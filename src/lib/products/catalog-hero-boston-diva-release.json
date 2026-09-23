@@ -1,0 +1,933 @@
+[
+  {
+    "groupSlug": "boston-round-15ml-amber-18-400",
+    "websiteSku": "GBBstnAmb15mlBlkCapSht",
+    "graceSku": "GB-BSR-AMB-15ML-BLK-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343671812388",
+    "family": "Boston Round",
+    "capacityMl": 15,
+    "bottleColor": "Amber",
+    "alt": "15 ml Amber Boston Round Bottle with Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstnAmb15mlBlkCapSht.4cae8a5e057e.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-30ml-clear-20-400",
+    "websiteSku": "GBBstn1ozBlkCapSht",
+    "graceSku": "GB-BSR-CLR-30ML-BLK-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343671877924",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "bottleColor": "Clear",
+    "alt": "30 ml Clear Boston Round Bottle with Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstn1ozBlkCapSht.cc2f3b5a2966.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-60ml-cobalt-blue-20-400-dropper",
+    "websiteSku": "GBBstnBlu2ozBlkDropperShnGlTrim",
+    "graceSku": "GB-BSR-CBL-60ML-BLK-T-02",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343650578724",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "bottleColor": "Cobalt Blue",
+    "alt": "60 ml Cobalt Blue Boston Round Dropper Bottle",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstnBlu2ozBlkDropperShnGlTrim.0f9f8c5746a7.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-15ml-amber-18-400-dropper",
+    "websiteSku": "GBBstnAmb15mlWhtDropperGlTrim",
+    "graceSku": "GB-BSR-AMB-15ML-WHT-T-02",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343629672740",
+    "family": "Boston Round",
+    "capacityMl": 15,
+    "bottleColor": "Amber",
+    "alt": "15 ml Amber Boston Round Dropper Bottle",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstnAmb15mlWhtDropperGlTrim.dd8a4e0a5813.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-15ml-clear-18-400",
+    "websiteSku": "GBBstn15BlkCapSht",
+    "graceSku": "GB-BSR-CLR-15ML-BLK-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343671746852",
+    "family": "Boston Round",
+    "capacityMl": 15,
+    "bottleColor": "Clear",
+    "alt": "15 ml Clear Boston Round Bottle with Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstn15BlkCapSht.09868cd2a71e.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-15ml-cobalt-blue-18-400",
+    "websiteSku": "GBBstnBlu15BlkCapSht",
+    "graceSku": "GB-BSR-CBL-15ML-BLK-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343671845156",
+    "family": "Boston Round",
+    "capacityMl": 15,
+    "bottleColor": "Cobalt Blue",
+    "alt": "15 ml Cobalt Blue Boston Round Bottle with Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstnBlu15BlkCapSht.80bc02fb8006.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-15ml-cobalt-blue-18-400-dropper",
+    "websiteSku": "GBBstnBlu15mlBlkDropperSlTrim",
+    "graceSku": "GB-BSR-CBL-15ML-BLK-T-03",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343635276068",
+    "family": "Boston Round",
+    "capacityMl": 15,
+    "bottleColor": "Cobalt Blue",
+    "alt": "15 ml Cobalt Blue Boston Round Dropper Bottle",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstnBlu15mlBlkDropperSlTrim.e1aee47991b9.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-30ml-amber-20-400",
+    "websiteSku": "GBBstnAmb1ozBlkCapSht",
+    "graceSku": "GB-BSR-AMB-30ML-BLK-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343672041764",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "bottleColor": "Amber",
+    "alt": "30 ml Amber Boston Round Bottle with Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstnAmb1ozBlkCapSht.a2ba5174f6b4.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+    "websiteSku": "GBBstnAmb1ozMtlRollonMattSl",
+    "graceSku": "GB-BSR-AMB-30ML-MRL-MSLV",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343616925988",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "bottleColor": "Amber",
+    "alt": "30 ml Amber Boston Round Roll-On Bottle",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstnAmb1ozMtlRollonMattSl.fd86b63e6d28.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+    "websiteSku": "GBBstnAmb1ozRollonMattGl",
+    "graceSku": "GB-BSR-AMB-30ML-RON-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343617024292",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "bottleColor": "Amber",
+    "alt": "30 ml Amber Boston Round Roll-On Bottle — Empty · cap beside",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstnAmb1ozRollonMattGl.fbab7f330046.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-30ml-amber-20-400-dropper",
+    "websiteSku": "GBBstnAmb1ozWhtDropperShnGlTrim",
+    "graceSku": "GB-BSR-AMB-30ML-WHT-T-02",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343637963044",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "bottleColor": "Amber",
+    "alt": "30 ml Amber Boston Round Dropper Bottle",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstnAmb1ozWhtDropperShnGlTrim.d1764f56a5d6.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-30ml-clear-20-400-dropper",
+    "websiteSku": "GBBstn1ozBlkDrpShnGlTrim",
+    "graceSku": "GB-BSR-CLR-30ML-DRP-SGTR-T-01",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343636521252",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "bottleColor": "Clear",
+    "alt": "30 ml Clear Boston Round Dropper Bottle",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstn1ozBlkDrpShnGlTrim.2d487c6bb582.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+    "websiteSku": "GBBstn1ozMtlRollonMattGl",
+    "graceSku": "GB-BSR-CLR-30ML-MRO-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343614664996",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "bottleColor": "Clear",
+    "alt": "30 ml Clear Boston Round Roll-On Bottle",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstn1ozMtlRollonMattGl.e8d9f69a93d3.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+    "websiteSku": "GBBstn1ozRollonShBlk",
+    "graceSku": "GB-BSR-CLR-30ML-RBL-SBLK",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343614697764",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "bottleColor": "Clear",
+    "alt": "30 ml Clear Boston Round Roll-On Bottle — Empty · cap beside",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstn1ozRollonShBlk.94e2767cac1a.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-30ml-cobalt-blue-20-400",
+    "websiteSku": "GBBstnBlu1ozBlkCapSht",
+    "graceSku": "GB-BSR-CBL-30ML-BLK-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343672107300",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "bottleColor": "Cobalt Blue",
+    "alt": "30 ml Cobalt Blue Boston Round Bottle with Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstnBlu1ozBlkCapSht.c40840151f09.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-30ml-cobalt-blue-20-400-dropper",
+    "websiteSku": "GBBstnBlu1ozBlkDropperShnGlTrim",
+    "graceSku": "GB-BSR-CBL-30ML-BLK-T-02",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343639863588",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "bottleColor": "Cobalt Blue",
+    "alt": "30 ml Cobalt Blue Boston Round Dropper Bottle",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstnBlu1ozBlkDropperShnGlTrim.91f1ac9d7a26.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+    "websiteSku": "GBBstnBlu1ozMtlRollonMattSl",
+    "graceSku": "GB-BSR-BLU-30ML-MRO-MSLV",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343620071716",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "bottleColor": "Cobalt Blue",
+    "alt": "30 ml Cobalt Blue Boston Round Roll-On Bottle",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstnBlu1ozMtlRollonMattSl.dc7af321feff.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+    "websiteSku": "GBBstnBlu1ozRollonMattBlk",
+    "graceSku": "GB-BSR-BLU-30ML-RON-MBLK",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343620202788",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "bottleColor": "Cobalt Blue",
+    "alt": "30 ml Cobalt Blue Boston Round Roll-On Bottle — Empty · cap beside",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstnBlu1ozRollonMattBlk.3da8625f3b0d.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-60ml-amber-20-400",
+    "websiteSku": "GBBstnAmb2ozBlkCapSht",
+    "graceSku": "GB-BSR-AMB-60ML-BLK-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343673450788",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "bottleColor": "Amber",
+    "alt": "60 ml Amber Boston Round Bottle with Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstnAmb2ozBlkCapSht.17f5a50ec752.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-60ml-amber-20-400-dropper",
+    "websiteSku": "GBBstnAmb2ozBlkDropperShnGlTrim",
+    "graceSku": "GB-BSR-AMB-60ML-BLK-T-01",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343647301924",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "bottleColor": "Amber",
+    "alt": "60 ml Amber Boston Round Dropper Bottle",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstnAmb2ozBlkDropperShnGlTrim.7807f303092e.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+    "websiteSku": "GBBstnAmb2ozMtlRollonMattGl",
+    "graceSku": "GB-BSR-AMB-60ML-MRL-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343625576740",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "bottleColor": "Amber",
+    "alt": "60 ml Amber Boston Round Roll-On Bottle",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstnAmb2ozMtlRollonMattGl.261c51a1d3cc.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+    "websiteSku": "GBBstnAmb2ozRollonMattGl",
+    "graceSku": "GB-BSR-AMB-60ML-RON-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343625675044",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "bottleColor": "Amber",
+    "alt": "60 ml Amber Boston Round Roll-On Bottle — Empty · cap beside",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstnAmb2ozRollonMattGl.f8d5be867878.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-60ml-clear-20-400",
+    "websiteSku": "GBBstn2ozBlkCapSht",
+    "graceSku": "GB-BSR-CLR-60ML-BLK-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343673188644",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "bottleColor": "Clear",
+    "alt": "60 ml Clear Boston Round Bottle with Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstn2ozBlkCapSht.9755758ef380.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-60ml-clear-20-400-dropper",
+    "websiteSku": "GBBstn2ozBlkDrprShnGlTrim",
+    "graceSku": "GB-BSR-CLR-60ML-BLK-T-02",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343645040932",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "bottleColor": "Clear",
+    "alt": "60 ml Clear Boston Round Dropper Bottle",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstn2ozBlkDrprShnGlTrim.0c870d81b7b0.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+    "websiteSku": "GBBstn2ozMtlRollGl",
+    "graceSku": "GB-BSR-CLR-60ML-MRL-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343621415204",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "bottleColor": "Clear",
+    "alt": "60 ml Clear Boston Round Roll-On Bottle — Empty · cap beside",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstn2ozMtlRollGl.15bd9824eb84.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+    "websiteSku": "GBBstn2ozRollonMattGl",
+    "graceSku": "GB-BSR-CLR-60ML-RBL-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343621611812",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "bottleColor": "Clear",
+    "alt": "60 ml Clear Boston Round Roll-On Bottle",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstn2ozRollonMattGl.4bbd744b3315.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-60ml-cobalt-blue-20-400",
+    "websiteSku": "GBBstnBlu2ozBlkCapSht",
+    "graceSku": "GB-BSR-BLU-60ML-BLK-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343674466596",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "bottleColor": "Cobalt Blue",
+    "alt": "60 ml Cobalt Blue Boston Round Bottle with Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstnBlu2ozBlkCapSht.8a87577aaa7b.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+    "websiteSku": "GBBstnBlu2ozMtlRollonMattSl",
+    "graceSku": "GB-BSR-BLU-60ML-MRO-MSLV",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343627641124",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "bottleColor": "Cobalt Blue",
+    "alt": "60 ml Cobalt Blue Boston Round Roll-On Bottle",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstnBlu2ozMtlRollonMattSl.43196502ef64.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+    "websiteSku": "GBBstnBlu2ozRollonMattGl",
+    "graceSku": "GB-BSR-BLU-60ML-RON-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343627706660",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "bottleColor": "Cobalt Blue",
+    "alt": "60 ml Cobalt Blue Boston Round Roll-On Bottle — Empty · cap beside",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBBstnBlu2ozRollonMattGl.f2295d777c74.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-30ml-clear-18-415-antiquespray",
+    "websiteSku": "GBDiva30AnSpGl",
+    "graceSku": "GB-DVA-CLR-30ML-ASP-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343658836260",
+    "family": "Diva",
+    "capacityMl": 30,
+    "bottleColor": "Clear",
+    "alt": "30 ml Clear Diva Vintage Style Bulb Spray Bottle — Empty · assembled",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva30AnSpGl.800616d6d88a.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-30ml-clear-18-415-reducer",
+    "websiteSku": "GBDiva30RdcrShnGl",
+    "graceSku": "GB-DVA-CLR-30ML-RDC-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343650021668",
+    "family": "Diva",
+    "capacityMl": 30,
+    "bottleColor": "Clear",
+    "alt": "30 ml Clear Diva Reducer Bottle — Empty · capped",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva30RdcrShnGl.f4aad7daa2d2.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-30ml-clear-18-415-perfumespray",
+    "websiteSku": "GBDiva30SpryMtGl",
+    "graceSku": "GB-DVA-CLR-30ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343641501988",
+    "family": "Diva",
+    "capacityMl": 30,
+    "bottleColor": "Clear",
+    "alt": "30 ml Clear Diva Bottle — Empty · cap beside",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva30SpryMtGl.77d1379385e4.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-30ml-clear-18-415-lotionpump",
+    "websiteSku": "LBDiva30LtnMtGl",
+    "graceSku": "LB-DVA-CLR-30ML-LPM-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343676530980",
+    "family": "Diva",
+    "capacityMl": 30,
+    "bottleColor": "Clear",
+    "alt": "30 ml Clear Diva Lotion Pump Bottle — Empty · cap beside",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/LBDiva30LtnMtGl.7e5ebd0bfc2d.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-46ml-clear-18-415-antiquespray",
+    "websiteSku": "GBDiva46AnSpGl",
+    "graceSku": "GB-DVA-CLR-46ML-ASP-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343661556004",
+    "family": "Diva",
+    "capacityMl": 46,
+    "bottleColor": "Clear",
+    "alt": "46 ml Clear Diva Vintage Style Bulb Spray Bottle — Empty · assembled",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46AnSpGl.cff146902751.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-46ml-clear-18-415-antiquespray-tassel",
+    "websiteSku": "GBDiva46AnSpTslIvyGl",
+    "graceSku": "GB-DVA-CLR-46ML-AST-IVGD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343662604580",
+    "family": "Diva",
+    "capacityMl": 46,
+    "bottleColor": "Clear",
+    "alt": "46 ml Clear Diva Vintage Style Bulb Spray Bottle with Tassel — Empty · assembled",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46AnSpTslIvyGl.d201bd671150.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-46ml-clear-18-415-dropper",
+    "websiteSku": "GBDiva46DrpGl",
+    "graceSku": "GB-DVA-CLR-46ML-DRP-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343643205924",
+    "family": "Diva",
+    "capacityMl": 46,
+    "bottleColor": "Clear",
+    "alt": "46 ml Clear Diva Dropper Bottle — Empty · assembled",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46DrpGl.d21797170363.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-46ml-clear-18-415-reducer",
+    "websiteSku": "GBDiva46RdcrShnGl",
+    "graceSku": "GB-DVA-CLR-46ML-RDC-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343653069092",
+    "family": "Diva",
+    "capacityMl": 46,
+    "bottleColor": "Clear",
+    "alt": "46 ml Clear Diva Reducer Bottle — Empty · capped",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46RdcrShnGl.c435f69e23dc.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-46ml-clear-18-415-perfumespray",
+    "websiteSku": "GBDiva46SpryMtGl",
+    "graceSku": "GB-DVA-CLR-46ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343620432164",
+    "family": "Diva",
+    "capacityMl": 46,
+    "bottleColor": "Clear",
+    "alt": "46 ml Clear Diva Bottle — Empty · cap beside",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46SpryMtGl.3a43b073b7ef.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-46ml-clear-18-415-lotionpump",
+    "websiteSku": "LBDiva46LtnMtGl",
+    "graceSku": "LB-DVA-CLR-46ML-LPM-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343688491300",
+    "family": "Diva",
+    "capacityMl": 46,
+    "bottleColor": "Clear",
+    "alt": "46 ml Clear Diva Lotion Pump Bottle — Empty · cap beside",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/LBDiva46LtnMtGl.61883994f283.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-46ml-frosted-18-415-antiquespray",
+    "websiteSku": "GBDivaFrst46AnSpGl",
+    "graceSku": "GB-DVA-FRS-46ML-T-13",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343665094948",
+    "family": "Diva",
+    "capacityMl": 46,
+    "bottleColor": "Frosted",
+    "alt": "46 ml Frosted Diva Vintage Style Bulb Spray Bottle — Empty · assembled",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDivaFrst46AnSpGl.6f101ac8dab6.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-46ml-frosted-18-415-antiquespray-tassel",
+    "websiteSku": "GBDivaFrst46AnSpTslIvyGl",
+    "graceSku": "GB-DVA-FRS-46ML-T-22",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343665881380",
+    "family": "Diva",
+    "capacityMl": 46,
+    "bottleColor": "Frosted",
+    "alt": "46 ml Frosted Diva Vintage Style Bulb Spray Bottle with Tassel — Empty · assembled",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDivaFrst46AnSpTslIvyGl.be65da09058e.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-46ml-frosted-18-415-reducer",
+    "websiteSku": "GBDivaFrst46RdcrShnGl",
+    "graceSku": "GB-DVA-FRS-46ML-T-39",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343654281508",
+    "family": "Diva",
+    "capacityMl": 46,
+    "bottleColor": "Frosted",
+    "alt": "46 ml Frosted Diva Reducer Bottle — Empty · capped",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDivaFrst46RdcrShnGl.3a22c9db00a9.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-46ml-frosted-18-415-perfumespray",
+    "websiteSku": "GBDivaFrst46SpryMtGl",
+    "graceSku": "GB-DVA-FRS-46ML-02",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343624331556",
+    "family": "Diva",
+    "capacityMl": 46,
+    "bottleColor": "Frosted",
+    "alt": "46 ml Frosted Diva Bottle — Empty · cap beside",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDivaFrst46SpryMtGl.debe163571d8.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-46ml-frosted-18-415-lotionpump",
+    "websiteSku": "LBDivaFrst46LtnMtGl",
+    "graceSku": "LB-DVA-FRS-46ML-02",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343689408804",
+    "family": "Diva",
+    "capacityMl": 46,
+    "bottleColor": "Frosted",
+    "alt": "46 ml Frosted Diva Lotion Pump Bottle — Empty · cap beside",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/LBDivaFrst46LtnMtGl.597e30c155c6.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-100ml-clear-18-415-antiquespray",
+    "websiteSku": "GBDiva100AnSpGl",
+    "graceSku": "GB-DVA-CLR-100ML-ASP-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343678791972",
+    "family": "Diva",
+    "capacityMl": 100,
+    "bottleColor": "Clear",
+    "alt": "100 ml Clear Diva Vintage Style Bulb Spray Bottle — Empty · assembled",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva100AnSpGl.4367e12baa85.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-100ml-clear-18-415-antiquespray-tassel",
+    "websiteSku": "GBDiva100AnSpTslGl",
+    "graceSku": "GB-DVA-CLR-100ML-AST-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343679807780",
+    "family": "Diva",
+    "capacityMl": 100,
+    "bottleColor": "Clear",
+    "alt": "100 ml Clear Diva Vintage Style Bulb Spray Bottle with Tassel — Empty · assembled",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva100AnSpTslGl.119c782f6d71.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-100ml-clear-18-415-reducer",
+    "websiteSku": "GBDiva100RdcrShnGl",
+    "graceSku": "GB-DVA-CLR-100ML-RDC-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343628820772",
+    "family": "Diva",
+    "capacityMl": 100,
+    "bottleColor": "Clear",
+    "alt": "100 ml Clear Diva Reducer Bottle — Empty · capped",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva100RdcrShnGl.76ad64db6b7e.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-100ml-clear-18-415-perfumespray",
+    "websiteSku": "GBDiva100SpryMtGl",
+    "graceSku": "GB-DVA-CLR-100ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343649825060",
+    "family": "Diva",
+    "capacityMl": 100,
+    "bottleColor": "Clear",
+    "alt": "100 ml Clear Diva Bottle — Empty · cap beside",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva100SpryMtGl.89a35e039bed.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-100ml-clear-18-415-lotionpump",
+    "websiteSku": "LBDiva100LtnMtGl",
+    "graceSku": "LB-DVA-CLR-100ML-LPM-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343610470692",
+    "family": "Diva",
+    "capacityMl": 100,
+    "bottleColor": "Clear",
+    "alt": "100 ml Clear Diva Lotion Pump Bottle — Empty · cap beside",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/LBDiva100LtnMtGl.4b6cda8805b2.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  }
+]

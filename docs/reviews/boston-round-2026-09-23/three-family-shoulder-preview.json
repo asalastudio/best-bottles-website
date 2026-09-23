@@ -1,0 +1,297 @@
+{
+  "status": "saved targets applied to existing artwork for scale review; not new renders",
+  "canvas": [
+    2080,
+    2288
+  ],
+  "baselinePct": 91,
+  "lockSource": "/Users/jordanrichter/Projects/Madison Studio/madison-app/.worktrees/hero-catalog-scale-plan-2026-09-22/src/lib/bestBottlesShoulderLock.ts",
+  "lockSourceSha256": "21bc54af5c737e30433155d223bd72fc2e56755d1dee76294bdf88527a3c22dd",
+  "sourceLandmarkNote": "Visually measured at 360 x 396, uncertainty about 2-3 preview pixels. Final generated images need independent measurement.",
+  "generationHeldForUserScaleReview": false,
+  "families": [
+    {
+      "family": "Boston Round",
+      "rows": [
+        {
+          "sku": "GBBstn15BlkCapSht",
+          "capacityMl": 15,
+          "spanPct": 42,
+          "upperYPercent": 49,
+          "baselinePct": 91,
+          "landmark": "glass shoulder",
+          "sourceSha256": "2950e8ed333dd90d112dda13955f5a43e79d48e2655bf2f174cc58bf6bb0bf3d",
+          "sourceUrl": "/images/catalog/bone-review/GBBstn15BlkCapSht.2950e8ed333d.png",
+          "sourceLandmarks": {
+            "cx": 152,
+            "shoulder": 199,
+            "base": 357,
+            "coordinateWidth": 360,
+            "coordinateHeight": 396
+          },
+          "transform": {
+            "scale": 1.4035443037974682,
+            "x": -9.2678481012656,
+            "y": -89.20303797468341
+          },
+          "preview": "output/shoulder-lock-review-2026-09-23/GBBstn15BlkCapSht-scale-preview.png",
+          "previewSha256": "089d6cf2bb95d3196097e5d3c43f481552e19355f06853fa5c3bc1e849d37a81"
+        },
+        {
+          "sku": "GBBstn1ozBlkCapSht",
+          "capacityMl": 30,
+          "spanPct": 45,
+          "upperYPercent": 46,
+          "baselinePct": 91,
+          "landmark": "glass shoulder",
+          "sourceSha256": "bee6983f3c20fbf9798b6ff6b1a1efb9501c1e63c013b15f1886bf320333b07a",
+          "sourceUrl": "/images/catalog/bone-review/GBBstn1ozBlkCapSht.bee6983f3c20.png",
+          "sourceLandmarks": {
+            "cx": 156,
+            "shoulder": 186,
+            "base": 357,
+            "coordinateWidth": 360,
+            "coordinateHeight": 396
+          },
+          "transform": {
+            "scale": 1.3894736842105262,
+            "x": -24.0842105263157,
+            "y": -67.43578947368405
+          },
+          "preview": "output/shoulder-lock-review-2026-09-23/GBBstn1ozBlkCapSht-scale-preview.png",
+          "previewSha256": "c1386daab24bb266fc1924e0852a708812fbf8f27a03b1c04dc131c2423e57d6"
+        },
+        {
+          "sku": "GBBstn2ozBlkCapSht",
+          "capacityMl": 60,
+          "spanPct": 52,
+          "upperYPercent": 39,
+          "baselinePct": 91,
+          "landmark": "glass shoulder",
+          "sourceSha256": "6f5506b0bf8f1583404b55a27c3c4dae8669afae9ac0fe0d68fb07540a483adc",
+          "sourceUrl": "/images/catalog/bone-review/GBBstn2ozBlkCapSht.6f5506b0bf8f.png",
+          "sourceLandmarks": {
+            "cx": 176,
+            "shoulder": 175,
+            "base": 356,
+            "coordinateWidth": 360,
+            "coordinateHeight": 396
+          },
+          "transform": {
+            "scale": 1.5169060773480663,
+            "x": -241.6937016574584,
+            "y": -258.00044198895057
+          },
+          "preview": "output/shoulder-lock-review-2026-09-23/GBBstn2ozBlkCapSht-scale-preview.png",
+          "previewSha256": "08a376ff6d0626686af9ea1a7d261655d4a61c6ae18f57f8b96fca2b78cc6e8c"
+        }
+      ],
+      "sheet": "output/shoulder-lock-review-2026-09-23/boston-round-shoulder-locks.png"
+    },
+    {
+      "family": "Diva",
+      "rows": [
+        {
+          "sku": "GBDiva30SpryMtGl",
+          "capacityMl": 30,
+          "spanPct": 40,
+          "upperYPercent": 51,
+          "baselinePct": 91,
+          "landmark": "closure seat at cap/glass junction",
+          "sourceSha256": "9f6dbfaa0b8aed20c4d56cd301a7e0d122dfc681f6f9fd131bc134f94a68040b",
+          "sourceUrl": "/images/catalog/bone-review/GBDiva30SpryMtGl.9f6dbfaa0b8a.png",
+          "sourceLandmarks": {
+            "cx": 164,
+            "shoulder": 201,
+            "base": 358,
+            "coordinateWidth": 360,
+            "coordinateHeight": 396
+          },
+          "transform": {
+            "scale": 1.3452229299363057,
+            "x": -40.8050955414011,
+            "y": -4.809171974522542
+          },
+          "preview": "output/shoulder-lock-review-2026-09-23/GBDiva30SpryMtGl-scale-preview.png",
+          "previewSha256": "199e4456de451a28714243f56743012a4c481de614be15436f32afa6ee0cad0d"
+        },
+        {
+          "sku": "GBDiva46SpryMtGl",
+          "capacityMl": 46,
+          "spanPct": 47,
+          "upperYPercent": 44,
+          "baselinePct": 91,
+          "landmark": "closure seat at cap/glass junction",
+          "sourceSha256": "bb34e3f85b32c95fa5cffe050b60b38b819476c6f466192cdd12cdd53558275b",
+          "sourceUrl": "/images/catalog/bone-review/GBDiva46SpryMtGl.bb34e3f85b32.png",
+          "sourceLandmarks": {
+            "cx": 165,
+            "shoulder": 175,
+            "base": 357,
+            "coordinateWidth": 360,
+            "coordinateHeight": 396
+          },
+          "transform": {
+            "scale": 1.3635164835164832,
+            "x": -59.71428571428544,
+            "y": -27.279999999999745
+          },
+          "preview": "output/shoulder-lock-review-2026-09-23/GBDiva46SpryMtGl-scale-preview.png",
+          "previewSha256": "1f9a4f0b5ea8988084a31940f8e1562d72be2af13a524a62e5402f989d668c48"
+        },
+        {
+          "sku": "GBDiva100SpryMtGl",
+          "capacityMl": 100,
+          "spanPct": 57,
+          "upperYPercent": 34,
+          "baselinePct": 91,
+          "landmark": "closure seat at cap/glass junction",
+          "sourceSha256": "5751b23a58205d9eb542e43959e0331981b9bbe8c5fce9d3e63e8127c5a539ee",
+          "sourceUrl": "/images/catalog/bone-review/GBDiva100SpryMtGl.5751b23a5820.png",
+          "sourceLandmarks": {
+            "cx": 174,
+            "shoulder": 130,
+            "base": 357,
+            "coordinateWidth": 360,
+            "coordinateHeight": 396
+          },
+          "transform": {
+            "scale": 1.3258149779735684,
+            "x": -84.4644933920705,
+            "y": 31.0442290748897
+          },
+          "preview": "output/shoulder-lock-review-2026-09-23/GBDiva100SpryMtGl-scale-preview.png",
+          "previewSha256": "ea11b3f60654787d115a4e49603decf1870b1b08785787b329878079e5e37669"
+        }
+      ],
+      "sheet": "output/shoulder-lock-review-2026-09-23/diva-shoulder-locks.png"
+    },
+    {
+      "family": "Sleek",
+      "rows": [
+        {
+          "sku": "GBSleek5SpryGlMatt",
+          "capacityMl": 5,
+          "spanPct": 33,
+          "upperYPercent": 58,
+          "baselinePct": 91,
+          "landmark": "glass shoulder",
+          "sourceSha256": "54c31977c243632658734de13532d5368ec18782109bbb725132c90314fdff70",
+          "sourceUrl": "/images/catalog/bone-review/GBSleek5SpryGlMatt.54c31977c243.png",
+          "sourceLandmarks": {
+            "cx": 154,
+            "shoulder": 228,
+            "base": 358,
+            "coordinateWidth": 360,
+            "coordinateHeight": 396
+          },
+          "transform": {
+            "scale": 1.3403076923076922,
+            "x": 20.768000000000256,
+            "y": 2.8159999999998035
+          },
+          "preview": "output/shoulder-lock-review-2026-09-23/GBSleek5SpryGlMatt-scale-preview.png",
+          "previewSha256": "253b2a522b31a0470b0976854e30575450a28442602c7905bd67e8a5608fa8e6"
+        },
+        {
+          "sku": "GBSleek8SpryGlMatt",
+          "capacityMl": 8,
+          "spanPct": 43,
+          "upperYPercent": 48,
+          "baselinePct": 91,
+          "landmark": "glass shoulder",
+          "sourceSha256": "8e5aa43acc5884300cdd06b7e39b9d5efbb03a25dcbf98ddb7f68cc66ab88395",
+          "sourceUrl": "/images/catalog/bone-review/GBSleek8SpryGlMatt.8e5aa43acc58.png",
+          "sourceLandmarks": {
+            "cx": 150,
+            "shoulder": 191,
+            "base": 358,
+            "coordinateWidth": 360,
+            "coordinateHeight": 396
+          },
+          "transform": {
+            "scale": 1.3595209580838326,
+            "x": 31.511377245508925,
+            "y": -26.99017964071936
+          },
+          "preview": "output/shoulder-lock-review-2026-09-23/GBSleek8SpryGlMatt-scale-preview.png",
+          "previewSha256": "2b698ad54de3237526cf82cbefe45091dd1da21c9d5b33221fbbd4a00f10e85d"
+        },
+        {
+          "sku": "GBSlk30SpryMtGl",
+          "capacityMl": 30,
+          "spanPct": 47,
+          "upperYPercent": 44,
+          "baselinePct": 91,
+          "landmark": "glass shoulder",
+          "sourceSha256": "daa34888af73fc66a0abfbbb7408a194d64a4916bf63f34af049f771550b0846",
+          "sourceUrl": "/images/catalog/bone-review/GBSlk30SpryMtGl.daa34888af73.png",
+          "sourceLandmarks": {
+            "cx": 160,
+            "shoulder": 171,
+            "base": 358,
+            "coordinateWidth": 360,
+            "coordinateHeight": 396
+          },
+          "transform": {
+            "scale": 1.3270588235294118,
+            "x": -4.8941176470586925,
+            "y": 23.369411764705546
+          },
+          "preview": "output/shoulder-lock-review-2026-09-23/GBSlk30SpryMtGl-scale-preview.png",
+          "previewSha256": "507f37b20e742f1fc314073153a97015b9edd70a7710a87e6d68518518f77918"
+        },
+        {
+          "sku": "GBSlk50SpryMtGl",
+          "capacityMl": 50,
+          "spanPct": 56,
+          "upperYPercent": 35,
+          "baselinePct": 91,
+          "landmark": "glass shoulder",
+          "sourceSha256": "00aa4a4d8030cd5cbd7304b39a962de692fdce323568d6f6347b832db62fd543",
+          "sourceUrl": "/images/catalog/bone-review/GBSlk50SpryMtGl.00aa4a4d8030.png",
+          "sourceLandmarks": {
+            "cx": 160,
+            "shoulder": 139,
+            "base": 358,
+            "coordinateWidth": 360,
+            "coordinateHeight": 396
+          },
+          "transform": {
+            "scale": 1.35013698630137,
+            "x": -20.89497716894971,
+            "y": -12.432511415525369
+          },
+          "preview": "output/shoulder-lock-review-2026-09-23/GBSlk50SpryMtGl-scale-preview.png",
+          "previewSha256": "fa1d72a89d2a7b40ca57dfdcfa79bd48f873d04751b8472aeb0224a916029d31"
+        },
+        {
+          "sku": "GBSlk100SpryMtGl",
+          "capacityMl": 100,
+          "spanPct": 60.5,
+          "upperYPercent": 30.5,
+          "baselinePct": 91,
+          "landmark": "glass shoulder",
+          "sourceSha256": "d49491c9200b7c1471620a802a94662069a6a137692a990b697a05985044b23e",
+          "sourceUrl": "/images/catalog/bone-review/GBSlk100SpryMtGl.d49491c9200b.png",
+          "sourceLandmarks": {
+            "cx": 167,
+            "shoulder": 121,
+            "base": 357,
+            "coordinateWidth": 360,
+            "coordinateHeight": 396
+          },
+          "transform": {
+            "scale": 1.3535593220338984,
+            "x": -64.32576271186451,
+            "y": -11.876271186441045
+          },
+          "preview": "output/shoulder-lock-review-2026-09-23/GBSlk100SpryMtGl-scale-preview.png",
+          "previewSha256": "125052d8945db02319862a9696a999cfadc976bb8065500f419bffa0882f83d3"
+        }
+      ],
+      "sheet": "output/shoulder-lock-review-2026-09-23/sleek-shoulder-locks.png"
+    }
+  ],
+  "targetReviewDecision": "User accepted the displayed saved targets with Ok; proceed with Boston pilot first"
+}
