@@ -1,6 +1,8 @@
 import assemblies from "./catalog-included-assemblies.json";
 import thirteenFourFifteenCaps from "./catalog-included-13-415-caps.json";
 
+const allAssemblies = [...assemblies, ...thirteenFourFifteenCaps];
+
 type Identity = {
     websiteSku?: string | null; graceSku?: string | null; family?: string | null;
     capacityMl?: number | null; color?: string | null; neckThreadSize?: string | null;
@@ -14,7 +16,7 @@ type Identity = {
  */
 export function catalogIncludedAssembly(product: Identity) {
     if (product.category !== "Glass Bottle") return null;
-    return [...assemblies, ...thirteenFourFifteenCaps].find(source => source.websiteSku === product.websiteSku && source.graceSku === product.graceSku
+    return allAssemblies.find(source => source.websiteSku === product.websiteSku && source.graceSku === product.graceSku
         && source.family === product.family && source.capacityMl === product.capacityMl && source.color === product.color
         && source.neckThreadSize === product.neckThreadSize && source.applicator === (product.applicator ?? null)
         && source.capColor === product.capColor) ?? null;

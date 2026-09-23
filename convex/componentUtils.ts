@@ -72,6 +72,7 @@ export function normalizeComponentsByType(
     components: unknown,
 ): Record<string, NormalizedComponent[]> {
     const grouped: Record<string, NormalizedComponent[]> = {};
+    const seenByType = new Map<string, Set<string>>();
     const add = (type: string, value: unknown) => {
         const normalized = normalizeComponent(value);
         const reviewed = reviewed13_415Component(normalized.graceSku, normalized.websiteSku);
@@ -82,7 +83,11 @@ export function normalizeComponentsByType(
             : reviewed?.kind?.startsWith("roll-on-") ? "Roll-On Cap"
                 : reviewed && (reviewed.kind === "short-ribbed" || reviewed.kind === "short-lined" || reviewed.kind === "tall-lined") ? "Cap" : type;
         const bucket = grouped[canonicalType] ??= [];
-        if (!bucket.some(part => part.graceSku === normalized.graceSku)) bucket.push(normalized);
+        const seen = seenByType.get(canonicalType) ?? new Set<string>();
+        if (!seenByType.has(canonicalType)) seenByType.set(canonicalType, seen);
+        if (seen.has(normalized.graceSku)) return;
+        seen.add(normalized.graceSku);
+        bucket.push(normalized);
     };
 
     if (Array.isArray(components)) {
