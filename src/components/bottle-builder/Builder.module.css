@@ -344,7 +344,7 @@
 .glassSection h3:focus { outline: none; }
 .singleGlass { display: grid; grid-template-columns: minmax(120px, 180px); }
 .singleGlass .option { min-height: 48px; justify-content: center; padding: 12px 32px; }
-.componentThumb { display: grid; justify-items: center; align-items: end; height: 140px; padding: 8px 8px 12px; }
+.componentThumb { display: grid; grid-template: minmax(0, 1fr) / minmax(0, 1fr); place-items: center; height: 140px; padding: 8px 8px 12px; }
 .coverControl { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 0 16px 16px; flex-wrap: wrap; font-size: 12px; }
 .coverControl button { min-height: 44px; padding: 8px 12px; border: 1px solid #c9c1b3; border-radius: 4px; text-decoration: underline; text-underline-offset: 3px; }
 @media(max-width: 639px) { .coverControl { grid-column: 1 / -1; font-size: 13px; } .steps button { font-size: 12px; gap: 4px; } }
@@ -368,6 +368,7 @@
     .workspace { --panel-height: calc(100dvh - 152px); grid-template-columns: minmax(0, 1.48fr) minmax(0, 1.08fr) minmax(260px, .8fr); gap: 14px; }
     .builder[data-current-step="0"] .workspace { --panel-height: calc(100dvh - 364px); }
     .options { display: flex; flex-direction: column; height: max(320px, var(--panel-height)); min-height: 0; max-height: 900px; padding: 0; overflow: hidden; }
+    .options { margin-inline-start: 12px; }
     .optionHeader { flex: 0 0 auto; padding: 18px 22px 14px; margin: 0; border-bottom: 1px solid var(--line); }
     .optionHeader h2 { font-size: 28px; margin-top: 5px; }
     .optionHeader p { font-size: 12px; }
@@ -380,11 +381,12 @@
     .optionFooter .primary { font-size: 13px; min-height: 46px; }
     .optionFooter:empty { display: none; }
     .bottleGrid, .colorGrid, .closureGrid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px; }
-    .fitmentGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+    .fitmentGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .fitmentGrid .option { padding: 12px 10px 14px; }
     .fitmentGrid .optionDescription { display: none; }
     .bottleThumb { height: 98px; }
     .colorThumb { height: 88px; margin-bottom: 7px; }
-    .componentThumb { height: 84px; padding: 6px 8px 10px; }
+    .componentThumb { height: 152px; padding: 10px; }
     .closureThumb { height: 82px; padding: 5px 8px 7px; }
     .option { padding: 9px 7px 11px; }
     .option strong, .closureGrid .option strong { font-size: 12px; }
