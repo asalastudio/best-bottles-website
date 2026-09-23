@@ -8,7 +8,7 @@ describe('homepage catalog navigation',()=>{
   expect(data.families.map(c=>c.label).sort()).toEqual(['Bell','Bell Collection','Cylinder']);
   const legacy=data.families.find(c=>c.id==='Bell Collection')!;
   expect(new URL(legacy.href,'https://example.com').searchParams.get('families')).toBe('Bell Collection');
-  expect(data.families.find(c=>c.id==='Cylinder')?.href).toMatch(/^\/catalog\/cylinder/);
+  expect(data.families.find(c=>c.id==='Cylinder')?.href).toBe('/catalog?category=Glass+Bottle&families=Cylinder&sort=capacity-asc');
   expect(data.glassFamilyCount).toBe(3);
  });
  it('includes non-glass bottle and jar lines without mixing component categories into families',()=>{
@@ -20,10 +20,10 @@ describe('homepage catalog navigation',()=>{
   expect(data.collections.find(c=>c.id==='samples')?.href).toBe(HOME_SAMPLE_FEATURE.href);
   expect(data.collections.find(c=>c.id==='bags')?.href).toBe(HOME_ACCESSORY_STORY.links.find(c=>c.label==='Bags & Pouches')?.href);
   expect(data.applicators.map(c=>c.label)).toContain('Reducer');
-  expect(data.applicators.every(c=>c.href.startsWith('/catalog/application/'))).toBe(true);
+  expect(data.applicators.every(c=>c.href.startsWith('/catalog?applicators='))).toBe(true);
  });
  it('never borrows a different family photograph or hides a navigable family for missing media',()=>{
   const data=buildHomeBrowseData([group('Bell')],[{groupSlug:'bell',family:'Circle',url:'/wrong.png'}]);
-  expect(data.families[0].image).toBeNull();expect(data.families[0].href).toContain('bell');
+  expect(data.families[0].image).toBeNull();expect(data.families[0].href).toContain('families=Bell');
  });
 });

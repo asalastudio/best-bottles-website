@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
+import { redirect } from "next/navigation";
 import CatalogClient, { type CatalogSearchResult } from "./CatalogClient";
 import Footer from "@/components/Footer";
 import { api } from "../../../convex/_generated/api";
-import { paramsToFilters } from "@/lib/catalogFilters";
+import { catalogBrowseRedirect, paramsToFilters } from "@/lib/catalogFilters";
 import { getCatalogConvexClient, searchCatalogServer } from "@/lib/catalogServer";
 import { defaultLocale, isLocale, type AppLocale } from "@/i18n/config";
 import { buildHreflangAlternates } from "@/i18n/metadata";
+import { localizeHref } from "@/i18n/paths";
 import enMessages from "../../../messages/en.json";
 import esMessages from "../../../messages/es.json";
 
@@ -46,6 +48,12 @@ export default async function CatalogPage({
 }) {
     const resolvedSearchParams = await searchParams;
     const urlSearchParams = toURLSearchParams(resolvedSearchParams);
+    const browseRedirect = catalogBrowseRedirect(urlSearchParams);
+    if (browseRedirect) {
+        const localeValue = await getLocale();
+        const locale: AppLocale = isLocale(localeValue) ? localeValue : defaultLocale;
+        redirect(localizeHref(locale, browseRedirect));
+    }
     const initialState = paramsToFilters(urlSearchParams);
     const convex = getCatalogConvexClient();
 

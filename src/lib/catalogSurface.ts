@@ -50,7 +50,7 @@ export const MASTER_CATALOG_SURFACE: CatalogSurfaceManifest = {
     defaultOpenFacets: ["category", "applicators", "capacities", "neckThreadSizes", "colors"],
     mobileDefaultOpenFacets: ["applicators", "capacities"],
     truncateAfter: 8,
-    defaultSort: "featured",
+    defaultSort: "capacity-asc",
     resultLabel: "products",
 };
 
