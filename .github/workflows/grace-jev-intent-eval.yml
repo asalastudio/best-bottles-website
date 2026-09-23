@@ -26,6 +26,9 @@ on:
       - "convex/gracePrompt.ts"
       - "scripts/grace-jev-intent-eval.mts"
       - "data/grace-evals/**"
+      - "src/lib/catalog/jev-reconciliation.ts"
+      - "scripts/audit-jev-reconciliation.mts"
+      - "data/reconciliation/**"
       - "package.json"
       - "package-lock.json"
       - ".github/workflows/grace-jev-intent-eval.yml"
@@ -40,6 +43,9 @@ on:
       - "convex/gracePrompt.ts"
       - "scripts/grace-jev-intent-eval.mts"
       - "data/grace-evals/**"
+      - "src/lib/catalog/jev-reconciliation.ts"
+      - "scripts/audit-jev-reconciliation.mts"
+      - "data/reconciliation/**"
       - "package.json"
       - "package-lock.json"
       - ".github/workflows/grace-jev-intent-eval.yml"
@@ -50,6 +56,31 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  reconciliation:
+    # Advisory public-catalog evidence audit. No Convex or media write credentials.
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.17.0
+          cache: npm
+      - run: npm ci
+      - name: Review bottle and component evidence with Jev
+        run: npx tsx scripts/audit-jev-reconciliation.mts --run --out=output/jev-reconciliation
+        env:
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+      - name: Save advisory report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jev-reconciliation-report
+          path: output/jev-reconciliation/
+          if-no-files-found: warn
+          retention-days: 14
   eval:
     runs-on: ubuntu-latest
     timeout-minutes: 30
