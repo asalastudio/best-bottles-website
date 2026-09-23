@@ -116,7 +116,7 @@ This work is on the separate `codex/cylinder-pdp-fitments-2026-09-22` branch.
 
 Final local checks: 2,072 tests passed (seven skipped across two files), full
 TypeScript and Webpack production build passed, and repository lint completed
-with zero errors and 97 existing warnings. The shared resolver test was updated
+with zero errors and 97 warnings. The shared resolver test was updated
 to follow normalization through the new catalog helper. A PDP DOM test timed
 out during the first concurrent build/test run; the final complete test run
 passed after the build finished. Eighteen recovered source kits passed their
