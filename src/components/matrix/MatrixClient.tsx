@@ -151,7 +151,9 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
     const subtitles = [
         `${visibleBodies.length} bottle ${visibleBodies.length === 1 ? "option" : "options"} · small to large`,
         "Choose how your bottle dispenses or closes.",
-        `Choose the look of your ${/Roller/.test(fitment ?? "") ? "roller cap" : (fitment ? displayApplicatorName(fitment).toLowerCase() : "component")}. Every option shown fits your selection.`,
+        fitment === "Screw Cap" && body?.family === "Cylinder" && body.capacityMl === 5 && body.neck === "13-415"
+            ? "Black and white short caps are ribbed. The other six short caps and the gold and silver tall caps have liners."
+            : `Choose the look of your ${/Roller/.test(fitment ?? "") ? "roller cap" : (fitment ? displayApplicatorName(fitment).toLowerCase() : "component")}. Every option shown fits your selection.`,
         "Check your bottle, finish, and quantity before adding.",
     ];
     function goTo(next: number) {
@@ -289,7 +291,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
                         const count = availableCount + unavailableCount;
                         return <Option key={f} label={displayApplicatorName(f)} description={fitmentChoiceHints[f] ?? fitmentDescriptions[f]} selected={fitment === f} onClick={() => { update({ fitment: f, closure: null }); setShowCover(false); goTo(2); }}>
                             <div className={styles.componentThumb}><FitmentIllustration fitment={f} neck={body?.neck} /></div>
-                            <strong>{displayApplicatorName(f)}</strong><small>{count} {/Roller/.test(f) ? (count === 1 ? "cap option" : "cap options") : (count === 1 ? "finish" : "finishes")}{unavailableCount > 0 ? ` · ${availableCount} available` : ""}</small>
+                            <strong>{displayApplicatorName(f)}</strong><small>{count} {/(Roller|Cap)/.test(f) ? (count === 1 ? "cap option" : "cap options") : (count === 1 ? "finish" : "finishes")}{unavailableCount > 0 ? ` · ${availableCount} available` : ""}</small>
                         </Option>;
                     })}</div> : <>
                         <div className={styles.selectedFitment}><div><span>Selected fitment</span><strong>{displayApplicatorName(fitment ?? "")}</strong><small>{fitmentChoiceHints[fitment!] ?? fitmentDescriptions[fitment!]}</small></div>

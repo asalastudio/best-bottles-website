@@ -23,15 +23,30 @@ function cylinderBodyKey(bottle: Bottle): string | null {
     return JSON.stringify([bottle.capacityMl, text(bottle.color), text(bottle.neckThreadSize)]);
 }
 
-export function catalogComponentPool(bottle: Bottle, siblings: readonly Bottle[]) {
+type IndexedSource = { bottle: Bottle; grouped: ReturnType<typeof normalizeComponentsByType> };
+export function indexCatalogComponentPools(siblings: readonly Bottle[]) {
+    const byBody = new Map<string, IndexedSource[]>();
+    for (const bottle of siblings) {
+        const key = cylinderBodyKey(bottle);
+        if (!key) continue;
+        const sources = byBody.get(key) ?? [];
+        sources.push({ bottle, grouped: normalizeComponentsByType(bottle.components) });
+        byBody.set(key, sources);
+    }
+    return byBody;
+}
+
+export function catalogComponentPool(bottle: Bottle, siblings: readonly Bottle[], index?: ReturnType<typeof indexCatalogComponentPools>) {
     const grouped = normalizeComponentsByType(bottle.components);
     const key = cylinderBodyKey(bottle);
     const sources: string[] = [];
     if (!key) return { grouped, sources };
-    for (const sibling of siblings) {
+    const donors = index?.get(key) ?? siblings.filter(sibling => cylinderBodyKey(sibling) === key)
+        .map(sibling => ({ bottle: sibling, grouped: normalizeComponentsByType(sibling.components) }));
+    for (const { bottle: sibling, grouped: siblingComponents } of donors) {
         if (sibling.websiteSku === bottle.websiteSku || cylinderBodyKey(sibling) !== key) continue;
         let contributed = false;
-        for (const [kind, parts] of Object.entries(normalizeComponentsByType(sibling.components))) {
+        for (const [kind, parts] of Object.entries(siblingComponents)) {
             const own = grouped[kind] ?? [];
             const known = new Set(own.map(part => part.graceSku));
             const additions: NormalizedComponent[] = [];

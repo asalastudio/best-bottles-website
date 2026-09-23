@@ -81,6 +81,39 @@ function group(family: string) {
 }
 
 describe("customer Product Compatibility Matrix families", () => {
+    it("shares the reviewed 13-415 sprayer identity across Matrix, PDP, and Grace", async () => {
+        const t = convexTest(schema, modules);
+        const active = { graceSku: "CMP-CAP-BLK-13-415-01", websiteSku: "CP13-415SpryBlkMt",
+            itemName: "Cap/Closure Thread 13-415", imageUrl: null, webPrice1pc: 0.65,
+            webPrice12pc: null, capColor: "Black", stockStatus: "In Stock" };
+        const retired = { ...active, graceSku: "CMP-SPR-MTBK-13-415-07",
+            websiteSku: "CP13-415SpryBlkMt__RETIRED__old" };
+        await t.run(async ctx => {
+            await ctx.db.insert("products", { ...product("Component", active.graceSku),
+                category: "Component", websiteSku: active.websiteSku, neckThreadSize: "13-415",
+                itemName: active.itemName, componentGroup: "Fine Mist Sprayer", shopifyVariantId: "active-part" });
+            for (const family of ["Cylinder", "Elegant"]) await ctx.db.insert("products", {
+                ...product(family, `GB-${family.toUpperCase()}-SPR-BLK`), neckThreadSize: "13-415",
+                capacityMl: family === "Cylinder" ? 5 : 15, capacity: family === "Cylinder" ? "5 ml" : "15 ml",
+                applicator: "Fine Mist Sprayer", components: { "Short Cap": [active], Sprayer: [retired,
+                    { ...active, graceSku: "CMP-SPR-GENERIC-13-415", websiteSku: "GenericSpray" }] },
+            });
+        });
+        for (const family of ["Cylinder", "Elegant"]) {
+            const sku = `GB-${family.toUpperCase()}-SPR-BLK-WEB`;
+            const matrix = await t.query(api.matrix.getFamilyRows, { family });
+            const row = matrix.rows.find(r => r.websiteSku === sku)!;
+            const pdp = await t.query(api.products.getCompatibleFitments, { bottleSku: sku });
+            const grace = await t.query(api.grace.getBottleComponents, { websiteSku: sku });
+            for (const components of [row.components, pdp.components, grace?.components]) {
+                expect(components?.Sprayer.map(p => p.websiteSku)).toEqual([active.websiteSku]);
+                expect(components?.Sprayer[0].itemName).toBe("Matte Black Fine Mist Sprayer, Thread 13-415");
+                if ("capColor" in components!.Sprayer[0]) expect(components!.Sprayer[0].capColor).toBe("Matte Black");
+                expect(components?.["Short Cap"]).toBeUndefined();
+            }
+        }
+    });
+
     it("recovers same-body catalog components consistently for Builder, PDP, and Grace", async () => {
         const t = convexTest(schema, modules);
         const bottle = { ...product("Cylinder", "GB-CYL-CLR-25ML-SPR-SBLK"),
