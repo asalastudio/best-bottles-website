@@ -1,4 +1,5 @@
 import { exactComponentMatches } from "./component-matches";
+import { catalogIncludedAssembly } from "../../../convex/catalogIncludedAssemblies";
 import { sourceComponentLink, sourceComponentLinks } from "./source-component-links";
 import type { FunctionReturnType } from "convex/server";
 import type { api } from "../../../convex/_generated/api";
@@ -71,6 +72,9 @@ export const isClosurePart = (part: BuilderPart) => closureSlots.has(part.slot);
  * Standalone component publication is independent of the complete assembly's
  * eligibility, checked by isBuilderCandidate and again at cart preflight. */
 export function compatibleFinishComponent(row: CatalogRow) {
+    const included = catalogIncludedAssembly(row);
+    if (included) return { websiteSku: included.websiteSku, imageUrl: null,
+        name: `${included.finish} ${included.fitment} included with this bottle` };
     const source = sourceComponentLink(row);
     if (!source && sourceComponentLinks.some(link => link.assemblySku === row.websiteSku)) return null;
     const exact = exactComponentMatches[row.websiteSku ?? ""] ?? source;
@@ -152,7 +156,12 @@ export function assessBuilderConfiguration(row: CatalogRow, kit: BuilderKit | nu
  * loose component on top of an assembly that already includes that component.
  */
 export function isBuilderCandidate(row: CatalogRow): boolean {
-    return row.resolution !== "unknown"
+    // These complete assemblies remain catalog/PDP products. The chooser
+    // excludes the small sprays and 16 mm jumbo rollers (Jordan, 2026-09-22).
+    // Keep the separate standard 50 ml / 18-415 Cylinder available.
+    if (row.family === "Cylinder" && ((row.capacityMl === 3.3 || row.capacityMl === 4)
+        || ([28, 50].includes(row.capacityMl ?? 0) && row.neckThreadSize === "16mm"))) return false;
+    return (row.resolution !== "unknown" || Boolean(catalogIncludedAssembly(row)))
         && !/__RETIRED__/i.test(row.websiteSku ?? "")
         && Boolean(compatibleFinishComponent(row))
         && Boolean(row.graceSku && row.websiteSku && row.itemName && row.family && row.color && row.neckThreadSize)
@@ -168,13 +177,20 @@ export function isBuilderCandidate(row: CatalogRow): boolean {
 export function configurationFromRow(row: CatalogRow, kit: BuilderKit | null, preview?: BuilderConfiguration): BuilderConfiguration | null {
     if (!isBuilderCandidate(row) || !kit || kit.conflicts.length
         || (kit.sku !== row.websiteSku && kit.sku !== row.graceSku)) return null;
-    const app = row.applicator?.trim();
+    const app = catalogIncludedAssembly(row)?.fitment ?? row.applicator?.trim();
     const capOnly = app === "Cap/Closure" || ((!app || app === "N/A") && /\bcap\b/i.test(row.itemName ?? ""));
+    // Cylinder's source-reviewed reducer kits intentionally keep the reducer
+    // and closure in one photographed fitment. They are not missing a pump,
+    // and must not expose an invented independent insert or cap-off state.
+    const reducerAssembly = app === "Reducer" && row.family === "Cylinder"
+        && row.neckThreadSize === "18-415" && [25, 50, 100].includes(row.capacityMl ?? 0)
+        && kit.parts.length === 2 && kit.parts.some(p => p.slot === "body")
+        && kit.parts.some(p => p.slot === "fitment" && p.derivation === "psd-layer");
     const assemblySplit = kit.completeness === "capSplit" && !capOnly && Boolean(app && app !== "N/A")
         && preview?.kit?.completeness === "full" && preview.kit.familyId === kit.familyId
         && preview.family === row.family && preview.capacityMl === row.capacityMl && preview.color === row.color
         && preview.neck === row.neckThreadSize
-        && kit.parts.some(isClosurePart);
+        && (kit.parts.some(isClosurePart) || reducerAssembly);
     if (kit.completeness !== "full" && !(capOnly && kit.completeness === "capSplit") && !assemblySplit) return null;
     const body = kit.parts.find(part => part.slot === "body");
     if (!body || !kit.parts.some(part => part.slot !== "body")) return null;
@@ -217,7 +233,8 @@ export function catalogConfigurationFromRow(row: CatalogRow, kit: BuilderKit | n
     const assembly = (assemblyMedia as Record<string, { url: string }>)[row.websiteSku ?? ""] ?? (plateUrl ? { url: plateUrl } : undefined);
     if (!isBuilderCandidate(row) || (!kit && (!bodyImage || !assembly)) || (row.family === "Cylinder" && row.capacityMl === 5.5)) return null;
     const { family, color, capacityMl, neckThreadSize: neck } = row;
-    const app = row.applicator?.trim();
+    const included = catalogIncludedAssembly(row);
+    const app = included?.fitment ?? row.applicator?.trim();
     const capOnly = app === "Cap/Closure" || ((!app || app === "N/A") && /\bcap\b/i.test(row.itemName ?? ""));
     let fitment = capOnly ? /tear[ -]off/i.test(row.itemName ?? "") ? "Tear-off Cap" : "Screw Cap" : app === "Metal Roller Ball" ? "Metal Roller"
         : app === "Plastic Roller Ball" ? "Plastic Roller" : app === "Perfume Spray Pump" ? "Perfume Sprayer"
@@ -230,14 +247,15 @@ export function catalogConfigurationFromRow(row: CatalogRow, kit: BuilderKit | n
     if (/vintage|bulb/i.test(fitment) && !/tassel/i.test(fitment) && /with\s+tassel/i.test(description)) fitment = `${fitment} with Tassel`;
     const name = getCustomerFacingProductName({ variant: row });
     const finishComponent = compatibleFinishComponent(row)!;
-    let closure = name.variantLabel ?? row.capColor?.trim() ?? "Standard finish";
+    let closure = included?.finish ?? name.variantLabel ?? row.capColor?.trim() ?? "Standard finish";
     // Tall or short is the listed cap's own name ("Tall Matt Silver caps" vs
     // "Short Matt Silver caps"); the row's capStyle says Tall on both Diva 46 reducers.
     const capName = finishComponent.name;
     const tall = /\btall\b/i.test(capName) ? true : /\bshort\b/i.test(capName) ? false : row.capStyle === "Tall";
-    if (/Cap/.test(closure)) {
+    if (capOnly || app === "Reducer" || /Cap/.test(closure)) {
         if (tall && !/\bTall\b/i.test(closure)) closure = `Tall ${closure}`;
         if (!tall && /^Tall\s+/i.test(closure)) closure = closure.replace(/^Tall\s+/i, "");
+        if (!tall && /\bshort\b/i.test(capName) && !/\bShort\b/i.test(closure)) closure = `Short ${closure}`;
     }
     if (/vintage|bulb/i.test(fitment)) {
         // Ivory bulb with a shiny gold or shiny silver collar; jeweled ring variants.

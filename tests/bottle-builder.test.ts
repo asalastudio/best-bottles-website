@@ -207,6 +207,21 @@ describe("builder catalog boundary", () => {
         }
         expect(resolveBuilderConfigurations([donor.row, { ...split.row, components: {} }], [donor.kit, split.kit])[1]).toBeNull();
     });
+    it("keeps the photographed Cylinder reducer together and uses verified bare glass for the body step", () => {
+        const identity = { capacityMl: 50, neckThreadSize: "18-415", productGroupSlug: "cylinder-50ml-clear-18-415" };
+        const source = fixture({ ...identity, websiteSku: "Cylinder50Sprayer", applicator: "Fine Mist Sprayer" }, ["body", "sprayer", "overcap"]);
+        const reducer = fixture({ ...identity, websiteSku: "Cylinder50Reducer", applicator: "Reducer" }, ["body", "fitment"]);
+        reducer.kit.completeness = "capSplit";
+        expect(configurationFromRow(reducer.row, reducer.kit)).toBeNull();
+        const result = resolveBuilderConfigurations([source.row, reducer.row], [source.kit, reducer.kit])[1]!;
+        expect(result.fitment).toBe("Reducer");
+        expect(result.kit).toBe(reducer.kit);
+        expect(result.previewKit).toBe(source.kit);
+        expect(previewParts(result, "body").map(p => p.slot)).toEqual(["body"]);
+        expect(previewParts(result, "fitment").map(p => p.slot)).toEqual(["body", "fitment"]);
+        expect(result.product.shopifyVariantId).toBe(reducer.row.shopifyVariantId);
+        expect(resolveBuilderConfigurations([source.row, { ...reducer.row, applicator: "Fine Mist Sprayer" }], [source.kit, reducer.kit])[1]).toBeNull();
+    });
     it("does not request a chooser kit when a reviewed body image already exists", () => {
         const { row } = fixture({ family: "Circle", capacityMl: 15, neckThreadSize: "13-415", websiteSku: "GBCrcl15RollBlkSh", productGroupSlug: "circle-15ml-clear-rollon" });
         expect(chooserSourceRows([row])).toEqual([]);

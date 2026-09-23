@@ -35,6 +35,7 @@
 /.superpowers/
 
 # Local scratch and generated test outputs
+/output/cylinder-fitment-repair/
 /tmp/
 /topaz-test/
 /ziOGLQ3X
@@ -221,3 +222,4 @@ public/local-kits/
 /data/repairs/four-family-components-2026-09-22/production-before.json
 /data/repairs/four-family-components-2026-09-22/local-kits.json
 /output/four-family-component-cleanup/
+/output/imagegen/circle15-fixed-body-pilot/

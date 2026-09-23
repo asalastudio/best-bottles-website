@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { auditFamilyReadiness } from "../scripts/lib/builder-readiness";
+import { auditFamilyReadiness, cylinderArtworkWarnings } from "../scripts/lib/builder-readiness";
 import type { CatalogRow, BuilderKit } from "@/lib/bottle-builder/model";
 
 function fixture() {
@@ -18,6 +18,20 @@ function fixture() {
     return { row, kit };
 }
 describe("read-only builder readiness audit", () => {
+    it("reports a missing 9 ml dip tube separately from compatibility and ignores rollers", () => {
+        const { row, kit } = fixture();
+        const nine = { ...row, family: "Cylinder", capacityMl: 9, neckThreadSize: "17-415" };
+        expect(cylinderArtworkWarnings(nine, kit)).toEqual(["missing_9ml_dip_tube"]);
+        expect(cylinderArtworkWarnings({ ...nine, applicator: "Metal Roller Ball" }, kit)).toEqual([]);
+        expect(cylinderArtworkWarnings(nine, { ...kit, parts: [...kit.parts, { ...kit.parts[1], slot: "diptube" }] })).toEqual([]);
+    });
+    it("does not mistake a 25 ml tube and cover for an exposed pump", () => {
+        const { row, kit } = fixture();
+        const pump = { ...row, family: "Cylinder", capacityMl: 25, neckThreadSize: "18-415", applicator: "Lotion Pump" as const };
+        const covered = { ...kit, parts: kit.parts.map(p => p.slot === "sprayer" ? { ...p, slot: "diptube" as const } : p) };
+        expect(cylinderArtworkWarnings(pump, covered)).toEqual(["missing_25ml_exposed_mechanism"]);
+        expect(cylinderArtworkWarnings(pump, kit)).toEqual([]);
+    });
     it("separates standalone publication from a sellable exact assembly and never mutates it", () => {
         const { row, kit } = fixture(); row.components.Sprayer[0].shopifySellable = false;
         const before = structuredClone(row);

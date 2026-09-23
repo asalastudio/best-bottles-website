@@ -36,6 +36,8 @@ import {
     resolveCompatibleComponents,
     selectBestFitmentRule,
 } from "./componentUtils";
+import { catalogComponentPool, addReviewedCatalogComponent, reviewedCatalogLink } from "./catalogComponentSources";
+import { catalogIncludedAssembly } from "./catalogIncludedAssemblies";
 
 /** How a row's component list came to be — carried to the UI so it can show
  *  the difference instead of flattening it. */
@@ -133,6 +135,8 @@ export const getFamilyRows = query({
         // component SKU rather than once per bottle/component occurrence.
         const componentSkus = new Set<string>();
         for (const bottle of bottles) {
+            const sourceLink = reviewedCatalogLink(bottle);
+            if (sourceLink) componentSkus.add(sourceLink.componentGraceSku);
             for (const components of Object.values(normalizeComponentsByType(bottle.components))) {
                 for (const component of components) {
                     if (component.graceSku) componentSkus.add(component.graceSku);
@@ -165,7 +169,9 @@ export const getFamilyRows = query({
 
         const rows = await Promise.all(bottles.map(async (b) => {
             const thread = (b.neckThreadSize ?? "").toString().trim();
-            const grouped = normalizeComponentsByType(b.components);
+            const link = reviewedCatalogLink(b);
+            const { grouped, sources } = addReviewedCatalogComponent(b, catalogComponentPool(b, bottles),
+                link ? componentProducts.get(link.componentGraceSku) ?? null : null);
             const rule = selectBestFitmentRule(rulesByThread.get(thread) ?? [], b);
             const resolved = resolveCompatibleComponents(grouped, rule, b);
 
@@ -184,7 +190,7 @@ export const getFamilyRows = query({
                         const product = componentProducts.get(component.graceSku) ?? null;
                         return {
                             ...component,
-                            websiteSku: product?.websiteSku ?? null,
+                            websiteSku: product?.websiteSku || component.websiteSku || null,
                             productGroupSlug: product ? productGroupSlug(product) : null,
                             shopifyVariantId: product?.shopifyVariantId ?? null,
                             shopifySellable: product?.shopifySellable ?? null,
@@ -225,6 +231,7 @@ export const getFamilyRows = query({
                 shopifyVariantId: b.shopifyVariantId ?? null,
                 shopifySellable: b.shopifySellable ?? null,
                 components: resolvedForCart,
+                includedAssembly: catalogIncludedAssembly(b),
                 resolution,
                 // Bottle Only is an EXPLICIT choice, never inferred from an
                 // empty list. A row whose components are unknown offers it as
@@ -234,6 +241,7 @@ export const getFamilyRows = query({
                 ...(args.diagnostics ? {
                     diagnostics: {
                         listedComponentCount: listed,
+                        catalogSourceSkus: sources,
                         resolvedComponentCount: Object.values(resolved)
                             .reduce((n, xs) => n + xs.length, 0),
                         matchedFitmentRule: rule

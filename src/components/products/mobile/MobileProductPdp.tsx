@@ -120,6 +120,7 @@ export type MobileProductPdpProps = {
     capOptionPhotoKeys: Record<string, string[]>;
     capOptionThumbnails?: Record<string, string>;
     localKits?: Record<string, LocalKitPilot>;
+    localComponentPreviewSku?: string;
     resolveCapFinish: (variant: ProductVariant) => { label: string; swatchName: string };
     variantSku: (variant: ProductVariant) => string | null;
     onCommitVariant: (selection: { rollerVariant?: "metal" | "plastic"; capOption?: string; applicator?: string }) => void;
@@ -157,7 +158,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         addedFlash, onAddToCart, quoteHref, qty, onQtyChange, cartCount, backHref, cartAnchorRef, glassOptions,
         rollerOptions, activeApplicator, capOptions, activeCapOption, capOptionPhotoKeys, capOptionThumbnails, resolveCapFinish, variantSku,
         onCommitVariant, onCommitGlass, onPickerOpenChange, onAskGrace, description, relations, initialCompatibility,
-        volumePricing, onAddComponent, localKits = {},
+        volumePricing, onAddComponent, localKits = {}, localComponentPreviewSku,
     } = props;
 
     const isMobile = useViewportIsMobile();
@@ -278,6 +279,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     };
     const decodedPlate = useDecodedPlate(plateUrlFor(viewMode), markPlateBroken);
     const preferKitPair = !assembledOnly && !shownPlate?.imageCapOff && kitHasRemovableCap(shownKit);
+    const reviewingComponents = Boolean(localComponentPreviewSku && localComponentPreviewSku === shownKit?.sku);
     const fallbackImageUrl = skuImageFallbacks[shownVariant?.websiteSku ?? ""] ?? shownVariant?.imageUrl ?? group.heroImageUrl ?? null;
 
     /* ── expanded viewer (same configured bottle, its own cap state) ─────── */
@@ -545,7 +547,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 hasCapOffPlate={Boolean(shownPlate?.imageCapOff)}
                 ref={heroRef}
                 plateUrl={decodedPlate.url}
-                kitParts={pilot || preferKitPair ? kitPartsWithCap : decodedPlate.url && decodedPlate.url === (viewMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : kitPartsWithCap}
+                kitParts={reviewingComponents || pilot || preferKitPair ? kitPartsWithCap : decodedPlate.url && decodedPlate.url === (viewMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : kitPartsWithCap}
                 fallbackImageUrl={decodedPlate.url ? null : fallbackImageUrl}
                 alt={`${displayName}${previewingLabel ? ` — previewing ${previewingLabel}` : ""}`}
                 backHref={backHref}
@@ -691,7 +693,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 viewModes={viewModes}
                 onViewModeChange={changeViewerView}
                 plateUrl={viewerPlate.url}
-                kitParts={pilot || preferKitPair ? viewerKitParts : viewerPlate.url && viewerPlate.url === (viewerMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : viewerKitParts}
+                kitParts={reviewingComponents || pilot || preferKitPair ? viewerKitParts : viewerPlate.url && viewerPlate.url === (viewerMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : viewerKitParts}
                 fallbackImageUrl={viewerPlate.url ? null : fallbackImageUrl}
                 alt={displayName}
                 onPlateError={markPlateBroken}

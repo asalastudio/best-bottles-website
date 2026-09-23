@@ -2,9 +2,11 @@ import "server-only";
 import { unstable_cache } from "next/cache";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../convex/_generated/api";
+import { catalogIncludedAssembly } from "../../../convex/catalogIncludedAssemblies";
 import { builderBodyIdentity, chooserGroupKey, chooserSourceRows, resolveBuilderConfigurations, type BuilderKit, groupBuilderBodies, isBuilderCandidate, type CatalogRow } from "./model";
 import { resolveListedComponents, unavailableVintageFinishes, type ActiveComponent } from "./components";
 import { bareChooserKit, slimBuilderBodies } from "./payload";
+import { readLocalComponentKits } from "../paper-doll/local-component-kits";
 
 const client = () => new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
@@ -16,18 +18,7 @@ const cachedKit = unstable_cache(async (websiteSku: string, graceSku: string) =>
 // Local preview of kits that are extracted but not yet published: BUILDER_LOCAL_KITS
 // names a kits.json staged by scripts/paperdoll/local-kit-overlay.mjs, whose part
 // URLs live under public/local-kits/. Never set in production; nothing here writes.
-let localKitRows: Record<string, BuilderKit> | null | undefined;
-function localKits() {
-    if (localKitRows !== undefined) return localKitRows;
-    const file = process.env.BUILDER_LOCAL_KITS;
-    if (!file) return (localKitRows = null);
-    try {
-        // eslint-disable-next-line @typescript-eslint/no-require-imports
-        const { readFileSync } = require("node:fs") as typeof import("node:fs");
-        localKitRows = JSON.parse(readFileSync(file, "utf8")).rows as Record<string, BuilderKit>;
-    } catch { localKitRows = null; }
-    return localKitRows;
-}
+const localKits = readLocalComponentKits;
 
 /** Every kit read goes through here so a locally staged kit is seen wherever a
  * published one would be. */
@@ -136,7 +127,7 @@ async function loadChooserKits(candidates: CatalogRow[]): Promise<{
     const missed: CatalogRow[] = [];
     for (const row of primary) {
         const kit = own.get(row.websiteSku!) ?? own.get(row.graceSku!) ?? null;
-        const proof = kit ? bareChooserKit(kit) : undefined;
+        const proof = kit && (!catalogIncludedAssembly(row) || kit.completeness === "full") ? bareChooserKit(kit) : undefined;
         if (proof) proofs.set(chooserGroupKey(row), proof);
         else missed.push(row);
     }
@@ -150,7 +141,7 @@ async function loadChooserKits(candidates: CatalogRow[]): Promise<{
             const key = chooserGroupKey(row);
             if (proofs.has(key)) continue;
             const kit = extra.get(row.websiteSku!) ?? extra.get(row.graceSku!) ?? null;
-            const proof = kit ? bareChooserKit(kit) : undefined;
+            const proof = kit && (!catalogIncludedAssembly(row) || kit.completeness === "full") ? bareChooserKit(kit) : undefined;
             if (proof) proofs.set(key, proof);
         }
     }

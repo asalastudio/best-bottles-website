@@ -90,6 +90,15 @@ function layer(slot: string, bounds: { left: number; top: number; right: number;
 }
 
 describe('neck seating for fused spray and pump layers', () => {
+    it('preserves the master-photographed 25 ml pump overlap instead of exposing the threads', () => {
+        const body = layer('body', { left: 357, top: 288, right: 639, bottom: 1001 });
+        const pump = layer('pump', { left: 399, top: 37, right: 591, bottom: 425 });
+        pump.part.derivation = 'psd-layer';
+        const seated = seatPreviewLayers([body, pump], { seatY: 288, baselineY: 1001 });
+        expect(seated[1]).toBe(pump);
+        expect(seated[1].bounds.bottom).toBe(425);
+        expect(seated[1].transform).toBeUndefined();
+    });
     // Production GBCyl50SpryShnSl / GBCyl50SpryMtSl bounds (2026-09-20).
     const cyl50 = {
         anchors: { axisX: 500, seatY: 235, baselineY: 980 },

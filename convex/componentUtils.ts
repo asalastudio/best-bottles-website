@@ -2,6 +2,8 @@ type RawComponent = Record<string, unknown>;
 
 export interface NormalizedComponent {
     graceSku: string;
+    /** Exact source-verified canonical identity for an imported blank SKU. */
+    websiteSku?: string;
     itemName: string;
     imageUrl: string | null;
     webPrice1pc: number | null;

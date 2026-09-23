@@ -11,6 +11,8 @@ export type ExactComponentMatch = {
 
 /** Reviewed by hand, 2026-09-08. These win over the generated joins below. */
 const reviewed: Record<string, ExactComponentMatch> = {
+    GBCyl9SpryRd: { family: "Cylinder", capacityMl: 9, color: "Clear", neck: "17-415", applicator: "Fine Mist Sprayer", componentSku: "Spry17-415Red",
+        evidence: "2026-09-22 exact legacy product describes red trim and clear overcap; the cap color field names the clear cover, not the red actuator collar." },
     GBCrcl30GlCap: { family: "Circle", capacityMl: 30, color: "Clear", neck: "15-415", applicator: null, componentSku: "CP15-415ShnGl" },
     GBCrcl30SlCap: { family: "Circle", capacityMl: 30, color: "Clear", neck: "15-415", applicator: null, componentSku: "CP15-415ShnSl" },
     LBCyl50LtnMtSl: { family: "Cylinder", capacityMl: 50, color: "Clear", neck: "18-415", applicator: "Lotion Pump", componentSku: "Ltn18-415MtSl" },

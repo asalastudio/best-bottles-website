@@ -45,7 +45,8 @@ describe("PDP stage mode capabilities", () => {
         expect(configuratorSource).toContain("hasReleasedExplodedKit: releasedKitAvailable");
         expect(configuratorSource).not.toContain("hasReleasedExplodedKit: kitReady");
         expect(configuratorSource).not.toContain("api.productKits.forSku,");
-        expect(productDetailSource).toContain("const selectedKitQuery = useQuery(");
+        expect(productDetailSource).toContain("const publishedKitQuery = useQuery(");
+        expect(productDetailSource).toContain("?? publishedKitQuery");
         expect(productDetailSource).toContain("hasReleasedKit: Boolean(selectedKit?.parts?.length)");
         expect(productDetailSource).toContain("kitQuery={selectedKitQuery}");
         expect(productDetailSource).toContain("selectedGraceSku={selectedVariant?.graceSku ?? null}");

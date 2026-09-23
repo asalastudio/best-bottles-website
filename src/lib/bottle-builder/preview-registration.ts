@@ -71,6 +71,10 @@ export function seatPreviewLayers(layers: PreviewLayer[], anchors: { seatY: numb
     const neckFloor = anchors.seatY + bodyHeight * NECK_ZONE_RATIO;
     return layers.map(layer => {
         if (!FITTED_SLOTS.has(layer.part.slot)) return layer;
+        // Native PSD layers already record the seated assembly. Their ferrule
+        // deliberately overlaps the glass neck. Lifting its bottom toward an
+        // estimated lip exposes threads and makes the pump float (25 ml).
+        if (layer.part.derivation === "psd-layer") return layer;
         const width = layer.bounds.right - layer.bounds.left;
         if (width > bodyWidth * MAX_FITTED_WIDTH_RATIO) return layer;
         if (layer.bounds.bottom <= seat || layer.bounds.bottom > neckFloor) return layer;

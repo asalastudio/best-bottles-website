@@ -4,7 +4,6 @@ import { createRoot } from "react-dom/client";
 import { afterEach, beforeEach, expect, it, vi } from "vitest";
 import BuilderImage from "@/components/bottle-builder/BuilderImage";
 import { previewParts, type BuilderConfiguration, type BuilderKit, type BuilderPart } from "@/lib/bottle-builder/model";
-import { neckSeatY } from "@/lib/bottle-builder/preview-registration";
 
 const asset = (url: string) => ({ url, key: url, sha256: url, bytes: 1000, width: 1000, height: 1100 });
 
@@ -48,10 +47,9 @@ beforeEach(() => {
 });
 afterEach(() => { act(() => root.unmount()); el.remove(); vi.unstubAllGlobals(); });
 
-it("applies the neck-seat transform on the assembled preview, not the chooser tile", () => {
-    const dy = neckSeatY(kit.anchors) - 352;
+it("preserves native PSD seating in the assembled preview and chooser tile", () => {
     act(() => root.render(<BuilderImage config={config} parts={previewParts(config, "complete")} stage="complete" label="50 ml Cylinder spray" />));
-    expect(el.querySelector("[data-builder-layer=\"sprayer\"]")?.getAttribute("transform")).toBe(`translate(0 ${dy})`);
+    expect(el.querySelector("[data-builder-layer=\"sprayer\"]")?.getAttribute("transform")).toBeNull();
     expect(el.querySelector("[data-builder-layer=\"body\"]")?.getAttribute("transform")).toBeNull();
     expect(el.querySelector("[data-builder-layer=\"diptube\"]")?.getAttribute("transform")).toBeNull();
     act(() => root.render(<BuilderImage config={config} parts={previewParts(config, "complete")} stage="complete" thumbnail label="tile" />));

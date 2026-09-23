@@ -21,6 +21,7 @@ import {
 } from "@/lib/matrix/order-state";
 import { summarizeMatrixOrder } from "@/lib/matrix/cart";
 import { matrixProductHref } from "@/lib/matrix/product-identity";
+import { isBuilderCandidate } from "@/lib/bottle-builder/model";
 
 const modules = import.meta.glob("../convex/**/*.ts");
 
@@ -80,6 +81,39 @@ function group(family: string) {
 }
 
 describe("customer Product Compatibility Matrix families", () => {
+    it("recovers same-body catalog components consistently for Builder, PDP, and Grace", async () => {
+        const t = convexTest(schema, modules);
+        const bottle = { ...product("Cylinder", "GB-CYL-CLR-25ML-SPR-SBLK"),
+            websiteSku: "GBcyl25SpryShnBlk", capacity: "25 ml", capacityMl: 25,
+            applicator: "Fine Mist Sprayer" as const, capColor: "Shiny Black",
+            shopifyVariantId: "gid://shopify/ProductVariant/25", shopifySellable: true };
+        const part = { graceSku: "CMP-SPR-SBLK-18-415", itemName: "Shiny black spray pump",
+            capColor: "Shiny Black", stockStatus: "In Stock", webPrice1pc: 0.5 };
+        await t.run(async ctx => {
+            await ctx.db.insert("products", bottle);
+            await ctx.db.insert("products", { ...bottle, graceSku: "GB-CYL-CLR-25ML-LTN-MSL",
+                websiteSku: "LBCyl25LtnMtSl", applicator: "Lotion Pump", components: { Sprayer: [part] } });
+            await ctx.db.insert("products", { ...product("Closure", part.graceSku),
+                websiteSku: "Spry18-415ShnBlk", category: "Component", itemName: part.itemName,
+                shopifyVariantId: "gid://shopify/ProductVariant/part", shopifySellable: false });
+        });
+        const matrix = await t.query(api.matrix.getFamilyRows, { family: "Cylinder", diagnostics: true });
+        const row = matrix.rows.find(r => r.websiteSku === bottle.websiteSku)!;
+        const pdp = await t.query(api.products.getCompatibleFitments, { bottleSku: bottle.websiteSku });
+        const grace = await t.query(api.grace.getBottleComponents, { websiteSku: bottle.websiteSku });
+        expect(row.resolution).toBe("bottle_listed");
+        expect(row.diagnostics?.catalogSourceSkus).toEqual(["LBCyl25LtnMtSl"]);
+        for (const components of [row.components, pdp.components, grace?.components]) {
+            expect(components?.Sprayer.map(p => p.graceSku)).toEqual([part.graceSku]);
+        }
+        expect(isBuilderCandidate(row)).toBe(true);
+        expect(row.shopifyVariantId).toBe(bottle.shopifyVariantId);
+        // Reconciliation is read-only: the imported record remains untouched.
+        const stored = await t.run(async ctx => (await ctx.db.query("products")
+            .withIndex("by_websiteSku", q => q.eq("websiteSku", bottle.websiteSku)).unique())?.components);
+        expect(stored).toEqual([]);
+    });
+
     it("returns only families backed by products and never exposes Unknown", async () => {
         const t = convexTest(schema, modules);
         await t.run(async (ctx) => {

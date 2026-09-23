@@ -1,0 +1,182 @@
+[
+  {
+    "sku": "GBCyl5BlkShSht",
+    "catalogCapacityMl": 5,
+    "sourceCapacityMl": 5,
+    "source": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-shiny-black-cap",
+    "sourceSha256": "bd03040b91f625fefb5424106a76f6f27316e45c00da8ff47e0d320435b6ac68",
+    "checkedAt": "2026-09-23T01:57:49.662Z",
+    "capImage": "https://www.bestbottles.com/images/store/caps/13-415CpBlkShShtMtl.png",
+    "componentSku": "CP13-415BlkShShtMtl"
+  },
+  {
+    "sku": "GBCyl5CuSht",
+    "catalogCapacityMl": 5,
+    "sourceCapacityMl": 5,
+    "source": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-matte-copper-cap",
+    "sourceSha256": "f3b79ab391dd95c156d62459f22a997a3f16ba9ed00da5f48514be6573b0ef57",
+    "checkedAt": "2026-09-23T01:57:49.741Z",
+    "capImage": "https://www.bestbottles.com/images/store/caps/13-415CpCuSht.png",
+    "componentSku": "CP13-415CuSht"
+  },
+  {
+    "sku": "GBCyl5GlMattSht",
+    "catalogCapacityMl": 5,
+    "sourceCapacityMl": 5,
+    "source": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-matte-gold-cap",
+    "sourceSha256": "f833183bc501707fca19c9b0012771920e36380eb6515dab71b65efefa028e6f",
+    "checkedAt": "2026-09-23T01:57:49.755Z",
+    "capImage": "https://www.bestbottles.com/images/store/caps/13-415CpGlMattSht.png",
+    "componentSku": "CP13-415GlMattSht"
+  },
+  {
+    "sku": "GBCyl5GlSht",
+    "catalogCapacityMl": 5,
+    "sourceCapacityMl": 5,
+    "source": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-shiny-gold-cap",
+    "sourceSha256": "e5e3c2d6f8cd25676fe8330485cfd4af392350c10c5259cdbb387ca017eb3f22",
+    "checkedAt": "2026-09-23T01:57:49.775Z",
+    "capImage": "https://www.bestbottles.com/images/store/caps/13-415CpGlSht.png",
+    "componentSku": "CP13-415GlSht"
+  },
+  {
+    "sku": "GBCyl5SlMattSht",
+    "catalogCapacityMl": 5,
+    "sourceCapacityMl": 5,
+    "source": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-matte-silver-cap",
+    "sourceSha256": "daf8fbefbead0accb64debc09fd1cc6802de8e3498f1599a1b931839fe11d735",
+    "checkedAt": "2026-09-23T01:57:49.792Z",
+    "capImage": "https://www.bestbottles.com/images/store/caps/13-415CpSlMattSht.png",
+    "componentSku": "CP13-415SlMattSht"
+  },
+  {
+    "sku": "GBCyl5SlSht",
+    "catalogCapacityMl": 5,
+    "sourceCapacityMl": 5,
+    "source": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-shiny-silver-cap",
+    "sourceSha256": "d68b440607732db75619ce4343c205f79b04000abbc9a6f01aaa7b34434a8a6f",
+    "checkedAt": "2026-09-23T01:57:49.798Z",
+    "capImage": "https://www.bestbottles.com/images/store/caps/13-415CpSlSht.png",
+    "componentSku": "CP13-415SlSht"
+  },
+  {
+    "sku": "GBTallCyl9BlkShSht",
+    "catalogCapacityMl": 9,
+    "sourceCapacityMl": 9,
+    "source": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-shiny-black-cap",
+    "sourceSha256": "0152c251c0f186b5936cded4f9c302d757984b024bfbbb5a3dd2285e52f50dee",
+    "checkedAt": "2026-09-23T01:57:50.031Z",
+    "capImage": "https://www.bestbottles.com/images/store/caps/13-415CpBlkShShtMtl.png",
+    "componentSku": "CP13-415BlkShShtMtl"
+  },
+  {
+    "sku": "GBTallCyl9CuSht",
+    "catalogCapacityMl": 9,
+    "sourceCapacityMl": 9,
+    "source": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-matte-copper-cap",
+    "sourceSha256": "7ec8c0f8c5155770110a92f5529bf233b0fe58aa5f5a6e294d671ab7f8b72649",
+    "checkedAt": "2026-09-23T01:57:50.065Z",
+    "capImage": "https://www.bestbottles.com/images/store/caps/13-415CpCuSht.png",
+    "componentSku": "CP13-415CuSht"
+  },
+  {
+    "sku": "GBTallCyl9GlMattSht",
+    "catalogCapacityMl": 9,
+    "sourceCapacityMl": 9,
+    "source": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-short--bottle-short-matte-gold-cap",
+    "sourceSha256": "8f3b16f7639b291d7ae0e641c8cae9a694f1aaadc845d2247fa027bc2b850cfe",
+    "checkedAt": "2026-09-23T01:57:50.067Z",
+    "capImage": "https://www.bestbottles.com/images/store/caps/13-415CpGlMattSht.png",
+    "componentSku": "CP13-415GlMattSht"
+  },
+  {
+    "sku": "GBTallCyl9GlSht",
+    "catalogCapacityMl": 9,
+    "sourceCapacityMl": 9,
+    "source": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-shiny-gold-cap",
+    "sourceSha256": "0d76ce011c5ee22d369900da983aeba4e8372f4034095c767bf097062b7c8b3d",
+    "checkedAt": "2026-09-23T01:57:50.067Z",
+    "capImage": "https://www.bestbottles.com/images/store/caps/13-415CpGlSht.png",
+    "componentSku": "CP13-415GlSht"
+  },
+  {
+    "sku": "GBTallCyl9SlMattSht",
+    "catalogCapacityMl": 9,
+    "sourceCapacityMl": 9,
+    "source": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-matte-silver-cap",
+    "sourceSha256": "a1bcf35b21324eb04a9afab3e7f795a1d9592b9c95bde38358fc21cf6cb9d60a",
+    "checkedAt": "2026-09-23T01:57:50.142Z",
+    "capImage": "https://www.bestbottles.com/images/store/caps/13-415CpSlMattSht.png",
+    "componentSku": "CP13-415SlMattSht"
+  },
+  {
+    "sku": "GBTallCyl9SlSht",
+    "catalogCapacityMl": 9,
+    "sourceCapacityMl": 9,
+    "source": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-shiny-silver-cap",
+    "sourceSha256": "fb7c624f6fe0d4156348707ab79c30644a5db2d32d085c1c89e31cb8f0802382",
+    "checkedAt": "2026-09-23T01:57:50.161Z",
+    "capImage": "https://www.bestbottles.com/images/store/caps/13-415CpSlSht.png",
+    "componentSku": "CP13-415SlSht"
+  },
+  {
+    "sku": "GBTallCylFrst9BlkShSht",
+    "catalogCapacityMl": 9,
+    "sourceCapacityMl": 9,
+    "source": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-shiny-black-cap",
+    "sourceSha256": "69f337acc5ee4f8a6c0acdb39d09b4d318ed44ce2167f49e836ad84b07f74dbe",
+    "checkedAt": "2026-09-23T01:57:50.209Z",
+    "capImage": "https://www.bestbottles.com/images/store/caps/13-415CpBlkShShtMtl.png",
+    "componentSku": "CP13-415BlkShShtMtl"
+  },
+  {
+    "sku": "GBTallCylFrst9CuSht",
+    "catalogCapacityMl": 9,
+    "sourceCapacityMl": 9,
+    "source": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-matte-copper-cap",
+    "sourceSha256": "72b631baa7069240f0652c1ded7d0b2aac34eadc44a044872fe2dfae3729a3dd",
+    "checkedAt": "2026-09-23T01:57:50.207Z",
+    "capImage": "https://www.bestbottles.com/images/store/caps/13-415CpCuSht.png",
+    "componentSku": "CP13-415CuSht"
+  },
+  {
+    "sku": "GBTallCylFrst9GlMattSht",
+    "catalogCapacityMl": 9,
+    "sourceCapacityMl": 9,
+    "source": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-matte-gold-cap",
+    "sourceSha256": "10cfab6098a2095086a2219c4770ba56fbfbbf787877269aef53dc4f1415c7e4",
+    "checkedAt": "2026-09-23T01:57:50.203Z",
+    "capImage": "https://www.bestbottles.com/images/store/caps/13-415CpGlMattSht.png",
+    "componentSku": "CP13-415GlMattSht"
+  },
+  {
+    "sku": "GBTallCylFrst9GlSht",
+    "catalogCapacityMl": 9,
+    "sourceCapacityMl": 9,
+    "source": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-shiny-gold-cap",
+    "sourceSha256": "84ff51f590e05fdd06edffbd9f400598898fa84f6b628c218376a7eea6b2b185",
+    "checkedAt": "2026-09-23T01:57:50.274Z",
+    "capImage": "https://www.bestbottles.com/images/store/caps/13-415CpGlSht.png",
+    "componentSku": "CP13-415GlSht"
+  },
+  {
+    "sku": "GBTallCylFrst9SlMattSht",
+    "catalogCapacityMl": 9,
+    "sourceCapacityMl": 9,
+    "source": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-matte-silver-cap",
+    "sourceSha256": "652fc9ca9a0abc8f93b1076983f3a9cc88c8a9a07eefe5b594d62616eb7ca587",
+    "checkedAt": "2026-09-23T01:57:50.293Z",
+    "capImage": "https://www.bestbottles.com/images/store/caps/13-415CpSlMattSht.png",
+    "componentSku": "CP13-415SlMattSht"
+  },
+  {
+    "sku": "GBTallCylFrst9SlSht",
+    "catalogCapacityMl": 9,
+    "sourceCapacityMl": 9,
+    "source": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-shiny-silver-cap",
+    "sourceSha256": "8de3ef98ad317404440dba498e36c94cfb14b23c74211992181c0da28183e63d",
+    "checkedAt": "2026-09-23T01:57:50.332Z",
+    "capImage": "https://www.bestbottles.com/images/store/caps/13-415CpSlSht.png",
+    "componentSku": "CP13-415SlSht"
+  }
+]
