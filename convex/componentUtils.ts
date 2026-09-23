@@ -87,6 +87,7 @@ export function normalizeComponentsByType(
 }
 
 type BottleLike = {
+    reviewedComponentCorrections?: Array<{ componentGraceSku: string; componentType: string }>;
     capColor?: string | null;
     family?: string | null;
     capacityMl?: number | null;
@@ -310,6 +311,12 @@ export function resolveCompatibleComponents(
         const part = grouped[link.componentType]?.find(item => item.graceSku === link.componentGraceSku);
         if (part && !byThread[link.componentType]?.some(item => item.graceSku === part.graceSku)) {
             byThread[link.componentType] = [...(byThread[link.componentType] ?? []), part];
+        }
+    }
+    for (const correction of bottle.reviewedComponentCorrections ?? []) {
+        const part = grouped[correction.componentType]?.find(item => item.graceSku === correction.componentGraceSku);
+        if (part && !byThread[correction.componentType]?.some(item => item.graceSku === part.graceSku)) {
+            byThread[correction.componentType] = [...(byThread[correction.componentType] ?? []), part];
         }
     }
     return applyApplicatorCompatibilityRules(byThread, grouped, bottle);

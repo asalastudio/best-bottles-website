@@ -25,7 +25,7 @@ export const loadBuilderFamily = unstable_cache(async (family: string) => {
     const data = await familyRows(family);
     if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${family}`);
     return slimBuilderBodies(await loadBuilderBodies(data.rows));
-}, ["bottle-builder-family-chooser-v2"], { revalidate: 300 });
+}, ["bottle-builder-family-chooser-v2"], { revalidate: 300, tags: ["bottle-components"] });
 
 export const loadBuilderFamilies = unstable_cache(async () => {
     const families = await client().query(api.matrix.listFamilies, {});
@@ -46,7 +46,7 @@ export const loadBuilderFamilies = unstable_cache(async () => {
         }
     }));
     return available.filter(family => family !== null);
-}, ["bottle-builder-families-bare-v6"], { revalidate: 300 });
+}, ["bottle-builder-families-bare-v6"], { revalidate: 300, tags: ["bottle-components"] });
 
 async function loadKitsForRows(rows: Array<{ websiteSku: string | null; graceSku: string | null }>): Promise<Map<string, BuilderKit | null>> {
     const result = new Map<string, BuilderKit | null>();

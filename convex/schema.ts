@@ -30,6 +30,17 @@ const portalAddress = v.object({
 });
 
 export default defineSchema({
+    // Stakeholder decisions only; these tables never change product/component associations.
+    componentReconciliationReviews: defineTable({
+        caseId: v.string(), evidenceSha: v.string(), revision: v.number(), decision: v.string(),
+        correctComponentSku: v.string(), notes: v.string(), sourceUrl: v.string(),
+        actorId: v.string(), actorEmail: v.union(v.string(), v.null()), updatedAt: v.number(),
+    }).index("by_case_evidence", ["caseId", "evidenceSha"]),
+    componentReconciliationHistory: defineTable({
+        caseId: v.string(), evidenceSha: v.string(), revision: v.number(), decision: v.string(),
+        correctComponentSku: v.string(), notes: v.string(), sourceUrl: v.string(),
+        actorId: v.string(), actorEmail: v.union(v.string(), v.null()), updatedAt: v.number(),
+    }).index("by_case", ["caseId", "updatedAt"]),
     // ── Product Groups (Phase 1) ─────────────────────────────────────────────
     // ~230 parent groups. Each group = unique (family + capacityMl + color).
     // All 2,354 individual SKU variants link back to their parent group.
@@ -218,6 +229,11 @@ export default defineSchema({
         // ── Fitment ─────────────────────────────────────────────────
         fitmentStatus: v.union(v.string(), v.null()),
         components: v.any(), // Array of compatible component SKUs by type
+        reviewedComponentCorrections: v.optional(v.array(v.object({
+            replaceGraceSku: v.string(), componentGraceSku: v.string(), componentSku: v.string(),
+            componentType: v.string(), itemName: v.string(), sourceUrl: v.string(), reviewCaseId: v.string(),
+        }))),
+        componentReviewVersion: v.optional(v.number()),
         graceDescription: v.union(v.string(), v.null()),
         assemblyType: v.optional(v.union(
             v.literal("2-part"),

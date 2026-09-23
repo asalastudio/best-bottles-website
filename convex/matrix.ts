@@ -37,7 +37,7 @@ import {
     resolveCompatibleComponents,
     selectBestFitmentRule,
 } from "./componentUtils";
-import { catalogComponentPool, addReviewedCatalogComponent, reviewedCatalogLink } from "./catalogComponentSources";
+import { catalogComponentPool, addReviewedCatalogComponent, reviewedCatalogLink, applyStaffComponentCorrections } from "./catalogComponentSources";
 import { catalogIncludedAssembly } from "./catalogIncludedAssemblies";
 
 /** How a row's component list came to be — carried to the UI so it can show
@@ -136,6 +136,7 @@ export const getFamilyRows = query({
         // component SKU rather than once per bottle/component occurrence.
         const componentSkus = new Set<string>();
         for (const bottle of bottles) {
+            for (const correction of bottle.reviewedComponentCorrections ?? []) componentSkus.add(correction.componentGraceSku);
             const sourceLink = reviewedCatalogLink(bottle);
             if (sourceLink) componentSkus.add(sourceLink.componentGraceSku);
             for (const components of Object.values(normalizeComponentsByType(bottle.components))) {
@@ -172,8 +173,8 @@ export const getFamilyRows = query({
         const rows = await Promise.all(bottles.map(async (b) => {
             const thread = (b.neckThreadSize ?? "").toString().trim();
             const link = reviewedCatalogLink(b);
-            const { grouped, sources } = addReviewedCatalogComponent(b, catalogComponentPool(b, bottles),
-                link ? componentProducts.get(link.componentGraceSku) ?? null : null);
+            const { grouped, sources } = applyStaffComponentCorrections(b, addReviewedCatalogComponent(b, catalogComponentPool(b, bottles),
+                link ? componentProducts.get(link.componentGraceSku) ?? null : null));
             const rule = selectBestFitmentRule(rulesByThread.get(thread) ?? [], b);
             const resolved = resolveCompatibleComponents(grouped, rule, b);
 
@@ -227,6 +228,7 @@ export const getFamilyRows = query({
                 shopifyVariantId: b.shopifyVariantId ?? null,
                 shopifySellable: b.shopifySellable ?? null,
                 components: resolvedForCart,
+                ...(b.reviewedComponentCorrections?.length ? { reviewedComponentCorrections: b.reviewedComponentCorrections } : {}),
                 includedAssembly: catalogIncludedAssembly(b),
                 resolution,
                 // Bottle Only is an EXPLICIT choice, never inferred from an

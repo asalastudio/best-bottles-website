@@ -15,6 +15,7 @@ export type ActiveComponent = {
  * Current matrix relationships take precedence. No catalog records are modified. */
 function restoreSourceLink(row: CatalogRow, products: Map<string, ActiveComponent | null>): CatalogRow {
     const link = sourceComponentLink(row);
+    if (link && row.reviewedComponentCorrections?.some(c => c.replaceGraceSku === link.componentGraceSku)) return row;
     if (!link || Object.values(row.components).flat().some(part => part.graceSku === link.componentGraceSku
         || part.websiteSku === link.componentSku)) return row;
     const active = products.get(link.componentGraceSku);

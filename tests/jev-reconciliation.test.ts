@@ -40,6 +40,11 @@ describe("advisory Jev bottle/component evidence review", () => {
         expect(reconciliationVerdict(rows[0], null).status).toBe("not_evaluated");
         expect(reconciliationVerdict(rows[0], answer()).status).toBe("evidence_aligned");
     });
+    it("checks literal family, glass and capacity disagreements even when the model misses them", () => {
+        expect(reconciliationVerdict(rows.find(r => r.id === "control-round-instead-of-circle")!, answer()).issues).toContain("source_family_mismatch");
+        expect(reconciliationVerdict(rows.find(r => r.id === "control-clear-instead-of-frosted")!, answer()).issues).toContain("source_glass_mismatch");
+        expect(reconciliationVerdict(rows.find(r => r.id === "GBCyl5SpryGlMatt")!, answer()).issues).toContain("source_capacity_mismatch");
+    });
     it("holds disagreement and uncertain answers for human review", () => {
         const response = answer(); response.answers.finish.confidence = .6;
         expect(reconciliationVerdict(rows[0], response).issues).toContain("finish_uncertain");

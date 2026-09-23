@@ -1,0 +1,1356 @@
+{
+  "checkedAt": "2026-09-23T15:43:25.433Z",
+  "mode": "advisory-live",
+  "model": "jev-1.13.0",
+  "scope": "Text evidence only; no physical-fit, image-quality, or publication approval",
+  "total": 22,
+  "serviceFailures": 0,
+  "controls": {
+    "total": 10,
+    "flagged": 10,
+    "falseAlignment": 0
+  },
+  "results": [
+    {
+      "id": "GBCrclFrst50DrpGl",
+      "kind": "catalog",
+      "sku": "GBCrclFrst50DrpGl",
+      "proposedSku": "Drp18-415Gl",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-gold-collar-cap",
+        "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette"
+      ],
+      "inputSha256": "c6fc2c60bf33ea5dd37c3ba8449315c995b2eabffd43d03312718386517a3596",
+      "expected": null,
+      "deterministicIssues": [],
+      "status": "review_required",
+      "issues": [
+        "finish_uncertain"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 1,
+            "probabilities": {
+              "supported": 1,
+              "contradicted": 0,
+              "insufficient": 0
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.92,
+            "probabilities": {
+              "supported": 0.95,
+              "contradicted": 0,
+              "insufficient": 0.05
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.51,
+            "probabilities": {
+              "supported": 0.67,
+              "contradicted": 0,
+              "insufficient": 0.33
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1692,
+          "output_tokens": 128
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": null
+    },
+    {
+      "id": "GBCrclFrst50AnSpTslGl",
+      "kind": "catalog",
+      "sku": "GBCrclFrst50AnSpTslGl",
+      "proposedSku": "CP18-415AnSpTslGl",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-gold-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+        "https://www.bestbottles.com/product/Vintage-antique-bulb-sprayer-gold-Tassel"
+      ],
+      "inputSha256": "fd3b86f9b7ddc296c41ab417ef6bf586e2bb1fb2fcf2fb865c9f461e28231176",
+      "expected": null,
+      "deterministicIssues": [
+        "component_source_sku_mismatch"
+      ],
+      "status": "review_required",
+      "issues": [
+        "component_source_sku_mismatch",
+        "finish_insufficient"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.98,
+            "probabilities": {
+              "supported": 0.99,
+              "contradicted": 0,
+              "insufficient": 0.01
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.99,
+            "probabilities": {
+              "supported": 0.99,
+              "contradicted": 0,
+              "insufficient": 0.01
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.37,
+            "probabilities": {
+              "supported": 0.41,
+              "contradicted": 0.01,
+              "insufficient": 0.58
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1720,
+          "output_tokens": 131
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": null
+    },
+    {
+      "id": "GBCrcl15GlMattSht",
+      "kind": "catalog",
+      "sku": "GBCrcl15GlMattSht",
+      "proposedSku": "CP13-415GlMattSht",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/circle-design-15-ml-bottle-short-matte-gold-cap"
+      ],
+      "inputSha256": "dc1c6b2e5f3aef4258ebe54e445c72aa7eae4d46ed52c7792bb859e29f5a9e47",
+      "expected": null,
+      "deterministicIssues": [
+        "missing_component_evidence",
+        "component_source_neck_unconfirmed"
+      ],
+      "status": "review_required",
+      "issues": [
+        "missing_component_evidence",
+        "component_source_neck_unconfirmed",
+        "mechanism_insufficient",
+        "finish_uncertain"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.97,
+            "probabilities": {
+              "supported": 0.98,
+              "contradicted": 0,
+              "insufficient": 0.02
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.25,
+            "probabilities": {
+              "supported": 0.44,
+              "contradicted": 0.06,
+              "insufficient": 0.5
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.59,
+            "probabilities": {
+              "supported": 0.73,
+              "contradicted": 0.01,
+              "insufficient": 0.26
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1397,
+          "output_tokens": 131
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": null
+    },
+    {
+      "id": "GBRnd128DrpGl",
+      "kind": "catalog",
+      "sku": "GBRnd128DrpGl",
+      "proposedSku": "Drp18-415Gl",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/round-design-128-ml-glass-bottle-white-dropper-shiny-gold-collar-cap",
+        "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette"
+      ],
+      "inputSha256": "86843e22e74a519f8439fcfa42d61ca7261ec612fbc1142511a6ba3e9b5f44e5",
+      "expected": null,
+      "deterministicIssues": [],
+      "status": "review_required",
+      "issues": [
+        "finish_uncertain"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.99,
+            "probabilities": {
+              "supported": 0.99,
+              "contradicted": 0,
+              "insufficient": 0.01
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.93,
+            "probabilities": {
+              "supported": 0.96,
+              "contradicted": 0,
+              "insufficient": 0.04
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.48,
+            "probabilities": {
+              "supported": 0.65,
+              "contradicted": 0,
+              "insufficient": 0.35
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1688,
+          "output_tokens": 128
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": null
+    },
+    {
+      "id": "GBRndFrst128AnSpTslIvyGl",
+      "kind": "catalog",
+      "sku": "GBRndFrst128AnSpTslIvyGl",
+      "proposedSku": "AnSpTsl18-415IvyGl",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-ivory-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+        "https://www.bestbottles.com/product/Vintage-antique-bulb-sprayer-ivory-gold-Tassel"
+      ],
+      "inputSha256": "2126aa2e3f8f59546290639c9cb29cae98562ea6860de9652b056f0bb79b9345",
+      "expected": null,
+      "deterministicIssues": [],
+      "status": "review_required",
+      "issues": [
+        "finish_insufficient"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 1,
+            "probabilities": {
+              "supported": 1,
+              "contradicted": 0,
+              "insufficient": 0
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.99,
+            "probabilities": {
+              "supported": 0.99,
+              "contradicted": 0,
+              "insufficient": 0.01
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.34,
+            "probabilities": {
+              "supported": 0.43,
+              "contradicted": 0.02,
+              "insufficient": 0.55
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1747,
+          "output_tokens": 131
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": null
+    },
+    {
+      "id": "GBCyl9SpryBlk",
+      "kind": "catalog",
+      "sku": "GBCyl9SpryBlk",
+      "proposedSku": "Spry17-415Blk",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/cylinder-design-9-ml-clear-glass-bottle-sprayer-black-trim-and-cap",
+        "https://www.bestbottles.com/product/spray-top-black-trim-color-17-415"
+      ],
+      "inputSha256": "e3d304f31cc5a9c4bbc0f3ca867e9e2e85b76bc6129a0ba8e20a4a28f2501a03",
+      "expected": null,
+      "deterministicIssues": [],
+      "status": "review_required",
+      "issues": [
+        "mechanism_uncertain",
+        "finish_insufficient"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.99,
+            "probabilities": {
+              "supported": 0.99,
+              "contradicted": 0,
+              "insufficient": 0.01
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.74,
+            "probabilities": {
+              "supported": 0.82,
+              "contradicted": 0.02,
+              "insufficient": 0.16
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.74,
+            "probabilities": {
+              "supported": 0.15,
+              "contradicted": 0.02,
+              "insufficient": 0.83
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1639,
+          "output_tokens": 131
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": null
+    },
+    {
+      "id": "GBCyl5SpryGlMatt",
+      "kind": "catalog",
+      "sku": "GBCyl5SpryGlMatt",
+      "proposedSku": "CP13-415SpryGlMt",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-matte-gold-spray",
+        "https://www.bestbottles.com/product/spray-top-matte-gold-13-415"
+      ],
+      "inputSha256": "6a5b1c9df727ba73dd748fc820d200162939b44be53f1bdcd1b0973f51166592",
+      "expected": null,
+      "deterministicIssues": [],
+      "status": "review_required",
+      "issues": [
+        "identity_uncertain",
+        "mechanism_uncertain",
+        "finish_insufficient"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.16,
+            "probabilities": {
+              "supported": 0.44,
+              "contradicted": 0.4,
+              "insufficient": 0.16
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.54,
+            "probabilities": {
+              "supported": 0.69,
+              "contradicted": 0.02,
+              "insufficient": 0.29
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.64,
+            "probabilities": {
+              "supported": 0.24,
+              "contradicted": 0,
+              "insufficient": 0.76
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1627,
+          "output_tokens": 131
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": null
+    },
+    {
+      "id": "GBCyl5MtlRollBlkDot",
+      "kind": "catalog",
+      "sku": "GBCyl5MtlRollBlkDot",
+      "proposedSku": "CPRoll13-415BlackDot",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-metal-roller-ball-plug-black-shiny-cap-with-dots",
+        "https://www.bestbottles.com/product/Caps-lids-top-roll-on-bottle-Black-dot-Color-13-415"
+      ],
+      "inputSha256": "7240e7ec4a995b1e651a460c928cffe1dab5a681335596d187b995d8d7f3510d",
+      "expected": null,
+      "deterministicIssues": [],
+      "status": "review_required",
+      "issues": [
+        "identity_contradicted",
+        "mechanism_insufficient",
+        "finish_uncertain"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "contradicted",
+            "confidence": 0.19,
+            "probabilities": {
+              "supported": 0.39,
+              "contradicted": 0.46,
+              "insufficient": 0.15
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.21,
+            "probabilities": {
+              "supported": 0.41,
+              "contradicted": 0.11,
+              "insufficient": 0.48
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.38,
+            "probabilities": {
+              "supported": 0.59,
+              "contradicted": 0.01,
+              "insufficient": 0.4
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1671,
+          "output_tokens": 134
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": null
+    },
+    {
+      "id": "GBCyl5RollBlkDot",
+      "kind": "catalog",
+      "sku": "GBCyl5RollBlkDot",
+      "proposedSku": "CPRoll13-415BlackDot",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-plastic-roller-ball-plug-black-shiny-cap-with-dots",
+        "https://www.bestbottles.com/product/Caps-lids-top-roll-on-bottle-Black-dot-Color-13-415"
+      ],
+      "inputSha256": "af84d862d348a8a3b8843f02df8bc29f78230dbc5190bfee7648d95d16c7b13f",
+      "expected": null,
+      "deterministicIssues": [],
+      "status": "review_required",
+      "issues": [
+        "identity_contradicted",
+        "mechanism_insufficient",
+        "finish_uncertain"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "contradicted",
+            "confidence": 0.14,
+            "probabilities": {
+              "supported": 0.41,
+              "contradicted": 0.42,
+              "insufficient": 0.17
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.15,
+            "probabilities": {
+              "supported": 0.39,
+              "contradicted": 0.18,
+              "insufficient": 0.43
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.5,
+            "probabilities": {
+              "supported": 0.67,
+              "contradicted": 0.02,
+              "insufficient": 0.31
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1671,
+          "output_tokens": 134
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": null
+    },
+    {
+      "id": "GBEmp50AnSpGl",
+      "kind": "catalog",
+      "sku": "GBEmp50AnSpGl",
+      "proposedSku": "AnSp18-415Gl",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/empire-design-50-ml-glass-bottle-gold-vintage-style-sprayer-shiny-gold-collar-cap",
+        "https://www.bestbottles.com/product/Vintage-antique-bulb-sprayer-gold"
+      ],
+      "inputSha256": "cfa3e70d6815a888abcfd27222209bfffd8169a629ecba428b517e5591142255",
+      "expected": null,
+      "deterministicIssues": [],
+      "status": "review_required",
+      "issues": [
+        "finish_insufficient"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.98,
+            "probabilities": {
+              "supported": 0.99,
+              "contradicted": 0,
+              "insufficient": 0.01
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.93,
+            "probabilities": {
+              "supported": 0.95,
+              "contradicted": 0,
+              "insufficient": 0.05
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.55,
+            "probabilities": {
+              "supported": 0.29,
+              "contradicted": 0.01,
+              "insufficient": 0.7
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1685,
+          "output_tokens": 131
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": null
+    },
+    {
+      "id": "LBEmp50WhtClOvrCp",
+      "kind": "catalog",
+      "sku": "LBEmp50WhtClOvrCp",
+      "proposedSku": "LBEmp50WhtClOvrCp",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/empire-design-50-ml-glass-bottle-white-rectangular-clear-over-the-cap"
+      ],
+      "inputSha256": "640b6a3795cccf10a2656607bc45a43955eb662c6dba7a0adb8f84d8fa2f9540",
+      "expected": null,
+      "deterministicIssues": [],
+      "status": "review_required",
+      "issues": [
+        "mechanism_uncertain",
+        "finish_uncertain"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.98,
+            "probabilities": {
+              "supported": 0.99,
+              "contradicted": 0,
+              "insufficient": 0.01
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.55,
+            "probabilities": {
+              "supported": 0.7,
+              "contradicted": 0.12,
+              "insufficient": 0.18
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.62,
+            "probabilities": {
+              "supported": 0.75,
+              "contradicted": 0.01,
+              "insufficient": 0.24
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1490,
+          "output_tokens": 128
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": null
+    },
+    {
+      "id": "GBEmp100RdcrShnBlk",
+      "kind": "catalog",
+      "sku": "GBEmp100RdcrShnBlk",
+      "proposedSku": "GBEmp100RdcrShnBlk",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/empire-design-100-ml-glass-bottle-reducer-black-shiny-cap"
+      ],
+      "inputSha256": "429ba4fdc6789b2f6619117ea9714aeeb8343d7200f7dc7cdd649ef77d8bd5bd",
+      "expected": null,
+      "deterministicIssues": [],
+      "status": "review_required",
+      "issues": [
+        "mechanism_uncertain",
+        "finish_insufficient"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.99,
+            "probabilities": {
+              "supported": 0.99,
+              "contradicted": 0,
+              "insufficient": 0.01
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.82,
+            "probabilities": {
+              "supported": 0.88,
+              "contradicted": 0.06,
+              "insufficient": 0.06
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.56,
+            "probabilities": {
+              "supported": 0.25,
+              "contradicted": 0.04,
+              "insufficient": 0.71
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1498,
+          "output_tokens": 131
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": null
+    },
+    {
+      "id": "control-wrong-neck",
+      "kind": "control",
+      "sku": "GBCrclFrst50DrpGl",
+      "proposedSku": "Drp18-415Gl",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-gold-collar-cap",
+        "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette"
+      ],
+      "inputSha256": "e4700858e2998b4ae160560afb0d31afbdbb2ac2d6a59bd5283986cac92360a8",
+      "expected": "review",
+      "deterministicIssues": [
+        "neck_mismatch",
+        "component_source_neck_unconfirmed"
+      ],
+      "status": "review_required",
+      "issues": [
+        "neck_mismatch",
+        "component_source_neck_unconfirmed",
+        "mechanism_uncertain",
+        "finish_uncertain"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.99,
+            "probabilities": {
+              "supported": 1,
+              "contradicted": 0,
+              "insufficient": 0
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.14,
+            "probabilities": {
+              "supported": 0.43,
+              "contradicted": 0.37,
+              "insufficient": 0.2
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.32,
+            "probabilities": {
+              "supported": 0.55,
+              "contradicted": 0.07,
+              "insufficient": 0.38
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1690,
+          "output_tokens": 128
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": true
+    },
+    {
+      "id": "control-wrong-source-sku",
+      "kind": "control",
+      "sku": "GBCrclFrst50DrpGl",
+      "proposedSku": "Drp18-415Gl",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-gold-collar-cap",
+        "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette"
+      ],
+      "inputSha256": "8f0f229ea7e1aff4d373812a72ab53475ab15ae633c677adbe9a965e4d48998c",
+      "expected": "review",
+      "deterministicIssues": [
+        "assembly_source_sku_mismatch"
+      ],
+      "status": "review_required",
+      "issues": [
+        "assembly_source_sku_mismatch",
+        "finish_uncertain"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.99,
+            "probabilities": {
+              "supported": 1,
+              "contradicted": 0,
+              "insufficient": 0
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.89,
+            "probabilities": {
+              "supported": 0.92,
+              "contradicted": 0.01,
+              "insufficient": 0.07
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.37,
+            "probabilities": {
+              "supported": 0.58,
+              "contradicted": 0,
+              "insufficient": 0.42
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1685,
+          "output_tokens": 128
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": true
+    },
+    {
+      "id": "control-missing-source",
+      "kind": "control",
+      "sku": "GBCrclFrst50DrpGl",
+      "proposedSku": "Drp18-415Gl",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette"
+      ],
+      "inputSha256": "5e4536e8fe1a0e4d27144820c4e38b7e62d3eaad197def9ce3b6d672be6a9459",
+      "expected": "review",
+      "deterministicIssues": [
+        "missing_assembly_evidence",
+        "assembly_source_neck_unconfirmed"
+      ],
+      "status": "review_required",
+      "issues": [
+        "missing_assembly_evidence",
+        "assembly_source_neck_unconfirmed",
+        "identity_insufficient",
+        "mechanism_uncertain",
+        "finish_insufficient"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.99,
+            "probabilities": {
+              "supported": 0,
+              "contradicted": 0,
+              "insufficient": 1
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.78,
+            "probabilities": {
+              "supported": 0.86,
+              "contradicted": 0.01,
+              "insufficient": 0.13
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.27,
+            "probabilities": {
+              "supported": 0.48,
+              "contradicted": 0.01,
+              "insufficient": 0.51
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1440,
+          "output_tokens": 134
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": true
+    },
+    {
+      "id": "control-assembled-as-loose-part",
+      "kind": "control",
+      "sku": "GBCrclFrst50DrpGl",
+      "proposedSku": "Drp18-415Gl",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-gold-collar-cap",
+        "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette"
+      ],
+      "inputSha256": "5325f371a4a104f6d88bba5be3cdf6094b3b80ddf5f8d396ead7a26a3d70a6dd",
+      "expected": "review",
+      "deterministicIssues": [
+        "assembled_product_used_as_component"
+      ],
+      "status": "review_required",
+      "issues": [
+        "assembled_product_used_as_component",
+        "finish_uncertain"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 1,
+            "probabilities": {
+              "supported": 1,
+              "contradicted": 0,
+              "insufficient": 0
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.94,
+            "probabilities": {
+              "supported": 0.96,
+              "contradicted": 0.01,
+              "insufficient": 0.03
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.39,
+            "probabilities": {
+              "supported": 0.6,
+              "contradicted": 0,
+              "insufficient": 0.4
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1691,
+          "output_tokens": 128
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": true
+    },
+    {
+      "id": "control-tassel-instead-of-dropper",
+      "kind": "control",
+      "sku": "GBCrclFrst50DrpGl",
+      "proposedSku": "CP18-415AnSpTslGl",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-gold-collar-cap",
+        "https://www.bestbottles.com/product/Vintage-antique-bulb-sprayer-gold-Tassel"
+      ],
+      "inputSha256": "4588abdc7501df2d306d73a64096cfb82ac3e799f8e7460c73b6d8b034e88310",
+      "expected": "review",
+      "deterministicIssues": [
+        "component_source_sku_mismatch"
+      ],
+      "status": "review_required",
+      "issues": [
+        "component_source_sku_mismatch",
+        "mechanism_contradicted",
+        "finish_insufficient"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.99,
+            "probabilities": {
+              "supported": 0.99,
+              "contradicted": 0,
+              "insufficient": 0.01
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "contradicted",
+            "confidence": 0.94,
+            "probabilities": {
+              "supported": 0.01,
+              "contradicted": 0.96,
+              "insufficient": 0.03
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.27,
+            "probabilities": {
+              "supported": 0.01,
+              "contradicted": 0.48,
+              "insufficient": 0.51
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1740,
+          "output_tokens": 134
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": true
+    },
+    {
+      "id": "control-silver-instead-of-gold",
+      "kind": "control",
+      "sku": "GBCrclFrst50DrpGl",
+      "proposedSku": "Drp18-415Sl",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-gold-collar-cap",
+        "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-silver-trim-glass-Pipette"
+      ],
+      "inputSha256": "de3682d673615f2fee7a96396177dd5eb675bb22f073584455acb69f3cb845be",
+      "expected": "review",
+      "deterministicIssues": [],
+      "status": "review_required",
+      "issues": [
+        "mechanism_contradicted",
+        "finish_contradicted"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.99,
+            "probabilities": {
+              "supported": 1,
+              "contradicted": 0,
+              "insufficient": 0
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "contradicted",
+            "confidence": 0.25,
+            "probabilities": {
+              "supported": 0.26,
+              "contradicted": 0.5,
+              "insufficient": 0.24
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "contradicted",
+            "confidence": 0.87,
+            "probabilities": {
+              "supported": 0,
+              "contradicted": 0.92,
+              "insufficient": 0.08
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1696,
+          "output_tokens": 134
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": true
+    },
+    {
+      "id": "control-round-instead-of-circle",
+      "kind": "control",
+      "sku": "GBCrclFrst50DrpGl",
+      "proposedSku": "Drp18-415Gl",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-gold-collar-cap",
+        "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette"
+      ],
+      "inputSha256": "f934e29b8589f0ed050b44aa75bf6d9da25f07c64ac1c113e7b2394dcf5a3560",
+      "expected": "review",
+      "deterministicIssues": [],
+      "status": "review_required",
+      "issues": [
+        "finish_uncertain"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.92,
+            "probabilities": {
+              "supported": 0.95,
+              "contradicted": 0.03,
+              "insufficient": 0.02
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.98,
+            "probabilities": {
+              "supported": 0.99,
+              "contradicted": 0,
+              "insufficient": 0.01
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.5,
+            "probabilities": {
+              "supported": 0.67,
+              "contradicted": 0,
+              "insufficient": 0.33
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1633,
+          "output_tokens": 128
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": true
+    },
+    {
+      "id": "control-clear-instead-of-frosted",
+      "kind": "control",
+      "sku": "GBCrclFrst50DrpGl",
+      "proposedSku": "Drp18-415Gl",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-gold-collar-cap",
+        "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette"
+      ],
+      "inputSha256": "14bba52ee0e50bb997687d358875618875e1f1e3858967b5fb3c636299fefd4b",
+      "expected": "review",
+      "deterministicIssues": [],
+      "status": "review_required",
+      "issues": [
+        "identity_uncertain",
+        "finish_uncertain"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.11,
+            "probabilities": {
+              "supported": 0.39999999999999997,
+              "contradicted": 0.37,
+              "insufficient": 0.23
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.93,
+            "probabilities": {
+              "supported": 0.95,
+              "contradicted": 0.01,
+              "insufficient": 0.04
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.41,
+            "probabilities": {
+              "supported": 0.61,
+              "contradicted": 0.01,
+              "insufficient": 0.38
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1688,
+          "output_tokens": 128
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": true
+    },
+    {
+      "id": "control-insufficient-description",
+      "kind": "control",
+      "sku": "GBCrclFrst50DrpGl",
+      "proposedSku": "Drp18-415Gl",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-gold-collar-cap",
+        "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette"
+      ],
+      "inputSha256": "977c4689d435dfabdc5fc8cdfe5a912d80c4a966eadcce2bfc58ffcf3a2f6952",
+      "expected": "review",
+      "deterministicIssues": [],
+      "status": "review_required",
+      "issues": [
+        "identity_insufficient",
+        "mechanism_uncertain",
+        "finish_insufficient"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.97,
+            "probabilities": {
+              "supported": 0.01,
+              "contradicted": 0.01,
+              "insufficient": 0.98
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.64,
+            "probabilities": {
+              "supported": 0.76,
+              "contradicted": 0.01,
+              "insufficient": 0.23
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.29,
+            "probabilities": {
+              "supported": 0.47,
+              "contradicted": 0.01,
+              "insufficient": 0.52
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1629,
+          "output_tokens": 134
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": true
+    },
+    {
+      "id": "control-plastic-instead-of-metal",
+      "kind": "control",
+      "sku": "GBCyl5MtlRollBlkDot",
+      "proposedSku": "CPRoll13-415BlackDot",
+      "sourceUrls": [
+        "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-metal-roller-ball-plug-black-shiny-cap-with-dots",
+        "https://www.bestbottles.com/product/Caps-lids-top-roll-on-bottle-Black-dot-Color-13-415"
+      ],
+      "inputSha256": "9c7c58f0568afa521d4c0b38e04f74fb6f4a1c741cc483966863358d6c5ab701",
+      "expected": "review",
+      "deterministicIssues": [],
+      "status": "review_required",
+      "issues": [
+        "identity_contradicted",
+        "mechanism_contradicted",
+        "finish_uncertain"
+      ],
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "identity": {
+            "type": "choice",
+            "choice": "contradicted",
+            "confidence": 0.33,
+            "probabilities": {
+              "supported": 0.3,
+              "contradicted": 0.55,
+              "insufficient": 0.15
+            }
+          },
+          "mechanism": {
+            "type": "choice",
+            "choice": "contradicted",
+            "confidence": 0.32,
+            "probabilities": {
+              "supported": 0.13,
+              "contradicted": 0.55,
+              "insufficient": 0.32
+            }
+          },
+          "finish": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.35,
+            "probabilities": {
+              "supported": 0.56,
+              "contradicted": 0.05,
+              "insufficient": 0.39
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1675,
+          "output_tokens": 134
+        }
+      },
+      "error": null,
+      "cached": false,
+      "benchmarkAgreement": true
+    }
+  ]
+}

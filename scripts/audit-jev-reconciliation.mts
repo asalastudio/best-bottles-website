@@ -2,6 +2,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { parse } from "dotenv";
+import { reconciliationCsv } from "../src/lib/catalog/reconciliation-csv";
 import { reconciliationCaseSchema, reconciliationResponseSchema, reconciliationVerdict, reconciliationState,
     deterministicFindings, evidenceKey, reviewReconciliation, RECONCILIATION_MODEL } from "../src/lib/catalog/jev-reconciliation";
 
@@ -54,6 +55,8 @@ const report = { checkedAt: new Date().toISOString(), mode: run ? "advisory-live
     controls: { total: controls.length, flagged: controls.filter(r => r.status === "review_required").length,
         falseAlignment: controls.filter(r => r.status === "evidence_aligned").length }, results };
 writeFileSync(resolve(out, "report.json"), JSON.stringify(report, null, 2) + "\n");
+writeFileSync(resolve(out, "catalog-review.csv"), reconciliationCsv(rows, results, report.checkedAt));
+writeFileSync(resolve(out, "stakeholder-findings.csv"), reconciliationCsv(rows, results, report.checkedAt, true));
 const safe = (s: string) => s.replace(/[|\r\n]/g, " ");
 writeFileSync(resolve(out, "report.md"), `# Jev reconciliation pilot\n\n${report.mode}; ${rows.length} cases. Advisory text review only.\n\n| Case | SKU | Result | Findings |\n| --- | --- | --- | --- |\n${results.map(r => `| ${safe(r.id)} | ${safe(r.sku)} | ${r.status} | ${r.issues.join(", ")} |`).join("\n")}\n`);
 if (!run) writeFileSync(resolve(out, "request-preview.json"), JSON.stringify(rows.map(row => ({ id: row.id, state: reconciliationState(row) })), null, 2) + "\n");

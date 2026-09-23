@@ -24,6 +24,7 @@ import {
     isFinishOnlyRequest,
     shouldSuppressCapApplicatorFilter,
 } from "./finishOnlyIntent";
+import { COMPONENT_VOCABULARY } from "../../../convex/componentVocabulary";
 import { applicatorsForUseCase } from "./useCaseApplicators";
 
 export const JEV_ENDPOINT = "https://api.typesafe.ai/v1/systemone";
@@ -130,6 +131,8 @@ export function buildGraceIntentQuestions() {
             instructions: {
                 question: "Which single dispensing applicator or closure type does the customer ask for in `request`?",
                 focus: "Judge only what the customer states or clearly describes. Do not infer an applicator from the liquid they will use. A type the customer rejects (\"not a roller\") is not the one they want. Finish or colour words alone (shiny gold, matte black, pink with dots, gold, silver) are never an applicator — those belong on cap_finish or atomizer_finish, and this question is not_stated.",
+                shared_catalog_terms: COMPONENT_VOCABULARY,
+                vocabulary_scope: "These are search synonyms, not fitment rules. The Sprayer library group includes several mechanisms: use the distinct spray and bulb_spray criteria below. A roller cap is a cap, not the ball itself. Always obtain exact compatibility from the live bottle component lookup.",
             },
             criteria: {
                 rollon: { what: "A rolling ball that applies liquid to skin", examples: ["roll-on", "roller bottle", "rollerball", "ball applicator", "role on (a misheard roll-on)"] },

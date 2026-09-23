@@ -55,6 +55,16 @@ export function deterministicFindings(row: ReconciliationCase): string[] {
     const issues: string[] = [];
     if (!row.assemblySource?.description) issues.push("missing_assembly_evidence");
     if (row.assemblySource && row.assemblySource.itemSku !== row.bottle.sku) issues.push("assembly_source_sku_mismatch");
+    // Public descriptions spell out these literal fields. Do not ask the model
+    // to decide whether Circle means Round, or silently reconcile 5 vs 5.5 mL.
+    const description = row.assemblySource?.description ?? "";
+    const family = description.match(/\b(Cylinder|Circle|Round|Empire)\s+design\b/i)?.[1];
+    if (family && family.toLowerCase() !== row.bottle.family.toLowerCase()) issues.push("source_family_mismatch");
+    const capacity = description.match(/\b(\d+(?:\.\d+)?)\s*ml\b/i)?.[1];
+    if (capacity && Number(capacity) !== row.bottle.capacityMl) issues.push("source_capacity_mismatch");
+    const glass = description.match(/\b(clear|frosted|amber|cobalt(?: blue)?)\s+glass\b/i)?.[1];
+    const normalizeGlass = (value: string) => value.toLowerCase().replace(/ blue$/, "");
+    if (glass && normalizeGlass(glass) !== normalizeGlass(row.bottle.glass)) issues.push("source_glass_mismatch");
     if (!row.bottle.neck || !row.proposed.neck) issues.push("missing_neck");
     else if (row.bottle.neck !== row.proposed.neck) issues.push("neck_mismatch");
     if (!row.assemblySource?.neck || row.assemblySource.neck !== row.bottle.neck) issues.push("assembly_source_neck_unconfirmed");

@@ -4,7 +4,7 @@ import { normalizeComponentsByType, type NormalizedComponent } from "./component
 import { reviewedCatalogLink } from "./catalogComponentEvidence";
 export { reviewedCatalogLink } from "./catalogComponentEvidence";
 
-type Bottle = Pick<Doc<"products">, "family" | "capacityMl" | "color" | "neckThreadSize" | "category" | "shape" | "websiteSku" | "components" | "graceSku" | "applicator" | "capColor">;
+type Bottle = Pick<Doc<"products">, "family" | "capacityMl" | "color" | "neckThreadSize" | "category" | "shape" | "websiteSku" | "components" | "graceSku" | "applicator" | "capColor" | "reviewedComponentCorrections">;
 const text = (value: string | null | undefined) => (value ?? "").trim().toLowerCase();
 
 /** A component list belongs to the physical bottle, not one finish SKU.
@@ -71,5 +71,18 @@ export async function loadCatalogComponentPool(ctx: QueryCtx, bottle: Doc<"produ
     if (siblings.length > 1200) throw new Error("Cylinder component source query truncated");
     const link = reviewedCatalogLink(bottle);
     const part = link ? await ctx.db.query("products").withIndex("by_graceSku", q => q.eq("graceSku", link.componentGraceSku)).unique() : null;
-    return addReviewedCatalogComponent(bottle, catalogComponentPool(bottle, siblings), part);
+    return applyStaffComponentCorrections(bottle, addReviewedCatalogComponent(bottle, catalogComponentPool(bottle, siblings), part));
+}
+
+/** Exact SKU-scoped staff corrections run after legacy/source supplementation so
+ * an old static link or sibling donor cannot silently reintroduce a replaced part. */
+export function applyStaffComponentCorrections(bottle: Bottle, pool: ReturnType<typeof catalogComponentPool>) {
+    if (!bottle.reviewedComponentCorrections?.length) return pool;
+    const grouped = Object.fromEntries(Object.entries(pool.grouped).map(([kind, parts]) => [kind, [...parts]]));
+    for (const correction of bottle.reviewedComponentCorrections) {
+        for (const kind of Object.keys(grouped)) grouped[kind] = grouped[kind].filter(part => part.graceSku !== correction.replaceGraceSku && part.graceSku !== correction.componentGraceSku);
+        (grouped[correction.componentType] ??= []).push({ graceSku: correction.componentGraceSku, websiteSku: correction.componentSku,
+            itemName: correction.itemName, imageUrl: null, webPrice1pc: null, webPrice12pc: null, capColor: null, stockStatus: null });
+    }
+    return { grouped, sources: [...pool.sources, ...bottle.reviewedComponentCorrections.map(c => c.sourceUrl)] };
 }

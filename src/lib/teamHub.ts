@@ -91,6 +91,13 @@ export function buildTeamHubTools({ shopifyAdminHref, madisonStudioHref }: TeamH
             section: "catalog",
         },
         {
+            name: "Components Library",
+            href: "/team/components",
+            description: "Review bottle and component matches, inspect catalog evidence, and record shared clarifications or proposed corrections.",
+            badge: "Review",
+            section: "catalog",
+        },
+        {
             name: "Sanity Studio",
             href: "/studio",
             description: "Edit homepage, journal articles, and product copy. Click any text in Presentation to edit it live.",
