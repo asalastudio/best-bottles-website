@@ -341,7 +341,7 @@
   inset:0 0 auto;
   height:max(0px,var(--stone-offset));
   /* Reflect only the empty top strip to meet the lowered image without a seam. */
-  background:url('/assets/homepage/diva-circle-hero-original.png') center top / 100% auto no-repeat;
+  background:url('/assets/homepage/diva-circle-hero-ivory-marble.png') center top / 100% auto no-repeat;
   transform:scaleY(-1);
 }
 .stoneImage {
