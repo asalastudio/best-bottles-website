@@ -323,3 +323,88 @@
   .families .edgeControls,
   .families .railControls{display:none}
 }
+
+/* Selected stone photograph: keep the full composition and its left copy space. */
+.hero[data-scene="diva-circle-stone"] {
+  height:calc(100vw * 941 / 1672 - 150px);
+  aspect-ratio:auto;
+  background:#e8d6bc;
+}
+.stoneArt {
+  --stone-offset:calc(clamp(40px,4vw,64px) - 100px);
+  position:absolute;
+  inset:0;
+}
+.stoneArt::before {
+  content:"";
+  position:absolute;
+  inset:0 0 auto;
+  height:max(0px,var(--stone-offset));
+  /* Reflect only the empty top strip to meet the lowered image without a seam. */
+  background:url('/assets/homepage/diva-circle-hero-original.png') center top / 100% auto no-repeat;
+  transform:scaleY(-1);
+}
+.stoneImage {
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:none;
+  transform:translateY(var(--stone-offset));
+}
+.hero[data-scene="diva-circle-stone"] .heroCopy {
+  position:absolute;
+  top:50%;
+  left:6%;
+  transform:translateY(-50%);
+  width:38%;
+  max-width:620px;
+  padding:0;
+  margin:0;
+  color:#222220;
+  text-shadow:none;
+}
+.hero[data-scene="diva-circle-stone"] .heroCopy h1 {
+  font-size:clamp(30px,3.6vw,64px);
+  line-height:1.1;
+  letter-spacing:.055em;
+  max-width:none;
+  text-shadow:none;
+}
+.hero[data-scene="diva-circle-stone"] .heroCopy p {
+  font-size:clamp(14px,1.4vw,22px);
+  line-height:1.45;
+  max-width:400px;
+  margin:24px 0;
+  color:#403a33;
+  text-shadow:none;
+}
+.hero[data-scene="diva-circle-stone"] .primary {
+  background:#1d1d1f;color:#fff;border-color:#1d1d1f;text-shadow:none;
+}
+.hero[data-scene="diva-circle-stone"] .secondary {
+  background:transparent;color:#35322e;border-color:#35322e;text-shadow:none;
+}
+/* The desktop crop would cut the sprayer and crowd the copy on tablets. */
+@media(min-width:641px) and (max-width:1100px) {
+  .hero[data-scene="diva-circle-stone"] {height:calc(100vw * 941 / 1672)}
+  .hero[data-scene="diva-circle-stone"] .stoneArt {--stone-offset:0px}
+}
+@media(max-width:640px) {
+  .hero[data-scene="diva-circle-stone"] {display:flex;flex-direction:column;aspect-ratio:auto;height:auto}
+  .hero[data-scene="diva-circle-stone"] .stoneArt {position:relative;inset:auto;width:100%;aspect-ratio:1.35}
+  .hero[data-scene="diva-circle-stone"] .stoneArt {--stone-offset:24px;overflow:hidden}
+  .hero[data-scene="diva-circle-stone"] .stoneArt::before {background-position:right top;background-size:auto calc(100vw / 1.35)}
+  .hero[data-scene="diva-circle-stone"] .stoneImage {
+    height:100%;object-fit:cover;object-position:right center;
+    transform:translateY(var(--stone-offset));
+  }
+  .hero[data-scene="diva-circle-stone"] .heroCopy {
+    position:relative;top:auto;left:auto;transform:none;order:0;
+    width:100%;max-width:none;padding:24px 22px 28px;
+  }
+  .hero[data-scene="diva-circle-stone"] .heroCopy h1 {font-size:30px}
+  .hero[data-scene="diva-circle-stone"] .heroCopy p {font-size:14px;margin:14px 0 20px}
+  .hero[data-scene="diva-circle-stone"] .buttons {flex-direction:row;gap:10px}
+  .hero[data-scene="diva-circle-stone"] .primary,
+  .hero[data-scene="diva-circle-stone"] .secondary {font-size:11px;padding:12px 16px;min-height:44px}
+}
