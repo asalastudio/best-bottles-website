@@ -100,19 +100,27 @@ it("still draws the tile once the selected bottle's full kit replaces the stand-
     expect(html).toContain("https://blob.example/cylinder-master/body.webp");
 });
 
-it("does not CSS-zoom a 100 ml thumbnail, which clipped the neck after the crop", () => {
+it.each([
+    { view: "thumbnail", thumbnail: true, expanded: false, scale: 1.3392 },
+    { view: "normal stage", thumbnail: false, expanded: false, scale: 1.24 },
+    { view: "expanded stage", thumbnail: false, expanded: true, scale: 1.24 },
+])("does not apply a second CSS zoom after fitting the $view", ({ thumbnail, expanded, scale }) => {
     const [slim] = slimBuilderBodies([cylinder50]);
     const tile = clearBodyPreview(slim!);
     const el = document.createElement("div");
     const root = createRoot(el);
     vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
     try {
-        act(() => root.render(<BuilderImage config={tile} parts={previewParts(tile, "body")} label="100 ml Cylinder bottle" scale={1.24} thumbnail placeholder />));
+        act(() => root.render(<BuilderImage config={tile} parts={previewParts(tile, "body")} label="100 ml Cylinder bottle" scale={scale} thumbnail={thumbnail} expanded={expanded} placeholder />));
         const html = el.innerHTML;
         expect(html).toContain("data-chooser-img");
-        expect(html).not.toContain("scale(1.24)");
-        expect(html).not.toContain("scale(1.3392)");
         const img = el.querySelector("img") as HTMLImageElement;
+        // A zoom anywhere in this subtree would enlarge an already-fitted
+        // source canvas and could push the neck out of the viewport. This also
+        // catches derived factors such as scale * .88, not just literal values.
+        for (let node: HTMLElement | null = img; node && node !== el; node = node.parentElement) {
+            expect(node.style.transform).toBe("");
+        }
         expect(parseFloat(img.style.top)).toBeLessThanOrEqual(0);
     } finally {
         act(() => root.unmount());
