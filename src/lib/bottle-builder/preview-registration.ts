@@ -112,8 +112,8 @@ export function registerVintagePreview(
     if (!reference || config.id === reference.id
         || config.bodyId !== reference.bodyId || config.family !== reference.family
         || config.capacityMl !== reference.capacityMl || config.color !== reference.color
-        || config.neck !== reference.neck || config.kit?.completeness !== "full"
-        || referenceKit?.completeness !== "full") return null;
+        || config.neck !== reference.neck || !config.kit
+        || !referenceKit) return null;
     const body = parts.find(part => part.slot === "body");
     const fixedBody = referenceKit.parts.find(part => part.slot === "body");
     if (!body || !fixedBody) return null;
@@ -122,6 +122,9 @@ export function registerVintagePreview(
     const sourceWidth = source.right - source.left;
     const targetWidth = target.right - target.left;
     if (sourceWidth <= 0 || targetWidth <= 0) return null;
+    // Cap-split kits keep their photographed glass and receive only the same
+    // uniform transform as the hardware. Never replace a partial body with a
+    // bare layer that could expose pixels its source closure covered.
     // Neck pixels can be cropped differently beneath each photographed collar.
     // Glass diameter and baseline stay physical landmarks across those crops.
     const scale = targetWidth / sourceWidth;
@@ -134,7 +137,7 @@ export function registerVintagePreview(
         // trustworthy for this: the 2026-09-16 Empire kits all record 979 while their
         // glass ends at 1060, which stood a sidecar overcap 80 px above the ground.
         groundY: config.kit.anchors.baselineY * scale + y,
-        layers: orderRegisteredLayers(parts.map(part => part.slot === "body"
+        layers: orderRegisteredLayers(parts.map(part => part.slot === "body" && config.kit!.completeness === "full" && referenceKit.completeness === "full"
             ? { part: fixedBody, bounds: fixedBody.bounds, transform: undefined }
             : { part, bounds: { left: part.bounds.left * scale + x, top: part.bounds.top * scale + y,
                 right: part.bounds.right * scale + x, bottom: part.bounds.bottom * scale + y },

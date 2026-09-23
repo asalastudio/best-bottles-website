@@ -1,5 +1,18 @@
 # Validation — 2026-09-22
 
+## Framing follow-up
+
+- 98 targeted tests passed across nine files; the 68 PDP tests were rerun after the final Empire cap-toggle correction and passed.
+- The final production Webpack build passed, including TypeScript and all 68 static pages.
+- 16 new production-build browser checks passed: four PDPs at 1440 × 900, 1280 × 650 and 390 × 844; plus Circle 100 mL Clear/Frosted × Gold/Matte Silver in Builder. All photo canvases retained 10:11, paired cap toggles kept their zoom, and all four Circle Builder choices measured **224.16 px glass width**. No page errors or broken visible PDP images.
+- Mobile Builder reached review at 390 × 844. The final screenshot waits for every SVG image to decode; the bottle and integrated gold hose/tassel are visible. No order submitted.
+- Saved-audit bounds checks: **4,128 Builder views** from 688 kitted configurations, and **1,646 PDP cap states** from 823 kits. Zero clipped bounds, zero changing Builder cameras within a body/material, and consistent glass width across all material colors in each body group. Nine local Circle role repairs are applied to this audit. Missing kits and incorrectly classified source layers remain separate work.
+- Desktop artwork inventory adds exact-name source candidates for 30 SKUs absent from the earlier master-only match. These candidates still require layer and visual verification.
+
+Evidence: `framing-audit.json`, `framing-browser-checks.json`, `framing-test-results.txt`, `mobile-builder-check.json`, and `desktop-artwork-inventory.json`. See the README for the distinction between safe display framing and completed source/component repairs.
+
+## Initial component repair batch
+
 - **210 tests passed in 20 files**, covering the repair transaction, PDP framing, mobile PDP models, Builder selection, source links, payloads and component registration. Full output: `test-results.txt`.
 - **TypeScript and production Webpack build passed**. Final build compiled successfully in 44 seconds, completed TypeScript in 28.6 seconds and generated all 68 static pages. The local build required the existing Clerk runtime configuration to serve public routes; the ignored local environment was configured before final browser checks.
 - **18 production-build browser checks passed**: nine exact Circle Builder combinations, four family PDPs at 1440px and 390px, and one component-only PDP. Zero page errors and zero broken visible images in the final run. See `browser-checks.json`.

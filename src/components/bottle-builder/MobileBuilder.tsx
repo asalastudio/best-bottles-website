@@ -167,7 +167,7 @@ export default function MobileBuilder(p: Props) {
     function closeFilters() { filters.current?.close(); setFilterOpen(false); filterTrigger.current?.focus(); }
     function closePreview() { setPreviewZoom(1); }
     const clearFilters = () => { p.onFilter("size", ""); p.onFilter("neck", ""); p.onFilter("application", ""); };
-    const previewImage = (expandedView = false) => preview && <BuilderImage config={preview} parts={parts} stage={previewStage} expanded={expandedView} scale={/Vintage|Tassel/.test(fitment ?? "") ? 1 : 1.18} showCover={p.showCover} bodyReference={bodyReference}
+    const previewImage = (expandedView = false) => preview && <BuilderImage config={preview} parts={parts} stage={previewStage} expanded={expandedView} showCover={p.showCover} bodyReference={bodyReference} frameConfigurations={body?.configurations}
         label={`${body?.capacityMl} ml ${stage < 2 ? preview.color : color} ${body?.profileLabel}${stage >= 2 && fitment ? ` with ${displayApplicatorName(fitment)}` : " bottle"}${stage >= 3 && closure ? `, ${closure}` : ""}`} />;
 
     return <div ref={root} className={styles.mobile} data-mobile-builder data-stage={stage} data-keyboard={keyboardOpen} data-large-text={largeText} data-confirm={Boolean(p.lastAdded)} aria-busy={busy}

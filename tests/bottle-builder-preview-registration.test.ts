@@ -76,7 +76,12 @@ describe('vintage bottle registration', () => {
         expect(roller).not.toBeNull();
         expect(roller!.layers.find(layer => layer.part.slot === 'body')!.part).toBe(reference.kit!.parts.find(part => part.slot === 'body'));
         expect(registerVintagePreview(reference, reference.kit!.parts, reference)).toBeNull();
-        expect(registerVintagePreview({ ...source, kit: { ...source.kit!, completeness: 'capSplit' } }, source.kit!.parts, reference)).toBeNull();
+        const partial = registerVintagePreview({ ...source, kit: { ...source.kit!, completeness: 'capSplit' } }, source.kit!.parts, reference)!;
+        // A cap-split kit keeps its own pixels; only the complete assembly is
+        // uniformly aligned to the reference width and ground.
+        expect(partial.layers[0].part).toBe(source.kit!.parts[0]);
+        expect(partial.layers[0].bounds).toEqual(reference.kit!.parts[0].bounds);
+        expect(partial.layers[0].transform).toBe(partial.layers[1].transform);
     });
 });
 

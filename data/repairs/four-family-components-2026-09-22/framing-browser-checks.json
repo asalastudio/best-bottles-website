@@ -1,0 +1,211 @@
+{
+  "checkedAt": "2026-09-23T00:55:39.615Z",
+  "base": "http://localhost:3056",
+  "checks": [
+    {
+      "surface": "pdp",
+      "slug": "circle-15ml-clear-13-415",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "http": 200,
+      "width": 587,
+      "height": 646,
+      "transform": "matrix(0.713, 0, 0, 0.713, 84.2726, 92.701)",
+      "broken": [],
+      "pass": true
+    },
+    {
+      "surface": "pdp",
+      "slug": "circle-100ml-clear-18-415-perfumespray",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "http": 200,
+      "width": 587,
+      "height": 646,
+      "transform": "matrix(0.87216, 0, 0, 0.87216, 37.538, 41.2923)",
+      "broken": [],
+      "pass": true
+    },
+    {
+      "surface": "pdp",
+      "slug": "round-78ml-frosted-18-415-antiquespray",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "http": 200,
+      "width": 587,
+      "height": 646,
+      "transform": "matrix(0.95, 0, 0, 0.95, 14.6816, 16.15)",
+      "broken": [],
+      "pass": true
+    },
+    {
+      "surface": "pdp",
+      "slug": "empire-50ml-clear-18-415-perfumespray",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "http": 200,
+      "width": 587,
+      "height": 646,
+      "transform": "matrix(0.88, 0, 0, 0.88, -29.3633, 39.0184)",
+      "broken": [],
+      "pass": true
+    },
+    {
+      "surface": "pdp",
+      "slug": "circle-15ml-clear-13-415",
+      "viewport": {
+        "width": 1280,
+        "height": 650
+      },
+      "http": 200,
+      "width": 424,
+      "height": 466,
+      "transform": "matrix(0.713, 0, 0, 0.713, 60.7902, 66.871)",
+      "broken": [],
+      "pass": true
+    },
+    {
+      "surface": "pdp",
+      "slug": "circle-100ml-clear-18-415-perfumespray",
+      "viewport": {
+        "width": 1280,
+        "height": 650
+      },
+      "http": 200,
+      "width": 424,
+      "height": 466,
+      "transform": "matrix(0.87216, 0, 0, 0.87216, 27.0781, 29.7867)",
+      "broken": [],
+      "pass": true
+    },
+    {
+      "surface": "pdp",
+      "slug": "round-78ml-frosted-18-415-antiquespray",
+      "viewport": {
+        "width": 1280,
+        "height": 650
+      },
+      "http": 200,
+      "width": 424,
+      "height": 466,
+      "transform": "matrix(0.95, 0, 0, 0.95, 10.5906, 11.65)",
+      "broken": [],
+      "pass": true
+    },
+    {
+      "surface": "pdp",
+      "slug": "empire-50ml-clear-18-415-perfumespray",
+      "viewport": {
+        "width": 1280,
+        "height": 650
+      },
+      "http": 200,
+      "width": 424,
+      "height": 466,
+      "transform": "matrix(0.88, 0, 0, 0.88, -21.1812, 28.1464)",
+      "broken": [],
+      "pass": true
+    },
+    {
+      "surface": "pdp",
+      "slug": "circle-15ml-clear-13-415",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "http": 200,
+      "width": 322,
+      "height": 354,
+      "transform": "matrix(0.713, 0, 0, 0.713, 46.2406, 50.8663)",
+      "broken": [],
+      "pass": true
+    },
+    {
+      "surface": "pdp",
+      "slug": "circle-100ml-clear-18-415-perfumespray",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "http": 200,
+      "width": 322,
+      "height": 354,
+      "transform": "matrix(0.87216, 0, 0, 0.87216, 20.5972, 22.6576)",
+      "broken": [],
+      "pass": true
+    },
+    {
+      "surface": "pdp",
+      "slug": "round-78ml-frosted-18-415-antiquespray",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "http": 200,
+      "width": 322,
+      "height": 354,
+      "transform": "matrix(0.95, 0, 0, 0.95, 8.05586, 8.86172)",
+      "broken": [],
+      "pass": true
+    },
+    {
+      "surface": "pdp",
+      "slug": "empire-50ml-clear-18-415-perfumespray",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "http": 200,
+      "width": 322,
+      "height": 354,
+      "transform": "matrix(0.88, 0, 0, 0.88, -16.1117, 21.4099)",
+      "broken": [],
+      "pass": true
+    },
+    {
+      "surface": "builder",
+      "color": "Clear",
+      "finish": "Gold",
+      "viewBox": "-349.8391530944625 -134.35726872246687 1352.8611795261806 1354.6409368061638",
+      "bodyWidth": 224.15828398087842,
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/e2430a38ea8ed2d7971af09acc3b98dfc7646a7a09cc309c544d8b3a05990879.body.webp",
+      "pass": true
+    },
+    {
+      "surface": "builder",
+      "color": "Clear",
+      "finish": "Matte Silver",
+      "viewBox": "-349.8391530944625 -134.35726872246687 1352.8611795261806 1354.6409368061638",
+      "bodyWidth": 224.15828398087842,
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/e2430a38ea8ed2d7971af09acc3b98dfc7646a7a09cc309c544d8b3a05990879.body.webp",
+      "pass": true
+    },
+    {
+      "surface": "builder",
+      "color": "Frosted",
+      "finish": "Gold",
+      "viewBox": "-337.0457980456026 -123.89999999999986 1341.0457980456026 1342.8100115938828",
+      "bodyWidth": 224.15828513767815,
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/697e7f2b335aa5d3f7325e2ffea873992a0a64d4d9967b7f5642aac9246802c8.body.webp",
+      "pass": true
+    },
+    {
+      "surface": "builder",
+      "color": "Frosted",
+      "finish": "Matte Silver",
+      "viewBox": "-337.0457980456026 -123.89999999999986 1341.0457980456026 1342.8100115938828",
+      "bodyWidth": 224.15828513767815,
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/697e7f2b335aa5d3f7325e2ffea873992a0a64d4d9967b7f5642aac9246802c8.body.webp",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

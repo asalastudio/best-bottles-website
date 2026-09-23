@@ -145,10 +145,11 @@ export type MobileProductViewerProps = {
     family?: string | null;
     capacityMl?: number | null;
     color?: string | null;
+    hasCapOffPlate?: boolean;
 };
 
 export default function MobileProductViewer({
-    open, onClose, title, eyebrow, viewMode, viewModes, onViewModeChange, plateUrl, kitParts, fallbackImageUrl, alt, onPlateError, onRestoreFocus, family, capacityMl, color,
+    open, onClose, title, eyebrow, viewMode, viewModes, onViewModeChange, plateUrl, kitParts, fallbackImageUrl, alt, onPlateError, onRestoreFocus, family, capacityMl, color, hasCapOffPlate,
 }: MobileProductViewerProps) {
     const { surfaceRef, transform, reset, handlers } = usePinchZoom();
     const closeRef = useRef<HTMLButtonElement>(null);
@@ -244,7 +245,7 @@ export default function MobileProductViewer({
                     >
                         <div className="absolute inset-0 will-change-transform" style={surfaceStyle}>
                             {hasStack ? (
-                                <PaperDollLayers plateUrl={plateUrl} kitParts={kitParts} alt={alt} onPlateError={onPlateError} className="[&_img]:pointer-events-none" family={family} capacityMl={capacityMl} color={color} view={viewMode === "capOff" ? "capOff" : "assembled"} />
+                                <PaperDollLayers plateUrl={plateUrl} kitParts={kitParts} alt={alt} onPlateError={onPlateError} className="[&_img]:pointer-events-none" family={family} capacityMl={capacityMl} color={color} hasCapOffPlate={hasCapOffPlate} view={viewMode === "capOff" ? "capOff" : "assembled"} />
                             ) : fallbackImageUrl ? (
                                 // eslint-disable-next-line @next/next/no-img-element
                                 <img src={fallbackImageUrl} alt={alt} draggable={false} className="pointer-events-none absolute inset-0 h-full w-full object-contain object-center" />

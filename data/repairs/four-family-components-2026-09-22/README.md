@@ -39,6 +39,48 @@ URLs and source-master candidates that support each correction. Recipes reject
 changed source images, anchors, catalog identity, membership or duplicate rows.
 Applying twice is a no-op. The transaction validates every item before writing.
 
+## Framing follow-up
+
+PDP and Build Your Bottle framing is included in this branch. PDP layer offsets
+now use an actual 1000 × 1100 photo canvas even when a short desktop viewport
+constrains the surrounding panel. Catalog-photo fallback uses contain, paired
+cap-on/off plates share a display scale, and kits reserve room for both cap
+states. The photographic frame ignores non-removable parts' exploded offsets.
+When no separate cap-off raster exists, the same decoded kit paints both cap
+states instead of switching between the kit and a differently framed plate.
+
+Builder keeps one camera for the selected physical body across fitments, finish
+choices, material colors and cap states. The envelope includes seated hardware
+and grounded overcaps from the offered configurations. Comparing envelopes in
+glass-width units makes clear/frosted/colored photographs the same displayed
+width while preserving each material's own glass. Cap-split kits retain all
+source pixels and receive a uniform whole-assembly transform; no stretching,
+new parts, or cross-material glass substitution is introduced.
+
+`framing-audit.json` records 4,128 Builder views across 688 kitted configurations
+and 1,646 PDP cap states across 823 kits from the saved production audit, with
+nine locally repaired Circle roles applied. All recorded bounds fit their safe
+frame. This is not proof for the 76 Builder configurations and 102 PDP SKUs
+without served kits, nor a new approval of wrongly labelled or incomplete kits.
+Legacy flat photographs retain their capacity scale; per-source body measurement
+is still required where different photographs have different internal crops.
+The approved 2080 × 2288 hero images and 91% hero baseline remain unchanged.
+
+## Desktop source inventory
+
+The Desktop source folder `/Users/jordanrichter/Desktop/Best Bottles` and
+`/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master`
+are separate directories. Both are now explicitly tracked. The Desktop tree
+contains 1,139 image/artwork files and exact-name candidates for 39 in-scope
+SKUs, including **30 absent from the original master-only filename matches**:
+Circle 15 mL, clear/cobalt 5 mL Cylinder, and clear/frosted Tall 9 mL short caps.
+
+See `desktop-artwork-inventory.json` for every candidate path. Capped and uncapped
+versions are kept distinct. These matches locate resources; they do not approve
+layer roles. A direct PSD header read stalled and was stopped, so this pass only
+records paths and file sizes; it does not claim the newly found PSD layers have
+been decoded or visually validated. No master or Desktop original was changed.
+
 ## Evidence
 
 - Fresh production read: 29 exact products, eight existing/proposed group

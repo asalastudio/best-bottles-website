@@ -141,3 +141,28 @@ describe("scale inversions and overflow", () => {
         expect(pdpPublishedPlateScale("Elegant", 100, "clear")).toBe(0.95);
     });
 });
+
+it("reserves identical framing for assembled and sidecar views without using the sprayer's exploded offset", () => {
+    const parts = [
+        {slot:"body",bounds:{left:300,top:300,right:700,bottom:1050},exploded:{dx:0,dy:0}},
+        {slot:"sprayer",bounds:{left:450,top:100,right:550,bottom:310},exploded:{dx:0,dy:-2000}},
+        {slot:"overcap",bounds:{left:440,top:80,right:560,bottom:320},exploded:{dx:300,dy:-2800}},
+    ];
+    const on=pdpStageFrame({view:"assembled",parts});
+    const parked=withDetachedCapOffsets(parts);
+    const off=pdpStageFrame({view:"capOff",parts:parked});
+    expect(off).toEqual(on);
+    expect(on.scale).toBeGreaterThan(.9);
+    for (const part of parked) {
+        const delta=part.slot==="overcap"?part.exploded:{dx:0,dy:0};
+        expect((part.bounds.left+delta.dx)*on.scale+on.x*10).toBeGreaterThanOrEqual(40);
+        expect((part.bounds.right+delta.dx)*on.scale+on.x*10).toBeLessThanOrEqual(960);
+        expect((part.bounds.top+delta.dy)*on.scale+on.y*11).toBeGreaterThanOrEqual(44);
+        expect((part.bounds.bottom+delta.dy)*on.scale+on.y*11).toBeLessThanOrEqual(1056);
+    }
+});
+
+it("does not zoom a paired photograph when the cap is toggled", () => {
+    const common={family:"Circle",capacityMl:100,hasCapOffPlate:true};
+    expect(pdpStageFrame({...common,view:"assembled"})).toEqual(pdpStageFrame({...common,view:"capOff"}));
+});

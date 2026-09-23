@@ -1,0 +1,3009 @@
+{
+  "checkedAt": "2026-09-23T00:53:49.270Z",
+  "source": "../four-family-pdp-components-2026-09-22/data/audits/four-family-pdp-components-2026-09-22",
+  "scope": "Saved production audit plus nine locally corrected Circle kits. Bounds checks do not replace source or visual approval.",
+  "builder": {
+    "bodies": 24,
+    "views": 4128,
+    "clipped": 0,
+    "unstableCameras": 0,
+    "results": [
+      {
+        "bodyId": "cylinder-5ml|13-415|Glass Bottle",
+        "color": "Clear",
+        "views": 24,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "GBCyl5Gl",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCyl5Sl",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCyl5BlkSht",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCyl5WhtSht",
+            "bodyWidth": 0.27409046887873834
+          }
+        ]
+      },
+      {
+        "bodyId": "cylinder-5ml|13-415|Glass Bottle",
+        "color": "Cobalt Blue",
+        "views": 210,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 5.551115123125783e-17,
+        "differingSources": [
+          {
+            "sku": "GBCylBlu5SpryBluMatt",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5SpryCuMatt",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5SpryGlMatt",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5SprySlMatt",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5SpryBlkSh",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5SpryGlSh",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5SprySlSh",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5MtlRollBlkDot",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5MtlRollCuMatt",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5MtlRollGlMatt",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5MtlRollSlMatt",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5MtlRollPinkDot",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5MtlRollBlkSh",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5MtlRollGlSh",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5MtlRollSlSh",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5MtlRollSlDot",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5RollBlkDot",
+            "bodyWidth": 0.2740904688787384
+          },
+          {
+            "sku": "GBCylBlu5RollCuMatt",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5RollGlMatt",
+            "bodyWidth": 0.2740904688787384
+          },
+          {
+            "sku": "GBCylBlu5RollSlMatt",
+            "bodyWidth": 0.2740904688787384
+          },
+          {
+            "sku": "GBCylBlu5RollPinkDot",
+            "bodyWidth": 0.2740904688787384
+          },
+          {
+            "sku": "GBCylBlu5RollBlkSh",
+            "bodyWidth": 0.2740904688787384
+          },
+          {
+            "sku": "GBCylBlu5RollGlSh",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5RollSlSh",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5RollSlDot",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5Gl",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5Sl",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5CuSht",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5GlMattSht",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5SlMattSht",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5BlkSht",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5WhtSht",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5BlkShSht",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5GlSht",
+            "bodyWidth": 0.27409046887873834
+          },
+          {
+            "sku": "GBCylBlu5SlSht",
+            "bodyWidth": 0.27409046887873834
+          }
+        ]
+      },
+      {
+        "bodyId": "cylinder-9ml|13-415|Glass Bottle",
+        "color": "Clear",
+        "views": 180,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "GBTallCyl9SpryBlkMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9SpryBluMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9SpryCuMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9SpryGlMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9SprySlMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9SpryBlkSh",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9SpryGlSh",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9SprySlSh",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9MtlRollBlkDot",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9MtlRollCuMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9MtlRollGlMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9MtlRollSlMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9MtlRollPinkDot",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9MtlRollBlkSh",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9MtlRollGlSh",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9MtlRollSlSh",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9MtlRollSlDot",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9RollBlkDot",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9RollCuMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9RollGlMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9RollSlMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9RollPinkDot",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9RollBlkSh",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9RollGlSh",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9RollSlSh",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9RollSlDot",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9Gl",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9BlkSht",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9WhtSht",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCyl9Sl",
+            "bodyWidth": 0.15685019206145967
+          }
+        ]
+      },
+      {
+        "bodyId": "cylinder-9ml|13-415|Glass Bottle",
+        "color": "Frosted",
+        "views": 180,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 5.551115123125783e-17,
+        "differingSources": [
+          {
+            "sku": "GBTallCylFrst9SpryCuMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9SpryBlkMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9SpryBluMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9SpryGlMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9SprySlMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9SpryBlkSh",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9SpryGlSh",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9SprySlSh",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9MtlRollBlkDot",
+            "bodyWidth": 0.15685019206145973
+          },
+          {
+            "sku": "GBTallCylFrst9MtlRollCuMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9MtlRollGlMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9MtlRollSlMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9MtlRollPinkDot",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9MtlRollBlkSh",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9MtlRollGlSh",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9MtlRollSlSh",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9MtlRollSlDot",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9RollBlkDot",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9RollCuMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9RollGlMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9RollSlMatt",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9RollPinkDot",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9RollBlkSh",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9RollGlSh",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9RollSlSh",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9RollSlDot",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9Gl",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9Sl",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9BlkSht",
+            "bodyWidth": 0.15685019206145967
+          },
+          {
+            "sku": "GBTallCylFrst9WhtSht",
+            "bodyWidth": 0.15685019206145967
+          }
+        ]
+      },
+      {
+        "bodyId": "cylinder-9ml|17-415|Glass Bottle",
+        "color": "Clear",
+        "views": 150,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "GBCyl9SpryBlk",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9SpryGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9SpryMattSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9SpryTur",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "LBCyl9LtnBlk",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "LBCyl9LtnGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "LBCyl9LtnMtSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9MtlRollMattSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9MtlRollBlkDot",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9MtlRollMattCu",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9MtlRollMattGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9MtlRollPnkDot",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9MtlRollShBlk",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9MtlRollShnGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9MtlRollShnSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9MtlRollSlDot",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9MtlRollWht",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9RollMattCu",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9RollMattGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9RollMattSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9RollShBlk",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9RollShnGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9RollShnSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9RollSlDot",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCyl9RollWht",
+            "bodyWidth": 0.2376167395673247
+          }
+        ]
+      },
+      {
+        "bodyId": "cylinder-9ml|17-415|Glass Bottle",
+        "color": "Amber",
+        "views": 54,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "GBCylAmb9SpryBlk",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylAmb9SpryGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylAmb9SpryMattSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylAmb9SpryRd",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylAmb9SpryShSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylAmb9SpryTur",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "LBCylAmb9LtnBlk",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "LBCylAmb9LtnGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "LBCylAmb9LtnMtSl",
+            "bodyWidth": 0.2376167395673247
+          }
+        ]
+      },
+      {
+        "bodyId": "cylinder-9ml|17-415|Glass Bottle",
+        "color": "Cobalt Blue",
+        "views": 162,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "GBCylBlu9SpryBlk",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9SpryGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9SpryMattSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9SpryRd",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9SpryShSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9SpryTur",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "LBCylBlu9LtnBlk",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "LBCylBlu9LtnGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "LBCylBlu9LtnMattSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9MtlRollBlkDot",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9MtlRollMattCu",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9MtlRollMattGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9MtlRollMattSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9MtlRollPnkDot",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9MtlRollShBlk",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9MtlRollShnGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9MtlRollShnSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9MtlRollSlDot",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9MtlRollWht",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9RollBlkDot",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9RollMattCu",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9RollMattGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9RollMattSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9RollShBlk",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9RollShnGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9RollShnSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylBlu9RollWht",
+            "bodyWidth": 0.2376167395673247
+          }
+        ]
+      },
+      {
+        "bodyId": "cylinder-9ml|17-415|Glass Bottle",
+        "color": "Frosted",
+        "views": 174,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "GBCylFrst9SpryBlk",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9SpryGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9SpryMattSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9SpryRd",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9SpryShSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9SpryTur",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "LBCylFrst9LtnBlk",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "LBCylFrst9LtnGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "LBCylFrst9LtnMtSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9MtlRollBlkDot",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9MtlRollMattCu",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9MtlRollMattGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9MtlRollMattSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9MtlRollPnkDot",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9MtlRollShBlk",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9MtlRollShnGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9MtlRollShnSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9MtlRollSlDot",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9MtlRollWht",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9RollBlkDot",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9RollMattCu",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9RollMattGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9RollMattSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9RollPnkDot",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9RollShBlk",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9RollShnGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9RollShnSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9RollSlDot",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylFrst9RollWht",
+            "bodyWidth": 0.2376167395673247
+          }
+        ]
+      },
+      {
+        "bodyId": "cylinder-9ml|17-415|Glass Bottle",
+        "color": "Swirl",
+        "views": 126,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "GBCylSwrl9SpryBlk",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylSwrl9SpryGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylSwrl9SpryMattSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylSwrl9SpryRd",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylSwrl9SpryShSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylSwrl9SpryTur",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "LBCylSwrl9LtnBlk",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "LBCylSwrl9LtnGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "LBCylSwrl9LtnMtSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylSwrl9MtlRollBlkDot",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylSwrl9MtlRollMattCu",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylSwrl9MtlRollMattGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylSwrl9MtlRollMattSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylSwrl9MtlRollPnkDot",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylSwrl9MtlRollShBlk",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylSwrl9MtlRollShnGl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylSwrl9MtlRollShnSl",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylSwrl9MtlRollSlDot",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylSwrl9RollBlkDot",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylSwrl9RollPnkDot",
+            "bodyWidth": 0.2376167395673247
+          },
+          {
+            "sku": "GBCylSwrl9RollSlDot",
+            "bodyWidth": 0.2376167395673247
+          }
+        ]
+      },
+      {
+        "bodyId": "cylinder-25ml|18-415|Glass Bottle",
+        "color": "Clear",
+        "views": 42,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "LBcyl25LtnClOvrCap",
+            "bodyWidth": 0.3234287669931997
+          },
+          {
+            "sku": "LBCyl25LtnCu",
+            "bodyWidth": 0.3234287669931997
+          },
+          {
+            "sku": "LBCyl25LtnMtGl",
+            "bodyWidth": 0.3234287669931997
+          },
+          {
+            "sku": "LBCyl25LtnMtSl",
+            "bodyWidth": 0.3234287669931997
+          },
+          {
+            "sku": "LBCyl25LtnShnBlk",
+            "bodyWidth": 0.3234287669931997
+          },
+          {
+            "sku": "LBCyl25LtnShnGl",
+            "bodyWidth": 0.3234287669931997
+          },
+          {
+            "sku": "LBCyl25LtnShnSl",
+            "bodyWidth": 0.3234287669931997
+          }
+        ]
+      },
+      {
+        "bodyId": "cylinder-50ml|18-415|Glass Bottle",
+        "color": "Clear",
+        "views": 252,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "LBCyl50LtnClOvrCap",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "LBCyl50LtnCu",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "LBCyl50LtnMtGl",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "LBCyl50LtnMtSl",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "LBCyl50LtnShnBlk",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "LBCyl50LtnShnGl",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "LBCyl50LtnShnSl",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50SpryCu",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50SpryMtGl",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50SpryMtSl",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50SpryShnBlk",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50SpryShnGl",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50SpryShnSl",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50RdcrBlkLthr",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50RdcrBrwnLthr",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50RdcrIvyLthr",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50RdcrLBrwnLthr",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50RdcrMtSl",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50RdcrPnkLthr",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50RdcrShnGl",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50RdcrShnSl",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50RdcrMtSlTall",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50RdcrShnBlkTall",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50RdcrWht",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50AnSpBlk",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50AnSpGl",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50AnSpIvyGl",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50AnSpIvySl",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50AnSpLvn",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50AnSpMtSl",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50AnSpPnk",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50AnSpRed",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50AnSpWht",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50AnSpTslBlk",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50AnSpTslGl",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50AnSpTslIvyGl",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50AnSpTslIvySl",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50AnSpTslLvn",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50AnSpTslMtSl",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50AnSpTslPnk",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50AnSpTslRed",
+            "bodyWidth": 0.157303888091712
+          },
+          {
+            "sku": "GBCyl50AnSpTslWht",
+            "bodyWidth": 0.157303888091712
+          }
+        ]
+      },
+      {
+        "bodyId": "cylinder-100ml|18-415|Glass Bottle",
+        "color": "Clear",
+        "views": 252,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "LBCyl100LtnClOvrCap",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "LBCyl100LtnCu",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "LBCyl100LtnMtGl",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "LBCyl100LtnMtSl",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "LBCyl100LtnShnBlk",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "LBCyl100LtnShnGl",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "LBCyl100LtnShnSl",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100SpryCu",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100SpryMtGl",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100SpryMtSl",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100SpryShnBlk",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100SpryShnGl",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100SpryShnSl",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100RdcrBlkLthr",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100RdcrBrwnLthr",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100RdcrIvyLthr",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100RdcrLBrwnLthr",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100RdcrMtSl",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100RdcrPnkLthr",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100RdcrShnGl",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100RdcrShnSl",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100RdcrMtSlTall",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100RdcrShnBlkTall",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100RdcrWht",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100AnSpBlk",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100AnSpGl",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100AnSpIvyGl",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100AnSpIvySl",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100AnSpLvn",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100AnSpMtSl",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100AnSpPnk",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100AnSpRed",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100AnSpWht",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100AnSpTslBlk",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100AnSpTslGl",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100AnSpTslIvyGl",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100AnSpTslIvySl",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100AnSpTslLvn",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100AnSpTslMtSl",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100AnSpTslPnk",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100AnSpTslRed",
+            "bodyWidth": 0.1533928185215885
+          },
+          {
+            "sku": "GBCyl100AnSpTslWht",
+            "bodyWidth": 0.1533928185215885
+          }
+        ]
+      },
+      {
+        "bodyId": "circle-15ml|13-415|Glass Bottle",
+        "color": "Clear",
+        "views": 162,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "GBCrcl15SpryBluMatt",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15SpryCuMatt",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15SpryGlMatt",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15SprySlMatt",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15SpryBlkSh",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15SpryGlSh",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15SprySlSh",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15MtlRollCuMatt",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15MtlRollGlMatt",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15MtlRollSlMatt",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15MtlRollPinkDot",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15MtlRollBlkSh",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15MtlRollGlSh",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15MtlRollSlSh",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15MtlRollSlDot",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15RollCuMatt",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15RollGlMatt",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15RollSlMatt",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15RollPinkDot",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15RollBlkSh",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15RollGlSh",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15RollSlSh",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15RollSlDot",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15BlkSht",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15Gl",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15Sl",
+            "bodyWidth": 0.7353115025416717
+          },
+          {
+            "sku": "GBCrcl15WhtSht",
+            "bodyWidth": 0.7353115025416717
+          }
+        ]
+      },
+      {
+        "bodyId": "circle-30ml|15-415|Glass Bottle",
+        "color": "Clear",
+        "views": 24,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "GBCrcl30SpryBlk",
+            "bodyWidth": 0.6896153401871318
+          },
+          {
+            "sku": "GBCrcl30SpryShSl",
+            "bodyWidth": 0.6896153401871318
+          },
+          {
+            "sku": "GBCrcl30GlCap",
+            "bodyWidth": 0.6896153401871318
+          },
+          {
+            "sku": "GBCrcl30SlCap",
+            "bodyWidth": 0.6896153401871318
+          }
+        ]
+      },
+      {
+        "bodyId": "circle-50ml|18-415|Glass Bottle",
+        "color": "Clear",
+        "views": 228,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "GBCrcl50DrpCu",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50DrpGl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50DrpSl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "LBCrcl50LtnClOvrCap",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "LBCrcl50LtnCu",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "LBCrcl50LtnMtGl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "LBCrcl50LtnMtSl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "LBCrcl50LtnShnBlk",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "LBCrcl50LtnShnGl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "LBCrcl50LtnShnSl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50SpryCu",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50SpryMtGl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50SpryMtSl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50SpryShnBlk",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50SpryShnGl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50SpryShnSl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50RdcrBlkLthr",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50RdcrBrwnLthr",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50RdcrIvyLthr",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50RdcrLBrwnLthr",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50RdcrPnkLthr",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50RdcrShnGl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50RdcrShnSl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50RdcrMtSlTall",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50RdcrShnBlkTall",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50RdcrWht",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50AnSpBlk",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50AnSpGl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50AnSpIvyGl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50AnSpIvySl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50AnSpLvn",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50AnSpMtSl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50AnSpRed",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50AnSpWht",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50AnSpTslBlk",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50AnSpTslIvyGl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50AnSpTslMtSl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrcl50AnSpTslWht",
+            "bodyWidth": 0.48834402138397287
+          }
+        ]
+      },
+      {
+        "bodyId": "circle-50ml|18-415|Glass Bottle",
+        "color": "Frosted",
+        "views": 108,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "GBCrclFrst50RdcrBlkLthr",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrclFrst50RdcrBrwnLthr",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrclFrst50RdcrLBrwnLthr",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrclFrst50RdcrMtSl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrclFrst50RdcrPnkLthr",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrclFrst50RdcrShnGl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrclFrst50RdcrShnSl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrclFrst50RdcrShnBlkTall",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrclFrst50RdcrWht",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrclFrst50AnSpBlk",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrclFrst50AnSpIvyGl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrclFrst50AnSpIvySl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrclFrst50AnSpLvn",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrclFrst50AnSpMtSl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrclFrst50AnSpPnk",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrclFrst50AnSpRed",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrclFrst50AnSpGl",
+            "bodyWidth": 0.48834402138397287
+          },
+          {
+            "sku": "GBCrclFrst50AnSpWht",
+            "bodyWidth": 0.48834402138397287
+          }
+        ]
+      },
+      {
+        "bodyId": "circle-100ml|18-415|Glass Bottle",
+        "color": "Clear",
+        "views": 210,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "LBCrcl100LtnClOvrCap",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "LBCrcl100LtnMtGl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "LBCrcl100LtnMtSl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "LBCrcl100LtnShnBlk",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "LBCrcl100LtnShnGl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "LBCrcl100LtnShnSl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100SpryMtGl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100SpryMtSl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100SpryShnBlk",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100SpryShnGl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100SpryShnSl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100RdcrBlkLthr",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100RdcrBrwnLthr",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100RdcrIvyLthr",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100RdcrLBrwnLthr",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100RdcrMtSl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100RdcrPnkLthr",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100RdcrShnGl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100RdcrShnSl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100RdcrMtSlTall",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100RdcrShnBlkTall",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100RdcrWht",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100AnSpBlk",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100AnSpGl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100AnSpIvyGl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100AnSpIvySl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100AnSpLvn",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100AnSpMtSl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100AnSpPnk",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100AnSpRed",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100AnSpWht",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100AnSpTslGl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100AnSpTslIvyGl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100AnSpTslLvn",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrcl100AnSpTslMtSl",
+            "bodyWidth": 0.5078126347306465
+          }
+        ]
+      },
+      {
+        "bodyId": "circle-100ml|18-415|Glass Bottle",
+        "color": "Frosted",
+        "views": 240,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "LBCrclFrst100LtnClOvrCap",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "LBCrclFrst100LtnMtGl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "LBCrclFrst100LtnMtSl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "LBCrclFrst100LtnShnBlk",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "LBCrclFrst100LtnShnGl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "LBCrclFrst100LtnShnSl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100SpryCu",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100SpryMtGl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100SpryMtSl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100SpryShnBlk",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100SpryShnGl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100SpryShnSl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100RdcrBlkLthr",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100RdcrBrwnLthr",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100RdcrIvyLthr",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100RdcrLBrwnLthr",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100RdcrMtSl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100RdcrPnkLthr",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100RdcrShnGl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100RdcrShnSl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100RdcrMtSlTall",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100RdcrShnBlkTall",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100RdcrWht",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100AnSpBlk",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100AnSpIvyGl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100AnSpIvySl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100AnSpLvn",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100AnSpMtSl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100AnSpPnk",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100AnSpRed",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100AnSpGl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100AnSpWht",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100AnSpTslBlk",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100AnSpTslGl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100AnSpTslIvySl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100AnSpTslIvyGl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100AnSpTslLvn",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100AnSpTslMtSl",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100AnSpTslPnk",
+            "bodyWidth": 0.5078126347306465
+          },
+          {
+            "sku": "GBCrclFrst100AnSpTslWht",
+            "bodyWidth": 0.5078126347306465
+          }
+        ]
+      },
+      {
+        "bodyId": "round-78ml|18-415|Glass Bottle",
+        "color": "Clear",
+        "views": 210,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "LBRnd78LtnClOvrCap",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "LBRnd78LtnCu",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "LBRnd78LtnMtGl",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78SpryCu",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78SpryMtGl",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78SpryMtSl",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78SpryShnBlk",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78SpryShnGl",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78SpryShnSl",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78RdcrBlkLthr",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78RdcrBrwnLthr",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78RdcrIvyLthr",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78RdcrLBrwnLthr",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78RdcrMtSl",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78RdcrPnkLthr",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78RdcrShnGl",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78RdcrShnSl",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78RdcrMtSlTall",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78RdcrShnBlkTall",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78RdcrWht",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78AnSpBlk",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78AnSpGl",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78AnSpIvyGl",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78AnSpIvySl",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78AnSpLvn",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78AnSpMtSl",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78AnSpPnk",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78AnSpRed",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78AnSpWht",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78AnSpTslBlk",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78AnSpTslGl",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78AnSpTslIvyGl",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78AnSpTslIvySl",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78AnSpTslRed",
+            "bodyWidth": 0.4796756449892097
+          },
+          {
+            "sku": "GBRnd78AnSpTslWht",
+            "bodyWidth": 0.4796756449892097
+          }
+        ]
+      },
+      {
+        "bodyId": "round-78ml|18-415|Glass Bottle",
+        "color": "Frosted",
+        "views": 222,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "LBRndFrst78LtnClOvrCap",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "LBRndFrst78LtnMtGl",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "LBRndFrst78LtnMtSl",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "LBRndFrst78LtnShnBlk",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "LBRndFrst78LtnShnGl",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "LBRndFrst78LtnShnSl",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78SpryCu",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78SpryMtGl",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78SpryMtSl",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78SpryShnBlk",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78SpryShnGl",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78SpryShnSl",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78RdcrBlkLthr",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78RdcrBrwnLthr",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78RdcrIvyLthr",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78RdcrLBrwnLthr",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78RdcrMtSl",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78RdcrPnkLthr",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78RdcrShnGl",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78RdcrShnSl",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78RdcrMtSlTall",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78RdcrShnBlkTall",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78RdcrWht",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78AnSpBlk",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78AnSpGl",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78AnSpIvyGl",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78AnSpIvySl",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78AnSpLvn",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78AnSpMtSl",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78AnSpPnk",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78AnSpRed",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78AnSpWht",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78AnSpTslGl",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78AnSpTslIvyGl",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78AnSpTslIvySl",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78AnSpTslMtSl",
+            "bodyWidth": 0.4796756449892098
+          },
+          {
+            "sku": "GBRndFrst78AnSpTslWht",
+            "bodyWidth": 0.4796756449892098
+          }
+        ]
+      },
+      {
+        "bodyId": "round-128ml|18-415|Glass Bottle",
+        "color": "Clear",
+        "views": 216,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "LBRnd128LtnCu",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "LBRnd128LtnMtGl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "LBRnd128LtnMtSl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "LBRnd128LtnShnBlk",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "LBRnd128LtnShnGl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "LBRnd128LtnShnSl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128SpryCu",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128SpryMtGl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128SpryShnBlk",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128SpryShnGl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128SpryShnSl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128RdcrBlkLthr",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128RdcrBrwnLthr",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128RdcrIvyLthr",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128RdcrLBrwnLthr",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128RdcrMtSl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128RdcrPnkLthr",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128RdcrShnGl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128RdcrShnSl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128RdcrMtSlTall",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128RdcrShnBlkTall",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128RdcrWht",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128AnSpBlk",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128AnSpGl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128AnSpIvyGl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128AnSpIvySl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128AnSpLvn",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128AnSpMtSl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128AnSpPnk",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128AnSpRed",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128AnSpWht",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128AnSpTslGl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128AnSpTslIvyGl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128AnSpTslLvn",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128AnSpTslMtSl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRnd128AnSpTslPnk",
+            "bodyWidth": 0.45159236670354147
+          }
+        ]
+      },
+      {
+        "bodyId": "round-128ml|18-415|Glass Bottle",
+        "color": "Frosted",
+        "views": 180,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "LBRndFrst128LtnMtSl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "LBRndFrst128LtnShnBlk",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "LBRndFrst128LtnShnGl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128SpryMtGl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128SpryMtSl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128SpryShnGl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128RdcrBlkLthr",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128RdcrBrwnLthr",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128RdcrIvyLthr",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128RdcrLBrwnLthr",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128RdcrMtSl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128RdcrPnkLthr",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128RdcrShnGl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128RdcrMtSlTall",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128RdcrShnBlkTall",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128RdcrWht",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128AnSpBlk",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128AnSpIvyGl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128AnSpIvySl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128AnSpMtSl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128AnSpPnk",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128AnSpRed",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128AnSpGl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128AnSpWht",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128AnSpTslGl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128AnSpTslIvyGl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128AnSpTslIvySl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128AnSpTslMtSl",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128AnSpTslRed",
+            "bodyWidth": 0.45159236670354147
+          },
+          {
+            "sku": "GBRndFrst128AnSpTslWht",
+            "bodyWidth": 0.45159236670354147
+          }
+        ]
+      },
+      {
+        "bodyId": "empire-50ml|18-415|Glass Bottle",
+        "color": "Clear",
+        "views": 270,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "GBEmp50DrpCu",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50DrpGl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50DrpSl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "LBEmp50LtnClOvrCap",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "LBEmp50LtnCu",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "LBEmp50LtnMtGl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "LBEmp50LtnMtSl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "LBEmp50LtnShnBlk",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "LBEmp50LtnShnGl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "LBEmp50LtnShnSl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50SpryCu",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50SpryMtGl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50SpryMtSl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50SpryShnBlk",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50SpryShnGl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50SpryShnSl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50RdcrBlkLthr",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50RdcrBrwnLthr",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50RdcrIvyLthr",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50RdcrLBrwnLthr",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50RdcrMtSl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50RdcrPnkLthr",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50RdcrShnGl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50RdcrShnSl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50RdcrMtSlTall",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50RdcrShnBlkTall",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50RdcrWht",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50AnSpBlk",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50AnSpGl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50AnSpIvyGl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50AnSpIvySl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50AnSpLvn",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50AnSpMtSl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50AnSpPnk",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50AnSpRed",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50AnSpWht",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50AnSpTslBlk",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50AnSpTslGl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50AnSpTslIvyGl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50AnSpTslIvySl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50AnSpTslLvn",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50AnSpTslMtSl",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50AnSpTslPnk",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50AnSpTslRed",
+            "bodyWidth": 0.2465056101912331
+          },
+          {
+            "sku": "GBEmp50AnSpTslWht",
+            "bodyWidth": 0.2465056101912331
+          }
+        ]
+      },
+      {
+        "bodyId": "empire-100ml|18-415|Glass Bottle",
+        "color": "Clear",
+        "views": 252,
+        "clipped": [],
+        "cameraCount": 1,
+        "bodyWidthSpread": 0,
+        "differingSources": [
+          {
+            "sku": "LBEmp100LtnClOvrCap",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "LBEmp100LtnCu",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "LBEmp100LtnMtGl",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "LBEmp100LtnMtSl",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "LBEmp100LtnShnBlk",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "LBEmp100LtnShnGl",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "LBEmp100LtnShnSl",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100SpryCu",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100SpryMtGl",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100SpryMtSl",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100SpryShnBlk",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100SpryShnGl",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100SpryShnSl",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100RdcrBlkLthr",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100RdcrBrwnLthr",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100RdcrIvyLthr",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100RdcrLBrwnLthr",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100RdcrMtSl",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100RdcrPnkLthr",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100RdcrShnGl",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100RdcrShnSl",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100RdcrMtSlTall",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100RdcrShnBlkTall",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100RdcrWht",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100AnSpBlk",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100AnSpGl",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100AnSpIvyGl",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100AnSpIvySl",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100AnSpLvn",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100AnSpMtSl",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100AnSpPnk",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100AnSpRed",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100AnSpWht",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100AnSpTslBlk",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100AnSpTslGl",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100AnSpTslIvyGl",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100AnSpTslIvySl",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100AnSpTslLvn",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100AnSpTslMtSl",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100AnSpTslPnk",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100AnSpTslRed",
+            "bodyWidth": 0.23220191841003138
+          },
+          {
+            "sku": "GBEmp100AnSpTslWht",
+            "bodyWidth": 0.23220191841003138
+          }
+        ]
+      }
+    ]
+  },
+  "pdp": {
+    "views": 1646,
+    "clipped": []
+  }
+}

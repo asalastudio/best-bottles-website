@@ -28,6 +28,13 @@ try {
   const sku='GBCrclFrst100AnSpTslGl';
   const hash=recipes.kitRoles.find(r=>r.sku===sku).after.parts.find(p=>p.slot==='sprayer').sha256;
   await page.waitForFunction(hash=>[...document.querySelectorAll('[data-builder-layer="sprayer"]')].some(n=>(n.getAttribute('href')||n.getAttribute('src')||'').includes(hash)),{timeout:30000},hash);
+  await page.waitForNetworkIdle({idleTime:1000,timeout:30000});
+  await page.evaluate(async()=>{
+    const urls=[...document.querySelectorAll('[aria-label="Live bottle preview"] [data-builder-layer]')].map(n=>n.getAttribute('href')||n.getAttribute('src')).filter(Boolean);
+    await Promise.all(urls.map(url=>{const img=new Image();img.src=url;return img.decode();}));
+    await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+  });
+  result.frame=await page.$eval('[aria-label="Live bottle preview"]',n=>({html:n.innerHTML,rect:{width:n.clientWidth,height:n.clientHeight}}));
   result.summary=await page.$eval('[aria-label="Review and quantity"]',n=>n.innerText);
   result.sku=sku;result.stage=4;
   result.pass=result.errors.length===0;

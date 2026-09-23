@@ -10,6 +10,8 @@
  * composition may shrink further to keep a 4% margin.
  */
 
+import { REMOVABLE_KIT_SLOTS, detachedCapOffset } from "./kit-frame";
+
 import {
     PDP_CAP_OFF_FIT_SCALE,
     PDP_MAX_FILL_RATIO,
@@ -19,6 +21,7 @@ import {
 } from "./pdp-capacity-standards";
 
 type PartBounds = {
+    slot?: string;
     bounds: { left: number; top: number; right: number; bottom: number };
     exploded?: { dx: number; dy: number };
 };
@@ -43,24 +46,21 @@ export function pdpCapacityScale(
     return pdpPublishedPlateScale(family, capacityMl, color);
 }
 
-function shiftedBounds(part: PartBounds, useExploded: boolean) {
-    const dx = useExploded ? (part.exploded?.dx ?? 0) : 0;
-    const dy = useExploded ? (part.exploded?.dy ?? 0) : 0;
+function unionBounds(parts: readonly PartBounds[]) {
+    const body = parts.find(p => p.slot === "body")?.bounds ?? null;
+    const boxes = parts.flatMap(part => {
+        if (!part.slot || !REMOVABLE_KIT_SLOTS.has(part.slot) || !body) return [part.bounds];
+        const offset = detachedCapOffset({ ...part, exploded: part.exploded ?? { dx: 0, dy: 0 } }, body);
+        // Reserve both cap states, keeping scale and bottle position unchanged.
+        // Other parts' exploded offsets are never painted in the photo view.
+        return [part.bounds, {
+            left: part.bounds.left + offset.dx, right: part.bounds.right + offset.dx,
+            top: part.bounds.top + offset.dy, bottom: part.bounds.bottom + offset.dy,
+        }];
+    });
     return {
-        left: part.bounds.left + dx,
-        right: part.bounds.right + dx,
-        top: part.bounds.top + dy,
-        bottom: part.bounds.bottom + dy,
-    };
-}
-
-function unionBounds(parts: readonly PartBounds[], useExploded: boolean) {
-    const boxes = parts.map((part) => shiftedBounds(part, useExploded));
-    return {
-        left: Math.min(...boxes.map((box) => box.left)),
-        right: Math.max(...boxes.map((box) => box.right)),
-        top: Math.min(...boxes.map((box) => box.top)),
-        bottom: Math.max(...boxes.map((box) => box.bottom)),
+        left: Math.min(...boxes.map(box => box.left)), right: Math.max(...boxes.map(box => box.right)),
+        top: Math.min(...boxes.map(box => box.top)), bottom: Math.max(...boxes.map(box => box.bottom)),
     };
 }
 
@@ -105,6 +105,8 @@ export function pdpStageFrame(input: {
     color?: string | null;
     view: Exclude<PdpStageView, "exploded">;
     parts?: readonly PartBounds[] | null;
+    /** Apply the same canvas scale to both members of a cap-on/off plate pair. */
+    hasCapOffPlate?: boolean;
     width?: number;
     height?: number;
 }): PdpStageFrame {
@@ -114,7 +116,7 @@ export function pdpStageFrame(input: {
     let scale = capacityScale;
     const detachCap = input.view === "capOff";
 
-    if (detachCap && !input.parts?.length) {
+    if ((detachCap || input.hasCapOffPlate) && !input.parts?.length) {
         // Baked CAP OFF plates include a beside-cap on an already-large bottle.
         // Shrink the composition; never raise the bottle above the glass lock.
         scale = Math.min(scale, capacityScale * PDP_CAP_OFF_FIT_SCALE);
@@ -122,7 +124,7 @@ export function pdpStageFrame(input: {
 
     const canvasBounds = { left: 0, top: 0, right: width, bottom: height };
     if (input.parts?.length) {
-        const bounds = unionBounds(input.parts, detachCap);
+        const bounds = unionBounds(input.parts);
         scale = Math.min(scale, fitScale(bounds, width, height));
         return centerFrame(bounds, scale, width, height);
     }
