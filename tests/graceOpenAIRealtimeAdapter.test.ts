@@ -2,11 +2,13 @@ import { describe, expect, it, vi } from "vitest";
 import {
     buildGraceRealtimeTools,
     createGraceOpenAIRealtimeAdapter,
+    createGraceVoiceMediaStream,
     getGraceRealtimeToolSpecs,
     GraceRealtimeConnectionCancelledError,
     type GraceRealtimeAgentConfig,
     type GraceRealtimeSessionLike,
 } from "../src/lib/grace/openaiRealtimeAdapter";
+import { GRACE_VOICE_AUDIO_CONSTRAINTS, GRACE_VOICE_ECHO_TAIL_MS } from "../src/lib/grace/voiceEchoGuard";
 import { GRACE_OPENAI_TOOL_SPECS } from "../src/lib/grace/openaiToolSpecs";
 import { GRACE_REALTIME_MODEL, GRACE_REALTIME_VOICE } from "../src/lib/grace/openaiRealtimeConfig";
 
@@ -19,6 +21,7 @@ class FakeSession implements GraceRealtimeSessionLike {
     interrupt = vi.fn();
     mute = vi.fn();
     close = vi.fn();
+    transport = { sendEvent: vi.fn() };
 
     on(event: string, handler: (...args: unknown[]) => void) {
         const handlers = this.handlers.get(event) ?? [];
@@ -88,7 +91,9 @@ describe("Grace OpenAI Realtime adapter", () => {
                     voice: GRACE_REALTIME_VOICE,
                     audio: expect.objectContaining({
                         input: expect.objectContaining({
+                            noiseReduction: { type: "far_field" },
                             turnDetection: expect.objectContaining({
+                                eagerness: "low",
                                 interrupt_response: false,
                             }),
                         }),
@@ -112,14 +117,25 @@ describe("Grace OpenAI Realtime adapter", () => {
     it("sends typed turns and updates context without triggering a response", async () => {
         const session = new FakeSession();
         const createAgent = vi.fn((config: GraceRealtimeAgentConfig) => config);
+        const createSession = vi.fn(() => session);
         const adapter = createGraceOpenAIRealtimeAdapter({
             baseInstructions: "Base truth rules.",
             toolImplementations: Object.fromEntries(
                 GRACE_OPENAI_TOOL_SPECS.map(({ name }) => [name, vi.fn()]),
             ),
-            dependencies: { createAgent, createSession: () => session },
+            dependencies: { createAgent, createSession },
         });
         await adapter.connect({ clientSecret: "ek_test", mode: "text" });
+
+        expect(createSession).toHaveBeenCalledWith(
+            expect.anything(),
+            expect.objectContaining({
+                transport: "websocket",
+                config: expect.objectContaining({
+                    outputModalities: ["text"],
+                }),
+            }),
+        );
 
         adapter.sendText("Show me amber 9 mL bottles");
         await adapter.sendContext("Active Refine thread: 17-415");
@@ -209,6 +225,7 @@ describe("Grace OpenAI Realtime adapter", () => {
         session.emit("agent_end", {}, {}, "Want me to open the 28 milliliter bottle?");
         session.emit("audio_start");
         expect(session.mute).toHaveBeenCalledWith(true);
+        expect(session.transport?.sendEvent).toHaveBeenCalledWith({ type: "input_audio_buffer.clear" });
         expect(onModeChange).toHaveBeenCalledWith("speaking");
 
         session.emit("transport_event", {
@@ -216,16 +233,26 @@ describe("Grace OpenAI Realtime adapter", () => {
             transcript: "Want me to open the 28 milliliter bottle?",
         });
         expect(onMessage).not.toHaveBeenCalledWith(expect.objectContaining({ role: "user" }));
+        expect(session.interrupt).not.toHaveBeenCalled();
 
         session.emit("audio_stopped");
         expect(onModeChange).toHaveBeenCalledWith("listening");
+        session.emit("transport_event", {
+            type: "input_audio_buffer.speech_started",
+        });
+        expect(session.interrupt).toHaveBeenCalledTimes(1);
+        session.emit("transport_event", {
+            type: "response.created",
+        });
+        expect(session.interrupt).toHaveBeenCalledTimes(2);
         session.emit("transport_event", {
             type: "conversation.item.input_audio_transcription.completed",
             transcript: "Want me to open the 28 milliliter bottle?",
         });
         expect(onMessage).not.toHaveBeenCalledWith(expect.objectContaining({ role: "user" }));
+        expect(session.interrupt).toHaveBeenCalledTimes(3);
 
-        await vi.advanceTimersByTimeAsync(450);
+        await vi.advanceTimersByTimeAsync(GRACE_VOICE_ECHO_TAIL_MS);
         expect(session.mute).toHaveBeenCalledWith(false);
 
         session.emit("transport_event", {
@@ -322,5 +349,11 @@ describe("Grace OpenAI Realtime adapter", () => {
         expect(onConnect).not.toHaveBeenCalled();
         expect(adapter.hasSession()).toBe(false);
         expect(adapter.isConnected()).toBe(false);
+    });
+
+    it("asks Chrome for echo-cancelled microphone audio", async () => {
+        const getUserMedia = vi.fn(async () => ({ id: "mic" } as unknown as MediaStream));
+        await expect(createGraceVoiceMediaStream(getUserMedia)).resolves.toEqual({ id: "mic" });
+        expect(getUserMedia).toHaveBeenCalledWith({ audio: { ...GRACE_VOICE_AUDIO_CONSTRAINTS } });
     });
 });

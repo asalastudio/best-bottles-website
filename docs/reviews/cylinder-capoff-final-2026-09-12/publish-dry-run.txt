@@ -1,0 +1,20 @@
+DRY RUN → https://helpful-elephant-638.convex.cloud
+Existing family metadata will be preserved for this partial release.
+
+=== Cylinder 28 mL — Clear (cylinder-28ml-clear-16mm) — 4 SKUs, 16 objects (replacing 4 already on the target) ===
+
+=== Cylinder 5 mL — Clear (cylinder-5ml-clear-13-415) — 8 SKUs, 32 objects (replacing 8 already on the target) ===
+
+=== Cylinder 5 mL — Cobalt Blue (cylinder-5ml-cobalt-blue-13-415) — 9 SKUs, 36 objects (replacing 9 already on the target) ===
+
+=== Cylinder 9 mL — Clear (cylinder-9ml-clear-13-415) — 3 SKUs, 12 objects (replacing 3 already on the target) ===
+
+=== Cylinder 9 mL — Frosted (cylinder-9ml-frosted-13-415) — 1 SKUs, 4 objects (replacing 1 already on the target) ===
+
+example key: plates/cylinder-28ml-clear-16mm/GBCyl1ozRollWht/e1b5663e5ed2045effd3971c4cd08a9b1fdfa6b776a0f6df82ebd1648b277d16.front-on-1000x1100.webp
+cylinder-28ml-clear-16mm: 0 SKU(s) no product carries; 0 on duplicated catalogue SKUs
+cylinder-5ml-clear-13-415: 0 SKU(s) no product carries; 0 on duplicated catalogue SKUs
+cylinder-5ml-cobalt-blue-13-415: 0 SKU(s) no product carries; 0 on duplicated catalogue SKUs
+cylinder-9ml-clear-13-415: 0 SKU(s) no product carries; 0 on duplicated catalogue SKUs
+cylinder-9ml-frosted-13-415: 0 SKU(s) no product carries; 0 on duplicated catalogue SKUs
+re-run with --apply to upload, verify and index.

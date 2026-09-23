@@ -1,0 +1,934 @@
+{
+  "sourceRoot": "/Users/jordanrichter/Desktop/Best Bottles/Caps and Sprayers Missing Images/17-415 Lotion & Sprayers",
+  "rows": [
+    {
+      "sku": "Ltn17-415Blk",
+      "sourceUrl": "https://www.bestbottles.com/product/lotion-top-black-color-17-415",
+      "sourceSha256": "2c85a718bc61ce01f1d827a112fa23cbc7d6c0bf696ffb6d20438ced6403d278",
+      "legacyImage": "Ltn17-415Blk.gif",
+      "componentKind": "Lotion Pump",
+      "affectedBottleSkus": [
+        "GBCyl9SpryBlk",
+        "GBCyl9SpryGl",
+        "GBCyl9SpryMattSl",
+        "GBCyl9SpryRd",
+        "GBCyl9SpryShSl",
+        "GBCyl9SpryTur",
+        "GBCylAmb9SpryBlk",
+        "GBCylAmb9SpryGl",
+        "GBCylAmb9SpryMattSl",
+        "GBCylAmb9SpryRd",
+        "GBCylAmb9SpryShSl",
+        "GBCylAmb9SpryTur",
+        "GBCylBlu9SpryBlk",
+        "GBCylBlu9SpryGl",
+        "GBCylBlu9SpryMattSl",
+        "GBCylBlu9SpryRd",
+        "GBCylBlu9SpryShSl",
+        "GBCylBlu9SpryTur",
+        "GBCylFrst9SpryBlk",
+        "GBCylFrst9SpryGl",
+        "GBCylFrst9SpryMattSl",
+        "GBCylFrst9SpryRd",
+        "GBCylFrst9SpryShSl",
+        "GBCylFrst9SpryTur",
+        "GBCylSwrl9SpryBlk",
+        "GBCylSwrl9SpryGl",
+        "GBCylSwrl9SpryMattSl",
+        "GBCylSwrl9SpryRd",
+        "GBCylSwrl9SpryShSl",
+        "GBCylSwrl9SpryTur",
+        "LBCyl9LtnBlk",
+        "LBCyl9LtnGl",
+        "LBCyl9LtnMtSl",
+        "LBCylAmb9LtnBlk",
+        "LBCylAmb9LtnGl",
+        "LBCylAmb9LtnMtSl",
+        "LBCylBlu9LtnBlk",
+        "LBCylBlu9LtnGl",
+        "LBCylBlu9LtnMattSl",
+        "LBCylFrst9LtnBlk",
+        "LBCylFrst9LtnGl",
+        "LBCylFrst9LtnMtSl",
+        "LBCylSwrl9LtnBlk",
+        "LBCylSwrl9LtnGl",
+        "LBCylSwrl9LtnMtSl"
+      ],
+      "sourcePsd": "/Users/jordanrichter/Desktop/Best Bottles/Caps and Sprayers Missing Images/17-415 Lotion & Sprayers/19. 17-415LtBlk.psd",
+      "canvas": [
+        578,
+        1046
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "file": "Ltn17-415Blk.diptube.png",
+          "layerIndex": 1,
+          "layerName": "Layer 14",
+          "bounds": [
+            274,
+            394,
+            397,
+            1006
+          ],
+          "sha256": "1f5093ce8bc5c920519dcfc27eb4d798bcccfc4dacf663a17792784c7c9f359c"
+        },
+        {
+          "slot": "pump",
+          "file": "Ltn17-415Blk.pump.png",
+          "layerIndex": 2,
+          "layerName": "Group 1",
+          "bounds": [
+            311,
+            228,
+            428,
+            437
+          ],
+          "sha256": "098853e0dd57c842da507ed0c09fb2d79fada56b4e54bee6f078aac9a3cce89b"
+        },
+        {
+          "slot": "overcap",
+          "file": "Ltn17-415Blk.overcap.png",
+          "layerIndex": 6,
+          "layerName": "Layer 13",
+          "bounds": [
+            115,
+            731,
+            228,
+            881
+          ],
+          "sha256": "41a4c0786120e6e7cdb1771709f0c47f8f0ec52aaa5237f3082d69153ad1f115"
+        }
+      ],
+      "state": "extracted source candidate; per-bottle registration and visual approval required",
+      "sourceCrosswalk": "Exact 17-415 component family and finish; native Desktop filenames use Sp/Lt while catalog identifiers use Spry/Ltn. Preserve distinct spray and lotion artwork."
+    },
+    {
+      "sku": "Ltn17-415Gl",
+      "sourceUrl": "https://www.bestbottles.com/product/lotion-top-gold-color-17-415",
+      "sourceSha256": "24cbacace8b534dba2f3a2a890d185ae30fa148288b3b42c795c06d1202d6045",
+      "legacyImage": "Ltn17-415Gl.gif",
+      "componentKind": "Lotion Pump",
+      "affectedBottleSkus": [
+        "GBCyl9SpryBlk",
+        "GBCyl9SpryGl",
+        "GBCyl9SpryMattSl",
+        "GBCyl9SpryRd",
+        "GBCyl9SpryShSl",
+        "GBCyl9SpryTur",
+        "GBCylAmb9SpryBlk",
+        "GBCylAmb9SpryGl",
+        "GBCylAmb9SpryMattSl",
+        "GBCylAmb9SpryRd",
+        "GBCylAmb9SpryShSl",
+        "GBCylAmb9SpryTur",
+        "GBCylBlu9SpryBlk",
+        "GBCylBlu9SpryGl",
+        "GBCylBlu9SpryMattSl",
+        "GBCylBlu9SpryRd",
+        "GBCylBlu9SpryShSl",
+        "GBCylBlu9SpryTur",
+        "GBCylFrst9SpryBlk",
+        "GBCylFrst9SpryGl",
+        "GBCylFrst9SpryMattSl",
+        "GBCylFrst9SpryRd",
+        "GBCylFrst9SpryShSl",
+        "GBCylFrst9SpryTur",
+        "GBCylSwrl9SpryBlk",
+        "GBCylSwrl9SpryGl",
+        "GBCylSwrl9SpryMattSl",
+        "GBCylSwrl9SpryRd",
+        "GBCylSwrl9SpryShSl",
+        "GBCylSwrl9SpryTur",
+        "LBCyl9LtnBlk",
+        "LBCyl9LtnGl",
+        "LBCyl9LtnMtSl",
+        "LBCylAmb9LtnBlk",
+        "LBCylAmb9LtnGl",
+        "LBCylAmb9LtnMtSl",
+        "LBCylBlu9LtnBlk",
+        "LBCylBlu9LtnGl",
+        "LBCylBlu9LtnMattSl",
+        "LBCylFrst9LtnBlk",
+        "LBCylFrst9LtnGl",
+        "LBCylFrst9LtnMtSl",
+        "LBCylSwrl9LtnBlk",
+        "LBCylSwrl9LtnGl",
+        "LBCylSwrl9LtnMtSl"
+      ],
+      "sourcePsd": "/Users/jordanrichter/Desktop/Best Bottles/Caps and Sprayers Missing Images/17-415 Lotion & Sprayers/18. 17-415LtGl.psd",
+      "canvas": [
+        578,
+        1046
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "file": "Ltn17-415Gl.diptube.png",
+          "layerIndex": 1,
+          "layerName": "Layer 14",
+          "bounds": [
+            274,
+            394,
+            397,
+            1006
+          ],
+          "sha256": "1f5093ce8bc5c920519dcfc27eb4d798bcccfc4dacf663a17792784c7c9f359c"
+        },
+        {
+          "slot": "pump",
+          "file": "Ltn17-415Gl.pump.png",
+          "layerIndex": 2,
+          "layerName": "Group 1",
+          "bounds": [
+            309,
+            229,
+            427,
+            437
+          ],
+          "sha256": "f5b3f0c78aba514a9df4042f5db68cc0fbcfda89d7038daa7156bcd83c673ed0"
+        },
+        {
+          "slot": "overcap",
+          "file": "Ltn17-415Gl.overcap.png",
+          "layerIndex": 6,
+          "layerName": "Layer 13",
+          "bounds": [
+            115,
+            731,
+            228,
+            881
+          ],
+          "sha256": "41a4c0786120e6e7cdb1771709f0c47f8f0ec52aaa5237f3082d69153ad1f115"
+        }
+      ],
+      "state": "extracted source candidate; per-bottle registration and visual approval required",
+      "sourceCrosswalk": "Exact 17-415 component family and finish; native Desktop filenames use Sp/Lt while catalog identifiers use Spry/Ltn. Preserve distinct spray and lotion artwork."
+    },
+    {
+      "sku": "Ltn17-415MattSl",
+      "sourceUrl": "https://www.bestbottles.com/product/lotion-top-matte-silver-color-17-415",
+      "sourceSha256": "b09b42ec3d1518d14f3d4878d2fb3b2a079dc219c1f15249c7265e10872a57e2",
+      "legacyImage": "Ltn17-415MattSl.gif",
+      "componentKind": "Lotion Pump",
+      "affectedBottleSkus": [
+        "GBCyl9SpryBlk",
+        "GBCyl9SpryGl",
+        "GBCyl9SpryMattSl",
+        "GBCyl9SpryRd",
+        "GBCyl9SpryShSl",
+        "GBCyl9SpryTur",
+        "GBCylAmb9SpryBlk",
+        "GBCylAmb9SpryGl",
+        "GBCylAmb9SpryMattSl",
+        "GBCylAmb9SpryRd",
+        "GBCylAmb9SpryShSl",
+        "GBCylAmb9SpryTur",
+        "GBCylBlu9SpryBlk",
+        "GBCylBlu9SpryGl",
+        "GBCylBlu9SpryMattSl",
+        "GBCylBlu9SpryRd",
+        "GBCylBlu9SpryShSl",
+        "GBCylBlu9SpryTur",
+        "GBCylFrst9SpryBlk",
+        "GBCylFrst9SpryGl",
+        "GBCylFrst9SpryMattSl",
+        "GBCylFrst9SpryRd",
+        "GBCylFrst9SpryShSl",
+        "GBCylFrst9SpryTur",
+        "GBCylSwrl9SpryBlk",
+        "GBCylSwrl9SpryGl",
+        "GBCylSwrl9SpryMattSl",
+        "GBCylSwrl9SpryRd",
+        "GBCylSwrl9SpryShSl",
+        "GBCylSwrl9SpryTur",
+        "LBCyl9LtnBlk",
+        "LBCyl9LtnGl",
+        "LBCyl9LtnMtSl",
+        "LBCylAmb9LtnBlk",
+        "LBCylAmb9LtnGl",
+        "LBCylAmb9LtnMtSl",
+        "LBCylBlu9LtnBlk",
+        "LBCylBlu9LtnGl",
+        "LBCylBlu9LtnMattSl",
+        "LBCylFrst9LtnBlk",
+        "LBCylFrst9LtnGl",
+        "LBCylFrst9LtnMtSl",
+        "LBCylSwrl9LtnBlk",
+        "LBCylSwrl9LtnGl",
+        "LBCylSwrl9LtnMtSl"
+      ],
+      "sourcePsd": "/Users/jordanrichter/Desktop/Best Bottles/Caps and Sprayers Missing Images/17-415 Lotion & Sprayers/17. 17-415LtMattSl..psd",
+      "canvas": [
+        578,
+        1046
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "file": "Ltn17-415MattSl.diptube.png",
+          "layerIndex": 1,
+          "layerName": "Layer 14",
+          "bounds": [
+            274,
+            394,
+            397,
+            1006
+          ],
+          "sha256": "1f5093ce8bc5c920519dcfc27eb4d798bcccfc4dacf663a17792784c7c9f359c"
+        },
+        {
+          "slot": "pump",
+          "file": "Ltn17-415MattSl.pump.png",
+          "layerIndex": 2,
+          "layerName": "Group 1",
+          "bounds": [
+            308,
+            228,
+            429,
+            439
+          ],
+          "sha256": "48c9290b7caa08b080046a0b95a86a96d77be182a4dd7b3356fb9ee3f278ad5f"
+        },
+        {
+          "slot": "overcap",
+          "file": "Ltn17-415MattSl.overcap.png",
+          "layerIndex": 6,
+          "layerName": "Layer 13",
+          "bounds": [
+            115,
+            731,
+            228,
+            881
+          ],
+          "sha256": "41a4c0786120e6e7cdb1771709f0c47f8f0ec52aaa5237f3082d69153ad1f115"
+        }
+      ],
+      "state": "extracted source candidate; per-bottle registration and visual approval required",
+      "sourceCrosswalk": "Exact 17-415 component family and finish; native Desktop filenames use Sp/Lt while catalog identifiers use Spry/Ltn. Preserve distinct spray and lotion artwork."
+    },
+    {
+      "sku": "Spry17-415Blk",
+      "sourceUrl": "https://www.bestbottles.com/product/spray-top-black-trim-color-17-415",
+      "sourceSha256": "f86a33017de02391f30a1c3e168af82ea938d5c5e3d2893ba3babe3b15882bef",
+      "legacyImage": "Spry17-415Blk.gif",
+      "componentKind": "Sprayer",
+      "affectedBottleSkus": [
+        "GBCyl9SpryBlk",
+        "GBCyl9SpryGl",
+        "GBCyl9SpryMattSl",
+        "GBCyl9SpryRd",
+        "GBCyl9SpryShSl",
+        "GBCyl9SpryTur",
+        "GBCylAmb9SpryBlk",
+        "GBCylAmb9SpryGl",
+        "GBCylAmb9SpryMattSl",
+        "GBCylAmb9SpryRd",
+        "GBCylAmb9SpryShSl",
+        "GBCylAmb9SpryTur",
+        "GBCylBlu9SpryBlk",
+        "GBCylBlu9SpryGl",
+        "GBCylBlu9SpryMattSl",
+        "GBCylBlu9SpryRd",
+        "GBCylBlu9SpryShSl",
+        "GBCylBlu9SpryTur",
+        "GBCylFrst9SpryBlk",
+        "GBCylFrst9SpryGl",
+        "GBCylFrst9SpryMattSl",
+        "GBCylFrst9SpryRd",
+        "GBCylFrst9SpryShSl",
+        "GBCylFrst9SpryTur",
+        "GBCylSwrl9SpryBlk",
+        "GBCylSwrl9SpryGl",
+        "GBCylSwrl9SpryMattSl",
+        "GBCylSwrl9SpryRd",
+        "GBCylSwrl9SpryShSl",
+        "GBCylSwrl9SpryTur",
+        "LBCyl9LtnBlk",
+        "LBCyl9LtnGl",
+        "LBCyl9LtnMtSl",
+        "LBCylAmb9LtnBlk",
+        "LBCylAmb9LtnGl",
+        "LBCylAmb9LtnMtSl",
+        "LBCylBlu9LtnBlk",
+        "LBCylBlu9LtnGl",
+        "LBCylBlu9LtnMattSl",
+        "LBCylFrst9LtnBlk",
+        "LBCylFrst9LtnGl",
+        "LBCylFrst9LtnMtSl",
+        "LBCylSwrl9LtnBlk",
+        "LBCylSwrl9LtnGl",
+        "LBCylSwrl9LtnMtSl"
+      ],
+      "sourcePsd": "/Users/jordanrichter/Desktop/Best Bottles/Caps and Sprayers Missing Images/17-415 Lotion & Sprayers/13. 17-415SpBlk.psd",
+      "canvas": [
+        578,
+        1046
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "file": "Spry17-415Blk.diptube.png",
+          "layerIndex": 1,
+          "layerName": "Layer 15",
+          "bounds": [
+            344,
+            397,
+            400,
+            879
+          ],
+          "sha256": "04e9911fbd7664c46f2ecfa88791b62c4404c4d8792812ba4b75ffe5d4aaa4a9"
+        },
+        {
+          "slot": "sprayer",
+          "file": "Spry17-415Blk.sprayer.png",
+          "layerIndex": 2,
+          "layerName": "Group 1",
+          "bounds": [
+            312,
+            236,
+            424,
+            436
+          ],
+          "sha256": "52739c8cb18a509cb2c06b1ce618cd105b5b9168c47340e35fd2834f2b9fe3da"
+        },
+        {
+          "slot": "overcap",
+          "file": "Spry17-415Blk.overcap.png",
+          "layerIndex": 6,
+          "layerName": "Layer 13",
+          "bounds": [
+            115,
+            731,
+            228,
+            881
+          ],
+          "sha256": "41a4c0786120e6e7cdb1771709f0c47f8f0ec52aaa5237f3082d69153ad1f115"
+        }
+      ],
+      "state": "extracted source candidate; per-bottle registration and visual approval required",
+      "sourceCrosswalk": "Exact 17-415 component family and finish; native Desktop filenames use Sp/Lt while catalog identifiers use Spry/Ltn. Preserve distinct spray and lotion artwork."
+    },
+    {
+      "sku": "Spry17-415Gl",
+      "sourceUrl": "https://www.bestbottles.com/product/spray-top-gold-color-17-415",
+      "sourceSha256": "8c16130e40f61f0307b572bbfbd28af6538baa9168858ae724c889c0e0253e22",
+      "legacyImage": "Spry17-415Gl.gif",
+      "componentKind": "Sprayer",
+      "affectedBottleSkus": [
+        "GBCyl9SpryBlk",
+        "GBCyl9SpryGl",
+        "GBCyl9SpryMattSl",
+        "GBCyl9SpryRd",
+        "GBCyl9SpryShSl",
+        "GBCyl9SpryTur",
+        "GBCylAmb9SpryBlk",
+        "GBCylAmb9SpryGl",
+        "GBCylAmb9SpryMattSl",
+        "GBCylAmb9SpryRd",
+        "GBCylAmb9SpryShSl",
+        "GBCylAmb9SpryTur",
+        "GBCylBlu9SpryBlk",
+        "GBCylBlu9SpryGl",
+        "GBCylBlu9SpryMattSl",
+        "GBCylBlu9SpryRd",
+        "GBCylBlu9SpryShSl",
+        "GBCylBlu9SpryTur",
+        "GBCylFrst9SpryBlk",
+        "GBCylFrst9SpryGl",
+        "GBCylFrst9SpryMattSl",
+        "GBCylFrst9SpryRd",
+        "GBCylFrst9SpryShSl",
+        "GBCylFrst9SpryTur",
+        "GBCylSwrl9SpryBlk",
+        "GBCylSwrl9SpryGl",
+        "GBCylSwrl9SpryMattSl",
+        "GBCylSwrl9SpryRd",
+        "GBCylSwrl9SpryShSl",
+        "GBCylSwrl9SpryTur",
+        "LBCyl9LtnBlk",
+        "LBCyl9LtnGl",
+        "LBCyl9LtnMtSl",
+        "LBCylAmb9LtnBlk",
+        "LBCylAmb9LtnGl",
+        "LBCylAmb9LtnMtSl",
+        "LBCylBlu9LtnBlk",
+        "LBCylBlu9LtnGl",
+        "LBCylBlu9LtnMattSl",
+        "LBCylFrst9LtnBlk",
+        "LBCylFrst9LtnGl",
+        "LBCylFrst9LtnMtSl",
+        "LBCylSwrl9LtnBlk",
+        "LBCylSwrl9LtnGl",
+        "LBCylSwrl9LtnMtSl"
+      ],
+      "sourcePsd": "/Users/jordanrichter/Desktop/Best Bottles/Caps and Sprayers Missing Images/17-415 Lotion & Sprayers/11. 17-415SpGl.psd",
+      "canvas": [
+        578,
+        1046
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "file": "Spry17-415Gl.diptube.png",
+          "layerIndex": 1,
+          "layerName": "Layer 15",
+          "bounds": [
+            344,
+            397,
+            400,
+            879
+          ],
+          "sha256": "04e9911fbd7664c46f2ecfa88791b62c4404c4d8792812ba4b75ffe5d4aaa4a9"
+        },
+        {
+          "slot": "sprayer",
+          "file": "Spry17-415Gl.sprayer.png",
+          "layerIndex": 2,
+          "layerName": "Group 1",
+          "bounds": [
+            312,
+            241,
+            422,
+            436
+          ],
+          "sha256": "96225d4eb910e8d813acc79f75c672e9d6918fed7a9b569573cf1b338713b61c"
+        },
+        {
+          "slot": "overcap",
+          "file": "Spry17-415Gl.overcap.png",
+          "layerIndex": 6,
+          "layerName": "Layer 13",
+          "bounds": [
+            115,
+            731,
+            228,
+            881
+          ],
+          "sha256": "41a4c0786120e6e7cdb1771709f0c47f8f0ec52aaa5237f3082d69153ad1f115"
+        }
+      ],
+      "state": "extracted source candidate; per-bottle registration and visual approval required",
+      "sourceCrosswalk": "Exact 17-415 component family and finish; native Desktop filenames use Sp/Lt while catalog identifiers use Spry/Ltn. Preserve distinct spray and lotion artwork."
+    },
+    {
+      "sku": "Spry17-415MattSl",
+      "sourceUrl": "https://www.bestbottles.com/product/spray-top-matte-silver-color-17-415",
+      "sourceSha256": "8c8b59b1137b55aeaae522c8f817f58a8ddfaf31fdcd0cf386e569d757114f6a",
+      "legacyImage": "Spry17-415MattSl.gif",
+      "componentKind": "Sprayer",
+      "affectedBottleSkus": [
+        "GBCyl9SpryBlk",
+        "GBCyl9SpryGl",
+        "GBCyl9SpryMattSl",
+        "GBCyl9SpryRd",
+        "GBCyl9SpryShSl",
+        "GBCyl9SpryTur",
+        "GBCylAmb9SpryBlk",
+        "GBCylAmb9SpryGl",
+        "GBCylAmb9SpryMattSl",
+        "GBCylAmb9SpryRd",
+        "GBCylAmb9SpryShSl",
+        "GBCylAmb9SpryTur",
+        "GBCylBlu9SpryBlk",
+        "GBCylBlu9SpryGl",
+        "GBCylBlu9SpryMattSl",
+        "GBCylBlu9SpryRd",
+        "GBCylBlu9SpryShSl",
+        "GBCylBlu9SpryTur",
+        "GBCylFrst9SpryBlk",
+        "GBCylFrst9SpryGl",
+        "GBCylFrst9SpryMattSl",
+        "GBCylFrst9SpryRd",
+        "GBCylFrst9SpryShSl",
+        "GBCylFrst9SpryTur",
+        "GBCylSwrl9SpryBlk",
+        "GBCylSwrl9SpryGl",
+        "GBCylSwrl9SpryMattSl",
+        "GBCylSwrl9SpryRd",
+        "GBCylSwrl9SpryShSl",
+        "GBCylSwrl9SpryTur",
+        "LBCyl9LtnBlk",
+        "LBCyl9LtnGl",
+        "LBCyl9LtnMtSl",
+        "LBCylAmb9LtnBlk",
+        "LBCylAmb9LtnGl",
+        "LBCylAmb9LtnMtSl",
+        "LBCylBlu9LtnBlk",
+        "LBCylBlu9LtnGl",
+        "LBCylBlu9LtnMattSl",
+        "LBCylFrst9LtnBlk",
+        "LBCylFrst9LtnGl",
+        "LBCylFrst9LtnMtSl",
+        "LBCylSwrl9LtnBlk",
+        "LBCylSwrl9LtnGl",
+        "LBCylSwrl9LtnMtSl"
+      ],
+      "sourcePsd": "/Users/jordanrichter/Desktop/Best Bottles/Caps and Sprayers Missing Images/17-415 Lotion & Sprayers/12. 17-415SpMattSl.psd",
+      "canvas": [
+        578,
+        1046
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "file": "Spry17-415MattSl.diptube.png",
+          "layerIndex": 1,
+          "layerName": "Layer 15",
+          "bounds": [
+            344,
+            397,
+            400,
+            879
+          ],
+          "sha256": "04e9911fbd7664c46f2ecfa88791b62c4404c4d8792812ba4b75ffe5d4aaa4a9"
+        },
+        {
+          "slot": "sprayer",
+          "file": "Spry17-415MattSl.sprayer.png",
+          "layerIndex": 2,
+          "layerName": "Group 1",
+          "bounds": [
+            310,
+            242,
+            422,
+            436
+          ],
+          "sha256": "e15748979d2d096ad44c4ae6b54be19b1db1c09749d9281cfdf39897cb0c757b"
+        },
+        {
+          "slot": "overcap",
+          "file": "Spry17-415MattSl.overcap.png",
+          "layerIndex": 6,
+          "layerName": "Layer 13",
+          "bounds": [
+            115,
+            731,
+            228,
+            881
+          ],
+          "sha256": "41a4c0786120e6e7cdb1771709f0c47f8f0ec52aaa5237f3082d69153ad1f115"
+        }
+      ],
+      "state": "extracted source candidate; per-bottle registration and visual approval required",
+      "sourceCrosswalk": "Exact 17-415 component family and finish; native Desktop filenames use Sp/Lt while catalog identifiers use Spry/Ltn. Preserve distinct spray and lotion artwork."
+    },
+    {
+      "sku": "Spry17-415Red",
+      "sourceUrl": "https://www.bestbottles.com/product/spray-top-red-color-17-415",
+      "sourceSha256": "8e3785715a2e9c5b77c7a1a0c5dde2d10002dde95395d6f442f30a99d3b19c74",
+      "legacyImage": "Spry17-415Red.gif",
+      "componentKind": "Sprayer",
+      "affectedBottleSkus": [
+        "GBCyl9SpryBlk",
+        "GBCyl9SpryGl",
+        "GBCyl9SpryMattSl",
+        "GBCyl9SpryRd",
+        "GBCyl9SpryShSl",
+        "GBCyl9SpryTur",
+        "GBCylAmb9SpryBlk",
+        "GBCylAmb9SpryGl",
+        "GBCylAmb9SpryMattSl",
+        "GBCylAmb9SpryRd",
+        "GBCylAmb9SpryShSl",
+        "GBCylAmb9SpryTur",
+        "GBCylBlu9SpryBlk",
+        "GBCylBlu9SpryGl",
+        "GBCylBlu9SpryMattSl",
+        "GBCylBlu9SpryRd",
+        "GBCylBlu9SpryShSl",
+        "GBCylBlu9SpryTur",
+        "GBCylFrst9SpryBlk",
+        "GBCylFrst9SpryGl",
+        "GBCylFrst9SpryMattSl",
+        "GBCylFrst9SpryRd",
+        "GBCylFrst9SpryShSl",
+        "GBCylFrst9SpryTur",
+        "GBCylSwrl9SpryBlk",
+        "GBCylSwrl9SpryGl",
+        "GBCylSwrl9SpryMattSl",
+        "GBCylSwrl9SpryRd",
+        "GBCylSwrl9SpryShSl",
+        "GBCylSwrl9SpryTur",
+        "LBCyl9LtnBlk",
+        "LBCyl9LtnGl",
+        "LBCyl9LtnMtSl",
+        "LBCylAmb9LtnBlk",
+        "LBCylAmb9LtnGl",
+        "LBCylAmb9LtnMtSl",
+        "LBCylBlu9LtnBlk",
+        "LBCylBlu9LtnGl",
+        "LBCylBlu9LtnMattSl",
+        "LBCylFrst9LtnBlk",
+        "LBCylFrst9LtnGl",
+        "LBCylFrst9LtnMtSl",
+        "LBCylSwrl9LtnBlk",
+        "LBCylSwrl9LtnGl",
+        "LBCylSwrl9LtnMtSl"
+      ],
+      "sourcePsd": "/Users/jordanrichter/Desktop/Best Bottles/Caps and Sprayers Missing Images/17-415 Lotion & Sprayers/15. 17-415SpRed.psd",
+      "canvas": [
+        578,
+        1046
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "file": "Spry17-415Red.diptube.png",
+          "layerIndex": 1,
+          "layerName": "Layer 15",
+          "bounds": [
+            344,
+            397,
+            400,
+            879
+          ],
+          "sha256": "04e9911fbd7664c46f2ecfa88791b62c4404c4d8792812ba4b75ffe5d4aaa4a9"
+        },
+        {
+          "slot": "sprayer",
+          "file": "Spry17-415Red.sprayer.png",
+          "layerIndex": 2,
+          "layerName": "Group 1",
+          "bounds": [
+            311,
+            233,
+            426,
+            435
+          ],
+          "sha256": "d129fed4a16a5d2669931815829de770fc30e341a75495d1599a9ff24e5a429a"
+        },
+        {
+          "slot": "overcap",
+          "file": "Spry17-415Red.overcap.png",
+          "layerIndex": 6,
+          "layerName": "Layer 13",
+          "bounds": [
+            115,
+            731,
+            228,
+            881
+          ],
+          "sha256": "41a4c0786120e6e7cdb1771709f0c47f8f0ec52aaa5237f3082d69153ad1f115"
+        }
+      ],
+      "state": "extracted source candidate; per-bottle registration and visual approval required",
+      "sourceCrosswalk": "Exact 17-415 component family and finish; native Desktop filenames use Sp/Lt while catalog identifiers use Spry/Ltn. Preserve distinct spray and lotion artwork."
+    },
+    {
+      "sku": "Spry17-415ShnSl",
+      "sourceUrl": "https://www.bestbottles.com/product/spray-top-shiny-silver-color-17-415",
+      "sourceSha256": "af514e3e3928f8ce78e5ea5f59b462703d41cacb1fe4dc864c685f8b488488e2",
+      "legacyImage": "Spry17-415ShnSl.gif",
+      "componentKind": "Sprayer",
+      "affectedBottleSkus": [
+        "GBCyl9SpryBlk",
+        "GBCyl9SpryGl",
+        "GBCyl9SpryMattSl",
+        "GBCyl9SpryRd",
+        "GBCyl9SpryShSl",
+        "GBCyl9SpryTur",
+        "GBCylAmb9SpryBlk",
+        "GBCylAmb9SpryGl",
+        "GBCylAmb9SpryMattSl",
+        "GBCylAmb9SpryRd",
+        "GBCylAmb9SpryShSl",
+        "GBCylAmb9SpryTur",
+        "GBCylBlu9SpryBlk",
+        "GBCylBlu9SpryGl",
+        "GBCylBlu9SpryMattSl",
+        "GBCylBlu9SpryRd",
+        "GBCylBlu9SpryShSl",
+        "GBCylBlu9SpryTur",
+        "GBCylFrst9SpryBlk",
+        "GBCylFrst9SpryGl",
+        "GBCylFrst9SpryMattSl",
+        "GBCylFrst9SpryRd",
+        "GBCylFrst9SpryShSl",
+        "GBCylFrst9SpryTur",
+        "GBCylSwrl9SpryBlk",
+        "GBCylSwrl9SpryGl",
+        "GBCylSwrl9SpryMattSl",
+        "GBCylSwrl9SpryRd",
+        "GBCylSwrl9SpryShSl",
+        "GBCylSwrl9SpryTur",
+        "LBCyl9LtnBlk",
+        "LBCyl9LtnGl",
+        "LBCyl9LtnMtSl",
+        "LBCylAmb9LtnBlk",
+        "LBCylAmb9LtnGl",
+        "LBCylAmb9LtnMtSl",
+        "LBCylBlu9LtnBlk",
+        "LBCylBlu9LtnGl",
+        "LBCylBlu9LtnMattSl",
+        "LBCylFrst9LtnBlk",
+        "LBCylFrst9LtnGl",
+        "LBCylFrst9LtnMtSl",
+        "LBCylSwrl9LtnBlk",
+        "LBCylSwrl9LtnGl",
+        "LBCylSwrl9LtnMtSl"
+      ],
+      "sourcePsd": "/Users/jordanrichter/Desktop/Best Bottles/Caps and Sprayers Missing Images/17-415 Lotion & Sprayers/14. 17-415SpShnSl.psd",
+      "canvas": [
+        578,
+        1046
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "file": "Spry17-415ShnSl.diptube.png",
+          "layerIndex": 1,
+          "layerName": "Layer 15",
+          "bounds": [
+            344,
+            397,
+            400,
+            879
+          ],
+          "sha256": "04e9911fbd7664c46f2ecfa88791b62c4404c4d8792812ba4b75ffe5d4aaa4a9"
+        },
+        {
+          "slot": "sprayer",
+          "file": "Spry17-415ShnSl.sprayer.png",
+          "layerIndex": 2,
+          "layerName": "Group 1",
+          "bounds": [
+            311,
+            234,
+            425,
+            435
+          ],
+          "sha256": "16a8e9d3d8c0de8edc8fbc7f4a14656a5c7048fb3929b239a9f036127e09ec91"
+        },
+        {
+          "slot": "overcap",
+          "file": "Spry17-415ShnSl.overcap.png",
+          "layerIndex": 6,
+          "layerName": "Layer 13",
+          "bounds": [
+            115,
+            731,
+            228,
+            881
+          ],
+          "sha256": "41a4c0786120e6e7cdb1771709f0c47f8f0ec52aaa5237f3082d69153ad1f115"
+        }
+      ],
+      "state": "extracted source candidate; per-bottle registration and visual approval required",
+      "sourceCrosswalk": "Exact 17-415 component family and finish; native Desktop filenames use Sp/Lt while catalog identifiers use Spry/Ltn. Preserve distinct spray and lotion artwork."
+    },
+    {
+      "sku": "Spry17-415Tur",
+      "sourceUrl": "https://www.bestbottles.com/product/spray-top-turquoise-color-17-415",
+      "sourceSha256": "b092aa1be215bc5f81977212ec5c8990165850c32b5fb56dc3218f0ebca0037a",
+      "legacyImage": "Spry17-415Tur.gif",
+      "componentKind": "Sprayer",
+      "affectedBottleSkus": [
+        "GBCyl9SpryBlk",
+        "GBCyl9SpryGl",
+        "GBCyl9SpryMattSl",
+        "GBCyl9SpryRd",
+        "GBCyl9SpryShSl",
+        "GBCyl9SpryTur",
+        "GBCylAmb9SpryBlk",
+        "GBCylAmb9SpryGl",
+        "GBCylAmb9SpryMattSl",
+        "GBCylAmb9SpryRd",
+        "GBCylAmb9SpryShSl",
+        "GBCylAmb9SpryTur",
+        "GBCylBlu9SpryBlk",
+        "GBCylBlu9SpryGl",
+        "GBCylBlu9SpryMattSl",
+        "GBCylBlu9SpryRd",
+        "GBCylBlu9SpryShSl",
+        "GBCylBlu9SpryTur",
+        "GBCylFrst9SpryBlk",
+        "GBCylFrst9SpryGl",
+        "GBCylFrst9SpryMattSl",
+        "GBCylFrst9SpryRd",
+        "GBCylFrst9SpryShSl",
+        "GBCylFrst9SpryTur",
+        "GBCylSwrl9SpryBlk",
+        "GBCylSwrl9SpryGl",
+        "GBCylSwrl9SpryMattSl",
+        "GBCylSwrl9SpryRd",
+        "GBCylSwrl9SpryShSl",
+        "GBCylSwrl9SpryTur",
+        "LBCyl9LtnBlk",
+        "LBCyl9LtnGl",
+        "LBCyl9LtnMtSl",
+        "LBCylAmb9LtnBlk",
+        "LBCylAmb9LtnGl",
+        "LBCylAmb9LtnMtSl",
+        "LBCylBlu9LtnBlk",
+        "LBCylBlu9LtnGl",
+        "LBCylBlu9LtnMattSl",
+        "LBCylFrst9LtnBlk",
+        "LBCylFrst9LtnGl",
+        "LBCylFrst9LtnMtSl",
+        "LBCylSwrl9LtnBlk",
+        "LBCylSwrl9LtnGl",
+        "LBCylSwrl9LtnMtSl"
+      ],
+      "sourcePsd": "/Users/jordanrichter/Desktop/Best Bottles/Caps and Sprayers Missing Images/17-415 Lotion & Sprayers/16. 17-415SpTur.psd",
+      "canvas": [
+        578,
+        1046
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "file": "Spry17-415Tur.diptube.png",
+          "layerIndex": 1,
+          "layerName": "Layer 15",
+          "bounds": [
+            344,
+            397,
+            400,
+            879
+          ],
+          "sha256": "04e9911fbd7664c46f2ecfa88791b62c4404c4d8792812ba4b75ffe5d4aaa4a9"
+        },
+        {
+          "slot": "sprayer",
+          "file": "Spry17-415Tur.sprayer.png",
+          "layerIndex": 2,
+          "layerName": "Group 1",
+          "bounds": [
+            309,
+            231,
+            434,
+            436
+          ],
+          "sha256": "c34b4b4a73c0967283386c0a77c9da61e6fab1d180cc7ec1ae810cc7756b7292"
+        },
+        {
+          "slot": "overcap",
+          "file": "Spry17-415Tur.overcap.png",
+          "layerIndex": 6,
+          "layerName": "Layer 13",
+          "bounds": [
+            115,
+            731,
+            228,
+            881
+          ],
+          "sha256": "41a4c0786120e6e7cdb1771709f0c47f8f0ec52aaa5237f3082d69153ad1f115"
+        }
+      ],
+      "state": "extracted source candidate; per-bottle registration and visual approval required",
+      "sourceCrosswalk": "Exact 17-415 component family and finish; native Desktop filenames use Sp/Lt while catalog identifiers use Spry/Ltn. Preserve distinct spray and lotion artwork."
+    }
+  ],
+  "published": false,
+  "background": "Native PSD Background layer excluded; all source originals untouched.",
+  "visualInspection": {
+    "state": "source candidates only",
+    "findings": [
+      "Nine distinct native mechanisms and their sidecar caps are present.",
+      "The three lotion dip-tube layers contain stray white retouch polygons outside the tube. They must be excluded using a reviewed source mask before per-bottle use.",
+      "Native 578 x 1046 component canvas is a reference; use higher-resolution exact full-assembly layers where available.",
+      "No colored 9 mL tube fix is implied by these extractions. Per-material transmission and fit remain unapproved."
+    ]
+  }
+}

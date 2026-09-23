@@ -1,8 +1,8 @@
+import { matchesShopCollection } from "./shopCollections";
 import {
     APPLICATOR_BUCKETS,
     BOTTLE_CATEGORIES,
     COMPONENT_CATEGORIES,
-    FAMILY_ORDER,
     type CatalogFilters,
     type RollerMaterial,
     type SortValue,
@@ -15,6 +15,7 @@ import {
     catalogSearchScore,
     classifyComponentType,
     capacitySelectionMatches,
+    sortCatalogFeatured,
 } from "@/lib/catalogFilters";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { isVisibleCatalogGroup, isMissingHeroSource } from "@/lib/products/catalog-listing-visibility";
@@ -69,6 +70,10 @@ export interface CatalogSearchVariantPreviewRow {
         webPrice1pc: number | null;
         shopifyVariantId: string | null;
         shopifySellable: boolean | null;
+        webPrice10pc?: number | null;
+        webPrice12pc?: number | null;
+        /** Published quantity-break ladder (site truth); drives the grid card tier table. */
+        priceTiers?: Array<{ minQty: number; unitPrice: number; totalPrice?: number }> | null;
     }>;
 }
 
@@ -150,7 +155,7 @@ export function buildCatalogSearchResult(input: {
         return applicatorBucketMatchesProductValues(bucket as never, group.applicatorTypes ?? []);
     };
     const runFilters = (skipKeys = new Set<keyof CatalogFilters>()) => {
-        let rows = [...groups];
+        let rows = filters.shopCollection ? groups.filter(group => matchesShopCollection(group, filters.shopCollection!)) : [...groups];
         if (filters.search) {
             rows = rows.filter((group) => catalogSearchMatches(filters.search, [
                 group.displayName,
@@ -179,8 +184,15 @@ export function buildCatalogSearchResult(input: {
             rows = rows.filter((group) => group.family != null && set.has(group.family));
         }
         if (!skipKeys.has("colors") && filters.colors.length > 0) {
-            const set = new Set(filters.colors.map((color) => canonicalGlassColor(color)));
-            rows = rows.filter((group) => set.has(canonicalGlassColor(group.color)));
+            const set = new Set(
+                filters.colors
+                    .map((color) => canonicalGlassColor(color))
+                    .filter((color): color is string => Boolean(color)),
+            );
+            rows = rows.filter((group) => {
+                const color = canonicalGlassColor(group.color);
+                return color != null && set.has(color);
+            });
         }
         if (!skipKeys.has("capacities") && filters.capacities.length > 0) {
             rows = rows.filter((group) => capacitySelectionMatches(group.capacityMl, filters.capacities));
@@ -233,7 +245,10 @@ export function buildCatalogSearchResult(input: {
         applicators,
         rollerMaterials,
         families: countBy(familyFacetBase.filter((group) => !COMPONENT_CATEGORIES.has(group.category)), (group) => group.family),
-        colors: countBy(colorFacetBase, (group) => canonicalGlassColor(group.color)),
+        colors: countBy(
+            colorFacetBase.filter((group) => BOTTLE_CATEGORIES.has(group.category)),
+            (group) => canonicalGlassColor(group.color),
+        ),
         capacities,
         neckThreadSizes: countBy(threadFacetBase, (group) => group.neckThreadSize),
         componentTypes: countBy(result, (group) => classifyComponentType(group.displayName, group.family)),
@@ -241,7 +256,7 @@ export function buildCatalogSearchResult(input: {
             ? { min: Math.min(...priceFloors), max: Math.max(...priceCeilings, ...priceFloors) }
             : { min: 0, max: 0 },
     };
-    const sorted = [...result];
+    let sorted = [...result];
     if (input.sort === "best-match" && filters.search) {
         const score = (group: CatalogSearchGroup) => catalogSearchScore(filters.search, [
             { value: group.displayName, weight: 5 },
@@ -264,20 +279,7 @@ export function buildCatalogSearchResult(input: {
     else if (input.sort === "variants-desc") sorted.sort((a, b) => (b.variantCount ?? 0) - (a.variantCount ?? 0));
     else if (input.sort === "capacity-asc") sorted.sort((a, b) => (a.capacityMl ?? Infinity) - (b.capacityMl ?? Infinity));
     else if (input.sort === "capacity-desc") sorted.sort((a, b) => (b.capacityMl ?? -Infinity) - (a.capacityMl ?? -Infinity));
-    else {
-        const familyIdx = (family: string | null) => {
-            if (!family) return FAMILY_ORDER.length;
-            const index = FAMILY_ORDER.indexOf(family);
-            return index >= 0 ? index : FAMILY_ORDER.length;
-        };
-        sorted.sort((a, b) => {
-            const categoryDelta = (BOTTLE_CATEGORIES.has(a.category) ? 0 : 1) - (BOTTLE_CATEGORIES.has(b.category) ? 0 : 1);
-            if (categoryDelta !== 0) return categoryDelta;
-            const familyDelta = familyIdx(a.family) - familyIdx(b.family);
-            if (familyDelta !== 0) return familyDelta;
-            return (a.capacityMl ?? 99999) - (b.capacityMl ?? 99999);
-        });
-    }
+    else sorted = sortCatalogFeatured(sorted);
     const offset = Math.max(0, Number(input.cursor ?? 0) || 0);
     const limit = Math.min(Math.max(input.limit, 1), 240);
     const items = sorted.slice(offset, offset + limit);
@@ -291,5 +293,39 @@ export function buildCatalogSearchResult(input: {
             resolveCatalogGroupSku(group._id, input.primarySkus, input.variantPreviewRows)
         ),
         variantPreviewRows: input.variantPreviewRows.filter((row) => visibleIds.has(row.groupId)),
+    };
+}
+
+function mergeRowsByGroupId<T extends { groupId: string }>(previous: T[], next: T[]): T[] {
+    const merged = new Map<string, T>();
+    for (const row of previous) merged.set(row.groupId, row);
+    for (const row of next) merged.set(row.groupId, row);
+    return [...merged.values()];
+}
+
+type CatalogPageMergeable = {
+    items: Array<{ _id: string }>;
+    primarySkus: Array<{ groupId: string }>;
+    variantPreviewRows: Array<{ groupId: string }>;
+    nextCursor: string | null;
+};
+
+/** Append a cursor page onto the already-rendered catalog without dropping earlier cards. */
+export function mergeCatalogSearchPages<T extends CatalogPageMergeable>(
+    previous: T,
+    nextPage: T,
+): T {
+    const seen = new Set(previous.items.map((item) => item._id));
+    const items = [...previous.items] as T["items"];
+    for (const item of nextPage.items) {
+        if (seen.has(item._id)) continue;
+        seen.add(item._id);
+        items.push(item);
+    }
+    return {
+        ...nextPage,
+        items,
+        primarySkus: mergeRowsByGroupId(previous.primarySkus, nextPage.primarySkus) as T["primarySkus"],
+        variantPreviewRows: mergeRowsByGroupId(previous.variantPreviewRows, nextPage.variantPreviewRows) as T["variantPreviewRows"],
     };
 }

@@ -1,0 +1,6977 @@
+{
+ "generatedAt": "2026-09-02T15:04:50-0700",
+ "legacySkus": 2397,
+ "prodSkus": 2324,
+ "onlyLegacy": [
+  "CP13-415CuSht",
+  "CP13-415GlMattSht",
+  "CP13-415GlSht",
+  "CP13-415SlMattSht",
+  "CP13-415SlSht",
+  "GBBstnBlu2ozMtlRollonShnBlk",
+  "GBCrcl15BlkShSht",
+  "GBCrcl15CuSht",
+  "GBCrcl15GlMattSht",
+  "GBCrcl15GlSht",
+  "GBCrcl15SlMattSht",
+  "GBCrcl15SlSht",
+  "GBCyl5BlkShSht",
+  "GBCyl5CuSht",
+  "GBCyl5GlMattSht",
+  "GBCyl5GlSht",
+  "GBCyl5SlMattSht",
+  "GBCyl5SlSht",
+  "GBCyl5WhtSht",
+  "GBCylBlu5CuSht",
+  "GBCylBlu5GlMattSht",
+  "GBCylBlu5GlSht",
+  "GBCylBlu5SlMattSht",
+  "GBCylBlu5SlSht",
+  "GBCylSwrl9MtlRollWht",
+  "GBCylSwrl9RollWht",
+  "GBElg15BlkShSht",
+  "GBElg15CuSht",
+  "GBElg15GlMattSht",
+  "GBElg15GlSht",
+  "GBElg15MinarSl",
+  "GBElg15SlMattSht",
+  "GBElg15SlSht",
+  "GBElgFrst15CuSht",
+  "GBElgFrst15GlMattSht",
+  "GBElgFrst15GlSht",
+  "GBElgFrst15MinarCu",
+  "GBElgFrst15MinarSl",
+  "GBElgFrst15SlMattSht",
+  "GBElgFrst15SlSht",
+  "GBElgFrst15SpryGlMatt",
+  "GBFlair15BlkShSht",
+  "GBFlair15CuSht",
+  "GBFlair15GlMattSht",
+  "GBFlair15GlSht",
+  "GBFlair15MinarCu",
+  "GBFlair15MinarSl",
+  "GBFlair15SlMattSht",
+  "GBFlair15SlSht",
+  "GBRect10BlkShSht",
+  "GBRect10CuSht",
+  "GBRect10GlMattSht",
+  "GBRect10GlSht",
+  "GBRect10MinarCu",
+  "GBRect10MinarSl",
+  "GBRect10SlMattSht",
+  "GBRect10SlSht",
+  "GBRoyal13BlkShSht",
+  "GBRoyal13CuSht",
+  "GBRoyal13GlMattSht",
+  "GBRoyal13GlSht",
+  "GBRoyal13MinarCu",
+  "GBRoyal13MinarSl",
+  "GBRoyal13SlMattSht",
+  "GBRoyal13SlSht",
+  "GBSleek5BlkShSht",
+  "GBSleek5CuSht",
+  "GBSleek5GlMattSht",
+  "GBSleek5GlSht",
+  "GBSleek5SlMattSht",
+  "GBSleek5SlSht",
+  "GBSleek8BlkShSht",
+  "GBSleek8CuSht",
+  "GBSleek8GlMattSht",
+  "GBSleek8GlSht",
+  "GBSleek8SlMattSht",
+  "GBSleek8SlSht",
+  "GBSqr15BlkShSht",
+  "GBSqr15CuSht",
+  "GBSqr15GlMattSht",
+  "GBSqr15GlSht",
+  "GBSqr15SlMattSht",
+  "GBTallCyl9BlkShSht",
+  "GBTallCyl9CuSht",
+  "GBTallCyl9GlMattSht",
+  "GBTallCyl9GlSht",
+  "GBTallCyl9SlMattSht",
+  "GBTallCyl9SlSht",
+  "GBTallCyl9WhtSht",
+  "GBTallCylFrst9BlkShSht",
+  "GBTallCylFrst9CuSht",
+  "GBTallCylFrst9GlMattSht",
+  "GBTallCylFrst9GlSht",
+  "GBTallCylFrst9SlMattSht",
+  "GBTallCylFrst9SlSht",
+  "GBTallRect10BlkShSht",
+  "GBTallRect10CuSht",
+  "GBTallRect10GlMattSht",
+  "GBTallRect10GlSht",
+  "GBTallRect10SlMattSht",
+  "GBTallRect10SlSht",
+  "GBTulip6CuSht",
+  "GBTulip6GlMattSht",
+  "GBTulip6GlSht",
+  "GBTulip6SlMattSht",
+  "GBTulip6SlSht",
+  "GBTulipAmb5BlkShSht",
+  "GBTulipAmb5CuSht",
+  "GBTulipAmb5GlMattSht",
+  "GBTulipAmb5GlSht",
+  "GBTulipAmb5SlMattSht",
+  "GBTulipAmb5SlSht"
+ ],
+ "onlyProd": [
+  "13-415CAP4SpryCuMt",
+  "13-415CAP4SpryGlSh",
+  "13-415CAP4SprySlMt",
+  "18-415CAP4SpryMtGl",
+  "18-415CAP4SpryShnBlk",
+  "Alu250mlSprayBlack",
+  "AntqSprBulbLavender",
+  "BoxCWndwWhite",
+  "CJ30BlkCap",
+  "CJ30SlCap",
+  "CJ40BlkCap",
+  "CJ40SlCap",
+  "CJ5BlkCap",
+  "CJ5SlCap",
+  "CJAmb5mlSlCap",
+  "CP13-425Blk",
+  "CP13-425Wht",
+  "CP18-415AnSpPnk",
+  "CP18-415AnSpTslGl",
+  "CP24-400BlkPls",
+  "CPKeyChnGld",
+  "CPTslRed",
+  "CPWhite1Oz",
+  "CapBlackPoly22mm-400",
+  "Droppers1ozElg",
+  "GBATom5RedBurg",
+  "GBBell10BlkShSht",
+  "GBBell10MtlRollBlkDot",
+  "GBBell10RollBlkDot",
+  "GBBell10SpryBlkSh",
+  "GBBstn15BlkDrp",
+  "GBPillar9BlkShSht",
+  "GBPillar9MtlRollBlkdot",
+  "GBPillar9RollBlkDot",
+  "GBPillar9SpryBlkMatt",
+  "GBVBlu1o9BlackCapSht",
+  "GBVialAmb1o5WhtCapSht",
+  "GBcyl25SpryShnBlk",
+  "HMAC-TEST-ONLY",
+  "LBMetalSilver1oz",
+  "PbClear4ozFlpWh",
+  "PbClear8ozFlpWh",
+  "PbNat16ozFlpWh",
+  "Plastic"
+ ],
+ "plateless": [
+  {
+   "websiteSku": "13-415CAP4SpryCuMt",
+   "family": "Sprayer",
+   "category": "Component",
+   "group": "fine-mist-sprayer-13-415",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "13-415CAP4SpryGlSh",
+   "family": "Sprayer",
+   "category": "Component",
+   "group": "fine-mist-sprayer-13-415",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "13-415CAP4SprySlMt",
+   "family": "Sprayer",
+   "category": "Component",
+   "group": "fine-mist-sprayer-13-415",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "18-400CpAppBlk",
+   "family": "Cap/Closure",
+   "category": "Component",
+   "group": "cap-closure-18-400",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.42
+  },
+  {
+   "websiteSku": "18-400CpShortBlk",
+   "family": "Cap/Closure",
+   "category": "Component",
+   "group": "cap-closure-18-400",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.32
+  },
+  {
+   "websiteSku": "18-415CAP4SpryMtGl",
+   "family": "Sprayer",
+   "category": "Component",
+   "group": "fine-mist-sprayer-18-415",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "18-415CAP4SpryShnBlk",
+   "family": "Sprayer",
+   "category": "Component",
+   "group": "fine-mist-sprayer-18-415",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "Alu100mlSprayBlack",
+   "family": "Aluminum Bottle",
+   "category": "Aluminum Bottle",
+   "group": "aluminum-bottle-100ml-mixed-20-410",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 1.25
+  },
+  {
+   "websiteSku": "Alu250SpryBl",
+   "family": "Aluminum Bottle",
+   "category": "Component",
+   "group": "fine-mist-sprayer-20-410",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 1.5
+  },
+  {
+   "websiteSku": "Alu500",
+   "family": "Aluminum Bottle",
+   "category": "Aluminum Bottle",
+   "group": "aluminum-bottle-500ml-mixed-20-410",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "121x363",
+   "noCatalogueImage": false,
+   "legacyPrice": 3.65
+  },
+  {
+   "websiteSku": "AnSp18-415Wht",
+   "family": "Sprayer",
+   "category": "Component",
+   "group": "vintage-bulb-sprayer-18-415",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 4.25
+  },
+  {
+   "websiteSku": "AntqSprBulbLavender",
+   "family": "Sprayer",
+   "category": "Component",
+   "group": "vintage-bulb-sprayer",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "350x450",
+   "legacyMain": "245x245",
+   "noCatalogueImage": false,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "Box-4x4x4",
+   "family": "Gift Box",
+   "category": "Packaging",
+   "group": "gift-box-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.45
+  },
+  {
+   "websiteSku": "Box-5x5x5",
+   "family": "Gift Box",
+   "category": "Packaging",
+   "group": "gift-box-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.52
+  },
+  {
+   "websiteSku": "BoxBWndwBlueFthr",
+   "family": "Gift Box",
+   "category": "Packaging",
+   "group": "gift-box-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.35
+  },
+  {
+   "websiteSku": "BoxBWndwEarthBrush",
+   "family": "Gift Box",
+   "category": "Packaging",
+   "group": "gift-box-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.35
+  },
+  {
+   "websiteSku": "BoxBWndwGreenBrush",
+   "family": "Gift Box",
+   "category": "Packaging",
+   "group": "gift-box-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.35
+  },
+  {
+   "websiteSku": "BoxBWndwOrngShade",
+   "family": "Gift Box",
+   "category": "Packaging",
+   "group": "gift-box-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.35
+  },
+  {
+   "websiteSku": "BoxCWndwBlueDots",
+   "family": "Gift Box",
+   "category": "Packaging",
+   "group": "gift-box-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.35
+  },
+  {
+   "websiteSku": "BoxCWndwGreenPrint",
+   "family": "Gift Box",
+   "category": "Packaging",
+   "group": "gift-box-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.35
+  },
+  {
+   "websiteSku": "BoxCWndwGrnShd",
+   "family": "Gift Box",
+   "category": "Packaging",
+   "group": "gift-box-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.35
+  },
+  {
+   "websiteSku": "BoxCWndwSlvrSunFlwr",
+   "family": "Gift Box",
+   "category": "Packaging",
+   "group": "gift-box-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.35
+  },
+  {
+   "websiteSku": "BoxCWndwWhite",
+   "family": "Gift Box",
+   "category": "Packaging",
+   "group": "gift-box-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "BoxECreamMatteCube",
+   "family": "Gift Box",
+   "category": "Packaging",
+   "group": "gift-box-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.75
+  },
+  {
+   "websiteSku": "BoxECreamMatteRctMed",
+   "family": "Gift Box",
+   "category": "Packaging",
+   "group": "gift-box-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.75
+  },
+  {
+   "websiteSku": "BoxWhite101020",
+   "family": "Gift Box",
+   "category": "Packaging",
+   "group": "gift-box-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "350x450",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.25
+  },
+  {
+   "websiteSku": "CJ30BlkCap",
+   "family": "Cap/Closure",
+   "category": "Component",
+   "group": "cap-closure-PRESS-FIT",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "CJ30SlCap",
+   "family": "Cap/Closure",
+   "category": "Component",
+   "group": "cap-closure-PRESS-FIT",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "CJ40BlkCap",
+   "family": "Cap/Closure",
+   "category": "Component",
+   "group": "cap-closure-PRESS-FIT",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "CJ40SlCap",
+   "family": "Cap/Closure",
+   "category": "Component",
+   "group": "cap-closure-PRESS-FIT",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "CJ5BlkCap",
+   "family": "Cap/Closure",
+   "category": "Component",
+   "group": "cap-closure-PRESS-FIT",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "CJ5SlCap",
+   "family": "Cap/Closure",
+   "category": "Component",
+   "group": "cap-closure-PRESS-FIT",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "CJAmb30BlkCap",
+   "family": "Cream Jar",
+   "category": "Glass Jar",
+   "group": "cream-jar-30ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "360x480",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.9
+  },
+  {
+   "websiteSku": "CP13-415SpryBlkMt",
+   "family": "Sprayer",
+   "category": "Component",
+   "group": "fine-mist-sprayer-13-415",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.65
+  },
+  {
+   "websiteSku": "CP13-415SpryBlkSh",
+   "family": "Sprayer",
+   "category": "Component",
+   "group": "fine-mist-sprayer-13-415",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.65
+  },
+  {
+   "websiteSku": "CP13-415SpryBluMt",
+   "family": "Sprayer",
+   "category": "Component",
+   "group": "fine-mist-sprayer-13-415",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.65
+  },
+  {
+   "websiteSku": "CP13-415SpryCuMt",
+   "family": "Sprayer",
+   "category": "Component",
+   "group": "fine-mist-sprayer-13-415",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.65
+  },
+  {
+   "websiteSku": "CP13-415SpryGlMt",
+   "family": "Sprayer",
+   "category": "Component",
+   "group": "fine-mist-sprayer-13-415",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.65
+  },
+  {
+   "websiteSku": "CP13-415SpryGlSh",
+   "family": "Sprayer",
+   "category": "Component",
+   "group": "fine-mist-sprayer-13-415",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.65
+  },
+  {
+   "websiteSku": "CP13-415SprySlMt",
+   "family": "Sprayer",
+   "category": "Component",
+   "group": "fine-mist-sprayer-13-415",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.65
+  },
+  {
+   "websiteSku": "CP13-415SprySlSh",
+   "family": "Sprayer",
+   "category": "Component",
+   "group": "fine-mist-sprayer-13-415",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.65
+  },
+  {
+   "websiteSku": "CP13-425Blk",
+   "family": "Cap/Closure",
+   "category": "Component",
+   "group": "cap-closure-13-425",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "CP13-425Wht",
+   "family": "Cap/Closure",
+   "category": "Component",
+   "group": "cap-closure-13-425",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "CP18-415ShnBlkTall",
+   "family": "Cap/Closure",
+   "category": "Component",
+   "group": "cap-closure-18-415",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": true,
+   "legacyPrice": 0.27
+  },
+  {
+   "websiteSku": "CP24-400BlkPls",
+   "family": "Cap/Closure",
+   "category": "Component",
+   "group": "cap-closure-24-400",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "CPKeyChnGld",
+   "family": "Cap/Closure",
+   "category": "Component",
+   "group": "cap-closure-SPECIAL",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "CPTslRed",
+   "family": "Cap/Closure",
+   "category": "Component",
+   "group": "cap-closure-SPECIAL",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "CPWhite1Oz",
+   "family": "Roll-On Cap",
+   "category": "Component",
+   "group": "roll-on-fitment",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "CapBlackPoly22mm-400",
+   "family": "Cap/Closure",
+   "category": "Component",
+   "group": "cap-closure-22-400",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "CreamJarAmb40Blkcap",
+   "family": "Cream Jar",
+   "category": "Glass Jar",
+   "group": "cream-jar-40ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "311x400",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.95
+  },
+  {
+   "websiteSku": "CreamJarAmb5mlSlcap",
+   "family": "Cream Jar",
+   "category": "Component",
+   "group": "lotion-pump-37mm",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.5
+  },
+  {
+   "websiteSku": "CreamJarFrstdPlsBlkPls2oz",
+   "family": "Cream Jar",
+   "category": "Glass Jar",
+   "group": "cream-jar-60ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.85
+  },
+  {
+   "websiteSku": "Droppers1ozElg",
+   "family": "Dropper",
+   "category": "Component",
+   "group": "dropper-17-415",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "FunnelMetalGl",
+   "family": "Tool",
+   "category": "Accessory",
+   "group": "tool-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "350x450",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.44
+  },
+  {
+   "websiteSku": "FunnelMetalSl",
+   "family": "Tool",
+   "category": "Accessory",
+   "group": "tool-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "350x450",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.44
+  },
+  {
+   "websiteSku": "GB09BlackCapApp",
+   "family": "Vial",
+   "category": "Glass Bottle",
+   "group": "vial-9ml-clear-18-400-glasswand",
+   "plateReason": "SAME_STEM_DIFFERENT_PHOTOGRAPH",
+   "onLegacySite": true,
+   "legacyCapOn": "360x480",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": true,
+   "legacyPrice": 0.46
+  },
+  {
+   "websiteSku": "GB1mlVWht",
+   "family": "Vial",
+   "category": "Glass Bottle",
+   "group": "vial-1ml-clear-Plug",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "600x800",
+   "legacyEnlarged": "600x800",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.13
+  },
+  {
+   "websiteSku": "GBATom5RedBurg",
+   "family": "Sprayer",
+   "category": "Component",
+   "group": "fine-mist-sprayer-13-415",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "GBAtom10BlkDot",
+   "family": "Atomizer",
+   "category": "Metal Atomizer",
+   "group": "atomizer-10ml",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 3.4
+  },
+  {
+   "websiteSku": "GBAtom10Lv",
+   "family": "Atomizer",
+   "category": "Metal Atomizer",
+   "group": "atomizer-10ml",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 3.15
+  },
+  {
+   "websiteSku": "GBAtom10Red",
+   "family": "Atomizer",
+   "category": "Metal Atomizer",
+   "group": "atomizer-10ml",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 3.15
+  },
+  {
+   "websiteSku": "GBAtom10Sl",
+   "family": "Atomizer",
+   "category": "Metal Atomizer",
+   "group": "atomizer-10ml",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 3.15
+  },
+  {
+   "websiteSku": "GBAtom10SlDot",
+   "family": "Atomizer",
+   "category": "Metal Atomizer",
+   "group": "atomizer-10ml",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 3.4
+  },
+  {
+   "websiteSku": "GBAtom10SlStars",
+   "family": "Atomizer",
+   "category": "Metal Atomizer",
+   "group": "atomizer-10ml",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 3.4
+  },
+  {
+   "websiteSku": "GBAtom5Gl",
+   "family": "Atomizer",
+   "category": "Metal Atomizer",
+   "group": "atomizer-5ml",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 2.8
+  },
+  {
+   "websiteSku": "GBAtom5PnkDot",
+   "family": "Atomizer",
+   "category": "Metal Atomizer",
+   "group": "atomizer-5ml",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 3.05
+  },
+  {
+   "websiteSku": "GBAtom5Red",
+   "family": "Atomizer",
+   "category": "Metal Atomizer",
+   "group": "atomizer-5ml",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 2.8
+  },
+  {
+   "websiteSku": "GBAtom5SlDot",
+   "family": "Atomizer",
+   "category": "Metal Atomizer",
+   "group": "atomizer-5ml",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 3.05
+  },
+  {
+   "websiteSku": "GBBell10BlkShSht",
+   "family": "Bell",
+   "category": "Glass Bottle",
+   "group": "bell-10ml-clear-13-415-capclosure",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "600x800",
+   "legacyEnlarged": "600x800",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "GBBell10MtlRollBlkDot",
+   "family": "Bell",
+   "category": "Glass Bottle",
+   "group": "bell-10ml-clear-13-415",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "600x800",
+   "legacyEnlarged": "600x800",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "GBBell10RollBlkDot",
+   "family": "Bell",
+   "category": "Glass Bottle",
+   "group": "bell-10ml-clear-13-415",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "600x800",
+   "legacyEnlarged": "600x800",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "GBBell10SpryBlkSh",
+   "family": "Bell",
+   "category": "Glass Bottle",
+   "group": "bell-10ml-clear-13-415-finemist",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "600x800",
+   "legacyEnlarged": "600x800",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "GBBstn1ozRollonMattBlk",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-30ml-clear-20-400-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "234x360",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.92
+  },
+  {
+   "websiteSku": "GBBstn1ozRollonMattGl",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-30ml-clear-20-400-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "234x360",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.92
+  },
+  {
+   "websiteSku": "GBBstn1ozRollonMattSl",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-30ml-clear-20-400-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "234x360",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.92
+  },
+  {
+   "websiteSku": "GBBstn1ozRollonShBlk",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-30ml-clear-20-400-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.92
+  },
+  {
+   "websiteSku": "GBBstn1ozRollonShGl",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-30ml-clear-20-400-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.92
+  },
+  {
+   "websiteSku": "GBBstn1ozRollonShnSl",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-30ml-clear-20-400-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "234x360",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.92
+  },
+  {
+   "websiteSku": "GBBstn2ozBlkDrpr",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-60ml-clear-20-400-dropper",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.75
+  },
+  {
+   "websiteSku": "GBBstn2ozBlkDrprShnGlTrim",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-60ml-clear-20-400-dropper",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.9
+  },
+  {
+   "websiteSku": "GBBstn2ozBlkDrprShnSlTrim",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-60ml-clear-20-400-dropper",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.9
+  },
+  {
+   "websiteSku": "GBBstn2ozMtlRollBlk",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-60ml-clear-20-400-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 1.1
+  },
+  {
+   "websiteSku": "GBBstn2ozMtlRollGl",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-60ml-clear-20-400-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 1.1
+  },
+  {
+   "websiteSku": "GBBstn2ozMtlRollMattBlk",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-60ml-clear-20-400-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 1.1
+  },
+  {
+   "websiteSku": "GBBstn2ozMtlRollMattGl",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-60ml-clear-20-400-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 1.1
+  },
+  {
+   "websiteSku": "GBBstn2ozMtlRollMattSl",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-60ml-clear-20-400-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 1.1
+  },
+  {
+   "websiteSku": "GBBstn2ozMtlRollShnSl",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-60ml-clear-20-400-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 1.1
+  },
+  {
+   "websiteSku": "GBBstn2ozRollGl",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-60ml-clear-20-400-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.95
+  },
+  {
+   "websiteSku": "GBBstn2ozRollMattBlk",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-60ml-clear-20-400-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.95
+  },
+  {
+   "websiteSku": "GBBstn2ozRollMattSl",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-60ml-clear-20-400-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.95
+  },
+  {
+   "websiteSku": "GBBstn2ozRollShnBlk",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-60ml-clear-20-400-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.95
+  },
+  {
+   "websiteSku": "GBBstn2ozRollShnSl",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-60ml-clear-20-400-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.95
+  },
+  {
+   "websiteSku": "GBBstn2ozWhtDrpr",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-60ml-clear-20-400-dropper",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.75
+  },
+  {
+   "websiteSku": "GBBstn2ozWhtDrprShnGlTrim",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-60ml-clear-20-400-dropper",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.9
+  },
+  {
+   "websiteSku": "GBBstn2ozWhtDrprShnSlTrim",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-60ml-clear-20-400-dropper",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.9
+  },
+  {
+   "websiteSku": "GBBstnAmb1ozBlkDrpShnGl",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-30ml-amber-20-400-dropper",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.87
+  },
+  {
+   "websiteSku": "GBBstnAmb1ozWhtDrprShnSlTrim",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-30ml-amber-20-400-dropper",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.87
+  },
+  {
+   "websiteSku": "GBBstnAmb2ozBlkDrpr",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-60ml-amber-20-400-dropper",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.75
+  },
+  {
+   "websiteSku": "GBBstnAmb2ozBlkDrprShnSlTrim",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-60ml-amber-20-400-dropper",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.9
+  },
+  {
+   "websiteSku": "GBBstnAmb2ozWhtDrpr",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-60ml-amber-20-400-dropper",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.75
+  },
+  {
+   "websiteSku": "GBBstnBlu15BlkDrpr",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-15ml-cobalt-blue-18-400-dropper",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.67
+  },
+  {
+   "websiteSku": "GBBstnBlu15BlkDrprGlTrim",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-15ml-cobalt-blue-18-400-dropper",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.82
+  },
+  {
+   "websiteSku": "GBBstnBlu15WhtDrpr",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-15ml-cobalt-blue-18-400-dropper",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.67
+  },
+  {
+   "websiteSku": "GBBstnBlu15WhtDrprGlTrim",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-15ml-cobalt-blue-18-400-dropper",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.82
+  },
+  {
+   "websiteSku": "GBBstnBlu15WhtDrprSlTrim",
+   "family": "Boston Round",
+   "category": "Glass Bottle",
+   "group": "boston-round-15ml-cobalt-blue-18-400-dropper",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.82
+  },
+  {
+   "websiteSku": "GBCrclFrst100AnSpTslBlk",
+   "family": "Circle",
+   "category": "Glass Bottle",
+   "group": "circle-100ml-frosted-18-415-antiquespray",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 7.15
+  },
+  {
+   "websiteSku": "GBCrclFrst100AnSpTslGl",
+   "family": "Circle",
+   "category": "Glass Bottle",
+   "group": "circle-100ml-frosted-18-415-antiquespray-tassel",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 7.15
+  },
+  {
+   "websiteSku": "GBCrclFrst100AnSpTslIvyGl",
+   "family": "Circle",
+   "category": "Glass Bottle",
+   "group": "circle-100ml-frosted-18-415-antiquespray-tassel",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 7.15
+  },
+  {
+   "websiteSku": "GBCrclFrst100AnSpTslIvySl",
+   "family": "Circle",
+   "category": "Glass Bottle",
+   "group": "circle-100ml-frosted-18-415-antiquespray",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 7.15
+  },
+  {
+   "websiteSku": "GBCrclFrst100AnSpTslLvn",
+   "family": "Circle",
+   "category": "Glass Bottle",
+   "group": "circle-100ml-frosted-18-415-antiquespray",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 7.15
+  },
+  {
+   "websiteSku": "GBCrclFrst100AnSpTslPnk",
+   "family": "Circle",
+   "category": "Glass Bottle",
+   "group": "circle-100ml-frosted-18-415-antiquespray",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 7.15
+  },
+  {
+   "websiteSku": "GBCrclFrst100AnSpTslRed",
+   "family": "Circle",
+   "category": "Glass Bottle",
+   "group": "circle-100ml-frosted-18-415-antiquespray",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 7.15
+  },
+  {
+   "websiteSku": "GBCyl1ozRollWht",
+   "family": "Cylinder",
+   "category": "Glass Bottle",
+   "group": "cylinder-28ml-clear-16mm-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": 0.85
+  },
+  {
+   "websiteSku": "GBCylBlu5BlkShSht",
+   "family": "Cylinder",
+   "category": "Glass Bottle",
+   "group": "cylinder-5ml-cobalt-blue-13-415",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "600x800",
+   "legacyEnlarged": "600x800",
+   "legacyMain": "300x400",
+   "noCatalogueImage": true,
+   "legacyPrice": 0.5
+  },
+  {
+   "websiteSku": "GBDiva100RdcrShnBlk",
+   "family": "Diva",
+   "category": "Glass Bottle",
+   "group": "diva-100ml-clear-18-415-reducer",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "360x480",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 2.42
+  },
+  {
+   "websiteSku": "GBElg15MinarCu",
+   "family": "Elegant",
+   "category": "Glass Bottle",
+   "group": "elegant-15ml-clear-13-415-capclosure",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "600x800",
+   "legacyEnlarged": "648x800",
+   "legacyMain": "300x472",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.88
+  },
+  {
+   "websiteSku": "GBElg30SpryShGl",
+   "family": "Elegant",
+   "category": "Glass Bottle",
+   "group": "elegant-30ml-clear-15-415-perfumespray",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": 2.25
+  },
+  {
+   "websiteSku": "GBElg30SpryShnSl",
+   "family": "Elegant",
+   "category": "Glass Bottle",
+   "group": "elegant-30ml-clear-15-415-perfumespray",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": 2.25
+  },
+  {
+   "websiteSku": "GBElgFrst15BlkShSht",
+   "family": "Elegant",
+   "category": "Glass Bottle",
+   "group": "elegant-15ml-frosted-13-415",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "600x800",
+   "legacyEnlarged": "600x800",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.8
+  },
+  {
+   "websiteSku": "GBElgFrst15BlkSht",
+   "family": "Elegant",
+   "category": "Glass Bottle",
+   "group": "elegant-15ml-frosted-13-415",
+   "plateReason": "SAME_STEM_DIFFERENT_PHOTOGRAPH",
+   "onLegacySite": true,
+   "legacyCapOn": "360x480",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.64
+  },
+  {
+   "websiteSku": "GBElgFrst15WhtSht",
+   "family": "Elegant",
+   "category": "Glass Bottle",
+   "group": "elegant-15ml-frosted-13-415",
+   "plateReason": "SAME_STEM_DIFFERENT_PHOTOGRAPH",
+   "onLegacySite": true,
+   "legacyCapOn": "360x480",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.64
+  },
+  {
+   "websiteSku": "GBMtlRoll28Blk",
+   "family": "Cylinder",
+   "category": "Glass Bottle",
+   "group": "cylinder-28ml-clear-16mm-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": 1.15
+  },
+  {
+   "websiteSku": "GBMtlRoll28Wht",
+   "family": "Cylinder",
+   "category": "Glass Bottle",
+   "group": "cylinder-28ml-clear-16mm-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": 1.15
+  },
+  {
+   "websiteSku": "GBPillar9BlkShSht",
+   "family": "Pillar",
+   "category": "Glass Bottle",
+   "group": "pillar-9ml-clear-Size: GBPillar9BlkSht Nemat In",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "600x800",
+   "legacyEnlarged": "600x800",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "GBPillar9MtlRollBlkdot",
+   "family": "Pillar",
+   "category": "Glass Bottle",
+   "group": "pillar-9ml-clear-13-415",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "600x800",
+   "legacyEnlarged": "600x800",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "GBPillar9RollBlkDot",
+   "family": "Pillar",
+   "category": "Glass Bottle",
+   "group": "pillar-9ml-clear-13-415",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "600x800",
+   "legacyEnlarged": "600x800",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "GBPillar9SpryBlkMatt",
+   "family": "Pillar",
+   "category": "Glass Bottle",
+   "group": "pillar-9ml-clear-17-415-finemist",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "600x800",
+   "legacyEnlarged": "600x800",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "GBRndFrst128AnSpTslGl",
+   "family": "Round",
+   "category": "Glass Bottle",
+   "group": "round-128ml-frosted-18-415-antiquespray",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 7.15
+  },
+  {
+   "websiteSku": "GBRndFrst128SpryMtSl",
+   "family": "Round",
+   "category": "Glass Bottle",
+   "group": "round-128ml-frosted-18-415-perfumespray",
+   "plateReason": "SAME_STEM_DIFFERENT_PHOTOGRAPH",
+   "onLegacySite": true,
+   "legacyCapOn": "360x480",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 3.55
+  },
+  {
+   "websiteSku": "GBRndFrst128SpryShnBlk",
+   "family": "Round",
+   "category": "Glass Bottle",
+   "group": "round-128ml-frosted-18-415-perfumespray",
+   "plateReason": "SAME_STEM_DIFFERENT_PHOTOGRAPH",
+   "onLegacySite": true,
+   "legacyCapOn": "360x480",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 3.55
+  },
+  {
+   "websiteSku": "GBRndFrst128SpryShnGl",
+   "family": "Round",
+   "category": "Glass Bottle",
+   "group": "round-128ml-frosted-18-415-perfumespray",
+   "plateReason": "SAME_STEM_DIFFERENT_PHOTOGRAPH",
+   "onLegacySite": true,
+   "legacyCapOn": "360x480",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 3.55
+  },
+  {
+   "websiteSku": "GBRndFrst128SpryShnSl",
+   "family": "Round",
+   "category": "Glass Bottle",
+   "group": "round-128ml-frosted-18-415-perfumespray",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "288x324",
+   "noCatalogueImage": false,
+   "legacyPrice": 3.55
+  },
+  {
+   "websiteSku": "GBRoll28Blk",
+   "family": "Cylinder",
+   "category": "Glass Bottle",
+   "group": "cylinder-28ml-clear-16mm-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": 0.85
+  },
+  {
+   "websiteSku": "GBSQSTBlue",
+   "family": "Rectangle",
+   "category": "Glass Bottle",
+   "group": "rectangle-9ml-clear-Ground-glassapplicator",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": true,
+   "legacyPrice": 3.2
+  },
+  {
+   "websiteSku": "GBSlk30RdcrShnGl",
+   "family": "Sleek",
+   "category": "Glass Bottle",
+   "group": "sleek-30ml-clear-18-415-reducer",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "360x480",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": true,
+   "legacyPrice": 1.52
+  },
+  {
+   "websiteSku": "GBSlk50AnSpTslBlk",
+   "family": "Sleek",
+   "category": "Glass Bottle",
+   "group": "sleek-50ml-clear-18-415-antiquespray-tassel",
+   "plateReason": "SAME_STEM_DIFFERENT_PHOTOGRAPH",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": true,
+   "legacyPrice": 6.3
+  },
+  {
+   "websiteSku": "GBSlk50AnSpTslGl",
+   "family": "Sleek",
+   "category": "Glass Bottle",
+   "group": "sleek-50ml-clear-18-415-antiquespray-tassel",
+   "plateReason": "SAME_STEM_DIFFERENT_PHOTOGRAPH",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 6.3
+  },
+  {
+   "websiteSku": "GBSlk50AnSpTslIvyGl",
+   "family": "Sleek",
+   "category": "Glass Bottle",
+   "group": "sleek-50ml-clear-18-415-antiquespray-tassel",
+   "plateReason": "SAME_STEM_DIFFERENT_PHOTOGRAPH",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 6.3
+  },
+  {
+   "websiteSku": "GBSlk50AnSpTslIvySl",
+   "family": "Sleek",
+   "category": "Glass Bottle",
+   "group": "sleek-50ml-clear-18-415-antiquespray-tassel",
+   "plateReason": "SAME_STEM_DIFFERENT_PHOTOGRAPH",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 6.3
+  },
+  {
+   "websiteSku": "GBSlk50AnSpTslLvn",
+   "family": "Sleek",
+   "category": "Glass Bottle",
+   "group": "sleek-50ml-clear-18-415-antiquespray-tassel",
+   "plateReason": "SAME_STEM_DIFFERENT_PHOTOGRAPH",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 6.3
+  },
+  {
+   "websiteSku": "GBSlk50AnSpTslMtSl",
+   "family": "Sleek",
+   "category": "Glass Bottle",
+   "group": "sleek-50ml-clear-18-415-antiquespray-tassel",
+   "plateReason": "SAME_STEM_DIFFERENT_PHOTOGRAPH",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 6.3
+  },
+  {
+   "websiteSku": "GBSlk50AnSpTslPnk",
+   "family": "Sleek",
+   "category": "Glass Bottle",
+   "group": "sleek-50ml-clear-18-415-antiquespray-tassel",
+   "plateReason": "SAME_STEM_DIFFERENT_PHOTOGRAPH",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 6.3
+  },
+  {
+   "websiteSku": "GBSlk50AnSpTslRed",
+   "family": "Sleek",
+   "category": "Glass Bottle",
+   "group": "sleek-50ml-clear-18-415-antiquespray-tassel",
+   "plateReason": "SAME_STEM_DIFFERENT_PHOTOGRAPH",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 6.3
+  },
+  {
+   "websiteSku": "GBSlk50AnSpTslWht",
+   "family": "Sleek",
+   "category": "Glass Bottle",
+   "group": "sleek-50ml-clear-18-415-antiquespray-tassel",
+   "plateReason": "SAME_STEM_DIFFERENT_PHOTOGRAPH",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 6.3
+  },
+  {
+   "websiteSku": "GBSlk50RdcrLBrwnLthr",
+   "family": "Sleek",
+   "category": "Glass Bottle",
+   "group": "sleek-50ml-clear-18-415-reducer",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "360x480",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": true,
+   "legacyPrice": 1.95
+  },
+  {
+   "websiteSku": "GBSpry1ozGl",
+   "family": "Cylinder",
+   "category": "Glass Bottle",
+   "group": "cylinder-30ml-clear-18-415",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "360x480",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": true,
+   "legacyPrice": 2.1
+  },
+  {
+   "websiteSku": "GBTallRect10MtlRollPinkDo",
+   "family": "Rectangle",
+   "category": "Glass Bottle",
+   "group": "rectangle-10ml-clear-13-415-rollon",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": 1.12
+  },
+  {
+   "websiteSku": "GBTulip6BlkShSht",
+   "family": "Tulip",
+   "category": "Glass Bottle",
+   "group": "tulip-6ml-clear-13-415",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "600x800",
+   "legacyEnlarged": "600x800",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.59
+  },
+  {
+   "websiteSku": "GBV1DrmWhtCapSht",
+   "family": "Vial",
+   "category": "Glass Bottle",
+   "group": "vial-4ml-clear-13-425",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": 0.39
+  },
+  {
+   "websiteSku": "GBVAmb1DrmBlkDrpr",
+   "family": "Vial",
+   "category": "Glass Bottle",
+   "group": "vial-4ml-amber-13-425-dropper",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": 0.81
+  },
+  {
+   "websiteSku": "GBVBlu1o9BlackCapSht",
+   "family": "Vial",
+   "category": "Glass Bottle",
+   "group": "vial-3ml-blue-13-425",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "600x800",
+   "legacyEnlarged": "600x800",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "GBVGreen2o4BlackCapSht",
+   "family": "Vial",
+   "category": "Glass Bottle",
+   "group": "vial-3ml-green-13-425",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "600x800",
+   "legacyEnlarged": "600x800",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 1.08
+  },
+  {
+   "websiteSku": "GBVGreen2o4WhtCapSht",
+   "family": "Vial",
+   "category": "Glass Bottle",
+   "group": "vial-3ml-green-13-425",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "600x800",
+   "legacyEnlarged": "600x800",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 1.08
+  },
+  {
+   "websiteSku": "GBVialAmb1o5WhtCapSht",
+   "family": "Vial",
+   "category": "Glass Bottle",
+   "group": "vial-2ml-amber-13-425",
+   "plateReason": "not built",
+   "onLegacySite": false,
+   "legacyCapOn": "360x480",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "GBcyl25SpryShnBlk",
+   "family": "Cylinder",
+   "category": "Glass Bottle",
+   "group": "cylinder-25ml-clear-18-415-finemist",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "600x800",
+   "legacyEnlarged": "600x800",
+   "legacyMain": "300x400",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "HMAC-TEST-ONLY",
+   "family": null,
+   "category": "Internal",
+   "group": "webhook-test-hmac",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "LB1ozGl",
+   "family": "Lotion Bottle",
+   "category": "Glass Bottle",
+   "group": "lotion-bottle-30ml-clear",
+   "plateReason": "familyId:missing:neck",
+   "onLegacySite": true,
+   "legacyCapOn": "360x480",
+   "legacyEnlarged": "600x800",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 2.1
+  },
+  {
+   "websiteSku": "LB1ozSl",
+   "family": "Lotion Bottle",
+   "category": "Glass Bottle",
+   "group": "lotion-bottle-30ml-clear",
+   "plateReason": "familyId:missing:neck",
+   "onLegacySite": true,
+   "legacyCapOn": "360x480",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 2.1
+  },
+  {
+   "websiteSku": "LBCyl25LtnCu",
+   "family": "Cylinder",
+   "category": "Glass Bottle",
+   "group": "cylinder-25ml-clear-18-415-lotionpump",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": 2.5
+  },
+  {
+   "websiteSku": "LBCyl25LtnMtGl",
+   "family": "Cylinder",
+   "category": "Glass Bottle",
+   "group": "cylinder-25ml-clear-18-415-lotionpump",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": 2.5
+  },
+  {
+   "websiteSku": "LBCyl25LtnMtSl",
+   "family": "Cylinder",
+   "category": "Glass Bottle",
+   "group": "cylinder-25ml-clear-18-415-lotionpump",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": 2.5
+  },
+  {
+   "websiteSku": "LBCyl25LtnShnBlk",
+   "family": "Cylinder",
+   "category": "Glass Bottle",
+   "group": "cylinder-25ml-clear-18-415-lotionpump",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": 2.5
+  },
+  {
+   "websiteSku": "LBCyl25LtnShnGl",
+   "family": "Cylinder",
+   "category": "Glass Bottle",
+   "group": "cylinder-25ml-clear-18-415-lotionpump",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": 2.5
+  },
+  {
+   "websiteSku": "LBCyl25LtnShnSl",
+   "family": "Cylinder",
+   "category": "Glass Bottle",
+   "group": "cylinder-25ml-clear-18-415-lotionpump",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": 2.5
+  },
+  {
+   "websiteSku": "LBRndFrst128LtnClOvrCap",
+   "family": "Round",
+   "category": "Glass Bottle",
+   "group": "round-128ml-frosted-18-415-lotionpump",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "288x324",
+   "noCatalogueImage": false,
+   "legacyPrice": 3.55
+  },
+  {
+   "websiteSku": "LBRndFrst128LtnMtSl",
+   "family": "Round",
+   "category": "Glass Bottle",
+   "group": "round-128ml-frosted-18-415-lotionpump",
+   "plateReason": "SAME_STEM_DIFFERENT_PHOTOGRAPH",
+   "onLegacySite": true,
+   "legacyCapOn": "360x480",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 3.55
+  },
+  {
+   "websiteSku": "LBRndFrst128LtnShnBlk",
+   "family": "Round",
+   "category": "Glass Bottle",
+   "group": "round-128ml-frosted-18-415-lotionpump",
+   "plateReason": "SAME_STEM_DIFFERENT_PHOTOGRAPH",
+   "onLegacySite": true,
+   "legacyCapOn": "360x480",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 3.55
+  },
+  {
+   "websiteSku": "LBRndFrst128LtnShnGl",
+   "family": "Round",
+   "category": "Glass Bottle",
+   "group": "round-128ml-frosted-18-415-lotionpump",
+   "plateReason": "SAME_STEM_DIFFERENT_PHOTOGRAPH",
+   "onLegacySite": true,
+   "legacyCapOn": "360x480",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 3.55
+  },
+  {
+   "websiteSku": "LBRndFrst128LtnShnSl",
+   "family": "Round",
+   "category": "Glass Bottle",
+   "group": "round-128ml-frosted-18-415-lotionpump",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "288x324",
+   "noCatalogueImage": false,
+   "legacyPrice": 3.55
+  },
+  {
+   "websiteSku": "LBcyl25LtnClOvrCap",
+   "family": "Cylinder",
+   "category": "Glass Bottle",
+   "group": "cylinder-25ml-clear-18-415-lotionpump",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "600x800",
+   "legacyEnlarged": "600x800",
+   "legacyMain": "300x400",
+   "noCatalogueImage": true,
+   "legacyPrice": 2.5
+  },
+  {
+   "websiteSku": "Ltn18-415Cu",
+   "family": "Lotion Pump",
+   "category": "Component",
+   "group": "lotion-pump-18-415",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 1.4
+  },
+  {
+   "websiteSku": "Ltn18-415MtGl",
+   "family": "Lotion Pump",
+   "category": "Component",
+   "group": "lotion-pump-18-415",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 1.4
+  },
+  {
+   "websiteSku": "Ltn18-415MtSl",
+   "family": "Lotion Pump",
+   "category": "Component",
+   "group": "lotion-pump-18-415",
+   "plateReason": "not built",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 1.4
+  },
+  {
+   "websiteSku": "OBagBlack4x6",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.77
+  },
+  {
+   "websiteSku": "OBagBlack5x8",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.88
+  },
+  {
+   "websiteSku": "OBagChGreen4x6",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": 0.77
+  },
+  {
+   "websiteSku": "OBagChGreen5x8",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.88
+  },
+  {
+   "websiteSku": "OBagGold4x6",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.77
+  },
+  {
+   "websiteSku": "OBagGold5x8",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.88
+  },
+  {
+   "websiteSku": "OBagIvory4x6",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "350x450",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.77
+  },
+  {
+   "websiteSku": "OBagLavender5x8",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.88
+  },
+  {
+   "websiteSku": "OBagLightPurple5x8",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.88
+  },
+  {
+   "websiteSku": "OBagPink4x6",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "350x450",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.77
+  },
+  {
+   "websiteSku": "OBagPurple4x6",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "350x450",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.77
+  },
+  {
+   "websiteSku": "OBagRed4x6",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.77
+  },
+  {
+   "websiteSku": "OBagRed5x8",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.88
+  },
+  {
+   "websiteSku": "OBagSilver4x6",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.77
+  },
+  {
+   "websiteSku": "PB10SpryNat",
+   "family": "Plastic Bottle",
+   "category": "Plastic Bottle",
+   "group": "plastic-bottle-10ml-mixed",
+   "plateReason": "familyId:missing:neck",
+   "onLegacySite": true,
+   "legacyCapOn": "360x480",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.6
+  },
+  {
+   "websiteSku": "PB1ozSprySl",
+   "family": "Plastic Bottle",
+   "category": "Plastic Bottle",
+   "group": "plastic-bottle-30ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "350x450",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.65
+  },
+  {
+   "websiteSku": "PbClear4ozFlpWh",
+   "family": "Cylinder",
+   "category": "Glass Bottle",
+   "group": "cylinder-118ml-clear",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "360x480",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "PbClear8ozFlpWh",
+   "family": "Cylinder",
+   "category": "Glass Bottle",
+   "group": "cylinder-227ml-clear",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "PbNat16ozFlpWh",
+   "family": "Cylinder",
+   "category": "Glass Bottle",
+   "group": "cylinder-454ml-clear",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "360x480",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": true,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "Plastic",
+   "family": "Tool",
+   "category": "Accessory",
+   "group": "tool-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": false,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": false,
+   "legacyPrice": null
+  },
+  {
+   "websiteSku": "RecloseableBags12x15",
+   "family": "Packaging Supply",
+   "category": "Packaging",
+   "group": "packaging-supply-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "350x450",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 25.0
+  },
+  {
+   "websiteSku": "RecloseableBags2x10",
+   "family": "Packaging Supply",
+   "category": "Packaging",
+   "group": "packaging-supply-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "350x450",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 2.4
+  },
+  {
+   "websiteSku": "RecloseableBags2x12",
+   "family": "Packaging Supply",
+   "category": "Packaging",
+   "group": "packaging-supply-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "350x450",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 2.6
+  },
+  {
+   "websiteSku": "RecloseableBags3x12",
+   "family": "Packaging Supply",
+   "category": "Packaging",
+   "group": "packaging-supply-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "350x450",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 3.0
+  },
+  {
+   "websiteSku": "RecloseableBags3x3",
+   "family": "Packaging Supply",
+   "category": "Packaging",
+   "group": "packaging-supply-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "350x450",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 1.5
+  },
+  {
+   "websiteSku": "RecloseableBags3x4",
+   "family": "Packaging Supply",
+   "category": "Packaging",
+   "group": "packaging-supply-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 1.5
+  },
+  {
+   "websiteSku": "RecloseableBags4X5",
+   "family": "Packaging Supply",
+   "category": "Packaging",
+   "group": "packaging-supply-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 2.0
+  },
+  {
+   "websiteSku": "RecloseableBags4X6",
+   "family": "Packaging Supply",
+   "category": "Packaging",
+   "group": "packaging-supply-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "350x450",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 2.25
+  },
+  {
+   "websiteSku": "RecloseableBags4X8",
+   "family": "Packaging Supply",
+   "category": "Packaging",
+   "group": "packaging-supply-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "350x450",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 2.6
+  },
+  {
+   "websiteSku": "RecloseableBags4x12",
+   "family": "Packaging Supply",
+   "category": "Packaging",
+   "group": "packaging-supply-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 3.5
+  },
+  {
+   "websiteSku": "RecloseableBags6x10",
+   "family": "Packaging Supply",
+   "category": "Packaging",
+   "group": "packaging-supply-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "350x450",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 4.0
+  },
+  {
+   "websiteSku": "RecloseableBags9x12",
+   "family": "Packaging Supply",
+   "category": "Packaging",
+   "group": "packaging-supply-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "none",
+   "legacyMain": "none",
+   "noCatalogueImage": true,
+   "legacyPrice": 7.5
+  },
+  {
+   "websiteSku": "Spry18-415ShnGl",
+   "family": "Sprayer",
+   "category": "Component",
+   "group": "fine-mist-sprayer-18-415",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "300x400",
+   "noCatalogueImage": false,
+   "legacyPrice": 1.4
+  },
+  {
+   "websiteSku": "VBagBlack4x3",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "265x347",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.44
+  },
+  {
+   "websiteSku": "VBagBlack4x5",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "350x450",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.55
+  },
+  {
+   "websiteSku": "VBagBlue4x3",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "312x290",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.44
+  },
+  {
+   "websiteSku": "VBagGreen4x3",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "261x305",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.44
+  },
+  {
+   "websiteSku": "VBagGreen4x5",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "350x450",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.55
+  },
+  {
+   "websiteSku": "VBagRed4x3",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "360x480",
+   "legacyMain": "243x355",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.44
+  },
+  {
+   "websiteSku": "VBagRed4x5",
+   "family": "Gift Bag",
+   "category": "Packaging",
+   "group": "gift-bag-0ml-mixed",
+   "plateReason": "match:no-psd",
+   "onLegacySite": true,
+   "legacyCapOn": "none",
+   "legacyEnlarged": "350x450",
+   "legacyMain": "350x450",
+   "noCatalogueImage": false,
+   "legacyPrice": 0.55
+  }
+ ],
+ "noCatalogueImage": [
+  {
+   "websiteSku": "13-415CAP4SpryCuMt",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "13-415CAP4SpryGlSh",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "13-415CAP4SprySlMt",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "18-415CAP4SpryMtGl",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "18-415CAP4SpryShnBlk",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "20-400Cp2ozShortBlk",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "20-400cp1ozShortBlk",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "8-425CpShortBlack",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "8-425CpShortWhite",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "AnSp18-415Blk",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "AnSp18-415Gl",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CJ30BlkCap",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "CJ30SlCap",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "CJ40BlkCap",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "CJ40SlCap",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "CJ5BlkCap",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "CJ5SlCap",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "CP13-415BlkSht",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CP13-415Gl",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CP13-415Sl",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CP13-415WhtSht",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CP13-425Blk",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "CP13-425Wht",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "CP15-415ShnGl",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CP15-415ShnSl",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CP18-415AnSpPnk",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "CP18-415AnSpTslGl",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "CP18-415BlkLthr",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CP18-415BrwnLthr",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CP18-415LBrwnLthr",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CP18-415LIvyLthr",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CP18-415LPnkLthr",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CP18-415MtSl",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CP18-415MtSlTall",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CP18-415ShnBlkTall",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CP18-415ShnGl",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CP18-415ShnSl",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CP18-415Wh",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CP24-400BlkPls",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "CP8-425TallBlack",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CP8-425TallShnGl",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CP8-425TallShnSl",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CPKeyChnGld",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "CPRoll13-415BlackDot",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CPRoll13-415BlkSh",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CPRoll13-415Cu",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CPRoll13-415GlMt",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CPRoll13-415GlSh",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CPRoll13-415PinkDot",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CPRoll13-415SlDot",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CPRoll13-415SlMt",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CPRoll13-415SlSh",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CPRoll20-400TallMattBlk",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CPRoll20-400TallMattGl",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CPRoll20-400TallMattSl",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CPRoll20-400TallShnBlk",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CPRoll20-400TallShnGl",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CPRoll20-400TallShnSl",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CPTslRed",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "CPWhite1Oz",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "CapBlackPoly22mm-400",
+   "family": "Cap/Closure",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "CpRoll17-415BlkDot",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CpRoll17-415Cu",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CpRoll17-415MattGl",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CpRoll17-415MattSl",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CpRoll17-415PnkDot",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CpRoll17-415ShnBlk",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CpRoll17-415ShnGl",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CpRoll17-415ShnSl",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CpRoll17-415SlDot",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "CpRoll17-415White",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Droppers1ozElg",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "Drp18-40015mlBlckBulb",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Drp18-40015mlShnGlTrimBlkBulb",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Drp18-40015mlShnGlTrimWhiteBulb",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Drp18-40015mlShnSlTrimBlkBulb",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Drp18-40015mlShnSlTrimWhiteBulb",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Drp18-40015mlWhiteBulb",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Drp18-415Cu",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Drp18-415Gl",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Drp18-415Sl",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Drp20-4001ozBlckBulb",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Drp20-4001ozShnGlTrimBlkBulb",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Drp20-4001ozShnSlTrimBlkBulb",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Drp20-4001ozWhiteBulb",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Drp20-4001ozlShnGlTrimWhiteBulb",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Drp20-4001ozlShnSlTrimWhiteBulb",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Drp20-4002ozBlckBulb",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Drp20-4002ozShnGlTrimBlkBulb",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Drp20-4002ozShnSlTrimBlkBulb",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Drp20-4002ozWhiteBulb",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Drp20-4002ozlShnGlTrimWhiteBulb",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Drp20-4002ozlShnSlTrimWhiteBulb",
+   "family": "Dropper",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GB09BlackCapApp",
+   "family": "Vial",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GB09BlackCapSht",
+   "family": "Vial",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GB1ozGenieBl",
+   "family": "Decorative",
+   "legacyCapOn": "350x450",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GB1ozGenieCl",
+   "family": "Decorative",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GB6TPlGl",
+   "family": "Decorative",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBATom5RedBurg",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "GBAtom5SlimGl",
+   "family": "Atomizer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCB12ozPear",
+   "family": "Decorative",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCrcl15Gl",
+   "family": "Circle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCrcl15Sl",
+   "family": "Circle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCrclFrst50AnSpTslBlk",
+   "family": "Circle",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCrclFrst50AnSpTslGl",
+   "family": "Circle",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCrclFrst50AnSpTslIvyGl",
+   "family": "Circle",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCrclFrst50AnSpTslIvySl",
+   "family": "Circle",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCrclFrst50AnSpTslLvn",
+   "family": "Circle",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCrclFrst50AnSpTslMtSl",
+   "family": "Circle",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCrclFrst50AnSpTslPnk",
+   "family": "Circle",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCrclFrst50AnSpTslRed",
+   "family": "Circle",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCrclFrst50AnSpTslWht",
+   "family": "Circle",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100AnSpGl",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100AnSpIvyGl",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100AnSpIvySl",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100AnSpLvn",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100AnSpPnk",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100AnSpRed",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100AnSpTslIvyGl",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100AnSpTslIvySl",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100AnSpTslLvn",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "576x576",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100AnSpTslPnk",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100AnSpTslRed",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100AnSpTslWht",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100AnSpWht",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100RdcrBrwnLthr",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100RdcrLBrwnLthr",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100RdcrMtSl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100RdcrMtSlTall",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100RdcrPnkLthr",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100RdcrShnBlk",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100RdcrShnGl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100RdcrWht",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100SpryCu",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100SpryMtGl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl100SpryShnSl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl1ozRollWht",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl50AnSpGl",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl50AnSpIvyGl",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl50AnSpRed",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl50AnSpTslBlk",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl50AnSpTslMtSl",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl50AnSpTslWht",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl50RdcrBrwnLthr",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl50RdcrMtSl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl50RdcrShnBlk",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCyl50SpryMtGl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylAmb9MtlRollBlkDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylAmb9MtlRollMattCu",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylAmb9MtlRollMattGl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylAmb9MtlRollMattSl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylAmb9MtlRollPnkDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylAmb9MtlRollShBlk",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylAmb9MtlRollShnGl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylAmb9MtlRollShnSl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylAmb9MtlRollSlDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylAmb9MtlRollWht",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylAmb9RollMattCu",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylAmb9RollMattGl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylAmb9RollMattSl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylAmb9RollPnkDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylAmb9RollShBlk",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylAmb9RollShnGl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylAmb9RollShnSl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylAmb9RollSlDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylAmb9RollWht",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylBlu5BlkShSht",
+   "family": "Cylinder",
+   "legacyCapOn": "600x800",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylBlu9MtlRollPnkDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylBlu9RollPnkDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylBlu9SpryShSl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylFrst9MtlRollPnkDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylFrst9RollPnkDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollBlkDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollMattCu",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollMattGl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollMattSl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollPnkDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollShBlk",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollShnGl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollShnSl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollSlDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9RollMattCu",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9RollMattGl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9RollMattSl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9RollPnkDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9RollShBlk",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9RollShnGl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9RollShnSl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9RollSlDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9SpryShSl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBDiva100AnSpTslLvn",
+   "family": "Diva",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBDiva100AnSpTslPnk",
+   "family": "Diva",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBElg30SpryShGl",
+   "family": "Elegant",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBElg30SpryShnSl",
+   "family": "Elegant",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBElgFrst100AnSpWht",
+   "family": "Elegant",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBFlair15BlkSht",
+   "family": "Flair",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBFlair15WhtSht",
+   "family": "Flair",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBHeartFrst4KeyGld",
+   "family": "Decorative",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBHeartFrst4TslRed",
+   "family": "Decorative",
+   "legacyCapOn": "680x800",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBMtlCylGl",
+   "family": "Royal",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBMtlMrblLarge",
+   "family": "Decorative",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBMtlMrblSmall",
+   "family": "Decorative",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBMtlRoll28Blk",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBMtlRoll28Wht",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRect10BlkSht",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRect10RollBlkDot",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRect10RollBlkSh",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRect10RollGlSh",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRect10RollPinkDot",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRect10RollSlDot",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRect10RollSlSh",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRect10SpryBlkSh",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRect10SpryGlSh",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRect10SprySlSh",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRect10WhtSht",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRoll28Blk",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRoyal13BlkSht",
+   "family": "Royal",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRoyal13RollBlkDot",
+   "family": "Royal",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRoyal13RollBlkSh",
+   "family": "Royal",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRoyal13RollGlSh",
+   "family": "Royal",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRoyal13RollPinkDot",
+   "family": "Royal",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRoyal13SpryBlkSh",
+   "family": "Royal",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRoyal13SpryGlSh",
+   "family": "Royal",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRoyal13SprySlSh",
+   "family": "Royal",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBRoyal13WhtSht",
+   "family": "Royal",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSQSTBlue",
+   "family": "Rectangle",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSQSTClear",
+   "family": "Rectangle",
+   "legacyCapOn": "none",
+   "legacyMain": "181x272",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSQSTGREEN",
+   "family": "Rectangle",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek5BlkSht",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek5RollBlkDot",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek5RollBlkSh",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek5RollGlSh",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek5RollPinkDot",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek5RollSlDot",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek5RollSlSh",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek5SpryBlkSh",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek5SpryGlSh",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek5SprySlSh",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek5WhtSht",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek8BlkSht",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek8RollBlkDot",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek8RollBlkSh",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek8RollGlSh",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek8RollPinkDot",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek8RollSlDot",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek8RollSlSh",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek8SpryBlkSh",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek8SpryGlSh",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek8SprySlSh",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSleek8WhtSht",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100AnSpBlk",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100AnSpGl",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100AnSpIvyGl",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100AnSpIvySl",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100AnSpLvn",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100AnSpMtSl",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100AnSpPnk",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100AnSpRed",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100AnSpTslBlk",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100AnSpTslGl",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100AnSpTslIvyGl",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100AnSpTslIvySl",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100AnSpTslLvn",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100AnSpTslMtSl",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100AnSpTslPnk",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100AnSpTslRed",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100AnSpTslWht",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100AnSpWht",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100RdcrBlkLthr",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100RdcrBrwnLthr",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100RdcrIvyLthr",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100RdcrLBrwnLthr",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100RdcrMtSlTall",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100RdcrPnkLthr",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100RdcrShnBlkTall",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100RdcrShnGl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100RdcrShnSl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100RdcrWht",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100SpryCu",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100SpryMtGl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100SpryMtSl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100SpryShnBlk",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100SpryShnGl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk100SpryShnSl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30AnSpBlk",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30AnSpGl",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30AnSpIvyGl",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30AnSpIvySl",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30AnSpLvn",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30AnSpMtSl",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30AnSpPnk",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30AnSpRed",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30AnSpWht",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30DrpCu",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30DrpGl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30DrpSl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30RdcrBlkLthr",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30RdcrBrwnLthr",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30RdcrIvyLthr",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30RdcrLBrwnLthr",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30RdcrMtSlTall",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30RdcrPnkLthr",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30RdcrShnBlkTall",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30RdcrShnGl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30RdcrShnSl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30RdcrWht",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk30SpryCu",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk50AnSpBlk",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk50AnSpTslBlk",
+   "family": "Sleek",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk50RdcrBlkLthr",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk50RdcrBrwnLthr",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk50RdcrIvyLthr",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk50RdcrLBrwnLthr",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk50RdcrMtSlTall",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk50RdcrPnkLthr",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk50RdcrShnBlkTall",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk50RdcrShnGl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk50RdcrShnSl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk50RdcrWht",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk50SpryCu",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk50SpryMtGl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlk50SpryShnSl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100AnSpBlk",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100AnSpGl",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100AnSpIvyGl",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100AnSpIvySl",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100AnSpLvn",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100AnSpMtSl",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100AnSpPnk",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100AnSpRed",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100AnSpTslBlk",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100AnSpTslGl",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100AnSpTslIvyGl",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100AnSpTslIvySl",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100AnSpTslLvn",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100AnSpTslMtSl",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100AnSpTslPnk",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100AnSpTslRed",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100AnSpTslWht",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100AnSpWht",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100RdcrBlkLthr",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100RdcrBrwnLthr",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100RdcrIvyLthr",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100RdcrLBrwnLthr",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100RdcrMtSlTall",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100RdcrPnkLthr",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100RdcrShnBlkTall",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100RdcrShnGl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100RdcrShnSl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100RdcrWht",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100SpryCu",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100SpryMtGl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100SpryMtSl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100SpryShnBlk",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100SpryShnGl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm100SpryShnSl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30AnSpBlk",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30AnSpGl",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30AnSpIvyGl",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30AnSpIvySl",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30AnSpLvn",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30AnSpMtSl",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30AnSpPnk",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30AnSpRed",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30AnSpWht",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30DrpCu",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30DrpGl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30DrpSl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30RdcrBlkLthr",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30RdcrBrwnLthr",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30RdcrIvyLthr",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30RdcrLBrwnLthr",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30RdcrMtSlTall",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30RdcrPnkLthr",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30RdcrShnBlkTall",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30RdcrShnGl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30RdcrShnSl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30RdcrWht",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm30SpryCu",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm50AnSpBlk",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm50AnSpTslBlk",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm50RdcrBlkLthr",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm50RdcrBrwnLthr",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm50RdcrIvyLthr",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm50RdcrLBrwnLthr",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm50RdcrMtSlTall",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm50RdcrPnkLthr",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm50RdcrShnBlkTall",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm50RdcrShnGl",
+   "family": "Slim",
+   "legacyCapOn": "600x800",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm50RdcrShnSl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm50RdcrWht",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm50SpryCu",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm50SpryMtGl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm50SpryMtSl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm50SpryShnBlk",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm50SpryShnGl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSlm50SpryShnSl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSpry1ozGl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSpry1ozSl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSqr15BlkSht",
+   "family": "Square",
+   "legacyCapOn": "600x800",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSqr15RollBlkDot",
+   "family": "Square",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSqr15RollBlkSh",
+   "family": "Square",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSqr15RollSlDot",
+   "family": "Square",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSqr15SpryGlSh",
+   "family": "Square",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSqr15SprySlSh",
+   "family": "Square",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBSqr15WhtSht",
+   "family": "Square",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTRDPClear",
+   "family": "Teardrop",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTRDPGreen",
+   "family": "Teardrop",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9MtlRollBlkDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9MtlRollBlkSh",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9MtlRollCuMatt",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9MtlRollGlMatt",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9MtlRollGlSh",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9MtlRollPinkDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9MtlRollSlDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9MtlRollSlMatt",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9MtlRollSlSh",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9RollCuMatt",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9RollGlSh",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9RollPinkDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9RollSlDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9RollSlMatt",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9RollSlSh",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9SpryBlkSh",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9SpryBluMatt",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9SpryCuMatt",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9SpryGlMatt",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9SpryGlSh",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9SprySlMatt",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCyl9SprySlSh",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9BlkSht",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9Gl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9MtlRollBlkDot",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9MtlRollBlkSh",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9MtlRollCuMatt",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9MtlRollGlMatt",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9MtlRollGlSh",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9MtlRollPinkDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9MtlRollSlDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9MtlRollSlMatt",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9MtlRollSlSh",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9RollBlkSh",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9RollCuMatt",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9RollGlMatt",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9RollGlSh",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9RollPinkDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9RollSlDot",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9RollSlMatt",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9RollSlSh",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9Sl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9SpryBlkSh",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9SpryBluMatt",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9SpryCuMatt",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9SpryGlMatt",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9SpryGlSh",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9SprySlMatt",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallCylFrst9SprySlSh",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallRect10BlkSht",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallRect10MtlRollPinkDo",
+   "family": "Rectangle",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallRect10RollBlkDot",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallRect10RollBlkSh",
+   "family": "Rectangle",
+   "legacyCapOn": "600x800",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallRect10RollGlSh",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallRect10RollPinkDot",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallRect10RollSlDot",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallRect10RollSlSh",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallRect10SpryBlkSh",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallRect10SpryGlSh",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallRect10SprySlSh",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTallRect10WhtSht",
+   "family": "Rectangle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTrdpBlue",
+   "family": "Teardrop",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTulip6RollBlkDot",
+   "family": "Tulip",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTulipAmb5BlkSht",
+   "family": "Tulip",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTulipAmb5RollBlkSh",
+   "family": "Tulip",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTulipAmb5RollGlSh",
+   "family": "Tulip",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTulipAmb5RollPinkDot",
+   "family": "Tulip",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTulipAmb5RollSlDot",
+   "family": "Tulip",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTulipAmb5RollSlSh",
+   "family": "Tulip",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTulipAmb5SpryBlkSh",
+   "family": "Tulip",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTulipAmb5SpryGlSh",
+   "family": "Tulip",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTulipAmb5SprySlSh",
+   "family": "Tulip",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBTulipAmb5WhtSht",
+   "family": "Tulip",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBV1DrmBlackCapSht",
+   "family": "Vial",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBV1DrmWhtCapSht",
+   "family": "Vial",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBVAmb1DrmBlkDrpr",
+   "family": "Vial",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "GBcyl25SpryShnBlk",
+   "family": "Cylinder",
+   "legacyCapOn": "600x800",
+   "legacyMain": "300x400",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "HMAC-TEST-ONLY",
+   "family": null,
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "LBCyl100LtnClOvrCap",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBCyl100LtnCu",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBCyl100LtnMtGl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBCyl100LtnMtSl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBCyl100LtnShnBlk",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBCyl100LtnShnGl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBCyl100LtnShnSl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBCyl25LtnCu",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBCyl25LtnMtGl",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBCyl25LtnMtSl",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBCyl25LtnShnBlk",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBCyl25LtnShnGl",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBCyl25LtnShnSl",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBCyl50LtnClOvrCap",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBCyl50LtnShnGl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBCylSwrl9LtnGl",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk100LtnCu",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk100LtnMtGl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk100LtnMtSl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk100LtnShnBlk",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk100LtnShnGl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk100LtnShnSl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk100WhtRectClOverCap",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk30LtnClOvrCap",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk30LtnCu",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk30LtnMtGl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk30LtnMtSl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk30LtnShnBlk",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk30LtnShnGl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk30LtnShnSl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk30WhtRectClOverCap",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk50LtnClOvrCap",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk50LtnCu",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk50LtnMtGl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk50LtnMtSl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk50LtnShnBlk",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk50LtnShnGl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk50LtnShnSl",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlk50WhtRectClOverCap",
+   "family": "Sleek",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm100LtnCu",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm100LtnMtGl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm100LtnMtSl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm100LtnShnBlk",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm100LtnShnGl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm100LtnShnSl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm100MtSlClOvrCap",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm30LtnClOvrCap",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm30LtnCu",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm30LtnMtGl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm30LtnMtSl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm30LtnShnBlk",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm30LtnShnGl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm30LtnShnSl",
+   "family": "Slim",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm50LtnClOvrCap",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm50LtnCu",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm50LtnMtGl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm50LtnMtSl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm50LtnShnBlk",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm50LtnShnGl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBSlm50LtnShnSl",
+   "family": "Slim",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "LBcyl25LtnClOvrCap",
+   "family": "Cylinder",
+   "legacyCapOn": "600x800",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Ltn17-415Blk",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Ltn17-415Gl",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Ltn17-415MattSl",
+   "family": "Roll-On Cap",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Ltn18-415MtSlCl",
+   "family": "Lotion Pump",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Ltn18-415ShnBlk",
+   "family": "Lotion Pump",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Ltn18-415ShnGl",
+   "family": "Lotion Pump",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Ltn18-415ShnSl",
+   "family": "Lotion Pump",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "OBagChGreen4x6",
+   "family": "Gift Bag",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "PB1ozClearcap",
+   "family": "Plastic Bottle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "PB1ozSpryNat",
+   "family": "Plastic Bottle",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "PbClear4ozFlpWh",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "PbClear8ozFlpWh",
+   "family": "Cylinder",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "PbNat16ozFlpWh",
+   "family": "Cylinder",
+   "legacyCapOn": "360x480",
+   "legacyMain": "300x400",
+   "onLegacySite": false
+  },
+  {
+   "websiteSku": "RecloseableBags9x12",
+   "family": "Packaging Supply",
+   "legacyCapOn": "none",
+   "legacyMain": "none",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Spry15-415Blk",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Spry15-415MattGl",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Spry15-415MattSl",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Spry15-415ShnGl",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Spry15-415ShnSl",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Spry17-415Blk",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Spry17-415Gl",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Spry17-415MattSl",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Spry17-415Red",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Spry17-415ShnSl",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Spry17-415Tur",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Spry18-415Cu",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Spry18-415MtGl",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Spry18-415MtSl",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Spry18-415ShnBlk",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  },
+  {
+   "websiteSku": "Spry18-415ShnSl",
+   "family": "Sprayer",
+   "legacyCapOn": "none",
+   "legacyMain": "300x400",
+   "onLegacySite": true
+  }
+ ]
+}

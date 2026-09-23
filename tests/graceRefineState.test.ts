@@ -19,7 +19,7 @@ describe("Grace Refine state", () => {
 
     it("exposes exact capacities in the canonical Refine UI", () => {
         const source = readFileSync("src/app/catalog/CatalogClient.tsx", "utf8");
-        expect(source).toContain("Exact capacity");
+        expect(source).toContain('t("exactCapacity")');
         expect(source).toContain("toggleArrayFilter(\"capacities\", capacity.label)");
     });
 
@@ -28,7 +28,7 @@ describe("Grace Refine state", () => {
             application: "rollon",
             capacities: ["9 ml"],
             rollerMaterials: ["metal"],
-        })).toBe("/catalog/cylinder?applicators=rollon&roller=metal&capacities=9+ml");
+        })).toBe("/catalog?category=Glass+Bottle&applicators=rollon&roller=metal&families=Cylinder&capacities=9+ml&sort=capacity-asc");
     });
 
     it("verifies Grace refinements against the catalog before reporting success", () => {
@@ -40,9 +40,9 @@ describe("Grace Refine state", () => {
 
     it("bridges family discovery to the dedicated family finder", () => {
         const state = getGraceRefineState(new URLSearchParams("families=Cylinder"));
-        expect(graceRefineDestination(state)).toBe("/catalog/cylinder");
+        expect(graceRefineDestination(state)).toBe("/catalog/cylinder?sort=capacity-asc");
         expect(graceRefineDestination(getGraceRefineState(new URLSearchParams("families=Boston+Round"))))
-            .toBe("/catalog/boston-round");
+            .toBe("/catalog/boston-round?sort=capacity-asc");
     });
 
     it("inherits every active catalog constraint exactly", () => {
@@ -99,7 +99,7 @@ describe("Grace Refine state", () => {
         ));
 
         expect(graceRefineDestination(state)).toBe(
-            "/catalog/cylinder?applicators=rollon&capacities=9+ml&threads=17-415",
+            "/catalog/cylinder?applicators=rollon&capacities=9+ml&threads=17-415&sort=capacity-asc",
         );
     });
 
@@ -109,7 +109,7 @@ describe("Grace Refine state", () => {
         ));
 
         expect(graceRefineDestination(state)).toBe(
-            "/catalog?families=Cylinder%2CElegant&capacities=9+ml",
+            "/catalog?families=Cylinder%2CElegant&capacities=9+ml&sort=capacity-asc",
         );
     });
 

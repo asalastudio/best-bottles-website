@@ -5,21 +5,23 @@ import { verifyWriteToken } from "./writeToken";
 import { isLegacyProductRouteAlias } from "../src/lib/products/legacy-product-route-overrides";
 import type { Doc, Id } from "./_generated/dataModel";
 import {
-    filterGroupedComponentsByFitmentRule,
-    normalizeComponentsByType,
+    resolveCompatibleComponents,
     selectBestFitmentRule,
 } from "./componentUtils";
+import { loadCatalogComponentPool } from "./catalogComponentSources";
+import { catalogIncludedAssembly } from "./catalogIncludedAssemblies";
 import { buildFamilyPageData } from "../src/lib/products/family-page-data";
 import { buildFocusedPdpRelations } from "../src/lib/products/pdp-relations";
 import {
     APPLICATOR_BUCKETS,
     BOTTLE_CATEGORIES,
     COMPONENT_CATEGORIES,
-    FAMILY_ORDER,
     canonicalGlassColor,
     catalogSearchMatches,
+    catalogSearchResultTieBreak,
     catalogSearchScore,
     classifyComponentType as classifyCatalogComponentType,
+    sortCatalogFeatured,
     normalizeRollerMaterials,
     parseCapacityLabelMl as parseCapacityMl,
     rollerMaterialMatchesProductValues,
@@ -39,6 +41,15 @@ function isShopifyCdnUrl(value: string | null | undefined) {
         return new URL(value).hostname === "cdn.shopify.com";
     } catch {
         return value.includes("cdn.shopify.com/");
+    }
+}
+
+function isExactShopifyCdnUrl(value: string) {
+    try {
+        const url = new URL(value);
+        return url.protocol === "https:" && url.hostname === "cdn.shopify.com";
+    } catch {
+        return false;
     }
 }
 
@@ -363,6 +374,58 @@ export const lookupSku = query({
     },
 });
 
+/**
+ * Indexed product lookup used by Madison's Shopify publisher for exact website
+ * SKU resolution and post-write image readback.
+ */
+export const getByWebsiteSku = query({
+    args: { websiteSku: v.string() },
+    returns: v.union(
+        v.object({
+            websiteSku: v.string(),
+            graceSku: v.string(),
+            category: v.string(),
+            family: v.union(v.string(), v.null()),
+            color: v.union(v.string(), v.null()),
+            applicator: v.union(v.string(), v.null()),
+            capStyle: v.union(v.string(), v.null()),
+            capColor: v.union(v.string(), v.null()),
+            trimColor: v.union(v.string(), v.null()),
+            itemName: v.string(),
+            imageUrl: v.union(v.string(), v.null()),
+            imageUrlCapOff: v.union(v.string(), v.null()),
+            productGroupId: v.union(v.id("productGroups"), v.null()),
+        }),
+        v.null(),
+    ),
+    handler: async (ctx, args) => {
+        const websiteSku = args.websiteSku.trim();
+        if (!websiteSku) return null;
+
+        const product = await ctx.db
+            .query("products")
+            .withIndex("by_websiteSku", (q) => q.eq("websiteSku", websiteSku))
+            .unique();
+        if (!product) return null;
+
+        return {
+            websiteSku: product.websiteSku,
+            graceSku: product.graceSku,
+            category: product.category,
+            family: product.family,
+            color: product.color,
+            applicator: product.applicator,
+            capStyle: product.capStyle,
+            capColor: product.capColor,
+            trimColor: product.trimColor,
+            itemName: product.itemName,
+            imageUrl: product.imageUrl ?? null,
+            imageUrlCapOff: product.imageUrlCapOff ?? null,
+            productGroupId: product.productGroupId ?? null,
+        };
+    },
+});
+
 // Find products by their family (e.g. "Boston Round")
 export const getByFamily = query({
     args: { family: v.string() },
@@ -459,7 +522,7 @@ export const getCompatibleFitments = query({
         if (!bottle) return { bottle: null, components: null };
 
         const bottleThread = (bottle.neckThreadSize ?? "").toString().trim();
-        const grouped = normalizeComponentsByType(bottle.components);
+        const { grouped } = await loadCatalogComponentPool(ctx, bottle);
         const fitmentRules = bottleThread
             ? await ctx.db
                 .query("fitments")
@@ -467,7 +530,7 @@ export const getCompatibleFitments = query({
                 .collect()
             : [];
         const matchedFitmentRule = selectBestFitmentRule(fitmentRules, bottle);
-        const reconciled = filterGroupedComponentsByFitmentRule(grouped, matchedFitmentRule);
+        const reconciled = resolveCompatibleComponents(grouped, matchedFitmentRule, bottle);
         const isPlasticBottlePdp = (bottle.category ?? "") === "Plastic Bottle";
 
         // 2. Filter components by thread — 18-400 caps don't fit 17-415 bottles, etc.
@@ -500,7 +563,7 @@ export const getCompatibleFitments = query({
                             .first();
                         return {
                             graceSku: item.graceSku,
-                            websiteSku: product?.websiteSku ?? null,
+                            websiteSku: product?.websiteSku || item.websiteSku || null,
                             itemName: item.itemName,
                             shopifyVariantId: product?.shopifyVariantId ?? null,
                             checkoutEligible: Boolean(product?.shopifyVariantId),
@@ -517,6 +580,7 @@ export const getCompatibleFitments = query({
         return {
             bottle,
             components: Object.fromEntries(componentEntries),
+            includedAssembly: catalogIncludedAssembly(bottle),
         };
     },
 });
@@ -636,8 +700,7 @@ export const getCatalogProducts = query({
         if (args.collection) {
             return await ctx.db
                 .query("products")
-                .withIndex("by_category")
-                .filter((q) => q.eq(q.field("bottleCollection"), args.collection))
+                .withIndex("by_collection", (q) => q.eq("bottleCollection", args.collection!))
                 .take(limit);
         }
 
@@ -849,8 +912,16 @@ export const searchCatalog = query({
             }
             if (!skipKeys.has("colors") && filters.colors.length > 0) {
                 // Rows still say "Blue"/"Cobalt" for some groups; match on the canonical label.
-                const colorSet = new Set(filters.colors.map((color) => canonicalGlassColor(color)));
-                rows = rows.filter((group) => colorSet.has(canonicalGlassColor(group.color)));
+                // Non-canonical colours (Black/White/…) canonicalize to null and never match.
+                const colorSet = new Set(
+                    filters.colors
+                        .map((color) => canonicalGlassColor(color))
+                        .filter((color): color is string => Boolean(color)),
+                );
+                rows = rows.filter((group) => {
+                    const color = canonicalGlassColor(group.color);
+                    return color != null && colorSet.has(color);
+                });
             }
             if (!skipKeys.has("capacities") && filters.capacities.length > 0) {
                 const selectedMls = new Set(filters.capacities.map(parseCapacityMl).filter((value): value is number => value != null));
@@ -914,7 +985,11 @@ export const searchCatalog = query({
             applicators: applicatorCounts,
             rollerMaterials,
             families: countByCatalogGroup(familyFacetBase.filter((group) => !COMPONENT_CATEGORIES.has(group.category)), (group) => group.family),
-            colors: countByCatalogGroup(colorFacetBase, (group) => canonicalGlassColor(group.color)),
+            // Glass colour facet: bottle/jar categories only; non-canonical colours dropped.
+            colors: countByCatalogGroup(
+                colorFacetBase.filter((group) => BOTTLE_CATEGORIES.has(group.category)),
+                (group) => canonicalGlassColor(group.color),
+            ),
             capacities,
             neckThreadSizes: countByCatalogGroup(threadFacetBase, (group) => group.neckThreadSize),
             componentTypes: countByCatalogGroup(result, (group) => classifyCatalogComponentType(group.displayName, group.family)),
@@ -923,7 +998,7 @@ export const searchCatalog = query({
                 : { min: 0, max: 0 },
         };
 
-        const sorted = [...result];
+        let sorted = [...result];
         const sort = args.sort;
         if (sort === "best-match" && filters.search) {
             sorted.sort((a, b) => {
@@ -957,24 +1032,14 @@ export const searchCatalog = query({
         } else if (sort === "capacity-desc") {
             sorted.sort((a, b) => (b.capacityMl ?? -Infinity) - (a.capacityMl ?? -Infinity));
         } else {
-            const familyIdx = (family: string | null) => {
-                if (!family) return FAMILY_ORDER.length;
-                const index = FAMILY_ORDER.indexOf(family);
-                return index >= 0 ? index : FAMILY_ORDER.length;
-            };
-            sorted.sort((a, b) => {
-                const categoryA = BOTTLE_CATEGORIES.has(a.category) ? 0 : 1;
-                const categoryB = BOTTLE_CATEGORIES.has(b.category) ? 0 : 1;
-                if (categoryA !== categoryB) return categoryA - categoryB;
-                const familyA = familyIdx(a.family);
-                const familyB = familyIdx(b.family);
-                if (familyA !== familyB) return familyA - familyB;
-                return (a.capacityMl ?? 99999) - (b.capacityMl ?? 99999);
-            });
+            sorted = sortCatalogFeatured(sorted);
         }
 
         const offset = Math.max(0, Number(args.cursor ?? 0) || 0);
-        const limit = Math.min(Math.max(args.limit, 1), 240);
+        // Each page item collects its group's full product documents; 240 groups blew Convex's 16 MB
+        // per-execution read budget (2026-09-14). Two catalog pages per request is the safe ceiling;
+        // the storefront loads more through the cursor.
+        const limit = Math.min(Math.max(args.limit, 1), 48);
         const items = sorted.slice(offset, offset + limit);
         const nextOffset = offset + items.length;
         const nextCursor = nextOffset < sorted.length ? String(nextOffset) : null;
@@ -1006,6 +1071,9 @@ export const searchCatalog = query({
                     webPrice1pc: variant.webPrice1pc ?? null,
                     shopifyVariantId: variant.shopifyVariantId ?? null,
                     shopifySellable: variant.shopifySellable ?? null,
+                    webPrice10pc: variant.webPrice10pc ?? null,
+                    webPrice12pc: variant.webPrice12pc ?? null,
+                    priceTiers: variant.priceTiers ?? null,
                 })),
             };
         }));
@@ -1151,6 +1219,9 @@ export const getCatalogGroupVariantPreviewData = query({
                 webPrice1pc: number | null;
                 shopifyVariantId: string | null;
                 shopifySellable: boolean | null;
+                webPrice10pc: number | null;
+                webPrice12pc: number | null;
+                priceTiers: Array<{ minQty: number; totalPrice: number; unitPrice: number }> | null;
             }>;
         }[] = [];
 
@@ -1188,6 +1259,9 @@ export const getCatalogGroupVariantPreviewData = query({
                             webPrice1pc: variant.webPrice1pc ?? null,
                             shopifyVariantId: variant.shopifyVariantId ?? null,
                             shopifySellable: variant.shopifySellable ?? null,
+                            webPrice10pc: variant.webPrice10pc ?? null,
+                            webPrice12pc: variant.webPrice12pc ?? null,
+                            priceTiers: variant.priceTiers ?? null,
                         })),
                     };
                 }),
@@ -1701,6 +1775,93 @@ function verifyProductImageWriteToken(writeToken: string) {
 }
 
 /**
+ * Explicitly assigns a Shopify-published SKU image as a product-group hero.
+ *
+ * Madison calls this only after its exact approved SKU job has published to
+ * Shopify and `setVariantImages` has cached the returned CDN URL on that SKU.
+ * Requiring the exact Grace + website SKU pair and matching products.imageUrl
+ * prevents a group hero from being pointed at another SKU's or an arbitrary
+ * Shopify image.
+ */
+export const setProductGroupHeroFromApprovedSku = mutation({
+    args: {
+        writeToken: v.string(),
+        productGroupSlug: v.string(),
+        websiteSku: v.string(),
+        graceSku: v.string(),
+        heroImageUrl: v.string(),
+    },
+    returns: v.object({
+        success: v.literal(true),
+        changed: v.boolean(),
+        productGroupId: v.id("productGroups"),
+        productGroupSlug: v.string(),
+        websiteSku: v.string(),
+        graceSku: v.string(),
+        heroImageUrl: v.string(),
+    }),
+    handler: async (ctx, args) => {
+        verifyProductImageWriteToken(args.writeToken);
+
+        const productGroupSlug = args.productGroupSlug.trim();
+        const websiteSku = args.websiteSku.trim();
+        const graceSku = args.graceSku.trim();
+        const heroImageUrl = args.heroImageUrl.trim();
+
+        if (!productGroupSlug) throw new Error("product_group_slug_required");
+        if (!websiteSku) throw new Error("website_sku_required");
+        if (!graceSku) throw new Error("grace_sku_required");
+        if (!isExactShopifyCdnUrl(heroImageUrl)) {
+            throw new Error("shopify_cdn_hero_image_url_required");
+        }
+
+        const [groups, products] = await Promise.all([
+            ctx.db
+                .query("productGroups")
+                .withIndex("by_slug", (q) => q.eq("slug", productGroupSlug))
+                .take(2),
+            ctx.db
+                .query("products")
+                .withIndex("by_graceSku", (q) => q.eq("graceSku", graceSku))
+                .take(2),
+        ]);
+
+        if (groups.length === 0) throw new Error("product_group_not_found");
+        if (groups.length > 1) throw new Error("product_group_slug_not_unique");
+        if (products.length === 0) throw new Error("approved_sku_not_found");
+        if (products.length > 1) throw new Error("approved_grace_sku_not_unique");
+
+        const group = groups[0];
+        const product = products[0];
+        if (!group || !product) throw new Error("catalog_identity_resolution_failed");
+        if (product.websiteSku !== websiteSku) {
+            throw new Error("approved_sku_identifiers_mismatch");
+        }
+        if (product.productGroupId !== group._id) {
+            throw new Error("approved_sku_not_in_product_group");
+        }
+        if (product.imageUrl !== heroImageUrl) {
+            throw new Error("approved_sku_shopify_image_not_synced");
+        }
+
+        const changed = group.heroImageUrl !== heroImageUrl;
+        if (changed) {
+            await ctx.db.patch(group._id, { heroImageUrl });
+        }
+
+        return {
+            success: true as const,
+            changed,
+            productGroupId: group._id,
+            productGroupSlug: group.slug,
+            websiteSku: product.websiteSku,
+            graceSku: product.graceSku,
+            heroImageUrl,
+        };
+    },
+});
+
+/**
  * Designates the customer-facing representative SKU for a product group.
  *
  * This controls:
@@ -2109,7 +2270,7 @@ export const setVariantImages = mutation({
 });
 
 // Applicator bucket suffixes in slugs (e.g. cylinder-5ml-clear-13-415-spray ends with -spray)
-const APPLICATOR_BUCKET_SUFFIXES = ["-spray", "-finemist", "-perfumespray", "-antiquespray", "-antiquespray-tassel", "-rollon", "-dropper", "-lotionpump", "-reducer", "-glasswand", "-glassapplicator", "-capclosure"] as const;
+const APPLICATOR_BUCKET_SUFFIXES = ["-spray", "-finemist", "-perfumespray", "-vintagestyle-tassel", "-vintagestyle", "-antiquespray-tassel", "-antiquespray", "-rollon", "-dropper", "-lotionpump", "-reducer", "-glasswand", "-glassapplicator", "-capclosure"] as const;
 
 // Cylinder 5ml roll-on: only Clear and cobalt-blue glass (no Amber — 5ml Amber is Tulip-shaped only)
 const CYLINDER_5ML_ROLLON_ALLOWED = new Set(["Clear", "Blue", "Cobalt", "Cobalt Blue"]);
@@ -2669,5 +2830,142 @@ export const getCheckoutBlockedCount = query({
             byReason,
             sampleBlockedSkus: blocked.slice(0, 10).map((p) => p.graceSku),
         };
+    },
+});
+
+/**
+ * Product lookup for the portal's order pad.
+ *
+ * Uses the storefront's own search logic rather than raw full-text ranking, so
+ * the pad and the catalogue agree about what a query means. That matters: the
+ * first version ranked by the Convex search index alone, which scores term
+ * overlap and has no idea that a capacity is a constraint. "9ml roll metal"
+ * put a 1 oz Boston round first, because "roll" and "metal" matched and "9ml"
+ * was simply ignored.
+ *
+ * `catalogSearchMatches` requires EVERY token to appear somewhere in the row,
+ * which is what excludes the wrong capacity. `catalogSearchScore` then ranks
+ * with the same field weights the catalogue uses, and ties break on capacity
+ * ascending, so the smallest matching size leads.
+ *
+ * The search index is still how candidates are gathered — `products` crossed
+ * Convex's per-execution read limit at 2,330 documents, so nothing here may
+ * read the whole table.
+ */
+export const searchForOrderPad = query({
+    args: { term: v.string(), limit: v.optional(v.number()) },
+    handler: async (ctx, args) => {
+        const term = args.term.trim();
+        if (term.length < 2) return [];
+        const limit = Math.min(Math.max(args.limit ?? 8, 1), 20);
+
+        // Superseded rows keep their old SKU behind a "__RETIRED__" marker so
+        // history stays auditable. They are not buyable and must never surface
+        // in a pad that exists to put things on an order.
+        const isOfferable = (product: Doc<"products">) => {
+            const sku = product.websiteSku ?? product.graceSku ?? "";
+            if (sku.includes("__RETIRED__")) return false;
+            // `shopifySellable` is tri-state: false is a checked no, null or
+            // undefined means the sweep has not run and the variant id decides.
+            if (product.shopifySellable === false) return false;
+            return true;
+        };
+
+        const candidates = new Map<string, Doc<"products">>();
+
+        // Exact SKU wins outright. Someone who typed a SKU wants that SKU, not
+        // the fuzzy neighbourhood around its name.
+        const exact: Doc<"products">[] = [];
+        for (const candidate of new Set([term, term.toUpperCase()])) {
+            for (const row of [
+                await ctx.db.query("products").withIndex("by_websiteSku", (q) => q.eq("websiteSku", candidate)).first(),
+                await ctx.db.query("products").withIndex("by_graceSku", (q) => q.eq("graceSku", candidate)).first(),
+            ]) {
+                if (row && isOfferable(row) && !candidates.has(row._id)) {
+                    candidates.set(row._id, row);
+                    exact.push(row);
+                }
+            }
+        }
+
+        // A wide candidate net, because the index only searches itemName while
+        // the match runs across capacity, colour, neck and SKU as well.
+        const byName = await ctx.db
+            .query("products")
+            .withSearchIndex("search_itemName", (q) => q.search("itemName", term))
+            .take(180);
+        for (const product of byName) {
+            if (!isOfferable(product)) continue;
+            if (!candidates.has(product._id)) candidates.set(product._id, product);
+        }
+
+        const searchFields = (product: Doc<"products">) => [
+            product.itemName,
+            product.websiteSku,
+            product.graceSku,
+            product.family,
+            product.color,
+            product.capacity,
+            product.capacityMl == null ? null : `${product.capacityMl} ml`,
+            product.category,
+            product.neckThreadSize,
+            product.applicator,
+            product.capColor,
+            product.bottleCollection,
+        ];
+
+        const pool = [...candidates.values()].filter((p) => !exact.includes(p));
+        let matched = pool.filter((product) => catalogSearchMatches(term, searchFields(product)));
+        // Requiring every token is right when something matches and useless
+        // when nothing does; fall back to the scored pool rather than showing
+        // an empty pad for a reasonable query.
+        if (matched.length === 0) matched = pool;
+
+        const score = (product: Doc<"products">) => catalogSearchScore(term, [
+            { value: product.itemName, weight: 5 },
+            { value: product.websiteSku, weight: 5 },
+            { value: product.graceSku, weight: 5 },
+            { value: product.applicator, weight: 4 },
+            { value: product.family, weight: 3 },
+            { value: product.capacity, weight: 3 },
+            { value: product.capacityMl == null ? null : `${product.capacityMl} ml`, weight: 3 },
+            { value: product.color, weight: 2 },
+            { value: product.neckThreadSize, weight: 2 },
+            { value: product.capColor, weight: 2 },
+            { value: product.category, weight: 1 },
+            { value: product.bottleCollection, weight: 1 },
+        ]);
+
+        matched.sort((a, b) => score(b) - score(a) || catalogSearchResultTieBreak(
+            { capacityMl: a.capacityMl, family: a.family, displayName: a.itemName, slug: a.websiteSku },
+            { capacityMl: b.capacityMl, family: b.family, displayName: b.itemName, slug: b.websiteSku },
+        ));
+
+        // Diversity cap. Ranking alone fills the list with one product in eight
+        // cap colours, which looks like a broken search even when every row is
+        // a legitimate hit. Two per product group leaves room for four distinct
+        // products in eight slots; an exact SKU match is never capped.
+        const PER_GROUP = 2;
+        const perGroup = new Map<string, number>();
+        const diversified: Doc<"products">[] = [];
+        for (const product of matched) {
+            const key = product.productGroupId ?? product._id;
+            const seen = perGroup.get(key) ?? 0;
+            if (seen >= PER_GROUP) continue;
+            perGroup.set(key, seen + 1);
+            diversified.push(product);
+            if (diversified.length >= limit) break;
+        }
+
+        return [...exact, ...diversified].slice(0, limit).map((product) => ({
+            sku: product.websiteSku ?? product.graceSku,
+            itemName: product.itemName,
+            capacity: product.capacity ?? null,
+            imageUrl: product.imageUrl ?? null,
+            startingPrice: product.webPrice1pc ?? null,
+            // Absent means Shopify cannot sell it, so the pad offers a quote
+            // instead of an Add button rather than failing at submission.
+            orderable: Boolean(product.shopifyVariantId),
+        }));
     },
 });

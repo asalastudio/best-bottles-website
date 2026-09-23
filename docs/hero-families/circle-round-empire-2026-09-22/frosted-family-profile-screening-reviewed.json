@@ -1,0 +1,333 @@
+[
+  {
+    "sku": "GBCrclFrst50RdcrIvyLthr",
+    "beforeEdges": [
+      407,
+      1686,
+      1279
+    ],
+    "afterEdges": [
+      399,
+      1679,
+      1280
+    ],
+    "normalizedWidthChangePct": 0.69,
+    "status": "manual-edge-review-pass",
+    "automaticResult": {
+      "sku": "GBCrclFrst50RdcrIvyLthr",
+      "beforeEdges": [
+        455,
+        1686,
+        1231
+      ],
+      "afterEdges": [
+        399,
+        1679,
+        1280
+      ],
+      "normalizedWidthChangePct": 4.62,
+      "status": "inspect"
+    },
+    "manualReview": "Automatic detector chose internal highlight at x455. Outer contour is x407; reviewed before-leather-edge.png and after-leather-edge.png. No image pixels altered."
+  },
+  {
+    "sku": "GBCrclFrst50AnSpGl",
+    "beforeEdges": [
+      560,
+      1833,
+      1273
+    ],
+    "afterEdges": [
+      559,
+      1824,
+      1265
+    ],
+    "normalizedWidthChangePct": -0.43,
+    "status": "screen-pass"
+  },
+  {
+    "sku": "GBCrclFrst50DrpGl",
+    "beforeEdges": [
+      413,
+      1679,
+      1266
+    ],
+    "afterEdges": [
+      404,
+      1671,
+      1267
+    ],
+    "normalizedWidthChangePct": 1.44,
+    "status": "screen-pass"
+  },
+  {
+    "sku": "LBCrclFrst50LtnMtGl",
+    "beforeEdges": [
+      181,
+      1497,
+      1316
+    ],
+    "afterEdges": [
+      174,
+      1496,
+      1322
+    ],
+    "normalizedWidthChangePct": 0.58,
+    "status": "screen-pass"
+  },
+  {
+    "sku": "GBCrclFrst50SpryMtGl",
+    "beforeEdges": [
+      187,
+      1506,
+      1319
+    ],
+    "afterEdges": [
+      185,
+      1504,
+      1319
+    ],
+    "normalizedWidthChangePct": 0.45,
+    "status": "screen-pass"
+  },
+  {
+    "sku": "GBCrclFrst50RdcrShnGl",
+    "beforeEdges": [
+      411,
+      1679,
+      1268
+    ],
+    "afterEdges": [
+      403,
+      1676,
+      1273
+    ],
+    "normalizedWidthChangePct": 0.76,
+    "status": "screen-pass"
+  },
+  {
+    "sku": "GBCrclFrst100AnSpGl",
+    "beforeEdges": [
+      481,
+      1787,
+      1306
+    ],
+    "afterEdges": [
+      473,
+      1792,
+      1319
+    ],
+    "normalizedWidthChangePct": 1.92,
+    "status": "screen-pass"
+  },
+  {
+    "sku": "GBCrclFrst100AnSpTslIvyGl",
+    "beforeEdges": [
+      579,
+      2078,
+      1499
+    ],
+    "afterEdges": [
+      580,
+      2072,
+      1492
+    ],
+    "normalizedWidthChangePct": 0.06,
+    "status": "screen-pass"
+  },
+  {
+    "sku": "LBCrclFrst100LtnMtGl",
+    "beforeEdges": [
+      193,
+      1521,
+      1328
+    ],
+    "afterEdges": [
+      191,
+      1519,
+      1328
+    ],
+    "normalizedWidthChangePct": 1.3,
+    "status": "screen-pass"
+  },
+  {
+    "sku": "GBCrclFrst100SpryMtGl",
+    "beforeEdges": [
+      192,
+      1519,
+      1327
+    ],
+    "afterEdges": [
+      187,
+      1515,
+      1328
+    ],
+    "normalizedWidthChangePct": 1.15,
+    "status": "screen-pass"
+  },
+  {
+    "sku": "GBCrclFrst100RdcrShnGl",
+    "beforeEdges": [
+      402,
+      1718,
+      1316
+    ],
+    "afterEdges": [
+      401,
+      1718,
+      1317
+    ],
+    "normalizedWidthChangePct": 1.84,
+    "status": "screen-pass"
+  },
+  {
+    "sku": "GBRndFrst78AnSpGl",
+    "beforeEdges": [
+      627,
+      1746,
+      1119
+    ],
+    "afterEdges": [
+      622,
+      1748,
+      1126
+    ],
+    "normalizedWidthChangePct": 0.83,
+    "status": "screen-pass"
+  },
+  {
+    "sku": "GBRndFrst78AnSpTslGl",
+    "beforeEdges": [
+      842,
+      1940,
+      1098
+    ],
+    "afterEdges": [
+      832,
+      1937,
+      1105
+    ],
+    "normalizedWidthChangePct": 1.4,
+    "status": "screen-pass"
+  },
+  {
+    "sku": "LBRndFrst78LtnMtGl",
+    "beforeEdges": [
+      248,
+      1479,
+      1231
+    ],
+    "afterEdges": [
+      243,
+      1476,
+      1233
+    ],
+    "normalizedWidthChangePct": 1.2,
+    "status": "screen-pass"
+  },
+  {
+    "sku": "GBRndFrst78SpryMtGl",
+    "beforeEdges": [
+      269,
+      1469,
+      1200
+    ],
+    "afterEdges": [
+      266,
+      1470,
+      1204
+    ],
+    "normalizedWidthChangePct": 1.28,
+    "status": "screen-pass"
+  },
+  {
+    "sku": "GBRndFrst78RdcrShnGl",
+    "beforeEdges": [
+      488,
+      1593,
+      1105
+    ],
+    "afterEdges": [
+      485,
+      1590,
+      1105
+    ],
+    "normalizedWidthChangePct": 1.88,
+    "status": "screen-pass"
+  },
+  {
+    "sku": "GBRndFrst128AnSpGl",
+    "beforeEdges": [
+      539,
+      1806,
+      1267
+    ],
+    "afterEdges": [
+      527,
+      1807,
+      1280
+    ],
+    "normalizedWidthChangePct": 1.64,
+    "status": "screen-pass"
+  },
+  {
+    "sku": "GBRndFrst128DrpGl",
+    "beforeEdges": [
+      420,
+      1633,
+      1213
+    ],
+    "afterEdges": [
+      410,
+      1631,
+      1221
+    ],
+    "normalizedWidthChangePct": 0.54,
+    "status": "screen-pass"
+  },
+  {
+    "sku": "LBRndFrst128LtnMtGl",
+    "beforeEdges": [
+      262,
+      1540,
+      1278
+    ],
+    "afterEdges": [
+      249,
+      1538,
+      1289
+    ],
+    "normalizedWidthChangePct": 1.98,
+    "status": "screen-pass"
+  },
+  {
+    "sku": "GBRndFrst128SpryMtGl",
+    "beforeEdges": [
+      241,
+      1526,
+      1285
+    ],
+    "afterEdges": [
+      228,
+      1522,
+      1294
+    ],
+    "normalizedWidthChangePct": 1.48,
+    "status": "screen-pass"
+  },
+  {
+    "sku": "GBRndFrst128RdcrShnGl",
+    "beforeEdges": [
+      412,
+      1671,
+      1259
+    ],
+    "afterEdges": [
+      401,
+      1670,
+      1269
+    ],
+    "normalizedWidthChangePct": 1.41,
+    "status": "screen-pass"
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-09-13T01:25:14.290Z",
+  "sourceRecovery": {
+    "family": "Boston Round",
+    "configurations": 33,
+    "withMasterCandidates": 33,
+    "sourceApproved": 33,
+    "existingPairedSources": 17,
+    "capOnReviewPending": 0,
+    "finishedPlateApprovalsInherited": 0
+  },
+  "boston": {
+    "catalogSkus": 123,
+    "approvedPlates": 62,
+    "missingPlates": 33,
+    "existingPlates": 90,
+    "kitLive": 0,
+    "groupsWithSunburst": 23
+  },
+  "unchangedPlateApprovalFile": true,
+  "validation": {
+    "measurementCount": 1876,
+    "fetchFailures": 0,
+    "measurementFailures": 0,
+    "reviewTestsPassed": 17,
+    "desktopHttp": 200,
+    "browserErrors": 0,
+    "mobileHorizontalOverflow": false
+  },
+  "before": {
+    "sourceApprovalsRecorded": 0,
+    "existingPairViews": 15,
+    "missingCappedPairs": 2,
+    "approvedPlates": 62,
+    "missingPlates": 33,
+    "kitLive": 0,
+    "groupsWithSunburst": 23
+  }
+}

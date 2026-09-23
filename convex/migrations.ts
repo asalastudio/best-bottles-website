@@ -77,11 +77,11 @@ const APPLICATOR_BUCKET_MAP: Record<string, string> = {
     "Fine Mist Sprayer": "finemist",
     "Atomizer": "finemist",
     "Perfume Spray Pump": "perfumespray",
-    "Vintage Bulb Sprayer": "antiquespray",
-    "Vintage Bulb Sprayer with Tassel": "antiquespray-tassel",
+    "Vintage Bulb Sprayer": "vintagestyle",
+    "Vintage Bulb Sprayer with Tassel": "vintagestyle-tassel",
     // Legacy keys kept for backward-compat during migration window
-    "Antique Bulb Sprayer": "antiquespray",
-    "Antique Bulb Sprayer with Tassel": "antiquespray-tassel",
+    "Antique Bulb Sprayer": "vintagestyle",
+    "Antique Bulb Sprayer with Tassel": "vintagestyle-tassel",
     "Dropper": "dropper",
     "Lotion Pump": "lotionpump",
     "Reducer": "reducer",
@@ -96,8 +96,10 @@ const APPLICATOR_BUCKET_LABELS: Record<string, string> = {
     rollon: "Roll-On",
     finemist: "Fine Mist Spray",
     perfumespray: "Perfume Spray",
-    antiquespray: "Vintage Bulb Spray",
-    "antiquespray-tassel": "Vintage Bulb Spray with Tassel",
+    vintagestyle: "Vintage Style Bulb Sprayer",
+    "vintagestyle-tassel": "Vintage Style Bulb Sprayer with Tassel",
+    antiquespray: "Vintage Style Bulb Sprayer",
+    "antiquespray-tassel": "Vintage Style Bulb Sprayer with Tassel",
     dropper: "Dropper",
     lotionpump: "Lotion Pump",
     reducer: "Reducer",
@@ -110,8 +112,10 @@ const APPLICATOR_BUCKET_LABELS: Record<string, string> = {
 const APPLICATOR_BUCKET_TITLE: Record<string, string> = {
     rollon: "Roll-On Bottle",
     finemist: "Fine Mist Spray Bottle",
-    antiquespray: "Vintage Bulb Spray Bottle",
-    "antiquespray-tassel": "Vintage Bulb Spray Bottle with Tassel",
+    vintagestyle: "Vintage Style Bulb Sprayer Bottle",
+    "vintagestyle-tassel": "Vintage Style Bulb Sprayer Bottle with Tassel",
+    antiquespray: "Vintage Style Bulb Sprayer Bottle",
+    "antiquespray-tassel": "Vintage Style Bulb Sprayer Bottle with Tassel",
     dropper: "Dropper Bottle",
     lotionpump: "Lotion Pump Bottle",
     reducer: "Reducer Bottle",
@@ -2644,6 +2648,56 @@ export const fixMisparsedSprayGlassColors = internalMutation({
  * Populate the `shape` field for Decorative family products based on SKU patterns.
  * Heart, Tola, Marble, Pear — used by buildDisplayName for clean product titles.
  */
+
+/**
+ * Best Bottles does not sell black glass. Opaque "black atomizer" SKUs were
+ * mislabelled as color=Black; siblings (gold/silver/red designs) correctly use
+ * Clear with the finish in the design name. capColor stays Black.
+ */
+export const fixAtomizerBlackGlassToClear = internalMutation({
+    args: {},
+    handler: async (ctx) => {
+        const skus = [
+            "GB-CYL-BLK-5ML-ATM-BLK",
+            "GB-CYL-BLK-5ML-ATM-BLK-02",
+            "GB-SLM-BLK-5ML-ATM-BLK-T",
+            "GB-CYL-BLK-10ML-ATM-BLK-01",
+            "GB-CYL-BLK-10ML-ATM-BLK-02",
+        ] as const;
+        const results: Array<{
+            graceSku: string;
+            found: boolean;
+            from: string | null;
+            to: string | null;
+            capColor: string | null;
+        }> = [];
+        for (const graceSku of skus) {
+            const product = await ctx.db
+                .query("products")
+                .withIndex("by_graceSku", (q) => q.eq("graceSku", graceSku))
+                .first();
+            if (!product) {
+                results.push({ graceSku, found: false, from: null, to: null, capColor: null });
+                continue;
+            }
+            const from = product.color ?? null;
+            if (from === "Clear") {
+                results.push({ graceSku, found: true, from, to: from, capColor: product.capColor ?? null });
+                continue;
+            }
+            await ctx.db.patch(product._id, { color: "Clear" });
+            results.push({
+                graceSku,
+                found: true,
+                from,
+                to: "Clear",
+                capColor: product.capColor ?? null,
+            });
+        }
+        return { success: true, results };
+    },
+});
+
 export const enrichDecorativeShapes = internalMutation({
     args: {
         cursor: v.optional(v.string()),
@@ -4448,7 +4502,7 @@ export const patchBostonRoundDescriptions = internalMutation({
  * - { capacityMl, applicatorBucket, description } — applies only to groups whose slug ends with applicatorBucket
  *
  * Applicator-specific entries take precedence over capacity-only entries.
- * Applicator buckets: rollon, finemist, perfumespray, antiquespray, antiquespray-tassel, dropper, lotionpump, reducer, glasswand, glassapplicator, capclosure
+ * Applicator buckets: rollon, finemist, perfumespray, vintagestyle, vintagestyle-tassel, dropper, lotionpump, reducer, glasswand, glassapplicator, capclosure
  */
 export const patchFamilyDescriptions = internalMutation({
     args: {
@@ -4478,12 +4532,17 @@ export const patchFamilyDescriptions = internalMutation({
             .query("productGroups")
             .withIndex("by_family", (q) => q.eq("family", family))
             .collect();
-        const KNOWN_BUCKETS = new Set(["rollon", "finemist", "perfumespray", "antiquespray", "antiquespray-tassel", "dropper", "lotionpump", "reducer", "glasswand", "glassapplicator", "capclosure"]);
+        const KNOWN_BUCKETS = new Set(["rollon", "finemist", "perfumespray", "vintagestyle", "vintagestyle-tassel", "antiquespray", "antiquespray-tassel", "dropper", "lotionpump", "reducer", "glasswand", "glassapplicator", "capclosure"]);
         const getApplicatorFromSlug = (s: string): string | null => {
-            if (s.endsWith("-antiquespray-tassel")) return "antiquespray-tassel";
+            // Live product-group slugs still end in -antiquespray*; map to current refine buckets.
+            if (s.endsWith("-antiquespray-tassel") || s.endsWith("-vintagestyle-tassel")) return "vintagestyle-tassel";
+            if (s.endsWith("-antiquespray") || s.endsWith("-vintagestyle")) return "vintagestyle";
             const parts = s.split("-");
             const last = parts.length > 1 ? (parts.pop() ?? null) : null;
-            return last && KNOWN_BUCKETS.has(last) ? last : null;
+            if (!last || !KNOWN_BUCKETS.has(last)) return null;
+            if (last === "antiquespray") return "vintagestyle";
+            if (last === "antiquespray-tassel") return "vintagestyle-tassel";
+            return last;
         };
         let patched = 0;
         for (const g of groups) {
@@ -5797,7 +5856,7 @@ export const fixAnomalousThreadSizesProducts = internalMutation({
 
 /**
  * Remove accidentally pushed 50 ml Frosted Circle tassel variants from the
- * non-tassel antique spray PDP.
+ * non-tassel vintage-style bulb spray PDP (product slug still *-antiquespray).
  *
  * The valid non-tassel group is:
  *   circle-50ml-frosted-18-415-antiquespray

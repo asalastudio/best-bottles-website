@@ -1,0 +1,16 @@
+{
+ "appliedAt": "2026-09-16T14:47:58.326Z",
+ "oldSha": "fa775259d4216566733a9c06659ee2f04b8fbf58045218ad504164a2e3388463",
+ "newSha": "75d2acb523496dd2a07db5dfb098340e438b0b7051de5451ef973c92bb64e28d",
+ "key": "kits/cylinder-master/75d2acb523496dd2a07db5dfb098340e438b0b7051de5451ef973c92bb64e28d.overcap.webp",
+ "why": "Jordan 2026-09-16: white retouch card on the copper overcap; blob removed, cap edge intact",
+ "skus": [
+  "GBCyl50SpryCu"
+ ],
+ "outcomes": [
+  {
+   "outcome": "updated",
+   "sku": "GBCyl50SpryCu"
+  }
+ ]
+}

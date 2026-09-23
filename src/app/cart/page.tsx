@@ -1,5 +1,7 @@
 "use client";
 
+import { useRegion } from "@/components/RegionProvider";
+
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -8,6 +10,7 @@ import { ArrowRight, Minus, Plus, ShoppingBag, Trash, WarningCircle } from "@/co
 import { checkoutMinimum, checkoutMinimumMessage, isCheckoutReady, splitCheckoutItems } from "@/lib/checkout";
 
 export default function CartPage() {
+    const { formatPrice } = useRegion();
     const {
         items,
         itemCount,
@@ -20,8 +23,8 @@ export default function CartPage() {
     } = useCart();
 
     const subtotal = items.reduce((sum, item) => sum + (item.unitPrice ?? 0) * item.quantity, 0);
-    const minimum = checkoutMinimum(items);
     const { checkoutReadyItems, quoteOnlyItems } = splitCheckoutItems(items);
+    const minimum = checkoutMinimum(checkoutReadyItems);
 
     return (
         <main className="min-h-screen bg-bone">
@@ -109,9 +112,9 @@ export default function CartPage() {
                                                 <div className="text-left sm:text-right">
                                                     {item.unitPrice != null ? (
                                                         <>
-                                                            <p className="text-xs text-slate">${item.unitPrice.toFixed(2)} ea</p>
+                                                            <p className="text-xs text-slate">{formatPrice(item.unitPrice)} ea</p>
                                                             <p className="font-serif text-2xl font-medium text-obsidian">
-                                                                ${(item.unitPrice * item.quantity).toFixed(2)}
+                                                                {formatPrice((item.unitPrice * item.quantity))}
                                                             </p>
                                                         </>
                                                     ) : (
@@ -129,7 +132,7 @@ export default function CartPage() {
                             <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-gold">Summary</p>
                             <div className="mt-4 flex items-center justify-between border-b border-champagne/40 pb-4">
                                 <span className="text-sm text-slate">{itemCount} item{itemCount === 1 ? "" : "s"}</span>
-                                <span className="font-serif text-3xl font-medium text-obsidian">${subtotal.toFixed(2)}</span>
+                                <span className="font-serif text-3xl font-medium text-obsidian">{formatPrice(subtotal)}</span>
                             </div>
                             <p className="mt-4 text-xs leading-relaxed text-slate">
                                 {quoteOnlyItems.length > 0

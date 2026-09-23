@@ -1,14 +1,14 @@
 "use client";
 
+import { useRegion } from "@/components/RegionProvider";
+
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { X, ShoppingBag, Plus, Minus, Trash, ArrowRight, WarningCircle } from "@/components/icons";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "@/components/CartProvider";
 import { useGrace } from "@/components/useGrace";
-import { checkoutMinimum, checkoutMinimumMessage, isCheckoutReady, splitCheckoutItems } from "@/lib/checkout";
-
-const FREE_SHIPPING_THRESHOLD = 99;
+import { ORDER_MINIMUM, checkoutMinimum, checkoutMinimumMessage, isCheckoutReady, splitCheckoutItems } from "@/lib/checkout";
 
 interface CartDrawerProps {
     isOpen: boolean;
@@ -16,6 +16,7 @@ interface CartDrawerProps {
 }
 
 export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
+    const { formatPrice } = useRegion();
     const { items, itemCount, removeItem, updateQuantity, checkout, isCheckingOut, checkoutError, isCartHydrated } = useCart();
     const { openPanel: openGracePanel } = useGrace();
     const drawerRef = useRef<HTMLDivElement>(null);
@@ -88,10 +89,9 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
     }, [isOpen]);
 
     const subtotal = items.reduce((sum, item) => sum + (item.unitPrice ?? 0) * item.quantity, 0);
-    const minimum = checkoutMinimum(items);
     const { checkoutReadyItems, quoteOnlyItems } = splitCheckoutItems(items);
-    const progressPercent = Math.min((subtotal / FREE_SHIPPING_THRESHOLD) * 100, 100);
-    const amountToFreeShipping = Math.max(FREE_SHIPPING_THRESHOLD - subtotal, 0);
+    const minimum = checkoutMinimum(checkoutReadyItems);
+    const progressPercent = Math.min((minimum.subtotal / ORDER_MINIMUM) * 100, 100);
     return (
         <AnimatePresence>
             {isOpen && (
@@ -173,9 +173,9 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                         {items.length > 0 && (
                             <div className="relative px-6 py-3 shrink-0 bg-white/40 border-b border-champagne/30">
                                 <p className="font-sans text-[12px] text-obsidian font-medium mb-2">
-                                    {amountToFreeShipping === 0
-                                        ? "You've unlocked Free Shipping!"
-                                        : `$${amountToFreeShipping.toFixed(2)} away from Free Shipping`}
+                                    {minimum.met
+                                        ? "You've reached the $50 order minimum."
+                                        : `${formatPrice(minimum.remaining)} away from the $50 order minimum`}
                                 </p>
                                 <div className="h-1.5 w-full bg-champagne/30 rounded-full overflow-hidden">
                                     <motion.div
@@ -291,9 +291,9 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                                                         <div className="text-right">
                                                             {item.unitPrice != null ? (
                                                                 <>
-                                                                    <p className="text-[11px] text-slate">${item.unitPrice.toFixed(2)} ea</p>
+                                                                    <p className="text-[11px] text-slate">{formatPrice(item.unitPrice)} ea</p>
                                                                     <p className="text-[14px] font-medium text-obsidian">
-                                                                        ${(item.unitPrice * item.quantity).toFixed(2)}
+                                                                        {formatPrice((item.unitPrice * item.quantity))}
                                                                     </p>
                                                                 </>
                                                             ) : (
@@ -307,7 +307,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                                             {nudge && (
                                                 <div className="mt-3 p-2 bg-muted-gold/10 border border-muted-gold/20 rounded-lg flex items-center justify-between gap-2">
                                                     <p className="text-[11px] text-obsidian/85 leading-normal">
-                                                        Add <span className="font-semibold text-muted-gold">{nudge.units} more</span> to unlock <span className="font-semibold">{nudge.targetQty}+ pricing</span> at <span className="font-semibold">${nudge.price.toFixed(2)}/ea</span> (Save <span className="font-semibold text-emerald-700">{nudge.savePct}%</span>!)
+                                                        Add <span className="font-semibold text-muted-gold">{nudge.units} more</span> to unlock <span className="font-semibold">{nudge.targetQty}+ pricing</span> at <span className="font-semibold">{formatPrice(nudge.price)}/ea</span> (Save <span className="font-semibold text-emerald-700">{nudge.savePct}%</span>!)
                                                     </p>
                                                     <button
                                                         onClick={() => updateQuantity(item.graceSku, nudge.targetQty)}
@@ -354,7 +354,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                                 )}
                                 <div className="flex items-center justify-between mb-4">
                                     <span className="text-[14px] text-slate font-sans uppercase tracking-widest text-xs">Total</span>
-                                    <span className="font-serif text-2xl font-medium text-obsidian">${subtotal.toFixed(2)}</span>
+                                    <span className="font-serif text-2xl font-medium text-obsidian">{formatPrice(subtotal)}</span>
                                 </div>
 
                             <p className="mt-4 text-sm text-slate" role="status">{checkoutMinimumMessage(minimum)}</p>

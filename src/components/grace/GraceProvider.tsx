@@ -36,7 +36,11 @@ import {
     type ProductCard,
     type PendingCartProduct,
 } from "@/components/GraceContext";
-import { getAnonOwnerKey } from "@/lib/graceAnonOwnerKey";
+import {
+    getActiveGraceOwnerKey,
+    resolveGraceOwnerKey,
+    setActiveGraceOwnerKey,
+} from "@/lib/graceOwnerKey";
 import { useGraceMemory } from "@/lib/grace/useGraceMemory";
 import { isGraceToolResult } from "@/lib/graceToolResults";
 import {
@@ -297,7 +301,7 @@ function buildCatalogPath(products: ProductCard[], query?: string, family?: stri
     } else if (/roll[\s-]?on|roller/.test(queryText)) {
         qs.set("applicators", "rollon");
     } else if (/(bulb|vintage|antique).*(spray|sprayer)/.test(queryText)) {
-        qs.set("applicators", "antiquespray,antiquespray-tassel");
+        qs.set("applicators", "vintagestyle,vintagestyle-tassel");
     } else if (/dropper|pipette/.test(queryText)) {
         qs.set("applicators", "dropper");
     } else if (/lotion\s*pump/.test(queryText)) {
@@ -548,7 +552,7 @@ async function callGraceServerTool<T>(
 ): Promise<{ result: T | null; error?: string; status: number }> {
     const response = await fetchJsonWithTimeout<{ result?: T; error?: string }>("/api/grace/tools", {
         method: "POST",
-        headers: { "Content-Type": "application/json", "x-grace-owner-key": getAnonOwnerKey() },
+        headers: { "Content-Type": "application/json", "x-grace-owner-key": getActiveGraceOwnerKey() },
         body: JSON.stringify({ tool_name: toolName, parameters }),
     });
     return {
@@ -579,7 +583,12 @@ function GraceProviderBase({
     const mintShortlistShareTokenMutation = useMutation(api.graceShortlists.mintShareToken);
     const upsertMemoryMutation = useMutation(api.graceMemory.upsertNote);
     const recordSessionTraceMutation = useMutation(api.graceSessionTraces.record);
-    const memoryNote = useGraceMemory(getAnonOwnerKey());
+    // Signing in changes the owner key, so shortlists, memory, and uploads
+    // follow the person rather than the device. Published synchronously during
+    // render so a tool call in the same tick cannot use a stale key.
+    const ownerKey = resolveGraceOwnerKey(userId);
+    setActiveGraceOwnerKey(ownerKey);
+    const memoryNote = useGraceMemory(ownerKey);
     const submitFormRef = useRef(submitFormMutation);
     useEffect(() => { submitFormRef.current = submitFormMutation; }, [submitFormMutation]);
     const createShortlistRef = useRef(createShortlistMutation);
@@ -604,7 +613,7 @@ function GraceProviderBase({
     const rememberDestination = useCallback((href: string, title: string, sku?: string) => {
         sessionTraceRef.current.destinations.push({ href, at: Date.now() });
         void upsertMemoryRef.current({
-            ownerKey: getAnonOwnerKey(),
+            ownerKey: resolveGraceOwnerKey(userIdRef.current),
             kind: "destination",
             text: title,
             href,
@@ -2012,9 +2021,9 @@ function GraceProviderBase({
                     return "There are no verified products to shortlist yet. Run searchCatalog first, then call displayShortlist again.";
                 }
 
-                const ownerKey = getAnonOwnerKey();
+                const shortlistOwnerKey = resolveGraceOwnerKey(userIdRef.current);
                 const created = await createShortlistRef.current({
-                    ownerKey,
+                    ownerKey: shortlistOwnerKey,
                     name: "Grace shortlist",
                     items: recentProducts.slice(0, 6).map((p) => ({
                         graceSku: p.graceSku,
@@ -2310,7 +2319,7 @@ function GraceProviderBase({
             if (!kind || !text) return "A kind (profile, correction, or destination) and a short note are required.";
             try {
                 await upsertMemoryRef.current({
-                    ownerKey: getAnonOwnerKey(),
+                    ownerKey: resolveGraceOwnerKey(userIdRef.current),
                     kind,
                     text,
                     href: params.href ?? undefined,
@@ -2404,7 +2413,7 @@ function GraceProviderBase({
         const trace = sessionTraceRef.current;
         if (trace.sessionId) {
             void recordSessionTraceRef.current({
-                ownerKey: getAnonOwnerKey(),
+                ownerKey: resolveGraceOwnerKey(userIdRef.current),
                 sessionId: trace.sessionId,
                 startedAt: sessionStartedAtRef.current || Date.now(),
                 endedAt: Date.now(),
@@ -3038,6 +3047,57 @@ function GraceProviderBase({
         openAIAdapter.interrupt();
     }, [openAIAdapter]);
 
+    // ── Transcript sync (signed-in customers only) ───────────────────────────
+    // Anonymous visitors are never recorded; the route answers them with 204.
+    // The whole transcript is re-posted after each completed turn, debounced,
+    // so the stored row mirrors the live thread without per-message writes.
+    // One session id spans the thread until the conversation is reset.
+    const transcriptSessionIdRef = useRef<string | null>(null);
+    const transcriptStartedAtRef = useRef(0);
+    const transcriptSyncedSignatureRef = useRef("");
+
+    useEffect(() => {
+        if (messages.length === 0) {
+            transcriptSessionIdRef.current = null;
+            transcriptSyncedSignatureRef.current = "";
+            return;
+        }
+        if (!userId || isAwaitingReply) return;
+        if (!messages.some((m) => m.role === "user")) return;
+
+        if (!transcriptSessionIdRef.current) {
+            transcriptSessionIdRef.current = typeof crypto !== "undefined" && typeof crypto.randomUUID === "function"
+                ? crypto.randomUUID()
+                : `grace-${Date.now()}`;
+            transcriptStartedAtRef.current = Date.now();
+        }
+        const last = messages[messages.length - 1];
+        const signature = `${messages.length}:${last?.id ?? ""}:${last?.content.length ?? 0}`;
+        if (signature === transcriptSyncedSignatureRef.current) return;
+
+        const sessionId = transcriptSessionIdRef.current;
+        const startedAt = transcriptStartedAtRef.current;
+        const timer = setTimeout(() => {
+            transcriptSyncedSignatureRef.current = signature;
+            void fetch("/api/grace/sessions", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                keepalive: true,
+                body: JSON.stringify({
+                    sessionId,
+                    startedAt,
+                    surface: pathnameRef.current.startsWith("/grace-workspace") ? "workspace" : "drawer",
+                    companionMode: companionModeRef.current,
+                    lastPageUrl: pageContextRef.current?.pageUrl,
+                    messages: messages.map((m) => ({ role: m.role, text: m.content })),
+                }),
+            }).catch((error: unknown) => {
+                console.warn("[Grace] session transcript sync failed", error);
+            });
+        }, 1200);
+        return () => clearTimeout(timer);
+    }, [messages, isAwaitingReply, userId]);
+
     // ── Compose context value ────────────────────────────────────────────────
 
     const contextValue = useMemo((): GraceContextValue => ({
@@ -3084,6 +3144,7 @@ function GraceProviderBase({
         graceQuery,
         pageContext,
         browsingHistory,
+        ownerKey,
     }), [
         panelMode, companionMode, surface, openPanel, followSurfacedProduct, closePanel, minimizeToStrip, isOpen,
         launcherTooltip, minimizeWithTooltip, appendInlineMessage,
@@ -3091,7 +3152,7 @@ function GraceProviderBase({
         send, errorMessage, conversationActive, startConversation, endConversation, resetConversation,
         onNavigate, pendingNavigation, clearPendingNavigation, confirmAction, dismissAction,
         activeForm, updateFormField, submitActiveForm, dismissActiveForm,
-        voiceFailed, graceQuery, pageContext, browsingHistory, stopSpeaking,
+        voiceFailed, graceQuery, pageContext, browsingHistory, stopSpeaking, ownerKey,
     ]);
 
     return (

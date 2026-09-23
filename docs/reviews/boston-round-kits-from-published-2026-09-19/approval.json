@@ -1,0 +1,18 @@
+{
+ "release": "boston-round-kits-2026-09-19",
+ "ship": "ship Boston Round kit release 2026-09-19",
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:11.661Z",
+ "preparedBy": "reissue-kit-approval.mjs (Claude Opus 5)",
+ "preparedAt": "2026-09-19T12:37:11.662Z",
+ "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/boston-round-kits.jpg",
+ "skus": {
+  "GBBstnAmb1ozRollonGl": "eceb3b6fd028736f77be0686027e7483266579f6080ab8fcf27b12cb0e513176",
+  "GBBstnBlu1ozRollonGl": "b07a4f5def35b97f28e5a5ba6ae3ede6207e742abfc510635cb04cb90b296466",
+  "GBBstn1ozMtlRollonGl": "f2b188b4ae452d26cc3f4f470435cee868f3742312ffead2bcbc5f9b33cdcaa6",
+  "GBBstnAmb2ozRollonGl": "b0a50b890de4b04bfb422c3e8e1e54ca9df9af049786c62b20ed36327453251d"
+ },
+ "setAside": [],
+ "note": "Re-issued against the published plates. The set-aside rows keep their review; their kits must be re-cut from the plate that replaced the one they were registered to."
+}

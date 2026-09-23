@@ -56,9 +56,9 @@ for (const g of groups) {
 }
 
 // Dedupe by (family, capacityMl, applicatorBucket) for applicator-specific description mapping
-const BUCKETS = new Set(["rollon","finemist","perfumespray","antiquespray","antiquespray-tassel","dropper","lotionpump","reducer","glasswand","glassapplicator","capclosure"]);
+const BUCKETS = new Set(["rollon","finemist","perfumespray","vintagestyle","vintagestyle-tassel","dropper","lotionpump","reducer","glasswand","glassapplicator","capclosure"]);
 function getApplicatorFromSlug(slug) {
-    if (slug.endsWith("-antiquespray-tassel")) return "antiquespray-tassel";
+    if (slug.endsWith("-antiquespray-tassel")) return "vintagestyle-tassel";
     const last = slug.split("-").pop();
     return BUCKETS.has(last) ? last : null;
 }

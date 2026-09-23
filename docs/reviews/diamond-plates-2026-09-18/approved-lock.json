@@ -1,0 +1,335 @@
+{
+ "schemaVersion": 1,
+ "release": "Diamond plates 2026-09-18",
+ "approvedAt": "2026-09-19T05:09:23.568Z",
+ "actor": "Jordan · approved the Diamond contact sheet in chat (\"Diamond is great\")",
+ "approvalId": "60836a4b-401b-4813-a910-04ece37d4326",
+ "reviewPacket": "public/reviews/plate-completion-2026-09-18/diamond-new-plates.jpg",
+ "reviewPacketSha256": "3416382418394a4ed19263efe964f3c7bacf7e15063a5e9b3773de0d2295afd5",
+ "approvalFile": "dist/paper-doll/diamond-plates-2026-09-18/plates/manifest.json",
+ "approvalFileSha256": "6a4bc61190eb5dd14c9d951e01e0b28ebdac28d0a145583f352cd360e0d52c2c",
+ "visualApproved": true,
+ "legacySourcesAccepted": false,
+ "publicationAuthorized": false,
+ "indexingAuthorized": false,
+ "rows": [
+  {
+   "sku": "LBDmnd2ozLtnClOvrCap",
+   "graceSku": "LB-DMD-CLR-60ML-LPM-COCP",
+   "familyId": "diamond-60ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "diamond-60ml-clear-18-415/LBDmnd2ozLtnClOvrCap.front-on.webp",
+    "storeKey": "plates/diamond-60ml-clear-18-415/LBDmnd2ozLtnClOvrCap/2b531dad35aa35a01c2ae2dfebff69a2a863d525f71d3b550d38729aa8c7fcd9.front-on-1000x1100.webp",
+    "sha256": "2b531dad35aa35a01c2ae2dfebff69a2a863d525f71d3b550d38729aa8c7fcd9",
+    "bytes": 18744,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "aec36801ecad62ef8a12eb81d53bedf0e90138e8130d6b08bbf536f410b7bff1",
+    "bytes": 1758
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/28.  60ml Diamond (Clear) Ltn & Spry, capped/28. LBDmnd2ozLtnClOvrCap.psd",
+    "sha256": "b514981995e878c50e080605e7dfe04b15776a84e20b1f8cb47ca24659c45216"
+   }
+  },
+  {
+   "sku": "LBDmnd2ozLtnCu",
+   "graceSku": "LB-DMD-CLR-60ML-LPM-CPR",
+   "familyId": "diamond-60ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "diamond-60ml-clear-18-415/LBDmnd2ozLtnCu.front-on.webp",
+    "storeKey": "plates/diamond-60ml-clear-18-415/LBDmnd2ozLtnCu/fb2c77121e9e7db135ee394d55237b7c52198b07d2380209baeb88fb9d5fd38f.front-on-1000x1100.webp",
+    "sha256": "fb2c77121e9e7db135ee394d55237b7c52198b07d2380209baeb88fb9d5fd38f",
+    "bytes": 17788,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "e8b669988a15f66329b41e4d4ffc9a9669ab00923b423db518b27a4c1b99fab2",
+    "bytes": 1700
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/28.  60ml Diamond (Clear) Ltn & Spry, capped/56. LBDmnd2ozLtnCu.psd",
+    "sha256": "d471b703cdc03189d41b00a4a49ad26f51c1efba327526073b44fa4a7516b863"
+   }
+  },
+  {
+   "sku": "LBDmnd2ozLtnMtGl",
+   "graceSku": "LB-DMD-CLR-60ML-LPM-MGLD",
+   "familyId": "diamond-60ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "diamond-60ml-clear-18-415/LBDmnd2ozLtnMtGl.front-on.webp",
+    "storeKey": "plates/diamond-60ml-clear-18-415/LBDmnd2ozLtnMtGl/22910576801d963ada960740f3f4f15766b80df9382a5fd179225357eb29440f.front-on-1000x1100.webp",
+    "sha256": "22910576801d963ada960740f3f4f15766b80df9382a5fd179225357eb29440f",
+    "bytes": 16884,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "f465865cd027c93cb9f919f47aa56ca1c450ec6cc0f7c05e4ca7dd8fe1ad7f3e",
+    "bytes": 1684
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/28.  60ml Diamond (Clear) Ltn & Spry, capped/12. LBDmnd2ozLtnMtGl.psd",
+    "sha256": "bb6a395590bee1a9ac05d65c1477c3aecc7e65fce8036c984211c99d35ff5cea"
+   }
+  },
+  {
+   "sku": "LBDmnd2ozLtnMtSl",
+   "graceSku": "LB-DMD-CLR-60ML-LPM-MSLV",
+   "familyId": "diamond-60ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "diamond-60ml-clear-18-415/LBDmnd2ozLtnMtSl.front-on.webp",
+    "storeKey": "plates/diamond-60ml-clear-18-415/LBDmnd2ozLtnMtSl/bd543194743b782fceda8933c5c45737ac33d9f600690e5ed7f4cf647e447819.front-on-1000x1100.webp",
+    "sha256": "bd543194743b782fceda8933c5c45737ac33d9f600690e5ed7f4cf647e447819",
+    "bytes": 15476,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "b6876ce4eaa18e2e38e4c8b632147e6d6299aae54cf879378a0c4c2d9e8ad221",
+    "bytes": 1528
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/28.  60ml Diamond (Clear) Ltn & Spry, capped/26. LBDmnd2ozLtnMtSl.psd",
+    "sha256": "94a0ce4425cced05105327038a8b04d8bb5ecd1d33eddd4994a04ae596578cc7"
+   }
+  },
+  {
+   "sku": "LBDmnd2ozLtnShnBlk",
+   "graceSku": "LB-DMD-CLR-60ML-LPM-SBLK",
+   "familyId": "diamond-60ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "diamond-60ml-clear-18-415/LBDmnd2ozLtnShnBlk.front-on.webp",
+    "storeKey": "plates/diamond-60ml-clear-18-415/LBDmnd2ozLtnShnBlk/d30dbc9df61e446d8849f4add59d36f618916ecf5a655ad4ce58e04320f8bfb2.front-on-1000x1100.webp",
+    "sha256": "d30dbc9df61e446d8849f4add59d36f618916ecf5a655ad4ce58e04320f8bfb2",
+    "bytes": 16826,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "0b0e5f769bcb7fe39fa963516d8004fc81839679f841112dcb94d29c363b2b50",
+    "bytes": 1640
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/28.  60ml Diamond (Clear) Ltn & Spry, capped/22. LBDmnd2ozLtnShnBlk.psd",
+    "sha256": "58fcdc9f2da0d5ed1b97893f3aaafbc6db9d647915446f8deeb411897987d2d6"
+   }
+  },
+  {
+   "sku": "LBDmnd2ozLtnShnGl",
+   "graceSku": "LB-DMD-CLR-60ML-LPM-SGLD",
+   "familyId": "diamond-60ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "diamond-60ml-clear-18-415/LBDmnd2ozLtnShnGl.front-on.webp",
+    "storeKey": "plates/diamond-60ml-clear-18-415/LBDmnd2ozLtnShnGl/f622ccc1989e03cbec00a895af23be0ffc6059f50cfa5fa3ac4a7215c8d05e3f.front-on-1000x1100.webp",
+    "sha256": "f622ccc1989e03cbec00a895af23be0ffc6059f50cfa5fa3ac4a7215c8d05e3f",
+    "bytes": 18602,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "b946dfdc467ae5bd7b75f3d13f642933897d7e8d62dc30e714a5276fd629feac",
+    "bytes": 1872
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/28.  60ml Diamond (Clear) Ltn & Spry, capped/18. LBDmnd2ozLtnShnGl.psd",
+    "sha256": "d09bfc78e25a8016e681a1338d327af2421743898ac283983d625e7cfb36aec5"
+   }
+  },
+  {
+   "sku": "LBDmnd2ozLtnShnSl",
+   "graceSku": "LB-DMD-CLR-60ML-LPM-SSLV",
+   "familyId": "diamond-60ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "diamond-60ml-clear-18-415/LBDmnd2ozLtnShnSl.front-on.webp",
+    "storeKey": "plates/diamond-60ml-clear-18-415/LBDmnd2ozLtnShnSl/d8d083f49948710c4aa6698c2241c3b8fdcde4ff3696b4566ac0737e0fe1f70a.front-on-1000x1100.webp",
+    "sha256": "d8d083f49948710c4aa6698c2241c3b8fdcde4ff3696b4566ac0737e0fe1f70a",
+    "bytes": 17450,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "a347821c5b1a196ae31f004989d883889482b88431711bbb9ab161c9f943bcb5",
+    "bytes": 1692
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/28.  60ml Diamond (Clear) Ltn & Spry, capped/32. LBDmnd2ozLtnShnSl.psd",
+    "sha256": "073234208f60a3cd92938552b159bae24beb9ef65385fab6422d5041c80c6bde"
+   }
+  },
+  {
+   "sku": "GBDmnd2ozSpryCu",
+   "graceSku": "GB-DMD-CLR-60ML-SPR-CPR",
+   "familyId": "diamond-60ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "diamond-60ml-clear-18-415/GBDmnd2ozSpryCu.front-on.webp",
+    "storeKey": "plates/diamond-60ml-clear-18-415/GBDmnd2ozSpryCu/c259a73383adc5b3f3099773ee9899ff0932504539bc07598f7dbae644d2d40e.front-on-1000x1100.webp",
+    "sha256": "c259a73383adc5b3f3099773ee9899ff0932504539bc07598f7dbae644d2d40e",
+    "bytes": 16972,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "c8801964bbffc60e285468c870c927018564d1366e767153041dbfc6fc16163e",
+    "bytes": 1616
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/28.  60ml Diamond (Clear) Ltn & Spry, capped/53. GBDmnd2ozSpryCu.psd",
+    "sha256": "185377f359f8be7e67adadeb1d4d2d50d2a616320c72c7ab7eb4339071a4d6cf"
+   }
+  },
+  {
+   "sku": "GBDmnd2ozSpryMtGl",
+   "graceSku": "GB-DMD-CLR-60ML-SPR-MGLD",
+   "familyId": "diamond-60ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "diamond-60ml-clear-18-415/GBDmnd2ozSpryMtGl.front-on.webp",
+    "storeKey": "plates/diamond-60ml-clear-18-415/GBDmnd2ozSpryMtGl/32ec7744ea2cf3d30dd6607af7bb1e7b35c2011b924afe2602008aa413fbe0f6.front-on-1000x1100.webp",
+    "sha256": "32ec7744ea2cf3d30dd6607af7bb1e7b35c2011b924afe2602008aa413fbe0f6",
+    "bytes": 15992,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "ff42a13af13d38472d920921c11f4aa467959491ac8a5e6178bfc7cc11b19382",
+    "bytes": 1582
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/28.  60ml Diamond (Clear) Ltn & Spry, capped/11. GBDmnd2ozSpryMtGl.psd",
+    "sha256": "c7299919572a335bca429ddc0b2c6977396849b8fa72ded1da30263ceb6ca6fd"
+   }
+  },
+  {
+   "sku": "GBDmnd2ozSpryMtSl",
+   "graceSku": "GB-DMD-CLR-60ML-SPR-MSLV",
+   "familyId": "diamond-60ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "diamond-60ml-clear-18-415/GBDmnd2ozSpryMtSl.front-on.webp",
+    "storeKey": "plates/diamond-60ml-clear-18-415/GBDmnd2ozSpryMtSl/0a0f6c8f476c99c45b3d6faf840ff3eff2286b43a3d8263c7e8fd3b7101d1fce.front-on-1000x1100.webp",
+    "sha256": "0a0f6c8f476c99c45b3d6faf840ff3eff2286b43a3d8263c7e8fd3b7101d1fce",
+    "bytes": 14892,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "d4a43ea98ea3d553864ddcfed7cb1ece40f5bb6411bdba38c96420b9de24e960",
+    "bytes": 1442
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/28.  60ml Diamond (Clear) Ltn & Spry, capped/24. GBDmnd2ozSpryMtSl.psd",
+    "sha256": "ed6e7c84c223f7a33a7b33d4d0a7bad5e798f4d797c2262dd37154e5520cd337"
+   }
+  },
+  {
+   "sku": "GBDmnd2ozSpryShnBlk",
+   "graceSku": "GB-DMD-CLR-60ML-SPR-SBLK",
+   "familyId": "diamond-60ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "diamond-60ml-clear-18-415/GBDmnd2ozSpryShnBlk.front-on.webp",
+    "storeKey": "plates/diamond-60ml-clear-18-415/GBDmnd2ozSpryShnBlk/dbd054f4ea9948fa4e4da69fb755f61735f1ec28b60ef708abd50d7f6c1760df.front-on-1000x1100.webp",
+    "sha256": "dbd054f4ea9948fa4e4da69fb755f61735f1ec28b60ef708abd50d7f6c1760df",
+    "bytes": 16330,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "3c12dc4fdb1def062affc29ac263c0db34036f1e523fff0ba357db3eafa27aa6",
+    "bytes": 1544
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/28.  60ml Diamond (Clear) Ltn & Spry, capped/21. GBDmnd2ozSpryShnBlk.psd",
+    "sha256": "eee3751fb23414cc3f3eb046ae97436cb272b934f03eae75ba954bfa55d5a8b4"
+   }
+  },
+  {
+   "sku": "GBDmnd2ozSpryShnGl",
+   "graceSku": "GB-DMD-CLR-60ML-SPR-SGLD",
+   "familyId": "diamond-60ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "diamond-60ml-clear-18-415/GBDmnd2ozSpryShnGl.front-on.webp",
+    "storeKey": "plates/diamond-60ml-clear-18-415/GBDmnd2ozSpryShnGl/1643a1e787b5af8fef46b35b6636f9d706abca3c2de6710e93885092a190f068.front-on-1000x1100.webp",
+    "sha256": "1643a1e787b5af8fef46b35b6636f9d706abca3c2de6710e93885092a190f068",
+    "bytes": 17930,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "a5f7e9d4ffc98413d936ba136dd532a6fd59cf763ce0f57503a93e7c9f39a45f",
+    "bytes": 1764
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/28.  60ml Diamond (Clear) Ltn & Spry, capped/17. GBDmnd2ozSpryShnGl.psd",
+    "sha256": "e0fbe08e783aacba5324887420870fc7e2d53c0708820ca607a5dcccad987139"
+   }
+  },
+  {
+   "sku": "GBDmnd2ozSpryShnSl",
+   "graceSku": "GB-DMD-CLR-60ML-SPR-SSLV",
+   "familyId": "diamond-60ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "diamond-60ml-clear-18-415/GBDmnd2ozSpryShnSl.front-on.webp",
+    "storeKey": "plates/diamond-60ml-clear-18-415/GBDmnd2ozSpryShnSl/e673efcfd6bde25135fc3a9d6cb5c6af6849628d6feed17b424c8ae0cc6d30ce.front-on-1000x1100.webp",
+    "sha256": "e673efcfd6bde25135fc3a9d6cb5c6af6849628d6feed17b424c8ae0cc6d30ce",
+    "bytes": 16944,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "01e51b22c16ffbff1fb2195db2584526b6b97684f3cbdb5f03bc66fc0377e936",
+    "bytes": 1608
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/28.  60ml Diamond (Clear) Ltn & Spry, capped/30. GBDmnd2ozSpryShnSl.psd",
+    "sha256": "b87e1d6980ff398981fc689f0baa1a0cdaa59b134e51daf9c7a31c952a60f6cc"
+   }
+  }
+ ],
+ "scope": {
+  "renderedInBatch": 41,
+  "alreadyLiveAndExcluded": 28
+ },
+ "frontSourcePins": [],
+ "note": "Approves the rendered plate bytes after review. Publishing is a separate step and needs a release-specific ship phrase."
+}

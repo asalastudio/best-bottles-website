@@ -1,0 +1,108 @@
+{
+ "family": "Round",
+ "confirmedAt": "2026-09-18",
+ "evidence": [
+  "2026-09-18: several Round lotion bottles share exact bytes with a sprayer file of another name. Jordan chose per-SKU pins rather than a library-wide rule.",
+  "2026-09-18: the first pass pinned the uniquely-named file, which turned out to be the cap-beside view; corrected to the capped copy that carries this SKU's own name."
+ ],
+ "frontSourcePins": {
+  "LBRndFrst128LtnMtSl": {
+   "relPath": "2.  18-415 Bottles /10. Round Frosted 128ml/1. Round Frst 128ml PSD/26. LBRndFrst128LtnMtSl.psd",
+   "sha256": "432b045d9c1e5f2932c42176d000bae398ce50460f1fa5c79eb77fce71d75a35",
+   "reason": "the capped front for this lotion bottle. Capped, the lotion pump and the fine mist sprayer are the same object, so the library saved one photograph under both names; that sharing is what made the crosswalk hand this SKU the sprayer's copy.",
+   "rejected": [
+    {
+     "relPath": "2.  18-415 Bottles /10. Round Frosted 128ml/1. Round Frst 128ml PSD/25. LBRndFrst128LtnMtSl.psd",
+     "sha256": "97f4678ef383a50a7fae7082ef1a08411448889c28c50aa04163fffec062d922",
+     "why": "this file is named for this SKU alone, but it depicts the pump with its overcap standing beside the bottle, which is the cap-off view. Two of them also failed the renderer's registration gate."
+    }
+   ],
+   "evidence": "flattened both candidates and compared, 2026-09-18: /reviews/plate-completion-2026-09-18/round-pinned-sources.jpg",
+   "reviewedBy": "Jordan \u00b7 chose per-SKU pins over a global rule, chat 2026-09-18"
+  },
+  "LBRndFrst128LtnMtGl": {
+   "relPath": "2.  18-415 Bottles /10. Round Frosted 128ml/1. Round Frst 128ml PSD/12. LBRndFrst128LtnMtGl.psd",
+   "sha256": "de0545ca278e292041a59efd074a7357535b02ed922c7333a100a0d031882fea",
+   "reason": "the capped front for this lotion bottle. Capped, the lotion pump and the fine mist sprayer are the same object, so the library saved one photograph under both names; that sharing is what made the crosswalk hand this SKU the sprayer's copy.",
+   "rejected": [
+    {
+     "relPath": "2.  18-415 Bottles /10. Round Frosted 128ml/1. Round Frst 128ml PSD/14. LBRndFrst128LtnMtGl.psd",
+     "sha256": "7dd7bd64579bc5f1dcc943bff2e521bceeeb9e5dd41dc646df38d1fc859d8ba9",
+     "why": "this file is named for this SKU alone, but it depicts the pump with its overcap standing beside the bottle, which is the cap-off view. Two of them also failed the renderer's registration gate."
+    }
+   ],
+   "evidence": "flattened both candidates and compared, 2026-09-18: /reviews/plate-completion-2026-09-18/round-pinned-sources.jpg",
+   "reviewedBy": "Jordan \u00b7 chose per-SKU pins over a global rule, chat 2026-09-18"
+  },
+  "LBRndFrst128LtnCu": {
+   "relPath": "2.  18-415 Bottles /10. Round Frosted 128ml/1. Round Frst 128ml PSD/58. LBRndFrst128LtnCu.psd",
+   "sha256": "91c21b06d27218902db6f3aae77cd798d5faa9e2e4aab264d1e92dd721382598",
+   "reason": "the capped front for this lotion bottle. Capped, the lotion pump and the fine mist sprayer are the same object, so the library saved one photograph under both names; that sharing is what made the crosswalk hand this SKU the sprayer's copy.",
+   "rejected": [
+    {
+     "relPath": "2.  18-415 Bottles /10. Round Frosted 128ml/1. Round Frst 128ml PSD/59. LBRndFrst128LtnCu.psd",
+     "sha256": "962a5fafaeb6704ad26179ed932bb0e2aad9b9c7bc74a202d5aeef494df25e41",
+     "why": "this file is named for this SKU alone, but it depicts the pump with its overcap standing beside the bottle, which is the cap-off view. Two of them also failed the renderer's registration gate."
+    }
+   ],
+   "evidence": "flattened both candidates and compared, 2026-09-18: /reviews/plate-completion-2026-09-18/round-pinned-sources.jpg",
+   "reviewedBy": "Jordan \u00b7 chose per-SKU pins over a global rule, chat 2026-09-18"
+  },
+  "LBRndFrst128LtnShnGl": {
+   "relPath": "2.  18-415 Bottles /10. Round Frosted 128ml/1. Round Frst 128ml PSD/18. LBRndFrst128LtnShnGl.psd",
+   "sha256": "0ed4ebb8aa2fa3a2669290c1f60166ee254934e52766a0b8710ab24bebf27491",
+   "reason": "the capped front for this lotion bottle. Capped, the lotion pump and the fine mist sprayer are the same object, so the library saved one photograph under both names; that sharing is what made the crosswalk hand this SKU the sprayer's copy.",
+   "rejected": [
+    {
+     "relPath": "2.  18-415 Bottles /10. Round Frosted 128ml/1. Round Frst 128ml PSD/16. LBRndFrst128LtnShnGl.psd",
+     "sha256": "a0f606bd6b8745d9b18ea623f94edb425fd3f58379b9aacc02b0a67a303f68a5",
+     "why": "this file is named for this SKU alone, but it depicts the pump with its overcap standing beside the bottle, which is the cap-off view. Two of them also failed the renderer's registration gate."
+    }
+   ],
+   "evidence": "flattened both candidates and compared, 2026-09-18: /reviews/plate-completion-2026-09-18/round-pinned-sources.jpg",
+   "reviewedBy": "Jordan \u00b7 chose per-SKU pins over a global rule, chat 2026-09-18"
+  },
+  "LBRndFrst128LtnShnBlk": {
+   "relPath": "2.  18-415 Bottles /10. Round Frosted 128ml/1. Round Frst 128ml PSD/22. LBRndFrst128LtnShnBlk.psd",
+   "sha256": "35c0252dde45a656bb5b69cd2f2e04dd347c7f3e8fbfad1657e3c51b0437350a",
+   "reason": "the capped front for this lotion bottle. Capped, the lotion pump and the fine mist sprayer are the same object, so the library saved one photograph under both names; that sharing is what made the crosswalk hand this SKU the sprayer's copy.",
+   "rejected": [
+    {
+     "relPath": "2.  18-415 Bottles /10. Round Frosted 128ml/1. Round Frst 128ml PSD/20. LBRndFrst128LtnShnBlk.psd",
+     "sha256": "1c617ff67a43a1e243781eeda3b2956e224d0d71d5ba31dd9b73395c09821831",
+     "why": "this file is named for this SKU alone, but it depicts the pump with its overcap standing beside the bottle, which is the cap-off view. Two of them also failed the renderer's registration gate."
+    }
+   ],
+   "evidence": "flattened both candidates and compared, 2026-09-18: /reviews/plate-completion-2026-09-18/round-pinned-sources.jpg",
+   "reviewedBy": "Jordan \u00b7 chose per-SKU pins over a global rule, chat 2026-09-18"
+  },
+  "LBRndFrst78LtnMtSl": {
+   "relPath": "2.  18-415 Bottles /8. Round 78ml Frosted/1. Round Frst 78ml Psd/26. LBRndFrst78LtnMtSl.psd",
+   "sha256": "b27f32f412e171a752487778b791d72de6e73ae479e43d4221faa2e32827385f",
+   "reason": "the capped front. This SKU has two photographs of its own; the other is the pump with its overcap standing beside the bottle, which is the cap-off view.",
+   "rejected": [
+    {
+     "relPath": "2.  18-415 Bottles /8. Round 78ml Frosted/1. Round Frst 78ml Psd/25. LBRndFrst78LtnMtSl.psd",
+     "sha256": "78207824cf3c38c9c730e190fa6584e9039d3d08db5b33025f86f03e5255e83a",
+     "why": "cap-beside presentation, shown as option A on the review sheet"
+    }
+   ],
+   "evidence": "/reviews/plate-completion-2026-09-18/round-lotion-two-candidates.jpg, options A and B flattened side by side",
+   "reviewedBy": "Jordan \u00b7 chose the capped option, chat 2026-09-18"
+  },
+  "LBRndFrst78LtnCu": {
+   "relPath": "2.  18-415 Bottles /8. Round 78ml Frosted/1. Round Frst 78ml Psd/56. LBRndFrst78LtnCu.psd",
+   "sha256": "15229093adefc960fe5bd590454e16ae11f6d0b2826fbb451556d894ff3bf772",
+   "reason": "the capped front. This SKU has two photographs of its own; the other is the pump with its overcap standing beside the bottle, which is the cap-off view.",
+   "rejected": [
+    {
+     "relPath": "2.  18-415 Bottles /8. Round 78ml Frosted/1. Round Frst 78ml Psd/55. LBRndFrst78LtnCu.psd",
+     "sha256": "53ae76722c6a8162a633ba7914b22ae599e186e695b69605853576df8a8d9c7e",
+     "why": "cap-beside presentation, shown as option A on the review sheet"
+    }
+   ],
+   "evidence": "/reviews/plate-completion-2026-09-18/round-lotion-two-candidates.jpg, options A and B flattened side by side",
+   "reviewedBy": "Jordan \u00b7 chose the capped option, chat 2026-09-18"
+  }
+ }
+}

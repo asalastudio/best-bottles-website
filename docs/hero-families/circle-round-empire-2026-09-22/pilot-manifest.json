@@ -1,0 +1,140 @@
+[
+  {
+    "sku": "GBCrclFrst50SpryMtGl",
+    "capacityMl": 50,
+    "family": "Circle",
+    "spanPct": 54,
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBCrclFrst50SpryMtGl.e325119c30a5.png",
+    "sourceSha256": "e325119c30a5db7c4f15ed8b8b97611e38ff0256716e2ba1e80760f089677848",
+    "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-pilot/inputs/GBCrclFrst50SpryMtGl-framed.png",
+    "sourceMeasurement": {
+      "seat": 700,
+      "foot": 1546,
+      "bodyCenterX": 620,
+      "uncertaintyPx": 6
+    },
+    "transform": {
+      "scale": 1.4604255319148935,
+      "x": -78.79716312056735,
+      "y": -175.73787234042538
+    },
+    "master": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-pilot/inputs/GBCrclFrst50SpryMtGl-master-13.png",
+    "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-pilot/inputs/frosted-material-reference.jpg",
+    "model": "gpt-image-2.5-sunburst",
+    "apiSize": "auto",
+    "finalCanvas": [
+      2080,
+      2288
+    ],
+    "status": "generated-material-preview-needs-review",
+    "masterEvidence": {
+      "sku": "GBCrclFrst50SpryMtGl",
+      "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/13. GBCrclFrst50SpryMtGl.psd",
+      "sourceSha256": "25f8a45a411d0da265aa79582895111289a07acc5fc2049410c2bad8a36153f7",
+      "composite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-pilot/inputs/GBCrclFrst50SpryMtGl-master-13.png",
+      "size": [
+        1400,
+        1750
+      ]
+    },
+    "masterSelection": "Visually verified: 13 is exposed gold actuator with separate gold sidecar; 11 is capped and was excluded.",
+    "inputHashes": {
+      "framedInput": "7bce971f1bb0ae818024674a3a8e3081ebb5866455d9e351819f06b600532775",
+      "master": "794fb474d1dded57660d8ff6a22d9a5b1382ca42ed9f4fb1ead4a5d87ef32fe8",
+      "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413"
+    },
+    "promptPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-pilot/GBCrclFrst50SpryMtGl-prompt.txt",
+    "promptSha256": "c391faabcfbe6b1969762ddb2347e532eab57247f33c34b56aa86e7266efd85a",
+    "execution": "Bundled imagegen CLI; user-selected gpt-image-2.5-sunburst; high quality; auto native output size; final canvas separately verified.",
+    "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-pilot/GBCrclFrst50SpryMtGl-raw.png",
+    "rawSha256": "b26dde1a1321fd82d152f956fb44e2787005aa6c7d0065a9ddf9f3df3cdf4fa7",
+    "nativeSize": [
+      1196,
+      1315
+    ],
+    "previewOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-pilot/GBCrclFrst50SpryMtGl-material-preview-2080.png",
+    "previewSha256": "e3b61f0a34e7da2a503eaf7f89d9663d6aea6ae68e37729dc7798036c1234a3a",
+    "outputMeasurement": {
+      "seat": 486,
+      "foot": 1193,
+      "center": 471,
+      "uncertaintyPx": 3
+    },
+    "outputTransform": {
+      "scale": 1.7475530410183875,
+      "x": 3.5691843470061713,
+      "y": -2.7507779349361954
+    },
+    "resolutionStatus": "Native output 1196x1315; uniform resampling for 2080x2288 material preview. Requires native-resolution production render after material acceptance.",
+    "assessment": "Frost and glass foot visually improved; exact geometry/material approval pending."
+  },
+  {
+    "sku": "GBRndFrst78SpryMtGl",
+    "capacityMl": 78,
+    "family": "Round",
+    "spanPct": 48,
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/round-enhancement/aligned-v4/GBRndFrst78SpryMtGl.premium-aligned-v4.png",
+    "sourceSha256": "60a46193b2bca04ecc9679db2b8803b1e4ae58e96167aa81d64dbe47942783a4",
+    "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-pilot/inputs/GBRndFrst78SpryMtGl-framed.png",
+    "sourceMeasurement": {
+      "seat": 840,
+      "foot": 1550,
+      "bodyCenterX": 620,
+      "uncertaintyPx": 6
+    },
+    "transform": {
+      "scale": 1.5468169014084507,
+      "x": -132.35981220657288,
+      "y": -315.48619718309874
+    },
+    "master": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-pilot/inputs/GBRndFrst78SpryMtGl-master-13.png",
+    "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-pilot/inputs/frosted-material-reference.jpg",
+    "model": "gpt-image-2.5-sunburst",
+    "apiSize": "auto",
+    "finalCanvas": [
+      2080,
+      2288
+    ],
+    "status": "generated-material-preview-needs-review",
+    "masterEvidence": {
+      "sku": "GBRndFrst78SpryMtGl",
+      "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /8. Round 78ml Frosted/1. Round Frst 78ml Psd/13. GBRndFrst78SpryMtGl.psd",
+      "sourceSha256": "6aea6c4d780246d8244307cd871e812e83316f77397872e575948652d971caec",
+      "composite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-pilot/inputs/GBRndFrst78SpryMtGl-master-13.png",
+      "size": [
+        1400,
+        1575
+      ]
+    },
+    "masterSelection": "Visually verified: 13 is exposed gold actuator with separate gold sidecar; 11 is capped and was excluded.",
+    "inputHashes": {
+      "framedInput": "1e9e1ca12b3e696e2d07b9f860f34778d3b0d1de1eabfff5a0dae80d93307725",
+      "master": "e5cc108cb41c678d605cdebbfd90047d87c3898f2d782af95678bace66c467c0",
+      "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413"
+    },
+    "promptPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-pilot/GBRndFrst78SpryMtGl-prompt.txt",
+    "promptSha256": "d92051954e45542f6e360ff159b190b59089f51f88bbb40f7f850c914d511f37",
+    "execution": "Bundled imagegen CLI; user-selected gpt-image-2.5-sunburst; high quality; auto native output size; final canvas separately verified.",
+    "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-pilot/GBRndFrst78SpryMtGl-raw.png",
+    "rawSha256": "874286bc36587f83195d7345c107c5305fcf077c46032940f25ca1df758e1f9a",
+    "nativeSize": [
+      1196,
+      1315
+    ],
+    "previewOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-pilot/GBRndFrst78SpryMtGl-material-preview-2080.png",
+    "previewSha256": "5e182a1e97fab4987bd45745ce2078a558fda33c028752ca034a5db574be43bd",
+    "outputMeasurement": {
+      "seat": 566,
+      "foot": 1192,
+      "center": 474,
+      "uncertaintyPx": 3
+    },
+    "outputTransform": {
+      "scale": 1.754376996805112,
+      "x": -4.908029818956379,
+      "y": -9.13738019169341
+    },
+    "resolutionStatus": "Native output 1196x1315; uniform resampling for 2080x2288 material preview. Requires native-resolution production render after material acceptance.",
+    "assessment": "Frost and glass foot visually improved; exact geometry/material approval pending."
+  }
+]

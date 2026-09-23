@@ -23,12 +23,13 @@ import type { CatalogSearchResultShape } from "@/lib/catalogSearchFallback";
 import { applicationCatalogSurface } from "@/lib/catalogSurface";
 import { analytics } from "@/lib/analytics";
 import { useGrace } from "@/components/useGrace";
+import { useCopy } from "@/i18n/useCopy";
 import {
     buildGuidedFinderFamilies,
     conflictingRefinement,
 } from "@/lib/products/guided-finder";
 import {
-    applicationFinderHref,
+    applicationGuidePath,
     parseBrowseContext,
 } from "@/lib/products/focused-shopping";
 
@@ -75,6 +76,7 @@ function serializeFinderSearch(
     params.delete("applicators");
     if (application !== "rollon") params.delete("roller");
     if (sort === surface.defaultSort) params.delete("sort");
+    params.set("guide", "1");
     const query = params.toString();
     return query ? `?${query}` : "";
 }
@@ -137,8 +139,9 @@ export default function ApplicationFinderClient({
     const lastIncomingRoute = useRef(finderUrl(pathname, search));
     const trackedEntryRoutes = useRef(new Set<string>());
     const { openPanel: openGracePanel } = useGrace();
+    const t = useCopy("catalog");
 
-    const families = useMemo(() => buildGuidedFinderFamilies(activeResult), [activeResult]);
+    const families = useMemo(() => buildGuidedFinderFamilies(activeResult, filters.rollerMaterials), [activeResult, filters.rollerMaterials]);
     const exactFinderUrl = finderUrl(activePathname, activeSearch);
 
     useEffect(() => {
@@ -315,7 +318,7 @@ export default function ApplicationFinderClient({
             applicators: [],
             rollerMaterials: nextApplication === "rollon" ? filters.rollerMaterials : [],
         };
-        const nextPathname = applicationFinderHref(nextApplication);
+        const nextPathname = applicationGuidePath(nextApplication);
         const nextSort = applicationCatalogSurface(nextApplication).defaultSort;
         const nextSearch = serializeFinderSearch(nextApplication, nextFilters, nextSort);
         void runSearch({
@@ -441,7 +444,7 @@ export default function ApplicationFinderClient({
                             {refinementSummary(activeApplication, filters)}
                         </p>
                         <button type="button" onClick={openGraceFromFinder} className="mt-4 text-sm font-semibold text-obsidian underline underline-offset-4">
-                            Ask Grace for help choosing
+                            {t("askGraceForHelpChoosing")}
                         </button>
                         {requestError ? (
                             <p className="mt-3 text-sm text-red-800" role="status">{requestError}</p>

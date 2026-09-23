@@ -4,7 +4,7 @@ import ProductCardImagePreview from "@/components/products/ProductCardImagePrevi
 import type { CatalogHero } from "@/lib/products/catalog-heroes";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
 import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import { Package } from "@/components/icons";
@@ -78,19 +78,28 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
             productTitle={title} defaultImage={{ url: approvedHero ? exactVariant?.imageUrl ?? null : imageUrl, alt: title }} catalogHero={catalogHero}
             productHref={href} variantPreviews={[]}
             auditMeta={{ surface: "catalog-card", family, productGroupSlug: slug, websiteSku: approvedHero ? exactVariant?.websiteSku : undefined }}
-        /> : <Link href={href} aria-label={`View ${title}`} className="relative block aspect-[4/3] w-full overflow-hidden bg-[#f0ebe3] sm:aspect-[10/11]"
+        /> : <LocaleLink href={href} aria-label={`View ${title}`} className="relative block aspect-[4/3] w-full overflow-hidden bg-[#f0ebe3] sm:aspect-[10/11]"
             onPointerEnter={(event) => { if (event.pointerType === "mouse") setHeroHovered(true); }}
             onPointerLeave={() => setHeroHovered(false)} data-visual-mode={visual.mode}
             data-bb-image-audit="catalog-card" data-bb-family={family ?? undefined} data-bb-product-group-slug={slug}
             data-bb-website-sku={variants[0]?.websiteSku}>
             {displayImage ? <Image src={displayImage} alt={title} fill
                 unoptimized={displayImage.includes(".public.blob.vercel-storage.com/")}
-                className="object-contain" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                className="object-contain" sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                 onError={() => fail(displayImage)} />
                 : <span className="flex h-full flex-col items-center justify-center gap-3 text-xs text-slate"><Package className="h-10 w-10" />Product image coming soon</span>}
-        </Link>}
-        {showRail && <CatalogCapOptions title={title} href={href} variants={variants}
-            photo={(variant) => { const url = photo(variant); return url && !failed.has(url) ? url : undefined; }}
-            onImageError={fail} />}
+        </LocaleLink>}
+        {showRail && (
+            <>
+                <p className="px-3 pt-2 text-[12px] leading-tight text-slate lg:hidden">
+                    {variants.length} cap option{variants.length === 1 ? "" : "s"}
+                </p>
+                <div className="hidden lg:block">
+                    <CatalogCapOptions title={title} href={href} variants={variants}
+                        photo={(variant) => { const url = photo(variant); return url && !failed.has(url) ? url : undefined; }}
+                        onImageError={fail} />
+                </div>
+            </>
+        )}
     </div>;
 }

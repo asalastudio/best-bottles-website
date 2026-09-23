@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "id": "aluminum-bottle-plates-2026-09-14",
+  "family": "Aluminum Bottle",
+  "createdAt": "2026-09-14T00:59:43.122Z",
+  "ledgerAt": "2026-09-14T00:39:35.157Z",
+  "scope": "Current development catalog; legacy scope remains open.",
+  "canvas": {
+    "width": 1000,
+    "height": 1100
+  },
+  "rows": [
+    {
+      "sku": "Alu100mlSprayBlack",
+      "graceSku": "AB-ALU-CLR-100ML-SPR-BLK",
+      "productGroupId": "kh7134v41n6zq4rhk658mqgvd18dq93f",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Black",
+      "itemName": "Cylinder shaped, matte aluminum 100 ml bottle with black sprayer. For use with cologne, perfume, air freshner, face and body spray, or room spray. Price Each",
+      "groupSlug": "aluminum-bottle-100ml-clear-20-410-finemist",
+      "familyId": null,
+      "views": [],
+      "error": null
+    },
+    {
+      "sku": "Alu120mlLotionPumpBlack",
+      "graceSku": "AB-ALU-CLR-120ML-LPM-BLK",
+      "productGroupId": "kh7bz2yn4z966h8x8qh3fftden8dqm8n",
+      "capacityMl": 120,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Black",
+      "itemName": "Cylinder shaped, brushed aluminum 120 ml bottle with lotion black. For use with lotion or treatment pump. Price Each",
+      "groupSlug": "aluminum-bottle-120ml-clear-20-410-lotionpump",
+      "familyId": "aluminum-bottle-120ml-clear-20-410",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/aluminum-bottle-120ml-clear-20-410/Alu120mlLotionPumpBlack/2eb108679f1425e7729c967d19000f6f0d8d4ed77e071a684645e912d228afff.front-on-1000x1100.webp",
+          "sha256": "2eb108679f1425e7729c967d19000f6f0d8d4ed77e071a684645e912d228afff",
+          "url": "/images/plate-contact-sheets/2eb108679f1425e7729c967d19000f6f0d8d4ed77e071a684645e912d228afff.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "Alu120mlLotionPumpWhite",
+      "graceSku": "AB-ALU-CLR-120ML-LPM-WHT",
+      "productGroupId": "kh7bz2yn4z966h8x8qh3fftden8dqm8n",
+      "capacityMl": 120,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "White",
+      "itemName": "Cylinder shaped, brushed aluminum 120 ml bottle with lotion white. For use with lotion or treatment pump. Price Each",
+      "groupSlug": "aluminum-bottle-120ml-clear-20-410-lotionpump",
+      "familyId": "aluminum-bottle-120ml-mixed-20-410",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/aluminum-bottle-120ml-mixed-20-410/Alu120mlLotionPumpWhite/511116267a2dd81445b15e13972f77d6af5fa2c984a684e2866a73aa820f9222.plate-1000x1100.webp",
+          "sha256": "511116267a2dd81445b15e13972f77d6af5fa2c984a684e2866a73aa820f9222",
+          "url": "/images/plate-contact-sheets/511116267a2dd81445b15e13972f77d6af5fa2c984a684e2866a73aa820f9222.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/aluminum-bottle-120ml-mixed-20-410/Alu120mlLotionPumpWhite/08679e3296f6deb0baaad0d725c903982ad53cc7cf4c557a138cb05cbc8356e0.plateCapOff-1000x1100.webp",
+          "sha256": "08679e3296f6deb0baaad0d725c903982ad53cc7cf4c557a138cb05cbc8356e0",
+          "url": "/images/plate-contact-sheets/08679e3296f6deb0baaad0d725c903982ad53cc7cf4c557a138cb05cbc8356e0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "Alu250mlSprayBlack",
+      "graceSku": "AB-ALU-CLR-250ML-SPR-BLK",
+      "productGroupId": "kh7c29t6nzngz0tcp5asbppp7d8dpge8",
+      "capacityMl": 250,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Black",
+      "itemName": "Aluminum Bottle 250 ml (8.45 oz) Clear Aluminum Bottle with Sprayer Black Cap",
+      "groupSlug": "aluminum-bottle-250ml-clear-20-410-finemist",
+      "familyId": "aluminum-bottle-250ml-clear-20-410",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/aluminum-bottle-250ml-clear-20-410/Alu250mlSprayBlack/e5e78ddb91abf5403d70ffc1390dd0f76d6b38519f0785cd441f03e92255d81e.front-on-1000x1100.webp",
+          "sha256": "e5e78ddb91abf5403d70ffc1390dd0f76d6b38519f0785cd441f03e92255d81e",
+          "url": "/images/plate-contact-sheets/e5e78ddb91abf5403d70ffc1390dd0f76d6b38519f0785cd441f03e92255d81e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/aluminum-bottle-250ml-clear-20-410/Alu250mlSprayBlack/4803a63d26b15b93eaf71b9fcefabe658f7b005fb9c2395e40e2298653bc8cff.front-off-1000x1100.webp",
+          "sha256": "4803a63d26b15b93eaf71b9fcefabe658f7b005fb9c2395e40e2298653bc8cff",
+          "url": "/images/plate-contact-sheets/4803a63d26b15b93eaf71b9fcefabe658f7b005fb9c2395e40e2298653bc8cff.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "Alu500",
+      "graceSku": "AB-ALU-CLR-500ML",
+      "productGroupId": "kh7ce9zwavec5yk680njg345es8dqvaf",
+      "capacityMl": 500,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Cylinder shaped, aluminum 500 ml bottle with white plug and tear off cap. For use with perfume oil, aromatic oils, fragrance oils and attars. Price Each",
+      "groupSlug": "aluminum-bottle-500ml-clear-20-410",
+      "familyId": null,
+      "views": [],
+      "error": null
+    },
+    {
+      "sku": "Alu65mlLotionPumpBlack",
+      "graceSku": "AB-ALU-CLR-65ML-LPM-BLK",
+      "productGroupId": "kh79c9ztmfahwxnt8km5d15wc98dqdpf",
+      "capacityMl": 65,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Black",
+      "itemName": "Cylinder shaped, brushed aluminum 65 ml bottle with lotion black. For use with lotion or treatment pump. Price Each",
+      "groupSlug": "aluminum-bottle-65ml-clear-20-410-lotionpump",
+      "familyId": "aluminum-bottle-65ml-clear-20-410",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/aluminum-bottle-65ml-clear-20-410/Alu65mlLotionPumpBlack/55310da434251e7bab729cd59c9356beb089dfae015c79b13e55aad3ee4ef6d1.front-on-1000x1100.webp",
+          "sha256": "55310da434251e7bab729cd59c9356beb089dfae015c79b13e55aad3ee4ef6d1",
+          "url": "/images/plate-contact-sheets/55310da434251e7bab729cd59c9356beb089dfae015c79b13e55aad3ee4ef6d1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "Alu65mlLotionPumpWhite",
+      "graceSku": "AB-CYL-WHT-65ML-LPM-WHT",
+      "productGroupId": "kh7c9fk2d100b3j4r1j2jprea98dq03n",
+      "capacityMl": 65,
+      "color": "White",
+      "applicator": "Lotion Pump",
+      "capColor": "White",
+      "itemName": "Cylinder shaped, brushed aluminum 65 ml bottle with lotion white. For use with lotion or treatment pump. Price Each",
+      "groupSlug": "aluminum-bottle-65ml-white-20-410-lotionpump",
+      "familyId": "aluminum-bottle-65ml-mixed-20-410",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/aluminum-bottle-65ml-mixed-20-410/Alu65mlLotionPumpWhite/d1def6c084deba26de4074de4f83b79ec3408b71fcc3f2b9411ffefc3ab8bac9.plate-1000x1100.webp",
+          "sha256": "d1def6c084deba26de4074de4f83b79ec3408b71fcc3f2b9411ffefc3ab8bac9",
+          "url": "/images/plate-contact-sheets/d1def6c084deba26de4074de4f83b79ec3408b71fcc3f2b9411ffefc3ab8bac9.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/aluminum-bottle-65ml-mixed-20-410/Alu65mlLotionPumpWhite/23d7872101996320ed06bc823d484a8ef3979a35331046af65dfe1a21f0f84ec.plateCapOff-1000x1100.webp",
+          "sha256": "23d7872101996320ed06bc823d484a8ef3979a35331046af65dfe1a21f0f84ec",
+          "url": "/images/plate-contact-sheets/23d7872101996320ed06bc823d484a8ef3979a35331046af65dfe1a21f0f84ec.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    }
+  ]
+}

@@ -18,7 +18,7 @@ function allMegaHrefs(): string[] {
 }
 
 describe("mega menu destinations", () => {
-    it("sends bottle applicator links into the application finder, not catalog multi-select", () => {
+    it("sends bottle applicator links into the master catalog", () => {
         const links = MEGA_MENU_PANELS.bottles.columns[0]?.links ?? [];
         expect(links.map((link) => [link.label, link.href])).toEqual(
             APPLICATOR_NAV.map((nav) => [nav.label, applicationFinderHref(nav.value)]),
@@ -33,7 +33,7 @@ describe("mega menu destinations", () => {
             label: "View all families",
             href: catalogHref({ category: "Glass Bottle" }),
         });
-        expect(familyFinderHref("Cylinder")).toBe("/catalog/cylinder");
+        expect(familyFinderHref("Cylinder")).toBe("/catalog?category=Glass+Bottle&families=Cylinder&sort=capacity-asc");
     });
 
     it("uses live capacity range tokens instead of hardcoded milliliter lists", () => {
@@ -48,7 +48,7 @@ describe("mega menu destinations", () => {
         expect(links.some((link) => link.href.includes("0.03"))).toBe(false);
     });
 
-    it("filters closures by component type and pairs leftover help with Build a Bottle", () => {
+    it("filters closures by component type and pairs leftover help with Build Your Bottle", () => {
         expect(panelHrefs("closures")).toEqual(expect.arrayContaining([
             catalogHref({ category: "Component", componentType: "Sprayer" }),
             catalogHref({ category: "Component", componentType: "Dropper" }),

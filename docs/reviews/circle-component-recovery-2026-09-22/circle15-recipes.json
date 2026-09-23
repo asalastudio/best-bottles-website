@@ -1,0 +1,523 @@
+{
+  "storePrefix": "kits/circle-component-recovery-2026-09-22",
+  "rows": [
+    {
+      "sku": "GBCrcl15SpryBlkMatt",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-15ML-SPR-MBLK",
+        "family": "Circle",
+        "capacityMl": 15,
+        "color": "Clear",
+        "neckThreadSize": "13-415",
+        "category": "Glass Bottle",
+        "applicator": "Fine Mist Sprayer"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/3. GBCrcl15SpryBlkMatt.psd",
+        "sha256": "0169dcf5bf249c84a9a57f0ef0af511a20da99c384c23aa61676653396e826d2"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /3. GBCrcl15SpryBlkMatt.psd",
+        "sha256": "070d8d1074a53dca2da3f97a3740e26ff20fb0db919e9f06ba822496cc447e3f"
+      },
+      "onBody": 2,
+      "offBody": 1,
+      "bodyWidth": 530,
+      "baselineY": 1056,
+      "familyId": "circle-15ml-clear-13-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ],
+      "review": "Native glass and dip tube from exact capped source; exposed mechanism translated from identical uncapped glass; matching cap remains separate. Uniform scale only."
+    },
+    {
+      "sku": "GBCrcl15SpryBlkSh",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-15ML-SPR-SBLK",
+        "family": "Circle",
+        "capacityMl": 15,
+        "color": "Clear",
+        "neckThreadSize": "13-415",
+        "category": "Glass Bottle",
+        "applicator": "Fine Mist Sprayer"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/4. GBCrcl15SpryBlkSh.psd",
+        "sha256": "786cb28e5a115a437bb5fa8397c745bd70875d48be32d67c015e29bcb478b920"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /4. GBCrcl15SpryBlkSh.psd",
+        "sha256": "e075812b66fb5eb33f6574b30374c687ed9223bece627b066d0f6651375a2e34"
+      },
+      "onBody": 2,
+      "offBody": 1,
+      "bodyWidth": 530,
+      "baselineY": 1056,
+      "familyId": "circle-15ml-clear-13-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ],
+      "review": "Native glass and dip tube from exact capped source; exposed mechanism translated from identical uncapped glass; matching cap remains separate. Uniform scale only."
+    },
+    {
+      "sku": "GBCrcl15SpryBluMatt",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-15ML-SPR-MBLU",
+        "family": "Circle",
+        "capacityMl": 15,
+        "color": "Clear",
+        "neckThreadSize": "13-415",
+        "category": "Glass Bottle",
+        "applicator": "Fine Mist Sprayer"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/5. GBCrcl15SpryBluMatt.psd",
+        "sha256": "71299e6a6444e4181c62aed1a149e0efbb28908a4b3186943f86e79a88f56cd2"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /5. GBCrcl15SpryBluMatt.psd",
+        "sha256": "ed20e9b2fa409ad4e7be7cd3f995194deae8fad9ddc11ffa2f89cfb60889fff7"
+      },
+      "onBody": 2,
+      "offBody": 1,
+      "bodyWidth": 530,
+      "baselineY": 1056,
+      "familyId": "circle-15ml-clear-13-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ],
+      "review": "Native glass and dip tube from exact capped source; exposed mechanism translated from identical uncapped glass; matching cap remains separate. Uniform scale only."
+    },
+    {
+      "sku": "GBCrcl15SpryCuMatt",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-15ML-SPR-MCPR",
+        "family": "Circle",
+        "capacityMl": 15,
+        "color": "Clear",
+        "neckThreadSize": "13-415",
+        "category": "Glass Bottle",
+        "applicator": "Fine Mist Sprayer"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/30. GBCrcl15SpryCuMatt.psd",
+        "sha256": "fb96da8a8eeadb668a979024d4fd40466fa9511b0eedefadf280dd9db920b236"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /30. GBCrcl15SpryCuMatt.psd",
+        "sha256": "c5d641fc594ece035eb2400401a82c86c34999210856311a2121bf1bc5c1cb91"
+      },
+      "onBody": 2,
+      "offBody": 1,
+      "bodyWidth": 530,
+      "baselineY": 1056,
+      "familyId": "circle-15ml-clear-13-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 4
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4,
+              "reviewedProductBox": [
+                0,
+                58,
+                203,
+                442
+              ]
+            }
+          ]
+        }
+      ],
+      "review": "Native glass and dip tube from exact capped source; exposed mechanism translated from identical uncapped glass; matching cap remains separate. Uniform scale only."
+    },
+    {
+      "sku": "GBCrcl15SpryGlMatt",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-15ML-SPR-MGLD",
+        "family": "Circle",
+        "capacityMl": 15,
+        "color": "Clear",
+        "neckThreadSize": "13-415",
+        "category": "Glass Bottle",
+        "applicator": "Fine Mist Sprayer"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/7. GBCrcl15SpryGlMatt.psd",
+        "sha256": "e81ef96379e5a7325b143e8e588d993d6595f1f88fb86317f824f6c8ba8f0356"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /7. GBCrcl15SpryGlMatt.psd",
+        "sha256": "041037558d58fd58177483dc66ca736b0b9fe77c966381d4780832bb62a7f4b9"
+      },
+      "onBody": 2,
+      "offBody": 1,
+      "bodyWidth": 530,
+      "baselineY": 1056,
+      "familyId": "circle-15ml-clear-13-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ],
+      "review": "Native glass and dip tube from exact capped source; exposed mechanism translated from identical uncapped glass; matching cap remains separate. Uniform scale only."
+    },
+    {
+      "sku": "GBCrcl15SpryGlSh",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-15ML-SPR-SGLD",
+        "family": "Circle",
+        "capacityMl": 15,
+        "color": "Clear",
+        "neckThreadSize": "13-415",
+        "category": "Glass Bottle",
+        "applicator": "Fine Mist Sprayer"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/6. GBCrcl15SpryGlSh.psd",
+        "sha256": "f5135bd4d78a7379628da19e2f8ff8d8e7c6320ec910a7d16d6998ba60a504db"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /6. GBCrcl15SpryGlSh.psd",
+        "sha256": "510efbec08a9d6e81215b20974cc18db67ead1cc5460b0bc2423738cfa5a5371"
+      },
+      "onBody": 2,
+      "offBody": 1,
+      "bodyWidth": 530,
+      "baselineY": 1056,
+      "familyId": "circle-15ml-clear-13-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ],
+      "review": "Native glass and dip tube from exact capped source; exposed mechanism translated from identical uncapped glass; matching cap remains separate. Uniform scale only."
+    },
+    {
+      "sku": "GBCrcl15SprySlMatt",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-15ML-SPR-MSLV",
+        "family": "Circle",
+        "capacityMl": 15,
+        "color": "Clear",
+        "neckThreadSize": "13-415",
+        "category": "Glass Bottle",
+        "applicator": "Fine Mist Sprayer"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/8. GBCrcl15SprySlMatt.psd",
+        "sha256": "6964641a47c6a5841ece281dbbdf7eab3b8184a9e90258ce23d00cf40822d9ea"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /8. GBCrcl15SprySlMatt.psd",
+        "sha256": "0c703539753aec686f14e0688013fa6e8e081f5d2a7e0c561a63a12ef13bcd47"
+      },
+      "onBody": 2,
+      "offBody": 1,
+      "bodyWidth": 530,
+      "baselineY": 1056,
+      "familyId": "circle-15ml-clear-13-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ],
+      "review": "Native glass and dip tube from exact capped source; exposed mechanism translated from identical uncapped glass; matching cap remains separate. Uniform scale only."
+    },
+    {
+      "sku": "GBCrcl15SprySlSh",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-15ML-SPR-SSLV",
+        "family": "Circle",
+        "capacityMl": 15,
+        "color": "Clear",
+        "neckThreadSize": "13-415",
+        "category": "Glass Bottle",
+        "applicator": "Fine Mist Sprayer"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/9. GBCrcl15SprySlSh copy.psd",
+        "sha256": "e2a3ce1f7793ccf9361e224c62347d2d6d4fb8260508c214c28ac609c92b8fa5"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /9. GBCrcl15SprySlSh copy.psd",
+        "sha256": "175387ef15a4703e9a495fa2145251dbdd9d472cc6f8fd2818a999834fdd8b23"
+      },
+      "onBody": 2,
+      "offBody": 1,
+      "bodyWidth": 530,
+      "baselineY": 1056,
+      "familyId": "circle-15ml-clear-13-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ],
+      "review": "Native glass and dip tube from exact capped source; exposed mechanism translated from identical uncapped glass; matching cap remains separate. Uniform scale only."
+    }
+  ]
+}

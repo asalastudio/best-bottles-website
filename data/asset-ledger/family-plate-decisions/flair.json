@@ -1,0 +1,1687 @@
+{
+  "revision": 1,
+  "decisions": {
+    "GBFlair15BlkSht:46aa6323b3522c9da7bc2b2176aa5b30f44a0eddcace6baa2b137d830eb66588": {
+      "sku": "GBFlair15BlkSht",
+      "binding": "46aa6323b3522c9da7bc2b2176aa5b30f44a0eddcace6baa2b137d830eb66588",
+      "sha256": "4c7253ca2038b3a5a014ae07ebdd6305ba83afc7e162401efb269a363ce22d07",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15BlkSht/4c7253ca2038b3a5a014ae07ebdd6305ba83afc7e162401efb269a363ce22d07.front-on-1000x1100.webp",
+          "sha256": "4c7253ca2038b3a5a014ae07ebdd6305ba83afc7e162401efb269a363ce22d07",
+          "url": "/images/plate-contact-sheets/4c7253ca2038b3a5a014ae07ebdd6305ba83afc7e162401efb269a363ce22d07.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15BlkSht/ddaf7fdd099ad288c14d0c955d5f88d16cf523e464a9cc6924fd6e93ae6276c4.front-off-1000x1100.webp",
+          "sha256": "ddaf7fdd099ad288c14d0c955d5f88d16cf523e464a9cc6924fd6e93ae6276c4",
+          "url": "/images/plate-contact-sheets/ddaf7fdd099ad288c14d0c955d5f88d16cf523e464a9cc6924fd6e93ae6276c4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15Gl:6b4671993da6a24f5defebbe372b85760f817479cd369f23791d01f505f1d588": {
+      "sku": "GBFlair15Gl",
+      "binding": "6b4671993da6a24f5defebbe372b85760f817479cd369f23791d01f505f1d588",
+      "sha256": "2dfe281a57941f230ac916fb062227e9406cdff60ca5150806dfd05044deba80",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15Gl/2dfe281a57941f230ac916fb062227e9406cdff60ca5150806dfd05044deba80.front-on-1000x1100.webp",
+          "sha256": "2dfe281a57941f230ac916fb062227e9406cdff60ca5150806dfd05044deba80",
+          "url": "/images/plate-contact-sheets/2dfe281a57941f230ac916fb062227e9406cdff60ca5150806dfd05044deba80.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15Gl/0f856fdedc425704736c4c3a4a31810c6fdb45c5e9088607aaa84bca001a001e.front-off-1000x1100.webp",
+          "sha256": "0f856fdedc425704736c4c3a4a31810c6fdb45c5e9088607aaa84bca001a001e",
+          "url": "/images/plate-contact-sheets/0f856fdedc425704736c4c3a4a31810c6fdb45c5e9088607aaa84bca001a001e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15MtlRollBlkDot:6df285b695575aed63b31ea2cd25a0f05addf3f26d4f7632f9f2af9959c25c99": {
+      "sku": "GBFlair15MtlRollBlkDot",
+      "binding": "6df285b695575aed63b31ea2cd25a0f05addf3f26d4f7632f9f2af9959c25c99",
+      "sha256": "cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollBlkDot/cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457.front-on-1000x1100.webp",
+          "sha256": "cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457",
+          "url": "/images/plate-contact-sheets/cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollBlkDot/89e8e6efe690d26c1aaa0db6da41d5adda8c4cb432fde440efc08d91d2d74701.front-off-1000x1100.webp",
+          "sha256": "89e8e6efe690d26c1aaa0db6da41d5adda8c4cb432fde440efc08d91d2d74701",
+          "url": "/images/plate-contact-sheets/89e8e6efe690d26c1aaa0db6da41d5adda8c4cb432fde440efc08d91d2d74701.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15MtlRollBlkSh:9f7bebf0b27cb1702b75f4475d1367c63a78ef8eb1ebaf2a3fbefceace90331b": {
+      "sku": "GBFlair15MtlRollBlkSh",
+      "binding": "9f7bebf0b27cb1702b75f4475d1367c63a78ef8eb1ebaf2a3fbefceace90331b",
+      "sha256": "a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollBlkSh/a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab.front-on-1000x1100.webp",
+          "sha256": "a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab",
+          "url": "/images/plate-contact-sheets/a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollBlkSh/efd59e91dde1d27fd01c0f867b566bc2e0fb8781677bec08dbf6badbdc453d81.front-off-1000x1100.webp",
+          "sha256": "efd59e91dde1d27fd01c0f867b566bc2e0fb8781677bec08dbf6badbdc453d81",
+          "url": "/images/plate-contact-sheets/efd59e91dde1d27fd01c0f867b566bc2e0fb8781677bec08dbf6badbdc453d81.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15MtlRollCuMatt:818a672a0ba043e0b1f6acadf8ac6f48fcd392369b97e6641a27d4caed70813b": {
+      "sku": "GBFlair15MtlRollCuMatt",
+      "binding": "818a672a0ba043e0b1f6acadf8ac6f48fcd392369b97e6641a27d4caed70813b",
+      "sha256": "3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollCuMatt/3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799.front-on-1000x1100.webp",
+          "sha256": "3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799",
+          "url": "/images/plate-contact-sheets/3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollCuMatt/38fafe1ed670f187a57b11f144d83da0cc3748d4b993112094744d06ed12d786.front-off-1000x1100.webp",
+          "sha256": "38fafe1ed670f187a57b11f144d83da0cc3748d4b993112094744d06ed12d786",
+          "url": "/images/plate-contact-sheets/38fafe1ed670f187a57b11f144d83da0cc3748d4b993112094744d06ed12d786.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15MtlRollGlMatt:5de03febe07083677b2e183912d3a292cb2b6f3b9d4ec16173b7e475664c8282": {
+      "sku": "GBFlair15MtlRollGlMatt",
+      "binding": "5de03febe07083677b2e183912d3a292cb2b6f3b9d4ec16173b7e475664c8282",
+      "sha256": "ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollGlMatt/ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a.front-on-1000x1100.webp",
+          "sha256": "ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a",
+          "url": "/images/plate-contact-sheets/ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollGlMatt/dcf96ef3ce54732985d5b0aa2d8b3985d0f4ae00ce488fa8cf9a7a847351c370.front-off-1000x1100.webp",
+          "sha256": "dcf96ef3ce54732985d5b0aa2d8b3985d0f4ae00ce488fa8cf9a7a847351c370",
+          "url": "/images/plate-contact-sheets/dcf96ef3ce54732985d5b0aa2d8b3985d0f4ae00ce488fa8cf9a7a847351c370.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15MtlRollGlSh:9eaf0ef17a0d7150573a0ed3f5753f43862518f3475587dacba8a3ede69812a0": {
+      "sku": "GBFlair15MtlRollGlSh",
+      "binding": "9eaf0ef17a0d7150573a0ed3f5753f43862518f3475587dacba8a3ede69812a0",
+      "sha256": "f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollGlSh/f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0.front-on-1000x1100.webp",
+          "sha256": "f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0",
+          "url": "/images/plate-contact-sheets/f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollGlSh/293fae1f2dbe078369615ab9727b2e24da61a29f1d550db3bbdd7944a8b41fca.front-off-1000x1100.webp",
+          "sha256": "293fae1f2dbe078369615ab9727b2e24da61a29f1d550db3bbdd7944a8b41fca",
+          "url": "/images/plate-contact-sheets/293fae1f2dbe078369615ab9727b2e24da61a29f1d550db3bbdd7944a8b41fca.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15MtlRollPinkDot:c14a9fb6a095d1cd639ecdb8d0812049cc90ffc6ea211a3b2757a89797eeff51": {
+      "sku": "GBFlair15MtlRollPinkDot",
+      "binding": "c14a9fb6a095d1cd639ecdb8d0812049cc90ffc6ea211a3b2757a89797eeff51",
+      "sha256": "834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollPinkDot/834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0.front-on-1000x1100.webp",
+          "sha256": "834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0",
+          "url": "/images/plate-contact-sheets/834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollPinkDot/8b3e1d8e60d03cfe7c2e6ddd65c1a7b84766cc45ba3a0dec347cb79b8ac4a1d5.front-off-1000x1100.webp",
+          "sha256": "8b3e1d8e60d03cfe7c2e6ddd65c1a7b84766cc45ba3a0dec347cb79b8ac4a1d5",
+          "url": "/images/plate-contact-sheets/8b3e1d8e60d03cfe7c2e6ddd65c1a7b84766cc45ba3a0dec347cb79b8ac4a1d5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15MtlRollSlDot:51e1fdcdb9bc3c5c64c8728bac62fdd33eafb20f9f2922260456f8cb69f9a1e5": {
+      "sku": "GBFlair15MtlRollSlDot",
+      "binding": "51e1fdcdb9bc3c5c64c8728bac62fdd33eafb20f9f2922260456f8cb69f9a1e5",
+      "sha256": "a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollSlDot/a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600.front-on-1000x1100.webp",
+          "sha256": "a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600",
+          "url": "/images/plate-contact-sheets/a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollSlDot/878c4639062f786126891f37098fd08e1c822a2330b97bbd6942f242d23ff397.front-off-1000x1100.webp",
+          "sha256": "878c4639062f786126891f37098fd08e1c822a2330b97bbd6942f242d23ff397",
+          "url": "/images/plate-contact-sheets/878c4639062f786126891f37098fd08e1c822a2330b97bbd6942f242d23ff397.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15MtlRollSlMatt:4dd396966728db652a6610f88abcc0ed92676941ff62b28eff4e7f0c9fe14f99": {
+      "sku": "GBFlair15MtlRollSlMatt",
+      "binding": "4dd396966728db652a6610f88abcc0ed92676941ff62b28eff4e7f0c9fe14f99",
+      "sha256": "e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollSlMatt/e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3.front-on-1000x1100.webp",
+          "sha256": "e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3",
+          "url": "/images/plate-contact-sheets/e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollSlMatt/42f18ea37e40b0f457d8a8af7b67d96bd1517cde98f42c51d6a7e019619da163.front-off-1000x1100.webp",
+          "sha256": "42f18ea37e40b0f457d8a8af7b67d96bd1517cde98f42c51d6a7e019619da163",
+          "url": "/images/plate-contact-sheets/42f18ea37e40b0f457d8a8af7b67d96bd1517cde98f42c51d6a7e019619da163.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15MtlRollSlSh:4bc13ee04112d583e02183aeb4ec49407df092b433923510ca59f830b3bf12d5": {
+      "sku": "GBFlair15MtlRollSlSh",
+      "binding": "4bc13ee04112d583e02183aeb4ec49407df092b433923510ca59f830b3bf12d5",
+      "sha256": "9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollSlSh/9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d.front-on-1000x1100.webp",
+          "sha256": "9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d",
+          "url": "/images/plate-contact-sheets/9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollSlSh/48bffc6296caa4d54be16c1093c6cd377e649e1cffa36b5f06a367916d129289.front-off-1000x1100.webp",
+          "sha256": "48bffc6296caa4d54be16c1093c6cd377e649e1cffa36b5f06a367916d129289",
+          "url": "/images/plate-contact-sheets/48bffc6296caa4d54be16c1093c6cd377e649e1cffa36b5f06a367916d129289.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15RollBlkDot:e2e209c2b088e478e01c7f06b002d5b6b30cf497eb6e5f8999a4c4a35df6ff86": {
+      "sku": "GBFlair15RollBlkDot",
+      "binding": "e2e209c2b088e478e01c7f06b002d5b6b30cf497eb6e5f8999a4c4a35df6ff86",
+      "sha256": "cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollBlkDot/cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457.front-on-1000x1100.webp",
+          "sha256": "cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457",
+          "url": "/images/plate-contact-sheets/cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollBlkDot/377d77413c7a5fd13609c7435a0f43cabfa64afb0d192e9fc3ba826128d2eb76.front-off-1000x1100.webp",
+          "sha256": "377d77413c7a5fd13609c7435a0f43cabfa64afb0d192e9fc3ba826128d2eb76",
+          "url": "/images/plate-contact-sheets/377d77413c7a5fd13609c7435a0f43cabfa64afb0d192e9fc3ba826128d2eb76.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15RollBlkSh:1f090a4523606630a4a1129b02c95a5900a15b678fb3a00dbd4e956c8e5d42d3": {
+      "sku": "GBFlair15RollBlkSh",
+      "binding": "1f090a4523606630a4a1129b02c95a5900a15b678fb3a00dbd4e956c8e5d42d3",
+      "sha256": "a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollBlkSh/a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab.front-on-1000x1100.webp",
+          "sha256": "a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab",
+          "url": "/images/plate-contact-sheets/a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollBlkSh/27caf102c65a655dd81c86b1e239429580025ca500c11af92466a0dc0f49c465.front-off-1000x1100.webp",
+          "sha256": "27caf102c65a655dd81c86b1e239429580025ca500c11af92466a0dc0f49c465",
+          "url": "/images/plate-contact-sheets/27caf102c65a655dd81c86b1e239429580025ca500c11af92466a0dc0f49c465.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15RollCuMatt:93fc1b0ce803466ab1330bb1741ff6921248f37d2d58c1d53c9cc3c7ad926e5f": {
+      "sku": "GBFlair15RollCuMatt",
+      "binding": "93fc1b0ce803466ab1330bb1741ff6921248f37d2d58c1d53c9cc3c7ad926e5f",
+      "sha256": "3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollCuMatt/3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799.front-on-1000x1100.webp",
+          "sha256": "3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799",
+          "url": "/images/plate-contact-sheets/3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollCuMatt/d1e651f90e71c7ff7e5632d2e066b9ee5711b2f375b10dc66016f6d5b5123cdc.front-off-1000x1100.webp",
+          "sha256": "d1e651f90e71c7ff7e5632d2e066b9ee5711b2f375b10dc66016f6d5b5123cdc",
+          "url": "/images/plate-contact-sheets/d1e651f90e71c7ff7e5632d2e066b9ee5711b2f375b10dc66016f6d5b5123cdc.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15RollGlMatt:bf681959bf3902698a7739656e7baeaa9bfb63e0fdae37ec2dc54fcca45968cd": {
+      "sku": "GBFlair15RollGlMatt",
+      "binding": "bf681959bf3902698a7739656e7baeaa9bfb63e0fdae37ec2dc54fcca45968cd",
+      "sha256": "ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollGlMatt/ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a.front-on-1000x1100.webp",
+          "sha256": "ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a",
+          "url": "/images/plate-contact-sheets/ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollGlMatt/220143accbd49aa5587097b62d8ca7ea85dd329c924cb4e03d2b8bcebeda9845.front-off-1000x1100.webp",
+          "sha256": "220143accbd49aa5587097b62d8ca7ea85dd329c924cb4e03d2b8bcebeda9845",
+          "url": "/images/plate-contact-sheets/220143accbd49aa5587097b62d8ca7ea85dd329c924cb4e03d2b8bcebeda9845.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15RollGlSh:576bd60b44292487e407f9e00cc4578624ccbb4af8c19b34d063e9045352bd7c": {
+      "sku": "GBFlair15RollGlSh",
+      "binding": "576bd60b44292487e407f9e00cc4578624ccbb4af8c19b34d063e9045352bd7c",
+      "sha256": "f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollGlSh/f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0.front-on-1000x1100.webp",
+          "sha256": "f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0",
+          "url": "/images/plate-contact-sheets/f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollGlSh/3215a866434b579e1ddbd8480827385ce7cf4c553c3bb469023594b8279e4240.front-off-1000x1100.webp",
+          "sha256": "3215a866434b579e1ddbd8480827385ce7cf4c553c3bb469023594b8279e4240",
+          "url": "/images/plate-contact-sheets/3215a866434b579e1ddbd8480827385ce7cf4c553c3bb469023594b8279e4240.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15RollPinkDot:de5e3c9f6be10f18c30365b179d40b239f3520ce2ea0805a4e2847fd7f85d527": {
+      "sku": "GBFlair15RollPinkDot",
+      "binding": "de5e3c9f6be10f18c30365b179d40b239f3520ce2ea0805a4e2847fd7f85d527",
+      "sha256": "834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollPinkDot/834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0.front-on-1000x1100.webp",
+          "sha256": "834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0",
+          "url": "/images/plate-contact-sheets/834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollPinkDot/8a229a81dac40e0a90fa6c302bfedd3845450dd0dba2cb50d3d9ae49132e99e5.front-off-1000x1100.webp",
+          "sha256": "8a229a81dac40e0a90fa6c302bfedd3845450dd0dba2cb50d3d9ae49132e99e5",
+          "url": "/images/plate-contact-sheets/8a229a81dac40e0a90fa6c302bfedd3845450dd0dba2cb50d3d9ae49132e99e5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15RollSlDot:81d9cc3bcad86255f0a0ebab95097aa9e578f577a56261af364860fa2435fc2e": {
+      "sku": "GBFlair15RollSlDot",
+      "binding": "81d9cc3bcad86255f0a0ebab95097aa9e578f577a56261af364860fa2435fc2e",
+      "sha256": "a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollSlDot/a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600.front-on-1000x1100.webp",
+          "sha256": "a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600",
+          "url": "/images/plate-contact-sheets/a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollSlDot/351cde52e29d5c348629ce5d21e9a60609c48ab3c7aa55a1b848011c251e2ae4.front-off-1000x1100.webp",
+          "sha256": "351cde52e29d5c348629ce5d21e9a60609c48ab3c7aa55a1b848011c251e2ae4",
+          "url": "/images/plate-contact-sheets/351cde52e29d5c348629ce5d21e9a60609c48ab3c7aa55a1b848011c251e2ae4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15RollSlMatt:4ac57ef20da9c911cde16fad3a0c05686786f122e42cfbc29e108ecee0b767d1": {
+      "sku": "GBFlair15RollSlMatt",
+      "binding": "4ac57ef20da9c911cde16fad3a0c05686786f122e42cfbc29e108ecee0b767d1",
+      "sha256": "e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollSlMatt/e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3.front-on-1000x1100.webp",
+          "sha256": "e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3",
+          "url": "/images/plate-contact-sheets/e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollSlMatt/9b8f54b51ade72537c2b98134c4b8699af26d8a4f03b7129a3aa37b6f2df9fff.front-off-1000x1100.webp",
+          "sha256": "9b8f54b51ade72537c2b98134c4b8699af26d8a4f03b7129a3aa37b6f2df9fff",
+          "url": "/images/plate-contact-sheets/9b8f54b51ade72537c2b98134c4b8699af26d8a4f03b7129a3aa37b6f2df9fff.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15RollSlSh:ec4918f99b110e7c943ae9c0390f037a51d2c67006dbada98acf009ef65d7b57": {
+      "sku": "GBFlair15RollSlSh",
+      "binding": "ec4918f99b110e7c943ae9c0390f037a51d2c67006dbada98acf009ef65d7b57",
+      "sha256": "9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollSlSh/9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d.front-on-1000x1100.webp",
+          "sha256": "9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d",
+          "url": "/images/plate-contact-sheets/9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollSlSh/f5c62d493720a3914b444e1c095170ad3b4d22c5cd207ca2a3ab34ba3d334b8d.front-off-1000x1100.webp",
+          "sha256": "f5c62d493720a3914b444e1c095170ad3b4d22c5cd207ca2a3ab34ba3d334b8d",
+          "url": "/images/plate-contact-sheets/f5c62d493720a3914b444e1c095170ad3b4d22c5cd207ca2a3ab34ba3d334b8d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15Sl:d0e6ba4986e6cd7d289ed1e6172078b30e067cec5957af92f3c3283a0533c0be": {
+      "sku": "GBFlair15Sl",
+      "binding": "d0e6ba4986e6cd7d289ed1e6172078b30e067cec5957af92f3c3283a0533c0be",
+      "sha256": "fa7ca60d469c19e5e44b683d20d8a59041c8ba6736b4539e5c66f6e2a47c347e",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15Sl/fa7ca60d469c19e5e44b683d20d8a59041c8ba6736b4539e5c66f6e2a47c347e.front-on-1000x1100.webp",
+          "sha256": "fa7ca60d469c19e5e44b683d20d8a59041c8ba6736b4539e5c66f6e2a47c347e",
+          "url": "/images/plate-contact-sheets/fa7ca60d469c19e5e44b683d20d8a59041c8ba6736b4539e5c66f6e2a47c347e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15Sl/825d98743d3893c669bbede47814012949136cbc72a27d049f3bf6cc167f86c1.front-off-1000x1100.webp",
+          "sha256": "825d98743d3893c669bbede47814012949136cbc72a27d049f3bf6cc167f86c1",
+          "url": "/images/plate-contact-sheets/825d98743d3893c669bbede47814012949136cbc72a27d049f3bf6cc167f86c1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15SpryBlkMatt:1e8fc3a89871b146dc4805881cae74c3d2f39ee6dacc9c9fc582a5dafe0dfd35": {
+      "sku": "GBFlair15SpryBlkMatt",
+      "binding": "1e8fc3a89871b146dc4805881cae74c3d2f39ee6dacc9c9fc582a5dafe0dfd35",
+      "sha256": "e8be56611ef516d2c980e2816ea9a460570a6a9cab87047fd1fb43c586c53006",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryBlkMatt/e8be56611ef516d2c980e2816ea9a460570a6a9cab87047fd1fb43c586c53006.front-on-1000x1100.webp",
+          "sha256": "e8be56611ef516d2c980e2816ea9a460570a6a9cab87047fd1fb43c586c53006",
+          "url": "/images/plate-contact-sheets/e8be56611ef516d2c980e2816ea9a460570a6a9cab87047fd1fb43c586c53006.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryBlkMatt/1a33ea7952a8f3e31622ae715718dc866651f3127874f5f3b4a73715e88a5380.front-off-1000x1100.webp",
+          "sha256": "1a33ea7952a8f3e31622ae715718dc866651f3127874f5f3b4a73715e88a5380",
+          "url": "/images/plate-contact-sheets/1a33ea7952a8f3e31622ae715718dc866651f3127874f5f3b4a73715e88a5380.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15SpryBlkSh:5809e003cce9ce4a7fe1f98269f170afdfb9705600206958fd56cce377e75ce3": {
+      "sku": "GBFlair15SpryBlkSh",
+      "binding": "5809e003cce9ce4a7fe1f98269f170afdfb9705600206958fd56cce377e75ce3",
+      "sha256": "72afc2df810c133cbbc6d60bd8ed11db4f528be5a898c61e5ac7fed355101952",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryBlkSh/72afc2df810c133cbbc6d60bd8ed11db4f528be5a898c61e5ac7fed355101952.front-on-1000x1100.webp",
+          "sha256": "72afc2df810c133cbbc6d60bd8ed11db4f528be5a898c61e5ac7fed355101952",
+          "url": "/images/plate-contact-sheets/72afc2df810c133cbbc6d60bd8ed11db4f528be5a898c61e5ac7fed355101952.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryBlkSh/288f5babe4f975679dee0b386912f9a4b0229e9052157968a2c14be0e81660c7.front-off-1000x1100.webp",
+          "sha256": "288f5babe4f975679dee0b386912f9a4b0229e9052157968a2c14be0e81660c7",
+          "url": "/images/plate-contact-sheets/288f5babe4f975679dee0b386912f9a4b0229e9052157968a2c14be0e81660c7.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15SpryBluMatt:0b07b7204dcbe29edac6a961c800f87dd8773bde994c7de01aee0b33cbd17f8d": {
+      "sku": "GBFlair15SpryBluMatt",
+      "binding": "0b07b7204dcbe29edac6a961c800f87dd8773bde994c7de01aee0b33cbd17f8d",
+      "sha256": "392b19daedebe09b3384e690739270626c558421613a137b823043b3a3696d1e",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryBluMatt/392b19daedebe09b3384e690739270626c558421613a137b823043b3a3696d1e.front-on-1000x1100.webp",
+          "sha256": "392b19daedebe09b3384e690739270626c558421613a137b823043b3a3696d1e",
+          "url": "/images/plate-contact-sheets/392b19daedebe09b3384e690739270626c558421613a137b823043b3a3696d1e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryBluMatt/af4b1c5b725c4ac1184f0d30948911b818b8aaa6dcfe9916c8f19eb16678c29a.front-off-1000x1100.webp",
+          "sha256": "af4b1c5b725c4ac1184f0d30948911b818b8aaa6dcfe9916c8f19eb16678c29a",
+          "url": "/images/plate-contact-sheets/af4b1c5b725c4ac1184f0d30948911b818b8aaa6dcfe9916c8f19eb16678c29a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15SpryCuMatt:11a576efda5fd17b17892c24d3c952c5f8a366b9f6785dfa9048d1ee5dcbd8e4": {
+      "sku": "GBFlair15SpryCuMatt",
+      "binding": "11a576efda5fd17b17892c24d3c952c5f8a366b9f6785dfa9048d1ee5dcbd8e4",
+      "sha256": "36f74e6647cf9e3dc62ba66f1a48c425c6d56d601e92f6be42c6abba34d56a75",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryCuMatt/36f74e6647cf9e3dc62ba66f1a48c425c6d56d601e92f6be42c6abba34d56a75.front-on-1000x1100.webp",
+          "sha256": "36f74e6647cf9e3dc62ba66f1a48c425c6d56d601e92f6be42c6abba34d56a75",
+          "url": "/images/plate-contact-sheets/36f74e6647cf9e3dc62ba66f1a48c425c6d56d601e92f6be42c6abba34d56a75.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryCuMatt/886b81ee4a54df50ca2971e208bcdda513e24290f154f31e5261f2b30538a1f3.front-off-1000x1100.webp",
+          "sha256": "886b81ee4a54df50ca2971e208bcdda513e24290f154f31e5261f2b30538a1f3",
+          "url": "/images/plate-contact-sheets/886b81ee4a54df50ca2971e208bcdda513e24290f154f31e5261f2b30538a1f3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15SpryGlMatt:99aacc054c00c13780eaa228e5f0a5c7d6e8bb815884963584d4dbfe89f4abd1": {
+      "sku": "GBFlair15SpryGlMatt",
+      "binding": "99aacc054c00c13780eaa228e5f0a5c7d6e8bb815884963584d4dbfe89f4abd1",
+      "sha256": "f8a0cce8d01fc4894d0cda8018cc8fd70207c93e4c0a57045598eda405895354",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryGlMatt/f8a0cce8d01fc4894d0cda8018cc8fd70207c93e4c0a57045598eda405895354.front-on-1000x1100.webp",
+          "sha256": "f8a0cce8d01fc4894d0cda8018cc8fd70207c93e4c0a57045598eda405895354",
+          "url": "/images/plate-contact-sheets/f8a0cce8d01fc4894d0cda8018cc8fd70207c93e4c0a57045598eda405895354.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryGlMatt/312e38e2ab5ce1b30ac6315f156e428afe23b3d7917b7b1dcf1a73019b8c6ac3.front-off-1000x1100.webp",
+          "sha256": "312e38e2ab5ce1b30ac6315f156e428afe23b3d7917b7b1dcf1a73019b8c6ac3",
+          "url": "/images/plate-contact-sheets/312e38e2ab5ce1b30ac6315f156e428afe23b3d7917b7b1dcf1a73019b8c6ac3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15SpryGlSh:3023d7a4dffd3b817b463ecc7ba41070977cd89eb7ecc7e647e049fcde9e64f5": {
+      "sku": "GBFlair15SpryGlSh",
+      "binding": "3023d7a4dffd3b817b463ecc7ba41070977cd89eb7ecc7e647e049fcde9e64f5",
+      "sha256": "19c9102aa9d7e17fd4ce189c5ae4932f7623a2844a3468fb2646d855efc6fec2",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryGlSh/19c9102aa9d7e17fd4ce189c5ae4932f7623a2844a3468fb2646d855efc6fec2.front-on-1000x1100.webp",
+          "sha256": "19c9102aa9d7e17fd4ce189c5ae4932f7623a2844a3468fb2646d855efc6fec2",
+          "url": "/images/plate-contact-sheets/19c9102aa9d7e17fd4ce189c5ae4932f7623a2844a3468fb2646d855efc6fec2.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryGlSh/9ccdb2c2f8aa99c1d5f958819213263d1a1fdc5d78c231fd5648091943bd9e12.front-off-1000x1100.webp",
+          "sha256": "9ccdb2c2f8aa99c1d5f958819213263d1a1fdc5d78c231fd5648091943bd9e12",
+          "url": "/images/plate-contact-sheets/9ccdb2c2f8aa99c1d5f958819213263d1a1fdc5d78c231fd5648091943bd9e12.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15SprySlMatt:019310ddeafdc6b91dc6b2cdee6e5c0f810f456e97282652430e2a5c107b7383": {
+      "sku": "GBFlair15SprySlMatt",
+      "binding": "019310ddeafdc6b91dc6b2cdee6e5c0f810f456e97282652430e2a5c107b7383",
+      "sha256": "87554b02da3a444e8d63e49d2aa9b05c0c727617d169cf09e1376694038908fb",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SprySlMatt/87554b02da3a444e8d63e49d2aa9b05c0c727617d169cf09e1376694038908fb.front-on-1000x1100.webp",
+          "sha256": "87554b02da3a444e8d63e49d2aa9b05c0c727617d169cf09e1376694038908fb",
+          "url": "/images/plate-contact-sheets/87554b02da3a444e8d63e49d2aa9b05c0c727617d169cf09e1376694038908fb.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SprySlMatt/5c6b98be243fb69705803ef6efa612be825833ab72f61abd3b6576e4ad19037e.front-off-1000x1100.webp",
+          "sha256": "5c6b98be243fb69705803ef6efa612be825833ab72f61abd3b6576e4ad19037e",
+          "url": "/images/plate-contact-sheets/5c6b98be243fb69705803ef6efa612be825833ab72f61abd3b6576e4ad19037e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15SprySlSh:af8d364443cfe361e1a8a484d28f0893348e5a2605035f31b6471eab7f24ec5d": {
+      "sku": "GBFlair15SprySlSh",
+      "binding": "af8d364443cfe361e1a8a484d28f0893348e5a2605035f31b6471eab7f24ec5d",
+      "sha256": "e512421d72ad526a3e2222390007a53015f64c16a38b6b9bfc82f0371bed295e",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SprySlSh/e512421d72ad526a3e2222390007a53015f64c16a38b6b9bfc82f0371bed295e.front-on-1000x1100.webp",
+          "sha256": "e512421d72ad526a3e2222390007a53015f64c16a38b6b9bfc82f0371bed295e",
+          "url": "/images/plate-contact-sheets/e512421d72ad526a3e2222390007a53015f64c16a38b6b9bfc82f0371bed295e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SprySlSh/d6d002daa849fb641be3a1a45825c19abd2f03c1aa57d6249e6cb6f7bd9bb877.front-off-1000x1100.webp",
+          "sha256": "d6d002daa849fb641be3a1a45825c19abd2f03c1aa57d6249e6cb6f7bd9bb877",
+          "url": "/images/plate-contact-sheets/d6d002daa849fb641be3a1a45825c19abd2f03c1aa57d6249e6cb6f7bd9bb877.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBFlair15WhtSht:50aa4292dca0bbcd9321b7a735f8f6e6139c83fb3cd68dc376efd8395d021db6": {
+      "sku": "GBFlair15WhtSht",
+      "binding": "50aa4292dca0bbcd9321b7a735f8f6e6139c83fb3cd68dc376efd8395d021db6",
+      "sha256": "6d8beca8abf2a803b93ed9d616dd5cecfa3a9f12b63dbd117f6a64ca9d8799ea",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15WhtSht/6d8beca8abf2a803b93ed9d616dd5cecfa3a9f12b63dbd117f6a64ca9d8799ea.front-on-1000x1100.webp",
+          "sha256": "6d8beca8abf2a803b93ed9d616dd5cecfa3a9f12b63dbd117f6a64ca9d8799ea",
+          "url": "/images/plate-contact-sheets/6d8beca8abf2a803b93ed9d616dd5cecfa3a9f12b63dbd117f6a64ca9d8799ea.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15WhtSht/8a7838f12cfe8e5362f4cd1518704a4c86cb004f0ba52ee06cbe647498665ab2.front-off-1000x1100.webp",
+          "sha256": "8a7838f12cfe8e5362f4cd1518704a4c86cb004f0ba52ee06cbe647498665ab2",
+          "url": "/images/plate-contact-sheets/8a7838f12cfe8e5362f4cd1518704a4c86cb004f0ba52ee06cbe647498665ab2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  },
+  "history": [
+    {
+      "sku": "GBFlair15BlkSht",
+      "binding": "46aa6323b3522c9da7bc2b2176aa5b30f44a0eddcace6baa2b137d830eb66588",
+      "sha256": "4c7253ca2038b3a5a014ae07ebdd6305ba83afc7e162401efb269a363ce22d07",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15BlkSht/4c7253ca2038b3a5a014ae07ebdd6305ba83afc7e162401efb269a363ce22d07.front-on-1000x1100.webp",
+          "sha256": "4c7253ca2038b3a5a014ae07ebdd6305ba83afc7e162401efb269a363ce22d07",
+          "url": "/images/plate-contact-sheets/4c7253ca2038b3a5a014ae07ebdd6305ba83afc7e162401efb269a363ce22d07.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15BlkSht/ddaf7fdd099ad288c14d0c955d5f88d16cf523e464a9cc6924fd6e93ae6276c4.front-off-1000x1100.webp",
+          "sha256": "ddaf7fdd099ad288c14d0c955d5f88d16cf523e464a9cc6924fd6e93ae6276c4",
+          "url": "/images/plate-contact-sheets/ddaf7fdd099ad288c14d0c955d5f88d16cf523e464a9cc6924fd6e93ae6276c4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15Gl",
+      "binding": "6b4671993da6a24f5defebbe372b85760f817479cd369f23791d01f505f1d588",
+      "sha256": "2dfe281a57941f230ac916fb062227e9406cdff60ca5150806dfd05044deba80",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15Gl/2dfe281a57941f230ac916fb062227e9406cdff60ca5150806dfd05044deba80.front-on-1000x1100.webp",
+          "sha256": "2dfe281a57941f230ac916fb062227e9406cdff60ca5150806dfd05044deba80",
+          "url": "/images/plate-contact-sheets/2dfe281a57941f230ac916fb062227e9406cdff60ca5150806dfd05044deba80.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15Gl/0f856fdedc425704736c4c3a4a31810c6fdb45c5e9088607aaa84bca001a001e.front-off-1000x1100.webp",
+          "sha256": "0f856fdedc425704736c4c3a4a31810c6fdb45c5e9088607aaa84bca001a001e",
+          "url": "/images/plate-contact-sheets/0f856fdedc425704736c4c3a4a31810c6fdb45c5e9088607aaa84bca001a001e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15MtlRollBlkDot",
+      "binding": "6df285b695575aed63b31ea2cd25a0f05addf3f26d4f7632f9f2af9959c25c99",
+      "sha256": "cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollBlkDot/cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457.front-on-1000x1100.webp",
+          "sha256": "cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457",
+          "url": "/images/plate-contact-sheets/cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollBlkDot/89e8e6efe690d26c1aaa0db6da41d5adda8c4cb432fde440efc08d91d2d74701.front-off-1000x1100.webp",
+          "sha256": "89e8e6efe690d26c1aaa0db6da41d5adda8c4cb432fde440efc08d91d2d74701",
+          "url": "/images/plate-contact-sheets/89e8e6efe690d26c1aaa0db6da41d5adda8c4cb432fde440efc08d91d2d74701.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15MtlRollBlkSh",
+      "binding": "9f7bebf0b27cb1702b75f4475d1367c63a78ef8eb1ebaf2a3fbefceace90331b",
+      "sha256": "a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollBlkSh/a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab.front-on-1000x1100.webp",
+          "sha256": "a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab",
+          "url": "/images/plate-contact-sheets/a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollBlkSh/efd59e91dde1d27fd01c0f867b566bc2e0fb8781677bec08dbf6badbdc453d81.front-off-1000x1100.webp",
+          "sha256": "efd59e91dde1d27fd01c0f867b566bc2e0fb8781677bec08dbf6badbdc453d81",
+          "url": "/images/plate-contact-sheets/efd59e91dde1d27fd01c0f867b566bc2e0fb8781677bec08dbf6badbdc453d81.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15MtlRollCuMatt",
+      "binding": "818a672a0ba043e0b1f6acadf8ac6f48fcd392369b97e6641a27d4caed70813b",
+      "sha256": "3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollCuMatt/3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799.front-on-1000x1100.webp",
+          "sha256": "3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799",
+          "url": "/images/plate-contact-sheets/3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollCuMatt/38fafe1ed670f187a57b11f144d83da0cc3748d4b993112094744d06ed12d786.front-off-1000x1100.webp",
+          "sha256": "38fafe1ed670f187a57b11f144d83da0cc3748d4b993112094744d06ed12d786",
+          "url": "/images/plate-contact-sheets/38fafe1ed670f187a57b11f144d83da0cc3748d4b993112094744d06ed12d786.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15MtlRollGlMatt",
+      "binding": "5de03febe07083677b2e183912d3a292cb2b6f3b9d4ec16173b7e475664c8282",
+      "sha256": "ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollGlMatt/ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a.front-on-1000x1100.webp",
+          "sha256": "ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a",
+          "url": "/images/plate-contact-sheets/ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollGlMatt/dcf96ef3ce54732985d5b0aa2d8b3985d0f4ae00ce488fa8cf9a7a847351c370.front-off-1000x1100.webp",
+          "sha256": "dcf96ef3ce54732985d5b0aa2d8b3985d0f4ae00ce488fa8cf9a7a847351c370",
+          "url": "/images/plate-contact-sheets/dcf96ef3ce54732985d5b0aa2d8b3985d0f4ae00ce488fa8cf9a7a847351c370.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15MtlRollGlSh",
+      "binding": "9eaf0ef17a0d7150573a0ed3f5753f43862518f3475587dacba8a3ede69812a0",
+      "sha256": "f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollGlSh/f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0.front-on-1000x1100.webp",
+          "sha256": "f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0",
+          "url": "/images/plate-contact-sheets/f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollGlSh/293fae1f2dbe078369615ab9727b2e24da61a29f1d550db3bbdd7944a8b41fca.front-off-1000x1100.webp",
+          "sha256": "293fae1f2dbe078369615ab9727b2e24da61a29f1d550db3bbdd7944a8b41fca",
+          "url": "/images/plate-contact-sheets/293fae1f2dbe078369615ab9727b2e24da61a29f1d550db3bbdd7944a8b41fca.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15MtlRollPinkDot",
+      "binding": "c14a9fb6a095d1cd639ecdb8d0812049cc90ffc6ea211a3b2757a89797eeff51",
+      "sha256": "834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollPinkDot/834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0.front-on-1000x1100.webp",
+          "sha256": "834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0",
+          "url": "/images/plate-contact-sheets/834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollPinkDot/8b3e1d8e60d03cfe7c2e6ddd65c1a7b84766cc45ba3a0dec347cb79b8ac4a1d5.front-off-1000x1100.webp",
+          "sha256": "8b3e1d8e60d03cfe7c2e6ddd65c1a7b84766cc45ba3a0dec347cb79b8ac4a1d5",
+          "url": "/images/plate-contact-sheets/8b3e1d8e60d03cfe7c2e6ddd65c1a7b84766cc45ba3a0dec347cb79b8ac4a1d5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15MtlRollSlDot",
+      "binding": "51e1fdcdb9bc3c5c64c8728bac62fdd33eafb20f9f2922260456f8cb69f9a1e5",
+      "sha256": "a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollSlDot/a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600.front-on-1000x1100.webp",
+          "sha256": "a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600",
+          "url": "/images/plate-contact-sheets/a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollSlDot/878c4639062f786126891f37098fd08e1c822a2330b97bbd6942f242d23ff397.front-off-1000x1100.webp",
+          "sha256": "878c4639062f786126891f37098fd08e1c822a2330b97bbd6942f242d23ff397",
+          "url": "/images/plate-contact-sheets/878c4639062f786126891f37098fd08e1c822a2330b97bbd6942f242d23ff397.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15MtlRollSlMatt",
+      "binding": "4dd396966728db652a6610f88abcc0ed92676941ff62b28eff4e7f0c9fe14f99",
+      "sha256": "e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollSlMatt/e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3.front-on-1000x1100.webp",
+          "sha256": "e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3",
+          "url": "/images/plate-contact-sheets/e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollSlMatt/42f18ea37e40b0f457d8a8af7b67d96bd1517cde98f42c51d6a7e019619da163.front-off-1000x1100.webp",
+          "sha256": "42f18ea37e40b0f457d8a8af7b67d96bd1517cde98f42c51d6a7e019619da163",
+          "url": "/images/plate-contact-sheets/42f18ea37e40b0f457d8a8af7b67d96bd1517cde98f42c51d6a7e019619da163.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15MtlRollSlSh",
+      "binding": "4bc13ee04112d583e02183aeb4ec49407df092b433923510ca59f830b3bf12d5",
+      "sha256": "9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollSlSh/9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d.front-on-1000x1100.webp",
+          "sha256": "9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d",
+          "url": "/images/plate-contact-sheets/9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollSlSh/48bffc6296caa4d54be16c1093c6cd377e649e1cffa36b5f06a367916d129289.front-off-1000x1100.webp",
+          "sha256": "48bffc6296caa4d54be16c1093c6cd377e649e1cffa36b5f06a367916d129289",
+          "url": "/images/plate-contact-sheets/48bffc6296caa4d54be16c1093c6cd377e649e1cffa36b5f06a367916d129289.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15RollBlkDot",
+      "binding": "e2e209c2b088e478e01c7f06b002d5b6b30cf497eb6e5f8999a4c4a35df6ff86",
+      "sha256": "cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollBlkDot/cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457.front-on-1000x1100.webp",
+          "sha256": "cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457",
+          "url": "/images/plate-contact-sheets/cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollBlkDot/377d77413c7a5fd13609c7435a0f43cabfa64afb0d192e9fc3ba826128d2eb76.front-off-1000x1100.webp",
+          "sha256": "377d77413c7a5fd13609c7435a0f43cabfa64afb0d192e9fc3ba826128d2eb76",
+          "url": "/images/plate-contact-sheets/377d77413c7a5fd13609c7435a0f43cabfa64afb0d192e9fc3ba826128d2eb76.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15RollBlkSh",
+      "binding": "1f090a4523606630a4a1129b02c95a5900a15b678fb3a00dbd4e956c8e5d42d3",
+      "sha256": "a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollBlkSh/a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab.front-on-1000x1100.webp",
+          "sha256": "a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab",
+          "url": "/images/plate-contact-sheets/a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollBlkSh/27caf102c65a655dd81c86b1e239429580025ca500c11af92466a0dc0f49c465.front-off-1000x1100.webp",
+          "sha256": "27caf102c65a655dd81c86b1e239429580025ca500c11af92466a0dc0f49c465",
+          "url": "/images/plate-contact-sheets/27caf102c65a655dd81c86b1e239429580025ca500c11af92466a0dc0f49c465.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15RollCuMatt",
+      "binding": "93fc1b0ce803466ab1330bb1741ff6921248f37d2d58c1d53c9cc3c7ad926e5f",
+      "sha256": "3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollCuMatt/3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799.front-on-1000x1100.webp",
+          "sha256": "3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799",
+          "url": "/images/plate-contact-sheets/3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollCuMatt/d1e651f90e71c7ff7e5632d2e066b9ee5711b2f375b10dc66016f6d5b5123cdc.front-off-1000x1100.webp",
+          "sha256": "d1e651f90e71c7ff7e5632d2e066b9ee5711b2f375b10dc66016f6d5b5123cdc",
+          "url": "/images/plate-contact-sheets/d1e651f90e71c7ff7e5632d2e066b9ee5711b2f375b10dc66016f6d5b5123cdc.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15RollGlMatt",
+      "binding": "bf681959bf3902698a7739656e7baeaa9bfb63e0fdae37ec2dc54fcca45968cd",
+      "sha256": "ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollGlMatt/ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a.front-on-1000x1100.webp",
+          "sha256": "ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a",
+          "url": "/images/plate-contact-sheets/ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollGlMatt/220143accbd49aa5587097b62d8ca7ea85dd329c924cb4e03d2b8bcebeda9845.front-off-1000x1100.webp",
+          "sha256": "220143accbd49aa5587097b62d8ca7ea85dd329c924cb4e03d2b8bcebeda9845",
+          "url": "/images/plate-contact-sheets/220143accbd49aa5587097b62d8ca7ea85dd329c924cb4e03d2b8bcebeda9845.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15RollGlSh",
+      "binding": "576bd60b44292487e407f9e00cc4578624ccbb4af8c19b34d063e9045352bd7c",
+      "sha256": "f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollGlSh/f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0.front-on-1000x1100.webp",
+          "sha256": "f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0",
+          "url": "/images/plate-contact-sheets/f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollGlSh/3215a866434b579e1ddbd8480827385ce7cf4c553c3bb469023594b8279e4240.front-off-1000x1100.webp",
+          "sha256": "3215a866434b579e1ddbd8480827385ce7cf4c553c3bb469023594b8279e4240",
+          "url": "/images/plate-contact-sheets/3215a866434b579e1ddbd8480827385ce7cf4c553c3bb469023594b8279e4240.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15RollPinkDot",
+      "binding": "de5e3c9f6be10f18c30365b179d40b239f3520ce2ea0805a4e2847fd7f85d527",
+      "sha256": "834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollPinkDot/834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0.front-on-1000x1100.webp",
+          "sha256": "834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0",
+          "url": "/images/plate-contact-sheets/834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollPinkDot/8a229a81dac40e0a90fa6c302bfedd3845450dd0dba2cb50d3d9ae49132e99e5.front-off-1000x1100.webp",
+          "sha256": "8a229a81dac40e0a90fa6c302bfedd3845450dd0dba2cb50d3d9ae49132e99e5",
+          "url": "/images/plate-contact-sheets/8a229a81dac40e0a90fa6c302bfedd3845450dd0dba2cb50d3d9ae49132e99e5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15RollSlDot",
+      "binding": "81d9cc3bcad86255f0a0ebab95097aa9e578f577a56261af364860fa2435fc2e",
+      "sha256": "a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollSlDot/a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600.front-on-1000x1100.webp",
+          "sha256": "a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600",
+          "url": "/images/plate-contact-sheets/a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollSlDot/351cde52e29d5c348629ce5d21e9a60609c48ab3c7aa55a1b848011c251e2ae4.front-off-1000x1100.webp",
+          "sha256": "351cde52e29d5c348629ce5d21e9a60609c48ab3c7aa55a1b848011c251e2ae4",
+          "url": "/images/plate-contact-sheets/351cde52e29d5c348629ce5d21e9a60609c48ab3c7aa55a1b848011c251e2ae4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15RollSlMatt",
+      "binding": "4ac57ef20da9c911cde16fad3a0c05686786f122e42cfbc29e108ecee0b767d1",
+      "sha256": "e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollSlMatt/e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3.front-on-1000x1100.webp",
+          "sha256": "e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3",
+          "url": "/images/plate-contact-sheets/e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollSlMatt/9b8f54b51ade72537c2b98134c4b8699af26d8a4f03b7129a3aa37b6f2df9fff.front-off-1000x1100.webp",
+          "sha256": "9b8f54b51ade72537c2b98134c4b8699af26d8a4f03b7129a3aa37b6f2df9fff",
+          "url": "/images/plate-contact-sheets/9b8f54b51ade72537c2b98134c4b8699af26d8a4f03b7129a3aa37b6f2df9fff.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15RollSlSh",
+      "binding": "ec4918f99b110e7c943ae9c0390f037a51d2c67006dbada98acf009ef65d7b57",
+      "sha256": "9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollSlSh/9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d.front-on-1000x1100.webp",
+          "sha256": "9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d",
+          "url": "/images/plate-contact-sheets/9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollSlSh/f5c62d493720a3914b444e1c095170ad3b4d22c5cd207ca2a3ab34ba3d334b8d.front-off-1000x1100.webp",
+          "sha256": "f5c62d493720a3914b444e1c095170ad3b4d22c5cd207ca2a3ab34ba3d334b8d",
+          "url": "/images/plate-contact-sheets/f5c62d493720a3914b444e1c095170ad3b4d22c5cd207ca2a3ab34ba3d334b8d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15Sl",
+      "binding": "d0e6ba4986e6cd7d289ed1e6172078b30e067cec5957af92f3c3283a0533c0be",
+      "sha256": "fa7ca60d469c19e5e44b683d20d8a59041c8ba6736b4539e5c66f6e2a47c347e",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15Sl/fa7ca60d469c19e5e44b683d20d8a59041c8ba6736b4539e5c66f6e2a47c347e.front-on-1000x1100.webp",
+          "sha256": "fa7ca60d469c19e5e44b683d20d8a59041c8ba6736b4539e5c66f6e2a47c347e",
+          "url": "/images/plate-contact-sheets/fa7ca60d469c19e5e44b683d20d8a59041c8ba6736b4539e5c66f6e2a47c347e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15Sl/825d98743d3893c669bbede47814012949136cbc72a27d049f3bf6cc167f86c1.front-off-1000x1100.webp",
+          "sha256": "825d98743d3893c669bbede47814012949136cbc72a27d049f3bf6cc167f86c1",
+          "url": "/images/plate-contact-sheets/825d98743d3893c669bbede47814012949136cbc72a27d049f3bf6cc167f86c1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15SpryBlkMatt",
+      "binding": "1e8fc3a89871b146dc4805881cae74c3d2f39ee6dacc9c9fc582a5dafe0dfd35",
+      "sha256": "e8be56611ef516d2c980e2816ea9a460570a6a9cab87047fd1fb43c586c53006",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryBlkMatt/e8be56611ef516d2c980e2816ea9a460570a6a9cab87047fd1fb43c586c53006.front-on-1000x1100.webp",
+          "sha256": "e8be56611ef516d2c980e2816ea9a460570a6a9cab87047fd1fb43c586c53006",
+          "url": "/images/plate-contact-sheets/e8be56611ef516d2c980e2816ea9a460570a6a9cab87047fd1fb43c586c53006.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryBlkMatt/1a33ea7952a8f3e31622ae715718dc866651f3127874f5f3b4a73715e88a5380.front-off-1000x1100.webp",
+          "sha256": "1a33ea7952a8f3e31622ae715718dc866651f3127874f5f3b4a73715e88a5380",
+          "url": "/images/plate-contact-sheets/1a33ea7952a8f3e31622ae715718dc866651f3127874f5f3b4a73715e88a5380.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15SpryBlkSh",
+      "binding": "5809e003cce9ce4a7fe1f98269f170afdfb9705600206958fd56cce377e75ce3",
+      "sha256": "72afc2df810c133cbbc6d60bd8ed11db4f528be5a898c61e5ac7fed355101952",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryBlkSh/72afc2df810c133cbbc6d60bd8ed11db4f528be5a898c61e5ac7fed355101952.front-on-1000x1100.webp",
+          "sha256": "72afc2df810c133cbbc6d60bd8ed11db4f528be5a898c61e5ac7fed355101952",
+          "url": "/images/plate-contact-sheets/72afc2df810c133cbbc6d60bd8ed11db4f528be5a898c61e5ac7fed355101952.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryBlkSh/288f5babe4f975679dee0b386912f9a4b0229e9052157968a2c14be0e81660c7.front-off-1000x1100.webp",
+          "sha256": "288f5babe4f975679dee0b386912f9a4b0229e9052157968a2c14be0e81660c7",
+          "url": "/images/plate-contact-sheets/288f5babe4f975679dee0b386912f9a4b0229e9052157968a2c14be0e81660c7.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15SpryBluMatt",
+      "binding": "0b07b7204dcbe29edac6a961c800f87dd8773bde994c7de01aee0b33cbd17f8d",
+      "sha256": "392b19daedebe09b3384e690739270626c558421613a137b823043b3a3696d1e",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryBluMatt/392b19daedebe09b3384e690739270626c558421613a137b823043b3a3696d1e.front-on-1000x1100.webp",
+          "sha256": "392b19daedebe09b3384e690739270626c558421613a137b823043b3a3696d1e",
+          "url": "/images/plate-contact-sheets/392b19daedebe09b3384e690739270626c558421613a137b823043b3a3696d1e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryBluMatt/af4b1c5b725c4ac1184f0d30948911b818b8aaa6dcfe9916c8f19eb16678c29a.front-off-1000x1100.webp",
+          "sha256": "af4b1c5b725c4ac1184f0d30948911b818b8aaa6dcfe9916c8f19eb16678c29a",
+          "url": "/images/plate-contact-sheets/af4b1c5b725c4ac1184f0d30948911b818b8aaa6dcfe9916c8f19eb16678c29a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15SpryCuMatt",
+      "binding": "11a576efda5fd17b17892c24d3c952c5f8a366b9f6785dfa9048d1ee5dcbd8e4",
+      "sha256": "36f74e6647cf9e3dc62ba66f1a48c425c6d56d601e92f6be42c6abba34d56a75",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryCuMatt/36f74e6647cf9e3dc62ba66f1a48c425c6d56d601e92f6be42c6abba34d56a75.front-on-1000x1100.webp",
+          "sha256": "36f74e6647cf9e3dc62ba66f1a48c425c6d56d601e92f6be42c6abba34d56a75",
+          "url": "/images/plate-contact-sheets/36f74e6647cf9e3dc62ba66f1a48c425c6d56d601e92f6be42c6abba34d56a75.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryCuMatt/886b81ee4a54df50ca2971e208bcdda513e24290f154f31e5261f2b30538a1f3.front-off-1000x1100.webp",
+          "sha256": "886b81ee4a54df50ca2971e208bcdda513e24290f154f31e5261f2b30538a1f3",
+          "url": "/images/plate-contact-sheets/886b81ee4a54df50ca2971e208bcdda513e24290f154f31e5261f2b30538a1f3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15SpryGlMatt",
+      "binding": "99aacc054c00c13780eaa228e5f0a5c7d6e8bb815884963584d4dbfe89f4abd1",
+      "sha256": "f8a0cce8d01fc4894d0cda8018cc8fd70207c93e4c0a57045598eda405895354",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryGlMatt/f8a0cce8d01fc4894d0cda8018cc8fd70207c93e4c0a57045598eda405895354.front-on-1000x1100.webp",
+          "sha256": "f8a0cce8d01fc4894d0cda8018cc8fd70207c93e4c0a57045598eda405895354",
+          "url": "/images/plate-contact-sheets/f8a0cce8d01fc4894d0cda8018cc8fd70207c93e4c0a57045598eda405895354.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryGlMatt/312e38e2ab5ce1b30ac6315f156e428afe23b3d7917b7b1dcf1a73019b8c6ac3.front-off-1000x1100.webp",
+          "sha256": "312e38e2ab5ce1b30ac6315f156e428afe23b3d7917b7b1dcf1a73019b8c6ac3",
+          "url": "/images/plate-contact-sheets/312e38e2ab5ce1b30ac6315f156e428afe23b3d7917b7b1dcf1a73019b8c6ac3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15SpryGlSh",
+      "binding": "3023d7a4dffd3b817b463ecc7ba41070977cd89eb7ecc7e647e049fcde9e64f5",
+      "sha256": "19c9102aa9d7e17fd4ce189c5ae4932f7623a2844a3468fb2646d855efc6fec2",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryGlSh/19c9102aa9d7e17fd4ce189c5ae4932f7623a2844a3468fb2646d855efc6fec2.front-on-1000x1100.webp",
+          "sha256": "19c9102aa9d7e17fd4ce189c5ae4932f7623a2844a3468fb2646d855efc6fec2",
+          "url": "/images/plate-contact-sheets/19c9102aa9d7e17fd4ce189c5ae4932f7623a2844a3468fb2646d855efc6fec2.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryGlSh/9ccdb2c2f8aa99c1d5f958819213263d1a1fdc5d78c231fd5648091943bd9e12.front-off-1000x1100.webp",
+          "sha256": "9ccdb2c2f8aa99c1d5f958819213263d1a1fdc5d78c231fd5648091943bd9e12",
+          "url": "/images/plate-contact-sheets/9ccdb2c2f8aa99c1d5f958819213263d1a1fdc5d78c231fd5648091943bd9e12.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15SprySlMatt",
+      "binding": "019310ddeafdc6b91dc6b2cdee6e5c0f810f456e97282652430e2a5c107b7383",
+      "sha256": "87554b02da3a444e8d63e49d2aa9b05c0c727617d169cf09e1376694038908fb",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SprySlMatt/87554b02da3a444e8d63e49d2aa9b05c0c727617d169cf09e1376694038908fb.front-on-1000x1100.webp",
+          "sha256": "87554b02da3a444e8d63e49d2aa9b05c0c727617d169cf09e1376694038908fb",
+          "url": "/images/plate-contact-sheets/87554b02da3a444e8d63e49d2aa9b05c0c727617d169cf09e1376694038908fb.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SprySlMatt/5c6b98be243fb69705803ef6efa612be825833ab72f61abd3b6576e4ad19037e.front-off-1000x1100.webp",
+          "sha256": "5c6b98be243fb69705803ef6efa612be825833ab72f61abd3b6576e4ad19037e",
+          "url": "/images/plate-contact-sheets/5c6b98be243fb69705803ef6efa612be825833ab72f61abd3b6576e4ad19037e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15SprySlSh",
+      "binding": "af8d364443cfe361e1a8a484d28f0893348e5a2605035f31b6471eab7f24ec5d",
+      "sha256": "e512421d72ad526a3e2222390007a53015f64c16a38b6b9bfc82f0371bed295e",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SprySlSh/e512421d72ad526a3e2222390007a53015f64c16a38b6b9bfc82f0371bed295e.front-on-1000x1100.webp",
+          "sha256": "e512421d72ad526a3e2222390007a53015f64c16a38b6b9bfc82f0371bed295e",
+          "url": "/images/plate-contact-sheets/e512421d72ad526a3e2222390007a53015f64c16a38b6b9bfc82f0371bed295e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SprySlSh/d6d002daa849fb641be3a1a45825c19abd2f03c1aa57d6249e6cb6f7bd9bb877.front-off-1000x1100.webp",
+          "sha256": "d6d002daa849fb641be3a1a45825c19abd2f03c1aa57d6249e6cb6f7bd9bb877",
+          "url": "/images/plate-contact-sheets/d6d002daa849fb641be3a1a45825c19abd2f03c1aa57d6249e6cb6f7bd9bb877.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBFlair15WhtSht",
+      "binding": "50aa4292dca0bbcd9321b7a735f8f6e6139c83fb3cd68dc376efd8395d021db6",
+      "sha256": "6d8beca8abf2a803b93ed9d616dd5cecfa3a9f12b63dbd117f6a64ca9d8799ea",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:30.527Z",
+      "batchId": "92eee3d8-4409-47ef-8cf3-12a9f6277964",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15WhtSht/6d8beca8abf2a803b93ed9d616dd5cecfa3a9f12b63dbd117f6a64ca9d8799ea.front-on-1000x1100.webp",
+          "sha256": "6d8beca8abf2a803b93ed9d616dd5cecfa3a9f12b63dbd117f6a64ca9d8799ea",
+          "url": "/images/plate-contact-sheets/6d8beca8abf2a803b93ed9d616dd5cecfa3a9f12b63dbd117f6a64ca9d8799ea.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15WhtSht/8a7838f12cfe8e5362f4cd1518704a4c86cb004f0ba52ee06cbe647498665ab2.front-off-1000x1100.webp",
+          "sha256": "8a7838f12cfe8e5362f4cd1518704a4c86cb004f0ba52ee06cbe647498665ab2",
+          "url": "/images/plate-contact-sheets/8a7838f12cfe8e5362f4cd1518704a4c86cb004f0ba52ee06cbe647498665ab2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  ]
+}

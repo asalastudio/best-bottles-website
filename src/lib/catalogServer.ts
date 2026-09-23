@@ -1,3 +1,4 @@
+import { getShopCollection } from "./shopCollections";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../convex/_generated/api";
 import {
@@ -137,6 +138,7 @@ function normalizeCatalogSearchArgs(args: CatalogSearchArgs): CatalogSearchArgs 
             ...filters,
             search: typeof filters.search === "string" ? filters.search : EMPTY_FILTERS.search,
             category: typeof filters.category === "string" ? filters.category : null,
+            shopCollection: getShopCollection(filters.shopCollection)?.key ?? null,
             collection: typeof filters.collection === "string" ? filters.collection : null,
             applicators: asStringArray(filters.applicators) as CatalogFilters["applicators"],
             rollerMaterials: normalizeRollerMaterials(asStringArray(filters.rollerMaterials)),
@@ -158,14 +160,15 @@ function normalizeCatalogSearchArgs(args: CatalogSearchArgs): CatalogSearchArgs 
 export async function searchCatalogServer(args: CatalogSearchArgs): Promise<CatalogSearchResultShape> {
     const normalizedArgs = normalizeCatalogSearchArgs(args);
     const convex = getCatalogConvexClient();
+    const { shopCollection, ...backendFilters } = normalizedArgs.filters;
     const convexArgs = {
         ...normalizedArgs,
         filters: {
-            ...normalizedArgs.filters,
+            ...backendFilters,
             capacities: expandCapacityFilterValues(normalizedArgs.filters.capacities),
         },
     };
-    try {
+    if (!shopCollection) try {
         const result = await convex.query(api.products.searchCatalog, convexArgs) as CatalogSearchResultShape;
         const [enriched, snapshot] = await Promise.all([withCatalogMediaPreviewRows(convex, result), getCatalogVisibilitySnapshot(convex)]);
         return applyVisibleCatalogSummary(sanitizeCatalogResult(enriched), snapshot, normalizedArgs);

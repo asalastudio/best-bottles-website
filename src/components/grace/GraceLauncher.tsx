@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useGrace } from "@/components/useGrace";
+import { useCopy } from "@/i18n/useCopy";
 
 /**
  * Grace floating launcher — PRD v3 collapsed-state spec.
@@ -22,6 +23,7 @@ import { useGrace } from "@/components/useGrace";
  */
 export default function GraceLauncher() {
     const { panelMode, openPanel, conversationActive, launcherTooltip, companionMode } = useGrace();
+    const t = useCopy("grace");
     const isOpen = panelMode === "open";
     const pathname = usePathname();
     const agentic = companionMode === "agentic";
@@ -41,8 +43,8 @@ export default function GraceLauncher() {
                     exit={{ opacity: 0, scale: 0.9, y: 8 }}
                     transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
                     onClick={() => openPanel()}
-                    aria-label="Open Grace AI"
-                    title="Ask Grace — AI bottling concierge"
+                    aria-label={t("openAria")}
+                    title={t("openTitle")}
                     className={`fixed z-[55] cursor-pointer items-center justify-center group ${agentic ? "flex" : "hidden xl:flex"}`}
                     data-grace-agentic={agentic ? "true" : "false"}
                     style={{
@@ -108,7 +110,7 @@ export default function GraceLauncher() {
                     {/* Notification dot — lit while Grace is alive in the background */}
                     {conversationActive && (
                         <span
-                            aria-label="Grace conversation in progress"
+                            aria-label={t("conversationInProgress")}
                             className="absolute"
                             style={{
                                 right: 6,

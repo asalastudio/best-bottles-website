@@ -1,0 +1,33 @@
+{
+  "packetSha256": "b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b",
+  "configurations": 38,
+  "pairedViews": 76,
+  "pairAlignmentPassed": 38,
+  "worstBodyMeanError": 3.1762,
+  "limit": 12,
+  "sameCanvas": [
+    1000,
+    1100
+  ],
+  "newDistinctImageFiles": 20,
+  "alreadyApprovedRollerPairs": [
+    "GBTallCyl9MtlRollBlkDot",
+    "GBTallCyl9RollBlkSh",
+    "GBTallCyl9RollCuMatt",
+    "GBTallCyl9RollSlSh"
+  ],
+  "unchangedFronts": 33,
+  "masterOnlyRows": 11,
+  "legacySourceAcceptanceRequired": 27,
+  "visualInspectionSheets": [
+    "final-pairs-1.jpg",
+    "final-pairs-2.jpg",
+    "final-pairs-3.jpg",
+    "final-pairs-4.jpg",
+    "final-pairs-5.jpg",
+    "final-pairs-6.jpg",
+    "final-pairs-7.jpg"
+  ],
+  "visualInspection": "Codex inspected all paired outputs; original bare glass, seated roller, sprayer and photographed plastic opening are visible. No floating incomplete insert; no fabricated components or selective shadow edits.",
+  "publicationAuthorized": false
+}

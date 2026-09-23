@@ -1,0 +1,702 @@
+{
+  "review": "Native Desktop artwork inspected against user spray and treatment-pump references. Candidate output requires final UI review.",
+  "rows": [
+    {
+      "sku": "GBCyl9SpryBlk",
+      "identity": {
+        "graceSku": "GB-CYL-CLR-9ML-T-21",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "color": "Clear",
+        "neckThreadSize": "17-415",
+        "category": "Glass Bottle",
+        "applicator": "Fine Mist Sprayer"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/GBCyl9SpryBlk.psd",
+        "sha256": "f899bcf0290c780f0212de4e1c56f1b98d4c32e544c5b14689169c6c13506179",
+        "reviewedOpacity": {
+          "4": 201
+        }
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/GBCyl9SpryBlk.psd",
+        "sha256": "8ea64a5c9820b55f7f070d9801a1d0ad6ec11b6e7c4922c3135c1bc2e8317a32"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 215,
+      "baselineY": 1054,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        },
+        {
+          "slot": "collar",
+          "layers": [
+            {
+              "source": "on",
+              "index": 5
+            }
+          ]
+        }
+      ],
+      "overcapReview": "Native transparent overcap opacity is 201/255 in every capped Desktop PSD; retain it in exported alpha.",
+      "familyId": "cylinder-9ml-clear-17-415",
+      "registrationReview": "Use the capped-source actuator and collar. The uncapped PSD shifts them upward 3px; using on positions preserves original assembled parity."
+    },
+    {
+      "sku": "GBCyl9SpryShSl",
+      "identity": {
+        "graceSku": "GB-CYL-CLR-9ML-T-25",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "color": "Clear",
+        "neckThreadSize": "17-415",
+        "category": "Glass Bottle",
+        "applicator": "Fine Mist Sprayer"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/GBCyl9SpryShSl.psd",
+        "sha256": "28dc8ec437c10188b61f5fa00ebe353d680774430cf6dcdaaefd10b3adac722f",
+        "reviewedOpacity": {
+          "3": 201
+        }
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/GBCyl9SpryShSl.psd",
+        "sha256": "8a4163a56514be7e8efeeb91d27e7229e3d1f8a83efca2ebeb9861567a116817"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 215,
+      "baselineY": 1054,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 5
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "collar",
+          "layers": [
+            {
+              "source": "off",
+              "index": 4
+            }
+          ]
+        }
+      ],
+      "overcapReview": "Native transparent overcap opacity is 201/255 in every capped Desktop PSD; retain it in exported alpha.",
+      "familyId": "cylinder-9ml-clear-17-415"
+    },
+    {
+      "sku": "GBCyl9SpryGl",
+      "identity": {
+        "graceSku": "GB-CYL-CLR-9ML-T-22",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "color": "Clear",
+        "neckThreadSize": "17-415",
+        "category": "Glass Bottle",
+        "applicator": "Fine Mist Sprayer"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/GBCyl9SpryGl.psd",
+        "sha256": "6afbd479266839dfc4c04fc6ff415b39d46ca5289f40b5eeaf822cb614731a88",
+        "reviewedOpacity": {
+          "6": 201
+        }
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/GBCyl9SpryGl.psd",
+        "sha256": "8da3f35751fe8b2b442d7b58042851c378d4dd1e25ab3c8746875dc448fb37a1"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 215,
+      "baselineY": 1054,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 6
+            }
+          ]
+        },
+        {
+          "slot": "collar",
+          "layers": [
+            {
+              "source": "off",
+              "index": 6
+            }
+          ]
+        }
+      ],
+      "overcapReview": "Native transparent overcap opacity is 201/255 in every capped Desktop PSD; retain it in exported alpha.",
+      "familyId": "cylinder-9ml-clear-17-415"
+    },
+    {
+      "sku": "GBCyl9SpryMattSl",
+      "identity": {
+        "graceSku": "GB-CYL-CLR-9ML-T-23",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "color": "Clear",
+        "neckThreadSize": "17-415",
+        "category": "Glass Bottle",
+        "applicator": "Fine Mist Sprayer"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/GBCyl9SpryMattSl.psd",
+        "sha256": "34e46ec9dc2a30d101ddfacc5c584c6ff28a19f82545d6c5a2a36a02bd35edb5",
+        "reviewedOpacity": {
+          "4": 201
+        }
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/GBCyl9SpryMattSl.psd",
+        "sha256": "d2b67914f6e208515fb054e403018932534a4b20a48df850c53148fdba44739f"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 215,
+      "baselineY": 1054,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        },
+        {
+          "slot": "collar",
+          "layers": [
+            {
+              "source": "off",
+              "index": 4
+            }
+          ]
+        }
+      ],
+      "overcapReview": "Native transparent overcap opacity is 201/255 in every capped Desktop PSD; retain it in exported alpha.",
+      "familyId": "cylinder-9ml-clear-17-415"
+    },
+    {
+      "sku": "GBCyl9SpryTur",
+      "identity": {
+        "graceSku": "GB-CYL-CLR-9ML-T-26",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "color": "Clear",
+        "neckThreadSize": "17-415",
+        "category": "Glass Bottle",
+        "applicator": "Fine Mist Sprayer"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/GBCyl9SpryTur.psd",
+        "sha256": "a07ed6884f1b26866946b4278422599885b80ba1adc910325bb33dfa84220fe8",
+        "reviewedOpacity": {
+          "3": 201
+        }
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/GBCyl9SpryTur.psd",
+        "sha256": "455a01574006f69d00a350eea0c7456ec5b05e85a00374555cfad1f9853aeb11"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 215,
+      "baselineY": 1054,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 4
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "collar",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "overcapReview": "Native transparent overcap opacity is 201/255 in every capped Desktop PSD; retain it in exported alpha.",
+      "familyId": "cylinder-9ml-clear-17-415"
+    },
+    {
+      "sku": "GBCyl9SpryRd",
+      "identity": {
+        "graceSku": "GB-CYL-CLR-9ML-T-24",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "color": "Clear",
+        "neckThreadSize": "17-415",
+        "category": "Glass Bottle",
+        "applicator": "Fine Mist Sprayer"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/GBCyl9SpryRd.psd",
+        "sha256": "ba94b373861319e7e0c493030946d3f7f2a3765672db17d72b52c7315d596db5",
+        "reviewedOpacity": {
+          "4": 201
+        }
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/GBCyl9SpryRd.psd",
+        "sha256": "7bf2e3ca001ff5e15aa12060091d23a2e50069a12401795ae9a46cc8ec9b1ad5"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 215,
+      "baselineY": 1054,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        },
+        {
+          "slot": "collar",
+          "layers": [
+            {
+              "source": "off",
+              "index": 4
+            }
+          ]
+        }
+      ],
+      "overcapReview": "Native transparent overcap opacity is 201/255 in every capped Desktop PSD; retain it in exported alpha.",
+      "familyId": "cylinder-9ml-clear-17-415"
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "identity": {
+        "graceSku": "LB-CYL-CLR-9ML-T-01",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "color": "Clear",
+        "neckThreadSize": "17-415",
+        "category": "Glass Bottle",
+        "applicator": "Lotion Pump"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/LBCyl9LtnBlk.psd",
+        "sha256": "76108612ea7364e56221eff4c6d3f7ddc567e58bcfbec53f2705ddaac0d67ff3",
+        "reviewedOpacity": {
+          "5": 201
+        }
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/LBCyl9LtnBlk.psd",
+        "sha256": "337253f8b50325601701713995b0f1b3387b34ff0bac337da52efdf8aeb13945"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 215,
+      "baselineY": 1054,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 6
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 5
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 5
+            }
+          ]
+        },
+        {
+          "slot": "collar",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "overcapReview": "Native transparent overcap opacity is 201/255 in every capped Desktop PSD; retain it in exported alpha.",
+      "familyId": "cylinder-9ml-clear-17-415"
+    },
+    {
+      "sku": "LBCyl9LtnMtSl",
+      "identity": {
+        "graceSku": "LB-CYL-CLR-9ML-T-03",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "color": "Clear",
+        "neckThreadSize": "17-415",
+        "category": "Glass Bottle",
+        "applicator": "Lotion Pump"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/LBCyl9LtnMtSl.psd",
+        "sha256": "4598e9f40b7c052605abfa8ae3cf1a950bfbe2cad38f4f23ccb140e52606dbe5",
+        "reviewedOpacity": {
+          "4": 201
+        }
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/LBCyl9LtnMtSl.psd",
+        "sha256": "ddefa4babbaf431eed464b84228ec03202452df8d01213bf317e519389b45748"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 215,
+      "baselineY": 1054,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 6
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 5
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        },
+        {
+          "slot": "collar",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "overcapReview": "Native transparent overcap opacity is 201/255 in every capped Desktop PSD; retain it in exported alpha.",
+      "familyId": "cylinder-9ml-clear-17-415"
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "identity": {
+        "graceSku": "LB-CYL-CLR-9ML-T-02",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "color": "Clear",
+        "neckThreadSize": "17-415",
+        "category": "Glass Bottle",
+        "applicator": "Lotion Pump"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/LBCyl9LtnGl.psd",
+        "sha256": "71687a14440ae1dc860cc18bf46d0770840af955df41876ad259b07210c0f575",
+        "reviewedOpacity": {
+          "7": 201
+        }
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/LBCyl9LtnGl.psd",
+        "sha256": "433df6a940415c5ade9536980df022eb26ec2c262291a0bc1a99f9b7d88aa7c0"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 215,
+      "baselineY": 1054,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 8
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "off",
+              "index": 5
+            },
+            {
+              "source": "off",
+              "index": 7
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 7
+            }
+          ]
+        },
+        {
+          "slot": "collar",
+          "layers": [
+            {
+              "source": "off",
+              "index": 6
+            }
+          ]
+        }
+      ],
+      "overcapReview": "Native transparent overcap opacity is 201/255 in every capped Desktop PSD; retain it in exported alpha.",
+      "familyId": "cylinder-9ml-clear-17-415"
+    }
+  ]
+}

@@ -17,6 +17,18 @@ const kitSlotV = v.union(
     v.literal("tassel"), v.literal("reducer"), v.literal("pipette"),
 );
 
+const portalAddress = v.object({
+    contactName: v.string(),
+    company: v.string(),
+    phone: v.string(),
+    address1: v.string(),
+    address2: v.string(),
+    city: v.string(),
+    provinceCode: v.string(),
+    zip: v.string(),
+    countryCode: v.string(),
+});
+
 export default defineSchema({
     // ── Product Groups (Phase 1) ─────────────────────────────────────────────
     // ~230 parent groups. Each group = unique (family + capacityMl + color).
@@ -24,6 +36,13 @@ export default defineSchema({
     productGroups: defineTable({
         slug: v.string(),                                    // e.g. "cylinder-9ml-clear" — stable URL key
         displayName: v.string(),                             // e.g. "Cylinder 9ml Clear" — for search
+        /**
+         * A name a staff member typed in the Team Hub to REPLACE the generated one. Empty for almost
+         * every product: customer-facing names are composed from attributes (capacity, colour, family,
+         * product type) so 2,480 SKUs read as one catalogue. `displayName` is NOT this: it holds
+         * imported legacy text and is only a fallback; making it win would re-title the shop overnight.
+         */
+        customName: v.optional(v.union(v.string(), v.null())),
         family: v.string(),
         capacity: v.union(v.string(), v.null()),             // human-readable e.g. "9 ml"
         capacityMl: v.union(v.number(), v.null()),
@@ -39,6 +58,8 @@ export default defineSchema({
         shopifyUpdatedAt: v.optional(v.number()),                      // Last webhook sync timestamp
         sanitySlug: v.optional(v.union(v.string(), v.null())),
         heroImageUrl: v.optional(v.union(v.string(), v.null())),
+        /** Superseded Shopify CDN hero. See products.legacyShopifyImageUrl. */
+        legacyShopifyHeroImageUrl: v.optional(v.union(v.string(), v.null())),
         // Option A: applicator-first — unique applicator types in this group (e.g. ["Metal Roller", "Fine Mist Sprayer"])
         applicatorTypes: v.optional(v.array(v.string())),
         // Cached primary SKU — populated by backfill migration to eliminate N+1 on catalog page.
@@ -183,6 +204,12 @@ export default defineSchema({
         // when group.paperDollFamilyKey is set, but kept as a static gallery
         // alongside paper-doll for editorial/lifestyle views (Phase 2).
         imageUrlCapOff: v.optional(v.union(v.string(), v.null())),
+        // The Shopify CDN URL that `imageUrl` held before plate imagery was
+        // promoted into it. Kept, not discarded: those files are mostly deleted
+        // (a 40-URL probe returned 37 404s) but the value is the only record of
+        // what the row used to point at, and it makes the promotion reversible.
+        legacyShopifyImageUrl: v.optional(v.union(v.string(), v.null())),
+        legacyShopifyImageUrlCapOff: v.optional(v.union(v.string(), v.null())),
         productUrl: v.union(v.string(), v.null()),
         dataGrade: v.union(v.string(), v.null()),
         bottleCollection: v.union(v.string(), v.null()),
@@ -229,6 +256,10 @@ export default defineSchema({
         shopifyVariantId: v.optional(v.union(v.string(), v.null())),        // Shopify variant GID
         shopifyInventoryItemId: v.optional(v.union(v.string(), v.null())),  // Shopify inventory item GID
         shopifyUpdatedAt: v.optional(v.number()),                           // Last webhook sync timestamp
+        /** From the product webhook, so an inventory-level webhook can tell a real stock-out from an
+         * untracked or oversellable variant sitting at zero. Undefined = no product webhook seen yet. */
+        shopifyInventoryTracked: v.optional(v.union(v.boolean(), v.null())),
+        shopifyInventoryPolicy: v.optional(v.union(v.string(), v.null())),
         /**
          * Whether Shopify will actually SELL this variant right now.
          *
@@ -260,6 +291,7 @@ export default defineSchema({
         .index("by_graceSku", ["graceSku"])           // Grace internal lookup
         .index("by_category", ["category"])
         .index("by_family", ["family"])
+        .index("by_collection", ["bottleCollection"])   // getCatalogProducts collection filter
         .index("by_neckThreadSize", ["neckThreadSize"])
         .index("by_productGroupId", ["productGroupId"]) // Used by getProductGroup to avoid full table scan
         .index("by_shopifyVariantId", ["shopifyVariantId"]) // Webhook sync: inventory updates
@@ -399,7 +431,10 @@ export default defineSchema({
         companyName: v.string(),
         tier: v.string(),                           // e.g. "The Scaler"
         accountManager: v.string(),
-        netTerms: v.string(),                       // e.g. "Net 30"
+        // Best Bottles extends no credit — there is no Net 30/60/90 and no
+        // credit facility. The field survives only so rows seeded before that
+        // was settled still validate; nothing reads it and nothing writes it.
+        netTerms: v.optional(v.string()),
         taxExempt: v.boolean(),
         memberSince: v.string(),                    // e.g. "March 2021"
         shopifyCustomerId: v.optional(v.string()),  // nullable until Shopify sync
@@ -411,6 +446,19 @@ export default defineSchema({
         billingEmail: v.optional(v.string()),           // email the Shopify customer is keyed on
         shopifyCustomerLinkedAt: v.optional(v.number()),
         shopifyCustomerLinkedBy: v.optional(v.string()), // Clerk user ID that triggered the link
+
+        // ─── Where orders ship ────────────────────────────────────────────
+        // A Shopify draft order with no address cannot be rated, taxed, or
+        // fulfilled, so this is what turns a submitted order into one the
+        // warehouse can actually pick. Held here rather than read from Shopify
+        // at submit time so the portal can show it, validate it, and refuse to
+        // submit without it.
+        shippingAddress: v.optional(portalAddress),
+        // Most wholesale buyers bill where they ship; the separate address is
+        // stored only when they say otherwise.
+        billingAddress: v.optional(portalAddress),
+        addressUpdatedAt: v.optional(v.number()),
+        addressUpdatedBy: v.optional(v.string()),
     })
         .index("by_clerkOrgId", ["clerkOrgId"])
         .index("by_accountNumber", ["accountNumber"])
@@ -475,14 +523,52 @@ export default defineSchema({
         ),
         orderDate: v.number(),
         estimatedDelivery: v.optional(v.string()),
+        // Kept for rows written before shipments existed, and still filled from
+        // the first shipment so anything reading a single number keeps working.
         trackingNumber: v.optional(v.string()),
         carrier: v.optional(v.string()),
+
+        // A wholesale order does not arrive in one box. Pallets ship on
+        // different days from different carriers, and collapsing that to one
+        // tracking number told the customer their order had shipped when half
+        // of it had — so every shipment is kept.
+        shipments: v.optional(v.array(v.object({
+            /** Shopify fulfilment id — the idempotency key for updates. */
+            shopifyFulfillmentId: v.optional(v.string()),
+            trackingNumber: v.optional(v.string()),
+            carrier: v.optional(v.string()),
+            /** Carrier's own tracking page, as Shopify resolved it. */
+            trackingUrl: v.optional(v.string()),
+            /** Shopify delivery state: in_transit, out_for_delivery, delivered… */
+            shipmentStatus: v.optional(v.string()),
+            shippedAt: v.optional(v.number()),
+            estimatedDelivery: v.optional(v.string()),
+            /** What travelled in this box, so a partial shipment is legible. */
+            lineItems: v.optional(v.array(v.object({
+                sku: v.string(),
+                description: v.string(),
+                quantity: v.number(),
+            }))),
+        }))),
+
         shipFrom: v.optional(v.string()),
         shipTo: v.optional(v.string()),
         totalAmount: v.optional(v.number()),
+
+        // Order history arrives from two places and must stay separable: the
+        // historical book lives in QuickBooks, while everything placed from now
+        // on arrives by Shopify webhook. Both are optional so existing rows and
+        // a later QuickBooks backfill both fit without a migration.
+        source: v.optional(v.union(v.literal("shopify"), v.literal("quickbooks"))),
+        // Shopify's numeric order id. `orderId` holds the human name (#1003)
+        // because that is what a customer recognises; this is the idempotency
+        // key, so a replayed or updated webhook patches instead of duplicating.
+        shopifyOrderId: v.optional(v.string()),
+        updatedAt: v.optional(v.number()),
     })
         .index("by_orgId", ["clerkOrgId"])
-        .index("by_orderId", ["orderId"]),
+        .index("by_orderId", ["orderId"])
+        .index("by_shopifyOrderId", ["shopifyOrderId"]),
 
     // Saved draft orders — native portal data, not synced from any external system.
     portalDrafts: defineTable({
@@ -498,10 +584,29 @@ export default defineSchema({
             description: v.string(),
             quantity: v.number(),
             unitPrice: v.optional(v.number()),
+            // Captured when the line is added so submission does not have to
+            // re-resolve the SKU, and so a product renamed between drafting and
+            // submitting still reaches the right Shopify variant.
+            shopifyVariantId: v.optional(v.string()),
         })),
         totalAmount: v.optional(v.number()),
         createdAt: v.number(),
         updatedAt: v.number(),
+
+        // Set once the draft has been pushed to Shopify. A submitted draft is
+        // a record of what was sent, not an editable cart, so these being
+        // present is what makes the order pad read-only.
+        shopifyDraftOrderId: v.optional(v.string()),
+        shopifyDraftOrderName: v.optional(v.string()),
+        submittedAt: v.optional(v.number()),
+        submittedBy: v.optional(v.string()),
+
+        // Set when a SUBMITTED draft is put away. An unsubmitted draft is a
+        // scratch document and is deleted outright; a submitted one is the
+        // record of what was sent to Shopify, so it is hidden rather than
+        // destroyed — otherwise the portal would disagree with the order.
+        archivedAt: v.optional(v.number()),
+        archivedBy: v.optional(v.string()),
     })
         .index("by_orgId", ["clerkOrgId"]),
 
@@ -626,6 +731,32 @@ export default defineSchema({
     })
         .index("by_owner", ["ownerKey"])
         .index("by_endedAt", ["endedAt"]),
+
+    // Grace sessions — transcripts recorded for SIGNED-IN customers only.
+    // Written by the Next.js server after it resolves the Clerk identity, so
+    // clerkUserId / clerkOrgId are trusted. Anonymous sessions never land here;
+    // `graceSessionTraces` above keeps the no-transcript telemetry for everyone.
+    graceSessions: defineTable({
+        clerkUserId: v.string(),
+        clerkOrgId: v.optional(v.string()),          // absent when the user has no active org yet
+        ownerKey: v.string(),                        // same key that scopes shortlists + memory
+        sessionId: v.string(),                       // minted client-side, one row per session
+        surface: v.string(),                         // "workspace" | "drawer"
+        companionMode: v.string(),
+        title: v.string(),                           // first user message, clipped
+        startedAt: v.number(),
+        lastMessageAt: v.number(),
+        endedAt: v.optional(v.number()),
+        lastPageUrl: v.optional(v.string()),
+        messageCount: v.number(),
+        messages: v.array(v.object({
+            role: v.union(v.literal("user"), v.literal("grace")),
+            text: v.string(),
+        })),
+    })
+        .index("by_sessionId", ["sessionId"])
+        .index("by_orgId", ["clerkOrgId", "lastMessageAt"])
+        .index("by_user", ["clerkUserId", "lastMessageAt"]),
 
     // -------------------------------------------------------------------------
     // GRACE AI UPLOADS — user-supplied images for reference match + brand mockup
@@ -1003,4 +1134,28 @@ export default defineSchema({
         buildId: v.string(),
     })
         .index("by_familyId", ["familyId"]),
+
+    /**
+     * Every Team Hub edit to a catalogue row: who, when, the value before and after.
+     * One entry per field, so a single field can be reverted without touching the rest.
+     * Values are JSON strings: a name, a status and a five-rung price ladder share one column.
+     */
+    catalogChangeLog: defineTable({
+        targetType: v.union(v.literal("product"), v.literal("group")),
+        targetId: v.string(),                       // products / productGroups _id
+        label: v.string(),                          // website SKU or group slug, for reading the log
+        field: v.string(),
+        before: v.string(),
+        after: v.string(),
+        actorId: v.string(),
+        actorEmail: v.union(v.string(), v.null()),
+        at: v.number(),
+        source: v.string(),                         // "team-hub" | "team-hub-revert"
+        revertOf: v.optional(v.id("catalogChangeLog")),
+        revertedBy: v.optional(v.id("catalogChangeLog")),
+        /** Set when the edit changed the 1-piece price, which Shopify must charge too. */
+        shopifyPush: v.optional(v.object({ status: v.union(v.literal("ok"), v.literal("failed"), v.literal("off")), detail: v.union(v.string(), v.null()), at: v.number() })),
+    })
+        .index("by_target", ["targetType", "targetId", "at"])
+        .index("by_at", ["at"]),
 });

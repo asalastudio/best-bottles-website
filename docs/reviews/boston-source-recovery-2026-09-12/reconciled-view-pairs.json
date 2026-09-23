@@ -1,0 +1,455 @@
+[
+  {
+    "sku": "GBBstn1ozRollonMattBlk",
+    "pairStatus": "paired_source_views",
+    "sourceViews": [
+      {
+        "sha256": "87ace723b99efe733e39393f84e6b1c744989c1f26254e733e985c1a54cce5e7",
+        "view": "on"
+      },
+      {
+        "sha256": "528d220a581c272172b4c1f5a4a88fe12264c882662f94682a9ad6f96d6e2447",
+        "view": "off"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstn1ozRollonMattGl",
+    "pairStatus": "paired_source_views",
+    "sourceViews": [
+      {
+        "sha256": "69fc7fcbdb859cf416bda3db221e829ef30dc4f87d616d6acffde7ec52f9c161",
+        "view": "on"
+      },
+      {
+        "sha256": "f97a063bcec9c7fe9065498d9d0799680268bccd7e26f608d54093b43f6c669b",
+        "view": "off"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstn1ozRollonMattSl",
+    "pairStatus": "paired_source_views",
+    "sourceViews": [
+      {
+        "sha256": "3c5f48e8f1673400f082a147e55fcc51848512c1523d83c4afb2adbdc7ee4201",
+        "view": "on"
+      },
+      {
+        "sha256": "b63fc411e8d909be926c991ce3b9e42a479616a7b8ccc9383bdea778199b9bb7",
+        "view": "off"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstn1ozRollonShBlk",
+    "pairStatus": "paired_source_views",
+    "sourceViews": [
+      {
+        "sha256": "d7d00c8c68581a53cfa367dba4439be56f6d86d9d4e159231b8d6b2316033f26",
+        "view": "on"
+      },
+      {
+        "sha256": "0b839dd4cc7468f3c8a2bf3292c93330eb832ddbbb7ffac19d448a7f5bcad7e1",
+        "view": "off"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstn1ozRollonShGl",
+    "pairStatus": "paired_source_views",
+    "sourceViews": [
+      {
+        "sha256": "f6e9cb0eb2d745f1bd100246574057eddc08b933b5212ac46a5c830248c24806",
+        "view": "on"
+      },
+      {
+        "sha256": "b69ebf68c2cabd567469ca0cd5e832c0b82a5f83980cf8c4fbadff3bd4ef0b5f",
+        "view": "off"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstn1ozRollonShnSl",
+    "pairStatus": "paired_source_views",
+    "sourceViews": [
+      {
+        "sha256": "9245deb2ecd4849cb68e1d78067cc21e13f0841c0113cd9c1056d2db70cdc5d0",
+        "view": "on"
+      },
+      {
+        "sha256": "82a2eaae3dedb17f04bdfd942e916a7c0f676671d29d537c09121887b4f178fa",
+        "view": "off"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstn2ozBlkDrpr",
+    "pairStatus": "assembled_source_only",
+    "sourceViews": [
+      {
+        "sha256": "c4fc03484a4a0eaaabf921f7a9cca708848186050bcbc69551555799ad3617e8",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstn2ozBlkDrprShnGlTrim",
+    "pairStatus": "assembled_source_only",
+    "sourceViews": [
+      {
+        "sha256": "602437b895696e2b7f18bd368bf64cfcf6101e9a948c6b4d4cf61ca06df5dcef",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstn2ozBlkDrprShnSlTrim",
+    "pairStatus": "assembled_source_only",
+    "sourceViews": [
+      {
+        "sha256": "83b5d50295ca882e0b5150b4c5faba372087f2a9b06c11473bb05826dbc3a911",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstn2ozMtlRollBlk",
+    "pairStatus": "cap_on_review_pending",
+    "sourceViews": [
+      {
+        "sha256": "85f49e0f56ec7f6026d100612f2b7e4f46b5c9ce49c091aa1419ceee8d35054d",
+        "view": "off"
+      },
+      {
+        "sha256": "85f49e0f56ec7f6026d100612f2b7e4f46b5c9ce49c091aa1419ceee8d35054d",
+        "view": "off"
+      }
+    ],
+    "reconciledCapOn": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/20. GBBstn2ozRollonBlk.psd",
+      "sourceSha256": "d3ddf813748f0823c5a02571dd2231e047b89d9f013c0a18bc043adb3ba9fe06",
+      "url": "/images/boston-source-recovery/d3ddf813748f0823c5a02571dd2231e047b89d9f013c0a18bc043adb3ba9fe06.png",
+      "sha256": "44c845e244bcc3b034aa7cf29c0d576f3a33561bad56537a6d8e6c7735a7ea7f",
+      "width": 945,
+      "height": 1500,
+      "view": "on",
+      "status": "pending",
+      "note": "Recovered original capped master view. New view awaiting Jordan review; existing source approvals do not cover these bytes.",
+      "matchEvidence": "Catalog descriptions specify the same 60 mL clear Boston glass and shiny black cap. The alternate plastic cap-off master is pixel-identical to the approved plastic source. The metal and plastic cap-off images differ only in the exposed roller region (199,132)-(417,312); the lower glass and cap are pixel-identical, including the cap layer. The capped image hides that roller region. No parts were fabricated or pixels edited."
+    }
+  },
+  {
+    "sku": "GBBstn2ozMtlRollGl",
+    "pairStatus": "paired_source_views",
+    "sourceViews": [
+      {
+        "sha256": "3e1e6d3f095ca34195f93bd96d98558784f6bdd9200abc425d936ba90126465c",
+        "view": "off"
+      },
+      {
+        "sha256": "1e3ccfcb1d72823347839d484e1350f27a23a035987e26d55808ccefcd887057",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstn2ozMtlRollMattBlk",
+    "pairStatus": "paired_source_views",
+    "sourceViews": [
+      {
+        "sha256": "3fb051353540a88cb94d6ea8ee65707771f10c3f63992894ddf51ee9048ad6fc",
+        "view": "off"
+      },
+      {
+        "sha256": "a50086061dacb3de85d7c93fa50a7d539c91facc3bc862ba2279f60db6d5d76c",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstn2ozMtlRollMattGl",
+    "pairStatus": "paired_source_views",
+    "sourceViews": [
+      {
+        "sha256": "3edb3ed8b54e7e687ab1735f391ad0d48a80ccfa0f77916d21479a27d2694bea",
+        "view": "on"
+      },
+      {
+        "sha256": "c693aa8b70986b367206a08cb2f12de3753c385b30a22d85a0263050fe73b591",
+        "view": "off"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstn2ozMtlRollMattSl",
+    "pairStatus": "paired_source_views",
+    "sourceViews": [
+      {
+        "sha256": "c676531dc26844eb307f5189917d90e4d5e2dc600e792038eb7a2d2f5e1ca99b",
+        "view": "off"
+      },
+      {
+        "sha256": "08303d3d1395b2fa13d24d4c0ae75d4ff7cad97cb3b1cdf7bc2df3c232e390ae",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstn2ozMtlRollShnSl",
+    "pairStatus": "paired_source_views",
+    "sourceViews": [
+      {
+        "sha256": "7186fea519daeee290b170a1240fc1139236050eca72452b4dd2a08190411250",
+        "view": "on"
+      },
+      {
+        "sha256": "354a24ede5a304055b464fb71c50da89873e0df5da15062ccff6a997079edf10",
+        "view": "off"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstn2ozRollGl",
+    "pairStatus": "paired_source_views",
+    "sourceViews": [
+      {
+        "sha256": "5efe766a21990d1bae3fb8bc50118d633d4e8da6a379cb8a5a6a6d39fbd29dc5",
+        "view": "off"
+      },
+      {
+        "sha256": "53da48155e2d0ab29cc5e8c237c640f0c3963a21aa526b153aaeab59676093f3",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstn2ozRollMattBlk",
+    "pairStatus": "paired_source_views",
+    "sourceViews": [
+      {
+        "sha256": "29978af2103af732807729c7a3d51d46bc6d850d21925d1fb3c2bb70a952fa4a",
+        "view": "off"
+      },
+      {
+        "sha256": "4821264b1c574c2e5ec2d53af40dc73d4c0eb77f7161942f5bbf633237e49272",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstn2ozRollMattSl",
+    "pairStatus": "paired_source_views",
+    "sourceViews": [
+      {
+        "sha256": "fc6b1a33f3aa2cf12e210ecc712d53989c1bdd83727e83806a84fc0947bd9281",
+        "view": "off"
+      },
+      {
+        "sha256": "08303d3d1395b2fa13d24d4c0ae75d4ff7cad97cb3b1cdf7bc2df3c232e390ae",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstn2ozRollShnBlk",
+    "pairStatus": "cap_on_review_pending",
+    "sourceViews": [
+      {
+        "sha256": "396ba1b139efd774908da59b8b0f611dbea5d907d40728212026c330f23d1f98",
+        "view": "off"
+      },
+      {
+        "sha256": "396ba1b139efd774908da59b8b0f611dbea5d907d40728212026c330f23d1f98",
+        "view": "off"
+      }
+    ],
+    "reconciledCapOn": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/20. GBBstn2ozRollonBlk.psd",
+      "sourceSha256": "d3ddf813748f0823c5a02571dd2231e047b89d9f013c0a18bc043adb3ba9fe06",
+      "url": "/images/boston-source-recovery/d3ddf813748f0823c5a02571dd2231e047b89d9f013c0a18bc043adb3ba9fe06.png",
+      "sha256": "44c845e244bcc3b034aa7cf29c0d576f3a33561bad56537a6d8e6c7735a7ea7f",
+      "width": 945,
+      "height": 1500,
+      "view": "on",
+      "status": "pending",
+      "note": "Recovered original capped master view. New view awaiting Jordan review; existing source approvals do not cover these bytes.",
+      "matchEvidence": "Catalog descriptions specify the same 60 mL clear Boston glass and shiny black cap. The alternate plastic cap-off master is pixel-identical to the approved plastic source. The metal and plastic cap-off images differ only in the exposed roller region (199,132)-(417,312); the lower glass and cap are pixel-identical, including the cap layer. The capped image hides that roller region. No parts were fabricated or pixels edited."
+    }
+  },
+  {
+    "sku": "GBBstn2ozRollShnSl",
+    "pairStatus": "paired_source_views",
+    "sourceViews": [
+      {
+        "sha256": "c034ec4e09741a9d32dae5802757ca49d2c67554ddb3237b2e990797921f46cc",
+        "view": "off"
+      },
+      {
+        "sha256": "948ebc5428d652d16d7843aea2d14338ee7e14376810e2c58371f23ec71fb361",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstn2ozWhtDrpr",
+    "pairStatus": "assembled_source_only",
+    "sourceViews": [
+      {
+        "sha256": "88ca4018e9a17dd50d7903f9dc02a5528c9ab41121a5340ba866b0bfa023331f",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstn2ozWhtDrprShnGlTrim",
+    "pairStatus": "assembled_source_only",
+    "sourceViews": [
+      {
+        "sha256": "8a60e4c136a84f95c08784b9fc8c0874883c8d7f5576e527328d8640d4d8184a",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstn2ozWhtDrprShnSlTrim",
+    "pairStatus": "assembled_source_only",
+    "sourceViews": [
+      {
+        "sha256": "5bafced5c24b49769917edc6447bb94622af3cf825f831c79c6a390cc6662245",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstnAmb1ozBlkDrpShnGl",
+    "pairStatus": "assembled_source_only",
+    "sourceViews": [
+      {
+        "sha256": "d00f2acb51d53fb3cd884c4fb77a5613be3f33ccb5e7aeb9a07d1c62ca05ef4e",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstnAmb1ozWhtDrprShnSlTrim",
+    "pairStatus": "assembled_source_only",
+    "sourceViews": [
+      {
+        "sha256": "7c826b0cf71c0b8aa043cb42939f79bcac0ad40878d34ffe04f55a0ca4982e0d",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstnAmb2ozBlkDrpr",
+    "pairStatus": "assembled_source_only",
+    "sourceViews": [
+      {
+        "sha256": "73553209b0eaebfd00ae96ae5482f2d2351e5232eed7a130a4f8b85a04d70025",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstnAmb2ozBlkDrprShnSlTrim",
+    "pairStatus": "assembled_source_only",
+    "sourceViews": [
+      {
+        "sha256": "30a882dc9777b67e8463c15feb9f202bd3e633302eba56805b19a028f91ef3a3",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstnAmb2ozWhtDrpr",
+    "pairStatus": "assembled_source_only",
+    "sourceViews": [
+      {
+        "sha256": "19558534c053a9ee43eff6aff7ca0c2ed279f3dd3eb22928575c66d6f096fd24",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstnBlu15BlkDrpr",
+    "pairStatus": "assembled_source_only",
+    "sourceViews": [
+      {
+        "sha256": "d32fb7ed218a8273d6e735c50453eca4b6896ac461244e1d62aa571fea8b8729",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstnBlu15BlkDrprGlTrim",
+    "pairStatus": "assembled_source_only",
+    "sourceViews": [
+      {
+        "sha256": "f018186a40d9e014f9ef6a760182a8d7a50ade05589dbd68cc47b3e5e6d2c819",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstnBlu15WhtDrpr",
+    "pairStatus": "assembled_source_only",
+    "sourceViews": [
+      {
+        "sha256": "49144aae9401b9ebf275290a43ab49f31ae145504ada19ba93973b3af066f84d",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstnBlu15WhtDrprGlTrim",
+    "pairStatus": "assembled_source_only",
+    "sourceViews": [
+      {
+        "sha256": "b84e9eba0b37f45e63a526d0c5daef1b00c3ba25d425d5cd0211d50911a3955d",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  },
+  {
+    "sku": "GBBstnBlu15WhtDrprSlTrim",
+    "pairStatus": "assembled_source_only",
+    "sourceViews": [
+      {
+        "sha256": "cb75410b111d685a54a120d3e13d5e980415e502cd936b7918bf8b32ee558b92",
+        "view": "on"
+      }
+    ],
+    "reconciledCapOn": null
+  }
+]

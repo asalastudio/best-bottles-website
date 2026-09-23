@@ -1,0 +1,128 @@
+{
+ "schemaVersion": 1,
+ "release": "royal-kits-2026-09-19",
+ "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/royal",
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:19.628Z",
+ "shipPhrase": "ship Royal kit release 2026-09-19",
+ "published": [
+  "https://precise-raccoon-123.convex.cloud",
+  "https://helpful-elephant-638.convex.cloud"
+ ],
+ "counts": {
+  "extractedCandidates": 26,
+  "approved": 26,
+  "setAside": 0,
+  "notExtracted": 3
+ },
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/royal-kits.jpg",
+ "reviewSheetSha256": "0b3b82d63c6c28877c6ac000f1697ec5f2a12b0114da7f13a85a58b9c207da8c",
+ "rows": [
+  {
+   "sku": "GBRoyal13BlkSht",
+   "plateSha256": "4e16c918751b9af64d617a4086ea2f3fb20e857a371d838db95138cb50f1b830"
+  },
+  {
+   "sku": "GBRoyal13Gl",
+   "plateSha256": "67998fac9f4b498915a1a72b173050ad7a6a06a6653bbb5f6338fa6fd089460a"
+  },
+  {
+   "sku": "GBRoyal13MtlRollBlkSh",
+   "plateSha256": "202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6"
+  },
+  {
+   "sku": "GBRoyal13MtlRollCuMatt",
+   "plateSha256": "c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67"
+  },
+  {
+   "sku": "GBRoyal13MtlRollGlMatt",
+   "plateSha256": "1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77"
+  },
+  {
+   "sku": "GBRoyal13MtlRollGlSh",
+   "plateSha256": "a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6"
+  },
+  {
+   "sku": "GBRoyal13MtlRollPinkDot",
+   "plateSha256": "59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339"
+  },
+  {
+   "sku": "GBRoyal13MtlRollSlDot",
+   "plateSha256": "5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad"
+  },
+  {
+   "sku": "GBRoyal13MtlRollSlMatt",
+   "plateSha256": "76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4"
+  },
+  {
+   "sku": "GBRoyal13MtlRollSlSh",
+   "plateSha256": "85df0c50c4a75b1ced082afaa783cc4e0b919618db969e96ac8609cee4437354"
+  },
+  {
+   "sku": "GBRoyal13RollBlkSh",
+   "plateSha256": "202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6"
+  },
+  {
+   "sku": "GBRoyal13RollCuMatt",
+   "plateSha256": "c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67"
+  },
+  {
+   "sku": "GBRoyal13RollGlMatt",
+   "plateSha256": "1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77"
+  },
+  {
+   "sku": "GBRoyal13RollGlSh",
+   "plateSha256": "a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6"
+  },
+  {
+   "sku": "GBRoyal13RollPinkDot",
+   "plateSha256": "59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339"
+  },
+  {
+   "sku": "GBRoyal13RollSlDot",
+   "plateSha256": "5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad"
+  },
+  {
+   "sku": "GBRoyal13RollSlMatt",
+   "plateSha256": "76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4"
+  },
+  {
+   "sku": "GBRoyal13Sl",
+   "plateSha256": "5a69bea3dc6a8d30e737ea114fcaf7f6fd0c0941f61579a5cc18adebdf61362f"
+  },
+  {
+   "sku": "GBRoyal13SpryBlkSh",
+   "plateSha256": "d384a38ffba2f6f9159232edf06ad5f400ceae9e214a4fe08667529a7d53840d"
+  },
+  {
+   "sku": "GBRoyal13SpryBluMatt",
+   "plateSha256": "f1cb91e6a722a163a4a971d94f00f292774ff25b99dc474708099fb09beaf148"
+  },
+  {
+   "sku": "GBRoyal13SpryCuMatt",
+   "plateSha256": "6fad847a73f78c821b54c6adb8f5ef7863e3a90e48eec5678e723dc4cea72495"
+  },
+  {
+   "sku": "GBRoyal13SpryGlMatt",
+   "plateSha256": "665531dfb62106db5c723767ad95640468e1e30be26b200c49f3475f4472646d"
+  },
+  {
+   "sku": "GBRoyal13SpryGlSh",
+   "plateSha256": "c22910054da4e7b38893d80356e4e919088ca270e99783072c8643cf656bf3ab"
+  },
+  {
+   "sku": "GBRoyal13SprySlMatt",
+   "plateSha256": "7d5b2472b71368b63eb4c77b224c1bded296eafe5dbd7551cd4b1f7169e2b638"
+  },
+  {
+   "sku": "GBRoyal13SprySlSh",
+   "plateSha256": "3d1dff50f28ad343fbdc43baa6e26ce22135ff7c845ee2651194129e4accf970"
+  },
+  {
+   "sku": "GBRoyal13WhtSht",
+   "plateSha256": "f403f4e880747c038f66723f5b8149a878fc28089dd3252a44a50cf33ea572c1"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "901b7567e78d822ce54681768e2d4baac82e488f886055a51cfa0f47065410ba"
+}

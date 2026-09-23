@@ -1,0 +1,2041 @@
+{
+ "version": 1,
+ "createdAt": "2026-09-21",
+ "labelledBy": "Claude draft — labels need review by Jordan / Best Bottles before results are quoted",
+ "splitRule": "id number divisible by 3 = holdout (not used for tuning question wording)",
+ "applicatorIntents": [
+  "rollon",
+  "spray",
+  "bulb_spray",
+  "lotionpump",
+  "dropper",
+  "reducer",
+  "cap",
+  "stopper",
+  "several",
+  "not_stated",
+  "not_carried"
+ ],
+ "notes": "expect.family / glassColour are set only when the customer names them; cap and sprayer colours are not glass colours. expect.atomizerFinish / capFinish are graded only when present (omit to skip; null = none named). Finish-only queries (shiny gold, matte black, pink with dots) must be cap_finish or atomizer_finish, never glass and never the Cap/Closure applicator. capacityMl is graded in code with a ±10% tolerance. wants: component_only only when the customer says they already have bottles or asks for parts only; naming just an applicator counts as complete_bottle.",
+ "cases": [
+  {
+   "id": "c001",
+   "text": "roll on bottles for perfume oil",
+   "split": "tune",
+   "expect": {
+    "applicator": "rollon",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c002",
+   "text": "rollerball bottles 10ml",
+   "split": "tune",
+   "expect": {
+    "applicator": "rollon",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 10,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c003",
+   "text": "role on bottle 10ml",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 10,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "voice"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c004",
+   "text": "roller bottles for essential oils",
+   "split": "tune",
+   "expect": {
+    "applicator": "rollon",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c005",
+   "text": "roll-on perfume bottle amber",
+   "split": "tune",
+   "expect": {
+    "applicator": "rollon",
+    "family": null,
+    "glassColour": "Amber",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c006",
+   "text": "10 ml roll on in cobalt blue",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "family": null,
+    "glassColour": "Cobalt Blue",
+    "capacityMl": 10,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c007",
+   "text": "I sell perfume oils on Etsy and need little roller bottles",
+   "split": "tune",
+   "expect": {
+    "applicator": "rollon",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "indie"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c008",
+   "text": "bottle with a ball applicator for under eye serum",
+   "split": "tune",
+   "expect": {
+    "applicator": "rollon",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "descriptive"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c009",
+   "text": "metal roller ball bottle 5ml",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 5,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "trade"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c010",
+   "text": "rollon for attar 6ml",
+   "split": "tune",
+   "expect": {
+    "applicator": "rollon",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 6,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c011",
+   "text": "clear roll on bottles with gold caps",
+   "split": "tune",
+   "expect": {
+    "applicator": "rollon",
+    "family": null,
+    "glassColour": "Clear",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "colour-trap"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c012",
+   "text": "roll in bottle for my oil",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "voice"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c013",
+   "text": "frosted roller bottles",
+   "split": "tune",
+   "expect": {
+    "applicator": "rollon",
+    "family": null,
+    "glassColour": "Frosted",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c014",
+   "text": "roll-on 9ml cylinder",
+   "split": "tune",
+   "expect": {
+    "applicator": "rollon",
+    "family": "Cylinder",
+    "glassColour": null,
+    "capacityMl": 9,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c015",
+   "text": "perfume atomiser 30ml",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 30,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "spelling"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c016",
+   "text": "fine mist spray bottle 50ml",
+   "split": "tune",
+   "expect": {
+    "applicator": "spray",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 50,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c017",
+   "text": "something to spritz cologne with",
+   "split": "tune",
+   "expect": {
+    "applicator": "spray",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "descriptive"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c018",
+   "text": "not a roller, I want a spray top",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "negation"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c019",
+   "text": "pump spray bottle for body mist",
+   "split": "tune",
+   "expect": {
+    "applicator": "spray",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "confusable"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c020",
+   "text": "mister bottle for room spray",
+   "split": "tune",
+   "expect": {
+    "applicator": "spray",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "descriptive"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c021",
+   "text": "a sample of your 30ml spray bottle",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 30,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c022",
+   "text": "travel perfume sprayer 5ml",
+   "split": "tune",
+   "expect": {
+    "applicator": "spray",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 5,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c023",
+   "text": "empty cologne bottle 100 ml",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 100,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "ambiguous"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c024",
+   "text": "glass spray bottle amber 100ml",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "family": null,
+    "glassColour": "Amber",
+    "capacityMl": 100,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c025",
+   "text": "spray bottles for my perfume brand, clear, 50ml",
+   "split": "tune",
+   "expect": {
+    "applicator": "spray",
+    "family": null,
+    "glassColour": "Clear",
+    "capacityMl": 50,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "indie"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c026",
+   "text": "perfume bottle that sprays",
+   "split": "tune",
+   "expect": {
+    "applicator": "spray",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "descriptive"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c027",
+   "text": "atomizer bottle for decants",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "family-trap"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c028",
+   "text": "sprayer bottle in black glass",
+   "split": "tune",
+   "expect": {
+    "applicator": "spray",
+    "family": null,
+    "glassColour": "none_named",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c029",
+   "text": "perfume spray pump bottle 100ml",
+   "split": "tune",
+   "expect": {
+    "applicator": "spray",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 100,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "trade"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c030",
+   "text": "vintage perfume bottle with the squeeze bulb and tassel",
+   "split": "holdout",
+   "expect": {
+    "applicator": "bulb_spray",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": true
+   },
+   "tags": [
+    "descriptive"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c031",
+   "text": "antique style bulb atomizer",
+   "split": "tune",
+   "expect": {
+    "applicator": "bulb_spray",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c032",
+   "text": "old fashioned perfume bottle with the puffer ball",
+   "split": "tune",
+   "expect": {
+    "applicator": "bulb_spray",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "descriptive"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c033",
+   "text": "perfume bottle with a tassel",
+   "split": "holdout",
+   "expect": {
+    "applicator": "bulb_spray",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": true
+   },
+   "tags": [
+    "descriptive"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c034",
+   "text": "bulb sprayer without the tassel",
+   "split": "tune",
+   "expect": {
+    "applicator": "bulb_spray",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": false
+   },
+   "tags": [
+    "negation"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c035",
+   "text": "lotion bottle with pump 100ml",
+   "split": "tune",
+   "expect": {
+    "applicator": "lotionpump",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 100,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c036",
+   "text": "treatment pump for face cream",
+   "split": "holdout",
+   "expect": {
+    "applicator": "lotionpump",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "trade"
+   ],
+   "source": "constructed",
+   "labelChange": "2026-09-21: wants unclear -> complete_bottle under the revised rule (parts-only only when the customer says they already have bottles or asks for parts only)"
+  },
+  {
+   "id": "c037",
+   "text": "serum pump bottle 30ml",
+   "split": "tune",
+   "expect": {
+    "applicator": "lotionpump",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 30,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c038",
+   "text": "pump bottle for body lotion",
+   "split": "tune",
+   "expect": {
+    "applicator": "lotionpump",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c039",
+   "text": "hand cream dispenser bottle",
+   "split": "holdout",
+   "expect": {
+    "applicator": "lotionpump",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "descriptive"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c040",
+   "text": "glass pump bottle for foundation",
+   "split": "tune",
+   "expect": {
+    "applicator": "lotionpump",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "descriptive"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c041",
+   "text": "serum bottle with pipette",
+   "split": "tune",
+   "expect": {
+    "applicator": "dropper",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "descriptive"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c042",
+   "text": "glass dropper bottles 30ml",
+   "split": "holdout",
+   "expect": {
+    "applicator": "dropper",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 30,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c043",
+   "text": "eye dropper bottle amber 15ml",
+   "split": "tune",
+   "expect": {
+    "applicator": "dropper",
+    "family": null,
+    "glassColour": "Amber",
+    "capacityMl": 15,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c044",
+   "text": "tincture bottle",
+   "split": "tune",
+   "expect": {
+    "applicator": "dropper",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "trade"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c045",
+   "text": "cobalt blue dropper bottle",
+   "split": "holdout",
+   "expect": {
+    "applicator": "dropper",
+    "family": null,
+    "glassColour": "Cobalt Blue",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c046",
+   "text": "boston round with dropper 2 oz",
+   "split": "tune",
+   "expect": {
+    "applicator": "dropper",
+    "family": "Boston Round",
+    "glassColour": null,
+    "capacityMl": 60,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c047",
+   "text": "orifice reducer for essential oils 15ml",
+   "split": "tune",
+   "expect": {
+    "applicator": "reducer",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 15,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "trade"
+   ],
+   "source": "constructed",
+   "labelChange": "2026-09-21: wants unclear -> complete_bottle under the revised rule (parts-only only when the customer says they already have bottles or asks for parts only)"
+  },
+  {
+   "id": "c048",
+   "text": "euro dropper bottle",
+   "split": "holdout",
+   "expect": {
+    "applicator": "reducer",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "confusable"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c049",
+   "text": "splash bottle for aftershave",
+   "split": "tune",
+   "expect": {
+    "applicator": "reducer",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "descriptive"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c050",
+   "text": "dripper insert bottle",
+   "split": "tune",
+   "expect": {
+    "applicator": "reducer",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "trade"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c051",
+   "text": "splash on cologne bottle",
+   "split": "holdout",
+   "expect": {
+    "applicator": "reducer",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c052",
+   "text": "bottle with a plug that lets out drops",
+   "split": "tune",
+   "expect": {
+    "applicator": "reducer",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "descriptive"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c053",
+   "text": "I need caps for my 18-415 bottles",
+   "split": "tune",
+   "expect": {
+    "applicator": "cap",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only",
+    "tassel": null
+   },
+   "tags": [
+    "component"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c054",
+   "text": "just the lids, black, for 13-415 necks",
+   "split": "holdout",
+   "expect": {
+    "applicator": "cap",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only",
+    "tassel": null
+   },
+   "tags": [
+    "colour-trap"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c055",
+   "text": "replacement screw caps",
+   "split": "tune",
+   "expect": {
+    "applicator": "cap",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only",
+    "tassel": null
+   },
+   "tags": [
+    "component"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c056",
+   "text": "bottle with a black cap",
+   "split": "tune",
+   "expect": {
+    "applicator": "cap",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "colour-trap"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c057",
+   "text": "bottle with a glass wand dabber",
+   "split": "holdout",
+   "expect": {
+    "applicator": "stopper",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "descriptive"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c058",
+   "text": "apothecary bottle with glass stopper",
+   "split": "tune",
+   "expect": {
+    "applicator": "stopper",
+    "family": "Apothecary",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c059",
+   "text": "perfume bottle with a glass rod applicator",
+   "split": "tune",
+   "expect": {
+    "applicator": "stopper",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "trade"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c060",
+   "text": "roll-on, sprayer, and lotion pump options in 9ml",
+   "split": "holdout",
+   "expect": {
+    "applicator": "several",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 9,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "several"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c061",
+   "text": "do you have this in both a roller and a spray version",
+   "split": "tune",
+   "expect": {
+    "applicator": "several",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "several"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c062",
+   "text": "dropper or pump bottles for serum",
+   "split": "tune",
+   "expect": {
+    "applicator": "several",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "several"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c063",
+   "text": "amber boston round 1 oz",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "family": "Boston Round",
+    "glassColour": "Amber",
+    "capacityMl": 30,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c064",
+   "text": "10ml bottle for attar",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 10,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "use-only"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c065",
+   "text": "small glass bottles for samples",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "use-only"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c066",
+   "text": "cobalt blue glass bottles",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": "Cobalt Blue",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c067",
+   "text": "do you sell square perfume bottles",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": "Square",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "shape"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c068",
+   "text": "50ml cylinder bottle",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": "Cylinder",
+    "glassColour": null,
+    "capacityMl": 50,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c069",
+   "text": "frosted glass bottle 100ml",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": "Frosted",
+    "capacityMl": 100,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c070",
+   "text": "sample vials 2ml",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": "Vial",
+    "glassColour": null,
+    "capacityMl": 2,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c071",
+   "text": "bottles for my beard oil",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "use-only"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c072",
+   "text": "elegant bottle for a wedding favor",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "family-trap"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c073",
+   "text": "I want something sleek and minimal for my brand",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "family-trap"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c074",
+   "text": "can Grace help me find a bottle for my perfume",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "family-trap"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c075",
+   "text": "decorative bottles for gifts",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "family": "Decorative",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "shape"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c076",
+   "text": "diamond shaped perfume bottle",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": "Diamond",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "shape"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c077",
+   "text": "tall thin bottle 30ml",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 30,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "descriptive"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c078",
+   "text": "empire bottle 50ml",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "family": "Empire",
+    "glassColour": null,
+    "capacityMl": 50,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "named"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c079",
+   "text": "diva bottle in clear",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": "Diva",
+    "glassColour": "Clear",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "named"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c080",
+   "text": "replacement sprayer that fits my 50ml empire bottle",
+   "split": "tune",
+   "expect": {
+    "applicator": "spray",
+    "family": "Empire",
+    "glassColour": null,
+    "capacityMl": 50,
+    "wants": "component_only",
+    "tassel": null
+   },
+   "tags": [
+    "component"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c081",
+   "text": "roller ball fitments for 10ml bottles",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 10,
+    "wants": "component_only",
+    "tassel": null
+   },
+   "tags": [
+    "component"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c082",
+   "text": "spare pumps for my lotion bottles",
+   "split": "tune",
+   "expect": {
+    "applicator": "lotionpump",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only",
+    "tassel": null
+   },
+   "tags": [
+    "component"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c083",
+   "text": "droppers only, no bottles",
+   "split": "tune",
+   "expect": {
+    "applicator": "dropper",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only",
+    "tassel": null
+   },
+   "tags": [
+    "component"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c084",
+   "text": "sprayer tops for 13-415 neck",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only",
+    "tassel": null
+   },
+   "tags": [
+    "component"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c085",
+   "text": "black bottle with gold cap",
+   "split": "tune",
+   "expect": {
+    "applicator": "cap",
+    "family": null,
+    "glassColour": "none_named",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "colour-trap"
+   ],
+   "source": "constructed",
+   "labelChange": "2026-09-21: not_stated -> cap, to match c056 'bottle with a black cap' and c087 (a named plain cap is a Cap/Closure bottle)"
+  },
+  {
+   "id": "c086",
+   "text": "clear bottle with a black cap 30ml",
+   "split": "tune",
+   "expect": {
+    "applicator": "cap",
+    "family": null,
+    "glassColour": "Clear",
+    "capacityMl": 30,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "colour-trap"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c087",
+   "text": "gold perfume bottle",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": "none_named",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c088",
+   "text": "brown glass bottles",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": "Amber",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "synonym"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c089",
+   "text": "blue bottles for bath oil",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": "Cobalt Blue",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "synonym"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c090",
+   "text": "amber roll on with a silver cap",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "family": null,
+    "glassColour": "Amber",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "colour-trap"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c091",
+   "text": "frosted spray bottle with a black top",
+   "split": "tune",
+   "expect": {
+    "applicator": "spray",
+    "family": null,
+    "glassColour": "Frosted",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "colour-trap"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c092",
+   "text": "flint glass dropper bottle",
+   "split": "tune",
+   "expect": {
+    "applicator": "dropper",
+    "family": null,
+    "glassColour": "Clear",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "trade"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c093",
+   "text": "green glass bottle for essential oils",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": "Green",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c094",
+   "text": "airless pump bottle for serum",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_carried",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "not-carried"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c095",
+   "text": "trigger spray bottle for cleaning",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_carried",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "not-carried"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c096",
+   "text": "foaming pump bottle",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_carried",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "not-carried"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c097",
+   "text": "plastic squeeze tube for lip gloss",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_carried",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "not-carried"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c098",
+   "text": "a tomizer for perfume",
+   "split": "tune",
+   "expect": {
+    "applicator": "spray",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "voice"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c099",
+   "text": "do you have them rollers in amber",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "family": null,
+    "glassColour": "Amber",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "voice"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c100",
+   "text": "the little spray ones, like 5 ml",
+   "split": "tune",
+   "expect": {
+    "applicator": "spray",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 5,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "voice"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c101",
+   "text": "I'm looking for a bottle for perfume oil that won't leak in my purse",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "use-only"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c102",
+   "text": "mist sprayer bottle 10ml clear",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "family": null,
+    "glassColour": "Clear",
+    "capacityMl": 10,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c103",
+   "text": "can I get the Cylinder in a roll on",
+   "split": "tune",
+   "expect": {
+    "applicator": "rollon",
+    "family": "Cylinder",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "named"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c104",
+   "text": "lotion pump, not a spray",
+   "split": "tune",
+   "expect": {
+    "applicator": "lotionpump",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "negation"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c105",
+   "text": "no dropper, just a regular cap",
+   "split": "holdout",
+   "expect": {
+    "applicator": "cap",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "negation"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c106",
+   "text": "perfume bottle, splash not spray",
+   "split": "tune",
+   "expect": {
+    "applicator": "reducer",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "negation"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c107",
+   "text": "I want the spray version not the roll-on",
+   "split": "tune",
+   "expect": {
+    "applicator": "spray",
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "negation"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c108",
+   "text": "boston round bottles with droppers, amber, 4oz",
+   "split": "holdout",
+   "expect": {
+    "applicator": "dropper",
+    "family": "Boston Round",
+    "glassColour": "Amber",
+    "capacityMl": 120,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c109",
+   "text": "shiny gold",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "atomizerFinish": null,
+    "capFinish": "Shiny Gold",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "finish-only",
+    "cap-finish"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c110",
+   "text": "matte black",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "atomizerFinish": null,
+    "capFinish": "Matte Black",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "finish-only",
+    "cap-finish"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c111",
+   "text": "pink with dots",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "atomizerFinish": "Pink with Dots",
+    "capFinish": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "finish-only",
+    "atomizer-finish"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c112",
+   "text": "shiny gold cap",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "atomizerFinish": null,
+    "capFinish": "Shiny Gold",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "finish-only",
+    "cap-finish"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c113",
+   "text": "silver with stars",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "atomizerFinish": "Silver with Star Patterns",
+    "capFinish": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "finish-only",
+    "atomizer-finish"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c114",
+   "text": "frosted glass bottles",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": "Frosted",
+    "atomizerFinish": null,
+    "capFinish": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "finish-only",
+    "glass-colour"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c115",
+   "text": "pink with dots atomizer",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "atomizerFinish": "Pink with Dots",
+    "capFinish": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "finish-only",
+    "atomizer-finish"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c116",
+   "text": "matte gold",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "atomizerFinish": null,
+    "capFinish": "Matte Gold",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "finish-only",
+    "cap-finish"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c117",
+   "text": "amber glass",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": "Amber",
+    "atomizerFinish": null,
+    "capFinish": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "finish-only",
+    "glass-colour"
+   ],
+   "source": "constructed"
+  }
+ ]
+}

@@ -35,6 +35,7 @@
 /.superpowers/
 
 # Local scratch and generated test outputs
+/output/cylinder-fitment-repair/
 /tmp/
 /topaz-test/
 /ziOGLQ3X
@@ -182,6 +183,7 @@ Best-Bottles-Orphan-urls/
 
 # paper-doll pipeline output (published to object storage, never committed)
 dist/
+data/paper-doll/**/*.assembled.webp
 
 # point-in-time copies of the Convex catalogue — the deployment is the source of
 # truth, not a JSON dump in git. Regenerate with:
@@ -201,3 +203,25 @@ data/paper-doll/plates-snapshot.json
 
 # Immutable local Round review v1 exports; the catalog ships the normalized v2 set.
 /public/images/catalog/round-enhancement/aligned/*.premium-aligned-v1.png
+
+# asset ledger: downloaded plate images used only to measure them
+data/asset-ledger/plates-cache/
+public/assets/homepage.png-cache/
+public/assets/sketches/*.png
+public/assets/cards/*.png
+public/assets/hero/**/*.png
+public/assets/hero/*.png
+public/assets/hero/frames/_mask.png
+public/local-kits/
+.env*.local
+
+# Local raw Cylinder generation packages; final PNGs and manifests are versioned.
+/output/imagegen/cylinder-25-30-2026-09-22/
+/output/imagegen/cylinder-9-slim-2026-09-22/
+
+# Local four-family component repair snapshots and browser captures.
+/data/repairs/four-family-components-2026-09-22/production-before.json
+/data/repairs/four-family-components-2026-09-22/local-kits.json
+/output/four-family-component-cleanup/
+/output/imagegen/circle15-fixed-body-pilot/
+/output/component-release-2026-09-22/

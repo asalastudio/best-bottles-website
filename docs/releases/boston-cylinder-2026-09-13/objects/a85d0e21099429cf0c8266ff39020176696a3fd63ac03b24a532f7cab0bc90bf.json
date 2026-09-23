@@ -1,0 +1,2025 @@
+{
+  "generatedAt": "2026-09-13T07:12:35.427071+00:00",
+  "builder": {
+    "name": "prepare-cylinder-plate-release.py",
+    "version": "1.0.0"
+  },
+  "canvas": {
+    "width": 1000,
+    "height": 1100
+  },
+  "rows": [
+    {
+      "websiteSku": "GBCyl1ozRollWht",
+      "graceSku": "GB-CYL-CLR-28ML-RBL-WHT",
+      "productGroupId": "kh74mv3vd64tqn8kkvg5rwkd3s8dq8q6",
+      "familyId": "cylinder-28ml-clear-16mm",
+      "familyName": "Cylinder 28 mL \u2014 Clear",
+      "neck": "16mm",
+      "plate": {
+        "key": "plates/cylinder-28ml-clear-16mm/GBCyl1ozRollWht/e1b5663e5ed2045effd3971c4cd08a9b1fdfa6b776a0f6df82ebd1648b277d16.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-28ml-clear-16mm/GBCyl1ozRollWht/e1b5663e5ed2045effd3971c4cd08a9b1fdfa6b776a0f6df82ebd1648b277d16.front-on-1000x1100.webp",
+        "sha256": "e1b5663e5ed2045effd3971c4cd08a9b1fdfa6b776a0f6df82ebd1648b277d16",
+        "bytes": 7554,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "13. 16 mm/1. 28ml Capped/4.  GBCyl28RollWht.psd",
+        "sourceSha256": "a6a88ec3fe6e0bd7081d0fb0dc7043621c59e34a9bd0c64547ae25fb364f666c",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-28ml-clear-16mm/GBCyl1ozRollWht/e1b5663e5ed2045effd3971c4cd08a9b1fdfa6b776a0f6df82ebd1648b277d16.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-28ml-clear-16mm/GBCyl1ozRollWht/e1b5663e5ed2045effd3971c4cd08a9b1fdfa6b776a0f6df82ebd1648b277d16.front-on-1000x1100.webp",
+        "sha256": "e1b5663e5ed2045effd3971c4cd08a9b1fdfa6b776a0f6df82ebd1648b277d16",
+        "bytes": 7554,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "13. 16 mm/1. 28ml Capped/4.  GBCyl28RollWht.psd",
+        "sourceSha256": "a6a88ec3fe6e0bd7081d0fb0dc7043621c59e34a9bd0c64547ae25fb364f666c",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-28ml-clear-16mm/GBCyl1ozRollWht/006ee456ea69189ba51475ad5cf6479f1956d1a9e3b3b698873d3a4704c49a39.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-28ml-clear-16mm/GBCyl1ozRollWht/006ee456ea69189ba51475ad5cf6479f1956d1a9e3b3b698873d3a4704c49a39.front-off-1000x1100.webp",
+        "sha256": "006ee456ea69189ba51475ad5cf6479f1956d1a9e3b3b698873d3a4704c49a39",
+        "bytes": 80016,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "13. 16 mm/2. 28ml  Uncapped/4.  GBCyl28RollWht.psd",
+        "sourceSha256": "6f63bd84d0ababc7a48ab3c26c6804c7ca2e19e032c6828dcbda1fc1534534d0",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-28ml-clear-16mm/GBCyl1ozRollWht/006ee456ea69189ba51475ad5cf6479f1956d1a9e3b3b698873d3a4704c49a39.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-28ml-clear-16mm/GBCyl1ozRollWht/006ee456ea69189ba51475ad5cf6479f1956d1a9e3b3b698873d3a4704c49a39.front-off-1000x1100.webp",
+        "sha256": "006ee456ea69189ba51475ad5cf6479f1956d1a9e3b3b698873d3a4704c49a39",
+        "bytes": 80016,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "13. 16 mm/2. 28ml  Uncapped/4.  GBCyl28RollWht.psd",
+        "sourceSha256": "6f63bd84d0ababc7a48ab3c26c6804c7ca2e19e032c6828dcbda1fc1534534d0",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "a090482718bcf2fb249acc8e6c1cc234ceb12d74784307baafb32dc4e9e201b9",
+      "pairCheck": {
+        "sku": "GBCyl1ozRollWht",
+        "bodyMeanError": 1.043,
+        "region": [
+          375,
+          521,
+          619,
+          991
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-28ml-clear-16mm/GBCyl1ozRollWht/e1b5663e5ed2045effd3971c4cd08a9b1fdfa6b776a0f6df82ebd1648b277d16.front-on-1000x1100.webp",
+          "sha256": "e1b5663e5ed2045effd3971c4cd08a9b1fdfa6b776a0f6df82ebd1648b277d16",
+          "url": "/images/plate-contact-sheets/e1b5663e5ed2045effd3971c4cd08a9b1fdfa6b776a0f6df82ebd1648b277d16.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCyl5RollBlkSh",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SBLK",
+      "productGroupId": "kh7cg4q3te980y8e8pzh55tk458dpqtf",
+      "familyId": "cylinder-5ml-clear-13-415",
+      "familyName": "Cylinder 5 mL \u2014 Clear",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollBlkSh/a8eb2242e1eaec36e9e0a1b498a38c46dfcc3913cd6449d3eee5d6ba4701635f.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollBlkSh/a8eb2242e1eaec36e9e0a1b498a38c46dfcc3913cd6449d3eee5d6ba4701635f.front-on-1000x1100.webp",
+        "sha256": "a8eb2242e1eaec36e9e0a1b498a38c46dfcc3913cd6449d3eee5d6ba4701635f",
+        "bytes": 58018,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/25. GBCyl5RollBlkSh.psd",
+        "sourceSha256": "e371531e20f31aa4710c058af51461f69531a4795d7d4d1a7ab3369492d143e7",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollBlkSh/a8eb2242e1eaec36e9e0a1b498a38c46dfcc3913cd6449d3eee5d6ba4701635f.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollBlkSh/a8eb2242e1eaec36e9e0a1b498a38c46dfcc3913cd6449d3eee5d6ba4701635f.front-on-1000x1100.webp",
+        "sha256": "a8eb2242e1eaec36e9e0a1b498a38c46dfcc3913cd6449d3eee5d6ba4701635f",
+        "bytes": 58018,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/25. GBCyl5RollBlkSh.psd",
+        "sourceSha256": "e371531e20f31aa4710c058af51461f69531a4795d7d4d1a7ab3369492d143e7",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollBlkSh/89a5ff035538e76533ff13ee52b0672d40265eecba556ab695dbd0fb070764e8.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollBlkSh/89a5ff035538e76533ff13ee52b0672d40265eecba556ab695dbd0fb070764e8.front-off-1000x1100.webp",
+        "sha256": "89a5ff035538e76533ff13ee52b0672d40265eecba556ab695dbd0fb070764e8",
+        "bytes": 81538,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /25. GBCyl5RollBlkSh.psd",
+        "sourceSha256": "70ea08f12d4df91a7f696949259206c9478e29fb57d087c7677b34b74a585c10",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollBlkSh/89a5ff035538e76533ff13ee52b0672d40265eecba556ab695dbd0fb070764e8.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollBlkSh/89a5ff035538e76533ff13ee52b0672d40265eecba556ab695dbd0fb070764e8.front-off-1000x1100.webp",
+        "sha256": "89a5ff035538e76533ff13ee52b0672d40265eecba556ab695dbd0fb070764e8",
+        "bytes": 81538,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /25. GBCyl5RollBlkSh.psd",
+        "sourceSha256": "70ea08f12d4df91a7f696949259206c9478e29fb57d087c7677b34b74a585c10",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "ea44890d83321ef6aada8ff7b58d7fe1142c834c9f331a2afc28ac58c3b5b838",
+      "pairCheck": {
+        "sku": "GBCyl5RollBlkSh",
+        "bodyMeanError": 0.0,
+        "region": [
+          399,
+          599,
+          603,
+          1051
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollBlkSh/e049bf9635e69d6224a18346dde0e27378ad283bb00e705ed747c6b82ca70f90.front-on-1000x1100.webp",
+          "sha256": "e049bf9635e69d6224a18346dde0e27378ad283bb00e705ed747c6b82ca70f90",
+          "url": "/images/plate-contact-sheets/e049bf9635e69d6224a18346dde0e27378ad283bb00e705ed747c6b82ca70f90.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCyl5RollCuMatt",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-MCPR",
+      "productGroupId": "kh7cg4q3te980y8e8pzh55tk458dpqtf",
+      "familyId": "cylinder-5ml-clear-13-415",
+      "familyName": "Cylinder 5 mL \u2014 Clear",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollCuMatt/a13f38e70a2855ea48646583b56ea031622d0abceee3751899f0581574af2367.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollCuMatt/a13f38e70a2855ea48646583b56ea031622d0abceee3751899f0581574af2367.front-on-1000x1100.webp",
+        "sha256": "a13f38e70a2855ea48646583b56ea031622d0abceee3751899f0581574af2367",
+        "bytes": 109694,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/23. GBCyl5RollCuMatt.psd",
+        "sourceSha256": "4ef2813e392a2b0c636bcd56ada335971eb8d09c9c4da71fbe6c0afa955539c6",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollCuMatt/a13f38e70a2855ea48646583b56ea031622d0abceee3751899f0581574af2367.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollCuMatt/a13f38e70a2855ea48646583b56ea031622d0abceee3751899f0581574af2367.front-on-1000x1100.webp",
+        "sha256": "a13f38e70a2855ea48646583b56ea031622d0abceee3751899f0581574af2367",
+        "bytes": 109694,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/23. GBCyl5RollCuMatt.psd",
+        "sourceSha256": "4ef2813e392a2b0c636bcd56ada335971eb8d09c9c4da71fbe6c0afa955539c6",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollCuMatt/fe782451b556560e98d85ccdc27d3538317876baffd500ad68421a1bb4326e88.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollCuMatt/fe782451b556560e98d85ccdc27d3538317876baffd500ad68421a1bb4326e88.front-off-1000x1100.webp",
+        "sha256": "fe782451b556560e98d85ccdc27d3538317876baffd500ad68421a1bb4326e88",
+        "bytes": 131368,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /23. GBCyl5RollCuMatt.psd",
+        "sourceSha256": "8210a78ade614a0cbd874693b008514ffac38ce550bda113fda1c27d0813e2db",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollCuMatt/fe782451b556560e98d85ccdc27d3538317876baffd500ad68421a1bb4326e88.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollCuMatt/fe782451b556560e98d85ccdc27d3538317876baffd500ad68421a1bb4326e88.front-off-1000x1100.webp",
+        "sha256": "fe782451b556560e98d85ccdc27d3538317876baffd500ad68421a1bb4326e88",
+        "bytes": 131368,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /23. GBCyl5RollCuMatt.psd",
+        "sourceSha256": "8210a78ade614a0cbd874693b008514ffac38ce550bda113fda1c27d0813e2db",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "7673fbfef9ae2d1d687d9c72d6a740ac0d441c7d280ead32a7c19f85a2597323",
+      "pairCheck": {
+        "sku": "GBCyl5RollCuMatt",
+        "bodyMeanError": 0.0,
+        "region": [
+          399,
+          598,
+          603,
+          1050
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollCuMatt/fac6752784f1c4bf714a0b7474f08eabb298d11a858ddcdff74337e34532b398.front-on-1000x1100.webp",
+          "sha256": "fac6752784f1c4bf714a0b7474f08eabb298d11a858ddcdff74337e34532b398",
+          "url": "/images/plate-contact-sheets/fac6752784f1c4bf714a0b7474f08eabb298d11a858ddcdff74337e34532b398.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCyl5RollGlMatt",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-MGLD",
+      "productGroupId": "kh7cg4q3te980y8e8pzh55tk458dpqtf",
+      "familyId": "cylinder-5ml-clear-13-415",
+      "familyName": "Cylinder 5 mL \u2014 Clear",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollGlMatt/9c7385981c14d94d91b044eec04626b0919b6773ab457a109422ad7f91a0fb87.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollGlMatt/9c7385981c14d94d91b044eec04626b0919b6773ab457a109422ad7f91a0fb87.front-on-1000x1100.webp",
+        "sha256": "9c7385981c14d94d91b044eec04626b0919b6773ab457a109422ad7f91a0fb87",
+        "bytes": 107618,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/17. GBCyl5RollGlMatt.psd",
+        "sourceSha256": "f871b19b635bf4879a8d7ae68210b9d9c70c68686556b82cc4d8514d7ffa4359",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollGlMatt/9c7385981c14d94d91b044eec04626b0919b6773ab457a109422ad7f91a0fb87.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollGlMatt/9c7385981c14d94d91b044eec04626b0919b6773ab457a109422ad7f91a0fb87.front-on-1000x1100.webp",
+        "sha256": "9c7385981c14d94d91b044eec04626b0919b6773ab457a109422ad7f91a0fb87",
+        "bytes": 107618,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/17. GBCyl5RollGlMatt.psd",
+        "sourceSha256": "f871b19b635bf4879a8d7ae68210b9d9c70c68686556b82cc4d8514d7ffa4359",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollGlMatt/9cd5a3629098a2c7f03c94fea4ef7808e4f9f3ea698364613f0004c3e1de909b.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollGlMatt/9cd5a3629098a2c7f03c94fea4ef7808e4f9f3ea698364613f0004c3e1de909b.front-off-1000x1100.webp",
+        "sha256": "9cd5a3629098a2c7f03c94fea4ef7808e4f9f3ea698364613f0004c3e1de909b",
+        "bytes": 139592,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /17. GBCyl5RollGlMatt.psd",
+        "sourceSha256": "a1c793b2526d82f39cc93039a5af2287126df93d2865a7e0c2840cd725a1b45b",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollGlMatt/9cd5a3629098a2c7f03c94fea4ef7808e4f9f3ea698364613f0004c3e1de909b.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollGlMatt/9cd5a3629098a2c7f03c94fea4ef7808e4f9f3ea698364613f0004c3e1de909b.front-off-1000x1100.webp",
+        "sha256": "9cd5a3629098a2c7f03c94fea4ef7808e4f9f3ea698364613f0004c3e1de909b",
+        "bytes": 139592,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /17. GBCyl5RollGlMatt.psd",
+        "sourceSha256": "a1c793b2526d82f39cc93039a5af2287126df93d2865a7e0c2840cd725a1b45b",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "84385a566cc54130ae06c48d6a02a07a83dfe4a41609644d6749bd8d4374835b",
+      "pairCheck": {
+        "sku": "GBCyl5RollGlMatt",
+        "bodyMeanError": 0.0,
+        "region": [
+          399,
+          603,
+          603,
+          1050
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollGlMatt/2d7e1e65544060ab2bd8ae446317fffbbaf42f8155658bce8f7488f0a9618c7b.front-on-1000x1100.webp",
+          "sha256": "2d7e1e65544060ab2bd8ae446317fffbbaf42f8155658bce8f7488f0a9618c7b",
+          "url": "/images/plate-contact-sheets/2d7e1e65544060ab2bd8ae446317fffbbaf42f8155658bce8f7488f0a9618c7b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCyl5RollGlSh",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SGLD",
+      "productGroupId": "kh7cg4q3te980y8e8pzh55tk458dpqtf",
+      "familyId": "cylinder-5ml-clear-13-415",
+      "familyName": "Cylinder 5 mL \u2014 Clear",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollGlSh/0945fb2279c678122101599ccb3fddb1e6b69983d79152c12ca8b8327dfb3bc1.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollGlSh/0945fb2279c678122101599ccb3fddb1e6b69983d79152c12ca8b8327dfb3bc1.front-on-1000x1100.webp",
+        "sha256": "0945fb2279c678122101599ccb3fddb1e6b69983d79152c12ca8b8327dfb3bc1",
+        "bytes": 117014,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/19. GBCyl5RollGlSh.psd",
+        "sourceSha256": "b067e2c5341265174c09c4cd053dd4f389c26a8d3e847a05f4b6a2d6e68629e8",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollGlSh/0945fb2279c678122101599ccb3fddb1e6b69983d79152c12ca8b8327dfb3bc1.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollGlSh/0945fb2279c678122101599ccb3fddb1e6b69983d79152c12ca8b8327dfb3bc1.front-on-1000x1100.webp",
+        "sha256": "0945fb2279c678122101599ccb3fddb1e6b69983d79152c12ca8b8327dfb3bc1",
+        "bytes": 117014,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/19. GBCyl5RollGlSh.psd",
+        "sourceSha256": "b067e2c5341265174c09c4cd053dd4f389c26a8d3e847a05f4b6a2d6e68629e8",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollGlSh/9a003781dfb089817fac4391446811dc927256846b40e8a4956442cf41bcf6e6.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollGlSh/9a003781dfb089817fac4391446811dc927256846b40e8a4956442cf41bcf6e6.front-off-1000x1100.webp",
+        "sha256": "9a003781dfb089817fac4391446811dc927256846b40e8a4956442cf41bcf6e6",
+        "bytes": 143066,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /19. GBCyl5RollGlSh.psd",
+        "sourceSha256": "361054bf8fcffde78949152ebb984354c195bbb2c0f2aac7f74bbe5417c11062",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollGlSh/9a003781dfb089817fac4391446811dc927256846b40e8a4956442cf41bcf6e6.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollGlSh/9a003781dfb089817fac4391446811dc927256846b40e8a4956442cf41bcf6e6.front-off-1000x1100.webp",
+        "sha256": "9a003781dfb089817fac4391446811dc927256846b40e8a4956442cf41bcf6e6",
+        "bytes": 143066,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /19. GBCyl5RollGlSh.psd",
+        "sourceSha256": "361054bf8fcffde78949152ebb984354c195bbb2c0f2aac7f74bbe5417c11062",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "38fcb43a94eeb340102064aaf6091184662798bc88039691845aec5f1bb9b174",
+      "pairCheck": {
+        "sku": "GBCyl5RollGlSh",
+        "bodyMeanError": 0.0,
+        "region": [
+          399,
+          599,
+          603,
+          1051
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollGlSh/b05009c22fc7521b7779751cf2ceb7f4772d89a9adce745d52884b0c6caf0a44.front-on-1000x1100.webp",
+          "sha256": "b05009c22fc7521b7779751cf2ceb7f4772d89a9adce745d52884b0c6caf0a44",
+          "url": "/images/plate-contact-sheets/b05009c22fc7521b7779751cf2ceb7f4772d89a9adce745d52884b0c6caf0a44.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCyl5RollPinkDot",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-PKDT",
+      "productGroupId": "kh7cg4q3te980y8e8pzh55tk458dpqtf",
+      "familyId": "cylinder-5ml-clear-13-415",
+      "familyName": "Cylinder 5 mL \u2014 Clear",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollPinkDot/a97ec31778e2eeff64abe214b99ce65ae5920b4e065cad2a06012d0f18ac191a.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollPinkDot/a97ec31778e2eeff64abe214b99ce65ae5920b4e065cad2a06012d0f18ac191a.front-on-1000x1100.webp",
+        "sha256": "a97ec31778e2eeff64abe214b99ce65ae5920b4e065cad2a06012d0f18ac191a",
+        "bytes": 117154,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/12. GBCyl5MtlRollPinkDot.psd",
+        "sourceSha256": "aba28366d40d6170ae8496a6942cbe74e25d1c6a6ee9724de24e1243b7112989",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollPinkDot/a97ec31778e2eeff64abe214b99ce65ae5920b4e065cad2a06012d0f18ac191a.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollPinkDot/a97ec31778e2eeff64abe214b99ce65ae5920b4e065cad2a06012d0f18ac191a.front-on-1000x1100.webp",
+        "sha256": "a97ec31778e2eeff64abe214b99ce65ae5920b4e065cad2a06012d0f18ac191a",
+        "bytes": 117154,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/12. GBCyl5MtlRollPinkDot.psd",
+        "sourceSha256": "aba28366d40d6170ae8496a6942cbe74e25d1c6a6ee9724de24e1243b7112989",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollPinkDot/6c7e681a046b04159157adf6bdad57b148329b73bc1a3828a804c9fb53d77225.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollPinkDot/6c7e681a046b04159157adf6bdad57b148329b73bc1a3828a804c9fb53d77225.front-off-1000x1100.webp",
+        "sha256": "6c7e681a046b04159157adf6bdad57b148329b73bc1a3828a804c9fb53d77225",
+        "bytes": 141860,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /13. GBCyl5RollPinkDot.psd",
+        "sourceSha256": "94d54eeaf98142f3cdf6cdc0d40884209d17b92380ec6cd24e50e2ae06d71e47",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollPinkDot/6c7e681a046b04159157adf6bdad57b148329b73bc1a3828a804c9fb53d77225.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollPinkDot/6c7e681a046b04159157adf6bdad57b148329b73bc1a3828a804c9fb53d77225.front-off-1000x1100.webp",
+        "sha256": "6c7e681a046b04159157adf6bdad57b148329b73bc1a3828a804c9fb53d77225",
+        "bytes": 141860,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /13. GBCyl5RollPinkDot.psd",
+        "sourceSha256": "94d54eeaf98142f3cdf6cdc0d40884209d17b92380ec6cd24e50e2ae06d71e47",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "aa92b114b2dbbc8e9b07ec040cdecb98a453ef1de76f642cbeb6c799b7109400",
+      "pairCheck": {
+        "sku": "GBCyl5RollPinkDot",
+        "bodyMeanError": 0.0,
+        "region": [
+          399,
+          607,
+          603,
+          1050
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollPinkDot/e6f43b955b35959d8922aac8f418b752b85caebdcba28c7dd95e0c2c5aa9bfac.front-on-1000x1100.webp",
+          "sha256": "e6f43b955b35959d8922aac8f418b752b85caebdcba28c7dd95e0c2c5aa9bfac",
+          "url": "/images/plate-contact-sheets/e6f43b955b35959d8922aac8f418b752b85caebdcba28c7dd95e0c2c5aa9bfac.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCyl5RollSlMatt",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-MSLV",
+      "productGroupId": "kh7cg4q3te980y8e8pzh55tk458dpqtf",
+      "familyId": "cylinder-5ml-clear-13-415",
+      "familyName": "Cylinder 5 mL \u2014 Clear",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollSlMatt/121bc40cd7263cced44bec4ea0fd0de9d66180896e83e5133a1dc24e8fa9671c.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollSlMatt/121bc40cd7263cced44bec4ea0fd0de9d66180896e83e5133a1dc24e8fa9671c.front-on-1000x1100.webp",
+        "sha256": "121bc40cd7263cced44bec4ea0fd0de9d66180896e83e5133a1dc24e8fa9671c",
+        "bytes": 61312,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/15. GBCyl5RollSlMatt.psd",
+        "sourceSha256": "516a49e59ef030134c47e56352ea3a412fda675af16db4f3f8f6f16c1897f898",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollSlMatt/121bc40cd7263cced44bec4ea0fd0de9d66180896e83e5133a1dc24e8fa9671c.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollSlMatt/121bc40cd7263cced44bec4ea0fd0de9d66180896e83e5133a1dc24e8fa9671c.front-on-1000x1100.webp",
+        "sha256": "121bc40cd7263cced44bec4ea0fd0de9d66180896e83e5133a1dc24e8fa9671c",
+        "bytes": 61312,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/15. GBCyl5RollSlMatt.psd",
+        "sourceSha256": "516a49e59ef030134c47e56352ea3a412fda675af16db4f3f8f6f16c1897f898",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollSlMatt/d955443ab73de4f5404e94e32cacf73b76eddfb780675a9c7010afb4a1bcdf38.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollSlMatt/d955443ab73de4f5404e94e32cacf73b76eddfb780675a9c7010afb4a1bcdf38.front-off-1000x1100.webp",
+        "sha256": "d955443ab73de4f5404e94e32cacf73b76eddfb780675a9c7010afb4a1bcdf38",
+        "bytes": 84472,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /15. GBCyl5RollSlMatt.psd",
+        "sourceSha256": "0b5d8ca174438c8a73c4f2f17341d0163e6c7a9b6d589774f4d6472d895ea00f",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollSlMatt/d955443ab73de4f5404e94e32cacf73b76eddfb780675a9c7010afb4a1bcdf38.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollSlMatt/d955443ab73de4f5404e94e32cacf73b76eddfb780675a9c7010afb4a1bcdf38.front-off-1000x1100.webp",
+        "sha256": "d955443ab73de4f5404e94e32cacf73b76eddfb780675a9c7010afb4a1bcdf38",
+        "bytes": 84472,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /15. GBCyl5RollSlMatt.psd",
+        "sourceSha256": "0b5d8ca174438c8a73c4f2f17341d0163e6c7a9b6d589774f4d6472d895ea00f",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "093b39c86f4a15594ec5be034d3d5e93cda0b0f76953eec1563f98d521377afd",
+      "pairCheck": {
+        "sku": "GBCyl5RollSlMatt",
+        "bodyMeanError": 0.0,
+        "region": [
+          399,
+          603,
+          603,
+          1051
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollSlMatt/d9031fd5f263ae79457ad7c005d2d267da3af25f3e70784fa4ea264709e8d16b.front-on-1000x1100.webp",
+          "sha256": "d9031fd5f263ae79457ad7c005d2d267da3af25f3e70784fa4ea264709e8d16b",
+          "url": "/images/plate-contact-sheets/d9031fd5f263ae79457ad7c005d2d267da3af25f3e70784fa4ea264709e8d16b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCyl5RollSlSh",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SSLV",
+      "productGroupId": "kh7cg4q3te980y8e8pzh55tk458dpqtf",
+      "familyId": "cylinder-5ml-clear-13-415",
+      "familyName": "Cylinder 5 mL \u2014 Clear",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollSlSh/71c028f60094034d9e697392f0d43814198c740fc7c2546d474177745a6073e1.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollSlSh/71c028f60094034d9e697392f0d43814198c740fc7c2546d474177745a6073e1.front-on-1000x1100.webp",
+        "sha256": "71c028f60094034d9e697392f0d43814198c740fc7c2546d474177745a6073e1",
+        "bytes": 67074,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/21. GBCyl5RollSlSh.psd",
+        "sourceSha256": "7ed5ee801be70e42f4498398efde703da4ecda030ffccaf46932e0044219e58a",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollSlSh/71c028f60094034d9e697392f0d43814198c740fc7c2546d474177745a6073e1.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollSlSh/71c028f60094034d9e697392f0d43814198c740fc7c2546d474177745a6073e1.front-on-1000x1100.webp",
+        "sha256": "71c028f60094034d9e697392f0d43814198c740fc7c2546d474177745a6073e1",
+        "bytes": 67074,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/21. GBCyl5RollSlSh.psd",
+        "sourceSha256": "7ed5ee801be70e42f4498398efde703da4ecda030ffccaf46932e0044219e58a",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollSlSh/cbbe3f620554773c7922b28e387081e4c24f9a0a9770da6fdffd9693b03c5361.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollSlSh/cbbe3f620554773c7922b28e387081e4c24f9a0a9770da6fdffd9693b03c5361.front-off-1000x1100.webp",
+        "sha256": "cbbe3f620554773c7922b28e387081e4c24f9a0a9770da6fdffd9693b03c5361",
+        "bytes": 90328,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /21. GBCyl5RollSlSh.psd",
+        "sourceSha256": "04c277216f2f86b61a39907f07cd31937c54fe14eb11f1b60ec8ae565faa6d17",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5RollSlSh/cbbe3f620554773c7922b28e387081e4c24f9a0a9770da6fdffd9693b03c5361.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5RollSlSh/cbbe3f620554773c7922b28e387081e4c24f9a0a9770da6fdffd9693b03c5361.front-off-1000x1100.webp",
+        "sha256": "cbbe3f620554773c7922b28e387081e4c24f9a0a9770da6fdffd9693b03c5361",
+        "bytes": 90328,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /21. GBCyl5RollSlSh.psd",
+        "sourceSha256": "04c277216f2f86b61a39907f07cd31937c54fe14eb11f1b60ec8ae565faa6d17",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "730dcadc8ca5c58bc9996c70ac0f354550d104cadd632d5edb5e8fee9d27cf94",
+      "pairCheck": {
+        "sku": "GBCyl5RollSlSh",
+        "bodyMeanError": 0.0,
+        "region": [
+          399,
+          599,
+          603,
+          1051
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollSlSh/01e9bb4ae28437b5bf7e500ccfd9c1c5990183541ee2e8ec051f113c648bbbb2.front-on-1000x1100.webp",
+          "sha256": "01e9bb4ae28437b5bf7e500ccfd9c1c5990183541ee2e8ec051f113c648bbbb2",
+          "url": "/images/plate-contact-sheets/01e9bb4ae28437b5bf7e500ccfd9c1c5990183541ee2e8ec051f113c648bbbb2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCyl5WhtSht",
+      "graceSku": "GB-CYL-CLR-5ML-WHT-S",
+      "productGroupId": "kh70ryfm2hmz484j4z93mqzfwn8dp590",
+      "familyId": "cylinder-5ml-clear-13-415",
+      "familyName": "Cylinder 5 mL \u2014 Clear",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5WhtSht/33cd973f44bea137d299ae491d504bbe584c598b7c80f7094af1a32db40c4d94.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5WhtSht/33cd973f44bea137d299ae491d504bbe584c598b7c80f7094af1a32db40c4d94.front-on-1000x1100.webp",
+        "sha256": "33cd973f44bea137d299ae491d504bbe584c598b7c80f7094af1a32db40c4d94",
+        "bytes": 9820,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/2. GBCyl5WhtSht.psd",
+        "sourceSha256": "720894b15434b6bd6b3b6088b52b85aa81930d75d2856416e5524d57d8ce6c29",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5WhtSht/33cd973f44bea137d299ae491d504bbe584c598b7c80f7094af1a32db40c4d94.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5WhtSht/33cd973f44bea137d299ae491d504bbe584c598b7c80f7094af1a32db40c4d94.front-on-1000x1100.webp",
+        "sha256": "33cd973f44bea137d299ae491d504bbe584c598b7c80f7094af1a32db40c4d94",
+        "bytes": 9820,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/2. GBCyl5WhtSht.psd",
+        "sourceSha256": "720894b15434b6bd6b3b6088b52b85aa81930d75d2856416e5524d57d8ce6c29",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5WhtSht/208439348038cb1af9131a820f2a5d315b0e1a6261d25147706d476d14614886.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5WhtSht/208439348038cb1af9131a820f2a5d315b0e1a6261d25147706d476d14614886.front-off-1000x1100.webp",
+        "sha256": "208439348038cb1af9131a820f2a5d315b0e1a6261d25147706d476d14614886",
+        "bytes": 63506,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /2. GBCyl5WhtSht.psd",
+        "sourceSha256": "34da6a19e04971098672d825d186fecea690495aa1a3c17079e42905aa8f31dc",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-5ml-clear-13-415/GBCyl5WhtSht/208439348038cb1af9131a820f2a5d315b0e1a6261d25147706d476d14614886.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-clear-13-415/GBCyl5WhtSht/208439348038cb1af9131a820f2a5d315b0e1a6261d25147706d476d14614886.front-off-1000x1100.webp",
+        "sha256": "208439348038cb1af9131a820f2a5d315b0e1a6261d25147706d476d14614886",
+        "bytes": 63506,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /2. GBCyl5WhtSht.psd",
+        "sourceSha256": "34da6a19e04971098672d825d186fecea690495aa1a3c17079e42905aa8f31dc",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "6b41d75fc6de6bf29dccabbe122f4745fecb21709a6ce4470b5fbefb742953b5",
+      "pairCheck": {
+        "sku": "GBCyl5WhtSht",
+        "bodyMeanError": 0.942,
+        "region": [
+          398,
+          670,
+          604,
+          1049
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5WhtSht/33cd973f44bea137d299ae491d504bbe584c598b7c80f7094af1a32db40c4d94.front-on-1000x1100.webp",
+          "sha256": "33cd973f44bea137d299ae491d504bbe584c598b7c80f7094af1a32db40c4d94",
+          "url": "/images/plate-contact-sheets/33cd973f44bea137d299ae491d504bbe584c598b7c80f7094af1a32db40c4d94.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCylBlu5RollBlkDot",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-BKDT",
+      "productGroupId": "kh7bfn4x5y5b3sr0dmp26z00a18dp5js",
+      "familyId": "cylinder-5ml-cobalt-blue-13-415",
+      "familyName": "Cylinder 5 mL \u2014 Cobalt Blue",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkDot/57f286efb826fb30a92b7b866ca935d51dea447a269705d53119f14dd5813e39.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkDot/57f286efb826fb30a92b7b866ca935d51dea447a269705d53119f14dd5813e39.front-on-1000x1100.webp",
+        "sha256": "57f286efb826fb30a92b7b866ca935d51dea447a269705d53119f14dd5813e39",
+        "bytes": 185204,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/27. GBCylBlu5RollBlkDot.psd",
+        "sourceSha256": "67a2b82caed19582916edc6b4cb66703b31b27c55cf3b0631b16049159685d02",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkDot/57f286efb826fb30a92b7b866ca935d51dea447a269705d53119f14dd5813e39.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkDot/57f286efb826fb30a92b7b866ca935d51dea447a269705d53119f14dd5813e39.front-on-1000x1100.webp",
+        "sha256": "57f286efb826fb30a92b7b866ca935d51dea447a269705d53119f14dd5813e39",
+        "bytes": 185204,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/27. GBCylBlu5RollBlkDot.psd",
+        "sourceSha256": "67a2b82caed19582916edc6b4cb66703b31b27c55cf3b0631b16049159685d02",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkDot/62df2df28dba3256f40bc751c4783257dce040a3b3209ecefb3819597017ce38.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkDot/62df2df28dba3256f40bc751c4783257dce040a3b3209ecefb3819597017ce38.front-off-1000x1100.webp",
+        "sha256": "62df2df28dba3256f40bc751c4783257dce040a3b3209ecefb3819597017ce38",
+        "bytes": 241080,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/27. GBCylBlu5RollBlkDot.psd",
+        "sourceSha256": "48d61d4a2f06f9b1844490331dc24b3d612934dcb58dce0ca25fb9d86898b290",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkDot/62df2df28dba3256f40bc751c4783257dce040a3b3209ecefb3819597017ce38.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkDot/62df2df28dba3256f40bc751c4783257dce040a3b3209ecefb3819597017ce38.front-off-1000x1100.webp",
+        "sha256": "62df2df28dba3256f40bc751c4783257dce040a3b3209ecefb3819597017ce38",
+        "bytes": 241080,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/27. GBCylBlu5RollBlkDot.psd",
+        "sourceSha256": "48d61d4a2f06f9b1844490331dc24b3d612934dcb58dce0ca25fb9d86898b290",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "c52caf2ab1707b5ee3ed60649c4e477122e96584f539e62a4223172b1f8b5557",
+      "pairCheck": {
+        "sku": "GBCylBlu5RollBlkDot",
+        "bodyMeanError": 0.0,
+        "region": [
+          398,
+          595,
+          604,
+          1043
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkDot/aaf1bb4b9abb9090926df92ed7c344e2247bc19aa11cb5746d965619e3b43acb.front-on-1000x1100.webp",
+          "sha256": "aaf1bb4b9abb9090926df92ed7c344e2247bc19aa11cb5746d965619e3b43acb",
+          "url": "/images/plate-contact-sheets/aaf1bb4b9abb9090926df92ed7c344e2247bc19aa11cb5746d965619e3b43acb.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCylBlu5RollBlkSh",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-SBLK",
+      "productGroupId": "kh7bfn4x5y5b3sr0dmp26z00a18dp5js",
+      "familyId": "cylinder-5ml-cobalt-blue-13-415",
+      "familyName": "Cylinder 5 mL \u2014 Cobalt Blue",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkSh/c1a4519ddc419476d430c0ddc38aa574fff4577bcf2f5ae674398a7f76f9ba2f.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkSh/c1a4519ddc419476d430c0ddc38aa574fff4577bcf2f5ae674398a7f76f9ba2f.front-on-1000x1100.webp",
+        "sha256": "c1a4519ddc419476d430c0ddc38aa574fff4577bcf2f5ae674398a7f76f9ba2f",
+        "bytes": 184212,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/24. GBCylBlu5MtlRollBlkSh.psd",
+        "sourceSha256": "b5509660c6f8febe00299b6a9877423dbc8a3b099ba1a32a88b30a98e745cd59",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkSh/c1a4519ddc419476d430c0ddc38aa574fff4577bcf2f5ae674398a7f76f9ba2f.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkSh/c1a4519ddc419476d430c0ddc38aa574fff4577bcf2f5ae674398a7f76f9ba2f.front-on-1000x1100.webp",
+        "sha256": "c1a4519ddc419476d430c0ddc38aa574fff4577bcf2f5ae674398a7f76f9ba2f",
+        "bytes": 184212,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/24. GBCylBlu5MtlRollBlkSh.psd",
+        "sourceSha256": "b5509660c6f8febe00299b6a9877423dbc8a3b099ba1a32a88b30a98e745cd59",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkSh/67569f00812d405f9f5391107290b80c5e0e647f4554dbb6e3a2a5899f55a717.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkSh/67569f00812d405f9f5391107290b80c5e0e647f4554dbb6e3a2a5899f55a717.front-off-1000x1100.webp",
+        "sha256": "67569f00812d405f9f5391107290b80c5e0e647f4554dbb6e3a2a5899f55a717",
+        "bytes": 236394,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/25. GBCylBlu5RollBlkSh.psd",
+        "sourceSha256": "5a09b5b1cd73fad59945894a2385158f6160565fab201fc1e0d46680a2706c02",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkSh/67569f00812d405f9f5391107290b80c5e0e647f4554dbb6e3a2a5899f55a717.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkSh/67569f00812d405f9f5391107290b80c5e0e647f4554dbb6e3a2a5899f55a717.front-off-1000x1100.webp",
+        "sha256": "67569f00812d405f9f5391107290b80c5e0e647f4554dbb6e3a2a5899f55a717",
+        "bytes": 236394,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/25. GBCylBlu5RollBlkSh.psd",
+        "sourceSha256": "5a09b5b1cd73fad59945894a2385158f6160565fab201fc1e0d46680a2706c02",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "50923b0a36480441cf96c2d4d2906e2c7bd32b6a37ad93d08167bb9839b758a0",
+      "pairCheck": {
+        "sku": "GBCylBlu5RollBlkSh",
+        "bodyMeanError": 0.0,
+        "region": [
+          398,
+          598,
+          604,
+          1043
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkSh/bef83c5a6221cd09b6d87027e6c2b83b515a2874e307656e8ee004dd2f100bc2.front-on-1000x1100.webp",
+          "sha256": "bef83c5a6221cd09b6d87027e6c2b83b515a2874e307656e8ee004dd2f100bc2",
+          "url": "/images/plate-contact-sheets/bef83c5a6221cd09b6d87027e6c2b83b515a2874e307656e8ee004dd2f100bc2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCylBlu5RollCuMatt",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-MCPR",
+      "productGroupId": "kh7bfn4x5y5b3sr0dmp26z00a18dp5js",
+      "familyId": "cylinder-5ml-cobalt-blue-13-415",
+      "familyName": "Cylinder 5 mL \u2014 Cobalt Blue",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollCuMatt/c6eca4f130c12b2eb2bcfff01d475c493fba3c9f3294d356a36994b2a2adbee4.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollCuMatt/c6eca4f130c12b2eb2bcfff01d475c493fba3c9f3294d356a36994b2a2adbee4.front-on-1000x1100.webp",
+        "sha256": "c6eca4f130c12b2eb2bcfff01d475c493fba3c9f3294d356a36994b2a2adbee4",
+        "bytes": 225240,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/22. GBCylBlu5MtlRollCuMatt.psd",
+        "sourceSha256": "ee65855174890d827f78f97e55822ef78372185fa08cae397caa45e02f682907",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollCuMatt/c6eca4f130c12b2eb2bcfff01d475c493fba3c9f3294d356a36994b2a2adbee4.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollCuMatt/c6eca4f130c12b2eb2bcfff01d475c493fba3c9f3294d356a36994b2a2adbee4.front-on-1000x1100.webp",
+        "sha256": "c6eca4f130c12b2eb2bcfff01d475c493fba3c9f3294d356a36994b2a2adbee4",
+        "bytes": 225240,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/22. GBCylBlu5MtlRollCuMatt.psd",
+        "sourceSha256": "ee65855174890d827f78f97e55822ef78372185fa08cae397caa45e02f682907",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollCuMatt/b30d59fdb9218254937098fad19d3abca3240663451ce0dd3eb24bb3de081cb1.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollCuMatt/b30d59fdb9218254937098fad19d3abca3240663451ce0dd3eb24bb3de081cb1.front-off-1000x1100.webp",
+        "sha256": "b30d59fdb9218254937098fad19d3abca3240663451ce0dd3eb24bb3de081cb1",
+        "bytes": 277382,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/23. GBCylBlu5RollCuMatt.psd",
+        "sourceSha256": "92b5439c8c9680259e9af9f6ec1b76c69d37147de71458ef3dc0b00ced7994f4",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollCuMatt/b30d59fdb9218254937098fad19d3abca3240663451ce0dd3eb24bb3de081cb1.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollCuMatt/b30d59fdb9218254937098fad19d3abca3240663451ce0dd3eb24bb3de081cb1.front-off-1000x1100.webp",
+        "sha256": "b30d59fdb9218254937098fad19d3abca3240663451ce0dd3eb24bb3de081cb1",
+        "bytes": 277382,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/23. GBCylBlu5RollCuMatt.psd",
+        "sourceSha256": "92b5439c8c9680259e9af9f6ec1b76c69d37147de71458ef3dc0b00ced7994f4",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "ebc55a3b66fe0b7662805adb67950d93b285330677e5e54fcdf5efb96855b4bc",
+      "pairCheck": {
+        "sku": "GBCylBlu5RollCuMatt",
+        "bodyMeanError": 0.0,
+        "region": [
+          398,
+          594,
+          604,
+          1043
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollCuMatt/132b0833224147aad42180dd6d2e77a3634a68c0a2f01b4a0ee3a92a15f2e5dc.front-on-1000x1100.webp",
+          "sha256": "132b0833224147aad42180dd6d2e77a3634a68c0a2f01b4a0ee3a92a15f2e5dc",
+          "url": "/images/plate-contact-sheets/132b0833224147aad42180dd6d2e77a3634a68c0a2f01b4a0ee3a92a15f2e5dc.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCylBlu5RollGlMatt",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-MGLD",
+      "productGroupId": "kh7bfn4x5y5b3sr0dmp26z00a18dp5js",
+      "familyId": "cylinder-5ml-cobalt-blue-13-415",
+      "familyName": "Cylinder 5 mL \u2014 Cobalt Blue",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlMatt/29fac87e8b8cb4451ce72f2cf0915074716ebeecd919b5fe3ae2edc7d364eaef.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlMatt/29fac87e8b8cb4451ce72f2cf0915074716ebeecd919b5fe3ae2edc7d364eaef.front-on-1000x1100.webp",
+        "sha256": "29fac87e8b8cb4451ce72f2cf0915074716ebeecd919b5fe3ae2edc7d364eaef",
+        "bytes": 223268,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/16. GBCylBlu5MtlRollGlMatt.psd",
+        "sourceSha256": "f7485b72bc2034461cc2e7a95b756161cfee1cf2c4d8a76bd19c7b5cb50e3588",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlMatt/29fac87e8b8cb4451ce72f2cf0915074716ebeecd919b5fe3ae2edc7d364eaef.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlMatt/29fac87e8b8cb4451ce72f2cf0915074716ebeecd919b5fe3ae2edc7d364eaef.front-on-1000x1100.webp",
+        "sha256": "29fac87e8b8cb4451ce72f2cf0915074716ebeecd919b5fe3ae2edc7d364eaef",
+        "bytes": 223268,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/16. GBCylBlu5MtlRollGlMatt.psd",
+        "sourceSha256": "f7485b72bc2034461cc2e7a95b756161cfee1cf2c4d8a76bd19c7b5cb50e3588",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlMatt/4b4d21718a952d753642cdce7d3d5697bc0ff0d32b71ebdf9e95e1ad48dfb6d0.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlMatt/4b4d21718a952d753642cdce7d3d5697bc0ff0d32b71ebdf9e95e1ad48dfb6d0.front-off-1000x1100.webp",
+        "sha256": "4b4d21718a952d753642cdce7d3d5697bc0ff0d32b71ebdf9e95e1ad48dfb6d0",
+        "bytes": 284602,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/17. GBCylBlu5RollGlMatt.psd",
+        "sourceSha256": "f4a9e129107a4c7087862dcc83416e582d8667fb45b8c70a0a0cd568d9321374",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlMatt/4b4d21718a952d753642cdce7d3d5697bc0ff0d32b71ebdf9e95e1ad48dfb6d0.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlMatt/4b4d21718a952d753642cdce7d3d5697bc0ff0d32b71ebdf9e95e1ad48dfb6d0.front-off-1000x1100.webp",
+        "sha256": "4b4d21718a952d753642cdce7d3d5697bc0ff0d32b71ebdf9e95e1ad48dfb6d0",
+        "bytes": 284602,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/17. GBCylBlu5RollGlMatt.psd",
+        "sourceSha256": "f4a9e129107a4c7087862dcc83416e582d8667fb45b8c70a0a0cd568d9321374",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "0dbdd2d2c4ce35f91cae5addf54f20da4fd875c6ed091997af28c3ef1e23ba6c",
+      "pairCheck": {
+        "sku": "GBCylBlu5RollGlMatt",
+        "bodyMeanError": 0.0,
+        "region": [
+          398,
+          598,
+          604,
+          1043
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlMatt/245bf92b428a0d476424fb8359f7fea486e71b51eab4c73532bd08dd2235f79b.front-on-1000x1100.webp",
+          "sha256": "245bf92b428a0d476424fb8359f7fea486e71b51eab4c73532bd08dd2235f79b",
+          "url": "/images/plate-contact-sheets/245bf92b428a0d476424fb8359f7fea486e71b51eab4c73532bd08dd2235f79b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCylBlu5RollGlSh",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-SGLD",
+      "productGroupId": "kh7bfn4x5y5b3sr0dmp26z00a18dp5js",
+      "familyId": "cylinder-5ml-cobalt-blue-13-415",
+      "familyName": "Cylinder 5 mL \u2014 Cobalt Blue",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlSh/e9ed2b831f80c7c90d8370ddd9aeb3daaff6a54592cb6d962e60bbb13f57f8e9.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlSh/e9ed2b831f80c7c90d8370ddd9aeb3daaff6a54592cb6d962e60bbb13f57f8e9.front-on-1000x1100.webp",
+        "sha256": "e9ed2b831f80c7c90d8370ddd9aeb3daaff6a54592cb6d962e60bbb13f57f8e9",
+        "bytes": 231932,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/19. GBCylBlu5RollGlSh.psd",
+        "sourceSha256": "66b2e010579c7ddb78d6917fecdf32aec00b65bb684916a2b64a6fb3b4c81af8",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlSh/e9ed2b831f80c7c90d8370ddd9aeb3daaff6a54592cb6d962e60bbb13f57f8e9.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlSh/e9ed2b831f80c7c90d8370ddd9aeb3daaff6a54592cb6d962e60bbb13f57f8e9.front-on-1000x1100.webp",
+        "sha256": "e9ed2b831f80c7c90d8370ddd9aeb3daaff6a54592cb6d962e60bbb13f57f8e9",
+        "bytes": 231932,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/19. GBCylBlu5RollGlSh.psd",
+        "sourceSha256": "66b2e010579c7ddb78d6917fecdf32aec00b65bb684916a2b64a6fb3b4c81af8",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlSh/eea9d401a75bf396c645f724518f5aebb7d6e90144d8ab7768d93d831bf3ad09.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlSh/eea9d401a75bf396c645f724518f5aebb7d6e90144d8ab7768d93d831bf3ad09.front-off-1000x1100.webp",
+        "sha256": "eea9d401a75bf396c645f724518f5aebb7d6e90144d8ab7768d93d831bf3ad09",
+        "bytes": 288896,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/19. GBCylBlu5RollGlSh.psd",
+        "sourceSha256": "e7e1dd604c6f9bdc58931fa94d1452ca16b19d77f45f5e3d77f864dbdc8b9a76",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlSh/eea9d401a75bf396c645f724518f5aebb7d6e90144d8ab7768d93d831bf3ad09.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlSh/eea9d401a75bf396c645f724518f5aebb7d6e90144d8ab7768d93d831bf3ad09.front-off-1000x1100.webp",
+        "sha256": "eea9d401a75bf396c645f724518f5aebb7d6e90144d8ab7768d93d831bf3ad09",
+        "bytes": 288896,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/19. GBCylBlu5RollGlSh.psd",
+        "sourceSha256": "e7e1dd604c6f9bdc58931fa94d1452ca16b19d77f45f5e3d77f864dbdc8b9a76",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "8930042dd1848af6c7e76110947ab3e1230a55b7491381ef4d41fba8d83f4932",
+      "pairCheck": {
+        "sku": "GBCylBlu5RollGlSh",
+        "bodyMeanError": 0.0,
+        "region": [
+          398,
+          594,
+          604,
+          1043
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlSh/0261392c3c6da08b67cae2357cce3a0d039f2ed20dec1cc8a6d2891cf454b807.front-on-1000x1100.webp",
+          "sha256": "0261392c3c6da08b67cae2357cce3a0d039f2ed20dec1cc8a6d2891cf454b807",
+          "url": "/images/plate-contact-sheets/0261392c3c6da08b67cae2357cce3a0d039f2ed20dec1cc8a6d2891cf454b807.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCylBlu5RollPinkDot",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-PKDT",
+      "productGroupId": "kh7bfn4x5y5b3sr0dmp26z00a18dp5js",
+      "familyId": "cylinder-5ml-cobalt-blue-13-415",
+      "familyName": "Cylinder 5 mL \u2014 Cobalt Blue",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollPinkDot/cc953464003ca09bd317695ec05bd088dab22cd389f89e14c7bdc66b7a480364.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollPinkDot/cc953464003ca09bd317695ec05bd088dab22cd389f89e14c7bdc66b7a480364.front-on-1000x1100.webp",
+        "sha256": "cc953464003ca09bd317695ec05bd088dab22cd389f89e14c7bdc66b7a480364",
+        "bytes": 232728,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/12. GBCylBlu5MtlRollPinkDot.psd",
+        "sourceSha256": "a9b4cd32c1ca4af24281101b6c886084df38a7f8ac1418c752eaf5e54f0fd8a7",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollPinkDot/cc953464003ca09bd317695ec05bd088dab22cd389f89e14c7bdc66b7a480364.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollPinkDot/cc953464003ca09bd317695ec05bd088dab22cd389f89e14c7bdc66b7a480364.front-on-1000x1100.webp",
+        "sha256": "cc953464003ca09bd317695ec05bd088dab22cd389f89e14c7bdc66b7a480364",
+        "bytes": 232728,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/12. GBCylBlu5MtlRollPinkDot.psd",
+        "sourceSha256": "a9b4cd32c1ca4af24281101b6c886084df38a7f8ac1418c752eaf5e54f0fd8a7",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollPinkDot/81a0e8d0074d20418edcae724301f818349f4331d93a09039d0214226c41e1bb.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollPinkDot/81a0e8d0074d20418edcae724301f818349f4331d93a09039d0214226c41e1bb.front-off-1000x1100.webp",
+        "sha256": "81a0e8d0074d20418edcae724301f818349f4331d93a09039d0214226c41e1bb",
+        "bytes": 289054,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/13. GBCylBlu5RollPinkDot.psd",
+        "sourceSha256": "520d49f2f56b18ff3bedbb00e38de02f6d68c1f4f2028bd4675f4b20517aa053",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollPinkDot/81a0e8d0074d20418edcae724301f818349f4331d93a09039d0214226c41e1bb.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollPinkDot/81a0e8d0074d20418edcae724301f818349f4331d93a09039d0214226c41e1bb.front-off-1000x1100.webp",
+        "sha256": "81a0e8d0074d20418edcae724301f818349f4331d93a09039d0214226c41e1bb",
+        "bytes": 289054,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/13. GBCylBlu5RollPinkDot.psd",
+        "sourceSha256": "520d49f2f56b18ff3bedbb00e38de02f6d68c1f4f2028bd4675f4b20517aa053",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "e6cb8fe2287acbe0310ae57294f734a3340dcb6e53ed5412fe884d5f342bd121",
+      "pairCheck": {
+        "sku": "GBCylBlu5RollPinkDot",
+        "bodyMeanError": 0.0,
+        "region": [
+          398,
+          602,
+          604,
+          1043
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollPinkDot/316cf6e41cfc7b311f0be36996dae4494262a35ba6a91543146667f0850743f5.front-on-1000x1100.webp",
+          "sha256": "316cf6e41cfc7b311f0be36996dae4494262a35ba6a91543146667f0850743f5",
+          "url": "/images/plate-contact-sheets/316cf6e41cfc7b311f0be36996dae4494262a35ba6a91543146667f0850743f5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCylBlu5RollSlDot",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-SLDT",
+      "productGroupId": "kh7bfn4x5y5b3sr0dmp26z00a18dp5js",
+      "familyId": "cylinder-5ml-cobalt-blue-13-415",
+      "familyName": "Cylinder 5 mL \u2014 Cobalt Blue",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlDot/756ea8d2d61fdc3564e7e8d71447932ee5a906aeceea91a487d53f22152dd949.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlDot/756ea8d2d61fdc3564e7e8d71447932ee5a906aeceea91a487d53f22152dd949.front-on-1000x1100.webp",
+        "sha256": "756ea8d2d61fdc3564e7e8d71447932ee5a906aeceea91a487d53f22152dd949",
+        "bytes": 186632,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/11. GBCylBlu5RollSlDot.psd",
+        "sourceSha256": "aef183f62b49e0690bb75c2b3e0eb379ac03acc47ce23e25110fba6c563ebc33",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlDot/756ea8d2d61fdc3564e7e8d71447932ee5a906aeceea91a487d53f22152dd949.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlDot/756ea8d2d61fdc3564e7e8d71447932ee5a906aeceea91a487d53f22152dd949.front-on-1000x1100.webp",
+        "sha256": "756ea8d2d61fdc3564e7e8d71447932ee5a906aeceea91a487d53f22152dd949",
+        "bytes": 186632,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/11. GBCylBlu5RollSlDot.psd",
+        "sourceSha256": "aef183f62b49e0690bb75c2b3e0eb379ac03acc47ce23e25110fba6c563ebc33",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlDot/e0e2ab4425019de371e6e4858263448a3278f20fe8d7fcdc913885c7e9e9120c.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlDot/e0e2ab4425019de371e6e4858263448a3278f20fe8d7fcdc913885c7e9e9120c.front-off-1000x1100.webp",
+        "sha256": "e0e2ab4425019de371e6e4858263448a3278f20fe8d7fcdc913885c7e9e9120c",
+        "bytes": 238638,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/11. GBCylBlu5RollSlDot.psd",
+        "sourceSha256": "775425cdf1b6d7f83547f079bdf7c22b9e81b8f5963bd740725e16ad52255cff",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlDot/e0e2ab4425019de371e6e4858263448a3278f20fe8d7fcdc913885c7e9e9120c.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlDot/e0e2ab4425019de371e6e4858263448a3278f20fe8d7fcdc913885c7e9e9120c.front-off-1000x1100.webp",
+        "sha256": "e0e2ab4425019de371e6e4858263448a3278f20fe8d7fcdc913885c7e9e9120c",
+        "bytes": 238638,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/11. GBCylBlu5RollSlDot.psd",
+        "sourceSha256": "775425cdf1b6d7f83547f079bdf7c22b9e81b8f5963bd740725e16ad52255cff",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "b5da50f4654ae6b392ce3ec313d6b427a7755fb386a5934917188a3c7b5e90cd",
+      "pairCheck": {
+        "sku": "GBCylBlu5RollSlDot",
+        "bodyMeanError": 0.0,
+        "region": [
+          400,
+          602,
+          606,
+          1043
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlDot/b787f846979b38f7828e3bf15fbed353eb02de285d69f7f2399738346aaf52e5.front-on-1000x1100.webp",
+          "sha256": "b787f846979b38f7828e3bf15fbed353eb02de285d69f7f2399738346aaf52e5",
+          "url": "/images/plate-contact-sheets/b787f846979b38f7828e3bf15fbed353eb02de285d69f7f2399738346aaf52e5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCylBlu5RollSlMatt",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-MSLV",
+      "productGroupId": "kh7bfn4x5y5b3sr0dmp26z00a18dp5js",
+      "familyId": "cylinder-5ml-cobalt-blue-13-415",
+      "familyName": "Cylinder 5 mL \u2014 Cobalt Blue",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlMatt/1cb8a010a4762882b94e90078184dbc96535109a8ecc73f9b9e24d664369e9d3.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlMatt/1cb8a010a4762882b94e90078184dbc96535109a8ecc73f9b9e24d664369e9d3.front-on-1000x1100.webp",
+        "sha256": "1cb8a010a4762882b94e90078184dbc96535109a8ecc73f9b9e24d664369e9d3",
+        "bytes": 185646,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/15. GBCylBlu5RollSlMatt.psd",
+        "sourceSha256": "1fae330bd9cb7bd52f83a5d4713d729b378c6fd65df9f1ea47c88bf9e2d8ea2f",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlMatt/1cb8a010a4762882b94e90078184dbc96535109a8ecc73f9b9e24d664369e9d3.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlMatt/1cb8a010a4762882b94e90078184dbc96535109a8ecc73f9b9e24d664369e9d3.front-on-1000x1100.webp",
+        "sha256": "1cb8a010a4762882b94e90078184dbc96535109a8ecc73f9b9e24d664369e9d3",
+        "bytes": 185646,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/15. GBCylBlu5RollSlMatt.psd",
+        "sourceSha256": "1fae330bd9cb7bd52f83a5d4713d729b378c6fd65df9f1ea47c88bf9e2d8ea2f",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlMatt/9db2c4d11ade65a4df99109072ec278ce96f69dc04ac9ed3812924ea673641f5.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlMatt/9db2c4d11ade65a4df99109072ec278ce96f69dc04ac9ed3812924ea673641f5.front-off-1000x1100.webp",
+        "sha256": "9db2c4d11ade65a4df99109072ec278ce96f69dc04ac9ed3812924ea673641f5",
+        "bytes": 240514,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/15. GBCylBlu5RollSlMatt.psd",
+        "sourceSha256": "0e1695bb3a3ecdb5432bf8617425f62b73c3ca66d27df47611cef0f8bfd05d1e",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlMatt/9db2c4d11ade65a4df99109072ec278ce96f69dc04ac9ed3812924ea673641f5.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlMatt/9db2c4d11ade65a4df99109072ec278ce96f69dc04ac9ed3812924ea673641f5.front-off-1000x1100.webp",
+        "sha256": "9db2c4d11ade65a4df99109072ec278ce96f69dc04ac9ed3812924ea673641f5",
+        "bytes": 240514,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/15. GBCylBlu5RollSlMatt.psd",
+        "sourceSha256": "0e1695bb3a3ecdb5432bf8617425f62b73c3ca66d27df47611cef0f8bfd05d1e",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "3855c2dd75635849ef4aff901d87d9d0083d988766d324c34a095dd6cf12042c",
+      "pairCheck": {
+        "sku": "GBCylBlu5RollSlMatt",
+        "bodyMeanError": 0.0,
+        "region": [
+          398,
+          602,
+          604,
+          1043
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlMatt/9a7b3f640872fa98e721e5b848a64df99aa0747c435d761274ea612ef1d9bd61.front-on-1000x1100.webp",
+          "sha256": "9a7b3f640872fa98e721e5b848a64df99aa0747c435d761274ea612ef1d9bd61",
+          "url": "/images/plate-contact-sheets/9a7b3f640872fa98e721e5b848a64df99aa0747c435d761274ea612ef1d9bd61.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCylBlu5RollSlSh",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-SSLV",
+      "productGroupId": "kh7bfn4x5y5b3sr0dmp26z00a18dp5js",
+      "familyId": "cylinder-5ml-cobalt-blue-13-415",
+      "familyName": "Cylinder 5 mL \u2014 Cobalt Blue",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlSh/26192785ac784f6773546bbf641231136020b772f3ccd4803d34ba517191da30.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlSh/26192785ac784f6773546bbf641231136020b772f3ccd4803d34ba517191da30.front-on-1000x1100.webp",
+        "sha256": "26192785ac784f6773546bbf641231136020b772f3ccd4803d34ba517191da30",
+        "bytes": 191368,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/20. GBCylBlu5MtlRollSlSh.psd",
+        "sourceSha256": "78d05dc0a691ee9b1468df981577477311642258e66b3fa1d3dfaf3580450126",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlSh/26192785ac784f6773546bbf641231136020b772f3ccd4803d34ba517191da30.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlSh/26192785ac784f6773546bbf641231136020b772f3ccd4803d34ba517191da30.front-on-1000x1100.webp",
+        "sha256": "26192785ac784f6773546bbf641231136020b772f3ccd4803d34ba517191da30",
+        "bytes": 191368,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/20. GBCylBlu5MtlRollSlSh.psd",
+        "sourceSha256": "78d05dc0a691ee9b1468df981577477311642258e66b3fa1d3dfaf3580450126",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlSh/86f6a77512a1be08a146452685ad7fa9b847f7a94599453b8b5ef194653b5d2a.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlSh/86f6a77512a1be08a146452685ad7fa9b847f7a94599453b8b5ef194653b5d2a.front-off-1000x1100.webp",
+        "sha256": "86f6a77512a1be08a146452685ad7fa9b847f7a94599453b8b5ef194653b5d2a",
+        "bytes": 245340,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/21. GBCylBlu5RollSlSh.psd",
+        "sourceSha256": "c2736322a0b6c88b1b258d0395bcadce281a96cfa8cae003fd50da46f9028cae",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlSh/86f6a77512a1be08a146452685ad7fa9b847f7a94599453b8b5ef194653b5d2a.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlSh/86f6a77512a1be08a146452685ad7fa9b847f7a94599453b8b5ef194653b5d2a.front-off-1000x1100.webp",
+        "sha256": "86f6a77512a1be08a146452685ad7fa9b847f7a94599453b8b5ef194653b5d2a",
+        "bytes": 245340,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/21. GBCylBlu5RollSlSh.psd",
+        "sourceSha256": "c2736322a0b6c88b1b258d0395bcadce281a96cfa8cae003fd50da46f9028cae",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "c0047f396ca43fa248d294cc4bd8f098915fcca5e6adc93a87041306b4ea9461",
+      "pairCheck": {
+        "sku": "GBCylBlu5RollSlSh",
+        "bodyMeanError": 0.0,
+        "region": [
+          398,
+          594,
+          604,
+          1043
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlSh/d0d518891d1794a06bb86e32bb51647b5f4320f3734eea605273903191302b2e.front-on-1000x1100.webp",
+          "sha256": "d0d518891d1794a06bb86e32bb51647b5f4320f3734eea605273903191302b2e",
+          "url": "/images/plate-contact-sheets/d0d518891d1794a06bb86e32bb51647b5f4320f3734eea605273903191302b2e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBMtlRoll28Blk",
+      "graceSku": "GB-CYL-CLR-28ML-MRL-01",
+      "productGroupId": "kh74mv3vd64tqn8kkvg5rwkd3s8dq8q6",
+      "familyId": "cylinder-28ml-clear-16mm",
+      "familyName": "Cylinder 28 mL \u2014 Clear",
+      "neck": "16mm",
+      "plate": {
+        "key": "plates/cylinder-28ml-clear-16mm/GBMtlRoll28Blk/a64c1b259fe0629ce45ae4741a1b20dd7ec3eaba15ac0935642e1b2fcfabcc80.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-28ml-clear-16mm/GBMtlRoll28Blk/a64c1b259fe0629ce45ae4741a1b20dd7ec3eaba15ac0935642e1b2fcfabcc80.front-on-1000x1100.webp",
+        "sha256": "a64c1b259fe0629ce45ae4741a1b20dd7ec3eaba15ac0935642e1b2fcfabcc80",
+        "bytes": 10580,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "13. 16 mm/1. 28ml Capped/1. GBCyl28MtlRollBlk.psd",
+        "sourceSha256": "cdb8551b2ea5caeb4469e01ad4626f277738ec12938fb653131cd4c0d4dfe288",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-28ml-clear-16mm/GBMtlRoll28Blk/a64c1b259fe0629ce45ae4741a1b20dd7ec3eaba15ac0935642e1b2fcfabcc80.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-28ml-clear-16mm/GBMtlRoll28Blk/a64c1b259fe0629ce45ae4741a1b20dd7ec3eaba15ac0935642e1b2fcfabcc80.front-on-1000x1100.webp",
+        "sha256": "a64c1b259fe0629ce45ae4741a1b20dd7ec3eaba15ac0935642e1b2fcfabcc80",
+        "bytes": 10580,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "13. 16 mm/1. 28ml Capped/1. GBCyl28MtlRollBlk.psd",
+        "sourceSha256": "cdb8551b2ea5caeb4469e01ad4626f277738ec12938fb653131cd4c0d4dfe288",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-28ml-clear-16mm/GBMtlRoll28Blk/0fc88922072c1db40b953c8ea3229dc072fa1a6707fa65268380a58674836172.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-28ml-clear-16mm/GBMtlRoll28Blk/0fc88922072c1db40b953c8ea3229dc072fa1a6707fa65268380a58674836172.front-off-1000x1100.webp",
+        "sha256": "0fc88922072c1db40b953c8ea3229dc072fa1a6707fa65268380a58674836172",
+        "bytes": 84490,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "13. 16 mm/2. 28ml  Uncapped/1. GBCyl28MtlRollBlk.psd",
+        "sourceSha256": "50d44a77f0efb65fe6c3b4e569d2138799acbe4a0136fd5708cba59286fb958c",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-28ml-clear-16mm/GBMtlRoll28Blk/0fc88922072c1db40b953c8ea3229dc072fa1a6707fa65268380a58674836172.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-28ml-clear-16mm/GBMtlRoll28Blk/0fc88922072c1db40b953c8ea3229dc072fa1a6707fa65268380a58674836172.front-off-1000x1100.webp",
+        "sha256": "0fc88922072c1db40b953c8ea3229dc072fa1a6707fa65268380a58674836172",
+        "bytes": 84490,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "13. 16 mm/2. 28ml  Uncapped/1. GBCyl28MtlRollBlk.psd",
+        "sourceSha256": "50d44a77f0efb65fe6c3b4e569d2138799acbe4a0136fd5708cba59286fb958c",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "2e82eaafff86688c59af32ac2e9afd62abd54c3fbf1bffb07abecba52e5c3178",
+      "pairCheck": {
+        "sku": "GBMtlRoll28Blk",
+        "bodyMeanError": 1.04,
+        "region": [
+          375,
+          520,
+          619,
+          991
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-28ml-clear-16mm/GBMtlRoll28Blk/a64c1b259fe0629ce45ae4741a1b20dd7ec3eaba15ac0935642e1b2fcfabcc80.front-on-1000x1100.webp",
+          "sha256": "a64c1b259fe0629ce45ae4741a1b20dd7ec3eaba15ac0935642e1b2fcfabcc80",
+          "url": "/images/plate-contact-sheets/a64c1b259fe0629ce45ae4741a1b20dd7ec3eaba15ac0935642e1b2fcfabcc80.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBMtlRoll28Wht",
+      "graceSku": "GB-CYL-CLR-28ML-MRL-02",
+      "productGroupId": "kh74mv3vd64tqn8kkvg5rwkd3s8dq8q6",
+      "familyId": "cylinder-28ml-clear-16mm",
+      "familyName": "Cylinder 28 mL \u2014 Clear",
+      "neck": "16mm",
+      "plate": {
+        "key": "plates/cylinder-28ml-clear-16mm/GBMtlRoll28Wht/1dac9f8c63fa64183174f6eaba4bd1f1be0c02f049d577504be55439aabb30ed.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-28ml-clear-16mm/GBMtlRoll28Wht/1dac9f8c63fa64183174f6eaba4bd1f1be0c02f049d577504be55439aabb30ed.front-on-1000x1100.webp",
+        "sha256": "1dac9f8c63fa64183174f6eaba4bd1f1be0c02f049d577504be55439aabb30ed",
+        "bytes": 7638,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "13. 16 mm/1. 28ml Capped/2.  GBCyl28MtlRollWht.psd",
+        "sourceSha256": "c3b5c9232ca208819699e6c3dd97ae1b70257df7cc4181c3387da279886861c9",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-28ml-clear-16mm/GBMtlRoll28Wht/1dac9f8c63fa64183174f6eaba4bd1f1be0c02f049d577504be55439aabb30ed.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-28ml-clear-16mm/GBMtlRoll28Wht/1dac9f8c63fa64183174f6eaba4bd1f1be0c02f049d577504be55439aabb30ed.front-on-1000x1100.webp",
+        "sha256": "1dac9f8c63fa64183174f6eaba4bd1f1be0c02f049d577504be55439aabb30ed",
+        "bytes": 7638,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "13. 16 mm/1. 28ml Capped/2.  GBCyl28MtlRollWht.psd",
+        "sourceSha256": "c3b5c9232ca208819699e6c3dd97ae1b70257df7cc4181c3387da279886861c9",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-28ml-clear-16mm/GBMtlRoll28Wht/1965ae0e7295e119219e6eff890d8f88a98cb5072d00fed3f2fa57bef96afac9.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-28ml-clear-16mm/GBMtlRoll28Wht/1965ae0e7295e119219e6eff890d8f88a98cb5072d00fed3f2fa57bef96afac9.front-off-1000x1100.webp",
+        "sha256": "1965ae0e7295e119219e6eff890d8f88a98cb5072d00fed3f2fa57bef96afac9",
+        "bytes": 81722,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "13. 16 mm/2. 28ml  Uncapped/2.  GBCyl28MtlRollWht.psd",
+        "sourceSha256": "14a4c0e68cc5821aa0da5f8f4f1a1ad9578c5850eb3e8f80fd28c5666faf1bd4",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-28ml-clear-16mm/GBMtlRoll28Wht/1965ae0e7295e119219e6eff890d8f88a98cb5072d00fed3f2fa57bef96afac9.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-28ml-clear-16mm/GBMtlRoll28Wht/1965ae0e7295e119219e6eff890d8f88a98cb5072d00fed3f2fa57bef96afac9.front-off-1000x1100.webp",
+        "sha256": "1965ae0e7295e119219e6eff890d8f88a98cb5072d00fed3f2fa57bef96afac9",
+        "bytes": 81722,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "13. 16 mm/2. 28ml  Uncapped/2.  GBCyl28MtlRollWht.psd",
+        "sourceSha256": "14a4c0e68cc5821aa0da5f8f4f1a1ad9578c5850eb3e8f80fd28c5666faf1bd4",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "2db6396557339bc82563b6469df9cf12e142143fb48469dd46c7d081cd32a2ec",
+      "pairCheck": {
+        "sku": "GBMtlRoll28Wht",
+        "bodyMeanError": 1.04,
+        "region": [
+          375,
+          521,
+          619,
+          991
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-28ml-clear-16mm/GBMtlRoll28Wht/1dac9f8c63fa64183174f6eaba4bd1f1be0c02f049d577504be55439aabb30ed.front-on-1000x1100.webp",
+          "sha256": "1dac9f8c63fa64183174f6eaba4bd1f1be0c02f049d577504be55439aabb30ed",
+          "url": "/images/plate-contact-sheets/1dac9f8c63fa64183174f6eaba4bd1f1be0c02f049d577504be55439aabb30ed.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBRoll28Blk",
+      "graceSku": "GB-CYL-CLR-28ML-RBL",
+      "productGroupId": "kh74mv3vd64tqn8kkvg5rwkd3s8dq8q6",
+      "familyId": "cylinder-28ml-clear-16mm",
+      "familyName": "Cylinder 28 mL \u2014 Clear",
+      "neck": "16mm",
+      "plate": {
+        "key": "plates/cylinder-28ml-clear-16mm/GBRoll28Blk/6c0edcabb89c277606e67fa93cf7c8e6eb3f08795c97ad75371f3dfc4363b6f2.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-28ml-clear-16mm/GBRoll28Blk/6c0edcabb89c277606e67fa93cf7c8e6eb3f08795c97ad75371f3dfc4363b6f2.front-on-1000x1100.webp",
+        "sha256": "6c0edcabb89c277606e67fa93cf7c8e6eb3f08795c97ad75371f3dfc4363b6f2",
+        "bytes": 10940,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "13. 16 mm/1. 28ml Capped/3. GBCyl28RollBlk.psd",
+        "sourceSha256": "2bf146e961717d721e0b317932cc0538a7760a68400d8b684caf68237e426479",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-28ml-clear-16mm/GBRoll28Blk/6c0edcabb89c277606e67fa93cf7c8e6eb3f08795c97ad75371f3dfc4363b6f2.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-28ml-clear-16mm/GBRoll28Blk/6c0edcabb89c277606e67fa93cf7c8e6eb3f08795c97ad75371f3dfc4363b6f2.front-on-1000x1100.webp",
+        "sha256": "6c0edcabb89c277606e67fa93cf7c8e6eb3f08795c97ad75371f3dfc4363b6f2",
+        "bytes": 10940,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "13. 16 mm/1. 28ml Capped/3. GBCyl28RollBlk.psd",
+        "sourceSha256": "2bf146e961717d721e0b317932cc0538a7760a68400d8b684caf68237e426479",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-28ml-clear-16mm/GBRoll28Blk/c69d73081d524f9627af9b05b662a2b2a5747fdc0b2dc98a66f965ee93dd587f.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-28ml-clear-16mm/GBRoll28Blk/c69d73081d524f9627af9b05b662a2b2a5747fdc0b2dc98a66f965ee93dd587f.front-off-1000x1100.webp",
+        "sha256": "c69d73081d524f9627af9b05b662a2b2a5747fdc0b2dc98a66f965ee93dd587f",
+        "bytes": 84000,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "13. 16 mm/2. 28ml  Uncapped/3. GBCyl28RollBlk.psd",
+        "sourceSha256": "27e61c60b32e4fb7c762a46239de914bbabeb54b0f90009bde6f69774a395745",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-28ml-clear-16mm/GBRoll28Blk/c69d73081d524f9627af9b05b662a2b2a5747fdc0b2dc98a66f965ee93dd587f.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-28ml-clear-16mm/GBRoll28Blk/c69d73081d524f9627af9b05b662a2b2a5747fdc0b2dc98a66f965ee93dd587f.front-off-1000x1100.webp",
+        "sha256": "c69d73081d524f9627af9b05b662a2b2a5747fdc0b2dc98a66f965ee93dd587f",
+        "bytes": 84000,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "13. 16 mm/2. 28ml  Uncapped/3. GBCyl28RollBlk.psd",
+        "sourceSha256": "27e61c60b32e4fb7c762a46239de914bbabeb54b0f90009bde6f69774a395745",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "b4a3fe24e814dd00dfe86028c4b92aeacb7dfde520f088f9e0d0f2fce9fb999b",
+      "pairCheck": {
+        "sku": "GBRoll28Blk",
+        "bodyMeanError": 1.038,
+        "region": [
+          375,
+          519,
+          619,
+          991
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-28ml-clear-16mm/GBRoll28Blk/6c0edcabb89c277606e67fa93cf7c8e6eb3f08795c97ad75371f3dfc4363b6f2.front-on-1000x1100.webp",
+          "sha256": "6c0edcabb89c277606e67fa93cf7c8e6eb3f08795c97ad75371f3dfc4363b6f2",
+          "url": "/images/plate-contact-sheets/6c0edcabb89c277606e67fa93cf7c8e6eb3f08795c97ad75371f3dfc4363b6f2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBTallCyl9RollGlMatt",
+      "graceSku": "GB-CYL-CLR-9ML-ROL-MGLD-02",
+      "productGroupId": "kh78r3vqahaac36khdjgj336158dqj1x",
+      "familyId": "cylinder-9ml-clear-13-415",
+      "familyName": "Cylinder 9 mL \u2014 Clear",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlMatt/ab904c342aa860e16ce9a0eaf249d86e5f16d691437352683e0ef78d84698a16.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlMatt/ab904c342aa860e16ce9a0eaf249d86e5f16d691437352683e0ef78d84698a16.front-on-1000x1100.webp",
+        "sha256": "ab904c342aa860e16ce9a0eaf249d86e5f16d691437352683e0ef78d84698a16",
+        "bytes": 57912,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /16. GBTallCyl9MtlRollGlMatt.psd",
+        "sourceSha256": "ae8217dd00b6e06b73effd6cfb14cd41e386e7fa7856c71b6987acf4d1c55c12",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlMatt/ab904c342aa860e16ce9a0eaf249d86e5f16d691437352683e0ef78d84698a16.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlMatt/ab904c342aa860e16ce9a0eaf249d86e5f16d691437352683e0ef78d84698a16.front-on-1000x1100.webp",
+        "sha256": "ab904c342aa860e16ce9a0eaf249d86e5f16d691437352683e0ef78d84698a16",
+        "bytes": 57912,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /16. GBTallCyl9MtlRollGlMatt.psd",
+        "sourceSha256": "ae8217dd00b6e06b73effd6cfb14cd41e386e7fa7856c71b6987acf4d1c55c12",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlMatt/a5ad64efd073969d03cb2053f15b7c917fda8e46a3ac89507d8e1b1024dd902a.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlMatt/a5ad64efd073969d03cb2053f15b7c917fda8e46a3ac89507d8e1b1024dd902a.front-off-1000x1100.webp",
+        "sha256": "a5ad64efd073969d03cb2053f15b7c917fda8e46a3ac89507d8e1b1024dd902a",
+        "bytes": 67762,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/17. GBTallCyl9RollGlMatt.psd",
+        "sourceSha256": "8e31e0003c11c398de1ec7fa84caa4bb0ccf5f29cb9966c7989a32ec69dc28bc",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlMatt/a5ad64efd073969d03cb2053f15b7c917fda8e46a3ac89507d8e1b1024dd902a.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlMatt/a5ad64efd073969d03cb2053f15b7c917fda8e46a3ac89507d8e1b1024dd902a.front-off-1000x1100.webp",
+        "sha256": "a5ad64efd073969d03cb2053f15b7c917fda8e46a3ac89507d8e1b1024dd902a",
+        "bytes": 67762,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/17. GBTallCyl9RollGlMatt.psd",
+        "sourceSha256": "8e31e0003c11c398de1ec7fa84caa4bb0ccf5f29cb9966c7989a32ec69dc28bc",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "49e2731bfced4e32b30860363189b0cb7fb8ec1ddd8d830948d8f4ac53316361",
+      "pairCheck": {
+        "sku": "GBTallCyl9RollGlMatt",
+        "bodyMeanError": 1.176,
+        "region": [
+          441,
+          582,
+          569,
+          1050
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlMatt/175ff055aebe8af9d68d4308137e20476c6a2335e61d4488d49fde6847276b49.front-on-1000x1100.webp",
+          "sha256": "175ff055aebe8af9d68d4308137e20476c6a2335e61d4488d49fde6847276b49",
+          "url": "/images/plate-contact-sheets/175ff055aebe8af9d68d4308137e20476c6a2335e61d4488d49fde6847276b49.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBTallCyl9RollGlSh",
+      "graceSku": "GB-CYL-CLR-9ML-ROL-SGLD-02",
+      "productGroupId": "kh78r3vqahaac36khdjgj336158dqj1x",
+      "familyId": "cylinder-9ml-clear-13-415",
+      "familyName": "Cylinder 9 mL \u2014 Clear",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlSh/1c4f0502f10419fc54acdd4ead82121d51bbede593c17b47bcdbc6ec00921ebf.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlSh/1c4f0502f10419fc54acdd4ead82121d51bbede593c17b47bcdbc6ec00921ebf.front-on-1000x1100.webp",
+        "sha256": "1c4f0502f10419fc54acdd4ead82121d51bbede593c17b47bcdbc6ec00921ebf",
+        "bytes": 58184,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /19. GBTallCyl9RollGlSh.psd",
+        "sourceSha256": "dce0086aa105b007dc31bfb68883ac1ba077d3e4f5d6c5eb62c9baf32f07b8e4",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlSh/1c4f0502f10419fc54acdd4ead82121d51bbede593c17b47bcdbc6ec00921ebf.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlSh/1c4f0502f10419fc54acdd4ead82121d51bbede593c17b47bcdbc6ec00921ebf.front-on-1000x1100.webp",
+        "sha256": "1c4f0502f10419fc54acdd4ead82121d51bbede593c17b47bcdbc6ec00921ebf",
+        "bytes": 58184,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /19. GBTallCyl9RollGlSh.psd",
+        "sourceSha256": "dce0086aa105b007dc31bfb68883ac1ba077d3e4f5d6c5eb62c9baf32f07b8e4",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlSh/8d1aee42765d0154af36292a3335d8f942672e5808cc175b005a432ce45479db.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlSh/8d1aee42765d0154af36292a3335d8f942672e5808cc175b005a432ce45479db.front-off-1000x1100.webp",
+        "sha256": "8d1aee42765d0154af36292a3335d8f942672e5808cc175b005a432ce45479db",
+        "bytes": 68280,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/19. GBTallCyl9RollGlSh.psd",
+        "sourceSha256": "9a866a458722fb452fc24bc030507b48293107672e4c65f60cfc71ed5570b5e1",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlSh/8d1aee42765d0154af36292a3335d8f942672e5808cc175b005a432ce45479db.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlSh/8d1aee42765d0154af36292a3335d8f942672e5808cc175b005a432ce45479db.front-off-1000x1100.webp",
+        "sha256": "8d1aee42765d0154af36292a3335d8f942672e5808cc175b005a432ce45479db",
+        "bytes": 68280,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/19. GBTallCyl9RollGlSh.psd",
+        "sourceSha256": "9a866a458722fb452fc24bc030507b48293107672e4c65f60cfc71ed5570b5e1",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "dc2aec9039977b1e754b1214331afc69e0ebacc2488cddc436b6018a338df23f",
+      "pairCheck": {
+        "sku": "GBTallCyl9RollGlSh",
+        "bodyMeanError": 1.176,
+        "region": [
+          441,
+          582,
+          569,
+          1050
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlSh/a637ea75a88eaa8fc1c123f26dd0b313369132e9ade236776a21e765c3d351a9.front-on-1000x1100.webp",
+          "sha256": "a637ea75a88eaa8fc1c123f26dd0b313369132e9ade236776a21e765c3d351a9",
+          "url": "/images/plate-contact-sheets/a637ea75a88eaa8fc1c123f26dd0b313369132e9ade236776a21e765c3d351a9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBTallCyl9RollSlMatt",
+      "graceSku": "GB-CYL-CLR-9ML-ROL-MSLV-02",
+      "productGroupId": "kh78r3vqahaac36khdjgj336158dqj1x",
+      "familyId": "cylinder-9ml-clear-13-415",
+      "familyName": "Cylinder 9 mL \u2014 Clear",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlMatt/6f4a0bb1ff7e9458a5282afe19f52941167924d0cea9ca988c8ebd84723ed87e.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlMatt/6f4a0bb1ff7e9458a5282afe19f52941167924d0cea9ca988c8ebd84723ed87e.front-on-1000x1100.webp",
+        "sha256": "6f4a0bb1ff7e9458a5282afe19f52941167924d0cea9ca988c8ebd84723ed87e",
+        "bytes": 36146,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /14. GBTallCyl9MtlRollSlMatt.psd",
+        "sourceSha256": "392f7c0c914e23972680ea44979bafa089183666b8470c55db94bd180f2bcf61",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlMatt/6f4a0bb1ff7e9458a5282afe19f52941167924d0cea9ca988c8ebd84723ed87e.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlMatt/6f4a0bb1ff7e9458a5282afe19f52941167924d0cea9ca988c8ebd84723ed87e.front-on-1000x1100.webp",
+        "sha256": "6f4a0bb1ff7e9458a5282afe19f52941167924d0cea9ca988c8ebd84723ed87e",
+        "bytes": 36146,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /14. GBTallCyl9MtlRollSlMatt.psd",
+        "sourceSha256": "392f7c0c914e23972680ea44979bafa089183666b8470c55db94bd180f2bcf61",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlMatt/fb3a37cb8d6e37cfb58bf5de1fec76640b318955356e50c99c7d30bbbedcbccc.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlMatt/fb3a37cb8d6e37cfb58bf5de1fec76640b318955356e50c99c7d30bbbedcbccc.front-off-1000x1100.webp",
+        "sha256": "fb3a37cb8d6e37cfb58bf5de1fec76640b318955356e50c99c7d30bbbedcbccc",
+        "bytes": 45402,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/15. GBTallCyl9RollSlMatt.psd",
+        "sourceSha256": "3636e17c77b5abf829804eaafb7e7abba3a9f802b10a64a76ab31182494f8e84",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlMatt/fb3a37cb8d6e37cfb58bf5de1fec76640b318955356e50c99c7d30bbbedcbccc.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlMatt/fb3a37cb8d6e37cfb58bf5de1fec76640b318955356e50c99c7d30bbbedcbccc.front-off-1000x1100.webp",
+        "sha256": "fb3a37cb8d6e37cfb58bf5de1fec76640b318955356e50c99c7d30bbbedcbccc",
+        "bytes": 45402,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/15. GBTallCyl9RollSlMatt.psd",
+        "sourceSha256": "3636e17c77b5abf829804eaafb7e7abba3a9f802b10a64a76ab31182494f8e84",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "d2b8b63b73ee58d93605cd7295a9302d5ea941e044e9acd9522d0b9ef0d134b9",
+      "pairCheck": {
+        "sku": "GBTallCyl9RollSlMatt",
+        "bodyMeanError": 1.176,
+        "region": [
+          441,
+          583,
+          569,
+          1051
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlMatt/609b99de8715fda56b03f723e7ec96db4c29112151fe61c8da0528c6d0051345.front-on-1000x1100.webp",
+          "sha256": "609b99de8715fda56b03f723e7ec96db4c29112151fe61c8da0528c6d0051345",
+          "url": "/images/plate-contact-sheets/609b99de8715fda56b03f723e7ec96db4c29112151fe61c8da0528c6d0051345.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBTallCylFrst9MtlRollBlkDot",
+      "graceSku": "GB-CYL-FRS-9ML-T-02",
+      "productGroupId": "kh7en6gmhng3tbc86e2pyxgb698dpsgp",
+      "familyId": "cylinder-9ml-frosted-13-415",
+      "familyName": "Cylinder 9 mL \u2014 Frosted",
+      "neck": "13-415",
+      "plate": {
+        "key": "plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9MtlRollBlkDot/de1a226b280e70713d8b0c5b79840159c644b3ec58a67e397925b29eb0a5e1b5.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9MtlRollBlkDot/de1a226b280e70713d8b0c5b79840159c644b3ec58a67e397925b29eb0a5e1b5.front-on-1000x1100.webp",
+        "sha256": "de1a226b280e70713d8b0c5b79840159c644b3ec58a67e397925b29eb0a5e1b5",
+        "bytes": 5262,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /26. GBTallCylFrst9MtlRollBlkDot copy.psd",
+        "sourceSha256": "f4e8b7ade6c318c6a8931e52a01a965f3d08c57d21f2e58afc0ef6c5803a6df8",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumb": {
+        "key": "plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9MtlRollBlkDot/de1a226b280e70713d8b0c5b79840159c644b3ec58a67e397925b29eb0a5e1b5.front-on-1000x1100.webp",
+        "storeKey": "plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9MtlRollBlkDot/de1a226b280e70713d8b0c5b79840159c644b3ec58a67e397925b29eb0a5e1b5.front-on-1000x1100.webp",
+        "sha256": "de1a226b280e70713d8b0c5b79840159c644b3ec58a67e397925b29eb0a5e1b5",
+        "bytes": 5262,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /26. GBTallCylFrst9MtlRollBlkDot copy.psd",
+        "sourceSha256": "f4e8b7ade6c318c6a8931e52a01a965f3d08c57d21f2e58afc0ef6c5803a6df8",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "plateCapOff": {
+        "key": "plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9MtlRollBlkDot/2d759228bf4309d400201f7cbde4f57d19788de819a88a80b4d74a2806a2241f.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9MtlRollBlkDot/2d759228bf4309d400201f7cbde4f57d19788de819a88a80b4d74a2806a2241f.front-off-1000x1100.webp",
+        "sha256": "2d759228bf4309d400201f7cbde4f57d19788de819a88a80b4d74a2806a2241f",
+        "bytes": 52558,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/26. GBTallCylFrst9MtlRollBlkDot.psd",
+        "sourceSha256": "97770771eb7a2e57aedef67f0ef298b94c31d41c5fa7bc28be97bdeedf17668d",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "thumbCapOff": {
+        "key": "plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9MtlRollBlkDot/2d759228bf4309d400201f7cbde4f57d19788de819a88a80b4d74a2806a2241f.front-off-1000x1100.webp",
+        "storeKey": "plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9MtlRollBlkDot/2d759228bf4309d400201f7cbde4f57d19788de819a88a80b4d74a2806a2241f.front-off-1000x1100.webp",
+        "sha256": "2d759228bf4309d400201f7cbde4f57d19788de819a88a80b4d74a2806a2241f",
+        "bytes": 52558,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/26. GBTallCylFrst9MtlRollBlkDot.psd",
+        "sourceSha256": "97770771eb7a2e57aedef67f0ef298b94c31d41c5fa7bc28be97bdeedf17668d",
+        "sourceStateEvidence": "explicit reviewed source and visual inspection"
+      },
+      "publishable": true,
+      "blockReasons": [],
+      "reviewBinding": "e5ce91d7cc286596c653e0337cf5c67f6f88d5d855bb3f81a554e86fd081895d",
+      "pairCheck": {
+        "sku": "GBTallCylFrst9MtlRollBlkDot",
+        "bodyMeanError": 0.747,
+        "region": [
+          440,
+          575,
+          562,
+          1048
+        ],
+        "passed": true
+      },
+      "baselineViews": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9MtlRollBlkDot/de1a226b280e70713d8b0c5b79840159c644b3ec58a67e397925b29eb0a5e1b5.front-on-1000x1100.webp",
+          "sha256": "de1a226b280e70713d8b0c5b79840159c644b3ec58a67e397925b29eb0a5e1b5",
+          "url": "/images/plate-contact-sheets/de1a226b280e70713d8b0c5b79840159c644b3ec58a67e397925b29eb0a5e1b5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "rows": 25,
+    "groups": 5,
+    "capOff": 25
+  },
+  "reviewPacketSha256": "efdd955f5f8c0ba573546fe5190bd6bdaee0a340713f297870186bf0a731bc11",
+  "approvalFileSha256": "5a32c80bc63304d66a0fd39c2b8a06b609478d124e1b5d3f97de86ebf74fdeb1",
+  "technicalReviewSha256": "6bcc5d5383dc6e80f29a5eb2e5ce752241ea3205ef20eebe9fd581802fe0a9c5",
+  "publicationAuthorized": true,
+  "release": "Cylinder paired plates 2026-09-12",
+  "thumbnailPolicy": "Small previews reference the exact approved full-resolution raster. No new image files.",
+  "authorizationRecord": "docs/reviews/cylinder-capoff-final-2026-09-12/ship-authorization.json"
+}

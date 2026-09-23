@@ -49,6 +49,7 @@ vi.mock("@/components/CartProvider", () => ({
 }));
 vi.mock("@/components/CartDrawer", () => ({ default: () => null }));
 vi.mock("@/components/Footer", () => ({ default: () => createElement("footer", null, "Footer") }));
+vi.mock("convex/react", () => ({ useQuery: () => undefined }));
 vi.mock("@/lib/analytics", () => ({
     analytics: {
         finderEntered: mocks.finderEntered,
@@ -171,7 +172,7 @@ describe("Cylinder family-first server route", () => {
     it("fixes Cylinder in the route and honors canonical application refinements on first render", async () => {
         const element = await FamilyLandingPage({
             params: Promise.resolve({ family: "cylinder" }),
-            searchParams: Promise.resolve({ applicators: "rollon", capacities: "9 ml", roller: "metal" }),
+            searchParams: Promise.resolve({ applicators: "rollon", capacities: "9 ml", roller: "metal", guide: "1" }),
         });
         const html = renderToStaticMarkup(element);
 
@@ -201,6 +202,7 @@ describe("Cylinder family-first server route", () => {
                     capacities: "9 ml",
                     threads: "17-415",
                     sort: "price-asc",
+                    guide: "1",
                 }),
             });
             const html = renderToStaticMarkup(element);
@@ -212,7 +214,7 @@ describe("Cylinder family-first server route", () => {
                 : null;
 
             expect(returnPath).toBe(
-                "/catalog/cylinder?applicators=rollon&roller=metal&colors=Amber&capacities=9+ml&threads=17-415&sort=price-asc",
+                "/catalog/cylinder?applicators=rollon&roller=metal&colors=Amber&capacities=9+ml&threads=17-415&sort=price-asc&guide=1",
             );
             expect(returnPath).not.toContain("family");
             expect(mocks.serverSearch).toHaveBeenCalledWith(expect.objectContaining({
@@ -293,7 +295,7 @@ describe("Cylinder family-first client", () => {
         await act(async () => buttonWithText(container, "Roll-On").click());
 
         expect(mocks.routerReplace).toHaveBeenLastCalledWith(
-            "/catalog/cylinder?applicators=rollon&roller=metal&capacities=9+ml",
+            "/catalog/cylinder?applicators=rollon&roller=metal&capacities=9+ml&guide=1",
             { scroll: false },
         );
         expect(container.querySelector('a[href^="/products/cylinder-9ml-spray"]')).not.toBeNull();
@@ -347,7 +349,7 @@ describe("Cylinder family-first client", () => {
             root.render(createElement(FamilyPageClient, { family: "Cylinder", heroFallback: "/assets/Cylinder-BB.png",
                 baseCatalog: allCylinderResult,
                 initialResult: rollOnResult,
-                search: "?applicators=rollon",
+                search: "?applicators=rollon&guide=1",
                 editorial: null,
             }));
         });
@@ -358,7 +360,7 @@ describe("Cylinder family-first client", () => {
         await act(async () => root.unmount());
     });
 
-    it("keeps Build a Bottle as the secondary action", () => {
+    it("keeps Build Your Bottle as the secondary action", () => {
         const html = renderToStaticMarkup(createElement(FamilyPageClient, { family: "Cylinder", heroFallback: "/assets/Cylinder-BB.png",
             baseCatalog: allCylinderResult,
             initialResult: allCylinderResult,
@@ -367,7 +369,7 @@ describe("Cylinder family-first client", () => {
         }));
         const parsed = new DOMParser().parseFromString(html, "text/html");
         const buildLink = [...parsed.querySelectorAll("[data-desktop-family-catalog] a")]
-            .find((link) => link.textContent?.trim() === "Build a Bottle");
+            .find((link) => link.textContent?.trim() === "Build Your Bottle");
 
         expect(buildLink?.getAttribute("href")).toBe("/matrix?family=Cylinder&from=finder");
         expect(buildLink?.className).toContain("border-obsidian");

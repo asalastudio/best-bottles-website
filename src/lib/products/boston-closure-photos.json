@@ -1,0 +1,444 @@
+{
+  "components": {
+    "CPRoll20-400TallMattSl": {
+      "name": "Tall Matte Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallMattSl/a7c910418e0c1ec84894c1a05df23f2b0001bd680030eb484b76bcbdfb3e0d12.front-on-240x240.webp"
+    },
+    "CPRoll20-400TallMattBlk": {
+      "name": "Tall Matte Black cap or closure for rollon bottles, Threadsize 20-400",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallMattBlk/d31c537995112284f98fbaea368026163ede91e4a4300716a0ffa63ebecd218a.front-on-240x240.webp"
+    },
+    "CPRoll20-400TallShnGl": {
+      "name": "Tall Shiny Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallShnGl/c338a2c2de3bcd1fe6d673bcf58a9384417768f0a90b902dfa54314ce88d183d.front-on-240x240.webp"
+    },
+    "CPRoll20-400TallShnSl": {
+      "name": "Tall Shiny Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallShnSl/1e13d7b77d8d5883a32d1a8aaac01a5bb2cc1d0ee2cc297ff096fd74e538dac9.front-on-240x240.webp"
+    },
+    "CPRoll20-400TallShnBlk": {
+      "name": "Tall Shiny Black cap or closure for rollon bottles, Threadsize 20-400",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallShnBlk/a5b46fed559752601f7f693fd545be3ff7363ac530d7f57d0d6e1e085a7ab0db.front-on-240x240.webp"
+    },
+    "CPRoll20-400TallMattGl": {
+      "name": "Tall Matte Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallMattGl/1f4d7e6d329baba606a7a6b49cc2b224e7e2fc0a9caed8165c8950a292cf476a.front-on-240x240.webp"
+    }
+  },
+  "variants": {
+    "GBBstn1ozMtlRollonBlk": {
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Black",
+      "componentSku": "CPRoll20-400TallShnBlk"
+    },
+    "GBBstn1ozMtlRollonGl": {
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Gold",
+      "componentSku": "CPRoll20-400TallShnGl"
+    },
+    "GBBstn1ozMtlRollonMattBlk": {
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Black",
+      "componentSku": "CPRoll20-400TallMattBlk"
+    },
+    "GBBstn1ozMtlRollonMattGl": {
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "componentSku": "CPRoll20-400TallMattGl"
+    },
+    "GBBstn1ozMtlRollonMattSl": {
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "componentSku": "CPRoll20-400TallMattSl"
+    },
+    "GBBstn1ozMtlRollonShnSl": {
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "componentSku": "CPRoll20-400TallShnSl"
+    },
+    "GBBstn1ozRollonMattBlk": {
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Black",
+      "componentSku": "CPRoll20-400TallMattBlk"
+    },
+    "GBBstn1ozRollonMattGl": {
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "componentSku": "CPRoll20-400TallMattGl"
+    },
+    "GBBstn1ozRollonMattSl": {
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "componentSku": "CPRoll20-400TallMattSl"
+    },
+    "GBBstn1ozRollonShBlk": {
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "componentSku": "CPRoll20-400TallShnBlk"
+    },
+    "GBBstn1ozRollonShGl": {
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Gold",
+      "componentSku": "CPRoll20-400TallShnGl"
+    },
+    "GBBstn1ozRollonShnSl": {
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "componentSku": "CPRoll20-400TallShnSl"
+    },
+    "GBBstn2ozMtlRollBlk": {
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Black",
+      "componentSku": "CPRoll20-400TallShnBlk"
+    },
+    "GBBstn2ozMtlRollGl": {
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Gold",
+      "componentSku": "CPRoll20-400TallShnGl"
+    },
+    "GBBstn2ozMtlRollMattBlk": {
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Black",
+      "componentSku": "CPRoll20-400TallMattBlk"
+    },
+    "GBBstn2ozMtlRollMattGl": {
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "componentSku": "CPRoll20-400TallMattGl"
+    },
+    "GBBstn2ozMtlRollMattSl": {
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "componentSku": "CPRoll20-400TallMattSl"
+    },
+    "GBBstn2ozMtlRollShnSl": {
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "componentSku": "CPRoll20-400TallShnSl"
+    },
+    "GBBstn2ozRollGl": {
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Gold",
+      "componentSku": "CPRoll20-400TallShnGl"
+    },
+    "GBBstn2ozRollMattBlk": {
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Black",
+      "componentSku": "CPRoll20-400TallMattBlk"
+    },
+    "GBBstn2ozRollMattSl": {
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "componentSku": "CPRoll20-400TallMattSl"
+    },
+    "GBBstn2ozRollShnBlk": {
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "componentSku": "CPRoll20-400TallShnBlk"
+    },
+    "GBBstn2ozRollShnSl": {
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "componentSku": "CPRoll20-400TallShnSl"
+    },
+    "GBBstn2ozRollonMattGl": {
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "componentSku": "CPRoll20-400TallMattGl"
+    },
+    "GBBstnAmb1ozMtlRollonGl": {
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Gold",
+      "componentSku": "CPRoll20-400TallShnGl"
+    },
+    "GBBstnAmb1ozMtlRollonMattBlk": {
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Black",
+      "componentSku": "CPRoll20-400TallMattBlk"
+    },
+    "GBBstnAmb1ozMtlRollonMattGl": {
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "componentSku": "CPRoll20-400TallMattGl"
+    },
+    "GBBstnAmb1ozMtlRollonMattSl": {
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "componentSku": "CPRoll20-400TallMattSl"
+    },
+    "GBBstnAmb1ozMtlRollonShnBlk": {
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Black",
+      "componentSku": "CPRoll20-400TallShnBlk"
+    },
+    "GBBstnAmb1ozMtlRollonShnSl": {
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "componentSku": "CPRoll20-400TallShnSl"
+    },
+    "GBBstnAmb1ozRollonGl": {
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Gold",
+      "componentSku": "CPRoll20-400TallShnGl"
+    },
+    "GBBstnAmb1ozRollonMattBlk": {
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Black",
+      "componentSku": "CPRoll20-400TallMattBlk"
+    },
+    "GBBstnAmb1ozRollonMattGl": {
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "componentSku": "CPRoll20-400TallMattGl"
+    },
+    "GBBstnAmb1ozRollonMattSl": {
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "componentSku": "CPRoll20-400TallMattSl"
+    },
+    "GBBstnAmb1ozRollonShnBlk": {
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "componentSku": "CPRoll20-400TallShnBlk"
+    },
+    "GBBstnAmb1ozRollonShnSl": {
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "componentSku": "CPRoll20-400TallShnSl"
+    },
+    "GBBstnAmb2ozMtlRollonGl": {
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Gold",
+      "componentSku": "CPRoll20-400TallShnGl"
+    },
+    "GBBstnAmb2ozMtlRollonMattBlk": {
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Black",
+      "componentSku": "CPRoll20-400TallMattBlk"
+    },
+    "GBBstnAmb2ozMtlRollonMattGl": {
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "componentSku": "CPRoll20-400TallMattGl"
+    },
+    "GBBstnAmb2ozMtlRollonMattSl": {
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "componentSku": "CPRoll20-400TallMattSl"
+    },
+    "GBBstnAmb2ozMtlRollonShnSl": {
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "componentSku": "CPRoll20-400TallShnSl"
+    },
+    "GBBstnAmb2ozRollonGl": {
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Gold",
+      "componentSku": "CPRoll20-400TallShnGl"
+    },
+    "GBBstnAmb2ozRollonMattBlk": {
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Black",
+      "componentSku": "CPRoll20-400TallMattBlk"
+    },
+    "GBBstnAmb2ozRollonMattGl": {
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "componentSku": "CPRoll20-400TallMattGl"
+    },
+    "GBBstnAmb2ozRollonMattSl": {
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "componentSku": "CPRoll20-400TallMattSl"
+    },
+    "GBBstnAmb2ozRollonShnBlk": {
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "componentSku": "CPRoll20-400TallShnBlk"
+    },
+    "GBBstnAmb2ozRollonShnSl": {
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "componentSku": "CPRoll20-400TallShnSl"
+    },
+    "GBBstnBlu1ozMtlRollonGl": {
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Gold",
+      "componentSku": "CPRoll20-400TallShnGl"
+    },
+    "GBBstnBlu1ozMtlRollonMattBlk": {
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Black",
+      "componentSku": "CPRoll20-400TallMattBlk"
+    },
+    "GBBstnBlu1ozMtlRollonMattGl": {
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "componentSku": "CPRoll20-400TallMattGl"
+    },
+    "GBBstnBlu1ozMtlRollonMattSl": {
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "componentSku": "CPRoll20-400TallMattSl"
+    },
+    "GBBstnBlu1ozMtlRollonShnSl": {
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "componentSku": "CPRoll20-400TallShnSl"
+    },
+    "GBBstnBlu1ozRollonGl": {
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Gold",
+      "componentSku": "CPRoll20-400TallShnGl"
+    },
+    "GBBstnBlu1ozRollonMattBlk": {
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Black",
+      "componentSku": "CPRoll20-400TallMattBlk"
+    },
+    "GBBstnBlu1ozRollonMattGl": {
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "componentSku": "CPRoll20-400TallMattGl"
+    },
+    "GBBstnBlu1ozRollonMattSl": {
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "componentSku": "CPRoll20-400TallMattSl"
+    },
+    "GBBstnBlu1ozRollonShnBlk": {
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "componentSku": "CPRoll20-400TallShnBlk"
+    },
+    "GBBstnBlu1ozRollonShnSl": {
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "componentSku": "CPRoll20-400TallShnSl"
+    },
+    "GBBstnBlu2ozMtlRollonGl": {
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Gold",
+      "componentSku": "CPRoll20-400TallShnGl"
+    },
+    "GBBstnBlu2ozMtlRollonMattBlk": {
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Black",
+      "componentSku": "CPRoll20-400TallMattBlk"
+    },
+    "GBBstnBlu2ozMtlRollonMattGl": {
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "componentSku": "CPRoll20-400TallMattGl"
+    },
+    "GBBstnBlu2ozMtlRollonMattSl": {
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "componentSku": "CPRoll20-400TallMattSl"
+    },
+    "GBBstnBlu2ozMtlRollonShnSl": {
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "componentSku": "CPRoll20-400TallShnSl"
+    },
+    "GBBstnBlu2ozRollonGl": {
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Gold",
+      "componentSku": "CPRoll20-400TallShnGl"
+    },
+    "GBBstnBlu2ozRollonMattBlk": {
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Black",
+      "componentSku": "CPRoll20-400TallMattBlk"
+    },
+    "GBBstnBlu2ozRollonMattGl": {
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "componentSku": "CPRoll20-400TallMattGl"
+    },
+    "GBBstnBlu2ozRollonMattSl": {
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "componentSku": "CPRoll20-400TallMattSl"
+    },
+    "GBBstnBlu2ozRollonShnBlk": {
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "componentSku": "CPRoll20-400TallShnBlk"
+    },
+    "GBBstnBlu2ozRollonShnSl": {
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "componentSku": "CPRoll20-400TallShnSl"
+    }
+  }
+}

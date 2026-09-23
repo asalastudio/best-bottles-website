@@ -10,18 +10,20 @@
  * Shared by the mobile hero; the desktop configurator stage keeps its own
  * inline copy of the same contract (exploded transforms, 3D) untouched.
  */
+import PdpPhotoCanvas from "./PdpPhotoCanvas";
 import { useEffect, useMemo, useState } from "react";
 import type { FunctionReturnType } from "convex/server";
 import type { api } from "../../../convex/_generated/api";
 import { decodeImage } from "@/lib/paper-doll/decode-image";
 import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
+import { REMOVABLE_KIT_SLOTS, withDetachedCapOffsets } from "@/lib/products/kit-frame";
+import { pdpStageFrame, pdpStageTransformCss, type PdpStageView } from "@/lib/products/pdp-stage-frame";
 
 export type KitQueryResult = FunctionReturnType<typeof api.productKits.forSku> | undefined;
 export type KitView = NonNullable<FunctionReturnType<typeof api.productKits.forSku>>;
 export type KitPart = KitView["parts"][number];
 
-/** Slots that leave the stack when the customer lifts the cap. */
-export const REMOVABLE_KIT_SLOTS: ReadonlySet<string> = new Set(["cap", "overcap"]);
+export { REMOVABLE_KIT_SLOTS };
 
 export function kitHasRemovableCap(kit: KitView | null | undefined): boolean {
     return Boolean(kit?.parts?.some((part) => REMOVABLE_KIT_SLOTS.has(part.slot)));
@@ -41,7 +43,9 @@ export function useDecodedKitParts(
     const targetParts = useMemo(() => {
         if (!kit?.parts?.length) return null;
         const sorted = [...kit.parts].sort((a, b) => a.zOrder - b.zOrder);
-        return withCap ? sorted : sorted.filter((part) => !REMOVABLE_KIT_SLOTS.has(part.slot));
+        // CAP OFF keeps the removable cap, parked beside the bottle, so the
+        // detached closure cannot force the glass to fill the canvas.
+        return withCap ? sorted : withDetachedCapOffsets(sorted);
     }, [kit, withCap]);
     // Decoded sets are keyed by the exact target array, so a pending query, a
     // different SKU, or a cap toggle derives to "not ready" without a reset.
@@ -91,12 +95,27 @@ type PaperDollLayersProps = {
     alt: string;
     onPlateError?: (url: string) => void;
     className?: string;
+    family?: string | null;
+    capacityMl?: number | null;
+    color?: string | null;
+    view?: Exclude<PdpStageView, "exploded">;
+    hasCapOffPlate?: boolean;
 };
 
-export default function PaperDollLayers({ plateUrl, kitParts, alt, onPlateError, className }: PaperDollLayersProps) {
+export default function PaperDollLayers({ plateUrl, kitParts, alt, onPlateError, className, family, capacityMl, color, view = "assembled", hasCapOffPlate }: PaperDollLayersProps) {
     const stacked = Boolean(kitParts?.length);
+    const stageTransform = pdpStageTransformCss(pdpStageFrame({
+        family,
+        capacityMl,
+        color,
+        view,
+        hasCapOffPlate,
+        parts: stacked ? kitParts : null,
+    }));
     return (
         <div className={`relative h-full w-full bg-white ${className ?? ""}`} data-paper-doll={stacked ? "kit" : "plate"}>
+            <PdpPhotoCanvas>
+            <div className="absolute inset-0" style={{ transformOrigin: "0 0", transform: stageTransform }} data-pdp-stage-frame="">
             {!stacked && plateUrl ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
@@ -119,10 +138,17 @@ export default function PaperDollLayers({ plateUrl, kitParts, alt, onPlateError,
                     width={part.image.width}
                     height={part.image.height}
                     decoding="async"
-                    style={{ zIndex: part.zOrder }}
+                    style={{
+                        zIndex: part.zOrder,
+                        transform: view === "capOff" && REMOVABLE_KIT_SLOTS.has(part.slot)
+                            ? `translate(${(part.exploded.dx / 10).toFixed(2)}%, ${(part.exploded.dy / 11).toFixed(2)}%)`
+                            : undefined,
+                    }}
                     className="absolute inset-0 h-full w-full object-contain"
                 />
             ))}
+            </div>
+            </PdpPhotoCanvas>
         </div>
     );
 }

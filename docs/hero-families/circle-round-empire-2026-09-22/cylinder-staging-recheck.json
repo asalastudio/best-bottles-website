@@ -1,0 +1,303 @@
+{
+  "checkedAt": "2026-09-22T21:36:36.073Z",
+  "url": "https://best-bottles-website.vercel.app",
+  "total": 59,
+  "passed": 59,
+  "rows": [
+    {
+      "sku": "GBCyl9MtlRollBlkDot",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCyl9SpryGl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCylAmb9MtlRollBlkDot",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCylAmb9SpryMattSl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu9MtlRollBlkDot",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "LBCylAmb9LtnMtSl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu9RollBlkDot",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu9SpryMattSl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCylFrst9RollBlkDot",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCylFrst9MtlRollBlkDot",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "LBCylFrst9LtnMtSl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCylFrst9SpryMattSl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCylSwrl9RollBlkDot",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "LBCylSwrl9LtnMtSl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollBlkDot",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCylSwrl9SpryMattSl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBMtlRoll28Blk",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCyl50AnSpMtSl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCyl50AnSpTslMtSl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCyl50MtlRollBlk",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCyl50RdcrMtSl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCyl50RollWht",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCyl50SpryMtGl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "LBCyl50LtnMtGl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCyl100AnSpMtSl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCyl100RdcrMtSl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCyl100AnSpTslMtSl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCyl100SpryMtGl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "LBCyl100LtnMtGl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBSpry3mlClBlk",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBcyl25AnSpIvyGl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCyl25DrpGl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBcyl25AnSpTslIvyGl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCyl25RdcrShnGl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBSpry1ozGl",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9SpryGlMatt",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9SpryGlMatt",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "status": 200,
+      "passed": true
+    }
+  ]
+}

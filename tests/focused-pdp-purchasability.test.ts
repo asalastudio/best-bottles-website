@@ -15,7 +15,7 @@ describe("focused PDP purchasability recovery", () => {
         expect(source).toContain("if (!focusedPdpCapabilities.isPurchasable)");
         expect(source).toContain('data-testid="pdp-unavailable-state"');
         const unavailable = source.slice(source.indexOf('data-testid="pdp-unavailable-state"'), source.indexOf("const inStock"));
-        expect(unavailable).toContain("Ask Grace");
+        expect(unavailable).toContain('graceCopy("ask")');
         expect(unavailable).not.toContain("Quantity");
         expect(unavailable).not.toContain("Request Quote");
         expect(unavailable).not.toContain("pdp-sticky-cart-bar");

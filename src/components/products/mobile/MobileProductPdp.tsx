@@ -1,5 +1,7 @@
 "use client";
 
+import { useRegion } from "@/components/RegionProvider";
+
 import { verifiedCapOffPhoto } from "@/lib/products/verified-cap-off-photo";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
 
@@ -20,10 +22,14 @@ import { kitHasRemovableCap, useDecodedKitParts, useDecodedPlate, type KitQueryR
 import type { PdpCompatibilityComponent, PdpCompatibilityPayload } from "@/components/products/PdpDiscoverySections";
 import { analytics } from "@/lib/analytics";
 import type { PlateRef } from "@/lib/paper-doll/plates";
+import type { LocalKitPilot } from "@/lib/products/local-kit-pilot";
+import { requiresAssembledClosure } from "@/lib/products/closure-presentation";
 import { resolveCapOptionPhoto } from "@/lib/products/closure-swatch-keys";
 import { resolveGuidedVariant, type GuidedVariantDeps } from "@/lib/products/guided-variant-resolver";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
+import { shouldHideAssembledPdpLowerStack } from "@/lib/products/assembled-pdp";
 import { focusedProductPresentation } from "@/lib/products/focused-product-presentation";
+import { useCopy } from "@/i18n/useCopy";
 import {
     buildMobileConfigRows,
     confirmLabelFor,
@@ -42,6 +48,7 @@ import {
 } from "@/lib/products/mobile-pdp-view-modes";
 import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
 import { closureBaseFromSlug, useClosureThumbnails } from "@/lib/products/use-closure-thumbnails";
+import { capacityMlFromSlug } from "@/lib/products/group-variant-intent";
 import { useViewportIsMobile } from "@/lib/products/use-viewport-is-mobile";
 import { resolveChargedUnitPrice } from "@/lib/volumePricing";
 import {
@@ -81,6 +88,7 @@ export type MobileProductPdpProps = {
     group: {
         family?: string | null;
         capacity?: string | null;
+        capacityMl?: number | null;
         color?: string | null;
         category?: string | null;
         neckThreadSize?: string | null;
@@ -111,6 +119,8 @@ export type MobileProductPdpProps = {
     activeCapOption: string | null;
     capOptionPhotoKeys: Record<string, string[]>;
     capOptionThumbnails?: Record<string, string>;
+    localKits?: Record<string, LocalKitPilot>;
+    localComponentPreviewSku?: string;
     resolveCapFinish: (variant: ProductVariant) => { label: string; swatchName: string };
     variantSku: (variant: ProductVariant) => string | null;
     onCommitVariant: (selection: { rollerVariant?: "metal" | "plastic"; capOption?: string; applicator?: string }) => void;
@@ -131,7 +141,7 @@ export type MobileProductPdpProps = {
 function plateFor(platesBySku: Record<string, PlateRef>, variant: ProductVariant | null | undefined): PlateRef | null {
     if (!variant) return null;
     const plate = platesBySku[variant.graceSku] ?? (variant.websiteSku ? platesBySku[variant.websiteSku] : undefined) ?? null;
-    const capOff = verifiedCapOffPhoto(variant.websiteSku);
+    const capOff = plate?.localCandidate ? null : verifiedCapOffPhoto(variant.websiteSku);
     return capOff && plate ? { ...plate, imageCapOff: capOff } : plate;
 }
 
@@ -139,17 +149,16 @@ function slugFromHref(href: string): string {
     return href.replace(/^\/products\//, "").split("?")[0] ?? href;
 }
 
-function formatEach(price: number | null | undefined): string {
-    return price == null ? "Price on request" : `$${price.toFixed(2)}`;
-}
-
 export default function MobileProductPdp(props: MobileProductPdpProps) {
+    const { formatPrice } = useRegion();
+    const graceCopy = useCopy("grace");
+    const formatEach = (price: number | null | undefined): string => (price == null ? "Price on request" : formatPrice(price));
     const {
         slug, group, variants, selectedVariant, platesBySku, selectedKitQuery, skuImageFallbacks, displayName, inStock, canAddToCart,
         addedFlash, onAddToCart, quoteHref, qty, onQtyChange, cartCount, backHref, cartAnchorRef, glassOptions,
         rollerOptions, activeApplicator, capOptions, activeCapOption, capOptionPhotoKeys, capOptionThumbnails, resolveCapFinish, variantSku,
         onCommitVariant, onCommitGlass, onPickerOpenChange, onAskGrace, description, relations, initialCompatibility,
-        volumePricing, onAddComponent,
+        volumePricing, onAddComponent, localKits = {}, localComponentPreviewSku,
     } = props;
 
     const isMobile = useViewportIsMobile();
@@ -158,6 +167,15 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         [group.category, group.family],
     );
     const isBottle = productPresentation.kind === "bottle";
+    const hideAssembledLowerStack = shouldHideAssembledPdpLowerStack({
+        category: group.category,
+        family: group.family,
+        assemblyType: selectedVariant?.assemblyType,
+        applicator: selectedVariant?.applicator ?? activeApplicator,
+        itemName: selectedVariant?.itemName ?? displayName,
+        websiteSku: selectedVariant?.websiteSku,
+        graceSku: selectedVariant?.graceSku,
+    });
     const closureBase = useMemo(
         () => isBottle ? closureBaseFromSlug(slug) : "none",
         [isBottle, slug],
@@ -234,26 +252,34 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     const shownVariant = previewSibling?.variant ?? previewInGroup ?? selectedVariant;
     const shownPlate = previewSibling ? previewSibling.plate : previewInGroup ? plateFor(platesBySku, previewInGroup) : committedPlate;
     const previewing = Boolean(previewSibling?.variant || (previewInGroup && previewInGroup._id !== selectedVariant?._id));
+    const assembledOnly = requiresAssembledClosure(shownVariant?.applicator, shownVariant?.websiteSku);
+    const pilot = shownVariant?.websiteSku ? localKits[shownVariant.websiteSku] : undefined;
     const shownKitQuery: KitQueryResult = previewing ? undefined : selectedKitQuery;
     const { kit: shownKit, parts: kitPartsWithCap } = useDecodedKitParts(
         { websiteSku: shownVariant?.websiteSku, graceSku: shownVariant?.graceSku },
-        shownKitQuery,
-        picker.viewMode !== "capOff",
+        pilot ? (picker.viewMode === "capOff" ? pilot.off : pilot.on) : shownKitQuery,
+        Boolean(pilot) || assembledOnly || picker.viewMode !== "capOff",
     );
 
     const viewCaps = useMemo<MobileViewCapabilities>(() => ({
-        hasCapOffAsset: Boolean(shownPlate?.imageCapOff) || kitHasRemovableCap(shownKit),
-    }), [shownPlate?.imageCapOff, shownKit]);
+        hasCapOffAsset: !assembledOnly && (Boolean(shownPlate?.imageCapOff) || kitHasRemovableCap(shownKit)),
+        applicator: shownVariant?.applicator,
+        websiteSku: shownVariant?.websiteSku,
+    }), [shownPlate?.imageCapOff, shownKit, assembledOnly, shownVariant?.applicator, shownVariant?.websiteSku]);
     const viewModes = useMemo(() => getMobileViewModes(viewCaps), [viewCaps]);
     // The stage always paints the configured bottle; "capOff" here only comes
     // from the roller picker's preview or a Grace plate command.
     const viewMode = coerceMobileViewMode(picker.viewMode, viewCaps);
 
     const plateUrlFor = (view: ProductViewMode): string | null => {
-        const wanted = view === "capOff" && shownPlate?.imageCapOff ? shownPlate.imageCapOff : shownPlate?.image ?? null;
+        const wanted = view === "capOff" && shownPlate?.imageCapOff
+            ? shownPlate.imageCapOff
+            : shownPlate?.image ?? null;
         return wanted && !brokenPlates.has(wanted) ? wanted : null;
     };
     const decodedPlate = useDecodedPlate(plateUrlFor(viewMode), markPlateBroken);
+    const preferKitPair = !assembledOnly && !shownPlate?.imageCapOff && kitHasRemovableCap(shownKit);
+    const reviewingComponents = Boolean(localComponentPreviewSku && localComponentPreviewSku === shownKit?.sku);
     const fallbackImageUrl = skuImageFallbacks[shownVariant?.websiteSku ?? ""] ?? shownVariant?.imageUrl ?? group.heroImageUrl ?? null;
 
     /* ── expanded viewer (same configured bottle, its own cap state) ─────── */
@@ -261,8 +287,8 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     const viewerPlate = useDecodedPlate(viewerOpen ? plateUrlFor(viewerMode) : null, markPlateBroken);
     const { parts: viewerKitParts } = useDecodedKitParts(
         { websiteSku: shownVariant?.websiteSku, graceSku: shownVariant?.graceSku },
-        viewerOpen ? shownKitQuery : undefined,
-        viewerMode !== "capOff",
+        viewerOpen ? (pilot ? (viewerMode === "capOff" ? pilot.off : pilot.on) : shownKitQuery) : undefined,
+        Boolean(pilot) || viewerMode !== "capOff",
     );
     const openViewer = () => {
         setViewerView(viewMode);
@@ -518,9 +544,10 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
             <style dangerouslySetInnerHTML={{ __html: chromeCss }} />
 
             <MobileProductHero
+                hasCapOffPlate={Boolean(shownPlate?.imageCapOff)}
                 ref={heroRef}
                 plateUrl={decodedPlate.url}
-                kitParts={decodedPlate.url && decodedPlate.url === (viewMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : kitPartsWithCap}
+                kitParts={reviewingComponents || pilot || preferKitPair ? kitPartsWithCap : decodedPlate.url && decodedPlate.url === (viewMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : kitPartsWithCap}
                 fallbackImageUrl={decodedPlate.url ? null : fallbackImageUrl}
                 alt={`${displayName}${previewingLabel ? ` — previewing ${previewingLabel}` : ""}`}
                 backHref={backHref}
@@ -529,6 +556,10 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 onPlateError={markPlateBroken}
                 onViewLarger={openViewer}
                 overlay={null}
+                family={group.family}
+                capacityMl={group.capacityMl ?? capacityMlFromSlug(slug)}
+                color={group.color}
+                view={viewMode === "capOff" ? "capOff" : "assembled"}
             />
 
             {/* Configure sits under the bottle, before the title, so first-time
@@ -591,7 +622,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 </div>
                 {priceEach != null && qty > 1 ? (
                     <p className="mt-2 text-right text-xs text-slate">
-                        {qty.toLocaleString()} × {formatEach(priceEach)} = <span className="font-semibold text-obsidian">${(priceEach * qty).toFixed(2)}</span>
+                        {qty.toLocaleString()} × {formatEach(priceEach)} = <span className="font-semibold text-obsidian">{formatPrice((priceEach * qty))}</span>
                     </p>
                 ) : null}
                 {/* Grace sits at the decision point, not in a floating disc: the
@@ -608,7 +639,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                             <Microphone className="h-4 w-4" />
                         </span>
                         <span className="min-w-0 flex-1">
-                            <span className="block text-sm font-medium text-obsidian">Ask Grace about fit and bulk pricing</span>
+                            <span className="block text-sm font-medium text-obsidian">{graceCopy("askAboutFitAndBulk")}</span>
                             <span className="block text-xs leading-snug text-slate">
                                 {neckSize ? `${neckSize} closures` : "Compatible closures"} · case quantities · quotes
                             </span>
@@ -619,6 +650,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
             </section>
 
             {/* ── secondary information: compact disclosures, sticky bar stays ── */}
+            {hideAssembledLowerStack ? null : (
             <MobileProductDetails
                 variant={selectedVariant}
                 sku={resolvedSku}
@@ -632,6 +664,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 onAskGrace={onAskGrace ?? (() => {})}
                 onAddComponent={onAddComponent ?? (() => {})}
             />
+            )}
 
             {/* ── sticky Add to Cart: the same variant, price, and qty as above ── */}
             <MobileStickyPurchaseBar
@@ -651,6 +684,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
 
             {/* ── expanded viewer: same configured bottle, Cap On | Cap Off ──── */}
             <MobileProductViewer
+                hasCapOffPlate={Boolean(shownPlate?.imageCapOff)}
                 open={viewerOpen}
                 onClose={closeViewer}
                 title={displayName}
@@ -659,11 +693,14 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 viewModes={viewModes}
                 onViewModeChange={changeViewerView}
                 plateUrl={viewerPlate.url}
-                kitParts={viewerPlate.url && viewerPlate.url === (viewerMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : viewerKitParts}
+                kitParts={reviewingComponents || pilot || preferKitPair ? viewerKitParts : viewerPlate.url && viewerPlate.url === (viewerMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : viewerKitParts}
                 fallbackImageUrl={viewerPlate.url ? null : fallbackImageUrl}
                 alt={displayName}
                 onPlateError={markPlateBroken}
                 onRestoreFocus={restoreViewerFocus}
+                family={group.family}
+                capacityMl={group.capacityMl ?? capacityMlFromSlug(slug)}
+                color={group.color}
             />
 
             {/* ── the picker ───────────────────────────────────────────────── */}

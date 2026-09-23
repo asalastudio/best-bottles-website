@@ -3,17 +3,15 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 
 const track = vi.hoisted(() => vi.fn());
 
-vi.mock("mixpanel-browser", () => ({
+
+vi.mock("posthog-js", () => ({
   default: {
     init: vi.fn(),
     identify: vi.fn(),
     reset: vi.fn(),
-    track,
-    people: { set: vi.fn() },
-    register: vi.fn(),
-    set_group: vi.fn(),
-    get_group: vi.fn(() => ({ set: vi.fn() })),
-    time_event: vi.fn(),
+    capture: track,
+    setPersonProperties: vi.fn(),
+    group: vi.fn(),
   },
 }));
 
@@ -35,6 +33,28 @@ describe("checkout analytics event semantics", () => {
     expect(analytics).toContain('adapter.track("Checkout Redirected"');
     expect(analytics).toContain('adapter.track("Order Completed"');
     expect(analytics).not.toContain('adapter.track("Checkout Completed"');
+  });
+});
+
+describe("catalog grid quick-add analytics", () => {
+  it("emits the PRD snake_case events with product, variant, quantity, and active tier", () => {
+    const base = { productId: "cylinder-5ml-clear-roll-on", sku: "GBCyl5RollBlk" };
+    analytics.catalogTierPricingToggled({ open: true, ...base, quantity: 1, tier: "1–11" });
+    analytics.catalogTierSelected({ ...base, quantity: 144, tier: "144–499" });
+    analytics.catalogQuantityChanged({ ...base, quantity: 145, tier: "144–499", source: "stepper" });
+    analytics.catalogQuickAdd({ stage: "clicked", ...base, quantity: 145, tier: "144–499" });
+    analytics.catalogQuickAdd({ stage: "success", ...base, quantity: 145, tier: "144–499" });
+    analytics.catalogQuickAdd({ stage: "error", ...base, quantity: 0, tier: null, error: "not-purchasable" });
+    analytics.catalogTierPricingToggled({ open: false, ...base, quantity: 145, tier: "144–499" });
+
+    expect(track.mock.calls.map((call) => call[0])).toEqual([
+      "tier_pricing_opened", "tier_selected", "quantity_changed",
+      "quick_add_clicked", "quick_add_success", "quick_add_error", "tier_pricing_closed",
+    ]);
+    expect(track.mock.calls[1][1]).toEqual({ ...base, quantity: 144, tier: "144–499" });
+    expect(track.mock.calls[2][1]).toEqual({ ...base, quantity: 145, tier: "144–499", source: "stepper" });
+    expect(track.mock.calls[5][1]).toEqual({ ...base, quantity: 0, tier: null, error: "not-purchasable" });
+    expect(track.mock.calls[6][1]).toEqual({ ...base, quantity: 145, tier: "144–499" });
   });
 });
 

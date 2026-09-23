@@ -114,11 +114,11 @@ describe("compatibility resolver parity", () => {
         const matrix = readFileSync("convex/matrix.ts", "utf8");
         const grace = readFileSync("convex/grace.ts", "utf8");
         const products = readFileSync("convex/products.ts", "utf8");
+        const catalogSources = readFileSync("convex/catalogComponentSources.ts", "utf8");
         const productPage = readFileSync("src/app/products/[slug]/page.tsx", "utf8");
         const chain = [
-            "normalizeComponentsByType",
             "selectBestFitmentRule",
-            "filterGroupedComponentsByFitmentRule",
+            "resolveCompatibleComponents",
         ];
 
         for (const source of [matrix, grace, products]) {
@@ -126,6 +126,9 @@ describe("compatibility resolver parity", () => {
                 expect(source).toContain(`${functionName}(`);
             }
         }
+        expect(matrix).toContain("catalogComponentPool(");
+        for (const source of [grace, products]) expect(source).toContain("loadCatalogComponentPool(");
+        expect(catalogSources).toContain("normalizeComponentsByType(");
         expect(productPage).toContain("api.grace.getBottleComponents");
         expect(productPage).toContain("initialCompatibility");
     });

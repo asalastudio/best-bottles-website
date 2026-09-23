@@ -1,0 +1,39 @@
+{
+ "schemaVersion": 1,
+ "release": "boston-round-kits-2026-09-19",
+ "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/boston-round",
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:11.661Z",
+ "shipPhrase": "ship Boston Round kit release 2026-09-19",
+ "published": [
+  "https://precise-raccoon-123.convex.cloud"
+ ],
+ "counts": {
+  "extractedCandidates": 4,
+  "approved": 4,
+  "setAside": 0,
+  "notExtracted": 11
+ },
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/boston-round-kits.jpg",
+ "reviewSheetSha256": "1bdabd17a6653250f78ca8f8a34258130ac791350cd78ae12d3db0c66be9477d",
+ "rows": [
+  {
+   "sku": "GBBstnAmb1ozRollonGl",
+   "plateSha256": "eceb3b6fd028736f77be0686027e7483266579f6080ab8fcf27b12cb0e513176"
+  },
+  {
+   "sku": "GBBstnBlu1ozRollonGl",
+   "plateSha256": "b07a4f5def35b97f28e5a5ba6ae3ede6207e742abfc510635cb04cb90b296466"
+  },
+  {
+   "sku": "GBBstn1ozMtlRollonGl",
+   "plateSha256": "f2b188b4ae452d26cc3f4f470435cee868f3742312ffead2bcbc5f9b33cdcaa6"
+  },
+  {
+   "sku": "GBBstnAmb2ozRollonGl",
+   "plateSha256": "b0a50b890de4b04bfb422c3e8e1e54ca9df9af049786c62b20ed36327453251d"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "c481220ed968c1846599568aa37943b0f97d0b88eb82d0ee48ff076700061628"
+}

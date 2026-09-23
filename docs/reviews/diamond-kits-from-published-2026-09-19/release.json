@@ -1,0 +1,140 @@
+{
+ "schemaVersion": 1,
+ "release": "diamond-kits-2026-09-19",
+ "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/diamond",
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:14.371Z",
+ "shipPhrase": "ship Diamond kit release 2026-09-19",
+ "published": [
+  "https://precise-raccoon-123.convex.cloud",
+  "https://helpful-elephant-638.convex.cloud"
+ ],
+ "counts": {
+  "extractedCandidates": 29,
+  "approved": 29,
+  "setAside": 0,
+  "notExtracted": 12
+ },
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/diamond-kits.jpg",
+ "reviewSheetSha256": "ed6508eb1384fa856836ba563e8a42379aa60d0fe1ad3bc1d395f5525141f88e",
+ "rows": [
+  {
+   "sku": "GBDmnd2ozAnSpBlk",
+   "plateSha256": "3bfe751684f8306d0fd8c908d3fee003c7b878a6013be64a8c660d0f3c1ff999"
+  },
+  {
+   "sku": "GBDmnd2ozAnSpGl",
+   "plateSha256": "097eee533b3b40dcfd5971bc6fbf45aa39e89fbf3b0295b666ebeee3cb911117"
+  },
+  {
+   "sku": "GBDmnd2ozAnSpIvyGl",
+   "plateSha256": "d61a1d1391b8928d8a1c92cee50e6f25e9c0c6404d429b0fdcf9dc3b8b2c3467"
+  },
+  {
+   "sku": "GBDmnd2ozAnSpIvySl",
+   "plateSha256": "c14f5b0fe4d633ff3f57769149541ff6c5848c223e9d60d31daf1cbea1423edf"
+  },
+  {
+   "sku": "GBDmnd2ozAnSpLvn",
+   "plateSha256": "7e579ba60b909c28815f842062fec17d90c624e4236c6b62e94cf3bb3fd2f558"
+  },
+  {
+   "sku": "GBDmnd2ozAnSpMtSl",
+   "plateSha256": "f26e802f32b9ef548a490c01d6c894e17c7d0c12b3bb9c79377a8baa501c65d3"
+  },
+  {
+   "sku": "GBDmnd2ozAnSpPnk",
+   "plateSha256": "5f2fa15a671783704ca53fb0746c0dc92509dcf50ab9cf5369c8e6e2c4a7b0d4"
+  },
+  {
+   "sku": "GBDmnd2ozAnSpRed",
+   "plateSha256": "9e830ff014a94699c62aa71750b67ed6c7d6893454e90d40c520bce8fad7d7ee"
+  },
+  {
+   "sku": "GBDmnd2ozAnSpTslIvyGl",
+   "plateSha256": "9654d9e4afb903b8d1caaf05bf0addd49c6ae6592b40eee26170a4957a1d466a"
+  },
+  {
+   "sku": "GBDmnd2ozAnSpTslLvn",
+   "plateSha256": "061d9f80f196c0a705e32b5841a4bdd596d5f73b77f53dc3d6d3694580f3e3ca"
+  },
+  {
+   "sku": "GBDmnd2ozAnSpWht",
+   "plateSha256": "68d456cef71d6789558a55ad315cda23dff917b9e744bf5dec8490de666a51c2"
+  },
+  {
+   "sku": "GBDmnd2ozRdcrBlkLthr",
+   "plateSha256": "f52a1e1054d5c1958d4ea127ec7a42818d47a7921dcd3718d37e16e9a780e3ea"
+  },
+  {
+   "sku": "GBDmnd2ozRdcrBrwnLthr",
+   "plateSha256": "855aef308d4a6dd8e083e24744c8c667f6c9b541327c74baccd4c4b4dff0ca17"
+  },
+  {
+   "sku": "GBDmnd2ozRdcrIvyLthr",
+   "plateSha256": "a1876f126918e93311dabdff791d96fff98cf486de2a1d3e53988c6bb5436478"
+  },
+  {
+   "sku": "GBDmnd2ozRdcrLBrwnLthr",
+   "plateSha256": "a15fd31017628107f922856599b052aa4d0b4483327fab1a85824287e85cb08d"
+  },
+  {
+   "sku": "GBDmnd2ozRdcrMtSl",
+   "plateSha256": "38a06afdd5d632c9d1ac741a752769233397a8c8b7750c7ead0018bfc4b776a2"
+  },
+  {
+   "sku": "GBDmnd2ozRdcrMtSlTall",
+   "plateSha256": "4ab929754cde1a3a8cbff991dbbbc880aeda7a1dc6df5d20f1360c870b144a42"
+  },
+  {
+   "sku": "GBDmnd2ozRdcrPnkLthr",
+   "plateSha256": "8e1b90de4e72a389c5f47d3b3714431f4eb3df98d715908b9bb5333f0e3584ef"
+  },
+  {
+   "sku": "GBDmnd2ozRdcrShnBlk",
+   "plateSha256": "b2699e1b71614345d2e60ac532e614f03264bf5868403e9968ea02fcdf566a74"
+  },
+  {
+   "sku": "GBDmnd2ozRdcrShnBlkTall",
+   "plateSha256": "ca9a302bb8098a3b50f94c2ad48a3287abf6946e1827152036bba8aa5aab790f"
+  },
+  {
+   "sku": "GBDmnd2ozRdcrShnGl",
+   "plateSha256": "bba5396b91a4cc8d17847fcc30d7eb2d53f92ce613d61338429debfdac42759f"
+  },
+  {
+   "sku": "GBDmnd2ozRdcrShnSl",
+   "plateSha256": "6ce924554078a18650c3919e8653efa6b21e2ae5893206335860fe1a9ff6c082"
+  },
+  {
+   "sku": "GBDmnd2ozRdcrWht",
+   "plateSha256": "5bac00e3c8aa0a08a10ab6ab08ff657872e98bfb79804e791d2a0168852d5cc4"
+  },
+  {
+   "sku": "GBDmnd2ozSpryMtGl",
+   "plateSha256": "32ec7744ea2cf3d30dd6607af7bb1e7b35c2011b924afe2602008aa413fbe0f6"
+  },
+  {
+   "sku": "GBDmnd2ozSpryMtSl",
+   "plateSha256": "0a0f6c8f476c99c45b3d6faf840ff3eff2286b43a3d8263c7e8fd3b7101d1fce"
+  },
+  {
+   "sku": "GBDmnd2ozSpryShnBlk",
+   "plateSha256": "dbd054f4ea9948fa4e4da69fb755f61735f1ec28b60ef708abd50d7f6c1760df"
+  },
+  {
+   "sku": "GBDmnd2ozSpryShnGl",
+   "plateSha256": "1643a1e787b5af8fef46b35b6636f9d706abca3c2de6710e93885092a190f068"
+  },
+  {
+   "sku": "GBDmnd2ozSpryShnSl",
+   "plateSha256": "e673efcfd6bde25135fc3a9d6cb5c6af6849628d6feed17b424c8ae0cc6d30ce"
+  },
+  {
+   "sku": "LBDmnd2ozLtnMtSl",
+   "plateSha256": "bd543194743b782fceda8933c5c45737ac33d9f600690e5ed7f4cf647e447819"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "0e05fd43233712356ce4f16c09cdca4367f4b44ee49dd5bc0f2e7357d6858daa"
+}

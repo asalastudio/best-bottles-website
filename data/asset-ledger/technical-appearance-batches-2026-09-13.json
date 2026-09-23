@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "technical-appearance-batches-2026-09-13",
+  "scope": "plate-plan rows at review",
+  "method": "one cap-on appearance decision per family; full plate and technical approval remain separate",
+  "ledgerAt": "2026-09-13T22:55:10.015Z",
+  "generatedAt": "2026-09-13T22:56:44.697015+00:00",
+  "families": {
+    "Aluminum Bottle": {
+      "rows": 1,
+      "sheet": "data/asset-ledger/family-plate-sheets/aluminum-bottle.json",
+      "reviewUrl": "/team/asset-ledger?preview=1&view=plates&family=Aluminum Bottle&scope=cap-on-appearance"
+    },
+    "Cream Jar": {
+      "rows": 6,
+      "sheet": "data/asset-ledger/family-plate-sheets/cream-jar.json",
+      "reviewUrl": "/team/asset-ledger?preview=1&view=plates&family=Cream Jar&scope=cap-on-appearance"
+    },
+    "Decorative": {
+      "rows": 7,
+      "sheet": "data/asset-ledger/family-plate-sheets/decorative.json",
+      "reviewUrl": "/team/asset-ledger?preview=1&view=plates&family=Decorative&scope=cap-on-appearance"
+    },
+    "Empire": {
+      "rows": 19,
+      "sheet": "data/asset-ledger/family-plate-sheets/empire.json",
+      "reviewUrl": "/team/asset-ledger?preview=1&view=plates&family=Empire&scope=cap-on-appearance"
+    },
+    "Flair": {
+      "rows": 30,
+      "sheet": "data/asset-ledger/family-plate-sheets/flair.json",
+      "reviewUrl": "/team/asset-ledger?preview=1&view=plates&family=Flair&scope=cap-on-appearance"
+    },
+    "Grace": {
+      "rows": 32,
+      "sheet": "data/asset-ledger/family-plate-sheets/grace.json",
+      "reviewUrl": "/team/asset-ledger?preview=1&view=plates&family=Grace&scope=cap-on-appearance"
+    },
+    "Rectangle": {
+      "rows": 49,
+      "sheet": "data/asset-ledger/family-plate-sheets/rectangle.json",
+      "reviewUrl": "/team/asset-ledger?preview=1&view=plates&family=Rectangle&scope=cap-on-appearance"
+    },
+    "Royal": {
+      "rows": 26,
+      "sheet": "data/asset-ledger/family-plate-sheets/royal.json",
+      "reviewUrl": "/team/asset-ledger?preview=1&view=plates&family=Royal&scope=cap-on-appearance"
+    },
+    "Sleek": {
+      "rows": 29,
+      "sheet": "data/asset-ledger/family-plate-sheets/sleek.json",
+      "reviewUrl": "/team/asset-ledger?preview=1&view=plates&family=Sleek&scope=cap-on-appearance"
+    },
+    "Slim": {
+      "rows": 19,
+      "sheet": "data/asset-ledger/family-plate-sheets/slim.json",
+      "reviewUrl": "/team/asset-ledger?preview=1&view=plates&family=Slim&scope=cap-on-appearance"
+    },
+    "Square": {
+      "rows": 29,
+      "sheet": "data/asset-ledger/family-plate-sheets/square.json",
+      "reviewUrl": "/team/asset-ledger?preview=1&view=plates&family=Square&scope=cap-on-appearance"
+    },
+    "Tulip": {
+      "rows": 59,
+      "sheet": "data/asset-ledger/family-plate-sheets/tulip.json",
+      "reviewUrl": "/team/asset-ledger?preview=1&view=plates&family=Tulip&scope=cap-on-appearance"
+    },
+    "Vial": {
+      "rows": 10,
+      "sheet": "data/asset-ledger/family-plate-sheets/vial.json",
+      "reviewUrl": "/team/asset-ledger?preview=1&view=plates&family=Vial&scope=cap-on-appearance"
+    }
+  },
+  "summary": {
+    "rows": 316,
+    "families": 13,
+    "imagesVerified": 316,
+    "capOffViewsAdded": 0
+  }
+}

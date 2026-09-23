@@ -1,0 +1,150 @@
+{
+  "model": "gpt-image-2.5-sunburst",
+  "requestedSize": "2080x2288",
+  "quality": "high",
+  "state": "visually-approved-locked",
+  "authorization": "User clarified flat-looking face is the problem and supplied new round-volume photo for the correction; previous frosted finish remains approved.",
+  "rows": [
+    {
+      "sku": "GBRndFrst78AnSpGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "catalog": {
+        "sku": "GBRndFrst78AnSpGl",
+        "family": "Round",
+        "capacityMl": 78,
+        "color": "Frosted",
+        "applicator": "Vintage Bulb Sprayer",
+        "groupSlug": "round-78ml-frosted-18-415-antiquespray",
+        "graceSku": "GB-RND-FRS-78ML-ASP-GLD"
+      },
+      "target": {
+        "glassBodyKey": "round:78-standard",
+        "label": "Round 78 ml",
+        "shoulderPct": 48,
+        "bodyAspect": 0.961,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 43,
+        "landmark": "closure-seat"
+      },
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /8. Round 78ml Frosted/1. Round Frst 78ml Psd/37. GBRndFrst78AnSpGl.psd",
+      "masterSha256": "3537f343494b9afac0c6c1576c4cfac86c1c42ecbc1580fd00d5f3fb437aade5",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/inputs/GBRndFrst78AnSpGl-master.png",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/round-enhancement/aligned-v4/GBRndFrst78AnSpGl.premium-aligned-v4.png",
+      "currentSha256": "18fa3af6e86540071cc5a0b34c33c53ca1df7db58aabe2fbab302438a9386cda",
+      "state": "visually-approved-locked",
+      "presentation": "assembled closure",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceMeasurement": {
+        "centerX": 896,
+        "closureSeatY": 846,
+        "glassFootY": 1549,
+        "uncertaintyPx": 8,
+        "method": "Visually checked grid; seat refined using collar color within body axis ROI, foot excludes shadow"
+      },
+      "frameTransform": {
+        "scale": 1.5622190611664295,
+        "x": -205.08161213845415,
+        "y": -337.7973257467993
+      },
+      "inputArtworkBounds": [
+        248,
+        335,
+        1250,
+        1565
+      ],
+      "masterVisualCheck": "exact catalog SKU, assembly, material, hardware and cap state inspected in master sheet",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/GBRndFrst78AnSpGl-2080x2288.png",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/round78-correction-v4/GBRndFrst78AnSpGl-prompt.txt",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/round78-correction-v4/round-volume-user-reference.jpg",
+      "inputSha256": {
+        "framedInput": "f8eae5832d8a9fd526194743972780f478dc3d5666ab88e04199f311c817fe29",
+        "masterComposite": "6610b11c5a780d0ed5c11d9db27c36ee8ae0fe66b70c4114bf4f3aaf52ef9bd2",
+        "materialReference": "15e775cac8a43478b1be563b3c1a0aee136721fbfd67be5dd9463372072ad1cf",
+        "maskFile": "68203b3301a9f92809c2ddb76bee78b72a28b7dfd19d8a2a71ed909ea4297e3d",
+        "promptFile": "f8c4c2c0a910027bc57a1aa6f0339dab49b499a39614fd2885ffcad7c8f95064"
+      },
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/round78-correction-v4/GBRndFrst78AnSpGl-native-2080x2288.png",
+      "supersedesSha256": "f8eae5832d8a9fd526194743972780f478dc3d5666ab88e04199f311c817fe29",
+      "maskFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/round78-correction-v4/glass-face-mask.png",
+      "imageInputs": [
+        "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/GBRndFrst78AnSpGl-2080x2288.png",
+        "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/round78-correction-v4/round-volume-user-reference.jpg",
+        "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/inputs/GBRndFrst78AnSpGl-master.png"
+      ],
+      "result": {
+        "sku": "GBRndFrst78AnSpGl",
+        "family": "Round",
+        "capacityMl": 78,
+        "catalog": {
+          "sku": "GBRndFrst78AnSpGl",
+          "family": "Round",
+          "capacityMl": 78,
+          "color": "Frosted",
+          "applicator": "Vintage Bulb Sprayer",
+          "groupSlug": "round-78ml-frosted-18-415-antiquespray",
+          "graceSku": "GB-RND-FRS-78ML-ASP-GLD"
+        },
+        "nativePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/round78-correction-v4/GBRndFrst78AnSpGl-native-2080x2288.png",
+        "nativeSha256": "9cf68a5b42c04daa18ab634e2350611820f73fce25065197c2531a021254d496",
+        "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/round78-correction-v4/aligned/GBRndFrst78AnSpGl-2080x2288.png",
+        "finalSha256": "ae4000ff96f1c5522ff5eba8e1c6978d0b422b134b5ec4de032dbefdbe1c438b",
+        "size": [
+          2080,
+          2288
+        ],
+        "targetSpanPct": 48,
+        "glassFootPct": 91,
+        "closureSeatY": 983.8399999999999,
+        "glassFootY": 2082.08,
+        "measurementUncertaintyPx": 4.008175182481752,
+        "transform": {
+          "scale": 1.002043795620438,
+          "x": -2.4423357664234024,
+          "y": -2.1710948905110854
+        },
+        "transformedArtworkBounds": [
+          176.923503649635,
+          178.19678832116776,
+          1748.1281751824818,
+          2109.1351824817516
+        ],
+        "presentation": "assembled closure",
+        "status": "visually-approved-locked",
+        "approvalLock": "approval-lock.json"
+      }
+    }
+  ],
+  "uploadReview": "Explicit approval received: Yes run it. One successful API call made.",
+  "uploadAuthorization": "User replied Yes run it to the explicit request to send the new reference photo, 78 mL render, exact master composite and edit mask to OpenAI Sunburst for one correction.",
+  "approvalLock": {
+    "sku": "GBRndFrst78AnSpGl",
+    "family": "Round",
+    "capacityMl": 78,
+    "decision": "approved",
+    "approvedAt": "2026-09-22T21:23:41.408989+00:00",
+    "userStatement": "All right, this is perfect. Let's lock it in. These are good to go.",
+    "version": "round78-face-v4",
+    "file": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/round78-correction-v4/aligned/GBRndFrst78AnSpGl-2080x2288.png",
+    "sha256": "ae4000ff96f1c5522ff5eba8e1c6978d0b422b134b5ec4de032dbefdbe1c438b",
+    "nativeSha256": "9cf68a5b42c04daa18ab634e2350611820f73fce25065197c2531a021254d496",
+    "canvas": [
+      2080,
+      2288
+    ],
+    "glassSpanPct": 48,
+    "capGlassJunctionFromTopPct": 43,
+    "glassFootFromTopPct": 91,
+    "material": "approved frosted satin",
+    "geometry": "exact Round master with user-approved convex face appearance",
+    "presentation": "gold bulb sprayer attached; integral foot retained",
+    "supersedesSha256": "f8eae5832d8a9fd526194743972780f478dc3d5666ab88e04199f311c817fe29",
+    "publicationState": "not-published",
+    "scope": "Approval of this exact corrected render; prior rejected Circle renders are excluded."
+  }
+}

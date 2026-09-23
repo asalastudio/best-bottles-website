@@ -1,0 +1,3470 @@
+{
+ "version": 1,
+ "createdAt": "2026-09-21",
+ "labelledBy": "Community research agent (docs/research/grace-phrase-catalog/raw/community-phrases.json), converted to the eval schema; not reviewed by Best Bottles",
+ "splitRule": "all holdout — never used to tune the Jev question wording",
+ "notes": "finemist/perfumespray -> spray; antiquespray* -> bulb_spray; NOT_IN_CATALOGUE -> not_carried; AMBIGUOUS applicator -> ambiguous (union for search relevance, skipped for understanding); capacityMl parsed from the text when a single size is given.",
+ "cases": [
+  {
+   "id": "k001",
+   "text": "I'm about to bottle 5,000 units. Should I go with crimp sprayers or screw-on ones?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYfragrance/comments/1hydixf/",
+   "whyHard": "Crimp is not stocked; volume/business intent; asks for advice, not a product"
+  },
+  {
+   "id": "k002",
+   "text": "I can't find nice glass bottles for my first fragrances that don't need crimping. Who sells them?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYfragrance/comments/13n41ti/",
+   "whyHard": "Negation of crimp = wants screw-neck; applicator implied, not named"
+  },
+  {
+   "id": "k003",
+   "text": "Are there perfume atomizers that press-fit with an O-ring instead of screwing on?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_carried",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYfragrance/comments/1kmz5ak/",
+   "whyHard": "Asks for a closure mechanism the store likely does not carry"
+  },
+  {
+   "id": "k004",
+   "text": "Can I reuse old perfume bottles for my finished perfumes? Where would I even buy sprayers when every neck is different?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYfragrance/comments/1is3cl2/",
+   "whyHard": "Part for bottles they already own, with unknown neck sizes"
+  },
+  {
+   "id": "k005",
+   "text": "I've lost the spray top off my cologne. How do I use it now?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYfragrance/comments/118ycud/",
+   "whyHard": "Support question; the real answer is probably a decant bottle, not a part"
+  },
+  {
+   "id": "k006",
+   "text": "Is it OK to use PET plastic bottles for body sprays I'm going to sell?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYfragrance/comments/on9opn/",
+   "whyHard": "Material question pointing at Plastic Bottle; seller context"
+  },
+  {
+   "id": "k007",
+   "text": "Does anyone know of alternative caps for my perfume bottles?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "cap",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Indiemakeupandmore/comments/iu9tom/",
+   "whyHard": "No neck given; a reply says any cap starting with 18 is the right thread"
+  },
+  {
+   "id": "k008",
+   "text": "Where can I buy replacement nozzles? Amazon and eBay only show me decant bottles.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/fragrance/comments/11ar9jz/",
+   "whyHard": "Wants a part, marketplaces push whole bottles"
+  },
+  {
+   "id": "k009",
+   "text": "The top of my perfume broke off. What can I buy to replace the sprayer, or should I move it into another container?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "ambiguous",
+    "applicatorAny": [
+     "spray"
+    ],
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Perfumes/comments/11f8bnv/",
+   "whyHard": "Two acceptable outcomes: part or new bottle"
+  },
+  {
+   "id": "k010",
+   "text": "Anybody know where to get replacement caps for cologne bottles?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "cap",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/fragrance/comments/ecxpar/",
+   "whyHard": "Designer overcap; almost certainly no fit"
+  },
+  {
+   "id": "k011",
+   "text": "I lost the cap to my cologne. Is there anything better than wrapping it in cling film?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "cap",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Colognes/comments/1gqyaml/",
+   "whyHard": "Vague; \"cap\" here is an overcap on a crimped sprayer"
+  },
+  {
+   "id": "k012",
+   "text": "I can't justify paying for tiny samples in dabber vials that you have to splash on.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": "Vial",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/fragrance/comments/1iu48nv/",
+   "whyHard": "Negation: dabber is what they do NOT want; implies spray vial"
+  },
+  {
+   "id": "k013",
+   "text": "How do I switch my dabber samples over to atomizers?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": "Vial",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/FemFragLab/comments/1i0lkhw/",
+   "whyHard": "Starts from dabber, wants spray; small size implied"
+  },
+  {
+   "id": "k014",
+   "text": "I need alternative caps, like orifice reducers, for my 5 ml perfume bottles.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "reducer",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 5.0,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Indiemakeupandmore/comments/xqlq9j/",
+   "whyHard": "Size given is the BOTTLE volume, not the neck"
+  },
+  {
+   "id": "k015",
+   "text": "Is there a way to modify my 5 mL perfume bottles so they're easier to use?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 5.0,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Indiemakeupandmore/comments/2v1rt4/",
+   "whyHard": "Fully vague; applicator unknown"
+  },
+  {
+   "id": "k016",
+   "text": "Reducer caps or wand caps: which should I get?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "ambiguous",
+    "applicatorAny": [
+     "reducer",
+     "stopper"
+    ],
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Indiemakeupandmore/comments/1ghqxs8/",
+   "whyHard": "Two applicators in one sentence"
+  },
+  {
+   "id": "k017",
+   "text": "What are reducer caps actually for?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "reducer",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Indiemakeupandmore/comments/1joel7l/",
+   "whyHard": "Informational question, not a purchase"
+  },
+  {
+   "id": "k018",
+   "text": "Any cap solutions for this brand's perfume bottles?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "reducer",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Indiemakeupandmore/comments/1q0xw48/",
+   "whyHard": "Brand stands in for the neck; a reply estimates an 8 mm inner neck and suggests reducer inserts"
+  },
+  {
+   "id": "k019",
+   "text": "I keep spilling my little sample bottles. Are there orifice reducers or rollerball caps that would fit them?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "ambiguous",
+    "applicatorAny": [
+     "reducer",
+     "rollon"
+    ],
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Indiemakeupandmore/comments/10z49q8/",
+   "whyHard": "Two applicators offered as alternatives"
+  },
+  {
+   "id": "k020",
+   "text": "Should I keep essential oils in bottles with dropper tops?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "ambiguous",
+    "applicatorAny": [
+     "dropper",
+     "reducer"
+    ],
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/essentialoils/comments/1q5lnmw/",
+   "whyHard": "Community answer is actually phenolic polycone caps (capclosure)"
+  },
+  {
+   "id": "k021",
+   "text": "Stainless steel or plastic roller balls on perfume oil bottles: which is better?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/PerfumeOils/comments/nbajjv/",
+   "whyHard": "Comparison inside one bucket"
+  },
+  {
+   "id": "k022",
+   "text": "My rollerball barely lets any oil out.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Indiemakeupandmore/comments/wa6old/",
+   "whyHard": "Problem report; may lead to a replacement or a reducer"
+  },
+  {
+   "id": "k023",
+   "text": "Does any indie brand sell fillable cuticle oil pens?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_carried",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/RedditLaqueristas/comments/1i9nbxw/",
+   "whyHard": "Store lacks pens; roller is the nearest substitute"
+  },
+  {
+   "id": "k024",
+   "text": "What are the best 10 to 15 ml atomizers for travel, leak-proof and without evaporation?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": "Atomizer",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/fragrance/comments/1kev5lm/",
+   "whyHard": "Three qualifiers, size range, \"atomizer\" ambiguity"
+  },
+  {
+   "id": "k025",
+   "text": "Are those little scent atomizers OK to bring in carry-on?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": "Atomizer",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/fragrance/comments/vzmt3p/",
+   "whyHard": "Policy question"
+  },
+  {
+   "id": "k026",
+   "text": "Is there a portable refillable perfume atomiser that doesn't leak?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": "Atomizer",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/BuyItForLife/comments/16qjslo/",
+   "whyHard": "UK spelling + negated problem"
+  },
+  {
+   "id": "k027",
+   "text": "I'm finally starting my perfume brand. Here's the bottle I'm planning to use; thoughts?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DesiFragranceAddicts/comments/1j38wea/",
+   "whyHard": "Nothing specified; replies suggest a white frosted bottle and a frosted cap"
+  },
+  {
+   "id": "k028",
+   "text": "Roller bottles are my top priority because perfume oils are my best seller on Etsy.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Assistance/comments/1vcqkf6/",
+   "whyHard": "Seller context; bulk implied"
+  },
+  {
+   "id": "k029",
+   "text": "I want to launch a few perfumes in small quantities and need bottles plus a box and printing.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYfragrance/comments/1kwg39k/",
+   "whyHard": "Packaging and decoration mixed in"
+  },
+  {
+   "id": "k030",
+   "text": "I made a scalp spray with rosemary oil and it clogged the spray bottle. Do I need a special sprayer?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYBeauty/comments/1jf5i7e/",
+   "whyHard": "Clogging: the right answer might not be a spray at all"
+  },
+  {
+   "id": "k031",
+   "text": "For homemade oil mixes, what's best: dropper, pump or dripper?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "ambiguous",
+    "applicatorAny": [
+     "dropper",
+     "lotionpump",
+     "reducer"
+    ],
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYBeauty/comments/1sq1yeh/",
+   "whyHard": "Three applicators named; \"dripper\" means reducer"
+  },
+  {
+   "id": "k032",
+   "text": "Can I put oil in an airless pump bottle?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_carried",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/SkincareAddiction/comments/afps1h/",
+   "whyHard": "Airless not stocked"
+  },
+  {
+   "id": "k033",
+   "text": "I need a heavier massage oil bottle that won't tip over every time I pump it.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "lotionpump",
+    "tassel": null,
+    "family": "Pillar",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/MassageTherapists/comments/1cifxi3/",
+   "whyHard": "Shape inferred from stability; volume probably above range"
+  },
+  {
+   "id": "k034",
+   "text": "What kind of cap do you like on beard oil: orifice or dropper?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "ambiguous",
+    "applicatorAny": [
+     "dropper",
+     "reducer"
+    ],
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/beardoil/comments/5otcin/",
+   "whyHard": "Classic dropper-vs-reducer choice"
+  },
+  {
+   "id": "k035",
+   "text": "I'm looking for a small spray bottle that's safe for alcohol.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/preppers/comments/ffttov/",
+   "whyHard": "Material compatibility, not a use case"
+  },
+  {
+   "id": "k036",
+   "text": "Could I buy a replacement lotion pump for this bottle in a store?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "lotionpump",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/bathandbodyworks/comments/pgakcs/",
+   "whyHard": "Neck not stated; a reply says it needs 24-410 with a long dip tube, probably outside the glass range"
+  },
+  {
+   "id": "k037",
+   "text": "Help, my favourite 10 ml perfume is leaking!",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 10.0,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Indiemakeupandmore/comments/cx8w9x/",
+   "whyHard": "No product named; context says roller"
+  },
+  {
+   "id": "k038",
+   "text": "Are the sample vials really less than 2.5 ml? I'm confused by the dram sizes.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": "Vial",
+    "glassColour": null,
+    "capacityMl": 2.5,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Indiemakeupandmore/comments/pni2yv/",
+   "whyHard": "Dram ambiguity"
+  },
+  {
+   "id": "k039",
+   "text": "Can you add an atomizer to a splash bottle?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/fragrance/comments/laevu0/",
+   "whyHard": "Splash bottles often have odd necks"
+  },
+  {
+   "id": "k040",
+   "text": "How do you put on eau de parfum from a splash bottle?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "cap",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/fragrance/comments/1m0k6b2/",
+   "whyHard": "Usage question"
+  },
+  {
+   "id": "k041",
+   "text": "I need help getting the pump into the bottle.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYfragrance/comments/11ll9qq/",
+   "whyHard": "Assembly support; crimp context"
+  },
+  {
+   "id": "k042",
+   "text": "I've been looking at crimpers on Amazon to turn other bottles into perfume bottles and I'm totally lost.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_carried",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYfragrance/comments/12m1odz/",
+   "whyHard": "Tooling not stocked"
+  },
+  {
+   "id": "k043",
+   "text": "What's the difference between an atomizer and a fine mist sprayer?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "ambiguous",
+    "applicatorAny": [
+     "bulb_spray",
+     "spray"
+    ],
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYfragrance/comments/j5y613/",
+   "whyHard": "Community answer: an atomizer is a bulb; a mist sprayer pumps"
+  },
+  {
+   "id": "k044",
+   "text": "What do I add to perfume oil to make a hanging car diffuser bottle?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_carried",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/PerfumeOils/comments/yglvrh/",
+   "whyHard": "Formulation question plus an out-of-range format"
+  },
+  {
+   "id": "k045",
+   "text": "Can I make a reed diffuser out of a perfume I like?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_carried",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYfragrance/comments/skwmpg/",
+   "whyHard": "Reed diffuser not stocked"
+  },
+  {
+   "id": "k046",
+   "text": "Has anyone tried putting perfume oils into an atomiser?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Indiemakeupandmore/comments/ifj67c/",
+   "whyHard": "Oil in a sprayer clogs; the correct steer is a roller"
+  },
+  {
+   "id": "k047",
+   "text": "How do I get the top off this empty perfume bottle? It won't twist or pull.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/howto/comments/1jm53qs/",
+   "whyHard": "Crimped; support only"
+  },
+  {
+   "id": "k048",
+   "text": "Why aren't atomizers easier to refill?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": "Atomizer",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/fragrance/comments/unpcbn/",
+   "whyHard": "Complaint, latent need for refillable"
+  },
+  {
+   "id": "k049",
+   "text": "Any recs for a good pump bottle for cuticle oil?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "lotionpump",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/RedditLaqueristas/comments/1ty5u6d/",
+   "whyHard": "Unusual pairing (cuticle + pump)"
+  },
+  {
+   "id": "k050",
+   "text": "Where can I buy small spray tops for my perfume sample vials?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": "Vial",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/fragrance/comments/ng5vi6/",
+   "whyHard": "Sprayer for 1-2 ml vials"
+  },
+  {
+   "id": "k051",
+   "text": "I'm trying to buy about 50 glass dropper bottles to store dilutions in.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "dropper",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYfragrance/comments/1bidyor/",
+   "whyHard": "Maker quantity"
+  },
+  {
+   "id": "k052",
+   "text": "Who's your go-to supplier for phenolic polycone caps?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "cap",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYfragrance/comments/17i20j0/",
+   "whyHard": "Trade term typed by a hobbyist"
+  },
+  {
+   "id": "k053",
+   "text": "My essential oil comes out way too fast.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "reducer",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/essentialoils/comments/1g5ii0t/",
+   "whyHard": "Problem statement; answer is a reducer or a different cap"
+  },
+  {
+   "id": "k054",
+   "text": "What's the best spray bottle for a really FINE mist? I don't want to end up soaked.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/AsianBeauty/comments/6irei1/",
+   "whyHard": "Quality qualifier"
+  },
+  {
+   "id": "k055",
+   "text": "How should I package perfumes so they don't leak in the mail?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Indiemakeupandmore/comments/9kro0c/",
+   "whyHard": "Shipping, not product selection"
+  },
+  {
+   "id": "k056",
+   "text": "Any travel perfume bottle that doesn't leak and can be refilled?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": "Atomizer",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/TravelHacks/comments/1ll32bl/",
+   "whyHard": "Two qualifiers, one negated"
+  },
+  {
+   "id": "k057",
+   "text": "I'd really like a spray, not a rollerball.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Indiemakeupandmore/comments/zswm4m/",
+   "whyHard": "Explicit negation of rollon"
+  },
+  {
+   "id": "k058",
+   "text": "I ordered a plain 5 ml bottle by mistake instead of a rollerball. Can I just get the roller top?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 5.0,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Indiemakeupandmore/comments/16yclic/",
+   "whyHard": "Owns the bottle; 5 ml indie bottle likely 18-415"
+  },
+  {
+   "id": "k059",
+   "text": "I've spent weeks looking for droppers that fit a 22-400 neck, not 20-400, and are short enough for a 1 oz bottle.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "dropper",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 30.0,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYfragrance/comments/nl2zks/",
+   "whyHard": "Precise but unusual finish; dip-tube length"
+  },
+  {
+   "id": "k060",
+   "text": "Where can I find rollerball inserts for 5 ml Arcana and Sorce bottles?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 5.0,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Indiemakeupandmore/comments/1n4xj1a/",
+   "whyHard": "Brand names stand in for the neck size"
+  },
+  {
+   "id": "k061",
+   "text": "Anyone know where to get rollerball caps for 5 ml bottles?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 5.0,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Indiemakeupandmore/comments/h8w7rd/",
+   "whyHard": "\"cap\" means the whole roller fitment"
+  },
+  {
+   "id": "k062",
+   "text": "I measured my vintage Avon bottle and I think it's 18-415. Does a replacement soap pump exist for it?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "lotionpump",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/HelpMeFind/comments/11tbtw2/",
+   "whyHard": "Legit neck but a household use case"
+  },
+  {
+   "id": "k063",
+   "text": "Dropper, reducer, or nothing at all for beard oil?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "ambiguous",
+    "applicatorAny": [
+     "cap",
+     "dropper",
+     "reducer"
+    ],
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/beardoil/comments/8gtfts/",
+   "whyHard": "Three options including \"nothing\""
+  },
+  {
+   "id": "k064",
+   "text": "I need help with those restrictor tops on beard oil bottles.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "reducer",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/BeardTalk/comments/17y81zx/",
+   "whyHard": "Rare synonym"
+  },
+  {
+   "id": "k065",
+   "text": "Where do you get sample bottles?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": "Vial",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Perfumes/comments/19940jo/",
+   "whyHard": "Applicator unspecified"
+  },
+  {
+   "id": "k066",
+   "text": "I'm launching a perfume oil brand and need a supplier that will do small batches, around 200 units.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/smallbusiness/comments/1qufg25/",
+   "whyHard": "Business intent; applicator implied by perfume oil"
+  },
+  {
+   "id": "k067",
+   "text": "Are there glass bottles with an embossed logo that don't need a 10,000-piece minimum?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_carried",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYfragrance/comments/1n204x0/",
+   "whyHard": "Custom mould"
+  },
+  {
+   "id": "k068",
+   "text": "I need exactly 100 round glass bottles, 50 to 100 ml, with a custom spray coating.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": "Round",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/smallbusinessindia/comments/1ug5qq2/",
+   "whyHard": "Decoration service"
+  },
+  {
+   "id": "k069",
+   "text": "I make ceramic perfume bottles. Where can I buy just the squeeze bulbs with tassels?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "bulb_spray",
+    "tassel": true,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/crafts/comments/1f3a4zl/",
+   "whyHard": "Component for a non-glass, non-standard neck"
+  },
+  {
+   "id": "k070",
+   "text": "Looking for a perfume bottle with one of those balloon atomizers.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "bulb_spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Perfumes/comments/10lp1kq/",
+   "whyHard": "Lay word \"balloon\""
+  },
+  {
+   "id": "k071",
+   "text": "My vintage DeVilbiss atomizer is clogged. Squeezing the bulb feels tight like a balloon.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "bulb_spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/fixit/comments/18bdemk/",
+   "whyHard": "Repair question"
+  },
+  {
+   "id": "k072",
+   "text": "I want luxurious-looking airless pump bottles.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_carried",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYBeauty/comments/2s880e/",
+   "whyHard": "Airless not stocked; nearest is glass + treatment pump"
+  },
+  {
+   "id": "k073",
+   "text": "Rollerball vs dropper: my first choice would be a heavy-bottomed 15 ml with a button dropper.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "dropper",
+    "tassel": null,
+    "family": "Pillar",
+    "glassColour": null,
+    "capacityMl": 15.0,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Indiemakeupandmore/comments/1u3ymwe/",
+   "whyHard": "Two applicators; the preference comes last"
+  },
+  {
+   "id": "k074",
+   "text": "Is there a travel alternative to dropper bottles? They all seem to have that floppy rubber bulb on top.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "ambiguous",
+    "applicatorAny": [
+     "reducer",
+     "rollon"
+    ],
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/essentialoils/comments/1m59wrq/",
+   "whyHard": "Wants NOT a dropper"
+  },
+  {
+   "id": "k075",
+   "text": "These bottles came without droppers. Can I add a dropper orifice?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "reducer",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Indiemakeupandmore/comments/1egscbs/",
+   "whyHard": "\"dropper orifice\" = reducer"
+  },
+  {
+   "id": "k076",
+   "text": "I want to move 50 and 100 ml vintage splash bottles into sprays, preferably crimp-on, plus a few 5-10 ml travel sprays.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://basenotes.com/threads/where-to-get-quality-bottles-in-small-qty-2025.567444/",
+   "whyHard": "Two sizes, crimp preference, travel add-on"
+  },
+  {
+   "id": "k077",
+   "text": "Who sells quality 1 to 3 ml glass spray bottles for samplers, without a 1,000-piece minimum?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": "Vial",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://basenotes.com/threads/sample-spray-bottles.553518/",
+   "whyHard": "MOQ constraint"
+  },
+  {
+   "id": "k078",
+   "text": "Best supplier of roll-on bottles with stainless steel balls? Reviews keep mentioning leaks.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://basenotes.com/threads/in-search-of-best-supplier-of-roll-on-bottles-with-stainless-steel-roller-ball-that-doesnt-leak.402180/",
+   "whyHard": "Quality + leak qualifier"
+  },
+  {
+   "id": "k079",
+   "text": "For natural perfumes in coconut oil, is a plastic or metal roller better?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://basenotes.com/threads/questions-re-roll-on-bottles-for-oil-based-perfume.523332/",
+   "whyHard": "Material of ball"
+  },
+  {
+   "id": "k080",
+   "text": "What's the best source for bottles with pumps?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "lotionpump",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.soapmakingforum.com/threads/best-source-for-bottles-with-pumps.69856/latest",
+   "whyHard": "Soapmaker context: plastic probable"
+  },
+  {
+   "id": "k081",
+   "text": "Which bottle style do you prefer for oud oil?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "stopper",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.ouddict.com/threads/oud-oil-bottle-choices.352/",
+   "whyHard": "Attar community prefers a glass stick"
+  },
+  {
+   "id": "k082",
+   "text": "Should I transfer perfume from my splash bottle to a spray bottle?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.fragrantica.com/board/viewtopic.php?id=299914",
+   "whyHard": "Advice question"
+  },
+  {
+   "id": "k083",
+   "text": "Where's a good place to get glass atomizers?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": "Clear",
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/fragrance/comments/ai2hq7/",
+   "whyHard": "atomizer = small glass spray bottle here; a reply notes sprayers under 5 ml fit poorly"
+  },
+  {
+   "id": "k084",
+   "text": "Is it possible to put an atomizer on 5 ml miniatures?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 5.0,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/fragrance/comments/ghzgpu/",
+   "whyHard": "Designer minis have non-standard necks"
+  },
+  {
+   "id": "k085",
+   "text": "What are the best 10 ml travel bottles?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 10.0,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/fragrance/comments/1gbsk31/",
+   "whyHard": "Applicator implied; replies describe the \"sleek longer\" 10 ml sprays (Tall Cylinder/Slim/Sleek ambiguity)"
+  },
+  {
+   "id": "k086",
+   "text": "How do I stop leaks when flying?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Indiemakeupandmore/comments/cap7dj/",
+   "whyHard": "No product; community answer is a reducer bottle plus tape"
+  },
+  {
+   "id": "k087",
+   "text": "Why don't more perfume houses offer 5 ml rollerballs?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 5.0,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/Indiemakeupandmore/comments/15wl1yx/",
+   "whyHard": "Opinion"
+  },
+  {
+   "id": "k088",
+   "text": "I'm making DIY perfume party favors. What bottles and tops should I use?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYfragrance/comments/1t71720/",
+   "whyHard": "Applicator unstated; replies steer to crimpless tops as the alternative to screw tops"
+  },
+  {
+   "id": "k089",
+   "text": "How do I keep a screw-on sprayer from coming unscrewed when I pull the cap off?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYfragrance/comments/1e9nx5f/",
+   "whyHard": "Quality complaint about the store's own format"
+  },
+  {
+   "id": "k090",
+   "text": "My crimp tool isn't crimping. It just pushes the cap and sleeve on. 15 mm bottles.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_carried",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIYfragrance/comments/1kpvebm/",
+   "whyHard": "15 mm = FEA crimp"
+  },
+  {
+   "id": "k091",
+   "text": "How do I work out the thread size of a glass bottle? 18-415 caps didn't fit.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "cap",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/AskEngineers/comments/1lfr0tg/",
+   "whyHard": "Neck mismatch"
+  },
+  {
+   "id": "k092",
+   "text": "What cap size does a 60 ml Boston round take?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "cap",
+    "tassel": null,
+    "family": "Boston Round",
+    "glassColour": null,
+    "capacityMl": 60.0,
+    "wants": "component_only"
+   },
+   "tags": [
+    "observed"
+   ],
+   "source": "research:community",
+   "url": "https://www.reddit.com/r/DIY_eJuice/comments/ltyzmc/",
+   "whyHard": "Answer: 20-400"
+  },
+  {
+   "id": "k093",
+   "text": "I need something small for perfume oil that won't leak in my purse.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "No applicator named; \"small\" and \"purse\" imply 5-10 ml"
+  },
+  {
+   "id": "k094",
+   "text": "Do you have 10 ml amber roller bottles with steel balls, around 50 of them?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": "Amber",
+    "capacityMl": 10.0,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": null
+  },
+  {
+   "id": "k095",
+   "text": "Looking for 1 oz amber dropper bottles for beard oil.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "dropper",
+    "tassel": null,
+    "family": "Boston Round",
+    "glassColour": "Amber",
+    "capacityMl": 30.0,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": null
+  },
+  {
+   "id": "k096",
+   "text": "I want a 30 ml frosted bottle with a pump for my serum.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "lotionpump",
+    "tassel": null,
+    "family": null,
+    "glassColour": "Frosted",
+    "capacityMl": 30.0,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Pump = treatment/lotion pump, not a perfume pump"
+  },
+  {
+   "id": "k097",
+   "text": "Can I get a 50 ml square perfume bottle with a gold spray top?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": "Square",
+    "glassColour": "Clear",
+    "capacityMl": 50.0,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Gold refers to the sprayer, not the glass"
+  },
+  {
+   "id": "k098",
+   "text": "I need 4 oz glass bottles with fine mist sprayers for room spray.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 120.0,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Size may exceed range"
+  },
+  {
+   "id": "k099",
+   "text": "Show me vintage perfume bottles with the squeeze bulb and tassel.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "bulb_spray",
+    "tassel": true,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": null
+  },
+  {
+   "id": "k100",
+   "text": "Do you sell little glass vials for perfume samples, 2 ml with a sprayer?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": "Vial",
+    "glassColour": "Clear",
+    "capacityMl": 2.0,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": null
+  },
+  {
+   "id": "k101",
+   "text": "What's your cheapest cobalt blue roll-on?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": "Cobalt Blue",
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": null
+  },
+  {
+   "id": "k102",
+   "text": "Glass cream jars, 50 ml, with black lids please.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "cap",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 50.0,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Category Cream Jar, not a bottle"
+  },
+  {
+   "id": "k103",
+   "text": "I'm after an apothecary style bottle with a glass stopper for my bathroom.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "stopper",
+    "tassel": null,
+    "family": "Apothecary",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": null
+  },
+  {
+   "id": "k104",
+   "text": "I want aluminum spray bottles for my linen spray.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Category Aluminum Bottle"
+  },
+  {
+   "id": "k105",
+   "text": "Not a roller, a spray. It's for my cologne.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Negated applicator comes first"
+  },
+  {
+   "id": "k106",
+   "text": "I don't want a dropper. I want the kind you just tip and it drips out one drop at a time.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "reducer",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Negates dropper, then describes a reducer"
+  },
+  {
+   "id": "k107",
+   "text": "No pumps please, they always clog with my oil. Something I can roll on.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Negation plus a clogging problem"
+  },
+  {
+   "id": "k108",
+   "text": "I want a spray, but not one of those old-fashioned bulb ones.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Negates antiquespray"
+  },
+  {
+   "id": "k109",
+   "text": "Anything except the plastic insert. I hate shaking the bottle to get oil out.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "ambiguous",
+    "applicatorAny": [
+     "dropper",
+     "rollon"
+    ],
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Negates reducer, described not named"
+  },
+  {
+   "id": "k110",
+   "text": "Not amber. Clear glass, so people can see the colour of the perfume.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": "Clear",
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Colour negation; UK spelling"
+  },
+  {
+   "id": "k111",
+   "text": "I don't need the bottle, just the spray pump part.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Explicit component_only"
+  },
+  {
+   "id": "k112",
+   "text": "It shouldn't be a dabber. I want to be able to spritz it.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": "Vial",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": null
+  },
+  {
+   "id": "k113",
+   "text": "Can I get the same bottle with both a roller and a spray top so customers can choose?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "ambiguous",
+    "applicatorAny": [
+     "rollon",
+     "spray"
+    ],
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Two applicators wanted together"
+  },
+  {
+   "id": "k114",
+   "text": "I need 10 ml rollers and some 30 ml droppers, all amber.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "ambiguous",
+    "applicatorAny": [
+     "dropper",
+     "rollon"
+    ],
+    "tassel": null,
+    "family": null,
+    "glassColour": "Amber",
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Two products in one request"
+  },
+  {
+   "id": "k115",
+   "text": "Serum pump or dropper for a vitamin C serum, which do you recommend?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "ambiguous",
+    "applicatorAny": [
+     "dropper",
+     "lotionpump"
+    ],
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Advice between two buckets"
+  },
+  {
+   "id": "k116",
+   "text": "I want a spray bottle for the car and a roll-on for my purse, same scent.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "ambiguous",
+    "applicatorAny": [
+     "rollon",
+     "spray"
+    ],
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": null
+  },
+  {
+   "id": "k117",
+   "text": "I have some 5 ml amber bottles. Do you sell rollerball tops that fit them?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": "Amber",
+    "capacityMl": 5.0,
+    "wants": "component_only"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Neck unknown; 5 ml amber is usually 18-415"
+  },
+  {
+   "id": "k118",
+   "text": "What cap fits an 18-415 bottle?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "cap",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": null
+  },
+  {
+   "id": "k119",
+   "text": "Do you sell just the orifice reducers, the little plastic insert things?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "reducer",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": null
+  },
+  {
+   "id": "k120",
+   "text": "My vintage atomizer bulb cracked. Can I buy just a new bulb with the tassel?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "bulb_spray",
+    "tassel": true,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Fit to old neck unlikely"
+  },
+  {
+   "id": "k121",
+   "text": "Will your 20-410 treatment pumps fit a 20-400 glass bottle?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "lotionpump",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "400 vs 410 cross-fit question"
+  },
+  {
+   "id": "k122",
+   "text": "I lost the lid to my roller bottle. Do you sell just the caps?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "cap",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Roller-bottle cap is a capclosure, not a rollon"
+  },
+  {
+   "id": "k123",
+   "text": "I need a new sprayer for my Dior bottle. The nozzle broke.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Crimped designer bottle; no fit, so redirect to decanting"
+  },
+  {
+   "id": "k124",
+   "text": "Do the droppers come with the glass tube cut to length for a 1 oz bottle?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "dropper",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 30.0,
+    "wants": "component_only"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Dip-tube length"
+  },
+  {
+   "id": "k125",
+   "text": "The threads on my bottle don't match any cap I've bought. It's about 13 mm across.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "cap",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Outer diameter only"
+  },
+  {
+   "id": "k126",
+   "text": "I need bottles for my perfume.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "No size, applicator or quantity"
+  },
+  {
+   "id": "k127",
+   "text": "Something pretty for a gift.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": "Decorative",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Could map to antiquespray"
+  },
+  {
+   "id": "k128",
+   "text": "What do people usually use for oils?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Informational"
+  },
+  {
+   "id": "k129",
+   "text": "Do you have anything smaller?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Relies on prior context"
+  },
+  {
+   "id": "k130",
+   "text": "I want the normal essential oil bottle, the brown one.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "reducer",
+    "tassel": null,
+    "family": "Boston Round",
+    "glassColour": "Amber",
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "\"Normal\" = Boston round with euro dropper"
+  },
+  {
+   "id": "k131",
+   "text": "Just the basic ones everyone uses for samples.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": "Vial",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": null
+  },
+  {
+   "id": "k132",
+   "text": "Something for my beard stuff.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "ambiguous",
+    "applicatorAny": [
+     "dropper",
+     "reducer"
+    ],
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": null
+  },
+  {
+   "id": "k133",
+   "text": "Do you have airless pump bottles for my retinol serum?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_carried",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Steer: opaque glass with treatment pump, stating it is not airless"
+  },
+  {
+   "id": "k134",
+   "text": "I need plastic squeeze tubes for lip gloss.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_carried",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Roll-on is the only in-catalogue alternative"
+  },
+  {
+   "id": "k135",
+   "text": "Do you sell candle jars with wooden lids?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_carried",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Jar exists as a word but candle vessels probably do not"
+  },
+  {
+   "id": "k136",
+   "text": "I want 500 ml amber bottles with trigger sprayers for cleaning spray.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_carried",
+    "tassel": null,
+    "family": null,
+    "glassColour": "Amber",
+    "capacityMl": 500.0,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Trigger + large volume"
+  },
+  {
+   "id": "k137",
+   "text": "Can you fill the bottles with my perfume and put my logo on them?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Filling and decoration services"
+  },
+  {
+   "id": "k138",
+   "text": "Do you have child-resistant dropper caps for tinctures?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_carried",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": null
+  },
+  {
+   "id": "k139",
+   "text": "I need a crimping tool for 15 mm perfume pumps.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_carried",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": null
+  },
+  {
+   "id": "k140",
+   "text": "Do you sell reed diffuser sticks and the bottles?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_carried",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": null
+  },
+  {
+   "id": "k141",
+   "text": "Cuticle oil bottles with a brush in the cap?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_carried",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Brush cap not stocked; roller is the alternative"
+  },
+  {
+   "id": "k142",
+   "text": "I want a foaming pump bottle for hand soap.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_carried",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": null
+  },
+  {
+   "id": "k143",
+   "text": "do u have role on bottles for oils",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Voice mishearing \"role on\""
+  },
+  {
+   "id": "k144",
+   "text": "I need a tomizer for my purse",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": "Atomizer",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Voice split \"a tomizer\""
+  },
+  {
+   "id": "k145",
+   "text": "looking for adder oil bottles with the glass stick",
+   "split": "holdout",
+   "expect": {
+    "applicator": "stopper",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "\"adder\" = attar"
+  },
+  {
+   "id": "k146",
+   "text": "perfume automizer 10ml refillable",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": "Atomizer",
+    "glassColour": null,
+    "capacityMl": 10.0,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Misspelling \"automizer\""
+  },
+  {
+   "id": "k147",
+   "text": "vintage atomiser with tassle in pink",
+   "split": "holdout",
+   "expect": {
+    "applicator": "bulb_spray",
+    "tassel": true,
+    "family": null,
+    "glassColour": null,
+    "colourSkip": true,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Two misspellings plus a colour"
+  },
+  {
+   "id": "k148",
+   "text": "orfice reducer caps 18 415 black",
+   "split": "holdout",
+   "expect": {
+    "applicator": "reducer",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Misspelling plus spaced neck finish"
+  },
+  {
+   "id": "k149",
+   "text": "I want a your oh dropper bottle, fifteen mil, brown",
+   "split": "holdout",
+   "expect": {
+    "applicator": "reducer",
+    "tassel": null,
+    "family": null,
+    "glassColour": "Amber",
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Voice: \"your oh dropper\" = euro dropper; \"fifteen mil\""
+  },
+  {
+   "id": "k150",
+   "text": "rollar bottels 10 ml gold lid x24",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 10.0,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Two typos; quantity notation"
+  },
+  {
+   "id": "k151",
+   "text": "have you got any colour atomisers for wedding favours",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": "Atomizer",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "UK spelling throughout"
+  },
+  {
+   "id": "k152",
+   "text": "one third ounce roll ons clear",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": "Clear",
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Spoken fraction"
+  },
+  {
+   "id": "k153",
+   "text": "ittar bottles 6 ml fancy crystal",
+   "split": "holdout",
+   "expect": {
+    "applicator": "stopper",
+    "tassel": null,
+    "family": "Decorative",
+    "glassColour": null,
+    "capacityMl": 6.0,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Transliteration"
+  },
+  {
+   "id": "k154",
+   "text": "the bottle with the balloon thing you squeeze",
+   "split": "holdout",
+   "expect": {
+    "applicator": "bulb_spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Lay description only"
+  },
+  {
+   "id": "k155",
+   "text": "twenty four ten pumps for lotion",
+   "split": "holdout",
+   "expect": {
+    "applicator": "lotionpump",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Spoken neck finish, likely out of range"
+  },
+  {
+   "id": "k156",
+   "text": "half dram vials",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": "Vial",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Dram ambiguity"
+  },
+  {
+   "id": "k157",
+   "text": "I want the kind of dropper with the rubber bulb and glass tube, not the plastic drip insert.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "dropper",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Disambiguates dropper vs reducer explicitly"
+  },
+  {
+   "id": "k158",
+   "text": "Is a euro dropper the same as a dropper?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "ambiguous",
+    "applicatorAny": [
+     "dropper",
+     "reducer"
+    ],
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Definitional"
+  },
+  {
+   "id": "k159",
+   "text": "For alcohol perfume I want a proper perfume pump, not a cheap fine mist one.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "finemist vs perfumespray quality"
+  },
+  {
+   "id": "k160",
+   "text": "I need a mister for toner. Super fine, not a perfume sprayer.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Reverse of the above"
+  },
+  {
+   "id": "k161",
+   "text": "Is a treatment pump the same thing as a lotion pump?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "lotionpump",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Terminology"
+  },
+  {
+   "id": "k162",
+   "text": "I need an atomizer. The kind with a bulb, not a travel spray.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "bulb_spray",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Same word, two meanings, resolved by the speaker"
+  },
+  {
+   "id": "k163",
+   "text": "Do you have the glass wand caps like on sample vials?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "stopper",
+    "tassel": null,
+    "family": "Vial",
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "component_only"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": null
+  },
+  {
+   "id": "k164",
+   "text": "Tall skinny 10 ml bottle with a roller, clear glass.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "familySkip": true,
+    "glassColour": "Clear",
+    "capacityMl": 10.0,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Shape words map to three families"
+  },
+  {
+   "id": "k165",
+   "text": "Flat pocket-size perfume bottle, 15 ml or so, with a spray.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "familySkip": true,
+    "glassColour": null,
+    "capacityMl": 15.0,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": null
+  },
+  {
+   "id": "k166",
+   "text": "A round ball-shaped perfume bottle, about 30 ml, spray.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": null,
+    "familySkip": true,
+    "glassColour": null,
+    "capacityMl": 30.0,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Round vs Circle"
+  },
+  {
+   "id": "k167",
+   "text": "Something with a heavy base that feels luxury, 50 ml, black cap.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": "Pillar",
+    "glassColour": null,
+    "capacityMl": 50.0,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Premium cue"
+  },
+  {
+   "id": "k168",
+   "text": "I want dark glass to protect the oil from light, but not brown.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "colourSkip": true,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "UV need with a colour negation"
+  },
+  {
+   "id": "k169",
+   "text": "Matte black 1 oz dropper bottles with gold droppers.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "dropper",
+    "tassel": null,
+    "family": null,
+    "glassColour": "none_named",
+    "capacityMl": 30.0,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Colour on glass and colour on closure"
+  },
+  {
+   "id": "k170",
+   "text": "A heart-shaped mini perfume bottle for wedding favors, about 5 ml.",
+   "split": "holdout",
+   "expect": {
+    "applicator": "spray",
+    "tassel": null,
+    "family": "Decorative",
+    "glassColour": null,
+    "capacityMl": 5.0,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "No heart family"
+  },
+  {
+   "id": "k171",
+   "text": "What's your minimum order on the 10 ml rollers?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": 10.0,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "MOQ question"
+  },
+  {
+   "id": "k172",
+   "text": "Can I order a sample of each before buying a case?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Sample-order intent"
+  },
+  {
+   "id": "k173",
+   "text": "Do you give price breaks if I buy 500?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Tier pricing"
+  },
+  {
+   "id": "k174",
+   "text": "I'm starting a small perfume oil line. What do most indie brands use?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "rollon",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Advice plus implied product"
+  },
+  {
+   "id": "k175",
+   "text": "Do you ship to Canada, and how many come in a case?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "capacityMl": null,
+    "wants": "unclear"
+   },
+   "tags": [
+    "constructed"
+   ],
+   "source": "research:community",
+   "url": null,
+   "whyHard": "Logistics"
+  },
+  {
+   "id": "k176",
+   "text": "Do you have anything in shiny gold?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "atomizerFinish": null,
+    "capFinish": "Shiny Gold",
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "finish-only",
+    "cap-finish"
+   ],
+   "source": "constructed",
+   "url": null,
+   "whyHard": "Finish-only; must not route to Cap/Closure applicator"
+  },
+  {
+   "id": "k177",
+   "text": "I want the matte black ones",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "atomizerFinish": null,
+    "capFinish": "Matte Black",
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "finish-only",
+    "cap-finish"
+   ],
+   "source": "constructed",
+   "url": null,
+   "whyHard": "Finish-only colour words with no applicator"
+  },
+  {
+   "id": "k178",
+   "text": "Anything in pink with dots?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "atomizerFinish": "Pink with Dots",
+    "capFinish": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "finish-only",
+    "atomizer-finish"
+   ],
+   "source": "constructed",
+   "url": null,
+   "whyHard": "Decorated atomizer finish without naming a family"
+  }
+ ]
+}

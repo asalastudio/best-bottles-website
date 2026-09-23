@@ -1,0 +1,399 @@
+{
+  "revision": 1,
+  "decisions": {
+    "GB1ozGenieBl:b1969408cacbd7cd5a031395639df19e6fe59b1cdf412261950141a2095ba371": {
+      "sku": "GB1ozGenieBl",
+      "binding": "b1969408cacbd7cd5a031395639df19e6fe59b1cdf412261950141a2095ba371",
+      "sha256": "6ffb69a7402b29b36f0e5ef2d52622e55010ec0c8feb68db6b5e8f88b412a801",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:41.692Z",
+      "batchId": "3611798c-8f19-4088-a1f5-e45df554370b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-32ml-cobalt-blue-ground/GB1ozGenieBl/6ffb69a7402b29b36f0e5ef2d52622e55010ec0c8feb68db6b5e8f88b412a801.front-on-1000x1100.webp",
+          "sha256": "6ffb69a7402b29b36f0e5ef2d52622e55010ec0c8feb68db6b5e8f88b412a801",
+          "url": "/images/plate-contact-sheets/6ffb69a7402b29b36f0e5ef2d52622e55010ec0c8feb68db6b5e8f88b412a801.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-32ml-cobalt-blue-ground/GB1ozGenieBl/aa73026f5aa7944e823716ff13034b759c5516730e8748db049ef75598df0331.front-off-1000x1100.webp",
+          "sha256": "aa73026f5aa7944e823716ff13034b759c5516730e8748db049ef75598df0331",
+          "url": "/images/plate-contact-sheets/aa73026f5aa7944e823716ff13034b759c5516730e8748db049ef75598df0331.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GB1ozGenieCl:9ec7c4f4ffd581d13dfe2d3e974724808513a2988158c23fa8a974b0399318cf": {
+      "sku": "GB1ozGenieCl",
+      "binding": "9ec7c4f4ffd581d13dfe2d3e974724808513a2988158c23fa8a974b0399318cf",
+      "sha256": "32a07ccf004bd15b10f392c7f2dde216e7bb0fbd69d4899023b442aa349977e8",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:41.692Z",
+      "batchId": "3611798c-8f19-4088-a1f5-e45df554370b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-32ml-clear-ground/GB1ozGenieCl/32a07ccf004bd15b10f392c7f2dde216e7bb0fbd69d4899023b442aa349977e8.front-on-1000x1100.webp",
+          "sha256": "32a07ccf004bd15b10f392c7f2dde216e7bb0fbd69d4899023b442aa349977e8",
+          "url": "/images/plate-contact-sheets/32a07ccf004bd15b10f392c7f2dde216e7bb0fbd69d4899023b442aa349977e8.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-32ml-clear-ground/GB1ozGenieCl/2ae4cc9565d7c9d4ab42d310b5cc21e6bb12ab2256eb6e28e6fd70b4e17b7dc9.front-off-1000x1100.webp",
+          "sha256": "2ae4cc9565d7c9d4ab42d310b5cc21e6bb12ab2256eb6e28e6fd70b4e17b7dc9",
+          "url": "/images/plate-contact-sheets/2ae4cc9565d7c9d4ab42d310b5cc21e6bb12ab2256eb6e28e6fd70b4e17b7dc9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GB3TPlGl:8d8a0ec1a878c4c3b2745c7717b5bd2d45c0e64be40180597aab743df898b3b1": {
+      "sku": "GB3TPlGl",
+      "binding": "8d8a0ec1a878c4c3b2745c7717b5bd2d45c0e64be40180597aab743df898b3b1",
+      "sha256": "de638fefaee75d4d7dbae8aae2c84e5bc1400718ef4693f30f1cf7170aa8674e",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:41.692Z",
+      "batchId": "3611798c-8f19-4088-a1f5-e45df554370b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-3ml-clear-14-3mm/GB3TPlGl/de638fefaee75d4d7dbae8aae2c84e5bc1400718ef4693f30f1cf7170aa8674e.front-on-1000x1100.webp",
+          "sha256": "de638fefaee75d4d7dbae8aae2c84e5bc1400718ef4693f30f1cf7170aa8674e",
+          "url": "/images/plate-contact-sheets/de638fefaee75d4d7dbae8aae2c84e5bc1400718ef4693f30f1cf7170aa8674e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-3ml-clear-14-3mm/GB3TPlGl/0d429254960f16440c2d5f46bb1a4d2bb9eed8323f26fc74aafe3a09de83f1f3.front-off-1000x1100.webp",
+          "sha256": "0d429254960f16440c2d5f46bb1a4d2bb9eed8323f26fc74aafe3a09de83f1f3",
+          "url": "/images/plate-contact-sheets/0d429254960f16440c2d5f46bb1a4d2bb9eed8323f26fc74aafe3a09de83f1f3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GB6TPlGl:97b841b216e0cca7d68e8dec73ec109e3be99ec91638682e2f1dbd18a5d62b02": {
+      "sku": "GB6TPlGl",
+      "binding": "97b841b216e0cca7d68e8dec73ec109e3be99ec91638682e2f1dbd18a5d62b02",
+      "sha256": "d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:41.692Z",
+      "batchId": "3611798c-8f19-4088-a1f5-e45df554370b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-6ml-clear-14-3mm/GB6TPlGl/d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1.front-on-1000x1100.webp",
+          "sha256": "d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1",
+          "url": "/images/plate-contact-sheets/d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-6ml-clear-14-3mm/GB6TPlGl/4c679db72f962ba60fe297c7d23ed858875ab23d7fd62740e662237371ed56fc.front-off-1000x1100.webp",
+          "sha256": "4c679db72f962ba60fe297c7d23ed858875ab23d7fd62740e662237371ed56fc",
+          "url": "/images/plate-contact-sheets/4c679db72f962ba60fe297c7d23ed858875ab23d7fd62740e662237371ed56fc.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBEternalFlameBlue:d9ad98bcd5bb42785d50616728152057fe89f9595244bc4756f6991d75fe00ad": {
+      "sku": "GBEternalFlameBlue",
+      "binding": "d9ad98bcd5bb42785d50616728152057fe89f9595244bc4756f6991d75fe00ad",
+      "sha256": "944026f3c095b751bca1f1634b046b06d6dacc016809f9df995563bf0eb77b26",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:41.692Z",
+      "batchId": "3611798c-8f19-4088-a1f5-e45df554370b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-35ml-cobalt-blue-ground/GBEternalFlameBlue/944026f3c095b751bca1f1634b046b06d6dacc016809f9df995563bf0eb77b26.front-on-1000x1100.webp",
+          "sha256": "944026f3c095b751bca1f1634b046b06d6dacc016809f9df995563bf0eb77b26",
+          "url": "/images/plate-contact-sheets/944026f3c095b751bca1f1634b046b06d6dacc016809f9df995563bf0eb77b26.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-35ml-cobalt-blue-ground/GBEternalFlameBlue/493b0df9e181e03080166c1511ec69142ee9e4ba3d334622ae176abfc7443131.front-off-1000x1100.webp",
+          "sha256": "493b0df9e181e03080166c1511ec69142ee9e4ba3d334622ae176abfc7443131",
+          "url": "/images/plate-contact-sheets/493b0df9e181e03080166c1511ec69142ee9e4ba3d334622ae176abfc7443131.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBEternalFlameGreen:ad46f22908662e254a0f7fca7079e3fa224fcf41822dfaa264a98350ddbf4946": {
+      "sku": "GBEternalFlameGreen",
+      "binding": "ad46f22908662e254a0f7fca7079e3fa224fcf41822dfaa264a98350ddbf4946",
+      "sha256": "89528509574b25ba048ef274b7af3c4453b017895f9876f1192ad699e0d0f092",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:41.692Z",
+      "batchId": "3611798c-8f19-4088-a1f5-e45df554370b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-35ml-green-ground/GBEternalFlameGreen/89528509574b25ba048ef274b7af3c4453b017895f9876f1192ad699e0d0f092.front-on-1000x1100.webp",
+          "sha256": "89528509574b25ba048ef274b7af3c4453b017895f9876f1192ad699e0d0f092",
+          "url": "/images/plate-contact-sheets/89528509574b25ba048ef274b7af3c4453b017895f9876f1192ad699e0d0f092.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-35ml-green-ground/GBEternalFlameGreen/10f63ec49c86fc3bf748d4e181ddb40c15e26b4c4cbf5325116e7f65acbd7ad5.front-off-1000x1100.webp",
+          "sha256": "10f63ec49c86fc3bf748d4e181ddb40c15e26b4c4cbf5325116e7f65acbd7ad5",
+          "url": "/images/plate-contact-sheets/10f63ec49c86fc3bf748d4e181ddb40c15e26b4c4cbf5325116e7f65acbd7ad5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBMtlMrblSmall:22e91dacd89f71fd649c5e3ac0f61b8949665d91ffb4836560fc83a434109dc5": {
+      "sku": "GBMtlMrblSmall",
+      "binding": "22e91dacd89f71fd649c5e3ac0f61b8949665d91ffb4836560fc83a434109dc5",
+      "sha256": "9c5f59c099e9e4d3790287c3d48eecea46b00b175eca8e89229d478597deedff",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:41.692Z",
+      "batchId": "3611798c-8f19-4088-a1f5-e45df554370b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-5ml-clear-17-52mm/GBMtlMrblSmall/9c5f59c099e9e4d3790287c3d48eecea46b00b175eca8e89229d478597deedff.front-on-1000x1100.webp",
+          "sha256": "9c5f59c099e9e4d3790287c3d48eecea46b00b175eca8e89229d478597deedff",
+          "url": "/images/plate-contact-sheets/9c5f59c099e9e4d3790287c3d48eecea46b00b175eca8e89229d478597deedff.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-5ml-clear-17-52mm/GBMtlMrblSmall/5103ee22a68ddcf7865bb189608f1cd65a9e6f183dc6869b202cc76d3c31772c.front-off-1000x1100.webp",
+          "sha256": "5103ee22a68ddcf7865bb189608f1cd65a9e6f183dc6869b202cc76d3c31772c",
+          "url": "/images/plate-contact-sheets/5103ee22a68ddcf7865bb189608f1cd65a9e6f183dc6869b202cc76d3c31772c.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  },
+  "history": [
+    {
+      "sku": "GB1ozGenieBl",
+      "binding": "b1969408cacbd7cd5a031395639df19e6fe59b1cdf412261950141a2095ba371",
+      "sha256": "6ffb69a7402b29b36f0e5ef2d52622e55010ec0c8feb68db6b5e8f88b412a801",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:41.692Z",
+      "batchId": "3611798c-8f19-4088-a1f5-e45df554370b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-32ml-cobalt-blue-ground/GB1ozGenieBl/6ffb69a7402b29b36f0e5ef2d52622e55010ec0c8feb68db6b5e8f88b412a801.front-on-1000x1100.webp",
+          "sha256": "6ffb69a7402b29b36f0e5ef2d52622e55010ec0c8feb68db6b5e8f88b412a801",
+          "url": "/images/plate-contact-sheets/6ffb69a7402b29b36f0e5ef2d52622e55010ec0c8feb68db6b5e8f88b412a801.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-32ml-cobalt-blue-ground/GB1ozGenieBl/aa73026f5aa7944e823716ff13034b759c5516730e8748db049ef75598df0331.front-off-1000x1100.webp",
+          "sha256": "aa73026f5aa7944e823716ff13034b759c5516730e8748db049ef75598df0331",
+          "url": "/images/plate-contact-sheets/aa73026f5aa7944e823716ff13034b759c5516730e8748db049ef75598df0331.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GB1ozGenieCl",
+      "binding": "9ec7c4f4ffd581d13dfe2d3e974724808513a2988158c23fa8a974b0399318cf",
+      "sha256": "32a07ccf004bd15b10f392c7f2dde216e7bb0fbd69d4899023b442aa349977e8",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:41.692Z",
+      "batchId": "3611798c-8f19-4088-a1f5-e45df554370b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-32ml-clear-ground/GB1ozGenieCl/32a07ccf004bd15b10f392c7f2dde216e7bb0fbd69d4899023b442aa349977e8.front-on-1000x1100.webp",
+          "sha256": "32a07ccf004bd15b10f392c7f2dde216e7bb0fbd69d4899023b442aa349977e8",
+          "url": "/images/plate-contact-sheets/32a07ccf004bd15b10f392c7f2dde216e7bb0fbd69d4899023b442aa349977e8.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-32ml-clear-ground/GB1ozGenieCl/2ae4cc9565d7c9d4ab42d310b5cc21e6bb12ab2256eb6e28e6fd70b4e17b7dc9.front-off-1000x1100.webp",
+          "sha256": "2ae4cc9565d7c9d4ab42d310b5cc21e6bb12ab2256eb6e28e6fd70b4e17b7dc9",
+          "url": "/images/plate-contact-sheets/2ae4cc9565d7c9d4ab42d310b5cc21e6bb12ab2256eb6e28e6fd70b4e17b7dc9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GB3TPlGl",
+      "binding": "8d8a0ec1a878c4c3b2745c7717b5bd2d45c0e64be40180597aab743df898b3b1",
+      "sha256": "de638fefaee75d4d7dbae8aae2c84e5bc1400718ef4693f30f1cf7170aa8674e",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:41.692Z",
+      "batchId": "3611798c-8f19-4088-a1f5-e45df554370b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-3ml-clear-14-3mm/GB3TPlGl/de638fefaee75d4d7dbae8aae2c84e5bc1400718ef4693f30f1cf7170aa8674e.front-on-1000x1100.webp",
+          "sha256": "de638fefaee75d4d7dbae8aae2c84e5bc1400718ef4693f30f1cf7170aa8674e",
+          "url": "/images/plate-contact-sheets/de638fefaee75d4d7dbae8aae2c84e5bc1400718ef4693f30f1cf7170aa8674e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-3ml-clear-14-3mm/GB3TPlGl/0d429254960f16440c2d5f46bb1a4d2bb9eed8323f26fc74aafe3a09de83f1f3.front-off-1000x1100.webp",
+          "sha256": "0d429254960f16440c2d5f46bb1a4d2bb9eed8323f26fc74aafe3a09de83f1f3",
+          "url": "/images/plate-contact-sheets/0d429254960f16440c2d5f46bb1a4d2bb9eed8323f26fc74aafe3a09de83f1f3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GB6TPlGl",
+      "binding": "97b841b216e0cca7d68e8dec73ec109e3be99ec91638682e2f1dbd18a5d62b02",
+      "sha256": "d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:41.692Z",
+      "batchId": "3611798c-8f19-4088-a1f5-e45df554370b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-6ml-clear-14-3mm/GB6TPlGl/d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1.front-on-1000x1100.webp",
+          "sha256": "d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1",
+          "url": "/images/plate-contact-sheets/d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-6ml-clear-14-3mm/GB6TPlGl/4c679db72f962ba60fe297c7d23ed858875ab23d7fd62740e662237371ed56fc.front-off-1000x1100.webp",
+          "sha256": "4c679db72f962ba60fe297c7d23ed858875ab23d7fd62740e662237371ed56fc",
+          "url": "/images/plate-contact-sheets/4c679db72f962ba60fe297c7d23ed858875ab23d7fd62740e662237371ed56fc.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBEternalFlameBlue",
+      "binding": "d9ad98bcd5bb42785d50616728152057fe89f9595244bc4756f6991d75fe00ad",
+      "sha256": "944026f3c095b751bca1f1634b046b06d6dacc016809f9df995563bf0eb77b26",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:41.692Z",
+      "batchId": "3611798c-8f19-4088-a1f5-e45df554370b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-35ml-cobalt-blue-ground/GBEternalFlameBlue/944026f3c095b751bca1f1634b046b06d6dacc016809f9df995563bf0eb77b26.front-on-1000x1100.webp",
+          "sha256": "944026f3c095b751bca1f1634b046b06d6dacc016809f9df995563bf0eb77b26",
+          "url": "/images/plate-contact-sheets/944026f3c095b751bca1f1634b046b06d6dacc016809f9df995563bf0eb77b26.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-35ml-cobalt-blue-ground/GBEternalFlameBlue/493b0df9e181e03080166c1511ec69142ee9e4ba3d334622ae176abfc7443131.front-off-1000x1100.webp",
+          "sha256": "493b0df9e181e03080166c1511ec69142ee9e4ba3d334622ae176abfc7443131",
+          "url": "/images/plate-contact-sheets/493b0df9e181e03080166c1511ec69142ee9e4ba3d334622ae176abfc7443131.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBEternalFlameGreen",
+      "binding": "ad46f22908662e254a0f7fca7079e3fa224fcf41822dfaa264a98350ddbf4946",
+      "sha256": "89528509574b25ba048ef274b7af3c4453b017895f9876f1192ad699e0d0f092",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:41.692Z",
+      "batchId": "3611798c-8f19-4088-a1f5-e45df554370b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-35ml-green-ground/GBEternalFlameGreen/89528509574b25ba048ef274b7af3c4453b017895f9876f1192ad699e0d0f092.front-on-1000x1100.webp",
+          "sha256": "89528509574b25ba048ef274b7af3c4453b017895f9876f1192ad699e0d0f092",
+          "url": "/images/plate-contact-sheets/89528509574b25ba048ef274b7af3c4453b017895f9876f1192ad699e0d0f092.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-35ml-green-ground/GBEternalFlameGreen/10f63ec49c86fc3bf748d4e181ddb40c15e26b4c4cbf5325116e7f65acbd7ad5.front-off-1000x1100.webp",
+          "sha256": "10f63ec49c86fc3bf748d4e181ddb40c15e26b4c4cbf5325116e7f65acbd7ad5",
+          "url": "/images/plate-contact-sheets/10f63ec49c86fc3bf748d4e181ddb40c15e26b4c4cbf5325116e7f65acbd7ad5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBMtlMrblSmall",
+      "binding": "22e91dacd89f71fd649c5e3ac0f61b8949665d91ffb4836560fc83a434109dc5",
+      "sha256": "9c5f59c099e9e4d3790287c3d48eecea46b00b175eca8e89229d478597deedff",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:41.692Z",
+      "batchId": "3611798c-8f19-4088-a1f5-e45df554370b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-5ml-clear-17-52mm/GBMtlMrblSmall/9c5f59c099e9e4d3790287c3d48eecea46b00b175eca8e89229d478597deedff.front-on-1000x1100.webp",
+          "sha256": "9c5f59c099e9e4d3790287c3d48eecea46b00b175eca8e89229d478597deedff",
+          "url": "/images/plate-contact-sheets/9c5f59c099e9e4d3790287c3d48eecea46b00b175eca8e89229d478597deedff.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-5ml-clear-17-52mm/GBMtlMrblSmall/5103ee22a68ddcf7865bb189608f1cd65a9e6f183dc6869b202cc76d3c31772c.front-off-1000x1100.webp",
+          "sha256": "5103ee22a68ddcf7865bb189608f1cd65a9e6f183dc6869b202cc76d3c31772c",
+          "url": "/images/plate-contact-sheets/5103ee22a68ddcf7865bb189608f1cd65a9e6f183dc6869b202cc76d3c31772c.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  ]
+}

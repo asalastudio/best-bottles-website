@@ -1,5 +1,7 @@
 "use client";
 
+import { useRegion } from "@/components/RegionProvider";
+
 import { fitmentChoiceHints, fitmentContents } from "@/lib/bottle-builder/fitment-copy";
 import { useEffect, useId, useMemo, useRef, useState, useTransition, useSyncExternalStore, type ReactNode } from "react";
 import Link from "next/link";
@@ -7,24 +9,28 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { ArrowLeft, ArrowRight, Check, CheckCircle, Minus, Plus, ShieldCheck, SlidersHorizontal, ShoppingBag } from "@/components/icons";
 import { useCart } from "@/components/CartProvider";
 import { useBuilderFamilies } from "@/components/bottle-builder/useBuilderFamilies";
+import { useBuilderKits } from "@/components/bottle-builder/useBuilderKits";
 import FamilyLoadingStatus from "@/components/bottle-builder/FamilyLoadingStatus";
+import bodyHeightMedia from "@/lib/bottle-builder/body-heights.generated.json";
 import MobileBuilder from "@/components/bottle-builder/MobileBuilder";
 import BuilderImage from "@/components/bottle-builder/BuilderImage";
 import FitmentIllustration from "@/components/bottle-builder/FitmentIllustration";
 import BuilderFinishImage from "@/components/bottle-builder/BuilderFinishImage";
 import { checkoutMinimum, checkoutMinimumMessage } from "@/lib/checkout";
 import { analytics } from "@/lib/analytics";
+import { displayApplicatorName } from "@/lib/catalogFilters";
 import {
     builderOrder, deriveBuilder, emptySelection, previewParts, reconcileSelection, selectBuilderBody,
-    MAX_QUANTITY, ORDER_MINIMUM, type BuilderBody, type BuilderConfiguration, type BuilderSelection,
+    MAX_QUANTITY, ORDER_MINIMUM, type BuilderBody, type BuilderConfiguration, type BuilderSelection, bareGlassPreview, clearBodyPreview,
 } from "@/lib/bottle-builder/model";
 import hasIncludedCovers from "@/lib/bottle-builder/exposed-sprayers.generated.json";
+import { CHOOSER_PRIORITY_TILES } from "@/lib/bottle-builder/mobile-request";
 import styles from "@/components/bottle-builder/Builder.module.css";
 
 const money = (value: number | null) => value == null ? "—" : new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(value);
 const subscribeMobile = (callback: () => void) => { const query = window.matchMedia("(max-width: 1099px)"); query.addEventListener("change", callback); return () => query.removeEventListener("change", callback); };
 const mobileSnapshot = () => window.matchMedia("(max-width: 1099px)").matches;
-const serverMobileSnapshot = () => false;
+const serverMobileSnapshot = (preferMobile: boolean) => () => preferMobile;
 const steps = ["Bottle", "Fitment", "Appearance", "Review"];
 const fitmentDescriptions: Record<string, string> = {
     "Screw Cap": "Close and reopen your bottle.",
@@ -38,11 +44,22 @@ const fitmentDescriptions: Record<string, string> = {
     "Vintage Bulb Sprayer with Tassel": "A squeeze-bulb spray with a decorative tassel.",
 };
 
-// Visual size cues for the chooser, not a dimensional product comparison.
-// Preserve the taller, slender 9 ml profile and a graduated size range.
-function chooserScale(body: BuilderBody) {
-    if (body.family === "Circle") return ({ 15: .68, 30: .79, 50: .9, 100: 1 } as Record<number, number>)[body.capacityMl] ?? 1;
-    if (body.family !== "Cylinder") return 1;
+// Chooser tiles keep the family's physical proportions: each body is shown at
+// its measured glass height relative to the tallest body on offer (canonical
+// body-geometry audit, 2026-07-12), floored so the smallest stays legible.
+// Cylinder keeps its hand-tuned cues for the two 9 ml necks the audit merges.
+const bodyHeights = (bodyHeightMedia as { heights: Record<string, { bodyHeightMm: number }> }).heights;
+export function bodyHeightMm(body: Pick<BuilderBody, "family" | "capacityMl">) {
+    return bodyHeights[`${body.family}|${body.capacityMl}`]?.bodyHeightMm ?? null;
+}
+function physicalChooserScale(body: BuilderBody, all: BuilderBody[]) {
+    const mine = bodyHeightMm(body);
+    const tallest = Math.max(...all.map(b => bodyHeightMm(b) ?? 0));
+    if (!mine || !tallest) return null;
+    return Math.max(.48, mine / tallest);
+}
+function chooserScale(body: BuilderBody, all: BuilderBody[] = [body]) {
+    if (body.family !== "Cylinder") return physicalChooserScale(body, all) ?? 1;
     if (body.capacityMl <= 5) return .52;
     if (body.capacityMl === 9 && body.neck === "13-415") return .84;
     if (body.capacityMl === 9 && body.neck === "17-415") return .68;
@@ -52,20 +69,24 @@ function chooserScale(body: BuilderBody) {
     return 1;
 }
 
-export default function MatrixClient({ families: initialFamilies, openFamily, bodies }: {
+export default function MatrixClient({ families: initialFamilies, openFamily, bodies: initialBodies, preferMobile = false }: {
     families: { family: string; groups: number }[];
     openFamily: string;
     bodies: BuilderBody[];
+    preferMobile?: boolean;
 }) {
+    const { formatPrice } = useRegion();
+    const money = (value: number | null) => (value == null ? "—" : formatPrice(value));
     const { families, status: familyStatus, retry: retryFamilies } = useBuilderFamilies(initialFamilies);
     const familyNotice = <FamilyLoadingStatus status={familyStatus} onRetry={retryFamilies} />;
     const router = useRouter();
     const searchParams = useSearchParams();
     const { items, addItems, isCartHydrated } = useCart();
     const [selection, setSelection] = useState<BuilderSelection>(emptySelection);
+    const bodies = useBuilderKits(openFamily, initialBodies, selection.bodyId);
     const [step, setStep] = useState(0);
     const [mobileStage, setMobileStage] = useState(0);
-    const isMobile = useSyncExternalStore(subscribeMobile, mobileSnapshot, serverMobileSnapshot);
+    const isMobile = useSyncExternalStore(subscribeMobile, mobileSnapshot, serverMobileSnapshot(preferMobile));
     const [previewExpanded, setPreviewExpanded] = useState(false);
     const reviewHeading = useRef<HTMLHeadingElement>(null);
     const previewId = useId();
@@ -76,8 +97,11 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
     const [application, setApplication] = useState("");
     const [moreFilters, setMoreFilters] = useState(false);
     const [pending, startTransition] = useTransition();
+    // The family select is controlled by the server-rendered family; while the
+    // next family loads it must show the family the customer just chose.
+    const [chosenFamily, setChosenFamily] = useState(openFamily);
     const [adding, setAdding] = useState(false);
-    const [lastAdded, setLastAdded] = useState<{ name: string; quantity: number } | null>(null);
+    const [lastAdded, setLastAdded] = useState<{ name: string; quantity: number; total?: number | null; lines?: string[] } | null>(null);
     const confirmation = useRef<HTMLDivElement>(null);
     const [error, setError] = useState("");
     const optionHeading = useRef<HTMLHeadingElement>(null);
@@ -100,13 +124,17 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
     const visibleBodies = useMemo(() => bodies.filter(b => (!size || b.capacityMl === Number(size))
         && (!neck || b.neck === neck) && (!application || b.configurations.some(c => c.fitment === application))), [bodies, size, neck, application]);
     const preview = configuration ?? current.fitted[0] ?? current.colored[0] ?? body?.configurations[0];
+    // one fixed body per bottle and glass: the first full kit (vintage first, its body is the reference for the bulb sprayers)
+    // reducer photographs carry the insert inside the neck, so a reducer body is the last choice of reference
     const bodyReference = current.colored.find(c => c.fitment === "Vintage Bulb Sprayer" && c.kit?.completeness === "full")
+        ?? current.colored.find(c => c.kit?.completeness === "full" && c.fitment !== "Reducer") ?? current.colored.find(c => c.kit?.completeness === "full")
         ?? current.colored[0] ?? body?.configurations[0];
     const hasIncludedCover = Boolean(configuration && /Sprayer|Pump/.test(configuration.fitment)
         && ((configuration.id in hasIncludedCovers) || (configuration.kit?.parts.some(p => p.slot === "overcap")
         && configuration.kit?.parts.some(p => !["body", "overcap", "diptube"].includes(p.slot)))));
     const previewStage = step === 0 ? "body" : configuration ? "complete" : fitment ? "fitment" : "body";
-    const displayParts = preview ? previewParts(preview, previewStage).filter(p => !(hasIncludedCover && !showCover && p.slot === "overcap")) : [];
+    // the overcap is never dropped from the preview: worn when showCover, standing on the ground beside the bottle otherwise (BuilderImage)
+    const displayParts = preview ? previewParts(preview, previewStage) : [];
     const completed = [Boolean(body && color), Boolean(fitment), Boolean(configuration), false];
     const canContinue = step === 0 ? Boolean(body && color) : step === 1 ? Boolean(fitment) : Boolean(configuration);
     const fitmentReady = step === 0 && canContinue && !pending;
@@ -122,7 +150,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
     const subtitles = [
         `${visibleBodies.length} bottle ${visibleBodies.length === 1 ? "option" : "options"} · small to large`,
         "Choose how your bottle dispenses or closes.",
-        `Choose the look of your ${/Roller/.test(fitment ?? "") ? "roller cap" : fitment?.toLowerCase() ?? "component"}. Every option shown fits your selection.`,
+        `Choose the look of your ${/Roller/.test(fitment ?? "") ? "roller cap" : (fitment ? displayApplicatorName(fitment).toLowerCase() : "component")}. Every option shown fits your selection.`,
         "Check your bottle, finish, and quantity before adding.",
     ];
     function goTo(next: number) {
@@ -146,6 +174,8 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
         setShowCover(false);
         setSelection(next); setLastAdded(null); setError("");
         requestAnimationFrame(() => {
+            // several glasses: bring the colour choice into view; one glass: the
+            // action bar is sticky, so the shopper's eye stays on the preview
             glassHeading.current?.focus({ preventScroll: true });
             glassHeading.current?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "nearest" });
         });
@@ -163,9 +193,17 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
             if (!freshOrder.canAdd) throw new Error("This build is no longer available. Refresh the builder and try again.");
             if (freshOrder.unitPrice !== order.unitPrice) throw new Error("The price has changed. Refresh the builder before adding this bottle.");
             addItems([{ ...fresh.product, quantity: selection.quantity, unitPrice: freshOrder.unitPrice }]);
-            // Recycle the builder only after the exact configuration is in the cart.
-            setMobileStage(0); setSelection(emptySelection()); setShowCover(false); setSize(""); setNeck(""); setApplication(""); setMoreFilters(false); setStep(0);
-            setLastAdded({ name: fresh.product.itemName, quantity: selection.quantity });
+            setLastAdded({
+                name: fresh.product.itemName,
+                quantity: selection.quantity,
+                total: freshOrder.total,
+                lines: [`${fresh.capacityMl} ml ${fresh.profileLabel}`, fresh.color, displayApplicatorName(fresh.fitment), fresh.closure],
+            });
+            // Desktop recycles into a fresh chooser. Mobile keeps this build
+            // on screen so the confirmation is not mistaken for a reset.
+            if (!isMobile) {
+                setMobileStage(0); setSelection(emptySelection()); setShowCover(false); setSize(""); setNeck(""); setApplication(""); setMoreFilters(false); setStep(0);
+            }
             requestAnimationFrame(() => {
                 confirmation.current?.focus({ preventScroll: true });
                 confirmation.current?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" });
@@ -183,10 +221,10 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
 
     if (isMobile) return <MobileBuilder familyNotice={familyNotice} families={families} family={openFamily} bodies={bodies}
         selection={selection} current={current} order={order} stage={mobileStage} onStage={next => { setMobileStage(next); setStep(next < 2 ? 0 : next - 1); setError(""); }}
-        onUpdate={patch => { update(patch); if (patch.bodyId || patch.color || patch.fitment) setShowCover(false); }} onReset={reset} onFamily={family => { reset(); startTransition(() => router.push(`/matrix?family=${encodeURIComponent(family)}`)); }} onAdd={addToCart}
+        onUpdate={patch => { update(patch); if (patch.bodyId || patch.color || patch.fitment) setShowCover(false); }} onReset={reset} onFamily={family => { reset(); startTransition(() => router.push(`/matrix?family=${encodeURIComponent(family)}${searchParams.get("shop") ? `&shop=${encodeURIComponent(searchParams.get("shop")!)}` : ""}`)); }} onAdd={addToCart}
         size={size} neck={neck} application={application} onFilter={(filter, value) => { if (filter === "size") setSize(value); else if (filter === "neck") setNeck(value); else setApplication(value); }}
         pending={pending} adding={adding} hydrated={isCartHydrated} error={error} lastAdded={lastAdded} cartProgress={cartProgress}
-        hasIncludedCover={hasIncludedCover} showCover={showCover} onCover={() => setShowCover(value => !value)} chooserScale={chooserScale} />;
+        hasIncludedCover={hasIncludedCover} showCover={showCover} onCover={() => setShowCover(value => !value)} chooserScale={b => chooserScale(b, bodies)} />;
 
     return <div className={styles.builder} data-bottle-builder data-current-step={step} data-has-bottle={Boolean(body)} aria-busy={pending || adding}>
         <header className={styles.header}>
@@ -209,48 +247,51 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
         </div>}
         {step === 0 && familyNotice}
         {step === 0 && <div className={styles.filters}>
-            <label>Bottle family<select aria-label="Bottle family" value={openFamily} disabled={adding || pending} onChange={e => {
+            <label>Bottle family<select aria-label="Bottle family" value={chosenFamily} disabled={adding} onChange={e => {
                 const family = e.target.value;
+                setChosenFamily(family);
                 reset();
-                startTransition(() => router.push(`/matrix?family=${encodeURIComponent(family)}`));
+                startTransition(() => router.push(`/matrix?family=${encodeURIComponent(family)}${searchParams.get("shop") ? `&shop=${encodeURIComponent(searchParams.get("shop")!)}` : ""}`));
             }}>{families.map(f => <option key={f.family}>{f.family}</option>)}</select></label>
+            {pending && chosenFamily !== openFamily && <p role="status" className={styles.familyPending}>Loading {chosenFamily} bottles…</p>}
             <label>Size<select aria-label="Size" value={size} disabled={adding || pending} onChange={e => { setSize(e.target.value); goTo(0); }}>
                 <option value="">All sizes</option>{sizes.map(size => <option value={size} key={size}>{size} ml</option>)}</select></label>
             <button className={styles.filterToggle} aria-expanded={moreFilters} onClick={() => setMoreFilters(!moreFilters)}><SlidersHorizontal size={17} /> More filters{neck || application ? " •" : ""}</button>
             {moreFilters && <><label>Neck size<select aria-label="Neck size" value={neck} onChange={e => { setNeck(e.target.value); goTo(0); }}><option value="">All neck sizes</option>{necks.map(n => <option key={n}>{n}</option>)}</select></label>
-                <label>Application<select aria-label="Application" value={application} onChange={e => { setApplication(e.target.value); goTo(0); }}><option value="">All fitments</option>{applications.map(a => <option key={a}>{a}</option>)}</select></label></>}
+                <label>Application<select aria-label="Application" value={application} onChange={e => { setApplication(e.target.value); goTo(0); }}><option value="">All fitments</option>{applications.map(a => <option key={a} value={a}>{displayApplicatorName(a)}</option>)}</select></label></>}
             {(size || neck || application) && <button className={styles.textButton} onClick={() => { setSize(""); setNeck(""); setApplication(""); }}>Clear filters</button>}
             <span className={styles.filterNote}><ShieldCheck size={18} /> Compatible choices, at every step.</span>
         </div>}
         <div className={styles.workspace} id="builder-workspace">
             <section className={styles.options} aria-label="Bottle options">
-                <div className={styles.optionHeader}><div className={styles.optionToolbar}><span className={styles.eyebrow}>Step {step + 1} of 4</span><button type="button" className={styles.startOver} onClick={reset} disabled={adding || pending}>Start over</button></div>
+                <div className={styles.optionHeader}><div className={styles.optionToolbar}><span className={styles.eyebrow}>Step {step + 1} of 4</span><button type="button" className={styles.startOver} onClick={reset} disabled={adding}>Start over</button></div>
                     <h2 tabIndex={-1} ref={optionHeading}>{titles[step]}</h2><p>{subtitles[step]}</p></div>
                 <fieldset aria-label={titles[step]} disabled={adding || pending} className={styles.optionFieldset}>
                 {step === 0 && <div className={styles.bottleGrid}>
-                    {visibleBodies.map(b => <Option key={b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} selected={body?.id === b.id} onClick={() => chooseBottle(b)}>
-                        <div className={styles.bottleThumb}><BuilderImage config={b.configurations[0]} parts={previewParts(b.configurations[0], "body")} label={`${b.capacityMl} ml ${b.family} bottle`} scale={chooserScale(b)} /></div>
+                    {visibleBodies.map((b, index) => <Option key={b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} selected={body?.id === b.id} onClick={() => chooseBottle(b)}>
+                        <div className={styles.bottleThumb}><BuilderImage config={clearBodyPreview(b)} parts={previewParts(clearBodyPreview(b), "body")} label={`${b.capacityMl} ml ${b.family} bottle`} scale={chooserScale(b, bodies)} thumbnail placeholder priority={index < CHOOSER_PRIORITY_TILES} /></div>
                         <strong>{b.capacityMl} ml</strong>{b.profileLabel !== b.family && <small>{b.profileLabel}</small>}<span className={styles.neckBadge}>Neck: {b.neck}</span>
                     </Option>)}
                 </div>}
                 {step === 0 && !visibleBodies.length && <div className={styles.empty}><h3>No bottles for these choices.</h3><p>Try another size or bottle family.</p><button className={styles.secondary} onClick={() => { setSize(""); setNeck(""); setApplication(""); }}>Clear filters</button><Link href={catalogHref}>Explore the full catalog <ArrowRight size={15} /></Link></div>}
-                {step === 0 && body && <div className={styles.glassSection}><h3 ref={glassHeading} tabIndex={-1}>Choose your glass</h3><div className={current.colors.length === 1 ? styles.singleGlass : styles.colorGrid}>
+                {step === 0 && body && current.colors.length > 1 && <div className={styles.glassSection}><h3 ref={glassHeading} tabIndex={-1}>Choose your glass color</h3><div className={styles.colorGrid}>
                     {current.colors.map(c => { const example = body!.configurations.find(config => config.color === c)!; return <Option key={c} label={c} selected={color === c} onClick={() => update({ color: c, fitment: null, closure: null })}>
-                        {current.colors.length > 1 && <div className={styles.colorThumb}><BuilderImage config={example} parts={previewParts(example, "body")} label={`${c} bottle`} /></div>}<strong>{c}{current.colors.length === 1 ? " glass" : ""}</strong>
+                        <div className={styles.colorThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} thumbnail placeholder /></div><strong>{c}</strong>
                     </Option>; })}
-                </div><div className={styles.nextStepHint} role="status">{fitmentReady && <><CheckCircle size={17} /><span>Your bottle is ready. Select <strong>Choose Fitment</strong> to continue.</span></>}</div></div>}
+                </div></div>}
+                {step === 0 && body && <div className={styles.nextStepHint} role="status">{fitmentReady && <><CheckCircle size={17} /><span>{current.colors.length === 1 ? <>{color} glass, the only glass for this bottle. Select <strong>Choose Fitment</strong> to continue.</> : <>Your bottle is ready. Select <strong>Choose Fitment</strong> to continue.</>}</span></>}</div>}
                 {(step === 1 || step === 2) && <>
                     <div className={styles.compatibilityContext}><ShieldCheck size={18} /><span><strong>{body?.capacityMl} ml {body?.family} · {color}</strong><span>Neck: {body?.neck} · Compatible components below</span></span></div>
                     {step === 1 ? <div className={styles.fitmentGrid}>{current.fitments.map(f => {
                         const availableCount = current.colored.filter(c => c.fitment === f).length;
                         const unavailableCount = body?.unavailableFinishes?.filter(c => c.color === color && c.fitment === f).length ?? 0;
                         const count = availableCount + unavailableCount;
-                        return <Option key={f} label={f} description={fitmentChoiceHints[f] ?? fitmentDescriptions[f]} selected={fitment === f} onClick={() => { update({ fitment: f, closure: null }); setShowCover(false); goTo(2); }}>
-                            <div className={styles.componentThumb}><FitmentIllustration fitment={f} /></div>
-                            <strong>{f}</strong><small>{count} {/Roller/.test(f) ? (count === 1 ? "cap option" : "cap options") : (count === 1 ? "finish" : "finishes")}{unavailableCount > 0 ? ` · ${availableCount} available` : ""}</small>
+                        return <Option key={f} label={displayApplicatorName(f)} description={fitmentChoiceHints[f] ?? fitmentDescriptions[f]} selected={fitment === f} onClick={() => { update({ fitment: f, closure: null }); setShowCover(false); goTo(2); }}>
+                            <div className={styles.componentThumb}><FitmentIllustration fitment={f} neck={body?.neck} /></div>
+                            <strong>{displayApplicatorName(f)}</strong><small>{count} {/Roller/.test(f) ? (count === 1 ? "cap option" : "cap options") : (count === 1 ? "finish" : "finishes")}{unavailableCount > 0 ? ` · ${availableCount} available` : ""}</small>
                         </Option>;
                     })}</div> : <>
-                        <div className={styles.selectedFitment}><div><span>Selected fitment</span><strong>{fitment}</strong><small>{fitmentChoiceHints[fitment!] ?? fitmentDescriptions[fitment!]}</small></div>
+                        <div className={styles.selectedFitment}><div><span>Selected fitment</span><strong>{displayApplicatorName(fitment ?? "")}</strong><small>{fitmentChoiceHints[fitment!] ?? fitmentDescriptions[fitment!]}</small></div>
                             <button className={styles.textButton} onClick={() => goTo(1)}>Change fitment</button></div>
                         <div className={styles.closureSection}>
                             <p>{current.closures.length === 1 ? `This ${finishLabel.toLowerCase()} is included with your bottle.` : `Select your ${finishLabel.toLowerCase()} to see the complete bottle.`}</p>
@@ -264,14 +305,14 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
                             </button>)}</div>
                         </div>
                         {configuration && hasIncludedCover && <div className={styles.includedCover}>
-                            {configuration.kit?.parts.some(p => p.slot === "overcap") && <div className={styles.includedCoverImage}><BuilderImage config={configuration} parts={configuration.kit.parts.filter(p => p.slot === "overcap")} stage="complete" thumbnail label={`${closure} included overcap`} /></div>}
-                            <div><strong>Included overcap: {closure}</strong><p>Comes with this {fitment?.includes("Pump") ? "pump" : "sprayer"}. The finish is matched and cannot be changed separately.</p></div><CheckCircle size={20} />
+                            {configuration.kit?.parts.some(p => p.slot === "overcap") && <div className={styles.includedCoverImage}><BuilderImage config={configuration} parts={configuration.kit.parts.filter(p => p.slot === "overcap")} stage="complete" thumbnail label="Included overcap" /></div>}
+                            <div><strong>Included overcap</strong><p>Comes with this {fitment?.includes("Pump") ? "pump" : "sprayer"} and cannot be selected separately.</p></div><CheckCircle size={20} />
                         </div>}
                     </>}
                 </>}
                 {step === 3 && <div className={styles.review}>
                     <ShieldCheck size={30} weight="light" /><h3>Everything fits.</h3><p>{fitmentContents(fitment)}</p>{hasIncludedCover && <p>Matching protective overcap included.</p>}
-                            <dl><div><dt>Bottle</dt><dd>{body?.capacityMl} ml {body?.family}</dd></div><div><dt>Glass</dt><dd>{color}</dd></div><div><dt>Fitment</dt><dd>{fitment}</dd></div><div><dt>{finishLabel}</dt><dd>{closure}</dd></div><div><dt>Neck</dt><dd>{body?.neck}</dd></div></dl>
+                            <dl><div><dt>Bottle</dt><dd>{body?.capacityMl} ml {body?.family}</dd></div><div><dt>Glass</dt><dd>{color}</dd></div><div><dt>Fitment</dt><dd>{displayApplicatorName(fitment ?? "")}</dd></div><div><dt>{finishLabel}</dt><dd>{closure}</dd></div><div><dt>Neck</dt><dd>{body?.neck}</dd></div></dl>
                             <p className={styles.small}>Set your quantity in Your Build. We’ll check current availability before adding.</p>
                 </div>}
                 </fieldset>
@@ -280,10 +321,10 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
             </section>
             <section className={styles.preview} aria-label="Live bottle preview" data-preview-stage={previewStage} data-expanded={previewExpanded}>
                 <div className={styles.previewHeader}><span>YOUR BOTTLE, TAKING SHAPE</span><span className={styles.liveDot}>{preview ? "Your bottle preview" : "Live preview"}</span></div>
-                {preview ? <div id={previewId} className={styles.previewImage}><BuilderImage config={preview} parts={displayParts} stage={previewStage} showCover={showCover} bodyReference={bodyReference}
-                    label={body ? `${preview.capacityMl} ml ${preview.color} ${preview.family}${fitment ? ` with ${fitment}` : preview.kit ? " bottle body" : " bottle"}${closure ? `, ${closure}` : ""}` : "Bottle body preview — choose a bottle to begin"} /></div>
+                {preview ? <div id={previewId} className={`${styles.previewImage} ${previewStage === "complete" && !preview.kit && preview.photoUrl ? styles.plateStage : ""}`}><BuilderImage config={preview} parts={displayParts} stage={previewStage} showCover={showCover} bodyReference={bodyReference} frameConfigurations={body?.configurations}
+                    label={body ? `${preview.capacityMl} ml ${preview.color} ${preview.family}${fitment ? ` with ${displayApplicatorName(fitment)}` : preview.kit ? " bottle body" : " bottle"}${closure ? `, ${closure}` : ""}` : "Bottle body preview — choose a bottle to begin"} /></div>
                     : <div className={styles.previewEmpty}><ShoppingBag size={32} weight="light" /><p>Your bottle starts here.</p></div>}
-                <div className={styles.previewCaption} aria-live="polite">{body ? <><h2>{body.capacityMl} ml {body.profileLabel}</h2><p>{color ?? "Choose your glass"}{fitment ? ` · ${fitment}` : ""}</p>{preview && !preview.kit && fitment && !configuration && <p>Your selected fitment is shown in the options. Choose your {finishLabel.toLowerCase()} to see the complete bottle.</p>}</> : <><h2>A bottle. Your possibilities.</h2><p>Choose a bottle to start building.</p></>}</div>
+                <div className={styles.previewCaption} aria-live="polite">{body ? <><h2>{body.capacityMl} ml {body.profileLabel}</h2><p>{color ?? "Choose your glass"}{fitment ? ` · ${displayApplicatorName(fitment)}` : ""}</p>{preview && !preview.kit && fitment && !configuration && <p>Your selected fitment is shown in the options. Choose your {finishLabel.toLowerCase()} to see the complete bottle.</p>}</> : <><h2>A bottle. Your possibilities.</h2><p>Choose a bottle to start building.</p></>}</div>
                 {hasIncludedCover && <div className={styles.coverControl}><span>Matching overcap included</span><button type="button" aria-pressed={showCover} onClick={() => setShowCover(value => !value)}>{showCover ? "Hide cap" : "Show cap"}</button></div>}
                 {body && <button className={styles.previewToggle} aria-expanded={previewExpanded} aria-controls={previewId} onClick={() => setPreviewExpanded(value => !value)}>{previewExpanded ? "Minimize preview" : "View larger bottle"}</button>}
             </section>
@@ -291,7 +332,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
                 <div className={styles.summaryHeading}><h2 ref={reviewHeading} tabIndex={-1}>{step === 3 ? "Review your bottle" : "Your Build"}</h2></div>
                 <SummaryLine number={1} label="Bottle" value={body ? `${body.capacityMl} ml ${body.profileLabel}` : null} detail={body ? `${body.neck} neck` : "Start with a bottle shape"} onEdit={() => goTo(0)} />
                 <SummaryLine number={null} label="Glass" value={color} detail="Choose your glass" onEdit={() => goTo(0)} />
-                <SummaryLine number={2} label="Fitment" value={fitment} detail="Made to fit your bottle" onEdit={() => goTo(1)} />
+                <SummaryLine number={2} label="Fitment" value={fitment ? displayApplicatorName(fitment) : null} detail="Made to fit your bottle" onEdit={() => goTo(1)} />
                 {fitment && <SummaryLine number={3} label={finishLabel} value={closure} detail={finishTitle} onEdit={() => goTo(2)} />}
                 <div className={styles.purchase}>
                     {step === 3 ? <>

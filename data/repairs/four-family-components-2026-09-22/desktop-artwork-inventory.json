@@ -1,0 +1,1413 @@
+{
+  "roots": {
+    "desktop": "/Users/jordanrichter/Desktop/Best Bottles",
+    "master": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master"
+  },
+  "desktopMediaFiles": 1139,
+  "scopedSkuCount": 925,
+  "masterExactNameSkus": 838,
+  "desktopExactNameSkus": 39,
+  "additionalDesktopCandidateSkus": [
+    "GBCrcl15BlkShSht",
+    "GBCrcl15CuSht",
+    "GBCrcl15GlMattSht",
+    "GBCrcl15GlSht",
+    "GBCrcl15SlMattSht",
+    "GBCrcl15SlSht",
+    "GBCyl5BlkShSht",
+    "GBCyl5CuSht",
+    "GBCyl5GlMattSht",
+    "GBCyl5GlSht",
+    "GBCyl5SlMattSht",
+    "GBCyl5SlSht",
+    "GBCylBlu5BlkShSht",
+    "GBCylBlu5CuSht",
+    "GBCylBlu5GlMattSht",
+    "GBCylBlu5GlSht",
+    "GBCylBlu5SlMattSht",
+    "GBCylBlu5SlSht",
+    "GBTallCyl9BlkShSht",
+    "GBTallCyl9CuSht",
+    "GBTallCyl9GlMattSht",
+    "GBTallCyl9GlSht",
+    "GBTallCyl9SlMattSht",
+    "GBTallCyl9SlSht",
+    "GBTallCylFrst9BlkShSht",
+    "GBTallCylFrst9CuSht",
+    "GBTallCylFrst9GlMattSht",
+    "GBTallCylFrst9GlSht",
+    "GBTallCylFrst9SlMattSht",
+    "GBTallCylFrst9SlSht"
+  ],
+  "note": "These are distinct directories, not aliases. Preserve both source sets. Filename matching locates candidates; existing reviewed layer assignments remain authoritative. No source files were modified.",
+  "rows": [
+    {
+      "sku": "GBCyl9SpryShSl",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/GBCyl9SpryShSl.psd",
+      "bytes": 1540283,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl9SpryBlk",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/GBCyl9SpryBlk.psd",
+      "bytes": 1426382,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl9SpryGl",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/GBCyl9SpryGl.psd",
+      "bytes": 1688740,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl9SpryMattSl",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/GBCyl9SpryMattSl.psd",
+      "bytes": 1558007,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl9SpryTur",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/GBCyl9SpryTur.psd",
+      "bytes": 1565683,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/LBCyl9LtnBlk.psd",
+      "bytes": 1471442,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "LBCyl9LtnMtSl",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/LBCyl9LtnMtSl.psd",
+      "bytes": 1601400,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/LBCyl9LtnGl.psd",
+      "bytes": 1617813,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl9SpryRd",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/GBCyl9SpryRd.psd",
+      "bytes": 1561912,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl9SpryShSl",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/GBCyl9SpryShSl.psd",
+      "bytes": 1503830,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl9SpryBlk",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/GBCyl9SpryBlk.psd",
+      "bytes": 1515550,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl9SpryGl",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/GBCyl9SpryGl.psd",
+      "bytes": 1652754,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl9SpryMattSl",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/GBCyl9SpryMattSl.psd",
+      "bytes": 1522589,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl9SpryTur",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/GBCyl9SpryTur.psd",
+      "bytes": 1527387,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/LBCyl9LtnBlk.psd",
+      "bytes": 1558702,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "LBCyl9LtnMtSl",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/LBCyl9LtnMtSl.psd",
+      "bytes": 1566161,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/LBCyl9LtnGl.psd",
+      "bytes": 1696993,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl9SpryRd",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/GBCyl9SpryRd.psd",
+      "bytes": 1525971,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/31. GBCylBlu5GlMattSht.psd",
+      "bytes": 974229,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/31. GBCyl5GlMattSht.psd",
+      "bytes": 752589,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/35. GBTallCylFrst9BlkShSht.psd",
+      "bytes": 1765910,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/31. GBTallCyl9GlMattSht.psd",
+      "bytes": 1534316,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/31. GBTallCylFrst9GlMattSht.psd",
+      "bytes": 1784920,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/32. GBTallCylFrst9GlSht.psd",
+      "bytes": 1779600,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/36. GBCylBlu5CuSht.psd",
+      "bytes": 983218,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/34. GBCylBlu5SlMattSht.psd",
+      "bytes": 966094,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/35. GBCylBlu5BlkShSht.psd",
+      "bytes": 963050,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/35. GBTallCyl9BlkShSht.psd",
+      "bytes": 1514968,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/32. GBCylBlu5GlSht.psd",
+      "bytes": 967910,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/36. GBCrcl15CuSht.psd",
+      "bytes": 1632174,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/36. GBTallCylFrst9CuSht.psd",
+      "bytes": 1798976,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/33. GBTallCylFrst9SlSht.psd",
+      "bytes": 1761980,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/33. GBCrcl15SlSht.psd",
+      "bytes": 1589915,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/33. GBCylBlu5SlSht.psd",
+      "bytes": 947101,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/31. GBCrcl15GlMattSht.psd",
+      "bytes": 1618376,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/32. GBCyl5GlSht.psd",
+      "bytes": 747420,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/34. GBTallCyl9SlMattSht.psd",
+      "bytes": 1522456,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/36. GBTallCyl9CuSht.psd",
+      "bytes": 1548587,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/32. GBTallCyl9GlSht.psd",
+      "bytes": 1529901,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/34. GBTallCylFrst9SlMattSht.psd",
+      "bytes": 1773476,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/32. GBCrcl15GlSht.psd",
+      "bytes": 1611551,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/34. GBCyl5SlMattSht.psd",
+      "bytes": 745182,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/35. GBCyl5BlkShSht.psd",
+      "bytes": 744314,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/36. GBCyl5CuSht.psd",
+      "bytes": 762910,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/34. GBCrcl15SlMattSht.psd",
+      "bytes": 1604181,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/35. GBCrcl15BlkShSht.psd",
+      "bytes": 1596969,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/33. GBCyl5SlSht.psd",
+      "bytes": 725251,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13-415 Short Caps only/33. GBTallCyl9SlSht.psd",
+      "bytes": 1512478,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/36. GBCylBlu5CuSht.png",
+      "bytes": 24237,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/32. GBTallCylFrst9GlSht.png",
+      "bytes": 8297,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/35. GBTallCylFrst9BlkShSht.png",
+      "bytes": 5983,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/31. GBTallCyl9GlMattSht.png",
+      "bytes": 8777,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/31. GBTallCylFrst9GlMattSht.png",
+      "bytes": 7618,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/31. GBCyl5GlMattSht.png",
+      "bytes": 17179,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/31. GBCylBlu5GlMattSht.png",
+      "bytes": 22918,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/33. GBCylBlu5SlSht.png",
+      "bytes": 24714,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/33. GBCrcl15SlSht.png",
+      "bytes": 26678,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/31. GBCrcl15GlMattSht.png",
+      "bytes": 29938,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/33. GBTallCylFrst9SlSht.png",
+      "bytes": 6127,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/36. GBTallCylFrst9CuSht.png",
+      "bytes": 7535,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/36. GBCrcl15CuSht.png",
+      "bytes": 31332,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/32. GBCylBlu5GlSht.png",
+      "bytes": 24196,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/35. GBTallCyl9BlkShSht.png",
+      "bytes": 7132,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/35. GBCylBlu5BlkShSht.png",
+      "bytes": 25267,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/34. GBCylBlu5SlMattSht.png",
+      "bytes": 25569,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/34. GBTallCylFrst9SlMattSht.png",
+      "bytes": 6541,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/32. GBCrcl15GlSht.png",
+      "bytes": 31838,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/34. GBTallCyl9SlMattSht.png",
+      "bytes": 7188,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/32. GBTallCyl9GlSht.png",
+      "bytes": 10231,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/36. GBTallCyl9CuSht.png",
+      "bytes": 9021,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/32. GBCyl5GlSht.png",
+      "bytes": 18883,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/34. GBCrcl15SlMattSht.png",
+      "bytes": 27305,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/33. GBCyl5SlSht.png",
+      "bytes": 13900,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/35. GBCrcl15BlkShSht.png",
+      "bytes": 25899,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/33. GBTallCyl9SlSht.png",
+      "bytes": 7663,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/36. GBCyl5CuSht.png",
+      "bytes": 18515,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/35. GBCyl5BlkShSht.png",
+      "bytes": 12597,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Thumbnail Png/34. GBCyl5SlMattSht.png",
+      "bytes": 14039,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /35. GBTallCylFrst9BlkShSht.psd",
+      "bytes": 1765910,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /31. GBTallCylFrst9GlMattSht.psd",
+      "bytes": 1784920,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /32. GBTallCylFrst9GlSht.psd",
+      "bytes": 1779600,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /36. GBTallCylFrst9CuSht.psd",
+      "bytes": 1798976,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /33. GBTallCylFrst9SlSht.psd",
+      "bytes": 1761980,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /34. GBTallCylFrst9SlMattSht.psd",
+      "bytes": 1773476,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/35. GBTallCylFrst9BlkShSht.psd",
+      "bytes": 1688790,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/31. GBTallCylFrst9GlMattSht.psd",
+      "bytes": 1707490,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/32. GBTallCylFrst9GlSht.psd",
+      "bytes": 1702987,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/36. GBTallCylFrst9CuSht.psd",
+      "bytes": 1721754,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/33. GBTallCylFrst9SlSht.psd",
+      "bytes": 1685090,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/34. GBTallCylFrst9SlMattSht.psd",
+      "bytes": 1695497,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/31. GBCylBlu5GlMattSht.psd",
+      "bytes": 1033594,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/36. GBCylBlu5CuSht.psd",
+      "bytes": 1042691,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/34. GBCylBlu5SlMattSht.psd",
+      "bytes": 1027160,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/35. GBCylBlu5BlkShSht.psd",
+      "bytes": 1024293,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/32. GBCylBlu5GlSht.psd",
+      "bytes": 1028377,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/33. GBCylBlu5SlSht.psd",
+      "bytes": 1005348,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/3. Blue 5ml Cylinder/2. Blue 5ml Cyl (Capped) PSD/31. GBCylBlu5GlMattSht.psd",
+      "bytes": 974229,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/3. Blue 5ml Cylinder/2. Blue 5ml Cyl (Capped) PSD/36. GBCylBlu5CuSht.psd",
+      "bytes": 983218,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/3. Blue 5ml Cylinder/2. Blue 5ml Cyl (Capped) PSD/34. GBCylBlu5SlMattSht.psd",
+      "bytes": 966094,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/3. Blue 5ml Cylinder/2. Blue 5ml Cyl (Capped) PSD/35. GBCylBlu5BlkShSht.psd",
+      "bytes": 963050,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/3. Blue 5ml Cylinder/2. Blue 5ml Cyl (Capped) PSD/32. GBCylBlu5GlSht.psd",
+      "bytes": 967910,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/3. Blue 5ml Cylinder/2. Blue 5ml Cyl (Capped) PSD/33. GBCylBlu5SlSht.psd",
+      "bytes": 947101,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /31. GBCyl5GlMattSht.psd",
+      "bytes": 802955,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /32. GBCyl5GlSht.psd",
+      "bytes": 797768,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /34. GBCyl5SlMattSht.psd",
+      "bytes": 795459,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /35. GBCyl5BlkShSht.psd",
+      "bytes": 792592,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /36. GBCyl5CuSht.psd",
+      "bytes": 810986,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /33. GBCyl5SlSht.psd",
+      "bytes": 774711,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/31. GBCyl5GlMattSht.psd",
+      "bytes": 752589,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/32. GBCyl5GlSht.psd",
+      "bytes": 747420,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/34. GBCyl5SlMattSht.psd",
+      "bytes": 745182,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/35. GBCyl5BlkShSht.psd",
+      "bytes": 744314,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/36. GBCyl5CuSht.psd",
+      "bytes": 762910,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/33. GBCyl5SlSht.psd",
+      "bytes": 725251,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/31. GBTallCyl9GlMattSht.psd",
+      "bytes": 1568131,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/35. GBTallCyl9BlkShSht.psd",
+      "bytes": 1548815,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/34. GBTallCyl9SlMattSht.psd",
+      "bytes": 1555517,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/36. GBTallCyl9CuSht.psd",
+      "bytes": 1581764,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/32. GBTallCyl9GlSht.psd",
+      "bytes": 1563009,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/33. GBTallCyl9SlSht.psd",
+      "bytes": 1545513,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /31. GBTallCyl9GlMattSht.psd",
+      "bytes": 1534316,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /35. GBTallCyl9BlkShSht.psd",
+      "bytes": 1514968,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /34. GBTallCyl9SlMattSht.psd",
+      "bytes": 1522456,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /36. GBTallCyl9CuSht.psd",
+      "bytes": 1548587,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /32. GBTallCyl9GlSht.psd",
+      "bytes": 1529901,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /33. GBTallCyl9SlSht.psd",
+      "bytes": 1512478,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/36. GBCylBlu5CuSht.png",
+      "bytes": 64957,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/32. GBTallCylFrst9GlSht.png",
+      "bytes": 25668,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/35. GBTallCylFrst9BlkShSht.png",
+      "bytes": 21155,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/31. GBTallCyl9GlMattSht.png",
+      "bytes": 23877,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/31. GBTallCylFrst9GlMattSht.png",
+      "bytes": 24608,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/31. GBCyl5GlMattSht.png",
+      "bytes": 44086,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/31. GBCylBlu5GlMattSht.png",
+      "bytes": 61386,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/33. GBCylBlu5SlSht.png",
+      "bytes": 66466,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/33. GBCrcl15SlSht.png",
+      "bytes": 66316,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/31. GBCrcl15GlMattSht.png",
+      "bytes": 79864,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/33. GBTallCylFrst9SlSht.png",
+      "bytes": 18990,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/36. GBTallCylFrst9CuSht.png",
+      "bytes": 24801,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/36. GBCrcl15CuSht.png",
+      "bytes": 81693,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/32. GBCylBlu5GlSht.png",
+      "bytes": 64366,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/35. GBTallCyl9BlkShSht.png",
+      "bytes": 19671,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/35. GBCylBlu5BlkShSht.png",
+      "bytes": 66255,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/34. GBCylBlu5SlMattSht.png",
+      "bytes": 69829,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/34. GBTallCylFrst9SlMattSht.png",
+      "bytes": 20683,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/32. GBCrcl15GlSht.png",
+      "bytes": 84057,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/34. GBTallCyl9SlMattSht.png",
+      "bytes": 19356,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/32. GBTallCyl9GlSht.png",
+      "bytes": 25498,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/36. GBTallCyl9CuSht.png",
+      "bytes": 24638,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/32. GBCyl5GlSht.png",
+      "bytes": 49613,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/34. GBCrcl15SlMattSht.png",
+      "bytes": 68096,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/33. GBCyl5SlSht.png",
+      "bytes": 35823,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/35. GBCrcl15BlkShSht.png",
+      "bytes": 68533,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/33. GBTallCyl9SlSht.png",
+      "bytes": 19448,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/36. GBCyl5CuSht.png",
+      "bytes": 48034,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/35. GBCyl5BlkShSht.png",
+      "bytes": 33587,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Capped Png/13415 Capped Png/34. GBCyl5SlMattSht.png",
+      "bytes": 36371,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/36. GBCylBlu5CuSht.png",
+      "bytes": 64957,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/32. GBTallCylFrst9GlSht.png",
+      "bytes": 25668,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/35. GBTallCylFrst9BlkShSht.png",
+      "bytes": 21155,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/31. GBTallCyl9GlMattSht.png",
+      "bytes": 23877,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/31. GBTallCylFrst9GlMattSht.png",
+      "bytes": 24608,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/31. GBCyl5GlMattSht.png",
+      "bytes": 44086,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/31. GBCylBlu5GlMattSht.png",
+      "bytes": 61386,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/33. GBCylBlu5SlSht.png",
+      "bytes": 66466,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/33. GBCrcl15SlSht.png",
+      "bytes": 66316,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/31. GBCrcl15GlMattSht.png",
+      "bytes": 79864,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/33. GBTallCylFrst9SlSht.png",
+      "bytes": 18990,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/36. GBTallCylFrst9CuSht.png",
+      "bytes": 24801,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/36. GBCrcl15CuSht.png",
+      "bytes": 81693,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/32. GBCylBlu5GlSht.png",
+      "bytes": 64366,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/35. GBTallCyl9BlkShSht.png",
+      "bytes": 19671,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/35. GBCylBlu5BlkShSht.png",
+      "bytes": 66255,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/34. GBCylBlu5SlMattSht.png",
+      "bytes": 69829,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/34. GBTallCylFrst9SlMattSht.png",
+      "bytes": 20683,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/32. GBCrcl15GlSht.png",
+      "bytes": 84057,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/34. GBTallCyl9SlMattSht.png",
+      "bytes": 19356,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/32. GBTallCyl9GlSht.png",
+      "bytes": 25498,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/36. GBTallCyl9CuSht.png",
+      "bytes": 24638,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/32. GBCyl5GlSht.png",
+      "bytes": 49613,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/34. GBCrcl15SlMattSht.png",
+      "bytes": 68096,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/33. GBCyl5SlSht.png",
+      "bytes": 35823,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/35. GBCrcl15BlkShSht.png",
+      "bytes": 68533,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/33. GBTallCyl9SlSht.png",
+      "bytes": 19448,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/36. GBCyl5CuSht.png",
+      "bytes": 48034,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/35. GBCyl5BlkShSht.png",
+      "bytes": 33587,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/Full Size Uncapped Png/13415 Enlarged Images (Uncapped) PNG/34. GBCyl5SlMattSht.png",
+      "bytes": 36371,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /36. GBCrcl15CuSht.psd",
+      "bytes": 1703534,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /33. GBCrcl15SlSht.psd",
+      "bytes": 1663252,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /31. GBCrcl15GlMattSht.psd",
+      "bytes": 1689722,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /32. GBCrcl15GlSht.psd",
+      "bytes": 1684753,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /34. GBCrcl15SlMattSht.psd",
+      "bytes": 1677199,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /35. GBCrcl15BlkShSht.psd",
+      "bytes": 1670675,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/36. GBCrcl15CuSht.psd",
+      "bytes": 1632174,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/33. GBCrcl15SlSht.psd",
+      "bytes": 1589915,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/31. GBCrcl15GlMattSht.psd",
+      "bytes": 1618376,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/32. GBCrcl15GlSht.psd",
+      "bytes": 1611551,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/34. GBCrcl15SlMattSht.psd",
+      "bytes": 1604181,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/35. GBCrcl15BlkShSht.psd",
+      "bytes": 1596969,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBTallCylFrst9GlMattSht.png",
+      "bytes": 7618,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBCyl5SlMattSht.png",
+      "bytes": 12332,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBTallCylFrst9SlSht.png",
+      "bytes": 6127,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBCrcl15GlSht.png",
+      "bytes": 28099,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBTallCylFrst9GlSht.png",
+      "bytes": 8297,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBCrcl15SlSht.png",
+      "bytes": 26678,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBCylBlu5GlMattSht.png",
+      "bytes": 22918,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBCrcl15BlkShSht.png",
+      "bytes": 21131,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBCyl5CuSht.png",
+      "bytes": 15300,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBTallCyl9BlkShSht.png",
+      "bytes": 6348,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBCrcl15CuSht.png",
+      "bytes": 27664,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBTallCyl9SlMattSht.png",
+      "bytes": 6249,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBCyl5SlSht.png",
+      "bytes": 13900,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBCyl5GlSht.png",
+      "bytes": 16035,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBCrcl15GlMattSht.png",
+      "bytes": 29938,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBCyl5BlkShSht.png",
+      "bytes": 12597,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBTallCylFrst9CuSht.png",
+      "bytes": 7535,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBCylBlu5BlkShSht.png",
+      "bytes": 22721,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBTallCyl9SlSht.png",
+      "bytes": 6267,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBTallCyl9GlMattSht.png",
+      "bytes": 7233,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBCylBlu5CuSht.png",
+      "bytes": 24237,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBTallCyl9GlSht.png",
+      "bytes": 8344,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCrcl15SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBCrcl15SlMattSht.png",
+      "bytes": 21477,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9BlkShSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBTallCylFrst9BlkShSht.png",
+      "bytes": 5983,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5GlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBCylBlu5GlSht.png",
+      "bytes": 24196,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBCyl5GlMattSht.png",
+      "bytes": 14543,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCylFrst9SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBTallCylFrst9SlMattSht.png",
+      "bytes": 5155,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBTallCyl9CuSht.png",
+      "bytes": 7631,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5SlSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBCylBlu5SlSht.png",
+      "bytes": 22254,
+      "status": "exact-name candidate; visual and layer comparison required"
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "path": "/Users/jordanrichter/Desktop/Best Bottles/New Short Caps 13-415 Bottles/1. Thumbnail Capped Png/GBCylBlu5SlMattSht.png",
+      "bytes": 25569,
+      "status": "exact-name candidate; visual and layer comparison required"
+    }
+  ]
+}

@@ -393,3 +393,146 @@ export const integrity = query({
         };
     },
 });
+
+/**
+ * Promote plate imagery into the fields the catalogue already reads.
+ *
+ * The catalogue renders `products.imageUrl` and `productGroups.heroImageUrl`,
+ * both of which hold Shopify CDN URLs for files that have since been deleted —
+ * a sample of 40 group heroes returned 37 404s. The plate index holds the same
+ * products on permanent, content-addressed Vercel Blob URLs, and covers 84% of
+ * the catalogue.
+ *
+ * Rather than teach every consumer about a second image source, this writes the
+ * plate URL into the field they already read and preserves the superseded value
+ * alongside it. Three rules keep that safe:
+ *
+ *  1. **Never blanks anything.** A row with no plate is left exactly as it was,
+ *     dead URL and all, because a broken image is still better than no image
+ *     if the plate pipeline has simply not reached that product yet.
+ *  2. **Preserves the original once.** `legacyShopifyImageUrl` is only written
+ *     when it is empty, so re-running never overwrites the true original with
+ *     an already-promoted plate URL.
+ *  3. **Idempotent.** A row already pointing at its plate is skipped, so this
+ *     can run on every publish without churn.
+ */
+export const promotePlateImagery = mutation({
+    args: {
+        writeToken: v.string(),
+        skus: v.array(v.string()),
+        dryRun: v.optional(v.boolean()),
+    },
+    returns: v.object({
+        promoted: v.number(),
+        skipped: v.number(),
+        noPlate: v.number(),
+        examples: v.array(v.object({ sku: v.string(), from: v.string(), to: v.string() })),
+    }),
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+        if (args.skus.length > 200) throw new Error("promotePlateImagery accepts at most 200 SKUs per call");
+
+        let promoted = 0;
+        let skipped = 0;
+        let noPlate = 0;
+        const examples: Array<{ sku: string; from: string; to: string }> = [];
+
+        for (const rawSku of args.skus) {
+            const sku = rawSku.trim();
+            if (!sku) continue;
+
+            const product = await ctx.db
+                .query("products")
+                .withIndex("by_websiteSku", (q) => q.eq("websiteSku", sku))
+                .first();
+            if (!product) { noPlate += 1; continue; }
+
+            const plateRows = [
+                ...await ctx.db.query("productPlates").withIndex("by_websiteSku", (q) => q.eq("websiteSku", sku)).collect(),
+                ...await ctx.db.query("productPlates").withIndex("by_graceSku", (q) => q.eq("graceSku", product.graceSku)).collect(),
+            ];
+            if (plateRows.length === 0) { noPlate += 1; continue; }
+            const plate = plateRows.sort((a, b) => b.importedAt - a.importedAt)[0];
+
+            if (product.imageUrl === plate.front.url) { skipped += 1; continue; }
+
+            if (!args.dryRun) {
+                await ctx.db.patch(product._id, {
+                    imageUrl: plate.front.url,
+                    imageUrlCapOff: plate.frontCapOff?.url ?? product.imageUrlCapOff ?? null,
+                    legacyShopifyImageUrl: product.legacyShopifyImageUrl ?? product.imageUrl ?? null,
+                    legacyShopifyImageUrlCapOff:
+                        product.legacyShopifyImageUrlCapOff ?? product.imageUrlCapOff ?? null,
+                });
+            }
+            promoted += 1;
+            if (examples.length < 3) {
+                examples.push({ sku, from: product.imageUrl ?? "(none)", to: plate.front.url });
+            }
+        }
+
+        return { promoted, skipped, noPlate, examples };
+    },
+});
+
+/**
+ * Give each product group the plate of one of its own products.
+ *
+ * The group hero is a card image, so any covered member is a fair
+ * representative; picking the first with a plate beats leaving a dead URL.
+ */
+export const promoteGroupHeroImagery = mutation({
+    args: {
+        writeToken: v.string(),
+        slugs: v.array(v.string()),
+        dryRun: v.optional(v.boolean()),
+    },
+    returns: v.object({ promoted: v.number(), skipped: v.number(), noPlate: v.number() }),
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+        if (args.slugs.length > 60) throw new Error("promoteGroupHeroImagery accepts at most 60 slugs per call");
+
+        let promoted = 0;
+        let skipped = 0;
+        let noPlate = 0;
+
+        for (const slug of args.slugs) {
+            const group = await ctx.db
+                .query("productGroups")
+                .withIndex("by_slug", (q) => q.eq("slug", slug))
+                .first();
+            if (!group) { noPlate += 1; continue; }
+
+            const members = await ctx.db
+                .query("products")
+                .withIndex("by_productGroupId", (q) => q.eq("productGroupId", group._id))
+                .take(40);
+
+            let chosen: string | null = null;
+            for (const member of members) {
+                if (!member.websiteSku) continue;
+                const rows = await ctx.db
+                    .query("productPlates")
+                    .withIndex("by_websiteSku", (q) => q.eq("websiteSku", member.websiteSku as string))
+                    .collect();
+                if (rows.length > 0) {
+                    chosen = rows.sort((a, b) => b.importedAt - a.importedAt)[0].front.url;
+                    break;
+                }
+            }
+
+            if (!chosen) { noPlate += 1; continue; }
+            if (group.heroImageUrl === chosen) { skipped += 1; continue; }
+
+            if (!args.dryRun) {
+                await ctx.db.patch(group._id, {
+                    heroImageUrl: chosen,
+                    legacyShopifyHeroImageUrl: group.legacyShopifyHeroImageUrl ?? group.heroImageUrl ?? null,
+                });
+            }
+            promoted += 1;
+        }
+
+        return { promoted, skipped, noPlate };
+    },
+});

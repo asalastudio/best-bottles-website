@@ -52,6 +52,7 @@ vi.mock("@/components/CartProvider", () => ({
 
 vi.mock("@/components/CartDrawer", () => ({ default: () => null }));
 vi.mock("@/components/Footer", () => ({ default: () => createElement("footer", null, "Footer") }));
+vi.mock("convex/react", () => ({ useQuery: () => undefined }));
 vi.mock("@/lib/analytics", () => ({
     analytics: {
         finderEntered: mocks.finderEntered,
@@ -179,7 +180,7 @@ describe("application-first finder server route", () => {
     it("selects Roll-On and renders unrefined products before hydration", async () => {
         const element = await ApplicationFinderPage({
             params: Promise.resolve({ application: "roll-on" }),
-            searchParams: Promise.resolve({}),
+            searchParams: Promise.resolve({ guide: "1" }),
         });
         const html = renderToStaticMarkup(element);
 
@@ -205,7 +206,7 @@ describe("application-first finder server route", () => {
     ])("maps %s only to its existing canonical catalog buckets", async (slug, buckets) => {
         await ApplicationFinderPage({
             params: Promise.resolve({ application: slug }),
-            searchParams: Promise.resolve({}),
+            searchParams: Promise.resolve({ guide: "1" }),
         });
 
         const request = mocks.serverSearch.mock.calls[0]?.[0] as CatalogSearchArgs;
@@ -276,7 +277,7 @@ describe("application-first finder client", () => {
 
         await act(async () => buttonWithText(container, "9 ml").click());
         expect(mocks.routerReplace).toHaveBeenLastCalledWith(
-            "/catalog/application/roll-on?capacities=9+ml",
+            "/catalog/application/roll-on?capacities=9+ml&guide=1",
             { scroll: false },
         );
         expect(mocks.clientSearch).toHaveBeenLastCalledWith(expect.objectContaining({
@@ -289,7 +290,7 @@ describe("application-first finder client", () => {
 
         await act(async () => buttonWithText(container, "Metal").click());
         expect(mocks.routerReplace).toHaveBeenLastCalledWith(
-            "/catalog/application/roll-on?roller=metal&capacities=9+ml",
+            "/catalog/application/roll-on?roller=metal&capacities=9+ml&guide=1",
             { scroll: false },
         );
         expect(mocks.clientSearch).toHaveBeenLastCalledWith(expect.objectContaining({
@@ -328,7 +329,7 @@ describe("application-first finder client", () => {
 
         expect(container.textContent).toContain("9 ml Clear Cylinder Roll-On Bottle");
         expect(container.querySelector('[aria-busy="true"]')).not.toBeNull();
-        expect(mocks.routerReplace).toHaveBeenLastCalledWith("/catalog/application/spray", { scroll: false });
+        expect(mocks.routerReplace).toHaveBeenLastCalledWith("/catalog/application/spray?guide=1", { scroll: false });
         expect(mocks.clientSearch).toHaveBeenCalledWith(expect.objectContaining({
             filters: expect.objectContaining({ applicators: ["finemist", "perfumespray"] }),
         }), expect.any(AbortSignal));
@@ -364,7 +365,7 @@ describe("application-first finder client", () => {
             root.render(createElement(ApplicationFinderClient, {
                 application: "spray",
                 pathname: "/catalog/application/spray",
-                search: "",
+                search: "?guide=1",
                 unrefinedFacetSource: sprayResult,
                 initialResult: sprayResult,
             }));
@@ -397,11 +398,11 @@ describe("application-first finder client", () => {
 describe("finder entry links", () => {
     it("routes homepage applicators to dedicated finders", () => {
         expect(HOME_APPLICATION_LINKS.map(({ key, href }) => [key, href])).toEqual([
-            ["rollon", "/catalog/application/roll-on"],
-            ["spray", "/catalog/application/spray"],
-            ["lotionpump", "/catalog/application/lotion-pump"],
-            ["dropper", "/catalog/application/dropper"],
-            ["reducer", "/catalog/application/reducer"],
+            ["rollon", "/catalog?applicators=rollon&sort=capacity-asc"],
+            ["spray", "/catalog?applicators=finemist%2Cperfumespray&sort=capacity-asc"],
+            ["lotionpump", "/catalog?applicators=lotionpump&sort=capacity-asc"],
+            ["dropper", "/catalog?applicators=dropper&sort=capacity-asc"],
+            ["reducer", "/catalog?applicators=reducer&sort=capacity-asc"],
         ]);
     });
 

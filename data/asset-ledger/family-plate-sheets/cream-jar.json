@@ -1,0 +1,504 @@
+{
+  "schemaVersion": 1,
+  "id": "cream-jar-plates-2026-09-14",
+  "family": "Cream Jar",
+  "createdAt": "2026-09-14T01:00:16.439Z",
+  "ledgerAt": "2026-09-14T00:39:35.157Z",
+  "scope": "Current development catalog; legacy scope remains open.",
+  "canvas": {
+    "width": 1000,
+    "height": 1100
+  },
+  "rows": [
+    {
+      "sku": "CJAmb30BlkCap",
+      "graceSku": "CJ-JAR-AMB-30ML-BLK",
+      "productGroupId": "kh70xbssy25grhkk4jgr33c2g18dp85n",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "Black",
+      "itemName": "Cream glass jar style 30 ml amber bottle with black cap. For use with body butters, creams, thick lotions. Price each",
+      "groupSlug": "cream-jar-30ml-amber",
+      "familyId": null,
+      "views": [],
+      "error": null
+    },
+    {
+      "sku": "CJAmb30SlCap",
+      "graceSku": "CJ-JAR-AMB-30ML-SLV",
+      "productGroupId": "kh70xbssy25grhkk4jgr33c2g18dp85n",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "Silver",
+      "itemName": "Cream glass jar style 30 ml amber bottle with silver cap. For use with body butters, creams, thick lotions. Price each",
+      "groupSlug": "cream-jar-30ml-amber",
+      "familyId": "cream-jar-30ml-amber-45mm",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-30ml-amber-45mm/CJAmb30SlCap/704b5eeedbe6a3aa6739aab974865d201af490e69bc6f23e527f88b9f7623245.front-on-1000x1100.webp",
+          "sha256": "704b5eeedbe6a3aa6739aab974865d201af490e69bc6f23e527f88b9f7623245",
+          "url": "/images/plate-contact-sheets/704b5eeedbe6a3aa6739aab974865d201af490e69bc6f23e527f88b9f7623245.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-30ml-amber-45mm/CJAmb30SlCap/8c220cb5d6d66f316b7ca16499a152dc93c6500916584dc93ae4f7a707ae39c9.front-off-1000x1100.webp",
+          "sha256": "8c220cb5d6d66f316b7ca16499a152dc93c6500916584dc93ae4f7a707ae39c9",
+          "url": "/images/plate-contact-sheets/8c220cb5d6d66f316b7ca16499a152dc93c6500916584dc93ae4f7a707ae39c9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "CJAmb40SlCap",
+      "graceSku": "CJ-JAR-AMB-40ML-02",
+      "productGroupId": "kh7b0k275c1yprzknzv6hbz7n58dp4vg",
+      "capacityMl": 40,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "Amber",
+      "itemName": "Glass, cream jar style 40 ml amber bottle with silver cap. For use with body butters, creams, thick lotions. Price each",
+      "groupSlug": "cream-jar-40ml-amber",
+      "familyId": "cream-jar-40ml-amber-48-400",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-40ml-amber-48-400/CJAmb40SlCap/bd713b37839d4c4046ff5cd4f36a78acba3b6677556d3866020f2e9e35b3da28.front-on-1000x1100.webp",
+          "sha256": "bd713b37839d4c4046ff5cd4f36a78acba3b6677556d3866020f2e9e35b3da28",
+          "url": "/images/plate-contact-sheets/bd713b37839d4c4046ff5cd4f36a78acba3b6677556d3866020f2e9e35b3da28.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-40ml-amber-48-400/CJAmb40SlCap/64b202e3039267857bb8843dcbe0ac650e9133cc36d04451321b1d9ce99b8a04.front-off-1000x1100.webp",
+          "sha256": "64b202e3039267857bb8843dcbe0ac650e9133cc36d04451321b1d9ce99b8a04",
+          "url": "/images/plate-contact-sheets/64b202e3039267857bb8843dcbe0ac650e9133cc36d04451321b1d9ce99b8a04.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "CJAmb5mlBlkCap",
+      "graceSku": "CJ-JAR-AMB-5ML-BLK",
+      "productGroupId": "kh7128a4cf04tkqx1q92g64ap58dq838",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "Black",
+      "itemName": "Cream glass jar style 5 ml amber bottle with black cap. For use with body butters, creams, and thick lotions. Small trial or sample size. Great for promotions. Price each",
+      "groupSlug": "cream-jar-5ml-amber",
+      "familyId": "cream-jar-5ml-amber-27mm",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-5ml-amber-27mm/CJAmb5mlBlkCap/76482c15c4d850b424d78e8bb71f218e61e4da2ca69831445d45f5d67bc35abb.front-on-1000x1100.webp",
+          "sha256": "76482c15c4d850b424d78e8bb71f218e61e4da2ca69831445d45f5d67bc35abb",
+          "url": "/images/plate-contact-sheets/76482c15c4d850b424d78e8bb71f218e61e4da2ca69831445d45f5d67bc35abb.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-5ml-amber-27mm/CJAmb5mlBlkCap/b62aab5cdd4d89d01613a7ca5532c29e5f0dc81794432b095490f973f2e4e3e0.front-off-1000x1100.webp",
+          "sha256": "b62aab5cdd4d89d01613a7ca5532c29e5f0dc81794432b095490f973f2e4e3e0",
+          "url": "/images/plate-contact-sheets/b62aab5cdd4d89d01613a7ca5532c29e5f0dc81794432b095490f973f2e4e3e0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "CJAmb5mlSlCap",
+      "graceSku": "CJ-JAR-AMB-5ML-SLV",
+      "productGroupId": "kh7128a4cf04tkqx1q92g64ap58dq838",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "Silver",
+      "itemName": "Cream Jar 5 ml (0.17 oz) Amber Glass Silver Cap",
+      "groupSlug": "cream-jar-5ml-amber",
+      "familyId": "cream-jar-5ml-amber-27mm",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-5ml-amber-27mm/CJAmb5mlSlCap/9b91e9bb215b99dd29723ab6d54bc60909a643f187b250c5553eae85b525e2cd.front-on-1000x1100.webp",
+          "sha256": "9b91e9bb215b99dd29723ab6d54bc60909a643f187b250c5553eae85b525e2cd",
+          "url": "/images/plate-contact-sheets/9b91e9bb215b99dd29723ab6d54bc60909a643f187b250c5553eae85b525e2cd.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-5ml-amber-27mm/CJAmb5mlSlCap/60398c476a48a404ba61bcb38793527ca656be430a700e1cb8c8717f90d7dfaf.front-off-1000x1100.webp",
+          "sha256": "60398c476a48a404ba61bcb38793527ca656be430a700e1cb8c8717f90d7dfaf",
+          "url": "/images/plate-contact-sheets/60398c476a48a404ba61bcb38793527ca656be430a700e1cb8c8717f90d7dfaf.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "CJBlu3",
+      "graceSku": "CJ-JAR-CBL-9ML",
+      "productGroupId": "kh7a589thqcf1pw74wfc86j3918dqxta",
+      "capacityMl": 3,
+      "color": "Cobalt Blue",
+      "applicator": null,
+      "capColor": "Blue",
+      "itemName": "Plastic, cream jar style 3 ml bottle with blue cap. For use with body butters, creams, and thick lotions. Small trial or sample size. Great for promotions. Price each",
+      "groupSlug": "cream-jar-3ml-cobalt-blue",
+      "familyId": null,
+      "views": [],
+      "error": null
+    },
+    {
+      "sku": "CJClr15Pnk",
+      "graceSku": "CJ-JAR-CLR-15ML-PNK",
+      "productGroupId": "kh7frtnqngnj8tnvyr5twtesbd8dq7hf",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Pink",
+      "itemName": "Plastic, cream jar style 15 ml bottle with pink cap. For use with body butters, creams, and thick lotions. Small trial or sample size. Great for promotions. Price each",
+      "groupSlug": "cream-jar-15ml-clear",
+      "familyId": "cream-jar-15ml-clear-37mm",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-15ml-clear-37mm/CJClr15Pnk/67c197151ff7ec37c168039ba1d15b966650debc727cf448eb2fb50e5fb64aad.front-on-1000x1100.webp",
+          "sha256": "67c197151ff7ec37c168039ba1d15b966650debc727cf448eb2fb50e5fb64aad",
+          "url": "/images/plate-contact-sheets/67c197151ff7ec37c168039ba1d15b966650debc727cf448eb2fb50e5fb64aad.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-15ml-clear-37mm/CJClr15Pnk/32218d5da1285cc73060f66f6dcb70ca8fccd3c2db7ffcf223ea1932c8a5d00d.front-off-1000x1100.webp",
+          "sha256": "32218d5da1285cc73060f66f6dcb70ca8fccd3c2db7ffcf223ea1932c8a5d00d",
+          "url": "/images/plate-contact-sheets/32218d5da1285cc73060f66f6dcb70ca8fccd3c2db7ffcf223ea1932c8a5d00d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "CJClr15Wht",
+      "graceSku": "CJ-JAR-CLR-15ML-WHT",
+      "productGroupId": "kh7frtnqngnj8tnvyr5twtesbd8dq7hf",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "White",
+      "itemName": "Plastic, cream jar style 15 ml bottle with white cap. For use with body butters, creams, and thick lotions. Small trial or sample size. Great for promotions. Price each",
+      "groupSlug": "cream-jar-15ml-clear",
+      "familyId": "cream-jar-15ml-clear-37mm",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-15ml-clear-37mm/CJClr15Wht/a656f0f7068d446ce21bca32be731e4de1d58611da5a1493e0d5cc6514116978.front-on-1000x1100.webp",
+          "sha256": "a656f0f7068d446ce21bca32be731e4de1d58611da5a1493e0d5cc6514116978",
+          "url": "/images/plate-contact-sheets/a656f0f7068d446ce21bca32be731e4de1d58611da5a1493e0d5cc6514116978.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-15ml-clear-37mm/CJClr15Wht/f031f5fe8e2a67d2c781dc06ed2f500c1ae3c4fb87e69f951176f6b4c5f000c5.front-off-1000x1100.webp",
+          "sha256": "f031f5fe8e2a67d2c781dc06ed2f500c1ae3c4fb87e69f951176f6b4c5f000c5",
+          "url": "/images/plate-contact-sheets/f031f5fe8e2a67d2c781dc06ed2f500c1ae3c4fb87e69f951176f6b4c5f000c5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "CJClr3",
+      "graceSku": "CJ-JAR-CLR-3ML",
+      "productGroupId": "kh732wspx17qfj4meaqqcdv9xd8dp6wm",
+      "capacityMl": 3,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Plastic, cream jar style 3 ml bottle with clear cap. For use with body butters, creams, and thick lotions. Small trial or sample size. Great for promotions. Price each",
+      "groupSlug": "cream-jar-3ml-clear",
+      "familyId": "cream-jar-3ml-clear-20mm",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-3ml-clear-20mm/CJClr3/cc5e320aff6880aca0ea2b8febcd88715fa3b211a7ee8e59e0b4c99f9bf36042.front-on-1000x1100.webp",
+          "sha256": "cc5e320aff6880aca0ea2b8febcd88715fa3b211a7ee8e59e0b4c99f9bf36042",
+          "url": "/images/plate-contact-sheets/cc5e320aff6880aca0ea2b8febcd88715fa3b211a7ee8e59e0b4c99f9bf36042.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-3ml-clear-20mm/CJClr3/1e48ae77e8355ab6ee0dab4390fa2ad5e1867ba2666ee577d9a31fba0b2e8ce2.front-off-1000x1100.webp",
+          "sha256": "1e48ae77e8355ab6ee0dab4390fa2ad5e1867ba2666ee577d9a31fba0b2e8ce2",
+          "url": "/images/plate-contact-sheets/1e48ae77e8355ab6ee0dab4390fa2ad5e1867ba2666ee577d9a31fba0b2e8ce2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "CJClr5mlClrCap",
+      "graceSku": "CJ-JAR-CLR-5ML-CLR",
+      "productGroupId": "kh7dd2t9n6h0fzzawtew1vp9vs8dqmhd",
+      "capacityMl": 5,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Plastic, cream jar style 5 ml clear bottle with clear cap Small trial or sample size. Great for promotions. Price each",
+      "groupSlug": "cream-jar-5ml-clear",
+      "familyId": "cream-jar-5ml-clear-27mm",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-5ml-clear-27mm/CJClr5mlClrCap/7b042904666f895b38459b886b57180aa2f9e721be49c8b78a35f3907279cfd1.front-on-1000x1100.webp",
+          "sha256": "7b042904666f895b38459b886b57180aa2f9e721be49c8b78a35f3907279cfd1",
+          "url": "/images/plate-contact-sheets/7b042904666f895b38459b886b57180aa2f9e721be49c8b78a35f3907279cfd1.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-5ml-clear-27mm/CJClr5mlClrCap/206b646cd57b71284536b1e58203c975da6e58a55c1c656593929c9b335e04eb.front-off-1000x1100.webp",
+          "sha256": "206b646cd57b71284536b1e58203c975da6e58a55c1c656593929c9b335e04eb",
+          "url": "/images/plate-contact-sheets/206b646cd57b71284536b1e58203c975da6e58a55c1c656593929c9b335e04eb.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "CJFrst30BlkCap",
+      "graceSku": "CJ-JAR-FRS-30ML-BLK",
+      "productGroupId": "kh72p6w47m2g2xakhexs6hb40s8dpwpx",
+      "capacityMl": 30,
+      "color": "Frosted",
+      "applicator": null,
+      "capColor": "Black",
+      "itemName": "Cream glass jar style 30 ml frosted bottle with black cap. For use with body butters, creams, thick lotions. Small trial or sample size. Great for promotions. Price each",
+      "groupSlug": "cream-jar-30ml-frosted",
+      "familyId": "cream-jar-30ml-frosted-45mm",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-30ml-frosted-45mm/CJFrst30BlkCap/f2fdb520bd15cd05605a81478345c61134802285c84a59f25011cff3b28210b4.front-on-1000x1100.webp",
+          "sha256": "f2fdb520bd15cd05605a81478345c61134802285c84a59f25011cff3b28210b4",
+          "url": "/images/plate-contact-sheets/f2fdb520bd15cd05605a81478345c61134802285c84a59f25011cff3b28210b4.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-30ml-frosted-45mm/CJFrst30BlkCap/0ba1354db1f6de547dbdd901ba4187aaa57cd6ecec279832c84d160fe83f4eaf.front-off-1000x1100.webp",
+          "sha256": "0ba1354db1f6de547dbdd901ba4187aaa57cd6ecec279832c84d160fe83f4eaf",
+          "url": "/images/plate-contact-sheets/0ba1354db1f6de547dbdd901ba4187aaa57cd6ecec279832c84d160fe83f4eaf.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "CJFrst30SlCap",
+      "graceSku": "CJ-JAR-FRS-30ML-SLV",
+      "productGroupId": "kh72p6w47m2g2xakhexs6hb40s8dpwpx",
+      "capacityMl": 30,
+      "color": "Frosted",
+      "applicator": null,
+      "capColor": "Silver",
+      "itemName": "Cream jar style 30 ml frosted bottle with silver cap . For use with body butters, creams, thick lotions. Small trial or sample size. Great for promotions. Price each",
+      "groupSlug": "cream-jar-30ml-frosted",
+      "familyId": "cream-jar-30ml-frosted-45mm",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-30ml-frosted-45mm/CJFrst30SlCap/2bc8d7b0953eddd2d24b87f2e762e6c27ce83a25478a49ec8a63f56f5eedf8b3.front-on-1000x1100.webp",
+          "sha256": "2bc8d7b0953eddd2d24b87f2e762e6c27ce83a25478a49ec8a63f56f5eedf8b3",
+          "url": "/images/plate-contact-sheets/2bc8d7b0953eddd2d24b87f2e762e6c27ce83a25478a49ec8a63f56f5eedf8b3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-30ml-frosted-45mm/CJFrst30SlCap/ff68bfc018a20f6f4ea9010cb6e0ffc769c928e0028bbd7063d4467452e12d08.front-off-1000x1100.webp",
+          "sha256": "ff68bfc018a20f6f4ea9010cb6e0ffc769c928e0028bbd7063d4467452e12d08",
+          "url": "/images/plate-contact-sheets/ff68bfc018a20f6f4ea9010cb6e0ffc769c928e0028bbd7063d4467452e12d08.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "CJFrst40BlkCap",
+      "graceSku": "CJ-JAR-FRS-40ML-01",
+      "productGroupId": "kh79bt7saqq6mkmattdevv5qn58dqefv",
+      "capacityMl": 40,
+      "color": "Frosted",
+      "applicator": null,
+      "capColor": "Frosted",
+      "itemName": "Glass, cream jar style 40 ml frosted bottle with black cap. For use with body butters, creams, thick lotions. Price each",
+      "groupSlug": "cream-jar-40ml-frosted",
+      "familyId": "cream-jar-40ml-frosted-48-400",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-40ml-frosted-48-400/CJFrst40BlkCap/37101af9d09242577be6b04b1b8a9e0b2d0ff312f22eb93c2aa5c81dbc8c2a48.front-on-1000x1100.webp",
+          "sha256": "37101af9d09242577be6b04b1b8a9e0b2d0ff312f22eb93c2aa5c81dbc8c2a48",
+          "url": "/images/plate-contact-sheets/37101af9d09242577be6b04b1b8a9e0b2d0ff312f22eb93c2aa5c81dbc8c2a48.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-40ml-frosted-48-400/CJFrst40BlkCap/ee4fae9d76c2e15b3c53ab8b7284200cb27e43ef9de5d9bd9808a1523579819e.front-off-1000x1100.webp",
+          "sha256": "ee4fae9d76c2e15b3c53ab8b7284200cb27e43ef9de5d9bd9808a1523579819e",
+          "url": "/images/plate-contact-sheets/ee4fae9d76c2e15b3c53ab8b7284200cb27e43ef9de5d9bd9808a1523579819e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "CJFrst40SlCap",
+      "graceSku": "CJ-JAR-FRS-40ML-02",
+      "productGroupId": "kh79bt7saqq6mkmattdevv5qn58dqefv",
+      "capacityMl": 40,
+      "color": "Frosted",
+      "applicator": null,
+      "capColor": "Frosted",
+      "itemName": "Glass, cream jar style 40 ml frosted bottle with silver cap. For use with body butters, creams, thick lotions. Price each",
+      "groupSlug": "cream-jar-40ml-frosted",
+      "familyId": "cream-jar-40ml-frosted-48-400",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-40ml-frosted-48-400/CJFrst40SlCap/31b0d4a63ab2bdd8b03a0429d5acb257480f36114720e780e2082bec59d296e0.front-on-1000x1100.webp",
+          "sha256": "31b0d4a63ab2bdd8b03a0429d5acb257480f36114720e780e2082bec59d296e0",
+          "url": "/images/plate-contact-sheets/31b0d4a63ab2bdd8b03a0429d5acb257480f36114720e780e2082bec59d296e0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-40ml-frosted-48-400/CJFrst40SlCap/ffb1cf0054795cd3e7263f5d620ebbb12604f62a6418764ae0c8fe3f8466cbfd.front-off-1000x1100.webp",
+          "sha256": "ffb1cf0054795cd3e7263f5d620ebbb12604f62a6418764ae0c8fe3f8466cbfd",
+          "url": "/images/plate-contact-sheets/ffb1cf0054795cd3e7263f5d620ebbb12604f62a6418764ae0c8fe3f8466cbfd.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "CJWhite20",
+      "graceSku": "CJ-JAR-20ML-WHT",
+      "productGroupId": "kh7fpp7hjhww8mbyqp03dm99g98dqt66",
+      "capacityMl": 20,
+      "color": "White",
+      "applicator": null,
+      "capColor": "White",
+      "itemName": "Plastic, cream jar style 20 mlbottle with white cap. For use with body butters, creams, and thick lotions. Small trial or sample size. Great for promotions. Price each",
+      "groupSlug": "cream-jar-20ml-white",
+      "familyId": "cream-jar-20ml-white-40mm",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-20ml-white-40mm/CJWhite20/5189ed3a55ab26c95b869ce4f1e4ff8c8bdc9f81ad160f8b207ddc818923aa9a.front-on-1000x1100.webp",
+          "sha256": "5189ed3a55ab26c95b869ce4f1e4ff8c8bdc9f81ad160f8b207ddc818923aa9a",
+          "url": "/images/plate-contact-sheets/5189ed3a55ab26c95b869ce4f1e4ff8c8bdc9f81ad160f8b207ddc818923aa9a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-20ml-white-40mm/CJWhite20/f6b605b09c0df28635968ddd88e1f29cd4d64af3ff2ef68edd2b676601a4d770.front-off-1000x1100.webp",
+          "sha256": "f6b605b09c0df28635968ddd88e1f29cd4d64af3ff2ef68edd2b676601a4d770",
+          "url": "/images/plate-contact-sheets/f6b605b09c0df28635968ddd88e1f29cd4d64af3ff2ef68edd2b676601a4d770.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "CJWhitePlsSlFr2oz",
+      "graceSku": "CJ-JAR-60ML-WHT",
+      "productGroupId": "kh74f5zj880p3r5smegf5sy19n8dpk4a",
+      "capacityMl": 63,
+      "color": "White",
+      "applicator": null,
+      "capColor": "White",
+      "itemName": "White plastic cream jar with silver cap, capacity 63 ml",
+      "groupSlug": "cream-jar-63ml-white",
+      "familyId": "cream-jar-63ml-white-58mm",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-63ml-white-58mm/CJWhitePlsSlFr2oz/372dcc72ac5362404e7953b0a7698a25ad37a05496d460c31be21fd92bce6f45.front-on-1000x1100.webp",
+          "sha256": "372dcc72ac5362404e7953b0a7698a25ad37a05496d460c31be21fd92bce6f45",
+          "url": "/images/plate-contact-sheets/372dcc72ac5362404e7953b0a7698a25ad37a05496d460c31be21fd92bce6f45.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-63ml-white-58mm/CJWhitePlsSlFr2oz/84cc22ef07148449c3d1f1f2e44e0a8d27f542e06aaddd426245e2e2459d9096.front-off-1000x1100.webp",
+          "sha256": "84cc22ef07148449c3d1f1f2e44e0a8d27f542e06aaddd426245e2e2459d9096",
+          "url": "/images/plate-contact-sheets/84cc22ef07148449c3d1f1f2e44e0a8d27f542e06aaddd426245e2e2459d9096.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "CreamJarAmb40Blkcap",
+      "graceSku": "CJ-JAR-AMB-40ML-01",
+      "productGroupId": "kh7b0k275c1yprzknzv6hbz7n58dp4vg",
+      "capacityMl": 40,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "Amber",
+      "itemName": "Glass, cream jar style 40 ml amber bottle with black cap. For use with body butters, creams, thick lotions. Price each",
+      "groupSlug": "cream-jar-40ml-amber",
+      "familyId": null,
+      "views": [],
+      "error": null
+    },
+    {
+      "sku": "CreamJarFrstdPlsBlkPls2oz",
+      "graceSku": "CJ-JAR-FRS-60ML",
+      "productGroupId": "kh7c4czc0jzw7y2pdf0b99qx3h8dpt1v",
+      "capacityMl": 60,
+      "color": "Frosted",
+      "applicator": null,
+      "capColor": "Frosted",
+      "itemName": "Frosted plastic Cream jar bottle with clear cap. Capacity: 63 ml",
+      "groupSlug": "cream-jar-60ml-frosted",
+      "familyId": null,
+      "views": [],
+      "error": null
+    }
+  ]
+}

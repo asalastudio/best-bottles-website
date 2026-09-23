@@ -1,0 +1,32 @@
+{
+ "schemaVersion": 1,
+ "release": "atomizer-kits-2026-09-19",
+ "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/atomizer",
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:11.026Z",
+ "shipPhrase": "ship Atomizer kit release 2026-09-19",
+ "published": [
+  "https://precise-raccoon-123.convex.cloud",
+  "https://helpful-elephant-638.convex.cloud"
+ ],
+ "counts": {
+  "extractedCandidates": 2,
+  "approved": 2,
+  "setAside": 0,
+  "notExtracted": 12
+ },
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/atomizer-kits.jpg",
+ "reviewSheetSha256": "7ba4a6ac26739f8dbccda7addbbb08b22feb75850ac9b8691bd4f58c7695ba81",
+ "rows": [
+  {
+   "sku": "GBAtom10Blk",
+   "plateSha256": "a2d38a2811ed3a24f2e68084190371f0bb641eb4eaf86a31544d094d2e0238e5"
+  },
+  {
+   "sku": "GBAtom5Sl",
+   "plateSha256": "d0f0b547002723458f59fce5c08e9c161e30bd7f6ffc98f329abe2700a57a01c"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "4ef069b78fe024700d688b86780625da3ceb162b39b650bccb71f475b1491a6d"
+}

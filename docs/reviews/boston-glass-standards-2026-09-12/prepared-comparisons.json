@@ -1,0 +1,406 @@
+[
+  {
+    "standardId": "boston-round-standard-15ml",
+    "kind": "bare-glass-standard",
+    "preparedAt": "2026-09-13T00:00:23.192222+00:00",
+    "requestId": "54e3e186-0008-454f-814d-3bee4057cc1f",
+    "standardVersion": 1,
+    "referenceSha256": "871d96733ee510ba8bc62bb7b997746b718be9523e35efdad81462cf283dfc40",
+    "referenceImage": {
+      "url": "/images/catalog/bone-review/GBBstn15BlkCapSht.871d96733ee5.png",
+      "sha256": "871d96733ee510ba8bc62bb7b997746b718be9523e35efdad81462cf283dfc40"
+    },
+    "measurement": "full_glass",
+    "before": {
+      "url": "/images/bottle-standards/boston-2026-09-12/15ml-current-glass.8d965f273927d8a8.png",
+      "sha256": "8d965f273927d8a8dcc29073fa4c10f95fd0866355bf56e642a853c6aff66bc8"
+    },
+    "after": {
+      "url": "/images/bottle-standards/boston-2026-09-12/15ml-proposed-glass.8d965f273927d8a8.png",
+      "sha256": "8d965f273927d8a8dcc29073fa4c10f95fd0866355bf56e642a853c6aff66bc8"
+    },
+    "bareGlass": {
+      "url": "/images/bottle-standards/boston-2026-09-12/15ml-source-glass.78b7f558ca3e7294.png",
+      "sha256": "78b7f558ca3e7294d4bbd18b6aa018f3bb72f39feb8197f986b3cd6ff79ae1bd",
+      "identityVerified": true,
+      "verifiedBy": "Codex \u00b7 exact catalog crosswalk and visual PSD layer inspection",
+      "verifiedAt": "2026-09-13T00:00:23.192222+00:00",
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/3. Clear Bottle (.5ounce:15ml) (capped)/Clear Dropper Bottler 1.5 ounce Alternating Caps (capped)/1. GBBstn15BlkCapSht.psd",
+      "sourceSha256": "1c994a66c9d0eb524d3aff308514532efe560d0659f2df9c99860e4e4891fa71",
+      "layerIndex": 1,
+      "layerName": "Layer 4"
+    },
+    "canvas": {
+      "width": 1560,
+      "height": 1716
+    },
+    "glass": {
+      "rimY": 759.5209429938918,
+      "baseY": 1561.56
+    },
+    "beforeGlass": {
+      "rimY": 759.5209429938918,
+      "baseY": 1561.56
+    },
+    "baselinePercent": 91,
+    "registrationVerified": true,
+    "assemblyBoundsVerified": true,
+    "scopeVerified": true,
+    "productGroupIds": [
+      "kh7bbete9a8hmk9j8r6ngfb0bs8dqv80",
+      "kh70b67y176d4jftmy5xyd930x8dp2jn",
+      "kh7em1j4z5a71s14sknz63zgk98dpm9w",
+      "kh70nt59vyfdnkts72wkf17km58dpvy3",
+      "kh74gnrjnzjqm2deqcxzx1zswn8dqs1a"
+    ],
+    "affectedSkus": [
+      "GBBstn15BlkCapSht",
+      "GBBstn15BlkDrp",
+      "GBBstnAmb15mlBlkCapSht",
+      "GBBstnAmb15mlBlkDropper",
+      "GBBstnAmb15mlBlkDropperGlTrim",
+      "GBBstnAmb15mlBlkDropperSlTrim",
+      "GBBstnAmb15mlWhtDropper",
+      "GBBstnAmb15mlWhtDropperGlTrim",
+      "GBBstnAmb15mlWhtDropperSlTrim",
+      "GBBstnBlu15BlkCapSht",
+      "GBBstnBlu15BlkDrpr",
+      "GBBstnBlu15BlkDrprGlTrim",
+      "GBBstnBlu15WhtDrpr",
+      "GBBstnBlu15WhtDrprGlTrim",
+      "GBBstnBlu15WhtDrprSlTrim",
+      "GBBstnBlu15mlBlkDropperSlTrim"
+    ],
+    "registration": {
+      "sku": "GBBstn15BlkCapSht",
+      "capacity": 15,
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/3. Clear Bottle (.5ounce:15ml) (capped)/Clear Dropper Bottler 1.5 ounce Alternating Caps (capped)/1. GBBstn15BlkCapSht.psd",
+      "layerIndex": 1,
+      "layerName": "Layer 4",
+      "layerOffset": [
+        137,
+        312
+      ],
+      "rimLocalY": 2,
+      "baseLocalY": 809,
+      "scale": 0.9938526109121538,
+      "translateX": 621.9413657077889,
+      "translateY": 756.9732377720676,
+      "glassHeight": 802.0390570061081,
+      "baseY": 1561.0,
+      "registrationMedianPx": 1.9458827421798333,
+      "registrationP95Px": 9.414935922186412
+    },
+    "transform": {
+      "before": {
+        "scale": 0.9938526109121538,
+        "x": 621.9413657077889,
+        "y": 757.5332377720675
+      },
+      "after": {
+        "scale": 0.9938526109121538,
+        "x": 621.9413657077889,
+        "y": 757.5332377720675
+      },
+      "relativePercent": 0
+    },
+    "note": "Bare-glass standard from the exact master layer. Current framing is calibrated to the approved hero body. Existing hero pixels and shadows are untouched. Registration residuals are recorded; no claim that generated hero pixels exactly match the master."
+  },
+  {
+    "standardId": "boston-round-standard-30ml",
+    "kind": "bare-glass-standard",
+    "preparedAt": "2026-09-13T00:00:23.192222+00:00",
+    "requestId": "2bba7570-a281-4b67-93bb-e7ba82307f01",
+    "standardVersion": 1,
+    "referenceSha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+    "referenceImage": {
+      "url": "/images/catalog/bone-review/GBBstn1ozBlkCapSht.d1ca21c8a1dd.png",
+      "sha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401"
+    },
+    "measurement": "full_glass",
+    "before": {
+      "url": "/images/bottle-standards/boston-2026-09-12/30ml-current-glass.191dcb3ff17f9d32.png",
+      "sha256": "191dcb3ff17f9d32e5970b80a825b6d31fa774d9f9669ad58a1cf1aada6e896d"
+    },
+    "after": {
+      "url": "/images/bottle-standards/boston-2026-09-12/30ml-proposed-glass.5bf522a337373602.png",
+      "sha256": "5bf522a3373736025c7bf77cd075ca486877e2624ea58288336dd52fdc7aff77"
+    },
+    "bareGlass": {
+      "url": "/images/bottle-standards/boston-2026-09-12/30ml-source-glass.700b94b2a41f3748.png",
+      "sha256": "700b94b2a41f3748ff1cf935d895df2bfb6cf48025232207a2b535a1a157f9a5",
+      "identityVerified": true,
+      "verifiedBy": "Codex \u00b7 exact catalog crosswalk and visual PSD layer inspection",
+      "verifiedAt": "2026-09-13T00:00:23.192222+00:00",
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/17. GBBstn1ozBlkCapSht.psd",
+      "sourceSha256": "8f3adeb586877cc3a1ca8b58901f43022fe388187aa2c5b8d11bfa8edc4f6f1e",
+      "layerIndex": 1,
+      "layerName": "Layer 22"
+    },
+    "canvas": {
+      "width": 1560,
+      "height": 1716
+    },
+    "glass": {
+      "rimY": 661.853513145764,
+      "baseY": 1561.56
+    },
+    "beforeGlass": {
+      "rimY": 688.0585564521982,
+      "baseY": 1561.56
+    },
+    "baselinePercent": 91,
+    "registrationVerified": true,
+    "assemblyBoundsVerified": true,
+    "scopeVerified": true,
+    "productGroupIds": [
+      "kh701bf09an4958zyxw5e110wd8dppyt",
+      "kh76cthp5ysk49hky1ceay825s8dpqmm",
+      "kh78vztmsmmv18mr8cvbb01mxx8dq9kr",
+      "kh7bb32zgnejqh02fd0bm6cgwx8dq3bd",
+      "kh70av3cknps9zwv11j1h53ag18dpb4z",
+      "kh7beaghvaf5dggxbjxy0xe17n8dp7kv",
+      "kh78xmwqbv64gbbjxzkrhg7qms8dqpes",
+      "kh73sfz15bankpnj62myjyh54n8dppwh",
+      "kh77jqvwd4zc959n8zp80502658dq64d"
+    ],
+    "affectedSkus": [
+      "GBBstn1ozBlkCapSht",
+      "GBBstn1ozBlkDrp",
+      "GBBstn1ozBlkDrpShnGlTrim",
+      "GBBstn1ozMtlRollonBlk",
+      "GBBstn1ozMtlRollonGl",
+      "GBBstn1ozMtlRollonMattBlk",
+      "GBBstn1ozMtlRollonMattGl",
+      "GBBstn1ozMtlRollonMattSl",
+      "GBBstn1ozMtlRollonShnSl",
+      "GBBstn1ozRollonMattBlk",
+      "GBBstn1ozRollonMattGl",
+      "GBBstn1ozRollonMattSl",
+      "GBBstn1ozRollonShBlk",
+      "GBBstn1ozRollonShGl",
+      "GBBstn1ozRollonShnSl",
+      "GBBstn1ozWhtDrp",
+      "GBBstn1ozWhtDrpShnGlTrim",
+      "GBBstn1ozWhtDrpShnSlTrim",
+      "GBBstnAmb1ozBlkCapSht",
+      "GBBstnAmb1ozBlkDropper",
+      "GBBstnAmb1ozBlkDrpShnGl",
+      "GBBstnAmb1ozMtlRollonGl",
+      "GBBstnAmb1ozMtlRollonMattBlk",
+      "GBBstnAmb1ozMtlRollonMattGl",
+      "GBBstnAmb1ozMtlRollonMattSl",
+      "GBBstnAmb1ozMtlRollonShnBlk",
+      "GBBstnAmb1ozMtlRollonShnSl",
+      "GBBstnAmb1ozRollonGl",
+      "GBBstnAmb1ozRollonMattBlk",
+      "GBBstnAmb1ozRollonMattGl",
+      "GBBstnAmb1ozRollonMattSl",
+      "GBBstnAmb1ozRollonShnBlk",
+      "GBBstnAmb1ozRollonShnSl",
+      "GBBstnAmb1ozWhtDropper",
+      "GBBstnAmb1ozWhtDropperShnGlTrim",
+      "GBBstnAmb1ozWhtDrprShnSlTrim",
+      "GBBstnBlu1ozBlkCapSht",
+      "GBBstnBlu1ozBlkDropper",
+      "GBBstnBlu1ozBlkDropperShnGlTrim",
+      "GBBstnBlu1ozMtlRollonGl",
+      "GBBstnBlu1ozMtlRollonMattBlk",
+      "GBBstnBlu1ozMtlRollonMattGl",
+      "GBBstnBlu1ozMtlRollonMattSl",
+      "GBBstnBlu1ozMtlRollonShnSl",
+      "GBBstnBlu1ozRollonGl",
+      "GBBstnBlu1ozRollonMattBlk",
+      "GBBstnBlu1ozRollonMattGl",
+      "GBBstnBlu1ozRollonMattSl",
+      "GBBstnBlu1ozRollonShnBlk",
+      "GBBstnBlu1ozRollonShnSl",
+      "GBBstnBlu1ozWhtDropper",
+      "GBBstnBlu1ozWhtDropperShnGlTrim",
+      "GBBstnBlu1ozWhtDropperShnSlTrim"
+    ],
+    "registration": {
+      "sku": "GBBstn1ozBlkCapSht",
+      "capacity": 30,
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/17. GBBstn1ozBlkCapSht.psd",
+      "layerIndex": 1,
+      "layerName": "Layer 22",
+      "layerOffset": [
+        76,
+        468
+      ],
+      "rimLocalY": 3,
+      "baseLocalY": 946,
+      "scale": 0.926300576402759,
+      "translateX": 588.177211058966,
+      "translateY": 684.71965472299,
+      "glassHeight": 873.5014435478017,
+      "baseY": 1561.0,
+      "registrationMedianPx": 2.003078627492698,
+      "registrationP95Px": 15.159220791949812
+    },
+    "transform": {
+      "before": {
+        "scale": 0.926300576402759,
+        "x": 588.177211058966,
+        "y": 685.2796547229899
+      },
+      "after": {
+        "scale": 0.9540895936948418,
+        "x": 582.422527390735,
+        "y": 658.9912443646796
+      },
+      "relativePercent": 3
+    },
+    "note": "Bare-glass standard from the exact master layer. Current framing is calibrated to the approved hero body. Existing hero pixels and shadows are untouched. Registration residuals are recorded; no claim that generated hero pixels exactly match the master."
+  },
+  {
+    "standardId": "boston-round-standard-60ml",
+    "kind": "bare-glass-standard",
+    "preparedAt": "2026-09-13T00:00:23.192222+00:00",
+    "requestId": "7b1f0360-96b8-47c4-bf92-dff28e8eb206",
+    "standardVersion": 1,
+    "referenceSha256": "6f5506b0bf8f1583404b55a27c3c4dae8669afae9ac0fe0d68fb07540a483adc",
+    "referenceImage": {
+      "url": "/images/catalog/bone-review/GBBstn2ozBlkCapSht.6f5506b0bf8f.png",
+      "sha256": "6f5506b0bf8f1583404b55a27c3c4dae8669afae9ac0fe0d68fb07540a483adc"
+    },
+    "measurement": "full_glass",
+    "before": {
+      "url": "/images/bottle-standards/boston-2026-09-12/60ml-current-glass.2ac7ac0f29be4d70.png",
+      "sha256": "2ac7ac0f29be4d70c31dd133aebdb7676f74a00e06729faf9e887aa449b9462d"
+    },
+    "after": {
+      "url": "/images/bottle-standards/boston-2026-09-12/60ml-proposed-glass.2ac7ac0f29be4d70.png",
+      "sha256": "2ac7ac0f29be4d70c31dd133aebdb7676f74a00e06729faf9e887aa449b9462d"
+    },
+    "bareGlass": {
+      "url": "/images/bottle-standards/boston-2026-09-12/60ml-source-glass.8cc3883ca1ae5328.png",
+      "sha256": "8cc3883ca1ae53284d4f016f96938abfdbacbc5f44cb69fd328b51817303c0bc",
+      "identityVerified": true,
+      "verifiedBy": "Codex \u00b7 exact catalog crosswalk and visual PSD layer inspection",
+      "verifiedAt": "2026-09-13T00:00:23.192222+00:00",
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/17. GBBstn2ozBlkCapSht.psd",
+      "sourceSha256": "82dacf0eeb9397d6ead784ff4dad5144d7882f6e843b12e511505ee16f87cdf0",
+      "layerIndex": 1,
+      "layerName": "Layer 6"
+    },
+    "canvas": {
+      "width": 1560,
+      "height": 1716
+    },
+    "glass": {
+      "rimY": 490.9522817442911,
+      "baseY": 1561.56
+    },
+    "beforeGlass": {
+      "rimY": 490.9522817442911,
+      "baseY": 1561.56
+    },
+    "baselinePercent": 91,
+    "registrationVerified": true,
+    "assemblyBoundsVerified": true,
+    "scopeVerified": true,
+    "productGroupIds": [
+      "kh74fjj3ngy8a25a6r9bybsm6n8dp9s0",
+      "kh777dtpw7yx3x5g09s5vggbs98dpm7a",
+      "kh79h0rk045gy6sxmgx2y856f98dp0xq",
+      "kh71hqj8fks931wf2yqfahgjqx8dpeat",
+      "kh79sm9atpya350awcq2xqv4z98dqy71",
+      "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "kh7d04rmj7hs17c440qg5xb4cn8dpg5a",
+      "kh7e5h1vzrdbtz42t9rqcg81sx8dq4sz",
+      "kh7fa6r13e1h081b1n7ganfcan8dp5mh"
+    ],
+    "affectedSkus": [
+      "GBBstn2ozBlkCapSht",
+      "GBBstn2ozBlkDrpr",
+      "GBBstn2ozBlkDrprShnGlTrim",
+      "GBBstn2ozBlkDrprShnSlTrim",
+      "GBBstn2ozMtlRollBlk",
+      "GBBstn2ozMtlRollGl",
+      "GBBstn2ozMtlRollMattBlk",
+      "GBBstn2ozMtlRollMattGl",
+      "GBBstn2ozMtlRollMattSl",
+      "GBBstn2ozMtlRollShnSl",
+      "GBBstn2ozRollGl",
+      "GBBstn2ozRollMattBlk",
+      "GBBstn2ozRollMattSl",
+      "GBBstn2ozRollShnBlk",
+      "GBBstn2ozRollShnSl",
+      "GBBstn2ozRollonMattGl",
+      "GBBstn2ozWhtDrpr",
+      "GBBstn2ozWhtDrprShnGlTrim",
+      "GBBstn2ozWhtDrprShnSlTrim",
+      "GBBstnAmb2ozBlkCapSht",
+      "GBBstnAmb2ozBlkDropperShnGlTrim",
+      "GBBstnAmb2ozBlkDrpr",
+      "GBBstnAmb2ozBlkDrprShnSlTrim",
+      "GBBstnAmb2ozMtlRollonGl",
+      "GBBstnAmb2ozMtlRollonMattBlk",
+      "GBBstnAmb2ozMtlRollonMattGl",
+      "GBBstnAmb2ozMtlRollonMattSl",
+      "GBBstnAmb2ozMtlRollonShnSl",
+      "GBBstnAmb2ozRollonGl",
+      "GBBstnAmb2ozRollonMattBlk",
+      "GBBstnAmb2ozRollonMattGl",
+      "GBBstnAmb2ozRollonMattSl",
+      "GBBstnAmb2ozRollonShnBlk",
+      "GBBstnAmb2ozRollonShnSl",
+      "GBBstnAmb2ozWhtDropperShnGlTrim",
+      "GBBstnAmb2ozWhtDropperShnSlTrim",
+      "GBBstnAmb2ozWhtDrpr",
+      "GBBstnBlu2ozBlkCapSht",
+      "GBBstnBlu2ozBlkDropper",
+      "GBBstnBlu2ozBlkDropperShnGlTrim",
+      "GBBstnBlu2ozMtlRollonGl",
+      "GBBstnBlu2ozMtlRollonMattBlk",
+      "GBBstnBlu2ozMtlRollonMattGl",
+      "GBBstnBlu2ozMtlRollonMattSl",
+      "GBBstnBlu2ozMtlRollonShnSl",
+      "GBBstnBlu2ozRollonGl",
+      "GBBstnBlu2ozRollonMattBlk",
+      "GBBstnBlu2ozRollonMattGl",
+      "GBBstnBlu2ozRollonMattSl",
+      "GBBstnBlu2ozRollonShnBlk",
+      "GBBstnBlu2ozRollonShnSl",
+      "GBBstnBlu2ozWhtDropper",
+      "GBBstnBlu2ozWhtDropperShnGlTrim",
+      "GBBstnBlu2ozWhtDropperShnSlTrim"
+    ],
+    "registration": {
+      "sku": "GBBstn2ozBlkCapSht",
+      "capacity": 60,
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/17. GBBstn2ozBlkCapSht.psd",
+      "layerIndex": 1,
+      "layerName": "Layer 6",
+      "layerOffset": [
+        50,
+        314
+      ],
+      "rimLocalY": 1,
+      "baseLocalY": 1155,
+      "scale": 0.927736324311706,
+      "translateX": 532.1522003469074,
+      "translateY": 489.46454541997946,
+      "glassHeight": 1070.6077182557087,
+      "baseY": 1561.0,
+      "registrationMedianPx": 2.0320539623965033,
+      "registrationP95Px": 12.980997938281808
+    },
+    "transform": {
+      "before": {
+        "scale": 0.927736324311706,
+        "x": 532.1522003469074,
+        "y": 490.0245454199794
+      },
+      "after": {
+        "scale": 0.927736324311706,
+        "x": 532.1522003469074,
+        "y": 490.0245454199794
+      },
+      "relativePercent": 0
+    },
+    "note": "Bare-glass standard from the exact master layer. Current framing is calibrated to the approved hero body. Existing hero pixels and shadows are untouched. Registration residuals are recorded; no claim that generated hero pixels exactly match the master."
+  }
+]

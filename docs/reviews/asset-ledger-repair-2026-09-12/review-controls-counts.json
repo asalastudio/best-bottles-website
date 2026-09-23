@@ -1,0 +1,15 @@
+{
+  "at": "2026-09-12T23:48:55.022Z",
+  "checkedApprovedPlates": 165,
+  "liveKits": 420,
+  "sunburstGroups": 71,
+  "lockedStandards": 0,
+  "sizingRequests": [
+    {
+      "standard": "boston-round-standard-30ml",
+      "percent": null,
+      "status": "requested"
+    }
+  ],
+  "holds": 174
+}

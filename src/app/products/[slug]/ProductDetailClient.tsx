@@ -1,5 +1,10 @@
 "use client";
 
+import { useRegion } from "@/components/RegionProvider";
+
+import { decodeImage } from "@/lib/paper-doll/decode-image";
+import type { LocalKitPilot } from "@/lib/products/local-kit-pilot";
+import type { BuilderKit } from "@/lib/bottle-builder/model";
 import { verifiedCapOffPhoto } from "@/lib/products/verified-cap-off-photo";
 import { normalizeImportedCapColor } from "@/lib/products/cap-finish-evidence";
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
@@ -18,7 +23,8 @@ import Navbar from "@/components/Navbar";
 import Breadcrumbs, { type BreadcrumbStep } from "@/components/Breadcrumbs";
 import { useCart } from "@/components/CartProvider";
 import { useGrace } from "@/components/useGrace";
-import { APPLICATOR_BUCKETS, APPLICATOR_NAV, type ApplicatorNavValue } from "@/lib/catalogFilters";
+import { useCopy } from "@/i18n/useCopy";
+import { APPLICATOR_BUCKETS, APPLICATOR_NAV, displayApplicatorName, type ApplicatorNavValue } from "@/lib/catalogFilters";
 import { buildCapOptionPhotoKeys } from "@/lib/products/closure-swatch-keys";
 import { reconcilePdpEditorialDescriptions } from "@/lib/products/pdp-editorial-description";
 import { decoratedCapFinish } from "@/lib/products/decorated-cap-finish";
@@ -44,9 +50,12 @@ import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { focusedProductOptionLabel, focusedProductPresentation } from "@/lib/products/focused-product-presentation";
 import cylinderCapThumbnails from "@/lib/products/cylinder-cap-thumbnails.generated.json";
+import { bostonClosurePhoto } from "@/lib/products/boston-closure-photos";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
+import { shouldHideAssembledPdpLowerStack } from "@/lib/products/assembled-pdp";
+import { filterVariantsForGroupIntent } from "@/lib/products/group-variant-intent";
 import { isCheckoutReady } from "@/lib/checkout";
 import {
     VOLUME_TIERS_HONORED_AT_CHECKOUT,
@@ -87,11 +96,6 @@ function analyticsApplicationForApplicator(applicator: string | null | undefined
 }
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
-
-function formatPrice(price: number | null | undefined): string {
-    if (!price) return "—";
-    return `$${price.toFixed(2)}`;
-}
 
 function getFinishFromGraceSku(graceSku: string | null | undefined): { label: string; swatchName: string } | null {
     if (!graceSku) return null;
@@ -207,10 +211,10 @@ function getVariantOptionPrefix(v: ProductVariant): string | null {
     const capStyle = v.capStyle?.trim() || null;
 
     if (/-AST-/.test(sku) || /ansptsl/i.test(websiteSku) || (applicator.includes("vintage") && itemName.includes("tassel"))) {
-        return "Vintage Bulb Sprayer with Tassel";
+        return "Vintage Style Bulb Sprayer with Tassel";
     }
     if (/-ASP-/.test(sku) || /ansp/i.test(websiteSku) || /(vintage|antique|bulb).*(spray|sprayer)/.test(`${applicator} ${itemName}`)) {
-        return "Vintage Bulb Sprayer";
+        return "Vintage Style Bulb Sprayer";
     }
     if (sku.includes("-SPR-") || applicator.includes("spray")) return "Spray";
     if (sku.includes("-LPM-") || applicator.includes("lotion")) return "Lotion Pump";
@@ -669,7 +673,7 @@ function VariantImagePicker({
                 key={tile.id}
                 type="button"
                 onClick={() => onSelect(tile.variant)}
-                title={`${tile.label} · ${tile.graceSku}`}
+                title={tile.label}
                 aria-label={`Select ${tile.label} variant`}
                 aria-pressed={isSelected}
                 className={`
@@ -806,7 +810,7 @@ function TrustStack({ variant, inStock }: { variant: ProductVariant | null | und
                 )}
                 <div className="flex items-center gap-2.5 text-obsidian">
                     <Truck className="w-4 h-4 text-slate shrink-0" strokeWidth={1.5} />
-                    <span>Free shipping on orders over <span className="font-semibold">$99</span></span>
+                    <span>$50 minimum per order</span>
                 </div>
             </div>
         </div>
@@ -814,6 +818,8 @@ function TrustStack({ variant, inStock }: { variant: ProductVariant | null | und
 }
 
 function VolumeTeaser({ variant }: { variant: ProductVariant | null | undefined }) {
+    const { formatPrice: money } = useRegion();
+    const formatPrice = (price: number | null | undefined): string => (price ? money(price) : "—");
     if (!variant?.webPrice1pc) return null;
     const tiers = buildDisplayVolumeTiers({
         webPrice1pc: variant.webPrice1pc,
@@ -850,6 +856,8 @@ function TierLadder({
     compact?: boolean;
     onQtyChange?: (qty: number) => void;
 }) {
+    const { formatPrice: money } = useRegion();
+    const formatPrice = (price: number | null | undefined): string => (price ? money(price) : "—");
     if (!variant?.webPrice1pc) return null;
 
     const p1 = variant.webPrice1pc;
@@ -1078,6 +1086,10 @@ export interface SiblingGroup {
 
 export default function ProductDetailClient({
     platesBySku = {},
+    localKits = {},
+    localComponentKits = {},
+    localAssetPreview = false,
+    localAssetVersion = '',
     slug,
     initialData,
     initialPdpBlocks = [],
@@ -1092,15 +1104,34 @@ export default function ProductDetailClient({
     initialCompatibility?: PdpCompatibilityPayload | null;
     siblingGroups?: SiblingGroup[];
     /** static paper-doll plates for this catalogue, keyed by graceSku or websiteSku (the productPlates index; bytes on Vercel Blob) */
-    platesBySku?: Record<string, { image: string; imageCapOff: string | null }>;
+    platesBySku?: Record<string, { image: string; imageCapOff: string | null; localCandidate?: boolean; reviewStatus?: string }>;
+    localKits?: Record<string, LocalKitPilot>;
+    localComponentKits?: Record<string, BuilderKit>;
+    localAssetPreview?: boolean;
+    localAssetVersion?: string;
 }) {
+    const localComponentPreview = Object.keys(localComponentKits).length > 0;
+    const { formatPrice: money } = useRegion();
+    const formatPrice = (price: number | null | undefined): string => (price ? money(price) : "—");
     const router = useRouter();
+    useEffect(() => {
+        const urls = new Set(Object.values(localKits).flatMap(kit => [...kit.on.parts, ...kit.off.parts].map(part => part.image.url)));
+        for (const url of urls) void decodeImage(url).catch(() => {});
+    }, [localKits]);
+    useEffect(()=>{
+        if(!localAssetPreview)return;
+        let active=true;
+        const update=async()=>{if(document.hidden)return;try{const response=await fetch('/api/asset-ledger/plate-completion',{cache:'no-store'});if(!response.ok)return;const data=await response.json();if(active&&data.version!==localAssetVersion)router.refresh();}catch{/* Keep the current image during a local rebuild. */}};
+        const timer=window.setInterval(update,10000);window.addEventListener('focus',update);
+        return()=>{active=false;window.clearInterval(timer);window.removeEventListener('focus',update);};
+    },[localAssetPreview,localAssetVersion,router]);
     const convex = useConvex();
     const glassNavigationRequest = useRef(0);
     const [glassNavigationError, setGlassNavigationError] = useState<string | null>(null);
     const pathname = usePathname();
     const searchParams = useSearchParams();
     const { openPanel: openGracePanel } = useGrace();
+    const graceCopy = useCopy("grace");
     const legacyRouteOverride = getLegacyProductRouteOverride(slug);
     const activeSlug = legacyRouteOverride ?? slug;
     const applicatorParam = searchParams.get("applicator");
@@ -1152,8 +1183,9 @@ export default function ProductDetailClient({
     }), [resolvePresentedVariantOption]);
     const variants = useMemo(() => {
         const rawVariants = (data?.variants as ProductVariant[] | undefined) ?? [];
-        return filterVariantsForProductGroup(data?.group, rawVariants).map(normalizeImportedCapColor);
-    }, [data?.group, data?.variants]);
+        const integrity = filterVariantsForProductGroup(data?.group, rawVariants).map(normalizeImportedCapColor);
+        return filterVariantsForGroupIntent(activeSlug, integrity);
+    }, [activeSlug, data?.group, data?.variants]);
     const isRollonGroup = /roll-?on/.test(activeSlug);
     const variantFromUrl = useMemo(
         () => selectedVariantParam
@@ -1295,10 +1327,11 @@ export default function ProductDetailClient({
     const capOptionThumbnails = useMemo(() => {
         const exactPhotos: Record<string, string> = cylinderCapThumbnails;
         return Object.fromEntries(variantsForApplicator.flatMap((variant) => {
-            const photo = variant.websiteSku ? exactPhotos[variant.websiteSku] : undefined;
+            const photo = bostonClosurePhoto(activeSlug, variant)
+                ?? (variant.websiteSku ? exactPhotos[variant.websiteSku] : undefined);
             return photo ? [[resolvePresentedVariantOption(variant).swatchName, photo]] : [];
         }));
-    }, [variantsForApplicator, resolvePresentedVariantOption]);
+    }, [activeSlug, variantsForApplicator, resolvePresentedVariantOption]);
 
     const primaryCapColor = primaryVariant && (primaryVariant.applicator ?? null) === (activeApplicator ?? null)
         ? resolvePresentedVariantOption(primaryVariant).swatchName
@@ -1390,12 +1423,15 @@ export default function ProductDetailClient({
             ?? (selectedVariant.websiteSku ? platesBySku[selectedVariant.websiteSku] : undefined)
             ?? null
         : null;
-    const selectedKitQuery = useQuery(
+    const selectedPilot = localAssetPreview && selectedVariant?.websiteSku ? localKits[selectedVariant.websiteSku] : undefined;
+    const publishedKitQuery = useQuery(
         api.productKits.forSku,
         selectedVariant?.graceSku || selectedVariant?.websiteSku
             ? { graceSku: selectedVariant.graceSku ?? null, websiteSku: selectedVariant.websiteSku ?? null }
             : "skip",
     );
+    const selectedKitQuery = (selectedVariant?.websiteSku ? localComponentKits[selectedVariant.websiteSku] : null) ?? publishedKitQuery;
+    const localComponentPreviewSku = selectedVariant?.websiteSku ? localComponentKits[selectedVariant.websiteSku]?.sku : undefined;
     const selectedKit = resolveSelectedSkuKit({
         websiteSku: selectedVariant?.websiteSku,
         graceSku: selectedVariant?.graceSku,
@@ -1491,6 +1527,15 @@ export default function ProductDetailClient({
         )),
     }), [group?.heroImageUrl, groupHasPlates, hasApproved3d, selectedKit, variants]);
     const isFocusedPurchasePdp = focusedPdpCapabilities.canRenderFocusedShell;
+    const hideAssembledLowerStack = shouldHideAssembledPdpLowerStack({
+        category: group?.category,
+        family: group?.family,
+        assemblyType: selectedVariant?.assemblyType,
+        applicator: selectedVariant?.applicator ?? activeApplicator,
+        itemName: selectedVariant?.itemName ?? group?.displayName,
+        websiteSku: selectedVariant?.websiteSku,
+        graceSku: selectedVariant?.graceSku,
+    });
     const hasCompleteVariantImagePicker =
         hasVariantImagePicker && variantImageTiles.length === variantsForApplicator.length;
 
@@ -1684,10 +1729,12 @@ export default function ProductDetailClient({
         if (!sku) return null;
         const params = new URLSearchParams();
         params.set("sku", sku);
+        if (localAssetPreview) params.set("assetPreview", "boston");
+        else if (localComponentPreview) params.set("assetPreview", "kits");
         if (qty > 1) params.set("qty", String(qty));
         if (safeFrom) params.set("from", safeFrom);
         return `/products/${activeSlug}?${params.toString()}`;
-    }, [activeSlug, qty, safeFrom]);
+    }, [activeSlug, qty, safeFrom, localAssetPreview, localComponentPreview]);
 
     const handleGuidedVariantSelection = useCallback((selection: { rollerVariant?: "metal" | "plastic"; capOption?: string; applicator?: string }) => {
         const nextApplicator = selection.applicator ?? (selection.rollerVariant
@@ -1729,7 +1776,10 @@ export default function ProductDetailClient({
                 const targetSlug = decodeURIComponent(target.pathname.slice("/products/".length));
                 const sibling = await convex.query(api.products.getProductGroup, { slug: targetSlug });
                 if (request !== glassNavigationRequest.current) return;
-                const candidates = filterVariantsForProductGroup(sibling?.group, (sibling?.variants ?? []) as ProductVariant[]).map(normalizeImportedCapColor);
+                const candidates = filterVariantsForGroupIntent(
+                    targetSlug,
+                    filterVariantsForProductGroup(sibling?.group, (sibling?.variants ?? []) as ProductVariant[]).map(normalizeImportedCapColor),
+                );
                 const resolved = resolveGlassSiblingVariant(candidates, {
                     applicator: selectedVariant.applicator,
                     capOption: resolvePresentedVariantOption(selectedVariant).swatchName,
@@ -1745,9 +1795,11 @@ export default function ProductDetailClient({
             }
         }
         if (safeFrom) target.searchParams.set("from", safeFrom);
+        if (localAssetPreview) target.searchParams.set("assetPreview", "boston");
+        else if (localComponentPreview) target.searchParams.set("assetPreview", "kits");
         if (qty > 1) target.searchParams.set("qty", String(qty));
         router.replace(`${target.pathname}${target.search}`, { scroll: false });
-    }, [convex, qty, router, safeFrom, selectedVariant, presentedVariantDeps, resolvePresentedVariantOption]);
+    }, [convex, qty, router, safeFrom, selectedVariant, presentedVariantDeps, resolvePresentedVariantOption, localAssetPreview, localComponentPreview]);
 
     useEffect(() => {
         const onPlate = (event: Event) => {
@@ -1984,10 +2036,10 @@ export default function ProductDetailClient({
                 <Navbar hideMobileSearch />
                 <div className="pt-[104px] sm:pt-[160px] lg:pt-[120px] max-w-[1440px] mx-auto px-4 sm:px-6 py-32 text-center">
                     <h1 className="font-serif text-4xl text-obsidian mb-4">Product currently unavailable</h1>
-                    <p className="text-slate mb-8 text-sm">We could not find a purchasable configuration for this product. Grace can help you find the right bottle.</p>
+                    <p className="text-slate mb-8 text-sm">{graceCopy("unpurchasableBody")}</p>
                     <div className="flex flex-wrap justify-center gap-3">
                         <button type="button" onClick={() => openGraceFromPdp()} className="inline-flex items-center px-6 py-3 bg-obsidian text-white uppercase text-xs font-bold tracking-wider hover:bg-muted-gold transition-colors">
-                            Ask Grace
+                            {graceCopy("ask")}
                         </button>
                         <Link href="/catalog" className="inline-flex items-center px-6 py-3 border border-obsidian text-obsidian uppercase text-xs font-bold tracking-wider hover:bg-obsidian hover:text-white transition-colors">
                             Browse Catalog
@@ -2083,6 +2135,8 @@ export default function ProductDetailClient({
         >
             <Navbar hideMobileSearch />
             <div className="pt-[104px] sm:pt-[160px] lg:pt-[120px]" data-mobile-pdp-frame="">
+                {Object.keys(localComponentKits).length > 0 && <aside className="mx-4 mb-4 rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-obsidian" data-asset-preview="components"><strong>Local component review</strong><p>Prepared component artwork is shown for the selected variants. These images have not been published.</p></aside>}
+                {localAssetPreview && <aside className="mx-4 mb-4 rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-obsidian" data-asset-preview="boston"><strong>{selectedPilot ? "30 mL Amber · interactive kit pilot" : "Boston Round · local image review"}</strong><p>{selectedPilot ? "Original glass/roller and cap layers are active after loading. Test Matte Black and Matte Silver with both roller materials and cap-on/off. Other finishes use their existing plates. Local review only." : selectedPlate?.localCandidate ? `Showing a prepared plate · ${selectedPlate.reviewStatus === 'approved' ? 'locally approved; awaiting release' : 'awaiting your image approval'}.` : 'Showing the current indexed image for this configuration.'} Kits and Sunburst heroes keep their current status.</p><a className="underline" href="/team/asset-ledger?preview=1&view=completion">Review the family contact sheet</a><button type="button" className="ml-4 min-h-11 underline" onClick={()=>router.refresh()}>Refresh latest images</button></aside>}
                 {glassNavigationError && <p role="alert" className="mx-4 mb-4 text-sm text-obsidian">{glassNavigationError}</p>}
                 {/* ── Breadcrumb ──────────────────────────────────────────────────── */}
                 <div className={isFocusedPurchasePdp ? "hidden md:block" : undefined}>
@@ -2102,6 +2156,8 @@ export default function ProductDetailClient({
                             selectedVariant={selectedVariant ?? null}
                             platesBySku={platesBySku}
                             selectedKitQuery={selectedKitQuery}
+                            localComponentPreviewSku={localComponentPreviewSku}
+                            localKits={localKits}
                             skuImageFallbacks={pdpSkuImageFallbacks}
                             displayName={customerDisplayName}
                             inStock={inStock}
@@ -2143,15 +2199,19 @@ export default function ProductDetailClient({
                     {isFocusedPurchasePdp && group.slug ? (
                         <div className="mb-8 lg:mb-14">
                             <ConfiguratorPdp
+                                applicator={activeApplicator}
+                                catalogFamily={group.family}
                                 currentSlug={group.slug}
                                 variantImageUrl={getPdpSkuFallbackImage(selectedVariant?.websiteSku) ?? usableProductImageUrl(selectedVariant?.imageUrl) ?? null}
                                 plateImage={selectedPlate?.image ?? null}
-                                plateImageCapOff={verifiedCapOffPhoto(selectedVariant?.websiteSku) ?? selectedPlate?.imageCapOff ?? null}
+                                plateImageCapOff={selectedPlate?.localCandidate ? selectedPlate.imageCapOff : verifiedCapOffPhoto(selectedVariant?.websiteSku) ?? selectedPlate?.imageCapOff ?? null}
                                 heightWithCap={selectedVariant?.heightWithCap ?? null}
                                 heightWithoutCap={selectedVariant?.heightWithoutCap ?? null}
                                 diameter={selectedVariant?.diameter ?? null}
                                 hasApproved3d={focusedPdpCapabilities.has3dMode}
                                 kitQuery={selectedKitQuery}
+                                localComponentPreviewSku={localComponentPreviewSku}
+                                localKitPilot={selectedPilot}
                                 selectedGraceSku={selectedVariant?.graceSku ?? null}
                                 groupTitle={productPresentation.kind === "bottle"
                                     ? `${group.family ?? ""} ${(group.capacity ?? "").split(" (")[0]}`.trim()
@@ -2515,7 +2575,7 @@ export default function ProductDetailClient({
                                                                     setSelectedCapComponentSku(item.websiteSku);
                                                                 }
                                                             }}
-                                                            title={item.graceSku ?? item.websiteSku}
+                                                            title={item.websiteSku}
                                                             className="flex shrink-0 flex-col items-center gap-1.5"
                                                         >
                                                             <span
@@ -2850,7 +2910,7 @@ export default function ProductDetailClient({
                                                                     setSelectedCapComponentSku(item.websiteSku);
                                                                 }
                                                             }}
-                                                            title={item.graceSku ?? item.websiteSku}
+                                                            title={item.websiteSku}
                                                             className="flex flex-col items-center gap-1.5 group/variant"
                                                         >
                                                             <span
@@ -3061,7 +3121,9 @@ export default function ProductDetailClient({
                 </section>
 
                 {/* Below md the mobile PDP folds these into compact disclosures
-                    under the configurator; desktop keeps the full sections. */}
+                    under the configurator; desktop keeps the full sections.
+                    Assembled bottle PDPs hide this stack until the SKS-style redesign (ASA-193). */}
+                {hideAssembledLowerStack ? null : (
                 <div className={isFocusedPurchasePdp ? "hidden md:block" : undefined} data-testid="pdp-desktop-secondary">
                 <PdpDiscoverySections
                     family={group.family}
@@ -3093,7 +3155,7 @@ export default function ProductDetailClient({
                                     <SpecRow label="Case Quantity" value={selectedVariant.caseQuantity ? `${selectedVariant.caseQuantity} units/case` : "Confirm before ordering"} />
                                     <SpecRow label="Capacity" value={selectedVariant.capacity} />
                                     <SpecRow label="Glass Color" value={selectedVariant.color} />
-                                    <SpecRow label="Applicator" value={selectedVariant.applicator} />
+                                    <SpecRow label="Applicator" value={selectedVariant.applicator ? displayApplicatorName(selectedVariant.applicator) : selectedVariant.applicator} />
                                     <SpecRow label="Ball Material" value={selectedVariant.ballMaterial} />
                                     <SpecRow label="Cap Style" value={selectedVariant.capStyle} />
                                     <SpecRow label="Cap Profile" value={selectedVariant.componentProfile || selectedVariant.capHeight} />
@@ -3133,7 +3195,7 @@ export default function ProductDetailClient({
                                     </div>
                                     <div className="rounded-sm border border-champagne/50 bg-white p-3">
                                         <p className="text-[10px] font-bold uppercase tracking-wider text-slate">Shipping</p>
-                                        <p className="mt-1 font-semibold text-obsidian">Free over $99</p>
+                                        <p className="mt-1 font-semibold text-obsidian">$50 order minimum</p>
                                     </div>
                                 </div>
                             </div>
@@ -3141,11 +3203,12 @@ export default function ProductDetailClient({
                     </section>
                 )}
                 </div>
+                )}
 
                 {/* ── Sanity Editorial Zone (feature strip, gallery, FAQ, rich desc) ── */}
-                <PdpEditorialZone blocks={resolvedPdpBlocks} />
+                {hideAssembledLowerStack ? null : <PdpEditorialZone blocks={resolvedPdpBlocks} />}
 
-                <PdpDiscoveryMatrixLink family={group.family} />
+                {hideAssembledLowerStack ? null : <PdpDiscoveryMatrixLink family={group.family} />}
 
                 {/* Footer spacer */}
                 <div className="h-32 bg-linen border-t border-champagne/30"></div>

@@ -8,7 +8,9 @@ import {
     executeKnowledgeTool,
 } from "@/lib/knowledge/toolRegistry";
 import type { GraceOpenAIToolName } from "@/lib/knowledge/toolSchemas";
+import { EMPTY_FILTERS, ROLLER_MATERIALS } from "@/lib/catalogFilters";
 import type { GraceRefineState } from "@/lib/grace/refineState";
+import { getShopCollection } from "@/lib/shopCollections";
 
 type PublicGraceToolCall = {
     authorizationName: GraceOpenAIToolName;
@@ -52,10 +54,10 @@ function assertSafeRefineState(value: unknown): asserts value is GraceRefineStat
         throw new Error("Invalid parameters for public Grace tool: refineState has an invalid type");
     }
     const allowedStateKeys = new Set(["filters", "sort", "view"]);
-    const allowedFilterKeys = new Set([
-        "category", "collection", "applicators", "families", "colors", "capacities",
-        "neckThreadSizes", "componentType", "priceMin", "priceMax", "search",
-    ]);
+    // Keep this allowlist derived from EMPTY_FILTERS so a catalog facet
+    // addition cannot 400 every searchCatalog call (the prior hardcoded list
+    // omitted rollerMaterials and shopCollection after the filter-system update).
+    const allowedFilterKeys = new Set(Object.keys(EMPTY_FILTERS));
     if (Object.keys(value).some((key) => !allowedStateKeys.has(key))
         || Object.keys(value.filters).some((key) => !allowedFilterKeys.has(key))) {
         throw new Error("Invalid parameters for public Grace tool: refineState contains undeclared fields");
@@ -76,11 +78,23 @@ function assertSafeRefineState(value: unknown): asserts value is GraceRefineStat
             throw new Error(`Invalid parameters for public Grace tool: refineState.filters.${key} is invalid`);
         }
     }
+    const rollerMaterials = filters.rollerMaterials;
+    if (rollerMaterials !== undefined) {
+        const allowedRollers = new Set<string>(ROLLER_MATERIALS);
+        if (!Array.isArray(rollerMaterials) || rollerMaterials.length > ROLLER_MATERIALS.length
+            || rollerMaterials.some((entry) => typeof entry !== "string" || !allowedRollers.has(entry))) {
+            throw new Error("Invalid parameters for public Grace tool: refineState.filters.rollerMaterials is invalid");
+        }
+    }
     for (const key of ["category", "collection", "componentType"]) {
         const entry = filters[key];
         if (entry !== null && (typeof entry !== "string" || entry.length > 200)) {
             throw new Error(`Invalid parameters for public Grace tool: refineState.filters.${key} is invalid`);
         }
+    }
+    if (filters.shopCollection !== undefined && filters.shopCollection !== null
+        && !getShopCollection(filters.shopCollection)) {
+        throw new Error("Invalid parameters for public Grace tool: refineState.filters.shopCollection is invalid");
     }
     if (typeof filters.search !== "string" || filters.search.length > 500) {
         throw new Error("Invalid parameters for public Grace tool: refineState.filters.search is invalid");

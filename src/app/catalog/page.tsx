@@ -1,23 +1,33 @@
 import type { Metadata } from "next";
+import { getLocale } from "next-intl/server";
+import { redirect } from "next/navigation";
 import CatalogClient, { type CatalogSearchResult } from "./CatalogClient";
 import Footer from "@/components/Footer";
 import { api } from "../../../convex/_generated/api";
-import { paramsToFilters } from "@/lib/catalogFilters";
+import { catalogBrowseRedirect, paramsToFilters } from "@/lib/catalogFilters";
 import { getCatalogConvexClient, searchCatalogServer } from "@/lib/catalogServer";
-import { SITE_URL } from "@/lib/seo";
+import { defaultLocale, isLocale, type AppLocale } from "@/i18n/config";
+import { buildHreflangAlternates } from "@/i18n/metadata";
+import { localizeHref } from "@/i18n/paths";
+import enMessages from "../../../messages/en.json";
+import esMessages from "../../../messages/es.json";
 
 const PAGE_SIZE = 24;
-const MAX_VISIBLE_LIMIT = 240;
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
-export const metadata: Metadata = {
-    title: { absolute: "Catalog — Wholesale Glass Bottles & Packaging | Best Bottles" },
-    description:
-        "Browse wholesale glass bottles, jars, sprayers, droppers, roll-ons, and packaging components by family, capacity, color, applicator, and neck finish.",
-    alternates: { canonical: `${SITE_URL}/catalog` },
-};
+export async function generateMetadata(): Promise<Metadata> {
+    const localeValue = await getLocale();
+    const locale: AppLocale = isLocale(localeValue) ? localeValue : defaultLocale;
+    const copy = locale === "es" ? esMessages.catalog : enMessages.catalog;
+    const path = locale === "es" ? "/es/catalog" : "/catalog";
+    return {
+        title: { absolute: copy.seoTitle },
+        description: copy.description,
+        alternates: buildHreflangAlternates(path),
+    };
+}
 
 function toURLSearchParams(input: Record<string, string | string[] | undefined>): URLSearchParams {
     const params = new URLSearchParams();
@@ -31,12 +41,6 @@ function toURLSearchParams(input: Record<string, string | string[] | undefined>)
     return params;
 }
 
-function clampVisibleLimit(rawLimit: string | null): number {
-    const parsed = Number(rawLimit);
-    if (!Number.isFinite(parsed) || parsed <= PAGE_SIZE) return PAGE_SIZE;
-    return Math.min(Math.ceil(parsed / PAGE_SIZE) * PAGE_SIZE, MAX_VISIBLE_LIMIT);
-}
-
 export default async function CatalogPage({
     searchParams,
 }: {
@@ -44,8 +48,13 @@ export default async function CatalogPage({
 }) {
     const resolvedSearchParams = await searchParams;
     const urlSearchParams = toURLSearchParams(resolvedSearchParams);
+    const browseRedirect = catalogBrowseRedirect(urlSearchParams);
+    if (browseRedirect) {
+        const localeValue = await getLocale();
+        const locale: AppLocale = isLocale(localeValue) ? localeValue : defaultLocale;
+        redirect(localizeHref(locale, browseRedirect));
+    }
     const initialState = paramsToFilters(urlSearchParams);
-    const initialLimit = clampVisibleLimit(urlSearchParams.get("limit"));
     const convex = getCatalogConvexClient();
 
     const [initialResult, initialTaxonomy] = await Promise.all([
@@ -53,7 +62,7 @@ export default async function CatalogPage({
             filters: initialState.filters,
             sort: initialState.sort,
             view: initialState.view,
-            limit: initialLimit,
+            limit: PAGE_SIZE,
             cursor: null,
         }) as Promise<CatalogSearchResult>,
         convex.query(api.products.getCatalogTaxonomy, {}),

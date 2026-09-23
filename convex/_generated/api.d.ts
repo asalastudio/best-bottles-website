@@ -14,6 +14,7 @@ import type * as backfillPhysicalSpecs from "../backfillPhysicalSpecs.js";
 import type * as backfillShopifyIds from "../backfillShopifyIds.js";
 import type * as backfillTrimColor from "../backfillTrimColor.js";
 import type * as backfillTrimColorFromDescription from "../backfillTrimColorFromDescription.js";
+import type * as catalogRestore from "../catalogRestore.js";
 import type * as catalogSync from "../catalogSync.js";
 import type * as componentUtils from "../componentUtils.js";
 import type * as crons from "../crons.js";
@@ -33,6 +34,7 @@ import type * as gracePrompt from "../gracePrompt.js";
 import type * as graceRateLimits from "../graceRateLimits.js";
 import type * as graceSearchUtils from "../graceSearchUtils.js";
 import type * as graceSessionTraces from "../graceSessionTraces.js";
+import type * as graceSessions from "../graceSessions.js";
 import type * as graceShortlists from "../graceShortlists.js";
 import type * as graceToolDefs from "../graceToolDefs.js";
 import type * as graceUploads from "../graceUploads.js";
@@ -45,12 +47,15 @@ import type * as materialRecipes from "../materialRecipes.js";
 import type * as matrix from "../matrix.js";
 import type * as measurements from "../measurements.js";
 import type * as migrations from "../migrations.js";
+import type * as nonBottleProductGroups from "../nonBottleProductGroups.js";
 import type * as observability from "../observability.js";
 import type * as paperDoll from "../paperDoll.js";
 import type * as patchFromMasterV83 from "../patchFromMasterV83.js";
 import type * as portal from "../portal.js";
 import type * as portalAuth from "../portalAuth.js";
+import type * as posthog from "../posthog.js";
 import type * as pricing from "../pricing.js";
+import type * as productGroupNames from "../productGroupNames.js";
 import type * as productGroups from "../productGroups.js";
 import type * as productGroupsRebuild from "../productGroupsRebuild.js";
 import type * as productKits from "../productKits.js";
@@ -60,6 +65,9 @@ import type * as repairCylinderPilot from "../repairCylinderPilot.js";
 import type * as resaleCertificates from "../resaleCertificates.js";
 import type * as seedProducts from "../seedProducts.js";
 import type * as shopifySync from "../shopifySync.js";
+import type * as staffProductEditRules from "../staffProductEditRules.js";
+import type * as staffProductEdits from "../staffProductEdits.js";
+import type * as staffProducts from "../staffProducts.js";
 import type * as writeToken from "../writeToken.js";
 
 import type {
@@ -75,6 +83,7 @@ declare const fullApi: ApiFromModules<{
   backfillShopifyIds: typeof backfillShopifyIds;
   backfillTrimColor: typeof backfillTrimColor;
   backfillTrimColorFromDescription: typeof backfillTrimColorFromDescription;
+  catalogRestore: typeof catalogRestore;
   catalogSync: typeof catalogSync;
   componentUtils: typeof componentUtils;
   crons: typeof crons;
@@ -94,6 +103,7 @@ declare const fullApi: ApiFromModules<{
   graceRateLimits: typeof graceRateLimits;
   graceSearchUtils: typeof graceSearchUtils;
   graceSessionTraces: typeof graceSessionTraces;
+  graceSessions: typeof graceSessions;
   graceShortlists: typeof graceShortlists;
   graceToolDefs: typeof graceToolDefs;
   graceUploads: typeof graceUploads;
@@ -106,12 +116,15 @@ declare const fullApi: ApiFromModules<{
   matrix: typeof matrix;
   measurements: typeof measurements;
   migrations: typeof migrations;
+  nonBottleProductGroups: typeof nonBottleProductGroups;
   observability: typeof observability;
   paperDoll: typeof paperDoll;
   patchFromMasterV83: typeof patchFromMasterV83;
   portal: typeof portal;
   portalAuth: typeof portalAuth;
+  posthog: typeof posthog;
   pricing: typeof pricing;
+  productGroupNames: typeof productGroupNames;
   productGroups: typeof productGroups;
   productGroupsRebuild: typeof productGroupsRebuild;
   productKits: typeof productKits;
@@ -121,6 +134,9 @@ declare const fullApi: ApiFromModules<{
   resaleCertificates: typeof resaleCertificates;
   seedProducts: typeof seedProducts;
   shopifySync: typeof shopifySync;
+  staffProductEditRules: typeof staffProductEditRules;
+  staffProductEdits: typeof staffProductEdits;
+  staffProducts: typeof staffProducts;
   writeToken: typeof writeToken;
 }>;
 
@@ -152,4 +168,5 @@ export declare const internal: FilterApi<
 
 export declare const components: {
   agent: import("@convex-dev/agent/_generated/component.js").ComponentApi<"agent">;
+  posthog: import("@posthog/convex/_generated/component.js").ComponentApi<"posthog">;
 };

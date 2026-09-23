@@ -228,7 +228,9 @@ describe("PdpDiscoverySections", () => {
 
         expect(markup).toContain("Compatible with this bottle");
         expect(markup).toContain("Roller17Blk");
-        expect(markup).toContain("CMP-ROLLER-17");
+        // BB-016 / D-06: the merchant SKU stays visible, the internal Grace code does not.
+        expect(markup).not.toContain("CMP-ROLLER-17");
+        expect(markup).not.toContain("CMP-ROLLER-QUOTE");
         expect(markup).toContain("roller.jpg");
         expect(markup).toContain("In Stock");
         expect(markup).toContain("$0.50 /ea");

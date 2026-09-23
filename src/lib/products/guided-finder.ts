@@ -1,10 +1,13 @@
 import { APPLICATOR_BUCKETS, APPLICATOR_NAV, FAMILY_ORDER, normalizeCapacityFilterValue, rollerMaterialMatchesProductValues, type RollerMaterial } from "@/lib/catalogFilters";
+import { catalogCapKind, type CatalogCapKind } from "@/lib/products/catalog-cap-photos";
+import { COMPONENT_CATEGORIES } from "@/lib/catalogFilters";
+import { resolveCatalogCardPurchaseVariant, type CatalogPurchaseVariant } from "@/lib/products/catalog-card-purchase";
 import type { CatalogSearchResultShape, CatalogSearchVariantPreviewRow } from "@/lib/catalogSearchFallback";
 import { isCheckoutReady } from "@/lib/checkout";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
-import { getProductCardVariantPreviews } from "@/lib/products/product-card-variant-previews";
+import { filterCatalogCardVariants, getCatalogCardVariantPreviews, getProductCardVariantPreviews, type ProductCardVariantPreview } from "@/lib/products/product-card-variant-previews";
 import type { BrowseContext } from "@/lib/products/focused-shopping";
-import { getCatalogHero, getCatalogHeroProductHref, type CatalogHero } from "@/lib/products/catalog-heroes";
+import { getCatalogHero, getCatalogHeroProductHref, resolveLiveCatalogCardHero, type CatalogHero } from "@/lib/products/catalog-heroes";
 
 type GuidedFinderAvailability = "in-stock" | "confirm-availability";
 
@@ -29,6 +32,23 @@ export type GuidedFinderProduct = {
     shopifySellable: boolean | null;
     checkoutReady: boolean;
     href: string;
+    /**
+     * The assembly this card sells, resolved by the SAME function the main
+     * catalogue grid uses. The family pages were a second catalogue with none
+     * of the first one's purchase affordances — no tier ladder, no quantity,
+     * no add — so a buyer who arrived through Bottle Families got a worse
+     * version of the same product. Sharing the resolver rather than rebuilding
+     * it is what stops the two drifting again.
+     */
+    purchase: CatalogPurchaseVariant | null;
+    /**
+     * Everything the catalogue card's preview needs to offer the fitment
+     * chooser — the cap/closure rail that lets a buyer see the same bottle
+     * with a different sprayer or roller before committing.
+     */
+    variantPreviews: ProductCardVariantPreview[];
+    capKind: CatalogCapKind | null;
+    slug: string;
 };
 
 export type GuidedFinderFamily = {
@@ -105,21 +125,38 @@ function imageFor(
     })[0]?.imageUrl ?? null;
 }
 
-export function buildGuidedFinderFamilies(result: CatalogSearchResultShape): GuidedFinderFamily[] {
+export function buildGuidedFinderFamilies(result: CatalogSearchResultShape, rollerMaterials: readonly string[] = []): GuidedFinderFamily[] {
     const rowsByGroupId = new Map(result.variantPreviewRows.map((row) => [row.groupId, row]));
+    const primarySkuFor = (groupId: string) => {
+        const row = result.primarySkus?.find((entry) => entry.groupId === groupId);
+        return row?.websiteSku ?? row?.graceSku ?? null;
+    };
     const grouped = new Map<string, GuidedFinderProduct[]>();
 
     for (const group of result.items) {
-        const variants = rowsByGroupId.get(group._id)?.variants ?? [];
-        const catalogHero = getCatalogHero(group.slug, variants);
-        const variant = variants.find((candidate) => candidate.websiteSku === catalogHero?.websiteSku) ?? variants[0] ?? null;
+        const variants = filterCatalogCardVariants(rowsByGroupId.get(group._id)?.variants ?? [], rollerMaterials);
+        const staticHero = getCatalogHero(group.slug, variants);
+        const liveCard = resolveLiveCatalogCardHero({
+            heroImageUrl: group.heroImageUrl,
+            staticHero,
+            variants,
+        });
+        const catalogHero = liveCard.catalogHero;
+        const variant = variants.find((candidate) => candidate.websiteSku === liveCard.picturedWebsiteSku) ?? variants[0] ?? null;
         const displayName = getCustomerFacingProductName({ group, variant, fallbackName: group.displayName }).displayName;
         const family = group.family ?? group.category;
+        const variantPreviews = getCatalogCardVariantPreviews(variants, {
+            primarySku: liveCard.picturedWebsiteSku ?? primarySkuFor(group._id) ?? undefined,
+            productTitle: displayName,
+            defaultImageUrl: liveCard.imageUrl ?? group.heroImageUrl,
+            groupColor: group.color,
+            productHref: `/products/${group.slug}`,
+        });
         const product: GuidedFinderProduct = {
             id: variant?.id ?? group._id,
             groupId: group._id,
             displayName,
-            imageUrl: imageFor(group, variant, displayName),
+            imageUrl: liveCard.imageUrl ?? imageFor(group, variant, displayName),
             catalogHero,
             family,
             capacity: capacityLabel(group.capacityMl, group.capacity),
@@ -139,7 +176,21 @@ export function buildGuidedFinderFamilies(result: CatalogSearchResultShape): Gui
                 shopifyVariantId: variant.shopifyVariantId,
                 shopifySellable: variant.shopifySellable,
             }) : false,
-            href: getCatalogHeroProductHref(catalogHero, `/products/${group.slug}`),
+            href: catalogHero
+                ? getCatalogHeroProductHref(catalogHero, `/products/${group.slug}`)
+                : `/products/${group.slug}${liveCard.picturedWebsiteSku ? `?sku=${encodeURIComponent(liveCard.picturedWebsiteSku)}` : ""}`,
+            variantPreviews,
+            // Components (caps, sprayers sold alone) have no cap chooser of
+            // their own — the thing being chosen IS the product.
+            capKind: COMPONENT_CATEGORIES.has(group.category)
+                ? null
+                : catalogCapKind(group.applicatorTypes ?? [], variantPreviews),
+            slug: group.slug,
+            purchase: resolveCatalogCardPurchaseVariant(variants, {
+                picturedSku: liveCard.picturedWebsiteSku ?? variant?.websiteSku ?? variant?.graceSku ?? null,
+                primarySku: primarySkuFor(group._id),
+                productTitle: displayName,
+            }),
         };
         const products = grouped.get(family) ?? [];
         products.push(product);

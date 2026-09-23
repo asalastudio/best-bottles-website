@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-09-23T02:11:08.296Z",
+  "total": 436,
+  "supportedGlassConfigurations": 432,
+  "standalonePlastics": 3,
+  "unresolvedAlias": 1,
+  "strictStructuralComplete": 372,
+  "strictAfterProposedStockOnly": 417,
+  "structuralMediaGaps": 15,
+  "current9mlMissingTubeKits": 44,
+  "current9mlMissingKit": 1,
+  "current25mlMissingExposedMechanism": 9,
+  "localNineRecovered": 9,
+  "availabilityNotApplied": 45,
+  "deployed": false,
+  "local25Recovered": 9,
+  "localRollerCandidates": 10,
+  "rollerSourceHold": 1
+}

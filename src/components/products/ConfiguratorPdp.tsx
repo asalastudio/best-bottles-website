@@ -1,5 +1,8 @@
 "use client";
 
+import { useRegion } from "@/components/RegionProvider";
+import { useCopy } from "@/i18n/useCopy";
+
 /**
  * ConfiguratorPdp — the guided configurator hero (design handoff
  * `design_handoff_configurator_pdp`, approved 2026-08-31).
@@ -32,11 +35,16 @@ import { useQuery } from "convex/react";
 import type { FunctionReturnType } from "convex/server";
 import { api } from "../../../convex/_generated/api";
 import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
-import { explodedKitFrame, orderExplodedOvercap } from "@/lib/products/kit-frame";
+import PdpPhotoCanvas from "./PdpPhotoCanvas";
+import { explodedKitFrame, orderExplodedOvercap, REMOVABLE_KIT_SLOTS, withDetachedCapOffsets } from "@/lib/products/kit-frame";
+import { capacityMlFromSlug, parseProductSlug } from "@/lib/products/group-variant-intent";
+import { pdpStageFrame, pdpStageTransformCss } from "@/lib/products/pdp-stage-frame";
 
 import { useGLTF } from "@react-three/drei";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
 import FocusedPdpLayout from "./FocusedPdpLayout";
+import type { LocalKitPilot } from "@/lib/products/local-kit-pilot";
+import { requiresAssembledClosure, allowsExplodedClosure } from "@/lib/products/closure-presentation";
 import PdpStageModeDock from "./PdpStageModeDock";
 import {
   getPdpStageModes,
@@ -47,9 +55,6 @@ import {
 import type { PdpAnalyticsDimension } from "@/lib/products/pdp-analytics";
 import { decodeImage } from "@/lib/paper-doll/decode-image";
 import { viewportIsMobile } from "@/lib/products/use-viewport-is-mobile";
-
-/** kit slots that come off when the customer lifts the cap; everything else is fitted */
-const REMOVABLE_SLOTS = new Set(["cap", "overcap"]);
 
 /**
  * Fitment swatches are photographs, not colour dots, wherever the closure has
@@ -134,7 +139,7 @@ export default function ConfiguratorPdp({
   onProductUrlChange,
   plateImage = null, plateImageCapOff = null, variantImageUrl = null,
   heightWithCap = null, heightWithoutCap = null, diameter = null, hasApproved3d = false, kitQuery, selectedGraceSku,
-  productPresentation,
+  productPresentation, applicator, catalogFamily, localKitPilot, localComponentPreviewSku,
 }: {
   currentSlug: string;
   /** paper-doll plate for the SELECTED SKU (productPlates index, served from Vercel Blob): the
@@ -153,6 +158,12 @@ export default function ConfiguratorPdp({
   kitQuery?: FunctionReturnType<typeof api.productKits.forSku>;
   selectedGraceSku?: string | null;
   productPresentation?: FocusedProductPresentation;
+  /** Selected catalog applicator; controls photographic view policy. */
+  applicator?: string | null;
+  catalogFamily?: string | null;
+  localKitPilot?: LocalKitPilot;
+  /** Exact SKU admitted by the server's loopback-only component review. */
+  localComponentPreviewSku?: string;
   groupTitle: string;          // "Elegant 60 ml"
   capacityLabel: string;       // "Clear glass"
   priceEach: number | null;    // committed group's unit price
@@ -210,6 +221,8 @@ export default function ConfiguratorPdp({
   /** One-line volume teaser under Add to Cart; the full table is below the fold. */
   volumePricing?: ReactNode;
 }) {
+    const { formatPrice } = useRegion();
+    const graceCopy = useCopy("grace");
   const isBottle = (productPresentation?.kind ?? "bottle") === "bottle";
   const fam = isBottle ? familyForSlugOrDerived(currentSlug) : null;
   const slugGlass: GlassPresetId = fam ? glassFromSlug(fam, currentSlug) : "clear";
@@ -222,6 +235,8 @@ export default function ConfiguratorPdp({
   };
   const rollerOffered = (variant: "metal" | "plastic") =>
     !rollerVariantsAvailable || rollerVariantsAvailable.includes(variant);
+  const assembledOnly = requiresAssembledClosure(applicator, websiteSku);
+  const allowExploded = allowsExplodedClosure(applicator, catalogFamily, websiteSku);
   const [withCap, setWithCap] = useState(false);
   // Photographs lead; the 3D viewer is opened by the customer, never for
   // them. Nothing about it -- its chunk, a WebGL context, the GLB -- is
@@ -238,14 +253,15 @@ export default function ConfiguratorPdp({
   // Exploded: the kit's parts slide apart along the axis by the offsets the
   // builder recorded (`exploded.dx/dy`, plate pixels). Only a kitted SKU has
   // them, so the mode is offered only when the stack is on screen.
-  const exploded = requestedStageMode === "exploded";
+  const exploded = allowExploded && requestedStageMode === "exploded";
   const [skuCopied, setSkuCopied] = useState(false);
   // URLs whose image element fired onError this session: the stage falls through to
   // the catalogue photograph instead of showing a broken image on white.
   const [brokenPlates, setBrokenPlates] = useState<ReadonlySet<string>>(() => new Set());
   // A pending next-SKU query never inherits a prior kit. The preferred mode
   // may survive loading, but only this SKU's stored kit can expose its layers.
-  const kit = resolveSelectedSkuKit({ websiteSku, graceSku: selectedGraceSku }, kitQuery);
+  const pilot = localKitPilot?.sku === websiteSku ? localKitPilot : undefined;
+  const kit = resolveSelectedSkuKit({ websiteSku, graceSku: selectedGraceSku }, pilot ? (withCap ? pilot.on : pilot.off) : kitQuery);
 
   // "Without cap" on a kitted SKU removes the cap PART. The cap-off PLATE swap
   // below still happens, but the kit stacks above the plate, so with the cap
@@ -255,15 +271,15 @@ export default function ConfiguratorPdp({
   const targetParts = useMemo(() => {
     if (!kit?.parts?.length) return null;
     const parts = orderExplodedOvercap([...kit.parts].sort((a, b) => a.zOrder - b.zOrder));
-    return withCap ? parts : parts.filter((p) => !REMOVABLE_SLOTS.has(p.slot));
-  }, [kit, withCap]);
+    return pilot || assembledOnly || withCap || exploded ? parts : withDetachedCapOffsets(parts);
+  }, [kit, withCap, assembledOnly, pilot, exploded]);
   // What is actually on screen: a fully decoded set owned by the current kit.
   // The synchronous SKU gate below prevents an old state value from painting
   // between render and effect cleanup during a variant transition.
   const [shownKit, setShownKit] = useState<{ sku: string; parts: NonNullable<typeof targetParts> } | null>(null);
   useEffect(() => {
     // Pending or no exact kit: never keep another SKU's layers on this stage.
-    if (kitQuery === undefined) { setShownKit(null); return; }
+    if (!pilot && kitQuery === undefined) { setShownKit(null); return; }
     // Resolved with no kit — a SKU that was never kitted. The stale stack would
     // otherwise keep showing the PREVIOUS bottle, which is worse than a flat plate.
     if (!kit?.sku || !targetParts?.length) { setShownKit(null); return; }
@@ -272,11 +288,11 @@ export default function ConfiguratorPdp({
       .then(() => { if (!cancelled) setShownKit({ sku: kit.sku, parts: targetParts }); })
       .catch(() => { if (!cancelled) setShownKit(null); });   // fall back to the plate
     return () => { cancelled = true; };
-  }, [kit, kitQuery, targetParts]);
+  }, [kit, kitQuery, targetParts, pilot]);
   // A published kit for this exact SKU is capability truth; decoding only
   // controls when its layers are safe to paint.
   const releasedKitAvailable = Boolean(kit?.parts?.length);
-  const kitReady = Boolean(kit?.sku && shownKit?.sku === kit.sku && shownKit.parts.length);
+  const kitReady = Boolean(kit?.sku && shownKit?.sku === kit.sku && shownKit.parts === targetParts && shownKit.parts.length);
   const kitParts = kitReady ? shownKit!.parts : null;
   const explodedFrame = explodedKitFrame(kitParts ?? []);
   const markPlateBroken = (url: string) => {
@@ -366,7 +382,7 @@ export default function ConfiguratorPdp({
     none: "capped", roller: "rollerCapped", reducer: "reducerCapped",
     sprayer: "sprayerCapped", pump: "pumpCapped",
   };
-  const kitHasCap = Boolean(kit?.parts?.some((p) => REMOVABLE_SLOTS.has(p.slot)));
+  const kitHasCap = Boolean(kit?.parts?.some((p) => REMOVABLE_KIT_SLOTS.has(p.slot)));
 
   // photographed fitment swatches for this closure at this neck (see COMPONENT_FAMILY)
   const componentFamilyId = neckSize && COMPONENT_FAMILY[activeBase]
@@ -400,7 +416,7 @@ export default function ConfiguratorPdp({
   // between colourways — it disables and says why (2026-09-02: on 5 ml
   // cobalt roll-on, 8 of 18 colourways have no cap-off plate yet, and the
   // control disappearing read as "the toggle is broken").
-  const canCap = CAPPABLE[activeBase] != null;
+  const canCap = !assembledOnly && CAPPABLE[activeBase] != null;
   const capToggleLive = canCap
     && ((show3d && Boolean(fam) && !fam?.photoOnly) || Boolean(plateImageCapOff) || kitHasCap);
   const closureFor = (base: ClosureBase) =>
@@ -411,10 +427,28 @@ export default function ConfiguratorPdp({
 
   /* ---------------------------------------------------------- the stage */
   // the plate for the selected SKU; cap-off plate when the cap is lifted
-  const wantedPlate = (!withCap && plateImageCapOff) ? plateImageCapOff : plateImage;
+  const capOff = !assembledOnly && !withCap;
+  // Exact recovered CAP OFF photographs stay on stage. Kit parking is only
+  // for colourways that have no cap-off raster. Keep those kits in BOTH cap
+  // states so toggling a cap cannot swap sources and resize the glass.
+  const preferKitPair = !assembledOnly && kitReady && !plateImageCapOff
+    && kitParts?.some(part => REMOVABLE_KIT_SLOTS.has(part.slot));
+  const wantedPlate = (capOff && plateImageCapOff) ? plateImageCapOff : plateImage;
   const plate = wantedPlate && !brokenPlates.has(wantedPlate) ? wantedPlate : null;
-  // Prefer exact assembled photographs; retain layers for exploded or missing states.
-  const showKitLayers = kitReady && (exploded || !plate || (!withCap && !plateImageCapOff));
+  const reviewingComponents = Boolean(localComponentPreviewSku && localComponentPreviewSku === kit?.sku);
+  const showKitLayers = kitReady && (reviewingComponents || Boolean(pilot) || exploded || preferKitPair || !plate);
+  const slugParts = parseProductSlug(currentSlug);
+  const capacityMl = slugParts?.capacityMl ?? capacityMlFromSlug(currentSlug);
+  const stageTransform = exploded
+    ? `translate(${explodedFrame.x}%, ${explodedFrame.y}%) scale(${explodedFrame.scale})`
+    : pdpStageTransformCss(pdpStageFrame({
+        family: catalogFamily,
+        capacityMl,
+        color: slugParts?.color,
+        view: capOff ? "capOff" : "assembled",
+        parts: showKitLayers ? kitParts : null,
+        hasCapOffPlate: Boolean(plateImageCapOff),
+      }));
   // A photo-only family (no approved geometry) never shows 3D; otherwise the
   // customer opens it. A plate outranks the catalogue photo: it is the exact
   // configuration, the photo is the group's hero.
@@ -438,7 +472,14 @@ export default function ConfiguratorPdp({
           </div>
         </div>
       ) : showPlate ? (
-        <div className="relative h-full w-full bg-white">
+        <div className="relative h-full w-full bg-white" data-paper-doll={showKitLayers ? "kit" : "plate"}>
+          {/* Capacity standard + CAP OFF fit from pdp-capacity-standards.json.
+              Circle 15 ml glass is locked smaller than 30 ml; a detached cap
+              may shrink the composition but never grow the bottle. */}
+          <PdpPhotoCanvas>
+          <div className="absolute inset-0 transition-transform duration-500 motion-reduce:transition-none"
+               style={{ transformOrigin: "0 0", transform: stageTransform }}
+               data-pdp-stage-frame="">
           {/* The flat plate: first paint, and what stays if the kit never arrives.
               Once the stack is up the plate is dropped entirely — leaving it
               mounted made every colourway change refetch a plate nobody sees. */}
@@ -452,8 +493,6 @@ export default function ConfiguratorPdp({
           {/* the kit, stacked in z-order. Every part was written on the plate's
               own canvas, so they need no positioning here -- they line up by
               construction, which is what keeps the bottle still. */}
-          <div className="absolute inset-0 transition-transform duration-500 motion-reduce:transition-none"
-               style={{ transformOrigin: "0 0", transform: exploded ? `translate(${explodedFrame.x}%, ${explodedFrame.y}%) scale(${explodedFrame.scale})` : "none" }}>
           {showKitLayers && kitParts?.map((part) => (
             // eslint-disable-next-line @next/next/no-img-element
             <img key={part.slot} src={part.image.url}
@@ -463,7 +502,7 @@ export default function ConfiguratorPdp({
                    zIndex: part.zOrder,
                    // offsets are plate pixels on a 1000x1100 canvas; the image IS the
                    // canvas here, so a percentage of its own box is the same distance
-                   transform: exploded
+                   transform: exploded || (capOff && REMOVABLE_KIT_SLOTS.has(part.slot))
                      ? `translate(${(part.exploded.dx / 10).toFixed(2)}%, ${(part.exploded.dy / 11).toFixed(2)}%)`
                      : "translate(0, 0)",
                  }}
@@ -472,11 +511,12 @@ export default function ConfiguratorPdp({
                             motion-reduce:transition-none motion-reduce:duration-0" />
           ))}
           </div>
+          </PdpPhotoCanvas>
         </div>
       ) : showPhoto ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img src={photoFallback!} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
-             className="h-full w-full object-cover" />
+             className="h-full w-full object-contain" />
       ) : showLive3d && fam ? (
         <Bottle3DViewer
           bodyId={fam.bodyForGlass?.[glass] ?? fam.bodyDefault}
@@ -557,13 +597,14 @@ export default function ConfiguratorPdp({
     hasApprovedImageOrPlate: Boolean(plate || photoFallback),
     hasApprovedGeometry: has3d,
     hasReleasedExplodedKit: releasedKitAvailable,
+    applicator, websiteSku,
     dimensions,
     photoOnly: fam?.photoOnly,
-    productFamily: displayName?.toLowerCase().includes("diva") ? "Diva" : groupTitle.split(" ")[0],
+    productFamily: catalogFamily ?? (displayName?.toLowerCase().includes("diva") ? "Diva" : groupTitle.split(" ")[0]),
   });
   const stageMode: PdpStageMode | null = showDimensions
     ? "dimensions"
-    : requestedStageMode === "exploded" && releasedKitAvailable
+    : exploded && releasedKitAvailable
       ? "exploded"
     : showLive3d
       ? "3d"
@@ -575,7 +616,7 @@ export default function ConfiguratorPdp({
     // Mode capabilities are primitive truth values; keeping the array out of
     // this dependency list prevents an effect on every render.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [requestedStageMode, has3d, releasedKitAvailable, plate, photoFallback, heightWithCap, heightWithoutCap, diameter, kitQuery]);
+  }, [requestedStageMode, has3d, releasedKitAvailable, plate, photoFallback, heightWithCap, heightWithoutCap, diameter, kitQuery, assembledOnly, allowExploded]);
   const stageToggle = (
     <PdpStageModeDock modes={modes} activeMode={stageMode} onModeChange={pickMode} />
   );
@@ -708,7 +749,7 @@ export default function ConfiguratorPdp({
     <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mt-3.5">
       {priceEach != null && (
         <p className="text-[28px] font-semibold text-obsidian tabular-nums leading-none">
-          ${priceEach.toFixed(2)}
+          {formatPrice(priceEach)}
           <span className="text-sm font-normal text-slate ml-1.5">/each</span>
         </p>
       )}
@@ -731,11 +772,11 @@ export default function ConfiguratorPdp({
     <div ref={ctaAnchorRef} className="mt-4" data-testid="pdp-focused-cta">
       <div className="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 text-sm">
         <span className="font-semibold tabular-nums text-obsidian">
-          {tierPrice != null ? `$${tierPrice.toFixed(2)} /ea` : "Price on request"}
+          {tierPrice != null ? `${formatPrice(tierPrice)} /ea` : "Price on request"}
         </span>
         {caseQty && tierPrice != null ? (
           <span className="text-slate">
-            ${ (tierPrice * caseQty).toFixed(2) } per case of {caseQty.toLocaleString()}
+            {formatPrice((tierPrice * caseQty))} per case of {caseQty.toLocaleString()}
           </span>
         ) : null}
       </div>
@@ -962,10 +1003,10 @@ export default function ConfiguratorPdp({
       {onAskGrace && (
         <p className="mt-6 px-4 flex items-center gap-2 text-sm text-slate">
           <ChatCircle className="h-4 w-4" />
-          Need help choosing?{" "}
+          {graceCopy("needHelpChoosing")}{" "}
           <button type="button" onClick={onAskGrace}
                   className="text-gold-dim underline underline-offset-2">
-            Ask Grace
+            {graceCopy("ask")}
           </button>
         </p>
       )}

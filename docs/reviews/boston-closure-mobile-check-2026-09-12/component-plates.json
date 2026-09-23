@@ -1,0 +1,84 @@
+{
+  "continueCursor": "074169b6642b394034c70b3e78636c3304d66943410f76ac93e69765976bde2d0cf8bd50ebfecedc9107a20c0f07b4097bc0b29d444517d5f3c7556d1f789e9768e303719f7428c64de306",
+  "isDone": true,
+  "page": [
+    {
+      "familyId": "roll-on-cap-20-400",
+      "graceSku": "CMP-ROC-MSLV-20400-T",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallMattSl/669f51822d01961ccdb3405ccacd6dc1890cc7c8f606c694c6027154ed3fcd05.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 2,
+      "sku": "CPRoll20-400TallMattSl",
+      "sourcePath": "20. Caps/1. 20-400 Roll on caps /Roll on caps/20. CPRoll20-400TallMattSl.psd",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallMattSl/a7c910418e0c1ec84894c1a05df23f2b0001bd680030eb484b76bcbdfb3e0d12.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "CPRoll20-400TallMattSl"
+    },
+    {
+      "familyId": "roll-on-cap-20-400",
+      "graceSku": "CMP-ROC-MBLK-20400-T",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallMattBlk/7ae7e31edc085a30281b76113956173f47d63cbfd0b81a43017d5f2e1f58cf68.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 2,
+      "sku": "CPRoll20-400TallMattBlk",
+      "sourcePath": "20. Caps/1. 20-400 Roll on caps /Roll on caps/25. CPRoll20-400TallMattBlk.psd",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallMattBlk/d31c537995112284f98fbaea368026163ede91e4a4300716a0ffa63ebecd218a.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "CPRoll20-400TallMattBlk"
+    },
+    {
+      "familyId": "roll-on-cap-20-400",
+      "graceSku": "CMP-ROC-SGLD-20400-T",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallShnGl/643f0f772f2600735db0fe74c5821fab965cd2fe7f09bfccd6afbbf39ed2129c.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 2,
+      "sku": "CPRoll20-400TallShnGl",
+      "sourcePath": "20. Caps/1. 20-400 Roll on caps /Roll on caps/22. CPRoll20-400TallShnGl.psd",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallShnGl/c338a2c2de3bcd1fe6d673bcf58a9384417768f0a90b902dfa54314ce88d183d.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "CPRoll20-400TallShnGl"
+    },
+    {
+      "familyId": "roll-on-cap-20-400",
+      "graceSku": "CMP-ROC-SSLV-20400-T",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallShnSl/544ca3213ec39350118a38ecdeeb323d4d001500a214c45b7e8e9299fb8850f5.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 2,
+      "sku": "CPRoll20-400TallShnSl",
+      "sourcePath": "20. Caps/1. 20-400 Roll on caps /Roll on caps/26. CPRoll20-400TallShnSl.psd",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallShnSl/1e13d7b77d8d5883a32d1a8aaac01a5bb2cc1d0ee2cc297ff096fd74e538dac9.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "CPRoll20-400TallShnSl"
+    },
+    {
+      "familyId": "roll-on-cap-20-400",
+      "graceSku": "CMP-ROC-SBLK-20400-T",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallShnBlk/d12b1d83aa27109928ea298d308e982181e9e0ab745f27ee7ddfb586e8b9e252.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 2,
+      "sku": "CPRoll20-400TallShnBlk",
+      "sourcePath": "20. Caps/1. 20-400 Roll on caps /Roll on caps/23. CPRoll20-400TallShnBlk.psd",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallShnBlk/a5b46fed559752601f7f693fd545be3ff7363ac530d7f57d0d6e1e085a7ab0db.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "CPRoll20-400TallShnBlk"
+    },
+    {
+      "familyId": "roll-on-cap-20-400",
+      "graceSku": "CMP-ROC-MGLD-20400-T",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallMattGl/ebbc57286f7f5904318af3d8bc46595217e2e4fcbaec72214065065f8ec9366f.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 2,
+      "sku": "CPRoll20-400TallMattGl",
+      "sourcePath": "20. Caps/1. 20-400 Roll on caps /Roll on caps/21. CPRoll20-400TallMattGl.psd",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallMattGl/1f4d7e6d329baba606a7a6b49cc2b224e7e2fc0a9caed8165c8950a292cf476a.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "CPRoll20-400TallMattGl"
+    }
+  ]
+}

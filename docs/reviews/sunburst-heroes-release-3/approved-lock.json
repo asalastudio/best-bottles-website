@@ -1,0 +1,506 @@
+{
+  "FunnelMetalGl": {
+    "sha256": "cd3bde0eb208e60222a65b14693a59bdb89b5eed6e41ccd25e1a490ac18e432a",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/FunnelMetalGl.cd3bde0eb208.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Tool",
+    "approvedAt": "2026-09-12T02:17:04.848Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "42533e4072baed5ba13c68a9eefbae00ab02b7999cc2732ac68e018001427127",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GB09BlackCapApp": {
+    "sha256": "3e70fd89b054a0d7a9292e19cd5875e55589c70b9042b9708877e41abc5492de",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GB09BlackCapApp.3e70fd89b054.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Vial",
+    "approvedAt": "2026-09-12T02:17:09.811Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "ef0a4e27861eb4a80e3286fa677f13df305444a6353b7d50e161184aa5d209c1",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GB15ApthBlue": {
+    "sha256": "fbf439e639162d02b7fb7b69e0511ab57e75eb855a09f295a69d3d58507b6925",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GB15ApthBlue.fbf439e63916.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Apothecary",
+    "approvedAt": "2026-09-12T02:17:12.690Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "db2ca82a7ccd7b4bad0c31000b8d39e18516392ef2bac1e2cd5b78e6d3a535dd",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GB1ozGenieCl": {
+    "sha256": "2f951f4bbc06b65903b85685da96abf06a7605dd27517b04454f74e00d2b2810",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GB1ozGenieCl.2f951f4bbc06.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Decorative",
+    "approvedAt": "2026-09-12T02:17:26.382Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "80c67dd52ba93f59b8b972aa1f029f56ee08347dca1168713bcdb6fac1087348",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GB3TPlGl": {
+    "sha256": "3f8144514e31abecc5664b2f63df9fa858f7584bec88ac1d42716a6a9ab3d878",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GB3TPlGl.3f8144514e31.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Decorative",
+    "approvedAt": "2026-09-12T02:17:25.831Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "358aeaaf70a48882ef2e2084fdbedf8f8582436a71e75d923c51ef50eec5db06",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBAtom10Blk": {
+    "sha256": "93294ef8c12759dd8c2906444c0e18209ae2f456259f4de01db0935c9f62f130",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBAtom10Blk.93294ef8c127.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Atomizer",
+    "approvedAt": "2026-09-12T02:17:42.094Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "5c2e4a045eb1a983f190315e5a248e69dd9df13a003385ce385c5046fb64a11a",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBAtom10Blu": {
+    "sha256": "0bdcb429bba6db90721bd1fb7e048539b5e78da84dd12404b5c52fe733825485",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBAtom10Blu.0bdcb429bba6.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Atomizer",
+    "approvedAt": "2026-09-12T02:17:42.605Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "4997592e9827f7eea2833a3b03536083bc2f1dca716aab6d5d90e54c751609e8",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBAtom10Gl": {
+    "sha256": "c34d6b3683299d39e1fd173a5ac228ffbd488511bf80e92d8b34cf6551308113",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBAtom10Gl.c34d6b368329.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Atomizer",
+    "approvedAt": "2026-09-12T02:17:43.415Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "e6059c9d0c99a56f9c762acb7ba4666398cf1691bd5c236ded26a6c6db9bc11e",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBAtom10Gr": {
+    "sha256": "f28979d78ba8671022042cfc40d476253f62303e655b5b6b7722b76588b0d2dd",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBAtom10Gr.f28979d78ba8.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Atomizer",
+    "approvedAt": "2026-09-12T02:17:43.965Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "d191428a55137984387bb3200ceb0bee3f3d3912b97948e50e1f0eac13c0f9d3",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBAtom10Lv": {
+    "sha256": "b10e2702abc8ce47590b6f7f3d78cf72ee0ebe67925d02177306c10c8dac1fbe",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBAtom10Lv.b10e2702abc8.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Atomizer",
+    "approvedAt": "2026-09-12T02:17:50.396Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "ed24857780e7325db95e18a87c379cfcd42be9d63c63721351056263eb3b05c3",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBAtom10Pnk": {
+    "sha256": "5afcb965c86fb65d693a648a6622fdb0e797619b36db9ac69036d3f36bd58f55",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBAtom10Pnk.5afcb965c86f.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Atomizer",
+    "approvedAt": "2026-09-12T02:17:49.825Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "bce25761537f4f54f8366fc730cf5bbd6eaed7970eaeea91edaed625314d19d6",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBAtom10Red": {
+    "sha256": "0d131e700a12f5dc7f5548d03400df880c1cebbbd20a77c7b64823b6700b5c4a",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBAtom10Red.0d131e700a12.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Atomizer",
+    "approvedAt": "2026-09-12T02:17:49.266Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "ce3108e4e3a837e057f18dc4c080ff4a383b597a1ab469c3954b908d287924df",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBAtom10SlStars": {
+    "sha256": "769d44f12dc85ee9e5dbc3b1b6c3c2e953f93a4a1684b6e242f82b74fec5a052",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBAtom10SlStars.769d44f12dc8.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Atomizer",
+    "approvedAt": "2026-09-12T02:17:48.666Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "ff6ffcab9274d5389064807776d61980f41c44b70cf7e74346f813f6cf92a9c1",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBAtom5Blk": {
+    "sha256": "309f38bf503bc4d7150aef1f967181090cc1060b19ed195f71b7311fea969e4e",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBAtom5Blk.309f38bf503b.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Atomizer",
+    "approvedAt": "2026-09-12T02:17:57.823Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "3b600a28ceb3993b2b4bc44c79e0c52b94e8d7610f7ec325945e7f412c0ea97e",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBAtom5BlkDot": {
+    "sha256": "0707c61450295c89a3fd4588b059718bf338140eabe33fba0dd437c30bb47393",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBAtom5BlkDot.0707c6145029.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Atomizer",
+    "approvedAt": "2026-09-12T02:17:58.582Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "3fd30f533eee35712683119c300182d30f34a6b28b46ba4c4db4a470a3ce1c04",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBAtom5Blu": {
+    "sha256": "5439ec02621911302f7e3c6a7dd9ea27d83fd89d2d2ed2c5dc793241a3da6aea",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBAtom5Blu.5439ec026219.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Atomizer",
+    "approvedAt": "2026-09-12T02:17:59.290Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "3f87150071d896849336f7c55d1f58715da6544b09eada9de92bca03e0ee8dbf",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBell10MtlRollBlkDot": {
+    "sha256": "cd58c576dfe1a3004f5f624520f4b5169da2dea63d5ef8cb05191f2ee7e54913",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBell10MtlRollBlkDot.cd58c576dfe1.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Bell",
+    "approvedAt": "2026-09-12T02:18:04.860Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "2d3e7993e79f694a35ef7472e2ca336a762837aef6957e49bb48d35dc39293c7",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBell10RollBlkDot": {
+    "sha256": "2551a792cd982de9fb9f68af5bf2149cfd1d777312e124dc185eac324b34a21e",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBell10RollBlkDot.2551a792cd98.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Bell",
+    "approvedAt": "2026-09-12T02:18:04.162Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "fb786648a09ec46a72d555de2a181a8c646c723f210467dbea50c1723cd651b7",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBell10SpryBlkSh": {
+    "sha256": "5f41d01e9a4c48ff6c1f390c24922ede04a35ebc168152a783e24916d187efbd",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBell10SpryBlkSh.5f41d01e9a4c.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Bell",
+    "approvedAt": "2026-09-12T02:18:03.533Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "7b6c85618c7c112e47d8503953581408781ad02e181a8e53a201d071cfc5313d",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBstn1ozBlkCapSht": {
+    "sha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstn1ozBlkCapSht.d1ca21c8a1dd.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:19:40.420Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "5a17952162234aed03bb269b00683d2208e93f7ed85dfc3ddc1508a51d80d013",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBstn1ozRollonShBlk": {
+    "sha256": "2a923f5d21f818efa63b1d46d1c8bde10fbdbe79cca0bc18b890481c0aa55244",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstn1ozRollonShBlk.2a923f5d21f8.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:19:41.296Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "cc0faf6f067a1a5c041da44b3ced5d0be0c1b7f4ed176b82d4d5a1293ba18801",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBstn2ozBlkCapSht": {
+    "sha256": "6f5506b0bf8f1583404b55a27c3c4dae8669afae9ac0fe0d68fb07540a483adc",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstn2ozBlkCapSht.6f5506b0bf8f.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:18:58.842Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "3394b07f25e03dc9b4194a7ddd254b1d4c9cc42659d7424587611fdf05bedc66",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBstn2ozBlkDrprShnGlTrim": {
+    "sha256": "28965cd6cec063c5aa47524add4cc3e7f4b2890d9597c18121450e77b9bc9317",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstn2ozBlkDrprShnGlTrim.28965cd6cec0.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:18:54.435Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "545c8006788267d454719c5ed8eff4e720c6f267af2220d3355dc9c8a30553ec",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBstn2ozMtlRollGl": {
+    "sha256": "cb4a33cbfcf38f4c9a659c09cd570cd1ba9c93923cf0db192bf1d10c30c57784",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstn2ozMtlRollGl.cb4a33cbfcf3.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:19:34.681Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "0c4af72c30448089abaa1ad4ddd3785fe041bc91742d6d7e5ed433b1df43d655",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBstnAmb15mlWhtDropperGlTrim": {
+    "sha256": "328611f750e9d8064545727a040da7e45f372730d3737ae41e082a79522f1891",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstnAmb15mlWhtDropperGlTrim.328611f750e9.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:19:33.420Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "c187b126126c81a5963706e052da006a7daaaa014a7c9dd8fdf1cf82fff48edd",
+      "card": "r5-boston-round-2026-09-10"
+    }
+  },
+  "GBBstnAmb1ozBlkCapSht": {
+    "sha256": "862068a58da1641185d127450dcd5496e19cca80f47f6d9f79f53cf96aba421e",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstnAmb1ozBlkCapSht.862068a58da1.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:19:31.707Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "6faf4b8b6c104d5eb38d820b1f584d191990956057490f7fe2dfce098dd78a87",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBstnAmb1ozMtlRollonMattSl": {
+    "sha256": "c8abdf0ac6d2471ae3e259798caeb96b64fdd00f2b62e619c14d86fa0412a4f8",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstnAmb1ozMtlRollonMattSl.c8abdf0ac6d2.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:19:31.121Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "6dd238ef1080e2ff288498e40ce4af8a4cf7991c8e91a32b19b5ec6f00375b16",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBstnAmb1ozRollonMattGl": {
+    "sha256": "1265d93107afd5b09c3c347726d83cf11d17b5430b068a6b9615ad81dc7e243d",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstnAmb1ozRollonMattGl.1265d93107af.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:19:55.451Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "ce480442d0b54ef99c7a27f315cc453b0bf7d6801f51647ff39000c9383087f0",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBstnAmb1ozWhtDropperShnGlTrim": {
+    "sha256": "7ca9ea270a2f451cc13dfa2eddce87b5dda54bc30cc8d27c99eb68e4037149ea",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstnAmb1ozWhtDropperShnGlTrim.7ca9ea270a2f.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:19:54.800Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "88c732f88850b4241bab816b0f25eca7214195f8453c07269cd7c985b495c4af",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBstnAmb2ozBlkCapSht": {
+    "sha256": "1ed776afb876d9efcc3ac0c9cef518802dc518d3a3b21d696e2db8e7295689ea",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstnAmb2ozBlkCapSht.1ed776afb876.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:19:54.201Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "0a049bf81a7e58bf50a78ae7b75794c4754f02639c43c142edc20b29663bb188",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBstnAmb2ozBlkDropperShnGlTrim": {
+    "sha256": "b8fb228d863ee858ce20e6e5b5a31ed38550b9574a6e4e13004b55c2527073b5",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstnAmb2ozBlkDropperShnGlTrim.b8fb228d863e.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:19:53.732Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "1a16a706700b4cd2c9fcabb12e899a50029648512795044ff5d8d5f32a8391ef",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBstnAmb2ozMtlRollonMattGl": {
+    "sha256": "45ed3646a6bea88e4f5b7088a0dd413cc77221829655743ec0e473a45cefa87a",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstnAmb2ozMtlRollonMattGl.45ed3646a6be.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:20:00.603Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "dcf1ad432414b5b3794b30fb720ad9e0f55fcb055fadf4dbc643a30a6d199ca4",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBstnAmb2ozRollonMattGl": {
+    "sha256": "5b727e39ed91c9b84bb50b110f0774725b25d0d02323db23a223e47f732ae1c4",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstnAmb2ozRollonMattGl.5b727e39ed91.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:20:01.343Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "28655e81cdcd096e13215d34b207391349599f5b98c0d893c06756d409a547a9",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBstnBlu15BlkCapSht": {
+    "sha256": "a79ca8c075a42407e25fde99196e8762e7634573ff10406d9c869b4e1e23f202",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstnBlu15BlkCapSht.a79ca8c075a4.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:20:02.142Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "62ea28710ce8c9287aa7b93a05fcace99a2d14467b5a7f22153090a470f8988f",
+      "card": "r5-boston-round-2026-09-10"
+    }
+  },
+  "GBBstnBlu15mlBlkDropperSlTrim": {
+    "sha256": "b70a912a72eab5190d1398d83b28b33136d03c8ad1041fe82ab0b263d9ddf139",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstnBlu15mlBlkDropperSlTrim.b70a912a72ea.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:20:02.682Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "ccca37eb05b38c7e9d915354d66f8f735bb201a83aadefb9652a7b450a339f3d",
+      "card": "r5-boston-round-2026-09-10"
+    }
+  },
+  "GBBstnBlu1ozBlkDropperShnGlTrim": {
+    "sha256": "036590a86c6e4929a61628aa6f3bb72fced37e2a3f5ec1722ab7a4ca9fedda77",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstnBlu1ozBlkDropperShnGlTrim.036590a86c6e.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:20:10.887Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "1ff1776e26351cd1494b4e3206ecc76eca2d905826c8695c1fb8ab792e5163ef",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBstnBlu1ozRollonMattBlk": {
+    "sha256": "538c7caa02ec82a0e8b331664979d10178da2bed6e1f5f1993ab38fdffc3d75f",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstnBlu1ozRollonMattBlk.538c7caa02ec.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:20:11.512Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "6b3453e11b51b798025b06209c0e1a0418d1600dc95626290997162fc73aa74d",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBstnBlu2ozBlkCapSht": {
+    "sha256": "289623853ece3f8a30aaebd41cef8c7f309912a91c02b78c13a12a69380ecc02",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstnBlu2ozBlkCapSht.289623853ece.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:20:12.114Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "2ca680e98a022db8a71487c502bfad2dde869abc5264f2c46e08a0a328fa19b7",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBstnBlu2ozBlkDropperShnGlTrim": {
+    "sha256": "650b424ffa6e448dedb5f0be7b14d5eb48a735ad6c71264f1fe4f76dae971bd7",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstnBlu2ozBlkDropperShnGlTrim.650b424ffa6e.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:20:12.955Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "18de2c402caddcd0c454f1a671da7b772a66399dd011efee93665d22c8c6501f",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBBstnBlu2ozRollonMattGl": {
+    "sha256": "4752f301b07b2a9befb4d45c9da7d785400e7ead2ada66cf9717a76ab34e85e5",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBBstnBlu2ozRollonMattGl.4752f301b07b.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Boston Round",
+    "approvedAt": "2026-09-12T02:20:17.006Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "908001ee2e5cbfda4c775c2129bb490f156cdb7d5e1690c9107eeefb4cec252c",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBCB12ozPear": {
+    "sha256": "39042325635d8d3c0c3bb484d77685345f86a491b4604d0ee9326e368f6d5226",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBCB12ozPear.39042325635d.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Decorative",
+    "approvedAt": "2026-09-12T02:17:24.613Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "f88ac19f77fcabf2dad4d147c0196cd2216f89805c3b21d44c25779a3708057c",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  },
+  "GBHeartFrst4TslRed": {
+    "sha256": "72085c2aa1830c424b586ce9dd5abab7179bafce0d7b2899c7854c62058259b5",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/locked/GBHeartFrst4TslRed.72085c2aa183.png",
+    "card": "r7-resettle-approved-2026-09-11",
+    "family": "Decorative",
+    "approvedAt": "2026-09-12T02:17:25.242Z",
+    "lockedAt": "2026-09-12T02:22:56.917846+00:00",
+    "supersedes": {
+      "sha256": "bfc64e86fae1e3092fc8b8e1f8d5be3b2dfa1c7cba30c84ed57cff2297fca505",
+      "card": "sunburst-all-heroes-latest-2026-09-09-r4"
+    }
+  }
+}

@@ -4,6 +4,7 @@ import { Suspense, type ReactNode } from "react";
 import { ClerkProvider } from "@clerk/nextjs";
 import ConvexClientProvider from "@/components/ConvexClientProvider";
 import { CartProvider } from "@/components/CartProvider";
+import { RegionProvider } from "@/components/RegionProvider";
 import {
     SanityMegaMenuProvider,
     type MegaMenuPanelsData,
@@ -13,7 +14,7 @@ import GraceProvider from "@/components/grace/GraceProvider";
 import GraceChatDrawer from "@/components/grace/GraceChatDrawer";
 import GraceLauncher from "@/components/grace/GraceLauncher";
 import GraceLayoutShell from "@/components/grace/GraceLayoutShell";
-import { MixpanelProvider } from "@/components/MixpanelProvider";
+import { AnalyticsProvider } from "@/components/AnalyticsProvider";
 import { CLERK_ENABLED } from "@/lib/clerk";
 import { clerkAppearance } from "@/lib/clerkAppearance";
 
@@ -23,18 +24,22 @@ import { clerkAppearance } from "@/lib/clerkAppearance";
 type AppProvidersProps = {
     children: ReactNode;
     megaMenuPanels: MegaMenuPanelsData | null | undefined;
+    initialMarketCode?: string | null;
 };
 
 function ProviderContent({
     children,
     withClerk,
     megaMenuPanels,
+    initialMarketCode,
 }: {
     children: ReactNode;
     withClerk: boolean;
     megaMenuPanels: MegaMenuPanelsData | null | undefined;
+    initialMarketCode?: string | null;
 }) {
     return (
+        <RegionProvider initialMarketCode={initialMarketCode}>
         <ConvexClientProvider withClerk={withClerk}>
             <CartProvider>
                 <Suspense
@@ -55,13 +60,14 @@ function ProviderContent({
                         <GraceLauncher />
                     </GraceProvider>
                 </Suspense>
-                <MixpanelProvider withClerk={withClerk} />
+                <AnalyticsProvider withClerk={withClerk} />
             </CartProvider>
         </ConvexClientProvider>
+        </RegionProvider>
     );
 }
 
-export default function AppProviders({ children, megaMenuPanels }: AppProvidersProps) {
+export default function AppProviders({ children, megaMenuPanels, initialMarketCode }: AppProvidersProps) {
     // withClerk must be constant for the whole session. When it was derived
     // from the pathname, navigating between a non-Clerk page and a Clerk page
     // (e.g. expanding the Grace drawer into /grace-workspace) changed the
@@ -76,7 +82,7 @@ export default function AppProviders({ children, megaMenuPanels }: AppProvidersP
             // SignIn, SignUp, UserButton, UserProfile — renders in the Best
             // Bottles design rather than Clerk's default third-party card.
             <ClerkProvider appearance={clerkAppearance}>
-                <ProviderContent withClerk={withClerk} megaMenuPanels={megaMenuPanels}>
+                <ProviderContent withClerk={withClerk} megaMenuPanels={megaMenuPanels} initialMarketCode={initialMarketCode}>
                     {children}
                 </ProviderContent>
             </ClerkProvider>
@@ -84,7 +90,7 @@ export default function AppProviders({ children, megaMenuPanels }: AppProvidersP
     }
 
     return (
-        <ProviderContent withClerk={false} megaMenuPanels={megaMenuPanels}>
+        <ProviderContent withClerk={false} megaMenuPanels={megaMenuPanels} initialMarketCode={initialMarketCode}>
             {children}
         </ProviderContent>
     );

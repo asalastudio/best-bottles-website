@@ -1,0 +1,109 @@
+bottle,family,capacityMl,neck,glass,variant,glassMm,diameterMm,skus,tag,glassPct,glassPx,governingSku,check
+23,Cream Jar,3,20mm,Standard,,18.0,35.0,2,S20,23.0,395,CJBlu3,Heights disagree: most common height used; fix the SKUs listed
+104,Vial,2,13-425,Standard,,22.0,16.0,1,S20,24.0,412,GBVialAmb1o5WhtCapSht,
+24,Cream Jar,5,27mm,Standard,,24.0,31.0,2,S20,25.0,429,CJAmb5mlBlkCap,Heights disagree: most common height used; fix the SKUs listed
+25,Cream Jar,5,PRESS-FIT,Standard,,24.0,31.0,1,S20,25.0,429,CJAmb5mlSlCap,
+26,Cream Jar,15,37mm,Standard,,26.0,55.0,2,S30,26.0,446,CJClr15Pnk,Heights disagree: most common height used; fix the SKUs listed
+106,Vial,3,13-425,Standard,,29.0,14.0,3,S30,27.5,472,GBVGreen2o4BlackCapSht,"Heights disagree: most common height used; fix the SKUs listed; all the odd ones are short-cap listings, possibly measured with the cap on"
+27,Cream Jar,20,40mm,Standard,,33.9,55.0,1,S30,30.0,515,CJWhite20,
+28,Cream Jar,30,45mm,Standard,,35.0,52.0,4,S40,30.5,523,CJAmb30BlkCap,
+103,Vial,1,Plug,Standard,,35.0,8.0,4,S40,30.5,523,GB1mlVBlk,
+105,Vial,2,8-425,Standard,,35.0,12.0,4,S40,30.5,523,GBVialClr2mlBlackCap,
+32,Cylinder,3.3,12mm,Standard,,37.0,14.0,2,S40,31.5,541,GBSpry3mlClBlk,
+29,Cream Jar,40,48/400,Standard,,42.0,56.0,4,S40,34.0,583,CJAmb40SlCap,
+50,Decorative,3,14.3mm,Standard,Tola,42.0,18.0,1,S40,34.0,583,GB3TPlGl,
+100,Teardrop,9,Ground,Standard,,43.0,20.0,3,S40,34.5,592,GBTRDPClear,
+56,Decorative,35,Ground,Standard,Eternal Flame,44.0,63.0,3,S40,35.0,601,GBEternalFlameClear,Heights disagree: most common height used; fix the SKUs listed
+91,Sleek,5,13-415,Standard,,45.0,17.0,36,S50,35.4,607,GBSleek5BlkSht,
+101,Tulip,5,13-415,Standard,,45.0,23.0,36,S50,35.4,607,GBTulipAmb5BlkSht,
+102,Tulip,6,13-415,Standard,,45.0,23.0,35,S50,35.4,607,GBTulip6BlkShSht,
+107,Vial,4,13-425,Standard,,45.0,15.0,12,S50,35.4,607,GBV1DrmBlackCapSht,
+51,Decorative,4,8mm,Frosted,Heart,46.0,32.0,2,S50,35.9,616,GBHeartFrst4KeyGld,
+82,Rectangle,9,Ground,Standard,,47.0,24.0,3,S50,36.4,625,GBSQSTBlue,
+53,Decorative,6,14.3mm,Standard,Tola,48.0,22.0,1,S50,36.9,633,GB6TPlGl,
+33,Cylinder,4,12mm,Standard,,49.0,14.0,2,S50,37.3,640,GBSpry4mlClBlk,
+83,Rectangle,10,13-415,Standard,,50.0,29.0,38,S50,37.8,649,GBRect10BlkSht,
+43,Cylinder,30,18-415,Standard,,50.8,42.0,2,S50,38.2,656,GBSpry1ozGl,Check height: GBSpry1ozGl is a slim 30 ml tube; 50.8 x 42 mm cannot be right
+30,Cream Jar,60,58mm,Standard,,51.0,59.0,1,S50,38.3,657,CreamJarFrstdPlsBlkPls2oz,
+31,Cream Jar,63,58mm,Standard,,51.0,59.0,1,S50,38.3,657,CJWhitePlsSlFr2oz,
+99,Square,15,13-415,Standard,,52.0,26.0,34,S50,38.8,666,GBSqr15BlkSht,
+8,Apothecary,118,Ground,Standard,Pear,52.2,27.4,1,S50,38.9,668,GBPearClear4ozStpr,"Check height: a 27.4 x 52.2 mm glass holds about 18 ml, not 118 ml"
+57,Decorative,355,Ground,Standard,Pear,52.2,92.0,1,S50,38.9,668,GBCB12ozPear,"wide glass: 69 % of card height across, check the cap fits beside it"
+34,Cylinder,5,13-415,Standard,,53.0,17.0,70,S50,39.2,673,GBCyl5BlkSht,"Heights disagree: most common height used; fix the SKUs listed; all the odd ones are short-cap listings, possibly measured with the cap on"
+35,Cylinder,5.5,13-415,Standard,,53.0,17.0,1,S50,39.2,673,GBCyl5SpryBlkMatt,
+12,Bell,10,13-415,Standard,,55.0,27.0,4,S60,40.2,690,GBBell10BlkShSht,
+73,Flair,15,13-415,Standard,,56.0,41.0,38,S60,40.7,698,GBFlair15BlkSht,
+89,Royal,13,13-415,Standard,,56.0,43.7,37,S60,40.7,698,GBRoyal13BlkShSht,
+78,Pillar,9,13-415,Standard,,57.0,21.0,3,S60,41.2,707,GBPillar9BlkShSht,
+79,Pillar,9,17-415,Standard,,57.0,21.0,1,S60,41.2,707,GBPillar9SpryBlkMatt,
+6,Apothecary,15,Ground,Standard,,58.0,30.0,1,S60,41.6,714,GB15ApthBlue,
+7,Apothecary,30,Ground,Standard,,58.0,37.0,3,S60,41.6,714,GB1ozApth,
+16,Circle,15,13-415,Standard,,60.0,50.0,36,S60,42.6,731,GBCrcl15BlkSht,
+63,Elegant,15,13-415,Frosted,,61.0,35.0,36,S60,43.1,740,GBElgFrst15BlkShSht,"Heights disagree: most common height used; fix the SKUs listed; all the odd ones are short-cap listings, possibly measured with the cap on"
+64,Elegant,15,13-415,Standard,,61.0,36.0,38,S60,43.1,740,GBElg15BlkSht,
+90,Royal,14,11mm,Standard,,64.0,43.7,1,S60,44.6,765,GBMtlCylGl,
+52,Decorative,5,17.52mm,Standard,Marble,66.0,26.0,1,S70,45.6,782,GBMtlMrblSmall,
+92,Sleek,8,13-415,Standard,,66.0,17.0,36,S70,45.6,782,GBSleek8BlkSht,
+13,Boston Round,15,18-400,Standard,,68.0,25.0,16,S70,46.7,801,GBBstn15BlkCapSht,
+81,Plastic Bottle,30,13-415,Standard,,68.0,23.7,3,S70,46.7,801,PB1ozClearcap,
+39,Cylinder,9,17-415,Standard,,70.0,20.0,87,S70,47.8,820,GBCyl9MtlRollBlkDot,
+85,Round,78,18-415,Frosted,,73.0,59.0,43,S70,49.6,851,GBRndFrst78AnSpBlk,Heights disagree: most common height used; fix the SKUs listed
+86,Round,78,18-415,Standard,,73.0,59.0,43,S70,49.6,851,GBRnd78AnSpBlk,Heights disagree: most common height used; fix the SKUs listed
+17,Circle,30,15-415,Standard,,74.0,60.0,7,S70,50.2,861,GBCrcl30GlCap,
+38,Cylinder,9,17-415,Frosted,,74.0,21.0,29,S70,50.2,861,GBCylFrst9MtlRollBlkDot,
+40,Cylinder,9,17-415,Swirl,,74.0,21.0,29,S70,50.2,861,GBCylSwrl9MtlRollBlkDot,
+65,Elegant,30,15-415,Frosted,,75.0,44.0,7,S80,50.7,870,GBElgFrst30GlCap,
+66,Elegant,30,15-415,Standard,,75.0,44.0,7,S80,50.7,870,GBElg30GlCap,
+10,Atomizer,5,13-415,Standard,,76.0,18.0,9,S80,51.3,880,GBAtom5Gl,
+55,Decorative,32,Ground,Standard,Genie,77.0,42.0,2,S80,51.9,891,GB1ozGenieCl,
+14,Boston Round,30,20-400,Standard,,78.0,33.0,53,S80,52.4,899,GBBstn1ozBlkDrp,"Heights disagree: most common height used; fix the SKUs listed; all the odd ones are short-cap listings, possibly measured with the cap on"
+108,Vial,9,18-400,Standard,,79.4,20.0,2,S80,53.1,911,GB09BlackCapApp,
+54,Decorative,10,17.52mm,Standard,Marble,80.0,28.0,1,S80,53.5,918,GBMtlMrblLarge,
+42,Cylinder,28,16mm,Standard,,81.0,31.0,4,S80,54.0,927,GBCyl1ozRollWht,
+59,Diva,30,18-415,Standard,,81.0,43.0,34,S80,54.0,927,GBDiva30AnSpBlk,
+11,Atomizer,10,17mm,Standard,,82.0,23.0,11,S80,54.5,935,GBAtom10Gl,
+41,Cylinder,25,18-415,Standard,,83.0,32.0,45,S80,55.1,946,LBCyl25LtnCu,Some SKUs blank: 30 SKUs on this glass have no height recorded
+87,Round,128,18-415,Frosted,,83.0,69.0,46,S80,55.1,946,GBRndFrst128AnSpBlk,Heights disagree: most common height used; fix the SKUs listed
+88,Round,128,18-415,Standard,,83.0,69.0,46,S80,55.1,946,GBRnd128AnSpBlk,Heights disagree: most common height used; fix the SKUs listed
+67,Elegant,60,18-415,Frosted,,86.0,54.0,47,S90,56.7,973,GBElgFrst60AnSpBlk,Heights disagree: most common height used; fix the SKUs listed
+68,Elegant,60,18-415,Standard,,86.0,54.0,47,S90,56.7,973,GBElg60AnSpBlk,Heights disagree: most common height used; fix the SKUs listed
+18,Circle,50,18-400,Frosted,,87.0,72.0,1,S90,57.2,982,GBCrclFrst50RdcrIvyLthr,
+19,Circle,50,18-415,Frosted,,87.0,72.0,44,S90,57.2,982,GBCrclFrst50AnSpBlk,
+20,Circle,50,18-415,Standard,,87.0,72.0,46,S90,57.2,982,GBCrcl50AnSpBlk,
+96,Slim,30,18-415,Standard,,87.0,30.0,37,S90,57.2,982,GBSlm30AnSpBlk,
+58,Diamond,60,18-415,Standard,,88.0,39.0,43,S90,57.7,990,GBDmnd2ozAnSpBlk,
+71,Empire,50,18-415,Standard,,88.0,37.0,47,S90,57.7,990,GBEmp50AnSpBlk,
+60,Diva,46,18-415,Frosted,,89.0,49.0,44,S90,58.2,999,GBDiva46DrpSl,Heights disagree: most common height used; fix the SKUs listed
+61,Diva,46,18-415,Standard,,89.0,49.0,55,S90,58.2,999,GBDiva46AnSpBlk,
+9,Atomizer,5,10mm,Standard,,92.0,15.0,3,S90,59.8,1026,GBAtom5SlimGl,
+80,Plastic Bottle,10,,Standard,,93.8,23.7,1,S90,60.6,1040,PB10SpryNat,
+1,Aluminum Bottle,65,20-410,Standard,,94.0,36.0,2,S90,60.7,1042,Alu65mlLotionPumpBlack,
+15,Boston Round,60,20-400,Standard,,94.0,39.0,55,S90,60.7,1042,GBBstn2ozBlkCapSht,
+44,Cylinder,50,16mm,Standard,,98.0,37.0,4,S100,62.6,1074,GBCyl50MtlRollBlk,
+93,Sleek,30,18-415,Standard,,98.0,28.0,38,S100,62.6,1074,GBSlk30AnSpBlk,
+84,Rectangle,10,13-415,Standard,Tall,101.0,17.0,36,S100,63.8,1095,GBTallRect10BlkSht,
+21,Circle,100,18-415,Frosted,,105.0,89.0,43,S110,65.2,1119,GBCrclFrst100AnSpBlk,
+22,Circle,100,18-415,Standard,,105.0,89.0,43,S110,65.2,1119,GBCrcl100AnSpBlk,
+36,Cylinder,9,13-415,Frosted,Tall,106.0,18.0,36,S110,65.5,1124,GBTallCylFrst9BlkSht,
+37,Cylinder,9,13-415,Standard,Tall,106.0,18.0,36,S110,65.5,1124,GBTallCyl9BlkSht,
+72,Empire,100,18-415,Standard,,107.0,46.0,44,S110,65.8,1129,GBEmp100AnSpBlk,
+69,Elegant,100,18-415,Frosted,,109.0,61.0,43,S110,66.3,1138,GBElgFrst100AnSpBlk,
+70,Elegant,100,18-415,Standard,,109.0,61.0,44,S110,66.3,1138,GBElg100AnSpBlk,
+62,Diva,100,18-415,Standard,,113.0,64.0,43,S110,67.2,1153,GBDiva100AnSpBlk,
+74,Grace,55,18-415,Standard,,113.0,52.0,43,S110,67.2,1153,GBGrce55AnSpBlk,
+3,Aluminum Bottle,120,20-410,Standard,,114.0,45.0,2,S110,67.4,1157,Alu120mlLotionPumpBlack,
+47,Cylinder,114,,Standard,,116.0,41.0,1,S120,67.8,1163,PbClear4ozFlpWh,
+45,Cylinder,50,18-415,Standard,,117.0,32.0,43,S120,68.0,1167,GBCyl50AnSpBlk,
+75,Lotion Bottle,3,snap,Standard,,118.0,33.0,1,S120,68.2,1170,LB3mlClear,"Check height: a 33 x 118 mm glass holds about 61 ml, not 3 ml"
+76,Lotion Bottle,30,,Standard,,118.0,33.0,2,S120,68.2,1170,LB1ozGl,
+77,Lotion Bottle,30,18mm,Standard,,118.0,33.0,1,S120,68.2,1170,LBMetalSilver1oz,
+97,Slim,50,18-415,Standard,,121.0,31.0,43,S120,68.8,1181,GBSlm50AnSpBlk,
+2,Aluminum Bottle,100,20-410,Standard,,127.8,50.0,1,S130,69.9,1199,Alu100mlSprayBlack,
+4,Aluminum Bottle,250,20-410,Standard,,127.8,60.0,1,S130,69.9,1199,Alu250mlSprayBlack,
+94,Sleek,50,18-415,Standard,,139.0,28.0,44,S140,71.7,1230,GBSlk50AnSpBlk,
+95,Sleek,100,18-415,Standard,,149.0,36.0,44,S150,73.2,1256,GBSlk100AnSpBlk,
+46,Cylinder,100,18-415,Standard,,154.0,35.0,43,S150,74.0,1270,GBCyl100AnSpBlk,
+98,Slim,100,18-415,Standard,,154.0,37.0,43,S150,74.0,1270,GBSlm100AnSpBlk,
+48,Cylinder,227,,Standard,,156.0,51.0,1,S160,74.3,1275,PbClear8ozFlpWh,
+5,Aluminum Bottle,500,20-410,Standard,,178.0,74.0,1,S180,77.6,1332,Alu500,
+49,Cylinder,454,,Standard,,195.0,62.0,1,S200,80.0,1373,PbNat16ozFlpWh,

@@ -1,0 +1,21 @@
+{
+ "appliedAt": "2026-09-18T23:45:39.165Z",
+ "deployment": "https://precise-raccoon-123.convex.cloud",
+ "evidence": "Shopify Admin API variant titles and prices",
+ "results": [
+  {
+   "websiteSku": "GBDiva46DrpCu",
+   "graceSku": "GB-DVA-CLR-46ML-DRP-CPR",
+   "variant": "gid://shopify/ProductVariant/53343643238692",
+   "before": "GB-DVA-FRS-46ML-DRP-CPR",
+   "outcome": "set"
+  },
+  {
+   "websiteSku": "GBDiva46DrpGl",
+   "graceSku": "GB-DVA-CLR-46ML-DRP-GLD",
+   "variant": "gid://shopify/ProductVariant/53343643205924",
+   "before": "GB-DVA-FRS-46ML-DRP-GLD",
+   "outcome": "set"
+  }
+ ]
+}

@@ -1,0 +1,675 @@
+{
+  "outputVersion": "premium-aligned-v4",
+  "sourceCollection": "round-premium-family-2026-09-07-v3",
+  "savedTargetByCapacityMl": {
+    "78": 42.0,
+    "128": 49.0
+  },
+  "targetMeasurement": "glass base to the top of the glass, where the closure meets it",
+  "shownAtReviewByCapacityMl": {
+    "78": 49.0,
+    "128": 54.5
+  },
+  "shownAtReviewWasAConstant": true,
+  "baselinePercent": 91,
+  "background": "#F5F3EF",
+  "transform": "uniform scale and translation only; per-SKU scale solved against the measured glass",
+  "worstMatteErasurePercent": 0.565,
+  "worstMatteErasureSku": "LBRnd128LtnMtGl",
+  "shoulderUnsolved": [],
+  "clipped": [],
+  "scope": "review candidates only; not published and not referenced by catalog-heroes.json",
+  "rows": [
+    {
+      "sku": "GBRnd78SpryCu",
+      "capacityMl": 78,
+      "sourceVersion": "premium-approved-v2",
+      "lane": "cap-right",
+      "targetShoulderPercent": 42.0,
+      "measuredShoulderPercent": 41.96,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 281.132,
+      "scaleRatioAppliedToV2": 1.022298,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 275.0,
+          "measuredPercent": 41.084
+        },
+        {
+          "stage": "corrected",
+          "radiusPx": 281.132,
+          "measuredPercent": 41.958
+        }
+      ],
+      "inkTop": 343,
+      "inkBottom": 1569,
+      "inkLeft": 247,
+      "inkRight": 1431,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 2,
+      "assemblyPixelsErasedPercent": 0.0
+    },
+    {
+      "sku": "GBRnd78AnSpGl",
+      "capacityMl": 78,
+      "sourceVersion": "premium-candidate-v1",
+      "lane": "bulb-left",
+      "targetShoulderPercent": 42.0,
+      "measuredShoulderPercent": 42.25,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 275.0,
+      "scaleRatioAppliedToV2": 1.0,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 275.0,
+          "measuredPercent": 42.249
+        },
+        {
+          "stage": "already on target",
+          "radiusPx": 275.0,
+          "measuredPercent": 42.249
+        }
+      ],
+      "inkTop": 332,
+      "inkBottom": 1570,
+      "inkLeft": 244,
+      "inkRight": 1290,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 295,
+      "assemblyPixelsErasedPercent": 0.067
+    },
+    {
+      "sku": "GBRnd78AnSpTslGl",
+      "capacityMl": 78,
+      "sourceVersion": "premium-candidate-v1",
+      "lane": "tassel-left",
+      "targetShoulderPercent": 42.0,
+      "measuredShoulderPercent": 41.78,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 275.0,
+      "scaleRatioAppliedToV2": 1.0,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 275.0,
+          "measuredPercent": 41.783
+        },
+        {
+          "stage": "already on target",
+          "radiusPx": 275.0,
+          "measuredPercent": 41.783
+        }
+      ],
+      "inkTop": 367,
+      "inkBottom": 1606,
+      "inkLeft": 86,
+      "inkRight": 1343,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 586,
+      "assemblyPixelsErasedPercent": 0.109
+    },
+    {
+      "sku": "LBRnd78LtnCu",
+      "capacityMl": 78,
+      "sourceVersion": "premium-candidate-v1",
+      "lane": "cap-right",
+      "targetShoulderPercent": 42.0,
+      "measuredShoulderPercent": 42.02,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 280.337,
+      "scaleRatioAppliedToV2": 1.019406,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 275.0,
+          "measuredPercent": 41.2
+        },
+        {
+          "stage": "corrected",
+          "radiusPx": 280.337,
+          "measuredPercent": 42.016
+        }
+      ],
+      "inkTop": 337,
+      "inkBottom": 1571,
+      "inkLeft": 246,
+      "inkRight": 1481,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 321,
+      "assemblyPixelsErasedPercent": 0.05
+    },
+    {
+      "sku": "GBRnd78RdcrShnGl",
+      "capacityMl": 78,
+      "sourceVersion": "premium-candidate-v1",
+      "lane": "center",
+      "targetShoulderPercent": 42.0,
+      "measuredShoulderPercent": 41.61,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 275.0,
+      "scaleRatioAppliedToV2": 1.0,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 275.0,
+          "measuredPercent": 41.608
+        },
+        {
+          "stage": "already on target",
+          "radiusPx": 275.0,
+          "measuredPercent": 41.608
+        }
+      ],
+      "inkTop": 67,
+      "inkBottom": 1572,
+      "inkLeft": 388,
+      "inkRight": 1463,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 21,
+      "assemblyPixelsErasedPercent": 0.009
+    },
+    {
+      "sku": "GBRndFrst78AnSpGl",
+      "capacityMl": 78,
+      "sourceVersion": "premium-candidate-v1",
+      "lane": "bulb-left",
+      "targetShoulderPercent": 42.0,
+      "measuredShoulderPercent": 41.78,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 275.0,
+      "scaleRatioAppliedToV2": 1.0,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 275.0,
+          "measuredPercent": 41.783
+        },
+        {
+          "stage": "already on target",
+          "radiusPx": 275.0,
+          "measuredPercent": 41.783
+        }
+      ],
+      "inkTop": 333,
+      "inkBottom": 1569,
+      "inkLeft": 245,
+      "inkRight": 1307,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 5,
+      "assemblyPixelsErasedPercent": 0.001
+    },
+    {
+      "sku": "GBRndFrst78AnSpTslGl",
+      "capacityMl": 78,
+      "sourceVersion": "premium-candidate-v1",
+      "lane": "tassel-left",
+      "targetShoulderPercent": 42.0,
+      "measuredShoulderPercent": 42.02,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 266.038,
+      "scaleRatioAppliedToV2": 0.967409,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 275.0,
+          "measuredPercent": 43.415
+        },
+        {
+          "stage": "corrected",
+          "radiusPx": 266.038,
+          "measuredPercent": 42.016
+        }
+      ],
+      "inkTop": 361,
+      "inkBottom": 1581,
+      "inkLeft": 165,
+      "inkRight": 1397,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 0,
+      "assemblyPixelsErasedPercent": 0.0
+    },
+    {
+      "sku": "LBRndFrst78LtnMtGl",
+      "capacityMl": 78,
+      "sourceVersion": "premium-candidate-v1",
+      "lane": "cap-right",
+      "targetShoulderPercent": 42.0,
+      "measuredShoulderPercent": 41.96,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 301.671,
+      "scaleRatioAppliedToV2": 1.096986,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 275.0,
+          "measuredPercent": 38.287
+        },
+        {
+          "stage": "corrected",
+          "radiusPx": 301.671,
+          "measuredPercent": 41.958
+        }
+      ],
+      "inkTop": 410,
+      "inkBottom": 1572,
+      "inkLeft": 225,
+      "inkRight": 1441,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 93,
+      "assemblyPixelsErasedPercent": 0.016
+    },
+    {
+      "sku": "GBRndFrst78SpryMtGl",
+      "capacityMl": 78,
+      "sourceVersion": "premium-candidate-v1",
+      "lane": "cap-right",
+      "targetShoulderPercent": 42.0,
+      "measuredShoulderPercent": 42.02,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 290.187,
+      "scaleRatioAppliedToV2": 1.055227,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 275.0,
+          "measuredPercent": 39.802
+        },
+        {
+          "stage": "corrected",
+          "radiusPx": 290.187,
+          "measuredPercent": 42.016
+        }
+      ],
+      "inkTop": 374,
+      "inkBottom": 1571,
+      "inkLeft": 248,
+      "inkRight": 1397,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 0,
+      "assemblyPixelsErasedPercent": 0.0
+    },
+    {
+      "sku": "GBRndFrst78RdcrShnGl",
+      "capacityMl": 78,
+      "sourceVersion": "premium-candidate-v1",
+      "lane": "center",
+      "targetShoulderPercent": 42.0,
+      "measuredShoulderPercent": 42.19,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 275.0,
+      "scaleRatioAppliedToV2": 1.0,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 275.0,
+          "measuredPercent": 42.191
+        },
+        {
+          "stage": "already on target",
+          "radiusPx": 275.0,
+          "measuredPercent": 42.191
+        }
+      ],
+      "inkTop": 596,
+      "inkBottom": 1582,
+      "inkLeft": 405,
+      "inkRight": 1147,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 0,
+      "assemblyPixelsErasedPercent": 0.0
+    },
+    {
+      "sku": "GBRnd128SpryMtGl",
+      "capacityMl": 128,
+      "sourceVersion": "premium-approved-v1",
+      "lane": "cap-right",
+      "targetShoulderPercent": 49.0,
+      "measuredShoulderPercent": 49.01,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 322.458,
+      "scaleRatioAppliedToV2": 1.020437,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 316.0,
+          "measuredPercent": 48.019
+        },
+        {
+          "stage": "corrected",
+          "radiusPx": 322.458,
+          "measuredPercent": 49.009
+        }
+      ],
+      "inkTop": 320,
+      "inkBottom": 1571,
+      "inkLeft": 216,
+      "inkRight": 1430,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 3,
+      "assemblyPixelsErasedPercent": 0.0
+    },
+    {
+      "sku": "GBRnd128AnSpGl",
+      "capacityMl": 128,
+      "sourceVersion": "premium-candidate-v1",
+      "lane": "bulb-left",
+      "targetShoulderPercent": 49.0,
+      "measuredShoulderPercent": 49.01,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 342.846,
+      "scaleRatioAppliedToV2": 1.084955,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 316.0,
+          "measuredPercent": 45.163
+        },
+        {
+          "stage": "corrected",
+          "radiusPx": 342.846,
+          "measuredPercent": 49.009
+        }
+      ],
+      "inkTop": 183,
+      "inkBottom": 1571,
+      "inkLeft": 242,
+      "inkRight": 1339,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 0,
+      "assemblyPixelsErasedPercent": 0.0
+    },
+    {
+      "sku": "GBRnd128AnSpTslIvyGl",
+      "capacityMl": 128,
+      "sourceVersion": "premium-candidate-v1",
+      "lane": "tassel-left",
+      "targetShoulderPercent": 49.0,
+      "measuredShoulderPercent": 48.78,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 305.76,
+      "scaleRatioAppliedToV2": 0.967595,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 316.0,
+          "measuredPercent": 50.641
+        },
+        {
+          "stage": "corrected",
+          "radiusPx": 305.76,
+          "measuredPercent": 48.776
+        }
+      ],
+      "inkTop": 275,
+      "inkBottom": 1574,
+      "inkLeft": 8,
+      "inkRight": 1537,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 30,
+      "assemblyPixelsErasedPercent": 0.004
+    },
+    {
+      "sku": "GBRnd128DrpGl",
+      "capacityMl": 128,
+      "sourceVersion": "premium-candidate-v1",
+      "lane": "center",
+      "targetShoulderPercent": 49.0,
+      "measuredShoulderPercent": 49.01,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 332.964,
+      "scaleRatioAppliedToV2": 1.053684,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 316.0,
+          "measuredPercent": 46.503
+        },
+        {
+          "stage": "corrected",
+          "radiusPx": 332.964,
+          "measuredPercent": 49.009
+        }
+      ],
+      "inkTop": 202,
+      "inkBottom": 1568,
+      "inkLeft": 343,
+      "inkRight": 1217,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 10,
+      "assemblyPixelsErasedPercent": 0.003
+    },
+    {
+      "sku": "LBRnd128LtnMtGl",
+      "capacityMl": 128,
+      "sourceVersion": "premium-candidate-v1",
+      "lane": "cap-right",
+      "targetShoulderPercent": 49.0,
+      "measuredShoulderPercent": 49.01,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 299.555,
+      "scaleRatioAppliedToV2": 0.947959,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 316.0,
+          "measuredPercent": 51.69
+        },
+        {
+          "stage": "corrected",
+          "radiusPx": 299.555,
+          "measuredPercent": 49.009
+        }
+      ],
+      "inkTop": 272,
+      "inkBottom": 1577,
+      "inkLeft": 236,
+      "inkRight": 1464,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 3145,
+      "assemblyPixelsErasedPercent": 0.565
+    },
+    {
+      "sku": "GBRnd128RdcrShnGl",
+      "capacityMl": 128,
+      "sourceVersion": "premium-candidate-v1",
+      "lane": "center",
+      "targetShoulderPercent": 49.0,
+      "measuredShoulderPercent": 49.01,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 324.427,
+      "scaleRatioAppliedToV2": 1.026667,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 316.0,
+          "measuredPercent": 47.727
+        },
+        {
+          "stage": "corrected",
+          "radiusPx": 324.427,
+          "measuredPercent": 49.009
+        }
+      ],
+      "inkTop": 463,
+      "inkBottom": 1567,
+      "inkLeft": 343,
+      "inkRight": 1205,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 0,
+      "assemblyPixelsErasedPercent": 0.0
+    },
+    {
+      "sku": "GBRndFrst128AnSpGl",
+      "capacityMl": 128,
+      "sourceVersion": "premium-candidate-v1",
+      "lane": "bulb-left",
+      "targetShoulderPercent": 49.0,
+      "measuredShoulderPercent": 49.01,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 320.9,
+      "scaleRatioAppliedToV2": 1.015507,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 316.0,
+          "measuredPercent": 48.252
+        },
+        {
+          "stage": "corrected",
+          "radiusPx": 320.9,
+          "measuredPercent": 49.009
+        }
+      ],
+      "inkTop": 185,
+      "inkBottom": 1587,
+      "inkLeft": 222,
+      "inkRight": 1506,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 1337,
+      "assemblyPixelsErasedPercent": 0.162
+    },
+    {
+      "sku": "GBRndFrst128DrpGl",
+      "capacityMl": 128,
+      "sourceVersion": "premium-candidate-v1",
+      "lane": "center",
+      "targetShoulderPercent": 49.0,
+      "measuredShoulderPercent": 48.95,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 304.359,
+      "scaleRatioAppliedToV2": 0.963162,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 316.0,
+          "measuredPercent": 50.874
+        },
+        {
+          "stage": "corrected",
+          "radiusPx": 304.359,
+          "measuredPercent": 48.951
+        }
+      ],
+      "inkTop": 290,
+      "inkBottom": 1569,
+      "inkLeft": 361,
+      "inkRight": 1178,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 10,
+      "assemblyPixelsErasedPercent": 0.002
+    },
+    {
+      "sku": "LBRndFrst128LtnMtGl",
+      "capacityMl": 128,
+      "sourceVersion": "premium-candidate-v1",
+      "lane": "cap-right",
+      "targetShoulderPercent": 49.0,
+      "measuredShoulderPercent": 49.01,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 305.76,
+      "scaleRatioAppliedToV2": 0.967595,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 316.0,
+          "measuredPercent": 50.641
+        },
+        {
+          "stage": "corrected",
+          "radiusPx": 305.76,
+          "measuredPercent": 49.009
+        }
+      ],
+      "inkTop": 294,
+      "inkBottom": 1585,
+      "inkLeft": 205,
+      "inkRight": 1438,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 221,
+      "assemblyPixelsErasedPercent": 0.031
+    },
+    {
+      "sku": "GBRndFrst128SpryMtGl",
+      "capacityMl": 128,
+      "sourceVersion": "premium-candidate-v1",
+      "lane": "cap-right",
+      "targetShoulderPercent": 49.0,
+      "measuredShoulderPercent": 48.95,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 316.0,
+      "scaleRatioAppliedToV2": 1.0,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 316.0,
+          "measuredPercent": 48.951
+        },
+        {
+          "stage": "already on target",
+          "radiusPx": 316.0,
+          "measuredPercent": 48.951
+        }
+      ],
+      "inkTop": 288,
+      "inkBottom": 1572,
+      "inkLeft": 227,
+      "inkRight": 1455,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 13,
+      "assemblyPixelsErasedPercent": 0.002
+    },
+    {
+      "sku": "GBRndFrst128RdcrShnGl",
+      "capacityMl": 128,
+      "sourceVersion": "premium-candidate-v1",
+      "lane": "center",
+      "targetShoulderPercent": 49.0,
+      "measuredShoulderPercent": 49.01,
+      "shoulderSolved": true,
+      "solvedRadiusPx": 323.636,
+      "scaleRatioAppliedToV2": 1.024166,
+      "solverTrace": [
+        {
+          "stage": "v2 placement",
+          "radiusPx": 316.0,
+          "measuredPercent": 47.844
+        },
+        {
+          "stage": "corrected",
+          "radiusPx": 323.636,
+          "measuredPercent": 49.009
+        }
+      ],
+      "inkTop": 473,
+      "inkBottom": 1574,
+      "inkLeft": 357,
+      "inkRight": 1204,
+      "baselineY": 1562,
+      "clippedAtCanvasEdge": false,
+      "assemblyPixelsErasedByMatte": 26,
+      "assemblyPixelsErasedPercent": 0.006
+    }
+  ]
+}

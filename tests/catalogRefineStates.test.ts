@@ -2,12 +2,14 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import FocusedFinderResults from "@/components/catalog/FocusedFinderResults";
 import { buildCatalogSearchArgs } from "@/lib/catalogSearchClient";
 import { CYLINDER_CATALOG_SURFACE } from "@/lib/catalogSurface";
 import { familyFinderHref } from "@/lib/products/focused-shopping";
 import type { GuidedFinderFamily } from "@/lib/products/guided-finder";
+vi.mock("@/components/CartProvider", () => ({ useCart: () => ({ addItems: () => {}, itemCount: 0, isCartHydrated: true }) }));
+vi.mock("convex/react", () => ({ useQuery: () => undefined }));
 
 describe("catalog Refine states", () => {
     const master = readFileSync(join(process.cwd(), "src/app/catalog/CatalogClient.tsx"), "utf8");
@@ -33,6 +35,10 @@ describe("catalog Refine states", () => {
             shopifySellable: true,
             checkoutReady: true,
             href: "/products/cylinder-9ml-rollon",
+            purchase: null,
+        variantPreviews: [],
+        capKind: null,
+        slug: "fixture-slug",
         }],
     }];
 
@@ -79,11 +85,11 @@ describe("catalog Refine states", () => {
     });
 
     it("keeps master history commits and emits canonical Cylinder finder URLs", () => {
-        expect(master).toContain("router.push(`${pathname}${qs ? `?${qs}` : \"\"}`");
+        expect(master).toContain('router.push(`${path}${qs ? `?${qs}` : ""}`');
         expect(familyFinderHref("Cylinder", {
             application: "rollon",
             capacities: ["9 ml"],
             rollerMaterials: ["metal"],
-        })).toBe("/catalog/cylinder?applicators=rollon&roller=metal&capacities=9+ml");
+        })).toBe("/catalog?category=Glass+Bottle&applicators=rollon&roller=metal&families=Cylinder&capacities=9+ml&sort=capacity-asc");
     });
 });

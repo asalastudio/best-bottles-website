@@ -1,0 +1,677 @@
+{
+  "rows": [
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "status": "candidate-needs-visual-review",
+      "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/3.  17-415 Bottles/10. Clear  (Capped)/12. GBCyl9RollBlkDot.psd",
+      "sourceSha256": "9a21cac689e6f50e5496bd879a63d44c355a88b02340bc5a90d42938a1ed1d49",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "transform": {
+        "scale": 0.849802371541502,
+        "x": 180.899209486166,
+        "y": -240.2490118577075
+      },
+      "baselineY": 1054,
+      "parts": [
+        {
+          "slot": "body",
+          "sourceLayer": 3,
+          "sourcePixelHash": "be8e3e16ec0e4f947d84cb68a6656e827fb265e30e87e5e445961566d721aabb",
+          "sha256": "2c2cecc8b688ac64d55a0d6032fc4dc4c4c170c48a26023fb684ddbbd53d0419",
+          "file": "GBCyl9RollBlkDot.body.png",
+          "bounds": {
+            "left": 392,
+            "top": 276,
+            "right": 607,
+            "bottom": 1054
+          },
+          "zOrder": 0,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "roller",
+          "sourceLayer": 2,
+          "sourcePixelHash": "b97dfd4c1c2ff294962a8062637b3236aeb23145d2e27f9aa4dba232536b1bd5",
+          "sha256": "9afcd82d9d0840527c42c9c5aee82e40fbd2b50b1c4686e27a3fb1b89243dcbe",
+          "file": "GBCyl9RollBlkDot.roller.png",
+          "bounds": {
+            "left": 406,
+            "top": 163,
+            "right": 564,
+            "bottom": 433
+          },
+          "zOrder": 1,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "sourceLayer": 4,
+          "sourcePixelHash": "0859f2f4e4ab0c55bcb4b1e0d85a140dab96ccec2cf5930c31de63f5f8aa92cc",
+          "sha256": "fa0d6c80c0fbd7771e27fe7e56f8def2f46d7e0dd8fe1239cf7b3ed80f06b679",
+          "file": "GBCyl9RollBlkDot.cap.png",
+          "bounds": {
+            "left": 395,
+            "top": 147,
+            "right": 599,
+            "bottom": 429
+          },
+          "zOrder": 2,
+          "derivation": "psd-layer"
+        }
+      ],
+      "excludedSourceLayers": [
+        1
+      ],
+      "note": "Excluded obsolete metal-roller repair layer. Kept exact plastic roller, glass and cap pixels. No uploads or index writes."
+    },
+    {
+      "sku": "GBCylBlu9RollPnkDot",
+      "status": "hold",
+      "reason": "Plastic roller layer is ambiguous"
+    },
+    {
+      "sku": "GBCylBlu9RollSlDot",
+      "status": "candidate-needs-visual-review",
+      "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/13. GBCylBlu9RollSlDot.psd",
+      "sourceSha256": "abc28d9eea86d0486f489d21cad3f7476c6e4a32f1f4d4bfd4dea6e49233ddfe",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "transform": {
+        "scale": 0.9071729957805907,
+        "x": 170.24261603375527,
+        "y": -323.99578059071723
+      },
+      "baselineY": 1054,
+      "parts": [
+        {
+          "slot": "body",
+          "sourceLayer": 2,
+          "sourcePixelHash": "a2d87e6a9502ee11026d38a28493deb43878f6bb57d21d1456ad10316d6a993b",
+          "sha256": "ab76aa14faef2368c06ba6ad2d7b12887ded4a4ccc31392b38769aa1bdf3607d",
+          "file": "GBCylBlu9RollSlDot.body.png",
+          "bounds": {
+            "left": 392,
+            "top": 234,
+            "right": 607,
+            "bottom": 1053
+          },
+          "zOrder": 0,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "roller",
+          "sourceLayer": 3,
+          "sourcePixelHash": "88c4fafbee04bd0c19dad7c0b3b529adfb79bfb4a5db7ef15cd0d962161e0a71",
+          "sha256": "176aca217153412d6a0b864e66e99110ee29f3ed0bb7e4ba2b35736544d8cf49",
+          "file": "GBCylBlu9RollSlDot.roller.png",
+          "bounds": {
+            "left": 399,
+            "top": 112,
+            "right": 568,
+            "bottom": 400
+          },
+          "zOrder": 1,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "sourceLayer": 4,
+          "sourcePixelHash": "a85b9cc02dcf32f515a628b776148ad6da10ab989ecfafabd2e84bca883345c9",
+          "sha256": "39297a1d983b427814c7b93d868a3e368e521f7246dd97ea5564d8bb8b78be43",
+          "file": "GBCylBlu9RollSlDot.cap.png",
+          "bounds": {
+            "left": 391,
+            "top": 82,
+            "right": 604,
+            "bottom": 384
+          },
+          "zOrder": 2,
+          "derivation": "psd-layer"
+        }
+      ],
+      "excludedSourceLayers": [
+        1
+      ],
+      "note": "Excluded obsolete metal-roller repair layer. Kept exact plastic roller, glass and cap pixels. No uploads or index writes."
+    },
+    {
+      "sku": "GBCyl9RollPnkDot",
+      "status": "candidate-needs-visual-review",
+      "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/3.  17-415 Bottles/10. Clear  (Capped)/14. GBCyl9RollPnkDot.psd",
+      "sourceSha256": "5b05f89802857c1a8e029529d453308e843977a22555b611737d2e5e17a5b9fd",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "transform": {
+        "scale": 0.849802371541502,
+        "x": 181.7490118577075,
+        "y": -235.1501976284585
+      },
+      "baselineY": 1054,
+      "parts": [
+        {
+          "slot": "body",
+          "sourceLayer": 3,
+          "sourcePixelHash": "a972f424cce44ab1287ce0ad525590b79f58bcc74fe502faa35365388cc0cb26",
+          "sha256": "60a232e01d2a1518150623558c85f11b8238045513e1b6b67c7a11bdb80f1c3d",
+          "file": "GBCyl9RollPnkDot.body.png",
+          "bounds": {
+            "left": 392,
+            "top": 276,
+            "right": 608,
+            "bottom": 1054
+          },
+          "zOrder": 0,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "roller",
+          "sourceLayer": 2,
+          "sourcePixelHash": "5ce06e5a5be22d5ab9b687660bc33ae0129ce66b660932331640d2dbde410696",
+          "sha256": "306d96ab5d6df5e9bb14146f314da4d96b243320fa959b2dcfe02959fae936d3",
+          "file": "GBCyl9RollPnkDot.roller.png",
+          "bounds": {
+            "left": 406,
+            "top": 163,
+            "right": 564,
+            "bottom": 433
+          },
+          "zOrder": 1,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "sourceLayer": 4,
+          "sourcePixelHash": "9939075c91a434aeee5ca59a0ea1ad852f8dcc4f42d3bb83e4cc535e5d908ee7",
+          "sha256": "028dd6f0d31acef4d2e95db311f044aa67aba97bc2c4f1683a2ac5ff16b2b78e",
+          "file": "GBCyl9RollPnkDot.cap.png",
+          "bounds": {
+            "left": 397,
+            "top": 144,
+            "right": 594,
+            "bottom": 426
+          },
+          "zOrder": 2,
+          "derivation": "psd-layer"
+        }
+      ],
+      "excludedSourceLayers": [
+        1
+      ],
+      "note": "Excluded obsolete metal-roller repair layer. Kept exact plastic roller, glass and cap pixels. No uploads or index writes."
+    },
+    {
+      "sku": "GBCylSwrl9RollShnSl",
+      "status": "candidate-needs-visual-review",
+      "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/3.  17-415 Bottles/8. Swirl 9ml (Capped)/17. GBCylSwrl9RollShnSl.psd",
+      "sourceSha256": "fd530ce9cf72a4b7fa525bfa2e4af60d178421c4a9a5a60c9c2fb96c3b44a4c1",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "transform": {
+        "scale": 0.8531746031746031,
+        "x": 182.61904761904765,
+        "y": -243.67857142857133
+      },
+      "baselineY": 1054,
+      "parts": [
+        {
+          "slot": "body",
+          "sourceLayer": 3,
+          "sourcePixelHash": "b3c926e04b969a56b49fab0d9144a617a85a2b6bd9280d7f7346fd586cd05c24",
+          "sha256": "3c2d9d6912ec56b558ac3ca73d293603f263bd0124497dea3bfd60b9feb1ec98",
+          "file": "GBCylSwrl9RollShnSl.body.png",
+          "bounds": {
+            "left": 393,
+            "top": 273,
+            "right": 608,
+            "bottom": 1054
+          },
+          "zOrder": 0,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "roller",
+          "sourceLayer": 2,
+          "sourcePixelHash": "ce6f79d71edc4cf1ca006ce899f284f3567d5aaedbd3ba722af080d2df517918",
+          "sha256": "115b0dfcda1579ea3d11c06912c88d97a58d7cc5e049e21bc298a25e007e856b",
+          "file": "GBCylSwrl9RollShnSl.roller.png",
+          "bounds": {
+            "left": 405,
+            "top": 169,
+            "right": 564,
+            "bottom": 440
+          },
+          "zOrder": 1,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "sourceLayer": 4,
+          "sourcePixelHash": "58122686870b4a73ae14d9e658806bea8d5ce9efe40507027e88ea2ec5f72de4",
+          "sha256": "26cd22318979f779ff2b2dcb9260fd9c080458c71b85c13e37bf0e35fc988637",
+          "file": "GBCylSwrl9RollShnSl.cap.png",
+          "bounds": {
+            "left": 403,
+            "top": 143,
+            "right": 597,
+            "bottom": 423
+          },
+          "zOrder": 2,
+          "derivation": "psd-layer"
+        }
+      ],
+      "excludedSourceLayers": [
+        1
+      ],
+      "note": "Excluded obsolete metal-roller repair layer. Kept exact plastic roller, glass and cap pixels. No uploads or index writes."
+    },
+    {
+      "sku": "GBCylSwrl9RollShnGl",
+      "status": "candidate-needs-visual-review",
+      "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/3.  17-415 Bottles/8. Swirl 9ml (Capped)/16. GBCylSwrl9RollShnGl.psd",
+      "sourceSha256": "b4209487aa6378a991f3717ba18e7dafccbaa90cc8350a5ae8c2661224dc99de",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "transform": {
+        "scale": 0.8531746031746031,
+        "x": 183.47222222222223,
+        "y": -242.82539682539687
+      },
+      "baselineY": 1054,
+      "parts": [
+        {
+          "slot": "body",
+          "sourceLayer": 3,
+          "sourcePixelHash": "0c85b8b781eace2c39a47aec55c679100b34cfc81cfbf18767ce5f716343c54a",
+          "sha256": "e95e76797457cd740594efc49bde16b1aedb12fa0a140d519bea3dce3ca1f8c5",
+          "file": "GBCylSwrl9RollShnGl.body.png",
+          "bounds": {
+            "left": 392,
+            "top": 273,
+            "right": 607,
+            "bottom": 1052
+          },
+          "zOrder": 0,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "roller",
+          "sourceLayer": 2,
+          "sourcePixelHash": "e6fe22d6364e3ef0a6f67bda9bbe72f3c93a7cdc37397f7728aa4501584b6b81",
+          "sha256": "3a7da3ac61a23dfa09fcb25c93237ba76286eb59b2064420b7e2fbb429aa8138",
+          "file": "GBCylSwrl9RollShnGl.roller.png",
+          "bounds": {
+            "left": 405,
+            "top": 169,
+            "right": 564,
+            "bottom": 440
+          },
+          "zOrder": 1,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "sourceLayer": 4,
+          "sourcePixelHash": "9be0b21899ef54f0ebc7bd8eeff1f2c8427bc1803598cab175d5dd02e36dbd36",
+          "sha256": "34487bddf855a420f84f831a81444b574cd315a0c05070519e288f7436bd75d7",
+          "file": "GBCylSwrl9RollShnGl.cap.png",
+          "bounds": {
+            "left": 402,
+            "top": 144,
+            "right": 598,
+            "bottom": 426
+          },
+          "zOrder": 2,
+          "derivation": "psd-layer"
+        }
+      ],
+      "excludedSourceLayers": [
+        1
+      ],
+      "note": "Excluded obsolete metal-roller repair layer. Kept exact plastic roller, glass and cap pixels. No uploads or index writes."
+    },
+    {
+      "sku": "GBCylSwrl9RollShBlk",
+      "status": "candidate-needs-visual-review",
+      "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/3.  17-415 Bottles/8. Swirl 9ml (Capped)/19. GBCylSwrl9RollShBlk.psd",
+      "sourceSha256": "16df92bf3b3f25f0941c3006511bc0b5045b31f19b21a0696b1939883730f9ca",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "transform": {
+        "scale": 0.8531746031746031,
+        "x": 182.61904761904765,
+        "y": -243.67857142857133
+      },
+      "baselineY": 1054,
+      "parts": [
+        {
+          "slot": "body",
+          "sourceLayer": 2,
+          "sourcePixelHash": "3eed4c555ef18299e7248869032511c2cd69f4b7ac55a192b2b234de599e7155",
+          "sha256": "9717cb92e6a11ba5bcf6466c3370bf4587866e6620dbe2b4182c108af45a7946",
+          "file": "GBCylSwrl9RollShBlk.body.png",
+          "bounds": {
+            "left": 393,
+            "top": 273,
+            "right": 608,
+            "bottom": 1054
+          },
+          "zOrder": 0,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "roller",
+          "sourceLayer": 3,
+          "sourcePixelHash": "ce6f79d71edc4cf1ca006ce899f284f3567d5aaedbd3ba722af080d2df517918",
+          "sha256": "115b0dfcda1579ea3d11c06912c88d97a58d7cc5e049e21bc298a25e007e856b",
+          "file": "GBCylSwrl9RollShBlk.roller.png",
+          "bounds": {
+            "left": 405,
+            "top": 169,
+            "right": 564,
+            "bottom": 440
+          },
+          "zOrder": 1,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "sourceLayer": 4,
+          "sourcePixelHash": "3a41a13e6c7eb7b1de5a6ce8111fd648ff33e1e2753178430001682b66a81aeb",
+          "sha256": "9b9e9b94fe23400d2ea617ec1c4835f5aa2c236982671fb1334dc75ade5d871f",
+          "file": "GBCylSwrl9RollShBlk.cap.png",
+          "bounds": {
+            "left": 403,
+            "top": 148,
+            "right": 600,
+            "bottom": 428
+          },
+          "zOrder": 2,
+          "derivation": "psd-layer"
+        }
+      ],
+      "excludedSourceLayers": [
+        1
+      ],
+      "note": "Excluded obsolete metal-roller repair layer. Kept exact plastic roller, glass and cap pixels. No uploads or index writes."
+    },
+    {
+      "sku": "GBCylSwrl9RollMattCu",
+      "status": "candidate-needs-visual-review",
+      "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/3.  17-415 Bottles/8. Swirl 9ml (Capped)/18. GBCylSwrl9RollMattCu.psd",
+      "sourceSha256": "3360e4d799b946b8038827158e6529544a619c577e6aae442520587c8d1ef4bf",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "transform": {
+        "scale": 0.8531746031746031,
+        "x": 180.0595238095238,
+        "y": -242.82539682539687
+      },
+      "baselineY": 1054,
+      "parts": [
+        {
+          "slot": "body",
+          "sourceLayer": 3,
+          "sourcePixelHash": "ec725eef98bd53245431b939f81cb05455502c8ce75d01977a6c4ac594d50ca3",
+          "sha256": "2f0ba4bcabda23ca313a20556f650209cd68926de8e51d268c280e5a07c68115",
+          "file": "GBCylSwrl9RollMattCu.body.png",
+          "bounds": {
+            "left": 393,
+            "top": 273,
+            "right": 607,
+            "bottom": 1052
+          },
+          "zOrder": 0,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "roller",
+          "sourceLayer": 2,
+          "sourcePixelHash": "5ce06e5a5be22d5ab9b687660bc33ae0129ce66b660932331640d2dbde410696",
+          "sha256": "8f64c0ebc1815e219305a6ba9e8c02c5139809f2313757a730cc6fa8c9d0f00e",
+          "file": "GBCylSwrl9RollMattCu.roller.png",
+          "bounds": {
+            "left": 405,
+            "top": 169,
+            "right": 564,
+            "bottom": 440
+          },
+          "zOrder": 1,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "sourceLayer": 4,
+          "sourcePixelHash": "886bedf17c612b2281c044d7277166b78804ba578ad6c8ca6085ce9c77014c10",
+          "sha256": "18ea80b640e47fdd51f2af1c850b0fb12c4b3d407d7c78db7561f661b5223f73",
+          "file": "GBCylSwrl9RollMattCu.cap.png",
+          "bounds": {
+            "left": 401,
+            "top": 144,
+            "right": 596,
+            "bottom": 422
+          },
+          "zOrder": 2,
+          "derivation": "psd-layer"
+        }
+      ],
+      "excludedSourceLayers": [
+        1
+      ],
+      "note": "Excluded obsolete metal-roller repair layer. Kept exact plastic roller, glass and cap pixels. No uploads or index writes."
+    },
+    {
+      "sku": "GBCylSwrl9RollMattSl",
+      "status": "candidate-needs-visual-review",
+      "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/3.  17-415 Bottles/8. Swirl 9ml (Capped)/11. GBCylSwrl9RollMattSl.psd",
+      "sourceSha256": "b3516572b4aaf50132516dd564ee5c3df2a199543a3e44cfcc9eb4a66cf88b1e",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "transform": {
+        "scale": 0.8531746031746031,
+        "x": 180.91269841269843,
+        "y": -241.11904761904748
+      },
+      "baselineY": 1054,
+      "parts": [
+        {
+          "slot": "body",
+          "sourceLayer": 2,
+          "sourcePixelHash": "8ba90e362d40dda92f9edda2a8ae1992c38cfce878136b4b5603ebc28be876fa",
+          "sha256": "3038f67be7db84c1abab61a8129042accff152ee310d9bfafc0830adba50c6a3",
+          "file": "GBCylSwrl9RollMattSl.body.png",
+          "bounds": {
+            "left": 392,
+            "top": 272,
+            "right": 607,
+            "bottom": 1054
+          },
+          "zOrder": 0,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "roller",
+          "sourceLayer": 1,
+          "sourcePixelHash": "f94e4abe2ec779a0fafdd04652962bf2e64833fbafb649f3f65c8a9f03b525a3",
+          "sha256": "1b5b4cf9e5aae934e435cc69e9b0837831e61e4113b2e8fe30ecc9fc690b3b61",
+          "file": "GBCylSwrl9RollMattSl.roller.png",
+          "bounds": {
+            "left": 405,
+            "top": 169,
+            "right": 564,
+            "bottom": 440
+          },
+          "zOrder": 1,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "sourceLayer": 3,
+          "sourcePixelHash": "9a9d47475ff7a285241756a1f116c8983ecb6959ccc8d5e4edb84143fe366b90",
+          "sha256": "d42656456e325a9bc14c68b865074251ce20c75ad348c4d365ed5c26eaa1ca88",
+          "file": "GBCylSwrl9RollMattSl.cap.png",
+          "bounds": {
+            "left": 400,
+            "top": 150,
+            "right": 591,
+            "bottom": 426
+          },
+          "zOrder": 2,
+          "derivation": "psd-layer"
+        }
+      ],
+      "excludedSourceLayers": [],
+      "note": "Excluded obsolete metal-roller repair layer. Kept exact plastic roller, glass and cap pixels. No uploads or index writes."
+    },
+    {
+      "sku": "GBCylSwrl9RollMattGl",
+      "status": "candidate-needs-visual-review",
+      "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/3.  17-415 Bottles/8. Swirl 9ml (Capped)/15. GBCylSwrl9RollMattGl.psd",
+      "sourceSha256": "87f10da693c8ac24cac118e0d0e4155caa58001a2384f21c8b0bd3906846ba8c",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "transform": {
+        "scale": 0.8531746031746031,
+        "x": 180.0595238095238,
+        "y": -242.82539682539687
+      },
+      "baselineY": 1054,
+      "parts": [
+        {
+          "slot": "body",
+          "sourceLayer": 3,
+          "sourcePixelHash": "058438e01beeb76a557f681cf8cbae0fb8ed3ba9ed6bae596458b3039edda86c",
+          "sha256": "c497b0fcbac5c6098901870dce6e617a93eb2b97cc5926c3c99bf6b16407441f",
+          "file": "GBCylSwrl9RollMattGl.body.png",
+          "bounds": {
+            "left": 392,
+            "top": 273,
+            "right": 607,
+            "bottom": 1052
+          },
+          "zOrder": 0,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "roller",
+          "sourceLayer": 2,
+          "sourcePixelHash": "79afdd3d46323d21bda60aaf242305a1561788a8c23a5f075bb75df185e18b2a",
+          "sha256": "4566ed195bde1346279b80bf3f2429bd445994d0e74760a7cacd2b2ac81470e4",
+          "file": "GBCylSwrl9RollMattGl.roller.png",
+          "bounds": {
+            "left": 407,
+            "top": 169,
+            "right": 564,
+            "bottom": 433
+          },
+          "zOrder": 1,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "sourceLayer": 4,
+          "sourcePixelHash": "d7a79806f84403493d9260936f3c090d3fa564842880faa0e7a67417abc58e60",
+          "sha256": "ab5247b9f932a4920ed20f0ae285d80d7ed83810ebfa437ece32d3904f774531",
+          "file": "GBCylSwrl9RollMattGl.cap.png",
+          "bounds": {
+            "left": 399,
+            "top": 145,
+            "right": 595,
+            "bottom": 423
+          },
+          "zOrder": 2,
+          "derivation": "psd-layer"
+        }
+      ],
+      "excludedSourceLayers": [
+        1
+      ],
+      "note": "Excluded obsolete metal-roller repair layer. Kept exact plastic roller, glass and cap pixels. No uploads or index writes."
+    },
+    {
+      "sku": "GBCylSwrl9RollWht",
+      "status": "candidate-needs-visual-review",
+      "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/3.  17-415 Bottles/8. Swirl 9ml (Capped)/20. GBCylSwrl9RollWht.psd",
+      "sourceSha256": "8e72e43f475881bc9761baac8acabab21692d9887bafaefd09c61b12d270dee3",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "transform": {
+        "scale": 0.8531746031746031,
+        "x": 179.20634920634922,
+        "y": -243.67857142857133
+      },
+      "baselineY": 1054,
+      "parts": [
+        {
+          "slot": "body",
+          "sourceLayer": 2,
+          "sourcePixelHash": "4036b182b61b1465e81fcd8c2f99b2e2ec780654973f5291920899bed4988dde",
+          "sha256": "9608abddf2fef942016aa18a2a241af36eb818db445d01aeaad9a70f3820676c",
+          "file": "GBCylSwrl9RollWht.body.png",
+          "bounds": {
+            "left": 392,
+            "top": 273,
+            "right": 607,
+            "bottom": 1054
+          },
+          "zOrder": 0,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "roller",
+          "sourceLayer": 3,
+          "sourcePixelHash": "f94e4abe2ec779a0fafdd04652962bf2e64833fbafb649f3f65c8a9f03b525a3",
+          "sha256": "1b5b4cf9e5aae934e435cc69e9b0837831e61e4113b2e8fe30ecc9fc690b3b61",
+          "file": "GBCylSwrl9RollWht.roller.png",
+          "bounds": {
+            "left": 405,
+            "top": 169,
+            "right": 564,
+            "bottom": 440
+          },
+          "zOrder": 1,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "sourceLayer": 4,
+          "sourcePixelHash": "a168da030363f0cc1caeebb44850e47f851e61c5524ad3f25f4050006f2636bc",
+          "sha256": "6c164a0cc6317f0a05fa6645980ccd316fb9c0588ad2a38e45f20629b54c6397",
+          "file": "GBCylSwrl9RollWht.cap.png",
+          "bounds": {
+            "left": 397,
+            "top": 132,
+            "right": 601,
+            "bottom": 426
+          },
+          "zOrder": 2,
+          "derivation": "psd-layer"
+        }
+      ],
+      "excludedSourceLayers": [
+        1
+      ],
+      "note": "Excluded obsolete metal-roller repair layer. Kept exact plastic roller, glass and cap pixels. No uploads or index writes."
+    }
+  ]
+}

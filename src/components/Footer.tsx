@@ -1,7 +1,8 @@
 "use client";
 
-import { useCallback, useState } from "react";
-import Link from "next/link";
+import { useCallback, useMemo, useState } from "react";
+import BrandWordmark from "./BrandWordmark";
+import LocaleLink from "./LocaleLink";
 import { useMutation } from "convex/react";
 import {
     ArrowRight,
@@ -14,50 +15,50 @@ import {
     Truck,
 } from "@phosphor-icons/react";
 import { api } from "../../convex/_generated/api";
+import { useCopy } from "@/i18n/useCopy";
 
 const FOOTER_GROUPS = [
     {
-        title: "Shop",
+        titleKey: "shop",
         links: [
-            ["All Bottles", "/catalog?category=Glass+Bottle"],
-            ["Bottle Families", "/catalog?sort=featured"],
-            ["Cylinder", "/catalog/cylinder"],
-            ["Closures & Applicators", "/catalog?category=Component"],
-            ["Request a Quote", "/request-quote"],
+            ["allBottles", "/catalog?category=Glass+Bottle"],
+            ["bottleFamilies", "/catalog?sort=featured"],
+            ["cylinder", "/catalog/cylinder"],
+            ["closuresApplicators", "/catalog?category=Component"],
         ],
     },
     {
-        title: "Resources",
+        titleKey: "resources",
         links: [
-            ["Fitment Guide", "/resources"],
-            ["Build Your Bottle", "/matrix"],
-            ["Packaging Insights", "/blog"],
-            ["Shipping & Returns", "/shipping-returns"],
-            ["Help Me Choose", "/#find-your-bottle"],
-            ["Talk with Grace", "/#find-your-bottle"],
+            ["fitmentGuide", "/resources"],
+            ["buildYourBottle", "/matrix"],
+            ["packagingInsights", "/blog"],
+            ["shippingReturns", "/shipping-returns"],
+            ["helpMeChoose", "/#find-your-bottle"],
+            ["talkWithGrace", "/#find-your-bottle"],
         ],
     },
     {
-        title: "Company",
+        titleKey: "company",
         links: [
-            ["Our Story", "/about"],
-            ["Nemat International", "https://www.nematinternational.com"],
-            ["Contact", "/contact"],
-            ["Wholesale Inquiry", "/request-quote"],
+            ["ourStory", "/about"],
+            ["contact", "/contact"],
+            ["wholesaleInquiry", "/request-quote"],
         ],
     },
 ] as const;
 
 const SERVICE_ITEMS = [
-    { title: "Free Shipping Over $99", detail: "Across eligible U.S. orders", icon: Truck },
-    { title: "Fitment Verified", detail: "Compatibility checked", icon: ShieldCheck },
-    { title: "Packaging Guidance", detail: "Ask Grace without leaving the page", icon: ChatCircle },
+    { titleKey: "orderMinimum", detailKey: "orderMinimumDetail", icon: Truck },
+    { titleKey: "fitmentVerified", detailKey: "fitmentVerifiedDetail", icon: ShieldCheck },
+    { titleKey: "packagingGuidance", detailKey: "packagingGuidanceDetail", icon: ChatCircle },
 ] as const;
 
 export default function Footer() {
     const submitForm = useMutation(api.forms.submit);
     const [email, setEmail] = useState("");
     const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+    const t = useCopy("footer");
 
     const handleSubscribe = useCallback(async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -76,22 +77,22 @@ export default function Footer() {
         }
     }, [email, status, submitForm]);
 
-    const socialLinks = [
+    const socialLinks = useMemo(() => [
         { label: "Instagram", href: "https://www.instagram.com/nematinternational/", icon: InstagramLogo },
         { label: "Facebook", href: "https://www.facebook.com/NematInternational", icon: FacebookLogo },
         { label: "LinkedIn", href: "https://www.linkedin.com/company/nematinternational/", icon: LinkedinLogo },
-    ] as const;
+    ] as const, []);
 
     return (
-        <footer className="bg-obsidian text-bone/68 pb-[calc(2rem+var(--mobile-tab-bar-clearance))] xl:pb-8">
+        <footer className="bg-[#0f0f10] text-bone/68 pb-[calc(2rem+var(--mobile-tab-bar-clearance))] xl:pb-8">
             <div className="border-b border-white/12">
                 <div className="mx-auto grid max-w-[1440px] md:grid-cols-3">
                     {SERVICE_ITEMS.map((item) => (
-                        <div key={item.title} className="flex items-center gap-4 border-b border-white/12 px-5 py-5 last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0 lg:px-10">
+                        <div key={item.titleKey} className="flex items-center gap-4 border-b border-white/12 px-5 py-5 last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0 lg:px-10">
                             <item.icon size={21} weight="light" className="shrink-0 text-muted-gold" />
                             <div>
-                                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white">{item.title}</p>
-                                <p className="mt-1 text-[10px] text-white/48">{item.detail}</p>
+                                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white">{t(item.titleKey)}</p>
+                                <p className="mt-1 text-[10px] text-white/48">{t(item.detailKey)}</p>
                             </div>
                         </div>
                     ))}
@@ -101,13 +102,13 @@ export default function Footer() {
             <div className="mx-auto max-w-[1440px] px-5 py-12 sm:px-6 lg:px-10 lg:py-16">
                 <div className="grid gap-12 border-b border-white/12 pb-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-8 lg:pb-16">
                     <div className="lg:col-span-3">
-                        <Link href="/" className="font-cormorant text-[28px] font-semibold tracking-tight text-white transition-colors hover:text-muted-gold">
-                            BEST BOTTLES
-                        </Link>
+                        <LocaleLink href="/" aria-label={t("home")} className="inline-block transition-opacity hover:opacity-80">
+                            <BrandWordmark tone="light" className="!h-[18px]" />
+                        </LocaleLink>
                         <p className="mt-4 max-w-[260px] text-xs leading-relaxed text-white/58">
-                            Premium glass bottles and closures for beauty, fragrance, and wellness brands.
+                            {t("tagline")}
                         </p>
-                        <p className="mt-5 font-display text-lg text-muted-gold">Beautifully Contained.</p>
+                        <p className="mt-5 font-brand-display text-[11px] tracking-[0.2em] text-muted-gold">{t("beautifullyContained")}</p>
                         <div className="mt-7 flex gap-2">
                             {socialLinks.map((social) => (
                                 <a
@@ -125,31 +126,38 @@ export default function Footer() {
                     </div>
 
                     {FOOTER_GROUPS.map((group) => (
-                        <div key={group.title} className="lg:col-span-2">
-                            <h2 className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white">{group.title}</h2>
+                        <div key={group.titleKey} className="lg:col-span-2">
+                            <h2 className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white">{t(group.titleKey)}</h2>
                             <ul className="mt-5 space-y-3.5">
-                                {group.links.map(([label, href]) => (
-                                    <li key={label}>
-                                        <Link href={href} className="text-xs text-white/58 transition-colors hover:text-muted-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold">
-                                            {label}
-                                        </Link>
+                                {group.links.map(([labelKey, href]) => (
+                                    <li key={labelKey}>
+                                        <LocaleLink href={href} className="text-xs text-white/58 transition-colors hover:text-muted-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold">
+                                            {t(labelKey)}
+                                        </LocaleLink>
                                     </li>
                                 ))}
+                                {group.titleKey === "company" && (
+                                    <li>
+                                        <a href="https://www.nematinternational.com" className="text-xs text-white/58 transition-colors hover:text-muted-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold">
+                                            Nemat International
+                                        </a>
+                                    </li>
+                                )}
                             </ul>
                         </div>
                     ))}
 
                     <div className="md:col-span-2 lg:col-span-3">
-                        <h2 className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white">Contact & Notes</h2>
+                        <h2 className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white">{t("contactNotes")}</h2>
                         <div className="mt-5 space-y-2 text-xs">
                             <a href="tel:+18009363628" className="block text-white/70 transition-colors hover:text-muted-gold">1-800-936-3628</a>
                             <a href="mailto:sales@nematinternational.com" className="block text-white/70 transition-colors hover:text-muted-gold">sales@nematinternational.com</a>
-                            <p className="text-white/42">Mon–Fri, 8am–5pm PT</p>
+                            <p className="text-white/42">{t("hours")}</p>
                         </div>
 
                         <form onSubmit={handleSubscribe} className="mt-8">
                             <label htmlFor="footer-newsletter-email" className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white">
-                                Packaging notes by email
+                                {t("newsletterLabel")}
                             </label>
                             <div className="mt-3 flex border border-white/22 focus-within:border-muted-gold focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-muted-gold/40">
                                 <span className="flex w-10 items-center justify-center text-white/45" aria-hidden>
@@ -163,7 +171,7 @@ export default function Footer() {
                                     autoComplete="email"
                                     spellCheck={false}
                                     required
-                                    aria-label="Email address"
+                                    aria-label={t("emailLabel")}
                                     value={email}
                                     onChange={(event) => setEmail(event.target.value)}
                                     placeholder="name@company.com…"
@@ -172,26 +180,26 @@ export default function Footer() {
                                 <button
                                     type="submit"
                                     disabled={status === "submitting"}
-                                    aria-label="Subscribe to packaging notes"
+                                    aria-label={t("subscribe")}
                                     className="flex w-11 items-center justify-center text-muted-gold transition-colors hover:bg-white/6 hover:text-white disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold"
                                 >
                                     <ArrowRight size={15} />
                                 </button>
                             </div>
                             <div className="mt-2 min-h-4 text-[10px] text-white/46" role="status" aria-live="polite">
-                                {status === "success" && "You’re on the list."}
-                                {status === "error" && "We couldn’t subscribe you. Please try again."}
+                                {status === "success" && t("subscribeSuccess")}
+                                {status === "error" && t("subscribeError")}
                             </div>
                         </form>
                     </div>
                 </div>
 
                 <div className="flex flex-col gap-5 pt-7 text-[10px] text-white/36 md:flex-row md:items-center md:justify-between">
-                    <p>© 2026 Best Bottles, a division of Nemat International.</p>
+                    <p>{t("copyright")}</p>
                     <div className="flex flex-wrap gap-x-6 gap-y-3">
-                        <Link href="/terms" className="transition-colors hover:text-muted-gold">Terms</Link>
-                        <Link href="/privacy" className="transition-colors hover:text-muted-gold">Privacy</Link>
-                        <Link href="/sitemap.xml" className="transition-colors hover:text-muted-gold">Sitemap</Link>
+                        <LocaleLink href="/terms" className="transition-colors hover:text-muted-gold">{t("terms")}</LocaleLink>
+                        <LocaleLink href="/privacy" className="transition-colors hover:text-muted-gold">{t("privacy")}</LocaleLink>
+                        <LocaleLink href="/sitemap.xml" className="transition-colors hover:text-muted-gold">{t("sitemap")}</LocaleLink>
                     </div>
                 </div>
             </div>

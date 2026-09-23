@@ -1,5 +1,5 @@
-import { mutation, query } from "./_generated/server";
-import { v } from "convex/values";
+import { mutation, query, type QueryCtx } from "./_generated/server";
+import { Infer, v } from "convex/values";
 import { verifyWriteToken } from "./writeToken";
 
 /**
@@ -84,6 +84,45 @@ const kitViewV = v.object({
     conflicts: v.array(v.string()),
 });
 
+type KitSkuPair = { graceSku: string | null; websiteSku: string | null };
+type KitView = Infer<typeof kitViewV>;
+
+const kitPairV = v.object({
+    graceSku: v.union(v.string(), v.null()),
+    websiteSku: v.union(v.string(), v.null()),
+});
+
+const MAX_KITS_PER_LOOKUP = 50;
+
+async function publishedKitView(ctx: QueryCtx, args: KitSkuPair): Promise<KitView | null> {
+    const rows = [];
+    if (args.graceSku) rows.push(...await ctx.db.query("productKits").withIndex("by_graceSku", (q) => q.eq("graceSku", args.graceSku)).collect());
+    if (args.websiteSku) rows.push(...await ctx.db.query("productKits").withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.websiteSku)).collect());
+    const seen = new Set<string>();
+    const unique = rows.filter((row) => { if (seen.has(row._id)) return false; seen.add(row._id); return true; });
+    if (unique.length === 0) return null;
+    // An exact website SKU is stronger evidence than an old Grace alias.
+    const exact = args.websiteSku ? unique.filter((row) => row.websiteSku === args.websiteSku) : [];
+    const newest = (exact.length ? exact : unique).sort((a, b) => b.importedAt - a.importedAt)[0];
+    if (!newest) return null;
+    const plates = await ctx.db.query("productPlates").withIndex("by_sku", (q) => q.eq("sku", newest.sku)).collect();
+    const plate = plates.length === 1 ? plates[0] : null;
+    // Publication can replace a plate before its kit. During that interval
+    // return the photograph rather than layering stale, misregistered parts.
+    if (!plate || plate.front?.sha256 !== newest.plateSha256) return null;
+    return {
+        sku: newest.sku,
+        familyId: newest.familyId,
+        plateSha256: newest.plateSha256,
+        canvas: newest.canvas,
+        anchors: newest.anchors,
+        completeness: newest.completeness,
+        parts: newest.parts,
+        three: newest.three,
+        conflicts: unique.length > 1 ? [newest.sku] : [],
+    };
+}
+
 /**
  * One kit for one SKU, fetched by the stage on interaction. Exact website SKU first,
  * Grace SKU second, newest row wins, duplicates reported never thrown.
@@ -91,32 +130,22 @@ const kitViewV = v.object({
 export const forSku = query({
     args: { graceSku: v.union(v.string(), v.null()), websiteSku: v.union(v.string(), v.null()) },
     returns: v.union(kitViewV, v.null()),
+    handler: async (ctx, args) => publishedKitView(ctx, args),
+});
+
+/** First-paint chooser and selected-body hydration: one round trip for many SKUs. */
+export const forSkus = query({
+    args: { pairs: v.array(kitPairV) },
+    returns: v.record(v.string(), v.union(kitViewV, v.null())),
     handler: async (ctx, args) => {
-        const rows = [];
-        if (args.graceSku) rows.push(...await ctx.db.query("productKits").withIndex("by_graceSku", (q) => q.eq("graceSku", args.graceSku)).collect());
-        if (args.websiteSku) rows.push(...await ctx.db.query("productKits").withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.websiteSku)).collect());
-        const seen = new Set<string>();
-        const unique = rows.filter((row) => { if (seen.has(row._id)) return false; seen.add(row._id); return true; });
-        if (unique.length === 0) return null;
-        // An exact website SKU is stronger evidence than an old Grace alias.
-        const exact = args.websiteSku ? unique.filter((row) => row.websiteSku === args.websiteSku) : [];
-        const newest = (exact.length ? exact : unique).sort((a, b) => b.importedAt - a.importedAt)[0];
-        const plates = await ctx.db.query("productPlates").withIndex("by_sku", (q) => q.eq("sku", newest.sku)).collect();
-        const plate = plates.length === 1 ? plates[0] : null;
-        // Publication can replace a plate before its kit. During that interval
-        // return the photograph rather than layering stale, misregistered parts.
-        if (!plate || plate.front.sha256 !== newest.plateSha256) return null;
-        return {
-            sku: newest.sku,
-            familyId: newest.familyId,
-            plateSha256: newest.plateSha256,
-            canvas: newest.canvas,
-            anchors: newest.anchors,
-            completeness: newest.completeness,
-            parts: newest.parts,
-            three: newest.three,
-            conflicts: unique.length > 1 ? [newest.sku] : [],
-        };
+        const kits: Record<string, KitView | null> = {};
+        const wanted = args.pairs.slice(0, MAX_KITS_PER_LOOKUP);
+        for (const pair of wanted) {
+            const key = pair.websiteSku || pair.graceSku;
+            if (!key || key in kits) continue;
+            kits[key] = await publishedKitView(ctx, pair);
+        }
+        return kits;
     },
 });
 

@@ -1,0 +1,452 @@
+{
+ "release": "circle-master-kits-2026-09-16",
+ "ship": "ship Circle kit release 2026-09-16",
+ "approvedBy": "Jordan Richter — approved the kit contact sheet in chat 2026-09-16 ('looks good' / 'These all look fantastic'); authorised publication 2026-09-19 ('process all the kits… push them to production')",
+ "approvedAt": "2026-09-19T07:28:28.284Z",
+ "reviewSheet": "/reviews/builder-bodies-2026-09-14/circle-kits-2026-09-16.jpg",
+ "skus": {
+  "GBCrcl30SpryBlk": "7525f4c5f53dfd08a95cc81257371f2a07c0eb24166ed4e3237ef3994506585c",
+  "GBCrcl30SpryShSl": "2642abb7c519f47dda45295f53cb4057dc0727fc9784c1a2de0f7174466184cf",
+  "GBCrcl30GlCap": "ecb095f90cfcbb799198936a1d95d686d5fd559710e14247df72784351b93d7c",
+  "GBCrcl50AnSpTslWht": "d9cc86c6cb87b0a21b469b8511af9db147e52e8648b48561bf42e071ec86d2c5",
+  "GBCrcl50AnSpTslBlk": "e16e2b329e137899054319086d70b14c88f07838b595ab645c8b010d6f157647",
+  "GBCrcl50AnSpTslIvyGl": "6127243056675bbb38d893a35ff495f1aa7a2e1342f3ab41032e969895d4ac2d",
+  "GBCrcl50AnSpTslMtSl": "4c167cdd382574aae1fd7ff88f153266f20800e1b351b8738c0f0f26d406acf4",
+  "GBCrcl50AnSpBlk": "8358c0cd7da0ec78d573814b37eb1d748888c093adddb35dcb0151b4d1484acd",
+  "GBCrcl50AnSpGl": "3065929a27e31e94dc30f9ac1c5644c37aded45ab477a5b6f09fba9944997890",
+  "GBCrcl50AnSpIvyGl": "eec347d3e62a557878f3988b704363ffc3953b59a591a4c5111d89aae4a5865c",
+  "GBCrcl50AnSpIvySl": "1314dfc6d8b065c439e64a63c174f76b77537f782780461e5ab1a62a4da8a7cb",
+  "GBCrcl50AnSpLvn": "9ee81236cbafaf066fd60a06d3a300a2a93961407bf0866e5c38230ca1fc6608",
+  "GBCrcl50AnSpMtSl": "81e37b50c55c2eea8eb1a831aeb46ff86f961165f6d3614e10fcbc3c20cc2aa1",
+  "GBCrcl50AnSpRed": "c07ec67d9bd363ae0ca5bc33f479cc03b8daef0c7709c7c7ab5edaed5fbd5ec6",
+  "GBCrcl50AnSpWht": "9f7ffc320593ffd9275ec89d18ff286aee9de30547238a3f807a068c7e05b0cd",
+  "GBCrcl50DrpCu": "d64a2b2d17df947a42a999264aa0f26a621772000bd67bb217af9e322086f76a",
+  "GBCrcl50DrpGl": "f344ca7696024d394f43a0d5fe0791ee476a5444d518633f1fbe2b741e448809",
+  "GBCrcl50DrpSl": "6f3d0bee0c3655886dcaa15016c6cf8e581d4347f4f461439f55ce655b78b956",
+  "GBCrcl50RdcrBlkLthr": "fd00ea3a5112e98964c99b9db33e70a8946e0014518fd60f5c876e5dafe83f61",
+  "GBCrcl50RdcrBrwnLthr": "bb81051ff0eb3401310bbc7cc8e7c0738c51015b73ef367a9a8a9b675bf12688",
+  "GBCrcl50RdcrIvyLthr": "a4662fe169583c7dd745d9490ff9ba97541de6d5174ac3a55d2dbba913fa05fb",
+  "GBCrcl50RdcrLBrwnLthr": "7e394f797b3a835f6cb75eec54626566b4366f92ad1b2fadf3f017fa38de3227",
+  "GBCrcl50RdcrMtSlTall": "8e8035dd7a828f305d37abaee264ddb0a109645de097f6a8a1b37584462cf4b7",
+  "GBCrcl50RdcrPnkLthr": "01d3996b2cc2cc9cbbf4a54e4d82f515a4da7ca6b41c18553870c6485245dd85",
+  "GBCrcl50RdcrShnBlk": "3a9e531887977f90b3e7426c19c09b34b405ad419ff40790290df7df252be8d3",
+  "GBCrcl50RdcrShnBlkTall": "e9a250cb9fa3b2d83fbbcc47607aa03fdb4cb8e06b223e318f681502d482f67c",
+  "GBCrcl50RdcrShnGl": "11ad7226ab6061af061f560fc24e121eec354183d9f5f2a6ee19101e76f245df",
+  "GBCrcl50RdcrShnSl": "0cd478d8c778df8220089c50e7ac7266999b8bf1630a27242e595d6263136199",
+  "GBCrcl50RdcrWht": "a2db5ff5d254c5b01398e4e393f31ac10f2d838f5ca84f2d9519ed885920d4db",
+  "GBCrclFrst50AnSpBlk": "1b5b92670dee11859371e1282e1d0a9c39048ced13a1f1d8608b98a55d7ef7a6",
+  "GBCrclFrst50AnSpGl": "311368d2b6574b59b9fd6a892bea477a93f25099f42dbee1a9e918c60bf34b82",
+  "GBCrclFrst50AnSpIvyGl": "889ce5a5ca461609f625c6a624efbbfe8939e417d657c7ccb2f35da777e8aab1",
+  "GBCrclFrst50AnSpIvySl": "3dbfc8379a8643882ec7e49e5417b2ddae0b2bf368df1d2aac08fac2464e26b8",
+  "GBCrclFrst50AnSpLvn": "ba645e429cc2769b57a5e30225c06523160560e2d3e0f8dc7186f582b66c7c89",
+  "GBCrclFrst50AnSpMtSl": "9358a6968b32d07b4cf10023b925c016500643f5894418d9a2d6d65500b21d49",
+  "GBCrclFrst50AnSpPnk": "e8a0cc986c84404a777f59fff653ae1f50231ae4d263c7aa9caefd64af8d7db3",
+  "GBCrclFrst50AnSpRed": "ca6a839bfdb193ef0774b4e0284fe841fedf764a6f761ebf3daf3f2a0ef65485",
+  "GBCrclFrst50AnSpWht": "e8d54812eb819d3787daba5b9bd773b4345fa2039829e5c46ed41cb91395eb30",
+  "GBCrclFrst50RdcrBlkLthr": "34bf6cc4b43693fe33aa5f1d70c5cbe1bd73ac436ccfc9686d177630ad9450f5",
+  "GBCrclFrst50RdcrBrwnLthr": "002b6208b4cb481cef2b72f5467a12119c7b57fddb34e14738c68455ae1d4667",
+  "GBCrclFrst50RdcrLBrwnLthr": "4912d03fe0b9e7f614d3bd08993abe0714952624a8f9d937771067a56372624b",
+  "GBCrclFrst50RdcrMtSl": "71b0459d50246c16ed46d97d5ffffc679fe9c86604c37e7f5d4955529af7f64b",
+  "GBCrclFrst50RdcrPnkLthr": "1980f9b234d4228647a55af12f3a86e89ddb803de42f66458a5ec01ce35c0369",
+  "GBCrclFrst50RdcrShnBlk": "b2bd51f6e87d619c46ceb3e0fa96c27d7e09e84bc35c564e46e8ffba0f622e2f",
+  "GBCrclFrst50RdcrShnBlkTall": "fc1da602fa095181c5b5eb1b529e53a0d52c0ac88995585e0e6964aec32e12a4",
+  "GBCrclFrst50RdcrShnGl": "88b24f1199b0d5120372bfe359b40fafba0a71011281e81708084fba52bbe5bf",
+  "GBCrclFrst50RdcrShnSl": "2465f027990109879e8897f6c5c1d46cff119f6b1bcec2a4c655c5f78e5a270f",
+  "GBCrclFrst50RdcrWht": "a2b4f1ad50ec70429afde8ff9b47c4d26b3742a33466d95cfb37c9e5fa1f842b",
+  "GBCrcl100AnSpTslMtSl": "622fef0e49491f34285f1dea71acdf742ed90103793264ed5911d4ce413a6ae6",
+  "GBCrcl100AnSpTslIvyGl": "443f7d9b47f4db585e4331b26f6c3a846a92ea5a820f0dc31cbffe2a0f59b6a1",
+  "GBCrcl100AnSpTslLvn": "c9cd11c31fc3d8adb7c87b62ba1515609ea0f4982ea8796d029beb37929611b6",
+  "GBCrcl100AnSpTslGl": "aa771420fccb878acbc381be7bb967428ded3cc9cd7e219fe08bbe7420fcbb7a",
+  "GBCrcl100AnSpBlk": "c09793aa0ad1786a37f54a623eee5bddf96fdd5563c19f476f76902cda192384",
+  "GBCrcl100AnSpGl": "2ae0e2445158110b3b0d01b096d6fcdb660c5df43fdad54ccfbb2292ff9f28e8",
+  "GBCrcl100AnSpIvyGl": "c4df3839a46f77cd927b2f31e6f0c233000537cea6e6f64a227b72f89cb3640a",
+  "GBCrcl100AnSpIvySl": "d093b76030ce02c1a4aa3e1046da8334b1e4d8523a35c8140fc44a7c189eaf53",
+  "GBCrcl100AnSpLvn": "d2ace3aac79d8c3b75df3e82a80199e08446d885c2ff790743e2db608b831511",
+  "GBCrcl100AnSpMtSl": "4fc63749f198e5a483f4a166219fda7a7bc9575cc32da08ebbe665045e6321b6",
+  "GBCrcl100AnSpPnk": "87ae511c2ee686d3b89163a6edac3f984fcf966f52725e11d0b194a710042b22",
+  "GBCrcl100AnSpRed": "cfff8f05c67c6030dd2dee4c4ef2fcba62e2d6bb2e2755b8b2b4d56bf78c7bbc",
+  "GBCrcl100AnSpWht": "9d1884cb0085f9a87a9b5770d7034f5f632f7f5a06fa6c22c708629dac5f25b0",
+  "GBCrcl100RdcrBlkLthr": "a4ddfc965a1aeeef68613fa36941dc1b4f8617afaea8a061f5b7edc7e63e6964",
+  "GBCrcl100RdcrBrwnLthr": "ca55172b37b3012fa66ff7f6d2550c90e9fbc0257d6f5ebc6a49ad91ac830c37",
+  "GBCrcl100RdcrIvyLthr": "e871ac151929aae86cac273269e11080cc265fe9b92807087b9d6cc54cb75f5d",
+  "GBCrcl100RdcrLBrwnLthr": "7d9a5d38493f36d99476d9c6fadcba0c26d482e5c95933ce150cdea6748c1c20",
+  "GBCrcl100RdcrMtSl": "907a954982fdf8736540d993280934a017350e271d78eab5a8ff59b5fcb8139f",
+  "GBCrcl100RdcrMtSlTall": "f3679edb22cac918b0ed8f600723800b42d94671ab38f8fa474115fd81af866c",
+  "GBCrcl100RdcrPnkLthr": "507b72db4b936c17c74804b89799be13e5e9c44b8851b29159255cadaa5933f7",
+  "GBCrcl100RdcrShnBlk": "869535814a029f31d71e841e22733e949d09273c7d6b663597aa10dba44998cf",
+  "GBCrcl100RdcrShnBlkTall": "bd6a4ae54876aee2d0a505768b7c9103c69be3c26ad68290002479f54e8b11dc",
+  "GBCrcl100RdcrShnGl": "a64d58278c678f16d7a8a890b6f86e43db688fdaafbb1106f85f9e2025c858da",
+  "GBCrcl100RdcrShnSl": "482cd36ae66a4b812fe68cc40f3acb6b603cdadd7d8da37317936ade016b709c",
+  "GBCrcl100RdcrWht": "7d363769812fd06147d292b1ebf7ebdb934a1b975f02643d4ebf3c35a8d2ab62",
+  "GBCrclFrst100SpryShnBlk": "4baec44dd49066c1751bf99eb12b61c7948671d800b52617aae53daed53a1ffb",
+  "GBCrclFrst100AnSpTslMtSl": "f99e97e06433e1b845c56f6113aecfbfcb687c23705a3272f46b82045890aa66",
+  "GBCrclFrst100AnSpTslWht": "c7361865ecbab27ea40d55a75fe681bada39b46489ce416c27e8c087b56d15a7",
+  "GBCrclFrst100SpryMtGl": "68a6795d98c5df026384c6b456fd4ce6bb3761806b7d18c1f269f59f3ae120e6",
+  "GBCrclFrst100SpryMtSl": "91bc7beb7101b1f5c81c3f6c94b118aa7928408ec601fe73328298e1df9ddbbf",
+  "LBCrclFrst100LtnMtGl": "616609412454c1cd75a4301d08c61aaa086803e87bb0f538690f1f759d3c2375",
+  "GBCrclFrst100SpryShnGl": "8bc3051fe930592a82956efb3ec2c5987475cff792ed0bf863997b428f3fd641",
+  "GBCrclFrst100SpryShnSl": "5532e9924b3339698b7de1fc0113219995ff5dad81c6199f2ce51406dec76dfd",
+  "GBCrclFrst100SpryCu": "3271f431f090c7200ed4150b43d72b953d8a1fe845aeb308dd042269f91a49de",
+  "GBCrclFrst100AnSpTslBlk": "dd1e16aa5aedec741e6df64413bf0a20373dc0e7690e7e1907850f6b838b9f5e",
+  "GBCrclFrst100AnSpTslGl": "240b148a750ea4d387bdb223d8d3bc177d81aa469673a8bd71606a27748341a0",
+  "GBCrclFrst100AnSpTslIvyGl": "dc2ebfd397071acd5499af7134925de2755bee3b32dd920b4ffe25fe4b2d8365",
+  "GBCrclFrst100AnSpTslIvySl": "a24cf3266c346c98807a3fef6d8171a93524c3e48d59d678388da786b786e044",
+  "GBCrclFrst100AnSpTslLvn": "11ae9c129d16bdaf970060179d78a49bc808b2152eca789ffeed9176b6bc0649",
+  "GBCrclFrst100AnSpTslPnk": "414cdce5f6a5985a8d3ce7194836473f0175a618878987aef09056291f70e6f5",
+  "GBCrclFrst100AnSpBlk": "4caa369cd7fe2eeeb4a434e25aca7469d439ee463c11e2be9d77134a07aa33a9",
+  "GBCrclFrst100AnSpGl": "cd260ad7c28a0689677996d4de0081089c4b16ea58697cdc9ab384683312c6ec",
+  "GBCrclFrst100AnSpIvyGl": "06013e6f1fabb855dba6d0ac9e0db92316a06415aa6a5a241e938cbe146f7142",
+  "GBCrclFrst100AnSpIvySl": "31a2675f92e34bab4e35b1dac1a4aff21bc47db95bfefc3cf5cf4fdff4d8001c",
+  "GBCrclFrst100AnSpLvn": "4f1f477156e3cb1207107f48ca50858fdefab100ededcd635e86dae3de555247",
+  "GBCrclFrst100AnSpMtSl": "a560e091a57070c4127cea88b23b1405cdcde1f057cb6ec2adc85871f18f026e",
+  "GBCrclFrst100AnSpPnk": "1f3ac3fdfb0430a86f4fc0dfed761372f038a5947b75a34fa235a9422097f1aa",
+  "GBCrclFrst100AnSpRed": "77f3cd29fd5a3f9c5967b1efb871b27a0349f8c52c1cccf78d76b6361236a820",
+  "GBCrclFrst100AnSpWht": "8f34a546d1fa4ad0d9e7522b0a24ef48fd128148dbda95a69d5a037ee1bc7422",
+  "GBCrclFrst100RdcrBlkLthr": "74dff87b8212def5da43949df74e8877bfb9c3626d79029cd98b1a56b28054ce",
+  "GBCrclFrst100RdcrBrwnLthr": "0ab373a3fe942d3da1d6b8e07c0ebab581fd35305aa8f8b12495a18f9157c17a",
+  "GBCrclFrst100RdcrIvyLthr": "9a0375ff745a6787a56cdc7ae060adf86e79175be9d9133d008fec50e1135b93",
+  "GBCrclFrst100RdcrLBrwnLthr": "5f55201856dceb62384551f6efbada88df2bf342930749dd4296ecbb2352ee5f",
+  "GBCrclFrst100RdcrMtSl": "728a7eec9c0e45df80ea8779e23af4d64edd2172da6642557d5113c76886dff4",
+  "GBCrclFrst100RdcrMtSlTall": "db7c848677bc3bc459f40778017ffe099a52fbdf476e37e32e81973a7ea87b29",
+  "GBCrclFrst100RdcrPnkLthr": "e98f0787a2e4a1b69d259ebc0f62808a84b5773a987ca9f5654c243fa70785da",
+  "GBCrclFrst100RdcrShnBlk": "f50ae15f3c491a4f14284630b8e6e7736a2f196a7fc9651485388e085352ebc7",
+  "GBCrclFrst100RdcrShnBlkTall": "49eced496fb8aa900adf135428248a25fa2b9127ecf92fe06f06cf12ba60e8d7",
+  "GBCrclFrst100RdcrShnGl": "6fa7a2ad91bb30249f7c01d9ed4bc6fb51cf279b79dec40b26dbc884bcb1f0ca",
+  "GBCrclFrst100RdcrShnSl": "24b247080de7e6dd09485bd4b74ceb0120d4bc42193687b43135a3e8c0d43ad8",
+  "GBCrclFrst100RdcrWht": "c1cf2f12167f052cf4aaf4393ae63683aac090429d9ba6ce9ec434b2505e16de"
+ },
+ "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
+ "setAside": [
+  {
+   "sku": "GBCrcl15RollSlSh",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "9025f6952d67e425c9b037325a5426f460a6533e4352397f16fb48a3033b9a4c",
+   "currentPlate": "ab74c6559200345b8347fa6acbb0efdcdd6b846274e9284483bd6012e3f9b495"
+  },
+  {
+   "sku": "GBCrcl15RollSlMatt",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "80f47db63db1af6b8c8d7a3d93d2b35ba6ebda03bf747f356889e70771d3bb32",
+   "currentPlate": "22710511f5c0fde03ad7f083f895a5232c513a2510a9dbb4a2339bc11b890ffe"
+  },
+  {
+   "sku": "GBCrcl15SpryGlSh",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "8d9421de88f7ac317e87c8eb26004ade34a52e86b5d7e8d2400eba1e7695e094",
+   "currentPlate": "e35e61ce81a6ad7f63f8c8af5875e867b0e38c2180942c1522aadcb7a1a06729"
+  },
+  {
+   "sku": "GBCrcl15MtlRollGlMatt",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "f886c515979ee0f9f652bda19cc6135c6c0977ed70fdb8f03a06465dbef02984",
+   "currentPlate": "154f5bcb1e88bf5a1c4706ae579fa6d9f6f41c94fb1257613d38a5b8d228b3ea"
+  },
+  {
+   "sku": "GBCrcl15MtlRollGlSh",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "413e15939931ea9d4287ffbc39ee8ab9cfbb0a81fdf6c7dbdfc5fd43bea6560b",
+   "currentPlate": "245ae600ae47b39f6f23041a23083bd3c0d2829144b2f83be7e303bad610d826"
+  },
+  {
+   "sku": "GBCrcl15MtlRollCuMatt",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "ef351dfd98a2f3d9a272ca97c6f3bae3456f7cbc808823407afae29cb4c2a3e4",
+   "currentPlate": "28094d26a7d795943b8fd1cf0e928336f6ce58d8d88193693826451416de810b"
+  },
+  {
+   "sku": "GBCrcl15SpryBlkSh",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "6e24c10e6102e3166ee828508f4e4ddc92a904d214de1cd2578dcfdb8af1801b",
+   "currentPlate": "9771eba44f8f1f43926fbda0835ce63a8e3582b5ef1f42fc13f7f63c49da25d3"
+  },
+  {
+   "sku": "GBCrcl15MtlRollSlDot",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "e8a403d65b28d67d5a6fd0ebb0fcf236e54ab022a66ea09bc7a65fdd84e69daa",
+   "currentPlate": "4aeca3008ae7c1fa879583409c3e9607102c1bc730f36e72f7542a2a76c29816"
+  },
+  {
+   "sku": "GBCrcl15MtlRollPinkDot",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "95b66cde7e67ea827059c04da20709034bc59ffb47f33d2d72ec7e2a6cdbfd41",
+   "currentPlate": "f9890cd21d6ec35cb2dd5fb521f9d8589f72ffb3d1719d4e71a8f386ddf2f1ed"
+  },
+  {
+   "sku": "GBCrcl15SpryBlkMatt",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "d2c7db35e01b91a4d0aab4fd29752717c434d28ff10d8896e6f10fa1718c524e",
+   "currentPlate": "7ca8d11a319b40e0edf1ad79b4bd6373b28e3dec1097c8c23b5abb7c6350a267"
+  },
+  {
+   "sku": "GBCrcl15RollPinkDot",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "95b66cde7e67ea827059c04da20709034bc59ffb47f33d2d72ec7e2a6cdbfd41",
+   "currentPlate": "f9890cd21d6ec35cb2dd5fb521f9d8589f72ffb3d1719d4e71a8f386ddf2f1ed"
+  },
+  {
+   "sku": "GBCrcl15MtlRollSlMatt",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "80f47db63db1af6b8c8d7a3d93d2b35ba6ebda03bf747f356889e70771d3bb32",
+   "currentPlate": "22710511f5c0fde03ad7f083f895a5232c513a2510a9dbb4a2339bc11b890ffe"
+  },
+  {
+   "sku": "GBCrcl15Sl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "33ef6a1e7b41c6becd1773c122a0fc792c19ff38a87b2f782c0d7d433486967e",
+   "currentPlate": "28239df653f650136b5e1c24d4a60cf5de631f9e50354d19e475d890e90e3d4f"
+  },
+  {
+   "sku": "GBCrcl15MtlRollSlSh",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "9025f6952d67e425c9b037325a5426f460a6533e4352397f16fb48a3033b9a4c",
+   "currentPlate": "ab74c6559200345b8347fa6acbb0efdcdd6b846274e9284483bd6012e3f9b495"
+  },
+  {
+   "sku": "GBCrcl15Gl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "423e002960d5e9de71ff6ac2a5c18992fb49a7f2ed10119f7f05cf9db1207fa7",
+   "currentPlate": "403dcb7e596f2920db7f0ea8668bd693f9ac368f20b9d561dd29f608c2673ef6"
+  },
+  {
+   "sku": "GBCrcl15SpryCuMatt",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "f9f680cf8248a66cce3dadd84bb7283aed7d6abe03076b2decffbb8890e59e88",
+   "currentPlate": "662ccfeb987bac98c59148fd65b3d4ea54f4a44ffb9b9c6f453f7e03479b58e8"
+  },
+  {
+   "sku": "GBCrcl15BlkSht",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "b8a8ee2331568d88796323adece1fb341bef813f40702296297e06cb93e88868",
+   "currentPlate": "f309df0001382b6f55885860da04ffe21bc7f0a4aeafe5928b5f8b723a3d09d9"
+  },
+  {
+   "sku": "GBCrcl15RollCuMatt",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "ef351dfd98a2f3d9a272ca97c6f3bae3456f7cbc808823407afae29cb4c2a3e4",
+   "currentPlate": "28094d26a7d795943b8fd1cf0e928336f6ce58d8d88193693826451416de810b"
+  },
+  {
+   "sku": "GBCrcl15RollGlMatt",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "f886c515979ee0f9f652bda19cc6135c6c0977ed70fdb8f03a06465dbef02984",
+   "currentPlate": "154f5bcb1e88bf5a1c4706ae579fa6d9f6f41c94fb1257613d38a5b8d228b3ea"
+  },
+  {
+   "sku": "GBCrcl15SpryBluMatt",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "6556ea68b113e2c7e8aa4e87f4335354ca89fb24425397399b6f95177141b374",
+   "currentPlate": "5c1d642370e290bdf4ac466e8a713e865e9608d56b29c0b52d6d728576cfcd98"
+  },
+  {
+   "sku": "GBCrcl15RollGlSh",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "413e15939931ea9d4287ffbc39ee8ab9cfbb0a81fdf6c7dbdfc5fd43bea6560b",
+   "currentPlate": "245ae600ae47b39f6f23041a23083bd3c0d2829144b2f83be7e303bad610d826"
+  },
+  {
+   "sku": "GBCrcl15RollBlkSh",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "27da81e1ea7428093066f91d5490fe133a440ead9b3476addd1a1e41ec0261ce",
+   "currentPlate": "1ccb43cee88cd84e7a02b35bb4aa9d81b15e50e24a74d7551e5851dfb40abb69"
+  },
+  {
+   "sku": "GBCrcl15MtlRollBlkSh",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "27da81e1ea7428093066f91d5490fe133a440ead9b3476addd1a1e41ec0261ce",
+   "currentPlate": "1ccb43cee88cd84e7a02b35bb4aa9d81b15e50e24a74d7551e5851dfb40abb69"
+  },
+  {
+   "sku": "GBCrcl15RollSlDot",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "e8a403d65b28d67d5a6fd0ebb0fcf236e54ab022a66ea09bc7a65fdd84e69daa",
+   "currentPlate": "4aeca3008ae7c1fa879583409c3e9607102c1bc730f36e72f7542a2a76c29816"
+  },
+  {
+   "sku": "GBCrcl15SprySlMatt",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "428420d9ae30381c0494fbaf9fabceabf00ef016839eb8051a979c7b0a27ab51",
+   "currentPlate": "fbfde0b5133216433fc01d7813522a6ef7ef8f90e85a04bc034b5bd05afb01f0"
+  },
+  {
+   "sku": "GBCrcl15SpryGlMatt",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "8c5afc6985644f76b1e869e768740c1f8783ca18b28db9902b7920c43f5c1360",
+   "currentPlate": "90725f2a99fd684f94741359b01d7db6fd9d8319afaae65744dfa8c5f80b072b"
+  },
+  {
+   "sku": "GBCrcl15WhtSht",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "dad123e0bf37f998351bed8a7fec713f7a76eb56261fac393ff1552a98ceddb7",
+   "currentPlate": "105a599e3e841217247dd0ad53901056bac14f60433456ee4f800d2b936c6f4f"
+  },
+  {
+   "sku": "GBCrcl30SlCap",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "6d86d133e021431845a391df0b8cb5903be3141c3d11631b88370e30a1de7376",
+   "currentPlate": "19f910d982b47f8e26623922312a495bddf079b19c04058018dadb60f21a089c"
+  },
+  {
+   "sku": "GBCrcl50SpryShnSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "ed7a6427207f9816c2914f2313a7e8bb8bcf371f0fb9d445c3905e604776506e",
+   "currentPlate": "620000e143644ea1e6cd4de85556de4af942c2e97e2f211160f0045413c087dc"
+  },
+  {
+   "sku": "LBCrcl50LtnShnSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "0ebc01d96f4281caf082112a64c7b89bfaf7e6c3ab50e002ee457e4d86ec6dbe",
+   "currentPlate": "c7914dd6b3fa43c9544cf49e869eddc7177acf8a808e9048962f3f2d87fae8bf"
+  },
+  {
+   "sku": "LBCrcl50LtnMtSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "0da2493e88c6d71f8a1ed68bc36ad81428d335aad08efb11bf009bcc718b94cc",
+   "currentPlate": "42bc37deda47200d9c9925d811cf18de65d646131f17f1de94a10ee2a535b470"
+  },
+  {
+   "sku": "GBCrcl50SpryShnGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "fd5b47a605059c49514f940676be072e3ac16ce47b0e3b4d69e370992d2e5ff6",
+   "currentPlate": "67a768af9665f038d5e3f52f56670bcdd8ef71c483ecf4eade8f0a30e2fdc2c9"
+  },
+  {
+   "sku": "LBCrcl50LtnShnGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "8f1e12a70054cb359f25d79ebc95bbe1443a5ec6ddc7f24e850241b4944f2331",
+   "currentPlate": "c00ecea1ea76df5c3a301d931d338db9bedf9ff5d372964bb5373a2c331ce207"
+  },
+  {
+   "sku": "LBCrcl50LtnClOvrCap",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "1f6e12aa05e2a02c912566343403e15108a8f64e19fcf9ecbb38e0ed3f8b5835",
+   "currentPlate": "9a004fb670fff1a3d070f004bcb95453ea5ba46b4c31340a877bd26c22364d55"
+  },
+  {
+   "sku": "GBCrcl50SpryShnBlk",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "19b7c34686d293ca6b57e65ed065bbd9d6825b25a607e4955471e6f600ed0adf",
+   "currentPlate": "a0eade499edcbda0c56f972f7ecdf49ec67dc3fcd2a3f1d1a0cf60f9e14b7271"
+  },
+  {
+   "sku": "GBCrcl50SpryMtSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "eed7be3e30247c74b0b81ea781311f3fd84cd008358ef9fd7b348e3b0ca68666",
+   "currentPlate": "a3d1becf5a382aaac4c5d6c0b1ef18ac7907a4893c25704b5adc9de55a25ac39"
+  },
+  {
+   "sku": "LBCrcl50LtnMtGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "b8331a9430b1592c7bc698344dcf35db6fa888970ee0da4f761586ef6f13da59",
+   "currentPlate": "922c1b544693da6af51617c0aba445c635891b1ec7f6933d3294227746538428"
+  },
+  {
+   "sku": "LBCrcl50LtnShnBlk",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "7996d7c221819fbcbba3c5482e07000c88703c4c86c4ed5d438339ef3fc3e44f",
+   "currentPlate": "13fa7e806d605fc47ccb2a5841c3af9722ad391df2d16755652ef1f8f57dca9b"
+  },
+  {
+   "sku": "GBCrcl50SpryMtGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "6d5df9e1641bdd702c6bf1d6d61507ff71369baf3a0f9a4268188f6fd8226507",
+   "currentPlate": "51027e56f524bd0e67c48eef3deb48ac3fa3b5f7b9623332ec6e76664f4de3c0"
+  },
+  {
+   "sku": "LBCrcl100LtnShnBlk",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "bff27e46a311d481477f2a9d4d2e1faf86538316e48f50fd044475f844c2bb25",
+   "currentPlate": "1a22b72b5f9374fd5dd746c83dda642eb3532a69a15e397a76672130b65ee327"
+  },
+  {
+   "sku": "GBCrcl100SpryShnSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "c7fa6e690dc074707854bc587905ed7627121b32251856b69743abd244d48b19",
+   "currentPlate": "e019ef7295584c6d6a33ad9f250801c7559758741ee3c42d4e222d906f191a7a"
+  },
+  {
+   "sku": "LBCrcl100LtnMtSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "530ac54d184f5502cfd2a0267bb27c45edc326a827b70da58f04662914f023c1",
+   "currentPlate": "02c06d21eca66b646d7621d178cc3d1388b982265b7de219285d1402acf32ac7"
+  },
+  {
+   "sku": "GBCrcl100SpryMtSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "d3d6baadac25a661b9192e2b3d0e3f6af2d8795c1ee7f8d77cad3f24994c7a90",
+   "currentPlate": "3292126c8959a2537c75a7cf355a9d75d847fc1003a4a89c40e7a5ebd8cb6766"
+  },
+  {
+   "sku": "GBCrcl100SpryShnGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "8082dbdb150d85d35b0ced7e13162e262b293409c4c07c5b6c5496193a54bd0e",
+   "currentPlate": "f43efff70dca0070af12d043254326857829ac8c236a7843e8c2032cfb39dff2"
+  },
+  {
+   "sku": "GBCrcl100SpryMtGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "20aa4e2ac123ccc2cb471e8083543e05f9bfd27fca288ba0c36bb380e371eb4d",
+   "currentPlate": "3f58d9a2f17a18ce7c02bce04ec6448afe1264f38651a01a623c675300c419ee"
+  },
+  {
+   "sku": "LBCrcl100LtnMtGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "07b195ce6844cd12a1a5ae3d99e19f3bf08352d877bb032efa0bbbdbda5dcf91",
+   "currentPlate": "303251d4528d11a5d496de043b9407acd29f018dfd7290cf6c8dfb1a8e570b51"
+  },
+  {
+   "sku": "LBCrcl100LtnShnSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "d986a30c0cb94cf2b405fa6182ea4dd236ecacaa104b09522c61e4f940704cb3",
+   "currentPlate": "557aa9e58a501bae4015240522a2cdfc8cdc44ae49da92fcef7ee1e206d30ee7"
+  },
+  {
+   "sku": "GBCrcl100SpryShnBlk",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "4f4de77abdbebab0f0de6bf019fa32b074b2f2da8cb4008ef8eeb048161fc18b",
+   "currentPlate": "0473f69fbb3ceeddc3ddafc294c483cb6a39d5582721a73daa5d4e7eed549409"
+  },
+  {
+   "sku": "LBCrcl100LtnShnGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "61683893a553cbc456af5c7bd20a429f8a23d8d22a7e6fb0ac1434054aa7ae7c",
+   "currentPlate": "36b5073a44cc1f9edbf39af7c79f29d01539afbbd0ad103fa8245f3e009d5d52"
+  },
+  {
+   "sku": "LBCrcl100LtnClOvrCap",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "fdb57fc3e782bbfee0d4e644f8a3510ab51dfd3765eb84059fb6eade3c6c5732",
+   "currentPlate": "d8c48f7438c428eee2c38d9d2b157226c51443ba6d54ef8662e15ca193abdade"
+  },
+  {
+   "sku": "LBCrclFrst100LtnShnSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "b4592d1bb58bcb793ab934fb72d9d51736556167632046bfe3e7772abafe1e4f",
+   "currentPlate": "5532e9924b3339698b7de1fc0113219995ff5dad81c6199f2ce51406dec76dfd"
+  },
+  {
+   "sku": "LBCrclFrst100LtnShnBlk",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "fb3c473c2b8f109733b1d4f86a4a6ba5ab46f3513601b01c7ad629615dd0230e",
+   "currentPlate": "4baec44dd49066c1751bf99eb12b61c7948671d800b52617aae53daed53a1ffb"
+  },
+  {
+   "sku": "LBCrclFrst100LtnClOvrCap",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "2967896e584508ee3bb4816a398882a01cea26231ab72f0adb2e1f0cb0bb0fbd",
+   "currentPlate": "81f6006c6633552dfd04f6fc3439583cd98063b7e97fe2250e1c1462cc540cc5"
+  },
+  {
+   "sku": "LBCrclFrst100LtnShnGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "2c67f72d2c4cdc490b52f68649db68e77d21e95dba4707e62d28d6c16eef4da8",
+   "currentPlate": "8bc3051fe930592a82956efb3ec2c5987475cff792ed0bf863997b428f3fd641"
+  },
+  {
+   "sku": "LBCrclFrst100LtnMtSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "20b3baad4e789b6012aa48b0a54b19c83054047f9f10dc09c28c636ab15e2151",
+   "currentPlate": "91bc7beb7101b1f5c81c3f6c94b118aa7928408ec601fe73328298e1df9ddbbf"
+  }
+ ],
+ "note": "Re-issued against the published plates. The set-aside rows keep their review; their kits must be re-cut from the plate that replaced the one they were registered to."
+}

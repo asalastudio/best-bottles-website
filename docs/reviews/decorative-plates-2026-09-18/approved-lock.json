@@ -1,0 +1,95 @@
+{
+ "schemaVersion": 1,
+ "release": "Decorative plates 2026-09-18",
+ "approvedAt": "2026-09-19T06:28:27.822Z",
+ "actor": "Jordan · approved in chat (\"I approve the 32\"), from the legacy and small-family contact sheets",
+ "approvalId": "8d830a7f-d609-421c-b967-d88f5ceb033d",
+ "reviewPacket": "public/reviews/plate-completion-2026-09-18/tail-new-plates.jpg",
+ "reviewPacketSha256": "76c43d55ae87e79021806638f279590452fd6cc9951bcf9a0f6f5c12b095f05c",
+ "approvalFile": "dist/paper-doll/decorative-plates-2026-09-18/plates/manifest.json",
+ "approvalFileSha256": "0c11fabff32bdc00f57793aff268cd4cbfcbb04d951245063ddd146e97f1d8f7",
+ "visualApproved": true,
+ "legacySourcesAccepted": false,
+ "publicationAuthorized": false,
+ "indexingAuthorized": false,
+ "rows": [
+  {
+   "sku": "GBEternalFlameClear",
+   "graceSku": "GB-ETF-CLR-35ML",
+   "familyId": "decorative-35ml-clear-ground",
+   "closure": null,
+   "plate": {
+    "key": "decorative-35ml-clear-ground/GBEternalFlameClear.front-on.webp",
+    "storeKey": "plates/decorative-35ml-clear-ground/GBEternalFlameClear/dd45f1fe8f1f512822fb5f4ca6b51a8b05638288dee5b1624eb992d7f9942491.front-on-1000x1100.webp",
+    "sha256": "dd45f1fe8f1f512822fb5f4ca6b51a8b05638288dee5b1624eb992d7f9942491",
+    "bytes": 21142,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "ee90f102d97d2f5e61ab26f0ccdf7f7a53f91faa3418356bd5d16797cf443003",
+    "bytes": 1628
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "17. Additional Bottles/GBEternalFlameClear..psd",
+    "sha256": "13a89cf615c20a6cf580a8b3d9d9ad2af3e39ff2e74607d21044758f1fe3e5fc"
+   }
+  },
+  {
+   "sku": "GBHeartFrst4TslRed",
+   "graceSku": "GB-DEC-FRS-4ML-GST-RED-T",
+   "familyId": "decorative-4ml-frosted-8mm",
+   "closure": "Glass Stopper",
+   "plate": {
+    "key": "decorative-4ml-frosted-8mm/GBHeartFrst4TslRed.front-on.webp",
+    "storeKey": "plates/decorative-4ml-frosted-8mm/GBHeartFrst4TslRed/1a4f9c19bf8b516b14ca923fb8c075db7a646b3752a9c510ead421ee2401a4e8.front-on-1000x1100.webp",
+    "sha256": "1a4f9c19bf8b516b14ca923fb8c075db7a646b3752a9c510ead421ee2401a4e8",
+    "bytes": 46936,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "c0a8d6244e8a83aca1858994ae51375ef0583bc8b5cb75ee835a2dfbbf085554",
+    "bytes": 4126
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "9.   8mm Deco Hearts /1. Small Decorative Hearts /1. Frst 4 ml Heart/1. Frst 4ml Heart/4. GBHeartFrst4TslRed.psd",
+    "sha256": "01003021a0c290971f5dadf24652dc1fabe491d4f54ab1124945138b462732f4"
+   }
+  },
+  {
+   "sku": "GBHeartFrst4KeyGld",
+   "graceSku": "GB-DEC-FRS-4ML-GST-GLD-T",
+   "familyId": "decorative-4ml-frosted-8mm",
+   "closure": "Glass Stopper",
+   "plate": {
+    "key": "decorative-4ml-frosted-8mm/GBHeartFrst4KeyGld.front-on.webp",
+    "storeKey": "plates/decorative-4ml-frosted-8mm/GBHeartFrst4KeyGld/d6a4d180cb8ac89383b28a0c280825e3ccbba83cee8a87ad96a0ec1cae027aa4.front-on-1000x1100.webp",
+    "sha256": "d6a4d180cb8ac89383b28a0c280825e3ccbba83cee8a87ad96a0ec1cae027aa4",
+    "bytes": 44878,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "37392528fea57e1c5ffc0f16bd2b3c0ab21af14c6703b1a0f9562235692bdff3",
+    "bytes": 4756
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "9.   8mm Deco Hearts /1. Small Decorative Hearts /1. Frst 4 ml Heart/1. Frst 4ml Heart/2. GBHeartFrst4KeyGld.psd",
+    "sha256": "e6bccfb33b8869c672eac4394d209e40c0a5fb842717aef93d7e3ee0871f9ab8"
+   }
+  }
+ ],
+ "scope": {
+  "renderedInBatch": 10,
+  "alreadyLiveAndExcluded": 7
+ },
+ "frontSourcePins": [],
+ "note": "Approves the rendered plate bytes after review. Publishing is a separate step and needs a release-specific ship phrase."
+}

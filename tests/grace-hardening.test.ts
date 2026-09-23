@@ -53,7 +53,7 @@ describe("Grace 100-point hardening contracts", () => {
   it("keeps mobile Grace available on product detail pages", () => {
     const mobileTab = read("src/components/mobile/MobileTabBar.tsx");
     expect(mobileTab).not.toContain('TABS.filter((tab) => tab.key !== "grace")');
-    expect(mobileTab).toContain("Ask Grace about fit for this bottle");
+    expect(mobileTab).toContain('grace("tooltipPdp")');
     expect(mobileTab).toContain("analytics.graceMobilePdpOpened");
   });
 

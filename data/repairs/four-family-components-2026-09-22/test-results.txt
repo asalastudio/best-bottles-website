@@ -1,0 +1,29 @@
+
+ RUN  v3.2.4 /Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/pdp-component-cleanup-2026-09-22
+
+ ✓ tests/compatibility-resolver-parity.test.ts (5 tests) 6ms
+ ✓ tests/bottle-builder-source-links.test.ts (9 tests) 5ms
+ ✓ tests/bottle-builder-payload.test.ts (7 tests) 8ms
+ ✓ tests/bottle-builder-components.test.ts (17 tests) 19ms
+ ✓ tests/mobile-pdp-models.test.ts (42 tests) 35ms
+ ✓ tests/bottle-builder.test.ts (28 tests) 25ms
+ ✓ tests/group-variant-intent.test.ts (11 tests) 6ms
+ ✓ tests/product-compatibility-matrix.test.ts (13 tests) 78ms
+ ✓ tests/bottle-builder-preview-registration.test.ts (11 tests) 5ms
+ ✓ tests/assembled-pdp-lower-stack.test.ts (6 tests) 5ms
+ ✓ tests/kit-frame.test.ts (3 tests) 3ms
+ ✓ tests/pdp-stage-frame.test.ts (11 tests) 6ms
+ ✓ tests/applicator-compatibility-rules.test.ts (6 tests) 3ms
+ ✓ tests/four-family-component-repair.test.ts (13 tests) 267ms
+ ✓ tests/pdp-selected-kit-truth.test.ts (2 tests) 3ms
+ ✓ tests/bottle-builder-preview-frame.test.ts (6 tests) 3ms
+ ✓ tests/bottle-builder-kits-hydrate.test.tsx (1 test) 15ms
+ ✓ tests/bottle-builder-preview-seat.test.tsx (1 test) 23ms
+ ✓ tests/bottle-builder-chooser-image.test.tsx (7 tests) 43ms
+ ✓ tests/pdp-stage-modes.test.ts (11 tests) 11ms
+
+ Test Files  20 passed (20)
+      Tests  210 passed (210)
+   Start at  17:27:42
+   Duration  2.26s (transform 900ms, setup 0ms, collect 4.07s, tests 570ms, environment 1.32s, prepare 1.15s)
+

@@ -1,0 +1,15 @@
+{
+ "release": "teardrop-kits-2026-09-19",
+ "ship": "ship Teardrop kit release 2026-09-19",
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:23.446Z",
+ "preparedBy": "reissue-kit-approval.mjs (Claude Opus 5)",
+ "preparedAt": "2026-09-19T12:37:23.447Z",
+ "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/teardrop-kits.jpg",
+ "skus": {
+  "GBTRDPClear": "d0c2b7136acaec8742664f8b0c5cc7aa168ad0fb0a7d93718a89e9f6ff3781fe"
+ },
+ "setAside": [],
+ "note": "Re-issued against the published plates. The set-aside rows keep their review; their kits must be re-cut from the plate that replaced the one they were registered to."
+}

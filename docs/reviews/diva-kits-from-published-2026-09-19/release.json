@@ -1,0 +1,115 @@
+{
+ "schemaVersion": 1,
+ "release": "diva-kits-2026-09-19",
+ "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/diva",
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:15.008Z",
+ "shipPhrase": "ship Diva kit release 2026-09-19",
+ "published": [
+  "https://precise-raccoon-123.convex.cloud"
+ ],
+ "counts": {
+  "extractedCandidates": 23,
+  "approved": 23,
+  "setAside": 0,
+  "notExtracted": 18
+ },
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/diva-kits.jpg",
+ "reviewSheetSha256": "f0a3e271ed8c15e5e70a2a3eb311f66eb91c52b5d12152777de83ce84d98b245",
+ "rows": [
+  {
+   "sku": "GBDiva100AnSpPnk",
+   "plateSha256": "43b5a231de1c1da34cf53cdd576b896866c764967ca13d06ed41fec7666107a8"
+  },
+  {
+   "sku": "GBDiva30RdcrBrwnLthr",
+   "plateSha256": "d48ff469dc095069d2670eef9d0ae6c46f5c0bf26df2549a066152369bc136c4"
+  },
+  {
+   "sku": "GBDiva46SpryCu",
+   "plateSha256": "0c97a75bb99a18c60b4b5c0c683b5f15725942222fe27392996ccc022f88bbe3"
+  },
+  {
+   "sku": "GBDiva46SpryMtGl",
+   "plateSha256": "be8e99b06889191503e5354b12e0673235646576d784cc6393b43fef75879377"
+  },
+  {
+   "sku": "GBDiva46SpryMtSl",
+   "plateSha256": "3ae6c6bd917c40182062718f2081221716f3e676370c530ad37298e605fdb6ee"
+  },
+  {
+   "sku": "GBDiva46SpryShnBlk",
+   "plateSha256": "e64fbb91d7789ca3ff7df4c145bc86c5b82cab4a0b4a7e69cc0932f86d5a5586"
+  },
+  {
+   "sku": "GBDiva46SpryShnGl",
+   "plateSha256": "def15443d3ce48b3bd9c31437594aeef7dd14fc95dc3961bcc28d020960b3d61"
+  },
+  {
+   "sku": "GBDiva46SpryShnSl",
+   "plateSha256": "0d049f4880de469c21fd15e1aef11ef3c3c7b901b94d6c1013784cb223a3606f"
+  },
+  {
+   "sku": "LBDiva100LtnCu",
+   "plateSha256": "efa60bf6016933360b215bc299999f2a93f1c7d20a7917b956d65f443b091a94"
+  },
+  {
+   "sku": "LBDiva100LtnMtGl",
+   "plateSha256": "9020795f58c411a1633bb430446df904ce0801d15122ba216b3d10420c236940"
+  },
+  {
+   "sku": "LBDiva100LtnMtSl",
+   "plateSha256": "7bd940d7bebde8c8c24ba78c14993217b43bcc069832a72b39364da09f4d8b28"
+  },
+  {
+   "sku": "LBDiva100LtnShnBlk",
+   "plateSha256": "410c75332829d1ab830cf9a3d193242d6858d1658e6c24f11d47478c3c3dae4f"
+  },
+  {
+   "sku": "LBDiva100LtnShnGl",
+   "plateSha256": "61b01c9523ba3b63bf2e3d0a57a9e69e4d8e612e7604c951d11fc256fa7fd7eb"
+  },
+  {
+   "sku": "LBDiva100LtnShnSl",
+   "plateSha256": "cadb3c4cff46f8e54fecb7a25c6d9217d36a0afccc9187e544d925a3a7702cf8"
+  },
+  {
+   "sku": "LBDiva30LtnMtGl",
+   "plateSha256": "ed1c23f239a6e3ff6516406b341f4580b6ffc0e8e9e4c1347a349525f42b88dc"
+  },
+  {
+   "sku": "LBDiva30LtnMtSl",
+   "plateSha256": "665a0f8e75d0d8a1fd930271d393dd0fb02844d0b3523a38082c7c8a128da730"
+  },
+  {
+   "sku": "LBDiva30LtnShnBlk",
+   "plateSha256": "429fce49f45dbc7c3592200fb4f939cf7eda95c63dc14fdd2a1467917fc0115d"
+  },
+  {
+   "sku": "LBDiva30LtnShnGl",
+   "plateSha256": "6d1fbc181bc84d391e2f079c954d1026b8b0b18e86949769a723314c7fcd742d"
+  },
+  {
+   "sku": "LBDiva30LtnShnSl",
+   "plateSha256": "625ab9b7a7652eeba75ae11a8426a04c2d9997840ced11225a341c97372d3d8b"
+  },
+  {
+   "sku": "LBDiva46LtnMtGl",
+   "plateSha256": "be8e99b06889191503e5354b12e0673235646576d784cc6393b43fef75879377"
+  },
+  {
+   "sku": "LBDiva46LtnMtSl",
+   "plateSha256": "3ae6c6bd917c40182062718f2081221716f3e676370c530ad37298e605fdb6ee"
+  },
+  {
+   "sku": "LBDiva46LtnShnBlk",
+   "plateSha256": "e64fbb91d7789ca3ff7df4c145bc86c5b82cab4a0b4a7e69cc0932f86d5a5586"
+  },
+  {
+   "sku": "LBDiva46LtnShnSl",
+   "plateSha256": "0d049f4880de469c21fd15e1aef11ef3c3c7b901b94d6c1013784cb223a3606f"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "064aed28075ae157004d123359d5299c0811d52132f73ed132308e4103bd3dd5"
+}

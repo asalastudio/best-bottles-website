@@ -1,0 +1,503 @@
+{
+ "schemaVersion": 1,
+ "release": "Legacy plates 2026-09-18",
+ "approvedAt": "2026-09-19T06:28:25.312Z",
+ "actor": "Jordan · approved in chat (\"I approve the 32\"), from the legacy and small-family contact sheets",
+ "approvalId": "d5f16fd4-9bdf-4e40-b173-4840bd8362c0",
+ "reviewPacket": "public/reviews/plate-completion-2026-09-18/legacy-new-plates.jpg",
+ "reviewPacketSha256": "90230be880fdc1d213f7664ed903f13b9ba448ebe4b99fc7b05a417e352fa31e",
+ "approvalFile": "dist/paper-doll/legacy-plates-2026-09-18/plates/manifest.json",
+ "approvalFileSha256": "610fa1ac27b5261cd0da5896c973c81486bb9f940d24afe040959eab2ff0afb2",
+ "visualApproved": true,
+ "legacySourcesAccepted": false,
+ "publicationAuthorized": false,
+ "indexingAuthorized": false,
+ "rows": [
+  {
+   "sku": "Alu100mlSprayBlack",
+   "graceSku": "AB-ALU-CLR-100ML-SPR-BLK",
+   "familyId": "aluminum-bottle-100ml-clear-20-410",
+   "closure": "Fine Mist Sprayer",
+   "plate": {
+    "key": "aluminum-bottle-100ml-clear-20-410/Alu100mlSprayBlack.front-on.webp",
+    "storeKey": "plates/aluminum-bottle-100ml-clear-20-410/Alu100mlSprayBlack/5394907887f8ec54a305053d988f2b414c0bb3c93d7e70e65b6451fb4e21ca24.front-on-1000x1100.webp",
+    "sha256": "5394907887f8ec54a305053d988f2b414c0bb3c93d7e70e65b6451fb4e21ca24",
+    "bytes": 18008,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "88f6f486c3b086d155bc02934a2b12ae2444446a9cd62aae7477ff2776065c29",
+    "bytes": 1128
+   },
+   "capOff": null,
+   "source": {
+    "library": "legacy-exact",
+    "path": "https://www.bestbottles.com/images/store/enlarged_pics/Alu100mlSprayBlack.gif",
+    "sha256": "73e729a87bff407525d3b5e461fb07954186ae0d4113731a965602804d3a1f79"
+   }
+  },
+  {
+   "sku": "Alu500",
+   "graceSku": "AB-ALU-CLR-500ML",
+   "familyId": "aluminum-bottle-500ml-clear-20-410",
+   "closure": null,
+   "plate": {
+    "key": "aluminum-bottle-500ml-clear-20-410/Alu500.front-on.webp",
+    "storeKey": "plates/aluminum-bottle-500ml-clear-20-410/Alu500/cd1d9d9a86a6aa5b52bb95ed49b3553c93c66bd1d50ea04fab8074f6e4b8c181.front-on-1000x1100.webp",
+    "sha256": "cd1d9d9a86a6aa5b52bb95ed49b3553c93c66bd1d50ea04fab8074f6e4b8c181",
+    "bytes": 26018,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "78943eb5d0b36c61b8cf1c309959d1f97489fa6eb031ef244a418d7c4b11e1dd",
+    "bytes": 1990
+   },
+   "capOff": null,
+   "source": {
+    "library": "legacy-exact",
+    "path": "https://www.bestbottles.com/images/store/enlarged_pics/Alu500.gif",
+    "sha256": "89d78e71c6ac78ef74c4aba31fa158639aefa74082367f03b3c0e546569ac915"
+   }
+  },
+  {
+   "sku": "CJAmb30BlkCap",
+   "graceSku": "CJ-JAR-AMB-30ML-BLK",
+   "familyId": "cream-jar-30ml-amber-45mm",
+   "closure": null,
+   "plate": {
+    "key": "cream-jar-30ml-amber-45mm/CJAmb30BlkCap.front-on.webp",
+    "storeKey": "plates/cream-jar-30ml-amber-45mm/CJAmb30BlkCap/3a959166bd706e1d849fdf4d49e63d8ca474af71c6835f064a2f75cb02c8a284.front-on-1000x1100.webp",
+    "sha256": "3a959166bd706e1d849fdf4d49e63d8ca474af71c6835f064a2f75cb02c8a284",
+    "bytes": 22150,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "fab7a7f20556394117ae76c02b5a100aea93ccd0fe1e730dbf04ad0024efe2c7",
+    "bytes": 2218
+   },
+   "capOff": null,
+   "source": {
+    "library": "legacy-exact",
+    "path": "https://www.bestbottles.com/images/store/enlarged_pics/CJAmb30BlkCap.gif",
+    "sha256": "54c0df57f96ec800efabde5621645f5f00403f14e7cfe242a2eef56679caef7e"
+   }
+  },
+  {
+   "sku": "GB1mlVWht",
+   "graceSku": "GB-VIA-CLR-1ML-WHT-T",
+   "familyId": "vial-1ml-clear-plug",
+   "closure": null,
+   "plate": {
+    "key": "vial-1ml-clear-plug/GB1mlVWht.front-on.webp",
+    "storeKey": "plates/vial-1ml-clear-plug/GB1mlVWht/09c34146402aad062f01e207193574e036cf5f2c46a6a33f95d5c4af472af35f.front-on-1000x1100.webp",
+    "sha256": "09c34146402aad062f01e207193574e036cf5f2c46a6a33f95d5c4af472af35f",
+    "bytes": 16616,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "b60aaa7e00e244b2be3752be174bbbb9eece72798f9e32cfd7ea949cdad05970",
+    "bytes": 1374
+   },
+   "capOff": null,
+   "source": {
+    "library": "legacy-exact",
+    "path": "https://www.bestbottles.com/images/store/enlarged_pics/GB1mlVWht.gif",
+    "sha256": "d017ff829c2d982e91b50500c6c77ad2917a2ff0a891378bf9f1a32c2a3d959e"
+   }
+  },
+  {
+   "sku": "GBBell10BlkShSht",
+   "graceSku": "GB-BEL-CLR-10ML-SHT-SBLK",
+   "familyId": "bell-10ml-clear-13-415",
+   "closure": "Cap/Closure",
+   "plate": {
+    "key": "bell-10ml-clear-13-415/GBBell10BlkShSht.front-on.webp",
+    "storeKey": "plates/bell-10ml-clear-13-415/GBBell10BlkShSht/a2f20e8dd12788fbc9685ea6e03f7414223b2b6d7e705a703f16c776899b78b2.front-on-1000x1100.webp",
+    "sha256": "a2f20e8dd12788fbc9685ea6e03f7414223b2b6d7e705a703f16c776899b78b2",
+    "bytes": 37094,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "001acbf46f4a4ad6a6337373d49d244ee19f0c65e11ada87ca0a894874803fb9",
+    "bytes": 3480
+   },
+   "capOff": null,
+   "source": {
+    "library": "legacy-exact",
+    "path": "https://www.bestbottles.com/images/store/enlarged_pics/GBBell10BlkShSht.gif",
+    "sha256": "4221a9b3cf027458679d23548310cb0fc862286690dfde710389f1c587485fbc"
+   }
+  },
+  {
+   "sku": "GBBell10MtlRollBlkDot",
+   "graceSku": "GB-BEL-CLR-10ML-MRL-BLDOT",
+   "familyId": "bell-10ml-clear-13-415",
+   "closure": "Metal Roller Ball",
+   "plate": {
+    "key": "bell-10ml-clear-13-415/GBBell10MtlRollBlkDot.front-on.webp",
+    "storeKey": "plates/bell-10ml-clear-13-415/GBBell10MtlRollBlkDot/671b209d9eb22915e4d0b79f350de9d93fb40fb81c1d40664afa667c6f997f7f.front-on-1000x1100.webp",
+    "sha256": "671b209d9eb22915e4d0b79f350de9d93fb40fb81c1d40664afa667c6f997f7f",
+    "bytes": 36928,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "252a322070fd372d5aaaf917f6a9cc653bea0579fbdd9cb6a6aa765f3445f444",
+    "bytes": 3634
+   },
+   "capOff": null,
+   "source": {
+    "library": "legacy-exact",
+    "path": "https://www.bestbottles.com/images/store/enlarged_pics/GBBell10MtlRollBlkDot.gif",
+    "sha256": "58b2f7ce6161caa0f483b154795ee363b9d61a104e14a131c3b22dc90ab3261f"
+   }
+  },
+  {
+   "sku": "GBBell10RollBlkDot",
+   "graceSku": "GB-BEL-CLR-10ML-ROL-BLDOT",
+   "familyId": "bell-10ml-clear-13-415",
+   "closure": "Plastic Roller Ball",
+   "plate": {
+    "key": "bell-10ml-clear-13-415/GBBell10RollBlkDot.front-on.webp",
+    "storeKey": "plates/bell-10ml-clear-13-415/GBBell10RollBlkDot/b9d61c13fb220f87292ff7af5b0e859562ec310fd4928b2286d37c39c3438097.front-on-1000x1100.webp",
+    "sha256": "b9d61c13fb220f87292ff7af5b0e859562ec310fd4928b2286d37c39c3438097",
+    "bytes": 36488,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "a6b4fdba6b00ed621f21fb035e8c5ee81abb4f2616f17e08548a8b3cfb6a7e4c",
+    "bytes": 3454
+   },
+   "capOff": null,
+   "source": {
+    "library": "legacy-exact",
+    "path": "https://www.bestbottles.com/images/store/enlarged_pics/GBBell10RollBlkDot.gif",
+    "sha256": "26d8385cdbbb1c082f0e10cd6a802180d753ffe2216576b8ad77648c07296fbe"
+   }
+  },
+  {
+   "sku": "GBBell10SpryBlkSh",
+   "graceSku": "GB-BEL-CLR-10ML-SPR-SBLK",
+   "familyId": "bell-10ml-clear-13-415",
+   "closure": "Fine Mist Sprayer",
+   "plate": {
+    "key": "bell-10ml-clear-13-415/GBBell10SpryBlkSh.front-on.webp",
+    "storeKey": "plates/bell-10ml-clear-13-415/GBBell10SpryBlkSh/59694973073d4f76e6e7ea9fbc7b916fd172a466100c4bb79bb5edbba2c2bb3e.front-on-1000x1100.webp",
+    "sha256": "59694973073d4f76e6e7ea9fbc7b916fd172a466100c4bb79bb5edbba2c2bb3e",
+    "bytes": 31998,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "21b2a7161877908b597199cf73d68214978c4f6933a673090c80574c50add517",
+    "bytes": 2646
+   },
+   "capOff": null,
+   "source": {
+    "library": "legacy-exact",
+    "path": "https://www.bestbottles.com/images/store/enlarged_pics/GBBell10SpryBlkSh.gif",
+    "sha256": "8e2f666af7b0627c95711b63994ffa2974c811948ef676df0536bf5f2dc75c1e"
+   }
+  },
+  {
+   "sku": "GBElg15MinarCu",
+   "graceSku": "GB-ELG-CLR-15ML-MNR-MCPR",
+   "familyId": "elegant-15ml-clear-13-415",
+   "closure": "Cap/Closure",
+   "plate": {
+    "key": "elegant-15ml-clear-13-415/GBElg15MinarCu.front-on.webp",
+    "storeKey": "plates/elegant-15ml-clear-13-415/GBElg15MinarCu/1e0d5725a326631a906325f6af32a3ae663b9111b66659c028f378dfff0e841c.front-on-1000x1100.webp",
+    "sha256": "1e0d5725a326631a906325f6af32a3ae663b9111b66659c028f378dfff0e841c",
+    "bytes": 27792,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "128278d3ccc247a6b33d1ea3cd22d0a8100ffa3eef5c6b9ba9a85281c2f390c4",
+    "bytes": 2900
+   },
+   "capOff": null,
+   "source": {
+    "library": "legacy-exact",
+    "path": "https://www.bestbottles.com/images/store/enlarged_pics/GBElg15MinarCu.gif",
+    "sha256": "7afe10f88b3e095be8c36fb7683acdf3991d7da4c0c2fee95883e8093da6637c"
+   }
+  },
+  {
+   "sku": "GBPillar9BlkShSht",
+   "graceSku": "GB-PIL-CLR-9ML-CAP-BLK",
+   "familyId": "pillar-9ml-clear-13-415",
+   "closure": "N/A",
+   "plate": {
+    "key": "pillar-9ml-clear-13-415/GBPillar9BlkShSht.front-on.webp",
+    "storeKey": "plates/pillar-9ml-clear-13-415/GBPillar9BlkShSht/a596eadf1c266b2beb4fcc23cc54473eb9321d0c2fdc4de0e887c503a4392de0.front-on-1000x1100.webp",
+    "sha256": "a596eadf1c266b2beb4fcc23cc54473eb9321d0c2fdc4de0e887c503a4392de0",
+    "bytes": 20858,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "5a87b4782163ed421bcff0f2615fe61ce0a6db20246b110d778cc9e6e56205e5",
+    "bytes": 2116
+   },
+   "capOff": null,
+   "source": {
+    "library": "legacy-exact",
+    "path": "https://www.bestbottles.com/images/store/enlarged_pics/GBPillar9BlkShSht.gif",
+    "sha256": "b1bf33b3bf5ba1a00fa217d6e5f3a0910f34c01f99f40055b6803167342eb254"
+   }
+  },
+  {
+   "sku": "GBPillar9MtlRollBlkdot",
+   "graceSku": "GB-PIL-CLR-9ML-MRL-BDOT",
+   "familyId": "pillar-9ml-clear-13-415",
+   "closure": "N/A",
+   "plate": {
+    "key": "pillar-9ml-clear-13-415/GBPillar9MtlRollBlkdot.front-on.webp",
+    "storeKey": "plates/pillar-9ml-clear-13-415/GBPillar9MtlRollBlkdot/08a5448334da97a36f25e21a677d87f5ae0246512eb517170a62c8dea0d6b599.front-on-1000x1100.webp",
+    "sha256": "08a5448334da97a36f25e21a677d87f5ae0246512eb517170a62c8dea0d6b599",
+    "bytes": 23414,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "cc30761c9f6f3d05ac15ef71aeb127f7a016602fb90990ab80f96b85b5f82a6f",
+    "bytes": 2536
+   },
+   "capOff": null,
+   "source": {
+    "library": "legacy-exact",
+    "path": "https://www.bestbottles.com/images/store/enlarged_pics/GBPillar9MtlRollBlkdot.gif",
+    "sha256": "db7b5bdc96c984852497de9ea4e2d67ef77419cf6665797736cc9161e998a739"
+   }
+  },
+  {
+   "sku": "GBPillar9RollBlkDot",
+   "graceSku": "GB-PIL-CLR-9ML-RBL-BDOT",
+   "familyId": "pillar-9ml-clear-13-415",
+   "closure": "N/A",
+   "plate": {
+    "key": "pillar-9ml-clear-13-415/GBPillar9RollBlkDot.front-on.webp",
+    "storeKey": "plates/pillar-9ml-clear-13-415/GBPillar9RollBlkDot/1f89a63a038cc66115205e89e9acf148333fe3ce18f45732f7d8177e8bd87dce.front-on-1000x1100.webp",
+    "sha256": "1f89a63a038cc66115205e89e9acf148333fe3ce18f45732f7d8177e8bd87dce",
+    "bytes": 22660,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "dc38a14c67ec75bb2a2ae07b1e29eb7421bd8e99f21da56f0e9931d8a86c972e",
+    "bytes": 2412
+   },
+   "capOff": null,
+   "source": {
+    "library": "legacy-exact",
+    "path": "https://www.bestbottles.com/images/store/enlarged_pics/GBPillar9RollBlkDot.gif",
+    "sha256": "7bd31ad9431cd6d386210e3f4f0f1f270bd24b2d99c8279d0eec708216bc3a73"
+   }
+  },
+  {
+   "sku": "GBPillar9SpryBlkMatt",
+   "graceSku": "GB-PIL-CLR-9ML-SPR-MBLK",
+   "familyId": "pillar-9ml-clear-17-415",
+   "closure": "Fine Mist Sprayer",
+   "plate": {
+    "key": "pillar-9ml-clear-17-415/GBPillar9SpryBlkMatt.front-on.webp",
+    "storeKey": "plates/pillar-9ml-clear-17-415/GBPillar9SpryBlkMatt/92d0a2a278835eeebb99f19b18885bce03c405da1bd84421299525e31dc2280a.front-on-1000x1100.webp",
+    "sha256": "92d0a2a278835eeebb99f19b18885bce03c405da1bd84421299525e31dc2280a",
+    "bytes": 19858,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "360f8778de3b34cf3ac040499fb2a7b77b4a90fea2c5b7637b7ec1c0f7f71faf",
+    "bytes": 1770
+   },
+   "capOff": null,
+   "source": {
+    "library": "legacy-exact",
+    "path": "https://www.bestbottles.com/images/store/enlarged_pics/GBPillar9SpryBlkMatt.gif",
+    "sha256": "2df525cd4dc9de648dbc72ef8b0805f5cc87b0e3d2e25e767a068557190fdde5"
+   }
+  },
+  {
+   "sku": "GBRndFrst128SpryShnSl",
+   "graceSku": "GB-RND-FRS-128ML-SPR-SSLV",
+   "familyId": "round-128ml-frosted-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "round-128ml-frosted-18-415/GBRndFrst128SpryShnSl.front-on.webp",
+    "storeKey": "plates/round-128ml-frosted-18-415/GBRndFrst128SpryShnSl/d3e27b897554ac4a95cbe829f110408eda7c0200d7a9f1d3ffc0f37c1a914185.front-on-1000x1100.webp",
+    "sha256": "d3e27b897554ac4a95cbe829f110408eda7c0200d7a9f1d3ffc0f37c1a914185",
+    "bytes": 16252,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "65d8c207f174c0c0c52e48652dc210c4e9923b49b1f2b0e767c11787d89ecfc3",
+    "bytes": 1676
+   },
+   "capOff": null,
+   "source": {
+    "library": "legacy-exact",
+    "path": "https://www.bestbottles.com/images/store/enlarged_pics/GBRndFrst128SpryShnSl.gif",
+    "sha256": "d753be95dbdad340808ce96f1ea44e444d3d2b7dbc2b281554aec9f2e75a984d"
+   }
+  },
+  {
+   "sku": "GBVBlu1o9BlackCapSht",
+   "graceSku": "GB-VIA-BLU-3ML-BLK-S",
+   "familyId": "vial-3ml-blue-13-425",
+   "closure": null,
+   "plate": {
+    "key": "vial-3ml-blue-13-425/GBVBlu1o9BlackCapSht.front-on.webp",
+    "storeKey": "plates/vial-3ml-blue-13-425/GBVBlu1o9BlackCapSht/c42d2b267261ad134e2d205dd2f15cdce01df7a42f8c3cfca5ee96372695719f.front-on-1000x1100.webp",
+    "sha256": "c42d2b267261ad134e2d205dd2f15cdce01df7a42f8c3cfca5ee96372695719f",
+    "bytes": 34364,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "6ef6205ae3b92f10e712ba1334937671125ab271bfe87c25bcabd24d37110c62",
+    "bytes": 3506
+   },
+   "capOff": null,
+   "source": {
+    "library": "legacy-exact",
+    "path": "https://www.bestbottles.com/images/store/enlarged_pics/GBVBlu1o9BlackCapSht.gif",
+    "sha256": "4ed61c67863bb6be86842dd3c5104139e8a4a77439d214a68a7cfaf6f4ad5691"
+   }
+  },
+  {
+   "sku": "GBVGreen2o4BlackCapSht",
+   "graceSku": "GB-VIA-CLR-3ML-GRN-S",
+   "familyId": "vial-3ml-green-13-425",
+   "closure": null,
+   "plate": {
+    "key": "vial-3ml-green-13-425/GBVGreen2o4BlackCapSht.front-on.webp",
+    "storeKey": "plates/vial-3ml-green-13-425/GBVGreen2o4BlackCapSht/a1f0517e643f9321aad8d32313187490d5176e6348f1391ea37dc90a6faae16d.front-on-1000x1100.webp",
+    "sha256": "a1f0517e643f9321aad8d32313187490d5176e6348f1391ea37dc90a6faae16d",
+    "bytes": 35576,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "930c9e417d3ab4040091824005be7ffda5beecd112fa48103e998aba3327cdfc",
+    "bytes": 3810
+   },
+   "capOff": null,
+   "source": {
+    "library": "legacy-exact",
+    "path": "https://www.bestbottles.com/images/store/enlarged_pics/GBVGreen2o4BlackCapSht.gif",
+    "sha256": "4001d6be79dc7c055d4a2a55d1cfb9e2b82c4b555c5262874a6fe5b3b4b78322"
+   }
+  },
+  {
+   "sku": "GBVGreen2o4WhtCapSht",
+   "graceSku": "GB-GRN-GRN-20ML",
+   "familyId": "vial-3ml-green-13-425",
+   "closure": null,
+   "plate": {
+    "key": "vial-3ml-green-13-425/GBVGreen2o4WhtCapSht.front-on.webp",
+    "storeKey": "plates/vial-3ml-green-13-425/GBVGreen2o4WhtCapSht/e576f4e2437bfbcaf5853ab6c53ab36172d3262318cb3ef1a6b11203d23084a3.front-on-1000x1100.webp",
+    "sha256": "e576f4e2437bfbcaf5853ab6c53ab36172d3262318cb3ef1a6b11203d23084a3",
+    "bytes": 31014,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "166be3af200efdbaf2f552f8bffaf41249375c4933c05db71b46701a83d62e38",
+    "bytes": 3210
+   },
+   "capOff": null,
+   "source": {
+    "library": "legacy-exact",
+    "path": "https://www.bestbottles.com/images/store/enlarged_pics/GBVGreen2o4WhtCapSht.gif",
+    "sha256": "f0fbc19723181f7e152038c17a2edc576298c8c1a7abf5b2c7302d6b9aa1034b"
+   }
+  },
+  {
+   "sku": "LBRndFrst128LtnClOvrCap",
+   "graceSku": "LB-RND-FRS-128ML-LPM-CLR",
+   "familyId": "round-128ml-frosted-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "round-128ml-frosted-18-415/LBRndFrst128LtnClOvrCap.front-on.webp",
+    "storeKey": "plates/round-128ml-frosted-18-415/LBRndFrst128LtnClOvrCap/fccd03efcf4e53e4ca69e1807ead9b762d848cda62beb10176172266d79e2660.front-on-1000x1100.webp",
+    "sha256": "fccd03efcf4e53e4ca69e1807ead9b762d848cda62beb10176172266d79e2660",
+    "bytes": 12598,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "9b3260af388718d685024235b597cc26d27db177d503fe0e47c52a1a718fb4d1",
+    "bytes": 1236
+   },
+   "capOff": null,
+   "source": {
+    "library": "legacy-exact",
+    "path": "https://www.bestbottles.com/images/store/enlarged_pics/LBRndFrst128LtnClOvrCap.gif",
+    "sha256": "0d9cd3fe8b00da0f4de722e401de58ab027d5ff97f6380ccf1c77748c488aaa8"
+   }
+  },
+  {
+   "sku": "LBRndFrst128LtnShnSl",
+   "graceSku": "LB-RND-FRS-128ML-LPM-SSLV",
+   "familyId": "round-128ml-frosted-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "round-128ml-frosted-18-415/LBRndFrst128LtnShnSl.front-on.webp",
+    "storeKey": "plates/round-128ml-frosted-18-415/LBRndFrst128LtnShnSl/85f3cd7a238060d63e4f58e8c9438891df117d748ebd65e69abefe8a9d3f7a21.front-on-1000x1100.webp",
+    "sha256": "85f3cd7a238060d63e4f58e8c9438891df117d748ebd65e69abefe8a9d3f7a21",
+    "bytes": 12648,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "240b8c274ee73925509e04464f160630ab42711287e0804e6ec8e5a11148f321",
+    "bytes": 1300
+   },
+   "capOff": null,
+   "source": {
+    "library": "legacy-exact",
+    "path": "https://www.bestbottles.com/images/store/enlarged_pics/LBRndFrst128LtnShnSl.gif",
+    "sha256": "b589039388fbe83af637bb31e255f2550c563128c7f0551f43b9a099a35cb025"
+   }
+  },
+  {
+   "sku": "PB1ozSprySl",
+   "graceSku": "CMP-SPR-SLV-",
+   "familyId": "plastic-bottle-30ml-clear-13-415",
+   "closure": "Fine Mist Sprayer",
+   "plate": {
+    "key": "plastic-bottle-30ml-clear-13-415/PB1ozSprySl.front-on.webp",
+    "storeKey": "plates/plastic-bottle-30ml-clear-13-415/PB1ozSprySl/1a9905f80b676b763218be5b5084e9e1301ac91327dffdaac7ca1770d65133c0.front-on-1000x1100.webp",
+    "sha256": "1a9905f80b676b763218be5b5084e9e1301ac91327dffdaac7ca1770d65133c0",
+    "bytes": 13950,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "90bb66843e72e487375fecb94444150c156da551912346e96eda115f65723558",
+    "bytes": 1388
+   },
+   "capOff": null,
+   "source": {
+    "library": "legacy-exact",
+    "path": "https://www.bestbottles.com/images/store/enlarged_pics/PB1ozSprySl.gif",
+    "sha256": "2543693be53cb72ce7a393426436afe9f3375a69b0b385f6d72221f92512397c"
+   }
+  }
+ ],
+ "scope": {
+  "renderedInBatch": 20,
+  "alreadyLiveAndExcluded": 0
+ },
+ "frontSourcePins": [],
+ "note": "Approves the rendered plate bytes after review. Publishing is a separate step and needs a release-specific ship phrase."
+}

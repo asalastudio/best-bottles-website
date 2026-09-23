@@ -1,0 +1,2443 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-09-13T15:13:12.202017+00:00",
+  "note": "Exact local release outputs and review/decision records. Restoring files never publishes, indexes, or grants approval. Original master PSDs remain in BB-PSD-Files-Master. No secrets or master PSD binaries are archived here.",
+  "files": [
+    {
+      "restorePath": "data/asset-ledger/boston-approved-source-plan.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/653b7eebd25c63f11193c4a29fe35de98f77894dfc1ef8e2bd7da2fea83f3f77.json",
+      "sha256": "653b7eebd25c63f11193c4a29fe35de98f77894dfc1ef8e2bd7da2fea83f3f77",
+      "bytes": 82296
+    },
+    {
+      "restorePath": "data/asset-ledger/boston-completion-decisions.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/94438df6b08b79017cd1c6b6f97173c04ce5b037582c1ae6f6aad41e660302a8.json",
+      "sha256": "94438df6b08b79017cd1c6b6f97173c04ce5b037582c1ae6f6aad41e660302a8",
+      "bytes": 851094
+    },
+    {
+      "restorePath": "data/asset-ledger/boston-kit-intake.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/3b89a7f94df3bc8637daa15be504fc83eabdda7a33d8aba7b3e1bb38e7793ba2.json",
+      "sha256": "3b89a7f94df3bc8637daa15be504fc83eabdda7a33d8aba7b3e1bb38e7793ba2",
+      "bytes": 170015
+    },
+    {
+      "restorePath": "data/asset-ledger/boston-kit-pilot.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/3d87f4bd1100d6e068281a79db703e702e96299c407fdeb3b6d48973e719556a.json",
+      "sha256": "3d87f4bd1100d6e068281a79db703e702e96299c407fdeb3b6d48973e719556a",
+      "bytes": 41046
+    },
+    {
+      "restorePath": "data/asset-ledger/boston-plate-completion.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/3dba278e1d97a844e41fbbae5b4a5f129d17665fb3ce40355ddf74ac06b7efae.json",
+      "sha256": "3dba278e1d97a844e41fbbae5b4a5f129d17665fb3ce40355ddf74ac06b7efae",
+      "bytes": 557150
+    },
+    {
+      "restorePath": "data/asset-ledger/boston-plate-contact-decisions.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/a3310df6fbfffa4db44ce8f098557f95d0dd7181c4adda87186dc1414cd4f320.json",
+      "sha256": "a3310df6fbfffa4db44ce8f098557f95d0dd7181c4adda87186dc1414cd4f320",
+      "bytes": 165977
+    },
+    {
+      "restorePath": "data/asset-ledger/boston-plate-contact-sheet.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/8cdb737f9479eee0a7d1e4a027c68635fd56b0a98bb96eae4e74be437dafde8b.json",
+      "sha256": "8cdb737f9479eee0a7d1e4a027c68635fd56b0a98bb96eae4e74be437dafde8b",
+      "bytes": 152851
+    },
+    {
+      "restorePath": "data/asset-ledger/boston-source-approvals.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/4e0b9f54db67f94e00f0ab135128014f74261ca47e5d1b33bb01eebc16ff0755.json",
+      "sha256": "4e0b9f54db67f94e00f0ab135128014f74261ca47e5d1b33bb01eebc16ff0755",
+      "bytes": 33931
+    },
+    {
+      "restorePath": "data/asset-ledger/boston-source-recovery.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/031d7b5a17b7d411002955bad3badb96fe98dc57b6b8fb20c268196465b7aa3b.json",
+      "sha256": "031d7b5a17b7d411002955bad3badb96fe98dc57b6b8fb20c268196465b7aa3b",
+      "bytes": 142700
+    },
+    {
+      "restorePath": "data/asset-ledger/bottle-standards.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/45326ffda8e2a52d34167a9b269ca5e86f0c51a9c69e0179dff8a7febc461af3.json",
+      "sha256": "45326ffda8e2a52d34167a9b269ca5e86f0c51a9c69e0179dff8a7febc461af3",
+      "bytes": 67489
+    },
+    {
+      "restorePath": "data/asset-ledger/cylinder-approved-capoff-sources.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/a90cc90a69646d77da1a215ff23798072f984c291d4d5745b2749af6dd2b57ce.json",
+      "sha256": "a90cc90a69646d77da1a215ff23798072f984c291d4d5745b2749af6dd2b57ce",
+      "bytes": 41232
+    },
+    {
+      "restorePath": "data/asset-ledger/cylinder-capoff-final-decisions.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5a32c80bc63304d66a0fd39c2b8a06b609478d124e1b5d3f97de86ebf74fdeb1.json",
+      "sha256": "5a32c80bc63304d66a0fd39c2b8a06b609478d124e1b5d3f97de86ebf74fdeb1",
+      "bytes": 26210
+    },
+    {
+      "restorePath": "data/asset-ledger/cylinder-final38-decisions.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/2ee4c7dd9fc9c22d2f31745430860b2820fb910845e575518e545f594666cf2c.json",
+      "sha256": "2ee4c7dd9fc9c22d2f31745430860b2820fb910845e575518e545f594666cf2c",
+      "bytes": 41433
+    },
+    {
+      "restorePath": "data/asset-ledger/family-plate-decisions/cylinder.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/7ca33fd68167baf3393bdf2a28e41d22c086ef33ca558a612030a15ba200fbd9.json",
+      "sha256": "7ca33fd68167baf3393bdf2a28e41d22c086ef33ca558a612030a15ba200fbd9",
+      "bytes": 2549776
+    },
+    {
+      "restorePath": "data/asset-ledger/family-plate-sheets/cylinder.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c76f648b6aacf22488daf4add1895795088763412b1dea3a6142aeb0170563f1.json",
+      "sha256": "c76f648b6aacf22488daf4add1895795088763412b1dea3a6142aeb0170563f1",
+      "bytes": 678474
+    },
+    {
+      "restorePath": "data/asset-ledger/final-image-candidates.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5fb26bb359e88aeb9a382e66756abdae0422fa7b5c9fa61a4d30f91e3eb99dee.json",
+      "sha256": "5fb26bb359e88aeb9a382e66756abdae0422fa7b5c9fa61a4d30f91e3eb99dee",
+      "bytes": 2198
+    },
+    {
+      "restorePath": "data/asset-ledger/local-plate-evidence.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/3d01cabdff233a7edd0fa5dac09fa116bee31a55b12e169b2a634ba0e37cd547.json",
+      "sha256": "3d01cabdff233a7edd0fa5dac09fa116bee31a55b12e169b2a634ba0e37cd547",
+      "bytes": 71598
+    },
+    {
+      "restorePath": "data/asset-ledger/plate-scope-dispositions.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/523bd4550331238d0d8697743d0aa14e55a853c8affcc6fce029f3e5e875034d.json",
+      "sha256": "523bd4550331238d0d8697743d0aa14e55a853c8affcc6fce029f3e5e875034d",
+      "bytes": 5200
+    },
+    {
+      "restorePath": "data/asset-ledger/review-collections.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/19bcf4cc022c723f2a7164ffb4eb6f9ba09a34d12b809cf7361bd958b37d7743.json",
+      "sha256": "19bcf4cc022c723f2a7164ffb4eb6f9ba09a34d12b809cf7361bd958b37d7743",
+      "bytes": 24484
+    },
+    {
+      "restorePath": "data/asset-ledger/unresolved-size-findings.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/b12d5bdda1490ef558b921fe36d26a185e4d178c97b6efcce2b76a6684d7f969.json",
+      "sha256": "b12d5bdda1490ef558b921fe36d26a185e4d178c97b6efcce2b76a6684d7f969",
+      "bytes": 73110
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/manifest.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/28ec0d00573fe04b65fb5fc1044fa36c35cb0c62da5ebde4673d7dd2e3f35848.json",
+      "sha256": "28ec0d00573fe04b65fb5fc1044fa36c35cb0c62da5ebde4673d7dd2e3f35848",
+      "bytes": 208531
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-amber-18-400/GBBstnAmb15mlBlkCapSht.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/42e5c3f961b646eb83fedbb9b1179eaf7f4fb72e8f3c36f740e5d372094b2448.webp",
+      "sha256": "42e5c3f961b646eb83fedbb9b1179eaf7f4fb72e8f3c36f740e5d372094b2448",
+      "bytes": 2806
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-amber-18-400/GBBstnAmb15mlBlkCapSht.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/e43e797f3a97ed1de1cbcf72a0c0dc428b8652bf6d93b12e10b9b25f8453b55f.webp",
+      "sha256": "e43e797f3a97ed1de1cbcf72a0c0dc428b8652bf6d93b12e10b9b25f8453b55f",
+      "bytes": 206570
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-amber-18-400/GBBstnAmb15mlBlkCapSht.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/88a6dedd59601b5f4a9d7814ae9fce3cee7ab29fc39847e3490f8b1624d0e2ba.webp",
+      "sha256": "88a6dedd59601b5f4a9d7814ae9fce3cee7ab29fc39847e3490f8b1624d0e2ba",
+      "bytes": 2258
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-amber-18-400/GBBstnAmb15mlBlkCapSht.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/dc175053dba5da16972af4a76f3824484491dba8acd8287dc153637df1004168.webp",
+      "sha256": "dc175053dba5da16972af4a76f3824484491dba8acd8287dc153637df1004168",
+      "bytes": 182240
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-clear-18-400/GBBstn15BlkCapSht.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/fee9a07378981f0c19d95b6ac74c1e5dca7a16913cbcb9d727229d0d2fef46d0.webp",
+      "sha256": "fee9a07378981f0c19d95b6ac74c1e5dca7a16913cbcb9d727229d0d2fef46d0",
+      "bytes": 2512
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-clear-18-400/GBBstn15BlkCapSht.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/398ba898b90ee279b980dbcb05e0c2bce079a019cee342abd730a6837730262a.webp",
+      "sha256": "398ba898b90ee279b980dbcb05e0c2bce079a019cee342abd730a6837730262a",
+      "bytes": 199154
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-clear-18-400/GBBstn15BlkCapSht.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/db9a80b2e9e39e8ddb31dd9290fd4d599b61e461dc449506cea652d3895bee37.webp",
+      "sha256": "db9a80b2e9e39e8ddb31dd9290fd4d599b61e461dc449506cea652d3895bee37",
+      "bytes": 2132
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-clear-18-400/GBBstn15BlkCapSht.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/cf53147c7cedde10e6154507dd6bb559fe0850111513ab481af9d09cd884d3c8.webp",
+      "sha256": "cf53147c7cedde10e6154507dd6bb559fe0850111513ab481af9d09cd884d3c8",
+      "bytes": 184176
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-clear-18-400/GBBstn15BlkDrp.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/e9d08248cdaa4e804164563b25ddf47270b9b1bb27766fb1c3f3fde0cb8f0a05.webp",
+      "sha256": "e9d08248cdaa4e804164563b25ddf47270b9b1bb27766fb1c3f3fde0cb8f0a05",
+      "bytes": 2436
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-clear-18-400/GBBstn15BlkDrp.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/9c65426d4ff1542ff37cf78d045cc2cf62df94e88a26329bc6d4cb23764ee79c.webp",
+      "sha256": "9c65426d4ff1542ff37cf78d045cc2cf62df94e88a26329bc6d4cb23764ee79c",
+      "bytes": 223912
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15BlkCapSht.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/30342594d3498d89d58b81361f683ddc2360b5c02304374b1186f2d2454ec8e6.webp",
+      "sha256": "30342594d3498d89d58b81361f683ddc2360b5c02304374b1186f2d2454ec8e6",
+      "bytes": 2922
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15BlkCapSht.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/29d048c20884a9f68935f6857d4585be8aa9c7196d0c841a63451022ce1883de.webp",
+      "sha256": "29d048c20884a9f68935f6857d4585be8aa9c7196d0c841a63451022ce1883de",
+      "bytes": 234476
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15BlkCapSht.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/55c4a5aca01efb173d0f30ba23f16e49de26f0a5c3abde8e7c481a1f8f7f2f58.webp",
+      "sha256": "55c4a5aca01efb173d0f30ba23f16e49de26f0a5c3abde8e7c481a1f8f7f2f58",
+      "bytes": 2356
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15BlkCapSht.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/35e1222c65215c3f779c9083e6da16a45235778f2cde4c9d7c3b66be61480484.webp",
+      "sha256": "35e1222c65215c3f779c9083e6da16a45235778f2cde4c9d7c3b66be61480484",
+      "bytes": 207452
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15BlkDrpr.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/fd6b061cf09452f4c3ae61e5be0094a59334400a8e7d524a9a2a78685db8b5bc.webp",
+      "sha256": "fd6b061cf09452f4c3ae61e5be0094a59334400a8e7d524a9a2a78685db8b5bc",
+      "bytes": 2522
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15BlkDrpr.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/97abc7b374f8d56dd11be846a7c482fa64a24d869219126ba082b61f8657a9e2.webp",
+      "sha256": "97abc7b374f8d56dd11be846a7c482fa64a24d869219126ba082b61f8657a9e2",
+      "bytes": 238054
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15BlkDrprGlTrim.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/a576d00600a0db5ae9b8ab6eae8f8c03a9c2fceacad70cc98a0665e66cb94bfe.webp",
+      "sha256": "a576d00600a0db5ae9b8ab6eae8f8c03a9c2fceacad70cc98a0665e66cb94bfe",
+      "bytes": 2780
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15BlkDrprGlTrim.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/41dbe631293965471c6ab8e75064d6628a575445cc308e068c2b4da53c994691.webp",
+      "sha256": "41dbe631293965471c6ab8e75064d6628a575445cc308e068c2b4da53c994691",
+      "bytes": 252632
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15WhtDrpr.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/bb7226264914fa887e863c359e96b6962704c4e89dd5abb8304a0f0624ddd17d.webp",
+      "sha256": "bb7226264914fa887e863c359e96b6962704c4e89dd5abb8304a0f0624ddd17d",
+      "bytes": 2280
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15WhtDrpr.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/7782b3e777e4b7939824a4fed23c8e06f0a421bbd3cf5fc198be1e433337b8d8.webp",
+      "sha256": "7782b3e777e4b7939824a4fed23c8e06f0a421bbd3cf5fc198be1e433337b8d8",
+      "bytes": 214862
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15WhtDrprGlTrim.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c0c458fa344f07c66a7d02d005a3fa753edb4a45fd09836666d7a82136d713b0.webp",
+      "sha256": "c0c458fa344f07c66a7d02d005a3fa753edb4a45fd09836666d7a82136d713b0",
+      "bytes": 2712
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15WhtDrprGlTrim.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/485e8f3749c330c0f935c0f7cc54c32f7657ea5340b3d5d141e6f0631a41a4c0.webp",
+      "sha256": "485e8f3749c330c0f935c0f7cc54c32f7657ea5340b3d5d141e6f0631a41a4c0",
+      "bytes": 245886
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15WhtDrprSlTrim.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/cfe010b79f714ed9691900279cf0ba0b3c7234a5298422600f10c4c81a4501cf.webp",
+      "sha256": "cfe010b79f714ed9691900279cf0ba0b3c7234a5298422600f10c4c81a4501cf",
+      "bytes": 2452
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15WhtDrprSlTrim.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/457dad7e863f884944e4bcbffd8e2741f9321b0b0c09b0d1e045d1e1462e21df.webp",
+      "sha256": "457dad7e863f884944e4bcbffd8e2741f9321b0b0c09b0d1e045d1e1462e21df",
+      "bytes": 239370
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozBlkCapSht.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/0671901036180610ee5fc0bba2a7d49cd04d499ca0ee8483ae88ed7082c27c6b.webp",
+      "sha256": "0671901036180610ee5fc0bba2a7d49cd04d499ca0ee8483ae88ed7082c27c6b",
+      "bytes": 2852
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozBlkCapSht.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/6ec6cd8ba3152648b8faa7b29313e4846f1bff99a2be84ede4d0f36040e78039.webp",
+      "sha256": "6ec6cd8ba3152648b8faa7b29313e4846f1bff99a2be84ede4d0f36040e78039",
+      "bytes": 266480
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozBlkCapSht.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/7aa67aaa41a715091caefd6ac9bc5f30b9229f7decde758327dd51c7c51de191.webp",
+      "sha256": "7aa67aaa41a715091caefd6ac9bc5f30b9229f7decde758327dd51c7c51de191",
+      "bytes": 2390
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozBlkCapSht.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/298187ee36407e3777d4af0196833b08eb97d99051dcb2380bcf84b6fd207e44.webp",
+      "sha256": "298187ee36407e3777d4af0196833b08eb97d99051dcb2380bcf84b6fd207e44",
+      "bytes": 246290
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozBlkDrpShnGl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/0710d1976e0efeb922da4704aa69e7ca9f5f47afe4a4e1b2f8c2af1624ddf519.webp",
+      "sha256": "0710d1976e0efeb922da4704aa69e7ca9f5f47afe4a4e1b2f8c2af1624ddf519",
+      "bytes": 2796
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozBlkDrpShnGl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/eede7f75bcc91a119549097d5ae4ff297af552a3fa4b6b43cfebd56458b1117b.webp",
+      "sha256": "eede7f75bcc91a119549097d5ae4ff297af552a3fa4b6b43cfebd56458b1117b",
+      "bytes": 284504
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonGl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c6ccac213afd277214987bc195e5c629d14ae55ef64a59cf0022d81de0ea2c5d.webp",
+      "sha256": "c6ccac213afd277214987bc195e5c629d14ae55ef64a59cf0022d81de0ea2c5d",
+      "bytes": 3606
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonGl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/f9a15670ca9d6dded33dbd8b979740c2c53f37155f81c5bd2666b56207e5937f.webp",
+      "sha256": "f9a15670ca9d6dded33dbd8b979740c2c53f37155f81c5bd2666b56207e5937f",
+      "bytes": 365254
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonGl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/96ab1a2ad255ec37e881becce25968cd8b61f9c01911ed11f4a7c5adbf74c50f.webp",
+      "sha256": "96ab1a2ad255ec37e881becce25968cd8b61f9c01911ed11f4a7c5adbf74c50f",
+      "bytes": 2460
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonGl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/9be7c2b1ee158ec85c61382679be654f9664b42672720d029af46019d768fc1d.webp",
+      "sha256": "9be7c2b1ee158ec85c61382679be654f9664b42672720d029af46019d768fc1d",
+      "bytes": 300114
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonShnSl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/1fa1916a16e3e3da5c467027419e062f0950adf0dac854778bf4d06ac7b4f1e5.webp",
+      "sha256": "1fa1916a16e3e3da5c467027419e062f0950adf0dac854778bf4d06ac7b4f1e5",
+      "bytes": 3316
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonShnSl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/80a5a402951e0f4778bf532172092cbd7bc3a247a5c2e1b2f662d254009e1f5c.webp",
+      "sha256": "80a5a402951e0f4778bf532172092cbd7bc3a247a5c2e1b2f662d254009e1f5c",
+      "bytes": 301434
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonShnSl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/3fdb5b83cf47234ad1f2c6bbcdb51017422e07325e18b9371789c98634f3c226.webp",
+      "sha256": "3fdb5b83cf47234ad1f2c6bbcdb51017422e07325e18b9371789c98634f3c226",
+      "bytes": 2120
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonShnSl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/fe0d86ec7dd51a6c6079d113d3879dab56f15493f033c3d2d270dfe49dd1acee.webp",
+      "sha256": "fe0d86ec7dd51a6c6079d113d3879dab56f15493f033c3d2d270dfe49dd1acee",
+      "bytes": 233276
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozWhtDrprShnSlTrim.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/e107f54c5661a027650aac6bf79b612a93804504497200ee29d2e20829fc3c21.webp",
+      "sha256": "e107f54c5661a027650aac6bf79b612a93804504497200ee29d2e20829fc3c21",
+      "bytes": 2538
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozWhtDrprShnSlTrim.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/49fd3c9ed236b8488a6ef1af2c289177ed62d47d530911ee3c517bababde2f11.webp",
+      "sha256": "49fd3c9ed236b8488a6ef1af2c289177ed62d47d530911ee3c517bababde2f11",
+      "bytes": 274178
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozBlkCapSht.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/dea137864a1cbf6bec0055cb918286ef73b6dace365da3f92985dc59e916a482.webp",
+      "sha256": "dea137864a1cbf6bec0055cb918286ef73b6dace365da3f92985dc59e916a482",
+      "bytes": 2604
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozBlkCapSht.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c60da424ac8fca2dba750e4ebe533f3142f7a381866d797d5422288850e7c4e0.webp",
+      "sha256": "c60da424ac8fca2dba750e4ebe533f3142f7a381866d797d5422288850e7c4e0",
+      "bytes": 228238
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozBlkCapSht.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c0a7f2b2787cef15a81d3359f8d626b1063807cf9940649622eb3f4decd563a5.webp",
+      "sha256": "c0a7f2b2787cef15a81d3359f8d626b1063807cf9940649622eb3f4decd563a5",
+      "bytes": 2280
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozBlkCapSht.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/f6c79efe149e59031cfdf39405346e6fe2c1b278843fcf79a7056c126f650c8e.webp",
+      "sha256": "f6c79efe149e59031cfdf39405346e6fe2c1b278843fcf79a7056c126f650c8e",
+      "bytes": 214928
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonGl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/e57de026408414382bfd669239100a79a42d1f98dbc200485567dbf0b097de00.webp",
+      "sha256": "e57de026408414382bfd669239100a79a42d1f98dbc200485567dbf0b097de00",
+      "bytes": 3440
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonGl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/565c55ffed9ae3d3230fe363ccdab1ee906403c4f2b6d6329ef2b56d26a58ae3.webp",
+      "sha256": "565c55ffed9ae3d3230fe363ccdab1ee906403c4f2b6d6329ef2b56d26a58ae3",
+      "bytes": 326438
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonGl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5286a6f2d22ba46d679bff5b6e03f2ef03c34ed0a92887d18777e4502aa84604.webp",
+      "sha256": "5286a6f2d22ba46d679bff5b6e03f2ef03c34ed0a92887d18777e4502aa84604",
+      "bytes": 2324
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonGl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/e957b986e6a00483eab649a0b78049f95d2b7c160f0956b49b70b8c35a67fbd5.webp",
+      "sha256": "e957b986e6a00483eab649a0b78049f95d2b7c160f0956b49b70b8c35a67fbd5",
+      "bytes": 271328
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonMattBlk.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/fca79f2725827a66992c826cf18d1369d65c00b520db507c4dd5ab5397587086.webp",
+      "sha256": "fca79f2725827a66992c826cf18d1369d65c00b520db507c4dd5ab5397587086",
+      "bytes": 2958
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonMattBlk.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/858ddff7fdb5266b232d8353d218c5240db4162af72be7d75a0dd1290b6da85b.webp",
+      "sha256": "858ddff7fdb5266b232d8353d218c5240db4162af72be7d75a0dd1290b6da85b",
+      "bytes": 262252
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonMattBlk.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/6f30754172124dcbae72a680420dad4e594dbb465911a6ea019da98dda619b7c.webp",
+      "sha256": "6f30754172124dcbae72a680420dad4e594dbb465911a6ea019da98dda619b7c",
+      "bytes": 1922
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonMattBlk.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/4d6a124492e706bb5ac125cc5878657b30d408e05f06a6faac0ef920cbb76d61.webp",
+      "sha256": "4d6a124492e706bb5ac125cc5878657b30d408e05f06a6faac0ef920cbb76d61",
+      "bytes": 203564
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonMattGl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d221f6346101cde334649eb5a5ca2ad3ca4b5e6c7d998480e02c4a04eb66873a.webp",
+      "sha256": "d221f6346101cde334649eb5a5ca2ad3ca4b5e6c7d998480e02c4a04eb66873a",
+      "bytes": 3038
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonMattGl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/979b668e105d8c24fa101fa4fc5ffc4b760b72424d0e46e82433b65e2a1331ca.webp",
+      "sha256": "979b668e105d8c24fa101fa4fc5ffc4b760b72424d0e46e82433b65e2a1331ca",
+      "bytes": 322786
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonMattGl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/470bfb0bd7a88b5ca33b717e4a17d2ff809aa83783aabd4b15530ff67869ac56.webp",
+      "sha256": "470bfb0bd7a88b5ca33b717e4a17d2ff809aa83783aabd4b15530ff67869ac56",
+      "bytes": 2054
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonMattGl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/2b7b878aeccf671fc969db6487739f54bc5427ba2e6251031c8a09f571f9a6ea.webp",
+      "sha256": "2b7b878aeccf671fc969db6487739f54bc5427ba2e6251031c8a09f571f9a6ea",
+      "bytes": 269196
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonMattSl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d574609e126270d39fdd06bcf84102d409ba49f9e6002d587aacf65d194abebf.webp",
+      "sha256": "d574609e126270d39fdd06bcf84102d409ba49f9e6002d587aacf65d194abebf",
+      "bytes": 2866
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonMattSl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/74b48554ea9fb9d026693bcba7a1a1c1ded219b9a961b425910976cc2ce13a1f.webp",
+      "sha256": "74b48554ea9fb9d026693bcba7a1a1c1ded219b9a961b425910976cc2ce13a1f",
+      "bytes": 260696
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonMattSl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/9733c6e77e745de36987571accd6d20bb75bd50b8296e5d081fb5801e3dbfe1c.webp",
+      "sha256": "9733c6e77e745de36987571accd6d20bb75bd50b8296e5d081fb5801e3dbfe1c",
+      "bytes": 1864
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonMattSl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5281a79a8bb61fe83fcd82fa1da127db364656b27cbf86f6a020abdeef9ff93c.webp",
+      "sha256": "5281a79a8bb61fe83fcd82fa1da127db364656b27cbf86f6a020abdeef9ff93c",
+      "bytes": 205180
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonMattBlk.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c52c3a8d4d32a63669bd28710c825b0b23fb8298c51f46ae30144ef0da914b59.webp",
+      "sha256": "c52c3a8d4d32a63669bd28710c825b0b23fb8298c51f46ae30144ef0da914b59",
+      "bytes": 2804
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonMattBlk.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/4e69c3b65936ba0caa56db4873a5ce4b64dc403235cf15fb8fa67ea0d6ff65a5.webp",
+      "sha256": "4e69c3b65936ba0caa56db4873a5ce4b64dc403235cf15fb8fa67ea0d6ff65a5",
+      "bytes": 251720
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonMattBlk.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/6f30754172124dcbae72a680420dad4e594dbb465911a6ea019da98dda619b7c.webp",
+      "sha256": "6f30754172124dcbae72a680420dad4e594dbb465911a6ea019da98dda619b7c",
+      "bytes": 1922
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonMattBlk.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/4d6a124492e706bb5ac125cc5878657b30d408e05f06a6faac0ef920cbb76d61.webp",
+      "sha256": "4d6a124492e706bb5ac125cc5878657b30d408e05f06a6faac0ef920cbb76d61",
+      "bytes": 203564
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonMattGl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/3b7b35b2702b60a90f814b8d6c39a0011d30e9ef28e17d1e73dcdf7e63f2ca2b.webp",
+      "sha256": "3b7b35b2702b60a90f814b8d6c39a0011d30e9ef28e17d1e73dcdf7e63f2ca2b",
+      "bytes": 2888
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonMattGl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/7af346e51dc546d381ea20c002244c3c1bebbc050b34082e2d3a0837cadea58f.webp",
+      "sha256": "7af346e51dc546d381ea20c002244c3c1bebbc050b34082e2d3a0837cadea58f",
+      "bytes": 312832
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonMattGl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/470bfb0bd7a88b5ca33b717e4a17d2ff809aa83783aabd4b15530ff67869ac56.webp",
+      "sha256": "470bfb0bd7a88b5ca33b717e4a17d2ff809aa83783aabd4b15530ff67869ac56",
+      "bytes": 2054
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonMattGl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/2b7b878aeccf671fc969db6487739f54bc5427ba2e6251031c8a09f571f9a6ea.webp",
+      "sha256": "2b7b878aeccf671fc969db6487739f54bc5427ba2e6251031c8a09f571f9a6ea",
+      "bytes": 269196
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonMattSl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/84146b5edfcc599f66b125fd2c1a5d0a866335f8033f09ec4d1c4921d335c8dc.webp",
+      "sha256": "84146b5edfcc599f66b125fd2c1a5d0a866335f8033f09ec4d1c4921d335c8dc",
+      "bytes": 2722
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonMattSl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d788c43ab7728f81eb61f99a9e4b25a05034db20120b9be1e6e3e6cfcd2d43dc.webp",
+      "sha256": "d788c43ab7728f81eb61f99a9e4b25a05034db20120b9be1e6e3e6cfcd2d43dc",
+      "bytes": 252868
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonMattSl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/9733c6e77e745de36987571accd6d20bb75bd50b8296e5d081fb5801e3dbfe1c.webp",
+      "sha256": "9733c6e77e745de36987571accd6d20bb75bd50b8296e5d081fb5801e3dbfe1c",
+      "bytes": 1864
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonMattSl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5281a79a8bb61fe83fcd82fa1da127db364656b27cbf86f6a020abdeef9ff93c.webp",
+      "sha256": "5281a79a8bb61fe83fcd82fa1da127db364656b27cbf86f6a020abdeef9ff93c",
+      "bytes": 205180
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonShBlk.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d1c87bd006c121a5bd96f7e8673bc4c6d11e04ba29a3cc23aa2045f5caf2a7b6.webp",
+      "sha256": "d1c87bd006c121a5bd96f7e8673bc4c6d11e04ba29a3cc23aa2045f5caf2a7b6",
+      "bytes": 2864
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonShBlk.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/7335a9369d000f3b3f4e02ada23a4b4289e41a2a789fa3c6e215dfc74aba8d38.webp",
+      "sha256": "7335a9369d000f3b3f4e02ada23a4b4289e41a2a789fa3c6e215dfc74aba8d38",
+      "bytes": 255834
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonShBlk.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/8248b7dc7a39a41a438ecdbf0e6889b281818db4a77d63046ecad19896af31af.webp",
+      "sha256": "8248b7dc7a39a41a438ecdbf0e6889b281818db4a77d63046ecad19896af31af",
+      "bytes": 1966
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonShBlk.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/7a99f7eb8222325c93d27e0bce026ec7d7e665f9ea9896a7be8f208e85b0db36.webp",
+      "sha256": "7a99f7eb8222325c93d27e0bce026ec7d7e665f9ea9896a7be8f208e85b0db36",
+      "bytes": 208104
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonShGl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/46685d676daa80c33d8cbc0dec113a6868e39bc7325f3e2bb1e722987964d769.webp",
+      "sha256": "46685d676daa80c33d8cbc0dec113a6868e39bc7325f3e2bb1e722987964d769",
+      "bytes": 3296
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonShGl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/4ba7c5ee5e3961152b219862f7df22c960affadc40a75950dcb31e4432df91a3.webp",
+      "sha256": "4ba7c5ee5e3961152b219862f7df22c960affadc40a75950dcb31e4432df91a3",
+      "bytes": 316696
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonShGl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5286a6f2d22ba46d679bff5b6e03f2ef03c34ed0a92887d18777e4502aa84604.webp",
+      "sha256": "5286a6f2d22ba46d679bff5b6e03f2ef03c34ed0a92887d18777e4502aa84604",
+      "bytes": 2324
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonShGl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/e957b986e6a00483eab649a0b78049f95d2b7c160f0956b49b70b8c35a67fbd5.webp",
+      "sha256": "e957b986e6a00483eab649a0b78049f95d2b7c160f0956b49b70b8c35a67fbd5",
+      "bytes": 271328
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonShnSl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/606ae17261df5da2a207cdcd491faf48881978b2652898d8b2e6af8503e091e6.webp",
+      "sha256": "606ae17261df5da2a207cdcd491faf48881978b2652898d8b2e6af8503e091e6",
+      "bytes": 2874
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonShnSl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/632b34343da14aa1e67eef41a5a27dedf9a51f3aa843db61eb40a6f0c1fe73c6.webp",
+      "sha256": "632b34343da14aa1e67eef41a5a27dedf9a51f3aa843db61eb40a6f0c1fe73c6",
+      "bytes": 248600
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonShnSl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5911e4e6750e486c0c7ee39cd799fea90da8014b5118e92a7c739329c61f78c0.webp",
+      "sha256": "5911e4e6750e486c0c7ee39cd799fea90da8014b5118e92a7c739329c61f78c0",
+      "bytes": 2012
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-clear-20-400/GBBstn1ozRollonShnSl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/59edd5501b3980e07249e486586a3772e97f8ee17ba2251ac88c6a166be44674.webp",
+      "sha256": "59edd5501b3980e07249e486586a3772e97f8ee17ba2251ac88c6a166be44674",
+      "bytes": 201856
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozBlkCapSht.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/19499b62d2e760f17f086b90ae6fd706bf37e0031d95577b36553424edc536e7.webp",
+      "sha256": "19499b62d2e760f17f086b90ae6fd706bf37e0031d95577b36553424edc536e7",
+      "bytes": 3028
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozBlkCapSht.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/688f43210c6523c29df6fcf1d32754b88d86a5b06205c84c6c437259b27b7d3e.webp",
+      "sha256": "688f43210c6523c29df6fcf1d32754b88d86a5b06205c84c6c437259b27b7d3e",
+      "bytes": 290074
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozBlkCapSht.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/64462de2166228783e9b899a5cd5b3c56e7fd0ce29384540c0b592c7408f06f1.webp",
+      "sha256": "64462de2166228783e9b899a5cd5b3c56e7fd0ce29384540c0b592c7408f06f1",
+      "bytes": 2540
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozBlkCapSht.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/7435f80070f18100a23ab7e2abe22ded67f38ba351fb781e76d0441268e634c4.webp",
+      "sha256": "7435f80070f18100a23ab7e2abe22ded67f38ba351fb781e76d0441268e634c4",
+      "bytes": 266102
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonGl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5506a9c0f12904d4867f5e1c3f4eeceba1e6fc15f94a7ee08617d674e4605cfe.webp",
+      "sha256": "5506a9c0f12904d4867f5e1c3f4eeceba1e6fc15f94a7ee08617d674e4605cfe",
+      "bytes": 3788
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonGl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c94ebb42865c6a3b3b3d837036da8756616e819fab16800459f349e62ebab8e3.webp",
+      "sha256": "c94ebb42865c6a3b3b3d837036da8756616e819fab16800459f349e62ebab8e3",
+      "bytes": 387698
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonGl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/1695a951996fb023c7a3f22deebd4ccd22b14e2447e31e9f9a0610cade8e6411.webp",
+      "sha256": "1695a951996fb023c7a3f22deebd4ccd22b14e2447e31e9f9a0610cade8e6411",
+      "bytes": 2612
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonGl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/f98a9eead00110061c6f932e12e4f8c4e2ae86b546ed6fbab751661e1dbd481e.webp",
+      "sha256": "f98a9eead00110061c6f932e12e4f8c4e2ae86b546ed6fbab751661e1dbd481e",
+      "bytes": 318962
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonMattSl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/2eac14e0fc20312123edbf206a9f9d86f4743e5c6c4243215ed89cb1e208c83e.webp",
+      "sha256": "2eac14e0fc20312123edbf206a9f9d86f4743e5c6c4243215ed89cb1e208c83e",
+      "bytes": 3364
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonMattSl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/49e123124beb11f7be24d7ea2fcd5d4ec57a5268dd0524e814f8d8c1f81894a1.webp",
+      "sha256": "49e123124beb11f7be24d7ea2fcd5d4ec57a5268dd0524e814f8d8c1f81894a1",
+      "bytes": 329852
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonMattSl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c820c18bae078b5c16312363d5bfbf95b452184f21edaf6e8099102575fed45a.webp",
+      "sha256": "c820c18bae078b5c16312363d5bfbf95b452184f21edaf6e8099102575fed45a",
+      "bytes": 2084
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonMattSl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/a7aca4642d16d4db5d0609f75da1c98ebe2c385d80d6bb24407b616ffb9bc450.webp",
+      "sha256": "a7aca4642d16d4db5d0609f75da1c98ebe2c385d80d6bb24407b616ffb9bc450",
+      "bytes": 259546
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonShnSl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/042f677099c963cd74e60c7816c4a2f8d6c364d2c3e11389343ce6d2288c3919.webp",
+      "sha256": "042f677099c963cd74e60c7816c4a2f8d6c364d2c3e11389343ce6d2288c3919",
+      "bytes": 3436
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonShnSl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/18ab0b6d7d645a64cc1408eabd5df03eeefd76481918be95f4820f1df5e1ada8.webp",
+      "sha256": "18ab0b6d7d645a64cc1408eabd5df03eeefd76481918be95f4820f1df5e1ada8",
+      "bytes": 323976
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonShnSl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/809e6f561f4c4976f8738b03f34eca152e5d4fd970143f693af81eca93fd312f.webp",
+      "sha256": "809e6f561f4c4976f8738b03f34eca152e5d4fd970143f693af81eca93fd312f",
+      "bytes": 2226
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonShnSl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/f2abb0662a7bb737fafba90a39c97c9b1f5c8909b3e735cc4f14267982f44f23.webp",
+      "sha256": "f2abb0662a7bb737fafba90a39c97c9b1f5c8909b3e735cc4f14267982f44f23",
+      "bytes": 252490
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonMattBlk.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/6e74f4a365961e3cf12269cbaf9a23c5a7a3d92280116e512cf24e0e366e162d.webp",
+      "sha256": "6e74f4a365961e3cf12269cbaf9a23c5a7a3d92280116e512cf24e0e366e162d",
+      "bytes": 3280
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonMattBlk.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/36a8c12e1ebae5ee9cd9618a3cc32053b44af66ceb73ab2af289738663edf732.webp",
+      "sha256": "36a8c12e1ebae5ee9cd9618a3cc32053b44af66ceb73ab2af289738663edf732",
+      "bytes": 317624
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonMattBlk.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/ca205ec1301c1c5c290dbbdb53b72ddd02a1e7d311c11c199722c44cbd657414.webp",
+      "sha256": "ca205ec1301c1c5c290dbbdb53b72ddd02a1e7d311c11c199722c44cbd657414",
+      "bytes": 2124
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonMattBlk.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/887194d0a724313d926749c3f9a28155f0027f980a929d6ca60d61d0a8b935a9.webp",
+      "sha256": "887194d0a724313d926749c3f9a28155f0027f980a929d6ca60d61d0a8b935a9",
+      "bytes": 257420
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonMattGl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/44461b08a359bd01ac68f6824fd0c99bc197b0fd7d7380403de2b9eac6a616e3.webp",
+      "sha256": "44461b08a359bd01ac68f6824fd0c99bc197b0fd7d7380403de2b9eac6a616e3",
+      "bytes": 3340
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonMattGl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/e3c791e580f3b4a71c479c1ebb9a050b8af930d479dac92d5751e17b1251eb1c.webp",
+      "sha256": "e3c791e580f3b4a71c479c1ebb9a050b8af930d479dac92d5751e17b1251eb1c",
+      "bytes": 371782
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonMattGl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/8fd7b707c61377497bb796f2e820bf4beae87088cbf350f3e36dddd74657cc2b.webp",
+      "sha256": "8fd7b707c61377497bb796f2e820bf4beae87088cbf350f3e36dddd74657cc2b",
+      "bytes": 2234
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonMattGl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/839514778eae32f72a03d372211af2d48058b10e435d3cc7c1db95cd0ff3249b.webp",
+      "sha256": "839514778eae32f72a03d372211af2d48058b10e435d3cc7c1db95cd0ff3249b",
+      "bytes": 317046
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonMattSl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5a731642633f780e0b85ed21b6a2149ab2c23061dcb93aee96c5c83e663fb414.webp",
+      "sha256": "5a731642633f780e0b85ed21b6a2149ab2c23061dcb93aee96c5c83e663fb414",
+      "bytes": 3234
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonMattSl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/3bff55fa24e760e6bb49ebe7f0ca5f45ad67db35f7d2c798b7fad0349fe414cf.webp",
+      "sha256": "3bff55fa24e760e6bb49ebe7f0ca5f45ad67db35f7d2c798b7fad0349fe414cf",
+      "bytes": 316918
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonMattSl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c820c18bae078b5c16312363d5bfbf95b452184f21edaf6e8099102575fed45a.webp",
+      "sha256": "c820c18bae078b5c16312363d5bfbf95b452184f21edaf6e8099102575fed45a",
+      "bytes": 2084
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonMattSl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/a7aca4642d16d4db5d0609f75da1c98ebe2c385d80d6bb24407b616ffb9bc450.webp",
+      "sha256": "a7aca4642d16d4db5d0609f75da1c98ebe2c385d80d6bb24407b616ffb9bc450",
+      "bytes": 259546
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozBlkCapSht.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/10dbb6670059e2b24beed1f277db1bd5e220e415834aa72b8e7f23aa02555beb.webp",
+      "sha256": "10dbb6670059e2b24beed1f277db1bd5e220e415834aa72b8e7f23aa02555beb",
+      "bytes": 2648
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozBlkCapSht.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/867bf3777d09b7451e7464420aca47bb6bfbef6e700a098d54b6baf8b071350d.webp",
+      "sha256": "867bf3777d09b7451e7464420aca47bb6bfbef6e700a098d54b6baf8b071350d",
+      "bytes": 275116
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozBlkCapSht.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/b093f2af216bc753ffe5a4a41b4148355e6d832138b677dfc0454f5d9b0dd369.webp",
+      "sha256": "b093f2af216bc753ffe5a4a41b4148355e6d832138b677dfc0454f5d9b0dd369",
+      "bytes": 2338
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozBlkCapSht.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/724d58572499cbd6e93f1bb82f481221c0d7e5d9f20d46010bcb057b5a2c629a.webp",
+      "sha256": "724d58572499cbd6e93f1bb82f481221c0d7e5d9f20d46010bcb057b5a2c629a",
+      "bytes": 258344
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozBlkDrpr.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/4bbf88fb917a17e6b027b3e13707b04483f2beb20e4415a0b660e49a17a26654.webp",
+      "sha256": "4bbf88fb917a17e6b027b3e13707b04483f2beb20e4415a0b660e49a17a26654",
+      "bytes": 2396
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozBlkDrpr.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/bdea3840bc26df410217a56087194c72aa4a4fa2d3fe3e8d66c39cbc563a2115.webp",
+      "sha256": "bdea3840bc26df410217a56087194c72aa4a4fa2d3fe3e8d66c39cbc563a2115",
+      "bytes": 293910
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozBlkDrprShnSlTrim.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/0b86ee891d1c31c87fdf1539f0d18c9dff75917f01c01fc2c001794db068dcaf.webp",
+      "sha256": "0b86ee891d1c31c87fdf1539f0d18c9dff75917f01c01fc2c001794db068dcaf",
+      "bytes": 2422
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozBlkDrprShnSlTrim.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/b5c53d07b91f1f5f981f5720346f532ed709b128df9de1718ba06229a5df12ab.webp",
+      "sha256": "b5c53d07b91f1f5f981f5720346f532ed709b128df9de1718ba06229a5df12ab",
+      "bytes": 283210
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonMattSl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/bc55f8ab0ef6456be8c6901e8f35384e40eb511628f54ce5f97661320e313117.webp",
+      "sha256": "bc55f8ab0ef6456be8c6901e8f35384e40eb511628f54ce5f97661320e313117",
+      "bytes": 2856
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonMattSl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/62f86c85074f3d362688a2047056d846ee1d1138ec4331b642dfc289da6b7c63.webp",
+      "sha256": "62f86c85074f3d362688a2047056d846ee1d1138ec4331b642dfc289da6b7c63",
+      "bytes": 306496
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonMattSl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5710a48ce4beabbe91567d8e28540693ef29e61c1a99269b82e8858618e4ccbf.webp",
+      "sha256": "5710a48ce4beabbe91567d8e28540693ef29e61c1a99269b82e8858618e4ccbf",
+      "bytes": 1934
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonMattSl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/acc2e36c3f4a65710bf14f448bb6ef741105e2ca8bb4a1f723a6649aa3b51eac.webp",
+      "sha256": "acc2e36c3f4a65710bf14f448bb6ef741105e2ca8bb4a1f723a6649aa3b51eac",
+      "bytes": 251668
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonShnSl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/11f95cf724358f953662b7b515e91efec924b8bc4dd1c8bf3e9412a8dde7f09f.webp",
+      "sha256": "11f95cf724358f953662b7b515e91efec924b8bc4dd1c8bf3e9412a8dde7f09f",
+      "bytes": 3004
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonShnSl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/80dddbc9b433f21c19aea38a08615e87631bb669c7c60f4a537e5feb862c82a9.webp",
+      "sha256": "80dddbc9b433f21c19aea38a08615e87631bb669c7c60f4a537e5feb862c82a9",
+      "bytes": 302988
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonShnSl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/095cd402e0e73cb7d9ee6d288e48c6e9ba779f9949a9d77f4eafc8028bff5b87.webp",
+      "sha256": "095cd402e0e73cb7d9ee6d288e48c6e9ba779f9949a9d77f4eafc8028bff5b87",
+      "bytes": 2016
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonShnSl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/097ba5812fc7c489abb2cba80c3c6c81bf9a2976330aef735eb96c7ed50ffb5e.webp",
+      "sha256": "097ba5812fc7c489abb2cba80c3c6c81bf9a2976330aef735eb96c7ed50ffb5e",
+      "bytes": 246900
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonGl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/b15718b4b80891b26b9a85b0766001c010cb986f2d8a99e21d136f303de1ec1c.webp",
+      "sha256": "b15718b4b80891b26b9a85b0766001c010cb986f2d8a99e21d136f303de1ec1c",
+      "bytes": 3114
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonGl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/85d59d3ee6e798a81b0fdb62f33265401c918bba83cf5fd97f8768379254f4db.webp",
+      "sha256": "85d59d3ee6e798a81b0fdb62f33265401c918bba83cf5fd97f8768379254f4db",
+      "bytes": 343820
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonGl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c56224214162b9d39fa5963f3b06e12c94f880b8787c3ba435f4b2283b9002c1.webp",
+      "sha256": "c56224214162b9d39fa5963f3b06e12c94f880b8787c3ba435f4b2283b9002c1",
+      "bytes": 2290
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonGl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d4f6a8359866d01a0ebcbfaf31bd67959df9b0636058a060215f57927057cabc.webp",
+      "sha256": "d4f6a8359866d01a0ebcbfaf31bd67959df9b0636058a060215f57927057cabc",
+      "bytes": 295622
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonMattBlk.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/6ca3877aa6fd6dd64e7e2f0bdcae222bf2ac9dc869df8b28b030d2ffdcc52f9a.webp",
+      "sha256": "6ca3877aa6fd6dd64e7e2f0bdcae222bf2ac9dc869df8b28b030d2ffdcc52f9a",
+      "bytes": 2870
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonMattBlk.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5fe2ce6f2aad84ffdb403ef8a8732a00ea454ad0470f6b82bf4c5774f4f90293.webp",
+      "sha256": "5fe2ce6f2aad84ffdb403ef8a8732a00ea454ad0470f6b82bf4c5774f4f90293",
+      "bytes": 298288
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonMattBlk.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/b7b6110e3b22dc9bad16d432ff55b50c2a55bc42c668e3fafbf217137833b9ac.webp",
+      "sha256": "b7b6110e3b22dc9bad16d432ff55b50c2a55bc42c668e3fafbf217137833b9ac",
+      "bytes": 1892
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonMattBlk.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/e32df289ad8ac2d971526288605620a372320799ecf2e3ef38375fab89f4c867.webp",
+      "sha256": "e32df289ad8ac2d971526288605620a372320799ecf2e3ef38375fab89f4c867",
+      "bytes": 248208
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonShnBlk.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/75529e515ec801ab71cf3d8932028cb92ca5375ffdf3993ba055ded83ded0fac.webp",
+      "sha256": "75529e515ec801ab71cf3d8932028cb92ca5375ffdf3993ba055ded83ded0fac",
+      "bytes": 2910
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonShnBlk.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d471e260fdadba5581016b8fa0cf0ea0608526b18cf088fd6abd0c8f88570f62.webp",
+      "sha256": "d471e260fdadba5581016b8fa0cf0ea0608526b18cf088fd6abd0c8f88570f62",
+      "bytes": 301338
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonShnBlk.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d6e3a4892e710c3bdd4e11bf5ad3d0475d97b76a58c24cc5d2e763049c60a57a.webp",
+      "sha256": "d6e3a4892e710c3bdd4e11bf5ad3d0475d97b76a58c24cc5d2e763049c60a57a",
+      "bytes": 1970
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonShnBlk.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5180f59e88271b954adefca18a2800dac850ea4bf4dbea557fb8c07c09190476.webp",
+      "sha256": "5180f59e88271b954adefca18a2800dac850ea4bf4dbea557fb8c07c09190476",
+      "bytes": 249902
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozWhtDrpr.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/24686108ef4042a531cdb58f69ca2dc94bf5751affb73a56dbcc14ace628c40c.webp",
+      "sha256": "24686108ef4042a531cdb58f69ca2dc94bf5751affb73a56dbcc14ace628c40c",
+      "bytes": 2176
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozWhtDrpr.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/0d88413b896801dbc72410b604d4dd69c569ff52a6db812e2335b016793880b3.webp",
+      "sha256": "0d88413b896801dbc72410b604d4dd69c569ff52a6db812e2335b016793880b3",
+      "bytes": 269548
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozBlkCapSht.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d87ab23a26008c0cd550f3a2adccb59fb2526de892ba7566b35c764b9a404a8e.webp",
+      "sha256": "d87ab23a26008c0cd550f3a2adccb59fb2526de892ba7566b35c764b9a404a8e",
+      "bytes": 2338
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozBlkCapSht.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/ba6556a68432c7c523a1068949bd9623dd7f9491f0120e780265aff26e48aca1.webp",
+      "sha256": "ba6556a68432c7c523a1068949bd9623dd7f9491f0120e780265aff26e48aca1",
+      "bytes": 230920
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozBlkCapSht.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/f0f17fc9eb1aa83a5f9bcc509d338536819411061213e5a42dcaad5d5411ba17.webp",
+      "sha256": "f0f17fc9eb1aa83a5f9bcc509d338536819411061213e5a42dcaad5d5411ba17",
+      "bytes": 2096
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozBlkCapSht.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/8a8a2489ea3d689d70eb9a18e1e69750656df041702fc9110a3a7257e956518c.webp",
+      "sha256": "8a8a2489ea3d689d70eb9a18e1e69750656df041702fc9110a3a7257e956518c",
+      "bytes": 220894
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozBlkDrpr.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/167dbcc70539319e222a1885f0a6b06b25c9c317287d5880e544273c3deeea31.webp",
+      "sha256": "167dbcc70539319e222a1885f0a6b06b25c9c317287d5880e544273c3deeea31",
+      "bytes": 2740
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozBlkDrpr.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/791e2a93680ad213d7b484bdad0767b7a3c34e2883d36b7c49b7a63976c9b6a9.webp",
+      "sha256": "791e2a93680ad213d7b484bdad0767b7a3c34e2883d36b7c49b7a63976c9b6a9",
+      "bytes": 292482
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozBlkDrprShnGlTrim.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5381245e585676055aad61b2aa8324bfd11390aa9266d7729a696a39cedfdd39.webp",
+      "sha256": "5381245e585676055aad61b2aa8324bfd11390aa9266d7729a696a39cedfdd39",
+      "bytes": 2866
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozBlkDrprShnGlTrim.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/6ec118c233d082dff05cc309dbae6e89f7b5c0394da6a80f50338ffc516ced5a.webp",
+      "sha256": "6ec118c233d082dff05cc309dbae6e89f7b5c0394da6a80f50338ffc516ced5a",
+      "bytes": 273560
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozBlkDrprShnSlTrim.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/09cbe02de581a49281147eae7a5846bfd2414371fce625b0b91062300ac57eb2.webp",
+      "sha256": "09cbe02de581a49281147eae7a5846bfd2414371fce625b0b91062300ac57eb2",
+      "bytes": 2714
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozBlkDrprShnSlTrim.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d8d93b599048b7f5829321c5cf4c75f12e39ad7d6585b19dbc8b9881fffedb4e.webp",
+      "sha256": "d8d93b599048b7f5829321c5cf4c75f12e39ad7d6585b19dbc8b9881fffedb4e",
+      "bytes": 275138
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollBlk.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/ac2ee5011a50aa5fb088fbdf2b781d6d873f24a8bddc82d671cc05821f49b082.webp",
+      "sha256": "ac2ee5011a50aa5fb088fbdf2b781d6d873f24a8bddc82d671cc05821f49b082",
+      "bytes": 2858
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollBlk.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/de4ad48ab7dc1bd1460779794a3a6f96ccbe9ed2d8b7038338af82f2fdd2aeaf.webp",
+      "sha256": "de4ad48ab7dc1bd1460779794a3a6f96ccbe9ed2d8b7038338af82f2fdd2aeaf",
+      "bytes": 267826
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollBlk.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5c8f617f3b4e65c4ea6b27519b58204204431cbf9ad5e7dc931d89f4f1b04df9.webp",
+      "sha256": "5c8f617f3b4e65c4ea6b27519b58204204431cbf9ad5e7dc931d89f4f1b04df9",
+      "bytes": 2038
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollBlk.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d5450dc686026312af4e70f8cb1174d70bff2e31b615f6fceeb2870ce5056244.webp",
+      "sha256": "d5450dc686026312af4e70f8cb1174d70bff2e31b615f6fceeb2870ce5056244",
+      "bytes": 220788
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollGl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d576651b9ffb8c7239dc596b9edfe8755050408210811a0d7e7c3ae667315a8f.webp",
+      "sha256": "d576651b9ffb8c7239dc596b9edfe8755050408210811a0d7e7c3ae667315a8f",
+      "bytes": 3164
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollGl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/17687446a9c7c9c08f8f29320ad324a1585aa01a43955914533986ff7c5dba58.webp",
+      "sha256": "17687446a9c7c9c08f8f29320ad324a1585aa01a43955914533986ff7c5dba58",
+      "bytes": 314660
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollGl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/ab5cd3498f26610e087765f161ca1cf176ccd7329169fcf4c17aa274410e12f5.webp",
+      "sha256": "ab5cd3498f26610e087765f161ca1cf176ccd7329169fcf4c17aa274410e12f5",
+      "bytes": 2378
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollGl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/b94f7cd59d80f3030ece72fa40f1488aaf1f693159d2494db56266ef785fdc7a.webp",
+      "sha256": "b94f7cd59d80f3030ece72fa40f1488aaf1f693159d2494db56266ef785fdc7a",
+      "bytes": 270652
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollMattBlk.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/4c3fabaa43f5a0559e61f15b91897925a3a7658cde43381b302961c8551ade0f.webp",
+      "sha256": "4c3fabaa43f5a0559e61f15b91897925a3a7658cde43381b302961c8551ade0f",
+      "bytes": 2814
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollMattBlk.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/410e3e793403a90a2181059c3b000418392a039f3cbda4ef7054cf63001280ca.webp",
+      "sha256": "410e3e793403a90a2181059c3b000418392a039f3cbda4ef7054cf63001280ca",
+      "bytes": 264404
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollMattBlk.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/3ffee6cf5c9db4ef0d0bb661c70a1e7f5d961a5789adb080befdc5156601a9f4.webp",
+      "sha256": "3ffee6cf5c9db4ef0d0bb661c70a1e7f5d961a5789adb080befdc5156601a9f4",
+      "bytes": 2042
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollMattBlk.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/556b0172825f4f47ab1e50094988da9298509aa23bc3c0656cc3195b1a206bb9.webp",
+      "sha256": "556b0172825f4f47ab1e50094988da9298509aa23bc3c0656cc3195b1a206bb9",
+      "bytes": 218788
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollMattGl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/f71d5f59eb5687a20fafb50e1d4a823e22bba65ff366f15d82a5f6c089a7cfe9.webp",
+      "sha256": "f71d5f59eb5687a20fafb50e1d4a823e22bba65ff366f15d82a5f6c089a7cfe9",
+      "bytes": 2906
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollMattGl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/f8075171e88a31b90e82a04ccbd53e3d1d3ba1e0a52e842d6f81edbc4becd40c.webp",
+      "sha256": "f8075171e88a31b90e82a04ccbd53e3d1d3ba1e0a52e842d6f81edbc4becd40c",
+      "bytes": 312020
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollMattGl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c362365d51aef8199d1e0727608d01aba5ee1dea2a4020c27b3d608fc957754f.webp",
+      "sha256": "c362365d51aef8199d1e0727608d01aba5ee1dea2a4020c27b3d608fc957754f",
+      "bytes": 2102
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollMattGl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/2b3a4ce3bda89464e4afdc97a2a39296da62eefb69f4438afc68e538e5e7397d.webp",
+      "sha256": "2b3a4ce3bda89464e4afdc97a2a39296da62eefb69f4438afc68e538e5e7397d",
+      "bytes": 267702
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollMattSl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/3bceed4399007d9a487fbae08e9b7cec99cfb1aab6dc5cffce2df984296b781c.webp",
+      "sha256": "3bceed4399007d9a487fbae08e9b7cec99cfb1aab6dc5cffce2df984296b781c",
+      "bytes": 2716
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollMattSl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d9711533cbba5adf58da3f6ec8ba8875ec21e8151f390a81a7f490076bc30dc7.webp",
+      "sha256": "d9711533cbba5adf58da3f6ec8ba8875ec21e8151f390a81a7f490076bc30dc7",
+      "bytes": 263672
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollMattSl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/760b9911fc7790adffdd7fa5e1a7b4f3b261b5f92218a5cb3a7e14852272facd.webp",
+      "sha256": "760b9911fc7790adffdd7fa5e1a7b4f3b261b5f92218a5cb3a7e14852272facd",
+      "bytes": 1934
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollMattSl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/de0d35a247be2fd43524796e8bde18fd33b5f5852a78de32d6c582d3a470325f.webp",
+      "sha256": "de0d35a247be2fd43524796e8bde18fd33b5f5852a78de32d6c582d3a470325f",
+      "bytes": 219618
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollShnSl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/4dc30f8936950083254d3a12bfb60262d1efbc4051c9e8f46db057e5e1021c10.webp",
+      "sha256": "4dc30f8936950083254d3a12bfb60262d1efbc4051c9e8f46db057e5e1021c10",
+      "bytes": 2896
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollShnSl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/2fe7a96445acaf988100375bd8c9df291fd4d8c8ef7ec674a5d04f316313103a.webp",
+      "sha256": "2fe7a96445acaf988100375bd8c9df291fd4d8c8ef7ec674a5d04f316313103a",
+      "bytes": 262692
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollShnSl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/402e5c08e6a0639123620fbb5fa5d6e4cd17d151e5cb597bd50d17dae50adfe0.webp",
+      "sha256": "402e5c08e6a0639123620fbb5fa5d6e4cd17d151e5cb597bd50d17dae50adfe0",
+      "bytes": 2118
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozMtlRollShnSl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/123ba06d412f58b56b9dba23f02cebbba5869b0b61dbaa46287d8aded84b700f.webp",
+      "sha256": "123ba06d412f58b56b9dba23f02cebbba5869b0b61dbaa46287d8aded84b700f",
+      "bytes": 216538
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollGl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/84e6dd74baacdb8d16127e424c36aa2ee42efe00c7a2f1941b552ed106464063.webp",
+      "sha256": "84e6dd74baacdb8d16127e424c36aa2ee42efe00c7a2f1941b552ed106464063",
+      "bytes": 3086
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollGl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/fa2b6892d9e28a77f05a82c39b761e17bc5cc4f7027a2dfffd2cb51e8c94d518.webp",
+      "sha256": "fa2b6892d9e28a77f05a82c39b761e17bc5cc4f7027a2dfffd2cb51e8c94d518",
+      "bytes": 307686
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollGl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c1217b8fa46e8f9a8bffb5221d74938dd470896999041edf51217f449c309121.webp",
+      "sha256": "c1217b8fa46e8f9a8bffb5221d74938dd470896999041edf51217f449c309121",
+      "bytes": 2366
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollGl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/ccefab3aa81950170034e50cf441e050470f246907ed85461b5e435e9e71f850.webp",
+      "sha256": "ccefab3aa81950170034e50cf441e050470f246907ed85461b5e435e9e71f850",
+      "bytes": 270306
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollMattBlk.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/8bf04cd0b249736e300232001af8c6e8f445af0fb54f5bad05589dc9458db8c9.webp",
+      "sha256": "8bf04cd0b249736e300232001af8c6e8f445af0fb54f5bad05589dc9458db8c9",
+      "bytes": 2696
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollMattBlk.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/1f8fae2c174fd69b7e4cfd3044689ecb5b25ec94d1bab22e5674566dada93ef3.webp",
+      "sha256": "1f8fae2c174fd69b7e4cfd3044689ecb5b25ec94d1bab22e5674566dada93ef3",
+      "bytes": 256312
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollMattBlk.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/3ffee6cf5c9db4ef0d0bb661c70a1e7f5d961a5789adb080befdc5156601a9f4.webp",
+      "sha256": "3ffee6cf5c9db4ef0d0bb661c70a1e7f5d961a5789adb080befdc5156601a9f4",
+      "bytes": 2042
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollMattBlk.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/556b0172825f4f47ab1e50094988da9298509aa23bc3c0656cc3195b1a206bb9.webp",
+      "sha256": "556b0172825f4f47ab1e50094988da9298509aa23bc3c0656cc3195b1a206bb9",
+      "bytes": 218788
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollMattSl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5e89cf828aefec249ee0a81a1c202fb6c5326b16fac6255f7fd4cdae4d7efc75.webp",
+      "sha256": "5e89cf828aefec249ee0a81a1c202fb6c5326b16fac6255f7fd4cdae4d7efc75",
+      "bytes": 2626
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollMattSl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/9e6d4dd42f8a9dd92e3e8436f93a3738c4f2421b9d4d1386e7785d80e26c80c9.webp",
+      "sha256": "9e6d4dd42f8a9dd92e3e8436f93a3738c4f2421b9d4d1386e7785d80e26c80c9",
+      "bytes": 255494
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollMattSl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/760b9911fc7790adffdd7fa5e1a7b4f3b261b5f92218a5cb3a7e14852272facd.webp",
+      "sha256": "760b9911fc7790adffdd7fa5e1a7b4f3b261b5f92218a5cb3a7e14852272facd",
+      "bytes": 1934
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollMattSl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/de0d35a247be2fd43524796e8bde18fd33b5f5852a78de32d6c582d3a470325f.webp",
+      "sha256": "de0d35a247be2fd43524796e8bde18fd33b5f5852a78de32d6c582d3a470325f",
+      "bytes": 219618
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollShnBlk.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/021388f52bff7c6ea43516a82ec70fe0e01bb2202cc3d0078b693518bb75f28a.webp",
+      "sha256": "021388f52bff7c6ea43516a82ec70fe0e01bb2202cc3d0078b693518bb75f28a",
+      "bytes": 2762
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollShnBlk.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/e1b6c556dc02829b94a3a13b4fe60f3a3029d2ffa7c319c4f9d817c46c424bf5.webp",
+      "sha256": "e1b6c556dc02829b94a3a13b4fe60f3a3029d2ffa7c319c4f9d817c46c424bf5",
+      "bytes": 259304
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollShnBlk.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5c8f617f3b4e65c4ea6b27519b58204204431cbf9ad5e7dc931d89f4f1b04df9.webp",
+      "sha256": "5c8f617f3b4e65c4ea6b27519b58204204431cbf9ad5e7dc931d89f4f1b04df9",
+      "bytes": 2038
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollShnBlk.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d5450dc686026312af4e70f8cb1174d70bff2e31b615f6fceeb2870ce5056244.webp",
+      "sha256": "d5450dc686026312af4e70f8cb1174d70bff2e31b615f6fceeb2870ce5056244",
+      "bytes": 220788
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollShnSl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/6610d39a2f07d7de8351aa0f3fb3cef2ae4f17423bfa2e2e37be7ba45ec11f39.webp",
+      "sha256": "6610d39a2f07d7de8351aa0f3fb3cef2ae4f17423bfa2e2e37be7ba45ec11f39",
+      "bytes": 2764
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollShnSl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/190f5a9d6664d4245f7f946ee760844b1588690a3c53580f319907b3b8f7bc21.webp",
+      "sha256": "190f5a9d6664d4245f7f946ee760844b1588690a3c53580f319907b3b8f7bc21",
+      "bytes": 253672
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollShnSl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/8d96536030876f2b6bbb0c474a5da94f711d2e6ef8c0d86b1214e99ed973582b.webp",
+      "sha256": "8d96536030876f2b6bbb0c474a5da94f711d2e6ef8c0d86b1214e99ed973582b",
+      "bytes": 2066
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollShnSl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/7e108a83cd184a7da117d1bbeff18193606bb17d87a4bb4cf09f25f797d3d5a8.webp",
+      "sha256": "7e108a83cd184a7da117d1bbeff18193606bb17d87a4bb4cf09f25f797d3d5a8",
+      "bytes": 217016
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollonMattGl.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/7cda9acba60f990b7870651f6ed109ea09393979b3c14a1ee26a6b63547628fe.webp",
+      "sha256": "7cda9acba60f990b7870651f6ed109ea09393979b3c14a1ee26a6b63547628fe",
+      "bytes": 2810
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollonMattGl.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/fd491335dfb858d18eeb74f87ad581f13ee976d3b41cfafbc5ddedad6bc81156.webp",
+      "sha256": "fd491335dfb858d18eeb74f87ad581f13ee976d3b41cfafbc5ddedad6bc81156",
+      "bytes": 304880
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollonMattGl.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c362365d51aef8199d1e0727608d01aba5ee1dea2a4020c27b3d608fc957754f.webp",
+      "sha256": "c362365d51aef8199d1e0727608d01aba5ee1dea2a4020c27b3d608fc957754f",
+      "bytes": 2102
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozRollonMattGl.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/2b3a4ce3bda89464e4afdc97a2a39296da62eefb69f4438afc68e538e5e7397d.webp",
+      "sha256": "2b3a4ce3bda89464e4afdc97a2a39296da62eefb69f4438afc68e538e5e7397d",
+      "bytes": 267702
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozWhtDrpr.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5d1ad42b7c26c5f66becfab7b6dce15002b2878bac0a390960121a41582faec5.webp",
+      "sha256": "5d1ad42b7c26c5f66becfab7b6dce15002b2878bac0a390960121a41582faec5",
+      "bytes": 2462
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozWhtDrpr.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/2a75455fdb57f5ae52e5af240d778e20c81cd112a3e9600f401ea2c4191777b8.webp",
+      "sha256": "2a75455fdb57f5ae52e5af240d778e20c81cd112a3e9600f401ea2c4191777b8",
+      "bytes": 264064
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozWhtDrprShnGlTrim.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/901e6fa96f377a06543fec5cedd26200c5380ed73275d69b7329cb94ca028408.webp",
+      "sha256": "901e6fa96f377a06543fec5cedd26200c5380ed73275d69b7329cb94ca028408",
+      "bytes": 2768
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozWhtDrprShnGlTrim.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/f2d3bbb82d080159853768c8d33b43c1be097b33f046fc9c6444d02f1693c934.webp",
+      "sha256": "f2d3bbb82d080159853768c8d33b43c1be097b33f046fc9c6444d02f1693c934",
+      "bytes": 271040
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozWhtDrprShnSlTrim.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/3068c13680ebef8f7384df6cf3fe09748b17fbc86fc0264ddfd7c1d12991cb6f.webp",
+      "sha256": "3068c13680ebef8f7384df6cf3fe09748b17fbc86fc0264ddfd7c1d12991cb6f",
+      "bytes": 2614
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-clear-20-400/GBBstn2ozWhtDrprShnSlTrim.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d0ff010f60d1ff0a19267e978f242555889e2abd238fd8d83ba0bb43db212600.webp",
+      "sha256": "d0ff010f60d1ff0a19267e978f242555889e2abd238fd8d83ba0bb43db212600",
+      "bytes": 271094
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozBlkCapSht.front-off-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c6f814b70175deb63e824d2a3730f42e22e417fff44441bda5a3f03b652fa161.webp",
+      "sha256": "c6f814b70175deb63e824d2a3730f42e22e417fff44441bda5a3f03b652fa161",
+      "bytes": 2884
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozBlkCapSht.front-off.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/edf96edb04708aa004252ded3fb08a17f5ed63d3743c5122bc2b6cc3318b5cee.webp",
+      "sha256": "edf96edb04708aa004252ded3fb08a17f5ed63d3743c5122bc2b6cc3318b5cee",
+      "bytes": 308234
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozBlkCapSht.front-on-thumb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/4e06b41f0677ff91fe8c8579df9260d993ce9949bad975ed47130e03c8351c04.webp",
+      "sha256": "4e06b41f0677ff91fe8c8579df9260d993ce9949bad975ed47130e03c8351c04",
+      "bytes": 2594
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-approved-release-2026-09-12/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozBlkCapSht.front-on.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/8ff6ae87db0d32bacf254ca34f68b9cc71a7953300db6f14ef830efa98311dfb.webp",
+      "sha256": "8ff6ae87db0d32bacf254ca34f68b9cc71a7953300db6f14ef830efa98311dfb",
+      "bytes": 290894
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/manifest.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/a67c62cf4157cae3c862f8a3e585afe4fe16d43581bb51e2cd602c3fc0a21976.json",
+      "sha256": "a67c62cf4157cae3c862f8a3e585afe4fe16d43581bb51e2cd602c3fc0a21976",
+      "bytes": 107192
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/038dcf628677911cda1a24620ebbb7e1a8f9accc640f87892e46d21575e04749.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/038dcf628677911cda1a24620ebbb7e1a8f9accc640f87892e46d21575e04749.webp",
+      "sha256": "038dcf628677911cda1a24620ebbb7e1a8f9accc640f87892e46d21575e04749",
+      "bytes": 229462
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/0ffbbaf0466941f7b31e75da31d11a49cf177184969ec9d93b2fd5b4c54a500f.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/0ffbbaf0466941f7b31e75da31d11a49cf177184969ec9d93b2fd5b4c54a500f.webp",
+      "sha256": "0ffbbaf0466941f7b31e75da31d11a49cf177184969ec9d93b2fd5b4c54a500f",
+      "bytes": 14616
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/21f581021fa7b1566182ac0b749323602ec71cdc17c438447fc019d3b0685e24.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/21f581021fa7b1566182ac0b749323602ec71cdc17c438447fc019d3b0685e24.webp",
+      "sha256": "21f581021fa7b1566182ac0b749323602ec71cdc17c438447fc019d3b0685e24",
+      "bytes": 279310
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0.webp",
+      "sha256": "2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0",
+      "bytes": 303372
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/3504ab4a3a427497d5fb1a2636aa184ce199623b6952e7233a5983881cfcf6b0.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/3504ab4a3a427497d5fb1a2636aa184ce199623b6952e7233a5983881cfcf6b0.webp",
+      "sha256": "3504ab4a3a427497d5fb1a2636aa184ce199623b6952e7233a5983881cfcf6b0",
+      "bytes": 335582
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/380d70ba9186bf2558e6d6aaca4b983466ee85413a3e9dbf076c01cf292b7427.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/380d70ba9186bf2558e6d6aaca4b983466ee85413a3e9dbf076c01cf292b7427.webp",
+      "sha256": "380d70ba9186bf2558e6d6aaca4b983466ee85413a3e9dbf076c01cf292b7427",
+      "bytes": 303716
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/39a4bc123dc9f2635f09b0c41f75e1f841f5daa3d76891e3598500cde4f0086d.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/39a4bc123dc9f2635f09b0c41f75e1f841f5daa3d76891e3598500cde4f0086d.webp",
+      "sha256": "39a4bc123dc9f2635f09b0c41f75e1f841f5daa3d76891e3598500cde4f0086d",
+      "bytes": 299018
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/4d21f8e61648537d38774751ee0562f4217d33f5c9bb816c3b39242f1b79352e.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/4d21f8e61648537d38774751ee0562f4217d33f5c9bb816c3b39242f1b79352e.webp",
+      "sha256": "4d21f8e61648537d38774751ee0562f4217d33f5c9bb816c3b39242f1b79352e",
+      "bytes": 307336
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/50874880860440e319268d83b28f05bbb4243c8ac5c424f0e7b4f9d3dfeacf02.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/50874880860440e319268d83b28f05bbb4243c8ac5c424f0e7b4f9d3dfeacf02.webp",
+      "sha256": "50874880860440e319268d83b28f05bbb4243c8ac5c424f0e7b4f9d3dfeacf02",
+      "bytes": 233448
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/50fa24074ea5f064a8e0ad94e9c06448d2e0edaa9b41466c93d6994a049d1ad5.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/50fa24074ea5f064a8e0ad94e9c06448d2e0edaa9b41466c93d6994a049d1ad5.webp",
+      "sha256": "50fa24074ea5f064a8e0ad94e9c06448d2e0edaa9b41466c93d6994a049d1ad5",
+      "bytes": 259604
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/56ad66264a127204cf270acef3a945b335aa3274b4ff86178e9bdd314f8c6e3f.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/56ad66264a127204cf270acef3a945b335aa3274b4ff86178e9bdd314f8c6e3f.webp",
+      "sha256": "56ad66264a127204cf270acef3a945b335aa3274b4ff86178e9bdd314f8c6e3f",
+      "bytes": 304248
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/5a2459d2081d9ef98a7b871756b1f53899f0ef46076c3fd7abc4c5c8a942e14b.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5a2459d2081d9ef98a7b871756b1f53899f0ef46076c3fd7abc4c5c8a942e14b.webp",
+      "sha256": "5a2459d2081d9ef98a7b871756b1f53899f0ef46076c3fd7abc4c5c8a942e14b",
+      "bytes": 320744
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/5bc7e1838e22c5b3ed1dcc2449d9f41cfec90831998570661e6a3f9ffe51995f.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5bc7e1838e22c5b3ed1dcc2449d9f41cfec90831998570661e6a3f9ffe51995f.webp",
+      "sha256": "5bc7e1838e22c5b3ed1dcc2449d9f41cfec90831998570661e6a3f9ffe51995f",
+      "bytes": 246710
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/64729bea9cab7d4a395871db4d36b4973a23f2f4aafbb3e8f213515b13ea4727.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/64729bea9cab7d4a395871db4d36b4973a23f2f4aafbb3e8f213515b13ea4727.webp",
+      "sha256": "64729bea9cab7d4a395871db4d36b4973a23f2f4aafbb3e8f213515b13ea4727",
+      "bytes": 197850
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/680a805748888fdc11eca9a54f5c4fc176c4e56f5176935e450015da3539667f.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/680a805748888fdc11eca9a54f5c4fc176c4e56f5176935e450015da3539667f.webp",
+      "sha256": "680a805748888fdc11eca9a54f5c4fc176c4e56f5176935e450015da3539667f",
+      "bytes": 223624
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/6e2a7998f94dcb4fb010e091048eb4978331d8febec2c65115f4e726ab156afc.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/6e2a7998f94dcb4fb010e091048eb4978331d8febec2c65115f4e726ab156afc.webp",
+      "sha256": "6e2a7998f94dcb4fb010e091048eb4978331d8febec2c65115f4e726ab156afc",
+      "bytes": 286914
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/6ffe55dcb1fdfaf5315691c3e7fe3b643a51b191432fe16795db1b86f211d052.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/6ffe55dcb1fdfaf5315691c3e7fe3b643a51b191432fe16795db1b86f211d052.webp",
+      "sha256": "6ffe55dcb1fdfaf5315691c3e7fe3b643a51b191432fe16795db1b86f211d052",
+      "bytes": 260854
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/7d166b0565efc514c6faf0382475791187cd07127eaa4b841ad7f1542a2e6354.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/7d166b0565efc514c6faf0382475791187cd07127eaa4b841ad7f1542a2e6354.webp",
+      "sha256": "7d166b0565efc514c6faf0382475791187cd07127eaa4b841ad7f1542a2e6354",
+      "bytes": 295418
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/83aa3f4f6d575d7bf316e1ca412e3ad816f45ae8b2e6f5e56c7262508a06fd93.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/83aa3f4f6d575d7bf316e1ca412e3ad816f45ae8b2e6f5e56c7262508a06fd93.webp",
+      "sha256": "83aa3f4f6d575d7bf316e1ca412e3ad816f45ae8b2e6f5e56c7262508a06fd93",
+      "bytes": 191298
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/8554e5ce5a37ba2ee71d51fa4c921093734c57e08f1e05c3afd8ff892fd45983.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/8554e5ce5a37ba2ee71d51fa4c921093734c57e08f1e05c3afd8ff892fd45983.webp",
+      "sha256": "8554e5ce5a37ba2ee71d51fa4c921093734c57e08f1e05c3afd8ff892fd45983",
+      "bytes": 14184
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/8ece95e89aca11e4bfb0cc6ab17668f191435aab0d2597f0902a47cecf5f7ba0.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/8ece95e89aca11e4bfb0cc6ab17668f191435aab0d2597f0902a47cecf5f7ba0.webp",
+      "sha256": "8ece95e89aca11e4bfb0cc6ab17668f191435aab0d2597f0902a47cecf5f7ba0",
+      "bytes": 239502
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/917ec53649ec8bad47fe2ac62c86fdc99cc6fa090d847eb89453bd4188047a29.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/917ec53649ec8bad47fe2ac62c86fdc99cc6fa090d847eb89453bd4188047a29.webp",
+      "sha256": "917ec53649ec8bad47fe2ac62c86fdc99cc6fa090d847eb89453bd4188047a29",
+      "bytes": 299516
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/95e26e13997423d976516164bb89b4668b3b2625227dae4061fd767cf5661fb8.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/95e26e13997423d976516164bb89b4668b3b2625227dae4061fd767cf5661fb8.webp",
+      "sha256": "95e26e13997423d976516164bb89b4668b3b2625227dae4061fd767cf5661fb8",
+      "bytes": 303486
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/9e6bdab35396549fd9aee27afe62ecb0220938bddec640b5f814d9d72b54d458.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/9e6bdab35396549fd9aee27afe62ecb0220938bddec640b5f814d9d72b54d458.webp",
+      "sha256": "9e6bdab35396549fd9aee27afe62ecb0220938bddec640b5f814d9d72b54d458",
+      "bytes": 308124
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/a3f798632fa4f2a3c728fd6708d4cfe05dad8523e6200528ba0f557fefa9b15c.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/a3f798632fa4f2a3c728fd6708d4cfe05dad8523e6200528ba0f557fefa9b15c.webp",
+      "sha256": "a3f798632fa4f2a3c728fd6708d4cfe05dad8523e6200528ba0f557fefa9b15c",
+      "bytes": 330756
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/a47a9f12a7e7e0585e8ef81b08a70c5f5c4eaa5de6eb6b390a0e9b2b54f032bf.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/a47a9f12a7e7e0585e8ef81b08a70c5f5c4eaa5de6eb6b390a0e9b2b54f032bf.webp",
+      "sha256": "a47a9f12a7e7e0585e8ef81b08a70c5f5c4eaa5de6eb6b390a0e9b2b54f032bf",
+      "bytes": 25614
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/ab92eeb097f1999880133593eb8692774180ddaa633a6a559663f87ec6cb8cec.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/ab92eeb097f1999880133593eb8692774180ddaa633a6a559663f87ec6cb8cec.webp",
+      "sha256": "ab92eeb097f1999880133593eb8692774180ddaa633a6a559663f87ec6cb8cec",
+      "bytes": 15744
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/ad21ca1cfd034f1e82cef78d2d5e723c20b221c28d2a7e930ccccdc53022eedb.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/ad21ca1cfd034f1e82cef78d2d5e723c20b221c28d2a7e930ccccdc53022eedb.webp",
+      "sha256": "ad21ca1cfd034f1e82cef78d2d5e723c20b221c28d2a7e930ccccdc53022eedb",
+      "bytes": 15390
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/bbe728e8461e760c180e32bd9fe383638d96710ab85f70581e5528af8c92ed23.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/bbe728e8461e760c180e32bd9fe383638d96710ab85f70581e5528af8c92ed23.webp",
+      "sha256": "bbe728e8461e760c180e32bd9fe383638d96710ab85f70581e5528af8c92ed23",
+      "bytes": 11170
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/bd66f849cd1bf9f4b2d8f3917dfec63449ce6994c74bdc5db2a6a0470b59ce53.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/bd66f849cd1bf9f4b2d8f3917dfec63449ce6994c74bdc5db2a6a0470b59ce53.webp",
+      "sha256": "bd66f849cd1bf9f4b2d8f3917dfec63449ce6994c74bdc5db2a6a0470b59ce53",
+      "bytes": 289742
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/c1c69db629acee83f8636754077e96b22bec984a3d762839f396363261717bf1.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c1c69db629acee83f8636754077e96b22bec984a3d762839f396363261717bf1.webp",
+      "sha256": "c1c69db629acee83f8636754077e96b22bec984a3d762839f396363261717bf1",
+      "bytes": 214804
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/c9938ed2b28d4e6c17579e062e5876a1138573ba1717f7553040ad8eb4831fcd.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c9938ed2b28d4e6c17579e062e5876a1138573ba1717f7553040ad8eb4831fcd.webp",
+      "sha256": "c9938ed2b28d4e6c17579e062e5876a1138573ba1717f7553040ad8eb4831fcd",
+      "bytes": 14814
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/d0182020749da520234d045ca85e0d09f92fb3aef863e8cb7c7652dc8b1bc489.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d0182020749da520234d045ca85e0d09f92fb3aef863e8cb7c7652dc8b1bc489.webp",
+      "sha256": "d0182020749da520234d045ca85e0d09f92fb3aef863e8cb7c7652dc8b1bc489",
+      "bytes": 25050
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/daacb41dd19d8b2508ae577b2f0353382bf0ae7c663e4d370d2ae868d13e0480.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/daacb41dd19d8b2508ae577b2f0353382bf0ae7c663e4d370d2ae868d13e0480.webp",
+      "sha256": "daacb41dd19d8b2508ae577b2f0353382bf0ae7c663e4d370d2ae868d13e0480",
+      "bytes": 29628
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/e2995495983b62467578fdcc861c135d3a227c6389c986fafef80400c042285c.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/e2995495983b62467578fdcc861c135d3a227c6389c986fafef80400c042285c.webp",
+      "sha256": "e2995495983b62467578fdcc861c135d3a227c6389c986fafef80400c042285c",
+      "bytes": 28388
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/f1dbbae9494bd628578e752acde5b5ddf998a89c610c28af0ac48cc7a187db8c.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/f1dbbae9494bd628578e752acde5b5ddf998a89c610c28af0ac48cc7a187db8c.webp",
+      "sha256": "f1dbbae9494bd628578e752acde5b5ddf998a89c610c28af0ac48cc7a187db8c",
+      "bytes": 299924
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/parts/fb6204aa1e71638a7a51524f254ef618bf5018f510c730e2f62a529429033b62.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/fb6204aa1e71638a7a51524f254ef618bf5018f510c730e2f62a529429033b62.webp",
+      "sha256": "fb6204aa1e71638a7a51524f254ef618bf5018f510c730e2f62a529429033b62",
+      "bytes": 240838
+    },
+    {
+      "restorePath": "dist/paper-doll/boston-kit-release-2026-09-12/publish-record.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/2c03a92d558001a8db8a9c73fc0d6b063958e9ec2199bd2cc1c6be80768b25de.json",
+      "sha256": "2c03a92d558001a8db8a9c73fc0d6b063958e9ec2199bd2cc1c6be80768b25de",
+      "bytes": 3186
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/manifest.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/a85d0e21099429cf0c8266ff39020176696a3fd63ac03b24a532f7cab0bc90bf.json",
+      "sha256": "a85d0e21099429cf0c8266ff39020176696a3fd63ac03b24a532f7cab0bc90bf",
+      "bytes": 115039
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-28ml-clear-16mm/GBCyl1ozRollWht/006ee456ea69189ba51475ad5cf6479f1956d1a9e3b3b698873d3a4704c49a39.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/006ee456ea69189ba51475ad5cf6479f1956d1a9e3b3b698873d3a4704c49a39.webp",
+      "sha256": "006ee456ea69189ba51475ad5cf6479f1956d1a9e3b3b698873d3a4704c49a39",
+      "bytes": 80016
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-28ml-clear-16mm/GBCyl1ozRollWht/e1b5663e5ed2045effd3971c4cd08a9b1fdfa6b776a0f6df82ebd1648b277d16.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/e1b5663e5ed2045effd3971c4cd08a9b1fdfa6b776a0f6df82ebd1648b277d16.webp",
+      "sha256": "e1b5663e5ed2045effd3971c4cd08a9b1fdfa6b776a0f6df82ebd1648b277d16",
+      "bytes": 7554
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-28ml-clear-16mm/GBMtlRoll28Blk/0fc88922072c1db40b953c8ea3229dc072fa1a6707fa65268380a58674836172.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/0fc88922072c1db40b953c8ea3229dc072fa1a6707fa65268380a58674836172.webp",
+      "sha256": "0fc88922072c1db40b953c8ea3229dc072fa1a6707fa65268380a58674836172",
+      "bytes": 84490
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-28ml-clear-16mm/GBMtlRoll28Blk/a64c1b259fe0629ce45ae4741a1b20dd7ec3eaba15ac0935642e1b2fcfabcc80.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/a64c1b259fe0629ce45ae4741a1b20dd7ec3eaba15ac0935642e1b2fcfabcc80.webp",
+      "sha256": "a64c1b259fe0629ce45ae4741a1b20dd7ec3eaba15ac0935642e1b2fcfabcc80",
+      "bytes": 10580
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-28ml-clear-16mm/GBMtlRoll28Wht/1965ae0e7295e119219e6eff890d8f88a98cb5072d00fed3f2fa57bef96afac9.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/1965ae0e7295e119219e6eff890d8f88a98cb5072d00fed3f2fa57bef96afac9.webp",
+      "sha256": "1965ae0e7295e119219e6eff890d8f88a98cb5072d00fed3f2fa57bef96afac9",
+      "bytes": 81722
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-28ml-clear-16mm/GBMtlRoll28Wht/1dac9f8c63fa64183174f6eaba4bd1f1be0c02f049d577504be55439aabb30ed.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/1dac9f8c63fa64183174f6eaba4bd1f1be0c02f049d577504be55439aabb30ed.webp",
+      "sha256": "1dac9f8c63fa64183174f6eaba4bd1f1be0c02f049d577504be55439aabb30ed",
+      "bytes": 7638
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-28ml-clear-16mm/GBRoll28Blk/6c0edcabb89c277606e67fa93cf7c8e6eb3f08795c97ad75371f3dfc4363b6f2.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/6c0edcabb89c277606e67fa93cf7c8e6eb3f08795c97ad75371f3dfc4363b6f2.webp",
+      "sha256": "6c0edcabb89c277606e67fa93cf7c8e6eb3f08795c97ad75371f3dfc4363b6f2",
+      "bytes": 10940
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-28ml-clear-16mm/GBRoll28Blk/c69d73081d524f9627af9b05b662a2b2a5747fdc0b2dc98a66f965ee93dd587f.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c69d73081d524f9627af9b05b662a2b2a5747fdc0b2dc98a66f965ee93dd587f.webp",
+      "sha256": "c69d73081d524f9627af9b05b662a2b2a5747fdc0b2dc98a66f965ee93dd587f",
+      "bytes": 84000
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-clear-13-415/GBCyl5RollBlkSh/89a5ff035538e76533ff13ee52b0672d40265eecba556ab695dbd0fb070764e8.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/89a5ff035538e76533ff13ee52b0672d40265eecba556ab695dbd0fb070764e8.webp",
+      "sha256": "89a5ff035538e76533ff13ee52b0672d40265eecba556ab695dbd0fb070764e8",
+      "bytes": 81538
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-clear-13-415/GBCyl5RollBlkSh/a8eb2242e1eaec36e9e0a1b498a38c46dfcc3913cd6449d3eee5d6ba4701635f.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/a8eb2242e1eaec36e9e0a1b498a38c46dfcc3913cd6449d3eee5d6ba4701635f.webp",
+      "sha256": "a8eb2242e1eaec36e9e0a1b498a38c46dfcc3913cd6449d3eee5d6ba4701635f",
+      "bytes": 58018
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-clear-13-415/GBCyl5RollCuMatt/a13f38e70a2855ea48646583b56ea031622d0abceee3751899f0581574af2367.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/a13f38e70a2855ea48646583b56ea031622d0abceee3751899f0581574af2367.webp",
+      "sha256": "a13f38e70a2855ea48646583b56ea031622d0abceee3751899f0581574af2367",
+      "bytes": 109694
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-clear-13-415/GBCyl5RollCuMatt/fe782451b556560e98d85ccdc27d3538317876baffd500ad68421a1bb4326e88.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/fe782451b556560e98d85ccdc27d3538317876baffd500ad68421a1bb4326e88.webp",
+      "sha256": "fe782451b556560e98d85ccdc27d3538317876baffd500ad68421a1bb4326e88",
+      "bytes": 131368
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-clear-13-415/GBCyl5RollGlMatt/9c7385981c14d94d91b044eec04626b0919b6773ab457a109422ad7f91a0fb87.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/9c7385981c14d94d91b044eec04626b0919b6773ab457a109422ad7f91a0fb87.webp",
+      "sha256": "9c7385981c14d94d91b044eec04626b0919b6773ab457a109422ad7f91a0fb87",
+      "bytes": 107618
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-clear-13-415/GBCyl5RollGlMatt/9cd5a3629098a2c7f03c94fea4ef7808e4f9f3ea698364613f0004c3e1de909b.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/9cd5a3629098a2c7f03c94fea4ef7808e4f9f3ea698364613f0004c3e1de909b.webp",
+      "sha256": "9cd5a3629098a2c7f03c94fea4ef7808e4f9f3ea698364613f0004c3e1de909b",
+      "bytes": 139592
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-clear-13-415/GBCyl5RollGlSh/0945fb2279c678122101599ccb3fddb1e6b69983d79152c12ca8b8327dfb3bc1.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/0945fb2279c678122101599ccb3fddb1e6b69983d79152c12ca8b8327dfb3bc1.webp",
+      "sha256": "0945fb2279c678122101599ccb3fddb1e6b69983d79152c12ca8b8327dfb3bc1",
+      "bytes": 117014
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-clear-13-415/GBCyl5RollGlSh/9a003781dfb089817fac4391446811dc927256846b40e8a4956442cf41bcf6e6.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/9a003781dfb089817fac4391446811dc927256846b40e8a4956442cf41bcf6e6.webp",
+      "sha256": "9a003781dfb089817fac4391446811dc927256846b40e8a4956442cf41bcf6e6",
+      "bytes": 143066
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-clear-13-415/GBCyl5RollPinkDot/6c7e681a046b04159157adf6bdad57b148329b73bc1a3828a804c9fb53d77225.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/6c7e681a046b04159157adf6bdad57b148329b73bc1a3828a804c9fb53d77225.webp",
+      "sha256": "6c7e681a046b04159157adf6bdad57b148329b73bc1a3828a804c9fb53d77225",
+      "bytes": 141860
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-clear-13-415/GBCyl5RollPinkDot/a97ec31778e2eeff64abe214b99ce65ae5920b4e065cad2a06012d0f18ac191a.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/a97ec31778e2eeff64abe214b99ce65ae5920b4e065cad2a06012d0f18ac191a.webp",
+      "sha256": "a97ec31778e2eeff64abe214b99ce65ae5920b4e065cad2a06012d0f18ac191a",
+      "bytes": 117154
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-clear-13-415/GBCyl5RollSlMatt/121bc40cd7263cced44bec4ea0fd0de9d66180896e83e5133a1dc24e8fa9671c.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/121bc40cd7263cced44bec4ea0fd0de9d66180896e83e5133a1dc24e8fa9671c.webp",
+      "sha256": "121bc40cd7263cced44bec4ea0fd0de9d66180896e83e5133a1dc24e8fa9671c",
+      "bytes": 61312
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-clear-13-415/GBCyl5RollSlMatt/d955443ab73de4f5404e94e32cacf73b76eddfb780675a9c7010afb4a1bcdf38.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d955443ab73de4f5404e94e32cacf73b76eddfb780675a9c7010afb4a1bcdf38.webp",
+      "sha256": "d955443ab73de4f5404e94e32cacf73b76eddfb780675a9c7010afb4a1bcdf38",
+      "bytes": 84472
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-clear-13-415/GBCyl5RollSlSh/71c028f60094034d9e697392f0d43814198c740fc7c2546d474177745a6073e1.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/71c028f60094034d9e697392f0d43814198c740fc7c2546d474177745a6073e1.webp",
+      "sha256": "71c028f60094034d9e697392f0d43814198c740fc7c2546d474177745a6073e1",
+      "bytes": 67074
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-clear-13-415/GBCyl5RollSlSh/cbbe3f620554773c7922b28e387081e4c24f9a0a9770da6fdffd9693b03c5361.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/cbbe3f620554773c7922b28e387081e4c24f9a0a9770da6fdffd9693b03c5361.webp",
+      "sha256": "cbbe3f620554773c7922b28e387081e4c24f9a0a9770da6fdffd9693b03c5361",
+      "bytes": 90328
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-clear-13-415/GBCyl5WhtSht/208439348038cb1af9131a820f2a5d315b0e1a6261d25147706d476d14614886.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/208439348038cb1af9131a820f2a5d315b0e1a6261d25147706d476d14614886.webp",
+      "sha256": "208439348038cb1af9131a820f2a5d315b0e1a6261d25147706d476d14614886",
+      "bytes": 63506
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-clear-13-415/GBCyl5WhtSht/33cd973f44bea137d299ae491d504bbe584c598b7c80f7094af1a32db40c4d94.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/33cd973f44bea137d299ae491d504bbe584c598b7c80f7094af1a32db40c4d94.webp",
+      "sha256": "33cd973f44bea137d299ae491d504bbe584c598b7c80f7094af1a32db40c4d94",
+      "bytes": 9820
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkDot/57f286efb826fb30a92b7b866ca935d51dea447a269705d53119f14dd5813e39.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/57f286efb826fb30a92b7b866ca935d51dea447a269705d53119f14dd5813e39.webp",
+      "sha256": "57f286efb826fb30a92b7b866ca935d51dea447a269705d53119f14dd5813e39",
+      "bytes": 185204
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkDot/62df2df28dba3256f40bc751c4783257dce040a3b3209ecefb3819597017ce38.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/62df2df28dba3256f40bc751c4783257dce040a3b3209ecefb3819597017ce38.webp",
+      "sha256": "62df2df28dba3256f40bc751c4783257dce040a3b3209ecefb3819597017ce38",
+      "bytes": 241080
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkSh/67569f00812d405f9f5391107290b80c5e0e647f4554dbb6e3a2a5899f55a717.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/67569f00812d405f9f5391107290b80c5e0e647f4554dbb6e3a2a5899f55a717.webp",
+      "sha256": "67569f00812d405f9f5391107290b80c5e0e647f4554dbb6e3a2a5899f55a717",
+      "bytes": 236394
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkSh/c1a4519ddc419476d430c0ddc38aa574fff4577bcf2f5ae674398a7f76f9ba2f.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c1a4519ddc419476d430c0ddc38aa574fff4577bcf2f5ae674398a7f76f9ba2f.webp",
+      "sha256": "c1a4519ddc419476d430c0ddc38aa574fff4577bcf2f5ae674398a7f76f9ba2f",
+      "bytes": 184212
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollCuMatt/b30d59fdb9218254937098fad19d3abca3240663451ce0dd3eb24bb3de081cb1.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/b30d59fdb9218254937098fad19d3abca3240663451ce0dd3eb24bb3de081cb1.webp",
+      "sha256": "b30d59fdb9218254937098fad19d3abca3240663451ce0dd3eb24bb3de081cb1",
+      "bytes": 277382
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollCuMatt/c6eca4f130c12b2eb2bcfff01d475c493fba3c9f3294d356a36994b2a2adbee4.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c6eca4f130c12b2eb2bcfff01d475c493fba3c9f3294d356a36994b2a2adbee4.webp",
+      "sha256": "c6eca4f130c12b2eb2bcfff01d475c493fba3c9f3294d356a36994b2a2adbee4",
+      "bytes": 225240
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlMatt/29fac87e8b8cb4451ce72f2cf0915074716ebeecd919b5fe3ae2edc7d364eaef.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/29fac87e8b8cb4451ce72f2cf0915074716ebeecd919b5fe3ae2edc7d364eaef.webp",
+      "sha256": "29fac87e8b8cb4451ce72f2cf0915074716ebeecd919b5fe3ae2edc7d364eaef",
+      "bytes": 223268
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlMatt/4b4d21718a952d753642cdce7d3d5697bc0ff0d32b71ebdf9e95e1ad48dfb6d0.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/4b4d21718a952d753642cdce7d3d5697bc0ff0d32b71ebdf9e95e1ad48dfb6d0.webp",
+      "sha256": "4b4d21718a952d753642cdce7d3d5697bc0ff0d32b71ebdf9e95e1ad48dfb6d0",
+      "bytes": 284602
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlSh/e9ed2b831f80c7c90d8370ddd9aeb3daaff6a54592cb6d962e60bbb13f57f8e9.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/e9ed2b831f80c7c90d8370ddd9aeb3daaff6a54592cb6d962e60bbb13f57f8e9.webp",
+      "sha256": "e9ed2b831f80c7c90d8370ddd9aeb3daaff6a54592cb6d962e60bbb13f57f8e9",
+      "bytes": 231932
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlSh/eea9d401a75bf396c645f724518f5aebb7d6e90144d8ab7768d93d831bf3ad09.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/eea9d401a75bf396c645f724518f5aebb7d6e90144d8ab7768d93d831bf3ad09.webp",
+      "sha256": "eea9d401a75bf396c645f724518f5aebb7d6e90144d8ab7768d93d831bf3ad09",
+      "bytes": 288896
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollPinkDot/81a0e8d0074d20418edcae724301f818349f4331d93a09039d0214226c41e1bb.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/81a0e8d0074d20418edcae724301f818349f4331d93a09039d0214226c41e1bb.webp",
+      "sha256": "81a0e8d0074d20418edcae724301f818349f4331d93a09039d0214226c41e1bb",
+      "bytes": 289054
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollPinkDot/cc953464003ca09bd317695ec05bd088dab22cd389f89e14c7bdc66b7a480364.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/cc953464003ca09bd317695ec05bd088dab22cd389f89e14c7bdc66b7a480364.webp",
+      "sha256": "cc953464003ca09bd317695ec05bd088dab22cd389f89e14c7bdc66b7a480364",
+      "bytes": 232728
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlDot/756ea8d2d61fdc3564e7e8d71447932ee5a906aeceea91a487d53f22152dd949.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/756ea8d2d61fdc3564e7e8d71447932ee5a906aeceea91a487d53f22152dd949.webp",
+      "sha256": "756ea8d2d61fdc3564e7e8d71447932ee5a906aeceea91a487d53f22152dd949",
+      "bytes": 186632
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlDot/e0e2ab4425019de371e6e4858263448a3278f20fe8d7fcdc913885c7e9e9120c.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/e0e2ab4425019de371e6e4858263448a3278f20fe8d7fcdc913885c7e9e9120c.webp",
+      "sha256": "e0e2ab4425019de371e6e4858263448a3278f20fe8d7fcdc913885c7e9e9120c",
+      "bytes": 238638
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlMatt/1cb8a010a4762882b94e90078184dbc96535109a8ecc73f9b9e24d664369e9d3.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/1cb8a010a4762882b94e90078184dbc96535109a8ecc73f9b9e24d664369e9d3.webp",
+      "sha256": "1cb8a010a4762882b94e90078184dbc96535109a8ecc73f9b9e24d664369e9d3",
+      "bytes": 185646
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlMatt/9db2c4d11ade65a4df99109072ec278ce96f69dc04ac9ed3812924ea673641f5.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/9db2c4d11ade65a4df99109072ec278ce96f69dc04ac9ed3812924ea673641f5.webp",
+      "sha256": "9db2c4d11ade65a4df99109072ec278ce96f69dc04ac9ed3812924ea673641f5",
+      "bytes": 240514
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlSh/26192785ac784f6773546bbf641231136020b772f3ccd4803d34ba517191da30.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/26192785ac784f6773546bbf641231136020b772f3ccd4803d34ba517191da30.webp",
+      "sha256": "26192785ac784f6773546bbf641231136020b772f3ccd4803d34ba517191da30",
+      "bytes": 191368
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlSh/86f6a77512a1be08a146452685ad7fa9b847f7a94599453b8b5ef194653b5d2a.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/86f6a77512a1be08a146452685ad7fa9b847f7a94599453b8b5ef194653b5d2a.webp",
+      "sha256": "86f6a77512a1be08a146452685ad7fa9b847f7a94599453b8b5ef194653b5d2a",
+      "bytes": 245340
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlMatt/a5ad64efd073969d03cb2053f15b7c917fda8e46a3ac89507d8e1b1024dd902a.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/a5ad64efd073969d03cb2053f15b7c917fda8e46a3ac89507d8e1b1024dd902a.webp",
+      "sha256": "a5ad64efd073969d03cb2053f15b7c917fda8e46a3ac89507d8e1b1024dd902a",
+      "bytes": 67762
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlMatt/ab904c342aa860e16ce9a0eaf249d86e5f16d691437352683e0ef78d84698a16.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/ab904c342aa860e16ce9a0eaf249d86e5f16d691437352683e0ef78d84698a16.webp",
+      "sha256": "ab904c342aa860e16ce9a0eaf249d86e5f16d691437352683e0ef78d84698a16",
+      "bytes": 57912
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlSh/1c4f0502f10419fc54acdd4ead82121d51bbede593c17b47bcdbc6ec00921ebf.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/1c4f0502f10419fc54acdd4ead82121d51bbede593c17b47bcdbc6ec00921ebf.webp",
+      "sha256": "1c4f0502f10419fc54acdd4ead82121d51bbede593c17b47bcdbc6ec00921ebf",
+      "bytes": 58184
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlSh/8d1aee42765d0154af36292a3335d8f942672e5808cc175b005a432ce45479db.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/8d1aee42765d0154af36292a3335d8f942672e5808cc175b005a432ce45479db.webp",
+      "sha256": "8d1aee42765d0154af36292a3335d8f942672e5808cc175b005a432ce45479db",
+      "bytes": 68280
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlMatt/6f4a0bb1ff7e9458a5282afe19f52941167924d0cea9ca988c8ebd84723ed87e.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/6f4a0bb1ff7e9458a5282afe19f52941167924d0cea9ca988c8ebd84723ed87e.webp",
+      "sha256": "6f4a0bb1ff7e9458a5282afe19f52941167924d0cea9ca988c8ebd84723ed87e",
+      "bytes": 36146
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlMatt/fb3a37cb8d6e37cfb58bf5de1fec76640b318955356e50c99c7d30bbbedcbccc.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/fb3a37cb8d6e37cfb58bf5de1fec76640b318955356e50c99c7d30bbbedcbccc.webp",
+      "sha256": "fb3a37cb8d6e37cfb58bf5de1fec76640b318955356e50c99c7d30bbbedcbccc",
+      "bytes": 45402
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9MtlRollBlkDot/2d759228bf4309d400201f7cbde4f57d19788de819a88a80b4d74a2806a2241f.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/2d759228bf4309d400201f7cbde4f57d19788de819a88a80b4d74a2806a2241f.webp",
+      "sha256": "2d759228bf4309d400201f7cbde4f57d19788de819a88a80b4d74a2806a2241f",
+      "bytes": 52558
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-approved-release-2026-09-12/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9MtlRollBlkDot/de1a226b280e70713d8b0c5b79840159c644b3ec58a67e397925b29eb0a5e1b5.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/de1a226b280e70713d8b0c5b79840159c644b3ec58a67e397925b29eb0a5e1b5.webp",
+      "sha256": "de1a226b280e70713d8b0c5b79840159c644b3ec58a67e397925b29eb0a5e1b5",
+      "bytes": 5262
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/manifest.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.json",
+      "sha256": "d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0",
+      "bytes": 291287
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-118ml-clear/PbClear4ozFlpWh/57e311826e0189c51a319c58dd5616a48fd62b7d35c0b8ccee39d7be67ca42f0.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/57e311826e0189c51a319c58dd5616a48fd62b7d35c0b8ccee39d7be67ca42f0.webp",
+      "sha256": "57e311826e0189c51a319c58dd5616a48fd62b7d35c0b8ccee39d7be67ca42f0",
+      "bytes": 113272
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-118ml-clear/PbClear4ozFlpWh/fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5.webp",
+      "sha256": "fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5",
+      "bytes": 8454
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-227ml-clear/PbClear8ozFlpWh/26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e.webp",
+      "sha256": "26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e",
+      "bytes": 7658
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-227ml-clear/PbClear8ozFlpWh/30dc4c43dd722149d9d5e4d54d10abf5952b92e5d32d23c0057d247c2be28327.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/30dc4c43dd722149d9d5e4d54d10abf5952b92e5d32d23c0057d247c2be28327.webp",
+      "sha256": "30dc4c43dd722149d9d5e4d54d10abf5952b92e5d32d23c0057d247c2be28327",
+      "bytes": 111278
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-3.3ml-clear-12mm/GBSpry3mlClBlk/24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa.webp",
+      "sha256": "24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa",
+      "bytes": 11944
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-3.3ml-clear-12mm/GBSpry3mlClBlk/79480a6feb9b91e9ea3dfed9852127b27b6778d5717fa0225a854677320e8b47.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/79480a6feb9b91e9ea3dfed9852127b27b6778d5717fa0225a854677320e8b47.webp",
+      "sha256": "79480a6feb9b91e9ea3dfed9852127b27b6778d5717fa0225a854677320e8b47",
+      "bytes": 126200
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-3.3ml-clear-12mm/GBSpry3mlClWht/2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99.webp",
+      "sha256": "2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99",
+      "bytes": 9146
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-3.3ml-clear-12mm/GBSpry3mlClWht/d709645dcab87412997045a713eef969eb79ab3d1b2b9615534195d677d439e7.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d709645dcab87412997045a713eef969eb79ab3d1b2b9615534195d677d439e7.webp",
+      "sha256": "d709645dcab87412997045a713eef969eb79ab3d1b2b9615534195d677d439e7",
+      "bytes": 114756
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-30ml-clear-18-415/GBSpry1ozGl/747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2.webp",
+      "sha256": "747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2",
+      "bytes": 176242
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-30ml-clear-18-415/GBSpry1ozGl/e8fe4f8339ec30d75077afc3d5138ebd2858e1bd809222640575e9d0df16d6f9.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/e8fe4f8339ec30d75077afc3d5138ebd2858e1bd809222640575e9d0df16d6f9.webp",
+      "sha256": "e8fe4f8339ec30d75077afc3d5138ebd2858e1bd809222640575e9d0df16d6f9",
+      "bytes": 248374
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-30ml-clear-18-415/GBSpry1ozSl/36831aefc963e87cc0cb84f27cd2cae2d7455e7df794271247b8427d03cf0946.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/36831aefc963e87cc0cb84f27cd2cae2d7455e7df794271247b8427d03cf0946.webp",
+      "sha256": "36831aefc963e87cc0cb84f27cd2cae2d7455e7df794271247b8427d03cf0946",
+      "bytes": 123120
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-30ml-clear-18-415/GBSpry1ozSl/4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1.webp",
+      "sha256": "4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1",
+      "bytes": 92506
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-454ml-clear/PbNat16ozFlpWh/1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8.webp",
+      "sha256": "1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8",
+      "bytes": 4274
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-454ml-clear/PbNat16ozFlpWh/d36c8934531e57f495a6707a12b709b0d31f41e029ea1cc78bbc47697bc2c1e4.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d36c8934531e57f495a6707a12b709b0d31f41e029ea1cc78bbc47697bc2c1e4.webp",
+      "sha256": "d36c8934531e57f495a6707a12b709b0d31f41e029ea1cc78bbc47697bc2c1e4",
+      "bytes": 43856
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-4ml-clear-12mm/GBSpry4mlClBlk/4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a.webp",
+      "sha256": "4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a",
+      "bytes": 9878
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-4ml-clear-12mm/GBSpry4mlClBlk/fab9df26ce3d6d7e8b1c1fb4bd07842c11dfe8e8266f87aea6ef86785380e2fa.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/fab9df26ce3d6d7e8b1c1fb4bd07842c11dfe8e8266f87aea6ef86785380e2fa.webp",
+      "sha256": "fab9df26ce3d6d7e8b1c1fb4bd07842c11dfe8e8266f87aea6ef86785380e2fa",
+      "bytes": 93028
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-4ml-clear-12mm/GBSpry4mlClWh/69677903f7ab82a92e48c2c5f0abf03015ebf49f4edd149c37eec19b71076c5b.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/69677903f7ab82a92e48c2c5f0abf03015ebf49f4edd149c37eec19b71076c5b.webp",
+      "sha256": "69677903f7ab82a92e48c2c5f0abf03015ebf49f4edd149c37eec19b71076c5b",
+      "bytes": 85076
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-4ml-clear-12mm/GBSpry4mlClWh/b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c.webp",
+      "sha256": "b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c",
+      "bytes": 8010
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-clear-13-415/GBCyl5BlkShSht/821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879.webp",
+      "sha256": "821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879",
+      "bytes": 8558
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-clear-13-415/GBCyl5BlkShSht/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp",
+      "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+      "bytes": 53274
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-clear-13-415/GBCyl5CuSht/1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985.webp",
+      "sha256": "1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985",
+      "bytes": 9426
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-clear-13-415/GBCyl5CuSht/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp",
+      "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+      "bytes": 53274
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-clear-13-415/GBCyl5GlMattSht/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp",
+      "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+      "bytes": 53274
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-clear-13-415/GBCyl5GlMattSht/b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce.webp",
+      "sha256": "b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce",
+      "bytes": 8976
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-clear-13-415/GBCyl5GlSht/5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a.webp",
+      "sha256": "5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a",
+      "bytes": 9682
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-clear-13-415/GBCyl5GlSht/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp",
+      "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+      "bytes": 53274
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-clear-13-415/GBCyl5SlMattSht/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp",
+      "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+      "bytes": 53274
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-clear-13-415/GBCyl5SlMattSht/f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1.webp",
+      "sha256": "f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1",
+      "bytes": 8902
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-clear-13-415/GBCyl5SlSht/ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43.webp",
+      "sha256": "ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43",
+      "bytes": 8572
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-clear-13-415/GBCyl5SlSht/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp",
+      "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+      "bytes": 53274
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5BlkShSht/2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3.webp",
+      "sha256": "2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3",
+      "bytes": 14304
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5BlkShSht/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp",
+      "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+      "bytes": 203294
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5CuSht/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp",
+      "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+      "bytes": 203294
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5CuSht/fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16.webp",
+      "sha256": "fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16",
+      "bytes": 15062
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5GlMattSht/2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964.webp",
+      "sha256": "2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964",
+      "bytes": 14436
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5GlMattSht/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp",
+      "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+      "bytes": 203294
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5GlSht/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp",
+      "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+      "bytes": 203294
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5GlSht/791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc.webp",
+      "sha256": "791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc",
+      "bytes": 15536
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5SlMattSht/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp",
+      "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+      "bytes": 203294
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5SlMattSht/5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980.webp",
+      "sha256": "5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980",
+      "bytes": 13608
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5SlSht/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp",
+      "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+      "bytes": 203294
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5SlSht/7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8.webp",
+      "sha256": "7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8",
+      "bytes": 14360
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9BlkShSht/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp",
+      "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+      "bytes": 32166
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9BlkShSht/f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3.webp",
+      "sha256": "f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3",
+      "bytes": 5970
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9CuSht/bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9.webp",
+      "sha256": "bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9",
+      "bytes": 6288
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9CuSht/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp",
+      "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+      "bytes": 32166
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9GlMattSht/8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe.webp",
+      "sha256": "8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe",
+      "bytes": 6228
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9GlMattSht/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp",
+      "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+      "bytes": 32166
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9GlSht/0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf.webp",
+      "sha256": "0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf",
+      "bytes": 6600
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9GlSht/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp",
+      "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+      "bytes": 32166
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9MtlRollBlkDot/1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7.webp",
+      "sha256": "1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7",
+      "bytes": 7680
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9MtlRollBlkDot/930506b5d78fa416f240d873563521e3fe9c4920f90d5c1c9bdc69d7f33acc0b.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/930506b5d78fa416f240d873563521e3fe9c4920f90d5c1c9bdc69d7f33acc0b.webp",
+      "sha256": "930506b5d78fa416f240d873563521e3fe9c4920f90d5c1c9bdc69d7f33acc0b",
+      "bytes": 47706
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollBlkDot/4ed8b88f2120bd13c71a7f08e9c07577af30922bef523a6fd920967e8cf58112.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/4ed8b88f2120bd13c71a7f08e9c07577af30922bef523a6fd920967e8cf58112.webp",
+      "sha256": "4ed8b88f2120bd13c71a7f08e9c07577af30922bef523a6fd920967e8cf58112",
+      "bytes": 47070
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollBlkDot/656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220.webp",
+      "sha256": "656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220",
+      "bytes": 7602
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollBlkSh/323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6.webp",
+      "sha256": "323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6",
+      "bytes": 34864
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollBlkSh/9962e60f9e1c9631e06a8a81d1a7a89ccc675892d45b02d69d9ef28a76ff3192.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/9962e60f9e1c9631e06a8a81d1a7a89ccc675892d45b02d69d9ef28a76ff3192.webp",
+      "sha256": "9962e60f9e1c9631e06a8a81d1a7a89ccc675892d45b02d69d9ef28a76ff3192",
+      "bytes": 44088
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollCuMatt/c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3.webp",
+      "sha256": "c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3",
+      "bytes": 56414
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollCuMatt/e9f913a3dcfbffc617e546672d33ce93ddb6af79ac778dd1848cd363ee88397f.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/e9f913a3dcfbffc617e546672d33ce93ddb6af79ac778dd1848cd363ee88397f.webp",
+      "sha256": "e9f913a3dcfbffc617e546672d33ce93ddb6af79ac778dd1848cd363ee88397f",
+      "bytes": 65944
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlSh/e0ae623b688ca4626750141ae9e8a3c1ce7a3dc033cadfd5f5a3cf917efe7ba0.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/e0ae623b688ca4626750141ae9e8a3c1ce7a3dc033cadfd5f5a3cf917efe7ba0.webp",
+      "sha256": "e0ae623b688ca4626750141ae9e8a3c1ce7a3dc033cadfd5f5a3cf917efe7ba0",
+      "bytes": 47312
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlSh/ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4.webp",
+      "sha256": "ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4",
+      "bytes": 36892
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9SlMattSht/c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15.webp",
+      "sha256": "c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15",
+      "bytes": 6078
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9SlMattSht/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp",
+      "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+      "bytes": 32166
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9SlSht/7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc.webp",
+      "sha256": "7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc",
+      "bytes": 6250
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-clear-13-415/GBTallCyl9SlSht/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp",
+      "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+      "bytes": 32166
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9BlkShSht/2039f5383576849339dcf01964efa7b70a5704eab8ff9bb6eb81614544fef0f4.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/2039f5383576849339dcf01964efa7b70a5704eab8ff9bb6eb81614544fef0f4.webp",
+      "sha256": "2039f5383576849339dcf01964efa7b70a5704eab8ff9bb6eb81614544fef0f4",
+      "bytes": 35960
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9BlkShSht/4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12.webp",
+      "sha256": "4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12",
+      "bytes": 4310
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9CuSht/30efc311035ae329f92aba3487a813ad86c28e89c9100774c0c5469601ddadfa.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/30efc311035ae329f92aba3487a813ad86c28e89c9100774c0c5469601ddadfa.webp",
+      "sha256": "30efc311035ae329f92aba3487a813ad86c28e89c9100774c0c5469601ddadfa",
+      "bytes": 37246
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9CuSht/58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d.webp",
+      "sha256": "58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d",
+      "bytes": 4316
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9GlMattSht/731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693.webp",
+      "sha256": "731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693",
+      "bytes": 4262
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9GlMattSht/d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a.webp",
+      "sha256": "d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a",
+      "bytes": 37290
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9GlSht/97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae.webp",
+      "sha256": "97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae",
+      "bytes": 4622
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9GlSht/d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a.webp",
+      "sha256": "d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a",
+      "bytes": 37290
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9SlMattSht/21794d04f0cb60880019fa150e6aade11ed063d4264fd3731bcc300bf3f5448d.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/21794d04f0cb60880019fa150e6aade11ed063d4264fd3731bcc300bf3f5448d.webp",
+      "sha256": "21794d04f0cb60880019fa150e6aade11ed063d4264fd3731bcc300bf3f5448d",
+      "bytes": 36990
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9SlMattSht/d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b.webp",
+      "sha256": "d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b",
+      "bytes": 4626
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9SlSht/7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261.front-on-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261.webp",
+      "sha256": "7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261",
+      "bytes": 4406
+    },
+    {
+      "restorePath": "dist/paper-doll/cylinder-final38-2026-09-13/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9SlSht/cd6ca90b93a1d173f297e66dedfb8aafb66fdcc8ed8e0ef7ae89c12958eb663d.front-off-1000x1100.webp",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/cd6ca90b93a1d173f297e66dedfb8aafb66fdcc8ed8e0ef7ae89c12958eb663d.webp",
+      "sha256": "cd6ca90b93a1d173f297e66dedfb8aafb66fdcc8ed8e0ef7ae89c12958eb663d",
+      "bytes": 36008
+    },
+    {
+      "restorePath": "hero-reviews/boston-30ml-final-size-v1-2026-09-12/asset-map.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/b1103aa029524eee5e7f8ca2584f4106788128ba6260abf3cc09e2d62129ac7c.json",
+      "sha256": "b1103aa029524eee5e7f8ca2584f4106788128ba6260abf3cc09e2d62129ac7c",
+      "bytes": 924
+    },
+    {
+      "restorePath": "hero-reviews/boston-30ml-final-size-v1-2026-09-12/assets/5bf522a3373736025c7bf77cd075ca486877e2624ea58288336dd52fdc7aff77.png",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/5bf522a3373736025c7bf77cd075ca486877e2624ea58288336dd52fdc7aff77.png",
+      "sha256": "5bf522a3373736025c7bf77cd075ca486877e2624ea58288336dd52fdc7aff77",
+      "bytes": 367620
+    },
+    {
+      "restorePath": "hero-reviews/boston-30ml-final-size-v1-2026-09-12/assets/c26a6e4cf88883e8485af6b5dfe897c8c773cb861caefa7e29dde3b20fdacde4.png",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/c26a6e4cf88883e8485af6b5dfe897c8c773cb861caefa7e29dde3b20fdacde4.png",
+      "sha256": "c26a6e4cf88883e8485af6b5dfe897c8c773cb861caefa7e29dde3b20fdacde4",
+      "bytes": 420932
+    },
+    {
+      "restorePath": "hero-reviews/boston-30ml-final-size-v1-2026-09-12/assets/d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401.png",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401.png",
+      "sha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+      "bytes": 317307
+    },
+    {
+      "restorePath": "hero-reviews/boston-30ml-final-size-v1-2026-09-12/collection.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/34d11b28e34d57bd0084007ec1a226d596130e34e4ff2d0fc68a0f71c4dda80a.json",
+      "sha256": "34d11b28e34d57bd0084007ec1a226d596130e34e4ff2d0fc68a0f71c4dda80a",
+      "bytes": 504
+    },
+    {
+      "restorePath": "hero-reviews/boston-30ml-final-size-v1-2026-09-12/data.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/aac9175d766f5946abd6270b9d9225d1b154ea18afcd13c705775ac3e3be468e.json",
+      "sha256": "aac9175d766f5946abd6270b9d9225d1b154ea18afcd13c705775ac3e3be468e",
+      "bytes": 1105
+    },
+    {
+      "restorePath": "hero-reviews/boston-30ml-final-size-v1-2026-09-12/feedback-at-import.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/36f272ade4889492ba2071e190a9e17dc687853e15fc88bb422e5fd80aea0370.json",
+      "sha256": "36f272ade4889492ba2071e190a9e17dc687853e15fc88bb422e5fd80aea0370",
+      "bytes": 60
+    },
+    {
+      "restorePath": "hero-reviews/boston-30ml-final-size-v1-2026-09-12/feedback.json",
+      "archivePath": "docs/releases/boston-cylinder-2026-09-13/objects/252dd0e374ed5f2627235066ccbc61d1a10eeba1357ba2b9c991c924bf4d54a5.json",
+      "sha256": "252dd0e374ed5f2627235066ccbc61d1a10eeba1357ba2b9c991c924bf4d54a5",
+      "bytes": 787
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+ "schemaVersion": 1,
+ "release": "Grace plates 2026-09-18",
+ "approvedAt": "2026-09-19T06:28:25.613Z",
+ "actor": "Jordan · approved in chat (\"I approve the 32\"), from the legacy and small-family contact sheets",
+ "approvalId": "2bf1fca3-8add-4fd9-9b6d-4e626415dacc",
+ "reviewPacket": "public/reviews/plate-completion-2026-09-18/tail-new-plates.jpg",
+ "reviewPacketSha256": "76c43d55ae87e79021806638f279590452fd6cc9951bcf9a0f6f5c12b095f05c",
+ "approvalFile": "dist/paper-doll/grace-plates-2026-09-18/plates/manifest.json",
+ "approvalFileSha256": "6491f922676abf8a4873f384a01a8072c687107496ed7b63735f91a642c78533",
+ "visualApproved": true,
+ "legacySourcesAccepted": false,
+ "publicationAuthorized": false,
+ "indexingAuthorized": false,
+ "rows": [
+  {
+   "sku": "LBGrce55LtnClOvrCap",
+   "graceSku": "LB-GRC-CLR-55ML-LPM-COCP",
+   "familyId": "grace-55ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "grace-55ml-clear-18-415/LBGrce55LtnClOvrCap.front-on.webp",
+    "storeKey": "plates/grace-55ml-clear-18-415/LBGrce55LtnClOvrCap/5dd689924975466b6289114d2d18f81fa2755d5e16806a41200df718ab8bca70.front-on-1000x1100.webp",
+    "sha256": "5dd689924975466b6289114d2d18f81fa2755d5e16806a41200df718ab8bca70",
+    "bytes": 21896,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "9217fd832c47e852b85cc620ddc940ef40976c47c8b3d4a4aad710d51093f934",
+    "bytes": 1814
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/29.  55ml Grace (Clear) Ltn & Spry, capped/28. LBGrce55LtnClOvrCap.psd",
+    "sha256": "1d4f3303da9f8573af1aedb698f54cda3014187d79596c59082b6a5f1e52fe27"
+   }
+  },
+  {
+   "sku": "LBGrce55LtnMtSl",
+   "graceSku": "LB-GRC-CLR-55ML-LPM-MSLV",
+   "familyId": "grace-55ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "grace-55ml-clear-18-415/LBGrce55LtnMtSl.front-on.webp",
+    "storeKey": "plates/grace-55ml-clear-18-415/LBGrce55LtnMtSl/e4ede3bf08af90a4a1545e12a1cfa5f2c7355f5bf5296d21ff1151bcaf56bbc6.front-on-1000x1100.webp",
+    "sha256": "e4ede3bf08af90a4a1545e12a1cfa5f2c7355f5bf5296d21ff1151bcaf56bbc6",
+    "bytes": 19454,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "67de576815c88d886a09109617d3126a1f5b23be95cd94b3a09834102fed02dd",
+    "bytes": 1646
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/29.  55ml Grace (Clear) Ltn & Spry, capped/26. LBGrce55LtnMtSl.psd",
+    "sha256": "a30e1856a29eb85c8dcf3f2ae7763085a68709d9ea55d4cfdd9221c5ac60d7a9"
+   }
+  },
+  {
+   "sku": "LBGrce55LtnShnBlk",
+   "graceSku": "LB-GRC-CLR-55ML-LPM-SBLK",
+   "familyId": "grace-55ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "grace-55ml-clear-18-415/LBGrce55LtnShnBlk.front-on.webp",
+    "storeKey": "plates/grace-55ml-clear-18-415/LBGrce55LtnShnBlk/51b2fe7b4c4cf730c9425db21ad4a42c39b1de3b2eae10cb507a93427077493b.front-on-1000x1100.webp",
+    "sha256": "51b2fe7b4c4cf730c9425db21ad4a42c39b1de3b2eae10cb507a93427077493b",
+    "bytes": 20722,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "8a2278cbafbfec7832a35eee914d58cfbf98b8cb546544a26e567bd17f615c67",
+    "bytes": 1688
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/29.  55ml Grace (Clear) Ltn & Spry, capped/22. LBGrce55LtnShnBlk.psd",
+    "sha256": "9b53f0da0bb33d1bfcb59c73886e227f96fc6820ba2dc58a403d459bfdb020f3"
+   }
+  },
+  {
+   "sku": "GBGrce55SpryShnBlk",
+   "graceSku": "GB-GRC-CLR-55ML-SPR-SBLK",
+   "familyId": "grace-55ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "grace-55ml-clear-18-415/GBGrce55SpryShnBlk.front-on.webp",
+    "storeKey": "plates/grace-55ml-clear-18-415/GBGrce55SpryShnBlk/7c6cac82ba60eeb404c023fa54b3533878397e460b0944f16f9c4146a5856d00.front-on-1000x1100.webp",
+    "sha256": "7c6cac82ba60eeb404c023fa54b3533878397e460b0944f16f9c4146a5856d00",
+    "bytes": 19026,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "f7fcf9dce1b5c5b8776588f5f395cd69acf8e7b1b43dc4be58a251bf6165f628",
+    "bytes": 1556
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/29.  55ml Grace (Clear) Ltn & Spry, capped/21. GBGrce55SpryShnBlk.psd",
+    "sha256": "131f2c5fdb1195ec090259926af3f846d64408a499c90df2a96bcdfeda8e6bd2"
+   }
+  },
+  {
+   "sku": "GBGrce55SpryShnSl",
+   "graceSku": "GB-GRC-CLR-55ML-SPR-SSLV",
+   "familyId": "grace-55ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "grace-55ml-clear-18-415/GBGrce55SpryShnSl.front-on.webp",
+    "storeKey": "plates/grace-55ml-clear-18-415/GBGrce55SpryShnSl/98f867a05acd5e5bba92e07aaebb255ef3fb20fd77ed1662deb14a637458319d.front-on-1000x1100.webp",
+    "sha256": "98f867a05acd5e5bba92e07aaebb255ef3fb20fd77ed1662deb14a637458319d",
+    "bytes": 19758,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "f40e07598109de3cf32705a1dd34be4186fdf5c4803f33aea9fd618fe9ee65e5",
+    "bytes": 1656
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/29.  55ml Grace (Clear) Ltn & Spry, capped/30. GBGrce55SpryShnSl.psd",
+    "sha256": "ed1f136f1d273b2d8c95b5fb500229da4588d3e9d7000deb184115761cae7e1c"
+   }
+  }
+ ],
+ "scope": {
+  "renderedInBatch": 41,
+  "alreadyLiveAndExcluded": 36
+ },
+ "frontSourcePins": [],
+ "note": "Approves the rendered plate bytes after review. Publishing is a separate step and needs a release-specific ship phrase."
+}

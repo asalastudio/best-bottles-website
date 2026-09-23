@@ -23,8 +23,8 @@ Two render modes:
       base lands on the same line. Gates, unchanged from the shipping builder:
       post-alignment residual ≤ 12/255 WITHIN a session, closure axis on the
       canvas centre line within 2 px on every capped plate.
-      Registration groups by (familyId, body token): a frosted body filed
-      under a clear group is still its own photograph.
+      Registration uses explicit physical standards where mapped, otherwise exact
+      catalog product groups. SKU spelling never determines the group.
   standalone — components. One scale per family, ink box centred, the part
       must not touch its source edge.
 
@@ -51,7 +51,7 @@ from scipy.signal import fftconvolve
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from build_tokens import parse_sku  # noqa: E402
+
 
 REPO = HERE.parents[1]
 DATA = REPO / "data" / "paper-doll"
@@ -64,7 +64,7 @@ AXIS_MAX = 2.0               # px, closure axis vs canvas centre
 STANDALONE_HEIGHT = 0.62     # a component's tallest part fills this much of the canvas height
 WIDTH_TOLERANCE = 0.03       # body widths within 3 % are the same photographic session
 BUILDER = {"name": "build_plates.py", "version": "1.0.0"}
-HANGING_CLOSURES = {"AnSp", "AnSpTsl"}   # a bulb or tassel hangs off the bottle: framed as a composition
+HANGING_CLOSURES = {"Vintage Bulb Sprayer", "Vintage Bulb Sprayer with Tassel", "Atomizer"}   # a bulb or tassel hangs off the bottle: framed as a composition
 
 
 # ---------------------------------------------------------------- image helpers (the shipping builder's, verbatim)
@@ -167,8 +167,13 @@ def source_of(entry: dict, state: str):
     return {"library": "master", "relPath": rec["chosenPath"], "path": source_path, "sha256": rec["chosen"], "stateEvidence": rec["stateEvidence"]}
 
 
-def validate_front_source(src: dict, website_sku: str):
-    """Refuse the two source-selection defects that previously reached production."""
+def validate_front_source(src: dict, website_sku: str, also_named=()):
+    """Refuse the two source-selection defects that previously reached production.
+
+    `also_named` carries the spellings the alias map vouches for. That map is the
+    one rewrite allowed at match time and only Jordan promotes into it, so a file
+    named `GBVial1DrmBlackCapSht` is acceptable evidence for `GBV1DrmBlackCapSht`
+    once that pair is in the map — but for nothing else."""
     rel_path = src["relPath"]
     # Shared parent folders can say "Capped & Uncapped". The nearest
     # unambiguous folder decides the state; an explicitly capped child is valid.
@@ -184,13 +189,17 @@ def validate_front_source(src: dict, website_sku: str):
     if folder_state in {"off", "ambiguous"}:
         raise RuntimeError(f"uncapped PSD cannot be the front source for {website_sku}")
     source_sku = re.sub(r"^\s*\d+[.-]?\s*", "", Path(rel_path).stem).rstrip(".").strip()
+    # a Finder duplicate is still the same product: "X copy.psd", "X copy 2.psd"
+    source_sku = re.sub(r"\s+copy(\s+\d+)?$", "", source_sku, flags=re.I).strip()
     sku_key = lambda value: re.sub(r"[^a-z0-9]", "", value.lower())  # noqa: E731
-    if sku_key(source_sku) != sku_key(website_sku):
-        raise RuntimeError(f"front source basename {source_sku!r} does not match website SKU {website_sku!r}")
+    accepted = {website_sku, *(n for n in also_named if n)}
+    if all(sku_key(source_sku) != sku_key(name) for name in accepted):
+        raise RuntimeError(f"front source basename {source_sku!r} matches no accepted name for {website_sku!r} "
+                           f"(accepted: {', '.join(sorted(accepted))})")
 
 
 def plan_groups(selection, xref, args):
-    """publishable xref rows -> render groups keyed by (familyId, body token | 'standalone')."""
+    """Keep distinct physical profiles separate using explicit catalog metadata."""
     groups = defaultdict(lambda: {"skus": []})
     for rec in xref["products"]:
         if not rec["publishable"]:
@@ -207,16 +216,23 @@ def plan_groups(selection, xref, args):
         if mode == "standalone":
             key = (fid, "standalone")
         else:
-            parsed = parse_sku(rec["websiteSku"])
-            key = (fid, parsed["body"] or rec["websiteSku"])
+            # A familyId can contain tall and footed profiles. Never merge it
+            # blindly, and never infer the physical body from SKU spelling.
+            group_id = rec.get("physicalStandardId") or rec.get("productGroupId")
+            if not group_id:
+                raise RuntimeError(f"physical_group_hold:{rec['websiteSku']}: refresh catalog group metadata before rendering")
+            key = (fid, group_id)
         on = source_of(entry, "on") or source_of(entry, "part") or source_of(entry, "unknown")
         off = source_of(entry, "off")
         if on is None:
             if off is not None:
                 raise RuntimeError(f"only an uncapped source exists for {rec['websiteSku']}; refusing to use it as the front")
             continue
-        validate_front_source(on, rec["websiteSku"])
-        closure = parse_sku(rec["websiteSku"])["closure"]
+        validate_front_source(on, rec["websiteSku"],
+                              also_named=[rec.get("stemSpelling")] if rec.get("matchKind") == "alias" else ())
+        if "applicator" not in rec:
+            raise RuntimeError(f"applicator_metadata_hold:{rec['websiteSku']}: refresh catalog metadata before rendering")
+        closure = rec["applicator"]
         groups[key]["skus"].append({"sku": rec["websiteSku"], "graceSku": rec["graceSku"], "familyId": fid, "family": rec["family"],
                                     "closure": closure, "warnings": rec["warnings"], "on": on, "off": off, "mode": mode})
     ordered = sorted(groups.items(), key=lambda kv: (-len(kv[1]["skus"]), kv[0]))
@@ -231,7 +247,7 @@ def family_name(fid: str) -> str:
 
 
 # ---------------------------------------------------------------- registered mode
-def build_registered(fid, body, skus, out_dir: Path, log):
+def build_registered(fid, body, skus, out_dir: Path, log, anchor=None):
     shots = []      # every flattened shot in the group
     per_sku = {}
     for item in skus:
@@ -429,20 +445,90 @@ def build_registered(fid, body, skus, out_dir: Path, log):
         registration["refused"] = "registration_unmatched"
         return [], registration
 
-    # one output scale for the family, measured in the primary session's pixels
-    max_w, uy0, uy1 = 0, 10**9, -10**9
-    for sh in shots:
-        c = clusters[sh["cluster"]]
-        k = c.get("k", 1.0)
-        x0, y0, x1, y1 = ink_bbox(sh["gray"])
-        max_w = max(max_w, (x1 - x0) * k)
-        base_rel_top = (c["refBase"] + sh["dy"] - y0) * k        # bottle base above the ink top
-        base_rel_bot = (c["refBase"] + sh["dy"] - y1) * k        # …and below the ink bottom
-        uy0 = min(uy0, -base_rel_top)
-        uy1 = max(uy1, -base_rel_bot)
+    # one output scale for the family, measured in the primary session's pixels.
+    #
+    # A bulb or tassel hangs beside and below the bottle. It already never defines
+    # a photographic session, and for the same reason it must not define the output
+    # scale or the vertical band: its ink reaches further than the glass does, so
+    # letting it vote shrinks the bottle and lifts it off the baseline every other
+    # closure on the same glass sits on. Measured on the 2026-09-13 rebuild, the
+    # tassel plates came out up to 184 px above their siblings' foot and around
+    # 60 % of their size, while plain and bulb-only closures agreed within 7 px.
+    # Jordan: the vintage bottle with tassel "has to have its own baseline along
+    # with the size" — that is this rule. The glass sets both; the tassel hangs.
+    def band_of(sample):
+        max_w, uy0, uy1 = 0, 10**9, -10**9
+        for sh in sample:
+            c = clusters[sh["cluster"]]
+            k = c.get("k", 1.0)
+            x0, y0, x1, y1 = ink_bbox(sh["gray"])
+            max_w = max(max_w, (x1 - x0) * k)
+            base_rel_top = (c["refBase"] + sh["dy"] - y0) * k    # bottle base above the ink top
+            base_rel_bot = (c["refBase"] + sh["dy"] - y1) * k    # …and below the ink bottom
+            uy0 = min(uy0, -base_rel_top)
+            uy1 = max(uy1, -base_rel_bot)
+        return max_w, uy0, uy1
+
+    anchors = [sh for sh in shots if sh["closure"] not in HANGING_CLOSURES]
+    max_w, uy0, uy1 = band_of(anchors or shots)
     uh = uy1 - uy0
     scale = min((OUT_W - 2 * PAD) / max_w, (OUT_H - 2 * PAD) / uh)
     base_out = PAD - uy0 * scale + ((OUT_H - 2 * PAD) - uh * scale) / 2   # where every bottle's base lands
+    # The hanging closures still have to fit on the canvas. Shrink only as far as
+    # that needs, and record it, rather than silently re-admitting them as anchors.
+    if anchors and len(anchors) != len(shots):
+        # A mixed group: the glass set the frame above, so only make sure the
+        # hanging parts still fit on the canvas.
+        hw, hy0, hy1 = band_of(shots)
+        fit = min((OUT_W - 2 * PAD) / hw, (OUT_H - 2 * PAD) / (hy1 - hy0))
+        if fit < scale:
+            registration["hangingFitScale"] = round(fit / scale, 4)
+            scale, uy0, uy1 = fit, hy0, hy1
+            uh = uy1 - uy0
+            base_out = PAD - uy0 * scale + ((OUT_H - 2 * PAD) - uh * scale) / 2
+        registration["anchoredOnGlass"] = len(anchors)
+    elif not anchors and anchor:
+        # Every shot here hangs, so this group has no glass of its own to measure.
+        # `body_metrics` cannot supply one either: on a tassel it spans the glass AND
+        # the tassel lying beside it — 829 px of glass read as 1413 on the 2026-09-13
+        # Round rebuild — which is why these plates came out about 60 % of their
+        # siblings' size and up to 184 px above the shared baseline. Take the frame
+        # from the group that photographed the same glass without a tassel rather
+        # than invent a new ruler for a shape that defeats the existing ones.
+        # Jordan chose this treatment on 2026-09-13, from three rendered against a
+        # plain sibling: the bottle keeps whatever size the whole composition needs
+        # in order to stay uncropped, but its foot is pinned to the baseline its
+        # siblings stand on. A tassel composition is roughly 1924 px wide against
+        # 829 px of glass, so matching the sibling's size as well would overflow the
+        # canvas by 352 px and behead the bulb on most of them. Pinning the baseline
+        # is what stops the bottle jumping when a customer switches finish.
+        registration["frameFrom"] = anchor["body"]
+        # Judge the fit on the assembled cap-on views, the ones a customer sees,
+        # for the same reason the baseline clamp below does. An uncapped view
+        # stands the overcap BESIDE the bottle, so it is far wider than the
+        # assembled shot; letting it set the width shrank whole groups against
+        # their siblings — Round 78 fell to 0.478 where its plain groups sat at
+        # 0.74, and Empire 100 with it, while Slim, whose tassel group has no
+        # uncapped view, was untouched.
+        framing = [sh for sh in shots if sh in assembled] or shots
+        max_w, uy0, uy1 = band_of(framing)
+        uh = uy1 - uy0
+        scale = min(anchor["scale"], (OUT_W - 2 * PAD) / max_w, (OUT_H - 2 * PAD) / uh)
+        if scale < anchor["scale"]:
+            registration["hangingFitScale"] = round(scale / anchor["scale"], 4)
+        base_out = anchor["baseOut"]
+        # Pinning must never push a plate off the canvas, but the clamp is judged on
+        # the assembled cap-on views — the ones a customer sees. Letting every shot
+        # vote here reintroduced the original fault in miniature: one uncapped view
+        # whose parts lie lower dragged the whole Empire 100 group 102 px up the
+        # canvas, floating a bottle whose own composition ended 100 px clear of it.
+        ay0, ay1 = band_of([sh for sh in shots if sh in assembled] or shots)[1:]
+        top, bottom = base_out + ay0 * scale, base_out + ay1 * scale
+        shifted = min(max(base_out, base_out - top + PAD), base_out - (bottom - (OUT_H - PAD)))
+        if abs(shifted - base_out) > 0.5:
+            registration["baselineShiftedToFit"] = round(shifted - base_out, 1)
+            base_out = shifted
+        registration["baselinePinnedTo"] = anchor["body"]
     registration.update({"scale": scale, "band": [round(uy0, 1), round(uy1, 1)], "baseOut": round(base_out, 1)})
 
     def render(sh, on_axis):
@@ -618,6 +704,11 @@ def main():
         return
 
     all_rows, reports, built = [], [], set()
+    # Groups whose closures all hang (bulb, tassel, atomizer) cannot measure their
+    # own glass, so build them after a sibling group of the same family that can.
+    all_hanging = lambda g: all(i["closure"] in HANGING_CLOSURES for i in g["skus"])  # noqa: E731
+    groups = sorted(groups, key=lambda kv: (kv[0][0], all_hanging(kv[1])))
+    family_frame: dict[str, dict] = {}
     for (fid, body), g in groups:
         out_dir = DIST / fid
         out_dir.mkdir(parents=True, exist_ok=True)
@@ -627,7 +718,10 @@ def main():
         if body == "standalone":
             rows, registration = build_standalone(fid, g["skus"], out_dir, log)
         else:
-            rows, registration = build_registered(fid, body, g["skus"], out_dir, log)
+            rows, registration = build_registered(fid, body, g["skus"], out_dir, log,
+                                                  anchor=family_frame.get(fid) if all_hanging(g) else None)
+            if not all_hanging(g) and registration.get("scale") and fid not in family_frame:
+                family_frame[fid] = {"body": body, "scale": registration["scale"], "baseOut": registration["baseOut"]}
         (out_dir / f"_registration{'' if body == 'standalone' else '-' + body}.json").write_text(json.dumps(registration, indent=1))
         refused = registration.get("refused")
         if refused:

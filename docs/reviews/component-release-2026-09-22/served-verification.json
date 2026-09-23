@@ -1,0 +1,476 @@
+{
+  "target": "https://precise-raccoon-123.convex.cloud",
+  "checkedAt": "2026-09-23T04:00:18.744Z",
+  "checks": [
+    {
+      "sku": "GBCyl9SpryBlk",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap",
+        "collar"
+      ]
+    },
+    {
+      "sku": "GBCyl9SpryShSl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap",
+        "collar"
+      ]
+    },
+    {
+      "sku": "GBCyl9SpryGl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap",
+        "collar"
+      ]
+    },
+    {
+      "sku": "GBCyl9SpryMattSl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap",
+        "collar"
+      ]
+    },
+    {
+      "sku": "GBCyl9SpryTur",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap",
+        "collar"
+      ]
+    },
+    {
+      "sku": "GBCyl9SpryRd",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap",
+        "collar"
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "pump",
+        "overcap",
+        "collar"
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnMtSl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "pump",
+        "overcap",
+        "collar"
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "pump",
+        "overcap",
+        "collar"
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "pump",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryShnGl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnGl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "pump",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryShnBlk",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnBlk",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "pump",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnMtSl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "pump",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryShnSl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnSl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "pump",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrcl15SpryBlkMatt",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrcl15SpryBlkSh",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrcl15SpryBluMatt",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrcl15SpryCuMatt",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrcl15SpryGlMatt",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrcl15SpryGlSh",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrcl15SprySlMatt",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrcl15SprySlSh",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrcl50SpryMtSl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrcl50SpryMtGl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrcl50SpryShnGl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrcl50SpryShnBlk",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrcl50SpryShnSl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtGl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnGl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnBlk",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtSl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnSl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrcl50SpryCu",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrclFrst50SpryCu",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer",
+        "overcap"
+      ]
+    },
+    {
+      "sku": "GBCrcl50AnSpTslBlk",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer"
+      ]
+    },
+    {
+      "sku": "GBCrcl50AnSpTslLvn",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer"
+      ]
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvyGl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer"
+      ]
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvySl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer"
+      ]
+    },
+    {
+      "sku": "GBCrcl50AnSpTslWht",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer"
+      ]
+    },
+    {
+      "sku": "GBCrcl50AnSpTslPnk",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer"
+      ]
+    },
+    {
+      "sku": "GBCrcl50AnSpTslRed",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer"
+      ]
+    },
+    {
+      "sku": "GBCrcl50AnSpTslMtSl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer"
+      ]
+    },
+    {
+      "sku": "GBCrcl50AnSpTslGl",
+      "ok": true,
+      "slots": [
+        "body",
+        "diptube",
+        "sprayer"
+      ]
+    }
+  ]
+}

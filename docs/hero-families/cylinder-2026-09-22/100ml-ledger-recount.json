@@ -1,0 +1,65 @@
+{
+  "before": {
+    "skuRecords": 443,
+    "heroGroups": 52,
+    "heroes": {
+      "indexed": 52,
+      "none": 381,
+      "pending": 10
+    },
+    "plates": {
+      "none": 7,
+      "plated": 316,
+      "plated-approved-legacy-source": 27,
+      "plated-no-capoff-by-design": 93
+    },
+    "approvedCompletePlates": 436,
+    "kits": {
+      "held": 13,
+      "live": 396,
+      "no-plate": 7,
+      "not-applicable": 3,
+      "stale": 24
+    }
+  },
+  "after": {
+    "skuRecords": 443,
+    "heroGroups": 52,
+    "heroes": {
+      "indexed": 52,
+      "none": 381,
+      "pending": 10
+    },
+    "plates": {
+      "none": 7,
+      "plated": 316,
+      "plated-approved-legacy-source": 27,
+      "plated-no-capoff-by-design": 93
+    },
+    "approvedCompletePlates": 436,
+    "kits": {
+      "held": 13,
+      "live": 396,
+      "no-plate": 7,
+      "not-applicable": 3,
+      "stale": 24
+    }
+  },
+  "productionMediaCountsChanged": false,
+  "stagingCandidates": {
+    "before": {
+      "images": 28,
+      "groups": 22
+    },
+    "after": {
+      "images": 33,
+      "groups": 27
+    }
+  },
+  "plateMeasurements": {
+    "count": 2286,
+    "fetchFailures": 0,
+    "measurementFailures": 0
+  },
+  "note": "Read-only production media ledger is unchanged by frontend pilot additions; raw snapshots preserved in local batch audit archive."
+}

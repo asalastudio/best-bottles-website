@@ -1,0 +1,57 @@
+{
+  "generatedAt": "2026-09-20T03:02:21.129Z",
+  "provider": "openai-image-2.5-sunburst",
+  "scaleContract": "shoulder-lock-2026-09-07",
+  "referenceRoute": "flattened-psd",
+  "rows": [
+    {
+      "websiteSku": "GBCyl100SpryMtGl",
+      "graceSku": "GB-CYL-CLR-100ML-SPR-MGLD",
+      "groupSlug": "cylinder-100ml-clear-18-415-perfumespray",
+      "sha256": "d229ea80191458f41dd84ca4b55806f9dcd2c023c624402d66be82ec9740f7ae",
+      "referenceRoute": "flattened-psd"
+    },
+    {
+      "websiteSku": "GBCyl50RdcrMtSl",
+      "graceSku": "GB-CYL-CLR-50ML-RDC-MSLV",
+      "groupSlug": "cylinder-50ml-clear-18-415-reducer",
+      "sha256": "7ab926311e4450c3c0ff4f5df1c2a863c492053678bbf6b0dbb4f16fc895fac6",
+      "referenceRoute": "flattened-psd"
+    },
+    {
+      "websiteSku": "GBCyl50SpryMtGl",
+      "graceSku": "GB-CYL-CLR-50ML-SPR-MGLD",
+      "groupSlug": "cylinder-50ml-clear-18-415-perfumespray",
+      "sha256": "9382a0ae9d398fc52941233c3297945ea2f6b82420cdce6dc7641fd0a4142135",
+      "referenceRoute": "flattened-psd"
+    },
+    {
+      "websiteSku": "GBTallCyl9MtlRollBlkDot",
+      "graceSku": "GB-CYL-CLR-9ML-MRL-BKDT-02",
+      "groupSlug": "cylinder-9ml-clear-13-415-rollon",
+      "sha256": "52046eb24c034937df430accd27f5c28d86856d20e11cbe6b420ec722d0c1352",
+      "referenceRoute": "flattened-psd"
+    },
+    {
+      "websiteSku": "LBCyl100LtnMtGl",
+      "graceSku": "LB-CYL-CLR-100ML-LPM-MGLD",
+      "groupSlug": "cylinder-100ml-clear-18-415-lotionpump",
+      "sha256": "dc478e401485e6aa8b91e08f46b0c912092a9b1b237541aab842c1e540582474",
+      "referenceRoute": "flattened-psd"
+    },
+    {
+      "websiteSku": "LBCyl25LtnMtGl",
+      "graceSku": "LB-CYL-CLR-25ML-LPM-MGLD",
+      "groupSlug": "cylinder-25ml-clear-18-415-lotionpump",
+      "sha256": "9debc8949bdf8066b83dae0e2d5ad9b3f7fb251f7462bef4fd037a30c5187c1b",
+      "referenceRoute": "flattened-psd"
+    },
+    {
+      "websiteSku": "LBCyl50LtnMtGl",
+      "graceSku": "LB-CYL-CLR-50ML-LPM-MGLD",
+      "groupSlug": "cylinder-50ml-clear-18-415-lotionpump",
+      "sha256": "43c79ce57bdbefa0d2634e1a0fbff2a0cc15949a333d21ff6b5fb90d43fab198",
+      "referenceRoute": "flattened-psd"
+    }
+  ]
+}

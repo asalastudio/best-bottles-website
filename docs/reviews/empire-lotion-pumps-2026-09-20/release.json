@@ -1,0 +1,71 @@
+{
+ "schemaVersion": 1,
+ "release": "empire-lotion-pumps-2026-09-20",
+ "batch": "dist/paper-doll/empire-lotion-pumps-2026-09-20",
+ "approvedBy": "Jordan Richter · in chat 2026-09-20: \"ship the lotion pumps and the set aside kits\"",
+ "approvedAt": "2026-09-20T18:29:08.220Z",
+ "shipPhrase": "ship Empire exposed lotion pumps 2026-09-20",
+ "published": [
+  "https://precise-raccoon-123.convex.cloud"
+ ],
+ "counts": {
+  "extractedCandidates": 12,
+  "approved": 12,
+  "setAside": 0,
+  "notExtracted": 0
+ },
+ "reviewSheet": "public/reviews/builder-review-2026-09-19/empire50-lotion-pump-kits-before-after.jpg + empire100-lotion-pump-kits-before-after.jpg",
+ "reviewSheetSha256": null,
+ "rows": [
+  {
+   "sku": "LBEmp100LtnCu",
+   "plateSha256": "6c3dee210bd4c028b3e73b1683401298c486f8ddc9c6c144d6fdcb5e1de1a344"
+  },
+  {
+   "sku": "LBEmp100LtnMtGl",
+   "plateSha256": "3a0d43e5b79c7c8ff345aa19976248abcd753a3bc1781eb62b3752cd967692fc"
+  },
+  {
+   "sku": "LBEmp100LtnMtSl",
+   "plateSha256": "ff0fd01aa91e7d27f3addb84dd0a71d84605ef8904441580a7a25dfa60b273ae"
+  },
+  {
+   "sku": "LBEmp100LtnShnBlk",
+   "plateSha256": "4535e5c6bd72f2c758c022bec1c12cb62b12618cc83da88587b0d903a53e4a2c"
+  },
+  {
+   "sku": "LBEmp100LtnShnGl",
+   "plateSha256": "5f54c88be524f3134eab4b4d2da3191491119cb5879323728f424e74c8142923"
+  },
+  {
+   "sku": "LBEmp100LtnShnSl",
+   "plateSha256": "db68e2455d6cb6e93c1a8ac5a90f83ddf1d4a698ed5ab8fcd7265b48a5d942d6"
+  },
+  {
+   "sku": "LBEmp50LtnCu",
+   "plateSha256": "272f112a4a2213acfcb51bb95bace98671b94ea9159d7f9d3a37c42cfc677ca9"
+  },
+  {
+   "sku": "LBEmp50LtnMtGl",
+   "plateSha256": "ee57cc850ff0ce8c05cb2a4911ff0b5a44ddf073a3e56ae97b445818a300ec75"
+  },
+  {
+   "sku": "LBEmp50LtnMtSl",
+   "plateSha256": "930ac23798b40601ce07c4854f9679800747b152aad6afc4774113c9a0b28c77"
+  },
+  {
+   "sku": "LBEmp50LtnShnBlk",
+   "plateSha256": "901523e6ee03867a7f32a1098d212cb0f094e6d2a225b46162f64b082f154771"
+  },
+  {
+   "sku": "LBEmp50LtnShnGl",
+   "plateSha256": "92bfde12e8a982ff757393f8853f36fefcae692154d6a524c68d6c59371a988f"
+  },
+  {
+   "sku": "LBEmp50LtnShnSl",
+   "plateSha256": "a3e8ecff333f96e9b79e622f415ef218bf56e8b855079d929b8c795d0058873a"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "f81cee0ce2281a21d7df02fed2605be0e5f1bcdcfd6dafe2bce4d8f12dc24eea"
+}

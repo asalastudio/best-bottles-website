@@ -1,0 +1,196 @@
+[
+  {
+    "path": "LB1ozGl.psd",
+    "sha256": "7824e460c1fdc0c5421e771fe9701613b8bb45de5a2f7f3102982b7602233fcb",
+    "preview": "sources/7824e460c1fdc0c5421e771fe9701613b8bb45de5a2f7f3102982b7602233fcb.png",
+    "dimensions": [
+      6000,
+      4000
+    ],
+    "layers": [
+      {
+        "name": "Background",
+        "visible": true,
+        "bbox": [
+          0,
+          0,
+          6000,
+          4000
+        ]
+      },
+      {
+        "name": "Curves 1",
+        "visible": true,
+        "bbox": [
+          2402,
+          325,
+          3128,
+          3146
+        ]
+      },
+      {
+        "name": "Layer 2",
+        "visible": true,
+        "bbox": [
+          2627,
+          1348,
+          3026,
+          4028
+        ]
+      },
+      {
+        "name": "Layer 1",
+        "visible": true,
+        "bbox": [
+          2457,
+          291,
+          3058,
+          1369
+        ]
+      }
+    ]
+  },
+  {
+    "path": "17. Additional Bottles/GB1ozGl.psd",
+    "sha256": "272daf473b31cf8e3cd1fcf0b44a58d58444319e5863ee5b4e01167ec2f6ecf5",
+    "preview": "sources/272daf473b31cf8e3cd1fcf0b44a58d58444319e5863ee5b4e01167ec2f6ecf5.png",
+    "dimensions": [
+      6000,
+      4000
+    ],
+    "layers": [
+      {
+        "name": "Background",
+        "visible": true,
+        "bbox": [
+          0,
+          0,
+          6000,
+          4000
+        ]
+      },
+      {
+        "name": "Curves 1",
+        "visible": true,
+        "bbox": [
+          2402,
+          325,
+          3128,
+          3146
+        ]
+      },
+      {
+        "name": "Layer 1",
+        "visible": true,
+        "bbox": [
+          2457,
+          291,
+          3058,
+          1369
+        ]
+      }
+    ]
+  },
+  {
+    "path": "17. Additional Bottles/GB1ozGl..psd",
+    "sha256": "eab95ecbbfc9a69a4133c430e8b9cda3aef0f7e51034f58f6c52e4e80dd1ea57",
+    "preview": "sources/eab95ecbbfc9a69a4133c430e8b9cda3aef0f7e51034f58f6c52e4e80dd1ea57.png",
+    "dimensions": [
+      6000,
+      4000
+    ],
+    "layers": [
+      {
+        "name": "Background",
+        "visible": true,
+        "bbox": [
+          0,
+          0,
+          6000,
+          4000
+        ]
+      },
+      {
+        "name": "Curves 1",
+        "visible": true,
+        "bbox": [
+          2402,
+          325,
+          3128,
+          3146
+        ]
+      },
+      {
+        "name": "Layer 1",
+        "visible": true,
+        "bbox": [
+          3278,
+          2068,
+          3879,
+          3146
+        ]
+      }
+    ]
+  },
+  {
+    "path": "LB1ozGl..psd",
+    "sha256": "bdab15513dc9639c6e79a6e172ff0312042284cc242adb59cc8d7dacc2154cac",
+    "preview": "sources/bdab15513dc9639c6e79a6e172ff0312042284cc242adb59cc8d7dacc2154cac.png",
+    "dimensions": [
+      6000,
+      4000
+    ],
+    "layers": [
+      {
+        "name": "Background",
+        "visible": true,
+        "bbox": [
+          0,
+          0,
+          6000,
+          4000
+        ]
+      },
+      {
+        "name": "Curves 1",
+        "visible": true,
+        "bbox": [
+          2402,
+          325,
+          3128,
+          3146
+        ]
+      },
+      {
+        "name": "Layer 3",
+        "visible": true,
+        "bbox": [
+          2625,
+          1343,
+          3024,
+          4023
+        ]
+      },
+      {
+        "name": "Layer 2",
+        "visible": true,
+        "bbox": [
+          2698,
+          396,
+          2820,
+          520
+        ]
+      },
+      {
+        "name": "Layer 1",
+        "visible": true,
+        "bbox": [
+          3278,
+          2068,
+          3879,
+          3146
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,1495 @@
+{
+  "summary": {
+    "builderViews": 126,
+    "builderClipped": 0,
+    "pdpViews": 60,
+    "pdpClipped": 0,
+    "bodyWidthSpread": 0,
+    "bodyBaseSpread": 0
+  },
+  "held": [
+    {
+      "sku": "GBCrclFrst50AnSpTslBlk",
+      "resolution": "unknown",
+      "reason": "Catalog compatibility unresolved; artwork recovery does not make it Builder eligible."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslGl",
+      "resolution": "unknown",
+      "reason": "Catalog compatibility unresolved; artwork recovery does not make it Builder eligible."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslIvyGl",
+      "resolution": "unknown",
+      "reason": "Catalog compatibility unresolved; artwork recovery does not make it Builder eligible."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslIvySl",
+      "resolution": "unknown",
+      "reason": "Catalog compatibility unresolved; artwork recovery does not make it Builder eligible."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslLvn",
+      "resolution": "unknown",
+      "reason": "Catalog compatibility unresolved; artwork recovery does not make it Builder eligible."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslMtSl",
+      "resolution": "unknown",
+      "reason": "Catalog compatibility unresolved; artwork recovery does not make it Builder eligible."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslPnk",
+      "resolution": "unknown",
+      "reason": "Catalog compatibility unresolved; artwork recovery does not make it Builder eligible."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslRed",
+      "resolution": "unknown",
+      "reason": "Catalog compatibility unresolved; artwork recovery does not make it Builder eligible."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslWht",
+      "resolution": "unknown",
+      "reason": "Catalog compatibility unresolved; artwork recovery does not make it Builder eligible."
+    }
+  ],
+  "results": [
+    {
+      "sku": "GBCrcl50SpryMtSl",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryMtSl",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryMtSl",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryMtSl",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryMtSl",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryMtSl",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryMtGl",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryMtGl",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryMtGl",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryMtGl",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryMtGl",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryMtGl",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnGl",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnGl",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnGl",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnGl",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnGl",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnGl",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnBlk",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnBlk",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnBlk",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnBlk",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnBlk",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnBlk",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnSl",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnSl",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnSl",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnSl",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnSl",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnSl",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtGl",
+      "color": "Frosted",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtGl",
+      "color": "Frosted",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtGl",
+      "color": "Frosted",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtGl",
+      "color": "Frosted",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtGl",
+      "color": "Frosted",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtGl",
+      "color": "Frosted",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnGl",
+      "color": "Frosted",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnGl",
+      "color": "Frosted",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnGl",
+      "color": "Frosted",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnGl",
+      "color": "Frosted",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnGl",
+      "color": "Frosted",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnGl",
+      "color": "Frosted",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnBlk",
+      "color": "Frosted",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnBlk",
+      "color": "Frosted",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnBlk",
+      "color": "Frosted",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnBlk",
+      "color": "Frosted",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnBlk",
+      "color": "Frosted",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnBlk",
+      "color": "Frosted",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtSl",
+      "color": "Frosted",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtSl",
+      "color": "Frosted",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtSl",
+      "color": "Frosted",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtSl",
+      "color": "Frosted",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtSl",
+      "color": "Frosted",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtSl",
+      "color": "Frosted",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnSl",
+      "color": "Frosted",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnSl",
+      "color": "Frosted",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnSl",
+      "color": "Frosted",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnSl",
+      "color": "Frosted",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnSl",
+      "color": "Frosted",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnSl",
+      "color": "Frosted",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryCu",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryCu",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryCu",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryCu",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryCu",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryCu",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryCu",
+      "color": "Frosted",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryCu",
+      "color": "Frosted",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryCu",
+      "color": "Frosted",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryCu",
+      "color": "Frosted",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryCu",
+      "color": "Frosted",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryCu",
+      "color": "Frosted",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslBlk",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslBlk",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslBlk",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslBlk",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslBlk",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslBlk",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslLvn",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslLvn",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslLvn",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslLvn",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslLvn",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslLvn",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvyGl",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvyGl",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvyGl",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvyGl",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvyGl",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvyGl",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvySl",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvySl",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvySl",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvySl",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvySl",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvySl",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslWht",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslWht",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslWht",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslWht",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslWht",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslWht",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslPnk",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslPnk",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslPnk",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslPnk",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslPnk",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslPnk",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslRed",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslRed",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslRed",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslRed",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslRed",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslRed",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslMtSl",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslMtSl",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslMtSl",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslMtSl",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslMtSl",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslMtSl",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslGl",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslGl",
+      "color": "Clear",
+      "stage": "body",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslGl",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslGl",
+      "color": "Clear",
+      "stage": "fitment",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslGl",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": false,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslGl",
+      "color": "Clear",
+      "stage": "complete",
+      "showCover": true,
+      "bodyWidth": 0.31951629653684527,
+      "bodyBase": 0.6957568400185464,
+      "clipped": []
+    }
+  ],
+  "pdp": [
+    {
+      "sku": "GBCrcl50SpryMtSl",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryMtSl",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryMtGl",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryMtGl",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnGl",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnGl",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnBlk",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnBlk",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnSl",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryShnSl",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtGl",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtGl",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnGl",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnGl",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnBlk",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnBlk",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtSl",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtSl",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnSl",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnSl",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryCu",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50SpryCu",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryCu",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50SpryCu",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslBlk",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslBlk",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslLvn",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslLvn",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvyGl",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvyGl",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvySl",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvySl",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslWht",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslWht",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslPnk",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslPnk",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslRed",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslRed",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslMtSl",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslMtSl",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslGl",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrcl50AnSpTslGl",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslBlk",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslBlk",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslGl",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslGl",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslIvyGl",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslIvyGl",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslIvySl",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslIvySl",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslLvn",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslLvn",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslMtSl",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslMtSl",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslPnk",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslPnk",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslRed",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslRed",
+      "view": "capOff",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslWht",
+      "view": "assembled",
+      "clipped": []
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslWht",
+      "view": "capOff",
+      "clipped": []
+    }
+  ]
+}

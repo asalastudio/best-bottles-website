@@ -1,0 +1,80 @@
+{
+ "schemaVersion": 1,
+ "release": "Cream-jar alias plates 2026-09-18",
+ "approvedAt": "2026-09-19T07:12:18.165Z",
+ "actor": "Jordan · confirmed each file is the same product from the name-confirmation sheet (\"Yes, those are clean matches\")",
+ "approvalId": "e44a4629-528d-49c4-82a4-c2ee32621bf5",
+ "reviewPacket": "public/reviews/plate-completion-2026-09-18/name-confirmations.jpg",
+ "reviewPacketSha256": "79ff3adfca213b0614f33369470c5bf248772771ef76008f78538b883cb48a28",
+ "approvalFile": "dist/paper-doll/cream-jar-plates-2026-09-18/plates/manifest.json",
+ "approvalFileSha256": "80fb6a59ed8ebdac036489b18e6b06721a9f6a6277aa145e21db3c5f1290a76e",
+ "visualApproved": true,
+ "legacySourcesAccepted": false,
+ "publicationAuthorized": false,
+ "indexingAuthorized": false,
+ "rows": [
+  {
+   "sku": "CreamJarAmb40Blkcap",
+   "graceSku": "CJ-JAR-AMB-40ML-01",
+   "familyId": "cream-jar-40ml-amber-48-400",
+   "closure": null,
+   "plate": {
+    "key": "cream-jar-40ml-amber-48-400/CreamJarAmb40Blkcap.front-on.webp",
+    "storeKey": "plates/cream-jar-40ml-amber-48-400/CreamJarAmb40Blkcap/784fa89838b2d48d73da52e906c5159f3e2028e88b6c7d2c041d724c08b3c04a.front-on-1000x1100.webp",
+    "sha256": "784fa89838b2d48d73da52e906c5159f3e2028e88b6c7d2c041d724c08b3c04a",
+    "bytes": 18446,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "3e33c7a5f3610752d99be9ac4e3d605bda5a028e8d2b3066d498fee3d95c7a0d",
+    "bytes": 4012
+   },
+   "capOff": {
+    "sha256": "1177da303163fec9681d6b92b6e1c3f666107dd80378359bc94970278b9668f2"
+   },
+   "source": {
+    "library": "master",
+    "path": "14. Cream Jars/Capped/5. Jar Amb, Blk Cap 40ml/CJAmb40BlkCap.psd",
+    "sha256": "c5dcacff4dc3ae240197efa57c3e8aac5fb8eb87f6263b0cd08decdcf28a3fbe"
+   }
+  },
+  {
+   "sku": "CreamJarFrstdPlsBlkPls2oz",
+   "graceSku": "CJ-JAR-FRS-60ML",
+   "familyId": "cream-jar-60ml-frosted-58mm",
+   "closure": null,
+   "plate": {
+    "key": "cream-jar-60ml-frosted-58mm/CreamJarFrstdPlsBlkPls2oz.front-on.webp",
+    "storeKey": "plates/cream-jar-60ml-frosted-58mm/CreamJarFrstdPlsBlkPls2oz/e6380ea6fe5a48ad53c6c8fd45d4418505fc26bf6029118497d1f8170fae90f0.front-on-1000x1100.webp",
+    "sha256": "e6380ea6fe5a48ad53c6c8fd45d4418505fc26bf6029118497d1f8170fae90f0",
+    "bytes": 8778,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "9053bce56fb17d23a174396457ddc702013ec094b25a1bcdab756fa08920bdca",
+    "bytes": 2026
+   },
+   "capOff": {
+    "sha256": "105f281b43650393934da7d79fc21ee19fdb5d52b4a56d8c1ff2334d0edd18bf"
+   },
+   "source": {
+    "library": "master",
+    "path": "14. Cream Jars/Capped/9. Cream Jar Frost Plastic 60ml black cap/CJFrstdPlsBlkPls2oz.psd",
+    "sha256": "3ec953d1e5e8804b5668d818b01d49fa607683e41680dbf160bc8bd2417b0786"
+   }
+  }
+ ],
+ "scope": {
+  "renderedInBatch": 16,
+  "alreadyLiveAndExcluded": 14
+ },
+ "frontSourcePins": [],
+ "note": "Approves the rendered plate bytes after review. Publishing is a separate step and needs a release-specific ship phrase.",
+ "preparedManifest": {
+  "file": "docs/reviews/cream-jar-alias-plates-2026-09-18/prepared-manifest.json",
+  "sha256": "80fb6a59ed8ebdac036489b18e6b06721a9f6a6277aa145e21db3c5f1290a76e",
+  "copiedFrom": "dist/paper-doll/cream-jar-plates-2026-09-18/plates/manifest.json"
+ }
+}

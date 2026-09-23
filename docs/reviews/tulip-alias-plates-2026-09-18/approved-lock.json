@@ -1,0 +1,54 @@
+{
+ "schemaVersion": 1,
+ "release": "Tulip alias plates 2026-09-18",
+ "approvedAt": "2026-09-19T07:12:19.866Z",
+ "actor": "Jordan · confirmed each file is the same product from the name-confirmation sheet (\"Yes, those are clean matches\")",
+ "approvalId": "0cbd7ae6-fa2a-466e-a8d9-e04775bca1e0",
+ "reviewPacket": "public/reviews/plate-completion-2026-09-18/name-confirmations.jpg",
+ "reviewPacketSha256": "79ff3adfca213b0614f33369470c5bf248772771ef76008f78538b883cb48a28",
+ "approvalFile": "dist/paper-doll/tulip-plates-2026-09-18/plates/manifest.json",
+ "approvalFileSha256": "c0ea5805f9edc9ef0122e0d8c42a2f622d25badb10e549d12affe8ec4c411bab",
+ "visualApproved": true,
+ "legacySourcesAccepted": false,
+ "publicationAuthorized": false,
+ "indexingAuthorized": false,
+ "rows": [
+  {
+   "sku": "GBTulip6BlkShSht",
+   "graceSku": "GB-TUL-CLR-6ML-CAP-SBLK",
+   "familyId": "tulip-6ml-clear-13-415",
+   "closure": "N/A",
+   "plate": {
+    "key": "tulip-6ml-clear-13-415/GBTulip6BlkShSht.front-on.webp",
+    "storeKey": "plates/tulip-6ml-clear-13-415/GBTulip6BlkShSht/eae9e1d8a4a1cbd4255219093fbeccbf092d3100fe7c57eb1966cfe8f6329058.front-on-1000x1100.webp",
+    "sha256": "eae9e1d8a4a1cbd4255219093fbeccbf092d3100fe7c57eb1966cfe8f6329058",
+    "bytes": 14284,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "a36b04ab3b34f229890bf5b0a1b098312fc0d0267c8689ae194f20509dc44427",
+    "bytes": 2026
+   },
+   "capOff": {
+    "sha256": "299b311e9a0faa52ad1cf7cd9b21d108e6068001ea1942408577dd6cf4f1d87d"
+   },
+   "source": {
+    "library": "master",
+    "path": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /1. GBTulip6BlkSht.psd",
+    "sha256": "b629820069aa5482641b888c40ec9798a10d038aec91ba1de2d582f1e84099a8"
+   }
+  }
+ ],
+ "scope": {
+  "renderedInBatch": 43,
+  "alreadyLiveAndExcluded": 42
+ },
+ "frontSourcePins": [],
+ "note": "Approves the rendered plate bytes after review. Publishing is a separate step and needs a release-specific ship phrase.",
+ "preparedManifest": {
+  "file": "docs/reviews/tulip-alias-plates-2026-09-18/prepared-manifest.json",
+  "sha256": "c0ea5805f9edc9ef0122e0d8c42a2f622d25badb10e549d12affe8ec4c411bab",
+  "copiedFrom": "dist/paper-doll/tulip-plates-2026-09-18/plates/manifest.json"
+ }
+}

@@ -1,0 +1,34 @@
+{
+  "verifiedAt": "2026-09-22T22:41:48.878686+00:00",
+  "state": "deployed-assets-and-public-desktop-mobile-catalog-verified",
+  "sharedStagingUrl": "https://best-bottles-website.vercel.app",
+  "deploymentUrl": "https://best-bottles-website-k72ljtqhy-asala.vercel.app",
+  "deploymentId": "dpl_DYJSWsVy6hGsctbKWEuysrA7tHVe",
+  "deploymentCommit": "3ae111d8a5a604656dd5bb1cc04117e5e497e524",
+  "source": "Git-backed redeploy with current branch-scoped preview settings",
+  "target": "preview",
+  "counts": {
+    "Cylinder": 59,
+    "Circle": 28,
+    "Round": 21,
+    "Empire": 11,
+    "allExports": 119,
+    "newlyStagedHeroes": 60
+  },
+  "rollbackUrl": "https://best-bottles-website-7zsmhwcv2-asala.vercel.app",
+  "rollbackDeploymentId": "dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+  "rollbackMethod": "Assign only best-bottles-website.vercel.app to the recorded prior preview with vercel alias set.",
+  "pr": "https://github.com/asalastudio/best-bottles-website/pull/228",
+  "stackedOn": "https://github.com/asalastudio/best-bottles-website/pull/225",
+  "verification": {
+    "approvedPublicAssetHashes": "staging-asset-verification.json",
+    "catalog": "staging-catalog-verification.json",
+    "pdpLinks": "staging-pdp-link-verification.json",
+    "unchangedBackendRecount": "staging-registry-recount.json",
+    "CI": "Passed complete verify job for code commit 3ae111d8; TypeScript, lint, unit tests and production build.",
+    "codeReview": "CodeRabbit skipped reviews because this stacked PR base is disabled; its success status is not a code review."
+  },
+  "scope": "Frontend catalog staging release. No merge, production promotion, Shopify/Convex media mutation, or PDP gallery replacement.",
+  "verifiedCatalogViews": 36,
+  "verifiedPdpViews": 6
+}

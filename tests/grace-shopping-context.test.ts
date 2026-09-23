@@ -22,6 +22,7 @@ describe("Grace shopping context", () => {
             application: "rollon",
             capacities: ["9 ml"],
             rollerMaterials: ["metal"],
+            sort: "capacity-asc",
             resultUrl: "/catalog/cylinder?applicators=rollon&capacities=9+ml&roller=metal",
         });
     });

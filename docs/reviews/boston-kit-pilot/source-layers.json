@@ -1,0 +1,554 @@
+[
+  {
+    "sku": "GBBstnAmb1ozMtlRollonMattBlk",
+    "view": "plate",
+    "source": {
+      "key": "boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattBlk.front-on.webp",
+      "storeKey": "plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattBlk/3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0.front-on-1000x1100.webp",
+      "sha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+      "bytes": 14252,
+      "width": 1000,
+      "height": 1100,
+      "sourceLibrary": "master",
+      "sourceRelPath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/3. GBBstnAmb1ozMtlRollonMattBlk.psd",
+      "sourceSha256": "987864a06140f0a1c8638d278dbdd66fa2a0e90d1db2f3c376a772e75db08bb1",
+      "sourceStateEvidence": "explicit"
+    },
+    "layers": [
+      {
+        "index": 0,
+        "name": "Background",
+        "bbox": [
+          0,
+          0,
+          945,
+          1500
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozMtlRollonMattBlk-plate-0.png",
+        "visible": true
+      },
+      {
+        "index": 1,
+        "name": "Layer 7",
+        "bbox": [
+          346,
+          315,
+          592,
+          529
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozMtlRollonMattBlk-plate-1.png",
+        "visible": true
+      },
+      {
+        "index": 2,
+        "name": "Layer 5",
+        "bbox": [
+          194,
+          290,
+          1006,
+          1500
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozMtlRollonMattBlk-plate-2.png",
+        "visible": true
+      },
+      {
+        "index": 3,
+        "name": "Layer 11",
+        "bbox": [
+          308,
+          291,
+          602,
+          760
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozMtlRollonMattBlk-plate-3.png",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnAmb1ozMtlRollonMattBlk",
+    "view": "plateCapOff",
+    "source": {
+      "key": "boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattBlk.front-off.webp",
+      "storeKey": "plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattBlk/8f07ee56d31ec00badd20a45c086c02b1e5b6a5dec9df8bd5a020080bac54a76.front-off-1000x1100.webp",
+      "sha256": "8f07ee56d31ec00badd20a45c086c02b1e5b6a5dec9df8bd5a020080bac54a76",
+      "bytes": 21530,
+      "width": 1000,
+      "height": 1100,
+      "sourceLibrary": "master",
+      "sourceRelPath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/1. Amber Bottle (1oz)/Amber - Alternating Caps/3. GBBstnAmb1ozMtlRollonMattBlk.psd",
+      "sourceSha256": "af23cbcd885e0d46bc90943bb5ab29bd58e5173dbb5887275c7c2aaf70a5a762",
+      "sourceStateEvidence": "explicit"
+    },
+    "layers": [
+      {
+        "index": 0,
+        "name": "Background",
+        "bbox": [
+          0,
+          0,
+          945,
+          1500
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozMtlRollonMattBlk-plateCapOff-0.png",
+        "visible": true
+      },
+      {
+        "index": 1,
+        "name": "Layer 7",
+        "bbox": [
+          162,
+          315,
+          408,
+          529
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozMtlRollonMattBlk-plateCapOff-1.png",
+        "visible": true
+      },
+      {
+        "index": 2,
+        "name": "Layer 5",
+        "bbox": [
+          10,
+          290,
+          822,
+          1500
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozMtlRollonMattBlk-plateCapOff-2.png",
+        "visible": true
+      },
+      {
+        "index": 3,
+        "name": "Layer 10",
+        "bbox": [
+          569,
+          990,
+          863,
+          1459
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozMtlRollonMattBlk-plateCapOff-3.png",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnAmb1ozMtlRollonMattSl",
+    "view": "plate",
+    "source": {
+      "key": "boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattSl.front-on.webp",
+      "storeKey": "plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattSl/1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68.front-on-1000x1100.webp",
+      "sha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+      "bytes": 14336,
+      "width": 1000,
+      "height": 1100,
+      "sourceLibrary": "master",
+      "sourceRelPath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/1. GBBstnAmb1ozMtlRollonMattSl.psd",
+      "sourceSha256": "3ca84fa59dffed11eb26323d63a6b8b7b74dc54ea6a1b06a4b7ce39e8f26c84f",
+      "sourceStateEvidence": "explicit"
+    },
+    "layers": [
+      {
+        "index": 0,
+        "name": "Background",
+        "bbox": [
+          0,
+          0,
+          945,
+          1500
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozMtlRollonMattSl-plate-0.png",
+        "visible": true
+      },
+      {
+        "index": 1,
+        "name": "Layer 7",
+        "bbox": [
+          351,
+          315,
+          597,
+          529
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozMtlRollonMattSl-plate-1.png",
+        "visible": true
+      },
+      {
+        "index": 2,
+        "name": "Layer 5",
+        "bbox": [
+          199,
+          290,
+          1011,
+          1500
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozMtlRollonMattSl-plate-2.png",
+        "visible": true
+      },
+      {
+        "index": 3,
+        "name": "Layer 8",
+        "bbox": [
+          314,
+          311,
+          608,
+          743
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozMtlRollonMattSl-plate-3.png",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnAmb1ozMtlRollonMattSl",
+    "view": "plateCapOff",
+    "source": {
+      "key": "boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattSl.front-off.webp",
+      "storeKey": "plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattSl/4d4f4b8e8243cff8661e9b59d30d4a799327880bc495b0a8aed1efc3ebd12b84.front-off-1000x1100.webp",
+      "sha256": "4d4f4b8e8243cff8661e9b59d30d4a799327880bc495b0a8aed1efc3ebd12b84",
+      "bytes": 21762,
+      "width": 1000,
+      "height": 1100,
+      "sourceLibrary": "master",
+      "sourceRelPath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/1. Amber Bottle (1oz)/Amber - Alternating Caps/1. GBBstnAmb1ozMtlRollonMattSl.psd",
+      "sourceSha256": "7e14dec33daccb39020f748a6c15203dc0895f5380bf8dce02472bb3892d0cb0",
+      "sourceStateEvidence": "explicit"
+    },
+    "layers": [
+      {
+        "index": 0,
+        "name": "Background",
+        "bbox": [
+          0,
+          0,
+          945,
+          1500
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozMtlRollonMattSl-plateCapOff-0.png",
+        "visible": true
+      },
+      {
+        "index": 1,
+        "name": "Layer 7",
+        "bbox": [
+          162,
+          315,
+          408,
+          529
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozMtlRollonMattSl-plateCapOff-1.png",
+        "visible": true
+      },
+      {
+        "index": 2,
+        "name": "Layer 5",
+        "bbox": [
+          10,
+          290,
+          822,
+          1500
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozMtlRollonMattSl-plateCapOff-2.png",
+        "visible": true
+      },
+      {
+        "index": 3,
+        "name": "Layer 4",
+        "bbox": [
+          585,
+          1015,
+          879,
+          1447
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozMtlRollonMattSl-plateCapOff-3.png",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnAmb1ozRollonMattBlk",
+    "view": "plate",
+    "source": {
+      "key": "boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattBlk.front-on.webp",
+      "storeKey": "plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattBlk/3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0.front-on-1000x1100.webp",
+      "sha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+      "bytes": 14252,
+      "width": 1000,
+      "height": 1100,
+      "sourceLibrary": "master",
+      "sourceRelPath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/8. GBBstnAmb1ozRollonMattBlk.psd",
+      "sourceSha256": "db8aa09ebb4d60407aeaff1bad20da32f7fd01bd071d72bc57420ca1ba85ebd9",
+      "sourceStateEvidence": "explicit"
+    },
+    "layers": [
+      {
+        "index": 0,
+        "name": "Background",
+        "bbox": [
+          0,
+          0,
+          945,
+          1500
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozRollonMattBlk-plate-0.png",
+        "visible": true
+      },
+      {
+        "index": 1,
+        "name": "Layer 7",
+        "bbox": [
+          346,
+          315,
+          592,
+          529
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozRollonMattBlk-plate-1.png",
+        "visible": true
+      },
+      {
+        "index": 2,
+        "name": "Layer 5",
+        "bbox": [
+          194,
+          290,
+          1006,
+          1500
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozRollonMattBlk-plate-2.png",
+        "visible": true
+      },
+      {
+        "index": 3,
+        "name": "Layer 11",
+        "bbox": [
+          308,
+          291,
+          602,
+          760
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozRollonMattBlk-plate-3.png",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnAmb1ozRollonMattBlk",
+    "view": "plateCapOff",
+    "source": {
+      "key": "boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattBlk.front-off.webp",
+      "storeKey": "plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattBlk/08e563e8bea279e76e163f35e6e450833af04ca2d1e90613cb2813a807451cbf.front-off-1000x1100.webp",
+      "sha256": "08e563e8bea279e76e163f35e6e450833af04ca2d1e90613cb2813a807451cbf",
+      "bytes": 20758,
+      "width": 1000,
+      "height": 1100,
+      "sourceLibrary": "master",
+      "sourceRelPath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/1. Amber Bottle (1oz)/Amber - Alternating Caps/8. GBBstnAmb1ozRollonMattBlk.psd",
+      "sourceSha256": "5b4a2e1ec5299c1eaceb4181d4d8fe24b4eae2583b9713b1c209d7e594ac1840",
+      "sourceStateEvidence": "blob-count:2"
+    },
+    "layers": [
+      {
+        "index": 0,
+        "name": "Background",
+        "bbox": [
+          0,
+          0,
+          945,
+          1500
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozRollonMattBlk-plateCapOff-0.png",
+        "visible": true
+      },
+      {
+        "index": 1,
+        "name": "Layer 7",
+        "bbox": [
+          162,
+          315,
+          408,
+          529
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozRollonMattBlk-plateCapOff-1.png",
+        "visible": true
+      },
+      {
+        "index": 2,
+        "name": "Layer 5",
+        "bbox": [
+          10,
+          290,
+          822,
+          1500
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozRollonMattBlk-plateCapOff-2.png",
+        "visible": true
+      },
+      {
+        "index": 3,
+        "name": "Layer 13",
+        "bbox": [
+          169,
+          353,
+          382,
+          524
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozRollonMattBlk-plateCapOff-3.png",
+        "visible": true
+      },
+      {
+        "index": 4,
+        "name": "Layer 16",
+        "bbox": [
+          559,
+          990,
+          853,
+          1459
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozRollonMattBlk-plateCapOff-4.png",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnAmb1ozRollonMattSl",
+    "view": "plate",
+    "source": {
+      "key": "boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattSl.front-on.webp",
+      "storeKey": "plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattSl/1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68.front-on-1000x1100.webp",
+      "sha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+      "bytes": 14336,
+      "width": 1000,
+      "height": 1100,
+      "sourceLibrary": "master",
+      "sourceRelPath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/6. GBBstnAmb1ozRollonMattSl.psd",
+      "sourceSha256": "7eabadd67036eb3e1edb72415913f98b487612974de3fdf27194af86b2e139eb",
+      "sourceStateEvidence": "explicit"
+    },
+    "layers": [
+      {
+        "index": 0,
+        "name": "Background",
+        "bbox": [
+          0,
+          0,
+          945,
+          1500
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozRollonMattSl-plate-0.png",
+        "visible": true
+      },
+      {
+        "index": 1,
+        "name": "Layer 7",
+        "bbox": [
+          351,
+          315,
+          597,
+          529
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozRollonMattSl-plate-1.png",
+        "visible": true
+      },
+      {
+        "index": 2,
+        "name": "Layer 5",
+        "bbox": [
+          199,
+          290,
+          1011,
+          1500
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozRollonMattSl-plate-2.png",
+        "visible": true
+      },
+      {
+        "index": 3,
+        "name": "Layer 8",
+        "bbox": [
+          314,
+          311,
+          608,
+          743
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozRollonMattSl-plate-3.png",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnAmb1ozRollonMattSl",
+    "view": "plateCapOff",
+    "source": {
+      "key": "boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattSl.front-off.webp",
+      "storeKey": "plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattSl/cd0c633fb653847ec382326186f384e488149fa0700875fc566a5b9d2afc0ad1.front-off-1000x1100.webp",
+      "sha256": "cd0c633fb653847ec382326186f384e488149fa0700875fc566a5b9d2afc0ad1",
+      "bytes": 21014,
+      "width": 1000,
+      "height": 1100,
+      "sourceLibrary": "master",
+      "sourceRelPath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/1. Amber Bottle (1oz)/Amber - Alternating Caps/6. GBBstnAmb1ozRollonMattSl.psd",
+      "sourceSha256": "fc54479ec1ef44ecdabcac4347793a39c532089d3036e3d26a05b0e20b0e219b",
+      "sourceStateEvidence": "blob-count:2"
+    },
+    "layers": [
+      {
+        "index": 0,
+        "name": "Background",
+        "bbox": [
+          0,
+          0,
+          945,
+          1500
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozRollonMattSl-plateCapOff-0.png",
+        "visible": true
+      },
+      {
+        "index": 1,
+        "name": "Layer 7",
+        "bbox": [
+          162,
+          315,
+          408,
+          529
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozRollonMattSl-plateCapOff-1.png",
+        "visible": true
+      },
+      {
+        "index": 2,
+        "name": "Layer 5",
+        "bbox": [
+          10,
+          290,
+          822,
+          1500
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozRollonMattSl-plateCapOff-2.png",
+        "visible": true
+      },
+      {
+        "index": 3,
+        "name": "Layer 13",
+        "bbox": [
+          169,
+          353,
+          382,
+          524
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozRollonMattSl-plateCapOff-3.png",
+        "visible": true
+      },
+      {
+        "index": 4,
+        "name": "Layer 12",
+        "bbox": [
+          583,
+          999,
+          877,
+          1440
+        ],
+        "path": "docs/reviews/boston-kit-pilot/GBBstnAmb1ozRollonMattSl-plateCapOff-4.png",
+        "visible": true
+      }
+    ]
+  }
+]

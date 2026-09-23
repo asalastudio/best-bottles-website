@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-09-13T02:05:44.879Z",
+  "catalogScope": 123,
+  "plateCoverage": 123,
+  "plateApprovals": 62,
+  "preparedPending": 61,
+  "liveKits": 0,
+  "priorKitCandidates": 25,
+  "reuseCandidatesOnPreservedPlates": 21,
+  "priorCandidatesNeedingNewPlateAlignment": [
+    "GBBstn15BlkCapSht",
+    "GBBstn1ozBlkCapSht",
+    "GBBstn2ozBlkCapSht",
+    "GBBstnAmb1ozMtlRollonShnSl"
+  ],
+  "kitHolds": 65,
+  "newPlateSlots": 33,
+  "sourceOfTruth": "Current workbench catalog and exact source/plate hashes; no new legacy scope reconciliation.",
+  "statusChanges": 0,
+  "publications": 0
+}

@@ -1,0 +1,912 @@
+{
+ "schemaVersion": 1,
+ "release": "Slim plates 2026-09-18",
+ "approvedAt": "2026-09-19T04:26:36.999Z",
+ "actor": "Jordan · chat approval of the contact sheet (\"yes they look good\")",
+ "approvalId": "113238a0-1146-45b7-b755-57bd0376d1eb",
+ "reviewPacket": "public/reviews/plate-completion-2026-09-18/slim-new-plates.jpg",
+ "reviewPacketSha256": "422253641510efaacf63e1eb2f704e6920e3a08200d1ae8af299344621a7ef61",
+ "approvalFile": "dist/paper-doll/slim-2026-09-18/plates/manifest.json",
+ "approvalFileSha256": "10cf00082aaed445ec4bc29a534100e4c7bb9d9e395b770d91f889b08de000b4",
+ "visualApproved": true,
+ "legacySourcesAccepted": false,
+ "publicationAuthorized": false,
+ "indexingAuthorized": false,
+ "rows": [
+  {
+   "sku": "LBSlm100LtnCu",
+   "graceSku": "LB-SLM-CLR-100ML-LPM-CPR",
+   "familyId": "slim-100ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "slim-100ml-clear-18-415/LBSlm100LtnCu.front-on.webp",
+    "storeKey": "plates/slim-100ml-clear-18-415/LBSlm100LtnCu/938cf9ec788aecc10ffa9fbab61b190d2c2a5134efdf293022f266b1d0e781ac.front-on-1000x1100.webp",
+    "sha256": "938cf9ec788aecc10ffa9fbab61b190d2c2a5134efdf293022f266b1d0e781ac",
+    "bytes": 12170,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "b18f644b0967250bb207852a050d0b75e3da11a10277ccfb109ad32e04ec3c9a",
+    "bytes": 1152
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/58. LBSlm100LtnCu.psd",
+    "sha256": "519d36ae65b670f521151b75a6208ef45510b3d45e0e74485e35598a7a45f93b"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "LBSlm100LtnMtGl",
+   "graceSku": "LB-SLM-CLR-100ML-LPM-MGLD",
+   "familyId": "slim-100ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "slim-100ml-clear-18-415/LBSlm100LtnMtGl.front-on.webp",
+    "storeKey": "plates/slim-100ml-clear-18-415/LBSlm100LtnMtGl/0c067f1042f1900fcf57e5e6c493aafbcde149fb8664f2f020e72b479cc45c27.front-on-1000x1100.webp",
+    "sha256": "0c067f1042f1900fcf57e5e6c493aafbcde149fb8664f2f020e72b479cc45c27",
+    "bytes": 11966,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "8c8cf6954259b21c5d9f85181f6b4c299bf18fc302ccb081610980ebbe491ea3",
+    "bytes": 1098
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/12. LBSlm100LtnMtGl.psd",
+    "sha256": "e7e409a69081796b49a96873ad08a8bad49c0960abf4443c647f048ac98b7174"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "LBSlm100LtnMtSl",
+   "graceSku": "LB-SLM-CLR-100ML-LPM-MSLV",
+   "familyId": "slim-100ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "slim-100ml-clear-18-415/LBSlm100LtnMtSl.front-on.webp",
+    "storeKey": "plates/slim-100ml-clear-18-415/LBSlm100LtnMtSl/6f71807993bdb7cd36a733e9bcdfa0f5c53bc43aa540041c2577b2723fab2bac.front-on-1000x1100.webp",
+    "sha256": "6f71807993bdb7cd36a733e9bcdfa0f5c53bc43aa540041c2577b2723fab2bac",
+    "bytes": 11722,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "efea47120515d4cb7450e972f99b54f8f6c9da51824468fbb24da36cab5f44e9",
+    "bytes": 996
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/26. LBSlm100LtnMtSl.psd",
+    "sha256": "037220680a4137e2917a1256aec6358b312d8a9d463bf3b967b1e4e1c95526fe"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "LBSlm100LtnShnBlk",
+   "graceSku": "LB-SLM-CLR-100ML-LPM-SBLK",
+   "familyId": "slim-100ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "slim-100ml-clear-18-415/LBSlm100LtnShnBlk.front-on.webp",
+    "storeKey": "plates/slim-100ml-clear-18-415/LBSlm100LtnShnBlk/a50e1bbf96c474b78c92b0ef5a302c1c5953c33d9ef4fecedbbfd8ade89b6d6c.front-on-1000x1100.webp",
+    "sha256": "a50e1bbf96c474b78c92b0ef5a302c1c5953c33d9ef4fecedbbfd8ade89b6d6c",
+    "bytes": 12006,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "eb633c01f5d7b6568350f3034b043c22531af6b6d7dd78906530e2edc4c83ce1",
+    "bytes": 1018
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/22. LBSlm100LtnShnBlk.psd",
+    "sha256": "ba1ea55241d94d053d9fd6d6501c742097874923ca1f92c88503fa0e63aa307d"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "LBSlm100LtnShnGl",
+   "graceSku": "LB-SLM-CLR-100ML-LPM-SGLD",
+   "familyId": "slim-100ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "slim-100ml-clear-18-415/LBSlm100LtnShnGl.front-on.webp",
+    "storeKey": "plates/slim-100ml-clear-18-415/LBSlm100LtnShnGl/98b48cdc578717ef98e52cdee91cfc6950ec5b314881a59ed4f30124bc19f8d5.front-on-1000x1100.webp",
+    "sha256": "98b48cdc578717ef98e52cdee91cfc6950ec5b314881a59ed4f30124bc19f8d5",
+    "bytes": 13044,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "194b502edf6ace2fd425c842d5a7dc63d3ac8ff7d8aa03412d0ba01fcfac8736",
+    "bytes": 1188
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/18. LBSlm100LtnShnGl.psd",
+    "sha256": "84a69e6cc34b802ad2136b3aea741d18c8619952fde806973ce364a845a83885"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "LBSlm100LtnShnSl",
+   "graceSku": "LB-SLM-CLR-100ML-LPM-SSLV",
+   "familyId": "slim-100ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "slim-100ml-clear-18-415/LBSlm100LtnShnSl.front-on.webp",
+    "storeKey": "plates/slim-100ml-clear-18-415/LBSlm100LtnShnSl/9aef530545f2ca330cf4b421c28f1cc239f69f0d30a936f49165a2af8a817db2.front-on-1000x1100.webp",
+    "sha256": "9aef530545f2ca330cf4b421c28f1cc239f69f0d30a936f49165a2af8a817db2",
+    "bytes": 12534,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "674276571089513213c52c372d4e06dca209baa17286b068fcd13e8e0314dc28",
+    "bytes": 1082
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/32. LBSlm100LtnShnSl.psd",
+    "sha256": "71207aa599852092ab5592fa4ae0d2e69de6daf7e5c8fb0834164f9ef9b3300c"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "LBSlm100MtSlClOvrCap",
+   "graceSku": "LB-SLM-CLR-100ML-MSLV-T",
+   "familyId": "slim-100ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "slim-100ml-clear-18-415/LBSlm100MtSlClOvrCap.front-on.webp",
+    "storeKey": "plates/slim-100ml-clear-18-415/LBSlm100MtSlClOvrCap/6460107737f12ae53a3204574bc4868ab0cef5616847ecf8a943719464cc131e.front-on-1000x1100.webp",
+    "sha256": "6460107737f12ae53a3204574bc4868ab0cef5616847ecf8a943719464cc131e",
+    "bytes": 13246,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "d68f812b3bfd4d7e7b85ef978b63af63cf54849940e1264400d3879a072f22cf",
+    "bytes": 1096
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/28. LBSlm100MtSlClOvrCap.psd",
+    "sha256": "8abefefb734ad5b20f121c611315fb39450632c4f0fe0cb3ecbae926b9ebfe9d"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "GBSlm100SpryCu",
+   "graceSku": "GB-SLM-CLR-100ML-SPR-CPR",
+   "familyId": "slim-100ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "slim-100ml-clear-18-415/GBSlm100SpryCu.front-on.webp",
+    "storeKey": "plates/slim-100ml-clear-18-415/GBSlm100SpryCu/02eeb03f1b2728bed89bccfdbe9dbf0cc9250ab1c43b277a6b1e7780a2c34b69.front-on-1000x1100.webp",
+    "sha256": "02eeb03f1b2728bed89bccfdbe9dbf0cc9250ab1c43b277a6b1e7780a2c34b69",
+    "bytes": 11210,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "e27e979af60d131490bd184a0f69a5ace7a09526645c4e2a924059ce48689565",
+    "bytes": 972
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/56. GBSlm100SpryCu.psd",
+    "sha256": "a7a8957d769da4282b64b83506e2f6867d67dd01ba827e1dc94defb9d05a3d1a"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "GBSlm100SpryMtGl",
+   "graceSku": "GB-SLM-CLR-100ML-SPR-MGLD",
+   "familyId": "slim-100ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "slim-100ml-clear-18-415/GBSlm100SpryMtGl.front-on.webp",
+    "storeKey": "plates/slim-100ml-clear-18-415/GBSlm100SpryMtGl/6c0a516b1d47f9c39fe3d7be205b1e18840c7372f48abc23b1d68a7467c779af.front-on-1000x1100.webp",
+    "sha256": "6c0a516b1d47f9c39fe3d7be205b1e18840c7372f48abc23b1d68a7467c779af",
+    "bytes": 10948,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "e4916b2cf3b69276cd941a3c56c76a965c3ca9af912448950725f84f1957277b",
+    "bytes": 942
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/11. GBSlm100SpryMtGl.psd",
+    "sha256": "d2545496526fb7682dbdec123cca1e103ae0d7cd12aca711e375cca42ddb96fc"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "GBSlm100SpryShnBlk",
+   "graceSku": "GB-SLM-CLR-100ML-SPR-SBLK",
+   "familyId": "slim-100ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "slim-100ml-clear-18-415/GBSlm100SpryShnBlk.front-on.webp",
+    "storeKey": "plates/slim-100ml-clear-18-415/GBSlm100SpryShnBlk/f32df7b709b645c5c894d81a4fa6174c917ea3e2ca2e26dbd65dfb71db73c433.front-on-1000x1100.webp",
+    "sha256": "f32df7b709b645c5c894d81a4fa6174c917ea3e2ca2e26dbd65dfb71db73c433",
+    "bytes": 11270,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "b1a4ade281579e27cf619bc96e71734cd15b181cee5033e92934e0e49f066881",
+    "bytes": 886
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/21. GBSlm100SpryShnBlk.psd",
+    "sha256": "d09b8ea062b414242ccd33f4d56704c7ac74ca926bc455997af4e7b9889fae23"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "GBSlm100SpryShnGl",
+   "graceSku": "GB-SLM-CLR-100ML-SPR-SGLD",
+   "familyId": "slim-100ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "slim-100ml-clear-18-415/GBSlm100SpryShnGl.front-on.webp",
+    "storeKey": "plates/slim-100ml-clear-18-415/GBSlm100SpryShnGl/f6e6dc2543a8841e3f03a3075e8bd27992ef66d983d3e75563d293cba971f5e8.front-on-1000x1100.webp",
+    "sha256": "f6e6dc2543a8841e3f03a3075e8bd27992ef66d983d3e75563d293cba971f5e8",
+    "bytes": 12520,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "3f6d307394d855b36eb6a0ae52ff2236a7db54d2af1a2be07877a5497633460c",
+    "bytes": 1048
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/17. GBSlm100SpryShnGl.psd",
+    "sha256": "9a929ee3dc5775c68663c0cb1a2e81e848f2dff2daf4751ee400bd74d8dfaac0"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "GBSlm100SpryShnSl",
+   "graceSku": "GB-SLM-CLR-100ML-SPR-SSLV",
+   "familyId": "slim-100ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "slim-100ml-clear-18-415/GBSlm100SpryShnSl.front-on.webp",
+    "storeKey": "plates/slim-100ml-clear-18-415/GBSlm100SpryShnSl/60e8d63118817d821a6d4b0a6e1254efd13c66eff86f50e0a4affe3987ea2185.front-on-1000x1100.webp",
+    "sha256": "60e8d63118817d821a6d4b0a6e1254efd13c66eff86f50e0a4affe3987ea2185",
+    "bytes": 11740,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "1e53ecb0c5773d469d7e20e05f53797b81498f7e9018ed7e06d6f3eafeafdcf9",
+    "bytes": 934
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/30. GBSlm100SpryShnSl.psd",
+    "sha256": "8d81c01ad6be6571e2b064c93cab87b9c85e592261b56cdb949da710f1c70685"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "LBSlm30LtnClOvrCap",
+   "graceSku": "LB-SLM-CLR-30ML-LPM-COCP",
+   "familyId": "slim-30ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "slim-30ml-clear-18-415/LBSlm30LtnClOvrCap.front-on.webp",
+    "storeKey": "plates/slim-30ml-clear-18-415/LBSlm30LtnClOvrCap/1b715170ed473aacc76263501900b9be3e2e4c345aac7ca29135afb67b85d93f.front-on-1000x1100.webp",
+    "sha256": "1b715170ed473aacc76263501900b9be3e2e4c345aac7ca29135afb67b85d93f",
+    "bytes": 16050,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "98c05d4aa77dd94a07c2cedc0effeabe7b2550afb7d54485ef3fb269b83de13f",
+    "bytes": 1430
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/28. LBSlm30LtnClOvrCap.psd",
+    "sha256": "c9f771eb661a6c414e5eb7b5ed7f617c9dfdef19ae8061e043436d902757559b"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "LBSlm30LtnCu",
+   "graceSku": "LB-SLM-CLR-30ML-LPM-CPR",
+   "familyId": "slim-30ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "slim-30ml-clear-18-415/LBSlm30LtnCu.front-on.webp",
+    "storeKey": "plates/slim-30ml-clear-18-415/LBSlm30LtnCu/d24b8442432608300ae63cc5aafc2ce0c5028b92cf07a2cff3cf88d7bfdb742d.front-on-1000x1100.webp",
+    "sha256": "d24b8442432608300ae63cc5aafc2ce0c5028b92cf07a2cff3cf88d7bfdb742d",
+    "bytes": 15094,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "d70de4061090aa4bdfc531019826c3deb802d2d6005504b61c3e1b8fe2ed2973",
+    "bytes": 1416
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/50. LBSlm30LtnCu.psd",
+    "sha256": "1ab48b9da8c21179c6e8895d21d4e26ec85df286659dde68dcc6dd80bdbfce74"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "LBSlm30LtnMtGl",
+   "graceSku": "LB-SLM-CLR-30ML-LPM-MGLD",
+   "familyId": "slim-30ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "slim-30ml-clear-18-415/LBSlm30LtnMtGl.front-on.webp",
+    "storeKey": "plates/slim-30ml-clear-18-415/LBSlm30LtnMtGl/7ab8fc1ca4585aa350744412a31af3ab07977f1fff1a8ff044d5537808fb7e3b.front-on-1000x1100.webp",
+    "sha256": "7ab8fc1ca4585aa350744412a31af3ab07977f1fff1a8ff044d5537808fb7e3b",
+    "bytes": 14286,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "2f0c28a9b7d4a13c97f8a89f02cf5c9884a4ae8a869807c64d9b8d2ee562db96",
+    "bytes": 1356
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/12. LBSlm30LtnMtGl.psd",
+    "sha256": "2f04e1060093021083778feacea2ec4f610d57bcc6679d4dfe926c33e093edac"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "LBSlm30LtnMtSl",
+   "graceSku": "LB-SLM-CLR-30ML-LPM-MSLV",
+   "familyId": "slim-30ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "slim-30ml-clear-18-415/LBSlm30LtnMtSl.front-on.webp",
+    "storeKey": "plates/slim-30ml-clear-18-415/LBSlm30LtnMtSl/fcc7620eb2b70c1426b959a0ca1e487f29d64d1408f4143f791aa70f70acc0e0.front-on-1000x1100.webp",
+    "sha256": "fcc7620eb2b70c1426b959a0ca1e487f29d64d1408f4143f791aa70f70acc0e0",
+    "bytes": 13662,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "b0525cb0d1666c55e379a9ff353776e2224968f49d6873a956c74d3acd1fbc83",
+    "bytes": 1286
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/26. LBSlm30LtnMtSl.psd",
+    "sha256": "e5d6d2d970d2f12c9e677c62745508f7e034f03fdf8c0d42d182271ec20efec5"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "LBSlm30LtnShnBlk",
+   "graceSku": "LB-SLM-CLR-30ML-LPM-SBLK",
+   "familyId": "slim-30ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "slim-30ml-clear-18-415/LBSlm30LtnShnBlk.front-on.webp",
+    "storeKey": "plates/slim-30ml-clear-18-415/LBSlm30LtnShnBlk/f820519fe585b87978d13ca5e6033eae525c26e3f04f1bc5f19e39f8e6bfffe9.front-on-1000x1100.webp",
+    "sha256": "f820519fe585b87978d13ca5e6033eae525c26e3f04f1bc5f19e39f8e6bfffe9",
+    "bytes": 14612,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "f98578a1dddf58b25fca5a7bf62a18e4f149f5725fc021219c96362a35826131",
+    "bytes": 1288
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/22. LBSlm30LtnShnBlk.psd",
+    "sha256": "b094b731aa69718be18ef4f04a60f70dcabb473bec409148190866b3b11b8f69"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "LBSlm30LtnShnGl",
+   "graceSku": "LB-SLM-CLR-30ML-LPM-SGLD",
+   "familyId": "slim-30ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "slim-30ml-clear-18-415/LBSlm30LtnShnGl.front-on.webp",
+    "storeKey": "plates/slim-30ml-clear-18-415/LBSlm30LtnShnGl/c25db7d33724d587aa705820834304ec4ca8a5b17a26b4445934f913327d9641.front-on-1000x1100.webp",
+    "sha256": "c25db7d33724d587aa705820834304ec4ca8a5b17a26b4445934f913327d9641",
+    "bytes": 16396,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "2fb9dac57608cca13c549c5bd29060c38aadc049e1c5a0c6b48030a98b389ace",
+    "bytes": 1576
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/18. LBSlm30LtnShnGl.psd",
+    "sha256": "399dfd1beaf8628a07468b57f0125dfaeff890b34a621265e98edfc9aa3848be"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "GBSlm30SpryCu",
+   "graceSku": "GB-SLM-CLR-30ML-SPR-CPR",
+   "familyId": "slim-30ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "slim-30ml-clear-18-415/GBSlm30SpryCu.front-on.webp",
+    "storeKey": "plates/slim-30ml-clear-18-415/GBSlm30SpryCu/50c81e664814517e3cd25f8bfed9acbac9c9bc89df63f3a988424a2a190b3bd7.front-on-1000x1100.webp",
+    "sha256": "50c81e664814517e3cd25f8bfed9acbac9c9bc89df63f3a988424a2a190b3bd7",
+    "bytes": 14516,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "439b471f5740848aa4f772e0c58565a35d2466046550af4661707e774ce542b0",
+    "bytes": 1278
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/48. GBSlm30SpryCu.psd",
+    "sha256": "7480d056ec368ff7bf6f325a272ebf1dafa85a61182d61f1d8bacdb299bb0e26"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "GBSlm30SpryMtGl",
+   "graceSku": "GB-SLM-CLR-30ML-SPR-MGLD",
+   "familyId": "slim-30ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "slim-30ml-clear-18-415/GBSlm30SpryMtGl.front-on.webp",
+    "storeKey": "plates/slim-30ml-clear-18-415/GBSlm30SpryMtGl/5525b90c9afd9f7e3f5f83a082d78b0646e9b0a580b05871a65519e1f21f6eac.front-on-1000x1100.webp",
+    "sha256": "5525b90c9afd9f7e3f5f83a082d78b0646e9b0a580b05871a65519e1f21f6eac",
+    "bytes": 13804,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "6ad606220407ca925cc6cad0a31896ca2ffeead77ff211b08fcb5e82d82bf214",
+    "bytes": 1256
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/11. GBSlm30SpryMtGl.psd",
+    "sha256": "224d7db9b71d55e090ff4bd4b0ad177267dd13420a39ca906a69c05d65016ef1"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "GBSlm30SpryMtSl",
+   "graceSku": "GB-SLM-CLR-30ML-SPR-MSLV",
+   "familyId": "slim-30ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "slim-30ml-clear-18-415/GBSlm30SpryMtSl.front-on.webp",
+    "storeKey": "plates/slim-30ml-clear-18-415/GBSlm30SpryMtSl/70476f510a6e8823506d280ba4d1cc66aed490a20b3fe92423300cb9f7c92186.front-on-1000x1100.webp",
+    "sha256": "70476f510a6e8823506d280ba4d1cc66aed490a20b3fe92423300cb9f7c92186",
+    "bytes": 12224,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "78eb863eadcd148b8f792a51267c7cae28031511c05e12c0066e87a972e1e1a4",
+    "bytes": 1120
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/24. GBSlm30SpryMtSl.psd",
+    "sha256": "9cb7e4bcafd2ededc300183aae8336afee9e58ad4b96cdc74ae8023a0af5e6f1"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "GBSlm30SpryShnBlk",
+   "graceSku": "GB-SLM-CLR-30ML-SPR-SBLK",
+   "familyId": "slim-30ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "slim-30ml-clear-18-415/GBSlm30SpryShnBlk.front-on.webp",
+    "storeKey": "plates/slim-30ml-clear-18-415/GBSlm30SpryShnBlk/9483dc67a4a0fc2e41f66d08d430bdef25fed41b414d2d4b66a0bf850c57c9b4.front-on-1000x1100.webp",
+    "sha256": "9483dc67a4a0fc2e41f66d08d430bdef25fed41b414d2d4b66a0bf850c57c9b4",
+    "bytes": 13584,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "69c4efc3631a3a6fd6c5120503e875bf5a151ff70dbfd3bf2c0bf22a81348905",
+    "bytes": 1196
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/21. GBSlm30SpryShnBlk.psd",
+    "sha256": "3f1f1460c75f087028a96cfac357340c330e0c30d4647d06d74c32b02e19c3a1"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "GBSlm30SpryShnGl",
+   "graceSku": "GB-SLM-CLR-30ML-SPR-SGLD",
+   "familyId": "slim-30ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "slim-30ml-clear-18-415/GBSlm30SpryShnGl.front-on.webp",
+    "storeKey": "plates/slim-30ml-clear-18-415/GBSlm30SpryShnGl/2909a85b1468161f58c8e90726670435b1f1a57f373d56f1c7bf6a0b0a8bf0ff.front-on-1000x1100.webp",
+    "sha256": "2909a85b1468161f58c8e90726670435b1f1a57f373d56f1c7bf6a0b0a8bf0ff",
+    "bytes": 15584,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "401df35788c7a9463b72b7f5b0ed6615bb83ca31827e5714da5bb9d6914d7e4a",
+    "bytes": 1474
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/17. GBSlm30SpryShnGl.psd",
+    "sha256": "d08cd69cd57ef895ac5a9e2a1eead8f7667eb0fb7928664958cfe4e9c5ff04f2"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "GBSlm30SpryShnSl",
+   "graceSku": "GB-SLM-CLR-30ML-SPR-SSLV",
+   "familyId": "slim-30ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "slim-30ml-clear-18-415/GBSlm30SpryShnSl.front-on.webp",
+    "storeKey": "plates/slim-30ml-clear-18-415/GBSlm30SpryShnSl/8803d0445f56ebe999ce44fd6b5e94f5a19b674b1c55361f6714f936615b2ff1.front-on-1000x1100.webp",
+    "sha256": "8803d0445f56ebe999ce44fd6b5e94f5a19b674b1c55361f6714f936615b2ff1",
+    "bytes": 14178,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "9218c3b1055dbbba6549d283b91347be136e39db8f91dfecd0aaa0455d39a82a",
+    "bytes": 1166
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/30. GBSlm30SpryShnSl.psd",
+    "sha256": "b5696370e123693bdd3bd0ca5498be2cbb22993aa9be4d94b025ce52bf574d69"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "LBSlm50LtnClOvrCap",
+   "graceSku": "LB-SLM-CLR-50ML-LPM-COCP",
+   "familyId": "slim-50ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "slim-50ml-clear-18-415/LBSlm50LtnClOvrCap.front-on.webp",
+    "storeKey": "plates/slim-50ml-clear-18-415/LBSlm50LtnClOvrCap/02c4e1f5bb1aaab79999512abdded0d577cb22a74199096e391e8ed391f4bee8.front-on-1000x1100.webp",
+    "sha256": "02c4e1f5bb1aaab79999512abdded0d577cb22a74199096e391e8ed391f4bee8",
+    "bytes": 14812,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "e6d4a18b9e5de440ff1d453db6ae8245b11af8b7e68695a198f190a075dbe021",
+    "bytes": 1256
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/28. LBSlm50LtnClOvrCap.psd",
+    "sha256": "0eec7a62ca2a300f91ee6e70bf83d0f328933f8970491a01a362e8cdb93c7371"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "LBSlm50LtnCu",
+   "graceSku": "LB-SLM-CLR-50ML-LPM-CPR",
+   "familyId": "slim-50ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "slim-50ml-clear-18-415/LBSlm50LtnCu.front-on.webp",
+    "storeKey": "plates/slim-50ml-clear-18-415/LBSlm50LtnCu/39ea6399c46ba86f06c1c7037c146f86ece4f19ed3b49a8e9d41a0e655911835.front-on-1000x1100.webp",
+    "sha256": "39ea6399c46ba86f06c1c7037c146f86ece4f19ed3b49a8e9d41a0e655911835",
+    "bytes": 13720,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "7b6e8cc1254ee2c6d560d286831c49444b3c2f9b9df09a254326790bf0cddaa3",
+    "bytes": 1214
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/56. LBSlm50LtnCu.psd",
+    "sha256": "b19bd94b0535f605b8697519d7ed27e8acf6457517b6fadb357b6468e3a557ac"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "LBSlm50LtnMtGl",
+   "graceSku": "LB-SLM-CLR-50ML-LPM-MGLD",
+   "familyId": "slim-50ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "slim-50ml-clear-18-415/LBSlm50LtnMtGl.front-on.webp",
+    "storeKey": "plates/slim-50ml-clear-18-415/LBSlm50LtnMtGl/8c48b08f418e4420c99f2cc62832d1d042006f63bd6e170c7bde420e41d041a7.front-on-1000x1100.webp",
+    "sha256": "8c48b08f418e4420c99f2cc62832d1d042006f63bd6e170c7bde420e41d041a7",
+    "bytes": 13380,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "daebcfa900a79a3260b700d4949c5bd4b6ff6aff295e9683172bcb1cfd1b1813",
+    "bytes": 1218
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/12. LBSlm50LtnMtGl.psd",
+    "sha256": "00865c771938bc65278eb765ae47da374cef911d01643b5f4b37e2346cb532b7"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "LBSlm50LtnMtSl",
+   "graceSku": "LB-SLM-CLR-50ML-LPM-MSLV",
+   "familyId": "slim-50ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "slim-50ml-clear-18-415/LBSlm50LtnMtSl.front-on.webp",
+    "storeKey": "plates/slim-50ml-clear-18-415/LBSlm50LtnMtSl/37a20e8ff06c6312c392ac10fc02dfc3da9818f7cdbda057548086732a41d704.front-on-1000x1100.webp",
+    "sha256": "37a20e8ff06c6312c392ac10fc02dfc3da9818f7cdbda057548086732a41d704",
+    "bytes": 12318,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "755671ef80487e4f1a27cea45b21a0a6d5f1cf7db6b86927b4edde2e6fa073d3",
+    "bytes": 1084
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/26. LBSlm50LtnMtSl.psd",
+    "sha256": "eb6c92383e2b2e208836c77d5221a4033cac59b461ee3df3942dbb16909521b4"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "LBSlm50LtnShnBlk",
+   "graceSku": "LB-SLM-CLR-50ML-LPM-SBLK",
+   "familyId": "slim-50ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "slim-50ml-clear-18-415/LBSlm50LtnShnBlk.front-on.webp",
+    "storeKey": "plates/slim-50ml-clear-18-415/LBSlm50LtnShnBlk/50998aa4be4eaece739574bd2c7f7491d0e06b2bac9a24cb61229eab916da27d.front-on-1000x1100.webp",
+    "sha256": "50998aa4be4eaece739574bd2c7f7491d0e06b2bac9a24cb61229eab916da27d",
+    "bytes": 13192,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "b083df332801c29752b495e055c8c6112128fe0a9aac3488539776c716d5048c",
+    "bytes": 1128
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/22. LBSlm50LtnShnBlk.psd",
+    "sha256": "d1abd154fa12f5beee41fbd49df4e1e1b48186c79d56ae47762bd88815102091"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "LBSlm50LtnShnGl",
+   "graceSku": "LB-SLM-CLR-50ML-LPM-SGLD",
+   "familyId": "slim-50ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "slim-50ml-clear-18-415/LBSlm50LtnShnGl.front-on.webp",
+    "storeKey": "plates/slim-50ml-clear-18-415/LBSlm50LtnShnGl/30d79a106879227d4df76bbbf033c8eedb6ff6bed59ad3875bfeb4fcc4a1ac06.front-on-1000x1100.webp",
+    "sha256": "30d79a106879227d4df76bbbf033c8eedb6ff6bed59ad3875bfeb4fcc4a1ac06",
+    "bytes": 14714,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "11d9f138c8de0ba322aa8f541afca6f90133710036d223a5be616fabbea92d96",
+    "bytes": 1316
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/18. LBSlm50LtnShnGl.psd",
+    "sha256": "d5e4e1ac4bc799ea796263fbe8fa6d36d9042973bc7c5319aabccbb420ca5acb"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "LBSlm50LtnShnSl",
+   "graceSku": "LB-SLM-CLR-50ML-LPM-SSLV",
+   "familyId": "slim-50ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "slim-50ml-clear-18-415/LBSlm50LtnShnSl.front-on.webp",
+    "storeKey": "plates/slim-50ml-clear-18-415/LBSlm50LtnShnSl/bdbf17c003260a722b37a24d8d2174d822c85fdefc5d02359d54e27ff120cfab.front-on-1000x1100.webp",
+    "sha256": "bdbf17c003260a722b37a24d8d2174d822c85fdefc5d02359d54e27ff120cfab",
+    "bytes": 13728,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "1778d2a7a8e8a739f08b7339eba49d3fd4d15cbae0145e46c1e7c9abdef69d17",
+    "bytes": 1168
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/32. LBSlm50LtnShnSl.psd",
+    "sha256": "0995830d7a2c4b74ee3dec79713f0e53f86f4317316fcf9c7c8fb45898b7fc8e"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "GBSlm50SpryCu",
+   "graceSku": "GB-SLM-CLR-50ML-SPR-CPR",
+   "familyId": "slim-50ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "slim-50ml-clear-18-415/GBSlm50SpryCu.front-on.webp",
+    "storeKey": "plates/slim-50ml-clear-18-415/GBSlm50SpryCu/c734b55153f27938093eaf539eb010ad443ce0191d09e8ad47dc2d6800faa8f8.front-on-1000x1100.webp",
+    "sha256": "c734b55153f27938093eaf539eb010ad443ce0191d09e8ad47dc2d6800faa8f8",
+    "bytes": 12920,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "355e56034396bb0190f03c168861fc39f0b838b6ba23c1d4b675c0e7edbcfa48",
+    "bytes": 1108
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/54. GBSlm50SpryCu.psd",
+    "sha256": "ca3bfdf798adc9f3d3c035cd3b8da26776d4b61eb8e6ac58ec3c9a4a8979cb54"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "GBSlm50SpryMtGl",
+   "graceSku": "GB-SLM-CLR-50ML-SPR-MGLD",
+   "familyId": "slim-50ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "slim-50ml-clear-18-415/GBSlm50SpryMtGl.front-on.webp",
+    "storeKey": "plates/slim-50ml-clear-18-415/GBSlm50SpryMtGl/321316991ecfa173b13bee58bf66b9ea0efa710aacddc1596fae1f3f3569a309.front-on-1000x1100.webp",
+    "sha256": "321316991ecfa173b13bee58bf66b9ea0efa710aacddc1596fae1f3f3569a309",
+    "bytes": 12258,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "bf33d6e447cf942810d44bf22ff8d94c12d9ebe920f92857fd0d3d354278b460",
+    "bytes": 1062
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/11. GBSlm50SpryMtGl.psd",
+    "sha256": "ca0a69144b30ec31af9a1205980e021417350fd7dde3e34f2fc0817f2eccba12"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "GBSlm50SpryMtSl",
+   "graceSku": "GB-SLM-CLR-50ML-SPR-MSLV",
+   "familyId": "slim-50ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "slim-50ml-clear-18-415/GBSlm50SpryMtSl.front-on.webp",
+    "storeKey": "plates/slim-50ml-clear-18-415/GBSlm50SpryMtSl/502737352ae5f5c0ea6f50628e86c4c5c70984ab9846068853a355d3693a49fe.front-on-1000x1100.webp",
+    "sha256": "502737352ae5f5c0ea6f50628e86c4c5c70984ab9846068853a355d3693a49fe",
+    "bytes": 11376,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "1afa79e936a2e38654fb2d2915764875e2c156dd4b9f86ce9dc3fc86f1546b41",
+    "bytes": 974
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/24. GBSlm50SpryMtSl.psd",
+    "sha256": "ed5320ee296b63ed0a291ef35cfc7995e6f560cdba77371ba93aa46c0240a63c"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "GBSlm50SpryShnBlk",
+   "graceSku": "GB-SLM-CLR-50ML-SPR-SBLK",
+   "familyId": "slim-50ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "slim-50ml-clear-18-415/GBSlm50SpryShnBlk.front-on.webp",
+    "storeKey": "plates/slim-50ml-clear-18-415/GBSlm50SpryShnBlk/a3fbbb78b4d74b2117c75428ba16357da7cce45c15b3be82927a7cd3fdd43489.front-on-1000x1100.webp",
+    "sha256": "a3fbbb78b4d74b2117c75428ba16357da7cce45c15b3be82927a7cd3fdd43489",
+    "bytes": 12518,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "93187a556c0ccb4d7ce85c7a0d4617289d687a0a792a8d6956b14830418cc234",
+    "bytes": 998
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/21. GBSlm50SpryShnBlk.psd",
+    "sha256": "f79e8a6f0895c03273aae12c19279f9af12191bc243ecbb79f8c6fc8b4c13a05"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "GBSlm50SpryShnGl",
+   "graceSku": "GB-SLM-CLR-50ML-SPR-SGLD",
+   "familyId": "slim-50ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "slim-50ml-clear-18-415/GBSlm50SpryShnGl.front-on.webp",
+    "storeKey": "plates/slim-50ml-clear-18-415/GBSlm50SpryShnGl/d896c2d60ba8e36066902515dd30248e665f1fcb775f6206cb35f8d78d3b416f.front-on-1000x1100.webp",
+    "sha256": "d896c2d60ba8e36066902515dd30248e665f1fcb775f6206cb35f8d78d3b416f",
+    "bytes": 13926,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "bb67e80a618a87836318b842b21926b1b88223c22bcddefa10d7400e7aebfe85",
+    "bytes": 1228
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/17. GBSlm50SpryShnGl.psd",
+    "sha256": "99761ae085442216a6a5af49afb122187b25ef889178ed368e327031178600e8"
+   },
+   "capOff": null
+  },
+  {
+   "sku": "GBSlm50SpryShnSl",
+   "graceSku": "GB-SLM-CLR-50ML-SPR-SSLV",
+   "familyId": "slim-50ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "slim-50ml-clear-18-415/GBSlm50SpryShnSl.front-on.webp",
+    "storeKey": "plates/slim-50ml-clear-18-415/GBSlm50SpryShnSl/5cef11bce73b1fea40c1fb6e7177347031279c3a578f6e54a405800565b2aec0.front-on-1000x1100.webp",
+    "sha256": "5cef11bce73b1fea40c1fb6e7177347031279c3a578f6e54a405800565b2aec0",
+    "bytes": 12708,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "a55cb2dd8f3eceb2902c05d8d33b7907d9b7b8a59a84f885641e1da7bd9a5c46",
+    "bytes": 1074
+   },
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/30. GBSlm50SpryShnSl.psd",
+    "sha256": "ba1ce03b48260b0c74f20b02cbc32700bad30071a4c0b14860e11155eae846df"
+   },
+   "capOff": null
+  }
+ ],
+ "scope": {
+  "renderedInBatch": 123,
+  "alreadyLiveAndExcluded": 86,
+  "note": "Only plates production does not already carry are locked here."
+ },
+ "capOffHold": "Each of these SKUs has two different uncapped photographs filed under one name, so no cap-off view is included. The front is unambiguous; the cap-off view waits on a choice between the rivals.",
+ "note": "Approves the rendered plate bytes after Jordan reviewed the contact sheet. Publishing is a separate step and needs a release-specific ship phrase."
+}

@@ -1,0 +1,137 @@
+{
+  "release": "boston-round-kit-release-2026-09-12",
+  "ship": "ship Boston Round kit release 2026-09-12",
+  "appliedAt": "2026-09-13T05:08:12.297Z",
+  "rows": [
+    "GBBstn15BlkCapSht",
+    "GBBstn1ozBlkCapSht",
+    "GBBstn2ozBlkCapSht",
+    "GBBstnAmb15mlBlkDropper",
+    "GBBstnAmb15mlBlkDropperGlTrim",
+    "GBBstnAmb15mlBlkDropperSlTrim",
+    "GBBstnAmb15mlWhtDropper",
+    "GBBstnAmb15mlWhtDropperGlTrim",
+    "GBBstnAmb15mlWhtDropperSlTrim",
+    "GBBstnAmb1ozBlkDropper",
+    "GBBstnAmb1ozMtlRollonMattBlk",
+    "GBBstnAmb1ozMtlRollonMattSl",
+    "GBBstnAmb1ozMtlRollonShnSl",
+    "GBBstnAmb1ozRollonMattBlk",
+    "GBBstnAmb1ozRollonMattSl",
+    "GBBstnAmb1ozWhtDropper",
+    "GBBstnAmb1ozWhtDropperShnGlTrim",
+    "GBBstnAmb2ozWhtDropperShnGlTrim",
+    "GBBstnAmb2ozWhtDropperShnSlTrim",
+    "GBBstnBlu15mlBlkDropperSlTrim",
+    "GBBstnBlu1ozBlkDropper",
+    "GBBstnBlu1ozBlkDropperShnGlTrim",
+    "GBBstnBlu1ozWhtDropper",
+    "GBBstnBlu1ozWhtDropperShnGlTrim",
+    "GBBstnBlu1ozWhtDropperShnSlTrim"
+  ],
+  "uploaded": 29,
+  "existed": 0,
+  "verified": 29,
+  "outcomes": [
+    {
+      "outcome": "inserted",
+      "sku": "GBBstn15BlkCapSht"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstn1ozBlkCapSht"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstn2ozBlkCapSht"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnAmb15mlBlkDropper"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnAmb15mlBlkDropperGlTrim"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnAmb15mlBlkDropperSlTrim"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnAmb15mlWhtDropper"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnAmb15mlWhtDropperGlTrim"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnAmb15mlWhtDropperSlTrim"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnAmb1ozBlkDropper"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnAmb1ozMtlRollonMattBlk"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnAmb1ozMtlRollonMattSl"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnAmb1ozMtlRollonShnSl"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnAmb1ozRollonMattBlk"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnAmb1ozRollonMattSl"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnAmb1ozWhtDropper"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnAmb1ozWhtDropperShnGlTrim"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnAmb2ozWhtDropperShnGlTrim"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnAmb2ozWhtDropperShnSlTrim"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnBlu15mlBlkDropperSlTrim"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnBlu1ozBlkDropper"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnBlu1ozBlkDropperShnGlTrim"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnBlu1ozWhtDropper"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnBlu1ozWhtDropperShnGlTrim"
+    },
+    {
+      "outcome": "inserted",
+      "sku": "GBBstnBlu1ozWhtDropperShnSlTrim"
+    }
+  ]
+}

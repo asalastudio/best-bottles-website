@@ -3,9 +3,10 @@ import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
 import tallRollers from "@/lib/bottle-builder/rollers.generated.json";
 import cobaltRollers from "@/lib/bottle-builder/rollers-cobalt.generated.json";
 import {
-    builderCartItem, builderOrder, catalogConfigurationFromRow, compatibleFinishComponent, configurationFromRow, deriveBuilder, emptySelection,
+    builderCartItem, builderOrder, catalogConfigurationFromRow, chooserSourceRows, clearBodyPreview, compatibleFinishComponent, configurationFromRow, deriveBuilder, emptySelection,
     groupBuilderBodies, resolveBuilderConfigurations, previewParts, reconcileSelection, selectBuilderBody, type BuilderConfiguration, type BuilderKit, type CatalogRow,
 } from "@/lib/bottle-builder/model";
+import { slimBuilderBodies } from "@/lib/bottle-builder/payload";
 
 const restoredRollers = { ...tallRollers, ...cobaltRollers };
 
@@ -81,8 +82,50 @@ describe("builder catalog boundary", () => {
             websiteSku: ({ 15: "GBCrcl15RollBlkSh", 30: "GBCrcl30SpryBlk", 50: "GBCrcl50SpryShnBlk", 100: "GBCrcl100SpryShnBlk" } as Record<number, string>)[capacityMl], productGroupSlug: `circle-${capacityMl}ml-clear-rollon`,
         }).row)!);
         expect(groupBuilderBodies(configs).map(b => b.capacityMl)).toEqual([15, 30, 50, 100]);
-        for (const config of configs) expect(config.bodyImage?.url).toMatch(/bottle-builder\/circle/);
+        // Circle 15 keeps the 2026-09-02 Circle media; the larger sizes come from the
+        // recipes' uncapped body layers under /bodies (2026-09-14, no insert in the neck)
+        for (const config of configs) expect(config.bodyImage?.url).toMatch(/bottle-builder\/(circle|bodies)\/circle-/);
         expect(catalogConfigurationFromRow(fixture({ family: "Circle", capacityMl: 50, neckThreadSize: "18-400", color: "Frosted" }).row)).toBeNull();
+    });
+    it("names a dropper by bulb and trim collar so trims stay distinct choices", () => {
+        // Boston Round 15 ml amber: three white-bulb droppers (plain, gold trim, silver trim)
+        // all carry capColor "White" and collapsed into one "White Collar" (2026-09-14)
+        const dropper = (websiteSku: string, itemName: string) => catalogConfigurationFromRow(fixture({
+            family: "Boston Round", capacityMl: 15, neckThreadSize: "18-400", color: "Amber", applicator: "Dropper", capColor: "White",
+            websiteSku, graceSku: websiteSku, itemName, productGroupSlug: "boston-round-15ml-amber-18-400-dropper",
+            components: { Dropper: [{ graceSku: "DRP", itemName: "Dropper Thread 18-400", imageUrl: null, capColor: "White", stockStatus: "In Stock",
+                webPrice1pc: .3, webPrice12pc: null, websiteSku: "Drp18-400Wht", productGroupSlug: "droppers", shopifyVariantId: "gid://shopify/ProductVariant/3", shopifySellable: true }] },
+        }).row, null, "https://example.com/plate.png")!;
+        const plain = dropper("TestBstnWhtDropper", "Boston round design 15ml Amber glass bottle with a white dropper.");
+        const gold = dropper("TestBstnWhtDropperGlTrim", "Boston round design 15ml Amber glass bottle and white dropper with a shiny gold trim cap.");
+        const silver = dropper("TestBstnWhtDropperSlTrim", "Boston round design 15ml Amber glass bottle and white dropper with a shiny silver trim cap.");
+        expect(plain.closure).toBe("White Collar");
+        expect(gold.closure).toBe("White Bulb, Shiny Gold Trim Collar");
+        expect(silver.closure).toBe("White Bulb, Shiny Silver Trim Collar");
+        expect(groupBuilderBodies([plain, gold, silver])[0].configurations).toHaveLength(3);
+    });
+    it("takes tall or short from the listed cap's own name, not the row's capStyle", () => {
+        // Diva 46 frosted reducer: both rows say capStyle Tall; the caps are named Tall and Short
+        const reducer = (websiteSku: string, capName: string, capSku: string) => catalogConfigurationFromRow(fixture({
+            family: "Diva", capacityMl: 46, neckThreadSize: "18-415", color: "Frosted", applicator: "Reducer", capColor: "Matte Silver", capStyle: "Tall",
+            websiteSku, graceSku: websiteSku, itemName: "Diva 46 ml (1.56 oz) Frosted Glass Bottle Tall Cap", productGroupSlug: "diva-46ml-frosted-18-415",
+            components: { Cap: [{ graceSku: "CAP", itemName: capName, imageUrl: null, capColor: "Matte Silver", stockStatus: "In Stock",
+                webPrice1pc: .3, webPrice12pc: null, websiteSku: capSku, productGroupSlug: "caps", shopifyVariantId: "gid://shopify/ProductVariant/4", shopifySellable: true }] },
+        }).row, null, "https://example.com/plate.png")!;
+        expect(reducer("TestDivaRdcrMtSlTall", "Tall Matt Silver caps for glass bottles. Thread size 18-415", "CP18-415MtSlTall").closure).toMatch(/^Tall /);
+        expect(reducer("TestDivaRdcrMtSl", "Short Matt Silver caps for glass bottles, Thread size 18-415", "CP18-415MtSl").closure).not.toMatch(/Tall/);
+    });
+    it("shows the chooser tile as bare clear glass even when only coloured glass is on offer", () => {
+        const amber = catalogConfigurationFromRow(fixture({
+            family: "Boston Round", capacityMl: 15, neckThreadSize: "18-400", color: "Amber", applicator: "Cap/Closure", capColor: "Black",
+            websiteSku: "TestBstnAmbCapSht", graceSku: "TestBstnAmbCapSht", itemName: "Boston round 15ml Amber glass bottle with black cap",
+            productGroupSlug: "boston-round-15ml-amber-18-400",
+        }).row, null, "https://example.com/plate.png")!;
+        expect(amber.bodyImage?.url).toMatch(/boston-round-15-amber-18-400/);
+        const preview = clearBodyPreview(groupBuilderBodies([amber])[0]);
+        expect(preview.color).toBe("Clear");
+        expect(preview.bodyImage?.url).toMatch(/boston-round-15-clear-18-400/);
+        expect(preview.kit).toBeNull();
     });
     it("keeps different molds separate when their capacity and neck match", () => {
         const configs = ["footed-rectangle", "tall-rectangle"].map(profile => {
@@ -131,6 +174,12 @@ describe("builder catalog boundary", () => {
         const { row, kit } = fixture({ applicator: "Cap/Closure", itemName: "9 ml clear Cylinder bottle with black cap" }, ["body", "cap"]);
         expect(configurationFromRow(row, { ...kit, completeness: "capSplit" })?.fitment).toBe("Screw Cap");
     });
+    it("offers a reducer, whose kit is a bottle and its style cap, but still refuses any other fitment with no mechanism", () => {
+        const reducer = fixture({ applicator: "Reducer", itemName: "9 ml clear Cylinder bottle with reducer and black cap" }, ["body", "cap"]);
+        expect(configurationFromRow(reducer.row, reducer.kit)?.fitment).toBe("Reducer");
+        const sprayer = fixture({ applicator: "Perfume Spray Pump" }, ["body", "cap"]);
+        expect(configurationFromRow(sprayer.row, sprayer.kit)).toBeNull();
+    });
     it("uses the matching separated roller preview without replacing a split assembly's SKU or layers", () => {
         const donor = fixture();
         const split = fixture({ websiteSku: "OtherMetalBlack", graceSku: "OTHER" }, ["body", "cap"]);
@@ -158,6 +207,44 @@ describe("builder catalog boundary", () => {
         }
         expect(resolveBuilderConfigurations([donor.row, { ...split.row, components: {} }], [donor.kit, split.kit])[1]).toBeNull();
     });
+    it("keeps the photographed Cylinder reducer together and uses verified bare glass for the body step", () => {
+        const identity = { capacityMl: 50, neckThreadSize: "18-415", productGroupSlug: "cylinder-50ml-clear-18-415" };
+        const source = fixture({ ...identity, websiteSku: "Cylinder50Sprayer", applicator: "Fine Mist Sprayer" }, ["body", "sprayer", "overcap"]);
+        const reducer = fixture({ ...identity, websiteSku: "Cylinder50Reducer", applicator: "Reducer" }, ["body", "fitment"]);
+        reducer.kit.completeness = "capSplit";
+        expect(configurationFromRow(reducer.row, reducer.kit)).toBeNull();
+        const result = resolveBuilderConfigurations([source.row, reducer.row], [source.kit, reducer.kit])[1]!;
+        expect(result.fitment).toBe("Reducer");
+        expect(result.kit).toBe(reducer.kit);
+        expect(result.previewKit).toBe(source.kit);
+        expect(previewParts(result, "body").map(p => p.slot)).toEqual(["body"]);
+        expect(previewParts(result, "fitment").map(p => p.slot)).toEqual(["body", "fitment"]);
+        expect(result.product.shopifyVariantId).toBe(reducer.row.shopifyVariantId);
+        expect(resolveBuilderConfigurations([source.row, { ...reducer.row, applicator: "Fine Mist Sprayer" }], [source.kit, reducer.kit])[1]).toBeNull();
+    });
+    it("does not request a chooser kit when a reviewed body image already exists", () => {
+        const { row } = fixture({ family: "Circle", capacityMl: 15, neckThreadSize: "13-415", websiteSku: "GBCrcl15RollBlkSh", productGroupSlug: "circle-15ml-clear-rollon" });
+        expect(chooserSourceRows([row])).toEqual([]);
+    });
+    it("lists Cylinder sibling finishes from one chooser kit without fetching every SKU", () => {
+        const source = fixture({ websiteSku: "Cylinder50SprayBlack", graceSku: "GB-CYL-50-BLK", capacityMl: 50, neckThreadSize: "18-415", productGroupSlug: "cylinder-50ml-clear-18-415-spray" });
+        const sibling = fixture({ websiteSku: "Cylinder50SprayGold", graceSku: "GB-CYL-50-GLD", capacityMl: 50, neckThreadSize: "18-415", capColor: "Gold", productGroupSlug: "cylinder-50ml-clear-18-415-spray" });
+        expect(catalogConfigurationFromRow(sibling.row)).toBeNull();
+        expect(chooserSourceRows([source.row, sibling.row]).map(row => row.websiteSku)).toEqual(["Cylinder50SprayBlack"]);
+        const resolved = resolveBuilderConfigurations(
+            [source.row, sibling.row],
+            [source.kit, null],
+            [null, null],
+            [null, source.kit],
+        );
+        expect(resolved[0]?.id).toBe("Cylinder50SprayBlack");
+        expect(resolved[1]?.id).toBe("Cylinder50SprayGold");
+        const slim = slimBuilderBodies(groupBuilderBodies(resolved.filter((config): config is BuilderConfiguration => config !== null)));
+        expect(slim[0]!.configurations).toHaveLength(2);
+        expect(slim[0]!.configurations.every(config => config.kit === null)).toBe(true);
+        expect(slim[0]!.configurations[0]!.chooserKit?.parts[0]!.image.url).toContain("Cylinder50SprayBlack-body.webp");
+        expect(previewParts(clearBodyPreview(slim[0]!), "body").map(part => part.slot)).toEqual(["body"]);
+    });
     it("collapses SKU assemblies and colors into bottle bodies while keeping necks distinct", () => {
         const bodies = groupBuilderBodies([configuration(), configuration({ websiteSku: "Amber", graceSku: "AMBER", color: "Amber" }), configuration({ websiteSku: "TALL", graceSku: "TALL", neckThreadSize: "13-415" })]);
         expect(bodies).toHaveLength(2);
@@ -176,8 +263,9 @@ describe("selection transitions and preview", () => {
         const selected = { bodyId: clear.bodyId, color: clear.color, fitment: clear.fitment, closure: clear.closure, quantity: 68 };
         const next = selectBuilderBody(bodies, selected, clear.bodyId);
         expect(next).toEqual({ bodyId: clear.bodyId, color: null, fitment: null, closure: null, quantity: 68 });
+        // one glass only: taken as read (2026-09-16), the top still starts empty
         const onlyClear = selectBuilderBody(groupBuilderBodies([clear]), selected, clear.bodyId);
-        expect(onlyClear.color).toBeNull();
+        expect(onlyClear.color).toBe("Clear");
         expect(onlyClear.fitment).toBeNull();
         expect(onlyClear.closure).toBeNull();
     });
@@ -187,10 +275,12 @@ describe("selection transitions and preview", () => {
         expect(deriveBuilder(bodies, state).configuration).toBeNull();
         expect(previewParts(clear, "body").map(p => p.slot)).toEqual(["body"]);
     });
-    it("requires explicit glass selection even when clear is the only option", () => {
+    it("takes the only glass as read, but never picks one colour among several", () => {
         const state = reconcileSelection(groupBuilderBodies([clear]), { ...emptySelection(), bodyId: clear.bodyId });
-        expect(state.color).toBeNull();
+        expect(state.color).toBe("Clear");
         expect(state.fitment).toBeNull();
+        const choice = reconcileSelection(bodies, { ...emptySelection(), bodyId: clear.bodyId });
+        expect(choice.color).toBeNull();
     });
     it("changing color removes incompatible fitment and cap", () => {
         const selected = { bodyId: clear.bodyId, color: "Clear", fitment: clear.fitment, closure: clear.closure, quantity: 50 };

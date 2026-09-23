@@ -1,8 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import MobileFamilyCatalog from "@/components/catalog/MobileFamilyCatalog";
 import mobileStyles from "@/components/catalog/MobileFamilyCatalog.module.css";
@@ -10,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FinderNavigationMemory from "@/components/catalog/FinderNavigationMemory";
 import FocusedApplicationCards from "@/components/catalog/FocusedApplicationCards";
+import FocusedSizeCards from "@/components/catalog/FocusedSizeCards";
 import FocusedFinderControls, { exclusiveFacetValue, type FocusedFinderOption } from "@/components/catalog/FocusedFinderControls";
 import FocusedFinderResults from "@/components/catalog/FocusedFinderResults";
 import {
@@ -31,6 +30,10 @@ import { buildGuidedFinderFamilies, conflictingRefinement } from "@/lib/products
 import { buildCylinderApplicationOptions } from "@/lib/products/cylinder-family-page";
 import { familyFinderPath, familyToSlug, parseBrowseContext } from "@/lib/products/focused-shopping";
 import type { ProductFamilyPageContent } from "@/sanity/lib/queries";
+import LocaleLink from "@/components/LocaleLink";
+import { localizeFamilyName } from "@/i18n/catalogCopy";
+import { localizeHref } from "@/i18n/paths";
+import { useAppLocale, useCopy } from "@/i18n/useCopy";
 
 type Props = {
     family: string;
@@ -80,6 +83,7 @@ function serializeFinderSearch(family: string, filters: CatalogFilters, sort: So
     params.delete("families");
     if (application !== "rollon") params.delete("roller");
     if (sort === surface.defaultSort) params.delete("sort");
+    params.set("guide", "1");
     const query = params.toString();
     return query ? `?${query}` : "";
 }
@@ -142,6 +146,10 @@ export default function FamilyPageClient({
     editorial,
 }: Props) {
     const router = useRouter();
+    const locale = useAppLocale();
+    const t = useCopy("catalog");
+    const nav = useCopy("nav");
+    const familyLabel = localizeFamilyName(locale, family);
     const surface = useMemo(() => familyCatalogSurface(family), [family]);
     const pathname = familyFinderPath(family);
     const incomingState = useMemo(() => urlBackedState(family, search), [family, search]);
@@ -164,7 +172,7 @@ export default function FamilyPageClient({
         () => buildCylinderApplicationOptions(baseCatalog.facets.applicators),
         [baseCatalog.facets.applicators],
     );
-    const families = useMemo(() => buildGuidedFinderFamilies(activeResult), [activeResult]);
+    const families = useMemo(() => buildGuidedFinderFamilies(activeResult, filters.rollerMaterials), [activeResult, filters.rollerMaterials]);
     const exactFinderUrl = finderUrl(family, activeSearch);
     const finderAnchor = `${familyToSlug(family)}-finder`;
 
@@ -236,7 +244,7 @@ export default function FamilyPageClient({
         setActiveSearch(input.search);
         setFilters(input.filters);
         setSort(input.sort);
-        const nextRoute = finderUrl(family, input.search);
+        const nextRoute = localizeHref(locale, finderUrl(family, input.search));
         if (input.focusResults) pendingFocusRoute.current = nextRoute;
         router.replace(nextRoute, { scroll: false });
 
@@ -273,7 +281,7 @@ export default function FamilyPageClient({
         } finally {
             if (!controller.signal.aborted) setIsUpdating(false);
         }
-    }, [family, router, surface]);
+    }, [family, locale, router, surface]);
 
     const navigateWithFilters = useCallback((nextFilters: CatalogFilters, focusResults = false, tracking?: {
         refinement?: {
@@ -385,8 +393,10 @@ export default function FamilyPageClient({
     }, []);
 
     const heroImageUrl = editorial?.familyHeroImageUrl || heroFallback;
-    const heroAlt = editorial?.familyHeroAlt || `${family} bottle and compatible closure`;
-    const story = editorial?.familyStory || defaultFamilyStory(family);
+    const heroAlt = editorial?.familyHeroAlt || `${familyLabel} bottle and compatible closure`;
+    const story = locale === "es"
+        ? t("familyIntro", { family: familyLabel })
+        : (editorial?.familyStory || defaultFamilyStory(family));
 
     return (
         <>
@@ -400,43 +410,55 @@ export default function FamilyPageClient({
                     hero={heroImageUrl} heroAlt={heroAlt} onHelp={openGraceFromFinder}
                 />
                 <div className={mobileStyles.desktop} data-desktop-family-catalog>
-                <Breadcrumbs steps={[{ label: "Catalog", href: "/catalog" }, { label: family }]} />
-                <section className="mx-auto max-w-[1440px] px-5 pb-10 sm:px-6 lg:px-10 lg:pb-14">
-                    <div className="grid border-y border-champagne/70 bg-bone lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
-                        <div className="flex flex-col justify-center px-5 py-10 sm:px-8 lg:px-10 lg:py-14">
-                            <p className="text-xs font-medium text-muted-gold">{editorial?.familyPageEyebrow || "Bottle family"}</p>
-                            <h1 className="mt-2 font-serif text-5xl font-medium leading-none sm:text-6xl">{family}</h1>
-                            <p className="mt-5 max-w-xl text-sm leading-7 text-slate">{story}</p>
-                            <p className="mt-5 border-l-2 border-muted-gold pl-4 text-sm text-obsidian">
-                                {family} is fixed here. Application and capacity are optional refinements.
+                <Breadcrumbs steps={[{ label: t("breadcrumb"), href: "/catalog" }, { label: familyLabel }]} />
+                {/* The family is already chosen by the time anyone is here, so
+                    the page opens with what they do not yet know: which sizes
+                    this shape is made in, and which dispensing styles. The
+                    editorial hero that used to sit here answered a question
+                    nobody had — "what is a Cylinder" — while burying both. */}
+                <section className="mx-auto max-w-[1440px] px-5 pb-8 sm:px-6 lg:px-10 lg:pb-10">
+                    <div className="flex flex-wrap items-end justify-between gap-4 border-b border-champagne/70 pb-5">
+                        <div className="min-w-0">
+                            <p className="text-xs font-medium text-muted-gold">
+                                {editorial?.familyPageEyebrow || t("bottleFamily")}
                             </p>
-                            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                                <a
-                                    href={`#${finderAnchor}`}
-                                    className="inline-flex min-h-11 items-center justify-center bg-obsidian px-5 text-sm font-semibold text-bone focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold"
-                                >
-                                    Find {family} products
-                                </a>
-                                <Link
-                                    href={`/matrix?family=${encodeURIComponent(family)}&from=finder`}
-                                    className="inline-flex min-h-11 items-center justify-center border border-obsidian px-5 text-sm font-semibold text-obsidian focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold"
-                                >
-                                    Build a Bottle
-                                </Link>
-                            </div>
+                            <h1 className="mt-1.5 font-serif text-4xl font-medium leading-none sm:text-5xl">
+                                {familyLabel}
+                            </h1>
+                            <p className="mt-3 max-w-2xl text-sm leading-6 text-slate">{story}</p>
                         </div>
-                        <div className="relative min-h-[340px] overflow-hidden bg-travertine sm:min-h-[460px]">
-                            <Image
-                                src={heroImageUrl}
-                                alt={heroAlt}
-                                fill
-                                priority
-                                unoptimized={heroImageUrl.startsWith("http")}
-                                className="object-cover"
-                                sizes="(max-width: 1024px) 100vw, 55vw"
-                            />
+                        <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
+                            <a
+                                href={`#${finderAnchor}`}
+                                className="inline-flex min-h-11 items-center justify-center bg-obsidian px-5 text-sm font-semibold text-bone focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold"
+                            >
+                                {t("findFamilyProducts", { family: familyLabel })}
+                            </a>
+                            <LocaleLink
+                                href={`/matrix?family=${encodeURIComponent(family)}&from=finder`}
+                                className="inline-flex min-h-11 items-center justify-center border border-obsidian px-5 text-sm font-semibold text-obsidian focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold"
+                            >
+                                {nav("buildYourBottleTitle")}
+                            </LocaleLink>
                         </div>
                     </div>
+
+                    {capacityOptions.length > 0 ? (
+                        <div className="mt-6">
+                            <h2 className="mb-2.5 text-xs font-medium uppercase tracking-[0.16em] text-slate">
+                                {t("familySizes")}
+                            </h2>
+                            <FocusedSizeCards
+                                sizes={capacityOptions.map((option) => ({
+                                    value: option.value,
+                                    label: option.label,
+                                    count: option.count ?? 0,
+                                }))}
+                                activeSize={filters.capacities[0] ?? null}
+                                onSelect={toggleCapacity}
+                            />
+                        </div>
+                    ) : null}
                 </section>
 
                 <section id={finderAnchor} className="scroll-mt-28 border-y border-champagne/70 bg-linen">
@@ -454,11 +476,11 @@ export default function FamilyPageClient({
                             className="mt-8"
                         />
                         <p className="mt-5 border-l-2 border-muted-gold pl-4 text-sm font-medium text-obsidian" aria-label="Current bottle specification">
-                            {refinementSummary(family, filters)}
+                            {refinementSummary(familyLabel, filters)}
                         </p>
                         {requestError ? <p className="mt-3 text-sm text-red-800" role="status">{requestError}</p> : null}
                         <button type="button" onClick={openGraceFromFinder} className="mt-4 text-sm font-semibold text-obsidian underline underline-offset-4">
-                            Ask Grace for help choosing
+                            {t("askGraceForHelpChoosing")}
                         </button>
                     </div>
                 </section>

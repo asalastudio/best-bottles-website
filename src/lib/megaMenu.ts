@@ -73,7 +73,7 @@ export const MEGA_MENU_PANELS: Record<MegaMenuId, MegaMenuPanelContent> = {
         },
         footerLinks: [
             { label: "Browse all bottles", href: glassBottleCatalog() },
-            { label: "Build a Bottle", href: "/matrix" },
+            { label: "Build Your Bottle", href: "/matrix" },
         ],
     },
     closures: {
@@ -93,7 +93,7 @@ export const MEGA_MENU_PANELS: Record<MegaMenuId, MegaMenuPanelContent> = {
             {
                 heading: "Pair with a bottle",
                 links: [
-                    { label: "Build a Bottle", href: "/matrix" },
+                    { label: "Build Your Bottle", href: "/matrix" },
                     { label: "Roll-On bottles", href: applicationFinderHref("rollon") },
                     { label: "Spray bottles", href: applicationFinderHref("spray") },
                     { label: "Dropper bottles", href: applicationFinderHref("dropper") },
@@ -110,13 +110,13 @@ export const MEGA_MENU_PANELS: Record<MegaMenuId, MegaMenuPanelContent> = {
             },
         ],
         featured: {
-            title: "Build a Bottle",
+            title: "Build Your Bottle",
             subtitle: "Choose a bottle, then only the closures that fit its neck.",
             href: "/matrix",
         },
         footerLinks: [
             { label: "All closures & components", href: componentCatalog() },
-            { label: "Build a Bottle", href: "/matrix" },
+            { label: "Build Your Bottle", href: "/matrix" },
         ],
     },
     specialty: {
@@ -129,7 +129,7 @@ export const MEGA_MENU_PANELS: Record<MegaMenuId, MegaMenuPanelContent> = {
                     { label: "Plastic spray bottles", href: catalogHref({ families: ["Plastic Bottle"] }) },
                     { label: "Apothecary", href: catalogHref({ families: ["Apothecary"] }) },
                     { label: "Decorative & shaped glass", href: catalogHref({ families: ["Decorative"] }) },
-                    { label: "Vintage bulb sprayers", href: catalogHref({ applicators: ["antiquespray", "antiquespray-tassel"] }) },
+                    { label: "Vintage style bulb sprayers", href: catalogHref({ applicators: ["vintagestyle", "vintagestyle-tassel"] }) },
                 ],
             },
             {

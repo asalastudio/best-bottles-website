@@ -78,24 +78,26 @@ describe("P1-3 — no-result searches terminate", () => {
 });
 
 describe("applicator vocabularies must not be confused across tools", () => {
-    // 2026-08-06: Grace passed the Refine bucket slug "antiquespray-tassel" into
+    // 2026-08-06: Grace passed the Refine bucket slug into
     // searchCatalog.applicatorFilter, which expects EXACT catalog values. The
     // filter matched nothing and silently removed the very products she wanted
     // (0 tassel rows instead of 16), so she reported a real product as missing.
+    // Bucket slug was later renamed antiquespray-tassel → vintagestyle-tassel.
     it("searchCatalog.applicatorFilter documents exact values and rejects bucket slugs", () => {
         const desc = specFor("searchCatalog")?.parameters.properties.applicatorFilter?.description as string;
         expect(desc).toContain("Vintage Bulb Sprayer with Tassel");
         expect(desc).toContain("Metal Roller Ball");
         expect(desc.toLowerCase()).toContain("do not pass the canonical refine bucket slugs");
-        expect(desc).toContain("antiquespray-tassel");
+        expect(desc).toContain("vintagestyle-tassel");
     });
 
     it("setCatalogRefinements.applicators stays on canonical bucket slugs", () => {
         const items = specFor("setCatalogRefinements")?.parameters.properties.applicators?.items as { enum?: string[] };
         expect(items?.enum).toContain("rollon");
-        expect(items?.enum).toContain("antiquespray-tassel");
+        expect(items?.enum).toContain("vintagestyle-tassel");
         // Customer-facing labels must never be valid here.
         expect(items?.enum).not.toContain("Vintage Bulb Sprayer with Tassel");
+        expect(items?.enum).not.toContain("Vintage Style Bulb Sprayer with Tassel");
     });
 });
 

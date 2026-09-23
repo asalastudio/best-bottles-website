@@ -1,5 +1,7 @@
 "use client";
 
+import { useRegion } from "@/components/RegionProvider";
+
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,6 +10,7 @@ import { api } from "../../../convex/_generated/api";
 import { ChatCircle, Package, ShoppingBag } from "@/components/icons";
 import { isCheckoutReady } from "@/lib/checkout";
 import { APPLICATOR_NAV, catalogHref } from "@/lib/catalogFilters";
+import { useCopy } from "@/i18n/useCopy";
 import { uniqueSameApplicationSizes, type FocusedPdpRelations, type ProductGroupRelation } from "@/lib/products/pdp-relations";
 
 export interface PdpCompatibilityComponent {
@@ -63,10 +66,6 @@ type PdpDiscoveryContentProps = {
     onAskGrace: () => void;
     onAddComponent: (component: PdpCompatibilityComponent) => void;
 };
-
-function formatPrice(price: number | null): string {
-    return price == null ? "Price on request" : `$${price.toFixed(2)} /ea`;
-}
 
 function sizeChipLabel(relation: ProductGroupRelation): string {
     return relation.capacityMl != null ? `${relation.capacityMl} ml` : (relation.capacity ?? "Size");
@@ -138,12 +137,17 @@ function ComponentCard({
     component: PdpCompatibilityComponent;
     onAddComponent: (component: PdpCompatibilityComponent) => void;
 }) {
+    const { formatPrice: money } = useRegion();
+    const formatPrice = (price: number | null): string => (price == null ? "Price on request" : `${money(price)} /ea`);
     const checkoutReady = isCheckoutReady({
         graceSku: component.graceSku,
         shopifyVariantId: component.shopifyVariantId,
         shopifySellable: component.shopifySellable,
     });
+    // The quote link still needs a working identifier, but only the merchant SKU
+    // is shown to a buyer: the Grace code is internal (D-06).
     const sku = component.websiteSku ?? component.graceSku;
+    const displaySku = component.websiteSku;
     const quoteHref = `/request-quote?products=${encodeURIComponent(`${component.itemName} (SKU: ${sku})`)}`;
 
     return (
@@ -152,7 +156,7 @@ function ComponentCard({
             <div className="min-w-0 flex-1">
                 <p className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">Compatible with this bottle</p>
                 <h3 className="mt-1 text-base font-semibold text-obsidian">{component.itemName}</h3>
-                <p className="mt-1 font-mono text-[11px] uppercase tracking-wide text-slate">SKU {sku} · {component.graceSku}</p>
+                {displaySku ? <p className="mt-1 font-mono text-[11px] uppercase tracking-wide text-slate">SKU {displaySku}</p> : null}
                 <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate">
                     <span>{component.stockStatus ?? "Availability to confirm"}</span>
                     <span className="font-semibold text-obsidian">{formatPrice(component.webPrice1pc)}</span>
@@ -270,6 +274,7 @@ export function PdpCompatibleComponentList({
     onAskGrace: () => void;
     onAddComponent: (component: PdpCompatibilityComponent) => void;
 }) {
+    const graceCopy = useCopy("grace");
     const groupedComponents = groupCompatibleComponents(compatibility);
     if (groupedComponents.length === 0) {
         return (
@@ -277,7 +282,7 @@ export function PdpCompatibleComponentList({
                 <p className="text-sm leading-relaxed text-amber-900">Compatibility is unmapped for this SKU. Do not assume a component fits until the neck and fitment are verified.</p>
                 <button type="button" onClick={onAskGrace} className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-sm border border-amber-700 px-3 py-2 text-xs font-bold uppercase tracking-wider text-amber-900 hover:bg-amber-100">
                     <ChatCircle className="h-4 w-4" />
-                    Ask Grace about fitment
+                    {graceCopy("askAboutFitment")}
                 </button>
             </div>
         );

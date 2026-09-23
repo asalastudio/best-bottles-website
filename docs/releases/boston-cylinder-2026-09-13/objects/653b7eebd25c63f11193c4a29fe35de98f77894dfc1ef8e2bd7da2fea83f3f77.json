@@ -1,0 +1,1875 @@
+{
+  "schemaVersion": 1,
+  "family": "Boston Round",
+  "scope": "33 currently missing plates only. No changes to approved plates.",
+  "createdAt": "2026-09-13T01:24:52.767Z",
+  "rows": [
+    {
+      "sku": "GBBstn1ozRollonMattBlk",
+      "productGroupId": "kh7beaghvaf5dggxbjxy0xe17n8dp7kv",
+      "standardId": "boston-round-standard-30ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "9620476902df9c5eab7add2032928137225fc222751c285cde7a9d082e03323e",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/8. GBBstn1ozRollMattBlk.psd",
+        "sourceSha256": "2c91570ac025f4a938cba08b7a31b6d01ed631c9154587f8e77f376385966a95",
+        "url": "/images/boston-source-recovery/2c91570ac025f4a938cba08b7a31b6d01ed631c9154587f8e77f376385966a95.png",
+        "sha256": "87ace723b99efe733e39393f84e6b1c744989c1f26254e733e985c1a54cce5e7",
+        "width": 975,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 22",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 29",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/8. GBBstn1ozRollMattBlk.psd",
+        "sourceSha256": "70f99c21a8fe157504a27b05350fb56b9be1267dba4041da2be7e788ad64fd9b",
+        "url": "/images/boston-source-recovery/70f99c21a8fe157504a27b05350fb56b9be1267dba4041da2be7e788ad64fd9b.png",
+        "sha256": "528d220a581c272172b4c1f5a4a88fe12264c882662f94682a9ad6f96d6e2447",
+        "width": 975,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 22",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 24",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 33",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 34",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "off"
+      },
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn1ozRollonMattGl",
+      "productGroupId": "kh7beaghvaf5dggxbjxy0xe17n8dp7kv",
+      "standardId": "boston-round-standard-30ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "0c2168414fce059418e83d7d752e25ca97a8cec56894d80d22c68df0cab9786a",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/10. GBBstn1ozRollMattGl.psd",
+        "sourceSha256": "461d348bab429d087f2ed62f985ef6d840ed0b0028c60dbbfb9232cea9b83160",
+        "url": "/images/boston-source-recovery/461d348bab429d087f2ed62f985ef6d840ed0b0028c60dbbfb9232cea9b83160.png",
+        "sha256": "69fc7fcbdb859cf416bda3db221e829ef30dc4f87d616d6acffde7ec52f9c161",
+        "width": 975,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 22",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 30",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/10. GBBstn1ozRollMattGl.psd",
+        "sourceSha256": "0c38b55299f839b238870433cae90771f22bc7823170292d2beb6f11a98f2983",
+        "url": "/images/boston-source-recovery/0c38b55299f839b238870433cae90771f22bc7823170292d2beb6f11a98f2983.png",
+        "sha256": "f97a063bcec9c7fe9065498d9d0799680268bccd7e26f608d54093b43f6c669b",
+        "width": 975,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 22",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 33",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 35",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "off"
+      },
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn1ozRollonMattSl",
+      "productGroupId": "kh7beaghvaf5dggxbjxy0xe17n8dp7kv",
+      "standardId": "boston-round-standard-30ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "a9ed86ce674cf7d9af603819f9a8b231232be8bcca186e8adf5b968e662db404",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/6. GBBstn1ozRollMattSl.psd",
+        "sourceSha256": "59e291a10a6ff5d8114f0dfa5b79a8cafed5d41954e141bd45cc6eb971fe17d7",
+        "url": "/images/boston-source-recovery/59e291a10a6ff5d8114f0dfa5b79a8cafed5d41954e141bd45cc6eb971fe17d7.png",
+        "sha256": "3c5f48e8f1673400f082a147e55fcc51848512c1523d83c4afb2adbdc7ee4201",
+        "width": 975,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 22",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 26",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/6. GBBstn1ozRollMattSl.psd",
+        "sourceSha256": "d04041cb7ef135350995b4773640f516f42224dd93d02c307f6c609cf6a76609",
+        "url": "/images/boston-source-recovery/d04041cb7ef135350995b4773640f516f42224dd93d02c307f6c609cf6a76609.png",
+        "sha256": "b63fc411e8d909be926c991ce3b9e42a479616a7b8ccc9383bdea778199b9bb7",
+        "width": 975,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 22",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 30",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 31",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "off"
+      },
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn1ozRollonShBlk",
+      "productGroupId": "kh7beaghvaf5dggxbjxy0xe17n8dp7kv",
+      "standardId": "boston-round-standard-30ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "83843c44e2948bcda92ee6ead440556279486e046c1de880c9d48b3b0333635c",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/19. GBBstn1ozRollShBlk.psd",
+        "sourceSha256": "3eb8328785fefa535abb13a48b88eeb40b0c53c0b849d698f08e717aa8eee171",
+        "url": "/images/boston-source-recovery/3eb8328785fefa535abb13a48b88eeb40b0c53c0b849d698f08e717aa8eee171.png",
+        "sha256": "d7d00c8c68581a53cfa367dba4439be56f6d86d9d4e159231b8d6b2316033f26",
+        "width": 975,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 22",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 35",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/19. GBBstn1ozRollShBlk.psd",
+        "sourceSha256": "8f9a1f4c9260ef8720f0ed2525f2148f7f63ee757a747052497974b0df211ad8",
+        "url": "/images/boston-source-recovery/8f9a1f4c9260ef8720f0ed2525f2148f7f63ee757a747052497974b0df211ad8.png",
+        "sha256": "0b839dd4cc7468f3c8a2bf3292c93330eb832ddbbb7ffac19d448a7f5bcad7e1",
+        "width": 975,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 22",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 24",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 33",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 34",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "off"
+      },
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn1ozRollonShGl",
+      "productGroupId": "kh7beaghvaf5dggxbjxy0xe17n8dp7kv",
+      "standardId": "boston-round-standard-30ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "8a3b1bcace093c26f0a43a77cea8b895c54ac3acbf306d08a413bc97cc58e27a",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/9. GBBstn1ozRollShGl.psd",
+        "sourceSha256": "77fcf7e30fd3e667bcb1860c61822fe39ab400f564a08b6ac6866956e460a9c7",
+        "url": "/images/boston-source-recovery/77fcf7e30fd3e667bcb1860c61822fe39ab400f564a08b6ac6866956e460a9c7.png",
+        "sha256": "f6e9cb0eb2d745f1bd100246574057eddc08b933b5212ac46a5c830248c24806",
+        "width": 975,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 22",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 29",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/9. GBBstn1ozRollShGl.psd",
+        "sourceSha256": "85d4f6c65b67ba4311242b169919e3eea51922c25284b9c07beaeadbe90e313c",
+        "url": "/images/boston-source-recovery/85d4f6c65b67ba4311242b169919e3eea51922c25284b9c07beaeadbe90e313c.png",
+        "sha256": "b69ebf68c2cabd567469ca0cd5e832c0b82a5f83980cf8c4fbadff3bd4ef0b5f",
+        "width": 975,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 22",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 33",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 34",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "off"
+      },
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn1ozRollonShnSl",
+      "productGroupId": "kh7beaghvaf5dggxbjxy0xe17n8dp7kv",
+      "standardId": "boston-round-standard-30ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "4847796e3173949dceea85f241b73be0a3460961ab7725aa8ca0b842c63f746b",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/7. GBBstn1ozRollShnSl.psd",
+        "sourceSha256": "c284917fd07f5cf47196a2f76f1a342f9fd3ee03878719f05b60dee7a14b3471",
+        "url": "/images/boston-source-recovery/c284917fd07f5cf47196a2f76f1a342f9fd3ee03878719f05b60dee7a14b3471.png",
+        "sha256": "9245deb2ecd4849cb68e1d78067cc21e13f0841c0113cd9c1056d2db70cdc5d0",
+        "width": 975,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 22",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 27",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/7. GBBstn1ozRollShnSl.psd",
+        "sourceSha256": "76c3bddf15a2ac16a079797f454fd8f536cc3f7b78d9c02bc4627f1d7b6a2be0",
+        "url": "/images/boston-source-recovery/76c3bddf15a2ac16a079797f454fd8f536cc3f7b78d9c02bc4627f1d7b6a2be0.png",
+        "sha256": "82a2eaae3dedb17f04bdfd942e916a7c0f676671d29d537c09121887b4f178fa",
+        "width": 975,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 22",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 32",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 31",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "off"
+      },
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn2ozBlkDrpr",
+      "productGroupId": "kh79sm9atpya350awcq2xqv4z98dqy71",
+      "standardId": "boston-round-standard-60ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "30697f2a5daaf7413d1d76d98ccdc8c6864f83602d14d5c17ab734ca3858fe97",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/16. GBBstn2ozBlkDrp.psd",
+        "sourceSha256": "3a2745c8fe28b918765010810c9ef362964b157478d94a13eb2bc7b59dfe5bc8",
+        "url": "/images/boston-source-recovery/3a2745c8fe28b918765010810c9ef362964b157478d94a13eb2bc7b59dfe5bc8.png",
+        "sha256": "c4fc03484a4a0eaaabf921f7a9cca708848186050bcbc69551555799ad3617e8",
+        "width": 600,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 6",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 7",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "'",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": null,
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn2ozBlkDrprShnGlTrim",
+      "productGroupId": "kh79sm9atpya350awcq2xqv4z98dqy71",
+      "standardId": "boston-round-standard-60ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "1c9edf36106fe94fff5e38424754e56de914102f6c912df736447d932ef1c26c",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/12. GBBstn2ozBlkDropperShnGlTrim.psd",
+        "sourceSha256": "8d36d157fbda03bcea719069cafbf87f34b4fdd227099efb410b49b45c5b1556",
+        "url": "/images/boston-source-recovery/8d36d157fbda03bcea719069cafbf87f34b4fdd227099efb410b49b45c5b1556.png",
+        "sha256": "602437b895696e2b7f18bd368bf64cfcf6101e9a948c6b4d4cf61ca06df5dcef",
+        "width": 600,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 6",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 7",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 9",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": null,
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn2ozBlkDrprShnSlTrim",
+      "productGroupId": "kh79sm9atpya350awcq2xqv4z98dqy71",
+      "standardId": "boston-round-standard-60ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "cea217b73baf7c7b880bb8effe7da9d733b8ae69e32ff964a6ba6abe340b6784",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/15. GBBstn2ozBlkDropperShnSlTrim.psd",
+        "sourceSha256": "3402600d058ad7367741a28b8f33e0371e90c8aa24a8b38b1479d989799dc613",
+        "url": "/images/boston-source-recovery/3402600d058ad7367741a28b8f33e0371e90c8aa24a8b38b1479d989799dc613.png",
+        "sha256": "83b5d50295ca882e0b5150b4c5faba372087f2a9b06c11473bb05826dbc3a911",
+        "width": 600,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 6",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 7",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 12",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": null,
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn2ozMtlRollBlk",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "standardId": "boston-round-standard-60ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "a4344fcfe611ac5f40907d0486fe7c099c115ab73a7640a501fc70c01977ba7d",
+      "pairApprovalBinding": "ebbd4629124f6775d176e528d7cef55dd12dacba91fb7f90064505604b3fdbbf",
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/20. GBBstn2ozRollonBlk.psd",
+        "sourceSha256": "d3ddf813748f0823c5a02571dd2231e047b89d9f013c0a18bc043adb3ba9fe06",
+        "url": "/images/boston-source-recovery/d3ddf813748f0823c5a02571dd2231e047b89d9f013c0a18bc043adb3ba9fe06.png",
+        "sha256": "44c845e244bcc3b034aa7cf29c0d576f3a33561bad56537a6d8e6c7735a7ea7f",
+        "width": 945,
+        "height": 1500,
+        "view": "on",
+        "status": "approved",
+        "note": "Recovered original capped master view. New view awaiting Jordan review; existing source approvals do not cover these bytes.",
+        "matchEvidence": "Catalog descriptions specify the same 60 mL clear Boston glass and shiny black cap. The alternate plastic cap-off master is pixel-identical to the approved plastic source. The metal and plastic cap-off images differ only in the exposed roller region (199,132)-(417,312); the lower glass and cap are pixel-identical, including the cap layer. The capped image hides that roller region. No parts were fabricated or pixels edited.",
+        "bytesVerified": true
+      },
+      "capOff": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/18. GBBstn2ozMtlRollonBlk.psd",
+        "sourceSha256": "b2150b0eadc39995dbe4d3ba5606976d36908e163f7ad74053b2a38c8b17cc8f",
+        "url": "/images/boston-source-recovery/b2150b0eadc39995dbe4d3ba5606976d36908e163f7ad74053b2a38c8b17cc8f.png",
+        "sha256": "85f49e0f56ec7f6026d100612f2b7e4f46b5c9ce49c091aa1419ceee8d35054d",
+        "width": 945,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 10",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 8",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 9",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "off"
+      },
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn2ozMtlRollGl",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "standardId": "boston-round-standard-60ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "42da8a8e64b2a45a2d5137a3afc988d5d54e265e90c6fa6dfb035abb3ff7349e",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/4. GBBstn2ozMtlRollonGl.psd",
+        "sourceSha256": "d73957b2b5159a39873dfa2df485282261534fee6ca4f3b6d2afd7ccb5071fea",
+        "url": "/images/boston-source-recovery/d73957b2b5159a39873dfa2df485282261534fee6ca4f3b6d2afd7ccb5071fea.png",
+        "sha256": "1e3ccfcb1d72823347839d484e1350f27a23a035987e26d55808ccefcd887057",
+        "width": 945,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 10",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 11",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/4. GBBstn2ozMtlRollonGl.psd",
+        "sourceSha256": "4878aa8d20f13486e737300a96827b84aea0c0fbd802403237b6e733a64494d2",
+        "url": "/images/boston-source-recovery/4878aa8d20f13486e737300a96827b84aea0c0fbd802403237b6e733a64494d2.png",
+        "sha256": "3e1e6d3f095ca34195f93bd96d98558784f6bdd9200abc425d936ba90126465c",
+        "width": 945,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 7",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 9",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 10",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "off"
+      },
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn2ozMtlRollMattBlk",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "standardId": "boston-round-standard-60ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "2f5a4aed984df07742e3072f0625bb23c789f700e42fcec645917a31629ed402",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/3. GBBstn2ozMtlRollonMattBlk.psd",
+        "sourceSha256": "f04b675fa3a157f468874fb90ab1e06801edaf651aac6c274afc3e2c19c4c0f2",
+        "url": "/images/boston-source-recovery/f04b675fa3a157f468874fb90ab1e06801edaf651aac6c274afc3e2c19c4c0f2.png",
+        "sha256": "a50086061dacb3de85d7c93fa50a7d539c91facc3bc862ba2279f60db6d5d76c",
+        "width": 945,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 9",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 11",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/3. GBBstn2ozMtlRollonMattBlk.psd",
+        "sourceSha256": "4ed4fa6ab8c9829d57aa2412e9ff0641ab872955aca60a6ce65ea22942f42466",
+        "url": "/images/boston-source-recovery/4ed4fa6ab8c9829d57aa2412e9ff0641ab872955aca60a6ce65ea22942f42466.png",
+        "sha256": "3fb051353540a88cb94d6ea8ee65707771f10c3f63992894ddf51ee9048ad6fc",
+        "width": 945,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 10",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 8",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 9",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "off"
+      },
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn2ozMtlRollMattGl",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "standardId": "boston-round-standard-60ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "324d6b72573e10a68d64e166e7e4f6272e3bcd9b6508a36c0a3d4fa60864effb",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/5. GBBstn2ozMtlRollonMattGl.psd",
+        "sourceSha256": "75f0eea1eb20812b4ad9fc86d380fe5f45b5dc3cd66581e924838655e608b9d2",
+        "url": "/images/boston-source-recovery/75f0eea1eb20812b4ad9fc86d380fe5f45b5dc3cd66581e924838655e608b9d2.png",
+        "sha256": "c693aa8b70986b367206a08cb2f12de3753c385b30a22d85a0263050fe73b591",
+        "width": 945,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 11",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 12",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/5. GBBstn2ozMtlRollonMattGl.psd",
+        "sourceSha256": "76b57bab827964b60603513744504f8fdf7e9a3ba4b430ecd6da022f651a9e37",
+        "url": "/images/boston-source-recovery/76b57bab827964b60603513744504f8fdf7e9a3ba4b430ecd6da022f651a9e37.png",
+        "sha256": "3edb3ed8b54e7e687ab1735f391ad0d48a80ccfa0f77916d21479a27d2694bea",
+        "width": 945,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 9",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 10",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 11",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "off"
+      },
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn2ozMtlRollMattSl",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "standardId": "boston-round-standard-60ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "f0363e6108b276324c57931c09a3b44d2ff6664e6cf7ce299c4f7b5484f7d9bd",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/1. GBBstn2ozMtlRollonMattSl.psd",
+        "sourceSha256": "4914891a05ddd899931837da3fd7e4ecf960968d5adecf05ef8bfa872c210a68",
+        "url": "/images/boston-source-recovery/4914891a05ddd899931837da3fd7e4ecf960968d5adecf05ef8bfa872c210a68.png",
+        "sha256": "08303d3d1395b2fa13d24d4c0ae75d4ff7cad97cb3b1cdf7bc2df3c232e390ae",
+        "width": 945,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 6",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 8",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/1. GBBstn2ozMtlRollonMattSl.psd",
+        "sourceSha256": "3932d283dd5584d76a9629708d809610e6a568c49698326e9ee4745ad2ed4390",
+        "url": "/images/boston-source-recovery/3932d283dd5584d76a9629708d809610e6a568c49698326e9ee4745ad2ed4390.png",
+        "sha256": "c676531dc26844eb307f5189917d90e4d5e2dc600e792038eb7a2d2f5e1ca99b",
+        "width": 945,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 7",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 6",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 4",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "off"
+      },
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn2ozMtlRollShnSl",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "standardId": "boston-round-standard-60ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "bb9a6e882c737b8139354469f1a04400a97945abf8491dfd7371c7fd50f5fc2c",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/2. GBBstn2ozMtlRollonShnSl.psd",
+        "sourceSha256": "6852f8d126b7c400af7ef03021212ae89531cf925a3ea372f9d356a9ca4c7c55",
+        "url": "/images/boston-source-recovery/6852f8d126b7c400af7ef03021212ae89531cf925a3ea372f9d356a9ca4c7c55.png",
+        "sha256": "354a24ede5a304055b464fb71c50da89873e0df5da15062ccff6a997079edf10",
+        "width": 945,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 8",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 9",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/2. GBBstn2ozMtlRollonShnSl.psd",
+        "sourceSha256": "0fe53bae2ba87e6fb4efd579d3f64978a122adeaf090842b3607760fba4c7cd5",
+        "url": "/images/boston-source-recovery/0fe53bae2ba87e6fb4efd579d3f64978a122adeaf090842b3607760fba4c7cd5.png",
+        "sha256": "7186fea519daeee290b170a1240fc1139236050eca72452b4dd2a08190411250",
+        "width": 945,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 5",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 7",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 8",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "off"
+      },
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn2ozRollGl",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "standardId": "boston-round-standard-60ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "cf2a93350a9b150fc4dd97aedc2745346f489cf571dc038127272d18e4cf4bd6",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/9. GBBstn2ozRollonGl.psd",
+        "sourceSha256": "7658f34d0cd5f07268db138d05201dfddf1655cd60bab5dd9c08d247b11420c4",
+        "url": "/images/boston-source-recovery/7658f34d0cd5f07268db138d05201dfddf1655cd60bab5dd9c08d247b11420c4.png",
+        "sha256": "53da48155e2d0ab29cc5e8c237c640f0c3963a21aa526b153aaeab59676093f3",
+        "width": 945,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 10",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 11",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/9. GBBstn2ozRollonGl.psd",
+        "sourceSha256": "a00a82162a97ee5a044bb0786f3faa9810dd7e7c221b6d6be8d193137f2cc3a2",
+        "url": "/images/boston-source-recovery/a00a82162a97ee5a044bb0786f3faa9810dd7e7c221b6d6be8d193137f2cc3a2.png",
+        "sha256": "5efe766a21990d1bae3fb8bc50118d633d4e8da6a379cb8a5a6a6d39fbd29dc5",
+        "width": 945,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 7",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 10",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "off"
+      },
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn2ozRollMattBlk",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "standardId": "boston-round-standard-60ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "c297e9295002c90bc26fd05ca79f84ff4f60df2a3b5156044c38b870a0ec8987",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/8. GBBstn2ozRollonMattBlk.psd",
+        "sourceSha256": "61084a45c3a3d08649e7fa7c43311927ff165c43a05ab0e0048426becc01a485",
+        "url": "/images/boston-source-recovery/61084a45c3a3d08649e7fa7c43311927ff165c43a05ab0e0048426becc01a485.png",
+        "sha256": "4821264b1c574c2e5ec2d53af40dc73d4c0eb77f7161942f5bbf633237e49272",
+        "width": 945,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 9",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 11",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/8. GBBstn2ozRollonMattBlk.psd",
+        "sourceSha256": "6205324cc385e1559c6267bf7b8ed31de97c298392119c886497ad37adf75086",
+        "url": "/images/boston-source-recovery/6205324cc385e1559c6267bf7b8ed31de97c298392119c886497ad37adf75086.png",
+        "sha256": "29978af2103af732807729c7a3d51d46bc6d850d21925d1fb3c2bb70a952fa4a",
+        "width": 945,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 10",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 9",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "off"
+      },
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn2ozRollMattSl",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "standardId": "boston-round-standard-60ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "8c08db1be61313e68a6f5e6151297fe935880d4583b5fe2c073de25a03b9e274",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/6. GBBstn2ozRollonMattSl.psd",
+        "sourceSha256": "4914891a05ddd899931837da3fd7e4ecf960968d5adecf05ef8bfa872c210a68",
+        "url": "/images/boston-source-recovery/4914891a05ddd899931837da3fd7e4ecf960968d5adecf05ef8bfa872c210a68.png",
+        "sha256": "08303d3d1395b2fa13d24d4c0ae75d4ff7cad97cb3b1cdf7bc2df3c232e390ae",
+        "width": 945,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 6",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 8",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/6. GBBstn2ozRollonMattSl.psd",
+        "sourceSha256": "727ba572245143b3f334c09bda1a4f0a480dfda48028a8a71a6ed72e4632d0f3",
+        "url": "/images/boston-source-recovery/727ba572245143b3f334c09bda1a4f0a480dfda48028a8a71a6ed72e4632d0f3.png",
+        "sha256": "fc6b1a33f3aa2cf12e210ecc712d53989c1bdd83727e83806a84fc0947bd9281",
+        "width": 945,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 6",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 4",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "off"
+      },
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn2ozRollShnBlk",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "standardId": "boston-round-standard-60ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "5e37865101e0102d403172955a9e3065c36e517095f788b44aa2d0f2ca67f2da",
+      "pairApprovalBinding": "cf4faf45efc84c5e4566bdd35760989ec46cc16ef3d48ce24b71fafb9c8eb037",
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/20. GBBstn2ozRollonBlk.psd",
+        "sourceSha256": "d3ddf813748f0823c5a02571dd2231e047b89d9f013c0a18bc043adb3ba9fe06",
+        "url": "/images/boston-source-recovery/d3ddf813748f0823c5a02571dd2231e047b89d9f013c0a18bc043adb3ba9fe06.png",
+        "sha256": "44c845e244bcc3b034aa7cf29c0d576f3a33561bad56537a6d8e6c7735a7ea7f",
+        "width": 945,
+        "height": 1500,
+        "view": "on",
+        "status": "approved",
+        "note": "Recovered original capped master view. New view awaiting Jordan review; existing source approvals do not cover these bytes.",
+        "matchEvidence": "Catalog descriptions specify the same 60 mL clear Boston glass and shiny black cap. The alternate plastic cap-off master is pixel-identical to the approved plastic source. The metal and plastic cap-off images differ only in the exposed roller region (199,132)-(417,312); the lower glass and cap are pixel-identical, including the cap layer. The capped image hides that roller region. No parts were fabricated or pixels edited.",
+        "bytesVerified": true
+      },
+      "capOff": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/18. GBBstn2ozRollonShnBlk.psd",
+        "sourceSha256": "70b4519b800955ff0ba04e594ff43a4ca696ac12604c7aa512672d9abf66c8e5",
+        "url": "/images/boston-source-recovery/70b4519b800955ff0ba04e594ff43a4ca696ac12604c7aa512672d9abf66c8e5.png",
+        "sha256": "396ba1b139efd774908da59b8b0f611dbea5d907d40728212026c330f23d1f98",
+        "width": 945,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 10",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 9",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "off"
+      },
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn2ozRollShnSl",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "standardId": "boston-round-standard-60ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "ffd84291ce42f14054a35aca70af6edba911e38cce0a792f8464e5a5f4e7a8c6",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/7. GBBstn2ozRollonShnSl.psd",
+        "sourceSha256": "3ed6db5172c29eddc17c5d6345c46e857a77d86f7e5ce7739b6ddca6d14ca129",
+        "url": "/images/boston-source-recovery/3ed6db5172c29eddc17c5d6345c46e857a77d86f7e5ce7739b6ddca6d14ca129.png",
+        "sha256": "948ebc5428d652d16d7843aea2d14338ee7e14376810e2c58371f23ec71fb361",
+        "width": 945,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 8",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 9",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/7. GBBstn2ozRollonShnSl.psd",
+        "sourceSha256": "19f16b857595fd5c77cd3c2ef4638ec0fcce011c3498f8473f446c0d76d89c5b",
+        "url": "/images/boston-source-recovery/19f16b857595fd5c77cd3c2ef4638ec0fcce011c3498f8473f446c0d76d89c5b.png",
+        "sha256": "c034ec4e09741a9d32dae5802757ca49d2c67554ddb3237b2e990797921f46cc",
+        "width": 945,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 5",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 8",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "off"
+      },
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn2ozWhtDrpr",
+      "productGroupId": "kh79sm9atpya350awcq2xqv4z98dqy71",
+      "standardId": "boston-round-standard-60ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "f04ead0670be6ff5f16580c0f9614033e0f3954d11c0a868be1151de625b638f",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/11. GBBstn2ozWhtDropper.psd",
+        "sourceSha256": "f8710970abdb9b5a9fff7f16e847addef4b56dea72012b448ac03564f140a12a",
+        "url": "/images/boston-source-recovery/f8710970abdb9b5a9fff7f16e847addef4b56dea72012b448ac03564f140a12a.png",
+        "sha256": "88ca4018e9a17dd50d7903f9dc02a5528c9ab41121a5340ba866b0bfa023331f",
+        "width": 600,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 6",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 7",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 8",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": null,
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn2ozWhtDrprShnGlTrim",
+      "productGroupId": "kh79sm9atpya350awcq2xqv4z98dqy71",
+      "standardId": "boston-round-standard-60ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "b78bbd7e83fb957adcf23f398b0f93f595368def80b81e0258e35ae53c1c75ac",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/13. GBBstn2ozWhtDropperShnGlTrim.psd",
+        "sourceSha256": "b79d74992b5080e97db3fe43ef9433851bf9823c45c2b1ffa777db136895da7a",
+        "url": "/images/boston-source-recovery/b79d74992b5080e97db3fe43ef9433851bf9823c45c2b1ffa777db136895da7a.png",
+        "sha256": "8a60e4c136a84f95c08784b9fc8c0874883c8d7f5576e527328d8640d4d8184a",
+        "width": 600,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 6",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 7",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 4",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": null,
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstn2ozWhtDrprShnSlTrim",
+      "productGroupId": "kh79sm9atpya350awcq2xqv4z98dqy71",
+      "standardId": "boston-round-standard-60ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "825a69e908403fa3df421a1202bbbdba4586c695ef418937bbbde9bc31acf64a",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/14. GBBstn2ozWhtDropperShnSlTrim.psd",
+        "sourceSha256": "f8963f1e107d4c5bc0250a6dccc7d8296b790c0caa4900fb78558eaaf30d4090",
+        "url": "/images/boston-source-recovery/f8963f1e107d4c5bc0250a6dccc7d8296b790c0caa4900fb78558eaaf30d4090.png",
+        "sha256": "5bafced5c24b49769917edc6447bb94622af3cf825f831c79c6a390cc6662245",
+        "width": 600,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 6",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 7",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 11",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": null,
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstnAmb1ozBlkDrpShnGl",
+      "productGroupId": "kh76cthp5ysk49hky1ceay825s8dpqmm",
+      "standardId": "boston-round-standard-30ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "9b795425a8f1bc9a4b32037f274081006ef91b64593b0cc8a6596c8255cbf47e",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/12. GBBstnAmb1ozBlkDropperShnGlTrim.psd",
+        "sourceSha256": "8948c4f9e4e39f82f535f2b5b3bda6cd07263343ad3dde0ada4a224b8afeb575",
+        "url": "/images/boston-source-recovery/8948c4f9e4e39f82f535f2b5b3bda6cd07263343ad3dde0ada4a224b8afeb575.png",
+        "sha256": "d00f2acb51d53fb3cd884c4fb77a5613be3f33ccb5e7aeb9a07d1c62ca05ef4e",
+        "width": 591,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 5",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 19",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": null,
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstnAmb1ozWhtDrprShnSlTrim",
+      "productGroupId": "kh76cthp5ysk49hky1ceay825s8dpqmm",
+      "standardId": "boston-round-standard-30ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "b5046d53e024f0f3e54da9fb6d38bde36a8261ccd17a6ed09b845345eb616f80",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/14. GBBstnAmb1ozWhtDropperShnSlTrim.psd",
+        "sourceSha256": "967be3256955e3ed40d93fd089b42ce33538a42de8f68fd096f60407583f452c",
+        "url": "/images/boston-source-recovery/967be3256955e3ed40d93fd089b42ce33538a42de8f68fd096f60407583f452c.png",
+        "sha256": "7c826b0cf71c0b8aa043cb42939f79bcac0ad40878d34ffe04f55a0ca4982e0d",
+        "width": 591,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 5",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 21",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": null,
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstnAmb2ozBlkDrpr",
+      "productGroupId": "kh777dtpw7yx3x5g09s5vggbs98dpm7a",
+      "standardId": "boston-round-standard-60ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "6c1e107580a7dab45e71c97a356c56f64f6de2679eff699e64af5201018b38d8",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/16. GBBstnAmb2ozBlkDropper.psd",
+        "sourceSha256": "94c7718142f6eb391cc9192b24427c0dc9c93ee1de571c1538608a63b58b548f",
+        "url": "/images/boston-source-recovery/94c7718142f6eb391cc9192b24427c0dc9c93ee1de571c1538608a63b58b548f.png",
+        "sha256": "73553209b0eaebfd00ae96ae5482f2d2351e5232eed7a130a4f8b85a04d70025",
+        "width": 600,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 2",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "'",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": null,
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstnAmb2ozBlkDrprShnSlTrim",
+      "productGroupId": "kh777dtpw7yx3x5g09s5vggbs98dpm7a",
+      "standardId": "boston-round-standard-60ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "ed57d8ed4cc964bbcba6000daf889b5650c4c4ee7589baa6af85bb1ace24f8ea",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/12. GBBstnAmb2ozBlkDropperShnSlTrim.psd",
+        "sourceSha256": "4fd6059cf0c12376b1b8ae524f4a26964047c9c9af3fc74746c99e73d619a4ba",
+        "url": "/images/boston-source-recovery/4fd6059cf0c12376b1b8ae524f4a26964047c9c9af3fc74746c99e73d619a4ba.png",
+        "sha256": "30a882dc9777b67e8463c15feb9f202bd3e633302eba56805b19a028f91ef3a3",
+        "width": 600,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 7",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 6",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": null,
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstnAmb2ozWhtDrpr",
+      "productGroupId": "kh777dtpw7yx3x5g09s5vggbs98dpm7a",
+      "standardId": "boston-round-standard-60ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "5b19ca3eb338ce57c2a6ab90c7bf9260b98fb460ec2c4cdc3f386cf69379c907",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/11. GBBstnAmb2ozWhtDropper.psd",
+        "sourceSha256": "35b64789da089ae8e1a5cf4c040ea888128ebf017181ea0b7418641d5b758069",
+        "url": "/images/boston-source-recovery/35b64789da089ae8e1a5cf4c040ea888128ebf017181ea0b7418641d5b758069.png",
+        "sha256": "19558534c053a9ee43eff6aff7ca0c2ed279f3dd3eb22928575c66d6f096fd24",
+        "width": 600,
+        "height": 1500,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 4",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 3",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": null,
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstnBlu15BlkDrpr",
+      "productGroupId": "kh74gnrjnzjqm2deqcxzx1zswn8dqs1a",
+      "standardId": "boston-round-standard-15ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "cada939304cd1f61e28ea898731beec69a49f31d8217a8019035d6ea51388bcd",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/5. GBBstnBlu15BlkDrp.psd",
+        "sourceSha256": "c7d203fd2f68f94c5155d19e0905bebf2e34b52a8b127a4b81233887ebd39ede",
+        "url": "/images/boston-source-recovery/c7d203fd2f68f94c5155d19e0905bebf2e34b52a8b127a4b81233887ebd39ede.png",
+        "sha256": "d32fb7ed218a8273d6e735c50453eca4b6896ac461244e1d62aa571fea8b8729",
+        "width": 591,
+        "height": 1181,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 3",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 2 copy",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": null,
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstnBlu15BlkDrprGlTrim",
+      "productGroupId": "kh74gnrjnzjqm2deqcxzx1zswn8dqs1a",
+      "standardId": "boston-round-standard-15ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "7edd09c9c3747225723a1ddcdf903bfae5e10f3939dd39d0aafe6a7a9dda9b70",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/7. GBBstnBlu15BlkDrpGlTrim.psd",
+        "sourceSha256": "fa72a02de0832a91b7cec0c4af89c529d5b9398bfecbce0610da4b1faec9976a",
+        "url": "/images/boston-source-recovery/fa72a02de0832a91b7cec0c4af89c529d5b9398bfecbce0610da4b1faec9976a.png",
+        "sha256": "f018186a40d9e014f9ef6a760182a8d7a50ade05589dbd68cc47b3e5e6d2c819",
+        "width": 591,
+        "height": 1181,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 5",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 6",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": null,
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstnBlu15WhtDrpr",
+      "productGroupId": "kh74gnrjnzjqm2deqcxzx1zswn8dqs1a",
+      "standardId": "boston-round-standard-15ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "4a7c44f82dc727e8246946042372f9cf8682e6d2895d0421c533db793f900160",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/6. GBBstnBlu15WhtDrp.psd",
+        "sourceSha256": "9d337772d09fb7026e79065a530682ee7392336930fa77fac96f0a5bd03d4cdb",
+        "url": "/images/boston-source-recovery/9d337772d09fb7026e79065a530682ee7392336930fa77fac96f0a5bd03d4cdb.png",
+        "sha256": "49144aae9401b9ebf275290a43ab49f31ae145504ada19ba93973b3af066f84d",
+        "width": 591,
+        "height": 1181,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 3",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 5",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": null,
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstnBlu15WhtDrprGlTrim",
+      "productGroupId": "kh74gnrjnzjqm2deqcxzx1zswn8dqs1a",
+      "standardId": "boston-round-standard-15ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "082994945376a34f61baec04142954cdc03532efa370e1e517e2501603662a1b",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/4. GBBstnBlu15WhtDrpGlTrim.psd",
+        "sourceSha256": "226bac97f53566eb848806fe20e6f2cd7ea446c84fc9d6a89a6e5ada559207c7",
+        "url": "/images/boston-source-recovery/226bac97f53566eb848806fe20e6f2cd7ea446c84fc9d6a89a6e5ada559207c7.png",
+        "sha256": "b84e9eba0b37f45e63a526d0c5daef1b00c3ba25d425d5cd0211d50911a3955d",
+        "width": 591,
+        "height": 1181,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 7",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 6",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": null,
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBBstnBlu15WhtDrprSlTrim",
+      "productGroupId": "kh74gnrjnzjqm2deqcxzx1zswn8dqs1a",
+      "standardId": "boston-round-standard-15ml",
+      "standardVersion": 1,
+      "sourceApprovalBinding": "8dd59d46d0f1562321c36adbc8653cceb5b5c3515faa7248ae162b936c0e90f5",
+      "pairApprovalBinding": null,
+      "capOn": {
+        "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/3. GBBstnBlu15WhtDrpSlTrim.psd",
+        "sourceSha256": "27270963215c841579cd5e87f9880fd16e08ab1bb5ea6ddaf0c0f2dcf862c001",
+        "url": "/images/boston-source-recovery/27270963215c841579cd5e87f9880fd16e08ab1bb5ea6ddaf0c0f2dcf862c001.png",
+        "sha256": "cb75410b111d685a54a120d3e13d5e980415e502cd936b7918bf8b32ee558b92",
+        "width": 591,
+        "height": 1181,
+        "layers": [
+          {
+            "name": "Background",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 6",
+            "visible": true,
+            "kind": "pixel"
+          },
+          {
+            "name": "Layer 5",
+            "visible": true,
+            "kind": "pixel"
+          }
+        ],
+        "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+        "view": "on"
+      },
+      "capOff": null,
+      "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "stage": "approved_sources_ready_for_plate_preparation",
+      "plateGeometry": "Requires explicit registration to locked glass standard on the plate canvas; existing approved plates are preserved.",
+      "kitStatus": "Not established by source review",
+      "publicationAuthorized": false
+    }
+  ]
+}

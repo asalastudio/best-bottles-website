@@ -1,0 +1,20 @@
+(node:85324) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/convex/_generated/api.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PUBLISH → https://helpful-elephant-638.convex.cloud
+Existing family metadata will be preserved for this partial release.
+
+=== Cylinder 28 mL — Clear (cylinder-28ml-clear-16mm) — 4 SKUs, 16 objects (replacing 4 already on the target) ===
+
+=== Cylinder 5 mL — Clear (cylinder-5ml-clear-13-415) — 8 SKUs, 32 objects (replacing 8 already on the target) ===
+
+=== Cylinder 5 mL — Cobalt Blue (cylinder-5ml-cobalt-blue-13-415) — 9 SKUs, 36 objects (replacing 9 already on the target) ===
+
+=== Cylinder 9 mL — Clear (cylinder-9ml-clear-13-415) — 3 SKUs, 12 objects (replacing 3 already on the target) ===
+
+=== Cylinder 9 mL — Frosted (cylinder-9ml-frosted-13-415) — 1 SKUs, 4 objects (replacing 1 already on the target) ===
+Error: BLOB_READ_WRITE_TOKEN is not set (the importer needs it; the site never does)
+    at createBlobStore (file:///Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/scripts/paperdoll/lib/store-blob.mjs:12:23)
+    at main (file:///Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/scripts/paperdoll/publish.mjs:125:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)

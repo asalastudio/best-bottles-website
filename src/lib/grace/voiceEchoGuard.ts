@@ -1,12 +1,23 @@
 /**
- * Phone speakerphone echo: Grace's TTS is picked up by the mic, semantic VAD
- * treats it as a new customer turn, and she answers herself.
+ * Speaker echo: Grace's TTS is picked up by the mic (phone speakerphone and
+ * desktop Chrome speakers), semantic VAD treats it as a new customer turn,
+ * and she answers herself until the session glitches.
  *
- * Mute the mic while she is speaking, keep it muted for a short tail after
- * audio stops, and ignore user transcripts that match her last utterance.
+ * Mute the mic while she is speaking, keep it muted for a tail after audio
+ * stops, clear the Realtime input buffer, cancel responses that start in
+ * that tail, and ignore user transcripts that match her last utterance.
+ *
+ * Desktop speakers need a longer tail than a phone earpiece — 450ms let
+ * room echo commit a turn after she finished.
  */
 
-export const GRACE_VOICE_ECHO_TAIL_MS = 450;
+export const GRACE_VOICE_ECHO_TAIL_MS = 1200;
+
+export const GRACE_VOICE_AUDIO_CONSTRAINTS = {
+    echoCancellation: true,
+    noiseSuppression: true,
+    autoGainControl: true,
+} as const;
 
 export function normalizeGraceEchoText(text: string): string {
     return text
@@ -35,6 +46,23 @@ export function isLikelyAssistantEcho(
     return overlap / userWords.length >= 0.7 && overlap >= 4;
 }
 
+export function isVoiceEchoGuardActive(args: {
+    now: number;
+    assistantSpeaking: boolean;
+    echoGuardUntil: number;
+}): boolean {
+    return args.assistantSpeaking || args.now < args.echoGuardUntil;
+}
+
+/** A new model response during the echo tail is Grace answering her own TTS. */
+export function shouldCancelEchoGeneratedResponse(args: {
+    now: number;
+    assistantSpeaking: boolean;
+    echoGuardUntil: number;
+}): boolean {
+    return !args.assistantSpeaking && args.now < args.echoGuardUntil;
+}
+
 export function shouldIgnoreVoiceUserTranscript(args: {
     now: number;
     assistantSpeaking: boolean;
@@ -42,7 +70,6 @@ export function shouldIgnoreVoiceUserTranscript(args: {
     transcript: string;
     lastAssistantText: string | null | undefined;
 }): boolean {
-    if (args.assistantSpeaking) return true;
-    if (args.now < args.echoGuardUntil) return true;
+    if (isVoiceEchoGuardActive(args)) return true;
     return isLikelyAssistantEcho(args.transcript, args.lastAssistantText);
 }

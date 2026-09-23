@@ -40,6 +40,60 @@ def checked_source(path: Path, master: Path = MASTER) -> Path:
     return resolved
 
 
+def apply_front_source_pins(target: Path, policy: dict) -> list[dict]:
+    """Give a SKU its own identity when the library filed one photograph under two names.
+
+    dedupe groups spellings that share a photograph, so a lotion bottle whose
+    file is byte-identical to a sprayer's ends up inheriting the sprayer as its
+    front, and the renderer rightly refuses it. A pin splits that group: the
+    pinned SKU gets its own stem pointing at the file named for it alone, and
+    the other spelling keeps the stem it had. The pinned bytes are re-hashed
+    here, so a policy that has drifted from the disk fails loudly.
+    """
+    pins = policy.get("frontSourcePins") or {}
+    if not pins:
+        return []
+    from psd_tools import PSDImage
+    selection = json.loads((target / "selection.json").read_text())
+    stems = selection["stems"]
+    applied = []
+    for sku, pin in sorted(pins.items()):
+        source = checked_source(MASTER / pin["relPath"])
+        digest = sha256_of(str(source))
+        if digest != pin["sha256"]:
+            raise ValueError(f"pinned front source for {sku} no longer matches the policy hash: {pin['relPath']}")
+        holder_key = next((k for k, v in stems.items() if sku in v.get("stems", [])), None)
+        if holder_key is None:
+            raise ValueError(f"pinned SKU {sku} has no stem to pin")
+        holder = stems[holder_key]
+        psd = PSDImage.open(str(source))
+        state = {
+            "chosen": digest,
+            "chosenPath": pin["relPath"],
+            "chosenLibrary": "master",
+            "chosenCanvas": [psd.width, psd.height],
+            "stateEvidence": "explicit",
+            "alternates": [],
+            "locations": [f"master:{pin['relPath']}"],
+            "samePhotograph": True,
+        }
+        others = [name for name in holder.get("stems", []) if name != sku]
+        if others:
+            # the shared photograph still belongs to the other spelling: split
+            holder["stems"] = others
+            key = stem_key(sku)
+            stems[key] = {"stems": [sku], "role": holder.get("role", "product"), "states": {"on": state}}
+            applied.append({"sku": sku, "action": "split from " + holder_key, "source": pin["relPath"]})
+        else:
+            holder.setdefault("states", {})["on"] = state
+            applied.append({"sku": sku, "action": "pinned in place", "source": pin["relPath"]})
+    (target / "selection.json").write_text(json.dumps(selection, indent=1))
+    (target / "front-source-pins.json").write_text(json.dumps({"applied": applied, "pins": pins}, indent=1))
+    for row in applied:
+        print(f"   pinned {row['sku']}: {row['action']} -> {row['source']}", flush=True)
+    return applied
+
+
 def family_products(snapshot, family):
     groups = {g["_id"]: g for g in snapshot["groups"]}
     return [p for p in snapshot["products"] if p.get("family") == family
@@ -128,13 +182,16 @@ def prepare(catalog: Path, out: Path, family: str):
     dedupe.DATA = target
     dedupe.PHASH_CACHE = target / "phash-cache.json"
     dedupe.main()
+    policy_path = DATA / "family-policies" / f"{family}.json"
+    policy = json.loads(policy_path.read_text()) if policy_path.exists() else {}
+    # Pins run between dedupe and the crosswalk: they change which photograph a
+    # SKU owns, which everything downstream then reads as ordinary selection.
+    apply_front_source_pins(target, policy)
     import xref
     xref.DATA = target
     xref.main()
     crosswalk = json.loads((target / "xref.json").read_text())
     by_sku = {p["websiteSku"]: p for p in products}
-    policy_path = DATA / "family-policies" / f"{family}.json"
-    policy = json.loads(policy_path.read_text()) if policy_path.exists() else {}
     (target / "family-policy.json").write_text(json.dumps(policy, indent=2))
     groups = {g["_id"]: g for g in snapshot["groups"]}
     from build_plates import source_of, validate_front_source
@@ -143,6 +200,10 @@ def prepare(catalog: Path, out: Path, family: str):
     selection = json.loads((target / "selection.json").read_text())
     for row in crosswalk["products"]:
         p = by_sku[row["websiteSku"]]
+        row["productGroupId"] = p.get("productGroupId")
+        row["applicator"] = p.get("applicator")
+        if not row["productGroupId"] and row.get("renderMode") != "standalone":
+            row["blockReasons"].append("physical_group_hold:catalog group missing")
         apply_catalog_policy(row, p, groups.get(p.get("productGroupId"), {}), policy)
         if row["family"] != family or (p.get("family") and p["family"] != family):
             row["blockReasons"].append("product_group_family_disagreement")
@@ -157,7 +218,8 @@ def prepare(catalog: Path, out: Path, family: str):
                 source_hold = policy.get("frontSourceHolds", {}).get(row["websiteSku"], {})
                 if source_hold.get("sourceSha256") == src["sha256"]:
                     raise ValueError("visual source hold: " + source_hold["reason"])
-                validate_front_source(src, row["websiteSku"])
+                validate_front_source(src, row["websiteSku"],
+                                      also_named=[row.get("stemSpelling")] if row.get("matchKind") == "alias" else ())
                 if sha256_of(str(src["path"])) != src["sha256"]:
                     raise ValueError("source hash changed during preparation")
             except (OSError, ValueError, RuntimeError) as error:

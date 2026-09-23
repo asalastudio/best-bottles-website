@@ -1,0 +1,343 @@
+[
+  {
+    "sku": "GBCyl1ozRollWht",
+    "bodyMeanError": 1.043,
+    "region": [
+      375,
+      521,
+      619,
+      991
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBCyl5RollBlkSh",
+    "bodyMeanError": 0.0,
+    "region": [
+      399,
+      599,
+      603,
+      1051
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBCyl5RollCuMatt",
+    "bodyMeanError": 0.0,
+    "region": [
+      399,
+      598,
+      603,
+      1050
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBCyl5RollGlMatt",
+    "bodyMeanError": 0.0,
+    "region": [
+      399,
+      603,
+      603,
+      1050
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBCyl5RollGlSh",
+    "bodyMeanError": 0.0,
+    "region": [
+      399,
+      599,
+      603,
+      1051
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBCyl5RollPinkDot",
+    "bodyMeanError": 0.0,
+    "region": [
+      399,
+      607,
+      603,
+      1050
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBCyl5RollSlMatt",
+    "bodyMeanError": 0.0,
+    "region": [
+      399,
+      603,
+      603,
+      1051
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBCyl5RollSlSh",
+    "bodyMeanError": 0.0,
+    "region": [
+      399,
+      599,
+      603,
+      1051
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBCyl5WhtSht",
+    "bodyMeanError": 0.942,
+    "region": [
+      398,
+      670,
+      604,
+      1049
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBCylBlu5RollBlkDot",
+    "bodyMeanError": 0.0,
+    "region": [
+      398,
+      595,
+      604,
+      1043
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBCylBlu5RollBlkSh",
+    "bodyMeanError": 0.0,
+    "region": [
+      398,
+      598,
+      604,
+      1043
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBCylBlu5RollCuMatt",
+    "bodyMeanError": 0.0,
+    "region": [
+      398,
+      594,
+      604,
+      1043
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBCylBlu5RollGlMatt",
+    "bodyMeanError": 0.0,
+    "region": [
+      398,
+      598,
+      604,
+      1043
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBCylBlu5RollGlSh",
+    "bodyMeanError": 0.0,
+    "region": [
+      398,
+      594,
+      604,
+      1043
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBCylBlu5RollPinkDot",
+    "bodyMeanError": 0.0,
+    "region": [
+      398,
+      602,
+      604,
+      1043
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBCylBlu5RollSlDot",
+    "bodyMeanError": 0.0,
+    "region": [
+      400,
+      602,
+      606,
+      1043
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBCylBlu5RollSlMatt",
+    "bodyMeanError": 0.0,
+    "region": [
+      398,
+      602,
+      604,
+      1043
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBCylBlu5RollSlSh",
+    "bodyMeanError": 0.0,
+    "region": [
+      398,
+      594,
+      604,
+      1043
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBMtlRoll28Blk",
+    "bodyMeanError": 1.04,
+    "region": [
+      375,
+      520,
+      619,
+      991
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBMtlRoll28Wht",
+    "bodyMeanError": 1.04,
+    "region": [
+      375,
+      521,
+      619,
+      991
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBRoll28Blk",
+    "bodyMeanError": 1.038,
+    "region": [
+      375,
+      519,
+      619,
+      991
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBSpry1ozSl",
+    "bodyMeanError": 6.229,
+    "region": [
+      372,
+      302,
+      544,
+      549
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBTallCyl9MtlRollBlkDot",
+    "bodyMeanError": 1.575,
+    "region": [
+      440,
+      577,
+      568,
+      1049
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBTallCyl9RollBlkDot",
+    "bodyMeanError": 29.247,
+    "region": [
+      443,
+      579,
+      571,
+      1049
+    ],
+    "passed": false
+  },
+  {
+    "sku": "GBTallCyl9RollBlkSh",
+    "bodyMeanError": 1.177,
+    "region": [
+      441,
+      582,
+      569,
+      1051
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBTallCyl9RollCuMatt",
+    "bodyMeanError": 1.177,
+    "region": [
+      441,
+      583,
+      569,
+      1051
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBTallCyl9RollGlMatt",
+    "bodyMeanError": 1.176,
+    "region": [
+      441,
+      582,
+      569,
+      1050
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBTallCyl9RollGlSh",
+    "bodyMeanError": 1.176,
+    "region": [
+      441,
+      582,
+      569,
+      1050
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBTallCyl9RollSlMatt",
+    "bodyMeanError": 1.176,
+    "region": [
+      441,
+      583,
+      569,
+      1051
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBTallCyl9RollSlSh",
+    "bodyMeanError": 1.177,
+    "region": [
+      441,
+      582,
+      569,
+      1051
+    ],
+    "passed": true
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollBlkDot",
+    "bodyMeanError": 0.747,
+    "region": [
+      440,
+      575,
+      562,
+      1048
+    ],
+    "passed": true
+  }
+]

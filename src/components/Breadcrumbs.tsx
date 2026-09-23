@@ -1,7 +1,8 @@
 "use client";
 
-import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
 import { ChevronRight } from "@/components/icons";
+import { useCopy } from "@/i18n/useCopy";
 
 export interface BreadcrumbStep {
     label: string;
@@ -13,12 +14,13 @@ export interface BreadcrumbsProps {
 }
 
 export default function Breadcrumbs({ steps }: BreadcrumbsProps) {
+    const t = useCopy("catalog");
     if (!steps || steps.length === 0) return null;
 
     return (
         <div className="border-b border-champagne/50 bg-bone overflow-x-auto hide-scroll">
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 py-2 sm:py-3 flex items-center space-x-2 text-[11px] sm:text-xs text-slate whitespace-nowrap">
-                <Link href="/" className="hover:text-muted-gold transition-colors shrink-0">Home</Link>
+                <LocaleLink href="/" className="hover:text-muted-gold transition-colors shrink-0">{t("home")}</LocaleLink>
                 {steps.map((step, idx) => {
                     const isLast = idx === steps.length - 1;
                     return (
@@ -29,12 +31,12 @@ export default function Breadcrumbs({ steps }: BreadcrumbsProps) {
                                     {step.label}
                                 </span>
                             ) : (
-                                <Link
+                                <LocaleLink
                                     href={step.href}
                                     className="hover:text-muted-gold transition-colors shrink-0"
                                 >
                                     {step.label}
-                                </Link>
+                                </LocaleLink>
                             )}
                         </div>
                     );

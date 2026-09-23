@@ -1,0 +1,220 @@
+{
+  "checkedAt": "2026-09-23T00:33:51.513Z",
+  "base": "http://localhost:3056",
+  "results": [
+    {
+      "surface": "builder",
+      "sku": "GBCrclFrst100AnSpTslBlk",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/697e7f2b335aa5d3f7325e2ffea873992a0a64d4d9967b7f5642aac9246802c8.body.webp"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/6281819bd5c0fdcdfa67496272406d81a997f6a976b77771670716a2e87c37ea.body.webp"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "surface": "builder",
+      "sku": "GBCrclFrst100AnSpTslGl",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/697e7f2b335aa5d3f7325e2ffea873992a0a64d4d9967b7f5642aac9246802c8.body.webp"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/a0b8e63760445b667a74a8001980dce510f2e0a0d90b852b6575255dc2513c15.body.webp"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "surface": "builder",
+      "sku": "GBCrclFrst100AnSpTslIvySl",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/697e7f2b335aa5d3f7325e2ffea873992a0a64d4d9967b7f5642aac9246802c8.body.webp"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/4b9a707d45ecc9fd99a9e94d447814dfae9b81faf68f385e89167a0db0df6df7.body.webp"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "surface": "builder",
+      "sku": "GBCrclFrst100AnSpTslIvyGl",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/697e7f2b335aa5d3f7325e2ffea873992a0a64d4d9967b7f5642aac9246802c8.body.webp"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/e2195cb4cd79192e2e2759b06012856f0242e48604d56e11edb81cf732576e20.body.webp"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "surface": "builder",
+      "sku": "GBCrclFrst100AnSpTslLvn",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/697e7f2b335aa5d3f7325e2ffea873992a0a64d4d9967b7f5642aac9246802c8.body.webp"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/7af69c6a4bc0c91dc4e72e7bc9bf36aa0f2dabc63084ba2e6aaefefa3f7d9825.body.webp"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "surface": "builder",
+      "sku": "GBCrclFrst100AnSpTslMtSl",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/697e7f2b335aa5d3f7325e2ffea873992a0a64d4d9967b7f5642aac9246802c8.body.webp"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/8ab9feff5d34fc1afc78a223d45f27a2a3a8394433a2a2390ee23e9a5018da65.body.webp"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "surface": "builder",
+      "sku": "GBCrclFrst100AnSpTslPnk",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/697e7f2b335aa5d3f7325e2ffea873992a0a64d4d9967b7f5642aac9246802c8.body.webp"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/3d472c8986dacf945c04bea844dcef9467af547f2c1b8204f2d4d1031e743af7.body.webp"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "surface": "builder",
+      "sku": "GBCrclFrst100AnSpTslWht",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/697e7f2b335aa5d3f7325e2ffea873992a0a64d4d9967b7f5642aac9246802c8.body.webp"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/3c71ca57b863ddd7baab846046c42dcf5203cbecee89e5186dea6d429551bdc4.body.webp"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "surface": "builder",
+      "sku": "GBCrcl50AnSpTslMtSl",
+      "pass": true
+    },
+    {
+      "surface": "pdp",
+      "slug": "cylinder-9ml-clear-17-415-rollon",
+      "width": 1440,
+      "http": 200,
+      "title": "9 ml Clear Cylinder Roll-On Bottle - Black with Dots Cap",
+      "secondary": false,
+      "brokenImages": [],
+      "pass": true
+    },
+    {
+      "surface": "pdp",
+      "slug": "circle-50ml-frosted-18-415-antiquespray",
+      "width": 1440,
+      "http": 200,
+      "title": "50 ml Frosted Circle Vintage Style Bulb Spray Bottle - Black",
+      "secondary": false,
+      "brokenImages": [],
+      "pass": true
+    },
+    {
+      "surface": "pdp",
+      "slug": "round-78ml-frosted-18-415-antiquespray",
+      "width": 1440,
+      "http": 200,
+      "title": "78 ml Frosted Round Vintage Style Bulb Spray Bottle - Gold",
+      "secondary": false,
+      "brokenImages": [],
+      "pass": true
+    },
+    {
+      "surface": "pdp",
+      "slug": "empire-50ml-clear-18-415-perfumespray",
+      "width": 1440,
+      "http": 200,
+      "title": "50 ml Clear Empire Perfume Spray Bottle - Matte Silver",
+      "secondary": false,
+      "brokenImages": [],
+      "pass": true
+    },
+    {
+      "surface": "pdp",
+      "slug": "cylinder-9ml-clear-17-415-rollon",
+      "width": 390,
+      "http": 200,
+      "title": "9 ml Clear Cylinder Roll-On Bottle - Black with Dots Cap",
+      "secondary": false,
+      "brokenImages": [],
+      "pass": true
+    },
+    {
+      "surface": "pdp",
+      "slug": "circle-50ml-frosted-18-415-antiquespray",
+      "width": 390,
+      "http": 200,
+      "title": "50 ml Frosted Circle Vintage Style Bulb Spray Bottle - Black",
+      "secondary": false,
+      "brokenImages": [],
+      "pass": true
+    },
+    {
+      "surface": "pdp",
+      "slug": "round-78ml-frosted-18-415-antiquespray",
+      "width": 390,
+      "http": 200,
+      "title": "78 ml Frosted Round Vintage Style Bulb Spray Bottle - Gold",
+      "secondary": false,
+      "brokenImages": [],
+      "pass": true
+    },
+    {
+      "surface": "pdp",
+      "slug": "empire-50ml-clear-18-415-perfumespray",
+      "width": 390,
+      "http": 200,
+      "title": "50 ml Clear Empire Perfume Spray Bottle - Matte Silver",
+      "secondary": false,
+      "brokenImages": [],
+      "pass": true
+    },
+    {
+      "surface": "component-pdp",
+      "slug": "cap-closure-18-415",
+      "secondaryRetained": true,
+      "pass": true
+    },
+    {
+      "pageErrors": []
+    }
+  ]
+}

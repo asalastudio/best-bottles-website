@@ -15,7 +15,11 @@ GROUP's fields (falling back to the product's), never from a folder name.
 
 publishable = matchKind in {exact, alias}
             and not convexDuplicate
-            and the stem has no SAME_STEM_DIFFERENT_PHOTOGRAPH conflict
+            and no SAME_STEM_DIFFERENT_PHOTOGRAPH conflict in a state the FRONT
+            can be built from. A conflict in the uncapped state alone holds the
+            cap-off view, not the plate: the front is built from the capped
+            source, and dedupe leaves a conflicted state with no chosen source,
+            so nothing downstream can silently pick one of the rivals.
             and familyId derivable
             (tokens.json review is checked at publish time, not here)
 """
@@ -35,6 +39,9 @@ DATA = REPO / "data" / "paper-doll"
 
 def slug(value) -> str:
     return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", str(value).lower())).strip("-")
+
+
+FRONT_STATES = frozenset({"on", "part", "unknown"})
 
 
 def punct_key(value: str) -> str:
@@ -70,7 +77,12 @@ def main():
     alias_raw = json.loads((DATA / "alias-map.json").read_text()) if (DATA / "alias-map.json").exists() else {}
 
     stems = sel["stems"]
-    conflict_stems = {c["stem"] for c in sel.get("conflicts", [])}
+    # Which STATE is ambiguous decides what it blocks. build_plates takes the
+    # front from "on", falling back to "part" then "unknown"; "off" is the
+    # optional cap-off view.
+    conflict_states: dict[str, set[str]] = defaultdict(set)
+    for conflict in sel.get("conflicts", []):
+        conflict_states[conflict["stem"]].add(conflict.get("state") or "unknown")
     exact_spelling = {}                      # spelling -> stemKey
     for key, entry in stems.items():
         for spelling in entry["stems"]:
@@ -150,8 +162,13 @@ def main():
             rec["blockReasons"].append(f"match:{rec['matchKind']}")
         if rec["convexDuplicate"]:
             rec["blockReasons"].append("convex_duplicate_websiteSku")
-        if rec["stemKey"] and rec["stemKey"] in conflict_stems:
+        ambiguous = conflict_states.get(rec["stemKey"], set()) if rec["stemKey"] else set()
+        if ambiguous & FRONT_STATES:
             rec["blockReasons"].append("SAME_STEM_DIFFERENT_PHOTOGRAPH")
+        elif ambiguous:
+            # Only an optional view has rival photographs. Record it so the
+            # cap-off debt is visible, and let the plate through.
+            rec["capOffHold"] = "SAME_STEM_DIFFERENT_PHOTOGRAPH:" + ",".join(sorted(ambiguous))
         if not fid:
             rec["blockReasons"].append(f"familyId:{fid_reason}")
         rec["publishable"] = not rec["blockReasons"]

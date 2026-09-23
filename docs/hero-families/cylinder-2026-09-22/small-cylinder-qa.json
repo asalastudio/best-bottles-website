@@ -1,0 +1,251 @@
+{
+  "canvas": [
+    2080,
+    2288
+  ],
+  "footYTargetPx": 2082.08,
+  "alignmentMethod": "Uniform complete-raster transforms from visually inspected raw shoulder/foot landmarks, then guided-sheet inspection. No local component or shadow retouching.",
+  "landmarkUncertaintyDeliveryPx": 8.681081081081082,
+  "nativeSizes": [
+    [
+      1196,
+      1315
+    ]
+  ],
+  "rawResponses": 11,
+  "generationRetries": 0,
+  "prior33HashesPreserved": true,
+  "rows": [
+    {
+      "sku": "GBSpry3mlClBlk",
+      "shoulderSpanPct": 28,
+      "shoulderYTargetPx": 1441.44,
+      "footYTargetPx": 2082.08,
+      "outputSha256": "5e55db395cfa2949adbf40222234652368014b5276de2cd737a9048462df9a7b",
+      "sourceGeometryComparison": {
+        "sourceBodyAspect": 2.134765625,
+        "generatedBodyAspect": 2.1264367816091956,
+        "relativeBodyAspectChangePct": -0.39,
+        "finalGeometryApproval": false
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          251,
+          248,
+          244
+        ],
+        "exactBoneCleared": false
+      }
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "shoulderSpanPct": 32.5,
+      "shoulderYTargetPx": 1338.48,
+      "footYTargetPx": 2082.08,
+      "outputSha256": "152036f08d2aec1f5d771613a77d19b20bd4d89061e590cd8f656c3a91c8b921",
+      "sourceGeometryComparison": {
+        "sourceBodyAspect": 2.7137014314928427,
+        "generatedBodyAspect": 2.811688311688312,
+        "relativeBodyAspectChangePct": 3.61,
+        "finalGeometryApproval": false
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          253,
+          250,
+          246
+        ],
+        "exactBoneCleared": false
+      }
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "shoulderSpanPct": 36.5,
+      "shoulderYTargetPx": 1246.96,
+      "footYTargetPx": 2082.08,
+      "outputSha256": "637c8aa197bc4d9c9b68d29493a763637edfefc6dd642282169c5946b22549dc",
+      "sourceGeometryComparison": {
+        "sourceBodyAspect": 2.3442622950819674,
+        "generatedBodyAspect": 2.483050847457627,
+        "relativeBodyAspectChangePct": 5.92,
+        "finalGeometryApproval": false
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          251,
+          248,
+          244
+        ],
+        "exactBoneCleared": false
+      }
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "shoulderSpanPct": 36.5,
+      "shoulderYTargetPx": 1246.96,
+      "footYTargetPx": 2082.08,
+      "outputSha256": "82f24320a8a166bc069a109bee49e6d9cc209e5a403e12ee583be9995c322d1a",
+      "sourceGeometryComparison": {
+        "sourceBodyAspect": 2.442786069651741,
+        "generatedBodyAspect": 2.4393939393939394,
+        "relativeBodyAspectChangePct": -0.14,
+        "finalGeometryApproval": false
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          252,
+          249,
+          245
+        ],
+        "exactBoneCleared": false
+      }
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "shoulderSpanPct": 36.5,
+      "shoulderYTargetPx": 1246.96,
+      "footYTargetPx": 2082.08,
+      "outputSha256": "6e766dc20b0072a7356a2ba6b13f5b93bb8c5aaf83a71cb46bb12a3302171f8c",
+      "sourceGeometryComparison": {
+        "sourceBodyAspect": 2.4554455445544554,
+        "generatedBodyAspect": 2.4343434343434343,
+        "relativeBodyAspectChangePct": -0.86,
+        "finalGeometryApproval": false
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          250.5,
+          248,
+          244
+        ],
+        "exactBoneCleared": false
+      }
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "shoulderSpanPct": 36.5,
+      "shoulderYTargetPx": 1246.96,
+      "footYTargetPx": 2082.08,
+      "outputSha256": "5e3219bdb0d864b9b7e48ee8648573c49178f62b80d3bae70aebc7fb5e8e5e0f",
+      "sourceGeometryComparison": {
+        "sourceBodyAspect": 2.4554455445544554,
+        "generatedBodyAspect": 2.4343434343434343,
+        "relativeBodyAspectChangePct": -0.86,
+        "finalGeometryApproval": false
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          253,
+          251,
+          247
+        ],
+        "exactBoneCleared": false
+      }
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "shoulderSpanPct": 36.5,
+      "shoulderYTargetPx": 1246.96,
+      "footYTargetPx": 2082.08,
+      "outputSha256": "164b75e4e50100659376f17ae6592f7159fbbfab4240b7ecea200c0825b11469",
+      "sourceGeometryComparison": {
+        "sourceBodyAspect": 2.402542372881356,
+        "generatedBodyAspect": 2.405,
+        "relativeBodyAspectChangePct": 0.1,
+        "finalGeometryApproval": false
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          250,
+          248,
+          244
+        ],
+        "exactBoneCleared": false
+      }
+    },
+    {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "shoulderSpanPct": 36.5,
+      "shoulderYTargetPx": 1246.96,
+      "footYTargetPx": 2082.08,
+      "outputSha256": "69235ce9bde8543eae1b735e8a8200160dd3c19a9e7fc6e538791643bbf12a6b",
+      "sourceGeometryComparison": {
+        "sourceBodyAspect": 2.4328358208955225,
+        "generatedBodyAspect": 2.4343434343434343,
+        "relativeBodyAspectChangePct": 0.06,
+        "finalGeometryApproval": false
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          251,
+          249,
+          246
+        ],
+        "exactBoneCleared": false
+      }
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "shoulderSpanPct": 36.5,
+      "shoulderYTargetPx": 1246.96,
+      "footYTargetPx": 2082.08,
+      "outputSha256": "6fe305eca91fcdbff3e88a3f23090c2ae98cd31c0c869fd1b4268ac6c759d834",
+      "sourceGeometryComparison": {
+        "sourceBodyAspect": 2.427860696517413,
+        "generatedBodyAspect": 2.405,
+        "relativeBodyAspectChangePct": -0.94,
+        "finalGeometryApproval": false
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          247,
+          245,
+          241
+        ],
+        "exactBoneCleared": false
+      }
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "shoulderSpanPct": 36.5,
+      "shoulderYTargetPx": 1246.96,
+      "footYTargetPx": 2082.08,
+      "outputSha256": "e3f6c4057c083c15bfd992d1f48939db28c5c5da3a96705eae77c3704419816c",
+      "sourceGeometryComparison": {
+        "sourceBodyAspect": 2.427860696517413,
+        "generatedBodyAspect": 2.381188118811881,
+        "relativeBodyAspectChangePct": -1.92,
+        "finalGeometryApproval": false
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          251,
+          250,
+          246
+        ],
+        "exactBoneCleared": false
+      }
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "shoulderSpanPct": 36.5,
+      "shoulderYTargetPx": 1246.96,
+      "footYTargetPx": 2082.08,
+      "outputSha256": "9f39c38b64784a8d55b7497ba56f2ab56a57d21d4958f6a55697fbc1886477a4",
+      "sourceGeometryComparison": {
+        "sourceBodyAspect": 2.4405940594059405,
+        "generatedBodyAspect": 2.4693877551020407,
+        "relativeBodyAspectChangePct": 1.18,
+        "finalGeometryApproval": false
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          253,
+          250,
+          246
+        ],
+        "exactBoneCleared": false
+      }
+    }
+  ]
+}

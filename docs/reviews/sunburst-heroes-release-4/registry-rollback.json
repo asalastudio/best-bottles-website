@@ -1,0 +1,662 @@
+{
+  "writtenAt": "2026-09-12T07:53:26.757Z",
+  "registry": "src/lib/products/catalog-heroes.json",
+  "manifest": "docs/reviews/catalog-complete-hero-release-2026-09-07.json",
+  "note": "Restore each `from` (url, manifest sha256, framing) to undo the Sunburst release 1 repoint.",
+  "rows": [
+    {
+      "websiteSku": "GBCrcl100AnSpGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrcl100AnSpGl.7643993ab799.png",
+        "manifestSha256": "7643993ab7998fb2fa35e453e4524e4c47ea9a7e037ca55bf28fb06595d0e643",
+        "framing": {
+          "scale": 1.0254576508840663,
+          "translateXPercent": -1.2728825442033116,
+          "translateYPercent": -2.342940016370133
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrcl100AnSpGl.3a2c2437214d.png",
+        "sha256": "3a2c2437214d6378e9664a2f30179861c93b73b88f6218d1c5ca1a773ef135c7",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r6-circle-settled-2026-09-11",
+      "approvedAt": "2026-09-12T02:21:49.150Z"
+    },
+    {
+      "websiteSku": "GBCrcl100AnSpTslGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrcl100AnSpTslGl.b6d92daf8fea.png",
+        "manifestSha256": "b6d92daf8fea976609858131ed63ae2a1068ce42bf3ba209d61768090c981fee",
+        "framing": {
+          "scale": 1.0265937214033214,
+          "translateXPercent": -1.3296860701660689,
+          "translateYPercent": -2.4463515636356634
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrcl100AnSpTslGl.2c000bcb5058.png",
+        "sha256": "2c000bcb5058fe4c1131514ea4b90c6bdf4724288cd6b27575cefb28541d26c1",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r6-circle-settled-2026-09-11",
+      "approvedAt": "2026-09-12T02:21:49.771Z"
+    },
+    {
+      "websiteSku": "GBCrcl100RdcrShnGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrcl100RdcrShnGl.1559dfd93201.png",
+        "manifestSha256": "1559dfd932016e2efd40abf36ddecca3e90d75a916e8856a95903fe793f44892",
+        "framing": {
+          "scale": 1.0282820768589154,
+          "translateXPercent": -1.4141038429457717,
+          "translateYPercent": -2.6000352012602512
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrcl100RdcrShnGl.c3a382b30482.png",
+        "sha256": "c3a382b304822d2ebdfc5247d132a3d2045b12bb8d235a6b213eadeeb7157fe6",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r6-circle-settled-2026-09-11",
+      "approvedAt": "2026-09-12T02:21:50.382Z"
+    },
+    {
+      "websiteSku": "GBCrcl100SpryMtGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrcl100SpryMtGl.9f1a45956a0b.png",
+        "manifestSha256": "9f1a45956a0b07e684dddfa34cfda68e750f9090700e7efcd43aefc698a336dc",
+        "framing": {
+          "scale": 1.0265937214033214,
+          "translateXPercent": -1.3296860701660689,
+          "translateYPercent": -2.4463515636356634
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrcl100SpryMtGl.ad83dd72f222.png",
+        "sha256": "ad83dd72f22218660742b344514f19faf4b7f9fb2db7a955e9b533928d8cf992",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r6-circle-settled-2026-09-11",
+      "approvedAt": "2026-09-12T02:21:51.058Z"
+    },
+    {
+      "websiteSku": "GBCrcl15Gl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrcl15Gl.5df997af94d3.png",
+        "manifestSha256": "5df997af94d302f0a4e3a2d91083184d9a181a77b24ca780bed6fd66fe1205b3",
+        "framing": {
+          "scale": 0.8140000000000002,
+          "translateXPercent": 7.536333333333316,
+          "translateYPercent": 23.166666666666664
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrcl15Gl.bd0ae9e1f474.png",
+        "sha256": "bd0ae9e1f4748d1c117c0fae4956ce3e010602beb8ee1807ab2fa75c33a4952d",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r6-circle-settled-2026-09-11",
+      "approvedAt": "2026-09-12T02:21:57.750Z"
+    },
+    {
+      "websiteSku": "GBCrcl15MtlRollGlMatt",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrcl15MtlRollGlMatt.6047bfebd74f.png",
+        "manifestSha256": "6047bfebd74f9558b380822315b88fc5d5154fb467af5343536d9766ea2886e5",
+        "framing": {
+          "scale": 0.8220093215950288,
+          "translateXPercent": 7.11851372345933,
+          "translateYPercent": 19.51009839461417
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrcl15MtlRollGlMatt.a5ef1cec6db7.png",
+        "sha256": "a5ef1cec6db749aa663d0f6f01d8f2c42577da220a01e2e05a372239400eff43",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r6-circle-settled-2026-09-11",
+      "approvedAt": "2026-09-12T02:21:58.420Z"
+    },
+    {
+      "websiteSku": "GBCrcl15SpryGlMatt",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrcl15SpryGlMatt.892101b98163.png",
+        "manifestSha256": "892101b98163c86b373062f193f590aaa5fa8b9d3ad11c5a64025fafbdfef758",
+        "framing": {
+          "scale": 0.8354210526315792,
+          "translateXPercent": 7.254289473684198,
+          "translateYPercent": 17.58421052631578
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrcl15SpryGlMatt.4abc2162d678.png",
+        "sha256": "4abc2162d678817f81e7338535fa2339e7d9107822e58dcf19fbdbcf5e987642",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r6-circle-settled-2026-09-11",
+      "approvedAt": "2026-09-12T02:21:59.760Z"
+    },
+    {
+      "websiteSku": "GBCrcl30GlCap",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrcl30GlCap.01eecbbe4d85.png",
+        "manifestSha256": "01eecbbe4d8503c6e1fe97e9e4200eed8a11383244b6d3363c5a10b8b07227c1",
+        "framing": {
+          "scale": 1.090815973273477,
+          "translateXPercent": -4.540798663673849,
+          "translateYPercent": -8.292223208226755
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrcl30GlCap.73169e784ffd.png",
+        "sha256": "73169e784ffd11ca53be695fd2e7694e14690c2dc1f0dcb4e5271154e045f6a5",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r6-circle-settled-2026-09-11",
+      "approvedAt": "2026-09-12T02:22:12.729Z"
+    },
+    {
+      "websiteSku": "GBCrcl30SpryMattGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrcl30SpryMattGl.60279e0b076c.png",
+        "manifestSha256": "60279e0b076c61f560513118f82b867f5451bb20efcf6559347b398e488a0fba",
+        "framing": {
+          "scale": 1.0920397274685638,
+          "translateXPercent": -4.601986373428192,
+          "translateYPercent": -8.403616218292349
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrcl30SpryMattGl.267edc5e626c.png",
+        "sha256": "267edc5e626c770cb5ffa91a025e7c523ab54da432a5bcce5d3b9abfb3251f92",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r6-circle-settled-2026-09-11",
+      "approvedAt": "2026-09-12T02:22:13.313Z"
+    },
+    {
+      "websiteSku": "GBCrcl50AnSpGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrcl50AnSpGl.f8607e109e90.png",
+        "manifestSha256": "f8607e109e90239aaad431b8feee8be2b9884df44625fe0ddb80387c2d01528e",
+        "framing": {
+          "scale": 1.0789954176947478,
+          "translateXPercent": -3.949770884737394,
+          "translateYPercent": -7.216249559393718
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrcl50AnSpGl.300d01758f98.png",
+        "sha256": "300d01758f982aac210468f690a6e19655e1861405e69b4cbf997a85b45315b8",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r6-circle-settled-2026-09-11",
+      "approvedAt": "2026-09-12T02:22:14.067Z"
+    },
+    {
+      "websiteSku": "GBCrcl50AnSpTslIvyGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrcl50AnSpTslIvyGl.b3cd7abc53c1.png",
+        "manifestSha256": "b3cd7abc53c1b2120bc67b916277c3abf0b191ac047a9610f2388e9d7b37c418",
+        "framing": {
+          "scale": 1.216195979990248,
+          "translateXPercent": -10.809798999512402,
+          "translateYPercent": -19.70501869142001
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrcl50AnSpTslIvyGl.78d4c9ed55be.png",
+        "sha256": "78d4c9ed55be7020c6e815a07d90784e1b1dd23faf5bbfcd98b771039f5bcad0",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r6-circle-settled-2026-09-11",
+      "approvedAt": "2026-09-12T02:22:54.443Z"
+    },
+    {
+      "websiteSku": "GBCrcl50DrpGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrcl50DrpGl.1c4ffae8961f.png",
+        "manifestSha256": "1c4ffae8961f61ce9a017b6136b698dcf4dd85c02215e58e8bf4c02eb82a3ada",
+        "framing": {
+          "scale": 1.0789954176947478,
+          "translateXPercent": -3.949770884737394,
+          "translateYPercent": -7.216249559393718
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrcl50DrpGl.0e6daa55097b.png",
+        "sha256": "0e6daa55097b7817b76344a4f951fdd4721647acefa40c14e2140a90f1058ebc",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r6-circle-settled-2026-09-11",
+      "approvedAt": "2026-09-12T02:23:04.942Z"
+    },
+    {
+      "websiteSku": "GBCrcl50RdcrShnGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrcl50RdcrShnGl.19d05867b478.png",
+        "manifestSha256": "19d05867b478b5d7637cfb0b6937d3110a28cf668b1043380e41e9071bd39f3e",
+        "framing": {
+          "scale": 1.0718257561891726,
+          "translateXPercent": -3.5912878094586342,
+          "translateYPercent": -6.56362652491187
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrcl50RdcrShnGl.50c74f388d2b.png",
+        "sha256": "50c74f388d2b86be373f140a625fff82be1bccdd05b42725ab21c7802016efa5",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r6-circle-settled-2026-09-11",
+      "approvedAt": "2026-09-12T02:23:04.214Z"
+    },
+    {
+      "websiteSku": "GBCrcl50SpryMtGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrcl50SpryMtGl.26b991568b84.png",
+        "manifestSha256": "26b991568b84ddd15fcc8f00c6c4a9599af7b3cb56b59774904a9542de2fbc2f",
+        "framing": {
+          "scale": 1.0789954176947478,
+          "translateXPercent": -3.949770884737394,
+          "translateYPercent": -7.216249559393718
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrcl50SpryMtGl.bdd15bd979b8.png",
+        "sha256": "bdd15bd979b8693a9efabd3f67508f050e11f9abd71ba22666330e6e503e23ab",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r6-circle-settled-2026-09-11",
+      "approvedAt": "2026-09-12T02:23:02.072Z"
+    },
+    {
+      "websiteSku": "GBCrclFrst100AnSpGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrclFrst100AnSpGl.d3221edf5374.png",
+        "manifestSha256": "d3221edf537433259d51d3273887a4f126a8b97c538433df4af4be37238fa3e2",
+        "framing": {
+          "scale": 1.0217751585747115,
+          "translateXPercent": -1.0887579287355738,
+          "translateYPercent": -2.007738793339118
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrclFrst100AnSpGl.221434785dd4.png",
+        "sha256": "221434785dd42a219267d705f2ae60b30944f180765b937d532eb824d0ea7e7d",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r6-circle-settled-2026-09-11",
+      "approvedAt": "2026-09-12T02:22:59.362Z"
+    },
+    {
+      "websiteSku": "GBCrclFrst100AnSpTslIvyGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrclFrst100AnSpTslIvyGl.07288e4ba905.png",
+        "manifestSha256": "07288e4ba9055bf0d99220d1979182a79f02272ec8a8b24cdf20b9d91f30f527",
+        "framing": {
+          "scale": 1.0209447069522137,
+          "translateXPercent": -1.0472353476106886,
+          "translateYPercent": -1.9321464020604806
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrclFrst100AnSpTslIvyGl.e3bc47848c6e.png",
+        "sha256": "e3bc47848c6e2986be30c8386215b0fce6b9f3caba151a1a0969f64508d16cdd",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r10-circle-frost-2026-09-12",
+      "approvedAt": "2026-09-12T06:53:23.450Z"
+    },
+    {
+      "websiteSku": "GBCrclFrst100RdcrShnGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrclFrst100RdcrShnGl.b6f7d42ff8f7.png",
+        "manifestSha256": "b6f7d42ff8f7ceec6986adfaa6aa36659716142eb18edf3f0b7a136c60a3d61f",
+        "framing": {
+          "scale": 1.0329028578490431,
+          "translateXPercent": -1.6451428924521596,
+          "translateYPercent": -3.0206447529257203
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrclFrst100RdcrShnGl.25795f39b7c8.png",
+        "sha256": "25795f39b7c80a352cfc8548544761513f608f722491b38ef8191c6f49488836",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r6-circle-settled-2026-09-11",
+      "approvedAt": "2026-09-12T02:23:13.387Z"
+    },
+    {
+      "websiteSku": "GBCrclFrst100SpryMtGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrclFrst100SpryMtGl.309d2da00f87.png",
+        "manifestSha256": "309d2da00f87878f55a7ac95ad81bac79e26101cc6089d0b4560491c73526ca9",
+        "framing": {
+          "scale": 1.0329028578490431,
+          "translateXPercent": -1.6451428924521596,
+          "translateYPercent": -3.0206447529257203
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrclFrst100SpryMtGl.51a21c13e4b7.png",
+        "sha256": "51a21c13e4b772e4984f313c003c096528e405b45b036c8ac962b78aebf3c88d",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r6-circle-settled-2026-09-11",
+      "approvedAt": "2026-09-12T02:23:19.475Z"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrclFrst50AnSpGl.a73dadbb94f0.png",
+        "manifestSha256": "a73dadbb94f0f6feb10666994d62c0946058eaa0597c119049fb8ac10b0a14c5",
+        "framing": {
+          "scale": 1.0753012755880131,
+          "translateXPercent": -3.7650637794006605,
+          "translateYPercent": -6.879987906088384
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrclFrst50AnSpGl.046e7ab96b6c.png",
+        "sha256": "046e7ab96b6c620a9a41c22999483f638c20ae6e2f2b5be285d88345e0de8c0e",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r6-circle-settled-2026-09-11",
+      "approvedAt": "2026-09-12T02:23:22.119Z"
+    },
+    {
+      "websiteSku": "GBCrclFrst50DrpGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrclFrst50DrpGl.c3efc5033ad5.png",
+        "manifestSha256": "c3efc5033ad5f6a851d60096bd7471611c29124772a9664bc3f28af8e83d1501",
+        "framing": {
+          "scale": 1.0741781536398183,
+          "translateXPercent": -3.7089076819909117,
+          "translateYPercent": -6.777755010803978
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrclFrst50DrpGl.00e37fa4d37d.png",
+        "sha256": "00e37fa4d37d254fa82980cead0cae44e650451093994025786d0873bae27b11",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r10-circle-frost-2026-09-12",
+      "approvedAt": "2026-09-12T06:53:22.268Z"
+    },
+    {
+      "websiteSku": "GBCrclFrst50RdcrIvyLthr",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrclFrst50RdcrIvyLthr.fabd4d918ae6.png",
+        "manifestSha256": "fabd4d918ae6e03dfcdff96cb73209e90facd8216dba4f623377818fde25508e",
+        "framing": {
+          "scale": 1.0730573753822965,
+          "translateXPercent": -3.6528687691148245,
+          "translateYPercent": -6.675735451465453
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrclFrst50RdcrIvyLthr.11c9a0f73f42.png",
+        "sha256": "11c9a0f73f42fcd3974977ce76a5c32b3966b5e9ae28dc5b0a3fc144974a1689",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r11-circle-frost-resize-2026-09-12",
+      "approvedAt": "2026-09-12T06:59:44.840Z"
+    },
+    {
+      "websiteSku": "GBCrclFrst50RdcrShnGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrclFrst50RdcrShnGl.617a4baaf53b.png",
+        "manifestSha256": "617a4baaf53ba8e7e01cc264965c498eab3cc1551bd70cd16410aa86816e4946",
+        "framing": {
+          "scale": 1.0754975261571909,
+          "translateXPercent": -3.7748763078595404,
+          "translateYPercent": -6.897851739949433
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrclFrst50RdcrShnGl.4456263fddc1.png",
+        "sha256": "4456263fddc1a3ebc797c143dc097e4eed4f7a38b6f5fb0df2a218693fa53507",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r10-circle-frost-2026-09-12",
+      "approvedAt": "2026-09-12T06:53:51.342Z"
+    },
+    {
+      "websiteSku": "GBCrclFrst50SpryMtGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCrclFrst50SpryMtGl.d9557a8a06fb.png",
+        "manifestSha256": "d9557a8a06fb2aaa526dfd3ea5fecc48aff6fdf7b07f02e7d375dc7f63113a43",
+        "framing": {
+          "scale": 1.0743739944293549,
+          "translateXPercent": -3.7186997214677415,
+          "translateYPercent": -6.795581544210509
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCrclFrst50SpryMtGl.e325119c30a5.png",
+        "sha256": "e325119c30a5db7c4f15ed8b8b97611e38ff0256716e2ba1e80760f089677848",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r10-circle-frost-2026-09-12",
+      "approvedAt": "2026-09-12T06:53:30.561Z"
+    },
+    {
+      "websiteSku": "LBCrcl100LtnMtGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/LBCrcl100LtnMtGl.986f220e426c.png",
+        "manifestSha256": "986f220e426c256b80981e0eb6ffb8d6c140b436e1851574bfc8f62b131768bd",
+        "framing": {
+          "scale": 1.0265937214033214,
+          "translateXPercent": -1.3296860701660689,
+          "translateYPercent": -2.4463515636356634
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/LBCrcl100LtnMtGl.6d2b895243c4.png",
+        "sha256": "6d2b895243c48234dfcd48c82983d74fd60081f2141b1f44e7c3ef81378dca02",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r6-circle-settled-2026-09-11",
+      "approvedAt": "2026-09-12T02:24:37.239Z"
+    },
+    {
+      "websiteSku": "LBCrcl50LtnMtGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/LBCrcl50LtnMtGl.f2d59ea6b8ff.png",
+        "manifestSha256": "f2d59ea6b8ffb391a9be268f2fda23d7bf22fa7560b471a3a5e864de40517899",
+        "framing": {
+          "scale": 1.0789954176947478,
+          "translateXPercent": -3.949770884737394,
+          "translateYPercent": -7.216249559393718
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/LBCrcl50LtnMtGl.0a9d66084dc5.png",
+        "sha256": "0a9d66084dc5ffd66d02d6cbc37b4aabb87e78013d89d65ca1d4bb4225d3d0ce",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r6-circle-settled-2026-09-11",
+      "approvedAt": "2026-09-12T02:24:43.792Z"
+    },
+    {
+      "websiteSku": "LBCrclFrst100LtnMtGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/LBCrclFrst100LtnMtGl.f8a3bd634987.png",
+        "manifestSha256": "f8a3bd634987c38cfdffdcfb4ca672845c3f6f0165323d9f3406e874cb29c459",
+        "framing": {
+          "scale": 1.0329028578490431,
+          "translateXPercent": -1.6451428924521596,
+          "translateYPercent": -3.0206447529257203
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/LBCrclFrst100LtnMtGl.cb81c881af6e.png",
+        "sha256": "cb81c881af6ea286c74d55345d1fb60ecc729576d83743b8d6a7bb8f046a9806",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r10-circle-frost-2026-09-12",
+      "approvedAt": "2026-09-12T06:53:31.596Z"
+    },
+    {
+      "websiteSku": "LBCrclFrst50LtnMtGl",
+      "family": "Circle",
+      "from": {
+        "url": "/images/catalog/bone-review/LBCrclFrst50LtnMtGl.f31e21488965.png",
+        "manifestSha256": "f31e214889656bd465f983adc70b9905a844f5434954ea83acbede014a15ef29",
+        "framing": {
+          "scale": 1.0743739944293549,
+          "translateXPercent": -3.7186997214677415,
+          "translateYPercent": -6.795581544210509
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/LBCrclFrst50LtnMtGl.b01840f43e1f.png",
+        "sha256": "b01840f43e1f8fb7bb9978866d4b1944ec5b5b37656d44bca909cd0a0a442b1d",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r10-circle-frost-2026-09-12",
+      "approvedAt": "2026-09-12T06:53:32.176Z"
+    }
+  ],
+  "skipped": [
+    {
+      "sku": "GBCrcl15RollBlkSh",
+      "why": "no registry row yet (new product group) — needs a row with group slug and variant before it can be indexed"
+    }
+  ]
+}

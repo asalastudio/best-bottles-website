@@ -31,8 +31,8 @@ export const clerkAppearance: Appearance = {
         colorDanger: "#B4453C",
         colorSuccess: "#3F7D58",
         colorWarning: MUTED_GOLD,
-        fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif",
-        fontFamilyButtons: "var(--font-inter), ui-sans-serif, system-ui, sans-serif",
+        fontFamily: "var(--font-brand)",
+        fontFamilyButtons: "var(--font-brand)",
         fontSize: "0.9375rem",
         // Square-ish to match the site's `rounded-sm` language.
         borderRadius: "2px",

@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-22",
+  "state": "deployed-assets-and-public-desktop-mobile-audit-verified",
+  "sharedStagingUrl": "https://best-bottles-website.vercel.app",
+  "deploymentUrl": "https://best-bottles-website-7zsmhwcv2-asala.vercel.app",
+  "deploymentId": "dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+  "deploymentCommit": "445fe3ded8326cde77969c1543d831b0ae674dc9",
+  "deploymentTarget": "preview",
+  "deploymentState": "READY",
+  "counts": {
+    "exports": 59,
+    "registeredGlassGroups": 49,
+    "visibleImages": 58,
+    "visibleGroups": 48,
+    "hiddenLegacyDuplicateImages": 1,
+    "remainingInScopeGenerationGaps": 0
+  },
+  "rollbackUrl": "https://best-bottles-website-rli7996jl-asala.vercel.app",
+  "rollbackDeploymentId": "dpl_4tMJZ84dg4wrV52CSvVjSVmm4gkN",
+  "rollbackCommit": "76585efac99ee492fe6c594ac03f172466fb098a",
+  "rollbackMethod": "Assign only best-bottles-website.vercel.app to the rollback preview using vercel alias set.",
+  "publicAssetVerification": "final-staging-asset-verification.json",
+  "protectedPreviewVerification": "final-preview-asset-verification.json",
+  "ciNote": "Vercel production build passed for 445fe3de. GitHub CI attempt 1 passed typecheck/lint/unit stages but failed during next/font Google loader (Cannot read properties of null reading 1); attempt 2 requested. Do not call CI green without checking the retry.",
+  "scopeBoundary": "Frontend staging only; no merge, Convex/Shopify mutation, PDP gallery change or production-media publication.",
+  "publicBrowserVerification": "final-staging-browser-verification.json",
+  "verifiedBrowserViews": 32
+}

@@ -210,7 +210,7 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
   {
     // Diva 46 ml: a PHOTO-ONLY guided family. Its 46 clear-glass plates
     // (the diva-46ml-clear-18-415 plates) cover every closure it sells --
-    // reducer, spray pump, lotion pump, dropper, vintage bulb, bulb + tassel.
+    // reducer, spray pump, lotion pump, dropper, vintage style bulb, bulb + tassel.
     // No geometry exists, so this entry carries no body and never shows 3D;
     // it is here so Diva sells through the same guided page as the 9 mL.
     key: "diva46",
@@ -314,8 +314,9 @@ export function colourTokenFromSlug(slug: string): string | null {
 
 /** The closure token a sibling slug must carry for this family, read from
  *  the current slug. Tokens are not always one word (Diva's tassel page is
- *  "...-antiquespray-tassel"), so the last word only identifies the BASE;
- *  the registry writes the full token back. */
+ *  "...-antiquespray-tassel" — product-group slug token, not the refine bucket
+ *  slug `vintagestyle-tassel`), so the last word only identifies the BASE;
+ *  the registry writes the full product slug token back. */
 export function closureTokenFromSlug(f: ConfiguratorFamily, slug: string): string {
   const last = slug.split("-").pop() ?? "";
   const base = f.closureFromSlug[last];

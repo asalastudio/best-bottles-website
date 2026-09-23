@@ -1,0 +1,212 @@
+[
+  {
+    "sku": "GBBstn1ozMtlRollonGl",
+    "mean": 0.0038689458689458688,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn1ozMtlRollonMattBlk",
+    "mean": 0.0036724786324786327,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn1ozMtlRollonMattGl",
+    "mean": 0.0033791452991452993,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn1ozMtlRollonMattSl",
+    "mean": 0.0032635897435897435,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn2ozRollonMattGl",
+    "mean": 0.0031426219870664316,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstnAmb1ozMtlRollonGl",
+    "mean": 0.0025001763668430336,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstnAmb1ozMtlRollonShnSl",
+    "mean": 0.002966255144032922,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstnAmb2ozMtlRollonMattSl",
+    "mean": 0.0022638447971781305,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstnAmb2ozMtlRollonShnSl",
+    "mean": 0.003220458553791887,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstnAmb2ozRollonGl",
+    "mean": 0.003195767195767196,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstnAmb2ozRollonMattBlk",
+    "mean": 0.0030445620223398,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstnAmb2ozRollonShnBlk",
+    "mean": 0.003134861845972957,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstnBlu1ozMtlRollonGl",
+    "mean": 0.002453615520282187,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstnBlu1ozMtlRollonMattSl",
+    "mean": 0.0019630805408583185,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstnBlu1ozMtlRollonShnSl",
+    "mean": 0.002919694297472075,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstnBlu1ozRollonMattBlk",
+    "mean": 0.0025810699588477365,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstnBlu1ozRollonMattGl",
+    "mean": 0.002223398001175779,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstnBlu1ozRollonMattSl",
+    "mean": 0.002201528512639624,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn1ozRollonMattBlk",
+    "mean": 0.003783019943019943,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn1ozRollonMattGl",
+    "mean": 0.003384615384615385,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn1ozRollonMattSl",
+    "mean": 0.003585641025641026,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn1ozRollonShBlk",
+    "mean": 0.0038705413105413105,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn1ozRollonShGl",
+    "mean": 0.0038744159544159542,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn1ozRollonShnSl",
+    "mean": 0.004685811965811966,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn2ozMtlRollBlk",
+    "mean": 0.003647501469723692,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn2ozMtlRollGl",
+    "mean": 0.0037084068195179305,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn2ozMtlRollMattBlk",
+    "mean": 0.003557201646090535,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn2ozMtlRollMattGl",
+    "mean": 0.0032030570252792475,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn2ozMtlRollMattSl",
+    "mean": 0.003083833039388595,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn2ozMtlRollShnSl",
+    "mean": 0.004040446796002351,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn2ozRollGl",
+    "mean": 0.0036479717813051146,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn2ozRollMattBlk",
+    "mean": 0.003496766607877719,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn2ozRollMattSl",
+    "mean": 0.003023398001175779,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn2ozRollShnBlk",
+    "mean": 0.003587066431510876,
+    "p99": 0.0,
+    "max": 1.0
+  },
+  {
+    "sku": "GBBstn2ozRollShnSl",
+    "mean": 0.003980011757789535,
+    "p99": 0.0,
+    "max": 1.0
+  }
+]

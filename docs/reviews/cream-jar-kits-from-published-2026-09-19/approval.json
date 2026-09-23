@@ -1,0 +1,27 @@
+{
+ "release": "cream-jar-kits-2026-09-19",
+ "ship": "ship Cream Jar kit release 2026-09-19",
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:13.233Z",
+ "preparedBy": "reissue-kit-approval.mjs (Claude Opus 5)",
+ "preparedAt": "2026-09-19T12:37:13.235Z",
+ "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/cream-jar-kits.jpg",
+ "skus": {
+  "CJAmb30SlCap": "704b5eeedbe6a3aa6739aab974865d201af490e69bc6f23e527f88b9f7623245",
+  "CJAmb40SlCap": "bd713b37839d4c4046ff5cd4f36a78acba3b6677556d3866020f2e9e35b3da28",
+  "CJAmb5mlBlkCap": "76482c15c4d850b424d78e8bb71f218e61e4da2ca69831445d45f5d67bc35abb",
+  "CJAmb5mlSlCap": "9b91e9bb215b99dd29723ab6d54bc60909a643f187b250c5553eae85b525e2cd",
+  "CJClr15Pnk": "67c197151ff7ec37c168039ba1d15b966650debc727cf448eb2fb50e5fb64aad",
+  "CJClr15Wht": "a656f0f7068d446ce21bca32be731e4de1d58611da5a1493e0d5cc6514116978",
+  "CJClr5mlClrCap": "7b042904666f895b38459b886b57180aa2f9e721be49c8b78a35f3907279cfd1",
+  "CJFrst30BlkCap": "f2fdb520bd15cd05605a81478345c61134802285c84a59f25011cff3b28210b4",
+  "CJFrst30SlCap": "2bc8d7b0953eddd2d24b87f2e762e6c27ce83a25478a49ec8a63f56f5eedf8b3",
+  "CJFrst40BlkCap": "37101af9d09242577be6b04b1b8a9e0b2d0ff312f22eb93c2aa5c81dbc8c2a48",
+  "CJFrst40SlCap": "31b0d4a63ab2bdd8b03a0429d5acb257480f36114720e780e2082bec59d296e0",
+  "CJWhite20": "5189ed3a55ab26c95b869ce4f1e4ff8c8bdc9f81ad160f8b207ddc818923aa9a",
+  "CJWhitePlsSlFr2oz": "372dcc72ac5362404e7953b0a7698a25ad37a05496d460c31be21fd92bce6f45"
+ },
+ "setAside": [],
+ "note": "Re-issued against the published plates. The set-aside rows keep their review; their kits must be re-cut from the plate that replaced the one they were registered to."
+}

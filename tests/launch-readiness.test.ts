@@ -55,8 +55,8 @@ describe("June 15 launch readiness guardrails", () => {
     });
 
     it("adds route-specific canonical metadata to launch pages", () => {
-        const expectations = [
-            ["src/app/catalog/page.tsx", "`${SITE_URL}/catalog`"],
+        const expectations: Array<[string, string]> = [
+            ["src/app/catalog/page.tsx", "buildHreflangAlternates(path)"],
             ["src/app/about/page.tsx", "`${SITE_URL}/about`"],
             ["src/app/blog/page.tsx", "`${SITE_URL}/blog`"],
             ["src/app/resources/page.tsx", "`${SITE_URL}/resources`"],
@@ -110,9 +110,9 @@ describe("June 15 launch readiness guardrails", () => {
         const footer = readRepoFile("src/components/Footer.tsx");
         const catalog = readRepoFile("src/app/catalog/CatalogClient.tsx");
 
-        expect(footer).toContain('aria-label="Email address"');
+        expect(footer).toContain('aria-label={t("emailLabel")}');
         expect(catalog).toContain('aria-label={`Filter by ${label}`}');
         expect(catalog).toContain('aria-label="Sort catalog results"');
-        expect(catalog).toContain('aria-label="Sort visible catalog results"');
+        expect(catalog).toContain('aria-label="Sort by visible catalog results"');
     });
 });

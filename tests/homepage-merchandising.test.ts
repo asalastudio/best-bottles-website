@@ -8,13 +8,16 @@ import {
     homepageFamilyHref,
 } from "@/lib/homepageMerchandising";
 import { readFileSync } from "node:fs";
+import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
+import CollectionShopping, { CollectionGrid } from "@/components/home/CollectionShopping";
 
 describe("family-first homepage merchandising", () => {
-    it("sends every shop-by-family tile to its dedicated landing page", () => {
-        expect(homepageFamilyHref("Cylinder")).toBe("/catalog/cylinder");
-        expect(homepageFamilyHref("Elegant")).toBe("/catalog/elegant");
-        expect(homepageFamilyHref("Circle")).toBe("/catalog/circle");
-        expect(homepageFamilyHref("Boston Round")).toBe("/catalog/boston-round");
+    it("sends every shop-by-family tile into the glass-bottle catalog", () => {
+        expect(homepageFamilyHref("Cylinder")).toBe("/catalog?category=Glass+Bottle&families=Cylinder&sort=capacity-asc");
+        expect(homepageFamilyHref("Elegant")).toBe("/catalog?category=Glass+Bottle&families=Elegant&sort=capacity-asc");
+        expect(homepageFamilyHref("Circle")).toBe("/catalog?category=Glass+Bottle&families=Circle&sort=capacity-asc");
+        expect(homepageFamilyHref("Boston Round")).toBe("/catalog?category=Glass+Bottle&families=Boston+Round&sort=capacity-asc");
     });
 
     it("uses the approved editorial family mosaic", () => {
@@ -53,11 +56,13 @@ describe("family-first homepage merchandising", () => {
         expect(HOME_SAMPLE_FEATURE.href).toContain("families=Vial");
         expect(HOME_SAMPLE_FEATURE.href).toContain("capacities=1+ml%2C1.5+ml%2C2+ml%2C4+ml");
 
-        const home = readFileSync("src/components/HomePage.tsx", "utf8");
-        expect(home.indexOf("<SampleTestersFeature")).toBeLessThan(home.indexOf("<ApplicationShowcase"));
+        const html = renderToStaticMarkup(createElement(CollectionGrid));
+        for (const key of ["sample-vials", "roll-on-bottles", "dropper-bottles"]) {
+            expect(html).toContain(`href="/catalog?shop=${key}&amp;sort=capacity-asc"`);
+        }
     });
 
-    it("uses three alternating editorial stories with live copy", () => {
+    it("keeps the legacy editorial categories discoverable in the collection directory", () => {
         expect(HOME_EDITORIAL_STORIES.map((story) => story.title)).toEqual([
             "Antique Bulb Sprayers",
             "Cream Jars",
@@ -66,13 +71,13 @@ describe("family-first homepage merchandising", () => {
         expect(HOME_EDITORIAL_STORIES.every((story) => story.image.includes("/editorial-sketches/") && story.image.endsWith(".webp"))).toBe(true);
         expect(HOME_EDITORIAL_STORIES.every((story) => story.href.startsWith("/catalog"))).toBe(true);
 
-        const home = readFileSync("src/components/HomePage.tsx", "utf8");
-        expect(home).toContain("Stories From the Collection");
-        expect(home.indexOf("<ApplicationShowcase")).toBeLessThan(home.indexOf("<EditorialStories"));
-        expect(home.indexOf("<EditorialStories")).toBeLessThan(home.indexOf("<PathChooser"));
+        const html = renderToStaticMarkup(createElement(CollectionGrid, { all: true }));
+        for (const key of ["glass-spray-bottles", "cream-jars", "decorative-bottles"]) {
+            expect(html).toContain(`href="/catalog?shop=${key}&amp;sort=capacity-asc"`);
+        }
     });
 
-    it("keeps packaging supplies in a smaller supporting story", () => {
+    it("keeps packaging supplies discoverable in the collection directory", () => {
         expect(HOME_ACCESSORY_STORY.title).toBe("Finish the presentation");
         expect(HOME_ACCESSORY_STORY.image).toBe("/assets/editorial-sketches/packaging-accessories-pencil.webp");
         expect(HOME_ACCESSORY_STORY.links.map((link) => link.label)).toEqual([
@@ -81,18 +86,22 @@ describe("family-first homepage merchandising", () => {
             "Filling Tools",
         ]);
 
-        const home = readFileSync("src/components/HomePage.tsx", "utf8");
-        expect(home.indexOf("<EditorialStories")).toBeLessThan(home.indexOf("<PackagingAccessoriesStory"));
-        expect(home.indexOf("<PackagingAccessoriesStory")).toBeLessThan(home.indexOf("<PathChooser"));
+        const html = renderToStaticMarkup(createElement(CollectionGrid, { all: true }));
+        expect(html).toContain('href="/catalog?shop=accessories-packaging&amp;sort=capacity-asc"');
     });
 
-    it("puts mobile search before browsing and preserves the desktop-only hero", () => {
+    it("puts shared search before shopping and families before collections", () => {
         const home = readFileSync("src/components/HomePage.tsx", "utf8");
-
-        expect(home).toContain('<Navbar variant="home" hideMobileSearch headerClassName={homeStyles.homeHeader} />');
-        expect(home).toContain('mobileHeroMode="categories"');
-        expect(home).toContain('id="mobile-home-search"');
-        expect(home.indexOf("<Hero ")).toBeLessThan(home.indexOf("<MobilePostHeroSearch"));
-        expect(home.indexOf("<MobilePostHeroSearch")).toBeLessThan(home.indexOf("<HomeCatalogBrowser"));
+        const header = readFileSync("src/components/home/ShoppingHeader.tsx", "utf8");
+        expect(home).toContain("<ShoppingHeader />");
+        expect(home.indexOf("<ShoppingHeader")).toBeLessThan(home.indexOf("<CollectionShopping"));
+        expect(header).toContain('role="search"');
+        expect(header).toContain('name="search"');
+        expect(header).toContain("localizeHref(locale, '/catalog')");
+        const html = renderToStaticMarkup(createElement(CollectionShopping, { data: null }));
+        expect(html.indexOf('id="family-heading"')).toBeGreaterThan(-1);
+        expect(html.indexOf('id="family-heading"')).toBeLessThan(html.indexOf('id="collections-heading"'));
+        expect(html).toContain('id="build-your-bottle"');
+        expect(html).toContain('href="/matrix"');
     });
 });

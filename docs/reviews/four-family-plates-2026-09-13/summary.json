@@ -1,0 +1,48 @@
+{
+  "counts": {
+    "preserved": 147,
+    "ready": 637,
+    "hold": 40,
+    "duplicate": 95,
+    "legacy": 10
+  },
+  "families": [
+    {
+      "family": "Elegant",
+      "total": 291,
+      "preserved": 92,
+      "ready": 159,
+      "hold": 3,
+      "duplicate": 36,
+      "legacy": 1
+    },
+    {
+      "family": "Diva",
+      "total": 228,
+      "preserved": 15,
+      "ready": 158,
+      "hold": 6,
+      "duplicate": 49,
+      "legacy": 0
+    },
+    {
+      "family": "Circle",
+      "total": 218,
+      "preserved": 40,
+      "ready": 165,
+      "hold": 0,
+      "duplicate": 4,
+      "legacy": 9
+    },
+    {
+      "family": "Sleek",
+      "total": 192,
+      "preserved": 0,
+      "ready": 155,
+      "hold": 31,
+      "duplicate": 6,
+      "legacy": 0
+    }
+  ],
+  "packetSha256": "d6e78fa53b538eb46a4f8099d6214027082ed99bee8e8fa4a2cf905beee092d8"
+}

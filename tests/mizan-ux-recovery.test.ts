@@ -51,6 +51,7 @@ describe("Mizan UX recovery guardrails", () => {
 
         expect(filters).toContain("catalogSearchMatches");
         expect(filters).toContain("catalogSearchRecoverySuggestions");
+        expect(catalog).toContain('<Navbar variant="catalog" initialSearchValue={filters.search || undefined} hideSearch />');
         expect(catalog).toContain('data-testid="catalog-search-input"');
         expect(catalog).toContain('data-testid="catalog-result-count"');
         expect(catalog).toContain('data-testid="catalog-active-filter-chip"');

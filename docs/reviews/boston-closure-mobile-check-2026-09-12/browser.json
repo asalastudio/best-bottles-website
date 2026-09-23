@@ -1,0 +1,1020 @@
+{
+  "groups": [
+    {
+      "slug": "boston-round-30ml-clear-20-400-rollon",
+      "capacityMl": 30,
+      "color": "Clear",
+      "variants": [
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Matte Silver",
+          "sku": "GBBstn1ozMtlRollonMattSl",
+          "url": "http://localhost:3040/products/boston-round-30ml-clear-20-400-rollon?sku=GB-BSR-CLR-30ML-MRO-MSLV&assetPreview=boston",
+          "title": "30 ml Clear Boston Round Roll-On Bottle - Matte Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/5281a79a8bb61fe83fcd82fa1da127db364656b27cbf86f6a020abdeef9ff93c.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Shiny Silver",
+          "sku": "GBBstn1ozMtlRollonShnSl",
+          "url": "http://localhost:3040/products/boston-round-30ml-clear-20-400-rollon?sku=GB-BSR-CLR-30ML-MRO-SSLV&assetPreview=boston",
+          "title": "30 ml Clear Boston Round Roll-On Bottle - Shiny Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonShnSl/a8f0f09c4926ac026b2859500fd3342e4c60c9c90d9482e21995edcad79a8b94.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Matte Black",
+          "sku": "GBBstn1ozMtlRollonMattBlk",
+          "url": "http://localhost:3040/products/boston-round-30ml-clear-20-400-rollon?sku=GB-BSR-CLR-30ML-MRO-MBLK&assetPreview=boston",
+          "title": "30 ml Clear Boston Round Roll-On Bottle - Matte Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/4d6a124492e706bb5ac125cc5878657b30d408e05f06a6faac0ef920cbb76d61.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Gold",
+          "sku": "GBBstn1ozMtlRollonGl",
+          "url": "http://localhost:3040/products/boston-round-30ml-clear-20-400-rollon?sku=GB-BSR-CLR-30ML-MRO-GLD&assetPreview=boston",
+          "title": "30 ml Clear Boston Round Roll-On Bottle - Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/e957b986e6a00483eab649a0b78049f95d2b7c160f0956b49b70b8c35a67fbd5.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Matte Gold",
+          "sku": "GBBstn1ozMtlRollonMattGl",
+          "url": "http://localhost:3040/products/boston-round-30ml-clear-20-400-rollon?sku=GB-BSR-CLR-30ML-MRO-MGLD&assetPreview=boston",
+          "title": "30 ml Clear Boston Round Roll-On Bottle - Matte Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/2b7b878aeccf671fc969db6487739f54bc5427ba2e6251031c8a09f571f9a6ea.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Black",
+          "sku": "GBBstn1ozMtlRollonBlk",
+          "url": "http://localhost:3040/products/boston-round-30ml-clear-20-400-rollon?sku=GB-BSR-CLR-30ML-MRL-BLK&assetPreview=boston",
+          "title": "30 ml Clear Boston Round Roll-On Bottle - Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonBlk/3d22572a0804b0b8862a65d67468b6ccb36d7c765b0d36d26d832f908146726c.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Shiny Black",
+          "sku": "GBBstn1ozRollonShBlk",
+          "url": "http://localhost:3040/products/boston-round-30ml-clear-20-400-rollon?sku=GB-BSR-CLR-30ML-RBL-SBLK&assetPreview=boston",
+          "title": "30 ml Clear Boston Round Roll-On Bottle - Shiny Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/7a99f7eb8222325c93d27e0bce026ec7d7e665f9ea9896a7be8f208e85b0db36.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Shiny Gold",
+          "sku": "GBBstn1ozRollonShGl",
+          "url": "http://localhost:3040/products/boston-round-30ml-clear-20-400-rollon?sku=GB-BSR-CLR-30ML-RBL-SGLD&assetPreview=boston",
+          "title": "30 ml Clear Boston Round Roll-On Bottle - Shiny Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/e957b986e6a00483eab649a0b78049f95d2b7c160f0956b49b70b8c35a67fbd5.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Matte Silver",
+          "sku": "GBBstn1ozRollonMattSl",
+          "url": "http://localhost:3040/products/boston-round-30ml-clear-20-400-rollon?sku=GB-BSR-CLR-30ML-RBL-MSLV&assetPreview=boston",
+          "title": "30 ml Clear Boston Round Roll-On Bottle - Matte Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/5281a79a8bb61fe83fcd82fa1da127db364656b27cbf86f6a020abdeef9ff93c.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Shiny Silver",
+          "sku": "GBBstn1ozRollonShnSl",
+          "url": "http://localhost:3040/products/boston-round-30ml-clear-20-400-rollon?sku=GB-BSR-CLR-30ML-RBL-SSLV&assetPreview=boston",
+          "title": "30 ml Clear Boston Round Roll-On Bottle - Shiny Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/59edd5501b3980e07249e486586a3772e97f8ee17ba2251ac88c6a166be44674.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Matte Gold",
+          "sku": "GBBstn1ozRollonMattGl",
+          "url": "http://localhost:3040/products/boston-round-30ml-clear-20-400-rollon?sku=GB-BSR-CLR-30ML-RBL-MGLD&assetPreview=boston",
+          "title": "30 ml Clear Boston Round Roll-On Bottle - Matte Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/2b7b878aeccf671fc969db6487739f54bc5427ba2e6251031c8a09f571f9a6ea.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Matte Black",
+          "sku": "GBBstn1ozRollonMattBlk",
+          "url": "http://localhost:3040/products/boston-round-30ml-clear-20-400-rollon?sku=GB-BSR-CLR-30ML-RBL-MBLK&assetPreview=boston",
+          "title": "30 ml Clear Boston Round Roll-On Bottle - Matte Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/4d6a124492e706bb5ac125cc5878657b30d408e05f06a6faac0ef920cbb76d61.webp",
+              "loaded": true
+            }
+          ]
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "slug": "boston-round-60ml-clear-20-400-rollon",
+      "capacityMl": 60,
+      "color": "Clear",
+      "variants": [
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Shiny Gold",
+          "sku": "GBBstn2ozMtlRollGl",
+          "url": "http://localhost:3040/products/boston-round-60ml-clear-20-400-rollon?sku=GB-BSR-CLR-60ML-MRL-SGLD&assetPreview=boston",
+          "title": "60 ml Clear Boston Round Roll-On Bottle - Shiny Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/b94f7cd59d80f3030ece72fa40f1488aaf1f693159d2494db56266ef785fdc7a.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Matte Black",
+          "sku": "GBBstn2ozMtlRollMattBlk",
+          "url": "http://localhost:3040/products/boston-round-60ml-clear-20-400-rollon?sku=GB-BSR-CLR-60ML-MRL-MBLK&assetPreview=boston",
+          "title": "60 ml Clear Boston Round Roll-On Bottle - Matte Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/556b0172825f4f47ab1e50094988da9298509aa23bc3c0656cc3195b1a206bb9.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Matte Gold",
+          "sku": "GBBstn2ozMtlRollMattGl",
+          "url": "http://localhost:3040/products/boston-round-60ml-clear-20-400-rollon?sku=GB-BSR-CLR-60ML-MRL-MGLD&assetPreview=boston",
+          "title": "60 ml Clear Boston Round Roll-On Bottle - Matte Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/2b3a4ce3bda89464e4afdc97a2a39296da62eefb69f4438afc68e538e5e7397d.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Matte Silver",
+          "sku": "GBBstn2ozMtlRollMattSl",
+          "url": "http://localhost:3040/products/boston-round-60ml-clear-20-400-rollon?sku=GB-BSR-CLR-60ML-MRL-MSLV&assetPreview=boston",
+          "title": "60 ml Clear Boston Round Roll-On Bottle - Matte Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/de0d35a247be2fd43524796e8bde18fd33b5f5852a78de32d6c582d3a470325f.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Shiny Silver",
+          "sku": "GBBstn2ozMtlRollShnSl",
+          "url": "http://localhost:3040/products/boston-round-60ml-clear-20-400-rollon?sku=GB-BSR-CLR-60ML-MRL-SSLV&assetPreview=boston",
+          "title": "60 ml Clear Boston Round Roll-On Bottle - Shiny Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/123ba06d412f58b56b9dba23f02cebbba5869b0b61dbaa46287d8aded84b700f.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Black",
+          "sku": "GBBstn2ozMtlRollBlk",
+          "url": "http://localhost:3040/products/boston-round-60ml-clear-20-400-rollon?sku=GB-BSR-CLR-60ML-MRL-BLK&assetPreview=boston",
+          "title": "60 ml Clear Boston Round Roll-On Bottle - Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/d5450dc686026312af4e70f8cb1174d70bff2e31b615f6fceeb2870ce5056244.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Shiny Black",
+          "sku": "GBBstn2ozRollShnBlk",
+          "url": "http://localhost:3040/products/boston-round-60ml-clear-20-400-rollon?sku=GB-BSR-CLR-60ML-RBL-SBLK&assetPreview=boston",
+          "title": "60 ml Clear Boston Round Roll-On Bottle - Shiny Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/d5450dc686026312af4e70f8cb1174d70bff2e31b615f6fceeb2870ce5056244.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Matte Gold",
+          "sku": "GBBstn2ozRollonMattGl",
+          "url": "http://localhost:3040/products/boston-round-60ml-clear-20-400-rollon?sku=GB-BSR-CLR-60ML-RBL-MGLD&assetPreview=boston",
+          "title": "60 ml Clear Boston Round Roll-On Bottle - Matte Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/2b3a4ce3bda89464e4afdc97a2a39296da62eefb69f4438afc68e538e5e7397d.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Matte Black",
+          "sku": "GBBstn2ozRollMattBlk",
+          "url": "http://localhost:3040/products/boston-round-60ml-clear-20-400-rollon?sku=GB-BSR-CLR-60ML-RBL-MBLK&assetPreview=boston",
+          "title": "60 ml Clear Boston Round Roll-On Bottle - Matte Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/556b0172825f4f47ab1e50094988da9298509aa23bc3c0656cc3195b1a206bb9.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Matte Silver",
+          "sku": "GBBstn2ozRollMattSl",
+          "url": "http://localhost:3040/products/boston-round-60ml-clear-20-400-rollon?sku=GB-BSR-CLR-60ML-RBL-MSLV&assetPreview=boston",
+          "title": "60 ml Clear Boston Round Roll-On Bottle - Matte Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/de0d35a247be2fd43524796e8bde18fd33b5f5852a78de32d6c582d3a470325f.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Shiny Silver",
+          "sku": "GBBstn2ozRollShnSl",
+          "url": "http://localhost:3040/products/boston-round-60ml-clear-20-400-rollon?sku=GB-BSR-CLR-60ML-RON-SSLV&assetPreview=boston",
+          "title": "60 ml Clear Boston Round Roll-On Bottle - Shiny Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/7e108a83cd184a7da117d1bbeff18193606bb17d87a4bb4cf09f25f797d3d5a8.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Shiny Gold",
+          "sku": "GBBstn2ozRollGl",
+          "url": "http://localhost:3040/products/boston-round-60ml-clear-20-400-rollon?sku=GB-BSR-CLR-60ML-RBL-SGLD&assetPreview=boston",
+          "title": "60 ml Clear Boston Round Roll-On Bottle - Shiny Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/ccefab3aa81950170034e50cf441e050470f246907ed85461b5e435e9e71f850.webp",
+              "loaded": true
+            }
+          ]
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "slug": "boston-round-30ml-amber-20-400-rollon",
+      "capacityMl": 30,
+      "color": "Amber",
+      "variants": [
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Matte Black",
+          "sku": "GBBstnAmb1ozMtlRollonMattBlk",
+          "url": "http://localhost:3040/products/boston-round-30ml-amber-20-400-rollon?sku=GB-BSR-AMB-30ML-MRL-MBLK&assetPreview=boston",
+          "title": "30 ml Amber Boston Round Roll-On Bottle - Matte Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattBlk/3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Matte Gold",
+          "sku": "GBBstnAmb1ozMtlRollonMattGl",
+          "url": "http://localhost:3040/products/boston-round-30ml-amber-20-400-rollon?sku=GB-BSR-AMB-30ML-MRL-MGLD&assetPreview=boston",
+          "title": "30 ml Amber Boston Round Roll-On Bottle - Matte Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattGl/a77ff9999dea782f13ce14c1479116b296da4a5196cc697a4d83eed6ab7c6c3d.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Matte Silver",
+          "sku": "GBBstnAmb1ozMtlRollonMattSl",
+          "url": "http://localhost:3040/products/boston-round-30ml-amber-20-400-rollon?sku=GB-BSR-AMB-30ML-MRL-MSLV&assetPreview=boston",
+          "title": "30 ml Amber Boston Round Roll-On Bottle - Matte Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattSl/1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Shiny Silver",
+          "sku": "GBBstnAmb1ozMtlRollonShnSl",
+          "url": "http://localhost:3040/products/boston-round-30ml-amber-20-400-rollon?sku=GB-BSR-AMB-30ML-MRL-SSLV&assetPreview=boston",
+          "title": "30 ml Amber Boston Round Roll-On Bottle - Shiny Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/fe0d86ec7dd51a6c6079d113d3879dab56f15493f033c3d2d270dfe49dd1acee.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Shiny Black",
+          "sku": "GBBstnAmb1ozMtlRollonShnBlk",
+          "url": "http://localhost:3040/products/boston-round-30ml-amber-20-400-rollon?sku=GB-BSR-AMB-30ML-MRL-SBLK&assetPreview=boston",
+          "title": "30 ml Amber Boston Round Roll-On Bottle - Shiny Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonShnBlk/6cedf7227ec064de77bba2cf25d6981785918fa7490775fb15ef195d4efca6db.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Gold",
+          "sku": "GBBstnAmb1ozMtlRollonGl",
+          "url": "http://localhost:3040/products/boston-round-30ml-amber-20-400-rollon?sku=GB-BSR-AMB-30ML-MRO-GLD&assetPreview=boston",
+          "title": "30 ml Amber Boston Round Roll-On Bottle - Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/9be7c2b1ee158ec85c61382679be654f9664b42672720d029af46019d768fc1d.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Matte Gold",
+          "sku": "GBBstnAmb1ozRollonMattGl",
+          "url": "http://localhost:3040/products/boston-round-30ml-amber-20-400-rollon?sku=GB-BSR-AMB-30ML-RON-MGLD&assetPreview=boston",
+          "title": "30 ml Amber Boston Round Roll-On Bottle - Matte Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattGl/ac72badff5c321207c6fe8e71be17aab160f2eda6427c35bef927d83cb11ef81.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Matte Black",
+          "sku": "GBBstnAmb1ozRollonMattBlk",
+          "url": "http://localhost:3040/products/boston-round-30ml-amber-20-400-rollon?sku=GB-BSR-AMB-30ML-RON-MBLK&assetPreview=boston",
+          "title": "30 ml Amber Boston Round Roll-On Bottle - Matte Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattBlk/3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Matte Silver",
+          "sku": "GBBstnAmb1ozRollonMattSl",
+          "url": "http://localhost:3040/products/boston-round-30ml-amber-20-400-rollon?sku=GB-BSR-AMB-30ML-RON-MSLV&assetPreview=boston",
+          "title": "30 ml Amber Boston Round Roll-On Bottle - Matte Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattSl/1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Shiny Silver",
+          "sku": "GBBstnAmb1ozRollonShnSl",
+          "url": "http://localhost:3040/products/boston-round-30ml-amber-20-400-rollon?sku=GB-BSR-AMB-30ML-RON-SSLV&assetPreview=boston",
+          "title": "30 ml Amber Boston Round Roll-On Bottle - Shiny Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonShnSl/34d0177d3ffc48dcc74a840d44ad76ede6c8f1a8515d00bca08827a8485162ec.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Shiny Black",
+          "sku": "GBBstnAmb1ozRollonShnBlk",
+          "url": "http://localhost:3040/products/boston-round-30ml-amber-20-400-rollon?sku=GB-BSR-AMB-30ML-RBL-SBLK&assetPreview=boston",
+          "title": "30 ml Amber Boston Round Roll-On Bottle - Shiny Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonShnBlk/184424a4073aefc26b5c36e886c398d69e529eae868913beab450f2c97384e17.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Gold",
+          "sku": "GBBstnAmb1ozRollonGl",
+          "url": "http://localhost:3040/products/boston-round-30ml-amber-20-400-rollon?sku=GB-BSR-AMB-30ML-RON-GLD&assetPreview=boston",
+          "title": "30 ml Amber Boston Round Roll-On Bottle - Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonGl/eceb3b6fd028736f77be0686027e7483266579f6080ab8fcf27b12cb0e513176.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "slug": "boston-round-60ml-amber-20-400-rollon",
+      "capacityMl": 60,
+      "color": "Amber",
+      "variants": [
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Matte Black",
+          "sku": "GBBstnAmb2ozMtlRollonMattBlk",
+          "url": "http://localhost:3040/products/boston-round-60ml-amber-20-400-rollon?sku=GB-BSR-AMB-60ML-MRL-MBLK&assetPreview=boston",
+          "title": "60 ml Amber Boston Round Roll-On Bottle - Matte Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonMattBlk/2654ed988127e1128bab75c76a1aa11375679bc534cab08a76913e7aa89bb608.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Matte Gold",
+          "sku": "GBBstnAmb2ozMtlRollonMattGl",
+          "url": "http://localhost:3040/products/boston-round-60ml-amber-20-400-rollon?sku=GB-BSR-AMB-60ML-MRL-MGLD&assetPreview=boston",
+          "title": "60 ml Amber Boston Round Roll-On Bottle - Matte Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonMattGl/c8a7aafafbc7dec2bffc12c818df30e056391bb6844296d8747d91401bfca490.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Matte Silver",
+          "sku": "GBBstnAmb2ozMtlRollonMattSl",
+          "url": "http://localhost:3040/products/boston-round-60ml-amber-20-400-rollon?sku=GB-BSR-AMB-60ML-MRL-MSLV&assetPreview=boston",
+          "title": "60 ml Amber Boston Round Roll-On Bottle - Matte Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/acc2e36c3f4a65710bf14f448bb6ef741105e2ca8bb4a1f723a6649aa3b51eac.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Shiny Silver",
+          "sku": "GBBstnAmb2ozMtlRollonShnSl",
+          "url": "http://localhost:3040/products/boston-round-60ml-amber-20-400-rollon?sku=GB-BSR-AMB-60ML-MRL-SSLV&assetPreview=boston",
+          "title": "60 ml Amber Boston Round Roll-On Bottle - Shiny Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/097ba5812fc7c489abb2cba80c3c6c81bf9a2976330aef735eb96c7ed50ffb5e.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Shiny Gold",
+          "sku": "GBBstnAmb2ozMtlRollonGl",
+          "url": "http://localhost:3040/products/boston-round-60ml-amber-20-400-rollon?sku=GB-BSR-AMB-60ML-MRL-SGLD&assetPreview=boston",
+          "title": "60 ml Amber Boston Round Roll-On Bottle - Shiny Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonGl/b0a50b890de4b04bfb422c3e8e1e54ca9df9af049786c62b20ed36327453251d.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Matte Gold",
+          "sku": "GBBstnAmb2ozRollonMattGl",
+          "url": "http://localhost:3040/products/boston-round-60ml-amber-20-400-rollon?sku=GB-BSR-AMB-60ML-RON-MGLD&assetPreview=boston",
+          "title": "60 ml Amber Boston Round Roll-On Bottle - Matte Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonMattGl/ed9c53ac7231e87523a714f6540623a4f5b15d4ee2b210ff2657082e1db1f8d3.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Matte Black",
+          "sku": "GBBstnAmb2ozRollonMattBlk",
+          "url": "http://localhost:3040/products/boston-round-60ml-amber-20-400-rollon?sku=GB-BSR-AMB-60ML-RON-MBLK&assetPreview=boston",
+          "title": "60 ml Amber Boston Round Roll-On Bottle - Matte Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/e32df289ad8ac2d971526288605620a372320799ecf2e3ef38375fab89f4c867.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Matte Silver",
+          "sku": "GBBstnAmb2ozRollonMattSl",
+          "url": "http://localhost:3040/products/boston-round-60ml-amber-20-400-rollon?sku=GB-BSR-AMB-60ML-RON-MSLV&assetPreview=boston",
+          "title": "60 ml Amber Boston Round Roll-On Bottle - Matte Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonMattSl/4e9f63b507952b493213212f434c614b7db1c4cb9a073035be4ad791b664ac8d.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Shiny Silver",
+          "sku": "GBBstnAmb2ozRollonShnSl",
+          "url": "http://localhost:3040/products/boston-round-60ml-amber-20-400-rollon?sku=GB-BSR-AMB-60ML-RON-SSLV&assetPreview=boston",
+          "title": "60 ml Amber Boston Round Roll-On Bottle - Shiny Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonShnSl/2e906a46a61ff78b9d522587672ea08d955051f355d0cac906c800ecf89968a1.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Shiny Black",
+          "sku": "GBBstnAmb2ozRollonShnBlk",
+          "url": "http://localhost:3040/products/boston-round-60ml-amber-20-400-rollon?sku=GB-BSR-AMB-60ML-RBL-SBLK&assetPreview=boston",
+          "title": "60 ml Amber Boston Round Roll-On Bottle - Shiny Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/5180f59e88271b954adefca18a2800dac850ea4bf4dbea557fb8c07c09190476.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Gold",
+          "sku": "GBBstnAmb2ozRollonGl",
+          "url": "http://localhost:3040/products/boston-round-60ml-amber-20-400-rollon?sku=GB-BSR-AMB-60ML-RON-GLD&assetPreview=boston",
+          "title": "60 ml Amber Boston Round Roll-On Bottle - Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/d4f6a8359866d01a0ebcbfaf31bd67959df9b0636058a060215f57927057cabc.webp",
+              "loaded": true
+            }
+          ]
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "slug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "capacityMl": 30,
+      "color": "Cobalt Blue",
+      "variants": [
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Matte Silver",
+          "sku": "GBBstnBlu1ozMtlRollonMattSl",
+          "url": "http://localhost:3040/products/boston-round-30ml-cobalt-blue-20-400-rollon?sku=GB-BSR-BLU-30ML-MRO-MSLV&assetPreview=boston",
+          "title": "30 ml Cobalt Blue Boston Round Roll-On Bottle - Matte Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/a7aca4642d16d4db5d0609f75da1c98ebe2c385d80d6bb24407b616ffb9bc450.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Shiny Silver",
+          "sku": "GBBstnBlu1ozMtlRollonShnSl",
+          "url": "http://localhost:3040/products/boston-round-30ml-cobalt-blue-20-400-rollon?sku=GB-BSR-BLU-30ML-MRO-SSLV&assetPreview=boston",
+          "title": "30 ml Cobalt Blue Boston Round Roll-On Bottle - Shiny Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/f2abb0662a7bb737fafba90a39c97c9b1f5c8909b3e735cc4f14267982f44f23.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Matte Black",
+          "sku": "GBBstnBlu1ozMtlRollonMattBlk",
+          "url": "http://localhost:3040/products/boston-round-30ml-cobalt-blue-20-400-rollon?sku=GB-BSR-BLU-30ML-MRO-MBLK&assetPreview=boston",
+          "title": "30 ml Cobalt Blue Boston Round Roll-On Bottle - Matte Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonMattBlk/4d7b2f05ae2ce258f757e2572f02f1cc9535cbcf3971f1f4197c2e55082fa31e.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Matte Gold",
+          "sku": "GBBstnBlu1ozMtlRollonMattGl",
+          "url": "http://localhost:3040/products/boston-round-30ml-cobalt-blue-20-400-rollon?sku=GB-BSR-BLU-30ML-MRO-MGLD&assetPreview=boston",
+          "title": "30 ml Cobalt Blue Boston Round Roll-On Bottle - Matte Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonMattGl/4799515eec5ada9ed18e8de3eb70808247e5b9272c07e763a1af1e5253c1c5ef.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Gold",
+          "sku": "GBBstnBlu1ozMtlRollonGl",
+          "url": "http://localhost:3040/products/boston-round-30ml-cobalt-blue-20-400-rollon?sku=GB-BSR-BLU-30ML-MRO-GLD&assetPreview=boston",
+          "title": "30 ml Cobalt Blue Boston Round Roll-On Bottle - Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/f98a9eead00110061c6f932e12e4f8c4e2ae86b546ed6fbab751661e1dbd481e.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Matte Black",
+          "sku": "GBBstnBlu1ozRollonMattBlk",
+          "url": "http://localhost:3040/products/boston-round-30ml-cobalt-blue-20-400-rollon?sku=GB-BSR-BLU-30ML-RON-MBLK&assetPreview=boston",
+          "title": "30 ml Cobalt Blue Boston Round Roll-On Bottle - Matte Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/887194d0a724313d926749c3f9a28155f0027f980a929d6ca60d61d0a8b935a9.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Matte Silver",
+          "sku": "GBBstnBlu1ozRollonMattSl",
+          "url": "http://localhost:3040/products/boston-round-30ml-cobalt-blue-20-400-rollon?sku=GB-BSR-CBL-30ML-RBL-MSLV&assetPreview=boston",
+          "title": "30 ml Cobalt Blue Boston Round Roll-On Bottle - Matte Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/a7aca4642d16d4db5d0609f75da1c98ebe2c385d80d6bb24407b616ffb9bc450.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Shiny Silver",
+          "sku": "GBBstnBlu1ozRollonShnSl",
+          "url": "http://localhost:3040/products/boston-round-30ml-cobalt-blue-20-400-rollon?sku=GB-BSR-BLU-30ML-RON-SSLV&assetPreview=boston",
+          "title": "30 ml Cobalt Blue Boston Round Roll-On Bottle - Shiny Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonShnSl/7b7a7e080c86a52ba6d1ec7084b8da4bc7d94dcc924e70502cd84cb4237d48e8.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Matte Gold",
+          "sku": "GBBstnBlu1ozRollonMattGl",
+          "url": "http://localhost:3040/products/boston-round-30ml-cobalt-blue-20-400-rollon?sku=GB-BSR-BLU-30ML-RON-MGLD&assetPreview=boston",
+          "title": "30 ml Cobalt Blue Boston Round Roll-On Bottle - Matte Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "http://localhost:3040/images/boston-plate-candidates/839514778eae32f72a03d372211af2d48058b10e435d3cc7c1db95cd0ff3249b.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Shiny Black",
+          "sku": "GBBstnBlu1ozRollonShnBlk",
+          "url": "http://localhost:3040/products/boston-round-30ml-cobalt-blue-20-400-rollon?sku=GB-BSR-CBL-30ML-RBL-SBLK&assetPreview=boston",
+          "title": "30 ml Cobalt Blue Boston Round Roll-On Bottle - Shiny Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonShnBlk/2ec2df24211a89f4d516f16784c1c6f7dae3ebd74883576106d2c437392332ba.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Gold",
+          "sku": "GBBstnBlu1ozRollonGl",
+          "url": "http://localhost:3040/products/boston-round-30ml-cobalt-blue-20-400-rollon?sku=GB-BSR-BLU-30ML-RON-GLD&assetPreview=boston",
+          "title": "30 ml Cobalt Blue Boston Round Roll-On Bottle - Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonGl/b07a4f5def35b97f28e5a5ba6ae3ede6207e742abfc510635cb04cb90b296466.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "slug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "capacityMl": 60,
+      "color": "Cobalt Blue",
+      "variants": [
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Matte Black",
+          "sku": "GBBstnBlu2ozMtlRollonMattBlk",
+          "url": "http://localhost:3040/products/boston-round-60ml-cobalt-blue-20-400-rollon?sku=GB-BSR-BLU-60ML-MRO-MBLK&assetPreview=boston",
+          "title": "60 ml Cobalt Blue Boston Round Roll-On Bottle - Matte Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonMattBlk/f1ba080a58803122ec1425385e57e3a04cd169c02f359c4a2af3c3087f10b586.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Matte Gold",
+          "sku": "GBBstnBlu2ozMtlRollonMattGl",
+          "url": "http://localhost:3040/products/boston-round-60ml-cobalt-blue-20-400-rollon?sku=GB-BSR-CBL-60ML-MRL-MGLD&assetPreview=boston",
+          "title": "60 ml Cobalt Blue Boston Round Roll-On Bottle - Matte Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonMattGl/d83a9e836595654e7bf688084ea51ba1fdc60a3aa6c0d7452c8692977d73ddda.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Matte Silver",
+          "sku": "GBBstnBlu2ozMtlRollonMattSl",
+          "url": "http://localhost:3040/products/boston-round-60ml-cobalt-blue-20-400-rollon?sku=GB-BSR-BLU-60ML-MRO-MSLV&assetPreview=boston",
+          "title": "60 ml Cobalt Blue Boston Round Roll-On Bottle - Matte Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonMattSl/beab00f3d22f82be79f68a42b3623890b557e197830192d788b9ef4cd542fd06.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Shiny Silver",
+          "sku": "GBBstnBlu2ozMtlRollonShnSl",
+          "url": "http://localhost:3040/products/boston-round-60ml-cobalt-blue-20-400-rollon?sku=GB-BSR-BLU-60ML-MRO-SSLV&assetPreview=boston",
+          "title": "60 ml Cobalt Blue Boston Round Roll-On Bottle - Shiny Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonShnSl/be80293d74890bba010de8184596facd8f5b8751508c55f71b47409e2e40f50f.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Metal RollerSmooth, cooling glide",
+          "finish": "Shiny Gold",
+          "sku": "GBBstnBlu2ozMtlRollonGl",
+          "url": "http://localhost:3040/products/boston-round-60ml-cobalt-blue-20-400-rollon?sku=GB-BSR-CBL-60ML-MRL-SGLD&assetPreview=boston",
+          "title": "60 ml Cobalt Blue Boston Round Roll-On Bottle - Shiny Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonGl/0f6f2a5c094212425fe2345870ae3c01918105e435d6d0e89f429cc492af1c2d.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Matte Gold",
+          "sku": "GBBstnBlu2ozRollonMattGl",
+          "url": "http://localhost:3040/products/boston-round-60ml-cobalt-blue-20-400-rollon?sku=GB-BSR-BLU-60ML-RON-MGLD&assetPreview=boston",
+          "title": "60 ml Cobalt Blue Boston Round Roll-On Bottle - Matte Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonMattGl/34c5143261d9b04e268979902c6256edff60db466a6b4aadd108123d43d41186.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Matte Black",
+          "sku": "GBBstnBlu2ozRollonMattBlk",
+          "url": "http://localhost:3040/products/boston-round-60ml-cobalt-blue-20-400-rollon?sku=GB-BSR-BLU-60ML-RON-MBLK&assetPreview=boston",
+          "title": "60 ml Cobalt Blue Boston Round Roll-On Bottle - Matte Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonMattBlk/f3dfded19723ede66e77bb85f82fad314e3e20495a03c217e89ce8e2787321c6.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Matte Silver",
+          "sku": "GBBstnBlu2ozRollonMattSl",
+          "url": "http://localhost:3040/products/boston-round-60ml-cobalt-blue-20-400-rollon?sku=GB-BSR-BLU-60ML-RON-MSLV&assetPreview=boston",
+          "title": "60 ml Cobalt Blue Boston Round Roll-On Bottle - Matte Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonMattSl/84a9aa4e8eb1b7ac5ebe86698b59cb55ccc5517c0321f227157f665bf72d22fc.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Shiny Silver",
+          "sku": "GBBstnBlu2ozRollonShnSl",
+          "url": "http://localhost:3040/products/boston-round-60ml-cobalt-blue-20-400-rollon?sku=GB-BSR-BLU-60ML-RON-SSLV&assetPreview=boston",
+          "title": "60 ml Cobalt Blue Boston Round Roll-On Bottle - Shiny Silver Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonShnSl/a4e518ad8379df7282ed905b967987728a44e01122ac5464cce54f42d8c8544d.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Shiny Black",
+          "sku": "GBBstnBlu2ozRollonShnBlk",
+          "url": "http://localhost:3040/products/boston-round-60ml-cobalt-blue-20-400-rollon?sku=GB-BSR-CBL-60ML-RBL-SBLK&assetPreview=boston",
+          "title": "60 ml Cobalt Blue Boston Round Roll-On Bottle - Shiny Black Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonShnBlk/4214684baa019c36b5d7311aaa213eff2ef19f3773a8418bab2d973822cfd78c.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        },
+        {
+          "material": "Plastic RollerLighter, lower cost",
+          "finish": "Gold",
+          "sku": "GBBstnBlu2ozRollonGl",
+          "url": "http://localhost:3040/products/boston-round-60ml-cobalt-blue-20-400-rollon?sku=GB-BSR-BLU-60ML-RON-GLD&assetPreview=boston",
+          "title": "60 ml Cobalt Blue Boston Round Roll-On Bottle - Gold Cap",
+          "overflow": false,
+          "images": [
+            {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonGl/adf9e5d9f1d207eaaee94cf4054d555f97a8c05666dd545f02e29ce3cf482384.front-on-1000x1100.webp",
+              "loaded": true
+            }
+          ]
+        }
+      ],
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "approvalWrites": 0
+}

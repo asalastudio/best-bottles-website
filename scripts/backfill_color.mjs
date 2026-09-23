@@ -173,8 +173,8 @@ function inferApplicator(text) {
   if (!text) return null;
   const lower = text.toLowerCase();
   if (lower.includes("vintage bulb sprayer") || lower.includes("antique sprayer")) {
-    if (lower.includes("tassel")) return "antiquespray-tassel";
-    return "antiquespray";
+    if (lower.includes("tassel")) return "vintagestyle-tassel";
+    return "vintagestyle";
   }
   if (lower.includes("fine mist sprayer") || lower.includes("sprayer") || lower.includes("spray")) {
     return "finemist";
