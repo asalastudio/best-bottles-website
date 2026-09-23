@@ -218,8 +218,12 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
     }
     function continueBuild() { goTo(Math.min(3, step + 1)); }
 
-    const action = step === 0 && !body ? <p className={styles.purchaseHint}>Choose a bottle above to begin.</p> : step < 3 ? <button key={`${step}-${step === 0 ? color : ""}`} className={`${styles.primary} ${fitmentReady ? styles.nextStepCue : ""}`} disabled={!canContinue || pending} onClick={continueBuild}>
-            {step === 0 ? "Choose Fitment" : step === 1 ? "Choose Appearance" : "Review Your Bottle"} <ArrowRight size={17} />
+    const nextActionLabel = step === 0 ? "Choose Your Fitment"
+        : step === 1 ? /Roller|Cap|Reducer/.test(fitment ?? "") ? "Choose Your Caps"
+            : fitment ? `Choose Your ${finishLabel.replace(/\b\w/g, letter => letter.toUpperCase())}` : "Choose Your Finish"
+        : "Review Your Bottle";
+    const action = step < 3 ? <button key={`${step}-${step === 0 ? color : ""}`} className={`${styles.primary} ${fitmentReady ? styles.nextStepCue : ""}`} disabled={!canContinue || pending} onClick={continueBuild}>
+            {nextActionLabel} <ArrowRight size={17} />
         </button> : <button className={styles.primary} disabled={!order.canAdd || adding || !isCartHydrated} onClick={addToCart}>
             {adding ? "Checking your bottle…" : "Add to Cart"} {!adding && <ShoppingBag size={17} />}
         </button>;
@@ -284,14 +288,14 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
                         <div className={styles.colorThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} thumbnail placeholder /></div><strong>{c}</strong>
                     </Option>; })}
                 </div></div>}
-                {step === 0 && body && <div className={styles.nextStepHint} role="status">{fitmentReady && <><CheckCircle size={17} /><span>{current.colors.length === 1 ? <>{color} glass, the only glass for this bottle. Select <strong>Choose Fitment</strong> to continue.</> : <>Your bottle is ready. Select <strong>Choose Fitment</strong> to continue.</>}</span></>}</div>}
+                {step === 0 && body && <div className={styles.nextStepHint} role="status">{fitmentReady && <><CheckCircle size={17} /><span>{current.colors.length === 1 ? <>{color} glass, the only glass for this bottle. Select <strong>Choose Your Fitment</strong> to continue.</> : <>Your bottle is ready. Select <strong>Choose Your Fitment</strong> to continue.</>}</span></>}</div>}
                 {(step === 1 || step === 2) && <>
                     {step === 1 && <div className={styles.compatibilityContext}><ShieldCheck size={18} /><span><strong>{body?.capacityMl} ml {body?.family} · {color}</strong><span>Neck: {body?.neck} · Compatible components below</span></span></div>}
                     {step === 1 ? <div className={styles.fitmentGrid}>{current.fitments.map(f => {
                         const availableCount = current.colored.filter(c => c.fitment === f).length;
                         const unavailableCount = body?.unavailableFinishes?.filter(c => c.color === color && c.fitment === f).length ?? 0;
                         const count = availableCount + unavailableCount;
-                        return <Option key={f} label={displayApplicatorName(f)} description={fitmentChoiceHints[f] ?? fitmentDescriptions[f]} selected={fitment === f} onClick={() => { update({ fitment: f, closure: null }); setShowCover(false); goTo(2); }}>
+                        return <Option key={f} label={displayApplicatorName(f)} description={fitmentChoiceHints[f] ?? fitmentDescriptions[f]} selected={fitment === f} onClick={() => { update({ fitment: f, closure: null }); setShowCover(false); }}>
                             <div className={styles.componentThumb}><FitmentIllustration fitment={f} neck={body?.neck} /></div>
                             <strong>{displayApplicatorName(f)}</strong><small>{count} {/(Roller|Cap)/.test(f) ? (count === 1 ? "cap option" : "cap options") : (count === 1 ? "finish" : "finishes")}{unavailableCount > 0 ? ` · ${availableCount} available` : ""}</small>
                         </Option>;
@@ -338,6 +342,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
             </section>
             <aside className={styles.summary} aria-label="Your Build">
                 <div className={styles.summaryHeading}><h2 ref={reviewHeading} tabIndex={-1}>{step === 3 ? "Review your bottle" : "Your Build"}</h2></div>
+                {step < 3 && <div className={styles.summaryNextAction}>{action}</div>}
                 <SummaryLine number={1} label="Bottle" value={body ? `${body.capacityMl} ml ${body.profileLabel}` : null} detail={body ? `${body.neck} neck` : "Start with a bottle shape"} onEdit={() => goTo(0)} />
                 <SummaryLine number={null} label="Glass" value={color} detail="Choose your glass" onEdit={() => goTo(0)} />
                 <SummaryLine number={2} label="Fitment" value={fitment ? displayApplicatorName(fitment) : null} detail="Made to fit your bottle" onEdit={() => goTo(1)} />

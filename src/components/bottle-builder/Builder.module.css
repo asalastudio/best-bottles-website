@@ -82,6 +82,8 @@
 .previewEmpty { flex: 1; display: grid; align-content: center; justify-items: center; gap: 16px; color: var(--quiet); min-height: 420px; font-size: 13px; }
 .summary { position: sticky; top: 126px; padding: 23px 20px 18px; }
 .summaryHeading { display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; }
+.summaryNextAction { margin: 0 0 16px; }
+.summaryNextAction .primary { width: 100%; }
 .summaryHeading h2 { font-family: var(--font-brand); font-size: 28px; line-height: 1.1; letter-spacing: -.025em;text-transform:none;letter-spacing:0}
 .summaryLine { display: flex; align-items: flex-start; gap: 10px; border-top: 1px solid #eeece7; padding: 16px 0; }
 .summaryNumber { margin-top: 1px; flex-shrink: 0; width: 24px; height: 24px; display: grid; place-items: center; border: 1px solid #ddd5c7; border-radius: 50%; color: #9a9387; font-size: 10px; }
