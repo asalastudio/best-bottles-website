@@ -1,6 +1,17 @@
 # Cylinder 9 ml — first CLEAR GLASS still (cloud VM)
 
 Date: 2026-09-24  
+**Product truth (this pilot):** `17-415-NECK-THREAD-MATRIX-2026-09-23.pdf`  
+(source check 23 Sep 2026 — Jordan’s component pack). First glass target is
+**CLEAR 9 mL Cylinder, 70 mm body, 17-415** (SKU example
+`GBCyl9MtlRollBlkDot`). Amber / Cobalt (70 mm) and Frosted / Swirl (74 mm)
+share the finish; **not this pass**.
+
+Count rule on this neck: 10 roll-on caps × 2 roller materials + 6 sprayers +
+3 pumps = **29 options per glass finish**. Assembly: 17-415 neck → ROLLER
+(insert + outer cap) **or** SPRAY **or** PUMP. Photos are often cap-off
+source plates with the roller insert still seated.
+
 Geometry: catalog body `Cyl-round-17-415-70x20` (straight 70×Ø20, 17-415)  
 **Not** the wavy `clear.jpg` photo-cutout rebuild.
 
@@ -72,5 +83,7 @@ Blender 5.2.0 LTS was still present from the prior install (Berkeley tarball).
 | `clear-glass/cyl9_clay.png` | Same camera, clay |
 | `clear-glass/cyl9_clay_vs_glass.png` | Pair |
 | `clear-glass/cyl9_clear_glass_solid.png` | Solid shipped GLB (acrylic-rod ceiling) |
+| `clear-glass/cyl9_clear_capoff_insert.png` | Optional: same body + seated metal roller (no outer cap) |
+| `17-415-NECK-THREAD-MATRIX-2026-09-23.pdf` | Authoritative component pack (23 Sep 2026) |
 
 Do **not** merge into `public/models/` or publish as a catalog plate.

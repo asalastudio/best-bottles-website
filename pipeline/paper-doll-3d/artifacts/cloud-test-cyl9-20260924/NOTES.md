@@ -2,8 +2,9 @@
 
 Date: 2026-09-24  
 Host: default Cursor-managed Linux VM (no private Blender worker)  
-Body: Cylinder 9 ml, Ø20 × 70, 17-415  
-SKU example: `GBCyl9MtlRollMattSl` (same body as ledger representative `LBCylAmb9LtnBlk`)
+Body: Cylinder 9 ml, Ø20 × 70, 17-415 — **CLEAR only this pass**  
+SKU example (matrix): `GBCyl9MtlRollBlkDot`  
+Authoritative pack: `17-415-NECK-THREAD-MATRIX-2026-09-23.pdf` (source check 23 Sep 2026)
 
 This folder is a **capability test**, not a catalog/media promotion. Do not
 merge these GLBs into `public/models/`.
