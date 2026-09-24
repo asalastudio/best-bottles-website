@@ -5,9 +5,10 @@ import elegantReleaseRows from "./catalog-hero-elegant-release.json";
 import bostonDivaReleaseRows from "./catalog-hero-boston-diva-release.json";
 import sleekReleaseRows from "./catalog-hero-sleek-release.json";
 import apothecaryReleaseRows from "./catalog-hero-apothecary-release.json";
+import remaining42ReleaseRows from "./catalog-hero-remaining-42-release.json";
 
 export type CatalogHero = Omit<(typeof heroRows)[number], "shopifyVariantId"> & { shopifyVariantId: string | null };
-const completePilotRows = [...pilotRows, ...crePilotRows, ...elegantReleaseRows, ...bostonDivaReleaseRows, ...sleekReleaseRows, ...apothecaryReleaseRows];
+const completePilotRows = [...pilotRows, ...crePilotRows, ...elegantReleaseRows, ...bostonDivaReleaseRows, ...sleekReleaseRows, ...apothecaryReleaseRows, ...remaining42ReleaseRows];
 function activePilotRows(): CatalogHero[] {
     return process.env.NEXT_PUBLIC_CATALOG_HERO_PILOT === "families-2026-09-22"
         ? completePilotRows : pilotRows;
@@ -40,11 +41,12 @@ export function getProductHero(websiteSku?: string | null): CatalogHero | null {
 }
 
 /** Only select an assembly still present in the filtered catalog result. */
-export function getCatalogHero(groupSlug: string, variants: readonly { websiteSku?: string | null }[]): CatalogHero | null {
+export function getCatalogHero(groupSlug: string, variants: readonly { websiteSku?: string | null }[], preferredWebsiteSku?: string | null): CatalogHero | null {
     const resolvedSlug = verifiedGroupAliases[groupSlug] ?? groupSlug;
-    const pilot = isCatalogHeroPilotEnabled() && activePilotRows().find(candidate =>
+    const eligible = isCatalogHeroPilotEnabled() ? activePilotRows().filter(candidate =>
         candidate.groupSlug === resolvedSlug && variants.some(variant => variant.websiteSku === candidate.websiteSku),
-    );
+    ) : [];
+    const pilot = eligible.find(candidate => candidate.websiteSku.toLowerCase() === preferredWebsiteSku?.trim().toLowerCase()) ?? eligible[0];
     if (pilot) return { ...pilot, groupSlug };
     const hero = byGroup.get(resolvedSlug)?.find(candidate =>
         variants.some(variant => variant.websiteSku === candidate.websiteSku),
