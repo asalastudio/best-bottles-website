@@ -5,7 +5,7 @@
     "Boston Round": 29,
     "Diva": 21
   },
-  "catalogEligibleCount": 49,
+  "catalogEligibleCount": 50,
   "newRenders": 47,
   "reusedPilots": 3,
   "canvas": [
@@ -16,7 +16,7 @@
   "published": false,
   "approvalBasis": "User reviewed the complete family sheets and requested committing and locking these results.",
   "measurementUncertainty": "Approximately two 360x396 preview pixels for the new framing measurements. Targets are not a claim of pixel-perfect landmark detection.",
-  "activation": "Existing families-2026-09-22 build flag; excludes the unmapped frosted Diva dropper. No deployment performed.",
+  "activation": "Existing families-2026-09-22 flag; all 50 approved heroes now have verified exact variant mappings. Gold frosted Diva production association repaired 2026-09-23.",
   "rows": [
     {
       "sku": "GBBstnAmb15mlBlkCapSht",
@@ -2038,7 +2038,7 @@
       "capacityMl": 46,
       "material": "Frosted",
       "groupSlug": "diva-46ml-frosted-18-415-dropper",
-      "shopifyVariantId": null,
+      "shopifyVariantId": "gid://shopify/ProductVariant/56214700523812",
       "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDivaFrst46DrpGl.04181608da8a.png",
       "sha256": "04181608da8aeb47289fc66bb727f0f30293240119491e23aa88c012327ef267",
       "canvas": [
@@ -2052,8 +2052,8 @@
       "targetBaseY": 2082,
       "visualDecision": "approved",
       "approvalDate": "2026-09-23",
-      "catalogEligible": false,
-      "publicationHold": "Catalog identity exists, but intake has no Shopify variant ID and no plate/kit. Reconcile the exact SKU association before publication; source artwork is verified.",
+      "catalogEligible": true,
+      "publicationHold": null,
       "reusedPilot": false,
       "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/52. GBDivaFrst46DrpGl.psd",
       "masterSha256": "e0288bda07c634e4ce823bf816ff09124252cd7944c1ece5733c5d670df9acba",
@@ -2080,7 +2080,8 @@
         "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
         "scaleReference": "1f9a4f0b5ea8988084a31940f8e1562d72be2af13a524a62e5402f989d668c48",
         "promptFile": "f86f5959bec118ae62bc83cac0727adb08899b9ecb46c969cd2d7e7341ad6e16"
-      }
+      },
+      "reconciliationDate": "2026-09-23"
     },
     {
       "sku": "GBDivaFrst46RdcrShnGl",

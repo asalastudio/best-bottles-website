@@ -1,0 +1,93 @@
+{
+  "at": "2026-09-23T20:04:39.040Z",
+  "production": "https://precise-raccoon-123.convex.cloud",
+  "shopifyWrites": 0,
+  "rows": [
+    {
+      "websiteSku": "GBDiva46DrpGl",
+      "graceSku": "GB-DVA-CLR-46ML-DRP-GLD",
+      "groupSlug": "diva-46ml-clear-18-415-dropper",
+      "color": "Clear",
+      "capColor": "Gold",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343643205924",
+      "shopifySellable": true,
+      "webPrice1pc": 2.4
+    },
+    {
+      "websiteSku": "GBDiva46DrpCu",
+      "graceSku": "GB-DVA-CLR-46ML-DRP-CPR",
+      "groupSlug": "diva-46ml-clear-18-415-dropper",
+      "color": "Clear",
+      "capColor": "Copper",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343643238692",
+      "shopifySellable": true,
+      "webPrice1pc": 2.4
+    },
+    {
+      "websiteSku": "GBDiva46DrpSl",
+      "graceSku": "GB-DVA-CLR-46ML-DRP-SLV",
+      "groupSlug": "diva-46ml-clear-18-415-dropper",
+      "color": "Clear",
+      "capColor": "Silver",
+      "shopifyVariantId": "gid://shopify/ProductVariant/56214700491044",
+      "shopifySellable": true,
+      "webPrice1pc": 2.4
+    },
+    {
+      "websiteSku": "GBDivaFrst46DrpGl",
+      "graceSku": "GB-DVA-FRS-46ML-DRP-GLD",
+      "groupSlug": "diva-46ml-frosted-18-415-dropper",
+      "color": "Frosted",
+      "capColor": "Gold",
+      "shopifyVariantId": "gid://shopify/ProductVariant/56214700523812",
+      "shopifySellable": true,
+      "webPrice1pc": 2.9
+    },
+    {
+      "websiteSku": "GBDivaFrst46DrpCu",
+      "graceSku": "GB-DVA-FRS-46ML-DRP-CPR",
+      "groupSlug": "diva-46ml-frosted-18-415-dropper",
+      "color": "Frosted",
+      "capColor": "Copper",
+      "shopifyVariantId": "gid://shopify/ProductVariant/56214700556580",
+      "shopifySellable": true,
+      "webPrice1pc": 2.9
+    },
+    {
+      "websiteSku": "GBDivaFrst46DrpSl",
+      "graceSku": "GB-DVA-FRS-46ML-DRP-SLV",
+      "groupSlug": "diva-46ml-frosted-18-415-dropper",
+      "color": "Frosted",
+      "capColor": "Silver",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343642485028",
+      "shopifySellable": true,
+      "webPrice1pc": 2.9
+    }
+  ],
+  "hero": {
+    "sku": "GBDivaFrst46DrpGl",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDivaFrst46DrpGl.04181608da8a.png",
+    "sha256": "04181608da8aeb47289fc66bb727f0f30293240119491e23aa88c012327ef267",
+    "regenerated": false
+  },
+  "sourceEvidence": [
+    "https://www.bestbottles.com/all-bottles/Perfume-vials-glass-bottles/large-dropper-bottles.php",
+    "https://www.bestbottles.com/product/diva-design-46-ml-glass-bottle-white-dropper-shiny-silver-collar-cap"
+  ],
+  "notes": "All six variants checked against live Shopify SKUs, prices, ACTIVE/published parent status and sellability. Three missing frosted production records restored, clear silver identity/group corrected, group counts/prices refreshed. Does not certify component-kit completion or a live checkout.",
+  "uiVerification": {
+    "url": "https://best-bottles-website.vercel.app/products/diva-46ml-frosted-18-415-dropper?sku=GBDivaFrst46DrpGl",
+    "title": "46 ml Frosted Diva Dropper Bottle - Gold Collar",
+    "finishOptions": [
+      "Gold",
+      "Copper",
+      "Silver"
+    ],
+    "unitPrice": 2.9,
+    "cartSku": "GB-DVA-FRS-46ML-DRP-GLD",
+    "addedToCart": true,
+    "testItemRemoved": true,
+    "checkoutSubmitted": false,
+    "approvedHeroRelease": "pending PR merge and deployment"
+  }
+}

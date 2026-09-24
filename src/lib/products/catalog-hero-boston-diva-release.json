@@ -929,5 +929,24 @@
       "translateXPercent": 0,
       "translateYPercent": 0
     }
+  },
+  {
+    "groupSlug": "diva-46ml-frosted-18-415-dropper",
+    "websiteSku": "GBDivaFrst46DrpGl",
+    "graceSku": "GB-DVA-FRS-46ML-DRP-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/56214700523812",
+    "family": "Diva",
+    "capacityMl": 46,
+    "bottleColor": "Frosted",
+    "alt": "46 ml Frosted Diva Dropper Bottle with Gold Collar",
+    "presentation": "Empty · assembled",
+    "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDivaFrst46DrpGl.04181608da8a.png",
+    "width": 2080,
+    "height": 2288,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
   }
 ]
