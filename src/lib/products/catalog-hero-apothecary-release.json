@@ -1,0 +1,97 @@
+[
+  {
+    "groupSlug": "apothecary-15ml-cobalt-blue-Ground-glassapplicator",
+    "websiteSku": "GB15ApthBlue",
+    "graceSku": "GB-APT-BLU-15ML-BLU-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343698714916",
+    "family": "Apothecary",
+    "capacityMl": 15,
+    "bottleColor": "Cobalt Blue",
+    "alt": "15 ml Cobalt Blue Apothecary Applicator Bottle",
+    "presentation": "Empty · glass stopper inserted",
+    "url": "/images/catalog/apothecary-approved-2026-09-24/GB15ApthBlue.35b5422473e1.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "apothecary-30ml-clear-Ground-glassapplicator",
+    "websiteSku": "GB1ozApth",
+    "graceSku": "GB-APT-CLR-30ML-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343698813220",
+    "family": "Apothecary",
+    "capacityMl": 30,
+    "bottleColor": "Clear",
+    "alt": "30 ml Clear Apothecary Applicator Bottle",
+    "presentation": "Empty · glass stopper inserted",
+    "url": "/images/catalog/apothecary-approved-2026-09-24/GB1ozApth.6aa8c9c98d38.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "apothecary-30ml-cobalt-blue-Ground-glassapplicator",
+    "websiteSku": "GB1ozApthBlue",
+    "graceSku": "GB-APT-BLU-30ML-BLU-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343699042596",
+    "family": "Apothecary",
+    "capacityMl": 30,
+    "bottleColor": "Cobalt Blue",
+    "alt": "30 ml Cobalt Blue Apothecary Applicator Bottle",
+    "presentation": "Empty · glass stopper inserted",
+    "url": "/images/catalog/apothecary-approved-2026-09-24/GB1ozApthBlue.78493b9ae933.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "apothecary-30ml-green-Ground-glassapplicator",
+    "websiteSku": "GB1ozApthGreen",
+    "graceSku": "GB-APT-GRN-30ML-GRN-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343699075364",
+    "family": "Apothecary",
+    "capacityMl": 30,
+    "bottleColor": "Green",
+    "alt": "30 ml Green Apothecary Applicator Bottle",
+    "presentation": "Empty · glass stopper inserted",
+    "url": "/images/catalog/apothecary-approved-2026-09-24/GB1ozApthGreen.6f87aa897825.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "pear-118ml-clear-Ground-stopper",
+    "websiteSku": "GBPearClear4ozStpr",
+    "graceSku": "GB-DEC-CLR-118ML",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343699108132",
+    "family": "Apothecary",
+    "capacityMl": 118,
+    "bottleColor": "Clear",
+    "alt": "118 ml Clear Pear Bottle with Stopper",
+    "presentation": "Empty · glass stopper inserted",
+    "url": "/images/catalog/apothecary-approved-2026-09-24/GBPearClear4ozStpr.2a3f26dd7377.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  }
+]

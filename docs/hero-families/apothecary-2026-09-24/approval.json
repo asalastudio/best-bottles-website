@@ -1,0 +1,187 @@
+{
+  "date": "2026-09-24",
+  "userApproval": "ok lets push these to the UI ad create a PR",
+  "scope": "Five reviewed Apothecary images, including seated green stopper",
+  "publication": false,
+  "background": "Approved generated bone treatment retained; no new exact-field background claim",
+  "rows": [
+    {
+      "sku": "GB15ApthBlue",
+      "groupSlug": "apothecary-15ml-cobalt-blue-Ground-glassapplicator",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343698714916",
+      "url": "/images/catalog/apothecary-approved-2026-09-24/GB15ApthBlue.35b5422473e1.webp",
+      "sha256": "35b5422473e1475fec5dde5b6c473b2aa63139f0239d4406d4bc960b840960be",
+      "bytes": 1151562,
+      "sourceFile": "GB15ApthBlue-candidate.png",
+      "sourceRenderSha256": "d4392f06fc3e9bda6184fa1fedbc38e0395da7dc476d299869f067f043dfbaff",
+      "sourceBytes": 2617212,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 35.5
+      },
+      "visualDecision": "approved",
+      "correction": null,
+      "inputSha256": {
+        "reference0": "fbf439e639162d02b7fb7b69e0511ab57e75eb855a09f295a69d3d58507b6925",
+        "reference1": "cd5605d524cbf5a072b351e81a0eee1a43860196f6ea985e91f28ad8d7b1c9a4",
+        "reference2": "8e5b46e2ba6fb80acbf004505e6fb7201e4164da6811470d30df15e5582d464e"
+      },
+      "masterSha256": "860af152409885074996abe6c13b50a83c0223ebbdfc7ade0b565b2c476964d6",
+      "effectivePromptSha256": "ab9ad9a6531a7624927afb636cfce3215aa409843e343d63af8a094918d38b96"
+    },
+    {
+      "sku": "GB1ozApth",
+      "groupSlug": "apothecary-30ml-clear-Ground-glassapplicator",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343698813220",
+      "url": "/images/catalog/apothecary-approved-2026-09-24/GB1ozApth.6aa8c9c98d38.webp",
+      "sha256": "6aa8c9c98d38a6b30f9d2d53d4d5c45fd4693a3fad434ae19c49bc22db58fe07",
+      "bytes": 1163178,
+      "sourceFile": "GB1ozApth-candidate.png",
+      "sourceRenderSha256": "1ec54cd16e9ee848d1b26be5033ffca10c638abef903f14e764b58fd45554245",
+      "sourceBytes": 2805845,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 48
+      },
+      "visualDecision": "approved",
+      "correction": null,
+      "inputSha256": {
+        "reference0": "45e66da80e99fa8f670a845d3e7ae9d40520f534aa4c9d42aa2090840c36d006",
+        "reference1": "ab9bab7e17b0fac9d78e2a2a92d5b4726c4a75147339449fb163fb1f33db4bef",
+        "reference2": "f42dee173aef735af827b6858c1f92f9f4d8bf9ca254485c14a4fe3a11160e97"
+      },
+      "masterSha256": "930a875d02b44ca89a0bba0b2267c85ea95f4018f94d9ccd93e9532c32889c59",
+      "effectivePromptSha256": "c187ce22c4d038610e3d124a58b2eb913ff977f58a89698974ed9d594147ace8"
+    },
+    {
+      "sku": "GB1ozApthBlue",
+      "groupSlug": "apothecary-30ml-cobalt-blue-Ground-glassapplicator",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343699042596",
+      "url": "/images/catalog/apothecary-approved-2026-09-24/GB1ozApthBlue.78493b9ae933.webp",
+      "sha256": "78493b9ae933048589f607e020bb6c82a2c19c1dd39876796d8215605810389e",
+      "bytes": 1375616,
+      "sourceFile": "GB1ozApthBlue-candidate.png",
+      "sourceRenderSha256": "8c9e8d900a3ba31329cca75c8e16680b0f84d8f24dfbc7f3a960e1e584f79edb",
+      "sourceBytes": 3132286,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 48
+      },
+      "visualDecision": "approved",
+      "correction": null,
+      "inputSha256": {
+        "reference0": "6e4254f5d35f0254b3b68ec8729df6deb4a580400435960fc30b69551b8fad50",
+        "reference1": "a9ef7046389e40d49ad984b5bc07ce584a8c80b1a013146f18852c078f641661",
+        "reference2": "fd558b0ff5017e8648b05a6afe09729fd237398323eb40b2f84556566e965c45"
+      },
+      "masterSha256": "8e13e50e1ae8ed0f22bed25f8389d197fc6b82486a4231b487462014249de534",
+      "effectivePromptSha256": "832b52a47988fffa042618d51286316fa9c003e38c2e30e34db8bcfe80badced"
+    },
+    {
+      "sku": "GB1ozApthGreen",
+      "groupSlug": "apothecary-30ml-green-Ground-glassapplicator",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343699075364",
+      "url": "/images/catalog/apothecary-approved-2026-09-24/GB1ozApthGreen.6f87aa897825.webp",
+      "sha256": "6f87aa89782501b8baa1cd43d779c8b95b95f33fa83a6be0341ac1646ac7349b",
+      "bytes": 1160988,
+      "sourceFile": "GB1ozApthGreen-seated-stopper-v2-candidate.png",
+      "sourceRenderSha256": "9b2bbf248baaf67bf345c4eb8e4d8986a2ce865aebed79b8def3e8f16bf7fd40",
+      "sourceBytes": 2854318,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 48
+      },
+      "visualDecision": "approved",
+      "correction": "stopper-seated",
+      "inputSha256": {
+        "reference0": "6db13e5ff49fcb0af7c6ec8ea76e06a05d1b016c866b3bd8054f2610664cf33a"
+      },
+      "masterSha256": "df96c37386152b423d1af477fbf7f6b6e6da74d7dabb12602bc9a5b71c8411a9",
+      "effectivePromptSha256": "86340d3b39fae823f18e7ed0c4a8c490a755efd043fd396aa194dcbb97725eab"
+    },
+    {
+      "sku": "GBPearClear4ozStpr",
+      "groupSlug": "pear-118ml-clear-Ground-stopper",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343699108132",
+      "url": "/images/catalog/apothecary-approved-2026-09-24/GBPearClear4ozStpr.2a3f26dd7377.webp",
+      "sha256": "2a3f26dd7377396c67b9f9103ec9aa8b2fd2ce55f090c0eda7b3e52bff1c510a",
+      "bytes": 1220358,
+      "sourceFile": "GBPearClear4ozStpr-candidate.png",
+      "sourceRenderSha256": "3445c4dbe7b3db95f845797d176bd4a9699514f703d39ec99cb22d1d923d5a0d",
+      "sourceBytes": 2968646,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 43
+      },
+      "visualDecision": "approved",
+      "correction": null,
+      "inputSha256": {
+        "reference0": "6c69149feb9e60f66d1650db94f6b3e00138dfa01349b35c8838e3d5e4abf0d4",
+        "reference1": "38267c5b901858f30a42c93d83edc74fc5fda570edde67bbeac4485a9ed86e41",
+        "reference2": "357536ab786cceff1793ed128df1555d4ead8aa1f05db8bd1823a8f719c20c2e"
+      },
+      "masterSha256": "96a85b9e001879bae80e4102bb399a04dca631b9f8063b1b043ad954159ce550",
+      "effectivePromptSha256": "0eefc31c34919946cd524c7826314b5b8fad4397ff9f9521581b6159fb305ae3"
+    }
+  ]
+}
