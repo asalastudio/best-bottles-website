@@ -861,6 +861,18 @@ export const searchCatalog = query({
             graceSku: group.primaryGraceSku ?? null,
         }));
         const skuMap = new Map(skuPairs.map((row) => [row.groupId, row.websiteSku ?? row.graceSku ?? ""]));
+        // A product group exposes only its primary SKU. An exact search for an
+        // alternate finish must still find that group so the catalog can show
+        // the selected variant's image and purchase link.
+        const exactSku = filters.search.trim();
+        const matchingProducts = exactSku && /^[A-Za-z0-9][A-Za-z0-9-]{2,79}$/.test(exactSku)
+            ? await Promise.all([
+                ctx.db.query("products").withIndex("by_websiteSku", (q) => q.eq("websiteSku", exactSku)).collect(),
+                ctx.db.query("products").withIndex("by_graceSku", (q) => q.eq("graceSku", exactSku)).collect(),
+            ]) : [];
+        const exactSkuGroupIds = new Set(matchingProducts.flat()
+            .map((product) => product.productGroupId && String(product.productGroupId))
+            .filter((id): id is string => Boolean(id)));
 
         const matchesApplicatorBucket = (group: typeof allGroups[number], bucket: string) => {
             const bucketDef = APPLICATOR_BUCKETS.find((candidate) => candidate.value === bucket);
@@ -873,7 +885,7 @@ export const searchCatalog = query({
         const runFilters = (skipKeys = new Set<string>()) => {
             let rows = [...allGroups];
             if (filters.search) {
-                rows = rows.filter((group) => catalogSearchMatches(filters.search, [
+                rows = rows.filter((group) => exactSkuGroupIds.has(String(group._id)) || catalogSearchMatches(filters.search, [
                     group.displayName,
                     group.family,
                     group.color,

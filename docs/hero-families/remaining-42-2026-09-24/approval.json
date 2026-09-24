@@ -1,0 +1,1538 @@
+{
+  "date": "2026-09-24",
+  "userApproval": "No we need the Slim one. Let's do the remaining 42 images now. Let's integrate those please",
+  "scope": {
+    "Slim": 15,
+    "Aluminum Bottle": 4,
+    "Atomizer": 23
+  },
+  "publication": false,
+  "background": "Generated bone treatment retained; pixel-exact background not claimed",
+  "rows": [
+    {
+      "sku": "GBSlm30AnSpGl",
+      "family": "Slim",
+      "groupSlug": "slim-30ml-clear-18-415-antiquespray",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343660769572",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBSlm30AnSpGl.f8f876caada0.webp",
+      "sha256": "f8f876caada0b2396b21cab8763ebad3838dfca98182dd8ffdc0d40b8b77697b",
+      "bytes": 1390164,
+      "sourceFile": "GBSlm30AnSpGl-candidate.png",
+      "sourceRenderSha256": "8150d34f1131ccf43ac9c150ed0274ecc38c2373c6cd20e9ed6f70858e78f1a3",
+      "sourceBytes": 3221498,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 48.5
+      },
+      "inputSha256": {
+        "reference0": "72aafacc8e3a5374f8911cc5aa6909810e5fb29804e5a104407d8d119ccc8fd0",
+        "reference1": "0716406fd384452f7ca5765917f6aef5d4572d89f98f48f083a9de87d4e70109",
+        "reference2": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "reference3": "d49e13e5d85a50fcf849356b6575e9aa3776c4619b155dab09140a6c5bcf0af4"
+      },
+      "masterSha256": "be78726c66195909501176dcade4c8fe62f9f34e2efd23cb52ffc368dd3a31b5",
+      "effectivePromptSha256": "6b0a76a0a193311ad21b2dce82500ce545760462ebc359f9cde16ccfe22dec4e",
+      "correction": null
+    },
+    {
+      "sku": "GBSlm30DrpCu",
+      "family": "Slim",
+      "groupSlug": "slim-30ml-clear-18-415-dropper",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343642255652",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBSlm30DrpCu.638504d0db38.webp",
+      "sha256": "638504d0db38d44d11a9fc2dc916e2b7dfdfd31e00398004ec762b9e833f5a85",
+      "bytes": 1114192,
+      "sourceFile": "GBSlm30DrpCu-candidate.png",
+      "sourceRenderSha256": "170238a001f6f24685f3ec33b629812dbc01f1f93896c57c2b6229ee7ac0abc6",
+      "sourceBytes": 2601796,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 48.5
+      },
+      "inputSha256": {
+        "reference0": "4e3bfb652ee402500e41db4d58ed3c03759303f5932a5eadf9181e9f6b271c63",
+        "reference1": "98f1f58f9a4fc89fd22f8121df0e8e04849e3119ae41238fa36f3a49f7294044",
+        "reference2": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "reference3": "3cc8f0f3cd6dcadb39229f6a75598e0fa5e04f9bb226be459b102350abab5adf"
+      },
+      "masterSha256": "b1b2e3921887737cf1219de735b081ae550f2698f8b151d4fbb6c66f4636721f",
+      "effectivePromptSha256": "aa0757fe085c1cb1b23dfe23043be4299710ede0890948b0ffc5862548549977",
+      "correction": null
+    },
+    {
+      "sku": "GBSlm30RdcrShnGl",
+      "family": "Slim",
+      "groupSlug": "slim-30ml-clear-18-415-reducer",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343652413732",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBSlm30RdcrShnGl.a45e5d04574e.webp",
+      "sha256": "a45e5d04574e16d8529ad6bbf418b8b5fddb8f1a0c073db9d9633c0417f438d8",
+      "bytes": 1174736,
+      "sourceFile": "GBSlm30RdcrShnGl-candidate.png",
+      "sourceRenderSha256": "331ed300d1cfda75e763c0c157d5b872495b3082966beeeb1d9896b6f8565ec6",
+      "sourceBytes": 2665084,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 48.5
+      },
+      "inputSha256": {
+        "reference0": "c0496d1464b76085953d1d4862c1001c66bf453c1b901dcab10a7637725c2095",
+        "reference1": "f1836bdd9a24d4ab41ccf47efd32f8b92dbff07d28a583513fcc48b5bb596a52",
+        "reference2": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "reference3": "e5fe01d4012385d002c63c7770329220f83fd4ebe27e437abb97ef141171cdd2"
+      },
+      "masterSha256": "c413c116b1e18156aa1b635d907e2afd83f989e294ddb697f13fc83fce9e496a",
+      "effectivePromptSha256": "db3ed23cdf64538fcaaa48fee255392d0ffec88952a80f59688a61538598dc76",
+      "correction": null
+    },
+    {
+      "sku": "GBSlm30SpryMtGl",
+      "family": "Slim",
+      "groupSlug": "slim-30ml-clear-18-415-perfumespray",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343618171172",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBSlm30SpryMtGl.16752112606e.webp",
+      "sha256": "16752112606eff378825c3daaecb9a0e7ce2bd85e60d50b256d7c1046de3bddb",
+      "bytes": 1289722,
+      "sourceFile": "GBSlm30SpryMtGl-candidate.png",
+      "sourceRenderSha256": "d110034e0a976a4099a5fae4ebbe5020dc3cc0533e614cb639b4420cf6d6dc9b",
+      "sourceBytes": 3031985,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 48.5
+      },
+      "inputSha256": {
+        "reference0": "ca579aa1c2d5b23fdae6c7f775905be5c34f1a859610634b74d4673bd071ea68",
+        "reference1": "e52ec869cff19844bda60e850ff31271d4d31e0528c8653875a66bb01b55b43e",
+        "reference2": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "reference3": "737bf9b015e897685310c6cad36e274a93418420536e9fb2575ea5c1ec0280ab"
+      },
+      "masterSha256": "829cdd01680bb48cb58f02c324afc2d06d20b888d424203ec357e2267e4bc2ee",
+      "effectivePromptSha256": "d93c9051001934d3d7cf876ef6ad3a9bc1189a5f6c3254e9e53edb37c250064d",
+      "correction": null
+    },
+    {
+      "sku": "LBSlm30LtnMtGl",
+      "family": "Slim",
+      "groupSlug": "slim-30ml-clear-18-415-lotionpump",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343688098084",
+      "url": "/images/catalog/next-four-approved-2026-09-24/LBSlm30LtnMtGl.b85c9a6a04c1.webp",
+      "sha256": "b85c9a6a04c19de223acf69b63cedaecfa5ca7dbcf27288de41ad9be685b445d",
+      "bytes": 1178546,
+      "sourceFile": "LBSlm30LtnMtGl-candidate.png",
+      "sourceRenderSha256": "0eb27174eac0125baee5485fa5730c3219c8025fef396d3befe3f266026c4c9e",
+      "sourceBytes": 2872845,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 48.5
+      },
+      "inputSha256": {
+        "reference0": "b3930f478f764134bfdff84374f2dfd6eef391e223fa342451fd8d57cf707a01",
+        "reference1": "b6a9b845f2cc509b318a39db2e5a8119f617d15addeece2a0b5d22dcb881b195",
+        "reference2": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "reference3": "b032981ec1aba9a96a119c79a7939af85c7dfc57634df9a0ae30ecc15b537bc3"
+      },
+      "masterSha256": "e4e7427f88e3ba4851fce72eaebfcc41c2fadba81122e029b7a1689e956857ea",
+      "effectivePromptSha256": "4b7c96a28f10261d437de1aed50d8c9f3f4ca2c85c325c512b777e5eafa8e1cf",
+      "correction": null
+    },
+    {
+      "sku": "GBSlm50AnSpGl",
+      "family": "Slim",
+      "groupSlug": "slim-50ml-clear-18-415-antiquespray",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343619547428",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBSlm50AnSpGl.b886a4abdd3e.webp",
+      "sha256": "b886a4abdd3eb20a111753de0fbc66df9a2d81c1c1f0647b96a65cea18a43031",
+      "bytes": 1293074,
+      "sourceFile": "GBSlm50AnSpGl-candidate.png",
+      "sourceRenderSha256": "007602a5600168eff9f278d6de4b4feb614f2ff7387e63f6279d7eba66e87725",
+      "sourceBytes": 2994917,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 54
+      },
+      "inputSha256": {
+        "reference0": "8c4df6d8678a1b57a49050e4e64dbd7cde964332ba364baf30e311d2b45a4be5",
+        "reference1": "e7cea4bb4b25251872bbcb44ba2e214864f9e8e6fded06e8e13edad639b7a377",
+        "reference2": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "reference3": "db338fe990cbbfe80d8a61b1537757652bd446abe6215eb3c48d6d79d1f46edd"
+      },
+      "masterSha256": "94269d093e43ce6e62bba090b7a91ece62ac38e03ee08b47ebed0d0c769311c8",
+      "effectivePromptSha256": "21c0c83d1abfc899f9ba8cb3935d02813803359f7b1b24ac7a94c38596706d8c",
+      "correction": null
+    },
+    {
+      "sku": "GBSlm50AnSpTslWht",
+      "family": "Slim",
+      "groupSlug": "slim-50ml-clear-18-415-antiquespray-tassel",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343624724772",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBSlm50AnSpTslWht.830c59d5c588.webp",
+      "sha256": "830c59d5c588ee3ab68129f54ef1c9849ea4ae2d6acf789921279e672cfc45ea",
+      "bytes": 1376642,
+      "sourceFile": "GBSlm50AnSpTslWht-candidate.png",
+      "sourceRenderSha256": "8c844fecb78226d4314987d6c2b7f32d53ca2b4b2ff35fc2a001b40ecd04366d",
+      "sourceBytes": 3334331,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 54
+      },
+      "inputSha256": {
+        "reference0": "09cf59b9ed070ab0614f599f6d5af6ba31aa0439b9b420c4c0b4c5f1c3fa6a34",
+        "reference1": "fef85f1b5d91a1d9c92e393482a6ed7336ba29548b0a67312c64012eb9310651",
+        "reference2": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "reference3": "5c832c420965f58f45ea4f0c5bc24a9c9d490eec83a8124cfeaac15bdd992954"
+      },
+      "masterSha256": "0af787a39d116e639455f19a5562cb07a5953f762c07e1c1453409da3d9fe741",
+      "effectivePromptSha256": "a9888ef94e886b5d249b5da77c6974111b6666a1d4162656a874fa8ec1d07ee2",
+      "correction": null
+    },
+    {
+      "sku": "GBSlm50RdcrShnGl",
+      "family": "Slim",
+      "groupSlug": "slim-50ml-clear-18-415-reducer",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343660998948",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBSlm50RdcrShnGl.1ecdd0ac81cc.webp",
+      "sha256": "1ecdd0ac81cc91d3609ffc335de5f47787322c8821b8d279ff5837756648f5b8",
+      "bytes": 1118752,
+      "sourceFile": "GBSlm50RdcrShnGl-candidate.png",
+      "sourceRenderSha256": "2f42fe42835ce4fe94e4e1ff19c19845eeebdd0f6eba4df96065c0d6565f2787",
+      "sourceBytes": 2604640,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 54
+      },
+      "inputSha256": {
+        "reference0": "6e604323df19d0a340a1204c9bdd13a886ccb6fc741b2705c75f69a1b5ccded0",
+        "reference1": "75fb89807b640490f86e6f0b9cc03e0b626a2502232985d7b15967f3ce515cc3",
+        "reference2": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "reference3": "12334f3a231ff4eeeb501d14744aba330c517dd3a6d24fb671e5766d7ec5ad3d"
+      },
+      "masterSha256": "09a55de42494c1e25b322169cc42cda81ee6c9774d535797f8177ee06aa6481a",
+      "effectivePromptSha256": "0b924890376f52897ceecf350cf641da30fd038728c7ebcf7d42e1e19bd7c356",
+      "correction": null
+    },
+    {
+      "sku": "GBSlm50SpryMtGl",
+      "family": "Slim",
+      "groupSlug": "slim-50ml-clear-18-415-perfumespray",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343640158500",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBSlm50SpryMtGl.81391eda7725.webp",
+      "sha256": "81391eda77252863e5f3702ba4c17abd40a4604acf55da37ecf4d0218139e468",
+      "bytes": 1167194,
+      "sourceFile": "GBSlm50SpryMtGl-candidate.png",
+      "sourceRenderSha256": "39ae4e5de89a2d1bf42efae9d627bf06f93dd63007e695f82984b6efdf4e9aa1",
+      "sourceBytes": 2715592,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 54
+      },
+      "inputSha256": {
+        "reference0": "e43a195e1ebf6980aef1e8575253122ae3262f5922bb4b83feca4200d0817177",
+        "reference1": "1957b82f187484de79c3193a40f54f1f74dd667ffe2229102a463e3e92c531f2",
+        "reference2": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "reference3": "602680f0b43785b05ef100a42299d4e5c8ffa03735db2eb257f0b6dbb8b9c8a9"
+      },
+      "masterSha256": "6c7743dc0b7bcff683b9df51c46166f22ce8dca519a2baa39283fb4b9cf8fa45",
+      "effectivePromptSha256": "47536706969f1ba1fcdbb90b87b327d29a8298e536c8bdb2ea8e69322f988709",
+      "correction": null
+    },
+    {
+      "sku": "LBSlm50LtnMtGl",
+      "family": "Slim",
+      "groupSlug": "slim-50ml-clear-18-415-lotionpump",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343691997476",
+      "url": "/images/catalog/next-four-approved-2026-09-24/LBSlm50LtnMtGl.66a0148ef00a.webp",
+      "sha256": "66a0148ef00aa82704fa55238665f1a32c7a6c4d9562daa8c7ce1305624a374f",
+      "bytes": 1161420,
+      "sourceFile": "LBSlm50LtnMtGl-candidate.png",
+      "sourceRenderSha256": "f643fb81fcf2b903c72a6888d6d5e36f1df22324555f26079b3e4b1a82e64747",
+      "sourceBytes": 2716705,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 54
+      },
+      "inputSha256": {
+        "reference0": "0886230965adc4b40b8572565ddc1b9cc0487ec53bf4ace05ffa3bd1e227383c",
+        "reference1": "a22947aa97dc91dadd2265b75edd15375d06e9d147d37073913eda41dc6210ce",
+        "reference2": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "reference3": "e0d24e38da5cd8a5abebcc4412121153fffbfe5cdddb3c45c68f5668ad168796"
+      },
+      "masterSha256": "c28103b0e5c2066b68b8333f4b1d46ef9b609f12006bd75a82bdd9fd47721ba1",
+      "effectivePromptSha256": "25170cef3c6498fd0f96ca5f8b4a50ee9c4aac87f5906ddb007e94cb0e6dd0dc",
+      "correction": null
+    },
+    {
+      "sku": "GBSlm100AnSpGl",
+      "family": "Slim",
+      "groupSlug": "slim-100ml-clear-18-415-antiquespray",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343686885668",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBSlm100AnSpGl.25a94a0e0123.webp",
+      "sha256": "25a94a0e0123d30eb474e2488e8fcf9ce6eb02f5237408d293d1d344236fbcd7",
+      "bytes": 1239912,
+      "sourceFile": "GBSlm100AnSpGl-candidate.png",
+      "sourceRenderSha256": "00f4ea2efcb7deee3b4516da08d86281245c35e50e8c8aadeb971fc45a0aa000",
+      "sourceBytes": 2952324,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 67.5
+      },
+      "inputSha256": {
+        "reference0": "ad9321c10bd3991c6d47a51642ba28112a20a8d4e87ccaf6dfc99ccce7b29873",
+        "reference1": "322ec65625a03cfe9dcbe3f8d704511bd5c7f3507e953efed4e83c218d90ebbb",
+        "reference2": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "reference3": "686f14d3d44a6aed2b4de7dbd97bd50aab7b9ebd6c393ceb3abcd7900e890390"
+      },
+      "masterSha256": "f8e3c133a12e717191b8b8a6550a3bb4b530d93882935994a4b0a7c32375085f",
+      "effectivePromptSha256": "fa4bbacd263a5c0e5b210a827419faa4a343bc21b79af50ef4b8bb5bf04ca70a",
+      "correction": null
+    },
+    {
+      "sku": "GBSlm100AnSpTslGl",
+      "family": "Slim",
+      "groupSlug": "slim-100ml-clear-18-415-antiquespray-tassel",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343687115044",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBSlm100AnSpTslGl.1b367d9b11ed.webp",
+      "sha256": "1b367d9b11ed364ee0960dca448a2cd429dca1748a4fe3a6d43efef24373dfcd",
+      "bytes": 1415268,
+      "sourceFile": "GBSlm100AnSpTslGl-candidate.png",
+      "sourceRenderSha256": "323978620866319fd18a6a27a10a2788eace8e3f84ad395acab4d7551a585475",
+      "sourceBytes": 3285145,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 67.5
+      },
+      "inputSha256": {
+        "reference0": "b0ccf08f88d537844af207d13821fc06a03ff855534c717c1683f325dcd51743",
+        "reference1": "b990a5625dc2273811813755ec8d5aae0cb77c16f600a31d4365aea95a22e596",
+        "reference2": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "reference3": "949c6ceb959348c1dc56d69049add6275de0028f276945c0534d3be69d1d72f1"
+      },
+      "masterSha256": "0b37ff623ef30e65d5fb79c6aeeb2f80c67474074b4a698f84fb541053f679c0",
+      "effectivePromptSha256": "7e1b99304e726e475515a36d30a6325ee44960253734063cdb42d10d48697228",
+      "correction": null
+    },
+    {
+      "sku": "GBSlm100RdcrShnGl",
+      "family": "Slim",
+      "groupSlug": "slim-100ml-clear-18-415-reducer",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343654740260",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBSlm100RdcrShnGl.6659cef1dab1.webp",
+      "sha256": "6659cef1dab1543f45144fdd6a51b30efa202908cfdec6b69411834c38627aec",
+      "bytes": 1101084,
+      "sourceFile": "GBSlm100RdcrShnGl-candidate.png",
+      "sourceRenderSha256": "528ad7c0a6720e880f2edad0fd0231b914a0521ba15c1d7ff8e2595cc84f0f11",
+      "sourceBytes": 2600780,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 67.5
+      },
+      "inputSha256": {
+        "reference0": "4ac6bfb081130759c2e6ceaeb0736f165c8ed270a4436aaefca05d7a9bb37112",
+        "reference1": "0f71c70f015b91902efe3e5c0faeb8d399c56f2e4805c3a2d9751aae6fb17e21",
+        "reference2": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "reference3": "ad5e028992e0308f72c15767f6dcb8a51302441b1521d072e6603902334322bf"
+      },
+      "masterSha256": "3be059e7c8ce10039e8eb648af7642ba547fa17460800f9ad6f7571bd542d5af",
+      "effectivePromptSha256": "bc8eaa8d8348342ea81472701d114c924280a90da79761ee33adbd31cc5a7092",
+      "correction": null
+    },
+    {
+      "sku": "GBSlm100SpryMtGl",
+      "family": "Slim",
+      "groupSlug": "slim-100ml-clear-18-415-perfumespray",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343652217124",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBSlm100SpryMtGl.a6b33de271bb.webp",
+      "sha256": "a6b33de271bb651d0db7203c09308ea38c0f3ca9aa06cc707dbd0c332c8e7d4c",
+      "bytes": 1212474,
+      "sourceFile": "GBSlm100SpryMtGl-candidate.png",
+      "sourceRenderSha256": "794e975db460394daf5598bd32d4f8f0972a0ea52405b1b6bfa0f00f8438d082",
+      "sourceBytes": 2721344,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 67.5
+      },
+      "inputSha256": {
+        "reference0": "7c7926c351c881f9210415ec33a13a8c2c94fbf1cc4bf50b85d75ec9e0d50579",
+        "reference1": "8e2a2cbb561678a79e8a437b490695570bc1faeb2cd87b7065bc643e297f66e8",
+        "reference2": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "reference3": "9befd1fb7e739f2be6d4af0091fbc0ac929e9c0e2300ea2c2051172c424db5a7"
+      },
+      "masterSha256": "1438b4319a4d5e648a83a45b0d7787b01cb5eec68705244ee77d2da0e57f4bb8",
+      "effectivePromptSha256": "37ba700f9f8580c00d0936850371e4c27ae86ba2b6f3e6f5724b8b592355d80b",
+      "correction": null
+    },
+    {
+      "sku": "LBSlm100LtnMtGl",
+      "family": "Slim",
+      "groupSlug": "slim-100ml-clear-18-415-lotionpump",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343613747492",
+      "url": "/images/catalog/next-four-approved-2026-09-24/LBSlm100LtnMtGl.ac6ba9bffe49.webp",
+      "sha256": "ac6ba9bffe495a8e292141398c23142205d58b5d79b29ae43059cecbf1f66a22",
+      "bytes": 1178248,
+      "sourceFile": "LBSlm100LtnMtGl-candidate.png",
+      "sourceRenderSha256": "0c0d1502ec4c580d742ece293a501e10647b2f35f39b5c01b0d793e6c6cd209e",
+      "sourceBytes": 2744709,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 67.5
+      },
+      "inputSha256": {
+        "reference0": "81d480036eaac17748f9f55822b7649614f6f70425fbf08e2e1b5075dc0ec6d6",
+        "reference1": "020999927f635cfdeed4ba4de853c61af5a48e3176ddb16cf28a90ce2b5cd077",
+        "reference2": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "reference3": "9ad54d20affce55181821f6856b5eca8b2915ff3e6c639201bc6e5a9eb05b7d8"
+      },
+      "masterSha256": "4174388f4bdbc5162771d1d442653d6b3fa68ba8282600553fb6abf925377ce4",
+      "effectivePromptSha256": "6a9135bbd79a45a60e59505afb05781b01012db8fd30e39abc1557d021da6954",
+      "correction": null
+    },
+    {
+      "sku": "Alu65mlLotionPumpBlack",
+      "family": "Aluminum Bottle",
+      "groupSlug": "aluminum-bottle-65ml-clear-20-410-lotionpump",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343694356772",
+      "url": "/images/catalog/next-four-approved-2026-09-24/Alu65mlLotionPumpBlack.e05aa48bdab2.webp",
+      "sha256": "e05aa48bdab2ac7fcea5dd635031f4bb09c9849b0d5fe4d9c9b54fe9db5cf3b5",
+      "bytes": 1150554,
+      "sourceFile": "Alu65mlLotionPumpBlack-candidate.png",
+      "sourceRenderSha256": "5e3ebf807b5b1942d091d48d0d959cc847d442610a521d7f50a6534a20c77de0",
+      "sourceBytes": 2822639,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 40
+      },
+      "inputSha256": {
+        "reference0": "146b7aad3918a504970251427597009acb2bbe3a559500fe1e2a709e02a24276",
+        "reference1": "5f4dd35b06fca5ade44be85635db31368abff33d3cab4554ca476a6dd54a1c6e",
+        "reference2": "558f218b8b509ca06f1ffcd41515bcdc9132ff137cb3c06578989e9b950a9e53"
+      },
+      "masterSha256": "863c17eb1df391f070dcea463dd2e7431070cdb5c38a3d986d5054f9b781dc54",
+      "effectivePromptSha256": "b858f3f18b451e052e2bee03c5b35708a42f392a5c4415595dcd6b5d1327cb10",
+      "correction": null
+    },
+    {
+      "sku": "Alu65mlLotionPumpWhite",
+      "family": "Aluminum Bottle",
+      "groupSlug": "aluminum-bottle-65ml-white-20-410-lotionpump",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343694324004",
+      "url": "/images/catalog/next-four-approved-2026-09-24/Alu65mlLotionPumpWhite.5d9d5458b093.webp",
+      "sha256": "5d9d5458b09342f115bd1ce7dfb44f312f8ff5876ddf648b19d25ce2769ff4f2",
+      "bytes": 1133996,
+      "sourceFile": "Alu65mlLotionPumpWhite-candidate.png",
+      "sourceRenderSha256": "ac1e4ccc391c59e2850c8decd832198f5d85686c8edeee250620d239c37312e9",
+      "sourceBytes": 2696109,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 40
+      },
+      "inputSha256": {
+        "reference0": "f3a8277a9860854965b20fb01f34f442e61bf5607375d897258099a2d3f14ce4",
+        "reference1": "fb597354ba37fb7f4922a9d47f6a3c89fb60ff27999e2382e809c0d407108a76",
+        "reference2": "d92931ff0c1b444731c17a8ffedd23d77ce4ab7eda1fdff651e88f69ae8781d0"
+      },
+      "masterSha256": "674af1199e1ebc2c23bd78f2b94534ac30a84112b41e90531004f4f969c150a7",
+      "effectivePromptSha256": "6e251d745d57cf137155a08ecf38f1e9ca754dc8743ee11617cf461fd6c87135",
+      "correction": null
+    },
+    {
+      "sku": "Alu120mlLotionPumpBlack",
+      "family": "Aluminum Bottle",
+      "groupSlug": "aluminum-bottle-120ml-clear-20-410-lotionpump",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343613878564",
+      "url": "/images/catalog/next-four-approved-2026-09-24/Alu120mlLotionPumpBlack.bc17cd0d2cea.webp",
+      "sha256": "bc17cd0d2ceaa43cb3cb895989fe78267070f30c7f07227d81a7981dca2d57b5",
+      "bytes": 1307478,
+      "sourceFile": "Alu120mlLotionPumpBlack-candidate.png",
+      "sourceRenderSha256": "c4b866964336d124d8ea2ac0e42e69b2d4c5ef5f3cc206a4b65abf3ced81bdeb",
+      "sourceBytes": 3277320,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 50.5
+      },
+      "inputSha256": {
+        "reference0": "ceb0adf35107ebbc2b10d0f7eb6bf735a489149bcc7212840ffafa10d8394516",
+        "reference1": "78a047d664dd8f2b013b8cdeca3886c32e58f041ced1fdfaa1adfd04e3feb5d5",
+        "reference2": "fae303241afd09b68afd6144384c172d8fc07504f3e8d60bf1c3a6d610f2ca77"
+      },
+      "masterSha256": "b7daa0842d841fa2f0f172294eaeaf4324c5e40266b6b7034b1f46cb63c15a7f",
+      "effectivePromptSha256": "2e6e3132b0193072396b3dacb3f10ca7c79eca001fa76912f8d79ddac6f53a43",
+      "correction": null
+    },
+    {
+      "sku": "Alu250mlSprayBlack",
+      "family": "Aluminum Bottle",
+      "groupSlug": "aluminum-bottle-250ml-clear-20-410-finemist",
+      "shopifyVariantId": "gid://shopify/ProductVariant/54056453636388",
+      "url": "/images/catalog/next-four-approved-2026-09-24/Alu250mlSprayBlack.8448986a2efe.webp",
+      "sha256": "8448986a2efe0bf889e6e9fe9b574866566125a718b5bdb2d0e76a856a015d21",
+      "bytes": 1236918,
+      "sourceFile": "Alu250mlSprayBlack-candidate.png",
+      "sourceRenderSha256": "08549c8783ff71bd4fa52ba6ca348db15ea634da852d3f4206e2f16348688872",
+      "sourceBytes": 3036619,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 60
+      },
+      "inputSha256": {
+        "reference0": "aaf5dbbee119519f1ab9a788110a559dbcd6f76b35302a7f7387fd9ef48a5d58",
+        "reference1": "ecf713731409b3a87f050b1a502cdae811a899dd8c46cc0c58b08a736e74ec5d",
+        "reference2": "8c39bb42cfe52fb72b053fbf4b005c13f333381b039952b1c61fb2b2c65f9db3"
+      },
+      "masterSha256": "cdec989efd8031e28bb003bf610f9b0467a763e256993034976bf198ef308fe7",
+      "effectivePromptSha256": "709e2f76427660588d6902bfaefc3dd11035d21040531951ee496c79ad9948f0",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom5Blk",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-5ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343600804132",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom5Blk.a95481b3951f.webp",
+      "sha256": "a95481b3951f089714ad764165c3be2077c61945daddf2d863c6eee08335c708",
+      "bytes": 1186456,
+      "sourceFile": "GBAtom5Blk-candidate.png",
+      "sourceRenderSha256": "5f02c0c43c46bd29bc34442f037a8a0b5bd0f992c94dbac5f4e85de674a7f903",
+      "sourceBytes": 2779221,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 69
+      },
+      "inputSha256": {
+        "reference0": "309f38bf503bc4d7150aef1f967181090cc1060b19ed195f71b7311fea969e4e",
+        "reference1": "0136cad6313bdece3f9e6835eace4fcc5d0542c839d98b1076d75bd684f2b2c3",
+        "reference2": "ec64294eeb71e25f8b2fa3cf38b3f0a23c5aa6f53663bd14c21401f7c1b85a0d"
+      },
+      "masterSha256": "d33da155c6ca316f6f9248344ff68683dadeee5df756ff6f4206ec906938fe67",
+      "effectivePromptSha256": "382015d3bca09f47cc34f80d6069df0ec48b67c30695ca4d0bef50cb035c65ee",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom5BlkDot",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-5ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343600836900",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom5BlkDot.1d4cb44a6696.webp",
+      "sha256": "1d4cb44a66965ec0b9d69f712da43127f34a03ec742bbb33aa584efb8a7a2740",
+      "bytes": 1162096,
+      "sourceFile": "GBAtom5BlkDot-candidate.png",
+      "sourceRenderSha256": "283b5712c8bf4863f31d7e6dd424dbfe0b69b4319f0809854b4d946177209f3a",
+      "sourceBytes": 2750857,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 69
+      },
+      "inputSha256": {
+        "reference0": "0707c61450295c89a3fd4588b059718bf338140eabe33fba0dd437c30bb47393",
+        "reference1": "aeeff8158444ce3583c95fad49ab0a59bce8876ea8615e196b7a494fdb07f82e",
+        "reference2": "ad83713d90d763d6a24317bc837902fa36f1b99be2fdfff6339e11a09aad0d66"
+      },
+      "masterSha256": "c82f5a8473095ef0f6650231a613f143007354568d44ea815ca30b03ef7c4054",
+      "effectivePromptSha256": "1526f5e55c94a97448f677d660832456239ef7a920d28df62860c6425dcf9c85",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom5Blu",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-5ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343600640292",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom5Blu.b415f9e2335c.webp",
+      "sha256": "b415f9e2335c2002455d5b0ce07007968ffc6ec9a333f642e09126a3e72bccb3",
+      "bytes": 1344616,
+      "sourceFile": "GBAtom5Blu-candidate.png",
+      "sourceRenderSha256": "778d6d5edc5647798deac07a5048b3daa103ca9c6cb6a7321214d90cfaaa6610",
+      "sourceBytes": 3154169,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 69
+      },
+      "inputSha256": {
+        "reference0": "5439ec02621911302f7e3c6a7dd9ea27d83fd89d2d2ed2c5dc793241a3da6aea",
+        "reference1": "422eaa087ea981579ee7a18ebe9c9bbd04a2a08c8d5004eaa35f846d3c6bdeeb",
+        "reference2": "e5f0554059aa35ac43becf4611555755572be75c91a68fce35535f74f9384145"
+      },
+      "masterSha256": "968eb71cf58a095f916a9579cc7e25c2756a6fe8226b827e480ef7cc47258695",
+      "effectivePromptSha256": "c27d94d1058ecb2113478d7b68b85df406d420c9984088dedb02d01cab9fce0b",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom5Gl",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-5ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343600673060",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom5Gl.0d224e615592.webp",
+      "sha256": "0d224e61559248c69609a2b4b0e6bf8b4028846c372ce961f833c25f6229b71f",
+      "bytes": 1395388,
+      "sourceFile": "GBAtom5Gl-candidate.png",
+      "sourceRenderSha256": "7ce4423a4b6b2657a4c8196e4a933d988ff1579270bc4cdfff0d68a7695baef0",
+      "sourceBytes": 3144813,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 69
+      },
+      "inputSha256": {
+        "reference0": "6ff6103cfbbbbe353de4d968aaf898730c7cf6610468d76b3393e578ddc14cbd",
+        "reference1": "14d7d54bd2e69a4c38edd583d56336492cc5ab145536c34dfd2d9b4f8de07919",
+        "reference2": "b24a86673443f40daa9d50b1014c615a7efc0593f2cd613f84be6f30a14ea0c6"
+      },
+      "masterSha256": "5634e868cef081b1ae6e5df03cde89b0abad802a2c2dc94a8acee63570e087e8",
+      "effectivePromptSha256": "9a7d843f7d3a22e285371d7ff2ce42d9630d41fd5ad812b75c4fe5b233ee1797",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom5PnkDot",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-5ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343600869668",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom5PnkDot.9104d1e7721e.webp",
+      "sha256": "9104d1e7721ef7321a89b1d349743f6429f8edc8ac3171febf6c13525d800bbc",
+      "bytes": 1383498,
+      "sourceFile": "GBAtom5PnkDot-candidate.png",
+      "sourceRenderSha256": "b024959a7fe2c2b87397906c230069f8502295f7ac328982e6b212c8dbaa8003",
+      "sourceBytes": 3289412,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 69
+      },
+      "inputSha256": {
+        "reference0": "cc74330ba77aaa83c85394700ec44f190b9f7b5da18ec22d89849d858cb2c2cb",
+        "reference1": "64ef0836bddc7d48841bc12be2c926d0d81143d116b41f42b37a95087b82342b",
+        "reference2": "c6ed121a546fe3c618f109403271f4ac3a31396ac8acbc361778e6381a949a1c"
+      },
+      "masterSha256": "bd5cecfc6eae6091ea8fa1b459469b4e5f627d700b28f632112de4dced0acbfe",
+      "effectivePromptSha256": "bdbb73cefda4ae95485019d0d0d477beb4daa415f3b39f07631053fc21c6f355",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom5Red",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-5ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343600705828",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom5Red.157a79e135b2.webp",
+      "sha256": "157a79e135b224508bd413bf8aeed53cffd6bd8f6bed95dfe70a3a02ce795391",
+      "bytes": 1307062,
+      "sourceFile": "GBAtom5Red-candidate.png",
+      "sourceRenderSha256": "7b884dd1ceb5dba56776c73759a6ccc671bbd0acef3d910f2dfa4dbb0d19dc04",
+      "sourceBytes": 2969613,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 69
+      },
+      "inputSha256": {
+        "reference0": "bb1619684d8b4137ee062c338fbc0cb1bc7e6bec53a182265dce1ac4618fd1d5",
+        "reference1": "23a3ec746e4e744727aefc5dbcddbfcfd19d0f1f8dc38a7f511477835bfe375e",
+        "reference2": "5d2f2591b52b1b207dcd3c4f5c4e751b933e7721c15b583c022923ff16c43dd9"
+      },
+      "masterSha256": "effa60d635cc1dd728b1e1f81163b00e6543051e231cd817b8999a9829e6e847",
+      "effectivePromptSha256": "7278d38bbdb595be443db37713692e9869e1f43b4c8fbc6c8dd404f236b33143",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom5Sl",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-5ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343600738596",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom5Sl.a1e3eae36086.webp",
+      "sha256": "a1e3eae36086badbc08db3151750bbd35b247bdaed5d139fd72712abbab5e352",
+      "bytes": 1299786,
+      "sourceFile": "GBAtom5Sl-candidate.png",
+      "sourceRenderSha256": "639f2254f02adeec8903f80787665c8381c9fdc7c8158dc3ceed5cf3f77a02f8",
+      "sourceBytes": 3171022,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 69
+      },
+      "inputSha256": {
+        "reference0": "250cfc989d3e2d3f92024e2b8a8ce8f01cc3bf7ea33d097af5c8fb764a9135a6",
+        "reference1": "147cec5662a7b5bafdec2ae0a32dbe79add35eebe78eb379bb075940ef7bccf7",
+        "reference2": "4e0418f4645cbb7c5ccd3a0ecd6b03a8288b4c3eafc06b4ea2db6b834499ff77"
+      },
+      "masterSha256": "6150b4f082d1de2403eabbb07af8191c9b7751e9c247ad7683b56844629ffb58",
+      "effectivePromptSha256": "a122b6985278b515259a9a3a19dbbbbe5c4e6a721cd33e8d446e92c89d58c1cb",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom5SlDot",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-5ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343600771364",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom5SlDot.203ba9b72d44.webp",
+      "sha256": "203ba9b72d44083f0d0364949e2821a017831059853f640a3b63c23e82199f1d",
+      "bytes": 1333916,
+      "sourceFile": "GBAtom5SlDot-candidate.png",
+      "sourceRenderSha256": "9259c0c7cf62331fa0d72b35dae7a206e50289b72b4e72df34a6d04f79393c82",
+      "sourceBytes": 3240350,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 69
+      },
+      "inputSha256": {
+        "reference0": "2046556b697b578fcfbbdfc216fd0f8bbe46562841c1912961c5360126817400",
+        "reference1": "91a66340a0278f1dd4576859ee43cccf94b5d0619121055b118a73282f780218",
+        "reference2": "841a5c2d3a87617c35203488bf15181527b70a197b149a1094c3241f696d2802"
+      },
+      "masterSha256": "b7df3b12275431ba2ecd58c878403730105aef4af45c2ecbd0a2d8a211c60cef",
+      "effectivePromptSha256": "90eb630c55d62404316be792caa4fdb63e440a56c662a4f92f05192074a2cb16",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom5SlStars",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-5ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343600607524",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom5SlStars.f62f6af1ab8b.webp",
+      "sha256": "f62f6af1ab8b9298e5d48287a059a7f6034d086d5ec9ab4cc8da5514add15fbd",
+      "bytes": 1456278,
+      "sourceFile": "GBAtom5SlStars-candidate.png",
+      "sourceRenderSha256": "089b850d95f62da5c3134d12871ceb22a598cc135ba5043eefc491d1d25f49cc",
+      "sourceBytes": 3284316,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 69
+      },
+      "inputSha256": {
+        "reference0": "603025884218c957022b2e57936cfbb4a7f520b5fd27bf09f28a472bd70bca2d",
+        "reference1": "f8f9424f42153cc9efda733a882397e48dff5177d400f5f20fb7f226e413703e",
+        "reference2": "c93498ee4cdf506fb3e12307ac5dbf490eda3f05bf19516fb9a02f16bd55543d"
+      },
+      "masterSha256": "67b27e5d22345be782d083e5cfda16749f8c7acfddd9b86a76ff62ae8383f85c",
+      "effectivePromptSha256": "896631cd95c5551e267a160eaa0fb342f993ca24002ce8519b7182667bf806f1",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom5SlimBlk",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-5ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/54056465629476",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom5SlimBlk.895f5c416907.webp",
+      "sha256": "895f5c416907f33509c312c11782f2e2f99932e0783ff0bfe01b25106071535e",
+      "bytes": 1255864,
+      "sourceFile": "GBAtom5SlimBlk-black-hardware-v2-candidate.png",
+      "sourceRenderSha256": "f1725234257e204eba65c9bf47a8d2e721200f71c227eec3bf7f518fa0e571e8",
+      "sourceBytes": 3023702,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 84.5
+      },
+      "inputSha256": {
+        "reference0": "c2cfb80a648f682002dee655185c0681b741f1339a75a40dd5169c27f21d7643"
+      },
+      "masterSha256": "459e71435b3c572a5b1c8fd4ed8ae8693b5e4867836be06f998c18842caa13ce",
+      "effectivePromptSha256": "62f19ae984d2f6389afd11a214cc6801d16ee9da48aaf603e4907bb0044b8318",
+      "correction": "black trim and actuator v2"
+    },
+    {
+      "sku": "GBAtom5SlimGl",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-5ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/54056465662244",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom5SlimGl.e5d81a57e5a9.webp",
+      "sha256": "e5d81a57e5a9c30e453e32b502c5465881a853f627c51b85028c08f2880d02ec",
+      "bytes": 1545668,
+      "sourceFile": "GBAtom5SlimGl-candidate.png",
+      "sourceRenderSha256": "8c9116910c11e71e5630aa5f7296843f06752b11b72d98588947c9ce0ab71a0b",
+      "sourceBytes": 3410438,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 84.5
+      },
+      "inputSha256": {
+        "reference0": "830f3564d618756c291dc359e40a4a53a4b67595dd09a51d9be9001a9491bdad",
+        "reference1": "d8ea7ac8ce19616ca88b4a508adcb134d20d322e55363dcb97a329e26dddea9e",
+        "reference2": "aa1251913c38ed7f6c251fd208d838bb0a0dd6992897ac372a5c40cac4e55064"
+      },
+      "masterSha256": "f1b79284313755490174b152d8266f36d86f8081987a607df746387ed72b697d",
+      "effectivePromptSha256": "cf61a53ed138acd2355682e91170abc5c318db60976dc846b7ed7c1915cdf305",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom5SlimSl",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-5ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/54056465695012",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom5SlimSl.0f6c17566cdf.webp",
+      "sha256": "0f6c17566cdf45b4b927d987c0a54f4ffe6c22b98b850c34a13f8e8369670a15",
+      "bytes": 1447028,
+      "sourceFile": "GBAtom5SlimSl-candidate.png",
+      "sourceRenderSha256": "b5f27dabb9b9e75d3cfb72a236fcb9c0476b290ab3b4970d6a3b7113085c56ad",
+      "sourceBytes": 3383684,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 84.5
+      },
+      "inputSha256": {
+        "reference0": "a936104e967301418a850c9c4430f162a8bc6af586d7d020ca175bbbd56fb606",
+        "reference1": "96f0b850c113e16b77828f9b4b431a9455fb3321599060a7ffc6eb6ff1f4f47f",
+        "reference2": "08b9e2e22ef0a9da60aa2e6e2c7cf277f3ae37f497d2e6cffe99744b307c41e9"
+      },
+      "masterSha256": "310e520e2b9efd609ff7234c177b83d5f9ed03ded21524791a2c448314984f80",
+      "effectivePromptSha256": "12f4e1633cb4bbd2a11f9c6bc0bbb273e5dd04177e84701a51ba58ae3b793184",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom10Blk",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-10ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343611650340",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom10Blk.79e7d1dfbf78.webp",
+      "sha256": "79e7d1dfbf78f55b6930c5b9a426fb19dee82e1c3e3c4c5c892ba67ca9ee47c9",
+      "bytes": 1199536,
+      "sourceFile": "GBAtom10Blk-candidate.png",
+      "sourceRenderSha256": "ae1c3911bd2036fa1c6e382ad9a5778fbebde009b9d8c05339c9d578907bd0e4",
+      "sourceBytes": 2837210,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 75
+      },
+      "inputSha256": {
+        "reference0": "93294ef8c12759dd8c2906444c0e18209ae2f456259f4de01db0935c9f62f130",
+        "reference1": "f7cccb342cc67f5ab7db5496b6f4d163f1514954a03cefe9a859b2e7133d84a6",
+        "reference2": "d604593b8eee2da882d2b3f280f8840c194e278156ff9cdb1140de9f31758f78"
+      },
+      "masterSha256": "b242aec2af05317d46d9a37a3817545504dd1309c4715d56890242056abc8e50",
+      "effectivePromptSha256": "dcd7a3bcbe8be8bdee462ec7247b61645d99b37988e6dd1d11edc66738f45d73",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom10BlkDot",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-10ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343611683108",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom10BlkDot.f9d43dc128d7.webp",
+      "sha256": "f9d43dc128d70b724e00560651afa99bd9865c2d78824841926d273d80e57fa3",
+      "bytes": 1296656,
+      "sourceFile": "GBAtom10BlkDot-candidate.png",
+      "sourceRenderSha256": "2345ec2642b0ba137a024094df4574519b2a2ea53816047ddd2bda8fd73ac443",
+      "sourceBytes": 3148576,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 75
+      },
+      "inputSha256": {
+        "reference0": "3f96013aad1a449e5711c618f8f5fa0f204822836afa02360948bea2957aa704",
+        "reference1": "409010c62706c7fe5156d84512fe7c34bbace79330c61f14eae4c0cb60c604b1",
+        "reference2": "e371af25b849c40e9ffa2207010c6c96e2e566f393e42427bbf6819d4b18aae0"
+      },
+      "masterSha256": "dec116af9af813707d093c204f3d08b7b506f56b17bbae61616219766c8881b3",
+      "effectivePromptSha256": "7dd5859cdc32004ad723f91ea6e616c0939de3437aad28885bdfef955c0d0553",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom10Blu",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-10ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343611715876",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom10Blu.52f14664d8de.webp",
+      "sha256": "52f14664d8de45eb4164d5b530eef129745c39659edeb99b9c2e0078f7bec12d",
+      "bytes": 1542372,
+      "sourceFile": "GBAtom10Blu-candidate.png",
+      "sourceRenderSha256": "8f77cc6813073bd0684db4b2056f34b7c51436c49d2c54f87f294b719256bf09",
+      "sourceBytes": 3353800,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 75
+      },
+      "inputSha256": {
+        "reference0": "0bdcb429bba6db90721bd1fb7e048539b5e78da84dd12404b5c52fe733825485",
+        "reference1": "153f447830a6b9a95454e581223299a0f9304cbed7065329f21d5916b0eeb5b2",
+        "reference2": "3584a5b55168fe25735eb2c1d491931b1cbfccd354ba00464a6e6ce1d0948662"
+      },
+      "masterSha256": "87c7513770bfbca35ae410184cb1c05d5a6652804a9cae0085d1e5eb27ba93ac",
+      "effectivePromptSha256": "b17bb7a246fcd7b41eaa13e08640d26e85ce1590808e9bcdc5eca6a3873d5e82",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom10Gl",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-10ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343611748644",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom10Gl.377d2c05b0c1.webp",
+      "sha256": "377d2c05b0c1873952d01d50a0e606fe6db2e660d5e7675b71ab01a243ca36dc",
+      "bytes": 1405692,
+      "sourceFile": "GBAtom10Gl-candidate.png",
+      "sourceRenderSha256": "0ab499edf7359a4eeee24e34ff8d4943d4743d63906bbcc84eec113edfa68429",
+      "sourceBytes": 3244224,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 75
+      },
+      "inputSha256": {
+        "reference0": "c34d6b3683299d39e1fd173a5ac228ffbd488511bf80e92d8b34cf6551308113",
+        "reference1": "3a8822d8d836bba895b4a1d901e14c6cfbf4a5772d322768b66e6228d5e7a70f",
+        "reference2": "e1a8a1445abc523f37f594bbac26389aaada6f21e24dc341a6d83a0f32004503"
+      },
+      "masterSha256": "ef384580856454751d85118178e9d82e1710545c88bc3b07c781a54967b8ee4e",
+      "effectivePromptSha256": "fc621984936549e9c5eb92377cf0e2621039bcb979a897f3166ab090d7c2de50",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom10Gr",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-10ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343611781412",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom10Gr.520871bee6f9.webp",
+      "sha256": "520871bee6f9ba8e323d61c413ae7892ac4261ac77daeb497fa2886ee87f6eb0",
+      "bytes": 1344158,
+      "sourceFile": "GBAtom10Gr-candidate.png",
+      "sourceRenderSha256": "53cf4aa5d4ca3971df42d14cfc63837dcee7c280488e92efcb14202e7f5577e1",
+      "sourceBytes": 3120269,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 75
+      },
+      "inputSha256": {
+        "reference0": "f28979d78ba8671022042cfc40d476253f62303e655b5b6b7722b76588b0d2dd",
+        "reference1": "e835f4cfcd5da2d17df996b06d1fb6936d866b30e12466021a4ed9fb71116d7b",
+        "reference2": "62f99b06aa7e4eadedc558beea40a4ddd58a1bf7fa070d3f0d1de882dd0c8602"
+      },
+      "masterSha256": "0e53623bc2c5b6fddccbbb47a23b1e5f2f2c9ec133546050d3ee813815f31030",
+      "effectivePromptSha256": "885a8fc468c491337cc7e60cd7eb79054240c28437649680736ff7fa4ac5aeb5",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom10Lv",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-10ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343611814180",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom10Lv.d53040e9c645.webp",
+      "sha256": "d53040e9c645524d36acd339650eca4fee7f7de263d0ba8623fc348e429aef72",
+      "bytes": 1529458,
+      "sourceFile": "GBAtom10Lv-candidate.png",
+      "sourceRenderSha256": "568161309d5024cf50cd77634d0927b892a917cea618c6568d6d1bdca453354c",
+      "sourceBytes": 3625330,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 75
+      },
+      "inputSha256": {
+        "reference0": "b10e2702abc8ce47590b6f7f3d78cf72ee0ebe67925d02177306c10c8dac1fbe",
+        "reference1": "5d907793796f9fa8bdfd59930810b89eee8fc3b6f88f19dbb31e486a74c0563a",
+        "reference2": "eae83fa2ae17cf149231e0b0879bce756a9cacc32a2883df7b1174109d3b3c9b"
+      },
+      "masterSha256": "ae7d64500b0dc8771eb9ea4c7900d32fe74a58b0e6c931e61f29c921b8ad9db1",
+      "effectivePromptSha256": "7c00ad40db773418a524a4b3ecb20f7b350de5f53fd8d7badce534f7cb7f69d9",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom10Pnk",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-10ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343611846948",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom10Pnk.ec95469c94ed.webp",
+      "sha256": "ec95469c94edaceec68907b2197052f55a2522cdd368eaed3a985acf1ed17616",
+      "bytes": 1441992,
+      "sourceFile": "GBAtom10Pnk-candidate.png",
+      "sourceRenderSha256": "27208435a0f2187c2d2f11fff227dd00e334e7023f96232a776030feddcec303",
+      "sourceBytes": 3647737,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 75
+      },
+      "inputSha256": {
+        "reference0": "5afcb965c86fb65d693a648a6622fdb0e797619b36db9ac69036d3f36bd58f55",
+        "reference1": "cdd7f2333302425ea09a0739da6c3d3797bbd829773e9169144d939929cd9e5d",
+        "reference2": "e837572cdbd6883ccee3ea151469108444c865650c65a5a47de459da34282d02"
+      },
+      "masterSha256": "cd1e7ba006c32a5a4a4a7d41435ec9455d1c520b624c78a48af20ce264bd6745",
+      "effectivePromptSha256": "39de35d702c295b9a3b239f99304767873689c55c398dacaee346c812a166312",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom10Red",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-10ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343611879716",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom10Red.61e2d5d93695.webp",
+      "sha256": "61e2d5d936957889368780e00cc041702139f5c052ba4ede3667b377ac5528c6",
+      "bytes": 1403064,
+      "sourceFile": "GBAtom10Red-candidate.png",
+      "sourceRenderSha256": "139ba6df3a1a453ce35f893c05a821091a881ac981ca83d1670e4b182457fc34",
+      "sourceBytes": 3235966,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 75
+      },
+      "inputSha256": {
+        "reference0": "0d131e700a12f5dc7f5548d03400df880c1cebbbd20a77c7b64823b6700b5c4a",
+        "reference1": "0bf81b62576dd95b809d118e40f6719883af3e104c9bb83e1224f44f8e622679",
+        "reference2": "ebe4408e49014cf362df34a41376b3ea3de40b3992222e3dee14e99c13d49c7e"
+      },
+      "masterSha256": "f34487a6b8d5449269c41fc188779db495b68b48c9042a6afd2942bb20d73c45",
+      "effectivePromptSha256": "c07304b0fb3ce555b42d5137614fd018e4ea084c1cd9618ddcf6722990ea910c",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom10Sl",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-10ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343611912484",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom10Sl.45db1cb5f6ac.webp",
+      "sha256": "45db1cb5f6acdcd8418a5b6a823c220d86de19fefd090c4ec1169c142f86761d",
+      "bytes": 1410008,
+      "sourceFile": "GBAtom10Sl-candidate.png",
+      "sourceRenderSha256": "0b17eda48d750cc54437904f89f291512cf19cea3404a924c9ea10231beafdaf",
+      "sourceBytes": 3582098,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 75
+      },
+      "inputSha256": {
+        "reference0": "7654d773edc11de5baa339134ab192a9d24e54fc052c713d14e850b48d57c25a",
+        "reference1": "bbee7b457de9da914a6869b2bd74f6cae77964ef2aa6ec2410f094deb097db83",
+        "reference2": "174700923c5440ccacf4daebd5aed9c686997ac8c1f9143c55f9f5d8d52eb142"
+      },
+      "masterSha256": "da61c61fac726c5b94f9ea2ef0c3948cf37be6ff52c889c13211b8467346dff6",
+      "effectivePromptSha256": "e7641709e312171925759f7b41297fda48d736ebf41fc73e5d6af64a787e58cc",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom10SlDot",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-10ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343611945252",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom10SlDot.16f5f9069384.webp",
+      "sha256": "16f5f906938471ee526c1494f9e8e4e3eb9aadf8f55c01f2df452b1f36e67cbe",
+      "bytes": 1550020,
+      "sourceFile": "GBAtom10SlDot-candidate.png",
+      "sourceRenderSha256": "4243cbbe2afc27f93902038b5838c3ac1735f4e080f6afeecf763c3ca52ec220",
+      "sourceBytes": 3877083,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 75
+      },
+      "inputSha256": {
+        "reference0": "d3f1181198bb162efd293dca9030b0360adbd62451d1c628377f3c737f83058c",
+        "reference1": "e14a8e0a3ca6d7a6aa2687e6c0670180bf70a277f75fbc405d1155ed7709a044",
+        "reference2": "0f686ca988a93b00d926d9a7298318f8f586b4089bacc3f2b155a90fdecda8a0"
+      },
+      "masterSha256": "9a3415cf88804a096b74ce198c50fa4e5fcd5f5ce8b8b2d41049da4eb09880e9",
+      "effectivePromptSha256": "30e662cd094a5ea79318dc3f80adae5ee1f449b37525fc2ab5fc0f86e82edb63",
+      "correction": null
+    },
+    {
+      "sku": "GBAtom10SlStars",
+      "family": "Atomizer",
+      "groupSlug": "atomizer-10ml",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343611978020",
+      "url": "/images/catalog/next-four-approved-2026-09-24/GBAtom10SlStars.4c0af4634c3d.webp",
+      "sha256": "4c0af4634c3d6e2eab5ec73719bb53311247221e8c23e60bbc9243e2eb1fb501",
+      "bytes": 1590712,
+      "sourceFile": "GBAtom10SlStars-candidate.png",
+      "sourceRenderSha256": "7c9df93345484c178f8b8a0120f89dece26e640b14e287f5c01cab288c666342",
+      "sourceBytes": 3771073,
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "approvedFramingTarget": {
+        "baselinePct": 91,
+        "spanPct": 75
+      },
+      "inputSha256": {
+        "reference0": "769d44f12dc85ee9e5dbc3b1b6c3c2e953f93a4a1684b6e242f82b74fec5a052",
+        "reference1": "35b64059cae24a3f96a89f5b8ebeec51dcb2435deb7381f60587e2348d58b5df",
+        "reference2": "f26462c4c1a124c9cd060f439f7efcd56debef184a1d16f603d8929152a3d5c6"
+      },
+      "masterSha256": "814455990d6584ea40a07a3230af48ab5ee9b3130a989a8c7cc6d22e57e245e7",
+      "effectivePromptSha256": "a842412d8ac839184d50a2a8e797daf3d6b352ed578f8e56ddba90ac0a56372a",
+      "correction": null
+    }
+  ]
+}

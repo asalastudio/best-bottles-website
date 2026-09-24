@@ -1638,8 +1638,8 @@ export default function CatalogClient({
         [variantPreviewRows, filters.rollerMaterials],
     );
     const catalogHeroMap = useMemo(() => {
-        return new Map(visibleProducts.map((group) => [group._id, getCatalogHero(group.slug, variantSourceMap.get(group._id) ?? [])]));
-    }, [variantSourceMap, visibleProducts]);
+        return new Map(visibleProducts.map((group) => [group._id, getCatalogHero(group.slug, variantSourceMap.get(group._id) ?? [], filters.search)]));
+    }, [variantSourceMap, visibleProducts, filters.search]);
     const skuMap = useMemo(() => {
         const next = new Map<string, string>();
         const groupIds = new Set<string>();
