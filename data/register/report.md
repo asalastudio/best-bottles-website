@@ -5,7 +5,7 @@ Source: Convex dev export (2540 rows, collected 2026-09-25T06:24:53Z), PSD libra
 ## Totals
 
 - Bodies: **94 current** (3 retired-only) across 34 neck groups
-- Components: **136 current**, 24 retired, 16 quarantined; **125 current components have a library PSD** (16 via alias-map, 34 case-insensitive)
+- Components: **141 current**, 24 retired, 16 quarantined; **128 current components have a library PSD** (16 via alias-map, 34 case-insensitive)
 - Assemblies: **2016 verified**, **129 retired**, **110 candidate**, **55 quarantine**, **2 exception**
 - Quarantine rows: 120 (see quarantine.csv)
 
@@ -24,17 +24,17 @@ Source: Convex dev export (2540 rows, collected 2026-09-25T06:24:53Z), PSD libra
 | 10mm | 1 | 1 | 0 | 0 | 0 | 3 | 0 | 0 |
 | 11mm | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 0 |
 | 12mm | 2 | 1 | 0 | 0 | 4 | 0 | 0 | 0 |
-| 13-415 | 17 | 5 | 25 | 498 | 21 | 0 | 0 | 31 |
+| 13-415 | 17 | 5 | 27 | 498 | 21 | 0 | 0 | 31 |
 | 13-425 | 3 | 4 | 2 | 0 | 16 | 0 | 0 | 0 |
 | 13mm | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 |
 | 14.3mm | 2 | 1 | 0 | 0 | 2 | 0 | 0 | 0 |
 | 15-415 | 2 | 2 | 7 | 21 | 0 | 0 | 0 | 0 |
 | 16mm | 2 | 1 | 0 | 0 | 8 | 0 | 0 | 0 |
-| 17-415 | 2 | 5 | 20 | 144 | 2 | 0 | 0 | 2 |
+| 17-415 | 2 | 5 | 22 | 144 | 2 | 0 | 0 | 2 |
 | 17.52mm | 2 | 1 | 0 | 0 | 0 | 2 | 0 | 0 |
 | 17mm | 1 | 4 | 0 | 0 | 11 | 0 | 0 | 0 |
 | 18-400 | 2 | 3 | 8 | 17 | 1 | 0 | 0 | 0 |
-| 18-415 | 23 | 2 | 47 | 1225 | 38 | 0 | 2 | 94 |
+| 18-415 | 23 | 2 | 48 | 1225 | 38 | 0 | 2 | 94 |
 | 18mm | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 0 |
 | 20-400 | 2 | 3 | 20 | 107 | 0 | 0 | 0 | 0 |
 | 20-410 | 5 | 2 | 0 | 0 | 7 | 0 | 0 | 0 |
@@ -65,7 +65,7 @@ The matrices counted **Glass Bottle** records only; the register also carries at
 - ⚠️ 17-415: assemblies 146 vs matrix 145 — by body: cylinder-9ml-17-415 145, pillar-9ml-17-415 1
 - ⚠️ 18-415: glass body formats 23 vs matrix 22
 - ✅ 18-415: current bottle rows 1265 vs matrix 1265
-- ✅ 18-415: component records 64 vs matrix 64
+- ⚠️ 18-415: component records 65 vs matrix 64
   - the 23rd 18-415 body is `cylinder-30ml-18-415`: the two fixed-spray exception SKUs, which the matrix keeps in its dashed card
 - ✅ 20-400: bottles 107 vs matrix 107; components 20 vs 20
 - ✅ 16mm: assemblies 8 vs matrix 8 — by body: cylinder-28ml-16mm 4, cylinder-50ml-16mm 4
@@ -75,35 +75,32 @@ The matrices counted **Glass Bottle** records only; the register also carries at
 
 ## Component types by neck (current)
 
-| neck | cap | cap-review | dropper | faux-leather-cap | fine-mist-sprayer | lotion-pump | plug-applicator | review | roll-on-cap | tassel-bulb-sprayer | vintage-bulb-sprayer |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| 13-415 | 7 |  |  |  | 5 |  |  |  | 13 |  |  |
-| 13-425 | 2 |  |  |  |  |  |  |  |  |  |  |
-| 15-415 |  |  |  |  | 4 |  |  |  | 2 | 1 |  |
-| 17-415 |  |  | 1 |  | 5 |  |  |  | 13 | 1 |  |
-| 18-400 | 2 |  | 6 |  |  |  |  |  |  |  |  |
-| 18-415 | 6 |  | 3 | 5 | 7 | 7 |  |  |  | 11 | 8 |
-| 20-400 | 2 |  | 12 |  |  |  |  |  | 6 |  |  |
-| 22-400 | 1 |  |  |  |  |  |  |  |  |  |  |
-| 24-400 | 1 |  |  |  |  |  |  |  |  |  |  |
-| 8-425 | 5 |  |  |  |  |  |  |  |  |  |  |
+| neck | cap | cap-review | dropper | faux-leather-cap | fine-mist-sprayer | lotion-pump | plug-applicator | reducer | review | roll-on-cap | roller-insert | tassel-bulb-sprayer | vintage-bulb-sprayer |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 13-415 | 7 |  |  |  | 5 |  |  |  |  | 13 | 2 |  |  |
+| 13-425 | 2 |  |  |  |  |  |  |  |  |  |  |  |  |
+| 15-415 |  |  |  |  | 5 |  |  |  |  | 2 |  |  |  |
+| 17-415 |  |  | 1 |  | 6 | 3 |  |  |  | 10 | 2 |  |  |
+| 18-400 | 2 |  | 6 |  |  |  |  |  |  |  |  |  |  |
+| 18-415 | 6 |  | 3 | 5 | 8 | 7 |  | 1 |  |  |  | 9 | 9 |
+| 20-400 | 2 |  | 12 |  |  |  |  |  |  | 6 |  |  |  |
+| 22-400 | 1 |  |  |  |  |  |  |  |  |  |  |  |  |
+| 24-400 | 1 |  |  |  |  |  |  |  |  |  |  |  |  |
+| 8-425 | 5 |  |  |  |  |  |  |  |  |  |  |  |  |
 
-## Library gaps — 11 current components with no PSD in 20. Caps / 21. Tassels
+## Library gaps — 13 current components with no PSD in 20. Caps / 21. Tassels
 
 - **13-415** (4): 13-415CAP4SpryCuMt [fine-mist-sprayer], 13-415CAP4SpryGlSh [fine-mist-sprayer], 13-415CAP4SprySlMt [fine-mist-sprayer], GBATom5RedBurg [fine-mist-sprayer]
 - **13-425** (2): CP13-425Blk [cap], CP13-425Wht [cap]
-- **17-415** (1): Droppers1ozElg [dropper]
+- **17-415** (3): Droppers1ozElg [dropper], LIB-17-415-MtlRollon [roller-insert], LIB-17-415-PlsticRollon [roller-insert]
 - **18-415** (2): 18-415CAP4SpryMtGl [fine-mist-sprayer], 18-415CAP4SpryShnBlk [fine-mist-sprayer]
 - **22-400** (1): CapBlackPoly22mm-400 [cap]
 - **24-400** (1): CP24-400BlkPls [cap]
 
-## Library PSDs that no component record claims — 13 stems in 20. Caps
+## Library PSDs that no component record claims — 10 stems in 20. Caps
 
 - **21. Hearts 8-245 Caps**: CP8-425BluTslShortSilverCap, CP8-425GlChainShortShnGlCap, CP8-425SlChainShortShnSlCap, CP8-425RedTslShortShnGlCap
 - **22. Vials Wand**: VialWandBlk, VialWandClr
-- **23. 18-415 Reducer**: 415Reducer
-- **24. 13-415 Roll on**: 13-415PlsticRollon
-- **25. 13-415  Metal Roll on**: 13-415MtlRollon
 - **28. 14.3 Cap**: CP14mmAppShnSlBlueDot, CP14mmAppShnGlRedDot
 - **6. 18-415 Caps**: CP18-415ShnBlk
 - **8. 18-415 Lotion**: Ltn18-415SqClr
@@ -112,6 +109,23 @@ The matrices counted **Glass Bottle** records only; the register also carries at
 
 | Convex websiteSku | library stem | folder(s) | match |
 |---|---|---|---|
+
+## Own-part builds — rules written for 17-415 (the pilot neck)
+
+Each sellable assembly names the parts it is physically made of (`buildParts`), matched uniquely on neck, component type, cap colour and dotted/plain. Roller balls add the neck's roller insert. A row that does not match exactly one part stays `unresolved` with the reason; nothing is guessed (Jordan 2026-09-25: wording errors wait for Convex corrections).
+
+| body | resolved | partial | unresolved |
+|---|---|---|---|
+| cylinder-9ml-17-415 | 126 | 0 | 19 |
+| pillar-9ml-17-415 | 1 | 0 | 0 |
+
+Unresolved, by reason (Convex corrections):
+
+- **10** — capColor 'Clear' repeats a glass colour; the Convex row needs its real cap colour: GBCyl9SpryBlk, GBCyl9SpryGl, GBCyl9SpryMattSl, GBCyl9SpryRd, GBCyl9SpryShSl, GBCyl9SpryTur, GBCylSwrl9SpryTur, LBCyl9LtnBlk, LBCyl9LtnGl, LBCyl9LtnMtSl
+- **3** — no current 17-415 fine-mist-sprayer matches capColor 'Turquoise' with capStyle 'Spray': GBCylAmb9SpryTur, GBCylBlu9SpryTur, GBCylFrst9SpryTur
+- **2** — no current 17-415 roll-on-cap matches capColor 'Black with Dots' with capStyle 'Tall': GBCyl9MtlRollBlkDot, GBCyl9RollBlkDot
+- **2** — no current 17-415 roll-on-cap matches capColor 'Pink with Dots' with capStyle 'Tall': GBCyl9MtlRollPnkDot, GBCyl9RollPnkDot
+- **2** — no current 17-415 roll-on-cap matches capColor 'Silver with Dots' with capStyle 'Tall': GBCyl9MtlRollSlDot, GBCyl9RollSlDot
 
 ## Catalogue data defects the register surfaced (Convex, not code)
 
@@ -143,6 +157,6 @@ The matrices counted **Glass Bottle** records only; the register also carries at
 ## Keys
 
 - `bodyId` = `[shape-]profile-<capacity>ml-<neck>` (profile from productGroupSlug, else family); `builderBodyId` mirrors `builderBodyIdentity()` in src/lib/bottle-builder/model.ts.
-- Components and assemblies are keyed by **graceSku**; `websiteSku` is carried as the legacy alias.
+- Components and assemblies are keyed by **graceSku**; `websiteSku` is carried as the legacy alias. Parts that are not products are keyed `LIB-<neck>-<name>` (`componentId`, `sellable` false).
 - Component `status`: current | retired | quarantine. Assembly `status`: verified | candidate | exception | quarantine | retired.
 - Nothing in Convex, Shopify or the website was changed. Rebuild: `python3 scripts/register/build_register.py`.
