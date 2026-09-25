@@ -1,0 +1,41 @@
+{
+  "preparedAt": "2026-09-23T21:36:40.359313+00:00",
+  "groups": [
+    {
+      "family": "Circle",
+      "finish": "Clear",
+      "sku": "GBCrcl30GlCap",
+      "currentAssemblyRecords": 7,
+      "heightWithoutCap": "74 \u00b11 mm",
+      "widthMm": 60.0,
+      "depthMm": 20.0,
+      "sourceUrl": "https://www.bestbottles.com/product/circle-design-30-ml-clear-glass-bottle-shiny-gold-cap",
+      "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/circle-30ml-clear-15-415/GBCrcl30GlCap/6dbf6b411664eca2428b85fd229571f2d00205db86c417dec6e8ae88af64e2b5.front-off-1000x1100.webp",
+      "imageFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/outputs/neck-thread-15-415-2026-09-23/body-references/GBCrcl30GlCap.webp"
+    },
+    {
+      "family": "Elegant",
+      "finish": "Clear",
+      "sku": "GBElg30GlCap",
+      "currentAssemblyRecords": 7,
+      "heightWithoutCap": "75 \u00b11 mm",
+      "widthMm": 44.0,
+      "depthMm": 22.0,
+      "sourceUrl": "https://www.bestbottles.com/product/elegant-design-30-ml-clear-glass-bottle-shiny-gold-cap",
+      "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/elegant-30ml-clear-15-415/GBElg30GlCap/44bb02c3c4cca2caaa94be9eeed1f45331169f7fd1108f6e69ffde39b2631206.front-off-1000x1100.webp",
+      "imageFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/outputs/neck-thread-15-415-2026-09-23/body-references/GBElg30GlCap.webp"
+    },
+    {
+      "family": "Elegant",
+      "finish": "Frosted",
+      "sku": "GBElgFrst30GlCap",
+      "currentAssemblyRecords": 7,
+      "heightWithoutCap": "75 \u00b11 mm",
+      "widthMm": 44.0,
+      "depthMm": 22.0,
+      "sourceUrl": "https://www.bestbottles.com/product/elegant-design-30-ml-frosted-glass-bottle-shiny-gold-cap",
+      "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/elegant-30ml-frosted-15-415/GBElgFrst30GlCap/2566874a8ffec9ecefa98607b96525b44b1d1d0022cba9533ac3ca98266c6768.front-off-1000x1100.webp",
+      "imageFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/outputs/neck-thread-15-415-2026-09-23/body-references/GBElgFrst30GlCap.webp"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+websiteSku,graceSku,type,neck,candidateStem,candidateFolders,match,similarity,status
+CP13-415SpryBlkMt,CMP-CAP-BLK-13-415-01,cap,13-415,Spry13-415BlkMt,18. 13-415 Sprayers,tokens-equal,1.0,needs-jordan-confirmation
+CP13-415SpryBlkMt,CMP-CAP-BLK-13-415-01,cap,13-415,Spry13-415BluMt,18. 13-415 Sprayers,similar,0.944,needs-jordan-confirmation
+CP13-415SpryBlkSh,CMP-CAP-BLK-13-415-02,cap,13-415,Spry13-415BlkSh,18. 13-415 Sprayers,tokens-equal,1.0,needs-jordan-confirmation
+CP13-415SpryBlkSh,CMP-CAP-BLK-13-415-02,cap,13-415,Spry13-415GlSh,18. 13-415 Sprayers,similar,0.914,needs-jordan-confirmation
+CP13-415SpryBluMt,CMP-CAP-13-415,cap,13-415,Spry13-415BluMt,18. 13-415 Sprayers,tokens-equal,1.0,needs-jordan-confirmation
+CP13-415SpryBluMt,CMP-CAP-13-415,cap,13-415,Spry13-415BlkMt,18. 13-415 Sprayers,similar,0.944,needs-jordan-confirmation
+CP13-415SpryGlMt,CMP-CAP-SGLD-13-415-02,cap,13-415,Spry13-415GlMt,18. 13-415 Sprayers,tokens-equal,1.0,needs-jordan-confirmation
+CP13-415SpryGlMt,CMP-CAP-SGLD-13-415-02,cap,13-415,Spry13-415BlkMt,18. 13-415 Sprayers,similar,0.914,needs-jordan-confirmation
+CP13-415SpryGlSh,CMP-CAP-SGLD-13-415-03,cap,13-415,Spry13-415GlSh,18. 13-415 Sprayers,tokens-equal,1.0,needs-jordan-confirmation
+CP13-415SpryGlSh,CMP-CAP-SGLD-13-415-03,cap,13-415,Spry13-415BlkSh,18. 13-415 Sprayers,similar,0.914,needs-jordan-confirmation
+CP13-415SprySlMt,CMP-CAP-SLV-13-415-02,cap,13-415,Spry13-415SlMt,18. 13-415 Sprayers,tokens-equal,1.0,needs-jordan-confirmation
+CP13-415SprySlMt,CMP-CAP-SLV-13-415-02,cap,13-415,Spry13-415SlSh,18. 13-415 Sprayers,similar,0.882,needs-jordan-confirmation
+CP13-415SprySlSh,CMP-CAP-SLV-13-415-03,cap,13-415,Spry13-415SlSh,18. 13-415 Sprayers,tokens-equal,1.0,needs-jordan-confirmation
+CP13-415SprySlSh,CMP-CAP-SLV-13-415-03,cap,13-415,Spry13-415SlMt,18. 13-415 Sprayers,similar,0.882,needs-jordan-confirmation
+13-415CAP4SpryCuMt,CMP-SPR-MTCP-13-415-01,fine-mist-sprayer,13-415,Spry13-415CuMt,18. 13-415 Sprayers,similar,0.85,needs-jordan-confirmation
+13-415CAP4SpryGlSh,CMP-SPR-SHGD-13-415-01,fine-mist-sprayer,13-415,Spry13-415GlSh,18. 13-415 Sprayers,similar,0.85,needs-jordan-confirmation
+13-415CAP4SprySlMt,CMP-SPR-MTSL-13-415-01,fine-mist-sprayer,13-415,Spry13-415SlMt,18. 13-415 Sprayers,similar,0.85,needs-jordan-confirmation
+13-415CAP4SprySlMt,CMP-SPR-MTSL-13-415-01,fine-mist-sprayer,13-415,Spry13-415CuMt,18. 13-415 Sprayers,similar,0.8,needs-jordan-confirmation
+CP13-415SpryCuMt,CMP-SPR-MTCP-13-415-07,fine-mist-sprayer,13-415,Spry13-415CuMt,18. 13-415 Sprayers,tokens-equal,1.0,needs-jordan-confirmation
+CP13-415SpryCuMt,CMP-SPR-MTCP-13-415-07,fine-mist-sprayer,13-415,Spry13-415BluMt,18. 13-415 Sprayers,similar,0.914,needs-jordan-confirmation
+18-400CpAppBlk,CMP-APP-BLK-18-400,cap,18-400,CP18-400AppBlk,27. 18-400 Cap with Wand,similar,0.903,needs-jordan-confirmation
+18-400CpShortBlk,CMP-CAP-BLK-18-400,cap,18-400,CP18-400ShortBlk,26. 18-400 Cap,similar,0.914,needs-jordan-confirmation
+18-415CAP4SpryMtGl,CMP-SPR-MTGD-18-415-01,fine-mist-sprayer,18-415,Spry13-415GlMt,18. 13-415 Sprayers,similar,0.8,needs-jordan-confirmation
+CP18-415AnSpPnk,CMP-CAP-PNK-18-415,vintage-bulb-sprayer,18-415,Ansp18-415Pnk,9. 18-415 Ansp,similar,0.839,needs-jordan-confirmation
+CP18-415AnSpTslGl,CMP-SPR-GLD-18415-TSL,tassel-bulb-sprayer,18-415,AnspTsl18-415Gl,10. 18-415 Ansp Tsl,similar,0.865,needs-jordan-confirmation
+20-400Cp2ozShortBlk,CMP-CAP-BLK-20-400-2OZ,cap,20-400,CP20-4002ozShortBlk,2. 20-400  Cap | 5. 18-400 Cap,similar,0.864,needs-jordan-confirmation
+20-400Cp2ozShortBlk,CMP-CAP-BLK-20-400-2OZ,cap,20-400,CP20-4001ozShortBlk,2. 20-400  Cap,similar,0.864,needs-jordan-confirmation
+20-400cp1ozShortBlk,CMP-CAP-BLK-20-400-1OZ,cap,20-400,CP20-4002ozShortBlk,2. 20-400  Cap | 5. 18-400 Cap,similar,0.864,needs-jordan-confirmation
+20-400cp1ozShortBlk,CMP-CAP-BLK-20-400-1OZ,cap,20-400,CP20-4001ozShortBlk,2. 20-400  Cap,similar,0.864,needs-jordan-confirmation
+8-425CpShortBlack,CMP-CAP-BLK-8-425,cap,8-425,CP8-425ShortBlack,20.  8-245 Caps | 21. Hearts 8-245 Caps,similar,0.919,needs-jordan-confirmation
+8-425CpShortWhite,CMP-CAP-WHT-8-425,cap,8-425,CP8-425ShortWhite,20.  8-245 Caps,similar,0.919,needs-jordan-confirmation
