@@ -416,11 +416,24 @@
     gap: 6px;
     padding: 8px 0 6px;
     min-height: 44px;
-    transition: background-color .2s;
+    border: 1px solid transparent;
+    transition: border-color .2s;
 }
 
+/* The chosen glass wears a hairline square, never a filled box (Jordan 2026-09-25). */
 .glassButton[aria-pressed="true"] {
-    background: #fff;
+    border-color: var(--pdp-ink);
+}
+
+/* A glass with nothing in stock: a dotted hairline, whether or not it is the one on the canvas. */
+.glassButton[data-unavailable="true"] {
+    border-style: dotted;
+    border-color: var(--pdp-ink);
+    opacity: .55;
+}
+
+.glassButton[data-unavailable="true"][aria-pressed="true"] {
+    opacity: .8;
 }
 
 .glassName {

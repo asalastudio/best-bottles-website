@@ -242,3 +242,6 @@ public/local-kits/
 
 # Convex export the PDP description generator reads; scripts/pdp-descriptions/export-catalog-facts.mjs recreates it
 data/descriptions/pdp/catalog-facts.json
+
+# Register plate re-renders (Sunburst candidates, fitted finals, review sheets); regenerable
+/output/register-plates/

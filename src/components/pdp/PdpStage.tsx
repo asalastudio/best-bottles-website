@@ -40,6 +40,8 @@ export type GlassLineupItem = {
     label: string;
     active: boolean;
     kit: KitLike | null;
+    /** Nothing of this glass is in stock or sellable online. */
+    unavailable?: boolean;
 };
 
 export type PdpStageProps = {
@@ -61,8 +63,8 @@ export type PdpStageProps = {
     activeGlassLabel: string;
 };
 
-/** Two callout labels need this much of the stage's height between their anchors (a three-line label in a ~560 px stage). */
-const CALLOUT_MIN_GAP_PCT = 8.5;
+/** Two callout labels need this much of the stage's height between their anchors (a three-line label is ~48 px in a ~560 px stage, plus breathing room). */
+const CALLOUT_MIN_GAP_PCT = 10;
 
 /** The mobile layout (option 4a) applies below 900px; thumbnails shrink with it. */
 export function useIsPdpMobile(): boolean {
@@ -278,6 +280,8 @@ export default function PdpStage({
                                 aria-pressed={glass.active}
                                 onClick={() => onGlassPick(glass.slug)}
                                 data-glass-slug={glass.slug}
+                                data-unavailable={glass.unavailable ? "true" : undefined}
+                                title={glass.unavailable ? `${glass.label}: out of stock` : undefined}
                             >
                                 {body && glass.kit
                                     ? <PdpKitPartImage part={body} canvas={glass.kit.canvas} height={glassThumbHeight} />

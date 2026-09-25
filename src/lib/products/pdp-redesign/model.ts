@@ -48,6 +48,8 @@ export type SiblingGlassGroup = {
     primaryGraceSku?: string | null;
     /** SKUs whose published kit can lend the bare body layer for the glass lineup. */
     bodyCandidates?: Array<{ websiteSku: string | null; graceSku: string | null }>;
+    /** False when none of the sibling's SKUs is in stock and sellable online (the lineup draws it dotted). */
+    inStock?: boolean;
 };
 
 export function slugifyPick(value: string): string {

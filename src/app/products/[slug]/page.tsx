@@ -40,6 +40,7 @@ import { resolveItemDescriptions } from "@/lib/products/item-description/resolve
 import { collectionDescription, collectionFor, derivePicks, resolveVariant, type SiblingGlassGroup } from "@/lib/products/pdp-redesign/model";
 import type { KitLike } from "@/lib/products/pdp-redesign/stage";
 import { loadRegisterKits } from "@/lib/register/load";
+import { isSoldOutStockStatus } from "@/lib/checkout";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -171,6 +172,7 @@ async function loadRedesignPayload(
                 primaryWebsiteSku: primary?.websiteSku ?? payload?.group.primaryWebsiteSku ?? null,
                 primaryGraceSku: primary?.graceSku ?? payload?.group.primaryGraceSku ?? null,
                 bodyCandidates: candidates.map((variant) => ({ websiteSku: variant.websiteSku ?? null, graceSku: variant.graceSku ?? null })),
+                inStock: variants.some((variant) => !isSoldOutStockStatus(variant.stockStatus) && variant.shopifySellable !== false),
             };
         } catch {
             return { slug: sibling.slug, color: sibling.color, displayName: sibling.displayName };

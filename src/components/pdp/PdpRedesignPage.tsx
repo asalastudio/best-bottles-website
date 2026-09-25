@@ -316,7 +316,12 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                         }))}
                         activeCapId={activeCap?.id ?? null}
                         onCapPick={onCapPick}
-                        glasses={glasses.map((glass) => ({ slug: glass.slug, label: glass.label, active: glass.active, kit: glassBodyKit(glass.slug) }))}
+                        glasses={glasses.map((glass) => ({
+                            slug: glass.slug, label: glass.label, active: glass.active, kit: glassBodyKit(glass.slug),
+                            unavailable: glass.active
+                                ? variants.every((variant) => isSoldOutStockStatus(variant.stockStatus) || variant.shopifySellable === false)
+                                : siblings.find((sibling) => sibling.slug === glass.slug)?.inStock === false,
+                        }))}
                         onGlassPick={onGlassPick}
                         activeCapName={capName}
                         activeGlassLabel={activeGlass?.label ?? glassLabel(group.color)}
