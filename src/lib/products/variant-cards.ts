@@ -88,7 +88,7 @@ export function atomizerVariantCardName(capacityMl: number | null | undefined, v
     return `${size}${finish}${slim ? " Slim" : ""} Atomizer${pattern}`;
 }
 
-type StagePlate = { image: string; imageCapOff: string | null; thumb?: string; thumbCapOff?: string | null };
+type StagePlate = { image: string; imageCapOff: string | null; thumb?: string; thumbCapOff?: string | null; heroStage?: boolean };
 
 /**
  * The PDP stage for a variant-card family shows the same released hero as the
@@ -108,7 +108,7 @@ export function withReleasedHeroStages<P extends StagePlate>(
         next ??= { ...plates };
         for (const key of [variant.graceSku, variant.websiteSku]) {
             if (!key) continue;
-            next[key] = { ...plates[key], image: hero.url, imageCapOff: null };
+            next[key] = { ...plates[key], image: hero.url, imageCapOff: null, heroStage: true };
         }
     }
     return next ?? plates;

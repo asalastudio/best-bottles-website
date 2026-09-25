@@ -545,6 +545,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
 
             <MobileProductHero
                 hasCapOffPlate={Boolean(shownPlate?.imageCapOff)}
+                heroStage={Boolean(shownPlate?.heroStage) && decodedPlate.url === shownPlate?.image}
                 ref={heroRef}
                 plateUrl={decodedPlate.url}
                 kitParts={reviewingComponents || pilot || preferKitPair ? kitPartsWithCap : decodedPlate.url && decodedPlate.url === (viewMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : kitPartsWithCap}
