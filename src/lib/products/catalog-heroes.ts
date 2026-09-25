@@ -19,11 +19,6 @@ export function isCatalogHeroPilotEnabled(): boolean {
     return ["cylinder-2026-09-22", "families-2026-09-22"].includes(process.env.NEXT_PUBLIC_CATALOG_HERO_PILOT ?? "");
 }
 
-function isPilotHero(hero?: CatalogHero | null): boolean {
-    const candidate = hero && activePilotRows().find(row => row.websiteSku === hero.websiteSku);
-    return Boolean(isCatalogHeroPilotEnabled() && candidate && candidate.url === hero?.url
-        && candidate.groupSlug === hero?.groupSlug);
-}
 const bySku = new Map(heroRows.map(hero => [hero.websiteSku, hero]));
 const byGroup = new Map<string, CatalogHero[]>();
 for (const hero of heroRows) byGroup.set(hero.groupSlug, [...(byGroup.get(hero.groupSlug) ?? []), hero]);
@@ -32,7 +27,20 @@ for (const hero of heroRows) byGroup.set(hero.groupSlug, [...(byGroup.get(hero.g
 // the applicator-qualified slug. Both identify the same exact 30 ml assembly.
 const verifiedGroupAliases: Readonly<Record<string, string>> = {
     "cylinder-30ml-clear-18-415": "cylinder-30ml-clear-18-415-finemist",
+    // Production's 2026-09-20 Shopify webhook split the three 5 ml Slim atomizers
+    // into this group; their approved heroes are recorded under atomizer-5ml.
+    "atomizer-5ml-slim": "atomizer-5ml",
 };
+
+function resolveGroupSlug(groupSlug: string): string {
+    return verifiedGroupAliases[groupSlug] ?? groupSlug;
+}
+
+function isPilotHero(hero?: CatalogHero | null): boolean {
+    const candidate = hero && activePilotRows().find(row => row.websiteSku === hero.websiteSku);
+    return Boolean(isCatalogHeroPilotEnabled() && candidate && candidate.url === hero?.url
+        && hero && candidate.groupSlug === resolveGroupSlug(hero.groupSlug));
+}
 
 /** Exact SKU lookup only: never borrow another finish or applicator's photo. */
 export function getProductHero(websiteSku?: string | null): CatalogHero | null {
@@ -40,9 +48,17 @@ export function getProductHero(websiteSku?: string | null): CatalogHero | null {
     return (isCatalogHeroPilotEnabled() ? activePilotRows().find(row => row.websiteSku === websiteSku) : null) ?? bySku.get(websiteSku) ?? null;
 }
 
+/** A released Sunburst hero for exactly this SKU in this group; never an older bone-review photo. */
+export function getReleasedCatalogHero(groupSlug: string, websiteSku?: string | null): CatalogHero | null {
+    if (!websiteSku || !isCatalogHeroPilotEnabled()) return null;
+    const resolvedSlug = resolveGroupSlug(groupSlug);
+    const row = activePilotRows().find(candidate => candidate.groupSlug === resolvedSlug && candidate.websiteSku === websiteSku);
+    return row ? { ...row, groupSlug } : null;
+}
+
 /** Only select an assembly still present in the filtered catalog result. */
 export function getCatalogHero(groupSlug: string, variants: readonly { websiteSku?: string | null }[], preferredWebsiteSku?: string | null): CatalogHero | null {
-    const resolvedSlug = verifiedGroupAliases[groupSlug] ?? groupSlug;
+    const resolvedSlug = resolveGroupSlug(groupSlug);
     const eligible = isCatalogHeroPilotEnabled() ? activePilotRows().filter(candidate =>
         candidate.groupSlug === resolvedSlug && variants.some(variant => variant.websiteSku === candidate.websiteSku),
     ) : [];
