@@ -1,0 +1,1660 @@
+/*
+ * Product Detail Page, design handoff option 3a (desktop) and 4a (mobile).
+ * Fidelity high: the values below are the handoff's, in px. Radius 0 everywhere
+ * except swatch dots and the roller ball. The mobile layout applies below 900px.
+ */
+
+.page {
+    --pdp-ink: #1c1c1e;
+    --pdp-page: #faf9f7;
+    --pdp-canvas: #f1ede6;
+    --pdp-card: #fff;
+    --pdp-border: #e6dccd;
+    --pdp-border-soft: #ece6dc;
+    --pdp-border-strong: #d9cdb9;
+    --pdp-divider: #e3dccf;
+    --pdp-switch-border: #cfc3ae;
+    --pdp-gold: #9a7a48;
+    --pdp-secondary: #5d6b7e;
+    --pdp-muted: #8a93a0;
+    --pdp-body: #4d5767;
+    --pdp-green: #4f8a5b;
+    --pdp-tile: #f8f6f2;
+    --pdp-panel: #f4f2ee;
+    --pdp-hover: #f1ebe0;
+    --pdp-baseline: #ddd3c3;
+    --pdp-grid: #f7f4ee;
+    --pdp-ease: cubic-bezier(.2, .7, .2, 1);
+    background: var(--pdp-page);
+    color: var(--pdp-ink);
+    font-family: var(--font-brand);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+.page :where(button) {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    text-align: inherit;
+}
+
+.page :where(button):focus-visible,
+.page :where(a):focus-visible {
+    outline: 2px solid var(--pdp-ink);
+    outline-offset: 2px;
+}
+
+.breadcrumb {
+    padding: 14px 40px;
+    font-size: 12px;
+    color: var(--pdp-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: var(--pdp-ink);
+}
+
+.breadcrumbCurrent {
+    color: var(--pdp-ink);
+}
+
+/* ── layout ────────────────────────────────────────────────────────────── */
+
+.grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 480px;
+    gap: 40px;
+    padding: 0 40px 40px;
+    align-items: start;
+}
+
+/* ── canvas ────────────────────────────────────────────────────────────── */
+
+.canvas {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    grid-template-areas:
+        "head head"
+        "rail stage"
+        "lineup lineup";
+    background: var(--pdp-canvas);
+}
+
+.canvasHead {
+    grid-area: head;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px 0;
+}
+
+.pickLine {
+    font-size: 11px;
+    letter-spacing: .14em;
+    color: var(--pdp-secondary);
+    white-space: nowrap;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+}
+
+.viewSwitch {
+    display: flex;
+    border: 1px solid var(--pdp-switch-border);
+    flex: none;
+}
+
+.viewButton {
+    font-size: 11px;
+    letter-spacing: .12em;
+    padding: 6px 12px;
+    white-space: nowrap;
+    min-height: 30px;
+    transition: background-color .2s, color .2s;
+}
+
+.viewButton[aria-pressed="true"] {
+    background: var(--pdp-ink);
+    color: #fff;
+}
+
+.viewButton:disabled {
+    color: var(--pdp-muted);
+    cursor: not-allowed;
+}
+
+.rail {
+    grid-area: rail;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 0 0;
+    border-right: 1px solid var(--pdp-divider);
+    max-height: 540px;
+    min-height: 0;
+}
+
+/* The scrolling part of the rail: caps run down beside the stage, across under it on mobile. */
+.railTrack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding-bottom: 10px;
+    min-height: 0;
+    width: 100%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+}
+
+.railLabel {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .16em;
+    color: var(--pdp-gold);
+    margin-bottom: 4px;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.railLabelMobile {
+    display: none;
+}
+
+.railButton {
+    width: 64px;
+    height: 56px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-bottom: 2px solid transparent;
+    opacity: .6;
+    transition: opacity .2s, border-color .2s;
+}
+
+.railButton:hover,
+.railButton[aria-pressed="true"] {
+    opacity: 1;
+}
+
+.railButton[aria-pressed="true"] {
+    border-bottom-color: var(--pdp-ink);
+}
+
+.railButton[data-unavailable="true"] {
+    opacity: .3;
+}
+
+.railSwatch {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .15);
+    margin-bottom: 9px;
+}
+
+.stage {
+    grid-area: stage;
+    position: relative;
+    overflow: hidden;
+    margin-left: 1px;
+    height: 540px;
+    container-type: size;
+}
+
+.stageGrid {
+    position: absolute;
+    inset: 0;
+    background-color: var(--pdp-grid);
+    background-image:
+        linear-gradient(rgba(154, 122, 72, .14) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(154, 122, 72, .14) 1px, transparent 1px),
+        linear-gradient(rgba(154, 122, 72, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(154, 122, 72, .05) 1px, transparent 1px);
+    background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.stageGrid[data-on="true"] {
+    opacity: 1;
+}
+
+.stageBaseline {
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    bottom: 38px;
+    border-top: 1px solid var(--pdp-baseline);
+    opacity: 1;
+    transition: opacity .4s;
+}
+
+.stageBaseline[data-on="false"] {
+    opacity: 0;
+}
+
+/* The 10:11 plate canvas, centred in whatever box the stage gives it. */
+.stageCanvasHost {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+}
+
+.stageCanvas {
+    position: relative;
+    width: min(100cqw, calc(100cqh * 10 / 11));
+    height: min(100cqh, calc(100cqw * 11 / 10));
+}
+
+.stageFrame {
+    position: absolute;
+    inset: 0;
+    transform-origin: 0 0;
+    transition: transform .6s var(--pdp-ease);
+}
+
+.stagePart {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform .6s var(--pdp-ease), opacity .3s;
+    pointer-events: none;
+    user-select: none;
+}
+
+.stageFallback {
+    position: absolute;
+    inset: 24px 24px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stageFallback img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.stageEmpty {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-size: 11px;
+    letter-spacing: .14em;
+    color: var(--pdp-muted);
+    text-transform: uppercase;
+}
+
+/* ── callouts ───────────────────────────────────────────────────────────── */
+
+.callouts {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(16px);
+    transition: opacity .4s .2s, transform .5s .2s;
+}
+
+.callouts[data-on="true"] {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.callout {
+    position: absolute;
+    right: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.calloutDot {
+    flex: none;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--pdp-gold);
+    margin-top: 6px;
+}
+
+.calloutLeader {
+    flex: 1;
+    border-top: 1px dashed var(--pdp-gold);
+    margin-top: 8px;
+}
+
+.calloutLabel {
+    flex: none;
+    width: 150px;
+    font-size: 11px;
+    line-height: 1.45;
+    color: var(--pdp-body);
+    padding-top: 1px;
+}
+
+.calloutLabel b {
+    color: var(--pdp-ink);
+    display: block;
+    font-size: 10px;
+    letter-spacing: .14em;
+    font-weight: 600;
+}
+
+/* ── glass lineup ───────────────────────────────────────────────────────── */
+
+.lineup {
+    grid-area: lineup;
+    border-top: 1px solid var(--pdp-divider);
+    padding: 14px 20px 16px;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.lineupLabel {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .16em;
+    color: var(--pdp-gold);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    align-self: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.lineupGrid {
+    flex: 1;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    gap: 8px;
+}
+
+.glassButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 0 6px;
+    min-height: 44px;
+    transition: background-color .2s;
+}
+
+.glassButton[aria-pressed="true"] {
+    background: #fff;
+}
+
+.glassName {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.glassButton[aria-pressed="true"] .glassName {
+    font-weight: 600;
+}
+
+.glassTile {
+    width: 40px;
+    height: 96px;
+    border-radius: 2px;
+}
+
+/* ── buy column ─────────────────────────────────────────────────────────── */
+
+.buy {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
+}
+
+.titleBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .2em;
+    color: var(--pdp-gold);
+    text-transform: uppercase;
+}
+
+.title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.25;
+    text-wrap: pretty;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--pdp-secondary);
+}
+
+.statusDot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--pdp-green);
+    flex: none;
+}
+
+.statusDot[data-out="true"] {
+    background: var(--pdp-muted);
+}
+
+.buyBox {
+    background: var(--pdp-card);
+    border: 1px solid var(--pdp-border);
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.selectionRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.swatchDot {
+    width: 26px;
+    height: 26px;
+    flex: none;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .15);
+    background-size: cover;
+    background-position: center;
+}
+
+.selectionName {
+    font-size: 13px;
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.selectionHint {
+    font-size: 11px;
+    color: var(--pdp-muted);
+    white-space: nowrap;
+}
+
+.rollerToggle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid var(--pdp-border-strong);
+}
+
+.rollerButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+    min-height: 44px;
+    transition: background-color .2s, color .2s;
+}
+
+.rollerButton[aria-pressed="true"] {
+    background: var(--pdp-ink);
+    color: #fff;
+}
+
+.rollerPrice {
+    opacity: .7;
+}
+
+.qtyRow {
+    display: flex;
+    gap: 8px;
+}
+
+.packWrap {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+}
+
+.packButton {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--pdp-border-strong);
+    background: #fff;
+    height: 40px;
+    padding: 0 12px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.packButton span:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.packButton:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.packChevron {
+    font-size: 11px;
+    color: var(--pdp-secondary);
+}
+
+.packMenu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 5;
+    background: #fff;
+    border: 1px solid var(--pdp-ink);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+}
+
+.packOption {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 9px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+    min-height: 44px;
+    align-items: center;
+}
+
+.packOption:hover,
+.packOption:focus-visible {
+    background: var(--pdp-hover);
+    color: var(--pdp-ink);
+    outline-offset: -3px;
+}
+
+.packOption[aria-selected="true"] {
+    background: var(--pdp-ink);
+    color: #fff;
+}
+
+.packSave {
+    opacity: .6;
+    margin-left: 8px;
+}
+
+.packSheetBackdrop {
+    display: none;
+}
+
+.stepper {
+    display: flex;
+    border: 1px solid var(--pdp-border-strong);
+    background: #fff;
+    height: 40px;
+    flex: none;
+}
+
+.stepButton {
+    width: 34px;
+    display: grid;
+    place-items: center;
+    color: var(--pdp-secondary);
+    font-size: 15px;
+}
+
+.stepButton:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+.qtyInput {
+    min-width: 60px;
+    width: 60px;
+    border: 0;
+    border-left: 1px solid var(--pdp-border-soft);
+    border-right: 1px solid var(--pdp-border-soft);
+    text-align: center;
+    font: inherit;
+    font-size: 13px;
+    background: transparent;
+    color: var(--pdp-ink);
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.qtyInput::-webkit-outer-spin-button,
+.qtyInput::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+.qtyInput:focus {
+    outline: none;
+    background: var(--pdp-tile);
+}
+
+.addButton {
+    background: var(--pdp-ink);
+    color: #fff;
+    text-align: center;
+    padding: 14px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .16em;
+    white-space: nowrap;
+    text-transform: uppercase;
+    min-height: 44px;
+    transition: background-color .2s;
+}
+
+.addButton:hover {
+    background: #3a3a3c;
+}
+
+.addButton:disabled {
+    background: var(--pdp-border-strong);
+    color: var(--pdp-secondary);
+    cursor: not-allowed;
+}
+
+.addedNote {
+    font-size: 11px;
+    color: var(--pdp-ink);
+}
+
+.buyFoot {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 11px;
+    color: var(--pdp-muted);
+}
+
+.caseLink {
+    color: var(--pdp-gold);
+    text-decoration: underline;
+    white-space: nowrap;
+    min-height: 24px;
+}
+
+.caseLink:disabled {
+    color: var(--pdp-muted);
+    text-decoration: none;
+    cursor: not-allowed;
+}
+
+.buyFootNote {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.buyFootNoteMobile {
+    display: none;
+}
+
+.error {
+    font-size: 11px;
+    font-weight: 500;
+    color: #9b2c2c;
+}
+
+/* ── in this order ──────────────────────────────────────────────────────── */
+
+.order {
+    display: flex;
+    flex-direction: column;
+    background: var(--pdp-panel);
+    padding: 10px 14px;
+    gap: 6px;
+}
+
+.orderHead {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .14em;
+    color: var(--pdp-gold);
+    text-transform: uppercase;
+}
+
+.orderLine {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.orderSwatch {
+    width: 14px;
+    height: 14px;
+    flex: none;
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .12);
+}
+
+.orderLabel {
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.orderQty {
+    color: var(--pdp-secondary);
+    white-space: nowrap;
+}
+
+.orderTotal {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.orderRemove {
+    color: var(--pdp-muted);
+    padding: 0 2px;
+    min-width: 24px;
+    min-height: 24px;
+    display: grid;
+    place-items: center;
+}
+
+.orderRemove:hover {
+    color: var(--pdp-ink);
+}
+
+.orderBar {
+    height: 3px;
+    background: var(--pdp-border);
+    margin-top: 4px;
+}
+
+.orderBarFill {
+    height: 3px;
+    background: var(--pdp-gold);
+    transition: width .3s;
+}
+
+.orderMinimum {
+    font-size: 11px;
+    color: var(--pdp-body);
+}
+
+/* ── product information ────────────────────────────────────────────────── */
+
+.info {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: 10px 16px;
+    font-size: 12px;
+    line-height: 1.55;
+    border-top: 1px solid var(--pdp-border-soft);
+    padding-top: 14px;
+}
+
+.infoKey {
+    color: var(--pdp-secondary);
+}
+
+.infoMono {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 11.5px;
+    word-break: break-all;
+}
+
+.infoDescription {
+    text-wrap: pretty;
+}
+
+.graceButton {
+    border: 1px solid var(--pdp-border-strong);
+    text-align: center;
+    padding: 11px;
+    font-size: 12px;
+    white-space: nowrap;
+    min-height: 44px;
+    width: 100%;
+    transition: background-color .2s, color .2s;
+}
+
+.graceButton:hover {
+    background: var(--pdp-ink);
+    color: #fff;
+    border-color: var(--pdp-ink);
+}
+
+/* ── build your bottle ──────────────────────────────────────────────────── */
+
+.build {
+    padding: 40px 40px 0;
+    border-top: 1px solid var(--pdp-border-soft);
+}
+
+.buildHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.buildTitle {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    white-space: nowrap;
+}
+
+.buildLine {
+    font-size: 12px;
+    letter-spacing: .14em;
+    color: var(--pdp-gold);
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.buildGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) 1.3fr;
+    gap: 16px;
+    align-items: stretch;
+}
+
+.tile {
+    background: var(--pdp-tile);
+    border: 1px solid var(--pdp-border);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tileNumber {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--pdp-gold);
+    letter-spacing: .1em;
+}
+
+.tileWell {
+    height: 120px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    overflow: hidden;
+}
+
+.tileTitle {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.tileBody {
+    font-size: 12px;
+    color: var(--pdp-body);
+    line-height: 1.5;
+}
+
+.tileCta {
+    background: var(--pdp-tile);
+    border: 1px solid var(--pdp-border);
+    padding: 24px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 16px;
+    align-items: center;
+}
+
+.tileCtaText {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tileCtaTitle {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.blackButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    background: var(--pdp-ink);
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .14em;
+    white-space: nowrap;
+    text-decoration: none;
+    text-transform: uppercase;
+    min-height: 44px;
+    transition: background-color .2s;
+}
+
+.blackButton:hover {
+    background: #3a3a3c;
+}
+
+.outlineButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--pdp-ink);
+    padding: 12px 22px;
+    font-size: 12px;
+    letter-spacing: .14em;
+    white-space: nowrap;
+    text-decoration: none;
+    color: var(--pdp-ink);
+    text-transform: uppercase;
+    min-height: 44px;
+    transition: background-color .2s, color .2s;
+}
+
+.outlineButton:hover {
+    background: var(--pdp-ink);
+    color: #fff;
+}
+
+.tileKit {
+    width: 130px;
+    display: block;
+}
+
+/* ── tech sheet ─────────────────────────────────────────────────────────── */
+
+.techWrap {
+    padding: 32px 40px 40px;
+}
+
+.tech {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 32px;
+    background: var(--pdp-card);
+    border: 1px solid var(--pdp-border);
+    padding: 24px;
+}
+
+.techDrawing {
+    aspect-ratio: 3 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: repeating-linear-gradient(45deg, #efeae2 0 6px, #f8f6f2 6px 12px);
+    font: 10px ui-monospace, Menlo, monospace;
+    color: #8a7f70;
+    text-align: center;
+    padding: 8px;
+}
+
+.techHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+}
+
+.techLabel {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .16em;
+    color: var(--pdp-gold);
+    white-space: nowrap;
+}
+
+.techPdf {
+    font-size: 12px;
+    text-decoration: underline;
+    color: var(--pdp-ink);
+}
+
+.techRows {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 40px;
+}
+
+.techRow {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    padding: 7px 0;
+    border-bottom: 1px solid #f0ebe3;
+    font-size: 12px;
+}
+
+.techRow span:first-child {
+    color: var(--pdp-secondary);
+}
+
+/* ── collection band ────────────────────────────────────────────────────── */
+
+.collectionWrap {
+    padding: 0 40px 40px;
+}
+
+.collection {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    align-items: center;
+    background: var(--pdp-panel);
+    border: 1px solid var(--pdp-border);
+}
+
+.collectionText {
+    padding: 32px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.collectionTitle {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.collectionBody {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--pdp-body);
+    max-width: 520px;
+    text-wrap: pretty;
+}
+
+.collectionButtons {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+    flex-wrap: wrap;
+}
+
+.collectionImage {
+    height: 100%;
+    min-height: 220px;
+    overflow: hidden;
+    background: var(--pdp-tile);
+}
+
+.collectionImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── sticky bar (mobile only) ────────────────────────────────────────────── */
+
+.sticky {
+    display: none;
+}
+
+/* ── mobile (option 4a) ─────────────────────────────────────────────────── */
+
+@media (max-width: 899px) {
+    .breadcrumb {
+        padding: 10px 16px 6px;
+        font-size: 11px;
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+
+    .canvas {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "head"
+            "stage"
+            "rail"
+            "lineup";
+    }
+
+    .canvasHead {
+        padding: 10px 12px 0;
+        gap: 8px;
+    }
+
+    .pickLine {
+        font-size: 10px;
+        letter-spacing: .12em;
+    }
+
+    .viewButton {
+        font-size: 9.5px;
+        letter-spacing: .1em;
+        padding: 5px 8px;
+        min-height: 30px;
+    }
+
+    .stage {
+        height: 400px;
+        margin-left: 0;
+    }
+
+    .stageBaseline {
+        left: 24px;
+        right: 24px;
+        bottom: 30px;
+    }
+
+    .callout {
+        right: 10px;
+        gap: 6px;
+    }
+
+    .calloutDot {
+        width: 5px;
+        height: 5px;
+        margin-top: 5px;
+    }
+
+    .calloutLeader {
+        margin-top: 7px;
+    }
+
+    .calloutLabel {
+        width: 118px;
+        font-size: 9.5px;
+        line-height: 1.4;
+    }
+
+    .calloutLabel b {
+        font-size: 9px;
+        letter-spacing: .12em;
+    }
+
+    .rail {
+        align-items: stretch;
+        gap: 6px;
+        padding: 10px 12px 8px;
+        border-right: 0;
+        border-top: 1px solid var(--pdp-divider);
+        max-height: none;
+    }
+
+    .railTrack {
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 6px;
+        padding-bottom: 2px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .railLabel {
+        font-size: 9.5px;
+        letter-spacing: .14em;
+        margin-bottom: 0;
+    }
+
+    .railLabelDesktop {
+        display: none;
+    }
+
+    .railLabelMobile {
+        display: inline;
+    }
+
+    .railButton {
+        flex: none;
+        width: 48px;
+        height: 52px;
+        scroll-snap-align: center;
+    }
+
+    .lineup {
+        padding: 10px 12px 12px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+    }
+
+    .lineupLabel {
+        writing-mode: horizontal-tb;
+        transform: none;
+        align-self: flex-start;
+        font-size: 9.5px;
+        letter-spacing: .14em;
+    }
+
+    .lineupGrid {
+        display: flex;
+        gap: 6px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .glassButton {
+        flex: none;
+        width: 68px;
+        gap: 4px;
+        padding: 6px 0 4px;
+        scroll-snap-align: center;
+    }
+
+    .glassName {
+        font-size: 10.5px;
+    }
+
+    .glassTile {
+        width: 28px;
+        height: 60px;
+    }
+
+    .buy {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .eyebrow {
+        font-size: 10px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .status {
+        font-size: 11.5px;
+    }
+
+    .statusDot {
+        width: 6px;
+        height: 6px;
+    }
+
+    .buyBox {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .selectionRow {
+        display: none;
+    }
+
+    .rollerButton {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+    .qtyRow {
+        gap: 6px;
+    }
+
+    .packButton {
+        height: 44px;
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    .stepper {
+        height: 44px;
+    }
+
+    .stepButton {
+        width: 36px;
+    }
+
+    .qtyInput {
+        min-width: 44px;
+        width: 44px;
+        font-size: 12px;
+    }
+
+    .addButton {
+        display: none;
+    }
+
+    .buyFoot {
+        font-size: 10.5px;
+    }
+
+    .buyFootNoteDesktop {
+        display: none;
+    }
+
+    .buyFootNoteMobile {
+        display: inline;
+    }
+
+    /* Pack of: a bottom sheet instead of a popover. */
+    .packMenu {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: auto;
+        bottom: 0;
+        z-index: 80;
+        border: 0;
+        border-top: 1px solid var(--pdp-ink);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+        box-shadow: 0 -8px 24px rgba(0, 0, 0, .12);
+    }
+
+    .packSheetBackdrop {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 79;
+        background: rgba(29, 29, 31, .35);
+    }
+
+    .packOption {
+        padding: 12px 16px;
+        font-size: 13px;
+        min-height: 48px;
+    }
+
+    .order {
+        padding: 10px 12px;
+    }
+
+    .orderHead {
+        font-size: 9.5px;
+    }
+
+    .orderLine {
+        font-size: 11px;
+        gap: 6px;
+    }
+
+    .orderSwatch {
+        width: 12px;
+        height: 12px;
+    }
+
+    .orderMinimum {
+        font-size: 10.5px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 11.5px;
+        line-height: 1.5;
+        padding-top: 12px;
+    }
+
+    .infoKey {
+        display: block;
+        font-size: 9.5px;
+        letter-spacing: .14em;
+        color: var(--pdp-gold);
+        font-weight: 600;
+        margin-bottom: 2px;
+        text-transform: uppercase;
+    }
+
+    .infoMono {
+        font-size: 11px;
+    }
+
+    .graceButton {
+        padding: 12px;
+    }
+
+    .build {
+        padding: 20px 16px 0;
+    }
+
+    .buildHead {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        margin-bottom: 12px;
+    }
+
+    .buildTitle {
+        font-size: 16px;
+    }
+
+    .buildLine {
+        font-size: 10px;
+    }
+
+    .buildGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .tile {
+        padding: 10px;
+        gap: 6px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tileNumber {
+        font-size: 10px;
+    }
+
+    .tileWell {
+        height: 64px;
+        gap: 4px;
+    }
+
+    .tileTitle {
+        font-size: 10px;
+        letter-spacing: .08em;
+    }
+
+    .tileBody {
+        display: none;
+    }
+
+    .tileCta {
+        grid-column: 1 / -1;
+        grid-template-columns: minmax(0, 1fr);
+        padding: 0;
+        background: none;
+        border: 0;
+    }
+
+    .tileCta .blackButton {
+        align-self: stretch;
+        padding: 13px;
+    }
+
+    .tileCtaTitle,
+    .tileCta .tileBody,
+    .tileKit {
+        display: none;
+    }
+
+    .techWrap {
+        padding: 20px 16px 0;
+    }
+
+    .tech {
+        display: block;
+        padding: 14px;
+    }
+
+    .techDrawing {
+        display: none;
+    }
+
+    .techLabel {
+        font-size: 10px;
+    }
+
+    .techPdf {
+        font-size: 11px;
+    }
+
+    .techRows {
+        display: block;
+    }
+
+    .techRow {
+        grid-template-columns: 130px 1fr;
+        padding: 6px 0;
+        font-size: 11.5px;
+    }
+
+    .collectionWrap {
+        padding: 20px 16px 90px;
+    }
+
+    .collection {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .collectionImage {
+        height: 150px;
+        min-height: 0;
+    }
+
+    .collectionText {
+        padding: 16px;
+        gap: 8px;
+    }
+
+    .collectionTitle {
+        font-size: 17px;
+    }
+
+    .collectionBody {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .collectionButtons .outlineButton {
+        display: none;
+    }
+
+    .sticky {
+        display: flex;
+        position: sticky;
+        bottom: 0;
+        z-index: 40;
+        background: var(--pdp-page);
+        border-top: 1px solid var(--pdp-border);
+        padding: 10px 16px calc(14px + env(safe-area-inset-bottom, 0px));
+        align-items: center;
+        gap: 12px;
+    }
+
+    .stickyText {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .stickyLine {
+        font-size: 10.5px;
+        color: var(--pdp-secondary);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .stickyTotal {
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+    .stickyButton {
+        background: var(--pdp-ink);
+        color: #fff;
+        padding: 0 20px;
+        height: 44px;
+        display: inline-flex;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: .14em;
+        white-space: nowrap;
+        text-transform: uppercase;
+    }
+
+    .stickyButton:disabled {
+        background: var(--pdp-border-strong);
+        color: var(--pdp-secondary);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .stageFrame,
+    .stagePart,
+    .stageGrid,
+    .stageBaseline,
+    .callouts {
+        transition: none;
+    }
+}

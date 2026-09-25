@@ -259,6 +259,9 @@ img.app-wordmark {
   main[data-mobile-pdp] > [data-mobile-pdp-frame] {
     padding-top: 0;
   }
+  /* The redesigned product page carries its own sticky Add to Cart bar on mobile. */
+  body:has(main[data-pdp-redesign]) [data-mobile-tab-bar] { display: none; }
+  body:has(main[data-pdp-redesign]) { --mobile-tab-bar-clearance: env(safe-area-inset-bottom, 0px); }
   body:has(main[data-mobile-pdp]) [data-site-header],
   body:has(main[data-mobile-pdp]) [data-mobile-tab-bar] {
     display: none;

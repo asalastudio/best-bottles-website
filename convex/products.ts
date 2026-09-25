@@ -167,6 +167,36 @@ export const getAllGroupsForPlates = query({
 });
 
 /**
+ * The fields `matchesShopCollection` needs for every group, so a product page
+ * can say how many bottles share its collection and which families they span.
+ * ~380 small rows; bounded rather than collected.
+ */
+export const getShopCollectionGroups = query({
+    args: {},
+    returns: v.array(v.object({
+        slug: v.string(),
+        family: v.string(),
+        category: v.string(),
+        capacityMl: v.union(v.number(), v.null()),
+        applicatorTypes: v.array(v.string()),
+        variantCount: v.number(),
+    })),
+    handler: async (ctx) => {
+        const groups = await ctx.db.query("productGroups").withIndex("by_slug").take(5000);
+        return groups
+            .filter((g) => g.variantCount > 0)
+            .map((g) => ({
+                slug: g.slug,
+                family: g.family,
+                category: g.category,
+                capacityMl: g.capacityMl ?? null,
+                applicatorTypes: g.applicatorTypes ?? [],
+                variantCount: g.variantCount,
+            }));
+    },
+});
+
+/**
  * Component relationships for the data audit: which component grace SKUs each
  * product declares, and the neck the product actually has. Only the SKUs are
  * returned, not the component objects — the audit checks thread compatibility,

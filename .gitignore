@@ -239,3 +239,6 @@ public/local-kits/
 
 # Local production-reconciliation snapshots (selected evidence is in docs).
 /output/diva-dropper-reconciliation-2026-09-23/
+
+# Convex export the PDP description generator reads; scripts/pdp-descriptions/export-catalog-facts.mjs recreates it
+data/descriptions/pdp/catalog-facts.json

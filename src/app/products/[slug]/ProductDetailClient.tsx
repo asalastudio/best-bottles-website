@@ -551,6 +551,10 @@ export interface ProductVariant {
     shape: string | null;
     color: string | null;
     capacity: string | null;
+    /** Numeric capacity from the Convex row; optional so older fixtures still type-check. */
+    capacityMl?: number | null;
+    capacityOz?: number | null;
+    caseWeightG?: number | null;
     heightWithCap: string | null;
     heightWithoutCap: string | null;
     diameter: string | null;

@@ -761,6 +761,36 @@ export const analytics = {
     adapter.track(`quick_add_${stage}`, rest);
   },
 
+  // ── Product page (design 3a/4a) ─────────────────────────────────────────
+  // Group slugs, SKUs and pick values are catalogue vocabulary, not customer data.
+
+  pdpView(properties: { group: string; sku: string }) {
+    const group = safeProductSlug(properties.group);
+    const sku = safeProductSku(properties.sku);
+    if (!group || !sku) return;
+    trackFocusedShopping("pdp_view", { group, sku });
+  },
+
+  pdpPick(properties: { group: string; type: "glass" | "roller" | "cap"; value: string; sku: string | null }) {
+    const group = safeProductSlug(properties.group);
+    const sku = properties.sku ? safeProductSku(properties.sku) : null;
+    if (!group) return;
+    trackFocusedShopping("pdp_pick", { group, type: properties.type, value: properties.value.slice(0, 80), ...(sku ? { sku } : {}) });
+  },
+
+  pdpViewMode(properties: { group: string; mode: "sidecar" | "capon" | "exploded" }) {
+    const group = safeProductSlug(properties.group);
+    if (!group) return;
+    trackFocusedShopping("pdp_view_mode", { group, mode: properties.mode });
+  },
+
+  pdpAddLine(properties: { group: string; sku: string; qty: number; tier: string | null }) {
+    const group = safeProductSlug(properties.group);
+    const sku = safeProductSku(properties.sku);
+    if (!group || !sku) return;
+    trackFocusedShopping("pdp_add_line", { group, sku, qty: properties.qty, ...(properties.tier ? { tier: properties.tier } : {}) });
+  },
+
   // ── Cart & Checkout ──────────────────────────────────────────────────────
 
   cartItemAdded(properties: {

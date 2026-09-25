@@ -34,6 +34,11 @@ import {
     selectPrimaryProductVariant,
     type FocusedPdpRelations,
 } from "@/lib/products/pdp-relations";
+import PdpRedesignPage, { type PdpRedesignPayload } from "@/components/pdp/PdpRedesignPage";
+import { parseProductSlug } from "@/lib/products/group-variant-intent";
+import { resolveItemDescriptions } from "@/lib/products/item-description/resolve";
+import { collectionDescription, collectionFor, derivePicks, resolveVariant, type SiblingGlassGroup } from "@/lib/products/pdp-redesign/model";
+import type { KitLike } from "@/lib/products/pdp-redesign/stage";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -128,6 +133,95 @@ async function getPdpBlocks(activeSlug: string, family: string | null | undefine
     }
 }
 
+/**
+ * The redesigned product page (design 3a/4a) serves every group whose slug
+ * follows the bottle grammar (<family>-<ml>ml-<colour>-<neck>[-<closure>]) and
+ * sells at least one SKU. Components, packaging and the odd slug keep the
+ * classic page. `NEXT_PUBLIC_PDP_REDESIGN=off` restores the classic page
+ * everywhere.
+ */
+function redesignApplies(slug: string, data: ProductGroupPayload): boolean {
+    if (process.env.NEXT_PUBLIC_PDP_REDESIGN === "off") return false;
+    if (data.variants.length === 0) return false;
+    if (isVariantCardFamily(data.group.family)) return false;
+    return parseProductSlug(slug) !== null;
+}
+
+async function loadRedesignPayload(
+    data: ProductGroupPayload,
+    activeSlug: string,
+    siblingGroups: SiblingGroup[],
+    platesBySku: Record<string, { image: string; imageCapOff: string | null }>,
+): Promise<PdpRedesignPayload> {
+    const convex = getConvexClient();
+    const siblings: SiblingGlassGroup[] = await Promise.all(siblingGroups.map(async (sibling) => {
+        try {
+            const payload = await convex.query(api.products.getProductGroup, { slug: sibling.slug }) as ProductGroupPayload | null;
+            const variants = payload ? filterVariantsForGroupIntent(sibling.slug, filterVariantsForProductGroup(payload.group, payload.variants)) : [];
+            const primary = payload ? selectPrimaryProductVariant(payload.group, variants) : null;
+            // The bare body is the same layer on every SKU of a glass; keep a few candidates so a
+            // primary SKU without a published kit still gets its body from a sibling SKU.
+            const candidates = [primary, ...variants.filter((variant) => variant !== primary).slice(0, 2)]
+                .filter((variant): variant is ProductVariant => Boolean(variant));
+            return {
+                slug: sibling.slug,
+                color: sibling.color,
+                displayName: sibling.displayName,
+                primaryWebsiteSku: primary?.websiteSku ?? payload?.group.primaryWebsiteSku ?? null,
+                primaryGraceSku: primary?.graceSku ?? payload?.group.primaryGraceSku ?? null,
+                bodyCandidates: candidates.map((variant) => ({ websiteSku: variant.websiteSku ?? null, graceSku: variant.graceSku ?? null })),
+            };
+        } catch {
+            return { slug: sibling.slug, color: sibling.color, displayName: sibling.displayName };
+        }
+    }));
+
+    // Kits for this group's SKUs plus each sibling's primary body, 50 pairs per call.
+    const pairs = [
+        ...data.variants.map((variant) => ({ websiteSku: variant.websiteSku ?? null, graceSku: variant.graceSku ?? null })),
+        ...siblings.flatMap((sibling) => sibling.bodyCandidates ?? [{ websiteSku: sibling.primaryWebsiteSku ?? null, graceSku: sibling.primaryGraceSku ?? null }]),
+    ].filter((pair) => pair.websiteSku || pair.graceSku);
+    const kitsBySku: Record<string, KitLike | null> = {};
+    for (let index = 0; index < pairs.length; index += 50) {
+        try {
+            const chunk = await convex.query(api.productKits.forSkus, { pairs: pairs.slice(index, index + 50) });
+            for (const [key, kit] of Object.entries(chunk)) {
+                kitsBySku[key] = kit as KitLike | null;
+                if (kit) {
+                    const owner = pairs.find((pair) => pair.websiteSku === key || pair.graceSku === key);
+                    if (owner?.websiteSku) kitsBySku[owner.websiteSku] = kit as KitLike;
+                    if (owner?.graceSku) kitsBySku[owner.graceSku] = kit as KitLike;
+                }
+            }
+        } catch (error) {
+            console.error("[pdp] kit lookup failed; rendering without layers", error);
+        }
+    }
+
+    const band = collectionFor(data.group);
+    let collection: PdpRedesignPayload["collection"] = null;
+    if (band) {
+        try {
+            const groups = await convex.query(api.products.getShopCollectionGroups, {});
+            collection = { band, description: collectionDescription(band, groups) };
+        } catch {
+            collection = { band, description: band.subtitle };
+        }
+    }
+
+    return {
+        slug: activeSlug,
+        group: data.group,
+        variants: data.variants,
+        siblings,
+        kitsBySku,
+        platesBySku,
+        descriptions: resolveItemDescriptions(data.variants),
+        collection,
+        familyHref: `/catalog?family=${encodeURIComponent(data.group.family)}`,
+    };
+}
+
 export async function generateMetadata({
     params,
     searchParams,
@@ -140,12 +234,21 @@ export async function generateMetadata({
     const data = await getProductData(activeSlug);
     const group = data?.group;
     // A variant-card family's catalog card links with ?sku=; title the page for that finish.
-    const requestedSku = (await searchParams)?.sku;
+    const resolvedParams = await searchParams;
+    const requestedSku = resolvedParams?.sku;
     const skuVariant = isVariantCardFamily(group?.family) && typeof requestedSku === "string"
         // The PDP's own colour picker writes the Grace SKU; catalog cards write the website SKU.
         ? data?.variants.find((candidate) => candidate.websiteSku === requestedSku || candidate.graceSku === requestedSku) ?? null
         : null;
-    const variant = skuVariant ?? getPrimaryVariant(data);
+    // The redesigned page carries its picks in the URL (?roller=&cap=, or ?sku= from a card or Grace).
+    const pickedVariant = data && redesignApplies(activeSlug, data)
+        ? resolveVariant(data.variants, derivePicks(data.variants, data.group, {
+            roller: typeof resolvedParams?.roller === "string" ? resolvedParams.roller : null,
+            cap: typeof resolvedParams?.cap === "string" ? resolvedParams.cap : null,
+            sku: typeof requestedSku === "string" ? requestedSku : null,
+        }))
+        : null;
+    const variant = skuVariant ?? pickedVariant ?? getPrimaryVariant(data);
 
     if (!group) {
         return {
@@ -265,6 +368,28 @@ export default async function ProductPage({
             { name: customerName, url: `${SITE_URL}/products/${activeSlug}` },
         ])
         : null;
+
+    if (data && redesignApplies(activeSlug, data)) {
+        const payload = await loadRedesignPayload(data, activeSlug, siblingGroups, platesBySku);
+        return (
+            <>
+                {productJsonLd && (
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+                    />
+                )}
+                {breadcrumbJsonLd && (
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+                    />
+                )}
+                <PdpRedesignPage {...payload} />
+                <Footer />
+            </>
+        );
+    }
 
     return (
         <>
