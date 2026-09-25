@@ -41,7 +41,10 @@ describe("homepage Shop three ways", () => {
         expect(html).toContain("Open the builder");
         expect(html.match(/href="\/matrix"/g)?.length).toBe(2);
         expect(html).toMatch(/collection-roll-on-bottles-bone-v3\.webp/);
-        expect(html).toContain("build-your-bottle-bone-v3.webp");
+        expect(html).toContain("build-your-bottle-journey-v1.webp");
+        // The same five steps, in the same words, as the builder's own step bar.
+        expect([...html.matchAll(/<li><span[^>]*>(\d)<\/span>([^<]+)<\/li>/g)].map((m) => `${m[1]} ${m[2]}`))
+            .toEqual(["1 Bottle", "2 Glass", "3 Fitment", "4 Finish", "5 Review"]);
         expect(html).not.toContain("Colored-pencil");
     });
 

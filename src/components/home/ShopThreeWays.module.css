@@ -178,21 +178,22 @@
     text-transform: uppercase;
 }
 
-/* 03 · Build your bottle. */
+/* 03 · Build your bottle — copy on top, the four-station image full width. */
 .build {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
-    gap: 48px;
-    align-items: center;
-    /* Bone, not the #f8f6f2 card tone: the tray photograph sits on bone
-       #F5F3EF and would otherwise show as a lighter box. */
-    background: #f5f3ef;
+    /* The journey photograph's own background (#F6F4F0), so it has no visible edge. */
+    background: #f6f4f0;
     border: 1px solid #e6dccd;
-    padding: 40px 48px;
+    padding: 40px 48px 36px;
 }
-.buildCopy { display: flex; flex-direction: column; gap: 20px; }
+.buildCopy {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 32px;
+    margin-bottom: 28px;
+}
 .buildHeading {
-    margin: 0;
+    margin: 0 0 12px;
     font-family: var(--font-brand);
     font-size: 28px;
     font-weight: 600;
@@ -202,7 +203,7 @@
 }
 .buildText { margin: 0; font-size: 16px; line-height: 1.6; color: #4d5767; white-space: pre-line; }
 .buildButton {
-    align-self: flex-start;
+    flex: none;
     display: inline-flex;
     align-items: center;
     min-height: 44px;
@@ -216,7 +217,48 @@
     border-radius: 0;
 }
 .buildButton:hover { background: #000; }
-.buildImage { display: block; width: 100%; height: auto; }
+.steps { margin: 0; }
+.stepsImage { display: block; width: 100%; height: auto; }
+.stepLabels {
+    /* Mirrors the builder's step bar: one step per fifth, under its group. */
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+}
+.stepLabels li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    color: #1c1c1e;
+}
+/* the builder's dash between steps */
+.stepLabels li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    width: 24px;
+    border-top: 1px solid #d8cdbb;
+}
+.stepNumber {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #9a7a48;
+    border-radius: 50%;
+    color: #9a7a48;
+    font-size: 12px;
+    letter-spacing: 0;
+}
 
 .wrap a:focus-visible,
 .wrap button:focus-visible { outline: 2px solid #75613c; outline-offset: 3px; }
@@ -232,7 +274,8 @@
     .tabTitle { font-size: 12px; white-space: normal; }
     .tab { padding: 16px 14px; justify-content: center; }
     .collectionGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .build { gap: 32px; padding: 32px; }
+    .build { padding: 32px; }
+    .stepLabels li { font-size: 12px; gap: 6px; }
 }
 @media (max-width: 640px) {
     .inner { padding-left: 20px; padding-right: 20px; }
@@ -263,9 +306,13 @@
         padding-right: 20px;
     }
     .collectionGrid > * { scroll-snap-align: start; }
-    .build { grid-template-columns: 1fr; gap: 24px; padding: 24px; }
-    .buildImage { order: -1; }
+    .build { padding: 24px 16px 20px; }
+    .buildCopy { flex-direction: column; align-items: flex-start; gap: 18px; margin-bottom: 20px; }
     .buildHeading { font-size: 22px; }
+    .stepLabels { margin-top: 12px; }
+    .stepLabels li { flex-direction: column; gap: 4px; font-size: 10px; letter-spacing: .02em; }
+    .stepLabels li:not(:last-child)::after { top: 12px; width: 12px; right: -6px; }
+    .stepNumber { width: 24px; height: 24px; font-size: 11px; }
 }
 @media (prefers-reduced-motion: reduce) {
     .card, .tab { transition: none; }

@@ -24,6 +24,12 @@ export type ShopSection = "families" | "collections" | "build";
 const SECTIONS: readonly ShopSection[] = ["families", "collections", "build"];
 export const shopSectionId = (section: ShopSection) => `shop-${section}`;
 
+// GPT Image 2.5 Sunburst (Higgsfield, 2026-09-25) from the approved Cylinder
+// photographs: the builder's five steps as five groups, centred on the fifths
+// of the width so each step label sits under its group.
+const BUILD_STEPS_IMAGE = "/assets/homepage/build-your-bottle-journey-v1.webp";
+const BUILD_STEPS = ["shopStepBottle", "shopStepGlass", "shopStepFitment", "shopStepFinish", "shopStepReview"] as const;
+
 type Props = {
     data: HomepageData | null;
     /** Glass-bottle groups per family (live Convex data); counts are hidden when absent. */
@@ -126,11 +132,21 @@ export default function ShopThreeWays({ data, familyCounts }: Props) {
                     <SectionHeading number={number("build")} way={ways.build.title} href={buildHref} linkLabel={t("shopOpenBuilder")} />
                     <div className={styles.build}>
                         <div className={styles.buildCopy}>
-                            <h3 id="shop-build-heading" className={styles.buildHeading}>{build?.heading || t("buildHeading")}</h3>
-                            <p className={styles.buildText}>{build?.description || t("buildDescription")}</p>
+                            <div>
+                                <h3 id="shop-build-heading" className={styles.buildHeading}>{build?.heading || t("buildHeading")}</h3>
+                                <p className={styles.buildText}>{build?.description || t("buildDescription")}</p>
+                            </div>
                             <LocaleLink href={buildHref} className={styles.buildButton}>{build?.buttonLabel || t("buildYourBottle")}</LocaleLink>
                         </div>
-                        <img className={styles.buildImage} src="/assets/homepage/build-your-bottle-bone-v3.webp" alt={t("shopBuildImageAlt")} width={1500} height={1000} loading="lazy" />
+                        {/* The builder's journey in one scene; the step bar mirrors the builder's. */}
+                        <figure className={styles.steps}>
+                            <img className={styles.stepsImage} src={BUILD_STEPS_IMAGE} alt={t("shopStepsImageAlt")} width={2000} height={753} loading="lazy" />
+                            <ol className={styles.stepLabels} aria-label={t("shopStepsLabel")}>
+                                {BUILD_STEPS.map((step, index) => (
+                                    <li key={step}><span className={styles.stepNumber}>{index + 1}</span>{t(step)}</li>
+                                ))}
+                            </ol>
+                        </figure>
                     </div>
                 </div>
             </section>
