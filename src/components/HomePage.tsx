@@ -882,7 +882,7 @@ export default function HomePage({ homepageData, browseData }: { homepageData: H
     return (
         <main className="min-h-screen">
             <ShoppingHeader />
-            <CollectionShopping data={homepageData} />
+            <CollectionShopping data={homepageData} browse={browseData} />
             <EducationPreview educationPreview={homepageData?.educationPreview} />
             <Footer />
         </main>

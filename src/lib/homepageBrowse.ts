@@ -1,9 +1,11 @@
 import { BOTTLE_CATEGORIES, FAMILY_ORDER } from './catalogFilters';
 import { HOME_ACCESSORY_STORY, HOME_APPLICATION_LINKS, HOME_EDITORIAL_STORIES, HOME_SAMPLE_FEATURE, homepageFamilyHref } from './homepageMerchandising';
 import { isVisibleCatalogGroup } from './products/catalog-listing-visibility';
+import { getLegacyProductRouteOverride } from './products/legacy-product-route-overrides';
 
 export type HomeBrowseCard = { id: string; label: string; href: string; image: string | null };
-export type HomeBrowseData = { families: HomeBrowseCard[]; applicators: HomeBrowseCard[]; collections: HomeBrowseCard[]; glassFamilyCount: number };
+/** familyCounts: listed glass-bottle groups per family — the cards the family's catalog page (category=Glass Bottle) shows. */
+export type HomeBrowseData = { families: HomeBrowseCard[]; applicators: HomeBrowseCard[]; collections: HomeBrowseCard[]; glassFamilyCount: number; familyCounts: Record<string, number> };
 export type HomeBrowseGroup = { _id: string; slug: string; family: string; category: string; variantCount: number; heroImageUrl?: string | null };
 type Hero = { groupSlug: string; family: string; url: string };
 
@@ -25,6 +27,7 @@ export function buildHomeBrowseData(groups: readonly HomeBrowseGroup[], heroes: 
     return {
         families,
         glassFamilyCount: new Set(bottles.filter(g => g.category === 'Glass Bottle').map(g => g.family)).size,
+        familyCounts: visible.filter(g => g.family && g.category === 'Glass Bottle' && !getLegacyProductRouteOverride(g.slug)).reduce<Record<string, number>>((counts, g) => ({ ...counts, [g.family]: (counts[g.family] ?? 0) + 1 }), {}),
         applicators: HOME_APPLICATION_LINKS.map(c => ({id:c.key,label:c.label,href:c.href,image:c.image})),
         collections: [
             collection('samples','Samples & Testers',HOME_SAMPLE_FEATURE.href,'Vial'),

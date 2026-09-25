@@ -11,6 +11,10 @@ describe('homepage catalog navigation',()=>{
   expect(data.families.find(c=>c.id==='Cylinder')?.href).toBe('/catalog?category=Glass+Bottle&families=Cylinder&sort=capacity-asc');
   expect(data.glassFamilyCount).toBe(3);
  });
+ it('counts listed glass-bottle groups per family, skipping components, empty, hidden and redirected groups',()=>{
+  const data=buildHomeBrowseData([group('Cylinder'),group('Cylinder','Component'),{...group('Cylinder'),_id:'c2',slug:'cylinder-5ml-clear-13-415'},group('Cylinder','Glass Bottle',0),{...group('Cylinder'),_id:'c3',slug:'cylinder-5.5ml-clear-13-415'},{...group('Cylinder'),_id:'c4',slug:'cylinder-9ml-17-415'},group('Round')],[]);
+  expect(data.familyCounts).toEqual({Cylinder:2,Round:1});
+ });
  it('includes non-glass bottle and jar lines without mixing component categories into families',()=>{
   const data=buildHomeBrowseData([group('Atomizer','Metal Atomizer'),group('Cream Jar','Glass Jar'),group('Plastic Bottle','Plastic Bottle'),group('Tool','Accessory')],[]);
   expect(data.families).toHaveLength(3);expect(data.glassFamilyCount).toBe(0);
