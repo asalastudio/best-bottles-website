@@ -225,6 +225,15 @@ export function kitsFromRegister(payload: RegisterStagePayload, options: { canva
     return kits;
 }
 
+/**
+ * The kit as a stage without an EXPLODED view draws it (Build Your Bottle):
+ * a seated insert stays, its full plug (an EXPLODED-only layer) is dropped, so
+ * the two never paint on top of each other in an assembled preview.
+ */
+export function assembledKit<T extends { parts: Array<{ views?: StageViewName[] }> }>(kit: T): T {
+    return { ...kit, parts: kit.parts.filter((part) => !part.views || part.views.includes("capon")) };
+}
+
 /** The SVG/CSS transform that puts a boxed part on the canvas; legacy full-canvas parts need none. */
 export function partBoxTransform(part: { box?: PartBox | null; image: { width: number; height: number } }): string | null {
     if (!part.box) return null;

@@ -8,6 +8,7 @@ import { resolveListedComponents, unavailableVintageFinishes, type ActiveCompone
 import { bareChooserKit, slimBuilderBodies } from "./payload";
 import { readLocalComponentKits } from "../paper-doll/local-component-kits";
 import { loadRegisterKits } from "@/lib/register/load";
+import { assembledKit } from "@/lib/register/stage-kit";
 
 const client = () => new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
@@ -68,7 +69,9 @@ async function loadKitsForRows(rows: Array<{ websiteSku: string | null; graceSku
     for (const row of rows) {
         const local = localKits();
         const staged = local && ((row.websiteSku && local[row.websiteSku]) || (row.graceSku && local[row.graceSku]));
-        const kit = staged || (row.graceSku && registered[row.graceSku]) || (row.websiteSku && registered[row.websiteSku]) || null;
+        // The builder draws assembled bottles only: a register insert's EXPLODED-only plug layer stays out.
+        const fromRegister = (row.graceSku && registered[row.graceSku]) || (row.websiteSku && registered[row.websiteSku]) || null;
+        const kit = staged || (fromRegister ? assembledKit(fromRegister) : null);
         if (kit) {
             if (row.websiteSku) result.set(row.websiteSku, kit);
             if (row.graceSku) result.set(row.graceSku, kit);

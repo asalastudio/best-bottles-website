@@ -280,6 +280,14 @@ export function bodyPart(kit: KitLike | null | undefined): KitPartLike | null {
     return kit?.parts?.find((part) => part.slot === "body") ?? null;
 }
 
+/**
+ * The layer that shows a fitment on its own (the Build Your Bottle strip's
+ * tile 02): the whole insert with its plug when the register carries one for
+ * EXPLODED (Jordan 2026-09-25: a stub cut at the rim reads as a broken part),
+ * else the seated layer. Follows the selected SKU, so metal and plastic each
+ * surface their own insert.
+ */
 export function fitmentPart(kit: KitLike | null | undefined): KitPartLike | null {
-    return kit?.parts?.find((part) => isFitmentSlot(part.slot)) ?? null;
+    const fitments = kit?.parts?.filter((part) => isFitmentSlot(part.slot)) ?? [];
+    return fitments.find((part) => part.views?.includes("exploded") && !part.views.includes("capon")) ?? fitments[0] ?? null;
 }

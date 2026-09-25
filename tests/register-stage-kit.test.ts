@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { STAGE_DATUMS, datumFromPlate, kitFromRegister, kitsFromRegister, partBoxTransform, type RegisterStagePayload } from "@/lib/register/stage-kit";
-import { closurePart, partCrop, stageLayout } from "@/lib/products/pdp-redesign/stage";
+import { STAGE_DATUMS, assembledKit, datumFromPlate, kitFromRegister, kitsFromRegister, partBoxTransform, type RegisterStagePayload } from "@/lib/register/stage-kit";
+import { closurePart, fitmentPart, partCrop, stageLayout } from "@/lib/products/pdp-redesign/stage";
 import { layerCropStyleForPart, layerTransform } from "@/lib/bottle-builder/preview-frame";
 
 /**
@@ -125,6 +125,13 @@ describe("kitFromRegister", () => {
         const context = { family: "Cylinder", capacityMl: 9, color: "Clear", applicator: "Metal Roller Ball", websiteSku: "GBCyl9MtlRollBlkDot" };
         expect(stageLayout(both, "capon", context)!.parts.filter((part) => part.slot === "roller").map((part) => part.url)).toEqual([seated.url]);
         expect(stageLayout(both, "exploded", context)!.parts.filter((part) => part.slot === "roller").map((part) => part.url)).toEqual([plug.url]);
+        // on its own (the Build Your Bottle strip) the fitment is the whole insert, plug included; a register without a plug keeps the seated layer
+        expect(fitmentPart(both)!.image.url).toBe(plug.url);
+        expect(fitmentPart(kit)!.image.url).toBe(ROLLER.layers[0].url);
+        // a stage with no EXPLODED view (Build Your Bottle) draws the seated insert alone, never both layers
+        expect(assembledKit(both).parts.filter((part) => part.slot === "roller").map((part) => part.image.url)).toEqual([seated.url]);
+        expect(assembledKit(both).parts.length).toBe(both.parts.length - 1);
+        expect(assembledKit(kit).parts).toEqual(kit.parts);
         // the plug lifts as the insert's own unit, the cap above it
         const exploded = stageLayout(both, "exploded", context)!;
         expect(exploded.parts.find((part) => part.slot === "roller")!.dyPct).toBeLessThan(0);
