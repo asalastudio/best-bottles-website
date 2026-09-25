@@ -1,0 +1,138 @@
+[
+  {
+    "asset": "jumbo-28-metal",
+    "sourceType": "master PSD",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/13. 16 mm/2. 28ml  Uncapped/1. GBCyl28MtlRollBlk.psd",
+    "sourceSha256": "50d44a77f0efb65fe6c3b4e569d2138799acbe4a0136fd5708cba59286fb958c",
+    "output": "source-images/jumbo-28-metal.png",
+    "outputSha256": "e4b4b6e829ebd629db0216e9741ad20f0dc54a478ad2461877a04b4141c86a08"
+  },
+  {
+    "asset": "jumbo-28-plastic",
+    "sourceType": "master PSD",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/13. 16 mm/2. 28ml  Uncapped/3. GBCyl28RollBlk.psd",
+    "sourceSha256": "27e61c60b32e4fb7c762a46239de914bbabeb54b0f90009bde6f69774a395745",
+    "output": "source-images/jumbo-28-plastic.png",
+    "outputSha256": "bc400b8c286da552580d5e78e95f2e4e344d3ea42f0cc73e9eb6e7ed8645d9bb"
+  },
+  {
+    "asset": "jumbo-50-metal",
+    "sourceType": "master PSD",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/13. 16 mm/4. 50ml Uncapped/3. GBCyl50MtlRollBlk.psd",
+    "sourceSha256": "986851ecd3257d24f5f05d4f84e10b4b408802100b3019829a51c4744f694649",
+    "output": "source-images/jumbo-50-metal.png",
+    "outputSha256": "3793d792a30873379b1a447592cf655e5350af3f37caa032315689c3cc5a8655"
+  },
+  {
+    "asset": "jumbo-50-plastic",
+    "sourceType": "master PSD",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/13. 16 mm/4. 50ml Uncapped/1. GBCyl50RollBlk.psd",
+    "sourceSha256": "b7cf4e25c9c25e167a28c4b1c18c4adb944594a20c6e4e6e0e4d2913d6997101",
+    "output": "source-images/jumbo-50-plastic.png",
+    "outputSha256": "f356dda4315d11aa551719594efdec455d76862735d169468a73390c0183a475"
+  },
+  {
+    "asset": "jumbo-metal-neck",
+    "sourceType": "master PSD",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/13. 16 mm/2. 28ml  Uncapped/1. GBCyl28MtlRollBlk.psd",
+    "sourceSha256": "50d44a77f0efb65fe6c3b4e569d2138799acbe4a0136fd5708cba59286fb958c",
+    "output": "source-images/jumbo-metal-neck.png",
+    "outputSha256": "7c499ec260ba772b3381d4ac8b301461ad06ab27cff4f70158387392fe1ad2ae"
+  },
+  {
+    "asset": "jumbo-plastic-neck",
+    "sourceType": "master PSD",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/13. 16 mm/2. 28ml  Uncapped/3. GBCyl28RollBlk.psd",
+    "sourceSha256": "27e61c60b32e4fb7c762a46239de914bbabeb54b0f90009bde6f69774a395745",
+    "output": "source-images/jumbo-plastic-neck.png",
+    "outputSha256": "8ab61d00bee7aec92012b6138a40cfa79f6c057b9f4a77990e04e9e4cea76493"
+  },
+  {
+    "asset": "jumbo-black-cap",
+    "sourceType": "master PSD",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/13. 16 mm/2. 28ml  Uncapped/1. GBCyl28MtlRollBlk.psd",
+    "sourceSha256": "50d44a77f0efb65fe6c3b4e569d2138799acbe4a0136fd5708cba59286fb958c",
+    "output": "source-images/jumbo-black-cap.png",
+    "outputSha256": "f1e1f66c6e1ed17eacabb4f8bfd437c28730324f661234efcd5e8c420208eda0"
+  },
+  {
+    "asset": "jumbo-white-cap",
+    "sourceType": "master PSD",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/13. 16 mm/2. 28ml  Uncapped/2.  GBCyl28MtlRollWht.psd",
+    "sourceSha256": "14a4c0e68cc5821aa0da5f8f4f1a1ad9578c5850eb3e8f80fd28c5666faf1bd4",
+    "output": "source-images/jumbo-white-cap.png",
+    "outputSha256": "433cd1787b6d7772319c3549f5ece0943bacb4e4ffe5ba640106320b7a54f3be"
+  },
+  {
+    "asset": "alu-65-black",
+    "sourceType": "master PSD",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/11. 20-410 Alu/20mm Alu Bottles/Alu 2oz/Alu65mlLotionPumpBlack.psd",
+    "sourceSha256": "863c17eb1df391f070dcea463dd2e7431070cdb5c38a3d986d5054f9b781dc54",
+    "output": "source-images/alu-65-black.png",
+    "outputSha256": "f3121f26e7a5166e39c065c2df298c86219281b60faae599ffa733cd9e699b7c"
+  },
+  {
+    "asset": "alu-65-white",
+    "sourceType": "master PSD",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/11. 20-410 Alu/20mm Alu Bottles/Alu 2oz/Alu65mlLotionPumpWhite.psd",
+    "sourceSha256": "674af1199e1ebc2c23bd78f2b94534ac30a84112b41e90531004f4f969c150a7",
+    "output": "source-images/alu-65-white.png",
+    "outputSha256": "5df783b5a82a471597fe49eca252635f40c609fea52dafca1d0255472ab696f8"
+  },
+  {
+    "asset": "alu-120-black",
+    "sourceType": "master PSD",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/11. 20-410 Alu/20mm Alu Bottles/Alu120mlLotionPumpBlack.psd",
+    "sourceSha256": "b7daa0842d841fa2f0f172294eaeaf4324c5e40266b6b7034b1f46cb63c15a7f",
+    "output": "source-images/alu-120-black.png",
+    "outputSha256": "0c7e42b45cc9051109632fdefb82bdd90cb6962b563f1f4c8cabb94758431782"
+  },
+  {
+    "asset": "alu-120-white",
+    "sourceType": "master PSD",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/11. 20-410 Alu/20mm Alu Bottles/Alu120mlLotionPumpWhite.psd",
+    "sourceSha256": "eca820f26b400de226a09f1e939d8363b46ecc1fb5b284386751021f74d6310b",
+    "output": "source-images/alu-120-white.png",
+    "outputSha256": "de4272888f4110a318fe6d3664080806310fc1e6134a8ee257ed2df338296ed5"
+  },
+  {
+    "asset": "alu-250-black",
+    "sourceType": "master PSD",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/11. 20-410 Alu/250ml/Alu250mlSprayblack.psd",
+    "sourceSha256": "64bb0e090902d47b3f9b90833acc493aa5cb1ddf4389d30b0eaf11708bd1ac66",
+    "output": "source-images/alu-250-black.png",
+    "outputSha256": "d18cacdb43d4e25a41fd8a0483fb963ac58ba5e8a8fcadc7e936eb49ce0e70b9"
+  },
+  {
+    "asset": "alu-black-sprayer",
+    "sourceType": "master PSD",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/11. 20-410 Alu/250ml/AlumSprayer.psd",
+    "sourceSha256": "96ef7d0ed25f3b0d91d1ea1c27d05d83f35a10cd5857ade3be6e364c4163f27b",
+    "output": "source-images/alu-black-sprayer.png",
+    "outputSha256": "d8f7c53be37d8d8ab0dccf42394dfe8f74d5202df91897c22543880d9c0cc3cd"
+  },
+  {
+    "asset": "alu-white-sprayer-archive",
+    "sourceType": "master PSD",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/11. 20-410 Alu/250ml/AlumSprayerWhite.psd",
+    "sourceSha256": "2062c8955e83cfedd64f6fad80caf3ed718186c4ba4788b7517a5c3a56063ad1",
+    "output": "source-images/alu-white-sprayer-archive.png",
+    "outputSha256": "b32b1dc377ebea64e7115a0bfc185154a6ddcc68654099543c692687f88773b9"
+  },
+  {
+    "asset": "alu-100-black",
+    "sourceType": "current product image URL",
+    "source": "https://www.bestbottles.com/images/store/enlarged_pics/Alu100mlSprayBlack.gif",
+    "sourceSha256": "73e729a87bff407525d3b5e461fb07954186ae0d4113731a965602804d3a1f79",
+    "output": "source-images/alu-100-black.png",
+    "outputSha256": "2bbed1bcab9121bc917b39d31f5945d2ca2c91cb01e43f62745e6c0d4f1aae99"
+  },
+  {
+    "asset": "alu-500",
+    "sourceType": "current product image URL",
+    "source": "https://www.bestbottles.com/images/store/enlarged_pics/Alu500.gif",
+    "sourceSha256": "89d78e71c6ac78ef74c4aba31fa158639aefa74082367f03b3c0e546569ac915",
+    "output": "source-images/alu-500.png",
+    "outputSha256": "e7b9db85931f9626910fd66daea0f6e7779afb062b9f04372e54a3eccf80717b"
+  }
+]

@@ -21,35 +21,34 @@ export type CatalogSurfaceManifest = {
     mobileDefaultOpenFacets: CatalogFacetKey[];
     /** Facet values shown before "Show more" (Baymard: truncate long lists, never hide them in a scroll box). */
     truncateAfter: number;
+    /** Per-facet exceptions to `truncateAfter`. */
+    truncateAfterByFacet?: Partial<Record<CatalogFacetKey, number>>;
     defaultSort: SortValue;
     resultLabel: string;
 };
 
 /**
- * Master catalogue hierarchy, ordered the way a packaging buyer narrows a
- * list (Baymard product-list research, 2025): scope first (what kind of
- * product), then the category-specific attributes that decide fit (dispensing
- * type, capacity, neck finish), then look (glass colour), then price and the
- * aesthetic line. Component Type only appears once a component category is
- * chosen, so it sits last.
+ * Master catalogue sidebar (design 8a, 2026-09-25), in the order a packaging
+ * buyer narrows a bottle: family, capacity, applicator, neck finish, glass,
+ * then the merchandising collection and price. Product type (category) is the
+ * switch in the title row, not a sidebar facet.
  */
 export const MASTER_CATALOG_SURFACE: CatalogSurfaceManifest = {
     id: "master",
     fixedFilters: {},
     visibleFacets: [
-        "category",
-        "collection",
-        "applicators",
+        "families",
         "capacities",
+        "applicators",
         "neckThreadSizes",
         "colors",
+        "shopCollection",
         "price",
-        "families",
-        "componentType",
     ],
-    defaultOpenFacets: ["category", "applicators", "capacities", "neckThreadSizes", "colors"],
-    mobileDefaultOpenFacets: ["applicators", "capacities"],
-    truncateAfter: 8,
+    defaultOpenFacets: ["families", "capacities", "applicators", "neckThreadSizes", "colors"],
+    mobileDefaultOpenFacets: ["families", "capacities"],
+    truncateAfter: 6,
+    truncateAfterByFacet: { families: 8 },
     defaultSort: "capacity-asc",
     resultLabel: "products",
 };

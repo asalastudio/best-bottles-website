@@ -17,7 +17,7 @@ it("keeps the new catalog wrapper static and falls back only to the pictured SKU
     container = document.createElement("div"); document.body.append(container); root = createRoot(container);
     act(() => root.render(createElement(CatalogCardPreview, {
         title: "Atomizer", catalogHero: hero, imageUrl: "/wrong-group-default.webp", heroHoverImageUrl: "/filled.webp",
-        href: "/products/atomizer-10ml?sku=GBAtom10Gl", family: "Atomizer", slug: "atomizer-10ml", neck: "17mm", capKind: null,
+        href: "/products/atomizer-10ml?sku=GBAtom10Gl", family: "Atomizer", slug: "atomizer-10ml",
         variants: [
             { id: "black", label: "Black", websiteSku: "GBAtom10Blk", imageUrl: "/black.webp", optionType: "capColor" },
             { id: "gold", label: "Gold", websiteSku: "GBAtom10Gl", imageUrl: "/exact-gold.webp", optionType: "capColor" },

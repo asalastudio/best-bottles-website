@@ -53,7 +53,7 @@ export const GRACE_TOOLS: OpenAI.Chat.Completions.ChatCompletionTool[] = [
                             "For **9ml Cylinder roll-on** specifically, use searchTerm like '9ml cylinder roller' with familyLimit 'Cylinder' — do not rely on a vague 'roll-on' search with the wrong family. " +
                             "Customer language → applicator values to use: " +
                             "'roll-on / roller' → 'Metal Roller Ball,Plastic Roller Ball'; " +
-                            "'spray / sprayer / perfume spray' → 'Fine Mist Sprayer,Perfume Spray Pump,Atomizer' (not Vintage Style Bulb Sprayer — use those product values separately); " +
+                            "'spray / sprayer / perfume spray' → 'Fine Mist Sprayer,Perfume Spray Pump,Atomizer' (not the vintage-style bulb sprayer — use those product values separately); " +
                             "'vintage / bulb sprayer / tassel' → 'Vintage Bulb Sprayer' or 'Vintage Bulb Sprayer with Tassel'; " +
                             "'splash-on / cologne / open mouth' → 'Reducer'; " +
                             "'dropper / eye dropper' → 'Dropper'; " +

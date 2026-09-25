@@ -120,12 +120,12 @@ export default function ShopThreeWays({ data, familyCounts }: Props) {
                 </div>
             </section>
 
-            <section id={shopSectionId("build")} className={`${styles.block} ${styles.lastBlock}`} aria-labelledby="shop-build-heading">
-                {/* The anchor the old stacked Build section used. */}
-                <span id="build-your-bottle" className={styles.anchor} aria-hidden="true" />
+            {/* Section 03 holds the four photographed steps (#261); that component carries the
+                build-your-bottle anchor and the heading this section is labelled by. */}
+            <section id={shopSectionId("build")} className={`${styles.block} ${styles.lastBlock}`} aria-labelledby="build-steps-heading">
                 <div className={styles.inner}>
                     <SectionHeading number={number("build")} way={ways.build.title} href={buildHref} linkLabel={t("shopOpenBuilder")} />
-                    <BuildYourBottleSteps build={build} headingId="shop-build-heading" />
+                    <BuildYourBottleSteps build={build} />
                 </div>
             </section>
         </div>

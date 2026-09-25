@@ -1,9 +1,8 @@
-/* Homepage Build Your Bottle: four numbered pencil-study steps and a start button (Jordan's comp, 2026-09-25),
-   nested in "Shop three ways" section 03 (its .inner supplies width and gutters).
+/* Homepage Build Your Bottle: four numbered steps and a start button (Jordan's comp, 2026-09-25).
    Gold #8B6F42 carries white type at 4.7:1; the smaller gold type uses #7A6139 (5.3:1 on bone). */
-.block{--gold:#8b6f42;--gold-ink:#7a6139;--tile:#f9f2e3;--rule:#dcd2c2;color:#1c1c1e}
+.section{--gold:#8b6f42;--gold-ink:#7a6139;--tile:#efebe4;--rule:#dcd2c2;max-width:1600px;margin:auto;padding:40px 4.5% 44px;color:#1c1c1e}
 .head{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 28px;margin-bottom:22px}
-.head h3{margin:0;font-family:var(--font-editorial);font-weight:400;font-size:42px;line-height:1.05;letter-spacing:-.005em;text-transform:none;text-wrap:balance}
+.head h2{font-family:var(--font-editorial);font-weight:400;font-size:42px;line-height:1.05;letter-spacing:-.005em;text-transform:none;text-wrap:balance}
 .eyebrow{font-family:var(--font-brand);font-size:11.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-ink)}
 .body{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:0 44px}
 .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:44px}
@@ -22,7 +21,7 @@
 .button:hover{background:#735b35}
 .arrow{font-size:15px;letter-spacing:0;transition:transform .2s}
 .button:hover .arrow{transform:translateX(3px)}
-.block a:focus-visible{outline:2px solid #75613c;outline-offset:4px}
+.section a:focus-visible{outline:2px solid #75613c;outline-offset:4px}
 
 @media(max-width:1180px){
   .body{grid-template-columns:1fr}
@@ -32,11 +31,12 @@
 @media(max-width:760px){
   .steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 16px}
   .step::after{display:none}
-  .head h3{margin:0;font-size:34px}
+  .head h2{font-size:34px}
 }
 @media(max-width:640px){
+  .section{padding:28px 20px 32px}
   .head{flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:18px}
-  .head h3{margin:0;font-size:30px}
+  .head h2{font-size:30px}
   .eyebrow{font-size:10.5px;letter-spacing:.18em}
   .badge{top:8px;left:8px;width:28px;height:28px;font-size:15px}
   .label{margin-top:10px;font-size:17px}

@@ -18,7 +18,7 @@ describe("mobile catalog compression", () => {
         expect(catalog).toContain('t("title")');
         expect(catalog).toContain("page-heading");
         expect(catalog).toContain('t("masterTitle")');
-        expect(catalog).toContain('t("visibleHelp"');
+        expect(catalog).toContain('data-testid="catalog-result-count"');
         expect(catalog).toContain("hidden lg:inline");
         expect(read("messages/en.json")).toContain("Master Catalog");
     });
@@ -27,35 +27,33 @@ describe("mobile catalog compression", () => {
         const catalog = read("src/app/catalog/CatalogClient.tsx");
         expect(catalog).toContain('data-testid="catalog-search-input"');
         expect(catalog).toContain('chips.filter((chip) => chip.facet !== "search")');
-        expect(catalog).toContain('activeFilterCount({ ...filters, search: "" })');
-        expect(catalog).toContain('title={t("collection")}');
+        expect(catalog).toContain('activeFilterCount({ ...filters, search: "", category: typeSwitchCategory ? null : filters.category })');
+        expect(read("src/components/catalog/CatalogFilterSidebar.tsx")).toContain('title={t("collection")}');
         expect(catalog).not.toContain("mobileQuickRefinements");
     });
 
-    it("puts filters, sort, and view on one mobile toolbar and keeps two-column visual cards", () => {
+    it("puts filters, sort, and view on the one toolbar and gives phones a single-column card with room for the Pack of row", () => {
         const catalog = read("src/app/catalog/CatalogClient.tsx");
         const grid = read("src/components/catalog/CatalogProductGrid.tsx");
-        const preview = read("src/components/catalog/CatalogCardPreview.tsx");
         const purchase = read("src/components/catalog/CatalogCardPurchase.tsx");
         expect(catalog).toContain("flex w-[300px] max-w-[85vw] flex-col");
         expect(catalog).toContain("min-h-0 flex-1 overflow-y-auto");
-        expect(catalog).toContain("lg:hidden mb-3 flex items-center gap-2");
-        expect(catalog).toContain("<ViewToggle value={viewMode} onChange={handleViewChange} />");
-        expect(catalog).toContain('aria-label="Line item view"');
-        expect(grid).toContain("grid-cols-2");
-        expect(preview).toContain("lg:hidden");
-        expect(preview).toContain("cap option");
-        expect(preview).toContain("hidden lg:block");
-        expect(purchase).toContain("catalog-card-add-compact");
-        expect(purchase).toContain("catalog-card-tier-toggle-compact");
-        expect(purchase).toContain("hidden items-start gap-3 lg:flex");
+        expect(catalog).toContain('data-testid="catalog-mobile-filter-button"');
+        expect(catalog).toContain("<ViewToggle value={viewMode} onChange={handleViewChange}");
+        expect(catalog).toContain('"Line item view"');
+        expect(grid).toContain("grid-cols-1");
+        expect(grid).toContain("sm:grid-cols-2");
+        expect(grid).toContain("lg:grid-cols-3");
+        // One purchase layout at every width: no compact twins, no tier dialog.
+        expect(purchase).not.toContain("-compact");
+        expect(purchase).not.toContain("<dialog");
+        expect(purchase).toContain('data-testid="catalog-card-pack-toggle"');
     });
 
     it("clears mobile facet chips without wiping the search query", () => {
         const catalog = read("src/app/catalog/CatalogClient.tsx");
         expect(catalog).toContain("handleClearFacets");
         expect(catalog).toContain("search: filters.search");
-        expect(catalog).toContain("onClearAll={handleClearFacets}");
         expect(catalog).toContain("onClick={handleClearFacets}");
         expect(catalog).toContain("onClick={handleClearAll}");
     });

@@ -111,8 +111,10 @@ describe("June 15 launch readiness guardrails", () => {
         const catalog = readRepoFile("src/app/catalog/CatalogClient.tsx");
 
         expect(footer).toContain('aria-label={t("emailLabel")}');
-        expect(catalog).toContain('aria-label={`Filter by ${label}`}');
+        const sidebar = readRepoFile("src/components/catalog/CatalogFilterSidebar.tsx");
+        expect(sidebar).toContain("aria-expanded={open}");
+        expect(sidebar).toContain('<label htmlFor={minId} className="sr-only">Minimum price per unit</label>');
         expect(catalog).toContain('aria-label="Sort catalog results"');
-        expect(catalog).toContain('aria-label="Sort by visible catalog results"');
+        expect(catalog).toContain('aria-label={`Remove ${chip.label} filter`}');
     });
 });

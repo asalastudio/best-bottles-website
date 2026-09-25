@@ -207,12 +207,14 @@ describe("no duplicated vocabulary in consumers", () => {
 });
 
 describe("sidebar hierarchy (Baymard product-list research)", () => {
-    it("scope, then fit attributes, then look, then price, then aesthetic line", () => {
+    it("family, then fit attributes, then look, then collection and price (design 8a)", () => {
         expect(MASTER_CATALOG_SURFACE.visibleFacets).toEqual([
-            "category", "collection", "applicators", "capacities", "neckThreadSizes", "colors", "price", "families", "componentType",
+            "families", "capacities", "applicators", "neckThreadSizes", "colors", "shopCollection", "price",
         ]);
-        expect(MASTER_CATALOG_SURFACE.defaultOpenFacets).toContain("colors");
-        expect(MASTER_CATALOG_SURFACE.defaultOpenFacets).toContain("category");
+        // Product type is the title-row switch, not a sidebar facet.
+        expect(MASTER_CATALOG_SURFACE.visibleFacets).not.toContain("category");
+        expect(MASTER_CATALOG_SURFACE.defaultOpenFacets).toEqual(["families", "capacities", "applicators", "neckThreadSizes", "colors"]);
+        expect(MASTER_CATALOG_SURFACE.truncateAfterByFacet).toEqual({ families: 8 });
         expect(MASTER_CATALOG_SURFACE.mobileDefaultOpenFacets.length).toBeLessThan(MASTER_CATALOG_SURFACE.defaultOpenFacets.length);
         expect(MASTER_CATALOG_SURFACE.truncateAfter).toBeGreaterThanOrEqual(5);
         expect(MASTER_CATALOG_SURFACE.truncateAfter).toBeLessThanOrEqual(10);
@@ -220,12 +222,14 @@ describe("sidebar hierarchy (Baymard product-list research)", () => {
 
     it("the sidebar renders from the manifest and truncates instead of scroll-boxing", () => {
         const client = read("src/app/catalog/CatalogClient.tsx");
-        expect(client).toContain("surface.visibleFacets.map(");
-        expect(client).toContain("TruncatedFacetList");
-        expect(client).not.toContain("max-h-[280px]");
-        expect(client).not.toContain("max-h-[240px]");
+        const sidebar = read("src/components/catalog/CatalogFilterSidebar.tsx");
+        expect(sidebar).toContain("surface.visibleFacets.map(");
+        expect(sidebar).toContain("function Truncated");
+        expect(sidebar).toContain("limitFor(");
+        expect(sidebar).not.toContain("max-h-[280px]");
+        expect(sidebar).not.toContain("max-h-[240px]");
+        expect(client).toContain("surface={MASTER_CATALOG_SURFACE}");
         expect(client).toContain('role="dialog"');
-        expect(client).toContain("indeterminate={range.partiallyChecked}");
     });
 });
 

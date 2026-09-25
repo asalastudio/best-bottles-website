@@ -1,0 +1,23 @@
+family,capacityMl,glassFinishes,currentAssemblyRecords,reducerWithCap,fineMistSprayer,perfumeSprayPump,vintageBulbSprayer,vintageBulbWithTassel,treatmentPump,dropper,other
+Circle,50,"Clear, Frosted",82,23,0,12,20,7,14,6,0
+Circle,100,"Clear, Frosted",86,24,0,12,24,12,14,0,0
+Cylinder,25,Clear,45,12,5,0,9,9,7,3,0
+Cylinder,50,Clear,43,12,0,6,9,9,7,0,0
+Cylinder,100,Clear,43,12,0,6,9,9,7,0,0
+Diamond,60,Clear,43,12,0,6,9,9,7,0,0
+Diva,30,Clear,34,12,0,6,9,0,7,0,0
+Diva,46,"Clear, Frosted",102,24,0,12,23,23,14,6,0
+Diva,100,Clear,43,12,0,6,9,9,7,0,0
+Elegant,60,"Clear, Frosted",94,24,0,12,23,13,16,6,0
+Elegant,100,"Clear, Frosted",87,23,0,12,18,18,16,0,0
+Empire,50,Clear,47,12,0,6,9,9,8,3,0
+Empire,100,Clear,44,12,0,6,9,9,8,0,0
+Grace,55,Clear,43,12,0,6,9,9,7,0,0
+Round,78,"Clear, Frosted",86,24,0,12,18,18,14,0,0
+Round,128,"Clear, Frosted",92,24,0,12,27,9,14,6,0
+Sleek,30,Clear,38,12,0,6,9,0,8,3,0
+Sleek,50,Clear,44,12,0,6,9,9,8,0,0
+Sleek,100,Clear,44,12,0,6,9,9,8,0,0
+Slim,30,Clear,37,12,0,6,9,0,7,3,0
+Slim,50,Clear,43,12,0,6,9,9,7,0,0
+Slim,100,Clear,43,12,0,6,9,9,7,0,0

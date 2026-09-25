@@ -1,0 +1,3044 @@
+{
+  "date": "2026-09-25",
+  "approvedBy": "Jordan (\"approve all\") after the review sheets",
+  "scope": {
+    "Square": 3,
+    "Rectangle": 9,
+    "Tulip": 6,
+    "Diamond": 5,
+    "Circle": 1,
+    "Round": 1,
+    "Teardrop": 3,
+    "Vial": 13
+  },
+  "publication": false,
+  "source": {
+    "lane": "batch3-2026-09-25",
+    "approvalCandidatesSha256": "5b6ab416b5e38c801dbf4dc4a44d41d3cbfc3a0247e038d7032d464c96077ae9"
+  },
+  "labelFollowUps": {
+    "GBSQSTBlue": {
+      "registryBottleColor": "Cobalt Blue",
+      "productionColor": "Clear",
+      "note": "The pictured glass is coloured; production files all three SQST variants as Clear. Data fix left for later."
+    },
+    "GBSQSTGREEN": {
+      "registryBottleColor": "Green",
+      "productionColor": "Clear",
+      "note": "The pictured glass is coloured; production files all three SQST variants as Clear. Data fix left for later."
+    }
+  },
+  "sizing": {
+    "curve": "pct = 3.5314 * mm^0.5868 (landmark-to-foot span; foot at 91%)",
+    "overrides": {
+      "vials": "Jordan 2026-09-25: 1 ml and 2 ml vials 32%, 3 ml and 4 ml vials 35%",
+      "stopperBottles": "Jordan 2026-09-25: SQST (64 mm) and Teardrop (68 mm) sized by full height with the stopper seated on the batch height curve (total_px = 228.9 * mm^0.388, fitted to the open-neck renders)"
+    },
+    "landmarkRule": "shoulder = neck base; closure seat for tube vials (rim) and ground-glass stoppers (top of the glass lip)"
+  },
+  "qa": "Framing re-registered to the lock (scale within 0.05%, < 1 px); every image reviewed by eye and approved by Jordan",
+  "held": {
+    "GBVGreen2o4BlackCapSht": "not rendered: no master PSD (Vial 3 ml green)",
+    "GBVBlu1o9BlackCapSht": "not rendered: no master PSD (Vial 3 ml blue)",
+    "GBRect10MinarCu": "not rendered: no master PSD (10 ml Minaret)",
+    "GBMtlCylGl": "not rendered: Royal 14 ml height disagreement",
+    "Pillar": "not rendered: no exact master PSDs",
+    "Lotion": "not rendered: lotion glass heights unknown",
+    "Hearts": "kept today's cards by Jordan's decision"
+  },
+  "rows": [
+    {
+      "sku": "GBSQSTClear",
+      "family": "Rectangle",
+      "groupSlug": "rectangle-9ml-clear-Ground-glassapplicator",
+      "graceSku": "GB-RCT-CLR-9ML-T-02",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343694258468",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh78wpmtypmnrjfa6ycqd9t4998drg3n",
+        "slug": "rectangle-9ml-clear-Ground-glassapplicator",
+        "displayName": "9 ml Clear Rectangle Applicator Bottle",
+        "color": "Clear",
+        "capColor": "Clear",
+        "applicator": "Glass Stopper",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBSQSTClear.51eb1f340836.webp",
+      "sha256": "51eb1f340836bda871851f96bee11601eea4dda169380cd2ad28aa7f7c4438c1",
+      "bytes": 1970860,
+      "selectedAttempt": "a2",
+      "sourceFittedSha256": "b3e20cd421ac17fd7cb484d3577f237de058eba5cf6095a42635ede0d4492d1a",
+      "sourceBytes": 3481835,
+      "sourceRenderSha256": "ecc33ed04e02ff0ca3b940c36c6bce1577f6c1a406f2279edd24bcb1ab6489b4",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 2,
+      "sizing": {
+        "glassMm": 47,
+        "heightWithStopperMm": 64,
+        "landmarkRule": "closure seat",
+        "targetPct": 37.01,
+        "curvePct": null,
+        "override": "Jordan 2026-09-25: stopper bottles sized by full height with stopper (64 mm) on the batch height curve",
+        "footFix": null,
+        "measuredFootPx": 1071,
+        "measuredLandmarkPx": 398,
+        "scaleFactor": 1.25824
+      },
+      "fit": {
+        "scale": 1.0024,
+        "shiftY": -3.6,
+        "shiftX": -2.3,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 274,
+        "iou": 0.9972,
+        "p95": 1.94,
+        "p99": 2.72,
+        "max": 3.48,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBSQSTClear-input.png",
+        "sha256": "5aa2e959c51179aaec67f57281a9d9f3c312e37b68f017083f5e5e6324bbe998"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/17. Additional Bottles/GBSQSTClear..psd",
+        "sha256": "fe6a756948f59fbee73fa830a93f8e09669d7780a840c300fba9c7326b6f9872"
+      },
+      "promptSha256": "33de92ab6562d526526f7ba52ac62ffadaf09af133145a39e28a590973dbe44d"
+    },
+    {
+      "sku": "GBSQSTBlue",
+      "family": "Rectangle",
+      "groupSlug": "rectangle-9ml-clear-Ground-glassapplicator",
+      "graceSku": "GB-RCT-CLR-9ML-T-01",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343694225700",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh78wpmtypmnrjfa6ycqd9t4998drg3n",
+        "slug": "rectangle-9ml-clear-Ground-glassapplicator",
+        "displayName": "9 ml Clear Rectangle Applicator Bottle",
+        "color": "Clear",
+        "capColor": "Clear",
+        "applicator": "Glass Stopper",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBSQSTBlue.e5e8aa201280.webp",
+      "sha256": "e5e8aa201280c6704868e82a092a728cd4bfce09f77dc0ffff02097ce87af643",
+      "bytes": 1898046,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "1094e9d53f2029a53bd7152e4b04585f4e8696fd909f2ea69506280f3fae3011",
+      "sourceBytes": 3447744,
+      "sourceRenderSha256": "cbd94d9fea46e4101997d9184e31d47a332e7fd8856ae3e63a4ec6f399af9c4b",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 47,
+        "heightWithStopperMm": 64,
+        "landmarkRule": "closure seat",
+        "targetPct": 36.97,
+        "curvePct": null,
+        "override": "Jordan 2026-09-25: stopper bottles sized by full height with stopper (64 mm) on the batch height curve",
+        "footFix": null,
+        "measuredFootPx": 1055,
+        "measuredLandmarkPx": 385,
+        "scaleFactor": 1.26239
+      },
+      "fit": {
+        "scale": 1.0007,
+        "shiftY": -2.3,
+        "shiftX": -0.6,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 535,
+        "iou": 0.9923,
+        "p95": 3.04,
+        "p99": 3.77,
+        "max": 5.94,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBSQSTBlue-input.png",
+        "sha256": "8cddaa0ee08276867f6a4f4debcc8345a9113c55ad7d389a82e63506f7b5bd1f"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/17. Additional Bottles/GBSQSTBlue.psd",
+        "sha256": "a609cf374b64fb4b62f3b7b74405aa07a01f634569040cfd70865dfa0672357a"
+      },
+      "promptSha256": "85025457153fa18fcb80f11fac871c8ebd2bd2a2bb22246a20c29cddb24af889"
+    },
+    {
+      "sku": "GBSQSTGREEN",
+      "family": "Rectangle",
+      "groupSlug": "rectangle-9ml-clear-Ground-glassapplicator",
+      "graceSku": "GB-RCT-CLR-9ML-T-03",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343694291236",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh78wpmtypmnrjfa6ycqd9t4998drg3n",
+        "slug": "rectangle-9ml-clear-Ground-glassapplicator",
+        "displayName": "9 ml Clear Rectangle Applicator Bottle",
+        "color": "Clear",
+        "capColor": "Clear",
+        "applicator": "Glass Stopper",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBSQSTGREEN.ab6f6a5ef950.webp",
+      "sha256": "ab6f6a5ef950f59005d24f497b7ba9e5b15b33df44068ee9270e19f376604332",
+      "bytes": 1910840,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "20f390197b3b91b110a1f0afc95d8d6aed687c61d0ad34655592b3b2619b9d59",
+      "sourceBytes": 3439127,
+      "sourceRenderSha256": "f91d07cb161d1ef0103337d21aa3da5c6af6c85a97acfb4e3c35f6a1e4b173a1",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 47,
+        "heightWithStopperMm": 64,
+        "landmarkRule": "closure seat",
+        "targetPct": 37.53,
+        "curvePct": null,
+        "override": "Jordan 2026-09-25: stopper bottles sized by full height with stopper (64 mm) on the batch height curve",
+        "footFix": null,
+        "measuredFootPx": 1070,
+        "measuredLandmarkPx": 413,
+        "scaleFactor": 1.30686
+      },
+      "fit": {
+        "scale": 1.0039,
+        "shiftY": -5.9,
+        "shiftX": -4.1,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 526,
+        "iou": 0.9913,
+        "p95": 1.99,
+        "p99": 2.35,
+        "max": 6.34,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "inputs/GBSQSTGREEN-input.png",
+        "sha256": "1ae0b4ce1b841cb00e13c90f1597e51f6ad4259d0f07dc82d1e28ac087fd2fb9"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/17. Additional Bottles/GBSQSTGREEN.psd",
+        "sha256": "3d8f1cf023987fcafcc766f90a3062a750324d8cc3476e41916da0dbe954f1bd"
+      },
+      "promptSha256": "2ff128a05f5dd18dfcc240a931f0e7805767b6e731bf951f648f363cff3e56ef"
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslBlk",
+      "family": "Circle",
+      "groupSlug": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "graceSku": "GB-CIR-FRS-50ML-ASP-01",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343667388708",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7eqtk6frtr12ef2k4ymmyhmx8ez095",
+        "slug": "circle-50ml-frosted-18-415-antiquespray-tassel",
+        "displayName": "50 ml Frosted Circle Vintage Bulb Spray Bottle with Tassel",
+        "color": "Frosted",
+        "capColor": "Frosted",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBCrclFrst50AnSpTslBlk.364ec338bc8f.webp",
+      "sha256": "364ec338bc8f52e42f8eeeada9e14f70c62c856d8f5b6d828e03fa60e338a485",
+      "bytes": 2084856,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "afa1edfa2c34e71ddc2fbd2c51b4f313e8ed4bae5156a4ec1682fffa523ccc5e",
+      "sourceBytes": 4024178,
+      "sourceRenderSha256": "a64287f17a3c9f41b4861d8694fd5a9c0a01ee979399b95b0fe7ccbe0929012a",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 87,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 48.54,
+        "curvePct": null,
+        "override": null,
+        "footFix": null,
+        "measuredFootPx": 1875,
+        "measuredLandmarkPx": 900,
+        "scaleFactor": 1.13908
+      },
+      "fit": {
+        "scale": 0.9988,
+        "shiftY": 0.3,
+        "shiftX": 1.4,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 1318,
+        "iou": 0.9885,
+        "p95": 5.4,
+        "p99": 18.85,
+        "max": 19.23,
+        "bgDevP95": 4
+      },
+      "input": {
+        "file": "inputs/GBCrclFrst50AnSpTslBlk-input.png",
+        "sha256": "aa5cb4e5da37f6c397b2bff67506ca0db08d3c30ce4706ea4589c24021973ae4"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/21. Tassels/Updated Tassels/48. GBCrclFrst50AnSpTslBlk.psd",
+        "sha256": "c18c94bd54f708a1797cf91ca6f837fc3ba6bad3e1eabb0f088be46ccae43512"
+      },
+      "promptSha256": "f4e9de2439b3c21f78fb4037b4f9ee8250f415c30233e758c39ffd7e5caa756f"
+    },
+    {
+      "sku": "GBDmnd2ozAnSpMtSl",
+      "family": "Diamond",
+      "groupSlug": "diamond-60ml-clear-18-415-antiquespray",
+      "graceSku": "GB-DMD-CLR-60ML-ASP-MSLV",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343637438756",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh754acbzgp1v22dp5qcfv6b198dsqfx",
+        "slug": "diamond-60ml-clear-18-415-antiquespray",
+        "displayName": "60 ml Clear Diamond Vintage Bulb Spray Bottle",
+        "color": "Clear",
+        "capColor": "Matte Silver",
+        "applicator": "Vintage Bulb Sprayer",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBDmnd2ozAnSpMtSl.2d63ba35de24.webp",
+      "sha256": "2d63ba35de2433200e0a8f485cd307d023b08f0c8e8acc7db2830e02a28321fd",
+      "bytes": 2164322,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "3cfcf14210f4735ee96a891328a7a9bab669c0905904583e9c788a30f2efa5df",
+      "sourceBytes": 4266155,
+      "sourceRenderSha256": "28c2f379d0979a2bcf799b796ca480e555aea9f728187b6064928f7ec30eda95",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 88,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 48.87,
+        "curvePct": null,
+        "override": null,
+        "footFix": null,
+        "measuredFootPx": 1795,
+        "measuredLandmarkPx": 790,
+        "scaleFactor": 1.11251
+      },
+      "fit": {
+        "scale": 0.9992,
+        "shiftY": -1,
+        "shiftX": -0.6,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 701,
+        "iou": 0.9873,
+        "p95": 4.04,
+        "p99": 5.38,
+        "max": 8.25,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "inputs/GBDmnd2ozAnSpMtSl-input.png",
+        "sha256": "1a9b707f5335d4a5c4612e824d07de4c8f328c4c83dbe5aa0449e88daa380e7c"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /28. Diamond 60ml/1. Diamond 60ml  PSD/35. GBDmnd2ozAnSpMtSl.psd",
+        "sha256": "d96bf2456a1cc50de5679277cb555f4ab842d0d701e3a644098fe3f2b22fe691"
+      },
+      "promptSha256": "49d5aca6109f8759128983cdf4e4d8d7e33dda9325aa246f91090cd2ca072661"
+    },
+    {
+      "sku": "GBDmnd2ozAnSpTslGl",
+      "family": "Diamond",
+      "groupSlug": "diamond-60ml-clear-18-415-antiquespray-tassel",
+      "graceSku": "GB-DMD-CLR-60ML-AST-GLD",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343640387876",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh74k8c2kvkdwv708nxwjc9w5s8drn6q",
+        "slug": "diamond-60ml-clear-18-415-antiquespray-tassel",
+        "displayName": "60 ml Clear Diamond Vintage Bulb Spray Bottle with Tassel",
+        "color": "Clear",
+        "capColor": "Gold",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBDmnd2ozAnSpTslGl.9ed895d2677b.webp",
+      "sha256": "9ed895d2677b4c06f93d0bf28ec938430ab63bcbf52d338df6b909cf103ce8a0",
+      "bytes": 2299048,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "a9f3b5f16a5a0c7768312148f648834666698e189bcc42fb9b4907f0743ed8a5",
+      "sourceBytes": 4472696,
+      "sourceRenderSha256": "3fab0bd7d05052c514c7709bcacd7cc85f47bc2d4dc2a94247e769e9e2c6b4bc",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 88,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 48.87,
+        "curvePct": null,
+        "override": null,
+        "footFix": null,
+        "measuredFootPx": 1877,
+        "measuredLandmarkPx": 865,
+        "scaleFactor": 1.10482
+      },
+      "fit": {
+        "scale": 0.999,
+        "shiftY": 1.8,
+        "shiftX": 1,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 1096,
+        "iou": 0.9846,
+        "p95": 4.97,
+        "p99": 7.8,
+        "max": 11.78,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBDmnd2ozAnSpTslGl-input.png",
+        "sha256": "64c6b5c6f49e48daadd2a10053f8005bc04b21c3cea81988f23d76b1e531ce75"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /28. Diamond 60ml/1. Diamond 60ml  PSD/50. GBDmnd2ozAnSpTslGl.psd",
+        "sha256": "60ed72f4c2b0c40e095a168f3094ea70b0f2fdd9d892ece318101916eb68f71d"
+      },
+      "promptSha256": "7ae566c23b277b904c90c4865178883fa79b726091946dd7672e3ba44ee901e8"
+    },
+    {
+      "sku": "GBDmnd2ozRdcrMtSl",
+      "family": "Diamond",
+      "groupSlug": "diamond-60ml-clear-18-415-reducer",
+      "graceSku": "GB-DMD-CLR-60ML-RDC-MSLV",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343664079140",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh769j3wzg0960yea7kca4762d8dr8vc",
+        "slug": "diamond-60ml-clear-18-415-reducer",
+        "displayName": "60 ml Clear Diamond Reducer Bottle",
+        "color": "Clear",
+        "capColor": "Matte Silver",
+        "applicator": "Reducer",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBDmnd2ozRdcrMtSl.a777f2991bb2.webp",
+      "sha256": "a777f2991bb263f09158f14b40739b531fb1bf96bff141fe76e3889e16994b4f",
+      "bytes": 1960208,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "185a26270a1d3181a23081ff224274e60e08d9e6ea809eaa1460d64eeed36787",
+      "sourceBytes": 3593076,
+      "sourceRenderSha256": "efeac8a5d8be9b3e4f0d0105a1b203a024e8df86f023a8a36db8af0453f1c67b",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 88,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 48.87,
+        "curvePct": null,
+        "override": null,
+        "footFix": null,
+        "measuredFootPx": 1468,
+        "measuredLandmarkPx": 458,
+        "scaleFactor": 1.107
+      },
+      "fit": {
+        "scale": 0.9988,
+        "shiftY": 0.9,
+        "shiftX": 0.3,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 1254,
+        "iou": 0.9606,
+        "p95": 3.03,
+        "p99": 4.72,
+        "max": 11.55,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBDmnd2ozRdcrMtSl-input.png",
+        "sha256": "ee981afdeb65481055589e4eb092b25ae2cb1b6ffc1cadd638e5df375f3eac50"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /28. Diamond 60ml/1. Diamond 60ml  PSD/9. GBDmnd2ozRdcrMtSl.psd",
+        "sha256": "5b3f59074055b2cc09556fe9c847dc6d1625fe23624f8291a49851c5598da2cc"
+      },
+      "promptSha256": "22c14fbeab310b4cb75c60de46f08ec1c0af5520cc09168bf440351c37b0e431"
+    },
+    {
+      "sku": "GBDmnd2ozSpryMtGl",
+      "family": "Diamond",
+      "groupSlug": "diamond-60ml-clear-18-415-perfumespray",
+      "graceSku": "GB-DMD-CLR-60ML-SPR-MGLD",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343642583332",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7b8a81kfgv8b0tcxn9ejjw3d8ds4zv",
+        "slug": "diamond-60ml-clear-18-415-perfumespray",
+        "displayName": "60 ml Clear Diamond Bottle",
+        "color": "Clear",
+        "capColor": "Matte Gold",
+        "applicator": "Perfume Spray Pump",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBDmnd2ozSpryMtGl.6a7292a0159d.webp",
+      "sha256": "6a7292a0159d4ef5bff35b079236b39917068764820f0c3c614999cf992d594e",
+      "bytes": 2007016,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "734f5f29c0ceed9b81695d69425d8947abbfa7959b607604a2056badf0272203",
+      "sourceBytes": 3833103,
+      "sourceRenderSha256": "86b1052e666f0bc155b1813dc5d06308109431986754cdd7ce9a5b4300955da0",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 88,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 48.87,
+        "curvePct": null,
+        "override": null,
+        "footFix": null,
+        "measuredFootPx": 1745,
+        "measuredLandmarkPx": 735,
+        "scaleFactor": 1.107
+      },
+      "fit": {
+        "scale": 0.9996,
+        "shiftY": -1.4,
+        "shiftX": -0.2,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 999,
+        "iou": 0.9846,
+        "p95": 3.97,
+        "p99": 5.07,
+        "max": 10.52,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBDmnd2ozSpryMtGl-input.png",
+        "sha256": "4ab85f5762ed36bb068be9dfcf4c2c7e69e599a0846693000c6b4fa7f54c9d0c"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /28. Diamond 60ml/1. Diamond 60ml  PSD/13. GBDmnd2ozSpryMtGl.psd",
+        "sha256": "7ff378648f94cecf5b1928da42a12550b3ac1ca7149086c22ba2c9f30715c044"
+      },
+      "promptSha256": "b23e856e4a937201d873c8f3960bdaabec7689ec0619cf06703b30c7abb1bf58"
+    },
+    {
+      "sku": "LBDmnd2ozLtnMtGl",
+      "family": "Diamond",
+      "groupSlug": "diamond-60ml-clear-18-415-lotionpump",
+      "graceSku": "LB-DMD-CLR-60ML-LPM-MGLD",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343692718372",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh74zrzqk4t0jm1jaskmh5tj618dsdeq",
+        "slug": "diamond-60ml-clear-18-415-lotionpump",
+        "displayName": "60 ml Clear Diamond Lotion Pump Bottle",
+        "color": "Clear",
+        "capColor": "Matte Gold",
+        "applicator": "Lotion Pump",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/LBDmnd2ozLtnMtGl.ffcbd375c5f2.webp",
+      "sha256": "ffcbd375c5f236623d3fa139e77b3d1f4a6b878881fba4d5265e99f31a334c21",
+      "bytes": 2031564,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "b56c19e3390749cfc2ab42a9abdd07b52e58dc6ea1d95104f10492a082aab26b",
+      "sourceBytes": 3981165,
+      "sourceRenderSha256": "746b01654cccb3036901354b7c0ecef84fac690b559e3079b5ea71030e9e77cf",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 88,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 48.87,
+        "curvePct": null,
+        "override": null,
+        "footFix": null,
+        "measuredFootPx": 1740,
+        "measuredLandmarkPx": 735,
+        "scaleFactor": 1.11251
+      },
+      "fit": {
+        "scale": 0.9985,
+        "shiftY": 1.2,
+        "shiftX": 0.4,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 1025,
+        "iou": 0.9836,
+        "p95": 3.99,
+        "p99": 4.73,
+        "max": 7.75,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/LBDmnd2ozLtnMtGl-input.png",
+        "sha256": "df9b19f8c3ed21e4c75bbceab9db5832f9875c219b231fe1c331f5563ce2efb7"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /28. Diamond 60ml/1. Diamond 60ml  PSD/14. LBDmnd2ozLtnMtGl.psd",
+        "sha256": "bbc2fb32bf58f7441d09a0e022e46fd4a06d26c528dfff1f15e88bee0513163c"
+      },
+      "promptSha256": "1cd9fd97495a64502627e2bec75ac5da8c5e2281758028f84c0ea6577e9e6f86"
+    },
+    {
+      "sku": "GBRect10Gl",
+      "family": "Rectangle",
+      "groupSlug": "footed-rectangle-10ml-clear-13-415",
+      "graceSku": "GB-RCT-CLR-10ML-GLD-T-01",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343641338148",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh74pyf0s05bzxzpnzkd8q5fbd8dr1rx",
+        "slug": "footed-rectangle-10ml-clear-13-415",
+        "displayName": "10 ml Clear Footed Rectangle Bottle with Cap",
+        "color": "Clear",
+        "capColor": "Gold",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBRect10Gl.fd36e221ab33.webp",
+      "sha256": "fd36e221ab33c6e88dec0e55bb6ef8fde7c1ae51184fec3a0a5728703450b3e0",
+      "bytes": 1803264,
+      "selectedAttempt": "a2",
+      "sourceFittedSha256": "ba038ec651c31ece84c396f799f07d15987c0d8d0562d14af0379a7bd0183acd",
+      "sourceBytes": 3251203,
+      "sourceRenderSha256": "4d0012cafe688f47e026a887cb094e6bb96af4407e2a46fc72337288b830c353",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 2,
+      "sizing": {
+        "glassMm": 50,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 35.07,
+        "curvePct": null,
+        "override": null,
+        "footFix": "foot was 901 (glass foot is a separate faint component); true glass bottom 991",
+        "measuredFootPx": 991,
+        "measuredLandmarkPx": 511,
+        "scaleFactor": 1.67167
+      },
+      "fit": {
+        "scale": 0.9984,
+        "shiftY": 0.9,
+        "shiftX": 1.5,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 339,
+        "iou": 0.9899,
+        "p95": 2.36,
+        "p99": 5.78,
+        "max": 10.71,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "inputs/GBRect10Gl-input.png",
+        "sha256": "b26efe9d48ff280e79b1f93c6f021d32dbc6ea2f3e72ca5240dc8c1d9be60ea1"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/18. Footed Rectangluar 10ml/1. Footed Rect 10ml (Uncapped) PSD/28. GBRect10Gl.psd",
+        "sha256": "a1b33e89b2bd067dc7cab1b41efa019893782b7c91d7d27af51742e153bf77a8"
+      },
+      "promptSha256": "23f240013bb3f1701ef897652191e418e194dd06c2fca568db9b302015f282a2"
+    },
+    {
+      "sku": "GBRect10MtlRollBlkDot",
+      "family": "Rectangle",
+      "groupSlug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "graceSku": "GB-RCT-CLR-10ML-MRL-BKDT-01",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343684722980",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7cnrwb710smxevgz27dbwfex8dr9tm",
+        "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+        "displayName": "10 ml Clear Footed Rectangle Roll-On Bottle",
+        "color": "Clear",
+        "capColor": "Black Dotted",
+        "applicator": "Metal Roller Ball",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBRect10MtlRollBlkDot.6e3b4c14219f.webp",
+      "sha256": "6e3b4c14219f9636e80cad5a54377fe591161b5b7dc3f869b3ad8a2c61fea997",
+      "bytes": 1824488,
+      "selectedAttempt": "a2",
+      "sourceFittedSha256": "f0bb9ad701b90d067030752bd7da2b814b40472887acec22e9e63dd7556be1de",
+      "sourceBytes": 3283157,
+      "sourceRenderSha256": "a405e841d803c1d740668d943022ecaf53d16cb916a5c7cf2191e75255f21235",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 2,
+      "sizing": {
+        "glassMm": 50,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 35.07,
+        "curvePct": null,
+        "override": null,
+        "footFix": "foot was 891 (glass foot is a separate faint component); true glass bottom 981",
+        "measuredFootPx": 981,
+        "measuredLandmarkPx": 501,
+        "scaleFactor": 1.67167
+      },
+      "fit": {
+        "scale": 0.9991,
+        "shiftY": -0.5,
+        "shiftX": 1.3,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 336,
+        "iou": 0.9905,
+        "p95": 2.36,
+        "p99": 3.71,
+        "max": 4.65,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "inputs/GBRect10MtlRollBlkDot-input.png",
+        "sha256": "27b3afb69658cdfb3f8f9e0d67d254b2ecc84fd935e3bc17946e112350672b98"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/18. Footed Rectangluar 10ml/1. Footed Rect 10ml (Uncapped) PSD/27. GBRect10MtlRollBlkDot.psd",
+        "sha256": "67c4f2557c4152c209f3bd7e865bbc59bceb454f1dc020ba48a57e07c15a31c8"
+      },
+      "promptSha256": "17ecfdb33b420bb634eb8a4eb383fb9685e44960b87ac90375280663646a5fd2"
+    },
+    {
+      "sku": "GBRect10SpryGlMatt",
+      "family": "Rectangle",
+      "groupSlug": "footed-rectangle-10ml-clear-13-415-finemist",
+      "graceSku": "GB-RCT-CLR-10ML-SPR-MGLD-01",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343628493092",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh71waqvcdze8pd7h9rxkqhams8ds81k",
+        "slug": "footed-rectangle-10ml-clear-13-415-finemist",
+        "displayName": "10 ml Clear Footed Rectangle Fine Mist Spray Bottle",
+        "color": "Clear",
+        "capColor": "Matte Gold",
+        "applicator": "Fine Mist Sprayer",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBRect10SpryGlMatt.43e762e807cb.webp",
+      "sha256": "43e762e807cbb1e020f5e2aad91023ef49718957aeb5a20676e7d206c788db6e",
+      "bytes": 1915982,
+      "selectedAttempt": "a2",
+      "sourceFittedSha256": "7df414dde280925eb3b6f90b337b359a5d98205376fa98386ba2c9b2b516ffda",
+      "sourceBytes": 3556842,
+      "sourceRenderSha256": "37a0822239756965d3d086a8b1e153cd9475db52831ef693f370d7f0b5f394a1",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 2,
+      "sizing": {
+        "glassMm": 50,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 35.07,
+        "curvePct": null,
+        "override": null,
+        "footFix": "foot was 886 (glass foot is a separate faint component); true glass bottom 976",
+        "measuredFootPx": 976,
+        "measuredLandmarkPx": 496,
+        "scaleFactor": 1.67167
+      },
+      "fit": {
+        "scale": 0.9983,
+        "shiftY": 0.7,
+        "shiftX": 1.9,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 579,
+        "iou": 0.9878,
+        "p95": 3.98,
+        "p99": 4.6,
+        "max": 9.76,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBRect10SpryGlMatt-input.png",
+        "sha256": "2618b74f638cc3d4c7991d08fc3ed53a8dc34cf939e7243b131be880eab935d1"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/18. Footed Rectangluar 10ml/1. Footed Rect 10ml (Uncapped) PSD/7. GBRect10SpryGlMatt.psd",
+        "sha256": "450e07e6c77d60288ae76a62f9cb6e2d2e1bea16e4ffb88c34a9879ed5a674aa"
+      },
+      "promptSha256": "3d053e3ef1feda456c7b918e5b110d3b832866ddc2d39d803cae22facf42c723"
+    },
+    {
+      "sku": "GBTallRect10Gl",
+      "family": "Rectangle",
+      "groupSlug": "tall-rectangle-10ml-clear-13-415",
+      "graceSku": "GB-RCT-CLR-10ML-GLD-T-02",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343641862436",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh73h3a6j3etcqcvad2eenww718dsne5",
+        "slug": "tall-rectangle-10ml-clear-13-415",
+        "displayName": "10 ml Clear Tall Rectangle Bottle with Cap",
+        "color": "Clear",
+        "capColor": "Gold",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBTallRect10Gl.39d81528984b.webp",
+      "sha256": "39d81528984bbba8cea23e32aafaf9a7090687b05877c655d7b5f449ff9acace",
+      "bytes": 1756230,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "f6a852294d14bf5c1bdba51de959782ab4fad48c99c534b7145ae96e55c4b1d3",
+      "sourceBytes": 3078381,
+      "sourceRenderSha256": "781f8adba2f9c15d7b58cdf4fda3de170d0e56ba49b43da72765058c6bb0eb42",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 101,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 52.98,
+        "curvePct": null,
+        "override": null,
+        "footFix": null,
+        "measuredFootPx": 1519,
+        "measuredLandmarkPx": 470,
+        "scaleFactor": 1.15561
+      },
+      "fit": {
+        "scale": 0.9997,
+        "shiftY": -1.4,
+        "shiftX": 0.6,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 285,
+        "iou": 0.9955,
+        "p95": 2.92,
+        "p99": 3.99,
+        "max": 5.95,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBTallRect10Gl-input.png",
+        "sha256": "7d5a0594701d842dab5b11f53e441c73fc2fa7c44735513d058b02e9cdf03cda"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/16. Tall Rectangular 10ml/1. Tall Rectangular 10ml (uncapped) PSD/28. GBTallRect10Gl.psd",
+        "sha256": "a31ad3b5cb84e49b6bcd4b1c4006c2ba4ff2113cbf4eb896f3452b3026830181"
+      },
+      "promptSha256": "37735130f992e6c26ab33afb03633e43a33dd576d16066f7a9a4429133fd39ed"
+    },
+    {
+      "sku": "GBTallRect10MtlRollBlkDot",
+      "family": "Rectangle",
+      "groupSlug": "tall-rectangle-10ml-clear-13-415-rollon",
+      "graceSku": "GB-RCT-CLR-10ML-MRL-BKDT-02",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343685607716",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh72pz1r8rkx7py7rxc21kxwpx8drp16",
+        "slug": "tall-rectangle-10ml-clear-13-415-rollon",
+        "displayName": "10 ml Clear Tall Rectangle Roll-On Bottle",
+        "color": "Clear",
+        "capColor": "Black Dotted",
+        "applicator": "Metal Roller Ball",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBTallRect10MtlRollBlkDot.768d007455ed.webp",
+      "sha256": "768d007455ed40a3cc7fa0584b5d50afaea4e6d2966c4a81406885fd93ec80de",
+      "bytes": 1811776,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "300aaa12cd2ef200a0e809a6524f95bdaed75624187c0b9f8f945e0c3c6f380e",
+      "sourceBytes": 3122558,
+      "sourceRenderSha256": "a07b36f506976b41ce192a20a2113b6f6375dbafbfd259a2484bc42d5453377b",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 101,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 52.98,
+        "curvePct": null,
+        "override": null,
+        "footFix": null,
+        "measuredFootPx": 1444,
+        "measuredLandmarkPx": 395,
+        "scaleFactor": 1.15561
+      },
+      "fit": {
+        "scale": 1.0009,
+        "shiftY": -2.2,
+        "shiftX": -1.1,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 318,
+        "iou": 0.9958,
+        "p95": 2.69,
+        "p99": 4.46,
+        "max": 7.4,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBTallRect10MtlRollBlkDot-input.png",
+        "sha256": "a331138d0a214899d5a8ec562a06fb256c73a89803c10ba996e7b545050037d2"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/16. Tall Rectangular 10ml/1. Tall Rectangular 10ml (uncapped) PSD/26. GBTallRect10MtlRollBlkDot.psd",
+        "sha256": "2c278f7c56b5f69870eb03e7ccd2372a56f58befa60b26fa06561480cf0026d2"
+      },
+      "promptSha256": "2e3c7c51e125c7baeaa8609cd450a54189e10d45df875086b331426e36f14033"
+    },
+    {
+      "sku": "GBTallRect10SpryGlMatt",
+      "family": "Rectangle",
+      "groupSlug": "tall-rectangle-10ml-clear-13-415-finemist",
+      "graceSku": "GB-RCT-CLR-10ML-SPR-MGLD-02",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343629345060",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh77bvn2qc0n4s02bjhwqk3jjs8drbb8",
+        "slug": "tall-rectangle-10ml-clear-13-415-finemist",
+        "displayName": "10 ml Clear Tall Rectangle Fine Mist Spray Bottle",
+        "color": "Clear",
+        "capColor": "Matte Gold",
+        "applicator": "Fine Mist Sprayer",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBTallRect10SpryGlMatt.145bd5e6ba64.webp",
+      "sha256": "145bd5e6ba64fd42e4056bdbc2b9dddcd4ef0163a476523a49c82bb32871fbe3",
+      "bytes": 1917596,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "0b0e160135ffbb19f27bbfc4169601d989b47722a080762dcd7af0cea6e90ce5",
+      "sourceBytes": 3385736,
+      "sourceRenderSha256": "5ff219780a298480089c0b2e9b7e26670c0377c7bb9eef8fed2c8ab008d3d16f",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 101,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 52.98,
+        "curvePct": null,
+        "override": null,
+        "footFix": null,
+        "measuredFootPx": 1518,
+        "measuredLandmarkPx": 469,
+        "scaleFactor": 1.15561
+      },
+      "fit": {
+        "scale": 0.9997,
+        "shiftY": -1.9,
+        "shiftX": -0.9,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 388,
+        "iou": 0.993,
+        "p95": 2.95,
+        "p99": 3.66,
+        "max": 3.83,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "inputs/GBTallRect10SpryGlMatt-input.png",
+        "sha256": "33e1987a3bfa62e722dadbc13f7f02df8a6698ca9115aa592fc68040e6990fd9"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/16. Tall Rectangular 10ml/1. Tall Rectangular 10ml (uncapped) PSD/7. GBTallRect10SpryGlMatt.psd",
+        "sha256": "4028d54df2a6040e7f0aecf2b771ee5f1a7af247fef5b185e5db96f9a759d11a"
+      },
+      "promptSha256": "91ae9bbb627a8153556f508c4d03baeca79fea457ba40e52dd6af6ee23e64124"
+    },
+    {
+      "sku": "GBRndFrst128AnSpTslRed",
+      "family": "Round",
+      "groupSlug": "round-128ml-frosted-18-415-antiquespray-tassel",
+      "graceSku": "GB-RND-FRS-128ML-ASP-08",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343606898980",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh74pkw12vk2kt67r1g6vgcy4n8eyad6",
+        "slug": "round-128ml-frosted-18-415-antiquespray-tassel",
+        "displayName": "128 ml Frosted Round Vintage Bulb Spray Bottle with Tassel",
+        "color": "Frosted",
+        "capColor": "Frosted",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBRndFrst128AnSpTslRed.b682b2196ea2.webp",
+      "sha256": "b682b2196ea236665eab0d9dd98b5d5dbe9c7c251115f894205f4eb9c3569a78",
+      "bytes": 2141620,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "47a9fd1510ff06736fdc58a3bab39f666941d91d13c94c0f6413fc1f6659c595",
+      "sourceBytes": 4099508,
+      "sourceRenderSha256": "96306168a10b5e711cd078c1efd12c9f30354e38b75ce51491ae41873e71b5cd",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 83,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 47.22,
+        "curvePct": null,
+        "override": null,
+        "footFix": null,
+        "measuredFootPx": 1462,
+        "measuredLandmarkPx": 560,
+        "scaleFactor": 1.19772
+      },
+      "fit": {
+        "scale": 0.9991,
+        "shiftY": 0.5,
+        "shiftX": 0.3,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 1473,
+        "iou": 0.9918,
+        "p95": 4.62,
+        "p99": 13.38,
+        "max": 15.11,
+        "bgDevP95": 5
+      },
+      "input": {
+        "file": "inputs/GBRndFrst128AnSpTslRed-input.png",
+        "sha256": "2f090094485a3c37ec54944a208b65bb197b0c4811095a30e8ff7cc66671923f"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /10. Round Frosted 128ml/1. Round Frst 128ml PSD/47. GBRndFrst128AnSpTslRed.psd",
+        "sha256": "53558548f445ec3826f0e0e7be31043705e82466cc6bb2d1b8ab4877617b3804"
+      },
+      "promptSha256": "f4e9de2439b3c21f78fb4037b4f9ee8250f415c30233e758c39ffd7e5caa756f"
+    },
+    {
+      "sku": "GBSqr15Gl",
+      "family": "Square",
+      "groupSlug": "square-15ml-clear-13-415",
+      "graceSku": "GB-VIA-CLR-15ML-GLD-T-02",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343647727908",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh70whm5zqkcvf6m8wb6pvg78d8dsbvx",
+        "slug": "square-15ml-clear-13-415",
+        "displayName": "15 ml Clear Square Bottle with Cap",
+        "color": "Clear",
+        "capColor": "Gold",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBSqr15Gl.80312d31e12e.webp",
+      "sha256": "80312d31e12ea22e7acbf79866eaa4f5cc55d2fad172dbb65a216bef9f1134e0",
+      "bytes": 1845118,
+      "selectedAttempt": "a2",
+      "sourceFittedSha256": "b1226d6f3e49f34497f17c5bf85e539261dfff2a0a446fcd811e96574c227612",
+      "sourceBytes": 3236098,
+      "sourceRenderSha256": "196ec9697128f41934ec03bb150a0f8da805310e4dd35dfdac98e11eb0381467",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 2,
+      "sizing": {
+        "glassMm": 52,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 35.89,
+        "curvePct": null,
+        "override": null,
+        "footFix": "foot was 758 (glass foot is a separate faint component); true glass bottom 872",
+        "measuredFootPx": 872,
+        "measuredLandmarkPx": 384,
+        "scaleFactor": 1.68271
+      },
+      "fit": {
+        "scale": 0.9991,
+        "shiftY": 0.9,
+        "shiftX": 0.9,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 771,
+        "iou": 0.9751,
+        "p95": 9.63,
+        "p99": 18.67,
+        "max": 23.9,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBSqr15Gl-input.png",
+        "sha256": "ad711f607b31f23bf9cd96d8800ca432688287b68206a4a8535a19d68517d6b2"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/12. Square 15ml/1. Square 15ml (Uncapped) PSD /28. GBSqr15Gl.psd",
+        "sha256": "6b599881ce99c2ec299dfe6e7844394f9f04bffd1ca2ff9cb0274e0849919853"
+      },
+      "promptSha256": "dbd62b64338a05e378a406cbeaad851014ed82ba23a645aee9b6ec22dffc720f"
+    },
+    {
+      "sku": "GBSqr15MtlRollBlkDot",
+      "family": "Square",
+      "groupSlug": "square-15ml-clear-13-415-rollon",
+      "graceSku": "GB-SQR-CLR-15ML-MRL-BKDT",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343610175780",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh74v4t3z8bn6dvcx9gxktnc7s8dre0b",
+        "slug": "square-15ml-clear-13-415-rollon",
+        "displayName": "15 ml Clear Square Roll-On Bottle",
+        "color": "Clear",
+        "capColor": "Black Dotted",
+        "applicator": "Metal Roller Ball",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBSqr15MtlRollBlkDot.6fbb69977c24.webp",
+      "sha256": "6fbb69977c2463b1b77887a15a95c7534cd24cba66a4684af542cb7a1b0c05bd",
+      "bytes": 1897138,
+      "selectedAttempt": "a2",
+      "sourceFittedSha256": "a4784e4ed1b2511a4596c7129ba6f69dba1b220528da454d96d59807116cece3",
+      "sourceBytes": 3354364,
+      "sourceRenderSha256": "dec0ef8c40335e689308229a3a9b02c2220970afe9f84b651fb0fba31312f2c7",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 2,
+      "sizing": {
+        "glassMm": 52,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 35.89,
+        "curvePct": null,
+        "override": null,
+        "footFix": "foot was 758 (glass foot is a separate faint component); true glass bottom 872",
+        "measuredFootPx": 872,
+        "measuredLandmarkPx": 384,
+        "scaleFactor": 1.68271
+      },
+      "fit": {
+        "scale": 0.9993,
+        "shiftY": 0.6,
+        "shiftX": 0,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 461,
+        "iou": 0.9928,
+        "p95": 2.86,
+        "p99": 4.94,
+        "max": 16.21,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "inputs/GBSqr15MtlRollBlkDot-input.png",
+        "sha256": "9bbe664ccf2289c0bba033b4369b5bb321b13bae29b1f81ae4648f62ed1f7430"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/12. Square 15ml/1. Square 15ml (Uncapped) PSD /26. GBSqr15MtlRollBlkDot.psd",
+        "sha256": "7bfdaa6b6db229d65ab20876e1fd2de7912c18bfbcfb5b3118efef23625bc63d"
+      },
+      "promptSha256": "4f69622bf31ca0f49eff3b767f18ab09d994e8dc7cdf574103ba43f2edcd2117"
+    },
+    {
+      "sku": "GBSqr15SpryGlMatt",
+      "family": "Square",
+      "groupSlug": "square-15ml-clear-13-415-finemist",
+      "graceSku": "GB-SQR-CLR-15ML-SPR-MGLD",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343698649380",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7chwdqx3be2h7pdkg3075dgd8dr9vn",
+        "slug": "square-15ml-clear-13-415-finemist",
+        "displayName": "15 ml Clear Square Fine Mist Spray Bottle",
+        "color": "Clear",
+        "capColor": "Matte Gold",
+        "applicator": "Fine Mist Sprayer",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBSqr15SpryGlMatt.db2940232b12.webp",
+      "sha256": "db2940232b12b8db47cc91e7b9abccaa90912eec520e6e1da93bb11bea8ef90d",
+      "bytes": 1980484,
+      "selectedAttempt": "a2",
+      "sourceFittedSha256": "9bd2752a1d3a611b158f7ae60aee324bfb3070a1ac0e766aba22ddf552a5ea93",
+      "sourceBytes": 3622483,
+      "sourceRenderSha256": "aa4e2edffde252697af134b70750eeeaa7b7b006b22d832082f2b8baa52f600b",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 2,
+      "sizing": {
+        "glassMm": 52,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 35.89,
+        "curvePct": null,
+        "override": null,
+        "footFix": "foot was 758 (glass foot is a separate faint component); true glass bottom 872",
+        "measuredFootPx": 872,
+        "measuredLandmarkPx": 384,
+        "scaleFactor": 1.68271
+      },
+      "fit": {
+        "scale": 0.9999,
+        "shiftY": -0.1,
+        "shiftX": 0.4,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 860,
+        "iou": 0.9828,
+        "p95": 10.29,
+        "p99": 13.92,
+        "max": 19.98,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "inputs/GBSqr15SpryGlMatt-input.png",
+        "sha256": "d0c7c5084f4712e372c1d34dd3f2521a8955ff883576a44f71ee716459184e99"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/12. Square 15ml/1. Square 15ml (Uncapped) PSD /7. GBSqr15SpryGlMatt.psd",
+        "sha256": "d1773b99062bc967c8282c18e70aae43e916a4ecb698dc428d3f071fcf9a735d"
+      },
+      "promptSha256": "0440762b31eff7198af9bc2bf8f136a0e0a0649bfe5f7b10ff7e49020422e02d"
+    },
+    {
+      "sku": "GBTRDPClear",
+      "family": "Teardrop",
+      "groupSlug": "teardrop-9ml-clear-Ground-glassapplicator",
+      "graceSku": "GB-TRD-CLR-9ML",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343694684452",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh75rq6cffsn4h5ecke7f5rmdd8dr6af",
+        "slug": "teardrop-9ml-clear-Ground-glassapplicator",
+        "displayName": "9 ml Clear Teardrop Applicator Bottle",
+        "color": "Clear",
+        "capColor": "Clear",
+        "applicator": "Glass Stopper",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBTRDPClear.e0190b6a82d5.webp",
+      "sha256": "e0190b6a82d563c2effa8da46f5c05446756a23f1f6adbd9e5cfa4c9bdd30690",
+      "bytes": 1803142,
+      "selectedAttempt": "a2",
+      "sourceFittedSha256": "245d16eacadf03758fd0ec83c5da4376f3f80d5fefaf165ed145420eaa5cd9c6",
+      "sourceBytes": 3286108,
+      "sourceRenderSha256": "2a0124f091e4d20a7b572da2f10c66e3cd1de93cf05227a12703fa784117db4f",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 2,
+      "sizing": {
+        "glassMm": 43,
+        "heightWithStopperMm": 68,
+        "landmarkRule": "closure seat",
+        "targetPct": 32.99,
+        "curvePct": null,
+        "override": "Jordan 2026-09-25: stopper bottles sized by full height with stopper (68 mm) on the batch height curve",
+        "footFix": null,
+        "measuredFootPx": 2906,
+        "measuredLandmarkPx": 1706,
+        "scaleFactor": 0.62896
+      },
+      "fit": {
+        "scale": 1.007,
+        "shiftY": -8.7,
+        "shiftX": -8.6,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 165,
+        "iou": 0.9958,
+        "p95": 4.4,
+        "p99": 5.42,
+        "max": 5.59,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "inputs/GBTRDPClear-input.png",
+        "sha256": "af5edf4dc8e000dbcd25d4c85c0760cf8f8bf2d8619971eb0dcdb561afbd4972"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/17. Additional Bottles/GBTRDPClear..psd",
+        "sha256": "72beb73c3889836e480cf6e089516f46a38418bdf6156687a9231650452e6f77"
+      },
+      "promptSha256": "f6dcfe5c65653bd4fa112e1b9e47b8cdd7d9a3ac34ae8f2bb93c49be82bd5294"
+    },
+    {
+      "sku": "GBTRDPGreen",
+      "family": "Teardrop",
+      "groupSlug": "teardrop-9ml-green-Ground-glassapplicator",
+      "graceSku": "GB-TRD-GRN-9ML",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343694946596",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7888ykj9ggbc6v1915zcksvs8dshw9",
+        "slug": "teardrop-9ml-green-Ground-glassapplicator",
+        "displayName": "9 ml Green Teardrop Applicator Bottle",
+        "color": "Green",
+        "capColor": "Clear",
+        "applicator": "Glass Stopper",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBTRDPGreen.b891d99dda94.webp",
+      "sha256": "b891d99dda94bf84016bd3a9e67163cbc9d99c5df7fb558c250686b17eabb9c9",
+      "bytes": 1862398,
+      "selectedAttempt": "a2",
+      "sourceFittedSha256": "9be2a1a82f36452c55e6883a8c634f2882038b4f8143c6c231a2401474804529",
+      "sourceBytes": 3361170,
+      "sourceRenderSha256": "4cb7df70a8ff92cc87b7ea3f35b3ebce57b42b8c5b9b667e573211033709e933",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 2,
+      "sizing": {
+        "glassMm": 43,
+        "heightWithStopperMm": 68,
+        "landmarkRule": "closure seat",
+        "targetPct": 32.89,
+        "curvePct": null,
+        "override": "Jordan 2026-09-25: stopper bottles sized by full height with stopper (68 mm) on the batch height curve",
+        "footFix": null,
+        "measuredFootPx": 3172,
+        "measuredLandmarkPx": 1858,
+        "scaleFactor": 0.57267
+      },
+      "fit": {
+        "scale": 1.0018,
+        "shiftY": -4.2,
+        "shiftX": -1.8,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 546,
+        "iou": 0.9923,
+        "p95": 3.36,
+        "p99": 3.67,
+        "max": 4.13,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBTRDPGreen-input.png",
+        "sha256": "5a5de55a43152d11876cd57160edbae9d564700521361191ac68bca759c04c50"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/17. Additional Bottles/GBTRDPGreen..psd",
+        "sha256": "fbbf91e71673b190a95d18ff602324a561c2321ff2150166e0201468e05b8248"
+      },
+      "promptSha256": "8c82240d5146ba80effd8f390ee00202b6af8bb1750a3878f1b557dc0f30b273"
+    },
+    {
+      "sku": "GBTrdpBlue",
+      "family": "Teardrop",
+      "groupSlug": "teardrop-9ml-cobalt-blue-Ground-glassapplicator",
+      "graceSku": "GB-TRD-BLU-9ML",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343694389540",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh70zjmxgr49kjggz0ax19tpdd8dsmj2",
+        "slug": "teardrop-9ml-cobalt-blue-Ground-glassapplicator",
+        "displayName": "9 ml Cobalt Blue Teardrop Applicator Bottle",
+        "color": "Cobalt Blue",
+        "capColor": "Clear",
+        "applicator": "Glass Stopper",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBTrdpBlue.56e0e89f2531.webp",
+      "sha256": "56e0e89f2531e3ee585c0f926eb45fb43aa1d34860fe5b2f8389187d9a470a6f",
+      "bytes": 1731236,
+      "selectedAttempt": "a2",
+      "sourceFittedSha256": "8225b9c183adb77ef8e87a532f116e7e201c7a78774cb009139fd568dda406e9",
+      "sourceBytes": 3039146,
+      "sourceRenderSha256": "b0bd8b49aa2cc4296632473cb04d7008b77e14c714b45c94348f456518c02413",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 2,
+      "sizing": {
+        "glassMm": 43,
+        "heightWithStopperMm": 68,
+        "landmarkRule": "closure seat",
+        "targetPct": 32.9,
+        "curvePct": null,
+        "override": "Jordan 2026-09-25: stopper bottles sized by full height with stopper (68 mm) on the batch height curve",
+        "footFix": null,
+        "measuredFootPx": 3172,
+        "measuredLandmarkPx": 1858,
+        "scaleFactor": 0.57295
+      },
+      "fit": {
+        "scale": 0.9999,
+        "shiftY": -1.6,
+        "shiftX": -0.4,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 550,
+        "iou": 0.9914,
+        "p95": 2.11,
+        "p99": 2.29,
+        "max": 2.57,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBTrdpBlue-input.png",
+        "sha256": "028f363157ad96e9900126711db7d2574b6fd1a71dfb41a2c2b002b2296ae20c"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/17. Additional Bottles/GBTrdpBlue..psd",
+        "sha256": "70788ab09ce7f79143d6507e1047650557c1916edd35685b3086326f24bd7b6a"
+      },
+      "promptSha256": "2cc9048773c2c3731ae662fce6d952a1455a12f097e3f7b60a6e7f6d48272584"
+    },
+    {
+      "sku": "GBTulip6Gl",
+      "family": "Tulip",
+      "groupSlug": "tulip-6ml-clear-13-415",
+      "graceSku": "GB-CYL-CLR-6ML-GLD-T",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343633604900",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7b8gqk3qxc9wgwyvzbt3f05x8dsdbn",
+        "slug": "tulip-6ml-clear-13-415",
+        "displayName": "6 ml Clear Tulip Bottle with Cap",
+        "color": "Clear",
+        "capColor": "Gold",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBTulip6Gl.d81025f84347.webp",
+      "sha256": "d81025f84347bec165b68408b7550c6129c6700f737c7b71bc22e456eb695b5c",
+      "bytes": 1835824,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "f2737bf100ae37dfec1603d971690bf9b01bfbe2c50d771b89d9fe9721795762",
+      "sourceBytes": 3283863,
+      "sourceRenderSha256": "9d799a0a8524212a6474144bf0d3d8a932dcdca04d4d6b84787a9bc63403d878",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 45,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 32.97,
+        "curvePct": null,
+        "override": null,
+        "footFix": null,
+        "measuredFootPx": 787,
+        "measuredLandmarkPx": 393,
+        "scaleFactor": 1.91448
+      },
+      "fit": {
+        "scale": 0.9967,
+        "shiftY": 4.2,
+        "shiftX": 3.2,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 885,
+        "iou": 0.9601,
+        "p95": 15.78,
+        "p99": 22.36,
+        "max": 25.02,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBTulip6Gl-input.png",
+        "sha256": "1d5e80282f1631820381bb4c9f1da1a1f86a261654d5fb5d677e1dc82db0c25c"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /28. GBTulip6Gl.psd",
+        "sha256": "932c49ffebcb62fee46688b8e115959aca80cf3752cbddf6c7f4195cc62d24cb"
+      },
+      "promptSha256": "007e628a06e34cc02e818cae07fc830591aef34324524be378ba9ae8e05b8e7d"
+    },
+    {
+      "sku": "GBTulip6MtlRollBlkDot",
+      "family": "Tulip",
+      "groupSlug": "tulip-6ml-clear-13-415-rollon",
+      "graceSku": "GB-CYL-CLR-6ML-MRL-BKDT",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343673778468",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7bjqtft92a66ahh46drwzf518ds6zt",
+        "slug": "tulip-6ml-clear-13-415-rollon",
+        "displayName": "6 ml Clear Tulip Roll-On Bottle",
+        "color": "Clear",
+        "capColor": "Black Dotted",
+        "applicator": "Metal Roller Ball",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBTulip6MtlRollBlkDot.da920fffbb35.webp",
+      "sha256": "da920fffbb35e71f8b5c663216805167d3e4fa88af333da4ab97f74a268080b6",
+      "bytes": 1879046,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "dee67377d777f5ea1742537a25ace4cae929d720a835c4ffb21341891732eb1c",
+      "sourceBytes": 3225192,
+      "sourceRenderSha256": "7edf336ed5b8fa4f3671a18e2e79ad74691d08b042def011a7ef6712a93c1c76",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 45,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 32.97,
+        "curvePct": null,
+        "override": null,
+        "footFix": null,
+        "measuredFootPx": 787,
+        "measuredLandmarkPx": 393,
+        "scaleFactor": 1.91448
+      },
+      "fit": {
+        "scale": 1.0021,
+        "shiftY": -3.8,
+        "shiftX": -2.4,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 821,
+        "iou": 0.9694,
+        "p95": 11.4,
+        "p99": 14.73,
+        "max": 18.24,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBTulip6MtlRollBlkDot-input.png",
+        "sha256": "b7f88f55afec7c00e5a549ce310370e7c798333a87d8695ea414ac619cd5d1de"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /26. GBTulip6MtlRollBlkDot.psd",
+        "sha256": "c2a331158e2c71422c386d66cd84ead06fc4df122b2fe182fd4c677e7958b9c8"
+      },
+      "promptSha256": "3602aebc1907824b0a22633c7de497ce84a3f7489db08f8aa6dfb3152013a39b"
+    },
+    {
+      "sku": "GBTulip6SpryGlMatt",
+      "family": "Tulip",
+      "groupSlug": "tulip-6ml-clear-13-415-finemist",
+      "graceSku": "GB-CYL-CLR-6ML-SPR-MGLD",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343680069924",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7a23ketzqqwry2dgegd6sfj18ds1c3",
+        "slug": "tulip-6ml-clear-13-415-finemist",
+        "displayName": "6 ml Clear Tulip Fine Mist Spray Bottle",
+        "color": "Clear",
+        "capColor": "Matte Gold",
+        "applicator": "Fine Mist Sprayer",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBTulip6SpryGlMatt.0512863cd272.webp",
+      "sha256": "0512863cd27210418534c9a5119c203d5245a60e810fd58f9e39154e1d26164b",
+      "bytes": 1970666,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "584a6fc250d5d4c5c5c924b48875345cd4e3ff30bc92cb2dba72457a2150bb9d",
+      "sourceBytes": 3666272,
+      "sourceRenderSha256": "6219c22499e2b90957ef496f0a64e3c69dd05ab1786dcaa7eac8e257bfbb6b9e",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 45,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 32.97,
+        "curvePct": null,
+        "override": null,
+        "footFix": null,
+        "measuredFootPx": 787,
+        "measuredLandmarkPx": 393,
+        "scaleFactor": 1.91448
+      },
+      "fit": {
+        "scale": 0.9994,
+        "shiftY": -1.3,
+        "shiftX": -0.7,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 1012,
+        "iou": 0.9709,
+        "p95": 9.83,
+        "p99": 18.64,
+        "max": 27.69,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "inputs/GBTulip6SpryGlMatt-input.png",
+        "sha256": "b6cf76f7a09739835f352f8b2ae7966f4346a10e7b36413a229d5bac0209e4e3"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /7. GBTulip6SpryGlMatt.psd",
+        "sha256": "5151b2cc1468bcc03e2d042be102e4ac0b6b573785325b4d5d54dce8d3680466"
+      },
+      "promptSha256": "3695e49432323a67d87e43960e668d82f10378a970f2e7e9b7e6411ee35bac3c"
+    },
+    {
+      "sku": "GBTulipAmb5Gl",
+      "family": "Tulip",
+      "groupSlug": "tulip-5ml-amber-13-415",
+      "graceSku": "GB-CYL-AMB-5ML-GLD-T",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343629476132",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+        "slug": "tulip-5ml-amber-13-415",
+        "displayName": "5 ml Amber Tulip Bottle with Cap",
+        "color": "Amber",
+        "capColor": "Gold",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBTulipAmb5Gl.596f37db19b6.webp",
+      "sha256": "596f37db19b6cc2e5c0de569a0cf1b7e36190da1ef023f5747cfe059110b0b60",
+      "bytes": 1846216,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "8e3cf9a340679600588023541ee8e33832b16e922225fa48e18f64c25b13dbb7",
+      "sourceBytes": 3353444,
+      "sourceRenderSha256": "193e5239b4aeeff7f3204340c641b7cd94fdf65238c36d1cb235346b6bd54c39",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 45,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 32.97,
+        "curvePct": null,
+        "override": null,
+        "footFix": null,
+        "measuredFootPx": 802,
+        "measuredLandmarkPx": 413,
+        "scaleFactor": 1.93909
+      },
+      "fit": {
+        "scale": 0.9993,
+        "shiftY": -0.3,
+        "shiftX": 1,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 689,
+        "iou": 0.9934,
+        "p95": 2.78,
+        "p99": 7.22,
+        "max": 8.25,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBTulipAmb5Gl-input.png",
+        "sha256": "0b772ad0be232de8e819a1c9c0ed12b270ef52fd94b436b74dee62468bf8e703"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /28. GBTulipAmb5Gl.psd",
+        "sha256": "6fdb81eedb4a15fed9f59695a5e9af941b686ae2916e19a3f1fc1e30edfef298"
+      },
+      "promptSha256": "ab473d888c1908f30389b65d830f83fe5d665a6dd2f49530a821ced329ef806c"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollBlkDot",
+      "family": "Tulip",
+      "groupSlug": "tulip-5ml-amber-13-415-rollon",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-BKDT",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343671288100",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+        "slug": "tulip-5ml-amber-13-415-rollon",
+        "displayName": "5 ml Amber Tulip Roll-On Bottle",
+        "color": "Amber",
+        "capColor": "Black Dotted",
+        "applicator": "Metal Roller Ball",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBTulipAmb5MtlRollBlkDot.a4137261d808.webp",
+      "sha256": "a4137261d808a730c7af776ffedd0de79797e56d3f9cb06d981e3d0ff65285c0",
+      "bytes": 1827390,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "05b73472cbee1aea7be4b1c8b90c9da679fb998b9d1ccb8e20633ade1420d53d",
+      "sourceBytes": 3254475,
+      "sourceRenderSha256": "17860c2445ab41e3101dd529e6d2b464fa0b0cd2313e521385cce81e9d89d1d3",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 45,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 32.97,
+        "curvePct": null,
+        "override": null,
+        "footFix": null,
+        "measuredFootPx": 802,
+        "measuredLandmarkPx": 413,
+        "scaleFactor": 1.93909
+      },
+      "fit": {
+        "scale": 0.9993,
+        "shiftY": -0.3,
+        "shiftX": 0.4,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 736,
+        "iou": 0.9936,
+        "p95": 2.94,
+        "p99": 4.61,
+        "max": 7.46,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBTulipAmb5MtlRollBlkDot-input.png",
+        "sha256": "981262ce0f2a316cfccc17ece748c779f8197d57458145179cca23ca2725eaac"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /26. GBTulipAmb5MtlRollBlkDot.psd",
+        "sha256": "241793e929de25d11e262f548b0a4745cb75b51dbc5a8f61effb9f5d0b9f7ee9"
+      },
+      "promptSha256": "29bbcca03fc4b9e27ca6a04c9a200474749fa3edb0e4c77746a450afed19df9e"
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlMatt",
+      "family": "Tulip",
+      "groupSlug": "tulip-5ml-amber-13-415-finemist",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MGLD",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343621054756",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7fqangqjdg0wb0mrn5v1d0rd8dsa38",
+        "slug": "tulip-5ml-amber-13-415-finemist",
+        "displayName": "5 ml Amber Tulip Fine Mist Spray Bottle",
+        "color": "Amber",
+        "capColor": "Matte Gold",
+        "applicator": "Fine Mist Sprayer",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBTulipAmb5SpryGlMatt.8e67fa56fbac.webp",
+      "sha256": "8e67fa56fbaca4de68696ebcb4989487950348a929f1361f652e3677455e2061",
+      "bytes": 1987144,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "bca9280fe37ca2f83ead23dc17bccf74d41fd2ca169f2e076e46645833a3e070",
+      "sourceBytes": 3819481,
+      "sourceRenderSha256": "21d9ce98d0b83ad10473b87ff4c573fb5126e133f8a9e09290ece9f75bd07008",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 45,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 32.97,
+        "curvePct": null,
+        "override": null,
+        "footFix": null,
+        "measuredFootPx": 804,
+        "measuredLandmarkPx": 415,
+        "scaleFactor": 1.93909
+      },
+      "fit": {
+        "scale": 0.9985,
+        "shiftY": -0.4,
+        "shiftX": 0.7,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 819,
+        "iou": 0.9924,
+        "p95": 3.17,
+        "p99": 4.54,
+        "max": 6.73,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBTulipAmb5SpryGlMatt-input.png",
+        "sha256": "772ab03ea7f3666dc35ad9270b1b5140883710d175baef3e5bdad12d5e89990e"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /7. GBTulipAmb5SpryGlMatt.psd",
+        "sha256": "ba9a4541ba98d26cedaaab39db02e5a6a1da6bcdf610bbeaf74b92cea582ce2c"
+      },
+      "promptSha256": "dc529066d2ade89a96f35dbd30da3bf113886a29bf160059baa6ecb53fb28ffb"
+    },
+    {
+      "sku": "GBVialAmb1o5WhtCapSht",
+      "family": "Vial",
+      "groupSlug": "vial-2ml-amber-13-425",
+      "graceSku": "GB-VIA-AMB-1.5ML-WHT-S",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343699140900",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh74wd1kt174err92n6q50qmkh8ds0k9",
+        "slug": "vial-2ml-amber-13-425",
+        "displayName": "2 ml Amber Vial Bottle with Cap",
+        "color": "Amber",
+        "capColor": "White",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBVialAmb1o5WhtCapSht.17c1ae4f88de.webp",
+      "sha256": "17c1ae4f88defce40ed7c7b2923aaf3f82b2bab0e9b3c73593e924770a821a4a",
+      "bytes": 1859886,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "c2d6a7b508802e7b87d55de6a2d718ba24df66f160622575f1b4577b8e8cde43",
+      "sourceBytes": 3379184,
+      "sourceRenderSha256": "d6ba02bf744a0c2b89e7fc691aa2724b4f513e456ac7c4e7fc0611bd47947022",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 22,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 32,
+        "curvePct": 21.66,
+        "override": "Jordan 2026-09-25: 1 & 2 ml vials 32%, 3 & 4 ml vials 35%",
+        "footFix": null,
+        "measuredFootPx": 590,
+        "measuredLandmarkPx": 371,
+        "scaleFactor": 3.3432
+      },
+      "fit": {
+        "scale": 0.9991,
+        "shiftY": -0.2,
+        "shiftX": 0.4,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 570,
+        "iou": 0.9925,
+        "p95": 2.51,
+        "p99": 11.11,
+        "max": 15.85,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBVialAmb1o5WhtCapSht-input.png",
+        "sha256": "6deb041199fd0ac38614912018d9ada1e2ae9013539929de04825058e0e4d473"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/22. GB 1o5 Amber/2.  Amber 1o5  Uncapped/2. GBVialAmb1o5WhtCapSht.psd",
+        "sha256": "19af33d7dab518888174f4452cca1ad9accb08a695a84bc7d31f995b40159a55"
+      },
+      "promptSha256": "91a08d178627a766bccd3bc39bd6a98f851324f59e68b8bc71183e51f5a3bca5"
+    },
+    {
+      "sku": "GB1mlAmbVialWht",
+      "family": "Vial",
+      "groupSlug": "vial-1ml-amber-Plug",
+      "graceSku": "GB-VIA-AMB-1ML-WHT-T",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343616336164",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7e71khyhec2bjt745jbbe91s8drxkh",
+        "slug": "vial-1ml-amber-Plug",
+        "displayName": "1 ml Amber Vial Bottle with Cap",
+        "color": "Amber",
+        "capColor": "White",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GB1mlAmbVialWht.b95fd0f5292f.webp",
+      "sha256": "b95fd0f5292f4ffcca067786d85615b658db831ce5d12983599a06e081917746",
+      "bytes": 1718546,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "316839b876cf8e397285ab2552368a405e8dde59ea3f203447261e86f95cb68a",
+      "sourceBytes": 2885366,
+      "sourceRenderSha256": "5ae63a03e1d5b1b32678b5fb7068572499afad0f42981827b87bb9c97b537aa9",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 35,
+        "heightWithStopperMm": null,
+        "landmarkRule": "closure seat",
+        "targetPct": 32,
+        "curvePct": 28.45,
+        "override": "Jordan 2026-09-25: 1 & 2 ml vials 32%, 3 & 4 ml vials 35%",
+        "footFix": null,
+        "measuredFootPx": 554,
+        "measuredLandmarkPx": 110,
+        "scaleFactor": 1.64901
+      },
+      "fit": {
+        "scale": 0.9959,
+        "shiftY": 2.6,
+        "shiftX": 4.2,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 316,
+        "iou": 0.9917,
+        "p95": 2.19,
+        "p99": 3.71,
+        "max": 6.6,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "inputs/GB1mlAmbVialWht-input.png",
+        "sha256": "82352488803e00215ac9ef18053e026681a2543e3996c14ebbf5bd8f7386afb8"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/2. 1ml Amber PSD Uncapped/2. GB1mlAmbVialWht.psd",
+        "sha256": "e1873548a3a15acd0f145d1774f6ff5bb01399006208892a88a54c66f8c749d8"
+      },
+      "promptSha256": "2371cd4aeabbdfe31a0475b0e8cca41e1cbdbfe013736b4a9ffe858fff7379c7"
+    },
+    {
+      "sku": "GB1mlVBlk",
+      "family": "Vial",
+      "groupSlug": "vial-1ml-clear-Plug",
+      "graceSku": "GB-VIA-CLR-1ML-BLK-T",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343616598308",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7127kstw87p81k7yf8q1p68d8drtgw",
+        "slug": "vial-1ml-clear-Plug",
+        "displayName": "1 ml Clear Vial Bottle with Cap",
+        "color": "Clear",
+        "capColor": "Black",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GB1mlVBlk.d1d6c324ee9d.webp",
+      "sha256": "d1d6c324ee9db75fdbd3b17f5d0a267789e0de7d88fe7a54c8a7b0e48acd6ddc",
+      "bytes": 1632318,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "ecfe455e239675a898c54d4919f41e7bb8dff85d9780b95b37eaad73f40d3fa8",
+      "sourceBytes": 2922097,
+      "sourceRenderSha256": "29af65ae29799cec645852c9f52f6b543d7f0c0f8772591b3dd4f077f8830c43",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 35,
+        "heightWithStopperMm": null,
+        "landmarkRule": "closure seat",
+        "targetPct": 32,
+        "curvePct": 28.45,
+        "override": "Jordan 2026-09-25: 1 & 2 ml vials 32%, 3 & 4 ml vials 35%",
+        "footFix": null,
+        "measuredFootPx": 536,
+        "measuredLandmarkPx": 100,
+        "scaleFactor": 1.67927
+      },
+      "fit": {
+        "scale": 0.9956,
+        "shiftY": 5.8,
+        "shiftX": 4.7,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 564,
+        "iou": 0.9809,
+        "p95": 2.83,
+        "p99": 3.14,
+        "max": 6.84,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "inputs/GB1mlVBlk-input.png",
+        "sha256": "c0c51731dd88e33da290a5f102609affcf7eaba36400158d0398e9d887466de9"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/4. 1ml Clear PSD Uncapped/1. GB1mlVBlk.psd",
+        "sha256": "92aec537eaacd1a4aac4ea8a10b44d0222f0a6c36f92293daf31816144b02e32"
+      },
+      "promptSha256": "6484b46c1ad10401fcc23f38fe4ef550c95050ae3cc1877e20e370af8e241dc3"
+    },
+    {
+      "sku": "GBVAmb2WhtCap",
+      "family": "Vial",
+      "groupSlug": "vial-2ml-amber-8-425",
+      "graceSku": "GB-VIA-CLR-2ML-S-02",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343616696612",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7e8ff1qa2g18d31pt4vc27px8drnt9",
+        "slug": "vial-2ml-amber-8-425",
+        "displayName": "2 ml Amber Vial Bottle with Cap",
+        "color": "Amber",
+        "capColor": "Clear",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBVAmb2WhtCap.6ffefe6181b1.webp",
+      "sha256": "6ffefe6181b19756385ebc08542be2d364da2d8f80a54936e7916cfd4a40382b",
+      "bytes": 1787708,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "1231e92e3eb67cf8eeac6923d67ccafb61c6be65b9875e0c6f21318501f3c33e",
+      "sourceBytes": 3078061,
+      "sourceRenderSha256": "0cd4c03b68796a384c27d4b609ea1ad91cc7ef03b65e7eb6ee9df13b0776fced",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 35,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 32,
+        "curvePct": 28.45,
+        "override": "Jordan 2026-09-25: 1 & 2 ml vials 32%, 3 & 4 ml vials 35%",
+        "footFix": null,
+        "measuredFootPx": 650,
+        "measuredLandmarkPx": 324,
+        "scaleFactor": 2.24589
+      },
+      "fit": {
+        "scale": 1.0014,
+        "shiftY": -2.2,
+        "shiftX": -0.2,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 412,
+        "iou": 0.9877,
+        "p95": 3.85,
+        "p99": 7.51,
+        "max": 10.67,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBVAmb2WhtCap-input.png",
+        "sha256": "59b8ddebf9132b2d3ce5b90c979eea77b0f885e4d756ea2270c0ee928108fe70"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/0. All Vials/Uncapped/GBVAmb2WhtCap.psd",
+        "sha256": "567f39dec848443096dc80381557eb322a70968c57acfcb38cb29c7eb05b3dc3"
+      },
+      "promptSha256": "0c8f5dd6643a2de71b574fc1bda0becd92c6e37499bf2e24f564337638b670f7"
+    },
+    {
+      "sku": "GBVialClr2mlWhtCap",
+      "family": "Vial",
+      "groupSlug": "vial-2ml-clear-8-425",
+      "graceSku": "GB-VIA-CLR-2ML-WHT-T",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343616729380",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh736t3zjy6jskwwmckw4yab6h8drvvk",
+        "slug": "vial-2ml-clear-8-425",
+        "displayName": "2 ml Clear Vial Bottle with Cap",
+        "color": "Clear",
+        "capColor": "White",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBVialClr2mlWhtCap.9b2f9f161245.webp",
+      "sha256": "9b2f9f1612454216ffa51d8558ed16611131e6f006b2f33dae250ec6a688aac7",
+      "bytes": 1759700,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "8496e0bbf7c40a14af55dbd27967cf6cbb8f65652626f51723f77a2c81305792",
+      "sourceBytes": 2995506,
+      "sourceRenderSha256": "a12bdcc6e4ca1fbbaabc1bfdd78fd46c217e81308fbb9c5064155707fdf0be6a",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 35,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 32,
+        "curvePct": 28.45,
+        "override": "Jordan 2026-09-25: 1 & 2 ml vials 32%, 3 & 4 ml vials 35%",
+        "footFix": null,
+        "measuredFootPx": 701,
+        "measuredLandmarkPx": 368,
+        "scaleFactor": 2.19868
+      },
+      "fit": {
+        "scale": 0.9988,
+        "shiftY": 0,
+        "shiftX": 0.5,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 383,
+        "iou": 0.9876,
+        "p95": 2.88,
+        "p99": 8.59,
+        "max": 13.69,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "inputs/GBVialClr2mlWhtCap-input.png",
+        "sha256": "4db3d5cd6e2745dfacc9d0d5627918366ebcc200848be4884fe09f0474ba84d1"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/6.   8-425 Bottles - CB/2. 2ml Dram/1.  Clear 2ml Dram/2. GBVialClr2mlWhtCap.psd",
+        "sha256": "69447e32201668f4473544b03dec4b6b37a1ed3655cc59e5b2314be2af2665db"
+      },
+      "promptSha256": "1f31e21a2c9fded56ca7898788ba6a0a2b1390e293cca53a674223f04af081c2"
+    },
+    {
+      "sku": "GBV1DrmBlkDropper",
+      "family": "Vial",
+      "groupSlug": "vial-4ml-clear-13-425-dropper",
+      "graceSku": "GB-VIA-CLR-3ML-01",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343694979364",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7cbd37zg41hqjgetjzy32t8h8dr13d",
+        "slug": "vial-4ml-clear-13-425-dropper",
+        "displayName": "4 ml Clear Vial Dropper Bottle",
+        "color": "Clear",
+        "capColor": "Clear",
+        "applicator": "Dropper",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBV1DrmBlkDropper.fd219ea716d7.webp",
+      "sha256": "fd219ea716d7ab6dedb12a551608938a6231b047b86c313507399c86386fdc9a",
+      "bytes": 1866708,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "d3cc0117f398b96fb9faf3c50a0c04661bf5ccaeb9d71cc44776e1da66981118",
+      "sourceBytes": 3151817,
+      "sourceRenderSha256": "a8df3086f1c6e6cb950c15a59708af69e9fc31dba5397860662deb5811249445",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 45,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 35,
+        "curvePct": 32.97,
+        "override": "Jordan 2026-09-25: 1 & 2 ml vials 32%, 3 & 4 ml vials 35%",
+        "footFix": null,
+        "measuredFootPx": 439,
+        "measuredLandmarkPx": 184.6,
+        "scaleFactor": 3.1478
+      },
+      "fit": {
+        "scale": 1.0021,
+        "shiftY": -2.4,
+        "shiftX": -4.5,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 334,
+        "iou": 0.9908,
+        "p95": 4.12,
+        "p99": 13.92,
+        "max": 20,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "inputs/GBV1DrmBlkDropper-input.png",
+        "sha256": "de61cbc35fcb02098451a6ee2c86e78cadc832f52df2276b45047b974f9fc17f"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/0. All Vials/Uncapped/GBV1DrmBlkDropper..psd",
+        "sha256": "323b07ae2f30e1d8aa19465e5f27f222e3fe55846211a87cf6cb495093cbce1b"
+      },
+      "promptSha256": "53efa59c7032a34d8e5b7edbec77ac94c90be69f7be48989048a91007ce9e562"
+    },
+    {
+      "sku": "GBV1DrmWhtCapSht",
+      "family": "Vial",
+      "groupSlug": "vial-4ml-clear-13-425",
+      "graceSku": "GB-VIA-CLR-3ML-S-02",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343618466084",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh767p9b1ngd2ddv632fx463v98dsjq6",
+        "slug": "vial-4ml-clear-13-425",
+        "displayName": "4 ml Clear Vial Bottle with Cap",
+        "color": "Clear",
+        "capColor": "Clear",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBV1DrmWhtCapSht.96c09896d1e8.webp",
+      "sha256": "96c09896d1e83cf7a85413ffeb6007a8865a698be71b866ca82db3fa82f76872",
+      "bytes": 1760574,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "6d9e47cc4aff2d78f332218085bb401a8308f832c73c6307483d47f920b5366e",
+      "sourceBytes": 3057297,
+      "sourceRenderSha256": "1f58aaa3f65879d63a00c2f428365e37647ff1390ffecb306706ccdd89970a2c",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 45,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 35,
+        "curvePct": 32.97,
+        "override": "Jordan 2026-09-25: 1 & 2 ml vials 32%, 3 & 4 ml vials 35%",
+        "footFix": null,
+        "measuredFootPx": 839,
+        "measuredLandmarkPx": 397,
+        "scaleFactor": 1.81176
+      },
+      "fit": {
+        "scale": 1.0039,
+        "shiftY": -5.1,
+        "shiftX": -4.4,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 404,
+        "iou": 0.9882,
+        "p95": 3.04,
+        "p99": 7.99,
+        "max": 10.04,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "inputs/GBV1DrmWhtCapSht-input.png",
+        "sha256": "0e368f2faa1b256082fd9b017b4d093c1b12a3e40ba08f8684333b90e84fb5f3"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/21. 1 Dram/1. 1 Dram/8.  Clear 1 Dram (uncapped) /3. GBVial1DrmWhtCapSht.psd",
+        "sha256": "daaa75a39cf326c8581a59f8714259f0b6133c7864cdfe7794cd45e3f5cb5e01"
+      },
+      "promptSha256": "a20c6737c437a826d13cc39552fc0a139d3684990ac03cd8e4a6a1fc08f5ff59"
+    },
+    {
+      "sku": "GBVAmb1DrmBlkDrpr",
+      "family": "Vial",
+      "groupSlug": "vial-4ml-amber-13-425-dropper",
+      "graceSku": "GB-VIA-CLR-3ML-02",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343695012132",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh71hn7z5e3x4mg49267cggscx8dssrw",
+        "slug": "vial-4ml-amber-13-425-dropper",
+        "displayName": "4 ml Amber Vial Dropper Bottle",
+        "color": "Amber",
+        "capColor": "Clear",
+        "applicator": "Dropper",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBVAmb1DrmBlkDrpr.578ebfa69f8d.webp",
+      "sha256": "578ebfa69f8d99bf6c3fe955ce3874e8083eaca94d375d3a23d962c00691905b",
+      "bytes": 1835940,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "d0ef7b06094e3d7120258cfb03f6f1f43e0b061d7319e41f2cd5dfea0a756288",
+      "sourceBytes": 3162571,
+      "sourceRenderSha256": "d293a0b25982a9f1ddd1ad41b644ef9747eaccbad42ebdde70f06d1b3acf373e",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 45,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 35,
+        "curvePct": 32.97,
+        "override": "Jordan 2026-09-25: 1 & 2 ml vials 32%, 3 & 4 ml vials 35%",
+        "footFix": null,
+        "measuredFootPx": 451,
+        "measuredLandmarkPx": 188,
+        "scaleFactor": 3.04487
+      },
+      "fit": {
+        "scale": 0.9988,
+        "shiftY": -0.1,
+        "shiftX": 1.5,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 633,
+        "iou": 0.9908,
+        "p95": 2.53,
+        "p99": 5.67,
+        "max": 19.83,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "inputs/GBVAmb1DrmBlkDrpr-input.png",
+        "sha256": "796871b8610ebbe944069c8688fc42e8af5e993d86e7dbbe5a26e119a22c95ed"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/0. All Vials/Uncapped/GBVAmb1DrmBlkDropper.psd",
+        "sha256": "b0f7b77163f72808d3a82893b45e12ddcc7270409bb95b71149854d2ed2d8aef"
+      },
+      "promptSha256": "8c7bb65627e975a63a0dffc55289527c087c00a0920ada1ae06955706b34a8d4"
+    },
+    {
+      "sku": "GBVAmb1DrmWhtCapSht",
+      "family": "Vial",
+      "groupSlug": "vial-4ml-amber-13-425",
+      "graceSku": "GB-VIA-CLR-3ML-S-04",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343618433316",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh78sykg22kf3nkezn73sc3sg18dr9wv",
+        "slug": "vial-4ml-amber-13-425",
+        "displayName": "4 ml Amber Vial Bottle with Cap",
+        "color": "Amber",
+        "capColor": "Clear",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBVAmb1DrmWhtCapSht.83c42055ac91.webp",
+      "sha256": "83c42055ac91e05bcb7e512a812f1c5c120f541ead7c84c52f414c05376757fa",
+      "bytes": 1751280,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "ac6074c267af1cc8324c00b1870eb24afc4487e0e2606949a7ac96011765d29b",
+      "sourceBytes": 3043473,
+      "sourceRenderSha256": "db115d144a87c3391479ed98bf47a1a4407bea520ebc6e84b759675061397c78",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 45,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 35,
+        "curvePct": 32.97,
+        "override": "Jordan 2026-09-25: 1 & 2 ml vials 32%, 3 & 4 ml vials 35%",
+        "footFix": null,
+        "measuredFootPx": 813,
+        "measuredLandmarkPx": 373,
+        "scaleFactor": 1.82
+      },
+      "fit": {
+        "scale": 1.001,
+        "shiftY": -1.6,
+        "shiftX": -0.8,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 439,
+        "iou": 0.9949,
+        "p95": 1.31,
+        "p99": 4.9,
+        "max": 12.35,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBVAmb1DrmWhtCapSht-input.png",
+        "sha256": "75915ae2551725ecd84f1e6308c9ce84a60e9a65658790d41200747c7d29785e"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/0. All Vials/Uncapped/GBVAmb1DrmWhtCapSht.psd",
+        "sha256": "59734fd7c400e57c79ceac186462276474ec3012a48f6d8d4698ccddf26ff83d"
+      },
+      "promptSha256": "9753c1b58df9c888c9ba75bbb02de6064d5034c2d6cd3aa0548205e7dbbd93c1"
+    },
+    {
+      "sku": "GBVBlu1DrmBlkDropper",
+      "family": "Vial",
+      "groupSlug": "vial-4ml-blue-13-425-dropper",
+      "graceSku": "GB-VIA-CLR-3ML-03",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343695044900",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh77d842c5atqrbbcyfkntr2d98dswgq",
+        "slug": "vial-4ml-blue-13-425-dropper",
+        "displayName": "4 ml Blue Vial Dropper Bottle",
+        "color": "Blue",
+        "capColor": "Clear",
+        "applicator": "Dropper",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBVBlu1DrmBlkDropper.b8ade229f5a1.webp",
+      "sha256": "b8ade229f5a1cf3d977cfa26f06bf21ffdbb9fffe1fa9cd4d159fb5a22c60b76",
+      "bytes": 1741662,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "f5c4eac748f078bdd63fe125bf26b2d2af9689c865e2f9245cda581a95ce17e0",
+      "sourceBytes": 3109792,
+      "sourceRenderSha256": "bbf82ba5fd880b41463e68be240c48938f498ddbd4e2be0ca674f3e529a7f404",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 45,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 35,
+        "curvePct": 32.97,
+        "override": "Jordan 2026-09-25: 1 & 2 ml vials 32%, 3 & 4 ml vials 35%",
+        "footFix": null,
+        "measuredFootPx": 451,
+        "measuredLandmarkPx": 186.5,
+        "scaleFactor": 3.0276
+      },
+      "fit": {
+        "scale": 1.0002,
+        "shiftY": -2.6,
+        "shiftX": 0.6,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 640,
+        "iou": 0.9864,
+        "p95": 3.38,
+        "p99": 4.31,
+        "max": 9.37,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBVBlu1DrmBlkDropper-input.png",
+        "sha256": "f5d626b8501730de299f74ab4957634b5be70af3c20d773312369b3f6257663f"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/0. All Vials/Uncapped/GBVBlu1DrmBlkDropper.psd",
+        "sha256": "9c62c9a9a7008c13aa7266021ac77b85fee40b364604b9117e5d2b4a385f70fc"
+      },
+      "promptSha256": "36a3d63fb0f134c72b090928d6a18dc04acce942985e6a3759db2f0b1620e425"
+    },
+    {
+      "sku": "GBVBlu1DrmWhtCapSht",
+      "family": "Vial",
+      "groupSlug": "vial-4ml-blue-13-425",
+      "graceSku": "GB-VIA-CLR-3ML-S-06",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343618498852",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7c4me50thdayvaqngagnaw8x8dr3a2",
+        "slug": "vial-4ml-blue-13-425",
+        "displayName": "4 ml Blue Vial Bottle with Cap",
+        "color": "Blue",
+        "capColor": "Clear",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBVBlu1DrmWhtCapSht.fb9b6f806afc.webp",
+      "sha256": "fb9b6f806afc278280dc46cee32d85514652e3fcf47b0da76c87bc0c0d2e232d",
+      "bytes": 1766562,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "b58e8986cfedd300a1d74a193246be3f7c23167f2115d314160c44303eee830a",
+      "sourceBytes": 3066720,
+      "sourceRenderSha256": "53f11f957987b196954e677c2f32b5ac57b9a7ab35087099140a15be3dd091a4",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 45,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 35,
+        "curvePct": 32.97,
+        "override": "Jordan 2026-09-25: 1 & 2 ml vials 32%, 3 & 4 ml vials 35%",
+        "footFix": null,
+        "measuredFootPx": 814,
+        "measuredLandmarkPx": 374,
+        "scaleFactor": 1.82
+      },
+      "fit": {
+        "scale": 1.0088,
+        "shiftY": -11.1,
+        "shiftX": -6.7,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 449,
+        "iou": 0.9861,
+        "p95": 3.5,
+        "p99": 5.14,
+        "max": 9.19,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBVBlu1DrmWhtCapSht-input.png",
+        "sha256": "836b2fa0cc07b35d6817aa84e4b3f240e454c9f688d53c69fbb043c8c5e69de5"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/0. All Vials/Uncapped/GBVBlu1DrmWhtCapSht..psd",
+        "sha256": "1c192d05623e458a9bb2fb953973b727617c66483c6f716a650548f71f7560f3"
+      },
+      "promptSha256": "df218e9634e0b6819e35d7353e9bb78d1a8e3cc6728d6b50f51e280ba59877c6"
+    },
+    {
+      "sku": "GBVGr1DrmBlkDropper",
+      "family": "Vial",
+      "groupSlug": "vial-4ml-green-13-425-dropper",
+      "graceSku": "GB-VIA-CLR-3ML-04",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343695077668",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh71gn33jwyz3nabjcdwcpnnrd8dr417",
+        "slug": "vial-4ml-green-13-425-dropper",
+        "displayName": "4 ml Green Vial Dropper Bottle",
+        "color": "Green",
+        "capColor": "Clear",
+        "applicator": "Dropper",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBVGr1DrmBlkDropper.7443d47ff9f4.webp",
+      "sha256": "7443d47ff9f49459b8007e5eb74a36b8a9dc57a3050d663fb05ba605942cafc2",
+      "bytes": 1789056,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "5d72bf7e200cbdc68741ab216846ad8f915a0a1c6425e7c3e1e13095da53be93",
+      "sourceBytes": 3159237,
+      "sourceRenderSha256": "b00f417a4552547f83b79ed189679dd3003f049bc39bbda8b28d9cadfe327068",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 45,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 35,
+        "curvePct": 32.97,
+        "override": "Jordan 2026-09-25: 1 & 2 ml vials 32%, 3 & 4 ml vials 35%",
+        "footFix": null,
+        "measuredFootPx": 452,
+        "measuredLandmarkPx": 199.9,
+        "scaleFactor": 3.17652
+      },
+      "fit": {
+        "scale": 1.0003,
+        "shiftY": -1.8,
+        "shiftX": 0.1,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 661,
+        "iou": 0.9845,
+        "p95": 4.88,
+        "p99": 10.97,
+        "max": 20.07,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBVGr1DrmBlkDropper-input.png",
+        "sha256": "6a408839b0fcf092ebc2865fab4fd2b45ec335722812acb10feff7579f0a87c9"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/0. All Vials/Uncapped/GBVGr1DrmBlkDropper.psd",
+        "sha256": "fb42d153d2cc64e06a739f2285680dc0b6313efdb882591eae59a22ee861d292"
+      },
+      "promptSha256": "97c70daada347ceff71f6f489573c7145aeacd7d77caf03e7cea53984811e338"
+    },
+    {
+      "sku": "GBVGr1DrmWhtCapSht",
+      "family": "Vial",
+      "groupSlug": "vial-4ml-green-13-425",
+      "graceSku": "GB-VIA-CLR-3ML-S-08",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343618531620",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh78m155sjar92g3c8etzca6yn8dsnb8",
+        "slug": "vial-4ml-green-13-425",
+        "displayName": "4 ml Green Vial Bottle with Cap",
+        "color": "Green",
+        "capColor": "Clear",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch3-approved-2026-09-25/GBVGr1DrmWhtCapSht.ff6a3833b953.webp",
+      "sha256": "ff6a3833b953444269126e04428346564b32632792f4168a66d3a790d48aed70",
+      "bytes": 1747096,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "c6e78eea786b219f20900ff38f625fe1934be83b14d8d7f84eac4790fbf459a3",
+      "sourceBytes": 3039512,
+      "sourceRenderSha256": "59db8310282d84163a9b673377f75a6465b40b95f0ea67a1f3307fda40bd59ee",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 45,
+        "heightWithStopperMm": null,
+        "landmarkRule": "shoulder",
+        "targetPct": 35,
+        "curvePct": 32.97,
+        "override": "Jordan 2026-09-25: 1 & 2 ml vials 32%, 3 & 4 ml vials 35%",
+        "footFix": null,
+        "measuredFootPx": 815,
+        "measuredLandmarkPx": 375,
+        "scaleFactor": 1.82
+      },
+      "fit": {
+        "scale": 1.003,
+        "shiftY": -3.6,
+        "shiftX": -2.1,
+        "note": "render resampled by the inverse of this similarity to the framing lock"
+      },
+      "qaRaw": {
+        "points": 453,
+        "iou": 0.988,
+        "p95": 4.9,
+        "p99": 20.7,
+        "max": 23.61,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "inputs/GBVGr1DrmWhtCapSht-input.png",
+        "sha256": "15a3938a2520f0e8509f71fe638e63a03600c1c3a81c84bf9cc5c465450350ee"
+      },
+      "psd": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/0. All Vials/Uncapped/GBVGr1DrmWhtCapSht.psd",
+        "sha256": "0ade035c5967184e517c6f306831e045ffe82cbcf073fd5d571bdd1b8555a91d"
+      },
+      "promptSha256": "bd3dd546129eff42de3ef3bbd0763507b1f1aef03cca60322a4931d613735205"
+    }
+  ]
+}

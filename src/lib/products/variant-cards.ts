@@ -34,13 +34,16 @@ export function variantCardId(groupId: string, variant: ExpandableVariant): stri
  * Replace each multi-SKU group of a variant-card family with one single-SKU
  * entry per variant. Every downstream map (hero, name, price, purchase) keys on
  * the entry id, so each card resolves exactly its own SKU.
+ *
+ * `totalCount` stays a count of products (groups), the unit every sidebar and
+ * product-type count uses: adding the extra cards made "Packaging & more" read
+ * 36 on the switch and 47 on the page, and the total grew as pages loaded.
  */
 export function expandVariantCards<G extends ExpandableGroup, V extends ExpandableVariant, R extends ExpandableResult<G, V>>(result: R): R {
     const rowsByGroup = new Map(result.variantPreviewRows.map((row) => [row.groupId, row.variants]));
     const items: G[] = [];
     const primarySkus: R["primarySkus"] = [];
     const variantPreviewRows: R["variantPreviewRows"] = [];
-    let addedCards = 0;
     let changed = false;
 
     const expandedGroupIds = new Set<string>();
@@ -52,7 +55,6 @@ export function expandVariantCards<G extends ExpandableGroup, V extends Expandab
         }
         changed = true;
         expandedGroupIds.add(group._id);
-        addedCards += variants.length - 1;
         for (const variant of variants) {
             const id = variantCardId(group._id, variant);
             items.push({ ...group, _id: id, variantCount: 1 } as G);
@@ -65,7 +67,6 @@ export function expandVariantCards<G extends ExpandableGroup, V extends Expandab
     return {
         ...result,
         items,
-        totalCount: result.totalCount + addedCards,
         primarySkus: [...result.primarySkus.filter((row) => !expandedGroupIds.has(row.groupId)), ...primarySkus],
         variantPreviewRows: [...result.variantPreviewRows.filter((row) => !expandedGroupIds.has(row.groupId)), ...variantPreviewRows],
     };
@@ -88,7 +89,7 @@ export function atomizerVariantCardName(capacityMl: number | null | undefined, v
     return `${size}${finish}${slim ? " Slim" : ""} Atomizer${pattern}`;
 }
 
-type StagePlate = { image: string; imageCapOff: string | null; thumb?: string; thumbCapOff?: string | null };
+type StagePlate = { image: string; imageCapOff: string | null; thumb?: string; thumbCapOff?: string | null; heroStage?: boolean };
 
 /**
  * The PDP stage for a variant-card family shows the same released hero as the
@@ -108,7 +109,7 @@ export function withReleasedHeroStages<P extends StagePlate>(
         next ??= { ...plates };
         for (const key of [variant.graceSku, variant.websiteSku]) {
             if (!key) continue;
-            next[key] = { ...plates[key], image: hero.url, imageCapOff: null };
+            next[key] = { ...plates[key], image: hero.url, imageCapOff: null, heroStage: true };
         }
     }
     return next ?? plates;

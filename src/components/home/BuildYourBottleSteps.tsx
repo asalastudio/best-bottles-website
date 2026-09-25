@@ -1,6 +1,5 @@
 "use client";
-/* Step tiles: colored-pencil studies drawn with GPT Image 2.5 (2026-09-25) in the house pencil style
-   (build-your-bottle-pencil-study, applicator sketches) after the approved component sheet. */
+/* Step tiles are composited from real PSD-layer kit parts by scripts/homepage/build-your-bottle-steps.mjs. */
 /* eslint-disable @next/next/no-img-element */
 import type { HomepageData } from "@/sanity/lib/queries";
 import LocaleLink from "@/components/LocaleLink";
@@ -14,14 +13,13 @@ const STEPS = [
     { image: "step-4", label: "buildStepComplete", alt: "buildStepCompleteAlt" },
 ] as const;
 
-/** Jordan's comp (2026-09-25): four numbered steps and a start column, inside "Shop three ways" section 03. */
-export default function BuildYourBottleSteps({ build, headingId }: { build?: HomepageData["buildYourBottle"]; headingId?: string }) {
+export default function BuildYourBottleSteps({ build }: { build?: HomepageData["buildYourBottle"] }) {
     const t = useCopy("home");
     const href = build?.destination === "/collections" ? "/collections" : "/matrix";
     return (
-        <div className={styles.block}>
+        <section className={styles.section} id="build-your-bottle" aria-labelledby="build-steps-heading">
             <div className={styles.head}>
-                <h3 id={headingId}>{build?.heading || t("buildStepsHeading")}</h3>
+                <h2 id="build-steps-heading">{build?.heading || t("buildStepsHeading")}</h2>
                 <p className={styles.eyebrow}>{t("buildStepsEyebrow")}</p>
             </div>
             <div className={styles.body}>
@@ -30,7 +28,7 @@ export default function BuildYourBottleSteps({ build, headingId }: { build?: Hom
                         <li key={step.image} className={styles.step}>
                             <LocaleLink href={href} className={styles.stepLink}>
                                 <span className={styles.media}>
-                                    <img src={`/assets/homepage/build-steps/${step.image}.webp`} alt={t(step.alt)} width={1440} height={900} loading="lazy" decoding="async" />
+                                    <img src={`/assets/homepage/build-steps/${step.image}.webp`} alt={t(step.alt)} width={960} height={600} loading="lazy" decoding="async" />
                                     <span className={styles.badge} aria-hidden="true">{index + 1}</span>
                                 </span>
                                 <span className={styles.label}>{t(step.label)}</span>
@@ -45,6 +43,6 @@ export default function BuildYourBottleSteps({ build, headingId }: { build?: Hom
                     </LocaleLink>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

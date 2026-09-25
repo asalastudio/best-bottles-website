@@ -1,32 +1,32 @@
 "use client";
 
 /**
- * Grid-card purchase block: headline rate, quantity stepper with the live
- * rate and subtotal, a "View tier pricing +" trigger, and a full-width Add
- * to cart. Sits OUTSIDE the card's product links so quantity, tier, and cart
- * clicks never navigate.
+ * Grid-card purchase block (master catalog design 8a): the live unit price,
+ * a "Pack of" menu that picks a quantity break, a quantity stepper, and one
+ * full-width "Add to cart · subtotal" button. Sits OUTSIDE the card's
+ * product links so quantity, tier and cart clicks never navigate.
  *
- * The five-tier ladder opens in a native <dialog> (focus trap, Esc, backdrop
- * click) instead of expanding inline, so opening it never pushes the grid
- * below the fold or hides the bottle photo. Picking a tier in the dialog
- * prepopulates the card's quantity; Add to cart works from either place.
+ * The menu is the only tier UI: no modal and no accordion. Picking a break
+ * sets the quantity to its first piece count; typing or stepping a quantity
+ * moves the break. The menu is absolutely positioned, so neither the card nor
+ * the grid may clip overflow.
  *
  * Pricing comes from the assembly's published ladder through
  * `catalog-card-purchase.ts` → `volumePricing.ts`; nothing here restates a
- * price. The cart keeps its own charging policy (`resolveChargedUnitPrice`).
+ * price. Every break's rate is shown as the price (Jordan, 2026-09-25: no
+ * "Quote" marks on the card): the headline follows the active break and the
+ * button total is that rate × quantity. Whether checkout bills the break is
+ * `NEXT_PUBLIC_VOLUME_TIERS_HONORED_AT_CHECKOUT`'s concern, not the card's.
  */
 
-import Image from "next/image";
 import LocaleLink from "@/components/LocaleLink";
-import { useEffect, useId, useRef, useState, type KeyboardEvent, type MouseEvent } from "react";
-import { Check, Minus, Plus, X, ShoppingCart } from "@/components/icons";
+import { useEffect, useId, useRef, useState, type KeyboardEvent } from "react";
 import { useCart } from "@/components/CartProvider";
 import { analytics } from "@/lib/analytics";
 import {
     CATALOG_QUANTITY_MAX,
     activeCatalogTier,
     buildCatalogCartItem,
-    catalogCardStartingPrice,
     catalogCardTiers,
     catalogTierLabel,
     catalogVariantOrderBlocked,
@@ -40,7 +40,6 @@ import {
 import { formatVolumeQtyRange, type DisplayVolumeTier } from "@/lib/volumePricing";
 import { useRegion } from "@/components/RegionProvider";
 
-
 /** Telemetry is best-effort: a tracking failure must never block or misreport a cart update. */
 function track(send: () => void) {
     try {
@@ -50,10 +49,8 @@ function track(send: () => void) {
     }
 }
 
-const FOCUS_RING = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold";
-const STEP_BUTTON = `flex h-11 w-11 shrink-0 items-center justify-center text-slate transition-colors motion-reduce:transition-none hover:bg-travertine hover:text-obsidian disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent sm:h-9 sm:w-9 ${FOCUS_RING} focus-visible:outline-offset-[-2px]`;
-const PRIMARY_BUTTON = `inline-flex min-h-11 w-full items-center justify-center gap-1.5 whitespace-nowrap rounded-sm bg-obsidian px-4 text-xs font-bold uppercase tracking-wider text-white transition-colors motion-reduce:transition-none hover:bg-muted-gold disabled:cursor-not-allowed disabled:bg-champagne/70 disabled:text-slate sm:min-h-10 ${FOCUS_RING}`;
-const SECONDARY_BUTTON = `inline-flex min-h-11 w-full items-center justify-center whitespace-nowrap rounded-sm border border-obsidian px-4 text-xs font-bold uppercase tracking-wider text-obsidian transition-colors motion-reduce:transition-none hover:bg-obsidian hover:text-white sm:min-h-10 ${FOCUS_RING}`;
+const FOCUS_RING = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1c1c1e]";
+const STEP_BUTTON = `flex h-full w-8 shrink-0 items-center justify-center text-[15px] text-[#5d6b7e] transition-colors motion-reduce:transition-none hover:bg-[#f1ebe0] hover:text-[#1c1c1e] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent ${FOCUS_RING} focus-visible:outline-offset-[-2px]`;
 
 export type CatalogCardPurchaseProps = {
     /** Product group slug — the cart's productGroupSlug and the analytics product ID. */
@@ -62,14 +59,16 @@ export type CatalogCardPurchaseProps = {
     /** PDP link used when the card cannot sell the pictured assembly. */
     href: string;
     variant: CatalogPurchaseVariant | null;
-    /** Lowest 1-unit price across the group; the fallback headline when the row carries no ladder. */
+    /** Lowest 1-unit price across the group; the fallback headline when the row carries no price. */
     groupStartingPrice: number | null;
     context: Omit<CatalogCartContext, "title" | "productGroupSlug">;
-    /** The card's bottle photo, repeated in the ladder dialog so the product stays in view. */
-    imageUrl?: string | null;
 };
 
-type Scope = "card" | "dialog";
+/** "1", "12", "500+": the break's first piece count, open-ended on the last break. */
+export function catalogPackLabel(tier: DisplayVolumeTier | null | undefined): string {
+    if (!tier) return "1";
+    return `${tier.minQty.toLocaleString("en-US")}${tier.maxQty == null ? "+" : ""}`;
+}
 
 export default function CatalogCardPurchase({
     productId,
@@ -78,23 +77,20 @@ export default function CatalogCardPurchase({
     variant,
     groupStartingPrice,
     context,
-    imageUrl,
 }: CatalogCardPurchaseProps) {
     const { formatPrice } = useRegion();
     const { addItems } = useCart();
     const baseId = useId();
-    const dialogId = `${baseId}-tiers`;
-    const titleId = `${baseId}-tiers-title`;
-    const scopedId = (scope: Scope, part: string) => `${baseId}-${scope}-${part}`;
+    const menuId = `${baseId}-packs`;
+    const qtyId = `${baseId}-qty`;
 
     const [qtyText, setQtyText] = useState("1");
-    const [tiersOpen, setTiersOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
     const [added, setAdded] = useState<number | null>(null);
     const committedQty = useRef(1);
-    const dialogRef = useRef<HTMLDialogElement>(null);
+    const wrapperRef = useRef<HTMLDivElement>(null);
     const triggerRef = useRef<HTMLButtonElement>(null);
-    const openerRef = useRef<HTMLButtonElement | null>(null);
-    const tierRefs = useRef<Array<HTMLButtonElement | null>>([]);
+    const optionRefs = useRef<Array<HTMLButtonElement | null>>([]);
     const addedTimer = useRef<number | null>(null);
 
     useEffect(() => () => {
@@ -108,34 +104,42 @@ export default function CatalogCardPurchase({
     const { qty, error } = parseCatalogQuantity(qtyText);
     const activeTier = activeCatalogTier(tiers, qty);
     const activeIndex = activeTier ? tiers.indexOf(activeTier) : -1;
-    const startingPrice = catalogCardStartingPrice(variant, tiers, groupStartingPrice);
     const sku = variant?.websiteSku ?? variant?.graceSku ?? null;
     const eventBase = { productId, sku, quantity: qty ?? 0, tier: catalogTierLabel(activeTier) };
 
-    const openTiers = (event?: MouseEvent<HTMLButtonElement>) => {
-        if (event) openerRef.current = event.currentTarget;
-        const dialog = dialogRef.current;
-        if (!dialog || dialog.open) return;
-        dialog.showModal();
-        setTiersOpen(true);
+    // Picking another cap swaps `variant` but keeps the quantity: caps in one
+    // group share a ladder, and the buyer's pack size should survive the swap.
+
+    // Close the menu on an outside press.
+    useEffect(() => {
+        if (!menuOpen) return;
+        const onPointerDown = (event: PointerEvent) => {
+            if (event.target instanceof Node && wrapperRef.current?.contains(event.target)) return;
+            setMenuOpen(false);
+            track(() => analytics.catalogTierPricingToggled({ open: false, ...eventBase }));
+        };
+        document.addEventListener("pointerdown", onPointerDown);
+        return () => document.removeEventListener("pointerdown", onPointerDown);
+    });
+
+    // Focus the active break once the list has rendered.
+    const focusOnOpen = useRef(0);
+    useEffect(() => {
+        if (menuOpen) optionRefs.current[focusOnOpen.current]?.focus({ preventScroll: true });
+    }, [menuOpen]);
+
+    const openMenu = () => {
+        if (menuOpen) return;
+        focusOnOpen.current = Math.max(activeIndex, 0);
+        setMenuOpen(true);
         track(() => analytics.catalogTierPricingToggled({ open: true, ...eventBase }));
-        tierRefs.current[Math.max(activeIndex, 0)]?.focus({ preventScroll: true });
     };
 
-    const closeTiers = () => {
-        const dialog = dialogRef.current;
-        if (dialog?.open) dialog.close();
-    };
-
-    // Fires for the close button, Esc, backdrop clicks, and a successful add.
-    const handleDialogClose = () => {
-        setTiersOpen(false);
+    const closeMenu = (returnFocus: boolean) => {
+        if (!menuOpen) return;
+        setMenuOpen(false);
         track(() => analytics.catalogTierPricingToggled({ open: false, ...eventBase }));
-        (openerRef.current ?? triggerRef.current)?.focus({ preventScroll: true });
-    };
-
-    const onDialogClick = (event: MouseEvent<HTMLDialogElement>) => {
-        if (event.target === event.currentTarget) closeTiers();
+        if (returnFocus) triggerRef.current?.focus({ preventScroll: true });
     };
 
     const commitQuantity = (next: number, source: "stepper" | "input" | "tier") => {
@@ -148,21 +152,29 @@ export default function CatalogCardPurchase({
         else track(() => analytics.catalogQuantityChanged({ productId, sku, quantity: clamped, tier, source }));
     };
 
-    const selectTier = (tier: DisplayVolumeTier) => {
-        if (tier === activeTier) return;
+    const pickTier = (tier: DisplayVolumeTier) => {
         commitQuantity(tier.minQty, "tier");
+        closeMenu(true);
     };
 
-    const onTierKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
-        let nextIndex: number | null = null;
-        if (event.key === "ArrowDown" || event.key === "ArrowRight") nextIndex = Math.min(tiers.length - 1, activeIndex + 1);
-        else if (event.key === "ArrowUp" || event.key === "ArrowLeft") nextIndex = Math.max(0, activeIndex - 1);
-        else if (event.key === "Home") nextIndex = 0;
-        else if (event.key === "End") nextIndex = tiers.length - 1;
-        if (nextIndex == null || !tiers[nextIndex]) return;
+    const onMenuKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+        const focused = optionRefs.current.findIndex((option) => option === document.activeElement);
+        let next: number | null = null;
+        if (event.key === "ArrowDown") next = Math.min(tiers.length - 1, focused + 1);
+        else if (event.key === "ArrowUp") next = Math.max(0, focused - 1);
+        else if (event.key === "Home") next = 0;
+        else if (event.key === "End") next = tiers.length - 1;
+        else if (event.key === "Escape") {
+            event.preventDefault();
+            closeMenu(true);
+            return;
+        } else if (event.key === "Tab") {
+            closeMenu(false);
+            return;
+        }
+        if (next == null) return;
         event.preventDefault();
-        selectTier(tiers[nextIndex]);
-        tierRefs.current[nextIndex]?.focus();
+        optionRefs.current[next]?.focus();
     };
 
     const handleAdd = () => {
@@ -196,319 +208,187 @@ export default function CatalogCardPurchase({
         setAdded(qty);
         if (addedTimer.current != null) window.clearTimeout(addedTimer.current);
         addedTimer.current = window.setTimeout(() => setAdded(null), 4000);
-        closeTiers();
     };
 
     if (!variant || variant.webPrice1pc == null || variant.webPrice1pc <= 0) {
         return (
-            <div className="border-t border-champagne/55 px-3 pb-3 pt-3 sm:px-5 lg:px-4 lg:pb-5 lg:pt-4" data-testid="catalog-card-purchase" data-state="unpriced">
-                <p className="text-[15px] font-medium text-obsidian lg:text-lg lg:font-semibold" data-testid="catalog-card-price">
+            <div className="mt-auto flex flex-col gap-2.5" data-testid="catalog-card-purchase" data-state="unpriced">
+                <p className="text-[18px] font-semibold leading-tight text-[#1c1c1e]" data-testid="catalog-card-price">
                     {groupStartingPrice != null
-                        ? <>From {formatPrice(groupStartingPrice)}<span className="text-sm font-normal text-slate">/ea</span></>
+                        ? <>From {formatPrice(groupStartingPrice)}<span className="ml-1.5 text-[12px] font-normal text-[#5d6b7e]">/pc</span></>
                         : "Request pricing"}
                 </p>
-                <LocaleLink href={href} className={`mt-2 inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-wider text-obsidian underline-offset-4 hover:underline sm:min-h-9 ${FOCUS_RING}`}>
+                <LocaleLink href={href} className={`flex min-h-11 w-full items-center justify-center border border-[#1c1c1e] px-3 text-[12px] font-medium uppercase tracking-[0.14em] text-[#1c1c1e] hover:bg-[#1c1c1e] hover:text-white ${FOCUS_RING}`}>
                     View options
                 </LocaleLink>
             </div>
         );
     }
 
-    const p1 = tiers[0]?.unitPrice ?? variant.webPrice1pc;
+    // The active break's rate is the price: headline × quantity = button total.
     const activeUnitPrice = activeTier?.unitPrice ?? variant.webPrice1pc;
-    const firstQuoteTier = tiers.find((tier) => !tier.appliesAtCheckout) ?? null;
-    const nextTier = activeIndex >= 0 ? tiers[activeIndex + 1] : undefined;
-    const unitsToNext = nextTier && qty != null ? nextTier.minQty - qty : 0;
-    const footnote = firstQuoteTier
-        ? `Online checkout bills ${formatPrice(p1)}/ea. ${firstQuoteTier.minQty.toLocaleString("en-US")}+ rates are confirmed on a quote.`
-        : nextTier && unitsToNext > 0 && unitsToNext <= 11
-            ? `Add ${unitsToNext} more to unlock ${formatPrice(nextTier.unitPrice)}/ea · save ${nextTier.savePct}%.`
-            : "Save more at higher quantities.";
+    const subtotal = (qty ?? 0) * activeUnitPrice;
 
-    // Render helpers (not nested components) so the card and dialog share one
-    // quantity without remounting inputs on every keystroke.
-    const renderStepper = (scope: Scope) => {
-        const qtyId = scopedId(scope, "qty");
-        return (
-            <div className="flex shrink-0 items-stretch rounded-sm border border-champagne bg-white" role="group" aria-label="Quantity">
-                <label htmlFor={qtyId} className="sr-only">Quantity</label>
-                <button
-                    type="button"
-                    className={STEP_BUTTON}
-                    onClick={() => commitQuantity((qty ?? 1) - 1, "stepper")}
-                    disabled={orderBlocked || (qty != null && qty <= 1)}
-                    aria-label="Decrease quantity"
-                >
-                    <Minus className="h-3.5 w-3.5" aria-hidden />
-                </button>
-                <input
-                    id={qtyId}
-                    data-testid={scope === "card" ? "catalog-card-qty" : "catalog-card-dialog-qty"}
-                    type="text"
-                    inputMode="numeric"
-                    pattern="[0-9]*"
-                    autoComplete="off"
-                    value={qtyText}
-                    disabled={orderBlocked}
-                    onChange={(event) => setQtyText(event.target.value)}
-                    onFocus={(event) => event.currentTarget.select()}
-                    onBlur={() => { if (qty != null) commitQuantity(qty, "input"); }}
-                    onKeyDown={(event) => {
-                        if (event.key !== "Enter") return;
-                        event.preventDefault();
-                        if (qty != null) commitQuantity(qty, "input");
-                    }}
-                    aria-invalid={error ? true : undefined}
-                    aria-describedby={scopedId(scope, error ? "error" : "live")}
-                    className="w-14 min-w-0 border-x border-champagne bg-transparent text-center text-sm font-medium tabular-nums text-obsidian focus:outline-none focus-visible:bg-bone/70 [appearance:textfield]"
-                />
-                <button
-                    type="button"
-                    className={STEP_BUTTON}
-                    onClick={() => commitQuantity((qty ?? 0) + 1, "stepper")}
-                    disabled={orderBlocked}
-                    aria-label="Increase quantity"
-                >
-                    <Plus className="h-3.5 w-3.5" aria-hidden />
-                </button>
-            </div>
-        );
-    };
-
-    const renderLiveLine = (scope: Scope) => (
-        <div className="min-w-0 flex-1 self-center text-[11px] leading-snug text-slate">
-            {error ? (
-                <p id={scopedId(scope, "error")} role="alert" className="font-medium text-red-700" data-testid="catalog-card-qty-error">
-                    {error}
-                </p>
-            ) : (
-                <p id={scopedId(scope, "live")} aria-live="polite" className="tabular-nums" data-testid="catalog-card-active-tier">
-                    <span className="block">
-                        <span className="text-sm font-semibold text-obsidian">{formatPrice(activeUnitPrice)}</span>
-                        /ea{activeTier && <> · {formatVolumeQtyRange(activeTier.minQty, activeTier.maxQty)}</>}
-                    </span>
-                    <span className="block">
-                        {activeTier && activeTier.savePct > 0 && (
-                            <><span className="font-semibold text-emerald-800">Save {activeTier.savePct}%</span> · </>
-                        )}
-                        <span className="whitespace-nowrap" data-testid="catalog-card-subtotal" data-quote={activeTier && !activeTier.appliesAtCheckout ? "true" : undefined}>
-                            {activeTier && !activeTier.appliesAtCheckout ? "Quote subtotal" : "Subtotal"}{" "}
-                            <span className="font-semibold text-obsidian">{formatPrice((qty ?? 0) * activeUnitPrice)}</span>
-                        </span>
-                    </span>
-                </p>
-            )}
-        </div>
-    );
-
-    const addLabel = soldOut ? "Out of stock" : orderBlocked ? "Unavailable" : "Add to cart";
+    const addLabel = soldOut
+        ? "Out of stock"
+        : orderBlocked
+            ? "Unavailable"
+            : added != null
+                ? "Added ✓"
+                : `Add to cart · ${formatPrice(subtotal)}`;
     const addAriaLabel = soldOut
         ? `Out of stock: ${title}`
         : orderBlocked
             ? `${title} unavailable for checkout`
-            : `Add ${qty ?? ""} ${title} to cart`.replace(/\s+/g, " ");
-
-    const renderAddButton = (scope: Scope) => (
-        <button
-            type="button"
-            data-testid={scope === "card" ? "catalog-card-add" : "catalog-card-dialog-add"}
-            onClick={handleAdd}
-            disabled={!canAdd || qty == null}
-            className={PRIMARY_BUTTON}
-            aria-label={addAriaLabel}
-        >
-            {added != null && canAdd ? <><Check className="h-3.5 w-3.5" aria-hidden />Added</> : addLabel}
-        </button>
-    );
-
-    const stockNote = soldOut ? (
-        <p className="mt-1 text-[11px] leading-snug text-slate" data-testid="catalog-card-stock">
-            <span className="font-semibold text-obsidian">Out of stock</span>
-        </p>
-    ) : orderBlocked ? (
-        <p className="mt-1 text-[11px] leading-snug text-slate" data-testid="catalog-card-stock">
-            <span className="font-semibold text-obsidian">Unavailable</span>
-            {" for online checkout."}
-        </p>
-    ) : null;
+            : `Add ${qty ?? ""} ${title} to cart, ${formatPrice(subtotal)}`.replace(/\s+/g, " ");
 
     return (
         <div
-            className="border-t border-champagne/55 px-3 pb-3 pt-3 sm:px-5 lg:px-4 lg:pb-4 lg:pt-3"
+            className="mt-auto flex flex-col gap-2.5"
             data-testid="catalog-card-purchase"
             data-state={soldOut ? "sold-out" : orderBlocked ? "unavailable" : "purchasable"}
         >
-            <p className="text-[15px] font-medium leading-tight text-obsidian lg:text-lg lg:font-semibold" data-testid="catalog-card-price">
-                From {formatPrice(startingPrice ?? variant.webPrice1pc)}
-                <span className="text-sm font-normal text-slate">/ea</span>
+            <p className="flex items-baseline gap-1.5 tabular-nums" aria-live="polite" data-testid="catalog-card-price">
+                <span className="text-[18px] font-semibold leading-tight text-[#1c1c1e]">{formatPrice(activeUnitPrice)}</span>
+                <span className="whitespace-nowrap text-[12px] text-[#5d6b7e]" data-testid="catalog-card-active-tier">
+                    /pc{activeTier && <> · {formatVolumeQtyRange(activeTier.minQty, activeTier.maxQty)} pcs</>}
+                </span>
             </p>
-            {variant.optionLabel && (
-                <p className="mt-0.5 hidden text-[11px] text-slate lg:block">
-                    Adds <span className="text-obsidian">{variant.optionLabel}</span>
+
+            {soldOut && (
+                <p className="-mt-1 text-[11px] font-semibold text-[#1c1c1e]" data-testid="catalog-card-stock">Out of stock</p>
+            )}
+            {orderBlocked && !soldOut && (
+                <p className="-mt-1 text-[11px] text-[#5d6b7e]" data-testid="catalog-card-stock">
+                    <span className="font-semibold text-[#1c1c1e]">Unavailable</span> for online checkout.
                 </p>
             )}
-            {stockNote}
 
-            <div className={`mt-2 flex items-center gap-2 lg:hidden ${tiers.length > 0 ? "" : "justify-end"}`}>
+            <div className="flex gap-2">
                 {tiers.length > 0 && (
-                    <button
-                        type="button"
-                        data-testid="catalog-card-tier-toggle-compact"
-                        aria-haspopup="dialog"
-                        aria-expanded={tiersOpen}
-                        aria-controls={dialogId}
-                        onClick={openTiers}
-                        className={`min-h-11 min-w-0 flex-1 text-left text-[11px] font-semibold leading-tight text-obsidian hover:text-muted-gold ${FOCUS_RING}`}
-                    >
-                        View tier pricing
-                    </button>
+                    <div ref={wrapperRef} className="relative min-w-0 flex-1">
+                        <button
+                            ref={triggerRef}
+                            type="button"
+                            data-testid="catalog-card-pack-toggle"
+                            aria-haspopup="listbox"
+                            aria-expanded={menuOpen}
+                            aria-controls={menuId}
+                            disabled={orderBlocked}
+                            onClick={() => (menuOpen ? closeMenu(false) : openMenu())}
+                            onKeyDown={(event) => {
+                                if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+                                    event.preventDefault();
+                                    openMenu();
+                                }
+                            }}
+                            className={`flex h-9 w-full items-center justify-between gap-2 border border-[#d9cdb9] bg-white px-2.5 text-[13px] text-[#1c1c1e] hover:border-[#1c1c1e] disabled:cursor-not-allowed disabled:opacity-50 ${FOCUS_RING}`}
+                        >
+                            <span className="truncate">Pack of <b className="font-semibold tabular-nums">{catalogPackLabel(activeTier)}</b></span>
+                            <span aria-hidden className="text-[11px] text-[#5d6b7e]">{menuOpen ? "▴" : "▾"}</span>
+                        </button>
+                        {menuOpen && (
+                            <div
+                                id={menuId}
+                                role="listbox"
+                                aria-label={`Quantity breaks for ${title}`}
+                                onKeyDown={onMenuKeyDown}
+                                data-testid="catalog-card-pack-menu"
+                                className="absolute left-0 top-full z-30 w-[200px] border border-[#1c1c1e] bg-white shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
+                            >
+                                {tiers.map((tier, index) => {
+                                    const active = index === activeIndex;
+                                    return (
+                                        <button
+                                            key={tier.minQty}
+                                            ref={(element) => { optionRefs.current[index] = element; }}
+                                            type="button"
+                                            role="option"
+                                            aria-selected={active}
+                                            aria-label={describeCatalogTier(tier, formatPrice)}
+                                            onClick={() => pickTier(tier)}
+                                            data-testid="catalog-card-tier-row"
+                                            data-tier-min={tier.minQty}
+                                            data-tier-active={active ? "true" : "false"}
+                                            className={`flex w-full items-center justify-between gap-3 px-3 py-[9px] text-left text-[13px] tabular-nums focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-[#9a7a48] ${active ? "bg-[#1c1c1e] text-white" : "text-[#1c1c1e] hover:bg-[#f1ebe0]"}`}
+                                        >
+                                            <span className="whitespace-nowrap">{formatVolumeQtyRange(tier.minQty, tier.maxQty)}</span>
+                                            <b className="whitespace-nowrap font-semibold">{formatPrice(tier.unitPrice)}</b>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        )}
+                    </div>
                 )}
-                <button
-                    type="button"
-                    data-testid="catalog-card-add-compact"
-                    onClick={handleAdd}
-                    disabled={!canAdd || qty == null}
-                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-sm bg-obsidian text-white ${FOCUS_RING}`}
-                    aria-label={addAriaLabel}
-                >
-                    {added != null ? <Check className="h-4 w-4" aria-hidden /> : <ShoppingCart className="h-4 w-4" aria-hidden />}
-                </button>
-            </div>
 
-            {/* Quantity → rate → tier pricing → add, top-down on every desktop width. */}
-            <div className="mt-3 hidden items-start gap-3 lg:flex">
-                {renderStepper("card")}
-                {renderLiveLine("card")}
-            </div>
-
-            {tiers.length > 0 && (
-                <>
+                <div className={`flex h-9 shrink-0 items-stretch border border-[#d9cdb9] bg-white ${tiers.length > 0 ? "" : "mr-auto"}`} role="group" aria-label="Quantity">
                     <button
-                        ref={triggerRef}
                         type="button"
-                        data-testid="catalog-card-tier-toggle"
-                        aria-haspopup="dialog"
-                        aria-expanded={tiersOpen}
-                        aria-controls={dialogId}
-                        onClick={openTiers}
-                        className={`mt-1 hidden min-h-11 w-full items-center justify-between gap-2 text-xs font-semibold text-obsidian transition-colors motion-reduce:transition-none hover:text-muted-gold sm:min-h-9 lg:flex ${FOCUS_RING}`}
+                        className={STEP_BUTTON}
+                        onClick={() => commitQuantity((qty ?? 1) - 1, "stepper")}
+                        disabled={orderBlocked || (qty != null && qty <= 1)}
+                        aria-label="Decrease quantity"
                     >
-                        <span>View tier pricing</span>
-                        <Plus weight="thin" className="h-4 w-4 shrink-0" aria-hidden />
+                        −
                     </button>
-                    <dialog
-                        ref={dialogRef}
-                        id={dialogId}
-                        data-testid="catalog-card-tier-dialog"
-                        aria-labelledby={titleId}
-                        onClose={handleDialogClose}
-                        onClick={onDialogClick}
-                        className="m-auto w-[min(26rem,calc(100vw-1.5rem))] max-h-[calc(100dvh-1.5rem)] overflow-y-auto rounded-sm border border-champagne bg-white p-0 text-obsidian shadow-2xl backdrop:bg-obsidian/45"
+                    <label htmlFor={qtyId} className="sr-only">Quantity</label>
+                    <input
+                        id={qtyId}
+                        data-testid="catalog-card-qty"
+                        type="text"
+                        inputMode="numeric"
+                        pattern="[0-9]*"
+                        autoComplete="off"
+                        value={qtyText}
+                        disabled={orderBlocked}
+                        onChange={(event) => setQtyText(event.target.value)}
+                        onFocus={(event) => event.currentTarget.select()}
+                        onBlur={() => { if (qty != null) commitQuantity(qty, "input"); }}
+                        onKeyDown={(event) => {
+                            if (event.key !== "Enter") return;
+                            event.preventDefault();
+                            if (qty != null) commitQuantity(qty, "input");
+                        }}
+                        aria-invalid={error ? true : undefined}
+                        aria-describedby={error ? `${baseId}-error` : undefined}
+                        className="w-11 min-w-0 border-x border-[#ece6dc] bg-transparent text-center text-[13px] tabular-nums text-[#1c1c1e] focus:outline-none focus-visible:bg-[#f8f6f2] [appearance:textfield]"
+                    />
+                    <button
+                        type="button"
+                        className={STEP_BUTTON}
+                        onClick={() => commitQuantity((qty ?? 0) + 1, "stepper")}
+                        disabled={orderBlocked}
+                        aria-label="Increase quantity"
                     >
-                        <div className="p-4 sm:p-5">
-                            <div className="flex items-start gap-3">
-                                {imageUrl && (
-                                    <span className="relative block h-16 w-16 shrink-0 overflow-hidden rounded-sm bg-[#f0ebe3]">
-                                        <Image src={imageUrl} alt="" fill sizes="64px" unoptimized className="object-contain" />
-                                    </span>
-                                )}
-                                <div className="min-w-0 flex-1">
-                                    <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-slate">Tier pricing</p>
-                                    <h3 id={titleId} className="mt-0.5 text-base font-medium leading-snug text-obsidian">{title}</h3>
-                                    {variant.optionLabel && (
-                                        <p className="mt-0.5 text-[11px] text-slate">Adds <span className="text-obsidian">{variant.optionLabel}</span></p>
-                                    )}
-                                </div>
-                                <button
-                                    type="button"
-                                    onClick={closeTiers}
-                                    aria-label="Close tier pricing"
-                                    data-testid="catalog-card-tier-close"
-                                    className={`-mr-2 -mt-2 flex h-11 w-11 shrink-0 items-center justify-center text-slate hover:text-obsidian sm:h-9 sm:w-9 ${FOCUS_RING}`}
-                                >
-                                    <X className="h-4 w-4" aria-hidden />
-                                </button>
-                            </div>
+                        +
+                    </button>
+                </div>
+            </div>
 
-                            <div className="mt-4 flex items-start gap-3">
-                                {renderStepper("dialog")}
-                                {renderLiveLine("dialog")}
-                            </div>
-
-                            <div className="mt-3 rounded-sm border border-champagne/60 bg-travertine/50 p-2">
-                                <div
-                                    className="grid grid-cols-[minmax(0,1fr)_auto_auto] gap-x-3 px-2 pb-1 text-[10px] font-semibold uppercase tracking-wider text-slate"
-                                    aria-hidden
-                                >
-                                    <span>Quantity</span>
-                                    <span className="text-right">Price (ea)</span>
-                                    <span className="text-right">You save</span>
-                                </div>
-                                <div
-                                    role="radiogroup"
-                                    aria-label={`Pricing tiers for ${title}`}
-                                    onKeyDown={onTierKeyDown}
-                                    className="divide-y divide-champagne/40"
-                                >
-                                    {tiers.map((tier, index) => {
-                                        const active = index === activeIndex;
-                                        return (
-                                            <button
-                                                key={tier.minQty}
-                                                ref={(element) => { tierRefs.current[index] = element; }}
-                                                type="button"
-                                                role="radio"
-                                                aria-checked={active}
-                                                aria-label={describeCatalogTier(tier, formatPrice)}
-                                                tabIndex={active || (activeIndex < 0 && index === 0) ? 0 : -1}
-                                                onClick={() => selectTier(tier)}
-                                                data-testid="catalog-card-tier-row"
-                                                data-tier-min={tier.minQty}
-                                                data-tier-active={active ? "true" : "false"}
-                                                className={`grid min-h-11 w-full grid-cols-[minmax(0,1fr)_auto_auto] items-center gap-x-3 px-2 text-left text-sm transition-colors motion-reduce:transition-none hover:bg-white sm:min-h-10 ${FOCUS_RING} focus-visible:outline-offset-[-2px] ${active ? "bg-white font-semibold text-obsidian" : "text-obsidian"}`}
-                                            >
-                                                <span className="flex min-w-0 items-center gap-2">
-                                                    <span
-                                                        aria-hidden
-                                                        className={`inline-flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full border ${active ? "border-muted-gold" : "border-champagne"}`}
-                                                    >
-                                                        {active && <span className="h-2 w-2 rounded-full bg-muted-gold" />}
-                                                    </span>
-                                                    <span className="tabular-nums">{formatVolumeQtyRange(tier.minQty, tier.maxQty)}</span>
-                                                </span>
-                                                <span className="text-right tabular-nums">{formatPrice(tier.unitPrice)}</span>
-                                                <span className={`text-right text-xs tabular-nums ${tier.savePct > 0 ? "text-emerald-800" : "text-slate"}`}>
-                                                    {tier.savePct > 0 ? `${tier.savePct}%` : "—"}
-                                                </span>
-                                            </button>
-                                        );
-                                    })}
-                                </div>
-                                <p className="mt-2 px-2 text-[11px] leading-relaxed text-slate" data-testid="catalog-card-tier-footnote">
-                                    {footnote}
-                                </p>
-                            </div>
-
-                            <div className="mt-4 flex flex-col gap-2 sm:flex-row">
-                                {renderAddButton("dialog")}
-                                <button type="button" onClick={closeTiers} className={`${SECONDARY_BUTTON} sm:w-auto sm:px-6`}>
-                                    Done
-                                </button>
-                            </div>
-                        </div>
-                    </dialog>
-                </>
+            {error && (
+                <p id={`${baseId}-error`} role="alert" className="-mt-1 text-[11px] font-medium text-red-700" data-testid="catalog-card-qty-error">
+                    {error}
+                </p>
             )}
-
-            <div className="mt-2 hidden lg:block">{renderAddButton("card")}</div>
+            <button
+                type="button"
+                data-testid="catalog-card-add"
+                onClick={handleAdd}
+                disabled={!canAdd || qty == null}
+                aria-label={addAriaLabel}
+                className={`w-full whitespace-nowrap bg-[#1c1c1e] p-3 text-[12px] font-medium uppercase tracking-[0.14em] text-white transition-colors motion-reduce:transition-none hover:bg-[#3a3a3c] disabled:cursor-not-allowed disabled:bg-[#d9cdb9] disabled:text-[#5d6b7e] ${FOCUS_RING}`}
+            >
+                {addLabel}
+            </button>
 
             {added != null && (
-                <p role="status" className="mt-1.5 flex items-center gap-2 text-[11px] text-obsidian" data-testid="catalog-card-added">
+                <p role="status" className="-mt-1 flex items-center gap-2 text-[11px] text-[#1c1c1e]" data-testid="catalog-card-added">
                     <span>Added {added.toLocaleString("en-US")} to your cart.</span>
                     <button
                         type="button"
                         onClick={() => window.dispatchEvent(new Event("open-cart-drawer"))}
-                        className={`min-h-11 font-semibold underline underline-offset-2 sm:min-h-0 ${FOCUS_RING}`}
+                        className={`min-h-8 font-semibold underline underline-offset-2 ${FOCUS_RING}`}
                     >
                         View cart
                     </button>

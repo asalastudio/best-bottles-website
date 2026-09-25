@@ -34,6 +34,8 @@ import {
     expandCapacityFilterValues,
     filtersAreEmpty,
     filtersToParams,
+    fluidOuncesToTradeMl,
+    normalizeCatalogSearchText,
     displayApplicatorName,
     normalizeApplicatorBuckets,
     paramsToFilters,
@@ -416,6 +418,33 @@ describe("catalog search tolerance", () => {
         expect(catalogSearchMatches("13/415", ["13-415 clear bottle"])).toBe(true);
     });
 
+    it("matches the British atomiser spelling", () => {
+        expect(catalogSearchMatches("atomiser", ["5 ml Atomizer Bottle", "Metal Atomizer"])).toBe(true);
+    });
+
+    it("ignores connecting words shoppers type around a part and neck size", () => {
+        expect(catalogSearchMatches("sprayer that fits 13-415", ["Fine Mist Sprayer", "Component", "13-415"])).toBe(true);
+        expect(catalogSearchMatches("dropper that fits my 18-415", ["Dropper", "18-415"])).toBe(true);
+    });
+
+    it("reads fluid ounces as the millilitre size the trade sells", () => {
+        expect(fluidOuncesToTradeMl(1)).toBe(30);
+        expect(fluidOuncesToTradeMl(0.5)).toBe(15);
+        expect(fluidOuncesToTradeMl(2)).toBe(60);
+        expect(fluidOuncesToTradeMl(1 / 3)).toBe(10);
+        expect(catalogSearchMatches("1oz amber dropper", ["30 ml (1.01 oz)", "Amber", "Dropper"])).toBe(true);
+        expect(catalogSearchMatches("1 fl oz dropper", ["30 ml (1.01 oz)", "Dropper"])).toBe(true);
+        expect(catalogSearchMatches("1/2 oz roll-on", ["15 ml (0.51 oz)", "Metal Roller Ball"])).toBe(true);
+        expect(catalogSearchMatches("1 oz dropper", ["60 ml (2.03 oz)", "Dropper"])).toBe(false);
+    });
+
+    it("keeps each product's own ounce label consistent with its millilitres", () => {
+        for (const [label, ml] of [["100 ml (3.38 oz)", 100], ["50 ml (1.69 oz)", 50], ["30 ml (1.01 oz)", 30], ["15 ml (0.51 oz)", 15], ["5 ml (0.17 oz)", 5]] as const) {
+            expect(normalizeCatalogSearchText(label)).toContain(`${ml}ml`);
+            expect(normalizeCatalogSearchText(label)).not.toMatch(/\boz\b/);
+        }
+    });
+
     it("scores stronger display-name matches above weak attribute matches", () => {
         const strong = catalogSearchScore("10ml roll-on", [
             { value: "10 ml Roll-On Bottle", weight: 5 },
@@ -565,19 +594,22 @@ describe("applicatorBucketMatchesProductValues", () => {
         expect(applicatorBucketMatchesProductValues("vintagestyle", ["Vintage Bulb Sprayer with Tassel"])).toBe(false);
     });
 
-    it("shows vintage style labels without changing stored applicator values", () => {
+    it("shows vintage-style labels without changing stored applicator values", () => {
         const plain = APPLICATOR_BUCKETS.find((bucket) => bucket.value === "vintagestyle")!;
         const tassel = APPLICATOR_BUCKETS.find((bucket) => bucket.value === "vintagestyle-tassel")!;
-        expect(plain.label).toBe("Vintage Style Bulb Sprayer");
-        expect(tassel.label).toBe("Vintage Style Bulb Sprayer with Tassel");
+        expect(plain.label).toBe("Vintage-style bulb sprayer");
+        expect(tassel.label).toBe("Vintage-style bulb sprayer with tassel");
         expect(plain.productValues).toContain("Vintage Bulb Sprayer");
         expect(tassel.productValues).toContain("Vintage Bulb Sprayer with Tassel");
         expect(plain.productValues).not.toContain("Vintage Style Bulb Sprayer");
     });
 
     it("rewrites stored applicator names for customer-facing copy", () => {
-        expect(displayApplicatorName("Vintage Bulb Sprayer")).toBe("Vintage Style Bulb Sprayer");
-        expect(displayApplicatorName("Vintage Bulb Sprayer with Tassel")).toBe("Vintage Style Bulb Sprayer with Tassel");
+        expect(displayApplicatorName("Vintage Bulb Sprayer")).toBe("Vintage-Style Bulb Sprayer");
+        expect(displayApplicatorName("Vintage Bulb Sprayer with Tassel")).toBe("Vintage-Style Bulb Sprayer with Tassel");
+        // Older "Vintage Style" copy is hyphenated too, never doubled.
+        expect(displayApplicatorName("Vintage Style Bulb Spray Bottle")).toBe("Vintage-Style Bulb Sprayer Bottle");
+        expect(displayApplicatorName("Vintage-Style Bulb Sprayer")).toBe("Vintage-Style Bulb Sprayer");
         expect(displayApplicatorName("Fine Mist Sprayer")).toBe("Fine Mist Sprayer");
     });
 

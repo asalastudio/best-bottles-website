@@ -1,4 +1,4 @@
-import { matchesShopCollection } from "./shopCollections";
+import { matchesShopCollection, SHOP_COLLECTIONS } from "./shopCollections";
 import {
     APPLICATOR_BUCKETS,
     BOTTLE_CATEGORIES,
@@ -15,6 +15,8 @@ import {
     catalogSearchScore,
     classifyComponentType,
     capacitySelectionMatches,
+    categorySelectionMatches,
+    neckSelectionMatches,
     sortCatalogFeatured,
 } from "@/lib/catalogFilters";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
@@ -117,6 +119,8 @@ export interface CatalogSearchResultShape {
         neckThreadSizes: Record<string, number>;
         componentTypes: Record<string, number>;
         priceRange: { min: number; max: number };
+        /** Products per shop collection under every other active filter (sidebar Collection facet). */
+        shopCollections?: Record<string, number>;
     };
     totalCount: number;
     nextCursor: string | null;
@@ -155,7 +159,9 @@ export function buildCatalogSearchResult(input: {
         return applicatorBucketMatchesProductValues(bucket as never, group.applicatorTypes ?? []);
     };
     const runFilters = (skipKeys = new Set<keyof CatalogFilters>()) => {
-        let rows = filters.shopCollection ? groups.filter(group => matchesShopCollection(group, filters.shopCollection!)) : [...groups];
+        let rows = filters.shopCollection && !skipKeys.has("shopCollection")
+            ? groups.filter(group => matchesShopCollection(group, filters.shopCollection!))
+            : [...groups];
         if (filters.search) {
             rows = rows.filter((group) => catalogSearchMatches(filters.search, [
                 group.displayName,
@@ -171,7 +177,7 @@ export function buildCatalogSearchResult(input: {
                 skuMap.get(group._id),
             ]));
         }
-        if (!skipKeys.has("category") && filters.category) rows = rows.filter((group) => group.category === filters.category);
+        if (!skipKeys.has("category") && filters.category) rows = rows.filter((group) => categorySelectionMatches(filters.category, group.category));
         if (!skipKeys.has("collection") && filters.collection) rows = rows.filter((group) => group.bottleCollection === filters.collection);
         if (!skipKeys.has("applicators") && filters.applicators.length > 0) {
             rows = rows.filter((group) => filters.applicators.some((bucket) => matchesApplicatorBucket(group, bucket)));
@@ -198,8 +204,7 @@ export function buildCatalogSearchResult(input: {
             rows = rows.filter((group) => capacitySelectionMatches(group.capacityMl, filters.capacities));
         }
         if (!skipKeys.has("neckThreadSizes") && filters.neckThreadSizes.length > 0) {
-            const set = new Set(filters.neckThreadSizes);
-            rows = rows.filter((group) => group.neckThreadSize != null && set.has(group.neckThreadSize));
+            rows = rows.filter((group) => neckSelectionMatches(filters.neckThreadSizes, group.neckThreadSize));
         }
         if (filters.componentType) rows = rows.filter((group) => classifyComponentType(group.displayName, group.family) === filters.componentType);
         if (filters.priceMin !== null) {
@@ -237,6 +242,11 @@ export function buildCatalogSearchResult(input: {
         plastic: rollerMaterialFacetBase.filter((group) => rollerMaterialMatchesProductValues("plastic", group.applicatorTypes ?? [])).length,
     } satisfies Record<RollerMaterial, number>;
     const categoryFacetBase = runFilters(new Set(["category", "collection"]));
+    const shopCollectionFacetBase = runFilters(new Set(["shopCollection"]));
+    const shopCollections: Record<string, number> = {};
+    for (const collection of SHOP_COLLECTIONS) {
+        shopCollections[collection.key] = shopCollectionFacetBase.filter((group) => matchesShopCollection(group, collection.key)).length;
+    }
     const priceFloors = result.map((group) => group.priceRangeMin).filter((value): value is number => value != null);
     const priceCeilings = result.map((group) => group.priceRangeMax ?? group.priceRangeMin).filter((value): value is number => value != null);
     const facets = {
@@ -255,6 +265,7 @@ export function buildCatalogSearchResult(input: {
         priceRange: priceFloors.length > 0
             ? { min: Math.min(...priceFloors), max: Math.max(...priceCeilings, ...priceFloors) }
             : { min: 0, max: 0 },
+        shopCollections,
     };
     let sorted = [...result];
     if (input.sort === "best-match" && filters.search) {

@@ -91,6 +91,26 @@ export function resolveCatalogCardPurchaseVariant(
     };
 }
 
+/**
+ * The assembly each cap dot on a card sells, keyed by variant-preview id. A
+ * dot whose SKU is missing from the rows (or has no Grace SKU) gets no entry,
+ * so the card keeps selling what it pictures rather than a stand-in.
+ */
+export function catalogCardPurchaseOptions(
+    rows: Source[] | null | undefined,
+    previews: ReadonlyArray<{ id: string; websiteSku?: string; graceSku?: string }>,
+    productTitle: string,
+): Record<string, CatalogPurchaseVariant> {
+    const options: Record<string, CatalogPurchaseVariant> = {};
+    for (const preview of previews) {
+        const sku = preview.websiteSku ?? preview.graceSku;
+        if (!sku) continue;
+        const option = resolveCatalogCardPurchaseVariant(rows, { picturedSku: sku, productTitle });
+        if (option && (option.websiteSku === sku || option.graceSku === sku)) options[preview.id] = option;
+    }
+    return options;
+}
+
 export function catalogVariantInStock(variant: Pick<CatalogPurchaseVariant, "stockStatus">): boolean {
     return variant.stockStatus === "In Stock" || variant.stockStatus === "Available to order";
 }

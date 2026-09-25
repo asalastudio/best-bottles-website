@@ -1,0 +1,600 @@
+{
+  "generatedAt": "2026-09-25",
+  "keys": {
+    "body": "bodyId = [shape-]profile-<capacity>ml-<neck>",
+    "component": "graceSku",
+    "assembly": "graceSku"
+  },
+  "rulings": [
+    {
+      "date": "2026-09-25",
+      "by": "Jordan",
+      "rule": "Atomizers, aluminium bottles and jars are each their own compatibility class, like plastic bottles: a matching neck finish does not make glass-bottle components compatible with them.",
+      "applies": "bodies.compatibilityClass = metal-atomizer | aluminum-bottle | glass-jar | cream-jar; their listed glass components are not resolved"
+    },
+    {
+      "date": "2026-09-24",
+      "by": "Jordan",
+      "rule": "Plastic bottles are their own compatibility class. A 13-415 neck on a plastic bottle does not make the 13-415 glass-bottle components compatible with it, nor it with them.",
+      "applies": "bodies.compatibilityClass = plastic-bottle; their listed glass components are not resolved"
+    },
+    {
+      "date": "2026-09-24",
+      "by": "Jordan",
+      "rule": "CMP-SPR-CLR-30ML (PB1ozSpryNat) and CMP-SPR-SLV- (PB1ozSprySl) are plastic bottles, not components; remove them from every component list.",
+      "applies": "assemblies: excluded from listed components before resolution (494 13-415 lists carried them)"
+    }
+  ],
+  "componentListExclusions": {
+    "CMP-SPR-CLR-30ML": "PB1ozSpryNat \u2014 1 oz plastic bottle with clear spray top; a product, not a component",
+    "CMP-SPR-SLV-": "PB1ozSprySl \u2014 1 oz plastic bottle with silver spray top; a product, not a component"
+  },
+  "ruledBodyClasses": {
+    "Plastic Bottle": {
+      "class": "plastic-bottle",
+      "source": "jordan-2026-09-24"
+    },
+    "Metal Atomizer": {
+      "class": "metal-atomizer",
+      "source": "jordan-2026-09-25"
+    },
+    "Aluminum Bottle": {
+      "class": "aluminum-bottle",
+      "source": "jordan-2026-09-25"
+    },
+    "Glass Jar": {
+      "class": "glass-jar",
+      "source": "jordan-2026-09-25"
+    },
+    "Cream Jar": {
+      "class": "cream-jar",
+      "source": "jordan-2026-09-25"
+    }
+  },
+  "necks": {
+    "(none)": {
+      "kind": "non-thread",
+      "bodies": 5,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {},
+      "assemblies": {
+        "quarantine": 6
+      },
+      "matrixAcceptance": null
+    },
+    "10mm": {
+      "kind": "non-thread",
+      "bodies": 1,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {},
+      "assemblies": {
+        "quarantine": 3
+      },
+      "matrixAcceptance": null
+    },
+    "11mm": {
+      "kind": "non-thread",
+      "bodies": 1,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {},
+      "assemblies": {
+        "quarantine": 1
+      },
+      "matrixAcceptance": null
+    },
+    "12mm": {
+      "kind": "non-thread",
+      "bodies": 2,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {
+        "Fine Mist Sprayer": 4
+      },
+      "assemblies": {
+        "candidate": 4
+      },
+      "notes": [
+        "3/4 mL Cylinder sprays, black or white; assembled rows only, no standalone 12 mm components."
+      ],
+      "matrixAcceptance": {
+        "assemblies": 4,
+        "source": "small-format-neck-matrix-13-425-8-425-12mm-17x11.pdf"
+      }
+    },
+    "13-415": {
+      "kind": "thread",
+      "bodies": 17,
+      "components": 25,
+      "componentTypes": {
+        "cap": 7,
+        "fine-mist-sprayer": 5,
+        "roll-on-cap": 13
+      },
+      "fitmentTypesObserved": {
+        "": 69,
+        "Atomizer": 9,
+        "Cap/Closure": 22,
+        "Fine Mist Sprayer": 126,
+        "Metal Roller Ball": 144,
+        "N/A": 5,
+        "Plastic Roller Ball": 144
+      },
+      "assemblies": {
+        "candidate": 21,
+        "retired": 31,
+        "verified": 498
+      },
+      "notes": [
+        "Roller insert (plastic or metal ball) is a separate part beneath the roll-on cap; inserts have no standalone component rows.",
+        "Short ribbed caps (black, white), short lined metal caps (6) and tall 24 mm liner caps (gold, silver) are separate options; tall liner caps are not roll-on caps.",
+        "The 1 oz plastic spray bottles (PB1ozSpryNat, PB1ozSprySl) carry a 13-415 neck but are their own class: no 13-415 glass component fits them (Jordan, 2026-09-24)."
+      ],
+      "matrixAcceptance": {
+        "bodyFormats": 15,
+        "glassRecords": 538,
+        "retired": 31,
+        "source": "13-415-neck-thread-matrix-17x11.pdf"
+      }
+    },
+    "13-425": {
+      "kind": "thread",
+      "bodies": 3,
+      "components": 2,
+      "componentTypes": {
+        "cap": 2
+      },
+      "fitmentTypesObserved": {
+        "": 12,
+        "Dropper": 4
+      },
+      "assemblies": {
+        "candidate": 16
+      },
+      "notes": [
+        "Small vials 2/3/4 mL; cap-coded component IDs link to unrelated items (conflict); blue 5/8-dram is bucketed as 3 mL by Convex though the source says 2 mL.",
+        "14-425 has no current bottle or component records \u2014 never merge it into 13-425."
+      ],
+      "matrixAcceptance": {
+        "bottleRows": 16,
+        "source": "small-format-neck-matrix-13-425-8-425-12mm-17x11.pdf"
+      }
+    },
+    "13mm": {
+      "kind": "non-thread",
+      "bodies": 0,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {},
+      "assemblies": {
+        "retired": 2
+      },
+      "matrixAcceptance": null
+    },
+    "14.3mm": {
+      "kind": "non-thread",
+      "bodies": 2,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {
+        "": 2
+      },
+      "assemblies": {
+        "candidate": 2
+      },
+      "matrixAcceptance": null
+    },
+    "15-415": {
+      "kind": "thread",
+      "bodies": 2,
+      "components": 7,
+      "componentTypes": {
+        "fine-mist-sprayer": 4,
+        "roll-on-cap": 2,
+        "tassel-bulb-sprayer": 1
+      },
+      "fitmentTypesObserved": {
+        "": 6,
+        "Perfume Spray Pump": 15
+      },
+      "assemblies": {
+        "verified": 21
+      },
+      "matrixAcceptance": null
+    },
+    "16mm": {
+      "kind": "non-thread",
+      "bodies": 2,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {
+        "Metal Roller Ball": 4,
+        "Plastic Roller Ball": 4
+      },
+      "assemblies": {
+        "candidate": 8
+      },
+      "notes": [
+        "Jumbo roller: 28 mL and 50 mL Cylinder, plastic or metal ball, black or white cap; 8 exact sold assemblies; component lists are empty in Convex."
+      ],
+      "matrixAcceptance": {
+        "assemblies": 8,
+        "source": "remaining-neck-groups-mini-catalog-17x11.pdf"
+      }
+    },
+    "17-415": {
+      "kind": "thread",
+      "bodies": 2,
+      "components": 20,
+      "componentTypes": {
+        "dropper": 1,
+        "fine-mist-sprayer": 5,
+        "roll-on-cap": 13,
+        "tassel-bulb-sprayer": 1
+      },
+      "fitmentTypesObserved": {
+        "Fine Mist Sprayer": 31,
+        "Lotion Pump": 15,
+        "Metal Roller Ball": 50,
+        "Plastic Roller Ball": 50
+      },
+      "assemblies": {
+        "candidate": 2,
+        "retired": 2,
+        "verified": 144
+      },
+      "notes": [
+        "Assembly paths: ROLLER = one insert + one of 10 outer caps; SPRAY = one of 6 fine-mist finishes; PUMP = one of 3 treatment finishes.",
+        "10 caps \u00d7 2 roller materials + 6 sprayers + 3 pumps = 29 options per glass finish."
+      ],
+      "matrixAcceptance": {
+        "assemblies": 145,
+        "optionsPerGlass": 29,
+        "glassFinishes": 5,
+        "source": "17-415-neck-thread-matrix-17x11.pdf"
+      }
+    },
+    "17.52mm": {
+      "kind": "non-thread",
+      "bodies": 2,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {},
+      "assemblies": {
+        "quarantine": 2
+      },
+      "matrixAcceptance": null
+    },
+    "17mm": {
+      "kind": "non-thread",
+      "bodies": 1,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {
+        "Atomizer": 11
+      },
+      "assemblies": {
+        "candidate": 11
+      },
+      "matrixAcceptance": null
+    },
+    "18-400": {
+      "kind": "thread",
+      "bodies": 2,
+      "components": 8,
+      "componentTypes": {
+        "cap": 2,
+        "dropper": 6
+      },
+      "fitmentTypesObserved": {
+        "": 4,
+        "Dropper": 12,
+        "Glass Rod": 1,
+        "N/A": 1
+      },
+      "assemblies": {
+        "candidate": 1,
+        "verified": 17
+      },
+      "matrixAcceptance": null
+    },
+    "18-415": {
+      "kind": "thread",
+      "bodies": 23,
+      "components": 47,
+      "componentTypes": {
+        "cap": 6,
+        "dropper": 3,
+        "faux-leather-cap": 5,
+        "fine-mist-sprayer": 7,
+        "lotion-pump": 7,
+        "tassel-bulb-sprayer": 11,
+        "vintage-bulb-sprayer": 8
+      },
+      "fitmentTypesObserved": {
+        "Dropper": 36,
+        "Fine Mist Sprayer": 5,
+        "Lotion Pump": 212,
+        "Perfume Spray Pump": 168,
+        "Reducer": 346,
+        "Vintage Bulb Sprayer": 288,
+        "Vintage Bulb Sprayer with Tassel": 208
+      },
+      "assemblies": {
+        "candidate": 38,
+        "exception": 2,
+        "retired": 94,
+        "verified": 1225
+      },
+      "notes": [
+        "Reducer is an insert beneath reducer-plus-cap assemblies, not a cap finish.",
+        "GBSpry1ozGl and GBSpry1ozSl (30 mL Cylinder) are fixed top-and-base spray products: they do not inherit the 25/50/100 mL Cylinder component choices."
+      ],
+      "exceptions": [
+        "GBSpry1ozGl",
+        "GBSpry1ozSl"
+      ],
+      "matrixAcceptance": {
+        "bodyFormats": 22,
+        "currentBottleRows": 1265,
+        "componentRecords": 64,
+        "outerVariants": 46,
+        "source": "18-415-neck-thread-mini-catalog-2-page-17x11.pdf"
+      }
+    },
+    "18mm": {
+      "kind": "non-thread",
+      "bodies": 1,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {},
+      "assemblies": {
+        "quarantine": 1
+      },
+      "matrixAcceptance": null
+    },
+    "20-400": {
+      "kind": "thread",
+      "bodies": 2,
+      "components": 20,
+      "componentTypes": {
+        "cap": 2,
+        "dropper": 12,
+        "roll-on-cap": 6
+      },
+      "fitmentTypesObserved": {
+        "": 6,
+        "Dropper": 32,
+        "Metal Roller Ball": 33,
+        "Plastic Roller Ball": 36
+      },
+      "assemblies": {
+        "verified": 107
+      },
+      "notes": [
+        "A roll-on needs the outer cap AND a plastic or metal roller plug; plugs have no standalone component rows.",
+        "Dropper glass stem: 76 mm on 30 mL, 90 mm on 60 mL; one finish photo is reused across both lengths but the component SKU and stem differ."
+      ],
+      "dropperStemMm": {
+        "30": 76,
+        "60": 90
+      },
+      "matrixAcceptance": {
+        "bottles": 107,
+        "components": 20,
+        "source": "20-400-neck-thread-mini-catalog-2-page-17x11.pdf"
+      }
+    },
+    "20-410": {
+      "kind": "thread",
+      "bodies": 5,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {
+        "": 1,
+        "Fine Mist Sprayer": 2,
+        "Lotion Pump": 4
+      },
+      "assemblies": {
+        "candidate": 7
+      },
+      "matrixAcceptance": null
+    },
+    "20mm": {
+      "kind": "non-thread",
+      "bodies": 1,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {},
+      "assemblies": {
+        "quarantine": 2
+      },
+      "matrixAcceptance": null
+    },
+    "22-400": {
+      "kind": "thread",
+      "bodies": 0,
+      "components": 1,
+      "componentTypes": {
+        "cap": 1
+      },
+      "fitmentTypesObserved": {},
+      "assemblies": {},
+      "matrixAcceptance": null
+    },
+    "24-400": {
+      "kind": "thread",
+      "bodies": 0,
+      "components": 1,
+      "componentTypes": {
+        "cap": 1
+      },
+      "fitmentTypesObserved": {},
+      "assemblies": {},
+      "matrixAcceptance": null
+    },
+    "27mm": {
+      "kind": "non-thread",
+      "bodies": 1,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {},
+      "assemblies": {
+        "quarantine": 2
+      },
+      "matrixAcceptance": null
+    },
+    "37mm": {
+      "kind": "non-thread",
+      "bodies": 1,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {},
+      "assemblies": {
+        "quarantine": 2
+      },
+      "matrixAcceptance": null
+    },
+    "40mm": {
+      "kind": "non-thread",
+      "bodies": 1,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {},
+      "assemblies": {
+        "quarantine": 1
+      },
+      "matrixAcceptance": null
+    },
+    "45mm": {
+      "kind": "non-thread",
+      "bodies": 1,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {},
+      "assemblies": {
+        "quarantine": 4
+      },
+      "matrixAcceptance": null
+    },
+    "48/400": {
+      "kind": "non-thread",
+      "bodies": 1,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {},
+      "assemblies": {
+        "quarantine": 4
+      },
+      "matrixAcceptance": null
+    },
+    "58mm": {
+      "kind": "non-thread",
+      "bodies": 2,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {},
+      "assemblies": {
+        "quarantine": 2
+      },
+      "matrixAcceptance": null
+    },
+    "8-425": {
+      "kind": "thread",
+      "bodies": 1,
+      "components": 5,
+      "componentTypes": {
+        "cap": 5
+      },
+      "fitmentTypesObserved": {
+        "": 4
+      },
+      "assemblies": {
+        "verified": 4
+      },
+      "notes": [
+        "2 mL vials; five standalone caps; a separate vial thread from 13-425. The PSD library folders spell it 8-245 (digit transposition)."
+      ],
+      "matrixAcceptance": {
+        "bottleRows": 4,
+        "standaloneCaps": 5,
+        "source": "small-format-neck-matrix-13-425-8-425-12mm-17x11.pdf"
+      }
+    },
+    "8mm": {
+      "kind": "non-thread",
+      "bodies": 1,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {},
+      "assemblies": {
+        "quarantine": 2
+      },
+      "matrixAcceptance": null
+    },
+    "Ground": {
+      "kind": "non-thread",
+      "bodies": 8,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {},
+      "assemblies": {
+        "quarantine": 17
+      },
+      "matrixAcceptance": null
+    },
+    "PRESS-FIT": {
+      "kind": "non-thread",
+      "bodies": 1,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {},
+      "assemblies": {
+        "quarantine": 1
+      },
+      "matrixAcceptance": null
+    },
+    "Plug": {
+      "kind": "non-thread",
+      "bodies": 1,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {},
+      "assemblies": {
+        "quarantine": 4
+      },
+      "matrixAcceptance": null
+    },
+    "Press-Fit": {
+      "kind": "non-thread",
+      "bodies": 0,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {},
+      "assemblies": {},
+      "matrixAcceptance": null
+    },
+    "Snap-On": {
+      "kind": "non-thread",
+      "bodies": 1,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {},
+      "assemblies": {
+        "quarantine": 1
+      },
+      "matrixAcceptance": null
+    },
+    "Specialty": {
+      "kind": "non-thread",
+      "bodies": 0,
+      "components": 0,
+      "componentTypes": {},
+      "fitmentTypesObserved": {},
+      "assemblies": {},
+      "matrixAcceptance": null
+    }
+  }
+}
