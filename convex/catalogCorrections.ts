@@ -1,5 +1,6 @@
 import { mutation } from "./_generated/server";
-import { v } from "convex/values";
+import { v, type Infer } from "convex/values";
+import schema from "./schema";
 import { verifyWriteToken } from "./writeToken";
 
 /**
@@ -20,8 +21,10 @@ const fieldsV = v.object({
     // 2026-09-25: the four 1 ml plug vials carried cap lengths ("Tall", "Applicator") as their
     // cap style, so the catalog swatch read "Tall White"; their closure is a plug.
     capStyle: v.optional(v.union(v.string(), v.null())),
+    // 2026-09-25: the ten Minaret dab-on cap SKUs were filed as sprayers or roll-ons; they are caps.
+    applicator: v.optional(schema.tables.products.validator.fields.applicator),
 });
-type Fields = { capColor?: string | null; capStyle?: string | null };
+type Fields = Infer<typeof fieldsV>;
 
 export const correctProductFields = mutation({
     args: {
@@ -60,7 +63,7 @@ export const correctProductFields = mutation({
                 const target = entry.patch[field] ?? null;
                 if (now === target) { out.alreadyCorrect.push(`${entry.websiteSku}.${field}`); continue; }
                 if (!(field in entry.expect) || now !== (entry.expect[field] ?? null)) { out.changedSince.push({ websiteSku: entry.websiteSku, field, now }); continue; }
-                write[field] = target;
+                Object.assign(write, { [field]: target });
                 out.written.push({ websiteSku: entry.websiteSku, field, before: now, after: target });
                 if (!dryRun) {
                     await ctx.db.insert("catalogChangeLog", {
