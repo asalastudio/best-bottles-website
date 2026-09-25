@@ -30,6 +30,7 @@ for (const line of readFileSync(resolve(ROOT, ".env.local"), "utf8").split("\n")
 const arg = (name, fallback) => { const i = process.argv.indexOf(`--${name}`); return i >= 0 ? process.argv[i + 1] : fallback; };
 const componentId = arg("component", "LIB-17-415-MtlRollon");
 const only = arg("only", "a,b").split(",").map((s) => s.trim()).filter(Boolean);
+const composeOnly = process.argv.includes("--compose-only");   // reuse renders/<name>.png, no API call
 const BASE = resolve(ROOT, "output", "register-plates", "inserts", componentId);
 const K = 4;                      // the stub is rendered at 4x (the model's minimum pixel budget wants a 1024 x 1536 canvas)
 const CANVAS = { width: 1024, height: 1536 };
@@ -64,38 +65,71 @@ async function main() {
     for (const name of only) {
         const started = Date.now();
         try {
-            const image = await toFile(createReadStream(resolve(BASE, "inputs", "stub-on-white.png")), "input-0.png", { type: "image/png" });
-            const res = await openai.images.edit({ model: MODEL, image, prompt: PROMPTS[name], size: `${CANVAS.width}x${CANVAS.height}`, quality: QUALITY, background: "opaque", output_format: "png" });
-            const b64 = res.data?.[0]?.b64_json;
-            if (!b64) throw new Error("no image");
-            const render = Buffer.from(b64, "base64");
-            writeFileSync(resolve(BASE, "renders", `${name}.png`), render);
-            const u = res.usage ?? {}; const d = u.input_tokens_details ?? {};
-            const cost = (d.text_tokens ?? 0) * PRICE.textIn + (d.image_tokens ?? 0) * PRICE.imageIn + (u.output_tokens ?? 0) * PRICE.imageOut;
-            spent += cost;
-            // Compose: the render's rows below the rim (keyed from white), the stub's own pixels above it.
+            let render, cost = 0;
+            if (composeOnly) {
+                render = readFileSync(resolve(BASE, "renders", `${name}.png`));
+            } else {
+                const image = await toFile(createReadStream(resolve(BASE, "inputs", "stub-on-white.png")), "input-0.png", { type: "image/png" });
+                const res = await openai.images.edit({ model: MODEL, image, prompt: PROMPTS[name], size: `${CANVAS.width}x${CANVAS.height}`, quality: QUALITY, background: "opaque", output_format: "png" });
+                const b64 = res.data?.[0]?.b64_json;
+                if (!b64) throw new Error("no image");
+                render = Buffer.from(b64, "base64");
+                writeFileSync(resolve(BASE, "renders", `${name}.png`), render);
+                const u = res.usage ?? {}; const d = u.input_tokens_details ?? {};
+                cost = (d.text_tokens ?? 0) * PRICE.textIn + (d.image_tokens ?? 0) * PRICE.imageIn + (u.output_tokens ?? 0) * PRICE.imageOut;
+                spent += cost;
+            }
+            // The model redraws the housing freely, so only its PLUG is used: find the render's flange (the
+            // widest row below the ball), take the rows under it, and hang that plug from the stub's own rim.
             const { data, info } = await sharp(render).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-            const rim = Math.round(top + layer.anchor.y * K);
-            const out = Buffer.alloc(info.width * info.height * 4, 0);
-            let lastRow = rim;
-            for (let y = rim; y < info.height; y++) {
-                let any = false;
+            const rows = [];
+            for (let y = 0; y < info.height; y++) {
+                let first = -1, last = -1;
                 for (let x = 0; x < info.width; x++) {
                     const i = (y * info.width + x) * 4;
-                    const lum = (data[i] + data[i + 1] + data[i + 2]) / 3;
-                    const alpha = lum >= 245 ? 0 : Math.min(255, Math.round((255 - lum) * 1.8 + 60));
-                    if (alpha > 0) { any = true; out[i] = data[i]; out[i + 1] = data[i + 1]; out[i + 2] = data[i + 2]; out[i + 3] = Math.min(255, alpha + (lum < 200 ? 255 : 0)); }
+                    if ((data[i] + data[i + 1] + data[i + 2]) / 3 < 245) { if (first < 0) first = x; last = x; }
                 }
-                if (any) lastRow = y;
+                rows.push(first < 0 ? null : { first, last, width: last - first + 1 });
             }
-            const plugOnly = await sharp(out, { raw: { width: info.width, height: info.height, channels: 4 } }).png().toBuffer();
-            // Full insert at 4x: stub over the keyed plug, then back to 1x on the stub's own column, extended downward.
-            const composed2x = await sharp({ create: { ...CANVAS, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } } }).composite([{ input: plugOnly, left: 0, top: 0 }, { input: big, left, top }]).png().toBuffer();
-            const plugRows = Math.max(0, Math.round((lastRow - rim) / K) + 2);
-            const finalH = meta.height + plugRows;
-            const final = await sharp(composed2x).extract({ left, top, width: stubW, height: Math.min(CANVAS.height - top, finalH * K) }).resize(meta.width, finalH, { kernel: "lanczos3" }).png().toBuffer();
+            const filled = rows.map((r, y) => ({ y, r })).filter((e) => e.r);
+            const top = filled[0].y, bottom = filled[filled.length - 1].y;
+            const belowBall = filled.filter((e) => e.y > top + (bottom - top) * 0.25);
+            const maxWidth = Math.max(...belowBall.map((e) => e.r.width));
+            const flangeRows = belowBall.filter((e) => e.r.width >= maxWidth * 0.96);
+            const flangeBottom = flangeRows[flangeRows.length - 1].y;
+            const plugRowsAll = filled.filter((e) => e.y > flangeBottom);
+            if (plugRowsAll.length < 8) throw new Error("no plug below the flange in the render");
+            const plugWidth4x = Math.max(...plugRowsAll.map((e) => e.r.width));
+            const plugAxis4x = plugRowsAll.reduce((a, e) => a + (e.r.first + e.r.last) / 2, 0) / plugRowsAll.length;
+            // Plug rows keyed from white, cropped to the plug's own column, at 4x.
+            const pw = plugWidth4x + 8, ph = plugRowsAll[plugRowsAll.length - 1].y - flangeBottom;
+            const px0 = Math.round(plugAxis4x - pw / 2), py0 = flangeBottom + 1;
+            const plugRaw = Buffer.alloc(pw * ph * 4, 0);
+            for (let y = 0; y < ph; y++) for (let x = 0; x < pw; x++) {
+                const sx = px0 + x, sy = py0 + y;
+                if (sx < 0 || sx >= info.width || sy >= info.height) continue;
+                const i = (sy * info.width + sx) * 4, o = (y * pw + x) * 4;
+                const lum = (data[i] + data[i + 1] + data[i + 2]) / 3;
+                if (lum >= 245) continue;
+                plugRaw[o] = data[i]; plugRaw[o + 1] = data[i + 1]; plugRaw[o + 2] = data[i + 2];
+                plugRaw[o + 3] = lum < 215 ? 255 : Math.round(((245 - lum) / 30) * 255);
+            }
+            // Fit the plug under the stub: no wider than 88% of the stub's flange, centred on the stub's axis, at 1x.
+            const stubFlange = layer.image.width;   // the stub's widest row is its flange
+            const plugScale = Math.min(1 / K, (stubFlange * 0.88) / pw);
+            const plugW = Math.max(1, Math.round(pw * plugScale)), plugH = Math.max(1, Math.round(ph * plugScale));
+            const plugPng = await sharp(plugRaw, { raw: { width: pw, height: ph, channels: 4 } }).resize(plugW, plugH, { kernel: "lanczos3" }).png().toBuffer();
+            // The stub's alpha ends at its flange (the plastic layer carries transparent padding below it).
+            const stubRaw = await sharp(stub).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+            let stubBottom = Math.ceil(layer.anchor.y) + 1;
+            for (let y = 0; y < stubRaw.info.height; y++) for (let x = 0; x < stubRaw.info.width; x++) if (stubRaw.data[(y * stubRaw.info.width + x) * 4 + 3] > 16) { stubBottom = Math.max(stubBottom, y + 1); break; }
+            const finalH = Math.max(meta.height, stubBottom + plugH);
+            const plugLeft = Math.round(layer.anchor.x - plugW / 2);
+            const final = await sharp({ create: { width: meta.width, height: finalH, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } } })
+                .composite([{ input: plugPng, left: plugLeft, top: stubBottom }, { input: stub, left: 0, top: 0 }]).png().toBuffer();
+            const plugRows = plugH;
             writeFileSync(resolve(BASE, "final", `${name}.png`), final);
-            writeFileSync(resolve(BASE, "final", `${name}.json`), JSON.stringify({ componentId, candidate: name, width: meta.width, height: finalH, anchor: layer.anchor, pxPerMm: layer.pxPerMm, plugMm: Number((plugRows / layer.pxPerMm).toFixed(1)), prompt: PROMPTS[name], costUsd: Number(cost.toFixed(4)) }, null, 1));
+            writeFileSync(resolve(BASE, "final", `${name}.json`), JSON.stringify({ componentId, candidate: name, width: meta.width, height: finalH, anchor: layer.anchor, pxPerMm: layer.pxPerMm, plugMm: Number((plugRows / layer.pxPerMm).toFixed(1)), plugWidthMm: Number((plugW / layer.pxPerMm).toFixed(1)), prompt: PROMPTS[name], costUsd: Number(cost.toFixed(4)) }, null, 1));
             finals.push({ name, final, plugMm: plugRows / layer.pxPerMm });
             console.log(`${name}: ok in ${Math.round((Date.now() - started) / 1000)} s, $${cost.toFixed(3)}; plug ${ (plugRows / layer.pxPerMm).toFixed(1)} mm below the rim`);
         } catch (error) {
