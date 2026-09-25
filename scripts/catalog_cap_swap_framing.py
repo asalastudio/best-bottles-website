@@ -33,6 +33,8 @@ roll-on, 0.677) had its bottle 3% off. Frosted glass on bone is the usual miss.
 Usage:
     python3 scripts/catalog_cap_swap_framing.py            # dev Convex from .env.local
     python3 scripts/catalog_cap_swap_framing.py --convex-url https://<deployment>.convex.cloud
+    python3 scripts/catalog_cap_swap_framing.py --skus GBRoyal13Gl GBSqr15Gl   # only these heroes;
+        other entries and shadow layers are kept, entries for heroes no longer in any registry are dropped
 """
 
 from __future__ import annotations
@@ -249,21 +251,42 @@ def main() -> None:
     parser.add_argument("--convex-url", default=None)
     parser.add_argument("--min-match", type=float, default=0.74)
     parser.add_argument("--workers", type=int, default=8)
+    parser.add_argument("--skus", nargs="*", default=None, help="calibrate only these website SKUs; keep the rest")
     args = parser.parse_args()
     convex = args.convex_url or convex_url_from_env()
 
-    rows = hero_rows()
+    all_rows = hero_rows()
+    rows = [row for row in all_rows if row["websiteSku"] in set(args.skus)] if args.skus else all_rows
+    if args.skus:  # a SKU may carry several registry rows (an older photo and a newer release)
+        missing = sorted(set(args.skus) - {row["websiteSku"] for row in rows})
+        if missing:
+            raise SystemExit(f"not in any hero registry: {', '.join(missing)}")
     skus = sorted({row["websiteSku"] for row in rows})
     plates: dict = {}
     for start in range(0, len(skus), 150):
         plates.update(convex_query(convex, "productPlates:forSkus", {"skus": skus[start:start + 150]})["plates"])
 
     shadow_dir = os.path.join(ROOT, "public", SHADOW_DIR)
-    if os.path.isdir(shadow_dir):  # layers are regenerated; stale ones must not ship
+    framing: dict = {}
+    if args.skus:
+        # Keep every calibration whose hero is still registered and not being redone; drop the rest
+        # (a superseded hero's entry and shadow layer must not outlive it).
+        live_urls = {row["url"] for row in all_rows}
+        redo_urls = {row["url"] for row in rows}
+        if os.path.exists(OUT):
+            with open(OUT, encoding="utf8") as handle:
+                previous = json.load(handle)
+            for url, entry in previous.items():
+                if url in live_urls and url not in redo_urls:
+                    framing[url] = entry
+                elif entry.get("shadow"):
+                    stale = os.path.join(ROOT, "public", entry["shadow"].lstrip("/"))
+                    if os.path.exists(stale):
+                        os.remove(stale)
+    elif os.path.isdir(shadow_dir):  # layers are regenerated; stale ones must not ship
         for name in os.listdir(shadow_dir):
             os.remove(os.path.join(shadow_dir, name))
 
-    framing: dict = {}
     skipped: list[tuple[str, str]] = []
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
         for url, result, reason in pool.map(lambda row: calibrate(row, plates, args.min_match), rows):

@@ -304,63 +304,6 @@
     }
   },
   {
-    "groupSlug": "square-15ml-clear-13-415",
-    "websiteSku": "GBSqr15Gl",
-    "graceSku": "GB-VIA-CLR-15ML-GLD-T-02",
-    "shopifyVariantId": "gid://shopify/ProductVariant/53343647727908",
-    "family": "Square",
-    "capacityMl": 15,
-    "bottleColor": "Clear",
-    "alt": "15 ml Clear Square Bottle with Shiny Gold Cap",
-    "presentation": "Empty \u00b7 cap beside",
-    "url": "/images/catalog/batch3-approved-2026-09-25/GBSqr15Gl.80312d31e12e.webp",
-    "width": 1560,
-    "height": 1716,
-    "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
-    }
-  },
-  {
-    "groupSlug": "square-15ml-clear-13-415-rollon",
-    "websiteSku": "GBSqr15MtlRollBlkDot",
-    "graceSku": "GB-SQR-CLR-15ML-MRL-BKDT",
-    "shopifyVariantId": "gid://shopify/ProductVariant/53343610175780",
-    "family": "Square",
-    "capacityMl": 15,
-    "bottleColor": "Clear",
-    "alt": "15 ml Clear Square Roll-On Bottle with Metal Roller Ball and Black Dotted Cap",
-    "presentation": "Empty \u00b7 cap beside",
-    "url": "/images/catalog/batch3-approved-2026-09-25/GBSqr15MtlRollBlkDot.6fbb69977c24.webp",
-    "width": 1560,
-    "height": 1716,
-    "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
-    }
-  },
-  {
-    "groupSlug": "square-15ml-clear-13-415-finemist",
-    "websiteSku": "GBSqr15SpryGlMatt",
-    "graceSku": "GB-SQR-CLR-15ML-SPR-MGLD",
-    "shopifyVariantId": "gid://shopify/ProductVariant/53343698649380",
-    "family": "Square",
-    "capacityMl": 15,
-    "bottleColor": "Clear",
-    "alt": "15 ml Clear Square Fine Mist Spray Bottle with Matte Gold Sprayer and Cap",
-    "presentation": "Empty \u00b7 cap beside",
-    "url": "/images/catalog/batch3-approved-2026-09-25/GBSqr15SpryGlMatt.db2940232b12.webp",
-    "width": 1560,
-    "height": 1716,
-    "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
-    }
-  },
-  {
     "groupSlug": "teardrop-9ml-clear-Ground-glassapplicator",
     "websiteSku": "GBTRDPClear",
     "graceSku": "GB-TRD-CLR-9ML",
