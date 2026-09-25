@@ -14,7 +14,8 @@
  },
  "vial-1ml-Plug|Clear": {
   "layer": "clear 1ml with black app",
-  "why": "Layer 1 is the black applicator"
+  "why": "Layer 1 is the black applicator",
+  "note": "FLAG: the source layer carries the applicator's outline inside the vial; the render keeps it as a pale panel"
  },
  "vial-2ml-13-425|Amber": {
   "layer": "Layer 6",
@@ -70,5 +71,70 @@
  },
  "vial-3ml-13-425|Green": {
   "exclude": "no master PSD under any name (GBVGreen2o4)"
+ },
+ "cylinder-9ml-13-415|Clear": {
+  "layer": "Layer 11",
+  "why": "the body is so slender (243 x 1254 px) that the dip-tube filter dropped it and a cap won"
+ },
+ "cylinder-9ml-13-415|Frosted": {
+  "layer": "Layer 14",
+  "why": "the body is so slender that the dip-tube filter dropped it and a cap won"
+ },
+ "teardrop-9ml-Ground|Clear": {
+  "cropX": 2800,
+  "why": "stopper and bottle are one merged layer; the bottle starts at x 2892 (the Cobalt file keeps them apart)"
+ },
+ "teardrop-9ml-Ground|Green": {
+  "cropX": 2800,
+  "why": "stopper and bottle are one merged layer; the bottle starts at x 2892"
+ },
+ "teardrop-9ml-Ground|Cobalt Blue": {
+  "layer": "Layer 2",
+  "why": "Layer 2 is the bottle; Layer 1 is the stopper set beside it"
+ },
+ "marble-decorative-10ml-17.52mm|Clear": {
+  "exclude": "metal-and-wood decorated bottle with its crystal cap in one layer; no bare glass"
+ },
+ "marble-decorative-5ml-17.52mm|Clear": {
+  "exclude": "metal-and-wood decorated bottle (wood sleeve, gold base); no bare glass"
+ },
+ "rectangle-10ml-13-415|Clear": {
+  "stripWhiteGround": true,
+  "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+ },
+ "tulip-6ml-13-415|Clear": {
+  "stripWhiteGround": true,
+  "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+ },
+ "sleek-30ml-18-415|Clear": {
+  "stripWhiteGround": true,
+  "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+ },
+ "sleek-50ml-18-415|Clear": {
+  "stripWhiteGround": true,
+  "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+ },
+ "sleek-5ml-13-415|Clear": {
+  "stripWhiteGround": true,
+  "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+ },
+ "diva-100ml-18-415|Clear": {
+  "stripWhiteGround": true,
+  "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+ },
+ "round-78ml-18-415|Clear": {
+  "note": "FLAG: only a capped photo exists, so the neck is hidden under the collar and the plate has no neck (any closure covers it); supply an uncapped photo or accept"
+ },
+ "round-78ml-18-415|Frosted": {
+  "note": "FLAG: geometry from the Clear photo, which has no neck (capped only)"
+ },
+ "vial-1ml-Plug|Amber": {
+  "note": "FLAG: geometry from the Clear layer, which carries the applicator's outline"
+ },
+ "cylinder-3.3ml-12mm|Clear": {
+  "note": "FLAG: the atomizer's inner tube is part of the body layer"
+ },
+ "cylinder-4ml-12mm|Clear": {
+  "note": "FLAG: the atomizer's inner tube is part of the body layer"
  }
 }

@@ -29,14 +29,37 @@ Pixels live in `output/register-bodies/` (gitignored). Numbers live in `data/reg
   because their top is the stopper. A gap over 5% between the two is flagged and left at "measured" until
   it is ruled on. Correcting a scale never needs a re-render.
 
-## Exclusions (9)
+## Exclusions (11)
 
 | plate | why |
 |---|---|
 | cream-jar-60ml-58mm Frosted | plastic, not glass |
+| marble-decorative-5ml, marble-decorative-10ml | metal-and-wood decorated bottles; sleeve and cap in one layer |
 | lotion-bottle-30ml-18mm, lotion-bottle-30ml-no-neck, lotion-bottle-3ml-Snap-On, royal-14ml-11mm | bottle and closure are one merged layer; no bare glass |
 | cylinder-30ml-18-415 Clear | the fixed 30 mL spray pair (a neck-matrix exception); one piece |
 | pillar-9ml-17-415 Clear | no master PSD; the only Pillar file is the 13-415 roll-on |
 | vial-3ml-13-425 Blue, Green | no master PSD under any name |
 
-Also flagged: Bell is sold as 10 mL, but the master library files it as Bell 12 mL.
+## Flags for review (kept, not approved automatically)
+
+- Round 78 mL: only a capped photo exists, so the body has no neck (closures cover it).
+- Vial 1 mL plug: the source layer carries the applicator's outline inside the vial.
+- Cylinder 3.3 mL and 4 mL (12 mm): the atomizer's inner tube is part of the body layer.
+- Amber vials (1 mL plug, 2 mL 8-425): a pale panel from the source photo survives two renders.
+- Bell is sold as 10 mL, but the master library files it as Bell 12 mL.
+
+## Source fixes applied (see `source-overrides.json`)
+
+- Slender bodies (the 9 mL tall Cylinder) were dropped by the dip-tube filter; named explicitly.
+- Six clear bodies (Rectangle 10, Tulip 6, Sleek 5/30/50, Diva 100) carried the retoucher's white fill patches
+  beyond the glass; stripped by flood fill from the edge (clear glass only).
+- Teardrop: stopper and bottle merged in one layer; cropped to the bottle.
+- Where colour comes from adjustment layers (the Green Teardrop is a blue photo under a Hue/Saturation), the
+  colour is taken from Photoshop's saved composite, masked by the body layer.
+
+## Clear glass renders opaque
+
+On a transparent canvas Sunburst often leaves clear glass part see-through with blocky partial alpha, which
+reads as a grey panel once baked. Clear and Swirl therefore render on white (as the photos were shot); the
+master outline is the alpha and the interior is baked to exactly `#F5F3EF`. Coloured and frosted glass render
+on a transparent canvas.

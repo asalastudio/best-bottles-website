@@ -23,6 +23,8 @@ const slug = s => s.toLowerCase().replace(/ /g, "-").replace(/\//g, "-");
 const argv = process.argv.slice(2);
 const limit = argv.includes("--limit") ? Number(argv[argv.indexOf("--limit") + 1]) : Infinity;
 const only = argv.includes("--only") ? argv[argv.indexOf("--only") + 1] : null;
+// --extra adds ONE line to the prompt, for a named retry only (longer prompts make the model re-decide the material).
+const extra = argv.includes("--extra") ? argv[argv.indexOf("--extra") + 1] : null;
 
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 let jobs = JSON.parse(readFileSync(resolve(BASE, "jobs.json"), "utf8")).filter(j => !only || j.bodyId === only);
@@ -33,20 +35,20 @@ let spent = 0, done = 0, failed = 0;
 async function run(job) {
     const out = resolve(BASE, "renders", job.bodyId, `${slug(job.glass)}.png`);
     mkdirSync(dirname(out), { recursive: true });
-    const prompt = job.role === "master" ? LOCKED : MATERIAL;
+    const prompt = (job.role === "master" ? LOCKED : MATERIAL) + (extra ? `\n${extra}` : "");
     for (let attempt = 1; attempt <= 3; attempt++) {
         const started = Date.now();
         try {
             const images = await Promise.all(job.images.map((f, i) => toFile(createReadStream(f), `input-${i}.png`, { type: "image/png" })));
             const res = await client.images.edit({ model: MODEL, image: images.length === 1 ? images[0] : images, prompt,
-                size: `${job.size[0]}x${job.size[1]}`, quality: QUALITY, background: "transparent", output_format: "png" });
+                size: `${job.size[0]}x${job.size[1]}`, quality: QUALITY, background: job.background ?? "transparent", output_format: "png" });
             const b64 = res.data?.[0]?.b64_json;
             if (!b64) throw new Error("no image in response");
             writeFileSync(out, Buffer.from(b64, "base64"));
             const u = res.usage ?? {}, d = u.input_tokens_details ?? {};
             const cost = (d.text_tokens ?? 0) * PRICE.textIn + (d.image_tokens ?? 0) * PRICE.imageIn + (u.output_tokens ?? 0) * PRICE.imageOut;
             spent += cost; done++;
-            writeFileSync(`${out}.json`, JSON.stringify({ ...job, model: MODEL, quality: QUALITY, background: "transparent", prompt, usage: u,
+            writeFileSync(`${out}.json`, JSON.stringify({ ...job, model: MODEL, quality: QUALITY, background: job.background ?? "transparent", prompt, usage: u,
                 costUsd: Number(cost.toFixed(4)), seconds: Math.round((Date.now() - started) / 1000) }, null, 1));
             console.log(`ok   ${job.bodyId} | ${job.glass} (${job.role}) $${cost.toFixed(3)} [${done}/${jobs.length}]`);
             return;

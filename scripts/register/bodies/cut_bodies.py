@@ -58,11 +58,22 @@ def convex_query(path: str, args: dict):
 def body_from_psd(path: Path, layer_name: str | None = None):
     psd = PSDImage.open(path)
     layers = [l for l in cp.pixel_layers(psd) if l.bbox[2] > l.bbox[0] and l.bbox[3] > l.bbox[1]]
+    adjusted = [l for l in psd.descendants() if l.kind not in ("pixel", "group", "type", "shape", "smartobject") and l.visible]
+    def colour_from_merged(img):
+        """Colour set by adjustment layers (e.g. a Hue/Saturation that turns a blue photo green) is absent from
+        the layer's own pixels; take RGB from Photoshop's saved composite, keep the body layer's alpha."""
+        merged = psd.topil()
+        if not adjusted or merged is None:
+            return img, ""
+        merged = merged.convert("RGB").resize(psd.size) if merged.size != psd.size else merged.convert("RGB")
+        out = merged.convert("RGBA"); out.putalpha(img.getchannel("A"))
+        return out, f" (colour from the saved composite: {', '.join(sorted({l.kind for l in adjusted}))})"
     if layer_name:
         named = [l for l in layers if l.name.startswith(layer_name)]
         if len(named) != 1:
             return None, f"override layer {layer_name!r} matched {len(named)} layers"
-        return cp.canvas_of(psd, named), f"PSD layer {named[0].name} (override)"
+        img, note = colour_from_merged(cp.canvas_of(psd, named))
+        return img, f"PSD layer {named[0].name} (override){note}"
     clip = lambda l: (max(0, l.bbox[0]), max(0, l.bbox[1]), min(psd.width, l.bbox[2]), min(psd.height, l.bbox[3]))
     layers = [l for l in layers if (clip(l)[2] - clip(l)[0]) > 0.2 * (clip(l)[3] - clip(l)[1])]  # drop dip tubes and pipettes
     if not layers:
@@ -72,8 +83,25 @@ def body_from_psd(path: Path, layer_name: str | None = None):
     body = max(standing, key=lambda l: (clip(l)[2] - clip(l)[0]) * (clip(l)[3] - clip(l)[1]))
     if (body.bbox[3] - body.bbox[1]) < 0.2 * psd.height and (body.bbox[2] - body.bbox[0]) < 0.2 * psd.width:
         return None, f"largest standing layer {body.name} is too small ({body.bbox}); body is probably flattened into the background"
-    img = cp.canvas_of(psd, [body])
-    return img, f"PSD layer {body.name}"
+    img, note = colour_from_merged(cp.canvas_of(psd, [body]))
+    return img, f"PSD layer {body.name}{note}"
+
+
+def strip_white_ground(img: Image.Image, white: int = 247) -> Image.Image:
+    """Drop near-white pixels reachable from the canvas edge through near-white (the retoucher's white fill,
+    invisible on the original white ground), then keep the largest solid piece. Glass walls enclose a clear
+    body's interior, so it survives. Never used on frosted glass: a flood fill eats the frost."""
+    from scipy import ndimage as ndi
+    a = np.asarray(img).copy()
+    whiteish = (a[..., 3] == 0) | (a[..., :3].min(axis=2) >= white)
+    lab, _ = ndi.label(whiteish)
+    edge_labels = set(np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]]))) - {0}
+    a[np.isin(lab, list(edge_labels)), 3] = 0
+    solid, n = ndi.label(a[..., 3] > 32)
+    if n > 1:
+        keep = 1 + int(np.argmax(ndi.sum(np.ones(solid.shape), solid, range(1, n + 1))))
+        a[(solid != keep) & (solid > 0), 3] = 0
+    return Image.fromarray(a)
 
 
 def body_from_kit(skus: list[str]):
@@ -118,6 +146,12 @@ def main():
         if img is None:
             img, how = body_from_kit(asm[(r["bodyId"], r["glass"])])
             how = f"{how} (PSD: {psd_how})"
+        if img is not None and o.get("stripWhiteGround"):
+            img = strip_white_ground(img)
+            how += " (white ground stripped)"
+        if img is not None and o.get("cropX"):
+            a = np.asarray(img).copy(); a[:, : int(o["cropX"]), 3] = 0; img = Image.fromarray(a)
+            how += f" (cropped at x {o['cropX']})"
         entry["source"] = how
         if img is not None and (np.asarray(img.getchannel("A")) > 128).sum() > 500:
             name = f"{r['bodyId']}--{slug(r['glass'])}.png"

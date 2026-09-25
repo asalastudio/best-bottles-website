@@ -383,11 +383,11 @@
   "glass": "Clear",
   "psd": "14. Cream Jars/Uncapped/13. Jar Clear, White cap 15ml/CJClr15Wht.psd",
   "override": null,
-  "source": "PSD layer Layer 4",
+  "source": "PSD layer Layer 4 (colour from the saved composite: brightnesscontrast, huesaturation)",
   "file": "cream-jar-15ml-37mm--clear.png",
   "width": 2106,
   "height": 1098,
-  "sha256": "cf10bf8a95f7457b9ed7cf23adfc9f2233373635d6ad22c6051e35974ebc7d40",
+  "sha256": "8668c175f72877c5a451ff4cfd18682cb59083728a74b2affde84a69d6a4f6d3",
   "measured": {
    "rim": 8,
    "foot": 1090,
@@ -796,18 +796,21 @@
   "bodyId": "cylinder-9ml-13-415",
   "glass": "Clear",
   "psd": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/1. GBTallCyl9BlkSht.psd",
-  "override": null,
-  "source": "PSD layer Layer 6",
+  "override": {
+   "layer": "Layer 11",
+   "why": "the body is so slender (243 x 1254 px) that the dip-tube filter dropped it and a cap won"
+  },
+  "source": "PSD layer Layer 11 (override)",
   "file": "cylinder-9ml-13-415--clear.png",
-  "width": 204,
-  "height": 141,
-  "sha256": "ee69998beb11dd9d60d14d817caff9712a8fa7e5188a32d19f6ecc37edc2a09a",
+  "width": 255,
+  "height": 1266,
+  "sha256": "c33c85355637f7901082866c3cdefffb0dd66353d41d2fba7fecf91a975bd186",
   "measured": {
-   "rim": 6,
-   "foot": 130,
-   "axisX": 100.5,
-   "barrelPx": 183.0,
-   "shoulderY": 9
+   "rim": 9,
+   "foot": 1257,
+   "axisX": 126.0,
+   "barrelPx": 216.0,
+   "shoulderY": 146
   }
  },
  {
@@ -815,18 +818,21 @@
   "bodyId": "cylinder-9ml-13-415",
   "glass": "Frosted",
   "psd": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/1. GBTallCylFrst9BlkSht.psd",
-  "override": null,
-  "source": "PSD layer Layer 6",
+  "override": {
+   "layer": "Layer 14",
+   "why": "the body is so slender that the dip-tube filter dropped it and a cap won"
+  },
+  "source": "PSD layer Layer 14 (override)",
   "file": "cylinder-9ml-13-415--frosted.png",
-  "width": 204,
-  "height": 141,
-  "sha256": "ee69998beb11dd9d60d14d817caff9712a8fa7e5188a32d19f6ecc37edc2a09a",
+  "width": 228,
+  "height": 1266,
+  "sha256": "13f9ff16fe35b0a1f1b4f3492190c9b87c5131ecc600f20c56a52bb7f6692597",
   "measured": {
-   "rim": 6,
-   "foot": 130,
-   "axisX": 100.5,
-   "barrelPx": 183.0,
-   "shoulderY": 9
+   "rim": 8,
+   "foot": 1259,
+   "axisX": 113.5,
+   "barrelPx": 205.0,
+   "shoulderY": 150
   }
  },
  {
@@ -948,18 +954,21 @@
   "bodyId": "diva-100ml-18-415",
   "glass": "Clear",
   "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/27.  100ml Diva (Clear) Ltn & Spry, capped/11. GBDiva100SpryMtGl.psd",
-  "override": null,
-  "source": "PSD layer Layer 1",
+  "override": {
+   "stripWhiteGround": true,
+   "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+  },
+  "source": "PSD layer Layer 1 (white ground stripped)",
   "file": "diva-100ml-18-415--clear.png",
-  "width": 864,
-  "height": 1743,
-  "sha256": "cdcf42f4b60244cf321ea7952fb6e66ca1398423bc95f52d700a5622b3e94e1b",
+  "width": 856,
+  "height": 1563,
+  "sha256": "664a10e50dde4499cdd2f876f02f8c5a073d773d6eb6db3102beffb4845b8c31",
   "measured": {
-   "rim": 30,
-   "foot": 1732,
-   "axisX": 434.5,
-   "barrelPx": 743.5,
-   "shoulderY": 589
+   "rim": 7,
+   "foot": 1556,
+   "axisX": 427.5,
+   "barrelPx": 694.0,
+   "shoulderY": 389
   }
  },
  {
@@ -1234,11 +1243,11 @@
   "glass": "Cobalt Blue",
   "psd": "19. Eternal Flames/GBEternalFlameBlue.psd",
   "override": null,
-  "source": "PSD layer Curves 3",
+  "source": "PSD layer Curves 3 (colour from the saved composite: curves, huesaturation, vibrance)",
   "file": "eternal-flame-decorative-35ml-Ground--cobalt-blue.png",
   "width": 2257,
   "height": 1461,
-  "sha256": "e595e133d5d2d8d9a4da313b42cb64fb42549990f9e73a17ffd3faf7ed077e2a",
+  "sha256": "1e2e531cdddde90d6ffd565fbd458432c96f07b1139b12ca09b0af87916850fd",
   "measured": {
    "rim": 8,
    "foot": 1453,
@@ -1399,38 +1408,22 @@
   "bodyId": "marble-decorative-10ml-17.52mm",
   "glass": "Clear",
   "psd": "18. Perfume Glass Bottles with Metal Decoration/GBMtlMrblLarge.psd",
-  "override": null,
-  "source": "PSD layer Layer 1",
-  "file": "marble-decorative-10ml-17.52mm--clear.png",
-  "width": 817,
-  "height": 3207,
-  "sha256": "4643ebe1efe152adf40eec28d71e9f6d3a99014352b3d1f58d91eb9da1b7b45e",
-  "measured": {
-   "rim": 22,
-   "foot": 3199,
-   "axisX": 393.0,
-   "barrelPx": 634.0,
-   "shoulderY": 416
-  }
+  "override": {
+   "exclude": "metal-and-wood decorated bottle with its crystal cap in one layer; no bare glass"
+  },
+  "source": "excluded: metal-and-wood decorated bottle with its crystal cap in one layer; no bare glass",
+  "file": null
  },
  {
   "plateKey": "marble-decorative-5ml-17.52mm|Clear",
   "bodyId": "marble-decorative-5ml-17.52mm",
   "glass": "Clear",
   "psd": "18. Perfume Glass Bottles with Metal Decoration/GBMtlMrblSmall.psd",
-  "override": null,
-  "source": "PSD layer Layer 1",
-  "file": "marble-decorative-5ml-17.52mm--clear.png",
-  "width": 752,
-  "height": 1251,
-  "sha256": "b6c80b6ff3907203fa28bbad54e975d3c1e919b3760c2990bec693ed92c1e2fb",
-  "measured": {
-   "rim": 9,
-   "foot": 1244,
-   "axisX": 373.0,
-   "barrelPx": 573.0,
-   "shoulderY": 19
-  }
+  "override": {
+   "exclude": "metal-and-wood decorated bottle (wood sleeve, gold base); no bare glass"
+  },
+  "source": "excluded: metal-and-wood decorated bottle (wood sleeve, gold base); no bare glass",
+  "file": null
  },
  {
   "plateKey": "pear-apothecary-118ml-Ground|Clear",
@@ -1508,18 +1501,21 @@
   "bodyId": "rectangle-10ml-13-415",
   "glass": "Clear",
   "psd": "5.  13-415 Bottles/16. Tall Rectangular 10ml/1. Tall Rectangular 10ml (uncapped) PSD/1. GBTallRect10BlkSht.psd",
-  "override": null,
-  "source": "PSD layer Layer 10",
+  "override": {
+   "stripWhiteGround": true,
+   "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+  },
+  "source": "PSD layer Layer 10 (white ground stripped)",
   "file": "rectangle-10ml-13-415--clear.png",
-  "width": 371,
-  "height": 1317,
-  "sha256": "79897511b065e34b316e81e62f97af6ccd7fe1eb1c25b0ac1d803f8013302ef5",
+  "width": 220,
+  "height": 1212,
+  "sha256": "0d55411aa710fafb7d48495471e3bcaa05f6bffe56c9dfe0f353f33a95c83b41",
   "measured": {
-   "rim": 6,
-   "foot": 1317,
-   "axisX": 187.5,
-   "barrelPx": 290.0,
-   "shoulderY": 659
+   "rim": 7,
+   "foot": 1205,
+   "axisX": 111.0,
+   "barrelPx": 199.0,
+   "shoulderY": 151
   }
  },
  {
@@ -1671,18 +1667,21 @@
   "bodyId": "sleek-30ml-18-415",
   "glass": "Clear",
   "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/11. 30ml  Slk, Ltn & Spry, capped/11. GBSlk30SpryMtGl.psd",
-  "override": null,
-  "source": "PSD layer Layer 17",
+  "override": {
+   "stripWhiteGround": true,
+   "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+  },
+  "source": "PSD layer Layer 17 (white ground stripped)",
   "file": "sleek-30ml-18-415--clear.png",
-  "width": 739,
-  "height": 1631,
-  "sha256": "b14b4101159b0dfb61d0cc171d0dfb8e882d562f30f746f381e3583060d51bce",
+  "width": 375,
+  "height": 1176,
+  "sha256": "fbcbf6444eee1146bd9fb4833939a0a7ca80fc1567d04374f0be9fc0f5e90e43",
   "measured": {
    "rim": 6,
-   "foot": 1614,
-   "axisX": 297.5,
-   "barrelPx": 460.0,
-   "shoulderY": 937
+   "foot": 1170,
+   "axisX": 190.5,
+   "barrelPx": 352.0,
+   "shoulderY": 199
   }
  },
  {
@@ -1690,18 +1689,21 @@
   "bodyId": "sleek-50ml-18-415",
   "glass": "Clear",
   "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/12. 50ml Slk, Ltn & Spry, capped/11. GBSlk50SpryMtGl.psd",
-  "override": null,
-  "source": "PSD layer new",
+  "override": {
+   "stripWhiteGround": true,
+   "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+  },
+  "source": "PSD layer new (white ground stripped)",
   "file": "sleek-50ml-18-415--clear.png",
-  "width": 600,
-  "height": 1770,
-  "sha256": "51384bab86142e76ddf1c33f792d32da34e4c4061d2969f79bda8aa14ddde170",
+  "width": 352,
+  "height": 1647,
+  "sha256": "80034b917224ad292fa05e45c00d0e127c5573ed230e34775c465602d96b541e",
   "measured": {
-   "rim": 6,
-   "foot": 1770,
-   "axisX": 296.0,
-   "barrelPx": 478.0,
-   "shoulderY": 242
+   "rim": 7,
+   "foot": 1640,
+   "axisX": 178.0,
+   "barrelPx": 326.0,
+   "shoulderY": 206
   }
  },
  {
@@ -1709,18 +1711,21 @@
   "bodyId": "sleek-5ml-13-415",
   "glass": "Clear",
   "psd": "5.  13-415 Bottles/5. Sleek 5ml/1. Sleek 5ml PSD (Uncapped) /1. GBSleek5BlkSht.psd",
-  "override": null,
-  "source": "PSD layer Layer 3",
+  "override": {
+   "stripWhiteGround": true,
+   "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+  },
+  "source": "PSD layer Layer 3 (white ground stripped)",
   "file": "sleek-5ml-13-415--clear.png",
-  "width": 337,
-  "height": 622,
-  "sha256": "7b80baf23697776bee1080f3886647a7e6ad026a21ec0031210a1b24e47c1adb",
+  "width": 234,
+  "height": 555,
+  "sha256": "0cb6dfa8afb9e73b980ccfa14dd8effcc6ceab1971bf42e8cd26317afd435f59",
   "measured": {
    "rim": 7,
-   "foot": 615,
-   "axisX": 129.0,
+   "foot": 549,
+   "axisX": 120.0,
    "barrelPx": 214.0,
-   "shoulderY": 26
+   "shoulderY": 166
   }
  },
  {
@@ -1823,18 +1828,21 @@
   "bodyId": "teardrop-9ml-Ground",
   "glass": "Clear",
   "psd": "17. Additional Bottles/GBTRDPClear.psd",
-  "override": null,
-  "source": "PSD layer Curves 1",
+  "override": {
+   "cropX": 2800,
+   "why": "stopper and bottle are one merged layer; the bottle starts at x 2892 (the Cobalt file keeps them apart)"
+  },
+  "source": "PSD layer Curves 1 (cropped at x 2800)",
   "file": "teardrop-9ml-Ground--clear.png",
-  "width": 1547,
+  "width": 871,
   "height": 1224,
-  "sha256": "eab0d7e312bcfdfd7146e93e96da824677cd4305169d54d6c79dfc5b2310394a",
+  "sha256": "4ac00111a598855d84b469fdc90be3b10bf009daafa14cbf96c15bf5e1b40772",
   "measured": {
    "rim": 9,
    "foot": 1216,
-   "axisX": 794.0,
-   "barrelPx": 1441.0,
-   "shoulderY": 322
+   "axisX": 435.0,
+   "barrelPx": 798.0,
+   "shoulderY": 523
   }
  },
  {
@@ -1842,12 +1850,15 @@
   "bodyId": "teardrop-9ml-Ground",
   "glass": "Cobalt Blue",
   "psd": "17. Additional Bottles/GBTrdpBlue.psd",
-  "override": null,
-  "source": "PSD layer Layer 2",
+  "override": {
+   "layer": "Layer 2",
+   "why": "Layer 2 is the bottle; Layer 1 is the stopper set beside it"
+  },
+  "source": "PSD layer Layer 2 (override) (colour from the saved composite: brightnesscontrast)",
   "file": "teardrop-9ml-Ground--cobalt-blue.png",
   "width": 863,
   "height": 1224,
-  "sha256": "bcb6677c92bbbeb5aa417324c0d80ce8b144fac0054d9a2d1b59ee7524b59b40",
+  "sha256": "5ccc1f0e69e01602cfcd51b113f27c62251e4b3e827b676b463846529c255edd",
   "measured": {
    "rim": 9,
    "foot": 1216,
@@ -1861,18 +1872,21 @@
   "bodyId": "teardrop-9ml-Ground",
   "glass": "Green",
   "psd": "17. Additional Bottles/GBTRDPGreen.psd",
-  "override": null,
-  "source": "PSD layer Curves 1",
+  "override": {
+   "cropX": 2800,
+   "why": "stopper and bottle are one merged layer; the bottle starts at x 2892"
+  },
+  "source": "PSD layer Curves 1 (colour from the saved composite: huesaturation) (cropped at x 2800)",
   "file": "teardrop-9ml-Ground--green.png",
-  "width": 1539,
+  "width": 863,
   "height": 1224,
-  "sha256": "725d1bb859071365093c1a6fa4a9eca7562bfaf2d2e50690d4202b9d45300dad",
+  "sha256": "82a60fcea225e46d65ff508d304bfe23dff89b0681a2234f351bc196fe952951",
   "measured": {
    "rim": 9,
    "foot": 1216,
-   "axisX": 789.5,
-   "barrelPx": 1435.0,
-   "shoulderY": 325
+   "axisX": 431.5,
+   "barrelPx": 790.0,
+   "shoulderY": 525
   }
  },
  {
@@ -1937,18 +1951,21 @@
   "bodyId": "tulip-6ml-13-415",
   "glass": "Clear",
   "psd": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /1. GBTulip6BlkSht.psd",
-  "override": null,
-  "source": "PSD layer Layer 4",
+  "override": {
+   "stripWhiteGround": true,
+   "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+  },
+  "source": "PSD layer Layer 4 (white ground stripped)",
   "file": "tulip-6ml-13-415--clear.png",
-  "width": 586,
-  "height": 657,
-  "sha256": "f652a965874f4d176de2b424b64e6a69ad1fb164fcf3bd7b876f638a2261a2ed",
+  "width": 288,
+  "height": 550,
+  "sha256": "36dd62bf09946211cba10acd1ffae3052a55251a2754e2ef36428a0ae20f5eee",
   "measured": {
-   "rim": 10,
-   "foot": 657,
-   "axisX": 238.0,
-   "barrelPx": 476.0,
-   "shoulderY": 178
+   "rim": 7,
+   "foot": 543,
+   "axisX": 144.0,
+   "barrelPx": 270.0,
+   "shoulderY": 151
   }
  },
  {

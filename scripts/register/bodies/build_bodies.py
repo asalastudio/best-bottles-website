@@ -70,6 +70,10 @@ def plan() -> dict[str, dict]:
         W, H = ceil16(w * k + 2 * MARGIN), ceil16(h * k + 2 * MARGIN)
         while W * H < MIN_PX:
             W += 16
+        while H > 3 * W:   # Sunburst refuses aspect ratios beyond 3:1; widening the canvas changes no geometry
+            W += 16
+        while W > 3 * H:
+            H += 16
         out[body_id] = {"master": master, "k": k, "canvas": [W, H], "axisX": W / 2, "footY": H - MARGIN, "glasses": entries}
     return out
 
@@ -111,7 +115,8 @@ def inputs():
         for e in body["glasses"]:
             glass = e["glass"]
             if e is master:
-                jobs.append({"bodyId": body_id, "glass": glass, "role": "master", "images": [str(d / "geometry.png")], "size": body["canvas"]})
+                jobs.append({"bodyId": body_id, "glass": glass, "role": "master", "images": [str(d / "geometry.png")], "size": body["canvas"],
+                             "background": "opaque" if glass in BONE_BAKED else "transparent"})
                 continue
             if e["file"]:
                 mat = place(Image.open(BASE / "cuts" / e["file"]).convert("RGBA"), e, master, body)
@@ -124,7 +129,8 @@ def inputs():
                 mat = fit_reference(Image.open(PILOT_RENDERS / f"{ref}.png").convert("RGBA"), body)
                 how = f"reference glass ({ref})"
             on_white(mat).save(d / f"{slug(glass)}-material.png")
-            jobs.append({"bodyId": body_id, "glass": glass, "role": how, "images": [str(d / "geometry.png"), str(d / f"{slug(glass)}-material.png")], "size": body["canvas"]})
+            jobs.append({"bodyId": body_id, "glass": glass, "role": how, "images": [str(d / "geometry.png"), str(d / f"{slug(glass)}-material.png")], "size": body["canvas"],
+                         "background": "opaque" if glass in BONE_BAKED else "transparent"})
         (d / "body.json").write_text(json.dumps({k: v for k, v in body.items() if k not in ("master", "glasses")} | {"masterGlass": master["glass"]}, indent=1))
     (BASE / "jobs.json").write_text(json.dumps(jobs, indent=1))
     print(f"{len(jobs)} render jobs across {len(bodies)} bodies -> {BASE / 'jobs.json'}")
@@ -141,6 +147,13 @@ def compare(g, m):
     return float(iou), float(dev.max()), float(np.percentile(dev, 95))
 
 
+def span(alpha: np.ndarray, thr: int = 16) -> np.ndarray:
+    """Silhouette with every row filled edge to edge. Sunburst often renders clear glass see-through (alpha ~0
+    inside), so a plain alpha threshold keeps only the walls; row spans compare outlines fairly."""
+    m = alpha > thr
+    return np.maximum.accumulate(m, axis=1) & np.maximum.accumulate(m[:, ::-1], axis=1)[:, ::-1]
+
+
 def mask_rgba(mask: np.ndarray) -> Image.Image:
     im = Image.new("RGBA", (mask.shape[1], mask.shape[0]), (255, 255, 255, 0))
     im.putalpha(Image.fromarray((mask * 255).astype(np.uint8)))
@@ -153,7 +166,9 @@ def qa():
     for body_id, body in bodies.items():
         d = BASE / "inputs" / body_id
         master_mask = np.asarray(Image.open(d / "master-mask.png")) > 127
+        master_span = span(np.asarray(Image.open(d / "master-mask.png")), 127)
         mm = cp.measure_body(mask_rgba(master_mask))
+        widest_px = int(master_span.sum(axis=1).max())
         soft = Image.fromarray((ndi.gaussian_filter(master_mask.astype(float), 0.8).clip(0, 1) * 255).astype(np.uint8))
         inv = INV[f"{body_id}|{body['master']['glass']}"]
         H_mm = float(inv["heightBareMm"])
@@ -163,12 +178,12 @@ def qa():
         # Two independent scales from the recorded measurements. Height is the pilot's basis; a ground-glass
         # body's top is its stopper, not the rim, so those scale by width. A gap over 5% is flagged, not hidden.
         by_height = (mm["foot"] - mm["rim"]) / apparent
-        by_width = mm["barrelPx"] / ref_w if ref_w else None
+        by_width = widest_px / ref_w if ref_w else None  # recorded diameters and widths are the widest point
         stoppered = body["master"]["bodyId"].endswith("-Ground") or inv["neck"] == "Ground"
         basis = "width" if stoppered and by_width else "height"
         px_per_mm = by_width if basis == "width" else by_height
         gap = round(100 * (by_height / by_width - 1), 1) if by_width else None
-        width_mm = mm["barrelPx"] / px_per_mm
+        width_mm = widest_px / px_per_mm
         row = {"bodyId": body_id, "cells": []}
         for e in body["glasses"]:
             glass = e["glass"]
@@ -176,20 +191,34 @@ def qa():
             entry = {"plateKey": f"{body_id}|{glass}", "bodyId": body_id, "glass": glass}
             if not rpath.exists():
                 entry["status"] = "not rendered"
-                results.append(entry); row["cells"].append((glass, None, e)); continue
+                results.append(entry); row["cells"].append((glass, None, entry)); continue
             raw = Image.open(rpath).convert("RGBA")
-            g0 = np.asarray(raw.getchannel("A")) > 127
-            raw_iou, _, _ = compare(g0, master_mask)
+            if np.asarray(raw.getchannel("A")).min() == 255:
+                # Opaque render (clear glass on white): the outline is the row span of pixels darker than the paper,
+                # and it becomes the render's alpha for measuring and fitting. The master outline is applied after.
+                rgb = np.asarray(raw.convert("RGB")).astype(np.int16)
+                ink = rgb.min(axis=2) < 236
+                sil = span((ink * 255).astype(np.uint8), 127)
+                raw.putalpha(Image.fromarray((sil * 255).astype(np.uint8)))
+            raw_iou, _, _ = compare(span(np.asarray(raw.getchannel("A"))), master_span)
             r = cp.measure_body(raw)
             sx, sy = mm["barrelPx"] / r["barrelPx"], (mm["foot"] - mm["rim"]) / (r["foot"] - r["rim"])
             big = raw.resize((max(1, round(raw.width * sx)), max(1, round(raw.height * sy))), Image.LANCZOS)
             fitted = Image.new("RGBA", raw.size, (0, 0, 0, 0))
             fitted.paste(big, (round(mm["axisX"] - r["axisX"] * sx), round(mm["rim"] - r["rim"] * sy)))
-            iou, dmax, p95 = compare(np.asarray(fitted.getchannel("A")) > 127, master_mask)
+            iou, dmax, p95 = compare(span(np.asarray(fitted.getchannel("A"))), master_span)
             locked = fitted.copy()
             locked.putalpha(Image.fromarray(np.minimum(np.asarray(fitted.getchannel("A")), np.asarray(soft))))
             baked = None
             if glass in BONE_BAKED:
+                # Clear glass, as in the pilot: flatten the render onto white inside the outline (Sunburst often
+                # leaves clear interiors part see-through, which reads as a white blob or panel), make the whole
+                # outline opaque, then level the paper white and multiply onto bone -> interior exactly #F5F3EF.
+                f = np.asarray(locked).astype(np.float32)
+                al = f[..., 3:4] / 255.0
+                f[..., :3] = f[..., :3] * al + 255.0 * (1.0 - al)
+                f[..., 3] = np.asarray(soft).astype(np.float32)
+                locked = Image.fromarray(f.clip(0, 255).astype(np.uint8), "RGBA")
                 rgba = np.asarray(locked).astype(np.float32)
                 solid = (rgba[..., 3] > 250) & (rgba[..., :3].min(axis=2) >= 235)
                 white = np.array([np.bincount(rgba[..., c][solid].astype(np.int64), minlength=256).argmax() if solid.any() else 255 for c in range(3)], dtype=np.float32)
@@ -216,7 +245,7 @@ def qa():
                 "bakedOnBone": baked, "render": {k: meta.get(k) for k in ("model", "quality", "costUsd", "prompt")},
             })
             results.append(entry)
-            row["cells"].append((glass, locked, e))
+            row["cells"].append((glass, locked, entry))
         rows.append(row)
     MEASURE.write_text(json.dumps(results, indent=1) + "\n")
     ok = [r for r in results if r.get("status") == "ok"]
@@ -236,8 +265,8 @@ def sheets(rows):
             y = 10 + i * (cell + 30)
             d.text((10, y + cell // 2), r["bodyId"][:34], fill=(28, 28, 30))
             master = next(c for c in CUTS if c["bodyId"] == r["bodyId"] and c["file"] and (c["glass"] == "Clear" or True))
-            items = [("photo", Image.open(BASE / "cuts" / master["file"]).convert("RGBA"))] + [(g, im) for g, im, _ in r["cells"]]
-            for j, (label, im) in enumerate(items):
+            items = [("photo", Image.open(BASE / "cuts" / master["file"]).convert("RGBA"), None)] + list(r["cells"])
+            for j, (label, im, res) in enumerate(items):
                 x = 240 + j * cell
                 if im is None:
                     d.rectangle([x + 8, y + 8, x + cell - 8, y + cell - 8], outline=(190, 50, 40)); d.text((x + 10, y + cell + 4), f"{label} · not rendered", fill=(190, 50, 40)); continue
@@ -245,7 +274,13 @@ def sheets(rows):
                 t = im.crop(bb); t.thumbnail((cell - 12, cell - 12), Image.LANCZOS)
                 tile = Image.new("RGBA", (cell - 6, cell - 6), (245, 243, 239, 255))
                 tile.alpha_composite(rs.on_bone(t) if label == "photo" else t, ((tile.width - t.width) // 2, tile.height - t.height))
-                sheet.paste(tile.convert("RGB"), (x, y)); d.text((x + 4, y + cell + 2), label, fill=(120, 100, 60))
+                sheet.paste(tile.convert("RGB"), (x, y))
+                if res:
+                    flag = res.get("status") != "ok" or (res.get("scale") or {}).get("flag")
+                    tag = f"{label} · IoU {res['checks']['fittedIoU']:.2f}" + (" · scale" if (res.get("scale") or {}).get("flag") else "") + (" · review" if res.get("status") == "review" else "")
+                    d.text((x + 4, y + cell + 2), tag, fill=(190, 50, 40) if flag else (120, 100, 60))
+                else:
+                    d.text((x + 4, y + cell + 2), "master photo", fill=(90, 90, 90))
         out = BASE / f"review-bodies-{n // per_sheet + 1}.png"
         sheet.save(out, optimize=True); print(out)
 
