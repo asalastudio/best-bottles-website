@@ -5,7 +5,7 @@ import { useEffect, useId, useRef, useState, type CSSProperties, type ReactNode 
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check, DotsThree, Minus, Plus, SlidersHorizontal, X, ArrowsOutSimple } from "@/components/icons";
 import { displayApplicatorName } from "@/lib/catalogFilters";
-import { bareGlassPreview, builderOrder, clearBodyPreview, deriveBuilder, MAX_QUANTITY, previewParts, type BuilderBody, type BuilderSelection } from "@/lib/bottle-builder/model";
+import { bareGlassPreview, borrowedFitmentPreview, builderOrder, clearBodyPreview, deriveBuilder, MAX_QUANTITY, previewParts, type BuilderBody, type BuilderConfiguration, type BuilderSelection } from "@/lib/bottle-builder/model";
 import { CHOOSER_PRIORITY_TILES } from "@/lib/bottle-builder/mobile-request";
 import { displayImageUrl } from "@/lib/products/optimizable-image";
 import { checkoutMinimum } from "@/lib/checkout";
@@ -26,6 +26,8 @@ type LastAdded = { name: string; quantity: number; total?: number | null; lines?
 
 type Props = {
     familyNotice?: import("react").ReactNode;
+    /** Shown after a bottle is chosen when its full configurations failed to load. */
+    bodyNotice?: import("react").ReactNode;
     families: { family: string; groups: number }[]; family: string; bodies: BuilderBody[];
     selection: BuilderSelection; current: ReturnType<typeof deriveBuilder>; order: ReturnType<typeof builderOrder>;
     stage: number; onStage: (stage: number) => void; onUpdate: (patch: Partial<BuilderSelection>) => void;
@@ -36,6 +38,8 @@ type Props = {
     lastAdded: LastAdded | null; cartProgress: ReturnType<typeof checkoutMinimum>;
     hasIncludedCover: boolean; showCover: boolean; onCover: () => void;
     chooserScale: (body: BuilderBody) => number;
+    /** Cart-consistent unit price range for the configurations a choice can still become; omitted = no prices on tiles. */
+    priceRange?: (configs: BuilderConfiguration[]) => { min: number; max: number } | null;
 };
 
 /** Mobile presentation only. Exact configuration, pricing and submission stay in MatrixClient. */
@@ -71,10 +75,27 @@ export default function MobileBuilder(p: Props) {
     const finishLabel = /Roller/.test(fitment ?? "") ? "Roller cap" : /Pump/.test(fitment ?? "") ? "Pump finish" : /Sprayer/.test(fitment ?? "") ? "Sprayer finish" : "Cap finish";
     const preview = configuration ?? p.current.fitted[0] ?? p.current.colored[0] ?? body?.configurations[0];
     const previewStage = stage < 2 || !fitment ? "body" : stage === 2 ? "fitment" : configuration ? "complete" : "fitment";
-    const parts = preview ? previewParts(preview, previewStage) : [];
     const bodyReference = p.current.colored.find(c => c.fitment === "Vintage Bulb Sprayer" && c.kit?.completeness === "full") ?? p.current.colored.find(c => c.kit?.completeness === "full" && c.fitment !== "Reducer") ?? p.current.colored.find(c => c.kit?.completeness === "full") ?? p.current.colored[0] ?? body?.configurations[0];
+    // No layered kit for this fitment yet: seat a sibling glass's mechanism on the universal body,
+    // else draw the universal body alone rather than "Image unavailable" (as MatrixClient).
+    const kitless = Boolean(preview && !preview.kit && previewStage === "fitment");
+    const borrowed = kitless ? borrowedFitmentPreview(body, color, fitment, bodyReference) : null;
+    const previewConfig = borrowed ?? (kitless && bodyReference?.kit ? bodyReference : preview);
+    const displayStage = borrowed || previewConfig === preview ? previewStage : "body";
+    const parts = previewConfig ? previewParts(previewConfig, displayStage) : [];
     const unavailable = body?.unavailableFinishes?.filter(c => c.color === color && c.fitment === fitment) ?? [];
-    const visible = p.bodies.filter(b => (!p.size || b.capacityMl === Number(p.size)) && (!p.neck || b.neck === p.neck) && (!p.application || b.configurations.some(c => c.fitment === p.application)));
+    const priceFrom = (configs: BuilderConfiguration[]) => {
+        const range = p.priceRange?.(configs);
+        return range ? (range.min === range.max ? `${money(range.min)} each` : `from ${money(range.min)}`) : null;
+    };
+    const possible = configuration ? [configuration] : fitment ? p.current.fitted : color ? p.current.colored : body?.configurations ?? [];
+    const fromLabel = (min: number | null | undefined) => min == null ? null : `from ${money(min)}`;
+    const bodyFrom = (b: BuilderBody) => b.chooserOnly ? fromLabel(b.priceFrom) : priceFrom(b.configurations);
+    const colorFrom = (b: BuilderBody, c: string) => b.chooserOnly ? fromLabel(b.colorPriceFrom?.[c]) : priceFrom(b.configurations.filter(item => item.color === c));
+    const possibleFrom = body?.chooserOnly ? (color ? fromLabel(body.colorPriceFrom?.[color]) : fromLabel(body.priceFrom)) : priceFrom(possible);
+    const runningPrice = configuration && p.order.unitPrice != null ? `${money(p.order.unitPrice)} each` : possibleFrom;
+    const bodyFitments = (b: BuilderBody) => b.fitments ?? b.configurations.map(c => c.fitment);
+    const visible = p.bodies.filter(b => (!p.size || b.capacityMl === Number(p.size)) && (!p.neck || b.neck === p.neck) && (!p.application || bodyFitments(b).includes(p.application)));
     const activeFilters = Boolean(p.size || p.neck || p.application);
     const showBar = !p.lastAdded;
     const forwardLabel = stage === 4
@@ -168,7 +189,7 @@ export default function MobileBuilder(p: Props) {
     function closeFilters() { filters.current?.close(); setFilterOpen(false); filterTrigger.current?.focus(); }
     function closePreview() { setPreviewZoom(1); }
     const clearFilters = () => { p.onFilter("size", ""); p.onFilter("neck", ""); p.onFilter("application", ""); };
-    const previewImage = (expandedView = false) => preview && <BuilderImage config={preview} parts={parts} stage={previewStage} expanded={expandedView} showCover={p.showCover} bodyReference={bodyReference} frameConfigurations={body?.configurations}
+    const previewImage = (expandedView = false) => preview && previewConfig && <BuilderImage config={previewConfig} parts={parts} stage={displayStage} expanded={expandedView} showCover={p.showCover} bodyReference={bodyReference} frameConfigurations={body?.configurations}
         label={`${body?.capacityMl} ml ${stage < 2 ? preview.color : color} ${body?.profileLabel}${stage >= 2 && fitment ? ` with ${displayApplicatorName(fitment)}` : " bottle"}${stage >= 3 && closure ? `, ${closure}` : ""}`} />;
 
     return <div ref={root} className={styles.mobile} data-mobile-builder data-stage={stage} data-keyboard={keyboardOpen} data-large-text={largeText} data-confirm={Boolean(p.lastAdded)} aria-busy={busy}
@@ -198,9 +219,10 @@ export default function MobileBuilder(p: Props) {
             </div>
         </div>
         {stage > 0 && body && stage < 4 && <div className={styles.selectedBottle}>
-            <div><h2>{body.capacityMl} ml {body.profileLabel}{color ? ` · ${color}` : ""}</h2><p>{fitment && stage > 1 ? `${displayApplicatorName(fitment)} · ` : ""}{body.neck}</p></div>
+            <div><h2>{body.capacityMl} ml {body.profileLabel}{color ? ` · ${color}` : ""}</h2><p>{fitment && stage > 1 ? `${displayApplicatorName(fitment)} · ` : ""}{body.neck}{runningPrice ? ` · ${runningPrice}` : ""}</p></div>
             <button onClick={() => go(0)} disabled={busy} aria-label="Edit bottle">Edit</button>
         </div>}
+        {stage > 0 && p.bodyNotice}
         {stage === 4 && <h1 ref={heading} tabIndex={-1} className={styles.title}>{titles[stage]}</h1>}
         {stage > 0 && preview && <section className={styles.preview} aria-label="Live bottle preview">
             <div className={`${styles.previewImage} ${previewStage === "complete" && !preview.kit && preview.photoUrl ? styles.plateStage : ""}`}>{previewImage()}</div>
@@ -216,7 +238,7 @@ export default function MobileBuilder(p: Props) {
             <fieldset disabled={busy} className={styles.group}><legend className={styles.srOnly}>Bottle</legend><div className={styles.bottleGrid}>
                 {visible.map((b, index) => <Choice key={b.id} name={`${id}-bottle`} value={b.id} selected={body?.id === b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} onSelect={() => choose({ bodyId: b.id })}>
                     <div className={styles.bottleThumb}><BuilderImage config={clearBodyPreview(b)} parts={previewParts(clearBodyPreview(b), "body")} scale={1.08 * Math.max(.55, p.chooserScale(b))} label={`${b.capacityMl} ml ${b.profileLabel}`} thumbnail placeholder priority={index < CHOOSER_PRIORITY_TILES} /></div>
-                    <strong>{b.capacityMl} ml</strong>{b.profileLabel !== b.family && <span>{b.profileLabel}</span>}<span>Neck: {b.neck}</span>
+                    <strong>{b.capacityMl} ml</strong>{b.profileLabel !== b.family && <span>{b.profileLabel}</span>}{bodyFrom(b) && <span className={styles.price}>{bodyFrom(b)}</span>}<span>Neck: {b.neck}</span>
                 </Choice>)}
             </div></fieldset>
             {!visible.length && <div className={styles.empty}><p>No bottles match these filters.</p><button onClick={clearFilters}>Clear filters</button><Link href={`/catalog?families=${encodeURIComponent(p.family)}`}>Browse catalog</Link></div>}
@@ -225,13 +247,13 @@ export default function MobileBuilder(p: Props) {
         {stage > 0 && stage < 4 && <>
             <fieldset disabled={busy} className={styles.group}><legend className={styles.srOnly}>{stages[stage]}</legend>
                 {stage === 1 && <div className={styles.glassGrid}>{p.current.colors.map(c => { const example = body!.configurations.find(item => item.color === c)!; return <Choice key={c} name={`${id}-glass`} value={c} selected={color === c} label={c} onSelect={() => choose({ color: c })}>
-                    <div className={styles.glassThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} thumbnail placeholder /></div><strong>{c}</strong>
+                    <div className={styles.glassThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} thumbnail placeholder /></div><strong>{c}</strong>{colorFrom(body!, c) && <span className={styles.price}>{colorFrom(body!, c)}</span>}
                 </Choice>; })}</div>}
                 {stage === 2 && <div className={styles.fitmentGrid}>{p.current.fitments.map(f => { return <Choice key={f} name={`${id}-fitment`} value={f} selected={fitment === f} label={displayApplicatorName(f)} onSelect={() => choose({ fitment: f })}>
-                    <div className={styles.componentThumb}><FitmentIllustration fitment={f} neck={body?.neck} /></div><strong>{displayApplicatorName(f)}</strong>{fitmentChoiceHints[f] && <span>{fitmentChoiceHints[f]}</span>}
+                    <div className={styles.componentThumb}><FitmentIllustration fitment={f} neck={body?.neck} /></div><strong>{displayApplicatorName(f)}</strong>{priceFrom(p.current.colored.filter(c => c.fitment === f)) && <span className={styles.price}>{priceFrom(p.current.colored.filter(c => c.fitment === f))}</span>}{fitmentChoiceHints[f] && <span>{fitmentChoiceHints[f]}</span>}
                 </Choice>; })}</div>}
                 {stage === 3 && <div className={styles.finishGrid}>{p.current.fitted.map(c => <Choice key={c.id} name={`${id}-finish`} value={c.closure} selected={closure === c.closure} label={c.closure} onSelect={() => choose({ closure: c.closure })}>
-                    <div className={styles.finishThumb}><BuilderFinishImage config={c} /></div><strong>{shortFinishLabel(c.closure)}</strong>
+                    <div className={styles.finishThumb}><BuilderFinishImage config={c} /></div><strong>{shortFinishLabel(c.closure)}</strong>{priceFrom([c]) && <span className={styles.price}>{priceFrom([c])}</span>}
                 </Choice>)}{unavailable.map(c => <Choice key={c.id} name={`${id}-finish`} value={c.id} selected={false} label={`${c.closure} — Out of stock`} onSelect={() => {}} disabled>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <div className={styles.finishThumb}><img src={displayImageUrl(c.imageUrl, 640)} alt={c.closure} loading="lazy" onError={e => { e.currentTarget.hidden = true; }} /></div><strong>{shortFinishLabel(c.closure)}</strong><span>Out of stock</span>
@@ -267,7 +289,7 @@ export default function MobileBuilder(p: Props) {
         <dialog ref={filters} className={styles.sheet} aria-labelledby={`${id}-filters`} onCancel={closeFilters} onClose={() => { setFilterOpen(false); filterTrigger.current?.focus(); }}>
             <div className={styles.dialogHeading}><h2 id={`${id}-filters`}>Filters</h2><button type="button" className={styles.closePreview} aria-label="Close filters" onClick={closeFilters}><X size={20} /></button></div>
             <div className={styles.filterBody}>
-                {([['size', 'Capacity', [...new Set(p.bodies.map(b => b.capacityMl))].sort((a,b) => a-b).map(n => [String(n), `${n} ml`])], ['neck', 'Neck', [...new Set(p.bodies.map(b => b.neck))].map(n => [n,n])], ['application', 'Application', [...new Set(p.bodies.flatMap(b => b.configurations.map(c => c.fitment)))].map(n => [n, displayApplicatorName(n)])]] as ["size" | "neck" | "application", string, string[][]][]).map(([key,label,values]) => <label className={styles.filterField} key={key}>{label}<select aria-label={label} value={p[key]} onChange={e => p.onFilter(key,e.target.value)}><option value="">All {label.toLowerCase()}{key === "size" ? "s" : " options"}</option>{values.map(([value,text]) => <option value={value} key={value}>{text}</option>)}</select></label>)}
+                {([['size', 'Capacity', [...new Set(p.bodies.map(b => b.capacityMl))].sort((a,b) => a-b).map(n => [String(n), `${n} ml`])], ['neck', 'Neck', [...new Set(p.bodies.map(b => b.neck))].map(n => [n,n])], ['application', 'Application', [...new Set(p.bodies.flatMap(bodyFitments))].map(n => [n, displayApplicatorName(n)])]] as ["size" | "neck" | "application", string, string[][]][]).map(([key,label,values]) => <label className={styles.filterField} key={key}>{label}<select aria-label={label} value={p[key]} onChange={e => p.onFilter(key,e.target.value)}><option value="">All {label.toLowerCase()}{key === "size" ? "s" : " options"}</option>{values.map(([value,text]) => <option value={value} key={value}>{text}</option>)}</select></label>)}
                 <button type="button" className={styles.filterClear} onClick={clearFilters}>Clear filters</button>
             </div>
             <div className={styles.sheetActions}><button type="button" className={styles.primary} onClick={closeFilters}>Show {visible.length} {visible.length === 1 ? "bottle" : "bottles"}</button></div>

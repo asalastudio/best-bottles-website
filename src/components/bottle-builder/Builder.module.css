@@ -3,14 +3,21 @@
 .builder button { cursor: pointer; }
 .builder button:disabled { cursor: default; opacity: .45; }
 .builder :is(button,a,select,input):focus-visible { outline: 2px solid #8b6f42; outline-offset: 4px; }
-.header { display: flex; justify-content: space-between; align-items: center; gap: 36px; margin-bottom: 28px; }
+.header { display: flex; justify-content: space-between; align-items: center; gap: 36px; margin-bottom: 14px; }
+/* The step bar stays in view under the site header at every step (Jordan, 2026-09-24):
+   completed nodes turn gold with a check, and the connector after each completed step fills. */
+.stepsBar { position: sticky; top: 120px; z-index: 7; display: flex; justify-content: center; margin: 0 0 18px; padding: 6px 0; background: #f5f3ef; border-bottom: 1px solid var(--line); }
+.steps button::after { transition: background-color .3s; }
+.steps .completeStep::after { background: var(--gold); }
+.steps .completeStep > span { animation: stepPop .35s ease-out; }
+@keyframes stepPop { 0% { transform: scale(.85); } 60% { transform: scale(1.12); } 100% { transform: scale(1); } }
 .backLink { display: inline-flex; align-items: center; gap: 8px; color: var(--quiet); font-size: 11px; margin-bottom: 12px; }
 .header h1 { font-family: var(--font-brand); font-size: clamp(36px, 3.5vw, 54px); letter-spacing: -.04em; line-height: 1.06;text-transform:none;letter-spacing:0}
 .header p { margin-top: 10px; color: var(--quiet); font-size: 13px; line-height: 1.65; }
-.steps { display: flex; gap: 14px; flex-shrink: 0; }
+.steps { display: flex; gap: 12px; flex-shrink: 0; }
 .steps button { display: flex; align-items: center; gap: 10px; font-size: 16px; position: relative; padding: 12px 0; color: #595750; }
 .steps button:disabled { opacity: 1; color: #6c6961; }
-.steps button:not(:last-child)::after { content: ''; width: 22px; height: 2px; margin-left: 4px; background: #d5d0c7; }
+.steps button:not(:last-child)::after { content: ''; width: 18px; height: 2px; margin-left: 2px; background: #d5d0c7; }
 .steps button > span { width: 42px; height: 42px; flex-shrink: 0; border: 1.5px solid #bfb9ac; background: #fff; border-radius: 50%; display: grid; place-items: center; font-size: 18px; font-weight: 600; }
 .steps button > span > svg { width: 20px; height: 20px; }
 .steps b { font-weight: 600; }
@@ -25,7 +32,7 @@
 .filterNote { margin-left: auto; display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--quiet); }
 .filterNote svg { color: var(--gold); }
 .textButton { color: #806336; font-size: 11px; text-decoration: underline; text-underline-offset: 3px; min-height: 32px; }
-.workspace { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.16fr) minmax(270px, .79fr); align-items: start; gap: 16px; scroll-margin-top: 120px; }
+.workspace { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.16fr) minmax(270px, .79fr); align-items: start; gap: 16px; scroll-margin-top: 200px; }
 .options, .summary { border: 1px solid var(--line); border-radius: 6px; background: #fff; }
 .options { padding: 24px 20px; min-height: 570px; }
 .optionHeader { margin-bottom: 24px; }
@@ -57,7 +64,7 @@
 .closureSection h3 { font-family: var(--font-brand); font-size: 24px; letter-spacing: -.025em;text-transform:none;letter-spacing:0}
 .closureSection > p { margin: 5px 0 16px; }
 .previous { display: inline-flex; align-items: center; gap: 7px; font-size: 11px; color: var(--quiet); margin-top: 26px; min-height: 36px; }
-.preview { position: sticky; top: 126px; border: 1px solid var(--line); border-radius: 6px; background: #eeebe5; min-height: 570px; overflow: hidden; display: flex; flex-direction: column; isolation: isolate; }
+.preview { position: sticky; top: 200px; border: 1px solid var(--line); border-radius: 6px; background: #eeebe5; min-height: 570px; overflow: hidden; display: flex; flex-direction: column; isolation: isolate; }
 .previewHeader { display: flex; justify-content: space-between; align-items: center; padding: 23px 22px 0; gap: 12px; }
 .previewHeader > span:first-child { font-size: 8px; letter-spacing: .15em; color: #79746b; }
 .liveDot { display: flex; align-items: center; gap: 5px; font-size: 9px; color: #69695f; white-space: nowrap; }
@@ -80,7 +87,7 @@
 .previewCaption h2 { font-family: var(--font-brand); font-size: 28px; line-height: 1.1; letter-spacing: -.025em;text-transform:none;letter-spacing:0}
 .previewCaption p { color: var(--quiet); font-size: 11px; margin-top: 9px; }
 .previewEmpty { flex: 1; display: grid; align-content: center; justify-items: center; gap: 16px; color: var(--quiet); min-height: 420px; font-size: 13px; }
-.summary { position: sticky; top: 126px; padding: 23px 20px 18px; }
+.summary { position: sticky; top: 200px; padding: 23px 20px 18px; }
 .summaryHeading { display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; }
 .summaryNextAction { margin: 0 0 16px; }
 .summaryNextAction .primary { width: 100%; }
@@ -104,7 +111,14 @@
 .quantity input::-webkit-inner-spin-button, .quantity input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
 .case { margin-top: 10px; font-size: 9px; line-height: 1.8; color: var(--quiet); }
 .case button { text-decoration: underline; text-underline-offset: 3px; color: #806336; margin-left: 4px; }
-.minimum { margin: 15px 0 18px; font-size: 10px; color: var(--quiet); line-height: 1.6; }
+.minimum { margin: 15px 0 18px; font-size: 12px; color: var(--quiet); line-height: 1.6; }
+/* price on screen from the first click (2026-09-24 audit): tile prices, the running price, and the minimum-order meter */
+.option .tilePrice { display: block; margin-top: 5px; font-size: 12px; font-weight: 600; color: #252523; font-variant-numeric: tabular-nums; }
+.fromPrice { display: grid; gap: 4px; padding-bottom: 14px; }
+.fromPrice strong { font-size: 21px; font-weight: 600; letter-spacing: -.02em; color: #252523; font-variant-numeric: tabular-nums; }
+.fromPrice small { font-size: 12px; color: var(--quiet); line-height: 1.5; }
+.meter { height: 6px; margin-top: 8px; border-radius: 3px; background: #ece7dd; overflow: hidden; }
+.meter i { display: block; height: 100%; background: var(--gold); border-radius: 3px; transition: width .2s; }
 .minimum span { display: flex; gap: 5px; align-items: center; color: #536a46; }
 .minimum strong { font-weight: 500; color: #806336; display: block; }
 .minimum button { display: block; color: #806336; text-decoration: underline; text-underline-offset: 3px; margin-top: 4px; min-height: 26px; }

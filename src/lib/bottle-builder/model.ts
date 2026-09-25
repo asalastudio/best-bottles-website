@@ -53,6 +53,14 @@ export type BuilderBody = {
     neck: string;
     configurations: BuilderConfiguration[];
     unavailableFinishes?: { id: string; color: string; fitment: string; closure: string; imageUrl: string }[];
+    /** First paint sends one configuration per glass colour (chooserBodies);
+     * the rest arrive from /api/bottle-builder/bodies once the bottle is chosen. */
+    chooserOnly?: boolean;
+    /** Every fitment the full body offers, so filters work before it loads. */
+    fitments?: string[];
+    /** Cheapest 1-piece price across the full body, and per glass colour. */
+    priceFrom?: number | null;
+    colorPriceFrom?: Record<string, number | null>;
 };
 export type BuilderSelection = {
     bodyId: string | null;
@@ -474,6 +482,52 @@ export function builderCartItem(config: BuilderConfiguration, quantity: number):
     if (unitPrice == null || !Number.isFinite(unitPrice) || unitPrice <= 0 || !config.product.shopifyVariantId
         || config.product.shopifySellable === false) throw new Error("This combination is no longer available.");
     return { ...config.product, quantity, unitPrice };
+}
+
+/** A fitment whose SKUs on this glass have no layered kit yet (every 5 ml cobalt
+ * plastic roller, 2026-09-24): preview a sibling's mechanism — same physical body,
+ * same fitment, another glass — registered onto this glass's universal body.
+ * Components are universal to a neck finish; the body is ground truth, and
+ * registerVintagePreview does the seating by glass diameter and baseline. The
+ * donor's closure never comes along (previewParts drops it at the fitment stage)
+ * and the reference must be a full kit so its own glass, not the donor's, is drawn.
+ * Display only: the configuration the shopper buys is unchanged. */
+export function borrowedFitmentPreview(body: BuilderBody | null, color: string | null, fitment: string | null,
+    reference: BuilderConfiguration | undefined): BuilderConfiguration | null {
+    if (!body || !color || !fitment || reference?.kit?.completeness !== "full") return null;
+    const donor = body.configurations.find(config => config.fitment === fitment && config.kit?.completeness === "full"
+        && config.kit.canvas.width === reference.kit!.canvas.width && config.kit.canvas.height === reference.kit!.canvas.height
+        && config.kit.parts.some(part => part.slot !== "body" && !isClosurePart(part)));
+    if (!donor?.kit) return null;
+    // registerVintagePreview scales by the body layer's bounding-box width and aligns
+    // baselines. A clear glass layer carries halo pixels a cobalt one lacks (259 vs
+    // 241 px on the 5 ml), which shrank the borrowed roller 7% and lifted it off the
+    // neck. Seat-to-baseline height is the same physical landmark on every glass of
+    // one body, so give the donor body a virtual box whose width encodes that height
+    // ratio: the registration then scales by glass height and lands the donor's seat
+    // exactly on this glass's seat.
+    const refBody = reference.kit.parts.find(part => part.slot === "body");
+    const donorHeight = donor.kit.anchors.baselineY - donor.kit.anchors.seatY;
+    const refHeight = reference.kit.anchors.baselineY - reference.kit.anchors.seatY;
+    if (!refBody || !(donorHeight > 0) || !(refHeight > 0)) return null;
+    const half = (refBody.bounds.right - refBody.bounds.left) * donorHeight / refHeight / 2;
+    const axis = donor.kit.anchors.neckAxisX ?? donor.kit.anchors.axisX;
+    const parts = donor.kit.parts.map(part => part.slot !== "body" ? part
+        : { ...part, bounds: { left: axis - half, right: axis + half, top: donor.kit!.anchors.seatY, bottom: donor.kit!.anchors.baselineY } });
+    return { ...donor, id: `${donor.id}~${color}`, color, kit: { ...donor.kit, parts }, bodyImage: reference.bodyImage, photoUrl: null, previewKit: undefined, chooserKit: undefined };
+}
+
+/** The cheapest and dearest charged unit price among the configurations a
+ * partial selection can still become, so a price is on screen from the first
+ * click. Same quantity and merged-SKU cart rule as builderOrder. */
+export function builderPriceRange(configs: BuilderConfiguration[], quantity: number, cart: CartItem[]) {
+    const qty = Number.isSafeInteger(quantity) && quantity >= 1 ? Math.min(quantity, MAX_QUANTITY) : 1;
+    const prices = configs.map(config => {
+        const existing = cart.find(item => item.graceSku === config.product.graceSku)?.quantity ?? 0;
+        return resolveChargedUnitPrice(qty + existing, config.product);
+    }).filter((price): price is number => price != null && Number.isFinite(price) && price > 0);
+    if (!prices.length) return null;
+    return { min: Math.min(...prices), max: Math.max(...prices) };
 }
 
 /** Match the cart's merged-SKU pricing, in cents, including any tier change. */
