@@ -5,6 +5,27 @@
     "component": "graceSku",
     "assembly": "graceSku"
   },
+  "rulings": [
+    {
+      "date": "2026-09-24",
+      "by": "Jordan",
+      "rule": "Plastic bottles are their own compatibility class. A 13-415 neck on a plastic bottle does not make the 13-415 glass-bottle components compatible with it, nor it with them.",
+      "applies": "bodies.compatibilityClass = plastic-bottle; their listed glass components are not resolved"
+    },
+    {
+      "date": "2026-09-24",
+      "by": "Jordan",
+      "rule": "CMP-SPR-CLR-30ML (PB1ozSpryNat) and CMP-SPR-SLV- (PB1ozSprySl) are plastic bottles, not components; remove them from every component list.",
+      "applies": "assemblies: excluded from listed components before resolution (494 13-415 lists carried them)"
+    }
+  ],
+  "componentListExclusions": {
+    "CMP-SPR-CLR-30ML": "PB1ozSpryNat \u2014 1 oz plastic bottle with clear spray top; a product, not a component",
+    "CMP-SPR-SLV-": "PB1ozSprySl \u2014 1 oz plastic bottle with silver spray top; a product, not a component"
+  },
+  "ruledBodyClasses": {
+    "Plastic Bottle": "plastic-bottle"
+  },
   "necks": {
     "(none)": {
       "kind": "non-thread",
@@ -77,13 +98,14 @@
         "Plastic Roller Ball": 144
       },
       "assemblies": {
-        "candidate": 515,
+        "candidate": 21,
         "retired": 31,
-        "verified": 4
+        "verified": 498
       },
       "notes": [
         "Roller insert (plastic or metal ball) is a separate part beneath the roll-on cap; inserts have no standalone component rows.",
-        "Short ribbed caps (black, white), short lined metal caps (6) and tall 24 mm liner caps (gold, silver) are separate options; tall liner caps are not roll-on caps."
+        "Short ribbed caps (black, white), short lined metal caps (6) and tall 24 mm liner caps (gold, silver) are separate options; tall liner caps are not roll-on caps.",
+        "The 1 oz plastic spray bottles (PB1ozSpryNat, PB1ozSprySl) carry a 13-415 neck but are their own class: no 13-415 glass component fits them (Jordan, 2026-09-24)."
       ],
       "matrixAcceptance": {
         "bodyFormats": 15,

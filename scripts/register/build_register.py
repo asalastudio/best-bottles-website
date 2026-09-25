@@ -55,10 +55,40 @@ MATRIX_ACCEPTANCE = {
     "12mm": {"assemblies": 4, "source": "small-format-neck-matrix-13-425-8-425-12mm-17x11.pdf"},
 }
 
+# Rulings (Jordan, 2026-09-24). Complete products that were pasted into the shared 13-415
+# component list, and body classes that never share components with glass bottles even when
+# the neck finish matches: "these are actual bottles that are 13-415, but they're plastic
+# bottles … not compatible with the other 13-415 components, so they should be in their own class."
+COMPONENT_LIST_EXCLUSIONS = {
+    "CMP-SPR-CLR-30ML": "PB1ozSpryNat — 1 oz plastic bottle with clear spray top; a product, not a component",
+    "CMP-SPR-SLV-": "PB1ozSprySl — 1 oz plastic bottle with silver spray top; a product, not a component",
+}
+RULED_BODY_CLASSES = {"Plastic Bottle": "plastic-bottle"}
+RULINGS = [
+    {"date": "2026-09-24", "by": "Jordan", "rule": "Plastic bottles are their own compatibility class. A 13-415 neck on a plastic bottle does not make the 13-415 glass-bottle components compatible with it, nor it with them.",
+     "applies": "bodies.compatibilityClass = plastic-bottle; their listed glass components are not resolved"},
+    {"date": "2026-09-24", "by": "Jordan", "rule": "CMP-SPR-CLR-30ML (PB1ozSpryNat) and CMP-SPR-SLV- (PB1ozSprySl) are plastic bottles, not components; remove them from every component list.",
+     "applies": "assemblies: excluded from listed components before resolution (494 13-415 lists carried them)"},
+]
+
+
+def compatibility_class(row: dict) -> tuple[str, str]:
+    """(class, source). Glass bottles share components by neck finish; ruled classes stand alone;
+    other non-glass categories stand alone by assumption until ruled."""
+    category = row.get("category") or ""
+    neck = norm_neck(row.get("neckThreadSize"))
+    if category in ("Glass Bottle", "Lotion Bottle"):
+        return f"glass-{neck or 'no-neck'}", "glass shares components by neck finish"
+    if category in RULED_BODY_CLASSES:
+        return RULED_BODY_CLASSES[category], "jordan-2026-09-24"
+    return slug(category) or "unclassified", "assumed-by-category (not yet ruled)"
+
+
 # Rules the matrices state that the data alone does not: keep them explicit and sourced.
 NECK_RULES = {
     "13-415": {"notes": ["Roller insert (plastic or metal ball) is a separate part beneath the roll-on cap; inserts have no standalone component rows.",
-                          "Short ribbed caps (black, white), short lined metal caps (6) and tall 24 mm liner caps (gold, silver) are separate options; tall liner caps are not roll-on caps."]},
+                          "Short ribbed caps (black, white), short lined metal caps (6) and tall 24 mm liner caps (gold, silver) are separate options; tall liner caps are not roll-on caps.",
+                          "The 1 oz plastic spray bottles (PB1ozSpryNat, PB1ozSprySl) carry a 13-415 neck but are their own class: no 13-415 glass component fits them (Jordan, 2026-09-24)."]},
     "17-415": {"notes": ["Assembly paths: ROLLER = one insert + one of 10 outer caps; SPRAY = one of 6 fine-mist finishes; PUMP = one of 3 treatment finishes.",
                           "10 caps × 2 roller materials + 6 sprayers + 3 pumps = 29 options per glass finish."]},
     "18-415": {"notes": ["Reducer is an insert beneath reducer-plus-cap assemblies, not a cap finish.",
@@ -263,9 +293,11 @@ def main() -> int:
         dims = body_dims.get(f"{slug(first.get('family'))}-{cap}ml-{neck}", {})
         representative = sorted(current or members, key=lambda m: (m.get("stockStatus") != "In Stock", m.get("graceSku") or ""))[0]
         cap_off = [m.get("imageUrlCapOff") for m in current if m.get("imageUrlCapOff")]
+        body_class, class_source = compatibility_class(first)
         bodies.append({
             "bodyId": body_id, "builderBodyId": builder_ids[body_id], "family": first.get("family") or "", "shape": first.get("shape") or "",
             "capacityMl": cap, "neck": neck, "category": first.get("category") or "",
+            "compatibilityClass": body_class, "classSource": class_source,
             "glassVariants": "; ".join(sorted({m.get("color") or "" for m in current} - {""})),
             "currentRecords": len(current), "retiredRecords": len(members) - len(current),
             "fitmentTypes": "; ".join(sorted({m.get("applicator") or "" for m in current} - {""})),
@@ -287,9 +319,13 @@ def main() -> int:
     assemblies = []
     for r in sorted(bottle_rows, key=lambda x: (norm_neck(x.get("neckThreadSize")), x.get("family") or "", float(x.get("capacityMl") or 0), x.get("graceSku") or "")):
         neck = norm_neck(r.get("neckThreadSize"))
-        listed = [c for c in (r.get("components") or []) if c]
+        body_class, _ = compatibility_class(r)
+        raw_listed = [c for c in (r.get("components") or []) if c]
+        excluded = [c for c in raw_listed if c in COMPONENT_LIST_EXCLUSIONS]
+        listed = [c for c in raw_listed if c not in COMPONENT_LIST_EXCLUSIONS]
+        isolated = body_class in RULED_BODY_CLASSES.values()
         resolved, foreign, misfiled, labels, unknown = [], [], [], [], []
-        for c in listed:
+        for c in ([] if isolated else listed):
             comp = component_by_grace.get(c)
             if comp:
                 (foreign if comp["neck"] and neck and comp["neck"] != neck else resolved).append(f"{c}@{comp['neck']}" if comp["neck"] and neck and comp["neck"] != neck else c)
@@ -309,8 +345,10 @@ def main() -> int:
             status, reason = "quarantine", f"non-thread neck '{neck}' — classify before composing"
         elif foreign:
             status, reason = "quarantine", f"component on another neck: {', '.join(foreign)}"
+        elif isolated:
+            status, reason = "candidate", f"own class ({body_class}): " + (f"the {len(listed)} listed {neck} glass components are not compatible (ruling 2026-09-24)" if listed else "no components ruled compatible yet")
         elif listed and not (unknown or misfiled or labels):
-            status, reason = "verified", "every listed component resolves to a component record on the same neck"
+            status, reason = "verified", "every listed component resolves to a component record on the same neck" + (f"; {len(excluded)} pasted product(s) excluded by rule" if excluded else "")
         elif listed:
             problems = []
             if labels:
@@ -324,8 +362,8 @@ def main() -> int:
             status, reason = "candidate", "no component list on the record; thread match only"
         assemblies.append({
             "graceSku": r.get("graceSku"), "websiteSku": r.get("websiteSku") or "", "bodyId": body_of_row[r.get("graceSku")], "neck": neck,
-            "category": r.get("category") or "", "glass": r.get("color") or "", "fitmentType": r.get("applicator") or "", "capColor": r.get("capColor") or "", "capStyle": r.get("capStyle") or "",
-            "assemblyType": r.get("assemblyType") or "", "listedComponentCount": len(listed), "resolvedComponents": "; ".join(resolved),
+            "category": r.get("category") or "", "compatibilityClass": body_class, "glass": r.get("color") or "", "fitmentType": r.get("applicator") or "", "capColor": r.get("capColor") or "", "capStyle": r.get("capStyle") or "",
+            "assemblyType": r.get("assemblyType") or "", "listedComponentCount": len(listed), "excludedByRule": "; ".join(excluded), "resolvedComponents": "; ".join(resolved),
             "unresolvedComponents": "; ".join(unknown + misfiled + labels + foreign), "status": status, "statusReason": reason,
             "stockStatus": r.get("stockStatus") or "", "verified": "" if r.get("verified") is None else r.get("verified"),
             "capOffPlate": r.get("imageUrlCapOff") or "", "productUrl": r.get("productUrl") or "",
@@ -377,7 +415,8 @@ def main() -> int:
 
     # ---------- rules ----------
     all_necks = sorted({b["neck"] for b in bodies} | {c["neck"] for c in components})
-    rules = {"generatedAt": today, "keys": {"body": "bodyId = [shape-]profile-<capacity>ml-<neck>", "component": "graceSku", "assembly": "graceSku"}, "necks": {}}
+    rules = {"generatedAt": today, "keys": {"body": "bodyId = [shape-]profile-<capacity>ml-<neck>", "component": "graceSku", "assembly": "graceSku"},
+             "rulings": RULINGS, "componentListExclusions": COMPONENT_LIST_EXCLUSIONS, "ruledBodyClasses": RULED_BODY_CLASSES, "necks": {}}
     for neck in all_necks:
         nb = [b for b in bodies if b["neck"] == neck and b["status"] == "current"]
         nc = [c for c in components if c["neck"] == neck and c["status"] == "current"]
@@ -409,6 +448,11 @@ def main() -> int:
 
     # ---------- report ----------
     status_counts = Counter(a["status"] for a in assemblies)
+    excluded_count = sum(1 for a in assemblies if a["excludedByRule"])
+    isolated_bodies = [b for b in bodies if b["classSource"] == "jordan-2026-09-24"]
+    rulings_lines = ["## Rulings applied", ""] + [f"- **{r['date']} · {r['by']}** — {r['rule']} _(applies: {r['applies']})_" for r in RULINGS] + [
+        f"- Effect this build: pasted products removed from **{excluded_count}** component lists; **{len(isolated_bodies)}** bodies in the ruled `plastic-bottle` class ({', '.join(b['bodyId'] for b in isolated_bodies)}); "
+        f"{sum(1 for b in bodies if b['classSource'].startswith('assumed'))} other non-glass bodies stand in classes assumed from their category until ruled.", ""]
     lines = [f"# Component register — Phase 1 reconciliation ({today})", "",
              f"Source: Convex dev export ({len(rows)} rows, collected {str(data.get('collectedAt', ''))[:19]}Z), "
              f"PSD library inventory ({len(library_rows)} PSDs), body-dims ({len(body_dims)} keys), 23 Sep review files ({len(review_items)} items). Read-only.", "",
@@ -418,6 +462,7 @@ def main() -> int:
              f"**{sum(1 for c in components if c['psdStem'] and c['status'] == 'current')} current components have a library PSD** ({sum(1 for c in components if c['psdMatch'] == 'alias-map')} via alias-map, {sum(1 for c in components if c['psdMatch'] == 'case-insensitive')} case-insensitive)",
              "- Assemblies: " + ", ".join(f"**{n} {s}**" for s, n in sorted(status_counts.items(), key=lambda kv: -kv[1])),
              f"- Quarantine rows: {len(quarantine)} (see quarantine.csv)", "",
+             *rulings_lines,
              "## Per neck", "",
              "| neck | bodies | glass variants | components | verified | candidate | quarantine | exception | retired |", "|---|---|---|---|---|---|---|---|---|"]
     for neck in all_necks:

@@ -6,8 +6,14 @@ Source: Convex dev export (2540 rows, collected 2026-09-25T06:24:53Z), PSD libra
 
 - Bodies: **94 current** (3 retired-only) across 34 neck groups
 - Components: **136 current**, 24 retired, 16 quarantined; **109 current components have a library PSD** (0 via alias-map, 34 case-insensitive)
-- Assemblies: **1528 verified**, **598 candidate**, **129 retired**, **55 quarantine**, **2 exception**
+- Assemblies: **2022 verified**, **129 retired**, **104 candidate**, **55 quarantine**, **2 exception**
 - Quarantine rows: 120 (see quarantine.csv)
+
+## Rulings applied
+
+- **2026-09-24 · Jordan** — Plastic bottles are their own compatibility class. A 13-415 neck on a plastic bottle does not make the 13-415 glass-bottle components compatible with it, nor it with them. _(applies: bodies.compatibilityClass = plastic-bottle; their listed glass components are not resolved)_
+- **2026-09-24 · Jordan** — CMP-SPR-CLR-30ML (PB1ozSpryNat) and CMP-SPR-SLV- (PB1ozSprySl) are plastic bottles, not components; remove them from every component list. _(applies: assemblies: excluded from listed components before resolution (494 13-415 lists carried them))_
+- Effect this build: pasted products removed from **495** component lists; **5** bodies in the ruled `plastic-bottle` class (cylinder-114ml-no-neck, cylinder-227ml-no-neck, cylinder-454ml-no-neck, plastic-bottle-10ml-no-neck, plastic-bottle-30ml-13-415); 19 other non-glass bodies stand in classes assumed from their category until ruled.
 
 ## Per neck
 
@@ -17,7 +23,7 @@ Source: Convex dev export (2540 rows, collected 2026-09-25T06:24:53Z), PSD libra
 | 10mm | 1 | 1 | 0 | 0 | 0 | 3 | 0 | 0 |
 | 11mm | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 0 |
 | 12mm | 2 | 1 | 0 | 0 | 4 | 0 | 0 | 0 |
-| 13-415 | 17 | 5 | 25 | 4 | 515 | 0 | 0 | 31 |
+| 13-415 | 17 | 5 | 25 | 498 | 21 | 0 | 0 | 31 |
 | 13-425 | 3 | 4 | 2 | 0 | 16 | 0 | 0 | 0 |
 | 13mm | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 |
 | 14.3mm | 2 | 1 | 0 | 0 | 2 | 0 | 0 | 0 |
@@ -151,7 +157,7 @@ The matrices counted **Glass Bottle** records only; the register also carries at
 ## Catalogue data defects the register surfaced (Convex, not code)
 
 - **7 assemblies list component TYPE LABELS instead of SKUs** (e.g. `Roll-On Cap`, `Sprayer`): 13-415 4, 17-415 2, 20-410 1. Samples: GBAtom5Blk, GBAtom5PnkDot, GBCyl5WhtSht, GBTallCyl9WhtSht, GBCylSwrl9MtlRollWht
-- **495 assemblies list a component that is not a Component row**: `CMP-SPR-CLR-30ML` is category Plastic Bottle (×495), `CMP-SPR-SLV-` is category Plastic Bottle (×495)
+- **0 assemblies list a component that is not a Component row**: 
 - **0 assemblies list a SKU with no record at all**: 
 
 ## Assemblies with no component list — 96
