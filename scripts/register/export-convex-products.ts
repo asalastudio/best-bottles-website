@@ -23,7 +23,8 @@ async function main() {
     const rows: Record<string, unknown>[] = [];
     let cursor: string | null = null;
     for (;;) {
-        const page = await client.action(api.products.getProductExportPage, { cursor, numItems: 500 });
+        const page: { page: Record<string, unknown>[]; isDone: boolean; continueCursor: string } =
+            await client.action(api.products.getProductExportPage, { cursor, numItems: 500 });
         rows.push(...page.page);
         if (page.isDone) break;
         cursor = page.continueCursor;
