@@ -10,6 +10,9 @@ const LEGACY_PRODUCT_ROUTE_OVERRIDES: Record<string, string> = {
     "cylinder-9ml-17-415": "cylinder-9ml-clear-17-415-rollon",
     "cylinder-9ml-white-13-415": "cylinder-9ml-clear-13-415",
     "cylinder-9ml-white-17-415-rollon": "cylinder-9ml-clear-17-415-rollon",
+    // The 2026-09-20 Shopify webhook split the 5 ml Slim atomizers into this
+    // group; they moved back into atomizer-5ml on 2026-09-25 and it is empty.
+    "atomizer-5ml-slim": "atomizer-5ml",
 };
 
 export function isLegacyProductRouteAlias(slug: string): boolean {

@@ -36,6 +36,12 @@ describe("legacy product route overrides", () => {
         expect(getCanonicalProductSlug("cylinder-9ml-clear-18-400-glasswand")).toBe("vial-9ml-clear-18-400-glasswand");
     });
 
+    it("sends the emptied webhook Slim atomizer group to atomizer-5ml, keeping the SKU", () => {
+        expect(resolveProductPageRedirectTarget("atomizer-5ml-slim", { sku: "GBAtom5SlimGl" }))
+            .toBe("/products/atomizer-5ml?sku=GBAtom5SlimGl");
+        expect(getLegacyProductRouteOverride("atomizer-5ml")).toBeNull();
+    });
+
     it("leaves canonical slugs unchanged", () => {
         expect(getLegacyProductRouteOverride("diva-46ml-clear-18-415-perfumespray")).toBeNull();
         expect(getCanonicalProductSlug("diva-46ml-clear-18-415-perfumespray")).toBe("diva-46ml-clear-18-415-perfumespray");
