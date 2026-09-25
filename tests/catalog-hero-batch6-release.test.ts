@@ -12,28 +12,39 @@ import { getCatalogHero, getProductHero, resolveLiveCatalogCardHero } from '../s
 afterEach(() => vi.unstubAllEnvs());
 
 // Jordan, 2026-09-25, after reviewing the 13-415 family cards: "Regenerate all three plus Pillar and Bell".
-const SCOPE = { Royal: 3, Square: 3, Flair: 3, Bell: 3, Pillar: 2 };
+const SCOPE = { Royal: 3, Square: 3, Flair: 3, Bell: 3, Pillar: 3 };
 // Production's glass heights (mm without the cap), which the approved curve sizes each card from.
 const GLASS_MM: Record<string, number> = { Royal: 56, Square: 52, Flair: 56, Bell: 55, Pillar: 57 };
-const LEGACY_PHOTO = ['GBPillar9MtlRollBlkdot', 'GBPillar9SpryBlkMatt'];
+const LEGACY_PHOTO = ['GBPillar9BlkShSht', 'GBPillar9MtlRollBlkdot', 'GBPillar9SpryBlkMatt'];
+// The Pillar cap card never had a registry row (production filed the bottle in a corrupt group until the
+// 2026-09-25 move), so its identity comes from production alone; every other SKU already had a card.
+const NEW_CARD = 'GBPillar9BlkShSht';
 const SUPERSEDED_NEXT_BATCH = ['GBRoyal13Gl', 'GBRoyal13SpryGlMatt', 'GBRoyal13MtlRollBlkDot', 'GBFlair15Gl', 'GBFlair15SpryGlMatt', 'GBFlair15MtlRollBlkDot'];
 const SUPERSEDED_BATCH3 = ['GBSqr15Gl', 'GBSqr15SpryGlMatt', 'GBSqr15MtlRollBlkDot'];
 
 describe('Batch 6 catalog hero release (Royal, Square, Flair, Bell, Pillar)', () => {
-  it('ships the 14 approved exact-SKU Sunburst renders with intact image files', async () => {
-    expect(rows).toHaveLength(14);
-    expect(new Set(rows.map(row => row.websiteSku)).size).toBe(14);
+  it('ships the 15 approved exact-SKU Sunburst renders with intact image files', async () => {
+    expect(rows).toHaveLength(15);
+    expect(new Set(rows.map(row => row.websiteSku)).size).toBe(15);
     expect(approval.scope).toEqual(SCOPE);
     for (const [family, count] of Object.entries(SCOPE)) expect(rows.filter(row => row.family === family)).toHaveLength(count);
-    expect(approval.rows).toHaveLength(14);
+    expect(approval.rows).toHaveLength(15);
     for (const hero of rows) {
       const evidence = approval.rows.find(row => row.sku === hero.websiteSku)!;
       expect(evidence.status).toBe('approved');
-      // Every SKU already had a card; the identity the older registry recorded is unchanged.
-      const original = catalog.find(row => row.websiteSku === hero.websiteSku)!;
-      expect([hero.groupSlug, hero.graceSku, hero.shopifyVariantId, hero.family, hero.capacityMl]).toEqual([
-        original.groupSlug, original.graceSku, original.shopifyVariantId, original.family, original.capacityMl,
-      ]);
+      const original = catalog.find(row => row.websiteSku === hero.websiteSku);
+      if (hero.websiteSku === NEW_CARD) {
+        // No older card to agree with: the group is the one the Pillar rollers already carry.
+        expect(original).toBeUndefined();
+        expect([hero.groupSlug, hero.family, hero.capacityMl]).toEqual(['pillar-9ml-clear-13-415', 'Pillar', 9]);
+        expect(hero.graceSku).toBeTruthy();
+      } else {
+        // Every other SKU already had a card; the identity the older registry recorded is unchanged.
+        expect(original).toBeDefined();
+        expect([hero.groupSlug, hero.graceSku, hero.shopifyVariantId, hero.family, hero.capacityMl]).toEqual([
+          original!.groupSlug, original!.graceSku, original!.shopifyVariantId, original!.family, original!.capacityMl,
+        ]);
+      }
       expect(evidence.production.slug).toBe(hero.groupSlug);
       expect(evidence.production.color).toBe('Clear');
       expect(hero.bottleColor).toBe('Clear');
@@ -69,8 +80,10 @@ describe('Batch 6 catalog hero release (Royal, Square, Flair, Bell, Pillar)', ()
         expect(row.source.legacy ?? null).toBeNull();
       }
     }
-    expect(approval.held).toHaveProperty('GBPillar9BlkShSht');
-    expect(rows.some(row => row.websiteSku === 'GBPillar9BlkShSht')).toBe(false);
+    // The Pillar cap card was held on the first run and released the same day; nothing stays held.
+    expect(approval.held).toEqual({});
+    expect(approval.releasedFromHold).toHaveProperty(NEW_CARD);
+    expect(rows.some(row => row.websiteSku === NEW_CARD)).toBe(true);
   });
 
   it('replaces the Royal and Flair rows of the next batch and the Square rows of batch 3', () => {

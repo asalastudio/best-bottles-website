@@ -6,7 +6,7 @@
     "Square": 3,
     "Flair": 3,
     "Bell": 3,
-    "Pillar": 2
+    "Pillar": 3
   },
   "publication": false,
   "source": {
@@ -50,10 +50,9 @@
     "footRule": "lowest ink row inside the bottle's own columns (the Square glass foot is a separate PSD component)"
   },
   "qa": "Outline-only gate (row-filled components, so interior reflections seen through the open necks do not count as edges): Square x3, Flair cap and roller, Pillar cap pass IoU >= 0.995 and p99 <= 4 px; Royal x3, Flair spray, Pillar roller and spray sit at the measurement noise floor (IoU 0.9947-0.9961, p99 2.5-7.2 px); Bell x3 are 6-12 px at the shoulder (IoU 0.992-0.995). Every image reviewed by eye and approved by Jordan.",
-  "held": {
-    "GBPillar9BlkShSht": {
-      "reason": "rendered and approved (fitted sha256 758d0ebe54fdd69109da527eb92e4c51c2864a720405ff42a10b6e8b3ea14f48) but production still files the bottle in the corrupt group \"pillar-9ml-clear-Size: GBPillar9BlkSht Nemat In\"; release after products:moveProductToGroup into pillar-9ml-clear-13-415"
-    }
+  "held": {},
+  "releasedFromHold": {
+    "GBPillar9BlkShSht": "held on the first run (2026-09-25 midday) because production filed the bottle in the corrupt group \"pillar-9ml-clear-Size: GBPillar9BlkSht Nemat In\"; released the same evening after scripts/catalog-corrections/2026-09-25-pillar-cap-group-move.mjs moved it into pillar-9ml-clear-13-415"
   },
   "rows": [
     {
@@ -967,6 +966,82 @@
         "note": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/7. Bell 12ml/1. Bell 12ml (Uncapped) PSD/26. GBBell12MtlRollBlkDot.psd"
       },
       "promptSha256": "7e4b67efef474b23342904ec31a59b5bc52a63c09b01dfe86096ad1cfdc25232"
+    },
+    {
+      "sku": "GBPillar9BlkShSht",
+      "family": "Pillar",
+      "groupSlug": "pillar-9ml-clear-13-415",
+      "graceSku": "GB-PIL-CLR-9ML-CAP-BLK",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343700386084",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh76xyjyn5gc130x56b1svqqr18dskqa",
+        "slug": "pillar-9ml-clear-13-415",
+        "displayName": "9 ml Clear Pillar Bottle with Cap",
+        "color": "Clear",
+        "capColor": "Clear",
+        "applicator": "N/A",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch6-approved-2026-09-25/GBPillar9BlkShSht.b7bf285f01a4.webp",
+      "sha256": "b7bf285f01a415b4ed7e4f2fbb64540e596a744046e29b0ea36cd7671305affa",
+      "bytes": 1792288,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "758d0ebe54fdd69109da527eb92e4c51c2864a720405ff42a10b6e8b3ea14f48",
+      "sourceBytes": 3095357,
+      "sourceRenderSha256": "60feb0ee5a2349e24a616fb691f2480ed0b33479dfa67e8ac0ce77b06443ded7",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 57,
+        "targetPct": 37.87,
+        "landmarkRule": "shoulder",
+        "scaleFactor": 1.5123
+      },
+      "fit": {
+        "scale": 0.9993,
+        "shiftY": -1.2,
+        "shiftX": 1.5,
+        "p95": 2.93
+      },
+      "qaOutline": {
+        "iou": 0.9972,
+        "p95": 1.37,
+        "p99": 3.64,
+        "max": 7.15,
+        "pass": true
+      },
+      "qaRawMask": {
+        "iou": 0.997,
+        "p95": 1.31,
+        "p99": 3.63,
+        "max": 6.75,
+        "bgDevP95": 3,
+        "pass": true
+      },
+      "input": {
+        "file": "inputs/GBPillar9BlkShSht-input.png",
+        "sha256": "3016727866bb3de9136e8aa85892b87e32bd7877cda08694c7ec4d474b48aa3f"
+      },
+      "source": {
+        "psd": null,
+        "legacy": "https://www.bestbottles.com/images/store/enlarged_pics/GBPillar9BlkShSht.gif",
+        "sha256": "b1bf33b3bf5ba1a00fa217d6e5f3a0910f34c01f99f40055b6803167342eb254",
+        "note": "legacy:https://www.bestbottles.com/images/store/enlarged_pics/GBPillar9BlkShSht.gif"
+      },
+      "promptSha256": "16c3bffa2529d69e53b8f059dade4c86679894ed7cfda9afa72f9e0e66d0ca82"
     },
     {
       "sku": "GBPillar9MtlRollBlkdot",

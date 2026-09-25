@@ -1,7 +1,7 @@
-// Export the 14 batch-6 Sunburst heroes Jordan approved on 2026-09-25 ("approve all"):
-// Royal 13 ml, Square 15 ml, Flair 15 ml, Bell 10 ml (three cards each, cap / fine-mist / metal roller)
-// and Pillar 9 ml (metal roller card, fine-mist card). Jordan asked for all five to be regenerated
-// after reviewing the 13-415 family cards ("Regenerate all three plus Pillar and Bell").
+// Export the 15 batch-6 Sunburst heroes Jordan approved on 2026-09-25 ("approve all"):
+// Royal 13 ml, Square 15 ml, Flair 15 ml, Bell 10 ml and Pillar 9 ml (three cards each, cap /
+// fine-mist / metal roller). Jordan asked for all five to be regenerated after reviewing the
+// 13-415 family cards ("Regenerate all three plus Pillar and Bell").
 //
 // Sources: the exact-SKU master PSDs (BB-PSD-Files-Master / 5. 13-415 Bottles; the library files the
 // Bell as "12ml" and names its SKUs GBBell12…) except Pillar, which has no master PSD and was rendered
@@ -10,9 +10,9 @@
 // 91%) on production's glass heights (Royal 56, Square 52, Flair 56, Bell 55, Pillar 57 mm). The Square
 // foot is the lowest ink row inside the bottle's columns (its glass foot is a separate PSD component).
 //
-// Held: GBPillar9BlkShSht (rendered, approved) — production still files that bottle in the corrupt group
-// "pillar-9ml-clear-Size: GBPillar9BlkSht Nemat In"; it releases once the product is moved into
-// pillar-9ml-clear-13-415 (products:moveProductToGroup) and this script is re-run with it added.
+// GBPillar9BlkShSht (the Pillar cap card) was held from the first run: production filed that bottle in the
+// corrupt group "pillar-9ml-clear-Size: GBPillar9BlkSht Nemat In". It joined the release on 2026-09-25 after
+// scripts/catalog-corrections/2026-09-25-pillar-cap-group-move.mjs moved it into pillar-9ml-clear-13-415.
 //
 // Usage: node scripts/hero-families/release-batch6.cjs <lane-dir>
 //   <lane-dir> holds approval-candidates.json, fitted/, renders/ and the review sheets.
@@ -57,16 +57,18 @@ const APPROVED = {
     alt: '10 ml Clear Bell Fine Mist Spray Bottle with Shiny Black Sprayer and Cap' },
   GBBell10MtlRollBlkDot: { attempt: 'a1', fittedSha256: '67338faec32aff90c618400ae8d5d3364d4f1e26f96885fbb2cae4881c78bc78', renderSha256: 'd573c03dba1bc5a6dd0a7e2f79aa57ca39b47e8b5ca92ba147573288f75cd9c8',
     alt: '10 ml Clear Bell Roll-On Bottle with Metal Roller Ball and Black Dotted Cap' },
+  GBPillar9BlkShSht: { attempt: 'a1', fittedSha256: '758d0ebe54fdd69109da527eb92e4c51c2864a720405ff42a10b6e8b3ea14f48', renderSha256: '60feb0ee5a2349e24a616fb691f2480ed0b33479dfa67e8ac0ce77b06443ded7',
+    alt: '9 ml Clear Pillar Bottle with Shiny Black Short Cap' },
   GBPillar9MtlRollBlkdot: { attempt: 'a1', fittedSha256: 'ccc2c97818f3719e835553e2f8b8d6591b488068098487ff10561aca613c6b0c', renderSha256: '4ada3c681a64a0cdc22ad9932168914887fe1a35821f2062509979113f965f6a',
     alt: '9 ml Clear Pillar Roll-On Bottle with Metal Roller Ball and Black Dotted Cap' },
   GBPillar9SpryBlkMatt: { attempt: 'a1', fittedSha256: 'c8e8f6ab1aac3b4b37ad89b9ce7d6148d2717fb0a898c423a65c90f71b01ba65', renderSha256: 'a048c7d5050646e4125a0bb0903019d4d761285858f8d0c4ebad4395f549a82d',
     alt: '9 ml Clear Pillar Fine Mist Spray Bottle with Matte Black Sprayer and Cap' },
 };
-const EXPECTED = { Royal: 3, Square: 3, Flair: 3, Bell: 3, Pillar: 2 };
-const HELD = {
-  GBPillar9BlkShSht: {
-    reason: 'rendered and approved (fitted sha256 758d0ebe54fdd69109da527eb92e4c51c2864a720405ff42a10b6e8b3ea14f48) but production still files the bottle in the corrupt group "pillar-9ml-clear-Size: GBPillar9BlkSht Nemat In"; release after products:moveProductToGroup into pillar-9ml-clear-13-415',
-  },
+const EXPECTED = { Royal: 3, Square: 3, Flair: 3, Bell: 3, Pillar: 3 };
+// Nothing is held any more; the record of the Pillar cap hold and its release stays in approval.json.
+const HELD = {};
+const RELEASED_FROM_HOLD = {
+  GBPillar9BlkShSht: 'held on the first run (2026-09-25 midday) because production filed the bottle in the corrupt group "pillar-9ml-clear-Size: GBPillar9BlkSht Nemat In"; released the same evening after scripts/catalog-corrections/2026-09-25-pillar-cap-group-move.mjs moved it into pillar-9ml-clear-13-415',
 };
 
 async function productionHolder(websiteSku) {
@@ -154,7 +156,7 @@ async function main() {
       landmarkRule: 'shoulder = first row wider than 1.25x the neck on the open-neck reference; siblings by body width',
       footRule: 'lowest ink row inside the bottle\'s own columns (the Square glass foot is a separate PSD component)' },
     qa: 'Outline-only gate (row-filled components, so interior reflections seen through the open necks do not count as edges): Square x3, Flair cap and roller, Pillar cap pass IoU >= 0.995 and p99 <= 4 px; Royal x3, Flair spray, Pillar roller and spray sit at the measurement noise floor (IoU 0.9947-0.9961, p99 2.5-7.2 px); Bell x3 are 6-12 px at the shoulder (IoU 0.992-0.995). Every image reviewed by eye and approved by Jordan.',
-    held: HELD, rows: evidence,
+    held: HELD, releasedFromHold: RELEASED_FROM_HOLD, rows: evidence,
   }, null, 2) + '\n');
   for (const sheet of ['contact-approved.jpg', 'sizing-proof.jpg', 'review-A.jpg', 'review-B.jpg', 'review-C.jpg']) {
     fs.copyFileSync(path.join(lane, sheet), path.join(docs, sheet));
