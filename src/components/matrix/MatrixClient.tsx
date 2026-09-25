@@ -110,7 +110,26 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
     const [error, setError] = useState("");
     const optionHeading = useRef<HTMLHeadingElement>(null);
     const optionsScroller = useRef<HTMLFieldSetElement>(null);
+    const builderRoot = useRef<HTMLDivElement>(null);
+    const stepsBar = useRef<HTMLDivElement>(null);
     const tracked = useRef(false);
+    // The site header is position: fixed and its height depends on the breakpoint; the steps bar and the
+    // workspace panels stick directly under it, so they read the live heights instead of a guessed 120px.
+    useEffect(() => {
+        const root = builderRoot.current;
+        if (!root) return;
+        const header = document.querySelector<HTMLElement>("header[class~='fixed']");
+        const apply = () => {
+            root.style.setProperty("--site-header-h", `${Math.round(header?.getBoundingClientRect().height ?? 0)}px`);
+            root.style.setProperty("--steps-h", `${Math.round(stepsBar.current?.getBoundingClientRect().height ?? 0)}px`);
+        };
+        apply();
+        if (typeof ResizeObserver !== "function") return;
+        const observer = new ResizeObserver(apply);
+        if (header) observer.observe(header);
+        if (stepsBar.current) observer.observe(stepsBar.current);
+        return () => observer.disconnect();
+    }, []);
     useEffect(() => {
         if (tracked.current) return;
         tracked.current = true;
@@ -269,13 +288,13 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
         pending={pending || awaitingBody} bodyNotice={bodyNotice} adding={adding} hydrated={isCartHydrated} error={error} lastAdded={lastAdded} cartProgress={cartProgress}
         hasIncludedCover={hasIncludedCover} showCover={showCover} onCover={() => setShowCover(value => !value)} chooserScale={b => chooserScale(b, bodies)} />;
 
-    return <div className={styles.builder} data-bottle-builder data-current-step={step} data-has-bottle={Boolean(body)} aria-busy={pending || adding}>
+    return <div ref={builderRoot} className={styles.builder} data-bottle-builder data-current-step={step} data-has-bottle={Boolean(body)} aria-busy={pending || adding}>
         <header className={styles.header}>
             <div><div className={styles.headerLinks}><Link className={styles.backLink} href={catalogHref}><ArrowLeft size={13} /> Back to bottles</Link><Link className={styles.mobileCartLink} href="/cart">View cart{isCartHydrated && items.length > 0 ? ` (${items.reduce((sum, item) => sum + item.quantity, 0)})` : ""}</Link></div>
                 <h1>Build Your Bottle</h1><p>Choose your bottle and glass, then how it dispenses or closes and the finish you like.</p></div>
         </header>
         {/* Sticky on desktop: the nodes light up and the connectors fill as each step completes, in view at every step. */}
-        <div className={styles.stepsBar}>
+        <div ref={stepsBar} className={styles.stepsBar}>
             <nav aria-label="Bottle building progress" className={styles.steps}>
                 {steps.map((label, index) => <button key={label} aria-current={step === index ? "step" : undefined}
                     disabled={adding || pending || (index === 1 && (!body || skipGlass)) || (index === 2 && !color) || (index === 3 && !fitment) || (index === 4 && !configuration)}
