@@ -57,16 +57,19 @@ describe("continuous catalog product grid", () => {
         }
     });
 
-    it("owns the hairline dividers and responsive columns", () => {
+    it("owns the hairline dividers and never goes past three across", () => {
         const source = readFileSync(
             join(process.cwd(), "src/components/catalog/CatalogProductGrid.tsx"),
             "utf8",
         );
-        expect(source).toContain("gap-px");
-        expect(source).toContain("border-champagne");
-        expect(source).toContain("grid-cols-2");
+        // Rules are top/left on the grid and right/bottom on each card, so a short last row has no filled gaps.
+        expect(source).toContain("border-l border-t border-[#e6dccd]");
+        expect(source).toContain("[&>*]:border-b [&>*]:border-r");
+        expect(source).not.toContain("gap-px");
         expect(source).toContain("lg:grid-cols-3");
-        expect(source).toContain("xl:grid-cols-4");
+        expect(source).not.toContain("xl:grid-cols-4");
+        // The card's Pack of menu hangs below the card, so nothing may clip it.
+        expect(source).not.toContain("overflow-hidden");
     });
 
     it("keeps the master continuous grid and gives Cylinder exact focused results", () => {
@@ -87,7 +90,8 @@ describe("continuous catalog product grid", () => {
         expect(cylinder).not.toContain("hover:shadow-md");
         expect(master).not.toContain("hover:bg-bone/25");
         expect(cylinder).not.toContain("hover:bg-bone/25");
-        expect(master).toContain("focus-within:outline");
+        // Keyboard focus outlines the card; a mouse click on a cap dot does not.
+        expect(master).toContain("has-[:focus-visible]:outline");
         expect(cylinder).toContain("focus-within:outline");
     });
 

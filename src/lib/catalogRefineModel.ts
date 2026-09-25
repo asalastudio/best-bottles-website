@@ -2,6 +2,7 @@ import { getShopCollection } from "./shopCollections";
 import {
     APPLICATOR_BUCKETS,
     catalogCategoryScopeLabel,
+    neckFacetLabel,
     resolveCapacityRange,
     type CatalogFacetKey,
     type CatalogFilters,
@@ -15,7 +16,7 @@ export type CatalogArrayFacet =
     | "colors"
     | "neckThreadSizes";
 
-export type CatalogFilterChipFacet = CatalogFacetKey | "search" | "shopCollection";
+export type CatalogFilterChipFacet = CatalogFacetKey | "search";
 
 export type CatalogFilterChip = {
     facet: CatalogFilterChipFacet;
@@ -25,7 +26,7 @@ export type CatalogFilterChip = {
 
 export function formatCatalogCapacityLabel(value: string): string {
     const range = resolveCapacityRange(value);
-    if (range) return `${range.label} — ${range.detail}`;
+    if (range) return `${range.label} (${range.detail})`;
     if (/\boz\b/i.test(value)) return value;
     const match = value.match(/^(\d+(?:\.\d+)?)\s*ml\b/i);
     if (!match) return value;
@@ -48,7 +49,7 @@ export function buildAppliedFilterChips(filters: CatalogFilters): CatalogFilterC
     if (filters.collection) chips.push({ facet: "collection", value: filters.collection, label: `Collection: ${filters.collection}` });
     for (const value of filters.applicators) {
         const label = APPLICATOR_BUCKETS.find((bucket) => bucket.value === value)?.label ?? value;
-        chips.push({ facet: "applicators", value, label: `Dispenser: ${label}` });
+        chips.push({ facet: "applicators", value, label: `Applicator: ${label}` });
     }
     for (const value of filters.rollerMaterials) {
         chips.push({ facet: "rollerMaterials", value, label: `Roller: ${value}` });
@@ -63,7 +64,7 @@ export function buildAppliedFilterChips(filters: CatalogFilters): CatalogFilterC
         chips.push({ facet: "capacities", value, label: `Capacity: ${formatCatalogCapacityLabel(value)}` });
     }
     for (const value of filters.neckThreadSizes) {
-        chips.push({ facet: "neckThreadSizes", value, label: `Neck: ${value}` });
+        chips.push({ facet: "neckThreadSizes", value, label: `Neck: ${neckFacetLabel(value)}` });
     }
     if (filters.componentType) {
         chips.push({ facet: "componentType", value: filters.componentType, label: `Component: ${filters.componentType}` });

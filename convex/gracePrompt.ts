@@ -215,13 +215,13 @@ Best Bottles is a SUPPLIER and SOURCING PARTNER — NOT a manufacturer.
 ### Practitioner Expertise — Our Competitive Moat
 Best Bottles uses the SAME bottles we sell for Nemat's own products — sold in Ulta, Sephora, and Whole Foods. If it's good enough for major retail, it's validated for professional use. This practitioner expertise is our primary differentiator — we are not just selling bottles, we are selling proven packaging solutions.
 
-### Vintage style bulb sprayer geometry and two-tone color rule (CRITICAL for ASP and AST applicators)
+### Vintage-style bulb sprayer geometry and two-tone color rule (CRITICAL for ASP and AST applicators)
 These applicators are ALWAYS two-tone — a fabric part and a metal part. Describe BOTH.
-When speaking to customers, call them **vintage style bulb sprayers** — they are vintage-style products, not antique or vintage goods. Internally they are stored as "Vintage Bulb Sprayer" / "Vintage Bulb Sprayer with Tassel".
+When speaking to customers, call them **vintage-style bulb sprayers** (always with the hyphen) — they are vintage-style products, not antique or vintage goods. Internally they are stored as "Vintage Bulb Sprayer" / "Vintage Bulb Sprayer with Tassel".
 
 Two variants:
-- **"Vintage Bulb Sprayer" (ASP)** = fabric-covered bulb mounted directly on the metal collar cap. No hose, no tassel. Customer-facing name: vintage style bulb sprayer.
-- **"Vintage Bulb Sprayer with Tassel" (AST)** = same bulb, plus a woven fabric hose connecting the bulb to the collar, plus a fabric tassel hanging from the bulb end. Customer-facing name: vintage style bulb sprayer with tassel.
+- **"Vintage Bulb Sprayer" (ASP)** = fabric-covered bulb mounted directly on the metal collar cap. No hose, no tassel. Customer-facing name: vintage-style bulb sprayer.
+- **"Vintage Bulb Sprayer with Tassel" (AST)** = same bulb, plus a woven fabric hose connecting the bulb to the collar, plus a fabric tassel hanging from the bulb end. Customer-facing name: vintage-style bulb sprayer with tassel.
 
 On the product row:
 - **capColor** = the **FABRIC** color (the bulb, plus the hose and tassel on AST — all one color). Examples: Red, Pink, Lavender, Ivory Gold, Black, White.

@@ -2,10 +2,9 @@
 
 import { useRegion } from "@/components/RegionProvider";
 
-import { BUILDER_COLLECTION_FITMENTS } from "@/lib/bottle-builder/collection-context";
-import { getShopCollection, SHOP_COLLECTIONS } from "@/lib/shopCollections";
+import { getShopCollection } from "@/lib/shopCollections";
 
-import { useState, useEffect, useMemo, useCallback, useRef, type ReactNode } from "react";
+import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import Image from "next/image";
 import LocaleLink from "@/components/LocaleLink";
 import { useRouter, usePathname } from "next/navigation";
@@ -16,25 +15,23 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import RefineSection from "@/components/catalog/RefineSection";
 import CatalogProductGrid from "@/components/catalog/CatalogProductGrid";
 import { useGrace } from "@/components/useGrace";
 import { getCatalogHero, getCatalogHeroProductHref, resolveLiveCatalogCardHero, type CatalogHero } from "@/lib/products/catalog-heroes";
 import { isOptimizableImageUrl } from "@/lib/products/optimizable-image";
 import CatalogCardPreview from "@/components/catalog/CatalogCardPreview";
 import CatalogCardPurchase from "@/components/catalog/CatalogCardPurchase";
-import { resolveCatalogCardPurchaseVariant } from "@/lib/products/catalog-card-purchase";
+import CatalogCapDots, { useCatalogCapPhotos } from "@/components/catalog/CatalogCapDots";
+import CatalogFilterSidebar from "@/components/catalog/CatalogFilterSidebar";
+import { catalogCardPurchaseOptions, resolveCatalogCardPurchaseVariant } from "@/lib/products/catalog-card-purchase";
 import { catalogCapKind } from "@/lib/products/catalog-cap-photos";
-import { client, isSanityConfigured } from "@/sanity/lib/client";
-import { urlFor } from "@/sanity/lib/image";
 import {
     catalogSortMenuOptions,
+    catalogFitmentLabel,
+    CATALOG_PRODUCT_TYPES,
+    productTypeCount,
     APPLICATOR_BUCKETS,
-    CAPACITY_RANGES,
-    CATEGORY_ORDER,
     COMPONENT_CATEGORIES,
-    capacityInRange,
-    type CatalogFacetKey,
     type SortValue,
     type CatalogFilters,
     type ViewMode,
@@ -42,7 +39,6 @@ import {
     filtersAreEmpty,
     activeFilterCount,
     catalogBreadcrumbSteps,
-    catalogResultScopeTitle,
     filtersToParams,
     paramsToFilters,
     catalogSearchRecoverySuggestions,
@@ -50,8 +46,6 @@ import {
 import {
     buildAppliedFilterChips,
     removeCatalogFilterChip,
-    toggleCatalogFacetValue,
-    type CatalogArrayFacet,
 } from "@/lib/catalogRefineModel";
 import {
     getCatalogCardVariantPreviews,
@@ -72,7 +66,7 @@ import { describeSuggestion, type InterpretationMode, type InterpretationSuggest
 import SearchClosestMatches from "@/components/catalog/SearchClosestMatches";
 import { useSearchInterpretation } from "@/components/catalog/useSearchInterpretation";
 import { familyGuideHref, isFamilyLandingFamily } from "@/lib/products/focused-shopping";
-import { localizeCollectionName, localizeCollectionSubtitle, localizeFamilyName, localizeMerchandisingName } from "@/i18n/catalogCopy";
+import { localizeCollectionName, localizeFamilyName, localizeMerchandisingName } from "@/i18n/catalogCopy";
 import { localizeHref, stripLocalePrefix } from "@/i18n/paths";
 import { useAppLocale, useCopy } from "@/i18n/useCopy";
 
@@ -81,65 +75,17 @@ import { useAppLocale, useCopy } from "@/i18n/useCopy";
 const PAGE_SIZE = 24;
 const SEARCH_DEBOUNCE_MS = 300;
 
-// ─── Sanity Family Banner ─────────────────────────────────────────────────────
-
-// Module-level cache so the Sanity query only runs once per session
-const familyImageCache = new Map<string, string>();
-
-function useFamilyBannerImage(family: string | null): string | null {
-    const [imgUrl, setImgUrl] = useState<string | null>(null);
-
-    useEffect(() => {
-        if (!family || !isSanityConfigured) return;
-        const cached = familyImageCache.get(family);
-        if (cached !== undefined) { setImgUrl(cached || null); return; } // eslint-disable-line react-hooks/set-state-in-effect -- early return from cache
-        client
-            .fetch<{ image?: { asset?: { _ref: string }; _type?: string } } | null>(
-                `*[_type == "homepagePage"][0].designFamilyCards[family == $fam][0] { image }`,
-                { fam: family }
-            )
-            .then((card) => {
-                const url = card?.image ? urlFor(card.image) : "";
-                familyImageCache.set(family, url);
-                setImgUrl(url || null);
-            })
-            .catch(() => { familyImageCache.set(family, ""); });
-    }, [family]);
-
-    return imgUrl;
-}
-
-function FamilyBanner({ family }: { family: string }) {
-    const imgUrl = useFamilyBannerImage(family);
-    if (!imgUrl) return null;
-    return (
-        <div className="relative w-full h-40 sm:h-52 lg:h-60 rounded-sm overflow-hidden mb-6 sm:mb-8 -ml-0">
-            <Image
-                src={imgUrl}
-                alt={family}
-                fill
-                className="object-cover object-center"
-                sizes="100vw"
-                unoptimized={!isOptimizableImageUrl(imgUrl)}
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-obsidian/60 via-obsidian/20 to-transparent" />
-            <div className="absolute bottom-5 left-6">
-                <p className="text-[10px] uppercase tracking-[0.25em] font-bold text-white/70 mb-1">Design Family</p>
-                <p className="font-serif text-2xl sm:text-3xl text-white font-medium">{family}</p>
-            </div>
-        </div>
-    );
-}
-
-// Valid glass colors — only these appear in the Glass Color filter.
-const COLOR_SWATCH_MAP: Record<string, string> = {
-    Clear: "bg-white border border-champagne/60",
-    Frosted: "bg-gradient-to-br from-white to-slate-200 border border-champagne/60",
-    "Cobalt Blue": "bg-blue-800",
-    Cobalt: "bg-blue-800",
-    Amber: "bg-amber-600",
-    Green: "bg-emerald-600",
-    Swirl: "bg-gradient-to-br from-sky-100 to-slate-300 border border-champagne/60",
+/** Product type switch labels (title row) and the live-count wording for each. */
+const PRODUCT_TYPE_COPY = {
+    "Glass Bottle": "typeGlassBottles",
+    jars: "typeJars",
+    Component: "typeComponents",
+    "packaging-more": "typePackagingMore",
+} as const satisfies Record<(typeof CATALOG_PRODUCT_TYPES)[number]["value"], string>;
+const PRODUCT_TYPE_COUNT_COPY: Partial<Record<string, "countGlassBottles" | "countJars" | "countComponents">> = {
+    "Glass Bottle": "countGlassBottles",
+    jars: "countJars",
+    Component: "countComponents",
 };
 
 // CATEGORY_ORDER and COMPONENT_CATEGORIES come from src/lib/catalogFilters.ts —
@@ -227,7 +173,7 @@ function SkeletonCard() {
 function SkeletonGrid() {
     return (
         <CatalogProductGrid>
-            {Array.from({ length: 12 }).map((_, i) => (
+            {Array.from({ length: 9 }).map((_, i) => (
                 <SkeletonCard key={i} />
             ))}
         </CatalogProductGrid>
@@ -322,20 +268,32 @@ function ProductGroupCard({
         thumbnailUrl ??
         getFirstPreviewImageUrl(variantPreviews) ??
         null;
-    const cardSpecs = [
-        group.capacityMl != null ? `${group.capacityMl} ml` : group.capacity?.replace(/\s*\([^)]*\)/g, ""),
-        group.neckThreadSize,
-        displayHero?.bottleColor ?? group.color,
-    ].filter(Boolean).join(" · ");
     // The card sells exactly the assembly it pictures (hero SKU, else the
     // search-ranked or primary SKU) so quick add and the PDP link agree.
     const picturedSku = liveCard.picturedWebsiteSku ?? selected?.websiteSku ?? selected?.graceSku ?? null;
     const primarySku = primaryWebsiteSku ?? primaryGraceSku ?? null;
-    const purchaseVariant = useMemo(
-        () => resolveCatalogCardPurchaseVariant(variantSources, { picturedSku, primarySku, productTitle: customerDisplayName }),
-        [variantSources, picturedSku, primarySku, customerDisplayName],
-    );
+    const previews = variantPreviews ?? [];
+    const defaultPurchase = resolveCatalogCardPurchaseVariant(variantSources, { picturedSku, primarySku, productTitle: customerDisplayName });
+    // Each cap dot sells its own SKU; a dot with no sellable row never swaps the card.
+    const capPurchases = catalogCardPurchaseOptions(variantSources, previews, customerDisplayName);
+    const defaultSku = defaultPurchase?.websiteSku ?? defaultPurchase?.graceSku ?? picturedSku;
+    const defaultCap = previews.find((variant) => defaultSku && (variant.websiteSku === defaultSku || variant.graceSku === defaultSku)) ?? previews[0] ?? null;
+    const [pickedCapId, setPickedCapId] = useState<string | null>(null);
+    const pickedCap = previews.find((variant) => variant.id === pickedCapId && variant.id !== defaultCap?.id && capPurchases[variant.id]) ?? null;
+    const purchaseVariant = pickedCap ? capPurchases[pickedCap.id] : defaultPurchase;
+    const capKind = COMPONENT_CATEGORIES.has(group.category) ? null : catalogCapKind(group.applicatorTypes ?? [], previews);
+    const capPhoto = useCatalogCapPhotos({ capKind, neck: group.neckThreadSize, variants: previews });
+    const showCapDots = previews.length > 1 || (capKind != null && previews.length === 1);
 
+    // {capacity} · {neck} · {glass} · {fitment}, the fitment of the SKU being sold.
+    const soldRow = variantSources?.find((row) => purchaseVariant && (row.graceSku === purchaseVariant.graceSku || (row.websiteSku && row.websiteSku === purchaseVariant.websiteSku)));
+    const neckLabel = group.neckThreadSize && /^[\w\s./-]{1,14}$/.test(group.neckThreadSize) ? group.neckThreadSize : null;
+    const cardSpecs = [
+        group.capacityMl != null ? `${group.capacityMl} ml` : group.capacity?.replace(/\s*\([^)]*\)/g, ""),
+        neckLabel,
+        displayHero?.bottleColor ?? group.color,
+        catalogFitmentLabel(soldRow?.applicator ?? purchaseVariant?.applicator, soldRow?.ballMaterial),
+    ].filter(Boolean).join(" · ");
 
     return (
         <motion.article
@@ -343,635 +301,50 @@ function ProductGroupCard({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: Math.min(index * 0.03, 0.3) }}
-            className="group/catalog-card flex h-full flex-col overflow-hidden bg-white focus-within:relative focus-within:z-10 focus-within:outline focus-within:outline-2 focus-within:outline-muted-gold focus-within:outline-offset-[-2px]"
+            className="group/catalog-card relative flex h-full flex-col bg-white focus-within:z-10 has-[[role=listbox]]:z-20 has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-[#9a7a48] has-[:focus-visible]:outline-offset-[-2px]"
+            data-testid="catalog-card"
         >
             <CatalogCardPreview
                 title={customerDisplayName}
                 catalogHero={displayHero}
                 imageUrl={defaultImageUrl}
                 heroHoverImageUrl={group.heroHoverImageUrl}
-                href={href}
-                variants={variantPreviews ?? []}
-                capKind={COMPONENT_CATEGORIES.has(group.category) ? null : catalogCapKind(group.applicatorTypes ?? [], variantPreviews)}
-                neck={group.neckThreadSize}
+                href={pickedCap ? productCardVariantHref(href, pickedCap) : href}
+                variants={previews}
                 family={group.family}
                 slug={group.slug}
+                selected={pickedCap}
             />
-            <LocaleLink href={href} className="flex flex-1 flex-col px-3 pb-3 pt-3 sm:px-5 lg:px-4 lg:pb-5 lg:pt-4">
-                <h4 className="text-[15px] font-medium leading-tight text-obsidian max-lg:line-clamp-2 lg:text-lg lg:leading-snug">{customerDisplayName}</h4>
-                <p data-testid="catalog-card-specs" className="mt-1 truncate text-[11px] leading-snug text-slate lg:mt-2 lg:text-xs lg:leading-relaxed lg:whitespace-normal">{cardSpecs}</p>
-            </LocaleLink>
-            <CatalogCardPurchase
-                productId={group.slug}
-                title={customerDisplayName}
-                href={href}
-                variant={purchaseVariant}
-                groupStartingPrice={group.priceRangeMin}
-                context={{
-                    family: group.family,
-                    capacity: group.capacity,
-                    color: group.color,
-                    category: group.category,
-                    neckThreadSize: group.neckThreadSize,
-                }}
-                imageUrl={defaultImageUrl}
-            />
-        </motion.article>
-    );
-}
-
-// ─── Checkbox Filter Item ────────────────────────────────────────────────────
-
-function CheckboxItem({
-    label,
-    count,
-    checked,
-    onChange,
-    swatch,
-    indeterminate = false,
-}: {
-    label: string;
-    count?: number;
-    checked: boolean;
-    onChange: () => void;
-    swatch?: string;
-    /** Some but not all of the values this box stands for are selected (capacity ranges). */
-    indeterminate?: boolean;
-}) {
-    const inputRef = useRef<HTMLInputElement>(null);
-    const mixed = indeterminate && !checked;
-    useEffect(() => {
-        if (inputRef.current) inputRef.current.indeterminate = mixed;
-    }, [mixed]);
-    return (
-        <label className="flex min-h-11 items-center gap-2.5 py-2 cursor-pointer group/check">
-            <input
-                ref={inputRef}
-                type="checkbox"
-                checked={checked}
-                onChange={onChange}
-                aria-checked={mixed ? "mixed" : checked}
-                aria-label={`Filter by ${label}`}
-                className="w-4 h-4 rounded border-champagne text-muted-gold focus:ring-muted-gold/30 cursor-pointer"
-            />
-            {swatch && (
-                <span className={`w-4 h-4 rounded-full shrink-0 ${swatch}`} />
-            )}
-            <span className={`text-[13px] flex-1 transition-colors ${checked ? "text-muted-gold font-semibold" : "text-obsidian/70 group-hover/check:text-obsidian"}`}>
-                {label}
-            </span>
-            {count !== undefined && (
-                <span className="text-[11px] text-slate/60">{count}</span>
-            )}
-        </label>
-    );
-}
-
-// ─── Truncated facet list ───────────────────────────────────────────────────
-// Baymard: long value lists are truncated with an explicit "Show N more", never
-// hidden inside a scroll box with an invisible scrollbar. Selected values stay
-// visible even when they fall past the fold.
-
-function TruncatedFacetList<T>({
-    items,
-    limit,
-    isSelected,
-    itemKey,
-    renderItem,
-    label,
-}: {
-    items: T[];
-    limit: number;
-    isSelected: (item: T) => boolean;
-    itemKey: (item: T) => string;
-    renderItem: (item: T) => ReactNode;
-    label: string;
-}) {
-    const [expanded, setExpanded] = useState(false);
-    const visible = expanded ? items : items.filter((item, index) => index < limit || isSelected(item));
-    const hidden = items.length - visible.length;
-    return (
-        <div className="space-y-0.5" data-testid={`catalog-facet-list-${label}`}>
-            {visible.map((item) => <div key={itemKey(item)}>{renderItem(item)}</div>)}
-            {items.length > limit && (
-                <button
-                    type="button"
-                    onClick={() => setExpanded((current) => !current)}
-                    aria-expanded={expanded}
-                    className="min-h-11 py-2 text-[12px] font-semibold text-muted-gold transition-colors hover:text-obsidian"
-                >
-                    {expanded ? "Show less" : `Show ${hidden} more`}
-                </button>
-            )}
-        </div>
-    );
-}
-
-// ─── Price Range Slider ──────────────────────────────────────────────────────
-
-function PriceRangeSlider({
-    min,
-    max,
-    valueMin,
-    valueMax,
-    onChange,
-}: {
-    min: number;
-    max: number;
-    valueMin: number | null;
-    valueMax: number | null;
-    onChange: (min: number | null, max: number | null) => void;
-}) {
-    const { formatPrice: money } = useRegion();
-    const formatPrice = (price: number | null | undefined): string => (price ? money(price) : "—");
-    const effectiveMin = valueMin ?? min;
-    const effectiveMax = valueMax ?? max;
-    const debounceRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
-
-    const handleChange = (newMin: number, newMax: number) => {
-        clearTimeout(debounceRef.current);
-        debounceRef.current = setTimeout(() => {
-            const isDefault = newMin <= min && newMax >= max;
-            onChange(isDefault ? null : newMin, isDefault ? null : newMax);
-        }, SEARCH_DEBOUNCE_MS);
-    };
-
-    if (min >= max) return null;
-
-    return (
-        <div className="space-y-3">
-            <div className="flex items-center justify-between text-[12px] text-obsidian font-medium">
-                <span>{formatPrice(effectiveMin)}</span>
-                <span>{formatPrice(effectiveMax)}</span>
-            </div>
-            <div className="space-y-2">
-                <div className="flex items-center gap-2">
-                    <span className="text-[11px] text-slate w-8">Min</span>
-                    <input
-                        type="range"
-                        min={min}
-                        max={max}
-                        step={0.01}
-                        value={effectiveMin}
-                        onChange={(e) => handleChange(Number(e.target.value), effectiveMax)}
-                        aria-label="Minimum price"
-                        className="flex-1 h-1.5 accent-muted-gold cursor-pointer"
-                    />
-                </div>
-                <div className="flex items-center gap-2">
-                    <span className="text-[11px] text-slate w-8">Max</span>
-                    <input
-                        type="range"
-                        min={min}
-                        max={max}
-                        step={0.01}
-                        value={effectiveMax}
-                        onChange={(e) => handleChange(effectiveMin, Number(e.target.value))}
-                        aria-label="Maximum price"
-                        className="flex-1 h-1.5 accent-muted-gold cursor-pointer"
-                    />
-                </div>
-            </div>
-            {(valueMin !== null || valueMax !== null) && (
-                <button
-                    onClick={() => onChange(null, null)}
-                    className="text-[11px] text-muted-gold hover:text-obsidian transition-colors"
-                >
-                    Reset price range
-                </button>
-            )}
-        </div>
-    );
-}
-
-// ─── Filter Sidebar Content ─────────────────────────────────────────────────
-
-function FilterSidebarContent({
-    facets,
-    taxonomy,
-    filters,
-    totalCount,
-    expandedCategories,
-    toggleCategory,
-    onFilterChange,
-    onClearAll,
-    onShowAll = onClearAll,
-    mobileOptimized = false,
-}: {
-    facets: Facets | null;
-    taxonomy: Record<string, Record<string, number>> | null;
-    filters: CatalogFilters;
-    totalCount: number;
-    expandedCategories: Record<string, boolean>;
-    toggleCategory: (cat: string) => void;
-    onFilterChange: (patch: Partial<CatalogFilters>) => void;
-    onClearAll: () => void;
-    onShowAll?: () => void;
-    mobileOptimized?: boolean;
-}) {
-    const t = useCopy("catalog");
-    const locale = useAppLocale();
-    const isComponentCategory = filters.category ? COMPONENT_CATEGORIES.has(filters.category) : false;
-    const surface = MASTER_CATALOG_SURFACE;
-    const truncateAfter = surface.truncateAfter;
-    // The manifest is the one place that decides order and first-paint disclosure.
-    const openByDefault = (facet: CatalogFacetKey) =>
-        (mobileOptimized ? surface.mobileDefaultOpenFacets : surface.defaultOpenFacets).includes(facet);
-
-    const toggleArrayFilter = (key: CatalogArrayFacet, value: string) => {
-        const next = toggleCatalogFacetValue(filters, key, value);
-        onFilterChange({ [key]: next[key] });
-    };
-
-    // Structure (which collections sit under which category) comes from the
-    // taxonomy; COUNTS come from the current result's facets so every number in
-    // the sidebar is the same unit — product groups in the current context —
-    // instead of SKU totals for categories and group counts everywhere else.
-    const sidebarCategories = useMemo(() => {
-        const structure = taxonomy ?? {};
-        const categoryCounts = facets?.categories ?? {};
-        const collectionCounts = facets?.collections ?? {};
-        const known = new Set<string>(CATEGORY_ORDER);
-        const seen = new Set<string>();
-        const ordered = [
-            ...CATEGORY_ORDER,
-            ...Object.keys(structure).filter((cat) => !known.has(cat)).sort(),
-            ...Object.keys(categoryCounts).filter((cat) => !known.has(cat)).sort(),
-        ].filter((cat) => {
-            if (seen.has(cat) || cat === "Internal") return false;
-            seen.add(cat);
-            return Boolean(structure[cat]) || (categoryCounts[cat] ?? 0) > 0;
-        });
-        return ordered.map((category) => ({
-            category,
-            label: ({ "Glass Bottle": "Glass bottles", "Glass Jar": "Glass jars", "Aluminum Bottle": "Aluminum bottles", "Plastic Bottle": "Plastic bottles", "Metal Atomizer": "Metal atomizers", Component: "Components", Accessory: "Accessories" } as Record<string, string>)[category] ?? category,
-            familyLabel: /Bottle|Atomizer/.test(category) ? "Bottle families" : "Collections",
-            count: categoryCounts[category] ?? 0,
-            collections: Object.keys(structure[category] ?? {})
-                .map((name) => ({ name, count: collectionCounts[name] ?? 0 }))
-                .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name)),
-        }));
-    }, [taxonomy, facets]);
-
-    const sortedCapacities = useMemo(() => {
-        if (!facets) return [];
-        return Object.values(facets.capacities).sort((a, b) => (a.ml ?? 9999) - (b.ml ?? 9999));
-    }, [facets]);
-
-    const capacityRanges = useMemo(() => {
-        return CAPACITY_RANGES.map((range) => {
-            const capacities = sortedCapacities.filter((cap) => capacityInRange(cap.ml, range));
-            const rangeTokenSelected = filters.capacities.includes(range.value);
-            const selectedCount = capacities.filter((cap) => filters.capacities.includes(cap.label)).length;
-            return {
-                ...range,
-                capacities,
-                count: capacities.reduce((sum, cap) => sum + cap.count, 0),
-                checked: rangeTokenSelected || (capacities.length > 0 && selectedCount === capacities.length),
-                partiallyChecked: !rangeTokenSelected && selectedCount > 0 && selectedCount < capacities.length,
-            };
-        }).filter((range) => range.capacities.length > 0 || filters.capacities.includes(range.value));
-    }, [filters.capacities, sortedCapacities]);
-
-    const sortedColors = useMemo(() => {
-        if (!facets) return [];
-        return Object.entries(facets.colors).sort(([, a], [, b]) => b - a);
-    }, [facets]);
-
-    const sortedThreads = useMemo(() => {
-        if (!facets) return [];
-        // Valid thread sizes match patterns like "18-415", "20-400", "13-415", "16mm"
-        // Filter out anomalous values like "Ground", "Plug", "PRESS-FIT", "snap", "SPECIAL", garbled SKUs
-        const VALID_THREAD_PATTERN = /^\d{1,3}[-/]\d{3,4}$|^\d{1,3}mm$/i;
-        return Object.entries(facets.neckThreadSizes)
-            .filter(([thread]) => VALID_THREAD_PATTERN.test(thread))
-            .sort(([a], [b]) => {
-                const na = parseFloat(a);
-                const nb = parseFloat(b);
-                if (!isNaN(na) && !isNaN(nb)) return na - nb;
-                return a.localeCompare(b);
-            });
-    }, [facets]);
-
-    const sortedFamilies = useMemo(() => {
-        if (!facets) return [];
-        return Object.entries(facets.families).sort(([a], [b]) => a.localeCompare(b));
-    }, [facets]);
-
-    const sortedComponentTypes = useMemo(() => {
-        if (!facets) return [];
-        return Object.entries(facets.componentTypes).sort(([, a], [, b]) => b - a);
-    }, [facets]);
-
-    const rollerMaterialSection = facets && (facets.rollerMaterials.metal > 0 || facets.rollerMaterials.plastic > 0) ? (
-        <RefineSection title={t("rollerMaterial")} defaultOpen={openByDefault("rollerMaterials")} hasActiveFilters={filters.rollerMaterials.length > 0}>
-            <div className="space-y-0.5">
-                {(["metal", "plastic"] as const).map((material) => (
-                    <CheckboxItem
-                        key={material}
-                        label={`${material[0].toUpperCase()}${material.slice(1)} roller`}
-                        count={facets.rollerMaterials[material]}
-                        checked={filters.rollerMaterials.includes(material)}
-                        onChange={() => toggleArrayFilter("rollerMaterials", material)}
-                    />
-                ))}
-            </div>
-        </RefineSection>
-    ) : null;
-
-    const toggleCapacityRange = (rangeValue: string, labels: string[]) => {
-        const selected = new Set(filters.capacities);
-        const allLabelsSelected = labels.length > 0 && labels.every((label) => selected.has(label));
-        const active = selected.has(rangeValue) || allLabelsSelected;
-        if (active) {
-            selected.delete(rangeValue);
-            for (const label of labels) selected.delete(label);
-        } else {
-            for (const label of labels) selected.delete(label);
-            selected.add(rangeValue);
-        }
-        onFilterChange({ capacities: [...selected] });
-    };
-
-    const applicatorSection = Object.keys(facets?.applicators ?? {}).length > 0 ? (
-        <RefineSection title={t("dispenser")} defaultOpen={openByDefault("applicators")} hasActiveFilters={filters.applicators.length > 0}>
-            <div className="space-y-0.5">
-                {APPLICATOR_BUCKETS.filter((b) => (facets?.applicators?.[b.value] ?? 0) > 0 || filters.applicators.includes(b.value)).map((bucket) => (
-                    <CheckboxItem
-                        key={bucket.value}
-                        label={bucket.label}
-                        count={facets?.applicators?.[bucket.value] ?? 0}
-                        checked={filters.applicators.includes(bucket.value)}
-                        onChange={() => toggleArrayFilter("applicators", bucket.value)}
-                    />
-                ))}
-            </div>
-        </RefineSection>
-    ) : null;
-
-    const familySection = sortedFamilies.length > 0 ? (
-        <RefineSection
-            title={t("designFamilies")}
-            defaultOpen={openByDefault("families")}
-            hasActiveFilters={filters.families.length > 0}
-        >
-            <TruncatedFacetList
-                label="families"
-                items={sortedFamilies}
-                limit={truncateAfter}
-                itemKey={([fam]) => fam}
-                isSelected={([fam]) => filters.families.includes(fam)}
-                renderItem={([fam, count]) => (
-                    <CheckboxItem
-                        label={localizeFamilyName(locale, fam)}
-                        count={count}
-                        checked={filters.families.includes(fam)}
-                        onChange={() => toggleArrayFilter("families", fam)}
+            <div className="flex flex-1 flex-col gap-2.5 px-[18px] pb-[18px] pt-3.5">
+                <LocaleLink href={pickedCap ? productCardVariantHref(href, pickedCap) : href} className="flex flex-col gap-1 focus-visible:outline-none">
+                    <h3 className="text-[15px] font-medium leading-[1.3] text-[#1c1c1e] max-lg:line-clamp-2">{customerDisplayName}</h3>
+                    <p data-testid="catalog-card-specs" className="truncate text-[12px] leading-snug text-[#5d6b7e]">{cardSpecs}</p>
+                </LocaleLink>
+                {showCapDots && (
+                    <CatalogCapDots
+                        title={customerDisplayName}
+                        variants={previews}
+                        selectedId={pickedCap?.id ?? defaultCap?.id ?? null}
+                        onSelect={(variant) => setPickedCapId(variant.id)}
+                        photo={capPhoto}
                     />
                 )}
-            />
-        </RefineSection>
-    ) : null;
-
-    const capacitySection = capacityRanges.length > 0 ? (
-        <RefineSection title={t("capacity")} defaultOpen={openByDefault("capacities")} hasActiveFilters={filters.capacities.length > 0}>
-            <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.16em] text-slate/70">{t("sizeRanges")}</p>
-            <div className="space-y-0.5">
-                {capacityRanges.map((range) => (
-                    <CheckboxItem
-                        key={range.value}
-                        label={`${range.label} — ${range.detail}`}
-                        count={range.count}
-                        checked={range.checked}
-                        indeterminate={range.partiallyChecked}
-                        onChange={() => toggleCapacityRange(range.value, range.capacities.map((cap) => cap.label))}
-                    />
-                ))}
-            </div>
-            <div className="mt-3 border-t border-champagne/40 pt-3">
-                <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.16em] text-slate/70">{t("exactCapacity")}</p>
-                <TruncatedFacetList
-                    label="capacities"
-                    items={sortedCapacities}
-                    limit={truncateAfter}
-                    itemKey={(capacity) => capacity.label}
-                    isSelected={(capacity) => filters.capacities.includes(capacity.label)}
-                    renderItem={(capacity) => (
-                        <CheckboxItem
-                            label={capacity.label}
-                            count={capacity.count}
-                            checked={filters.capacities.includes(capacity.label)}
-                            onChange={() => toggleArrayFilter("capacities", capacity.label)}
-                        />
-                    )}
+                <CatalogCardPurchase
+                    productId={group.slug}
+                    title={customerDisplayName}
+                    href={href}
+                    variant={purchaseVariant}
+                    groupStartingPrice={group.priceRangeMin}
+                    context={{
+                        family: group.family,
+                        capacity: group.capacity,
+                        color: group.color,
+                        category: group.category,
+                        neckThreadSize: group.neckThreadSize,
+                    }}
                 />
             </div>
-        </RefineSection>
-    ) : null;
-
-    const colorSection = sortedColors.length > 0 ? (
-        <RefineSection title={t("glassColor")} defaultOpen={openByDefault("colors")} hasActiveFilters={filters.colors.length > 0}>
-            <TruncatedFacetList
-                label="colors"
-                items={sortedColors}
-                limit={truncateAfter}
-                itemKey={([color]) => color}
-                isSelected={([color]) => filters.colors.includes(color)}
-                renderItem={([color, count]) => (
-                    <CheckboxItem
-                        label={color}
-                        count={count}
-                        checked={filters.colors.includes(color)}
-                        onChange={() => toggleArrayFilter("colors", color)}
-                        swatch={COLOR_SWATCH_MAP[color] ?? "bg-slate-300"}
-                    />
-                )}
-            />
-        </RefineSection>
-    ) : null;
-
-    const categorySection = sidebarCategories.length > 0 ? (
-        <RefineSection title={t("productType")} defaultOpen={openByDefault("category")} hasActiveFilters={!!(filters.category || filters.collection)}>
-            <div className="space-y-0.5">
-                {sidebarCategories.map((group) => {
-                    const isSelected = filters.category === group.category && !filters.collection;
-                    const holdsSelectedCollection = group.collections.some((col) => col.name === filters.collection);
-                    const isExpanded = expandedCategories[group.category] === true || isSelected || holdsSelectedCollection;
-                    // Zero results in the current context: greyed out, never hidden,
-                    // so the scope of the catalogue stays visible (Baymard).
-                    const isDead = group.count === 0 && !isSelected && !holdsSelectedCollection;
-                    return (
-                        <div key={group.category} data-testid="catalog-category-row">
-                            <div className="flex items-center gap-1">
-                                <button
-                                    type="button"
-                                    onClick={() => onFilterChange({ category: isSelected ? null : group.category, collection: null })}
-                                    aria-pressed={isSelected}
-                                    disabled={isDead}
-                                    className={`flex min-h-11 flex-1 items-center justify-between py-2 text-left text-[13px] transition-colors ${isSelected ? "font-semibold text-muted-gold" : isDead ? "cursor-not-allowed text-slate/40" : "text-obsidian/70 hover:text-muted-gold"}`}
-                                >
-                                    <span className="text-sm font-medium">{group.label}</span>
-                                    <span className="text-[11px] text-slate/60">{group.count}</span>
-                                </button>
-                                {group.collections.length > 0 && (
-                                    <button
-                                        type="button"
-                                        onClick={() => toggleCategory(group.category)}
-                                        aria-expanded={isExpanded}
-                                        aria-label={`${isExpanded ? "Hide" : "Show"} ${group.label} ${group.familyLabel.toLowerCase()}`}
-                                        className="flex min-h-11 min-w-9 items-center justify-center text-slate transition-colors hover:text-obsidian"
-                                    >
-                                        <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${isExpanded ? "rotate-0" : "-rotate-90"}`} />
-                                    </button>
-                                )}
-                            </div>
-                            <AnimatePresence initial={false}>
-                                {isExpanded && group.collections.length > 0 && (
-                                    <motion.div
-                                        initial={{ height: 0, opacity: 0 }}
-                                        animate={{ height: "auto", opacity: 1 }}
-                                        exit={{ height: 0, opacity: 0 }}
-                                        transition={{ duration: 0.2 }}
-                                        className="overflow-hidden"
-                                    >
-                                        <div className="mb-2 ml-2 space-y-0.5 border-l border-champagne pl-4">
-                                            <p className="pb-2 pt-3 text-[11px] font-medium uppercase tracking-[0.12em] text-slate">{group.familyLabel}</p>
-                                            {group.collections.map((col) => {
-                                                const colSelected = filters.collection === col.name;
-                                                const colDead = col.count === 0 && !colSelected;
-                                                return (
-                                                    <button
-                                                        key={col.name}
-                                                        type="button"
-                                                        disabled={colDead}
-                                                        aria-pressed={colSelected}
-                                                        onClick={() => onFilterChange({ collection: colSelected ? null : col.name, category: null })}
-                                                        className={`flex min-h-11 w-full items-center justify-between py-2 text-left text-[13px] transition-colors ${colSelected ? "font-semibold text-muted-gold" : colDead ? "cursor-not-allowed text-slate/40" : "text-obsidian/70 hover:text-muted-gold"}`}
-                                                    >
-                                                        <span>{col.name}</span>
-                                                        <span className="text-[11px] text-slate/60">{col.count}</span>
-                                                    </button>
-                                                );
-                                            })}
-                                        </div>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-                        </div>
-                    );
-                })}
-            </div>
-        </RefineSection>
-    ) : null;
-
-    const componentTypeSection = isComponentCategory && sortedComponentTypes.length > 0 ? (
-        <RefineSection title={t("componentType")} defaultOpen={openByDefault("componentType")} hasActiveFilters={!!filters.componentType}>
-            <div className="space-y-0.5">
-                {sortedComponentTypes.map(([type, count]) => (
-                    <button
-                        key={type}
-                        onClick={() => onFilterChange({ componentType: filters.componentType === type ? null : type })}
-                        className={`block min-h-11 text-left text-[13px] transition-colors w-full py-2 ${filters.componentType === type ? "text-muted-gold font-semibold" : "text-obsidian/70 hover:text-muted-gold"}`}
-                    >
-                        {type} ({count})
-                    </button>
-                ))}
-            </div>
-        </RefineSection>
-    ) : null;
-
-    const neckThreadSection = sortedThreads.length > 0 ? (
-        <RefineSection title={t("neckThread")} defaultOpen={openByDefault("neckThreadSizes")} hasActiveFilters={filters.neckThreadSizes.length > 0}>
-            <TruncatedFacetList
-                label="threads"
-                items={sortedThreads}
-                limit={truncateAfter}
-                itemKey={([thread]) => thread}
-                isSelected={([thread]) => filters.neckThreadSizes.includes(thread)}
-                renderItem={([thread, count]) => (
-                    <CheckboxItem
-                        label={thread}
-                        count={count}
-                        checked={filters.neckThreadSizes.includes(thread)}
-                        onChange={() => toggleArrayFilter("neckThreadSizes", thread)}
-                    />
-                )}
-            />
-        </RefineSection>
-    ) : null;
-
-    const priceSection = facets && facets.priceRange.min < facets.priceRange.max ? (
-        <RefineSection title={t("priceRange")} defaultOpen={openByDefault("price")} hasActiveFilters={filters.priceMin !== null || filters.priceMax !== null}>
-            <PriceRangeSlider
-                min={facets.priceRange.min}
-                max={facets.priceRange.max}
-                valueMin={filters.priceMin}
-                valueMax={filters.priceMax}
-                onChange={(min, max) => onFilterChange({ priceMin: min, priceMax: max })}
-            />
-        </RefineSection>
-    ) : null;
-
-    // Render order comes from the surface manifest (src/lib/catalogSurface.ts).
-    // "collection" is rendered inside the Categories section.
-    const sectionsByFacet: Record<CatalogFacetKey, ReactNode> = {
-        category: categorySection,
-        collection: null,
-        applicators: applicatorSection,
-        rollerMaterials: rollerMaterialSection,
-        capacities: capacitySection,
-        neckThreadSizes: neckThreadSection,
-        colors: colorSection,
-        price: priceSection,
-        families: familySection,
-        componentType: componentTypeSection,
-    };
-    const orderedSections = surface.visibleFacets.map((facet) => sectionsByFacet[facet]);
-
-    const shopCollectionSection = mobileOptimized ? (
-        <RefineSection title={t("collection")} defaultOpen={Boolean(filters.shopCollection)} hasActiveFilters={Boolean(filters.shopCollection)}>
-            <div className="space-y-0.5">
-                <button
-                    type="button"
-                    onClick={() => onFilterChange({ shopCollection: null })}
-                    aria-pressed={!filters.shopCollection}
-                    className={`flex min-h-11 w-full items-center py-2 text-left text-[13px] transition-colors ${!filters.shopCollection ? "font-semibold text-muted-gold" : "text-obsidian/70 hover:text-muted-gold"}`}
-                >
-                    {t("allCollections")}
-                </button>
-                {SHOP_COLLECTIONS.map((collection) => (
-                    <button
-                        key={collection.key}
-                        type="button"
-                        onClick={() => onFilterChange({ shopCollection: collection.key })}
-                        aria-pressed={filters.shopCollection === collection.key}
-                        className={`flex min-h-11 w-full items-center py-2 text-left text-[13px] transition-colors ${filters.shopCollection === collection.key ? "font-semibold text-muted-gold" : "text-obsidian/70 hover:text-muted-gold"}`}
-                    >
-                        {localizeCollectionName(locale, collection.key, collection.title)}
-                    </button>
-                ))}
-            </div>
-        </RefineSection>
-    ) : null;
-
-    return (
-        <>
-            {!mobileOptimized && (
-                <h3 className="font-serif text-xl text-obsidian border-b border-champagne pb-3 mb-6">{t("browse")}</h3>
-            )}
-            {shopCollectionSection}
-
-            <button
-                onClick={onShowAll}
-                className={`block min-h-11 text-left text-sm transition-colors w-full mb-6 py-2 border-b border-champagne/30 ${filtersAreEmpty(filters) ? "text-muted-gold font-semibold" : "text-obsidian hover:text-muted-gold"}`}
-            >
-                {t("allProducts", { count: totalCount.toLocaleString() })}
-            </button>
-
-            {orderedSections.map((section, index) => section ? (
-                <div key={index}>{section}</div>
-            ) : null)}
-        </>
+        </motion.article>
     );
 }
 
@@ -980,36 +353,31 @@ function FilterSidebarContent({
 function ViewToggle({
     value,
     onChange,
+    labels = { visual: "Visual", line: "Line items" },
 }: {
     value: ViewMode;
     onChange: (v: ViewMode) => void;
+    labels?: { visual: string; line: string };
 }) {
+    const option = (mode: ViewMode, label: string, ariaLabel: string, Icon: typeof LayoutGrid) => (
+        <button
+            type="button"
+            onClick={() => onChange(mode)}
+            className={`flex min-h-10 min-w-10 items-center justify-center gap-1.5 px-3 text-[12px] transition-colors lg:min-h-[32px] ${value === mode
+                ? "bg-[#1c1c1e] text-white"
+                : "bg-white text-[#1c1c1e] hover:bg-[#f1ebe0]"
+                }`}
+            aria-label={ariaLabel}
+            aria-pressed={value === mode}
+        >
+            <Icon className="h-3.5 w-3.5 sm:hidden" aria-hidden />
+            <span className="hidden whitespace-nowrap sm:inline">{label}</span>
+        </button>
+    );
     return (
-        <div className="inline-flex items-center bg-white border border-champagne rounded-lg p-0.5" role="group" aria-label="Catalog view">
-            <button
-                onClick={() => onChange("visual")}
-                className={`flex min-h-11 min-w-11 items-center justify-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-md transition-all sm:min-h-0 ${value === "visual"
-                    ? "bg-obsidian text-white"
-                    : "text-slate hover:text-obsidian"
-                    }`}
-                aria-label="Visual grid view"
-                aria-pressed={value === "visual"}
-            >
-                <LayoutGrid className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">Visual</span>
-            </button>
-            <button
-                onClick={() => onChange("line")}
-                className={`flex min-h-11 min-w-11 items-center justify-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-md transition-all sm:min-h-0 ${value === "line"
-                    ? "bg-obsidian text-white"
-                    : "text-slate hover:text-obsidian"
-                    }`}
-                aria-label="Line item view"
-                aria-pressed={value === "line"}
-            >
-                <List className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">Line Items</span>
-            </button>
+        <div className="inline-flex shrink-0 items-stretch overflow-hidden rounded-md border border-[#d9cdb9]" role="group" aria-label="Catalog view">
+            {option("visual", labels.visual, "Visual grid view", LayoutGrid)}
+            {option("line", labels.line, "Line item view", List)}
         </div>
     );
 }
@@ -1532,12 +900,10 @@ function BackToTop() {
 export default function CatalogClient({
     initialSearchParams,
     initialResult,
-    initialTaxonomy,
     interpretMode = "off",
 }: {
     initialSearchParams: string;
     initialResult: CatalogSearchResult;
-    initialTaxonomy: Record<string, Record<string, number>> | null;
     /** CATALOG_SEARCH_INTERPRETATION, read on the server (src/lib/catalog/searchInterpretationServer.ts). */
     interpretMode?: InterpretationMode;
 }) {
@@ -1571,15 +937,6 @@ export default function CatalogClient({
     const [filters, setFilters] = useState<CatalogFilters>(initialState.filters);
     const [sortBy, setSortBy] = useState<SortValue>(initialState.sort);
     const [viewMode, setViewMode] = useState<ViewMode>(initialState.view);
-    const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>(() => {
-        if (typeof window === "undefined") return {};
-        try {
-            const saved = window.localStorage.getItem("catalog_expanded");
-            return saved ? (JSON.parse(saved) as Record<string, boolean>) : {};
-        } catch {
-            return {};
-        }
-    });
     const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
     const [searchInput, setSearchInput] = useState(initialState.filters.search);
     const [rawResult, setActiveResult] = useState<CatalogSearchResult>(initialResult);
@@ -1623,13 +980,6 @@ export default function CatalogClient({
         [router, pathname, locale],
     );
 
-    // Persist accordion state
-    useEffect(() => {
-        try {
-            localStorage.setItem("catalog_expanded", JSON.stringify(expandedCategories));
-        } catch { /* noop */ }
-    }, [expandedCategories]);
-
     // Lock body scroll for mobile filter
     useEffect(() => {
         document.body.style.overflow = mobileFilterOpen ? "hidden" : "";
@@ -1646,10 +996,7 @@ export default function CatalogClient({
         return () => window.removeEventListener("keydown", onKeyDown);
     }, [mobileFilterOpen]);
 
-    // ── Convex Queries ──────────────────────────────────────────────────────
-    // Structure only (which collections belong to which category) — counts come
-    // from the search facets, so no live full-table subscription is needed.
-    const taxonomy = initialTaxonomy;
+    // ── Results ─────────────────────────────────────────────────────────────
     const filtered = activeResult.items;
     const facets = activeResult.facets;
     const totalCount = activeResult.totalCount;
@@ -2031,11 +1378,9 @@ export default function CatalogClient({
         [mobileFilterOpen, pushToUrl, sortBy, viewMode],
     );
 
-    const toggleCategory = useCallback((cat: string) => {
-        setExpandedCategories((prev) => ({ ...prev, [cat]: prev[cat] !== true }));
-    }, []);
-
-    const chips = buildAppliedFilterChips(filters).map((chip) => ({
+    // The product type switch already shows its category, so it gets no chip and no badge count.
+    const typeSwitchCategory = CATALOG_PRODUCT_TYPES.some((type) => type.value === filters.category);
+    const chips = buildAppliedFilterChips(filters).filter((chip) => !(chip.facet === "category" && typeSwitchCategory)).map((chip) => ({
         facet: chip.facet,
         label: chip.facet === "shopCollection"
             ? `${t("collection")}: ${localizeCollectionName(locale, chip.value, getShopCollection(chip.value)?.title)}`
@@ -2046,8 +1391,8 @@ export default function CatalogClient({
         },
     }));
     const facetChips = chips.filter((chip) => chip.facet !== "search");
-    const facetFilterCount = activeFilterCount({ ...filters, search: "" });
-    const compactChipLabel = (label: string) => label.replace(/^(Collection|Colección|Category|Dispenser|Roller|Family|Glass|Capacity|Neck|Component|Search|Price):\s*/i, "");
+    const facetFilterCount = activeFilterCount({ ...filters, search: "", category: typeSwitchCategory ? null : filters.category });
+    const compactChipLabel = (label: string) => label.replace(/^(Collection|Colección|Category|Applicator|Dispenser|Roller|Family|Glass|Capacity|Neck|Component|Search|Price):\s*/i, "");
     const activeConstraintSummary = buildAppliedFilterChips(filters)
         .map((chip) => chip.label)
         .join(" · ");
@@ -2056,16 +1401,6 @@ export default function CatalogClient({
         ? APPLICATOR_BUCKETS.find((b) => b.value === filters.applicators[0])?.label ?? filters.applicators[0]
         : null;
     const selectedFamilyLabel = filters.families.length === 1 ? filters.families[0] : null;
-    const rawScopeTitle = catalogResultScopeTitle(filters);
-    const scopeTitle = filters.search || filters.applicators.length > 0
-        ? rawScopeTitle
-        : filters.families.length === 1 && filters.families[0] && rawScopeTitle === filters.families[0]
-            ? localizeFamilyName(locale, filters.families[0])
-            : filters.shopCollection && rawScopeTitle === getShopCollection(filters.shopCollection)?.title
-                ? localizeCollectionName(locale, filters.shopCollection, rawScopeTitle)
-                : rawScopeTitle === "All products"
-                    ? t("allProductsHeading")
-                    : rawScopeTitle;
     const emptyFamilySuggestions = facets && selectedFamilyLabel
         ? Object.entries(facets.families)
             .filter(([family, count]) => family !== selectedFamilyLabel && count > 0)
@@ -2079,69 +1414,86 @@ export default function CatalogClient({
             : `Clear the ${selectedFamilyLabel} filter to see more ${selectedApplicatorLabel.toLowerCase()} options.`}`
         : null;
 
-    const quickApplicatorBuckets = APPLICATOR_BUCKETS.filter((bucket) => (
-        (facets?.applicators?.[bucket.value] ?? 0) > 0 || filters.applicators.includes(bucket.value)
-    ));
-    const mobileQuickApplicatorBuckets = filters.applicators.length > 0
-        ? quickApplicatorBuckets.filter((bucket) => filters.applicators.includes(bucket.value))
-        : quickApplicatorBuckets;
-    const renderQuickApplicatorButton = (bucket: (typeof APPLICATOR_BUCKETS)[number]) => {
-        const isActive = filters.applicators.includes(bucket.value);
-        return (
-            <button
-                key={bucket.value}
-                onClick={() => {
-                    handleFilterChange({
-                        applicators: isActive
-                            ? filters.applicators.filter((a) => a !== bucket.value)
-                            : [...filters.applicators, bucket.value],
-                    });
-                }}
-                aria-pressed={isActive}
-                data-testid="catalog-quick-applicator"
-                className={`shrink-0 min-h-11 px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full border transition-colors whitespace-nowrap ${isActive
-                    ? "bg-obsidian text-white border-obsidian"
-                    : "bg-white border-champagne text-obsidian hover:border-muted-gold"
-                    }`}
-            >
-                {bucket.label} ({facets?.applicators?.[bucket.value] ?? 0})
-            </button>
-        );
+    const productTypes = CATALOG_PRODUCT_TYPES.map((type) => ({
+        ...type,
+        label: t(PRODUCT_TYPE_COPY[type.value]),
+        count: productTypeCount(type.value, facets?.categories),
+    }));
+    const activeProductType = productTypes.find((type) => type.value === filters.category) ?? null;
+    const countLabel = isLoading
+        ? t("loading")
+        : filters.search
+            ? t(totalCount === 1 ? "resultsFor" : "resultsForPlural", { count: totalCount.toLocaleString(), query: filters.search })
+            : activeProductType && PRODUCT_TYPE_COUNT_COPY[activeProductType.value]
+                ? t(PRODUCT_TYPE_COUNT_COPY[activeProductType.value]!, { count: totalCount.toLocaleString() })
+                : t(totalCount === 1 ? "productCount" : "productCountPlural", { count: totalCount.toLocaleString() });
+    const handleProductType = (value: string) => {
+        // Families and component types belong to one product type, so they reset with it.
+        handleFilterChange({
+            category: filters.category === value ? null : value,
+            collection: null,
+            componentType: null,
+            families: [],
+        });
     };
+    const askGraceAboutThreads = () => openGrace();
+
+    const sidebar = (mobile: boolean) => (
+        <CatalogFilterSidebar
+            facets={facets}
+            filters={filters}
+            onFilterChange={handleFilterChange}
+            onAskGrace={askGraceAboutThreads}
+            mobile={mobile}
+            surface={MASTER_CATALOG_SURFACE}
+        />
+    );
+
     return (
-        <main className="min-h-screen bg-warm-white pt-[82px] lg:pt-[120px]">
+        <main className="min-h-screen bg-[#faf9f7] pt-[82px] font-sans text-[#1c1c1e] lg:pt-[120px]">
             <Navbar variant="catalog" initialSearchValue={filters.search || undefined} hideSearch />
-            <Breadcrumbs steps={catalogBreadcrumbSteps(filters)} />
+            <div className="lg:hidden">
+                <Breadcrumbs steps={catalogBreadcrumbSteps(filters)} />
+            </div>
 
-            <div className="max-w-[1720px] mx-auto px-4 sm:px-6 py-4 sm:py-8 max-lg:pt-4 max-lg:pb-3">
+            <div className="mx-auto max-w-[1720px]">
 
-                {/* Catalog Header */}
-                <div className="mb-4 sm:mb-12 border-b border-champagne/50 pb-4 sm:pb-8 flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-6 max-lg:mb-3 max-lg:border-0 max-lg:pb-0">
-                    <div>
-                        <h1 className="page-heading font-medium leading-none text-obsidian mb-1 sm:mb-2 lg:font-serif lg:text-4xl lg:leading-[1.1] xl:text-5xl">
-                            <span className="lg:hidden">{t("title")}</span>
-                            <span className="hidden lg:inline">{t("masterTitle")}</span>
-                        </h1>
-                        <p className="text-slate text-[15px] sm:text-sm max-w-xl" aria-live="polite">
-                            {isLoading ? t("loading") : (
-                                <>
-                                    <span className="lg:hidden">
-                                        {filters.search
-                                            ? t(totalCount === 1 ? "resultsFor" : "resultsForPlural", { count: totalCount.toLocaleString(), query: filters.search })
-                                            : t(totalCount === 1 ? "productCount" : "productCountPlural", { count: totalCount.toLocaleString() })}
-                                    </span>
-                                    <span className="hidden lg:inline">
-                                        {t("visibleHelp", { count: totalCount.toLocaleString() })}
-                                    </span>
-                                </>
-                            )}
-                        </p>
+                {/* Title row: name + live count, product type switch, search */}
+                <div className="flex flex-col gap-3 px-4 pt-4 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:gap-6 lg:px-10 lg:pt-[18px]">
+                    <div className="flex min-w-0 flex-col gap-3">
+                        <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+                            <h1 className="page-heading whitespace-nowrap font-semibold uppercase leading-none tracking-[0.1em] text-[#1c1c1e] max-lg:text-[22px] lg:text-[28px]">
+                                <span className="lg:hidden">{t("title")}</span>
+                                <span className="hidden lg:inline">{t("masterTitle")}</span>
+                            </h1>
+                            <p className="text-[13px] text-[#5d6b7e]" aria-live="polite" data-testid="catalog-result-count">
+                                {countLabel}
+                            </p>
+                        </div>
+                        <div role="group" aria-label={t("productType")} className="-mx-4 flex gap-1.5 overflow-x-auto px-4 pb-0.5 hide-scroll sm:mx-0 sm:px-0">
+                            {productTypes.map((type) => {
+                                const active = filters.category === type.value;
+                                return (
+                                    <button
+                                        key={type.value}
+                                        type="button"
+                                        onClick={() => handleProductType(type.value)}
+                                        aria-pressed={active}
+                                        data-testid="catalog-product-type"
+                                        className={`min-h-9 shrink-0 whitespace-nowrap border px-3.5 py-[7px] text-[12px] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1c1c1e] ${active
+                                            ? "border-[#1c1c1e] bg-[#1c1c1e] text-white"
+                                            : "border-[#d9cdb9] bg-transparent text-[#1c1c1e] hover:border-[#1c1c1e]"}`}
+                                    >
+                                        {type.label} <span className="opacity-60 tabular-nums">{type.count.toLocaleString()}</span>
+                                    </button>
+                                );
+                            })}
+                        </div>
                     </div>
 
-                    {/* Search Bar — every viewport; mobile no longer has to scroll back to the navbar */}
-                    <div className="w-full shrink-0 md:w-auto">
-                        <div className="flex h-12 items-center border border-champagne rounded-md px-3 bg-bone space-x-2 w-full md:w-80 hover:border-muted-gold transition-colors focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/20 lg:h-auto lg:rounded-full lg:bg-white/80 lg:px-4 lg:py-2.5">
-                            <Search className="w-4 h-4 text-slate shrink-0" />
+                    <div className="w-full shrink-0 lg:w-[340px]">
+                        <div className="flex h-11 items-center gap-2 rounded-full border border-[#d9cdb9] bg-white px-[18px] transition-colors focus-within:border-[#1c1c1e] hover:border-[#1c1c1e] lg:h-10">
+                            <Search className="h-4 w-4 shrink-0 text-[#8a93a0]" aria-hidden />
                             <input
                                 type="search"
                                 name="search"
@@ -2153,91 +1505,104 @@ export default function CatalogClient({
                                     if (e.key === "Enter") submittedSearchRef.current = e.currentTarget.value.trim();
                                 }}
                                 placeholder={t("searchPlaceholder")}
-                                className="bg-transparent text-base lg:text-sm focus:outline-none w-full placeholder-slate/60 text-obsidian [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
+                                className="w-full bg-transparent text-base text-[#1c1c1e] placeholder:text-[#8a93a0] focus:outline-none lg:text-[13px] [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
                                 aria-label={t("searchProducts")}
                                 data-testid="catalog-search-input"
                             />
                             {searchInput && (
-                                <button onClick={() => handleSearchInput("")} className="flex h-11 w-11 shrink-0 items-center justify-center" aria-label={t("clearSearch")}>
-                                    <X className="w-4 h-4 text-slate hover:text-obsidian transition-colors" />
+                                <button onClick={() => handleSearchInput("")} className="-mr-3 flex h-10 w-10 shrink-0 items-center justify-center" aria-label={t("clearSearch")}>
+                                    <X className="h-4 w-4 text-[#5d6b7e] transition-colors hover:text-[#1c1c1e]" />
                                 </button>
                             )}
                         </div>
                     </div>
                 </div>
 
-                {/* Desktop Active Filter Chips */}
-                <AnimatePresence>
-                    {chips.length > 0 && (
-                        <motion.div
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -10 }}
-                            className="mb-3 sm:mb-6 hidden lg:flex flex-wrap items-center gap-2"
-                            aria-label="Active catalog filters"
-                        >
-                            <span className="text-xs uppercase tracking-wider font-semibold text-slate">{t("activeFilters")}</span>
-                            {chips.map((chip, i) => (
-                                <span
-                                    key={`${chip.label}-${i}`}
-                                    className="inline-flex items-center px-3 py-1.5 bg-muted-gold/10 text-muted-gold border border-muted-gold/30 text-xs font-semibold rounded-full"
-                                    data-testid="catalog-active-filter-chip"
-                                >
-                                    <span className="truncate max-w-[160px]">{chip.label}</span>
-                                    <button
-                                        onClick={chip.onRemove}
-                                        className="ml-2 hover:text-obsidian transition-colors shrink-0"
-                                        aria-label={`Remove ${chip.label} filter`}
-                                    >
-                                        <X className="w-3 h-3" />
-                                    </button>
-                                </span>
-                            ))}
-                            {chips.length > 0 && (
-                                <button
-                                    onClick={handleClearAll}
-                                    className="text-xs text-slate hover:text-obsidian transition-colors underline underline-offset-2"
-                                >
-                                    {t("clearAll")}
-                                </button>
-                            )}
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-
-                {/* Mobile Filter / Sort / View toolbar */}
-                <div className="lg:hidden mb-3 flex items-center gap-2">
+                {/* Filter toolbar: active chips (desktop), mobile filter button, sort, view */}
+                <div className="mx-4 mt-4 flex items-center gap-2 border-b border-t border-b-[#ece6dc] border-t-[#1c1c1e] py-2.5 sm:mx-6 lg:mx-10 lg:mt-4 lg:min-h-[56px] lg:gap-3">
                     <button
+                        type="button"
                         onClick={() => setMobileFilterOpen(true)}
-                        className="inline-flex min-h-11 items-center gap-1.5 px-3 py-2.5 bg-white border border-champagne rounded-lg text-sm font-medium text-obsidian hover:border-muted-gold transition-colors"
+                        className="inline-flex min-h-10 shrink-0 items-center gap-1.5 rounded-md border border-[#d9cdb9] bg-white px-3 text-[13px] text-[#1c1c1e] lg:hidden"
                         data-testid="catalog-mobile-filter-button"
                     >
-                        <SlidersHorizontal className="w-4 h-4" />
+                        <SlidersHorizontal className="h-4 w-4" aria-hidden />
                         {t("filters")}
                         {facetFilterCount > 0 && (
-                            <span className="w-5 h-5 rounded-full bg-muted-gold text-white text-[10px] flex items-center justify-center font-bold">
+                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#1c1c1e] text-[10px] font-semibold text-white">
                                 {facetFilterCount}
                             </span>
                         )}
                     </button>
-
-                    <div className="relative min-w-0 flex-1">
-                        <label htmlFor="catalog-sort-mobile" className="sr-only">{t("sortBy")}</label>
+                    <div className="hidden min-w-0 flex-1 flex-wrap items-center gap-1.5 lg:flex" aria-label="Active catalog filters">
+                        {chips.length === 0 && (
+                            <span className="text-[12px] text-[#8a93a0]">{t("noFiltersApplied")}</span>
+                        )}
+                        {chips.map((chip, i) => (
+                            <button
+                                key={`${chip.label}-${i}`}
+                                type="button"
+                                onClick={chip.onRemove}
+                                aria-label={`Remove ${chip.label} filter`}
+                                className="inline-flex max-w-[260px] items-center gap-1.5 rounded-full border border-[#d9cdb9] bg-[#f1ebe0] py-1.5 pl-3 pr-2.5 text-[12px] text-[#1c1c1e] hover:border-[#1c1c1e]"
+                                data-testid="catalog-active-filter-chip"
+                            >
+                                <span className="truncate">{chip.label}</span>
+                                <span aria-hidden>✕</span>
+                            </button>
+                        ))}
+                        {chips.length > 0 && (
+                            <button
+                                type="button"
+                                onClick={handleClearAll}
+                                className="ml-1 whitespace-nowrap text-[12px] text-[#9a7a48] underline underline-offset-2 hover:text-[#1c1c1e]"
+                            >
+                                {t("clearAll")}
+                            </button>
+                        )}
+                    </div>
+                    <div className="relative ml-auto min-w-0 flex-1 lg:flex-none">
+                        <label htmlFor="catalog-sort" className="sr-only">{t("sortBy")}</label>
                         <select
-                            id="catalog-sort-mobile"
+                            id="catalog-sort"
                             value={sortBy}
                             onChange={(e) => handleSortChange(e.target.value as SortValue)}
                             aria-label="Sort catalog results"
-                            className="h-11 w-full appearance-none bg-white border border-champagne rounded-lg px-2.5 text-sm text-obsidian pr-7 focus:border-muted-gold focus:ring-2 focus:ring-muted-gold/20 outline-none"
+                            className="h-10 w-full cursor-pointer appearance-none rounded-md border border-[#d9cdb9] bg-white pl-3 pr-8 text-[12px] text-[#1c1c1e] outline-none focus:border-[#1c1c1e] lg:h-[34px] lg:w-auto"
                         >
                             {catalogSortMenuOptions(Boolean(filters.search)).map((opt) => (
                                 <option key={opt.value} value={opt.value}>{sortLabel(opt.value)}</option>
                             ))}
                         </select>
-                        <ArrowUpDown className="absolute right-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate pointer-events-none" />
+                        <ArrowUpDown className="pointer-events-none absolute right-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-[#5d6b7e]" aria-hidden />
                     </div>
-                    <ViewToggle value={viewMode} onChange={handleViewChange} />
+                    <ViewToggle value={viewMode} onChange={handleViewChange} labels={{ visual: t("viewVisual"), line: t("viewLineItems") }} />
                 </div>
+
+                {facetChips.length > 0 && (
+                    <div className="mx-4 mt-2 flex gap-1.5 overflow-x-auto pb-1 hide-scroll sm:mx-6 lg:hidden" aria-label="Active catalog filters">
+                        {facetChips.map((chip, i) => (
+                            <button
+                                key={`${chip.label}-${i}`}
+                                type="button"
+                                onClick={chip.onRemove}
+                                aria-label={`Remove ${chip.label} filter`}
+                                className="inline-flex min-h-9 shrink-0 items-center gap-1.5 rounded-full border border-[#d9cdb9] bg-[#f1ebe0] px-3 text-[12px] text-[#1c1c1e]"
+                                data-testid="catalog-active-filter-chip"
+                            >
+                                <span className="max-w-[160px] truncate">{compactChipLabel(chip.label)}</span>
+                                <span aria-hidden>✕</span>
+                            </button>
+                        ))}
+                        <button
+                            type="button"
+                            onClick={handleClearFacets}
+                            className="min-h-9 shrink-0 px-2 text-[12px] text-[#9a7a48] underline underline-offset-2"
+                        >
+                            {t("clear")}
+                        </button>
+                    </div>
+                )}
 
                 {/* Mobile Filter Drawer */}
                 <AnimatePresence>
@@ -2260,18 +1625,18 @@ export default function CatalogClient({
                                 role="dialog"
                                 aria-modal="true"
                                 aria-label="Filter products"
-                                className="fixed top-0 left-0 z-50 flex w-[300px] max-w-[85vw] flex-col bg-warm-white lg:hidden"
+                                className="fixed top-0 left-0 z-50 flex w-[300px] max-w-[85vw] flex-col bg-[#faf9f7] lg:hidden"
                                 style={{
                                     bottom: "calc(4rem + env(safe-area-inset-bottom, 0px))",
                                     boxShadow: "8px 0 40px rgba(29,29,31,0.15)",
                                 }}
                                 data-testid="catalog-filter-drawer"
                             >
-                                <div className="flex shrink-0 items-center justify-between px-5 py-4 border-b border-champagne/50 bg-warm-white">
+                                <div className="flex shrink-0 items-center justify-between border-b border-[#ece6dc] px-5 py-3">
                                     <div className="flex items-center gap-2">
-                                        <h3 className="font-serif text-lg text-obsidian font-medium">{t("filters")}</h3>
+                                        <h2 className="text-[13px] font-semibold uppercase tracking-[0.16em] text-[#1c1c1e]">{t("filters")}</h2>
                                         {facetFilterCount > 0 && (
-                                            <span className="w-5 h-5 rounded-full bg-muted-gold text-white text-[10px] flex items-center justify-center font-bold">
+                                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#1c1c1e] text-[10px] font-semibold text-white">
                                                 {facetFilterCount}
                                             </span>
                                         )}
@@ -2280,231 +1645,60 @@ export default function CatalogClient({
                                         type="button"
                                         autoFocus
                                         onClick={() => setMobileFilterOpen(false)}
-                                        className="min-h-11 min-w-11 flex items-center justify-center rounded-lg hover:bg-champagne/40 transition-colors"
+                                        className="flex min-h-11 min-w-11 items-center justify-center"
                                         aria-label="Close filters"
                                     >
-                                        <X className="w-5 h-5 text-slate" />
+                                        <X className="h-5 w-5 text-[#5d6b7e]" />
                                     </button>
                                 </div>
-                                <div className="min-h-0 flex-1 overflow-y-auto px-5 py-4">
-                                    <FilterSidebarContent
-                                        facets={facets}
-                                        taxonomy={taxonomy ?? null}
-                                        filters={filters}
-                                        totalCount={totalCount}
-                                        expandedCategories={expandedCategories}
-                                        toggleCategory={toggleCategory}
-                                        onFilterChange={handleFilterChange}
-                                        onClearAll={handleClearFacets}
-                                        onShowAll={handleClearAll}
-                                        mobileOptimized
-                                    />
+                                <div className="min-h-0 flex-1 overflow-y-auto px-5 pb-4">
+                                    {sidebar(true)}
                                 </div>
-                                <div className="shrink-0 px-5 py-4 bg-warm-white border-t border-champagne/50">
-                                    <div className="flex gap-2">
-                                        {facetFilterCount > 0 && (
-                                            <button
-                                                type="button"
-                                                onClick={handleClearFacets}
-                                                className="min-h-11 flex-1 border border-champagne px-3 text-xs font-semibold uppercase tracking-wider text-obsidian"
-                                            >
-                                                {t("clearAll")}
-                                            </button>
-                                        )}
+                                <div className="flex shrink-0 gap-2 border-t border-[#ece6dc] px-5 py-4">
+                                    {facetFilterCount > 0 && (
                                         <button
-                                            onClick={() => {
-                                                setMobileFilterOpen(false);
-                                                window.scrollTo({ top: 0, behavior: "smooth" });
-                                            }}
-                                            className="min-h-11 flex-[2] py-3 bg-obsidian text-white text-sm font-bold uppercase tracking-wider hover:bg-muted-gold transition-colors rounded-sm"
+                                            type="button"
+                                            onClick={handleClearFacets}
+                                            className="min-h-11 flex-1 border border-[#d9cdb9] px-3 text-[12px] font-medium uppercase tracking-[0.14em] text-[#1c1c1e]"
                                         >
-                                            {isLoading ? "Loading results" : `Show ${totalCount} ${totalCount === 1 ? "product" : "products"}`}
+                                            {t("clearAll")}
                                         </button>
-                                    </div>
+                                    )}
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            setMobileFilterOpen(false);
+                                            window.scrollTo({ top: 0, behavior: "smooth" });
+                                        }}
+                                        className="min-h-11 flex-[2] bg-[#1c1c1e] py-3 text-[12px] font-medium uppercase tracking-[0.14em] text-white"
+                                    >
+                                        {isLoading ? "Loading results" : `Show ${totalCount} ${totalCount === 1 ? "product" : "products"}`}
+                                    </button>
                                 </div>
                             </motion.div>
                         </>
                     )}
                 </AnimatePresence>
 
-                <div className="flex flex-col lg:flex-row items-start lg:space-x-6">
+                <div className="px-4 pb-24 pt-3 sm:px-6 lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-8 lg:px-10 lg:pb-10 lg:pt-2">
 
-                    {/* Desktop Sidebar */}
-                    <aside className="hidden lg:block w-72 shrink-0 sticky top-[120px] max-h-[calc(100vh-140px)] overflow-y-auto hide-scroll pb-12 bg-parchment/30 rounded-xl px-4 pt-4">
-                        <FilterSidebarContent
-                            facets={facets}
-                            taxonomy={taxonomy ?? null}
-                            filters={filters}
-                            totalCount={totalCount}
-                            expandedCategories={expandedCategories}
-                            toggleCategory={toggleCategory}
-                            onFilterChange={handleFilterChange}
-                            onClearAll={handleClearAll}
-                        />
+                    {/* Desktop sidebar: stays in view and scrolls on its own */}
+                    <aside className="hidden self-start lg:sticky lg:top-[120px] lg:block lg:max-h-[calc(100vh-136px)] lg:overflow-y-auto lg:pb-6 hide-scroll" aria-label={t("filters")}>
+                        {sidebar(false)}
                     </aside>
 
                     {/* Product Grid Content */}
-                    <div className="flex-1 min-w-0 w-full pb-32 border-l-0 lg:border-l border-champagne/30 lg:pl-6">
+                    <div className="min-w-0 pt-0 lg:pt-3.5">
 
                         {selectedFamilyLabel && isFamilyLandingFamily(selectedFamilyLabel) && (
-                            <p className="mb-4 text-sm text-obsidian">
+                            <p className="mb-3 text-[13px] text-[#1c1c1e]">
                                 <LocaleLink
                                     href={familyGuideHref(selectedFamilyLabel)}
-                                    className="underline underline-offset-4 hover:text-muted-gold"
+                                    className="underline underline-offset-4 hover:text-[#9a7a48]"
                                 >
                                     {t("helpChooseFamily", { family: localizeFamilyName(locale, selectedFamilyLabel) })}
                                 </LocaleLink>
                             </p>
-                        )}
-
-                        <div className="mb-5 hidden lg:flex flex-wrap items-center gap-3">
-                            <label className="text-sm" htmlFor="shop-collection">{t("shopByCollection")}</label>
-                            <select id="shop-collection" value={filters.shopCollection ?? ""}
-                                onChange={event => handleFilterChange({ shopCollection: event.target.value || null })}
-                                className="min-h-11 max-w-full rounded border border-champagne bg-white px-3 text-sm">
-                                <option value="">{t("allCollections")}</option>
-                                {SHOP_COLLECTIONS.map(collection => <option key={collection.key} value={collection.key}>{localizeCollectionName(locale, collection.key, collection.title)}</option>)}
-                            </select>
-                        </div>
-                        {filters.shopCollection && <p className="mb-4 hidden text-sm text-slate lg:block">{localizeCollectionSubtitle(locale, filters.shopCollection, getShopCollection(filters.shopCollection)?.subtitle)}</p>}
-                        {filters.shopCollection && BUILDER_COLLECTION_FITMENTS[filters.shopCollection] && <LocaleLink className="mb-4 hidden min-h-11 items-center border border-champagne px-4 text-sm lg:inline-flex" href={`/matrix?shop=${filters.shopCollection}${filters.families.length === 1 ? `&family=${encodeURIComponent(filters.families[0])}` : ''}`}>{t("buildFromCollection")}</LocaleLink>}
-                        {filters.shopCollection === "accessories-packaging" && <div className="mb-5 hidden flex-wrap gap-4 text-sm lg:flex">
-                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Component",families:[]})}>{t("looseComponents")}</button>
-                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Accessory",families:["Tool"]})}>{t("funnelsTools")}</button>
-                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Packaging",families:["Gift Bag"]})}>{t("bags")}</button>
-                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Packaging",families:["Gift Box"]})}>{t("boxes")}</button>
-                        </div>}
-                        {filters.shopCollection === "glass-spray-bottles" && <div className="mb-5 hidden flex-wrap gap-3 text-sm lg:flex">
-                            <button className="underline min-h-11" onClick={() => handleFilterChange({applicators:["vintagestyle","vintagestyle-tassel"]})}>{t("vintageBulbSpray")}</button>
-                            <LocaleLink className="underline" href="/catalog?category=Component&componentType=Sprayer">{t("looseSprayers")}</LocaleLink>
-                        </div>}
-                        {/* Family banner — shown when a single design family is filtered */}
-                        {filters.families.length === 1 && !filters.search && (
-                            <FamilyBanner family={filters.families[0]} />
-                        )}
-
-                        <h2 className="mb-3 font-serif text-lg font-medium text-obsidian lg:hidden">
-                            {scopeTitle}
-                        </h2>
-
-                        {/* Results Header — sticks directly below fixed navbar */}
-                        <div className="sticky top-[136px] lg:top-[100px] z-30 bg-warm-white pt-2 sm:pt-5 pb-2 mb-4 sm:mb-8 border-b-2 border-obsidian hidden lg:block">
-                            <div className="flex items-end justify-between gap-2 sm:gap-3">
-                                <div className="min-w-0">
-                                    <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-muted-gold font-bold mb-0.5 sm:mb-1">
-                                        {filters.search
-                                            ? t("searchResults")
-                                            : filters.applicators.length > 0 && filters.families.length === 1
-                                                ? localizeFamilyName(locale, filters.families[0] ?? "")
-                                                : t("title")}
-                                    </p>
-                                    <h2 className="font-serif text-lg sm:text-3xl font-medium text-obsidian truncate">
-                                        {scopeTitle}
-                                    </h2>
-                                </div>
-                                <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-                                    {/* View Toggle */}
-                                    <ViewToggle value={viewMode} onChange={handleViewChange} />
-
-                                    {/* Desktop Sort */}
-                                    <div className="hidden lg:flex items-center gap-2">
-                                        <label htmlFor="catalog-sort" className="text-xs font-semibold text-slate uppercase tracking-wider whitespace-nowrap">
-                                            {t("sortBy")}
-                                        </label>
-                                        <div className="relative">
-                                            <select
-                                                id="catalog-sort"
-                                                value={sortBy}
-                                                onChange={(e) => handleSortChange(e.target.value as SortValue)}
-                                                aria-label="Sort by visible catalog results"
-                                                className="appearance-none bg-white border border-champagne rounded-lg px-3 py-1.5 text-xs text-obsidian pr-7 focus:border-muted-gold focus:ring-2 focus:ring-muted-gold/20 outline-none cursor-pointer"
-                                            >
-                                                {catalogSortMenuOptions(Boolean(filters.search)).map((opt) => (
-                                                    <option key={opt.value} value={opt.value}>{sortLabel(opt.value)}</option>
-                                                ))}
-                                            </select>
-                                            <ArrowUpDown className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-slate pointer-events-none" />
-                                        </div>
-                                    </div>
-
-                                    <span
-                                        className="hidden sm:inline-flex px-2 sm:px-3 py-1 bg-white border border-champagne text-[10px] sm:text-xs font-semibold text-slate uppercase rounded-full whitespace-nowrap"
-                                        aria-live="polite"
-                                        data-testid="catalog-result-count"
-                                    >
-                                        {isLoading ? "Loading" : `${totalCount} ${totalCount === 1 ? "Product" : "Products"}`}
-                                    </span>
-                                    {chips.length > 0 && (
-                                        <button
-                                            onClick={handleClearAll}
-                                            className="hidden sm:inline-flex items-center gap-1 px-2 py-1 text-[10px] font-semibold text-muted-gold hover:text-obsidian bg-muted-gold/10 border border-muted-gold/30 rounded-full whitespace-nowrap transition-colors"
-                                        >
-                                            {chips.length} filter{chips.length !== 1 ? "s" : ""} · Clear
-                                        </button>
-                                    )}
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Quick applicator chips */}
-                        {facets && Object.keys(facets.applicators).length > 0 && (
-                            <>
-                                <div className="lg:hidden flex gap-2 mb-3 overflow-x-auto pb-1 hide-scroll">
-                                    <button
-                                        onClick={() => handleFilterChange({ applicators: [] })}
-                                        aria-pressed={filters.applicators.length === 0}
-                                        data-testid="catalog-quick-applicator"
-                                        className={`shrink-0 min-h-11 px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full border transition-colors ${filters.applicators.length === 0
-                                            ? "bg-obsidian text-white border-obsidian"
-                                            : "bg-white border-champagne text-obsidian hover:border-muted-gold"
-                                            }`}
-                                    >
-                                        All Bottles
-                                    </button>
-                                    {mobileQuickApplicatorBuckets.map(renderQuickApplicatorButton)}
-                                </div>
-                                <div className="hidden lg:flex gap-2 mb-6 overflow-x-auto pb-1 hide-scroll sm:flex-wrap">
-                                    <button
-                                        onClick={() => handleFilterChange({ applicators: [] })}
-                                        aria-pressed={filters.applicators.length === 0}
-                                        data-testid="catalog-quick-applicator"
-                                        className={`shrink-0 min-h-11 px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full border transition-colors ${filters.applicators.length === 0
-                                            ? "bg-obsidian text-white border-obsidian"
-                                            : "bg-white border-champagne text-obsidian hover:border-muted-gold"
-                                            }`}
-                                    >
-                                        All Bottles
-                                    </button>
-                                    {quickApplicatorBuckets.map(renderQuickApplicatorButton)}
-                                </div>
-                            </>
-                        )}
-
-                        {facetChips.length > 0 && (
-                        <div className="lg:hidden mb-3 flex gap-2 overflow-x-auto pb-1 hide-scroll" aria-label="Active catalog filters">
-                            {facetChips.map((chip, i) => (
-                                <span
-                                    key={`${chip.label}-${i}`}
-                                    className="inline-flex min-h-11 shrink-0 items-center px-3 py-1.5 bg-muted-gold/10 text-muted-gold border border-muted-gold/30 text-xs font-semibold rounded-full"
-                                    data-testid="catalog-active-filter-chip"
-                                >
-                                    <span className="truncate max-w-[160px]">{compactChipLabel(chip.label)}</span>
-                                    <button
-                                        onClick={chip.onRemove}
-                                        className="ml-2 flex h-8 w-8 items-center justify-center hover:text-obsidian transition-colors shrink-0"
-                                        aria-label={`Remove ${chip.label} filter`}
-                                    >
-                                        <X className="w-3 h-3" />
-                                    </button>
-                                </span>
-                            ))}
-                            <button
-                                onClick={handleClearFacets}
-                                className="shrink-0 min-h-11 px-2 text-xs font-semibold text-muted-gold hover:text-obsidian"
-                            >
-                                Clear
-                            </button>
-                        </div>
                         )}
 
                         {/* Loading */}
@@ -2678,7 +1872,7 @@ export default function CatalogClient({
                         {hasMore && (
                             <div className="flex flex-col items-center py-12 mt-8 border-t border-champagne/40">
                                 <p className="text-xs text-slate mb-4">
-                                    {t("showingOf", { shown: visibleProducts.length, total: totalCount })}
+                                    {t("showingOf", { shown: rawResult.items.length, total: totalCount })}
                                 </p>
                                 <button
                                     type="button"

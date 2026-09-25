@@ -8,6 +8,8 @@ import {
 } from "../src/lib/grace/refineState";
 import { familyFinderHref } from "@/lib/products/focused-shopping";
 import { readFileSync } from "node:fs";
+import { buildAppliedFilterChips } from "@/lib/catalogRefineModel";
+import { EMPTY_FILTERS } from "@/lib/catalogFilters";
 
 describe("Grace Refine state", () => {
     it("keeps the catalog client synchronized when Grace replaces the URL", () => {
@@ -17,10 +19,12 @@ describe("Grace Refine state", () => {
         expect(source).toContain("setActiveResult(initialResult)");
     });
 
-    it("exposes exact capacities in the canonical Refine UI", () => {
+    it("shows an exact capacity Grace applies as a removable chip beside the capacity ranges", () => {
         const source = readFileSync("src/app/catalog/CatalogClient.tsx", "utf8");
-        expect(source).toContain('t("exactCapacity")');
-        expect(source).toContain("toggleArrayFilter(\"capacities\", capacity.label)");
+        expect(source).toContain("buildAppliedFilterChips(filters)");
+        expect(buildAppliedFilterChips({ ...EMPTY_FILTERS, capacities: ["9 ml"] })).toEqual([
+            { facet: "capacities", value: "9 ml", label: "Capacity: 9 ml (0.3 oz)" },
+        ]);
     });
 
     it("uses the focused Cylinder route without repeating family as a required choice", () => {

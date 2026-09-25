@@ -9,7 +9,10 @@ import {
 } from "@/lib/catalogSearchFallback";
 import {
     EMPTY_FILTERS,
+    SPECIALTY_NECK_VALUE,
     expandCapacityFilterValues,
+    expandNeckFilterValues,
+    isMultiCategoryValue,
     normalizeRollerMaterials,
     SORT_OPTIONS,
     VIEW_MODES,
@@ -134,6 +137,10 @@ export function applyVisibleCatalogSummary(
     return { ...result, totalCount: Math.max(summary.totalCount, result.items.length), facets: summary.facets };
 }
 
+function storedNeckValues(groups: readonly CatalogSearchGroup[]): string[] {
+    return Array.from(new Set(groups.map((group) => group.neckThreadSize).filter((neck): neck is string => Boolean(neck))));
+}
+
 function asStringArray(value: unknown): string[] {
     return Array.isArray(value) ? value.filter((item): item is string => typeof item === "string" && item.trim().length > 0) : [];
 }
@@ -171,16 +178,25 @@ export async function searchCatalogServer(args: CatalogSearchArgs): Promise<Cata
     const normalizedArgs = normalizeCatalogSearchArgs(args);
     const convex = getCatalogConvexClient();
     const { shopCollection, ...backendFilters } = normalizedArgs.filters;
-    const convexArgs = {
-        ...normalizedArgs,
-        filters: {
-            ...backendFilters,
-            capacities: expandCapacityFilterValues(normalizedArgs.filters.capacities),
-        },
-    };
-    if (!shopCollection) try {
+    // Shop collections and product types that span several stored categories
+    // ("jars", "packaging-more") are matched in memory; Convex takes one exact category.
+    const inMemoryOnly = Boolean(shopCollection) || isMultiCategoryValue(normalizedArgs.filters.category);
+    if (!inMemoryOnly) try {
+        const snapshotPromise = getCatalogVisibilitySnapshot();
+        // "Specialty" stands for every non-standard neck; Convex matches exact stored values.
+        const neckThreadSizes = backendFilters.neckThreadSizes.includes(SPECIALTY_NECK_VALUE)
+            ? expandNeckFilterValues(backendFilters.neckThreadSizes, storedNeckValues((await snapshotPromise).groups))
+            : backendFilters.neckThreadSizes;
+        const convexArgs = {
+            ...normalizedArgs,
+            filters: {
+                ...backendFilters,
+                capacities: expandCapacityFilterValues(normalizedArgs.filters.capacities),
+                neckThreadSizes,
+            },
+        };
         const result = await convex.query(api.products.searchCatalog, convexArgs) as CatalogSearchResultShape;
-        const [enriched, snapshot] = await Promise.all([withCatalogMediaPreviewRows(convex, result), getCatalogVisibilitySnapshot()]);
+        const [enriched, snapshot] = await Promise.all([withCatalogMediaPreviewRows(convex, result), snapshotPromise]);
         return applyVisibleCatalogSummary(sanitizeCatalogResult(enriched), snapshot, normalizedArgs);
     } catch (error) {
         const message = error instanceof Error ? error.message : "";

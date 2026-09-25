@@ -3,9 +3,8 @@ import { getLocale } from "next-intl/server";
 import { redirect } from "next/navigation";
 import CatalogClient, { type CatalogSearchResult } from "./CatalogClient";
 import Footer from "@/components/Footer";
-import { api } from "../../../convex/_generated/api";
 import { catalogBrowseRedirect, paramsToFilters } from "@/lib/catalogFilters";
-import { getCatalogConvexClient, searchCatalogServer } from "@/lib/catalogServer";
+import { searchCatalogServer } from "@/lib/catalogServer";
 import { catalogInterpretationMode } from "@/lib/catalog/searchInterpretationServer";
 import { defaultLocale, isLocale, type AppLocale } from "@/i18n/config";
 import { buildHreflangAlternates } from "@/i18n/metadata";
@@ -56,25 +55,20 @@ export default async function CatalogPage({
         redirect(localizeHref(locale, browseRedirect));
     }
     const initialState = paramsToFilters(urlSearchParams);
-    const convex = getCatalogConvexClient();
 
-    const [initialResult, initialTaxonomy] = await Promise.all([
-        searchCatalogServer({
-            filters: initialState.filters,
-            sort: initialState.sort,
-            view: initialState.view,
-            limit: PAGE_SIZE,
-            cursor: null,
-        }) as Promise<CatalogSearchResult>,
-        convex.query(api.products.getCatalogTaxonomy, {}),
-    ]);
+    const initialResult = await (searchCatalogServer({
+        filters: initialState.filters,
+        sort: initialState.sort,
+        view: initialState.view,
+        limit: PAGE_SIZE,
+        cursor: null,
+    }) as Promise<CatalogSearchResult>);
 
     return (
         <>
             <CatalogClient
                 initialSearchParams={urlSearchParams.toString()}
                 initialResult={initialResult}
-                initialTaxonomy={initialTaxonomy}
                 interpretMode={catalogInterpretationMode()}
             />
             <Footer />
