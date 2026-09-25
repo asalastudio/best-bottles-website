@@ -6,6 +6,17 @@ import missingSources from "./missing-hero-sources.json";
 const HIDDEN_CATALOG_GROUPS = new Set([
     "cylinder-5.5ml-clear-13-415-finemist",
     "cylinder-5.5ml-clear-13-415",
+    // LBMetalSilver1oz: a silver metal-shell bottle the legacy site lists as no
+    // longer available (Jordan, 2026-09-25: take it off the new catalog).
+    "lotion-bottle-30ml-clear-18mm",
+]);
+
+// Groups that stay listed only while they still hold variants. The webhook-made
+// atomizer-5ml-slim group empties when its three SKUs move back into
+// atomizer-5ml, but its stored variantCount does not recount.
+const HIDDEN_WHEN_EMPTY_GROUPS = new Set([
+    "lotion-bottle-30ml-clear",
+    "atomizer-5ml-slim",
 ]);
 
 export function isHiddenCatalogGroup(slug: string): boolean {
@@ -31,5 +42,5 @@ export function hasCatalogSourceHold(slug: string): boolean {
 
 export function isVisibleCatalogGroup(group: { slug: string; variantCount: number }, variants?: readonly unknown[]): boolean {
     return !isHiddenCatalogGroup(group.slug) && !hasCatalogSourceHold(group.slug) && group.variantCount > 0
-        && !(group.slug === "lotion-bottle-30ml-clear" && variants?.length === 0);
+        && !(HIDDEN_WHEN_EMPTY_GROUPS.has(group.slug) && variants?.length === 0);
 }
