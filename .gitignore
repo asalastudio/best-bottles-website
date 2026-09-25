@@ -242,3 +242,4 @@ public/local-kits/
 
 # Component register Phase 3: cut plates and layers (native resolution); measurements are committed, pixels are not.
 /output/register-phase3/
+/output/register-bodies/

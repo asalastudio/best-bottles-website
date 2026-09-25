@@ -129,10 +129,12 @@ def measure_body(img: Image.Image) -> dict:
     widths, centres = [], []
     for y in rows:
         xs = np.where(m[y])[0]
+        if xs.size == 0:
+            continue  # a clear body can have see-through rows; they carry no width
         widths.append(xs.max() - xs.min() + 1)
         centres.append((xs.max() + xs.min() + 1) / 2)
-    barrel = float(np.median(widths))
-    axis = float(np.median(centres))
+    barrel = float(np.median(widths)) if widths else float(right - left)
+    axis = float(np.median(centres)) if centres else (left + right) / 2
     shoulder = next(y for y in range(top, bottom) if m[y].any() and (np.where(m[y])[0].max() - np.where(m[y])[0].min() + 1) >= 0.92 * barrel)
     px_per_mm = (bottom - top) / APPARENT_H_MM
     width = barrel / px_per_mm
