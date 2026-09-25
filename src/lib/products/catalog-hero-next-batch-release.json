@@ -76,82 +76,6 @@
     }
   },
   {
-    "groupSlug": "royal-13ml-clear-13-415-finemist",
-    "websiteSku": "GBRoyal13SpryGlMatt",
-    "graceSku": "GB-RYL-CLR-13ML-SPR-MGLD",
-    "shopifyVariantId": "gid://shopify/ProductVariant/53343694192932",
-    "family": "Royal",
-    "capacityMl": 13,
-    "bottleColor": "Clear",
-    "alt": "13 ml Clear Royal Fine Mist Spray Bottle with Matte Gold Sprayer and Cap",
-    "presentation": "Original product assembly",
-    "url": "/images/catalog/next-batch-approved-2026-09-25/GBRoyal13SpryGlMatt.1633203b14c6.webp",
-    "width": 1560,
-    "height": 1716,
-    "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
-    }
-  },
-  {
-    "groupSlug": "flair-15ml-clear-13-415",
-    "websiteSku": "GBFlair15Gl",
-    "graceSku": "GB-VIA-CLR-15ML-GLD-T-01",
-    "shopifyVariantId": "gid://shopify/ProductVariant/53343647007012",
-    "family": "Flair",
-    "capacityMl": 15,
-    "bottleColor": "Clear",
-    "alt": "15 ml Clear Flair Bottle with Shiny Gold Cap",
-    "presentation": "Original product assembly",
-    "url": "/images/catalog/next-batch-approved-2026-09-25/GBFlair15Gl.af10b87fd145.webp",
-    "width": 1560,
-    "height": 1716,
-    "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
-    }
-  },
-  {
-    "groupSlug": "flair-15ml-clear-13-415-finemist",
-    "websiteSku": "GBFlair15SpryGlMatt",
-    "graceSku": "GB-FLR-CLR-15ML-SPR-MGLD",
-    "shopifyVariantId": "gid://shopify/ProductVariant/53343635144996",
-    "family": "Flair",
-    "capacityMl": 15,
-    "bottleColor": "Clear",
-    "alt": "15 ml Clear Flair Fine Mist Spray Bottle with Matte Gold Sprayer and Cap",
-    "presentation": "Original product assembly",
-    "url": "/images/catalog/next-batch-approved-2026-09-25/GBFlair15SpryGlMatt.dc18f226ac1c.webp",
-    "width": 1560,
-    "height": 1716,
-    "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
-    }
-  },
-  {
-    "groupSlug": "flair-15ml-clear-13-415-rollon",
-    "websiteSku": "GBFlair15MtlRollBlkDot",
-    "graceSku": "GB-FLR-CLR-15ML-MRL-BKDT",
-    "shopifyVariantId": "gid://shopify/ProductVariant/53343624036644",
-    "family": "Flair",
-    "capacityMl": 15,
-    "bottleColor": "Clear",
-    "alt": "15 ml Clear Flair Roll-On Bottle with Metal Roller Ball and Black Dotted Cap",
-    "presentation": "Original product assembly",
-    "url": "/images/catalog/next-batch-approved-2026-09-25/GBFlair15MtlRollBlkDot.7a98f43bc89c.webp",
-    "width": 1560,
-    "height": 1716,
-    "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
-    }
-  },
-  {
     "groupSlug": "tola-6ml-clear-14.3mm",
     "websiteSku": "GB6TPlGl",
     "graceSku": "GB-DEC-CLR-6ML-T",
@@ -295,44 +219,6 @@
     "alt": "355 ml Cobalt Blue Pear Bottle with Glass Ball Stopper",
     "presentation": "Original product assembly",
     "url": "/images/catalog/next-batch-approved-2026-09-25/GBCB12ozPear.be09fc345992.webp",
-    "width": 1560,
-    "height": 1716,
-    "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
-    }
-  },
-  {
-    "groupSlug": "royal-13ml-clear-13-415",
-    "websiteSku": "GBRoyal13Gl",
-    "graceSku": "GB-VIA-CLR-13ML-GLD-T",
-    "shopifyVariantId": "gid://shopify/ProductVariant/53343643271460",
-    "family": "Royal",
-    "capacityMl": 13,
-    "bottleColor": "Clear",
-    "alt": "13 ml Clear Royal Bottle with Shiny Gold Cap",
-    "presentation": "Original product assembly",
-    "url": "/images/catalog/next-batch-approved-2026-09-25/GBRoyal13Gl.e7f53991ffa2.webp",
-    "width": 1560,
-    "height": 1716,
-    "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
-    }
-  },
-  {
-    "groupSlug": "royal-13ml-clear-13-415-rollon",
-    "websiteSku": "GBRoyal13MtlRollBlkDot",
-    "graceSku": "GB-RYL-CLR-13ML-MRL-BKDT",
-    "shopifyVariantId": "gid://shopify/ProductVariant/53343605391652",
-    "family": "Royal",
-    "capacityMl": 13,
-    "bottleColor": "Clear",
-    "alt": "13 ml Clear Royal Roll-On Bottle with Metal Roller Ball and Black Dotted Cap",
-    "presentation": "Original product assembly",
-    "url": "/images/catalog/next-batch-approved-2026-09-25/GBRoyal13MtlRollBlkDot.0bd1985f251f.webp",
     "width": 1560,
     "height": 1716,
     "framing": {
