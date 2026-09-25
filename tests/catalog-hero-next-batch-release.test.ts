@@ -10,20 +10,21 @@ import { getCatalogHero, getProductHero, resolveLiveCatalogCardHero } from '../s
 afterEach(() => vi.unstubAllEnvs());
 
 const HELD = [
-  'GBGrce55AnSpTslMtSl', 'GBRoyal13Gl', 'GBRoyal13MtlRollBlkDot', 'GB3TPlGl', 'GBEternalFlameGreen',
-  'GBCB12ozPear', 'GBHeartFrst4KeyGld', 'GBHeartFrst4TslRed', 'LB1ozGl', 'LB1ozSl', 'LB3mlClear',
+  'GBHeartFrst4KeyGld', 'GBHeartFrst4TslRed', 'LB1ozGl', 'LB1ozSl', 'LB3mlClear',
   'LBMetalSilver1oz', 'GBMtlCylGl', 'GB1ozGenieBl',
 ];
+const ROUND2_QA_PASS = ['GBEternalFlameGreen', 'GBCB12ozPear'];
+const ON_SIGHT = ['GBRoyal13Gl', 'GBRoyal13MtlRollBlkDot', 'GB3TPlGl', 'GBGrce55AnSpTslMtSl'];
 
 describe('Grace, Royal, Flair, and Decorative catalog hero release', () => {
-  it('ships the 14 approved exact-SKU Sunburst renders with intact image files', async () => {
-    expect(rows).toHaveLength(14);
-    expect(new Set(rows.map(row => row.websiteSku)).size).toBe(14);
-    expect(rows.filter(row => row.family === 'Grace')).toHaveLength(4);
-    expect(rows.filter(row => row.family === 'Royal')).toHaveLength(1);
+  it('ships the 20 approved exact-SKU Sunburst renders with intact image files', async () => {
+    expect(rows).toHaveLength(20);
+    expect(new Set(rows.map(row => row.websiteSku)).size).toBe(20);
+    expect(rows.filter(row => row.family === 'Grace')).toHaveLength(5);
+    expect(rows.filter(row => row.family === 'Royal')).toHaveLength(3);
     expect(rows.filter(row => row.family === 'Flair')).toHaveLength(3);
-    expect(rows.filter(row => row.family === 'Decorative')).toHaveLength(6);
-    expect(approval.rows).toHaveLength(14);
+    expect(rows.filter(row => row.family === 'Decorative')).toHaveLength(9);
+    expect(approval.rows).toHaveLength(20);
     for (const hero of rows) {
       const evidence = approval.rows.find(row => row.sku === hero.websiteSku)!;
       const original = catalog.find(row => row.websiteSku === hero.websiteSku)!;
@@ -39,10 +40,29 @@ describe('Grace, Royal, Flair, and Decorative catalog hero release', () => {
       expect([meta.format, meta.width, meta.height]).toEqual(['webp', 1560, 1716]);
       expect([hero.width, hero.height]).toEqual([1560, 1716]);
       expect(evidence.model).toBe('gpt-image-2.5-sunburst');
-      expect(evidence.qa.operationalPass).toBe(true);
+      // Every row passes the edge gate except the four Jordan approved on sight.
+      expect(evidence.qa.operationalPass).toBe(!ON_SIGHT.includes(hero.websiteSku));
       expect(hero.framing).toEqual({ scale: 1, translateXPercent: 0, translateYPercent: 0 });
     }
     expect(rows.find(row => row.websiteSku === 'GBEternalFlameBlue')?.bottleColor).toBe('Cobalt Blue');
+    expect(rows.find(row => row.websiteSku === 'GBEternalFlameGreen')?.bottleColor).toBe('Green');
+  });
+
+  it('takes the six added heroes from round 2 and records the four on-sight approvals', () => {
+    for (const sku of [...ROUND2_QA_PASS, ...ON_SIGHT]) {
+      const evidence = approval.rows.find(row => row.sku === sku)!;
+      expect(evidence.round).toBe(2);
+      expect(evidence.selectedAttempt).toMatch(/^r2a\d$/);
+      expect(evidence.status).toBe(ON_SIGHT.includes(sku) ? 'approved-on-sight' : 'qa-pass');
+    }
+    for (const sku of ON_SIGHT) {
+      const onSight = approval.rows.find(row => row.sku === sku)!.approvedOnSight!;
+      expect(onSight.attemptsTotal).toBe(6);
+      expect(onSight.measured.operationalPass).toBe(false);
+      expect(onSight.measured.iou).toBeLessThan(0.995);
+    }
+    expect(approval.approvedOnSight.skus.sort()).toEqual([...ON_SIGHT].sort());
+    expect(approval.rows.filter(row => 'status' in row)).toHaveLength(6);
   });
 
   it('keeps the pictured and purchasable SKU aligned in its production group', () => {

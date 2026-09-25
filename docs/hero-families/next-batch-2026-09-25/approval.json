@@ -2,15 +2,24 @@
   "date": "2026-09-25",
   "approvedBy": "Jordan, after reviewing the contact sheets",
   "scope": {
-    "Grace": 4,
-    "Royal": 1,
+    "Grace": 5,
+    "Royal": 3,
     "Flair": 3,
-    "Decorative": 6
+    "Decorative": 9
   },
   "publication": false,
   "source": {
-    "lane": "next-batch-2026-09-25 round 1 (fitted/)",
-    "approvalCandidatesSha256": "bc28a2f58f9cff09084890e333cdcac20e49c0011a20a6a5d10021fc4e18871a"
+    "lane": "next-batch-2026-09-25 round 1 (fitted/) and round 2 (fitted/round2/)",
+    "approvalCandidatesSha256": "7750d9f7e953be600e2d7779cf7df46853baf40fc2a4cd1c7b70598bed3be12b"
+  },
+  "approvedOnSight": {
+    "skus": [
+      "GBRoyal13Gl",
+      "GBRoyal13MtlRollBlkDot",
+      "GB3TPlGl",
+      "GBGrce55AnSpTslMtSl"
+    ],
+    "reason": "Approved on sight by Jordan 2026-09-25 after six attempts: the 4-6 px edge-gate miss is about the gate's own measurement noise (a geometrically perfect copy measures up to 4.4-5.2 px max)."
   },
   "sizing": {
     "curve": "pct = 3.5314 * mm^0.5868",
@@ -25,14 +34,8 @@
   "qaGate": "IoU >= 0.995 and smoothed edge p99 <= 4 px vs the master PSD input silhouette, plus by-eye shadow/material check",
   "background": "Generated bone treatment retained; pixel-exact background not claimed",
   "held": {
-    "GBGrce55AnSpTslMtSl": "QA near-miss (tassel strands redrawn); re-rendering",
-    "GBRoyal13Gl": "QA near-miss (right side of square body 5-8 px); re-rendering",
-    "GBRoyal13MtlRollBlkDot": "QA near-miss (right side of square body 5-8 px); re-rendering",
-    "GB3TPlGl": "QA near-miss (cap outline, partly a PSD alpha sliver); re-rendering",
-    "GBEternalFlameGreen": "QA near-miss (one detector point at the dome/foot corner); re-rendering",
-    "GBCB12ozPear": "QA near-miss (foot flare and stopper rim 4-8 px); re-rendering",
-    "GBHeartFrst4KeyGld": "presentation hold: keychain floats in the master pose, no contact shadow; being re-posed",
-    "GBHeartFrst4TslRed": "presentation hold: tassel floats in the master pose, no contact shadow; being re-posed",
+    "GBHeartFrst4KeyGld": "held: round 2 laid the keychain flat but the model re-posed the heart (IoU 0.976); today's card image stays",
+    "GBHeartFrst4TslRed": "held: round 2 laid the tassel flat but the model re-posed the heart (IoU 0.976); today's card image stays",
     "LB1ozGl": "not rendered: Lotion glass height unknown",
     "LB1ozSl": "not rendered: Lotion glass height unknown",
     "LB3mlClear": "not rendered: height unknown, plastic",
@@ -5190,6 +5193,2324 @@
         "status": "pass",
         "reason": "",
         "approval": "NOT APPROVED - Jordan approves by looking at the sheets"
+      }
+    },
+    {
+      "sku": "GBEternalFlameGreen",
+      "family": "Decorative",
+      "groupSlug": "eternal-flame-35ml-green-Ground",
+      "graceSku": "GB-ETF-GRN-35ML",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343698354468",
+      "round": 2,
+      "status": "qa-pass",
+      "approvalNote": "QA pass in round 2; approved from the round-2 contact sheet",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh77trt1vqay92x2fwc35ahb5x8dsht5",
+        "slug": "eternal-flame-35ml-green-Ground",
+        "displayName": "35 ml Green Eternal Flame Bottle",
+        "color": "Green",
+        "capColor": "Clear",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/next-batch-approved-2026-09-25/GBEternalFlameGreen.47eccae275a4.webp",
+      "sha256": "47eccae275a4b84970ea2210ac5af6dee375cfe3cfcc13fe8349fbc4c66e7a24",
+      "bytes": 1909730,
+      "sourceFile": "GBEternalFlameGreen-r2a1-fitted.png",
+      "sourceFittedSha256": "42ae3dd4a50bd6341516ab502521a49eb704087ea93256c15ce73ed607532473",
+      "sourceBytes": 3642658,
+      "selectedAttempt": "r2a1",
+      "sourceRenderFile": "GBEternalFlameGreen-r2a1.png",
+      "sourceRenderSha256": "4be658119be23cb887f366714b90bf6e3b7cbf2739aeafe096fdfa2acbd20ec0",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 44,
+        "landmarkRule": "closure seat = where the fitted closure/stopper lower edge meets the glass (top of glass for ground stoppers)",
+        "targetPct": 32.54,
+        "baselinePct": 91,
+        "curve": "pct = 3.5314 * mm^0.5868"
+      },
+      "fit": {
+        "uniformScale": 0.99899,
+        "about": "foot",
+        "horizontal": "assembly centre aligned to the input (centred) assembly",
+        "targetFootY": 2082.08,
+        "targetLandmarkY": 1337.7,
+        "targetPct": 32.54,
+        "measuredFootY": 2082.13,
+        "measuredLandmarkY": 1337.6,
+        "measuredPct": 32.541,
+        "footErrPx": 0.05,
+        "landmarkErrPx": -0.1,
+        "maxErrPctOfCanvasHeight": 0.004,
+        "landmarkBandPoints": 34,
+        "footBandPoints": 16
+      },
+      "qa": {
+        "iou": 0.99693,
+        "edgeSmoothed": {
+          "max": 3.38,
+          "p99": 2.51,
+          "p95": 1.43,
+          "median": 0.41
+        },
+        "edgePerPoint": {
+          "max": 4.21,
+          "p99": 2.86,
+          "p95": 1.66,
+          "median": 0.47
+        },
+        "operationalPass": true,
+        "strictPolicyPass": false,
+        "shadowProbe": {
+          "contactBandMeanDarkening": 93.43,
+          "belowFootMeanDarkening": 16.62,
+          "rightOfBaseMeanDarkening": 14.45,
+          "leftOfBaseMeanDarkening": 1.59
+        },
+        "background": {
+          "p95MaxChannelDevFromBone": 2,
+          "medianRGB": [
+            245,
+            243,
+            239
+          ]
+        },
+        "eye": {
+          "ok": true,
+          "note": "stopper seated; green kept; contact + cast shadow right"
+        }
+      },
+      "input": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/inputs/GBEternalFlameGreen-input.png",
+        "sha256": "c14def43caa881d26440f8f495656289371b9eff14a1d0a6f2f0b42e2c72df14",
+        "rebuilt": false
+      },
+      "inputSha256": "c14def43caa881d26440f8f495656289371b9eff14a1d0a6f2f0b42e2c72df14",
+      "psdSha256": "eca0e8fde7237a95f9a4239fce266d4a89da92729aa71ea10afc12a8da5f7a0f",
+      "effectivePromptSha256": "561a185e414df89250290a215ca210902d21e2370fd6f7db115acc1e269d75ba",
+      "laneRecord": {
+        "websiteSku": "GBEternalFlameGreen",
+        "graceSku": "GB-ETF-GRN-35ML",
+        "groupSlug": "eternal-flame-35ml-green-Ground",
+        "input": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/inputs/GBEternalFlameGreen-input.png",
+          "sha256": "c14def43caa881d26440f8f495656289371b9eff14a1d0a6f2f0b42e2c72df14",
+          "rebuilt": false
+        },
+        "selectedAttempt": "r2a1",
+        "render": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/renders/round2/GBEternalFlameGreen-r2a1.png",
+          "sha256": "4be658119be23cb887f366714b90bf6e3b7cbf2739aeafe096fdfa2acbd20ec0"
+        },
+        "fitted": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/fitted/round2/GBEternalFlameGreen-r2a1-fitted.png",
+          "sha256": "42ae3dd4a50bd6341516ab502521a49eb704087ea93256c15ce73ed607532473"
+        },
+        "qa": {
+          "geometry": {
+            "iou": 0.99693,
+            "edgeSmoothed": {
+              "max": 3.38,
+              "p99": 2.51,
+              "p95": 1.43,
+              "median": 0.41
+            },
+            "edgePerPoint": {
+              "max": 4.21,
+              "p99": 2.86,
+              "p95": 1.66,
+              "median": 0.47
+            },
+            "smoothingRadiusPx": 18,
+            "measuredPoints": 622,
+            "boundaryPoints": 685,
+            "validatedInputPoints": 685,
+            "worstPoints_y_x_dev": [
+              [
+                1782,
+                1518,
+                4.21
+              ],
+              [
+                1788,
+                1521,
+                3.73
+              ],
+              [
+                1776,
+                1513,
+                3.72
+              ],
+              [
+                1774,
+                1512,
+                3.42
+              ],
+              [
+                1770,
+                1508,
+                3.13
+              ],
+              [
+                1264,
+                1138,
+                2.95
+              ],
+              [
+                1767,
+                1506,
+                2.94
+              ],
+              [
+                1266,
+                1135,
+                2.55
+              ],
+              [
+                1764,
+                1503,
+                2.51
+              ],
+              [
+                1794,
+                1523,
+                2.42
+              ],
+              [
+                1760,
+                1500,
+                2.33
+              ],
+              [
+                1842,
+                1530,
+                -2.28
+              ]
+            ],
+            "detectorOnInputVsAlpha": {
+              "iou": 0.99177,
+              "edge": {
+                "max": 1.95,
+                "p99": 1.86,
+                "p95": 1.8,
+                "median": 1.59
+              }
+            },
+            "strictPolicyPass": false,
+            "operationalPass": true,
+            "gateNote": "Deviation = render visible edge minus input visible edge (same detector), only at boundary points where the detector reproduces the input alpha within 3 px. edgeSmoothed = mean deviation of boundary points within 18 px (suppresses per-point detector noise); IoU is first-order from |edgeSmoothed|. strict = IoU>=0.995 and PER-POINT max<=4px. operational (used for re-render/hold) = IoU>=0.995 and SMOOTHED p99<=4px. Validation: a geometrically perfect (synthetically scaled+shifted) copy of the input measures IoU 0.998-0.999, smoothed p99 0.6-2.1 px, but per-point/smoothed max up to 4.4-5.2 px, so a max<=4 px claim is below this method's resolution."
+          },
+          "shadowProbe": {
+            "contactBandMeanDarkening": 93.43,
+            "belowFootMeanDarkening": 16.62,
+            "rightOfBaseMeanDarkening": 14.45,
+            "leftOfBaseMeanDarkening": 1.59
+          },
+          "background": {
+            "p95MaxChannelDevFromBone": 2,
+            "medianRGB": [
+              245,
+              243,
+              239
+            ]
+          },
+          "material": {
+            "inputMeanRGBInsideGlass": [
+              69.4,
+              157.4,
+              70.4
+            ],
+            "fittedMeanRGBInsideGlass": [
+              72,
+              153.9,
+              71.1
+            ]
+          },
+          "eye": {
+            "ok": true,
+            "note": "stopper seated; green kept; contact + cast shadow right"
+          }
+        },
+        "fit": {
+          "uniformScale": 0.99899,
+          "about": "foot",
+          "horizontal": "assembly centre aligned to the input (centred) assembly",
+          "targetFootY": 2082.08,
+          "targetLandmarkY": 1337.7,
+          "targetPct": 32.54,
+          "measuredFootY": 2082.13,
+          "measuredLandmarkY": 1337.6,
+          "measuredPct": 32.541,
+          "footErrPx": 0.05,
+          "landmarkErrPx": -0.1,
+          "maxErrPctOfCanvasHeight": 0.004,
+          "landmarkBandPoints": 34,
+          "footBandPoints": 16
+        },
+        "raw": {
+          "similarity": {
+            "scale": 1.00197,
+            "ty": -2.69,
+            "tx": -1.83,
+            "iterations": [
+              [
+                1.00159,
+                -2.07,
+                -1.58
+              ],
+              [
+                1.00031,
+                -0.53,
+                -0.23
+              ],
+              [
+                1.00007,
+                -0.08,
+                -0.02
+              ]
+            ]
+          },
+          "landmarkBandOffsetPx": 0.17,
+          "footBandOffsetPx": -0.58,
+          "footY": 2082.9,
+          "landmarkY": 1337.77,
+          "spanPct": 32.567,
+          "iou": 0.99676,
+          "edgeSmoothed": {
+            "max": 3.16,
+            "p99": 2.75,
+            "p95": 1.43,
+            "median": 0.49
+          },
+          "edgePerPoint": {
+            "max": 4.11,
+            "p99": 2.9,
+            "p95": 1.57,
+            "median": 0.51
+          }
+        },
+        "attempts": [
+          {
+            "attempt": "r2a1",
+            "renderSha256": "4be658119be23cb887f366714b90bf6e3b7cbf2739aeafe096fdfa2acbd20ec0",
+            "iou": 0.99693,
+            "edgeSmoothedP99": 2.51,
+            "edgeSmoothedMax": 3.38,
+            "operationalPass": true,
+            "fitErrPct": 0.004,
+            "eye": {
+              "ok": true,
+              "note": "stopper seated; green kept; contact + cast shadow right"
+            },
+            "usage": {
+              "input_tokens": 2272,
+              "input_tokens_details": {
+                "image_tokens": 1517,
+                "text_tokens": 755
+              },
+              "output_tokens": 3569,
+              "output_tokens_details": {
+                "image_tokens": 3569,
+                "text_tokens": 0
+              },
+              "total_tokens": 5841
+            }
+          }
+        ],
+        "round1Selected": {
+          "attempt": "a3",
+          "iou": 0.99664,
+          "status": "held"
+        },
+        "status": "pass",
+        "reason": "",
+        "approval": "NOT APPROVED - Jordan approves by looking at the sheet"
+      }
+    },
+    {
+      "sku": "GBCB12ozPear",
+      "family": "Decorative",
+      "groupSlug": "pear-355ml-clear-Ground-glassapplicator",
+      "graceSku": "GB-DEC-CLR-355ML-T",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343698387236",
+      "round": 2,
+      "status": "qa-pass",
+      "approvalNote": "QA pass in round 2; approved from the round-2 contact sheet",
+      "colourNote": "Pictured glass is cobalt blue; production colour field is Clear, so bottleColor follows production",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh734vy13w886v3sr9jjdh24858ds9cw",
+        "slug": "pear-355ml-clear-Ground-glassapplicator",
+        "displayName": "355 ml Clear Pear Bottle with Stopper",
+        "color": "Clear",
+        "capColor": "Clear",
+        "applicator": "Glass Stopper",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/next-batch-approved-2026-09-25/GBCB12ozPear.be09fc345992.webp",
+      "sha256": "be09fc345992c0536a7ca7943913b8004b2cf10181a58c1a6ce52d131bba2ed2",
+      "bytes": 1845360,
+      "sourceFile": "GBCB12ozPear-r2a1-fitted.png",
+      "sourceFittedSha256": "8304a736a514b49a77bb69cab3e248953d6e36281b06b9101429c94ecf1cbcca",
+      "sourceBytes": 3526720,
+      "selectedAttempt": "r2a1",
+      "sourceRenderFile": "GBCB12ozPear-r2a1.png",
+      "sourceRenderSha256": "443d787603c9d55a00ec83386a9e241467e8b8709fa2d02fc4cb2aad7fe82804",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 151.9,
+        "landmarkRule": "closure seat = where the fitted closure/stopper lower edge meets the glass (top of glass for ground stoppers)",
+        "targetPct": 67.32,
+        "baselinePct": 91,
+        "curve": "pct = 3.5314 * mm^0.5868"
+      },
+      "fit": {
+        "uniformScale": 1.00042,
+        "about": "foot",
+        "horizontal": "assembly centre aligned to the input (centred) assembly",
+        "targetFootY": 2082.08,
+        "targetLandmarkY": 541.8,
+        "targetPct": 67.32,
+        "measuredFootY": 2082.01,
+        "measuredLandmarkY": 541.78,
+        "measuredPct": 67.318,
+        "footErrPx": -0.07,
+        "landmarkErrPx": -0.02,
+        "maxErrPctOfCanvasHeight": 0.003,
+        "landmarkBandPoints": 42,
+        "footBandPoints": 16
+      },
+      "qa": {
+        "iou": 0.99538,
+        "edgeSmoothed": {
+          "max": 3.42,
+          "p99": 2.77,
+          "p95": 2.29,
+          "median": 1.05
+        },
+        "edgePerPoint": {
+          "max": 5.14,
+          "p99": 3.09,
+          "p95": 2.35,
+          "median": 1.05
+        },
+        "operationalPass": true,
+        "strictPolicyPass": false,
+        "shadowProbe": {
+          "contactBandMeanDarkening": 124.13,
+          "belowFootMeanDarkening": 9.9,
+          "rightOfBaseMeanDarkening": 10.64,
+          "leftOfBaseMeanDarkening": 0.09
+        },
+        "background": {
+          "p95MaxChannelDevFromBone": 1,
+          "medianRGB": [
+            245,
+            243,
+            239
+          ]
+        },
+        "eye": {
+          "ok": true,
+          "note": "cobalt kept; ball stopper seated; contact + cast shadow right"
+        }
+      },
+      "input": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/inputs/GBCB12ozPear-input.png",
+        "sha256": "29d51ea71a46dd773fb70fabf89c28a2caddf7b62dcd705980f476f3379c1025",
+        "rebuilt": false
+      },
+      "inputSha256": "29d51ea71a46dd773fb70fabf89c28a2caddf7b62dcd705980f476f3379c1025",
+      "psdSha256": "cd6f3256a641bf39fc3e382f835a6254cb1ed9682a4e241d422d07bd9690ad2e",
+      "effectivePromptSha256": "e2563a55e799eb782d54ae870cd5b864036b97f8b94a2133806894d18234d675",
+      "laneRecord": {
+        "websiteSku": "GBCB12ozPear",
+        "graceSku": "GB-DEC-CLR-355ML-T",
+        "groupSlug": "pear-355ml-clear-Ground-glassapplicator",
+        "input": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/inputs/GBCB12ozPear-input.png",
+          "sha256": "29d51ea71a46dd773fb70fabf89c28a2caddf7b62dcd705980f476f3379c1025",
+          "rebuilt": false
+        },
+        "selectedAttempt": "r2a1",
+        "render": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/renders/round2/GBCB12ozPear-r2a1.png",
+          "sha256": "443d787603c9d55a00ec83386a9e241467e8b8709fa2d02fc4cb2aad7fe82804"
+        },
+        "fitted": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/fitted/round2/GBCB12ozPear-r2a1-fitted.png",
+          "sha256": "8304a736a514b49a77bb69cab3e248953d6e36281b06b9101429c94ecf1cbcca"
+        },
+        "qa": {
+          "geometry": {
+            "iou": 0.99538,
+            "edgeSmoothed": {
+              "max": 3.42,
+              "p99": 2.77,
+              "p95": 2.29,
+              "median": 1.05
+            },
+            "edgePerPoint": {
+              "max": 5.14,
+              "p99": 3.09,
+              "p95": 2.35,
+              "median": 1.05
+            },
+            "smoothingRadiusPx": 18,
+            "measuredPoints": 856,
+            "boundaryPoints": 978,
+            "validatedInputPoints": 891,
+            "worstPoints_y_x_dev": [
+              [
+                539,
+                1146,
+                -5.14
+              ],
+              [
+                528,
+                1211,
+                -3.93
+              ],
+              [
+                527,
+                1211,
+                -3.9
+              ],
+              [
+                534,
+                1210,
+                -3.84
+              ],
+              [
+                1056,
+                1497,
+                -3.25
+              ],
+              [
+                1050,
+                1497,
+                -3.21
+              ],
+              [
+                516,
+                1212,
+                -3.13
+              ],
+              [
+                522,
+                1212,
+                -3.1
+              ],
+              [
+                509,
+                1212,
+                -3.09
+              ],
+              [
+                1062,
+                1497,
+                -3.08
+              ],
+              [
+                1044,
+                1497,
+                -3.07
+              ],
+              [
+                1038,
+                1497,
+                -2.99
+              ]
+            ],
+            "detectorOnInputVsAlpha": {
+              "iou": 0.9923,
+              "edge": {
+                "max": 25.74,
+                "p99": 21.33,
+                "p95": 4.92,
+                "median": 1.17
+              }
+            },
+            "strictPolicyPass": false,
+            "operationalPass": true,
+            "gateNote": "Deviation = render visible edge minus input visible edge (same detector), only at boundary points where the detector reproduces the input alpha within 3 px. edgeSmoothed = mean deviation of boundary points within 18 px (suppresses per-point detector noise); IoU is first-order from |edgeSmoothed|. strict = IoU>=0.995 and PER-POINT max<=4px. operational (used for re-render/hold) = IoU>=0.995 and SMOOTHED p99<=4px. Validation: a geometrically perfect (synthetically scaled+shifted) copy of the input measures IoU 0.998-0.999, smoothed p99 0.6-2.1 px, but per-point/smoothed max up to 4.4-5.2 px, so a max<=4 px claim is below this method's resolution."
+          },
+          "shadowProbe": {
+            "contactBandMeanDarkening": 124.13,
+            "belowFootMeanDarkening": 9.9,
+            "rightOfBaseMeanDarkening": 10.64,
+            "leftOfBaseMeanDarkening": 0.09
+          },
+          "background": {
+            "p95MaxChannelDevFromBone": 1,
+            "medianRGB": [
+              245,
+              243,
+              239
+            ]
+          },
+          "material": {
+            "inputMeanRGBInsideGlass": [
+              17.6,
+              20.3,
+              135.2
+            ],
+            "fittedMeanRGBInsideGlass": [
+              17.9,
+              28.8,
+              162.5
+            ]
+          },
+          "eye": {
+            "ok": true,
+            "note": "cobalt kept; ball stopper seated; contact + cast shadow right"
+          }
+        },
+        "fit": {
+          "uniformScale": 1.00042,
+          "about": "foot",
+          "horizontal": "assembly centre aligned to the input (centred) assembly",
+          "targetFootY": 2082.08,
+          "targetLandmarkY": 541.8,
+          "targetPct": 67.32,
+          "measuredFootY": 2082.01,
+          "measuredLandmarkY": 541.78,
+          "measuredPct": 67.318,
+          "footErrPx": -0.07,
+          "landmarkErrPx": -0.02,
+          "maxErrPctOfCanvasHeight": 0.003,
+          "landmarkBandPoints": 42,
+          "footBandPoints": 16
+        },
+        "raw": {
+          "similarity": {
+            "scale": 1.00191,
+            "ty": -1.67,
+            "tx": -2.1,
+            "iterations": [
+              [
+                1.00175,
+                -1.55,
+                -1.94
+              ],
+              [
+                1.0002,
+                -0.14,
+                -0.19
+              ],
+              [
+                0.99996,
+                0.02,
+                0.02
+              ]
+            ]
+          },
+          "landmarkBandOffsetPx": 0.78,
+          "footBandOffsetPx": -2.77,
+          "footY": 2081.63,
+          "landmarkY": 542,
+          "spanPct": 67.292,
+          "iou": 0.99611,
+          "edgeSmoothed": {
+            "max": 3.06,
+            "p99": 2.39,
+            "p95": 1.99,
+            "median": 0.9
+          },
+          "edgePerPoint": {
+            "max": 4.59,
+            "p99": 2.46,
+            "p95": 2.04,
+            "median": 0.93
+          }
+        },
+        "attempts": [
+          {
+            "attempt": "r2a1",
+            "renderSha256": "443d787603c9d55a00ec83386a9e241467e8b8709fa2d02fc4cb2aad7fe82804",
+            "iou": 0.99538,
+            "edgeSmoothedP99": 2.77,
+            "edgeSmoothedMax": 3.42,
+            "operationalPass": true,
+            "fitErrPct": 0.003,
+            "eye": {
+              "ok": true,
+              "note": "cobalt kept; ball stopper seated; contact + cast shadow right"
+            },
+            "usage": {
+              "input_tokens": 2271,
+              "input_tokens_details": {
+                "image_tokens": 1517,
+                "text_tokens": 754
+              },
+              "output_tokens": 3569,
+              "output_tokens_details": {
+                "image_tokens": 3569,
+                "text_tokens": 0
+              },
+              "total_tokens": 5840
+            }
+          }
+        ],
+        "round1Selected": {
+          "attempt": "a1",
+          "iou": 0.99358,
+          "status": "held"
+        },
+        "status": "pass",
+        "reason": "",
+        "approval": "NOT APPROVED - Jordan approves by looking at the sheet"
+      }
+    },
+    {
+      "sku": "GBRoyal13Gl",
+      "family": "Royal",
+      "groupSlug": "royal-13ml-clear-13-415",
+      "graceSku": "GB-VIA-CLR-13ML-GLD-T",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343643271460",
+      "round": 2,
+      "status": "approved-on-sight",
+      "approvalNote": "Approved on sight by Jordan 2026-09-25 after six attempts: the 4-6 px edge-gate miss is about the gate's own measurement noise (a geometrically perfect copy measures up to 4.4-5.2 px max).",
+      "approvedOnSight": {
+        "attemptsTotal": 6,
+        "measured": {
+          "iou": 0.99441,
+          "edgeSmoothedP99": 5.13,
+          "edgeSmoothedMax": 5.75,
+          "edgePerPointMax": 6.18,
+          "gate": "IoU >= 0.995 and smoothed edge p99 <= 4 px",
+          "operationalPass": false
+        }
+      },
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7awcj6tr7qwabefa3qc6zh298dsjvy",
+        "slug": "royal-13ml-clear-13-415",
+        "displayName": "13 ml Clear Royal Bottle with Cap",
+        "color": "Clear",
+        "capColor": "Gold",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/next-batch-approved-2026-09-25/GBRoyal13Gl.e7f53991ffa2.webp",
+      "sha256": "e7f53991ffa27350d62da4cd1d2c5067fc36c45e708e4767b1c9c94b14d1eec7",
+      "bytes": 1840736,
+      "sourceFile": "GBRoyal13Gl-r2a3-fitted.png",
+      "sourceFittedSha256": "035d552c9baf7135a3bd4a9886ccfc49cf4dec442bd14b75a6f391fc3ed5f823",
+      "sourceBytes": 3281044,
+      "selectedAttempt": "r2a3",
+      "sourceRenderFile": "GBRoyal13Gl-r2a3.png",
+      "sourceRenderSha256": "e0093a1e789747eeca0ec83bcf9512f004794f240f323b9477150a4efd7c474f",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 56,
+        "landmarkRule": "glass shoulder = neck base where the closure skirt/collar meets the glass",
+        "targetPct": 37.48,
+        "baselinePct": 91,
+        "curve": "pct = 3.5314 * mm^0.5868"
+      },
+      "fit": {
+        "uniformScale": 0.99923,
+        "about": "foot",
+        "horizontal": "assembly centre aligned to the input (centred) assembly",
+        "targetFootY": 2082.08,
+        "targetLandmarkY": 1224.5,
+        "targetPct": 37.48,
+        "measuredFootY": 2082.09,
+        "measuredLandmarkY": 1224.51,
+        "measuredPct": 37.482,
+        "footErrPx": 0.01,
+        "landmarkErrPx": 0.01,
+        "maxErrPctOfCanvasHeight": 0,
+        "landmarkBandPoints": 85,
+        "footBandPoints": 18
+      },
+      "qa": {
+        "iou": 0.99441,
+        "edgeSmoothed": {
+          "max": 5.75,
+          "p99": 5.13,
+          "p95": 3.4,
+          "median": 0.96
+        },
+        "edgePerPoint": {
+          "max": 6.18,
+          "p99": 5.19,
+          "p95": 3.76,
+          "median": 0.96
+        },
+        "operationalPass": false,
+        "strictPolicyPass": false,
+        "shadowProbe": {
+          "contactBandMeanDarkening": 42.37,
+          "belowFootMeanDarkening": 4.09,
+          "rightOfBaseMeanDarkening": 6.41,
+          "leftOfBaseMeanDarkening": 0.47
+        },
+        "background": {
+          "p95MaxChannelDevFromBone": 2,
+          "medianRGB": [
+            245,
+            242,
+            239
+          ]
+        },
+        "eye": {
+          "ok": true,
+          "note": "contact shadow at base, light cast shadow to the right/back, single shadow; material and components match input; detached cap stands with its own contact shadow"
+        }
+      },
+      "input": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/inputs/GBRoyal13Gl-input.png",
+        "sha256": "59f621779c44a778a1f97394b7bb979c3fdc4af8e2262fb245c4e22bc99aac8f",
+        "rebuilt": false
+      },
+      "inputSha256": "59f621779c44a778a1f97394b7bb979c3fdc4af8e2262fb245c4e22bc99aac8f",
+      "psdSha256": "d4942b0d5ea406c7cdae76b76786022b4177e9461f1b12353e93c8dd7e44939f",
+      "effectivePromptSha256": "c2ebcfacc688c227d2ac6c673ef47af0c88a2cdd29bc31bb054a801df3c454f6",
+      "laneRecord": {
+        "websiteSku": "GBRoyal13Gl",
+        "graceSku": "GB-VIA-CLR-13ML-GLD-T",
+        "groupSlug": "royal-13ml-clear-13-415",
+        "input": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/inputs/GBRoyal13Gl-input.png",
+          "sha256": "59f621779c44a778a1f97394b7bb979c3fdc4af8e2262fb245c4e22bc99aac8f",
+          "rebuilt": false
+        },
+        "selectedAttempt": "r2a3",
+        "render": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/renders/round2/GBRoyal13Gl-r2a3.png",
+          "sha256": "e0093a1e789747eeca0ec83bcf9512f004794f240f323b9477150a4efd7c474f"
+        },
+        "fitted": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/fitted/round2/GBRoyal13Gl-r2a3-fitted.png",
+          "sha256": "035d552c9baf7135a3bd4a9886ccfc49cf4dec442bd14b75a6f391fc3ed5f823"
+        },
+        "qa": {
+          "geometry": {
+            "iou": 0.99441,
+            "edgeSmoothed": {
+              "max": 5.75,
+              "p99": 5.13,
+              "p95": 3.4,
+              "median": 0.96
+            },
+            "edgePerPoint": {
+              "max": 6.18,
+              "p99": 5.19,
+              "p95": 3.76,
+              "median": 0.96
+            },
+            "smoothingRadiusPx": 18,
+            "measuredPoints": 574,
+            "boundaryPoints": 659,
+            "validatedInputPoints": 583,
+            "worstPoints_y_x_dev": [
+              [
+                1548,
+                1198,
+                -6.18
+              ],
+              [
+                1560,
+                1198,
+                -5.75
+              ],
+              [
+                1554,
+                1198,
+                -5.55
+              ],
+              [
+                1566,
+                1198,
+                -5.53
+              ],
+              [
+                1638,
+                440,
+                -5.29
+              ],
+              [
+                1668,
+                440,
+                -5.26
+              ],
+              [
+                1650,
+                440,
+                -5.16
+              ],
+              [
+                1644,
+                440,
+                -5.16
+              ],
+              [
+                1656,
+                440,
+                -5.14
+              ],
+              [
+                1662,
+                440,
+                -4.96
+              ],
+              [
+                1632,
+                440,
+                -4.95
+              ],
+              [
+                1416,
+                441,
+                -4.75
+              ]
+            ],
+            "detectorOnInputVsAlpha": {
+              "iou": 0.9932,
+              "edge": {
+                "max": 8.12,
+                "p99": 7.48,
+                "p95": 5.49,
+                "median": 1.04
+              }
+            },
+            "strictPolicyPass": false,
+            "operationalPass": false,
+            "gateNote": "Deviation = render visible edge minus input visible edge (same detector), only at boundary points where the detector reproduces the input alpha within 3 px. edgeSmoothed = mean deviation of boundary points within 18 px (suppresses per-point detector noise); IoU is first-order from |edgeSmoothed|. strict = IoU>=0.995 and PER-POINT max<=4px. operational (used for re-render/hold) = IoU>=0.995 and SMOOTHED p99<=4px. Validation: a geometrically perfect (synthetically scaled+shifted) copy of the input measures IoU 0.998-0.999, smoothed p99 0.6-2.1 px, but per-point/smoothed max up to 4.4-5.2 px, so a max<=4 px claim is below this method's resolution."
+          },
+          "shadowProbe": {
+            "contactBandMeanDarkening": 42.37,
+            "belowFootMeanDarkening": 4.09,
+            "rightOfBaseMeanDarkening": 6.41,
+            "leftOfBaseMeanDarkening": 0.47
+          },
+          "background": {
+            "p95MaxChannelDevFromBone": 2,
+            "medianRGB": [
+              245,
+              242,
+              239
+            ]
+          },
+          "material": {
+            "inputMeanRGBInsideGlass": [
+              225.6,
+              224.2,
+              218.1
+            ],
+            "fittedMeanRGBInsideGlass": [
+              222,
+              219.4,
+              212.6
+            ]
+          },
+          "eye": {
+            "ok": true,
+            "note": "contact shadow at base, light cast shadow to the right/back, single shadow; material and components match input; detached cap stands with its own contact shadow"
+          }
+        },
+        "fit": {
+          "uniformScale": 0.99923,
+          "about": "foot",
+          "horizontal": "assembly centre aligned to the input (centred) assembly",
+          "targetFootY": 2082.08,
+          "targetLandmarkY": 1224.5,
+          "targetPct": 37.48,
+          "measuredFootY": 2082.09,
+          "measuredLandmarkY": 1224.51,
+          "measuredPct": 37.482,
+          "footErrPx": 0.01,
+          "landmarkErrPx": 0.01,
+          "maxErrPctOfCanvasHeight": 0,
+          "landmarkBandPoints": 85,
+          "footBandPoints": 18
+        },
+        "raw": {
+          "similarity": {
+            "scale": 1.00118,
+            "ty": -2.99,
+            "tx": -2.35,
+            "iterations": [
+              [
+                1.00112,
+                -2.85,
+                -2.29
+              ],
+              [
+                1.00028,
+                -0.41,
+                -0.22
+              ],
+              [
+                0.99977,
+                0.29,
+                0.16
+              ],
+              [
+                1.00021,
+                -0.26,
+                -0.13
+              ],
+              [
+                0.99981,
+                0.24,
+                0.13
+              ]
+            ]
+          },
+          "landmarkBandOffsetPx": 0.54,
+          "footBandOffsetPx": 0.19,
+          "footY": 2081.74,
+          "landmarkY": 1223.5,
+          "spanPct": 37.511,
+          "iou": 0.99238,
+          "edgeSmoothed": {
+            "max": 6.78,
+            "p99": 6.39,
+            "p95": 4.08,
+            "median": 1.38
+          },
+          "edgePerPoint": {
+            "max": 6.78,
+            "p99": 6.49,
+            "p95": 4.26,
+            "median": 1.42
+          }
+        },
+        "attempts": [
+          {
+            "attempt": "r2a1",
+            "renderSha256": "11360991c611708ef19b7021a6e7bd5b4127a35a1a29743627ca181f5e05a1dc",
+            "iou": 0.99233,
+            "edgeSmoothedP99": 5.76,
+            "edgeSmoothedMax": 6.74,
+            "operationalPass": false,
+            "fitErrPct": 0.004,
+            "eye": {
+              "ok": true,
+              "note": "contact shadow at base, light cast shadow to the right/back, single shadow; material and components match input; detached cap stands with its own contact shadow"
+            },
+            "usage": {
+              "input_tokens": 2308,
+              "input_tokens_details": {
+                "image_tokens": 1517,
+                "text_tokens": 791
+              },
+              "output_tokens": 3569,
+              "output_tokens_details": {
+                "image_tokens": 3569,
+                "text_tokens": 0
+              },
+              "total_tokens": 5877
+            }
+          },
+          {
+            "attempt": "r2a2",
+            "renderSha256": "7136c0ec4a8839d10f9627d69e345839812a063b50e70891bdaf40ac44f2fee2",
+            "iou": 0.99282,
+            "edgeSmoothedP99": 3.79,
+            "edgeSmoothedMax": 4.26,
+            "operationalPass": false,
+            "fitErrPct": 0.004,
+            "eye": {
+              "ok": true,
+              "note": "contact shadow at base, light cast shadow to the right/back, single shadow; material and components match input; detached cap stands with its own contact shadow"
+            },
+            "usage": {
+              "input_tokens": 2308,
+              "input_tokens_details": {
+                "image_tokens": 1517,
+                "text_tokens": 791
+              },
+              "output_tokens": 3569,
+              "output_tokens_details": {
+                "image_tokens": 3569,
+                "text_tokens": 0
+              },
+              "total_tokens": 5877
+            }
+          },
+          {
+            "attempt": "r2a3",
+            "renderSha256": "e0093a1e789747eeca0ec83bcf9512f004794f240f323b9477150a4efd7c474f",
+            "iou": 0.99441,
+            "edgeSmoothedP99": 5.13,
+            "edgeSmoothedMax": 5.75,
+            "operationalPass": false,
+            "fitErrPct": 0,
+            "eye": {
+              "ok": true,
+              "note": "contact shadow at base, light cast shadow to the right/back, single shadow; material and components match input; detached cap stands with its own contact shadow"
+            },
+            "usage": {
+              "input_tokens": 2308,
+              "input_tokens_details": {
+                "image_tokens": 1517,
+                "text_tokens": 791
+              },
+              "output_tokens": 3569,
+              "output_tokens_details": {
+                "image_tokens": 3569,
+                "text_tokens": 0
+              },
+              "total_tokens": 5877
+            }
+          }
+        ],
+        "round1Selected": {
+          "attempt": "a1",
+          "iou": 0.99316,
+          "status": "held"
+        },
+        "status": "held",
+        "reason": "geometry: IoU 0.9944 / smoothed edge p99 5.13 px (gate IoU>=0.995, p99<=4)",
+        "approval": "NOT APPROVED - Jordan approves by looking at the sheet"
+      }
+    },
+    {
+      "sku": "GBRoyal13MtlRollBlkDot",
+      "family": "Royal",
+      "groupSlug": "royal-13ml-clear-13-415-rollon",
+      "graceSku": "GB-RYL-CLR-13ML-MRL-BKDT",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343605391652",
+      "round": 2,
+      "status": "approved-on-sight",
+      "approvalNote": "Approved on sight by Jordan 2026-09-25 after six attempts: the 4-6 px edge-gate miss is about the gate's own measurement noise (a geometrically perfect copy measures up to 4.4-5.2 px max).",
+      "approvedOnSight": {
+        "attemptsTotal": 6,
+        "measured": {
+          "iou": 0.99323,
+          "edgeSmoothedP99": 4.99,
+          "edgeSmoothedMax": 5.45,
+          "edgePerPointMax": 6.38,
+          "gate": "IoU >= 0.995 and smoothed edge p99 <= 4 px",
+          "operationalPass": false
+        }
+      },
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh73rnpmqmv6cwpgbgrh4fbkfn8dsrv2",
+        "slug": "royal-13ml-clear-13-415-rollon",
+        "displayName": "13 ml Clear Royal Roll-On Bottle",
+        "color": "Clear",
+        "capColor": "Black Dotted",
+        "applicator": "Metal Roller Ball",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/next-batch-approved-2026-09-25/GBRoyal13MtlRollBlkDot.0bd1985f251f.webp",
+      "sha256": "0bd1985f251fbd83edc4eb847456aa67f343c8dc8a6e340bb165ec972b8bb011",
+      "bytes": 1965416,
+      "sourceFile": "GBRoyal13MtlRollBlkDot-r2a1-fitted.png",
+      "sourceFittedSha256": "a3427b4fb46f99c4c9b2c933ba4c1c89b0100dc9afac599d1a67e66b851f0bb5",
+      "sourceBytes": 3396228,
+      "selectedAttempt": "r2a1",
+      "sourceRenderFile": "GBRoyal13MtlRollBlkDot-r2a1.png",
+      "sourceRenderSha256": "644bfcb4ff88f9e9c8d7272ee8b82130d7340c534cc7089dada5d5cbb03b1862",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 56,
+        "landmarkRule": "glass shoulder = neck base where the closure skirt/collar meets the glass",
+        "targetPct": 37.48,
+        "baselinePct": 91,
+        "curve": "pct = 3.5314 * mm^0.5868"
+      },
+      "fit": {
+        "uniformScale": 0.99825,
+        "about": "foot",
+        "horizontal": "assembly centre aligned to the input (centred) assembly",
+        "targetFootY": 2082.08,
+        "targetLandmarkY": 1224.5,
+        "targetPct": 37.48,
+        "measuredFootY": 2082.17,
+        "measuredLandmarkY": 1224.5,
+        "measuredPct": 37.486,
+        "footErrPx": 0.09,
+        "landmarkErrPx": 0,
+        "maxErrPctOfCanvasHeight": 0.004,
+        "landmarkBandPoints": 62,
+        "footBandPoints": 4
+      },
+      "qa": {
+        "iou": 0.99323,
+        "edgeSmoothed": {
+          "max": 5.45,
+          "p99": 4.99,
+          "p95": 3.97,
+          "median": 1.12
+        },
+        "edgePerPoint": {
+          "max": 6.38,
+          "p99": 5.59,
+          "p95": 4.04,
+          "median": 1.11
+        },
+        "operationalPass": false,
+        "strictPolicyPass": false,
+        "shadowProbe": {
+          "contactBandMeanDarkening": 64.23,
+          "belowFootMeanDarkening": 6.68,
+          "rightOfBaseMeanDarkening": 10.34,
+          "leftOfBaseMeanDarkening": 1.61
+        },
+        "background": {
+          "p95MaxChannelDevFromBone": 3,
+          "medianRGB": [
+            243,
+            242,
+            238
+          ]
+        },
+        "eye": {
+          "ok": true,
+          "note": "contact shadow at base, light cast shadow to the right/back, single shadow; material and components match input; detached cap stands with its own contact shadow"
+        }
+      },
+      "input": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/inputs/GBRoyal13MtlRollBlkDot-input.png",
+        "sha256": "781a8f07439c5752594551eeb37c5779cbd19e65f33077691f34e683352c0125",
+        "rebuilt": false
+      },
+      "inputSha256": "781a8f07439c5752594551eeb37c5779cbd19e65f33077691f34e683352c0125",
+      "psdSha256": "80d85d9af6b58a6c66d7c2b5f9d077d95fc4e2e747dd37e5fd6396ee68cdddd9",
+      "effectivePromptSha256": "d7e524d3d61ee0c8bb09387827a18b938dc824b7cb3dbc7d8964f34985ec2ccc",
+      "laneRecord": {
+        "websiteSku": "GBRoyal13MtlRollBlkDot",
+        "graceSku": "GB-RYL-CLR-13ML-MRL-BKDT",
+        "groupSlug": "royal-13ml-clear-13-415-rollon",
+        "input": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/inputs/GBRoyal13MtlRollBlkDot-input.png",
+          "sha256": "781a8f07439c5752594551eeb37c5779cbd19e65f33077691f34e683352c0125",
+          "rebuilt": false
+        },
+        "selectedAttempt": "r2a1",
+        "render": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/renders/round2/GBRoyal13MtlRollBlkDot-r2a1.png",
+          "sha256": "644bfcb4ff88f9e9c8d7272ee8b82130d7340c534cc7089dada5d5cbb03b1862"
+        },
+        "fitted": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/fitted/round2/GBRoyal13MtlRollBlkDot-r2a1-fitted.png",
+          "sha256": "a3427b4fb46f99c4c9b2c933ba4c1c89b0100dc9afac599d1a67e66b851f0bb5"
+        },
+        "qa": {
+          "geometry": {
+            "iou": 0.99323,
+            "edgeSmoothed": {
+              "max": 5.45,
+              "p99": 4.99,
+              "p95": 3.97,
+              "median": 1.12
+            },
+            "edgePerPoint": {
+              "max": 6.38,
+              "p99": 5.59,
+              "p95": 4.04,
+              "median": 1.11
+            },
+            "smoothingRadiusPx": 18,
+            "measuredPoints": 506,
+            "boundaryPoints": 720,
+            "validatedInputPoints": 537,
+            "worstPoints_y_x_dev": [
+              [
+                1398,
+                1194,
+                -6.38
+              ],
+              [
+                1416,
+                438,
+                -5.73
+              ],
+              [
+                1404,
+                1194,
+                -5.65
+              ],
+              [
+                1410,
+                1194,
+                -5.64
+              ],
+              [
+                1434,
+                1194,
+                -5.63
+              ],
+              [
+                1566,
+                1195,
+                -5.59
+              ],
+              [
+                1416,
+                1194,
+                -5.49
+              ],
+              [
+                1440,
+                1194,
+                -5.47
+              ],
+              [
+                1554,
+                1195,
+                -5.38
+              ],
+              [
+                1560,
+                1195,
+                -5.37
+              ],
+              [
+                1446,
+                1194,
+                -5.35
+              ],
+              [
+                1458,
+                1194,
+                -5.32
+              ]
+            ],
+            "detectorOnInputVsAlpha": {
+              "iou": 0.98942,
+              "edge": {
+                "max": 29.44,
+                "p99": 27.53,
+                "p95": 7.68,
+                "median": 0.96
+              }
+            },
+            "strictPolicyPass": false,
+            "operationalPass": false,
+            "gateNote": "Deviation = render visible edge minus input visible edge (same detector), only at boundary points where the detector reproduces the input alpha within 3 px. edgeSmoothed = mean deviation of boundary points within 18 px (suppresses per-point detector noise); IoU is first-order from |edgeSmoothed|. strict = IoU>=0.995 and PER-POINT max<=4px. operational (used for re-render/hold) = IoU>=0.995 and SMOOTHED p99<=4px. Validation: a geometrically perfect (synthetically scaled+shifted) copy of the input measures IoU 0.998-0.999, smoothed p99 0.6-2.1 px, but per-point/smoothed max up to 4.4-5.2 px, so a max<=4 px claim is below this method's resolution."
+          },
+          "shadowProbe": {
+            "contactBandMeanDarkening": 64.23,
+            "belowFootMeanDarkening": 6.68,
+            "rightOfBaseMeanDarkening": 10.34,
+            "leftOfBaseMeanDarkening": 1.61
+          },
+          "background": {
+            "p95MaxChannelDevFromBone": 3,
+            "medianRGB": [
+              243,
+              242,
+              238
+            ]
+          },
+          "material": {
+            "inputMeanRGBInsideGlass": [
+              208.9,
+              208.9,
+              208.9
+            ],
+            "fittedMeanRGBInsideGlass": [
+              202.4,
+              201.4,
+              200
+            ]
+          },
+          "eye": {
+            "ok": true,
+            "note": "contact shadow at base, light cast shadow to the right/back, single shadow; material and components match input; detached cap stands with its own contact shadow"
+          }
+        },
+        "fit": {
+          "uniformScale": 0.99825,
+          "about": "foot",
+          "horizontal": "assembly centre aligned to the input (centred) assembly",
+          "targetFootY": 2082.08,
+          "targetLandmarkY": 1224.5,
+          "targetPct": 37.48,
+          "measuredFootY": 2082.17,
+          "measuredLandmarkY": 1224.5,
+          "measuredPct": 37.486,
+          "footErrPx": 0.09,
+          "landmarkErrPx": 0,
+          "maxErrPctOfCanvasHeight": 0.004,
+          "landmarkBandPoints": 62,
+          "footBandPoints": 4
+        },
+        "raw": {
+          "similarity": {
+            "scale": 1.00172,
+            "ty": -3.61,
+            "tx": -2.72,
+            "iterations": [
+              [
+                1.00175,
+                -3.52,
+                -2.81
+              ],
+              [
+                0.99997,
+                -0.09,
+                0.09
+              ]
+            ]
+          },
+          "landmarkBandOffsetPx": -0.03,
+          "footBandOffsetPx": null,
+          "footY": 2082.05,
+          "landmarkY": 1222.97,
+          "spanPct": 37.547,
+          "iou": 0.99149,
+          "edgeSmoothed": {
+            "max": 6.2,
+            "p99": 5.96,
+            "p95": 4.63,
+            "median": 1.34
+          },
+          "edgePerPoint": {
+            "max": 7.72,
+            "p99": 6,
+            "p95": 4.89,
+            "median": 1.31
+          }
+        },
+        "attempts": [
+          {
+            "attempt": "r2a1",
+            "renderSha256": "644bfcb4ff88f9e9c8d7272ee8b82130d7340c534cc7089dada5d5cbb03b1862",
+            "iou": 0.99323,
+            "edgeSmoothedP99": 4.99,
+            "edgeSmoothedMax": 5.45,
+            "operationalPass": false,
+            "fitErrPct": 0.004,
+            "eye": {
+              "ok": true,
+              "note": "contact shadow at base, light cast shadow to the right/back, single shadow; material and components match input; detached cap stands with its own contact shadow"
+            },
+            "usage": {
+              "input_tokens": 2313,
+              "input_tokens_details": {
+                "image_tokens": 1517,
+                "text_tokens": 796
+              },
+              "output_tokens": 3569,
+              "output_tokens_details": {
+                "image_tokens": 3569,
+                "text_tokens": 0
+              },
+              "total_tokens": 5882
+            }
+          },
+          {
+            "attempt": "r2a2",
+            "renderSha256": "bcc884e411ebf11589bc48500e03ce1020f53c01a5838fd07ef0da6bf5d322c1",
+            "iou": 0.98933,
+            "edgeSmoothedP99": 5.43,
+            "edgeSmoothedMax": 6.4,
+            "operationalPass": false,
+            "fitErrPct": 0.006,
+            "eye": {
+              "ok": true,
+              "note": "contact shadow at base, light cast shadow to the right/back, single shadow; material and components match input; detached cap stands with its own contact shadow"
+            },
+            "usage": {
+              "input_tokens": 2313,
+              "input_tokens_details": {
+                "image_tokens": 1517,
+                "text_tokens": 796
+              },
+              "output_tokens": 3569,
+              "output_tokens_details": {
+                "image_tokens": 3569,
+                "text_tokens": 0
+              },
+              "total_tokens": 5882
+            }
+          },
+          {
+            "attempt": "r2a3",
+            "renderSha256": "186078b327574bfe1c8ef6de3f828a7a239413e463eef1b0ddc488833f181bbe",
+            "iou": 0.99183,
+            "edgeSmoothedP99": 5.26,
+            "edgeSmoothedMax": 6.29,
+            "operationalPass": false,
+            "fitErrPct": 0.005,
+            "eye": {
+              "ok": true,
+              "note": "contact shadow at base, light cast shadow to the right/back, single shadow; material and components match input; detached cap stands with its own contact shadow"
+            },
+            "usage": {
+              "input_tokens": 2313,
+              "input_tokens_details": {
+                "image_tokens": 1517,
+                "text_tokens": 796
+              },
+              "output_tokens": 3569,
+              "output_tokens_details": {
+                "image_tokens": 3569,
+                "text_tokens": 0
+              },
+              "total_tokens": 5882
+            }
+          }
+        ],
+        "round1Selected": {
+          "attempt": "a2",
+          "iou": 0.99207,
+          "status": "held"
+        },
+        "status": "held",
+        "reason": "geometry: IoU 0.9932 / smoothed edge p99 4.99 px (gate IoU>=0.995, p99<=4)",
+        "approval": "NOT APPROVED - Jordan approves by looking at the sheet"
+      }
+    },
+    {
+      "sku": "GB3TPlGl",
+      "family": "Decorative",
+      "groupSlug": "tola-3ml-clear-14.3mm",
+      "graceSku": "GB-DEC-CLR-3ML-T",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343693603108",
+      "round": 2,
+      "status": "approved-on-sight",
+      "approvalNote": "Approved on sight by Jordan 2026-09-25 after six attempts: the 4-6 px edge-gate miss is about the gate's own measurement noise (a geometrically perfect copy measures up to 4.4-5.2 px max).",
+      "approvedOnSight": {
+        "attemptsTotal": 6,
+        "measured": {
+          "iou": 0.9938,
+          "edgeSmoothedP99": 4.9,
+          "edgeSmoothedMax": 5.8,
+          "edgePerPointMax": 8.68,
+          "gate": "IoU >= 0.995 and smoothed edge p99 <= 4 px",
+          "operationalPass": false
+        }
+      },
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh72891x6k4ez6pnekkvhkabr18dsr6c",
+        "slug": "tola-3ml-clear-14.3mm",
+        "displayName": "3 ml Clear Tola Bottle",
+        "color": "Clear",
+        "capColor": "Clear",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/next-batch-approved-2026-09-25/GB3TPlGl.30f0dba0bc9d.webp",
+      "sha256": "30f0dba0bc9d52bde8eb4d3b4bc823a17d36526aec208f7c5d477bc23e3b1dc9",
+      "bytes": 1937350,
+      "sourceFile": "GB3TPlGl-r2a1-fitted.png",
+      "sourceFittedSha256": "5dc2d3348d945b108d9565c99fd06c35096d0233a69b6e569488fbbd486084bf",
+      "sourceBytes": 3407317,
+      "selectedAttempt": "r2a1",
+      "sourceRenderFile": "GB3TPlGl-r2a1.png",
+      "sourceRenderSha256": "c97edeafe6d6f39d7ad9ad6881682a3b751f41f28d86e11e46beb5e2b2d58964",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 42,
+        "landmarkRule": "closure seat = where the fitted closure/stopper lower edge meets the glass (top of glass for ground stoppers)",
+        "targetPct": 31.66,
+        "baselinePct": 91,
+        "curve": "pct = 3.5314 * mm^0.5868"
+      },
+      "fit": {
+        "uniformScale": 1.00137,
+        "about": "foot",
+        "horizontal": "assembly centre aligned to the input (centred) assembly",
+        "targetFootY": 2082.08,
+        "targetLandmarkY": 1357.7,
+        "targetPct": 31.66,
+        "measuredFootY": 2082.32,
+        "measuredLandmarkY": 1357.96,
+        "measuredPct": 31.659,
+        "footErrPx": 0.24,
+        "landmarkErrPx": 0.26,
+        "maxErrPctOfCanvasHeight": 0.011,
+        "landmarkBandPoints": 38,
+        "footBandPoints": 0
+      },
+      "qa": {
+        "iou": 0.9938,
+        "edgeSmoothed": {
+          "max": 5.8,
+          "p99": 4.9,
+          "p95": 2.66,
+          "median": 0.63
+        },
+        "edgePerPoint": {
+          "max": 8.68,
+          "p99": 4.14,
+          "p95": 2.69,
+          "median": 0.67
+        },
+        "operationalPass": false,
+        "strictPolicyPass": false,
+        "shadowProbe": {
+          "contactBandMeanDarkening": 60.4,
+          "belowFootMeanDarkening": 2.88,
+          "rightOfBaseMeanDarkening": 16.5,
+          "leftOfBaseMeanDarkening": 1.04
+        },
+        "background": {
+          "p95MaxChannelDevFromBone": 2,
+          "medianRGB": [
+            245,
+            242,
+            239
+          ]
+        },
+        "eye": {
+          "ok": true,
+          "note": "contact shadow at base, light cast shadow to the right/back, single shadow; material and components match input; detached cap stands with its own contact shadow"
+        }
+      },
+      "input": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/inputs/GB3TPlGl-input.png",
+        "sha256": "e4f1b6821b7811a82f53a2783df2d1e6e5f06e61b3f05279650b885a176048bd",
+        "rebuilt": false
+      },
+      "inputSha256": "e4f1b6821b7811a82f53a2783df2d1e6e5f06e61b3f05279650b885a176048bd",
+      "psdSha256": "1942fa00969a876ee2ec6786ca9c924f07c0e6519b544710351616a6b5e07b52",
+      "effectivePromptSha256": "4ed5ea6babc60e07b50976d6ca5324d2e7b58e72b037c89a79ef91a28d1374fa",
+      "laneRecord": {
+        "websiteSku": "GB3TPlGl",
+        "graceSku": "GB-DEC-CLR-3ML-T",
+        "groupSlug": "tola-3ml-clear-14.3mm",
+        "input": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/inputs/GB3TPlGl-input.png",
+          "sha256": "e4f1b6821b7811a82f53a2783df2d1e6e5f06e61b3f05279650b885a176048bd",
+          "rebuilt": false
+        },
+        "selectedAttempt": "r2a1",
+        "render": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/renders/round2/GB3TPlGl-r2a1.png",
+          "sha256": "c97edeafe6d6f39d7ad9ad6881682a3b751f41f28d86e11e46beb5e2b2d58964"
+        },
+        "fitted": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/fitted/round2/GB3TPlGl-r2a1-fitted.png",
+          "sha256": "5dc2d3348d945b108d9565c99fd06c35096d0233a69b6e569488fbbd486084bf"
+        },
+        "qa": {
+          "geometry": {
+            "iou": 0.9938,
+            "edgeSmoothed": {
+              "max": 5.8,
+              "p99": 4.9,
+              "p95": 2.66,
+              "median": 0.63
+            },
+            "edgePerPoint": {
+              "max": 8.68,
+              "p99": 4.14,
+              "p95": 2.69,
+              "median": 0.67
+            },
+            "smoothingRadiusPx": 18,
+            "measuredPoints": 642,
+            "boundaryPoints": 670,
+            "validatedInputPoints": 647,
+            "worstPoints_y_x_dev": [
+              [
+                1740,
+                1085,
+                8.68
+              ],
+              [
+                1686,
+                1069,
+                6.93
+              ],
+              [
+                1746,
+                1089,
+                5.87
+              ],
+              [
+                1692,
+                1071,
+                4.44
+              ],
+              [
+                1722,
+                1085,
+                4.35
+              ],
+              [
+                1724,
+                1086,
+                4.31
+              ],
+              [
+                1716,
+                1083,
+                4.25
+              ],
+              [
+                1374,
+                974,
+                -3.98
+              ],
+              [
+                1697,
+                1074,
+                3.88
+              ],
+              [
+                1750,
+                1092,
+                3.88
+              ],
+              [
+                1698,
+                1074,
+                3.86
+              ],
+              [
+                1380,
+                976,
+                -3.82
+              ]
+            ],
+            "detectorOnInputVsAlpha": {
+              "iou": 0.993,
+              "edge": {
+                "max": 3.39,
+                "p99": 2.83,
+                "p95": 2.18,
+                "median": 0.93
+              }
+            },
+            "strictPolicyPass": false,
+            "operationalPass": false,
+            "gateNote": "Deviation = render visible edge minus input visible edge (same detector), only at boundary points where the detector reproduces the input alpha within 3 px. edgeSmoothed = mean deviation of boundary points within 18 px (suppresses per-point detector noise); IoU is first-order from |edgeSmoothed|. strict = IoU>=0.995 and PER-POINT max<=4px. operational (used for re-render/hold) = IoU>=0.995 and SMOOTHED p99<=4px. Validation: a geometrically perfect (synthetically scaled+shifted) copy of the input measures IoU 0.998-0.999, smoothed p99 0.6-2.1 px, but per-point/smoothed max up to 4.4-5.2 px, so a max<=4 px claim is below this method's resolution."
+          },
+          "shadowProbe": {
+            "contactBandMeanDarkening": 60.4,
+            "belowFootMeanDarkening": 2.88,
+            "rightOfBaseMeanDarkening": 16.5,
+            "leftOfBaseMeanDarkening": 1.04
+          },
+          "background": {
+            "p95MaxChannelDevFromBone": 2,
+            "medianRGB": [
+              245,
+              242,
+              239
+            ]
+          },
+          "material": {
+            "inputMeanRGBInsideGlass": [
+              201.9,
+              191.4,
+              168.4
+            ],
+            "fittedMeanRGBInsideGlass": [
+              211.1,
+              199,
+              173.5
+            ]
+          },
+          "eye": {
+            "ok": true,
+            "note": "contact shadow at base, light cast shadow to the right/back, single shadow; material and components match input; detached cap stands with its own contact shadow"
+          }
+        },
+        "fit": {
+          "uniformScale": 1.00137,
+          "about": "foot",
+          "horizontal": "assembly centre aligned to the input (centred) assembly",
+          "targetFootY": 2082.08,
+          "targetLandmarkY": 1357.7,
+          "targetPct": 31.66,
+          "measuredFootY": 2082.32,
+          "measuredLandmarkY": 1357.96,
+          "measuredPct": 31.659,
+          "footErrPx": 0.24,
+          "landmarkErrPx": 0.26,
+          "maxErrPctOfCanvasHeight": 0.011,
+          "landmarkBandPoints": 38,
+          "footBandPoints": 0
+        },
+        "raw": {
+          "similarity": {
+            "scale": 0.99994,
+            "ty": -1.54,
+            "tx": 0.21,
+            "iterations": [
+              [
+                0.99989,
+                -1.42,
+                0.25
+              ],
+              [
+                1.00005,
+                -0.12,
+                -0.04
+              ]
+            ]
+          },
+          "landmarkBandOffsetPx": 0.93,
+          "footBandOffsetPx": null,
+          "footY": 2080.41,
+          "landmarkY": 1357.02,
+          "spanPct": 31.617,
+          "iou": 0.99315,
+          "edgeSmoothed": {
+            "max": 6.28,
+            "p99": 5.44,
+            "p95": 2.85,
+            "median": 0.72
+          },
+          "edgePerPoint": {
+            "max": 9.1,
+            "p99": 4.87,
+            "p95": 2.5,
+            "median": 0.74
+          }
+        },
+        "attempts": [
+          {
+            "attempt": "r2a1",
+            "renderSha256": "c97edeafe6d6f39d7ad9ad6881682a3b751f41f28d86e11e46beb5e2b2d58964",
+            "iou": 0.9938,
+            "edgeSmoothedP99": 4.9,
+            "edgeSmoothedMax": 5.8,
+            "operationalPass": false,
+            "fitErrPct": 0.011,
+            "eye": {
+              "ok": true,
+              "note": "contact shadow at base, light cast shadow to the right/back, single shadow; material and components match input; detached cap stands with its own contact shadow"
+            },
+            "usage": {
+              "input_tokens": 2317,
+              "input_tokens_details": {
+                "image_tokens": 1517,
+                "text_tokens": 800
+              },
+              "output_tokens": 3569,
+              "output_tokens_details": {
+                "image_tokens": 3569,
+                "text_tokens": 0
+              },
+              "total_tokens": 5886
+            }
+          },
+          {
+            "attempt": "r2a2",
+            "renderSha256": "adb692f0c7c2dae390ff8c3fedf47a4e9c0d48355dd051c81d37b82b5aacc4ce",
+            "iou": 0.99356,
+            "edgeSmoothedP99": 4.67,
+            "edgeSmoothedMax": 5.57,
+            "operationalPass": false,
+            "fitErrPct": 0.002,
+            "eye": {
+              "ok": true,
+              "note": "contact shadow at base, light cast shadow to the right/back, single shadow; material and components match input; detached cap stands with its own contact shadow"
+            },
+            "usage": {
+              "input_tokens": 2317,
+              "input_tokens_details": {
+                "image_tokens": 1517,
+                "text_tokens": 800
+              },
+              "output_tokens": 3569,
+              "output_tokens_details": {
+                "image_tokens": 3569,
+                "text_tokens": 0
+              },
+              "total_tokens": 5886
+            }
+          },
+          {
+            "attempt": "r2a3",
+            "renderSha256": "2ef519308627125bec12fa2eab229a337888b8f0b5caacc527569cbb568e3bb0",
+            "iou": 0.99372,
+            "edgeSmoothedP99": 4.16,
+            "edgeSmoothedMax": 5,
+            "operationalPass": false,
+            "fitErrPct": 0.01,
+            "eye": {
+              "ok": true,
+              "note": "contact shadow at base, light cast shadow to the right/back, single shadow; material and components match input; detached cap stands with its own contact shadow"
+            },
+            "usage": {
+              "input_tokens": 2317,
+              "input_tokens_details": {
+                "image_tokens": 1517,
+                "text_tokens": 800
+              },
+              "output_tokens": 3569,
+              "output_tokens_details": {
+                "image_tokens": 3569,
+                "text_tokens": 0
+              },
+              "total_tokens": 5886
+            }
+          }
+        ],
+        "round1Selected": {
+          "attempt": "a1",
+          "iou": 0.99453,
+          "status": "held"
+        },
+        "status": "held",
+        "reason": "geometry: IoU 0.9938 / smoothed edge p99 4.9 px (gate IoU>=0.995, p99<=4)",
+        "approval": "NOT APPROVED - Jordan approves by looking at the sheet"
+      }
+    },
+    {
+      "sku": "GBGrce55AnSpTslMtSl",
+      "family": "Grace",
+      "groupSlug": "grace-55ml-clear-18-415-antiquespray-tassel",
+      "graceSku": "GB-GRC-CLR-55ML-AST-MSLV",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343634784548",
+      "round": 2,
+      "status": "approved-on-sight",
+      "approvalNote": "Approved on sight by Jordan 2026-09-25 after six attempts: the 4-6 px edge-gate miss is about the gate's own measurement noise (a geometrically perfect copy measures up to 4.4-5.2 px max).",
+      "approvedOnSight": {
+        "attemptsTotal": 6,
+        "measured": {
+          "iou": 0.99275,
+          "edgeSmoothedP99": 3.63,
+          "edgeSmoothedMax": 5.64,
+          "edgePerPointMax": 9.44,
+          "gate": "IoU >= 0.995 and smoothed edge p99 <= 4 px",
+          "operationalPass": false
+        }
+      },
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7ak3p1809n7ejpx6saks4ess8drj23",
+        "slug": "grace-55ml-clear-18-415-antiquespray-tassel",
+        "displayName": "55 ml Clear Grace Vintage Bulb Spray Bottle with Tassel",
+        "color": "Clear",
+        "capColor": "Matte Silver",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/next-batch-approved-2026-09-25/GBGrce55AnSpTslMtSl.66f3ef2d9cde.webp",
+      "sha256": "66f3ef2d9cdeca61c93065d2dc427d53efd7ea205cfd2ffa8d37638214730901",
+      "bytes": 2148472,
+      "sourceFile": "GBGrce55AnSpTslMtSl-r2a1-fitted.png",
+      "sourceFittedSha256": "fa088500026c3074c178238bf482f8dc2e8d4825bba54885343d304483341842",
+      "sourceBytes": 4348273,
+      "selectedAttempt": "r2a1",
+      "sourceRenderFile": "GBGrce55AnSpTslMtSl-r2a1.png",
+      "sourceRenderSha256": "357b8bb6cd0b115ea3db074e04dfb6d8ed959559cd95bb3e6d3167b08559d26f",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 113,
+        "landmarkRule": "glass shoulder = neck base where the closure skirt/collar meets the glass",
+        "targetPct": 56.59,
+        "baselinePct": 91,
+        "curve": "pct = 3.5314 * mm^0.5868"
+      },
+      "fit": {
+        "uniformScale": 0.99941,
+        "about": "foot",
+        "horizontal": "assembly centre aligned to the input (centred) assembly",
+        "targetFootY": 2082.08,
+        "targetLandmarkY": 787.3,
+        "targetPct": 56.59,
+        "measuredFootY": 2082.14,
+        "measuredLandmarkY": 787.36,
+        "measuredPct": 56.59,
+        "footErrPx": 0.06,
+        "landmarkErrPx": 0.06,
+        "maxErrPctOfCanvasHeight": 0.003,
+        "landmarkBandPoints": 72,
+        "footBandPoints": 0
+      },
+      "qa": {
+        "iou": 0.99275,
+        "edgeSmoothed": {
+          "max": 5.64,
+          "p99": 3.63,
+          "p95": 2.37,
+          "median": 0.75
+        },
+        "edgePerPoint": {
+          "max": 9.44,
+          "p99": 3.89,
+          "p95": 2.56,
+          "median": 0.84
+        },
+        "operationalPass": false,
+        "strictPolicyPass": false,
+        "shadowProbe": {
+          "contactBandMeanDarkening": 12.11,
+          "belowFootMeanDarkening": 2.28,
+          "rightOfBaseMeanDarkening": 8.74,
+          "leftOfBaseMeanDarkening": 0.58
+        },
+        "background": {
+          "p95MaxChannelDevFromBone": 2,
+          "medianRGB": [
+            244,
+            242,
+            239
+          ]
+        },
+        "eye": {
+          "ok": true,
+          "note": "bulb and tassel hang from the hose as in the input (they do not touch the surface); contact + cast shadow at the glass base only"
+        }
+      },
+      "input": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/inputs/GBGrce55AnSpTslMtSl-input.png",
+        "sha256": "889bdee580f49de1970d790034f66007103d0a59155265aeaa5487582d5ea941",
+        "rebuilt": false
+      },
+      "inputSha256": "889bdee580f49de1970d790034f66007103d0a59155265aeaa5487582d5ea941",
+      "psdSha256": "7638668ccb4b68105c341a4a4e4a1d8c69b3e3283dfffb27a2639145d3040f19",
+      "effectivePromptSha256": "29a81ae0da01c231fe9c4ea54407524c658e074e99f26a4936a7df0605a0d690",
+      "laneRecord": {
+        "websiteSku": "GBGrce55AnSpTslMtSl",
+        "graceSku": "GB-GRC-CLR-55ML-AST-MSLV",
+        "groupSlug": "grace-55ml-clear-18-415-antiquespray-tassel",
+        "input": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/inputs/GBGrce55AnSpTslMtSl-input.png",
+          "sha256": "889bdee580f49de1970d790034f66007103d0a59155265aeaa5487582d5ea941",
+          "rebuilt": false
+        },
+        "selectedAttempt": "r2a1",
+        "render": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/renders/round2/GBGrce55AnSpTslMtSl-r2a1.png",
+          "sha256": "357b8bb6cd0b115ea3db074e04dfb6d8ed959559cd95bb3e6d3167b08559d26f"
+        },
+        "fitted": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/fitted/round2/GBGrce55AnSpTslMtSl-r2a1-fitted.png",
+          "sha256": "fa088500026c3074c178238bf482f8dc2e8d4825bba54885343d304483341842"
+        },
+        "qa": {
+          "geometry": {
+            "iou": 0.99275,
+            "edgeSmoothed": {
+              "max": 5.64,
+              "p99": 3.63,
+              "p95": 2.37,
+              "median": 0.75
+            },
+            "edgePerPoint": {
+              "max": 9.44,
+              "p99": 3.89,
+              "p95": 2.56,
+              "median": 0.84
+            },
+            "smoothingRadiusPx": 18,
+            "measuredPoints": 1757,
+            "boundaryPoints": 1909,
+            "validatedInputPoints": 1780,
+            "worstPoints_y_x_dev": [
+              [
+                1884,
+                383,
+                -9.44
+              ],
+              [
+                1902,
+                1280,
+                -5.64
+              ],
+              [
+                1728,
+                1249,
+                -5.47
+              ],
+              [
+                1896,
+                1279,
+                -5.27
+              ],
+              [
+                1974,
+                1295,
+                -4.93
+              ],
+              [
+                1812,
+                1263,
+                -4.68
+              ],
+              [
+                1722,
+                1248,
+                -4.61
+              ],
+              [
+                1842,
+                1268,
+                -4.59
+              ],
+              [
+                1720,
+                1248,
+                -4.55
+              ],
+              [
+                1734,
+                1142,
+                -4.39
+              ],
+              [
+                1890,
+                1278,
+                -4.3
+              ],
+              [
+                1818,
+                1264,
+                -4.24
+              ]
+            ],
+            "detectorOnInputVsAlpha": {
+              "iou": 0.98735,
+              "edge": {
+                "max": 29.84,
+                "p99": 29.39,
+                "p95": 3.9,
+                "median": 0.93
+              }
+            },
+            "strictPolicyPass": false,
+            "operationalPass": false,
+            "gateNote": "Deviation = render visible edge minus input visible edge (same detector), only at boundary points where the detector reproduces the input alpha within 3 px. edgeSmoothed = mean deviation of boundary points within 18 px (suppresses per-point detector noise); IoU is first-order from |edgeSmoothed|. strict = IoU>=0.995 and PER-POINT max<=4px. operational (used for re-render/hold) = IoU>=0.995 and SMOOTHED p99<=4px. Validation: a geometrically perfect (synthetically scaled+shifted) copy of the input measures IoU 0.998-0.999, smoothed p99 0.6-2.1 px, but per-point/smoothed max up to 4.4-5.2 px, so a max<=4 px claim is below this method's resolution."
+          },
+          "shadowProbe": {
+            "contactBandMeanDarkening": 12.11,
+            "belowFootMeanDarkening": 2.28,
+            "rightOfBaseMeanDarkening": 8.74,
+            "leftOfBaseMeanDarkening": 0.58
+          },
+          "background": {
+            "p95MaxChannelDevFromBone": 2,
+            "medianRGB": [
+              244,
+              242,
+              239
+            ]
+          },
+          "material": {
+            "inputMeanRGBInsideGlass": [
+              220.7,
+              220.7,
+              220.7
+            ],
+            "fittedMeanRGBInsideGlass": [
+              212.7,
+              211.9,
+              211.1
+            ]
+          },
+          "eye": {
+            "ok": true,
+            "note": "bulb and tassel hang from the hose as in the input (they do not touch the surface); contact + cast shadow at the glass base only"
+          }
+        },
+        "fit": {
+          "uniformScale": 0.99941,
+          "about": "foot",
+          "horizontal": "assembly centre aligned to the input (centred) assembly",
+          "targetFootY": 2082.08,
+          "targetLandmarkY": 787.3,
+          "targetPct": 56.59,
+          "measuredFootY": 2082.14,
+          "measuredLandmarkY": 787.36,
+          "measuredPct": 56.59,
+          "footErrPx": 0.06,
+          "landmarkErrPx": 0.06,
+          "maxErrPctOfCanvasHeight": 0.003,
+          "landmarkBandPoints": 72,
+          "footBandPoints": 0
+        },
+        "raw": {
+          "similarity": {
+            "scale": 1.00001,
+            "ty": 0.08,
+            "tx": -0.28,
+            "iterations": [
+              [
+                1.00003,
+                0.12,
+                -0.33
+              ],
+              [
+                0.99999,
+                -0.04,
+                0.06
+              ]
+            ]
+          },
+          "landmarkBandOffsetPx": -0.76,
+          "footBandOffsetPx": null,
+          "footY": 2082.19,
+          "landmarkY": 786.65,
+          "spanPct": 56.623,
+          "iou": 0.99299,
+          "edgeSmoothed": {
+            "max": 5.76,
+            "p99": 3.77,
+            "p95": 2.33,
+            "median": 0.79
+          },
+          "edgePerPoint": {
+            "max": 10.11,
+            "p99": 4.02,
+            "p95": 2.44,
+            "median": 0.8
+          }
+        },
+        "attempts": [
+          {
+            "attempt": "r2a1",
+            "renderSha256": "357b8bb6cd0b115ea3db074e04dfb6d8ed959559cd95bb3e6d3167b08559d26f",
+            "iou": 0.99275,
+            "edgeSmoothedP99": 3.63,
+            "edgeSmoothedMax": 5.64,
+            "operationalPass": false,
+            "fitErrPct": 0.003,
+            "eye": {
+              "ok": true,
+              "note": "bulb and tassel hang from the hose as in the input (they do not touch the surface); contact + cast shadow at the glass base only"
+            },
+            "usage": {
+              "input_tokens": 2400,
+              "input_tokens_details": {
+                "image_tokens": 1517,
+                "text_tokens": 883
+              },
+              "output_tokens": 3569,
+              "output_tokens_details": {
+                "image_tokens": 3569,
+                "text_tokens": 0
+              },
+              "total_tokens": 5969
+            }
+          },
+          {
+            "attempt": "r2a2",
+            "renderSha256": "aef988fb51d2cebd805227e9799168a108ca7b20f329cd34bdf9ebeaec788f60",
+            "iou": 0.99042,
+            "edgeSmoothedP99": 3.74,
+            "edgeSmoothedMax": 4.29,
+            "operationalPass": false,
+            "fitErrPct": 0.002,
+            "eye": {
+              "ok": true,
+              "note": "bulb and tassel hang from the hose as in the input (they do not touch the surface); contact + cast shadow at the glass base only"
+            },
+            "usage": {
+              "input_tokens": 2400,
+              "input_tokens_details": {
+                "image_tokens": 1517,
+                "text_tokens": 883
+              },
+              "output_tokens": 3569,
+              "output_tokens_details": {
+                "image_tokens": 3569,
+                "text_tokens": 0
+              },
+              "total_tokens": 5969
+            }
+          },
+          {
+            "attempt": "r2a3",
+            "renderSha256": "b9dfe7b6a5d7af6ddae16d967b9e9a342148339f02f4e556d97bd1f208fad435",
+            "iou": 0.99201,
+            "edgeSmoothedP99": 3.54,
+            "edgeSmoothedMax": 8.76,
+            "operationalPass": false,
+            "fitErrPct": 0.004,
+            "eye": {
+              "ok": true,
+              "note": "bulb and tassel hang from the hose as in the input (they do not touch the surface); contact + cast shadow at the glass base only"
+            },
+            "usage": {
+              "input_tokens": 2400,
+              "input_tokens_details": {
+                "image_tokens": 1517,
+                "text_tokens": 883
+              },
+              "output_tokens": 3569,
+              "output_tokens_details": {
+                "image_tokens": 3569,
+                "text_tokens": 0
+              },
+              "total_tokens": 5969
+            }
+          }
+        ],
+        "round1Selected": {
+          "attempt": "a3",
+          "iou": 0.98646,
+          "status": "held"
+        },
+        "status": "held",
+        "reason": "geometry: IoU 0.9928 / smoothed edge p99 3.63 px (gate IoU>=0.995, p99<=4)",
+        "approval": "NOT APPROVED - Jordan approves by looking at the sheet"
       }
     }
   ]

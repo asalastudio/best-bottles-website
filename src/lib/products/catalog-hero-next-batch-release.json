@@ -264,5 +264,119 @@
       "translateXPercent": 0,
       "translateYPercent": 0
     }
+  },
+  {
+    "groupSlug": "eternal-flame-35ml-green-Ground",
+    "websiteSku": "GBEternalFlameGreen",
+    "graceSku": "GB-ETF-GRN-35ML",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343698354468",
+    "family": "Decorative",
+    "capacityMl": 35,
+    "bottleColor": "Green",
+    "alt": "35 ml Green Eternal Flame Bottle with Ground Glass Stopper",
+    "presentation": "Original product assembly",
+    "url": "/images/catalog/next-batch-approved-2026-09-25/GBEternalFlameGreen.47eccae275a4.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "pear-355ml-clear-Ground-glassapplicator",
+    "websiteSku": "GBCB12ozPear",
+    "graceSku": "GB-DEC-CLR-355ML-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343698387236",
+    "family": "Decorative",
+    "capacityMl": 355,
+    "bottleColor": "Clear",
+    "alt": "355 ml Cobalt Blue Pear Bottle with Glass Ball Stopper",
+    "presentation": "Original product assembly",
+    "url": "/images/catalog/next-batch-approved-2026-09-25/GBCB12ozPear.be09fc345992.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "royal-13ml-clear-13-415",
+    "websiteSku": "GBRoyal13Gl",
+    "graceSku": "GB-VIA-CLR-13ML-GLD-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343643271460",
+    "family": "Royal",
+    "capacityMl": 13,
+    "bottleColor": "Clear",
+    "alt": "13 ml Clear Royal Bottle with Shiny Gold Cap",
+    "presentation": "Original product assembly",
+    "url": "/images/catalog/next-batch-approved-2026-09-25/GBRoyal13Gl.e7f53991ffa2.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "royal-13ml-clear-13-415-rollon",
+    "websiteSku": "GBRoyal13MtlRollBlkDot",
+    "graceSku": "GB-RYL-CLR-13ML-MRL-BKDT",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343605391652",
+    "family": "Royal",
+    "capacityMl": 13,
+    "bottleColor": "Clear",
+    "alt": "13 ml Clear Royal Roll-On Bottle with Metal Roller Ball and Black Dotted Cap",
+    "presentation": "Original product assembly",
+    "url": "/images/catalog/next-batch-approved-2026-09-25/GBRoyal13MtlRollBlkDot.0bd1985f251f.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "tola-3ml-clear-14.3mm",
+    "websiteSku": "GB3TPlGl",
+    "graceSku": "GB-DEC-CLR-3ML-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343693603108",
+    "family": "Decorative",
+    "capacityMl": 3,
+    "bottleColor": "Clear",
+    "alt": "3 ml Clear Tola Bottle with Shiny Gold Cap and Red Bead",
+    "presentation": "Original product assembly",
+    "url": "/images/catalog/next-batch-approved-2026-09-25/GB3TPlGl.30f0dba0bc9d.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "grace-55ml-clear-18-415-antiquespray-tassel",
+    "websiteSku": "GBGrce55AnSpTslMtSl",
+    "graceSku": "GB-GRC-CLR-55ML-AST-MSLV",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343634784548",
+    "family": "Grace",
+    "capacityMl": 55,
+    "bottleColor": "Clear",
+    "alt": "55 ml Clear Grace Vintage Style Bulb Spray Bottle with Matte Silver Sprayer and Tassel",
+    "presentation": "Original product assembly",
+    "url": "/images/catalog/next-batch-approved-2026-09-25/GBGrce55AnSpTslMtSl.66f3ef2d9cde.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
   }
 ]

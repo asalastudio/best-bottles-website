@@ -1,11 +1,12 @@
-// Export the 14 next-batch Sunburst heroes Jordan approved on 2026-09-25 from
-// the contact sheets (Grace 55, Royal 13 spray, Flair 15, Tola 6, Marble,
-// Eternal Flame Clear/Blue, Genie Clear).
+// Export the 20 next-batch Sunburst heroes Jordan approved on 2026-09-25 from
+// the contact sheets: 14 round-1 QA passes, 2 round-2 QA passes (Eternal
+// Flame Green, Pear) and 4 round-2 renders approved on sight despite a 4-6 px
+// edge-gate miss (Royal 13 cap and roll-on, Tola 3, Grace bulb spray tassel).
 //
 // Usage: node scripts/hero-families/release-next-batch.cjs <lane-worktree>
 //   <lane-worktree> is the generation lane checkout that holds
 //   docs/hero-families/next-batch-2026-09-25/approval-candidates.json and
-//   output/imagegen/next-batch-2026-09-25/{fitted,renders}/.
+//   output/imagegen/next-batch-2026-09-25/{fitted,renders}/ (round 2 in round2/).
 //
 // Read-only against the lane and production: refuses any fitted or raw render
 // whose sha256 differs from the approved one recorded below, any lane record
@@ -26,9 +27,12 @@ const registryPath = path.join(root, 'src/lib/products/catalog-hero-next-batch-r
 const productionQuery = 'https://precise-raccoon-123.convex.cloud/api/query';
 const hash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 
-// Approved selection: the round-1 fitted file for each SKU, pinned by hash.
+// Approved selection: the fitted file for each SKU, pinned by hash. Round-1
+// rows come from candidates[], round-2 rows from round2.candidates[].
 // bottleColor keeps production's catalog colour (it feeds the card spec line
 // and the guided-finder colour facet); alt describes what is pictured.
+const ON_SIGHT = 'Approved on sight by Jordan 2026-09-25 after six attempts: the 4-6 px edge-gate miss is '
+  + 'about the gate\'s own measurement noise (a geometrically perfect copy measures up to 4.4-5.2 px max).';
 const APPROVED = {
   GBGrce55SpryMtGl: { attempt: 'a2', fittedSha256: '7cea9becd0134081108372662d326c7eb1d8efc33b893337ae78815659b0bb22', renderSha256: '57dcc84c18bd1ed0500e3daba1e67a0d648aa6a6ae24c8c2e47726ea1d85ea6f',
     bottleColor: 'Clear', alt: '55 ml Clear Grace Spray Bottle with Matte Gold Spray Pump and Cap' },
@@ -58,17 +62,24 @@ const APPROVED = {
     bottleColor: 'Cobalt Blue', alt: '35 ml Cobalt Blue Eternal Flame Bottle with Ground Glass Stopper' },
   GB1ozGenieCl: { attempt: 'a2', fittedSha256: 'c8ce8d0675cc2fa9e7b24823e3a629093d37a8e8b511a3e1bbbd66391da0dfa3', renderSha256: '30352f1c1e66393a5b21b9b4db12df8b285c60b4fe6cca03453133caf8a6c914',
     bottleColor: 'Clear', alt: '32 ml Clear Genie Bottle with Glass Stopper' },
+  GBEternalFlameGreen: { round: 2, attempt: 'r2a1', fittedSha256: '42ae3dd4a50bd6341516ab502521a49eb704087ea93256c15ce73ed607532473', renderSha256: '4be658119be23cb887f366714b90bf6e3b7cbf2739aeafe096fdfa2acbd20ec0',
+    bottleColor: 'Green', alt: '35 ml Green Eternal Flame Bottle with Ground Glass Stopper' },
+  // Production's colour field says Clear; the pictured glass is cobalt blue.
+  GBCB12ozPear: { round: 2, attempt: 'r2a1', fittedSha256: '8304a736a514b49a77bb69cab3e248953d6e36281b06b9101429c94ecf1cbcca', renderSha256: '443d787603c9d55a00ec83386a9e241467e8b8709fa2d02fc4cb2aad7fe82804',
+    bottleColor: 'Clear', alt: '355 ml Cobalt Blue Pear Bottle with Glass Ball Stopper' },
+  GBRoyal13Gl: { round: 2, attempt: 'r2a3', fittedSha256: '035d552c9baf7135a3bd4a9886ccfc49cf4dec442bd14b75a6f391fc3ed5f823', renderSha256: 'e0093a1e789747eeca0ec83bcf9512f004794f240f323b9477150a4efd7c474f',
+    onSight: true, bottleColor: 'Clear', alt: '13 ml Clear Royal Bottle with Shiny Gold Cap' },
+  GBRoyal13MtlRollBlkDot: { round: 2, attempt: 'r2a1', fittedSha256: 'a3427b4fb46f99c4c9b2c933ba4c1c89b0100dc9afac599d1a67e66b851f0bb5', renderSha256: '644bfcb4ff88f9e9c8d7272ee8b82130d7340c534cc7089dada5d5cbb03b1862',
+    onSight: true, bottleColor: 'Clear', alt: '13 ml Clear Royal Roll-On Bottle with Metal Roller Ball and Black Dotted Cap' },
+  GB3TPlGl: { round: 2, attempt: 'r2a1', fittedSha256: '5dc2d3348d945b108d9565c99fd06c35096d0233a69b6e569488fbbd486084bf', renderSha256: 'c97edeafe6d6f39d7ad9ad6881682a3b751f41f28d86e11e46beb5e2b2d58964',
+    onSight: true, bottleColor: 'Clear', alt: '3 ml Clear Tola Bottle with Shiny Gold Cap and Red Bead' },
+  GBGrce55AnSpTslMtSl: { round: 2, attempt: 'r2a1', fittedSha256: 'fa088500026c3074c178238bf482f8dc2e8d4825bba54885343d304483341842', renderSha256: '357b8bb6cd0b115ea3db074e04dfb6d8ed959559cd95bb3e6d3167b08559d26f',
+    onSight: true, bottleColor: 'Clear', alt: '55 ml Clear Grace Vintage Style Bulb Spray Bottle with Matte Silver Sprayer and Tassel' },
 };
-const EXPECTED = { Grace: 4, Royal: 1, Flair: 3, Decorative: 6 };
+const EXPECTED = { Grace: 5, Royal: 3, Flair: 3, Decorative: 9 };
 const HELD = {
-  GBGrce55AnSpTslMtSl: 'QA near-miss (tassel strands redrawn); re-rendering',
-  GBRoyal13Gl: 'QA near-miss (right side of square body 5-8 px); re-rendering',
-  GBRoyal13MtlRollBlkDot: 'QA near-miss (right side of square body 5-8 px); re-rendering',
-  GB3TPlGl: 'QA near-miss (cap outline, partly a PSD alpha sliver); re-rendering',
-  GBEternalFlameGreen: 'QA near-miss (one detector point at the dome/foot corner); re-rendering',
-  GBCB12ozPear: 'QA near-miss (foot flare and stopper rim 4-8 px); re-rendering',
-  GBHeartFrst4KeyGld: 'presentation hold: keychain floats in the master pose, no contact shadow; being re-posed',
-  GBHeartFrst4TslRed: 'presentation hold: tassel floats in the master pose, no contact shadow; being re-posed',
+  GBHeartFrst4KeyGld: 'held: round 2 laid the keychain flat but the model re-posed the heart (IoU 0.976); today\'s card image stays',
+  GBHeartFrst4TslRed: 'held: round 2 laid the tassel flat but the model re-posed the heart (IoU 0.976); today\'s card image stays',
   LB1ozGl: 'not rendered: Lotion glass height unknown',
   LB1ozSl: 'not rendered: Lotion glass height unknown',
   LB3mlClear: 'not rendered: height unknown, plastic',
@@ -99,7 +110,9 @@ async function main() {
     throw new Error('Pass the generation lane checkout: node scripts/hero-families/release-next-batch.cjs <lane>');
   }
   const laneJsonBytes = fs.readFileSync(path.join(laneDocs, 'approval-candidates.json'));
-  const candidates = JSON.parse(laneJsonBytes).candidates;
+  const laneJson = JSON.parse(laneJsonBytes);
+  const candidates = laneJson.candidates;
+  const round2 = laneJson.round2.candidates;
   const sizing = JSON.parse(fs.readFileSync(path.join(laneDocs, 'sizing-proof/sizing-targets.json')));
   const catalog = JSON.parse(fs.readFileSync(path.join(root, 'src/lib/products/catalog-heroes.json')));
   const skus = Object.keys(APPROVED);
@@ -115,22 +128,27 @@ async function main() {
   const evidence = [];
   for (const sku of skus) {
     const approved = APPROVED[sku];
-    const record = candidates.find(c => c.websiteSku === sku);
-    if (!record || record.status !== 'pass' || record.selectedAttempt !== approved.attempt
-      || record.fitted.sha256 !== approved.fittedSha256 || record.render.sha256 !== approved.renderSha256) {
+    const round = approved.round ?? 1;
+    const round1 = candidates.find(c => c.websiteSku === sku);
+    const record = round === 2 ? round2.find(c => c.websiteSku === sku) : round1;
+    const status = approved.onSight ? 'approved-on-sight' : 'qa-pass';
+    if (!record || !round1 || record.status !== (approved.onSight ? 'held' : 'pass') || record.selectedAttempt !== approved.attempt
+      || record.fitted.sha256 !== approved.fittedSha256 || record.render.sha256 !== approved.renderSha256
+      || record.groupSlug !== round1.groupSlug || record.graceSku !== round1.graceSku) {
       throw new Error(`Lane record no longer matches the approved selection: ${sku}`);
     }
     const identity = catalog.find(hero => hero.websiteSku === sku);
     const { group, variant } = await productionHolder(sku);
-    if (!identity || group.slug !== record.prodGroupSlug || group.slug !== identity.groupSlug
+    if (!identity || group.slug !== round1.prodGroupSlug || group.slug !== identity.groupSlug
       || variant.graceSku !== record.graceSku || variant.graceSku !== identity.graceSku
-      || variant.shopifyVariantId !== identity.shopifyVariantId || group.family !== record.family
+      || variant.shopifyVariantId !== identity.shopifyVariantId || group.family !== round1.family
       || group.capacityMl !== identity.capacityMl || group.color !== approved.bottleColor) {
       throw new Error(`Production identity mismatch: ${sku}`);
     }
 
-    const fittedPath = path.join(laneOutput, 'fitted', `${sku}-${approved.attempt}-fitted.png`);
-    const renderPath = path.join(laneOutput, 'renders', `${sku}-${approved.attempt}.png`);
+    const sub = round === 2 ? 'round2' : '';
+    const fittedPath = path.join(laneOutput, 'fitted', sub, `${sku}-${approved.attempt}-fitted.png`);
+    const renderPath = path.join(laneOutput, 'renders', sub, `${sku}-${approved.attempt}.png`);
     const source = fs.readFileSync(fittedPath);
     const render = fs.readFileSync(renderPath);
     const receipt = JSON.parse(fs.readFileSync(renderPath.replace(/\.png$/, '.render.json')));
@@ -151,14 +169,26 @@ async function main() {
     }
     const sha256 = hash(webp);
     const url = `${publicDir}/${sku}.${sha256.slice(0, 12)}.webp`;
-    fs.writeFileSync(path.join(root, 'public', url), webp);
+    const target = path.join(root, 'public', url);
+    // Already-released files must stay byte-identical across reruns.
+    if (fs.existsSync(target) && !fs.readFileSync(target).equals(webp)) throw new Error(`Released file changed: ${sku}`);
+    fs.writeFileSync(target, webp);
     heroes.push({ groupSlug: group.slug, websiteSku: sku, graceSku: variant.graceSku,
       shopifyVariantId: variant.shopifyVariantId, family: group.family, capacityMl: group.capacityMl,
       bottleColor: approved.bottleColor, alt: approved.alt, presentation: 'Original product assembly',
       url, width: 1560, height: 1716, framing: { scale: 1, translateXPercent: 0, translateYPercent: 0 } });
     const size = sizing.rows.find(row => row.sku === sku);
+    const g = record.qa.geometry;
+    const onSight = approved.onSight ? {
+      attemptsTotal: round1.attempts.length + record.attempts.length,
+      measured: { iou: g.iou, edgeSmoothedP99: g.edgeSmoothed.p99, edgeSmoothedMax: g.edgeSmoothed.max,
+        edgePerPointMax: g.edgePerPoint.max, gate: 'IoU >= 0.995 and smoothed edge p99 <= 4 px', operationalPass: g.operationalPass } } : null;
     evidence.push({ sku, family: group.family, groupSlug: group.slug, graceSku: variant.graceSku,
       shopifyVariantId: variant.shopifyVariantId,
+      // Round-1 evidence rows keep their original shape; round-2 rows say how they were approved.
+      ...(round === 2 ? { round, status, approvalNote: onSight ? ON_SIGHT : 'QA pass in round 2; approved from the round-2 contact sheet' } : {}),
+      ...(onSight ? { approvedOnSight: onSight } : {}),
+      ...(sku === 'GBCB12ozPear' ? { colourNote: 'Pictured glass is cobalt blue; production colour field is Clear, so bottleColor follows production' } : {}),
       production: { deployment: 'precise-raccoon-123', groupId: group._id, slug: group.slug,
         displayName: group.displayName, color: group.color, capColor: variant.capColor ?? null,
         applicator: variant.applicator ?? null, verifiedBy: 'products:searchCatalog exact websiteSku' },
@@ -180,14 +210,15 @@ async function main() {
   fs.writeFileSync(path.join(docs, 'approval.json'), JSON.stringify({
     date: '2026-09-25', approvedBy: 'Jordan, after reviewing the contact sheets',
     scope: EXPECTED, publication: false,
-    source: { lane: 'next-batch-2026-09-25 round 1 (fitted/)', approvalCandidatesSha256: hash(laneJsonBytes) },
+    source: { lane: 'next-batch-2026-09-25 round 1 (fitted/) and round 2 (fitted/round2/)', approvalCandidatesSha256: hash(laneJsonBytes) },
+    approvedOnSight: { skus: skus.filter(sku => APPROVED[sku].onSight), reason: ON_SIGHT },
     sizing: { curve: sizing.curve.bestFit.formula, measure: 'glass height mm (heightWithoutCap, foot to rim)',
       baselinePct: 91, landmarkRule: sizing.landmarkRule },
     qaGate: 'IoU >= 0.995 and smoothed edge p99 <= 4 px vs the master PSD input silhouette, plus by-eye shadow/material check',
     background: 'Generated bone treatment retained; pixel-exact background not claimed',
     held: HELD, rows: evidence,
   }, null, 2) + '\n');
-  for (const sheet of ['contact-grace.jpg', 'contact-royal-flair.jpg', 'contact-decorative.jpg', 'lineup-strip-wrapped.jpg']) {
+  for (const sheet of ['contact-grace.jpg', 'contact-royal-flair.jpg', 'contact-decorative.jpg', 'lineup-strip-wrapped.jpg', 'contact-round2.jpg']) {
     const from = path.join(laneDocs, sheet);
     const to = path.join(docs, sheet);
     if (fs.statSync(from).size > 2 * 1024 * 1024) {

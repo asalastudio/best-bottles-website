@@ -1,27 +1,55 @@
 # Grace, Royal, Flair, and Decorative catalog images (2026-09-25)
 
-Jordan approved 14 Sunburst heroes on 2026-09-25 after reviewing the contact sheets. This folder is the release record. The sheets were made before approval, so their headers still say "review candidates, NOT approved". The approval covers only the SKUs listed below, as round-1 fitted files.
+Jordan approved 20 Sunburst heroes on 2026-09-25 after reviewing the contact sheets. This folder is the release record. The sheets were made before approval, so their headers still say "review candidates, NOT approved".
 
-## Released (14)
+- **14** are round-1 QA passes, from `fitted/`.
+- **2** are round-2 QA passes, from `fitted/round2/`: GBEternalFlameGreen and GBCB12ozPear.
+- **4** are round-2 renders **approved on sight** (`status: "approved-on-sight"` in `approval.json`): GBRoyal13Gl, GBRoyal13MtlRollBlkDot, GB3TPlGl and GBGrce55AnSpTslMtSl. See below.
 
-| Family | SKU | Production group | Glass mm | Landmark | Target % (measured) | IoU | Edge p99 (px) |
-|---|---|---|---:|---|---|---:|---:|
-| Grace | GBGrce55SpryMtGl | grace-55ml-clear-18-415-perfumespray | 113 | shoulder | 56.59 (56.599) | 0.9958 | 3.39 |
-| Grace | LBGrce55LtnMtGl | grace-55ml-clear-18-415-lotionpump | 113 | shoulder | 56.59 (56.588) | 0.9952 | 2.79 |
-| Grace | GBGrce55RdcrMtSl | grace-55ml-clear-18-415-reducer | 113 | shoulder | 56.59 (56.597) | 0.9972 | 3.05 |
-| Grace | GBGrce55AnSpMtSl | grace-55ml-clear-18-415-antiquespray | 113 | shoulder | 56.59 (56.589) | 0.9957 | 3.38 |
-| Royal | GBRoyal13SpryGlMatt | royal-13ml-clear-13-415-finemist | 56 | shoulder | 37.48 (37.481) | 0.9955 | 3.23 |
-| Flair | GBFlair15Gl | flair-15ml-clear-13-415 | 56 | shoulder | 37.48 (37.479) | 0.9950 | 3.52 |
-| Flair | GBFlair15SpryGlMatt | flair-15ml-clear-13-415-finemist | 56 | shoulder | 37.48 (37.492) | 0.9953 | 3.39 |
-| Flair | GBFlair15MtlRollBlkDot | flair-15ml-clear-13-415-rollon | 56 | shoulder | 37.48 (37.482) | 0.9959 | 2.68 |
-| Decorative | GB6TPlGl | tola-6ml-clear-14.3mm | 48 | closure seat | 34.24 (34.228) | 0.9959 | 3.48 |
-| Decorative | GBMtlMrblSmall | marble-5ml-clear-17.52mm | 66 | closure seat | 41.28 (41.266) | 0.9969 | 2.60 |
-| Decorative | GBMtlMrblLarge | marble-10ml-clear-17.52mm | 80 | closure seat | 46.21 (46.213) | 0.9959 | 2.42 |
-| Decorative | GBEternalFlameClear | eternal-flame-35ml-clear-Ground | 44 | closure seat | 32.54 (32.535) | 0.9966 | 3.11 |
-| Decorative | GBEternalFlameBlue | eternal-flame-35ml-cobalt-blue-Ground | 44 | closure seat | 32.54 (32.531) | 0.9963 | 1.73 |
-| Decorative | GB1ozGenieCl | genie-32ml-clear-Ground | 77 | closure seat | 45.18 (45.184) | 0.9955 | 2.45 |
+## Released (20)
+
+| Family | SKU | Production group | Glass mm | Landmark | Target % (measured) | IoU | Edge p99 (px) | Source | Status |
+|---|---|---|---:|---|---|---:|---:|---|---|
+| Grace | GBGrce55SpryMtGl | grace-55ml-clear-18-415-perfumespray | 113 | shoulder | 56.59 (56.599) | 0.9958 | 3.39 | r1 a2 | QA pass |
+| Grace | LBGrce55LtnMtGl | grace-55ml-clear-18-415-lotionpump | 113 | shoulder | 56.59 (56.588) | 0.9952 | 2.79 | r1 a1 | QA pass |
+| Grace | GBGrce55RdcrMtSl | grace-55ml-clear-18-415-reducer | 113 | shoulder | 56.59 (56.597) | 0.9972 | 3.05 | r1 a1 | QA pass |
+| Grace | GBGrce55AnSpMtSl | grace-55ml-clear-18-415-antiquespray | 113 | shoulder | 56.59 (56.589) | 0.9957 | 3.38 | r1 a2 | QA pass |
+| Grace | GBGrce55AnSpTslMtSl | grace-55ml-clear-18-415-antiquespray-tassel | 113 | shoulder | 56.59 (56.590) | 0.9928 | 3.63 | r2a1 | **approved on sight** |
+| Royal | GBRoyal13Gl | royal-13ml-clear-13-415 | 56 | shoulder | 37.48 (37.482) | 0.9944 | 5.13 | r2a3 | **approved on sight** |
+| Royal | GBRoyal13SpryGlMatt | royal-13ml-clear-13-415-finemist | 56 | shoulder | 37.48 (37.481) | 0.9955 | 3.23 | r1 a3 | QA pass |
+| Royal | GBRoyal13MtlRollBlkDot | royal-13ml-clear-13-415-rollon | 56 | shoulder | 37.48 (37.486) | 0.9932 | 4.99 | r2a1 | **approved on sight** |
+| Flair | GBFlair15Gl | flair-15ml-clear-13-415 | 56 | shoulder | 37.48 (37.479) | 0.9950 | 3.52 | r1 a1 | QA pass |
+| Flair | GBFlair15SpryGlMatt | flair-15ml-clear-13-415-finemist | 56 | shoulder | 37.48 (37.492) | 0.9953 | 3.39 | r1 a1 | QA pass |
+| Flair | GBFlair15MtlRollBlkDot | flair-15ml-clear-13-415-rollon | 56 | shoulder | 37.48 (37.482) | 0.9959 | 2.68 | r1 a2 | QA pass |
+| Decorative | GB3TPlGl | tola-3ml-clear-14.3mm | 42 | closure seat | 31.66 (31.659) | 0.9938 | 4.90 | r2a1 | **approved on sight** |
+| Decorative | GB6TPlGl | tola-6ml-clear-14.3mm | 48 | closure seat | 34.24 (34.228) | 0.9959 | 3.48 | r1 a2 | QA pass |
+| Decorative | GBMtlMrblSmall | marble-5ml-clear-17.52mm | 66 | closure seat | 41.28 (41.266) | 0.9969 | 2.60 | r1 a1 | QA pass |
+| Decorative | GBMtlMrblLarge | marble-10ml-clear-17.52mm | 80 | closure seat | 46.21 (46.213) | 0.9959 | 2.42 | r1 a2 | QA pass |
+| Decorative | GBEternalFlameClear | eternal-flame-35ml-clear-Ground | 44 | closure seat | 32.54 (32.535) | 0.9966 | 3.11 | r1 a2 | QA pass |
+| Decorative | GBEternalFlameBlue | eternal-flame-35ml-cobalt-blue-Ground | 44 | closure seat | 32.54 (32.531) | 0.9963 | 1.73 | r1 a3 | QA pass |
+| Decorative | GBEternalFlameGreen | eternal-flame-35ml-green-Ground | 44 | closure seat | 32.54 (32.541) | 0.9969 | 2.51 | r2a1 | QA pass |
+| Decorative | GB1ozGenieCl | genie-32ml-clear-Ground | 77 | closure seat | 45.18 (45.184) | 0.9955 | 2.45 | r1 a2 | QA pass |
+| Decorative | GBCB12ozPear | pear-355ml-clear-Ground-glassapplicator | 151.9 | closure seat | 67.32 (67.318) | 0.9954 | 2.77 | r2a1 | QA pass |
 
 Each SKU was checked against production Convex (`precise-raccoon-123`, `products:searchCatalog`, exact websiteSku search). In each case the SKU is a variant of exactly the group shown, with the same graceSku and Shopify variant ID as `catalog-heroes.json`. The release script repeats this read-only check every time it runs.
+
+**Pear colour.** The Pear's glass is cobalt blue, but production's colour field (and slug) says Clear. `bottleColor` follows production (`Clear`), because it feeds the card spec line and the colour filter. The alt text describes the cobalt glass. `GBEternalFlameGreen` is `Green` in production and in the registry.
+
+## Approved on sight
+
+The four round-2 renders below miss the edge gate by about 4–6 px. Each SKU had six attempts in total (three in round 1, three in round 2), and none cleared the gate. Jordan approved the best round-2 render of each on sight on 2026-09-25. The miss is about the size of the gate's own measurement noise: a geometrically perfect copy of the input still measures up to 4.4–5.2 px max.
+
+| SKU | Round-2 attempt | IoU | Smoothed p99 / max (px) | Per-point max (px) |
+|---|---|---:|---:|---:|
+| GBRoyal13Gl | r2a3 | 0.9944 | 5.13 / 5.75 | 6.18 |
+| GBRoyal13MtlRollBlkDot | r2a1 | 0.9932 | 4.99 / 5.45 | 6.38 |
+| GB3TPlGl | r2a1 | 0.9938 | 4.90 / 5.80 | 8.68 |
+| GBGrce55AnSpTslMtSl | r2a1 | 0.9928 | 3.63 / 5.64 | 9.44 |
+
+The by-eye check passed on all four:
+- a single contact shadow with a cast to the right
+- the detached caps stand with their own shadow
+- on the Grace tassel, the bulb and tassel hang from the hose exactly as in the master pose
 
 ## Sizing
 
@@ -30,7 +58,7 @@ Each SKU was checked against production Convex (`precise-raccoon-123`, `products
 - The glass foot sits at **91 %** (y = 2082 of 2288).
 - The target % is the span from the landmark to the foot.
   - **Shouldered bottles** (Grace, Royal, Flair) use the glass shoulder, where the neck meets the body.
-  - **Shoulderless bottles** use the **closure seat**: where the fitted closure or stopper meets the glass. That is the top of the glass lip for ground stoppers (Eternal Flame, Genie), the neck base under the cap for Tola, and the top of the shell's top plate for Marble.
+  - **Shoulderless bottles** use the **closure seat**: where the fitted closure or stopper meets the glass. That is the top of the glass lip for ground stoppers (Eternal Flame, Genie, Pear), the neck base under the cap for Tola, and the top of the shell's top plate for Marble.
 - The fitted 2080 × 2288 canvas already holds the approved card framing. Registry framing is therefore identity (`scale 1`, no translation), the same as the remaining-42 release.
 
 ## QA gate
@@ -40,26 +68,25 @@ Each SKU was checked against production Convex (`precise-raccoon-123`, `products
   - a single contact shadow with its cast toward 2 o'clock
   - the stopper is seated
   - glass colour and metal-shell material are kept
-- Every released SKU passes the gate. Full QA, fit, input/PSD hashes and every attempt are in `approval.json` (`rows[].laneRecord`).
+- 16 rows pass the gate. The four rows above were approved on sight.
+- Full QA, fit, input/PSD hashes and every attempt are in `approval.json` (`rows[].laneRecord`).
 
 ## Export
 
 - Each approved fitted PNG is resized once, uniformly, from 2080 × 2288 to 1560 × 1716 (Lanczos3).
 - It is then encoded as lossless WebP and decoded again to confirm pixel equality.
 - Files are content-addressed under `public/images/catalog/next-batch-approved-2026-09-25/`.
-- The native PNGs total 49,462,531 bytes; the WebPs total 26,890,102 bytes.
-- `scripts/hero-families/release-next-batch.cjs <lane>` rebuilds everything. It refuses any fitted or raw render whose sha256 differs from the approved hash. It also refuses any lane record that no longer selects the approved attempt, and any production group mismatch.
+- The native PNGs total 71,064,771 bytes; the WebPs total 38,537,166 bytes.
+- `scripts/hero-families/release-next-batch.cjs <lane>` rebuilds everything.
+  - It refuses any fitted or raw render whose sha256 differs from the approved hash, for both round 1 and round 2.
+  - It refuses any lane record that no longer selects the approved attempt.
+  - It refuses any production group mismatch.
+  - It refuses to overwrite an already-released WebP with different bytes.
 - The generated bone background is kept; a pixel-exact background is not claimed.
 
 ## Held (not in this release)
 
-- **Six QA near-misses, being re-rendered:**
-  - GBGrce55AnSpTslMtSl: the tassel strands are redrawn.
-  - GBRoyal13Gl and GBRoyal13MtlRollBlkDot: the right side of the square body is 5–8 px off.
-  - GB3TPlGl: the cap outline, partly caused by a sliver in the PSD alpha.
-  - GBEternalFlameGreen: one detector point at the corner where the dome meets the foot.
-  - GBCB12ozPear: the foot flare and stopper rim are 4–8 px off.
-- **GBHeartFrst4KeyGld and GBHeartFrst4TslRed:** being re-posed. The master assembly holds the keychain and tassel in mid-air, and the frosted renders have no contact shadow.
+- **GBHeartFrst4KeyGld and GBHeartFrst4TslRed.** Round 2 rebuilt the input with the keychain or tassel lying flat. The model then re-posed the heart, rotating it toward upright, so geometry changed (IoU 0.976). The catalog cards keep today's images.
 - **Blocked on data, so not rendered:**
   - Lotion (LB1ozGl, LB1ozSl, LB3mlClear): glass heights are unknown.
   - GBMtlCylGl: the Royal 14 ml height is disputed.
@@ -75,6 +102,7 @@ To roll back, remove the `nextBatchReleaseRows` import and spread from `src/lib/
 
 ## Files
 
-- `approval.json`: the evidence for each SKU.
-- `contact-grace.jpg`, `contact-royal-flair.jpg`, `contact-decorative.jpg`: the sheets Jordan reviewed. They include the held SKUs.
-- `lineup-strip-wrapped.jpg`: all candidates beside six previously released heroes at one card scale.
+- `approval.json`: the evidence for each SKU. Round-2 rows add `round`, `status`, `approvalNote` and, when approved on sight, `approvedOnSight`.
+- `contact-grace.jpg`, `contact-royal-flair.jpg`, `contact-decorative.jpg`: the round-1 sheets Jordan reviewed.
+- `contact-round2.jpg`: the round-2 sheet. Each row shows the round-1 selection, the round-2 input, the round-2 best fitted render, and the input outline over the output.
+- `lineup-strip-wrapped.jpg`: the round-1 candidates beside six previously released heroes at one card scale.
