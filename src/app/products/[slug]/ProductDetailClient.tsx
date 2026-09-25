@@ -52,6 +52,8 @@ import { focusedProductOptionLabel, focusedProductPresentation } from "@/lib/pro
 import cylinderCapThumbnails from "@/lib/products/cylinder-cap-thumbnails.generated.json";
 import { bostonClosurePhoto } from "@/lib/products/boston-closure-photos";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
+import { atomizerVariantCardName, isVariantCardFamily } from "@/lib/products/variant-cards";
+import { getReleasedCatalogHero } from "@/lib/products/catalog-heroes";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import { shouldHideAssembledPdpLowerStack } from "@/lib/products/assembled-pdp";
@@ -1559,7 +1561,11 @@ export default function ProductDetailClient({
             : null,
         [group, selectedVariant],
     );
-    const customerDisplayName = customerFacingName?.displayName ?? group?.displayName ?? selectedVariant?.itemName ?? "";
+    // An Atomizer page carries the exact name of the catalog card that opened it.
+    const variantCardName = group && selectedVariant && isVariantCardFamily(group.family)
+        ? atomizerVariantCardName(group.capacityMl ?? getReleasedCatalogHero(group.slug, selectedVariant.websiteSku)?.capacityMl, selectedVariant)
+        : null;
+    const customerDisplayName = variantCardName ?? customerFacingName?.displayName ?? group?.displayName ?? selectedVariant?.itemName ?? "";
     const breadcrumbsSteps = useMemo(() => {
         if (!group) return [];
         const steps: BreadcrumbStep[] = [

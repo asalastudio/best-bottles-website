@@ -25,6 +25,8 @@ import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/li
 import { filterVariantsForGroupIntent } from "@/lib/products/group-variant-intent";
 import type { PdpBlock } from "@/components/PdpBlocks";
 import { loadPlatesForVariants } from "@/lib/paper-doll/plates";
+import { atomizerVariantCardName, isVariantCardFamily, withReleasedHeroStages } from "@/lib/products/variant-cards";
+import { getReleasedCatalogHero } from "@/lib/products/catalog-heroes";
 import { headers } from "next/headers";
 import { readCompletion } from "../../../../scripts/asset-ledger/plate-completion.mjs";
 import { localBostonPreview, previewPlates } from "../../../../scripts/asset-ledger/product-preview.mjs";
@@ -128,14 +130,22 @@ async function getPdpBlocks(activeSlug: string, family: string | null | undefine
 
 export async function generateMetadata({
     params,
+    searchParams,
 }: {
     params: Promise<{ slug: string }>;
+    searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }): Promise<Metadata> {
     const { slug } = await params;
     const activeSlug = getLegacyProductRouteOverride(slug) ?? slug;
     const data = await getProductData(activeSlug);
     const group = data?.group;
-    const variant = getPrimaryVariant(data);
+    // A variant-card family's catalog card links with ?sku=; title the page for that finish.
+    const requestedSku = (await searchParams)?.sku;
+    const skuVariant = isVariantCardFamily(group?.family) && typeof requestedSku === "string"
+        // The PDP's own colour picker writes the Grace SKU; catalog cards write the website SKU.
+        ? data?.variants.find((candidate) => candidate.websiteSku === requestedSku || candidate.graceSku === requestedSku) ?? null
+        : null;
+    const variant = skuVariant ?? getPrimaryVariant(data);
 
     if (!group) {
         return {
@@ -144,11 +154,14 @@ export async function generateMetadata({
         };
     }
 
-    const customerName = getCustomerFacingProductName({
-        group,
-        variant,
-        fallbackName: group.displayName,
-    }).displayName;
+    const customerName = (skuVariant
+        ? atomizerVariantCardName(group.capacityMl ?? getReleasedCatalogHero(group.slug, skuVariant.websiteSku)?.capacityMl, skuVariant)
+        : null)
+        ?? getCustomerFacingProductName({
+            group,
+            variant,
+            fallbackName: group.displayName,
+        }).displayName;
     const description = chooseCanonicalProductDescription({
         groupDescription: group.groupDescription ?? null,
         variantDescription: variant?.itemDescription ?? null,
@@ -274,7 +287,7 @@ export default async function ProductPage({
                 initialRelations={relations}
                 initialCompatibility={compatibility}
                 siblingGroups={siblingGroups}
-                platesBySku={localAssetPreview ? pilot.plates : platesBySku}
+                platesBySku={localAssetPreview ? pilot.plates : withReleasedHeroStages(group, data?.variants ?? [], platesBySku)}
                 localKits={pilot.kits}
                 localComponentKits={localComponentKits}
                 localAssetPreview={localAssetPreview}

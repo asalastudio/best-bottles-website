@@ -336,7 +336,8 @@ export function getCustomerFacingProductName(args: CustomerFacingNameArgs): Cust
     const finish = finishSuffix(productType, resolveFinish(args.variant), args.variant);
     const displayName = custom
         ? `${custom}${finish ? ` - ${finish}` : ""}`
-        : displayApplicatorName(`${baseName} ${productType}${finish ? ` - ${finish}` : ""}`.replace(/\s+/g, " ").trim());
+        // "10 ml Atomizer" + "Atomizer Bottle" must not read "Atomizer Atomizer Bottle".
+        : displayApplicatorName(`${baseName} ${productType}${finish ? ` - ${finish}` : ""}`.replace(/\s+/g, " ").replace(/\b(\w+) \1\b/gi, "$1").trim());
     const variantLabel = finish ?? (resolvedType ? productType : null);
     const confidence: CustomerFacingNameConfidence = custom || (args.variant && resolvedType) ? "high" : resolvedType ? "medium" : "fallback";
 

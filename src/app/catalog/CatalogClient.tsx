@@ -61,6 +61,7 @@ import {
     type ProductCardVariantPreviewSource,
 } from "@/lib/products/product-card-variant-previews";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
+import { atomizerVariantCardName, expandVariantCards, isVariantCardFamily } from "@/lib/products/variant-cards";
 import { isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import { buildCatalogSearchArgs, fetchCatalogSearch } from "@/lib/catalogSearchClient";
 import { catalogGroupSkuLabel, mergeCatalogSearchPages, resolveCatalogGroupSku } from "@/lib/catalogSearchFallback";
@@ -275,6 +276,7 @@ function ProductGroupCard({
     primaryWebsiteSku,
     matchSearch = false,
     catalogHero,
+    variantCardName,
 }: {
     group: CatalogGroup;
     index: number;
@@ -288,6 +290,8 @@ function ProductGroupCard({
     primaryWebsiteSku?: string | null;
     matchSearch?: boolean;
     catalogHero?: CatalogHero | null;
+    /** Set only for one-SKU cards of a variant-card family (e.g. "10 ml Blue Atomizer"). */
+    variantCardName?: string | null;
 }) {
     const selected = matchSearch ? variantPreviews?.[0] : null;
     const liveCard = resolveLiveCatalogCardHero({
@@ -299,10 +303,15 @@ function ProductGroupCard({
     const picturedPreview = liveCard.picturedWebsiteSku
         ? { id: liveCard.picturedWebsiteSku, label: liveCard.picturedWebsiteSku, websiteSku: liveCard.picturedWebsiteSku }
         : selected;
+    // A one-SKU card always opens its own finish on the PDP, hero or not.
+    const variantCardSku = variantCardName ? variantSources?.[0]?.websiteSku ?? null : null;
     const href = displayHero
         ? getCatalogHeroProductHref(displayHero, productGroupHref(group, applicatorParam))
-        : productCardVariantHref(productGroupHref(group, applicatorParam), picturedPreview);
-    const customerDisplayName = getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
+        : productCardVariantHref(
+            productGroupHref(group, applicatorParam),
+            picturedPreview ?? (variantCardSku ? { id: variantCardSku, label: variantCardSku, websiteSku: variantCardSku } : null),
+        );
+    const customerDisplayName = variantCardName ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
     const defaultImageUrl =
         liveCard.imageUrl ??
         usableProductImageUrl(group.heroImageUrl) ??
@@ -1566,7 +1575,9 @@ export default function CatalogClient({
     });
     const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
     const [searchInput, setSearchInput] = useState(initialState.filters.search);
-    const [activeResult, setActiveResult] = useState<CatalogSearchResult>(initialResult);
+    const [rawResult, setActiveResult] = useState<CatalogSearchResult>(initialResult);
+    // Atomizer finishes read as separate products: one card per SKU (see variant-cards.ts).
+    const activeResult = useMemo(() => expandVariantCards(rawResult), [rawResult]);
     const [isFetchingCatalog, setIsFetchingCatalog] = useState(false);
     const [isLoadingMore, setIsLoadingMore] = useState(false);
     const [queryError, setQueryError] = useState<string | null>(null);
@@ -1767,6 +1778,18 @@ export default function CatalogClient({
 
         return next;
     }, [variantPreviewRows, visibleProducts, skuMap, locale]);
+    const variantCardNameMap = useMemo(() => {
+        const next = new Map<string, string>();
+        for (const group of visibleProducts) {
+            if (!isVariantCardFamily(group.family)) continue;
+            const variants = variantSourceMap.get(group._id) ?? [];
+            if (variants.length !== 1) continue;
+            // Production's leftover Slim group has no capacity; the approved hero records it.
+            const name = atomizerVariantCardName(group.capacityMl ?? catalogHeroMap.get(group._id)?.capacityMl, variants[0]);
+            if (name) next.set(group._id, name);
+        }
+        return next;
+    }, [visibleProducts, variantSourceMap, catalogHeroMap]);
     const hasMore = activeResult.nextCursor != null;
     const isLoading = isFetchingCatalog && activeResult.items.length === 0;
     const searchRecoverySuggestions = useMemo(
@@ -2506,6 +2529,7 @@ export default function CatalogClient({
                                             primaryGraceSku={primarySkuMetaMap.get(group._id)?.graceSku}
                                             primaryWebsiteSku={primarySkuMetaMap.get(group._id)?.websiteSku}
                                             variantSources={variantSourceMap.get(group._id)}
+                                            variantCardName={variantCardNameMap.get(group._id)}
                                         />
                                     ))}
                                 </CatalogProductGrid>
