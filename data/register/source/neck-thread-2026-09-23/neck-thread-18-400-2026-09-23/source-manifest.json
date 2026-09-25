@@ -1,0 +1,132 @@
+[
+  {
+    "output": "source-images/boston-clear.png",
+    "role": "plain threaded 15 mL Boston Round glass layer",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/3. Clear Bottle (.5ounce:15ml) (capped)/Clear Dropper Bottler 1.5 ounce Alternating Caps (capped)/1. GBBstn15BlkCapSht.psd",
+    "sourceSha256": "1c994a66c9d0eb524d3aff308514532efe560d0659f2df9c99860e4e4891fa71",
+    "size": [
+      316,
+      812
+    ]
+  },
+  {
+    "output": "source-images/boston-amber.png",
+    "role": "plain threaded 15 mL Boston Round glass layer",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/1. GBBstnAmb15mlBlkCapSht.psd",
+    "sourceSha256": "8aefa739fdcf1e5fa736877c4bff380725b8e8d7a2aba8b85d3129a497eb1d72",
+    "size": [
+      322,
+      838
+    ]
+  },
+  {
+    "output": "source-images/boston-cobalt.png",
+    "role": "plain threaded 15 mL Boston Round glass layer",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/1. GBBstnBlu15BlkCapSht.psd",
+    "sourceSha256": "82e6548471ca8742eaafd65839f93b1a69fc44d7d718e7bdc59d67f63d21a297",
+    "size": [
+      322,
+      838
+    ]
+  },
+  {
+    "output": "source-images/vial-clear.png",
+    "role": "plain threaded 9 mL vial glass layer",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/0. All Vials/Uncapped/GB09BlackCapApp.psd",
+    "sourceSha256": "4192d89296c7e221ba9b782e5d4f4ced7bce482a9cf129f5285bfda0cbc58ed7",
+    "size": [
+      266,
+      516
+    ]
+  },
+  {
+    "output": "source-images/circle-frosted.png",
+    "role": "50 mL Circle source assembly; restricted to its listed reducer / leather-cap set",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/55. GBCrclFrst50RdcrIvyLthr.psd",
+    "sourceSha256": "550e26389e76cd1630eae0b6bfcc03f75ed56801f78f51f730d25b8e76046a04",
+    "size": [
+      1025,
+      1397
+    ]
+  },
+  {
+    "output": "source-images/drop-black.png",
+    "role": "standalone 18-400 component master",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/20. Caps/4. 18-400 Droppers/2. DRP18-40015mlBlckBulb.psd",
+    "sourceSha256": "6de19ac345d3e9da15a8bc97bee2a50529d195064b76c12e028f8497b2f8d849",
+    "size": [
+      709,
+      2656
+    ]
+  },
+  {
+    "output": "source-images/drop-black-gold.png",
+    "role": "standalone 18-400 component master",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/20. Caps/4. 18-400 Droppers/5. DRP18-40015mlShnGlTrimBlkBulb.psd",
+    "sourceSha256": "3cfa4cbf88942ccfa5ffcbeaddd8e863fad1becb7ec6c03014ecf8959c1b088a",
+    "size": [
+      717,
+      2646
+    ]
+  },
+  {
+    "output": "source-images/drop-black-silver.png",
+    "role": "standalone 18-400 component master",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/20. Caps/4. 18-400 Droppers/3. DRP18-40015mlShnSlTrimBlkBulb.psd",
+    "sourceSha256": "c4595742d254f6c626e5aeac6eaa0c88972fe7aa01b0727801974ce9feacdf73",
+    "size": [
+      984,
+      2642
+    ]
+  },
+  {
+    "output": "source-images/drop-white.png",
+    "role": "standalone 18-400 component master",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/20. Caps/4. 18-400 Droppers/1. DRP18-40015mlWhiteBulb.psd",
+    "sourceSha256": "07c0a388a4d16cd0afd1c14fbb9daae9414e25f67b83a36e1473c54c9b1ef011",
+    "size": [
+      663,
+      2580
+    ]
+  },
+  {
+    "output": "source-images/drop-white-gold.png",
+    "role": "standalone 18-400 component master",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/20. Caps/4. 18-400 Droppers/4. DRP18-40015mlShnGlTrimWhiteBulb.psd",
+    "sourceSha256": "82c5613797169aab8f481904dbb1d096f6075eb3d51940414943d8afb3dc898e",
+    "size": [
+      712,
+      2652
+    ]
+  },
+  {
+    "output": "source-images/drop-white-silver.png",
+    "role": "standalone 18-400 component master",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/20. Caps/4. 18-400 Droppers/6. DRP18-40015mlShnSlTrimWhiteBulb.psd",
+    "sourceSha256": "cd6c7421ab796ff87f3a8a4165bff517a33c4eda1be3b143a90f5fac3363cb6d",
+    "size": [
+      738,
+      2627
+    ]
+  },
+  {
+    "output": "source-images/short-black.png",
+    "role": "standalone 18-400 component master",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/20. Caps/26. 18-400 Cap/1. CP18-400ShortBlk.psd",
+    "sourceSha256": "dfd0b549075e7642ba101bc40c95ed2f2c02fbcdee87386a20c8b9b7ae90d9cb",
+    "size": [
+      648,
+      420
+    ]
+  },
+  {
+    "output": "source-images/applicator-black.png",
+    "role": "standalone 18-400 component master",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/20. Caps/27. 18-400 Cap with Wand/2. CP18-400AppBlk.psd",
+    "sourceSha256": "1046cb961010eef84f5e3eddfe2d78dd2cb3ebf531ec1749c49ea5fdb0ef5a56",
+    "size": [
+      271,
+      546
+    ]
+  }
+]

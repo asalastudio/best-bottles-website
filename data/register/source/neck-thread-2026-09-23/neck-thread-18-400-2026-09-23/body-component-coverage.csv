@@ -1,0 +1,5 @@
+family,capacityMl,glassColor,thread,currentBottleRecords,componentListSizes,exactBottleSkus,printLane
+Boston Round,15,Clear,18-400,2,7;0,GBBstn15BlkCapSht;GBBstn15BlkDrp,main thread diagram
+Boston Round,15,Amber,18-400,7,7;7;7;7;7;7;7,GBBstnAmb15mlBlkCapSht;GBBstnAmb15mlBlkDropper;GBBstnAmb15mlBlkDropperGlTrim;GBBstnAmb15mlBlkDropperSlTrim;GBBstnAmb15mlWhtDropper;GBBstnAmb15mlWhtDropperGlTrim;GBBstnAmb15mlWhtDropperSlTrim,main thread diagram
+Boston Round,15,Cobalt Blue,18-400,7,7;7;7;7;7;7;7,GBBstnBlu15BlkCapSht;GBBstnBlu15BlkDrpr;GBBstnBlu15BlkDrprGlTrim;GBBstnBlu15WhtDrpr;GBBstnBlu15WhtDrprGlTrim;GBBstnBlu15WhtDrprSlTrim;GBBstnBlu15mlBlkDropperSlTrim,main thread diagram
+Vial,9,Clear,18-400,2,8;8,GB09BlackCapApp;GB09BlackCapSht,main thread diagram
