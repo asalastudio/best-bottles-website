@@ -36,7 +36,13 @@ ROOT = Path(__file__).resolve().parents[2]
 REGISTER = ROOT / "data" / "register"
 SOURCE = REGISTER / "source"
 PAPER_DOLL = ROOT / "data" / "paper-doll"
-SNAPSHOT = SOURCE / "convex-products-2026-09-24.json.gz"
+def latest_snapshot() -> Path:
+    """The newest dated Convex export in source/ (convex-products-<YYYY-MM-DD>.json.gz)."""
+    found = sorted(SOURCE.glob("convex-products-*.json.gz"))
+    return found[-1] if found else SOURCE / "convex-products-2026-09-24.json.gz"
+
+
+SNAPSHOT = latest_snapshot()
 
 BOTTLE_CATEGORIES = {"Glass Bottle", "Lotion Bottle", "Aluminum Bottle", "Plastic Bottle", "Roll-On Bottle", "Glass Jar", "Cream Jar", "Metal Atomizer"}
 OUT_OF_SCOPE_CATEGORIES = {"Packaging", "Accessory"}
@@ -104,10 +110,11 @@ GLASS_COLOURS = {"clear", "amber", "cobalt blue", "frosted", "swirl", "blue", "g
 
 
 def colour_key(text: str) -> tuple[str, bool]:
-    """(base colour, dotted). 'Black Dotted' -> ('black', True); 'Matte Copper' -> ('matte copper', False)."""
+    """(base colour, dotted). 'Black with Dots' and 'Black Dotted' -> ('black', True); 'Matte Copper' -> ('matte copper', False)."""
     lowered = (text or "").lower()
-    dotted = bool(re.search(r"\bdot(ted)?\b", lowered))
-    base = re.sub(r"\s+", " ", re.sub(r"\b(dotted|dot|cap)\b", " ", lowered)).strip()
+    dotted = bool(re.search(r"\bdot(s|ted)?\b", lowered))
+    base = re.sub(r"\bwith\s+dots\b", " ", lowered)  # canonical: "Black with Dots" (src/lib/catalogFilters.ts)
+    base = re.sub(r"\s+", " ", re.sub(r"\b(dotted|dots|dot|cap)\b", " ", base)).strip()
     return base, dotted
 
 
@@ -227,18 +234,18 @@ def load_export(path: Path) -> dict:
     return data
 
 
-def write_snapshot(data: dict) -> None:
+def write_snapshot(data: dict, path: Path) -> None:
     keep = ["websiteSku", "graceSku", "itemName", "family", "bottleCollection", "category", "shape", "capacityMl", "capacityOz",
             "neckThreadSize", "applicator", "assemblyType", "fitmentStatus", "color", "capColor", "capStyle", "trimColor", "components",
             "productGroupId", "productGroupSlug", "imageUrlCapOff", "productUrl", "stockStatus", "verified", "dataGrade",
             "heightWithoutCap", "heightWithCap", "widthMm", "depthMm", "diameter", "caseQuantity", "webPrice1pc", "shopifyVariantId"]
     rows = [{k: r.get(k) for k in keep if k in r and r.get(k) not in (None, "", [])} for r in data["rows"]]
-    SNAPSHOT.parent.mkdir(parents=True, exist_ok=True)
+    path.parent.mkdir(parents=True, exist_ok=True)
     payload = json.dumps({
         "collectedAt": data.get("collectedAt"), "source": data.get("source"), "deployment": data.get("deployment", "dev:helpful-elephant-638"),
         "action": "products:getProductExportPage", "note": "components trimmed to grace_sku lists; empty fields omitted", "fields": keep, "rows": rows,
     }, separators=(",", ":"), sort_keys=True) + "\n"
-    SNAPSHOT.write_bytes(gzip.compress(payload.encode(), mtime=0))
+    path.write_bytes(gzip.compress(payload.encode(), mtime=0))
 
 
 # A graceSku (CMP-CAP-BLK-18415-LTR, GB-CYL-CLR-9ML-MRL-BLK). A bare word like "Sprayer" is a type label, not a SKU.
@@ -298,11 +305,14 @@ def main() -> int:
     args = parser.parse_args()
 
     data = load_export(args.export)
-    if args.export.resolve() != SNAPSHOT.resolve():
-        write_snapshot(data)
+    snapshot = args.export
+    if args.export.parent.resolve() != SOURCE.resolve():
+        stamp = str(data.get("collectedAt") or dt.date.today().isoformat())[:10]
+        snapshot = SOURCE / f"convex-products-{stamp}.json.gz"
+        write_snapshot(data, snapshot)
     rows = data["rows"]
     today = dt.date.today().isoformat()
-    export_note = "convex:products (dev) 2026-09-24"
+    export_note = f"convex:products (dev) {snapshot.name.removeprefix('convex-products-').removesuffix('.json.gz')}"
 
     library_rows = json.loads((PAPER_DOLL / "component-library-inventory.json").read_text())["rows"]
     by_stem = {r["stem"]: r for r in library_rows}
@@ -519,7 +529,7 @@ def main() -> int:
 
     # ---------- rules ----------
     all_necks = sorted({b["neck"] for b in bodies} | {c["neck"] for c in components})
-    rules = {"generatedAt": today, "snapshot": SNAPSHOT.name, "keys": {"body": "bodyId = [shape-]profile-<capacity>ml-<neck>", "component": "graceSku", "assembly": "graceSku"},
+    rules = {"generatedAt": today, "snapshot": snapshot.name, "keys": {"body": "bodyId = [shape-]profile-<capacity>ml-<neck>", "component": "graceSku", "assembly": "graceSku"},
              "rulings": RULINGS, "componentListExclusions": COMPONENT_LIST_EXCLUSIONS,
              "ruledBodyClasses": {category: {"class": cls, "source": source} for category, (cls, source) in RULED_BODY_CLASSES.items()}, "necks": {}}
     for neck in all_necks:

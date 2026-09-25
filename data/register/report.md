@@ -1,6 +1,6 @@
 # Component register — Phase 1 reconciliation (2026-09-25)
 
-Source: Convex dev export (2540 rows, collected 2026-09-25T06:24:53Z), PSD library inventory (393 PSDs), body-dims (144 keys), 23 Sep review files (49 items). Read-only.
+Source: Convex dev export (2540 rows, collected 2026-09-25T08:44:26Z), PSD library inventory (393 PSDs), body-dims (144 keys), 23 Sep review files (49 items). Read-only.
 
 ## Totals
 
@@ -116,16 +116,8 @@ Each sellable assembly names the parts it is physically made of (`buildParts`), 
 
 | body | resolved | partial | unresolved |
 |---|---|---|---|
-| cylinder-9ml-17-415 | 126 | 0 | 19 |
+| cylinder-9ml-17-415 | 145 | 0 | 0 |
 | pillar-9ml-17-415 | 1 | 0 | 0 |
-
-Unresolved, by reason (Convex corrections):
-
-- **10** — capColor 'Clear' repeats a glass colour; the Convex row needs its real cap colour: GBCyl9SpryBlk, GBCyl9SpryGl, GBCyl9SpryMattSl, GBCyl9SpryRd, GBCyl9SpryShSl, GBCyl9SpryTur, GBCylSwrl9SpryTur, LBCyl9LtnBlk, LBCyl9LtnGl, LBCyl9LtnMtSl
-- **3** — no current 17-415 fine-mist-sprayer matches capColor 'Turquoise' with capStyle 'Spray': GBCylAmb9SpryTur, GBCylBlu9SpryTur, GBCylFrst9SpryTur
-- **2** — no current 17-415 roll-on-cap matches capColor 'Black with Dots' with capStyle 'Tall': GBCyl9MtlRollBlkDot, GBCyl9RollBlkDot
-- **2** — no current 17-415 roll-on-cap matches capColor 'Pink with Dots' with capStyle 'Tall': GBCyl9MtlRollPnkDot, GBCyl9RollPnkDot
-- **2** — no current 17-415 roll-on-cap matches capColor 'Silver with Dots' with capStyle 'Tall': GBCyl9MtlRollSlDot, GBCyl9RollSlDot
 
 ## Catalogue data defects the register surfaced (Convex, not code)
 

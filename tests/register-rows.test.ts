@@ -62,17 +62,20 @@ describe("the committed register shapes cleanly for Convex", () => {
         expect(type("CP18-415AnSpTslGl")).toBe("tassel-bulb-sprayer");
     });
 
-    it("builds the 9 mL Cylinder pilot from its own parts: 126 resolved, 19 held for Convex corrections", () => {
+    it("builds every 9 mL Cylinder pilot bottle from its own parts", () => {
         const pilot = rows.assemblies.filter(a => a.bodyId === "cylinder-9ml-17-415");
         expect(pilot).toHaveLength(145);
         const resolved = pilot.filter(a => a.build.status === "resolved");
-        expect(resolved).toHaveLength(126);
-        expect(pilot.filter(a => a.build.status === "unresolved")).toHaveLength(19);
+        expect(resolved).toHaveLength(145);
         for (const assembly of resolved) {
             const roles = assembly.build.parts.map(p => p.role);
             if (/Roller Ball/.test(assembly.fitmentType ?? "")) expect(roles).toEqual(["roller", "cap"]);
             else expect(roles).toHaveLength(1);
         }
+        // "Black with Dots" (canonical, src/lib/catalogFilters.ts) and "Black Dotted" reach the same dotted cap.
+        const clearDotted = pilot.find(a => a.websiteSku === "GBCyl9MtlRollBlkDot");
+        expect(clearDotted?.capColor).toBe("Black with Dots");
+        expect(clearDotted?.build.parts.map(p => p.componentId)).toEqual(["LIB-17-415-MtlRollon", "CMP-ROC-BLK-17415-DOT"]);
         const metal = pilot.find(a => a.websiteSku === "GBCylAmb9MtlRollBlkDot");
         expect(metal?.build.parts).toEqual([
             { role: "roller", componentId: "LIB-17-415-MtlRollon" },
