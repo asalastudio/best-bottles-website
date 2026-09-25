@@ -1,0 +1,4154 @@
+{
+  "/images/catalog/apothecary-approved-2026-09-24/GB15ApthBlue.35b5422473e1.webp": {
+    "plate": "capped",
+    "scale": 0.62977,
+    "x": 0.1842,
+    "y": 0.31215,
+    "match": 0.881,
+    "shadow": "/images/catalog/cap-swap-shadows/GB15ApthBlue.f1ccb30418.webp"
+  },
+  "/images/catalog/apothecary-approved-2026-09-24/GB1ozApth.6aa8c9c98d38.webp": {
+    "plate": "capped",
+    "scale": 0.78971,
+    "x": 0.10466,
+    "y": 0.15168,
+    "match": 0.973,
+    "shadow": "/images/catalog/cap-swap-shadows/GB1ozApth.72322ae24b.webp"
+  },
+  "/images/catalog/apothecary-approved-2026-09-24/GB1ozApthBlue.78493b9ae933.webp": {
+    "plate": "capped",
+    "scale": 0.80038,
+    "x": 0.10054,
+    "y": 0.13991,
+    "match": 0.963,
+    "shadow": "/images/catalog/cap-swap-shadows/GB1ozApthBlue.88313316a8.webp"
+  },
+  "/images/catalog/apothecary-approved-2026-09-24/GB1ozApthGreen.6f87aa897825.webp": {
+    "plate": "capped",
+    "scale": 0.8104,
+    "x": 0.09301,
+    "y": 0.13539,
+    "match": 0.838,
+    "shadow": "/images/catalog/cap-swap-shadows/GB1ozApthGreen.0cbc59b26f.webp"
+  },
+  "/images/catalog/apothecary-approved-2026-09-24/GBPearClear4ozStpr.2a3f26dd7377.webp": {
+    "plate": "capped",
+    "scale": 0.74086,
+    "x": 0.12471,
+    "y": 0.19334,
+    "match": 0.963,
+    "shadow": "/images/catalog/cap-swap-shadows/GBPearClear4ozStpr.949cb51e85.webp"
+  },
+  "/images/catalog/bone-review/20-400cp1ozShortBlk.16c599073f83.png": {
+    "plate": "capped",
+    "scale": 0.86059,
+    "x": 0.06958,
+    "y": 0.29561,
+    "match": 0.984,
+    "shadow": "/images/catalog/cap-swap-shadows/20-400cp1ozShortBlk.a2fc4e2ef7.webp"
+  },
+  "/images/catalog/bone-review/Alu100mlSprayBlack.560df11fa2c4.png": {
+    "plate": "capped",
+    "scale": 0.76373,
+    "x": 0.12204,
+    "y": 0.17766,
+    "match": 0.975,
+    "shadow": "/images/catalog/cap-swap-shadows/Alu100mlSprayBlack.47f7adf678.webp"
+  },
+  "/images/catalog/bone-review/Alu120mlLotionPumpBlack.ceb0adf35107.png": {
+    "plate": "capped",
+    "scale": 0.79775,
+    "x": 0.125,
+    "y": 0.14318,
+    "match": 0.979,
+    "shadow": "/images/catalog/cap-swap-shadows/Alu120mlLotionPumpBlack.bbc64f5e1b.webp"
+  },
+  "/images/catalog/bone-review/Alu250mlSprayBlack.aaf5dbbee119.png": {
+    "plate": "capped",
+    "scale": 0.86083,
+    "x": 0.06428,
+    "y": 0.07923,
+    "match": 0.98,
+    "shadow": "/images/catalog/cap-swap-shadows/Alu250mlSprayBlack.bdf602db88.webp"
+  },
+  "/images/catalog/bone-review/Alu500.8cd5134acf51.png": {
+    "plate": "capped",
+    "scale": 0.925,
+    "x": 0.04135,
+    "y": 0.02206,
+    "match": 0.983,
+    "shadow": "/images/catalog/cap-swap-shadows/Alu500.45d0397453.webp"
+  },
+  "/images/catalog/bone-review/Alu65mlLotionPumpBlack.146b7aad3918.png": {
+    "plate": "capped",
+    "scale": 0.70244,
+    "x": 0.16855,
+    "y": 0.23338,
+    "match": 0.961,
+    "shadow": "/images/catalog/cap-swap-shadows/Alu65mlLotionPumpBlack.04450ce08e.webp"
+  },
+  "/images/catalog/bone-review/Alu65mlLotionPumpWhite.f3a8277a9860.png": {
+    "plate": "capped",
+    "scale": 0.70039,
+    "x": 0.16961,
+    "y": 0.23485,
+    "match": 0.972,
+    "shadow": "/images/catalog/cap-swap-shadows/Alu65mlLotionPumpWhite.a5b7a3fe89.webp"
+  },
+  "/images/catalog/bone-review/CJAmb5mlBlkCap.94819fd7f64b.png": {
+    "plate": "capped",
+    "scale": 1.0,
+    "x": -0.00417,
+    "y": 0.20076,
+    "match": 0.999,
+    "shadow": "/images/catalog/cap-swap-shadows/CJAmb5mlBlkCap.6744956822.webp"
+  },
+  "/images/catalog/bone-review/CJClr15Pnk.06fbb2dab331.png": {
+    "plate": "capped",
+    "scale": 0.97431,
+    "x": 0.01116,
+    "y": 0.2836,
+    "match": 0.987,
+    "shadow": "/images/catalog/cap-swap-shadows/CJClr15Pnk.37f8d4c297.webp"
+  },
+  "/images/catalog/bone-review/CJClr3.7ddcba2e79a0.png": {
+    "plate": "capped",
+    "scale": 0.77049,
+    "x": 0.11154,
+    "y": 0.41039,
+    "match": 0.977,
+    "shadow": "/images/catalog/cap-swap-shadows/CJClr3.3e6670cb3c.webp"
+  },
+  "/images/catalog/bone-review/CJClr5mlClrCap.97b8bf46e3fa.png": {
+    "plate": "capped",
+    "scale": 1.00904,
+    "x": -0.00545,
+    "y": 0.26202,
+    "match": 0.989,
+    "shadow": "/images/catalog/cap-swap-shadows/CJClr5mlClrCap.1ca0ae4129.webp"
+  },
+  "/images/catalog/bone-review/CJFrst30BlkCap.b0993fc6f8b9.png": {
+    "plate": "capped",
+    "scale": 1.3228,
+    "x": -0.1625,
+    "y": -0.07197,
+    "match": 0.966,
+    "shadow": "/images/catalog/cap-swap-shadows/CJFrst30BlkCap.f94047c488.webp"
+  },
+  "/images/catalog/bone-review/CJFrst40BlkCap.b25d1dd857f2.png": {
+    "plate": "capped",
+    "scale": 1.4415,
+    "x": -0.22225,
+    "y": -0.16781,
+    "match": 0.952,
+    "shadow": "/images/catalog/cap-swap-shadows/CJFrst40BlkCap.69c01a7a4d.webp"
+  },
+  "/images/catalog/bone-review/CJWhite20.a1b615e78568.png": {
+    "plate": "capped",
+    "scale": 1.15161,
+    "x": -0.07942,
+    "y": 0.05192,
+    "match": 0.975,
+    "shadow": "/images/catalog/cap-swap-shadows/CJWhite20.c3db28dabf.webp"
+  },
+  "/images/catalog/bone-review/CP13-415WhtSht.218dd8200600.png": {
+    "plate": "capped",
+    "scale": 1.37623,
+    "x": -0.18841,
+    "y": 0.00126,
+    "match": 0.947,
+    "shadow": "/images/catalog/cap-swap-shadows/CP13-415WhtSht.a379af0d5c.webp"
+  },
+  "/images/catalog/bone-review/CP15-415ShnSl.1c908394ecb0.png": {
+    "plate": "capped",
+    "scale": 1.28902,
+    "x": -0.14547,
+    "y": -0.10919,
+    "match": 0.966,
+    "shadow": "/images/catalog/cap-swap-shadows/CP15-415ShnSl.f85e2580e3.webp"
+  },
+  "/images/catalog/bone-review/CP18-415AnSpPnk.0ee82cb48fa3.png": {
+    "plate": "capped",
+    "scale": 1.40813,
+    "x": -0.20172,
+    "y": -0.17937,
+    "match": 0.956,
+    "shadow": "/images/catalog/cap-swap-shadows/CP18-415AnSpPnk.084dfac989.webp"
+  },
+  "/images/catalog/bone-review/CP18-415AnSpTslGl.266aaafe759a.png": {
+    "plate": "capped",
+    "scale": 1.37137,
+    "x": -0.18506,
+    "y": -0.14815,
+    "match": 0.957,
+    "shadow": "/images/catalog/cap-swap-shadows/CP18-415AnSpTslGl.115b3aa838.webp"
+  },
+  "/images/catalog/bone-review/CPRoll13-415SlDot.0059906d4c03.png": {
+    "plate": "capped",
+    "scale": 3.02144,
+    "x": -1.01295,
+    "y": -0.97414,
+    "match": 0.786,
+    "shadow": "/images/catalog/cap-swap-shadows/CPRoll13-415SlDot.a2d88812fe.webp"
+  },
+  "/images/catalog/bone-review/CPRoll20-400TallMattSl.8959310d05c7.png": {
+    "plate": "capped",
+    "scale": 1.43116,
+    "x": -0.21658,
+    "y": -0.18001,
+    "match": 0.966,
+    "shadow": "/images/catalog/cap-swap-shadows/CPRoll20-400TallMattSl.21f80061df.webp"
+  },
+  "/images/catalog/bone-review/CpRoll17-415MattSl.a6faf79b6316.png": {
+    "plate": "capped",
+    "scale": 1.56574,
+    "x": -0.2828,
+    "y": -0.2474,
+    "match": 0.945,
+    "shadow": "/images/catalog/cap-swap-shadows/CpRoll17-415MattSl.4b7e557558.webp"
+  },
+  "/images/catalog/bone-review/CreamJarAmb40Blkcap.9d2e6f554c40.png": {
+    "plate": "capped",
+    "scale": 1.4428,
+    "x": -0.22262,
+    "y": -0.19308,
+    "match": 0.948,
+    "shadow": "/images/catalog/cap-swap-shadows/CreamJarAmb40Blkcap.9719075747.webp"
+  },
+  "/images/catalog/bone-review/Drp18-40015mlWhiteBulb.5e4730af9bae.png": {
+    "plate": "capped",
+    "scale": 1.11492,
+    "x": -0.05764,
+    "y": -0.02146,
+    "match": 0.772,
+    "shadow": "/images/catalog/cap-swap-shadows/Drp18-40015mlWhiteBulb.96a7fab76a.webp"
+  },
+  "/images/catalog/bone-review/Drp18-415Gl.bbbbeda5f813.png": {
+    "plate": "capped",
+    "scale": 1.2882,
+    "x": -0.14408,
+    "y": -0.10526,
+    "match": 0.954,
+    "shadow": "/images/catalog/cap-swap-shadows/Drp18-415Gl.e68bde7ae2.webp"
+  },
+  "/images/catalog/bone-review/GB09BlackCapApp.3e70fd89b054.png": {
+    "plate": "capOff",
+    "scale": 0.66493,
+    "x": 0.16806,
+    "y": 0.26515,
+    "match": 0.849,
+    "shadow": "/images/catalog/cap-swap-shadows/GB09BlackCapApp.09a0551bf2.webp"
+  },
+  "/images/catalog/bone-review/GB09BlackCapSht.273b3d8be3b3.png": {
+    "plate": "capped",
+    "scale": 0.66013,
+    "x": 0.16578,
+    "y": 0.26537,
+    "match": 0.957,
+    "shadow": "/images/catalog/cap-swap-shadows/GB09BlackCapSht.7e1b47b62d.webp"
+  },
+  "/images/catalog/bone-review/GB15ApthBlue.fbf439e63916.png": {
+    "plate": "capped",
+    "scale": 0.59258,
+    "x": 0.17692,
+    "y": 0.32896,
+    "match": 0.903,
+    "shadow": "/images/catalog/cap-swap-shadows/GB15ApthBlue.ab070daede.webp"
+  },
+  "/images/catalog/bone-review/GB1mlVBlk.6ff69ced464f.png": {
+    "plate": "capped",
+    "scale": 0.50745,
+    "x": 0.24583,
+    "y": 0.42045,
+    "match": 0.908,
+    "shadow": "/images/catalog/cap-swap-shadows/GB1mlVBlk.02ead30c06.webp"
+  },
+  "/images/catalog/bone-review/GB1ozApth.45e66da80e99.png": {
+    "plate": "capped",
+    "scale": 0.77419,
+    "x": 0.11129,
+    "y": 0.16386,
+    "match": 0.987,
+    "shadow": "/images/catalog/cap-swap-shadows/GB1ozApth.9c3d1301d4.webp"
+  },
+  "/images/catalog/bone-review/GB1ozApthBlue.6e4254f5d35f.png": {
+    "plate": "capped",
+    "scale": 0.79371,
+    "x": 0.10381,
+    "y": 0.1441,
+    "match": 0.976,
+    "shadow": "/images/catalog/cap-swap-shadows/GB1ozApthBlue.6bc961f0ba.webp"
+  },
+  "/images/catalog/bone-review/GB1ozGenieBl.b0ecef963829.png": {
+    "plate": "capped",
+    "scale": 1.00858,
+    "x": 0.00365,
+    "y": 0.04348,
+    "match": 0.921,
+    "shadow": "/images/catalog/cap-swap-shadows/GB1ozGenieBl.b3e58dcac8.webp"
+  },
+  "/images/catalog/bone-review/GB1ozGenieCl.2f951f4bbc06.png": {
+    "plate": "capOff",
+    "scale": 0.9929,
+    "x": 0.00436,
+    "y": 0.05449,
+    "match": 0.906,
+    "shadow": "/images/catalog/cap-swap-shadows/GB1ozGenieCl.6798e505f4.webp"
+  },
+  "/images/catalog/bone-review/GB3TPlGl.3f8144514e31.png": {
+    "plate": "capOff",
+    "scale": 0.54668,
+    "x": 0.22618,
+    "y": 0.37601,
+    "match": 0.913,
+    "shadow": "/images/catalog/cap-swap-shadows/GB3TPlGl.cec6dbc251.webp"
+  },
+  "/images/catalog/bone-review/GB6TPlGl.371fee692bdc.png": {
+    "plate": "capOff",
+    "scale": 0.66667,
+    "x": 0.16667,
+    "y": 0.25758,
+    "match": 0.931,
+    "shadow": "/images/catalog/cap-swap-shadows/GB6TPlGl.32c1e04d7d.webp"
+  },
+  "/images/catalog/bone-review/GBAtom10Blk.93294ef8c127.png": {
+    "plate": "capped",
+    "scale": 0.91127,
+    "x": 0.0114,
+    "y": 0.05134,
+    "match": 0.945,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10Blk.f1bf6317e2.webp"
+  },
+  "/images/catalog/bone-review/GBAtom10BlkDot.3f96013aad1a.png": {
+    "plate": "capOff",
+    "scale": 0.98939,
+    "x": -0.04928,
+    "y": 0.03796,
+    "match": 0.974,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10BlkDot.c255b4ee71.webp"
+  },
+  "/images/catalog/bone-review/GBAtom10Blu.0bdcb429bba6.png": {
+    "plate": "capped",
+    "scale": 0.88966,
+    "x": 0.02455,
+    "y": 0.07569,
+    "match": 0.953,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10Blu.eb00514069.webp"
+  },
+  "/images/catalog/bone-review/GBAtom10Gl.c34d6b368329.png": {
+    "plate": "capped",
+    "scale": 0.89414,
+    "x": 0.02872,
+    "y": 0.0719,
+    "match": 0.951,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10Gl.a3dedcb04f.webp"
+  },
+  "/images/catalog/bone-review/GBAtom10Gr.f28979d78ba8.png": {
+    "plate": "capped",
+    "scale": 0.87399,
+    "x": 0.03789,
+    "y": 0.0883,
+    "match": 0.949,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10Gr.07a66cd04c.webp"
+  },
+  "/images/catalog/bone-review/GBAtom10Lv.b10e2702abc8.png": {
+    "plate": "capped",
+    "scale": 1.04049,
+    "x": -0.04795,
+    "y": 0.05145,
+    "match": 0.966,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10Lv.507ba2051d.webp"
+  },
+  "/images/catalog/bone-review/GBAtom10Pnk.5afcb965c86f.png": {
+    "plate": "capped",
+    "scale": 0.88963,
+    "x": 0.02489,
+    "y": 0.08057,
+    "match": 0.959,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10Pnk.2a3a072ecc.webp"
+  },
+  "/images/catalog/bone-review/GBAtom10Red.0d131e700a12.png": {
+    "plate": "capOff",
+    "scale": 0.99521,
+    "x": -0.01778,
+    "y": 0.0328,
+    "match": 0.971,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10Red.075d8ecfbb.webp"
+  },
+  "/images/catalog/bone-review/GBAtom10Sl.7654d773edc1.png": {
+    "plate": "capOff",
+    "scale": 1.00013,
+    "x": -0.01306,
+    "y": 0.03345,
+    "match": 0.997,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10Sl.a80768f552.webp"
+  },
+  "/images/catalog/bone-review/GBAtom10SlDot.d3f1181198bb.png": {
+    "plate": "capOff",
+    "scale": 0.99469,
+    "x": -0.01139,
+    "y": 0.02787,
+    "match": 0.99,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10SlDot.d6d0b464d0.webp"
+  },
+  "/images/catalog/bone-review/GBAtom10SlStars.769d44f12dc8.png": {
+    "plate": "capOff",
+    "scale": 1.02064,
+    "x": -0.06113,
+    "y": 0.00435,
+    "match": 0.967,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10SlStars.5e6f34ebe4.webp"
+  },
+  "/images/catalog/bone-review/GBAtom5Blk.309f38bf503b.png": {
+    "plate": "capped",
+    "scale": 1.16667,
+    "x": -0.11875,
+    "y": -0.22285,
+    "match": 0.962,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5Blk.c536ce179f.webp"
+  },
+  "/images/catalog/bone-review/GBAtom5BlkDot.0707c6145029.png": {
+    "plate": "capped",
+    "scale": 1.17651,
+    "x": -0.08954,
+    "y": -0.23407,
+    "match": 0.969,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5BlkDot.2905d71dce.webp"
+  },
+  "/images/catalog/bone-review/GBAtom5Blu.5439ec026219.png": {
+    "plate": "capped",
+    "scale": 0.7268,
+    "x": 0.09906,
+    "y": 0.20178,
+    "match": 0.933,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5Blu.d82d428fb0.webp"
+  },
+  "/images/catalog/bone-review/GBAtom5Gl.6ff6103cfbbb.png": {
+    "plate": "capped",
+    "scale": 0.94318,
+    "x": 0.02841,
+    "y": 0.11902,
+    "match": 0.992,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5Gl.aad7022e6d.webp"
+  },
+  "/images/catalog/bone-review/GBAtom5PnkDot.cc74330ba77a.png": {
+    "plate": "capped",
+    "scale": 0.75401,
+    "x": 0.0728,
+    "y": 0.17433,
+    "match": 0.958,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5PnkDot.1cc830786e.webp"
+  },
+  "/images/catalog/bone-review/GBAtom5Red.bb1619684d8b.png": {
+    "plate": "capped",
+    "scale": 0.92909,
+    "x": 0.03443,
+    "y": 0.12366,
+    "match": 0.991,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5Red.c54b86067f.webp"
+  },
+  "/images/catalog/bone-review/GBAtom5Sl.250cfc989d3e.png": {
+    "plate": "capped",
+    "scale": 1.17391,
+    "x": -0.08696,
+    "y": -0.22299,
+    "match": 0.987,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5Sl.48b1c09097.webp"
+  },
+  "/images/catalog/bone-review/GBAtom5SlDot.2046556b697b.png": {
+    "plate": "capOff",
+    "scale": 1.10067,
+    "x": -0.05263,
+    "y": -0.07555,
+    "match": 0.99,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5SlDot.40cfe98b4b.webp"
+  },
+  "/images/catalog/bone-review/GBAtom5SlStars.603025884218.png": {
+    "plate": "capped",
+    "scale": 1.18978,
+    "x": -0.09529,
+    "y": -0.23783,
+    "match": 0.984,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5SlStars.7279a10a29.webp"
+  },
+  "/images/catalog/bone-review/GBAtom5SlimBlk.5fa909a581b0.png": {
+    "plate": "capped",
+    "scale": 0.91304,
+    "x": 0.04348,
+    "y": 0.02948,
+    "match": 0.99,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5SlimBlk.9ffdff0bd9.webp"
+  },
+  "/images/catalog/bone-review/GBAtom5SlimGl.830f3564d618.png": {
+    "plate": "capped",
+    "scale": 0.91569,
+    "x": 0.04161,
+    "y": 0.02923,
+    "match": 0.988,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5SlimGl.9c384685b4.webp"
+  },
+  "/images/catalog/bone-review/GBAtom5SlimSl.a936104e9673.png": {
+    "plate": "capped",
+    "scale": 0.92754,
+    "x": 0.03623,
+    "y": 0.01493,
+    "match": 0.984,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5SlimSl.62c24f5555.webp"
+  },
+  "/images/catalog/bone-review/GBBell10BlkShSht.e4ef66bc078b.png": {
+    "plate": "capped",
+    "scale": 0.72417,
+    "x": 0.10185,
+    "y": 0.2016,
+    "match": 0.829,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBell10BlkShSht.1c132bed8f.webp"
+  },
+  "/images/catalog/bone-review/GBBell10MtlRollBlkDot.cd58c576dfe1.png": {
+    "plate": "capped",
+    "scale": 0.85554,
+    "x": -0.03257,
+    "y": 0.07808,
+    "match": 0.953,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBell10MtlRollBlkDot.79d91e4688.webp"
+  },
+  "/images/catalog/bone-review/GBBell10RollBlkDot.2551a792cd98.png": {
+    "plate": "capped",
+    "scale": 0.84712,
+    "x": -0.05177,
+    "y": 0.08969,
+    "match": 0.949,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBell10RollBlkDot.cda105c33e.webp"
+  },
+  "/images/catalog/bone-review/GBBell10SpryBlkSh.5f41d01e9a4c.png": {
+    "plate": "capped",
+    "scale": 0.95369,
+    "x": -0.10792,
+    "y": -0.0208,
+    "match": 0.939,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBell10SpryBlkSh.8dcf921889.webp"
+  },
+  "/images/catalog/bone-review/GBBstn15BlkCapSht.2950e8ed333d.png": {
+    "plate": "capOff",
+    "scale": 0.76485,
+    "x": 0.04097,
+    "y": 0.16961,
+    "match": 0.81,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstn15BlkCapSht.a3228d4b22.webp"
+  },
+  "/images/catalog/bone-review/GBBstn1ozBlkCapSht.bee6983f3c20.png": {
+    "plate": "capOff",
+    "scale": 0.83556,
+    "x": 0.01594,
+    "y": 0.0975,
+    "match": 0.879,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstn1ozBlkCapSht.9850ec8216.webp"
+  },
+  "/images/catalog/bone-review/GBBstn1ozBlkDrpShnGlTrim.9fb60b03f9c2.png": {
+    "plate": "capped",
+    "scale": 0.87862,
+    "x": 0.05464,
+    "y": 0.05729,
+    "match": 0.927,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstn1ozBlkDrpShnGlTrim.1ba630c0a2.webp"
+  },
+  "/images/catalog/bone-review/GBBstn1ozMtlRollonMattGl.465eb5f70474.png": {
+    "plate": "capOff",
+    "scale": 0.82422,
+    "x": 0.0231,
+    "y": 0.10797,
+    "match": 0.745,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstn1ozMtlRollonMattGl.1fd6094a0f.webp"
+  },
+  "/images/catalog/bone-review/GBBstn2ozBlkCapSht.6f5506b0bf8f.png": {
+    "plate": "capped",
+    "scale": 0.84152,
+    "x": 0.0695,
+    "y": 0.08965,
+    "match": 0.979,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstn2ozBlkCapSht.eb1780b029.webp"
+  },
+  "/images/catalog/bone-review/GBBstn2ozBlkDrprShnGlTrim.28965cd6cec0.png": {
+    "plate": "capped",
+    "scale": 0.852,
+    "x": 0.07083,
+    "y": 0.08215,
+    "match": 0.965,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstn2ozBlkDrprShnGlTrim.df47d985c9.webp"
+  },
+  "/images/catalog/bone-review/GBBstn2ozRollonMattGl.9646a007f4e1.png": {
+    "plate": "capOff",
+    "scale": 0.9154,
+    "x": -0.02216,
+    "y": 0.02442,
+    "match": 0.816,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstn2ozRollonMattGl.b961f8f9b7.webp"
+  },
+  "/images/catalog/bone-review/GBBstnAmb15mlBlkCapSht.74ef9f8c19bd.png": {
+    "plate": "capOff",
+    "scale": 0.82216,
+    "x": 0.00495,
+    "y": 0.11214,
+    "match": 0.773,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnAmb15mlBlkCapSht.f0d7f38f32.webp"
+  },
+  "/images/catalog/bone-review/GBBstnAmb15mlWhtDropperGlTrim.328611f750e9.png": {
+    "plate": "capped",
+    "scale": 0.68522,
+    "x": 0.12989,
+    "y": 0.24489,
+    "match": 0.934,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnAmb15mlWhtDropperGlTrim.8d57a386c6.webp"
+  },
+  "/images/catalog/bone-review/GBBstnAmb1ozBlkCapSht.d78eb5c51d51.png": {
+    "plate": "capOff",
+    "scale": 0.84833,
+    "x": 0.03265,
+    "y": 0.0856,
+    "match": 0.83,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnAmb1ozBlkCapSht.cd711abf10.webp"
+  },
+  "/images/catalog/bone-review/GBBstnAmb1ozMtlRollonMattSl.7ba7fe260cc5.png": {
+    "plate": "capOff",
+    "scale": 0.84971,
+    "x": 0.14915,
+    "y": 0.09178,
+    "match": 0.9,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnAmb1ozMtlRollonMattSl.c8260ff15f.webp"
+  },
+  "/images/catalog/bone-review/GBBstnAmb1ozWhtDropperShnGlTrim.7ca9ea270a2f.png": {
+    "plate": "capped",
+    "scale": 0.71612,
+    "x": 0.10348,
+    "y": 0.2067,
+    "match": 0.937,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnAmb1ozWhtDropperShnGlTrim.e8c88cc21b.webp"
+  },
+  "/images/catalog/bone-review/GBBstnAmb2ozBlkCapSht.907029bd6e73.png": {
+    "plate": "capOff",
+    "scale": 0.95309,
+    "x": -0.02257,
+    "y": -0.00981,
+    "match": 0.867,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnAmb2ozBlkCapSht.d9146aff4e.webp"
+  },
+  "/images/catalog/bone-review/GBBstnAmb2ozBlkDropperShnGlTrim.1713a8a88ff6.png": {
+    "plate": "capped",
+    "scale": 0.95322,
+    "x": 0.02043,
+    "y": 0.01303,
+    "match": 0.854,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnAmb2ozBlkDropperShnGlTrim.87c96f4f81.webp"
+  },
+  "/images/catalog/bone-review/GBBstnAmb2ozMtlRollonMattGl.a19a8ca83fa3.png": {
+    "plate": "capOff",
+    "scale": 0.92105,
+    "x": 0.11667,
+    "y": 0.02746,
+    "match": 0.911,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnAmb2ozMtlRollonMattGl.8892f43d76.webp"
+  },
+  "/images/catalog/bone-review/GBBstnBlu15BlkCapSht.3796b5354ac1.png": {
+    "plate": "capOff",
+    "scale": 0.82256,
+    "x": 0.01685,
+    "y": 0.11358,
+    "match": 0.795,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnBlu15BlkCapSht.c67d324dd6.webp"
+  },
+  "/images/catalog/bone-review/GBBstnBlu15mlBlkDropperSlTrim.11b77d8853ad.png": {
+    "plate": "capped",
+    "scale": 0.8531,
+    "x": 0.07095,
+    "y": 0.11528,
+    "match": 0.84,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnBlu15mlBlkDropperSlTrim.c3b66dc09c.webp"
+  },
+  "/images/catalog/bone-review/GBBstnBlu1ozBlkCapSht.b161834b0d15.png": {
+    "plate": "capOff",
+    "scale": 0.8519,
+    "x": -0.00281,
+    "y": 0.08603,
+    "match": 0.79,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnBlu1ozBlkCapSht.98bccb1dca.webp"
+  },
+  "/images/catalog/bone-review/GBBstnBlu1ozBlkDropperShnGlTrim.0c9474732e41.png": {
+    "plate": "capped",
+    "scale": 0.882,
+    "x": 0.05522,
+    "y": 0.05883,
+    "match": 0.879,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnBlu1ozBlkDropperShnGlTrim.e405c2199d.webp"
+  },
+  "/images/catalog/bone-review/GBBstnBlu2ozBlkCapSht.b9bc619220d0.png": {
+    "plate": "capOff",
+    "scale": 0.95258,
+    "x": -0.02591,
+    "y": -0.01147,
+    "match": 0.831,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnBlu2ozBlkCapSht.eeaafb5727.webp"
+  },
+  "/images/catalog/bone-review/GBBstnBlu2ozBlkDropperShnGlTrim.c10dd92aebcf.png": {
+    "plate": "capped",
+    "scale": 0.93928,
+    "x": 0.03709,
+    "y": 0.00564,
+    "match": 0.853,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnBlu2ozBlkDropperShnGlTrim.abb45617c1.webp"
+  },
+  "/images/catalog/bone-review/GBBstnBlu2ozMtlRollonMattSl.f9c91fcd1aeb.png": {
+    "plate": "capOff",
+    "scale": 0.91667,
+    "x": 0.125,
+    "y": 0.03283,
+    "match": 0.935,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnBlu2ozMtlRollonMattSl.f764618eb5.webp"
+  },
+  "/images/catalog/bone-review/GBCB12ozPear.39042325635d.png": {
+    "plate": "capped",
+    "scale": 0.91575,
+    "x": 0.03791,
+    "y": 0.01408,
+    "match": 0.912,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCB12ozPear.7d4ab5e408.webp"
+  },
+  "/images/catalog/bone-review/GBCrcl100AnSpGl.3a2c2437214d.png": {
+    "plate": "capped",
+    "scale": 0.88608,
+    "x": 0.05018,
+    "y": 0.03547,
+    "match": 0.952,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl100AnSpGl.2b12e5887c.webp"
+  },
+  "/images/catalog/bone-review/GBCrcl100AnSpTslGl.2c000bcb5058.png": {
+    "plate": "capped",
+    "scale": 1.12322,
+    "x": -0.07068,
+    "y": -0.07781,
+    "match": 0.936,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl100AnSpTslGl.5cba4780a2.webp"
+  },
+  "/images/catalog/bone-review/GBCrcl100RdcrShnGl.c3a382b30482.png": {
+    "plate": "capped",
+    "scale": 0.79074,
+    "x": 0.10373,
+    "y": 0.13147,
+    "match": 0.933,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl100RdcrShnGl.84c960ec93.webp"
+  },
+  "/images/catalog/bone-review/GBCrcl100SpryMtGl.ad83dd72f222.png": {
+    "plate": "capOff",
+    "scale": 0.87433,
+    "x": 0.04847,
+    "y": 0.05259,
+    "match": 0.936,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl100SpryMtGl.fcbcc3c48d.webp"
+  },
+  "/images/catalog/bone-review/GBCrcl15Gl.bd0ae9e1f474.png": {
+    "plate": "capOff",
+    "scale": 0.6809,
+    "x": 0.15468,
+    "y": 0.25941,
+    "match": 0.924,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl15Gl.989c9c9382.webp"
+  },
+  "/images/catalog/bone-review/GBCrcl15MtlRollGlMatt.a5ef1cec6db7.png": {
+    "plate": "capOff",
+    "scale": 0.66027,
+    "x": 0.125,
+    "y": 0.26894,
+    "match": 0.771,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl15MtlRollGlMatt.9a231c6a41.webp"
+  },
+  "/images/catalog/bone-review/GBCrcl15SpryGlMatt.4abc2162d678.png": {
+    "plate": "capOff",
+    "scale": 0.72352,
+    "x": 0.11435,
+    "y": 0.22709,
+    "match": 0.809,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl15SpryGlMatt.373c3ffa04.webp"
+  },
+  "/images/catalog/bone-review/GBCrcl30GlCap.73169e784ffd.png": {
+    "plate": "capOff",
+    "scale": 0.7309,
+    "x": 0.13029,
+    "y": 0.19554,
+    "match": 0.945,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl30GlCap.d09de89fc6.webp"
+  },
+  "/images/catalog/bone-review/GBCrcl30SpryMattGl.267edc5e626c.png": {
+    "plate": "capOff",
+    "scale": 0.796,
+    "x": 0.10033,
+    "y": 0.13512,
+    "match": 0.939,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl30SpryMattGl.b84fce58a5.webp"
+  },
+  "/images/catalog/bone-review/GBCrcl50AnSpGl.300d01758f98.png": {
+    "plate": "capped",
+    "scale": 0.86381,
+    "x": 0.06701,
+    "y": 0.06393,
+    "match": 0.953,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl50AnSpGl.6b4498bb6a.webp"
+  },
+  "/images/catalog/bone-review/GBCrcl50AnSpTslIvyGl.78d4c9ed55be.png": {
+    "plate": "capped",
+    "scale": 1.41136,
+    "x": -0.22028,
+    "y": -0.12828,
+    "match": 0.908,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl50AnSpTslIvyGl.83b027dd11.webp"
+  },
+  "/images/catalog/bone-review/GBCrcl50DrpGl.0e6daa55097b.png": {
+    "plate": "capped",
+    "scale": 0.82024,
+    "x": 0.08808,
+    "y": 0.10845,
+    "match": 0.929,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl50DrpGl.47400535f8.webp"
+  },
+  "/images/catalog/bone-review/GBCrcl50RdcrShnGl.50c74f388d2b.png": {
+    "plate": "capped",
+    "scale": 0.75281,
+    "x": 0.12046,
+    "y": 0.16722,
+    "match": 0.935,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl50RdcrShnGl.fa67ff428b.webp"
+  },
+  "/images/catalog/bone-review/GBCrcl50SpryMtGl.bdd15bd979b8.png": {
+    "plate": "capOff",
+    "scale": 0.84196,
+    "x": 0.07893,
+    "y": 0.08539,
+    "match": 0.939,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl50SpryMtGl.0d0fcef622.webp"
+  },
+  "/images/catalog/bone-review/GBCrclFrst100AnSpGl.221434785dd4.png": {
+    "plate": "capped",
+    "scale": 0.94257,
+    "x": 0.03604,
+    "y": 0.01913,
+    "match": 0.947,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrclFrst100AnSpGl.8387e78d84.webp"
+  },
+  "/images/catalog/bone-review/GBCrclFrst100AnSpTslIvyGl.e3bc47848c6e.png": {
+    "plate": "capped",
+    "scale": 2.00947,
+    "x": -0.48847,
+    "y": -0.55616,
+    "match": 0.843,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrclFrst100AnSpTslIvyGl.5f86e5afe0.webp"
+  },
+  "/images/catalog/bone-review/GBCrclFrst50AnSpGl.046e7ab96b6c.png": {
+    "plate": "capped",
+    "scale": 0.87371,
+    "x": 0.06944,
+    "y": 0.05753,
+    "match": 0.982,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrclFrst50AnSpGl.931e5b1f78.webp"
+  },
+  "/images/catalog/bone-review/GBCrclFrst50DrpGl.00e37fa4d37d.png": {
+    "plate": "capped",
+    "scale": 0.82263,
+    "x": 0.08843,
+    "y": 0.10452,
+    "match": 0.97,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrclFrst50DrpGl.b4db316063.webp"
+  },
+  "/images/catalog/bone-review/GBCrclFrst50RdcrIvyLthr.11c9a0f73f42.png": {
+    "plate": "capped",
+    "scale": 0.73288,
+    "x": 0.13072,
+    "y": 0.20234,
+    "match": 0.948,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrclFrst50RdcrIvyLthr.639972813e.webp"
+  },
+  "/images/catalog/bone-review/GBCrclFrst50RdcrShnGl.4456263fddc1.png": {
+    "plate": "capped",
+    "scale": 0.76923,
+    "x": 0.11538,
+    "y": 0.15734,
+    "match": 0.964,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrclFrst50RdcrShnGl.4a43b3c942.webp"
+  },
+  "/images/catalog/bone-review/GBCrclFrst50SpryMtGl.e325119c30a5.png": {
+    "plate": "capOff",
+    "scale": 0.85,
+    "x": 0.07104,
+    "y": 0.08163,
+    "match": 0.968,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrclFrst50SpryMtGl.215b6209ad.webp"
+  },
+  "/images/catalog/bone-review/GBCyl100SpryMtGl.d229ea801914.png": {
+    "plate": "capOff",
+    "scale": 1.00529,
+    "x": 0.04099,
+    "y": -0.03805,
+    "match": 0.79,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl100SpryMtGl.63f8d312df.webp"
+  },
+  "/images/catalog/bone-review/GBCyl50AnSpMtSl.494c890fa7e1.png": {
+    "plate": "capped",
+    "scale": 0.97809,
+    "x": 0.00723,
+    "y": 0.03631,
+    "match": 0.886,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl50AnSpMtSl.8e660998d9.webp"
+  },
+  "/images/catalog/bone-review/GBCyl50MtlRollBlk.6c0720231863.png": {
+    "plate": "capOff",
+    "scale": 0.79945,
+    "x": 0.16809,
+    "y": 0.13243,
+    "match": 0.796,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl50MtlRollBlk.a9298b5887.webp"
+  },
+  "/images/catalog/bone-review/GBCyl50SpryMtGl.9382a0ae9d39.png": {
+    "plate": "capOff",
+    "scale": 0.98437,
+    "x": 0.0699,
+    "y": 0.03131,
+    "match": 0.877,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl50SpryMtGl.db48606f27.webp"
+  },
+  "/images/catalog/bone-review/GBCyl5GlMattSht.5df70b4e77e8.png": {
+    "plate": "capped",
+    "scale": 0.70607,
+    "x": 0.14626,
+    "y": 0.22936,
+    "match": 0.97,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl5GlMattSht.140e158b50.webp"
+  },
+  "/images/catalog/bone-review/GBCyl5MtlRollBlkDot.8251a0ed0f79.png": {
+    "plate": "capOff",
+    "scale": 0.69328,
+    "x": 0.19019,
+    "y": 0.24049,
+    "match": 0.884,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl5MtlRollBlkDot.6fed584d9f.webp"
+  },
+  "/images/catalog/bone-review/GBCyl5SprySlMatt.8047788195b4.png": {
+    "plate": "capOff",
+    "scale": 0.70575,
+    "x": 0.18463,
+    "y": 0.23401,
+    "match": 0.908,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl5SprySlMatt.5d0b950338.webp"
+  },
+  "/images/catalog/bone-review/GBCyl9MtlRollBlkDot.cb58e7801b7b.png": {
+    "plate": "capOff",
+    "scale": 0.75615,
+    "x": 0.14781,
+    "y": 0.18488,
+    "match": 0.92,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl9MtlRollBlkDot.80a930f465.webp"
+  },
+  "/images/catalog/bone-review/GBCyl9SpryGl.47104e5a4bd1.png": {
+    "plate": "capOff",
+    "scale": 0.73259,
+    "x": 0.14265,
+    "y": 0.19496,
+    "match": 0.94,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl9SpryGl.e2f64aefca.webp"
+  },
+  "/images/catalog/bone-review/GBCylAmb9MtlRollBlkDot.fb2d3fc81c00.png": {
+    "plate": "capOff",
+    "scale": 0.7472,
+    "x": 0.16491,
+    "y": 0.18122,
+    "match": 0.884,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylAmb9MtlRollBlkDot.335b747520.webp"
+  },
+  "/images/catalog/bone-review/GBCylAmb9SpryMattSl.e9db7f777469.png": {
+    "plate": "capOff",
+    "scale": 0.7795,
+    "x": 0.13042,
+    "y": 0.16447,
+    "match": 0.876,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylAmb9SpryMattSl.7b4cd56244.webp"
+  },
+  "/images/catalog/bone-review/GBCylBlu5MtlRollBlkDot.51afa03846c9.png": {
+    "plate": "capOff",
+    "scale": 0.71466,
+    "x": 0.18077,
+    "y": 0.22558,
+    "match": 0.875,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylBlu5MtlRollBlkDot.d2fe1f9b29.webp"
+  },
+  "/images/catalog/bone-review/GBCylBlu5SlMattSht.ad34d9dad5bc.png": {
+    "plate": "capped",
+    "scale": 0.71143,
+    "x": 0.14325,
+    "y": 0.23041,
+    "match": 0.968,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylBlu5SlMattSht.6a4f861b0d.webp"
+  },
+  "/images/catalog/bone-review/GBCylBlu5SpryGlMatt.66e394377db7.png": {
+    "plate": "capOff",
+    "scale": 0.69523,
+    "x": 0.18485,
+    "y": 0.24116,
+    "match": 0.917,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylBlu5SpryGlMatt.7084ae67b6.webp"
+  },
+  "/images/catalog/bone-review/GBCylBlu9MtlRollBlkDot.b0b930f7c899.png": {
+    "plate": "capOff",
+    "scale": 0.7332,
+    "x": 0.16118,
+    "y": 0.20102,
+    "match": 0.845,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylBlu9MtlRollBlkDot.5380639908.webp"
+  },
+  "/images/catalog/bone-review/GBCylBlu9SpryMattSl.46c259b79a95.png": {
+    "plate": "capOff",
+    "scale": 0.76611,
+    "x": 0.14208,
+    "y": 0.17682,
+    "match": 0.908,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylBlu9SpryMattSl.598149e44d.webp"
+  },
+  "/images/catalog/bone-review/GBCylFrst9MtlRollBlkDot.01a8172c9a5c.png": {
+    "plate": "capOff",
+    "scale": 0.74026,
+    "x": 0.16788,
+    "y": 0.19043,
+    "match": 0.924,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylFrst9MtlRollBlkDot.90aafd695b.webp"
+  },
+  "/images/catalog/bone-review/GBCylFrst9SpryMattSl.518be8013731.png": {
+    "plate": "capOff",
+    "scale": 0.74339,
+    "x": 0.13597,
+    "y": 0.19622,
+    "match": 0.898,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylFrst9SpryMattSl.dc9e5de0cb.webp"
+  },
+  "/images/catalog/bone-review/GBCylSwrl9MtlRollBlkDot.46d03e9815ae.png": {
+    "plate": "capOff",
+    "scale": 0.75313,
+    "x": 0.16996,
+    "y": 0.17963,
+    "match": 0.761,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylSwrl9MtlRollBlkDot.d2c63f7677.webp"
+  },
+  "/images/catalog/bone-review/GBCylSwrl9SpryMattSl.b3bb29415568.png": {
+    "plate": "capOff",
+    "scale": 0.75269,
+    "x": 0.15292,
+    "y": 0.18557,
+    "match": 0.949,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylSwrl9SpryMattSl.425b22a836.webp"
+  },
+  "/images/catalog/bone-review/GBDiva100AnSpGl.f4bddea9bca1.png": {
+    "plate": "capped",
+    "scale": 0.90143,
+    "x": 0.04846,
+    "y": 0.04226,
+    "match": 0.989,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDiva100AnSpGl.a4ebbee6eb.webp"
+  },
+  "/images/catalog/bone-review/GBDiva100AnSpTslGl.a82d585d7e11.png": {
+    "plate": "capped",
+    "scale": 1.01351,
+    "x": -0.00517,
+    "y": -0.0019,
+    "match": 0.99,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDiva100AnSpTslGl.ef0c5c37d6.webp"
+  },
+  "/images/catalog/bone-review/GBDiva100SpryMtGl.5751b23a5820.png": {
+    "plate": "capOff",
+    "scale": 1.01076,
+    "x": 0.06833,
+    "y": -0.03929,
+    "match": 0.914,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDiva100SpryMtGl.c41d2c9202.webp"
+  },
+  "/images/catalog/bone-review/GBDiva30AnSpGl.60a66d5847ba.png": {
+    "plate": "capped",
+    "scale": 0.69164,
+    "x": 0.1538,
+    "y": 0.24523,
+    "match": 0.95,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDiva30AnSpGl.bfff249179.webp"
+  },
+  "/images/catalog/bone-review/GBDiva30SpryMtGl.9f6dbfaa0b8a.png": {
+    "plate": "capOff",
+    "scale": 0.70098,
+    "x": 0.20102,
+    "y": 0.22967,
+    "match": 0.875,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDiva30SpryMtGl.f50f80b8ae.webp"
+  },
+  "/images/catalog/bone-review/GBDiva46AnSpGl.85659b447e43.png": {
+    "plate": "capped",
+    "scale": 0.75678,
+    "x": 0.12141,
+    "y": 0.18262,
+    "match": 0.972,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDiva46AnSpGl.d28a69150a.webp"
+  },
+  "/images/catalog/bone-review/GBDiva46AnSpTslIvyGl.129b47c8513d.png": {
+    "plate": "capped",
+    "scale": 0.79849,
+    "x": 0.10108,
+    "y": 0.16729,
+    "match": 0.98,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDiva46AnSpTslIvyGl.002c572d2d.webp"
+  },
+  "/images/catalog/bone-review/GBDiva46SpryMtGl.bb34e3f85b32.png": {
+    "plate": "capOff",
+    "scale": 0.85438,
+    "x": 0.12417,
+    "y": 0.10359,
+    "match": 0.761,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDiva46SpryMtGl.572a26226b.webp"
+  },
+  "/images/catalog/bone-review/GBDivaFrst46AnSpGl.6f50fafb6c16.png": {
+    "plate": "capped",
+    "scale": 0.759,
+    "x": 0.11985,
+    "y": 0.18368,
+    "match": 0.964,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDivaFrst46AnSpGl.3aac72b1d5.webp"
+  },
+  "/images/catalog/bone-review/GBDivaFrst46AnSpTslIvyGl.23cb7e15e7fd.png": {
+    "plate": "capped",
+    "scale": 0.79228,
+    "x": 0.10607,
+    "y": 0.19494,
+    "match": 0.974,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDivaFrst46AnSpTslIvyGl.d978bccd03.webp"
+  },
+  "/images/catalog/bone-review/GBDmnd2ozAnSpMtSl.c71454361f64.png": {
+    "plate": "capped",
+    "scale": 0.91139,
+    "x": 0.0443,
+    "y": 0.03054,
+    "match": 0.992,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDmnd2ozAnSpMtSl.6d036280dd.webp"
+  },
+  "/images/catalog/bone-review/GBDmnd2ozAnSpTslGl.ae3d9cf78237.png": {
+    "plate": "capped",
+    "scale": 0.94326,
+    "x": 0.02746,
+    "y": 0.00226,
+    "match": 0.988,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDmnd2ozAnSpTslGl.2b545a4d93.webp"
+  },
+  "/images/catalog/bone-review/GBDmnd2ozRdcrMtSl.69d1b5759718.png": {
+    "plate": "capped",
+    "scale": 0.81216,
+    "x": 0.0921,
+    "y": 0.12594,
+    "match": 0.976,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDmnd2ozRdcrMtSl.efc899dfeb.webp"
+  },
+  "/images/catalog/bone-review/GBElg100AnSpGl.d9c06609d87f.png": {
+    "plate": "capped",
+    "scale": 0.91733,
+    "x": -0.02583,
+    "y": 0.05091,
+    "match": 0.913,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElg100AnSpGl.90507ed1af.webp"
+  },
+  "/images/catalog/bone-review/GBElg100AnSpTslIvyGl.cf5378c6bbd2.png": {
+    "plate": "capped",
+    "scale": 0.93067,
+    "x": -0.0323,
+    "y": 0.04644,
+    "match": 0.896,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElg100AnSpTslIvyGl.dffe1d1ed2.webp"
+  },
+  "/images/catalog/bone-review/GBElg100SpryMtGl.22aa5d8690e9.png": {
+    "plate": "capOff",
+    "scale": 0.9714,
+    "x": 0.08966,
+    "y": 0.03486,
+    "match": 0.761,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElg100SpryMtGl.04be7457d6.webp"
+  },
+  "/images/catalog/bone-review/GBElg15Gl.606f68e31a2f.png": {
+    "plate": "capOff",
+    "scale": 0.68673,
+    "x": 0.22218,
+    "y": 0.24171,
+    "match": 0.866,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElg15Gl.66edfb74dd.webp"
+  },
+  "/images/catalog/bone-review/GBElg15MtlRollGlMatt.0427e5c7fe26.png": {
+    "plate": "capOff",
+    "scale": 0.68687,
+    "x": 0.22698,
+    "y": 0.23984,
+    "match": 0.847,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElg15MtlRollGlMatt.5b0bcd342c.webp"
+  },
+  "/images/catalog/bone-review/GBElg15SpryGlMatt.c13b50b78fc2.png": {
+    "plate": "capOff",
+    "scale": 0.68465,
+    "x": 0.22239,
+    "y": 0.24672,
+    "match": 0.856,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElg15SpryGlMatt.1923409fb1.webp"
+  },
+  "/images/catalog/bone-review/GBElg30GlCap.bf3b6e5845cb.png": {
+    "plate": "capOff",
+    "scale": 0.70097,
+    "x": 0.23759,
+    "y": 0.23069,
+    "match": 0.922,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElg30GlCap.4e53468022.webp"
+  },
+  "/images/catalog/bone-review/GBElg30SpryMattGl.56f862f7d4e6.png": {
+    "plate": "capOff",
+    "scale": 0.77152,
+    "x": 0.22863,
+    "y": 0.17292,
+    "match": 0.885,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElg30SpryMattGl.f13ba7fd52.webp"
+  },
+  "/images/catalog/bone-review/GBElg60AnSpGl.6e9b2869631f.png": {
+    "plate": "capped",
+    "scale": 1.19917,
+    "x": -0.14678,
+    "y": 0.06681,
+    "match": 0.906,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElg60AnSpGl.4c1fde1614.webp"
+  },
+  "/images/catalog/bone-review/GBElg60AnSpTslIvyGl.e70e54e718e2.png": {
+    "plate": "capped",
+    "scale": 0.95567,
+    "x": -0.02106,
+    "y": 0.05121,
+    "match": 0.89,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElg60AnSpTslIvyGl.9c5a776da4.webp"
+  },
+  "/images/catalog/bone-review/GBElg60DrpGl.c5bc920673f7.png": {
+    "plate": "capped",
+    "scale": 0.76436,
+    "x": 0.1156,
+    "y": 0.15161,
+    "match": 0.884,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElg60DrpGl.e5a8098162.webp"
+  },
+  "/images/catalog/bone-review/GBElgFrst100AnSpGl.cb6986a3907b.png": {
+    "plate": "capped",
+    "scale": 0.90973,
+    "x": 0.04527,
+    "y": 0.03143,
+    "match": 0.99,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElgFrst100AnSpGl.35343901af.webp"
+  },
+  "/images/catalog/bone-review/GBElgFrst100AnSpTslGl.46f1bd0f1804.png": {
+    "plate": "capped",
+    "scale": 1.19277,
+    "x": -0.09558,
+    "y": -0.08749,
+    "match": 0.978,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElgFrst100AnSpTslGl.cc2994e3ab.webp"
+  },
+  "/images/catalog/bone-review/GBElgFrst15Gl.fdcf2781a005.png": {
+    "plate": "capOff",
+    "scale": 0.89235,
+    "x": 0.05002,
+    "y": 0.01768,
+    "match": 0.929,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElgFrst15Gl.d3c57d900c.webp"
+  },
+  "/images/catalog/bone-review/GBElgFrst15MtlRollGlSh.1c38a997ef56.png": {
+    "plate": "capOff",
+    "scale": 0.69259,
+    "x": 0.21925,
+    "y": 0.23647,
+    "match": 0.828,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElgFrst15MtlRollGlSh.623f9e898d.webp"
+  },
+  "/images/catalog/bone-review/GBElgFrst15SpryGlSh.1f7c6da3946e.png": {
+    "plate": "capOff",
+    "scale": 0.81374,
+    "x": 0.08768,
+    "y": 0.05995,
+    "match": 0.851,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElgFrst15SpryGlSh.9ea3af2815.webp"
+  },
+  "/images/catalog/bone-review/GBElgFrst30GlCap.27216e5cab5e.png": {
+    "plate": "capOff",
+    "scale": 0.89629,
+    "x": 0.055,
+    "y": 0.04854,
+    "match": 0.903,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElgFrst30GlCap.2e8f5e1313.webp"
+  },
+  "/images/catalog/bone-review/GBElgFrst30SpryMattGl.0969c9847c60.png": {
+    "plate": "capOff",
+    "scale": 0.78093,
+    "x": 0.19112,
+    "y": 0.16942,
+    "match": 0.932,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElgFrst30SpryMattGl.a7205620c8.webp"
+  },
+  "/images/catalog/bone-review/GBElgFrst60AnSpGl.4c33d203bdfc.png": {
+    "plate": "capped",
+    "scale": 0.82765,
+    "x": 0.08676,
+    "y": 0.11341,
+    "match": 0.981,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElgFrst60AnSpGl.82d6519a37.webp"
+  },
+  "/images/catalog/bone-review/GBElgFrst60AnSpTslGl.b147f12fc5dd.png": {
+    "plate": "capped",
+    "scale": 0.95312,
+    "x": 0.02695,
+    "y": 0.06629,
+    "match": 0.989,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElgFrst60AnSpTslGl.aea76e4c43.webp"
+  },
+  "/images/catalog/bone-review/GBEmp100AnSpGl.9bd7af0c9dc7.png": {
+    "plate": "capped",
+    "scale": 0.88571,
+    "x": 0.04464,
+    "y": 0.04643,
+    "match": 0.989,
+    "shadow": "/images/catalog/cap-swap-shadows/GBEmp100AnSpGl.0240461413.webp"
+  },
+  "/images/catalog/bone-review/GBEmp100AnSpTslGl.3212b05eabbc.png": {
+    "plate": "capped",
+    "scale": 1.14425,
+    "x": -0.08333,
+    "y": -0.04375,
+    "match": 0.982,
+    "shadow": "/images/catalog/cap-swap-shadows/GBEmp100AnSpTslGl.ef2679bff0.webp"
+  },
+  "/images/catalog/bone-review/GBEmp100RdcrShnGl.8ce6d101fb1a.png": {
+    "plate": "capped",
+    "scale": 0.79363,
+    "x": 0.09131,
+    "y": 0.12781,
+    "match": 0.973,
+    "shadow": "/images/catalog/cap-swap-shadows/GBEmp100RdcrShnGl.ecdad1c1a4.webp"
+  },
+  "/images/catalog/bone-review/GBEmp50AnSpGl.e441205f0179.png": {
+    "plate": "capped",
+    "scale": 0.85896,
+    "x": 0.06944,
+    "y": 0.0846,
+    "match": 0.983,
+    "shadow": "/images/catalog/cap-swap-shadows/GBEmp50AnSpGl.8bb976c660.webp"
+  },
+  "/images/catalog/bone-review/GBEmp50AnSpTslGl.02fd6b63e562.png": {
+    "plate": "capped",
+    "scale": 0.81611,
+    "x": 0.09091,
+    "y": 0.12293,
+    "match": 0.98,
+    "shadow": "/images/catalog/cap-swap-shadows/GBEmp50AnSpTslGl.97add4c994.webp"
+  },
+  "/images/catalog/bone-review/GBEmp50RdcrShnGl.9215b4d6a062.png": {
+    "plate": "capped",
+    "scale": 0.72615,
+    "x": 0.13778,
+    "y": 0.20982,
+    "match": 0.962,
+    "shadow": "/images/catalog/cap-swap-shadows/GBEmp50RdcrShnGl.1ca87d389f.webp"
+  },
+  "/images/catalog/bone-review/GBEternalFlameBlue.71b9cf7f8cea.png": {
+    "plate": "capped",
+    "scale": 0.82073,
+    "x": 0.08518,
+    "y": 0.16384,
+    "match": 0.978,
+    "shadow": "/images/catalog/cap-swap-shadows/GBEternalFlameBlue.eab59a700d.webp"
+  },
+  "/images/catalog/bone-review/GBEternalFlameGreen.cb6b8d0133ff.png": {
+    "plate": "capOff",
+    "scale": 1.02703,
+    "x": -0.01351,
+    "y": -0.02508,
+    "match": 0.984,
+    "shadow": "/images/catalog/cap-swap-shadows/GBEternalFlameGreen.23d7e12dc0.webp"
+  },
+  "/images/catalog/bone-review/GBFlair15Gl.fcc7b3746445.png": {
+    "plate": "capOff",
+    "scale": 0.92784,
+    "x": 0.03608,
+    "y": 0.02316,
+    "match": 0.991,
+    "shadow": "/images/catalog/cap-swap-shadows/GBFlair15Gl.95bb031bd7.webp"
+  },
+  "/images/catalog/bone-review/GBFlair15MtlRollBlkDot.2e74120504fa.png": {
+    "plate": "capOff",
+    "scale": 0.92965,
+    "x": 0.03532,
+    "y": 0.02341,
+    "match": 0.982,
+    "shadow": "/images/catalog/cap-swap-shadows/GBFlair15MtlRollBlkDot.11f7371747.webp"
+  },
+  "/images/catalog/bone-review/GBFlair15SpryGlMatt.4a02a7ec442d.png": {
+    "plate": "capOff",
+    "scale": 0.92925,
+    "x": 0.03576,
+    "y": 0.02151,
+    "match": 0.99,
+    "shadow": "/images/catalog/cap-swap-shadows/GBFlair15SpryGlMatt.1a4e0e5633.webp"
+  },
+  "/images/catalog/bone-review/GBGrce55AnSpMtSl.f8519eff0ac9.png": {
+    "plate": "capped",
+    "scale": 0.84268,
+    "x": 0.07971,
+    "y": 0.09816,
+    "match": 0.98,
+    "shadow": "/images/catalog/cap-swap-shadows/GBGrce55AnSpMtSl.6502d7a975.webp"
+  },
+  "/images/catalog/bone-review/GBGrce55AnSpTslMtSl.43a486fef0f8.png": {
+    "plate": "capped",
+    "scale": 0.90214,
+    "x": 0.04923,
+    "y": 0.04516,
+    "match": 0.985,
+    "shadow": "/images/catalog/cap-swap-shadows/GBGrce55AnSpTslMtSl.bbe79f767b.webp"
+  },
+  "/images/catalog/bone-review/GBGrce55RdcrMtSl.f85ba597a7c5.png": {
+    "plate": "capped",
+    "scale": 0.84774,
+    "x": 0.07505,
+    "y": 0.09684,
+    "match": 0.986,
+    "shadow": "/images/catalog/cap-swap-shadows/GBGrce55RdcrMtSl.ce90d67e14.webp"
+  },
+  "/images/catalog/bone-review/GBGrce55SpryMtGl.882e3d3c0199.png": {
+    "plate": "capOff",
+    "scale": 0.88315,
+    "x": 0.05843,
+    "y": 0.06358,
+    "match": 0.988,
+    "shadow": "/images/catalog/cap-swap-shadows/GBGrce55SpryMtGl.a96c493ddc.webp"
+  },
+  "/images/catalog/bone-review/GBHeartFrst4KeyGld.a32ac93d6cc2.png": {
+    "plate": "capped",
+    "scale": 0.75655,
+    "x": 0.13895,
+    "y": 0.30698,
+    "match": 0.978,
+    "shadow": "/images/catalog/cap-swap-shadows/GBHeartFrst4KeyGld.62f43a7c15.webp"
+  },
+  "/images/catalog/bone-review/GBHeartFrst4TslRed.72085c2aa183.png": {
+    "plate": "capped",
+    "scale": 0.93134,
+    "x": 0.15417,
+    "y": 0.11872,
+    "match": 0.747,
+    "shadow": "/images/catalog/cap-swap-shadows/GBHeartFrst4TslRed.2552745065.webp"
+  },
+  "/images/catalog/bone-review/GBMtlMrblSmall.5336a5cf4ae7.png": {
+    "plate": "capOff",
+    "scale": 0.72105,
+    "x": 0.13322,
+    "y": 0.2128,
+    "match": 0.967,
+    "shadow": "/images/catalog/cap-swap-shadows/GBMtlMrblSmall.1ecf987250.webp"
+  },
+  "/images/catalog/bone-review/GBPearClear4ozStpr.6c69149feb9e.png": {
+    "plate": "capped",
+    "scale": 0.74088,
+    "x": 0.12471,
+    "y": 0.19334,
+    "match": 0.976,
+    "shadow": "/images/catalog/cap-swap-shadows/GBPearClear4ozStpr.a681ea7116.webp"
+  },
+  "/images/catalog/bone-review/GBPillar9MtlRollBlkdot.42577015470a.png": {
+    "plate": "capped",
+    "scale": 0.70722,
+    "x": 0.07434,
+    "y": 0.22803,
+    "match": 0.94,
+    "shadow": "/images/catalog/cap-swap-shadows/GBPillar9MtlRollBlkdot.50c479f4f5.webp"
+  },
+  "/images/catalog/bone-review/GBPillar9SpryBlkMatt.06e4499f714b.png": {
+    "plate": "capped",
+    "scale": 0.81937,
+    "x": -0.03393,
+    "y": 0.12486,
+    "match": 0.961,
+    "shadow": "/images/catalog/cap-swap-shadows/GBPillar9SpryBlkMatt.feed7f12be.webp"
+  },
+  "/images/catalog/bone-review/GBRect10Gl.f92b2646ebb3.png": {
+    "plate": "capOff",
+    "scale": 0.7947,
+    "x": 0.10212,
+    "y": 0.1491,
+    "match": 0.974,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRect10Gl.39f6df3e7b.webp"
+  },
+  "/images/catalog/bone-review/GBRect10MtlRollBlkDot.fcc79f28405d.png": {
+    "plate": "capOff",
+    "scale": 0.7923,
+    "x": 0.10363,
+    "y": 0.15035,
+    "match": 0.972,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRect10MtlRollBlkDot.d5ad6735d5.webp"
+  },
+  "/images/catalog/bone-review/GBRect10SpryGlMatt.5061ef250ac4.png": {
+    "plate": "capOff",
+    "scale": 0.79359,
+    "x": 0.10389,
+    "y": 0.14764,
+    "match": 0.977,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRect10SpryGlMatt.48be2254c4.webp"
+  },
+  "/images/catalog/bone-review/GBRoyal13Gl.8f8caa2cbe83.png": {
+    "plate": "capOff",
+    "scale": 0.9644,
+    "x": 0.01874,
+    "y": -0.01822,
+    "match": 0.99,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRoyal13Gl.9330af3d75.webp"
+  },
+  "/images/catalog/bone-review/GBRoyal13MtlRollBlkDot.679fe225a3e5.png": {
+    "plate": "capOff",
+    "scale": 0.96244,
+    "x": 0.01886,
+    "y": -0.01732,
+    "match": 0.988,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRoyal13MtlRollBlkDot.d6a0581ce1.webp"
+  },
+  "/images/catalog/bone-review/GBRoyal13SpryGlMatt.b7c4167fe9a2.png": {
+    "plate": "capOff",
+    "scale": 0.96135,
+    "x": 0.0194,
+    "y": -0.01587,
+    "match": 0.989,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRoyal13SpryGlMatt.49da41a570.webp"
+  },
+  "/images/catalog/bone-review/GBSleek5Gl.e717e8a7f7ef.png": {
+    "plate": "capOff",
+    "scale": 0.70039,
+    "x": 0.20011,
+    "y": 0.23323,
+    "match": 0.925,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSleek5Gl.cb0318438a.webp"
+  },
+  "/images/catalog/bone-review/GBSleek5MtlRollGlMatt.41792e8a8939.png": {
+    "plate": "capOff",
+    "scale": 0.48226,
+    "x": 0.26133,
+    "y": 0.44811,
+    "match": 0.895,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSleek5MtlRollGlMatt.4b9413d1a9.webp"
+  },
+  "/images/catalog/bone-review/GBSleek5SpryGlMatt.54c31977c243.png": {
+    "plate": "capOff",
+    "scale": 0.7033,
+    "x": 0.1989,
+    "y": 0.23196,
+    "match": 0.901,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSleek5SpryGlMatt.42a2c2a1d6.webp"
+  },
+  "/images/catalog/bone-review/GBSleek8Gl.fc86f1468682.png": {
+    "plate": "capOff",
+    "scale": 0.66813,
+    "x": 0.2,
+    "y": 0.26389,
+    "match": 0.876,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSleek8Gl.9c66fdd6e4.webp"
+  },
+  "/images/catalog/bone-review/GBSleek8MtlRollGlMatt.c0905bf7e802.png": {
+    "plate": "capOff",
+    "scale": 0.68245,
+    "x": 0.19101,
+    "y": 0.25203,
+    "match": 0.81,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSleek8MtlRollGlMatt.5f8e98a6bc.webp"
+  },
+  "/images/catalog/bone-review/GBSleek8SpryGlMatt.8e5aa43acc58.png": {
+    "plate": "capOff",
+    "scale": 0.76809,
+    "x": 0.13869,
+    "y": 0.21388,
+    "match": 0.788,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSleek8SpryGlMatt.baa4a1ff35.webp"
+  },
+  "/images/catalog/bone-review/GBSlk100AnSpGl.378bc40d8fb5.png": {
+    "plate": "capped",
+    "scale": 0.91889,
+    "x": 0.02083,
+    "y": 0.02652,
+    "match": 0.989,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlk100AnSpGl.5fd236248a.webp"
+  },
+  "/images/catalog/bone-review/GBSlk100AnSpTslIvyGl.e96362d4ada2.png": {
+    "plate": "capped",
+    "scale": 0.98029,
+    "x": -0.01062,
+    "y": 0.00602,
+    "match": 0.991,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlk100AnSpTslIvyGl.059b2172e2.webp"
+  },
+  "/images/catalog/bone-review/GBSlk100SpryMtGl.d49491c9200b.png": {
+    "plate": "capOff",
+    "scale": 0.86823,
+    "x": 0.10379,
+    "y": 0.07713,
+    "match": 0.817,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlk100SpryMtGl.4de2f05452.webp"
+  },
+  "/images/catalog/bone-review/GBSlk30AnSpGl.079ae19a06d7.png": {
+    "plate": "capped",
+    "scale": 0.65968,
+    "x": 0.17008,
+    "y": 0.2772,
+    "match": 0.93,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlk30AnSpGl.478dd36c1c.webp"
+  },
+  "/images/catalog/bone-review/GBSlk30DrpGl.367a49336c49.png": {
+    "plate": "capped",
+    "scale": 0.79037,
+    "x": 0.09795,
+    "y": 0.15017,
+    "match": 0.947,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlk30DrpGl.014c765f2c.webp"
+  },
+  "/images/catalog/bone-review/GBSlk30SpryMtGl.daa34888af73.png": {
+    "plate": "capOff",
+    "scale": 0.7468,
+    "x": 0.16865,
+    "y": 0.17977,
+    "match": 0.897,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlk30SpryMtGl.111048dd72.webp"
+  },
+  "/images/catalog/bone-review/GBSlk50AnSpGl.811c9dc72020.png": {
+    "plate": "capped",
+    "scale": 0.87216,
+    "x": 0.06292,
+    "y": 0.0736,
+    "match": 0.987,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlk50AnSpGl.ef0fd07cfc.webp"
+  },
+  "/images/catalog/bone-review/GBSlk50AnSpTslIvyGl.9dfcf9805f40.png": {
+    "plate": "capped",
+    "scale": 1.38095,
+    "x": -0.19048,
+    "y": 0.00794,
+    "match": 0.963,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlk50AnSpTslIvyGl.01b5fd5bbc.webp"
+  },
+  "/images/catalog/bone-review/GBSlk50SpryMtGl.00aa4a4d8030.png": {
+    "plate": "capOff",
+    "scale": 0.79362,
+    "x": 0.12197,
+    "y": 0.13499,
+    "match": 0.895,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlk50SpryMtGl.6e217881ed.webp"
+  },
+  "/images/catalog/bone-review/GBSlm100AnSpGl.ad9321c10bd3.png": {
+    "plate": "capped",
+    "scale": 0.95021,
+    "x": 0.02544,
+    "y": -0.00564,
+    "match": 0.99,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlm100AnSpGl.3376f3aa83.webp"
+  },
+  "/images/catalog/bone-review/GBSlm100AnSpTslGl.b0ccf08f88d5.png": {
+    "plate": "capped",
+    "scale": 0.95,
+    "x": 0.025,
+    "y": 0.0286,
+    "match": 0.992,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlm100AnSpTslGl.4e13e03420.webp"
+  },
+  "/images/catalog/bone-review/GBSlm30AnSpGl.72aafacc8e3a.png": {
+    "plate": "capped",
+    "scale": 0.83333,
+    "x": 0.08333,
+    "y": 0.10795,
+    "match": 0.978,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlm30AnSpGl.60ee9d43e7.webp"
+  },
+  "/images/catalog/bone-review/GBSlm30DrpCu.4e3bfb652ee4.png": {
+    "plate": "capped",
+    "scale": 0.76775,
+    "x": 0.1099,
+    "y": 0.14944,
+    "match": 0.866,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlm30DrpCu.0879b46ec8.webp"
+  },
+  "/images/catalog/bone-review/GBSlm50AnSpGl.8c4df6d8678a.png": {
+    "plate": "capped",
+    "scale": 0.8484,
+    "x": 0.07478,
+    "y": 0.0943,
+    "match": 0.982,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlm50AnSpGl.ec1b33c7d4.webp"
+  },
+  "/images/catalog/bone-review/GBSlm50AnSpTslWht.09cf59b9ed07.png": {
+    "plate": "capped",
+    "scale": 0.9011,
+    "x": 0.04954,
+    "y": 0.05162,
+    "match": 0.985,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlm50AnSpTslWht.976514fb34.webp"
+  },
+  "/images/catalog/bone-review/GBSqr15Gl.510e01cc0eb0.png": {
+    "plate": "capOff",
+    "scale": 0.92028,
+    "x": 0.04077,
+    "y": 0.02345,
+    "match": 0.985,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSqr15Gl.98621286ae.webp"
+  },
+  "/images/catalog/bone-review/GBSqr15MtlRollBlkDot.f17ca0e1ac9b.png": {
+    "plate": "capOff",
+    "scale": 0.92119,
+    "x": 0.04032,
+    "y": 0.02235,
+    "match": 0.988,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSqr15MtlRollBlkDot.74f8a165c8.webp"
+  },
+  "/images/catalog/bone-review/GBSqr15SpryGlMatt.ec6f4d5b9ae9.png": {
+    "plate": "capOff",
+    "scale": 0.92128,
+    "x": 0.04063,
+    "y": 0.02251,
+    "match": 0.985,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSqr15SpryGlMatt.a6ee3f73d7.webp"
+  },
+  "/images/catalog/bone-review/GBTRDPClear.56361d54a255.png": {
+    "plate": "capped",
+    "scale": 0.78811,
+    "x": 0.10715,
+    "y": 0.15054,
+    "match": 0.98,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTRDPClear.139706291a.webp"
+  },
+  "/images/catalog/bone-review/GBTRDPGreen.c01f44e6f338.png": {
+    "plate": "capped",
+    "scale": 0.7875,
+    "x": 0.10526,
+    "y": 0.15191,
+    "match": 0.976,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTRDPGreen.fff18e085f.webp"
+  },
+  "/images/catalog/bone-review/GBTallCyl9GlMattSht.e40685c2d5b4.png": {
+    "plate": "capped",
+    "scale": 0.78741,
+    "x": 0.10338,
+    "y": 0.15336,
+    "match": 0.978,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTallCyl9GlMattSht.ff0dccc86b.webp"
+  },
+  "/images/catalog/bone-review/GBTallCyl9SpryGlMatt.e7b9c81373fc.png": {
+    "plate": "capOff",
+    "scale": 0.93528,
+    "x": 0.0375,
+    "y": 0.02992,
+    "match": 0.845,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTallCyl9SpryGlMatt.ae29a2894c.webp"
+  },
+  "/images/catalog/bone-review/GBTallCylFrst9GlMattSht.338c72fe6e2a.png": {
+    "plate": "capped",
+    "scale": 0.80173,
+    "x": 0.10088,
+    "y": 0.14658,
+    "match": 0.983,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTallCylFrst9GlMattSht.f6431c99b1.webp"
+  },
+  "/images/catalog/bone-review/GBTallCylFrst9SpryGlMatt.c0c2d412b1bf.png": {
+    "plate": "capOff",
+    "scale": 0.93609,
+    "x": 0.04188,
+    "y": 0.0094,
+    "match": 0.924,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTallCylFrst9SpryGlMatt.a2275f3fdf.webp"
+  },
+  "/images/catalog/bone-review/GBTallRect10Gl.9ae224508470.png": {
+    "plate": "capOff",
+    "scale": 0.98606,
+    "x": 0.00765,
+    "y": -0.03342,
+    "match": 0.991,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTallRect10Gl.83339f7c04.webp"
+  },
+  "/images/catalog/bone-review/GBTallRect10MtlRollBlkDot.5572f9befedb.png": {
+    "plate": "capOff",
+    "scale": 0.99331,
+    "x": 0.00373,
+    "y": -0.04017,
+    "match": 0.987,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTallRect10MtlRollBlkDot.a027c43b16.webp"
+  },
+  "/images/catalog/bone-review/GBTallRect10SpryGlMatt.63754e7f8d89.png": {
+    "plate": "capOff",
+    "scale": 0.99102,
+    "x": 0.00348,
+    "y": -0.03619,
+    "match": 0.986,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTallRect10SpryGlMatt.ad690f5c44.webp"
+  },
+  "/images/catalog/bone-review/GBTrdpBlue.a3f1643212e2.png": {
+    "plate": "capped",
+    "scale": 0.7875,
+    "x": 0.10526,
+    "y": 0.15191,
+    "match": 0.976,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTrdpBlue.c814eee6fe.webp"
+  },
+  "/images/catalog/bone-review/GBTulip6Gl.25df654127d3.png": {
+    "plate": "capOff",
+    "scale": 0.78596,
+    "x": 0.10624,
+    "y": 0.15641,
+    "match": 0.974,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTulip6Gl.4455366231.webp"
+  },
+  "/images/catalog/bone-review/GBTulip6MtlRollBlkDot.b7a05b5a0fa6.png": {
+    "plate": "capOff",
+    "scale": 0.7827,
+    "x": 0.108,
+    "y": 0.15666,
+    "match": 0.976,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTulip6MtlRollBlkDot.3c365b9c29.webp"
+  },
+  "/images/catalog/bone-review/GBTulip6SpryGlMatt.dfc088a6e39c.png": {
+    "plate": "capOff",
+    "scale": 0.88012,
+    "x": 0.06031,
+    "y": 0.06527,
+    "match": 0.984,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTulip6SpryGlMatt.a34b1974d1.webp"
+  },
+  "/images/catalog/bone-review/GBTulipAmb5Gl.0b796e17ec1e.png": {
+    "plate": "capped",
+    "scale": 0.6813,
+    "x": 0.16161,
+    "y": 0.25335,
+    "match": 0.955,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTulipAmb5Gl.e211b6069e.webp"
+  },
+  "/images/catalog/bone-review/GBTulipAmb5MtlRollBlkDot.1af4280035b3.png": {
+    "plate": "capped",
+    "scale": 0.68798,
+    "x": 0.154,
+    "y": 0.25149,
+    "match": 0.957,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTulipAmb5MtlRollBlkDot.2c76bf1ae3.webp"
+  },
+  "/images/catalog/bone-review/GBTulipAmb5SpryGlMatt.ab480305a99f.png": {
+    "plate": "capped",
+    "scale": 0.77,
+    "x": 0.11528,
+    "y": 0.17045,
+    "match": 0.969,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTulipAmb5SpryGlMatt.2d123f08cd.webp"
+  },
+  "/images/catalog/bone-review/GBV1DrmBlkDropper.91d90f9bc63f.png": {
+    "plate": "capOff",
+    "scale": 0.93699,
+    "x": 0.03189,
+    "y": 0.00943,
+    "match": 0.987,
+    "shadow": "/images/catalog/cap-swap-shadows/GBV1DrmBlkDropper.3c4a591d05.webp"
+  },
+  "/images/catalog/bone-review/GBVAmb1DrmBlkDrpr.0d7b2b4814f4.png": {
+    "plate": "capped",
+    "scale": 0.90552,
+    "x": 0.04583,
+    "y": 0.04015,
+    "match": 0.815,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVAmb1DrmBlkDrpr.444409b37f.webp"
+  },
+  "/images/catalog/bone-review/GBVAmb1DrmWhtCapSht.cac8ea37a63d.png": {
+    "plate": "capOff",
+    "scale": 0.73256,
+    "x": 0.13346,
+    "y": 0.20993,
+    "match": 0.97,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVAmb1DrmWhtCapSht.bcd912a1a6.webp"
+  },
+  "/images/catalog/bone-review/GBVAmb2WhtCap.59a9fd37d350.png": {
+    "plate": "capOff",
+    "scale": 0.64557,
+    "x": 0.17768,
+    "y": 0.28878,
+    "match": 0.958,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVAmb2WhtCap.d058cde017.webp"
+  },
+  "/images/catalog/bone-review/GBVBlu1DrmBlkDropper.cfbe95c678da.png": {
+    "plate": "capOff",
+    "scale": 0.91092,
+    "x": 0.04225,
+    "y": 0.03132,
+    "match": 0.983,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVBlu1DrmBlkDropper.c424e0582a.webp"
+  },
+  "/images/catalog/bone-review/GBVBlu1DrmWhtCapSht.d973203d45a0.png": {
+    "plate": "capOff",
+    "scale": 0.73762,
+    "x": 0.13185,
+    "y": 0.20312,
+    "match": 0.967,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVBlu1DrmWhtCapSht.d5650fd1db.webp"
+  },
+  "/images/catalog/bone-review/GBVGr1DrmBlkDropper.3a04492f6da4.png": {
+    "plate": "capOff",
+    "scale": 0.9314,
+    "x": 0.03144,
+    "y": 0.01539,
+    "match": 0.984,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVGr1DrmBlkDropper.57fcf967c7.webp"
+  },
+  "/images/catalog/bone-review/GBVGr1DrmWhtCapSht.7b37a63cdbd9.png": {
+    "plate": "capOff",
+    "scale": 0.71607,
+    "x": 0.14286,
+    "y": 0.22348,
+    "match": 0.968,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVGr1DrmWhtCapSht.e46aabf6de.webp"
+  },
+  "/images/catalog/bone-review/GBVGreen2o4BlackCapSht.76ca43a626df.png": {
+    "plate": "capped",
+    "scale": 0.52127,
+    "x": 0.21435,
+    "y": 0.41281,
+    "match": 0.779,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVGreen2o4BlackCapSht.cd1d524f78.webp"
+  },
+  "/images/catalog/bone-review/GBVialAmb1o5WhtCapSht.91c7267d15a3.png": {
+    "plate": "capped",
+    "scale": 0.5549,
+    "x": 0.223,
+    "y": 0.4265,
+    "match": 0.932,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVialAmb1o5WhtCapSht.cace4ece06.webp"
+  },
+  "/images/catalog/bone-review/GBVialClr2mlWhtCap.9efa4212a3c5.png": {
+    "plate": "capped",
+    "scale": 0.61313,
+    "x": 0.19284,
+    "y": 0.37077,
+    "match": 0.778,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVialClr2mlWhtCap.ea6b78b644.webp"
+  },
+  "/images/catalog/bone-review/GBcyl25AnSpIvyGl.741d3b8f1532.png": {
+    "plate": "capped",
+    "scale": 0.92163,
+    "x": 0.16577,
+    "y": 0.07211,
+    "match": 0.922,
+    "shadow": "/images/catalog/cap-swap-shadows/GBcyl25AnSpIvyGl.064ecc64eb.webp"
+  },
+  "/images/catalog/bone-review/GBcyl25AnSpTslIvyGl.4431e641ccf8.png": {
+    "plate": "capped",
+    "scale": 1.02223,
+    "x": -0.11476,
+    "y": 0.11429,
+    "match": 0.909,
+    "shadow": "/images/catalog/cap-swap-shadows/GBcyl25AnSpTslIvyGl.9ce8a06588.webp"
+  },
+  "/images/catalog/bone-review/GBcyl25SpryMtGl.efe374659d7a.png": {
+    "plate": "capOff",
+    "scale": 0.90421,
+    "x": -0.08204,
+    "y": 0.0864,
+    "match": 0.87,
+    "shadow": "/images/catalog/cap-swap-shadows/GBcyl25SpryMtGl.cfcc960052.webp"
+  },
+  "/images/catalog/bone-review/LBCrcl100LtnMtGl.6d2b895243c4.png": {
+    "plate": "capOff",
+    "scale": 0.88948,
+    "x": 0.05605,
+    "y": 0.03477,
+    "match": 0.935,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCrcl100LtnMtGl.dbc1f6e2d8.webp"
+  },
+  "/images/catalog/bone-review/LBCrcl50LtnMtGl.0a9d66084dc5.png": {
+    "plate": "capOff",
+    "scale": 0.86621,
+    "x": 0.0628,
+    "y": 0.05801,
+    "match": 0.949,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCrcl50LtnMtGl.9a9f10c102.webp"
+  },
+  "/images/catalog/bone-review/LBCrclFrst100LtnMtGl.cb81c881af6e.png": {
+    "plate": "capOff",
+    "scale": 1.31018,
+    "x": -0.15763,
+    "y": -0.06094,
+    "match": 0.968,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCrclFrst100LtnMtGl.cbd9344f54.webp"
+  },
+  "/images/catalog/bone-review/LBCrclFrst50LtnMtGl.b01840f43e1f.png": {
+    "plate": "capOff",
+    "scale": 0.88362,
+    "x": 0.05237,
+    "y": 0.04826,
+    "match": 0.965,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCrclFrst50LtnMtGl.d31cb74bf4.webp"
+  },
+  "/images/catalog/bone-review/LBCyl100LtnMtGl.dc478e401485.png": {
+    "plate": "capOff",
+    "scale": 0.995,
+    "x": 0.04583,
+    "y": -0.0303,
+    "match": 0.905,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCyl100LtnMtGl.93cda01be2.webp"
+  },
+  "/images/catalog/bone-review/LBCyl25LtnMtGl.9debc8949bdf.png": {
+    "plate": "capOff",
+    "scale": 0.8884,
+    "x": 0.01791,
+    "y": 0.10062,
+    "match": 0.861,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCyl25LtnMtGl.9a5cf3a72d.webp"
+  },
+  "/images/catalog/bone-review/LBCyl50LtnMtGl.43c79ce57bdb.png": {
+    "plate": "capOff",
+    "scale": 1.00855,
+    "x": 0.06809,
+    "y": 0.01644,
+    "match": 0.797,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCyl50LtnMtGl.bab09aa014.webp"
+  },
+  "/images/catalog/bone-review/LBCyl9LtnGl.c769559f9236.png": {
+    "plate": "capOff",
+    "scale": 0.72759,
+    "x": 0.1486,
+    "y": 0.19607,
+    "match": 0.945,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCyl9LtnGl.b87c523932.webp"
+  },
+  "/images/catalog/bone-review/LBCylAmb9LtnMtSl.107252b72039.png": {
+    "plate": "capOff",
+    "scale": 0.77412,
+    "x": 0.14042,
+    "y": 0.16962,
+    "match": 0.893,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCylAmb9LtnMtSl.c3f82fd9f8.webp"
+  },
+  "/images/catalog/bone-review/LBCylBlu9LtnMattSl.2cb9fab219f4.png": {
+    "plate": "capOff",
+    "scale": 0.75114,
+    "x": 0.14559,
+    "y": 0.18804,
+    "match": 0.913,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCylBlu9LtnMattSl.bbc226e831.webp"
+  },
+  "/images/catalog/bone-review/LBCylFrst9LtnMtSl.0ac172e064b8.png": {
+    "plate": "capOff",
+    "scale": 0.7638,
+    "x": 0.13403,
+    "y": 0.18186,
+    "match": 0.909,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCylFrst9LtnMtSl.8e1b7f7c5f.webp"
+  },
+  "/images/catalog/bone-review/LBCylSwrl9LtnMtSl.35ebf93e35f0.png": {
+    "plate": "capOff",
+    "scale": 0.78783,
+    "x": 0.13458,
+    "y": 0.15004,
+    "match": 0.954,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCylSwrl9LtnMtSl.0c69585d7d.webp"
+  },
+  "/images/catalog/bone-review/LBDiva100LtnMtGl.d40c88f6cefc.png": {
+    "plate": "capOff",
+    "scale": 0.95245,
+    "x": 0.09615,
+    "y": 0.00932,
+    "match": 0.915,
+    "shadow": "/images/catalog/cap-swap-shadows/LBDiva100LtnMtGl.8a0694366e.webp"
+  },
+  "/images/catalog/bone-review/LBDiva30LtnMtGl.8fca329d5da1.png": {
+    "plate": "capOff",
+    "scale": 0.7543,
+    "x": 0.17642,
+    "y": 0.19822,
+    "match": 0.88,
+    "shadow": "/images/catalog/cap-swap-shadows/LBDiva30LtnMtGl.273723b7ce.webp"
+  },
+  "/images/catalog/bone-review/LBDiva46LtnMtGl.7f25245cf4f5.png": {
+    "plate": "capOff",
+    "scale": 0.84589,
+    "x": 0.1275,
+    "y": 0.10692,
+    "match": 0.832,
+    "shadow": "/images/catalog/cap-swap-shadows/LBDiva46LtnMtGl.0dcf088cf4.webp"
+  },
+  "/images/catalog/bone-review/LBElg100LtnMtGl.21f1ab404ec2.png": {
+    "plate": "capOff",
+    "scale": 0.98227,
+    "x": 0.07917,
+    "y": -0.00379,
+    "match": 0.786,
+    "shadow": "/images/catalog/cap-swap-shadows/LBElg100LtnMtGl.f6405e151d.webp"
+  },
+  "/images/catalog/bone-review/LBElg60LtnMtGl.8ff5a70f3b95.png": {
+    "plate": "capOff",
+    "scale": 0.86226,
+    "x": 0.15219,
+    "y": 0.09855,
+    "match": 0.776,
+    "shadow": "/images/catalog/cap-swap-shadows/LBElg60LtnMtGl.b98e910ee7.webp"
+  },
+  "/images/catalog/bone-review/LBEmp100WhtClOvrCp.48ccc5df1efe.png": {
+    "plate": "capOff",
+    "scale": 0.91807,
+    "x": 0.02917,
+    "y": 0.01042,
+    "match": 0.988,
+    "shadow": "/images/catalog/cap-swap-shadows/LBEmp100WhtClOvrCp.d5f723f9e3.webp"
+  },
+  "/images/catalog/bone-review/LBEmp50WhtClOvrCp.49a6f2e62f03.png": {
+    "plate": "capOff",
+    "scale": 0.86054,
+    "x": 0.06757,
+    "y": 0.08139,
+    "match": 0.988,
+    "shadow": "/images/catalog/cap-swap-shadows/LBEmp50WhtClOvrCp.9d5c51d2bf.webp"
+  },
+  "/images/catalog/bone-review/LBGrce55LtnMtGl.c83eb9a3efe6.png": {
+    "plate": "capOff",
+    "scale": 0.84673,
+    "x": 0.07556,
+    "y": 0.09905,
+    "match": 0.984,
+    "shadow": "/images/catalog/cap-swap-shadows/LBGrce55LtnMtGl.c15fda65cf.webp"
+  },
+  "/images/catalog/bone-review/LBMetalSilver1oz.4cc5fa71e74f.png": {
+    "plate": "capped",
+    "scale": 0.77922,
+    "x": 0.10938,
+    "y": 0.15897,
+    "match": 0.981,
+    "shadow": "/images/catalog/cap-swap-shadows/LBMetalSilver1oz.12c12c1fd4.webp"
+  },
+  "/images/catalog/bone-review/LBSlk100LtnMtGl.d00646153e3c.png": {
+    "plate": "capOff",
+    "scale": 0.93818,
+    "x": 0.05696,
+    "y": 0.03115,
+    "match": 0.834,
+    "shadow": "/images/catalog/cap-swap-shadows/LBSlk100LtnMtGl.ab624519b4.webp"
+  },
+  "/images/catalog/bone-review/LBSlk30LtnMtGl.4269e255e383.png": {
+    "plate": "capOff",
+    "scale": 0.70869,
+    "x": 0.17262,
+    "y": 0.18452,
+    "match": 0.827,
+    "shadow": "/images/catalog/cap-swap-shadows/LBSlk30LtnMtGl.9fc36eed92.webp"
+  },
+  "/images/catalog/bone-review/LBSlk50LtnMtGl.b430ef92b91d.png": {
+    "plate": "capOff",
+    "scale": 0.82357,
+    "x": 0.09524,
+    "y": 0.0983,
+    "match": 0.878,
+    "shadow": "/images/catalog/cap-swap-shadows/LBSlk50LtnMtGl.dd1394375e.webp"
+  },
+  "/images/catalog/bone-review/Ltn17-415MattSl.66eccac0aa7e.png": {
+    "plate": "capped",
+    "scale": 1.29159,
+    "x": -0.14684,
+    "y": -0.10776,
+    "match": 0.973,
+    "shadow": "/images/catalog/cap-swap-shadows/Ltn17-415MattSl.bf38e868e1.webp"
+  },
+  "/images/catalog/bone-review/PB1ozClearcap.a2ed4a43a396.png": {
+    "plate": "capped",
+    "scale": 0.80403,
+    "x": 0.09742,
+    "y": 0.13291,
+    "match": 0.979,
+    "shadow": "/images/catalog/cap-swap-shadows/PB1ozClearcap.f63cb643c8.webp"
+  },
+  "/images/catalog/bone-review/PbClear8ozFlpWh.6ad784fb8874.png": {
+    "plate": "capped",
+    "scale": 0.85929,
+    "x": 0.07024,
+    "y": 0.12987,
+    "match": 0.961,
+    "shadow": "/images/catalog/cap-swap-shadows/PbClear8ozFlpWh.8819432709.webp"
+  },
+  "/images/catalog/bone-review/Spry17-415Gl.0df12f07443c.png": {
+    "plate": "capped",
+    "scale": 1.29935,
+    "x": -0.14941,
+    "y": -0.1115,
+    "match": 0.968,
+    "shadow": "/images/catalog/cap-swap-shadows/Spry17-415Gl.4274c6ed34.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstn15BlkCapSht.09868cd2a71e.png": {
+    "plate": "capOff",
+    "scale": 0.8003,
+    "x": 0.04132,
+    "y": 0.13847,
+    "match": 0.798,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstn15BlkCapSht.210ad04fba.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstn1ozBlkCapSht.cc2f3b5a2966.png": {
+    "plate": "capOff",
+    "scale": 0.87004,
+    "x": 0.00525,
+    "y": 0.07118,
+    "match": 0.871,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstn1ozBlkCapSht.524012f2a8.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstn1ozBlkDrpShnGlTrim.2d487c6bb582.png": {
+    "plate": "capped",
+    "scale": 0.88637,
+    "x": 0.05458,
+    "y": 0.06061,
+    "match": 0.922,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstn1ozBlkDrpShnGlTrim.61723f954c.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstn1ozMtlRollonMattGl.e8d9f69a93d3.png": {
+    "plate": "capOff",
+    "scale": 0.85137,
+    "x": 0.01818,
+    "y": 0.09218,
+    "match": 0.775,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstn1ozMtlRollonMattGl.1b731a6d2b.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstn2ozBlkCapSht.9755758ef380.png": {
+    "plate": "capOff",
+    "scale": 0.89637,
+    "x": -0.0069,
+    "y": 0.03417,
+    "match": 0.845,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstn2ozBlkCapSht.bbe66f14f1.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstn2ozBlkDrprShnGlTrim.0c870d81b7b0.png": {
+    "plate": "capped",
+    "scale": 0.948,
+    "x": 0.025,
+    "y": 0.00071,
+    "match": 0.955,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstn2ozBlkDrprShnGlTrim.fc806a4e58.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstn2ozMtlRollGl.15bd9824eb84.png": {
+    "plate": "capOff",
+    "scale": 0.88706,
+    "x": -0.00115,
+    "y": 0.06012,
+    "match": 0.907,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstn2ozMtlRollGl.f41f601b9f.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstn2ozRollonMattGl.4bbd744b3315.png": {
+    "plate": "capOff",
+    "scale": 0.93199,
+    "x": -0.0255,
+    "y": 0.01781,
+    "match": 0.84,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstn2ozRollonMattGl.371b0e5125.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstnAmb15mlBlkCapSht.4cae8a5e057e.png": {
+    "plate": "capOff",
+    "scale": 0.84874,
+    "x": 0.01388,
+    "y": 0.09175,
+    "match": 0.75,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnAmb15mlBlkCapSht.a937ffea03.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstnAmb15mlWhtDropperGlTrim.dd8a4e0a5813.png": {
+    "plate": "capped",
+    "scale": 0.90702,
+    "x": 0.05199,
+    "y": 0.0835,
+    "match": 0.843,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnAmb15mlWhtDropperGlTrim.91d779788d.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstnAmb1ozBlkCapSht.a2ba5174f6b4.png": {
+    "plate": "capOff",
+    "scale": 0.85675,
+    "x": 0.01382,
+    "y": 0.08413,
+    "match": 0.829,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnAmb1ozBlkCapSht.084c2d3bbb.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstnAmb1ozMtlRollonMattSl.fd86b63e6d28.png": {
+    "plate": "capOff",
+    "scale": 0.85151,
+    "x": 0.16488,
+    "y": 0.09495,
+    "match": 0.88,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnAmb1ozMtlRollonMattSl.af6dee6257.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstnAmb1ozRollonMattGl.fbab7f330046.png": {
+    "plate": "capOff",
+    "scale": 0.86845,
+    "x": 0.1619,
+    "y": 0.08212,
+    "match": 0.912,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnAmb1ozRollonMattGl.d37d28b375.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstnAmb1ozWhtDropperShnGlTrim.d1764f56a5d6.png": {
+    "plate": "capped",
+    "scale": 0.87914,
+    "x": 0.05912,
+    "y": 0.07298,
+    "match": 0.855,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnAmb1ozWhtDropperShnGlTrim.0e64307c2b.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstnAmb2ozBlkCapSht.17f5a50ec752.png": {
+    "plate": "capOff",
+    "scale": 0.95967,
+    "x": -0.03576,
+    "y": -0.00913,
+    "match": 0.858,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnAmb2ozBlkCapSht.4b2409d8f6.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstnAmb2ozBlkDropperShnGlTrim.7807f303092e.png": {
+    "plate": "capped",
+    "scale": 0.95124,
+    "x": 0.02053,
+    "y": 0.01261,
+    "match": 0.84,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnAmb2ozBlkDropperShnGlTrim.3c1424b976.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstnAmb2ozMtlRollonMattGl.261c51a1d3cc.png": {
+    "plate": "capOff",
+    "scale": 0.92997,
+    "x": 0.09722,
+    "y": 0.02641,
+    "match": 0.898,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnAmb2ozMtlRollonMattGl.ecb0a60af8.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstnAmb2ozRollonMattGl.f8d5be867878.png": {
+    "plate": "capOff",
+    "scale": 0.90288,
+    "x": 0.10694,
+    "y": 0.05095,
+    "match": 0.934,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnAmb2ozRollonMattGl.a0a477b00a.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstnBlu15BlkCapSht.80bc02fb8006.png": {
+    "plate": "capOff",
+    "scale": 0.82701,
+    "x": 0.03094,
+    "y": 0.11184,
+    "match": 0.782,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnBlu15BlkCapSht.de42b2b6a5.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstnBlu15mlBlkDropperSlTrim.e1aee47991b9.png": {
+    "plate": "capped",
+    "scale": 0.87117,
+    "x": 0.06033,
+    "y": 0.11051,
+    "match": 0.791,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnBlu15mlBlkDropperSlTrim.1f748bc20e.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstnBlu1ozBlkCapSht.c40840151f09.png": {
+    "plate": "capOff",
+    "scale": 0.86253,
+    "x": 0.01373,
+    "y": 0.0869,
+    "match": 0.779,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnBlu1ozBlkCapSht.67ee7f9878.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstnBlu1ozBlkDropperShnGlTrim.91f1ac9d7a26.png": {
+    "plate": "capped",
+    "scale": 0.88601,
+    "x": 0.05512,
+    "y": 0.06166,
+    "match": 0.86,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnBlu1ozBlkDropperShnGlTrim.e2a0ddd6cc.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstnBlu2ozBlkCapSht.8a87577aaa7b.png": {
+    "plate": "capOff",
+    "scale": 0.96395,
+    "x": -0.03888,
+    "y": -0.01446,
+    "match": 0.825,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnBlu2ozBlkCapSht.fad3b3df7d.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstnBlu2ozBlkDropperShnGlTrim.0f9f8c5746a7.png": {
+    "plate": "capped",
+    "scale": 0.94884,
+    "x": 0.02043,
+    "y": -0.00194,
+    "match": 0.968,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnBlu2ozBlkDropperShnGlTrim.2ce1c92a79.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstnBlu2ozMtlRollonMattSl.43196502ef64.png": {
+    "plate": "capOff",
+    "scale": 0.92325,
+    "x": 0.09583,
+    "y": 0.02746,
+    "match": 0.919,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnBlu2ozMtlRollonMattSl.a7bb1333e0.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBBstnBlu2ozRollonMattGl.f2295d777c74.png": {
+    "plate": "capOff",
+    "scale": 0.89037,
+    "x": 0.11059,
+    "y": 0.06224,
+    "match": 0.91,
+    "shadow": "/images/catalog/cap-swap-shadows/GBBstnBlu2ozRollonMattGl.d42c2623f6.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBDiva100AnSpGl.4367e12baa85.png": {
+    "plate": "capped",
+    "scale": 0.91914,
+    "x": 0.02215,
+    "y": 0.03628,
+    "match": 0.935,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDiva100AnSpGl.77580ddd1e.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBDiva100AnSpTslGl.119c782f6d71.png": {
+    "plate": "capped",
+    "scale": 1.03048,
+    "x": -0.02234,
+    "y": -0.00664,
+    "match": 0.95,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDiva100AnSpTslGl.031f1471fa.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBDiva100RdcrShnGl.76ad64db6b7e.png": {
+    "plate": "capped",
+    "scale": 0.85035,
+    "x": 0.07472,
+    "y": 0.10644,
+    "match": 0.943,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDiva100RdcrShnGl.333170d029.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBDiva100SpryMtGl.89a35e039bed.png": {
+    "plate": "capOff",
+    "scale": 1.0046,
+    "x": 0.02958,
+    "y": -0.02485,
+    "match": 0.89,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDiva100SpryMtGl.6fb7d3ae4c.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBDiva30AnSpGl.800616d6d88a.png": {
+    "plate": "capped",
+    "scale": 0.73991,
+    "x": 0.07598,
+    "y": 0.20388,
+    "match": 0.919,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDiva30AnSpGl.db2ac0ea46.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBDiva30RdcrShnGl.f4aad7daa2d2.png": {
+    "plate": "capped",
+    "scale": 0.62723,
+    "x": 0.18845,
+    "y": 0.30937,
+    "match": 0.904,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDiva30RdcrShnGl.3f4ddc1420.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBDiva30SpryMtGl.77d1379385e4.png": {
+    "plate": "capOff",
+    "scale": 0.727,
+    "x": 0.1762,
+    "y": 0.21616,
+    "match": 0.866,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDiva30SpryMtGl.e75266cb95.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46AnSpGl.cff146902751.png": {
+    "plate": "capped",
+    "scale": 0.85291,
+    "x": 0.01812,
+    "y": 0.1056,
+    "match": 0.93,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDiva46AnSpGl.1b981178f4.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46AnSpTslIvyGl.d201bd671150.png": {
+    "plate": "capped",
+    "scale": 0.8833,
+    "x": 0.02648,
+    "y": 0.09734,
+    "match": 0.94,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDiva46AnSpTslIvyGl.1facfd828d.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46DrpGl.d21797170363.png": {
+    "plate": "capped",
+    "scale": 0.80002,
+    "x": 0.0971,
+    "y": 0.14906,
+    "match": 0.945,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDiva46DrpGl.50a15f2c30.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46RdcrShnGl.c435f69e23dc.png": {
+    "plate": "capped",
+    "scale": 0.71391,
+    "x": 0.14152,
+    "y": 0.22993,
+    "match": 0.913,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDiva46RdcrShnGl.aed1847826.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46SpryMtGl.3a43b073b7ef.png": {
+    "plate": "capOff",
+    "scale": 0.85019,
+    "x": 0.10625,
+    "y": 0.10682,
+    "match": 0.766,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDiva46SpryMtGl.f0d2ed4779.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBDivaFrst46AnSpGl.6f101ac8dab6.png": {
+    "plate": "capped",
+    "scale": 0.86563,
+    "x": 0.01876,
+    "y": 0.11026,
+    "match": 0.943,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDivaFrst46AnSpGl.c5ebbfb021.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBDivaFrst46AnSpTslIvyGl.be65da09058e.png": {
+    "plate": "capped",
+    "scale": 0.88004,
+    "x": 0.02862,
+    "y": 0.1272,
+    "match": 0.958,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDivaFrst46AnSpTslIvyGl.d8d121b66a.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBDivaFrst46DrpGl.04181608da8a.png": {
+    "plate": "capped",
+    "scale": 0.8077,
+    "x": 0.09471,
+    "y": 0.14631,
+    "match": 0.948,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDivaFrst46DrpGl.6c4e8eed41.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBDivaFrst46RdcrShnGl.3a22c9db00a9.png": {
+    "plate": "capped",
+    "scale": 0.76709,
+    "x": 0.11462,
+    "y": 0.20593,
+    "match": 0.939,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDivaFrst46RdcrShnGl.f2cde94c13.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/GBDivaFrst46SpryMtGl.debe163571d8.png": {
+    "plate": "capOff",
+    "scale": 0.9097,
+    "x": 0.08651,
+    "y": 0.10908,
+    "match": 0.771,
+    "shadow": "/images/catalog/cap-swap-shadows/GBDivaFrst46SpryMtGl.930f760278.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/LBDiva100LtnMtGl.4b6cda8805b2.png": {
+    "plate": "capOff",
+    "scale": 0.93994,
+    "x": 0.0609,
+    "y": 0.03293,
+    "match": 0.904,
+    "shadow": "/images/catalog/cap-swap-shadows/LBDiva100LtnMtGl.71143aeb6e.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/LBDiva30LtnMtGl.7e5ebd0bfc2d.png": {
+    "plate": "capOff",
+    "scale": 0.7681,
+    "x": 0.15559,
+    "y": 0.19064,
+    "match": 0.86,
+    "shadow": "/images/catalog/cap-swap-shadows/LBDiva30LtnMtGl.07bd7f294b.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/LBDiva46LtnMtGl.61883994f283.png": {
+    "plate": "capOff",
+    "scale": 0.82274,
+    "x": 0.11458,
+    "y": 0.12374,
+    "match": 0.857,
+    "shadow": "/images/catalog/cap-swap-shadows/LBDiva46LtnMtGl.f1fea6b98f.webp"
+  },
+  "/images/catalog/boston-diva-approved-2026-09-23/LBDivaFrst46LtnMtGl.597e30c155c6.png": {
+    "plate": "capOff",
+    "scale": 0.92614,
+    "x": 0.07582,
+    "y": 0.0865,
+    "match": 0.744,
+    "shadow": "/images/catalog/cap-swap-shadows/LBDivaFrst46LtnMtGl.7f83b1b570.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBCrcl100AnSpGl.8228b5f240a3.png": {
+    "plate": "capped",
+    "scale": 0.93453,
+    "x": 0.02401,
+    "y": 0.01057,
+    "match": 0.952,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl100AnSpGl.9fcdd3b892.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBCrcl100AnSpTslGl.b41e9e6bd027.png": {
+    "plate": "capped",
+    "scale": 1.17225,
+    "x": -0.0918,
+    "y": -0.10052,
+    "match": 0.925,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl100AnSpTslGl.618582a892.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBCrcl100RdcrShnGl.9ad6a5ebcbec.png": {
+    "plate": "capped",
+    "scale": 0.83979,
+    "x": 0.08109,
+    "y": 0.09878,
+    "match": 0.931,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl100RdcrShnGl.4ebbadfd27.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBCrcl100SpryMtGl.692f63084431.png": {
+    "plate": "capOff",
+    "scale": 0.92303,
+    "x": 0.02878,
+    "y": 0.0229,
+    "match": 0.932,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl100SpryMtGl.a64fc5f832.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBCrcl15Gl.f85d45e29333.png": {
+    "plate": "capOff",
+    "scale": 0.74551,
+    "x": 0.1312,
+    "y": 0.20431,
+    "match": 0.932,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl15Gl.9a53efda4f.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBCrcl15MtlRollGlMatt.c2f83051ea31.png": {
+    "plate": "capOff",
+    "scale": 0.74174,
+    "x": 0.0964,
+    "y": 0.20231,
+    "match": 0.779,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl15MtlRollGlMatt.e6820d4b94.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBCrcl15RollBlkSh.153c7917b071.png": {
+    "plate": "capOff",
+    "scale": 0.76992,
+    "x": 0.07917,
+    "y": 0.18636,
+    "match": 0.935,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl15RollBlkSh.faf32fb67f.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBCrcl15SpryGlMatt.f2dde5199378.png": {
+    "plate": "capOff",
+    "scale": 0.82703,
+    "x": 0.07785,
+    "y": 0.13417,
+    "match": 0.802,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl15SpryGlMatt.335a618724.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBCrcl30GlCap.7ac83374d256.png": {
+    "plate": "capOff",
+    "scale": 0.73977,
+    "x": 0.12579,
+    "y": 0.19748,
+    "match": 0.953,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl30GlCap.7c1f35868a.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBCrcl30SpryMattGl.1d0022c51c9d.png": {
+    "plate": "capOff",
+    "scale": 0.82083,
+    "x": 0.08993,
+    "y": 0.12585,
+    "match": 0.937,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl30SpryMattGl.bd5291137e.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBCrcl50AnSpGl.2c0ef5604292.png": {
+    "plate": "capped",
+    "scale": 0.94643,
+    "x": 0.02111,
+    "y": -0.00512,
+    "match": 0.957,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl50AnSpGl.149554d737.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBCrcl50DrpGl.8a9da5b0d6c8.png": {
+    "plate": "capped",
+    "scale": 0.90909,
+    "x": 0.04356,
+    "y": 0.03512,
+    "match": 0.932,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl50DrpGl.506d6c520f.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBCrcl50RdcrShnGl.c00fce84ada7.png": {
+    "plate": "capped",
+    "scale": 0.82373,
+    "x": 0.08572,
+    "y": 0.11153,
+    "match": 0.944,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl50RdcrShnGl.8b57e645f5.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBCrcl50SpryMtGl.9b911e5dbbe5.png": {
+    "plate": "capOff",
+    "scale": 0.92991,
+    "x": 0.04521,
+    "y": 0.01558,
+    "match": 0.942,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrcl50SpryMtGl.5a49dc3240.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBCrclFrst100AnSpGl.879ce3a79bd1.png": {
+    "plate": "capped",
+    "scale": 1.08821,
+    "x": -0.04128,
+    "y": -0.02061,
+    "match": 0.836,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrclFrst100AnSpGl.c44aadf67d.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBCrclFrst50AnSpGl.cb473a04f649.png": {
+    "plate": "capped",
+    "scale": 1.00374,
+    "x": -0.00486,
+    "y": -0.01949,
+    "match": 0.945,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCrclFrst50AnSpGl.1b6f3f9d9c.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBEmp100AnSpGl.3fbe017a5989.png": {
+    "plate": "capped",
+    "scale": 0.87898,
+    "x": 0.04881,
+    "y": 0.06158,
+    "match": 0.918,
+    "shadow": "/images/catalog/cap-swap-shadows/GBEmp100AnSpGl.822c044a9f.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBEmp100AnSpTslGl.b54ba9c78770.png": {
+    "plate": "capped",
+    "scale": 1.14605,
+    "x": -0.08438,
+    "y": -0.02919,
+    "match": 0.924,
+    "shadow": "/images/catalog/cap-swap-shadows/GBEmp100AnSpTslGl.f67a5c62a8.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBEmp100RdcrShnGl.9ddd65637db3.png": {
+    "plate": "capped",
+    "scale": 0.80165,
+    "x": 0.08714,
+    "y": 0.13917,
+    "match": 0.898,
+    "shadow": "/images/catalog/cap-swap-shadows/GBEmp100RdcrShnGl.36be5744ec.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBEmp50AnSpGl.45b60c7ad00d.png": {
+    "plate": "capped",
+    "scale": 0.90972,
+    "x": 0.03472,
+    "y": 0.03472,
+    "match": 0.938,
+    "shadow": "/images/catalog/cap-swap-shadows/GBEmp50AnSpGl.e395648ed1.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBEmp50AnSpTslGl.73909356a8fb.png": {
+    "plate": "capped",
+    "scale": 0.87048,
+    "x": 0.04697,
+    "y": 0.07355,
+    "match": 0.953,
+    "shadow": "/images/catalog/cap-swap-shadows/GBEmp50AnSpTslGl.767865acd2.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBEmp50DrpGl.cc0b7600e01c.png": {
+    "plate": "capped",
+    "scale": 0.8272,
+    "x": 0.08537,
+    "y": 0.11068,
+    "match": 0.901,
+    "shadow": "/images/catalog/cap-swap-shadows/GBEmp50DrpGl.7ef89d789d.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBEmp50RdcrShnGl.0bd6eed9caa4.png": {
+    "plate": "capped",
+    "scale": 0.76397,
+    "x": 0.11957,
+    "y": 0.16943,
+    "match": 0.922,
+    "shadow": "/images/catalog/cap-swap-shadows/GBEmp50RdcrShnGl.0a53c3725a.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBRnd128AnSpGl.5f06c6212640.png": {
+    "plate": "capped",
+    "scale": 0.94483,
+    "x": 0.06041,
+    "y": -0.00628,
+    "match": 0.92,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRnd128AnSpGl.15537e2cda.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBRnd128RdcrShnGl.f8b8a66ea40c.png": {
+    "plate": "capped",
+    "scale": 0.85308,
+    "x": 0.07105,
+    "y": 0.09164,
+    "match": 0.878,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRnd128RdcrShnGl.8d65779c71.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBRnd128SpryMtGl.3b739a7147e4.png": {
+    "plate": "capOff",
+    "scale": 0.90666,
+    "x": 0.07514,
+    "y": 0.03482,
+    "match": 0.758,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRnd128SpryMtGl.37bc479c81.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBRnd78AnSpGl.8e40a4048bbd.png": {
+    "plate": "capped",
+    "scale": 0.85845,
+    "x": 0.03502,
+    "y": 0.06218,
+    "match": 0.864,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRnd78AnSpGl.c22829835b.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBRnd78AnSpTslGl.f370c30412cb.png": {
+    "plate": "capped",
+    "scale": 1.19789,
+    "x": -0.0885,
+    "y": -0.0809,
+    "match": 0.825,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRnd78AnSpTslGl.7037060d69.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBRnd78RdcrShnGl.54b95288d65a.png": {
+    "plate": "capped",
+    "scale": 0.76495,
+    "x": 0.11564,
+    "y": 0.16732,
+    "match": 0.808,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRnd78RdcrShnGl.9af28c7d75.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBRnd78SpryCu.2da76c836a2c.png": {
+    "plate": "capOff",
+    "scale": 0.89036,
+    "x": 0.08547,
+    "y": 0.05162,
+    "match": 0.849,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRnd78SpryCu.30bcd53fc5.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBRndFrst128AnSpGl.a069668e00e6.png": {
+    "plate": "capped",
+    "scale": 0.92948,
+    "x": 0.01701,
+    "y": -0.00902,
+    "match": 0.98,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRndFrst128AnSpGl.6f71223c80.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBRndFrst128DrpGl.1ff8e80a42bc.png": {
+    "plate": "capped",
+    "scale": 0.88567,
+    "x": 0.04754,
+    "y": 0.04749,
+    "match": 0.908,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRndFrst128DrpGl.964487bb82.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBRndFrst128RdcrShnGl.73878bbd3905.png": {
+    "plate": "capped",
+    "scale": 0.86485,
+    "x": 0.06382,
+    "y": 0.08508,
+    "match": 0.974,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRndFrst128RdcrShnGl.b5de7d9917.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBRndFrst78AnSpGl.ae4000ff96f1.png": {
+    "plate": "capped",
+    "scale": 0.9063,
+    "x": 0.0076,
+    "y": 0.03809,
+    "match": 0.978,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRndFrst78AnSpGl.a8a1b70894.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBRndFrst78AnSpTslGl.a08bcb5f93c0.png": {
+    "plate": "capped",
+    "scale": 1.30669,
+    "x": -0.16782,
+    "y": -0.13153,
+    "match": 0.892,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRndFrst78AnSpTslGl.3da0239887.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/GBRndFrst78RdcrShnGl.0d7b9209384c.png": {
+    "plate": "capped",
+    "scale": 0.86018,
+    "x": 0.06952,
+    "y": 0.1276,
+    "match": 0.809,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRndFrst78RdcrShnGl.e7f4b297d8.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/LBCrcl100LtnMtGl.5daeea49fca6.png": {
+    "plate": "capOff",
+    "scale": 0.93868,
+    "x": 0.03664,
+    "y": 0.0045,
+    "match": 0.929,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCrcl100LtnMtGl.732888d753.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/LBCrcl50LtnMtGl.0d65f37b7203.png": {
+    "plate": "capOff",
+    "scale": 0.9571,
+    "x": 0.02738,
+    "y": -0.01548,
+    "match": 0.952,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCrcl50LtnMtGl.d39dd0c30e.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/LBEmp100WhtClOvrCp.83d8b8d3b114.png": {
+    "plate": "capOff",
+    "scale": 0.91875,
+    "x": 0.02917,
+    "y": 0.02509,
+    "match": 0.909,
+    "shadow": "/images/catalog/cap-swap-shadows/LBEmp100WhtClOvrCp.49352d11d3.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/LBEmp50WhtClOvrCp.ffda90bb9bac.png": {
+    "plate": "capOff",
+    "scale": 0.90233,
+    "x": 0.04837,
+    "y": 0.03691,
+    "match": 0.923,
+    "shadow": "/images/catalog/cap-swap-shadows/LBEmp50WhtClOvrCp.e244a5fc40.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/LBRnd128LtnMtGl.03526c3eb1fd.png": {
+    "plate": "capOff",
+    "scale": 0.91729,
+    "x": 0.07579,
+    "y": 0.01401,
+    "match": 0.912,
+    "shadow": "/images/catalog/cap-swap-shadows/LBRnd128LtnMtGl.4fed61c737.webp"
+  },
+  "/images/catalog/cre-pilot-2026-09-22/LBRnd78LtnCu.126a7866e19f.png": {
+    "plate": "capOff",
+    "scale": 1.18477,
+    "x": -0.05312,
+    "y": -0.0786,
+    "match": 0.823,
+    "shadow": "/images/catalog/cap-swap-shadows/LBRnd78LtnCu.d36125be02.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCyl100AnSpMtSl.4c0ef81c3113.png": {
+    "plate": "capped",
+    "scale": 0.97094,
+    "x": -0.03496,
+    "y": -0.00296,
+    "match": 0.97,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl100AnSpMtSl.2cb9efe981.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCyl100AnSpTslMtSl.7c088c6921a3.png": {
+    "plate": "capped",
+    "scale": 0.98053,
+    "x": -0.09822,
+    "y": -0.00681,
+    "match": 0.934,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl100AnSpTslMtSl.7eed9f89ad.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCyl100RdcrMtSl.e5aec2df54e9.png": {
+    "plate": "capped",
+    "scale": 0.99612,
+    "x": 0.00227,
+    "y": -0.02686,
+    "match": 0.927,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl100RdcrMtSl.f8248b19e5.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCyl100SpryMtGl.c238fe44a86e.png": {
+    "plate": "capOff",
+    "scale": 0.99821,
+    "x": 0.05131,
+    "y": -0.02942,
+    "match": 0.958,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl100SpryMtGl.f1dfbeafe1.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCyl25DrpGl.5476f7c122f9.png": {
+    "plate": "capped",
+    "scale": 0.87059,
+    "x": 0.06424,
+    "y": 0.11805,
+    "match": 0.901,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl25DrpGl.9f9b3e3ea2.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCyl25RdcrShnGl.95b60b0cd9cd.png": {
+    "plate": "capped",
+    "scale": 0.85923,
+    "x": 0.07015,
+    "y": 0.12483,
+    "match": 0.886,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl25RdcrShnGl.02eea519d5.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCyl50AnSpMtSl.d9f827180268.png": {
+    "plate": "capped",
+    "scale": 0.99304,
+    "x": -0.11403,
+    "y": 0.03109,
+    "match": 0.936,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl50AnSpMtSl.e2a1ab7399.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCyl50MtlRollBlk.748d3f4631ca.png": {
+    "plate": "capOff",
+    "scale": 0.8269,
+    "x": 0.18027,
+    "y": 0.11479,
+    "match": 0.898,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl50MtlRollBlk.f927a56c97.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCyl50RollWht.b558aef1c1f8.png": {
+    "plate": "capOff",
+    "scale": 0.82038,
+    "x": 0.231,
+    "y": 0.11897,
+    "match": 0.847,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl50RollWht.39edc5ecf6.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCyl50SpryMtGl.88aa74a09984.png": {
+    "plate": "capOff",
+    "scale": 0.9898,
+    "x": 0.09818,
+    "y": 0.03461,
+    "match": 0.892,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl50SpryMtGl.3078077740.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCyl5GlMattSht.637c8aa197bc.png": {
+    "plate": "capped",
+    "scale": 0.68741,
+    "x": 0.15697,
+    "y": 0.24464,
+    "match": 0.904,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl5GlMattSht.5d45e665c2.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCyl5MtlRollBlkDot.6e766dc20b00.png": {
+    "plate": "capOff",
+    "scale": 0.68245,
+    "x": 0.26272,
+    "y": 0.25319,
+    "match": 0.943,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl5MtlRollBlkDot.1068267219.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCyl5RollBlkDot.5e3219bdb0d8.png": {
+    "plate": "capOff",
+    "scale": 0.687,
+    "x": 0.26181,
+    "y": 0.24917,
+    "match": 0.94,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl5RollBlkDot.84e7a1ad42.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCyl5SpryBlkMatt.9f39c38b6478.png": {
+    "plate": "capOff",
+    "scale": 0.68483,
+    "x": 0.26231,
+    "y": 0.25121,
+    "match": 0.932,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl5SpryBlkMatt.ded64411d1.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCyl5SprySlMatt.82f24320a8a1.png": {
+    "plate": "capOff",
+    "scale": 0.68554,
+    "x": 0.26633,
+    "y": 0.25238,
+    "match": 0.938,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl5SprySlMatt.847d8302ee.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCyl9MtlRollBlkDot.963eed913d43.png": {
+    "plate": "capOff",
+    "scale": 0.76117,
+    "x": 0.2205,
+    "y": 0.17963,
+    "match": 0.966,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl9MtlRollBlkDot.36d3e71112.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCyl9RollBlkDot.52b866cf8bfd.png": {
+    "plate": "capOff",
+    "scale": 0.76126,
+    "x": 0.22007,
+    "y": 0.18178,
+    "match": 0.956,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl9RollBlkDot.918ba2bb17.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCyl9SpryGl.3531f92e7360.png": {
+    "plate": "capOff",
+    "scale": 0.77241,
+    "x": 0.19669,
+    "y": 0.17391,
+    "match": 0.973,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCyl9SpryGl.8c0a004e26.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCylAmb9MtlRollBlkDot.b8ff3a73f388.png": {
+    "plate": "capOff",
+    "scale": 0.7623,
+    "x": 0.22237,
+    "y": 0.17903,
+    "match": 0.918,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylAmb9MtlRollBlkDot.d3b03bc649.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCylAmb9RollBlkDot.f28dd0c27078.png": {
+    "plate": "capOff",
+    "scale": 0.76507,
+    "x": 0.22149,
+    "y": 0.1761,
+    "match": 0.947,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylAmb9RollBlkDot.73e243ddec.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCylAmb9SpryMattSl.297ea26b8a91.png": {
+    "plate": "capOff",
+    "scale": 0.76114,
+    "x": 0.20208,
+    "y": 0.17992,
+    "match": 0.933,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylAmb9SpryMattSl.a49c296444.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu5MtlRollBlkDot.6fe305eca91f.png": {
+    "plate": "capOff",
+    "scale": 0.71212,
+    "x": 0.25096,
+    "y": 0.23217,
+    "match": 0.917,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylBlu5MtlRollBlkDot.9f0e36b1ae.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu5RollBlkDot.e3f6c4057c08.png": {
+    "plate": "capOff",
+    "scale": 0.69837,
+    "x": 0.14841,
+    "y": 0.24318,
+    "match": 0.949,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylBlu5RollBlkDot.abc74d85ca.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu5SlMattSht.164b75e4e501.png": {
+    "plate": "capped",
+    "scale": 0.71062,
+    "x": 0.14353,
+    "y": 0.23322,
+    "match": 0.959,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylBlu5SlMattSht.e9a454cf1e.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu5SpryGlMatt.69235ce9bde8.png": {
+    "plate": "capOff",
+    "scale": 0.69825,
+    "x": 0.2589,
+    "y": 0.24306,
+    "match": 0.95,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylBlu5SpryGlMatt.1c579508dc.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu9MtlRollBlkDot.844e9d33753f.png": {
+    "plate": "capOff",
+    "scale": 0.75934,
+    "x": 0.22467,
+    "y": 0.18252,
+    "match": 0.924,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylBlu9MtlRollBlkDot.20ae71583f.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu9RollBlkDot.4f9631b0ceb8.png": {
+    "plate": "capOff",
+    "scale": 0.76168,
+    "x": 0.22193,
+    "y": 0.17743,
+    "match": 0.914,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylBlu9RollBlkDot.af36aa1990.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu9SpryMattSl.4befc61f1a00.png": {
+    "plate": "capOff",
+    "scale": 0.76228,
+    "x": 0.20042,
+    "y": 0.18061,
+    "match": 0.904,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylBlu9SpryMattSl.d30889ba37.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCylFrst9MtlRollBlkDot.08fa7b4cd8f0.png": {
+    "plate": "capOff",
+    "scale": 0.74708,
+    "x": 0.22677,
+    "y": 0.18953,
+    "match": 0.951,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylFrst9MtlRollBlkDot.e9dfe5d305.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCylFrst9RollBlkDot.d9051dc36960.png": {
+    "plate": "capOff",
+    "scale": 0.77171,
+    "x": 0.21512,
+    "y": 0.16844,
+    "match": 0.945,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylFrst9RollBlkDot.a159f51f78.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCylFrst9SpryMattSl.d5b42efe1820.png": {
+    "plate": "capOff",
+    "scale": 0.75664,
+    "x": 0.20264,
+    "y": 0.18864,
+    "match": 0.89,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylFrst9SpryMattSl.4a9e5076e5.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCylSwrl9MtlRollBlkDot.cb173e3c3110.png": {
+    "plate": "capOff",
+    "scale": 0.76807,
+    "x": 0.2182,
+    "y": 0.17145,
+    "match": 0.945,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylSwrl9MtlRollBlkDot.333b71bee4.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCylSwrl9RollBlkDot.26dda713bfb7.png": {
+    "plate": "capOff",
+    "scale": 0.77082,
+    "x": 0.21732,
+    "y": 0.16926,
+    "match": 0.945,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylSwrl9RollBlkDot.498a8c0213.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBCylSwrl9SpryMattSl.70ebfb3a4550.png": {
+    "plate": "capOff",
+    "scale": 0.77733,
+    "x": 0.19417,
+    "y": 0.16826,
+    "match": 0.937,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCylSwrl9SpryMattSl.5896d3c83e.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBSpry1ozGl.aec2bd4a4e74.png": {
+    "plate": "capOff",
+    "scale": 0.84178,
+    "x": 0.11261,
+    "y": 0.14626,
+    "match": 0.855,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSpry1ozGl.02dec42120.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBTallCyl9MtlRollBlkDot.1b0eaaec38d3.png": {
+    "plate": "capOff",
+    "scale": 0.89881,
+    "x": 0.04741,
+    "y": 0.04524,
+    "match": 0.938,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTallCyl9MtlRollBlkDot.c726399870.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBTallCyl9RollBlkDot.f4e02e5fa3da.png": {
+    "plate": "capOff",
+    "scale": 0.89651,
+    "x": 0.04626,
+    "y": 0.0465,
+    "match": 0.938,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTallCyl9RollBlkDot.367ee2a2d0.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBTallCyl9SpryGlMatt.3753db48a2b7.png": {
+    "plate": "capOff",
+    "scale": 0.90106,
+    "x": 0.12917,
+    "y": 0.04384,
+    "match": 0.914,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTallCyl9SpryGlMatt.bd111eda8a.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBTallCylFrst9MtlRollBlkDot.4ef0013dc760.png": {
+    "plate": "capOff",
+    "scale": 0.91944,
+    "x": 0.03564,
+    "y": 0.02754,
+    "match": 0.947,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTallCylFrst9MtlRollBlkDot.5d4d5af8a6.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBTallCylFrst9RollBlkDot.35762581bc84.png": {
+    "plate": "capOff",
+    "scale": 0.90729,
+    "x": 0.14167,
+    "y": 0.03788,
+    "match": 0.977,
+    "shadow": "/images/catalog/cap-swap-shadows/GBTallCylFrst9RollBlkDot.31856a1714.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBcyl25AnSpIvyGl.bfadd47f97fe.png": {
+    "plate": "capped",
+    "scale": 0.91612,
+    "x": 0.04299,
+    "y": 0.08818,
+    "match": 0.891,
+    "shadow": "/images/catalog/cap-swap-shadows/GBcyl25AnSpIvyGl.021170789f.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBcyl25AnSpTslIvyGl.ab184134a30b.png": {
+    "plate": "capped",
+    "scale": 1.0202,
+    "x": -0.13045,
+    "y": 0.14861,
+    "match": 0.841,
+    "shadow": "/images/catalog/cap-swap-shadows/GBcyl25AnSpTslIvyGl.6260ab217e.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/GBcyl25SpryMtGl.511d21e7dee0.png": {
+    "plate": "capOff",
+    "scale": 0.88877,
+    "x": 0.05704,
+    "y": 0.10299,
+    "match": 0.858,
+    "shadow": "/images/catalog/cap-swap-shadows/GBcyl25SpryMtGl.59b910152c.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/LBCyl100LtnMtGl.8ef2159eee21.png": {
+    "plate": "capOff",
+    "scale": 1.0,
+    "x": 0.04583,
+    "y": -0.0303,
+    "match": 0.958,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCyl100LtnMtGl.d97e57cf6e.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/LBCyl25LtnMtGl.d5caeec0df28.png": {
+    "plate": "capOff",
+    "scale": 0.88818,
+    "x": 0.05961,
+    "y": 0.10233,
+    "match": 0.842,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCyl25LtnMtGl.3c9be06a7c.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/LBCyl50LtnMtGl.147afe555981.png": {
+    "plate": "capOff",
+    "scale": 0.98735,
+    "x": 0.1,
+    "y": 0.03409,
+    "match": 0.931,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCyl50LtnMtGl.582778a5a8.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/LBCyl9LtnGl.ca2699daa0ba.png": {
+    "plate": "capOff",
+    "scale": 0.77469,
+    "x": 0.19616,
+    "y": 0.17312,
+    "match": 0.965,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCyl9LtnGl.f8a19d9dcd.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/LBCylAmb9LtnMtSl.f80deb49076c.png": {
+    "plate": "capped",
+    "scale": 0.80458,
+    "x": 0.09583,
+    "y": 0.15846,
+    "match": 0.755,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCylAmb9LtnMtSl.d580991ed6.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/LBCylBlu9LtnMattSl.d0ec317eb616.png": {
+    "plate": "capped",
+    "scale": 0.76699,
+    "x": 0.11354,
+    "y": 0.17708,
+    "match": 0.886,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCylBlu9LtnMattSl.91462ef63b.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/LBCylFrst9LtnMtSl.619922894add.png": {
+    "plate": "capOff",
+    "scale": 0.76414,
+    "x": 0.19942,
+    "y": 0.18246,
+    "match": 0.924,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCylFrst9LtnMtSl.15ffe353b1.webp"
+  },
+  "/images/catalog/cylinder-pilot-2026-09-22/LBCylSwrl9LtnMtSl.e7f6c9af7f11.png": {
+    "plate": "capOff",
+    "scale": 0.76548,
+    "x": 0.19917,
+    "y": 0.17636,
+    "match": 0.941,
+    "shadow": "/images/catalog/cap-swap-shadows/LBCylSwrl9LtnMtSl.311bd568ec.webp"
+  },
+  "/images/catalog/elegant-approved-2026-09-23/GBElg100AnSpGl.7dd5b42e9d0a.png": {
+    "plate": "capped",
+    "scale": 0.91199,
+    "x": 0.06958,
+    "y": 0.03659,
+    "match": 0.867,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElg100AnSpGl.a9dbdde3fc.webp"
+  },
+  "/images/catalog/elegant-approved-2026-09-23/GBElg100AnSpTslIvyGl.ea331e5dfb29.png": {
+    "plate": "capped",
+    "scale": 1.20474,
+    "x": -0.12785,
+    "y": -0.07658,
+    "match": 0.791,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElg100AnSpTslIvyGl.00eccfb34f.webp"
+  },
+  "/images/catalog/elegant-approved-2026-09-23/GBElg15Gl.f95d548f7a10.png": {
+    "plate": "capOff",
+    "scale": 0.70281,
+    "x": 0.19592,
+    "y": 0.23505,
+    "match": 0.851,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElg15Gl.6f971a3a27.webp"
+  },
+  "/images/catalog/elegant-approved-2026-09-23/GBElg15MtlRollGlMatt.54e547a6a1a9.png": {
+    "plate": "capOff",
+    "scale": 0.69394,
+    "x": 0.20135,
+    "y": 0.23516,
+    "match": 0.815,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElg15MtlRollGlMatt.caaa82b9b9.webp"
+  },
+  "/images/catalog/elegant-approved-2026-09-23/GBElg15SpryGlMatt.615cd05227bc.png": {
+    "plate": "capOff",
+    "scale": 0.71622,
+    "x": 0.20152,
+    "y": 0.22831,
+    "match": 0.846,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElg15SpryGlMatt.63fa4a4672.webp"
+  },
+  "/images/catalog/elegant-approved-2026-09-23/GBElg30GlCap.373e026b3163.png": {
+    "plate": "capOff",
+    "scale": 0.71847,
+    "x": 0.18444,
+    "y": 0.22086,
+    "match": 0.889,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElg30GlCap.feb7d44e3f.webp"
+  },
+  "/images/catalog/elegant-approved-2026-09-23/GBElg60AnSpGl.b2c544a4cfb7.png": {
+    "plate": "capped",
+    "scale": 1.15286,
+    "x": -0.06578,
+    "y": 0.09741,
+    "match": 0.881,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElg60AnSpGl.162d737f75.webp"
+  },
+  "/images/catalog/elegant-approved-2026-09-23/GBElg60AnSpTslIvyGl.12b3ed29ce2c.png": {
+    "plate": "capped",
+    "scale": 0.97009,
+    "x": -0.03912,
+    "y": 0.07814,
+    "match": 0.84,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElg60AnSpTslIvyGl.f070faa6a6.webp"
+  },
+  "/images/catalog/elegant-approved-2026-09-23/GBElg60DrpGl.5b78cead4264.png": {
+    "plate": "capped",
+    "scale": 0.80393,
+    "x": 0.07903,
+    "y": 0.152,
+    "match": 0.781,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElg60DrpGl.1ff1c45149.webp"
+  },
+  "/images/catalog/elegant-approved-2026-09-23/GBElgFrst100AnSpGl.3a88affc9468.png": {
+    "plate": "capped",
+    "scale": 0.89416,
+    "x": 0.0815,
+    "y": 0.04627,
+    "match": 0.981,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElgFrst100AnSpGl.be659656b6.webp"
+  },
+  "/images/catalog/elegant-approved-2026-09-23/GBElgFrst100AnSpTslGl.7a965b2eca81.png": {
+    "plate": "capped",
+    "scale": 1.1866,
+    "x": -0.11079,
+    "y": -0.07142,
+    "match": 0.943,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElgFrst100AnSpTslGl.5c4c36f622.webp"
+  },
+  "/images/catalog/elegant-approved-2026-09-23/GBElgFrst15Gl.a51786be0d9e.png": {
+    "plate": "capOff",
+    "scale": 0.70929,
+    "x": 0.19443,
+    "y": 0.2319,
+    "match": 0.906,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElgFrst15Gl.9b98039783.webp"
+  },
+  "/images/catalog/elegant-approved-2026-09-23/GBElgFrst15MtlRollGlSh.1c94f9165b55.png": {
+    "plate": "capOff",
+    "scale": 0.69741,
+    "x": 0.18736,
+    "y": 0.24035,
+    "match": 0.815,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElgFrst15MtlRollGlSh.1f49affc7e.webp"
+  },
+  "/images/catalog/elegant-approved-2026-09-23/GBElgFrst15SpryGlSh.a7194000c908.png": {
+    "plate": "capOff",
+    "scale": 0.69044,
+    "x": 0.2063,
+    "y": 0.24037,
+    "match": 0.849,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElgFrst15SpryGlSh.05d3b05dd9.webp"
+  },
+  "/images/catalog/elegant-approved-2026-09-23/GBElgFrst30GlCap.9e0021f89ad7.png": {
+    "plate": "capOff",
+    "scale": 0.65619,
+    "x": 0.20251,
+    "y": 0.2782,
+    "match": 0.875,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElgFrst30GlCap.f4a2e5a9ba.webp"
+  },
+  "/images/catalog/elegant-approved-2026-09-23/GBElgFrst60AnSpGl.c776f20eb697.png": {
+    "plate": "capped",
+    "scale": 0.91844,
+    "x": 0.04013,
+    "y": 0.10433,
+    "match": 0.857,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElgFrst60AnSpGl.f2e4f8a685.webp"
+  },
+  "/images/catalog/elegant-approved-2026-09-23/GBElgFrst60AnSpTslGl.d89df2aed3ee.png": {
+    "plate": "capped",
+    "scale": 0.9516,
+    "x": 0.00356,
+    "y": 0.07323,
+    "match": 0.959,
+    "shadow": "/images/catalog/cap-swap-shadows/GBElgFrst60AnSpTslGl.6009b4e2e5.webp"
+  },
+  "/images/catalog/elegant-approved-2026-09-23/LBElg100LtnMtGl.e4fa765d2c7a.png": {
+    "plate": "capOff",
+    "scale": 0.96403,
+    "x": 0.04867,
+    "y": 0.00304,
+    "match": 0.746,
+    "shadow": "/images/catalog/cap-swap-shadows/LBElg100LtnMtGl.98b6812c9a.webp"
+  },
+  "/images/catalog/elegant-approved-2026-09-23/LBElg60LtnMtGl.65bd4d5cf600.png": {
+    "plate": "capOff",
+    "scale": 0.8323,
+    "x": 0.12538,
+    "y": 0.12271,
+    "match": 0.753,
+    "shadow": "/images/catalog/cap-swap-shadows/LBElg60LtnMtGl.12ff156a42.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/GB1ozGenieBl.863c191365f1.webp": {
+    "plate": "capped",
+    "scale": 0.86133,
+    "x": 0.07546,
+    "y": 0.18062,
+    "match": 0.943,
+    "shadow": "/images/catalog/cap-swap-shadows/GB1ozGenieBl.bbc7d477c7.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/GB1ozGenieCl.60f18bb051ea.webp": {
+    "plate": "capped",
+    "scale": 0.89258,
+    "x": 0.0566,
+    "y": 0.17203,
+    "match": 0.853,
+    "shadow": "/images/catalog/cap-swap-shadows/GB1ozGenieCl.51a7b46a3e.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/GB3TPlGl.30f0dba0bc9d.webp": {
+    "plate": "capOff",
+    "scale": 0.56052,
+    "x": 0.219,
+    "y": 0.37025,
+    "match": 0.916,
+    "shadow": "/images/catalog/cap-swap-shadows/GB3TPlGl.42be98a341.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/GB6TPlGl.c797d4990c7c.webp": {
+    "plate": "capOff",
+    "scale": 0.55566,
+    "x": 0.22173,
+    "y": 0.37453,
+    "match": 0.903,
+    "shadow": "/images/catalog/cap-swap-shadows/GB6TPlGl.708516c318.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/GBCB12ozPear.be09fc345992.webp": {
+    "plate": "capped",
+    "scale": 0.94085,
+    "x": 0.0264,
+    "y": 0.00835,
+    "match": 0.925,
+    "shadow": "/images/catalog/cap-swap-shadows/GBCB12ozPear.8415d5190c.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/GBEternalFlameBlue.78db59120253.webp": {
+    "plate": "capped",
+    "scale": 0.72396,
+    "x": 0.13376,
+    "y": 0.25292,
+    "match": 0.908,
+    "shadow": "/images/catalog/cap-swap-shadows/GBEternalFlameBlue.df3c77fae3.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/GBEternalFlameClear.573b3b30a2ba.webp": {
+    "plate": "capped",
+    "scale": 0.63795,
+    "x": 0.17917,
+    "y": 0.29408,
+    "match": 0.871,
+    "shadow": "/images/catalog/cap-swap-shadows/GBEternalFlameClear.7133683519.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/GBEternalFlameGreen.47eccae275a4.webp": {
+    "plate": "capped",
+    "scale": 0.7195,
+    "x": 0.13925,
+    "y": 0.25632,
+    "match": 0.906,
+    "shadow": "/images/catalog/cap-swap-shadows/GBEternalFlameGreen.802c9ed2ed.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/GBFlair15Gl.af10b87fd145.webp": {
+    "plate": "capOff",
+    "scale": 0.62793,
+    "x": 0.18458,
+    "y": 0.31275,
+    "match": 0.933,
+    "shadow": "/images/catalog/cap-swap-shadows/GBFlair15Gl.02b27f497c.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/GBFlair15MtlRollBlkDot.7a98f43bc89c.webp": {
+    "plate": "capOff",
+    "scale": 0.62656,
+    "x": 0.1867,
+    "y": 0.3126,
+    "match": 0.932,
+    "shadow": "/images/catalog/cap-swap-shadows/GBFlair15MtlRollBlkDot.27cce1f48f.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/GBFlair15SpryGlMatt.dc18f226ac1c.webp": {
+    "plate": "capOff",
+    "scale": 0.63036,
+    "x": 0.18515,
+    "y": 0.30969,
+    "match": 0.931,
+    "shadow": "/images/catalog/cap-swap-shadows/GBFlair15SpryGlMatt.d880fbadff.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/GBGrce55AnSpMtSl.6de57d8c0ecc.webp": {
+    "plate": "capped",
+    "scale": 0.88406,
+    "x": 0.05797,
+    "y": 0.0583,
+    "match": 0.948,
+    "shadow": "/images/catalog/cap-swap-shadows/GBGrce55AnSpMtSl.28c3871079.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/GBGrce55AnSpTslMtSl.66f3ef2d9cde.webp": {
+    "plate": "capped",
+    "scale": 0.8909,
+    "x": 0.0534,
+    "y": 0.05652,
+    "match": 0.963,
+    "shadow": "/images/catalog/cap-swap-shadows/GBGrce55AnSpTslMtSl.7678d36f2c.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/GBGrce55RdcrMtSl.ba29e092236f.webp": {
+    "plate": "capped",
+    "scale": 0.8858,
+    "x": 0.05627,
+    "y": 0.05789,
+    "match": 0.961,
+    "shadow": "/images/catalog/cap-swap-shadows/GBGrce55RdcrMtSl.6863cbc7ca.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/GBGrce55SpryMtGl.4a8a018848dc.webp": {
+    "plate": "capOff",
+    "scale": 0.89428,
+    "x": 0.05364,
+    "y": 0.05483,
+    "match": 0.964,
+    "shadow": "/images/catalog/cap-swap-shadows/GBGrce55SpryMtGl.9c463a2195.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/GBMtlMrblLarge.92d97d1a3983.webp": {
+    "plate": "capped",
+    "scale": 0.72073,
+    "x": 0.13361,
+    "y": 0.26683,
+    "match": 0.742,
+    "shadow": "/images/catalog/cap-swap-shadows/GBMtlMrblLarge.0eb21dd96b.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/GBMtlMrblSmall.0e2ee9a089fb.webp": {
+    "plate": "capped",
+    "scale": 0.72139,
+    "x": 0.13389,
+    "y": 0.30868,
+    "match": 0.909,
+    "shadow": "/images/catalog/cap-swap-shadows/GBMtlMrblSmall.0db36ab116.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/GBRoyal13Gl.e7f53991ffa2.webp": {
+    "plate": "capOff",
+    "scale": 0.65551,
+    "x": 0.17253,
+    "y": 0.27801,
+    "match": 0.925,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRoyal13Gl.48ae77454c.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/GBRoyal13MtlRollBlkDot.0bd1985f251f.webp": {
+    "plate": "capOff",
+    "scale": 0.65756,
+    "x": 0.17169,
+    "y": 0.2781,
+    "match": 0.92,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRoyal13MtlRollBlkDot.efd00e6ad8.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/GBRoyal13SpryGlMatt.1633203b14c6.webp": {
+    "plate": "capOff",
+    "scale": 0.6559,
+    "x": 0.17299,
+    "y": 0.27871,
+    "match": 0.924,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRoyal13SpryGlMatt.419c18d455.webp"
+  },
+  "/images/catalog/next-batch-approved-2026-09-25/LBGrce55LtnMtGl.1f39434ac858.webp": {
+    "plate": "capOff",
+    "scale": 0.89117,
+    "x": 0.05499,
+    "y": 0.05721,
+    "match": 0.962,
+    "shadow": "/images/catalog/cap-swap-shadows/LBGrce55LtnMtGl.f361ac811e.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/Alu120mlLotionPumpBlack.bc17cd0d2cea.webp": {
+    "plate": "capped",
+    "scale": 0.80784,
+    "x": 0.12083,
+    "y": 0.13561,
+    "match": 0.97,
+    "shadow": "/images/catalog/cap-swap-shadows/Alu120mlLotionPumpBlack.c8155dc622.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/Alu250mlSprayBlack.8448986a2efe.webp": {
+    "plate": "capped",
+    "scale": 0.89392,
+    "x": 0.04768,
+    "y": 0.05868,
+    "match": 0.967,
+    "shadow": "/images/catalog/cap-swap-shadows/Alu250mlSprayBlack.4c79390821.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/Alu65mlLotionPumpBlack.e05aa48bdab2.webp": {
+    "plate": "capped",
+    "scale": 0.71305,
+    "x": 0.16438,
+    "y": 0.22202,
+    "match": 0.947,
+    "shadow": "/images/catalog/cap-swap-shadows/Alu65mlLotionPumpBlack.a8c8e77f73.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom10Blk.79e7d1dfbf78.webp": {
+    "plate": "capped",
+    "scale": 0.88182,
+    "x": 0.02909,
+    "y": 0.07982,
+    "match": 0.912,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10Blk.a914568002.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom10BlkDot.f9d43dc128d7.webp": {
+    "plate": "capOff",
+    "scale": 0.9918,
+    "x": -0.04985,
+    "y": 0.03734,
+    "match": 0.965,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10BlkDot.6ec93543e0.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom10Blu.52f14664d8de.webp": {
+    "plate": "capped",
+    "scale": 0.88502,
+    "x": 0.02855,
+    "y": 0.07914,
+    "match": 0.934,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10Blu.016c8095be.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom10Gl.377d2c05b0c1.webp": {
+    "plate": "capped",
+    "scale": 0.89189,
+    "x": 0.02872,
+    "y": 0.0719,
+    "match": 0.94,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10Gl.f5aa7bf11a.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom10Gr.520871bee6f9.webp": {
+    "plate": "capped",
+    "scale": 0.87627,
+    "x": 0.03773,
+    "y": 0.08419,
+    "match": 0.925,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10Gr.80fa03c116.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom10Lv.d53040e9c645.webp": {
+    "plate": "capped",
+    "scale": 1.05754,
+    "x": -0.05448,
+    "y": 0.03429,
+    "match": 0.955,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10Lv.57ec3422d6.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom10Pnk.ec95469c94ed.webp": {
+    "plate": "capped",
+    "scale": 0.88961,
+    "x": 0.02489,
+    "y": 0.08057,
+    "match": 0.954,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10Pnk.504af35095.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom10Red.61e2d5d93695.webp": {
+    "plate": "capOff",
+    "scale": 0.99767,
+    "x": -0.0189,
+    "y": 0.02773,
+    "match": 0.959,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10Red.46452971cd.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom10Sl.45db1cb5f6ac.webp": {
+    "plate": "capOff",
+    "scale": 1.01031,
+    "x": -0.01778,
+    "y": 0.02901,
+    "match": 0.985,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10Sl.cef0a75aa9.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom10SlDot.16f5f9069384.webp": {
+    "plate": "capOff",
+    "scale": 0.99469,
+    "x": -0.01139,
+    "y": 0.02787,
+    "match": 0.984,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10SlDot.2635e749ca.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom10SlStars.4c0af4634c3d.webp": {
+    "plate": "capOff",
+    "scale": 1.01266,
+    "x": -0.05279,
+    "y": 0.00814,
+    "match": 0.953,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom10SlStars.c85e69fd5b.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom5Blk.a95481b3951f.webp": {
+    "plate": "capped",
+    "scale": 1.17677,
+    "x": -0.12446,
+    "y": -0.22941,
+    "match": 0.927,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5Blk.311585ec14.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom5BlkDot.1d4cb44a6696.webp": {
+    "plate": "capped",
+    "scale": 1.20981,
+    "x": -0.10161,
+    "y": -0.27862,
+    "match": 0.938,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5BlkDot.8ebef2446d.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom5Blu.b415f9e2335c.webp": {
+    "plate": "capped",
+    "scale": 0.7479,
+    "x": 0.09364,
+    "y": 0.18569,
+    "match": 0.931,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5Blu.4f4e1cc4cd.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom5Gl.0d224e615592.webp": {
+    "plate": "capped",
+    "scale": 0.94219,
+    "x": 0.02917,
+    "y": 0.11577,
+    "match": 0.985,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5Gl.ea0a51691d.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom5PnkDot.9104d1e7721e.webp": {
+    "plate": "capped",
+    "scale": 0.74323,
+    "x": 0.08572,
+    "y": 0.18601,
+    "match": 0.945,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5PnkDot.428159a288.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom5Red.157a79e135b2.webp": {
+    "plate": "capped",
+    "scale": 0.92571,
+    "x": 0.03521,
+    "y": 0.12418,
+    "match": 0.983,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5Red.bb9d30ed33.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom5Sl.a1e3eae36086.webp": {
+    "plate": "capped",
+    "scale": 1.17391,
+    "x": -0.08696,
+    "y": -0.22678,
+    "match": 0.984,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5Sl.909f8101c5.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom5SlDot.203ba9b72d44.webp": {
+    "plate": "capped",
+    "scale": 0.93648,
+    "x": 0.02992,
+    "y": 0.12009,
+    "match": 0.981,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5SlDot.80f9eef145.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom5SlStars.f62f6af1ab8b.webp": {
+    "plate": "capped",
+    "scale": 1.18978,
+    "x": -0.09529,
+    "y": -0.23783,
+    "match": 0.981,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5SlStars.b75ba11ebe.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom5SlimBlk.895f5c416907.webp": {
+    "plate": "capped",
+    "scale": 0.91569,
+    "x": 0.04194,
+    "y": 0.02923,
+    "match": 0.959,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5SlimBlk.7b347f435b.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom5SlimGl.e5d81a57e5a9.webp": {
+    "plate": "capped",
+    "scale": 0.91564,
+    "x": 0.04161,
+    "y": 0.02923,
+    "match": 0.984,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5SlimGl.04511ed184.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBAtom5SlimSl.0f6c17566cdf.webp": {
+    "plate": "capped",
+    "scale": 0.93478,
+    "x": 0.03053,
+    "y": 0.01458,
+    "match": 0.978,
+    "shadow": "/images/catalog/cap-swap-shadows/GBAtom5SlimSl.cab558a901.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBSlm100AnSpGl.25a94a0e0123.webp": {
+    "plate": "capped",
+    "scale": 0.95595,
+    "x": 0.01804,
+    "y": -0.00613,
+    "match": 0.983,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlm100AnSpGl.cd6eec0a7a.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBSlm100AnSpTslGl.1b367d9b11ed.webp": {
+    "plate": "capped",
+    "scale": 0.95594,
+    "x": 0.01042,
+    "y": 0.02068,
+    "match": 0.98,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlm100AnSpTslGl.1233af0ba8.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBSlm30AnSpGl.f8f876caada0.webp": {
+    "plate": "capped",
+    "scale": 0.83125,
+    "x": 0.08333,
+    "y": 0.10795,
+    "match": 0.976,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlm30AnSpGl.947be01afa.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBSlm30DrpCu.638504d0db38.webp": {
+    "plate": "capped",
+    "scale": 0.77181,
+    "x": 0.10833,
+    "y": 0.14489,
+    "match": 0.87,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlm30DrpCu.58f1c2d2c0.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBSlm50AnSpGl.b886a4abdd3e.webp": {
+    "plate": "capped",
+    "scale": 0.85522,
+    "x": 0.04474,
+    "y": 0.08892,
+    "match": 0.968,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlm50AnSpGl.9fba60b4e1.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/GBSlm50AnSpTslWht.830c59d5c588.webp": {
+    "plate": "capped",
+    "scale": 0.90695,
+    "x": 0.04207,
+    "y": 0.0425,
+    "match": 0.977,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlm50AnSpTslWht.c08922c91f.webp"
+  },
+  "/images/catalog/round-enhancement/aligned-v4/GBRnd128AnSpGl.premium-aligned-v4.png": {
+    "plate": "capped",
+    "scale": 0.85317,
+    "x": 0.1128,
+    "y": 0.07737,
+    "match": 0.923,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRnd128AnSpGl.61b58d23d9.webp"
+  },
+  "/images/catalog/round-enhancement/aligned-v4/GBRnd128AnSpTslIvyGl.premium-aligned-v4.png": {
+    "plate": "capped",
+    "scale": 1.13028,
+    "x": -0.03687,
+    "y": -0.18809,
+    "match": 0.825,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRnd128AnSpTslIvyGl.75173e7ad5.webp"
+  },
+  "/images/catalog/round-enhancement/aligned-v4/GBRnd128RdcrShnGl.premium-aligned-v4.png": {
+    "plate": "capped",
+    "scale": 0.76799,
+    "x": 0.11338,
+    "y": 0.16833,
+    "match": 0.878,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRnd128RdcrShnGl.c8c30419a1.webp"
+  },
+  "/images/catalog/round-enhancement/aligned-v4/GBRnd128SpryMtGl.premium-aligned-v4.png": {
+    "plate": "capOff",
+    "scale": 0.81653,
+    "x": 0.10937,
+    "y": 0.11588,
+    "match": 0.762,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRnd128SpryMtGl.d87ae48be0.webp"
+  },
+  "/images/catalog/round-enhancement/aligned-v4/GBRnd78AnSpGl.premium-aligned-v4.png": {
+    "plate": "capped",
+    "scale": 0.74533,
+    "x": 0.10512,
+    "y": 0.16851,
+    "match": 0.851,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRnd78AnSpGl.57a7beb9a2.webp"
+  },
+  "/images/catalog/round-enhancement/aligned-v4/GBRnd78AnSpTslGl.premium-aligned-v4.png": {
+    "plate": "capped",
+    "scale": 1.01709,
+    "x": -0.03007,
+    "y": 0.05748,
+    "match": 0.844,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRnd78AnSpTslGl.62397b16cf.webp"
+  },
+  "/images/catalog/round-enhancement/aligned-v4/GBRnd78RdcrShnGl.premium-aligned-v4.png": {
+    "plate": "capped",
+    "scale": 0.6439,
+    "x": 0.17577,
+    "y": 0.27214,
+    "match": 0.796,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRnd78RdcrShnGl.7532eab9aa.webp"
+  },
+  "/images/catalog/round-enhancement/aligned-v4/GBRnd78SpryCu.premium-aligned-v4.png": {
+    "plate": "capOff",
+    "scale": 0.7701,
+    "x": 0.12901,
+    "y": 0.1636,
+    "match": 0.851,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRnd78SpryCu.b65ac17dec.webp"
+  },
+  "/images/catalog/round-enhancement/aligned-v4/GBRndFrst128AnSpGl.premium-aligned-v4.png": {
+    "plate": "capped",
+    "scale": 0.84203,
+    "x": 0.06725,
+    "y": 0.07119,
+    "match": 0.975,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRndFrst128AnSpGl.2dbb0ed056.webp"
+  },
+  "/images/catalog/round-enhancement/aligned-v4/GBRndFrst128DrpGl.premium-aligned-v4.png": {
+    "plate": "capped",
+    "scale": 0.76638,
+    "x": 0.10759,
+    "y": 0.13666,
+    "match": 0.922,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRndFrst128DrpGl.2470790db1.webp"
+  },
+  "/images/catalog/round-enhancement/aligned-v4/GBRndFrst128RdcrShnGl.premium-aligned-v4.png": {
+    "plate": "capped",
+    "scale": 0.7722,
+    "x": 0.111,
+    "y": 0.16619,
+    "match": 0.967,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRndFrst128RdcrShnGl.1293ee86f2.webp"
+  },
+  "/images/catalog/round-enhancement/aligned-v4/GBRndFrst78AnSpGl.premium-aligned-v4.png": {
+    "plate": "capped",
+    "scale": 0.76902,
+    "x": 0.09346,
+    "y": 0.16183,
+    "match": 0.969,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRndFrst78AnSpGl.f04e9447c6.webp"
+  },
+  "/images/catalog/round-enhancement/aligned-v4/GBRndFrst78AnSpTslGl.premium-aligned-v4.png": {
+    "plate": "capped",
+    "scale": 1.10977,
+    "x": -0.04493,
+    "y": 0.01244,
+    "match": 0.935,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRndFrst78AnSpTslGl.4a1532e44d.webp"
+  },
+  "/images/catalog/round-enhancement/aligned-v4/GBRndFrst78RdcrShnGl.premium-aligned-v4.png": {
+    "plate": "capped",
+    "scale": 0.72764,
+    "x": 0.13457,
+    "y": 0.23598,
+    "match": 0.845,
+    "shadow": "/images/catalog/cap-swap-shadows/GBRndFrst78RdcrShnGl.0b11396dbe.webp"
+  },
+  "/images/catalog/round-enhancement/aligned-v4/LBRnd128LtnMtGl.premium-aligned-v4.png": {
+    "plate": "capOff",
+    "scale": 0.82465,
+    "x": 0.11046,
+    "y": 0.1007,
+    "match": 0.92,
+    "shadow": "/images/catalog/cap-swap-shadows/LBRnd128LtnMtGl.a91248767a.webp"
+  },
+  "/images/catalog/round-enhancement/aligned-v4/LBRnd78LtnCu.premium-aligned-v4.png": {
+    "plate": "capOff",
+    "scale": 1.02859,
+    "x": 0.00729,
+    "y": 0.0483,
+    "match": 0.842,
+    "shadow": "/images/catalog/cap-swap-shadows/LBRnd78LtnCu.8222e6b0c3.webp"
+  },
+  "/images/catalog/sleek-approved-2026-09-23/GBSleek5Gl.3263510ead57.png": {
+    "plate": "capOff",
+    "scale": 0.63803,
+    "x": 0.2318,
+    "y": 0.2973,
+    "match": 0.892,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSleek5Gl.d8305fc651.webp"
+  },
+  "/images/catalog/sleek-approved-2026-09-23/GBSleek5MtlRollGlMatt.e9cea873008b.png": {
+    "plate": "capOff",
+    "scale": 0.65676,
+    "x": 0.22064,
+    "y": 0.27899,
+    "match": 0.87,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSleek5MtlRollGlMatt.5823fdf883.webp"
+  },
+  "/images/catalog/sleek-approved-2026-09-23/GBSleek5SpryGlMatt.e4fb3f2e58be.png": {
+    "plate": "capOff",
+    "scale": 0.64319,
+    "x": 0.23059,
+    "y": 0.29438,
+    "match": 0.882,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSleek5SpryGlMatt.70ae797d48.webp"
+  },
+  "/images/catalog/sleek-approved-2026-09-23/GBSleek8Gl.c146b54ea2ac.png": {
+    "plate": "capOff",
+    "scale": 0.66632,
+    "x": 0.19792,
+    "y": 0.27367,
+    "match": 0.85,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSleek8Gl.2cdcfb9fc7.webp"
+  },
+  "/images/catalog/sleek-approved-2026-09-23/GBSleek8MtlRollGlMatt.9f29d4795f7a.png": {
+    "plate": "capOff",
+    "scale": 0.67097,
+    "x": 0.19304,
+    "y": 0.26186,
+    "match": 0.772,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSleek8MtlRollGlMatt.bdcdc122c1.webp"
+  },
+  "/images/catalog/sleek-approved-2026-09-23/GBSleek8SpryGlMatt.60c365466266.png": {
+    "plate": "capOff",
+    "scale": 0.76856,
+    "x": 0.15893,
+    "y": 0.20116,
+    "match": 0.775,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSleek8SpryGlMatt.b7f2c1f720.webp"
+  },
+  "/images/catalog/sleek-approved-2026-09-23/GBSlk100AnSpGl.fcb38308d06e.png": {
+    "plate": "capped",
+    "scale": 0.90602,
+    "x": 0.00938,
+    "y": 0.06013,
+    "match": 0.927,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlk100AnSpGl.a207f8e759.webp"
+  },
+  "/images/catalog/sleek-approved-2026-09-23/GBSlk100AnSpTslIvyGl.39fd0161f755.png": {
+    "plate": "capped",
+    "scale": 0.95732,
+    "x": 0.04194,
+    "y": 0.04247,
+    "match": 0.95,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlk100AnSpTslIvyGl.5b69c63f3f.webp"
+  },
+  "/images/catalog/sleek-approved-2026-09-23/GBSlk100RdcrShnGl.f46fdca554a1.png": {
+    "plate": "capped",
+    "scale": 0.90602,
+    "x": 0.05069,
+    "y": 0.1229,
+    "match": 0.824,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlk100RdcrShnGl.0ef2b0dfb3.webp"
+  },
+  "/images/catalog/sleek-approved-2026-09-23/GBSlk100SpryMtGl.e22c297f7c54.png": {
+    "plate": "capOff",
+    "scale": 0.90331,
+    "x": 0.06326,
+    "y": 0.06069,
+    "match": 0.793,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlk100SpryMtGl.481b92d0af.webp"
+  },
+  "/images/catalog/sleek-approved-2026-09-23/GBSlk30AnSpGl.95ca224380d6.png": {
+    "plate": "capped",
+    "scale": 0.77035,
+    "x": 0.05777,
+    "y": 0.16908,
+    "match": 0.947,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlk30AnSpGl.9002fe6c74.webp"
+  },
+  "/images/catalog/sleek-approved-2026-09-23/GBSlk30DrpGl.ef34e39e907b.png": {
+    "plate": "capped",
+    "scale": 0.8126,
+    "x": 0.09082,
+    "y": 0.13842,
+    "match": 0.926,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlk30DrpGl.49ddf6c0f9.webp"
+  },
+  "/images/catalog/sleek-approved-2026-09-23/GBSlk30SpryMtGl.4bbaa5fcf6e1.png": {
+    "plate": "capOff",
+    "scale": 0.75244,
+    "x": 0.16031,
+    "y": 0.18356,
+    "match": 0.865,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlk30SpryMtGl.ba67b8a2ee.webp"
+  },
+  "/images/catalog/sleek-approved-2026-09-23/GBSlk50AnSpGl.0df795a44844.png": {
+    "plate": "capped",
+    "scale": 0.83351,
+    "x": 0.0425,
+    "y": 0.11273,
+    "match": 0.955,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlk50AnSpGl.b68d469816.webp"
+  },
+  "/images/catalog/sleek-approved-2026-09-23/GBSlk50AnSpTslIvyGl.261dcc49adb3.png": {
+    "plate": "capped",
+    "scale": 1.32753,
+    "x": -0.15685,
+    "y": 0.05222,
+    "match": 0.889,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlk50AnSpTslIvyGl.a7cc6968f9.webp"
+  },
+  "/images/catalog/sleek-approved-2026-09-23/GBSlk50SpryMtGl.b28e5855217c.png": {
+    "plate": "capOff",
+    "scale": 0.81749,
+    "x": 0.10587,
+    "y": 0.12672,
+    "match": 0.878,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlk50SpryMtGl.4906662dca.webp"
+  },
+  "/images/catalog/sleek-approved-2026-09-23/LBSlk100LtnMtGl.cdcdeb3409a3.png": {
+    "plate": "capOff",
+    "scale": 0.93256,
+    "x": 0.04966,
+    "y": 0.02767,
+    "match": 0.839,
+    "shadow": "/images/catalog/cap-swap-shadows/LBSlk100LtnMtGl.e1a05eb2dc.webp"
+  },
+  "/images/catalog/sleek-approved-2026-09-23/LBSlk30LtnMtGl.4e7f63d5aa6e.png": {
+    "plate": "capOff",
+    "scale": 0.73308,
+    "x": 0.16418,
+    "y": 0.19461,
+    "match": 0.788,
+    "shadow": "/images/catalog/cap-swap-shadows/LBSlk30LtnMtGl.d6d2ff1fda.webp"
+  },
+  "/images/catalog/sleek-approved-2026-09-23/LBSlk50LtnMtGl.8cdeee69fc92.png": {
+    "plate": "capOff",
+    "scale": 0.82314,
+    "x": 0.10387,
+    "y": 0.09713,
+    "match": 0.85,
+    "shadow": "/images/catalog/cap-swap-shadows/LBSlk50LtnMtGl.d9779876ba.webp"
+  }
+}

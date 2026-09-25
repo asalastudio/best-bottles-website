@@ -44,7 +44,7 @@ describe("mega menu destinations", () => {
                 capacities: [range.value],
             })),
         );
-        expect(links[0]?.href).toContain("capacities=miniature");
+        expect(links[0]?.href).toContain("capacities=1-5ml");
         expect(links.some((link) => link.href.includes("0.03"))).toBe(false);
     });
 

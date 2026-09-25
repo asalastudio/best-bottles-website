@@ -1,7 +1,7 @@
 import { APPLICATOR_BUCKETS, APPLICATOR_NAV, FAMILY_ORDER, normalizeCapacityFilterValue, rollerMaterialMatchesProductValues, type RollerMaterial } from "@/lib/catalogFilters";
 import { catalogCapKind, type CatalogCapKind } from "@/lib/products/catalog-cap-photos";
 import { COMPONENT_CATEGORIES } from "@/lib/catalogFilters";
-import { resolveCatalogCardPurchaseVariant, type CatalogPurchaseVariant } from "@/lib/products/catalog-card-purchase";
+import { catalogCardPurchaseOptions, resolveCatalogCardPurchaseVariant, type CatalogPurchaseVariant } from "@/lib/products/catalog-card-purchase";
 import type { CatalogSearchResultShape, CatalogSearchVariantPreviewRow } from "@/lib/catalogSearchFallback";
 import { isCheckoutReady } from "@/lib/checkout";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
@@ -47,6 +47,11 @@ export type GuidedFinderProduct = {
      * with a different sprayer or roller before committing.
      */
     variantPreviews: ProductCardVariantPreview[];
+    /**
+     * The assembly each cap dot sells, keyed by variant-preview id, so picking
+     * a cap on the card swaps the price and the add-to-cart SKU with the photo.
+     */
+    purchaseOptions?: Record<string, CatalogPurchaseVariant>;
     capKind: CatalogCapKind | null;
     slug: string;
 };
@@ -186,6 +191,7 @@ export function buildGuidedFinderFamilies(result: CatalogSearchResultShape, roll
                 ? null
                 : catalogCapKind(group.applicatorTypes ?? [], variantPreviews),
             slug: group.slug,
+            purchaseOptions: catalogCardPurchaseOptions(variants, variantPreviews, displayName),
             purchase: resolveCatalogCardPurchaseVariant(variants, {
                 picturedSku: liveCard.picturedWebsiteSku ?? variant?.websiteSku ?? variant?.graceSku ?? null,
                 primarySku: primarySkuFor(group._id),

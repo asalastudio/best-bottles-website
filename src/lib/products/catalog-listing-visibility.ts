@@ -40,7 +40,11 @@ export function hasCatalogSourceHold(slug: string): boolean {
     ]).has(slug);
 }
 
-export function isVisibleCatalogGroup(group: { slug: string; variantCount: number }, variants?: readonly unknown[]): boolean {
+// Test and internal records ("Internal") are never listed, whatever their slug.
+const HIDDEN_CATEGORIES = new Set(["Internal"]);
+
+export function isVisibleCatalogGroup(group: { slug: string; variantCount: number; category?: string | null }, variants?: readonly unknown[]): boolean {
     return !isHiddenCatalogGroup(group.slug) && !hasCatalogSourceHold(group.slug) && group.variantCount > 0
+        && !HIDDEN_CATEGORIES.has(group.category ?? "")
         && !(HIDDEN_WHEN_EMPTY_GROUPS.has(group.slug) && variants?.length === 0);
 }

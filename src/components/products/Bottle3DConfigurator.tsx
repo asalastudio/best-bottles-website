@@ -176,8 +176,8 @@ export default function BottleConfigurator({
         : base === "roller" ? (withCap ? `Roll-on · ${capLabel} cap` : "Roll-on")
         : base === "reducer" ? (withCap ? `Reducer · ${capLabel} cap` : "Pour reducer")
         : base === "dropper" ? "Glass dropper"
-        : base === "antique" ? "Vintage style bulb sprayer"
-        : base === "antiqueTassel" ? "Vintage style bulb · Tassel"
+        : base === "antique" ? "Vintage-style bulb sprayer"
+        : base === "antiqueTassel" ? "Vintage-style bulb · Tassel"
         : base === "sprayer" ? (withCap ? "Fine-mist spray · Overcap" : "Fine-mist spray")
         : withCap ? "Lotion pump · Overcap" : "Lotion pump";
     const trimLabel = TRIMS.find((t) => t.id === trimMat)?.label ?? "";
