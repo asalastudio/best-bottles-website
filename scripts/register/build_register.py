@@ -63,8 +63,16 @@ COMPONENT_LIST_EXCLUSIONS = {
     "CMP-SPR-CLR-30ML": "PB1ozSpryNat — 1 oz plastic bottle with clear spray top; a product, not a component",
     "CMP-SPR-SLV-": "PB1ozSprySl — 1 oz plastic bottle with silver spray top; a product, not a component",
 }
-RULED_BODY_CLASSES = {"Plastic Bottle": "plastic-bottle"}
+RULED_BODY_CLASSES = {
+    "Plastic Bottle": ("plastic-bottle", "jordan-2026-09-24"),
+    "Metal Atomizer": ("metal-atomizer", "jordan-2026-09-25"),
+    "Aluminum Bottle": ("aluminum-bottle", "jordan-2026-09-25"),
+    "Glass Jar": ("glass-jar", "jordan-2026-09-25"),
+    "Cream Jar": ("cream-jar", "jordan-2026-09-25"),
+}
 RULINGS = [
+    {"date": "2026-09-25", "by": "Jordan", "rule": "Atomizers, aluminium bottles and jars are each their own compatibility class, like plastic bottles: a matching neck finish does not make glass-bottle components compatible with them.",
+     "applies": "bodies.compatibilityClass = metal-atomizer | aluminum-bottle | glass-jar | cream-jar; their listed glass components are not resolved"},
     {"date": "2026-09-24", "by": "Jordan", "rule": "Plastic bottles are their own compatibility class. A 13-415 neck on a plastic bottle does not make the 13-415 glass-bottle components compatible with it, nor it with them.",
      "applies": "bodies.compatibilityClass = plastic-bottle; their listed glass components are not resolved"},
     {"date": "2026-09-24", "by": "Jordan", "rule": "CMP-SPR-CLR-30ML (PB1ozSpryNat) and CMP-SPR-SLV- (PB1ozSprySl) are plastic bottles, not components; remove them from every component list.",
@@ -80,7 +88,7 @@ def compatibility_class(row: dict) -> tuple[str, str]:
     if category in ("Glass Bottle", "Lotion Bottle"):
         return f"glass-{neck or 'no-neck'}", "glass shares components by neck finish"
     if category in RULED_BODY_CLASSES:
-        return RULED_BODY_CLASSES[category], "jordan-2026-09-24"
+        return RULED_BODY_CLASSES[category]
     return slug(category) or "unclassified", "assumed-by-category (not yet ruled)"
 
 
@@ -323,7 +331,7 @@ def main() -> int:
         raw_listed = [c for c in (r.get("components") or []) if c]
         excluded = [c for c in raw_listed if c in COMPONENT_LIST_EXCLUSIONS]
         listed = [c for c in raw_listed if c not in COMPONENT_LIST_EXCLUSIONS]
-        isolated = body_class in RULED_BODY_CLASSES.values()
+        isolated = body_class in {cls for cls, _ in RULED_BODY_CLASSES.values()}
         resolved, foreign, misfiled, labels, unknown = [], [], [], [], []
         for c in ([] if isolated else listed):
             comp = component_by_grace.get(c)
@@ -416,7 +424,8 @@ def main() -> int:
     # ---------- rules ----------
     all_necks = sorted({b["neck"] for b in bodies} | {c["neck"] for c in components})
     rules = {"generatedAt": today, "keys": {"body": "bodyId = [shape-]profile-<capacity>ml-<neck>", "component": "graceSku", "assembly": "graceSku"},
-             "rulings": RULINGS, "componentListExclusions": COMPONENT_LIST_EXCLUSIONS, "ruledBodyClasses": RULED_BODY_CLASSES, "necks": {}}
+             "rulings": RULINGS, "componentListExclusions": COMPONENT_LIST_EXCLUSIONS,
+             "ruledBodyClasses": {category: {"class": cls, "source": source} for category, (cls, source) in RULED_BODY_CLASSES.items()}, "necks": {}}
     for neck in all_necks:
         nb = [b for b in bodies if b["neck"] == neck and b["status"] == "current"]
         nc = [c for c in components if c["neck"] == neck and c["status"] == "current"]
@@ -449,10 +458,13 @@ def main() -> int:
     # ---------- report ----------
     status_counts = Counter(a["status"] for a in assemblies)
     excluded_count = sum(1 for a in assemblies if a["excludedByRule"])
-    isolated_bodies = [b for b in bodies if b["classSource"] == "jordan-2026-09-24"]
+    isolated_bodies = [b for b in bodies if b["classSource"].startswith("jordan-")]
+    ruled_by_class = Counter(b["compatibilityClass"] for b in isolated_bodies)
+    assumed = [b for b in bodies if b["classSource"].startswith("assumed")]
     rulings_lines = ["## Rulings applied", ""] + [f"- **{r['date']} · {r['by']}** — {r['rule']} _(applies: {r['applies']})_" for r in RULINGS] + [
-        f"- Effect this build: pasted products removed from **{excluded_count}** component lists; **{len(isolated_bodies)}** bodies in the ruled `plastic-bottle` class ({', '.join(b['bodyId'] for b in isolated_bodies)}); "
-        f"{sum(1 for b in bodies if b['classSource'].startswith('assumed'))} other non-glass bodies stand in classes assumed from their category until ruled.", ""]
+        f"- Effect this build: pasted products removed from **{excluded_count}** component lists; **{len(isolated_bodies)}** bodies in ruled own classes ("
+        + ", ".join(f"{cls} {n}" for cls, n in sorted(ruled_by_class.items())) + ")"
+        + (f"; {len(assumed)} bodies still in classes assumed from their category, not yet ruled: " + ", ".join(sorted({b['category'] for b in assumed})) if assumed else "; no body class is assumed — every non-glass category is ruled") + ".", ""]
     lines = [f"# Component register — Phase 1 reconciliation ({today})", "",
              f"Source: Convex dev export ({len(rows)} rows, collected {str(data.get('collectedAt', ''))[:19]}Z), "
              f"PSD library inventory ({len(library_rows)} PSDs), body-dims ({len(body_dims)} keys), 23 Sep review files ({len(review_items)} items). Read-only.", "",

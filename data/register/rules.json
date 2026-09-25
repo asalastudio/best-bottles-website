@@ -1,11 +1,17 @@
 {
-  "generatedAt": "2026-09-24",
+  "generatedAt": "2026-09-25",
   "keys": {
     "body": "bodyId = [shape-]profile-<capacity>ml-<neck>",
     "component": "graceSku",
     "assembly": "graceSku"
   },
   "rulings": [
+    {
+      "date": "2026-09-25",
+      "by": "Jordan",
+      "rule": "Atomizers, aluminium bottles and jars are each their own compatibility class, like plastic bottles: a matching neck finish does not make glass-bottle components compatible with them.",
+      "applies": "bodies.compatibilityClass = metal-atomizer | aluminum-bottle | glass-jar | cream-jar; their listed glass components are not resolved"
+    },
     {
       "date": "2026-09-24",
       "by": "Jordan",
@@ -24,7 +30,26 @@
     "CMP-SPR-SLV-": "PB1ozSprySl \u2014 1 oz plastic bottle with silver spray top; a product, not a component"
   },
   "ruledBodyClasses": {
-    "Plastic Bottle": "plastic-bottle"
+    "Plastic Bottle": {
+      "class": "plastic-bottle",
+      "source": "jordan-2026-09-24"
+    },
+    "Metal Atomizer": {
+      "class": "metal-atomizer",
+      "source": "jordan-2026-09-25"
+    },
+    "Aluminum Bottle": {
+      "class": "aluminum-bottle",
+      "source": "jordan-2026-09-25"
+    },
+    "Glass Jar": {
+      "class": "glass-jar",
+      "source": "jordan-2026-09-25"
+    },
+    "Cream Jar": {
+      "class": "cream-jar",
+      "source": "jordan-2026-09-25"
+    }
   },
   "necks": {
     "(none)": {
@@ -373,8 +398,7 @@
         "Lotion Pump": 4
       },
       "assemblies": {
-        "candidate": 1,
-        "verified": 6
+        "candidate": 7
       },
       "matrixAcceptance": null
     },
