@@ -30,6 +30,14 @@ describe('missing source publication hold',()=>{
   expect(isVisibleCatalogGroup({slug:'lotion-bottle-30ml-clear',variantCount:1},[])).toBe(false);
   expect(isVisibleCatalogGroup({slug:'lotion-bottle-30ml-clear',variantCount:1})).toBe(true);
  });
+ it('takes the discontinued LBMetalSilver1oz group off the catalog',()=>{
+  expect(isVisibleCatalogGroup({slug:'lotion-bottle-30ml-clear-18mm',variantCount:1},[{websiteSku:'LBMetalSilver1oz'}])).toBe(false);
+ });
+ it('lists the webhook Slim atomizer group only while it still holds variants',()=>{
+  expect(isVisibleCatalogGroup({slug:'atomizer-5ml-slim',variantCount:3},[{websiteSku:'GBAtom5SlimBlk'}])).toBe(true);
+  expect(isVisibleCatalogGroup({slug:'atomizer-5ml-slim',variantCount:3},[])).toBe(false);
+  expect(isVisibleCatalogGroup({slug:'atomizer-5ml',variantCount:12},[])).toBe(true);
+ });
  it('filters server cards and variants and selects a pictured primary',()=>{
   const result=sanitizeCatalogResult(fixture());
   expect(result.items.map(r=>r._id)).toEqual(['covered','real-lotion']);
