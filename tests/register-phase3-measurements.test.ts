@@ -6,7 +6,7 @@ type Layer = { slot: string; width: number; height: number; pxPerMm: number; anc
 const m = JSON.parse(readFileSync(resolve(__dirname, "..", "data", "register", "phase3", "pilot-measurements.json"), "utf8")) as {
     bodyId: string;
     scaleBasis: { gatePct: number };
-    plates: { glass: string; width: number; height: number; pxPerMm: number; anchors: { axisX: number; seatY: number; shoulderY: number; baselineY: number }; checks: { widthErrorPct: number; passes: boolean; approvable: boolean; acceptedBy: string | null } }[];
+    plates: { glass: string; file: string; width: number; height: number; pxPerMm: number; anchors: { axisX: number; seatY: number; shoulderY: number; baselineY: number }; checks: { widthErrorPct: number; passes: boolean; approvable: boolean; acceptedBy: string | null } }[];
     components: { componentId: string; type: string; layers: Layer[]; checks: { registrationIoU?: number; clippedAtRim?: boolean } }[];
 };
 
