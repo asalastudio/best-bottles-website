@@ -13,11 +13,10 @@
  *
  * Pricing comes from the assembly's published ladder through
  * `catalog-card-purchase.ts` → `volumePricing.ts`; nothing here restates a
- * price. While volume breaks are not honoured at checkout
- * (`NEXT_PUBLIC_VOLUME_TIERS_HONORED_AT_CHECKOUT` off) the headline rate and
- * the button total are what checkout will bill, the menu marks the deeper
- * breaks "Quote", and a quote break shows its rate with a request-a-quote link
- * (the same Checkout / Quote split as the product page's volume table).
+ * price. Every break's rate is shown as the price (Jordan, 2026-09-25: no
+ * "Quote" marks on the card): the headline follows the active break and the
+ * button total is that rate × quantity. Whether checkout bills the break is
+ * `NEXT_PUBLIC_VOLUME_TIERS_HONORED_AT_CHECKOUT`'s concern, not the card's.
  */
 
 import LocaleLink from "@/components/LocaleLink";
@@ -226,16 +225,9 @@ export default function CatalogCardPurchase({
         );
     }
 
-    const p1 = tiers[0]?.unitPrice ?? variant.webPrice1pc;
+    // The active break's rate is the price: headline × quantity = button total.
     const activeUnitPrice = activeTier?.unitPrice ?? variant.webPrice1pc;
-    const quoted = Boolean(activeTier && !activeTier.appliesAtCheckout);
-    // Price consistency: the headline rate and the button total are what the
-    // cart and Shopify checkout will charge. A break checkout does not honour
-    // yet is shown as a quote rate beside it, never as the price.
-    const chargedUnitPrice = quoted ? p1 : activeUnitPrice;
-    const subtotal = (qty ?? 0) * chargedUnitPrice;
-    const firstQuoteTier = tiers.find((tier) => !tier.appliesAtCheckout) ?? null;
-    const quoteHref = `/request-quote?products=${encodeURIComponent(`${title} (SKU: ${variant.graceSku})`)}&quantities=${encodeURIComponent(`${qty ?? activeTier?.minQty ?? 1} units`)}`;
+    const subtotal = (qty ?? 0) * activeUnitPrice;
 
     const addLabel = soldOut
         ? "Out of stock"
@@ -257,11 +249,9 @@ export default function CatalogCardPurchase({
             data-state={soldOut ? "sold-out" : orderBlocked ? "unavailable" : "purchasable"}
         >
             <p className="flex items-baseline gap-1.5 tabular-nums" aria-live="polite" data-testid="catalog-card-price">
-                <span className="text-[18px] font-semibold leading-tight text-[#1c1c1e]">{formatPrice(chargedUnitPrice)}</span>
+                <span className="text-[18px] font-semibold leading-tight text-[#1c1c1e]">{formatPrice(activeUnitPrice)}</span>
                 <span className="whitespace-nowrap text-[12px] text-[#5d6b7e]" data-testid="catalog-card-active-tier">
-                    {quoted
-                        ? "/pc at checkout"
-                        : <>/pc{activeTier && <> · {formatVolumeQtyRange(activeTier.minQty, activeTier.maxQty)} pcs</>}</>}
+                    /pc{activeTier && <> · {formatVolumeQtyRange(activeTier.minQty, activeTier.maxQty)} pcs</>}
                 </span>
             </p>
 
@@ -323,12 +313,7 @@ export default function CatalogCardPurchase({
                                             className={`flex w-full items-center justify-between gap-3 px-3 py-[9px] text-left text-[13px] tabular-nums focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-[#9a7a48] ${active ? "bg-[#1c1c1e] text-white" : "text-[#1c1c1e] hover:bg-[#f1ebe0]"}`}
                                         >
                                             <span className="whitespace-nowrap">{formatVolumeQtyRange(tier.minQty, tier.maxQty)}</span>
-                                            <span className="flex items-baseline gap-1.5 whitespace-nowrap">
-                                                {!tier.appliesAtCheckout && (
-                                                    <span className={`text-[10px] uppercase tracking-[0.08em] ${active ? "text-white/70" : "text-[#8a93a0]"}`}>Quote</span>
-                                                )}
-                                                <b className="font-semibold">{formatPrice(tier.unitPrice)}</b>
-                                            </span>
+                                            <b className="whitespace-nowrap font-semibold">{formatPrice(tier.unitPrice)}</b>
                                         </button>
                                     );
                                 })}
@@ -386,27 +371,12 @@ export default function CatalogCardPurchase({
                     {error}
                 </p>
             )}
-            {firstQuoteTier && !error && (quoted && activeTier ? (
-                <p className="-mt-1 text-[11px] leading-snug text-[#5d6b7e]" data-testid="catalog-card-tier-footnote">
-                    Quote rate <span className="font-semibold text-[#9a7a48]">{formatPrice(activeTier.unitPrice)}/pc</span> for{" "}
-                    {formatVolumeQtyRange(activeTier.minQty, activeTier.maxQty)} pcs.{" "}
-                    <LocaleLink href={quoteHref} className={`whitespace-nowrap text-[#9a7a48] underline underline-offset-2 hover:text-[#1c1c1e] ${FOCUS_RING}`} data-testid="catalog-card-request-quote">
-                        Request a quote
-                    </LocaleLink>
-                </p>
-            ) : (
-                <p className="-mt-1 text-[11px] leading-snug text-[#8a93a0]" data-testid="catalog-card-tier-footnote">
-                    {firstQuoteTier.minQty.toLocaleString("en-US")}+ rates are confirmed on a quote.
-                </p>
-            ))}
-
             <button
                 type="button"
                 data-testid="catalog-card-add"
                 onClick={handleAdd}
                 disabled={!canAdd || qty == null}
                 aria-label={addAriaLabel}
-                data-quote={quoted ? "true" : undefined}
                 className={`w-full whitespace-nowrap bg-[#1c1c1e] p-3 text-[12px] font-medium uppercase tracking-[0.14em] text-white transition-colors motion-reduce:transition-none hover:bg-[#3a3a3c] disabled:cursor-not-allowed disabled:bg-[#d9cdb9] disabled:text-[#5d6b7e] ${FOCUS_RING}`}
             >
                 {addLabel}
