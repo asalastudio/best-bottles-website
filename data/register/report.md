@@ -5,7 +5,7 @@ Source: Convex dev export (2540 rows, collected 2026-09-25T06:24:53Z), PSD libra
 ## Totals
 
 - Bodies: **94 current** (3 retired-only) across 34 neck groups
-- Components: **136 current**, 24 retired, 16 quarantined; **109 current components have a library PSD** (0 via alias-map, 34 case-insensitive)
+- Components: **136 current**, 24 retired, 16 quarantined; **125 current components have a library PSD** (16 via alias-map, 34 case-insensitive)
 - Assemblies: **2016 verified**, **129 retired**, **110 candidate**, **55 quarantine**, **2 exception**
 - Quarantine rows: 120 (see quarantine.csv)
 
@@ -88,72 +88,30 @@ The matrices counted **Glass Bottle** records only; the register also carries at
 | 24-400 | 1 |  |  |  |  |  |  |  |  |  |  |
 | 8-425 | 5 |  |  |  |  |  |  |  |  |  |  |
 
-## Library gaps — 27 current components with no PSD in 20. Caps / 21. Tassels
+## Library gaps — 11 current components with no PSD in 20. Caps / 21. Tassels
 
-- **13-415** (12): CP13-415SpryBlkMt [cap], CP13-415SpryBlkSh [cap], CP13-415SpryBluMt [cap], CP13-415SpryGlMt [cap], CP13-415SpryGlSh [cap], CP13-415SprySlMt [cap], CP13-415SprySlSh [cap], 13-415CAP4SpryCuMt [fine-mist-sprayer], 13-415CAP4SpryGlSh [fine-mist-sprayer], 13-415CAP4SprySlMt [fine-mist-sprayer], CP13-415SpryCuMt [fine-mist-sprayer], GBATom5RedBurg [fine-mist-sprayer]
+- **13-415** (4): 13-415CAP4SpryCuMt [fine-mist-sprayer], 13-415CAP4SpryGlSh [fine-mist-sprayer], 13-415CAP4SprySlMt [fine-mist-sprayer], GBATom5RedBurg [fine-mist-sprayer]
 - **13-425** (2): CP13-425Blk [cap], CP13-425Wht [cap]
 - **17-415** (1): Droppers1ozElg [dropper]
-- **18-400** (2): 18-400CpAppBlk [cap], 18-400CpShortBlk [cap]
-- **18-415** (4): 18-415CAP4SpryMtGl [fine-mist-sprayer], 18-415CAP4SpryShnBlk [fine-mist-sprayer], CP18-415AnSpPnk [vintage-bulb-sprayer], CP18-415AnSpTslGl [tassel-bulb-sprayer]
-- **20-400** (2): 20-400Cp2ozShortBlk [cap], 20-400cp1ozShortBlk [cap]
+- **18-415** (2): 18-415CAP4SpryMtGl [fine-mist-sprayer], 18-415CAP4SpryShnBlk [fine-mist-sprayer]
 - **22-400** (1): CapBlackPoly22mm-400 [cap]
 - **24-400** (1): CP24-400BlkPls [cap]
-- **8-425** (2): 8-425CpShortBlack [cap], 8-425CpShortWhite [cap]
 
-## Library PSDs that no component record claims — 29 stems in 20. Caps
+## Library PSDs that no component record claims — 13 stems in 20. Caps
 
-- **10. 18-415 Ansp Tsl**: AnspTsl18-415Gl
-- **18. 13-415 Sprayers**: Spry13-415BlkMt, Spry13-415CuMt, Spry13-415BlkSh, Spry13-415BluMt, Spry13-415GlSh, Spry13-415GlMt, Spry13-415SlMt, Spry13-415SlSh
-- **2. 20-400  Cap**: CP20-4002ozShortBlk, CP20-4001ozShortBlk
-- **20.  8-245 Caps**: CP8-425ShortBlack, CP8-425ShortWhite
-- **21. Hearts 8-245 Caps**: CP8-425BluTslShortSilverCap, CP8-425ShortBlack, CP8-425GlChainShortShnGlCap, CP8-425SlChainShortShnSlCap, CP8-425RedTslShortShnGlCap
+- **21. Hearts 8-245 Caps**: CP8-425BluTslShortSilverCap, CP8-425GlChainShortShnGlCap, CP8-425SlChainShortShnSlCap, CP8-425RedTslShortShnGlCap
 - **22. Vials Wand**: VialWandBlk, VialWandClr
 - **23. 18-415 Reducer**: 415Reducer
 - **24. 13-415 Roll on**: 13-415PlsticRollon
 - **25. 13-415  Metal Roll on**: 13-415MtlRollon
-- **26. 18-400 Cap**: CP18-400ShortBlk
-- **27. 18-400 Cap with Wand**: CP18-400AppBlk
 - **28. 14.3 Cap**: CP14mmAppShnSlBlueDot, CP14mmAppShnGlRedDot
-- **5. 18-400 Cap**: CP20-4002ozShortBlk
 - **6. 18-415 Caps**: CP18-415ShnBlk
 - **8. 18-415 Lotion**: Ltn18-415SqClr
-- **9. 18-415 Ansp**: Ansp18-415Pnk
 
-## Alias candidates — 31 spelling pairs for Jordan to confirm (alias-candidates.csv)
+## Alias candidates — 0 spelling pairs for Jordan to confirm (alias-candidates.csv)
 
 | Convex websiteSku | library stem | folder(s) | match |
 |---|---|---|---|
-| CP13-415SpryBlkMt | Spry13-415BlkMt | 18. 13-415 Sprayers | tokens-equal 1.0 |
-| CP13-415SpryBlkMt | Spry13-415BluMt | 18. 13-415 Sprayers | similar 0.944 |
-| CP13-415SpryBlkSh | Spry13-415BlkSh | 18. 13-415 Sprayers | tokens-equal 1.0 |
-| CP13-415SpryBlkSh | Spry13-415GlSh | 18. 13-415 Sprayers | similar 0.914 |
-| CP13-415SpryBluMt | Spry13-415BluMt | 18. 13-415 Sprayers | tokens-equal 1.0 |
-| CP13-415SpryBluMt | Spry13-415BlkMt | 18. 13-415 Sprayers | similar 0.944 |
-| CP13-415SpryGlMt | Spry13-415GlMt | 18. 13-415 Sprayers | tokens-equal 1.0 |
-| CP13-415SpryGlMt | Spry13-415BlkMt | 18. 13-415 Sprayers | similar 0.914 |
-| CP13-415SpryGlSh | Spry13-415GlSh | 18. 13-415 Sprayers | tokens-equal 1.0 |
-| CP13-415SpryGlSh | Spry13-415BlkSh | 18. 13-415 Sprayers | similar 0.914 |
-| CP13-415SprySlMt | Spry13-415SlMt | 18. 13-415 Sprayers | tokens-equal 1.0 |
-| CP13-415SprySlMt | Spry13-415SlSh | 18. 13-415 Sprayers | similar 0.882 |
-| CP13-415SprySlSh | Spry13-415SlSh | 18. 13-415 Sprayers | tokens-equal 1.0 |
-| CP13-415SprySlSh | Spry13-415SlMt | 18. 13-415 Sprayers | similar 0.882 |
-| 13-415CAP4SpryCuMt | Spry13-415CuMt | 18. 13-415 Sprayers | similar 0.85 |
-| 13-415CAP4SpryGlSh | Spry13-415GlSh | 18. 13-415 Sprayers | similar 0.85 |
-| 13-415CAP4SprySlMt | Spry13-415SlMt | 18. 13-415 Sprayers | similar 0.85 |
-| 13-415CAP4SprySlMt | Spry13-415CuMt | 18. 13-415 Sprayers | similar 0.8 |
-| CP13-415SpryCuMt | Spry13-415CuMt | 18. 13-415 Sprayers | tokens-equal 1.0 |
-| CP13-415SpryCuMt | Spry13-415BluMt | 18. 13-415 Sprayers | similar 0.914 |
-| 18-400CpAppBlk | CP18-400AppBlk | 27. 18-400 Cap with Wand | similar 0.903 |
-| 18-400CpShortBlk | CP18-400ShortBlk | 26. 18-400 Cap | similar 0.914 |
-| 18-415CAP4SpryMtGl | Spry13-415GlMt | 18. 13-415 Sprayers | similar 0.8 |
-| CP18-415AnSpPnk | Ansp18-415Pnk | 9. 18-415 Ansp | similar 0.839 |
-| CP18-415AnSpTslGl | AnspTsl18-415Gl | 10. 18-415 Ansp Tsl | similar 0.865 |
-| 20-400Cp2ozShortBlk | CP20-4002ozShortBlk | 2. 20-400  Cap | 5. 18-400 Cap | similar 0.864 |
-| 20-400Cp2ozShortBlk | CP20-4001ozShortBlk | 2. 20-400  Cap | similar 0.864 |
-| 20-400cp1ozShortBlk | CP20-4002ozShortBlk | 2. 20-400  Cap | 5. 18-400 Cap | similar 0.864 |
-| 20-400cp1ozShortBlk | CP20-4001ozShortBlk | 2. 20-400  Cap | similar 0.864 |
-| 8-425CpShortBlack | CP8-425ShortBlack | 20.  8-245 Caps | 21. Hearts 8-245 Caps | similar 0.919 |
-| 8-425CpShortWhite | CP8-425ShortWhite | 20.  8-245 Caps | similar 0.919 |
 
 ## Catalogue data defects the register surfaced (Convex, not code)
 
