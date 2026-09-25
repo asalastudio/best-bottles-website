@@ -248,3 +248,9 @@ data/descriptions/pdp/catalog-facts.json
 
 # Dimension drawings (Sunburst traces, fitted finals, review sheets); regenerable
 /output/register-drawings/
+
+# Component register Phase 3: cut plates and layers (native resolution); measurements are committed, pixels are not.
+/output/register-phase3/
+/output/register-bodies/
+# Phase 4 parity gate: renders, legacy kits and review sheets (regenerable)
+/output/register-phase4/

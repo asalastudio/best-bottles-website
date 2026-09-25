@@ -1,0 +1,97 @@
+{
+ "generatedAt": "2026-09-25",
+ "purpose": "Reviewed cap states for master files whose blob-count guess was wrong or ambiguous. dedupe.py treats these as explicit evidence (outranks the heuristic; never a filename or folder label). Only the cap-beside file of each pair is listed: with it explicit, the mis-read capped twin is outranked and the cap-on source stays the curated Capped-folder copy already published.",
+ "files": [
+  {
+   "relPath": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/13. GBSlm30SpryMtGl.psd",
+   "sha256": "829cdd01680bb48cb58f02c324afc2d06d20b888d424203ec357e2267e4bc2ee",
+   "capState": "off",
+   "reviewedBy": "Jordan lane, by eye from a composite of both files (2026-09-25)",
+   "note": "cap beside the bottle, fitment fitted"
+  },
+  {
+   "relPath": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/14. LBSlm30LtnMtGl.psd",
+   "sha256": "e4e7427f88e3ba4851fce72eaebfcc41c2fadba81122e029b7a1689e956857ea",
+   "capState": "off",
+   "reviewedBy": "Jordan lane, by eye from a composite of both files (2026-09-25)",
+   "note": "cap beside the bottle, fitment fitted"
+  },
+  {
+   "relPath": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/15. GBSlm30SpryShnGl.psd",
+   "sha256": "a1995ab84b5db1a2146d02960899b4be5d04acc7443e5476246f36698f55111d",
+   "capState": "off",
+   "reviewedBy": "Jordan lane, by eye from a composite of both files (2026-09-25)",
+   "note": "cap beside the bottle, fitment fitted"
+  },
+  {
+   "relPath": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/16. LBSlm30LtnShnGl.psd",
+   "sha256": "17d2975a649b49de7c6404058bea6cf27fd4cb14f722d33bd6c4d9f909844c5d",
+   "capState": "off",
+   "reviewedBy": "Jordan lane, by eye from a composite of both files (2026-09-25)",
+   "note": "cap beside the bottle, fitment fitted"
+  },
+  {
+   "relPath": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/19. GBSlm30SpryShnBlk.psd",
+   "sha256": "ed2fe53a1e40c27916644ee5a6a27c9f322413497569e67584203acbc84c9033",
+   "capState": "off",
+   "reviewedBy": "Jordan lane, by eye from a composite of both files (2026-09-25)",
+   "note": "cap beside the bottle, fitment fitted"
+  },
+  {
+   "relPath": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/20. LBSlm30LtnShnBlk.psd",
+   "sha256": "62bafccad23fbdf9e8cb4762016a4b501d593ff7c1769dad596a9cdf191c2ce8",
+   "capState": "off",
+   "reviewedBy": "Jordan lane, by eye from a composite of both files (2026-09-25)",
+   "note": "cap beside the bottle, fitment fitted"
+  },
+  {
+   "relPath": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/23. GBSlm30SpryMtSl.psd",
+   "sha256": "16a017f5c6ac11dd16098d81b9869c821efc765ba6b3009423ab6cda3837a47a",
+   "capState": "off",
+   "reviewedBy": "Jordan lane, by eye from a composite of both files (2026-09-25)",
+   "note": "cap beside the bottle, fitment fitted"
+  },
+  {
+   "relPath": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/25. LBSlm30LtnMtSl.psd",
+   "sha256": "038ea154e563ade6af94381ab92c7f0da1d124375d938451a771d351675d80c9",
+   "capState": "off",
+   "reviewedBy": "Jordan lane, by eye from a composite of both files (2026-09-25)",
+   "note": "cap beside the bottle, fitment fitted"
+  },
+  {
+   "relPath": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/27. LBSlm30LtnClOvrCap.psd",
+   "sha256": "8fe61845229d6e37d1cee5585c7eb95869fa80781027adbe1f4f77875a67cc42",
+   "capState": "off",
+   "reviewedBy": "Jordan lane, by eye from a composite of both files (2026-09-25)",
+   "note": "cap beside the bottle, fitment fitted"
+  },
+  {
+   "relPath": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/29. GBSlm30SpryShnSl.psd",
+   "sha256": "e274ef9f125762d4dd656a39c285e6f27bad71aae339207bdbc0be19f030ca09",
+   "capState": "off",
+   "reviewedBy": "Jordan lane, by eye from a composite of both files (2026-09-25)",
+   "note": "cap beside the bottle, fitment fitted"
+  },
+  {
+   "relPath": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/47. GBSlm30SpryCu.psd",
+   "sha256": "e00c75d7dd56b925858f474b86fc69013f228839152f13e8a7770f69915938f5",
+   "capState": "off",
+   "reviewedBy": "Jordan lane, by eye from a composite of both files (2026-09-25)",
+   "note": "cap beside the bottle, fitment fitted"
+  },
+  {
+   "relPath": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/49. LBSlm30LtnCu.psd",
+   "sha256": "42c1f5f381705e96713bbfa021b4f1a63bf60760b4d93d95b2fbb45b16aa9819",
+   "capState": "off",
+   "reviewedBy": "Jordan lane, by eye from a composite of both files (2026-09-25)",
+   "note": "cap beside the bottle, fitment fitted"
+  },
+  {
+   "relPath": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/31. LBSlm30LtnShnSl.psd",
+   "sha256": "89cef6149a5642b93e520107fb2e93c998c04f0abcbb0fc194e4faf07ac54046",
+   "capState": "off",
+   "reviewedBy": "Jordan lane, by eye (2026-09-25)",
+   "note": "the only master file for this SKU: pump fitted, overcap beside; it is the cap-off view, not a front"
+  }
+ ]
+}

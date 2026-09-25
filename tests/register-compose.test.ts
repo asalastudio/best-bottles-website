@@ -1,8 +1,8 @@
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { compose, footY, frameFromDatum, frameFromLegacyKit, orderLayers, placeLayer, placePlate, placementStyle, type Frame, type LayerGeometry, type PlateGeometry } from "@/lib/register/compose";
 
-// The placement arithmetic is shared with the register lane (PR #270); its
-// per-plate measurement suite lives there with data/register/phase3/.
 const plate: PlateGeometry = { width: 768, height: 2304, pxPerMm: 27.2142, anchors: { axisX: 383, seatY: 167, shoulderY: 550, baselineY: 2176 } };
 // The legacy 9 mL Cylinder kit frame on dev: 1000 × 1100, axis 500, seat 279, foot 1055.
 const kit = { canvas: { width: 1000, height: 1100 }, anchors: { axisX: 500, seatY: 279, baselineY: 1055 } };
@@ -59,5 +59,26 @@ describe("register compose: placement", () => {
         expect(style.position).toBe("absolute");
         expect(parseFloat(style.width)).toBeCloseTo((768 * frame.pxPerMm / plate.pxPerMm) / 1000 * 100, 6);
         expect(style.zIndex).toBe(0);
+    });
+});
+
+describe("register compose: the pilot measurements compose without error", () => {
+    const m = JSON.parse(readFileSync(resolve(__dirname, "..", "data", "register", "phase3", "pilot-measurements.json"), "utf8")) as {
+        plates: PlateGeometry[]; components: { componentId: string; layers: LayerGeometry[] }[];
+    };
+    it("places every plate on the kit frame with its foot on the baseline and every layer's anchor on the seat", () => {
+        for (const p of m.plates) {
+            const frame = frameFromLegacyKit(kit, p);
+            expect(footY(p, frame)).toBeCloseTo(1055, 6);
+            for (const c of m.components) {
+                for (const placed of compose(p, c.layers, frame)) {
+                    if (placed.kind !== "layer") continue;
+                    const layer = placed.source as LayerGeometry;
+                    expect(placed.y + layer.anchor.y * placed.scale).toBeCloseTo(279, 6);
+                    expect(placed.width).toBeGreaterThan(0);
+                    expect(placed.width).toBeLessThan(1000);
+                }
+            }
+        }
     });
 });

@@ -132,6 +132,9 @@ def prepare(catalog: Path, out: Path, family: str):
     target.mkdir(parents=True, exist_ok=True)
     for filename in ("sources.json", "alias-map.json", "phash-cache.json", "tokens.json"):
         shutil.copyfile(DATA / filename, target / filename)
+    # Reviewed cap states travel with the batch: dedupe reads them from its data dir.
+    if (DATA / "cap-state-overrides.json").exists():
+        shutil.copyfile(DATA / "cap-state-overrides.json", target / "cap-state-overrides.json")
     source_config = json.loads((target / "sources.json").read_text())
     if set(source_config["libraries"]) != {"master"} or Path(source_config["libraries"]["master"]["root"]).resolve() != MASTER.resolve():
         raise ValueError("The batch requires the canonical master-only source configuration")

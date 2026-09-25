@@ -1,0 +1,2192 @@
+[
+ {
+  "plateKey": "apothecary-15ml-Ground|Cobalt Blue",
+  "bodyId": "apothecary-15ml-Ground",
+  "glass": "Cobalt Blue",
+  "psd": "10. Apothecary/1. Half Oz -15ml Apoth/1. GB15ApthBlue.psd",
+  "override": null,
+  "source": "PSD layer Layer 2",
+  "file": "apothecary-15ml-Ground--cobalt-blue.png",
+  "width": 444,
+  "height": 1177,
+  "sha256": "cd056805d429941f2e629583ca95b2cce84dca708426b1b3cef268c750f4b772",
+  "measured": {
+   "rim": 11,
+   "foot": 1170,
+   "axisX": 221.5,
+   "barrelPx": 417.0,
+   "shoulderY": 482
+  }
+ },
+ {
+  "plateKey": "apothecary-30ml-Ground|Clear",
+  "bodyId": "apothecary-30ml-Ground",
+  "glass": "Clear",
+  "psd": "10. Apothecary/2. 1oz Apoth/2. GB1ozApth.psd",
+  "override": null,
+  "source": "PSD layer Layer 1",
+  "file": "apothecary-30ml-Ground--clear.png",
+  "width": 543,
+  "height": 1393,
+  "sha256": "708bb6524015838a85b4dce7e3d8cce2f095157cb845f9aa70e182d41bf9924a",
+  "measured": {
+   "rim": 6,
+   "foot": 1387,
+   "axisX": 273.0,
+   "barrelPx": 516.0,
+   "shoulderY": 537
+  }
+ },
+ {
+  "plateKey": "apothecary-30ml-Ground|Cobalt Blue",
+  "bodyId": "apothecary-30ml-Ground",
+  "glass": "Cobalt Blue",
+  "psd": "10. Apothecary/2. 1oz Apoth/1. GB1ozApthBlue.psd",
+  "override": null,
+  "source": "PSD layer Layer 2",
+  "file": "apothecary-30ml-Ground--cobalt-blue.png",
+  "width": 536,
+  "height": 1383,
+  "sha256": "9973371f1bd92502b290506203900bd6bc4404a146025489a1b55e9d7a9456ac",
+  "measured": {
+   "rim": 11,
+   "foot": 1375,
+   "axisX": 266.0,
+   "barrelPx": 506.0,
+   "shoulderY": 565
+  }
+ },
+ {
+  "plateKey": "apothecary-30ml-Ground|Green",
+  "bodyId": "apothecary-30ml-Ground",
+  "glass": "Green",
+  "psd": "10. Apothecary/2. 1oz Apoth/3. GB1ozApthGreen.psd",
+  "override": null,
+  "source": "PSD layer Layer 3",
+  "file": "apothecary-30ml-Ground--green.png",
+  "width": 543,
+  "height": 1393,
+  "sha256": "defd841902ae1da921c705400f1dbaa254d5c194cafe03d44a2bdad8898ef239",
+  "measured": {
+   "rim": 6,
+   "foot": 1387,
+   "axisX": 272.5,
+   "barrelPx": 514.0,
+   "shoulderY": 576
+  }
+ },
+ {
+  "plateKey": "bell-10ml-13-415|Clear",
+  "bodyId": "bell-10ml-13-415",
+  "glass": "Clear",
+  "psd": "5.  13-415 Bottles/7. Bell 12ml/1. Bell 12ml (Uncapped) PSD/28. GBBell12Gl.psd",
+  "override": {
+   "psd": "5.  13-415 Bottles/7. Bell 12ml/1. Bell 12ml (Uncapped) PSD/28. GBBell12Gl.psd",
+   "why": "the catalogue sells it as 10 ml; the master library files it as Bell 12 ml (flagged)"
+  },
+  "source": "PSD layer Layer 1",
+  "file": "bell-10ml-13-415--clear.png",
+  "width": 318,
+  "height": 673,
+  "sha256": "0fec7ce41ece40da15438b7f0ec9c5651228db0e9c6cd9ca8192b241c974655e",
+  "measured": {
+   "rim": 10,
+   "foot": 663,
+   "axisX": 157.5,
+   "barrelPx": 299.0,
+   "shoulderY": 292
+  }
+ },
+ {
+  "plateKey": "boston-round-15ml-18-400|Amber",
+  "bodyId": "boston-round-15ml-18-400",
+  "glass": "Amber",
+  "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/1. GBBstnAmb15mlBlkCapSht.psd",
+  "override": null,
+  "source": "PSD layer Layer 2",
+  "file": "boston-round-15ml-18-400--amber.png",
+  "width": 516,
+  "height": 1017,
+  "sha256": "1105f938d17004c0904ffcb86a1f13a6a3b7aaea1ae01877a8f71c5103d6880a",
+  "measured": {
+   "rim": 6,
+   "foot": 1011,
+   "axisX": 208.5,
+   "barrelPx": 295.0,
+   "shoulderY": 185
+  }
+ },
+ {
+  "plateKey": "boston-round-15ml-18-400|Clear",
+  "bodyId": "boston-round-15ml-18-400",
+  "glass": "Clear",
+  "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/3. Clear Bottle (.5ounce:15ml) (capped)/Clear Dropper Bottler 1.5 ounce Alternating Caps (capped)/1. GBBstn15BlkCapSht.psd",
+  "override": null,
+  "source": "PSD layer Layer 4",
+  "file": "boston-round-15ml-18-400--clear.png",
+  "width": 328,
+  "height": 824,
+  "sha256": "3fef727ee139ea73d5a5c7ecc0bcefd86817e1d093b9f758f826fc057fb256c6",
+  "measured": {
+   "rim": 7,
+   "foot": 817,
+   "axisX": 166.0,
+   "barrelPx": 304.0,
+   "shoulderY": 251
+  }
+ },
+ {
+  "plateKey": "boston-round-15ml-18-400|Cobalt Blue",
+  "bodyId": "boston-round-15ml-18-400",
+  "glass": "Cobalt Blue",
+  "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/1. GBBstnBlu15BlkCapSht.psd",
+  "override": null,
+  "source": "PSD layer Layer 2",
+  "file": "boston-round-15ml-18-400--cobalt-blue.png",
+  "width": 516,
+  "height": 1017,
+  "sha256": "57a20ce7a7ed9724482375c0925bade791ac51f3a22c552b0621d90543c3d95d",
+  "measured": {
+   "rim": 6,
+   "foot": 1011,
+   "axisX": 208.5,
+   "barrelPx": 295.0,
+   "shoulderY": 185
+  }
+ },
+ {
+  "plateKey": "boston-round-30ml-20-400|Amber",
+  "bodyId": "boston-round-30ml-20-400",
+  "glass": "Amber",
+  "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/1. Amber Bottle (1oz)/Amber - Alternating Caps/1. GBBstnAmb1ozMtlRollonMattSl.psd",
+  "override": null,
+  "source": "PSD layer Layer 5",
+  "file": "boston-round-30ml-20-400--amber.png",
+  "width": 824,
+  "height": 1216,
+  "sha256": "f7c461e2f4d671a328d38e60a269f656f71c64369f89ba1ed95d059f50088636",
+  "measured": {
+   "rim": 6,
+   "foot": 1216,
+   "axisX": 412.0,
+   "barrelPx": 812.0,
+   "shoulderY": 14
+  }
+ },
+ {
+  "plateKey": "boston-round-30ml-20-400|Clear",
+  "bodyId": "boston-round-30ml-20-400",
+  "glass": "Clear",
+  "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/1. GBBstn1ozMtlRollonMattSl.psd",
+  "override": {
+   "layer": "Layer 22",
+   "why": "the largest layer is a white fill; Layer 22 is the bottle"
+  },
+  "source": "PSD layer Layer 22 (override)",
+  "file": "boston-round-30ml-20-400--clear.png",
+  "width": 422,
+  "height": 961,
+  "sha256": "c47c1146007f7ff25d0c8e4741ca92fb1dc281a259c305ca0c727a455752a223",
+  "measured": {
+   "rim": 8,
+   "foot": 954,
+   "axisX": 213.5,
+   "barrelPx": 395.0,
+   "shoulderY": 283
+  }
+ },
+ {
+  "plateKey": "boston-round-30ml-20-400|Cobalt Blue",
+  "bodyId": "boston-round-30ml-20-400",
+  "glass": "Cobalt Blue",
+  "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/2. Cobalt Blue Bottle (1oz)/Cobalt Blue - Alternating Caps /1. GBBstnBlu1ozMtlRollonMattSl.psd",
+  "override": null,
+  "source": "PSD layer Layer 5",
+  "file": "boston-round-30ml-20-400--cobalt-blue.png",
+  "width": 824,
+  "height": 1216,
+  "sha256": "5bbd4677068426a3ec7e040ffe29ee176261c82597cdee6b1e359f3f2c6a0e95",
+  "measured": {
+   "rim": 6,
+   "foot": 1216,
+   "axisX": 412.0,
+   "barrelPx": 812.0,
+   "shoulderY": 14
+  }
+ },
+ {
+  "plateKey": "boston-round-60ml-20-400|Amber",
+  "bodyId": "boston-round-60ml-20-400",
+  "glass": "Amber",
+  "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/1. Amber Bottle (2 ounce:60 ml)/Amber - Alternating Caps/1. GBBstnAmb2ozMtlRollonMattSl.psd",
+  "override": {
+   "sibling": true,
+   "why": "the Amber PSD holds only the cap; the body is flattened into the background"
+  },
+  "source": "sibling: the Amber PSD holds only the cap; the body is flattened into the background",
+  "file": null
+ },
+ {
+  "plateKey": "boston-round-60ml-20-400|Clear",
+  "bodyId": "boston-round-60ml-20-400",
+  "glass": "Clear",
+  "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/10. GBBstn2ozRollonMattGl.psd",
+  "override": {
+   "layer": "Layer 11",
+   "why": "Layer 11 is the bottle; the cap sits beside it"
+  },
+  "source": "PSD layer Layer 11 (override)",
+  "file": "boston-round-60ml-20-400--clear.png",
+  "width": 487,
+  "height": 1327,
+  "sha256": "139d1b0201168666064a793e5fafb93836efe5aa0360465fae0522421bcdaaee",
+  "measured": {
+   "rim": 7,
+   "foot": 1319,
+   "axisX": 247.0,
+   "barrelPx": 457.0,
+   "shoulderY": 484
+  }
+ },
+ {
+  "plateKey": "boston-round-60ml-20-400|Cobalt Blue",
+  "bodyId": "boston-round-60ml-20-400",
+  "glass": "Cobalt Blue",
+  "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/2. Cobalt Blue Bottle (2 ounce:60 ml)/Cobalt Blue 2oz - Alternating Caps  /1. GBBstnBlu2ozMtlRollonMattSl.psd",
+  "override": {
+   "sibling": true,
+   "why": "the Cobalt PSD holds only the cap; the body is flattened into the background"
+  },
+  "source": "sibling: the Cobalt PSD holds only the cap; the body is flattened into the background",
+  "file": null
+ },
+ {
+  "plateKey": "circle-100ml-18-415|Clear",
+  "bodyId": "circle-100ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/11. GBCrcl100SpryMtGl.psd",
+  "override": {
+   "layer": "Layer 1",
+   "why": "the dip tube runs past the canvas edge and won the baseline test"
+  },
+  "source": "PSD layer Layer 1 (override)",
+  "file": "circle-100ml-18-415--clear.png",
+  "width": 1254,
+  "height": 1473,
+  "sha256": "9f8f2683e50c3c77feb7bcd2adefc1042750212c4df3c3cb6cd189f75d2648f6",
+  "measured": {
+   "rim": 8,
+   "foot": 1464,
+   "axisX": 625.5,
+   "barrelPx": 1193.0,
+   "shoulderY": 543
+  }
+ },
+ {
+  "plateKey": "circle-100ml-18-415|Frosted",
+  "bodyId": "circle-100ml-18-415",
+  "glass": "Frosted",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/6. 100ml Circle Frst, Ltn & Frst, capped/11. GBCrclFrst100SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 1",
+  "file": "circle-100ml-18-415--frosted.png",
+  "width": 1079,
+  "height": 1295,
+  "sha256": "8d4efeee4d96299b7db63a094ad2a1f87b9e9d59318527093aadbf34e6eb0c07",
+  "measured": {
+   "rim": 7,
+   "foot": 1288,
+   "axisX": 539.0,
+   "barrelPx": 1020.0,
+   "shoulderY": 493
+  }
+ },
+ {
+  "plateKey": "circle-15ml-13-415|Clear",
+  "bodyId": "circle-15ml-13-415",
+  "glass": "Clear",
+  "psd": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /1. GBCrcl15BlkSht.psd",
+  "override": null,
+  "source": "PSD layer Layer 8",
+  "file": "circle-15ml-13-415--clear.png",
+  "width": 605,
+  "height": 745,
+  "sha256": "60910e955c56ae99ad988dfc77df75be38cdd34dd7b285c53eb69b5fbdd13739",
+  "measured": {
+   "rim": 10,
+   "foot": 739,
+   "axisX": 303.5,
+   "barrelPx": 562.0,
+   "shoulderY": 298
+  }
+ },
+ {
+  "plateKey": "circle-30ml-15-415|Clear",
+  "bodyId": "circle-30ml-15-415",
+  "glass": "Clear",
+  "psd": "4.  15-415 Bottles/2. Circle Clear 30ml - Uncapped/Circle 30ml/1. GBCrcl30SpryBlk.psd",
+  "override": null,
+  "source": "PSD layer Layer 2",
+  "file": "circle-30ml-15-415--clear.png",
+  "width": 725,
+  "height": 952,
+  "sha256": "bbfa5902dcf69dbf09a66e7a572898cf56c82b49cbba576216b5dd24e40076e7",
+  "measured": {
+   "rim": 8,
+   "foot": 945,
+   "axisX": 360.0,
+   "barrelPx": 680.0,
+   "shoulderY": 380
+  }
+ },
+ {
+  "plateKey": "circle-50ml-18-415|Clear",
+  "bodyId": "circle-50ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/4.  50ml Circle, Ltn & Spr, Capped/11. GBCrcl50SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 9",
+  "file": "circle-50ml-18-415--clear.png",
+  "width": 1020,
+  "height": 1239,
+  "sha256": "91ce3de980c66bff171b2106866dbb6c6c0669ae62ea2eb6720de8acee55c69a",
+  "measured": {
+   "rim": 8,
+   "foot": 1232,
+   "axisX": 506.5,
+   "barrelPx": 960.0,
+   "shoulderY": 495
+  }
+ },
+ {
+  "plateKey": "circle-50ml-18-415|Frosted",
+  "bodyId": "circle-50ml-18-415",
+  "glass": "Frosted",
+  "psd": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/1. GBCrclFrst50RdcrShnGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 8",
+  "file": "circle-50ml-18-415--frosted.png",
+  "width": 1013,
+  "height": 1192,
+  "sha256": "82e8535b70af909c8387749946a7f596d5301249bbecde0fd0694a77ecbf3da1",
+  "measured": {
+   "rim": 7,
+   "foot": 1185,
+   "axisX": 506.0,
+   "barrelPx": 957.0,
+   "shoulderY": 454
+  }
+ },
+ {
+  "plateKey": "cream-jar-15ml-37mm|Clear",
+  "bodyId": "cream-jar-15ml-37mm",
+  "glass": "Clear",
+  "psd": "14. Cream Jars/Uncapped/13. Jar Clear, White cap 15ml/CJClr15Wht.psd",
+  "override": null,
+  "source": "PSD layer Layer 4 (colour from the saved composite: brightnesscontrast, huesaturation)",
+  "file": "cream-jar-15ml-37mm--clear.png",
+  "width": 2106,
+  "height": 1098,
+  "sha256": "8668c175f72877c5a451ff4cfd18682cb59083728a74b2affde84a69d6a4f6d3",
+  "measured": {
+   "rim": 8,
+   "foot": 1090,
+   "axisX": 1044.5,
+   "barrelPx": 1778.0,
+   "shoulderY": 280
+  }
+ },
+ {
+  "plateKey": "cream-jar-20ml-40mm|White",
+  "bodyId": "cream-jar-20ml-40mm",
+  "glass": "White",
+  "psd": "14. Cream Jars/Uncapped/16. Jar White, White cap 20ml/CJWhite20.psd",
+  "override": null,
+  "source": "PSD layer Layer 1",
+  "file": "cream-jar-20ml-40mm--white.png",
+  "width": 1486,
+  "height": 799,
+  "sha256": "451d401ef0211dee8aa3618a9984b5d26146961b47bb90d7b654ecc6909f1028",
+  "measured": {
+   "rim": 39,
+   "foot": 790,
+   "axisX": 743.5,
+   "barrelPx": 1227.0,
+   "shoulderY": 62
+  }
+ },
+ {
+  "plateKey": "cream-jar-30ml-45mm|Amber",
+  "bodyId": "cream-jar-30ml-45mm",
+  "glass": "Amber",
+  "psd": "14. Cream Jars/Uncapped/3. Jar Amb, Sl Cap 30ml/CJAmb30SlCap.psd",
+  "override": null,
+  "source": "PSD layer Layer 6",
+  "file": "cream-jar-30ml-45mm--amber.png",
+  "width": 1785,
+  "height": 1718,
+  "sha256": "00df08c97d91470e62b388209021f37ef8d84a8ae7bee45b15d2996a0a6e2464",
+  "measured": {
+   "rim": 9,
+   "foot": 1708,
+   "axisX": 901.5,
+   "barrelPx": 1739.0,
+   "shoulderY": 280
+  }
+ },
+ {
+  "plateKey": "cream-jar-30ml-45mm|Frosted",
+  "bodyId": "cream-jar-30ml-45mm",
+  "glass": "Frosted",
+  "psd": "14. Cream Jars/Uncapped/10. Jar Frst, Blk Cap 30ml/CJFrst30BlkCap.psd",
+  "override": null,
+  "source": "PSD layer Layer 1",
+  "file": "cream-jar-30ml-45mm--frosted.png",
+  "width": 1591,
+  "height": 1394,
+  "sha256": "737c1ad45a521af301d6a78e561ac716cc7c2512b76ed57017d48a938207307f",
+  "measured": {
+   "rim": 9,
+   "foot": 1386,
+   "axisX": 800.5,
+   "barrelPx": 1557.0,
+   "shoulderY": 416
+  }
+ },
+ {
+  "plateKey": "cream-jar-3ml-20mm|Clear",
+  "bodyId": "cream-jar-3ml-20mm",
+  "glass": "Clear",
+  "psd": "14. Cream Jars/Uncapped/14. Jar Clear, White cap 3ml/CJClr3.psd",
+  "override": null,
+  "source": "PSD layer Layer 1",
+  "file": "cream-jar-3ml-20mm--clear.png",
+  "width": 1387,
+  "height": 791,
+  "sha256": "18d6464bba928fcaae4c8c57c00bfac593dba7c575326151d911929647320c66",
+  "measured": {
+   "rim": 9,
+   "foot": 782,
+   "axisX": 684.2,
+   "barrelPx": 1280.0,
+   "shoulderY": 298
+  }
+ },
+ {
+  "plateKey": "cream-jar-3ml-20mm|Cobalt Blue",
+  "bodyId": "cream-jar-3ml-20mm",
+  "glass": "Cobalt Blue",
+  "psd": null,
+  "override": {
+   "sibling": true,
+   "why": "CJ3Blue.psd holds the jar flattened into the background; geometry from the Clear 3 ml jar, cobalt from the reference glass"
+  },
+  "source": "sibling: CJ3Blue.psd holds the jar flattened into the background; geometry from the Clear 3 ml jar, cobalt from the reference glass",
+  "file": null
+ },
+ {
+  "plateKey": "cream-jar-40ml-48/400|Amber",
+  "bodyId": "cream-jar-40ml-48/400",
+  "glass": "Amber",
+  "psd": "14. Cream Jars/Uncapped/7. Jar Amb, Sl Cap 40ml/CJAmb40SlCap.psd",
+  "override": null,
+  "source": "PSD layer Layer 4",
+  "file": "cream-jar-40ml-48/400--amber.png",
+  "width": 1763,
+  "height": 1602,
+  "sha256": "74e0c46bd0411d33eb762e3a652865478ddc0c8df839c9199535a61555c49bc9",
+  "measured": {
+   "rim": 8,
+   "foot": 1592,
+   "axisX": 886.0,
+   "barrelPx": 1730.0,
+   "shoulderY": 457
+  }
+ },
+ {
+  "plateKey": "cream-jar-40ml-48/400|Frosted",
+  "bodyId": "cream-jar-40ml-48/400",
+  "glass": "Frosted",
+  "psd": "14. Cream Jars/Uncapped/2. Jar Frost, Sl Cap 40ml/CJFrst40SlCap.psd",
+  "override": null,
+  "source": "PSD layer Layer 1",
+  "file": "cream-jar-40ml-48/400--frosted.png",
+  "width": 1809,
+  "height": 1669,
+  "sha256": "2d77132bf727892f9804e547de2feae47656f9c1d977df6697d2c67960c37ffc",
+  "measured": {
+   "rim": 9,
+   "foot": 1660,
+   "axisX": 911.0,
+   "barrelPx": 1766.0,
+   "shoulderY": 480
+  }
+ },
+ {
+  "plateKey": "cream-jar-5ml-27mm|Amber",
+  "bodyId": "cream-jar-5ml-27mm",
+  "glass": "Amber",
+  "psd": "14. Cream Jars/Uncapped/11. Jar Amb, Blk Cap 5ml/CJAmb5mlBlkCap.psd",
+  "override": null,
+  "source": "PSD layer Layer 1",
+  "file": "cream-jar-5ml-27mm--amber.png",
+  "width": 1009,
+  "height": 929,
+  "sha256": "8937a660c3882836d14c973e51d5cba6301b4728d107fe941a6d36a296e92922",
+  "measured": {
+   "rim": 8,
+   "foot": 921,
+   "axisX": 505.0,
+   "barrelPx": 985.0,
+   "shoulderY": 330
+  }
+ },
+ {
+  "plateKey": "cream-jar-5ml-27mm|Clear",
+  "bodyId": "cream-jar-5ml-27mm",
+  "glass": "Clear",
+  "psd": "14. Cream Jars/Uncapped/17. Jar Clear, Clear Cap 5ml/CJClr5mlClrCap.psd",
+  "override": null,
+  "source": "kit body layer CJClr5mlClrCap (cream-jar-5ml-clear-27mm) (PSD: largest standing layer Layer 1 is too small ((2270, 1470, 3280, 2172)); body is probably flattened into the background)",
+  "file": "cream-jar-5ml-27mm--clear.png",
+  "width": 452,
+  "height": 318,
+  "sha256": "24d1bd1b87722406edd7ed264925e8e23ecc9395a80885ece4754468037df406",
+  "measured": {
+   "rim": 14,
+   "foot": 311,
+   "axisX": 227.5,
+   "barrelPx": 432.5,
+   "shoulderY": 116
+  }
+ },
+ {
+  "plateKey": "cream-jar-60ml-58mm|Frosted",
+  "bodyId": "cream-jar-60ml-58mm",
+  "glass": "Frosted",
+  "psd": null,
+  "override": {
+   "exclude": "plastic, not glass: the library names it Cream Jar Frost Plastic 60ml"
+  },
+  "source": "excluded: plastic, not glass: the library names it Cream Jar Frost Plastic 60ml",
+  "file": null
+ },
+ {
+  "plateKey": "cream-jar-63ml-58mm|White",
+  "bodyId": "cream-jar-63ml-58mm",
+  "glass": "White",
+  "psd": "14. Cream Jars/Uncapped/20. Cream Jar White Plastic 60ml, silver cap/CJWhitePlsSlFr2oz.psd",
+  "override": null,
+  "source": "PSD layer Layer 1",
+  "file": "cream-jar-63ml-58mm--white.png",
+  "width": 1872,
+  "height": 1806,
+  "sha256": "7627494125f5740b04d5e72e0fc172c71231ce978a1b939b6b913b13aa08ef78",
+  "measured": {
+   "rim": 8,
+   "foot": 1798,
+   "axisX": 948.5,
+   "barrelPx": 1820.0,
+   "shoulderY": 123
+  }
+ },
+ {
+  "plateKey": "cylinder-100ml-18-415|Clear",
+  "bodyId": "cylinder-100ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/3.  100ml Cyl, Ltn & Spry Capped/11. GBCyl100SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 25",
+  "file": "cylinder-100ml-18-415--clear.png",
+  "width": 520,
+  "height": 2407,
+  "sha256": "81a8e5d1fb119f7a0c97faac225d0ea36750f65bfada740924556f3a40957ed2",
+  "measured": {
+   "rim": 112,
+   "foot": 2399,
+   "axisX": 260.0,
+   "barrelPx": 486.0,
+   "shoulderY": 406
+  }
+ },
+ {
+  "plateKey": "cylinder-25ml-18-415|Clear",
+  "bodyId": "cylinder-25ml-18-415",
+  "glass": "Clear",
+  "psd": null,
+  "override": null,
+  "source": "kit body layer GBcyl25SpryShnBlk (cylinder-25ml-clear-18-415) (PSD: no PSD)",
+  "file": "cylinder-25ml-18-415--clear.png",
+  "width": 294,
+  "height": 725,
+  "sha256": "3ecfc5b50b792469b93932243b0fc1f53518fc779a488b45196e749d54533d92",
+  "measured": {
+   "rim": 12,
+   "foot": 718,
+   "axisX": 146.0,
+   "barrelPx": 270.0,
+   "shoulderY": 138
+  }
+ },
+ {
+  "plateKey": "cylinder-28ml-16mm|Clear",
+  "bodyId": "cylinder-28ml-16mm",
+  "glass": "Clear",
+  "psd": null,
+  "override": null,
+  "source": "kit body layer GBMtlRoll28Blk (cylinder-28ml-clear-16mm) (PSD: no PSD)",
+  "file": "cylinder-28ml-16mm--clear.png",
+  "width": 305,
+  "height": 780,
+  "sha256": "eb133d6b1b302b9742fbdaa11394f53cf8a419cc9ab64dcfee31ad1da2bdeffe",
+  "measured": {
+   "rim": 12,
+   "foot": 773,
+   "axisX": 151.5,
+   "barrelPx": 281.0,
+   "shoulderY": 148
+  }
+ },
+ {
+  "plateKey": "cylinder-3.3ml-12mm|Clear",
+  "bodyId": "cylinder-3.3ml-12mm",
+  "glass": "Clear",
+  "psd": "17. Additional Bottles/GBSpry3mlClBlk.psd",
+  "override": null,
+  "source": "PSD layer Layer 4 copy",
+  "file": "cylinder-3.3ml-12mm--clear.png",
+  "width": 533,
+  "height": 1124,
+  "sha256": "519cd09cc479ee4e0ee7122316b1152406d4f349ab0d72024f35d01f1b1f658b",
+  "measured": {
+   "rim": 9,
+   "foot": 1115,
+   "axisX": 266.5,
+   "barrelPx": 512.0,
+   "shoulderY": 26
+  }
+ },
+ {
+  "plateKey": "cylinder-30ml-18-415|Clear",
+  "bodyId": "cylinder-30ml-18-415",
+  "glass": "Clear",
+  "psd": "17. Additional Bottles/GBSpry1ozSl.psd",
+  "override": {
+   "exclude": "the fixed 30 ml spray pair (a matrix exception): bottle and sprayer are one piece in the PSD and no kit body layer exists"
+  },
+  "source": "excluded: the fixed 30 ml spray pair (a matrix exception): bottle and sprayer are one piece in the PSD and no kit body layer exists",
+  "file": null
+ },
+ {
+  "plateKey": "cylinder-4ml-12mm|Clear",
+  "bodyId": "cylinder-4ml-12mm",
+  "glass": "Clear",
+  "psd": "17. Additional Bottles/GBSpry4mlClBlk.psd",
+  "override": null,
+  "source": "PSD layer Layer 10",
+  "file": "cylinder-4ml-12mm--clear.png",
+  "width": 510,
+  "height": 1394,
+  "sha256": "959aed80da1e3a2df12359d85527a06faa42195f076e02d62b28846cbce646a0",
+  "measured": {
+   "rim": 9,
+   "foot": 1384,
+   "axisX": 254.0,
+   "barrelPx": 489.0,
+   "shoulderY": 32
+  }
+ },
+ {
+  "plateKey": "cylinder-5.5ml-13-415|Clear",
+  "bodyId": "cylinder-5.5ml-13-415",
+  "glass": "Clear",
+  "psd": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /3. GBCyl5SpryBlkMatt.psd",
+  "override": null,
+  "source": "PSD layer Layer 31",
+  "file": "cylinder-5.5ml-13-415--clear.png",
+  "width": 230,
+  "height": 648,
+  "sha256": "3d25c19195644962e487c45888840af0c9b81b62ee4bc9d35181c63b46156366",
+  "measured": {
+   "rim": 8,
+   "foot": 638,
+   "axisX": 116.0,
+   "barrelPx": 201.0,
+   "shoulderY": 157
+  }
+ },
+ {
+  "plateKey": "cylinder-50ml-16mm|Clear",
+  "bodyId": "cylinder-50ml-16mm",
+  "glass": "Clear",
+  "psd": "13. 16 mm/4. 50ml Uncapped/1. GBCyl50RollBlk.psd",
+  "override": null,
+  "source": "PSD layer Layer 10",
+  "file": "cylinder-50ml-16mm--clear.png",
+  "width": 521,
+  "height": 1380,
+  "sha256": "7eb8c9f83d0c24db59301fb004457b027568d1b8beb7a8a5065e288d547a998a",
+  "measured": {
+   "rim": 53,
+   "foot": 1372,
+   "axisX": 258.5,
+   "barrelPx": 487.0,
+   "shoulderY": 222
+  }
+ },
+ {
+  "plateKey": "cylinder-50ml-18-415|Clear",
+  "bodyId": "cylinder-50ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/2.  50ml Cyl, Ltn & Spry, capped/11. GBCyl50SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 8",
+  "file": "cylinder-50ml-18-415--clear.png",
+  "width": 468,
+  "height": 1662,
+  "sha256": "c88e008707a42b96c469756a9605e5b0b3a8ee04199e50ff27a129eb1cd241db",
+  "measured": {
+   "rim": 62,
+   "foot": 1654,
+   "axisX": 234.0,
+   "barrelPx": 436.0,
+   "shoulderY": 266
+  }
+ },
+ {
+  "plateKey": "cylinder-5ml-13-415|Clear",
+  "bodyId": "cylinder-5ml-13-415",
+  "glass": "Clear",
+  "psd": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /1. GBCyl5BlkSht.psd",
+  "override": null,
+  "source": "PSD layer Layer 4",
+  "file": "cylinder-5ml-13-415--clear.png",
+  "width": 230,
+  "height": 648,
+  "sha256": "a9a1e380ab56e94dc8c4c4495903dd290bd2ab6d4118bc60e1112d0712a750bd",
+  "measured": {
+   "rim": 9,
+   "foot": 639,
+   "axisX": 116.0,
+   "barrelPx": 201.0,
+   "shoulderY": 158
+  }
+ },
+ {
+  "plateKey": "cylinder-5ml-13-415|Cobalt Blue",
+  "bodyId": "cylinder-5ml-13-415",
+  "glass": "Cobalt Blue",
+  "psd": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/1. GBCylBlu5BlkSht.psd",
+  "override": null,
+  "source": "PSD layer Layer 5",
+  "file": "cylinder-5ml-13-415--cobalt-blue.png",
+  "width": 218,
+  "height": 648,
+  "sha256": "3994320bf3f84f80980135b0abe9f9e2ef96c283d0be4b78179276ad1f5cb16f",
+  "measured": {
+   "rim": 11,
+   "foot": 640,
+   "axisX": 108.5,
+   "barrelPx": 203.0,
+   "shoulderY": 162
+  }
+ },
+ {
+  "plateKey": "cylinder-9ml-13-415|Clear",
+  "bodyId": "cylinder-9ml-13-415",
+  "glass": "Clear",
+  "psd": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/1. GBTallCyl9BlkSht.psd",
+  "override": {
+   "layer": "Layer 11",
+   "why": "the body is so slender (243 x 1254 px) that the dip-tube filter dropped it and a cap won"
+  },
+  "source": "PSD layer Layer 11 (override)",
+  "file": "cylinder-9ml-13-415--clear.png",
+  "width": 255,
+  "height": 1266,
+  "sha256": "c33c85355637f7901082866c3cdefffb0dd66353d41d2fba7fecf91a975bd186",
+  "measured": {
+   "rim": 9,
+   "foot": 1257,
+   "axisX": 126.0,
+   "barrelPx": 216.0,
+   "shoulderY": 146
+  }
+ },
+ {
+  "plateKey": "cylinder-9ml-13-415|Frosted",
+  "bodyId": "cylinder-9ml-13-415",
+  "glass": "Frosted",
+  "psd": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/1. GBTallCylFrst9BlkSht.psd",
+  "override": {
+   "layer": "Layer 14",
+   "why": "the body is so slender that the dip-tube filter dropped it and a cap won"
+  },
+  "source": "PSD layer Layer 14 (override)",
+  "file": "cylinder-9ml-13-415--frosted.png",
+  "width": 228,
+  "height": 1266,
+  "sha256": "13f9ff16fe35b0a1f1b4f3492190c9b87c5131ecc600f20c56a52bb7f6692597",
+  "measured": {
+   "rim": 8,
+   "foot": 1259,
+   "axisX": 113.5,
+   "barrelPx": 205.0,
+   "shoulderY": 150
+  }
+ },
+ {
+  "plateKey": "cylinder-9ml-17-415|Amber",
+  "bodyId": "cylinder-9ml-17-415",
+  "glass": "Amber",
+  "psd": "3.  17-415 Bottles/3. Amber 9ml (Uncapped)/1. GBCylAmb9MtlRollMattSl.psd",
+  "override": null,
+  "source": "PSD layer Layer 13",
+  "file": "cylinder-9ml-17-415--amber.png",
+  "width": 249,
+  "height": 916,
+  "sha256": "c836efed53bd09db3d7828cff2ae2e1d93bd11aeb69f81a33137a75c046d0eee",
+  "measured": {
+   "rim": 8,
+   "foot": 907,
+   "axisX": 123.5,
+   "barrelPx": 229.0,
+   "shoulderY": 171
+  }
+ },
+ {
+  "plateKey": "cylinder-9ml-17-415|Clear",
+  "bodyId": "cylinder-9ml-17-415",
+  "glass": "Clear",
+  "psd": "3.  17-415 Bottles/9. Clear  (Uncapped)/1. GBCyl9MtlRollMattSl.psd",
+  "override": null,
+  "source": "PSD layer Layer 16",
+  "file": "cylinder-9ml-17-415--clear.png",
+  "width": 265,
+  "height": 927,
+  "sha256": "6e346d38dd95184eb713f3eb0a49b2e58ce80a3ffff9ba7bc5213dcf61af2428",
+  "measured": {
+   "rim": 7,
+   "foot": 920,
+   "axisX": 133.5,
+   "barrelPx": 241.0,
+   "shoulderY": 181
+  }
+ },
+ {
+  "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
+  "bodyId": "cylinder-9ml-17-415",
+  "glass": "Cobalt Blue",
+  "psd": "3.  17-415 Bottles/1. Cobalt Blue 9ml  (Uncapped)/1. GBCylBlu9MtlRollMattSl.psd",
+  "override": null,
+  "source": "PSD layer Layer 11",
+  "file": "cylinder-9ml-17-415--cobalt-blue.png",
+  "width": 249,
+  "height": 916,
+  "sha256": "db31a1866d854e7ed4e473681cee7a513b02a3e85b0e514bf1c3a5b4871b61a9",
+  "measured": {
+   "rim": 8,
+   "foot": 907,
+   "axisX": 123.5,
+   "barrelPx": 229.0,
+   "shoulderY": 171
+  }
+ },
+ {
+  "plateKey": "cylinder-9ml-17-415|Frosted",
+  "bodyId": "cylinder-9ml-17-415",
+  "glass": "Frosted",
+  "psd": "3.  17-415 Bottles/5. Frosted 9ml (Uncapped)/1. GBCylFrst9MtlRollMattSl.psd",
+  "override": null,
+  "source": "PSD layer Layer 15",
+  "file": "cylinder-9ml-17-415--frosted.png",
+  "width": 262,
+  "height": 915,
+  "sha256": "59692bcf0a0e38e23f1140975ef6f50e0a6517dc52bdb1bf27a75405fcc13597",
+  "measured": {
+   "rim": 7,
+   "foot": 904,
+   "axisX": 131.0,
+   "barrelPx": 234.0,
+   "shoulderY": 163
+  }
+ },
+ {
+  "plateKey": "cylinder-9ml-17-415|Swirl",
+  "bodyId": "cylinder-9ml-17-415",
+  "glass": "Swirl",
+  "psd": "3.  17-415 Bottles/7. Swirl 9ml (Uncapped)/1. GBCylSwrl9MtlRollMattSl.psd",
+  "override": null,
+  "source": "PSD layer Layer 17",
+  "file": "cylinder-9ml-17-415--swirl.png",
+  "width": 264,
+  "height": 927,
+  "sha256": "417872cc162a567b2d5894ceac1fc2ce49f937b8f26709a8d7e26c6ad8953914",
+  "measured": {
+   "rim": 7,
+   "foot": 919,
+   "axisX": 134.0,
+   "barrelPx": 237.0,
+   "shoulderY": 182
+  }
+ },
+ {
+  "plateKey": "diamond-60ml-18-415|Clear",
+  "bodyId": "diamond-60ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/28.  60ml Diamond (Clear) Ltn & Spry, capped/11. GBDmnd2ozSpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 8",
+  "file": "diamond-60ml-18-415--clear.png",
+  "width": 596,
+  "height": 1282,
+  "sha256": "823ff6b298e7accd5e7d3dd0bc48f3178611f0d464fdca718a191760a4e7abb5",
+  "measured": {
+   "rim": 9,
+   "foot": 1274,
+   "axisX": 298.5,
+   "barrelPx": 564.0,
+   "shoulderY": 246
+  }
+ },
+ {
+  "plateKey": "diva-100ml-18-415|Clear",
+  "bodyId": "diva-100ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/27.  100ml Diva (Clear) Ltn & Spry, capped/11. GBDiva100SpryMtGl.psd",
+  "override": {
+   "stripWhiteGround": true,
+   "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+  },
+  "source": "PSD layer Layer 1 (white ground stripped)",
+  "file": "diva-100ml-18-415--clear.png",
+  "width": 856,
+  "height": 1563,
+  "sha256": "664a10e50dde4499cdd2f876f02f8c5a073d773d6eb6db3102beffb4845b8c31",
+  "measured": {
+   "rim": 7,
+   "foot": 1556,
+   "axisX": 427.5,
+   "barrelPx": 694.0,
+   "shoulderY": 389
+  }
+ },
+ {
+  "plateKey": "diva-30ml-18-415|Clear",
+  "bodyId": "diva-30ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/23.  30ml Diva Clear, Ltn & Spry, capped/11. GBDiva30SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 5",
+  "file": "diva-30ml-18-415--clear.png",
+  "width": 604,
+  "height": 1177,
+  "sha256": "8043de398badc57d51aa6b3ae23cce5bdace9ff13da0d657e8468029aeffed1a",
+  "measured": {
+   "rim": 15,
+   "foot": 1168,
+   "axisX": 302.0,
+   "barrelPx": 489.0,
+   "shoulderY": 353
+  }
+ },
+ {
+  "plateKey": "diva-46ml-18-415|Clear",
+  "bodyId": "diva-46ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/25.  46 Diva (Clear) Ltn & Spry, capped/13. GBDiva46SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 1",
+  "file": "diva-46ml-18-415--clear.png",
+  "width": 671,
+  "height": 1277,
+  "sha256": "2cf9c0e31cf047f39757958854945e94dec8b159a0844c727cb357e63d0bee21",
+  "measured": {
+   "rim": 15,
+   "foot": 1270,
+   "axisX": 336.0,
+   "barrelPx": 543.0,
+   "shoulderY": 355
+  }
+ },
+ {
+  "plateKey": "diva-46ml-18-415|Frosted",
+  "bodyId": "diva-46ml-18-415",
+  "glass": "Frosted",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/26.  46 Diva (Frosted) Ltn & Spry, uncapped/11. GBDivaFrst46SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 3",
+  "file": "diva-46ml-18-415--frosted.png",
+  "width": 672,
+  "height": 1313,
+  "sha256": "0fee868fefc96302059f164fd5283a5ae737ff53fba149536347b1f21b387251",
+  "measured": {
+   "rim": 14,
+   "foot": 1307,
+   "axisX": 339.5,
+   "barrelPx": 551.5,
+   "shoulderY": 393
+  }
+ },
+ {
+  "plateKey": "elegant-100ml-18-415|Clear",
+  "bodyId": "elegant-100ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/18.  100ml Elegant, Ltn & Spry, capped/11. GBElg100SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Shape 1 copy",
+  "file": "elegant-100ml-18-415--clear.png",
+  "width": 893,
+  "height": 1533,
+  "sha256": "efc0cab547a77df4908addb1f780117f0ade14f45e5337327912d8b00756462f",
+  "measured": {
+   "rim": 8,
+   "foot": 1533,
+   "axisX": 444.0,
+   "barrelPx": 867.0,
+   "shoulderY": 230
+  }
+ },
+ {
+  "plateKey": "elegant-100ml-18-415|Frosted",
+  "bodyId": "elegant-100ml-18-415",
+  "glass": "Frosted",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/20.  100ml Eleg Frst, Ltn & Spry, capped/11. GBElgFrst100SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 8",
+  "file": "elegant-100ml-18-415--frosted.png",
+  "width": 897,
+  "height": 1583,
+  "sha256": "0fd38c54899e4c4028c34d43fdb0279422bc1d9275f413c2e342b166023bdbda",
+  "measured": {
+   "rim": 13,
+   "foot": 1576,
+   "axisX": 449.5,
+   "barrelPx": 868.0,
+   "shoulderY": 269
+  }
+ },
+ {
+  "plateKey": "elegant-15ml-13-415|Clear",
+  "bodyId": "elegant-15ml-13-415",
+  "glass": "Clear",
+  "psd": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/1. GBElg15BlkSht.psd",
+  "override": null,
+  "source": "PSD layer Layer 6",
+  "file": "elegant-15ml-13-415--clear.png",
+  "width": 435,
+  "height": 730,
+  "sha256": "6c66e9cbf4f9ef6ce0ed2560e3fce89673d3246d415eec653e116bcee3e5f5ce",
+  "measured": {
+   "rim": 6,
+   "foot": 724,
+   "axisX": 216.0,
+   "barrelPx": 416.0,
+   "shoulderY": 162
+  }
+ },
+ {
+  "plateKey": "elegant-15ml-13-415|Frosted",
+  "bodyId": "elegant-15ml-13-415",
+  "glass": "Frosted",
+  "psd": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/1. GBElgFrst15BlkSht.psd",
+  "override": null,
+  "source": "PSD layer Layer 8",
+  "file": "elegant-15ml-13-415--frosted.png",
+  "width": 439,
+  "height": 725,
+  "sha256": "6836960d1560814c6e1f53c8c1bdc9a3e0100d9d0cc9222741e1329a815b7631",
+  "measured": {
+   "rim": 6,
+   "foot": 718,
+   "axisX": 220.0,
+   "barrelPx": 419.0,
+   "shoulderY": 156
+  }
+ },
+ {
+  "plateKey": "elegant-30ml-15-415|Clear",
+  "bodyId": "elegant-30ml-15-415",
+  "glass": "Clear",
+  "psd": "4.  15-415 Bottles/6. Elegant Clear 30ml - Uncapped/Elegant Clear 30/4. GBElg30SpryMattSl.psd",
+  "override": null,
+  "source": "PSD layer Layer 20",
+  "file": "elegant-30ml-15-415--clear.png",
+  "width": 551,
+  "height": 869,
+  "sha256": "bd53911018f8340a80fc360b98c5bdd1c0a10212be2023fc51d1f50fd7b0e049",
+  "measured": {
+   "rim": 7,
+   "foot": 859,
+   "axisX": 275.0,
+   "barrelPx": 532.0,
+   "shoulderY": 131
+  }
+ },
+ {
+  "plateKey": "elegant-30ml-15-415|Frosted",
+  "bodyId": "elegant-30ml-15-415",
+  "glass": "Frosted",
+  "psd": "4.  15-415 Bottles/8. Elegant Frosted 30ml - Uncapped/Elegant Frst 30/1. GBElgFrst30SpryBlk.psd",
+  "override": null,
+  "source": "PSD layer Layer 11",
+  "file": "elegant-30ml-15-415--frosted.png",
+  "width": 555,
+  "height": 901,
+  "sha256": "df82376f77ba615fc9ddb031f94d7d9803a722d26aee85d1df63965128d7696c",
+  "measured": {
+   "rim": 10,
+   "foot": 894,
+   "axisX": 278.0,
+   "barrelPx": 532.0,
+   "shoulderY": 155
+  }
+ },
+ {
+  "plateKey": "elegant-60ml-18-415|Clear",
+  "bodyId": "elegant-60ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/17.  60ml Eleg, Ltn & Spry, capped/11. GBElg60SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Shape 3",
+  "file": "elegant-60ml-18-415--clear.png",
+  "width": 814,
+  "height": 1231,
+  "sha256": "1a11e6c7191823ddf0982a004607b8e85b6f20bc2e2ea6e6a048e7a49ac60b73",
+  "measured": {
+   "rim": 9,
+   "foot": 1223,
+   "axisX": 406.2,
+   "barrelPx": 790.0,
+   "shoulderY": 253
+  }
+ },
+ {
+  "plateKey": "elegant-60ml-18-415|Frosted",
+  "bodyId": "elegant-60ml-18-415",
+  "glass": "Frosted",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/19.  60ml Eleg Frst, Ltn & Spry, capped/11. GBElgFrst60SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 3",
+  "file": "elegant-60ml-18-415--frosted.png",
+  "width": 794,
+  "height": 1262,
+  "sha256": "360937130171a829d5ed897aabf75207afa5c72726a0d36b11f42643cba03b4d",
+  "measured": {
+   "rim": 9,
+   "foot": 1255,
+   "axisX": 395.0,
+   "barrelPx": 769.0,
+   "shoulderY": 278
+  }
+ },
+ {
+  "plateKey": "empire-100ml-18-415|Clear",
+  "bodyId": "empire-100ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/22.  100 Empire, Ltn & Spry, capped/11. GBEmp100SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 18",
+  "file": "empire-100ml-18-415--clear.png",
+  "width": 709,
+  "height": 1514,
+  "sha256": "0157fc2f753273f3fc0a9da5d12e5f681cb3ef347235b0dfb61ffb2971cce71d",
+  "measured": {
+   "rim": 13,
+   "foot": 1510,
+   "axisX": 333.5,
+   "barrelPx": 632.0,
+   "shoulderY": 240
+  }
+ },
+ {
+  "plateKey": "empire-50ml-18-415|Clear",
+  "bodyId": "empire-50ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/21.  50 Empire, Ltn & Spry, capped/11. GBEmp50SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 17",
+  "file": "empire-50ml-18-415--clear.png",
+  "width": 543,
+  "height": 1280,
+  "sha256": "689801f308f187d1dc1470ff5911a9fb2943504980e615668de8b7242de54b0f",
+  "measured": {
+   "rim": 16,
+   "foot": 1269,
+   "axisX": 273.2,
+   "barrelPx": 514.0,
+   "shoulderY": 266
+  }
+ },
+ {
+  "plateKey": "eternal-flame-decorative-35ml-Ground|Clear",
+  "bodyId": "eternal-flame-decorative-35ml-Ground",
+  "glass": "Clear",
+  "psd": "17. Additional Bottles/GBEternalFlameClear.psd",
+  "override": null,
+  "source": "PSD layer Brightness/Contrast 3",
+  "file": "eternal-flame-decorative-35ml-Ground--clear.png",
+  "width": 1610,
+  "height": 1215,
+  "sha256": "331d690e047891c5fa799842d1afcb0dc5d6647a6d8510832d1004c1577e20b7",
+  "measured": {
+   "rim": 8,
+   "foot": 1207,
+   "axisX": 803.5,
+   "barrelPx": 1490.5,
+   "shoulderY": 627
+  }
+ },
+ {
+  "plateKey": "eternal-flame-decorative-35ml-Ground|Cobalt Blue",
+  "bodyId": "eternal-flame-decorative-35ml-Ground",
+  "glass": "Cobalt Blue",
+  "psd": "19. Eternal Flames/GBEternalFlameBlue.psd",
+  "override": null,
+  "source": "PSD layer Curves 3 (colour from the saved composite: curves, huesaturation, vibrance)",
+  "file": "eternal-flame-decorative-35ml-Ground--cobalt-blue.png",
+  "width": 2257,
+  "height": 1461,
+  "sha256": "1e2e531cdddde90d6ffd565fbd458432c96f07b1139b12ca09b0af87916850fd",
+  "measured": {
+   "rim": 8,
+   "foot": 1453,
+   "axisX": 1126.8,
+   "barrelPx": 2074.0,
+   "shoulderY": 743
+  }
+ },
+ {
+  "plateKey": "eternal-flame-decorative-35ml-Ground|Green",
+  "bodyId": "eternal-flame-decorative-35ml-Ground",
+  "glass": "Green",
+  "psd": "19. Eternal Flames/GBEternalFlameGreen.psd",
+  "override": null,
+  "source": "PSD layer Curves 3",
+  "file": "eternal-flame-decorative-35ml-Ground--green.png",
+  "width": 1610,
+  "height": 2205,
+  "sha256": "a41deeb0c6eb6f58048a3c9ba914c3118f45c79d648398bd44311c24e6422c6c",
+  "measured": {
+   "rim": 8,
+   "foot": 2197,
+   "axisX": 807.0,
+   "barrelPx": 573.0,
+   "shoulderY": 1362
+  }
+ },
+ {
+  "plateKey": "flair-15ml-13-415|Clear",
+  "bodyId": "flair-15ml-13-415",
+  "glass": "Clear",
+  "psd": "5.  13-415 Bottles/11. Flair 15ml/1. Flair 15ml  (uncapped) PSD /1. GBFlair15BlkSht.psd",
+  "override": null,
+  "source": "PSD layer Layer 25",
+  "file": "flair-15ml-13-415--clear.png",
+  "width": 605,
+  "height": 919,
+  "sha256": "437c10fd76c64b084b49ce3f3e37cd6a132934bf825149612206190d22631e5b",
+  "measured": {
+   "rim": 11,
+   "foot": 903,
+   "axisX": 302.0,
+   "barrelPx": 508.0,
+   "shoulderY": 301
+  }
+ },
+ {
+  "plateKey": "genie-decorative-32ml-Ground|Clear",
+  "bodyId": "genie-decorative-32ml-Ground",
+  "glass": "Clear",
+  "psd": "17. Additional Bottles/GB1ozGenieCl.psd",
+  "override": null,
+  "source": "PSD layer Layer 1",
+  "file": "genie-decorative-32ml-Ground--clear.png",
+  "width": 1071,
+  "height": 2669,
+  "sha256": "4cc035b155eedfba0072ab5b17d76fb63cabd45518d627ce60abcdac9b3c2e95",
+  "measured": {
+   "rim": 9,
+   "foot": 2661,
+   "axisX": 537.8,
+   "barrelPx": 783.5,
+   "shoulderY": 1601
+  }
+ },
+ {
+  "plateKey": "genie-decorative-32ml-Ground|Cobalt Blue",
+  "bodyId": "genie-decorative-32ml-Ground",
+  "glass": "Cobalt Blue",
+  "psd": "17. Additional Bottles/GB1ozGenieBl.psd",
+  "override": null,
+  "source": "PSD layer Layer 1",
+  "file": "genie-decorative-32ml-Ground--cobalt-blue.png",
+  "width": 1070,
+  "height": 2003,
+  "sha256": "1d08a22e5cb61ea8fec143a377c507cc5b1524a97d0fee2878b7c9dc73eb6f56",
+  "measured": {
+   "rim": 8,
+   "foot": 1995,
+   "axisX": 532.5,
+   "barrelPx": 949.5,
+   "shoulderY": 1094
+  }
+ },
+ {
+  "plateKey": "grace-55ml-18-415|Clear",
+  "bodyId": "grace-55ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/29.  55ml Grace (Clear) Ltn & Spry, capped/11. GBGrce55SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 15",
+  "file": "grace-55ml-18-415--clear.png",
+  "width": 721,
+  "height": 1628,
+  "sha256": "e0b9adfcfe05c42a47af4656fc0a87e8261fe56eebad6cb4de6a91f74bec5398",
+  "measured": {
+   "rim": 14,
+   "foot": 1621,
+   "axisX": 365.0,
+   "barrelPx": 604.0,
+   "shoulderY": 396
+  }
+ },
+ {
+  "plateKey": "heart-decorative-4ml-8mm|Frosted",
+  "bodyId": "heart-decorative-4ml-8mm",
+  "glass": "Frosted",
+  "psd": "9.   8mm Deco Hearts /1. Small Decorative Hearts /1. Frst 4 ml Heart/1. Frst 4ml Heart/2. GBHeartFrst4KeyGld.psd",
+  "override": null,
+  "source": "PSD layer Layer 3",
+  "file": "heart-decorative-4ml-8mm--frosted.png",
+  "width": 483,
+  "height": 664,
+  "sha256": "02fac2c632e2c6acd42c770bf586c6a8e5ec1398db988065c4fb6d233092634e",
+  "measured": {
+   "rim": 10,
+   "foot": 652,
+   "axisX": 247.0,
+   "barrelPx": 430.0,
+   "shoulderY": 230
+  }
+ },
+ {
+  "plateKey": "lotion-bottle-30ml-18mm|Clear",
+  "bodyId": "lotion-bottle-30ml-18mm",
+  "glass": "Clear",
+  "psd": "18. Perfume Glass Bottles with Metal Decoration/LBMetalSilver1oz.psd",
+  "override": {
+   "exclude": "metal-clad bottle: the sleeve and pump are one merged layer, no bare glass"
+  },
+  "source": "excluded: metal-clad bottle: the sleeve and pump are one merged layer, no bare glass",
+  "file": null
+ },
+ {
+  "plateKey": "lotion-bottle-30ml-no-neck|Clear",
+  "bodyId": "lotion-bottle-30ml-no-neck",
+  "glass": "Clear",
+  "psd": "LB1ozGl.psd",
+  "override": {
+   "exclude": "bottle and gold pump are one merged layer, no bare glass"
+  },
+  "source": "excluded: bottle and gold pump are one merged layer, no bare glass",
+  "file": null
+ },
+ {
+  "plateKey": "lotion-bottle-3ml-Snap-On|Clear",
+  "bodyId": "lotion-bottle-3ml-Snap-On",
+  "glass": "Clear",
+  "psd": "18. Perfume Glass Bottles with Metal Decoration/LB3mlClear.psd",
+  "override": {
+   "exclude": "sample vial and sprayer are one merged layer, no bare glass"
+  },
+  "source": "excluded: sample vial and sprayer are one merged layer, no bare glass",
+  "file": null
+ },
+ {
+  "plateKey": "marble-decorative-10ml-17.52mm|Clear",
+  "bodyId": "marble-decorative-10ml-17.52mm",
+  "glass": "Clear",
+  "psd": "18. Perfume Glass Bottles with Metal Decoration/GBMtlMrblLarge.psd",
+  "override": {
+   "exclude": "metal-and-wood decorated bottle with its crystal cap in one layer; no bare glass"
+  },
+  "source": "excluded: metal-and-wood decorated bottle with its crystal cap in one layer; no bare glass",
+  "file": null
+ },
+ {
+  "plateKey": "marble-decorative-5ml-17.52mm|Clear",
+  "bodyId": "marble-decorative-5ml-17.52mm",
+  "glass": "Clear",
+  "psd": "18. Perfume Glass Bottles with Metal Decoration/GBMtlMrblSmall.psd",
+  "override": {
+   "exclude": "metal-and-wood decorated bottle (wood sleeve, gold base); no bare glass"
+  },
+  "source": "excluded: metal-and-wood decorated bottle (wood sleeve, gold base); no bare glass",
+  "file": null
+ },
+ {
+  "plateKey": "pear-apothecary-118ml-Ground|Clear",
+  "bodyId": "pear-apothecary-118ml-Ground",
+  "glass": "Clear",
+  "psd": "10. Apothecary/4. 4oz Pear Apoth/GBPearClear4ozStpr.psd",
+  "override": null,
+  "source": "PSD layer Layer 3",
+  "file": "pear-apothecary-118ml-Ground--clear.png",
+  "width": 960,
+  "height": 1616,
+  "sha256": "bfb6bcff366550dce59e5cfff3d62b51d01e986ef30852400c901ae37e5b3970",
+  "measured": {
+   "rim": 11,
+   "foot": 1605,
+   "axisX": 475.0,
+   "barrelPx": 863.0,
+   "shoulderY": 756
+  }
+ },
+ {
+  "plateKey": "pear-decorative-355ml-Ground|Clear",
+  "bodyId": "pear-decorative-355ml-Ground",
+  "glass": "Clear",
+  "psd": "10. Apothecary/8. 12 Oz Pear /GBCB12ozPear.psd",
+  "override": null,
+  "source": "PSD layer Layer 2",
+  "file": "pear-decorative-355ml-Ground--clear.png",
+  "width": 1242,
+  "height": 2666,
+  "sha256": "718f5fa6988e9a9661dedf850aa260e4b51e6aef1a21c5994118dc1a11ac3a01",
+  "measured": {
+   "rim": 9,
+   "foot": 2659,
+   "axisX": 628.5,
+   "barrelPx": 1032.0,
+   "shoulderY": 938
+  }
+ },
+ {
+  "plateKey": "pillar-9ml-13-415|Clear",
+  "bodyId": "pillar-9ml-13-415",
+  "glass": "Clear",
+  "psd": "12. Vials/0. All Vials/Capped/27. GBPillar9RollBlk.psd",
+  "override": {
+   "psd": "12. Vials/0. All Vials/Capped/27. GBPillar9RollBlk.psd",
+   "why": "filed as GBPillar9RollBlk, capped only"
+  },
+  "source": "PSD layer Layer 8",
+  "file": "pillar-9ml-13-415--clear.png",
+  "width": 322,
+  "height": 727,
+  "sha256": "f1ed4397b7c976ab10075cfc6045d29454b3a0e967220e2e40efac0ac5c3c069",
+  "measured": {
+   "rim": 6,
+   "foot": 718,
+   "axisX": 159.5,
+   "barrelPx": 295.0,
+   "shoulderY": 136
+  }
+ },
+ {
+  "plateKey": "pillar-9ml-17-415|Clear",
+  "bodyId": "pillar-9ml-17-415",
+  "glass": "Clear",
+  "psd": null,
+  "override": {
+   "exclude": "no master PSD; the only Pillar file is the 13-415 roll-on"
+  },
+  "source": "excluded: no master PSD; the only Pillar file is the 13-415 roll-on",
+  "file": null
+ },
+ {
+  "plateKey": "rectangle-10ml-13-415|Clear",
+  "bodyId": "rectangle-10ml-13-415",
+  "glass": "Clear",
+  "psd": "5.  13-415 Bottles/16. Tall Rectangular 10ml/1. Tall Rectangular 10ml (uncapped) PSD/1. GBTallRect10BlkSht.psd",
+  "override": {
+   "stripWhiteGround": true,
+   "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+  },
+  "source": "PSD layer Layer 10 (white ground stripped)",
+  "file": "rectangle-10ml-13-415--clear.png",
+  "width": 220,
+  "height": 1212,
+  "sha256": "0d55411aa710fafb7d48495471e3bcaa05f6bffe56c9dfe0f353f33a95c83b41",
+  "measured": {
+   "rim": 7,
+   "foot": 1205,
+   "axisX": 111.0,
+   "barrelPx": 199.0,
+   "shoulderY": 151
+  }
+ },
+ {
+  "plateKey": "rectangle-9ml-Ground|Clear",
+  "bodyId": "rectangle-9ml-Ground",
+  "glass": "Clear",
+  "psd": "17. Additional Bottles/GBSQSTBlue.psd",
+  "override": null,
+  "source": "PSD layer Layer 5",
+  "file": "rectangle-9ml-Ground--clear.png",
+  "width": 374,
+  "height": 940,
+  "sha256": "74dcf7d7ec5e5d73ea5759be05cc83e16710fa46b1c2845b0fa54ec9b40c4826",
+  "measured": {
+   "rim": 13,
+   "foot": 934,
+   "axisX": 187.5,
+   "barrelPx": 347.0,
+   "shoulderY": 402
+  }
+ },
+ {
+  "plateKey": "round-128ml-18-415|Clear",
+  "bodyId": "round-128ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/7.  128ml Round, Ltn & Spry, capped/11. GBRnd128SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 11",
+  "file": "round-128ml-18-415--clear.png",
+  "width": 1054,
+  "height": 1196,
+  "sha256": "c0d95ba395127f16ebb5e59db682cc993090e251659b697fd1200461c802e812",
+  "measured": {
+   "rim": 6,
+   "foot": 1188,
+   "axisX": 501.5,
+   "barrelPx": 955.0,
+   "shoulderY": 476
+  }
+ },
+ {
+  "plateKey": "round-128ml-18-415|Frosted",
+  "bodyId": "round-128ml-18-415",
+  "glass": "Frosted",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/11. GBRndFrst128SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 15",
+  "file": "round-128ml-18-415--frosted.png",
+  "width": 961,
+  "height": 1173,
+  "sha256": "a4326006f27c0aa90b57e11227998530a257be861cdd050a3e8358bbd12cf147",
+  "measured": {
+   "rim": 11,
+   "foot": 1167,
+   "axisX": 481.0,
+   "barrelPx": 902.0,
+   "shoulderY": 498
+  }
+ },
+ {
+  "plateKey": "round-78ml-18-415|Clear",
+  "bodyId": "round-78ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/11. GBRnd78SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 14",
+  "file": "round-78ml-18-415--clear.png",
+  "width": 1038,
+  "height": 1184,
+  "sha256": "a3e1cc5560719c11ff9313d3e793b9bfa15105652e0f1c8d12a61868eeed724e",
+  "measured": {
+   "rim": 366,
+   "foot": 1169,
+   "axisX": 526.0,
+   "barrelPx": 807.0,
+   "shoulderY": 582
+  }
+ },
+ {
+  "plateKey": "round-78ml-18-415|Frosted",
+  "bodyId": "round-78ml-18-415",
+  "glass": "Frosted",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/8.  78 Round Frosted, Spry & Ltn, capped/11. GBRndFrst78SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 10",
+  "file": "round-78ml-18-415--frosted.png",
+  "width": 971,
+  "height": 1179,
+  "sha256": "2837d9d8758e12699b2e56bcc0996dfa8faf6f7bd021d8c1270035fc6066d44a",
+  "measured": {
+   "rim": 14,
+   "foot": 1171,
+   "axisX": 488.0,
+   "barrelPx": 911.0,
+   "shoulderY": 486
+  }
+ },
+ {
+  "plateKey": "royal-13ml-13-415|Clear",
+  "bodyId": "royal-13ml-13-415",
+  "glass": "Clear",
+  "psd": "5.  13-415 Bottles/10. Royal 13ml/1. Royal 13ml (Unapped) PSD /1. GBRoyal13BlkSht.psd",
+  "override": null,
+  "source": "PSD layer Layer 25",
+  "file": "royal-13ml-13-415--clear.png",
+  "width": 573,
+  "height": 785,
+  "sha256": "e021d8878076700e96d93512374f01a1407de6121979056a4d1e722cd282416e",
+  "measured": {
+   "rim": 11,
+   "foot": 778,
+   "axisX": 285.0,
+   "barrelPx": 544.0,
+   "shoulderY": 238
+  }
+ },
+ {
+  "plateKey": "royal-14ml-11mm|Clear",
+  "bodyId": "royal-14ml-11mm",
+  "glass": "Clear",
+  "psd": "18. Perfume Glass Bottles with Metal Decoration/GBMtlCylGl.psd",
+  "override": {
+   "exclude": "decorative bottle and gold cap are one merged layer, no bare glass"
+  },
+  "source": "excluded: decorative bottle and gold cap are one merged layer, no bare glass",
+  "file": null
+ },
+ {
+  "plateKey": "sleek-100ml-18-415|Clear",
+  "bodyId": "sleek-100ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/13. 100ml Sleek, Ltn & Spry capped/11. GBSlk100SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 4",
+  "file": "sleek-100ml-18-415--clear.png",
+  "width": 633,
+  "height": 2079,
+  "sha256": "246dcb06140ff94d108045dd80bc0b99783b16507850e8e42202b527d888dc7d",
+  "measured": {
+   "rim": 8,
+   "foot": 2068,
+   "axisX": 262.0,
+   "barrelPx": 506.0,
+   "shoulderY": 214
+  }
+ },
+ {
+  "plateKey": "sleek-30ml-18-415|Clear",
+  "bodyId": "sleek-30ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/11. 30ml  Slk, Ltn & Spry, capped/11. GBSlk30SpryMtGl.psd",
+  "override": {
+   "stripWhiteGround": true,
+   "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+  },
+  "source": "PSD layer Layer 17 (white ground stripped)",
+  "file": "sleek-30ml-18-415--clear.png",
+  "width": 375,
+  "height": 1176,
+  "sha256": "fbcbf6444eee1146bd9fb4833939a0a7ca80fc1567d04374f0be9fc0f5e90e43",
+  "measured": {
+   "rim": 6,
+   "foot": 1170,
+   "axisX": 190.5,
+   "barrelPx": 352.0,
+   "shoulderY": 199
+  }
+ },
+ {
+  "plateKey": "sleek-50ml-18-415|Clear",
+  "bodyId": "sleek-50ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/12. 50ml Slk, Ltn & Spry, capped/11. GBSlk50SpryMtGl.psd",
+  "override": {
+   "stripWhiteGround": true,
+   "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+  },
+  "source": "PSD layer new (white ground stripped)",
+  "file": "sleek-50ml-18-415--clear.png",
+  "width": 352,
+  "height": 1647,
+  "sha256": "80034b917224ad292fa05e45c00d0e127c5573ed230e34775c465602d96b541e",
+  "measured": {
+   "rim": 7,
+   "foot": 1640,
+   "axisX": 178.0,
+   "barrelPx": 326.0,
+   "shoulderY": 206
+  }
+ },
+ {
+  "plateKey": "sleek-5ml-13-415|Clear",
+  "bodyId": "sleek-5ml-13-415",
+  "glass": "Clear",
+  "psd": "5.  13-415 Bottles/5. Sleek 5ml/1. Sleek 5ml PSD (Uncapped) /1. GBSleek5BlkSht.psd",
+  "override": {
+   "stripWhiteGround": true,
+   "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+  },
+  "source": "PSD layer Layer 3 (white ground stripped)",
+  "file": "sleek-5ml-13-415--clear.png",
+  "width": 234,
+  "height": 555,
+  "sha256": "0cb6dfa8afb9e73b980ccfa14dd8effcc6ceab1971bf42e8cd26317afd435f59",
+  "measured": {
+   "rim": 7,
+   "foot": 549,
+   "axisX": 120.0,
+   "barrelPx": 214.0,
+   "shoulderY": 166
+  }
+ },
+ {
+  "plateKey": "sleek-8ml-13-415|Clear",
+  "bodyId": "sleek-8ml-13-415",
+  "glass": "Clear",
+  "psd": "5.  13-415 Bottles/6. Sleek 8ml/1. Sleek 8ml (Uncapped) PSD /1. GBSleek8BlkSht.psd",
+  "override": null,
+  "source": "PSD layer Layer 7",
+  "file": "sleek-8ml-13-415--clear.png",
+  "width": 226,
+  "height": 796,
+  "sha256": "78d1358f6532a62f403825ed2abbaf6d4286bdf5f141ad7dc0a16420c5fe5f3e",
+  "measured": {
+   "rim": 10,
+   "foot": 788,
+   "axisX": 112.5,
+   "barrelPx": 200.0,
+   "shoulderY": 155
+  }
+ },
+ {
+  "plateKey": "slim-100ml-18-415|Clear",
+  "bodyId": "slim-100ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/11. GBSlm100SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 13",
+  "file": "slim-100ml-18-415--clear.png",
+  "width": 456,
+  "height": 2152,
+  "sha256": "f401770c1862362b501f774aca592d99cfdcc7d84a8aeef9047e95eed55ac207",
+  "measured": {
+   "rim": 8,
+   "foot": 2140,
+   "axisX": 225.5,
+   "barrelPx": 433.0,
+   "shoulderY": 255
+  }
+ },
+ {
+  "plateKey": "slim-30ml-18-415|Clear",
+  "bodyId": "slim-30ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/11. GBSlm30SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 13",
+  "file": "slim-30ml-18-415--clear.png",
+  "width": 425,
+  "height": 1251,
+  "sha256": "5f67890cb4770bfdac32fb15e755d2fe64dfa66ecd2eb927469931b3aba71437",
+  "measured": {
+   "rim": 12,
+   "foot": 1243,
+   "axisX": 210.5,
+   "barrelPx": 404.0,
+   "shoulderY": 235
+  }
+ },
+ {
+  "plateKey": "slim-50ml-18-415|Clear",
+  "bodyId": "slim-50ml-18-415",
+  "glass": "Clear",
+  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/11. GBSlm50SpryMtGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 15",
+  "file": "slim-50ml-18-415--clear.png",
+  "width": 440,
+  "height": 1475,
+  "sha256": "dc24c8c927ecc970cb8c2eef454a0a46e848adc5945a65b5dfa2f21bf595ebcb",
+  "measured": {
+   "rim": 14,
+   "foot": 1464,
+   "axisX": 217.5,
+   "barrelPx": 418.0,
+   "shoulderY": 30
+  }
+ },
+ {
+  "plateKey": "square-15ml-13-415|Clear",
+  "bodyId": "square-15ml-13-415",
+  "glass": "Clear",
+  "psd": "5.  13-415 Bottles/12. Square 15ml/1. Square 15ml (Uncapped) PSD /10. GBSqr15MtlRollSlDot.psd",
+  "override": null,
+  "source": "PSD layer Layer 20",
+  "file": "square-15ml-13-415--clear.png",
+  "width": 338,
+  "height": 632,
+  "sha256": "62018c120a66e95a704fa7f88121a69b9aef864e3eae15dbdc2ec19ed52315c8",
+  "measured": {
+   "rim": 8,
+   "foot": 626,
+   "axisX": 171.0,
+   "barrelPx": 314.0,
+   "shoulderY": 157
+  }
+ },
+ {
+  "plateKey": "teardrop-9ml-Ground|Clear",
+  "bodyId": "teardrop-9ml-Ground",
+  "glass": "Clear",
+  "psd": "17. Additional Bottles/GBTRDPClear.psd",
+  "override": {
+   "cropX": 2800,
+   "why": "stopper and bottle are one merged layer; the bottle starts at x 2892 (the Cobalt file keeps them apart)"
+  },
+  "source": "PSD layer Curves 1 (cropped at x 2800)",
+  "file": "teardrop-9ml-Ground--clear.png",
+  "width": 871,
+  "height": 1224,
+  "sha256": "4ac00111a598855d84b469fdc90be3b10bf009daafa14cbf96c15bf5e1b40772",
+  "measured": {
+   "rim": 9,
+   "foot": 1216,
+   "axisX": 435.0,
+   "barrelPx": 798.0,
+   "shoulderY": 523
+  }
+ },
+ {
+  "plateKey": "teardrop-9ml-Ground|Cobalt Blue",
+  "bodyId": "teardrop-9ml-Ground",
+  "glass": "Cobalt Blue",
+  "psd": "17. Additional Bottles/GBTrdpBlue.psd",
+  "override": {
+   "layer": "Layer 2",
+   "why": "Layer 2 is the bottle; Layer 1 is the stopper set beside it"
+  },
+  "source": "PSD layer Layer 2 (override) (colour from the saved composite: brightnesscontrast)",
+  "file": "teardrop-9ml-Ground--cobalt-blue.png",
+  "width": 863,
+  "height": 1224,
+  "sha256": "5ccc1f0e69e01602cfcd51b113f27c62251e4b3e827b676b463846529c255edd",
+  "measured": {
+   "rim": 9,
+   "foot": 1216,
+   "axisX": 431.5,
+   "barrelPx": 790.0,
+   "shoulderY": 525
+  }
+ },
+ {
+  "plateKey": "teardrop-9ml-Ground|Green",
+  "bodyId": "teardrop-9ml-Ground",
+  "glass": "Green",
+  "psd": "17. Additional Bottles/GBTRDPGreen.psd",
+  "override": {
+   "cropX": 2800,
+   "why": "stopper and bottle are one merged layer; the bottle starts at x 2892"
+  },
+  "source": "PSD layer Curves 1 (colour from the saved composite: huesaturation) (cropped at x 2800)",
+  "file": "teardrop-9ml-Ground--green.png",
+  "width": 863,
+  "height": 1224,
+  "sha256": "82a60fcea225e46d65ff508d304bfe23dff89b0681a2234f351bc196fe952951",
+  "measured": {
+   "rim": 9,
+   "foot": 1216,
+   "axisX": 431.5,
+   "barrelPx": 790.0,
+   "shoulderY": 525
+  }
+ },
+ {
+  "plateKey": "tola-decorative-3ml-14.3mm|Clear",
+  "bodyId": "tola-decorative-3ml-14.3mm",
+  "glass": "Clear",
+  "psd": "16. 14.3mm/New Folder With Items/GB3TPlGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 1",
+  "file": "tola-decorative-3ml-14.3mm--clear.png",
+  "width": 392,
+  "height": 859,
+  "sha256": "46b5d969a6303dca6135df8c9858083d375f7193e5671a3406110a579452ac4f",
+  "measured": {
+   "rim": 13,
+   "foot": 853,
+   "axisX": 196.0,
+   "barrelPx": 361.0,
+   "shoulderY": 318
+  }
+ },
+ {
+  "plateKey": "tola-decorative-6ml-14.3mm|Clear",
+  "bodyId": "tola-decorative-6ml-14.3mm",
+  "glass": "Clear",
+  "psd": "16. 14.3mm/New Folder With Items/GB6TPlGl.psd",
+  "override": null,
+  "source": "PSD layer Layer 1",
+  "file": "tola-decorative-6ml-14.3mm--clear.png",
+  "width": 392,
+  "height": 859,
+  "sha256": "46b5d969a6303dca6135df8c9858083d375f7193e5671a3406110a579452ac4f",
+  "measured": {
+   "rim": 13,
+   "foot": 853,
+   "axisX": 196.0,
+   "barrelPx": 361.0,
+   "shoulderY": 318
+  }
+ },
+ {
+  "plateKey": "tulip-5ml-13-415|Amber",
+  "bodyId": "tulip-5ml-13-415",
+  "glass": "Amber",
+  "psd": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /1. GBTulipAmb5BlkSht.psd",
+  "override": null,
+  "source": "PSD layer Layer 1",
+  "file": "tulip-5ml-13-415--amber.png",
+  "width": 297,
+  "height": 549,
+  "sha256": "10134d43eff78af8c8cf0baa27eeac1b8cad03ec2a835325b5cfe9ef6effa925",
+  "measured": {
+   "rim": 9,
+   "foot": 543,
+   "axisX": 147.5,
+   "barrelPx": 279.0,
+   "shoulderY": 160
+  }
+ },
+ {
+  "plateKey": "tulip-6ml-13-415|Clear",
+  "bodyId": "tulip-6ml-13-415",
+  "glass": "Clear",
+  "psd": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /1. GBTulip6BlkSht.psd",
+  "override": {
+   "stripWhiteGround": true,
+   "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+  },
+  "source": "PSD layer Layer 4 (white ground stripped)",
+  "file": "tulip-6ml-13-415--clear.png",
+  "width": 288,
+  "height": 550,
+  "sha256": "36dd62bf09946211cba10acd1ffae3052a55251a2754e2ef36428a0ae20f5eee",
+  "measured": {
+   "rim": 7,
+   "foot": 543,
+   "axisX": 144.0,
+   "barrelPx": 270.0,
+   "shoulderY": 151
+  }
+ },
+ {
+  "plateKey": "vial-1ml-Plug|Amber",
+  "bodyId": "vial-1ml-Plug",
+  "glass": "Amber",
+  "psd": "12. Vials/2. 1ml Amber PSD Uncapped/1. GB1mlAmbVBlk.psd",
+  "override": null,
+  "source": "PSD layer Layer 4",
+  "file": "vial-1ml-Plug--amber.png",
+  "width": 174,
+  "height": 497,
+  "sha256": "61a7f4407fe075b10be0fca788b24ade909f0a12ab904c61ef6ada985acc4691",
+  "measured": {
+   "rim": 7,
+   "foot": 490,
+   "axisX": 93.0,
+   "barrelPx": 154.0,
+   "shoulderY": 123
+  }
+ },
+ {
+  "plateKey": "vial-1ml-Plug|Clear",
+  "bodyId": "vial-1ml-Plug",
+  "glass": "Clear",
+  "psd": "12. Vials/4. 1ml Clear PSD Uncapped/1. GB1mlVBlk.psd",
+  "override": {
+   "layer": "clear 1ml with black app",
+   "why": "Layer 1 is the black applicator"
+  },
+  "source": "PSD layer clear 1ml with black app (override)",
+  "file": "vial-1ml-Plug--clear.png",
+  "width": 166,
+  "height": 472,
+  "sha256": "938309be6d6b8d3f60b7d23d09f009f84d7051fd8e2167f3221c70a935909393",
+  "measured": {
+   "rim": 24,
+   "foot": 463,
+   "axisX": 83.0,
+   "barrelPx": 109.0,
+   "shoulderY": 25
+  }
+ },
+ {
+  "plateKey": "vial-2ml-13-425|Amber",
+  "bodyId": "vial-2ml-13-425",
+  "glass": "Amber",
+  "psd": "5.  13-415 Bottles/22. GB 1o5 Amber/2.  Amber 1o5  Uncapped/2. GBVialAmb1o5WhtCapSht.psd",
+  "override": {
+   "layer": "Layer 6",
+   "why": "Layer 7 is the cap"
+  },
+  "source": "PSD layer Layer 6 (override)",
+  "file": "vial-2ml-13-425--amber.png",
+  "width": 203,
+  "height": 270,
+  "sha256": "b7dc7b278572094e44a426f16dfe61e1caae147167d921979be5075a48af1b54",
+  "measured": {
+   "rim": 34,
+   "foot": 262,
+   "axisX": 104.0,
+   "barrelPx": 177.0,
+   "shoulderY": 41
+  }
+ },
+ {
+  "plateKey": "vial-2ml-8-425|Amber",
+  "bodyId": "vial-2ml-8-425",
+  "glass": "Amber",
+  "psd": "12. Vials/0. All Vials/Uncapped/GBVAmb2BlackCap.psd",
+  "override": null,
+  "source": "PSD layer Layer 7",
+  "file": "vial-2ml-8-425--amber.png",
+  "width": 151,
+  "height": 415,
+  "sha256": "b90fe0c69867d9f09cd7174245d81551b4a3decb31a4062020fd55c0f0466cc7",
+  "measured": {
+   "rim": 7,
+   "foot": 408,
+   "axisX": 75.5,
+   "barrelPx": 134.0,
+   "shoulderY": 81
+  }
+ },
+ {
+  "plateKey": "vial-2ml-8-425|Clear",
+  "bodyId": "vial-2ml-8-425",
+  "glass": "Clear",
+  "psd": "6.   8-425 Bottles - CB/2. 2ml Dram/1.  Clear 2ml Dram/1. GBVialClr2mlBlackCap.psd",
+  "override": null,
+  "source": "PSD layer Layer 4",
+  "file": "vial-2ml-8-425--clear.png",
+  "width": 154,
+  "height": 434,
+  "sha256": "4a3cae60e79755b7589a4f8ffdeba540677d8bf425b7f4ed0dbcb1ef7af62580",
+  "measured": {
+   "rim": 11,
+   "foot": 427,
+   "axisX": 76.5,
+   "barrelPx": 135.0,
+   "shoulderY": 101
+  }
+ },
+ {
+  "plateKey": "vial-3ml-13-425|Blue",
+  "bodyId": "vial-3ml-13-425",
+  "glass": "Blue",
+  "psd": null,
+  "override": {
+   "exclude": "no master PSD under any name (GBVBlu1o9)"
+  },
+  "source": "excluded: no master PSD under any name (GBVBlu1o9)",
+  "file": null
+ },
+ {
+  "plateKey": "vial-3ml-13-425|Green",
+  "bodyId": "vial-3ml-13-425",
+  "glass": "Green",
+  "psd": null,
+  "override": {
+   "exclude": "no master PSD under any name (GBVGreen2o4)"
+  },
+  "source": "excluded: no master PSD under any name (GBVGreen2o4)",
+  "file": null
+ },
+ {
+  "plateKey": "vial-4ml-13-425|Amber",
+  "bodyId": "vial-4ml-13-425",
+  "glass": "Amber",
+  "psd": "12. Vials/0. All Vials/Uncapped/GBVAmb1DrmBlackCapSht.psd",
+  "override": null,
+  "source": "PSD layer Layer 4",
+  "file": "vial-4ml-13-425--amber.png",
+  "width": 193,
+  "height": 556,
+  "sha256": "05cd813e07ce63c6fd49a7ca970360011f2e9e4ed69c20e11ef31473a1969d2b",
+  "measured": {
+   "rim": 7,
+   "foot": 548,
+   "axisX": 96.5,
+   "barrelPx": 176.0,
+   "shoulderY": 106
+  }
+ },
+ {
+  "plateKey": "vial-4ml-13-425|Blue",
+  "bodyId": "vial-4ml-13-425",
+  "glass": "Blue",
+  "psd": "12. Vials/0. All Vials/Uncapped/GBVBlu1DrmBlackCapSht.psd",
+  "override": null,
+  "source": "PSD layer Layer 4",
+  "file": "vial-4ml-13-425--blue.png",
+  "width": 192,
+  "height": 556,
+  "sha256": "e4c5f42dd121ee604474314d2ac203d862fa89efd2eb1997eac691f37e4c6db9",
+  "measured": {
+   "rim": 7,
+   "foot": 548,
+   "axisX": 96.0,
+   "barrelPx": 175.0,
+   "shoulderY": 106
+  }
+ },
+ {
+  "plateKey": "vial-4ml-13-425|Clear",
+  "bodyId": "vial-4ml-13-425",
+  "glass": "Clear",
+  "psd": "12. Vials/0. All Vials/Capped/GBV1DrmBlkDropper.psd",
+  "override": null,
+  "source": "PSD layer Layer 4",
+  "file": "vial-4ml-13-425--clear.png",
+  "width": 119,
+  "height": 323,
+  "sha256": "dcbe7257a22c48924df7549b6dda4070182073c04f1fa8c1545f0f3ae81da353",
+  "measured": {
+   "rim": 7,
+   "foot": 316,
+   "axisX": 59.5,
+   "barrelPx": 103.0,
+   "shoulderY": 72
+  }
+ },
+ {
+  "plateKey": "vial-4ml-13-425|Green",
+  "bodyId": "vial-4ml-13-425",
+  "glass": "Green",
+  "psd": "12. Vials/0. All Vials/Uncapped/GBVGr1DrmBlackCapSht.psd",
+  "override": null,
+  "source": "PSD layer Layer 4",
+  "file": "vial-4ml-13-425--green.png",
+  "width": 197,
+  "height": 556,
+  "sha256": "d55a557e4f06ea009b6b2e0a91966693eada8c21d4bfc93518fdd7cd92551dc4",
+  "measured": {
+   "rim": 7,
+   "foot": 548,
+   "axisX": 98.5,
+   "barrelPx": 180.0,
+   "shoulderY": 107
+  }
+ },
+ {
+  "plateKey": "vial-9ml-18-400|Clear",
+  "bodyId": "vial-9ml-18-400",
+  "glass": "Clear",
+  "psd": "12. Vials/0. All Vials/Uncapped/GB09BlackCapApp.psd",
+  "override": {
+   "layer": "Layer 7",
+   "why": "Layer 3 is the cap"
+  },
+  "source": "PSD layer Layer 7 (override)",
+  "file": "vial-9ml-18-400--clear.png",
+  "width": 278,
+  "height": 528,
+  "sha256": "15fa04d580604c821ff7c147207ca67799964a6981f7596c3d5e5af50c13130c",
+  "measured": {
+   "rim": 51,
+   "foot": 519,
+   "axisX": 137.5,
+   "barrelPx": 255.0,
+   "shoulderY": 89
+  }
+ }
+]

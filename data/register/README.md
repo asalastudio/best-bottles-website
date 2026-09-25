@@ -20,6 +20,9 @@ nested component dicts to graceSku lists before saving `source/convex-products-<
 | `bodies.csv` | physical body: family × capacity × neck (× distinct shape) | `bodyId` = `[shape-]profile-<capacity>ml-<neck>` | current · retired |
 | `components.csv` | component product | `graceSku` (`websiteSku` kept as the legacy alias) | current · retired · quarantine |
 | `assemblies.csv` | sellable bottle product | `graceSku` | verified · candidate · exception · quarantine · retired |
+
+`components.csv` also holds parts that are not products (`sellable` False), keyed `LIB-<neck>-<name>`.
+`assemblies.csv` carries each SKU's own parts in `buildParts` (`role:componentId; …`), with `buildStatus` resolved · partial · unresolved and the reason.
 | `rules.json` | neck finish | neck | — |
 | `quarantine.csv` | anything that must be resolved before it is composed | — | — |
 | `report.md` | the reconciliation this build produced | — | — |
@@ -44,8 +47,14 @@ so the register and the Build Your Bottle kits name the same physical bottle the
 
 ## Next phase
 
-The Phase 2 schema proposal (Convex tables loaded from this register, coordinate contract, pilot
-readiness) is in `docs/COMPONENT_REGISTER_PHASE_2_SCHEMA.md` and is awaiting approval.
+Phase 2 is built: the register loads into the Convex tables `registerBodies`, `registerBodyPlates`,
+`registerComponents` and `registerAssemblies` (dev only so far). See
+`docs/COMPONENT_REGISTER_PHASE_2_SCHEMA.md`. After a rebuild, push with:
+
+```bash
+npx tsx scripts/register/push-register.ts            # dry run: shape, validate, diff
+npx tsx scripts/register/push-register.ts --apply    # write what changed
+```
 
 ## What the register does not decide
 
