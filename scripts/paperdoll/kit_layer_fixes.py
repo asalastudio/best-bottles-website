@@ -33,7 +33,11 @@ from scipy import ndimage as ndi
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "output" / "kit-fixes"
-KITS = OUT / "kits-dev.jsonl"          # npx convex data productKits --limit 6000 --format jsonLines
+# --target prod switches the dump and manifest: production rows were promoted at other times and can
+# differ from dev, so every fix is computed from the deployment's own layers (dump it with
+# `npx convex data productKits --limit 6000 --format jsonLines --prod`).
+TARGET = "prod" if "--target" in sys.argv and sys.argv[sys.argv.index("--target") + 1] == "prod" else "dev"
+KITS = OUT / f"kits-{TARGET}.jsonl"
 SRC, FIXED, ROLLER = OUT / "layers-src", OUT / "layers-fixed", OUT / "roller"
 CANVAS = (1000, 1100)
 WHITE = 247                              # the retoucher's fill is 248..255; copper highlights sit under it
@@ -234,7 +238,7 @@ def audit(kits) -> dict:
             if f > 0.5:
                 report["filledRoller"].append({"sku": sku, "familyId": k["familyId"], "whiteBelowSeat": round(f, 2)})
     OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / "audit.json").write_text(json.dumps(report, indent=1) + "\n")
+    (OUT / f"audit-{TARGET}.json").write_text(json.dumps(report, indent=1) + "\n")
     for key, rows in report.items():
         print(f"{key}: {len(rows)}")
         for r in rows:
@@ -244,8 +248,18 @@ def audit(kits) -> dict:
 
 # ---------------------------------------------------------------- roller
 def roller_cut_row(a, seat) -> int:
-    """The housing flange sits on the rim: cut at the bottom of the widest band around the seat."""
-    widths = {y: row_width(a, y, y + 1) for y in range(seat - 20, seat + 30)}
+    """The housing flange sits on the rim: cut at the bottom of the widest band around the seat. Rows that
+    are mostly the painted-white insert fill (as wide as the flange, just below it) do not count, but the
+    flange's own bright rim does: widths come from the raw alpha, fill rows are recognised by composition."""
+    widths = {}
+    for y in range(seat - 20, seat + 40):
+        row = a[y]
+        opaque = row[:, 3] > 128
+        if not opaque.any():
+            widths[y] = 0
+            continue
+        fill = float((row[opaque][:, :3].min(axis=1) >= WHITE).mean())
+        widths[y] = 0 if fill > 0.8 else int(np.where(opaque)[0].max() - np.where(opaque)[0].min() + 1)
     top = max(widths.values())
     band = [y for y, w in widths.items() if w >= 0.97 * top]
     return max(band) + 1
@@ -257,8 +271,11 @@ def roller_ref(kits):
     ROLLER.mkdir(parents=True, exist_ok=True)
     k = kits[ROLLER_REFERENCE]
     seat = k["anchors"]["seatY"]
-    a = strip_patch(fetch(part_of(k, "roller")))     # the white insert fill is as wide as the flange: strip it first
-    cut = roller_cut_row(a, seat)
+    raw = fetch(part_of(k, "roller"))
+    # The crop keeps every real pixel, including the flange's bright rim: a flood strip ate that rim the
+    # first time and the housing came back 8% too narrow (Jordan). roller_cut_row ignores the insert fill.
+    cut = roller_cut_row(raw, seat)
+    a = raw.copy()
     a[cut:, :, 3] = 0
     b = bbox(a)
     crop = a[b[1]:b[3], b[0]:b[2]]
@@ -290,17 +307,24 @@ def roller_fit(render_path: Path):
     nb = firm.getbbox()
     sx = (rb[2] - rb[0]) / (nb[2] - nb[0])
     sy = (rb[3] - rb[1]) / (nb[3] - nb[1])
-    s = (sx + sy) / 2
-    fitted = ren.convert("RGBa").resize((round(ren.width * s), round(ren.height * s)), Image.LANCZOS).convert("RGBA")
+    # Fit each axis on its own: the render's silhouette can be a few percent off the photograph's aspect,
+    # and a uniform fit then leaves one edge of the outline uncovered (a dark fringe on the first master).
+    fitted = ren.convert("RGBa").resize((round(ren.width * sx), round(ren.height * sy)), Image.LANCZOS).convert("RGBA")
     fb = Image.fromarray(((np.asarray(fitted)[..., 3] > 96) * 255).astype(np.uint8)).getbbox()
     out = Image.new("RGBA", ref.size, (0, 0, 0, 0))
     out.alpha_composite(fitted, (rb[0] - fb[0], rb[1] - fb[1]))
     o = np.asarray(out).copy()
+    # Under the outline, any pixel the render left thin or empty takes the colour of its nearest solid
+    # render pixel, so the lock never exposes the render's transparent black.
+    solid = o[..., 3] > 32
+    if (~solid).any():
+        _, (iy, ix) = ndi.distance_transform_edt(~solid, return_indices=True)
+        o[..., :3] = o[iy, ix, :3]
     # alpha lock: the reference outline is the geometry; keep the render's colour under it
     o[..., 3] = np.asarray(ref)[..., 3]
     master = Image.fromarray(o).crop(rb)
     master.save(ROLLER / "master.png")
-    report = {"render": str(render_path), "scaleX": round(sx, 4), "scaleY": round(sy, 4), "applied": round(s, 4),
+    report = {"render": str(render_path), "scaleX": round(sx, 4), "scaleY": round(sy, 4),
               "drift": {"widthPct": round((sx - 1) * 100, 2), "heightPct": round((sy - 1) * 100, 2)}, "masterSize": master.size}
     (ROLLER / "master.json").write_text(json.dumps({**meta, **report}, indent=1) + "\n")
     print(json.dumps(report))
@@ -353,7 +377,7 @@ def collar_stop(body: np.ndarray, mech: np.ndarray, seat: int):
 
 def build(kits, with_roller: bool):
     manifest = {"builtAt": time.strftime("%Y-%m-%dT%H:%M:%S"), "kits": {}}
-    fixes = json.loads((OUT / "audit.json").read_text())
+    fixes = json.loads((OUT / f"audit-{TARGET}.json").read_text())
     sheets = {"overcaps": [], "mechanisms": [], "rollers": []}
 
     def record(sku, parts, tags):
@@ -482,7 +506,7 @@ def build(kits, with_roller: bool):
             record(row["sku"], parts, ["filledRoller"])
             sheets["rollers"].append((row["sku"], fetch(rp), a, parts))
 
-    (OUT / "manifest.json").write_text(json.dumps(manifest, indent=1) + "\n")
+    (OUT / f"manifest-{TARGET}.json").write_text(json.dumps(manifest, indent=1) + "\n")
     print(f"manifest: {len(manifest['kits'])} kits; mechanism scales {json.dumps(scales)}")
     review_sheets(kits, sheets)
 
@@ -543,7 +567,7 @@ def review_sheets(kits, sheets):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("cmd", choices=["audit", "roller-ref", "roller-fit", "build"])
-    ap.add_argument("--render"); ap.add_argument("--no-roller", action="store_true")
+    ap.add_argument("--render"); ap.add_argument("--no-roller", action="store_true"); ap.add_argument("--target", default="dev", choices=["dev", "prod"])
     args = ap.parse_args()
     kits = load_kits()
     if args.cmd == "audit": audit(kits)

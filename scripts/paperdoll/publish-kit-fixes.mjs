@@ -28,8 +28,9 @@ const url = prod ? PROD_URL : process.env.NEXT_PUBLIC_CONVEX_URL;
 if (!url) throw new Error("NEXT_PUBLIC_CONVEX_URL missing");
 if (prod && !/precise-raccoon/.test(url)) throw new Error("prod URL mismatch");
 const OUT = resolve(ROOT, "output/kit-fixes");
-const manifest = JSON.parse(await readFile(resolve(OUT, "manifest.json"), "utf8"));
-const dump = new Map((await readFile(resolve(OUT, "kits-dev.jsonl"), "utf8")).split("\n").filter(l => l.startsWith("{")).map(l => JSON.parse(l)).map(r => [r.sku, r]));
+const target = prod ? "prod" : "dev";               // fixes built from this deployment's own dump
+const manifest = JSON.parse(await readFile(resolve(OUT, `manifest-${target}.json`), "utf8"));
+const dump = new Map((await readFile(resolve(OUT, `kits-${target}.jsonl`), "utf8")).split("\n").filter(l => l.startsWith("{")).map(l => JSON.parse(l)).map(r => [r.sku, r]));
 const convex = new ConvexHttpClient(url);
 // every layer this lane has published so far (dev and prod ledgers): a live row made only of dump layers
 // and lane layers is ours to rewrite; anything else means another lane touched it since the dump
@@ -43,21 +44,27 @@ for (const suffix of ["-dev", "-prod"]) {
 
 let skus = Object.keys(manifest.kits).filter(s => !only || only.includes(s)).filter(s => !fixFilter || manifest.kits[s].fixes.some(f => fixFilter.includes(f)))
     .filter(s => !familyPrefix || (dump.get(s)?.familyId ?? "").startsWith(familyPrefix));
-const plan = [];
+const plan = [], skipped = [];
 for (const sku of skus) {
     const entry = manifest.kits[sku];
     const source = dump.get(sku);
-    if (!source) { console.error(`${sku}: not in kits-dev.jsonl`); process.exit(1); }
-    // the row we replace must still be the row we built from (dev moves under us: revision check)
+    if (!source) { console.error(`${sku}: not in kits-${target}.jsonl`); process.exit(1); }
+    // the row we replace must still be the row we built from: every live layer is either from the dump
+    // this lane built on or a layer this lane published. Anything else is skipped and reported, never
+    // overwritten (production rows were promoted at other times and can differ from dev).
     const live = await convex.query(api.productKits.forSku, { websiteSku: source.websiteSku, graceSku: source.graceSku });
-    if (!live) { console.error(`${sku}: no live kit on ${url}`); process.exit(1); }
+    if (!live) { skipped.push({ sku, why: "no live kit" }); continue; }
     const known = new Set([...source.parts.map(p => p.image.sha256), ...laneShas]);
     const foreign = (live.parts ?? []).map(p => p.image.sha256).filter(sha => !known.has(sha));
-    if (foreign.length) { console.error(`${sku}: live row carries layers this lane does not know (${foreign.map(s => s.slice(0, 8)).join(", ")}); re-dump and rebuild`); process.exit(1); }
+    if (foreign.length) { skipped.push({ sku, why: `live layers this lane does not know: ${foreign.map(s => s.slice(0, 8)).join(", ")}` }); continue; }
     const liveShas = (live.parts ?? []).map(p => p.image.sha256).sort().join(",");
     const wantShas = entry.parts.map(p => p.image.sha256).sort().join(",");
     if (liveShas === wantShas) continue;                       // already published exactly this
     plan.push({ sku, entry, source });
+}
+if (skipped.length) {
+    console.log(`skipped ${skipped.length} rows (left untouched on ${url}):`);
+    for (const s of skipped) console.log(`  ${s.sku}: ${s.why}`);
 }
 const uploads = new Map();
 for (const { entry } of plan) for (const p of entry.parts) if (p.image.file && !uploads.has(p.image.sha256)) uploads.set(p.image.sha256, p);
