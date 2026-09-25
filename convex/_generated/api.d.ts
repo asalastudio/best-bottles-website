@@ -43,8 +43,8 @@ import type * as graceMemory from "../graceMemory.js";
 import type * as gracePrompt from "../gracePrompt.js";
 import type * as graceRateLimits from "../graceRateLimits.js";
 import type * as graceSearchUtils from "../graceSearchUtils.js";
-import type * as graceSessions from "../graceSessions.js";
 import type * as graceSessionTraces from "../graceSessionTraces.js";
+import type * as graceSessions from "../graceSessions.js";
 import type * as graceShortlists from "../graceShortlists.js";
 import type * as graceToolDefs from "../graceToolDefs.js";
 import type * as graceUploads from "../graceUploads.js";
@@ -86,6 +86,12 @@ import type * as staffProductEdits from "../staffProductEdits.js";
 import type * as staffProducts from "../staffProducts.js";
 import type * as writeToken from "../writeToken.js";
 
+import type {
+  ApiFromModules,
+  FilterApi,
+  FunctionReference,
+} from "convex/server";
+
 declare const fullApi: ApiFromModules<{
   applyCaseWeightCorrections: typeof applyCaseWeightCorrections;
   backfillEmpireSprayerTrimColor: typeof backfillEmpireSprayerTrimColor;
@@ -122,8 +128,8 @@ declare const fullApi: ApiFromModules<{
   gracePrompt: typeof gracePrompt;
   graceRateLimits: typeof graceRateLimits;
   graceSearchUtils: typeof graceSearchUtils;
-  graceSessions: typeof graceSessions;
   graceSessionTraces: typeof graceSessionTraces;
+  graceSessions: typeof graceSessions;
   graceShortlists: typeof graceShortlists;
   graceToolDefs: typeof graceToolDefs;
   graceUploads: typeof graceUploads;
@@ -156,7 +162,7 @@ declare const fullApi: ApiFromModules<{
   repairCylinderAvailability: typeof repairCylinderAvailability;
   repairCylinderPilot: typeof repairCylinderPilot;
   repairFourFamilyComponents: typeof repairFourFamilyComponents;
-  repairs_fourFamilyComponents: typeof repairs_fourFamilyComponents;
+  "repairs/fourFamilyComponents": typeof repairs_fourFamilyComponents;
   resaleCertificates: typeof resaleCertificates;
   seedProducts: typeof seedProducts;
   shopifySync: typeof shopifySync;

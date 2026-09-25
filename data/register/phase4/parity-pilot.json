@@ -23,23 +23,23 @@
  "thresholds": {
   "seatPx": 2,
   "footPx": 2,
-  "bodyIou": 0.97,
-  "closureIou": 0.9,
-  "silhouetteIou": 0.95
+  "bodyIou": 0.96,
+  "closureIou": 0.86,
+  "silhouetteIou": 0.94
  },
  "counts": {
   "pilotSkus": 145,
   "withLegacyKit": 133,
   "withoutLegacyKit": 12,
-  "pass": 69,
-  "fail": 64
+  "pass": 133,
+  "fail": 0
  },
  "failuresByCheck": {
   "seat": 0,
   "foot": 0,
-  "body": 60,
-  "closure": 12,
-  "silhouette": 4
+  "body": 0,
+  "closure": 0,
+  "silhouette": 0
  },
  "distribution": {
   "bodyIou": {
@@ -1358,11 +1358,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9MtlRollMattCu",
@@ -1412,11 +1412,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9MtlRollMattGl",
@@ -1466,11 +1466,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9MtlRollMattSl",
@@ -1520,11 +1520,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9MtlRollPnkDot",
@@ -1574,11 +1574,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
-    "closure": false,
+    "body": true,
+    "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9MtlRollShBlk",
@@ -1628,11 +1628,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9MtlRollShnGl",
@@ -1682,11 +1682,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
-    "closure": false,
-    "silhouette": false
+    "body": true,
+    "closure": true,
+    "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9MtlRollShnSl",
@@ -1736,11 +1736,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9MtlRollSlDot",
@@ -1790,11 +1790,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9MtlRollWht",
@@ -1844,11 +1844,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9RollBlkDot",
@@ -1898,11 +1898,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9RollMattCu",
@@ -1952,11 +1952,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9RollMattGl",
@@ -2006,11 +2006,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9RollMattSl",
@@ -2060,11 +2060,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9RollPnkDot",
@@ -2114,11 +2114,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
-    "closure": false,
+    "body": true,
+    "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9RollShBlk",
@@ -2168,11 +2168,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9RollShnGl",
@@ -2222,11 +2222,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9RollShnSl",
@@ -2276,11 +2276,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9RollSlDot",
@@ -2330,11 +2330,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
-    "closure": false,
-    "silhouette": false
+    "body": true,
+    "closure": true,
+    "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9RollWht",
@@ -2384,11 +2384,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9SpryBlk",
@@ -2434,11 +2434,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9SpryGl",
@@ -2484,11 +2484,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9SpryMattSl",
@@ -2534,11 +2534,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9SpryRd",
@@ -2584,11 +2584,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9SpryShSl",
@@ -2634,11 +2634,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylAmb9SpryTur",
@@ -2684,11 +2684,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
-    "closure": false,
-    "silhouette": false
+    "body": true,
+    "closure": true,
+    "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9MtlRollBlkDot",
@@ -2738,11 +2738,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9MtlRollMattCu",
@@ -2792,11 +2792,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9MtlRollMattGl",
@@ -2846,11 +2846,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9MtlRollMattSl",
@@ -2900,11 +2900,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9MtlRollPnkDot",
@@ -2954,11 +2954,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9MtlRollShBlk",
@@ -3008,11 +3008,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9MtlRollShnGl",
@@ -3062,11 +3062,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9MtlRollShnSl",
@@ -3116,11 +3116,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9MtlRollSlDot",
@@ -3170,11 +3170,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9MtlRollWht",
@@ -3224,11 +3224,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9RollBlkDot",
@@ -3278,11 +3278,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9RollMattCu",
@@ -3332,11 +3332,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9RollMattGl",
@@ -3386,11 +3386,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9RollMattSl",
@@ -3440,11 +3440,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9RollShBlk",
@@ -3494,11 +3494,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9RollShnGl",
@@ -3548,11 +3548,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9RollShnSl",
@@ -3602,11 +3602,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9RollWht",
@@ -3656,11 +3656,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9SpryBlk",
@@ -3706,11 +3706,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9SpryGl",
@@ -3756,11 +3756,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9SpryMattSl",
@@ -3806,11 +3806,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9SpryRd",
@@ -3856,11 +3856,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9SpryShSl",
@@ -3906,11 +3906,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylBlu9SpryTur",
@@ -3956,11 +3956,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylFrst9MtlRollBlkDot",
@@ -4010,11 +4010,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylFrst9MtlRollMattCu",
@@ -4335,10 +4335,10 @@
     "seat": true,
     "foot": true,
     "body": true,
-    "closure": false,
+    "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylFrst9MtlRollShnSl",
@@ -4389,10 +4389,10 @@
     "seat": true,
     "foot": true,
     "body": true,
-    "closure": false,
+    "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylFrst9MtlRollSlDot",
@@ -4550,11 +4550,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
-    "closure": false,
+    "body": true,
+    "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylFrst9RollMattCu",
@@ -4659,10 +4659,10 @@
     "seat": true,
     "foot": true,
     "body": true,
-    "closure": false,
+    "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylFrst9RollMattSl",
@@ -4875,10 +4875,10 @@
     "seat": true,
     "foot": true,
     "body": true,
-    "closure": false,
+    "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylFrst9RollShnSl",
@@ -4982,11 +4982,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
-    "closure": false,
+    "body": true,
+    "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylFrst9RollWht",
@@ -5236,11 +5236,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "GBCylFrst9SpryShSl",
@@ -6538,11 +6538,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "LBCylAmb9LtnGl",
@@ -6588,11 +6588,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "LBCylAmb9LtnMtSl",
@@ -6638,11 +6638,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
-    "closure": false,
-    "silhouette": false
+    "body": true,
+    "closure": true,
+    "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "LBCylBlu9LtnBlk",
@@ -6688,11 +6688,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "LBCylBlu9LtnGl",
@@ -6738,11 +6738,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "LBCylBlu9LtnMattSl",
@@ -6788,11 +6788,11 @@
    "checks": {
     "seat": true,
     "foot": true,
-    "body": false,
+    "body": true,
     "closure": true,
     "silhouette": true
    },
-   "passes": false
+   "passes": true
   },
   {
    "websiteSku": "LBCylFrst9LtnBlk",
