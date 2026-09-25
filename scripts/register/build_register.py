@@ -36,7 +36,13 @@ ROOT = Path(__file__).resolve().parents[2]
 REGISTER = ROOT / "data" / "register"
 SOURCE = REGISTER / "source"
 PAPER_DOLL = ROOT / "data" / "paper-doll"
-SNAPSHOT = SOURCE / "convex-products-2026-09-24.json.gz"
+def latest_snapshot() -> Path:
+    """The newest dated Convex export in source/ (convex-products-<YYYY-MM-DD>.json.gz)."""
+    found = sorted(SOURCE.glob("convex-products-*.json.gz"))
+    return found[-1] if found else SOURCE / "convex-products-2026-09-24.json.gz"
+
+
+SNAPSHOT = latest_snapshot()
 
 BOTTLE_CATEGORIES = {"Glass Bottle", "Lotion Bottle", "Aluminum Bottle", "Plastic Bottle", "Roll-On Bottle", "Glass Jar", "Cream Jar", "Metal Atomizer"}
 OUT_OF_SCOPE_CATEGORIES = {"Packaging", "Accessory"}
@@ -78,6 +84,76 @@ RULINGS = [
     {"date": "2026-09-24", "by": "Jordan", "rule": "CMP-SPR-CLR-30ML (PB1ozSpryNat) and CMP-SPR-SLV- (PB1ozSprySl) are plastic bottles, not components; remove them from every component list.",
      "applies": "assemblies: excluded from listed components before resolution (494 13-415 lists carried them)"},
 ]
+
+
+# Parts that are not products (Jordan 2026-09-25): keyed LIB-<neck>-<name>, graceSku empty, never sold alone.
+# psdStem names the master COMPONENT library layer; None = no master yet, cut from the productKits roller
+# layers in Phase 3 (the cobalt 9 mL metal roller layer carries a white fill and is not a valid source).
+LIBRARY_PARTS = [
+    {"componentId": "LIB-13-415-MtlRollon", "type": "roller-insert", "neck": "13-415", "rollerMaterial": "metal", "psdStem": "13-415MtlRollon", "itemName": "Metal roller-ball insert, 13-415"},
+    {"componentId": "LIB-13-415-PlsticRollon", "type": "roller-insert", "neck": "13-415", "rollerMaterial": "plastic", "psdStem": "13-415PlsticRollon", "itemName": "Plastic roller-ball insert, 13-415"},
+    {"componentId": "LIB-17-415-MtlRollon", "type": "roller-insert", "neck": "17-415", "rollerMaterial": "metal", "psdStem": None, "itemName": "Metal roller-ball insert, 17-415"},
+    {"componentId": "LIB-17-415-PlsticRollon", "type": "roller-insert", "neck": "17-415", "rollerMaterial": "plastic", "psdStem": None, "itemName": "Plastic roller-ball insert, 17-415"},
+    {"componentId": "LIB-18-415-Reducer", "type": "reducer", "neck": "18-415", "rollerMaterial": "", "psdStem": "415Reducer", "itemName": "Orifice reducer, 18-415"},
+]
+
+# Own-part builds: which component(s) a sellable assembly is physically made of. Rules are validated neck by
+# neck; the pilot neck is 17-415 (2026-09-25). Other necks record why they are not built yet.
+BUILD_RULE_NECKS = {"17-415"}
+FITMENT_BUILD = {  # fitmentType -> (component type, kit slot, roller material)
+    "Metal Roller Ball": ("roll-on-cap", "cap", "metal"),
+    "Plastic Roller Ball": ("roll-on-cap", "cap", "plastic"),
+    "Fine Mist Sprayer": ("fine-mist-sprayer", "sprayer", None),
+    "Lotion Pump": ("lotion-pump", "pump", None),
+}
+GLASS_COLOURS = {"clear", "amber", "cobalt blue", "frosted", "swirl", "blue", "green"}
+
+
+def colour_key(text: str) -> tuple[str, bool]:
+    """(base colour, dotted). 'Black with Dots' and 'Black Dotted' -> ('black', True); 'Matte Copper' -> ('matte copper', False)."""
+    lowered = (text or "").lower()
+    dotted = bool(re.search(r"\bdot(s|ted)?\b", lowered))
+    base = re.sub(r"\bwith\s+dots\b", " ", lowered)  # canonical: "Black with Dots" (src/lib/catalogFilters.ts)
+    base = re.sub(r"\s+", " ", re.sub(r"\b(dotted|dots|dot|cap)\b", " ", base)).strip()
+    return base, dotted
+
+
+def own_build(assembly: dict, body_class: str, by_neck_type: dict, library_ids: set) -> tuple[str, str, str]:
+    """(buildParts, buildStatus, buildReason) for one assembly. Never guesses: a part must match uniquely."""
+    neck, fitment, cap_colour = assembly["neck"], assembly["fitmentType"], assembly["capColor"]
+    if assembly["status"] not in ("verified", "candidate"):
+        return "", "unresolved", f"not composable: assembly status is {assembly['status']}"
+    if not body_class.startswith("glass-"):
+        return "", "unresolved", f"own class {body_class}: no components ruled compatible"
+    if neck not in BUILD_RULE_NECKS:
+        return "", "unresolved", f"own-part rules not written for {neck or 'no neck'} yet (pilot neck is 17-415)"
+    rule = FITMENT_BUILD.get(fitment)
+    if not rule:
+        return "", "unresolved", f"no own-part rule for fitment '{fitment or 'none'}'"
+    ctype, slot, material = rule
+    base, dotted = colour_key(cap_colour)
+    dotted = dotted or "dot" in (assembly["capStyle"] or "").lower()
+    pool = [c for c in by_neck_type.get((neck, ctype), []) if c["dotted"] == dotted]
+    exact = [c for c in pool if colour_key(c["capColor"])[0] == base]
+    family = [c for c in pool if base and colour_key(c["capColor"])[0].split(" ")[-1:] == base.split(" ")[-1:]]
+    match, how = (exact, "type + colour") if exact else (family, "colour family")
+    if len(match) != 1:
+        if base in GLASS_COLOURS:
+            why = f"capColor '{cap_colour}' repeats a glass colour; the Convex row needs its real cap colour"
+        elif match:
+            why = f"{len(match)} {ctype} components match '{cap_colour}': " + ", ".join(c["componentId"] for c in match)
+        else:
+            why = f"no current {neck} {ctype} matches capColor '{cap_colour}'" + (f" with capStyle '{assembly['capStyle']}'" if assembly["capStyle"] else "")
+        return "", "unresolved", why
+    parts = []
+    if material:
+        insert = f"LIB-{neck}-{'MtlRollon' if material == 'metal' else 'PlsticRollon'}"
+        if insert not in library_ids:
+            return "", "partial", f"cap {match[0]['componentId']} found; no {material} roller insert registered for {neck}"
+        parts.append(f"roller:{insert}")
+    parts.append(f"{slot}:{match[0]['componentId']}")
+    note = "" if how == "type + colour" else f" ('{cap_colour}' ~ '{match[0]['capColor']}')"
+    return "; ".join(parts), "resolved", f"own {ctype} matched by {how}{note}"
 
 
 def compatibility_class(row: dict) -> tuple[str, str]:
@@ -158,18 +234,18 @@ def load_export(path: Path) -> dict:
     return data
 
 
-def write_snapshot(data: dict) -> None:
+def write_snapshot(data: dict, path: Path) -> None:
     keep = ["websiteSku", "graceSku", "itemName", "family", "bottleCollection", "category", "shape", "capacityMl", "capacityOz",
             "neckThreadSize", "applicator", "assemblyType", "fitmentStatus", "color", "capColor", "capStyle", "trimColor", "components",
             "productGroupId", "productGroupSlug", "imageUrlCapOff", "productUrl", "stockStatus", "verified", "dataGrade",
             "heightWithoutCap", "heightWithCap", "widthMm", "depthMm", "diameter", "caseQuantity", "webPrice1pc", "shopifyVariantId"]
     rows = [{k: r.get(k) for k in keep if k in r and r.get(k) not in (None, "", [])} for r in data["rows"]]
-    SNAPSHOT.parent.mkdir(parents=True, exist_ok=True)
+    path.parent.mkdir(parents=True, exist_ok=True)
     payload = json.dumps({
         "collectedAt": data.get("collectedAt"), "source": data.get("source"), "deployment": data.get("deployment", "dev:helpful-elephant-638"),
         "action": "products:getProductExportPage", "note": "components trimmed to grace_sku lists; empty fields omitted", "fields": keep, "rows": rows,
     }, separators=(",", ":"), sort_keys=True) + "\n"
-    SNAPSHOT.write_bytes(gzip.compress(payload.encode(), mtime=0))
+    path.write_bytes(gzip.compress(payload.encode(), mtime=0))
 
 
 # A graceSku (CMP-CAP-BLK-18415-LTR, GB-CYL-CLR-9ML-MRL-BLK). A bare word like "Sprayer" is a type label, not a SKU.
@@ -190,7 +266,8 @@ def component_type(row: dict) -> tuple[str, str]:
     sku = (row.get("websiteSku") or "").lower()
     name = (row.get("itemName") or "").lower()
     if family == "Sprayer":
-        if "tsl" in sku or "tassel" in name:
+        # "Tsl" is matched case-sensitively: lower-casing turns "MattSl" into "mattsl", which reads as a tassel.
+        if "Tsl" in (row.get("websiteSku") or "") or "tassel" in name:
             return "tassel-bulb-sprayer", "family=Sprayer; SKU/name says tassel"
         if "ansp" in sku or "bulb" in name:
             return "vintage-bulb-sprayer", "family=Sprayer; SKU/name says bulb"
@@ -198,6 +275,8 @@ def component_type(row: dict) -> tuple[str, str]:
             return "fine-mist-sprayer", "family=Sprayer"
         return "sprayer-review", "family=Sprayer but the SKU pattern is unrecognised"
     if family == "Roll-On Cap":
+        if sku.startswith("ltn") or "lotion" in name or (row.get("capStyle") or "") == "Pump":
+            return "lotion-pump", "family=Roll-On Cap but SKU/capStyle says lotion pump"
         return "roll-on-cap", "family=Roll-On Cap"
     if family == "Cap/Closure":
         if "lthr" in sku or "leather" in name:
@@ -226,11 +305,14 @@ def main() -> int:
     args = parser.parse_args()
 
     data = load_export(args.export)
-    if args.export.resolve() != SNAPSHOT.resolve():
-        write_snapshot(data)
+    snapshot = args.export
+    if args.export.parent.resolve() != SOURCE.resolve():
+        stamp = str(data.get("collectedAt") or dt.date.today().isoformat())[:10]
+        snapshot = SOURCE / f"convex-products-{stamp}.json.gz"
+        write_snapshot(data, snapshot)
     rows = data["rows"]
     today = dt.date.today().isoformat()
-    export_note = "convex:products (dev) 2026-09-24"
+    export_note = f"convex:products (dev) {snapshot.name.removeprefix('convex-products-').removesuffix('.json.gz')}"
 
     library_rows = json.loads((PAPER_DOLL / "component-library-inventory.json").read_text())["rows"]
     by_stem = {r["stem"]: r for r in library_rows}
@@ -261,11 +343,13 @@ def main() -> int:
         psd_match = "" if not psd else "exact" if psd["stem"] == sku else "alias-map" if stem != sku else "case-insensitive"
         status = "retired" if is_retired(r) else "quarantine" if ctype.endswith("review") or not thread_like(neck) else "current"
         record = {
+            "componentId": r.get("graceSku"), "sellable": True,
             "graceSku": r.get("graceSku"), "websiteSku": sku, "type": ctype, "neck": neck, "finish": finish_label(r),
             "capColor": r.get("capColor") or "", "capStyle": r.get("capStyle") or "", "color": r.get("color") or "", "trimColor": r.get("trimColor") or "",
             "applicator": r.get("applicator") or "", "convexFamily": r.get("family") or "", "itemName": r.get("itemName") or "",
             "status": status, "typeEvidence": why,
-            "psdStem": psd["stem"] if psd else "", "psdPath": psd["file"] if psd else "", "psdFolder": psd["folder"] if psd else "",
+            "dotted": "dot" in sku.lower() or colour_key(r.get("capColor") or "")[1], "rollerMaterial": "",
+            "psdStem": psd["stem"] if psd else "", "psdLibrary": psd["library"] if psd else "", "psdPath": psd["file"] if psd else "", "psdFolder": psd["folder"] if psd else "",
             "psdMatch": psd_match, "psdCanvas": psd["canvas"] if psd else "", "psdHiddenLayers": psd["hiddenLayers"] if psd else "",
             "stockStatus": r.get("stockStatus") or "", "imageUrl": r.get("imageUrl") or "", "productUrl": r.get("productUrl") or "",
             "source": export_note, "confidence": "high" if psd and status == "current" else "medium" if status == "current" else "low",
@@ -273,6 +357,24 @@ def main() -> int:
         components.append(record)
         if record["graceSku"]:
             component_by_grace[record["graceSku"]] = record
+    for part in LIBRARY_PARTS:
+        psd = by_stem.get(part["psdStem"]) if part["psdStem"] else None
+        components.append({
+            "componentId": part["componentId"], "sellable": False, "graceSku": "", "websiteSku": "", "type": part["type"], "neck": part["neck"],
+            "finish": "", "capColor": "", "capStyle": "", "color": "", "trimColor": "", "applicator": "", "convexFamily": "", "itemName": part["itemName"],
+            "status": "current",
+            "typeEvidence": "library part, not a product (Jordan 2026-09-25)" + ("" if psd else "; no master PSD yet, cut from productKits roller layers in Phase 3"),
+            "dotted": False, "rollerMaterial": part["rollerMaterial"],
+            "psdStem": psd["stem"] if psd else "", "psdLibrary": psd["library"] if psd else "", "psdPath": psd["file"] if psd else "", "psdFolder": psd["folder"] if psd else "",
+            "psdMatch": "exact" if psd else "", "psdCanvas": psd["canvas"] if psd else "", "psdHiddenLayers": psd["hiddenLayers"] if psd else "",
+            "stockStatus": "", "imageUrl": "", "productUrl": "",
+            "source": "BB-PSD-Files-Master/20. Caps" if psd else "productKits roller layers (Phase 3)", "confidence": "high" if psd else "medium",
+        })
+    library_ids = {part["componentId"] for part in LIBRARY_PARTS}
+    by_neck_type: dict[tuple, list] = defaultdict(list)
+    for c in components:
+        if c["status"] == "current":
+            by_neck_type[(c["neck"], c["type"])].append(c)
 
     # ---------- bodies ----------
     bottle_rows = [r for r in rows if r.get("category") in BOTTLE_CATEGORIES]
@@ -377,6 +479,10 @@ def main() -> int:
             "capOffPlate": r.get("imageUrlCapOff") or "", "productUrl": r.get("productUrl") or "",
             "source": export_note, "confidence": {"verified": "high", "candidate": "medium"}.get(status, "low"),
         })
+        record = assemblies[-1]
+        sha = re.search(r"/([0-9a-f]{64})\.front-off", record["capOffPlate"])
+        record["capOffPlateSha256"] = sha.group(1) if sha else ""
+        record["buildParts"], record["buildStatus"], record["buildReason"] = own_build(record, body_class, by_neck_type, library_ids)
 
     # ---------- alias candidates: current components with no PSD vs library stems no component claims ----------
     claimed = {c["psdStem"] for c in components if c["psdStem"]}
@@ -423,7 +529,7 @@ def main() -> int:
 
     # ---------- rules ----------
     all_necks = sorted({b["neck"] for b in bodies} | {c["neck"] for c in components})
-    rules = {"generatedAt": today, "keys": {"body": "bodyId = [shape-]profile-<capacity>ml-<neck>", "component": "graceSku", "assembly": "graceSku"},
+    rules = {"generatedAt": today, "snapshot": snapshot.name, "keys": {"body": "bodyId = [shape-]profile-<capacity>ml-<neck>", "component": "graceSku", "assembly": "graceSku"},
              "rulings": RULINGS, "componentListExclusions": COMPONENT_LIST_EXCLUSIONS,
              "ruledBodyClasses": {category: {"class": cls, "source": source} for category, (cls, source) in RULED_BODY_CLASSES.items()}, "necks": {}}
     for neck in all_necks:
@@ -526,7 +632,7 @@ def main() -> int:
     for c in missing_psd:
         by_neck[c["neck"]].append(c)
     for neck, group in sorted(by_neck.items()):
-        lines.append(f"- **{neck or '(none)'}** ({len(group)}): " + ", ".join(f"{c['websiteSku'] or c['graceSku']} [{c['type']}]" for c in group))
+        lines.append(f"- **{neck or '(none)'}** ({len(group)}): " + ", ".join(f"{c['websiteSku'] or c['componentId']} [{c['type']}]" for c in group))
     lines += ["", f"## Library PSDs that no component record claims — {len(library_only)} stems in 20. Caps", ""]
     by_folder = defaultdict(list)
     for r in library_only_rows:
@@ -537,6 +643,21 @@ def main() -> int:
               "| Convex websiteSku | library stem | folder(s) | match |", "|---|---|---|---|"]
     for a in alias_candidates:
         lines.append(f"| {a['websiteSku']} | {a['candidateStem']} | {a['candidateFolders']} | {a['match']} {a['similarity']} |")
+    built = [a for a in assemblies if a["neck"] in BUILD_RULE_NECKS and a["status"] in ("verified", "candidate")]
+    lines += ["", f"## Own-part builds — rules written for {', '.join(sorted(BUILD_RULE_NECKS))} (the pilot neck)", "",
+              "Each sellable assembly names the parts it is physically made of (`buildParts`), matched uniquely on neck, component type, "
+              "cap colour and dotted/plain. Roller balls add the neck's roller insert. A row that does not match exactly one part stays "
+              "`unresolved` with the reason; nothing is guessed (Jordan 2026-09-25: wording errors wait for Convex corrections).", "",
+              "| body | resolved | partial | unresolved |", "|---|---|---|---|"]
+    for body_id in sorted({a["bodyId"] for a in built}):
+        tally = Counter(a["buildStatus"] for a in built if a["bodyId"] == body_id)
+        lines.append(f"| {body_id} | {tally['resolved']} | {tally['partial']} | {tally['unresolved']} |")
+    unresolved_reasons = Counter(a["buildReason"] for a in built if a["buildStatus"] != "resolved")
+    if unresolved_reasons:
+        lines += ["", "Unresolved, by reason (Convex corrections):", ""]
+        for why, n in unresolved_reasons.most_common():
+            skus = ", ".join(a["websiteSku"] for a in built if a["buildReason"] == why)
+            lines.append(f"- **{n}** — {why}: {skus}")
     label_rows = [a for a in assemblies if "type labels" in a["statusReason"]]
     misfiled_rows = [a for a in assemblies if "not a Component row" in a["statusReason"]]
     unknown_rows = [a for a in assemblies if "no record for" in a["statusReason"]]
@@ -557,7 +678,7 @@ def main() -> int:
         lines.append(f"| {kind} | {n} |")
     lines += ["", "## Keys", "",
               "- `bodyId` = `[shape-]profile-<capacity>ml-<neck>` (profile from productGroupSlug, else family); `builderBodyId` mirrors `builderBodyIdentity()` in src/lib/bottle-builder/model.ts.",
-              "- Components and assemblies are keyed by **graceSku**; `websiteSku` is carried as the legacy alias.",
+              "- Components and assemblies are keyed by **graceSku**; `websiteSku` is carried as the legacy alias. Parts that are not products are keyed `LIB-<neck>-<name>` (`componentId`, `sellable` false).",
               "- Component `status`: current | retired | quarantine. Assembly `status`: verified | candidate | exception | quarantine | retired.",
               "- Nothing in Convex, Shopify or the website was changed. Rebuild: `python3 scripts/register/build_register.py`."]
     (REGISTER / "report.md").write_text("\n".join(lines) + "\n")

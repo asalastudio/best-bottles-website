@@ -1,75 +1,75 @@
 kind,key,websiteSku,neck,reason,evidence,action
-component,CMP-PLUG-BLK-VIAL,REF-CMP-PLUG-BLK-VIAL,,family=Plug/Applicator,convex:products (dev) 2026-09-24,classify type / confirm neck before listing
-component,CMP-PLUG-WHT-VIAL,REF-CMP-PLUG-WHT-VIAL,,family=Plug/Applicator,convex:products (dev) 2026-09-24,classify type / confirm neck before listing
-component,CMP-ROC-WHT-03,CPWhite1Oz,,family=Roll-On Cap,convex:products (dev) 2026-09-24,classify type / confirm neck before listing
-component,CMP-SPR-LVN-BULB,AntqSprBulbLavender,,family=Sprayer; SKU/name says bulb,convex:products (dev) 2026-09-24,classify type / confirm neck before listing
-component,CMP-CAP-SBLK-13-415,,13-415,family=Cap/Component (alias-looking record),convex:products (dev) 2026-09-24,classify type / confirm neck before listing
-component,CMP-CAP-BDOT-17-415,,17-415,family=Cap/Component (alias-looking record),convex:products (dev) 2026-09-24,classify type / confirm neck before listing
-component,BB-ALU250SPRYBL,Alu250SpryBl,20-410,family=Aluminum Bottle is not a component family,convex:products (dev) 2026-09-24,classify type / confirm neck before listing
-component,BB-CREAMJARAMB5MLSLCAP,CreamJarAmb5mlSlcap,37mm,family=Cream Jar is not a component family,convex:products (dev) 2026-09-24,classify type / confirm neck before listing
-component,CMP-CLS-BLK-06,CJ30BlkCap,Press-Fit,family=Cap/Closure,convex:products (dev) 2026-09-24,classify type / confirm neck before listing
-component,CMP-CLS-SLV-02,CJ30SlCap,Press-Fit,family=Cap/Closure,convex:products (dev) 2026-09-24,classify type / confirm neck before listing
-component,CMP-CLS-BLK-07,CJ40BlkCap,Press-Fit,family=Cap/Closure,convex:products (dev) 2026-09-24,classify type / confirm neck before listing
-component,CMP-CLS-SLV-03,CJ40SlCap,Press-Fit,family=Cap/Closure,convex:products (dev) 2026-09-24,classify type / confirm neck before listing
-component,CMP-CLS-BLK-08,CJ5BlkCap,Press-Fit,family=Cap/Closure,convex:products (dev) 2026-09-24,classify type / confirm neck before listing
-component,CMP-CLS-SLV-04,CJ5SlCap,Press-Fit,family=Cap/Closure,convex:products (dev) 2026-09-24,classify type / confirm neck before listing
-component,CMP-CLS-GLD-02,CPKeyChnGld,Specialty,family=Cap/Closure,convex:products (dev) 2026-09-24,classify type / confirm neck before listing
-component,CMP-CLS-GDRD,CPTslRed,Specialty,family=Cap/Closure,convex:products (dev) 2026-09-24,classify type / confirm neck before listing
-assembly,PB-CYL-CLR-118ML-WFLP,PbClear4ozFlpWh,,no neck finish on the record,convex:products (dev) 2026-09-24,resolve before composing
-assembly,PB-CYL-227ML-WFLP,PbClear8ozFlpWh,,no neck finish on the record,convex:products (dev) 2026-09-24,resolve before composing
-assembly,PB-CYL-454ML-WFLP,PbNat16ozFlpWh,,no neck finish on the record,convex:products (dev) 2026-09-24,resolve before composing
-assembly,LB-LTB-CLR-30ML-SGLD-T,LB1ozGl,,no neck finish on the record,convex:products (dev) 2026-09-24,resolve before composing
-assembly,LB-LTB-CLR-30ML-SLV-T,LB1ozSl,,no neck finish on the record,convex:products (dev) 2026-09-24,resolve before composing
-assembly,CMP-SPR-CLR-10ML,PB10SpryNat,,no neck finish on the record,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-SLM-BLK-5ML-ATM-BLK-T,GBAtom5SlimBlk,10mm,non-thread neck '10mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-SLM-CLR-5ML-ATM-GLD-T,GBAtom5SlimGl,10mm,non-thread neck '10mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-SLM-CLR-5ML-ATM-SLV-T,GBAtom5SlimSl,10mm,non-thread neck '10mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-RYL-CLR-14ML-T,GBMtlCylGl,11mm,non-thread neck '11mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-DEC-CLR-5ML-T,GBMtlMrblSmall,17.52mm,non-thread neck '17.52mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-DEC-CLR-10ML-T,GBMtlMrblLarge,17.52mm,non-thread neck '17.52mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,LB-LTB-CLR-30ML-T,LBMetalSilver1oz,18mm,non-thread neck '18mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,CJ-JAR-CBL-9ML,CJBlu3,20mm,non-thread neck '20mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,CJ-JAR-CLR-3ML,CJClr3,20mm,non-thread neck '20mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,CJ-JAR-AMB-5ML-BLK,CJAmb5mlBlkCap,27mm,non-thread neck '27mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,CJ-JAR-CLR-5ML-CLR,CJClr5mlClrCap,27mm,non-thread neck '27mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,CJ-JAR-CLR-15ML-PNK,CJClr15Pnk,37mm,non-thread neck '37mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,CJ-JAR-CLR-15ML-WHT,CJClr15Wht,37mm,non-thread neck '37mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,CJ-JAR-20ML-WHT,CJWhite20,40mm,non-thread neck '40mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,CJ-JAR-AMB-30ML-BLK,CJAmb30BlkCap,45mm,non-thread neck '45mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,CJ-JAR-AMB-30ML-SLV,CJAmb30SlCap,45mm,non-thread neck '45mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,CJ-JAR-FRS-30ML-BLK,CJFrst30BlkCap,45mm,non-thread neck '45mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,CJ-JAR-FRS-30ML-SLV,CJFrst30SlCap,45mm,non-thread neck '45mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,CJ-JAR-AMB-40ML-01,CreamJarAmb40Blkcap,48/400,non-thread neck '48/400' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,CJ-JAR-AMB-40ML-02,CJAmb40SlCap,48/400,non-thread neck '48/400' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,CJ-JAR-FRS-40ML-01,CJFrst40BlkCap,48/400,non-thread neck '48/400' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,CJ-JAR-FRS-40ML-02,CJFrst40SlCap,48/400,non-thread neck '48/400' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,CJ-JAR-FRS-60ML,CreamJarFrstdPlsBlkPls2oz,58mm,non-thread neck '58mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,CJ-JAR-60ML-WHT,CJWhitePlsSlFr2oz,58mm,non-thread neck '58mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-DEC-FRS-4ML-GST-GLD-T,GBHeartFrst4KeyGld,8mm,non-thread neck '8mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-DEC-FRS-4ML-GST-RED-T,GBHeartFrst4TslRed,8mm,non-thread neck '8mm' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-APT-BLU-15ML-BLU-T,GB15ApthBlue,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-APT-BLU-30ML-BLU-T,GB1ozApthBlue,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-APT-CLR-30ML-T,GB1ozApth,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-APT-GRN-30ML-GRN-T,GB1ozApthGreen,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-DEC-CLR-118ML,GBPearClear4ozStpr,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-GNI-BLU-32ML,GB1ozGenieBl,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-GNI-CLR-32ML,GB1ozGenieCl,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-ETF-BLU-35ML,GBEternalFlameBlue,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-ETF-CLR-35ML,GBEternalFlameClear,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-ETF-GRN-35ML,GBEternalFlameGreen,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-DEC-CLR-355ML-T,GBCB12ozPear,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-RCT-CLR-9ML-T-01,GBSQSTBlue,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-RCT-CLR-9ML-T-02,GBSQSTClear,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-RCT-CLR-9ML-T-03,GBSQSTGREEN,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-TRD-BLU-9ML,GBTrdpBlue,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-TRD-CLR-9ML,GBTRDPClear,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-TRD-GRN-9ML,GBTRDPGreen,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,CJ-JAR-AMB-5ML-SLV,CJAmb5mlSlCap,PRESS-FIT,non-thread neck 'PRESS-FIT' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-VIA-AMB-1ML-WHT-T,GB1mlAmbVialWht,Plug,non-thread neck 'Plug' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-VIA-CLR-1ML,GB1mlAmbVBlk,Plug,non-thread neck 'Plug' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-VIA-CLR-1ML-BLK-T,GB1mlVBlk,Plug,non-thread neck 'Plug' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,GB-VIA-CLR-1ML-WHT-T,GB1mlVWht,Plug,non-thread neck 'Plug' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
-assembly,LB-LTB-CLR-3ML-CLR-T,LB3mlClear,Snap-On,non-thread neck 'Snap-On' — classify before composing,convex:products (dev) 2026-09-24,resolve before composing
+component,CMP-PLUG-BLK-VIAL,REF-CMP-PLUG-BLK-VIAL,,family=Plug/Applicator,convex:products (dev) 2026-09-25,classify type / confirm neck before listing
+component,CMP-PLUG-WHT-VIAL,REF-CMP-PLUG-WHT-VIAL,,family=Plug/Applicator,convex:products (dev) 2026-09-25,classify type / confirm neck before listing
+component,CMP-ROC-WHT-03,CPWhite1Oz,,family=Roll-On Cap,convex:products (dev) 2026-09-25,classify type / confirm neck before listing
+component,CMP-SPR-LVN-BULB,AntqSprBulbLavender,,family=Sprayer; SKU/name says bulb,convex:products (dev) 2026-09-25,classify type / confirm neck before listing
+component,CMP-CAP-SBLK-13-415,,13-415,family=Cap/Component (alias-looking record),convex:products (dev) 2026-09-25,classify type / confirm neck before listing
+component,CMP-CAP-BDOT-17-415,,17-415,family=Cap/Component (alias-looking record),convex:products (dev) 2026-09-25,classify type / confirm neck before listing
+component,BB-ALU250SPRYBL,Alu250SpryBl,20-410,family=Aluminum Bottle is not a component family,convex:products (dev) 2026-09-25,classify type / confirm neck before listing
+component,BB-CREAMJARAMB5MLSLCAP,CreamJarAmb5mlSlcap,37mm,family=Cream Jar is not a component family,convex:products (dev) 2026-09-25,classify type / confirm neck before listing
+component,CMP-CLS-BLK-06,CJ30BlkCap,Press-Fit,family=Cap/Closure,convex:products (dev) 2026-09-25,classify type / confirm neck before listing
+component,CMP-CLS-SLV-02,CJ30SlCap,Press-Fit,family=Cap/Closure,convex:products (dev) 2026-09-25,classify type / confirm neck before listing
+component,CMP-CLS-BLK-07,CJ40BlkCap,Press-Fit,family=Cap/Closure,convex:products (dev) 2026-09-25,classify type / confirm neck before listing
+component,CMP-CLS-SLV-03,CJ40SlCap,Press-Fit,family=Cap/Closure,convex:products (dev) 2026-09-25,classify type / confirm neck before listing
+component,CMP-CLS-BLK-08,CJ5BlkCap,Press-Fit,family=Cap/Closure,convex:products (dev) 2026-09-25,classify type / confirm neck before listing
+component,CMP-CLS-SLV-04,CJ5SlCap,Press-Fit,family=Cap/Closure,convex:products (dev) 2026-09-25,classify type / confirm neck before listing
+component,CMP-CLS-GLD-02,CPKeyChnGld,Specialty,family=Cap/Closure,convex:products (dev) 2026-09-25,classify type / confirm neck before listing
+component,CMP-CLS-GDRD,CPTslRed,Specialty,family=Cap/Closure,convex:products (dev) 2026-09-25,classify type / confirm neck before listing
+assembly,PB-CYL-CLR-118ML-WFLP,PbClear4ozFlpWh,,no neck finish on the record,convex:products (dev) 2026-09-25,resolve before composing
+assembly,PB-CYL-227ML-WFLP,PbClear8ozFlpWh,,no neck finish on the record,convex:products (dev) 2026-09-25,resolve before composing
+assembly,PB-CYL-454ML-WFLP,PbNat16ozFlpWh,,no neck finish on the record,convex:products (dev) 2026-09-25,resolve before composing
+assembly,LB-LTB-CLR-30ML-SGLD-T,LB1ozGl,,no neck finish on the record,convex:products (dev) 2026-09-25,resolve before composing
+assembly,LB-LTB-CLR-30ML-SLV-T,LB1ozSl,,no neck finish on the record,convex:products (dev) 2026-09-25,resolve before composing
+assembly,CMP-SPR-CLR-10ML,PB10SpryNat,,no neck finish on the record,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-SLM-BLK-5ML-ATM-BLK-T,GBAtom5SlimBlk,10mm,non-thread neck '10mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-SLM-CLR-5ML-ATM-GLD-T,GBAtom5SlimGl,10mm,non-thread neck '10mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-SLM-CLR-5ML-ATM-SLV-T,GBAtom5SlimSl,10mm,non-thread neck '10mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-RYL-CLR-14ML-T,GBMtlCylGl,11mm,non-thread neck '11mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-DEC-CLR-5ML-T,GBMtlMrblSmall,17.52mm,non-thread neck '17.52mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-DEC-CLR-10ML-T,GBMtlMrblLarge,17.52mm,non-thread neck '17.52mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,LB-LTB-CLR-30ML-T,LBMetalSilver1oz,18mm,non-thread neck '18mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,CJ-JAR-CBL-9ML,CJBlu3,20mm,non-thread neck '20mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,CJ-JAR-CLR-3ML,CJClr3,20mm,non-thread neck '20mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,CJ-JAR-AMB-5ML-BLK,CJAmb5mlBlkCap,27mm,non-thread neck '27mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,CJ-JAR-CLR-5ML-CLR,CJClr5mlClrCap,27mm,non-thread neck '27mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,CJ-JAR-CLR-15ML-PNK,CJClr15Pnk,37mm,non-thread neck '37mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,CJ-JAR-CLR-15ML-WHT,CJClr15Wht,37mm,non-thread neck '37mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,CJ-JAR-20ML-WHT,CJWhite20,40mm,non-thread neck '40mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,CJ-JAR-AMB-30ML-BLK,CJAmb30BlkCap,45mm,non-thread neck '45mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,CJ-JAR-AMB-30ML-SLV,CJAmb30SlCap,45mm,non-thread neck '45mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,CJ-JAR-FRS-30ML-BLK,CJFrst30BlkCap,45mm,non-thread neck '45mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,CJ-JAR-FRS-30ML-SLV,CJFrst30SlCap,45mm,non-thread neck '45mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,CJ-JAR-AMB-40ML-01,CreamJarAmb40Blkcap,48/400,non-thread neck '48/400' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,CJ-JAR-AMB-40ML-02,CJAmb40SlCap,48/400,non-thread neck '48/400' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,CJ-JAR-FRS-40ML-01,CJFrst40BlkCap,48/400,non-thread neck '48/400' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,CJ-JAR-FRS-40ML-02,CJFrst40SlCap,48/400,non-thread neck '48/400' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,CJ-JAR-FRS-60ML,CreamJarFrstdPlsBlkPls2oz,58mm,non-thread neck '58mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,CJ-JAR-60ML-WHT,CJWhitePlsSlFr2oz,58mm,non-thread neck '58mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-DEC-FRS-4ML-GST-GLD-T,GBHeartFrst4KeyGld,8mm,non-thread neck '8mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-DEC-FRS-4ML-GST-RED-T,GBHeartFrst4TslRed,8mm,non-thread neck '8mm' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-APT-BLU-15ML-BLU-T,GB15ApthBlue,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-APT-BLU-30ML-BLU-T,GB1ozApthBlue,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-APT-CLR-30ML-T,GB1ozApth,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-APT-GRN-30ML-GRN-T,GB1ozApthGreen,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-DEC-CLR-118ML,GBPearClear4ozStpr,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-GNI-BLU-32ML,GB1ozGenieBl,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-GNI-CLR-32ML,GB1ozGenieCl,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-ETF-BLU-35ML,GBEternalFlameBlue,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-ETF-CLR-35ML,GBEternalFlameClear,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-ETF-GRN-35ML,GBEternalFlameGreen,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-DEC-CLR-355ML-T,GBCB12ozPear,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-RCT-CLR-9ML-T-01,GBSQSTBlue,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-RCT-CLR-9ML-T-02,GBSQSTClear,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-RCT-CLR-9ML-T-03,GBSQSTGREEN,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-TRD-BLU-9ML,GBTrdpBlue,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-TRD-CLR-9ML,GBTRDPClear,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-TRD-GRN-9ML,GBTRDPGreen,Ground,non-thread neck 'Ground' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,CJ-JAR-AMB-5ML-SLV,CJAmb5mlSlCap,PRESS-FIT,non-thread neck 'PRESS-FIT' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-VIA-AMB-1ML-WHT-T,GB1mlAmbVialWht,Plug,non-thread neck 'Plug' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-VIA-CLR-1ML,GB1mlAmbVBlk,Plug,non-thread neck 'Plug' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-VIA-CLR-1ML-BLK-T,GB1mlVBlk,Plug,non-thread neck 'Plug' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,GB-VIA-CLR-1ML-WHT-T,GB1mlVWht,Plug,non-thread neck 'Plug' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
+assembly,LB-LTB-CLR-3ML-CLR-T,LB3mlClear,Snap-On,non-thread neck 'Snap-On' — classify before composing,convex:products (dev) 2026-09-25,resolve before composing
 review-2026-09-23,,,13-415,"{""component_scope"": ""CP13-415Gl"", ""source_truth"": ""13-415 gold tall liner cap; 24 mm; not a roller cap"", ""current_convex_observation"": ""Family is Roll-On Cap despite applicator Cap/Closure"", ""recommen",neck-thread-13-415-2026-09-23/component-remedy-register.csv,
 review-2026-09-23,,,13-415,"{""component_scope"": ""CP13-415Sl"", ""source_truth"": ""13-415 silver tall liner cap; 24 mm; not a roller cap"", ""current_convex_observation"": ""Family is Roll-On Cap despite applicator Cap/Closure"", ""recomm",neck-thread-13-415-2026-09-23/component-remedy-register.csv,
 review-2026-09-23,,,13-415,"{""component_scope"": ""CP13-415BlkSht and CP13-415WhtSht"", ""source_truth"": ""13-415 short ribbed caps; black and white"", ""current_convex_observation"": ""Family is Roll-On Cap despite applicator Cap/Closur",neck-thread-13-415-2026-09-23/component-remedy-register.csv,

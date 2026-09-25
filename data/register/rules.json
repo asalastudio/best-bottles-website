@@ -1,5 +1,6 @@
 {
   "generatedAt": "2026-09-25",
+  "snapshot": "convex-products-2026-09-25.json.gz",
   "keys": {
     "body": "bodyId = [shape-]profile-<capacity>ml-<neck>",
     "component": "graceSku",
@@ -107,11 +108,12 @@
     "13-415": {
       "kind": "thread",
       "bodies": 17,
-      "components": 25,
+      "components": 27,
       "componentTypes": {
         "cap": 7,
         "fine-mist-sprayer": 5,
-        "roll-on-cap": 13
+        "roll-on-cap": 13,
+        "roller-insert": 2
       },
       "fitmentTypesObserved": {
         "": 69,
@@ -191,9 +193,8 @@
       "bodies": 2,
       "components": 7,
       "componentTypes": {
-        "fine-mist-sprayer": 4,
-        "roll-on-cap": 2,
-        "tassel-bulb-sprayer": 1
+        "fine-mist-sprayer": 5,
+        "roll-on-cap": 2
       },
       "fitmentTypesObserved": {
         "": 6,
@@ -227,12 +228,13 @@
     "17-415": {
       "kind": "thread",
       "bodies": 2,
-      "components": 20,
+      "components": 22,
       "componentTypes": {
         "dropper": 1,
-        "fine-mist-sprayer": 5,
-        "roll-on-cap": 13,
-        "tassel-bulb-sprayer": 1
+        "fine-mist-sprayer": 6,
+        "lotion-pump": 3,
+        "roll-on-cap": 10,
+        "roller-insert": 2
       },
       "fitmentTypesObserved": {
         "Fine Mist Sprayer": 31,
@@ -303,15 +305,16 @@
     "18-415": {
       "kind": "thread",
       "bodies": 23,
-      "components": 47,
+      "components": 48,
       "componentTypes": {
         "cap": 6,
         "dropper": 3,
         "faux-leather-cap": 5,
-        "fine-mist-sprayer": 7,
+        "fine-mist-sprayer": 8,
         "lotion-pump": 7,
-        "tassel-bulb-sprayer": 11,
-        "vintage-bulb-sprayer": 8
+        "reducer": 1,
+        "tassel-bulb-sprayer": 9,
+        "vintage-bulb-sprayer": 9
       },
       "fitmentTypesObserved": {
         "Dropper": 36,

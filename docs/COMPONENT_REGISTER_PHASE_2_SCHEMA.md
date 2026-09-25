@@ -1,8 +1,10 @@
 # Component register — Phase 2: schema proposal
 
-**Status: PROPOSAL, awaiting Jordan's approval (2026-09-25).** Nothing in `convex/` has changed,
-no Convex deployment has been touched, no data has been written. Phase 2 ends when the
-decisions in §9 are made; only then does the schema land in `convex/schema.ts`.
+**Status: APPROVED and BUILT on the dev deployment (2026-09-25).** Jordan accepted all five
+recommendations in §9. The tables, functions and loader are in `convex/register.ts`,
+`convex/registerValidators.ts` and `scripts/register/`; dev holds 97 bodies, 181 components and
+2,312 assemblies. Prod is untouched. §10 records what was built and where it differs from this
+proposal. Phase 3 (anchor tooling) waits at its own checkpoint.
 
 Phase 1 (PR #255) produced `data/register/` — bodies, components and assemblies keyed by neck
 finish and graceSku, with Jordan's rulings in `rules.json`. Phase 2 turns that register into
@@ -319,7 +321,7 @@ folders hold caps, sprayers and pumps. **100 of the 145 pilot assemblies are rol
 
 (b) is the clean answer; (a) unblocks the pilot this week.
 
-## 9. Decisions needed before anything is created (the Phase 2 checkpoint)
+## 9. Decisions (all five approved by Jordan, 2026-09-25)
 
 1. **Table names** — `registerBodies / registerBodyPlates / registerComponents / registerAssemblies`, or bare `bodies / components / assemblies`?
 2. **Library-only component key** — `LIB-<neck>-<psdStem>` with `graceSku = null` and `sellable = false`. OK?
@@ -330,3 +332,45 @@ folders hold caps, sprayers and pumps. **100 of the 145 pilot assemblies are rol
 On approval the order of work is: fix §8.3 in the register script → add the four tables + `convex/register.ts` →
 `push-register.mjs` dry-run against dev → apply to dev → Phase 3 (anchor tooling) begins on the 5 pilot plates
 and the 19 pilot components.
+
+## 10. Build log (2026-09-25)
+
+**Register script** (`scripts/register/build_register.py`)
+- Type fixes from §8.3. The tassel test lower-cased the SKU, so every `MattSl` / `MtSl` sprayer read as
+  a tassel; it is now case-sensitive on `Tsl`. That also corrected `Spry15-415MattSl`, `Spry18-415MtSl`
+  and `AnSp18-415MtSl`. `Ltn17-415*` are lotion pumps.
+- Library parts (decision 2): `LIB-13-415-MtlRollon`, `LIB-13-415-PlsticRollon`, `LIB-18-415-Reducer`
+  from the master PSDs; `LIB-17-415-MtlRollon`, `LIB-17-415-PlsticRollon` with no PSD yet, to be cut
+  from the productKits roller layers in Phase 3 (decision 3). Vial wands, heart caps and the other
+  unclaimed stems are not parts; they stay listed in the report.
+- Own-part builds: `buildParts` / `buildStatus` / `buildReason` on every assembly. Rules are written
+  for 17-415 only; every other neck says so in its reason. Pilot: **126 resolved, 19 unresolved**
+  (decision 4: left for Convex corrections, listed in `report.md`). One 17-415 Pillar also resolves.
+- `capOffPlateSha256`, `psdLibrary` and `rules.json.snapshot` added for the loader.
+
+**Convex** (dev `helpful-elephant-638`, pushed with `npx convex dev --once` after confirming dev's 335
+functions matched this branch exactly)
+- Tables as §3 with these differences: the register stamp carries no build time, so an unchanged
+  register re-pushes as `unchanged`; `legacy.productKitSha256` became `kitPlateSha256` (the plate the
+  current kit is registered to, read from the target deployment at push time); components carry
+  `layersStatus` beside `layers`; `psd.sha256` was dropped (the inventory has none) and `psd.canvas`
+  may be null; component `type` also admits the register's `*-review` values for quarantined rows.
+- Functions: `upsertBodies`, `upsertComponents`, `upsertAssemblies` (write token, 100 rows per call,
+  register-owned fields only, so Phase 3 layers survive every push), `listPage` (token-gated, the
+  loader's diff source), and public reads `counts`, `body`, `componentsForNeck`, `assembliesForBody`,
+  `composition` (one SKU's plate and own parts, the Phase 4 renderer's input).
+- Body-plate and layer writers are deliberately not built yet; they arrive with the Phase 3 tooling.
+
+**Loader** (`scripts/register/push-register.ts`, run with tsx)
+
+```bash
+npx tsx scripts/register/push-register.ts            # dry run against dev
+npx tsx scripts/register/push-register.ts --apply    # write what changed
+```
+
+First apply inserted 97 / 181 / 2,312; a second run reports every row unchanged. 1,424 assemblies have
+a published kit on dev. Prod needs `--deployment prod` and `REGISTER_PROD_WRITE_TOKEN`; it has not been run.
+
+**Checks**: `tests/register-rows.test.ts` shapes every committed row and pins the pilot numbers;
+`tsc` and `npm run lint` clean. The full suite passed except `focused-pdp-mobile-dom`, which timed out
+under load and passes alone; it does not touch this code.
