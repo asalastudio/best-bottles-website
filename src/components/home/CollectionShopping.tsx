@@ -11,6 +11,7 @@ import { SHOP_COLLECTIONS, featuredCollectionCards, shopCollectionHref } from '@
 import { ImmersiveHeroArt } from './ImmersiveHeroArt';
 import EmpireFitmentHero from './EmpireFitmentHero';
 import StoneHeroArt from './StoneHeroArt';
+import BuildYourBottleSteps from './BuildYourBottleSteps';
 import LocaleLink from '@/components/LocaleLink';
 import { localizeCollectionName, localizeCollectionSubtitle, localizeFamilyName } from '@/i18n/catalogCopy';
 import { useAppLocale, useCopy } from '@/i18n/useCopy';
@@ -111,6 +112,6 @@ export default function CollectionShopping({data}:{data:HomepageData|null}){
     return <div className={styles.page}>
         <ShoppingHero slides={data?.useEditorialArtwork ? data.heroSlides : undefined} hotspots={data?.heroHotspots}/><FamilyCarousel cards={data?.useEditorialArtwork ? data.designFamilyCards : undefined}/>
         <section className={styles.section} aria-labelledby="collections-heading"><div className={styles.heading}><h2 id="collections-heading">{t("collections")}</h2><LocaleLink href="/collections">{t("viewAll")}</LocaleLink></div><p className={styles.intro}>{t("collectionsIntro")}</p><CollectionGrid cards={data?.collectionCards}/></section>
-        <section className={styles.section} id="build-your-bottle"><div className={styles.build}><div className={styles.buildCopy}><h2>{build?.heading || t("buildHeading")}</h2><p>{build?.description || t("buildDescription")}</p><LocaleLink className={styles.primary} href={build?.destination === '/collections' ? '/collections' : '/matrix'}>{build?.buttonLabel || t("buildYourBottle")}</LocaleLink></div><img src={asset('build-your-bottle-bone-v3')} alt="Colored-pencil study of a bare glass bottle, compatible spray assembly, clear cap and finished bottle" width={1000} height={600} loading="lazy"/></div></section>
+        <BuildYourBottleSteps build={build}/>
     </div>;
 }

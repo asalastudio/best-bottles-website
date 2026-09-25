@@ -113,7 +113,19 @@
     "fromTheLab": "From the Lab",
     "packagingInsights": "Packaging Insights",
     "viewAllArticles": "View All Articles",
-    "readMore": "Read More"
+    "readMore": "Read More",
+    "buildStepsHeading": "Build Your Bottle",
+    "buildStepsEyebrow": "Four simple steps. Endless possibilities.",
+    "buildStepBottle": "Choose Your Bottle",
+    "buildStepApplicator": "Choose Your Applicator",
+    "buildStepClosure": "Choose Your Closure",
+    "buildStepComplete": "Complete Your Bottle",
+    "buildStepBottleAlt": "Clear 9 ml and 25 ml Cylinder bottles",
+    "buildStepApplicatorAlt": "A black fine-mist spray top and a metal roller-ball top",
+    "buildStepClosureAlt": "Shiny black, shiny gold and brown leather caps",
+    "buildStepCompleteAlt": "A clear 25 ml Cylinder bottle with a shiny gold spray cap",
+    "buildStepsTagline": "Your vision.\nOur expertise.",
+    "buildStepsCta": "Start building"
   },
   "catalog": {
     "title": "Catalog",
