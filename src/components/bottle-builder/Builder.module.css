@@ -48,13 +48,13 @@
 .option strong { font-size: 11px; font-weight: 500; line-height: 1.45; }
 .option small { font-size: 9px; color: var(--quiet); margin-top: 4px; }
 .selectionCheck { position: absolute; top: 6px; right: 6px; width: 19px; height: 19px; background: var(--gold); color: #fff; border-radius: 50%; display: grid; place-items: center; }
-.bottleThumb { width: 100%; height: 125px; margin: 0 0 6px; }
-.colorThumb { width: 100%; height: 142px; background: #eeebe5; border-radius: 3px; margin-bottom: 10px; }
+.bottleThumb { width: 100%; height: 125px; margin: 0 0 6px; background: #f5f3ef; border-radius: 3px; }
+.colorThumb { width: 100%; height: 142px; background: #f5f3ef; border-radius: 3px; margin-bottom: 10px; }
 .bottleThumb [data-slate], .colorThumb [data-slate] { position: absolute; inset: 10px 16%; border-radius: 4px; background: linear-gradient(105deg, #b7c0c9 0%, #e4e9ee 42%, #b7c0c9 86%); background-size: 220% 100%; animation: builderSlateSweep 1.3s ease-in-out infinite; pointer-events: none; z-index: 0; }
 .bottleThumb [data-chooser-img], .bottleThumb img, .bottleThumb svg, .colorThumb [data-chooser-img], .colorThumb img, .colorThumb svg { position: relative; z-index: 1; }
 @keyframes builderSlateSweep { to { background-position: 220% 0; } }
 @media (prefers-reduced-motion: reduce) { .bottleThumb [data-slate], .colorThumb [data-slate] { animation: none; opacity: .7; } }
-.componentThumb { position: relative; width: 100%; height: 110px; padding: 8px; overflow: hidden; }
+.componentThumb { position: relative; width: 100%; height: 110px; padding: 8px; overflow: hidden; background: #f5f3ef; border-radius: 3px; }
 .fitmentGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .componentThumb > img { mix-blend-mode: multiply; }
 .closureThumb { position: relative; width: 100%; height: 106px; padding: 8px; overflow: hidden; display: grid; grid-template-rows: minmax(0, 1fr); grid-template-columns: minmax(0, 1fr); place-items: center; font-size: 10px; color: var(--quiet); }
@@ -64,7 +64,7 @@
 .closureSection h3 { font-family: var(--font-brand); font-size: 24px; letter-spacing: -.025em;text-transform:none;letter-spacing:0}
 .closureSection > p { margin: 5px 0 16px; }
 .previous { display: inline-flex; align-items: center; gap: 7px; font-size: 11px; color: var(--quiet); margin-top: 26px; min-height: 36px; }
-.preview { position: sticky; top: 200px; border: 1px solid var(--line); border-radius: 6px; background: #eeebe5; min-height: 570px; overflow: hidden; display: flex; flex-direction: column; isolation: isolate; }
+.preview { position: sticky; top: 200px; border: 1px solid var(--line); border-radius: 6px; background: #f5f3ef; min-height: 570px; overflow: hidden; display: flex; flex-direction: column; isolation: isolate; }
 .previewHeader { display: flex; justify-content: space-between; align-items: center; padding: 23px 22px 0; gap: 12px; }
 .previewHeader > span:first-child { font-size: 8px; letter-spacing: .15em; color: #79746b; }
 .liveDot { display: flex; align-items: center; gap: 5px; font-size: 9px; color: #69695f; white-space: nowrap; }
