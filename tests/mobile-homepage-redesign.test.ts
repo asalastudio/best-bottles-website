@@ -36,10 +36,11 @@ describe("mobile homepage redesign", () => {
         expect(tabs).toContain("openPanel");
     });
 
-    it("exposes popular families immediately after the hero with real family data", () => {
+    it("exposes bottle families immediately after the hero with real family data", () => {
         const html = renderToStaticMarkup(createElement(CollectionShopping, { data: null }));
-        expect(html.indexOf("Popular Families")).toBeGreaterThan(-1);
-        expect(html.indexOf('id="family-heading"')).toBeLessThan(html.indexOf('id="collections-heading"'));
+        expect(html.indexOf("Where would you like to start?")).toBeGreaterThan(html.indexOf("Contained."));
+        expect(html.indexOf('<section id="shop-families"')).toBeGreaterThan(html.indexOf("Where would you like to start?"));
+        expect(html.indexOf('<section id="shop-families"')).toBeLessThan(html.indexOf('<section id="shop-collections"'));
         expect(html).toContain("Cylinder");
         expect(html).toContain("Boston Round");
         expect(html).toContain('href="/bottle-families"');
@@ -57,15 +58,12 @@ describe("mobile homepage redesign", () => {
         const html = renderToStaticMarkup(createElement(CollectionShopping, { data: null }));
         const families = [...html.matchAll(/alt="([^"]+) bottle family"/g)].map((match) => match[1]);
         expect(families.slice(0, 4)).toEqual(["Cylinder", "Boston Round", "Round", "Circle"]);
-        expect(html).toContain('srcSet="/assets/homepage/family-cylinder-desktop-v4.webp"');
-        expect(html).toContain('srcSet="/assets/homepage/family-boston-round-desktop-v4.webp"');
-        expect(html).toContain('srcSet="/assets/homepage/family-round-desktop-v4.webp"');
-        expect(html).toContain('srcSet="/assets/homepage/family-circle-desktop-v4.webp"');
+        // The 1:1 family cards use the near-square v4 crops at every width.
+        expect(html).not.toContain("family-cylinder-desktop-v4");
         expect(html).toContain('src="/assets/homepage/family-cylinder-mobile-v4.webp"');
         expect(html).toContain('src="/assets/homepage/family-boston-round-mobile-v4.webp"');
         expect(html).toContain('src="/assets/homepage/family-round-mobile-v4.webp"');
         expect(html).toContain('src="/assets/homepage/family-circle-mobile-v4.webp"');
-        expect(html).toContain('media="(min-width:641px)"');
         expect(html).not.toContain("family-elegant-desktop-v4");
     });
 
