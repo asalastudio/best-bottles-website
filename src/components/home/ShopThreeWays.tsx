@@ -24,10 +24,10 @@ export type ShopSection = "families" | "collections" | "build";
 const SECTIONS: readonly ShopSection[] = ["families", "collections", "build"];
 export const shopSectionId = (section: ShopSection) => `shop-${section}`;
 
-// GPT Image 2.5 Sunburst (Higgsfield, 2026-09-25) from the approved Cylinder
+// GPT Image 2.5 Sunburst (2026-09-25; Higgsfield, fitments re-laid via OpenAI) from the approved Cylinder
 // photographs: the builder's five steps as five groups, centred on the fifths
 // of the width so each step label sits under its group.
-const BUILD_STEPS_IMAGE = "/assets/homepage/build-your-bottle-journey-v1.webp";
+const BUILD_STEPS_IMAGE = "/assets/homepage/build-your-bottle-journey-v2.webp";
 const BUILD_STEPS = ["shopStepBottle", "shopStepGlass", "shopStepFitment", "shopStepFinish", "shopStepReview"] as const;
 
 type Props = {
@@ -140,7 +140,7 @@ export default function ShopThreeWays({ data, familyCounts }: Props) {
                         </div>
                         {/* The builder's journey in one scene; the step bar mirrors the builder's. */}
                         <figure className={styles.steps}>
-                            <img className={styles.stepsImage} src={BUILD_STEPS_IMAGE} alt={t("shopStepsImageAlt")} width={2000} height={753} loading="lazy" />
+                            <img className={styles.stepsImage} src={BUILD_STEPS_IMAGE} alt={t("shopStepsImageAlt")} width={2000} height={755} loading="lazy" />
                             <ol className={styles.stepLabels} aria-label={t("shopStepsLabel")}>
                                 {BUILD_STEPS.map((step, index) => (
                                     <li key={step}><span className={styles.stepNumber}>{index + 1}</span>{t(step)}</li>

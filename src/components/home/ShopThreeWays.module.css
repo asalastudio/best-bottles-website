@@ -180,8 +180,8 @@
 
 /* 03 · Build your bottle — copy on top, the four-station image full width. */
 .build {
-    /* The journey photograph's own background (#F6F4F0), so it has no visible edge. */
-    background: #f6f4f0;
+    /* The journey photograph's own background (#F6F5F1), so it has no visible edge. */
+    background: #f6f5f1;
     border: 1px solid #e6dccd;
     padding: 40px 48px 36px;
 }
