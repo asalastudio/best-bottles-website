@@ -42,6 +42,14 @@ describe("legacy product route overrides", () => {
         expect(getLegacyProductRouteOverride("atomizer-5ml")).toBeNull();
     });
 
+    it("sends the emptied Minaret groups to their families' cap groups, keeping the SKU", () => {
+        expect(resolveProductPageRedirectTarget("rectangle-10ml-clear-13-415-finemist", { sku: "GBRect10MinarCu" }))
+            .toBe("/products/footed-rectangle-10ml-clear-13-415?sku=GBRect10MinarCu");
+        expect(resolveProductPageRedirectTarget("elegant-15ml-clear-13-415-capclosure", { sku: "GBElg15MinarCu" }))
+            .toBe("/products/elegant-15ml-clear-13-415?sku=GBElg15MinarCu");
+        expect(getLegacyProductRouteOverride("footed-rectangle-10ml-clear-13-415")).toBeNull();
+    });
+
     it("leaves canonical slugs unchanged", () => {
         expect(getLegacyProductRouteOverride("diva-46ml-clear-18-415-perfumespray")).toBeNull();
         expect(getCanonicalProductSlug("diva-46ml-clear-18-415-perfumespray")).toBe("diva-46ml-clear-18-415-perfumespray");

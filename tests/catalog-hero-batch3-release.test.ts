@@ -18,15 +18,18 @@ const RE_RENDERED = [
   'GBSQSTClear', 'GBTRDPClear', 'GBTrdpBlue', 'GBTRDPGreen',
 ];
 
-describe('Batch 3 catalog hero release (Square, Rectangle, Tulip, Diamond, frosted tassels, Teardrop, SQST, Vials)', () => {
-  it('ships the 41 approved exact-SKU Sunburst renders with intact image files', async () => {
-    expect(rows).toHaveLength(41);
-    expect(new Set(rows.map(row => row.websiteSku)).size).toBe(41);
-    expect(Object.fromEntries(Object.entries(approval.scope))).toEqual({ Square: 3, Rectangle: 9, Tulip: 6, Diamond: 5, Circle: 1, Round: 1, Teardrop: 3, Vial: 13 });
+// The 13 vials of this release were re-rendered proportional to Jordan's caliper
+// heights and moved to catalog-hero-vials-release.json (see that test).
+describe('Batch 3 catalog hero release (Square, Rectangle, Tulip, Diamond, frosted tassels, Teardrop, SQST)', () => {
+  it('ships the 28 approved exact-SKU Sunburst renders with intact image files', async () => {
+    expect(rows).toHaveLength(28);
+    expect(new Set(rows.map(row => row.websiteSku)).size).toBe(28);
+    expect(rows.some(row => row.family === 'Vial')).toBe(false);
+    expect(Object.fromEntries(Object.entries(approval.scope))).toEqual({ Square: 3, Rectangle: 9, Tulip: 6, Diamond: 5, Circle: 1, Round: 1, Teardrop: 3 });
     for (const [family, count] of Object.entries(approval.scope)) {
       expect(rows.filter(row => row.family === family)).toHaveLength(count);
     }
-    expect(approval.rows).toHaveLength(41);
+    expect(approval.rows).toHaveLength(28);
     for (const hero of rows) {
       const evidence = approval.rows.find(row => row.sku === hero.websiteSku)!;
       expect(evidence.status).toBe('approved');
@@ -51,13 +54,8 @@ describe('Batch 3 catalog hero release (Square, Rectangle, Tulip, Diamond, frost
     }
   });
 
-  it("applies Jordan's vial sizes and the full-height rule for stopper bottles", () => {
+  it('applies the full-height rule for stopper bottles and the glass-foot fix', () => {
     for (const row of approval.rows) {
-      const pct = row.sizing.targetPct;
-      if (row.family === 'Vial') {
-        const capacityMl = rows.find(hero => hero.websiteSku === row.sku)!.capacityMl;
-        expect(pct).toBe(capacityMl <= 2 ? 32 : 35);
-      }
       if (/SQST|TRDP|Trdp/.test(row.sku)) {
         expect(row.sizing.heightWithStopperMm).toBe(row.sku.includes('SQST') ? 64 : 68);
         expect(row.sizing.override).toContain('full height with stopper');
