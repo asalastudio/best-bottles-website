@@ -1,0 +1,102 @@
+{
+ "placement": {
+  "canvas": [
+   768,
+   2304
+  ],
+  "scale": 2.2,
+  "axisX": 384,
+  "footY": 2176,
+  "seatY": 167.4,
+  "shoulderY": 550.2,
+  "pxPerMm": 27.2087,
+  "master": "Clear plate x2.2"
+ },
+ "glasses": {
+  "Clear": {
+   "raw": {
+    "iou": 0.9564,
+    "edgeMaxPx": 72.8,
+    "edgeP95Px": 68.9
+   },
+   "fitted": {
+    "iou": 0.9914,
+    "edgeMaxPx": 13.6,
+    "edgeP95Px": 5.0,
+    "shoulderY": 538,
+    "masterShoulderY": 550.2
+   },
+   "costUsd": 0.0335,
+   "prompt": "1. Keep geometry locked\n2. Enhance the quality",
+   "bakedOnBone": "#F5F3EF"
+  },
+  "Amber": {
+   "raw": {
+    "iou": 0.9756,
+    "edgeMaxPx": 37.7,
+    "edgeP95Px": 34.0
+   },
+   "fitted": {
+    "iou": 0.9929,
+    "edgeMaxPx": 10.0,
+    "edgeP95Px": 5.0,
+    "shoulderY": 542,
+    "masterShoulderY": 550.2
+   },
+   "costUsd": 0.0452,
+   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour and material from the second image\n3. Enhance the quality",
+   "bakedOnBone": null
+  },
+  "Cobalt Blue": {
+   "raw": {
+    "iou": 0.9741,
+    "edgeMaxPx": 37.1,
+    "edgeP95Px": 33.7
+   },
+   "fitted": {
+    "iou": 0.9912,
+    "edgeMaxPx": 9.4,
+    "edgeP95Px": 4.2,
+    "shoulderY": 542,
+    "masterShoulderY": 550.2
+   },
+   "costUsd": 0.0452,
+   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour and material from the second image\n3. Enhance the quality",
+   "bakedOnBone": null
+  },
+  "Frosted": {
+   "raw": {
+    "iou": 0.9647,
+    "edgeMaxPx": 59.7,
+    "edgeP95Px": 55.5
+   },
+   "fitted": {
+    "iou": 0.992,
+    "edgeMaxPx": 11.2,
+    "edgeP95Px": 5.0,
+    "shoulderY": 540,
+    "masterShoulderY": 550.2
+   },
+   "costUsd": 0.0452,
+   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour and material from the second image\n3. Enhance the quality",
+   "bakedOnBone": null
+  },
+  "Swirl": {
+   "raw": {
+    "iou": 0.9912,
+    "edgeMaxPx": 8.0,
+    "edgeP95Px": 5.8
+   },
+   "fitted": {
+    "iou": 0.9925,
+    "edgeMaxPx": 9.0,
+    "edgeP95Px": 5.0,
+    "shoulderY": 551,
+    "masterShoulderY": 550.2
+   },
+   "costUsd": 0.0452,
+   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour and material from the second image\n3. Enhance the quality",
+   "bakedOnBone": "#F5F3EF"
+  }
+ }
+}
