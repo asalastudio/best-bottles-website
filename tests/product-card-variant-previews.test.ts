@@ -152,6 +152,37 @@ describe("product card variant previews", () => {
         expect(previews).toHaveLength(1);
         expect(previews[0]?.label).toBe("Short Green Cap");
     });
+
+    it("names a plug vial's swatch by its plug, not a cap length", () => {
+        const previews = getProductCardVariantPreviews(
+            [
+                {
+                    id: "white-plug",
+                    itemName: "1 ml Amber Vial Bottle with Cap",
+                    imageUrl: "https://cdn.shopify.com/white-plug.png",
+                    color: "Amber",
+                    capColor: "White",
+                    capStyle: "Plug",
+                    websiteSku: "GB1mlAmbVialWht",
+                },
+                {
+                    id: "black-plug",
+                    itemName: "1 ml Amber Vial Bottle with Cap",
+                    imageUrl: "https://cdn.shopify.com/black-plug.png",
+                    color: "Amber",
+                    capColor: "Black",
+                    capStyle: "Plug",
+                    websiteSku: "GB1mlAmbVBlk",
+                },
+            ],
+            {
+                productTitle: "1 ml Amber Vial Bottle with Cap",
+                groupColor: "Amber",
+            },
+        );
+
+        expect(previews.map((preview) => preview.label).sort()).toEqual(["Black Plug", "White Plug"]);
+    });
 });
 
 describe("material swatch backgrounds", () => {

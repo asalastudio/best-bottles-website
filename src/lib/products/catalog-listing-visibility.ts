@@ -17,6 +17,10 @@ const HIDDEN_CATALOG_GROUPS = new Set([
 const HIDDEN_WHEN_EMPTY_GROUPS = new Set([
     "lotion-bottle-30ml-clear",
     "atomizer-5ml-slim",
+    // The Minaret dab-on caps were filed here as sprayers / a separate closure;
+    // they moved into their families' cap groups on 2026-09-25.
+    "rectangle-10ml-clear-13-415-finemist",
+    "elegant-15ml-clear-13-415-capclosure",
 ]);
 
 export function isHiddenCatalogGroup(slug: string): boolean {

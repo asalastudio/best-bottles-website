@@ -307,6 +307,8 @@ function finishFromName(itemName: string | null | undefined): string | null {
 function resolveCapFinish(variant: ProductCardVariantPreviewSource): string | null {
     const capColor = cleanFinishLabel(variant.capColor);
     const capStyle = cleanFinishLabel(variant.capStyle);
+    // A plug vial's closure is its plug, so the swatch says "White Plug", not a cap length.
+    if (capStyle && normalizeKey(capStyle) === "plug") return capColor ? `${capColor} Plug` : "Plug";
     // Some legacy finish labels already include length; capStyle may contradict them.
     if (capColor && /^(?:short|tall)\b/i.test(capColor)) return capColor;
     if (capColor && capStyle && !normalizeKey(capStyle).includes(normalizeKey(capColor))) {
@@ -377,6 +379,7 @@ function previewLabel(variant: ProductCardVariantPreviewSource, groupColor?: str
     const variantColor = cleanLabel(variant.color);
     const groupColorKey = normalizeKey(groupColor);
 
+    if (finish === "Plug" || finish?.endsWith(" Plug")) return finish;
     if (finish && noun && noun !== "Cap") return `${finish} ${noun}`;
     if (finish) return `${finish} Cap`;
     if (variant.ballMaterial && applicator?.includes("Roller")) return `${variant.ballMaterial} Roller`;
