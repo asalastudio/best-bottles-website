@@ -29,6 +29,7 @@ DATA = json.loads(cp.MEASURE.read_text())
 
 def fitted(plate: dict, master: dict) -> Image.Image:
     """The plate scaled so its seat-to-foot and barrel width match the master's (at K), placed on the canvas."""
+    plate, master = plate.get("photoPlate", plate), master.get("photoPlate", master)  # always build from the photographs
     img = Image.open(cp.OUT / plate["file"]).convert("RGBA")
     a, ma = plate["anchors"], master["anchors"]
     sy = K * (ma["baselineY"] - ma["seatY"]) / (a["baselineY"] - a["seatY"])
@@ -55,7 +56,7 @@ def main():
     for glass, plate in plates.items():
         if glass != "Clear":
             on_white(fitted(plate, master)).save(OUT / f"{glass.lower().replace(' ', '-')}-material.png")
-    a = master["anchors"]
+    a = master.get("photoPlate", master)["anchors"]
     placement = {"canvas": [W, H], "scale": K, "axisX": AXIS_X, "footY": FOOT_Y,
                  "seatY": round(FOOT_Y - (a["baselineY"] - a["seatY"]) * K, 1),
                  "shoulderY": round(FOOT_Y - (a["baselineY"] - a["shoulderY"]) * K, 1),

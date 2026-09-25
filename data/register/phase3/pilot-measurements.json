@@ -18,141 +18,276 @@
   {
    "plateKey": "cylinder-9ml-17-415|Clear",
    "glass": "Clear",
-   "file": "plates/cylinder-9ml-17-415--clear.png",
-   "width": 265,
-   "height": 927,
-   "sha256": "6e346d38dd95184eb713f3eb0a49b2e58ce80a3ffff9ba7bc5213dcf61af2428",
-   "pxPerMm": 12.3676,
+   "file": "sunburst/final/clear.png",
+   "width": 768,
+   "height": 2304,
+   "sha256": "236b672e25eb8c9151271a1d0869f1258b0643a6e78ce69fc94be3df120ad6b6",
+   "pxPerMm": 27.2142,
    "anchors": {
-    "axisX": 133.5,
-    "seatY": 7,
-    "shoulderY": 181,
-    "baselineY": 920
+    "axisX": 383.0,
+    "seatY": 167,
+    "shoulderY": 550,
+    "baselineY": 2176
    },
    "checks": {
-    "barrelPx": 241.0,
-    "diameterMm": 19.49,
-    "widthErrorPct": 0.97,
+    "barrelPx": 530.0,
+    "diameterMm": 19.48,
+    "widthErrorPct": 0.91,
     "passes": true,
     "acceptedBy": null,
     "approvable": true
    },
    "source": {
-    "library": "BB-PSD-Files-Master",
+    "library": "gpt-image-2.5-sunburst (approved by Jordan 2026-09-25)",
     "path": "3.  17-415 Bottles/9. Clear  (Uncapped)/1. GBCyl9MtlRollMattSl.psd",
-    "layer": "Layer 16"
+    "layer": "geometry: Clear plate x2.2; material: Clear photo; baked on bone #F5F3EF"
+   },
+   "derivedFrom": "6e346d38dd95184eb713f3eb0a49b2e58ce80a3ffff9ba7bc5213dcf61af2428",
+   "photoPlate": {
+    "file": "plates/cylinder-9ml-17-415--clear.png",
+    "width": 265,
+    "height": 927,
+    "sha256": "6e346d38dd95184eb713f3eb0a49b2e58ce80a3ffff9ba7bc5213dcf61af2428",
+    "pxPerMm": 12.3676,
+    "anchors": {
+     "axisX": 133.5,
+     "seatY": 7,
+     "shoulderY": 181,
+     "baselineY": 920
+    },
+    "checks": {
+     "barrelPx": 241.0,
+     "diameterMm": 19.49,
+     "widthErrorPct": 0.97,
+     "passes": true,
+     "acceptedBy": null,
+     "approvable": true
+    },
+    "source": {
+     "library": "BB-PSD-Files-Master",
+     "path": "3.  17-415 Bottles/9. Clear  (Uncapped)/1. GBCyl9MtlRollMattSl.psd",
+     "layer": "Layer 16"
+    }
    }
   },
   {
    "plateKey": "cylinder-9ml-17-415|Amber",
    "glass": "Amber",
-   "file": "plates/cylinder-9ml-17-415--amber.png",
-   "width": 249,
-   "height": 916,
-   "sha256": "c836efed53bd09db3d7828cff2ae2e1d93bd11aeb69f81a33137a75c046d0eee",
-   "pxPerMm": 12.178,
+   "file": "sunburst/final/amber.png",
+   "width": 768,
+   "height": 2304,
+   "sha256": "d26d9fab33625c176f604f804f235bef9eb7b7d39cbeb6acde0d7d5e9f7bc08a",
+   "pxPerMm": 27.2142,
    "anchors": {
-    "axisX": 123.5,
-    "seatY": 8,
-    "shoulderY": 171,
-    "baselineY": 907
+    "axisX": 383.0,
+    "seatY": 167,
+    "shoulderY": 550,
+    "baselineY": 2176
    },
    "checks": {
-    "barrelPx": 229.0,
-    "diameterMm": 18.8,
-    "widthErrorPct": -2.57,
-    "passes": false,
-    "acceptedBy": "Jordan 2026-09-25: accepted; the Amber and Cobalt files share one photo 2.6% slimmer than the fit",
+    "barrelPx": 530.0,
+    "diameterMm": 19.48,
+    "widthErrorPct": 0.91,
+    "passes": true,
+    "acceptedBy": null,
     "approvable": true
    },
    "source": {
-    "library": "BB-PSD-Files-Master",
+    "library": "gpt-image-2.5-sunburst (approved by Jordan 2026-09-25)",
     "path": "3.  17-415 Bottles/3. Amber 9ml (Uncapped)/1. GBCylAmb9MtlRollMattSl.psd",
-    "layer": "Layer 13"
+    "layer": "geometry: Clear plate x2.2; material: Amber photo"
+   },
+   "derivedFrom": "c836efed53bd09db3d7828cff2ae2e1d93bd11aeb69f81a33137a75c046d0eee",
+   "photoPlate": {
+    "file": "plates/cylinder-9ml-17-415--amber.png",
+    "width": 249,
+    "height": 916,
+    "sha256": "c836efed53bd09db3d7828cff2ae2e1d93bd11aeb69f81a33137a75c046d0eee",
+    "pxPerMm": 12.178,
+    "anchors": {
+     "axisX": 123.5,
+     "seatY": 8,
+     "shoulderY": 171,
+     "baselineY": 907
+    },
+    "checks": {
+     "barrelPx": 229.0,
+     "diameterMm": 18.8,
+     "widthErrorPct": -2.57,
+     "passes": false,
+     "acceptedBy": "Jordan 2026-09-25: accepted; the Amber and Cobalt files share one photo 2.6% slimmer than the fit",
+     "approvable": true
+    },
+    "source": {
+     "library": "BB-PSD-Files-Master",
+     "path": "3.  17-415 Bottles/3. Amber 9ml (Uncapped)/1. GBCylAmb9MtlRollMattSl.psd",
+     "layer": "Layer 13"
+    }
    }
   },
   {
    "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
    "glass": "Cobalt Blue",
-   "file": "plates/cylinder-9ml-17-415--cobalt-blue.png",
-   "width": 249,
-   "height": 916,
-   "sha256": "db31a1866d854e7ed4e473681cee7a513b02a3e85b0e514bf1c3a5b4871b61a9",
-   "pxPerMm": 12.178,
+   "file": "sunburst/final/cobalt-blue.png",
+   "width": 768,
+   "height": 2304,
+   "sha256": "e6a30d162de3183d44cfef0ce6eaab5c22ba4bea4c22504a64fbf8265a67e176",
+   "pxPerMm": 27.2142,
    "anchors": {
-    "axisX": 123.5,
-    "seatY": 8,
-    "shoulderY": 171,
-    "baselineY": 907
+    "axisX": 383.0,
+    "seatY": 167,
+    "shoulderY": 550,
+    "baselineY": 2176
    },
    "checks": {
-    "barrelPx": 229.0,
-    "diameterMm": 18.8,
-    "widthErrorPct": -2.57,
-    "passes": false,
-    "acceptedBy": "Jordan 2026-09-25: accepted; the Amber and Cobalt files share one photo 2.6% slimmer than the fit",
+    "barrelPx": 530.0,
+    "diameterMm": 19.48,
+    "widthErrorPct": 0.91,
+    "passes": true,
+    "acceptedBy": null,
     "approvable": true
    },
    "source": {
-    "library": "BB-PSD-Files-Master",
+    "library": "gpt-image-2.5-sunburst (approved by Jordan 2026-09-25)",
     "path": "3.  17-415 Bottles/1. Cobalt Blue 9ml  (Uncapped)/1. GBCylBlu9MtlRollMattSl.psd",
-    "layer": "Layer 11"
+    "layer": "geometry: Clear plate x2.2; material: Cobalt Blue photo"
+   },
+   "derivedFrom": "db31a1866d854e7ed4e473681cee7a513b02a3e85b0e514bf1c3a5b4871b61a9",
+   "photoPlate": {
+    "file": "plates/cylinder-9ml-17-415--cobalt-blue.png",
+    "width": 249,
+    "height": 916,
+    "sha256": "db31a1866d854e7ed4e473681cee7a513b02a3e85b0e514bf1c3a5b4871b61a9",
+    "pxPerMm": 12.178,
+    "anchors": {
+     "axisX": 123.5,
+     "seatY": 8,
+     "shoulderY": 171,
+     "baselineY": 907
+    },
+    "checks": {
+     "barrelPx": 229.0,
+     "diameterMm": 18.8,
+     "widthErrorPct": -2.57,
+     "passes": false,
+     "acceptedBy": "Jordan 2026-09-25: accepted; the Amber and Cobalt files share one photo 2.6% slimmer than the fit",
+     "approvable": true
+    },
+    "source": {
+     "library": "BB-PSD-Files-Master",
+     "path": "3.  17-415 Bottles/1. Cobalt Blue 9ml  (Uncapped)/1. GBCylBlu9MtlRollMattSl.psd",
+     "layer": "Layer 11"
+    }
    }
   },
   {
    "plateKey": "cylinder-9ml-17-415|Frosted",
    "glass": "Frosted",
-   "file": "plates/cylinder-9ml-17-415--frosted.png",
-   "width": 262,
-   "height": 915,
-   "sha256": "59692bcf0a0e38e23f1140975ef6f50e0a6517dc52bdb1bf27a75405fcc13597",
-   "pxPerMm": 12.1509,
+   "file": "sunburst/final/frosted.png",
+   "width": 768,
+   "height": 2304,
+   "sha256": "7a77faf45cb110801bc24d579a542112688509e55be4fa9e49820e7bd9051e05",
+   "pxPerMm": 27.2142,
    "anchors": {
-    "axisX": 131.0,
-    "seatY": 7,
-    "shoulderY": 163,
-    "baselineY": 904
+    "axisX": 383.0,
+    "seatY": 167,
+    "shoulderY": 550,
+    "baselineY": 2176
    },
    "checks": {
-    "barrelPx": 234.0,
-    "diameterMm": 19.26,
-    "widthErrorPct": -0.22,
+    "barrelPx": 530.0,
+    "diameterMm": 19.48,
+    "widthErrorPct": 0.91,
     "passes": true,
     "acceptedBy": null,
     "approvable": true
    },
    "source": {
-    "library": "BB-PSD-Files-Master",
+    "library": "gpt-image-2.5-sunburst (approved by Jordan 2026-09-25)",
     "path": "3.  17-415 Bottles/5. Frosted 9ml (Uncapped)/1. GBCylFrst9MtlRollMattSl.psd",
-    "layer": "Layer 15"
+    "layer": "geometry: Clear plate x2.2; material: Frosted photo"
+   },
+   "derivedFrom": "59692bcf0a0e38e23f1140975ef6f50e0a6517dc52bdb1bf27a75405fcc13597",
+   "photoPlate": {
+    "file": "plates/cylinder-9ml-17-415--frosted.png",
+    "width": 262,
+    "height": 915,
+    "sha256": "59692bcf0a0e38e23f1140975ef6f50e0a6517dc52bdb1bf27a75405fcc13597",
+    "pxPerMm": 12.1509,
+    "anchors": {
+     "axisX": 131.0,
+     "seatY": 7,
+     "shoulderY": 163,
+     "baselineY": 904
+    },
+    "checks": {
+     "barrelPx": 234.0,
+     "diameterMm": 19.26,
+     "widthErrorPct": -0.22,
+     "passes": true,
+     "acceptedBy": null,
+     "approvable": true
+    },
+    "source": {
+     "library": "BB-PSD-Files-Master",
+     "path": "3.  17-415 Bottles/5. Frosted 9ml (Uncapped)/1. GBCylFrst9MtlRollMattSl.psd",
+     "layer": "Layer 15"
+    }
    }
   },
   {
    "plateKey": "cylinder-9ml-17-415|Swirl",
    "glass": "Swirl",
-   "file": "plates/cylinder-9ml-17-415--swirl.png",
-   "width": 264,
-   "height": 927,
-   "sha256": "417872cc162a567b2d5894ceac1fc2ce49f937b8f26709a8d7e26c6ad8953914",
-   "pxPerMm": 12.3541,
+   "file": "sunburst/final/swirl.png",
+   "width": 768,
+   "height": 2304,
+   "sha256": "677b9c4ff53538818f2d0c134314487a03077b22b0bdf6f75d9aa0255028cf99",
+   "pxPerMm": 27.2142,
    "anchors": {
-    "axisX": 134.0,
-    "seatY": 7,
-    "shoulderY": 182,
-    "baselineY": 919
+    "axisX": 383.0,
+    "seatY": 167,
+    "shoulderY": 550,
+    "baselineY": 2176
    },
    "checks": {
-    "barrelPx": 237.0,
-    "diameterMm": 19.18,
-    "widthErrorPct": -0.6,
+    "barrelPx": 530.0,
+    "diameterMm": 19.48,
+    "widthErrorPct": 0.91,
     "passes": true,
     "acceptedBy": null,
     "approvable": true
    },
    "source": {
-    "library": "BB-PSD-Files-Master",
+    "library": "gpt-image-2.5-sunburst (approved by Jordan 2026-09-25)",
     "path": "3.  17-415 Bottles/7. Swirl 9ml (Uncapped)/1. GBCylSwrl9MtlRollMattSl.psd",
-    "layer": "Layer 17"
+    "layer": "geometry: Clear plate x2.2; material: Swirl photo; baked on bone #F5F3EF"
+   },
+   "derivedFrom": "417872cc162a567b2d5894ceac1fc2ce49f937b8f26709a8d7e26c6ad8953914",
+   "photoPlate": {
+    "file": "plates/cylinder-9ml-17-415--swirl.png",
+    "width": 264,
+    "height": 927,
+    "sha256": "417872cc162a567b2d5894ceac1fc2ce49f937b8f26709a8d7e26c6ad8953914",
+    "pxPerMm": 12.3541,
+    "anchors": {
+     "axisX": 134.0,
+     "seatY": 7,
+     "shoulderY": 182,
+     "baselineY": 919
+    },
+    "checks": {
+     "barrelPx": 237.0,
+     "diameterMm": 19.18,
+     "widthErrorPct": -0.6,
+     "passes": true,
+     "acceptedBy": null,
+     "approvable": true
+    },
+    "source": {
+     "library": "BB-PSD-Files-Master",
+     "path": "3.  17-415 Bottles/7. Swirl 9ml (Uncapped)/1. GBCylSwrl9MtlRollMattSl.psd",
+     "layer": "Layer 17"
+    }
    }
   }
  ],

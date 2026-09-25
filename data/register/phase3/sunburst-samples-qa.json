@@ -27,7 +27,8 @@
     "masterShoulderY": 550.2
    },
    "costUsd": 0.0335,
-   "prompt": "1. Keep geometry locked\n2. Enhance the quality"
+   "prompt": "1. Keep geometry locked\n2. Enhance the quality",
+   "bakedOnBone": "#F5F3EF"
   },
   "Amber": {
    "raw": {
@@ -43,7 +44,8 @@
     "masterShoulderY": 550.2
    },
    "costUsd": 0.0452,
-   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour and material from the second image\n3. Enhance the quality"
+   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour and material from the second image\n3. Enhance the quality",
+   "bakedOnBone": null
   },
   "Cobalt Blue": {
    "raw": {
@@ -59,7 +61,8 @@
     "masterShoulderY": 550.2
    },
    "costUsd": 0.0452,
-   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour and material from the second image\n3. Enhance the quality"
+   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour and material from the second image\n3. Enhance the quality",
+   "bakedOnBone": null
   },
   "Frosted": {
    "raw": {
@@ -75,7 +78,8 @@
     "masterShoulderY": 550.2
    },
    "costUsd": 0.0452,
-   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour and material from the second image\n3. Enhance the quality"
+   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour and material from the second image\n3. Enhance the quality",
+   "bakedOnBone": null
   },
   "Swirl": {
    "raw": {
@@ -91,7 +95,8 @@
     "masterShoulderY": 550.2
    },
    "costUsd": 0.0452,
-   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour and material from the second image\n3. Enhance the quality"
+   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour and material from the second image\n3. Enhance the quality",
+   "bakedOnBone": "#F5F3EF"
   }
  }
 }

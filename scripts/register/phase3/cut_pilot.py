@@ -65,6 +65,10 @@ GLASS = {  # glass -> (uncapped folder, capped folder)
     "Swirl": ("7. Swirl 9ml (Uncapped)", "8. Swirl 9ml (Capped)"),
 }
 ALPHA = 128           # silhouette threshold
+# Jordan 2026-09-25 ("those look fine. Let's use those."): the body plates are the five Sunburst renders on
+# one locked geometry (scripts/register/phase3/sunburst_*.py/.mjs), each fitted to the Clear master and
+# alpha-locked to its outline. The photo plate each came from is kept on the record as `photoPlate`.
+USE_SUNBURST_PLATES = True
 
 
 def sha(img: Image.Image) -> str:
@@ -98,7 +102,7 @@ _ORDER: dict[int, dict[int, int]] = {}
 
 def canvas_of(psd: PSDImage, layers: list) -> Image.Image:
     """The chosen layers, each from its own pixels, composited bottom-up on a transparent canvas."""
-    order = _ORDER.setdefault(id(psd), {id(l): i for i, l in enumerate(psd.descendants())})
+    order = {id(l): i for i, l in enumerate(psd.descendants())}  # not cached: object ids are reused after garbage collection
     canvas = Image.new("RGBA", psd.size, (0, 0, 0, 0))
     for layer in sorted(layers, key=lambda l: order[id(l)]):
         pix = layer.composite()
@@ -201,6 +205,32 @@ def main() -> int:
             "source": {"library": "BB-PSD-Files-Master", "path": str(psd_path.relative_to(PSD_ROOT)), "layer": layer.name},
         })
         print(f"plate {glass:12} {cut.width}x{cut.height}  {m['pxPerMm']:.3f} px/mm  rim {m['rim']} shoulder {m['shoulderY']} foot {m['foot']}  width {m['diameterMm']:.2f} mm vs {FIT_D_MM} ({m['widthErrorPct']:+.1f}%)")
+
+    # ---------- approved Sunburst renders replace the photo plates (same anchors for every glass) ----------
+    sun = OUT / "sunburst" / "final"
+    if USE_SUNBURST_PLATES and sun.exists():
+        # Every render's outline is locked to the master, so the master mask is the one geometry to measure:
+        # per-image measurement would only add half-pixel antialiasing noise between glasses.
+        master_mask = Image.open(OUT / "sunburst" / "inputs" / "master-mask.png").convert("L")
+        master_rgba = Image.new("RGBA", master_mask.size, (255, 255, 255, 0))
+        master_rgba.putalpha(master_mask)
+        m = measure_body(master_rgba)
+        for p in result["plates"]:
+            final = sun / f"{p['glass'].lower().replace(' ', '-')}.png"
+            img = Image.open(final).convert("RGBA")
+            photo = {k: p[k] for k in ("file", "width", "height", "sha256", "pxPerMm", "anchors", "checks", "source")}
+            p.update({
+                "file": str(final.relative_to(OUT)), "width": img.width, "height": img.height, "sha256": sha(img),
+                "pxPerMm": round(m["pxPerMm"], 4),
+                "anchors": {"axisX": round(m["axisX"], 1), "seatY": m["rim"], "shoulderY": m["shoulderY"], "baselineY": m["foot"]},
+                "checks": {"barrelPx": m["barrelPx"], "diameterMm": round(m["diameterMm"], 2), "widthErrorPct": round(m["widthErrorPct"], 2),
+                           "passes": abs(m["widthErrorPct"]) <= 2.0, "acceptedBy": None, "approvable": abs(m["widthErrorPct"]) <= 2.0},
+                "source": {"library": "gpt-image-2.5-sunburst (approved by Jordan 2026-09-25)", "path": result["plates"][0]["source"]["path"] if False else photo["source"]["path"],
+                           "layer": f"geometry: Clear plate x2.2; material: {p['glass']} photo" + ("; baked on bone #F5F3EF" if p["glass"] in ("Clear", "Swirl") else "")},
+                "derivedFrom": photo["sha256"],
+                "photoPlate": photo,
+            })
+            print(f"plate {p['glass']:12} -> Sunburst {img.width}x{img.height}  {m['pxPerMm']:.3f} px/mm  rim {m['rim']} shoulder {m['shoulderY']} foot {m['foot']}  width {m['diameterMm']:.2f} mm ({m['widthErrorPct']:+.1f}%)")
 
     # ---------- components: library PSD registered against the capped clear bottle ----------
     capped_dir = BOTTLES / GLASS["Clear"][1]

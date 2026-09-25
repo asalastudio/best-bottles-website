@@ -24,6 +24,12 @@ BASE = cp.OUT / "sunburst"
 PLACE = json.loads((BASE / "inputs" / "placement.json").read_text())
 MASTER = np.asarray(Image.open(BASE / "inputs" / "master-mask.png")) > 127
 GLASSES = ["Clear", "Amber", "Cobalt Blue", "Frosted", "Swirl"]
+# Jordan 2026-09-25: with the background removed, clear glass must carry EXACTLY the on-brand bone the
+# product-page heroes sit on (#F5F3EF = --color-bone; sampled from the released heroes). Sunburst renders
+# the see-through interior as white, so clear glasses are multiplied onto bone: white becomes #F5F3EF
+# exactly, edges keep their tone. Draw these plates NORMALLY on a bone stage (no multiply again).
+BONE = (0xF5, 0xF3, 0xEF)
+BONE_BAKED = {"Clear", "Swirl"}  # Frosted keeps its white: that white is the frost, not the background
 slug = lambda g: g.lower().replace(" ", "-")
 
 
@@ -75,13 +81,24 @@ def main():
         m = cp.measure_body(fitted)
         locked = fitted.copy()
         locked.putalpha(Image.fromarray(np.minimum(np.asarray(fitted.getchannel("A")), np.asarray(soft))))
+        if glass in BONE_BAKED:
+            rgba = np.asarray(locked).astype(np.float32)
+            # The render's own paper white (about 253, not 255) is levelled to 255 first, so the see-through
+            # interior multiplies to EXACTLY #F5F3EF: per channel, the most common value among solid,
+            # near-white pixels inside the glass.
+            solid = (rgba[..., 3] > 250) & (rgba[..., :3].min(axis=2) >= 235)
+            white = np.array([np.bincount(rgba[..., c][solid].astype(np.int64), minlength=256).argmax() for c in range(3)], dtype=np.float32)
+            levelled = np.minimum(rgba[..., :3] * (255.0 / white), 255.0)
+            rgba[..., :3] = np.round(levelled * (np.array(BONE, dtype=np.float32) / 255.0))
+            locked = Image.fromarray(rgba.clip(0, 255).astype(np.uint8), "RGBA")
+            print(f"{glass}: paper white {white.astype(int).tolist()} levelled to 255, baked on #F5F3EF")
         locked.save(BASE / "final" / f"{slug(glass)}.png", optimize=True)
         finals[glass] = locked
         meta = json.loads((BASE / "renders" / f"{slug(glass)}.png.json").read_text())
         qa["glasses"][glass] = {"raw": {"iou": round(raw_iou, 4), "edgeMaxPx": round(raw_max, 1), "edgeP95Px": round(raw_p95, 1)},
                                 "fitted": {"iou": round(iou, 4), "edgeMaxPx": round(dmax, 1), "edgeP95Px": round(p95, 1),
                                            "shoulderY": m["shoulderY"], "masterShoulderY": PLACE["shoulderY"]},
-                                "costUsd": meta["costUsd"], "prompt": meta["prompt"]}
+                                "costUsd": meta["costUsd"], "prompt": meta["prompt"], "bakedOnBone": "#F5F3EF" if glass in BONE_BAKED else None}
         print(f"{glass:12} raw IoU {raw_iou:.4f} (max {raw_max:.0f}px)  fitted IoU {iou:.4f} (max {dmax:.0f}px, p95 {p95:.1f}px)  shoulder {m['shoulderY']} vs {PLACE['shoulderY']}")
     (BASE / "qa.json").write_text(json.dumps(qa, indent=1) + "\n")
 

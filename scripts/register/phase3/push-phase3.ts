@@ -31,7 +31,7 @@ type Layer = { slot: string; layerName: string; file: string; width: number; hei
 type Measurements = {
     bodyId: string;
     plates: { plateKey: string; glass: string; file: string; width: number; height: number; sha256: string; pxPerMm: number;
-        anchors: { axisX: number; seatY: number; shoulderY: number; baselineY: number }; checks: { passes: boolean; approvable: boolean; acceptedBy: string | null }; source: { library: string; path: string; layer: string } }[];
+        anchors: { axisX: number; seatY: number; shoulderY: number; baselineY: number }; checks: { passes: boolean; approvable: boolean; acceptedBy: string | null }; derivedFrom?: string; source: { library: string; path: string; layer: string } }[];
     components: { componentId: string; layers: Layer[]; checks: Record<string, unknown> }[];
 };
 
@@ -59,7 +59,7 @@ async function main() {
         const s = p.checks.approvable ? status(p.plateKey) : "measured";
         plates.push({ plateKey: p.plateKey, bodyId: m.bodyId, glass: p.glass, image, thumb: null, pxPerMm: p.pxPerMm,
             anchors: { axisX: p.anchors.axisX, seatY: p.anchors.seatY, baselineY: p.anchors.baselineY, shoulderY: p.anchors.shoulderY },
-            anchorStatus: s, anchorMeasuredBy: "scripts/register/phase3/cut_pilot.py", derivedFrom: null, storageProvider: "vercel-blob" as const,
+            anchorStatus: s, anchorMeasuredBy: "scripts/register/phase3/cut_pilot.py", derivedFrom: p.derivedFrom ?? null, storageProvider: "vercel-blob" as const,
             source: { library: p.source.library, path: p.source.path, psdSha256: null, layer: p.source.layer } });
         console.log(`plate ${p.plateKey}: ${s}${p.checks.passes ? "" : p.checks.acceptedBy ? ` (outside the gate; ${p.checks.acceptedBy})` : " (fails the size gate; held at measured)"}`);
     }

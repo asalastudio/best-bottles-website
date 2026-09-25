@@ -29,13 +29,15 @@ describe("Phase 3 pilot measurements (17-415 Cylinder 9 mL)", () => {
         for (const h of heights) expect(h).toBeCloseTo(heights[0], 1);
     });
 
-    it("keeps Amber and Cobalt outside the width gate but approvable by Jordan's named ruling", () => {
-        expect(m.plates.filter(p => !p.checks.passes).map(p => p.glass).sort()).toEqual(["Amber", "Cobalt Blue"]);
+    it("uses the approved Sunburst plates: one geometry, so every glass has the same size and anchors", () => {
+        const first = m.plates[0];
         for (const p of m.plates) {
-            expect(p.checks.approvable).toBe(p.checks.passes || Boolean(p.checks.acceptedBy));
-            if (!p.checks.passes) expect(p.checks.acceptedBy).toMatch(/^Jordan 2026-09-25/);
+            expect(p.file).toMatch(/^sunburst\/final\//);
+            expect([p.width, p.height]).toEqual([first.width, first.height]);
+            expect(p.anchors).toEqual(first.anchors);
+            expect(p.checks.passes).toBe(true);
+            expect(p.checks.approvable).toBe(true);
         }
-        expect(m.plates.every(p => p.checks.approvable)).toBe(true);
     });
 
     it("measures all 19 pilot components and both roller inserts", () => {
