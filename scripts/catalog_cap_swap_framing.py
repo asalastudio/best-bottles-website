@@ -249,21 +249,40 @@ def main() -> None:
     parser.add_argument("--convex-url", default=None)
     parser.add_argument("--min-match", type=float, default=0.74)
     parser.add_argument("--workers", type=int, default=8)
+    parser.add_argument("--only", action="append", default=[], metavar="SUBSTRING",
+                        help="recalibrate only heroes whose URL contains this (repeatable); other entries and shadows are kept, "
+                             "and entries for heroes no longer in any registry are dropped")
     args = parser.parse_args()
     convex = args.convex_url or convex_url_from_env()
 
-    rows = hero_rows()
+    all_rows = hero_rows()
+    rows = [row for row in all_rows if not args.only or any(part in row["url"] for part in args.only)]
+    if args.only and not rows:
+        raise SystemExit(f"no hero URL contains {args.only}")
     skus = sorted({row["websiteSku"] for row in rows})
     plates: dict = {}
     for start in range(0, len(skus), 150):
         plates.update(convex_query(convex, "productPlates:forSkus", {"skus": skus[start:start + 150]})["plates"])
 
     shadow_dir = os.path.join(ROOT, "public", SHADOW_DIR)
-    if os.path.isdir(shadow_dir):  # layers are regenerated; stale ones must not ship
+    framing: dict = {}
+    if args.only:
+        # Keep the calibration of every hero not being redone; drop entries (and their
+        # shadow layers) for hero URLs that no longer exist in any registry.
+        live = {row["url"] for row in all_rows}
+        redo = {row["url"] for row in rows}
+        if os.path.exists(OUT):
+            for url, entry in json.load(open(OUT, encoding="utf8")).items():
+                if url in live and url not in redo:
+                    framing[url] = entry
+                elif entry.get("shadow"):
+                    stale = os.path.join(ROOT, "public", entry["shadow"].lstrip("/"))
+                    if os.path.exists(stale):
+                        os.remove(stale)
+    elif os.path.isdir(shadow_dir):  # layers are regenerated; stale ones must not ship
         for name in os.listdir(shadow_dir):
             os.remove(os.path.join(shadow_dir, name))
 
-    framing: dict = {}
     skipped: list[tuple[str, str]] = []
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
         for url, result, reason in pool.map(lambda row: calibrate(row, plates, args.min_match), rows):
@@ -275,7 +294,8 @@ def main() -> None:
     with open(OUT, "w", encoding="utf8") as handle:
         json.dump(dict(sorted(framing.items())), handle, indent=2)
         handle.write("\n")
-    print(f"{len(framing)} of {len(rows)} heroes calibrated → {os.path.relpath(OUT, ROOT)}")
+    done = sum(1 for row in rows if row["url"] in framing)
+    print(f"{done} of {len(rows)} heroes calibrated{f' (file now holds {len(framing)})' if args.only else ''} → {os.path.relpath(OUT, ROOT)}")
     for url, reason in sorted(skipped):
         print(f"  skipped {url}: {reason}", file=sys.stderr)
 
