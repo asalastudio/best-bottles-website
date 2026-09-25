@@ -46,6 +46,14 @@ describe('missing source publication hold',()=>{
   expect(result.facets.categories.Component).toBe(2);
   expect(result.nextCursor).toBe('1');
  });
+ it('never reports fewer products than an exact SKU search returned',()=>{
+  const f=fixture();
+  // Convex matched a variant SKU the snapshot recount cannot see: 1 card, recount 0.
+  const page={...f,items:[f.items[0]],totalCount:1,nextCursor:null};
+  const result=applyVisibleCatalogSummary(sanitizeCatalogResult(page),{groups:f.items,primarySkus:f.primarySkus,variantPreviewRows:f.variantPreviewRows},{filters:{...EMPTY_FILTERS,search:'GBCyl9SpryGl'},sort:'best-match',view:'visual',limit:24,cursor:null});
+  expect(result.items).toHaveLength(1);
+  expect(result.totalCount).toBe(1);
+ });
  it('applies the same hold before fallback facets and pagination',()=>{
   const f=fixture(),result=buildCatalogSearchResult({groups:f.items,primarySkus:f.primarySkus,variantPreviewRows:f.variantPreviewRows,filters:EMPTY_FILTERS,sort:'featured',view:'visual',limit:24});
   expect(result.totalCount).toBe(2);

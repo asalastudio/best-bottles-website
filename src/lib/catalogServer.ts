@@ -88,7 +88,7 @@ async function withCatalogMediaPreviewRows(
     };
 }
 
-type CatalogVisibilitySnapshot = {
+export type CatalogVisibilitySnapshot = {
     groups: CatalogSearchGroup[];
     primarySkus: CatalogSearchResultShape["primarySkus"];
     variantPreviewRows: CatalogSearchResultShape["variantPreviewRows"];
@@ -115,7 +115,7 @@ const loadCatalogVisibilitySnapshot = unstable_cache(
     { revalidate: 30, tags: ["catalog-visibility"] },
 );
 
-async function getCatalogVisibilitySnapshot(): Promise<CatalogVisibilitySnapshot> {
+export async function getCatalogVisibilitySnapshot(): Promise<CatalogVisibilitySnapshot> {
     const convexUrl = process.env.NEXT_PUBLIC_CONVEX_URL;
     if (!convexUrl) throw new Error("NEXT_PUBLIC_CONVEX_URL is required to render catalog data.");
     return loadCatalogVisibilitySnapshot(convexUrl);
@@ -127,14 +127,18 @@ export function applyVisibleCatalogSummary(
     args: CatalogSearchArgs & { filters: CatalogFilters },
 ): CatalogSearchResultShape {
     const summary = buildCatalogSearchResult({ ...snapshot, ...args, limit: 1, cursor: null });
-    return { ...result, totalCount: summary.totalCount, facets: summary.facets };
+    // The snapshot recount has no exact alternate-SKU lookup (convex/products.ts
+    // searchCatalog), so "GBCyl9SpryGl" returned its product with a count of 0
+    // and the page showed "No products found" next to the card. Never report
+    // fewer products than the page is showing.
+    return { ...result, totalCount: Math.max(summary.totalCount, result.items.length), facets: summary.facets };
 }
 
 function asStringArray(value: unknown): string[] {
     return Array.isArray(value) ? value.filter((item): item is string => typeof item === "string" && item.trim().length > 0) : [];
 }
 
-function normalizeCatalogSearchArgs(args: CatalogSearchArgs): CatalogSearchArgs & { filters: CatalogFilters } {
+export function normalizeCatalogSearchArgs(args: CatalogSearchArgs): CatalogSearchArgs & { filters: CatalogFilters } {
     const filters = args.filters ?? {};
     const validSort = SORT_OPTIONS.some((option) => option.value === args.sort) ? args.sort : "featured";
     const validView = VIEW_MODES.includes(args.view) ? args.view : "visual";
