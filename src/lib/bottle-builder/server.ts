@@ -21,11 +21,19 @@ const familyRows = (family: string) => client().query(api.matrix.getFamilyRows, 
 
 const KIT_BATCH = 50;
 
+// Assembling a family from Convex (rows, listed components, plates, chooser
+// kits) takes 1.3–4.2 s and blocks the whole builder while it runs. Component
+// edits in the Team Hub call updateTag("bottle-components"), and add-to-cart
+// re-validates price and stock against Convex, so the chooser can be an hour
+// old without risk. Was 300 s, which put a visitor on the cold path every five
+// minutes per family (2026-09-24 first-open measurement).
+const FAMILY_CACHE_SECONDS = 60 * 60;
+
 export const loadBuilderFamily = unstable_cache(async (family: string) => {
     const data = await familyRows(family);
     if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${family}`);
     return slimBuilderBodies(await loadBuilderBodies(data.rows));
-}, ["bottle-builder-family-chooser-v6-unavailable-bulbs"], { revalidate: 300, tags: ["bottle-components"] });
+}, ["bottle-builder-family-chooser-v6-unavailable-bulbs"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 export const loadBuilderFamilies = unstable_cache(async () => {
     const families = await client().query(api.matrix.listFamilies, {});
@@ -46,7 +54,7 @@ export const loadBuilderFamilies = unstable_cache(async () => {
         }
     }));
     return available.filter(family => family !== null);
-}, ["bottle-builder-families-bare-v8-tall9-caps"], { revalidate: 300, tags: ["bottle-components"] });
+}, ["bottle-builder-families-bare-v8-tall9-caps"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 async function loadKitsForRows(rows: Array<{ websiteSku: string | null; graceSku: string | null }>): Promise<Map<string, BuilderKit | null>> {
     const result = new Map<string, BuilderKit | null>();

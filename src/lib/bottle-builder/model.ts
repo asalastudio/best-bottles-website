@@ -53,6 +53,14 @@ export type BuilderBody = {
     neck: string;
     configurations: BuilderConfiguration[];
     unavailableFinishes?: { id: string; color: string; fitment: string; closure: string; imageUrl: string }[];
+    /** First paint sends one configuration per glass colour (chooserBodies);
+     * the rest arrive from /api/bottle-builder/bodies once the bottle is chosen. */
+    chooserOnly?: boolean;
+    /** Every fitment the full body offers, so filters work before it loads. */
+    fitments?: string[];
+    /** Cheapest 1-piece price across the full body, and per glass colour. */
+    priceFrom?: number | null;
+    colorPriceFrom?: Record<string, number | null>;
 };
 export type BuilderSelection = {
     bodyId: string | null;
@@ -474,6 +482,19 @@ export function builderCartItem(config: BuilderConfiguration, quantity: number):
     if (unitPrice == null || !Number.isFinite(unitPrice) || unitPrice <= 0 || !config.product.shopifyVariantId
         || config.product.shopifySellable === false) throw new Error("This combination is no longer available.");
     return { ...config.product, quantity, unitPrice };
+}
+
+/** The cheapest and dearest charged unit price among the configurations a
+ * partial selection can still become, so a price is on screen from the first
+ * click. Same quantity and merged-SKU cart rule as builderOrder. */
+export function builderPriceRange(configs: BuilderConfiguration[], quantity: number, cart: CartItem[]) {
+    const qty = Number.isSafeInteger(quantity) && quantity >= 1 ? Math.min(quantity, MAX_QUANTITY) : 1;
+    const prices = configs.map(config => {
+        const existing = cart.find(item => item.graceSku === config.product.graceSku)?.quantity ?? 0;
+        return resolveChargedUnitPrice(qty + existing, config.product);
+    }).filter((price): price is number => price != null && Number.isFinite(price) && price > 0);
+    if (!prices.length) return null;
+    return { min: Math.min(...prices), max: Math.max(...prices) };
 }
 
 /** Match the cart's merged-SKU pricing, in cents, including any tier change. */

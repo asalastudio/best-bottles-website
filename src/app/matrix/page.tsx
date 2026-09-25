@@ -10,7 +10,7 @@ import BuilderLoading from "@/components/bottle-builder/BuilderLoading";
 import { loadBuilderEntry } from "@/lib/bottle-builder/entry";
 import MatrixClient from "@/components/matrix/MatrixClient";
 import { loadBuilderFamilies, loadBuilderFamily } from "@/lib/bottle-builder/server";
-import { slimBuilderBodies } from "@/lib/bottle-builder/payload";
+import { chooserBodies } from "@/lib/bottle-builder/payload";
 import { preferMobileRequest } from "@/lib/bottle-builder/mobile-request";
 import { SITE_URL, buildBreadcrumbJsonLd } from "@/lib/seo";
 
@@ -43,7 +43,9 @@ export default async function MatrixPage({ searchParams }: { searchParams: Promi
 async function Builder({ familyParam, collection }: { familyParam?: string; collection?: string }) {
     const preferMobile = preferMobileRequest(await headers());
     const entry = await loadBuilderEntry(familyParam, { family: loadBuilderFamily, families: loadBuilderFamilies });
-    const bodies = slimBuilderBodies(builderCollectionBodies(entry.bodies, collection));
+    // First paint: chooser bodies only (one configuration per glass). The chosen bottle's
+    // configurations load from /api/bottle-builder/bodies; Cylinder's HTML drops from 789 KB.
+    const bodies = chooserBodies(builderCollectionBodies(entry.bodies, collection));
     return <>
         <MatrixClient key={`${entry.openFamily}:${collection ?? "all"}`} {...entry} bodies={bodies} preferMobile={preferMobile} />
     </>;

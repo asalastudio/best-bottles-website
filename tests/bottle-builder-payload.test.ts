@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { attachBuilderKits, slimBuilderBodies } from "@/lib/bottle-builder/payload";
+import { attachBuilderKits, chooserBodies, slimBuilderBodies } from "@/lib/bottle-builder/payload";
 import { chooserPreloadUrls } from "@/lib/bottle-builder/mobile-request";
 import { bareGlassPreview, clearBodyPreview, previewParts, type BuilderBody, type BuilderConfiguration, type BuilderKit } from "@/lib/bottle-builder/model";
 
@@ -126,6 +126,36 @@ describe("builder first-paint payload", () => {
     });
 });
 
+describe("chooser-only first paint", () => {
+    it("keeps one configuration per glass colour with the full body's fitments and cheapest prices", () => {
+        const configs = [
+            config("Cyl9RollBlack", { closure: "Black", product: { graceSku: "a", unitPrice: 1.2, webPrice1pc: 1.2 } as BuilderConfiguration["product"] }),
+            config("Cyl9RollGold", { closure: "Gold", product: { graceSku: "b", unitPrice: .9, webPrice1pc: .9 } as BuilderConfiguration["product"] }),
+            config("Cyl9SprayBlack", { fitment: "Fine Mist Sprayer", product: { graceSku: "c", unitPrice: 2.5, webPrice1pc: 2.5 } as BuilderConfiguration["product"] }),
+            config("Cyl9AmberRoll", { color: "Amber", product: { graceSku: "d", unitPrice: 1.4, webPrice1pc: 1.4 } as BuilderConfiguration["product"] }),
+            config("Cyl9AmberSpray", { color: "Amber", fitment: "Fine Mist Sprayer", product: { graceSku: "e", unitPrice: 3, webPrice1pc: 3 } as BuilderConfiguration["product"] }),
+        ];
+        const [chooser] = chooserBodies([body(configs)]);
+        expect(chooser!.chooserOnly).toBe(true);
+        expect(chooser!.configurations.map(c => c.id)).toEqual(["Cyl9RollBlack", "Cyl9AmberRoll"]);
+        expect(chooser!.configurations.every(c => c.kit === null)).toBe(true);
+        expect(chooser!.fitments).toEqual(["Metal Roller", "Fine Mist Sprayer"]);
+        expect(chooser!.priceFrom).toBe(.9);
+        expect(chooser!.colorPriceFrom).toEqual({ Clear: .9, Amber: 1.4 });
+        // The tiles and glass swatches still resolve to a drawable configuration.
+        expect(clearBodyPreview(chooser!).id).toBe("Cyl9RollBlack");
+        expect(bareGlassPreview(chooser!.configurations[1]!).color).toBe("Amber");
+    });
+    it("ignores unpriced configurations when finding the cheapest", () => {
+        const [chooser] = chooserBodies([body([
+            config("Free", { product: { graceSku: "x", unitPrice: null, webPrice1pc: null } as unknown as BuilderConfiguration["product"] }),
+            config("Paid", { closure: "Gold", product: { graceSku: "y", unitPrice: 2, webPrice1pc: 2 } as BuilderConfiguration["product"] }),
+        ])]);
+        expect(chooser!.priceFrom).toBe(2);
+        expect(chooser!.colorPriceFrom).toEqual({ Clear: 2 });
+    });
+});
+
 describe("Build Your Bottle first-paint contract", () => {
     it("caches the opened family and sends the slim workspace, then loads kits for the selected bottle", () => {
         const page = readFileSync("src/app/matrix/page.tsx", "utf8");
@@ -138,7 +168,7 @@ describe("Build Your Bottle first-paint contract", () => {
         expect(server).toContain("productKits.forSkus");
         const familiesFn = server.slice(server.indexOf("export const loadBuilderFamilies"), server.indexOf("async function loadKitsForRows"));
         expect(familiesFn).not.toContain("loadBuilderFamily(");
-        expect(page).toContain("slimBuilderBodies");
+        expect(page).toContain("chooserBodies");
         expect(page).not.toContain("chooserPreloadUrls(bodies, CHOOSER_PRIORITY_TILES)");
         expect(page).not.toContain('rel="preload"');
         expect(client).toContain("useBuilderKits");

@@ -1,5 +1,8 @@
 {
   "buildCommand": "bash scripts/vercel-build.sh",
+  "crons": [
+    { "path": "/api/bottle-builder/warm", "schedule": "0 * * * *" }
+  ],
   "functions": {
     "src/app/api/pdf/catalog/route.ts": {
       "maxDuration": 300,
