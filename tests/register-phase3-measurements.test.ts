@@ -6,7 +6,7 @@ type Layer = { slot: string; width: number; height: number; pxPerMm: number; anc
 const m = JSON.parse(readFileSync(resolve(__dirname, "..", "data", "register", "phase3", "pilot-measurements.json"), "utf8")) as {
     bodyId: string;
     scaleBasis: { gatePct: number };
-    plates: { glass: string; width: number; height: number; pxPerMm: number; anchors: { axisX: number; seatY: number; shoulderY: number; baselineY: number }; checks: { heightErrorPct: number; passes: boolean } }[];
+    plates: { glass: string; width: number; height: number; pxPerMm: number; anchors: { axisX: number; seatY: number; shoulderY: number; baselineY: number }; checks: { heightErrorPct: number; passes: boolean; approvable: boolean; acceptedBy: string | null } }[];
     components: { componentId: string; type: string; layers: Layer[]; checks: { registrationIoU?: number; clippedAtRim?: boolean } }[];
 };
 
@@ -24,8 +24,13 @@ describe("Phase 3 pilot measurements (17-415 Cylinder 9 mL)", () => {
         }
     });
 
-    it("flags the Amber and Cobalt photos, which are slimmer than the fitted silhouette", () => {
+    it("keeps Amber and Cobalt outside the gate but approvable by Jordan's named ruling", () => {
         expect(m.plates.filter(p => !p.checks.passes).map(p => p.glass).sort()).toEqual(["Amber", "Cobalt Blue"]);
+        for (const p of m.plates) {
+            expect(p.checks.approvable).toBe(p.checks.passes || Boolean(p.checks.acceptedBy));
+            if (!p.checks.passes) expect(p.checks.acceptedBy).toMatch(/^Jordan 2026-09-25/);
+        }
+        expect(m.plates.every(p => p.checks.approvable)).toBe(true);
     });
 
     it("measures all 19 pilot components and both roller inserts", () => {

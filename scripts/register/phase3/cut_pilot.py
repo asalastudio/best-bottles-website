@@ -49,6 +49,12 @@ import math
 FIT_H_MM, FIT_D_MM, TILT_DEG = 72.2, 19.3, 6.0
 APPARENT_H_MM = FIT_H_MM * math.cos(math.radians(TILT_DEG)) + FIT_D_MM * math.sin(math.radians(TILT_DEG))
 CATALOGUE_MM = {"heightBare": 70.0, "diameter": 20.0}
+# Plates that fail the size gate but were accepted by name. The gate result stays recorded; the ruling
+# makes the plate approvable.
+ACCEPTED = {
+    "Amber": "Jordan 2026-09-25: accepted at +2.6% (the Amber and Cobalt files share one slimmer photo)",
+    "Cobalt Blue": "Jordan 2026-09-25: accepted at +2.6% (the Amber and Cobalt files share one slimmer photo)",
+}
 GLASS = {  # glass -> (uncapped folder, capped folder)
     "Clear": ("9. Clear  (Uncapped)", "10. Clear  (Capped)"),
     "Amber": ("3. Amber 9ml (Uncapped)", "4. Amber 9ml (Capped)"),
@@ -187,7 +193,8 @@ def main() -> int:
             "width": cut.width, "height": cut.height, "sha256": sha(cut), "pxPerMm": round(m["pxPerMm"], 4),
             "anchors": {"axisX": round(m["axisX"], 1), "seatY": m["rim"], "shoulderY": m["shoulderY"], "baselineY": m["foot"]},
             "checks": {"barrelPx": m["barrelPx"], "apparentHeightMm": round(m["apparentHeightMm"], 2), "heightErrorPct": round(m["heightErrorPct"], 2),
-                       "passes": abs(m["heightErrorPct"]) <= 2.0},
+                       "passes": abs(m["heightErrorPct"]) <= 2.0, "acceptedBy": ACCEPTED.get(glass),
+                       "approvable": abs(m["heightErrorPct"]) <= 2.0 or glass in ACCEPTED},
             "source": {"library": "BB-PSD-Files-Master", "path": str(psd_path.relative_to(PSD_ROOT)), "layer": layer.name},
         })
         print(f"plate {glass:12} {cut.width}x{cut.height}  {m['pxPerMm']:.3f} px/mm  rim {m['rim']} shoulder {m['shoulderY']} foot {m['foot']}  apparent height {m['apparentHeightMm']:.2f} mm vs {APPARENT_H_MM:.2f} ({m['heightErrorPct']:+.1f}%)")

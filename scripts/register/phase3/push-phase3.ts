@@ -8,8 +8,9 @@
  *   ... --approve --except plateKey|componentId,...                     # approve all but the named items
  *
  * Reads data/register/phase3/pilot-measurements.json and output/register-phase3/pilot/ (run cut_pilot.py
- * first). Blob keys are content-addressed and write-once. Dev only: NEXT_PUBLIC_CONVEX_URL,
- * BEST_BOTTLES_CONVEX_WRITE_TOKEN and BLOB_READ_WRITE_TOKEN from the environment or .env.local.
+ * first). Blob keys are content-addressed and write-once. Dev only: NEXT_PUBLIC_CONVEX_URL and
+ * BEST_BOTTLES_CONVEX_WRITE_TOKEN from .env.local; BLOB_READ_WRITE_TOKEN from the environment, .env.local,
+ * or .env.blob.local (gitignored), e.g. `vercel env pull .env.blob.local --environment=development`.
  */
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
@@ -20,7 +21,7 @@ import { createBlobStore } from "../../paperdoll/lib/store-blob.mjs";
 
 const ROOT = resolve(__dirname, "..", "..", "..");
 const OUT = resolve(ROOT, "output", "register-phase3", "pilot");
-config({ path: resolve(ROOT, ".env.local"), quiet: true });
+config({ path: [resolve(ROOT, ".env.local"), resolve(ROOT, ".env.blob.local")], quiet: true });
 const argv = process.argv.slice(2);
 const apply = argv.includes("--apply");
 const approve = argv.includes("--approve");
@@ -30,7 +31,7 @@ type Layer = { slot: string; layerName: string; file: string; width: number; hei
 type Measurements = {
     bodyId: string;
     plates: { plateKey: string; glass: string; file: string; width: number; height: number; sha256: string; pxPerMm: number;
-        anchors: { axisX: number; seatY: number; shoulderY: number; baselineY: number }; checks: { passes: boolean }; source: { library: string; path: string; layer: string } }[];
+        anchors: { axisX: number; seatY: number; shoulderY: number; baselineY: number }; checks: { passes: boolean; approvable: boolean; acceptedBy: string | null }; source: { library: string; path: string; layer: string } }[];
     components: { componentId: string; layers: Layer[]; checks: Record<string, unknown> }[];
 };
 
@@ -41,6 +42,9 @@ async function main() {
     if (url.includes("precise-raccoon-123")) throw new Error("this loader writes dev only");
     const status = (key: string) => (approve && !except.has(key) ? "approved" : "measured") as "approved" | "measured";
     const neck = m.bodyId.split("-").slice(-2).join("-");
+    if (apply && !process.env.BLOB_READ_WRITE_TOKEN) {
+        throw new Error("BLOB_READ_WRITE_TOKEN is not set. Run: vercel env pull .env.blob.local --environment=development");
+    }
     const store = apply ? createBlobStore() : null;
     const upload = async (key: string, file: string, width: number, height: number, sha256: string) => {
         const bytes = readFileSync(resolve(OUT, file));
@@ -51,12 +55,13 @@ async function main() {
     const plates = [];
     for (const p of m.plates) {
         const image = await upload(`register/plates/${m.bodyId}/${p.glass.toLowerCase().replace(/ /g, "-")}/${p.sha256}.png`, p.file, p.width, p.height, p.sha256);
-        const s = p.checks.passes ? status(p.plateKey) : "measured";  // a plate that fails the size gate is never approved
+        // A plate that fails the size gate is approved only if it carries a named ruling (checks.acceptedBy).
+        const s = p.checks.approvable ? status(p.plateKey) : "measured";
         plates.push({ plateKey: p.plateKey, bodyId: m.bodyId, glass: p.glass, image, thumb: null, pxPerMm: p.pxPerMm,
             anchors: { axisX: p.anchors.axisX, seatY: p.anchors.seatY, baselineY: p.anchors.baselineY, shoulderY: p.anchors.shoulderY },
             anchorStatus: s, anchorMeasuredBy: "scripts/register/phase3/cut_pilot.py", derivedFrom: null, storageProvider: "vercel-blob" as const,
             source: { library: p.source.library, path: p.source.path, psdSha256: null, layer: p.source.layer } });
-        console.log(`plate ${p.plateKey}: ${s}${p.checks.passes ? "" : " (fails the size gate; held at measured)"}`);
+        console.log(`plate ${p.plateKey}: ${s}${p.checks.passes ? "" : p.checks.acceptedBy ? ` (outside the gate; ${p.checks.acceptedBy})` : " (fails the size gate; held at measured)"}`);
     }
     const components = [];
     for (const c of m.components) {

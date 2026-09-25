@@ -1,8 +1,8 @@
 # Component register — Phase 3: pilot plates and layers (17-415 Cylinder 9 mL)
 
-**Status: cut, measured and self-checked locally (2026-09-25). Awaiting Jordan's review of the two
-sheets.** Nothing is uploaded and no plate or layer is in Convex yet. On approval,
-`push-phase3.ts --apply --approve` uploads to Vercel Blob and writes dev in one run.
+**Status: APPROVED by Jordan (2026-09-25), with Amber and Cobalt accepted at +2.6%.** The ruling is
+recorded per plate as `checks.acceptedBy`, and the gate result stays as measured. The load to dev waits
+only on `BLOB_READ_WRITE_TOKEN`, which Vercel holds for the Development environment and `.env.local` lacks.
 
 ## What was built
 
@@ -59,11 +59,15 @@ Both sit behind the glass, as they do in the master PSDs.
 - **The Amber and Cobalt uncapped photos** are about 6% slimmer than the clear photo relative to their
   height. They need either a re-shoot or Jordan's ruling to accept them at "measured".
 
-## To approve
+## To load the approved pilot into dev
+
+```bash
+vercel env pull .env.blob.local --environment=development
+```
 
 ```bash
 npx tsx scripts/register/phase3/push-phase3.ts --apply --approve
 ```
 
-To hold back any item, add `--except <plateKey|componentId>,…`. The upload step needs
-`BLOB_READ_WRITE_TOKEN`, which is not in `.env.local`. It lives in the Vercel project's environment.
+`.env.blob.local` is gitignored (`.env*.local`), and the loader reads it beside `.env.local`. To hold back
+any item, add `--except <plateKey|componentId>,…`. Without `--approve`, everything loads as "measured".

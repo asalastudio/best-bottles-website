@@ -33,7 +33,9 @@
     "barrelPx": 241.0,
     "apparentHeightMm": 73.12,
     "heightErrorPct": -0.96,
-    "passes": true
+    "passes": true,
+    "acceptedBy": null,
+    "approvable": true
    },
    "source": {
     "library": "BB-PSD-Files-Master",
@@ -59,7 +61,9 @@
     "barrelPx": 229.0,
     "apparentHeightMm": 75.77,
     "heightErrorPct": 2.64,
-    "passes": false
+    "passes": false,
+    "acceptedBy": "Jordan 2026-09-25: accepted at +2.6% (the Amber and Cobalt files share one slimmer photo)",
+    "approvable": true
    },
    "source": {
     "library": "BB-PSD-Files-Master",
@@ -85,7 +89,9 @@
     "barrelPx": 229.0,
     "apparentHeightMm": 75.77,
     "heightErrorPct": 2.64,
-    "passes": false
+    "passes": false,
+    "acceptedBy": "Jordan 2026-09-25: accepted at +2.6% (the Amber and Cobalt files share one slimmer photo)",
+    "approvable": true
    },
    "source": {
     "library": "BB-PSD-Files-Master",
@@ -111,7 +117,9 @@
     "barrelPx": 234.0,
     "apparentHeightMm": 73.98,
     "heightErrorPct": 0.22,
-    "passes": true
+    "passes": true,
+    "acceptedBy": null,
+    "approvable": true
    },
    "source": {
     "library": "BB-PSD-Files-Master",
@@ -137,7 +145,9 @@
     "barrelPx": 237.0,
     "apparentHeightMm": 74.27,
     "heightErrorPct": 0.6,
-    "passes": true
+    "passes": true,
+    "acceptedBy": null,
+    "approvable": true
    },
    "source": {
     "library": "BB-PSD-Files-Master",
