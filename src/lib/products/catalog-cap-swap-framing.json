@@ -1943,6 +1943,14 @@
     "match": 0.866,
     "shadow": "/images/catalog/cap-swap-shadows/GBSlm30DrpCu.0879b46ec8.webp"
   },
+  "/images/catalog/bone-review/GBSlm30SpryMtGl.ca579aa1c2d5.png": {
+    "plate": "capOff",
+    "scale": 0.84535,
+    "x": 0.11589,
+    "y": 0.10042,
+    "match": 0.885,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlm30SpryMtGl.23c16beae1.webp"
+  },
   "/images/catalog/bone-review/GBSlm50AnSpGl.8c4df6d8678a.png": {
     "plate": "capped",
     "scale": 0.8484,
@@ -2398,6 +2406,14 @@
     "y": 0.12412,
     "match": 0.868,
     "shadow": "/images/catalog/cap-swap-shadows/LBSlk50LtnMtGl.dd1394375e.webp"
+  },
+  "/images/catalog/bone-review/LBSlm30LtnMtGl.b3930f478f76.png": {
+    "plate": "capOff",
+    "scale": 0.85385,
+    "x": 0.11283,
+    "y": 0.09136,
+    "match": 0.92,
+    "shadow": "/images/catalog/cap-swap-shadows/LBSlm30LtnMtGl.253992762e.webp"
   },
   "/images/catalog/bone-review/Ltn17-415MattSl.66eccac0aa7e.png": {
     "plate": "capped",
@@ -3951,6 +3967,14 @@
     "match": 0.87,
     "shadow": "/images/catalog/cap-swap-shadows/GBSlm30DrpCu.58f1c2d2c0.webp"
   },
+  "/images/catalog/next-four-approved-2026-09-24/GBSlm30SpryMtGl.16752112606e.webp": {
+    "plate": "capOff",
+    "scale": 0.85077,
+    "x": 0.10992,
+    "y": 0.09611,
+    "match": 0.86,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlm30SpryMtGl.899f003367.webp"
+  },
   "/images/catalog/next-four-approved-2026-09-24/GBSlm50AnSpGl.b886a4abdd3e.webp": {
     "plate": "capped",
     "scale": 0.85522,
@@ -3966,6 +3990,14 @@
     "y": 0.0425,
     "match": 0.977,
     "shadow": "/images/catalog/cap-swap-shadows/GBSlm50AnSpTslWht.c08922c91f.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/LBSlm30LtnMtGl.b85c9a6a04c1.webp": {
+    "plate": "capOff",
+    "scale": 0.85393,
+    "x": 0.10866,
+    "y": 0.08757,
+    "match": 0.903,
+    "shadow": "/images/catalog/cap-swap-shadows/LBSlm30LtnMtGl.91cf01c11a.webp"
   },
   "/images/catalog/round-enhancement/aligned-v4/GBRnd128AnSpGl.premium-aligned-v4.png": {
     "plate": "capped",
@@ -4246,5 +4278,101 @@
     "y": 0.11575,
     "match": 0.844,
     "shadow": "/images/catalog/cap-swap-shadows/LBSlk50LtnMtGl.d9779876ba.webp"
+  },
+  "/images/catalog/vials-approved-2026-09-25/GBV1DrmBlkDropper.0c2a8347a742.webp": {
+    "plate": "capOff",
+    "scale": 0.73475,
+    "x": 0.13174,
+    "y": 0.20059,
+    "match": 0.913,
+    "shadow": "/images/catalog/cap-swap-shadows/GBV1DrmBlkDropper.0c54fbef9a.webp"
+  },
+  "/images/catalog/vials-approved-2026-09-25/GBVAmb1DrmBlkDrpr.4d4d025eb11c.webp": {
+    "plate": "capOff",
+    "scale": 0.76892,
+    "x": 0.11955,
+    "y": 0.1926,
+    "match": 0.768,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVAmb1DrmBlkDrpr.da6899f679.webp"
+  },
+  "/images/catalog/vials-approved-2026-09-25/GBVAmb1DrmWhtCapSht.c91a4c0b8009.webp": {
+    "plate": "capOff",
+    "scale": 0.58756,
+    "x": 0.20434,
+    "y": 0.34693,
+    "match": 0.902,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVAmb1DrmWhtCapSht.b4d7ea2084.webp"
+  },
+  "/images/catalog/vials-approved-2026-09-25/GBVAmb2WhtCap.7ffd6dae7ca7.webp": {
+    "plate": "capOff",
+    "scale": 0.47851,
+    "x": 0.26101,
+    "y": 0.44913,
+    "match": 0.864,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVAmb2WhtCap.576c71b003.webp"
+  },
+  "/images/catalog/vials-approved-2026-09-25/GBVBlu1DrmBlkDropper.ca9561afb67f.webp": {
+    "plate": "capOff",
+    "scale": 0.72549,
+    "x": 0.13668,
+    "y": 0.21297,
+    "match": 0.946,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVBlu1DrmBlkDropper.90765ddb6e.webp"
+  },
+  "/images/catalog/vials-approved-2026-09-25/GBVBlu1DrmWhtCapSht.f9249489db14.webp": {
+    "plate": "capOff",
+    "scale": 0.58769,
+    "x": 0.20565,
+    "y": 0.34612,
+    "match": 0.923,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVBlu1DrmWhtCapSht.d2bd6d7135.webp"
+  },
+  "/images/catalog/vials-approved-2026-09-25/GBVBlu1o9BlackCapSht.ecc1de43a5fe.webp": {
+    "plate": "capped",
+    "scale": 0.39012,
+    "x": 0.28426,
+    "y": 0.53746,
+    "match": 0.836,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVBlu1o9BlackCapSht.c33364d567.webp"
+  },
+  "/images/catalog/vials-approved-2026-09-25/GBVGr1DrmBlkDropper.e63744a6db45.webp": {
+    "plate": "capOff",
+    "scale": 0.75696,
+    "x": 0.12107,
+    "y": 0.18037,
+    "match": 0.951,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVGr1DrmBlkDropper.12fa51794e.webp"
+  },
+  "/images/catalog/vials-approved-2026-09-25/GBVGr1DrmWhtCapSht.7aab95b220c5.webp": {
+    "plate": "capOff",
+    "scale": 0.58574,
+    "x": 0.20476,
+    "y": 0.34564,
+    "match": 0.922,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVGr1DrmWhtCapSht.09f69b99f7.webp"
+  },
+  "/images/catalog/vials-approved-2026-09-25/GBVGreen2o4BlackCapSht.d703a6db23d6.webp": {
+    "plate": "capped",
+    "scale": 0.39642,
+    "x": 0.28148,
+    "y": 0.5329,
+    "match": 0.797,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVGreen2o4BlackCapSht.b487be5645.webp"
+  },
+  "/images/catalog/vials-approved-2026-09-25/GBVialAmb1o5WhtCapSht.d0c06b55854f.webp": {
+    "plate": "capOff",
+    "scale": 0.38052,
+    "x": 0.31115,
+    "y": 0.58016,
+    "match": 0.833,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVialAmb1o5WhtCapSht.449a34190f.webp"
+  },
+  "/images/catalog/vials-approved-2026-09-25/GBVialClr2mlWhtCap.6b503d1b70de.webp": {
+    "plate": "capped",
+    "scale": 0.43591,
+    "x": 0.28176,
+    "y": 0.49176,
+    "match": 0.923,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVialClr2mlWhtCap.560e8bd9f2.webp"
   }
 }

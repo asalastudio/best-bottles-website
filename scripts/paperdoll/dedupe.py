@@ -195,11 +195,22 @@ def main():
     for f in files:
         by_sha[f["sha256"]].append(f)
 
-    # 2. cap state per asset: explicit evidence from any location, then sha siblings
+    # 2. cap state per asset: explicit evidence from any location, then sha siblings.
+    # Reviewed overrides (data/paper-doll/cap-state-overrides.json) are explicit evidence
+    # too: a person looked at the file. They bind to the file's sha256, so a re-saved
+    # master file falls back to the ordinary rules until it is reviewed again.
+    overrides_path = DATA / "cap-state-overrides.json"
+    overrides = {}
+    if overrides_path.exists():
+        for row in json.loads(overrides_path.read_text())["files"]:
+            overrides[row["sha256"]] = row["capState"]
     asset_state: dict[str, tuple[str | None, str]] = {}
     for sha, locs in by_sha.items():
         if all(f["role"] == "component" for f in locs):
             asset_state[sha] = ("part", "component-folder")
+            continue
+        if sha in overrides:
+            asset_state[sha] = (overrides[sha], "explicit")
             continue
         explicit = Counter()
         for f in locs:
