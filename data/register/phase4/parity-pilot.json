@@ -1,0 +1,7098 @@
+{
+ "bodyId": "cylinder-9ml-17-415",
+ "measuredOn": "2026-09-25",
+ "renderedAt": "2026-09-25T17:18:11.713Z",
+ "frameMode": "pixels",
+ "canvas": {
+  "width": 1000,
+  "height": 1100
+ },
+ "datum": {
+  "canvas": {
+   "height": 1100,
+   "width": 1000
+  },
+  "anchors": {
+   "axisX": 500,
+   "baselineY": 1061,
+   "neckAxisX": 500,
+   "pxPerMm": null,
+   "seatY": 286
+  }
+ },
+ "thresholds": {
+  "seatPx": 2,
+  "footPx": 2,
+  "bodyIou": 0.97,
+  "closureIou": 0.9,
+  "silhouetteIou": 0.95
+ },
+ "counts": {
+  "pilotSkus": 145,
+  "withLegacyKit": 133,
+  "withoutLegacyKit": 12,
+  "pass": 69,
+  "fail": 64
+ },
+ "failuresByCheck": {
+  "seat": 0,
+  "foot": 0,
+  "body": 60,
+  "closure": 12,
+  "silhouette": 4
+ },
+ "distribution": {
+  "bodyIou": {
+   "min": 0.9604,
+   "median": 0.9706,
+   "max": 0.9948
+  },
+  "closureIou": {
+   "min": 0.8692,
+   "median": 0.9396,
+   "max": 0.9921
+  },
+  "silhouetteIou": {
+   "min": 0.9426,
+   "median": 0.9697,
+   "max": 0.9948
+  },
+  "seatDeltaPx": {
+   "min": 0.0,
+   "median": 0.0,
+   "max": 1.0
+  },
+  "footDeltaPx": {
+   "min": 0.0,
+   "median": 1.0,
+   "max": 1.0
+  },
+  "closureEdgeP95Px": {
+   "min": 1.0,
+   "median": 7.0,
+   "max": 19.03
+  }
+ },
+ "withoutLegacyKit": [
+  "GBCylBlu9RollPnkDot",
+  "GBCylBlu9RollSlDot",
+  "GBCylSwrl9RollMattCu",
+  "GBCylSwrl9RollMattGl",
+  "GBCylSwrl9RollMattSl",
+  "GBCylSwrl9RollShBlk",
+  "GBCylSwrl9RollShnGl",
+  "GBCylSwrl9RollShnSl",
+  "GBCyl9RollBlkDot",
+  "GBCyl9RollPnkDot",
+  "GBCyl9SpryShSl",
+  "GBCylSwrl9RollWht"
+ ],
+ "results": [
+  {
+   "websiteSku": "GBCyl9MtlRollBlkDot",
+   "graceSku": "GB-CYL-CLR-9ML-T-02",
+   "glass": "Clear",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Black with Dots",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-BLK-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 279,
+    "legacy": 279,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1054,
+    "legacy": 1054,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.99,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.61
+   },
+   "closure": {
+    "iou": 0.9921,
+    "edgeP95Px": 1.0,
+    "edgeMaxPx": 49.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9835
+   },
+   "silhouette": {
+    "iou": 0.9913,
+    "edgeP95Px": 1.41,
+    "edgeMaxPx": 3.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9MtlRollMattCu",
+   "graceSku": "GB-CYL-CLR-9ML-T-03",
+   "glass": "Clear",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Matte Copper",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-CPR-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 278,
+    "legacy": 278,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1053,
+    "legacy": 1053,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9941,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.61
+   },
+   "closure": {
+    "iou": 0.9629,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 8.25
+   },
+   "behindAboveRim": {
+    "iou": 0.9791
+   },
+   "silhouette": {
+    "iou": 0.9861,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 8.25
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9MtlRollMattGl",
+   "graceSku": "GB-CYL-CLR-9ML-T-04",
+   "glass": "Clear",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Matte Gold",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-MGLD-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 278,
+    "legacy": 278,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1053,
+    "legacy": 1053,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9928,
+    "edgeP95Px": 1.41,
+    "edgeMaxPx": 4.12
+   },
+   "closure": {
+    "iou": 0.9785,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 3.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9768
+   },
+   "silhouette": {
+    "iou": 0.9904,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 4.47
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9MtlRollMattSl",
+   "graceSku": "GB-CYL-CLR-9ML-MRL-MSLV-01",
+   "glass": "Clear",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Matte Silver",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-MSLV-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 278,
+    "legacy": 278,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1053,
+    "legacy": 1053,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.99,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.61
+   },
+   "closure": {
+    "iou": 0.9423,
+    "edgeP95Px": 11.0,
+    "edgeMaxPx": 11.05
+   },
+   "behindAboveRim": {
+    "iou": 0.9692
+   },
+   "silhouette": {
+    "iou": 0.9782,
+    "edgeP95Px": 11.0,
+    "edgeMaxPx": 11.05
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9MtlRollPnkDot",
+   "graceSku": "GB-CYL-CLR-9ML-T-05",
+   "glass": "Clear",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Pink with Dots",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-PNK-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 278,
+    "legacy": 278,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1053,
+    "legacy": 1053,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9898,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.61
+   },
+   "closure": {
+    "iou": 0.9754,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 6.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9688
+   },
+   "silhouette": {
+    "iou": 0.9872,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 4.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9MtlRollShBlk",
+   "graceSku": "GB-CYL-CLR-9ML-T-06",
+   "glass": "Clear",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Shiny Black",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SBLK-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 278,
+    "legacy": 278,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1053,
+    "legacy": 1053,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9942,
+    "edgeP95Px": 1.41,
+    "edgeMaxPx": 4.12
+   },
+   "closure": {
+    "iou": 0.9826,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 3.16
+   },
+   "behindAboveRim": {
+    "iou": 0.978
+   },
+   "silhouette": {
+    "iou": 0.9919,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 3.16
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9MtlRollShnGl",
+   "graceSku": "GB-CYL-CLR-9ML-T-07",
+   "glass": "Clear",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Shiny Gold",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SGLD-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 278,
+    "legacy": 278,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1053,
+    "legacy": 1053,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9913,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 4.0
+   },
+   "closure": {
+    "iou": 0.9785,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 3.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9732
+   },
+   "silhouette": {
+    "iou": 0.9886,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 3.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9MtlRollShnSl",
+   "graceSku": "GB-CYL-CLR-9ML-T-08",
+   "glass": "Clear",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Shiny Silver",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SSLV-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 278,
+    "legacy": 278,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1053,
+    "legacy": 1053,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9904,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.61
+   },
+   "closure": {
+    "iou": 0.9719,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 4.47
+   },
+   "behindAboveRim": {
+    "iou": 0.9726
+   },
+   "silhouette": {
+    "iou": 0.9873,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 4.47
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9MtlRollSlDot",
+   "graceSku": "GB-CYL-CLR-9ML-T-09",
+   "glass": "Clear",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Silver with Dots",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SLV-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 279,
+    "legacy": 279,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1054,
+    "legacy": 1054,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.991,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.61
+   },
+   "closure": {
+    "iou": 0.9759,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 4.47
+   },
+   "behindAboveRim": {
+    "iou": 0.9856
+   },
+   "silhouette": {
+    "iou": 0.9877,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 4.24
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9MtlRollWht",
+   "graceSku": "GB-CYL-CLR-9ML-T-10",
+   "glass": "Clear",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "White",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-WHT-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 279,
+    "legacy": 280,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.992,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.61
+   },
+   "closure": {
+    "iou": 0.9841,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 3.0
+   },
+   "behindAboveRim": {
+    "iou": 0.8999
+   },
+   "silhouette": {
+    "iou": 0.9913,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 3.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9RollMattCu",
+   "graceSku": "GB-CYL-CLR-9ML-T-12",
+   "glass": "Clear",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Matte Copper",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-CPR-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 279,
+    "legacy": 279,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1054,
+    "legacy": 1054,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.991,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.61
+   },
+   "closure": {
+    "iou": 0.9618,
+    "edgeP95Px": 8.0,
+    "edgeMaxPx": 9.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9867
+   },
+   "silhouette": {
+    "iou": 0.9841,
+    "edgeP95Px": 7.28,
+    "edgeMaxPx": 9.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9RollMattGl",
+   "graceSku": "GB-CYL-CLR-9ML-T-13",
+   "glass": "Clear",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Matte Gold",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-MGLD-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 279,
+    "legacy": 279,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1054,
+    "legacy": 1054,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.99,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.61
+   },
+   "closure": {
+    "iou": 0.9679,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 4.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9867
+   },
+   "silhouette": {
+    "iou": 0.9853,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 4.47
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9RollMattSl",
+   "graceSku": "GB-CYL-CLR-9ML-T-14",
+   "glass": "Clear",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Matte Silver",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-MSLV-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 278,
+    "legacy": 278,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1053,
+    "legacy": 1053,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.988,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.61
+   },
+   "closure": {
+    "iou": 0.9049,
+    "edgeP95Px": 12.0,
+    "edgeMaxPx": 12.17
+   },
+   "behindAboveRim": {
+    "iou": 0.9392
+   },
+   "silhouette": {
+    "iou": 0.9665,
+    "edgeP95Px": 12.0,
+    "edgeMaxPx": 12.17
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9RollShBlk",
+   "graceSku": "GB-CYL-CLR-9ML-T-16",
+   "glass": "Clear",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Shiny Black",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SBLK-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 278,
+    "legacy": 278,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1053,
+    "legacy": 1053,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9898,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.61
+   },
+   "closure": {
+    "iou": 0.9787,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9501
+   },
+   "silhouette": {
+    "iou": 0.9882,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9RollShnGl",
+   "graceSku": "GB-CYL-CLR-9ML-T-17",
+   "glass": "Clear",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Shiny Gold",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SGLD-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 278,
+    "legacy": 278,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1053,
+    "legacy": 1053,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.992,
+    "edgeP95Px": 1.41,
+    "edgeMaxPx": 4.0
+   },
+   "closure": {
+    "iou": 0.9273,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 7.07
+   },
+   "behindAboveRim": {
+    "iou": 0.9698
+   },
+   "silhouette": {
+    "iou": 0.9744,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 7.07
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9RollShnSl",
+   "graceSku": "GB-CYL-CLR-9ML-T-18",
+   "glass": "Clear",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Shiny Silver",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SSLV-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 278,
+    "legacy": 278,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1053,
+    "legacy": 1053,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9924,
+    "edgeP95Px": 1.41,
+    "edgeMaxPx": 4.12
+   },
+   "closure": {
+    "iou": 0.983,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9867
+   },
+   "silhouette": {
+    "iou": 0.9916,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 2.24
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9RollSlDot",
+   "graceSku": "GB-CYL-CLR-9ML-T-19",
+   "glass": "Clear",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Silver with Dots",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SLV-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 279,
+    "legacy": 279,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1054,
+    "legacy": 1054,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9886,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.16
+   },
+   "closure": {
+    "iou": 0.9431,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 7.07
+   },
+   "behindAboveRim": {
+    "iou": 0.9501
+   },
+   "silhouette": {
+    "iou": 0.9766,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 7.07
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9RollWht",
+   "graceSku": "GB-CYL-CLR-9ML-T-20",
+   "glass": "Clear",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "White",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-WHT-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 279,
+    "legacy": 279,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1054,
+    "legacy": 1054,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9937,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.61
+   },
+   "closure": {
+    "iou": 0.9758,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 5.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9867
+   },
+   "silhouette": {
+    "iou": 0.9905,
+    "edgeP95Px": 4.47,
+    "edgeMaxPx": 15.13
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9SpryBlk",
+   "graceSku": "GB-CYL-CLR-9ML-T-21",
+   "glass": "Clear",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Black",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-BLK-17-415-01"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 278,
+    "legacy": 278,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1053,
+    "legacy": 1053,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.99,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.61
+   },
+   "closure": {
+    "iou": 0.9806,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9881,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9SpryGl",
+   "graceSku": "GB-CYL-CLR-9ML-T-22",
+   "glass": "Clear",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Gold",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-SGLD-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 278,
+    "legacy": 278,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1053,
+    "legacy": 1053,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9942,
+    "edgeP95Px": 1.41,
+    "edgeMaxPx": 4.12
+   },
+   "closure": {
+    "iou": 0.9838,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.61
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9921,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.61
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9SpryMattSl",
+   "graceSku": "GB-CYL-CLR-9ML-T-23",
+   "glass": "Clear",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Matte Silver",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-SLV-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 278,
+    "legacy": 278,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1053,
+    "legacy": 1053,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.99,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.61
+   },
+   "closure": {
+    "iou": 0.9811,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9886,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.16
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9SpryRd",
+   "graceSku": "GB-CYL-CLR-9ML-T-24",
+   "glass": "Clear",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Red",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-RED-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 278,
+    "legacy": 278,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1053,
+    "legacy": 1053,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9927,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 4.12
+   },
+   "closure": {
+    "iou": 0.9817,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 5.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9904,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 5.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCyl9SpryTur",
+   "graceSku": "GB-CYL-CLR-9ML-T-26",
+   "glass": "Clear",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Turquoise",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-CLR-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 278,
+    "legacy": 278,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1053,
+    "legacy": 1053,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9948,
+    "edgeP95Px": 1.41,
+    "edgeMaxPx": 4.12
+   },
+   "closure": {
+    "iou": 0.9901,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 5.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9948,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 5.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylAmb9MtlRollBlkDot",
+   "graceSku": "GB-CYL-AMB-9ML-MRL-BKDT",
+   "glass": "Amber",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Black Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-BLK-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9639,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.9256,
+    "edgeP95Px": 8.25,
+    "edgeMaxPx": 44.0
+   },
+   "behindAboveRim": {
+    "iou": 0.8703
+   },
+   "silhouette": {
+    "iou": 0.9591,
+    "edgeP95Px": 7.81,
+    "edgeMaxPx": 9.22
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9MtlRollMattCu",
+   "graceSku": "GB-CYL-AMB-9ML-MRL-MCPR",
+   "glass": "Amber",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Matte Copper",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-CPR-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.963,
+    "edgeP95Px": 4.24,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9295,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 7.21
+   },
+   "behindAboveRim": {
+    "iou": 0.8762
+   },
+   "silhouette": {
+    "iou": 0.9624,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 7.21
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9MtlRollMattGl",
+   "graceSku": "GB-CYL-AMB-9ML-MRL-MGLD",
+   "glass": "Amber",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Matte Gold",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-MGLD-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9639,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.9016,
+    "edgeP95Px": 9.0,
+    "edgeMaxPx": 11.18
+   },
+   "behindAboveRim": {
+    "iou": 0.8703
+   },
+   "silhouette": {
+    "iou": 0.9533,
+    "edgeP95Px": 9.0,
+    "edgeMaxPx": 11.18
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9MtlRollMattSl",
+   "graceSku": "GB-CYL-AMB-9ML-MRL-MSLV",
+   "glass": "Amber",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Matte Silver",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-MSLV-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9627,
+    "edgeP95Px": 4.47,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9307,
+    "edgeP95Px": 8.0,
+    "edgeMaxPx": 8.94
+   },
+   "behindAboveRim": {
+    "iou": 0.8764
+   },
+   "silhouette": {
+    "iou": 0.963,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 9.22
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9MtlRollPnkDot",
+   "graceSku": "GB-CYL-AMB-9ML-MRL-PKDT",
+   "glass": "Amber",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Pink Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-PNK-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.963,
+    "edgeP95Px": 4.47,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.8984,
+    "edgeP95Px": 14.87,
+    "edgeMaxPx": 15.3
+   },
+   "behindAboveRim": {
+    "iou": 0.8763
+   },
+   "silhouette": {
+    "iou": 0.957,
+    "edgeP95Px": 14.0,
+    "edgeMaxPx": 15.3
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": false,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9MtlRollShBlk",
+   "graceSku": "GB-CYL-AMB-9ML-MRL-SBLK",
+   "glass": "Amber",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Shiny Black",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SBLK-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9643,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.908,
+    "edgeP95Px": 10.0,
+    "edgeMaxPx": 10.77
+   },
+   "behindAboveRim": {
+    "iou": 0.8734
+   },
+   "silhouette": {
+    "iou": 0.9561,
+    "edgeP95Px": 10.0,
+    "edgeMaxPx": 10.77
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9MtlRollShnGl",
+   "graceSku": "GB-CYL-AMB-9ML-MRL-SGLD",
+   "glass": "Amber",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Shiny Gold",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SGLD-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9633,
+    "edgeP95Px": 4.24,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.8842,
+    "edgeP95Px": 11.0,
+    "edgeMaxPx": 13.04
+   },
+   "behindAboveRim": {
+    "iou": 0.8755
+   },
+   "silhouette": {
+    "iou": 0.9478,
+    "edgeP95Px": 10.0,
+    "edgeMaxPx": 13.04
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": false,
+    "silhouette": false
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9MtlRollShnSl",
+   "graceSku": "GB-CYL-AMB-9ML-MRL-SSLV",
+   "glass": "Amber",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Shiny Silver",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SSLV-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9627,
+    "edgeP95Px": 4.24,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9374,
+    "edgeP95Px": 8.0,
+    "edgeMaxPx": 9.0
+   },
+   "behindAboveRim": {
+    "iou": 0.8762
+   },
+   "silhouette": {
+    "iou": 0.9629,
+    "edgeP95Px": 7.81,
+    "edgeMaxPx": 9.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9MtlRollSlDot",
+   "graceSku": "GB-CYL-AMB-9ML-MRL-SLDT",
+   "glass": "Amber",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Silver Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SLV-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9644,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.9042,
+    "edgeP95Px": 12.0,
+    "edgeMaxPx": 13.0
+   },
+   "behindAboveRim": {
+    "iou": 0.8734
+   },
+   "silhouette": {
+    "iou": 0.9557,
+    "edgeP95Px": 11.4,
+    "edgeMaxPx": 13.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9MtlRollWht",
+   "graceSku": "GB-CYL-AMB-9ML-MRL-WHT",
+   "glass": "Amber",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "White",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-WHT-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9643,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.9176,
+    "edgeP95Px": 10.0,
+    "edgeMaxPx": 10.05
+   },
+   "behindAboveRim": {
+    "iou": 0.8733
+   },
+   "silhouette": {
+    "iou": 0.9603,
+    "edgeP95Px": 9.06,
+    "edgeMaxPx": 10.05
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9RollBlkDot",
+   "graceSku": "GB-CYL-AMB-9ML-ROL-BKDT",
+   "glass": "Amber",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Black Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-BLK-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.963,
+    "edgeP95Px": 4.47,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9372,
+    "edgeP95Px": 8.6,
+    "edgeMaxPx": 44.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9728
+   },
+   "silhouette": {
+    "iou": 0.9617,
+    "edgeP95Px": 6.0,
+    "edgeMaxPx": 10.05
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9RollMattCu",
+   "graceSku": "GB-CYL-AMB-9ML-ROL-MCPR",
+   "glass": "Amber",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Matte Copper",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-CPR-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9641,
+    "edgeP95Px": 4.24,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.939,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 8.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9851
+   },
+   "silhouette": {
+    "iou": 0.9663,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 7.21
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9RollMattGl",
+   "graceSku": "GB-CYL-AMB-9ML-ROL-MGLD",
+   "glass": "Amber",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Matte Gold",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-MGLD-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9643,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.9012,
+    "edgeP95Px": 11.05,
+    "edgeMaxPx": 12.53
+   },
+   "behindAboveRim": {
+    "iou": 0.9766
+   },
+   "silhouette": {
+    "iou": 0.9531,
+    "edgeP95Px": 11.0,
+    "edgeMaxPx": 12.53
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9RollMattSl",
+   "graceSku": "GB-CYL-AMB-9ML-ROL-MSLV",
+   "glass": "Amber",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Matte Silver",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-MSLV-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9644,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.9374,
+    "edgeP95Px": 6.32,
+    "edgeMaxPx": 8.06
+   },
+   "behindAboveRim": {
+    "iou": 0.9887
+   },
+   "silhouette": {
+    "iou": 0.9648,
+    "edgeP95Px": 4.12,
+    "edgeMaxPx": 7.81
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9RollPnkDot",
+   "graceSku": "GB-CYL-AMB-9ML-ROL-PKDT",
+   "glass": "Amber",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Pink Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-PNK-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9634,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.8958,
+    "edgeP95Px": 15.13,
+    "edgeMaxPx": 16.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9652
+   },
+   "silhouette": {
+    "iou": 0.9567,
+    "edgeP95Px": 15.0,
+    "edgeMaxPx": 16.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": false,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9RollShBlk",
+   "graceSku": "GB-CYL-AMB-9ML-ROL-SBLK",
+   "glass": "Amber",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Shiny Black",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SBLK-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9632,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.9324,
+    "edgeP95Px": 8.0,
+    "edgeMaxPx": 8.94
+   },
+   "behindAboveRim": {
+    "iou": 0.9652
+   },
+   "silhouette": {
+    "iou": 0.9615,
+    "edgeP95Px": 8.0,
+    "edgeMaxPx": 8.94
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9RollShnGl",
+   "graceSku": "GB-CYL-AMB-9ML-ROL-SGLD",
+   "glass": "Amber",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Shiny Gold",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SGLD-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9632,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.905,
+    "edgeP95Px": 9.0,
+    "edgeMaxPx": 10.82
+   },
+   "behindAboveRim": {
+    "iou": 0.9619
+   },
+   "silhouette": {
+    "iou": 0.9525,
+    "edgeP95Px": 8.0,
+    "edgeMaxPx": 10.82
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9RollShnSl",
+   "graceSku": "GB-CYL-AMB-9ML-ROL-SSLV",
+   "glass": "Amber",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Shiny Silver",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SSLV-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9632,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.9292,
+    "edgeP95Px": 10.0,
+    "edgeMaxPx": 11.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9619
+   },
+   "silhouette": {
+    "iou": 0.962,
+    "edgeP95Px": 10.0,
+    "edgeMaxPx": 11.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9RollSlDot",
+   "graceSku": "GB-CYL-AMB-9ML-ROL-SLDT",
+   "glass": "Amber",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Silver Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SLV-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9639,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.882,
+    "edgeP95Px": 13.0,
+    "edgeMaxPx": 14.32
+   },
+   "behindAboveRim": {
+    "iou": 0.9619
+   },
+   "silhouette": {
+    "iou": 0.9493,
+    "edgeP95Px": 12.0,
+    "edgeMaxPx": 14.32
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": false,
+    "silhouette": false
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9RollWht",
+   "graceSku": "GB-CYL-AMB-9ML-ROL-WHT",
+   "glass": "Amber",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "White",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-WHT-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9631,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.9459,
+    "edgeP95Px": 6.0,
+    "edgeMaxPx": 6.4
+   },
+   "behindAboveRim": {
+    "iou": 0.9619
+   },
+   "silhouette": {
+    "iou": 0.9642,
+    "edgeP95Px": 5.1,
+    "edgeMaxPx": 7.21
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9SpryBlk",
+   "graceSku": "GB-CYL-AMB-9ML-SPR-BLK",
+   "glass": "Amber",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Black",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-BLK-17-415-01"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9631,
+    "edgeP95Px": 4.12,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9349,
+    "edgeP95Px": 12.37,
+    "edgeMaxPx": 13.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.962,
+    "edgeP95Px": 12.0,
+    "edgeMaxPx": 13.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9SpryGl",
+   "graceSku": "GB-CYL-AMB-9ML-SPR-GLD",
+   "glass": "Amber",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Gold",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-SGLD-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.964,
+    "edgeP95Px": 4.24,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.9064,
+    "edgeP95Px": 19.03,
+    "edgeMaxPx": 20.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.955,
+    "edgeP95Px": 18.97,
+    "edgeMaxPx": 20.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9SpryMattSl",
+   "graceSku": "GB-CYL-AMB-9ML-SPR-MSLV",
+   "glass": "Amber",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Matte Silver",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-SLV-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9627,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.936,
+    "edgeP95Px": 10.0,
+    "edgeMaxPx": 11.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9624,
+    "edgeP95Px": 9.85,
+    "edgeMaxPx": 10.2
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9SpryRd",
+   "graceSku": "GB-CYL-AMB-9ML-SPR-RED",
+   "glass": "Amber",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Red",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-RED-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9643,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.9061,
+    "edgeP95Px": 16.03,
+    "edgeMaxPx": 17.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9552,
+    "edgeP95Px": 16.0,
+    "edgeMaxPx": 17.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9SpryShSl",
+   "graceSku": "GB-CYL-AMB-9ML-SPR-SSLV",
+   "glass": "Amber",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Shiny Silver",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-SSLV-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9643,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.9188,
+    "edgeP95Px": 17.0,
+    "edgeMaxPx": 17.26
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9575,
+    "edgeP95Px": 16.03,
+    "edgeMaxPx": 17.26
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylAmb9SpryTur",
+   "graceSku": "GB-CYL-AMB-9ML-SPR-TRQ",
+   "glass": "Amber",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Turquoise",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-CLR-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9641,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.8957,
+    "edgeP95Px": 16.28,
+    "edgeMaxPx": 17.46
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9497,
+    "edgeP95Px": 16.0,
+    "edgeMaxPx": 17.46
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": false,
+    "silhouette": false
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9MtlRollBlkDot",
+   "graceSku": "GB-CYL-BLU-9ML-MRL-BKDT",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Black Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-BLK-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9622,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9344,
+    "edgeP95Px": 8.0,
+    "edgeMaxPx": 8.25
+   },
+   "behindAboveRim": {
+    "iou": 0.8836
+   },
+   "silhouette": {
+    "iou": 0.9603,
+    "edgeP95Px": 8.0,
+    "edgeMaxPx": 8.25
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9MtlRollMattCu",
+   "graceSku": "GB-CYL-BLU-9ML-MRL-MCPR",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Matte Copper",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-CPR-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9604,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9316,
+    "edgeP95Px": 6.0,
+    "edgeMaxPx": 7.81
+   },
+   "behindAboveRim": {
+    "iou": 0.89
+   },
+   "silhouette": {
+    "iou": 0.96,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 7.81
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9MtlRollMattGl",
+   "graceSku": "GB-CYL-BLU-9ML-MRL-MGLD",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Matte Gold",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-MGLD-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9616,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9231,
+    "edgeP95Px": 9.0,
+    "edgeMaxPx": 9.85
+   },
+   "behindAboveRim": {
+    "iou": 0.8851
+   },
+   "silhouette": {
+    "iou": 0.9577,
+    "edgeP95Px": 8.94,
+    "edgeMaxPx": 9.85
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9MtlRollMattSl",
+   "graceSku": "GB-CYL-BLU-9ML-MRL-MSLV",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Matte Silver",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-MSLV-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9608,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9406,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 8.06
+   },
+   "behindAboveRim": {
+    "iou": 0.8905
+   },
+   "silhouette": {
+    "iou": 0.9633,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.63
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9MtlRollPnkDot",
+   "graceSku": "GB-CYL-BLU-9ML-MRL-PKDT",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Pink Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-PNK-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9622,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9103,
+    "edgeP95Px": 13.19,
+    "edgeMaxPx": 14.14
+   },
+   "behindAboveRim": {
+    "iou": 0.8836
+   },
+   "silhouette": {
+    "iou": 0.9578,
+    "edgeP95Px": 13.0,
+    "edgeMaxPx": 14.14
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9MtlRollShBlk",
+   "graceSku": "GB-CYL-BLU-9ML-MRL-SBLK",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Shiny Black",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SBLK-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9604,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9414,
+    "edgeP95Px": 8.0,
+    "edgeMaxPx": 8.06
+   },
+   "behindAboveRim": {
+    "iou": 0.89
+   },
+   "silhouette": {
+    "iou": 0.9612,
+    "edgeP95Px": 7.07,
+    "edgeMaxPx": 8.06
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9MtlRollShnGl",
+   "graceSku": "GB-CYL-BLU-9ML-MRL-SGLD",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Shiny Gold",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SGLD-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9617,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.9056,
+    "edgeP95Px": 10.0,
+    "edgeMaxPx": 11.4
+   },
+   "behindAboveRim": {
+    "iou": 0.8829
+   },
+   "silhouette": {
+    "iou": 0.9532,
+    "edgeP95Px": 9.5,
+    "edgeMaxPx": 11.4
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9MtlRollShnSl",
+   "graceSku": "GB-CYL-BLU-9ML-MRL-SSLV",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Shiny Silver",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SSLV-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9604,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9481,
+    "edgeP95Px": 6.23,
+    "edgeMaxPx": 7.81
+   },
+   "behindAboveRim": {
+    "iou": 0.8901
+   },
+   "silhouette": {
+    "iou": 0.9632,
+    "edgeP95Px": 6.0,
+    "edgeMaxPx": 7.81
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9MtlRollSlDot",
+   "graceSku": "GB-CYL-BLU-9ML-MRL-SLDT",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Silver Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SLV-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.961,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9133,
+    "edgeP95Px": 10.3,
+    "edgeMaxPx": 11.18
+   },
+   "behindAboveRim": {
+    "iou": 0.8864
+   },
+   "silhouette": {
+    "iou": 0.955,
+    "edgeP95Px": 10.0,
+    "edgeMaxPx": 11.18
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9MtlRollWht",
+   "graceSku": "GB-CYL-BLU-9ML-MRL-WHT",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "White",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-WHT-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9616,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9478,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 5.83
+   },
+   "behindAboveRim": {
+    "iou": 0.8851
+   },
+   "silhouette": {
+    "iou": 0.9634,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 14.32
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9RollBlkDot",
+   "graceSku": "GB-CYL-BLU-9ML-ROL-BKDT",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Black Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-BLK-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9617,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.9417,
+    "edgeP95Px": 8.0,
+    "edgeMaxPx": 10.2
+   },
+   "behindAboveRim": {
+    "iou": 0.9825
+   },
+   "silhouette": {
+    "iou": 0.9617,
+    "edgeP95Px": 6.0,
+    "edgeMaxPx": 10.2
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9RollMattCu",
+   "graceSku": "GB-CYL-BLU-9ML-ROL-MCPR",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Matte Copper",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-CPR-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.961,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9392,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 8.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9398
+   },
+   "silhouette": {
+    "iou": 0.964,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 7.62
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9RollMattGl",
+   "graceSku": "GB-CYL-BLU-9ML-ROL-MGLD",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Matte Gold",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-MGLD-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9615,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9144,
+    "edgeP95Px": 11.0,
+    "edgeMaxPx": 11.7
+   },
+   "behindAboveRim": {
+    "iou": 0.9263
+   },
+   "silhouette": {
+    "iou": 0.9548,
+    "edgeP95Px": 10.05,
+    "edgeMaxPx": 11.7
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9RollMattSl",
+   "graceSku": "GB-CYL-BLU-9ML-ROL-MSLV",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Matte Silver",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-MSLV-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.961,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9507,
+    "edgeP95Px": 6.0,
+    "edgeMaxPx": 7.07
+   },
+   "behindAboveRim": {
+    "iou": 0.9398
+   },
+   "silhouette": {
+    "iou": 0.9652,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 11.4
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9RollShBlk",
+   "graceSku": "GB-CYL-BLU-9ML-ROL-SBLK",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Shiny Black",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SBLK-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9617,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.9354,
+    "edgeP95Px": 8.0,
+    "edgeMaxPx": 8.06
+   },
+   "behindAboveRim": {
+    "iou": 0.9319
+   },
+   "silhouette": {
+    "iou": 0.9603,
+    "edgeP95Px": 7.07,
+    "edgeMaxPx": 8.06
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9RollShnGl",
+   "graceSku": "GB-CYL-BLU-9ML-ROL-SGLD",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Shiny Gold",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SGLD-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9621,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.926,
+    "edgeP95Px": 8.54,
+    "edgeMaxPx": 9.22
+   },
+   "behindAboveRim": {
+    "iou": 0.9664
+   },
+   "silhouette": {
+    "iou": 0.9579,
+    "edgeP95Px": 8.0,
+    "edgeMaxPx": 9.22
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9RollShnSl",
+   "graceSku": "GB-CYL-BLU-9ML-ROL-SSLV",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Shiny Silver",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SSLV-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9604,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9377,
+    "edgeP95Px": 9.0,
+    "edgeMaxPx": 9.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9504
+   },
+   "silhouette": {
+    "iou": 0.9612,
+    "edgeP95Px": 8.0,
+    "edgeMaxPx": 9.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9RollWht",
+   "graceSku": "GB-CYL-BLU-9ML-ROL-WHT",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "White",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-WHT-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9616,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9645,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.0
+   },
+   "behindAboveRim": {
+    "iou": 0.981
+   },
+   "silhouette": {
+    "iou": 0.9675,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 15.13
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9SpryBlk",
+   "graceSku": "GB-CYL-BLU-9ML-SPR-BLK",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Black",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-BLK-17-415-01"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9611,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9614,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 7.28
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9658,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 7.28
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9SpryGl",
+   "graceSku": "GB-CYL-BLU-9ML-SPR-GLD",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Gold",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-SGLD-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9611,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9565,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 7.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9668,
+    "edgeP95Px": 6.32,
+    "edgeMaxPx": 7.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9SpryMattSl",
+   "graceSku": "GB-CYL-BLU-9ML-SPR-MSLV",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Matte Silver",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-SLV-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9606,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9396,
+    "edgeP95Px": 10.0,
+    "edgeMaxPx": 11.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9644,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 9.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9SpryRd",
+   "graceSku": "GB-CYL-BLU-9ML-SPR-RED",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Red",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-RED-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9606,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9669,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 5.1
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9697,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 5.83
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9SpryShSl",
+   "graceSku": "GB-CYL-BLU-9ML-SPR-SSLV",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Shiny Silver",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-SSLV-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9604,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9669,
+    "edgeP95Px": 6.0,
+    "edgeMaxPx": 6.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9704,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 6.32
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylBlu9SpryTur",
+   "graceSku": "GB-CYL-BLU-9ML-SPR-TRQ",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Turquoise",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-CLR-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9604,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9554,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 7.07
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9672,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 7.62
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylFrst9MtlRollBlkDot",
+   "graceSku": "GB-CYL-FRS-9ML-MRL-BKDT",
+   "glass": "Frosted",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Black Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-BLK-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9699,
+    "edgeP95Px": 7.85,
+    "edgeMaxPx": 12.08
+   },
+   "closure": {
+    "iou": 0.9149,
+    "edgeP95Px": 11.0,
+    "edgeMaxPx": 42.0
+   },
+   "behindAboveRim": {
+    "iou": 0.8458
+   },
+   "silhouette": {
+    "iou": 0.9687,
+    "edgeP95Px": 11.0,
+    "edgeMaxPx": 11.18
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylFrst9MtlRollMattCu",
+   "graceSku": "GB-CYL-FRS-9ML-MRL-MCPR",
+   "glass": "Frosted",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Matte Copper",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-CPR-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9714,
+    "edgeP95Px": 7.62,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.9126,
+    "edgeP95Px": 10.0,
+    "edgeMaxPx": 10.3
+   },
+   "behindAboveRim": {
+    "iou": 0.8436
+   },
+   "silhouette": {
+    "iou": 0.9717,
+    "edgeP95Px": 8.0,
+    "edgeMaxPx": 10.3
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylFrst9MtlRollMattGl",
+   "graceSku": "GB-CYL-FRS-9ML-MRL-MGLD",
+   "glass": "Frosted",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Matte Gold",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-MGLD-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9703,
+    "edgeP95Px": 7.81,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.9063,
+    "edgeP95Px": 12.0,
+    "edgeMaxPx": 12.65
+   },
+   "behindAboveRim": {
+    "iou": 0.841
+   },
+   "silhouette": {
+    "iou": 0.9666,
+    "edgeP95Px": 11.7,
+    "edgeMaxPx": 13.45
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylFrst9MtlRollMattSl",
+   "graceSku": "GB-CYL-FRS-9ML-MRL-MSLV",
+   "glass": "Frosted",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Matte Silver",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-MSLV-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9706,
+    "edgeP95Px": 7.62,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.9454,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 7.62
+   },
+   "behindAboveRim": {
+    "iou": 0.8423
+   },
+   "silhouette": {
+    "iou": 0.9782,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 16.28
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylFrst9MtlRollPnkDot",
+   "graceSku": "GB-CYL-FRS-9ML-MRL-PKDT",
+   "glass": "Frosted",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Pink Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-PNK-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9703,
+    "edgeP95Px": 7.81,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.9187,
+    "edgeP95Px": 11.7,
+    "edgeMaxPx": 12.65
+   },
+   "behindAboveRim": {
+    "iou": 0.841
+   },
+   "silhouette": {
+    "iou": 0.9706,
+    "edgeP95Px": 10.0,
+    "edgeMaxPx": 12.65
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylFrst9MtlRollShBlk",
+   "graceSku": "GB-CYL-FRS-9ML-MRL-SBLK",
+   "glass": "Frosted",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Shiny Black",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SBLK-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9711,
+    "edgeP95Px": 7.62,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.9125,
+    "edgeP95Px": 12.0,
+    "edgeMaxPx": 13.0
+   },
+   "behindAboveRim": {
+    "iou": 0.8432
+   },
+   "silhouette": {
+    "iou": 0.9703,
+    "edgeP95Px": 12.0,
+    "edgeMaxPx": 12.37
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylFrst9MtlRollShnGl",
+   "graceSku": "GB-CYL-FRS-9ML-MRL-SGLD",
+   "glass": "Frosted",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Shiny Gold",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SGLD-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9711,
+    "edgeP95Px": 7.62,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.8692,
+    "edgeP95Px": 13.0,
+    "edgeMaxPx": 14.87
+   },
+   "behindAboveRim": {
+    "iou": 0.8433
+   },
+   "silhouette": {
+    "iou": 0.9578,
+    "edgeP95Px": 12.37,
+    "edgeMaxPx": 14.87
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": false,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylFrst9MtlRollShnSl",
+   "graceSku": "GB-CYL-FRS-9ML-MRL-SSLV",
+   "glass": "Frosted",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Shiny Silver",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SSLV-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9704,
+    "edgeP95Px": 7.81,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.8936,
+    "edgeP95Px": 11.0,
+    "edgeMaxPx": 13.45
+   },
+   "behindAboveRim": {
+    "iou": 0.808
+   },
+   "silhouette": {
+    "iou": 0.9626,
+    "edgeP95Px": 10.0,
+    "edgeMaxPx": 13.45
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": false,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylFrst9MtlRollSlDot",
+   "graceSku": "GB-CYL-FRS-9ML-MRL-SLDT",
+   "glass": "Frosted",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Silver Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SLV-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9703,
+    "edgeP95Px": 7.81,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.9046,
+    "edgeP95Px": 12.0,
+    "edgeMaxPx": 12.53
+   },
+   "behindAboveRim": {
+    "iou": 0.8411
+   },
+   "silhouette": {
+    "iou": 0.9647,
+    "edgeP95Px": 11.0,
+    "edgeMaxPx": 13.34
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylFrst9MtlRollWht",
+   "graceSku": "GB-CYL-FRS-9ML-MRL-WHT",
+   "glass": "Frosted",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "White",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-WHT-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9715,
+    "edgeP95Px": 7.62,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.9356,
+    "edgeP95Px": 6.0,
+    "edgeMaxPx": 7.0
+   },
+   "behindAboveRim": {
+    "iou": 0.8449
+   },
+   "silhouette": {
+    "iou": 0.9734,
+    "edgeP95Px": 6.0,
+    "edgeMaxPx": 19.24
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylFrst9RollBlkDot",
+   "graceSku": "GB-CYL-FRS-9ML-ROL-BKDT",
+   "glass": "Frosted",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Black Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-BLK-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.97,
+    "edgeP95Px": 7.85,
+    "edgeMaxPx": 12.08
+   },
+   "closure": {
+    "iou": 0.8959,
+    "edgeP95Px": 11.18,
+    "edgeMaxPx": 42.19
+   },
+   "behindAboveRim": {
+    "iou": 0.9765
+   },
+   "silhouette": {
+    "iou": 0.962,
+    "edgeP95Px": 9.0,
+    "edgeMaxPx": 13.6
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": false,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylFrst9RollMattCu",
+   "graceSku": "GB-CYL-FRS-9ML-ROL-MCPR",
+   "glass": "Frosted",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Matte Copper",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-CPR-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9706,
+    "edgeP95Px": 7.62,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.9267,
+    "edgeP95Px": 9.0,
+    "edgeMaxPx": 9.43
+   },
+   "behindAboveRim": {
+    "iou": 0.9765
+   },
+   "silhouette": {
+    "iou": 0.9746,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 10.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylFrst9RollMattGl",
+   "graceSku": "GB-CYL-FRS-9ML-ROL-MGLD",
+   "glass": "Frosted",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Matte Gold",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-MGLD-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9703,
+    "edgeP95Px": 7.81,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.8977,
+    "edgeP95Px": 14.0,
+    "edgeMaxPx": 14.56
+   },
+   "behindAboveRim": {
+    "iou": 0.9584
+   },
+   "silhouette": {
+    "iou": 0.9638,
+    "edgeP95Px": 13.04,
+    "edgeMaxPx": 14.56
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": false,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylFrst9RollMattSl",
+   "graceSku": "GB-CYL-FRS-9ML-ROL-MSLV",
+   "glass": "Frosted",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Matte Silver",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-MSLV-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9703,
+    "edgeP95Px": 7.81,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.9439,
+    "edgeP95Px": 5.83,
+    "edgeMaxPx": 7.21
+   },
+   "behindAboveRim": {
+    "iou": 0.9584
+   },
+   "silhouette": {
+    "iou": 0.976,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 16.4
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylFrst9RollPnkDot",
+   "graceSku": "GB-CYL-FRS-9ML-ROL-PKDT",
+   "glass": "Frosted",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Pink Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-PNK-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9719,
+    "edgeP95Px": 7.28,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.9019,
+    "edgeP95Px": 14.0,
+    "edgeMaxPx": 14.56
+   },
+   "behindAboveRim": {
+    "iou": 0.9765
+   },
+   "silhouette": {
+    "iou": 0.969,
+    "edgeP95Px": 14.0,
+    "edgeMaxPx": 14.56
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylFrst9RollShBlk",
+   "graceSku": "GB-CYL-FRS-9ML-ROL-SBLK",
+   "glass": "Frosted",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Shiny Black",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SBLK-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9715,
+    "edgeP95Px": 7.62,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.9185,
+    "edgeP95Px": 10.77,
+    "edgeMaxPx": 11.05
+   },
+   "behindAboveRim": {
+    "iou": 0.9444
+   },
+   "silhouette": {
+    "iou": 0.9707,
+    "edgeP95Px": 10.05,
+    "edgeMaxPx": 11.05
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylFrst9RollShnGl",
+   "graceSku": "GB-CYL-FRS-9ML-ROL-SGLD",
+   "glass": "Frosted",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Shiny Gold",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SGLD-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9711,
+    "edgeP95Px": 7.62,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.8801,
+    "edgeP95Px": 12.0,
+    "edgeMaxPx": 13.04
+   },
+   "behindAboveRim": {
+    "iou": 0.9444
+   },
+   "silhouette": {
+    "iou": 0.9594,
+    "edgeP95Px": 11.0,
+    "edgeMaxPx": 13.04
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": false,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylFrst9RollShnSl",
+   "graceSku": "GB-CYL-FRS-9ML-ROL-SSLV",
+   "glass": "Frosted",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Shiny Silver",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SSLV-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9715,
+    "edgeP95Px": 7.62,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.9111,
+    "edgeP95Px": 13.0,
+    "edgeMaxPx": 13.04
+   },
+   "behindAboveRim": {
+    "iou": 0.9584
+   },
+   "silhouette": {
+    "iou": 0.97,
+    "edgeP95Px": 12.0,
+    "edgeMaxPx": 13.04
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylFrst9RollSlDot",
+   "graceSku": "GB-CYL-FRS-9ML-ROL-SLDT",
+   "glass": "Frosted",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Silver Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SLV-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.97,
+    "edgeP95Px": 7.85,
+    "edgeMaxPx": 12.08
+   },
+   "closure": {
+    "iou": 0.8968,
+    "edgeP95Px": 12.0,
+    "edgeMaxPx": 13.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9584
+   },
+   "silhouette": {
+    "iou": 0.962,
+    "edgeP95Px": 11.0,
+    "edgeMaxPx": 14.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": false,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylFrst9RollWht",
+   "graceSku": "GB-CYL-FRS-9ML-ROL-WHT",
+   "glass": "Frosted",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "White",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-WHT-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9715,
+    "edgeP95Px": 7.62,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.9396,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 8.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9375
+   },
+   "silhouette": {
+    "iou": 0.9751,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 21.59
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylFrst9SpryBlk",
+   "graceSku": "GB-CYL-FRS-9ML-SPR-BLK",
+   "glass": "Frosted",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Black",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-BLK-17-415-01"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9718,
+    "edgeP95Px": 7.62,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.9372,
+    "edgeP95Px": 11.0,
+    "edgeMaxPx": 13.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9775,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 9.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylFrst9SpryGl",
+   "graceSku": "GB-CYL-FRS-9ML-SPR-GLD",
+   "glass": "Frosted",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Gold",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-SGLD-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9713,
+    "edgeP95Px": 7.62,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.9365,
+    "edgeP95Px": 9.85,
+    "edgeMaxPx": 10.05
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9747,
+    "edgeP95Px": 9.11,
+    "edgeMaxPx": 10.05
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylFrst9SpryMattSl",
+   "graceSku": "GB-CYL-FRS-9ML-SPR-MSLV",
+   "glass": "Frosted",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Matte Silver",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-SLV-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9713,
+    "edgeP95Px": 7.62,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.9404,
+    "edgeP95Px": 8.0,
+    "edgeMaxPx": 9.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9755,
+    "edgeP95Px": 6.0,
+    "edgeMaxPx": 9.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylFrst9SpryRd",
+   "graceSku": "GB-CYL-FRS-9ML-SPR-RED",
+   "glass": "Frosted",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Red",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-RED-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 287,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9694,
+    "edgeP95Px": 8.0,
+    "edgeMaxPx": 13.04
+   },
+   "closure": {
+    "iou": 0.9271,
+    "edgeP95Px": 12.0,
+    "edgeMaxPx": 12.37
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9717,
+    "edgeP95Px": 11.7,
+    "edgeMaxPx": 12.37
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "GBCylFrst9SpryShSl",
+   "graceSku": "GB-CYL-FRS-9ML-SPR-SSLV",
+   "glass": "Frosted",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Shiny Silver",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-SSLV-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9714,
+    "edgeP95Px": 7.62,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.935,
+    "edgeP95Px": 11.0,
+    "edgeMaxPx": 11.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9754,
+    "edgeP95Px": 8.0,
+    "edgeMaxPx": 9.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylFrst9SpryTur",
+   "graceSku": "GB-CYL-FRS-9ML-SPR-TRQ",
+   "glass": "Frosted",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Turquoise",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-CLR-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.971,
+    "edgeP95Px": 7.62,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.9397,
+    "edgeP95Px": 8.0,
+    "edgeMaxPx": 9.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.975,
+    "edgeP95Px": 6.0,
+    "edgeMaxPx": 7.28
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollBlkDot",
+   "graceSku": "GB-CYL-CLR-9ML-MRL-BKDT-01",
+   "glass": "Swirl",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Black Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-BLK-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 282,
+    "legacy": 283,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1058,
+    "legacy": 1059,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9814,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.0
+   },
+   "closure": {
+    "iou": 0.9694,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 52.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9772
+   },
+   "silhouette": {
+    "iou": 0.9814,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollMattCu",
+   "graceSku": "GB-CYL-CLR-9ML-MRL-MCPR-01",
+   "glass": "Swirl",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Matte Copper",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-CPR-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 282,
+    "legacy": 283,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1058,
+    "legacy": 1059,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9809,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 4.47
+   },
+   "closure": {
+    "iou": 0.9693,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 7.07
+   },
+   "behindAboveRim": {
+    "iou": 0.9724
+   },
+   "silhouette": {
+    "iou": 0.9788,
+    "edgeP95Px": 6.08,
+    "edgeMaxPx": 9.06
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollMattGl",
+   "graceSku": "GB-CYL-CLR-9ML-MRL-MGLD-01",
+   "glass": "Swirl",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Matte Gold",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-MGLD-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 284,
+    "legacy": 284,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1059,
+    "legacy": 1059,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9832,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.0
+   },
+   "closure": {
+    "iou": 0.9693,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 4.12
+   },
+   "behindAboveRim": {
+    "iou": 0.9929
+   },
+   "silhouette": {
+    "iou": 0.9816,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollMattSl",
+   "graceSku": "GB-CYL-CLR-9ML-MRL-MSLV-02",
+   "glass": "Swirl",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Matte Silver",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-MSLV-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 284,
+    "legacy": 284,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1059,
+    "legacy": 1059,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9843,
+    "edgeP95Px": 3.02,
+    "edgeMaxPx": 4.0
+   },
+   "closure": {
+    "iou": 0.906,
+    "edgeP95Px": 12.0,
+    "edgeMaxPx": 13.42
+   },
+   "behindAboveRim": {
+    "iou": 0.9852
+   },
+   "silhouette": {
+    "iou": 0.9644,
+    "edgeP95Px": 12.0,
+    "edgeMaxPx": 13.42
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollPnkDot",
+   "graceSku": "GB-CYL-CLR-9ML-MRL-PKDT-01",
+   "glass": "Swirl",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Pink Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-PNK-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 282,
+    "legacy": 283,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1058,
+    "legacy": 1059,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9815,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.0
+   },
+   "closure": {
+    "iou": 0.9844,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 5.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9772
+   },
+   "silhouette": {
+    "iou": 0.984,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.1
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollShBlk",
+   "graceSku": "GB-CYL-CLR-9ML-MRL-SBLK-01",
+   "glass": "Swirl",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Shiny Black",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SBLK-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 284,
+    "legacy": 284,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1059,
+    "legacy": 1059,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9848,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 4.0
+   },
+   "closure": {
+    "iou": 0.9723,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9848
+   },
+   "silhouette": {
+    "iou": 0.9833,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 6.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollShnGl",
+   "graceSku": "GB-CYL-CLR-9ML-MRL-SGLD-01",
+   "glass": "Swirl",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Shiny Gold",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SGLD-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 282,
+    "legacy": 283,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1058,
+    "legacy": 1059,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9809,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 4.47
+   },
+   "closure": {
+    "iou": 0.9358,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 5.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9724
+   },
+   "silhouette": {
+    "iou": 0.9732,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 5.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollShnSl",
+   "graceSku": "GB-CYL-CLR-9ML-MRL-SSLV-01",
+   "glass": "Swirl",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Shiny Silver",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SSLV-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 282,
+    "legacy": 283,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1058,
+    "legacy": 1059,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9809,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 4.47
+   },
+   "closure": {
+    "iou": 0.9702,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9724
+   },
+   "silhouette": {
+    "iou": 0.9812,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollSlDot",
+   "graceSku": "GB-CYL-CLR-9ML-MRL-SLDT-01",
+   "glass": "Swirl",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "Silver Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SLV-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 284,
+    "legacy": 284,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1059,
+    "legacy": 1059,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9836,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.0
+   },
+   "closure": {
+    "iou": 0.975,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9909
+   },
+   "silhouette": {
+    "iou": 0.9815,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollWht",
+   "graceSku": "GB-CYL-WHT-9ML-MRL-WHT",
+   "glass": "Swirl",
+   "fitmentType": "Metal Roller Ball",
+   "capColor": "White",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-MtlRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-WHT-17415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 282,
+    "legacy": 283,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1058,
+    "legacy": 1059,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9806,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 4.47
+   },
+   "closure": {
+    "iou": 0.9585,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 6.0
+   },
+   "behindAboveRim": {
+    "iou": 0.9518
+   },
+   "silhouette": {
+    "iou": 0.9769,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 5.39
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9RollBlkDot",
+   "graceSku": "GB-CYL-CLR-9ML-ROL-BKDT-01",
+   "glass": "Swirl",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Black Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-BLK-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 282,
+    "legacy": 283,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1058,
+    "legacy": 1059,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9807,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.0
+   },
+   "closure": {
+    "iou": 0.95,
+    "edgeP95Px": 6.0,
+    "edgeMaxPx": 52.0
+   },
+   "behindAboveRim": {
+    "iou": 0.8788
+   },
+   "silhouette": {
+    "iou": 0.9755,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 6.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9RollPnkDot",
+   "graceSku": "GB-CYL-CLR-9ML-ROL-PKDT-01",
+   "glass": "Swirl",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Pink Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-PNK-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 282,
+    "legacy": 283,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1058,
+    "legacy": 1059,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9805,
+    "edgeP95Px": 3.61,
+    "edgeMaxPx": 5.0
+   },
+   "closure": {
+    "iou": 0.9784,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 2.24
+   },
+   "behindAboveRim": {
+    "iou": 0.8788
+   },
+   "silhouette": {
+    "iou": 0.9821,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 16.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9RollSlDot",
+   "graceSku": "GB-CYL-CLR-9ML-ROL-SLDT-01",
+   "glass": "Swirl",
+   "fitmentType": "Plastic Roller Ball",
+   "capColor": "Silver Dotted",
+   "buildParts": [
+    {
+     "role": "roller",
+     "componentId": "LIB-17-415-PlsticRollon"
+    },
+    {
+     "role": "cap",
+     "componentId": "CMP-ROC-SLV-17415-DOT"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 282,
+    "legacy": 283,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1058,
+    "legacy": 1059,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9815,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.0
+   },
+   "closure": {
+    "iou": 0.965,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.39
+   },
+   "behindAboveRim": {
+    "iou": 0.8307
+   },
+   "silhouette": {
+    "iou": 0.9786,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9SpryBlk",
+   "graceSku": "GB-CYL-BLK-9ML-SPR-BLK",
+   "glass": "Swirl",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Black",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-BLK-17-415-01"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 282,
+    "legacy": 283,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1058,
+    "legacy": 1059,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9806,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 4.47
+   },
+   "closure": {
+    "iou": 0.9736,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9795,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.39
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9SpryGl",
+   "graceSku": "GB-CYL-CLR-9ML-SPR-GLD",
+   "glass": "Swirl",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Gold",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-SGLD-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 282,
+    "legacy": 283,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1058,
+    "legacy": 1059,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.981,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.0
+   },
+   "closure": {
+    "iou": 0.9422,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 7.62
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9694,
+    "edgeP95Px": 6.32,
+    "edgeMaxPx": 16.12
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9SpryMattSl",
+   "graceSku": "GB-CYL-CLR-9ML-SPR-MSLV-01",
+   "glass": "Swirl",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Matte Silver",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-SLV-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 282,
+    "legacy": 283,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1058,
+    "legacy": 1059,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9816,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.0
+   },
+   "closure": {
+    "iou": 0.976,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 5.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9814,
+    "edgeP95Px": 3.16,
+    "edgeMaxPx": 5.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9SpryRd",
+   "graceSku": "GB-CYL-CLR-9ML-SPR-RED",
+   "glass": "Swirl",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Red",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-RED-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 282,
+    "legacy": 283,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1058,
+    "legacy": 1059,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9805,
+    "edgeP95Px": 3.61,
+    "edgeMaxPx": 5.0
+   },
+   "closure": {
+    "iou": 0.9762,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 7.21
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9807,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 7.21
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9SpryShSl",
+   "graceSku": "GB-CYL-CLR-9ML-SPR-SSLV-01",
+   "glass": "Swirl",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Shiny Silver",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-SSLV-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 282,
+    "legacy": 283,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1058,
+    "legacy": 1059,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.981,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 4.47
+   },
+   "closure": {
+    "iou": 0.9754,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 6.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.982,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 6.08
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "GBCylSwrl9SpryTur",
+   "graceSku": "GB-CYL-CLR-9ML-T-27",
+   "glass": "Swirl",
+   "fitmentType": "Fine Mist Sprayer",
+   "capColor": "Turquoise",
+   "buildParts": [
+    {
+     "role": "sprayer",
+     "componentId": "CMP-SPR-CLR-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 282,
+    "legacy": 283,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1058,
+    "legacy": 1059,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9809,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 4.0
+   },
+   "closure": {
+    "iou": 0.968,
+    "edgeP95Px": 6.0,
+    "edgeMaxPx": 7.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9778,
+    "edgeP95Px": 6.0,
+    "edgeMaxPx": 7.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "LBCyl9LtnBlk",
+   "graceSku": "LB-CYL-CLR-9ML-T-01",
+   "glass": "Clear",
+   "fitmentType": "Lotion Pump",
+   "capColor": "Black",
+   "buildParts": [
+    {
+     "role": "pump",
+     "componentId": "CMP-LPM-BLK-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 278,
+    "legacy": 278,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1053,
+    "legacy": 1053,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9913,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 4.0
+   },
+   "closure": {
+    "iou": 0.9845,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.61
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.99,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.61
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "LBCyl9LtnGl",
+   "graceSku": "LB-CYL-CLR-9ML-T-02",
+   "glass": "Clear",
+   "fitmentType": "Lotion Pump",
+   "capColor": "Gold",
+   "buildParts": [
+    {
+     "role": "pump",
+     "componentId": "CMP-LPM-SGLD-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 278,
+    "legacy": 278,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1053,
+    "legacy": 1053,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9913,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 4.0
+   },
+   "closure": {
+    "iou": 0.9888,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.16
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9917,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.16
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "LBCyl9LtnMtSl",
+   "graceSku": "LB-CYL-CLR-9ML-T-03",
+   "glass": "Clear",
+   "fitmentType": "Lotion Pump",
+   "capColor": "Matte Silver",
+   "buildParts": [
+    {
+     "role": "pump",
+     "componentId": "CMP-LPM-MSLV-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 278,
+    "legacy": 278,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1053,
+    "legacy": 1053,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9863,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.16
+   },
+   "closure": {
+    "iou": 0.9786,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 2.83
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9847,
+    "edgeP95Px": 2.0,
+    "edgeMaxPx": 3.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "LBCylAmb9LtnBlk",
+   "graceSku": "LB-CYL-AMB-9ML-LPM-BLK",
+   "glass": "Amber",
+   "fitmentType": "Lotion Pump",
+   "capColor": "Black",
+   "buildParts": [
+    {
+     "role": "pump",
+     "componentId": "CMP-LPM-BLK-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9642,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.9254,
+    "edgeP95Px": 11.0,
+    "edgeMaxPx": 12.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.962,
+    "edgeP95Px": 9.0,
+    "edgeMaxPx": 10.3
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "LBCylAmb9LtnGl",
+   "graceSku": "LB-CYL-AMB-9ML-LPM-GLD",
+   "glass": "Amber",
+   "fitmentType": "Lotion Pump",
+   "capColor": "Gold",
+   "buildParts": [
+    {
+     "role": "pump",
+     "componentId": "CMP-LPM-SGLD-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.963,
+    "edgeP95Px": 4.47,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9217,
+    "edgeP95Px": 14.0,
+    "edgeMaxPx": 15.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9588,
+    "edgeP95Px": 13.93,
+    "edgeMaxPx": 15.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "LBCylAmb9LtnMtSl",
+   "graceSku": "LB-CYL-AMB-9ML-LPM-MSLV",
+   "glass": "Amber",
+   "fitmentType": "Lotion Pump",
+   "capColor": "Matte Silver",
+   "buildParts": [
+    {
+     "role": "pump",
+     "componentId": "CMP-LPM-MSLV-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 290,
+    "legacy": 291,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1055,
+    "legacy": 1056,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9643,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.44
+   },
+   "closure": {
+    "iou": 0.8759,
+    "edgeP95Px": 15.0,
+    "edgeMaxPx": 17.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9426,
+    "edgeP95Px": 14.68,
+    "edgeMaxPx": 17.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": false,
+    "silhouette": false
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "LBCylBlu9LtnBlk",
+   "graceSku": "LB-CYL-BLU-9ML-LPM-BLK",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Lotion Pump",
+   "capColor": "Black",
+   "buildParts": [
+    {
+     "role": "pump",
+     "componentId": "CMP-LPM-BLK-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9611,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9604,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 8.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9663,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 8.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "LBCylBlu9LtnGl",
+   "graceSku": "LB-CYL-BLU-9ML-LPM-GLD",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Lotion Pump",
+   "capColor": "Gold",
+   "buildParts": [
+    {
+     "role": "pump",
+     "componentId": "CMP-LPM-SGLD-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9611,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9673,
+    "edgeP95Px": 6.0,
+    "edgeMaxPx": 6.08
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9711,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 6.08
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "LBCylBlu9LtnMattSl",
+   "graceSku": "LB-CYL-BLU-9ML-LPM-MSLV",
+   "glass": "Cobalt Blue",
+   "fitmentType": "Lotion Pump",
+   "capColor": "Matte Silver",
+   "buildParts": [
+    {
+     "role": "pump",
+     "componentId": "CMP-LPM-MSLV-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 283,
+    "legacy": 283,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1056,
+    "deltaPx": 0
+   },
+   "body": {
+    "iou": 0.9611,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 10.2
+   },
+   "closure": {
+    "iou": 0.9522,
+    "edgeP95Px": 6.0,
+    "edgeMaxPx": 9.9
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9651,
+    "edgeP95Px": 5.0,
+    "edgeMaxPx": 9.9
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": false,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": false
+  },
+  {
+   "websiteSku": "LBCylFrst9LtnBlk",
+   "graceSku": "LB-CYL-FRS-9ML-LPM-BLK",
+   "glass": "Frosted",
+   "fitmentType": "Lotion Pump",
+   "capColor": "Black",
+   "buildParts": [
+    {
+     "role": "pump",
+     "componentId": "CMP-LPM-BLK-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9714,
+    "edgeP95Px": 7.62,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.9268,
+    "edgeP95Px": 13.0,
+    "edgeMaxPx": 14.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9751,
+    "edgeP95Px": 9.93,
+    "edgeMaxPx": 11.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "LBCylFrst9LtnGl",
+   "graceSku": "LB-CYL-FRS-9ML-LPM-GLD",
+   "glass": "Frosted",
+   "fitmentType": "Lotion Pump",
+   "capColor": "Gold",
+   "buildParts": [
+    {
+     "role": "pump",
+     "componentId": "CMP-LPM-SGLD-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9718,
+    "edgeP95Px": 7.62,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.9548,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 7.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9807,
+    "edgeP95Px": 4.47,
+    "edgeMaxPx": 7.28
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "LBCylFrst9LtnMtSl",
+   "graceSku": "LB-CYL-FRS-9ML-LPM-MSLV",
+   "glass": "Frosted",
+   "fitmentType": "Lotion Pump",
+   "capColor": "Matte Silver",
+   "buildParts": [
+    {
+     "role": "pump",
+     "componentId": "CMP-LPM-MSLV-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 286,
+    "legacy": 286,
+    "deltaPx": 0
+   },
+   "foot": {
+    "new": 1056,
+    "legacy": 1057,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9718,
+    "edgeP95Px": 7.62,
+    "edgeMaxPx": 12.37
+   },
+   "closure": {
+    "iou": 0.9598,
+    "edgeP95Px": 6.0,
+    "edgeMaxPx": 9.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9811,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 12.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "LBCylSwrl9LtnBlk",
+   "graceSku": "LB-CYL-BLK-9ML-LPM-BLK",
+   "glass": "Swirl",
+   "fitmentType": "Lotion Pump",
+   "capColor": "Black",
+   "buildParts": [
+    {
+     "role": "pump",
+     "componentId": "CMP-LPM-BLK-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 282,
+    "legacy": 283,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1058,
+    "legacy": 1059,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9806,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 4.47
+   },
+   "closure": {
+    "iou": 0.9689,
+    "edgeP95Px": 3.16,
+    "edgeMaxPx": 5.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9798,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 12.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "LBCylSwrl9LtnGl",
+   "graceSku": "LB-CYL-CLR-9ML-LPM-GLD",
+   "glass": "Swirl",
+   "fitmentType": "Lotion Pump",
+   "capColor": "Gold",
+   "buildParts": [
+    {
+     "role": "pump",
+     "componentId": "CMP-LPM-SGLD-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 282,
+    "legacy": 283,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1058,
+    "legacy": 1059,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.9805,
+    "edgeP95Px": 3.61,
+    "edgeMaxPx": 5.0
+   },
+   "closure": {
+    "iou": 0.961,
+    "edgeP95Px": 7.0,
+    "edgeMaxPx": 7.62
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9762,
+    "edgeP95Px": 6.08,
+    "edgeMaxPx": 14.0
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  },
+  {
+   "websiteSku": "LBCylSwrl9LtnMtSl",
+   "graceSku": "LB-CYL-CLR-9ML-LPM-MSLV",
+   "glass": "Swirl",
+   "fitmentType": "Lotion Pump",
+   "capColor": "Matte Silver",
+   "buildParts": [
+    {
+     "role": "pump",
+     "componentId": "CMP-LPM-MSLV-17-415"
+    }
+   ],
+   "frameSource": "legacy-kit-pixels",
+   "seat": {
+    "new": 282,
+    "legacy": 283,
+    "deltaPx": 1
+   },
+   "foot": {
+    "new": 1058,
+    "legacy": 1059,
+    "deltaPx": 1
+   },
+   "body": {
+    "iou": 0.981,
+    "edgeP95Px": 4.0,
+    "edgeMaxPx": 5.0
+   },
+   "closure": {
+    "iou": 0.9839,
+    "edgeP95Px": 2.24,
+    "edgeMaxPx": 3.0
+   },
+   "behindAboveRim": {
+    "iou": null
+   },
+   "silhouette": {
+    "iou": 0.9833,
+    "edgeP95Px": 3.0,
+    "edgeMaxPx": 10.05
+   },
+   "checks": {
+    "seat": true,
+    "foot": true,
+    "body": true,
+    "closure": true,
+    "silhouette": true
+   },
+   "passes": true
+  }
+ ]
+}

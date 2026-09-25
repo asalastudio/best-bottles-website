@@ -999,6 +999,24 @@ export default defineSchema({
 
     // Journal of every delivery we accepted (webhook or sync transition), so the
     // dashboard has an activity feed and a Sentry retry can never double-apply.
+    // Storefront search box, one row per day per cleaned query (no user, no IP).
+    // Written by convex/catalogSearchLog.ts; rows older than 90 days are deleted.
+    catalogSearchDaily: defineTable({
+        day: v.string(),                              // UTC yyyy-mm-dd
+        query: v.string(),                            // lowercased, scrubbed, ≤120 chars
+        locale: v.string(),
+        searches: v.number(),
+        zeroResults: v.number(),
+        lastResultCount: v.number(),
+        suggestionsShown: v.number(),
+        suggestionClicks: v.number(),
+        lastSuggestions: v.array(v.string()),         // labels most recently offered
+        lastClicked: v.union(v.string(), v.null()),
+        updatedAt: v.number(),
+    })
+        .index("by_day_query_locale", ["day", "query", "locale"])
+        .index("by_day", ["day"]),
+
     errorIssueEvents: defineTable({
         issueId: v.id("errorIssues"),
         sentryIssueId: v.string(),

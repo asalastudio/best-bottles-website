@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { api } from "../../../convex/_generated/api";
 import { catalogBrowseRedirect, paramsToFilters } from "@/lib/catalogFilters";
 import { getCatalogConvexClient, searchCatalogServer } from "@/lib/catalogServer";
+import { catalogInterpretationMode } from "@/lib/catalog/searchInterpretationServer";
 import { defaultLocale, isLocale, type AppLocale } from "@/i18n/config";
 import { buildHreflangAlternates } from "@/i18n/metadata";
 import { localizeHref } from "@/i18n/paths";
@@ -74,6 +75,7 @@ export default async function CatalogPage({
                 initialSearchParams={urlSearchParams.toString()}
                 initialResult={initialResult}
                 initialTaxonomy={initialTaxonomy}
+                interpretMode={catalogInterpretationMode()}
             />
             <Footer />
         </>

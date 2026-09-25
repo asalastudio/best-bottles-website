@@ -41,10 +41,13 @@ type MobileProductHeroProps = {
     color?: string | null;
     hasCapOffPlate?: boolean;
     view?: "assembled" | "capOff";
+    /** plateUrl is a released catalog hero on its bone canvas: fill the stage
+     *  band with bone and skip the plate capacity calibration. */
+    heroStage?: boolean;
 };
 
 const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(function MobileProductHero(
-    { plateUrl, kitParts, fallbackImageUrl, alt, backHref, cartCount, onOpenCart, onPlateError, onViewLarger, overlay, family, capacityMl, color, hasCapOffPlate, view },
+    { plateUrl, kitParts, fallbackImageUrl, alt, backHref, cartCount, onOpenCart, onPlateError, onViewLarger, overlay, family, capacityMl, color, hasCapOffPlate, view, heroStage = false },
     ref,
 ) {
     // Match the empty server badge before showing a restored cart during hydration.
@@ -68,7 +71,7 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
         };
     }, []);
     return (
-        <div ref={ref} data-testid="mobile-pdp-hero" className="relative w-full bg-white">
+        <div ref={ref} data-testid="mobile-pdp-hero" className={`relative w-full ${heroStage ? "bg-bone" : "bg-white"}`}>
             <div
                 ref={toolbarRef}
                 data-testid="mobile-pdp-hero-toolbar"
@@ -104,7 +107,7 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
                 style={{ aspectRatio: "10 / 11", width: "min(100%, calc(42svh * 10 / 11))" }}
             >
                 {hasStack ? (
-                    <PaperDollLayers plateUrl={plateUrl} kitParts={kitParts} alt={alt} onPlateError={onPlateError} family={family} capacityMl={capacityMl} color={color} hasCapOffPlate={hasCapOffPlate} view={view} />
+                    <PaperDollLayers plateUrl={plateUrl} kitParts={kitParts} alt={alt} onPlateError={onPlateError} family={heroStage ? null : family} capacityMl={heroStage ? null : capacityMl} color={color} hasCapOffPlate={hasCapOffPlate} view={view} />
                 ) : fallbackImageUrl ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={displayImageUrl(fallbackImageUrl, 828)} alt={alt} className="absolute inset-0 h-full w-full object-contain object-center" />

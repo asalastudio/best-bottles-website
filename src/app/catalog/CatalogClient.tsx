@@ -67,6 +67,10 @@ import { buildCatalogSearchArgs, fetchCatalogSearch } from "@/lib/catalogSearchC
 import { catalogGroupSkuLabel, mergeCatalogSearchPages, resolveCatalogGroupSku } from "@/lib/catalogSearchFallback";
 import { MASTER_CATALOG_SURFACE } from "@/lib/catalogSurface";
 import { analytics } from "@/lib/analytics";
+import { sendCatalogSearchLog } from "@/lib/catalog/searchLog";
+import { describeSuggestion, type InterpretationMode, type InterpretationSuggestion } from "@/lib/catalog/searchSuggestionLabel";
+import SearchClosestMatches from "@/components/catalog/SearchClosestMatches";
+import { useSearchInterpretation } from "@/components/catalog/useSearchInterpretation";
 import { familyGuideHref, isFamilyLandingFamily } from "@/lib/products/focused-shopping";
 import { localizeCollectionName, localizeCollectionSubtitle, localizeFamilyName, localizeMerchandisingName } from "@/i18n/catalogCopy";
 import { localizeHref, stripLocalePrefix } from "@/i18n/paths";
@@ -1529,10 +1533,13 @@ export default function CatalogClient({
     initialSearchParams,
     initialResult,
     initialTaxonomy,
+    interpretMode = "off",
 }: {
     initialSearchParams: string;
     initialResult: CatalogSearchResult;
     initialTaxonomy: Record<string, Record<string, number>> | null;
+    /** CATALOG_SEARCH_INTERPRETATION, read on the server (src/lib/catalog/searchInterpretationServer.ts). */
+    interpretMode?: InterpretationMode;
 }) {
     const router = useRouter();
     const pathname = usePathname();
@@ -1585,6 +1592,11 @@ export default function CatalogClient({
     const catalogGenerationRef = useRef(0);
     const loadMoreLockRef = useRef(false);
     const loadMoreAbortRef = useRef<AbortController | null>(null);
+    // "Closest matches": the last query typed in this page's box (suggest only),
+    // the last one submitted with Enter, and queries the shopper undid.
+    const typedSearchRef = useRef<string | null>(null);
+    const submittedSearchRef = useRef<string | null>(null);
+    const [declinedInterpretations, setDeclinedInterpretations] = useState<ReadonlySet<string>>(() => new Set());
 
     // Sync externally-driven URL changes (including Grace) into the live grid.
     // Local state is intentional for responsive interactions, but the URL is
@@ -1642,6 +1654,28 @@ export default function CatalogClient({
     const facets = activeResult.facets;
     const totalCount = activeResult.totalCount;
     const visibleProducts = filtered;
+
+    // Search-box log (src/lib/catalog/searchLog.ts): one entry once a query has
+    // settled for 2 s, so half-typed words are not counted. Grace-driven
+    // navigations are Grace's searches, not the shopper's typing.
+    const loggedSearchRef = useRef<string | null>(null);
+    useEffect(() => {
+        const query = filters.search.trim();
+        if (!query || isGraceNav || isFetchingCatalog) return;
+        const key = `${locale}:${query.toLowerCase()}`;
+        if (loggedSearchRef.current === key) return;
+        const timer = window.setTimeout(() => {
+            loggedSearchRef.current = key;
+            sendCatalogSearchLog({ query, locale, event: { kind: "search", resultCount: totalCount } });
+            analytics.catalogFiltered({
+                searchTerm: query,
+                resultCount: totalCount,
+                families: filters.families.join(",") || undefined,
+                applicators: filters.applicators.join(",") || undefined,
+            });
+        }, 2000);
+        return () => window.clearTimeout(timer);
+    }, [filters.search, filters.families, filters.applicators, isFetchingCatalog, totalCount, locale, isGraceNav]);
     const visualApplicatorParam = filters.applicators.length === 1 ? filters.applicators[0] : null;
     const variantPreviewRows = activeResult.variantPreviewRows;
     const variantSourceMap = useMemo(
@@ -1797,6 +1831,54 @@ export default function CatalogClient({
         [filters.search],
     );
 
+    // "Closest matches" when a search finds nothing (flag: CATALOG_SEARCH_INTERPRETATION).
+    const interpretedFrom = searchParams.get("interpreted");
+    const interpretation = useSearchInterpretation({
+        mode: interpretMode,
+        allowed: !isGraceNav && locale === "en" && searchParams.get("interpret") !== "off",
+        query: filters.search,
+        searchInput,
+        filters,
+        noResults: !isFetchingCatalog && activeResult.items.length === 0 && totalCount === 0,
+        locale,
+        declined: declinedInterpretations,
+    });
+
+    const handleApplyInterpretation = useCallback(
+        (suggestion: InterpretationSuggestion) => {
+            sendCatalogSearchLog({ query: interpretation.query, locale, event: { kind: "suggestion_click", label: suggestion.label } });
+            const next: CatalogFilters = { ...EMPTY_FILTERS, ...suggestion.filters, search: "" };
+            clearTimeout(searchDebounceRef.current);
+            setSearchInput("");
+            setSortBy("capacity-asc");
+            setFilters(next);
+            pushToUrl(next, "capacity-asc", viewMode);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        },
+        [interpretation.query, locale, pushToUrl, viewMode],
+    );
+
+    // Auto mode applies a confident reading for searches that arrived from the
+    // header, the homepage or Enter — never for words still being typed here.
+    useEffect(() => {
+        if (interpretation.status !== "ready" || interpretation.mode !== "auto") return;
+        const top = interpretation.suggestions[0];
+        const query = interpretation.query;
+        if (!top?.autoEligible) return;
+        if (typedSearchRef.current === query && submittedSearchRef.current !== query) return;
+        const params = filtersToParams({ ...EMPTY_FILTERS, ...top.filters, search: "" }, "capacity-asc", viewMode);
+        params.set("interpreted", query);
+        router.replace(`${localizeHref(locale, stripLocalePrefix(pathname))}?${params.toString()}`, { scroll: false });
+    }, [interpretation, viewMode, router, locale, pathname]);
+
+    const handleUndoInterpretation = useCallback(() => {
+        if (!interpretedFrom) return;
+        setDeclinedInterpretations((prev) => new Set(prev).add(interpretedFrom.trim().toLowerCase()));
+        const params = filtersToParams({ ...EMPTY_FILTERS, search: interpretedFrom }, "best-match", viewMode);
+        params.set("interpret", "off");
+        router.push(`${localizeHref(locale, stripLocalePrefix(pathname))}?${params.toString()}`, { scroll: false });
+    }, [interpretedFrom, viewMode, router, locale, pathname]);
+
     useEffect(() => {
         const controller = new AbortController();
         const generation = ++catalogGenerationRef.current;
@@ -1933,6 +2015,7 @@ export default function CatalogClient({
             setSearchInput(term);
             clearTimeout(searchDebounceRef.current);
             searchDebounceRef.current = setTimeout(() => {
+                typedSearchRef.current = term.trim();
                 const nextSort: SortValue = term
                     ? (sortBy === "capacity-asc" || sortBy === "featured" ? "best-match" : sortBy)
                     : (sortBy === "best-match" ? "capacity-asc" : sortBy);
@@ -2066,6 +2149,9 @@ export default function CatalogClient({
                                 enterKeyHint="search"
                                 value={searchInput}
                                 onChange={(e) => handleSearchInput(e.target.value)}
+                                onKeyDown={(e) => {
+                                    if (e.key === "Enter") submittedSearchRef.current = e.currentTarget.value.trim();
+                                }}
                                 placeholder={t("searchPlaceholder")}
                                 className="bg-transparent text-base lg:text-sm focus:outline-none w-full placeholder-slate/60 text-obsidian [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
                                 aria-label={t("searchProducts")}
@@ -2446,6 +2532,7 @@ export default function CatalogClient({
                                         Active constraints: {activeConstraintSummary}. Remove one constraint or clear all to see more results.
                                     </p>
                                 )}
+                                <SearchClosestMatches state={interpretation} onApply={handleApplyInterpretation} />
                                 {searchRecoverySuggestions.length > 0 && (
                                     <div className="mb-6 max-w-lg">
                                         <p className="text-[11px] uppercase tracking-[0.18em] font-bold text-slate mb-3">
@@ -2483,6 +2570,26 @@ export default function CatalogClient({
                                         {t("talkWithGrace")}
                                     </button>
                                 </div>
+                            </div>
+                        )}
+
+                        {/* Auto-applied "closest match" — says what was shown instead, with a way back */}
+                        {interpretedFrom && visibleProducts.length > 0 && (
+                            <div
+                                role="status"
+                                className="mb-4 flex flex-wrap items-center justify-between gap-3 px-4 py-3 bg-muted-gold/10 border border-muted-gold/30 rounded-sm"
+                                data-testid="catalog-interpreted-banner"
+                            >
+                                <p className="text-sm text-obsidian">
+                                    {t("interpretedNotice", { query: interpretedFrom, label: describeSuggestion(filters) })}
+                                </p>
+                                <button
+                                    type="button"
+                                    onClick={handleUndoInterpretation}
+                                    className="min-h-11 shrink-0 text-xs font-semibold text-muted-gold underline underline-offset-4 hover:text-obsidian transition-colors"
+                                >
+                                    {t("interpretedUndo", { query: interpretedFrom })}
+                                </button>
                             </div>
                         )}
 

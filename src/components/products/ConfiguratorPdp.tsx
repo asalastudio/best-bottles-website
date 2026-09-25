@@ -138,7 +138,7 @@ export default function ConfiguratorPdp({
   capOptions, capOptionPhotoKeys, capOptionThumbnails, activeCapOption, onCapOptionChange, capSwatchStyle, glassOptions,
   rollerVariant: rollerVariantProp, rollerVariantsAvailable, onRollerVariantChange, onVariantSelectionChange,
   onProductUrlChange,
-  plateImage = null, plateImageCapOff = null, variantImageUrl = null,
+  plateImage = null, plateImageCapOff = null, plateIsReleasedHero = false, variantImageUrl = null,
   heightWithCap = null, heightWithoutCap = null, diameter = null, hasApproved3d = false, kitQuery, selectedGraceSku,
   productPresentation, applicator, catalogFamily, localKitPilot, localComponentPreviewSku,
 }: {
@@ -147,6 +147,10 @@ export default function ConfiguratorPdp({
    *  stage leads with this photograph; 3D is a toggle on top of it */
   plateImage?: string | null;
   plateImageCapOff?: string | null;
+  /** plateImage is a released catalog hero (see withReleasedHeroStages): it is
+   *  already framed on its bone canvas, so the stage fills with bone instead
+   *  of letterboxing it in white, and the plate calibration is skipped */
+  plateIsReleasedHero?: boolean;
   /** the selected SKU's catalogue photograph: the stage's fallback when the
    *  SKU has no plate (never photographed as a plate, or not built yet) */
   variantImageUrl?: string | null;
@@ -440,9 +444,10 @@ export default function ConfiguratorPdp({
   const showKitLayers = kitReady && (reviewingComponents || Boolean(pilot) || exploded || preferKitPair || !plate);
   const slugParts = parseProductSlug(currentSlug);
   const capacityMl = slugParts?.capacityMl ?? capacityMlFromSlug(currentSlug);
+  const heroStage = plateIsReleasedHero && !showKitLayers;
   const stageTransform = exploded
     ? `translate(${explodedFrame.x}%, ${explodedFrame.y}%) scale(${explodedFrame.scale})`
-    : pdpStageTransformCss(pdpStageFrame({
+    : heroStage ? "none" : pdpStageTransformCss(pdpStageFrame({
         family: catalogFamily,
         capacityMl,
         color: slugParts?.color,
@@ -473,7 +478,7 @@ export default function ConfiguratorPdp({
           </div>
         </div>
       ) : showPlate ? (
-        <div className="relative h-full w-full bg-white" data-paper-doll={showKitLayers ? "kit" : "plate"}>
+        <div className={`relative h-full w-full ${heroStage ? "bg-bone" : "bg-white"}`} data-paper-doll={showKitLayers ? "kit" : heroStage ? "hero" : "plate"}>
           {/* Capacity standard + CAP OFF fit from pdp-capacity-standards.json.
               Circle 15 ml glass is locked smaller than 30 ml; a detached cap
               may shrink the composition but never grow the bottle. */}
