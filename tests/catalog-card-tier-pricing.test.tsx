@@ -74,7 +74,8 @@ describe("Pack of menu on the catalog card (design 8a)", () => {
         expect(toggle.getAttribute("aria-expanded")).toBe("false");
         expect(menu()).toBeNull();
         expect(el.querySelector("dialog")).toBeNull();
-        expect($("catalog-card-tier-footnote").textContent).toBe("12+ rates are confirmed on a quote.");
+        // No quote footnote: the ladder's rates are the prices (Jordan, 2026-09-25).
+        expect(el.querySelector('[data-testid="catalog-card-tier-footnote"]')).toBeNull();
         expect($("catalog-card-add").textContent).toBe("Add to cart · $0.92");
 
         click(toggle);
@@ -82,8 +83,9 @@ describe("Pack of menu on the catalog card (design 8a)", () => {
         expect(menu()?.getAttribute("role")).toBe("listbox");
         expect(toggle.getAttribute("aria-controls")).toBe(menu()?.id);
         const rows = $$("catalog-card-tier-row");
-        // Breaks checkout does not honour yet are marked "Quote", as on the product page.
-        expect(rows.map((row) => row.textContent)).toEqual(["1–11$0.92", "12–47Quote$0.76", "48–143Quote$0.64", "144–499Quote$0.56", "500+Quote$0.53"]);
+        // Every break shows its range and its rate, nothing else — no "Quote" mark on any of them.
+        expect(rows.map((row) => row.textContent)).toEqual(["1–11$0.92", "12–47$0.76", "48–143$0.64", "144–499$0.56", "500+$0.53"]);
+        expect(el.textContent).not.toMatch(/quote/i);
         expect(rows.map((row) => row.getAttribute("aria-label"))).toEqual([
             "1–11 units at $0.92 each",
             "12–47 units at $0.76 each, save 17%",
@@ -97,7 +99,7 @@ describe("Pack of menu on the catalog card (design 8a)", () => {
         expect(track.mock.calls[0][1]).toEqual({ ...base, quantity: 1, tier: "1–11" });
     });
 
-    it("picking a break sets the quantity; the headline and button stay on what checkout charges, the break shows as a quote rate", () => {
+    it("picking a break sets the quantity, and the headline and button follow that break's rate", () => {
         card();
         click($("catalog-card-pack-toggle"));
         click($$("catalog-card-tier-row")[3]);
@@ -105,16 +107,13 @@ describe("Pack of menu on the catalog card (design 8a)", () => {
         expect(document.activeElement).toBe($("catalog-card-pack-toggle"));
         expect(($("catalog-card-qty") as HTMLInputElement).value).toBe("144");
         expect($("catalog-card-pack-toggle").textContent).toBe("Pack of 144▾");
-        // Price consistency: headline × quantity = button = what Shopify checkout bills.
-        expect($("catalog-card-price").textContent).toBe("$0.92/pc at checkout");
-        expect($("catalog-card-add").textContent).toBe("Add to cart · $132.48");
-        expect($("catalog-card-add").dataset.quote).toBe("true");
-        expect($("catalog-card-tier-footnote").textContent).toBe("Quote rate $0.56/pc for 144–499 pcs. Request a quote");
-        const quote = $("catalog-card-request-quote") as HTMLAnchorElement;
-        const url = new URL(quote.getAttribute("href")!, "https://bestbottles.com");
-        expect(url.pathname).toBe("/request-quote");
-        expect(url.searchParams.get("products")).toBe("5 ml Clear Cylinder Roll-On Bottle (SKU: CYL5-ROLL-BLK)");
-        expect(url.searchParams.get("quantities")).toBe("144 units");
+        // Price consistency: the break's rate is the price; headline × quantity = button.
+        expect($("catalog-card-price").textContent).toBe("$0.56/pc · 144–499 pcs");
+        expect($("catalog-card-add").textContent).toBe("Add to cart · $80.64");
+        expect($("catalog-card-add").dataset.quote).toBeUndefined();
+        expect(el.querySelector('[data-testid="catalog-card-tier-footnote"]')).toBeNull();
+        expect(el.querySelector('[data-testid="catalog-card-request-quote"]')).toBeNull();
+        expect(el.textContent).not.toMatch(/quote/i);
         expect(events()).toEqual(["tier_pricing_opened", "tier_selected", "tier_pricing_closed"]);
         expect(track.mock.calls[1]).toEqual(["tier_selected", { ...base, quantity: 144, tier: "144–499" }]);
     });
@@ -155,8 +154,8 @@ describe("Pack of menu on the catalog card (design 8a)", () => {
         type(qty, "600");
         expect(el.querySelector('[data-testid="catalog-card-qty-error"]')).toBeNull();
         expect($("catalog-card-pack-toggle").textContent).toBe("Pack of 500+▾");
-        expect($("catalog-card-price").textContent).toBe("$0.92/pc at checkout");
-        expect($("catalog-card-tier-footnote").textContent).toContain("Quote rate $0.53/pc for 500+ pcs.");
+        expect($("catalog-card-price").textContent).toBe("$0.53/pc · 500+ pcs");
+        expect($("catalog-card-add").textContent).toBe("Add to cart · $318.00");
         act(() => { qty.dispatchEvent(new FocusEvent("focusout", { bubbles: true })); });
         expect(track.mock.calls.at(-1)).toEqual(["quantity_changed", { ...base, quantity: 600, tier: "500+", source: "input" }]);
         expect(el.querySelector('label[for="' + qty.id + '"]')?.textContent).toBe("Quantity");
@@ -166,8 +165,8 @@ describe("Pack of menu on the catalog card (design 8a)", () => {
     it("adds the exact assembly and quantity from the card without navigating", () => {
         card();
         type($("catalog-card-qty") as HTMLInputElement, "200");
-        // The only link is the optional quote request; Add to cart never navigates.
-        expect([...el.querySelectorAll("a[href]")].map((link) => link.getAttribute("data-testid"))).toEqual(["catalog-card-request-quote"]);
+        // Nothing in the purchase block is a link; Add to cart never navigates.
+        expect(el.querySelectorAll("a[href]")).toHaveLength(0);
         click($("catalog-card-add"));
         expect(addItems).toHaveBeenCalledTimes(1);
         expect(addItems.mock.calls[0][0]).toEqual([expect.objectContaining({
