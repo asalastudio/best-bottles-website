@@ -4,6 +4,7 @@ import { verifyWriteToken } from "./writeToken";
 import {
     REGISTER_ROW_LIMIT,
     anchorStatusV,
+    bodyPlateRowV,
     assemblyRegisterFields,
     assemblyRowV,
     bodyPlateFields,
@@ -151,6 +152,58 @@ export const upsertAssemblies = mutation({
             results.push({ key: row.graceSku, outcome: "updated" });
         }
         return results;
+    },
+});
+
+// ---------- Phase 3: plates and layers (written by scripts/register/phase3/push-phase3.ts) ----------
+
+const STATUS_RANK = { unmeasured: 0, measured: 1, approved: 2 } as const;
+type AnchorStatus = keyof typeof STATUS_RANK;
+const weakest = (statuses: AnchorStatus[]): AnchorStatus =>
+    statuses.length === 0 ? "unmeasured" : statuses.reduce((a, b) => (STATUS_RANK[a] <= STATUS_RANK[b] ? a : b));
+
+export const upsertBodyPlates = mutation({
+    args: { writeToken: v.string(), rows: v.array(bodyPlateRowV) },
+    returns: v.array(outcomeV),
+    handler: async (ctx, args) => {
+        checkBatch(args.writeToken, args.rows);
+        const now = Date.now();
+        const results: Outcome[] = [];
+        for (const row of args.rows) {
+            const body = await ctx.db.query("registerBodies").withIndex("by_bodyId", q => q.eq("bodyId", row.bodyId)).first();
+            if (!body) { results.push({ key: row.plateKey, outcome: "error", error: "unknown_body" }); continue; }
+            if (row.plateKey !== `${row.bodyId}|${row.glass}`) { results.push({ key: row.plateKey, outcome: "error", error: "plateKey_mismatch" }); continue; }
+            const existing = await ctx.db.query("registerBodyPlates").withIndex("by_plateKey", q => q.eq("plateKey", row.plateKey)).collect();
+            if (existing.length > 1) { results.push({ key: row.plateKey, outcome: "error", error: "duplicate_index_rows" }); continue; }
+            if (existing.length === 0) {
+                await ctx.db.insert("registerBodyPlates", { ...row, revision: 1, importedAt: now });
+                results.push({ key: row.plateKey, outcome: "inserted" });
+                continue;
+            }
+            const current = existing[0];
+            const { _id, _creationTime, revision, importedAt, ...stored } = current;
+            void _id; void _creationTime; void importedAt;
+            if (stableJson(stored) === stableJson(row)) { results.push({ key: row.plateKey, outcome: "unchanged" }); continue; }
+            await ctx.db.patch(current._id, { ...row, revision: revision + 1, importedAt: now });
+            results.push({ key: row.plateKey, outcome: "updated" });
+        }
+        return results;
+    },
+});
+
+/** Replace one component's layers. Layers are Phase 3-owned: a register push never touches them. */
+export const setComponentLayers = mutation({
+    args: { writeToken: v.string(), componentId: v.string(), layers: v.array(componentLayerV) },
+    returns: outcomeV,
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+        const rows = await ctx.db.query("registerComponents").withIndex("by_componentId", q => q.eq("componentId", args.componentId)).collect();
+        if (rows.length !== 1) return { key: args.componentId, outcome: "error" as const, error: rows.length ? "duplicate_index_rows" : "unknown_component" };
+        const row = rows[0];
+        const layersStatus = weakest(args.layers.map(l => l.anchorStatus));
+        if (stableJson(row.layers) === stableJson(args.layers) && row.layersStatus === layersStatus) return { key: args.componentId, outcome: "unchanged" as const };
+        await ctx.db.patch(row._id, { layers: args.layers, layersStatus, revision: row.revision + 1, loadedAt: Date.now() });
+        return { key: args.componentId, outcome: "updated" as const };
     },
 });
 

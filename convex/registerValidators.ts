@@ -183,4 +183,20 @@ export const assemblyRegisterFields = {
 };
 export const assemblyRowV = v.object(assemblyRegisterFields);
 
+/** A body plate as the Phase 3 tooling writes it (revision and importedAt are set by the mutation). */
+export const bodyPlateRowV = v.object({
+    plateKey: bodyPlateFields.plateKey,
+    bodyId: bodyPlateFields.bodyId,
+    glass: bodyPlateFields.glass,
+    image: bodyPlateFields.image,
+    thumb: bodyPlateFields.thumb,
+    pxPerMm: bodyPlateFields.pxPerMm,
+    anchors: bodyPlateFields.anchors,
+    anchorStatus: bodyPlateFields.anchorStatus,
+    anchorMeasuredBy: bodyPlateFields.anchorMeasuredBy,
+    source: bodyPlateFields.source,
+    derivedFrom: bodyPlateFields.derivedFrom,
+    storageProvider: bodyPlateFields.storageProvider,
+});
+
 export const REGISTER_ROW_LIMIT = 100;
