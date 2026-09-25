@@ -324,21 +324,35 @@
     transform: translateX(0);
 }
 
+.calloutGroup {
+    display: contents;
+}
+
+/* The label row: leader from the dot's column to the label at the right edge. */
 .callout {
     position: absolute;
     right: 16px;
     display: flex;
     align-items: flex-start;
     gap: 10px;
+    padding-left: 16px;
 }
 
+/* The dot stays on the part; a shifted label's leader jogs down to it. */
 .calloutDot {
-    flex: none;
+    position: absolute;
     width: 6px;
     height: 6px;
+    margin: -3px 0 0 0;
     border-radius: 50%;
     background: var(--pdp-gold);
-    margin-top: 6px;
+}
+
+.calloutJog {
+    position: absolute;
+    width: 0;
+    margin-left: 2.5px;
+    border-left: 1px dashed var(--pdp-gold);
 }
 
 .calloutLeader {

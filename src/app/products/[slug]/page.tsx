@@ -39,6 +39,7 @@ import { parseProductSlug } from "@/lib/products/group-variant-intent";
 import { resolveItemDescriptions } from "@/lib/products/item-description/resolve";
 import { collectionDescription, collectionFor, derivePicks, resolveVariant, type SiblingGlassGroup } from "@/lib/products/pdp-redesign/model";
 import type { KitLike } from "@/lib/products/pdp-redesign/stage";
+import { loadRegisterKits } from "@/lib/register/load";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -181,14 +182,26 @@ async function loadRedesignPayload(
         ...data.variants.map((variant) => ({ websiteSku: variant.websiteSku ?? null, graceSku: variant.graceSku ?? null })),
         ...siblings.flatMap((sibling) => sibling.bodyCandidates ?? [{ websiteSku: sibling.primaryWebsiteSku ?? null, graceSku: sibling.primaryGraceSku ?? null }]),
     ].filter((pair) => pair.websiteSku || pair.graceSku);
+    // The component register first: one body plate per glass and the component
+    // library's layers, every SKU of a body on one fixed datum, so swapping a cap
+    // or the glass never moves the bottle. Only the SKUs it cannot draw read
+    // their published per-SKU kit.
     const kitsBySku: Record<string, KitLike | null> = {};
-    for (let index = 0; index < pairs.length; index += 50) {
+    const registerKits = await loadRegisterKits(convex, pairs.map((pair) => pair.graceSku));
+    const pending: typeof pairs = [];
+    for (const pair of pairs) {
+        const kit = (pair.graceSku ? registerKits[pair.graceSku] : null) ?? (pair.websiteSku ? registerKits[pair.websiteSku] : null) ?? null;
+        if (!kit) { pending.push(pair); continue; }
+        if (pair.websiteSku) kitsBySku[pair.websiteSku] = kit;
+        if (pair.graceSku) kitsBySku[pair.graceSku] = kit;
+    }
+    for (let index = 0; index < pending.length; index += 50) {
         try {
-            const chunk = await convex.query(api.productKits.forSkus, { pairs: pairs.slice(index, index + 50) });
+            const chunk = await convex.query(api.productKits.forSkus, { pairs: pending.slice(index, index + 50) });
             for (const [key, kit] of Object.entries(chunk)) {
                 kitsBySku[key] = kit as KitLike | null;
                 if (kit) {
-                    const owner = pairs.find((pair) => pair.websiteSku === key || pair.graceSku === key);
+                    const owner = pending.find((pair) => pair.websiteSku === key || pair.graceSku === key);
                     if (owner?.websiteSku) kitsBySku[owner.websiteSku] = kit as KitLike;
                     if (owner?.graceSku) kitsBySku[owner.graceSku] = kit as KitLike;
                 }

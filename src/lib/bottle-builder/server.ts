@@ -7,6 +7,7 @@ import { builderBodyIdentity, chooserGroupKey, chooserSourceRows, resolveBuilder
 import { resolveListedComponents, unavailableVintageFinishes, type ActiveComponent } from "./components";
 import { bareChooserKit, slimBuilderBodies } from "./payload";
 import { readLocalComponentKits } from "../paper-doll/local-component-kits";
+import { loadRegisterKits } from "@/lib/register/load";
 
 const client = () => new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
@@ -59,17 +60,22 @@ export const loadBuilderFamilies = unstable_cache(async () => {
 async function loadKitsForRows(rows: Array<{ websiteSku: string | null; graceSku: string | null }>): Promise<Map<string, BuilderKit | null>> {
     const result = new Map<string, BuilderKit | null>();
     const pending: Array<{ websiteSku: string | null; graceSku: string | null }> = [];
+    const convex = client();
+    // The component register draws a SKU from its glass's one plate and the shared
+    // component layers, every SKU of a body on one datum; a staged local kit still
+    // wins (an explicit preview), and anything the register cannot draw is published.
+    const registered = await loadRegisterKits(convex, rows.map(row => row.graceSku));
     for (const row of rows) {
         const local = localKits();
         const staged = local && ((row.websiteSku && local[row.websiteSku]) || (row.graceSku && local[row.graceSku]));
-        if (staged) {
-            if (row.websiteSku) result.set(row.websiteSku, staged);
-            if (row.graceSku) result.set(row.graceSku, staged);
+        const kit = staged || (row.graceSku && registered[row.graceSku]) || (row.websiteSku && registered[row.websiteSku]) || null;
+        if (kit) {
+            if (row.websiteSku) result.set(row.websiteSku, kit);
+            if (row.graceSku) result.set(row.graceSku, kit);
         } else {
             pending.push(row);
         }
     }
-    const convex = client();
     for (let start = 0; start < pending.length; start += KIT_BATCH) {
         const slice = pending.slice(start, start + KIT_BATCH);
         const batch = await convex.query(api.productKits.forSkus, {

@@ -13,6 +13,7 @@ import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react"
 import styles from "./pdp.module.css";
 import PdpKitPartImage from "./PdpKitPartImage";
 import { displayImageUrl } from "@/lib/products/optimizable-image";
+import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/products/register-image";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
 import type { Callout } from "@/lib/products/pdp-redesign/model";
@@ -60,6 +61,9 @@ export type PdpStageProps = {
     activeGlassLabel: string;
 };
 
+/** Two callout labels need this much of the stage's height between their anchors (a three-line label in a ~560 px stage). */
+const CALLOUT_MIN_GAP_PCT = 8.5;
+
 /** The mobile layout (option 4a) applies below 900px; thumbnails shrink with it. */
 export function useIsPdpMobile(): boolean {
     const [mobile, setMobile] = useState(false);
@@ -79,6 +83,10 @@ export default function PdpStage({
 }: PdpStageProps) {
     const layout = useMemo(() => stageLayout(kit, view, context), [kit, view, context]);
     const railRef = useRef<HTMLDivElement>(null);
+    // Register masters are served display-sized through the optimizer; when that
+    // proxy cannot reach the Blob host (a local network quirk) the master is shown.
+    const [rawUrls, setRawUrls] = useState<ReadonlySet<string>>(() => new Set());
+    const showRaw = (url: string) => setRawUrls((current) => (current.has(url) ? current : new Set(current).add(url)));
     const mobile = useIsPdpMobile();
     const capThumbHeight = mobile ? 42 : 48;
     const glassThumbHeight = mobile ? 60 : 96;
@@ -98,7 +106,17 @@ export default function PdpStage({
     const showCallouts = Boolean(layout?.grid) && callouts.length > 0;
     const calloutRows = useMemo(() => {
         if (!layout) return [];
-        return callouts.map((callout) => ({ callout, anchor: layout.anchors[callout.key] ?? null }));
+        const rows = callouts.map((callout) => ({ callout, anchor: layout.anchors[callout.key] ?? null, shiftPct: 0 }));
+        // Labels read top to bottom. When two anchors sit closer than a label is
+        // tall (the roller insert seats right at the neck), the lower label steps
+        // down and its leader jogs; the dot stays on the part.
+        let floor = Number.NEGATIVE_INFINITY;
+        for (const row of rows.filter((entry) => entry.anchor).sort((a, b) => a.anchor!.yPct - b.anchor!.yPct)) {
+            const y = Math.max(row.anchor!.yPct, floor);
+            row.shiftPct = y - row.anchor!.yPct;
+            floor = y + CALLOUT_MIN_GAP_PCT;
+        }
+        return rows;
     }, [callouts, layout]);
 
     return (
@@ -155,14 +173,43 @@ export default function PdpStage({
                 </div>
             </div>
 
-            <div className={styles.stage} data-testid="pdp-stage" data-view={view} data-layered={layout ? "true" : "false"}>
+            <div
+                className={styles.stage}
+                data-testid="pdp-stage"
+                data-view={view}
+                data-layered={layout ? "true" : "false"}
+                data-source={layout ? (kit?.register ? "register" : "kit") : fallbackImageUrl ? "photo" : "none"}
+            >
                 <div className={styles.stageGrid} data-on={layout?.grid ? "true" : "false"} aria-hidden />
                 <div className={styles.stageBaseline} data-on={layout ? (layout.baseline ? "true" : "false") : "true"} aria-hidden />
                 {layout ? (
                     <div className={styles.stageCanvasHost}>
                         <div className={styles.stageCanvas}>
                             <div className={styles.stageFrame} style={{ transform: layout.frameCss }}>
-                                {layout.parts.map((part) => (
+                                {layout.parts.map((part) => part.box ? (
+                                    // A register part: a native cut-out standing in its box on the canvas. The
+                                    // canvas-sized wrapper carries the view offset so the percentages stay the canvas's.
+                                    <span
+                                        key={part.key}
+                                        className={styles.stagePart}
+                                        data-slot={part.slot}
+                                        style={{ transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex }}
+                                    >
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                                        <img
+                                            src={rawUrls.has(part.url) ? part.url : registerImageSrc(part.url, 640)}
+                                            alt=""
+                                            draggable={false}
+                                            decoding="async"
+                                            onError={() => { if (markRegisterOptimizerUnavailable(part.url)) showRaw(part.url); }}
+                                            style={{
+                                                position: "absolute", display: "block", maxWidth: "none",
+                                                left: `${part.box.leftPct}%`, top: `${part.box.topPct}%`,
+                                                width: `${part.box.widthPct}%`, height: `${part.box.heightPct}%`,
+                                            }}
+                                        />
+                                    </span>
+                                ) : (
                                     // Kit layers stay plain <img>: their pixel canvas and alpha must not change.
                                     // eslint-disable-next-line @next/next/no-img-element
                                     <img
@@ -190,21 +237,24 @@ export default function PdpStage({
                 )}
 
                 <div className={styles.callouts} data-on={showCallouts ? "true" : "false"} aria-hidden={!showCallouts} data-testid="pdp-callouts">
-                    {calloutRows.map(({ callout, anchor }) => {
+                    {calloutRows.map(({ callout, anchor, shiftPct }) => {
                         if (!anchor) return null;
-                        const style: CSSProperties = {
+                        const rowStyle: CSSProperties = {
                             left: `${anchor.xPct}%`,
-                            top: `calc(${anchor.yPct}% - 8px)`,
+                            top: `calc(${anchor.yPct + shiftPct}% - 8px)`,
                         };
                         return (
-                            <div key={callout.key} className={styles.callout} style={style} data-callout={callout.key}>
-                                <span className={styles.calloutDot} />
-                                <span className={styles.calloutLeader} />
-                                <span className={styles.calloutLabel}>
-                                    <b>{callout.title}</b>
-                                    {callout.line1}
-                                    {callout.line2 ? <><br />{callout.line2}</> : null}
-                                </span>
+                            <div key={callout.key} className={styles.calloutGroup} data-callout={callout.key} data-shifted={shiftPct > 0 ? "true" : undefined}>
+                                <span className={styles.calloutDot} style={{ left: `${anchor.xPct}%`, top: `${anchor.yPct}%` }} />
+                                {shiftPct > 0 ? <span className={styles.calloutJog} style={{ left: `${anchor.xPct}%`, top: `${anchor.yPct}%`, height: `${shiftPct}%` }} /> : null}
+                                <div className={styles.callout} style={rowStyle}>
+                                    <span className={styles.calloutLeader} />
+                                    <span className={styles.calloutLabel}>
+                                        <b>{callout.title}</b>
+                                        {callout.line1}
+                                        {callout.line2 ? <><br />{callout.line2}</> : null}
+                                    </span>
+                                </div>
                             </div>
                         );
                     })}

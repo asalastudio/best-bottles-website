@@ -9,8 +9,10 @@
  * the bounds sit at the origin. No blend mode, no background: the alpha is the
  * cut-out. A plain <img>, like every registered paper-doll layer on the site.
  */
+import { useState } from "react";
 import { partCrop, type KitPartLike } from "@/lib/products/pdp-redesign/stage";
 import { displayImageUrl } from "@/lib/products/optimizable-image";
+import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/products/register-image";
 
 export default function PdpKitPartImage({
     part, canvas, height, alt = "", className,
@@ -22,6 +24,10 @@ export default function PdpKitPartImage({
     className?: string;
 }) {
     const crop = partCrop(part, canvas, height);
+    // A register master is served display-sized through the optimizer; if that
+    // proxy cannot reach the Blob host (a local network quirk), show the master.
+    const [raw, setRaw] = useState(false);
+    const src = raw ? part.image.url : part.box ? registerImageSrc(part.image.url, 256) : displayImageUrl(part.image.url, 640);
     return (
         <span
             className={className}
@@ -31,10 +37,11 @@ export default function PdpKitPartImage({
             {/* Kit layers and plates stay plain <img>: their pixel canvas and alpha must not change. */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-                src={displayImageUrl(part.image.url, 640)}
+                src={src}
                 alt={alt}
                 draggable={false}
                 decoding="async"
+                onError={() => { if (src !== part.image.url && markRegisterOptimizerUnavailable(part.image.url)) setRaw(true); }}
                 style={{ position: "absolute", left: crop.left, top: crop.top, width: crop.imgWidth, height: crop.imgHeight, maxWidth: "none", display: "block" }}
             />
         </span>

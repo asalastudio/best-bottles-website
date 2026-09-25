@@ -26,6 +26,8 @@ export const STAGE_VIEWS: ReadonlyArray<{ id: StageView; label: string }> = [
     { id: "exploded", label: "EXPLODED" },
 ];
 
+export type PartBox = { x: number; y: number; width: number; height: number };
+
 export type KitPartLike = {
     slot: string;
     zOrder: number;
@@ -34,6 +36,13 @@ export type KitPartLike = {
     assembled: { x: number; y: number };
     exploded: { dx: number; dy: number };
     image: { url: string; width: number; height: number };
+    /**
+     * Where the image sits on the canvas. A legacy kit layer has none: it is a
+     * full-canvas image. A register part (one plate per glass, one layer set
+     * per component, placed by src/lib/register/stage-kit.ts) is a cut-out at
+     * its native size standing in this box.
+     */
+    box?: PartBox | null;
 };
 
 export type KitLike = {
@@ -41,17 +50,25 @@ export type KitLike = {
     canvas: { width: number; height: number };
     anchors: { axisX: number; neckAxisX: number | null; seatY: number; baselineY: number };
     parts: KitPartLike[];
+    /** Set when the kit was composed from the component register rather than published per SKU. */
+    register?: { bodyId: string; plateKey: string; glass: string } | null;
 };
 
 export type StagePart = {
     key: string;
     slot: string;
     url: string;
-    /** translate() percentages of the part's own box (the canvas). */
+    /** translate() percentages of the canvas box. */
     dxPct: number;
     dyPct: number;
     zIndex: number;
+    /** The part's box in percent of the canvas; absent for a full-canvas layer. */
+    box?: { leftPct: number; topPct: number; widthPct: number; heightPct: number };
 };
+
+export function fullCanvasBox(canvas: { width: number; height: number }): PartBox {
+    return { x: 0, y: 0, width: canvas.width, height: canvas.height };
+}
 
 export type StagePoint = { xPct: number; yPct: number };
 
@@ -154,6 +171,14 @@ export function stageLayout(kit: KitLike | null | undefined, requested: StageVie
             dxPct: (offset.dx / canvas.width) * 100,
             dyPct: (offset.dy / canvas.height) * 100,
             zIndex: part.zOrder + 1,
+            ...(part.box ? {
+                box: {
+                    leftPct: (part.box.x / canvas.width) * 100,
+                    topPct: (part.box.y / canvas.height) * 100,
+                    widthPct: (part.box.width / canvas.width) * 100,
+                    heightPct: (part.box.height / canvas.height) * 100,
+                },
+            } : {}),
         };
     });
 
@@ -181,29 +206,37 @@ export function stageLayout(kit: KitLike | null | undefined, requested: StageVie
 }
 
 /**
- * The crop that shows one part at a given height: a full-canvas layer scaled
- * so its bounds fill the box, then shifted so the bounds sit at the origin.
- * Used for the cap rail, the glass lineup and the Build Your Bottle tiles.
+ * The crop that shows one part at a given height: the layer's image scaled
+ * so the part's bounds fill the box, then shifted so the bounds sit at the
+ * origin. A legacy layer's image is the whole canvas; a register part's image
+ * is its box. Used for the cap rail, the glass lineup and the Build Your
+ * Bottle tiles.
  */
 export function partCrop(part: KitPartLike, canvas: { width: number; height: number }, height: number): { width: number; height: number; imgWidth: number; imgHeight: number; left: number; top: number } {
+    const box = part.box ?? fullCanvasBox(canvas);
     const boundsW = Math.max(1, part.bounds.right - part.bounds.left);
     const boundsH = Math.max(1, part.bounds.bottom - part.bounds.top);
     const scale = height / boundsH;
     return {
         width: boundsW * scale,
         height,
-        imgWidth: canvas.width * scale,
-        imgHeight: canvas.height * scale,
-        left: -part.bounds.left * scale,
-        top: -part.bounds.top * scale,
+        imgWidth: box.width * scale,
+        imgHeight: box.height * scale,
+        left: (box.x - part.bounds.left) * scale,
+        top: (box.y - part.bounds.top) * scale,
     };
 }
 
-/** The layer to show for a closure thumbnail: the cap, else the overcap, else the top-most non-body part. */
+/** Which layer stands for the closure in a thumbnail, most to least cap-like. */
+const CLOSURE_THUMB_PRIORITY = ["cap", "overcap", "sprayer", "pump", "bulb", "tassel", "roller", "fitment", "reducer", "pipette", "collar", "diptube"];
+
+/** The layer to show for a closure thumbnail: the cap, else the overcap, else the most cap-like part (never the dip tube before the pump). */
 export function closurePart(kit: KitLike | null | undefined): KitPartLike | null {
     if (!kit?.parts?.length) return null;
-    const cap = kit.parts.find((part) => part.slot === "cap") ?? kit.parts.find((part) => part.slot === "overcap");
-    if (cap) return cap;
+    for (const slot of CLOSURE_THUMB_PRIORITY) {
+        const candidates = kit.parts.filter((part) => part.slot === slot);
+        if (candidates.length) return candidates.sort((a, b) => a.bounds.top - b.bounds.top)[0];
+    }
     const candidates = kit.parts.filter((part) => part.slot !== "body");
     return candidates.sort((a, b) => a.bounds.top - b.bounds.top)[0] ?? null;
 }
