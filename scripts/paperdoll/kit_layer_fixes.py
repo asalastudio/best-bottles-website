@@ -60,6 +60,11 @@ ROLLER_REFERENCE = "GBCyl9MtlRollMattSl"          # clear 9 ml 17-415: the layer
 ROLLER_FAMILIES = ("cylinder-9ml-clear-17-415", "cylinder-9ml-amber-17-415", "cylinder-9ml-cobalt-blue-17-415",
                    "cylinder-9ml-frosted-17-415", "cylinder-9ml-swirl-17-415")
 SUNBURST_SIZE = 1024
+# The photographed 17-415 housing has a flange only 1.2x its ball; the real part's flange is ~1.5x the ball
+# (15 mm over a 10 mm ball) and covers the neck rim. The reference is widened to that, and each glass's
+# roller is sized so the flange overhangs that glass's own neck threads (Jordan: "set properly on top").
+FLANGE_OVER_BALL = 1.5
+FLANGE_OVER_THREADS = 1.04
 
 
 def load_kits() -> dict[str, dict]:
@@ -267,6 +272,31 @@ def roller_cut_row(a, seat) -> int:
     return max(band) + 1
 
 
+def ball_and_flange(a):
+    """Widest row of the ball (top 45%), widest row overall (the flange), and the flange band's first row."""
+    al = a[..., 3] > 128
+    widths = [int(np.where(r)[0].max() - np.where(r)[0].min() + 1) if r.any() else 0 for r in al]
+    ball, flange = max(widths[: int(len(widths) * .45)]), max(widths)
+    return ball, flange, min(i for i, w in enumerate(widths) if w >= 0.97 * flange)
+
+
+def widen_flange(master: Image.Image) -> tuple[Image.Image, dict]:
+    """The photographed housing's flange is 1.2x its ball; the real part's is ~1.5x (15 mm over a 10 mm
+    ball) and covers the neck rim. Stretch only the flat flange band, about the axis, in the finished
+    master: Sunburst will not draw a widened outline, and a brushed disc stretched sideways reads true."""
+    a = np.asarray(master)
+    ball, flange, band_top = ball_and_flange(a)
+    f = FLANGE_OVER_BALL * ball / flange
+    if f <= 1.01:
+        return master, {"ballWidth": ball, "flangeWidth": flange, "flangeStretch": 1.0}
+    band = Image.fromarray(a[band_top:]).convert("RGBa")
+    wide = band.resize((round(band.width * f), band.height), Image.LANCZOS).convert("RGBA")
+    canvas = Image.new("RGBA", (wide.width, a.shape[0]), (0, 0, 0, 0))
+    canvas.alpha_composite(Image.fromarray(a[:band_top]), ((wide.width - a.shape[1]) // 2, 0))
+    canvas.alpha_composite(wide, (0, band_top))
+    return canvas, {"ballWidth": ball, "flangeWidth": round(flange * f), "flangeStretch": round(f, 4)}
+
+
 def roller_ref(kits):
     """Reference crop of the photographed 17-415 metal roller housing above the seat, flat-cut, and
     the Sunburst input: that crop upscaled onto a transparent square canvas."""
@@ -281,8 +311,9 @@ def roller_ref(kits):
     a[cut:, :, 3] = 0
     b = bbox(a)
     crop = a[b[1]:b[3], b[0]:b[2]]
+    ball, flange, _ = ball_and_flange(crop)
     meta = {"reference": ROLLER_REFERENCE, "seatY": seat, "cutY": cut, "cutBelowSeat": cut - seat,
-            "cropBox": list(b), "axisX": k["anchors"]["axisX"]}
+            "cropBox": list(b), "axisX": k["anchors"]["axisX"], "ballWidth": ball, "flangeWidthPhoto": flange}
     Image.fromarray(crop).save(ROLLER / "reference.png")
     # Sunburst input: fill ~78% of the canvas width, centred; remember the placement to fit back.
     scale = 0.78 * SUNBURST_SIZE / crop.shape[1]
@@ -309,8 +340,9 @@ def roller_fit(render_path: Path):
     nb = firm.getbbox()
     sx = (rb[2] - rb[0]) / (nb[2] - nb[0])
     sy = (rb[3] - rb[1]) / (nb[3] - nb[1])
-    # Fit each axis on its own: the render's silhouette can be a few percent off the photograph's aspect,
-    # and a uniform fit then leaves one edge of the outline uncovered (a dark fringe on the first master).
+    # Fit each axis on its own: the render comes back a few percent off the photograph's aspect, and a
+    # uniform fit leaves one edge of the outline to be filled by extension (a visible seam). A 4% stretch
+    # of a cylinder is not visible; the flange is widened afterwards, in the master, not here.
     fitted = ren.convert("RGBa").resize((round(ren.width * sx), round(ren.height * sy)), Image.LANCZOS).convert("RGBA")
     fb = Image.fromarray(((np.asarray(fitted)[..., 3] > 96) * 255).astype(np.uint8)).getbbox()
     out = Image.new("RGBA", ref.size, (0, 0, 0, 0))
@@ -324,10 +356,10 @@ def roller_fit(render_path: Path):
         o[..., :3] = o[iy, ix, :3]
     # alpha lock: the reference outline is the geometry; keep the render's colour under it
     o[..., 3] = np.asarray(ref)[..., 3]
-    master = Image.fromarray(o).crop(rb)
+    master, widened = widen_flange(Image.fromarray(o).crop(rb))
     master.save(ROLLER / "master.png")
     report = {"render": str(render_path), "scaleX": round(sx, 4), "scaleY": round(sy, 4),
-              "drift": {"widthPct": round((sx - 1) * 100, 2), "heightPct": round((sy - 1) * 100, 2)}, "masterSize": master.size}
+              "drift": {"widthPct": round((sx - 1) * 100, 2), "heightPct": round((sy - 1) * 100, 2)}, "masterSize": master.size, **widened}
     (ROLLER / "master.json").write_text(json.dumps({**meta, **report}, indent=1) + "\n")
     print(json.dumps(report))
     # review: reference | render | master on bone
@@ -488,17 +520,22 @@ def build(kits, with_roller: bool):
         master = Image.open(ROLLER / "master.png").convert("RGBA")
         ref_k = kits[ROLLER_REFERENCE]
         ref_h = ref_k["anchors"]["baselineY"] - ref_k["anchors"]["seatY"]
-        ref_w = meta["cropBox"][2] - meta["cropBox"][0]
+        m_al = np.asarray(master)[..., 3] > 128
+        m_flange = max(int(np.where(r)[0].max() - np.where(r)[0].min() + 1) for r in m_al if r.any())
         for row in fixes["filledRoller"]:
             k = kits[row["sku"]]
             parts = manifest["kits"].get(row["sku"], {}).get("parts") or [dict(p) for p in k["parts"]]
             rp = next(p for p in parts if p["slot"] == "roller")
-            s = (k["anchors"]["baselineY"] - k["anchors"]["seatY"]) / ref_h      # same bottle, per-canvas scale
-            w = round(ref_w * s); h = round(master.height * w / master.width)
+            seat = k["anchors"]["seatY"]
+            body_a = fetch(next(p for p in parts if p["slot"] == "body"))
+            threads = max(row_width(body_a, y, y + 1) for y in range(seat + 4, seat + 60))
+            # the flange overhangs this glass's own neck threads; the ball follows at the master's proportion
+            w = round(threads * FLANGE_OVER_THREADS * master.width / m_flange); h = round(master.height * w / master.width)
             small = master.convert("RGBa").resize((w, h), Image.LANCZOS).convert("RGBA")
             canvas = Image.new("RGBA", CANVAS, (0, 0, 0, 0))
-            x = round(k["anchors"]["axisX"] - w / 2)
-            y = round(k["anchors"]["seatY"] + meta["cutBelowSeat"] * s) - h
+            s = (k["anchors"]["baselineY"] - seat) / ref_h                       # the rim ellipse drop, per canvas
+            x = round((k["anchors"].get("neckAxisX") or k["anchors"]["axisX"]) - w / 2)
+            y = round(seat + meta["cutBelowSeat"] * s) - h
             canvas.alpha_composite(small, (x, y))
             a = np.asarray(canvas).copy()
             body = next(p for p in parts if p["slot"] == "body"); cap = next((p for p in parts if p["slot"] == "cap"), None)
@@ -507,6 +544,33 @@ def build(kits, with_roller: bool):
             parts[parts.index(rp)] = new_part(rp, a, "roller", 1, "filledRoller")
             record(row["sku"], parts, ["filledRoller"])
             sheets["rollers"].append((row["sku"], fetch(rp), a, parts))
+
+    # 5. plastic rollers on the same bottles: the photographed skirt is narrower than the neck it sits on
+    #    (each glass was photographed with its own neck width, the roller layer was not resized to match).
+    #    Same rule as the metal housing: the skirt overhangs this glass's threads. The layer is the photo,
+    #    only rescaled about its seat; no regeneration.
+    for sku, k in sorted(kits.items()):
+        if k["familyId"] not in ROLLER_FAMILIES or any(r["sku"] == sku for r in fixes["filledRoller"]):
+            continue
+        parts = manifest["kits"].get(sku, {}).get("parts") or [dict(p) for p in k["parts"]]
+        rp = next((p for p in parts if p["slot"] == "roller"), None)
+        body = next((p for p in parts if p["slot"] == "body"), None)
+        if not rp or not body:
+            continue
+        seat = k["anchors"]["seatY"]
+        a = fetch(rp)
+        skirt = max(row_width(a, y, y + 1) for y in range(int(rp["bounds"]["top"]), int(rp["bounds"]["bottom"])))
+        threads = max(row_width(fetch(body), y, y + 1) for y in range(seat + 4, seat + 60))
+        r = threads * FLANGE_OVER_THREADS / max(skirt, 1)
+        if abs(r - 1) < 0.03:
+            continue
+        axis = k["anchors"].get("neckAxisX") or k["anchors"]["axisX"]
+        scaled = register(a, axis, rp["bounds"]["bottom"], axis, rp["bounds"]["bottom"], r)      # about the seat, x kept on the axis
+        part = new_part(rp, scaled, "roller", rp["zOrder"], "rollerToNeck")
+        part["scale"] = round(r, 4)
+        parts[parts.index(rp)] = part
+        record(sku, parts, ["rollerToNeck"])
+        sheets["rollers"].append((sku, a, scaled, parts))
 
     (OUT / f"manifest-{TARGET}.json").write_text(json.dumps(manifest, indent=1) + "\n")
     print(f"manifest: {len(manifest['kits'])} kits; mechanism scales {json.dumps(scales)}")
