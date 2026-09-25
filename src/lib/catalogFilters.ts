@@ -509,12 +509,28 @@ export function expandCapacityFilterValues(selected: readonly string[]): string[
     return Array.from(new Set(labels));
 }
 
+/** US fluid ounces → the millilitre size the trade sells: 1 oz → 30 ml, 1/2 oz → 15 ml. */
+export function fluidOuncesToTradeMl(ounces: number): number {
+    const ml = ounces * 29.5735;
+    return ml >= 10 ? Math.round(ml / 5) * 5 : Math.round(ml);
+}
+
+function parseOunceAmount(amount: string): number | null {
+    const fraction = amount.match(/^(\d+)\s*\/\s*(\d+)$/);
+    const value = fraction ? Number(fraction[1]) / Number(fraction[2]) : Number(amount);
+    return Number.isFinite(value) && value > 0 ? value : null;
+}
+
 export function normalizeCatalogSearchText(value: string | null | undefined): string {
     if (!value) return "";
     let normalized = value
         .toLowerCase()
         .normalize("NFKD")
         .replace(/[–—]/g, "-")
+        .replace(/\b(\d+(?:\.\d+)?|\d+\s*\/\s*\d+)\s*(?:fl\.?\s*)?(?:oz|ounces?)\b/g, (match, amount: string) => {
+            const ounces = parseOunceAmount(amount);
+            return ounces === null ? match : `${fluidOuncesToTradeMl(ounces)} ml`;
+        })
         .replace(/(\d{1,4})\s*ml\b/g, "$1ml $1 ml")
         .replace(/\b(\d{1,3})\s*[-/]\s*(\d{3,4})\b/g, "$1-$2 $1/$2")
         .replace(/\broll[\s-]?on\b/g, "rollon roll-on roller rollerball roller ball")
@@ -525,6 +541,7 @@ export function normalizeCatalogSearchText(value: string | null | undefined): st
         .replace(/\bbulb\b/g, "bulb vintage antique")
         .replace(/\bsprayers?\b/g, "sprayer spray")
         .replace(/\bspray\b/g, "spray sprayer")
+        .replace(/\batomisers?\b/g, "atomizer")
         .replace(/\bauto?mizers?\b/g, "atomizer automizer automizers")
         .replace(/\batomizers?\b/g, "atomizer automizer automizers")
         .replace(/\bdroppers?\b/g, "dropper pipette")
@@ -550,7 +567,9 @@ export function normalizeCatalogSearchText(value: string | null | undefined): st
 export function catalogSearchTokens(query: string): string[] {
     const normalized = normalizeCatalogSearchText(query);
     if (!normalized) return [];
-    const stopWords = new Set(["a", "an", "and", "for", "of", "the", "with"]);
+    // Connecting words shoppers type around the product ("sprayer that fits
+    // 13-415") — no product field contains them, so every-word matching failed.
+    const stopWords = new Set(["a", "an", "and", "for", "of", "the", "with", "that", "fits", "fit", "my", "need", "want", "looking"]);
     return Array.from(new Set(normalized.split(/\s+/).filter((token) => token.length > 0 && !stopWords.has(token))));
 }
 

@@ -66,6 +66,7 @@ import { buildCatalogSearchArgs, fetchCatalogSearch } from "@/lib/catalogSearchC
 import { catalogGroupSkuLabel, mergeCatalogSearchPages, resolveCatalogGroupSku } from "@/lib/catalogSearchFallback";
 import { MASTER_CATALOG_SURFACE } from "@/lib/catalogSurface";
 import { analytics } from "@/lib/analytics";
+import { sendCatalogSearchLog } from "@/lib/catalog/searchLog";
 import { familyGuideHref, isFamilyLandingFamily } from "@/lib/products/focused-shopping";
 import { localizeCollectionName, localizeCollectionSubtitle, localizeFamilyName, localizeMerchandisingName } from "@/i18n/catalogCopy";
 import { localizeHref, stripLocalePrefix } from "@/i18n/paths";
@@ -1631,6 +1632,28 @@ export default function CatalogClient({
     const facets = activeResult.facets;
     const totalCount = activeResult.totalCount;
     const visibleProducts = filtered;
+
+    // Search-box log (src/lib/catalog/searchLog.ts): one entry once a query has
+    // settled for 2 s, so half-typed words are not counted. Grace-driven
+    // navigations are Grace's searches, not the shopper's typing.
+    const loggedSearchRef = useRef<string | null>(null);
+    useEffect(() => {
+        const query = filters.search.trim();
+        if (!query || isGraceNav || isFetchingCatalog) return;
+        const key = `${locale}:${query.toLowerCase()}`;
+        if (loggedSearchRef.current === key) return;
+        const timer = window.setTimeout(() => {
+            loggedSearchRef.current = key;
+            sendCatalogSearchLog({ query, locale, event: { kind: "search", resultCount: totalCount } });
+            analytics.catalogFiltered({
+                searchTerm: query,
+                resultCount: totalCount,
+                families: filters.families.join(",") || undefined,
+                applicators: filters.applicators.join(",") || undefined,
+            });
+        }, 2000);
+        return () => window.clearTimeout(timer);
+    }, [filters.search, filters.families, filters.applicators, isFetchingCatalog, totalCount, locale, isGraceNav]);
     const visualApplicatorParam = filters.applicators.length === 1 ? filters.applicators[0] : null;
     const variantPreviewRows = activeResult.variantPreviewRows;
     const variantSourceMap = useMemo(
