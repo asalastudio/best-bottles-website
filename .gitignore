@@ -242,3 +242,10 @@ public/local-kits/
 
 # builder kit layer fixes (published to Blob + Convex, never committed)
 /output/kit-fixes/
+
+# Component register Phase 3: cut plates and layers (native resolution); measurements are committed, pixels are not.
+/output/register-phase3/
+/output/register-bodies/
+
+# Phase 4 parity gate: renders, legacy kits and review sheets (regenerable)
+/output/register-phase4/

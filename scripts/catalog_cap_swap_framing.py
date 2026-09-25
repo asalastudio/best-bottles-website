@@ -33,6 +33,8 @@ roll-on, 0.677) had its bottle 3% off. Frosted glass on bone is the usual miss.
 Usage:
     python3 scripts/catalog_cap_swap_framing.py            # dev Convex from .env.local
     python3 scripts/catalog_cap_swap_framing.py --convex-url https://<deployment>.convex.cloud
+    python3 scripts/catalog_cap_swap_framing.py --skus GBRoyal13Gl GBSqr15Gl   # only these heroes;
+        other entries and shadow layers are kept, entries for heroes no longer in any registry are dropped
 """
 
 from __future__ import annotations
@@ -205,8 +207,13 @@ def write_shadow(row: dict, plate_url: str, scale: float, x: float, y: float) ->
     placed = Image.new("RGB", SHADOW_SIZE, WHITE)
     plate = read_image(plate_url).convert("RGB").resize((round(width * scale), round(height * scale)), Image.LANCZOS)
     placed.paste(plate, (round(x * width), round(y * height)))
-    objects = object_mask(hero, BONE, 45) | object_mask(placed, WHITE, 20)
-    objects = ndimage.binary_dilation(objects, iterations=2)
+    # The hero's own objects must vanish completely, or a faint clear overcap or the glass body's interior
+    # survives at 45 levels and shows through beside or behind the sibling's plate (Jordan, 2026-09-25:
+    # "debris or doubling", "a bigger bottle behind it"). Read the hero at 14 levels, close and fill each
+    # object so translucent interiors are covered, then grow the region; the plate's objects likewise.
+    hero_objects = ndimage.binary_fill_holes(ndimage.binary_closing(object_mask(hero, BONE, 14), iterations=4))
+    plate_objects = ndimage.binary_fill_holes(ndimage.binary_closing(object_mask(placed, WHITE, 20), iterations=4))
+    objects = ndimage.binary_dilation(hero_objects | plate_objects, iterations=5)
     ratio = np.clip(np.asarray(hero).astype(float) / np.array(BONE), 0, 1).mean(axis=2)
     ratio[objects] = 1.0
     digest = hashlib.sha1(row["url"].encode()).hexdigest()[:10]
@@ -249,21 +256,73 @@ def main() -> None:
     parser.add_argument("--convex-url", default=None)
     parser.add_argument("--min-match", type=float, default=0.74)
     parser.add_argument("--workers", type=int, default=8)
+    parser.add_argument("--skus", nargs="*", default=None, help="calibrate only these website SKUs; keep the rest")
+    parser.add_argument("--shadows-only", action="store_true", help="rewrite every existing entry's shadow layer from its stored placement; no fitting")
     args = parser.parse_args()
     convex = args.convex_url or convex_url_from_env()
 
-    rows = hero_rows()
+    if args.shadows_only:
+        with open(OUT, encoding="utf8") as handle:
+            framing = json.load(handle)
+        rows_by_url = {row["url"]: row for row in hero_rows()}
+        skus = sorted({rows_by_url[url]["websiteSku"] for url in framing if url in rows_by_url})
+        plates = {}
+        for start in range(0, len(skus), 150):
+            plates.update(convex_query(convex, "productPlates:forSkus", {"skus": skus[start:start + 150]})["plates"])
+        def rewrite(item):
+            url, entry = item
+            row = rows_by_url.get(url)
+            plate = plates.get(row["websiteSku"]) if row else None
+            plate_url = (plate or {}).get("imageCapOff" if entry["plate"] == "capOff" else "image")
+            if not row or not plate_url:
+                return url, None
+            return url, write_shadow(row, plate_url, entry["scale"], entry["x"], entry["y"])
+        done = 0
+        with ThreadPoolExecutor(max_workers=args.workers) as pool:
+            for url, shadow in pool.map(rewrite, list(framing.items())):
+                if shadow:
+                    framing[url]["shadow"] = shadow
+                    done += 1
+                else:
+                    print(f"  kept old shadow (no plate or hero row): {url}", file=sys.stderr)
+        with open(OUT, "w", encoding="utf8") as handle:
+            json.dump(dict(sorted(framing.items())), handle, indent=2)
+            handle.write("\n")
+        print(f"{done} of {len(framing)} shadow layers rewritten")
+        return
+
+    all_rows = hero_rows()
+    rows = [row for row in all_rows if row["websiteSku"] in set(args.skus)] if args.skus else all_rows
+    if args.skus:  # a SKU may carry several registry rows (an older photo and a newer release)
+        missing = sorted(set(args.skus) - {row["websiteSku"] for row in rows})
+        if missing:
+            raise SystemExit(f"not in any hero registry: {', '.join(missing)}")
     skus = sorted({row["websiteSku"] for row in rows})
     plates: dict = {}
     for start in range(0, len(skus), 150):
         plates.update(convex_query(convex, "productPlates:forSkus", {"skus": skus[start:start + 150]})["plates"])
 
     shadow_dir = os.path.join(ROOT, "public", SHADOW_DIR)
-    if os.path.isdir(shadow_dir):  # layers are regenerated; stale ones must not ship
+    framing: dict = {}
+    if args.skus:
+        # Keep every calibration whose hero is still registered and not being redone; drop the rest
+        # (a superseded hero's entry and shadow layer must not outlive it).
+        live_urls = {row["url"] for row in all_rows}
+        redo_urls = {row["url"] for row in rows}
+        if os.path.exists(OUT):
+            with open(OUT, encoding="utf8") as handle:
+                previous = json.load(handle)
+            for url, entry in previous.items():
+                if url in live_urls and url not in redo_urls:
+                    framing[url] = entry
+                elif entry.get("shadow"):
+                    stale = os.path.join(ROOT, "public", entry["shadow"].lstrip("/"))
+                    if os.path.exists(stale):
+                        os.remove(stale)
+    elif os.path.isdir(shadow_dir):  # layers are regenerated; stale ones must not ship
         for name in os.listdir(shadow_dir):
             os.remove(os.path.join(shadow_dir, name))
 
-    framing: dict = {}
     skipped: list[tuple[str, str]] = []
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
         for url, result, reason in pool.map(lambda row: calibrate(row, plates, args.min_match), rows):

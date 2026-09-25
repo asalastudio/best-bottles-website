@@ -14,18 +14,21 @@ const HELD = [
   'LBMetalSilver1oz', 'GBMtlCylGl',
 ];
 const ROUND2_QA_PASS = ['GBEternalFlameGreen', 'GBCB12ozPear'];
-const ROUND2_ON_SIGHT = ['GBRoyal13Gl', 'GBRoyal13MtlRollBlkDot', 'GB3TPlGl', 'GBGrce55AnSpTslMtSl'];
+const ROUND2_ON_SIGHT = ['GB3TPlGl', 'GBGrce55AnSpTslMtSl'];
 const ON_SIGHT = [...ROUND2_ON_SIGHT, 'GB1ozGenieBl'];
 
+// The Royal 13 ml and Flair 15 ml heroes of this release were regenerated on 2026-09-25
+// (batch 6) and moved to catalog-hero-batch6-release.json; see that test.
 describe('Grace, Royal, Flair, and Decorative catalog hero release', () => {
-  it('ships the 21 approved exact-SKU Sunburst renders with intact image files', async () => {
-    expect(rows).toHaveLength(21);
-    expect(new Set(rows.map(row => row.websiteSku)).size).toBe(21);
+  it('ships the 15 remaining approved exact-SKU Sunburst renders with intact image files', async () => {
+    expect(rows).toHaveLength(15);
+    expect(new Set(rows.map(row => row.websiteSku)).size).toBe(15);
     expect(rows.filter(row => row.family === 'Grace')).toHaveLength(5);
-    expect(rows.filter(row => row.family === 'Royal')).toHaveLength(3);
-    expect(rows.filter(row => row.family === 'Flair')).toHaveLength(3);
+    expect(rows.filter(row => row.family === 'Royal')).toHaveLength(0);
+    expect(rows.filter(row => row.family === 'Flair')).toHaveLength(0);
     expect(rows.filter(row => row.family === 'Decorative')).toHaveLength(10);
-    expect(approval.rows).toHaveLength(21);
+    expect(approval.rows).toHaveLength(15);
+    expect(approval.supersededBy['batch6-2026-09-25'].skus).toHaveLength(6);
     for (const hero of rows) {
       const evidence = approval.rows.find(row => row.sku === hero.websiteSku)!;
       const original = catalog.find(row => row.websiteSku === hero.websiteSku)!;
@@ -85,7 +88,7 @@ describe('Grace, Royal, Flair, and Decorative catalog hero release', () => {
       expect(onSight.measured.iou).toBeLessThan(0.995);
     }
     expect([...approval.approvedOnSight.skus].sort()).toEqual([...ON_SIGHT].sort());
-    expect(approval.rows.filter(row => 'status' in row)).toHaveLength(7);
+    expect(approval.rows.filter(row => 'status' in row)).toHaveLength(5);
   });
 
   it('keeps the pictured and purchasable SKU aligned in its production group', () => {

@@ -1,5 +1,14 @@
 import { defineSchema, defineTable } from "convex/server";
 import { v } from "convex/values";
+import {
+    anchorStatusV,
+    assemblyRegisterFields,
+    bodyPlateFields,
+    bodyRegisterFields,
+    componentLayerV,
+    componentRegisterFields,
+    storageProviderV,
+} from "./registerValidators";
 
 /** One stored image: an absolute, public, permanent URL plus what the importer verified about it. */
 const plateAssetV = v.object({
@@ -1154,6 +1163,47 @@ export default defineSchema({
         .index("by_websiteSku", ["websiteSku"])
         .index("by_graceSku", ["graceSku"])
         .index("by_familyId", ["familyId"]),
+
+    // Component register (docs/COMPONENT_REGISTER_PHASE_2_SCHEMA.md). Loaded from data/register/
+    // by scripts/register/push-register.ts; never edited by hand. productKits and productPlates
+    // stay the storefront's source until the renderer passes the per-SKU parity gate.
+    registerBodies: defineTable({
+        ...bodyRegisterFields,
+        revision: v.number(),
+        loadedAt: v.number(),
+    })
+        .index("by_bodyId", ["bodyId"])
+        .index("by_neck", ["neck"])
+        .index("by_compatibilityClass", ["compatibilityClass"]),
+
+    registerBodyPlates: defineTable(bodyPlateFields)
+        .index("by_plateKey", ["plateKey"])
+        .index("by_bodyId", ["bodyId"]),
+
+    registerComponents: defineTable({
+        ...componentRegisterFields,
+        layers: v.array(componentLayerV),         // written by the Phase 3 tooling, never by a register push
+        layersStatus: anchorStatusV,              // the weakest anchorStatus across layers; "unmeasured" when empty
+        storageProvider: storageProviderV,
+        revision: v.number(),
+        loadedAt: v.number(),
+    })
+        .index("by_componentId", ["componentId"])
+        .index("by_graceSku", ["graceSku"])
+        .index("by_websiteSku", ["websiteSku"])
+        .index("by_neck", ["neck"])
+        .index("by_neck_type", ["neck", "type"]),
+
+    registerAssemblies: defineTable({
+        ...assemblyRegisterFields,
+        revision: v.number(),
+        loadedAt: v.number(),
+    })
+        .index("by_graceSku", ["graceSku"])
+        .index("by_websiteSku", ["websiteSku"])
+        .index("by_bodyId", ["bodyId"])
+        .index("by_plateKey", ["plateKey"])
+        .index("by_neck_status", ["neck", "status"]),
 
     // Family registry for the lab and rails. Metadata, not a gate.
     plateFamilies: defineTable({

@@ -2,7 +2,6 @@
   "date": "2026-09-25",
   "approvedBy": "Jordan (\"approve all\") after the review sheets",
   "scope": {
-    "Square": 3,
     "Rectangle": 9,
     "Tulip": 6,
     "Diamond": 5,
@@ -1215,225 +1214,6 @@
       "promptSha256": "f4e9de2439b3c21f78fb4037b4f9ee8250f415c30233e758c39ffd7e5caa756f"
     },
     {
-      "sku": "GBSqr15Gl",
-      "family": "Square",
-      "groupSlug": "square-15ml-clear-13-415",
-      "graceSku": "GB-VIA-CLR-15ML-GLD-T-02",
-      "shopifyVariantId": "gid://shopify/ProductVariant/53343647727908",
-      "status": "approved",
-      "production": {
-        "deployment": "precise-raccoon-123",
-        "groupId": "kh70whm5zqkcvf6m8wb6pvg78d8dsbvx",
-        "slug": "square-15ml-clear-13-415",
-        "displayName": "15 ml Clear Square Bottle with Cap",
-        "color": "Clear",
-        "capColor": "Gold",
-        "applicator": null,
-        "verifiedBy": "products:searchCatalog exact websiteSku"
-      },
-      "url": "/images/catalog/batch3-approved-2026-09-25/GBSqr15Gl.80312d31e12e.webp",
-      "sha256": "80312d31e12ea22e7acbf79866eaa4f5cc55d2fad172dbb65a216bef9f1134e0",
-      "bytes": 1845118,
-      "selectedAttempt": "a2",
-      "sourceFittedSha256": "b1226d6f3e49f34497f17c5bf85e539261dfff2a0a446fcd811e96574c227612",
-      "sourceBytes": 3236098,
-      "sourceRenderSha256": "196ec9697128f41934ec03bb150a0f8da805310e4dd35dfdac98e11eb0381467",
-      "model": "gpt-image-2.5-sunburst",
-      "nativeSize": [
-        2080,
-        2288
-      ],
-      "exportSize": [
-        1560,
-        1716
-      ],
-      "resize": "uniform 0.75 Lanczos3",
-      "encoding": "lossless WebP",
-      "decodedPixelsVerified": true,
-      "attemptsForSku": 2,
-      "sizing": {
-        "glassMm": 52,
-        "heightWithStopperMm": null,
-        "landmarkRule": "shoulder",
-        "targetPct": 35.89,
-        "curvePct": null,
-        "override": null,
-        "footFix": "foot was 758 (glass foot is a separate faint component); true glass bottom 872",
-        "measuredFootPx": 872,
-        "measuredLandmarkPx": 384,
-        "scaleFactor": 1.68271
-      },
-      "fit": {
-        "scale": 0.9991,
-        "shiftY": 0.9,
-        "shiftX": 0.9,
-        "note": "render resampled by the inverse of this similarity to the framing lock"
-      },
-      "qaRaw": {
-        "points": 771,
-        "iou": 0.9751,
-        "p95": 9.63,
-        "p99": 18.67,
-        "max": 23.9,
-        "bgDevP95": 1
-      },
-      "input": {
-        "file": "inputs/GBSqr15Gl-input.png",
-        "sha256": "ad711f607b31f23bf9cd96d8800ca432688287b68206a4a8535a19d68517d6b2"
-      },
-      "psd": {
-        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/12. Square 15ml/1. Square 15ml (Uncapped) PSD /28. GBSqr15Gl.psd",
-        "sha256": "6b599881ce99c2ec299dfe6e7844394f9f04bffd1ca2ff9cb0274e0849919853"
-      },
-      "promptSha256": "dbd62b64338a05e378a406cbeaad851014ed82ba23a645aee9b6ec22dffc720f"
-    },
-    {
-      "sku": "GBSqr15MtlRollBlkDot",
-      "family": "Square",
-      "groupSlug": "square-15ml-clear-13-415-rollon",
-      "graceSku": "GB-SQR-CLR-15ML-MRL-BKDT",
-      "shopifyVariantId": "gid://shopify/ProductVariant/53343610175780",
-      "status": "approved",
-      "production": {
-        "deployment": "precise-raccoon-123",
-        "groupId": "kh74v4t3z8bn6dvcx9gxktnc7s8dre0b",
-        "slug": "square-15ml-clear-13-415-rollon",
-        "displayName": "15 ml Clear Square Roll-On Bottle",
-        "color": "Clear",
-        "capColor": "Black Dotted",
-        "applicator": "Metal Roller Ball",
-        "verifiedBy": "products:searchCatalog exact websiteSku"
-      },
-      "url": "/images/catalog/batch3-approved-2026-09-25/GBSqr15MtlRollBlkDot.6fbb69977c24.webp",
-      "sha256": "6fbb69977c2463b1b77887a15a95c7534cd24cba66a4684af542cb7a1b0c05bd",
-      "bytes": 1897138,
-      "selectedAttempt": "a2",
-      "sourceFittedSha256": "a4784e4ed1b2511a4596c7129ba6f69dba1b220528da454d96d59807116cece3",
-      "sourceBytes": 3354364,
-      "sourceRenderSha256": "dec0ef8c40335e689308229a3a9b02c2220970afe9f84b651fb0fba31312f2c7",
-      "model": "gpt-image-2.5-sunburst",
-      "nativeSize": [
-        2080,
-        2288
-      ],
-      "exportSize": [
-        1560,
-        1716
-      ],
-      "resize": "uniform 0.75 Lanczos3",
-      "encoding": "lossless WebP",
-      "decodedPixelsVerified": true,
-      "attemptsForSku": 2,
-      "sizing": {
-        "glassMm": 52,
-        "heightWithStopperMm": null,
-        "landmarkRule": "shoulder",
-        "targetPct": 35.89,
-        "curvePct": null,
-        "override": null,
-        "footFix": "foot was 758 (glass foot is a separate faint component); true glass bottom 872",
-        "measuredFootPx": 872,
-        "measuredLandmarkPx": 384,
-        "scaleFactor": 1.68271
-      },
-      "fit": {
-        "scale": 0.9993,
-        "shiftY": 0.6,
-        "shiftX": 0,
-        "note": "render resampled by the inverse of this similarity to the framing lock"
-      },
-      "qaRaw": {
-        "points": 461,
-        "iou": 0.9928,
-        "p95": 2.86,
-        "p99": 4.94,
-        "max": 16.21,
-        "bgDevP95": 2
-      },
-      "input": {
-        "file": "inputs/GBSqr15MtlRollBlkDot-input.png",
-        "sha256": "9bbe664ccf2289c0bba033b4369b5bb321b13bae29b1f81ae4648f62ed1f7430"
-      },
-      "psd": {
-        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/12. Square 15ml/1. Square 15ml (Uncapped) PSD /26. GBSqr15MtlRollBlkDot.psd",
-        "sha256": "7bfdaa6b6db229d65ab20876e1fd2de7912c18bfbcfb5b3118efef23625bc63d"
-      },
-      "promptSha256": "4f69622bf31ca0f49eff3b767f18ab09d994e8dc7cdf574103ba43f2edcd2117"
-    },
-    {
-      "sku": "GBSqr15SpryGlMatt",
-      "family": "Square",
-      "groupSlug": "square-15ml-clear-13-415-finemist",
-      "graceSku": "GB-SQR-CLR-15ML-SPR-MGLD",
-      "shopifyVariantId": "gid://shopify/ProductVariant/53343698649380",
-      "status": "approved",
-      "production": {
-        "deployment": "precise-raccoon-123",
-        "groupId": "kh7chwdqx3be2h7pdkg3075dgd8dr9vn",
-        "slug": "square-15ml-clear-13-415-finemist",
-        "displayName": "15 ml Clear Square Fine Mist Spray Bottle",
-        "color": "Clear",
-        "capColor": "Matte Gold",
-        "applicator": "Fine Mist Sprayer",
-        "verifiedBy": "products:searchCatalog exact websiteSku"
-      },
-      "url": "/images/catalog/batch3-approved-2026-09-25/GBSqr15SpryGlMatt.db2940232b12.webp",
-      "sha256": "db2940232b12b8db47cc91e7b9abccaa90912eec520e6e1da93bb11bea8ef90d",
-      "bytes": 1980484,
-      "selectedAttempt": "a2",
-      "sourceFittedSha256": "9bd2752a1d3a611b158f7ae60aee324bfb3070a1ac0e766aba22ddf552a5ea93",
-      "sourceBytes": 3622483,
-      "sourceRenderSha256": "aa4e2edffde252697af134b70750eeeaa7b7b006b22d832082f2b8baa52f600b",
-      "model": "gpt-image-2.5-sunburst",
-      "nativeSize": [
-        2080,
-        2288
-      ],
-      "exportSize": [
-        1560,
-        1716
-      ],
-      "resize": "uniform 0.75 Lanczos3",
-      "encoding": "lossless WebP",
-      "decodedPixelsVerified": true,
-      "attemptsForSku": 2,
-      "sizing": {
-        "glassMm": 52,
-        "heightWithStopperMm": null,
-        "landmarkRule": "shoulder",
-        "targetPct": 35.89,
-        "curvePct": null,
-        "override": null,
-        "footFix": "foot was 758 (glass foot is a separate faint component); true glass bottom 872",
-        "measuredFootPx": 872,
-        "measuredLandmarkPx": 384,
-        "scaleFactor": 1.68271
-      },
-      "fit": {
-        "scale": 0.9999,
-        "shiftY": -0.1,
-        "shiftX": 0.4,
-        "note": "render resampled by the inverse of this similarity to the framing lock"
-      },
-      "qaRaw": {
-        "points": 860,
-        "iou": 0.9828,
-        "p95": 10.29,
-        "p99": 13.92,
-        "max": 19.98,
-        "bgDevP95": 2
-      },
-      "input": {
-        "file": "inputs/GBSqr15SpryGlMatt-input.png",
-        "sha256": "d0c7c5084f4712e372c1d34dd3f2521a8955ff883576a44f71ee716459184e99"
-      },
-      "psd": {
-        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/12. Square 15ml/1. Square 15ml (Uncapped) PSD /7. GBSqr15SpryGlMatt.psd",
-        "sha256": "d1773b99062bc967c8282c18e70aae43e916a4ecb698dc428d3f071fcf9a735d"
-      },
-      "promptSha256": "0440762b31eff7198af9bc2bf8f136a0e0a0649bfe5f7b10ff7e49020422e02d"
-    },
-    {
       "sku": "GBTRDPClear",
       "family": "Teardrop",
       "groupSlug": "teardrop-9ml-clear-Ground-glassapplicator",
@@ -2093,5 +1873,15 @@
   ],
   "superseded": {
     "Vial": "the 13 vial heroes were re-rendered proportional to Jordan's caliper heights on 2026-09-25 and released in docs/hero-families/vials-2026-09-25 (catalog-hero-vials-release.json); their batch-3 files were removed"
+  },
+  "supersededBy": {
+    "batch6-2026-09-25": {
+      "skus": [
+        "GBSqr15Gl",
+        "GBSqr15SpryGlMatt",
+        "GBSqr15MtlRollBlkDot"
+      ],
+      "note": "Jordan asked on 2026-09-25 for these heroes to be regenerated; the batch-6 rows and files replace them (see docs/hero-families/batch6-2026-09-25)."
+    }
   }
 }

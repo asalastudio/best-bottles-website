@@ -1,0 +1,140 @@
+{
+ "_doc": "Per plate decisions for scripts/register/bodies/cut_bodies.py, each with its reason. layer = the PSD layer that is the bare body; psd = a master PSD found under a different name; kit = use the kit lane's cut body layer; sibling = no usable photo for this glass, so geometry comes from another glass of the same body and material from the reference glass; exclude = not a glass body we can cut.",
+ "boston-round-30ml-20-400|Clear": {
+  "layer": "Layer 22",
+  "why": "the largest layer is a white fill; Layer 22 is the bottle"
+ },
+ "boston-round-60ml-20-400|Clear": {
+  "layer": "Layer 11",
+  "why": "Layer 11 is the bottle; the cap sits beside it"
+ },
+ "circle-100ml-18-415|Clear": {
+  "layer": "Layer 1",
+  "why": "the dip tube runs past the canvas edge and won the baseline test"
+ },
+ "vial-1ml-Plug|Clear": {
+  "layer": "clear 1ml with black app",
+  "why": "Layer 1 is the black applicator",
+  "note": "FLAG: the source layer carries the applicator's outline inside the vial; the render keeps it as a pale panel"
+ },
+ "vial-2ml-13-425|Amber": {
+  "layer": "Layer 6",
+  "why": "Layer 7 is the cap"
+ },
+ "vial-9ml-18-400|Clear": {
+  "layer": "Layer 7",
+  "why": "Layer 3 is the cap"
+ },
+ "cylinder-30ml-18-415|Clear": {
+  "exclude": "the fixed 30 ml spray pair (a matrix exception): bottle and sprayer are one piece in the PSD and no kit body layer exists"
+ },
+ "boston-round-60ml-20-400|Amber": {
+  "sibling": true,
+  "why": "the Amber PSD holds only the cap; the body is flattened into the background"
+ },
+ "boston-round-60ml-20-400|Cobalt Blue": {
+  "sibling": true,
+  "why": "the Cobalt PSD holds only the cap; the body is flattened into the background"
+ },
+ "pillar-9ml-13-415|Clear": {
+  "psd": "12. Vials/0. All Vials/Capped/27. GBPillar9RollBlk.psd",
+  "why": "filed as GBPillar9RollBlk, capped only"
+ },
+ "bell-10ml-13-415|Clear": {
+  "psd": "5.  13-415 Bottles/7. Bell 12ml/1. Bell 12ml (Uncapped) PSD/28. GBBell12Gl.psd",
+  "why": "the catalogue sells it as 10 ml; the master library files it as Bell 12 ml (flagged)"
+ },
+ "cream-jar-3ml-20mm|Cobalt Blue": {
+  "sibling": true,
+  "why": "CJ3Blue.psd holds the jar flattened into the background; geometry from the Clear 3 ml jar, cobalt from the reference glass"
+ },
+ "cream-jar-60ml-58mm|Frosted": {
+  "exclude": "plastic, not glass: the library names it Cream Jar Frost Plastic 60ml"
+ },
+ "lotion-bottle-30ml-18mm|Clear": {
+  "exclude": "metal-clad bottle: the sleeve and pump are one merged layer, no bare glass"
+ },
+ "lotion-bottle-30ml-no-neck|Clear": {
+  "exclude": "bottle and gold pump are one merged layer, no bare glass"
+ },
+ "lotion-bottle-3ml-Snap-On|Clear": {
+  "exclude": "sample vial and sprayer are one merged layer, no bare glass"
+ },
+ "royal-14ml-11mm|Clear": {
+  "exclude": "decorative bottle and gold cap are one merged layer, no bare glass"
+ },
+ "pillar-9ml-17-415|Clear": {
+  "exclude": "no master PSD; the only Pillar file is the 13-415 roll-on"
+ },
+ "vial-3ml-13-425|Blue": {
+  "exclude": "no master PSD under any name (GBVBlu1o9)"
+ },
+ "vial-3ml-13-425|Green": {
+  "exclude": "no master PSD under any name (GBVGreen2o4)"
+ },
+ "cylinder-9ml-13-415|Clear": {
+  "layer": "Layer 11",
+  "why": "the body is so slender (243 x 1254 px) that the dip-tube filter dropped it and a cap won"
+ },
+ "cylinder-9ml-13-415|Frosted": {
+  "layer": "Layer 14",
+  "why": "the body is so slender that the dip-tube filter dropped it and a cap won"
+ },
+ "teardrop-9ml-Ground|Clear": {
+  "cropX": 2800,
+  "why": "stopper and bottle are one merged layer; the bottle starts at x 2892 (the Cobalt file keeps them apart)"
+ },
+ "teardrop-9ml-Ground|Green": {
+  "cropX": 2800,
+  "why": "stopper and bottle are one merged layer; the bottle starts at x 2892"
+ },
+ "teardrop-9ml-Ground|Cobalt Blue": {
+  "layer": "Layer 2",
+  "why": "Layer 2 is the bottle; Layer 1 is the stopper set beside it"
+ },
+ "marble-decorative-10ml-17.52mm|Clear": {
+  "exclude": "metal-and-wood decorated bottle with its crystal cap in one layer; no bare glass"
+ },
+ "marble-decorative-5ml-17.52mm|Clear": {
+  "exclude": "metal-and-wood decorated bottle (wood sleeve, gold base); no bare glass"
+ },
+ "rectangle-10ml-13-415|Clear": {
+  "stripWhiteGround": true,
+  "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+ },
+ "tulip-6ml-13-415|Clear": {
+  "stripWhiteGround": true,
+  "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+ },
+ "sleek-30ml-18-415|Clear": {
+  "stripWhiteGround": true,
+  "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+ },
+ "sleek-50ml-18-415|Clear": {
+  "stripWhiteGround": true,
+  "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+ },
+ "sleek-5ml-13-415|Clear": {
+  "stripWhiteGround": true,
+  "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+ },
+ "diva-100ml-18-415|Clear": {
+  "stripWhiteGround": true,
+  "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
+ },
+ "round-78ml-18-415|Clear": {
+  "note": "FLAG: only a capped photo exists, so the neck is hidden under the collar and the plate has no neck (any closure covers it); supply an uncapped photo or accept"
+ },
+ "round-78ml-18-415|Frosted": {
+  "note": "FLAG: geometry from the Clear photo, which has no neck (capped only)"
+ },
+ "vial-1ml-Plug|Amber": {
+  "note": "FLAG: geometry from the Clear layer, which carries the applicator's outline"
+ },
+ "cylinder-3.3ml-12mm|Clear": {
+  "note": "FLAG: the atomizer's inner tube is part of the body layer"
+ },
+ "cylinder-4ml-12mm|Clear": {
+  "note": "FLAG: the atomizer's inner tube is part of the body layer"
+ }
+}

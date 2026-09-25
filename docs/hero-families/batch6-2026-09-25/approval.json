@@ -1,0 +1,1199 @@
+{
+  "date": "2026-09-25",
+  "approvedBy": "Jordan (\"approve all\") after the contact sheet and the three before/after review sheets",
+  "scope": {
+    "Royal": 3,
+    "Square": 3,
+    "Flair": 3,
+    "Bell": 3,
+    "Pillar": 3
+  },
+  "publication": false,
+  "source": {
+    "lane": "batch6-2026-09-25",
+    "approvalCandidatesSha256": "b19a28b8ae66b6d20bf56ab642779b956aed048a08650c2bf3c4a30e1f9d4128",
+    "inputs": "exact-SKU master PSDs (BB-PSD-Files-Master / 5. 13-415 Bottles; Bell filed as 12ml, files GBBell12…); Pillar from exact-SKU legacy bestbottles.com photographs (no master PSD)"
+  },
+  "supersedes": {
+    "catalog-hero-next-batch-release.json": [
+      "GBRoyal13Gl",
+      "GBRoyal13SpryGlMatt",
+      "GBRoyal13MtlRollBlkDot",
+      "GBFlair15Gl",
+      "GBFlair15SpryGlMatt",
+      "GBFlair15MtlRollBlkDot"
+    ],
+    "catalog-hero-batch3-release.json": [
+      "GBSqr15Gl",
+      "GBSqr15SpryGlMatt",
+      "GBSqr15MtlRollBlkDot"
+    ],
+    "catalog-heroes.json (older generation, still present as the fallback)": [
+      "GBBell10BlkShSht",
+      "GBBell10SpryBlkSh",
+      "GBBell10MtlRollBlkDot",
+      "GBPillar9MtlRollBlkdot",
+      "GBPillar9SpryBlkMatt"
+    ]
+  },
+  "sizing": {
+    "curve": "pct = 3.5314 * mm^0.5868 (shoulder-to-foot span; foot at 91%)",
+    "glassMm": {
+      "Royal": 56,
+      "Square": 52,
+      "Flair": 56,
+      "Bell": 55,
+      "Pillar": 57
+    },
+    "glassMmSource": "production Convex heightWithoutCap 2026-09-25",
+    "landmarkRule": "shoulder = first row wider than 1.25x the neck on the open-neck reference; siblings by body width",
+    "footRule": "lowest ink row inside the bottle's own columns (the Square glass foot is a separate PSD component)"
+  },
+  "qa": "Outline-only gate (row-filled components, so interior reflections seen through the open necks do not count as edges): Square x3, Flair cap and roller, Pillar cap pass IoU >= 0.995 and p99 <= 4 px; Royal x3, Flair spray, Pillar roller and spray sit at the measurement noise floor (IoU 0.9947-0.9961, p99 2.5-7.2 px); Bell x3 are 6-12 px at the shoulder (IoU 0.992-0.995). Every image reviewed by eye and approved by Jordan.",
+  "held": {},
+  "releasedFromHold": {
+    "GBPillar9BlkShSht": "held on the first run (2026-09-25 midday) because production filed the bottle in the corrupt group \"pillar-9ml-clear-Size: GBPillar9BlkSht Nemat In\"; released the same evening after scripts/catalog-corrections/2026-09-25-pillar-cap-group-move.mjs moved it into pillar-9ml-clear-13-415"
+  },
+  "rows": [
+    {
+      "sku": "GBRoyal13Gl",
+      "family": "Royal",
+      "groupSlug": "royal-13ml-clear-13-415",
+      "graceSku": "GB-VIA-CLR-13ML-GLD-T",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343643271460",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7awcj6tr7qwabefa3qc6zh298dsjvy",
+        "slug": "royal-13ml-clear-13-415",
+        "displayName": "13 ml Clear Royal Bottle with Cap",
+        "color": "Clear",
+        "capColor": "Gold",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch6-approved-2026-09-25/GBRoyal13Gl.76d1723edd05.webp",
+      "sha256": "76d1723edd05c4197b60bcc7384316d84c288b1e2fafda9ae19477638a319eb2",
+      "bytes": 1925050,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "6e041a1f68d46a97683e8282c302dadb8aad5b441a6c287cb0be61a4249e50df",
+      "sourceBytes": 3432628,
+      "sourceRenderSha256": "dc8033bd329dcdc9c1d10922bb47ffb38f1abbcdcd1bbb481ef8d84dd2c6db53",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 56,
+        "targetPct": 37.48,
+        "landmarkRule": "shoulder",
+        "scaleFactor": 1.40129
+      },
+      "fit": {
+        "scale": 0.9997,
+        "shiftY": -0.5,
+        "shiftX": 0.5,
+        "p95": 3.28
+      },
+      "qaOutline": {
+        "iou": 0.9951,
+        "p95": 3.15,
+        "p99": 4.89,
+        "max": 8.63,
+        "pass": false
+      },
+      "qaRawMask": {
+        "iou": 0.9951,
+        "p95": 3.16,
+        "p99": 4.83,
+        "max": 9.5,
+        "bgDevP95": 2,
+        "pass": false
+      },
+      "input": {
+        "file": "inputs/GBRoyal13Gl-input.png",
+        "sha256": "2769a11783bfcb4615eb7ff76ba7ba5692a5d8d83d5745b03705656580c5b146"
+      },
+      "source": {
+        "psd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/10. Royal 13ml/1. Royal 13ml (Unapped) PSD /28. GBRoyal13Gl.psd",
+        "legacy": null,
+        "sha256": "d4942b0d5ea406c7cdae76b76786022b4177e9461f1b12353e93c8dd7e44939f",
+        "note": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/10. Royal 13ml/1. Royal 13ml (Unapped) PSD /28. GBRoyal13Gl.psd"
+      },
+      "promptSha256": "9d1a39760cddb0e7e2d36a20ca08383e6091b0c61b561011388f7a6d1352894f"
+    },
+    {
+      "sku": "GBRoyal13SpryGlMatt",
+      "family": "Royal",
+      "groupSlug": "royal-13ml-clear-13-415-finemist",
+      "graceSku": "GB-RYL-CLR-13ML-SPR-MGLD",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343694192932",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh739bs1qea53y047hpctbqtv58drb5a",
+        "slug": "royal-13ml-clear-13-415-finemist",
+        "displayName": "13 ml Clear Royal Fine Mist Spray Bottle",
+        "color": "Clear",
+        "capColor": "Matte Gold",
+        "applicator": "Fine Mist Sprayer",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch6-approved-2026-09-25/GBRoyal13SpryGlMatt.de76eb96d0e1.webp",
+      "sha256": "de76eb96d0e1841d45a8a52f92bd57213a600c14ce2332cfe5786ce4177ca200",
+      "bytes": 1954600,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "181cbbb67b3b3ac2977f51897db58c13218f1967e5bd63cfb62b01ab2d735efa",
+      "sourceBytes": 3595721,
+      "sourceRenderSha256": "1b51bfdc4a828c4863cbdf46d6430af69b50f422edbfd420ab8a79cb56c91735",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 56,
+        "targetPct": 37.48,
+        "landmarkRule": "shoulder",
+        "scaleFactor": 1.39333
+      },
+      "fit": {
+        "scale": 1.0005,
+        "shiftY": -2.3,
+        "shiftX": -0.6,
+        "p95": 3.36
+      },
+      "qaOutline": {
+        "iou": 0.9947,
+        "p95": 2.4,
+        "p99": 4.5,
+        "max": 8.6,
+        "pass": false
+      },
+      "qaRawMask": {
+        "iou": 0.9947,
+        "p95": 2.48,
+        "p99": 4.42,
+        "max": 8.6,
+        "bgDevP95": 2,
+        "pass": false
+      },
+      "input": {
+        "file": "inputs/GBRoyal13SpryGlMatt-input.png",
+        "sha256": "75a2ffd62f7ca8329570b44e26ab60f2087092bc65be5bb0c57ab48660eab3ba"
+      },
+      "source": {
+        "psd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/10. Royal 13ml/1. Royal 13ml (Unapped) PSD /7. GBRoyal13SpryGlMatt.psd",
+        "legacy": null,
+        "sha256": "f2d2f89d58d5d9586831a3fce076c039dc58af8294b6e2cb3b81736a02658f8e",
+        "note": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/10. Royal 13ml/1. Royal 13ml (Unapped) PSD /7. GBRoyal13SpryGlMatt.psd"
+      },
+      "promptSha256": "d73b981f557f348f030fd31e762f06123935f10bab12a5c9bb1a8d714812235f"
+    },
+    {
+      "sku": "GBRoyal13MtlRollBlkDot",
+      "family": "Royal",
+      "groupSlug": "royal-13ml-clear-13-415-rollon",
+      "graceSku": "GB-RYL-CLR-13ML-MRL-BKDT",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343605391652",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh73rnpmqmv6cwpgbgrh4fbkfn8dsrv2",
+        "slug": "royal-13ml-clear-13-415-rollon",
+        "displayName": "13 ml Clear Royal Roll-On Bottle",
+        "color": "Clear",
+        "capColor": "Black Dotted",
+        "applicator": "Metal Roller Ball",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch6-approved-2026-09-25/GBRoyal13MtlRollBlkDot.57a93d9622e2.webp",
+      "sha256": "57a93d9622e2c360c234d085fb62149ff439a564ae8a3e636a77db36e2293016",
+      "bytes": 1855264,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "3725e50611226ccb601fcc1520f0f0e4c70a89232be2e805e6de5036395670d3",
+      "sourceBytes": 3396624,
+      "sourceRenderSha256": "12812b4153bf67a0a90cd9892f5c286e329adb8897d8e1f2738fde63384a7c28",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 56,
+        "targetPct": 37.48,
+        "landmarkRule": "shoulder",
+        "scaleFactor": 1.39333
+      },
+      "fit": {
+        "scale": 1.0004,
+        "shiftY": -1.8,
+        "shiftX": 0.5,
+        "p95": 2.95
+      },
+      "qaOutline": {
+        "iou": 0.9956,
+        "p95": 3.02,
+        "p99": 7.23,
+        "max": 12.28,
+        "pass": false
+      },
+      "qaRawMask": {
+        "iou": 0.9957,
+        "p95": 2.96,
+        "p99": 6.51,
+        "max": 13.94,
+        "bgDevP95": 2,
+        "pass": false
+      },
+      "input": {
+        "file": "inputs/GBRoyal13MtlRollBlkDot-input.png",
+        "sha256": "18987f481390cf6ea98290af1e3519d58829a1dbc97c657692d2edf84c167a08"
+      },
+      "source": {
+        "psd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/10. Royal 13ml/1. Royal 13ml (Unapped) PSD /26. GBRoyal13MtlRollBlkDot.psd",
+        "legacy": null,
+        "sha256": "80d85d9af6b58a6c66d7c2b5f9d077d95fc4e2e747dd37e5fd6396ee68cdddd9",
+        "note": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/10. Royal 13ml/1. Royal 13ml (Unapped) PSD /26. GBRoyal13MtlRollBlkDot.psd"
+      },
+      "promptSha256": "e6c3a04ae59e43d5b7336ebebfa59bd7536daefa2330cd55ceb5fda4dcfcdcde"
+    },
+    {
+      "sku": "GBSqr15Gl",
+      "family": "Square",
+      "groupSlug": "square-15ml-clear-13-415",
+      "graceSku": "GB-VIA-CLR-15ML-GLD-T-02",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343647727908",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh70whm5zqkcvf6m8wb6pvg78d8dsbvx",
+        "slug": "square-15ml-clear-13-415",
+        "displayName": "15 ml Clear Square Bottle with Cap",
+        "color": "Clear",
+        "capColor": "Gold",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch6-approved-2026-09-25/GBSqr15Gl.2391e2c057f8.webp",
+      "sha256": "2391e2c057f894742d4009993cc41d1f24514fe45e38f1243feddfaebd20fa9b",
+      "bytes": 1853964,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "8b523cc6bdce8b61ff8bb82c78b3f51b19ea8d2b1deb961d6118aa096026bddb",
+      "sourceBytes": 3336595,
+      "sourceRenderSha256": "c5ae84ed35f7af8792d96d6ac2b503473f3f0d52df95d237e25400274c62dc6f",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 52,
+        "targetPct": 35.89,
+        "landmarkRule": "shoulder",
+        "scaleFactor": 1.68257
+      },
+      "fit": {
+        "scale": 0.9998,
+        "shiftY": -0.8,
+        "shiftX": 0,
+        "p95": 7.11
+      },
+      "qaOutline": {
+        "iou": 0.9979,
+        "p95": 1.31,
+        "p99": 3.62,
+        "max": 4.8,
+        "pass": true
+      },
+      "qaRawMask": {
+        "iou": 0.9838,
+        "p95": 7.08,
+        "p99": 21.3,
+        "max": 26.9,
+        "bgDevP95": 2,
+        "pass": false
+      },
+      "input": {
+        "file": "inputs/GBSqr15Gl-input.png",
+        "sha256": "ad711f607b31f23bf9cd96d8800ca432688287b68206a4a8535a19d68517d6b2"
+      },
+      "source": {
+        "psd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/12. Square 15ml/1. Square 15ml (Uncapped) PSD /28. GBSqr15Gl.psd",
+        "legacy": null,
+        "sha256": "6b599881ce99c2ec299dfe6e7844394f9f04bffd1ca2ff9cb0274e0849919853",
+        "note": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/12. Square 15ml/1. Square 15ml (Uncapped) PSD /28. GBSqr15Gl.psd"
+      },
+      "promptSha256": "dbd62b64338a05e378a406cbeaad851014ed82ba23a645aee9b6ec22dffc720f"
+    },
+    {
+      "sku": "GBSqr15SpryGlMatt",
+      "family": "Square",
+      "groupSlug": "square-15ml-clear-13-415-finemist",
+      "graceSku": "GB-SQR-CLR-15ML-SPR-MGLD",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343698649380",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7chwdqx3be2h7pdkg3075dgd8dr9vn",
+        "slug": "square-15ml-clear-13-415-finemist",
+        "displayName": "15 ml Clear Square Fine Mist Spray Bottle",
+        "color": "Clear",
+        "capColor": "Matte Gold",
+        "applicator": "Fine Mist Sprayer",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch6-approved-2026-09-25/GBSqr15SpryGlMatt.d356c8ec38ae.webp",
+      "sha256": "d356c8ec38ae5a9b277ca82723f2dfec718be3bc64ba5398da321af71c4eeab6",
+      "bytes": 1952190,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "c1d1020201bccd55f56c7f4c26bafd414d7e7bbb2b994419b0dd29278593e50d",
+      "sourceBytes": 3548080,
+      "sourceRenderSha256": "d90abb397e56065ff63fa3f73d912dbb2238e8362109841588cbc1a22bfab4c0",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 52,
+        "targetPct": 35.89,
+        "landmarkRule": "shoulder",
+        "scaleFactor": 1.68257
+      },
+      "fit": {
+        "scale": 1,
+        "shiftY": -1.3,
+        "shiftX": 0.2,
+        "p95": 4.41
+      },
+      "qaOutline": {
+        "iou": 0.9975,
+        "p95": 1.86,
+        "p99": 3.34,
+        "max": 17.94,
+        "pass": true
+      },
+      "qaRawMask": {
+        "iou": 0.9927,
+        "p95": 4.21,
+        "p99": 11.5,
+        "max": 20.28,
+        "bgDevP95": 2,
+        "pass": false
+      },
+      "input": {
+        "file": "inputs/GBSqr15SpryGlMatt-input.png",
+        "sha256": "ebc61cd310fee69f99c4a9209769436f2dd57eea5ee2c347600ed0a8a98094c2"
+      },
+      "source": {
+        "psd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/12. Square 15ml/1. Square 15ml (Uncapped) PSD /7. GBSqr15SpryGlMatt.psd",
+        "legacy": null,
+        "sha256": "d1773b99062bc967c8282c18e70aae43e916a4ecb698dc428d3f071fcf9a735d",
+        "note": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/12. Square 15ml/1. Square 15ml (Uncapped) PSD /7. GBSqr15SpryGlMatt.psd"
+      },
+      "promptSha256": "0440762b31eff7198af9bc2bf8f136a0e0a0649bfe5f7b10ff7e49020422e02d"
+    },
+    {
+      "sku": "GBSqr15MtlRollBlkDot",
+      "family": "Square",
+      "groupSlug": "square-15ml-clear-13-415-rollon",
+      "graceSku": "GB-SQR-CLR-15ML-MRL-BKDT",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343610175780",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh74v4t3z8bn6dvcx9gxktnc7s8dre0b",
+        "slug": "square-15ml-clear-13-415-rollon",
+        "displayName": "15 ml Clear Square Roll-On Bottle",
+        "color": "Clear",
+        "capColor": "Black Dotted",
+        "applicator": "Metal Roller Ball",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch6-approved-2026-09-25/GBSqr15MtlRollBlkDot.8dd16f01aa5f.webp",
+      "sha256": "8dd16f01aa5ff6cc4809aad62c52d35fbb9c820eff7bc934ed0f0b14e8e01284",
+      "bytes": 1878172,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "b8330cce9494a71cce9bb4a8fa2d5ce4ad675c369b69f044158eaf95e57fc7ef",
+      "sourceBytes": 3302796,
+      "sourceRenderSha256": "d86f3fc08dff479bc20364f95e9510d7ac4ddd1e74026652c5f75279925fcad2",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 52,
+        "targetPct": 35.89,
+        "landmarkRule": "shoulder",
+        "scaleFactor": 1.68257
+      },
+      "fit": {
+        "scale": 0.9985,
+        "shiftY": 1.3,
+        "shiftX": 1.4,
+        "p95": 6.36
+      },
+      "qaOutline": {
+        "iou": 0.9964,
+        "p95": 2.08,
+        "p99": 2.79,
+        "max": 6.94,
+        "pass": true
+      },
+      "qaRawMask": {
+        "iou": 0.9827,
+        "p95": 6.61,
+        "p99": 11.51,
+        "max": 19.54,
+        "bgDevP95": 3,
+        "pass": false
+      },
+      "input": {
+        "file": "inputs/GBSqr15MtlRollBlkDot-input.png",
+        "sha256": "3943b605afe9a5dc082c05345cc0cc0775dbb40ed27e28c72b8d119c0f951b54"
+      },
+      "source": {
+        "psd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/12. Square 15ml/1. Square 15ml (Uncapped) PSD /26. GBSqr15MtlRollBlkDot.psd",
+        "legacy": null,
+        "sha256": "7bfdaa6b6db229d65ab20876e1fd2de7912c18bfbcfb5b3118efef23625bc63d",
+        "note": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/12. Square 15ml/1. Square 15ml (Uncapped) PSD /26. GBSqr15MtlRollBlkDot.psd"
+      },
+      "promptSha256": "4f69622bf31ca0f49eff3b767f18ab09d994e8dc7cdf574103ba43f2edcd2117"
+    },
+    {
+      "sku": "GBFlair15Gl",
+      "family": "Flair",
+      "groupSlug": "flair-15ml-clear-13-415",
+      "graceSku": "GB-VIA-CLR-15ML-GLD-T-01",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343647007012",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7d4pch0k0hygweacrt3khtmd8drnx4",
+        "slug": "flair-15ml-clear-13-415",
+        "displayName": "15 ml Clear Flair Bottle with Cap",
+        "color": "Clear",
+        "capColor": "Gold",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch6-approved-2026-09-25/GBFlair15Gl.89ea114bd294.webp",
+      "sha256": "89ea114bd29468d9a8f3e562753328b569631c7414cc6b5aefbad6cefe522191",
+      "bytes": 1939282,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "9d965769a94f5ab486a2af1d6f265583411e35c0b123851c956553aa72080784",
+      "sourceBytes": 3504253,
+      "sourceRenderSha256": "dc685164ee0dc1823f3f6b2874b21b1bcf0d733d48aa6017d57e6d0f062ccff3",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 56,
+        "targetPct": 37.48,
+        "landmarkRule": "shoulder",
+        "scaleFactor": 1.18945
+      },
+      "fit": {
+        "scale": 0.9992,
+        "shiftY": -0.4,
+        "shiftX": 1.1,
+        "p95": 2.22
+      },
+      "qaOutline": {
+        "iou": 0.9959,
+        "p95": 2.08,
+        "p99": 2.94,
+        "max": 6.36,
+        "pass": true
+      },
+      "qaRawMask": {
+        "iou": 0.996,
+        "p95": 2.05,
+        "p99": 2.84,
+        "max": 5.92,
+        "bgDevP95": 2,
+        "pass": true
+      },
+      "input": {
+        "file": "inputs/GBFlair15Gl-input.png",
+        "sha256": "b274b03173ec2683dbd961af3296742d943974c46752409f2d94f4b01b7ad27c"
+      },
+      "source": {
+        "psd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/11. Flair 15ml/1. Flair 15ml  (uncapped) PSD /28. GBFlair15Gl.psd",
+        "legacy": null,
+        "sha256": "3c71ed8f415e59ac84974772a66adba4e5b493beb93a48d37c765cd6594acc7f",
+        "note": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/11. Flair 15ml/1. Flair 15ml  (uncapped) PSD /28. GBFlair15Gl.psd"
+      },
+      "promptSha256": "6eda51456c52e401a87c9f075fb60ecb1c352bc9034c3bea473dd132105c3c97"
+    },
+    {
+      "sku": "GBFlair15SpryGlMatt",
+      "family": "Flair",
+      "groupSlug": "flair-15ml-clear-13-415-finemist",
+      "graceSku": "GB-FLR-CLR-15ML-SPR-MGLD",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343635144996",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh77emhhnq0vmbndd81r80w3zx8ds2eq",
+        "slug": "flair-15ml-clear-13-415-finemist",
+        "displayName": "15 ml Clear Flair Fine Mist Spray Bottle",
+        "color": "Clear",
+        "capColor": "Matte Gold",
+        "applicator": "Fine Mist Sprayer",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch6-approved-2026-09-25/GBFlair15SpryGlMatt.a0a7d9d36c67.webp",
+      "sha256": "a0a7d9d36c67614dc98d030c2adbe7bd13d4973afc5eae648292067f3974a330",
+      "bytes": 1951910,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "e8c86d8b2578e2d58f13624f1ee30700124e7382660c814bfefb83b001b7fba7",
+      "sourceBytes": 3606924,
+      "sourceRenderSha256": "85affcc7e0fd3d11113c479c094f53c898b0cbbca8e3b1f8824536b5a5c8c9f5",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 56,
+        "targetPct": 37.48,
+        "landmarkRule": "shoulder",
+        "scaleFactor": 1.13679
+      },
+      "fit": {
+        "scale": 0.9966,
+        "shiftY": 3.6,
+        "shiftX": 2.5,
+        "p95": 3.67
+      },
+      "qaOutline": {
+        "iou": 0.9953,
+        "p95": 1.99,
+        "p99": 4.57,
+        "max": 7.54,
+        "pass": false
+      },
+      "qaRawMask": {
+        "iou": 0.9953,
+        "p95": 2.01,
+        "p99": 4.56,
+        "max": 7.54,
+        "bgDevP95": 2,
+        "pass": false
+      },
+      "input": {
+        "file": "inputs/GBFlair15SpryGlMatt-input.png",
+        "sha256": "47a212d0380582714ee9bfe8d3d535e6df1eb9084b2e95877ef2c6d83062200a"
+      },
+      "source": {
+        "psd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/11. Flair 15ml/1. Flair 15ml  (uncapped) PSD /7. GBFlair15SpryGlMatt.psd",
+        "legacy": null,
+        "sha256": "b8a2e251fecbcfc37f0f595a1d131d92a20fcdb31387edf86655c3ec5bc62852",
+        "note": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/11. Flair 15ml/1. Flair 15ml  (uncapped) PSD /7. GBFlair15SpryGlMatt.psd"
+      },
+      "promptSha256": "ef150417dc1ba7ffb869a3a3c393073285c539b964e3149c1e84a3a2e0f21d11"
+    },
+    {
+      "sku": "GBFlair15MtlRollBlkDot",
+      "family": "Flair",
+      "groupSlug": "flair-15ml-clear-13-415-rollon",
+      "graceSku": "GB-FLR-CLR-15ML-MRL-BKDT",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343624036644",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7cvhgx5vgabaxcjk78zajy8d8dr33r",
+        "slug": "flair-15ml-clear-13-415-rollon",
+        "displayName": "15 ml Clear Flair Roll-On Bottle",
+        "color": "Clear",
+        "capColor": "Black Dotted",
+        "applicator": "Metal Roller Ball",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch6-approved-2026-09-25/GBFlair15MtlRollBlkDot.c79dba2b800e.webp",
+      "sha256": "c79dba2b800eec0f6afc8d6e609a5f5d8305d79398065a52fe9ee13732cd7233",
+      "bytes": 1924092,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "a6f7a7e569548fcd233b706191b1cbb32991ad30ab67cc1962c054a770574432",
+      "sourceBytes": 3473709,
+      "sourceRenderSha256": "42805c7b321c20f139062df576dba64fb26e46a95814dd0713dacef13c3075ac",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 56,
+        "targetPct": 37.48,
+        "landmarkRule": "shoulder",
+        "scaleFactor": 1.16189
+      },
+      "fit": {
+        "scale": 0.9989,
+        "shiftY": 0.7,
+        "shiftX": 1.1,
+        "p95": 1.76
+      },
+      "qaOutline": {
+        "iou": 0.9975,
+        "p95": 1.34,
+        "p99": 3.11,
+        "max": 4.18,
+        "pass": true
+      },
+      "qaRawMask": {
+        "iou": 0.9975,
+        "p95": 1.33,
+        "p99": 3.14,
+        "max": 6.06,
+        "bgDevP95": 2,
+        "pass": true
+      },
+      "input": {
+        "file": "inputs/GBFlair15MtlRollBlkDot-input.png",
+        "sha256": "2b0e26ea10dae9b38d2210761fa5b2e665c80b92eca857228a6ef4a111fa7266"
+      },
+      "source": {
+        "psd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/11. Flair 15ml/1. Flair 15ml  (uncapped) PSD /26. GBFlair15MtlRollBlkDot.psd",
+        "legacy": null,
+        "sha256": "39833c79665a575e2368bae4fa47c7a9747ebfac904a27c869a869c4ac955dd6",
+        "note": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/11. Flair 15ml/1. Flair 15ml  (uncapped) PSD /26. GBFlair15MtlRollBlkDot.psd"
+      },
+      "promptSha256": "5bdfbdd1ef56e88083b1c6ed1834ff08e52871393100f6a95420eec28ad6d96e"
+    },
+    {
+      "sku": "GBBell10BlkShSht",
+      "family": "Bell",
+      "groupSlug": "bell-10ml-clear-13-415-capclosure",
+      "graceSku": "GB-BEL-CLR-10ML-SHT-SBLK",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343699271972",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh74zfq52rzgm9wmwytvsrv6298dsna4",
+        "slug": "bell-10ml-clear-13-415-capclosure",
+        "displayName": "10 ml Clear Bell Bottle",
+        "color": "Clear",
+        "capColor": "Shiny Black",
+        "applicator": "Cap/Closure",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch6-approved-2026-09-25/GBBell10BlkShSht.cd3ccf39d1ca.webp",
+      "sha256": "cd3ccf39d1ca5adb2b797c602562abc12cc125d015a4e6e4d2aa3de073ad0172",
+      "bytes": 1898960,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "f7e91e8e8b3a4aa02d0aecd23aebd70a8e80ea46b3323d2fa29a7299a314e869",
+      "sourceBytes": 3279393,
+      "sourceRenderSha256": "5c6e16e03774d159ec805b4681387412699ff988199ca42531e2cc24fa41d977",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 55,
+        "targetPct": 37.09,
+        "landmarkRule": "shoulder",
+        "scaleFactor": 1.65092
+      },
+      "fit": {
+        "scale": 0.9988,
+        "shiftY": 0.4,
+        "shiftX": 1.8,
+        "p95": 3.49
+      },
+      "qaOutline": {
+        "iou": 0.9946,
+        "p95": 3.03,
+        "p99": 11.85,
+        "max": 12.18,
+        "pass": false
+      },
+      "qaRawMask": {
+        "iou": 0.9946,
+        "p95": 3.03,
+        "p99": 11.84,
+        "max": 12.18,
+        "bgDevP95": 2,
+        "pass": false
+      },
+      "input": {
+        "file": "inputs/GBBell10BlkShSht-input.png",
+        "sha256": "776bfbf276eae30dcde1c709b88f23f72df5df1d789251061870083a86991beb"
+      },
+      "source": {
+        "psd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/7. Bell 12ml/1. Bell 12ml (Uncapped) PSD/1. GBBell12BlkSht.psd",
+        "legacy": null,
+        "sha256": "f84cd709ae477c7e760f744d582e9e11a952ef1a4ee2fb7188d044ebbbe0c579",
+        "note": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/7. Bell 12ml/1. Bell 12ml (Uncapped) PSD/1. GBBell12BlkSht.psd"
+      },
+      "promptSha256": "2ede6e7852449e437ff3ffa2c91737a5d838ecf709df666d3c5929178dba5f78"
+    },
+    {
+      "sku": "GBBell10SpryBlkSh",
+      "family": "Bell",
+      "groupSlug": "bell-10ml-clear-13-415-finemist",
+      "graceSku": "GB-BEL-CLR-10ML-SPR-SBLK",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343699239204",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7d30p5y2cnze1er94dvpcegd8dskc9",
+        "slug": "bell-10ml-clear-13-415-finemist",
+        "displayName": "10 ml Clear Bell Fine Mist Spray Bottle",
+        "color": "Clear",
+        "capColor": "Shiny Black",
+        "applicator": "Fine Mist Sprayer",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch6-approved-2026-09-25/GBBell10SpryBlkSh.3e5001a30f38.webp",
+      "sha256": "3e5001a30f3809d203973098a5573b7ae73c17d371e0c7931ff630c4b2fcb33f",
+      "bytes": 1821910,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "82b8939783c5a1f8eb2efd37f1decb23136b69cd09bea508f54692034d6be059",
+      "sourceBytes": 3295429,
+      "sourceRenderSha256": "26752462cfe9c1210c074d08a14ebe98881bbf4975b2d74dbc432c2b0eb7f571",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 55,
+        "targetPct": 37.09,
+        "landmarkRule": "shoulder",
+        "scaleFactor": 1.65092
+      },
+      "fit": {
+        "scale": 0.9994,
+        "shiftY": -1.3,
+        "shiftX": 1.2,
+        "p95": 3.82
+      },
+      "qaOutline": {
+        "iou": 0.9925,
+        "p95": 2.79,
+        "p99": 6.34,
+        "max": 17.88,
+        "pass": false
+      },
+      "qaRawMask": {
+        "iou": 0.9923,
+        "p95": 2.9,
+        "p99": 6.33,
+        "max": 17.88,
+        "bgDevP95": 2,
+        "pass": false
+      },
+      "input": {
+        "file": "inputs/GBBell10SpryBlkSh-input.png",
+        "sha256": "e5b55323142eefc5621c97e71ea5882b45598ab469ca474c4d8a66455494957d"
+      },
+      "source": {
+        "psd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/7. Bell 12ml/1. Bell 12ml (Uncapped) PSD/4. GBBell12SpryBlkSh.psd",
+        "legacy": null,
+        "sha256": "c53d3ae71ccf0080583bbfed74a0d221d0cd7852d054224cfaf45ec72d2d95e1",
+        "note": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/7. Bell 12ml/1. Bell 12ml (Uncapped) PSD/4. GBBell12SpryBlkSh.psd"
+      },
+      "promptSha256": "11cbd46b4be33e5f2d714038f0791220bb62ca5bd4a81f6abd4a7527dbb6ce1c"
+    },
+    {
+      "sku": "GBBell10MtlRollBlkDot",
+      "family": "Bell",
+      "groupSlug": "bell-10ml-clear-13-415-rollon",
+      "graceSku": "GB-BEL-CLR-10ML-MRL-BLDOT",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343699337508",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh779h86jxhzq4cy1hrqdja6n98dr9af",
+        "slug": "bell-10ml-clear-13-415-rollon",
+        "displayName": "10 ml Clear Bell Roll-On Bottle",
+        "color": "Clear",
+        "capColor": "Shiny Black",
+        "applicator": "Metal Roller Ball",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch6-approved-2026-09-25/GBBell10MtlRollBlkDot.8781e27d58a6.webp",
+      "sha256": "8781e27d58a66e8cb74827091be08b091cbdbbe64c2682041d691edeed9d3bac",
+      "bytes": 1916072,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "67338faec32aff90c618400ae8d5d3364d4f1e26f96885fbb2cae4881c78bc78",
+      "sourceBytes": 3369415,
+      "sourceRenderSha256": "d573c03dba1bc5a6dd0a7e2f79aa57ca39b47e8b5ca92ba147573288f75cd9c8",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 55,
+        "targetPct": 37.09,
+        "landmarkRule": "shoulder",
+        "scaleFactor": 1.65092
+      },
+      "fit": {
+        "scale": 1.0003,
+        "shiftY": -2,
+        "shiftX": 0.6,
+        "p95": 4.22
+      },
+      "qaOutline": {
+        "iou": 0.9919,
+        "p95": 3.25,
+        "p99": 12.44,
+        "max": 15.67,
+        "pass": false
+      },
+      "qaRawMask": {
+        "iou": 0.9918,
+        "p95": 3.43,
+        "p99": 12.42,
+        "max": 15.67,
+        "bgDevP95": 3,
+        "pass": false
+      },
+      "input": {
+        "file": "inputs/GBBell10MtlRollBlkDot-input.png",
+        "sha256": "9deebfd287944f5ad27cbc7db302ebc316f10aa4deb4057e43503d162cb8dd3e"
+      },
+      "source": {
+        "psd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/7. Bell 12ml/1. Bell 12ml (Uncapped) PSD/26. GBBell12MtlRollBlkDot.psd",
+        "legacy": null,
+        "sha256": "6d879c4c2f4db95d652f77c5df225b153adc135852b413b76a67f171dc34f644",
+        "note": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/7. Bell 12ml/1. Bell 12ml (Uncapped) PSD/26. GBBell12MtlRollBlkDot.psd"
+      },
+      "promptSha256": "7e4b67efef474b23342904ec31a59b5bc52a63c09b01dfe86096ad1cfdc25232"
+    },
+    {
+      "sku": "GBPillar9BlkShSht",
+      "family": "Pillar",
+      "groupSlug": "pillar-9ml-clear-13-415",
+      "graceSku": "GB-PIL-CLR-9ML-CAP-BLK",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343700386084",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh76xyjyn5gc130x56b1svqqr18dskqa",
+        "slug": "pillar-9ml-clear-13-415",
+        "displayName": "9 ml Clear Pillar Bottle with Cap",
+        "color": "Clear",
+        "capColor": "Clear",
+        "applicator": "N/A",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch6-approved-2026-09-25/GBPillar9BlkShSht.b7bf285f01a4.webp",
+      "sha256": "b7bf285f01a415b4ed7e4f2fbb64540e596a744046e29b0ea36cd7671305affa",
+      "bytes": 1792288,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "758d0ebe54fdd69109da527eb92e4c51c2864a720405ff42a10b6e8b3ea14f48",
+      "sourceBytes": 3095357,
+      "sourceRenderSha256": "60feb0ee5a2349e24a616fb691f2480ed0b33479dfa67e8ac0ce77b06443ded7",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 57,
+        "targetPct": 37.87,
+        "landmarkRule": "shoulder",
+        "scaleFactor": 1.5123
+      },
+      "fit": {
+        "scale": 0.9993,
+        "shiftY": -1.2,
+        "shiftX": 1.5,
+        "p95": 2.93
+      },
+      "qaOutline": {
+        "iou": 0.9972,
+        "p95": 1.37,
+        "p99": 3.64,
+        "max": 7.15,
+        "pass": true
+      },
+      "qaRawMask": {
+        "iou": 0.997,
+        "p95": 1.31,
+        "p99": 3.63,
+        "max": 6.75,
+        "bgDevP95": 3,
+        "pass": true
+      },
+      "input": {
+        "file": "inputs/GBPillar9BlkShSht-input.png",
+        "sha256": "3016727866bb3de9136e8aa85892b87e32bd7877cda08694c7ec4d474b48aa3f"
+      },
+      "source": {
+        "psd": null,
+        "legacy": "https://www.bestbottles.com/images/store/enlarged_pics/GBPillar9BlkShSht.gif",
+        "sha256": "b1bf33b3bf5ba1a00fa217d6e5f3a0910f34c01f99f40055b6803167342eb254",
+        "note": "legacy:https://www.bestbottles.com/images/store/enlarged_pics/GBPillar9BlkShSht.gif"
+      },
+      "promptSha256": "16c3bffa2529d69e53b8f059dade4c86679894ed7cfda9afa72f9e0e66d0ca82"
+    },
+    {
+      "sku": "GBPillar9MtlRollBlkdot",
+      "family": "Pillar",
+      "groupSlug": "pillar-9ml-clear-13-415",
+      "graceSku": "GB-PIL-CLR-9ML-MRL-BDOT",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343700320548",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh76xyjyn5gc130x56b1svqqr18dskqa",
+        "slug": "pillar-9ml-clear-13-415",
+        "displayName": "9 ml Clear Pillar Bottle with Cap",
+        "color": "Clear",
+        "capColor": null,
+        "applicator": "N/A",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch6-approved-2026-09-25/GBPillar9MtlRollBlkdot.48f9d3412fdd.webp",
+      "sha256": "48f9d3412fddea55c7f53f62638aadb04babb487d2a1ed79398c46966d9ffa2f",
+      "bytes": 1715180,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "ccc2c97818f3719e835553e2f8b8d6591b488068098487ff10561aca613c6b0c",
+      "sourceBytes": 3100931,
+      "sourceRenderSha256": "4ada3c681a64a0cdc22ad9932168914887fe1a35821f2062509979113f965f6a",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 57,
+        "targetPct": 37.87,
+        "landmarkRule": "shoulder",
+        "scaleFactor": 1.69911
+      },
+      "fit": {
+        "scale": 1.0009,
+        "shiftY": -2.6,
+        "shiftX": -0.6,
+        "p95": 2.76
+      },
+      "qaOutline": {
+        "iou": 0.9947,
+        "p95": 1.91,
+        "p99": 2.55,
+        "max": 8.38,
+        "pass": false
+      },
+      "qaRawMask": {
+        "iou": 0.9947,
+        "p95": 1.91,
+        "p99": 2.55,
+        "max": 8.38,
+        "bgDevP95": 3,
+        "pass": false
+      },
+      "input": {
+        "file": "inputs/GBPillar9MtlRollBlkdot-input.png",
+        "sha256": "7125e5054f49de50c19c5b41a1a183464cf72f9097ab4754c3dcf224ea20d726"
+      },
+      "source": {
+        "psd": null,
+        "legacy": "https://www.bestbottles.com/images/store/enlarged_pics/GBPillar9MtlRollBlkdot.gif",
+        "sha256": "db7b5bdc96c984852497de9ea4e2d67ef77419cf6665797736cc9161e998a739",
+        "note": "legacy:https://www.bestbottles.com/images/store/enlarged_pics/GBPillar9MtlRollBlkdot.gif"
+      },
+      "promptSha256": "d19bbbffb5e8e81b10bf452a7ea4b579ffa4fa66dd64a7c5427afa68ee04d4ec"
+    },
+    {
+      "sku": "GBPillar9SpryBlkMatt",
+      "family": "Pillar",
+      "groupSlug": "pillar-9ml-clear-17-415-finemist",
+      "graceSku": "GB-PIL-CLR-9ML-SPR-MBLK",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343699206436",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7d8evpx0b68wp0rb442bmxrx8ds36r",
+        "slug": "pillar-9ml-clear-17-415-finemist",
+        "displayName": "9 ml Clear Pillar Fine Mist Spray Bottle",
+        "color": "Clear",
+        "capColor": "Matte Black",
+        "applicator": "Fine Mist Sprayer",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/batch6-approved-2026-09-25/GBPillar9SpryBlkMatt.46ad573b869d.webp",
+      "sha256": "46ad573b869da16d4201fd298c5f866b3b59f3b6a87bc1f5a626ff0376d19d64",
+      "bytes": 1923742,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "c8e8f6ab1aac3b4b37ad89b9ce7d6148d2717fb0a898c423a65c90f71b01ba65",
+      "sourceBytes": 3441353,
+      "sourceRenderSha256": "a048c7d5050646e4125a0bb0903019d4d761285858f8d0c4ebad4395f549a82d",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "attemptsForSku": 1,
+      "sizing": {
+        "glassMm": 57,
+        "targetPct": 37.87,
+        "landmarkRule": "shoulder",
+        "scaleFactor": 1.95609
+      },
+      "fit": {
+        "scale": 0.998,
+        "shiftY": 0.7,
+        "shiftX": 2.1,
+        "p95": 2.97
+      },
+      "qaOutline": {
+        "iou": 0.9961,
+        "p95": 1.49,
+        "p99": 4.72,
+        "max": 6.97,
+        "pass": false
+      },
+      "qaRawMask": {
+        "iou": 0.996,
+        "p95": 1.47,
+        "p99": 4.21,
+        "max": 6.97,
+        "bgDevP95": 3,
+        "pass": false
+      },
+      "input": {
+        "file": "inputs/GBPillar9SpryBlkMatt-input.png",
+        "sha256": "27afa41a9f448443f2ef3c999587065342dc57459872bff9e61da7dbd5a337f2"
+      },
+      "source": {
+        "psd": null,
+        "legacy": "https://www.bestbottles.com/images/store/enlarged_pics/GBPillar9SpryBlkMatt.gif",
+        "sha256": "2df525cd4dc9de648dbc72ef8b0805f5cc87b0e3d2e25e767a068557190fdde5",
+        "note": "legacy:https://www.bestbottles.com/images/store/enlarged_pics/GBPillar9SpryBlkMatt.gif"
+      },
+      "promptSha256": "f2bff53f777b90ac143e4a41f6cd6db2c7df85eb272d8deb6c1c902582366b83"
+    }
+  ]
+}

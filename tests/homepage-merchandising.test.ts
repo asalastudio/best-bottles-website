@@ -99,8 +99,10 @@ describe("family-first homepage merchandising", () => {
         expect(header).toContain('name="search"');
         expect(header).toContain("localizeHref(locale, '/catalog')");
         const html = renderToStaticMarkup(createElement(CollectionShopping, { data: null }));
-        expect(html.indexOf('id="family-heading"')).toBeGreaterThan(-1);
-        expect(html.indexOf('id="family-heading"')).toBeLessThan(html.indexOf('id="collections-heading"'));
+        // "Shop three ways": families, then collections, then the builder, each its own section.
+        expect(html.indexOf('id="shop-three-ways"')).toBeGreaterThan(-1);
+        expect(html.indexOf('<section id="shop-families"')).toBeLessThan(html.indexOf('<section id="shop-collections"'));
+        expect(html.indexOf('<section id="shop-collections"')).toBeLessThan(html.indexOf('<section id="shop-build"'));
         expect(html).toContain('id="build-your-bottle"');
         expect(html).toContain('href="/matrix"');
     });
