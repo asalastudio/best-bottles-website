@@ -1,0 +1,46 @@
+/* Homepage Build Your Bottle: four numbered steps and a start button (Jordan's comp, 2026-09-25).
+   Gold #8B6F42 carries white type at 4.7:1; the smaller gold type uses #7A6139 (5.3:1 on bone). */
+.section{--gold:#8b6f42;--gold-ink:#7a6139;--tile:#efebe4;--rule:#dcd2c2;max-width:1600px;margin:auto;padding:40px 4.5% 44px;color:#1c1c1e}
+.head{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 28px;margin-bottom:22px}
+.head h2{font-family:var(--font-editorial);font-weight:400;font-size:42px;line-height:1.05;letter-spacing:-.005em;text-transform:none;text-wrap:balance}
+.eyebrow{font-family:var(--font-brand);font-size:11.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-ink)}
+.body{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:0 44px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:44px}
+.step{position:relative;min-width:0}
+.step:not(:last-child)::after{content:"";position:absolute;top:calc(31.25% - 7px);right:-27px;width:9px;height:9px;border-top:1.5px solid #8a7a62;border-right:1.5px solid #8a7a62;transform:rotate(45deg)}
+.stepLink{display:block;color:inherit;text-decoration:none}
+.media{position:relative;display:block;background:var(--tile);border-radius:3px;overflow:hidden}
+.media img{display:block;width:100%;height:auto;aspect-ratio:8/5;transition:transform .35s ease}
+.badge{position:absolute;top:10px;left:10px;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--gold);color:#fff;font-family:var(--font-editorial);font-size:18px;line-height:1}
+.label{display:block;margin-top:13px;font-family:var(--font-editorial);font-size:20px;line-height:1.2}
+.stepLink:hover .media img{transform:scale(1.03)}
+.stepLink:hover .label{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.cta{align-self:stretch;display:flex;flex-direction:column;justify-content:center;gap:22px;padding-left:40px;border-left:1px solid var(--rule)}
+.tagline{font-family:var(--font-brand);font-size:12.5px;font-weight:500;line-height:1.9;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-ink);white-space:pre-line}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:50px;padding:14px 30px;background:var(--gold);color:#fff;border-radius:2px;font-family:var(--font-brand);font-size:12.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;transition:background-color .2s}
+.button:hover{background:#735b35}
+.arrow{font-size:15px;letter-spacing:0;transition:transform .2s}
+.button:hover .arrow{transform:translateX(3px)}
+.section a:focus-visible{outline:2px solid #75613c;outline-offset:4px}
+
+@media(max-width:1180px){
+  .body{grid-template-columns:1fr}
+  .cta{flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px 24px;margin-top:30px;padding:24px 0 0;border-left:0;border-top:1px solid var(--rule)}
+  .tagline{white-space:normal}
+}
+@media(max-width:760px){
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 16px}
+  .step::after{display:none}
+  .head h2{font-size:34px}
+}
+@media(max-width:640px){
+  .section{padding:28px 20px 32px}
+  .head{flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:18px}
+  .head h2{font-size:30px}
+  .eyebrow{font-size:10.5px;letter-spacing:.18em}
+  .badge{top:8px;left:8px;width:28px;height:28px;font-size:15px}
+  .label{margin-top:10px;font-size:17px}
+  .cta{flex-direction:column;align-items:stretch;text-align:left}
+  .button{width:100%}
+}
+@media(prefers-reduced-motion:reduce){.media img,.arrow,.button{transition:none}.stepLink:hover .media img{transform:none}}
