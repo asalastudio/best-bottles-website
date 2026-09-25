@@ -229,6 +229,25 @@
   },
   {
     "groupSlug": "pillar-9ml-clear-13-415",
+    "websiteSku": "GBPillar9BlkShSht",
+    "graceSku": "GB-PIL-CLR-9ML-CAP-BLK",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343700386084",
+    "family": "Pillar",
+    "capacityMl": 9,
+    "bottleColor": "Clear",
+    "alt": "9 ml Clear Pillar Bottle with Shiny Black Short Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/batch6-approved-2026-09-25/GBPillar9BlkShSht.b7bf285f01a4.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "pillar-9ml-clear-13-415",
     "websiteSku": "GBPillar9MtlRollBlkdot",
     "graceSku": "GB-PIL-CLR-9ML-MRL-BDOT",
     "shopifyVariantId": "gid://shopify/ProductVariant/53343700320548",

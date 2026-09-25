@@ -247,6 +247,14 @@
     "match": 0.924,
     "shadow": "/images/catalog/cap-swap-shadows/GBFlair15SpryGlMatt.3c0e1ab453.webp"
   },
+  "/images/catalog/batch6-approved-2026-09-25/GBPillar9BlkShSht.b7bf285f01a4.webp": {
+    "plate": "capped",
+    "scale": 0.50697,
+    "x": 0.20484,
+    "y": 0.42655,
+    "match": 0.866,
+    "shadow": "/images/catalog/cap-swap-shadows/GBPillar9BlkShSht.f5c6f3ab86.webp"
+  },
   "/images/catalog/batch6-approved-2026-09-25/GBPillar9MtlRollBlkdot.48f9d3412fdd.webp": {
     "plate": "capped",
     "scale": 0.56894,
