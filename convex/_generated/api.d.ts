@@ -17,6 +17,7 @@ import type * as backfillTrimColorFromDescription from "../backfillTrimColorFrom
 import type * as catalogComponentEvidence from "../catalogComponentEvidence.js";
 import type * as catalogComponentProducts from "../catalogComponentProducts.js";
 import type * as catalogComponentSources from "../catalogComponentSources.js";
+import type * as catalogCorrections from "../catalogCorrections.js";
 import type * as catalogIncludedAssemblies from "../catalogIncludedAssemblies.js";
 import type * as catalogRestore from "../catalogRestore.js";
 import type * as catalogSearchLog from "../catalogSearchLog.js";
@@ -99,6 +100,7 @@ declare const fullApi: ApiFromModules<{
   catalogComponentEvidence: typeof catalogComponentEvidence;
   catalogComponentProducts: typeof catalogComponentProducts;
   catalogComponentSources: typeof catalogComponentSources;
+  catalogCorrections: typeof catalogCorrections;
   catalogIncludedAssemblies: typeof catalogIncludedAssemblies;
   catalogRestore: typeof catalogRestore;
   catalogSearchLog: typeof catalogSearchLog;
