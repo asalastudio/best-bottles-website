@@ -4,24 +4,24 @@ import { getShopCollection } from "./shopCollections";
 export const APPLICATOR_BUCKETS = [
     {
         value: "rollon",
-        label: "Roll-On",
+        label: "Roll-on",
         productValues: ["Metal Roller Ball", "Plastic Roller Ball", "Metal Roller", "Plastic Roller"],
     },
     // Fine Mist Spray: atomizer-style, typically < 30 ml
-    { value: "finemist", label: "Fine Mist Spray", productValues: ["Fine Mist Sprayer", "Atomizer"] },
+    { value: "finemist", label: "Fine mist spray", productValues: ["Fine Mist Sprayer", "Atomizer"] },
     // Perfume Spray Pump: classic spray collar, typically ≥ 30 ml
-    { value: "perfumespray", label: "Perfume Spray", productValues: ["Perfume Spray Pump"] },
+    { value: "perfumespray", label: "Perfume spray", productValues: ["Perfume Spray Pump"] },
     { value: "reducer", label: "Reducer", productValues: ["Reducer"] },
     { value: "dropper", label: "Dropper", productValues: ["Dropper"] },
-    { value: "lotionpump", label: "Lotion Pump", productValues: ["Lotion Pump"] },
-    { value: "vintagestyle", label: "Vintage Style Bulb Sprayer", productValues: ["Vintage Bulb Sprayer", "Antique Bulb Sprayer"] },
-    { value: "vintagestyle-tassel", label: "Vintage Style Bulb Sprayer with Tassel", productValues: ["Vintage Bulb Sprayer with Tassel", "Antique Bulb Sprayer with Tassel"] },
+    { value: "lotionpump", label: "Lotion pump", productValues: ["Lotion Pump"] },
+    { value: "vintagestyle", label: "Vintage-style bulb sprayer", productValues: ["Vintage Bulb Sprayer", "Antique Bulb Sprayer"] },
+    { value: "vintagestyle-tassel", label: "Vintage-style bulb sprayer with tassel", productValues: ["Vintage Bulb Sprayer with Tassel", "Antique Bulb Sprayer with Tassel"] },
     // Bottles sold with a plain screw cap and no dispensing applicator. 95 of
     // 362 catalogue groups carry this value (2026-09-02 dev snapshot), so
     // without a bucket the Product Type facet could not reach a quarter of the
     // catalogue — a Baymard "filters for all displayed list item info" gap.
-    { value: "capclosure", label: "Cap / Closure", productValues: ["Cap/Closure"] },
-    { value: "glassstopper", label: "Glass Stopper / Rod", productValues: ["Glass Stopper", "Glass Rod"] },
+    { value: "capclosure", label: "Cap / closure", productValues: ["Cap/Closure"] },
+    { value: "glassstopper", label: "Glass stopper / rod", productValues: ["Glass Stopper", "Glass Rod"] },
 ] as const;
 
 export type ApplicatorBucket = (typeof APPLICATOR_BUCKETS)[number]["value"];
@@ -375,13 +375,34 @@ function normalizeApplicatorToken(value: string): string {
  * `Vintage Bulb Sprayer` / `Vintage Bulb Sprayer with Tassel`.
  */
 export function displayApplicatorName(value: string): string {
+    // Always "vintage-style bulb sprayer" (hyphenated) in customer copy.
     return value
-        .replace(/\bVintage Bulb\b/g, "Vintage Style Bulb")
-        .replace(/\bvintage bulb\b/g, "vintage style bulb")
-        .replace(/\bVINTAGE BULB\b/g, "VINTAGE STYLE BULB")
+        .replace(/\bVintage[ -]Style Bulb\b/g, "Vintage Bulb")
+        .replace(/\bvintage[ -]style bulb\b/g, "vintage bulb")
+        .replace(/\bVINTAGE[ -]STYLE BULB\b/g, "VINTAGE BULB")
+        .replace(/\bVintage Bulb\b/g, "Vintage-Style Bulb")
+        .replace(/\bvintage bulb\b/g, "vintage-style bulb")
+        .replace(/\bVINTAGE BULB\b/g, "VINTAGE-STYLE BULB")
         // Prefer "Sprayer" so UI copy never sounds like fine-mist spray or an atomizer.
-        .replace(/\bVintage Style Bulb Spray\b(?!er)/g, "Vintage Style Bulb Sprayer")
-        .replace(/\bvintage style bulb spray\b(?!er)/g, "vintage style bulb sprayer");
+        .replace(/\bVintage-Style Bulb Spray\b(?!er)/g, "Vintage-Style Bulb Sprayer")
+        .replace(/\bvintage-style bulb spray\b(?!er)/g, "vintage-style bulb sprayer");
+}
+
+/**
+ * Short spec-line name for the applicator fitted to a SKU ("Metal roller",
+ * "Fine mist spray", "Vintage-style bulb sprayer"). Null when nothing is fitted.
+ */
+export function catalogFitmentLabel(applicator: string | null | undefined, ballMaterial?: string | null): string | null {
+    const value = applicator?.trim();
+    if (!value || value === "N/A") return null;
+    const bucket = APPLICATOR_BUCKETS.find((entry) => (entry.productValues as readonly string[]).includes(value));
+    if (bucket?.value === "rollon") {
+        const material = ballMaterial || value;
+        return /plastic/i.test(material) ? "Plastic roller" : /metal/i.test(material) ? "Metal roller" : "Roll-on";
+    }
+    if (bucket?.value === "capclosure") return "Cap";
+    if (bucket?.value === "glassstopper") return value === "Glass Rod" ? "Glass rod" : "Glass stopper";
+    return bucket?.label ?? displayApplicatorName(value);
 }
 
 /** Historic UI labels and prior bucket slugs still accepted in URLs and Grace refine. */
@@ -451,25 +472,41 @@ export function normalizeApplicatorBuckets(values: readonly string[]): Applicato
     return resolved;
 }
 
+/**
+ * Capacity ranges shown in the filter. They meet end to end — each range
+ * starts just above the previous one's maximum (`above`) — so no size falls
+ * between two ranges (the old set skipped 16–24, 51–54 and 121–127 ml).
+ */
 export const CAPACITY_RANGES = [
-    { value: "miniature", label: "Miniature", detail: "1-5 ml", min: 1, max: 5 },
-    { value: "small", label: "Small", detail: "6-15 ml", min: 6, max: 15 },
-    { value: "medium", label: "Medium", detail: "25-50 ml", min: 25, max: 50 },
-    { value: "large", label: "Large", detail: "55-120 ml", min: 55, max: 120 },
-    { value: "bulk", label: "Bulk", detail: "128 ml+", min: 128, max: null },
+    { value: "1-5ml", label: "1–5 ml", detail: "≤0.17 oz", above: 0, min: 1, max: 5 },
+    { value: "6-15ml", label: "6–15 ml", detail: "0.2–0.5 oz", above: 5, min: 6, max: 15 },
+    { value: "16-30ml", label: "16–30 ml", detail: "0.5–1 oz", above: 15, min: 16, max: 30 },
+    { value: "31-60ml", label: "31–60 ml", detail: "1–2 oz", above: 30, min: 31, max: 60 },
+    { value: "61-100ml", label: "61–100 ml", detail: "2–3.4 oz", above: 60, min: 61, max: 100 },
+    { value: "101ml-plus", label: "101+ ml", detail: "3.4+ oz", above: 100, min: 101, max: null },
 ] as const;
 
+/** Earlier range tokens, still accepted from old links and bookmarks; never shown. */
+const LEGACY_CAPACITY_RANGES = [
+    { value: "miniature", label: "Miniature", detail: "1-5 ml", above: 0, min: 1, max: 5 },
+    { value: "small", label: "Small", detail: "6-15 ml", above: 5, min: 6, max: 15 },
+    { value: "medium", label: "Medium", detail: "25-50 ml", above: 24, min: 25, max: 50 },
+    { value: "large", label: "Large", detail: "55-120 ml", above: 54, min: 55, max: 120 },
+    { value: "bulk", label: "Bulk", detail: "128 ml+", above: 127, min: 128, max: null },
+] as const;
+
+export type CapacityRange = (typeof CAPACITY_RANGES)[number] | (typeof LEGACY_CAPACITY_RANGES)[number];
 export type CapacityRangeValue = (typeof CAPACITY_RANGES)[number]["value"];
 
-export function capacityInRange(ml: number | null | undefined, range: (typeof CAPACITY_RANGES)[number]): boolean {
+export function capacityInRange(ml: number | null | undefined, range: CapacityRange): boolean {
     if (ml == null || ml <= 0) return false;
-    return ml >= range.min && (range.max == null || ml <= range.max);
+    return ml > range.above && (range.max == null || ml <= range.max);
 }
 
-export function resolveCapacityRange(value: string): (typeof CAPACITY_RANGES)[number] | null {
+export function resolveCapacityRange(value: string): CapacityRange | null {
     const token = value.trim().toLowerCase();
     if (!token) return null;
-    return CAPACITY_RANGES.find((range) => (
+    return [...CAPACITY_RANGES, ...LEGACY_CAPACITY_RANGES].find((range) => (
         range.value === token
         || range.label.toLowerCase() === token
     )) ?? null;
@@ -501,8 +538,9 @@ export function expandCapacityFilterValues(selected: readonly string[]): string[
         }
         const max = range.max ?? 2000;
         const step = range.max == null ? 1 : 0.1;
-        // `range.min` is a const literal union; widen so the loop can increment.
-        for (let ml: number = range.min; ml <= max + 1e-9; ml = Number((ml + step).toFixed(1))) {
+        // Start just above the previous range so decimal sizes (5.5 ml) are kept.
+        const start = range.max == null ? range.min : Number((range.above + step).toFixed(1));
+        for (let ml: number = start; ml <= max + 1e-9; ml = Number((ml + step).toFixed(1))) {
             labels.push(`${ml} ml`);
         }
     }
@@ -803,6 +841,7 @@ export type CatalogFacetKey =
     | "neckThreadSizes"
     | "category"
     | "collection"
+    | "shopCollection"
     | "componentType"
     | "price";
 
@@ -987,8 +1026,106 @@ export function catalogBrowseRedirect(sp: URLSearchParams): string | null {
     return `/catalog?${params.toString()}`;
 }
 
+// ─── Product type switch ────────────────────────────────────────────────────
+// The catalog title row offers four product types. Two cover several
+// `productGroups.category` values, so their `category` URL value is a key
+// ("jars", "packaging-more") rather than a stored category.
+
+export const CATALOG_PRODUCT_TYPES = [
+    { value: "Glass Bottle", label: "Glass bottles", categories: ["Glass Bottle"] },
+    { value: "jars", label: "Jars", categories: ["Glass Jar", "Cream Jar"] },
+    { value: "Component", label: "Components", categories: ["Component"] },
+    { value: "packaging-more", label: "Packaging & more", categories: ["Aluminum Bottle", "Plastic Bottle", "Metal Atomizer", "Packaging", "Accessory"] },
+] as const;
+
+function productTypeForCategoryValue(value: string | null | undefined) {
+    return CATALOG_PRODUCT_TYPES.find((type) => type.value === value) ?? null;
+}
+
+/** True when the `category` value stands for several stored categories (Convex matches one exact category). */
+export function isMultiCategoryValue(value: string | null | undefined): boolean {
+    return (productTypeForCategoryValue(value)?.categories.length ?? 0) > 1;
+}
+
+/** Does a group's stored category satisfy the `category` filter (a stored value or a product-type key)? */
+export function categorySelectionMatches(selected: string | null | undefined, groupCategory: string | null | undefined): boolean {
+    if (!selected) return true;
+    const type = productTypeForCategoryValue(selected);
+    if (type) return (type.categories as readonly string[]).includes(groupCategory ?? "");
+    return groupCategory === selected;
+}
+
+/** Product count for one type, from the category facet counts. */
+export function productTypeCount(value: string, categoryCounts: Record<string, number> | null | undefined): number {
+    const type = productTypeForCategoryValue(value);
+    if (!type || !categoryCounts) return 0;
+    return type.categories.reduce((sum, category) => sum + (categoryCounts[category] ?? 0), 0);
+}
+
+// ─── Neck finish facet ──────────────────────────────────────────────────────
+// Standard GPI threads are offered one by one. Ground-glass necks are one
+// option, and every other stored value (mm sizes, press-fit, snap, junk
+// imports) is grouped as "Specialty" so the list stays short and honest.
+
+export const STANDARD_NECK_FINISHES = [
+    "18-415", "13-415", "20-400", "17-415", "13-425", "18-400", "15-415", "20-410", "8-425",
+] as const;
+export const GROUND_NECK_VALUE = "Ground";
+export const SPECIALTY_NECK_VALUE = "specialty";
+
+export type NeckFacetOption = "standard" | "ground" | "specialty";
+
+export function neckFacetKind(neck: string | null | undefined): NeckFacetOption | null {
+    const value = neck?.trim();
+    if (!value) return null;
+    if ((STANDARD_NECK_FINISHES as readonly string[]).includes(value)) return "standard";
+    if (value.toLowerCase() === GROUND_NECK_VALUE.toLowerCase()) return "ground";
+    return "specialty";
+}
+
+export function neckFacetLabel(value: string): string {
+    if (value === SPECIALTY_NECK_VALUE) return "Specialty";
+    if (value.toLowerCase() === GROUND_NECK_VALUE.toLowerCase()) return "Ground glass";
+    return value;
+}
+
+/** A group matches when its neck equals a selected finish, or is non-standard and "Specialty" is selected. */
+export function neckSelectionMatches(selected: readonly string[], neck: string | null | undefined): boolean {
+    if (selected.length === 0) return true;
+    const kind = neckFacetKind(neck);
+    if (!kind) return false;
+    if (kind === "specialty") return selected.includes(SPECIALTY_NECK_VALUE) || selected.includes(neck!.trim());
+    if (kind === "ground") return selected.some((value) => value.toLowerCase() === GROUND_NECK_VALUE.toLowerCase());
+    return selected.includes(neck!.trim());
+}
+
+/** Replace the "specialty" token with the stored values it stands for (Convex matches exact values). */
+export function expandNeckFilterValues(selected: readonly string[], storedNecks: readonly string[]): string[] {
+    if (!selected.includes(SPECIALTY_NECK_VALUE)) return [...selected];
+    const specialty = storedNecks.filter((neck) => neckFacetKind(neck) === "specialty");
+    return Array.from(new Set([...selected.filter((value) => value !== SPECIALTY_NECK_VALUE), ...specialty]));
+}
+
+/** Sidebar options: standard finishes, then Ground glass, then Specialty (the sum of all other values). */
+export function neckFacetOptions(counts: Record<string, number> | null | undefined): Array<{ value: string; label: string; count: number }> {
+    const options = new Map<string, { value: string; label: string; count: number }>();
+    for (const neck of STANDARD_NECK_FINISHES) options.set(neck, { value: neck, label: neck, count: 0 });
+    options.set(GROUND_NECK_VALUE, { value: GROUND_NECK_VALUE, label: "Ground glass", count: 0 });
+    options.set(SPECIALTY_NECK_VALUE, { value: SPECIALTY_NECK_VALUE, label: "Specialty", count: 0 });
+    for (const [neck, count] of Object.entries(counts ?? {})) {
+        const kind = neckFacetKind(neck);
+        if (!kind) continue;
+        const key = kind === "standard" ? neck.trim() : kind === "ground" ? GROUND_NECK_VALUE : SPECIALTY_NECK_VALUE;
+        options.get(key)!.count += count;
+    }
+    const standard = [...STANDARD_NECK_FINISHES].map((neck) => options.get(neck)!).sort((a, b) => b.count - a.count);
+    return [...standard, options.get(GROUND_NECK_VALUE)!, options.get(SPECIALTY_NECK_VALUE)!];
+}
+
 export function catalogCategoryScopeLabel(category: string): string {
-    return category === "Glass Bottle" ? "Glass bottles" : category;
+    const type = productTypeForCategoryValue(category);
+    if (type) return type.label;
+    return category;
 }
 
 export function catalogResultScopeTitle(filters: CatalogFilters): string {

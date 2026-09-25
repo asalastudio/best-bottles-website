@@ -3,7 +3,7 @@
 export const SHOP_COLLECTIONS = [
     { key: 'roll-on-bottles', title: 'Roll-On Bottles', subtitle: 'A precise, personal application.', featured: true },
     { key: 'perfume-atomizers', title: 'Perfume Atomizers', subtitle: 'Refillable fragrance, ready to travel.', featured: true },
-    { key: 'glass-spray-bottles', title: 'Glass Spray Bottles', subtitle: 'Fine mist, perfume and vintage style bulb sprays.', featured: true },
+    { key: 'glass-spray-bottles', title: 'Glass Spray Bottles', subtitle: 'Fine mist, perfume and vintage-style bulb sprayers.', featured: true },
     { key: 'dropper-bottles', title: 'Dropper Bottles', subtitle: 'A measured drop for oils and serums.', featured: true },
     { key: 'sample-vials', title: 'Sample Vials', subtitle: 'Small formats for first impressions.', featured: true },
     { key: 'lotion-pump-bottles', title: 'Lotion Pump Bottles', subtitle: 'Dispensing for lotions and treatments.', featured: true },

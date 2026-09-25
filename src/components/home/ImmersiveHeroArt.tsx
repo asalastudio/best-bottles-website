@@ -9,7 +9,7 @@ export function ImmersiveHeroArt() {
       <img
         className={styles.heroScene}
         src="/assets/homepage/hero-empire-water-rebuilt.webp"
-        alt="Two Empire perfume bottles with a gold spray pump and black vintage style bulb, photographed on dark rock surrounded by reflective water"
+        alt="Two Empire perfume bottles with a gold spray pump and black vintage-style bulb, photographed on dark rock surrounded by reflective water"
         width={2688}
         height={1152}
         fetchPriority="high"

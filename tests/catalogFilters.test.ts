@@ -594,19 +594,22 @@ describe("applicatorBucketMatchesProductValues", () => {
         expect(applicatorBucketMatchesProductValues("vintagestyle", ["Vintage Bulb Sprayer with Tassel"])).toBe(false);
     });
 
-    it("shows vintage style labels without changing stored applicator values", () => {
+    it("shows vintage-style labels without changing stored applicator values", () => {
         const plain = APPLICATOR_BUCKETS.find((bucket) => bucket.value === "vintagestyle")!;
         const tassel = APPLICATOR_BUCKETS.find((bucket) => bucket.value === "vintagestyle-tassel")!;
-        expect(plain.label).toBe("Vintage Style Bulb Sprayer");
-        expect(tassel.label).toBe("Vintage Style Bulb Sprayer with Tassel");
+        expect(plain.label).toBe("Vintage-style bulb sprayer");
+        expect(tassel.label).toBe("Vintage-style bulb sprayer with tassel");
         expect(plain.productValues).toContain("Vintage Bulb Sprayer");
         expect(tassel.productValues).toContain("Vintage Bulb Sprayer with Tassel");
         expect(plain.productValues).not.toContain("Vintage Style Bulb Sprayer");
     });
 
     it("rewrites stored applicator names for customer-facing copy", () => {
-        expect(displayApplicatorName("Vintage Bulb Sprayer")).toBe("Vintage Style Bulb Sprayer");
-        expect(displayApplicatorName("Vintage Bulb Sprayer with Tassel")).toBe("Vintage Style Bulb Sprayer with Tassel");
+        expect(displayApplicatorName("Vintage Bulb Sprayer")).toBe("Vintage-Style Bulb Sprayer");
+        expect(displayApplicatorName("Vintage Bulb Sprayer with Tassel")).toBe("Vintage-Style Bulb Sprayer with Tassel");
+        // Older "Vintage Style" copy is hyphenated too, never doubled.
+        expect(displayApplicatorName("Vintage Style Bulb Spray Bottle")).toBe("Vintage-Style Bulb Sprayer Bottle");
+        expect(displayApplicatorName("Vintage-Style Bulb Sprayer")).toBe("Vintage-Style Bulb Sprayer");
         expect(displayApplicatorName("Fine Mist Sprayer")).toBe("Fine Mist Sprayer");
     });
 

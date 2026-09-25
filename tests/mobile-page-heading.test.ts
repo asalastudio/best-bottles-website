@@ -19,7 +19,7 @@ describe("mobile page headings sit with the wordmark", () => {
         const familyCss = read("src/components/catalog/MobileFamilyCatalog.module.css");
         expect(catalog).toContain("page-heading");
         expect(catalog).not.toContain("text-[32px]");
-        expect(catalog).toContain("lg:font-serif lg:text-4xl");
+        expect(catalog).toContain("lg:text-[28px]");
         expect(family).toContain('className="page-heading"');
         expect(familyCss).not.toContain("font-size: 34px");
     });

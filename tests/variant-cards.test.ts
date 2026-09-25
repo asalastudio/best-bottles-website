@@ -23,7 +23,8 @@ describe("expandVariantCards", () => {
         const expanded = expandVariantCards(result());
         expect(expanded.items.map((item) => item._id)).toEqual(["g10~GBAtom10Blk", "g10~GBAtom10Blu", "gc"]);
         expect(expanded.items.every((item) => item.family !== "Atomizer" || item.variantCount === 1)).toBe(true);
-        expect(expanded.totalCount).toBe(3);
+        // Cards split per SKU; the product count does not (it matches the sidebar and type switch).
+        expect(expanded.totalCount).toBe(2);
         expect(expanded.variantPreviewRows.find((row) => row.groupId === "g10~GBAtom10Blu")?.variants).toEqual([blu]);
         expect(expanded.primarySkus.find((row) => row.groupId === "g10~GBAtom10Blu")?.websiteSku).toBe("GBAtom10Blu");
         expect(expanded.primarySkus.some((row) => row.groupId === "g10")).toBe(false);

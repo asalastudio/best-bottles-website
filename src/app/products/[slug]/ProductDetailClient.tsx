@@ -213,10 +213,10 @@ function getVariantOptionPrefix(v: ProductVariant): string | null {
     const capStyle = v.capStyle?.trim() || null;
 
     if (/-AST-/.test(sku) || /ansptsl/i.test(websiteSku) || (applicator.includes("vintage") && itemName.includes("tassel"))) {
-        return "Vintage Style Bulb Sprayer with Tassel";
+        return "Vintage-Style Bulb Sprayer with Tassel";
     }
     if (/-ASP-/.test(sku) || /ansp/i.test(websiteSku) || /(vintage|antique|bulb).*(spray|sprayer)/.test(`${applicator} ${itemName}`)) {
-        return "Vintage Style Bulb Sprayer";
+        return "Vintage-Style Bulb Sprayer";
     }
     if (sku.includes("-SPR-") || applicator.includes("spray")) return "Spray";
     if (sku.includes("-LPM-") || applicator.includes("lotion")) return "Lotion Pump";
