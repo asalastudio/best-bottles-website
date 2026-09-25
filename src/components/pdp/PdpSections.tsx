@@ -10,12 +10,13 @@ import type { CSSProperties, ReactNode } from "react";
 import LocaleLink from "@/components/LocaleLink";
 import styles from "./pdp.module.css";
 import PdpKitPartImage from "./PdpKitPartImage";
+import PdpKitStackImage from "./PdpKitStackImage";
 import PdpDimensionDrawing from "./PdpDimensionDrawing";
 import type { DrawingSpec } from "@/lib/products/pdp-redesign/drawings";
 import { useIsPdpMobile } from "./PdpStage";
 import { ORDER_MINIMUM } from "@/lib/checkout";
 import type { CollectionBand, TechRow } from "@/lib/products/pdp-redesign/model";
-import { bodyPart, closurePart, fitmentPart, type KitLike } from "@/lib/products/pdp-redesign/stage";
+import { bodyPart, closureParts, fitmentPart, type KitLike } from "@/lib/products/pdp-redesign/stage";
 
 // ── In this order ─────────────────────────────────────────────────────────────
 
@@ -90,7 +91,7 @@ export function PdpBuildStrip({
     const body = bodyPart(bodyKit);
     const fitment = fitmentPart(fitmentKit);
     // Option 4a shows two caps at 40 px in the 64 px well; 3a shows three at 72 px in the 120 px well.
-    const caps = capKits.map((kit) => ({ kit, part: closurePart(kit) })).filter((entry) => entry.part).slice(0, mobile ? 2 : 3);
+    const caps = capKits.map((kit) => ({ kit, parts: closureParts(kit) })).filter((entry) => entry.parts.length).slice(0, mobile ? 2 : 3);
     const bodyHeight = mobile ? 60 : 112;
     const partHeight = mobile ? 40 : 72;
     return (
@@ -119,7 +120,7 @@ export function PdpBuildStrip({
                 <div className={styles.tile}>
                     <span className={styles.tileNumber}>03</span>
                     <div className={styles.tileWell}>
-                        {caps.map(({ kit, part }) => <PdpKitPartImage key={kit.sku} part={part!} canvas={kit.canvas} height={partHeight} />)}
+                        {caps.map(({ kit, parts }) => <PdpKitStackImage key={kit.sku} parts={parts} canvas={kit.canvas} height={partHeight} />)}
                     </div>
                     <span className={styles.tileTitle}>Cap</span>
                     <span className={styles.tileBody}>Choose the finish. Every cap shown fits.</span>

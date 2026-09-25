@@ -14,7 +14,8 @@
  * Callout anchors are read off the real part bounds after framing, so the
  * leaders point at the layers actually on screen.
  */
-import { explodedKitFrame, orderExplodedOvercap, REMOVABLE_KIT_SLOTS, withDetachedCapOffsets } from "@/lib/products/kit-frame";
+import { explodedKitFrame, REMOVABLE_KIT_SLOTS, withDetachedCapOffsets } from "@/lib/products/kit-frame";
+import { stackedExplodeOffsets } from "@/lib/products/exploded-stack";
 import { PDP_PLATE_CANVAS, pdpStageFrame, pdpStageTransformCss, type PdpStageFrame } from "@/lib/products/pdp-stage-frame";
 import { allowsExplodedClosure, requiresAssembledClosure } from "@/lib/products/closure-presentation";
 
@@ -43,6 +44,10 @@ export type KitPartLike = {
      * its native size standing in this box.
      */
     box?: PartBox | null;
+    /** The register component the layer came from, when it has one. */
+    componentId?: string | null;
+    /** The views this part is drawn in; absent = every view (a seated insert vs its full plug). */
+    views?: StageView[];
 };
 
 export type KitLike = {
@@ -140,14 +145,18 @@ export function stageLayout(kit: KitLike | null | undefined, requested: StageVie
     if (!kit?.parts?.length) return null;
     const canvas = kit.canvas ?? PDP_PLATE_CANVAS;
     const view = effectiveView(requested, kit, context);
-    const sorted = [...kit.parts].sort((a, b) => a.zOrder - b.zOrder);
+    const sorted = [...kit.parts].filter((part) => !part.views || part.views.includes(view)).sort((a, b) => a.zOrder - b.zOrder);
+    if (!sorted.length) return null;
 
     let offsets: Map<KitPartLike, { dx: number; dy: number }>;
     let frame: PdpStageFrame;
     if (view === "exploded") {
-        const ordered = orderExplodedOvercap(sorted);
-        offsets = new Map(ordered.map((part, index) => [sorted[index], part.exploded]));
-        frame = explodedKitFrame(ordered, canvas.width, canvas.height);
+        // Every kit explodes the same way: units stacked above the glass in assembly order, a
+        // sprayer's head, collar and tube travelling together. Recorded per-part offsets are not used.
+        const lifted = stackedExplodeOffsets(sorted);
+        offsets = new Map(sorted.map((part, index) => [part, lifted.get(index) ?? { dx: 0, dy: 0 }]));
+        const stacked = sorted.map((part, index) => ({ ...part, exploded: lifted.get(index) ?? { dx: 0, dy: 0 } }));
+        frame = explodedKitFrame(stacked, canvas.width, canvas.height);
     } else {
         const detached = withDetachedCapOffsets(sorted);
         // Only the removable closure moves in SIDECAR; the fitment stays seated in the glass.
@@ -212,19 +221,45 @@ export function stageLayout(kit: KitLike | null | undefined, requested: StageVie
  * is its box. Used for the cap rail, the glass lineup and the Build Your
  * Bottle tiles.
  */
-export function partCrop(part: KitPartLike, canvas: { width: number; height: number }, height: number): { width: number; height: number; imgWidth: number; imgHeight: number; left: number; top: number } {
+export function partCrop(part: KitPartLike, canvas: { width: number; height: number }, height: number, bounds: KitPartLike["bounds"] = part.bounds): { width: number; height: number; imgWidth: number; imgHeight: number; left: number; top: number } {
     const box = part.box ?? fullCanvasBox(canvas);
-    const boundsW = Math.max(1, part.bounds.right - part.bounds.left);
-    const boundsH = Math.max(1, part.bounds.bottom - part.bounds.top);
+    const boundsW = Math.max(1, bounds.right - bounds.left);
+    const boundsH = Math.max(1, bounds.bottom - bounds.top);
     const scale = height / boundsH;
     return {
         width: boundsW * scale,
         height,
         imgWidth: box.width * scale,
         imgHeight: box.height * scale,
-        left: (box.x - part.bounds.left) * scale,
-        top: (box.y - part.bounds.top) * scale,
+        left: (box.x - bounds.left) * scale,
+        top: (box.y - bounds.top) * scale,
     };
+}
+
+/** The rectangle around several parts, for a thumbnail that stacks them. */
+export function unionBounds(parts: readonly KitPartLike[]): KitPartLike["bounds"] {
+    return {
+        left: Math.min(...parts.map((part) => part.bounds.left)),
+        top: Math.min(...parts.map((part) => part.bounds.top)),
+        right: Math.max(...parts.map((part) => part.bounds.right)),
+        bottom: Math.max(...parts.map((part) => part.bounds.bottom)),
+    };
+}
+
+/**
+ * The layers that show a SKU's finish in a thumbnail: for a sprayer or pump,
+ * the head with its collar (the trim), never the overcap that hides them; for
+ * everything else, the closure. Seated layers only (a full plug is for EXPLODED).
+ */
+export function closureParts(kit: KitLike | null | undefined): KitPartLike[] {
+    if (!kit?.parts?.length) return [];
+    const seated = kit.parts.filter((part) => !part.views || part.views.includes("capon"));
+    const mechanism = seated.filter((part) => part.slot === "sprayer" || part.slot === "pump");
+    if (mechanism.length) {
+        return [...seated.filter((part) => part.slot === "collar"), ...mechanism].sort((a, b) => a.zOrder - b.zOrder);
+    }
+    const one = closurePart({ ...kit, parts: seated });
+    return one ? [one] : [];
 }
 
 /** Which layer stands for the closure in a thumbnail, most to least cap-like. */

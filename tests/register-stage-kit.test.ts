@@ -91,7 +91,7 @@ describe("kitFromRegister", () => {
         expect(cap.componentId).toBe(CAP.componentId);
     });
 
-    it("explodes parts straight up in assembly order, a component's layers of one slot moving as one piece", () => {
+    it("explodes parts straight up in assembly order; a pump's head, nozzle and collar travel as one piece", () => {
         const body = kit.parts.find((part) => part.slot === "body")!;
         const roller = kit.parts.find((part) => part.slot === "roller")!;
         const cap = kit.parts.find((part) => part.slot === "cap")!;
@@ -102,14 +102,33 @@ describe("kitFromRegister", () => {
 
         const pump = kitFromRegister("LB-CYL-CLR-9ML-LTN-BLK", PAYLOAD)!;
         const heads = pump.parts.filter((part) => part.slot === "pump");
-        expect(heads).toHaveLength(2);
-        expect(heads[0].exploded.dy).toBe(heads[1].exploded.dy);
         const collar = pump.parts.find((part) => part.slot === "collar")!;
         const overcap = pump.parts.find((part) => part.slot === "overcap")!;
-        // body → collar → pump → overcap, each lifted above the last
-        expect(collar.bounds.bottom + collar.exploded.dy).toBeCloseTo(pump.parts.find((part) => part.slot === "body")!.bounds.top - 24, 1);
-        expect(Math.max(...heads.map((part) => part.bounds.bottom + part.exploded.dy))).toBeLessThan(collar.bounds.top + collar.exploded.dy);
-        expect(overcap.bounds.bottom + overcap.exploded.dy).toBeLessThan(Math.min(...heads.map((part) => part.bounds.top + part.exploded.dy)));
+        expect(heads).toHaveLength(2);
+        // one mechanism: the same lift for both heads and the collar
+        expect(heads[0].exploded.dy).toBe(heads[1].exploded.dy);
+        expect(collar.exploded.dy).toBe(heads[0].exploded.dy);
+        const mechanismBottom = Math.max(collar.bounds.bottom, ...heads.map((part) => part.bounds.bottom)) + collar.exploded.dy;
+        const mechanismTop = Math.min(collar.bounds.top, ...heads.map((part) => part.bounds.top)) + collar.exploded.dy;
+        expect(mechanismBottom).toBeCloseTo(pump.parts.find((part) => part.slot === "body")!.bounds.top - 24, 1);
+        // the overcap is the only separate piece, above the mechanism
+        expect(overcap.bounds.bottom + overcap.exploded.dy).toBeCloseTo(mechanismTop - 24, 1);
+    });
+
+    it("draws a seated insert in CAP ON and SIDECAR and its full plug in EXPLODED when the register carries both", () => {
+        const plug = { ...ROLLER.layers[0], url: "https://blob/register/components/roller-plug.png", height: 330, anchor: { x: 91.5, y: 126 }, usage: "exploded" as const, z: "front" as const };
+        const seated = { ...ROLLER.layers[0], usage: "seated" as const };
+        const payload = { ...PAYLOAD, components: { ...PAYLOAD.components, [ROLLER.componentId]: { ...ROLLER, layers: [seated, plug] } } };
+        const both = kitFromRegister("GB-CYL-CLR-9ML-MRL-BKDT", payload)!;
+        const rollers = both.parts.filter((part) => part.slot === "roller");
+        expect(rollers.map((part) => part.views)).toEqual([["sidecar", "capon"], ["exploded"]]);
+        const context = { family: "Cylinder", capacityMl: 9, color: "Clear", applicator: "Metal Roller Ball", websiteSku: "GBCyl9MtlRollBlkDot" };
+        expect(stageLayout(both, "capon", context)!.parts.filter((part) => part.slot === "roller").map((part) => part.url)).toEqual([seated.url]);
+        expect(stageLayout(both, "exploded", context)!.parts.filter((part) => part.slot === "roller").map((part) => part.url)).toEqual([plug.url]);
+        // the plug lifts as the insert's own unit, the cap above it
+        const exploded = stageLayout(both, "exploded", context)!;
+        expect(exploded.parts.find((part) => part.slot === "roller")!.dyPct).toBeLessThan(0);
+        expect(exploded.parts.find((part) => part.slot === "cap")!.dyPct).toBeLessThan(exploded.parts.find((part) => part.slot === "roller")!.dyPct);
     });
 
     it("draws nothing for a SKU the register cannot render, and keys the rest by both SKUs", () => {

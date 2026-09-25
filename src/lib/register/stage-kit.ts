@@ -14,6 +14,7 @@
  * Nothing here reads pixels or Convex.
  */
 import { compose, footY, frameFromDatum, type Frame, type LayerGeometry, type PlateGeometry } from "./compose";
+import { stackedExplodeOffsets } from "@/lib/products/exploded-stack";
 
 export type StageDatum = { axisX: number; seatY: number; baselineY: number };
 /** The slots a kit part can occupy (convex/productKits.ts and the register's registerSlotV agree). */
@@ -39,7 +40,6 @@ const DEFAULT_PX_PER_MM = 10.5;
 /** Leave room above the seat for the tallest closure before the frame has to shrink the whole stack (the pilot glass is 775 px). */
 const MAX_GLASS_PX = 800;
 const FOOT_RATIO = 1061 / 1100;
-const EXPLODE_GAP_PX = 24;
 
 /** A datum for a body with no recorded frame: axis centred, foot on the canvas baseline, the pilot's px/mm unless the glass is too tall. */
 export function datumFromPlate(plate: PlateGeometry, canvas: { width: number; height: number } = STAGE_CANVAS): StageDatum {
@@ -56,7 +56,10 @@ export function stageDatum(bodyId: string, plate: PlateGeometry, canvas: { width
 // ---------- the register payload (registerStage:forSkus) ----------
 
 export type RegisterPlate = PlateGeometry & { plateKey: string; bodyId: string; glass: string; url: string; approved: boolean };
-export type RegisterLayer = LayerGeometry & { slot: KitSlot; url: string; approved: boolean };
+/** Which stage views a layer is for: a seated insert (clipped at the rim) for CAP ON and SIDECAR, its full plug for EXPLODED. */
+export type LayerUsage = "seated" | "exploded";
+export type StageViewName = "sidecar" | "capon" | "exploded";
+export type RegisterLayer = LayerGeometry & { slot: KitSlot; url: string; approved: boolean; usage?: LayerUsage | null };
 export type RegisterComponent = { componentId: string; type: string; layers: RegisterLayer[]; approved: boolean };
 export type RegisterBody = {
     bodyId: string; family: string; capacityMl: number | null; neck: string;
@@ -93,6 +96,8 @@ export type RegisterKitPart = {
     box: PartBox;
     /** The register component this layer came from (a plate has none). */
     componentId: string | null;
+    /** The views this part is drawn in; absent = every view. */
+    views?: StageViewName[];
 };
 
 export type RegisterKitMeta = {
@@ -133,37 +138,6 @@ function bodyBounds(plate: RegisterPlate, body: RegisterBody | undefined, frame:
         top: round(frame.seatY),
         bottom: round(footY(plate, frame)),
     };
-}
-
-/**
- * EXPLODED offsets: every part lifts straight up, stacked above the glass in
- * assembly order (explodeIndex ascending: the insert nearest the neck, then
- * the collar, the pump, the overcap), one gap apart. Layers of one component
- * and slot (a pump head and its nozzle) move as one piece.
- */
-function explodedOffsets(parts: Array<{ slot: string; componentId: string | null; explodeIndex: number; bounds: Bounds }>, glass: Bounds): Map<number, number> {
-    const units = new Map<string, { explodeIndex: number; top: number; bottom: number; indexes: number[] }>();
-    parts.forEach((part, index) => {
-        if (part.slot === "body") return;
-        const key = `${part.componentId ?? ""}|${part.slot}`;
-        const unit = units.get(key);
-        if (unit) {
-            unit.explodeIndex = Math.min(unit.explodeIndex, part.explodeIndex);
-            unit.top = Math.min(unit.top, part.bounds.top);
-            unit.bottom = Math.max(unit.bottom, part.bounds.bottom);
-            unit.indexes.push(index);
-        } else {
-            units.set(key, { explodeIndex: part.explodeIndex, top: part.bounds.top, bottom: part.bounds.bottom, indexes: [index] });
-        }
-    });
-    const offsets = new Map<number, number>();
-    let ceiling = glass.top - EXPLODE_GAP_PX;
-    for (const unit of [...units.values()].sort((a, b) => a.explodeIndex - b.explodeIndex || b.bottom - a.bottom)) {
-        const dy = round(ceiling - unit.bottom);
-        for (const index of unit.indexes) offsets.set(index, dy);
-        ceiling = unit.top + dy - EXPLODE_GAP_PX;
-    }
-    return offsets;
 }
 
 /**
@@ -215,11 +189,13 @@ export function kitFromRegister(
             derivation: "psd-layer",
             box,
             componentId: layer?.componentId ?? null,
+            ...(layer?.usage === "seated" ? { views: ["sidecar", "capon"] as StageViewName[] } : layer?.usage === "exploded" ? { views: ["exploded"] as StageViewName[] } : {}),
         };
     });
-    const glass = parts.find((part) => part.slot === "body")!.bounds;
-    const lifts = explodedOffsets(parts, glass);
-    lifts.forEach((dy, index) => { parts[index].exploded = { dx: 0, dy }; });
+    // EXPLODED offsets are computed over the parts of each view separately, so a seated insert and its full plug never stack against each other.
+    const lifts = stackedExplodeOffsets(parts.filter((part) => !part.views || part.views.includes("exploded")));
+    const explodable = parts.filter((part) => !part.views || part.views.includes("exploded"));
+    lifts.forEach((offset, index) => { explodable[index].exploded = offset; });
 
     const componentIds = [...new Set(assembly.parts.map((part) => part.componentId))];
     return {

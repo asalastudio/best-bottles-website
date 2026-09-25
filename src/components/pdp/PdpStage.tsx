@@ -12,6 +12,7 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import styles from "./pdp.module.css";
 import PdpKitPartImage from "./PdpKitPartImage";
+import PdpKitStackImage from "./PdpKitStackImage";
 import { displayImageUrl } from "@/lib/products/optimizable-image";
 import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/products/register-image";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
@@ -20,7 +21,7 @@ import type { Callout } from "@/lib/products/pdp-redesign/model";
 import {
     STAGE_VIEWS,
     bodyPart,
-    closurePart,
+    closureParts,
     stageLayout,
     type KitLike,
     type StageContext,
@@ -153,7 +154,7 @@ export default function PdpStage({
                 </span>
                 <div className={styles.railTrack} ref={railRef}>
                 {caps.map((cap) => {
-                    const part = closurePart(cap.kit);
+                    const parts = closureParts(cap.kit);
                     return (
                         <button
                             key={cap.id}
@@ -166,8 +167,8 @@ export default function PdpStage({
                             data-unavailable={cap.unavailable ? "true" : undefined}
                             onClick={() => onCapPick(cap.id)}
                         >
-                            {part && cap.kit
-                                ? <PdpKitPartImage part={part} canvas={cap.kit.canvas} height={capThumbHeight} />
+                            {parts.length && cap.kit
+                                ? <PdpKitStackImage parts={parts} canvas={cap.kit.canvas} height={capThumbHeight} />
                                 : <span className={styles.railSwatch} style={getMaterialSwatchStyle(cap.swatchName, {})} aria-hidden />}
                         </button>
                     );
