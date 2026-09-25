@@ -19,10 +19,12 @@ What is measured, per SKU, at 1000 × 1100:
                 clipped at the rim in the register, so only the visible part counts)
   silhouette    overlap of the whole assembly's row-filled silhouette
 
-Gate (proposed thresholds, to be confirmed with Jordan): seat and foot within
-2 px, body IoU ≥ 0.97, closure IoU ≥ 0.90, silhouette IoU ≥ 0.95. A SKU passes
-when every check passes. Thresholds are arguments so a ruling changes one
-number, not the measurement.
+Gate (thresholds accepted by Jordan, 2026-09-25): seat and foot within 2 px,
+body IoU ≥ 0.96, closure IoU ≥ 0.86, silhouette IoU ≥ 0.94. A SKU passes when
+every check passes. Thresholds are arguments so a later ruling changes one
+number, not the measurement. Also ruled the same day: the register keeps its
+rim-on-rim closure anchor, and a consumer that switches over stands the bottle
+on the legacy kit's pixels (render.ts's default frame).
 """
 from __future__ import annotations
 
@@ -177,9 +179,9 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--seat-px", type=float, default=2)
     parser.add_argument("--foot-px", type=float, default=2)
-    parser.add_argument("--body-iou", type=float, default=0.97)
-    parser.add_argument("--closure-iou", type=float, default=0.90)
-    parser.add_argument("--silhouette-iou", type=float, default=0.95)
+    parser.add_argument("--body-iou", type=float, default=0.96)
+    parser.add_argument("--closure-iou", type=float, default=0.86)
+    parser.add_argument("--silhouette-iou", type=float, default=0.94)
     args = parser.parse_args()
     thresholds = {"seatPx": args.seat_px, "footPx": args.foot_px, "bodyIou": args.body_iou, "closureIou": args.closure_iou, "silhouetteIou": args.silhouette_iou}
 

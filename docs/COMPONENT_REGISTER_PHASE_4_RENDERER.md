@@ -1,7 +1,7 @@
 # Component register — Phase 4: the renderer and the parity gate (17-415 Cylinder 9 mL)
 
-**Status: built and measured on 2026-09-25; at the checkpoint.** Nothing on the storefront reads the
-register yet. That switch is Phase 5, one consumer at a time, after this gate is accepted.
+**Status: gate ACCEPTED by Jordan, 2026-09-25** ("accept the thresholds, keep rim-on-rim, stand on legacy
+pixels"). Nothing on the storefront reads the register yet; that switch is Phase 5, one consumer at a time.
 
 ## What was built
 
@@ -56,7 +56,7 @@ The register's closures also sit ~5 px (0.5 mm) lower than the legacy caps. The 
 the rim (Phase 3: rim on rim with the master capped photo); the legacy caps hover half a millimetre above it.
 Relative to their own body, register and legacy closures are centred within a pixel of each other.
 
-## Proposed gate thresholds
+## Gate thresholds (accepted 2026-09-25)
 
 | check | threshold | why |
 |---|---|---|
@@ -69,14 +69,15 @@ At these thresholds all 133 pass (`parity-pilot.json`, pinned by `tests/register
 first-draft thresholds (0.97 / 0.90 / 0.95) 69 pass, and every miss is on Amber, Cobalt or Frosted for the
 reason above. The thresholds are arguments to `parity_gate.py`; a different ruling changes one number.
 
-## Decisions for Jordan
+## Rulings (Jordan, 2026-09-25)
 
-1. Accept the thresholds above as the cut-over gate for the pilot, or set stricter ones knowing Amber and
-   Cobalt then fail against their slimmer legacy photos.
-2. Where the storefront should stand the bottle when a consumer switches: on the legacy body's pixels (the
-   bottle does not move) or on the family datum (every SKU of a body stands identically; 12 kit-less SKUs
-   already do). The renderer supports both.
-3. The 0.5 mm closure height: keep the register's rim-on-rim anchor (recommended) or match the legacy kits.
+1. **Thresholds accepted** as the cut-over gate for the pilot: seat/foot ≤ 2 px, body ≥ 0.96, closure ≥ 0.86,
+   silhouette ≥ 0.94. They are the defaults in `parity_gate.py`.
+2. **Stand on the legacy pixels.** When a consumer switches, the bottle is framed on the legacy body's own
+   pixels (`frameFromLegacyKit` with the measured anchors), so nothing moves on the page. The 12 kit-less
+   SKUs stand on the pilot datum.
+3. **Keep rim-on-rim.** The register's closure anchor stays at the rim; the legacy caps' 0.5 mm hover is not
+   reproduced.
 
 ## Phase 5, when the gate is accepted
 
