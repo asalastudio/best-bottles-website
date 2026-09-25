@@ -240,6 +240,11 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune,
     });
     return scene;
   }, [mats, plasticEnv, metalEnv, matcaps, pbrMaps]);
+  // This memo BUILDS three.js scenes — it clones GLTFs and assigns materials
+  // onto their meshes. The compiler cannot preserve a memo whose body mutates
+  // hook-returned objects, and rebuilding these scenes every render is exactly
+  // what the memo exists to prevent.
+  // eslint-disable-next-line react-hooks/preserve-manual-memoization
   const parts = useMemo(() => {
     if (mode === "none" || !mats) return null;
     const g: { scene: THREE.Object3D }[] = [];
@@ -531,7 +536,7 @@ function StudioEnv({ studioId, intensity, rotationDeg }:
 
   // hybrid = HDRI + Lightformers baked into ONE cubemap (the candidate
   // single-environment architecture) — same component the scene shell mounts
-  if (preset.hybrid) return <StudioEnvironment />;
+  if (preset.managedEnv) return <StudioEnvironment />;
   if (preset.hdri) return <Environment files={preset.hdri} />;
 
   // legacy in-scene rig, kept only for A/B. Its narrow hot rim pair is what
@@ -580,6 +585,7 @@ function Rig({ azimuth, elevation, distance, targetY, fov, nonce }: {
     const cam = camera as THREE.PerspectiveCamera;
     /* eslint-disable react-hooks/immutability -- R3F's camera is imperative; this rig IS the camera controller */
     if (cam.isPerspectiveCamera && cam.fov !== fov) {
+      // eslint-disable-next-line react-hooks/immutability
       cam.fov = fov; cam.updateProjectionMatrix();
     }
     /* eslint-enable react-hooks/immutability */
@@ -690,6 +696,7 @@ export default function MaterialLab(
   const hasThreaded = threadedIds.includes(body.bodyId);
   const bakeMax = bake?.bodyId === body.bodyId ? bake.max : null;
 
+  // bakeMax is keyed to bodyId above, so stale measurements stay hidden.
   useEffect(() => {
     let dead = false;
     const bodyId = body.bodyId;
