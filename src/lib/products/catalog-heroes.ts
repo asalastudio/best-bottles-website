@@ -7,9 +7,10 @@ import sleekReleaseRows from "./catalog-hero-sleek-release.json";
 import apothecaryReleaseRows from "./catalog-hero-apothecary-release.json";
 import remaining42ReleaseRows from "./catalog-hero-remaining-42-release.json";
 import nextBatchReleaseRows from "./catalog-hero-next-batch-release.json";
+import batch3ReleaseRows from "./catalog-hero-batch3-release.json";
 
 export type CatalogHero = Omit<(typeof heroRows)[number], "shopifyVariantId"> & { shopifyVariantId: string | null };
-const completePilotRows = [...pilotRows, ...crePilotRows, ...elegantReleaseRows, ...bostonDivaReleaseRows, ...sleekReleaseRows, ...apothecaryReleaseRows, ...remaining42ReleaseRows, ...nextBatchReleaseRows];
+const completePilotRows = [...pilotRows, ...crePilotRows, ...elegantReleaseRows, ...bostonDivaReleaseRows, ...sleekReleaseRows, ...apothecaryReleaseRows, ...remaining42ReleaseRows, ...nextBatchReleaseRows, ...batch3ReleaseRows];
 function activePilotRows(): CatalogHero[] {
     return process.env.NEXT_PUBLIC_CATALOG_HERO_PILOT === "families-2026-09-22"
         ? completePilotRows : pilotRows;
