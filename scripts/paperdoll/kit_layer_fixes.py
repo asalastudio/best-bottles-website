@@ -201,9 +201,11 @@ def sibling_mask(kits, kit, part):
 
 
 def strip_with_sibling(a, mask):
+    """Keep only what lies inside the sibling's outline. No flood strip after it: a shiny silver cap reads
+    as near-white and a flood eats it to a sliver (prod Empire 50 Shiny Silver, caught on the sheet)."""
     out = a.copy()
     out[~mask, 3] = 0
-    return strip_patch(out)
+    return out
 
 
 # ---------------------------------------------------------------- audit
