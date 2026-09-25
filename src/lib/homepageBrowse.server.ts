@@ -9,4 +9,4 @@ import { buildHomeBrowseData } from './homepageBrowse';
 export const getHomepageBrowse = unstable_cache(async () => {
     const groups = await getCatalogConvexClient().query(api.products.getAllCatalogGroups, {});
     return buildHomeBrowseData(groups, heroes);
-}, ['homepage-browse-v1'], { revalidate: 60 });
+}, ['homepage-browse-v2'], { revalidate: 60 });

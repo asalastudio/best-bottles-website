@@ -14,22 +14,24 @@ afterEach(() => vi.unstubAllEnvs());
 // tassel bottles, whose cards showed plates until now.
 const NEW_SKUS = ['GBSQSTBlue', 'GBSQSTGREEN', 'GBCrclFrst50AnSpTslBlk', 'GBRndFrst128AnSpTslRed'];
 const RE_RENDERED = [
-  'GBRect10Gl', 'GBRect10MtlRollBlkDot', 'GBRect10SpryGlMatt', 'GBSqr15Gl', 'GBSqr15MtlRollBlkDot', 'GBSqr15SpryGlMatt',
+  'GBRect10Gl', 'GBRect10MtlRollBlkDot', 'GBRect10SpryGlMatt',
   'GBSQSTClear', 'GBTRDPClear', 'GBTrdpBlue', 'GBTRDPGreen',
 ];
 
 // The 13 vials of this release were re-rendered proportional to Jordan's caliper
-// heights and moved to catalog-hero-vials-release.json (see that test).
+// heights and moved to catalog-hero-vials-release.json (see that test); the three
+// Square 15 ml heroes were regenerated as batch 6 (catalog-hero-batch6-release.json).
 describe('Batch 3 catalog hero release (Square, Rectangle, Tulip, Diamond, frosted tassels, Teardrop, SQST)', () => {
-  it('ships the 28 approved exact-SKU Sunburst renders with intact image files', async () => {
-    expect(rows).toHaveLength(28);
-    expect(new Set(rows.map(row => row.websiteSku)).size).toBe(28);
+  it('ships the 25 approved exact-SKU Sunburst renders with intact image files', async () => {
+    expect(rows).toHaveLength(25);
+    expect(new Set(rows.map(row => row.websiteSku)).size).toBe(25);
     expect(rows.some(row => row.family === 'Vial')).toBe(false);
-    expect(Object.fromEntries(Object.entries(approval.scope))).toEqual({ Square: 3, Rectangle: 9, Tulip: 6, Diamond: 5, Circle: 1, Round: 1, Teardrop: 3 });
+    expect(rows.some(row => row.family === 'Square')).toBe(false);
+    expect(Object.fromEntries(Object.entries(approval.scope))).toEqual({ Rectangle: 9, Tulip: 6, Diamond: 5, Circle: 1, Round: 1, Teardrop: 3 });
     for (const [family, count] of Object.entries(approval.scope)) {
       expect(rows.filter(row => row.family === family)).toHaveLength(count);
     }
-    expect(approval.rows).toHaveLength(28);
+    expect(approval.rows).toHaveLength(25);
     for (const hero of rows) {
       const evidence = approval.rows.find(row => row.sku === hero.websiteSku)!;
       expect(evidence.status).toBe('approved');
