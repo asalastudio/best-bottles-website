@@ -67,6 +67,14 @@ export type PdpStageProps = {
 /** Two callout labels need this much of the stage's height between their anchors (a three-line label is ~48 px in a ~560 px stage, plus breathing room). */
 const CALLOUT_MIN_GAP_PCT = 10;
 
+/**
+ * A canvas percentage as a length inside the stage box. The 10:11 canvas is
+ * centred in the fluid stage (`.stage` defines --pdp-canvas-*), so a callout
+ * placed in stage percentages drifts off its part as the stage widens.
+ */
+const canvasX = (pct: number) => `calc(var(--pdp-canvas-x) + var(--pdp-canvas-w) * ${pct / 100})`;
+const canvasY = (pct: number) => `calc(var(--pdp-canvas-y) + var(--pdp-canvas-h) * ${pct / 100})`;
+
 /** The mobile layout (option 4a) applies below 900px; thumbnails shrink with it. */
 export function useIsPdpMobile(): boolean {
     const [mobile, setMobile] = useState(false);
@@ -186,7 +194,7 @@ export default function PdpStage({
                 <div className={styles.stageGrid} data-on={layout?.grid ? "true" : "false"} aria-hidden />
                 <div className={styles.stageBaseline} data-on={layout ? (layout.baseline ? "true" : "false") : "true"} aria-hidden />
                 {layout ? (
-                    <div className={styles.stageCanvasHost}>
+                    <div className={styles.stageCanvasHost} role="img" aria-label={fallbackAlt}>
                         <div className={styles.stageCanvas}>
                             <div className={styles.stageFrame} style={{ transform: layout.frameCss }}>
                                 {layout.parts.map((part) => part.box ? (
@@ -243,13 +251,13 @@ export default function PdpStage({
                     {calloutRows.map(({ callout, anchor, shiftPct }) => {
                         if (!anchor) return null;
                         const rowStyle: CSSProperties = {
-                            left: `${anchor.xPct}%`,
-                            top: `calc(${anchor.yPct + shiftPct}% - 8px)`,
+                            left: canvasX(anchor.xPct),
+                            top: `calc(${canvasY(anchor.yPct + shiftPct)} - 8px)`,
                         };
                         return (
                             <div key={callout.key} className={styles.calloutGroup} data-callout={callout.key} data-shifted={shiftPct > 0 ? "true" : undefined}>
-                                <span className={styles.calloutDot} style={{ left: `${anchor.xPct}%`, top: `${anchor.yPct}%` }} />
-                                {shiftPct > 0 ? <span className={styles.calloutJog} style={{ left: `${anchor.xPct}%`, top: `${anchor.yPct}%`, height: `${shiftPct}%` }} /> : null}
+                                <span className={styles.calloutDot} style={{ left: canvasX(anchor.xPct), top: canvasY(anchor.yPct) }} />
+                                {shiftPct > 0 ? <span className={styles.calloutJog} style={{ left: canvasX(anchor.xPct), top: canvasY(anchor.yPct), height: `calc(var(--pdp-canvas-h) * ${shiftPct / 100})` }} /> : null}
                                 <div className={styles.callout} style={rowStyle}>
                                     <span className={styles.calloutLeader} />
                                     <span className={styles.calloutLabel}>

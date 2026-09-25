@@ -216,6 +216,12 @@
     margin-left: 1px;
     height: 540px;
     container-type: size;
+    /* The canvas box inside the stage (.stageCanvas, centred by .stageCanvasHost). Callout
+       anchors are percentages of the canvas, so the dots and leaders place through these. */
+    --pdp-canvas-w: min(100cqw, calc(100cqh * 10 / 11));
+    --pdp-canvas-h: min(100cqh, calc(100cqw * 11 / 10));
+    --pdp-canvas-x: calc((100cqw - var(--pdp-canvas-w)) / 2);
+    --pdp-canvas-y: calc((100cqh - var(--pdp-canvas-h)) / 2);
 }
 
 .stageGrid {

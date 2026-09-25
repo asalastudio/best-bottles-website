@@ -26,6 +26,7 @@ import { dispatchPdpContextChange } from "@/lib/grace/pageContextEvents";
 import type { PlateRef } from "@/lib/paper-doll/plates";
 import type { ItemDescription } from "@/lib/products/item-description/resolve";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
+import { isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import { formatVolumeQtyRange, resolveQuotedUnitPrice } from "@/lib/volumePricing";
 import {
     buildYourBottleHref,
@@ -83,9 +84,11 @@ function kitFor(kits: Record<string, KitLike | null>, variant: { websiteSku?: st
     return (variant.websiteSku ? kits[variant.websiteSku] : null) ?? (variant.graceSku ? kits[variant.graceSku] : null) ?? null;
 }
 
+/** A photograph the stage may fall back to: never a Sanity render, never a 2020 bestbottles.com store image (the classic page blocks those too). */
 function usableImage(url: string | null | undefined): string | null {
     if (!url) return null;
     if (/cdn\.sanity\.io/.test(url)) return null;
+    if (isLegacyBestBottlesImageUrl(url)) return null;
     return url;
 }
 
@@ -145,7 +148,9 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         const query = [next, carried].filter(Boolean).join("&");
         const target = `${pathname}${query ? `?${query}` : ""}`;
         if (`${window.location.pathname}${window.location.search}` !== target) {
-            window.history.replaceState(window.history.state, "", target);
+            // A null state lets Next's patched History API keep its router state in step
+            // (passing Next's own state object makes it treat the call as internal and skip that).
+            window.history.replaceState(null, "", target);
         }
     }, [picks, rollers, pathname]);
 
