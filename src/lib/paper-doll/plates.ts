@@ -62,6 +62,9 @@ export type PlateRef = {
     imageCapOff: string | null;
     thumb?: string;
     thumbCapOff?: string | null;
+    /** `image` is a released catalog hero: already framed on its bone canvas, so
+     *  the stage fills with bone and skips the plate capacity calibration. */
+    heroStage?: boolean;
 };
 
 /** The 9 mL · 17-415 Cylinder's family id (legacy id kept as an alias in the registry). */

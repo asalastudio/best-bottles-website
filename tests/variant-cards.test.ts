@@ -76,16 +76,18 @@ describe("released Atomizer heroes on the card and the PDP", () => {
     });
 
     it("stages the selected SKU's released hero on the PDP and keeps plates elsewhere", () => {
-        const plates: Record<string, { image: string; imageCapOff: string | null; thumb?: string }> = {
+        const plates: Record<string, { image: string; imageCapOff: string | null; thumb?: string; heroStage?: boolean }> = {
             "GB-CYL-BLU-10ML-ATM-BLU": { image: "/plates/blu.webp", imageCapOff: "/plates/blu-off.webp", thumb: "/plates/blu-t.webp" },
             NoHero: { image: "/plates/other.webp", imageCapOff: null },
         };
         const staged = withReleasedHeroStages(atomizer10, [blu, { websiteSku: "NoHero" }], plates);
         expect(staged["GB-CYL-BLU-10ML-ATM-BLU"].image).toContain("/GBAtom10Blu.");
         expect(staged["GB-CYL-BLU-10ML-ATM-BLU"].imageCapOff).toBeNull();
+        expect(staged["GB-CYL-BLU-10ML-ATM-BLU"].heroStage).toBe(true);
         expect(staged["GB-CYL-BLU-10ML-ATM-BLU"].thumb).toBe("/plates/blu-t.webp");
         expect(staged.GBAtom10Blu.image).toContain("/GBAtom10Blu.");
         expect(staged.NoHero).toBe(plates.NoHero);
+        expect("heroStage" in staged.NoHero).toBe(false);
     });
 
     it("leaves other families' plates untouched", () => {

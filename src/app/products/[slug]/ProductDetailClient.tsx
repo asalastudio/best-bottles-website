@@ -1106,7 +1106,7 @@ export default function ProductDetailClient({
     initialCompatibility?: PdpCompatibilityPayload | null;
     siblingGroups?: SiblingGroup[];
     /** static paper-doll plates for this catalogue, keyed by graceSku or websiteSku (the productPlates index; bytes on Vercel Blob) */
-    platesBySku?: Record<string, { image: string; imageCapOff: string | null; localCandidate?: boolean; reviewStatus?: string }>;
+    platesBySku?: Record<string, { image: string; imageCapOff: string | null; localCandidate?: boolean; reviewStatus?: string; heroStage?: boolean }>;
     localKits?: Record<string, LocalKitPilot>;
     localComponentKits?: Record<string, BuilderKit>;
     localAssetPreview?: boolean;
@@ -2210,6 +2210,7 @@ export default function ProductDetailClient({
                                 currentSlug={group.slug}
                                 variantImageUrl={getPdpSkuFallbackImage(selectedVariant?.websiteSku) ?? usableProductImageUrl(selectedVariant?.imageUrl) ?? null}
                                 plateImage={selectedPlate?.image ?? null}
+                                plateIsReleasedHero={Boolean(selectedPlate?.heroStage)}
                                 plateImageCapOff={selectedPlate?.localCandidate ? selectedPlate.imageCapOff : verifiedCapOffPhoto(selectedVariant?.websiteSku) ?? selectedPlate?.imageCapOff ?? null}
                                 heightWithCap={selectedVariant?.heightWithCap ?? null}
                                 heightWithoutCap={selectedVariant?.heightWithoutCap ?? null}
