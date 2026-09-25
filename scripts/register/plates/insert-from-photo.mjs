@@ -71,36 +71,61 @@ async function main() {
     const meta = await photo.metadata();
     const { data, info } = await photo.raw().toBuffer({ resolveWithObject: true });
     const hasRealAlpha = (() => { for (let i = 3; i < data.length; i += 4) if (data[i] < 250) return true; return false; })();
+    // Background = the near-white region connected to the image border (a flood fill), so the
+    // frosted plastic's own bright highlights inside the part never turn into holes.
     const keyed = Buffer.alloc(data.length);
-    for (let i = 0; i < data.length; i += 4) {
-        const lum = (data[i] + data[i + 1] + data[i + 2]) / 3;
+    const W = info.width, H = info.height;
+    const lumAt = (i) => (data[i * 4] + data[i * 4 + 1] + data[i * 4 + 2]) / 3;
+    const background = new Uint8Array(W * H);
+    if (!hasRealAlpha) {
+        const queue = [];
+        const push = (x, y) => { const k = y * W + x; if (!background[k] && lumAt(k) >= 236) { background[k] = 1; queue.push(k); } };
+        for (let x = 0; x < W; x++) { push(x, 0); push(x, H - 1); }
+        for (let y = 0; y < H; y++) { push(0, y); push(W - 1, y); }
+        while (queue.length) {
+            const k = queue.pop(); const x = k % W, y = (k - x) / W;
+            if (x > 0) push(x - 1, y); if (x < W - 1) push(x + 1, y); if (y > 0) push(x, y - 1); if (y < H - 1) push(x, y + 1);
+        }
+    }
+    for (let k = 0; k < W * H; k++) {
+        const i = k * 4;
         keyed[i] = data[i]; keyed[i + 1] = data[i + 1]; keyed[i + 2] = data[i + 2];
-        keyed[i + 3] = hasRealAlpha ? data[i + 3] : lum >= PAPER ? 0 : lum < 205 ? 255 : Math.round(((PAPER - lum) / 35) * 255);
+        if (hasRealAlpha) { keyed[i + 3] = data[i + 3]; continue; }
+        if (background[k]) { keyed[i + 3] = 0; continue; }
+        // soften the outline: a part pixel touching the background fades by how close to paper it is
+        const x = k % W, y = (k - x) / W;
+        const edge = (x > 0 && background[k - 1]) || (x < W - 1 && background[k + 1]) || (y > 0 && background[k - W]) || (y < H - 1 && background[k + W]);
+        keyed[i + 3] = edge ? Math.max(90, Math.min(255, Math.round((250 - lumAt(k)) / 30 * 255))) : 255;
     }
     const rows = rowsOf(keyed, { ...info, hasAlpha: true });
     const f = flangeOf(rows);
     const scale = stubFlange.flangeWidth / f.flangeWidth;
     const outW = Math.round(info.width * scale), outH = Math.round(info.height * scale);
     const fitted = await sharp(keyed, { raw: { width: info.width, height: info.height, channels: 4 } }).resize(outW, outH, { kernel: "lanczos3" }).png().toBuffer();
-    // Crop to the insert and place it on the stub's column: axis on the stub's axis, flange underside at the stub's anchor row.
+    // The layer is the fitted photo cropped to the insert; its anchor is its own axis and flange underside,
+    // so compose() seats it at the rim exactly as it seats the stub (no shared canvas needed).
     const fittedRaw = await sharp(fitted).raw().toBuffer({ resolveWithObject: true });
-    const fr = flangeOf(rowsOf(fittedRaw.data, { ...fittedRaw.info, hasAlpha: true }));
-    const dx = Math.round(layer.anchor.x - fr.axis), dy = Math.round(layer.anchor.y - fr.flangeBottom);
-    const finalW = Math.max(stubRaw.info.width, outW + Math.abs(dx)), finalH = fr.bottom + dy + 2;
-    const final = await sharp({ create: { width: finalW, height: finalH, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } } })
-        .composite([{ input: fitted, left: dx, top: dy }]).png().toBuffer();
+    const frows = rowsOf(fittedRaw.data, { ...fittedRaw.info, hasAlpha: true });
+    const fr = flangeOf(frows);
+    const filledRows = frows.map((r, y) => ({ y, r })).filter((e) => e.r);
+    const bbox = { left: Math.min(...filledRows.map((e) => e.r.first)), right: Math.max(...filledRows.map((e) => e.r.last)), top: filledRows[0].y, bottom: filledRows[filledRows.length - 1].y };
+    const pad = 2;
+    const cropLeft = Math.max(0, bbox.left - pad), cropTop = Math.max(0, bbox.top - pad);
+    const finalW = Math.min(outW, bbox.right + pad + 1) - cropLeft, finalH = Math.min(outH, bbox.bottom + pad + 1) - cropTop;
+    const final = await sharp(fitted).extract({ left: cropLeft, top: cropTop, width: finalW, height: finalH }).png().toBuffer();
+    const anchor = { x: Number((fr.axis - cropLeft).toFixed(1)), y: fr.flangeBottom - cropTop };
     const base = resolve(ROOT, "output", "register-plates", "inserts", componentId);
     mkdirSync(resolve(base, "final"), { recursive: true });
     writeFileSync(resolve(base, "final", `${name}.png`), final);
     const plugMm = (fr.bottom - fr.flangeBottom) / layer.pxPerMm;
-    writeFileSync(resolve(base, "final", `${name}.json`), JSON.stringify({ componentId, candidate: name, source: photoPath, width: finalW, height: finalH, anchor: { x: layer.anchor.x, y: layer.anchor.y }, pxPerMm: layer.pxPerMm, plugMm: Number(plugMm.toFixed(1)), scale: Number(scale.toFixed(4)), photo: { width: meta.width, height: meta.height, hasAlpha: hasRealAlpha } }, null, 1));
+    writeFileSync(resolve(base, "final", `${name}.json`), JSON.stringify({ componentId, candidate: name, source: photoPath, width: finalW, height: finalH, anchor, pxPerMm: layer.pxPerMm, plugMm: Number(plugMm.toFixed(1)), scale: Number(scale.toFixed(4)), photo: { width: meta.width, height: meta.height, hasAlpha: hasRealAlpha } }, null, 1));
     // Review: stub | photographed insert, at 3x, rim line in gold.
     const S = 3;
-    const cells = [{ label: "seated stub (register)", buf: stub, w: stubRaw.info.width, h: stubRaw.info.height }, { label: `${name}: plug ${plugMm.toFixed(1)} mm below the rim`, buf: final, w: finalW, h: finalH }];
+    const cells = [{ label: "seated stub (register)", buf: stub, w: stubRaw.info.width, h: stubRaw.info.height, rim: layer.anchor.y }, { label: `${name}: plug ${plugMm.toFixed(1)} mm below the rim`, buf: final, w: finalW, h: finalH, rim: anchor.y }];
     const cellW = Math.max(...cells.map((c) => c.w)) * S, cellH = Math.max(...cells.map((c) => c.h)) * S;
     const sheetW = 20 + cells.length * (cellW + 20), sheetH = 50 + cellH + 40;
     const overlays = await Promise.all(cells.map(async (c, i) => ({ input: await sharp(c.buf).resize(c.w * S, c.h * S, { kernel: "nearest" }).png().toBuffer(), left: 20 + i * (cellW + 20), top: 40 })));
-    const svg = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${sheetW}" height="${sheetH}"><style>text{font-family:Helvetica,Arial;fill:#1c1c1e}</style><text x="20" y="26" font-size="15">${componentId}: the seated stub and the photographed insert fitted to it (flange width and axis matched; the flange underside is the rim).</text>${cells.map((c, i) => `<text x="${20 + i * (cellW + 20)}" y="${sheetH - 14}" font-size="13">${c.label}</text><line x1="${20 + i * (cellW + 20)}" y1="${40 + layer.anchor.y * S}" x2="${20 + i * (cellW + 20) + cellW}" y2="${40 + layer.anchor.y * S}" stroke="#9e814a" stroke-width="1" stroke-dasharray="4 3"/>`).join("")}</svg>`);
+    const svg = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${sheetW}" height="${sheetH}"><style>text{font-family:Helvetica,Arial;fill:#1c1c1e}</style><text x="20" y="26" font-size="15">${componentId}: the seated stub and the photographed insert fitted to it (flange width and axis matched; the flange underside is the rim).</text>${cells.map((c, i) => `<text x="${20 + i * (cellW + 20)}" y="${sheetH - 14}" font-size="13">${c.label}</text><line x1="${20 + i * (cellW + 20)}" y1="${40 + c.rim * S}" x2="${20 + i * (cellW + 20) + cellW}" y2="${40 + c.rim * S}" stroke="#9e814a" stroke-width="1" stroke-dasharray="4 3"/>`).join("")}</svg>`);
     await sharp({ create: { width: sheetW, height: sheetH, channels: 4, background: { r: 0xf5, g: 0xf3, b: 0xef, alpha: 1 } } }).composite([...overlays, { input: svg, left: 0, top: 0 }]).png().toFile(resolve(base, `review-${name}.png`));
     console.log(`${componentId}: photo ${meta.width}x${meta.height} (${hasRealAlpha ? "alpha" : "keyed"}) → ${finalW}x${finalH} at ${layer.pxPerMm} px/mm, flange scaled ${scale.toFixed(3)}, plug ${plugMm.toFixed(1)} mm; ${resolve(base, `review-${name}.png`)}`);
     console.log(`next: npx tsx scripts/register/plates/push-insert.ts --component ${componentId} --candidate ${name} --apply`);
