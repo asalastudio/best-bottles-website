@@ -24,7 +24,9 @@ describe("heroes recorded under slugs production has since renamed", () => {
 
     it("lets the released hero win the card on a renamed group", () => {
         const staticHero = getCatalogHero("aluminum-bottle-65ml-mixed-20-410", aluminum65);
-        const card = resolveLiveCatalogCardHero({ heroImageUrl: null, staticHero, variants: aluminum65 });
+        // A live Shopify group photo outranks every hero except a released one.
+        const heroImageUrl = "https://cdn.shopify.com/s/files/1/0000/files/alu65.png";
+        const card = resolveLiveCatalogCardHero({ heroImageUrl, staticHero, variants: aluminum65 });
         expect(card.imageUrl).toBe(staticHero?.url);
         expect(card.imageUrl).toContain("/next-four-approved-2026-09-24/");
     });
