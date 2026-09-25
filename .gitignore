@@ -245,3 +245,6 @@ data/descriptions/pdp/catalog-facts.json
 
 # Register plate re-renders (Sunburst candidates, fitted finals, review sheets); regenerable
 /output/register-plates/
+
+# Dimension drawings (Sunburst traces, fitted finals, review sheets); regenerable
+/output/register-drawings/

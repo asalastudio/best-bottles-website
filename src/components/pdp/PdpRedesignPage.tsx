@@ -60,6 +60,7 @@ import styles from "./pdp.module.css";
 import PdpBuyBox, { type AddState } from "./PdpBuyBox";
 import PdpStage from "./PdpStage";
 import { PdpBuildStrip, PdpCollectionBand, PdpOrderLines, PdpProductInfo, PdpStickyBar, PdpTechSheet, type OrderLineView } from "./PdpSections";
+import { drawingFor, drawingStyleFromQuery } from "@/lib/products/pdp-redesign/drawings";
 
 export type PdpRedesignPayload = {
     slug: string;
@@ -378,7 +379,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                     href={buildYourBottleHref(group, collection?.band ?? null)}
                 />
 
-                <PdpTechSheet rows={techSheetRows(selected, group)} onPrint={() => window.print()} />
+                <PdpTechSheet rows={techSheetRows(selected, group)} onPrint={() => window.print()} drawing={drawingFor(slug, selected, drawingStyleFromQuery(searchParams.get("drawing")))} />
 
                 {collection && (
                     <PdpCollectionBand band={collection.band} description={collection.description} familyHref={familyHref} familyLabel={group.family} />

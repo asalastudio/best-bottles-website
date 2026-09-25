@@ -1072,6 +1072,16 @@
     padding: 8px;
 }
 
+/* A real drawing: the trace on the card's white, figures in the page's type. */
+.techDrawing[data-has-drawing="true"] {
+    aspect-ratio: 200 / 280;
+    background: #fff;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    align-items: stretch;
+}
+
 .techHead {
     display: flex;
     justify-content: space-between;

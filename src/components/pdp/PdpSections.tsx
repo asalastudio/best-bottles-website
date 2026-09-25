@@ -10,6 +10,8 @@ import type { CSSProperties, ReactNode } from "react";
 import LocaleLink from "@/components/LocaleLink";
 import styles from "./pdp.module.css";
 import PdpKitPartImage from "./PdpKitPartImage";
+import PdpDimensionDrawing from "./PdpDimensionDrawing";
+import type { DrawingSpec } from "@/lib/products/pdp-redesign/drawings";
 import { useIsPdpMobile } from "./PdpStage";
 import { ORDER_MINIMUM } from "@/lib/checkout";
 import type { CollectionBand, TechRow } from "@/lib/products/pdp-redesign/model";
@@ -137,12 +139,14 @@ export function PdpBuildStrip({
 
 // ── Tech sheet ────────────────────────────────────────────────────────────────
 
-export function PdpTechSheet({ rows, onPrint }: { rows: TechRow[]; onPrint?: () => void }) {
+export function PdpTechSheet({ rows, onPrint, drawing = null }: { rows: TechRow[]; onPrint?: () => void; drawing?: DrawingSpec | null }) {
     if (rows.length === 0) return null;
     return (
         <section className={styles.techWrap} aria-label="Tech sheet" data-testid="pdp-tech-sheet">
             <div className={styles.tech}>
-                <div className={styles.techDrawing} aria-hidden>dimension drawing</div>
+                {drawing
+                    ? <div className={styles.techDrawing} data-has-drawing="true"><PdpDimensionDrawing spec={drawing} /></div>
+                    : <div className={styles.techDrawing} aria-hidden>dimension drawing</div>}
                 <div>
                     <div className={styles.techHead}>
                         <span className={styles.techLabel}>TECH SHEET</span>
