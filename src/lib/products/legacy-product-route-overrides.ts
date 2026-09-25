@@ -13,6 +13,9 @@ const LEGACY_PRODUCT_ROUTE_OVERRIDES: Record<string, string> = {
     // The 2026-09-20 Shopify webhook split the 5 ml Slim atomizers into this
     // group; they moved back into atomizer-5ml on 2026-09-25 and it is empty.
     "atomizer-5ml-slim": "atomizer-5ml",
+    // The Minaret dab-on caps moved into their families' cap groups on 2026-09-25.
+    "rectangle-10ml-clear-13-415-finemist": "footed-rectangle-10ml-clear-13-415",
+    "elegant-15ml-clear-13-415-capclosure": "elegant-15ml-clear-13-415",
 };
 
 export function isLegacyProductRouteAlias(slug: string): boolean {

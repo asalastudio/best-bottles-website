@@ -42,7 +42,7 @@
 .choice[data-disabled=true] input { cursor: not-allowed; }
 .choice[data-disabled=true] img { opacity: .6; }
 .check { position: absolute; z-index: 1; right: 4px; top: 4px; width: 22px; height: 22px; border-radius: 50%; color: white; background: var(--gold); display: grid; place-items: center; }
-.bottleGrid .choice, .glassGrid .choice { background: #eeebe5; }
+.bottleGrid .choice, .glassGrid .choice { background: #f5f3ef; }
 .bottleGrid strong, .glassGrid strong { font-size: 1rem; font-weight: 600; }
 .bottleThumb, .glassThumb { position: relative; width: 100%; aspect-ratio: 1 / .78; min-height: 110px; max-height: 132px; margin-bottom: 4px; display: flex; align-items: flex-end; justify-content: center; }
 .bottleThumb [data-slate], .glassThumb [data-slate] { position: absolute; inset: 10px 16%; border-radius: 4px; background: linear-gradient(105deg, #b7c0c9 0%, #e4e9ee 42%, #b7c0c9 86%); background-size: 220% 100%; animation: slateSweep 1.3s ease-in-out infinite; pointer-events: none; z-index: 0; }
@@ -54,7 +54,7 @@
 .bottleThumb [data-chooser-img], .bottleThumb img, .bottleThumb svg, .glassThumb [data-chooser-img], .glassThumb img, .glassThumb svg { position: relative; z-index: 1; }
 @keyframes slateSweep { 0%, 100% { background-position: 100% 0; } 50% { background-position: 0 0; } }
 @media (prefers-reduced-motion: reduce) { .bottleThumb [data-slate], .glassThumb [data-slate] { animation: none; opacity: .7; } }
-.componentThumb, .finishThumb { position: relative; overflow: hidden; width: 100%; height: 80px; display: grid; place-items: center; padding: 6px; background: #eeebe5; }
+.componentThumb, .finishThumb { position: relative; overflow: hidden; width: 100%; height: 80px; display: grid; place-items: center; padding: 6px; background: #f5f3ef; }
 .componentThumb { height: 92px; }
 .componentThumb img, .finishThumb img { object-fit: contain; width: 100%; height: 100%; mix-blend-mode: multiply; min-height: 0; }
 .preview { position: sticky; top: 0; z-index: 5; background: var(--bone); margin: 0 -16px; padding: 0 16px; isolation: isolate; }

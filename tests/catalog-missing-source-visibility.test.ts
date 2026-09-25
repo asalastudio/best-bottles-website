@@ -38,6 +38,12 @@ describe('missing source publication hold',()=>{
   expect(isVisibleCatalogGroup({slug:'atomizer-5ml-slim',variantCount:3},[])).toBe(false);
   expect(isVisibleCatalogGroup({slug:'atomizer-5ml',variantCount:12},[])).toBe(true);
  });
+ it('lists the old Minaret groups only while they still hold variants',()=>{
+  expect(isVisibleCatalogGroup({slug:'rectangle-10ml-clear-13-415-finemist',variantCount:2},[{websiteSku:'GBRect10MinarCu'}])).toBe(true);
+  expect(isVisibleCatalogGroup({slug:'rectangle-10ml-clear-13-415-finemist',variantCount:2},[])).toBe(false);
+  expect(isVisibleCatalogGroup({slug:'elegant-15ml-clear-13-415-capclosure',variantCount:1},[])).toBe(false);
+  expect(isVisibleCatalogGroup({slug:'footed-rectangle-10ml-clear-13-415',variantCount:12},[])).toBe(true);
+ });
  it('filters server cards and variants and selects a pictured primary',()=>{
   const result=sanitizeCatalogResult(fixture());
   expect(result.items.map(r=>r._id)).toEqual(['covered','real-lotion']);

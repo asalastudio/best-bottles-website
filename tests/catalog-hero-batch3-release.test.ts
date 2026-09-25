@@ -14,19 +14,24 @@ afterEach(() => vi.unstubAllEnvs());
 // tassel bottles, whose cards showed plates until now.
 const NEW_SKUS = ['GBSQSTBlue', 'GBSQSTGREEN', 'GBCrclFrst50AnSpTslBlk', 'GBRndFrst128AnSpTslRed'];
 const RE_RENDERED = [
-  'GBRect10Gl', 'GBRect10MtlRollBlkDot', 'GBRect10SpryGlMatt', 'GBSqr15Gl', 'GBSqr15MtlRollBlkDot', 'GBSqr15SpryGlMatt',
+  'GBRect10Gl', 'GBRect10MtlRollBlkDot', 'GBRect10SpryGlMatt',
   'GBSQSTClear', 'GBTRDPClear', 'GBTrdpBlue', 'GBTRDPGreen',
 ];
 
-describe('Batch 3 catalog hero release (Square, Rectangle, Tulip, Diamond, frosted tassels, Teardrop, SQST, Vials)', () => {
-  it('ships the 41 approved exact-SKU Sunburst renders with intact image files', async () => {
-    expect(rows).toHaveLength(41);
-    expect(new Set(rows.map(row => row.websiteSku)).size).toBe(41);
-    expect(Object.fromEntries(Object.entries(approval.scope))).toEqual({ Square: 3, Rectangle: 9, Tulip: 6, Diamond: 5, Circle: 1, Round: 1, Teardrop: 3, Vial: 13 });
+// The 13 vials of this release were re-rendered proportional to Jordan's caliper
+// heights and moved to catalog-hero-vials-release.json (see that test); the three
+// Square 15 ml heroes were regenerated as batch 6 (catalog-hero-batch6-release.json).
+describe('Batch 3 catalog hero release (Square, Rectangle, Tulip, Diamond, frosted tassels, Teardrop, SQST)', () => {
+  it('ships the 25 approved exact-SKU Sunburst renders with intact image files', async () => {
+    expect(rows).toHaveLength(25);
+    expect(new Set(rows.map(row => row.websiteSku)).size).toBe(25);
+    expect(rows.some(row => row.family === 'Vial')).toBe(false);
+    expect(rows.some(row => row.family === 'Square')).toBe(false);
+    expect(Object.fromEntries(Object.entries(approval.scope))).toEqual({ Rectangle: 9, Tulip: 6, Diamond: 5, Circle: 1, Round: 1, Teardrop: 3 });
     for (const [family, count] of Object.entries(approval.scope)) {
       expect(rows.filter(row => row.family === family)).toHaveLength(count);
     }
-    expect(approval.rows).toHaveLength(41);
+    expect(approval.rows).toHaveLength(25);
     for (const hero of rows) {
       const evidence = approval.rows.find(row => row.sku === hero.websiteSku)!;
       expect(evidence.status).toBe('approved');
@@ -51,13 +56,8 @@ describe('Batch 3 catalog hero release (Square, Rectangle, Tulip, Diamond, frost
     }
   });
 
-  it("applies Jordan's vial sizes and the full-height rule for stopper bottles", () => {
+  it('applies the full-height rule for stopper bottles and the glass-foot fix', () => {
     for (const row of approval.rows) {
-      const pct = row.sizing.targetPct;
-      if (row.family === 'Vial') {
-        const capacityMl = rows.find(hero => hero.websiteSku === row.sku)!.capacityMl;
-        expect(pct).toBe(capacityMl <= 2 ? 32 : 35);
-      }
       if (/SQST|TRDP|Trdp/.test(row.sku)) {
         expect(row.sizing.heightWithStopperMm).toBe(row.sku.includes('SQST') ? 64 : 68);
         expect(row.sizing.override).toContain('full height with stopper');

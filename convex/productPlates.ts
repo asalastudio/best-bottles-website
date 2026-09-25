@@ -242,6 +242,54 @@ export const upsertMany = mutation({
     },
 });
 
+/**
+ * Add the cap-off views to rows that already have a cap-on plate. Additive only:
+ * the row's front must still be the bytes the caller expects, and it must not
+ * carry a cap-off view yet, so an approved front is never replaced and an
+ * existing cap-off is never overwritten. `dryRun` defaults to TRUE.
+ */
+export const addCapOffViews = mutation({
+    args: {
+        writeToken: v.string(),
+        dryRun: v.optional(v.boolean()),
+        entries: v.array(v.object({
+            sku: v.string(),
+            expectFrontSha256: v.string(),
+            frontCapOff: plateAsset,
+            thumbCapOff: plateAsset,
+            psdSha256CapOff: v.union(v.string(), v.null()),
+        })),
+    },
+    returns: v.array(v.object({
+        sku: v.string(),
+        outcome: v.union(v.literal("added"), v.literal("would-add"), v.literal("skipped")),
+        reason: v.optional(v.string()),
+    })),
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+        if (args.entries.length > 50) throw new Error("addCapOffViews accepts at most 50 entries per call");
+        const dryRun = args.dryRun !== false;
+        const now = Date.now();
+        const out: Array<{ sku: string; outcome: "added" | "would-add" | "skipped"; reason?: string }> = [];
+        for (const entry of args.entries) {
+            const rows = await ctx.db.query("productPlates").withIndex("by_sku", (q) => q.eq("sku", entry.sku)).collect();
+            if (rows.length !== 1) { out.push({ sku: entry.sku, outcome: "skipped", reason: rows.length ? "duplicate_index_rows" : "no_row" }); continue; }
+            const row = rows[0];
+            if (row.front.sha256 !== entry.expectFrontSha256) { out.push({ sku: entry.sku, outcome: "skipped", reason: "front_changed" }); continue; }
+            if (row.frontCapOff || row.thumbCapOff) { out.push({ sku: entry.sku, outcome: "skipped", reason: "cap_off_exists" }); continue; }
+            if (!dryRun) {
+                await ctx.db.patch(row._id, {
+                    frontCapOff: entry.frontCapOff, thumbCapOff: entry.thumbCapOff,
+                    source: { ...row.source, psdSha256CapOff: entry.psdSha256CapOff },
+                    revision: row.revision + 1, importedAt: now,
+                });
+            }
+            out.push({ sku: entry.sku, outcome: dryRun ? "would-add" : "added" });
+        }
+        return out;
+    },
+});
+
 export const upsertFamilies = mutation({
     args: {
         writeToken: v.string(),

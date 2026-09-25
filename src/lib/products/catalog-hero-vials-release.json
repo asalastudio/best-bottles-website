@@ -1,0 +1,306 @@
+[
+  {
+    "groupSlug": "vial-4ml-clear-13-425",
+    "websiteSku": "GBV1DrmWhtCapSht",
+    "graceSku": "GB-VIA-CLR-3ML-S-02",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343618466084",
+    "family": "Vial",
+    "capacityMl": 4,
+    "bottleColor": "Clear",
+    "alt": "4 ml Clear Vial with White Screw Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/vials-approved-2026-09-25/GBV1DrmWhtCapSht.e2b04790b812.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "vial-4ml-amber-13-425",
+    "websiteSku": "GBVAmb1DrmWhtCapSht",
+    "graceSku": "GB-VIA-CLR-3ML-S-04",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343618433316",
+    "family": "Vial",
+    "capacityMl": 4,
+    "bottleColor": "Amber",
+    "alt": "4 ml Amber Vial with White Screw Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/vials-approved-2026-09-25/GBVAmb1DrmWhtCapSht.c91a4c0b8009.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "vial-4ml-blue-13-425",
+    "websiteSku": "GBVBlu1DrmWhtCapSht",
+    "graceSku": "GB-VIA-CLR-3ML-S-06",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343618498852",
+    "family": "Vial",
+    "capacityMl": 4,
+    "bottleColor": "Blue",
+    "alt": "4 ml Blue Vial with White Screw Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/vials-approved-2026-09-25/GBVBlu1DrmWhtCapSht.f9249489db14.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "vial-4ml-green-13-425",
+    "websiteSku": "GBVGr1DrmWhtCapSht",
+    "graceSku": "GB-VIA-CLR-3ML-S-08",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343618531620",
+    "family": "Vial",
+    "capacityMl": 4,
+    "bottleColor": "Green",
+    "alt": "4 ml Green Vial with White Screw Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/vials-approved-2026-09-25/GBVGr1DrmWhtCapSht.7aab95b220c5.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "vial-4ml-clear-13-425-dropper",
+    "websiteSku": "GBV1DrmBlkDropper",
+    "graceSku": "GB-VIA-CLR-3ML-01",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343694979364",
+    "family": "Vial",
+    "capacityMl": 4,
+    "bottleColor": "Clear",
+    "alt": "4 ml Clear Vial with Black Dropper",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/vials-approved-2026-09-25/GBV1DrmBlkDropper.0c2a8347a742.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "vial-4ml-amber-13-425-dropper",
+    "websiteSku": "GBVAmb1DrmBlkDrpr",
+    "graceSku": "GB-VIA-CLR-3ML-02",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343695012132",
+    "family": "Vial",
+    "capacityMl": 4,
+    "bottleColor": "Amber",
+    "alt": "4 ml Amber Vial with Black Dropper",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/vials-approved-2026-09-25/GBVAmb1DrmBlkDrpr.4d4d025eb11c.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "vial-4ml-blue-13-425-dropper",
+    "websiteSku": "GBVBlu1DrmBlkDropper",
+    "graceSku": "GB-VIA-CLR-3ML-03",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343695044900",
+    "family": "Vial",
+    "capacityMl": 4,
+    "bottleColor": "Blue",
+    "alt": "4 ml Blue Vial with Black Dropper",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/vials-approved-2026-09-25/GBVBlu1DrmBlkDropper.ca9561afb67f.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "vial-4ml-green-13-425-dropper",
+    "websiteSku": "GBVGr1DrmBlkDropper",
+    "graceSku": "GB-VIA-CLR-3ML-04",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343695077668",
+    "family": "Vial",
+    "capacityMl": 4,
+    "bottleColor": "Green",
+    "alt": "4 ml Green Vial with Black Dropper",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/vials-approved-2026-09-25/GBVGr1DrmBlkDropper.e63744a6db45.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "vial-2ml-clear-8-425",
+    "websiteSku": "GBVialClr2mlWhtCap",
+    "graceSku": "GB-VIA-CLR-2ML-WHT-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343616729380",
+    "family": "Vial",
+    "capacityMl": 2,
+    "bottleColor": "Clear",
+    "alt": "2 ml Clear Vial with White Screw Cap",
+    "presentation": "Original product assembly",
+    "url": "/images/catalog/vials-approved-2026-09-25/GBVialClr2mlWhtCap.6b503d1b70de.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "vial-2ml-amber-8-425",
+    "websiteSku": "GBVAmb2WhtCap",
+    "graceSku": "GB-VIA-CLR-2ML-S-02",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343616696612",
+    "family": "Vial",
+    "capacityMl": 2,
+    "bottleColor": "Amber",
+    "alt": "2 ml Amber Vial with White Screw Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/vials-approved-2026-09-25/GBVAmb2WhtCap.7ffd6dae7ca7.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "vial-1ml-amber-Plug",
+    "websiteSku": "GB1mlAmbVialWht",
+    "graceSku": "GB-VIA-AMB-1ML-WHT-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343616336164",
+    "family": "Vial",
+    "capacityMl": 1,
+    "bottleColor": "Amber",
+    "alt": "1 ml Amber Sample Vial with White Plug Applicator",
+    "presentation": "Original product assembly",
+    "url": "/images/catalog/vials-approved-2026-09-25/GB1mlAmbVialWht.beb367a1279e.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "vial-1ml-clear-Plug",
+    "websiteSku": "GB1mlVBlk",
+    "graceSku": "GB-VIA-CLR-1ML-BLK-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343616598308",
+    "family": "Vial",
+    "capacityMl": 1,
+    "bottleColor": "Clear",
+    "alt": "1 ml Clear Sample Vial with Black Plug Applicator",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/vials-approved-2026-09-25/GB1mlVBlk.648b12fd544c.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "vial-2ml-amber-13-425",
+    "websiteSku": "GBVialAmb1o5WhtCapSht",
+    "graceSku": "GB-VIA-AMB-1.5ML-WHT-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343699140900",
+    "family": "Vial",
+    "capacityMl": 2,
+    "bottleColor": "Amber",
+    "alt": "2 ml Amber Vial with White Screw Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/vials-approved-2026-09-25/GBVialAmb1o5WhtCapSht.d0c06b55854f.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "vial-3ml-blue-13-425",
+    "websiteSku": "GBVBlu1o9BlackCapSht",
+    "graceSku": "GB-VIA-BLU-3ML-BLK-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343699173668",
+    "family": "Vial",
+    "capacityMl": 3,
+    "bottleColor": "Blue",
+    "alt": "3 ml Blue Vial with Black Screw Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/vials-approved-2026-09-25/GBVBlu1o9BlackCapSht.ecc1de43a5fe.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "vial-3ml-green-13-425",
+    "websiteSku": "GBVGreen2o4BlackCapSht",
+    "graceSku": "GB-VIA-CLR-3ML-GRN-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343618302244",
+    "family": "Vial",
+    "capacityMl": 3,
+    "bottleColor": "Green",
+    "alt": "3 ml Green Vial with Black Screw Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/vials-approved-2026-09-25/GBVGreen2o4BlackCapSht.d703a6db23d6.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "lotion-bottle-3ml-clear-snap",
+    "websiteSku": "LB3mlClear",
+    "graceSku": "LB-LTB-CLR-3ML-CLR-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343698092324",
+    "family": "Lotion Bottle",
+    "capacityMl": 3,
+    "bottleColor": "Clear",
+    "alt": "3 ml Clear Plastic Sample Vial with Fine Mist Sprayer and Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/vials-approved-2026-09-25/LB3mlClear.fb8867d925b7.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  }
+]
