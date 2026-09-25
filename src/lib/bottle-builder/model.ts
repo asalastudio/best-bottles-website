@@ -499,7 +499,22 @@ export function borrowedFitmentPreview(body: BuilderBody | null, color: string |
         && config.kit.canvas.width === reference.kit!.canvas.width && config.kit.canvas.height === reference.kit!.canvas.height
         && config.kit.parts.some(part => part.slot !== "body" && !isClosurePart(part)));
     if (!donor?.kit) return null;
-    return { ...donor, id: `${donor.id}~${color}`, color, bodyImage: reference.bodyImage, photoUrl: null, previewKit: undefined, chooserKit: undefined };
+    // registerVintagePreview scales by the body layer's bounding-box width and aligns
+    // baselines. A clear glass layer carries halo pixels a cobalt one lacks (259 vs
+    // 241 px on the 5 ml), which shrank the borrowed roller 7% and lifted it off the
+    // neck. Seat-to-baseline height is the same physical landmark on every glass of
+    // one body, so give the donor body a virtual box whose width encodes that height
+    // ratio: the registration then scales by glass height and lands the donor's seat
+    // exactly on this glass's seat.
+    const refBody = reference.kit.parts.find(part => part.slot === "body");
+    const donorHeight = donor.kit.anchors.baselineY - donor.kit.anchors.seatY;
+    const refHeight = reference.kit.anchors.baselineY - reference.kit.anchors.seatY;
+    if (!refBody || !(donorHeight > 0) || !(refHeight > 0)) return null;
+    const half = (refBody.bounds.right - refBody.bounds.left) * donorHeight / refHeight / 2;
+    const axis = donor.kit.anchors.neckAxisX ?? donor.kit.anchors.axisX;
+    const parts = donor.kit.parts.map(part => part.slot !== "body" ? part
+        : { ...part, bounds: { left: axis - half, right: axis + half, top: donor.kit!.anchors.seatY, bottom: donor.kit!.anchors.baselineY } });
+    return { ...donor, id: `${donor.id}~${color}`, color, kit: { ...donor.kit, parts }, bodyImage: reference.bodyImage, photoUrl: null, previewKit: undefined, chooserKit: undefined };
 }
 
 /** The cheapest and dearest charged unit price among the configurations a
