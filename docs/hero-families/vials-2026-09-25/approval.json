@@ -1,0 +1,1162 @@
+{
+  "date": "2026-09-25",
+  "approvedBy": "Jordan (\"approve all\") after the review sheets",
+  "scope": {
+    "Vial": 15,
+    "Lotion Bottle": 1
+  },
+  "publication": false,
+  "source": {
+    "lane": "batch3-2026-09-25",
+    "approvalCandidatesSha256": "c390dc56848a46c65c6402c1ce27fc165b95bfc2250b6674095a66c2b64baf9c"
+  },
+  "labelFollowUps": {},
+  "sizing": {
+    "rule": "Vial family proportional to caliper glass height: 4 ml (45 mm) anchor at its approved 43.1% of the card, lifted 20% (Jordan 2026-09-25) = 26.3 px/mm; caps beside where the source shows them",
+    "caliper": {
+      "4 ml 13-425": "45 mm glass / 47.47 with cap",
+      "2 ml clear 8-425": "35 / 37.73",
+      "1 ml tubes": "35 / 44",
+      "2 ml amber 13-425": "22 / 24",
+      "3 ml 5/8 dram": "27 / 29",
+      "3 ml lotion": "no height; 65 mm with cap by Jordan's call"
+    },
+    "sources": "master PSDs for the 13 batch-3 vials; legacy bestbottles.com photos for the 3 ml blue and green vials and the 3 ml lotion (no master PSD)"
+  },
+  "qa": "Framing re-registered to the lock; every image reviewed by eye and approved by Jordan",
+  "held": {},
+  "rows": [
+    {
+      "sku": "GBV1DrmWhtCapSht",
+      "family": "Vial",
+      "groupSlug": "vial-4ml-clear-13-425",
+      "graceSku": "GB-VIA-CLR-3ML-S-02",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343618466084",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh767p9b1ngd2ddv632fx463v98dsjq6",
+        "slug": "vial-4ml-clear-13-425",
+        "displayName": "4 ml Clear Vial Bottle with Cap",
+        "color": "Clear",
+        "capColor": "Clear",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/vials-approved-2026-09-25/GBV1DrmWhtCapSht.e2b04790b812.webp",
+      "sha256": "e2b04790b812322792f85b802e89c58d47c99fa711e6c9571ae41b0879fb3a85",
+      "bytes": 1782550,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "32779e36d81ff657f74605c71b10a1b00f94b32787a6657763345b5ef1f0d08a",
+      "sourceBytes": 3086460,
+      "sourceRenderSha256": "c1dd7b6eee2830933e5298e1f40c398e315914baab8c0e24e814d2e01ff56ec4",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 45,
+        "glassMmSource": "Jordan caliper 2026-09-25",
+        "landmarkRule": "shoulder",
+        "sizing": "vial family: proportional to glass mm, 4 ml anchor 43.1% x 1.20 lift (Jordan 2026-09-25) = 26.3 px/mm",
+        "glassHeightPct": 51.74,
+        "targetPct": 41.58,
+        "measuredFootPx": 839,
+        "measuredLandmarkPx": 397,
+        "scaleFactor": 2.15224
+      },
+      "fit": {
+        "scale": 0.9968,
+        "shiftY": 2.4,
+        "shiftX": 1.7
+      },
+      "qaRaw": {
+        "points": 524,
+        "iou": 0.9897,
+        "p95": 3.06,
+        "p99": 7.93,
+        "max": 19.22,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "b5/inputs/GBV1DrmWhtCapSht-input.png",
+        "sha256": "676215a731e3c5cb6bfb8ea60ef73906061bb46180dc97f559370c91db6ebdcc"
+      },
+      "source": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/21. 1 Dram/1. 1 Dram/8.  Clear 1 Dram (uncapped) /3. GBVial1DrmWhtCapSht.psd",
+        "sha256": "daaa75a39cf326c8581a59f8714259f0b6133c7864cdfe7794cd45e3f5cb5e01"
+      },
+      "lane": "b5",
+      "promptSha256": "2eb7aeff7b30f523bc9e6bb37ea2661c5bfce67b6c6152237b5f71ddfabc1567"
+    },
+    {
+      "sku": "GBVAmb1DrmWhtCapSht",
+      "family": "Vial",
+      "groupSlug": "vial-4ml-amber-13-425",
+      "graceSku": "GB-VIA-CLR-3ML-S-04",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343618433316",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh78sykg22kf3nkezn73sc3sg18dr9wv",
+        "slug": "vial-4ml-amber-13-425",
+        "displayName": "4 ml Amber Vial Bottle with Cap",
+        "color": "Amber",
+        "capColor": "Clear",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/vials-approved-2026-09-25/GBVAmb1DrmWhtCapSht.c91a4c0b8009.webp",
+      "sha256": "c91a4c0b80090aeb4c2d521608e2bfd2db565814bbcf54ff9b12ef7cc7f203ea",
+      "bytes": 1821088,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "f33ba6d458127e036432764efa1f36e424f19b28d7a55be492d899b5baeee901",
+      "sourceBytes": 3233920,
+      "sourceRenderSha256": "c3265b13db134b112efa2841c693e7b20ac390c1176e4b80b1987ccd0a043d90",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 45,
+        "glassMmSource": "Jordan caliper 2026-09-25",
+        "landmarkRule": "shoulder",
+        "sizing": "vial family: proportional to glass mm, 4 ml anchor 43.1% x 1.20 lift (Jordan 2026-09-25) = 26.3 px/mm",
+        "glassHeightPct": 51.74,
+        "targetPct": 42,
+        "measuredFootPx": 813,
+        "measuredLandmarkPx": 373,
+        "scaleFactor": 2.184
+      },
+      "fit": {
+        "scale": 1.0046,
+        "shiftY": -5.2,
+        "shiftX": -2.7
+      },
+      "qaRaw": {
+        "points": 500,
+        "iou": 0.9905,
+        "p95": 2.8,
+        "p99": 9.04,
+        "max": 27.69,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "b5/inputs/GBVAmb1DrmWhtCapSht-input.png",
+        "sha256": "b9056447548cde44baeeb364eebf4c7f5bb2a2b1e161dd977b6ad88a894af5cd"
+      },
+      "source": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/0. All Vials/Uncapped/GBVAmb1DrmWhtCapSht.psd",
+        "sha256": "59734fd7c400e57c79ceac186462276474ec3012a48f6d8d4698ccddf26ff83d"
+      },
+      "lane": "b5",
+      "promptSha256": "f71552d98c2f3f5f35cac260517c98363b9d8ff8a378c290607453101b2ee66b"
+    },
+    {
+      "sku": "GBVBlu1DrmWhtCapSht",
+      "family": "Vial",
+      "groupSlug": "vial-4ml-blue-13-425",
+      "graceSku": "GB-VIA-CLR-3ML-S-06",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343618498852",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7c4me50thdayvaqngagnaw8x8dr3a2",
+        "slug": "vial-4ml-blue-13-425",
+        "displayName": "4 ml Blue Vial Bottle with Cap",
+        "color": "Blue",
+        "capColor": "Clear",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/vials-approved-2026-09-25/GBVBlu1DrmWhtCapSht.f9249489db14.webp",
+      "sha256": "f9249489db14d61617d03937721dc57e272fd2ba99c5162d19febb13d569e8c1",
+      "bytes": 1753686,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "0550b74c113bd3a2eb3aff27e280342ff005b7bcefe35a511ef6fb8820468659",
+      "sourceBytes": 3098989,
+      "sourceRenderSha256": "61e6f851e4ab36907f43fa083ec78bfc010bbf9930bfbe9176e6ede95d80f7e7",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 45,
+        "glassMmSource": "Jordan caliper 2026-09-25",
+        "landmarkRule": "shoulder",
+        "sizing": "vial family: proportional to glass mm, 4 ml anchor 43.1% x 1.20 lift (Jordan 2026-09-25) = 26.3 px/mm",
+        "glassHeightPct": 51.74,
+        "targetPct": 42,
+        "measuredFootPx": 814,
+        "measuredLandmarkPx": 374,
+        "scaleFactor": 2.184
+      },
+      "fit": {
+        "scale": 1.0015,
+        "shiftY": -1.1,
+        "shiftX": -0.1
+      },
+      "qaRaw": {
+        "points": 547,
+        "iou": 0.9896,
+        "p95": 3.82,
+        "p99": 7.18,
+        "max": 19.13,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "b5/inputs/GBVBlu1DrmWhtCapSht-input.png",
+        "sha256": "1031bde2634fa7a414e8ff3bf53fef7bdeb00440a1b32149613a35312d4fdf4d"
+      },
+      "source": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/0. All Vials/Uncapped/GBVBlu1DrmWhtCapSht..psd",
+        "sha256": "1c192d05623e458a9bb2fb953973b727617c66483c6f716a650548f71f7560f3"
+      },
+      "lane": "b5",
+      "promptSha256": "68779701bb1fec177dc1fe834f49ddd957cdc313f8f14660ddff0b8fa08baed0"
+    },
+    {
+      "sku": "GBVGr1DrmWhtCapSht",
+      "family": "Vial",
+      "groupSlug": "vial-4ml-green-13-425",
+      "graceSku": "GB-VIA-CLR-3ML-S-08",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343618531620",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh78m155sjar92g3c8etzca6yn8dsnb8",
+        "slug": "vial-4ml-green-13-425",
+        "displayName": "4 ml Green Vial Bottle with Cap",
+        "color": "Green",
+        "capColor": "Clear",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/vials-approved-2026-09-25/GBVGr1DrmWhtCapSht.7aab95b220c5.webp",
+      "sha256": "7aab95b220c5b226ca2155c20f2b1afc265f849bcd160af691fb7b2ac6b4b711",
+      "bytes": 1771366,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "8c64487d78ff20c04b2e0fd9a9e8ac129d744b06b7c836767a1c9f49d6b5b2ed",
+      "sourceBytes": 3122657,
+      "sourceRenderSha256": "e22a1abcd3ca30e6aa789b56beae2a0eceff9073e31e322b3769e7d039d20dbd",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 45,
+        "glassMmSource": "Jordan caliper 2026-09-25",
+        "landmarkRule": "shoulder",
+        "sizing": "vial family: proportional to glass mm, 4 ml anchor 43.1% x 1.20 lift (Jordan 2026-09-25) = 26.3 px/mm",
+        "glassHeightPct": 51.74,
+        "targetPct": 42,
+        "measuredFootPx": 815,
+        "measuredLandmarkPx": 375,
+        "scaleFactor": 2.184
+      },
+      "fit": {
+        "scale": 1.0063,
+        "shiftY": -6.9,
+        "shiftX": -3.8
+      },
+      "qaRaw": {
+        "points": 525,
+        "iou": 0.9874,
+        "p95": 4.06,
+        "p99": 10.05,
+        "max": 18.89,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "b5/inputs/GBVGr1DrmWhtCapSht-input.png",
+        "sha256": "c397fd7efdcb2e114b1ae8d30d52a992148a84afbc1bfa5e8426d189c32abc2a"
+      },
+      "source": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/0. All Vials/Uncapped/GBVGr1DrmWhtCapSht.psd",
+        "sha256": "0ade035c5967184e517c6f306831e045ffe82cbcf073fd5d571bdd1b8555a91d"
+      },
+      "lane": "b5",
+      "promptSha256": "ad0e13c1698c3c59a822bfa6ef73a5f9ce845460fba6ffc4091a57dbac784b79"
+    },
+    {
+      "sku": "GBV1DrmBlkDropper",
+      "family": "Vial",
+      "groupSlug": "vial-4ml-clear-13-425-dropper",
+      "graceSku": "GB-VIA-CLR-3ML-01",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343694979364",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7cbd37zg41hqjgetjzy32t8h8dr13d",
+        "slug": "vial-4ml-clear-13-425-dropper",
+        "displayName": "4 ml Clear Vial Dropper Bottle",
+        "color": "Clear",
+        "capColor": "Clear",
+        "applicator": "Dropper",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/vials-approved-2026-09-25/GBV1DrmBlkDropper.0c2a8347a742.webp",
+      "sha256": "0c2a8347a74233d15bff72bd659888ef456b9c0a17918f38eb88190944648e38",
+      "bytes": 1881734,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "f56618f5a552131865f86a06ec231441da57e4cb0c135557c5be7c4a4a220fdc",
+      "sourceBytes": 3330061,
+      "sourceRenderSha256": "9587a3c45318662e01637ee7251ceeee8fed8a0e70a2b37fa42b107d103aea1a",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 45,
+        "glassMmSource": "Jordan caliper 2026-09-25",
+        "landmarkRule": "shoulder",
+        "sizing": "vial family: proportional to glass mm, 4 ml anchor 43.1% x 1.20 lift (Jordan 2026-09-25) = 26.3 px/mm",
+        "glassHeightPct": 51.74,
+        "targetPct": 41.58,
+        "measuredFootPx": 439,
+        "measuredLandmarkPx": 184.6,
+        "scaleFactor": 3.73924
+      },
+      "fit": {
+        "scale": 1.0054,
+        "shiftY": -5.9,
+        "shiftX": -7.5
+      },
+      "qaRaw": {
+        "points": 348,
+        "iou": 0.9936,
+        "p95": 4.41,
+        "p99": 16.59,
+        "max": 20,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "b5/inputs/GBV1DrmBlkDropper-input.png",
+        "sha256": "395d66ab490ee9f1cb1accea70ffe03bbf631ae3ccd2906c85ab62319aff664e"
+      },
+      "source": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/0. All Vials/Uncapped/GBV1DrmBlkDropper..psd",
+        "sha256": "323b07ae2f30e1d8aa19465e5f27f222e3fe55846211a87cf6cb495093cbce1b"
+      },
+      "lane": "b5",
+      "promptSha256": "41a55db46a654f97c40d445624632fdbd46b15cd281e5c206c36454eb0684066"
+    },
+    {
+      "sku": "GBVAmb1DrmBlkDrpr",
+      "family": "Vial",
+      "groupSlug": "vial-4ml-amber-13-425-dropper",
+      "graceSku": "GB-VIA-CLR-3ML-02",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343695012132",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh71hn7z5e3x4mg49267cggscx8dssrw",
+        "slug": "vial-4ml-amber-13-425-dropper",
+        "displayName": "4 ml Amber Vial Dropper Bottle",
+        "color": "Amber",
+        "capColor": "Clear",
+        "applicator": "Dropper",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/vials-approved-2026-09-25/GBVAmb1DrmBlkDrpr.4d4d025eb11c.webp",
+      "sha256": "4d4d025eb11c73bfd7a1091ec7ddbc838adfa5a710e969df3e7c87c7006b054f",
+      "bytes": 1912462,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "c5ecaa88d031b56e3bacf8e506d3267ff55b688e06f18f1e0a3a23306facbb57",
+      "sourceBytes": 3448529,
+      "sourceRenderSha256": "3a5be3119e5a4198f0d77560b70eb3da4558747a3c5a3297c38c8647f8e2053a",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 45,
+        "glassMmSource": "Jordan caliper 2026-09-25",
+        "landmarkRule": "shoulder",
+        "sizing": "vial family: proportional to glass mm, 4 ml anchor 43.1% x 1.20 lift (Jordan 2026-09-25) = 26.3 px/mm",
+        "glassHeightPct": 51.74,
+        "targetPct": 42,
+        "measuredFootPx": 451,
+        "measuredLandmarkPx": 188,
+        "scaleFactor": 3.654
+      },
+      "fit": {
+        "scale": 1.0013,
+        "shiftY": -2.2,
+        "shiftX": -1.1
+      },
+      "qaRaw": {
+        "points": 815,
+        "iou": 0.9886,
+        "p95": 3.04,
+        "p99": 7.53,
+        "max": 19.94,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "b5/inputs/GBVAmb1DrmBlkDrpr-input.png",
+        "sha256": "abead9c063559741fd9ef96d51ebdbf0567b1d2d822c04179707e13cffea9b1e"
+      },
+      "source": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/0. All Vials/Uncapped/GBVAmb1DrmBlkDropper.psd",
+        "sha256": "b0f7b77163f72808d3a82893b45e12ddcc7270409bb95b71149854d2ed2d8aef"
+      },
+      "lane": "b5",
+      "promptSha256": "417787d32d6815c3343b1815edeccdb7df47996ed8599723e3eda03b718739f1"
+    },
+    {
+      "sku": "GBVBlu1DrmBlkDropper",
+      "family": "Vial",
+      "groupSlug": "vial-4ml-blue-13-425-dropper",
+      "graceSku": "GB-VIA-CLR-3ML-03",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343695044900",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh77d842c5atqrbbcyfkntr2d98dswgq",
+        "slug": "vial-4ml-blue-13-425-dropper",
+        "displayName": "4 ml Blue Vial Dropper Bottle",
+        "color": "Blue",
+        "capColor": "Clear",
+        "applicator": "Dropper",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/vials-approved-2026-09-25/GBVBlu1DrmBlkDropper.ca9561afb67f.webp",
+      "sha256": "ca9561afb67f60aba6b02fb02d167645bf5d11da30e199caf183adf301b9e744",
+      "bytes": 1919126,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "0b972e067e5d88cc14350c92f2b1386addf5a53e3d7b52cb0e02049e65a6897c",
+      "sourceBytes": 3363002,
+      "sourceRenderSha256": "326fcecf31932f2a38c7831d6d96f782275bf4af578275ebbc600d0b6154d032",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 45,
+        "glassMmSource": "Jordan caliper 2026-09-25",
+        "landmarkRule": "shoulder",
+        "sizing": "vial family: proportional to glass mm, 4 ml anchor 43.1% x 1.20 lift (Jordan 2026-09-25) = 26.3 px/mm",
+        "glassHeightPct": 51.74,
+        "targetPct": 42,
+        "measuredFootPx": 451,
+        "measuredLandmarkPx": 186.5,
+        "scaleFactor": 3.633
+      },
+      "fit": {
+        "scale": 0.9994,
+        "shiftY": -0.5,
+        "shiftX": 1.4
+      },
+      "qaRaw": {
+        "points": 771,
+        "iou": 0.9856,
+        "p95": 3.9,
+        "p99": 8.07,
+        "max": 20.01,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "b5/inputs/GBVBlu1DrmBlkDropper-input.png",
+        "sha256": "642f39f166a5dadc89175ce3446cb5ad55bb463479ec539ea4b38ccaaf4d2345"
+      },
+      "source": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/0. All Vials/Uncapped/GBVBlu1DrmBlkDropper.psd",
+        "sha256": "9c62c9a9a7008c13aa7266021ac77b85fee40b364604b9117e5d2b4a385f70fc"
+      },
+      "lane": "b5",
+      "promptSha256": "3bae1b7c7edc47952b7cde7dd7eee7e3d143f6c1bfc61cce899f970d3fd8eef3"
+    },
+    {
+      "sku": "GBVGr1DrmBlkDropper",
+      "family": "Vial",
+      "groupSlug": "vial-4ml-green-13-425-dropper",
+      "graceSku": "GB-VIA-CLR-3ML-04",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343695077668",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh71gn33jwyz3nabjcdwcpnnrd8dr417",
+        "slug": "vial-4ml-green-13-425-dropper",
+        "displayName": "4 ml Green Vial Dropper Bottle",
+        "color": "Green",
+        "capColor": "Clear",
+        "applicator": "Dropper",
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/vials-approved-2026-09-25/GBVGr1DrmBlkDropper.e63744a6db45.webp",
+      "sha256": "e63744a6db4544349263622adcdfe8e02a897aa8437fd5b7a4f3e08ebd9d374a",
+      "bytes": 1831248,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "d4bbcd99aeb619ae05ce8e9fa57c124741c819aa74bedf1add58ed75c00f7e93",
+      "sourceBytes": 3371280,
+      "sourceRenderSha256": "99b82e66601d554f21aded06bcc0522ef0972039e58af13daffe4bf8824cf33d",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 45,
+        "glassMmSource": "Jordan caliper 2026-09-25",
+        "landmarkRule": "shoulder",
+        "sizing": "vial family: proportional to glass mm, 4 ml anchor 43.1% x 1.20 lift (Jordan 2026-09-25) = 26.3 px/mm",
+        "glassHeightPct": 51.74,
+        "targetPct": 41.99,
+        "measuredFootPx": 452,
+        "measuredLandmarkPx": 199.9,
+        "scaleFactor": 3.8113
+      },
+      "fit": {
+        "scale": 1.0018,
+        "shiftY": -3.9,
+        "shiftX": -1.1
+      },
+      "qaRaw": {
+        "points": 804,
+        "iou": 0.9862,
+        "p95": 4.08,
+        "p99": 7.86,
+        "max": 19.98,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "b5/inputs/GBVGr1DrmBlkDropper-input.png",
+        "sha256": "019327d0efcea8a483f50c67499c45ed574c7ff8a88b57fbedb9bb59973a63af"
+      },
+      "source": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/0. All Vials/Uncapped/GBVGr1DrmBlkDropper.psd",
+        "sha256": "fb42d153d2cc64e06a739f2285680dc0b6313efdb882591eae59a22ee861d292"
+      },
+      "lane": "b5",
+      "promptSha256": "941e98a0b64a12dc447e6e64d3f1f552284734b0f4821c763d89b52b3be742c7"
+    },
+    {
+      "sku": "GBVialClr2mlWhtCap",
+      "family": "Vial",
+      "groupSlug": "vial-2ml-clear-8-425",
+      "graceSku": "GB-VIA-CLR-2ML-WHT-T",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343616729380",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh736t3zjy6jskwwmckw4yab6h8drvvk",
+        "slug": "vial-2ml-clear-8-425",
+        "displayName": "2 ml Clear Vial Bottle with Cap",
+        "color": "Clear",
+        "capColor": "White",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/vials-approved-2026-09-25/GBVialClr2mlWhtCap.6b503d1b70de.webp",
+      "sha256": "6b503d1b70de2d2a6c7936776b50a9f731cd2dfcd282ed2f894e2662dae34dde",
+      "bytes": 1748398,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "0fc3205e0cbce6ea16c68390aae201b788ae7391690b0c6f14f1cff6574e4860",
+      "sourceBytes": 2979842,
+      "sourceRenderSha256": "b8a7cb41fcfdc91de2ab02eca835284a060683992baaf4c0a455da435f30eece",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 35,
+        "glassMmSource": "Jordan caliper 2026-09-25",
+        "landmarkRule": "shoulder",
+        "sizing": "vial family: proportional to glass mm, 4 ml anchor 43.1% x 1.20 lift (Jordan 2026-09-25) = 26.3 px/mm",
+        "glassHeightPct": 40.24,
+        "targetPct": 31.31,
+        "measuredFootPx": 701,
+        "measuredLandmarkPx": 368,
+        "scaleFactor": 2.15112
+      },
+      "fit": {
+        "scale": 0.9926,
+        "shiftY": 9.4,
+        "shiftX": 7.1
+      },
+      "qaRaw": {
+        "points": 284,
+        "iou": 0.992,
+        "p95": 2.02,
+        "p99": 4.72,
+        "max": 7.5,
+        "bgDevP95": 3
+      },
+      "input": {
+        "file": "b5/inputs/GBVialClr2mlWhtCap-input.png",
+        "sha256": "cb214289f6909e81b943b7ed7188d441b8597f8db4447ffae263c00e8ad34731"
+      },
+      "source": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/6.   8-425 Bottles - CB/2. 2ml Dram/1.  Clear 2ml Dram/2. GBVialClr2mlWhtCap.psd",
+        "sha256": "69447e32201668f4473544b03dec4b6b37a1ed3655cc59e5b2314be2af2665db"
+      },
+      "lane": "b5",
+      "promptSha256": "a3e8ad277ada7ade0a34624ea10cc0536e5c45f68acf344861496b1653a9c7c6"
+    },
+    {
+      "sku": "GBVAmb2WhtCap",
+      "family": "Vial",
+      "groupSlug": "vial-2ml-amber-8-425",
+      "graceSku": "GB-VIA-CLR-2ML-S-02",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343616696612",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7e8ff1qa2g18d31pt4vc27px8drnt9",
+        "slug": "vial-2ml-amber-8-425",
+        "displayName": "2 ml Amber Vial Bottle with Cap",
+        "color": "Amber",
+        "capColor": "Clear",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/vials-approved-2026-09-25/GBVAmb2WhtCap.7ffd6dae7ca7.webp",
+      "sha256": "7ffd6dae7ca7fb491ecc5489dead64345fc4d1d2904c6a8d5a2140932a7cb733",
+      "bytes": 1786448,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "ef2e2ce96eee1aaabffa43e80658923104bb2c8ffc2b86d7266a41e8045de54d",
+      "sourceBytes": 3098830,
+      "sourceRenderSha256": "422437f5a6b59756df760fb644341638e534ec386984cc32eee7c04c8eb1d532",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 35,
+        "glassMmSource": "Jordan caliper 2026-09-25",
+        "landmarkRule": "shoulder",
+        "sizing": "vial family: proportional to glass mm, 4 ml anchor 43.1% x 1.20 lift (Jordan 2026-09-25) = 26.3 px/mm",
+        "glassHeightPct": 40.24,
+        "targetPct": 32.63,
+        "measuredFootPx": 650,
+        "measuredLandmarkPx": 324,
+        "scaleFactor": 2.29025
+      },
+      "fit": {
+        "scale": 1.0022,
+        "shiftY": -4.2,
+        "shiftX": -1.4
+      },
+      "qaRaw": {
+        "points": 424,
+        "iou": 0.9902,
+        "p95": 2.74,
+        "p99": 7.81,
+        "max": 18.77,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "b5/inputs/GBVAmb2WhtCap-input.png",
+        "sha256": "ee70f5712050840c8bb81a95337b581a99428eea11d1dfef4344ef5b5d9229fb"
+      },
+      "source": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/0. All Vials/Uncapped/GBVAmb2WhtCap.psd",
+        "sha256": "567f39dec848443096dc80381557eb322a70968c57acfcb38cb29c7eb05b3dc3"
+      },
+      "lane": "b5",
+      "promptSha256": "d608986a5c45dd344c5c6fe411d4c22feddf50d12490ee9583e76fb07a7f952a"
+    },
+    {
+      "sku": "GB1mlAmbVialWht",
+      "family": "Vial",
+      "groupSlug": "vial-1ml-amber-Plug",
+      "graceSku": "GB-VIA-AMB-1ML-WHT-T",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343616336164",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7e71khyhec2bjt745jbbe91s8drxkh",
+        "slug": "vial-1ml-amber-Plug",
+        "displayName": "1 ml Amber Vial Bottle with Cap",
+        "color": "Amber",
+        "capColor": "White",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/vials-approved-2026-09-25/GB1mlAmbVialWht.beb367a1279e.webp",
+      "sha256": "beb367a1279e862e7cef58079d33a9fe892db045400d05d6b7550aa4fed708bd",
+      "bytes": 1738096,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "f6564f9937fa59a1f349cc9a09ca37003c742a013bf8ce64d9c5bdf09b59d3b4",
+      "sourceBytes": 2904247,
+      "sourceRenderSha256": "320eff4a93fd3771fe83a6dfade2022d4f7ea6f40ff81032d54de87748680ad3",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 35,
+        "glassMmSource": "Jordan caliper 2026-09-25",
+        "landmarkRule": "closure seat",
+        "sizing": "vial family: proportional to glass mm, 4 ml anchor 43.1% x 1.20 lift (Jordan 2026-09-25) = 26.3 px/mm",
+        "glassHeightPct": 40.24,
+        "targetPct": 40.24,
+        "measuredFootPx": 554,
+        "measuredLandmarkPx": 110,
+        "scaleFactor": 2.0736
+      },
+      "fit": {
+        "scale": 1.0002,
+        "shiftY": -3.9,
+        "shiftX": -0.5
+      },
+      "qaRaw": {
+        "points": 357,
+        "iou": 0.9916,
+        "p95": 3.97,
+        "p99": 6.03,
+        "max": 9.21,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "b5/inputs/GB1mlAmbVialWht-input.png",
+        "sha256": "0aeb2f48f479f6d26ec93f03c7be35adedea1d64aa97cdc6eebc40573bbcda4b"
+      },
+      "source": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/2. 1ml Amber PSD Uncapped/2. GB1mlAmbVialWht.psd",
+        "sha256": "e1873548a3a15acd0f145d1774f6ff5bb01399006208892a88a54c66f8c749d8"
+      },
+      "lane": "b5",
+      "promptSha256": "dcc78bffe2e32636148a013ac225635767ae0600d7b5f8ba983f6a9cf17b988f"
+    },
+    {
+      "sku": "GB1mlVBlk",
+      "family": "Vial",
+      "groupSlug": "vial-1ml-clear-Plug",
+      "graceSku": "GB-VIA-CLR-1ML-BLK-T",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343616598308",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7127kstw87p81k7yf8q1p68d8drtgw",
+        "slug": "vial-1ml-clear-Plug",
+        "displayName": "1 ml Clear Vial Bottle with Cap",
+        "color": "Clear",
+        "capColor": "Black",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/vials-approved-2026-09-25/GB1mlVBlk.648b12fd544c.webp",
+      "sha256": "648b12fd544c91c23b4e65c34f9079e52efa48507b0ed333254f9075b32d731f",
+      "bytes": 1665180,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "9573cbcddb92dad94b1b936abe6a526da6059979dacb027a791beb562e608613",
+      "sourceBytes": 3086285,
+      "sourceRenderSha256": "5af2afb6d29158ce3748275b107279fe60cf6b1bfc72523409623dd1824cf979",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 35,
+        "glassMmSource": "Jordan caliper 2026-09-25",
+        "landmarkRule": "closure seat",
+        "sizing": "vial family: proportional to glass mm, 4 ml anchor 43.1% x 1.20 lift (Jordan 2026-09-25) = 26.3 px/mm",
+        "glassHeightPct": 40.24,
+        "targetPct": 38.39,
+        "measuredFootPx": 536,
+        "measuredLandmarkPx": 100,
+        "scaleFactor": 2.01461
+      },
+      "fit": {
+        "scale": 0.9966,
+        "shiftY": 1.4,
+        "shiftX": 2.1
+      },
+      "qaRaw": {
+        "points": 595,
+        "iou": 0.9761,
+        "p95": 4.21,
+        "p99": 6.01,
+        "max": 10.41,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "b5/inputs/GB1mlVBlk-input.png",
+        "sha256": "b2531cf3dc1e3dd2a7212915a38e79cc9e8242502bfc11808c628ee54ebbac40"
+      },
+      "source": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/12. Vials/4. 1ml Clear PSD Uncapped/1. GB1mlVBlk.psd",
+        "sha256": "92aec537eaacd1a4aac4ea8a10b44d0222f0a6c36f92293daf31816144b02e32"
+      },
+      "lane": "b5",
+      "promptSha256": "536467806009ee300d666608f5709917fb99104bf2115fae8859545d867704db"
+    },
+    {
+      "sku": "GBVialAmb1o5WhtCapSht",
+      "family": "Vial",
+      "groupSlug": "vial-2ml-amber-13-425",
+      "graceSku": "GB-VIA-AMB-1.5ML-WHT-S",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343699140900",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh74wd1kt174err92n6q50qmkh8ds0k9",
+        "slug": "vial-2ml-amber-13-425",
+        "displayName": "2 ml Amber Vial Bottle with Cap",
+        "color": "Amber",
+        "capColor": "White",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/vials-approved-2026-09-25/GBVialAmb1o5WhtCapSht.d0c06b55854f.webp",
+      "sha256": "d0c06b55854fd8135a9709be062e49c843187fcf5e498114ff4dbebdf6767031",
+      "bytes": 1803108,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "01f5959192b98714b2a6a3038774fbd84010fcb2ada3ecde383706a187e5e32f",
+      "sourceBytes": 3107307,
+      "sourceRenderSha256": "a539819414f9da0ee10ff6c07955bcad4698b48cccdcb39629f7c60742fb3684",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 22,
+        "glassMmSource": "Jordan caliper 2026-09-25",
+        "landmarkRule": "shoulder",
+        "sizing": "vial family: proportional to glass mm, 4 ml anchor 43.1% x 1.20 lift (Jordan 2026-09-25) = 26.3 px/mm",
+        "glassHeightPct": 25.29,
+        "targetPct": 17.75,
+        "measuredFootPx": 590,
+        "measuredLandmarkPx": 371,
+        "scaleFactor": 1.85484
+      },
+      "fit": {
+        "scale": 1.0027,
+        "shiftY": -5.6,
+        "shiftX": -1.5
+      },
+      "qaRaw": {
+        "points": 276,
+        "iou": 0.9903,
+        "p95": 2.33,
+        "p99": 4.35,
+        "max": 5.43,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "b5/inputs/GBVialAmb1o5WhtCapSht-input.png",
+        "sha256": "715cb699729ef7b5e54b05ef3f1c2e37293789fdb0f96b72ab483bc49d5a105c"
+      },
+      "source": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/22. GB 1o5 Amber/2.  Amber 1o5  Uncapped/2. GBVialAmb1o5WhtCapSht.psd",
+        "sha256": "19af33d7dab518888174f4452cca1ad9accb08a695a84bc7d31f995b40159a55"
+      },
+      "lane": "b5",
+      "promptSha256": "d0955d946fc6534173071e2c5b4be9dedd2cb1b13062f123be67276b4689fc28"
+    },
+    {
+      "sku": "GBVBlu1o9BlackCapSht",
+      "family": "Vial",
+      "groupSlug": "vial-3ml-blue-13-425",
+      "graceSku": "GB-VIA-BLU-3ML-BLK-S",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343699173668",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7064rrjykysmb3acejbmt8s98dr735",
+        "slug": "vial-3ml-blue-13-425",
+        "displayName": "3 ml Blue Vial Bottle with Cap",
+        "color": "Blue",
+        "capColor": "Black",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/vials-approved-2026-09-25/GBVBlu1o9BlackCapSht.ecc1de43a5fe.webp",
+      "sha256": "ecc1de43a5fe5bc4f91813e75e40474f89d3258d442b5ee814338b8dcc901908",
+      "bytes": 1831080,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "947b086c58c1970336897325edf0c01a4dcb9c47754163e7f187649ba294db7c",
+      "sourceBytes": 3236743,
+      "sourceRenderSha256": "f33af31dfaa452304caeb1347ede798b548d261c57abfd03f8088e12b3c05d9e",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 27,
+        "glassMmSource": "Jordan caliper 2026-09-25",
+        "landmarkRule": "shoulder",
+        "sizing": "vial family: proportional to glass mm, 4 ml anchor 43.1% x 1.20 lift (Jordan 2026-09-25) = 26.3 px/mm",
+        "glassHeightPct": 31.04,
+        "targetPct": 23,
+        "measuredFootPx": 690,
+        "measuredLandmarkPx": 258,
+        "scaleFactor": 1.21824
+      },
+      "fit": {
+        "scale": 1.0001,
+        "shiftY": -3.7,
+        "shiftX": -0.2
+      },
+      "qaRaw": {
+        "points": 408,
+        "iou": 0.9847,
+        "p95": 4.44,
+        "p99": 4.79,
+        "max": 6.52,
+        "bgDevP95": 2
+      },
+      "input": {
+        "file": "b5/inputs/GBVBlu1o9BlackCapSht-input.png",
+        "sha256": "b9d85c1317cd74f0c0bf0f5e97267d344723e4688e9019c56f50cb7ddcd2efcf"
+      },
+      "source": {
+        "path": "legacy:https://www.bestbottles.com/images/store/enlarged_pics/GBVBlu1o9BlackCapSht.gif",
+        "sha256": "4ed61c67863bb6be86842dd3c5104139e8a4a77439d214a68a7cfaf6f4ad5691"
+      },
+      "lane": "b5",
+      "promptSha256": "dea94040e8f5de04b7878b6dd8c85e91ff96abe5b1c93b9abfcdea125faab929"
+    },
+    {
+      "sku": "GBVGreen2o4BlackCapSht",
+      "family": "Vial",
+      "groupSlug": "vial-3ml-green-13-425",
+      "graceSku": "GB-VIA-CLR-3ML-GRN-S",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343618302244",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh759h9cd0280p36g99qqewyzx8dsb96",
+        "slug": "vial-3ml-green-13-425",
+        "displayName": "3 ml Green Vial Bottle with Cap",
+        "color": "Green",
+        "capColor": "Green",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/vials-approved-2026-09-25/GBVGreen2o4BlackCapSht.d703a6db23d6.webp",
+      "sha256": "d703a6db23d634f3064335f552baa5b554dbc90bf671f1774c9b3ef489997678",
+      "bytes": 1796748,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "c73777645f3e190402052b961b7371abdf6091d87ad4decda32e72a19149e02b",
+      "sourceBytes": 3133588,
+      "sourceRenderSha256": "a26b2728deb0d9aaaf42be41fcf6f3a013cb1889e3670d280722fad576dcf544",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 27,
+        "glassMmSource": "Jordan caliper 2026-09-25",
+        "landmarkRule": "shoulder",
+        "sizing": "vial family: proportional to glass mm, 4 ml anchor 43.1% x 1.20 lift (Jordan 2026-09-25) = 26.3 px/mm",
+        "glassHeightPct": 31.04,
+        "targetPct": 22.59,
+        "measuredFootPx": 688,
+        "measuredLandmarkPx": 266,
+        "scaleFactor": 1.22455
+      },
+      "fit": {
+        "scale": 1.001,
+        "shiftY": -2.9,
+        "shiftX": -0.6
+      },
+      "qaRaw": {
+        "points": 402,
+        "iou": 0.9906,
+        "p95": 2.63,
+        "p99": 3.17,
+        "max": 7.15,
+        "bgDevP95": 1
+      },
+      "input": {
+        "file": "b5/inputs/GBVGreen2o4BlackCapSht-input.png",
+        "sha256": "87ab2d8cd9a95c6f79c37e43f019ebaf4b7fb49a2a07ec25414d5e1027612e7a"
+      },
+      "source": {
+        "path": "legacy:https://www.bestbottles.com/images/store/enlarged_pics/GBVGreen2o4BlackCapSht.gif",
+        "sha256": "4001d6be79dc7c055d4a2a55d1cfb9e2b82c4b555c5262874a6fe5b3b4b78322"
+      },
+      "lane": "b5",
+      "promptSha256": "889f86e9bf7b177c2b172163c20504a8b96d99e4872b934a0e788a32a5d50737"
+    },
+    {
+      "sku": "LB3mlClear",
+      "family": "Lotion Bottle",
+      "groupSlug": "lotion-bottle-3ml-clear-snap",
+      "graceSku": "LB-LTB-CLR-3ML-CLR-T",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343698092324",
+      "status": "approved",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7cw4r8da4pprfypmzs1rag498ds4zt",
+        "slug": "lotion-bottle-3ml-clear-snap",
+        "displayName": "3 ml Clear Lotion Bottle Bottle with Cap",
+        "color": "Clear",
+        "capColor": "Clear",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/vials-approved-2026-09-25/LB3mlClear.fb8867d925b7.webp",
+      "sha256": "fb8867d925b71faf910883cdcad40141f18c8bc8534d7e2f4d1ed606367f0fad",
+      "bytes": 1681084,
+      "selectedAttempt": "a1",
+      "sourceFittedSha256": "6bf1c6ad544ccebc430a897a411c7a49f8f0d5ba81b65c2f9a2e5db266e406a1",
+      "sourceBytes": 3067835,
+      "sourceRenderSha256": "249bd27f48e61325a1616f2dfeec2db42555236b372e3ce170d5e9b606c17871",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": null,
+        "heightWithCapMm": 65,
+        "glassMmSource": "Jordan 2026-09-25: call it 65 mm tall with the cap; body ≈ 46.9 mm from the photo proportions",
+        "landmarkRule": "closure seat (top of the vial body under the sprayer collar)",
+        "targetPct": 35,
+        "note": "placed at 35% (the 3 ml vial rule in force when rendered); the approved curve for 46.9 mm gives 33.8%, within 1.3 points",
+        "measuredFootPx": 442,
+        "measuredLandmarkPx": 145,
+        "scaleFactor": 2.6963
+      },
+      "fit": {
+        "scale": 1.0006,
+        "shiftY": -1.1,
+        "shiftX": -0.2,
+        "p95": 7.88
+      },
+      "qaRaw": {
+        "p95": 7.88
+      },
+      "input": {
+        "file": "b4/inputs/LB3mlClear-input.png",
+        "sha256": "99bc3814d064cdbce8aeb661ef23125a3bc6503bc55468f2a8610cea1e37f600"
+      },
+      "source": {
+        "path": "legacy:https://www.bestbottles.com/images/store/enlarged_pics/LB3mlClear.gif",
+        "sha256": "6387d0bd9ce1bcb1a08b7ec74b413816a435f350aac3295a9081ca7ce998f365"
+      },
+      "lane": "b4",
+      "promptSha256": "dee033594337fd9a5547699e5142dd3d60b138ded9b41c493b206fd547fffe2e"
+    }
+  ]
+}
