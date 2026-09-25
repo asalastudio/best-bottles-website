@@ -1,0 +1,11 @@
+website_option_id,website_sku_or_image,normalized_component,finish,height_evidence,decision
+3736,CP13-415BlkSht,Short ribbed cap,Black,Website thumbnail and master art,Keep distinct
+3737,CP13-415WhtSht,Short ribbed cap,White,Website thumbnail and master art,Keep distinct
+3971,13-415CpBlkShShtMtl,Short liner cap,Shiny black,17 mm standalone component page,Keep distinct
+3972,13-415CpCuSht,Short liner cap,Matte copper,Website selectable option,Keep distinct; one of five additional finishes
+3973,13-415CpGlMattSht,Short liner cap,Matte gold,Website selectable option,Keep distinct; one of five additional finishes
+3974,13-415CpGlSht,Short liner cap,Shiny gold,5 mL Cylinder assembled height 59 mm versus 65 mm with regular gold cap,Keep distinct from CP13-415Gl
+3975,13-415CpSlMattSht,Short liner cap,Matte silver,Website selectable option,Keep distinct; one of five additional finishes
+3976,13-415CpSlSht,Short liner cap,Shiny silver,Website source image shorter than CP13-415Sl,Keep distinct from CP13-415Sl
+3739,CP13-415Gl,Tall liner cap,Shiny gold,24 mm standalone component page; 5 mL Cylinder assembled height 65 mm,Keep distinct from short gold cap and roll-on caps; use owner-approved display name
+3738,CP13-415Sl,Tall liner cap,Shiny silver,24 mm standalone component page,Keep distinct from short silver cap and roll-on caps; use owner-approved display name

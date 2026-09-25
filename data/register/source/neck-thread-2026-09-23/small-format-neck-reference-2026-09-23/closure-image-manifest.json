@@ -1,0 +1,27 @@
+[
+  {
+    "sourcePath": "public/references/closures/20-8-245-caps-cp8-425shortblack.png",
+    "label": "Short black",
+    "sha256": "0d5e7f15f61c23c62ecf11c45bb1d01230685b2fb38fb2339dc0591bc49a818d"
+  },
+  {
+    "sourcePath": "public/references/closures/20-8-245-caps-cp8-425shortwhite.png",
+    "label": "Short white",
+    "sha256": "8ef2e0693291b0561f8b77a96e17f7338a225091c7c3af0bd289821a5312b03d"
+  },
+  {
+    "sourcePath": "public/references/closures/20-8-245-caps-cp8-425tallblack.png",
+    "label": "Tall black",
+    "sha256": "0c61c1c84eb70a068dc9d0cd85a5934612c292db4f35d5261ab61938be83da77"
+  },
+  {
+    "sourcePath": "public/references/closures/20-8-245-caps-cp8-425tallshnsl.png",
+    "label": "Tall silver",
+    "sha256": "79a8b5bcb84d0c849e06fe3439a63235c5bc12079c8306c4efbba951cff10ed0"
+  },
+  {
+    "sourcePath": "public/references/closures/20-8-245-caps-cp8-425tallshngl.png",
+    "label": "Tall gold",
+    "sha256": "a750b229af205ef341fc7cc1b4a906724bfc75d1784adae548c5015aef278df5"
+  }
+]

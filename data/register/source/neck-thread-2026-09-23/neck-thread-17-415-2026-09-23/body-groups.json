@@ -1,0 +1,65 @@
+{
+  "collectedAt": "2026-09-23T21:00:19.731343+00:00",
+  "groups": [
+    {
+      "label": "Clear",
+      "sku": "GBCyl9MtlRollBlkDot",
+      "siteThread": "17-415",
+      "siteCapacity": "9 ml (0.3 oz)",
+      "siteHeightWithoutCap": "70 &#177;1 mm",
+      "siteDiameter": "20 &#177;0.5 mm",
+      "siteUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-black-dot-cap",
+      "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-17-415/GBCyl9MtlRollBlkDot/6c17945e0a1f4bd2ce374ebe927a8f3ff68f11e2ac37057f627081a9ace9e71a.front-off-1000x1100.webp",
+      "imageFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/outputs/neck-thread-17-415-2026-09-23/body-references/GBCyl9MtlRollBlkDot.webp",
+      "imageSourceType": "Convex cap-off plate"
+    },
+    {
+      "label": "Amber",
+      "sku": "GBCylAmb9MtlRollBlkDot",
+      "siteThread": "17-415",
+      "siteCapacity": "9 ml (0.3 oz)",
+      "siteHeightWithoutCap": "70 &#177;1 mm",
+      "siteDiameter": "20 &#177;0.5 mm",
+      "siteUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-amber-glass-bottle-metal-roller-ball-black-dot-cap",
+      "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-amber-17-415/GBCylAmb9MtlRollBlkDot/bf41dacd0a7a7d5495c84ee89799bc55961a9510a79211029bf9cb80631790bc.front-off-1000x1100.webp",
+      "imageFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/outputs/neck-thread-17-415-2026-09-23/body-references/GBCylAmb9MtlRollBlkDot.webp",
+      "imageSourceType": "Convex cap-off plate"
+    },
+    {
+      "label": "Cobalt blue",
+      "sku": "GBCylBlu9MtlRollBlkDot",
+      "siteThread": "17-415",
+      "siteCapacity": "9 ml (0.3 oz)",
+      "siteHeightWithoutCap": "70 &#177;1 mm",
+      "siteDiameter": "20 &#177;0.5 mm",
+      "siteUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-cobalt-blue-glass-bottle-metal-roller-ball-black-dot-cap",
+      "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-cobalt-blue-17-415/GBCylBlu9MtlRollBlkDot/a5b375f4135cac1f7e6af4b6536a408660da50b2dcad58a98d8e316f6f6bbec3.front-off-1000x1100.webp",
+      "imageFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/outputs/neck-thread-17-415-2026-09-23/body-references/GBCylBlu9MtlRollBlkDot.webp",
+      "imageSourceType": "Convex cap-off plate"
+    },
+    {
+      "label": "Frosted",
+      "sku": "GBCylFrst9MtlRollBlkDot",
+      "siteThread": "17-415",
+      "siteCapacity": "9 ml (0.3 oz)",
+      "siteHeightWithoutCap": "74 &#177;1 mm",
+      "siteDiameter": "21 &#177;0.5 mm",
+      "siteUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-frosted-glass-bottle-metal-roller-ball-black-dot-cap",
+      "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-17-415/GBCylFrst9MtlRollBlkDot/0cdc49cb3a1a9b993f830a6e3d144876fd969000c7a30d10eece8ed1dd926f62.front-off-1000x1100.webp",
+      "imageFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/outputs/neck-thread-17-415-2026-09-23/body-references/GBCylFrst9MtlRollBlkDot.webp",
+      "imageSourceType": "Convex cap-off plate"
+    },
+    {
+      "label": "Swirl",
+      "sku": "GBCylSwrl9MtlRollBlkDot",
+      "siteThread": "17-415",
+      "siteCapacity": "9 ml (0.3 oz)",
+      "siteHeightWithoutCap": "74 &#177;1 mm",
+      "siteDiameter": "21 &#177;0.5 mm",
+      "siteUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-swirl-glass-bottle-metal-roller-ball-black-dot-cap",
+      "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-swirl-17-415/GBCylSwrl9MtlRollBlkDot/dc1dc2cfe11f8edcb6f715072f9a97a037ddf94222bc48b85a1f3f0b0281ba1f.front-off-1000x1100.webp",
+      "imageFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/outputs/neck-thread-17-415-2026-09-23/body-references/GBCylSwrl9MtlRollBlkDot.webp",
+      "imageSourceType": "Convex cap-off plate"
+    }
+  ]
+}

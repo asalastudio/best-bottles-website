@@ -1,0 +1,212 @@
+[
+  {
+    "role": "plain threaded glass body layer from short-cap master PSD",
+    "output": "source-images/body-30-clear.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/17. GBBstn1ozBlkCapSht.psd",
+    "sourceSha256": "8f3adeb586877cc3a1ca8b58901f43022fe388187aa2c5b8d11bfa8edc4f6f1e",
+    "size": [
+      410,
+      949
+    ]
+  },
+  {
+    "role": "plain threaded glass body layer from short-cap master PSD",
+    "output": "source-images/body-30-amber.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/17. GBBstnAmb1ozBlkCapSht.psd",
+    "sourceSha256": "d55c3911e6f42992f21851b6e4705038291fb559a5d8a2898d0ff72e61e62bf5",
+    "size": [
+      409,
+      963
+    ]
+  },
+  {
+    "role": "plain threaded glass body layer from short-cap master PSD",
+    "output": "source-images/body-30-cobalt-blue.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/17. GBBstnBlu1ozBlkCapSht.psd",
+    "sourceSha256": "05d0e8c6355727ddfa084c31bbeedeecfe53bf3d2c7e02f4c3db87d41a892d4c",
+    "size": [
+      409,
+      963
+    ]
+  },
+  {
+    "role": "plain threaded glass body layer from short-cap master PSD",
+    "output": "source-images/body-60-clear.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/17. GBBstn2ozBlkCapSht.psd",
+    "sourceSha256": "82dacf0eeb9397d6ead784ff4dad5144d7882f6e843b12e511505ee16f87cdf0",
+    "size": [
+      494,
+      1158
+    ]
+  },
+  {
+    "role": "plain threaded glass body layer from short-cap master PSD",
+    "output": "source-images/body-60-amber.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/17. GBBstnAmb2ozBlkCapSht.psd",
+    "sourceSha256": "7a4b430ed4f984a8e27134f4e47a65d0f5257536f649af042fc2288495d89281",
+    "size": [
+      473,
+      1166
+    ]
+  },
+  {
+    "role": "plain threaded glass body layer from short-cap master PSD",
+    "output": "source-images/body-60-cobalt-blue.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/17. GBBstnBlu2ozBlkCapSht.psd",
+    "sourceSha256": "e741ba2b1c3b62e8912ddc95e824bbfaf4eca2c8eda98bb7a5006b2814c9fc7e",
+    "size": [
+      486,
+      1165
+    ]
+  },
+  {
+    "role": "outer component visual",
+    "output": "source-images/roll-matte-black.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/2. 20-400 High Res Caps/Caps/5. 20-400CpRollTallMattBlk.psd",
+    "sourceSha256": "e33829a95b53be66549f88f48157a9b57783b71efd2a68010f400119d3addbac",
+    "size": [
+      318,
+      493
+    ]
+  },
+  {
+    "role": "outer component visual",
+    "output": "source-images/roll-matte-gold.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/2. 20-400 High Res Caps/Caps/2. 20-400CpRollTallMattGl.psd",
+    "sourceSha256": "740a943a9c710815ee79952637b4dc3b472b4b07e8bb10907446a395ec9651c4",
+    "size": [
+      323,
+      472
+    ]
+  },
+  {
+    "role": "outer component visual",
+    "output": "source-images/roll-matte-silver.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/2. 20-400 High Res Caps/Caps/1. 20-400CpRollTallMattSl.psd",
+    "sourceSha256": "7286107c13906e3a031ad4f28216472771649522b404ed2316d356953799065b",
+    "size": [
+      310,
+      445
+    ]
+  },
+  {
+    "role": "outer component visual",
+    "output": "source-images/roll-shiny-black.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/2. 20-400 High Res Caps/Caps/4. 20-400CpRollTallShnBlk.psd",
+    "sourceSha256": "c5a75b3ffca8a750215fdeaf1af28cefc532f85784dfa91457f11649c73867e1",
+    "size": [
+      322,
+      469
+    ]
+  },
+  {
+    "role": "outer component visual",
+    "output": "source-images/roll-shiny-gold.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/2. 20-400 High Res Caps/Caps/3. 20-400CpRollTallShnGl.psd",
+    "sourceSha256": "7618c8136dc2a5b5429c052eaa9f3e7fc700f7b4f43652bda6178dc747cfbdb3",
+    "size": [
+      325,
+      477
+    ]
+  },
+  {
+    "role": "outer component visual",
+    "output": "source-images/roll-shiny-silver.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/2. 20-400 High Res Caps/Caps/6. 20-400CpRollTallShnSl.psd",
+    "sourceSha256": "da375e806481f771fd9ee7f3e3f012417eabbcb510bace27382f7ff2fa1bb0f9",
+    "size": [
+      315,
+      450
+    ]
+  },
+  {
+    "role": "outer component visual",
+    "output": "source-images/short-black.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/2. 20-400 High Res Caps/Caps/8. 20-400cp1ozShortBlk.psd",
+    "sourceSha256": "e45c696fde888dd70737855c64b72622faba14530ef76162e583b71689e36ac0",
+    "size": [
+      316,
+      169
+    ]
+  },
+  {
+    "role": "outer component visual",
+    "output": "source-images/drop-black.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/2. 20-400 High Res Caps/Droppers/8. 20-400Drp1ozBlckBulb.psd",
+    "sourceSha256": "6de19ac345d3e9da15a8bc97bee2a50529d195064b76c12e028f8497b2f8d849",
+    "size": [
+      709,
+      2656
+    ]
+  },
+  {
+    "role": "outer component visual",
+    "output": "source-images/drop-black-gold.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/2. 20-400 High Res Caps/Droppers/11. 20-400Drp1ozShnGlTrimBlkBulb.psd",
+    "sourceSha256": "3cfa4cbf88942ccfa5ffcbeaddd8e863fad1becb7ec6c03014ecf8959c1b088a",
+    "size": [
+      717,
+      2646
+    ]
+  },
+  {
+    "role": "outer component visual",
+    "output": "source-images/drop-black-silver.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/2. 20-400 High Res Caps/Droppers/9. 20-400Drp1ozShnSlTrimBlkBulb.psd",
+    "sourceSha256": "c4595742d254f6c626e5aeac6eaa0c88972fe7aa01b0727801974ce9feacdf73",
+    "size": [
+      984,
+      2642
+    ]
+  },
+  {
+    "role": "outer component visual",
+    "output": "source-images/drop-white.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/2. 20-400 High Res Caps/Droppers/7.  20-400Drp1ozWhiteBulb.psd",
+    "sourceSha256": "07c0a388a4d16cd0afd1c14fbb9daae9414e25f67b83a36e1473c54c9b1ef011",
+    "size": [
+      663,
+      2580
+    ]
+  },
+  {
+    "role": "outer component visual",
+    "output": "source-images/drop-white-gold.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/2. 20-400 High Res Caps/Droppers/10. 20-400Drp1ozlShnGlTrimWhiteBulb.psd",
+    "sourceSha256": "82c5613797169aab8f481904dbb1d096f6075eb3d51940414943d8afb3dc898e",
+    "size": [
+      712,
+      2652
+    ]
+  },
+  {
+    "role": "outer component visual",
+    "output": "source-images/drop-white-silver.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/2. 20-400 High Res Caps/Droppers/12. 20-400Drp1ozlShnSlTrimWhiteBulb.psd",
+    "sourceSha256": "cd6c7421ab796ff87f3a8a4165bff517a33c4eda1be3b143a90f5fac3363cb6d",
+    "size": [
+      738,
+      2627
+    ]
+  },
+  {
+    "role": "roller insert head from cap-off assembly PSD; same visual scale",
+    "output": "source-images/plug-plastic.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/6. GBBstn1ozRollMattSl.psd",
+    "sourceSha256": "d04041cb7ef135350995b4773640f516f42224dd93d02c307f6c609cf6a76609",
+    "size": [
+      209,
+      172
+    ]
+  },
+  {
+    "role": "roller insert head from cap-off assembly PSD; same visual scale",
+    "output": "source-images/plug-metal.png",
+    "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/1. GBBstn1ozMtlRollonMattSl.psd",
+    "sourceSha256": "68cad12d8746fde491802bb3ef6dfa165a29106028e223dcb64ff8caf3ce3f1b",
+    "size": [
+      217,
+      175
+    ]
+  }
+]
