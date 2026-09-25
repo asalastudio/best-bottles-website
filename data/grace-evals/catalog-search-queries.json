@@ -1,0 +1,1546 @@
+{
+ "description": "Short storefront search-box queries, labelled with what a Best Bottles merchandiser would show. Tune thresholds on split=tune only; report on holdout. viaUseTable = the right dispensers come from the reviewed use table (src/lib/grace/useCaseApplicators.ts), not from words the shopper typed. Labels written 2026-09-24; spot-check before trusting results.",
+ "fields": {
+  "applicators": "any of these APPLICATOR_BUCKETS values",
+  "families": "any of",
+  "colors": "any of (canonical glass colours)",
+  "capacityMl": "within ±10%",
+  "neck": "exact neck finish",
+  "parts": "a loose component (category Component or Cap/Closure)",
+  "notCarried": "the store does not sell this; the right outcome is no suggestion"
+ },
+ "cases": [
+  {
+   "id": "s001",
+   "text": "10ml roller bottles for essential oils",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "rollon"
+    ],
+    "capacityMl": 10
+   },
+   "source": "staging-2026-09-24"
+  },
+  {
+   "id": "s002",
+   "text": "amber dropper 1oz",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "dropper"
+    ],
+    "colors": [
+     "Amber"
+    ],
+    "capacityMl": 30
+   },
+   "source": "staging-2026-09-24"
+  },
+  {
+   "id": "s003",
+   "text": "roller bottle",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "rollon"
+    ]
+   },
+   "source": "staging-2026-09-24"
+  },
+  {
+   "id": "s004",
+   "text": "10 ml roll-on",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "rollon"
+    ],
+    "capacityMl": 10
+   },
+   "source": "staging-2026-09-24"
+  },
+  {
+   "id": "s005",
+   "text": "perfume spray bottle 30ml",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "finemist",
+     "perfumespray"
+    ],
+    "capacityMl": 30
+   },
+   "source": "staging-2026-09-24"
+  },
+  {
+   "id": "s006",
+   "text": "cap for 18-415",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "capclosure"
+    ],
+    "neck": "18-415",
+    "parts": true
+   },
+   "source": "staging-2026-09-24"
+  },
+  {
+   "id": "s007",
+   "text": "sprayer that fits 13-415",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "finemist",
+     "perfumespray"
+    ],
+    "neck": "13-415",
+    "parts": true
+   },
+   "source": "staging-2026-09-24"
+  },
+  {
+   "id": "s008",
+   "text": "atomiser",
+   "split": "holdout",
+   "expect": {
+    "families": [
+     "Atomizer"
+    ]
+   },
+   "source": "staging-2026-09-24"
+  },
+  {
+   "id": "s009",
+   "text": "rollerball 10ml",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "rollon"
+    ],
+    "capacityMl": 10
+   },
+   "source": "staging-2026-09-24"
+  },
+  {
+   "id": "s010",
+   "text": "dropper for 1 oz boston round",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "dropper"
+    ],
+    "families": [
+     "Boston Round"
+    ],
+    "capacityMl": 30
+   },
+   "source": "staging-2026-09-24"
+  },
+  {
+   "id": "s011",
+   "text": "black cap",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "capclosure"
+    ]
+   },
+   "source": "staging-2026-09-24"
+  },
+  {
+   "id": "s012",
+   "text": "frosted spray 50 ml",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "finemist",
+     "perfumespray"
+    ],
+    "colors": [
+     "Frosted"
+    ],
+    "capacityMl": 50
+   },
+   "source": "staging-2026-09-24"
+  },
+  {
+   "id": "s013",
+   "text": "pump bottle",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "lotionpump"
+    ]
+   },
+   "source": "staging-2026-09-24"
+  },
+  {
+   "id": "s014",
+   "text": "lotion pump",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "lotionpump"
+    ]
+   },
+   "source": "staging-2026-09-24"
+  },
+  {
+   "id": "s015",
+   "text": "attar bottle",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "rollon",
+     "reducer",
+     "glassstopper"
+    ]
+   },
+   "viaUseTable": true,
+   "source": "staging-2026-09-24"
+  },
+  {
+   "id": "s016",
+   "text": "travel perfume",
+   "split": "holdout",
+   "expect": {
+    "families": [
+     "Atomizer"
+    ]
+   },
+   "source": "staging-2026-09-24"
+  },
+  {
+   "id": "s017",
+   "text": "gold roll on cap",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "rollon"
+    ],
+    "parts": true
+   },
+   "source": "staging-2026-09-24"
+  },
+  {
+   "id": "s018",
+   "text": "essential oil bottle",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "reducer",
+     "dropper",
+     "rollon"
+    ]
+   },
+   "viaUseTable": true,
+   "source": "staging-2026-09-24"
+  },
+  {
+   "id": "s019",
+   "text": "sample vials",
+   "split": "tune",
+   "expect": {
+    "families": [
+     "Vial"
+    ]
+   },
+   "source": "staging-2026-09-24"
+  },
+  {
+   "id": "s020",
+   "text": "glass dropper bottle 30 ml",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "dropper"
+    ],
+    "capacityMl": 30
+   },
+   "source": "staging-2026-09-24"
+  },
+  {
+   "id": "s021",
+   "text": "roll on bottles",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "rollon"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s022",
+   "text": "roller bottles 10ml",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "rollon"
+    ],
+    "capacityMl": 10
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s023",
+   "text": "rollerball bottles for perfume oil",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "rollon"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s024",
+   "text": "roll-on glass bottle amber",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "rollon"
+    ],
+    "colors": [
+     "Amber"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s025",
+   "text": "metal roller ball bottle",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "rollon"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s026",
+   "text": "roll on for oils",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "rollon"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s027",
+   "text": "role on bottle",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "rollon"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s028",
+   "text": "roller bottle 1/3 oz",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "rollon"
+    ],
+    "capacityMl": 10
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s029",
+   "text": "5ml roll on",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "rollon"
+    ],
+    "capacityMl": 5
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s030",
+   "text": "cobalt blue roller bottles",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "rollon"
+    ],
+    "colors": [
+     "Cobalt Blue"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s031",
+   "text": "frosted roll on",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "rollon"
+    ],
+    "colors": [
+     "Frosted"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s032",
+   "text": "swirl roller bottle",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "rollon"
+    ],
+    "colors": [
+     "Swirl"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s033",
+   "text": "roll on 9 ml cylinder",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "rollon"
+    ],
+    "families": [
+     "Cylinder"
+    ],
+    "capacityMl": 9
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s034",
+   "text": "15ml elegant roll on",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "rollon"
+    ],
+    "families": [
+     "Elegant"
+    ],
+    "capacityMl": 15
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s035",
+   "text": "aromatherapy roller",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "rollon"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s036",
+   "text": "perfume atomizer bottle",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "finemist",
+     "perfumespray"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s037",
+   "text": "fine mist spray bottle",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "finemist",
+     "perfumespray"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s038",
+   "text": "glass spray bottle 100ml",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "finemist",
+     "perfumespray"
+    ],
+    "capacityMl": 100
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s039",
+   "text": "perfume bottle with sprayer 50ml",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "finemist",
+     "perfumespray"
+    ],
+    "capacityMl": 50
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s040",
+   "text": "mini perfume spray 5ml",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "finemist",
+     "perfumespray"
+    ],
+    "capacityMl": 5
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s041",
+   "text": "spray bottle for cologne",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "finemist",
+     "perfumespray"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s042",
+   "text": "mister bottle",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "finemist",
+     "perfumespray"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s043",
+   "text": "spritzer 30ml",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "finemist",
+     "perfumespray"
+    ],
+    "capacityMl": 30
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s044",
+   "text": "amber spray bottle",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "finemist",
+     "perfumespray"
+    ],
+    "colors": [
+     "Amber"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s045",
+   "text": "cologne bottle 100 ml",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "finemist",
+     "perfumespray",
+     "vintagestyle",
+     "vintagestyle-tassel"
+    ],
+    "capacityMl": 100
+   },
+   "viaUseTable": true,
+   "source": "constructed"
+  },
+  {
+   "id": "s046",
+   "text": "empty perfume bottles 30ml",
+   "split": "holdout",
+   "expect": {
+    "capacityMl": 30
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s047",
+   "text": "room spray bottle",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "finemist",
+     "perfumespray"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s048",
+   "text": "linen spray bottle",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "finemist",
+     "perfumespray"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s049",
+   "text": "vintage perfume bottle with bulb",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "vintagestyle",
+     "vintagestyle-tassel"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s050",
+   "text": "bulb sprayer bottle with tassel",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "vintagestyle-tassel"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s051",
+   "text": "antique atomizer bottle",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "vintagestyle",
+     "vintagestyle-tassel"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s052",
+   "text": "puffer perfume bottle",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "vintagestyle",
+     "vintagestyle-tassel"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s053",
+   "text": "tassel perfume bottle 100ml",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "vintagestyle-tassel"
+    ],
+    "capacityMl": 100
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s054",
+   "text": "dropper bottles",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "dropper"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s055",
+   "text": "pipette bottle 30ml",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "dropper"
+    ],
+    "capacityMl": 30
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s056",
+   "text": "tincture bottle 1 oz",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "dropper"
+    ],
+    "capacityMl": 30
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s057",
+   "text": "serum bottle with dropper",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "dropper"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s058",
+   "text": "amber glass dropper 2oz",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "dropper"
+    ],
+    "colors": [
+     "Amber"
+    ],
+    "capacityMl": 60
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s059",
+   "text": "blue dropper bottle 60 ml",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "dropper"
+    ],
+    "colors": [
+     "Cobalt Blue"
+    ],
+    "capacityMl": 60
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s060",
+   "text": "eye dropper bottle",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "dropper"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s061",
+   "text": "beard oil bottle",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "dropper",
+     "lotionpump"
+    ]
+   },
+   "viaUseTable": true,
+   "source": "constructed"
+  },
+  {
+   "id": "s062",
+   "text": "face serum bottle",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "dropper",
+     "lotionpump"
+    ]
+   },
+   "viaUseTable": true,
+   "source": "constructed"
+  },
+  {
+   "id": "s063",
+   "text": "hair oil bottle",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "dropper",
+     "lotionpump"
+    ]
+   },
+   "viaUseTable": true,
+   "source": "constructed"
+  },
+  {
+   "id": "s064",
+   "text": "cuticle oil bottle",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "dropper",
+     "lotionpump"
+    ]
+   },
+   "viaUseTable": true,
+   "source": "constructed"
+  },
+  {
+   "id": "s065",
+   "text": "euro dropper bottle",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "reducer"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s066",
+   "text": "orifice reducer bottle",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "reducer"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s067",
+   "text": "splash bottle",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "reducer"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s068",
+   "text": "reducer cap bottle 15ml",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "reducer"
+    ],
+    "capacityMl": 15
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s069",
+   "text": "dripper insert bottle",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "reducer"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s070",
+   "text": "treatment pump bottle",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "lotionpump"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s071",
+   "text": "serum pump bottle 30 ml",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "lotionpump"
+    ],
+    "capacityMl": 30
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s072",
+   "text": "lotion bottle with pump 100ml",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "lotionpump"
+    ],
+    "capacityMl": 100
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s073",
+   "text": "foundation pump bottle",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "lotionpump"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s074",
+   "text": "body lotion bottle",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "lotionpump"
+    ]
+   },
+   "viaUseTable": true,
+   "source": "constructed"
+  },
+  {
+   "id": "s075",
+   "text": "boston round 4oz",
+   "split": "tune",
+   "expect": {
+    "families": [
+     "Boston Round"
+    ],
+    "capacityMl": 120
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s076",
+   "text": "boston round amber",
+   "split": "holdout",
+   "expect": {
+    "families": [
+     "Boston Round"
+    ],
+    "colors": [
+     "Amber"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s077",
+   "text": "cylinder bottles",
+   "split": "tune",
+   "expect": {
+    "families": [
+     "Cylinder"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s078",
+   "text": "diva perfume bottle",
+   "split": "holdout",
+   "expect": {
+    "families": [
+     "Diva"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s079",
+   "text": "empire bottle 50ml",
+   "split": "tune",
+   "expect": {
+    "families": [
+     "Empire"
+    ],
+    "capacityMl": 50
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s080",
+   "text": "elegant 60ml",
+   "split": "holdout",
+   "expect": {
+    "families": [
+     "Elegant"
+    ],
+    "capacityMl": 60
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s081",
+   "text": "circle perfume bottle",
+   "split": "tune",
+   "expect": {
+    "families": [
+     "Circle"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s082",
+   "text": "round perfume bottle frosted",
+   "split": "holdout",
+   "expect": {
+    "families": [
+     "Round"
+    ],
+    "colors": [
+     "Frosted"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s083",
+   "text": "slim spray bottle",
+   "split": "tune",
+   "expect": {
+    "families": [
+     "Slim"
+    ],
+    "applicators": [
+     "finemist",
+     "perfumespray"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s084",
+   "text": "sleek 30 ml",
+   "split": "holdout",
+   "expect": {
+    "families": [
+     "Sleek"
+    ],
+    "capacityMl": 30
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s085",
+   "text": "square bottle 15ml",
+   "split": "tune",
+   "expect": {
+    "families": [
+     "Square"
+    ],
+    "capacityMl": 15
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s086",
+   "text": "tulip bottle",
+   "split": "holdout",
+   "expect": {
+    "families": [
+     "Tulip"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s087",
+   "text": "diamond perfume bottle",
+   "split": "tune",
+   "expect": {
+    "families": [
+     "Diamond"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s088",
+   "text": "teardrop bottle",
+   "split": "holdout",
+   "expect": {
+    "families": [
+     "Teardrop"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s089",
+   "text": "grace bottle 55ml",
+   "split": "tune",
+   "expect": {
+    "families": [
+     "Grace"
+    ],
+    "capacityMl": 55
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s090",
+   "text": "heart shaped perfume bottle",
+   "split": "holdout",
+   "expect": {
+    "families": [
+     "Decorative"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s091",
+   "text": "apothecary bottle with glass stopper",
+   "split": "tune",
+   "expect": {
+    "families": [
+     "Apothecary"
+    ],
+    "applicators": [
+     "glassstopper"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s092",
+   "text": "replacement sprayer 18-415",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "finemist",
+     "perfumespray"
+    ],
+    "neck": "18-415",
+    "parts": true
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s093",
+   "text": "18/415 caps",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "capclosure"
+    ],
+    "neck": "18-415",
+    "parts": true
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s094",
+   "text": "dropper tops 20-400",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "dropper"
+    ],
+    "neck": "20-400",
+    "parts": true
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s095",
+   "text": "roll on caps 13-415",
+   "split": "tune",
+   "expect": {
+    "neck": "13-415",
+    "parts": true
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s096",
+   "text": "lotion pump 18-415",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "lotionpump"
+    ],
+    "neck": "18-415"
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s097",
+   "text": "fine mist sprayer only",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "finemist",
+     "perfumespray"
+    ],
+    "parts": true
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s098",
+   "text": "just the caps for 20-400 bottles",
+   "split": "holdout",
+   "expect": {
+    "neck": "20-400",
+    "parts": true
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s099",
+   "text": "spare droppers",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "dropper"
+    ],
+    "parts": true
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s100",
+   "text": "sprayer 20-410",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "finemist",
+     "perfumespray"
+    ],
+    "neck": "20-410"
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s101",
+   "text": "bulb sprayer replacement",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "vintagestyle",
+     "vintagestyle-tassel"
+    ],
+    "parts": true
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s102",
+   "text": "reducer inserts 18-415",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "reducer"
+    ],
+    "neck": "18-415",
+    "parts": true
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s103",
+   "text": "13-415 bottles",
+   "split": "tune",
+   "expect": {
+    "neck": "13-415"
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s104",
+   "text": "17-415 roll on",
+   "split": "holdout",
+   "expect": {
+    "neck": "17-415",
+    "applicators": [
+     "rollon"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s105",
+   "text": "20-400 amber",
+   "split": "tune",
+   "expect": {
+    "neck": "20-400",
+    "colors": [
+     "Amber"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s106",
+   "text": "18 415 spray bottle",
+   "split": "holdout",
+   "expect": {
+    "neck": "18-415",
+    "applicators": [
+     "finemist",
+     "perfumespray"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s107",
+   "text": "2 oz bottle",
+   "split": "tune",
+   "expect": {
+    "capacityMl": 60
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s108",
+   "text": "half ounce bottle",
+   "split": "holdout",
+   "expect": {
+    "capacityMl": 15
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s109",
+   "text": "4 oz amber bottles",
+   "split": "tune",
+   "expect": {
+    "colors": [
+     "Amber"
+    ],
+    "capacityMl": 120
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s110",
+   "text": "1 oz perfume bottle",
+   "split": "holdout",
+   "expect": {
+    "capacityMl": 30
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s111",
+   "text": "100ml perfume bottle",
+   "split": "tune",
+   "expect": {
+    "capacityMl": 100
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s112",
+   "text": "3ml sample vial",
+   "split": "holdout",
+   "expect": {
+    "families": [
+     "Vial"
+    ],
+    "capacityMl": 3
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s113",
+   "text": "cobalt blue bottles",
+   "split": "tune",
+   "expect": {
+    "colors": [
+     "Cobalt Blue"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s114",
+   "text": "green glass bottle",
+   "split": "holdout",
+   "expect": {
+    "colors": [
+     "Green"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s115",
+   "text": "frosted glass bottles",
+   "split": "tune",
+   "expect": {
+    "colors": [
+     "Frosted"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s116",
+   "text": "clear glass perfume bottles 50ml",
+   "split": "holdout",
+   "expect": {
+    "colors": [
+     "Clear"
+    ],
+    "capacityMl": 50
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s117",
+   "text": "perfume oil bottles",
+   "split": "tune",
+   "expect": {
+    "applicators": [
+     "rollon",
+     "reducer",
+     "glassstopper"
+    ]
+   },
+   "viaUseTable": true,
+   "source": "constructed"
+  },
+  {
+   "id": "s118",
+   "text": "oud oil bottle",
+   "split": "holdout",
+   "expect": {
+    "applicators": [
+     "rollon",
+     "reducer",
+     "glassstopper"
+    ]
+   },
+   "viaUseTable": true,
+   "source": "constructed"
+  },
+  {
+   "id": "s119",
+   "text": "fragrance sample bottles",
+   "split": "tune",
+   "expect": {
+    "families": [
+     "Vial"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s120",
+   "text": "atomizer bottle travel",
+   "split": "holdout",
+   "expect": {
+    "families": [
+     "Atomizer"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s121",
+   "text": "purse perfume sprayer",
+   "split": "tune",
+   "expect": {
+    "families": [
+     "Atomizer"
+    ]
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s122",
+   "text": "perfume bottle 50 ml gold cap",
+   "split": "holdout",
+   "expect": {
+    "capacityMl": 50
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s123",
+   "text": "airless pump bottle",
+   "split": "tune",
+   "expect": {
+    "notCarried": true
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s124",
+   "text": "trigger spray bottle",
+   "split": "holdout",
+   "expect": {
+    "notCarried": true
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s125",
+   "text": "candle jar",
+   "split": "tune",
+   "expect": {
+    "notCarried": true
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s126",
+   "text": "reed diffuser bottle",
+   "split": "holdout",
+   "expect": {
+    "notCarried": true
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s127",
+   "text": "crimp perfume pump",
+   "split": "tune",
+   "expect": {
+    "notCarried": true
+   },
+   "source": "constructed"
+  },
+  {
+   "id": "s128",
+   "text": "foaming pump bottle",
+   "split": "holdout",
+   "expect": {
+    "notCarried": true
+   },
+   "source": "constructed"
+  }
+ ]
+}

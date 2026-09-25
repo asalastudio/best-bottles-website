@@ -1,9 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { api } from "../../../../../convex/_generated/api";
-import { getCatalogConvexClient } from "@/lib/catalogServer";
 import { enforceGraceRateLimit } from "@/lib/graceRateLimitServer";
-import { reportError } from "@/lib/observability/report";
-import { parseSearchLogPayload, scrubSearchQuery } from "@/lib/catalog/searchLog";
+import { parseSearchLogPayload } from "@/lib/catalog/searchLog";
+import { recordCatalogSearchEvent } from "@/lib/catalog/searchLogServer";
 
 /**
  * POST /api/catalog/search-log
@@ -14,8 +12,7 @@ import { parseSearchLogPayload, scrubSearchQuery } from "@/lib/catalog/searchLog
  */
 export async function POST(request: NextRequest) {
     const noContent = () => new NextResponse(null, { status: 204 });
-    const writeToken = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
-    if (!writeToken) return noContent();
+    if (!process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN) return noContent();
 
     const rateLimited = await enforceGraceRateLimit(request, {
         route: "catalog-search-log",
@@ -25,18 +22,6 @@ export async function POST(request: NextRequest) {
     if (rateLimited) return noContent();
 
     const payload = parseSearchLogPayload(await request.json().catch(() => null));
-    const query = payload ? scrubSearchQuery(payload.query) : "";
-    if (!payload || !query) return noContent();
-
-    try {
-        await getCatalogConvexClient().mutation(api.catalogSearchLog.record, {
-            token: writeToken,
-            query,
-            locale: payload.locale,
-            event: payload.event,
-        });
-    } catch (error) {
-        reportError(error, { area: "catalog-search-log", level: "warning" });
-    }
+    if (payload) await recordCatalogSearchEvent(payload);
     return noContent();
 }
