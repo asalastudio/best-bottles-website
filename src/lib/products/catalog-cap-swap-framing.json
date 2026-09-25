@@ -3911,6 +3911,14 @@
     "match": 0.87,
     "shadow": "/images/catalog/cap-swap-shadows/GBSlm30DrpCu.58f1c2d2c0.webp"
   },
+  "/images/catalog/next-four-approved-2026-09-24/GBSlm30SpryMtGl.16752112606e.webp": {
+    "plate": "capOff",
+    "scale": 0.85077,
+    "x": 0.10992,
+    "y": 0.09611,
+    "match": 0.86,
+    "shadow": "/images/catalog/cap-swap-shadows/GBSlm30SpryMtGl.899f003367.webp"
+  },
   "/images/catalog/next-four-approved-2026-09-24/GBSlm50AnSpGl.b886a4abdd3e.webp": {
     "plate": "capped",
     "scale": 0.85522,
@@ -3926,6 +3934,14 @@
     "y": 0.0425,
     "match": 0.977,
     "shadow": "/images/catalog/cap-swap-shadows/GBSlm50AnSpTslWht.c08922c91f.webp"
+  },
+  "/images/catalog/next-four-approved-2026-09-24/LBSlm30LtnMtGl.b85c9a6a04c1.webp": {
+    "plate": "capOff",
+    "scale": 0.85393,
+    "x": 0.10866,
+    "y": 0.08757,
+    "match": 0.903,
+    "shadow": "/images/catalog/cap-swap-shadows/LBSlm30LtnMtGl.91cf01c11a.webp"
   },
   "/images/catalog/round-enhancement/aligned-v4/GBRnd128AnSpGl.premium-aligned-v4.png": {
     "plate": "capped",
