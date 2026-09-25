@@ -1,10 +1,14 @@
 # Catalog kit completion inventory
 
-This inventory separates component-kit readiness from media coverage. It does not publish catalog data.
+> **OBSOLETE — do not use these counts for planning.**
+>
+> This folder is a historical snapshot from 2026-09-08 (420 kit complete / 411 candidates / 927 held / 1,876 plates). After the Sep 19 kit ship, live PROD has **1,728 kits / 2,283 plates**. Current truth: [`../catalog-kit-completion-2026-09-20/`](../catalog-kit-completion-2026-09-20/).
+
+This inventory separates component-kit readiness from media coverage. It does not publish catalog data. Keep this folder only as historical evidence of the pre-ship candidate/hold classification.
 
 ## Exact plate and kit ledger
 
-The current exact-plate inventory contains 1,876 rows:
+This snapshot's exact-plate inventory contains 1,876 rows:
 
 | Kit state | Rows | Meaning |
 | --- | ---: | --- |
