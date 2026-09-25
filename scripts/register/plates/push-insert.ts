@@ -54,7 +54,8 @@ async function main() {
     const sha256 = createHash("sha256").update(bytes).digest("hex");
     const key = `register/components/${neck}/${componentId}/roller-exploded-${sha256}.png`;
     console.log(`${componentId}: stub ${stub.image.width}x${stub.image.height} anchor (${stub.anchor.x}, ${stub.anchor.y}) → plug candidate ${candidate} ${meta.width}x${meta.height}, ${meta.plugMm} mm below the rim, sha ${sha256.slice(0, 12)}`);
-    if (meta.width !== stub.image.width || meta.anchor.x !== stub.anchor.x || meta.anchor.y !== stub.anchor.y) throw new Error("the plug must keep the stub's width and anchor");
+    // A photographed insert may be wider than the stub's canvas; it must share the stub's px/mm and seat at the same rim point.
+    if (meta.pxPerMm !== stub.pxPerMm || meta.anchor.y !== stub.anchor.y) throw new Error("the insert must keep the stub's px/mm and rim anchor");
     if (!apply) { console.log(`dry run: would upload ${key} and set two layers (seated stub, exploded plug). Add --apply.`); return; }
     if (!process.env.BLOB_READ_WRITE_TOKEN) throw new Error("BLOB_READ_WRITE_TOKEN is not set");
     const { url: blobUrl } = await createBlobStore().putObject(key, bytes, "image/png");
