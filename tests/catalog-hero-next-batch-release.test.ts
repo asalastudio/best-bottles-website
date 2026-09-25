@@ -11,20 +11,21 @@ afterEach(() => vi.unstubAllEnvs());
 
 const HELD = [
   'GBHeartFrst4KeyGld', 'GBHeartFrst4TslRed', 'LB1ozGl', 'LB1ozSl', 'LB3mlClear',
-  'LBMetalSilver1oz', 'GBMtlCylGl', 'GB1ozGenieBl',
+  'LBMetalSilver1oz', 'GBMtlCylGl',
 ];
 const ROUND2_QA_PASS = ['GBEternalFlameGreen', 'GBCB12ozPear'];
-const ON_SIGHT = ['GBRoyal13Gl', 'GBRoyal13MtlRollBlkDot', 'GB3TPlGl', 'GBGrce55AnSpTslMtSl'];
+const ROUND2_ON_SIGHT = ['GBRoyal13Gl', 'GBRoyal13MtlRollBlkDot', 'GB3TPlGl', 'GBGrce55AnSpTslMtSl'];
+const ON_SIGHT = [...ROUND2_ON_SIGHT, 'GB1ozGenieBl'];
 
 describe('Grace, Royal, Flair, and Decorative catalog hero release', () => {
-  it('ships the 20 approved exact-SKU Sunburst renders with intact image files', async () => {
-    expect(rows).toHaveLength(20);
-    expect(new Set(rows.map(row => row.websiteSku)).size).toBe(20);
+  it('ships the 21 approved exact-SKU Sunburst renders with intact image files', async () => {
+    expect(rows).toHaveLength(21);
+    expect(new Set(rows.map(row => row.websiteSku)).size).toBe(21);
     expect(rows.filter(row => row.family === 'Grace')).toHaveLength(5);
     expect(rows.filter(row => row.family === 'Royal')).toHaveLength(3);
     expect(rows.filter(row => row.family === 'Flair')).toHaveLength(3);
-    expect(rows.filter(row => row.family === 'Decorative')).toHaveLength(9);
-    expect(approval.rows).toHaveLength(20);
+    expect(rows.filter(row => row.family === 'Decorative')).toHaveLength(10);
+    expect(approval.rows).toHaveLength(21);
     for (const hero of rows) {
       const evidence = approval.rows.find(row => row.sku === hero.websiteSku)!;
       const original = catalog.find(row => row.websiteSku === hero.websiteSku)!;
@@ -40,7 +41,7 @@ describe('Grace, Royal, Flair, and Decorative catalog hero release', () => {
       expect([meta.format, meta.width, meta.height]).toEqual(['webp', 1560, 1716]);
       expect([hero.width, hero.height]).toEqual([1560, 1716]);
       expect(evidence.model).toBe('gpt-image-2.5-sunburst');
-      // Every row passes the edge gate except the four Jordan approved on sight.
+      // Every row passes the edge gate except the five Jordan approved on sight.
       expect(evidence.qa.operationalPass).toBe(!ON_SIGHT.includes(hero.websiteSku));
       expect(hero.framing).toEqual({ scale: 1, translateXPercent: 0, translateYPercent: 0 });
     }
@@ -48,21 +49,43 @@ describe('Grace, Royal, Flair, and Decorative catalog hero release', () => {
     expect(rows.find(row => row.websiteSku === 'GBEternalFlameGreen')?.bottleColor).toBe('Green');
   });
 
-  it('takes the six added heroes from round 2 and records the four on-sight approvals', () => {
-    for (const sku of [...ROUND2_QA_PASS, ...ON_SIGHT]) {
+  it('labels the pictured glass colour and records where production differs', () => {
+    const genie = rows.find(row => row.websiteSku === 'GB1ozGenieBl')!;
+    expect([genie.groupSlug, genie.bottleColor]).toEqual(['genie-32ml-cobalt-blue-Ground', 'Aqua']);
+    expect(genie.alt).toContain('Aqua');
+    expect(rows.find(row => row.websiteSku === 'GBCB12ozPear')?.bottleColor).toBe('Cobalt Blue');
+    expect(approval.labelFollowUps).toMatchObject({
+      GB1ozGenieBl: { registryBottleColor: 'Aqua', productionColor: 'Cobalt Blue' },
+      GBCB12ozPear: { registryBottleColor: 'Cobalt Blue', productionColor: 'Clear' },
+    });
+    for (const row of approval.rows) {
+      if (!(row.sku in approval.labelFollowUps)) {
+        expect(row.production.color).toBe(rows.find(hero => hero.websiteSku === row.sku)?.bottleColor);
+      }
+    }
+  });
+
+  it('takes the later-round heroes from their named attempt and records the on-sight approvals', () => {
+    for (const sku of [...ROUND2_QA_PASS, ...ROUND2_ON_SIGHT]) {
       const evidence = approval.rows.find(row => row.sku === sku)!;
       expect(evidence.round).toBe(2);
       expect(evidence.selectedAttempt).toMatch(/^r2a\d$/);
       expect(evidence.status).toBe(ON_SIGHT.includes(sku) ? 'approved-on-sight' : 'qa-pass');
     }
+    const genie = approval.rows.find(row => row.sku === 'GB1ozGenieBl')!;
+    expect([genie.round, genie.selectedAttempt, genie.status]).toEqual([3, 'r3a1', 'approved-on-sight']);
+    expect(genie.approvedOnSight!.measured).toMatchObject({
+      edgeSmoothedP99: 2.6, edgeSmoothedMax: 2.84, fitErrPct: 0.001,
+      glassColour: { inputMedianRGB: [202, 226, 230], outputMedianRGB: [203, 229, 233], inputHueDeg: 188.6, outputHueDeg: 188 },
+    });
     for (const sku of ON_SIGHT) {
       const onSight = approval.rows.find(row => row.sku === sku)!.approvedOnSight!;
-      expect(onSight.attemptsTotal).toBe(6);
+      expect(onSight.attemptsTotal).toBe(sku === 'GB1ozGenieBl' ? 3 : 6);
       expect(onSight.measured.operationalPass).toBe(false);
       expect(onSight.measured.iou).toBeLessThan(0.995);
     }
-    expect(approval.approvedOnSight.skus.sort()).toEqual([...ON_SIGHT].sort());
-    expect(approval.rows.filter(row => 'status' in row)).toHaveLength(6);
+    expect([...approval.approvedOnSight.skus].sort()).toEqual([...ON_SIGHT].sort());
+    expect(approval.rows.filter(row => 'status' in row)).toHaveLength(7);
   });
 
   it('keeps the pictured and purchasable SKU aligned in its production group', () => {

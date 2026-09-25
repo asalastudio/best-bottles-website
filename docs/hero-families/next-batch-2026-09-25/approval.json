@@ -5,21 +5,40 @@
     "Grace": 5,
     "Royal": 3,
     "Flair": 3,
-    "Decorative": 9
+    "Decorative": 10
   },
   "publication": false,
   "source": {
-    "lane": "next-batch-2026-09-25 round 1 (fitted/) and round 2 (fitted/round2/)",
-    "approvalCandidatesSha256": "7750d9f7e953be600e2d7779cf7df46853baf40fc2a4cd1c7b70598bed3be12b"
+    "lane": "next-batch-2026-09-25 round 1 (fitted/), round 2 (fitted/round2/) and round 3 (fitted/round3/)",
+    "approvalCandidatesSha256": "4ad666e9bd83418b462e685fe8ea330933a8ce01ca07f8d8d6aa10bb150a4b64"
   },
   "approvedOnSight": {
     "skus": [
       "GBRoyal13Gl",
       "GBRoyal13MtlRollBlkDot",
       "GB3TPlGl",
-      "GBGrce55AnSpTslMtSl"
+      "GBGrce55AnSpTslMtSl",
+      "GB1ozGenieBl"
     ],
-    "reason": "Approved on sight by Jordan 2026-09-25 after six attempts: the 4-6 px edge-gate miss is about the gate's own measurement noise (a geometrically perfect copy measures up to 4.4-5.2 px max)."
+    "reasons": {
+      "GBRoyal13Gl": "Approved on sight by Jordan 2026-09-25 after six attempts: the 4-6 px edge-gate miss is about the gate's own measurement noise (a geometrically perfect copy measures up to 4.4-5.2 px max).",
+      "GBRoyal13MtlRollBlkDot": "Approved on sight by Jordan 2026-09-25 after six attempts: the 4-6 px edge-gate miss is about the gate's own measurement noise (a geometrically perfect copy measures up to 4.4-5.2 px max).",
+      "GB3TPlGl": "Approved on sight by Jordan 2026-09-25 after six attempts: the 4-6 px edge-gate miss is about the gate's own measurement noise (a geometrically perfect copy measures up to 4.4-5.2 px max).",
+      "GBGrce55AnSpTslMtSl": "Approved on sight by Jordan 2026-09-25 after six attempts: the 4-6 px edge-gate miss is about the gate's own measurement noise (a geometrically perfect copy measures up to 4.4-5.2 px max).",
+      "GB1ozGenieBl": "Approved on sight by Jordan 2026-09-25: IoU 0.9941 is just under the 0.995 gate while the edge deviation passes (smoothed p99 2.60 / max 2.84 px), and the pale aqua glass of the master PSD is kept."
+    }
+  },
+  "labelFollowUps": {
+    "GBCB12ozPear": {
+      "registryBottleColor": "Cobalt Blue",
+      "productionColor": "Clear",
+      "note": "The pictured glass is cobalt blue and Jordan confirmed \"Pear is cobalt\", so bottleColor is Cobalt Blue. Production's colour field still says Clear (and the slug says clear); that data fix is left for later."
+    },
+    "GB1ozGenieBl": {
+      "registryBottleColor": "Aqua",
+      "productionColor": "Cobalt Blue",
+      "note": "Jordan decided the glass is aqua (pale aqua / light turquoise, as in its master PSD) and must stay aqua, so bottleColor is Aqua. Production still names and filters it as Cobalt Blue; Jordan chose to leave that unchanged for now."
+    }
   },
   "sizing": {
     "curve": "pct = 3.5314 * mm^0.5868",
@@ -41,7 +60,6 @@
     "LB3mlClear": "not rendered: height unknown, plastic",
     "LBMetalSilver1oz": "not rendered: discontinued, hidden from the catalog",
     "GBMtlCylGl": "not rendered: Royal 14 ml height disagreement",
-    "GB1ozGenieBl": "not rendered: cobalt vs aqua master PSD conflict",
     "Pillar": "not rendered: no exact master PSDs"
   },
   "rows": [
@@ -5549,7 +5567,7 @@
       "round": 2,
       "status": "qa-pass",
       "approvalNote": "QA pass in round 2; approved from the round-2 contact sheet",
-      "colourNote": "Pictured glass is cobalt blue; production colour field is Clear, so bottleColor follows production",
+      "colourNote": "The pictured glass is cobalt blue and Jordan confirmed \"Pear is cobalt\", so bottleColor is Cobalt Blue. Production's colour field still says Clear (and the slug says clear); that data fix is left for later.",
       "production": {
         "deployment": "precise-raccoon-123",
         "groupId": "kh734vy13w886v3sr9jjdh24858ds9cw",
@@ -7510,6 +7528,507 @@
         },
         "status": "held",
         "reason": "geometry: IoU 0.9928 / smoothed edge p99 3.63 px (gate IoU>=0.995, p99<=4)",
+        "approval": "NOT APPROVED - Jordan approves by looking at the sheet"
+      }
+    },
+    {
+      "sku": "GB1ozGenieBl",
+      "family": "Decorative",
+      "groupSlug": "genie-32ml-cobalt-blue-Ground",
+      "graceSku": "GB-GNI-BLU-32ML",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343697895716",
+      "round": 3,
+      "status": "approved-on-sight",
+      "approvalNote": "Approved on sight by Jordan 2026-09-25: IoU 0.9941 is just under the 0.995 gate while the edge deviation passes (smoothed p99 2.60 / max 2.84 px), and the pale aqua glass of the master PSD is kept.",
+      "approvedOnSight": {
+        "attemptsTotal": 3,
+        "measured": {
+          "iou": 0.99405,
+          "edgeSmoothedP99": 2.6,
+          "edgeSmoothedMax": 2.84,
+          "edgePerPointMax": 5.32,
+          "gate": "IoU >= 0.995 and smoothed edge p99 <= 4 px",
+          "operationalPass": false,
+          "fitErrPct": 0.001,
+          "glassColour": {
+            "inputMedianRGB": [
+              202,
+              226,
+              230
+            ],
+            "outputMedianRGB": [
+              203,
+              229,
+              233
+            ],
+            "inputHueDeg": 188.6,
+            "outputHueDeg": 188
+          }
+        }
+      },
+      "colourNote": "Jordan decided the glass is aqua (pale aqua / light turquoise, as in its master PSD) and must stay aqua, so bottleColor is Aqua. Production still names and filters it as Cobalt Blue; Jordan chose to leave that unchanged for now.",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7d35h2aryh76bpexz7vg74hs8dsy4n",
+        "slug": "genie-32ml-cobalt-blue-Ground",
+        "displayName": "32 ml Cobalt Blue Genie Bottle",
+        "color": "Cobalt Blue",
+        "capColor": "Clear",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku"
+      },
+      "url": "/images/catalog/next-batch-approved-2026-09-25/GB1ozGenieBl.863c191365f1.webp",
+      "sha256": "863c191365f1aad07af4e42c3232f792675e6065d83e2ceaafbfc65b24de6409",
+      "bytes": 1879604,
+      "sourceFile": "GB1ozGenieBl-r3a1-fitted.png",
+      "sourceFittedSha256": "c1c8cb452bdf0cf19f48e3556d4366849518e86ee3a39a8c458b7ecfbc94a1dc",
+      "sourceBytes": 3487326,
+      "selectedAttempt": "r3a1",
+      "sourceRenderFile": "GB1ozGenieBl-r3a1.png",
+      "sourceRenderSha256": "c733fe55c0cb15a52a59c7688a7449644fa5c5759f62426addab6d16938af5d8",
+      "model": "gpt-image-2.5-sunburst",
+      "nativeSize": [
+        2080,
+        2288
+      ],
+      "exportSize": [
+        1560,
+        1716
+      ],
+      "resize": "uniform 0.75 Lanczos3",
+      "encoding": "lossless WebP",
+      "decodedPixelsVerified": true,
+      "sizing": {
+        "glassMm": 77,
+        "landmarkRule": "closure seat = where the fitted closure/stopper lower edge meets the glass (top of glass for ground stoppers)",
+        "targetPct": 45.18,
+        "baselinePct": 91,
+        "curve": "pct = 3.5314 * mm^0.5868"
+      },
+      "fit": {
+        "uniformScale": 0.99933,
+        "about": "foot",
+        "horizontal": "assembly centre aligned to the input (centred) assembly",
+        "targetFootY": 2082.08,
+        "targetLandmarkY": 1048.3,
+        "targetPct": 45.18,
+        "measuredFootY": 2082.08,
+        "measuredLandmarkY": 1048.29,
+        "measuredPct": 45.183,
+        "footErrPx": 0,
+        "landmarkErrPx": -0.01,
+        "maxErrPctOfCanvasHeight": 0.001,
+        "landmarkBandPoints": 31,
+        "footBandPoints": 23
+      },
+      "qa": {
+        "iou": 0.99405,
+        "edgeSmoothed": {
+          "max": 2.84,
+          "p99": 2.6,
+          "p95": 2.25,
+          "median": 0.76
+        },
+        "edgePerPoint": {
+          "max": 5.32,
+          "p99": 2.74,
+          "p95": 2.33,
+          "median": 0.82
+        },
+        "operationalPass": false,
+        "strictPolicyPass": false,
+        "shadowProbe": {
+          "contactBandMeanDarkening": 53.17,
+          "belowFootMeanDarkening": 5.8,
+          "rightOfBaseMeanDarkening": 7.53,
+          "leftOfBaseMeanDarkening": 0.69
+        },
+        "background": {
+          "p95MaxChannelDevFromBone": 2,
+          "medianRGB": [
+            244,
+            242,
+            239
+          ]
+        },
+        "eye": {
+          "ok": true,
+          "note": "pale aqua kept (body + stopper); stopper seated; ribs kept; contact shadow at base, light cast shadow to the right; single shadow"
+        }
+      },
+      "input": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/inputs/round3/GB1ozGenieBl-input.png",
+        "sha256": "3a432a24c27af7e54e625668711d0a9f785fdad256a1c777d88f5c4b6afdd9ca",
+        "psdPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/17. Additional Bottles/GB1ozGenieBl..psd",
+        "psdSha256": "21441fdde826b7b155a03ec5ccff82ef2572cce234215b3d169731fd293b28dd"
+      },
+      "inputSha256": "3a432a24c27af7e54e625668711d0a9f785fdad256a1c777d88f5c4b6afdd9ca",
+      "psdSha256": "21441fdde826b7b155a03ec5ccff82ef2572cce234215b3d169731fd293b28dd",
+      "effectivePromptSha256": "7d8342f33c3bb0553002611baab874ffe205bd5b261b480242d562aa6bf52e0c",
+      "laneRecord": {
+        "websiteSku": "GB1ozGenieBl",
+        "graceSku": "GB-GNI-BLU-32ML",
+        "groupSlug": "genie-32ml-cobalt-blue-Ground",
+        "input": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/inputs/round3/GB1ozGenieBl-input.png",
+          "sha256": "3a432a24c27af7e54e625668711d0a9f785fdad256a1c777d88f5c4b6afdd9ca",
+          "psdPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/17. Additional Bottles/GB1ozGenieBl..psd",
+          "psdSha256": "21441fdde826b7b155a03ec5ccff82ef2572cce234215b3d169731fd293b28dd"
+        },
+        "selectedAttempt": "r3a1",
+        "render": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/renders/round3/GB1ozGenieBl-r3a1.png",
+          "sha256": "c733fe55c0cb15a52a59c7688a7449644fa5c5759f62426addab6d16938af5d8"
+        },
+        "fitted": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/hero-next-four-2026-09-24/output/imagegen/next-batch-2026-09-25/fitted/round3/GB1ozGenieBl-r3a1-fitted.png",
+          "sha256": "c1c8cb452bdf0cf19f48e3556d4366849518e86ee3a39a8c458b7ecfbc94a1dc"
+        },
+        "qa": {
+          "geometry": {
+            "iou": 0.99405,
+            "edgeSmoothed": {
+              "max": 2.84,
+              "p99": 2.6,
+              "p95": 2.25,
+              "median": 0.76
+            },
+            "edgePerPoint": {
+              "max": 5.32,
+              "p99": 2.74,
+              "p95": 2.33,
+              "median": 0.82
+            },
+            "smoothingRadiusPx": 18,
+            "measuredPoints": 590,
+            "boundaryPoints": 638,
+            "validatedInputPoints": 615,
+            "worstPoints_y_x_dev": [
+              [
+                1992,
+                864,
+                -5.32
+              ],
+              [
+                1818,
+                1306,
+                -3.02
+              ],
+              [
+                1824,
+                1305,
+                -2.91
+              ],
+              [
+                1996,
+                863,
+                -2.85
+              ],
+              [
+                1830,
+                1304,
+                -2.85
+              ],
+              [
+                1812,
+                1307,
+                -2.81
+              ],
+              [
+                1758,
+                1311,
+                -2.74
+              ],
+              [
+                1752,
+                1310,
+                -2.71
+              ],
+              [
+                1746,
+                1309,
+                -2.71
+              ],
+              [
+                1836,
+                1302,
+                -2.66
+              ],
+              [
+                1764,
+                1312,
+                -2.66
+              ],
+              [
+                1788,
+                1312,
+                -2.63
+              ]
+            ],
+            "detectorOnInputVsAlpha": {
+              "iou": 0.99433,
+              "edge": {
+                "max": 1.75,
+                "p99": 1.39,
+                "p95": 1.21,
+                "median": 0.9
+              }
+            },
+            "strictPolicyPass": false,
+            "operationalPass": false,
+            "gateNote": "Deviation = render visible edge minus input visible edge (same detector), only at boundary points where the detector reproduces the input alpha within 3 px. edgeSmoothed = mean deviation of boundary points within 18 px (suppresses per-point detector noise); IoU is first-order from |edgeSmoothed|. strict = IoU>=0.995 and PER-POINT max<=4px. operational (used for re-render/hold) = IoU>=0.995 and SMOOTHED p99<=4px. Validation: a geometrically perfect (synthetically scaled+shifted) copy of the input measures IoU 0.998-0.999, smoothed p99 0.6-2.1 px, but per-point/smoothed max up to 4.4-5.2 px, so a max<=4 px claim is below this method's resolution."
+          },
+          "shadowProbe": {
+            "contactBandMeanDarkening": 53.17,
+            "belowFootMeanDarkening": 5.8,
+            "rightOfBaseMeanDarkening": 7.53,
+            "leftOfBaseMeanDarkening": 0.69
+          },
+          "background": {
+            "p95MaxChannelDevFromBone": 2,
+            "medianRGB": [
+              244,
+              242,
+              239
+            ]
+          },
+          "material": {
+            "inputMeanRGBInsideGlass": [
+              181.7,
+              219.5,
+              225.6
+            ],
+            "fittedMeanRGBInsideGlass": [
+              182.1,
+              220.7,
+              226.1
+            ]
+          },
+          "colourCheck": {
+            "region": "input alpha eroded 12 px, rows landmark+30 .. foot-60",
+            "input": {
+              "medianRGB": [
+                202,
+                226,
+                230
+              ],
+              "hueOfMedianDeg": 188.6,
+              "satOfMedian": 0.122,
+              "valOfMedian": 0.902,
+              "medianHueDeg_tintedPx": 188,
+              "medianSat": 0.109,
+              "medianVal": 0.902,
+              "pixels": 327956
+            },
+            "output": {
+              "medianRGB": [
+                203,
+                229,
+                233
+              ],
+              "hueOfMedianDeg": 188,
+              "satOfMedian": 0.129,
+              "valOfMedian": 0.914,
+              "medianHueDeg_tintedPx": 187.1,
+              "medianSat": 0.108,
+              "medianVal": 0.914,
+              "pixels": 327956
+            },
+            "deltaHueOfMedianDeg": -0.6,
+            "deltaMedianRGB": [
+              1,
+              3,
+              3
+            ]
+          },
+          "eye": {
+            "ok": true,
+            "note": "pale aqua kept (body + stopper); stopper seated; ribs kept; contact shadow at base, light cast shadow to the right; single shadow"
+          }
+        },
+        "fit": {
+          "uniformScale": 0.99933,
+          "about": "foot",
+          "horizontal": "assembly centre aligned to the input (centred) assembly",
+          "targetFootY": 2082.08,
+          "targetLandmarkY": 1048.3,
+          "targetPct": 45.18,
+          "measuredFootY": 2082.08,
+          "measuredLandmarkY": 1048.29,
+          "measuredPct": 45.183,
+          "footErrPx": 0,
+          "landmarkErrPx": -0.01,
+          "maxErrPctOfCanvasHeight": 0.001,
+          "landmarkBandPoints": 31,
+          "footBandPoints": 23
+        },
+        "raw": {
+          "similarity": {
+            "scale": 1.00251,
+            "ty": -3.02,
+            "tx": -2.15,
+            "iterations": [
+              [
+                1.00264,
+                -3.22,
+                -2.3
+              ],
+              [
+                0.99987,
+                0.2,
+                0.15
+              ]
+            ]
+          },
+          "landmarkBandOffsetPx": 0.39,
+          "footBandOffsetPx": -1.53,
+          "footY": 2082.75,
+          "landmarkY": 1048.28,
+          "spanPct": 45.213,
+          "iou": 0.99382,
+          "edgeSmoothed": {
+            "max": 3.49,
+            "p99": 3.22,
+            "p95": 2.88,
+            "median": 0.81
+          },
+          "edgePerPoint": {
+            "max": 3.66,
+            "p99": 3.26,
+            "p95": 2.88,
+            "median": 0.85
+          }
+        },
+        "attempts": [
+          {
+            "attempt": "r3a1",
+            "renderSha256": "c733fe55c0cb15a52a59c7688a7449644fa5c5759f62426addab6d16938af5d8",
+            "iou": 0.99405,
+            "edgeSmoothedP99": 2.6,
+            "edgeSmoothedMax": 2.84,
+            "operationalPass": false,
+            "fitErrPct": 0.001,
+            "colour": {
+              "inputMedianRGB": [
+                202,
+                226,
+                230
+              ],
+              "outputMedianRGB": [
+                203,
+                229,
+                233
+              ],
+              "inputHueDeg": 188.6,
+              "outputHueDeg": 188,
+              "inputSat": 0.122,
+              "outputSat": 0.129
+            },
+            "eye": {
+              "ok": true,
+              "note": "pale aqua kept (body + stopper); stopper seated; ribs kept; contact shadow at base, light cast shadow to the right; single shadow"
+            },
+            "usage": {
+              "input_tokens": 2233,
+              "input_tokens_details": {
+                "image_tokens": 1517,
+                "text_tokens": 716
+              },
+              "output_tokens": 3569,
+              "output_tokens_details": {
+                "image_tokens": 3569,
+                "text_tokens": 0
+              },
+              "total_tokens": 5802
+            }
+          },
+          {
+            "attempt": "r3a2",
+            "renderSha256": "49d90f595274a2f1329a3f17fd64aacdf9da3898fa5c8a26df1b71471247c7ef",
+            "iou": 0.9909,
+            "edgeSmoothedP99": 7.78,
+            "edgeSmoothedMax": 8.26,
+            "operationalPass": false,
+            "fitErrPct": 0.003,
+            "colour": {
+              "inputMedianRGB": [
+                202,
+                226,
+                230
+              ],
+              "outputMedianRGB": [
+                199,
+                228,
+                233
+              ],
+              "inputHueDeg": 188.6,
+              "outputHueDeg": 188.8,
+              "inputSat": 0.122,
+              "outputSat": 0.146
+            },
+            "eye": {
+              "ok": true,
+              "note": "pale aqua kept, slightly more saturated; stopper seated; contact + cast shadow right"
+            },
+            "usage": {
+              "input_tokens": 2288,
+              "input_tokens_details": {
+                "image_tokens": 1517,
+                "text_tokens": 771
+              },
+              "output_tokens": 3569,
+              "output_tokens_details": {
+                "image_tokens": 3569,
+                "text_tokens": 0
+              },
+              "total_tokens": 5857
+            }
+          },
+          {
+            "attempt": "r3a3",
+            "renderSha256": "4fc4ea6cacf260ce0666a1f2e30b8f653c1d121e9a7566dbfe1374c90bf819fb",
+            "iou": 0.99376,
+            "edgeSmoothedP99": 2.85,
+            "edgeSmoothedMax": 3.43,
+            "operationalPass": false,
+            "fitErrPct": 0.009,
+            "colour": {
+              "inputMedianRGB": [
+                202,
+                226,
+                230
+              ],
+              "outputMedianRGB": [
+                202,
+                228,
+                232
+              ],
+              "inputHueDeg": 188.6,
+              "outputHueDeg": 188,
+              "inputSat": 0.122,
+              "outputSat": 0.129
+            },
+            "eye": {
+              "ok": true,
+              "note": "pale aqua kept; stopper seated; contact + cast shadow right"
+            },
+            "usage": {
+              "input_tokens": 2288,
+              "input_tokens_details": {
+                "image_tokens": 1517,
+                "text_tokens": 771
+              },
+              "output_tokens": 3569,
+              "output_tokens_details": {
+                "image_tokens": 3569,
+                "text_tokens": 0
+              },
+              "total_tokens": 5857
+            }
+          }
+        ],
+        "status": "held",
+        "reason": "geometry: IoU 0.9940 / smoothed edge p99 2.6 px (gate IoU>=0.995, p99<=4)",
         "approval": "NOT APPROVED - Jordan approves by looking at the sheet"
       }
     }

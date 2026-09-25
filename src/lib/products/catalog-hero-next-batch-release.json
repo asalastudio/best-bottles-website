@@ -291,7 +291,7 @@
     "shopifyVariantId": "gid://shopify/ProductVariant/53343698387236",
     "family": "Decorative",
     "capacityMl": 355,
-    "bottleColor": "Clear",
+    "bottleColor": "Cobalt Blue",
     "alt": "355 ml Cobalt Blue Pear Bottle with Glass Ball Stopper",
     "presentation": "Original product assembly",
     "url": "/images/catalog/next-batch-approved-2026-09-25/GBCB12ozPear.be09fc345992.webp",
@@ -371,6 +371,25 @@
     "alt": "55 ml Clear Grace Vintage Style Bulb Spray Bottle with Matte Silver Sprayer and Tassel",
     "presentation": "Original product assembly",
     "url": "/images/catalog/next-batch-approved-2026-09-25/GBGrce55AnSpTslMtSl.66f3ef2d9cde.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "genie-32ml-cobalt-blue-Ground",
+    "websiteSku": "GB1ozGenieBl",
+    "graceSku": "GB-GNI-BLU-32ML",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343697895716",
+    "family": "Decorative",
+    "capacityMl": 32,
+    "bottleColor": "Aqua",
+    "alt": "32 ml Aqua Genie Bottle with Glass Stopper",
+    "presentation": "Original product assembly",
+    "url": "/images/catalog/next-batch-approved-2026-09-25/GB1ozGenieBl.863c191365f1.webp",
     "width": 1560,
     "height": 1716,
     "framing": {

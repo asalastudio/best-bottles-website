@@ -1,12 +1,13 @@
-// Export the 20 next-batch Sunburst heroes Jordan approved on 2026-09-25 from
+// Export the 21 next-batch Sunburst heroes Jordan approved on 2026-09-25 from
 // the contact sheets: 14 round-1 QA passes, 2 round-2 QA passes (Eternal
-// Flame Green, Pear) and 4 round-2 renders approved on sight despite a 4-6 px
-// edge-gate miss (Royal 13 cap and roll-on, Tola 3, Grace bulb spray tassel).
+// Flame Green, Pear), 4 round-2 renders approved on sight despite a 4-6 px
+// edge-gate miss (Royal 13 cap and roll-on, Tola 3, Grace bulb spray tassel)
+// and the round-3 aqua Genie Blue, also approved on sight.
 //
 // Usage: node scripts/hero-families/release-next-batch.cjs <lane-worktree>
 //   <lane-worktree> is the generation lane checkout that holds
 //   docs/hero-families/next-batch-2026-09-25/approval-candidates.json and
-//   output/imagegen/next-batch-2026-09-25/{fitted,renders}/ (round 2 in round2/).
+//   output/imagegen/next-batch-2026-09-25/{fitted,renders}/ (rounds 2 and 3 in round2/, round3/).
 //
 // Read-only against the lane and production: refuses any fitted or raw render
 // whose sha256 differs from the approved one recorded below, any lane record
@@ -28,7 +29,9 @@ const productionQuery = 'https://precise-raccoon-123.convex.cloud/api/query';
 const hash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 
 // Approved selection: the fitted file for each SKU, pinned by hash. Round-1
-// rows come from candidates[], round-2 rows from round2.candidates[].
+// rows come from candidates[], round-N rows from roundN.candidates[].
+// productionColor is set only where Jordan chose a registry bottleColor that
+// differs from production's colour field; production is left unchanged.
 // bottleColor keeps production's catalog colour (it feeds the card spec line
 // and the guided-finder colour facet); alt describes what is pictured.
 const ON_SIGHT = 'Approved on sight by Jordan 2026-09-25 after six attempts: the 4-6 px edge-gate miss is '
@@ -64,9 +67,10 @@ const APPROVED = {
     bottleColor: 'Clear', alt: '32 ml Clear Genie Bottle with Glass Stopper' },
   GBEternalFlameGreen: { round: 2, attempt: 'r2a1', fittedSha256: '42ae3dd4a50bd6341516ab502521a49eb704087ea93256c15ce73ed607532473', renderSha256: '4be658119be23cb887f366714b90bf6e3b7cbf2739aeafe096fdfa2acbd20ec0',
     bottleColor: 'Green', alt: '35 ml Green Eternal Flame Bottle with Ground Glass Stopper' },
-  // Production's colour field says Clear; the pictured glass is cobalt blue.
   GBCB12ozPear: { round: 2, attempt: 'r2a1', fittedSha256: '8304a736a514b49a77bb69cab3e248953d6e36281b06b9101429c94ecf1cbcca', renderSha256: '443d787603c9d55a00ec83386a9e241467e8b8709fa2d02fc4cb2aad7fe82804',
-    bottleColor: 'Clear', alt: '355 ml Cobalt Blue Pear Bottle with Glass Ball Stopper' },
+    bottleColor: 'Cobalt Blue', productionColor: 'Clear', alt: '355 ml Cobalt Blue Pear Bottle with Glass Ball Stopper',
+    colourNote: 'The pictured glass is cobalt blue and Jordan confirmed "Pear is cobalt", so bottleColor is Cobalt Blue. '
+      + 'Production\'s colour field still says Clear (and the slug says clear); that data fix is left for later.' },
   GBRoyal13Gl: { round: 2, attempt: 'r2a3', fittedSha256: '035d552c9baf7135a3bd4a9886ccfc49cf4dec442bd14b75a6f391fc3ed5f823', renderSha256: 'e0093a1e789747eeca0ec83bcf9512f004794f240f323b9477150a4efd7c474f',
     onSight: true, bottleColor: 'Clear', alt: '13 ml Clear Royal Bottle with Shiny Gold Cap' },
   GBRoyal13MtlRollBlkDot: { round: 2, attempt: 'r2a1', fittedSha256: 'a3427b4fb46f99c4c9b2c933ba4c1c89b0100dc9afac599d1a67e66b851f0bb5', renderSha256: '644bfcb4ff88f9e9c8d7272ee8b82130d7340c534cc7089dada5d5cbb03b1862',
@@ -75,8 +79,14 @@ const APPROVED = {
     onSight: true, bottleColor: 'Clear', alt: '3 ml Clear Tola Bottle with Shiny Gold Cap and Red Bead' },
   GBGrce55AnSpTslMtSl: { round: 2, attempt: 'r2a1', fittedSha256: 'fa088500026c3074c178238bf482f8dc2e8d4825bba54885343d304483341842', renderSha256: '357b8bb6cd0b115ea3db074e04dfb6d8ed959559cd95bb3e6d3167b08559d26f',
     onSight: true, bottleColor: 'Clear', alt: '55 ml Clear Grace Vintage Style Bulb Spray Bottle with Matte Silver Sprayer and Tassel' },
+  GB1ozGenieBl: { round: 3, attempt: 'r3a1', fittedSha256: 'c1c8cb452bdf0cf19f48e3556d4366849518e86ee3a39a8c458b7ecfbc94a1dc', renderSha256: 'c733fe55c0cb15a52a59c7688a7449644fa5c5759f62426addab6d16938af5d8',
+    onSight: true, onSightNote: 'Approved on sight by Jordan 2026-09-25: IoU 0.9941 is just under the 0.995 gate while the edge '
+      + 'deviation passes (smoothed p99 2.60 / max 2.84 px), and the pale aqua glass of the master PSD is kept.',
+    bottleColor: 'Aqua', productionColor: 'Cobalt Blue', alt: '32 ml Aqua Genie Bottle with Glass Stopper',
+    colourNote: 'Jordan decided the glass is aqua (pale aqua / light turquoise, as in its master PSD) and must stay aqua, so '
+      + 'bottleColor is Aqua. Production still names and filters it as Cobalt Blue; Jordan chose to leave that unchanged for now.' },
 };
-const EXPECTED = { Grace: 5, Royal: 3, Flair: 3, Decorative: 9 };
+const EXPECTED = { Grace: 5, Royal: 3, Flair: 3, Decorative: 10 };
 const HELD = {
   GBHeartFrst4KeyGld: 'held: round 2 laid the keychain flat but the model re-posed the heart (IoU 0.976); today\'s card image stays',
   GBHeartFrst4TslRed: 'held: round 2 laid the tassel flat but the model re-posed the heart (IoU 0.976); today\'s card image stays',
@@ -85,7 +95,6 @@ const HELD = {
   LB3mlClear: 'not rendered: height unknown, plastic',
   LBMetalSilver1oz: 'not rendered: discontinued, hidden from the catalog',
   GBMtlCylGl: 'not rendered: Royal 14 ml height disagreement',
-  GB1ozGenieBl: 'not rendered: cobalt vs aqua master PSD conflict',
   Pillar: 'not rendered: no exact master PSDs',
 };
 
@@ -112,15 +121,10 @@ async function main() {
   const laneJsonBytes = fs.readFileSync(path.join(laneDocs, 'approval-candidates.json'));
   const laneJson = JSON.parse(laneJsonBytes);
   const candidates = laneJson.candidates;
-  const round2 = laneJson.round2.candidates;
+  const rounds = { 1: candidates, 2: laneJson.round2.candidates, 3: laneJson.round3.candidates };
   const sizing = JSON.parse(fs.readFileSync(path.join(laneDocs, 'sizing-proof/sizing-targets.json')));
   const catalog = JSON.parse(fs.readFileSync(path.join(root, 'src/lib/products/catalog-heroes.json')));
   const skus = Object.keys(APPROVED);
-  for (const [family, count] of Object.entries(EXPECTED)) {
-    if (skus.filter(sku => candidates.find(c => c.websiteSku === sku)?.family === family).length !== count) {
-      throw new Error(`Unexpected ${family} count`);
-    }
-  }
   fs.mkdirSync(docs, { recursive: true });
   fs.mkdirSync(path.join(root, 'public', publicDir), { recursive: true });
 
@@ -130,23 +134,23 @@ async function main() {
     const approved = APPROVED[sku];
     const round = approved.round ?? 1;
     const round1 = candidates.find(c => c.websiteSku === sku);
-    const record = round === 2 ? round2.find(c => c.websiteSku === sku) : round1;
+    const record = rounds[round].find(c => c.websiteSku === sku);
     const status = approved.onSight ? 'approved-on-sight' : 'qa-pass';
-    if (!record || !round1 || record.status !== (approved.onSight ? 'held' : 'pass') || record.selectedAttempt !== approved.attempt
+    if (!record || (round < 3 && !round1) || record.status !== (approved.onSight ? 'held' : 'pass') || record.selectedAttempt !== approved.attempt
       || record.fitted.sha256 !== approved.fittedSha256 || record.render.sha256 !== approved.renderSha256
-      || record.groupSlug !== round1.groupSlug || record.graceSku !== round1.graceSku) {
+      || (round1 && (record.groupSlug !== round1.groupSlug || record.graceSku !== round1.graceSku))) {
       throw new Error(`Lane record no longer matches the approved selection: ${sku}`);
     }
     const identity = catalog.find(hero => hero.websiteSku === sku);
     const { group, variant } = await productionHolder(sku);
-    if (!identity || group.slug !== round1.prodGroupSlug || group.slug !== identity.groupSlug
+    if (!identity || group.slug !== (round1 ? round1.prodGroupSlug : record.groupSlug) || group.slug !== identity.groupSlug
       || variant.graceSku !== record.graceSku || variant.graceSku !== identity.graceSku
-      || variant.shopifyVariantId !== identity.shopifyVariantId || group.family !== round1.family
-      || group.capacityMl !== identity.capacityMl || group.color !== approved.bottleColor) {
+      || variant.shopifyVariantId !== identity.shopifyVariantId || group.family !== (round1 ? round1.family : identity.family)
+      || group.capacityMl !== identity.capacityMl || group.color !== (approved.productionColor ?? approved.bottleColor)) {
       throw new Error(`Production identity mismatch: ${sku}`);
     }
 
-    const sub = round === 2 ? 'round2' : '';
+    const sub = round > 1 ? `round${round}` : '';
     const fittedPath = path.join(laneOutput, 'fitted', sub, `${sku}-${approved.attempt}-fitted.png`);
     const renderPath = path.join(laneOutput, 'renders', sub, `${sku}-${approved.attempt}.png`);
     const source = fs.readFileSync(fittedPath);
@@ -180,15 +184,18 @@ async function main() {
     const size = sizing.rows.find(row => row.sku === sku);
     const g = record.qa.geometry;
     const onSight = approved.onSight ? {
-      attemptsTotal: round1.attempts.length + record.attempts.length,
+      attemptsTotal: Object.values(rounds).reduce((sum, list) => sum + (list.find(c => c.websiteSku === sku)?.attempts.length ?? 0), 0),
       measured: { iou: g.iou, edgeSmoothedP99: g.edgeSmoothed.p99, edgeSmoothedMax: g.edgeSmoothed.max,
-        edgePerPointMax: g.edgePerPoint.max, gate: 'IoU >= 0.995 and smoothed edge p99 <= 4 px', operationalPass: g.operationalPass } } : null;
+        edgePerPointMax: g.edgePerPoint.max, gate: 'IoU >= 0.995 and smoothed edge p99 <= 4 px', operationalPass: g.operationalPass,
+        ...(record.qa.colourCheck ? { fitErrPct: record.fit.maxErrPctOfCanvasHeight, glassColour: {
+          inputMedianRGB: record.qa.colourCheck.input.medianRGB, outputMedianRGB: record.qa.colourCheck.output.medianRGB,
+          inputHueDeg: record.qa.colourCheck.input.hueOfMedianDeg, outputHueDeg: record.qa.colourCheck.output.hueOfMedianDeg } } : {}) } } : null;
     evidence.push({ sku, family: group.family, groupSlug: group.slug, graceSku: variant.graceSku,
       shopifyVariantId: variant.shopifyVariantId,
       // Round-1 evidence rows keep their original shape; round-2 rows say how they were approved.
-      ...(round === 2 ? { round, status, approvalNote: onSight ? ON_SIGHT : 'QA pass in round 2; approved from the round-2 contact sheet' } : {}),
+      ...(round > 1 ? { round, status, approvalNote: onSight ? (approved.onSightNote ?? ON_SIGHT) : 'QA pass in round 2; approved from the round-2 contact sheet' } : {}),
       ...(onSight ? { approvedOnSight: onSight } : {}),
-      ...(sku === 'GBCB12ozPear' ? { colourNote: 'Pictured glass is cobalt blue; production colour field is Clear, so bottleColor follows production' } : {}),
+      ...(approved.colourNote ? { colourNote: approved.colourNote } : {}),
       production: { deployment: 'precise-raccoon-123', groupId: group._id, slug: group.slug,
         displayName: group.displayName, color: group.color, capColor: variant.capColor ?? null,
         applicator: variant.applicator ?? null, verifiedBy: 'products:searchCatalog exact websiteSku' },
@@ -206,19 +213,26 @@ async function main() {
       input: record.input, inputSha256: receipt.inputSha256, psdSha256: receipt.psdSha256,
       effectivePromptSha256: receipt.effectivePromptSha256, laneRecord: record });
   }
+  for (const [family, count] of Object.entries(EXPECTED)) {
+    if (heroes.filter(hero => hero.family === family).length !== count) throw new Error(`Unexpected ${family} count`);
+  }
   fs.writeFileSync(registryPath, JSON.stringify(heroes, null, 2) + '\n');
   fs.writeFileSync(path.join(docs, 'approval.json'), JSON.stringify({
     date: '2026-09-25', approvedBy: 'Jordan, after reviewing the contact sheets',
     scope: EXPECTED, publication: false,
-    source: { lane: 'next-batch-2026-09-25 round 1 (fitted/) and round 2 (fitted/round2/)', approvalCandidatesSha256: hash(laneJsonBytes) },
-    approvedOnSight: { skus: skus.filter(sku => APPROVED[sku].onSight), reason: ON_SIGHT },
+    source: { lane: 'next-batch-2026-09-25 round 1 (fitted/), round 2 (fitted/round2/) and round 3 (fitted/round3/)',
+      approvalCandidatesSha256: hash(laneJsonBytes) },
+    approvedOnSight: { skus: skus.filter(sku => APPROVED[sku].onSight),
+      reasons: Object.fromEntries(skus.filter(sku => APPROVED[sku].onSight).map(sku => [sku, APPROVED[sku].onSightNote ?? ON_SIGHT])) },
+    labelFollowUps: Object.fromEntries(skus.filter(sku => APPROVED[sku].productionColor).map(sku => [sku, {
+      registryBottleColor: APPROVED[sku].bottleColor, productionColor: APPROVED[sku].productionColor, note: APPROVED[sku].colourNote }])),
     sizing: { curve: sizing.curve.bestFit.formula, measure: 'glass height mm (heightWithoutCap, foot to rim)',
       baselinePct: 91, landmarkRule: sizing.landmarkRule },
     qaGate: 'IoU >= 0.995 and smoothed edge p99 <= 4 px vs the master PSD input silhouette, plus by-eye shadow/material check',
     background: 'Generated bone treatment retained; pixel-exact background not claimed',
     held: HELD, rows: evidence,
   }, null, 2) + '\n');
-  for (const sheet of ['contact-grace.jpg', 'contact-royal-flair.jpg', 'contact-decorative.jpg', 'lineup-strip-wrapped.jpg', 'contact-round2.jpg']) {
+  for (const sheet of ['contact-grace.jpg', 'contact-royal-flair.jpg', 'contact-decorative.jpg', 'lineup-strip-wrapped.jpg', 'contact-round2.jpg', 'contact-genie-blue.jpg']) {
     const from = path.join(laneDocs, sheet);
     const to = path.join(docs, sheet);
     if (fs.statSync(from).size > 2 * 1024 * 1024) {
