@@ -484,6 +484,24 @@ export function builderCartItem(config: BuilderConfiguration, quantity: number):
     return { ...config.product, quantity, unitPrice };
 }
 
+/** A fitment whose SKUs on this glass have no layered kit yet (every 5 ml cobalt
+ * plastic roller, 2026-09-24): preview a sibling's mechanism — same physical body,
+ * same fitment, another glass — registered onto this glass's universal body.
+ * Components are universal to a neck finish; the body is ground truth, and
+ * registerVintagePreview does the seating by glass diameter and baseline. The
+ * donor's closure never comes along (previewParts drops it at the fitment stage)
+ * and the reference must be a full kit so its own glass, not the donor's, is drawn.
+ * Display only: the configuration the shopper buys is unchanged. */
+export function borrowedFitmentPreview(body: BuilderBody | null, color: string | null, fitment: string | null,
+    reference: BuilderConfiguration | undefined): BuilderConfiguration | null {
+    if (!body || !color || !fitment || reference?.kit?.completeness !== "full") return null;
+    const donor = body.configurations.find(config => config.fitment === fitment && config.kit?.completeness === "full"
+        && config.kit.canvas.width === reference.kit!.canvas.width && config.kit.canvas.height === reference.kit!.canvas.height
+        && config.kit.parts.some(part => part.slot !== "body" && !isClosurePart(part)));
+    if (!donor?.kit) return null;
+    return { ...donor, id: `${donor.id}~${color}`, color, bodyImage: reference.bodyImage, photoUrl: null, previewKit: undefined, chooserKit: undefined };
+}
+
 /** The cheapest and dearest charged unit price among the configurations a
  * partial selection can still become, so a price is on screen from the first
  * click. Same quantity and merged-SKU cart rule as builderOrder. */

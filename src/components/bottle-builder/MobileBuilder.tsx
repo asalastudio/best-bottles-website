@@ -5,7 +5,7 @@ import { useEffect, useId, useRef, useState, type CSSProperties, type ReactNode 
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check, DotsThree, Minus, Plus, SlidersHorizontal, X, ArrowsOutSimple } from "@/components/icons";
 import { displayApplicatorName } from "@/lib/catalogFilters";
-import { bareGlassPreview, builderOrder, clearBodyPreview, deriveBuilder, MAX_QUANTITY, previewParts, type BuilderBody, type BuilderConfiguration, type BuilderSelection } from "@/lib/bottle-builder/model";
+import { bareGlassPreview, borrowedFitmentPreview, builderOrder, clearBodyPreview, deriveBuilder, MAX_QUANTITY, previewParts, type BuilderBody, type BuilderConfiguration, type BuilderSelection } from "@/lib/bottle-builder/model";
 import { CHOOSER_PRIORITY_TILES } from "@/lib/bottle-builder/mobile-request";
 import { displayImageUrl } from "@/lib/products/optimizable-image";
 import { checkoutMinimum } from "@/lib/checkout";
@@ -76,9 +76,12 @@ export default function MobileBuilder(p: Props) {
     const preview = configuration ?? p.current.fitted[0] ?? p.current.colored[0] ?? body?.configurations[0];
     const previewStage = stage < 2 || !fitment ? "body" : stage === 2 ? "fitment" : configuration ? "complete" : "fitment";
     const bodyReference = p.current.colored.find(c => c.fitment === "Vintage Bulb Sprayer" && c.kit?.completeness === "full") ?? p.current.colored.find(c => c.kit?.completeness === "full" && c.fitment !== "Reducer") ?? p.current.colored.find(c => c.kit?.completeness === "full") ?? p.current.colored[0] ?? body?.configurations[0];
-    // No layered kit for this fitment yet: draw the universal body rather than "Image unavailable" (as MatrixClient).
-    const previewConfig = preview && !preview.kit && previewStage === "fitment" && bodyReference?.kit ? bodyReference : preview;
-    const displayStage = previewConfig === preview ? previewStage : "body";
+    // No layered kit for this fitment yet: seat a sibling glass's mechanism on the universal body,
+    // else draw the universal body alone rather than "Image unavailable" (as MatrixClient).
+    const kitless = Boolean(preview && !preview.kit && previewStage === "fitment");
+    const borrowed = kitless ? borrowedFitmentPreview(body, color, fitment, bodyReference) : null;
+    const previewConfig = borrowed ?? (kitless && bodyReference?.kit ? bodyReference : preview);
+    const displayStage = borrowed || previewConfig === preview ? previewStage : "body";
     const parts = previewConfig ? previewParts(previewConfig, displayStage) : [];
     const unavailable = body?.unavailableFinishes?.filter(c => c.color === color && c.fitment === fitment) ?? [];
     const priceFrom = (configs: BuilderConfiguration[]) => {

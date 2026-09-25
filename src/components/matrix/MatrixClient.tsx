@@ -21,7 +21,7 @@ import { checkoutMinimum, checkoutMinimumMessage } from "@/lib/checkout";
 import { analytics } from "@/lib/analytics";
 import { displayApplicatorName } from "@/lib/catalogFilters";
 import {
-    builderOrder, builderPriceRange, deriveBuilder, emptySelection, previewParts, reconcileSelection, selectBuilderBody,
+    borrowedFitmentPreview, builderOrder, builderPriceRange, deriveBuilder, emptySelection, previewParts, reconcileSelection, selectBuilderBody,
     MAX_QUANTITY, ORDER_MINIMUM, type BuilderBody, type BuilderConfiguration, type BuilderSelection, bareGlassPreview, clearBodyPreview,
 } from "@/lib/bottle-builder/model";
 import hasIncludedCovers from "@/lib/bottle-builder/exposed-sprayers.generated.json";
@@ -161,9 +161,12 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
     const previewStage = step <= 1 ? "body" : configuration ? "complete" : fitment ? "fitment" : "body";
     // the overcap is never dropped from the preview: worn when showCover, standing on the ground beside the bottle otherwise (BuilderImage)
     // A fitment with no layered kit yet (every 5 ml cobalt plastic roller, for one) has nothing to draw at
-    // the fitment stage. Show this bottle-and-glass's universal body instead of "Image unavailable".
-    const previewConfig = preview && !preview.kit && previewStage === "fitment" && bodyReference?.kit ? bodyReference : preview;
-    const displayStage = previewConfig === preview ? previewStage : "body";
+    // the fitment stage. Seat a sibling glass's mechanism on this glass's universal body; failing that,
+    // show the universal body alone instead of "Image unavailable".
+    const kitless = Boolean(preview && !preview.kit && previewStage === "fitment");
+    const borrowed = kitless ? borrowedFitmentPreview(body, color, fitment, bodyReference) : null;
+    const previewConfig = borrowed ?? (kitless && bodyReference?.kit ? bodyReference : preview);
+    const displayStage = borrowed || previewConfig === preview ? previewStage : "body";
     const displayParts = previewConfig ? previewParts(previewConfig, displayStage) : [];
     // One glass only: the colour is taken as read and the Glass step is passed
     // over in either direction, exactly as MobileBuilder does.
@@ -374,7 +377,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
                 {preview && previewConfig ? <div id={previewId} className={`${styles.previewImage} ${previewStage === "complete" && !preview.kit && preview.photoUrl ? styles.plateStage : ""}`}><BuilderImage config={previewConfig} parts={displayParts} stage={displayStage} showCover={showCover} bodyReference={bodyReference} frameConfigurations={body?.configurations}
                     label={body ? `${preview.capacityMl} ml ${preview.color} ${preview.family}${fitment ? ` with ${displayApplicatorName(fitment)}` : preview.kit ? " bottle body" : " bottle"}${closure ? `, ${closure}` : ""}` : "Bottle body preview — choose a bottle to begin"} /></div>
                     : <div className={styles.previewEmpty}><ShoppingBag size={32} weight="light" /><p>Your bottle starts here.</p></div>}
-                <div className={styles.previewCaption} aria-live="polite">{body ? <><h2>{body.capacityMl} ml {body.profileLabel}</h2><p>{color ?? "Choose your glass"}{fitment ? ` · ${displayApplicatorName(fitment)}` : ""}</p>{preview && !preview.kit && fitment && !configuration && <p>Your selected fitment is shown in the options. Choose your {finishLabel.toLowerCase()} to see the complete bottle.</p>}</> : <><h2>A bottle. Your possibilities.</h2><p>Choose a bottle to start building.</p></>}</div>
+                <div className={styles.previewCaption} aria-live="polite">{body ? <><h2>{body.capacityMl} ml {body.profileLabel}</h2><p>{color ?? "Choose your glass"}{fitment ? ` · ${displayApplicatorName(fitment)}` : ""}</p>{preview && !preview.kit && !borrowed && fitment && !configuration && <p>Your selected fitment is shown in the options. Choose your {finishLabel.toLowerCase()} to see the complete bottle.</p>}</> : <><h2>A bottle. Your possibilities.</h2><p>Choose a bottle to start building.</p></>}</div>
                 {hasIncludedCover && <div className={styles.coverControl}><span>Matching overcap included</span><button type="button" aria-pressed={showCover} onClick={() => setShowCover(value => !value)}>{showCover ? "Hide cap" : "Show cap"}</button></div>}
                 {body && <button className={styles.previewToggle} aria-expanded={previewExpanded} aria-controls={previewId} onClick={() => setPreviewExpanded(value => !value)}>{previewExpanded ? "Minimize preview" : "View larger bottle"}</button>}
             </section>
