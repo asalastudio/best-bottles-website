@@ -42,6 +42,11 @@ so the register and the Build Your Bottle kits name the same physical bottle the
   identity reviews, review issues) is carried verbatim under `source/neck-thread-2026-09-23/` and
   surfaced in `quarantine.csv` as `review-2026-09-23` rows.
 
+## Next phase
+
+The Phase 2 schema proposal (Convex tables loaded from this register, coordinate contract, pilot
+readiness) is in `docs/COMPONENT_REGISTER_PHASE_2_SCHEMA.md` and is awaiting approval.
+
 ## What the register does not decide
 
 Thread equality identifies a candidate, not a fit: roller-insert seating, liner, dip-tube and
