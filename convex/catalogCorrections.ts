@@ -17,8 +17,11 @@ import { verifyWriteToken } from "./writeToken";
 
 const fieldsV = v.object({
     capColor: v.optional(v.union(v.string(), v.null())),
+    // 2026-09-25: the four 1 ml plug vials carried cap lengths ("Tall", "Applicator") as their
+    // cap style, so the catalog swatch read "Tall White"; their closure is a plug.
+    capStyle: v.optional(v.union(v.string(), v.null())),
 });
-type Fields = { capColor?: string | null };
+type Fields = { capColor?: string | null; capStyle?: string | null };
 
 export const correctProductFields = mutation({
     args: {
