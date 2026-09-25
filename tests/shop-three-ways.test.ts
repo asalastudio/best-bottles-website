@@ -39,13 +39,16 @@ describe("homepage Shop three ways", () => {
         expect(html).toContain('href="/collections"');
         expect(html).toContain("View all collections");
         expect(html).toContain("Open the builder");
-        expect(html.match(/href="\/matrix"/g)?.length).toBe(2);
+        expect(html.match(/href="\/matrix"/g)?.length).toBe(6);
         expect(html).toMatch(/collection-roll-on-bottles-bone-v3\.webp/);
-        expect(html).toContain("build-your-bottle-journey-v2.webp");
-        // The same five steps, in the same words, as the builder's own step bar.
-        expect([...html.matchAll(/<li><span[^>]*>(\d)<\/span>([^<]+)<\/li>/g)].map((m) => `${m[1]} ${m[2]}`))
-            .toEqual(["1 Bottle", "2 Glass", "3 Fitment", "4 Finish", "5 Review"]);
-        expect(html).not.toContain("Colored-pencil");
+        // Section 03 is Jordan's four-step comp with the pencil-study tiles.
+        expect(html).toContain("Four simple steps. Endless possibilities.");
+        expect([...html.matchAll(/build-steps\/(step-\d)\.webp/g)].map((m) => m[1])).toEqual(["step-1", "step-2", "step-3", "step-4"]);
+        expect(html).toContain("Choose Your Bottle");
+        expect(html).toContain("Choose Your Applicator");
+        expect(html).toContain("Choose Your Closure");
+        expect(html).toContain("Complete Your Bottle");
+        expect(html).toContain("Start building");
     });
 
     it("shows live family counts, and none when counts are unavailable", () => {

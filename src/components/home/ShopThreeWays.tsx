@@ -12,6 +12,7 @@ import LocaleLink from "@/components/LocaleLink";
 import { localizeCollectionName, localizeFamilyName } from "@/i18n/catalogCopy";
 import { useAppLocale, useCopy } from "@/i18n/useCopy";
 import { collectionCardImage } from "./collectionCardImage";
+import BuildYourBottleSteps from "./BuildYourBottleSteps";
 import styles from "./ShopThreeWays.module.css";
 
 /**
@@ -23,12 +24,6 @@ import styles from "./ShopThreeWays.module.css";
 export type ShopSection = "families" | "collections" | "build";
 const SECTIONS: readonly ShopSection[] = ["families", "collections", "build"];
 export const shopSectionId = (section: ShopSection) => `shop-${section}`;
-
-// GPT Image 2.5 Sunburst (2026-09-25; Higgsfield, fitments re-laid via OpenAI) from the approved Cylinder
-// photographs: the builder's five steps as five groups, centred on the fifths
-// of the width so each step label sits under its group.
-const BUILD_STEPS_IMAGE = "/assets/homepage/build-your-bottle-journey-v2.webp";
-const BUILD_STEPS = ["shopStepBottle", "shopStepGlass", "shopStepFitment", "shopStepFinish", "shopStepReview"] as const;
 
 type Props = {
     data: HomepageData | null;
@@ -130,24 +125,7 @@ export default function ShopThreeWays({ data, familyCounts }: Props) {
                 <span id="build-your-bottle" className={styles.anchor} aria-hidden="true" />
                 <div className={styles.inner}>
                     <SectionHeading number={number("build")} way={ways.build.title} href={buildHref} linkLabel={t("shopOpenBuilder")} />
-                    <div className={styles.build}>
-                        <div className={styles.buildCopy}>
-                            <div>
-                                <h3 id="shop-build-heading" className={styles.buildHeading}>{build?.heading || t("buildHeading")}</h3>
-                                <p className={styles.buildText}>{build?.description || t("buildDescription")}</p>
-                            </div>
-                            <LocaleLink href={buildHref} className={styles.buildButton}>{build?.buttonLabel || t("buildYourBottle")}</LocaleLink>
-                        </div>
-                        {/* The builder's journey in one scene; the step bar mirrors the builder's. */}
-                        <figure className={styles.steps}>
-                            <img className={styles.stepsImage} src={BUILD_STEPS_IMAGE} alt={t("shopStepsImageAlt")} width={2000} height={755} loading="lazy" />
-                            <ol className={styles.stepLabels} aria-label={t("shopStepsLabel")}>
-                                {BUILD_STEPS.map((step, index) => (
-                                    <li key={step}><span className={styles.stepNumber}>{index + 1}</span>{t(step)}</li>
-                                ))}
-                            </ol>
-                        </figure>
-                    </div>
+                    <BuildYourBottleSteps build={build} headingId="shop-build-heading" />
                 </div>
             </section>
         </div>
