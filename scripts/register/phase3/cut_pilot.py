@@ -43,17 +43,19 @@ BODY_ID = "cylinder-9ml-17-415"
 import math
 # Scale basis. The catalogue says 70 x 20 mm, but these photos were shot from ~6 deg above: the kit-fit
 # study (memory project_cyl9_clear_master_kitfit_2026_09_23, CYL_SPECS["009_kitfit"]) matched the 17-415
-# 9 mL silhouettes to a 72.2 x 19.3 mm cylinder at 6 deg, IoU .954. A cylinder's width does not change
-# with tilt, so px/mm comes from the barrel width at alpha 0.5 = 19.3 mm, and the apparent height
-# predicted at 6 deg (H cos + D sin) is the independent +-2% check.
+# 9 mL silhouettes to a 72.2 x 19.3 mm cylinder at 6 deg, IoU .954.
+# Every glass is the same mould, so every plate stands at the SAME height (Jordan 2026-09-25: "the clear
+# needs to be brought up to the same height as all the other bottles"): px/mm = seat-to-foot pixels /
+# the apparent height at 6 deg (H cos + D sin = 73.8 mm). The barrel width at alpha 0.5 against 19.3 mm
+# is the independent +-2% check.
 FIT_H_MM, FIT_D_MM, TILT_DEG = 72.2, 19.3, 6.0
 APPARENT_H_MM = FIT_H_MM * math.cos(math.radians(TILT_DEG)) + FIT_D_MM * math.sin(math.radians(TILT_DEG))
 CATALOGUE_MM = {"heightBare": 70.0, "diameter": 20.0}
 # Plates that fail the size gate but were accepted by name. The gate result stays recorded; the ruling
 # makes the plate approvable.
 ACCEPTED = {
-    "Amber": "Jordan 2026-09-25: accepted at +2.6% (the Amber and Cobalt files share one slimmer photo)",
-    "Cobalt Blue": "Jordan 2026-09-25: accepted at +2.6% (the Amber and Cobalt files share one slimmer photo)",
+    "Amber": "Jordan 2026-09-25: accepted; the Amber and Cobalt files share one photo 2.6% slimmer than the fit",
+    "Cobalt Blue": "Jordan 2026-09-25: accepted; the Amber and Cobalt files share one photo 2.6% slimmer than the fit",
 }
 GLASS = {  # glass -> (uncapped folder, capped folder)
     "Clear": ("9. Clear  (Uncapped)", "10. Clear  (Capped)"),
@@ -128,10 +130,10 @@ def measure_body(img: Image.Image) -> dict:
     barrel = float(np.median(widths))
     axis = float(np.median(centres))
     shoulder = next(y for y in range(top, bottom) if m[y].any() and (np.where(m[y])[0].max() - np.where(m[y])[0].min() + 1) >= 0.92 * barrel)
-    px_per_mm = barrel / FIT_D_MM
-    apparent = (bottom - top) / px_per_mm
+    px_per_mm = (bottom - top) / APPARENT_H_MM
+    width = barrel / px_per_mm
     return {"rim": top, "foot": bottom, "axisX": axis, "barrelPx": barrel, "shoulderY": shoulder, "pxPerMm": px_per_mm,
-            "apparentHeightMm": apparent, "heightErrorPct": 100 * (apparent - APPARENT_H_MM) / APPARENT_H_MM}
+            "diameterMm": width, "widthErrorPct": 100 * (width - FIT_D_MM) / FIT_D_MM}
 
 
 def body_layer(psd: PSDImage):
@@ -174,7 +176,8 @@ def main() -> int:
     comps = {r["componentId"]: r for r in csv.DictReader((REGISTER / "components.csv").open())}
     asm = [r for r in csv.DictReader((REGISTER / "assemblies.csv").open()) if r["bodyId"] == BODY_ID]
     result = {"bodyId": BODY_ID, "psdRoot": str(PSD_ROOT), "catalogueMm": CATALOGUE_MM,
-              "scaleBasis": {"method": "barrel width at alpha 0.5 = fitted diameter", "fitHeightMm": FIT_H_MM, "fitDiameterMm": FIT_D_MM,
+              "scaleBasis": {"method": "seat-to-foot = apparent height of the fitted bottle at the camera tilt (every glass the same height); barrel width is the check",
+                             "fitHeightMm": FIT_H_MM, "fitDiameterMm": FIT_D_MM,
                              "cameraTiltDeg": TILT_DEG, "expectedApparentHeightMm": round(APPARENT_H_MM, 2), "gatePct": 2.0,
                              "source": "kit-fit study 2026-09-23 (CYL_SPECS['009_kitfit'])"},
               "plates": [], "components": []}
@@ -192,12 +195,12 @@ def main() -> int:
             "plateKey": f"{BODY_ID}|{glass}", "glass": glass, "file": f"plates/{BODY_ID}--{glass.lower().replace(' ', '-')}.png",
             "width": cut.width, "height": cut.height, "sha256": sha(cut), "pxPerMm": round(m["pxPerMm"], 4),
             "anchors": {"axisX": round(m["axisX"], 1), "seatY": m["rim"], "shoulderY": m["shoulderY"], "baselineY": m["foot"]},
-            "checks": {"barrelPx": m["barrelPx"], "apparentHeightMm": round(m["apparentHeightMm"], 2), "heightErrorPct": round(m["heightErrorPct"], 2),
-                       "passes": abs(m["heightErrorPct"]) <= 2.0, "acceptedBy": ACCEPTED.get(glass),
-                       "approvable": abs(m["heightErrorPct"]) <= 2.0 or glass in ACCEPTED},
+            "checks": {"barrelPx": m["barrelPx"], "diameterMm": round(m["diameterMm"], 2), "widthErrorPct": round(m["widthErrorPct"], 2),
+                       "passes": abs(m["widthErrorPct"]) <= 2.0, "acceptedBy": ACCEPTED.get(glass),
+                       "approvable": abs(m["widthErrorPct"]) <= 2.0 or glass in ACCEPTED},
             "source": {"library": "BB-PSD-Files-Master", "path": str(psd_path.relative_to(PSD_ROOT)), "layer": layer.name},
         })
-        print(f"plate {glass:12} {cut.width}x{cut.height}  {m['pxPerMm']:.3f} px/mm  rim {m['rim']} shoulder {m['shoulderY']} foot {m['foot']}  apparent height {m['apparentHeightMm']:.2f} mm vs {APPARENT_H_MM:.2f} ({m['heightErrorPct']:+.1f}%)")
+        print(f"plate {glass:12} {cut.width}x{cut.height}  {m['pxPerMm']:.3f} px/mm  rim {m['rim']} shoulder {m['shoulderY']} foot {m['foot']}  width {m['diameterMm']:.2f} mm vs {FIT_D_MM} ({m['widthErrorPct']:+.1f}%)")
 
     # ---------- components: library PSD registered against the capped clear bottle ----------
     capped_dir = BOTTLES / GLASS["Clear"][1]

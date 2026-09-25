@@ -55,7 +55,10 @@ def scaled(img: Image.Image, px_per_mm: float) -> tuple[Image.Image, float]:
     return img.resize((max(1, round(img.width * f)), max(1, round(img.height * f))), Image.LANCZOS), f
 
 
-def render(plate: dict, layers: list, size=(260, 640), rim_at=250) -> Image.Image:
+CELL, RIM_AT = (260, 700), 200  # the whole bottle fits: 73.8 mm x 6 px/mm = 443 px of glass below the rim
+
+
+def render(plate: dict, layers: list, size=CELL, rim_at=RIM_AT) -> Image.Image:
     """Plate + layers placed by anchors only. rim_at: where the seat lands on the cell."""
     cell = Image.new("RGBA", size, BONE)
     axis_c = size[0] / 2
@@ -79,7 +82,7 @@ def render(plate: dict, layers: list, size=(260, 640), rim_at=250) -> Image.Imag
     return cell
 
 
-def reference(entry: dict, size=(260, 640), rim_at=250) -> Image.Image:
+def reference(entry: dict, size=CELL, rim_at=RIM_AT) -> Image.Image:
     ref = entry["reference"]
     psd = PSDImage.open(Path(DATA["psdRoot"]) / ref["psd"])
     layers = cp.pixel_layers(psd)
@@ -99,7 +102,7 @@ def plates_sheet():
     w, h, top = 250, 620, 70
     sheet = Image.new("RGBA", (w * len(plates) + 40, h + 150), BONE)
     d = ImageDraw.Draw(sheet)
-    d.text((20, 14), "Body plates: 17-415 Cylinder 9 mL. Lines: axis, seat (rim), shoulder, foot. Scale 6 px/mm, feet aligned.", fill=INK, font=FB)
+    d.text((20, 14), "Body plates: 17-415 Cylinder 9 mL, every glass the same height. Lines: axis, seat (rim), shoulder, foot. Scale 6 px/mm, feet aligned.", fill=INK, font=FB)
     for i, p in enumerate(plates):
         img, f = scaled(Image.open(OUT / p["file"]).convert("RGBA"), p["pxPerMm"])
         x0 = 20 + i * w + (w - img.width) // 2
@@ -115,8 +118,8 @@ def plates_sheet():
         ok = "PASS" if c["passes"] else "FLAG"
         d.text((20 + i * w, top + h - 20), f"{p['glass']}", fill=INK, font=FB)
         d.text((20 + i * w, top + h + 4), f"{p['pxPerMm']:.3f} px/mm  ·  {p['width']}×{p['height']} px", fill=INK, font=FS)
-        d.text((20 + i * w, top + h + 22), f"height {c['apparentHeightMm']:.1f} mm vs {DATA['scaleBasis']['expectedApparentHeightMm']:.1f}", fill=INK, font=FS)
-        d.text((20 + i * w, top + h + 40), f"{c['heightErrorPct']:+.1f}%  {ok}", fill=GREEN if c["passes"] else RED, font=F)
+        d.text((20 + i * w, top + h + 22), f"width {c['diameterMm']:.1f} mm vs {DATA['scaleBasis']['fitDiameterMm']:.1f}", fill=INK, font=FS)
+        d.text((20 + i * w, top + h + 40), f"{c['widthErrorPct']:+.1f}%  {ok}" + ("  accepted" if not c["passes"] and c.get("acceptedBy") else ""), fill=GREEN if c["passes"] else RED, font=F)
     out = OUT / "review-plates.png"
     sheet.convert("RGB").save(out, optimize=True)
     return out
@@ -125,7 +128,7 @@ def plates_sheet():
 def components_sheet():
     clear = next(p for p in DATA["plates"] if p["glass"] == "Clear")
     entries = [e for e in DATA["components"] if e.get("reference")]
-    cols, cw, ch = 4, 560, 700
+    cols, cw, ch = 4, 560, CELL[1] + 60
     rows = (len(entries) + cols - 1) // cols
     sheet = Image.new("RGBA", (cols * cw + 20, rows * ch + 60), BONE)
     d = ImageDraw.Draw(sheet)
@@ -137,12 +140,12 @@ def components_sheet():
         sheet.alpha_composite(ours, (x, y))
         sheet.alpha_composite(ref, (x + 270, y))
         dd = ImageDraw.Draw(sheet)
-        dd.line([(x, y + 250), (x + 530, y + 250)], fill=GOLD, width=1)
+        dd.line([(x, y + RIM_AT), (x + 530, y + RIM_AT)], fill=GOLD, width=1)
         iou = e["checks"].get("registrationIoU")
         tag = f"IoU {iou:.3f}" if iou is not None else ("clipped at rim" if e["checks"].get("clippedAtRim") else "whole layer")
         flag = iou is not None and iou < 0.95
-        dd.text((x, y + 648), e["componentId"], fill=INK, font=F)
-        dd.text((x, y + 668), f"{e['type']} · {tag} · {', '.join(l['slot'] for l in e['layers'])}", fill=RED if flag else INK, font=FS)
+        dd.text((x, y + CELL[1] + 8), e["componentId"], fill=INK, font=F)
+        dd.text((x, y + CELL[1] + 28), f"{e['type']} · {tag} · {', '.join(l['slot'] for l in e['layers'])}", fill=RED if flag else INK, font=FS)
     out = OUT / "review-components.png"
     sheet.convert("RGB").save(out, optimize=True)
     return out

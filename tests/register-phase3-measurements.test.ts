@@ -6,7 +6,7 @@ type Layer = { slot: string; width: number; height: number; pxPerMm: number; anc
 const m = JSON.parse(readFileSync(resolve(__dirname, "..", "data", "register", "phase3", "pilot-measurements.json"), "utf8")) as {
     bodyId: string;
     scaleBasis: { gatePct: number };
-    plates: { glass: string; width: number; height: number; pxPerMm: number; anchors: { axisX: number; seatY: number; shoulderY: number; baselineY: number }; checks: { heightErrorPct: number; passes: boolean; approvable: boolean; acceptedBy: string | null } }[];
+    plates: { glass: string; width: number; height: number; pxPerMm: number; anchors: { axisX: number; seatY: number; shoulderY: number; baselineY: number }; checks: { widthErrorPct: number; passes: boolean; approvable: boolean; acceptedBy: string | null } }[];
     components: { componentId: string; type: string; layers: Layer[]; checks: { registrationIoU?: number; clippedAtRim?: boolean } }[];
 };
 
@@ -20,11 +20,16 @@ describe("Phase 3 pilot measurements (17-415 Cylinder 9 mL)", () => {
             expect(a.baselineY).toBeLessThanOrEqual(p.height);
             expect(a.axisX).toBeGreaterThan(0.4 * p.width);
             expect(a.axisX).toBeLessThan(0.6 * p.width);
-            expect(p.checks.passes).toBe(Math.abs(p.checks.heightErrorPct) <= m.scaleBasis.gatePct);
+            expect(p.checks.passes).toBe(Math.abs(p.checks.widthErrorPct) <= m.scaleBasis.gatePct);
         }
     });
 
-    it("keeps Amber and Cobalt outside the gate but approvable by Jordan's named ruling", () => {
+    it("stands every glass at the same height (Jordan 2026-09-25)", () => {
+        const heights = m.plates.map(p => (p.anchors.baselineY - p.anchors.seatY) / p.pxPerMm);
+        for (const h of heights) expect(h).toBeCloseTo(heights[0], 1);
+    });
+
+    it("keeps Amber and Cobalt outside the width gate but approvable by Jordan's named ruling", () => {
         expect(m.plates.filter(p => !p.checks.passes).map(p => p.glass).sort()).toEqual(["Amber", "Cobalt Blue"]);
         for (const p of m.plates) {
             expect(p.checks.approvable).toBe(p.checks.passes || Boolean(p.checks.acceptedBy));
