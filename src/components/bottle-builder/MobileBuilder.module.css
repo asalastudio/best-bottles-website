@@ -103,6 +103,9 @@
 .previewControls { position: absolute; top: 0; left: 0; right: 0; z-index: 3; display: grid; justify-items: end; align-items: start; width: 100%; padding: max(10px, env(safe-area-inset-top, 0px)) max(12px, env(safe-area-inset-right, 0px)) 0 max(12px, env(safe-area-inset-left, 0px)); pointer-events: none; }
 .mobile .closePreview, .zoom .closePreview, .sheet .closePreview { display: grid; place-items: center; width: clamp(44px, 12vw, 56px); height: clamp(44px, 12vw, 56px); min-width: 44px; min-height: 44px; padding: 0; line-height: 0; border-radius: 50%; background: #fff; border: 1px solid #cfc6b8; box-shadow: 0 2px 12px rgba(28,28,30,.16); pointer-events: auto; }
 .zoom .closePreview svg, .sheet .closePreview svg { display: block; margin: 0; width: clamp(18px, 5vw, 22px); height: clamp(18px, 5vw, 22px); }
+.zoomControls { position: absolute; left: 0; right: 0; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 3; display: grid; justify-items: center; pointer-events: none; }
+.zoomCover { pointer-events: auto; min-height: 44px; padding: 10px 16px; background: #fff; color: var(--ink); border: 1px solid var(--line); border-radius: 4px; font-size: .875rem; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
+.zoomCover[aria-pressed=true] { background: var(--ink); color: #fff; border-color: var(--ink); }
 .expandedImage { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; isolation: isolate; touch-action: pinch-zoom; display: grid; place-items: center; justify-items: center; padding: 0; }
 .expandedImage > * { max-width: 100%; max-height: 100%; width: auto; height: 100%; object-fit: contain; object-position: center; justify-self: center; margin: 0 auto; transform: scale(var(--preview-zoom, 1)); transform-origin: center center; }
 @media (max-height: 500px), (orientation: landscape) { .previewControls { padding-right: max(16px, env(safe-area-inset-right, 0px)); } }

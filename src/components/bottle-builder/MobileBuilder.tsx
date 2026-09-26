@@ -299,6 +299,8 @@ export default function MobileBuilder(p: Props) {
                 <button type="submit" className={styles.closePreview} aria-label="Close preview"><X size={20} /></button>
             </form>
             <div className={styles.expandedImage} data-zoom={previewZoom > 1} onDoubleClick={() => setPreviewZoom(z => z === 1 ? 2 : 1)} style={{ "--preview-zoom": previewZoom } as CSSProperties}>{previewImage(true)}</div>
+            {/* The overcap can be worn or set beside the bottle here too (Jordan, 2026-09-25): the expanded view is where customers judge the finished bottle. */}
+            {stage >= 3 && p.hasIncludedCover && <div className={styles.zoomControls}><button type="button" className={styles.zoomCover} aria-pressed={p.showCover} onClick={p.onCover}>{p.showCover ? "Hide overcap" : "Show overcap on"}</button></div>}
         </dialog>
         </>}
     </div>;

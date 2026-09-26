@@ -254,3 +254,6 @@ data/descriptions/pdp/catalog-facts.json
 /output/register-bodies/
 # Phase 4 parity gate: renders, legacy kits and review sheets (regenerable)
 /output/register-phase4/
+
+# builder kit layer fixes (published to Blob + Convex, never committed)
+/output/kit-fixes/
