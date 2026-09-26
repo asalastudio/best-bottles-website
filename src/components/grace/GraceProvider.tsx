@@ -57,7 +57,7 @@ import {
     type GraceRealtimeToolImplementations,
 } from "@/lib/grace/openaiRealtimeAdapter";
 import { GRACE_REALTIME_INSTRUCTIONS } from "@/lib/grace/realtimeInstructions";
-import { formatGraceMemoryLines, normalizeRememberNoteKind, type GraceMemoryNote } from "@/lib/grace/memoryNotes";
+import { formatGraceMemoryLines, normalizeRememberNoteKind, resolveRememberNoteHref, type GraceMemoryNote } from "@/lib/grace/memoryNotes";
 import { buildGraceSiteCapabilities } from "@/lib/grace/siteCapabilities";
 import {
     buildCatalogSessionNote,
@@ -2350,13 +2350,23 @@ function GraceProviderBase({
             const kind = normalizeRememberNoteKind(params.kind);
             const text = (params.text ?? "").trim();
             if (!kind || !text) return "A kind (profile, correction, or destination) and a short note are required.";
+            // A destination note without a path used to reach Convex and be
+            // rejected there; the page the customer is on is the destination.
+            const href = resolveRememberNoteHref({
+                kind,
+                href: params.href,
+                currentPath: stripLocalePrefix(pathnameRef.current),
+            });
+            if (kind === "destination" && !href) {
+                return "A destination note needs a site-relative path such as /products/{slug}. Pass the page you moved the customer to as href.";
+            }
             try {
                 await upsertMemoryRef.current({
                     ownerKey: resolveGraceOwnerKey(userIdRef.current),
                     kind,
                     text,
-                    href: params.href ?? undefined,
-                    sku: params.sku ?? undefined,
+                    href: href ?? undefined,
+                    sku: params.sku?.trim() || undefined,
                 });
                 sessionTraceRef.current.tools.push({
                     name: "rememberCustomerNote",

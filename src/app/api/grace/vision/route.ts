@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 import { enforceGraceRateLimit } from "@/lib/graceRateLimitServer";
+import { isValidGraceOwnerKey } from "@/lib/graceOwnerKeyFormat";
 
 /**
  * Grace vision endpoint — GPT-4o analyzes an uploaded reference image and
@@ -78,7 +79,9 @@ export async function POST(req: NextRequest) {
         if (!imageUrl) {
             return NextResponse.json({ error: "imageUrl required" }, { status: 400 });
         }
-        if (!body.ownerKey || !/^(anon-[a-z0-9-]{8,}|[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12})$/i.test(body.ownerKey)) {
+        // Shared shapes, including the `user:` keys signed-in customers send;
+        // the old anonymous-only pattern rejected every signed-in request.
+        if (!isValidGraceOwnerKey(body.ownerKey)) {
             return NextResponse.json({ error: "Valid ownerKey required" }, { status: 400 });
         }
         let parsed: URL;
