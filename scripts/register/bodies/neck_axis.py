@@ -108,6 +108,11 @@ def main() -> int:
     pilot = json.loads(PILOT.read_text())
     skipped: list = []
     rows = update(bodies, BODY_IMAGES, args.write, skipped) + update(pilot["plates"], PILOT_IMAGES, args.write, skipped)
+    if args.write and pilot["plates"]:  # the pilot's five glasses are one geometry: one axis, one shoulder (the median)
+        for key in ("axisX", "shoulderY"):
+            shared = float(np.median([p["anchors"][key] for p in pilot["plates"]]))
+            for p in pilot["plates"]:
+                p["anchors"][key] = round(shared * 2) / 2 if key == "axisX" else int(round(shared))
     for key, mm in sorted(rows, key=lambda r: -abs(r[1])):
         if abs(mm) >= 0.1:
             print(f"{key:40} neck axis {mm:+.2f} mm from the barrel axis")

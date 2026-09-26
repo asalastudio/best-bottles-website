@@ -24,7 +24,7 @@
    "sha256": "236b672e25eb8c9151271a1d0869f1258b0643a6e78ce69fc94be3df120ad6b6",
    "pxPerMm": 27.2142,
    "anchors": {
-    "axisX": 377.5,
+    "axisX": 376.5,
     "seatY": 167,
     "shoulderY": 536,
     "baselineY": 2176,
@@ -138,7 +138,7 @@
    "sha256": "e6a30d162de3183d44cfef0ce6eaab5c22ba4bea4c22504a64fbf8265a67e176",
    "pxPerMm": 27.2142,
    "anchors": {
-    "axisX": 377.5,
+    "axisX": 376.5,
     "seatY": 167,
     "shoulderY": 536,
     "baselineY": 2176,
@@ -252,7 +252,7 @@
    "sha256": "677b9c4ff53538818f2d0c134314487a03077b22b0bdf6f75d9aa0255028cf99",
    "pxPerMm": 27.2142,
    "anchors": {
-    "axisX": 375.5,
+    "axisX": 376.5,
     "seatY": 167,
     "shoulderY": 536,
     "baselineY": 2176,
