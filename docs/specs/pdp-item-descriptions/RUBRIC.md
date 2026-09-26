@@ -14,7 +14,7 @@ Scope: the "Item description" line on the redesigned PDP (`PdpProductInfo`), one
 
 Companion files in this folder:
 
-- `TEMPLATE.md`: the layout, meaning the summary, the bullets and the three-sentence version, based on Baymard, Shopify and Amazon guidance.
+- `TEMPLATE.md`: the locked layout, meaning two or three sentences and then three (at most four) labelled bullets, based on Baymard, Shopify and Amazon guidance.
 - `community-research.md`: what buyers ask about bottles and applicators on Reddit, with sources.
 - `use-line-audit.csv`: the 99 SKUs whose current "For ..." line contradicts the fitment or is missing.
 
@@ -364,9 +364,9 @@ Each card sets what the "For ..." sentence may say (**Primary**, then **Also**),
 
 ### 4.3 Size bands (key C)
 
-The size band adds one purpose phrase to the summary and ranks the uses. This covers every mode: vials, drams, roll-ons, sprayers, pour bottles and atomizers.
+The size band adds one purpose phrase to sentence 1 and ranks the uses. This covers every mode: vials, drams, roll-ons, sprayers, pour bottles and atomizers.
 
-| Band | ml | Phrase in the summary | Source |
+| Band | ml | Phrase in sentence 1 | Source |
 |---|---|---|---|
 | Sample | 5 or less, and every vial | **Samples lead.** "for samples and promotional giveaways of {liquids}"; vials add "testers" | Best Bottles: drams, 5 ml bottles, roll-ons and sprays are used for samples and promotional items. 5 ml is the cutoff. The exception is the 9 ml glass-rod vial, which serves as a sample vial. Legacy: "Perfume sample vials for promotions" |
 | Small | 6–9 | "sized for samples, promotions and travel" | Legacy: "Small sized bottle for promotion samples and travel" |
@@ -398,7 +398,7 @@ This line answers the most common question across all four research segments: "w
 - Template: "The {neck} neck also takes the {other fitments} sold for this bottle."
 - The fitment list is computed per family, capacity, neck **and glass colour**, and includes a screw cap when a cap-only SKU exists there. Today's `fitmentsAtNeck` in `family-profiles.json` ignores colour and leaves caps out; Phase 1 fixes that.
 - Never write "universal", "fits most", or "fits all 18 mm". 18-400, 18-410 and 18-415 are different threads.
-- It fills the **Fits** bullet in TEMPLATE.md, and the second half of sentence 2 in the three-sentence layout.
+- It fills the **Fits** bullet in TEMPLATE.md.
 
 ### 4.6 Carry behaviour (key F)
 
@@ -432,29 +432,32 @@ On the 13-415 neck, used by the 5–30 ml bottles, every screw cap Best Bottles 
 
 ## 5. Choosing each field, and the lint rules
 
-The layout lives in `TEMPLATE.md`: a one-sentence summary and three to five labelled bullets on the product page, plus a three-sentence version for compact places. It replaces the identity-first sentence order first proposed here, because the page title above the description already gives capacity, glass colour and family.
+The layout is locked in `TEMPLATE.md`: two or three sentences, then three (at most four) labelled bullets. It replaces the identity-first sentence order first proposed here, because the page title above the description already gives capacity, glass colour and family.
 
 This section keeps the rules for choosing what goes in each field.
 
-**Uses, in the summary.** Two to four uses from the mode card:
+**Uses, in sentence 1.** Two to four uses from the mode card:
 
 - Primary uses first, ranked by the size band, with the size phrase last.
 - Legacy "For use with" terms are kept only when they pass the mode's allowed list; the rest are dropped.
 
-**Good to know.** Exactly one fact, chosen by this priority:
+**Sentence 2, the deciding fact.** Exactly one fact, chosen by this priority:
 
 1. The mode's guard: a limit that prevents a wrong purchase (BULB, STOPPER, MIST, DROP, PUMP-LOTION).
-2. The mode's mechanism line (SPLASH, DAB).
-3. A legacy flag: hand made, engravable, travel cap, weighted base.
-4. The carry line (4.6).
+2. The mode's mechanism line (SPLASH, DAB, PUMP-SPRAY, POUR).
+3. A legacy flag: engravable, travel cap, weighted base.
 
-The neck-system line (4.5) has its own field, **Fits**. The material line (4.4) has its own field, **Glass** or **Material**.
+**Sentence 3, optional.** A care, travel or sample note that sentence 2 didn't use: the carry line (4.6), or the DROP care line.
+
+**Good to know bullet.** Only for one extra verified fact: the lined cap (4.7), hand made, engravable, weighted base. It never repeats sentence 2.
+
+The neck-system line (4.5) has its own bullet, **Fits**. The material line (4.4) has its own bullet, **Glass** or **Material**.
 
 ### Lint rules
 
 A test enforces these; see Phase 2.
 
-- Word, sentence, bullet and character limits are in TEMPLATE.md §7.
+- Word, sentence, bullet and character limits are in TEMPLATE.md §6.
 - No term from the mode's Excluded list.
 - Brand banned list checked with word boundaries. The 2026-05-23 regex has none, so "serum" matches `rum` and "origin" matches `gin`.
 - Claims list: leak-proof (except "not leak-proof"), airtight, spill-proof, UV-proof, blocks UV, preserves, extends shelf life, sterile, ready to fill, universal, fits most, unbreakable, cosmetic-grade, medical-grade, therapeutic, child-resistant.
@@ -465,7 +468,7 @@ A test enforces these; see Phase 2.
 
 ## 6. Worked examples
 
-All twelve archetypes are in TEMPLATE.md §6, in both layouts. For comparison, here is what the live generator writes today for the first two.
+All sixteen examples are in TEMPLATE.md §5, in the locked format. For comparison, here is what the live generator writes today for the first two.
 
 - **`GBCylAmb9MtlRollWht`**, 76 words:
   > A 9 ml (0.3 oz) amber glass cylinder, fitted with a steel roller ball and a white cap. Straight sides, so a label wraps square. The steel ball lays oil down in a thin, even line and feels cool against the skin. For perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. It stands 70 mm without the cap and 83 mm with it and 20 mm across, on a 17-415 neck. Sold assembled, 724 to a case.
@@ -504,18 +507,18 @@ These are the questions where the answer changes the copy. Each has a recommenda
 ### Phase 1: encode the rubric (code)
 
 - Add `src/lib/products/item-description/rubric.ts`. It holds the mode cards, liquid classes, size bands, material lines and guard lines as data, and replaces `DEFAULT_USES_BY_APPLICATOR`.
-- Have `compose.ts` build the TEMPLATE.md record (`summary`, `included`, `fits`, `glass`, `goodToKnow`) and render both layouts from it:
+- Have `compose.ts` build the TEMPLATE.md record (`sentences`, `included`, `fits`, `glass`, `goodToKnow`) and render the paragraph and the bullets from it:
   - The measurement and shipping sentences are removed. They live in the tech sheet.
   - The uses filter legacy "For use with" terms through the mode's allowed list, then fill from the card.
-  - Good to know is chosen by the priority in section 5.
+  - Sentences 2 and 3 and the Good to know bullet are chosen by section 5.
   - Fits is computed per family, capacity, neck and glass colour.
-- `item-descriptions.json` gains `summary` and `bullets`. `PdpProductInfo` renders them, and falls back to `description` (layout A).
+- `item-descriptions.json` gains `sentences` and `bullets`. `PdpProductInfo` renders the paragraph and a list, and falls back to `description` (the paragraph).
 - Keep the runtime resolver order (curated JSON, then composed, then legacy) unchanged, so new SKUs get the same voice at request time.
 
 ### Phase 2: lint as a test
 
-- Add `tests/item-description-rubric.test.ts`. It runs every row of `item-descriptions.json` through the section 5 lint rules and the TEMPLATE.md §7 checklist, and fails on any violation.
-- Keep a snapshot of the 12 worked examples.
+- Add `tests/item-description-rubric.test.ts`. It runs every row of `item-descriptions.json` through the section 5 lint rules and the TEMPLATE.md §6 checklist, and fails on any violation.
+- Keep a snapshot of the 16 worked examples.
 
 ### Phase 3: regenerate from production
 
