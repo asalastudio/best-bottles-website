@@ -42,6 +42,7 @@ const layerV = v.object({
     usage: v.optional(v.union(v.literal("seated"), v.literal("exploded"))),
     solidBottomY: v.optional(v.number()),
     glass: v.optional(v.string()),
+    bodyId: v.optional(v.string()),
 });
 
 const componentV = v.object({
@@ -131,6 +132,7 @@ export const forSkus = query({
                         ...(layer.usage ? { usage: layer.usage } : {}),
                         ...(layer.solidBottomY !== undefined ? { solidBottomY: layer.solidBottomY } : {}),
                         ...(layer.glass ? { glass: layer.glass } : {}),
+                        ...(layer.bodyId ? { bodyId: layer.bodyId } : {}),
                     })),
                     approved: component.layers.length > 0 && component.layersStatus === "approved",
                 };

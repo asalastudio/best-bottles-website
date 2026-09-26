@@ -4,17 +4,19 @@
  * the 21 components' layers (caps, roller inserts, fine-mist sprayers, lotion pumps), replacing the Phase 3 pilot
  * cut-outs. Both storefront stages (the product page and Build Your Bottle) draw from these rows.
  *
- *   npx tsx scripts/register/blender/push-blender-9ml.ts --dir <final dir>                      # dry run
- *   npx tsx scripts/register/blender/push-blender-9ml.ts --dir <final dir> --apply              # upload + write dev, "measured"
- *   npx tsx scripts/register/blender/push-blender-9ml.ts --dir <final dir> --apply --approve    # the same, "approved"
+ *   npx tsx scripts/register/blender/push-blender-body.ts --dir <final dir>                      # dry run
+ *   npx tsx scripts/register/blender/push-blender-body.ts --dir <final dir> --apply              # upload + write dev, "measured"
+ *   npx tsx scripts/register/blender/push-blender-body.ts --dir <final dir> --apply --approve    # the same, "approved"
  *   ... --env-dir <checkout>   read .env.local / .env.blob.local from another checkout (default: this repo root)
+ *   ... --data <name>          data/register/<name>/measurements.json (default blender-9ml; e.g. blender-tallcyl-13-415)
  *   ... --deployment prod      PRODUCTION: needs REGISTER_PROD_WRITE_TOKEN in the environment; never the default.
  *                              Run scripts/register/push-register.ts --deployment prod --apply first (prod's register
  *                              tables start empty). Images are content-addressed, so a prod run reuses the dev blobs.
  *
- * Reads data/register/blender-9ml/measurements.json (written by the Blender lane's build_assets.py) and the images
- * in --dir. See-through layers carry `glass` (one per plate glass) and `usage: "seated"`; the full plugs and the
- * lifted pump internals carry `usage: "exploded"`. Blob keys are content-addressed and write-once.
+ * Reads data/register/<data>/measurements.json (written by the Blender lane's build_assets.py) and the images in
+ * --dir. Every layer carries the body's `bodyId`, and is written with setBodyComponentLayers, so a component shared
+ * with other bodies keeps their layers. See-through layers also carry `glass` (one per plate glass) and
+ * `usage: "seated"`; full plugs and lifted pump internals carry `usage: "exploded"`. Blob keys are content-addressed.
  * Dev by default; production only with --deployment prod (Jordan runs it).
  */
 import { readFileSync } from "node:fs";
@@ -32,6 +34,7 @@ config({ path: [resolve(envDir, ".env.local"), resolve(envDir, ".env.blob.local"
 const apply = argv.includes("--apply");
 const approve = argv.includes("--approve");
 const dir = arg("--dir");
+const dataName = arg("--data") ?? "blender-9ml";
 
 type Asset = { file: string; width: number; height: number; sha256: string };
 type Layer = Asset & {
@@ -48,7 +51,7 @@ type Measurements = {
 
 async function main() {
     if (!dir) throw new Error("--dir <final dir> is required (the Blender lane's register-9ml-v32/final)");
-    const m = JSON.parse(readFileSync(resolve(ROOT, "data", "register", "blender-9ml", "measurements.json"), "utf8")) as Measurements;
+    const m = JSON.parse(readFileSync(resolve(ROOT, "data", "register", dataName, "measurements.json"), "utf8")) as Measurements;
     const PROD_URL = "https://precise-raccoon-123.convex.cloud";
     const deployment = arg("--deployment") ?? "dev";
     if (deployment !== "dev" && deployment !== "prod") throw new Error(`--deployment must be dev or prod, not ${deployment}`);
@@ -89,7 +92,7 @@ async function main() {
             const image = await upload(`register/components/${neck}/${c.componentId}/${l.slot}-${l.sha256}.png`, l);
             layers.push({ slot: l.slot as never, layerName: l.layerName, z: l.z, image, image2x: null, pxPerMm: l.pxPerMm,
                 anchor: l.anchor, anchorStatus: status, explodeIndex: l.explodeIndex,
-                ...(l.usage ? { usage: l.usage } : {}), ...(l.glass ? { glass: l.glass } : {}) });
+                ...(l.usage ? { usage: l.usage } : {}), ...(l.glass ? { glass: l.glass } : {}), bodyId: m.bodyId });
         }
         components.push({ componentId: c.componentId, layers });
         console.log(`component ${c.componentId}: ${layers.length} layer(s) (${layers.filter(l => "glass" in l).length} see-through), ${status}`);
@@ -101,7 +104,7 @@ async function main() {
     const total = (tally: Record<string, number>) => Object.values(tally).reduce((sum, n) => sum + n, 0);
     if (!total(before.bodies) || !total(before.components)) throw new Error(`${deployment} has no register rows (${JSON.stringify(before)}); run scripts/register/push-register.ts --deployment ${deployment} --apply first`);
     console.log("plates:", JSON.stringify(await client.mutation(api.register.upsertBodyPlates, { writeToken: token, rows: plates })));
-    for (const c of components) console.log(c.componentId, JSON.stringify(await client.mutation(api.register.setComponentLayers, { writeToken: token, ...c })));
+    for (const c of components) console.log(c.componentId, JSON.stringify(await client.mutation(api.register.setBodyComponentLayers, { writeToken: token, bodyId: m.bodyId, ...c })));
     console.log("counts:", JSON.stringify(await client.query(api.register.counts, {})));
 }
 

@@ -250,3 +250,27 @@ describe("see-through layers (one per glass)", () => {
         expect(assembledKit(clear).parts.some((part) => part.slot === "diptube")).toBe(true);
     });
 });
+
+describe("body-scoped layers", () => {
+    const blender = { slot: "cap" as const, z: "front" as const, explodeIndex: 1, url: "https://blob/register/components/cap-blender.png", width: 500, height: 700, pxPerMm: 25, anchor: { x: 250, y: 300 }, approved: true, bodyId: "cylinder-9ml-17-415" };
+    const CAP2 = { ...CAP, layers: [...CAP.layers, blender] };
+    const OTHER = { ...PLATE, plateKey: "cylinder-5ml-13-415|Clear", bodyId: "cylinder-5ml-13-415", url: "https://blob/register/plates/5ml.png" };
+    const payload: RegisterStagePayload = {
+        ...PAYLOAD,
+        plates: { ...PAYLOAD.plates, [OTHER.plateKey]: OTHER },
+        components: { ...PAYLOAD.components, [CAP.componentId]: CAP2 },
+        assemblies: {
+            ...PAYLOAD.assemblies,
+            "GB-CYL-CLR-5ML-CAP": { graceSku: "GB-CYL-CLR-5ML-CAP", websiteSku: "GBCyl5Cap", bodyId: "cylinder-5ml-13-415", plateKey: OTHER.plateKey, glass: "Clear", neck: "13-415", parts: [{ role: "cap", componentId: CAP.componentId }], renderable: true, reason: null },
+        },
+    };
+    const capUrls = (sku: string) => kitFromRegister(sku, payload)!.parts.filter((part) => part.slot === "cap").map((part) => part.image.url);
+
+    it("draws only the body's own layers when the component has them", () => {
+        expect(capUrls("GB-CYL-CLR-9ML-MRL-BKDT")).toEqual([blender.url]);
+    });
+
+    it("keeps the generic layers for every other body that shares the component", () => {
+        expect(capUrls("GB-CYL-CLR-5ML-CAP")).toEqual([CAP.layers[0].url]);
+    });
+});

@@ -128,6 +128,10 @@ export const componentLayerV = v.object({
     // different in every glass, so it carries one layer per glass: the plate glass it was rendered behind
     // ("Clear", "Amber", ...). The renderer draws it only on that glass; absent = every glass.
     glass: v.optional(v.string()),
+    // A layer made for one body (a native render of that bottle's own fitment) carries its bodyId. When a component
+    // has layers for the assembly's body, the renderer draws ONLY those; every other body keeps the generic layers
+    // (absent bodyId). So one body's closures can be re-rendered without changing any other body that shares them.
+    bodyId: v.optional(v.string()),
 });
 
 export const componentRegisterFields = {

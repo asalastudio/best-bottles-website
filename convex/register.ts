@@ -207,6 +207,27 @@ export const setComponentLayers = mutation({
     },
 });
 
+/**
+ * Replace one body's layers on a component, keeping every other layer (the generic set other bodies draw, and other
+ * bodies' own layers). Every layer passed must carry that bodyId.
+ */
+export const setBodyComponentLayers = mutation({
+    args: { writeToken: v.string(), componentId: v.string(), bodyId: v.string(), layers: v.array(componentLayerV) },
+    returns: outcomeV,
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+        if (args.layers.some(l => l.bodyId !== args.bodyId)) return { key: args.componentId, outcome: "error" as const, error: "layer_body_mismatch" };
+        const rows = await ctx.db.query("registerComponents").withIndex("by_componentId", q => q.eq("componentId", args.componentId)).collect();
+        if (rows.length !== 1) return { key: args.componentId, outcome: "error" as const, error: rows.length ? "duplicate_index_rows" : "unknown_component" };
+        const row = rows[0];
+        const layers = [...row.layers.filter(l => l.bodyId !== args.bodyId), ...args.layers];
+        const layersStatus = weakest(layers.map(l => l.anchorStatus));
+        if (stableJson(row.layers) === stableJson(layers) && row.layersStatus === layersStatus) return { key: args.componentId, outcome: "unchanged" as const };
+        await ctx.db.patch(row._id, { layers, layersStatus, revision: row.revision + 1, loadedAt: Date.now() });
+        return { key: args.componentId, outcome: "updated" as const };
+    },
+});
+
 const tableV = v.union(v.literal("bodies"), v.literal("components"), v.literal("assemblies"));
 
 /** The loader's diff source: register-owned fields of every stored row, a page at a time. */

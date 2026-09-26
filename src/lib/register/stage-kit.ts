@@ -59,8 +59,19 @@ export type RegisterPlate = PlateGeometry & { plateKey: string; bodyId: string; 
 /** Which stage views a layer is for: a seated insert (clipped at the rim) for CAP ON and SIDECAR, its full plug for EXPLODED. */
 export type LayerUsage = "seated" | "exploded";
 export type StageViewName = "sidecar" | "capon" | "exploded";
-/** `glass`: a see-through layer rendered behind one plate glass ("Clear", "Amber", ...); drawn only on that glass. Absent = every glass. */
-export type RegisterLayer = LayerGeometry & { slot: KitSlot; url: string; approved: boolean; usage?: LayerUsage | null; glass?: string | null };
+/**
+ * `glass`: a see-through layer rendered behind one plate glass ("Clear", "Amber", ...); drawn only on that glass. Absent = every glass.
+ * `bodyId`: a layer made for one body. A component with layers for the assembly's body draws only those; other bodies keep its generic layers.
+ */
+export type RegisterLayer = LayerGeometry & { slot: KitSlot; url: string; approved: boolean; usage?: LayerUsage | null; glass?: string | null; bodyId?: string | null };
+
+/** The layers a component draws on one assembly: its layers for that body if it has any, else its generic ones; then the glass filter. */
+export function layersFor(component: { layers: RegisterLayer[] }, assembly: { bodyId: string; glass: string }): RegisterLayer[] {
+    const own = component.layers.filter((layer) => layer.bodyId === assembly.bodyId);
+    const pool = own.length ? own : component.layers.filter((layer) => !layer.bodyId);
+    // A see-through layer belongs to the glass it was rendered behind; another glass draws its own.
+    return pool.filter((layer) => !layer.glass || layer.glass === assembly.glass);
+}
 export type RegisterComponent = { componentId: string; type: string; layers: RegisterLayer[]; approved: boolean };
 export type RegisterBody = {
     bodyId: string; family: string; capacityMl: number | null; neck: string;
@@ -159,11 +170,7 @@ export function kitFromRegister(
     for (const part of assembly.parts) {
         const component = payload.components[part.componentId];
         if (!component) return null;
-        for (const layer of component.layers) {
-            // A see-through layer belongs to the glass it was rendered behind; another glass draws its own.
-            if (layer.glass && layer.glass !== assembly.glass) continue;
-            layers.push({ ...layer, componentId: part.componentId, role: part.role });
-        }
+        for (const layer of layersFor(component, assembly)) layers.push({ ...layer, componentId: part.componentId, role: part.role });
     }
     if (layers.length === 0) return null;
 
