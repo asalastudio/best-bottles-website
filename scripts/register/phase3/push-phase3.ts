@@ -27,7 +27,11 @@ const argv = process.argv.slice(2);
 const apply = argv.includes("--apply");
 const approve = argv.includes("--approve");
 const except = new Set((argv[argv.indexOf("--except") + 1] ?? "").split(",").filter(() => argv.includes("--except")).map(s => s.trim()).filter(Boolean));
-const only = new Set((argv[argv.indexOf("--only") + 1] ?? "").split(",").filter(() => argv.includes("--only")).map(s => s.trim()).filter(Boolean));
+const onlyArg = argv.includes("--only") ? argv[argv.indexOf("--only") + 1] ?? "" : null;
+if (onlyArg !== null && (onlyArg.startsWith("--") || !onlyArg.split(",").some(s => s.trim()))) {
+    throw new Error("--only needs one or more component IDs, e.g. --only CMP-SPR-CLR-17-415");  // an empty --only would load everything
+}
+const only = new Set((onlyArg ?? "").split(",").map(s => s.trim()).filter(Boolean));
 
 type Layer = { slot: string; layerName: string; file: string; width: number; height: number; sha256: string; pxPerMm: number; anchor: { x: number; y: number }; z: string; explodeIndex: number };
 type Measurements = {
