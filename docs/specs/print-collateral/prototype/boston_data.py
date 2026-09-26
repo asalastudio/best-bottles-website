@@ -10,8 +10,8 @@ EXPORT = ROOT / "docs/reviews/audit-2026-08-06/convex-products-for-crosscheck.js
 GLASS_ORDER = ["Clear", "Amber", "Cobalt Blue"]
 FITMENT_ORDER = ["Dropper", "Steel roller ball", "Plastic roller ball", "Short screw cap"]
 FINISH_ORDER = [
-    "Black bulb", "Black bulb, gold trim", "Black bulb, silver trim",
-    "White bulb", "White bulb, gold trim", "White bulb, silver trim",
+    "Black bulb, black collar", "Black bulb, shiny gold collar", "Black bulb, shiny silver collar",
+    "White bulb, white collar", "White bulb, shiny gold collar", "White bulb, shiny silver collar",
     "Matte Black cap", "Matte Gold cap", "Matte Silver cap",
     "Shiny Black cap", "Shiny Gold cap", "Shiny Silver cap", "Black cap",
 ]
@@ -25,12 +25,14 @@ def size_label(capacity: str) -> str:
 def fitment(row: dict) -> tuple[str, str]:
     sku, name = row["websiteSku"], row["itemName"].lower()
     if re.search(r"Dr(o)?p", sku):
-        bulb = "White bulb" if "Wht" in sku else "Black bulb"
+        # Collar wording follows the 20-400 and 18-400 component inventories (23 Sep 2026):
+        # a plain dropper's collar matches its bulb; trimmed ones are shiny gold or shiny silver.
+        colour = "White" if "Wht" in sku else "Black"
         if re.search(r"GlTrim|ShnGl", sku):
-            return "Dropper", f"{bulb}, gold trim"
+            return "Dropper", f"{colour} bulb, shiny gold collar"
         if re.search(r"SlTrim|ShnSl", sku):
-            return "Dropper", f"{bulb}, silver trim"
-        return "Dropper", bulb
+            return "Dropper", f"{colour} bulb, shiny silver collar"
+        return "Dropper", f"{colour} bulb, {colour.lower()} collar"
     if "CapSht" in sku:
         return "Short screw cap", "Black cap"
     kind = "Steel roller ball" if re.search(r"Mtl", sku) else "Plastic roller ball"

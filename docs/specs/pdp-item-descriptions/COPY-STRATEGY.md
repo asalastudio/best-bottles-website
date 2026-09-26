@@ -9,6 +9,7 @@ Status: **locked 2026-09-26** (Best Bottles approved sections 1–9 and decision
 - `market-research.md`: what suppliers, Amazon, Etsy, Faire and Google do and require, with sources.
 - `community-research.md`: what buyers ask on Reddit.
 - `../print-collateral/PRINT-PLAN.md`: the printed catalogue, line booklet and family inserts, built from the same record.
+- `SYNTHESIS.md`: the 23 September neck-thread sheets and the component register reconciled with this standard; decisions D1–D7.
 
 ---
 
@@ -358,7 +359,7 @@ The printed pieces are one more channel built from the same record; the plan and
 - **Tests.** A vitest suite runs every SKU through naming and descriptions and fails on any of these:
   - A title over 60 characters.
   - A duplicate word ("Vial Vial").
-  - A neck finish not written as `NN-NNN`.
+  - A neck finish not written as `NN-NNN` (GPI finishes) or "{n} mm" (16 mm, 12 mm and other non-GPI necks).
   - A unit without a space.
   - A banned word or claim.
   - A title and a spec that disagree, e.g. capacity in the title ≠ `capacityMl`.
@@ -397,3 +398,4 @@ The printed pieces are one more channel built from the same record; the plan and
 | 5 | Overflow capacity, label panel and inch dimensions | **Locked: yes** (rollout step 6) |
 | 6 | Google Merchant feed | **Locked: yes** (rollout step 7) |
 | 7 | Printed catalogue, line booklet and family inserts | **New.** See `../print-collateral/PRINT-PLAN.md` for the formats and the proof |
+| 8 | Neck sheets and component register: cap, sprayer and pump words; what counts as a fit; stopper bottles; stock source | **New.** See `SYNTHESIS.md`, decisions D1–D7 |

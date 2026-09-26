@@ -397,6 +397,7 @@ This line answers the most common question across all four research segments: "w
 
 - Template: "The {neck} neck also takes the {other fitments} sold for this bottle."
 - The fitment list is computed per family, capacity, neck **and glass colour**, and includes a screw cap when a cap-only SKU exists there. Today's `fitmentsAtNeck` in `family-profiles.json` ignores colour and leaves caps out; Phase 1 fixes that.
+- **Source (2026-09-26):** the component register's `verified` assemblies on the same body and glass colour (`data/register/assemblies.csv`); thread candidates are never listed. See SYNTHESIS.md §4.1.
 - Never write "universal", "fits most", or "fits all 18 mm". 18-400, 18-410 and 18-415 are different threads.
 - It fills the **Fits** bullet in TEMPLATE.md.
 
@@ -484,11 +485,11 @@ These are the questions where the answer changes the copy. Each has a recommenda
 2. **Drop room spray and "air freshener" from the 478 bulb-sprayer SKUs?** Recommended: yes, pending item 3.
 3. **Facts only Best Bottles can confirm.** Until each is confirmed, the line that depends on it stays out.
    - Do the bulb sprayers seal when idle?
-   - Do the perfume spray pumps screw on, or are they crimped?
+   - Do the perfume spray pumps screw on, or are they crimped? *Answered 2026-09-26: they screw on. The 15-415 and 18-415 sprayers are sold as separate thread parts (neck sheets, SYNTHESIS.md §2). The 30 ml Cylinder spray pair is the exception, with a fixed top.*
    - What is the dropper bulb made of: natural rubber, nitrile or silicone?
    - What plastic are the roller housings and the reducer made of?
    - How are the metal atomizers refilled: bottom-fill or top-fill?
-   - Is the closure on the 1 ml vials a plug or a screw cap?
+   - Is the closure on the 1 ml vials a plug or a screw cap? *Answered by the register: a plug (neck `Plug`, 4 assemblies).*
    - What liner, if any, is inside the aluminum bottles?
 4. **"Tincture" as a dropper use?** Recommended: no, for the food-contact and brand reasons in 4.1.
 5. **Replace the legacy "Item type" line** (for example, "Clear, frosted and colored glass roll-on bottles of capacity range about 1/3oz (from 8ml to 10ml)") with a short rubric label such as "Roll-on bottle · perfume oil and blends"? README §4.6 keeps the Best Bottles text "for now", so this is a separate decision. Recommended: yes, after the descriptions ship.

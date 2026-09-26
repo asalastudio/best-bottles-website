@@ -43,7 +43,7 @@ PHOTOS = {
     "GBBstnAmb1ozBlkCapSht": "boston-diva-approved-2026-09-23",
     "GBDiva30RdcrShnGl": "boston-diva-approved-2026-09-23",
     "LBDiva30LtnMtGl": "boston-diva-approved-2026-09-23",
-    "GB1ozApthBlue": "apothecary-approved-2026-09-24",
+    "GB15ApthBlue": "apothecary-approved-2026-09-24",
     "GBVAmb1DrmWhtCapSht": "vials-approved-2026-09-25",
     "GBAtom10Gl": "next-four-approved-2026-09-24",
     "CreamJarAmb40Blkcap": "bone-review",
@@ -70,7 +70,7 @@ USES = [
     ("GBBstnAmb1ozBlkCapSht", "Pour Bottle", "Beard oil, hair oil, body oil and essential oils.", "No fitment; the oil pours from the neck."),
     ("GBDiva30RdcrShnGl", "Pour Bottle with Reducer", "Splash cologne, aftershave, perfume oil, beard oil.", "The reducer slows the pour to a splash or drip."),
     ("LBDiva30LtnMtGl", "Lotion Pump Bottle", "Body lotion, liquid soap, serums, body and hair oil.", "For liquids that pour; creams go in a jar."),
-    ("GB1ozApthBlue", "Bottle with Glass Stopper", "Perfume oil and attar kept on a shelf.", "The stopper is not leak-proof."),
+    ("GB15ApthBlue", "Bottle with Glass Stopper", "Perfume oil and attar kept on a shelf.", "The stopper is not leak-proof."),
     ("GBVAmb1DrmWhtCapSht", "Vials and Drams", "Samples, testers and promotional giveaways.", "Sizes up to 5 ml, plus every vial."),
     ("GBAtom10Gl", "Travel Atomizer", "Decants of eau de parfum or cologne.", "A metal shell around a refillable glass vial."),
     ("CreamJarAmb40Blkcap", "Cream Jar", "Cream, balm, body butter, salve, solid perfume.", "For products too thick to pour."),
@@ -81,6 +81,44 @@ FAMILIES = [
     "Sleek", "Slim", "Diamond", "Grace", "Tulip", "Bell", "Rectangle", "Square", "Royal", "Flair",
     "Pillar", "Teardrop", "Apothecary", "Vials and Drams", "Travel Atomizers", "Cream Jars",
     "Aluminum and Plastic",
+]
+
+
+# What fits what, by neck finish. Wording follows the 23 Sep 2026 neck-thread sheets
+# (data/register/source/neck-thread-2026-09-23) in the locked vocabulary; bottle lists match the
+# component register's current bodies (data/register/bodies.csv, 25 Sep 2026).
+SHARED_NECKS = [
+    ("13-415",
+     "Cylinder 5 ml · Tall Cylinder 9 ml · Sleek 5 and 8 ml · Tulip 5 and 6 ml · Pillar 9 ml · Bell 10 ml · "
+     "Rectangle and Tall Rectangle 10 ml · Royal 13 ml · Circle, Elegant, Flair and Square 15 ml",
+     "Roll-on cap over a steel or plastic roller ball · fine-mist sprayer · short ribbed cap · short lined cap · tall lined cap"),
+    ("15-415", "Circle and Elegant 30 ml", "Fine-mist sprayer · lined cap"),
+    ("17-415", "Cylinder 9 ml",
+     "Roll-on cap over a steel or plastic roller ball · fine-mist sprayer · treatment pump"),
+    ("18-400", "Boston Round 15 ml · 9 ml vial",
+     "Boston Round: dropper (66 mm stem) or short screw cap. Vial: short screw cap or cap with glass rod"),
+    ("18-415",
+     "Circle 50 and 100 · Cylinder 25, 50 and 100 · Diamond 60 · Diva 30, 46 and 100 · Elegant 60 and 100 · "
+     "Empire 50 and 100 · Grace 55 · Round 78 and 128 · Sleek and Slim 30, 50 and 100 ml",
+     "Fine-mist sprayer · lotion pump · vintage bulb sprayer, with or without tassel · orifice reducer with cap · "
+     "faux-leather cap · lined cap · dropper (Circle 50, Cylinder 25, Diva 46, Elegant 60, Empire 50, Round 128, "
+     "Sleek 30 and Slim 30 ml)"),
+    ("20-400", "Boston Round 30 and 60 ml",
+     "Roll-on cap over a steel or plastic roller ball · dropper (76 mm stem on 30 ml, 90 mm on 60 ml) · short screw cap"),
+]
+COMPLETE_SETS = [
+    ("16 mm", "Cylinder 28 and 50 ml", "Steel or plastic roller ball with a black or white cap"),
+    ("12 mm", "Cylinder 3 and 4 ml", "Fine-mist sprayer, black or white"),
+    ("13-425", "Vials, 2 to 4 ml", "Short black or white cap; dropper on the 4 ml"),
+    ("8-425", "Vials, 2 ml", "Short or tall cap"),
+    ("Plug", "Vials, 1 ml", "Plug"),
+]
+OWN_CLASS = [
+    ("Stopper", "Apothecary 15 and 30 ml · Pear 118 ml · Teardrop and Rectangle 9 ml · Genie 32 ml · Eternal Flame 35 ml",
+     "Ground-glass stopper, matched to its bottle; no screw thread"),
+    ("20-410", "Aluminum bottles, 65 to 500 ml", "Sprayer or lotion pump as sold; glass-bottle parts do not apply"),
+    ("Atomizer", "Travel atomizers, 5 and 10 ml", "Sold complete"),
+    ("Jar", "Cream jars, 3 to 63 ml", "Each lid is matched to its jar"),
 ]
 
 
@@ -291,8 +329,9 @@ CARE = [
     ("Glass", "Amber reduces the light that reaches the contents; clear shows the fill level."),
 ]
 FINISHES = [
-    ("Dropper", "Black or white bulb; plain, gold-trim or silver-trim collar."),
-    ("Roller caps", "Matte black, gold or silver; shiny black, gold or silver."),
+    ("Dropper", "Black or white bulb; collar to match the bulb, or shiny gold or shiny silver."),
+    ("Dropper stem", "66 mm on 15 ml, 76 mm on 30 ml, 90 mm on 60 ml. Each size has its own dropper."),
+    ("Roll-on caps", "Matte black, gold or silver; shiny black, gold or silver."),
     ("Screw cap", "Short black cap."),
 ]
 OVERVIEW = (
@@ -398,7 +437,7 @@ def insert_pages(data: dict, photos: dict, mark: str) -> tuple[str, str]:
 def booklet_pages(data: dict, photos: dict, mark: str) -> tuple[str, str]:
     cover_row = strip(
         photos["cover"],
-        [("GBCylAmb9MtlRollBlkDot", ""), ("GBElg60AnSpTslIvyGl", ""), ("GBBstnAmb1ozWhtDropperShnGlTrim", ""), ("GB1ozApthBlue", ""), ("GBAtom10Gl", "")],
+        [("GBCylAmb9MtlRollBlkDot", ""), ("GBElg60AnSpTslIvyGl", ""), ("GBBstnAmb1ozWhtDropperShnGlTrim", ""), ("GB15ApthBlue", ""), ("GBAtom10Gl", "")],
         width=4.7, height=2.3, gap=0.02,
     )
     cover = f"""
@@ -422,10 +461,10 @@ def booklet_pages(data: dict, photos: dict, mark: str) -> tuple[str, str]:
   <p class=lede>Every bottle is sold empty, with the fitment and cap shown. Capacities are in millilitres,
   with ounces where buyers use them. Each family page lists its sizes, neck finishes, glass colours and
   the fitments that screw onto it.</p>
-  <ul class=toc>{toc([("Choose by use", "3"), ("Neck finishes: what fits what", "5"), ("Glass colours and cap finishes", "6")])}</ul>
+  <ul class=toc>{toc([("Glass colours and cap finishes", "3"), ("Choose by use", "4"), ("What fits what: neck finishes", "6")])}</ul>
   <p class='kicker sect'>The families</p>
-  <ul class='toc cols'>{toc([(f, str(7 + i)) for i, f in enumerate(FAMILIES)])}</ul>
-  <ul class=toc>{toc([("Samples and promotional sizes", "32"), ("Caps and closures sold separately", "33"), ("Ordering and custom work", "34")])}</ul>
+  <ul class='toc cols'>{toc([(f, str(8 + i)) for i, f in enumerate(FAMILIES)])}</ul>
+  <ul class=toc>{toc([("Samples and promotional sizes", "33"), ("Caps and closures sold separately", "34"), ("Ordering and custom work", "35")])}</ul>
   <span class='folio l'>2</span>
 </section>"""
     uses = photos["uses"]
@@ -441,14 +480,43 @@ def booklet_pages(data: dict, photos: dict, mark: str) -> tuple[str, str]:
   <p class=kicker>Choose by use</p>
   <h2 class=serif>What each bottle is for</h2>
   <div class=grid>{''.join(cells[:6])}</div>
-  <span class='folio l'>3</span>
+  <span class='folio l'>4</span>
 </section>"""
     use_b = f"""
 <section class='page b-use'>
   <p class=kicker>Choose by use</p>
   <h2 class='serif ghost'>What each bottle is for</h2>
   <div class=grid>{''.join(cells[6:])}</div>
-  <span class='folio r'>4</span>
+  <span class='folio r'>5</span>
+</section>"""
+    def neck_rows(rows):
+        return "".join(
+            f"<div class=nrow><p class='nk mono'>{esc(n)}</p><div><p class=nb>{esc(b)}</p><p class=nf>{esc(f)}</p></div></div>"
+            for n, b, f in rows
+        )
+
+    fits_a = f"""
+<section class='page b-fits'>
+  <p class=kicker>Neck finishes</p>
+  <h2 class=serif>What fits what</h2>
+  <p class=lede>Caps, rollers, sprayers, pumps and droppers screw onto the neck, so every bottle with the same
+  neck finish shares the same parts. In <span class=mono>18-415</span>, 18 is the neck's diameter in millimetres
+  and 415 is the thread style.</p>
+  <p class='kicker sect'>Shared parts</p>
+  {neck_rows(SHARED_NECKS)}
+  <span class='folio l'>6</span>
+</section>"""
+    fits_b = f"""
+<section class='page b-fits'>
+  <p class=kicker>Neck finishes</p>
+  <h2 class='serif'>Sold as complete sets</h2>
+  <p class=lede>These bottles come with their parts already chosen; the parts are not sold separately.</p>
+  {neck_rows(COMPLETE_SETS)}
+  <p class='kicker sect'>Their own class</p>
+  {neck_rows(OWN_CLASS)}
+  <p class=rule-note>A shared neck is where fit starts, not a guarantee: stem length, dip-tube length and how an
+  insert seats are checked bottle by bottle. Each product page lists the parts confirmed for that bottle.</p>
+  <span class='folio r'>7</span>
 </section>"""
     table = data["table"]
     sizes = strip(
@@ -473,10 +541,11 @@ def booklet_pages(data: dict, photos: dict, mark: str) -> tuple[str, str]:
   {fit_chart(table, compact=True)}
   <div class=more>
     <img src='{code}' alt=''>
-    <p>Dropper: black or white bulb; plain, gold-trim or silver-trim collar. Roller caps: matte or shiny
-    black, gold and silver. Every item number: <span class=mono>bestbottles.com/catalog/boston-round</span></p>
+    <p>Droppers: black or white bulb, collar to match or shiny gold or silver; each size has its own stem
+    (66, 76 or 90 mm). Roll-on caps: matte or shiny black, gold and silver. Every item number:
+    <span class=mono>bestbottles.com/catalog/boston-round</span></p>
   </div>
-  <span class='folio r'>9</span>
+  <span class='folio l'>10</span>
 </section>"""
     css = SMALL_CSS + FIT_CSS + """
 .b-cover{display:flex;flex-direction:column;align-items:center}
@@ -501,6 +570,15 @@ ul.toc.cols li{break-inside:avoid;line-height:1.72}
 .b-use h3{font-size:11pt;font-weight:600;line-height:1.05;margin-top:.03in}
 .b-use .for{font-size:6.4pt;line-height:1.38;color:var(--ink2);margin-top:.02in}
 .b-use .fact{font-size:6.1pt;line-height:1.38;color:var(--gold);margin-top:.01in}
+.b-fits h2{font-size:22pt;font-weight:500;margin:.06in 0 .07in;line-height:1}
+.b-fits .lede{font-size:7.3pt;line-height:1.55;color:var(--ink2)}
+.b-fits .lede .mono{color:var(--gold)}
+.b-fits .sect{margin:.1in 0 .02in}
+.b-fits .nrow{display:grid;grid-template-columns:.62in 1fr;gap:.08in;padding:5.2pt 0;border-bottom:.5pt solid var(--hair)}
+.b-fits .nk{font-size:8.2pt;color:var(--gold);font-weight:500;padding-top:.5pt}
+.b-fits .nb{font-size:7.1pt;line-height:1.42;color:var(--ink);font-weight:500}
+.b-fits .nf{font-size:6.7pt;line-height:1.42;color:var(--mute);margin-top:1.6pt}
+.b-fits .rule-note{font-size:6.2pt;line-height:1.45;color:var(--mute);margin-top:.12in}
 .b-family .head{display:flex;justify-content:space-between}
 .b-family .mute{color:var(--mute)}
 .b-family .sizes{margin-top:.12in}
@@ -517,7 +595,7 @@ ul.toc.cols li{break-inside:avoid;line-height:1.72}
 .b-family .more p{font-size:6.4pt;line-height:1.5;color:var(--mute)}
 .b-family .more .mono{color:var(--gold)}
 """
-    return css, cover + contents + use_a + use_b + family
+    return css, cover + contents + use_a + use_b + fits_a + fits_b + family
 
 
 # --------------------------------------------------------------------------- the catalogue spread (US Letter)
@@ -617,6 +695,8 @@ footer{position:absolute;left:.55in;right:.55in;bottom:.32in;display:flex;justif
 .c-left .lower{display:grid;grid-template-columns:3.65in 1fr;gap:.3in;margin-top:.18in}
 .c-left .lower .kicker{margin-bottom:.04in}
 .c-left .lower .kicker.gap{margin-top:.16in}
+.c-left table.fit th,.c-left table.fit td{padding:3.6pt 2pt}
+.c-left table.fit th.size{font-size:8pt}
 .c-left ul.fin{margin-top:.08in}
 .c-left ul.fin li,.c-left ul.care li{font-size:6.9pt}
 .c-right table.ls{margin-top:.12in;font-size:6.9pt}
@@ -666,7 +746,7 @@ def main() -> None:
         "glass": prepare("glass", ["GBBstn2ozBlkDrprShnGlTrim", "GBBstnAmb2ozBlkDropperShnGlTrim", "GBBstnBlu2ozBlkDropperShnGlTrim"], px_per_card=1100),
         "sizes": prepare("sizes", ["GBBstnBlu15BlkCapSht", "GBBstnBlu1ozBlkCapSht", "GBBstnBlu2ozBlkCapSht"], px_per_card=1100),
         "uses": prepare("uses", [u[0] for u in USES], px_per_card=1000),
-        "cover": prepare("cover", ["GBCylAmb9MtlRollBlkDot", "GBElg60AnSpTslIvyGl", "GBBstnAmb1ozWhtDropperShnGlTrim", "GB1ozApthBlue", "GBAtom10Gl"], px_per_card=1200),
+        "cover": prepare("cover", ["GBCylAmb9MtlRollBlkDot", "GBElg60AnSpTslIvyGl", "GBBstnAmb1ozWhtDropperShnGlTrim", "GB15ApthBlue", "GBAtom10Gl"], px_per_card=1200),
     }
     pieces = []
     for name, (css, body) in [

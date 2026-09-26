@@ -1,6 +1,6 @@
 # Print plan: the catalogue, the line booklet and the family inserts
 
-Status: proposed · 2026-09-26 · proof: `prototype/boston-round-proof.pdf` (9 pages, Boston Round)
+Status: proposed · 2026-09-26 · proof: `prototype/boston-round-proof.pdf` (11 pages, Boston Round) · fit data: `../pdp-item-descriptions/SYNTHESIS.md`
 
 **Companion files:** `../pdp-item-descriptions/COPY-STRATEGY.md` (names and wording; section 7.6 covers print), `../pdp-item-descriptions/TEMPLATE.md` and `RUBRIC.md` (descriptions, uses, care lines), `DESIGN.md` at the repo root (brand system).
 
@@ -14,7 +14,7 @@ Status: proposed · 2026-09-26 · proof: `prototype/boston-round-proof.pdf` (9 p
    - **The Catalogue** — US Letter, a family spread plus a line sheet for every family, about 100 pages. It is a PDF on the site first, with short print runs for trade buyers.
 2. **Generated, not typeset by hand.** The existing PDF generator (`src/lib/pdf/catalog`) gains three modes. A new family or SKU appears in print the next time the files are built.
 3. **No prices in print.** Prices, stock and pack sizes change; the printed pieces point to bestbottles.com and 1-800-936-3628, and a dated price list is printed separately when needed.
-4. **The proof is ready for review:** the Boston Round insert (front and back), five booklet pages and a catalogue spread, built from the August 2026 production export (123 SKUs) and the approved photography.
+4. **The proof is ready for review:** the Boston Round insert (front and back), seven booklet pages (including the "What fits what" spread) and a catalogue spread. It is built from the production catalogue (123 SKUs), the component register and the approved photography.
 
 ---
 
@@ -66,14 +66,16 @@ Status: proposed · 2026-09-26 · proof: `prototype/boston-round-proof.pdf` (9 p
 |---|---|
 | 1 | Cover |
 | 2 | Contents and how to read the book |
-| 3–4 | Choose by use: the twelve bottle types, each with its uses and one deciding fact (RUBRIC.md §4.2) |
-| 5 | Neck finishes: what fits what (13-415, 17-415, 18-400, 18-415, 20-400 …) |
-| 6 | Glass colours and cap finishes |
-| 7–31 | One page per family: size row, name, one-sentence description, glass, neck, case quantity, fit chart, finishes, QR |
-| 32 | Samples and promotional sizes (5 ml and under, plus every vial; the 9 ml glass-rod vial) |
-| 33 | Caps and closures sold separately |
-| 34 | Ordering, custom work, contact |
-| 35–36 | Inside back cover and back cover |
+| 3 | Glass colours and cap finishes |
+| 4–5 | Choose by use (spread): the twelve bottle types, each with its uses and one deciding fact (RUBRIC.md §4.2) |
+| 6–7 | What fits what (spread): shared parts by neck finish; complete sets and own-class bottles (SYNTHESIS.md §1) |
+| 8–32 | One page per family: size row, name, one-sentence description, glass, neck, case quantity, fit chart, finishes, QR |
+| 33 | Samples and promotional sizes (5 ml and under, plus every vial; the 9 ml glass-rod vial) |
+| 34 | Caps and closures sold separately |
+| 35 | Ordering, custom work, contact |
+| 36 | Back cover |
+
+Spreads face: even pages on the left, odd on the right.
 
 The proof's contents page lists 25 family pages. The data has 27 families, including Decorative and Lotion Bottle; the final list comes from Convex when the booklet is built, and small families share a page.
 
@@ -89,7 +91,8 @@ The proof's contents page lists 25 family pages. The data has 27 families, inclu
 
 **Structure:**
 - Cover, contents, how to read the catalogue.
-- Choose by use (one spread), neck finish guide (one spread), glass and finishes (one spread).
+- Choose by use (one spread), glass and finishes (one spread).
+- **What fits what, by neck finish:** one spread per shared neck (13-415, 15-415, 17-415, 18-400, 18-415 across two spreads, 20-400), plus one for complete sets and own-class bottles. It follows the 23 September neck sheets' layout (component rail, the neck, the bottle cards) in the catalogue's type and colour, and is built from the component register (`data/register/`). See `../pdp-item-descriptions/SYNTHESIS.md`.
 - **Each family:** a family page, then its line sheet.
   - **Family page:** the fitment row (one size in one glass colour, with every fitment sold for that neck), family name, description, a spec row per size (neck, case quantity), the fit chart, finish options, use and care, a glass-colour row and a size row.
   - **Line sheet:** one row per fitment and finish, one column per glass colour, and the item number in each cell. About 44 rows fit on a page. Boston Round's 123 SKUs fill exactly one.
@@ -157,6 +160,7 @@ The print pieces follow DESIGN.md, "The Material Ledger":
 ## 5. How it is generated
 
 - **Modes:** `src/lib/pdf/catalog` gains `mode=insert`, `mode=booklet` and `mode=catalogue`, with a `card5x7` page preset. They reuse the Convex loader, the Puppeteer renderer and the existing `/api/pdf/catalog` route.
+- **Fit source:** the component register (`data/register/assemblies.csv`, or its Convex tables once pushed). Only `verified` assemblies appear in a fit chart; `candidate`, `exception` and `quarantine` rows never do.
 - **Family data builder:** generalised from `prototype/boston_data.py`. It groups SKUs by family, size, fitment and finish, with glass colours as columns. It reads fitment and finish from Convex fields (applicator, cap colour, trim), not from legacy item names, and fails if a SKU is dropped or two SKUs land in one cell.
 - **Photo slots:** each family's slots (fitment row, glass row, size row) are listed in one JSON file. A missing approved photo shows the slot name on the page and is listed in the build report.
 - **Build report:** pages per family, missing photos, and any text that overflows its box (Chromium measures it).
@@ -167,11 +171,12 @@ The print pieces follow DESIGN.md, "The Material Ledger":
 
 ## 6. Data questions the proof raised
 
-- **Boston Round 15 ml, clear:** only a black-bulb dropper and a black cap. Amber and cobalt blue carry six dropper finishes. Is that the real range?
+- **Boston Round 15 ml, clear:** only a black-bulb dropper and a black cap, while amber and cobalt blue carry six dropper finishes. The 18-400 neck sheet shows all six droppers exist as parts, so this is an assembly gap, not a parts gap (SYNTHESIS decision D6).
 - **Shiny black steel-roller cap:** listed only on 30 ml clear and amber and 60 ml clear. Confirm.
 - **`GBBstnAmb1ozRollonShnBlk`:** the legacy item name says "Cylinder design". It isn't printed (names are generated), but the record should be fixed.
-- **25 ml Cylinder bulb sprayers:** 18 SKUs have no glass colour in Convex, so their titles can't be built.
-- **Case quantities** (15 ml: 317, 30 ml: 360, 60 ml: 240): confirm before they are printed.
+- **25 ml Cylinder bulb sprayers:** 18 SKUs had no glass colour in the August export; fixed in the 25 September export.
+- **Case quantities** (15 ml: 317, 30 ml: 360, 60 ml: 240): unchanged in the 25 September export; confirm before they are printed.
+- **Stock:** the proof no longer features `GB1ozApthBlue`, which the legacy site shows as out of stock (Convex says in stock; SYNTHESIS decision D7).
 
 ---
 
