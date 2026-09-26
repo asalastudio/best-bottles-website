@@ -84,6 +84,13 @@ last. The library's turquoise 17-415 collar carried a white paper strip on its r
 such strips on coloured parts at cut time, and the pilot collar was cleaned and reloaded
 (`push-phase3.ts --only CMP-SPR-CLR-17-415`).
 
+**Specks (2026-09-26).** Jordan's review sheet showed a white fleck beside the copper 13-415 sprayer and a white paper wedge
+on its overcap. `drop_specks` (cut_components.py) runs on every front layer at cut time: pieces detached from the part and
+under 1% of it go, with their haze; on a coloured cap or overcap, near-white paper outside the row outline of the coloured
+pixels goes when a piece reaches 12 px or more off the outline, so chrome highlights and gold rims stay.
+`clean_layers.py --neck <neck>` applies it to layers already cut, in place (canvas kept, so anchors hold). 18-415: nine
+layers cleaned, including the paper band on the copper overcap `CMP-SPR-MTCP-18-415-03`; 13-415: six.
+
 ## Known gaps
 
 - Bulb sprayers keep one cut per finish from one body's photo; the bulb's hang is that photo's. Their dip tube is

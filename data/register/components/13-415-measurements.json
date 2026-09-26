@@ -209,12 +209,12 @@
      "slot": "cap",
      "layerName": "Layer 1",
      "file": "CMP-CAP-BLK-S-13-415--0-cap.png",
-     "width": 636,
-     "height": 419,
-     "sha256": "a2829b7bb645e84d48bf0d0f2446b0ba1fca83f79df5a07e68e32725524bde05",
+     "width": 624,
+     "height": 393,
+     "sha256": "1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0",
      "pxPerMm": 37.2019,
      "anchor": {
-      "x": 308.4,
+      "x": 296.4,
       "y": 54.4
      },
      "z": "front",
@@ -224,7 +224,10 @@
    "checks": {
     "registrationIoU": 0.9708,
     "libraryScale": 3.3118,
-    "approvable": true
+    "approvable": true,
+    "specksClearedPx": {
+     "cap": 1195
+    }
    }
   },
   {
@@ -254,12 +257,12 @@
      "layerName": "Layer 2",
      "file": "CMP-CAP-SGLD-13-415-01--0-cap.png",
      "width": 470,
-     "height": 702,
-     "sha256": "4eeb615baeff7f098e9a4cf9f6264046a6ec4ef5a25706bef657d78c7a6c8cbf",
+     "height": 692,
+     "sha256": "6c93eef5b547acf513950ef80da416fd024d75dab75a771524d07c23caf9c1a6",
      "pxPerMm": 26.0014,
      "anchor": {
       "x": 232.7,
-      "y": 363.9
+      "y": 353.9
      },
      "z": "front",
      "explodeIndex": 1
@@ -268,7 +271,10 @@
    "checks": {
     "registrationIoU": 0.9883,
     "libraryScale": 2.3147,
-    "approvable": true
+    "approvable": true,
+    "specksClearedPx": {
+     "cap": 67
+    }
    }
   },
   {
@@ -298,13 +304,13 @@
      "slot": "sprayer",
      "layerName": "Layer 2",
      "file": "CMP-CAP-SGLD-13-415-02--0-sprayer.png",
-     "width": 530,
-     "height": 1002,
-     "sha256": "b792a64de8ff90cbc6255fa6ec469113a8cdaa724ca9c9514085a230c3874764",
+     "width": 525,
+     "height": 976,
+     "sha256": "4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e",
      "pxPerMm": 33.1114,
      "anchor": {
-      "x": 245.4,
-      "y": 575.2
+      "x": 240.4,
+      "y": 562.2
      },
      "z": "front",
      "explodeIndex": 1
@@ -328,7 +334,10 @@
    "checks": {
     "registrationIoU": 0.9917,
     "libraryScale": 2.9477,
-    "approvable": true
+    "approvable": true,
+    "specksClearedPx": {
+     "sprayer": 606
+    }
    }
   },
   {
@@ -418,12 +427,12 @@
      "layerName": "Layer 3",
      "file": "CMP-CAP-SLV-13-415-01--0-cap.png",
      "width": 470,
-     "height": 702,
-     "sha256": "f2c68357745b801401653b316341bc1a31089a918c258e4b682dfa4e81347a42",
+     "height": 692,
+     "sha256": "5fd070a7a5870e657d256e8f240c020ef06187f40a8ff0ce8270a9e8b0bcd7e2",
      "pxPerMm": 26.0014,
      "anchor": {
       "x": 235.0,
-      "y": 363.9
+      "y": 353.9
      },
      "z": "front",
      "explodeIndex": 1
@@ -432,7 +441,10 @@
    "checks": {
     "registrationIoU": 0.9865,
     "libraryScale": 2.3147,
-    "approvable": true
+    "approvable": true,
+    "specksClearedPx": {
+     "cap": 83
+    }
    }
   },
   {
@@ -1022,9 +1034,9 @@
      "slot": "sprayer",
      "layerName": "Layer 2",
      "file": "CMP-SPR-MTCP-13-415-07--0-sprayer.png",
-     "width": 556,
-     "height": 1034,
-     "sha256": "13222e3b731e9bdc76f3779b90794bab86a93e93c9638d56d908c913b349b2ec",
+     "width": 555,
+     "height": 1031,
+     "sha256": "4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb",
      "pxPerMm": 34.3484,
      "anchor": {
       "x": 270.4,
@@ -1037,13 +1049,13 @@
      "slot": "overcap",
      "layerName": "Layer 10 copy (30. GBCrcl15SpryCuMatt.psd)",
      "file": "CMP-SPR-MTCP-13-415-07--overcap.png",
-     "width": 236,
-     "height": 420,
-     "sha256": "861d0bbedd74c3b752bdb8f9e025fccfd31d4d04ee4533e1bf0859e01b4e4d90",
+     "width": 214,
+     "height": 395,
+     "sha256": "bb4cc14ddf3bbc4772ddc2639e77460aa9847e73661ca85cd95fd4813da1956d",
      "pxPerMm": 11.233,
      "anchor": {
       "x": 105.5,
-      "y": 265
+      "y": 240
      },
      "z": "front",
      "explodeIndex": 2
@@ -1052,7 +1064,11 @@
    "checks": {
     "registrationIoU": 0.9971,
     "libraryScale": 3.0578,
-    "approvable": true
+    "approvable": true,
+    "specksClearedPx": {
+     "sprayer": 3159,
+     "overcap": 839
+    }
    }
   },
   {
