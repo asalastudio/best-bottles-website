@@ -99,7 +99,13 @@ Key `cylinder-9ml-13-415`, measured by Jordan on 2026-09-26.
 | E | 11.22 | 11.34 |
 | I | 7.04 | 7.3 |
 
-Still needed: Dp, Hn, Dep and Cap. The glass has not yet been rebuilt to these readings; that waits on Jordan's go.
+Still needed: Dp, Hn, Dep and Cap.
+
+**Shape:** from Jordan's photo IMG_5823, the shoulder is one smooth round from the wall into the neck. The May 2015
+drawing glass had a cone plus a ledge, which read as two steps; do not rebuild it that way.
+
+**WIP rebuild:** `outputs/tall-caliper-v36/` (v36) rebuilds this glass to the readings, with the smooth shoulder.
+Fh is held at 11.2 until it is re-measured (see the Cylinder 5 ml check below).
 
 ### 13-415 fine-mist sprayer and overcap
 
