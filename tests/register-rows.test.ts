@@ -85,9 +85,19 @@ describe("the committed register shapes cleanly for Convex", () => {
 
     it("never builds an assembly outside the validated necks", () => {
         // The own-part rules written so far (BUILD_RULE_NECKS in scripts/register/build_register.py): the 17-415 pilot,
-        // 18-415 (2026-09-25) and the 14.3 mm Tola plug (2026-09-25).
+        // 18-415 and the 14.3 mm Tola plug (2026-09-25), 13-415 (2026-09-26).
         const built = rows.assemblies.filter(a => a.build.status !== "unresolved");
-        expect(new Set(built.map(a => a.neck))).toEqual(new Set(["17-415", "18-415", "14.3mm"]));
+        expect(new Set(built.map(a => a.neck))).toEqual(new Set(["13-415", "17-415", "18-415", "14.3mm"]));
+    });
+
+    it("builds a 13-415 roll-on from its SKU: the roller material's insert under the named cap", () => {
+        const metal = rows.assemblies.find(a => a.websiteSku === "GBCrcl15MtlRollBlkSh");
+        expect(metal?.build.parts).toEqual([
+            { role: "roller", componentId: "LIB-13-415-MtlRollon" },
+            { role: "cap", componentId: "CMP-ROC-SBLK-13415" },
+        ]);
+        const spray = rows.assemblies.find(a => a.websiteSku === "GBCrcl15SpryGlSh");
+        expect(spray?.build.parts).toEqual([{ role: "sprayer", componentId: "CMP-CAP-SGLD-13-415-03" }]);
     });
 
     it("keys each assembly's body plate by body and glass", () => {

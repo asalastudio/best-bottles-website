@@ -110,8 +110,7 @@
       "bodies": 17,
       "components": 27,
       "componentTypes": {
-        "cap": 7,
-        "fine-mist-sprayer": 5,
+        "fine-mist-sprayer": 12,
         "roll-on-cap": 13,
         "roller-insert": 2
       },

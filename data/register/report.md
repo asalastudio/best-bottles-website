@@ -77,7 +77,7 @@ The matrices counted **Glass Bottle** records only; the register also carries at
 
 | neck | cap | cap-review | dropper | faux-leather-cap | fine-mist-sprayer | lotion-pump | plug-applicator | reducer | review | roll-on-cap | roller-insert | tassel-bulb-sprayer | vintage-bulb-sprayer |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 13-415 | 7 |  |  |  | 5 |  |  |  |  | 13 | 2 |  |  |
+| 13-415 |  |  |  |  | 12 |  |  |  |  | 13 | 2 |  |  |
 | 13-425 | 2 |  |  |  |  |  |  |  |  |  |  |  |  |
 | 14.3mm |  |  |  |  |  |  | 1 |  |  |  |  |  |  |
 | 15-415 |  |  |  |  | 5 |  |  |  |  | 2 |  |  |  |
@@ -112,42 +112,68 @@ The matrices counted **Glass Bottle** records only; the register also carries at
 | Convex websiteSku | library stem | folder(s) | match |
 |---|---|---|---|
 
-## Own-part builds — rules written for 14.3mm, 17-415, 18-415 (the pilot neck)
+## Own-part builds — rules written for 13-415, 14.3mm, 17-415, 18-415
 
 Each sellable assembly names the parts it is physically made of (`buildParts`), matched uniquely on neck, component type, cap colour and dotted/plain. Roller balls add the neck's roller insert. A row that does not match exactly one part stays `unresolved` with the reason; nothing is guessed (Jordan 2026-09-25: wording errors wait for Convex corrections).
 
 | body | resolved | partial | unresolved |
 |---|---|---|---|
+| atomizer-5ml-13-415 | 0 | 0 | 9 |
+| bell-10ml-13-415 | 3 | 0 | 1 |
 | circle-100ml-18-415 | 84 | 0 | 2 |
+| circle-15ml-13-415 | 30 | 0 | 0 |
 | circle-50ml-18-415 | 80 | 0 | 2 |
 | cylinder-100ml-18-415 | 42 | 0 | 1 |
 | cylinder-25ml-18-415 | 44 | 0 | 1 |
+| cylinder-5.5ml-13-415 | 1 | 0 | 0 |
 | cylinder-50ml-18-415 | 42 | 0 | 1 |
+| cylinder-5ml-13-415 | 58 | 0 | 12 |
+| cylinder-9ml-13-415 | 60 | 0 | 12 |
 | cylinder-9ml-17-415 | 145 | 0 | 0 |
 | diamond-60ml-18-415 | 42 | 0 | 1 |
 | diva-100ml-18-415 | 42 | 0 | 1 |
 | diva-30ml-18-415 | 33 | 0 | 1 |
 | diva-46ml-18-415 | 90 | 0 | 12 |
 | elegant-100ml-18-415 | 83 | 0 | 4 |
+| elegant-15ml-13-415 | 57 | 0 | 2 |
 | elegant-60ml-18-415 | 89 | 0 | 5 |
 | empire-100ml-18-415 | 42 | 0 | 2 |
 | empire-50ml-18-415 | 45 | 0 | 2 |
+| flair-15ml-13-415 | 30 | 0 | 0 |
 | grace-55ml-18-415 | 42 | 0 | 1 |
+| pillar-9ml-13-415 | 2 | 0 | 1 |
 | pillar-9ml-17-415 | 1 | 0 | 0 |
+| plastic-bottle-30ml-13-415 | 0 | 0 | 3 |
+| rectangle-10ml-13-415 | 60 | 0 | 0 |
 | round-128ml-18-415 | 90 | 0 | 2 |
 | round-78ml-18-415 | 84 | 0 | 2 |
+| royal-13ml-13-415 | 29 | 0 | 0 |
 | sleek-100ml-18-415 | 42 | 0 | 2 |
 | sleek-30ml-18-415 | 36 | 0 | 2 |
 | sleek-50ml-18-415 | 42 | 0 | 2 |
+| sleek-5ml-13-415 | 30 | 0 | 0 |
+| sleek-8ml-13-415 | 30 | 0 | 0 |
 | slim-100ml-18-415 | 41 | 0 | 2 |
 | slim-30ml-18-415 | 36 | 0 | 1 |
 | slim-50ml-18-415 | 42 | 0 | 1 |
+| square-15ml-13-415 | 29 | 0 | 0 |
 | tola-decorative-3ml-14.3mm | 1 | 0 | 0 |
 | tola-decorative-6ml-14.3mm | 1 | 0 | 0 |
+| tulip-5ml-13-415 | 30 | 0 | 0 |
+| tulip-6ml-13-415 | 29 | 0 | 1 |
 
 Unresolved, by reason (Convex corrections):
 
 - **29** — no current 18-415 cap/faux-leather-cap carries the SKU code 'ShnBlk': GBCrcl50RdcrShnBlk, GBCrclFrst50RdcrShnBlk, GBCrcl100RdcrShnBlk, GBCrclFrst100RdcrShnBlk, GBcyl25RdcrShnBlk, GBCyl50RdcrShnBlk, GBCyl100RdcrShnBlk, GBDmnd2ozRdcrShnBlk, GBDiva30RdcrShnBlk, GBDiva46RdcrShnBlk, GBDivaFrst46RdcrShnBlk, GBDiva100RdcrShnBlk, GBElg60RdcrShnBlk, GBElgFrst60RdcrShnBlk, GBElg100RdcrShnBlk, GBElgFrst100RdcrShnBlk, GBEmp50RdcrShnBlk, GBEmp100RdcrShnBlk, GBGrce55RdcrShnBlk, GBRnd78RdcrShnBlk, GBRndFrst78RdcrShnBlk, GBRnd128RdcrShnBlk, GBRndFrst128RdcrShnBlk, GBSlk30RdcrShnBlk, GBSlk50RdcrShnBlk, GBSlk100RdcrShnBlk, GBSlm30RdcrShnBlk, GBSlm50RdcrShnBlk, GBSlm100RdcrShnBlk
+- **9** — own class metal-atomizer: no components ruled compatible: GBAtom5Blk, GBAtom5BlkDot, GBAtom5Blu, GBAtom5Gl, GBAtom5Red, GBAtom5Sl, GBAtom5SlDot, GBAtom5SlStars, GBAtom5PnkDot
+- **8** — no current 13-415 cap carries the SKU code 'BlkShSht' (no component record and no master photo): GBBell10BlkShSht, GBCylBlu5BlkShSht, GBCyl5BlkShSht, GBTallCyl9BlkShSht, GBTallCylFrst9BlkShSht, GBElgFrst15BlkShSht, GBPillar9BlkShSht, GBTulip6BlkShSht
+- **4** — no current 13-415 cap carries the SKU code 'CuSht' (no component record and no master photo): GBCylBlu5CuSht, GBCyl5CuSht, GBTallCyl9CuSht, GBTallCylFrst9CuSht
+- **4** — no current 13-415 cap carries the SKU code 'GlMattSht' (no component record and no master photo): GBCylBlu5GlMattSht, GBCyl5GlMattSht, GBTallCyl9GlMattSht, GBTallCylFrst9GlMattSht
+- **4** — no current 13-415 cap carries the SKU code 'SlMattSht' (no component record and no master photo): GBCylBlu5SlMattSht, GBCyl5SlMattSht, GBTallCyl9SlMattSht, GBTallCylFrst9SlMattSht
+- **4** — no current 13-415 cap carries the SKU code 'GlSht' (no component record and no master photo): GBCylBlu5GlSht, GBCyl5GlSht, GBTallCyl9GlSht, GBTallCylFrst9GlSht
+- **4** — no current 13-415 cap carries the SKU code 'SlSht' (no component record and no master photo): GBCylBlu5SlSht, GBCyl5SlSht, GBTallCyl9SlSht, GBTallCylFrst9SlSht
+- **3** — own class plastic-bottle: no components ruled compatible: PB1ozSpryNat, PB1ozSprySl, PB1ozClearcap
+- **1** — no current 13-415 cap carries the SKU code 'MinarCu' (no component record and no master photo): GBElg15MinarCu
 - **1** — no current 18-415 vintage-bulb-sprayer carries the SKU code 'BlkRng': GBDiva46AnSpBlkRng
 - **1** — no current 18-415 vintage-bulb-sprayer carries the SKU code 'IvySlRng': GBDiva46AnSpIvySlRng
 - **1** — no current 18-415 vintage-bulb-sprayer carries the SKU code 'LvnRng': GBDiva46AnSpLvnRng
