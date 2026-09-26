@@ -84,6 +84,38 @@ last. The library's turquoise 17-415 collar carried a white paper strip on its r
 such strips on coloured parts at cut time, and the pilot collar was cleaned and reloaded
 (`push-phase3.ts --only CMP-SPR-CLR-17-415`).
 
+**Specks (2026-09-26).** Jordan's review sheet showed a white fleck beside the copper 13-415 sprayer and a white paper wedge
+on its overcap. `drop_specks` (cut_components.py) runs on every front layer at cut time: pieces detached from the part and
+under 1% of it go, with their haze; on a coloured cap or overcap, near-white paper outside the row outline of the coloured
+pixels goes when a piece reaches 12 px or more off the outline, so chrome highlights and gold rims stay.
+`clean_layers.py --neck <neck>` applies it to layers already cut, in place (canvas kept, so anchors hold). 18-415: nine
+layers cleaned, including the paper band on the copper overcap `CMP-SPR-MTCP-18-415-03`; 13-415: six.
+
+## Seating on the neck (2026-09-26)
+
+Jordan: "the caps are not centered on top of the bottle" (Tall Cylinder 9), and the roller "sits a little bit off to the side"
+(5 mL cylinder). Two causes, both fixed:
+
+- **Parts.** Anchors came from where each part stood in its product photo, and the photographed part was often a little off
+  the glass axis (up to 1.15 mm). `recentre` (cut_components.py) puts each source image's anchor on the part's own centre
+  line; layers cut from one image move together (a nozzle disc stays on its head), the overcap is its own source, bulb
+  sprayers keep theirs. Applied to 13-415, 18-415, 14.3mm and the 17-415 pilot (`clean_layers.py --recentre`).
+- **Plates.** The plate axis was the barrel's centre; on a plate whose glass leans a little (the Tall Cylinder 9 drifts 0.7 mm
+  from foot to neck) the neck is elsewhere. `scripts/register/bodies/neck_axis.py` seats every threaded neck (and the Tola's
+  14.3 mm) on the neck's own axis: rows from 0.5 mm under the rim to the shoulder's start, median midpoint. 79 plates moved
+  (largest 0.72 mm); `anchors.barrelAxisX` keeps the old value; jars, ground stoppers and the heart keep the barrel axis.
+  `build_bodies.py` measures the same way on future runs.
+
+**Closures end where the shoulder begins (the stage decides, per bottle).** Jordan: the 9 mL cylinder's sprayer should be
+"raised up a little bit"; the 5 mL cylinder's cap "is dropping a little low". One closure serves bottles whose necks differ
+(13-415 shoulders begin 9.9 to 17.6 mm under the rim, 18-415 14.2 to 20+), and the parts were measured on long-necked
+reference photos, so on a short neck they swallowed the shoulder or sank into the glass (Slim 30, Cylinder 50). Each plate's
+`anchors.shoulderY` is now where its shoulder begins (neck_axis.py: two thirds of the way from neck to body width, then back up
+the flare past the thread crests; the old mark stays as `bodyShoulderY`), each layer records `solidBottomY` (its lowest solid
+row; bulb sprayers excepted, their bulb hangs beside the bottle), and `compose.ts shoulderLiftMm` lifts a bottle's seated
+front layers by however far they would reach past its shoulder. Inserts behind the glass stay on the rim. The Diva 46 and the
+other long necks do not move; the 5 mL cylinder lifts about 1.1 mm, the Slim 30 about 4 mm.
+
 ## Known gaps
 
 - Bulb sprayers keep one cut per finish from one body's photo; the bulb's hang is that photo's. Their dip tube is

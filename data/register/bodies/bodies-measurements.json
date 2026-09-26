@@ -254,10 +254,12 @@
   "sha256": "c74d6e393f7981278be769a323bc78b4c6cf7d5de78133424717eb45cf8ca366",
   "pxPerMm": 33.7268,
   "anchors": {
-   "axisX": 577.0,
+   "axisX": 569.5,
    "seatY": 156,
-   "shoulderY": 983,
-   "baselineY": 2096
+   "shoulderY": 676,
+   "baselineY": 2096,
+   "barrelAxisX": 577.0,
+   "bodyShoulderY": 983
   },
   "checks": {
    "rawIoU": 0.9877,
@@ -321,10 +323,12 @@
   "sha256": "5fc08a466b203d092f87aae86ddd74ea79cbccead54d3f6a05e2c20a2fc48172",
   "pxPerMm": 27.9752,
   "anchors": {
-   "axisX": 495.5,
+   "axisX": 493.5,
    "seatY": 131,
-   "shoulderY": 722,
-   "baselineY": 2096
+   "shoulderY": 691,
+   "baselineY": 2096,
+   "barrelAxisX": 495.5,
+   "bodyShoulderY": 722
   },
   "checks": {
    "rawIoU": 0.9721,
@@ -380,10 +384,12 @@
   "sha256": "3aa0df926906ec37e4c8c618032a797fdb58f2d10934708845d7a61fb07bf399",
   "pxPerMm": 27.9752,
   "anchors": {
-   "axisX": 495.0,
+   "axisX": 490.5,
    "seatY": 131,
-   "shoulderY": 711,
-   "baselineY": 2096
+   "shoulderY": 632,
+   "baselineY": 2096,
+   "barrelAxisX": 495.0,
+   "bodyShoulderY": 711
   },
   "checks": {
    "rawIoU": 0.9817,
@@ -447,10 +453,12 @@
   "sha256": "3ea2751c45c446a6e62928556d39c09b7092f1fcbca8a9961ddbd9f2c19b50fd",
   "pxPerMm": 27.9752,
   "anchors": {
-   "axisX": 496.5,
+   "axisX": 493.0,
    "seatY": 130,
-   "shoulderY": 715,
-   "baselineY": 2095
+   "shoulderY": 634,
+   "baselineY": 2095,
+   "barrelAxisX": 496.5,
+   "bodyShoulderY": 715
   },
   "checks": {
    "rawIoU": 0.9799,
@@ -506,10 +514,12 @@
   "sha256": "4a10b68b344f88f34b4091fb85244b67ecc69ca2dc2a3d2cd18ee99c380ec9c1",
   "pxPerMm": 24.2897,
   "anchors": {
-   "axisX": 536.0,
+   "axisX": 529.2,
    "seatY": 128,
-   "shoulderY": 696,
-   "baselineY": 2096
+   "shoulderY": 614,
+   "baselineY": 2096,
+   "barrelAxisX": 536.0,
+   "bodyShoulderY": 696
   },
   "checks": {
    "rawIoU": 0.9786,
@@ -565,10 +575,12 @@
   "sha256": "0a0b0816e6558b96a777d1f402974f252451a66510f045239be4079bcdab6389",
   "pxPerMm": 24.2897,
   "anchors": {
-   "axisX": 536.0,
+   "axisX": 530.5,
    "seatY": 128,
-   "shoulderY": 697,
-   "baselineY": 2096
+   "shoulderY": 614,
+   "baselineY": 2096,
+   "barrelAxisX": 536.0,
+   "bodyShoulderY": 697
   },
   "checks": {
    "rawIoU": 0.9649,
@@ -632,10 +644,12 @@
   "sha256": "669b4257647401cc6f3dce67df49127b764daf4128a0df994b779e9e80b47e99",
   "pxPerMm": 24.2897,
   "anchors": {
-   "axisX": 536.5,
+   "axisX": 527.5,
    "seatY": 128,
-   "shoulderY": 692,
-   "baselineY": 2096
+   "shoulderY": 614,
+   "baselineY": 2096,
+   "barrelAxisX": 536.5,
+   "bodyShoulderY": 692
   },
   "checks": {
    "rawIoU": 0.9814,
@@ -691,10 +705,12 @@
   "sha256": "676d7a02c95060f0cfce0933be7f3f748c44cb6d8cc8b5eb17ec6143bfec48fc",
   "pxPerMm": 17.7529,
   "anchors": {
-   "axisX": 463.0,
+   "axisX": 463.5,
    "seatY": 364,
-   "shoulderY": 833,
-   "baselineY": 2096
+   "shoulderY": 719,
+   "baselineY": 2096,
+   "barrelAxisX": 463.0,
+   "bodyShoulderY": 833
   },
   "checks": {
    "rawIoU": 0.9678,
@@ -750,10 +766,12 @@
   "sha256": "53c63a8ce6dad42768ff4142250c6cf4241fabf5b94f5ae426dcb2adda234fc5",
   "pxPerMm": 17.7631,
   "anchors": {
-   "axisX": 463.5,
+   "axisX": 462.5,
    "seatY": 364,
-   "shoulderY": 810,
-   "baselineY": 2097
+   "shoulderY": 719,
+   "baselineY": 2097,
+   "barrelAxisX": 463.5,
+   "bodyShoulderY": 810
   },
   "checks": {
    "rawIoU": 0.8881,
@@ -819,8 +837,10 @@
   "anchors": {
    "axisX": 463.0,
    "seatY": 364,
-   "shoulderY": 801,
-   "baselineY": 2097
+   "shoulderY": 719,
+   "baselineY": 2097,
+   "barrelAxisX": 463.0,
+   "bodyShoulderY": 801
   },
   "checks": {
    "rawIoU": 0.8921,
@@ -876,10 +896,12 @@
   "sha256": "f83325a54b2bc67de3dbca095c37ab67b15507cfc591ac476a86ca839c439159",
   "pxPerMm": 17.3924,
   "anchors": {
-   "axisX": 952.5,
+   "axisX": 956.5,
    "seatY": 119,
-   "shoulderY": 856,
-   "baselineY": 2097
+   "shoulderY": 467,
+   "baselineY": 2097,
+   "barrelAxisX": 952.5,
+   "bodyShoulderY": 856
   },
   "checks": {
    "rawIoU": 0.9842,
@@ -943,10 +965,12 @@
   "sha256": "38f4104e9424ac1d43381af229278f618783d7d416e2dba91cef407ce14494a6",
   "pxPerMm": 17.3836,
   "anchors": {
-   "axisX": 952.5,
+   "axisX": 954.0,
    "seatY": 119,
-   "shoulderY": 850,
-   "baselineY": 2096
+   "shoulderY": 467,
+   "baselineY": 2096,
+   "barrelAxisX": 952.5,
+   "bodyShoulderY": 850
   },
   "checks": {
    "rawIoU": 0.987,
@@ -1002,10 +1026,12 @@
   "sha256": "519a3c42f39317b66a25b5cda8e0d63e4dc4117a418bdabc459b2e76cb4e358e",
   "pxPerMm": 30.1551,
   "anchors": {
-   "axisX": 911.5,
+   "axisX": 917.0,
    "seatY": 139,
-   "shoulderY": 907,
-   "baselineY": 2096
+   "shoulderY": 671,
+   "baselineY": 2096,
+   "barrelAxisX": 911.5,
+   "bodyShoulderY": 907
   },
   "checks": {
    "rawIoU": 0.9899,
@@ -1071,8 +1097,10 @@
   "anchors": {
    "axisX": 864.0,
    "seatY": 161,
-   "shoulderY": 906,
-   "baselineY": 2097
+   "shoulderY": 646,
+   "baselineY": 2097,
+   "barrelAxisX": 864.0,
+   "bodyShoulderY": 906
   },
   "checks": {
    "rawIoU": 0.991,
@@ -1136,10 +1164,12 @@
   "sha256": "a2de54f983754d3e1b42753abaaa2f235e36f5df9177de9b92053628066418f1",
   "pxPerMm": 20.6381,
   "anchors": {
-   "axisX": 920.0,
+   "axisX": 921.0,
    "seatY": 155,
-   "shoulderY": 918,
-   "baselineY": 2096
+   "shoulderY": 568,
+   "baselineY": 2096,
+   "barrelAxisX": 920.0,
+   "bodyShoulderY": 918
   },
   "checks": {
    "rawIoU": 0.9887,
@@ -1203,10 +1233,12 @@
   "sha256": "ba4fe0d7cc8ef5991d2c8d6f19e2aa7a7f35452c0b5928fc062dc92475fd44b0",
   "pxPerMm": 20.6381,
   "anchors": {
-   "axisX": 919.0,
+   "axisX": 920.5,
    "seatY": 155,
-   "shoulderY": 910,
-   "baselineY": 2096
+   "shoulderY": 568,
+   "baselineY": 2096,
+   "barrelAxisX": 919.0,
+   "bodyShoulderY": 910
   },
   "checks": {
    "rawIoU": 0.9917,
@@ -1935,10 +1967,12 @@
   "sha256": "5ad1aa3cecf3d484d2a07ed3ea34d2c1cffdeca83a815fe4d23562e82fcdfb25",
   "pxPerMm": 12.1162,
   "anchors": {
-   "axisX": 368.0,
+   "axisX": 364.5,
    "seatY": 196,
-   "shoulderY": 437,
-   "baselineY": 2096
+   "shoulderY": 427,
+   "baselineY": 2096,
+   "barrelAxisX": 368.0,
+   "bodyShoulderY": 437
   },
   "checks": {
    "rawIoU": 0.9802,
@@ -2002,10 +2036,12 @@
   "sha256": "ccc5caec433662fb9c3a404e0cde8bd3cd9ca55b2abe510451785a472cdbdc77",
   "pxPerMm": 22.6918,
   "anchors": {
-   "axisX": 504.5,
+   "axisX": 498.0,
    "seatY": 147,
-   "shoulderY": 500,
-   "baselineY": 2096
+   "shoulderY": 486,
+   "baselineY": 2096,
+   "barrelAxisX": 504.5,
+   "bodyShoulderY": 500
   },
   "checks": {
    "rawIoU": 0.9884,
@@ -2270,10 +2306,12 @@
   "sha256": "e5f40a8f37ff4f0d00817aa62bedb63605d75ba3068aa8d88dd8cf5af91592e5",
   "pxPerMm": 35.6785,
   "anchors": {
-   "axisX": 455.0,
+   "axisX": 444.5,
    "seatY": 151,
-   "shoulderY": 604,
-   "baselineY": 2095
+   "shoulderY": 578,
+   "baselineY": 2095,
+   "barrelAxisX": 455.0,
+   "bodyShoulderY": 604
   },
   "checks": {
    "rawIoU": 0.9741,
@@ -2404,10 +2442,12 @@
   "sha256": "6da4f4e418e44d36adbfeeb11105e20f20408165f6ae7a83acf14d4f6ab84c2a",
   "pxPerMm": 16.0062,
   "anchors": {
-   "axisX": 384.0,
+   "axisX": 380.5,
    "seatY": 180,
-   "shoulderY": 423,
-   "baselineY": 2096
+   "shoulderY": 415,
+   "baselineY": 2096,
+   "barrelAxisX": 384.0,
+   "bodyShoulderY": 423
   },
   "checks": {
    "rawIoU": 0.9915,
@@ -2471,10 +2511,12 @@
   "sha256": "e1f7c0e7d1305ff1f3c2c9a22602f619d9576754473977a1c5ecb146e6280ec2",
   "pxPerMm": 35.6601,
   "anchors": {
-   "axisX": 455.0,
+   "axisX": 444.5,
    "seatY": 151,
-   "shoulderY": 607,
-   "baselineY": 2094
+   "shoulderY": 577,
+   "baselineY": 2094,
+   "barrelAxisX": 455.0,
+   "bodyShoulderY": 607
   },
   "checks": {
    "rawIoU": 0.9899,
@@ -2538,10 +2580,12 @@
   "sha256": "5db1c8bb2111937674cbe79084673e547e4cc18906aabc7d72010a5e52cca84b",
   "pxPerMm": 35.6968,
   "anchors": {
-   "axisX": 454.5,
+   "axisX": 446.0,
    "seatY": 150,
-   "shoulderY": 611,
-   "baselineY": 2095
+   "shoulderY": 580,
+   "baselineY": 2095,
+   "barrelAxisX": 454.5,
+   "bodyShoulderY": 611
   },
   "checks": {
    "rawIoU": 0.9673,
@@ -2597,10 +2641,12 @@
   "sha256": "170ebb7506f7fe2fb9b476317578cd4515c705a7529e6bcdb8bb5b2fecbd40c0",
   "pxPerMm": 18.3689,
   "anchors": {
-   "axisX": 367.5,
+   "axisX": 353.8,
    "seatY": 125,
-   "shoulderY": 340,
-   "baselineY": 2096
+   "shoulderY": 330,
+   "baselineY": 2096,
+   "barrelAxisX": 367.5,
+   "bodyShoulderY": 340
   },
   "checks": {
    "rawIoU": 0.9742,
@@ -2664,10 +2710,12 @@
   "sha256": "a947448b227ce22aa17497df7eb3c1a12ecb39bac1078e8286be79ecfb3f550b",
   "pxPerMm": 18.3689,
   "anchors": {
-   "axisX": 368.5,
+   "axisX": 356.8,
    "seatY": 125,
-   "shoulderY": 340,
-   "baselineY": 2096
+   "shoulderY": 328,
+   "baselineY": 2096,
+   "barrelAxisX": 368.5,
+   "bodyShoulderY": 340
   },
   "checks": {
    "rawIoU": 0.9818,
@@ -2723,10 +2771,12 @@
   "sha256": "50ae1ae8df2e9fab769df154dc61974b8fa23bfa564f3eaf0e7db667dd4a96f7",
   "pxPerMm": 27.4868,
   "anchors": {
-   "axisX": 384.0,
+   "axisX": 379.0,
    "seatY": 125,
-   "shoulderY": 491,
-   "baselineY": 2096
+   "shoulderY": 480,
+   "baselineY": 2096,
+   "barrelAxisX": 384.0,
+   "bodyShoulderY": 491
   },
   "checks": {
    "rawIoU": 0.9853,
@@ -2782,10 +2832,12 @@
   "sha256": "1d85ae177e4fcf59af6937b97e0417a5dc1c323a3a2aab24dfc626add040515c",
   "pxPerMm": 27.4868,
   "anchors": {
-   "axisX": 383.5,
+   "axisX": 379.0,
    "seatY": 125,
-   "shoulderY": 491,
-   "baselineY": 2096
+   "shoulderY": 477,
+   "baselineY": 2096,
+   "barrelAxisX": 383.5,
+   "bodyShoulderY": 491
   },
   "checks": {
    "rawIoU": 0.9831,
@@ -2849,10 +2901,12 @@
   "sha256": "7058c80a92d7a19ef4bd46557c005525bfeb97d910ec22eeb641583c5ae16c47",
   "pxPerMm": 27.4868,
   "anchors": {
-   "axisX": 384.5,
+   "axisX": 381.0,
    "seatY": 125,
-   "shoulderY": 505,
-   "baselineY": 2096
+   "shoulderY": 490,
+   "baselineY": 2096,
+   "barrelAxisX": 384.5,
+   "bodyShoulderY": 505
   },
   "checks": {
    "rawIoU": 0.9433,
@@ -2908,10 +2962,12 @@
   "sha256": "371a5005efa829abb55caf0ff9776bb708f81a0e8cf26551e30d7de6a7f9b0a0",
   "pxPerMm": 27.5008,
   "anchors": {
-   "axisX": 384.5,
+   "axisX": 379.5,
    "seatY": 125,
-   "shoulderY": 502,
-   "baselineY": 2097
+   "shoulderY": 489,
+   "baselineY": 2097,
+   "barrelAxisX": 384.5,
+   "bodyShoulderY": 502
   },
   "checks": {
    "rawIoU": 0.97,
@@ -2967,10 +3023,12 @@
   "sha256": "4c2770b3633bab675e7a2231ec4211b195c4ec3a5bbb366503bb47960f67cf73",
   "pxPerMm": 27.4868,
   "anchors": {
-   "axisX": 384.0,
+   "axisX": 378.5,
    "seatY": 125,
-   "shoulderY": 503,
-   "baselineY": 2096
+   "shoulderY": 489,
+   "baselineY": 2096,
+   "barrelAxisX": 384.0,
+   "bodyShoulderY": 503
   },
   "checks": {
    "rawIoU": 0.9681,
@@ -3034,10 +3092,12 @@
   "sha256": "9f5ed12391c2fda7eac78482fc42087aa00a02e31f8cf2a3ad59c58b43dfb514",
   "pxPerMm": 20.6746,
   "anchors": {
-   "axisX": 568.0,
+   "axisX": 567.0,
    "seatY": 145,
-   "shoulderY": 500,
-   "baselineY": 2043
+   "shoulderY": 467,
+   "baselineY": 2043,
+   "barrelAxisX": 568.0,
+   "bodyShoulderY": 500
   },
   "checks": {
    "rawIoU": 0.9781,
@@ -3101,10 +3161,12 @@
   "sha256": "18dde5696498da5c165ee2d64d8344e9757639eaa6770108891edb138861d552",
   "pxPerMm": 16.6456,
   "anchors": {
-   "axisX": 647.0,
+   "axisX": 643.0,
    "seatY": 113,
-   "shoulderY": 608,
-   "baselineY": 2095
+   "shoulderY": 446,
+   "baselineY": 2095,
+   "barrelAxisX": 647.0,
+   "bodyShoulderY": 608
   },
   "checks": {
    "rawIoU": 0.9904,
@@ -3170,8 +3232,10 @@
   "anchors": {
    "axisX": 616.0,
    "seatY": 157,
-   "shoulderY": 717,
-   "baselineY": 2096
+   "shoulderY": 613,
+   "baselineY": 2096,
+   "barrelAxisX": 616.0,
+   "bodyShoulderY": 717
   },
   "checks": {
    "rawIoU": 0.9921,
@@ -3235,10 +3299,12 @@
   "sha256": "e1f942bf4757cf6dae7d9e073b5ff9769d90db384a899ef6b4ab95d7773cd493",
   "pxPerMm": 20.8364,
   "anchors": {
-   "axisX": 623.5,
+   "axisX": 622.0,
    "seatY": 146,
-   "shoulderY": 660,
-   "baselineY": 2097
+   "shoulderY": 563,
+   "baselineY": 2097,
+   "barrelAxisX": 623.5,
+   "bodyShoulderY": 660
   },
   "checks": {
    "rawIoU": 0.9881,
@@ -3302,10 +3368,12 @@
   "sha256": "e5432192d6476eee0221a9c693761dbea054276e7cc330e7d5653fa1c6d78205",
   "pxPerMm": 20.8471,
   "anchors": {
-   "axisX": 624.0,
+   "axisX": 622.0,
    "seatY": 146,
-   "shoulderY": 654,
-   "baselineY": 2098
+   "shoulderY": 563,
+   "baselineY": 2098,
+   "barrelAxisX": 624.0,
+   "bodyShoulderY": 654
   },
   "checks": {
    "rawIoU": 0.9896,
@@ -3361,10 +3429,12 @@
   "sha256": "affaf24806d70c3dec90a52f222a291c28246402fb7741456934770d8cb0c522",
   "pxPerMm": 17.3289,
   "anchors": {
-   "axisX": 680.5,
+   "axisX": 670.5,
    "seatY": 107,
-   "shoulderY": 392,
-   "baselineY": 2096
+   "shoulderY": 374,
+   "baselineY": 2096,
+   "barrelAxisX": 680.5,
+   "bodyShoulderY": 392
   },
   "checks": {
    "rawIoU": 0.9883,
@@ -3428,10 +3498,12 @@
   "sha256": "49593cd09a5972751a74a73435d18c05c0585c0300a2c79eb91990ee8e8d650e",
   "pxPerMm": 17.3376,
   "anchors": {
-   "axisX": 680.5,
+   "axisX": 678.5,
    "seatY": 107,
-   "shoulderY": 391,
-   "baselineY": 2097
+   "shoulderY": 372,
+   "baselineY": 2097,
+   "barrelAxisX": 680.5,
+   "bodyShoulderY": 391
   },
   "checks": {
    "rawIoU": 0.9903,
@@ -3487,10 +3559,12 @@
   "sha256": "a563662ffb622f73c1e4ffe4afad025f92f36d90b62a77830a997ed4a8dd4a36",
   "pxPerMm": 30.5298,
   "anchors": {
-   "axisX": 695.5,
+   "axisX": 681.0,
    "seatY": 129,
-   "shoulderY": 550,
-   "baselineY": 2096
+   "shoulderY": 505,
+   "baselineY": 2096,
+   "barrelAxisX": 695.5,
+   "bodyShoulderY": 550
   },
   "checks": {
    "rawIoU": 0.9913,
@@ -3554,10 +3628,12 @@
   "sha256": "181c3b13be5f55b951c920bebacc8dd6de25573ef162a9e1c91df32416a02d1d",
   "pxPerMm": 30.5298,
   "anchors": {
-   "axisX": 696.5,
+   "axisX": 686.0,
    "seatY": 129,
-   "shoulderY": 546,
-   "baselineY": 2096
+   "shoulderY": 504,
+   "baselineY": 2096,
+   "barrelAxisX": 696.5,
+   "bodyShoulderY": 546
   },
   "checks": {
    "rawIoU": 0.9877,
@@ -3613,10 +3689,12 @@
   "sha256": "34ed787f9abe3299c904de2ad642f342787a85e2c821a0b3be698ce70f93a9ea",
   "pxPerMm": 24.7637,
   "anchors": {
-   "axisX": 735.5,
+   "axisX": 729.0,
    "seatY": 136,
-   "shoulderY": 421,
-   "baselineY": 2097
+   "shoulderY": 394,
+   "baselineY": 2097,
+   "barrelAxisX": 735.5,
+   "bodyShoulderY": 421
   },
   "checks": {
    "rawIoU": 0.9856,
@@ -3680,10 +3758,12 @@
   "sha256": "a0ddb492de22a5a72150831ea039d1dd99cb395b6af956a5a5ae2a0ced7156fe",
   "pxPerMm": 24.7637,
   "anchors": {
-   "axisX": 736.0,
+   "axisX": 731.0,
    "seatY": 136,
-   "shoulderY": 418,
-   "baselineY": 2097
+   "shoulderY": 393,
+   "baselineY": 2097,
+   "barrelAxisX": 736.0,
+   "bodyShoulderY": 418
   },
   "checks": {
    "rawIoU": 0.9923,
@@ -3739,10 +3819,12 @@
   "sha256": "db7c6308f3e9c9d6d73a6a1e34dccdafbd0b568f0bded6ed8463c37f81e76056",
   "pxPerMm": 21.6401,
   "anchors": {
-   "axisX": 760.5,
+   "axisX": 752.5,
    "seatY": 124,
-   "shoulderY": 515,
-   "baselineY": 2097
+   "shoulderY": 478,
+   "baselineY": 2097,
+   "barrelAxisX": 760.5,
+   "bodyShoulderY": 515
   },
   "checks": {
    "rawIoU": 0.9902,
@@ -3806,10 +3888,12 @@
   "sha256": "a01865c38a9f7fa31e819e4326b5f631ca2b1c8f816209eac50228017678bb48",
   "pxPerMm": 21.6401,
   "anchors": {
-   "axisX": 760.5,
+   "axisX": 750.8,
    "seatY": 124,
-   "shoulderY": 512,
-   "baselineY": 2097
+   "shoulderY": 475,
+   "baselineY": 2097,
+   "barrelAxisX": 760.5,
+   "bodyShoulderY": 512
   },
   "checks": {
    "rawIoU": 0.989,
@@ -3865,10 +3949,12 @@
   "sha256": "97ed31088574714b12da6de6653d7c1fcab8117a4b3c941722f4f4b39eabfa23",
   "pxPerMm": 17.6494,
   "anchors": {
-   "axisX": 568.0,
+   "axisX": 565.5,
    "seatY": 133,
-   "shoulderY": 427,
-   "baselineY": 2096
+   "shoulderY": 422,
+   "baselineY": 2096,
+   "barrelAxisX": 568.0,
+   "bodyShoulderY": 427
   },
   "checks": {
    "rawIoU": 0.993,
@@ -3932,10 +4018,12 @@
   "sha256": "d260dcd1fd95003ad6a9cb4398f5ef34f0b6ca2cdda79833daa9bb7b1f27d4aa",
   "pxPerMm": 21.3272,
   "anchors": {
-   "axisX": 528.0,
+   "axisX": 519.0,
    "seatY": 147,
-   "shoulderY": 523,
-   "baselineY": 2096
+   "shoulderY": 515,
+   "baselineY": 2096,
+   "barrelAxisX": 528.0,
+   "bodyShoulderY": 523
   },
   "checks": {
    "rawIoU": 0.9925,
@@ -4184,10 +4272,12 @@
   "sha256": "45f1e797b698679a23951775710320921f69f0998830644829a7bc3fdee68a6a",
   "pxPerMm": 32.3947,
   "anchors": {
-   "axisX": 761.0,
+   "axisX": 765.0,
    "seatY": 154,
-   "shoulderY": 782,
-   "baselineY": 2097
+   "shoulderY": 648,
+   "baselineY": 2097,
+   "barrelAxisX": 761.0,
+   "bodyShoulderY": 782
   },
   "checks": {
    "rawIoU": 0.9877,
@@ -4377,10 +4467,12 @@
   "sha256": "6d19501374251ffd86b2cc78fc2fffda91332d7e220c469f203af48e28b1b3dd",
   "pxPerMm": 16.6615,
   "anchors": {
-   "axisX": 544.5,
+   "axisX": 542.0,
    "seatY": 134,
-   "shoulderY": 590,
-   "baselineY": 2097
+   "shoulderY": 467,
+   "baselineY": 2097,
+   "barrelAxisX": 544.5,
+   "bodyShoulderY": 590
   },
   "checks": {
    "rawIoU": 0.9892,
@@ -4696,10 +4788,12 @@
   "sha256": "95309d47dfe85b34de75b14220b93b6d6d21fd59f3b62473c4c899afa4680a0b",
   "pxPerMm": 33.2695,
   "anchors": {
-   "axisX": 543.5,
+   "axisX": 543.2,
    "seatY": 138,
-   "shoulderY": 502,
-   "baselineY": 2097
+   "shoulderY": 466,
+   "baselineY": 2097,
+   "barrelAxisX": 543.5,
+   "bodyShoulderY": 502
   },
   "checks": {
    "rawIoU": 0.9853,
@@ -4763,10 +4857,12 @@
   "sha256": "a2cc5ff0520a9a58785027e05dc42ebe6615e14575ec32a84cc24da6a436d60b",
   "pxPerMm": 19.3302,
   "anchors": {
-   "axisX": 368.0,
+   "axisX": 361.0,
    "seatY": 120,
-   "shoulderY": 356,
-   "baselineY": 2096
+   "shoulderY": 353,
+   "baselineY": 2096,
+   "barrelAxisX": 368.0,
+   "bodyShoulderY": 356
   },
   "checks": {
    "rawIoU": 0.9829,
@@ -4897,10 +4993,12 @@
   "sha256": "5b74b6e01df47ff01e5f96e7ed4d2db2e78aeb789097245f07c39b227246fda8",
   "pxPerMm": 21.9591,
   "anchors": {
-   "axisX": 951.0,
+   "axisX": 944.0,
    "seatY": 119,
-   "shoulderY": 919,
-   "baselineY": 2090
+   "shoulderY": 558,
+   "baselineY": 2090,
+   "barrelAxisX": 951.0,
+   "bodyShoulderY": 919
   },
   "checks": {
    "rawIoU": 0.9863,
@@ -4964,10 +5062,12 @@
   "sha256": "7ebafe1ea75d46f27bbe74e2671ddb1db0732265c3ecf7f9c9fae6131e8a836c",
   "pxPerMm": 21.9368,
   "anchors": {
-   "axisX": 950.5,
+   "axisX": 945.0,
    "seatY": 119,
-   "shoulderY": 930,
-   "baselineY": 2088
+   "shoulderY": 558,
+   "baselineY": 2088,
+   "barrelAxisX": 950.5,
+   "bodyShoulderY": 930
   },
   "checks": {
    "rawIoU": 0.9881,
@@ -5023,10 +5123,12 @@
   "sha256": "971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb",
   "pxPerMm": 24.9215,
   "anchors": {
-   "axisX": 920.0,
+   "axisX": 914.0,
    "seatY": 133,
-   "shoulderY": 934,
-   "baselineY": 2096
+   "shoulderY": 631,
+   "baselineY": 2096,
+   "barrelAxisX": 920.0,
+   "bodyShoulderY": 934
   },
   "checks": {
    "rawIoU": 0.9841,
@@ -5090,10 +5192,12 @@
   "sha256": "02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde",
   "pxPerMm": 24.9215,
   "anchors": {
-   "axisX": 920.5,
+   "axisX": 914.5,
    "seatY": 133,
-   "shoulderY": 930,
-   "baselineY": 2096
+   "shoulderY": 631,
+   "baselineY": 2096,
+   "barrelAxisX": 920.5,
+   "bodyShoulderY": 930
   },
   "checks": {
    "rawIoU": 0.9934,
@@ -5149,10 +5253,12 @@
   "sha256": "86f13e6e51994a7af074d95d45c69cdd6ec07dafaa0fa2a2078c356b8626e852",
   "pxPerMm": 32.635,
   "anchors": {
-   "axisX": 831.5,
+   "axisX": 813.5,
    "seatY": 141,
-   "shoulderY": 724,
-   "baselineY": 2095
+   "shoulderY": 602,
+   "baselineY": 2095,
+   "barrelAxisX": 831.5,
+   "bodyShoulderY": 724
   },
   "checks": {
    "rawIoU": 0.9934,
@@ -5216,10 +5322,12 @@
   "sha256": "e3cd12d0150005d236abf3cc80c217534d2f04f073bc7222c8d85ff485ee3a51",
   "pxPerMm": 13.0375,
   "anchors": {
-   "axisX": 408.5,
+   "axisX": 410.0,
    "seatY": 115,
-   "shoulderY": 313,
-   "baselineY": 2096
+   "shoulderY": 310,
+   "baselineY": 2096,
+   "barrelAxisX": 408.5,
+   "bodyShoulderY": 313
   },
   "checks": {
    "rawIoU": 0.9715,
@@ -5283,10 +5391,12 @@
   "sha256": "3c09bbe9b33683ea503155de5c9b860b59aee72009a8ef8f56f8873482e0943f",
   "pxPerMm": 19.7231,
   "anchors": {
-   "axisX": 416.0,
+   "axisX": 413.5,
    "seatY": 116,
-   "shoulderY": 459,
-   "baselineY": 2096
+   "shoulderY": 457,
+   "baselineY": 2096,
+   "barrelAxisX": 416.0,
+   "bodyShoulderY": 459
   },
   "checks": {
    "rawIoU": 0.8638,
@@ -5350,10 +5460,12 @@
   "sha256": "9b42d0f6ff218b4607550a681eec96b25ac8814669936d4af918007a2fb82eed",
   "pxPerMm": 14.0474,
   "anchors": {
-   "axisX": 368.0,
+   "axisX": 364.5,
    "seatY": 114,
-   "shoulderY": 353,
-   "baselineY": 2097
+   "shoulderY": 347,
+   "baselineY": 2097,
+   "barrelAxisX": 368.0,
+   "bodyShoulderY": 353
   },
   "checks": {
    "rawIoU": 0.9883,
@@ -5417,10 +5529,12 @@
   "sha256": "4b11cb15093eb862654fc87da1c482c441e887cf7eff267572591caa464b2797",
   "pxPerMm": 41.994,
   "anchors": {
-   "axisX": 520.5,
+   "axisX": 505.5,
    "seatY": 143,
-   "shoulderY": 721,
-   "baselineY": 2097
+   "shoulderY": 658,
+   "baselineY": 2097,
+   "barrelAxisX": 520.5,
+   "bodyShoulderY": 721
   },
   "checks": {
    "rawIoU": 0.9873,
@@ -5484,10 +5598,12 @@
   "sha256": "7987a868e0824c4d2462d6f97d9523b5dfc8bb4340bce939603558412e49573c",
   "pxPerMm": 28.9993,
   "anchors": {
-   "axisX": 384.0,
+   "axisX": 375.5,
    "seatY": 141,
-   "shoulderY": 498,
-   "baselineY": 2096
+   "shoulderY": 464,
+   "baselineY": 2096,
+   "barrelAxisX": 384.0,
+   "bodyShoulderY": 498
   },
   "checks": {
    "rawIoU": 0.9827,
@@ -5551,10 +5667,12 @@
   "sha256": "dac9aaf9d8e082cea9fbecaee4d3f9009b9807db4fa16bae2b4f86f5c21771f2",
   "pxPerMm": 12.5459,
   "anchors": {
-   "axisX": 368.0,
+   "axisX": 367.5,
    "seatY": 126,
-   "shoulderY": 345,
-   "baselineY": 2096
+   "shoulderY": 330,
+   "baselineY": 2096,
+   "barrelAxisX": 368.0,
+   "bodyShoulderY": 345
   },
   "checks": {
    "rawIoU": 0.9719,
@@ -5618,10 +5736,12 @@
   "sha256": "e02414756bad03dabbdd37febdfcfb096d4f304184cd1dcf104813005e78ed79",
   "pxPerMm": 21.7379,
   "anchors": {
-   "axisX": 439.5,
+   "axisX": 432.8,
    "seatY": 147,
-   "shoulderY": 472,
-   "baselineY": 2096
+   "shoulderY": 455,
+   "baselineY": 2096,
+   "barrelAxisX": 439.5,
+   "bodyShoulderY": 472
   },
   "checks": {
    "rawIoU": 0.9752,
@@ -5685,10 +5805,12 @@
   "sha256": "c89667b8d4c608f120e07996bedddc69220e1950ca3b5176991dbb026f81dd11",
   "pxPerMm": 16.0871,
   "anchors": {
-   "axisX": 368.0,
+   "axisX": 366.5,
    "seatY": 108,
-   "shoulderY": 403,
-   "baselineY": 2096
+   "shoulderY": 390,
+   "baselineY": 2096,
+   "barrelAxisX": 368.0,
+   "bodyShoulderY": 403
   },
   "checks": {
    "rawIoU": 0.9235,
@@ -5752,10 +5874,12 @@
   "sha256": "b17dc553b7d483fcd46fbf342f4df644f7615503bc08d00c32506d0109ee4da3",
   "pxPerMm": 35.9342,
   "anchors": {
-   "axisX": 632.5,
+   "axisX": 613.0,
    "seatY": 140,
-   "shoulderY": 612,
-   "baselineY": 2096
+   "shoulderY": 533,
+   "baselineY": 2096,
+   "barrelAxisX": 632.5,
+   "bodyShoulderY": 612
   },
   "checks": {
    "rawIoU": 0.9931,
@@ -6004,10 +6128,12 @@
   "sha256": "83a7fcec620af5705032d7a5609fefe91e59a24cf845beffe03af7391e53e535",
   "pxPerMm": 39.9529,
   "anchors": {
-   "axisX": 562.0,
+   "axisX": 541.5,
    "seatY": 352,
-   "shoulderY": 851,
-   "baselineY": 2096
+   "shoulderY": 767,
+   "baselineY": 2096,
+   "barrelAxisX": 562.0,
+   "bodyShoulderY": 851
   },
   "checks": {
    "rawIoU": 0.9923,
@@ -6071,10 +6197,12 @@
   "sha256": "d30216cae12ad97deac0bbf29bda947b877f5c7218ca94d8e4e2c863df3ce5c4",
   "pxPerMm": 34.8544,
   "anchors": {
-   "axisX": 562.0,
+   "axisX": 540.5,
    "seatY": 352,
-   "shoulderY": 843,
-   "baselineY": 2096
+   "shoulderY": 755,
+   "baselineY": 2096,
+   "barrelAxisX": 562.0,
+   "bodyShoulderY": 843
   },
   "checks": {
    "rawIoU": 0.9613,
@@ -6138,10 +6266,12 @@
   "sha256": "84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0",
   "pxPerMm": 41.2234,
   "anchors": {
-   "axisX": 639.5,
+   "axisX": 630.0,
    "seatY": 152,
-   "shoulderY": 704,
-   "baselineY": 2096
+   "shoulderY": 653,
+   "baselineY": 2096,
+   "barrelAxisX": 639.5,
+   "bodyShoulderY": 704
   },
   "checks": {
    "rawIoU": 0.9913,
@@ -6197,10 +6327,12 @@
   "sha256": "db7071b85180341984ab8ef5940f030ac41a819d287f355b7e222e19b66d03d6",
   "pxPerMm": 41.3507,
   "anchors": {
-   "axisX": 623.0,
+   "axisX": 624.0,
    "seatY": 147,
-   "shoulderY": 668,
-   "baselineY": 2097
+   "shoulderY": 628,
+   "baselineY": 2097,
+   "barrelAxisX": 623.0,
+   "bodyShoulderY": 668
   },
   "checks": {
    "rawIoU": 0.9901,
@@ -6390,10 +6522,12 @@
   "sha256": "07785d85d6b2faa2caa262f96a2f17ce9cfa2a628e87063f3dbeecb61dc52dfc",
   "pxPerMm": 71.7563,
   "anchors": {
-   "axisX": 849.0,
+   "axisX": 844.0,
    "seatY": 407,
-   "shoulderY": 447,
-   "baselineY": 2097
+   "shoulderY": 1842,
+   "baselineY": 2097,
+   "barrelAxisX": 849.0,
+   "bodyShoulderY": 447
   },
   "checks": {
    "rawIoU": 0.9803,
@@ -6449,10 +6583,12 @@
   "sha256": "499f10fc8860cb30a2f34f06906e7b2b608eba9e235af92de8140cbfb9e69e24",
   "pxPerMm": 53.1298,
   "anchors": {
-   "axisX": 457.5,
+   "axisX": 450.0,
    "seatY": 179,
-   "shoulderY": 592,
-   "baselineY": 2095
+   "shoulderY": 564,
+   "baselineY": 2095,
+   "barrelAxisX": 457.5,
+   "bodyShoulderY": 592
   },
   "checks": {
    "rawIoU": 0.99,
@@ -6508,10 +6644,12 @@
   "sha256": "541702c606dddb5efc5c61c6953d77d00718ca2f6924e6248025c54385111c6e",
   "pxPerMm": 53.1021,
   "anchors": {
-   "axisX": 456.5,
+   "axisX": 449.0,
    "seatY": 179,
-   "shoulderY": 591,
-   "baselineY": 2094
+   "shoulderY": 565,
+   "baselineY": 2094,
+   "barrelAxisX": 456.5,
+   "bodyShoulderY": 591
   },
   "checks": {
    "rawIoU": 0.992,
@@ -6575,10 +6713,12 @@
   "sha256": "64a5e46fc6ed17a1f3b6b421b1d55418aecabcbbaa17871f27d92a259a3c220c",
   "pxPerMm": 41.2984,
   "anchors": {
-   "axisX": 471.5,
+   "axisX": 469.0,
    "seatY": 180,
-   "shoulderY": 575,
-   "baselineY": 2093
+   "shoulderY": 552,
+   "baselineY": 2093,
+   "barrelAxisX": 471.5,
+   "bodyShoulderY": 575
   },
   "checks": {
    "rawIoU": 0.957,
@@ -6634,10 +6774,12 @@
   "sha256": "b14eff9d69f04ff2fa1d36ed4834e7adf108aff43edbd654ed0daa03e3e14a2c",
   "pxPerMm": 41.2768,
   "anchors": {
-   "axisX": 472.0,
+   "axisX": 470.5,
    "seatY": 180,
-   "shoulderY": 567,
-   "baselineY": 2092
+   "shoulderY": 544,
+   "baselineY": 2092,
+   "bodyShoulderY": 567,
+   "barrelAxisX": 472.0
   },
   "checks": {
    "rawIoU": 0.9753,
@@ -6693,10 +6835,12 @@
   "sha256": "43e7e5e9099a073468cdd3b286c24a4b9e67c2b8525ac709bb4859c0011a293b",
   "pxPerMm": 41.2984,
   "anchors": {
-   "axisX": 472.0,
+   "axisX": 467.0,
    "seatY": 180,
-   "shoulderY": 539,
-   "baselineY": 2093
+   "shoulderY": 516,
+   "baselineY": 2093,
+   "barrelAxisX": 472.0,
+   "bodyShoulderY": 539
   },
   "checks": {
    "rawIoU": 0.8003,
@@ -6760,10 +6904,12 @@
   "sha256": "6dd227bae2819d2a7bbd05955bfd2049d981600969b7dcd4a000b865da276cee",
   "pxPerMm": 41.2984,
   "anchors": {
-   "axisX": 471.0,
+   "axisX": 467.5,
    "seatY": 181,
-   "shoulderY": 569,
-   "baselineY": 2094
+   "shoulderY": 549,
+   "baselineY": 2094,
+   "barrelAxisX": 471.0,
+   "bodyShoulderY": 569
   },
   "checks": {
    "rawIoU": 0.975,
@@ -6819,10 +6965,12 @@
   "sha256": "691f4b36f59b9454c6b3beac63821feed9f27c919fa8780f7b055f204740a33d",
   "pxPerMm": 21.8862,
   "anchors": {
-   "axisX": 623.5,
+   "axisX": 626.2,
    "seatY": 322,
-   "shoulderY": 433,
-   "baselineY": 2096
+   "shoulderY": 426,
+   "baselineY": 2096,
+   "barrelAxisX": 623.5,
+   "bodyShoulderY": 433
   },
   "checks": {
    "rawIoU": 0.9519,
