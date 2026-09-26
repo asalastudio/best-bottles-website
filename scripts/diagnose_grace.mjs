@@ -12,8 +12,9 @@
  * Section 2 needs the Next app reachable at BASE_URL. Section 3 needs
  * NEXT_PUBLIC_CONVEX_URL and hits Convex directly, the same path Grace's tools use.
  *
- * Rewritten 2026-09-25: the previous version probed the ElevenLabs routes that
- * were removed in August, so every run reported failures that meant nothing.
+ * Rewritten 2026-09-25: the previous version probed the routes of a voice
+ * vendor removed in August, so every run reported failures that meant nothing.
+ * Grace runs on OpenAI (Realtime voice and GPT-5 text) only.
  */
 
 import { readFileSync } from "fs";

@@ -9,10 +9,10 @@ import { executePublicGraceToolCall } from "@/lib/grace/publicToolCallServer";
  */
 export async function POST(req: NextRequest) {
     try {
-        // GRACE_TOOLS_WEBHOOK_SECRET is the canonical name; the ELEVENLABS_*
-        // fallback keeps existing Vercel envs working until they are renamed.
-        const expectedSecret = process.env.GRACE_TOOLS_WEBHOOK_SECRET
-            ?? process.env.ELEVENLABS_WEBHOOK_SECRET;
+        // Optional shared secret for server-to-server callers. Grace's own
+        // browser calls are same-origin and never need it. The previous voice
+        // vendor's fallback name was dropped on 2026-09-25 (OpenAI only).
+        const expectedSecret = process.env.GRACE_TOOLS_WEBHOOK_SECRET;
         if (expectedSecret) {
             const originHeader = req.headers.get("origin");
             const hostHeader = req.headers.get("host");
