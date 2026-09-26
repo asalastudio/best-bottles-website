@@ -104,8 +104,11 @@ Still needed: Dp, Hn, Dep and Cap.
 **Shape:** from Jordan's photo IMG_5823, the shoulder is one smooth round from the wall into the neck. The May 2015
 drawing glass had a cone plus a ledge, which read as two steps; do not rebuild it that way.
 
-**WIP rebuild:** `outputs/tall-caliper-v36/` (v36) rebuilds this glass to the readings, with the smooth shoulder.
-Fh is held at 11.2 until it is re-measured (see the Cylinder 5 ml check below).
+**Neck height ruling (Jordan, 2026-09-26):** Fh = 11.0 for both 13-415 cylinders, this one and the Cylinder 5 ml,
+measured from the rim top to where the neck meets the shoulder. The raw 10.11 stays in `values`; 11.0 is in `model`.
+
+**WIP rebuild:** `outputs/tall-caliper-v36/` (v36) rebuilds this glass to the readings, with the smooth shoulder and
+Fh 11.0.
 
 ### 13-415 fine-mist sprayer and overcap
 
@@ -167,9 +170,8 @@ Key `cylinder-5ml-13-415`, measured by Jordan on 2026-09-26. The Clear and Cobal
 
 - The site gives 53 × 17 for this bottle, which matches.
 - Still needed: W, Dp, T, Dep and Cap.
-- **Check before modelling:** the 13-415 finish should be the same on every bottle. This one reads E 11.64 and
-  Fh ~11.0, while the Tall Cylinder reads 11.22 and 10.11. Re-measure both bottles on the same points: the neck Ø just
-  under the threads, and Fh from the rim top to where the neck meets the shoulder.
+- **Neck height:** Jordan set Fh = 11.0 for both 13-415 cylinders on 2026-09-26.
+- **Still open:** the neck Ø reads 11.64 here but 11.22 on the Tall Cylinder. The 13-415 finish should match.
 
 ### 13-415 roller insert (metal and plastic ball)
 
