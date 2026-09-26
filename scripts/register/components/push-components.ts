@@ -6,6 +6,7 @@
  *   npx tsx scripts/register/components/push-components.ts --neck 18-415 --apply              # upload + write as "measured"
  *   npx tsx scripts/register/components/push-components.ts --neck 18-415 --apply --approve    # approvable ones as "approved"
  *   ... --except CMP-A,CMP-B                                                                   # hold back named components
+ *   ... --deployment prod                                                   # production: REGISTER_PROD_WRITE_TOKEN (scripts/register/deployment.ts)
  *
  * Reads data/register/components/<neck>-measurements.json and output/register-components/<neck>/
  * (run cut_components.py first). A component is approvable when its registration self-check passed
@@ -19,6 +20,7 @@ import { config } from "dotenv";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../convex/_generated/api";
 import { createBlobStore } from "../../paperdoll/lib/store-blob.mjs";
+import { registerTarget } from "../deployment";
 
 const ROOT = resolve(__dirname, "..", "..", "..");
 config({ path: [resolve(ROOT, ".env.local"), resolve(ROOT, ".env.blob.local")], quiet: true });
@@ -36,9 +38,8 @@ async function main() {
     if (!neck) throw new Error("--neck is required");
     const OUT = resolve(ROOT, "output", "register-components", neck);
     const m = JSON.parse(readFileSync(resolve(ROOT, "data", "register", "components", `${neck}-measurements.json`), "utf8")) as Measurements;
-    const url = process.env.NEXT_PUBLIC_CONVEX_URL, token = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
-    if (!url || !token) throw new Error("NEXT_PUBLIC_CONVEX_URL and BEST_BOTTLES_CONVEX_WRITE_TOKEN are required");
-    if (url.includes("precise-raccoon-123")) throw new Error("this loader writes dev only");
+    const { deployment, url, token } = registerTarget(process.argv.slice(2));
+    console.log(`deployment: ${deployment} (${url})`);
     if (apply && !process.env.BLOB_READ_WRITE_TOKEN) throw new Error("BLOB_READ_WRITE_TOKEN is not set");
     const store = apply ? createBlobStore() : null;
     const upload = async (key: string, file: string, width: number, height: number, sha256: string) => {

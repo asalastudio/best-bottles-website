@@ -7,6 +7,7 @@
  *   npx tsx scripts/register/phase3/push-phase3.ts --apply --approve    # the same, marked "approved" (Jordan's sign-off)
  *   ... --approve --except plateKey|componentId,...                     # approve all but the named items
  *   ... --only componentId,...                                           # load only the named components (no plates)
+ *   ... --deployment prod                                                   # production: REGISTER_PROD_WRITE_TOKEN (scripts/register/deployment.ts)
  *
  * Reads data/register/phase3/pilot-measurements.json and output/register-phase3/pilot/ (run cut_pilot.py
  * first). Blob keys are content-addressed and write-once. Dev only: NEXT_PUBLIC_CONVEX_URL and
@@ -19,6 +20,7 @@ import { config } from "dotenv";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../convex/_generated/api";
 import { createBlobStore } from "../../paperdoll/lib/store-blob.mjs";
+import { registerTarget } from "../deployment";
 
 const ROOT = resolve(__dirname, "..", "..", "..");
 const OUT = resolve(ROOT, "output", "register-phase3", "pilot");
@@ -43,9 +45,8 @@ type Measurements = {
 
 async function main() {
     const m = JSON.parse(readFileSync(resolve(ROOT, "data", "register", "phase3", "pilot-measurements.json"), "utf8")) as Measurements;
-    const url = process.env.NEXT_PUBLIC_CONVEX_URL, token = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
-    if (!url || !token) throw new Error("NEXT_PUBLIC_CONVEX_URL and BEST_BOTTLES_CONVEX_WRITE_TOKEN are required");
-    if (url.includes("precise-raccoon-123")) throw new Error("this loader writes dev only");
+    const { deployment, url, token } = registerTarget(process.argv.slice(2));
+    console.log(`deployment: ${deployment} (${url})`);
     const status = (key: string) => (approve && !except.has(key) ? "approved" : "measured") as "approved" | "measured";
     const neck = m.bodyId.split("-").slice(-2).join("-");
     if (apply && !process.env.BLOB_READ_WRITE_TOKEN) {
