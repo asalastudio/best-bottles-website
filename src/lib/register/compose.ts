@@ -32,6 +32,10 @@ export type LayerGeometry = {
     height: number;
     pxPerMm: number;
     anchor: { x: number; y: number };
+    /** The layer's lowest solid row, image px: how far the part reaches under the seat. */
+    solidBottomY?: number;
+    /** "exploded": drawn only in the exploded view (a plug with its stem), never seated on the neck. */
+    usage?: "seated" | "exploded" | null;
 };
 
 /** Where the seat sits on the output canvas, and the output scale. */
@@ -77,14 +81,14 @@ export function placePlate<P extends PlateGeometry>(plate: P, frame: Frame, zInd
     };
 }
 
-export function placeLayer<L extends LayerGeometry>(layer: L, frame: Frame, zIndex: number): Placement<L> {
+export function placeLayer<L extends LayerGeometry>(layer: L, frame: Frame, zIndex: number, liftPx = 0): Placement<L> {
     const scale = scaleFor(frame, layer.pxPerMm);
     return {
         source: layer,
         kind: "layer",
         scale,
         x: frame.axisX - layer.anchor.x * scale,
-        y: frame.seatY - layer.anchor.y * scale,
+        y: frame.seatY - layer.anchor.y * scale - liftPx,
         width: layer.width * scale,
         height: layer.height * scale,
         zIndex,
@@ -106,18 +110,38 @@ export function orderLayers<L extends LayerGeometry>(layers: readonly L[]): { be
     return { behind, front };
 }
 
-/** Everything the canvas draws, in draw order. */
+/**
+ * How far (mm) to lift the closure so it ends where this plate's shoulder begins. One cap serves bottles whose necks
+ * differ: the 13-415 caps were measured on the Circle 15, whose neck runs 13.3 mm under the rim, and dropped over the
+ * shoulder of the 5 mL cylinder, whose neck runs 11.8 mm (Jordan 2026-09-26: "the cap is dropping a little low"). The
+ * reach is the lowest solid row of the seated front layers; a plate with no shoulder mark, or a layer with no solid
+ * bottom recorded, is left where its anchor puts it. Inserts behind the glass stay on the rim.
+ */
+export function shoulderLiftMm(plate: PlateGeometry, layers: readonly LayerGeometry[]): number {
+    const shoulder = plate.anchors.shoulderY;
+    if (shoulder == null || !(shoulder > plate.anchors.seatY)) return 0;
+    const clearanceMm = (shoulder - plate.anchors.seatY) / plate.pxPerMm;
+    let reachMm = -Infinity;
+    for (const layer of layers) {
+        if (layer.z === "behind-body" || layer.usage === "exploded" || layer.solidBottomY == null) continue;
+        reachMm = Math.max(reachMm, (layer.solidBottomY - layer.anchor.y) / layer.pxPerMm);
+    }
+    return reachMm > clearanceMm ? reachMm - clearanceMm : 0;
+}
+
+/** Everything the canvas draws, in draw order. The front layers are lifted clear of the shoulder (shoulderLiftMm). */
 export function compose<P extends PlateGeometry, L extends LayerGeometry>(
     plate: P,
     layers: readonly L[],
     frame: Frame,
 ): Array<Placement<P> | Placement<L>> {
     const { behind, front } = orderLayers(layers);
+    const liftPx = shoulderLiftMm(plate, layers) * frame.pxPerMm;
     const out: Array<Placement<P> | Placement<L>> = [];
     let z = 0;
     for (const layer of behind) out.push(placeLayer(layer, frame, z++));
     out.push(placePlate(plate, frame, z++));
-    for (const layer of front) out.push(placeLayer(layer, frame, z++));
+    for (const layer of front) out.push(placeLayer(layer, frame, z++, liftPx));
     return out;
 }
 

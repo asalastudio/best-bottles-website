@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
-import { compose, footY, frameFromDatum, frameFromLegacyKit, orderLayers, placeLayer, placePlate, placementStyle, type Frame, type LayerGeometry, type PlateGeometry } from "@/lib/register/compose";
+import { compose, footY, frameFromDatum, frameFromLegacyKit, orderLayers, placeLayer, placePlate, placementStyle, shoulderLiftMm, type Frame, type LayerGeometry, type PlateGeometry } from "@/lib/register/compose";
 
 const plate: PlateGeometry = { width: 768, height: 2304, pxPerMm: 27.2142, anchors: { axisX: 383, seatY: 167, shoulderY: 550, baselineY: 2176 } };
 // The legacy 9 mL Cylinder kit frame on dev: 1000 × 1100, axis 500, seat 279, foot 1055.
@@ -64,6 +64,24 @@ describe("register compose: placement", () => {
         expect(orderLayers([oneCap, onePiece]).front.map((l) => l.slot)).toEqual(["sprayer", "overcap"]);
     });
 
+    it("lifts a closure that reaches past this plate's shoulder so it ends where the shoulder begins (Jordan 2026-09-26)", () => {
+        // plate: 27.21 px/mm, seat 167, shoulder 13 mm under the rim; cap: 10 px/mm, anchor y 50, solid to row 200 = 15 mm under the rim
+        const shouldered: PlateGeometry = { ...plate, anchors: { ...plate.anchors, shoulderY: plate.anchors.seatY + 13 * plate.pxPerMm } };
+        const deep: LayerGeometry = { ...cap, pxPerMm: 10, anchor: { x: cap.anchor.x, y: 50 }, solidBottomY: 200 };
+        const insert: LayerGeometry = { ...roller, pxPerMm: 10, anchor: { x: 10, y: 0 }, solidBottomY: 400 };  // behind the glass: never lifts
+        expect(shoulderLiftMm(shouldered, [deep, insert])).toBeCloseTo(2, 6);
+        const placed = compose(shouldered, [deep, insert], frame);
+        const capAt = placed.find((p) => p.kind === "layer" && (p.source as LayerGeometry).slot === "cap")!;
+        const insertAt = placed.find((p) => p.kind === "layer" && (p.source as LayerGeometry).slot === "roller")!;
+        expect(capAt.y + 50 * capAt.scale).toBeCloseTo(frame.seatY - 2 * frame.pxPerMm, 6);
+        expect(insertAt.y).toBeCloseTo(frame.seatY, 6);
+        // a closure that ends above the shoulder, a plate with no shoulder mark, or a layer with no solid bottom: no lift
+        expect(shoulderLiftMm(shouldered, [{ ...deep, solidBottomY: 150 }])).toBe(0);
+        expect(shoulderLiftMm({ ...plate, anchors: { ...plate.anchors, shoulderY: null } }, [deep])).toBe(0);
+        expect(shoulderLiftMm(shouldered, [{ ...deep, solidBottomY: undefined }])).toBe(0);
+        expect(shoulderLiftMm(shouldered, [{ ...deep, usage: "exploded" }])).toBe(0);
+    });
+
     it("expresses a placement as percentages of the stage box", () => {
         const style = placementStyle(placePlate(plate, frame, 0), frame);
         expect(style.position).toBe("absolute");
@@ -76,15 +94,17 @@ describe("register compose: the pilot measurements compose without error", () =>
     const m = JSON.parse(readFileSync(resolve(__dirname, "..", "data", "register", "phase3", "pilot-measurements.json"), "utf8")) as {
         plates: PlateGeometry[]; components: { componentId: string; layers: LayerGeometry[] }[];
     };
-    it("places every plate on the kit frame with its foot on the baseline and every layer's anchor on the seat", () => {
+    it("places every plate on the kit frame with its foot on the baseline and every layer's anchor on the seat, a front layer lifted clear of the shoulder", () => {
         for (const p of m.plates) {
             const frame = frameFromLegacyKit(kit, p);
             expect(footY(p, frame)).toBeCloseTo(1055, 6);
             for (const c of m.components) {
+                const lift = shoulderLiftMm(p, c.layers) * frame.pxPerMm;
+                expect(lift).toBeLessThan(1.5 * frame.pxPerMm);  // a nudge, never a jump
                 for (const placed of compose(p, c.layers, frame)) {
                     if (placed.kind !== "layer") continue;
                     const layer = placed.source as LayerGeometry;
-                    expect(placed.y + layer.anchor.y * placed.scale).toBeCloseTo(279, 6);
+                    expect(placed.y + layer.anchor.y * placed.scale).toBeCloseTo(layer.z === "front" ? 279 - lift : 279, 6);
                     expect(placed.width).toBeGreaterThan(0);
                     expect(placed.width).toBeLessThan(1000);
                 }

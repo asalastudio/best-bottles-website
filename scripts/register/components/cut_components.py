@@ -210,6 +210,12 @@ def drop_specks(img: Image.Image, slot: str = "") -> tuple[Image.Image, int]:
 OFF_AXIS_TYPES = {"vintage-bulb-sprayer", "tassel-bulb-sprayer"}
 
 
+def solid_bottom(img: Image.Image) -> int:
+    """The row just under the layer's lowest solid pixel (image px): with the plate's shoulderY, how far the part reaches."""
+    rows = np.where((alpha(img) > ALPHA).any(axis=1))[0]
+    return int(rows.max()) + 1 if rows.size else 0
+
+
 def centre_line(img: Image.Image) -> float:
     """The median of the solid rows' midpoints: the axis of a turned part, unmoved by a nozzle hole or a highlight."""
     m = alpha(img) > ALPHA
@@ -566,6 +572,11 @@ def main() -> int:
         print(f"{cid:26} {ctype:20} ref {sku:24} IoU {score:.3f} lib {lib_px_per_mm:.2f} px/mm layers {[l['slot'] for l in entry['layers']]}")
         result["components"].append(entry)
 
+    for entry in result["components"]:  # how far each layer reaches under the seat, for the stage's shoulder lift
+        if entry["type"] in OFF_AXIS_TYPES:  # a bulb and hose hang beside the bottle: not a reach down the neck
+            continue
+        for layer in entry["layers"]:
+            layer["solidBottomY"] = solid_bottom(Image.open(out_dir / layer["file"]).convert("RGBA"))
     measure_path.parent.mkdir(parents=True, exist_ok=True)
     if only and measure_path.exists():  # a partial run replaces only the components it processed
         previous = json.loads(measure_path.read_text())

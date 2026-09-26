@@ -121,6 +121,9 @@ export const componentLayerV = v.object({
     // Which stage views draw the layer: "seated" (clipped at the rim, behind the glass) for CAP ON and
     // SIDECAR, "exploded" (the full part with its plug) for EXPLODED; absent = every view.
     usage: v.optional(v.union(v.literal("seated"), v.literal("exploded"))),
+    // The layer's lowest solid row (image px). With the plate's shoulderY it tells the stage how far a closure reaches under
+    // the rim, so a cap measured on a long-necked bottle is lifted clear of a shorter neck's shoulder (Jordan 2026-09-26).
+    solidBottomY: v.optional(v.number()),
 });
 
 export const componentRegisterFields = {

@@ -106,10 +106,15 @@ Jordan: "the caps are not centered on top of the bottle" (Tall Cylinder 9), and 
   (largest 0.72 mm); `anchors.barrelAxisX` keeps the old value; jars, ground stoppers and the heart keep the barrel axis.
   `build_bodies.py` measures the same way on future runs.
 
-**17-415 collars (Jordan: "raised up a little bit").** The 17-415 sprayer and pump collars reached 14.1 to 14.4 mm under the
-rim; the 9 mL cylinder's shoulder begins 13.63 mm under it, so the collar swallowed the shoulder. `clean_layers.py --pilot
---clear-shoulder "cylinder-9ml-17-415|Clear"` lifts each whole closure 0.47 to 0.78 mm so the collar ends where the shoulder
-begins. Other necks unchanged until Jordan rules.
+**Closures end where the shoulder begins (the stage decides, per bottle).** Jordan: the 9 mL cylinder's sprayer should be
+"raised up a little bit"; the 5 mL cylinder's cap "is dropping a little low". One closure serves bottles whose necks differ
+(13-415 shoulders begin 9.9 to 17.6 mm under the rim, 18-415 14.2 to 20+), and the parts were measured on long-necked
+reference photos, so on a short neck they swallowed the shoulder or sank into the glass (Slim 30, Cylinder 50). Each plate's
+`anchors.shoulderY` is now where its shoulder begins (neck_axis.py: two thirds of the way from neck to body width, then back up
+the flare past the thread crests; the old mark stays as `bodyShoulderY`), each layer records `solidBottomY` (its lowest solid
+row; bulb sprayers excepted, their bulb hangs beside the bottle), and `compose.ts shoulderLiftMm` lifts a bottle's seated
+front layers by however far they would reach past its shoulder. Inserts behind the glass stay on the rim. The Diva 46 and the
+other long necks do not move; the 5 mL cylinder lifts about 1.1 mm, the Slim 30 about 4 mm.
 
 ## Known gaps
 

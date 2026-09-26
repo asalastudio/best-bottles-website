@@ -20,7 +20,8 @@
      },
      "z": "front",
      "explodeIndex": 0,
-     "usage": "seated"
+     "usage": "seated",
+     "solidBottomY": 209
     },
     {
      "slot": "cap",
@@ -36,7 +37,8 @@
      },
      "z": "front",
      "explodeIndex": 0,
-     "usage": "exploded"
+     "usage": "exploded",
+     "solidBottomY": 306
     }
    ],
    "checks": {

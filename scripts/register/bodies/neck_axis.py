@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Seat every body plate on its neck: anchors.axisX = the neck's own axis, not the barrel's.
+Seat every body plate on its neck: anchors.axisX = the neck's own axis, not the barrel's, and anchors.shoulderY = where
+the shoulder begins (the stage keeps a closure above it).
 
   python3 scripts/register/bodies/neck_axis.py            # dry run: the shift per plate, in mm
   python3 scripts/register/bodies/neck_axis.py --write    # write data/register/bodies/bodies-measurements.json and the pilot plates
@@ -34,22 +35,36 @@ MAX_SHIFT_MM = 1.0
 
 
 def neck_rows(alpha: np.ndarray, seat_y: int, px_per_mm: float) -> tuple[int, int]:
-    """(first, last) row of the neck: from 0.5 mm under the rim to the shoulder's start, at most 20 mm down."""
+    """(first, last) row of the neck: from 0.5 mm under the rim to where the shoulder begins, at most 20 mm down.
+    A thread crest is wider than the neck between crests, so a small widening is not the shoulder: the shoulder is found
+    where the width has gone two thirds of the way from the neck to the body, then followed back up the flare while it narrows,
+    to the first row wider than the neck's thread crests or the foot of a straight neck base."""
     m = alpha > 128
+    rows = np.where(m.any(axis=1))[0]
+    width = lambda y: (lambda xs: xs.max() - xs.min() + 1 if xs.size else 0)(np.where(m[y])[0])  # noqa: E731
     first = int(round(seat_y + 0.5 * px_per_mm))
     stop = min(m.shape[0], int(round(seat_y + 20 * px_per_mm)))
-    widths = []
-    for y in range(first, stop):
-        xs = np.where(m[y])[0]
-        widths.append(xs.max() - xs.min() + 1 if xs.size else 0)
-    head = [w for w in widths[: max(3, int(2 * px_per_mm))] if w]
-    neck_w = float(np.median(head)) if head else 0.0
-    last = stop - 1
-    for i, w in enumerate(widths):
-        if neck_w and w > 1.08 * neck_w and i > px_per_mm:  # past the first millimetre: the lip can flare
-            last = first + i - 1
+    head = [width(y) for y in range(first, min(stop, first + max(3, int(2 * px_per_mm))))]
+    neck_w = float(np.median([w for w in head if w])) if any(head) else 0.0
+    band = rows[int(0.4 * len(rows)): int(0.85 * len(rows))]
+    body_w = float(np.median([width(y) for y in band])) if band.size else neck_w
+    if not neck_w or body_w <= neck_w * 1.05:
+        return first, stop - 1
+    threshold = neck_w + 2 * (body_w - neck_w) / 3  # two thirds: a thread crest on a narrow bottle can pass one third
+    y = next((y for y in range(first + int(px_per_mm), stop) if width(y) > threshold), None)
+    if y is None:
+        return first, stop - 1
+    crest = float(np.percentile([width(r) for r in range(first, y)], 90))  # the neck's widest thread crests
+    # Back up the flare while it keeps narrowing. A straight section (a neck base wider than the threads, ending in a flat
+    # shoulder ledge, as on the Slim 30) stops the walk: the closure sits down onto the ledge, so that is the shoulder.
+    flat, straight = 0, max(2, int(round(0.4 * px_per_mm)))
+    while y - 1 > first and width(y - 1) > crest:
+        flat = flat + 1 if width(y - 1) >= width(y) else 0
+        if flat >= straight:
+            y += flat - 1
             break
-    return first, last
+        y -= 1
+    return first, y - 1
 
 
 def neck_axis(alpha: np.ndarray, seat_y: int, px_per_mm: float) -> float:
@@ -78,6 +93,9 @@ def update(plates: list[dict], images: Path, write: bool, skipped: list) -> list
         if write and abs(axis - p["anchors"]["axisX"]) >= 0.5:
             p["anchors"].setdefault("barrelAxisX", p["anchors"]["axisX"])
             p["anchors"]["axisX"] = axis
+        if write:  # where the closure must end: the stage lifts one that reaches further (compose.ts shoulderLiftMm)
+            p["anchors"].setdefault("bodyShoulderY", p["anchors"].get("shoulderY"))
+            p["anchors"]["shoulderY"] = neck_rows(a, p["anchors"]["seatY"], p["pxPerMm"])[1] + 1
         moved.append((p["plateKey"], round(shift, 2)))
     return moved
 

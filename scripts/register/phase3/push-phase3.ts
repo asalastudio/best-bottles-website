@@ -33,7 +33,7 @@ if (onlyArg !== null && (onlyArg.startsWith("--") || !onlyArg.split(",").some(s 
 }
 const only = new Set((onlyArg ?? "").split(",").map(s => s.trim()).filter(Boolean));
 
-type Layer = { slot: string; layerName: string; file: string; width: number; height: number; sha256: string; pxPerMm: number; anchor: { x: number; y: number }; z: string; explodeIndex: number };
+type Layer = { slot: string; layerName: string; file: string; width: number; height: number; sha256: string; pxPerMm: number; anchor: { x: number; y: number }; z: string; explodeIndex: number; solidBottomY?: number };
 type Measurements = {
     bodyId: string;
     plates: { plateKey: string; glass: string; file: string; width: number; height: number; sha256: string; pxPerMm: number;
@@ -75,7 +75,7 @@ async function main() {
         for (const l of c.layers) {
             const image = await upload(`register/components/${neck}/${c.componentId}/${l.slot}-${l.sha256}.png`, l.file, l.width, l.height, l.sha256);
             layers.push({ slot: l.slot as never, layerName: l.layerName, z: l.z as "front" | "behind-body", image, image2x: null, pxPerMm: l.pxPerMm,
-                anchor: l.anchor, anchorStatus: status(c.componentId), explodeIndex: l.explodeIndex });
+                anchor: l.anchor, anchorStatus: status(c.componentId), explodeIndex: l.explodeIndex, ...(l.solidBottomY != null ? { solidBottomY: l.solidBottomY } : {}) });
         }
         components.push({ componentId: c.componentId, layers });
         console.log(`component ${c.componentId}: ${layers.length} layer(s), ${status(c.componentId)}`);

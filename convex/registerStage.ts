@@ -40,6 +40,7 @@ const layerV = v.object({
     anchor: v.object({ x: v.number(), y: v.number() }),
     approved: v.boolean(),
     usage: v.optional(v.union(v.literal("seated"), v.literal("exploded"))),
+    solidBottomY: v.optional(v.number()),
 });
 
 const componentV = v.object({
@@ -127,6 +128,7 @@ export const forSkus = query({
                         url: layer.image.url, width: layer.image.width, height: layer.image.height,
                         pxPerMm: layer.pxPerMm, anchor: layer.anchor, approved: layer.anchorStatus === "approved",
                         ...(layer.usage ? { usage: layer.usage } : {}),
+                        ...(layer.solidBottomY !== undefined ? { solidBottomY: layer.solidBottomY } : {}),
                     })),
                     approved: component.layers.length > 0 && component.layersStatus === "approved",
                 };
