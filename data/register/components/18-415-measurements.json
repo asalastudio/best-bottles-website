@@ -1,0 +1,2468 @@
+{
+ "neck": "18-415",
+ "psdRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+ "method": "library PSD registered on the closure of a sold SKU's master photo; photo scale tied to the body's register plate by seat-to-foot",
+ "components": [
+  {
+   "componentId": "CMP-CAP-BLK-18415-LTR",
+   "websiteSku": "CP18-415BlkLthr",
+   "type": "faux-leather-cap",
+   "psd": "20. Caps/6. 18-415 Caps/4. CP18-415BlkLthr.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/4. GBCrcl100RdcrBlkLthr.psd",
+    "sku": "GBCrcl100RdcrBlkLthr",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 212,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1",
+    "matchedLayers": [
+     "Layer 16"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 1 copy, Layer 1 copy",
+     "file": "CMP-CAP-BLK-18415-LTR--0-cap.png",
+     "width": 229,
+     "height": 245,
+     "sha256": "8bd04d6c5a282ea76c16bc8ec98df1f148e7f8e2740688a3ed44788dc7a182e7",
+     "pxPerMm": 7.1992,
+     "anchor": {
+      "x": 105.8,
+      "y": 112.8
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9794,
+    "libraryScale": 0.5623,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-CAP-BRN-18415-LTR",
+   "websiteSku": "CP18-415BrwnLthr",
+   "type": "faux-leather-cap",
+   "psd": "20. Caps/6. 18-415 Caps/5. CP18-415BrwnLthr.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/5. GBCrcl100RdcrBrwnLthr.psd",
+    "sku": "GBCrcl100RdcrBrwnLthr",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 212,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1",
+    "matchedLayers": [
+     "Layer 17"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 1 copy, Layer 1 copy",
+     "file": "CMP-CAP-BRN-18415-LTR--0-cap.png",
+     "width": 227,
+     "height": 244,
+     "sha256": "1a315abd51583519d964763719e510489ad65d41157649bb17af66481e4b36a8",
+     "pxPerMm": 7.0378,
+     "anchor": {
+      "x": 103.6,
+      "y": 114.3
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9848,
+    "libraryScale": 0.5497,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-CAP-IVY-18415-LTR",
+   "websiteSku": "CP18-415LIvyLthr",
+   "type": "faux-leather-cap",
+   "psd": "20. Caps/6. 18-415 Caps/44. CP18-415LIvyLthr.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/52. GBCrcl100RdcrIvyLthr.psd",
+    "sku": "GBCrcl100RdcrIvyLthr",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 212,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1",
+    "matchedLayers": [
+     "Layer 19"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 3",
+     "file": "CMP-CAP-IVY-18415-LTR--0-cap.png",
+     "width": 793,
+     "height": 870,
+     "sha256": "a8408ded928b19b85ab86622c68710570e26019c8d700529725937486f320422",
+     "pxPerMm": 26.3501,
+     "anchor": {
+      "x": 416.6,
+      "y": 383.2
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.993,
+    "libraryScale": 2.0582,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-CAP-LBRN-18415-LTR",
+   "websiteSku": "CP18-415LBrwnLthr",
+   "type": "faux-leather-cap",
+   "psd": "20. Caps/6. 18-415 Caps/6. CP18-415LBrwnLthr.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/6. GBCrcl100RdcrLBrwnLthr.psd",
+    "sku": "GBCrcl100RdcrLBrwnLthr",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 212,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1",
+    "matchedLayers": [
+     "Layer 18"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 1 copy, Layer 1 copy, Layer 1 copy",
+     "file": "CMP-CAP-LBRN-18415-LTR--0-cap.png",
+     "width": 227,
+     "height": 244,
+     "sha256": "334320d38cfb4759b15438ed2edf9a9a51ee5b7401cbb4b85c9364fa67631a69",
+     "pxPerMm": 7.1766,
+     "anchor": {
+      "x": 103.3,
+      "y": 111.9
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9761,
+    "libraryScale": 0.5606,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-CAP-MSLV-18415-S",
+   "websiteSku": "CP18-415MtSl",
+   "type": "cap",
+   "psd": "20. Caps/6. 18-415 Caps/9. CP18-415MtSl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/9. GBCrcl100RdcrMtSl.psd",
+    "sku": "GBCrcl100RdcrMtSl",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 212,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 17",
+    "matchedLayers": [
+     "Layer 16"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 1 copy",
+     "file": "CMP-CAP-MSLV-18415-S--0-cap.png",
+     "width": 233,
+     "height": 226,
+     "sha256": "ab1f6159d1e145299e2a6d78327fe5652877c76b4c9b3b643aa181c509a3c02d",
+     "pxPerMm": 9.6019,
+     "anchor": {
+      "x": 125.4,
+      "y": 44.8
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9571,
+    "libraryScale": 0.75,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-CAP-MSLV-18415-T",
+   "websiteSku": "CP18-415MtSlTall",
+   "type": "cap",
+   "psd": "20. Caps/6. 18-415 Caps/8. CP18-415MtSlTall.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/8. GBCrcl100RdcrMtSlTall.psd",
+    "sku": "GBCrcl100RdcrMtSlTall",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 212,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 16",
+    "matchedLayers": [
+     "Layer 15"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 1 copy",
+     "file": "CMP-CAP-MSLV-18415-T--0-cap.png",
+     "width": 204,
+     "height": 245,
+     "sha256": "25cdbc112e3e99fab06d1f3cee450933d40ef6841593c8b86ebbe6e72fb397f9",
+     "pxPerMm": 8.0656,
+     "anchor": {
+      "x": 105.1,
+      "y": 94.4
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.922,
+    "libraryScale": 0.63,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-CAP-PNK-18-415",
+   "websiteSku": "CP18-415AnSpPnk",
+   "type": "vintage-bulb-sprayer",
+   "psd": "20. Caps/9. 18-415 Ansp /24. Ansp18-415Pnk.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/34. GBCrcl100AnSpPnk.psd",
+    "sku": "GBCrcl100AnSpPnk",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 4 copy, Layer 11 (bottle photo)",
+     "file": "CMP-CAP-PNK-18-415--sprayer.png",
+     "width": 895,
+     "height": 605,
+     "sha256": "fe2b9f4a6911dff87628135ed9ed2fc74e19e4b890bf10e6ddcd6c68a0627727",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 747.5,
+      "y": 375
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "diptube",
+     "layerName": "Layer 4 copy, Layer 11 (bottle photo, below the collar from row 632)",
+     "file": "CMP-CAP-PNK-18-415--diptube.png",
+     "width": 289,
+     "height": 1077,
+     "sha256": "297dcbe55e3980401c7cb675942793aca98762ccf4ae4d48d5f0b13fc2a29bb7",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 164.5,
+      "y": -218
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 300,
+    "splitRow": 632
+   }
+  },
+  {
+   "componentId": "CMP-CAP-PNK-18415-LTR",
+   "websiteSku": "CP18-415LPnkLthr",
+   "type": "faux-leather-cap",
+   "psd": "20. Caps/6. 18-415 Caps/45. CP18-415LPnkLthr.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/51. GBCrcl100RdcrPnkLthr.psd",
+    "sku": "GBCrcl100RdcrPnkLthr",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 212,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1",
+    "matchedLayers": [
+     "Layer 18"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 2",
+     "file": "CMP-CAP-PNK-18415-LTR--0-cap.png",
+     "width": 794,
+     "height": 875,
+     "sha256": "63418091fd5457b015fea7d563ecb9f384bc320cb7bb20d93237e68f0ee678ce",
+     "pxPerMm": 26.2098,
+     "anchor": {
+      "x": 409.4,
+      "y": 392.6
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9876,
+    "libraryScale": 2.0472,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-CAP-SBLK-18415-T",
+   "websiteSku": "CP18-415ShnBlkTall",
+   "type": "cap",
+   "psd": "20. Caps/6. 18-415 Caps/2. CP18-415ShnBlkTall.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/2. GBCrcl100RdcrShnBlkTall.psd",
+    "sku": "GBCrcl100RdcrShnBlkTall",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 212,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 15",
+    "matchedLayers": [
+     "Layer 14"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 1 copy, Layer 1 copy",
+     "file": "CMP-CAP-SBLK-18415-T--0-cap.png",
+     "width": 221,
+     "height": 245,
+     "sha256": "216376a7f597fef31d124b470c9c1a99628f36fabed4e92f42c403e0e0ed4d5d",
+     "pxPerMm": 8.0673,
+     "anchor": {
+      "x": 99.6,
+      "y": 94.5
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9564,
+    "libraryScale": 0.6301,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-CAP-SGLD-18415-S",
+   "websiteSku": "CP18-415ShnGl",
+   "type": "cap",
+   "psd": "20. Caps/6. 18-415 Caps/1. CP18-415ShnGl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/1. GBCrcl100RdcrShnGl.psd",
+    "sku": "GBCrcl100RdcrShnGl",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 212,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 14",
+    "matchedLayers": [
+     "Layer 13"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 1 copy, Layer 1 copy",
+     "file": "CMP-CAP-SGLD-18415-S--0-cap.png",
+     "width": 233,
+     "height": 221,
+     "sha256": "3e51945791b1c5a47553daeea323ae74e11dae1673995e156062ad74f6192f53",
+     "pxPerMm": 9.014,
+     "anchor": {
+      "x": 115.8,
+      "y": 50.7
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9102,
+    "libraryScale": 0.7041,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-CAP-SSLV-18415-S",
+   "websiteSku": "CP18-415ShnSl",
+   "type": "cap",
+   "psd": "20. Caps/6. 18-415 Caps/7. CP18-415ShnSl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/7. GBCrcl100RdcrShnSl.psd",
+    "sku": "GBCrcl100RdcrShnSl",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 212,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 16",
+    "matchedLayers": [
+     "Layer 15"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 1 copy",
+     "file": "CMP-CAP-SSLV-18415-S--0-cap.png",
+     "width": 233,
+     "height": 236,
+     "sha256": "23b110009dcb021c8426237f8b7e97d622130de1a30f73a85c400626cab04172",
+     "pxPerMm": 9.558,
+     "anchor": {
+      "x": 125.1,
+      "y": 58.5
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.8469,
+    "libraryScale": 0.7466,
+    "approvable": false
+   }
+  },
+  {
+   "componentId": "CMP-CAP-WHT-18415-T",
+   "websiteSku": "CP18-415Wh",
+   "type": "cap",
+   "psd": "20. Caps/6. 18-415 Caps/10. CP18-415Wh.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/10. GBCrcl100RdcrWht.psd",
+    "sku": "GBCrcl100RdcrWht",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 212,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 18",
+    "matchedLayers": [
+     "Layer 17"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 1 copy",
+     "file": "CMP-CAP-WHT-18415-T--0-cap.png",
+     "width": 203,
+     "height": 245,
+     "sha256": "b2a62926377b89e2b34fea1be5ab2849186494e1210fde5bf8aa22ea2748dfa7",
+     "pxPerMm": 8.1068,
+     "anchor": {
+      "x": 105.8,
+      "y": 93.4
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9802,
+    "libraryScale": 0.6332,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-DRP-CPR-18415",
+   "websiteSku": "Drp18-415Cu",
+   "type": "dropper",
+   "psd": "20. Caps/29. 18-415 Droppers/Drp18-415Cu.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/53. GBCrcl50DrpCu.psd",
+    "sku": "GBCrcl50DrpCu",
+    "bodyId": "circle-50ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-50ml-18-415|Clear",
+    "bottlePxPerMm": 13.0144,
+    "rimY": 388,
+    "axisX": 727.5,
+    "seatToFootPx": 1224,
+    "plateSeatToFootPx": 1975,
+    "bodyLayer": "Layer 7"
+   },
+   "layers": [
+    {
+     "slot": "fitment",
+     "layerName": "Layer 5, Layer 8 (bottle photo)",
+     "file": "CMP-DRP-CPR-18415--fitment.png",
+     "width": 352,
+     "height": 558,
+     "sha256": "5dca56f5370736a5b7d4a1476528a04535128eba1ee8fb0bad10b26198b12cde",
+     "pxPerMm": 13.0144,
+     "anchor": {
+      "x": 183.5,
+      "y": 281
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 5, Layer 8 (bottle photo, below the collar from row 659)",
+     "file": "CMP-DRP-CPR-18415--pipette.png",
+     "width": 273,
+     "height": 807,
+     "sha256": "05c061b9a41a08e14302e2cbe89aaae4be3599f876adbff0ccc94e05a6f47c15",
+     "pxPerMm": 13.0144,
+     "anchor": {
+      "x": 178.5,
+      "y": -265
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 330,
+    "splitRow": 659
+   }
+  },
+  {
+   "componentId": "CMP-DRP-SGLD-18415",
+   "websiteSku": "Drp18-415Gl",
+   "type": "dropper",
+   "psd": "20. Caps/29. 18-415 Droppers/Drp18-415Gl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/52. GBCrcl50DrpGl.psd",
+    "sku": "GBCrcl50DrpGl",
+    "bodyId": "circle-50ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-50ml-18-415|Clear",
+    "bottlePxPerMm": 13.0144,
+    "rimY": 388,
+    "axisX": 727.5,
+    "seatToFootPx": 1224,
+    "plateSeatToFootPx": 1975,
+    "bodyLayer": "Layer 4"
+   },
+   "layers": [
+    {
+     "slot": "fitment",
+     "layerName": "Layer 5 (bottle photo)",
+     "file": "CMP-DRP-SGLD-18415--fitment.png",
+     "width": 350,
+     "height": 558,
+     "sha256": "7a854df705e47536e446f617b23a3f10c88725950df84cda5fdb7c9884e3c3e5",
+     "pxPerMm": 13.0144,
+     "anchor": {
+      "x": 177.5,
+      "y": 285
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 5 (bottle photo, below the collar from row 655)",
+     "file": "CMP-DRP-SGLD-18415--pipette.png",
+     "width": 340,
+     "height": 808,
+     "sha256": "c107345f6b44c10ea2fea2aae48ddd89d534134ae7ae31b6d841b86596e29661",
+     "pxPerMm": 13.0144,
+     "anchor": {
+      "x": 173.5,
+      "y": -261
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 328,
+    "splitRow": 655
+   }
+  },
+  {
+   "componentId": "CMP-DRP-SSLV-18415",
+   "websiteSku": "Drp18-415Sl",
+   "type": "dropper",
+   "psd": "20. Caps/29. 18-415 Droppers/Drp18-415Sl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/51. GBCrcl50DrpSl.psd",
+    "sku": "GBCrcl50DrpSl",
+    "bodyId": "circle-50ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-50ml-18-415|Clear",
+    "bottlePxPerMm": 13.0144,
+    "rimY": 388,
+    "axisX": 727.5,
+    "seatToFootPx": 1224,
+    "plateSeatToFootPx": 1975,
+    "bodyLayer": "Layer 7"
+   },
+   "layers": [
+    {
+     "slot": "fitment",
+     "layerName": "Layer 5 (bottle photo)",
+     "file": "CMP-DRP-SSLV-18415--fitment.png",
+     "width": 351,
+     "height": 558,
+     "sha256": "9312783a4b7bd0c76213531b28f28830e2b6854edbdfb5ab1baf8f681ff85540",
+     "pxPerMm": 13.0144,
+     "anchor": {
+      "x": 182.5,
+      "y": 281
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 5 (bottle photo, below the collar from row 659)",
+     "file": "CMP-DRP-SSLV-18415--pipette.png",
+     "width": 272,
+     "height": 807,
+     "sha256": "a76f594f97ab646b404a6aa2914fbca51135c485a62bd7fe293418607e225c3f",
+     "pxPerMm": 13.0144,
+     "anchor": {
+      "x": 177.5,
+      "y": -265
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 329,
+    "splitRow": 659
+   }
+  },
+  {
+   "componentId": "CMP-LPM-CPR-18-415",
+   "websiteSku": "Ltn18-415Cu",
+   "type": "lotion-pump",
+   "psd": "20. Caps/8. 18-415 Lotion/16. Ltn18-415Cu.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/56. LBCrcl100LtnCu.psd",
+    "sku": "LBCrcl100LtnCu",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 647.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1",
+    "matchedLayers": [
+     "Layer 9"
+    ],
+    "overcapPsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/55. LBCrcl100LtnCu.psd"
+   },
+   "layers": [
+    {
+     "slot": "pump",
+     "layerName": "Layer 1",
+     "file": "CMP-LPM-CPR-18-415--0-pump.png",
+     "width": 228,
+     "height": 400,
+     "sha256": "2f177bcda74c64e65f49676233c3baeee86b061d79b3c9015df4536ba1333510",
+     "pxPerMm": 8.786,
+     "anchor": {
+      "x": 114.7,
+      "y": 236.2
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 4 (55. LBCrcl100LtnCu.psd)",
+     "file": "CMP-LPM-CPR-18-415--overcap.png",
+     "width": 172,
+     "height": 1047,
+     "sha256": "fdcbb3406edf46c574eab9e04ffbbca64584b8f11303b0ccf5dff1e6f3e26355",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 87.5,
+      "y": -208
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9546,
+    "libraryScale": 0.6863,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-LPM-MGLD-18-415",
+   "websiteSku": "Ltn18-415MtGl",
+   "type": "lotion-pump",
+   "psd": "20. Caps/8. 18-415 Lotion/16. Ltn18-415MtGl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/14. LBCrcl100LtnMtGl.psd",
+    "sku": "LBCrcl100LtnMtGl",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 647.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1",
+    "matchedLayers": [
+     "Layer 7"
+    ],
+    "overcapPsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/12. LBCrcl100LtnMtGl.psd"
+   },
+   "layers": [
+    {
+     "slot": "pump",
+     "layerName": "Layer 1 copy",
+     "file": "CMP-LPM-MGLD-18-415--0-pump.png",
+     "width": 236,
+     "height": 400,
+     "sha256": "9bf0b332f31b19bb20950682f4cfa41491932484add300d78ee57f905391ef4b",
+     "pxPerMm": 8.8222,
+     "anchor": {
+      "x": 118.2,
+      "y": 242.1
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 4 (12. LBCrcl100LtnMtGl.psd)",
+     "file": "CMP-LPM-MGLD-18-415--overcap.png",
+     "width": 172,
+     "height": 1047,
+     "sha256": "88d7a7bab85621430588d793dc762bf81e29bc3d49d76afb1e9a747d13867e89",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 88.5,
+      "y": -208
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9103,
+    "libraryScale": 0.6891,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-LPM-MSLV-18-415-01",
+   "websiteSku": "Ltn18-415MtSl",
+   "type": "lotion-pump",
+   "psd": "20. Caps/8. 18-415 Lotion/16. Ltn18-415MtSl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/25. LBCrcl100LtnMtSl.psd",
+    "sku": "LBCrcl100LtnMtSl",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 668.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1",
+    "matchedLayers": [
+     "Layer 10"
+    ],
+    "overcapPsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/26. LBCrcl100LtnMtSl.psd"
+   },
+   "layers": [
+    {
+     "slot": "pump",
+     "layerName": "Layer 1 copy",
+     "file": "CMP-LPM-MSLV-18-415-01--0-pump.png",
+     "width": 552,
+     "height": 995,
+     "sha256": "0cc427bbd8ed00ae446a8a4e5fec65e8a3f68476b7f4cf11c6398f51825987bb",
+     "pxPerMm": 23.1664,
+     "anchor": {
+      "x": 296.2,
+      "y": 570.7
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 4 (26. LBCrcl100LtnMtSl.psd)",
+     "file": "CMP-LPM-MSLV-18-415-01--overcap.png",
+     "width": 172,
+     "height": 1047,
+     "sha256": "88d7a7bab85621430588d793dc762bf81e29bc3d49d76afb1e9a747d13867e89",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 88.5,
+      "y": -208
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9604,
+    "libraryScale": 1.8095,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-LPM-MSLV-18-415-02",
+   "websiteSku": "Ltn18-415MtSlCl",
+   "type": "lotion-pump",
+   "psd": "20. Caps/8. 18-415 Lotion/20. Ltn18-415MtSlCl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/27. LBCrcl100LtnClOvrCap.psd",
+    "sku": "LBCrcl100LtnClOvrCap",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 650.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1",
+    "matchedLayers": [
+     "Layer 10"
+    ],
+    "overcapPsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/28. LBCrcl100LtnClOvrCap.psd"
+   },
+   "layers": [
+    {
+     "slot": "pump",
+     "layerName": "Layer 2 copy",
+     "file": "CMP-LPM-MSLV-18-415-02--0-pump.png",
+     "width": 565,
+     "height": 981,
+     "sha256": "c4e70e2d9fcd9d18fd74b384607f1faed235200eafc355f70caf5f83ba538bc9",
+     "pxPerMm": 23.0964,
+     "anchor": {
+      "x": 279.7,
+      "y": 552.8
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 4 (28. LBCrcl100LtnClOvrCap.psd)",
+     "file": "CMP-LPM-MSLV-18-415-02--overcap.png",
+     "width": 172,
+     "height": 1047,
+     "sha256": "88d7a7bab85621430588d793dc762bf81e29bc3d49d76afb1e9a747d13867e89",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 88.5,
+      "y": -208
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9702,
+    "libraryScale": 1.8041,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-LPM-SBLK-18-415",
+   "websiteSku": "Ltn18-415ShnBlk",
+   "type": "lotion-pump",
+   "psd": "20. Caps/8. 18-415 Lotion/18. Ltn18-415ShnBlk.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/20. LBCrcl100LtnShnBlk.psd",
+    "sku": "LBCrcl100LtnShnBlk",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 669.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1",
+    "matchedLayers": [
+     "Layer 9"
+    ],
+    "overcapPsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/22. LBCrcl100LtnShnBlk.psd"
+   },
+   "layers": [
+    {
+     "slot": "pump",
+     "layerName": "Layer 1 copy",
+     "file": "CMP-LPM-SBLK-18-415--0-pump.png",
+     "width": 233,
+     "height": 400,
+     "sha256": "7fd1cfbea3ed6283b4937b6c0f9d3416bc379da9fabc13b1bc4d460e74d71176",
+     "pxPerMm": 9.1446,
+     "anchor": {
+      "x": 125.2,
+      "y": 228.6
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 4 (22. LBCrcl100LtnShnBlk.psd)",
+     "file": "CMP-LPM-SBLK-18-415--overcap.png",
+     "width": 172,
+     "height": 1047,
+     "sha256": "88d7a7bab85621430588d793dc762bf81e29bc3d49d76afb1e9a747d13867e89",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 88.5,
+      "y": -208
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9607,
+    "libraryScale": 0.7143,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-LPM-SGLD-18-415",
+   "websiteSku": "Ltn18-415ShnGl",
+   "type": "lotion-pump",
+   "psd": "20. Caps/8. 18-415 Lotion/17. Ltn18-415ShnGl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/16. LBCrcl100LtnShnGl.psd",
+    "sku": "LBCrcl100LtnShnGl",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 668.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1",
+    "matchedLayers": [
+     "Layer 8"
+    ],
+    "overcapPsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/18. LBCrcl100LtnShnGl.psd"
+   },
+   "layers": [
+    {
+     "slot": "pump",
+     "layerName": "Layer 1 copy",
+     "file": "CMP-LPM-SGLD-18-415--0-pump.png",
+     "width": 239,
+     "height": 400,
+     "sha256": "07155152afd69e8ef46c789f986353c6a4246c8dd0d9b47d32454294c1f0159b",
+     "pxPerMm": 9.4085,
+     "anchor": {
+      "x": 120.7,
+      "y": 227.9
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 4 (18. LBCrcl100LtnShnGl.psd)",
+     "file": "CMP-LPM-SGLD-18-415--overcap.png",
+     "width": 172,
+     "height": 1047,
+     "sha256": "88d7a7bab85621430588d793dc762bf81e29bc3d49d76afb1e9a747d13867e89",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 88.5,
+      "y": -208
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9888,
+    "libraryScale": 0.7349,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-LPM-SSLV-18-415",
+   "websiteSku": "Ltn18-415ShnSl",
+   "type": "lotion-pump",
+   "psd": "20. Caps/8. 18-415 Lotion/21. Ltn18-415ShnSl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/31. LBCrcl100LtnShnSl.psd",
+    "sku": "LBCrcl100LtnShnSl",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 652.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1",
+    "matchedLayers": [
+     "Layer 11"
+    ],
+    "overcapPsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/32. LBCrcl100LtnShnSl.psd"
+   },
+   "layers": [
+    {
+     "slot": "pump",
+     "layerName": "Layer 2 copy",
+     "file": "CMP-LPM-SSLV-18-415--0-pump.png",
+     "width": 231,
+     "height": 400,
+     "sha256": "5ab4afef966a38362aa7e46a12c8f076a476dc3c005f0425521645c0c8b662c4",
+     "pxPerMm": 9.2722,
+     "anchor": {
+      "x": 117.4,
+      "y": 229.9
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 4 (32. LBCrcl100LtnShnSl.psd)",
+     "file": "CMP-LPM-SSLV-18-415--overcap.png",
+     "width": 172,
+     "height": 1047,
+     "sha256": "88d7a7bab85621430588d793dc762bf81e29bc3d49d76afb1e9a747d13867e89",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 88.5,
+      "y": -208
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9708,
+    "libraryScale": 0.7243,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-SPR-BKSL-18-415-02",
+   "websiteSku": "AnSp18-415Blk",
+   "type": "vintage-bulb-sprayer",
+   "psd": "20. Caps/9. 18-415 Ansp /29. Ansp18-415Blk.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/39. GBCrcl100AnSpBlk.psd",
+    "sku": "GBCrcl100AnSpBlk",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 4 copy, Layer 16 (bottle photo)",
+     "file": "CMP-SPR-BKSL-18-415-02--sprayer.png",
+     "width": 931,
+     "height": 624,
+     "sha256": "56014b6a9c88597dae905be7f316d6e959c759b6049fa902e038cf9ce2c4c82b",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 789.5,
+      "y": 396
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "diptube",
+     "layerName": "Layer 4 copy, Layer 16 (bottle photo, below the collar from row 630)",
+     "file": "CMP-SPR-BKSL-18-415-02--diptube.png",
+     "width": 307,
+     "height": 1079,
+     "sha256": "24a0336827af08588ef9607a78314cb32c7bca7420aa606553d39e63863c8244",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 165.5,
+      "y": -216
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 294,
+    "splitRow": 630
+   }
+  },
+  {
+   "componentId": "CMP-SPR-BLK-18-415-02",
+   "websiteSku": "AnSpTsl18-415Blk",
+   "type": "tassel-bulb-sprayer",
+   "psd": "20. Caps/10. 18-415 Ansp Tsl/41. AnspTsl18-415Blk.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/48. GBCrcl100AnSpTslBlk.psd",
+    "sku": "GBCrcl100AnSpTslBlk",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 394,
+    "axisX": 1483.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 4 copy, Layer 8, Layer 5 (bottle photo)",
+     "file": "CMP-SPR-BLK-18-415-02--sprayer.png",
+     "width": 1628,
+     "height": 1800,
+     "sha256": "33a206a1c60bba73428c2691224d325b015c05d1e02f41a1f49c4f4b9bcc8278",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 1483.5,
+      "y": 308
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "diptube",
+     "layerName": "Layer 4 copy, Layer 8, Layer 5 (bottle photo, below the collar from row 609)",
+     "file": "CMP-SPR-BLK-18-415-02--diptube.png",
+     "width": 310,
+     "height": 1100,
+     "sha256": "1f27de662c8986fd569b0570444ac99d40bca5e408d110f520ed5fa3e7e90439",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 167.5,
+      "y": -209
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 295,
+    "splitRow": 609
+   }
+  },
+  {
+   "componentId": "CMP-SPR-GLD-18-415-02",
+   "websiteSku": "AnSp18-415Gl",
+   "type": "vintage-bulb-sprayer",
+   "psd": "20. Caps/9. 18-415 Ansp /27. Ansp18-415Gl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/37. GBCrcl100AnSpGl.psd",
+    "sku": "GBCrcl100AnSpGl",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 4 copy, Layer 14 (bottle photo)",
+     "file": "CMP-SPR-GLD-18-415-02--sprayer.png",
+     "width": 908,
+     "height": 601,
+     "sha256": "848c7bd50bb6d1aeb8797964e7ee84f6c21cdc31e9d1e97f692bae55ce5ef6dd",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 764.5,
+      "y": 373
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "diptube",
+     "layerName": "Layer 4 copy, Layer 14 (bottle photo, below the collar from row 630)",
+     "file": "CMP-SPR-GLD-18-415-02--diptube.png",
+     "width": 216,
+     "height": 1079,
+     "sha256": "4b8638272643f3ee81c427594e4e9dd8f62368f72113eeb4d36fb30c293f1f70",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 166.5,
+      "y": -216
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 296,
+    "splitRow": 630
+   }
+  },
+  {
+   "componentId": "CMP-SPR-GLD-18415-TSL",
+   "websiteSku": "CP18-415AnSpTslGl",
+   "type": "tassel-bulb-sprayer",
+   "psd": "20. Caps/10. 18-415 Ansp Tsl/43. AnspTsl18-415Gl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/50. GBCrcl100AnSpTslGl.psd",
+    "sku": "GBCrcl100AnSpTslGl",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 1483.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 4 copy, Layer 7, Layer 5 (bottle photo)",
+     "file": "CMP-SPR-GLD-18415-TSL--sprayer.png",
+     "width": 1616,
+     "height": 1731,
+     "sha256": "e55cea34d77f95d743ee6965f693cad020d6d1e5d4ef9e3d27866ba9b65901b9",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 1471.5,
+      "y": 308
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "diptube",
+     "layerName": "Layer 4 copy, Layer 7, Layer 5 (bottle photo, below the collar from row 623)",
+     "file": "CMP-SPR-GLD-18415-TSL--diptube.png",
+     "width": 310,
+     "height": 1086,
+     "sha256": "766f01599bebf01df69b029f83f23c48dc964863f76846aa3daae8f24d79af2e",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 167.5,
+      "y": -209
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 295,
+    "splitRow": 623
+   }
+  },
+  {
+   "componentId": "CMP-SPR-IVGD-18-415-01",
+   "websiteSku": "AnSp18-415IvyGl",
+   "type": "vintage-bulb-sprayer",
+   "psd": "20. Caps/9. 18-415 Ansp /28. Ansp18-415IvyGl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/38. GBCrcl100AnSpIvyGl.psd",
+    "sku": "GBCrcl100AnSpIvyGl",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 4 copy, Layer 15 (bottle photo)",
+     "file": "CMP-SPR-IVGD-18-415-01--sprayer.png",
+     "width": 903,
+     "height": 601,
+     "sha256": "5c10da82ef2bba1e99ea2bb55d7e39846e2da40a0d206c87fadb0cfd5fbc3119",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 759.5,
+      "y": 374
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "diptube",
+     "layerName": "Layer 4 copy, Layer 15 (bottle photo, below the collar from row 629)",
+     "file": "CMP-SPR-IVGD-18-415-01--diptube.png",
+     "width": 250,
+     "height": 1080,
+     "sha256": "f91aa69443e108538583daf79eb78fdc1acd9851a8ab35d90db324bdc0d65a8f",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 163.5,
+      "y": -215
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 295,
+    "splitRow": 629
+   }
+  },
+  {
+   "componentId": "CMP-SPR-IVGD-18-415-02",
+   "websiteSku": "AnSpTsl18-415IvyGl",
+   "type": "tassel-bulb-sprayer",
+   "psd": "20. Caps/10. 18-415 Ansp Tsl/36. AnspTsl18-415IvyGl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/43. GBCrcl100AnSpTslIvyGl.psd",
+    "sku": "GBCrcl100AnSpTslIvyGl",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 1483.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 4 copy, Layer 4, Layer 5 (bottle photo)",
+     "file": "CMP-SPR-IVGD-18-415-02--sprayer.png",
+     "width": 1628,
+     "height": 1723,
+     "sha256": "65295d990e4ec3833f3c24a9c153b765fcae099643486058ef07215b7f38df4d",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 1483.5,
+      "y": 308
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "diptube",
+     "layerName": "Layer 4 copy, Layer 4, Layer 5 (bottle photo, below the collar from row 623)",
+     "file": "CMP-SPR-IVGD-18-415-02--diptube.png",
+     "width": 310,
+     "height": 1086,
+     "sha256": "766f01599bebf01df69b029f83f23c48dc964863f76846aa3daae8f24d79af2e",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 167.5,
+      "y": -209
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 295,
+    "splitRow": 623
+   }
+  },
+  {
+   "componentId": "CMP-SPR-IVSL-18-415-01",
+   "websiteSku": "AnSp18-415IvySl",
+   "type": "vintage-bulb-sprayer",
+   "psd": "20. Caps/9. 18-415 Ansp /26. Ansp18-415IvySl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/36. GBCrcl100AnSpIvySl.psd",
+    "sku": "GBCrcl100AnSpIvySl",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 4 copy, Layer 13 (bottle photo)",
+     "file": "CMP-SPR-IVSL-18-415-01--sprayer.png",
+     "width": 895,
+     "height": 594,
+     "sha256": "52d56b0edf6a752c7686ab3caefd1a5aa3c1f60e5f39ce1197b090b127412ff0",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 756.5,
+      "y": 365
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "diptube",
+     "layerName": "Layer 4 copy, Layer 13 (bottle photo, below the collar from row 631)",
+     "file": "CMP-SPR-IVSL-18-415-01--diptube.png",
+     "width": 241,
+     "height": 1078,
+     "sha256": "96f18e9202029effdeed49f523d72d9ecf27eae6ccc7a3328f65af45e273ca45",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 160.5,
+      "y": -217
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 286,
+    "splitRow": 631
+   }
+  },
+  {
+   "componentId": "CMP-SPR-IVSL-18-415-02",
+   "websiteSku": "AnSpTsl18-415IvySl",
+   "type": "tassel-bulb-sprayer",
+   "psd": "20. Caps/10. 18-415 Ansp Tsl/37. AnspTsl18-415IvySl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/44. GBCrcl100AnSpTslIvySl.psd",
+    "sku": "GBCrcl100AnSpTslIvySl",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 1483.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 4 copy, Layer 4, Layer 5 (bottle photo)",
+     "file": "CMP-SPR-IVSL-18-415-02--sprayer.png",
+     "width": 1628,
+     "height": 1723,
+     "sha256": "65295d990e4ec3833f3c24a9c153b765fcae099643486058ef07215b7f38df4d",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 1483.5,
+      "y": 308
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "diptube",
+     "layerName": "Layer 4 copy, Layer 4, Layer 5 (bottle photo, below the collar from row 623)",
+     "file": "CMP-SPR-IVSL-18-415-02--diptube.png",
+     "width": 310,
+     "height": 1086,
+     "sha256": "766f01599bebf01df69b029f83f23c48dc964863f76846aa3daae8f24d79af2e",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 167.5,
+      "y": -209
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 295,
+    "splitRow": 623
+   }
+  },
+  {
+   "componentId": "CMP-SPR-LVN-18-415-01",
+   "websiteSku": "AnSp18-415Lvn",
+   "type": "vintage-bulb-sprayer",
+   "psd": "20. Caps/9. 18-415 Ansp /23. Ansp18-415Lvn.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/33. GBCrcl100AnSpLvn.psd",
+    "sku": "GBCrcl100AnSpLvn",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 4 copy, Layer 10 (bottle photo)",
+     "file": "CMP-SPR-LVN-18-415-01--sprayer.png",
+     "width": 909,
+     "height": 615,
+     "sha256": "fb3882c11bede6f49e7741c52e8376b1aa7ecd94fa2f910e52eaa98ec005ece4",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 760.5,
+      "y": 382
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "diptube",
+     "layerName": "Layer 4 copy, Layer 10 (bottle photo, below the collar from row 635)",
+     "file": "CMP-SPR-LVN-18-415-01--diptube.png",
+     "width": 218,
+     "height": 1074,
+     "sha256": "1143c9c604151cceb939ac6486824ee4b4c787400c70f558236a252d3b6e3616",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 165.5,
+      "y": -221
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 299,
+    "splitRow": 635
+   }
+  },
+  {
+   "componentId": "CMP-SPR-LVN-18-415-02",
+   "websiteSku": "AnSpTsl18-415Lvn",
+   "type": "tassel-bulb-sprayer",
+   "psd": "20. Caps/10. 18-415 Ansp Tsl/35. AnspTsl18-415Lvn.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/42. GBCrcl100AnSpTslLvn.psd",
+    "sku": "GBCrcl100AnSpTslLvn",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 1483.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 4 copy, Layer 2, Layer 3 (bottle photo)",
+     "file": "CMP-SPR-LVN-18-415-02--sprayer.png",
+     "width": 1595,
+     "height": 1739,
+     "sha256": "f7d88c6ee47c769a088b231b5df53883c7ec262ec08badeed0633db1771c8b3b",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 1446.5,
+      "y": 313
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "diptube",
+     "layerName": "Layer 4 copy, Layer 2, Layer 3 (bottle photo, below the collar from row 623)",
+     "file": "CMP-SPR-LVN-18-415-02--diptube.png",
+     "width": 317,
+     "height": 1086,
+     "sha256": "a2a023ea66d9ec4c9e95efadf3a1b0b4bcad90f9881292d8703136d0f7050c4a",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 169.5,
+      "y": -209
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 302,
+    "splitRow": 623
+   }
+  },
+  {
+   "componentId": "CMP-SPR-MSLV-18-415-01",
+   "websiteSku": "AnSp18-415MtSl",
+   "type": "vintage-bulb-sprayer",
+   "psd": "20. Caps/9. 18-415 Ansp /25. Ansp18-415MtSl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/35. GBCrcl100AnSpMtSl.psd",
+    "sku": "GBCrcl100AnSpMtSl",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 4 copy, Layer 12 (bottle photo)",
+     "file": "CMP-SPR-MSLV-18-415-01--sprayer.png",
+     "width": 919,
+     "height": 607,
+     "sha256": "099f66c6982497245525b930a03661058e5ef5bcf77b10538a0e3270bc83f85b",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 777.5,
+      "y": 374
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "diptube",
+     "layerName": "Layer 4 copy, Layer 12 (bottle photo, below the collar from row 635)",
+     "file": "CMP-SPR-MSLV-18-415-01--diptube.png",
+     "width": 245,
+     "height": 1074,
+     "sha256": "76e1f0ff98ef2fc42944d94f47be5053061daac866ee94c8d8d7413729e0d0ef",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 162.5,
+      "y": -221
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 289,
+    "splitRow": 635
+   }
+  },
+  {
+   "componentId": "CMP-SPR-MSLV-18-415-02",
+   "websiteSku": "AnSpTsl18-415MtS",
+   "type": "tassel-bulb-sprayer",
+   "psd": "20. Caps/10. 18-415 Ansp Tsl/42. AnspTsl18-415MtS.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/49. GBCrcl100AnSpTslMtSl.psd",
+    "sku": "GBCrcl100AnSpTslMtSl",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 394,
+    "axisX": 1483.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 4 copy, Layer 10, Layer 11 (bottle photo)",
+     "file": "CMP-SPR-MSLV-18-415-02--sprayer.png",
+     "width": 1634,
+     "height": 1796,
+     "sha256": "2db04d2b0302648aba85244fbe820d2751a97df88638c96dffbd8f2d1596d2b6",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 1483.5,
+      "y": 322
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "diptube",
+     "layerName": "Layer 4 copy, Layer 10, Layer 11 (bottle photo, below the collar from row 615)",
+     "file": "CMP-SPR-MSLV-18-415-02--diptube.png",
+     "width": 313,
+     "height": 1094,
+     "sha256": "e09966cc96a29b1a2bab068a7df2959dbc883c418828e3beeddfb10390b410e8",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 162.5,
+      "y": -215
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 299,
+    "splitRow": 615
+   }
+  },
+  {
+   "componentId": "CMP-SPR-MTCP-18-415-03",
+   "websiteSku": "Spry18-415Cu",
+   "type": "fine-mist-sprayer",
+   "psd": "20. Caps/7. 18-415 Sprayers /15. Spry18-415Cu.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/54. GBCrcl100SpryCu.psd",
+    "sku": "GBCrcl100SpryCu",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 668.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1",
+    "matchedLayers": [
+     "Layer 6"
+    ],
+    "overcapPsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/53. GBCrcl100SpryCu.psd"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 1",
+     "file": "CMP-SPR-MTCP-18-415-03--0-sprayer.png",
+     "width": 229,
+     "height": 400,
+     "sha256": "3e202abc21d58540a291c613276788e92e181cd8dbbbe0bae3b999b979372042",
+     "pxPerMm": 9.0702,
+     "anchor": {
+      "x": 118.5,
+      "y": 231.3
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 2 (53. GBCrcl100SpryCu.psd)",
+     "file": "CMP-SPR-MTCP-18-415-03--overcap.png",
+     "width": 118,
+     "height": 1053,
+     "sha256": "1ec2b8aa8fe6a2bfcae21d4f2a0d4e3d839f1f1d22781e18ca0f69985c968fab",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 61.5,
+      "y": -211
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9799,
+    "libraryScale": 0.7085,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-SPR-MTGD-18-415-05",
+   "websiteSku": "Spry18-415MtGl",
+   "type": "fine-mist-sprayer",
+   "psd": "20. Caps/7. 18-415 Sprayers /11. Spry18-415MtGl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/13. GBCrcl100SpryMtGl.psd",
+    "sku": "GBCrcl100SpryMtGl",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 668.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1",
+    "matchedLayers": [
+     "Layer 4"
+    ],
+    "overcapPsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/11. GBCrcl100SpryMtGl.psd"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 1 copy",
+     "file": "CMP-SPR-MTGD-18-415-05--0-sprayer.png",
+     "width": 232,
+     "height": 400,
+     "sha256": "e485dc376198c07273f8af57baf1e8c297f576a2b2a7686a33af3e2c5a78dc0e",
+     "pxPerMm": 8.7991,
+     "anchor": {
+      "x": 119.2,
+      "y": 234.8
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 2 (11. GBCrcl100SpryMtGl.psd)",
+     "file": "CMP-SPR-MTGD-18-415-05--overcap.png",
+     "width": 118,
+     "height": 1053,
+     "sha256": "1ec2b8aa8fe6a2bfcae21d4f2a0d4e3d839f1f1d22781e18ca0f69985c968fab",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 61.5,
+      "y": -211
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9376,
+    "libraryScale": 0.6873,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-SPR-MTSL-18-415-06",
+   "websiteSku": "Spry18-415MtSl",
+   "type": "fine-mist-sprayer",
+   "psd": "20. Caps/7. 18-415 Sprayers /14. Spry18-415MtSl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/23. GBCrcl100SpryMtSl.psd",
+    "sku": "GBCrcl100SpryMtSl",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 672.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1",
+    "matchedLayers": [
+     "Layer 7"
+    ],
+    "overcapPsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/24. GBCrcl100SpryMtSl.psd"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 1 copy",
+     "file": "CMP-SPR-MTSL-18-415-06--0-sprayer.png",
+     "width": 226,
+     "height": 397,
+     "sha256": "5c50ea9efde8b3535c6330bf6b21429e2300857f9ba7d9c47677349dce048cef",
+     "pxPerMm": 9.1322,
+     "anchor": {
+      "x": 120.9,
+      "y": 226.0
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 2 (24. GBCrcl100SpryMtSl.psd)",
+     "file": "CMP-SPR-MTSL-18-415-06--overcap.png",
+     "width": 118,
+     "height": 1053,
+     "sha256": "1ec2b8aa8fe6a2bfcae21d4f2a0d4e3d839f1f1d22781e18ca0f69985c968fab",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 61.5,
+      "y": -211
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9587,
+    "libraryScale": 0.7133,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-SPR-PNK-18-415",
+   "websiteSku": "AnSpTsl18-415Pnk",
+   "type": "tassel-bulb-sprayer",
+   "psd": "20. Caps/10. 18-415 Ansp Tsl/39. AnspTsl18-415Pnk.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/46. GBCrcl100AnSpTslPnk.psd",
+    "sku": "GBCrcl100AnSpTslPnk",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 1483.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 4 copy, Layer 6, Layer 5 (bottle photo)",
+     "file": "CMP-SPR-PNK-18-415--sprayer.png",
+     "width": 1628,
+     "height": 1738,
+     "sha256": "3debade8363940ccb81dcbb816cd241ad794c42d76a450f95b15cdfebe36056c",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 1483.5,
+      "y": 308
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "diptube",
+     "layerName": "Layer 4 copy, Layer 6, Layer 5 (bottle photo, below the collar from row 623)",
+     "file": "CMP-SPR-PNK-18-415--diptube.png",
+     "width": 310,
+     "height": 1086,
+     "sha256": "766f01599bebf01df69b029f83f23c48dc964863f76846aa3daae8f24d79af2e",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 167.5,
+      "y": -209
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 295,
+    "splitRow": 623
+   }
+  },
+  {
+   "componentId": "CMP-SPR-RED-18-415-01",
+   "websiteSku": "AnSp18-415Red",
+   "type": "vintage-bulb-sprayer",
+   "psd": "20. Caps/9. 18-415 Ansp /31. Ansp18-415Red.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/41. GBCrcl100AnSpRed.psd",
+    "sku": "GBCrcl100AnSpRed",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 4 copy, Layer 18 (bottle photo)",
+     "file": "CMP-SPR-RED-18-415-01--sprayer.png",
+     "width": 937,
+     "height": 630,
+     "sha256": "de409ea9e8d475eb4fa76257d368108c228a606f892cfc5089d80386b9ce8dca",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 790.5,
+      "y": 402
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "diptube",
+     "layerName": "Layer 4 copy, Layer 18 (bottle photo, below the collar from row 630)",
+     "file": "CMP-SPR-RED-18-415-01--diptube.png",
+     "width": 312,
+     "height": 1079,
+     "sha256": "080fab704543ae3f1c2791e4cb635300821c7e62c5b58f524a24a693560f4f1e",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 165.5,
+      "y": -216
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 298,
+    "splitRow": 630
+   }
+  },
+  {
+   "componentId": "CMP-SPR-RED-18-415-02",
+   "websiteSku": "AnSpTsl18-415Red",
+   "type": "tassel-bulb-sprayer",
+   "psd": "20. Caps/10. 18-415 Ansp Tsl/40. AnspTsl18-415Red.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/47. GBCrcl100AnSpTslRed.psd",
+    "sku": "GBCrcl100AnSpTslRed",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 1483.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 4 copy, Layer 7, Layer 5 (bottle photo)",
+     "file": "CMP-SPR-RED-18-415-02--sprayer.png",
+     "width": 1628,
+     "height": 1706,
+     "sha256": "de03bde7cdcbb3b85f17572ad955744fb6a518ca3a26f782e005b5f97e77b302",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 1483.5,
+      "y": 308
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "diptube",
+     "layerName": "Layer 4 copy, Layer 7, Layer 5 (bottle photo, below the collar from row 623)",
+     "file": "CMP-SPR-RED-18-415-02--diptube.png",
+     "width": 310,
+     "height": 1086,
+     "sha256": "766f01599bebf01df69b029f83f23c48dc964863f76846aa3daae8f24d79af2e",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 167.5,
+      "y": -209
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 295,
+    "splitRow": 623
+   }
+  },
+  {
+   "componentId": "CMP-SPR-SHBK-18-415-06",
+   "websiteSku": "Spry18-415ShnBlk",
+   "type": "fine-mist-sprayer",
+   "psd": "20. Caps/7. 18-415 Sprayers /13. Spry18-415ShnBlk.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/19. GBCrcl100SpryShnBlk.psd",
+    "sku": "GBCrcl100SpryShnBlk",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 668.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1",
+    "matchedLayers": [
+     "Layer 6"
+    ],
+    "overcapPsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/21. GBCrcl100SpryShnBlk.psd"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 1 copy",
+     "file": "CMP-SPR-SHBK-18-415-06--0-sprayer.png",
+     "width": 232,
+     "height": 400,
+     "sha256": "9d494fd880618a93df237d4a4ce12c35c13cc5b98af531044a943793654e9994",
+     "pxPerMm": 9.017,
+     "anchor": {
+      "x": 124.6,
+      "y": 229.4
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 2 (21. GBCrcl100SpryShnBlk.psd)",
+     "file": "CMP-SPR-SHBK-18-415-06--overcap.png",
+     "width": 118,
+     "height": 1053,
+     "sha256": "1ec2b8aa8fe6a2bfcae21d4f2a0d4e3d839f1f1d22781e18ca0f69985c968fab",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 61.5,
+      "y": -211
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.949,
+    "libraryScale": 0.7043,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-SPR-SHGD-18-415-05",
+   "websiteSku": "Spry18-415ShnGl",
+   "type": "fine-mist-sprayer",
+   "psd": "20. Caps/7. 18-415 Sprayers /12. Spry18-415ShnGl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/15. GBCrcl100SpryShnGl.psd",
+    "sku": "GBCrcl100SpryShnGl",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 639.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1",
+    "matchedLayers": [
+     "Layer 5"
+    ],
+    "overcapPsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/17. GBCrcl100SpryShnGl.psd"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 1 copy",
+     "file": "CMP-SPR-SHGD-18-415-05--0-sprayer.png",
+     "width": 242,
+     "height": 400,
+     "sha256": "41f38526607d7ec57dcc6c175773a0ec77889e76f1bd23f478cc2292b6497846",
+     "pxPerMm": 9.2797,
+     "anchor": {
+      "x": 120.2,
+      "y": 228.6
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 2 (17. GBCrcl100SpryShnGl.psd)",
+     "file": "CMP-SPR-SHGD-18-415-05--overcap.png",
+     "width": 118,
+     "height": 1053,
+     "sha256": "1ec2b8aa8fe6a2bfcae21d4f2a0d4e3d839f1f1d22781e18ca0f69985c968fab",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 61.5,
+      "y": -211
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9914,
+    "libraryScale": 0.7248,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-SPR-SHSL-18-415-06",
+   "websiteSku": "Spry18-415ShnSl",
+   "type": "fine-mist-sprayer",
+   "psd": "20. Caps/7. 18-415 Sprayers /15. Spry18-415ShnSl.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/29. GBCrcl100SpryShnSl.psd",
+    "sku": "GBCrcl100SpryShnSl",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 653.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1",
+    "matchedLayers": [
+     "Layer 8"
+    ],
+    "overcapPsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/30. GBCrcl100SpryShnSl.psd"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 2 copy",
+     "file": "CMP-SPR-SHSL-18-415-06--0-sprayer.png",
+     "width": 226,
+     "height": 398,
+     "sha256": "a26b031f10138c75eae2c73ead6908b1896facdfee8e4a690d34e2f0c2a49616",
+     "pxPerMm": 9.0296,
+     "anchor": {
+      "x": 114.6,
+      "y": 231.3
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 2 (30. GBCrcl100SpryShnSl.psd)",
+     "file": "CMP-SPR-SHSL-18-415-06--overcap.png",
+     "width": 118,
+     "height": 1053,
+     "sha256": "1ec2b8aa8fe6a2bfcae21d4f2a0d4e3d839f1f1d22781e18ca0f69985c968fab",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 61.5,
+      "y": -211
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9431,
+    "libraryScale": 0.7053,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-SPR-WHT-18-415-01",
+   "websiteSku": "AnSp18-415Wht",
+   "type": "vintage-bulb-sprayer",
+   "psd": "20. Caps/9. 18-415 Ansp /30. Ansp18-415Wht.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/40. GBCrcl100AnSpWht.psd",
+    "sku": "GBCrcl100AnSpWht",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 4 copy, Layer 17 (bottle photo)",
+     "file": "CMP-SPR-WHT-18-415-01--sprayer.png",
+     "width": 935,
+     "height": 621,
+     "sha256": "dc778d02391bae45222b728542eec2cbaba5d42d7d96c0d8ec4e7fa2680c5d33",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 791.5,
+      "y": 395
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "diptube",
+     "layerName": "Layer 4 copy, Layer 17 (bottle photo, below the collar from row 628)",
+     "file": "CMP-SPR-WHT-18-415-01--diptube.png",
+     "width": 308,
+     "height": 1081,
+     "sha256": "347ab1692692da32b086c29d77a22dfecfa87ca9c975b10b8f3c7be98bcde119",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 164.5,
+      "y": -214
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 293,
+    "splitRow": 628
+   }
+  },
+  {
+   "componentId": "CMP-SPR-WHT-18-415-02",
+   "websiteSku": "AnSpTsl18-415Wht",
+   "type": "tassel-bulb-sprayer",
+   "psd": "20. Caps/10. 18-415 Ansp Tsl/38. AnspTsl18-415Wht.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/45. GBCrcl100AnSpTslWht.psd",
+    "sku": "GBCrcl100AnSpTslWht",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 408,
+    "axisX": 1483.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1977,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 4 copy, Layer 6, Layer 5 (bottle photo)",
+     "file": "CMP-SPR-WHT-18-415-02--sprayer.png",
+     "width": 1628,
+     "height": 1737,
+     "sha256": "c878540fd834dec743bd2fea9ee41547d8326560ab21cbda6f28d55f593e4fbc",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 1483.5,
+      "y": 308
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "diptube",
+     "layerName": "Layer 4 copy, Layer 6, Layer 5 (bottle photo, below the collar from row 623)",
+     "file": "CMP-SPR-WHT-18-415-02--diptube.png",
+     "width": 310,
+     "height": 1086,
+     "sha256": "766f01599bebf01df69b029f83f23c48dc964863f76846aa3daae8f24d79af2e",
+     "pxPerMm": 12.8025,
+     "anchor": {
+      "x": 167.5,
+      "y": -209
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 295,
+    "splitRow": 623
+   }
+  }
+ ]
+}

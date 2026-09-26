@@ -257,3 +257,5 @@ data/descriptions/pdp/catalog-facts.json
 
 # builder kit layer fixes (published to Blob + Convex, never committed)
 /output/kit-fixes/
+/output/register-components/
+/output/register-bodies
