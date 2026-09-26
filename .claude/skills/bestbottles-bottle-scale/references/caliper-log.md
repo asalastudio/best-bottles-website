@@ -154,6 +154,23 @@ Jordan: "make any necessary logical adjustments if our caliper is off a millimet
 **What the older model had wrong:** the 3D model built before these readings had an overcap of Ø17.6 × 29.6 and a
 collar of Ø17. Use the readings above.
 
+**LOCKED geometry (Jordan, 2026-09-26: "the geometry is perfect, so it needs to be locked in").** The sprayer (collar,
+step ring, actuator, nozzle insert) is locked in `outputs/sprayer-13415-v38/`:
+
+- `sprayer_13415.py`: `build()`, `seat_on()` and `verify()`;
+- `sprayer-13415-locked.blend` and `LOCK.json`.
+
+How it was proven:
+
+- Re-rendering the approved view from the lock matches it pixel for pixel.
+- A build at the Tall's seat is within 0.000007 mm of the locked parts.
+
+How to use it:
+
+- Colour is a material swap only. Render each finish in its approved scene: the v33 `sprayer-scenes` for eight
+  finishes; red comes from the 17-415 v27 scene.
+- The overcap is built to the caliper but is not locked yet.
+
 **One sprayer for every 13-415 neck.** Jordan: the same sprayer and overcap fit every 13-415 neck that takes a
 fine-mist sprayer. These numbers therefore hold for all 15 such bodies (listed in `appliesTo`). The dip tube is the
 only part that changes, because it is cut to each bottle's depth.
