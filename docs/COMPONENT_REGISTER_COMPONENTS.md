@@ -45,6 +45,13 @@ npx tsx scripts/register/components/push-components.ts --neck 18-415 --apply --a
 ```
 
 Dev only. Approvable components load as `approved`; the rest as `measured` and are not drawn. A SKU
+
+**Production (2026-09-26, Jordan).** Every loader takes `--deployment prod` (scripts/register/deployment.ts): never the default,
+the prod deployment's own write token in `REGISTER_PROD_WRITE_TOKEN`
+(`export REGISTER_PROD_WRITE_TOKEN="$(npx convex env get BEST_BOTTLES_CONVEX_WRITE_TOKEN --prod)"`, never printed). Dev and prod
+read the same public Blob store, so a promotion writes rows only. Order: push-register, push-bodies, push-phase3, then
+push-components per neck (a layer needs its component row). The first promotion's receipt is
+`data/register/promotion-2026-09-26.json`: 106 plates, 89 component layers, 1,839 builds, 0 errors.
 renders from the register once its plate and every part it names are approved (`registerStage:forSkus`).
 
 ## 14.3 mm — the Tola plug

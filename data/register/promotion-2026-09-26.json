@@ -1,0 +1,87 @@
+{
+ "promotedAt": "2026-09-26",
+ "by": "Claude on Jordan's instruction in chat (\"YES\" to promoting the register to production once main's CI finished)",
+ "mainCommit": "164c8446 (includes #287 and #288)",
+ "deployment": "prod precise-raccoon-123 (register rows only: dev and prod read the same public Vercel Blob store)",
+ "steps": [
+  {
+   "loader": "scripts/register/push-register.ts --deployment prod --apply",
+   "bodies": {
+    "inserted": 97
+   },
+   "components": {
+    "inserted": 182
+   },
+   "assemblies": {
+    "inserted": 2312
+   }
+  },
+  {
+   "loader": "scripts/register/bodies/push-bodies.ts --deployment prod --apply --approve",
+   "plates": {
+    "inserted": 103,
+    "approved": 101,
+    "measured": 2
+   }
+  },
+  {
+   "loader": "scripts/register/phase3/push-phase3.ts --deployment prod --apply --approve",
+   "plates": {
+    "inserted": 5,
+    "approved": 5
+   },
+   "componentLayers": {
+    "approved": 21
+   }
+  },
+  {
+   "loader": "scripts/register/components/push-components.ts --deployment prod --neck 18-415 --apply --approve",
+   "components": {
+    "approved": 44,
+    "measured": 1
+   }
+  },
+  {
+   "loader": "scripts/register/components/push-components.ts --deployment prod --neck 13-415 --apply --approve",
+   "components": {
+    "approved": 23
+   }
+  },
+  {
+   "loader": "scripts/register/components/push-components.ts --deployment prod --neck 14.3mm --apply --approve",
+   "components": {
+    "approved": 1
+   }
+  }
+ ],
+ "prodCountsAfter": {
+  "bodyPlates": {
+   "approved": 106,
+   "measured": 2
+  },
+  "componentLayers": {
+   "approved": 89,
+   "measured": 1,
+   "unmeasured": 92
+  },
+  "builds": {
+   "resolved": 1839,
+   "unresolved": 473
+  }
+ },
+ "errors": 0,
+ "heldBack": {
+  "cream-jar-20ml-40mm|White": "rulings.json hold (the cut is not the jar)",
+  "empire-100ml-18-415|Clear": "fitted IoU 0.968 under the 0.97 gate",
+  "CMP-CAP-SSLV-18415-S": "registration IoU 0.847 under the 0.90 gate"
+ },
+ "verifiedOnProduction": [
+  "cylinder-5ml-clear-13-415-rollon (metal roller, silver dots, CAP ON): register",
+  "cylinder-9ml-frosted-13-415-finemist (shiny silver, CAP ON): register",
+  "diva-46ml-clear-18-415-perfumespray (copper): register",
+  "slim-30ml-clear-18-415-perfumespray: register",
+  "cylinder-9ml-clear-17-415-finemist (turquoise): register",
+  "boston-round-30ml-amber-20-400-rollon: not in the register (no 20-400 parts yet); its Shopify photo fallback is a dead URL (404), pre-existing"
+ ],
+ "notInRegisterYet": "SKUs whose parts are not cut (20-400, 15-415, 18-400, 13-425, 16mm, 12mm, 8-425), the 29 Short Liner Cap SKUs, 29 18-415 RdcrShnBlk SKUs, and prod products newer than the 2026-09-25 dev snapshot (e.g. GBCrcl15BlkShSht) keep their published kit or photo."
+}

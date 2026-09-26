@@ -5,6 +5,7 @@
  *   npx tsx scripts/register/bodies/push-bodies.ts                    # dry run
  *   npx tsx scripts/register/bodies/push-bodies.ts --apply            # upload + write as "measured"
  *   npx tsx scripts/register/bodies/push-bodies.ts --apply --approve [--except plateKey,...]
+ *   ... --deployment prod                                                   # production: REGISTER_PROD_WRITE_TOKEN (scripts/register/deployment.ts)
  *
  * Reads data/register/bodies/bodies-measurements.json, output/register-bodies/final/ and the rulings in
  * data/register/bodies/rulings.json. Only plates with status "ok" are approvable; "review" plates load as
@@ -19,6 +20,7 @@ import { config } from "dotenv";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../convex/_generated/api";
 import { createBlobStore } from "../../paperdoll/lib/store-blob.mjs";
+import { registerTarget } from "../deployment";
 
 const ROOT = resolve(__dirname, "..", "..", "..");
 const BASE = resolve(ROOT, "output", "register-bodies");
@@ -43,9 +45,8 @@ type Plate = {
 async function main() {
     const plates = (JSON.parse(readFileSync(resolve(ROOT, "data", "register", "bodies", "bodies-measurements.json"), "utf8")) as Plate[])
         .filter(p => p.file && p.bodyId !== PILOT);
-    const url = process.env.NEXT_PUBLIC_CONVEX_URL, token = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
-    if (!url || !token) throw new Error("NEXT_PUBLIC_CONVEX_URL and BEST_BOTTLES_CONVEX_WRITE_TOKEN are required");
-    if (url.includes("precise-raccoon-123")) throw new Error("this loader writes dev only");
+    const { deployment, url, token } = registerTarget(process.argv.slice(2));
+    console.log(`deployment: ${deployment} (${url})`);
     if (apply && !process.env.BLOB_READ_WRITE_TOKEN) throw new Error("BLOB_READ_WRITE_TOKEN is not set (.env.blob.local)");
     const store = apply ? createBlobStore() : null;
     const rows = [];
