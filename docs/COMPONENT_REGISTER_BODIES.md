@@ -10,10 +10,10 @@ the product-page hero bone, and Build Your Bottle uses the same bone (PR #264).
 |---|---|---|
 | inventory | `inventory.py` | `data/register/bodies/inventory.csv`: every current glass body × glass colour, its SKU-named master PSDs, its measurements |
 | cut | `cut_bodies.py` | the bare body per plate: the largest layer standing on the lowest baseline, else the kit lane's body layer; decisions in `source-overrides.json` |
-| inputs | `build_bodies.py inputs` | one master geometry per body (its Clear cut, else its first glass), longest side 2000 px; each other glass's own photo fitted to it, or the pilot reference glass |
-| render | `render_bodies.mjs` | `gpt-image-2.5-sunburst`, quality high, transparent background, the pilot's prompts; resumable |
-| qa | `build_bodies.py qa` | fit back to the master, alpha locked, Clear and Swirl baked on `#F5F3EF`, both scales recorded, review sheets |
-| load | `push-bodies.ts` | `registerBodyPlates` on dev; approvable = status ok and scale gap ≤ 5% |
+| inputs | `build_bodies.py inputs --pass lit` | one master geometry per body (its Clear cut, else its first glass), longest side 2000 px, its row-filled silhouette as the master mask; the reference glass of each colour fitted to the canvas; named necks trimmed at the glass rim |
+| render | `render_bodies.mjs --pass lit` | `gpt-image-2.5-sunburst`, quality high; each job carries its prompt (three numbered lines) and, for the edited necks, one extra line; resumable |
+| qa | `build_bodies.py qa --pass lit` | fit back to the master, the render's own outline kept, Clear and Swirl baked on `#F5F3EF`, anchors and both scales measured on the plate, review sheets |
+| load | `push-bodies.ts` | `registerBodyPlates` on dev; approvable = status ok and (scale gap ≤ 5% or accepted in `rulings.json`); held plates load as measured |
 
 Pixels live in `output/register-bodies/` (gitignored). Numbers live in `data/register/bodies/bodies-measurements.json`.
 
@@ -40,12 +40,53 @@ Pixels live in `output/register-bodies/` (gitignored). Numbers live in `data/reg
 | pillar-9ml-17-415 Clear | no master PSD; the only Pillar file is the 13-415 roll-on |
 | vial-3ml-13-425 Blue, Green | no master PSD under any name |
 
+## Second pass (2026-09-25, `--pass lit`)
+
+Jordan's review of the first pass: the plates read as the Photoshop cuts, not as Sunburst glass ("they look
+like Photoshop images that haven't been rendered yet"); use the actual glass reference images on file; the
+reducer photographed in the Grace, Empire and Diamond necks and the plug in the Tola necks come out; the 1 mL
+and 2 mL vials were defective; and "we need clean edges" — as the paper-doll source of truth the plates were
+unusable. Everything but the pilot body was re-rendered.
+
+- **Every plate renders from two images**: the master geometry and the reference glass of its colour. Clear,
+  frosted, cobalt blue and swirl are the pilot cylinder renders (`output/register-phase3/pilot/sunburst/renders/`);
+  amber is the Boston round 30 mL amber rendered from its own photo in the first pass ("Boston round amber is
+  good reference"). Prompts stay three numbered lines: geometry locked to the first image; lighting and finish
+  (and, for coloured glass, colour and material) from the second; enhance. Frosted needs the word: with the
+  colour prompt alone the model keeps the glass clear (Round 78 test), so frosted plates say "frosted satin
+  glass" and add the body's own frosted photo as a material image where one exists. Green, blue and white have
+  no reference on file: green and blue keep the own-photo material recipe; white masters take the clear
+  reference for lighting and keep their own colour.
+- **Neck edits** (`NECK_EDITS`, rows on the master cut): the insert above the glass rim is trimmed, the master
+  mask ends at the rim (the seat moves down to the glass), and one extra prompt line asks for an empty mouth.
+  Grace 55, Empire 50 and 100, Diamond 60 (orifice reducer); Tola 3 and 6 mL (plug).
+- **The plate keeps the render's own outline.** The first pass clipped every render to the photo cut's mask
+  enlarged 2–4×, and the cut's soft, ragged edge and a bone fringe where the mask overhung the render came with
+  it. Now the fitted render's alpha is the plate (opaque Clear renders: the row span of the ink; pieces under
+  0.5% of the area dropped); the master mask is only the fit target and the gate (IoU ≥ 0.97, interior holes
+  ≤ 2%); anchors and scale are measured on the plate itself.
+- **Master mask = row-filled silhouette.** The PSD cuts of clear bodies carry see-through interiors (up to 73%
+  of the area on the tall cylinders); a glass body's silhouette has no holes. The 1 mL vial's mask also stops at
+  the ink, its cut carries white paper outside the glass (the notch Jordan flagged).
+- **The Tola plug is its own part**: `LIB-14.3mm-Plug` (type plug-applicator, slot cap); the head photographed
+  above the rim is the seated layer, head plus a synthesised stem the exploded layer, cut in canvas space at the
+  3 mL plate's px/mm (`plug_layers`); both Tola SKUs build `cap:LIB-14.3mm-Plug`. The two Tola cuts are one
+  photo (same sha256) filed under two heights, 42 and 48 mm; the 6 mL plate is that photo at the 6 mL scale.
+- The pilot body (Cylinder 9 mL 17-415) belongs to the Phase 3 lane and is not re-rendered; qa carries its
+  first-pass plates forward.
+
+Outputs: `jobs-lit.json`, `renders-lit/`, `final-lit/`, `review-bodies-lit-N.png`; the measurements file is the
+same `bodies-measurements.json` (every entry records `render.pass` and `checks.edges`). Rulings live in
+`data/register/bodies/rulings.json`: the 63 scale flags accepted from the gallery review; the ten plates Jordan
+held (reducer, plug, the two vials) load as measured with the reason on the row until the second-pass renders
+are released.
+
 ## Flags for review (kept, not approved automatically)
 
 - Round 78 mL: only a capped photo exists, so the body has no neck (closures cover it).
-- Vial 1 mL plug: the source layer carries the applicator's outline inside the vial.
+- Vial 1 mL plug: the source layer carries the applicator's outline inside the vial (second pass: mask stops at the ink; re-rendered clean).
 - Cylinder 3.3 mL and 4 mL (12 mm): the atomizer's inner tube is part of the body layer.
-- Amber vials (1 mL plug, 2 mL 8-425): a pale panel from the source photo survives two renders.
+- Amber vials (1 mL plug, 2 mL 8-425): a pale panel from the source photo survived two first-pass renders (the cut's see-through interior punched through the mask; gone with the row-filled mask and the render's own outline).
 - Bell is sold as 10 mL, but the master library files it as Bell 12 mL.
 
 ## Source fixes applied (see `source-overrides.json`)

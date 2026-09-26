@@ -5,7 +5,7 @@ Source: Convex dev export (2540 rows, collected 2026-09-25T08:44:26Z), PSD libra
 ## Totals
 
 - Bodies: **94 current** (3 retired-only) across 34 neck groups
-- Components: **141 current**, 24 retired, 16 quarantined; **128 current components have a library PSD** (16 via alias-map, 34 case-insensitive)
+- Components: **142 current**, 24 retired, 16 quarantined; **128 current components have a library PSD** (16 via alias-map, 34 case-insensitive)
 - Assemblies: **2016 verified**, **129 retired**, **110 candidate**, **55 quarantine**, **2 exception**
 - Quarantine rows: 120 (see quarantine.csv)
 
@@ -27,7 +27,7 @@ Source: Convex dev export (2540 rows, collected 2026-09-25T08:44:26Z), PSD libra
 | 13-415 | 17 | 5 | 27 | 498 | 21 | 0 | 0 | 31 |
 | 13-425 | 3 | 4 | 2 | 0 | 16 | 0 | 0 | 0 |
 | 13mm | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 |
-| 14.3mm | 2 | 1 | 0 | 0 | 2 | 0 | 0 | 0 |
+| 14.3mm | 2 | 1 | 1 | 0 | 2 | 0 | 0 | 0 |
 | 15-415 | 2 | 2 | 7 | 21 | 0 | 0 | 0 | 0 |
 | 16mm | 2 | 1 | 0 | 0 | 8 | 0 | 0 | 0 |
 | 17-415 | 2 | 5 | 22 | 144 | 2 | 0 | 0 | 2 |
@@ -79,6 +79,7 @@ The matrices counted **Glass Bottle** records only; the register also carries at
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 13-415 | 7 |  |  |  | 5 |  |  |  |  | 13 | 2 |  |  |
 | 13-425 | 2 |  |  |  |  |  |  |  |  |  |  |  |  |
+| 14.3mm |  |  |  |  |  |  | 1 |  |  |  |  |  |  |
 | 15-415 |  |  |  |  | 5 |  |  |  |  | 2 |  |  |  |
 | 17-415 |  |  | 1 |  | 6 | 3 |  |  |  | 10 | 2 |  |  |
 | 18-400 | 2 |  | 6 |  |  |  |  |  |  |  |  |  |  |
@@ -88,10 +89,11 @@ The matrices counted **Glass Bottle** records only; the register also carries at
 | 24-400 | 1 |  |  |  |  |  |  |  |  |  |  |  |  |
 | 8-425 | 5 |  |  |  |  |  |  |  |  |  |  |  |  |
 
-## Library gaps — 13 current components with no PSD in 20. Caps / 21. Tassels
+## Library gaps — 14 current components with no PSD in 20. Caps / 21. Tassels
 
 - **13-415** (4): 13-415CAP4SpryCuMt [fine-mist-sprayer], 13-415CAP4SpryGlSh [fine-mist-sprayer], 13-415CAP4SprySlMt [fine-mist-sprayer], GBATom5RedBurg [fine-mist-sprayer]
 - **13-425** (2): CP13-425Blk [cap], CP13-425Wht [cap]
+- **14.3mm** (1): LIB-14.3mm-Plug [plug-applicator]
 - **17-415** (3): Droppers1ozElg [dropper], LIB-17-415-MtlRollon [roller-insert], LIB-17-415-PlsticRollon [roller-insert]
 - **18-415** (2): 18-415CAP4SpryMtGl [fine-mist-sprayer], 18-415CAP4SpryShnBlk [fine-mist-sprayer]
 - **22-400** (1): CapBlackPoly22mm-400 [cap]
@@ -110,7 +112,7 @@ The matrices counted **Glass Bottle** records only; the register also carries at
 | Convex websiteSku | library stem | folder(s) | match |
 |---|---|---|---|
 
-## Own-part builds — rules written for 17-415, 18-415 (the pilot neck)
+## Own-part builds — rules written for 14.3mm, 17-415, 18-415 (the pilot neck)
 
 Each sellable assembly names the parts it is physically made of (`buildParts`), matched uniquely on neck, component type, cap colour and dotted/plain. Roller balls add the neck's roller insert. A row that does not match exactly one part stays `unresolved` with the reason; nothing is guessed (Jordan 2026-09-25: wording errors wait for Convex corrections).
 
@@ -140,6 +142,8 @@ Each sellable assembly names the parts it is physically made of (`buildParts`), 
 | slim-100ml-18-415 | 41 | 0 | 2 |
 | slim-30ml-18-415 | 36 | 0 | 1 |
 | slim-50ml-18-415 | 42 | 0 | 1 |
+| tola-decorative-3ml-14.3mm | 1 | 0 | 0 |
+| tola-decorative-6ml-14.3mm | 1 | 0 | 0 |
 
 Unresolved, by reason (Convex corrections):
 

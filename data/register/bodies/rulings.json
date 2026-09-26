@@ -1,0 +1,30 @@
+{
+  "_doc": "Jordan's rulings on the catalogue Sunburst plates, applied by scripts/register/bodies/push-bodies.ts. scaleFlags: when set, a plate whose height-based and width-based scales disagree by more than 5% is still approved; the plate's own px/mm is the truth and components tie to it by seat-to-foot (docs/COMPONENT_REGISTER_COMPONENTS.md). hold: the plate loads as measured (not drawn) until it is re-rendered; the reason is recorded on the row.",
+  "scaleFlags": {
+    "by": "Jordan",
+    "date": "2026-09-25",
+    "ruling": "approved from the plate gallery review (claude.ai/artifact/4ruLy5pMDufbt4DNJmpajY); the scale flag stays recorded per plate"
+  },
+  "reviewStatus": {
+    "by": "Jordan",
+    "date": "2026-09-25",
+    "ruling": "the six plates the outline gate marked review (Diamond 60, Empire 100, Round 128 x2, Vial 1 ml plug x2) stay measured until named"
+  },
+  "hold": {
+    "grace-55ml-18-415|Clear": "orifice reducer photographed in the neck; remove it and re-render (Jordan 2026-09-25)",
+    "empire-50ml-18-415|Clear": "orifice reducer photographed in the neck; remove it and re-render (Jordan 2026-09-25)",
+    "empire-100ml-18-415|Clear": "orifice reducer photographed in the neck; remove it and re-render (Jordan 2026-09-25)",
+    "vial-2ml-8-425|Amber": "defective render; re-render (Jordan 2026-09-25)",
+    "vial-2ml-8-425|Clear": "defective render; re-render (Jordan 2026-09-25)",
+    "tola-decorative-3ml-14.3mm|Clear": "plug photographed in the neck; the body re-renders without it and the plug becomes its own component layer (Jordan 2026-09-25)",
+    "tola-decorative-6ml-14.3mm|Clear": "plug photographed in the neck; the body re-renders without it and the plug becomes its own component layer (Jordan 2026-09-25)",
+    "diamond-60ml-18-415|Clear": "looks good but the orifice reducer is photographed in the neck; remove it and re-render (Jordan 2026-09-25)",
+    "vial-1ml-Plug|Amber": "defective; re-render from the glass reference image (Jordan 2026-09-25)",
+    "vial-1ml-Plug|Clear": "defective; re-render from the glass reference image (Jordan 2026-09-25)"
+  },
+  "secondPass": {
+    "by": "Jordan",
+    "date": "2026-09-25",
+    "ruling": "take one more pass on the derived-glass plates using the actual glass reference images on file (clear, frosted, cobalt, amber) as the material input; the Rounds included (they look okay but should come from the references). Dip tubes are to be created."
+  }
+}

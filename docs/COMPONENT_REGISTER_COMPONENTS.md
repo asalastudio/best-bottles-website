@@ -46,6 +46,16 @@ npx tsx scripts/register/components/push-components.ts --neck 18-415 --apply --a
 Dev only. Approvable components load as `approved`; the rest as `measured` and are not drawn. A SKU
 renders from the register once its plate and every part it names are approved (`registerStage:forSkus`).
 
+## 14.3 mm — the Tola plug
+
+The two Tola decorative bottles (3 and 6 mL; `GB3TPlGl`, `GB6TPlGl`) are sold with one closure, the ribbed
+plastic plug photographed in their neck. Jordan 2026-09-25: the plug is separate from the glass. The bodies
+lane cuts it (`scripts/register/bodies/build_bodies.py`, `plug_layers`): the seated layer is the head above the
+glass rim (usage `seated`, drawn in CAP ON and SIDECAR); the exploded layer is the head plus a synthesised stem
+(usage `exploded`). Component `LIB-14.3mm-Plug`, type plug-applicator, slot cap, px/mm the 3 mL plate's own;
+numbers in `data/register/components/14.3mm-measurements.json`, loaded with `push-components.ts --neck 14.3mm`.
+`build_register.py` resolves both Tola assemblies to `cap:LIB-14.3mm-Plug`.
+
 ## Known gaps
 
 - Bulb sprayers keep one cut per finish from one body's photo; the bulb's hang is that photo's.

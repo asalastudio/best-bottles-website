@@ -1,0 +1,54 @@
+{
+ "neck": "14.3mm",
+ "method": "cut from the Tola master photo in canvas space; head photographed, stem synthesised (build_bodies.py plug_layers)",
+ "components": [
+  {
+   "componentId": "LIB-14.3mm-Plug",
+   "type": "plug",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Tola plug, seated (from tola-decorative-3ml-14.3mm master photo)",
+     "file": "LIB-14.3mm-Plug/cap-seated.png",
+     "width": 346,
+     "height": 209,
+     "sha256": "aba9e15e9f99886d702eca5424048b05dcf9b226e09097b5e907ed9f84154ee9",
+     "pxPerMm": 39.9529,
+     "anchor": {
+      "x": 201,
+      "y": 209
+     },
+     "z": "front",
+     "explodeIndex": 0,
+     "usage": "seated"
+    },
+    {
+     "slot": "cap",
+     "layerName": "Tola plug, exploded (from tola-decorative-3ml-14.3mm master photo)",
+     "file": "LIB-14.3mm-Plug/cap-exploded.png",
+     "width": 346,
+     "height": 306,
+     "sha256": "633d053114357ecad4054d94c0dccfa276b4693ac6686ff87135fbb242ed91b7",
+     "pxPerMm": 39.9529,
+     "anchor": {
+      "x": 201,
+      "y": 209
+     },
+     "z": "front",
+     "explodeIndex": 0,
+     "usage": "exploded"
+    }
+   ],
+   "checks": {
+    "status": "cut",
+    "approvable": true,
+    "fromBody": "tola-decorative-3ml-14.3mm",
+    "cutRows": {
+     "headTop": 14,
+     "glassRim": 104,
+     "stemBottom": 146
+    }
+   }
+  }
+ ]
+}

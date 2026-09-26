@@ -95,11 +95,15 @@ LIBRARY_PARTS = [
     {"componentId": "LIB-17-415-MtlRollon", "type": "roller-insert", "neck": "17-415", "rollerMaterial": "metal", "psdStem": None, "itemName": "Metal roller-ball insert, 17-415"},
     {"componentId": "LIB-17-415-PlsticRollon", "type": "roller-insert", "neck": "17-415", "rollerMaterial": "plastic", "psdStem": None, "itemName": "Plastic roller-ball insert, 17-415"},
     {"componentId": "LIB-18-415-Reducer", "type": "reducer", "neck": "18-415", "rollerMaterial": "", "psdStem": "415Reducer", "itemName": "Orifice reducer, 18-415"},
+    # The Tola plug (Jordan 2026-09-25: the plug needs to be separate from the glass). No library PSD: its layers are
+    # cut from the Tola master photo by scripts/register/bodies/build_bodies.py (plug_layers).
+    {"componentId": "LIB-14.3mm-Plug", "type": "plug-applicator", "neck": "14.3mm", "rollerMaterial": "", "psdStem": None, "itemName": "Plug, 14.3 mm (Tola)",
+     "evidence": "library part, not a product (Jordan 2026-09-25); cut from the Tola master photo, GB3TPlGl.psd", "source": "Tola master photo (build_bodies.py plug_layers)"},
 ]
 
 # Own-part builds: which component(s) a sellable assembly is physically made of. Rules are validated neck by
 # neck; the pilot neck is 17-415 (2026-09-25). Other necks record why they are not built yet.
-BUILD_RULE_NECKS = {"17-415", "18-415"}
+BUILD_RULE_NECKS = {"17-415", "18-415", "14.3mm"}
 FITMENT_BUILD = {  # fitmentType -> (component type, kit slot, roller material)
     "Metal Roller Ball": ("roll-on-cap", "cap", "metal"),
     "Plastic Roller Ball": ("roll-on-cap", "cap", "plastic"),
@@ -179,6 +183,11 @@ def own_build(assembly: dict, body_class: str, by_neck_type: dict, library_ids: 
         return "", "unresolved", f"own-part rules not written for {neck or 'no neck'} yet (pilot neck is 17-415)"
     if neck == "18-415":
         return own_build_18415(assembly, by_neck_type)
+    if neck == "14.3mm":
+        # The Tola decorative bottles are sold with one closure, the plug photographed in their neck (Jordan 2026-09-25).
+        if "LIB-14.3mm-Plug" not in library_ids:
+            return "", "partial", "no plug registered for 14.3mm"
+        return "cap:LIB-14.3mm-Plug", "resolved", "the 14.3 mm plug: the one closure sold on the Tola neck, cut from the bottle photo"
     rule = FITMENT_BUILD.get(fitment)
     if not rule:
         return "", "unresolved", f"no own-part rule for fitment '{fitment or 'none'}'"
@@ -415,12 +424,12 @@ def main() -> int:
             "componentId": part["componentId"], "sellable": False, "graceSku": "", "websiteSku": "", "type": part["type"], "neck": part["neck"],
             "finish": "", "capColor": "", "capStyle": "", "color": "", "trimColor": "", "applicator": "", "convexFamily": "", "itemName": part["itemName"],
             "status": "current",
-            "typeEvidence": "library part, not a product (Jordan 2026-09-25)" + ("" if psd else "; no master PSD yet, cut from productKits roller layers in Phase 3"),
+            "typeEvidence": part.get("evidence") or ("library part, not a product (Jordan 2026-09-25)" + ("" if psd else "; no master PSD yet, cut from productKits roller layers in Phase 3")),
             "dotted": False, "rollerMaterial": part["rollerMaterial"],
             "psdStem": psd["stem"] if psd else "", "psdLibrary": psd["library"] if psd else "", "psdPath": psd["file"] if psd else "", "psdFolder": psd["folder"] if psd else "",
             "psdMatch": "exact" if psd else "", "psdCanvas": psd["canvas"] if psd else "", "psdHiddenLayers": psd["hiddenLayers"] if psd else "",
             "stockStatus": "", "imageUrl": "", "productUrl": "",
-            "source": "BB-PSD-Files-Master/20. Caps" if psd else "productKits roller layers (Phase 3)", "confidence": "high" if psd else "medium",
+            "source": part.get("source") or ("BB-PSD-Files-Master/20. Caps" if psd else "productKits roller layers (Phase 3)"), "confidence": "high" if psd else "medium",
         })
     library_ids = {part["componentId"] for part in LIBRARY_PARTS}
     by_neck_type: dict[tuple, list] = defaultdict(list)

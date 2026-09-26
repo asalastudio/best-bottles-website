@@ -6,10 +6,12 @@
  *   npx tsx scripts/register/bodies/push-bodies.ts --apply            # upload + write as "measured"
  *   npx tsx scripts/register/bodies/push-bodies.ts --apply --approve [--except plateKey,...]
  *
- * Reads data/register/bodies/bodies-measurements.json and output/register-bodies/final/. Only plates with
- * status "ok" are approvable; "review" plates and plates whose two scales disagree by more than 5% load as
- * "measured" until they are ruled on. The pilot body (cylinder-9ml-17-415) is owned by push-phase3.ts and
- * skipped here. Blob keys are content-addressed and write-once. Token from .env.local / .env.blob.local.
+ * Reads data/register/bodies/bodies-measurements.json, output/register-bodies/final/ and the rulings in
+ * data/register/bodies/rulings.json. Only plates with status "ok" are approvable; "review" plates load as
+ * "measured", and so do plates whose two scales disagree by more than 5% unless rulings.scaleFlags accepts
+ * them (Jordan 2026-09-25). A plate named in rulings.hold loads as "measured" with its reason on the row,
+ * whatever else says. The pilot body (cylinder-9ml-17-415) is owned by push-phase3.ts and skipped here.
+ * Blob keys are content-addressed and write-once. Token from .env.local / .env.blob.local.
  */
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
@@ -25,6 +27,10 @@ const argv = process.argv.slice(2);
 const apply = argv.includes("--apply"), approve = argv.includes("--approve");
 const except = new Set(argv.includes("--except") ? argv[argv.indexOf("--except") + 1].split(",").map(s => s.trim()) : []);
 const PILOT = "cylinder-9ml-17-415";
+
+type Rulings = { scaleFlags?: { by: string; date: string; ruling: string } | null; hold?: Record<string, string> };
+const RULINGS = JSON.parse(readFileSync(resolve(ROOT, "data", "register", "bodies", "rulings.json"), "utf8")) as Rulings;
+const HOLD = RULINGS.hold ?? {};
 
 type Plate = {
     plateKey: string; bodyId: string; glass: string; status: string; file: string; width: number; height: number; sha256: string; pxPerMm: number;
@@ -45,9 +51,14 @@ async function main() {
     const rows = [];
     const tally: Record<string, number> = {};
     for (const p of plates) {
-        const approvable = p.status === "ok" && !p.scale.flag;
-        const status = approve && approvable && !except.has(p.plateKey) ? "approved" : "measured";
+        const held = HOLD[p.plateKey];
+        const approvable = p.status === "ok" && (!p.scale.flag || Boolean(RULINGS.scaleFlags));
+        const status = approve && approvable && !held && !except.has(p.plateKey) ? "approved" : "measured";
         tally[status] = (tally[status] ?? 0) + 1;
+        if (held) console.log(`  hold ${p.plateKey}: ${held}`);
+        const measuredBy = "scripts/register/bodies/build_bodies.py"
+            + (p.scale.flag && RULINGS.scaleFlags && !held ? `; scale flag (${p.scale.basis} basis, gap ${p.scale.gapPct}%) accepted: ${RULINGS.scaleFlags.by} ${RULINGS.scaleFlags.date}` : "")
+            + (held ? `; held: ${held}` : "");
         const key = `register/plates/${p.bodyId}/${p.glass.toLowerCase().replace(/ /g, "-")}/${p.sha256}.png`;
         const bytes = readFileSync(resolve(BASE, p.file));
         const { url: blobUrl } = store ? await store.putObject(key, bytes, "image/png") : { url: `(dry run) ${key}` };
@@ -55,7 +66,7 @@ async function main() {
             plateKey: p.plateKey, bodyId: p.bodyId, glass: p.glass,
             image: { url: blobUrl, key, sha256: p.sha256, bytes: bytes.length, width: p.width, height: p.height }, thumb: null,
             pxPerMm: p.pxPerMm, anchors: { axisX: p.anchors.axisX, seatY: p.anchors.seatY, baselineY: p.anchors.baselineY, shoulderY: p.anchors.shoulderY },
-            anchorStatus: status as "approved" | "measured", anchorMeasuredBy: "scripts/register/bodies/build_bodies.py",
+            anchorStatus: status as "approved" | "measured", anchorMeasuredBy: measuredBy,
             source: { library: "gpt-image-2.5-sunburst", path: p.source.psd ?? p.source.cut, psdSha256: null,
                       layer: `geometry: ${p.source.masterGlass}; material: ${p.source.role}${p.bakedOnBone ? "; baked on bone " + p.bakedOnBone.bone : ""}` },
             derivedFrom: p.source.derivedFrom, storageProvider: "vercel-blob" as const,
