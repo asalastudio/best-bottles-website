@@ -6,6 +6,7 @@
  *   npx tsx scripts/register/phase3/push-phase3.ts --apply              # upload to Vercel Blob, write dev as "measured"
  *   npx tsx scripts/register/phase3/push-phase3.ts --apply --approve    # the same, marked "approved" (Jordan's sign-off)
  *   ... --approve --except plateKey|componentId,...                     # approve all but the named items
+ *   ... --only componentId,...                                           # load only the named components (no plates)
  *
  * Reads data/register/phase3/pilot-measurements.json and output/register-phase3/pilot/ (run cut_pilot.py
  * first). Blob keys are content-addressed and write-once. Dev only: NEXT_PUBLIC_CONVEX_URL and
@@ -26,6 +27,7 @@ const argv = process.argv.slice(2);
 const apply = argv.includes("--apply");
 const approve = argv.includes("--approve");
 const except = new Set((argv[argv.indexOf("--except") + 1] ?? "").split(",").filter(() => argv.includes("--except")).map(s => s.trim()).filter(Boolean));
+const only = new Set((argv[argv.indexOf("--only") + 1] ?? "").split(",").filter(() => argv.includes("--only")).map(s => s.trim()).filter(Boolean));
 
 type Layer = { slot: string; layerName: string; file: string; width: number; height: number; sha256: string; pxPerMm: number; anchor: { x: number; y: number }; z: string; explodeIndex: number };
 type Measurements = {
@@ -53,7 +55,7 @@ async function main() {
     };
 
     const plates = [];
-    for (const p of m.plates) {
+    for (const p of only.size ? [] : m.plates) {
         const image = await upload(`register/plates/${m.bodyId}/${p.glass.toLowerCase().replace(/ /g, "-")}/${p.sha256}.png`, p.file, p.width, p.height, p.sha256);
         // A plate that fails the size gate is approved only if it carries a named ruling (checks.acceptedBy).
         const s = p.checks.approvable ? status(p.plateKey) : "measured";
@@ -64,7 +66,7 @@ async function main() {
         console.log(`plate ${p.plateKey}: ${s}${p.checks.passes ? "" : p.checks.acceptedBy ? ` (outside the gate; ${p.checks.acceptedBy})` : " (fails the size gate; held at measured)"}`);
     }
     const components = [];
-    for (const c of m.components) {
+    for (const c of m.components.filter((x) => !only.size || only.has(x.componentId))) {
         const layers = [];
         for (const l of c.layers) {
             const image = await upload(`register/components/${neck}/${c.componentId}/${l.slot}-${l.sha256}.png`, l.file, l.width, l.height, l.sha256);
@@ -76,7 +78,7 @@ async function main() {
     }
     if (!apply) { console.log("\ndry run: nothing uploaded or written. Add --apply."); return; }
     const client = new ConvexHttpClient(url);
-    console.log("plates:", JSON.stringify(await client.mutation(api.register.upsertBodyPlates, { writeToken: token, rows: plates })));
+    if (plates.length) console.log("plates:", JSON.stringify(await client.mutation(api.register.upsertBodyPlates, { writeToken: token, rows: plates })));
     for (const c of components) console.log(c.componentId, JSON.stringify(await client.mutation(api.register.setComponentLayers, { writeToken: token, ...c })));
     console.log("counts:", JSON.stringify(await client.query(api.register.counts, {})));
 }
