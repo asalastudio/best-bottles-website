@@ -12805,5 +12805,1066 @@
     "sku": "GBCylSwrl9RollSlDot"
    }
   ]
+ },
+ {
+  "appliedAt": "2026-09-26T00:04:57.741Z",
+  "deployment": "https://helpful-elephant-638.convex.cloud",
+  "kits": [
+   {
+    "sku": "GBCyl9RollMattCu",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "ec128de2efbcc52bf6e92c28a094930441855658d291a45c731a958665ca60d0",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "9c5c1ad17169376b72664f0fb7fcf67c189ecbad3dfc1924ada89502f5a6d3ee",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "0c5c9d7b65231ea61b3eedfe32c565653915cc7d31898d6dd5710e1c058725b5",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCyl9RollMattGl",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "efc1213722c90eb59e44fb3ab1c8cbaaea55ae2feb21eb281f884506254e8fc0",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "d48c6576e50e48d4b88314bb905d0417c22a0b0ba4c8c794d33a85443caeda9b",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "f3e3e96c0617179d55ef71b2b19411450e2374ba7f02728b4c2267a69312cd3b",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCyl9RollMattSl",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "1be6e510328a080df96cf46f78a8cc6b7ee46356390c4751643430c4eac02612",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "253e4788afb1cc5730007ccb12bb7f304445403cfe57605a36961705dc9ccc9a",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "7eed45c2f67aa16e5e56c0b940d33963b1d1cd9b7a16ba481d84bffa81e0d82f",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCyl9RollShBlk",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "6525f3210c902b2e72f41f0e79c75dfa7f1f823f252f0d1f30d13b5cbbe76b17",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "253e4788afb1cc5730007ccb12bb7f304445403cfe57605a36961705dc9ccc9a",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "7986b14ce22a467f26575fc7c998bbff21438367ffee9cd1452e5e49d5171e73",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCyl9RollShnGl",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "409d18501105c4354969dea8a2e93a6801447c73e3fb1397f73866b322d4a70e",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "e67b60424d6422afa7011d8b745028efe9a9338784f2e5c45b90f05deca5d015",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "b683a438dcbed53a431e545cdace893514aa3b34527e1f93a9975764811ef03e",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCyl9RollShnSl",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "774899a7a0b74297e40c08b9110d9622b0967ff16a221748b01f7c08522cea64",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "5b64829fd99456a9e3b3ae194a1a25caabe575805c1d6d5061d649b7ebb7c7d0",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "37258be0f8a25189b9600acf9ae4721db94928147a1263e575e7a6ec0d736093",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCyl9RollSlDot",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "a80a23a904da596db577f701b6ce7085d9861cc40bc11237dd394783ddab9f7e",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "2ca089773be6ff37407cbcddfb7ef8a83524b713e31fb370a84f80b3be2d262d",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "74098d712adfc9e214fb8a08c1084a7982d5aafdd2969b652704e977752dfc7a",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCyl9RollWht",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "c6a5a3c27a5974b17cce0ee025b8ef96c81f0f73094bf9a029654d252c582396",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "d48c6576e50e48d4b88314bb905d0417c22a0b0ba4c8c794d33a85443caeda9b",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "a6d097238ffbdd450153e55fb029f770d975502bcc722258f9bdf46ccc472a11",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylAmb9RollBlkDot",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "1842149b547caf628cb5d08c166e20ead030982fd2dc53b2302e78c3e31d8904",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "eb1f98bb1b7e1ec38eb333da0fba962d9c9db313338d77ff94c48d041ce88a4a",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "b21a76f3ebaddee980ef579c821f2ffad8ebb217fd07ef0a5e67e076bdb5b285",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylAmb9RollMattCu",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "384b103623a0935aca6267627f9147d392298989cdd254cb18648333f9d3b5e5",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "ebb02844e03e85364baf1fa54894bdf895531ebe28d429f9499c707974a09c1f",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "06e8056e4996ff6a14d6dc5c05b8137946c40d54cb5a81f825ebaa0614ef87a9",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylAmb9RollMattGl",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "0fd2fccef247578d00f2669e6b0a9326f2804738aa77bc0fb2c506e4113eceb3",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "92c89f2ef077e258258099a3692a1747b93b2beb1e1af70eeda85dd477ad9835",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "f90963122eba0b66703e2e01b2fde18eea385c4c0012cd40090b97744bc6e23b",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylAmb9RollMattSl",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "0a62b07b0a88bd9b8d4f38dc46e25d2d04cc16a0fb26f11e0607a7d0faeeeae8",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "7d08d047b29a3b9ba7988926bd96c5e98cf98cc23aee0f8e6b7b1de073a8440b",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "74fc08c510d434ac558a3110b7a5048d39892ec9e7999afc70550068af60b191",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylAmb9RollPnkDot",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "69eec840ac011b273f05b9f77196c89ab75a7e3a24eff604d7e124f9e99d6996",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "b9a1cb9fe74af80c833b01eaa7803da56431df10319d884278d30ecf4c4accf9",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "e7452fdfe2e2d58f89504e6e65bf2549bad4c64253dde85a6d3aaf156d8dcd47",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylAmb9RollShBlk",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "587e5da1d103ddd8b168bc4d4320a5ffa8bed5278d95d47c9311b1df56880d5f",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "fae0994214f70159e7601ad257e3129bd5613c07bf51892f30547ca86caf2d46",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "0fef418a34e475991f27e62a268d0d3ec02eee4f0be8d4ebfe5ed8631868155e",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylAmb9RollShnGl",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "28b8a13e5f6d928f6f510aa6f9b3c510a75a3531545c0c6bf9c4d154f5228041",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "baa25d91f6f83b2fe45800da887d53377dab2bc4c8fc31d61ad741cf0e39a194",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "9e7c0a516d39faf38252b29849a5720ead4b4299aa0ccabb629e07dc004c6692",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylAmb9RollShnSl",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "d4c4e5064a4019f7bf3abbaf7892c292005351d8dd7f7b677f3ea5016f6d9093",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "baa25d91f6f83b2fe45800da887d53377dab2bc4c8fc31d61ad741cf0e39a194",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "d3ab7e5a06fffbf337926d4b4c04ea7b7b59f083856a8690ce5fefd7df84ee63",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylAmb9RollSlDot",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "dd99c398f66c9eb84e532e3a31ce23e651af433a54875b2695c3d8b909c330a9",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "fe52382bf331ae5d790ef2bd1bf2add390b3b269ccdea5f943b73b9a63c2b254",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "220533181bb5726214a67dc2c4f2c5991a1e2c678c370f76d01d2572ef961e19",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylAmb9RollWht",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "a1c3866ca36334fab02190829ba4cb841e617ce8b2c3c30cb14b8a803addbb77",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "14d15f8395101c9e1771d723450aa4cd16dd0ab719342bebc86fb46f0ebadd36",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "445af64da4d546206362adfc5bcea8ae4b2ca765951cec1b5bba2639c9af6e0e",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylBlu9RollBlkDot",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "ca5c943e5f3cafbf0a03708a93069a069dfb2fe7312de665f820b4f513899ac6",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "d2339d55f71e1f5260859ebb82f317f245eb3f4f0ddabe3feaef08242486441b",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "3e88b23f7dc339cf41ad89a63da3ffe5c88ad2ce59f6412fa5b10da08e77353a",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylBlu9RollMattCu",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "944930fd2d748cb6b7c0ff6a115445d0f35777bea688d1f5bc6ffbeefedd39d6",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "fb364e98c9b5b289d125dc00f0cedf3bc03f4aaa47236ebd7cf2d8ca0bcb2858",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "eb10829984113a24c21782fa835e01fb4db130e37e2b62f6f96a1682df51c04b",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylBlu9RollMattGl",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "16f3fa2b315f341ddd94e6b05068802ad969aba0fc09a1d9ab8542a8388a03e0",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "9a8672e233c2facf3e60b1fc6f40dc92b6474329559284b24edc6d4d91918259",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "5e326dc9c6a81f510a194238fc49efdc849a4615cd3aed07f44c32789c12d885",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylBlu9RollMattSl",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "bd8aa6bc2c5711648184bc892a33394c737dee800ae4b7e8919eeb6d9c706f9d",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "c06028287611faa7963b81fd08196b4c38ea3783435258e2bb709bea2e03a057",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "9668ab3852319de6e7deb61cd932f6a551311ff1a6f45b7c1b09c255381a1414",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylBlu9RollShBlk",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "cbe5f3e9c2bc6b0014fc30c34bdc8f4d101f4c1613e720ab26b69148b984ae2f",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "9a4b8aef3b3fd6a1fdc6c5ca9293f5cfd2fbc4d669d5f7ea287d20beb9c6c64f",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "2f7f239b7a858ae3a236abeeb086098e85c54278abfd8e6bc722a301ca738b77",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylBlu9RollShnGl",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "118815b60f1623d956d5ca2b8307ec8281503cda2e90d22308609d122567098d",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "ac75b8bb1b1e9b3196d98a2cbb1403891247e68c8ac21c3e6eec01c93d4438ca",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "1e4dd8ada0f856eecd085e373fab6d7b61081c0e203508a4f4e63db501c50454",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylBlu9RollShnSl",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "333e92a26b1602c8a6b773b68901420a918a836fd0e2d098256954300c18474f",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "0c4fa4fc474578b0de69058afe4080c6d44cd3124b92559a37f5d69c65405732",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "cb9ba1a0488969954e2b164670bfeb962039f674222880e4bfe36bfdbddd6e66",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylBlu9RollWht",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "bb31a4a8ad70fc93de19cfc305eae759eeb4f105d9e773c2767eb0b556231a67",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "ac75b8bb1b1e9b3196d98a2cbb1403891247e68c8ac21c3e6eec01c93d4438ca",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "8480a93d7c8a1255d9b6dad06ec594080de2fdc11cc3f242c5e8d56fb6b355a1",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylFrst9RollBlkDot",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "0886193a8004919653cfbfeef89423a596d430509f0de80c74917a84842484e4",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "a99108cff0e9b74072a06d9c3f428390e1f40936e3cd0ec77708415b46d449c9",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "0c5d45a7d5ad5f1d19198139400ea3b6e14cc893c54affe4d81165109f95fb13",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylFrst9RollMattCu",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "1569c941904a908526b76b3ab5facf734ba28ec634750b94c0096f2bf9b4ffea",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "40d9959266fa6b0fe886c480377b5ec7ff213060c2091b442bc074fc7aa8da27",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "391877296518758b9a0add3812a3b9cf0669f1f6e54fc605f7a0532c58dc9a77",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylFrst9RollMattGl",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "829f86bd7a406cecdf31b6fa7e768aa14b3e497bd0309051df78fc2c9d9d5132",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "a912b901fa20f96ffb16c4d0b9e5145b4e577754f93edcb03765528921b8a40a",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "5e326dc9c6a81f510a194238fc49efdc849a4615cd3aed07f44c32789c12d885",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylFrst9RollMattSl",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "50ccd489fede3216deae143c4585e50f26d09208c5abf8ba4c1d834045f1536a",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "a912b901fa20f96ffb16c4d0b9e5145b4e577754f93edcb03765528921b8a40a",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "55bc1eb564f72bf197b2f658b5db12dc6e5d8873d9f08a0674af882651f0f790",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylFrst9RollPnkDot",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "8ae1167999bffeb682d7f2345e8ce2c9a9d23b16895652a72329c612d0c15af1",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "ba98fc9e8cf1841533c93f063e7c708461973141543e27a711fc8514ef8577df",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "f7366c0b328bb544ac5f2cfc89463bc3d8349355a77df67602f25efe1b5b6c55",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylFrst9RollShBlk",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "67caef86e171c4f51b6a31794e9e6b12c043ae32a6292b87ab223010a5a9f644",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "2fc39f68839a2081153c2254f35414d8c7e3bf046e3eea28423b13d831a79a4e",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "2f7f239b7a858ae3a236abeeb086098e85c54278abfd8e6bc722a301ca738b77",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylFrst9RollShnGl",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "7854f93dd4b9e46b3afb726f04f443a04747640f707b44fce54e82340568289a",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "e77edaf1b7c53e831c7a40aede198acf94d44ca193388afd2d707dcb828d87f2",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "1e4dd8ada0f856eecd085e373fab6d7b61081c0e203508a4f4e63db501c50454",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylFrst9RollShnSl",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "74887d3e91b15a583dbb5bbebf9ac44fab7d8370ef7cb5f7273a3b5e00e0abd1",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "6185c26ffa24c3d6049e5c727fed17c28b429ba4f0f1b8cb133678deb1c16ec5",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "b4e958a55cde96cbaeea93b684a8bfb9deb68f24c13a69c49a25f3ec3a1957d3",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylFrst9RollSlDot",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "55e1c721a2e2a6688d34294a3750b2dcdc1d83826f56f8a9b44bb6739e15b2e8",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "40d9959266fa6b0fe886c480377b5ec7ff213060c2091b442bc074fc7aa8da27",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "92e82e1a1200db24310b09f4e2868c3105f6745308fd19474f9aa40df0451c6e",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylFrst9RollWht",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "2d2219a2da25cd9fa7caa284cd5f7b7f17e0d2c777cf054cccb20764f85cfc26",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "0626430a179bd40fb9a47038128385defd96d0b5ddc087bf7164bf094e979898",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "9485c62c9ee0de5f1789897c30cdf04a685cc19e0f05db861faa983c38855a33",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylSwrl9RollBlkDot",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "65603557933a77a7bb464a6ecfc1d628eebf43a366f39044a69d7ebba8f1bf79",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "25bbf61e5b1aa667fda4f763a1ba8d2a726ad1b6fc2d966ee63d09479443f694",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "33ba232f515cd79fa8d898b33ff8128193f97066ef1701856d61f62504b1f2a8",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylSwrl9RollPnkDot",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "3a1d27812931a6b3e62ad9614c16b83d3ba557fc88153da98bc7f3f82a32bfbe",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "759c22e968dbe4dee0465f97fc121114a2c16fbd4ee5dd8b34106753af29af12",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "35abed24954d0664a432bb33e32b22616df598ec4c9677fd86b62690a05cf374",
+      "donor": null
+     }
+    ]
+   },
+   {
+    "sku": "GBCylSwrl9RollSlDot",
+    "fixes": [
+     "rollerToNeck"
+    ],
+    "parts": [
+     {
+      "slot": "body",
+      "sha256": "507ef2760658697ff525d0e527e6ac0cde6fd5a77f2b91fb9baa27baedb8b7b2",
+      "donor": null
+     },
+     {
+      "slot": "roller",
+      "sha256": "cafe629e9a4aebc378667857b822ec319c62aadd13854c36681b6ebc5e501e79",
+      "donor": null
+     },
+     {
+      "slot": "cap",
+      "sha256": "6c733cb89470a258a02788f26b50b8a51db3427a71678d4fa1b8b75bf2611a3f",
+      "donor": null
+     }
+    ]
+   }
+  ],
+  "outcomes": [
+   {
+    "outcome": "updated",
+    "sku": "GBCyl9RollMattCu"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCyl9RollMattGl"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCyl9RollMattSl"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCyl9RollShBlk"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCyl9RollShnGl"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCyl9RollShnSl"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCyl9RollSlDot"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCyl9RollWht"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylAmb9RollBlkDot"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylAmb9RollMattCu"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylAmb9RollMattGl"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylAmb9RollMattSl"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylAmb9RollPnkDot"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylAmb9RollShBlk"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylAmb9RollShnGl"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylAmb9RollShnSl"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylAmb9RollSlDot"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylAmb9RollWht"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylBlu9RollBlkDot"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylBlu9RollMattCu"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylBlu9RollMattGl"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylBlu9RollMattSl"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylBlu9RollShBlk"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylBlu9RollShnGl"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylBlu9RollShnSl"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylBlu9RollWht"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylFrst9RollBlkDot"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylFrst9RollMattCu"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylFrst9RollMattGl"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylFrst9RollMattSl"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylFrst9RollPnkDot"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylFrst9RollShBlk"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylFrst9RollShnGl"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylFrst9RollShnSl"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylFrst9RollSlDot"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylFrst9RollWht"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylSwrl9RollBlkDot"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylSwrl9RollPnkDot"
+   },
+   {
+    "outcome": "updated",
+    "sku": "GBCylSwrl9RollSlDot"
+   }
+  ]
  }
 ]
