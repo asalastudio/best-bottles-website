@@ -104,8 +104,11 @@ Still needed: Dp, Hn, Dep and Cap.
 **Shape:** from Jordan's photo IMG_5823, the shoulder is one smooth round from the wall into the neck. The May 2015
 drawing glass had a cone plus a ledge, which read as two steps; do not rebuild it that way.
 
-**Neck height ruling (Jordan, 2026-09-26):** Fh = 11.0 for both 13-415 cylinders, this one and the Cylinder 5 ml,
-measured from the rim top to where the neck meets the shoulder. The raw 10.11 stays in `values`; 11.0 is in `model`.
+**13-415 finish rulings (Jordan, 2026-09-26)** apply to both 13-415 cylinders, this one and the Cylinder 5 ml:
+
+- **Neck height:** Fh = 11.0, measured from the rim top to where the neck meets the shoulder. The raw 10.11 stays in
+  `values`, and 11.0 is in `model`.
+- **Neck Ø:** E = 11.22.
 
 **WIP rebuild:** `outputs/tall-caliper-v36/` (v36) rebuilds this glass to the readings, with the smooth shoulder and
 Fh 11.0.
@@ -170,8 +173,8 @@ Key `cylinder-5ml-13-415`, measured by Jordan on 2026-09-26. The Clear and Cobal
 
 - The site gives 53 × 17 for this bottle, which matches.
 - Still needed: W, Dp, T, Dep and Cap.
-- **Neck height:** Jordan set Fh = 11.0 for both 13-415 cylinders on 2026-09-26.
-- **Still open:** the neck Ø reads 11.64 here but 11.22 on the Tall Cylinder. The 13-415 finish should match.
+- **13-415 finish rulings (Jordan, 2026-09-26), for both 13-415 cylinders:** neck height Fh = 11.0 and neck Ø E = 11.22.
+  The raw readings (Fh ~11.0 and E 11.64 here, Fh 10.11 on the Tall) stay in `values`; the rulings are in `model`.
 
 ### 13-415 roller insert (metal and plastic ball)
 
