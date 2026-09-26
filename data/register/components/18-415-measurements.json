@@ -34,7 +34,7 @@
      "sha256": "8bd04d6c5a282ea76c16bc8ec98df1f148e7f8e2740688a3ed44788dc7a182e7",
      "pxPerMm": 7.1992,
      "anchor": {
-      "x": 105.8,
+      "x": 106.5,
       "y": 112.8
      },
      "z": "front",
@@ -44,7 +44,13 @@
    "checks": {
     "registrationIoU": 0.9794,
     "libraryScale": 0.5623,
-    "approvable": true
+    "approvable": true,
+    "recentredMm": [
+     [
+      "cap",
+      -0.097
+     ]
+    ]
    }
   },
   {
@@ -122,7 +128,7 @@
      "sha256": "a8408ded928b19b85ab86622c68710570e26019c8d700529725937486f320422",
      "pxPerMm": 26.3501,
      "anchor": {
-      "x": 416.6,
+      "x": 404.0,
       "y": 383.2
      },
      "z": "front",
@@ -132,7 +138,13 @@
    "checks": {
     "registrationIoU": 0.993,
     "libraryScale": 2.0582,
-    "approvable": true
+    "approvable": true,
+    "recentredMm": [
+     [
+      "cap",
+      0.478
+     ]
+    ]
    }
   },
   {
@@ -166,7 +178,7 @@
      "sha256": "334320d38cfb4759b15438ed2edf9a9a51ee5b7401cbb4b85c9364fa67631a69",
      "pxPerMm": 7.1766,
      "anchor": {
-      "x": 103.3,
+      "x": 104.2,
       "y": 111.9
      },
      "z": "front",
@@ -176,7 +188,13 @@
    "checks": {
     "registrationIoU": 0.9761,
     "libraryScale": 0.5606,
-    "approvable": true
+    "approvable": true,
+    "recentredMm": [
+     [
+      "cap",
+      -0.132
+     ]
+    ]
    }
   },
   {
@@ -210,7 +228,7 @@
      "sha256": "ab1f6159d1e145299e2a6d78327fe5652877c76b4c9b3b643aa181c509a3c02d",
      "pxPerMm": 9.6019,
      "anchor": {
-      "x": 125.4,
+      "x": 117.0,
       "y": 44.8
      },
      "z": "front",
@@ -220,7 +238,13 @@
    "checks": {
     "registrationIoU": 0.9571,
     "libraryScale": 0.75,
-    "approvable": true
+    "approvable": true,
+    "recentredMm": [
+     [
+      "cap",
+      0.875
+     ]
+    ]
    }
   },
   {
@@ -254,7 +278,7 @@
      "sha256": "25cdbc112e3e99fab06d1f3cee450933d40ef6841593c8b86ebbe6e72fb397f9",
      "pxPerMm": 8.0656,
      "anchor": {
-      "x": 105.1,
+      "x": 103.0,
       "y": 94.4
      },
      "z": "front",
@@ -264,7 +288,13 @@
    "checks": {
     "registrationIoU": 0.922,
     "libraryScale": 0.63,
-    "approvable": true
+    "approvable": true,
+    "recentredMm": [
+     [
+      "cap",
+      0.26
+     ]
+    ]
    }
   },
   {
@@ -355,7 +385,7 @@
      "sha256": "05058e25010d340ada26a7b4710134d02e27087604191a7de3f60cf544ee5c97",
      "pxPerMm": 26.2098,
      "anchor": {
-      "x": 409.4,
+      "x": 401.0,
       "y": 392.6
      },
      "z": "front",
@@ -368,7 +398,13 @@
     "approvable": true,
     "specksClearedPx": {
      "cap": 2160
-    }
+    },
+    "recentredMm": [
+     [
+      "cap",
+      0.32
+     ]
+    ]
    }
   },
   {
@@ -402,7 +438,7 @@
      "sha256": "216376a7f597fef31d124b470c9c1a99628f36fabed4e92f42c403e0e0ed4d5d",
      "pxPerMm": 8.0673,
      "anchor": {
-      "x": 99.6,
+      "x": 97.0,
       "y": 94.5
      },
      "z": "front",
@@ -412,7 +448,13 @@
    "checks": {
     "registrationIoU": 0.9564,
     "libraryScale": 0.6301,
-    "approvable": true
+    "approvable": true,
+    "recentredMm": [
+     [
+      "cap",
+      0.322
+     ]
+    ]
    }
   },
   {
@@ -446,7 +488,7 @@
      "sha256": "3e51945791b1c5a47553daeea323ae74e11dae1673995e156062ad74f6192f53",
      "pxPerMm": 9.014,
      "anchor": {
-      "x": 115.8,
+      "x": 110.0,
       "y": 50.7
      },
      "z": "front",
@@ -456,7 +498,13 @@
    "checks": {
     "registrationIoU": 0.9102,
     "libraryScale": 0.7041,
-    "approvable": true
+    "approvable": true,
+    "recentredMm": [
+     [
+      "cap",
+      0.643
+     ]
+    ]
    }
   },
   {
@@ -490,7 +538,7 @@
      "sha256": "47b100d5600877255dfa86c8ecc117f8ecc2e5cad8ae3165a52d64e6f475949c",
      "pxPerMm": 9.558,
      "anchor": {
-      "x": 125.1,
+      "x": 115.5,
       "y": 58.5
      },
      "z": "front",
@@ -503,7 +551,13 @@
     "approvable": false,
     "specksClearedPx": {
      "cap": 26
-    }
+    },
+    "recentredMm": [
+     [
+      "cap",
+      1.004
+     ]
+    ]
    }
   },
   {
@@ -537,7 +591,7 @@
      "sha256": "b2a62926377b89e2b34fea1be5ab2849186494e1210fde5bf8aa22ea2748dfa7",
      "pxPerMm": 8.1068,
      "anchor": {
-      "x": 105.8,
+      "x": 104.0,
       "y": 93.4
      },
      "z": "front",
@@ -547,7 +601,13 @@
    "checks": {
     "registrationIoU": 0.9802,
     "libraryScale": 0.6332,
-    "approvable": true
+    "approvable": true,
+    "recentredMm": [
+     [
+      "cap",
+      0.222
+     ]
+    ]
    }
   },
   {
@@ -578,7 +638,7 @@
      "sha256": "5dca56f5370736a5b7d4a1476528a04535128eba1ee8fb0bad10b26198b12cde",
      "pxPerMm": 13.0144,
      "anchor": {
-      "x": 183.5,
+      "x": 175.8,
       "y": 281
      },
      "z": "front",
@@ -593,7 +653,7 @@
      "sha256": "05c061b9a41a08e14302e2cbe89aaae4be3599f876adbff0ccc94e05a6f47c15",
      "pxPerMm": 13.0144,
      "anchor": {
-      "x": 178.5,
+      "x": 170.8,
       "y": -265
      },
      "z": "behind-body",
@@ -604,7 +664,17 @@
     "status": "cut from the bottle photo",
     "approvable": true,
     "collarWidthPx": 330,
-    "splitRow": 659
+    "splitRow": 659,
+    "recentredMm": [
+     [
+      "fitment",
+      0.595
+     ],
+     [
+      "pipette",
+      0.595
+     ]
+    ]
    }
   },
   {
@@ -635,7 +705,7 @@
      "sha256": "7a854df705e47536e446f617b23a3f10c88725950df84cda5fdb7c9884e3c3e5",
      "pxPerMm": 13.0144,
      "anchor": {
-      "x": 177.5,
+      "x": 173.5,
       "y": 285
      },
      "z": "front",
@@ -650,7 +720,7 @@
      "sha256": "c107345f6b44c10ea2fea2aae48ddd89d534134ae7ae31b6d841b86596e29661",
      "pxPerMm": 13.0144,
      "anchor": {
-      "x": 173.5,
+      "x": 169.5,
       "y": -261
      },
      "z": "behind-body",
@@ -661,7 +731,17 @@
     "status": "cut from the bottle photo",
     "approvable": true,
     "collarWidthPx": 328,
-    "splitRow": 655
+    "splitRow": 655,
+    "recentredMm": [
+     [
+      "fitment",
+      0.307
+     ],
+     [
+      "pipette",
+      0.307
+     ]
+    ]
    }
   },
   {
@@ -692,7 +772,7 @@
      "sha256": "9312783a4b7bd0c76213531b28f28830e2b6854edbdfb5ab1baf8f681ff85540",
      "pxPerMm": 13.0144,
      "anchor": {
-      "x": 182.5,
+      "x": 175.0,
       "y": 281
      },
      "z": "front",
@@ -707,7 +787,7 @@
      "sha256": "a76f594f97ab646b404a6aa2914fbca51135c485a62bd7fe293418607e225c3f",
      "pxPerMm": 13.0144,
      "anchor": {
-      "x": 177.5,
+      "x": 170.0,
       "y": -265
      },
      "z": "behind-body",
@@ -718,7 +798,17 @@
     "status": "cut from the bottle photo",
     "approvable": true,
     "collarWidthPx": 329,
-    "splitRow": 659
+    "splitRow": 659,
+    "recentredMm": [
+     [
+      "fitment",
+      0.576
+     ],
+     [
+      "pipette",
+      0.576
+     ]
+    ]
    }
   },
   {
@@ -753,7 +843,7 @@
      "sha256": "972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106",
      "pxPerMm": 8.786,
      "anchor": {
-      "x": 114.7,
+      "x": 113.0,
       "y": 236.2
      },
      "z": "front",
@@ -768,7 +858,7 @@
      "sha256": "bfba49c70defb6ddc31527dd8e74970467b87043bd83986cf1a9cd9780fcb056",
      "pxPerMm": 12.8025,
      "anchor": {
-      "x": 206.5,
+      "x": 207.0,
       "y": 408
      },
      "z": "front",
@@ -781,7 +871,17 @@
     "approvable": true,
     "specksClearedPx": {
      "pump": 112
-    }
+    },
+    "recentredMm": [
+     [
+      "pump",
+      0.193
+     ],
+     [
+      "overcap",
+      -0.039
+     ]
+    ]
    }
   },
   {
@@ -831,7 +931,7 @@
      "sha256": "42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529",
      "pxPerMm": 12.8025,
      "anchor": {
-      "x": 184.5,
+      "x": 176.5,
       "y": 356
      },
      "z": "front",
@@ -844,7 +944,13 @@
     "approvable": true,
     "specksClearedPx": {
      "pump": 100
-    }
+    },
+    "recentredMm": [
+     [
+      "overcap",
+      0.625
+     ]
+    ]
    }
   },
   {
@@ -879,7 +985,7 @@
      "sha256": "0cc427bbd8ed00ae446a8a4e5fec65e8a3f68476b7f4cf11c6398f51825987bb",
      "pxPerMm": 23.1664,
      "anchor": {
-      "x": 296.2,
+      "x": 278.5,
       "y": 570.7
      },
      "z": "front",
@@ -894,7 +1000,7 @@
      "sha256": "e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83",
      "pxPerMm": 12.8025,
      "anchor": {
-      "x": 185.5,
+      "x": 175.5,
       "y": 354
      },
      "z": "front",
@@ -904,7 +1010,17 @@
    "checks": {
     "registrationIoU": 0.9604,
     "libraryScale": 1.8095,
-    "approvable": true
+    "approvable": true,
+    "recentredMm": [
+     [
+      "pump",
+      0.764
+     ],
+     [
+      "overcap",
+      0.781
+     ]
+    ]
    }
   },
   {
@@ -939,7 +1055,7 @@
      "sha256": "c4e70e2d9fcd9d18fd74b384607f1faed235200eafc355f70caf5f83ba538bc9",
      "pxPerMm": 23.0964,
      "anchor": {
-      "x": 279.7,
+      "x": 283.5,
       "y": 552.8
      },
      "z": "front",
@@ -954,7 +1070,7 @@
      "sha256": "c4d4b9daf52cfda14d1e92d111a8c19467beadf960e1cfb558f7ed466e7966a3",
      "pxPerMm": 12.8025,
      "anchor": {
-      "x": 162.5,
+      "x": 163.0,
       "y": 406
      },
      "z": "front",
@@ -964,7 +1080,17 @@
    "checks": {
     "registrationIoU": 0.9702,
     "libraryScale": 1.8041,
-    "approvable": true
+    "approvable": true,
+    "recentredMm": [
+     [
+      "pump",
+      -0.165
+     ],
+     [
+      "overcap",
+      -0.039
+     ]
+    ]
    }
   },
   {
@@ -999,7 +1125,7 @@
      "sha256": "7fd1cfbea3ed6283b4937b6c0f9d3416bc379da9fabc13b1bc4d460e74d71176",
      "pxPerMm": 9.1446,
      "anchor": {
-      "x": 125.2,
+      "x": 119.0,
       "y": 228.6
      },
      "z": "front",
@@ -1014,7 +1140,7 @@
      "sha256": "8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822",
      "pxPerMm": 12.8025,
      "anchor": {
-      "x": 178.5,
+      "x": 176.0,
       "y": 352
      },
      "z": "front",
@@ -1024,7 +1150,17 @@
    "checks": {
     "registrationIoU": 0.9607,
     "libraryScale": 0.7143,
-    "approvable": true
+    "approvable": true,
+    "recentredMm": [
+     [
+      "pump",
+      0.678
+     ],
+     [
+      "overcap",
+      0.195
+     ]
+    ]
    }
   },
   {
@@ -1059,7 +1195,7 @@
      "sha256": "07155152afd69e8ef46c789f986353c6a4246c8dd0d9b47d32454294c1f0159b",
      "pxPerMm": 9.4085,
      "anchor": {
-      "x": 120.7,
+      "x": 122.0,
       "y": 227.9
      },
      "z": "front",
@@ -1074,7 +1210,7 @@
      "sha256": "de0582dafa63fd693f9e22125610b5f4a1f04826f3fa392a85afa7169befeced",
      "pxPerMm": 12.8025,
      "anchor": {
-      "x": 176.5,
+      "x": 168.8,
       "y": 357
      },
      "z": "front",
@@ -1084,7 +1220,17 @@
    "checks": {
     "registrationIoU": 0.9888,
     "libraryScale": 0.7349,
-    "approvable": true
+    "approvable": true,
+    "recentredMm": [
+     [
+      "pump",
+      -0.138
+     ],
+     [
+      "overcap",
+      0.605
+     ]
+    ]
    }
   },
   {
@@ -1119,7 +1265,7 @@
      "sha256": "5ab4afef966a38362aa7e46a12c8f076a476dc3c005f0425521645c0c8b662c4",
      "pxPerMm": 9.2722,
      "anchor": {
-      "x": 117.4,
+      "x": 115.5,
       "y": 229.9
      },
      "z": "front",
@@ -1134,7 +1280,7 @@
      "sha256": "4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece",
      "pxPerMm": 12.8025,
      "anchor": {
-      "x": 183.5,
+      "x": 175.5,
       "y": 354
      },
      "z": "front",
@@ -1144,7 +1290,17 @@
    "checks": {
     "registrationIoU": 0.9708,
     "libraryScale": 0.7243,
-    "approvable": true
+    "approvable": true,
+    "recentredMm": [
+     [
+      "pump",
+      0.205
+     ],
+     [
+      "overcap",
+      0.625
+     ]
+    ]
    }
   },
   {
@@ -1866,7 +2022,7 @@
      "sha256": "8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a",
      "pxPerMm": 9.0702,
      "anchor": {
-      "x": 118.5,
+      "x": 113.0,
       "y": 231.3
      },
      "z": "front",
@@ -1881,7 +2037,7 @@
      "sha256": "9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9",
      "pxPerMm": 12.8025,
      "anchor": {
-      "x": 186.5,
+      "x": 181.0,
       "y": 408
      },
      "z": "front",
@@ -1895,7 +2051,17 @@
     "specksClearedPx": {
      "sprayer": 120,
      "overcap": 8557
-    }
+    },
+    "recentredMm": [
+     [
+      "sprayer",
+      0.606
+     ],
+     [
+      "overcap",
+      0.43
+     ]
+    ]
    }
   },
   {
@@ -1930,7 +2096,7 @@
      "sha256": "dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed",
      "pxPerMm": 8.7991,
      "anchor": {
-      "x": 119.2,
+      "x": 116.5,
       "y": 234.8
      },
      "z": "front",
@@ -1945,7 +2111,7 @@
      "sha256": "42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529",
      "pxPerMm": 12.8025,
      "anchor": {
-      "x": 184.5,
+      "x": 176.5,
       "y": 356
      },
      "z": "front",
@@ -1958,7 +2124,17 @@
     "approvable": true,
     "specksClearedPx": {
      "sprayer": 101
-    }
+    },
+    "recentredMm": [
+     [
+      "sprayer",
+      0.307
+     ],
+     [
+      "overcap",
+      0.625
+     ]
+    ]
    }
   },
   {
@@ -1993,7 +2169,7 @@
      "sha256": "5c50ea9efde8b3535c6330bf6b21429e2300857f9ba7d9c47677349dce048cef",
      "pxPerMm": 9.1322,
      "anchor": {
-      "x": 120.9,
+      "x": 114.0,
       "y": 226.0
      },
      "z": "front",
@@ -2008,7 +2184,7 @@
      "sha256": "e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83",
      "pxPerMm": 12.8025,
      "anchor": {
-      "x": 185.5,
+      "x": 175.5,
       "y": 354
      },
      "z": "front",
@@ -2018,7 +2194,17 @@
    "checks": {
     "registrationIoU": 0.9587,
     "libraryScale": 0.7133,
-    "approvable": true
+    "approvable": true,
+    "recentredMm": [
+     [
+      "sprayer",
+      0.756
+     ],
+     [
+      "overcap",
+      0.781
+     ]
+    ]
    }
   },
   {
@@ -2224,7 +2410,7 @@
      "sha256": "9d494fd880618a93df237d4a4ce12c35c13cc5b98af531044a943793654e9994",
      "pxPerMm": 9.017,
      "anchor": {
-      "x": 124.6,
+      "x": 118.5,
       "y": 229.4
      },
      "z": "front",
@@ -2239,7 +2425,7 @@
      "sha256": "8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822",
      "pxPerMm": 12.8025,
      "anchor": {
-      "x": 178.5,
+      "x": 176.0,
       "y": 352
      },
      "z": "front",
@@ -2249,7 +2435,17 @@
    "checks": {
     "registrationIoU": 0.949,
     "libraryScale": 0.7043,
-    "approvable": true
+    "approvable": true,
+    "recentredMm": [
+     [
+      "sprayer",
+      0.676
+     ],
+     [
+      "overcap",
+      0.195
+     ]
+    ]
    }
   },
   {
@@ -2284,7 +2480,7 @@
      "sha256": "41f38526607d7ec57dcc6c175773a0ec77889e76f1bd23f478cc2292b6497846",
      "pxPerMm": 9.2797,
      "anchor": {
-      "x": 120.2,
+      "x": 121.5,
       "y": 228.6
      },
      "z": "front",
@@ -2299,7 +2495,7 @@
      "sha256": "177601ce48e6d817e1fbeebf18246c078cca84cedbce281747026dc3ef8abb38",
      "pxPerMm": 12.8025,
      "anchor": {
-      "x": 184.5,
+      "x": 169.8,
       "y": 357
      },
      "z": "front",
@@ -2309,7 +2505,17 @@
    "checks": {
     "registrationIoU": 0.9914,
     "libraryScale": 0.7248,
-    "approvable": true
+    "approvable": true,
+    "recentredMm": [
+     [
+      "sprayer",
+      -0.14
+     ],
+     [
+      "overcap",
+      1.152
+     ]
+    ]
    }
   },
   {
@@ -2344,7 +2550,7 @@
      "sha256": "a26b031f10138c75eae2c73ead6908b1896facdfee8e4a690d34e2f0c2a49616",
      "pxPerMm": 9.0296,
      "anchor": {
-      "x": 114.6,
+      "x": 113.0,
       "y": 231.3
      },
      "z": "front",
@@ -2359,7 +2565,7 @@
      "sha256": "4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece",
      "pxPerMm": 12.8025,
      "anchor": {
-      "x": 183.5,
+      "x": 175.5,
       "y": 354
      },
      "z": "front",
@@ -2369,7 +2575,17 @@
    "checks": {
     "registrationIoU": 0.9431,
     "libraryScale": 0.7053,
-    "approvable": true
+    "approvable": true,
+    "recentredMm": [
+     [
+      "sprayer",
+      0.177
+     ],
+     [
+      "overcap",
+      0.625
+     ]
+    ]
    }
   },
   {

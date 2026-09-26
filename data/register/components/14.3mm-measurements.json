@@ -15,7 +15,7 @@
      "sha256": "aba9e15e9f99886d702eca5424048b05dcf9b226e09097b5e907ed9f84154ee9",
      "pxPerMm": 39.9529,
      "anchor": {
-      "x": 201,
+      "x": 174.0,
       "y": 209
      },
      "z": "front",
@@ -31,7 +31,7 @@
      "sha256": "633d053114357ecad4054d94c0dccfa276b4693ac6686ff87135fbb242ed91b7",
      "pxPerMm": 39.9529,
      "anchor": {
-      "x": 201,
+      "x": 174.0,
       "y": 209
      },
      "z": "front",
@@ -47,7 +47,17 @@
      "headTop": 14,
      "glassRim": 104,
      "stemBottom": 146
-    }
+    },
+    "recentredMm": [
+     [
+      "cap",
+      0.676
+     ],
+     [
+      "cap",
+      0.676
+     ]
+    ]
    }
   }
  ]

@@ -203,6 +203,42 @@ def drop_specks(img: Image.Image, slot: str = "") -> tuple[Image.Image, int]:
     return (Image.fromarray(a), cleared) if cleared else (img, 0)
 
 
+# A threaded closure sits on the bottle's axis. Anchors first came from where the part stood in its product photo, and
+# the photographed part was often a little off the glass axis (up to 1.15 mm; Jordan 2026-09-26: "the caps are not
+# centered on top of the bottle", the Tall Cylinder 9). recentre() puts each source image's anchor on the part's own
+# centre line. Bulb sprayers keep theirs: the bulb hangs to one side of the axis.
+OFF_AXIS_TYPES = {"vintage-bulb-sprayer", "tassel-bulb-sprayer"}
+
+
+def centre_line(img: Image.Image) -> float:
+    """The median of the solid rows' midpoints: the axis of a turned part, unmoved by a nozzle hole or a highlight."""
+    m = alpha(img) > ALPHA
+    rows = np.where(m.any(axis=1))[0]
+    return float(np.median([(np.where(m[y])[0].min() + np.where(m[y])[0].max()) / 2 for y in rows]))
+
+
+def recentre(entry: dict, images: Path) -> list[tuple[str, float]]:
+    """Move each source image's anchor x onto its part's centre line. Layers cut from one image (a library canvas, or
+    one photo) move together by the shift their largest front layer needs, so a nozzle disc stays where it sits on its
+    head; the overcap, cut from the capped photo, is its own source. Returns (slot, shift in mm) per moved layer."""
+    if entry["type"] in OFF_AXIS_TYPES or not entry["layers"]:
+        return []
+    groups: dict[str, list[dict]] = {}
+    for layer in entry["layers"]:
+        groups.setdefault("overcap" if layer["slot"] == "overcap" else "part", []).append(layer)
+    moved = []
+    for layers in groups.values():
+        front = [l for l in layers if l["z"] == "front"] or layers
+        ref = max(front, key=lambda l: int((alpha(Image.open(images / l["file"]).convert("RGBA")) > ALPHA).sum()))
+        shift = ref["anchor"]["x"] - centre_line(Image.open(images / ref["file"]).convert("RGBA"))
+        if abs(shift) < 0.5:
+            continue
+        for layer in layers:  # one source image, one px/mm: the same shift for each of its layers
+            layer["anchor"]["x"] = round(layer["anchor"]["x"] - shift, 1)
+            moved.append((layer["slot"], round(shift / layer["pxPerMm"], 3)))
+    return moved
+
+
 def crop_save(img: Image.Image, path: Path, pad: int = 6) -> tuple[Image.Image, int, int]:
     l, t, r, b = box(alpha(img) > 0)
     l, t = max(0, l - pad), max(0, t - pad)
@@ -406,6 +442,8 @@ def main() -> int:
                                     "file": name, "width": cut.width, "height": cut.height, "sha256": sha(cut), "pxPerMm": round(ref_px_per_mm, 4),
                                     "anchor": {"x": round(ref.bm["axisX"] - ox, 1), "y": round(ref.bm["rim"] - oy, 1)}, "z": "behind-body", "explodeIndex": 0})
             entry["checks"] = {"status": "cut from the uncapped bottle photo", "approvable": True, "clippedBelowRimPx": ROLLER_CLIP_BELOW_RIM}
+            if (moved := recentre(entry, out_dir)):
+                entry["checks"]["recentredMm"] = moved
             review.append((f"{cid} · photo cut · {sku}", cut, None, ctype))
             result["components"].append(entry)
             print(f"{cid:26} {ctype:20} ref {sku:24} cut from photo {cut.width}x{cut.height}")
@@ -434,6 +472,8 @@ def main() -> int:
                                         "sha256": sha(bcut), "pxPerMm": round(ref_px_per_mm, 4), "anchor": {"x": round(ref.bm["axisX"] - bx, 1), "y": round(ref.bm["rim"] - by, 1)},
                                         "z": "behind-body", "explodeIndex": 0})
             entry["checks"] = {"status": "cut from the bottle photo", "approvable": True, "collarWidthPx": collar_w, "splitRow": split_row}
+            if (moved := recentre(entry, out_dir)):
+                entry["checks"]["recentredMm"] = moved
             review.append((f"{cid} · photo cut · {sku}", cut, None, ctype))
             result["components"].append(entry)
             print(f"{cid:26} {ctype:20} ref {sku:24} cut from photo {cut.width}x{cut.height}")
@@ -521,6 +561,8 @@ def main() -> int:
         overlay.paste(scaled, (int(round(tx)), int(round(ty))))
         ov_crop = overlay.crop(crop.getbbox() and (max(0, rl - pad), max(0, rt - pad), min(ref_img.width, rr + pad), min(ref_img.height, rb + pad)))
         review.append((f"{cid} · IoU {score:.3f} · {sku}", crop, ov_crop, ctype))
+        if (moved := recentre(entry, out_dir)):
+            entry["checks"]["recentredMm"] = moved
         print(f"{cid:26} {ctype:20} ref {sku:24} IoU {score:.3f} lib {lib_px_per_mm:.2f} px/mm layers {[l['slot'] for l in entry['layers']]}")
         result["components"].append(entry)
 
