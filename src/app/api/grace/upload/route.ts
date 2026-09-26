@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../../convex/_generated/api";
 import { enforceGraceRateLimit } from "@/lib/graceRateLimitServer";
+import { isValidGraceOwnerKey } from "@/lib/graceOwnerKeyFormat";
 
 /**
  * Grace AI file upload endpoint.
@@ -23,7 +24,9 @@ const ACCEPTED = new Set([
 ]);
 
 function isValidOwnerKey(ownerKey: string): boolean {
-    return /^(anon-[a-z0-9-]{8,}|[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12})$/i.test(ownerKey);
+    // Shared shapes, including the `user:` keys signed-in customers send;
+    // the old anonymous-only pattern rejected every signed-in upload.
+    return isValidGraceOwnerKey(ownerKey);
 }
 
 let _convex: ConvexHttpClient | null = null;

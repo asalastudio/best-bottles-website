@@ -50,6 +50,42 @@ export function formatGraceMemoryLines(note: GraceMemoryNote | null | undefined)
 
 export type RememberNoteKind = "profile" | "correction" | "destination";
 
+function isSiteRelativePath(value: string): boolean {
+    return value.startsWith("/") && !value.startsWith("//");
+}
+
+/**
+ * The path a destination note stores. The model often calls the tool with
+ * `href: null` after moving the customer, and the Convex mutation then rejects
+ * the note ("Destination must be a site-relative path"); the page the customer
+ * is on is the destination in that case. A full URL on our own origin is
+ * reduced to its path. Profile and correction notes carry no path.
+ */
+export function resolveRememberNoteHref({
+    kind,
+    href,
+    currentPath,
+}: {
+    kind: RememberNoteKind;
+    href?: string | null;
+    currentPath?: string | null;
+}): string | null {
+    if (kind !== "destination") return null;
+    const candidate = (href ?? "").trim();
+    if (isSiteRelativePath(candidate)) return candidate;
+    if (/^https?:\/\//i.test(candidate)) {
+        try {
+            const url = new URL(candidate);
+            const path = `${url.pathname}${url.search}`;
+            if (isSiteRelativePath(path)) return path;
+        } catch {
+            /* not a URL after all */
+        }
+    }
+    const fallback = (currentPath ?? "").trim();
+    return isSiteRelativePath(fallback) ? fallback : null;
+}
+
 export function normalizeRememberNoteKind(value: unknown): RememberNoteKind | null {
     if (value === "profile" || value === "correction" || value === "destination") return value;
     return null;
