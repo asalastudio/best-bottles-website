@@ -91,6 +91,26 @@ pixels goes when a piece reaches 12 px or more off the outline, so chrome highli
 `clean_layers.py --neck <neck>` applies it to layers already cut, in place (canvas kept, so anchors hold). 18-415: nine
 layers cleaned, including the paper band on the copper overcap `CMP-SPR-MTCP-18-415-03`; 13-415: six.
 
+## Seating on the neck (2026-09-26)
+
+Jordan: "the caps are not centered on top of the bottle" (Tall Cylinder 9), and the roller "sits a little bit off to the side"
+(5 mL cylinder). Two causes, both fixed:
+
+- **Parts.** Anchors came from where each part stood in its product photo, and the photographed part was often a little off
+  the glass axis (up to 1.15 mm). `recentre` (cut_components.py) puts each source image's anchor on the part's own centre
+  line; layers cut from one image move together (a nozzle disc stays on its head), the overcap is its own source, bulb
+  sprayers keep theirs. Applied to 13-415, 18-415, 14.3mm and the 17-415 pilot (`clean_layers.py --recentre`).
+- **Plates.** The plate axis was the barrel's centre; on a plate whose glass leans a little (the Tall Cylinder 9 drifts 0.7 mm
+  from foot to neck) the neck is elsewhere. `scripts/register/bodies/neck_axis.py` seats every threaded neck (and the Tola's
+  14.3 mm) on the neck's own axis: rows from 0.5 mm under the rim to the shoulder's start, median midpoint. 79 plates moved
+  (largest 0.72 mm); `anchors.barrelAxisX` keeps the old value; jars, ground stoppers and the heart keep the barrel axis.
+  `build_bodies.py` measures the same way on future runs.
+
+**17-415 collars (Jordan: "raised up a little bit").** The 17-415 sprayer and pump collars reached 14.1 to 14.4 mm under the
+rim; the 9 mL cylinder's shoulder begins 13.63 mm under it, so the collar swallowed the shoulder. `clean_layers.py --pilot
+--clear-shoulder "cylinder-9ml-17-415|Clear"` lifts each whole closure 0.47 to 0.78 mm so the collar ends where the shoulder
+begins. Other necks unchanged until Jordan rules.
+
 ## Known gaps
 
 - Bulb sprayers keep one cut per finish from one body's photo; the bulb's hang is that photo's. Their dip tube is
