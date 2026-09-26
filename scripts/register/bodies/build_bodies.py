@@ -48,6 +48,15 @@ from PIL import Image, ImageDraw
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "phase3"))
 import cut_pilot as cp  # noqa: E402
+from neck_axis import MAX_SHIFT_MM, SEATED_NECK, neck_axis  # noqa: E402
+
+
+def seat_axis(entry: dict, alpha: np.ndarray, pm: dict, px_per_mm: float) -> float:
+    """A threaded neck seats its closure on the neck's own axis (neck_axis.py, Jordan 2026-09-26); anything else, the barrel's."""
+    axis = neck_axis(alpha, pm["rim"], px_per_mm)
+    if SEATED_NECK.search(entry["bodyId"]) and abs(axis - pm["axisX"]) / px_per_mm <= MAX_SHIFT_MM:
+        return round(axis, 1)
+    return round(pm["axisX"], 1)
 import review_sheet as rs  # noqa: E402
 from scipy import ndimage as ndi  # noqa: E402
 
@@ -510,7 +519,8 @@ def qa():
             entry.update({
                 "status": status, "file": str(out.relative_to(BASE)), "width": plate.width, "height": plate.height,
                 "sha256": cp.sha(plate), "pxPerMm": round(px_per_mm, 4),
-                "anchors": {"axisX": round(pm["axisX"], 1), "seatY": pm["rim"], "shoulderY": pm["shoulderY"], "baselineY": pm["foot"]},
+                "anchors": {"axisX": seat_axis(entry, plate_alpha, pm, px_per_mm), "seatY": pm["rim"], "shoulderY": pm["shoulderY"], "baselineY": pm["foot"],
+                            "barrelAxisX": round(pm["axisX"], 1)},
                 "checks": {"rawIoU": round(raw_iou, 4), "fittedIoU": round(iou, 4), "edgeP95Px": round(p95, 1), "edgeMaxPx": round(dmax, 1),
                            "interiorHolePct": round(100 * holes, 2), "edges": "render outline",
                            "widthMm": round(width_mm, 2), "referenceWidthMm": ref_w,
