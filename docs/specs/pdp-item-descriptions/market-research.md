@@ -209,13 +209,13 @@ Amazon's "Customers say" summaries show:
 
 ### Best Bottles is already live on Faire
 
-- **Shop:** https://www.faire.com/brand/b_bzqsxpr4yl. Best Bottles, Union City, CA, rated 4.8 from 92 reviews, with 13 products.
+- **Shop:** https://www.faire.com/brand/b_bzqsxpr4yl. Best Bottles, Union City, CA, rated 4.8 from 92 reviews, with 20 live listings (rechecked 2026-09-26; the first pass counted 13). The page also shows ten "Purchased product" entries from reviews, which are past listings.
 - **The current names are inconsistent:**
   - "Tall Clear Cylinder Glass Bottle with Metal Roller Ball-9ml"
   - "Tulip Amber Glass Bottle with Sprayer - 5ml(Multiple Colors)"
   - "Boston Round Amber Bottle - 30ml (Multiple Dropper Colors)"
 - **Descriptions** reuse the legacy text, about 200 characters, with no dimensions, neck finish or case pack.
-- **"Made in: United States"** appears on every listing.
+- **"Made in: United States"** appears on every listing. Public import records for Nemat International point to China (177 of 221 sea shipments); see COPY-STRATEGY.md 7.4.
 
 ### Rules
 

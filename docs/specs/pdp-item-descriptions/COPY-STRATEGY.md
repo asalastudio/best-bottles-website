@@ -1,6 +1,6 @@
 # Product copy strategy: titles, descriptions and all product wording
 
-Status: proposed for lock · 2026-09-26
+Status: **locked 2026-09-26** (Best Bottles approved sections 1–9 and decisions 1, 2, 4 and 5). The ounce rule in 2.1 is a recommendation still awaiting sign-off; the Faire "Made in" value is under investigation (7.4).
 
 **Companion files in this folder:**
 
@@ -8,6 +8,7 @@ Status: proposed for lock · 2026-09-26
 - `RUBRIC.md`: which uses, guards and claims each product type may carry.
 - `market-research.md`: what suppliers, Amazon, Etsy, Faire and Google do and require, with sources.
 - `community-research.md`: what buyers ask on Reddit.
+- `../print-collateral/PRINT-PLAN.md`: the printed catalogue, line booklet and family inserts, built from the same record.
 
 ---
 
@@ -17,7 +18,7 @@ Status: proposed for lock · 2026-09-26
 2. **Title formula: `{Capacity} {Glass} {Family} {Type}`.** For example, "9 ml Amber Cylinder Roll-On Bottle".
    - Capacity comes first, as it does with nearly every supplier.
    - There is no brand, no pack count and no promotional word.
-   - Titles are 60 characters or less, which is Faire's hard limit. All 2,113 bottles fit: the longest is 54 characters and the median 39.
+   - Titles are 60 characters or less, which is Faire's hard limit. All 2,113 bottles fit. The longest, "100 ml Frosted Elegant Vintage Bulb Spray Bottle with Tassel", is exactly 60.
 3. **Variant name: `{Title} - {Variant label}`.** For example, "9 ml Amber Cylinder Roll-On Bottle - Steel Ball, White Cap".
 4. **Item description: the locked format.** Two or three sentences, then Included, Fits and Glass, plus Good to know when there is an extra verified fact. See `TEMPLATE.md`.
 5. **The Tech Sheet carries the specs; the buy box carries commercial facts.** Price tiers, case pack, minimums and lead times never appear in titles, descriptions or meta text. Google, Faire, Amazon and Etsy all require this.
@@ -28,6 +29,7 @@ Status: proposed for lock · 2026-09-26
    - the live Faire shop
    - a Google feed
    - Amazon and Etsy, if Best Bottles ever lists there
+   - print: the catalogue, the line booklet and the family inserts (`../print-collateral/PRINT-PLAN.md`)
 
 ---
 
@@ -41,7 +43,7 @@ Status: proposed for lock · 2026-09-26
 | Item type line | Legacy category text | "Classic Glass Bottles With Attractive Caps" |
 | Item description | `data/descriptions/pdp/item-descriptions.json` | 76 words; being replaced by the locked format |
 | Shopify title and body | `scripts/push_convex_to_shopify.mjs`: `displayName`, `groupDescription` | "Circle 100ml Clear" |
-| Faire (live, 13 listings) | Typed by hand | "Clear Circle Glass Bottle with Metal Roller Ball - 15ml" |
+| Faire (live, 20 listings) | Typed by hand | "Clear Circle Glass Bottle with Metal Roller Ball - 15ml" |
 | Structured data | `buildProductJsonLd()`, `src/lib/seo.ts` | One `Product`; no colour, material or variant grouping |
 
 **What goes wrong:**
@@ -60,11 +62,29 @@ The same word always means the same thing, on every surface.
 | Item | Write | Never |
 |---|---|---|
 | Capacity | "9 ml" (space, lowercase) | "9ml", "9 mL", "9 ML" |
-| Ounces in titles | Only where buyers name the size in ounces: Boston rounds at 15, 30 and 60 ml, as "15 ml (0.5 oz)", "30 ml (1 oz)", "60 ml (2 oz)"; and sizes of 118 ml and up, as "118 ml (4 oz)" | "1/2oz", "3 1/2oz" |
-| Ounces in the Google feed | Always: "9 ml (0.3 oz)" | |
+| Ounces in titles | Millilitres first, always. Ounces in brackets only on sizes buyers name in ounces: Boston rounds at 15, 30 and 60 ml ("15 ml (0.5 oz)", "30 ml (1 oz)", "60 ml (2 oz)") and the standard ounce sizes 118 and 120 ml "(4 oz)", 227 ml "(8 oz)", 355 ml "(12 oz)" and 454 ml "(16 oz)". Not 128, 250 or 500 ml, which are metric sizes. *Recommendation; see 2.1.1.* | "1/2oz", "3 1/2oz", "1 oz (30 ml)" |
+| Ounces in the Google feed | Always, from a rounding table ("9 ml (0.3 oz)", "50 ml (1.7 oz)"), never from the computed Convex value "1.01 oz" | |
+| Overlong titles | If a title passes 60 characters, drop the ounce bracket first | |
 | Drams | Vials the catalogue names in drams: "1 Dram (4 ml)", "5/8 Dram (3 ml)" | "dram" without the ml |
 | Neck finish | "18-415", with a hyphen | "18/415", "18mm", "18-415mm" |
 | Dimensions | In the Tech Sheet only, in mm; inches in brackets, once added | Anywhere in titles or descriptions |
+
+#### 2.1.1 Why this ounce rule (research, 2026-09-26)
+
+**What Best Bottles does today:**
+
+| Surface | Pattern | Example |
+|---|---|---|
+| Legacy site names (2,285) | Both units, ml first, on 1,962; ml only on 106 | "Boston round design 30ml, 1oz…" |
+| Legacy URLs | ml, except Boston Round and Diamond in oz | `diamond-design-2-oz-…` |
+| Convex capacity field | ml, then computed oz | "30 ml (1.01 oz)" |
+| New site headline | ml only | "25 ml Clear Cylinder Fine Mist Spray Bottle" |
+| Faire (20 listings) | ml only, no space, at the end | "Boston Round Amber Bottle - 30ml (Multiple Dropper Colors)" |
+| 2020 print catalogue | ml, with oz for Boston rounds and 4 oz | "Capacity: 15ml - 2oz", "Capacity: 4oz" |
+
+**What the trade does:** the unit follows the mould. Boston rounds are sold in ounces (SKS "1/2 oz Amber Glass Boston Round Bottles", Specialty Bottle "1 oz Amber Boston Round Glass Bottle with Dropper", Premium Vials "1/2 oz (15ml) AMBER Glass Boston Round Bottle"); roll-ons, perfume bottles and vials in millilitres (SKS "10 ml Glass Bottles…", Specialty Bottle "10 ml Roll-on Top Amber Glass Bottle"). Uline writes ounces on everything. On Amazon, 62% of 298 competitor titles are ml only, 30% give both and 7% oz only; "1 oz amber dropper bottle" results lead with oz (13 of 14), "10 ml roll on bottle" results with ml (27 of 28). Google and Amazon set no unit preference; Amazon asks for a space ("60 ml").
+
+**So:** ml first keeps one pattern across 2,113 bottles and matches Best Bottles' own legacy names; the ounce bracket on Boston rounds and standard ounce sizes carries the words those buyers search. Putting ounces on every title would push 18 names past Faire's 60 characters.
 
 ### 2.2 Glass and material
 
@@ -88,7 +108,7 @@ Cylinder, Tall Cylinder, Circle, Round, Elegant, Boston Round, Diva, Empire, Sli
 | ROLL | Roll-On Bottle | |
 | MIST | Fine-Mist Spray Bottle | |
 | PUMP-SPRAY | Perfume Spray Bottle | |
-| BULB | Bulb Spray Bottle | "Vintage-style" goes in sentence 1 of the description and in the Google title. The tassel version is "Bulb Spray Bottle with Tassel". Adding "Vintage-Style" to the title would push 176 SKUs past 60 characters. |
+| BULB | Vintage Bulb Spray Bottle | Locked 2026-09-26. The tassel version is "Vintage Bulb Spray Bottle with Tassel" (tassel groups are separate pages, so the tassel stays in the title). All 478 fit in 60 characters; the longest is exactly 60. "Vintage-Style" would push 194 past the limit, so the description's sentence 1 says "vintage-style" instead. |
 | SPLASH | Pour Bottle with Reducer | Best Bottles' naming |
 | POUR | Pour Bottle | Every glass bottle sold with only a screw cap |
 | DROP | Dropper Bottle | |
@@ -165,7 +185,7 @@ A single module, `src/lib/products/naming.ts`, builds every name from the Convex
 
 | SKU | Headline today | Meta name today | New core title |
 |---|---|---|---|
-| `GBCrcl100AnSpBlk` | 100 ml Clear Circle Spray Bottle | 100 ml Clear Circle Vintage-Style Bulb Sprayer Bottle - Black | 100 ml Clear Circle Bulb Spray Bottle |
+| `GBCrcl100AnSpBlk` | 100 ml Clear Circle Spray Bottle | 100 ml Clear Circle Vintage-Style Bulb Sprayer Bottle - Black | 100 ml Clear Circle Vintage Bulb Spray Bottle |
 | `GBCrcl100RdcrPnkLthr` | 100 ml Clear Circle Splash-On Bottle | 100 ml Clear Circle Reducer Bottle - Pink Leather Cap | 100 ml Clear Circle Pour Bottle with Reducer |
 | `GBCylAmb9SpryBlk` | 9 ml Amber Cylinder Spray Bottle | 9 ml Amber Cylinder Perfume Spray Bottle - Black | 9 ml Amber Cylinder Fine-Mist Spray Bottle |
 | `GBBstnAmb1ozBlkCapSht` | 30 ml Amber Boston Round Bottle | (varies) | 30 ml (1 oz) Amber Boston Round Pour Bottle |
@@ -269,7 +289,7 @@ The copy is written by fixed rules from catalogue data, not by generative AI, so
 - The same variant option names as the site: "Cap", "Ball", "Sprayer", "Collar".
 - SEO title and description = the browser title and meta description.
 
-### 7.4 Faire (live: 13 listings, 4.8★ from 92 reviews)
+### 7.4 Faire (live: 20 listings, 4.8★ from 92 reviews)
 
 **Edit the existing listings in place so their reviews and order history stay attached.**
 
@@ -288,9 +308,22 @@ The copy is written by fixed rules from catalogue data, not by generative AI, so
 | Boston Round Amber Bottle - 60ml (Multiple Dropper Colors) | 60 ml (2 oz) Amber Boston Round Dropper Bottle | Color (collar) |
 | Boston Round Clear Bottle - 60ml (Multiple Dropper Colors) | 60 ml (2 oz) Clear Boston Round Dropper Bottle | Color (collar) |
 | Frosted Glass Cream Jar - 40ml (Multiple Cap Colors) | 40 ml Frosted Cream Jar | Color (lid) |
+| Boston Round Amber Bottle-30ml (Multiple Caps & Rollerballs) | 30 ml (1 oz) Amber Boston Round Roll-On Bottle | Material (ball), Color (cap) |
+| Boston Round Clear Bottle - 15ml (Multiple Dropper Colors) | 15 ml (0.5 oz) Clear Boston Round Dropper Bottle | Color (collar) |
+| Cylinder Amber Glass Bottle with Metal Roller Ball - 9ml | 9 ml Amber Cylinder Roll-On Bottle | Color (cap) |
+| Cylinder Clear Glass Bottle with Plastic Roller Ball - 9ml | 9 ml Clear Cylinder Roll-On Bottle - Plastic Ball | Color (cap). Same core title as the steel-ball listing, so it carries the variant label until the two are merged under a Material (ball) option; keep the listing with more reviews |
+| Cylinder Clear Bottle with Spray Pump-100ml(Multiple Caps) | 100 ml Clear Cylinder Perfume Spray Bottle | Color (pump) |
+| Amber Glass Cream Jar - 5ml (Multiple Cap Colors) | 5 ml Amber Cream Jar | Color (lid) |
+| Amber Glass Cream Jar - 40ml (Multiple Cap Colors) | 40 ml Amber Cream Jar | Color (lid) |
+
+The shop page also lists ten "Purchased product" entries from reviews (for example "Diva Glass Bottle with Tassel Sprayer-100ml Multiple Colors"). They are past listings; if any is reactivated, it takes a name from the same formula.
 
 - **Description:** the paragraph, the bullets, then a spec block: Capacity, Height, Diameter, Neck finish, Case pack, Made in. Keep it under 1,000 characters; retailers copy it into their POS.
-- **"Made in: United States"** is on every listing today. Best Bottles must confirm it against U.S. Customs and Border Protection country-of-origin rules before republishing.
+- **"Made in" needs correcting before anything is republished.**
+  - Every listing checked says "Made in: United States" (for example https://www.faire.com/product/p_y3sme8maxz, 2026-09-26).
+  - Public U.S. import records for Nemat International, Union City, the company behind bestbottles.com, show 221 sea shipments: 177 from China, 26 from Taiwan (older), 4 from Singapore. Recent rows include "Glass Bottle Sprayer Microsprayer Glass Bottle Plastic Cap" (Zhejiang JM Industrial, China, 2026-03-08) and "Steel Balls" (Taian Xinxin, China, 2026-07-16). Sources: https://www.importyeti.com/company/nemat-international and https://www.importgenius.com/importers/nemat-international-inc.
+  - Fitting a roller or cap onto an imported bottle is not usually a "substantial transformation" under CBP rules, so the origin follows the glass.
+  - Best Bottles confirms each listed SKU from the supplier invoice or the CBP entry (Form 7501) and checks the carton markings. The expected answer for current stock is China.
 - **Brand bio:** rewrite it. It currently reads "BestBottles.com is an online beauty packaging wholesale store… great gifts, party and wedding favors."
 
 ### 7.5 Amazon and Etsy (not live; only if Best Bottles lists there)
@@ -305,6 +338,16 @@ The copy is written by fixed rules from catalogue data, not by generative AI, so
   - Use all 13 tags, as multi-word phrases: e.g. "empty perfume bottle", "attar bottle", "roller bottle 10ml", "fragrance decants".
   - Variations are attribute-first: "Cap: Matte Gold".
   - Description: the paragraph, the bullets, the specs, then a Please Note block: "Ships empty; test your formula before filling a full run."
+
+### 7.6 Print: catalogue, line booklet and family inserts
+
+The printed pieces are one more channel built from the same record; the plan and a Boston Round proof are in `../print-collateral/PRINT-PLAN.md`.
+
+- **Names:** the family name as the page heading; the core title (3.1) wherever a single product is named; variant labels (2.5) in the line sheet.
+- **Descriptions:** the family paragraph uses sentence 1 of the item description at family level; care lines come from RUBRIC.md, word for word.
+- **Item numbers** are the website SKUs, so a buyer can type them into the site search.
+- **No prices** in anything printed in volume. Prices, stock and pack sizes point to the site and the phone line; a dated price list is printed separately, on demand.
+- **The claims policy (section 6) applies unchanged.**
 
 ---
 
@@ -335,18 +378,22 @@ The copy is written by fixed rules from catalogue data, not by generative AI, so
 | 2 | Item descriptions in the locked format | Code + regenerate from production | RUBRIC.md Phases 1–3 |
 | 3 | Meta description from the description; `ProductGroup` structured data | Code | Steps 1–2 |
 | 4 | Shopify sync sends the new title, body and options | Script | Steps 1–2 |
-| 5 | Faire: rename 13 listings, rewrite descriptions, verify "Made in", new bio | Faire admin | Steps 1–2; country-of-origin answer |
-| 6 | Tech Sheet additions: overflow, inches, label panel, neck tooltip | Data + code | New Convex fields |
-| 7 | Google Merchant feed | Script + Merchant Center | A decision to sell through Google Shopping |
+| 5 | Faire: rename 20 listings, rewrite descriptions, correct "Made in", new bio | Faire admin | Steps 1–2; country-of-origin confirmation (7.4) |
+| 6 | Tech Sheet additions: overflow capacity, inches, label panel, neck tooltip (approved) | Data + code | New Convex fields; measurements from the supplier drawings |
+| 7 | Google Merchant feed (approved) | Script + Merchant Center | Steps 1–3; a Merchant Center account |
+| 8a | Print: catalogue, line booklet, family inserts | `src/lib/pdf/catalog` + printer | Steps 1–2; PRINT-PLAN.md decisions |
 | 8 | Amazon or Etsy listings | Marketplace | A business decision to list |
 
 ---
 
-## 10. Decisions for Best Bottles
+## 10. Decisions (updated 2026-09-26)
 
-1. **Lock the title formula and vocabulary in sections 2 and 3?** Recommended: yes.
-2. **Bulb sprayers titled "Bulb Spray Bottle",** with "vintage-style" in the description and the Google title? Recommended: yes. With it in the title, 176 SKUs break Faire's 60-character limit.
-3. **Ounces in titles only for Boston rounds and sizes of 4 oz and up;** always in the Google title? Recommended: yes.
-4. **Country of origin for the Faire "Made in" field.** Best Bottles to confirm.
-5. **Add overflow capacity, label panel and inch dimensions to the catalogue?** Recommended: yes; the trade suppliers all show them.
-6. **Set up a Google Merchant feed?** This is a business decision; the copy side is ready once steps 1–3 ship.
+| # | Decision | Status |
+|---|---|---|
+| 1 | Title formula and vocabulary (sections 2 and 3) | **Locked** |
+| 2 | Bulb sprayers | **Locked:** "Vintage Bulb Spray Bottle" and "Vintage Bulb Spray Bottle with Tassel"; all fit in 60 characters |
+| 3 | Ounces in titles | **Recommendation revised with evidence (2.1.1); awaiting Best Bottles' OK.** ml first; ounces in brackets on Boston rounds and standard ounce sizes only; always in the Google title |
+| 4 | Country of origin for Faire "Made in" | **Under confirmation.** Import records point to China (7.4); the "United States" value on Faire today looks wrong. Best Bottles confirms from invoices before the Faire edit |
+| 5 | Overflow capacity, label panel and inch dimensions | **Locked: yes** (rollout step 6) |
+| 6 | Google Merchant feed | **Locked: yes** (rollout step 7) |
+| 7 | Printed catalogue, line booklet and family inserts | **New.** See `../print-collateral/PRINT-PLAN.md` for the formats and the proof |
