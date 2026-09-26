@@ -1,6 +1,7 @@
 import { mutation, query } from "./_generated/server";
 import { v } from "convex/values";
 import { verifyWriteToken } from "./writeToken";
+import { componentLayersStatus, withBodyLayers, withGenericLayers } from "./registerLayers";
 import {
     REGISTER_ROW_LIMIT,
     anchorStatusV,
@@ -157,10 +158,6 @@ export const upsertAssemblies = mutation({
 
 // ---------- Phase 3: plates and layers (written by scripts/register/phase3/push-phase3.ts) ----------
 
-const STATUS_RANK = { unmeasured: 0, measured: 1, approved: 2 } as const;
-type AnchorStatus = keyof typeof STATUS_RANK;
-const weakest = (statuses: AnchorStatus[]): AnchorStatus =>
-    statuses.length === 0 ? "unmeasured" : statuses.reduce((a, b) => (STATUS_RANK[a] <= STATUS_RANK[b] ? a : b));
 
 export const upsertBodyPlates = mutation({
     args: { writeToken: v.string(), rows: v.array(bodyPlateRowV) },
@@ -191,7 +188,10 @@ export const upsertBodyPlates = mutation({
     },
 });
 
-/** Replace one component's layers. Layers are Phase 3-owned: a register push never touches them. */
+/**
+ * Replace one component's generic layers. Layers are Phase 3-owned: a register push never touches them. Body-scoped
+ * layers (setBodyComponentLayers) are kept unless the call carries layers for that body.
+ */
 export const setComponentLayers = mutation({
     args: { writeToken: v.string(), componentId: v.string(), layers: v.array(componentLayerV) },
     returns: outcomeV,
@@ -200,16 +200,18 @@ export const setComponentLayers = mutation({
         const rows = await ctx.db.query("registerComponents").withIndex("by_componentId", q => q.eq("componentId", args.componentId)).collect();
         if (rows.length !== 1) return { key: args.componentId, outcome: "error" as const, error: rows.length ? "duplicate_index_rows" : "unknown_component" };
         const row = rows[0];
-        const layersStatus = weakest(args.layers.map(l => l.anchorStatus));
-        if (stableJson(row.layers) === stableJson(args.layers) && row.layersStatus === layersStatus) return { key: args.componentId, outcome: "unchanged" as const };
-        await ctx.db.patch(row._id, { layers: args.layers, layersStatus, revision: row.revision + 1, loadedAt: Date.now() });
+        const layers = withGenericLayers(row.layers, args.layers);
+        const layersStatus = componentLayersStatus(layers);
+        if (stableJson(row.layers) === stableJson(layers) && row.layersStatus === layersStatus) return { key: args.componentId, outcome: "unchanged" as const };
+        await ctx.db.patch(row._id, { layers, layersStatus, revision: row.revision + 1, loadedAt: Date.now() });
         return { key: args.componentId, outcome: "updated" as const };
     },
 });
 
 /**
  * Replace one body's layers on a component, keeping every other layer (the generic set other bodies draw, and other
- * bodies' own layers). Every layer passed must carry that bodyId.
+ * bodies' own layers). Every layer passed must carry that bodyId. The component-wide layersStatus rates the generic
+ * set only, so this write never changes what another body may draw; registerStage.forSkus rates body layers per body.
  */
 export const setBodyComponentLayers = mutation({
     args: { writeToken: v.string(), componentId: v.string(), bodyId: v.string(), layers: v.array(componentLayerV) },
@@ -220,8 +222,8 @@ export const setBodyComponentLayers = mutation({
         const rows = await ctx.db.query("registerComponents").withIndex("by_componentId", q => q.eq("componentId", args.componentId)).collect();
         if (rows.length !== 1) return { key: args.componentId, outcome: "error" as const, error: rows.length ? "duplicate_index_rows" : "unknown_component" };
         const row = rows[0];
-        const layers = [...row.layers.filter(l => l.bodyId !== args.bodyId), ...args.layers];
-        const layersStatus = weakest(layers.map(l => l.anchorStatus));
+        const layers = withBodyLayers(row.layers, args.bodyId, args.layers);
+        const layersStatus = componentLayersStatus(layers);
         if (stableJson(row.layers) === stableJson(layers) && row.layersStatus === layersStatus) return { key: args.componentId, outcome: "unchanged" as const };
         await ctx.db.patch(row._id, { layers, layersStatus, revision: row.revision + 1, loadedAt: Date.now() });
         return { key: args.componentId, outcome: "updated" as const };

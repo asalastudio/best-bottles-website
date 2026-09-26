@@ -19,6 +19,7 @@
  * `usage: "seated"`; full plugs and lifted pump internals carry `usage: "exploded"`. Blob keys are content-addressed.
  * Dev by default; production only with --deployment prod (Jordan runs it).
  */
+import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { config } from "dotenv";
@@ -44,6 +45,7 @@ type Layer = Asset & {
 };
 type Measurements = {
     bodyId: string;
+    createdBy?: string;
     plates: (Asset & { plateKey: string; glass: string; pxPerMm: number;
         anchors: { axisX: number; seatY: number; shoulderY: number; baselineY: number };
         source: { library: string; path: string; layer: string } })[];
@@ -62,6 +64,10 @@ async function main() {
     const uploaded = new Map<string, string>();
     const upload = async (key: string, a: Asset) => {
         const bytes = readFileSync(resolve(dir, a.file));
+        // Blob keys are content-addressed and never overwritten: a --dir holding other renders under the same names
+        // would otherwise publish the wrong image under this key for good.
+        const actual = createHash("sha256").update(bytes).digest("hex");
+        if (actual !== a.sha256) throw new Error(`${a.file}: sha256 ${actual} does not match measurements.json (${a.sha256}); wrong --dir?`);
         let blobUrl = uploaded.get(key);
         if (!blobUrl) {
             blobUrl = store ? (await store.putObject(key, bytes, "image/png")).url : `(dry run) ${key}`;
@@ -75,7 +81,7 @@ async function main() {
         const image = await upload(`register/plates/${m.bodyId}/${p.glass.toLowerCase().replace(/ /g, "-")}/${p.sha256}.png`, p);
         plates.push({ plateKey: p.plateKey, bodyId: m.bodyId, glass: p.glass, image, thumb: null, pxPerMm: p.pxPerMm,
             anchors: { axisX: p.anchors.axisX, seatY: p.anchors.seatY, baselineY: p.anchors.baselineY, shoulderY: p.anchors.shoulderY },
-            anchorStatus: status, anchorMeasuredBy: "Blender camera projection (register-9ml-v32/export.py)", derivedFrom: null,
+            anchorStatus: status, anchorMeasuredBy: `Blender camera projection (${m.createdBy ?? "the Blender lane"})`, derivedFrom: null,
             storageProvider: "vercel-blob" as const,
             source: { library: p.source.library, path: p.source.path, psdSha256: null, layer: p.source.layer } });
         console.log(`plate ${p.plateKey}: ${p.width}x${p.height} @ ${p.pxPerMm} px/mm, ${status}`);

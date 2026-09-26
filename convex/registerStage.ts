@@ -1,6 +1,7 @@
 import { query } from "./_generated/server";
 import { type Infer, v } from "convex/values";
 import { registerSlotV } from "./registerValidators";
+import { layersForBody } from "./registerLayers";
 
 /**
  * Component register, Phase 5: what a stage needs to draw SKUs from the
@@ -134,6 +135,7 @@ export const forSkus = query({
                         ...(layer.glass ? { glass: layer.glass } : {}),
                         ...(layer.bodyId ? { bodyId: layer.bodyId } : {}),
                     })),
+                    // the component-wide rating (its generic set); per-body approval is decided per assembly below
                     approved: component.layers.length > 0 && component.layersStatus === "approved",
                 };
             }
@@ -151,7 +153,11 @@ export const forSkus = query({
                                 ? "no parts to draw"
                                 : assembly.build.parts.find((part) => !components[part.componentId])
                                     ? "a part has no component record"
-                                    : assembly.build.parts.find((part) => !components[part.componentId].approved)
+                                    : assembly.build.parts.find((part) => {
+                                        // the layers THIS body draws (its own, else the generic set): another body's load never gates it
+                                        const drawn = layersForBody(components[part.componentId].layers, assembly.bodyId);
+                                        return drawn.length === 0 || drawn.some((layer) => !layer.approved);
+                                    })
                                         ? "a part's layers are not approved"
                                         : null;
             assemblies[graceSku] = {
