@@ -47,7 +47,7 @@ describe("the committed register shapes cleanly for Convex", () => {
     it("registers the library parts as non-sellable components keyed LIB-<neck>-<name>", () => {
         const parts = rows.components.filter(c => c.componentId.startsWith("LIB-"));
         expect(parts.map(p => p.componentId).sort()).toEqual([
-            "LIB-13-415-MtlRollon", "LIB-13-415-PlsticRollon", "LIB-17-415-MtlRollon", "LIB-17-415-PlsticRollon", "LIB-18-415-Reducer",
+            "LIB-13-415-MtlRollon", "LIB-13-415-PlsticRollon", "LIB-14.3mm-Plug", "LIB-17-415-MtlRollon", "LIB-17-415-PlsticRollon", "LIB-18-415-Reducer",
         ]);
         for (const part of parts) {
             expect(part.sellable).toBe(false);
@@ -83,9 +83,11 @@ describe("the committed register shapes cleanly for Convex", () => {
         ]);
     });
 
-    it("never builds an assembly outside the validated neck", () => {
+    it("never builds an assembly outside the validated necks", () => {
+        // The own-part rules written so far (BUILD_RULE_NECKS in scripts/register/build_register.py): the 17-415 pilot,
+        // 18-415 (2026-09-25) and the 14.3 mm Tola plug (2026-09-25).
         const built = rows.assemblies.filter(a => a.build.status !== "unresolved");
-        expect(new Set(built.map(a => a.neck))).toEqual(new Set(["17-415"]));
+        expect(new Set(built.map(a => a.neck))).toEqual(new Set(["17-415", "18-415", "14.3mm"]));
     });
 
     it("keys each assembly's body plate by body and glass", () => {
