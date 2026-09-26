@@ -9,9 +9,9 @@
  *   npx tsx scripts/register/blender/push-blender-body.ts --dir <final dir> --apply --approve    # the same, "approved"
  *   ... --env-dir <checkout>   read .env.local / .env.blob.local from another checkout (default: this repo root)
  *   ... --data <name>          data/register/<name>/measurements.json (default blender-9ml; e.g. blender-tallcyl-13-415)
- *   ... --deployment prod      PRODUCTION: needs REGISTER_PROD_WRITE_TOKEN in the environment; never the default.
- *                              Run scripts/register/push-register.ts --deployment prod --apply first (prod's register
- *                              tables start empty). Images are content-addressed, so a prod run reuses the dev blobs.
+ *   ... --deployment prod      PRODUCTION (scripts/register/deployment.ts): needs REGISTER_PROD_WRITE_TOKEN in the
+ *                              environment; never the default. Refuses a deployment with no register rows. Images are
+ *                              content-addressed in the one public Blob store, so a prod run reuses the dev uploads.
  *
  * Reads data/register/<data>/measurements.json (written by the Blender lane's build_assets.py) and the images in
  * --dir. Every layer carries the body's `bodyId`, and is written with setBodyComponentLayers, so a component shared
@@ -25,6 +25,7 @@ import { config } from "dotenv";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../convex/_generated/api";
 import { createBlobStore } from "../../paperdoll/lib/store-blob.mjs";
+import { registerTarget } from "../deployment";
 
 const ROOT = resolve(__dirname, "..", "..", "..");
 const argv = process.argv.slice(2);
@@ -52,13 +53,7 @@ type Measurements = {
 async function main() {
     if (!dir) throw new Error("--dir <final dir> is required (the Blender lane's register-9ml-v32/final)");
     const m = JSON.parse(readFileSync(resolve(ROOT, "data", "register", dataName, "measurements.json"), "utf8")) as Measurements;
-    const PROD_URL = "https://precise-raccoon-123.convex.cloud";
-    const deployment = arg("--deployment") ?? "dev";
-    if (deployment !== "dev" && deployment !== "prod") throw new Error(`--deployment must be dev or prod, not ${deployment}`);
-    const url = deployment === "prod" ? PROD_URL : process.env.NEXT_PUBLIC_CONVEX_URL;
-    const token = deployment === "prod" ? process.env.REGISTER_PROD_WRITE_TOKEN : process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
-    if (!url || !token) throw new Error(deployment === "prod" ? "--deployment prod needs REGISTER_PROD_WRITE_TOKEN in the environment" : "NEXT_PUBLIC_CONVEX_URL and BEST_BOTTLES_CONVEX_WRITE_TOKEN are required");
-    if (deployment === "dev" && url === PROD_URL) throw new Error(".env.local points at prod; refusing to treat it as dev");
+    const { deployment, url, token } = registerTarget(argv);
     console.log(`register images -> ${deployment} (${url}) ${apply ? "APPLY" : "dry run"}`);
     if (apply && !process.env.BLOB_READ_WRITE_TOKEN) throw new Error("BLOB_READ_WRITE_TOKEN is not set (vercel env pull .env.blob.local --environment=development)");
     const status = (approve ? "approved" : "measured") as "approved" | "measured";
