@@ -1002,7 +1002,7 @@
      "file": "components/CMP-SPR-CLR-17-415--1-collar.png",
      "width": 328,
      "height": 281,
-     "sha256": "7ba2765f8524267ea6bd47603ad53d2c2481971b7f5dd4d0e8a677dcf5e7c6c3",
+     "sha256": "c3d7bd5f5e539c5caf8726381cd8bd533973dd26321086cb64d426f236fa38d4",
      "pxPerMm": 16.2325,
      "anchor": {
       "x": 157.3,
@@ -1029,7 +1029,8 @@
    ],
    "checks": {
     "registrationIoU": 0.9368,
-    "libraryScale": 1.3125
+    "libraryScale": 1.3125,
+    "whiteEdgeStripCols": 25
    }
   },
   {

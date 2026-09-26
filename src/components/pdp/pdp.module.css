@@ -72,12 +72,20 @@
 
 /* ── layout ────────────────────────────────────────────────────────────── */
 
+/* The details column is 555px (Jordan 2026-09-26: the canvas gives 75px to add-to-cart and the copy); below
+   1100px it keeps the handoff's 480px so the canvas does not starve. */
 .grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 480px;
+    grid-template-columns: minmax(0, 1fr) 555px;
     gap: 40px;
     padding: 0 40px 40px;
     align-items: start;
+}
+
+@media (min-width: 900px) and (max-width: 1099px) {
+    .grid {
+        grid-template-columns: minmax(0, 1fr) 480px;
+    }
 }
 
 /* ── canvas ────────────────────────────────────────────────────────────── */

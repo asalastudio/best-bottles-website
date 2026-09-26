@@ -29,5 +29,16 @@
   },
   "hold": {
     "cream-jar-20ml-40mm|White": "the cut is not the jar body (CJWhite20.psd Layer 1 is a shallow white dish); needs a re-cut before it can be drawn (Jordan 2026-09-25: 'this is retarded')"
+  },
+  "approval": {
+    "by": "Jordan",
+    "date": "2026-09-26",
+    "ruling": "I approve all the approvable ones",
+    "scope": "every plate and component that passed its gate: 106 plates (second pass), and the 13-415, 14.3mm, 17-415 and 18-415 components; they load approved on dev. Production promotion remains a separate step.",
+    "held": {
+      "cream-jar-20ml-40mm|White": "hold above (the cut is not the jar)",
+      "empire-100ml-18-415|Clear": "fitted IoU 0.968, under the 0.97 gate",
+      "CMP-CAP-SSLV-18415-S": "registration IoU 0.847, under the 0.90 gate"
+    }
   }
 }

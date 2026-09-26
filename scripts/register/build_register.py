@@ -103,7 +103,7 @@ LIBRARY_PARTS = [
 
 # Own-part builds: which component(s) a sellable assembly is physically made of. Rules are validated neck by
 # neck; the pilot neck is 17-415 (2026-09-25). Other necks record why they are not built yet.
-BUILD_RULE_NECKS = {"17-415", "18-415", "14.3mm"}
+BUILD_RULE_NECKS = {"13-415", "17-415", "18-415", "14.3mm"}
 FITMENT_BUILD = {  # fitmentType -> (component type, kit slot, roller material)
     "Metal Roller Ball": ("roll-on-cap", "cap", "metal"),
     "Plastic Roller Ball": ("roll-on-cap", "cap", "plastic"),
@@ -163,6 +163,68 @@ def own_build_18415(assembly: dict, by_neck_type: dict) -> tuple[str, str, str]:
     return "", "unresolved", f"website SKU '{sku}' names no 18-415 top (AnSpTsl, AnSp, Spry, Ltn, Drp, Rdcr)"
 
 
+# 13-415 (2026-09-26): the same method as 18-415. The website SKU spells the top after the body code:
+# `GBCrcl15MtlRollBlkSh` is the Circle 15 with a metal roller under the shiny black roll-on cap `CPRoll13-415BlkSh`,
+# `GBCrcl15SpryGlSh` carries the sprayer `CP13-415SpryGlSh`, and a SKU with no type token names its plain cap
+# (`GBCrcl15BlkSht` -> `CP13-415BlkSht`, the short ribbed black cap; `Gl` / `Sl` are the tall shiny caps). The
+# assembly SKUs spell matte "Matt" where the components spell "Mt"; the roll-on caps file matte copper as "Cu" and the
+# black dotted cap as "BlackDot". The roller insert is the library part for the SKU's roller material.
+SKU_TAIL_13415 = [  # (type token in the assembly SKU, component stem prefix, kit slot, roller insert)
+    ("MtlRoll", "CPRoll13-415", "cap", "LIB-13-415-MtlRollon"),
+    ("Roll", "CPRoll13-415", "cap", "LIB-13-415-PlsticRollon"),
+    ("Spry", "CP13-415Spry", "sprayer", None),
+]
+CODE_ALIASES_13415 = {"cu": "cumt", "blackdot": "blkdot", "pinkdo": "pinkdot"}  # "PinkDo": GBTallRect10MtlRollPinkDo, a truncated website SKU
+
+
+def code_key_13415(code: str) -> str:
+    lowered = code.lower().replace("matt", "mt")
+    return CODE_ALIASES_13415.get(lowered, lowered)
+
+
+def own_build_13415(assembly: dict, by_neck_type: dict, library_ids: set) -> tuple[str, str, str]:
+    """13-415 own parts from the website SKU's type token and finish code (see SKU_TAIL_13415)."""
+    sku = assembly["websiteSku"] or ""
+    current = [c for (neck, _), cs in by_neck_type.items() if neck == "13-415" for c in cs if c["websiteSku"]]
+
+    def stem_matches(prefix: str, code: str, exclude: tuple = ()) -> list:
+        out = []
+        for c in current:
+            stem = c["websiteSku"]
+            if not stem.startswith(prefix) or any(stem.startswith(x) for x in exclude):
+                continue
+            if code_key_13415(stem[len(prefix):]) == code_key_13415(code):
+                out.append(c)
+        return out
+
+    for token, prefix, slot, insert in SKU_TAIL_13415:
+        at = sku.find(token)
+        if at < 0:
+            continue
+        code = sku[at + len(token):]
+        matches = stem_matches(prefix, code)
+        if len(matches) != 1:
+            why = f"{len(matches)} components match" if matches else "no current 13-415 component carries"
+            return "", "unresolved", f"{why} the SKU code '{code}' after '{token}' ({prefix}...)"
+        parts = []
+        if insert:
+            if insert not in library_ids:
+                return "", "partial", f"{matches[0]['componentId']} found; {insert} is not registered"
+            parts.append(f"roller:{insert}")
+        parts.append(f"{slot}:{matches[0]['componentId']}")
+        return "; ".join(parts), "resolved", f"own {matches[0]['type']} matched by SKU code '{code}'"
+    tail = re.match(r"^GB[A-Za-z]+?\d+(?:o\d+)?(?P<code>[A-Za-z]*)$", sku)
+    code = tail.group("code") if tail else ""
+    if not code:
+        return "", "unresolved", f"website SKU '{sku}' names no 13-415 top (MtlRoll, Roll, Spry or a cap code)"
+    matches = stem_matches("CP13-415", code, exclude=("CP13-415Spry",))
+    if len(matches) == 1:
+        return f"cap:{matches[0]['componentId']}", "resolved", f"own cap matched by SKU code '{code}'"
+    if matches:
+        return "", "unresolved", f"SKU code '{code}' matches {len(matches)} caps: " + ", ".join(c["componentId"] for c in matches)
+    return "", "unresolved", f"no current 13-415 cap carries the SKU code '{code}' (no component record and no master photo)"
+
+
 def colour_key(text: str) -> tuple[str, bool]:
     """(base colour, dotted). 'Black with Dots' and 'Black Dotted' -> ('black', True); 'Matte Copper' -> ('matte copper', False)."""
     lowered = (text or "").lower()
@@ -183,6 +245,8 @@ def own_build(assembly: dict, body_class: str, by_neck_type: dict, library_ids: 
         return "", "unresolved", f"own-part rules not written for {neck or 'no neck'} yet (pilot neck is 17-415)"
     if neck == "18-415":
         return own_build_18415(assembly, by_neck_type)
+    if neck == "13-415":
+        return own_build_13415(assembly, by_neck_type, library_ids)
     if neck == "14.3mm":
         # The Tola decorative bottles are sold with one closure, the plug photographed in their neck (Jordan 2026-09-25).
         if "LIB-14.3mm-Plug" not in library_ids:
@@ -340,6 +404,9 @@ def component_type(row: dict) -> tuple[str, str]:
             return "lotion-pump", "family=Roll-On Cap but SKU/capStyle says lotion pump"
         return "roll-on-cap", "family=Roll-On Cap"
     if family == "Cap/Closure":
+        # The 13-415 sprayers are filed as Cap/Closure (CP13-415SpryBlkMt, applicator Fine Mist Sprayer): the SKU names the sprayer.
+        if "Spry" in (row.get("websiteSku") or "") and (row.get("applicator") or "") == "Fine Mist Sprayer":
+            return "fine-mist-sprayer", "family=Cap/Closure but the SKU (Spry) and applicator name a fine-mist sprayer"
         if "lthr" in sku or "leather" in name:
             return "faux-leather-cap", "family=Cap/Closure; leather"
         if "rdcr" in sku or "reducer" in name:
@@ -705,7 +772,7 @@ def main() -> int:
     for a in alias_candidates:
         lines.append(f"| {a['websiteSku']} | {a['candidateStem']} | {a['candidateFolders']} | {a['match']} {a['similarity']} |")
     built = [a for a in assemblies if a["neck"] in BUILD_RULE_NECKS and a["status"] in ("verified", "candidate")]
-    lines += ["", f"## Own-part builds — rules written for {', '.join(sorted(BUILD_RULE_NECKS))} (the pilot neck)", "",
+    lines += ["", f"## Own-part builds — rules written for {', '.join(sorted(BUILD_RULE_NECKS))}", "",
               "Each sellable assembly names the parts it is physically made of (`buildParts`), matched uniquely on neck, component type, "
               "cap colour and dotted/plain. Roller balls add the neck's roller insert. A row that does not match exactly one part stays "
               "`unresolved` with the reason; nothing is guessed (Jordan 2026-09-25: wording errors wait for Convex corrections).", "",

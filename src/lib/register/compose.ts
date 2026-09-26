@@ -11,9 +11,10 @@
  * same numbers drive the Node renderer (the parity gate) and the storefront's
  * CSS. Nothing here reads pixels.
  *
- * Draw order mirrors the approved Phase 3 review sheet: behind-body layers,
- * then the plate, then the front layers with the highest explodeIndex first
- * (the overcap under the collar, so the collar's rim reads in front).
+ * Draw order: behind-body layers, then the plate, then the front layers with
+ * the highest explodeIndex first, except the overcap: it covers the sprayer or
+ * pump head, so it draws over the mechanism and under the collar, whose rim
+ * reads in front (Jordan 2026-09-26: the clear overcap drew behind the nozzle).
  */
 
 export type PlateGeometry = {
@@ -90,10 +91,18 @@ export function placeLayer<L extends LayerGeometry>(layer: L, frame: Frame, zInd
     };
 }
 
-/** Draw order: behind-body layers (explodeIndex ascending), the plate, front layers (explodeIndex descending). */
+/**
+ * Draw order: behind-body layers (explodeIndex ascending), the plate, front layers (explodeIndex descending) with
+ * the overcap moved over the mechanism it covers and under the collar (a one-piece sprayer has no collar layer, so
+ * its overcap draws last and hides it, as the 13-415 metal overcaps do).
+ */
 export function orderLayers<L extends LayerGeometry>(layers: readonly L[]): { behind: L[]; front: L[] } {
     const behind = layers.filter((layer) => layer.z === "behind-body").sort((a, b) => a.explodeIndex - b.explodeIndex);
-    const front = layers.filter((layer) => layer.z !== "behind-body").sort((a, b) => b.explodeIndex - a.explodeIndex);
+    const sorted = layers.filter((layer) => layer.z !== "behind-body").sort((a, b) => b.explodeIndex - a.explodeIndex);
+    const overcaps = sorted.filter((layer) => layer.slot === "overcap");
+    const rest = sorted.filter((layer) => layer.slot !== "overcap");
+    const at = rest.findIndex((layer) => layer.slot === "collar");
+    const front = at < 0 ? [...rest, ...overcaps] : [...rest.slice(0, at), ...overcaps, ...rest.slice(at)];
     return { behind, front };
 }
 

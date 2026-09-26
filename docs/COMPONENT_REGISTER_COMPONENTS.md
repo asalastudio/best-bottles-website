@@ -57,6 +57,33 @@ glass rim (usage `seated`, drawn in CAP ON and SIDECAR); the exploded layer is t
 numbers in `data/register/components/14.3mm-measurements.json`, loaded with `push-components.ts --neck 14.3mm`.
 `build_register.py` resolves both Tola assemblies to `cap:LIB-14.3mm-Plug`.
 
+## 13-415 (2026-09-26)
+
+**Own parts.** `own_build_13415` reads the website SKU the same way: `MtlRoll` / `Roll` + a code is the metal or plastic
+roller insert under the roll-on cap `CPRoll13-415<code>`; `Spry` + a code is the sprayer `CP13-415Spry<code>`; a SKU
+with no type token names its plain cap (`BlkSht`, `WhtSht` = the short ribbed caps, `Gl`, `Sl` = the tall shiny caps).
+The assembly SKUs spell matte "Matt" where the components spell "Mt"; the roll-on caps file matte copper as `Cu` and
+the black dotted cap as `BlackDot`; `GBTallRect10MtlRollPinkDo` is a truncated website SKU. The 13-415 sprayers are filed
+in Convex as Cap/Closure (applicator Fine Mist Sprayer); `component_type` now types them `fine-mist-sprayer`, so they
+cut with their overcap. Result: 478 of 519 sold SKUs resolved. Unresolved: 9 metal atomizers and 3 plastic bottles (own
+classes, Jordan 2026-09-24) and 29 short-cap SKUs on the Cylinder 5, Blue 5, Tall Cylinder 9 (clear and frosted), Bell,
+Elegant frosted, Pillar and Tulip 6 (`BlkShSht`, `CuSht`, `GlMattSht`, `SlMattSht`, `GlSht`, `SlSht`, one `MinarCu`):
+no component record and no master photo.
+
+**Layers.** Every 13-415 master comes as a pair: uncapped (the roller or sprayer on the neck, the cap parked beside the
+bottle) and capped. A cap registers on the capped file. The roller inserts are cut from the uncapped photo and cleared
+3 px below the rim, as the 17-415 pilot did: the library insert files carry a white masking shape. The library sprayer is
+one layer (head and ferrule), and its overcap is a tall metal sleeve that hides the whole sprayer. A master whose largest
+layer runs off the canvas is an uncut photo pasted in (the capped Circle 15 black-dot file) and is skipped for the next
+SKU sold with the part. 23 components, IoU 0.904 to 0.997, all approved (Jordan 2026-09-26: "I approve all the
+approvable ones").
+
+**Draw order (2026-09-26).** Jordan: the clear overcap drew behind the nozzle. `orderLayers` (compose.ts) now draws the
+overcap over the mechanism it covers and under the collar; with no collar layer (the 13-415 one-piece sprayer) it draws
+last. The library's turquoise 17-415 collar carried a white paper strip on its right edge; `drop_white_edge_strip` clears
+such strips on coloured parts at cut time, and the pilot collar was cleaned and reloaded
+(`push-phase3.ts --only CMP-SPR-CLR-17-415`).
+
 ## Known gaps
 
 - Bulb sprayers keep one cut per finish from one body's photo; the bulb's hang is that photo's. Their dip tube is

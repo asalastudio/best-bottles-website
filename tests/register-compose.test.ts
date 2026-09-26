@@ -48,10 +48,20 @@ describe("register compose: placement", () => {
         const pump: LayerGeometry = { ...cap, slot: "pump", explodeIndex: 3 };
         const order = orderLayers([collar, roller, overcap, pump]);
         expect(order.behind.map((l) => l.slot)).toEqual(["roller"]);
-        expect(order.front.map((l) => l.slot)).toEqual(["overcap", "pump", "collar"]);
+        expect(order.front.map((l) => l.slot)).toEqual(["pump", "overcap", "collar"]);
         const stack = compose(plate, [collar, roller, overcap, pump], frame);
-        expect(stack.map((p) => (p.kind === "plate" ? "plate" : (p.source as LayerGeometry).slot))).toEqual(["roller", "plate", "overcap", "pump", "collar"]);
+        expect(stack.map((p) => (p.kind === "plate" ? "plate" : (p.source as LayerGeometry).slot))).toEqual(["roller", "plate", "pump", "overcap", "collar"]);
         expect(stack.map((p) => p.zIndex)).toEqual([0, 1, 2, 3, 4]);
+    });
+
+    it("draws the overcap over the nozzle it covers (Jordan 2026-09-26), and over a one-piece sprayer with no collar", () => {
+        const sprayer: LayerGeometry = { ...cap, slot: "sprayer", explodeIndex: 2 };
+        const collar: LayerGeometry = { ...cap, slot: "collar", explodeIndex: 1 };
+        const overcap: LayerGeometry = { ...cap, slot: "overcap", explodeIndex: 3 };
+        expect(orderLayers([sprayer, collar, overcap]).front.map((l) => l.slot)).toEqual(["sprayer", "overcap", "collar"]);
+        const oneCap: LayerGeometry = { ...cap, slot: "overcap", explodeIndex: 2 };
+        const onePiece: LayerGeometry = { ...cap, slot: "sprayer", explodeIndex: 1 };
+        expect(orderLayers([oneCap, onePiece]).front.map((l) => l.slot)).toEqual(["sprayer", "overcap"]);
     });
 
     it("expresses a placement as percentages of the stage box", () => {

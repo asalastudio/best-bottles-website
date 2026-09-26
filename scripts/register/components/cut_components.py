@@ -41,11 +41,11 @@ ROOT = Path(__file__).resolve().parents[3]
 REGISTER = ROOT / "data" / "register"
 INVENTORY = json.loads((ROOT / "data" / "paper-doll" / "component-library-inventory.json").read_text())
 PSD_ROOT = Path(INVENTORY["root"])
-BOTTLE_FOLDERS = {"18-415": PSD_ROOT / "2.  18-415 Bottles "}
+BOTTLE_FOLDERS = {"18-415": PSD_ROOT / "2.  18-415 Bottles ", "13-415": PSD_ROOT / "5.  13-415 Bottles"}
 ALPHA = 128
 MIN_IOU_APPROVABLE = 0.90
 SLOT_BY_TYPE = {"roll-on-cap": "cap", "cap": "cap", "faux-leather-cap": "cap", "fine-mist-sprayer": "sprayer", "lotion-pump": "pump",
-                "vintage-bulb-sprayer": "sprayer", "tassel-bulb-sprayer": "sprayer", "dropper": "fitment", "reducer": "reducer"}
+                "vintage-bulb-sprayer": "sprayer", "tassel-bulb-sprayer": "sprayer", "dropper": "fitment", "reducer": "reducer", "roller-insert": "roller"}
 ONE_IMAGE_TYPES = {"cap", "faux-leather-cap", "roll-on-cap"}      # a cap is one part however many layers drew it
 # Cut from the bottle photo, not the library: the dropper library files hold no pixel layers, and the
 # vintage bulb sprayer files show the bulb on a long hose and dip tube that the product photos do not
@@ -53,6 +53,10 @@ ONE_IMAGE_TYPES = {"cap", "faux-leather-cap", "roll-on-cap"}      # a cap is one
 PHOTO_CUT_TYPES = {"dropper", "vintage-bulb-sprayer", "tassel-bulb-sprayer"}
 BELOW_SLOT = {"dropper": "pipette", "vintage-bulb-sprayer": "diptube", "tassel-bulb-sprayer": "diptube"}
 OVERCAP_TYPES = {"fine-mist-sprayer", "lotion-pump"}
+# 13-415 masters come in pairs: uncapped (the roller or sprayer on the neck, its cap parked beside the bottle) and capped.
+# A cap registers on the capped file; the roller insert is cut from the uncapped one, as the 17-415 pilot did: the
+# library insert files carry a white masking shape, and every photographed insert layer runs on below the rim.
+ROLLER_CLIP_BELOW_RIM = 3
 
 
 def sha(img: Image.Image) -> str:
@@ -124,6 +128,33 @@ def measure_body(img: Image.Image) -> dict:
         centres.append((xs.max() + xs.min() + 1) / 2)
     return {"rim": top, "foot": bottom, "axisX": float(np.median(centres)) if centres else (left + right) / 2,
             "barrelPx": float(np.median(widths)) if widths else float(right - left)}
+
+
+def drop_white_edge_strip(img: Image.Image, min_cols: int = 3) -> tuple[Image.Image, int]:
+    """Clear a strip of white paper standing at the left or right edge of a coloured part (the library's turquoise
+    17-415 collar carries one: a white sliver beside the collar on the stage, Jordan 2026-09-26). A column belongs to
+    the strip when it is mostly near-white; a part that is white overall (a white sprayer head or cap) is left alone."""
+    a = np.asarray(img).copy()
+    op = a[..., 3] > 200
+    if op.sum() < 100:
+        return img, 0
+    wh = (a[..., :3].min(axis=2) > 235) & op
+    if wh.sum() / op.sum() > 0.3:
+        return img, 0
+    rows = int(op.any(axis=1).sum())
+    cols = np.where(op.any(axis=0))[0]
+    cleared = 0
+    for start, step in ((int(cols.min()), 1), (int(cols.max()), -1)):
+        strip, c = [], start
+        while 0 <= c < a.shape[1] and wh[:, c].sum() > 0.25 * rows and wh[:, c].sum() >= 0.8 * op[:, c].sum():
+            strip.append(c)
+            c += step
+        if len(strip) >= min_cols:
+            a[:, strip, 3] = 0
+            if 0 <= c < a.shape[1]:
+                a[wh[:, c], c, 3] = 0  # the strip's anti-aliased fringe
+            cleared += len(strip)
+    return (Image.fromarray(a), cleared) if cleared else (img, 0)
 
 
 def crop_save(img: Image.Image, path: Path, pad: int = 6) -> tuple[Image.Image, int, int]:
@@ -200,14 +231,14 @@ def iou_after_fit(lib: np.ndarray, ref: np.ndarray) -> tuple[float, float, tuple
 
 
 def sku_of(path: Path) -> str:
-    return re.sub(r"^\d+\.\s*", "", path.stem).strip()
+    return re.sub(r"\s+copy$", "", re.sub(r"^\d+\.\s*", "", path.stem).strip())
 
 
 def index_masters(neck: str) -> dict[str, list[Path]]:
     """Every per-SKU master under the neck's bottle tree, by website SKU (side views and cap sheets excluded)."""
     files: dict[str, list[Path]] = {}
     for p in sorted(BOTTLE_FOLDERS[neck].rglob("*.psd")):
-        if any(word in str(p).lower() for word in ("sideview", "18415 caps", "thumbnail")):
+        if any(word in str(p).lower() for word in ("sideview", "side view", "18415 caps", "caps 13-415", "capped images", "thumbnail")):
             continue
         files.setdefault(sku_of(p), []).append(p)
     return files
@@ -232,6 +263,9 @@ class Reference:
         # a layer standing clear of the body's horizontal span is the overcap parked beside the bottle
         self.beside = [l for l in others if l.bbox[0] >= br - 0.05 * w or l.bbox[2] <= bl + 0.05 * w]
         self.closure = [l for l in others if l not in self.beside and areas[id(l)] > 50]
+        # A master whose largest layer runs off the canvas is an uncut photo pasted in (GBCrcl15RollBlkDot capped: the
+        # cap never cut from its ground), not a bottle; it cannot be measured.
+        self.usable = bl >= 0 and bt >= 0 and br <= w and bb <= self.psd.height
 
     @property
     def exposed(self) -> bool:
@@ -286,20 +320,23 @@ def main() -> int:
         entry = {"componentId": cid, "websiteSku": c["websiteSku"], "type": ctype, "psd": f"{c['psdLibrary']}/{c['psdPath']}" if c["psdPath"] else None,
                  "reference": None, "layers": [], "checks": {}}
         # candidate references: Clear glass first, bodies with a plate only, masters on disk only
-        cands = sorted({(a["bodyId"], a["glass"], a["websiteSku"]) for a in users[cid]}, key=lambda t: (t[1] != "Clear", t[0]))
+        cands = sorted({(a["bodyId"], a["glass"], a["websiteSku"]) for a in users[cid]}, key=lambda t: (t[1] != "Clear", t[0], t[2]))
         chosen = None
         for body_id, glass, sku in cands:
             plate = plates.get((body_id, glass))
             if not plate or sku not in masters:
                 continue
-            refs = [r for r in (open_ref(p) for p in masters[sku]) if r]
+            refs = [r for r in (open_ref(p) for p in masters[sku]) if r and r.usable]
             if not refs:
                 continue
             exposed = next((r for r in refs if r.exposed), None)
             on = next((r for r in refs if not r.exposed), None)
-            if ctype in OVERCAP_TYPES and not exposed:
+            if (ctype in OVERCAP_TYPES or ctype == "roller-insert") and not exposed:
                 continue
-            chosen = (body_id, glass, sku, plate, exposed or refs[0], on)
+            if ctype in ONE_IMAGE_TYPES and not on:  # only the uncapped file: the cap is parked beside, not on the neck
+                continue
+            ref = on if ctype in ONE_IMAGE_TYPES and on else exposed or refs[0]  # a cap registers where it sits on the neck
+            chosen = (body_id, glass, sku, plate, ref, on)
             break
         if not chosen:
             entry["checks"]["status"] = "no usable master photo for a SKU sold with this part"
@@ -312,6 +349,21 @@ def main() -> int:
         entry["reference"] = {"psd": str(ref.path.relative_to(PSD_ROOT)), "sku": sku, "bodyId": body_id, "glass": glass, "plateKey": plate["plateKey"],
                               "bottlePxPerMm": round(ref_px_per_mm, 4), "rimY": ref.bm["rim"], "axisX": round(ref.bm["axisX"], 1),
                               "seatToFootPx": ref.bm["foot"] - ref.bm["rim"], "plateSeatToFootPx": plate_span, "bodyLayer": ref.body.name}
+
+        if ctype == "roller-insert":
+            # the insert as it sits on the uncapped photo, cleared below the rim: the part inside the neck is behind the glass
+            a = np.asarray(canvas_of(ref.psd, ref.closure)).copy()
+            a[ref.bm["rim"] + ROLLER_CLIP_BELOW_RIM:, :, 3] = 0
+            name = f"{cid}--roller.png"
+            cut, ox, oy = crop_save(Image.fromarray(a), out_dir / name)
+            entry["layers"].append({"slot": "roller", "layerName": ", ".join(l.name for l in ref.closure) + f" (uncapped bottle photo, cleared from {ROLLER_CLIP_BELOW_RIM} px below the rim)",
+                                    "file": name, "width": cut.width, "height": cut.height, "sha256": sha(cut), "pxPerMm": round(ref_px_per_mm, 4),
+                                    "anchor": {"x": round(ref.bm["axisX"] - ox, 1), "y": round(ref.bm["rim"] - oy, 1)}, "z": "behind-body", "explodeIndex": 0})
+            entry["checks"] = {"status": "cut from the uncapped bottle photo", "approvable": True, "clippedBelowRimPx": ROLLER_CLIP_BELOW_RIM}
+            review.append((f"{cid} · photo cut · {sku}", cut, None, ctype))
+            result["components"].append(entry)
+            print(f"{cid:26} {ctype:20} ref {sku:24} cut from photo {cut.width}x{cut.height}")
+            continue
 
         if ctype in PHOTO_CUT_TYPES or not c["psdPath"]:
             # the part as it sits on the photo, at the photo's scale
@@ -385,7 +437,9 @@ def main() -> int:
                 groups.append(("diptube", [l]))
         n = len(groups)
         for i, (slot, layers) in enumerate(groups):
-            img = canvas_of(lib_psd, layers)
+            img, strip = drop_white_edge_strip(canvas_of(lib_psd, layers))
+            if strip:
+                entry["checks"]["whiteEdgeStripCols"] = strip
             name = f"{cid}--{i}-{slot}.png"
             cut, ox, oy = crop_save(img, out_dir / name)
             entry["layers"].append({"slot": slot, "layerName": ", ".join(l.name for l in layers), "file": name, "width": cut.width, "height": cut.height, "sha256": sha(cut),
