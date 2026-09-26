@@ -1,5 +1,5 @@
 import { readFileSync } from "node:fs";
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 
 const track = vi.hoisted(() => vi.fn());
 
@@ -16,6 +16,9 @@ vi.mock("posthog-js", () => ({
 }));
 
 import { analytics } from "@/lib/analytics";
+
+// posthog-js loads on init (it left the shell bundle); once loaded, calls reach it synchronously.
+beforeAll(() => analytics.init("phc_test"));
 
 beforeEach(() => {
   track.mockClear();

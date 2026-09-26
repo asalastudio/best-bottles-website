@@ -13,6 +13,7 @@ import BuilderImage from "./BuilderImage";
 import BuilderFinishImage from "./BuilderFinishImage";
 import FitmentIllustration from "./FitmentIllustration";
 import styles from "./MobileBuilder.module.css";
+import { useTileIntent } from "./useTileIntent";
 
 const stages = ["Bottle", "Glass", "Fitment", "Finish"];
 const titles = ["Choose your bottle", "Choose your glass", "Choose your fitment", "Choose your finish", "Review your bottle"];
@@ -38,6 +39,8 @@ type Props = {
     lastAdded: LastAdded | null; cartProgress: ReturnType<typeof checkoutMinimum>;
     hasIncludedCover: boolean; showCover: boolean; onCover: () => void;
     chooserScale: (body: BuilderBody) => number;
+    /** A bottle tile about to be picked: start loading its options. */
+    onBodyIntent?: (bodyId: string) => void;
     /** Cart-consistent unit price range for the configurations a choice can still become; omitted = no prices on tiles. */
     priceRange?: (configs: BuilderConfiguration[]) => { min: number; max: number } | null;
 };
@@ -236,7 +239,7 @@ export default function MobileBuilder(p: Props) {
                 <button ref={filterTrigger} className={styles.filterButton} aria-haspopup="dialog" aria-expanded={filterOpen} onClick={() => { setFilterOpen(true); filters.current?.showModal(); }}><SlidersHorizontal size={18} /> Filter{activeFilters && <span aria-label="active">●</span>}</button>
             </div><p className={styles.count}>{visible.length} bottle {visible.length === 1 ? "option" : "options"}</p>
             <fieldset disabled={busy} className={styles.group}><legend className={styles.srOnly}>Bottle</legend><div className={styles.bottleGrid}>
-                {visible.map((b, index) => <Choice key={b.id} name={`${id}-bottle`} value={b.id} selected={body?.id === b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} onSelect={() => choose({ bodyId: b.id })}>
+                {visible.map((b, index) => <Choice key={b.id} name={`${id}-bottle`} value={b.id} selected={body?.id === b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} onSelect={() => choose({ bodyId: b.id })} onIntent={p.onBodyIntent && (() => p.onBodyIntent!(b.id))}>
                     <div className={styles.bottleThumb}><BuilderImage config={clearBodyPreview(b)} parts={previewParts(clearBodyPreview(b), "body")} scale={1.08 * Math.max(.55, p.chooserScale(b))} label={`${b.capacityMl} ml ${b.profileLabel}`} thumbnail placeholder priority={index < CHOOSER_PRIORITY_TILES} /></div>
                     <strong>{b.capacityMl} ml</strong>{b.profileLabel !== b.family && <span>{b.profileLabel}</span>}{bodyFrom(b) && <span className={styles.price}>{bodyFrom(b)}</span>}<span>Neck: {b.neck}</span>
                 </Choice>)}
@@ -306,8 +309,9 @@ export default function MobileBuilder(p: Props) {
     </div>;
 }
 
-function Choice({ name, value, selected, label, onSelect, disabled, children }: { name: string; value: string; selected: boolean; label: string; onSelect: () => void; disabled?: boolean; children: ReactNode }) {
-    return <label className={styles.choice} data-selected={selected} data-disabled={disabled}>
+function Choice({ name, value, selected, label, onSelect, onIntent, disabled, children }: { name: string; value: string; selected: boolean; label: string; onSelect: () => void; onIntent?: () => void; disabled?: boolean; children: ReactNode }) {
+    const intent = useTileIntent(onIntent);
+    return <label className={styles.choice} data-selected={selected} data-disabled={disabled} {...intent}>
         <input type="radio" name={name} value={value} checked={selected} onChange={onSelect} aria-label={label} disabled={disabled} />
         {selected && <span className={styles.check}><Check size={13} weight="bold" /></span>}{children}
     </label>;

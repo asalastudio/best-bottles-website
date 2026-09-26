@@ -1,4 +1,4 @@
-import { exactComponentMatches } from "./component-matches";
+import { exactComponentMatch } from "./component-matches";
 import { catalogIncludedAssembly } from "../../../convex/catalogIncludedAssemblies";
 import { sourceComponentLink, sourceComponentLinks } from "./source-component-links";
 import type { FunctionReturnType } from "convex/server";
@@ -119,7 +119,7 @@ export function compatibleFinishComponent(row: CatalogRow) {
     const source = sourceComponentLink(row);
     if (!source && sourceComponentLinks.some(link => link.assemblySku === row.websiteSku)) return null;
     // Exact current source witnesses supersede older generated metadata.
-    const exact = source ?? exactComponentMatches[row.websiteSku ?? ""];
+    const exact = source ?? exactComponentMatch(row.websiteSku ?? "");
     if (exact && (row.family !== exact.family || row.capacityMl !== exact.capacityMl || row.color !== exact.color
         || row.neckThreadSize !== exact.neck || (row.applicator ?? null) !== exact.applicator)) return null;
     const app = row.applicator ?? "";

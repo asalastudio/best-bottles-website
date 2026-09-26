@@ -32,6 +32,16 @@ const KIT_BATCH = 50;
 // minutes per family (2026-09-24 first-open measurement).
 const FAMILY_CACHE_SECONDS = 60 * 60;
 
+/** CDN policy for the builder's JSON routes: fresh for a while, then served
+ * stale while one background request refreshes it, so an expiry never makes a
+ * visitor wait on the function. The old `stale-while-revalidate=60` gave a
+ * minute of grace, so a bottle nobody picked for six minutes went cold. Vercel
+ * strips both directives before the response reaches the browser, and a new
+ * deployment starts the CDN empty (the data cache above survives it). */
+export const BUILDER_CDN_CACHE = "public, s-maxage=300, stale-while-revalidate=86400";
+/** The family list changes only with the catalogue; it was never CDN-cached. */
+export const BUILDER_FAMILIES_CDN_CACHE = "public, s-maxage=3600, stale-while-revalidate=86400";
+
 export const loadBuilderFamily = unstable_cache(async (family: string) => {
     const data = await familyRows(family);
     if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${family}`);
@@ -94,16 +104,27 @@ async function loadKitsForRows(rows: Array<{ websiteSku: string | null; graceSku
     return result;
 }
 
+// A bottle's kit layers (register + published kits) cost 0.3–1.4 s of Convex
+// round trips, and this was the one builder read with no data cache: every CDN
+// miss on /api/bottle-builder/kits — the first pick after each deploy, or any
+// pick five minutes after the last one — paid it in full (2.7 s measured on
+// production 2026-09-26). Keyed by the bottle's exact SKU pairs, so a changed
+// catalogue is a new entry rather than a stale one; the tag clears it with the
+// family. Callers resolve the body first, so junk ids never reach the cache.
+const cachedBodyKits = unstable_cache(async (pairs: Array<[string, string | null]>) => {
+    const loaded = await loadKitsForRows(pairs.map(([websiteSku, graceSku]) => ({ websiteSku, graceSku })));
+    const kits: Record<string, BuilderKit | null> = {};
+    for (const [websiteSku, graceSku] of pairs) {
+        kits[websiteSku] = loaded.get(websiteSku) ?? (graceSku ? loaded.get(graceSku) : undefined) ?? null;
+    }
+    return kits;
+}, ["bottle-builder-body-kits-v1"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+
 export async function loadBuilderBodyKits(family: string, bodyId: string) {
     if (!family || family.length > 100 || !bodyId || bodyId.length > 200) return {};
     const body = (await loadBuilderFamily(family)).find(item => item.id === bodyId);
     if (!body) return {};
-    const loaded = await loadKitsForRows(body.configurations.map(config => ({ websiteSku: config.id, graceSku: config.product.graceSku })));
-    const kits: Record<string, BuilderKit | null> = {};
-    for (const config of body.configurations) {
-        kits[config.id] = loaded.get(config.id) ?? loaded.get(config.product.graceSku) ?? null;
-    }
-    return kits;
+    return cachedBodyKits(body.configurations.map(config => [config.id, config.product.graceSku ?? null]));
 }
 
 /** The published plate per candidate SKU: the exact master front on the plate

@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import React, { act, type ImgHTMLAttributes } from "react";
 import { createRoot, type Root } from "react-dom/client";
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 
 const track = vi.hoisted(() => vi.fn());
 const addItems = vi.hoisted(() => vi.fn());
@@ -22,6 +22,7 @@ vi.mock("next/image", () => ({ default: (props: ImgHTMLAttributes<HTMLImageEleme
 } }));
 
 import CatalogCardPurchase from "@/components/catalog/CatalogCardPurchase";
+import { analytics } from "@/lib/analytics";
 import type { CatalogPurchaseVariant } from "@/lib/products/catalog-card-purchase";
 
 (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
@@ -61,6 +62,8 @@ function type(input: HTMLInputElement, value: string) {
 }
 const events = () => track.mock.calls.map((call) => call[0]);
 
+// posthog-js loads on init (it left the shell bundle); once loaded, calls reach it synchronously.
+beforeAll(() => analytics.init("phc_test"));
 beforeEach(() => { track.mockClear(); addItems.mockClear(); });
 afterEach(() => { act(() => root?.unmount()); el?.remove(); });
 
