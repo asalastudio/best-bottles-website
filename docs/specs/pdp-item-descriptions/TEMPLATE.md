@@ -85,7 +85,9 @@ The generator builds one record per SKU. Both layouts are rendered from it.
 - One sentence, 10 to 25 words, 160 characters or less.
 - Start with the type phrase for the dispense mode (table below), then "for", then two to four uses from the mode card, then the size phrase.
 - Do not repeat capacity, glass colour or family. The page title right above already says "9 ml Amber Cylinder Roll-On Bottle".
-  - Exception: ounces, when buyers name the size in ounces ("in the common 1 oz size").
+  - Exception: sizes buyers name in ounces or drams ("in the common 1 oz size", "A 1 dram vial").
+- **At 5 ml and under, samples lead:** "A roll-on bottle for samples and promotional giveaways of perfume oil, attar and carrier-oil blends." Best Bottles' buyers use drams, 5 ml bottles, roll-ons and sprays as samples and promotional items.
+- **Beard oil** is named wherever the mode card lists it: droppers, pour bottles and splash bottles (RUBRIC.md §4.1).
 
 ### Bullets
 
@@ -113,12 +115,13 @@ The generator builds one record per SKU. Both layouts are rendered from it.
 | SPLASH | splash bottle with an orifice reducer |
 | PUMP-LOTION | lotion-pump bottle |
 | DROP | dropper bottle |
-| CAP | screw-cap bottle |
+| POUR | pour bottle (only a short screw cap; the oil is poured into the hand) |
 | STOPPER | stoppered bottle ("stoppered apothecary bottle" when the family is Apothecary) |
 | DAB | dab-on bottle with a glass rod |
-| VIAL | sample vial |
+| VIAL | "{n} dram vial" when the catalogue names the size in drams ("1 dram vial", "5/8 dram vial"), otherwise "sample vial" |
 | JAR | cream jar |
 | ATOMIZER | refillable travel atomizer |
+| STOCK | stock bottle (cap-only bottles over 100 ml) |
 
 ### Size phrases
 
@@ -126,9 +129,10 @@ These follow the size bands in RUBRIC.md §4.3.
 
 | Band | Phrase |
 |---|---|
-| 4 ml or less | Folded into the uses: "for ... samples, testers and swaps" |
-| 5 to 15 ml | "sized for a purse or pocket" |
-| 25 to 60 ml | None, or "in the common 1 oz size" at 30 ml |
+| 5 ml or less | Samples lead: "for samples and promotional giveaways of {liquids}"; vials add "testers" |
+| 6 to 9 ml | "sized for samples, promotions and travel" |
+| 10 to 15 ml | "sized for decants, promotions and travel" |
+| 25 to 60 ml | None, or "in the common 1 oz size" at 30 ml and "2 oz" at 60 ml |
 | 78 to 128 ml | "at full retail size" |
 | Over 130 ml | "for stock or refills" |
 
@@ -170,13 +174,18 @@ Below them come the Tech sheet (capacity, neck finish, glass, fitment, heights, 
 
 ## 6. Worked examples
 
-These are the same twelve archetypes as RUBRIC.md. Each Fits line was checked against the catalogue for the same family, capacity, neck and glass colour. Word counts cover everything shown.
+There are fifteen examples:
+
+- the twelve archetypes from RUBRIC.md, with the pour bottle and the 1 dram vial updated
+- three sample sizes: a 5 ml roll-on, a 3.3 ml sprayer and a 5 ml pour bottle
+
+Each Fits line was checked against the catalogue for the same family, capacity, neck and glass colour. Word counts cover everything shown.
 
 ### 1. Cylinder 9 ml, amber, steel roller ball, white cap · `GBCylAmb9MtlRollWht` (ROLL)
 
 **Layout B, summary and bullets** (66 words)
 
-A roll-on bottle for perfume oil, attar and carrier-oil blends, sized for a purse or pocket.
+A roll-on bottle for perfume oil, attar and carrier-oil blends, sized for samples, promotions and travel.
 
 - **Included:** Steel roller ball and white screw cap, fitted
 - **Fits:** 17-415 neck; also takes the plastic roller, fine-mist sprayer and lotion pump sold for this bottle
@@ -185,21 +194,21 @@ A roll-on bottle for perfume oil, attar and carrier-oil blends, sized for a purs
 
 **Layout A, three sentences** (56 words)
 
-> A roll-on bottle for perfume oil, attar and carrier-oil blends, sized for a purse or pocket. It comes with a steel roller ball and white screw cap; the 17-415 neck also takes the plastic roller, fine-mist sprayer and lotion pump sold for this bottle. Carry it capped and upright; the ball alone is not a seal.
+> A roll-on bottle for perfume oil, attar and carrier-oil blends, sized for samples, promotions and travel. It comes with a steel roller ball and white screw cap; the 17-415 neck also takes the plastic roller, fine-mist sprayer and lotion pump sold for this bottle. Carry it capped and upright; the ball alone is not a seal.
 
 ### 2. Cylinder 9 ml, amber, black fine-mist sprayer · `GBCylAmb9SpryBlk` (MIST)
 
-**Layout B, summary and bullets** (61 words)
+**Layout B, summary and bullets** (60 words)
 
-A fine-mist spray bottle for eau de parfum, cologne, body mist and decants, sized for a purse or pocket.
+A fine-mist spray bottle for eau de parfum, cologne and body mist, sized for samples, promotions and travel.
 
 - **Included:** Black fine-mist sprayer and plastic overcap, fitted
 - **Fits:** 17-415 neck; also takes the steel and plastic rollers and the lotion pump sold for this bottle
 - **Good to know:** It sprays thin liquids only; perfume oil and undiluted essential oil clog it
 
-**Layout A, three sentences** (60 words)
+**Layout A, three sentences** (59 words)
 
-> A fine-mist spray bottle for eau de parfum, cologne, body mist and decants, sized for a purse or pocket. It comes with a black fine-mist sprayer and plastic overcap; the 17-415 neck also takes the steel and plastic rollers and the lotion pump sold for this bottle. It sprays thin liquids only; perfume oil and undiluted essential oil clog it.
+> A fine-mist spray bottle for eau de parfum, cologne and body mist, sized for samples, promotions and travel. It comes with a black fine-mist sprayer and plastic overcap; the 17-415 neck also takes the steel and plastic rollers and the lotion pump sold for this bottle. It sprays thin liquids only; perfume oil and undiluted essential oil clog it.
 
 ### 3. Circle 100 ml, clear, black vintage-style bulb sprayer · `GBCrcl100AnSpBlk` (BULB)
 
@@ -265,30 +274,35 @@ A lotion-pump bottle for body lotion, liquid soap, serums and body or hair oil.
 
 **Layout B, summary and bullets** (69 words)
 
-A dropper bottle for facial oil, serums, beard oil and carrier-oil blends, in the common 1 oz size.
+A dropper bottle for essential oils, beard oil and facial serums, in the common 1 oz size.
 
 - **Included:** Glass pipette dropper, rubber bulb and black collar, fitted
 - **Fits:** 20-400 neck; also takes the steel and plastic rollers and the screw cap sold for this bottle
 - **Glass:** Amber; reduces the light that reaches the contents
-- **Good to know:** Undiluted essential oils soften rubber; store those under the screw cap
+- **Good to know:** Store it upright; undiluted essential oil softens the rubber bulb over time
 
 **Layout A, three sentences** (59 words)
 
-> A dropper bottle for facial oil, serums, beard oil and carrier-oil blends, in the common 1 oz size. It comes with a glass pipette dropper, rubber bulb and black collar; the 20-400 neck also takes the steel and plastic rollers and the screw cap sold for this bottle. Undiluted essential oils soften rubber; store those under the screw cap.
+> A dropper bottle for essential oils, beard oil and facial serums, in the common 1 oz size. It comes with a glass pipette dropper, rubber bulb and black collar; the 20-400 neck also takes the steel and plastic rollers and the screw cap sold for this bottle. Store it upright; undiluted essential oil softens the rubber bulb over time.
 
-### 8. Boston Round 30 ml, amber, black screw cap · `GBBstnAmb1ozBlkCapSht` (CAP)
+*Note:* Essential oils lead the uses at Best Bottles' direction. The care line stays because undiluted essential oil softens rubber bulbs (community-research.md §1.4).
 
-**Layout B, summary and bullets** (47 words)
+### 8. Boston Round 30 ml, amber, short black cap (pour) · `GBBstnAmb1ozBlkCapSht` (POUR)
 
-A screw-cap bottle for storing essential oils, perfume oil and blends, or for splitting a larger bottle.
+**Layout B, summary and bullets** (68 words)
 
-- **Included:** Black screw cap
+A pour bottle for beard oil, hair oil, body oil and essential oils, in the common 1 oz size.
+
+- **Included:** Short black screw cap
 - **Fits:** 20-400 neck; also takes the dropper and the steel and plastic rollers sold for this bottle
 - **Glass:** Amber; reduces the light that reaches the contents
+- **Good to know:** It has no fitment, so the oil pours straight from the neck into the hand
 
-**Layout A, three sentences** (50 words)
+**Layout A, three sentences** (59 words)
 
-> A screw-cap bottle for storing essential oils, perfume oil and blends, or for splitting a larger bottle. It comes with a black screw cap; the 20-400 neck also takes the dropper and the steel and plastic rollers sold for this bottle. Amber glass reduces the light that reaches the contents.
+> A pour bottle for beard oil, hair oil, body oil and essential oils, in the common 1 oz size. It comes with a short black screw cap; the 20-400 neck also takes the dropper and the steel and plastic rollers sold for this bottle. It has no fitment, so the oil pours straight from the neck into the hand.
+
+*Note:* Included says "lined" once Best Bottles confirms which short caps have a liner (RUBRIC.md §7, item 6).
 
 ### 9. Apothecary 15 ml, cobalt blue, ground-glass stopper · `GB15ApthBlue` (STOPPER)
 
@@ -306,35 +320,34 @@ A stoppered apothecary bottle for perfume oil, attar and essential oil kept on a
 
 ### 10. Metal-shell atomizer 10 ml, black · `GBAtom10Blk` (ATOMIZER)
 
-**Layout B, summary and bullets** (43 words)
+**Layout B, summary and bullets** (42 words)
 
-A refillable travel atomizer for carrying a decant of eau de parfum or cologne in a bag or pocket.
+A refillable travel atomizer for eau de parfum or cologne on the go, and for gifts and promotions.
 
 - **Included:** Built-in sprayer and black cap
 - **Material:** Black metal shell
 - **Good to know:** The shell can be laser-engraved with a name or a logo
 
-**Layout A, three sentences** (39 words)
+**Layout A, three sentences** (38 words)
 
-> A refillable travel atomizer for carrying a decant of eau de parfum or cologne in a bag or pocket. It comes with a built-in sprayer and black cap. The shell can be laser-engraved with a name or a logo.
+> A refillable travel atomizer for eau de parfum or cologne on the go, and for gifts and promotions. It comes with a built-in sprayer and black cap. The shell can be laser-engraved with a name or a logo.
 
 *Note:* The refill method goes in Good to know once it is confirmed.
 
-### 11. Vial 1 ml, amber, white cap · `GB1mlAmbVialWht` (VIAL)
+### 11. 1 dram vial (4 ml), amber, short white cap · `GBVAmb1DrmWhtCapSht` (VIAL)
 
-**Layout B, summary and bullets** (35 words)
+**Layout B, summary and bullets** (54 words)
 
-A sample vial for perfume and oil samples, testers and swaps.
+A 1 dram vial for samples, testers and promotional giveaways of perfume, perfume oil and essential oil.
 
-- **Included:** White cap
+- **Included:** Short white screw cap
+- **Fits:** 13-425 neck; also takes the dropper sold for this bottle
 - **Glass:** Amber; reduces the light that reaches the contents
 - **Good to know:** Fill it with a pipette or a small funnel
 
-**Layout A, three sentences** (26 words)
+**Layout A, three sentences** (45 words)
 
-> A sample vial for perfume and oil samples, testers and swaps. It comes with a white cap. Fill it with a pipette or a small funnel.
-
-*Note:* Whether the closure is a press-fit plug or a screw cap is awaiting confirmation (RUBRIC.md §7, item 3); Included names it once confirmed.
+> A 1 dram vial for samples, testers and promotional giveaways of perfume, perfume oil and essential oil. It comes with a short white screw cap; the 13-425 neck also takes the dropper sold for this bottle. Fill it with a pipette or a small funnel.
 
 ### 12. Cream jar 15 ml, clear, pink lid · `CJClr15Pnk` (JAR)
 
@@ -349,6 +362,50 @@ A cream jar for creams, balms, body butter and solid perfume.
 **Layout A, three sentences** (27 words)
 
 > A cream jar for creams, balms, body butter and solid perfume. It comes with a pink screw lid. The wide mouth takes a spatula or a fingertip.
+
+### 13. Cylinder 5 ml, clear, steel roller ball (sample size) · `GBCyl5MtlRollBlkSh` (ROLL)
+
+**Layout B, summary and bullets** (57 words)
+
+A roll-on bottle for samples and promotional giveaways of perfume oil, attar and carrier-oil blends.
+
+- **Included:** Steel roller ball and shiny black screw cap, fitted
+- **Fits:** 13-415 neck; also takes the plastic roller, fine-mist sprayer and screw cap sold for this bottle
+- **Good to know:** Carry it capped and upright; the ball alone is not a seal
+
+**Layout A, three sentences** (56 words)
+
+> A roll-on bottle for samples and promotional giveaways of perfume oil, attar and carrier-oil blends. It comes with a steel roller ball and shiny black screw cap; the 13-415 neck also takes the plastic roller, fine-mist sprayer and screw cap sold for this bottle. Carry it capped and upright; the ball alone is not a seal.
+
+### 14. Cylinder 3.3 ml, clear, black fine-mist sprayer (sample size) · `GBSpry3mlClBlk` (MIST)
+
+**Layout B, summary and bullets** (47 words)
+
+A fine-mist spray bottle for samples and promotional giveaways of eau de parfum, cologne and body mist.
+
+- **Included:** Black fine-mist sprayer and clear cap, fitted
+- **Glass:** Clear; shows the fill level
+- **Good to know:** It sprays thin liquids only; perfume oil and undiluted essential oil clog it
+
+**Layout A, three sentences** (40 words)
+
+> A fine-mist spray bottle for samples and promotional giveaways of eau de parfum, cologne and body mist. It comes with a black fine-mist sprayer and clear cap. It sprays thin liquids only; perfume oil and undiluted essential oil clog it.
+
+### 15. Cylinder 5 ml, clear, short black cap (pour, sample size) · `GBCyl5BlkSht` (POUR)
+
+**Layout B, summary and bullets** (53 words)
+
+A pour bottle for samples and promotional giveaways of perfume oil, attar and beard oil.
+
+- **Included:** Short black screw cap
+- **Fits:** 13-415 neck; also takes the steel and plastic rollers and the fine-mist sprayer sold for this bottle
+- **Good to know:** It has no fitment, so the oil pours straight from the neck
+
+**Layout A, three sentences** (53 words)
+
+> A pour bottle for samples and promotional giveaways of perfume oil, attar and beard oil. It comes with a short black screw cap; the 13-415 neck also takes the steel and plastic rollers and the fine-mist sprayer sold for this bottle. It has no fitment, so the oil pours straight from the neck.
+
+*Note:* The "into the hand" ending is dropped at sample size, where the bottle is filled and handed out rather than used from.
 
 ---
 

@@ -1,6 +1,13 @@
 # PDP item descriptions: classification rubric and plan
 
 Status: draft for review · 2026-09-26
+Updated 2026-09-26 with Best Bottles' direction:
+
+- Beard oil is named wherever buyers put it.
+- Droppers lead with essential oils, beard oil and facial serums.
+- Bottles sold with only a short screw cap are "pour" bottles.
+- Vials are named as drams where the catalogue does.
+- Bottles of 5 ml and under are described first as samples and promotional items.
 Scope: the "Item description" line on the redesigned PDP (`PdpProductInfo`), one per SKU, for the 2,113 bottle and jar SKUs in 317 product groups. Components, gift packaging and tools are out of scope; they keep their cleaned legacy text.
 
 Companion files in this folder:
@@ -157,6 +164,15 @@ The customer-facing words for each class. The first column is the internal code 
 | L7 | Splash | splash cologne, aftershave | |
 | L8 | Pourable lotions and soaps | body lotion, hand lotion, liquid soap, body wash, conditioner, cleansing oil | "creams" (they go in a jar) |
 | L9 | Thick | cream, balm, body butter, salve, solid perfume | |
+| P | Purpose, not a liquid | samples, testers, trial sizes, promotional giveaways, gifts, favors, decants, travel | Holiday names (the legacy text says "Valentines"); promises of a sample programme |
+
+**Purpose words (P)** come from the size band (4.3), not from the liquid. The legacy catalogue already uses them: "Perfume sample vials for promotions", "Small sized bottle for promotion samples and travel", "good for promotions and decants", "Great for gifts and promotion". Brands buy the small sizes to hand out.
+
+**Beard oil** (L6) is named wherever buyers put it:
+
+- **Primary** for DROP, POUR and SPLASH.
+- **Also** for PUMP-LOTION.
+- **Never** for ROLL, MIST, PUMP-SPRAY or BULB.
 
 "Tincture" is deliberately absent. It implies an ingestible, which needs food-contact assurances we have not verified, and most tinctures raise the same brand issue as L1. The team decides this (section 7).
 
@@ -169,7 +185,7 @@ Each card sets what the "For ..." sentence may say (**Primary**, then **Also**),
 - **Convex values.** `Metal Roller Ball`, `Plastic Roller Ball`.
 - **Catalogue.** 463 SKUs; 13-415, 17-415 and 20-400 necks; 5–60 ml.
 - **Primary.** L3 perfume oil and attar; L5 diluted oil blends.
-- **Also.** L6 (facial oil, cuticle oil) at 5–15 ml.
+- **Also.** L6 (facial oil, cuticle oil) at 5–15 ml. Samples and promotions, by size band (4.3). At 5 ml and under, samples lead.
 - **Excluded.**
   - L1 spray perfume: users report it evaporates past the ball.
   - L4 undiluted essential oil: skin application without a carrier is not something we suggest.
@@ -189,7 +205,7 @@ Each card sets what the "For ..." sentence may say (**Primary**, then **Also**),
 - **Convex values.** `Fine Mist Sprayer`.
 - **Catalogue.** 167 SKUs; mostly 13-415 and 17-415; 3–30 ml, plus aluminum and plastic bottles up to 250 ml.
 - **Primary.** L1 spray perfume; L2 water-thin mists.
-- **Also.** Decants and samples at up to 15 ml.
+- **Also.** Samples, promotions and decants at up to 15 ml, by size band (4.3). At 5 ml and under, samples lead.
 - **Excluded.** L3, L4, L5 and L6 (oils); L8 and L9. There are 29 oil-on-mist SKUs today.
 - **Deciding fact.**
   1. Guard. "Thin liquids only: perfume oil and undiluted essential oil clog the sprayer."
@@ -245,12 +261,11 @@ Each card sets what the "For ..." sentence may say (**Primary**, then **Also**),
 
 - **Convex values.** `Dropper`.
 - **Catalogue.** 78 bottle SKUs; 20-400, 18-415, 18-400 and 13-425 necks; 4–128 ml. The default is Boston round, 30 ml, amber or cobalt.
-- **Primary.** L6 facial oil, serum, beard oil, hair oil; L5 carrier-diluted blends.
-- **Also.** L3 perfume oil.
-- **Excluded.** L4 undiluted essential oil *storage*; L1 and L2; L8 and L9.
+- **Primary, in this order.** L4 essential oils; L6 beard oil; facial serums. This follows Best Bottles' direction, 2026-09-26.
+- **Also.** Facial oil, hair oil, carrier-oil blends (L5), perfume oil (L3).
+- **Excluded.** L1 and L2; L8 and L9.
 - **Deciding fact.**
-  1. Guard. "Undiluted essential oils soften rubber, so store those under the screw cap sold for this bottle." Only say "sold for this bottle" when a cap-only SKU exists at the same neck.
-  2. Carry. "Keep it upright so the oil does not sit against the bulb."
+  1. Care. "Store it upright; undiluted essential oil softens the rubber bulb over time." The research signal on rubber bulbs is strong, so the line stays even though essential oils lead the uses.
 - **Evidence.**
   - Undiluted essential oil turns rubber bulbs gooey (8+ threads, including a recent post with 2.4K upvotes).
   - A 30 ml amber Boston round with a dropper is the default beard-oil package (DIY segment, section 4).
@@ -271,6 +286,7 @@ Each card sets what the "For ..." sentence may say (**Primary**, then **Also**),
 - **Convex values.** `Atomizer`, `Metal Atomizer`.
 - **Catalogue.** 23 SKUs; 5–10 ml.
 - **Primary.** L1 decants of eau de parfum or cologne carried in a bag or pocket.
+- **Also.** Gifts and promotions. The legacy pages say "Great for gifts and promotion".
 - **Excluded.** Oils.
 - **Deciding fact.**
   1. The engraving flag. "The shell can be laser-engraved."
@@ -282,6 +298,7 @@ Each card sets what the "For ..." sentence may say (**Primary**, then **Also**),
 - **Convex values.** `Glass Stopper`, or a ground neck.
 - **Catalogue.** 13 SKUs, plus 6 ground-neck bottles listed without a fitment.
 - **Primary.** L3 perfume oil and attar, kept on a dressing table or shelf; display.
+- **Also.** Gifts, favors and promotions for the 4 ml decorative bottles. The legacy text lists them.
 - **Excluded.** Anything that travels.
 - **Deciding fact.**
   1. Guard. "The stopper seats by friction and is not leak-proof, so it is not a travel bottle." This is already verified in the current copy.
@@ -295,23 +312,40 @@ Each card sets what the "For ..." sentence may say (**Primary**, then **Also**),
 - **Deciding fact.** "Dab straight from the glass rod; the cap seals the neck between uses."
 - **Evidence.** Buyers ask for a glass stick, not plastic, and wands suit thick oils (3 threads).
 
-#### CAP: bottle with a screw cap and no fitment
+#### POUR: pour bottle (a short screw cap and no fitment)
 
-- **Convex values.** `Cap/Closure`, `N/A`, or empty, on a bottle.
-- **Catalogue.** 104 SKUs, not counting vials and jars. By size:
-  - At 5–15 ml: L3 perfume oil, samples and decants; a blank to fit later.
-  - Boston round at 15–60 ml: L4 essential oil storage; L3; splitting a larger bottle.
-  - Above 130 ml: stock and refill.
+- **What it is.** Best Bottles' name for this group: "pour oils". The oil is poured from the neck straight into the hand.
+- **Convex values.** `Cap/Closure`, `N/A` or empty, on a bottle of 100 ml or less. Vials, jars and ground-glass necks are not included.
+- **Catalogue.** 94 SKUs:
+
+  | Size | SKUs |
+  |---|---:|
+  | 5 ml and under | 19 |
+  | 6–9 ml | 20 |
+  | 10–15 ml | 41 |
+  | 15–60 ml Boston rounds and others | 14 |
+
+  Most carry a short cap.
+- **Primary, by size.**
+  - 5 ml and under: samples and promotional giveaways of perfume oil, attar and beard oil.
+  - 6–15 ml: L3 perfume oil and attar; L6 beard oil; then samples, promotions, decants and travel.
+  - 15–60 ml: L6 beard oil, hair oil and body oil; L4 essential oils; splitting a larger bottle.
+- **Excluded.** L1 and L2 (they want a sprayer); L9.
 - **Deciding fact.**
-  1. Neck system line. "The 13-415 neck also takes the roll-on and fine-mist sprayer sold for this bottle."
+  1. "It has no fitment, so the oil pours straight from the neck into the hand."
+  2. The Fits line names the dropper, rollers or sprayer sold for the same bottle, for buyers who want a fitment later.
+- **Needs confirmation.** Only one catalogue row mentions a cap liner. Say "lined cap" only once Best Bottles confirms which short caps have one.
 - **Evidence.** "Which parts match" is the most-asked question across all four segments.
 
-#### VIAL: sample vial
+**STOCK.** The 4 cap-only bottles over 100 ml (plastic flip-top and aluminum, 118–500 ml) are "stock bottles" for stock or refills, not pour bottles. Three plastic flip-top SKUs (`PbClear4ozFlpWh`, `PbClear8ozFlpWh`, `PbNat16ozFlpWh`) are categorised "Glass Bottle" in production; Phase 5 fixes that.
 
-- **Convex values.** `family = Vial`.
-- **Catalogue.** 26 SKUs; 1–4 ml.
-- **Primary.** Samples, testers and swaps of L1 or L3.
-- **Deciding fact.** Fill method: "Fill it with a pipette or a small funnel." Name the closure exactly: plug, screw cap, or dropper.
+#### VIAL: vials and drams
+
+- **Convex values.** `family = Vial`, including the dram vials sold with a dropper.
+- **Catalogue.** 26 SKUs. The catalogue names them 1 ml, 1.5 ml, 2 ml, 5/8 dram (3 ml) and 1 dram (4 ml), plus two 9 ml cylinder vials.
+- **Type phrase.** "{n} dram vial" when the catalogue names the size in drams, otherwise "sample vial". The page title carries the ml, so "dram" never stands alone.
+- **Primary.** Samples, testers, trial sizes and promotional giveaways of L1, L3 or L4. Best Bottles: "drams are for samples".
+- **Deciding fact.** Fill method: "Fill it with a pipette or a small funnel." Name the closure exactly: the 1 ml plug applicator, a short screw cap, or a dropper.
 - **Fix.** 4 SKUs call a press-fit neck screw-capped.
 
 #### JAR: cream jar
@@ -324,15 +358,18 @@ Each card sets what the "For ..." sentence may say (**Primary**, then **Also**),
 
 ### 4.3 Size bands (key C)
 
-The size band adds one context phrase to the "For ..." sentence and ranks the uses.
+The size band adds one purpose phrase to the summary and ranks the uses. This covers every mode: vials, drams, roll-ons, sprayers, pour bottles and atomizers.
 
-| Band | ml | Context phrase | Notes from research |
+| Band | ml | Phrase in the summary | Source |
 |---|---|---|---|
-| Sample | ≤ 4 | "samples, testers and swaps" | Spray vials beat dab vials for sampling. |
-| Purse | 5–15 | "sized for a purse or pocket", "decants" | 10 ml is the standard roller and the daily-carry decant. 5 ml is a full size for perfume oil. Attar sizes are 3, 6 and 12 ml. |
-| Everyday | 25–60 | none, or "a 1 oz size" when the size is 30 ml | 30 ml (1 oz) is the default for beard oil and serums. |
-| Full size | 78–128 | "full retail size", "dressing table" | |
-| Stock | > 130 | "stock or refill" | |
+| Sample | 5 or less | **Samples lead.** "for samples and promotional giveaways of {liquids}"; vials add "testers" | Best Bottles: drams, 5 ml bottles, roll-ons and sprays are used for samples and promotional items. Legacy: "Perfume sample vials for promotions" |
+| Small | 6–9 | "sized for samples, promotions and travel" | Legacy: "Small sized bottle for promotion samples and travel" |
+| Purse | 10–15 | "sized for decants, promotions and travel" | Legacy: "good for promotions and decants". Research: 10 ml is the standard roller and the daily-carry decant |
+| Everyday | 25–60 | None, or "in the common 1 oz size" at 30 ml and "2 oz" at 60 ml | 30 ml (1 oz) is the default for beard oil and serums |
+| Full size | 78–128 | "at full retail size" | |
+| Stock | Over 130 | "for stock or refills" | |
+
+Attar sizes are 3, 6 and 12 ml. A 5 ml bottle is also a full size for perfume oil, so a 5 ml roll-on still names perfume oil after the sample phrase.
 
 ### 4.4 Glass and material lines (key D)
 
@@ -353,9 +390,9 @@ Use a material line only when it changes the use. It competes for sentence 3; it
 This line answers the most common question across all four research segments: "which parts fit this bottle?"
 
 - Template: "The {neck} neck also takes the {other fitments} sold for this bottle."
-- The fitment list comes from `fitmentsAtNeck` in `family-profiles.json`, which the generator already builds. Only fitments actually sold at that family, capacity and neck are named.
+- The fitment list is computed per family, capacity, neck **and glass colour**, and includes a screw cap when a cap-only SKU exists there. Today's `fitmentsAtNeck` in `family-profiles.json` ignores colour and leaves caps out; Phase 1 fixes that.
 - Never write "universal", "fits most", or "fits all 18 mm". 18-400, 18-410 and 18-415 are different threads.
-- It is sentence 3 for CAP, and for PUMP-SPRAY when no guard applies. For other modes it is the second candidate after the guard.
+- It fills the **Fits** bullet in TEMPLATE.md, and the second half of sentence 2 in the three-sentence layout.
 
 ### 4.6 Carry behaviour (key F)
 
@@ -364,7 +401,7 @@ This line answers the most common question across all four research segments: "w
 | STOPPER, BULB | Not a travel bottle; this is the guard. |
 | ROLL, ATOMIZER, DROP | Carry capped and upright. |
 | MIST | Keep the overcap on in a bag, when the SKU has one. |
-| CAP, SPLASH, VIAL | No line unless a legacy flag says more. |
+| POUR, SPLASH, VIAL | No line unless a legacy flag says more. |
 
 Words we never use for carry: leak-proof, airtight, spill-proof, TSA-approved. The only exception is "not leak-proof", which is allowed.
 
@@ -430,6 +467,9 @@ These are the questions where the answer changes the copy. Each has a recommenda
 4. **"Tincture" as a dropper use?** Recommended: no, for the food-contact and brand reasons in 4.1.
 5. **Replace the legacy "Item type" line** (for example, "Clear, frosted and colored glass roll-on bottles of capacity range about 1/3oz (from 8ml to 10ml)") with a short rubric label such as "Roll-on bottle · perfume oil and blends"? README §4.6 keeps the Best Bottles text "for now", so this is a separate decision. Recommended: yes, after the descriptions ship.
 
+6. **Pour bottles.** Is "pour bottle" the customer-facing name for every glass bottle sold with only a screw cap, from 5 to 60 ml, not counting vials and jars? And which short caps have a liner, so the copy can say "lined cap"?
+7. **Where samples lead.** At 5 ml and under the summary opens with "samples and promotional giveaways"; from 6 to 15 ml samples and promotions follow the liquids. Recommended: keep the line at 5 ml, as Best Bottles described.
+
 ---
 
 ## 8. Plan
@@ -469,6 +509,7 @@ These are the questions where the answer changes the copy. Each has a recommenda
 
 - The 99 rows in `use-line-audit.csv`.
 - The neck-value artefact on `GBPillar9BlkSht`.
+- The three plastic flip-top bottles categorised "Glass Bottle".
 - Equal with-cap and without-cap heights on Boston rounds.
 - Propose optional Convex fields for the facts in item 3 of section 7: `closureAttachment`, `bulbMaterial`, `pipetteLengthMm`, `rollerHousingMaterial`. With those recorded, the guard lines stop depending on this document. This is a schema proposal for review, not a change made here.
 
