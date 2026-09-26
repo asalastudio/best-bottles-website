@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 import { getFunctionName } from "convex/server";
 import type { BuilderKit, CatalogRow } from "@/lib/bottle-builder/model";
 
-const state = vi.hoisted(() => ({ rows: [] as unknown[], kits: {} as Record<string, unknown>, truncated: false, missingPlates: [] as string[] }));
+const state = vi.hoisted(() => ({ rows: [] as unknown[], kits: {} as Record<string, unknown>, truncated: false, missingPlates: [] as string[], register: null as unknown }));
 vi.mock("server-only", () => ({}));
 vi.mock("next/cache", () => ({ unstable_cache: (fn: unknown) => fn }));
 vi.mock("@/lib/paper-doll/local-component-kits", () => ({ readLocalComponentKits: () => null }));
@@ -13,11 +13,12 @@ vi.mock("convex/browser", () => ({ ConvexHttpClient: class {
             case "productKits:forSkus": return Object.fromEntries(args.pairs!.map(p => [p.websiteSku, state.kits[p.websiteSku] ?? null]));
             case "productPlates:forSkus": return { plates: Object.fromEntries(args.skus!.filter(sku => !state.missingPlates.includes(sku)).map(sku => [sku, { image: `https://example.com/${sku}.png` }])) };
             case "products:lookupSku": return null;
+            case "registerStage:forSkus": return state.register ?? { plates: {}, components: {}, bodies: {}, assemblies: {} };
             default: throw new Error(`Unexpected query: ${getFunctionName(ref)}`);
         }
     }
 } }));
-import { freshConfiguration, loadBuilderBodies } from "@/lib/bottle-builder/server";
+import { freshConfiguration, loadBuilderBodies, loadBuilderBodyKits, loadBuilderFamily } from "@/lib/bottle-builder/server";
 
 function row(sku: string, finish: string): CatalogRow {
     return { websiteSku: sku, graceSku: `grace-${sku}`, family: "Cylinder", capacityMl: 9,
@@ -80,5 +81,39 @@ describe("fresh builder purchase reconciliation", () => {
         state.truncated = false;
         state.rows.push({ ...target, websiteSku: "AnotherSwirlShnGl", graceSku: "another-grace" });
         expect(await freshConfiguration("Cylinder", target.websiteSku!)).toBeNull();
+    });
+});
+
+describe("register kits in the builder", () => {
+    const PLATE = { plateKey: "cylinder-9ml-17-415|Swirl", bodyId: "cylinder-9ml-17-415", glass: "Swirl", url: "https://blob/register/plates/swirl.png", width: 768, height: 2304, pxPerMm: 27.2142, anchors: { axisX: 383, seatY: 167, baselineY: 2176, shoulderY: 550 }, approved: true };
+    const layer = (slot: string, extra: Record<string, unknown> = {}) => ({ slot, z: "front", explodeIndex: 1, url: `https://blob/register/components/${slot}.png`, width: 172, height: 135, pxPerMm: 12.3676, anchor: { x: 91.5, y: 126 }, approved: true, ...extra });
+    beforeEach(() => {
+        state.rows = [row("GBCylSwrl9MtlRollMattSl", "Matte Silver"), row("GBCylSwrl9MtlRollShnGl", "Shiny Gold")];
+        state.kits = {};
+        state.truncated = false;
+        state.missingPlates = [];
+        state.register = {
+            plates: { [PLATE.plateKey]: PLATE },
+            components: {
+                "CMP-ROC-MSLV-17415": { componentId: "CMP-ROC-MSLV-17415", type: "roll-on-cap", approved: true, layers: [layer("cap")] },
+                "LIB-17-415-MtlRollon": { componentId: "LIB-17-415-MtlRollon", type: "roller-insert", approved: true, layers: [
+                    layer("roller", { z: "behind-body", explodeIndex: 0, usage: "seated" }),
+                    layer("roller", { explodeIndex: 0, height: 255, usage: "exploded", url: "https://blob/register/components/roller-exploded.png" }),
+                ] },
+            },
+            bodies: { "cylinder-9ml-17-415": { bodyId: "cylinder-9ml-17-415", family: "Cylinder", capacityMl: 9, neck: "17-415", dims: { heightBareMm: 70, diameterMm: 20, widthMm: 21 } } },
+            assemblies: { "grace-GBCylSwrl9MtlRollMattSl": { graceSku: "grace-GBCylSwrl9MtlRollMattSl", websiteSku: "GBCylSwrl9MtlRollMattSl", bodyId: "cylinder-9ml-17-415", plateKey: PLATE.plateKey, glass: "Swirl", neck: "17-415", parts: [{ role: "roller", componentId: "LIB-17-415-MtlRollon" }, { role: "cap", componentId: "CMP-ROC-MSLV-17415" }], renderable: true, reason: null } },
+        };
+    });
+    it("adopts a register kit with the seated insert only: the EXPLODED plug layer never paints in the assembled builder", async () => {
+        // The chooser lists the glass from the register plate; the body's exact kits (the builder's kits API) come from the register too.
+        const listed = (await loadBuilderBodies(state.rows as CatalogRow[])).flatMap(body => body.configurations);
+        expect(listed.map(c => c.id).sort()).toEqual(["GBCylSwrl9MtlRollMattSl", "GBCylSwrl9MtlRollShnGl"]);
+        const [body] = await loadBuilderFamily("Cylinder");
+        const kit = (await loadBuilderBodyKits("Cylinder", body.id))["GBCylSwrl9MtlRollMattSl"]!;
+        expect(kit.register?.plateKey).toBe(PLATE.plateKey);
+        expect(kit.parts.map(part => part.slot).sort()).toEqual(["body", "cap", "roller"]);
+        expect(kit.parts.find(part => part.slot === "roller")!.image.url).toBe("https://blob/register/components/roller.png");
+        state.register = null;
     });
 });

@@ -13,14 +13,18 @@ import fitmentMedia from "./fitments.generated.json";
 import rollerMedia from "./rollers.generated.json";
 import cobaltRollerMedia from "./rollers-cobalt.generated.json";
 import { resolveChargedUnitPrice } from "@/lib/volumePricing";
+import type { PartBox, RegisterKitMeta } from "@/lib/register/stage-kit";
 
 type MatrixRow = FunctionReturnType<typeof api.matrix.getFamilyRows>["rows"][number];
 export type CatalogRow = Omit<MatrixRow, "resolution"> & {
     resolution: MatrixRow["resolution"] | "source_verified";
     compatibilitySources?: string[];
 };
-export type BuilderKit = NonNullable<FunctionReturnType<typeof api.productKits.forSku>>;
-export type BuilderPart = BuilderKit["parts"][number];
+type PublishedKit = NonNullable<FunctionReturnType<typeof api.productKits.forSku>>;
+/** A published kit layer (a full-canvas image), or a register part standing in its own box on the canvas (src/lib/register/stage-kit.ts). */
+export type BuilderPart = PublishedKit["parts"][number] & { box?: PartBox | null; componentId?: string | null };
+/** A published per-SKU kit, or one composed from the component register (`register` set): one plate per glass, shared component layers, one datum per body. */
+export type BuilderKit = Omit<PublishedKit, "parts"> & { parts: BuilderPart[]; register?: RegisterKitMeta | null };
 export type BuilderConfiguration = {
     id: string;
     bodyId: string;

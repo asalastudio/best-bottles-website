@@ -1,0 +1,58 @@
+{
+ "body": "cylinder-9ml-17-415",
+ "canvas": {
+  "width": 768,
+  "height": 2304
+ },
+ "source": "scripts/register/drawings (Sunburst 2.5 traces of the register composition; figures are drawn by the page from the SKU's data)",
+ "closures": {
+  "finemist": {
+   "ink": {
+    "src": "/assets/drawings/cylinder-9ml-17-415/finemist-ink.webp",
+    "width": 247,
+    "height": 800,
+    "closureTopY": 29.4,
+    "seatY": 200.7,
+    "footY": 770.6,
+    "axisX": 123.5,
+    "glassLeft": 46.3,
+    "glassRight": 200.7
+   },
+   "pencil": {
+    "src": "/assets/drawings/cylinder-9ml-17-415/finemist-pencil.webp",
+    "width": 247,
+    "height": 800,
+    "closureTopY": 29.4,
+    "seatY": 200.7,
+    "footY": 770.6,
+    "axisX": 123.5,
+    "glassLeft": 46.3,
+    "glassRight": 200.7
+   }
+  },
+  "rollon": {
+   "ink": {
+    "src": "/assets/drawings/cylinder-9ml-17-415/rollon-ink.webp",
+    "width": 275,
+    "height": 800,
+    "closureTopY": 29.4,
+    "seatY": 136.9,
+    "footY": 770.6,
+    "axisX": 137.4,
+    "glassLeft": 51.5,
+    "glassRight": 223.2
+   },
+   "pencil": {
+    "src": "/assets/drawings/cylinder-9ml-17-415/rollon-pencil.webp",
+    "width": 275,
+    "height": 800,
+    "closureTopY": 29.4,
+    "seatY": 136.9,
+    "footY": 770.6,
+    "axisX": 137.4,
+    "glassLeft": 51.5,
+    "glassRight": 223.2
+   }
+  }
+ }
+}

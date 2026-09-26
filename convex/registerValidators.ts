@@ -118,6 +118,9 @@ export const componentLayerV = v.object({
     anchor: v.object({ x: v.number(), y: v.number() }),   // lands on the body's (axisX, seatY)
     anchorStatus: anchorStatusV,
     explodeIndex: v.number(),
+    // Which stage views draw the layer: "seated" (clipped at the rim, behind the glass) for CAP ON and
+    // SIDECAR, "exploded" (the full part with its plug) for EXPLODED; absent = every view.
+    usage: v.optional(v.union(v.literal("seated"), v.literal("exploded"))),
 });
 
 export const componentRegisterFields = {

@@ -6,14 +6,17 @@ import { dropperGlassStartY } from "@/lib/bottle-builder/dropper-compositing";
 import exposedSprayers from "@/lib/bottle-builder/exposed-sprayers.generated.json";
 import type { BuilderConfiguration, BuilderPart } from "@/lib/bottle-builder/model";
 import { builderBodyFrame, builderPreviewLayout } from "@/lib/bottle-builder/preview-layout";
-import { layerCropStyle, previewFrame } from "@/lib/bottle-builder/preview-frame";
-import { displayImageUrl, isOptimizableImageUrl } from "@/lib/products/optimizable-image";
+import { layerCropStyleForPart, layerTransform, previewFrame } from "@/lib/bottle-builder/preview-frame";
+import { isOptimizableImageUrl, isRegisterAssetUrl } from "@/lib/products/optimizable-image";
+import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/products/register-image";
 
 /** Clear glass and the clear dip tube take the stage colour. A published dropper
  * part also contains its metal collar; multiplying a clear dropper assembly
  * exposes the bottle's neck threads through opaque metal. Measured sources split
  * the two materials below. Unmeasured sources keep their existing behaviour. */
 function blendsIntoGlass(config: BuilderConfiguration, part: BuilderPart, stage: "body" | "fitment" | "complete", splitDropper: boolean) {
+    // A register plate is baked on the stage bone (#F5F3EF) already; multiplying it would darken the glass.
+    if (part.box && part.slot === "body") return false;
     if (part.slot === "diptube" && config.family === "Cylinder" && config.capacityMl === 9
         && config.neck === "13-415" && config.color === "Frosted") return true;
     if (part.slot === "pipette") return config.color !== "Clear";
@@ -49,6 +52,10 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     const splitDropper = config.fitment === "Dropper" && layers.some(({ part }) => dropperGlassStartY(part) !== undefined);
     const urls = kit ? layers.map(({ part }) => part.image.url) : fallbackUrl ? [fallbackUrl] : [];
     const [failedUrl, setFailedUrl] = useState<string | null>(null);
+    // A register master whose optimized request failed (a local network quirk) is shown as the master, not as a failure.
+    const [rawRegister, setRawRegister] = useState(false);
+    const onLayerError = (url: string) => { if (markRegisterOptimizerUnavailable(url)) setRawRegister(true); else setFailedUrl(url); };
+    const layerHref = (url: string, width: 640 | 1200) => (rawRegister && isRegisterAssetUrl(url) ? url : registerImageSrc(url, width));
     const urlKey = urls.join("|");
     const [loadState, setLoadState] = useState({ key: urlKey, count: 0 });
     if (loadState.key !== urlKey) setLoadState({ key: urlKey, count: 0 });
@@ -90,7 +97,7 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     // does not honor loading or fetchPriority — Cylinder tiles sat blank.
     if (layers.length === 1 && !layers[0].transform && !splitDropper) {
         const [{ part }] = layers;
-        const crop = layerCropStyle(part.image, { x, y, width, height });
+        const crop = layerCropStyleForPart(part, { x, y, width, height });
         const blend: CSSProperties["mixBlendMode"] = blendsIntoGlass(config, part, stage, splitDropper) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined;
         // Size is applied once by the frame, equally for a single layer and SVG.
         // layerCropStyle places the layer in percentages of its box, which matches the
@@ -110,8 +117,8 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
             <span style={{ position: "absolute", inset: 0 }}>
                 <Image src={part.image.url} alt={label} {...imgProps} width={part.image.width} height={part.image.height}
                     sizes={thumbnail ? "(max-width: 640px) 42vw, 220px" : "(max-width: 640px) 90vw, 520px"}
-                    unoptimized={!isOptimizableImageUrl(part.image.url)} data-builder-layer={part.slot}
-                    onError={() => setFailedUrl(part.image.url)} style={crop} />
+                    unoptimized={!isOptimizableImageUrl(part.image.url) || (rawRegister && isRegisterAssetUrl(part.image.url))} data-builder-layer={part.slot}
+                    onError={() => onLayerError(part.image.url)} style={crop} />
             </span>
             </span>
         </span>);
@@ -122,22 +129,22 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
             const glassY = splitDropper ? dropperGlassStartY(part) : undefined;
             if (glassY !== undefined) {
                 const opaqueId = `${titleId}-${part.slot}-opaque`, glassId = `${titleId}-${part.slot}-glass`;
-                return <g key={part.slot} transform={transform}>
+                return <g key={part.slot} transform={layerTransform(transform, part)}>
                     <defs>
                         <clipPath id={opaqueId} clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width={part.image.width} height={glassY} /></clipPath>
                         <clipPath id={glassId} clipPathUnits="userSpaceOnUse"><rect x="0" y={glassY} width={part.image.width} height={part.image.height - glassY} /></clipPath>
                     </defs>
-                    <image href={displayImageUrl(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} x="0" y="0"
+                    <image href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} x="0" y="0"
                         clipPath={`url(#${opaqueId})`} data-builder-layer={part.slot} data-builder-material="opaque"
-                        onLoad={markLoaded} onError={() => setFailedUrl(part.image.url)} />
-                    <image href={displayImageUrl(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} x="0" y="0"
+                        onLoad={markLoaded} onError={() => onLayerError(part.image.url)} />
+                    <image href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} x="0" y="0"
                         clipPath={`url(#${glassId})`} data-builder-material="glass" style={{ mixBlendMode: "multiply" }}
-                        onError={() => setFailedUrl(part.image.url)} />
+                        onError={() => onLayerError(part.image.url)} />
                 </g>;
             }
-            return <image key={part.slot} href={displayImageUrl(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} transform={transform}
+            return <image key={`${part.slot}-${part.componentId ?? ""}-${part.image.url}`} href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} transform={layerTransform(transform, part)}
                 x="0" y="0" style={{ mixBlendMode: blendsIntoGlass(config, part, stage, splitDropper) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined }}
-                onLoad={markLoaded} onError={() => setFailedUrl(part.image.url)} data-builder-layer={part.slot} />;
+                onLoad={markLoaded} onError={() => onLayerError(part.image.url)} data-builder-layer={part.slot} />;
         })}
 
     </svg>);
