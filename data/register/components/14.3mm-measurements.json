@@ -4,7 +4,7 @@
  "components": [
   {
    "componentId": "LIB-14.3mm-Plug",
-   "type": "plug",
+   "type": "plug-applicator",
    "layers": [
     {
      "slot": "cap",
