@@ -1789,19 +1789,23 @@
   "plateKey": "slim-50ml-18-415|Clear",
   "bodyId": "slim-50ml-18-415",
   "glass": "Clear",
-  "psd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/11. GBSlm50SpryMtGl.psd",
-  "override": null,
-  "source": "PSD layer Layer 15",
+  "psd": "2.  18-415 Bottles /15. Slim 50ml/2. Slim 50ml (18-415) Sideviews/Slim 50ml .psd",
+  "override": {
+   "psd": "2.  18-415 Bottles /15. Slim 50ml/2. Slim 50ml (18-415) Sideviews/Slim 50ml .psd",
+   "layer": "Layer 1",
+   "why": "every product PSD's Slim 50 body layer stops at the shoulder under the cap (no neck); the sideview photo carries the whole bottle (Jordan 2026-09-25: reducers and necks)"
+  },
+  "source": "PSD layer Layer 1 (override; hidden layer, its own pixels)",
   "file": "slim-50ml-18-415--clear.png",
-  "width": 440,
-  "height": 1475,
-  "sha256": "dc24c8c927ecc970cb8c2eef454a0a46e848adc5945a65b5dfa2f21bf595ebcb",
+  "width": 439,
+  "height": 1706,
+  "sha256": "84a1eeb432cc739a3c5878cc211764879a2b3b448fba4c32adc52466447419a3",
   "measured": {
-   "rim": 14,
-   "foot": 1464,
-   "axisX": 217.5,
-   "barrelPx": 418.0,
-   "shoulderY": 30
+   "rim": 9,
+   "foot": 1705,
+   "axisX": 223.0,
+   "barrelPx": 417.0,
+   "shoulderY": 257
   }
  },
  {

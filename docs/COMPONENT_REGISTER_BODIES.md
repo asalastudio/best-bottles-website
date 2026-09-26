@@ -59,7 +59,9 @@ unusable. Everything but the pilot body was re-rendered.
   reference for lighting and keep their own colour.
 - **Neck edits** (`NECK_EDITS`, rows on the master cut): the insert above the glass rim is trimmed, the master
   mask ends at the rim (the seat moves down to the glass), and one extra prompt line asks for an empty mouth.
-  Grace 55, Empire 50 and 100, Diamond 60 (orifice reducer); Tola 3 and 6 mL (plug).
+  Grace 55, Empire 50 and 100, Diamond 60, Slim 30 and 100, Diva 30 and 46, Circle 30 and 50 (orifice reducer); Tola 3 and 6 mL (plug); Boston round 60 (roller ball
+  and housing); the 12 mm atomizer cylinders 3.3 and 4 mL (nothing to trim: the line asks for an empty bottle, and
+  the pump, spring and tube photographed inside the glass are gone).
 - **The plate keeps the render's own outline.** The first pass clipped every render to the photo cut's mask
   enlarged 2–4×, and the cut's soft, ragged edge and a bone fringe where the mask overhung the render came with
   it. Now the fitted render's alpha is the plate (opaque Clear renders: the row span of the ink; pieces under
@@ -72,20 +74,31 @@ unusable. Everything but the pilot body was re-rendered.
   above the rim is the seated layer, head plus a synthesised stem the exploded layer, cut in canvas space at the
   3 mL plate's px/mm (`plug_layers`); both Tola SKUs build `cap:LIB-14.3mm-Plug`. The two Tola cuts are one
   photo (same sha256) filed under two heights, 42 and 48 mm; the 6 mL plate is that photo at the 6 mL scale.
-- The pilot body (Cylinder 9 mL 17-415) belongs to the Phase 3 lane and is not re-rendered; qa carries its
-  first-pass plates forward.
+- The pilot body (Cylinder 9 mL 17-415) renders for the gallery like every other body; `push-bodies.ts` skips it, dev
+  keeps its Phase 3 plates.
+- **Colour rules from Jordan's gallery review.** Clear and Swirl plates are colourless by construction: after the
+  bone levelling only luminance is kept, then the bone tint (the Eternal Flame had come out green). A plate whose photo
+  carries the true colour renders from that photo with the clear reference for lighting (`OWN_COLOUR`: the Genie
+  "Cobalt Blue" is aqua blue). A glass the catalogue does not list but the product is sold in is added as an extra
+  plate copied from another glass of the body (`EXTRA_PLATES`: the Pear decorative is cobalt and clear; its only
+  photo is the cobalt one). A dark seam down the axis of a photo (the Royal 13) is erased before rendering
+  (`ERASE_AXIS_SEAM`). The Slim 50's product PSDs have no neck (every body layer stops under the cap); its cut comes
+  from the hidden bare-bottle layer of the sideview photo (`source-overrides.json`; `cut_bodies.py --only`).
 
 Outputs: `jobs-lit.json`, `renders-lit/`, `final-lit/`, `review-bodies-lit-N.png`; the measurements file is the
 same `bodies-measurements.json` (every entry records `render.pass` and `checks.edges`). Rulings live in
 `data/register/bodies/rulings.json`: the 63 scale flags accepted from the gallery review; the ten plates Jordan
-held (reducer, plug, the two vials) load as measured with the reason on the row until the second-pass renders
-are released.
+held (reducer, plug, the two vials) were re-rendered and released on dev for review; the 20 mL white cream jar is
+held: its cut (CJWhite20.psd Layer 1) is a shallow white dish, not the jar body, and needs a re-cut.
 
 ## Flags for review (kept, not approved automatically)
 
-- Round 78 mL: only a capped photo exists, so the body has no neck (closures cover it).
+- Round 78 mL: every Clear layer in the library stops at the shoulder under the cap, so the body had no neck. Second
+  pass: its own Frosted photo is the master geometry (`MASTER_GLASS`), and Clear renders from it with the clear reference.
+- Round 128 mL: the Clear cut carries a white highlight blob on the right of the disc; the mask now stops at the ink
+  (`MASK_FROM_INK`), which had widened the fit and squashed the plate (Jordan: "Round has to be redone").
 - Vial 1 mL plug: the source layer carries the applicator's outline inside the vial (second pass: mask stops at the ink; re-rendered clean).
-- Cylinder 3.3 mL and 4 mL (12 mm): the atomizer's inner tube is part of the body layer.
+- Cylinder 3.3 mL and 4 mL (12 mm): the atomizer's inner tube is part of the body layer (second pass: rendered empty by the prompt line).
 - Amber vials (1 mL plug, 2 mL 8-425): a pale panel from the source photo survived two first-pass renders (the cut's see-through interior punched through the mask; gone with the row-filled mask and the render's own outline).
 - Bell is sold as 10 mL, but the master library files it as Bell 12 mL.
 

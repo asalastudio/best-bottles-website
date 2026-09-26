@@ -27,7 +27,7 @@ lighting and keep their own colour. Named necks are edited before rendering (NEC
 reducer photographed in the Grace, Empire and Diamond necks and the plug in the Tola necks are trimmed above
 the glass rim, the master mask ends at the rim, and one prompt line asks for an empty mouth. The Tola plug
 is cut out as its own component layers (plug_layers). The pilot body (cylinder-9ml-17-415) belongs to the
-Phase 3 lane: the second pass does not re-render it, qa carries its first-pass plates forward.
+Phase 3 lane: it renders for the gallery like every other body, but push-bodies.ts skips it: dev keeps its Phase 3 plates.
 
 After rendering: fit back to the master (rim, foot, barrel width, axis), lock alpha to the master outline,
 bake Clear and Swirl on the hero bone #F5F3EF, scale from the recorded height (plus the 6 deg camera tilt
@@ -85,12 +85,16 @@ LIT_CLEAR = "1. Keep geometry locked to the first image\n2. Lighting and finish 
 LIT_COLOUR = "1. Keep geometry locked to the first image\n2. Glass colour, material and lighting from the second image\n3. Enhance the quality"
 LIT_OWN_COLOUR = "1. Keep geometry locked to the first image\n2. Lighting and finish quality from the second image; keep the glass colour of the first image\n3. Enhance the quality"
 MATERIAL = "1. Keep geometry locked to the first image\n2. Glass colour and material from the second image\n3. Enhance the quality"
-# Frosted needs the word: with the colour prompt alone the model keeps the glass clear (Round 78 test, 2026-09-25).
-LIT_FROSTED = "1. Keep geometry locked to the first image\n2. Frosted glass: the satin-etched translucent white material, colour and lighting of the second image\n3. Enhance the quality"
-LIT_FROSTED_OWN = "1. Keep geometry locked to the first image\n2. Glass material and colour from the second image: frosted satin glass; lighting and finish quality from the third image\n3. Enhance the quality"
+# Textured glass needs the word: with the colour prompt alone the model keeps the glass plain and clear (Round 78 frosted
+# test; the pilot Swirl came out plain, 2026-09-25). {word}: how the prompt names the material.
+TEXTURED = {"Frosted": "frosted satin glass, satin-etched and translucent white", "Swirl": "swirl glass, clear glass with its spiral fluted ribs"}
+LIT_TEXTURED = "1. Keep geometry locked to the first image\n2. {word}: the material, colour and lighting of the second image\n3. Enhance the quality"
+LIT_TEXTURED_OWN = "1. Keep geometry locked to the first image\n2. Glass material and colour from the second image: {word}; lighting and finish quality from the third image\n3. Enhance the quality"
 EMPTY_MOUTH = {
-    "orifice reducer": "4. The mouth of the bottle is open and empty: no orifice reducer or plastic insert in the neck",
+    "orifice reducer": "4. The mouth of the bottle is open and empty: no orifice reducer, plastic insert or collar in the neck; the rim is plain glass",
     "plug": "4. The mouth of the bottle is open and empty: no plug or plastic insert in the neck",
+    "roller ball": "4. The mouth of the bottle is open and empty: no roller ball or plastic insert in the neck",
+    "pump": "4. The bottle is empty: no pump, spring, tube or insert inside the glass",
 }
 # Cut-space rows on the master cut (Jordan 2026-09-25: remove the reducer / the plug and re-render; the plug
 # becomes its own component). glassRim: first row of the glass rim; everything above is the insert's top.
@@ -98,12 +102,41 @@ NECK_EDITS = {
     "grace-55ml-18-415": {"glassRim": 24, "insert": "orifice reducer"},
     "empire-50ml-18-415": {"glassRim": 22, "insert": "orifice reducer"},
     "empire-100ml-18-415": {"glassRim": 24, "insert": "orifice reducer"},
-    "diamond-60ml-18-415": {"glassRim": 20, "insert": "orifice reducer"},
+    "diamond-60ml-18-415": {"glassRim": 24, "insert": "orifice reducer"},   # 24: the flat rim band rendered as a plastic lip (Jordan 2026-09-25)
+    # Jordan 2026-09-25, from the gallery: "some of these have a reducer at the top": the disc above the glass rim on the
+    # Slim 30/100, Diva 30/46 and Circle 30/50 photos (row profiles: a narrow bright top, then the rim width).
+    "slim-30ml-18-415": {"glassRim": 24, "insert": "orifice reducer"},
+    "slim-100ml-18-415": {"glassRim": 20, "insert": "orifice reducer"},
+    "diva-30ml-18-415": {"glassRim": 27, "insert": "orifice reducer"},
+    "diva-46ml-18-415": {"glassRim": 25, "insert": "orifice reducer"},
+    "circle-50ml-18-415": {"glassRim": 30, "insert": "orifice reducer"},
+    "circle-30ml-15-415": {"glassRim": 24, "insert": "orifice reducer"},
     "tola-decorative-3ml-14.3mm": {"glassRim": 104, "insert": "plug", "plug": {"top": 14, "stemBottom": 146, "stemHalf": 54}},
     "tola-decorative-6ml-14.3mm": {"glassRim": 104, "insert": "plug", "plug": {"top": 14, "stemBottom": 146, "stemHalf": 54}},
+    # Jordan 2026-09-25, from the gallery: the roller ball photographed in the Boston round 60 neck, the atomizer pump
+    # photographed inside the 12 mm cylinders (glassRim 0: nothing to trim, the prompt line empties the glass).
+    "boston-round-60ml-20-400": {"glassRim": 170, "insert": "roller ball"},
+    "cylinder-3.3ml-12mm": {"glassRim": 0, "insert": "pump"},
+    "cylinder-4ml-12mm": {"glassRim": 0, "insert": "pump"},
 }
 PLUG_COMPONENT = {"componentId": "LIB-14.3mm-Plug", "neck": "14.3mm", "type": "plug-applicator", "fromBody": "tola-decorative-3ml-14.3mm"}
-MASK_FROM_INK = {"vial-1ml-Plug"}
+# Masks that stop at the ink: the 1 mL vial cut carries white paper outside the glass; the Round 128 cut carries a white
+# highlight blob on the right of the disc (invisible on white to the model, so the render is a clean circle, but the
+# alpha mask widened the fit by it: the plate came out wider than tall; Jordan 2026-09-25 "Round has to be redone").
+MASK_FROM_INK = {"vial-1ml-Plug", "round-128ml-18-415"}
+# The master glass when it is not the Clear cut: no uncapped Clear photo of the Round 78 exists in the library (every
+# Clear layer stops at the shoulder under the cap), so its geometry is its own Frosted photo; Clear renders from it
+# with the clear reference ("the glass stays colourless and clear").
+MASTER_GLASS = {"round-78ml-18-415": "Frosted"}
+# Plates whose own photo carries the colour, not the reference of their catalogue glass name (Jordan 2026-09-25: the Genie
+# "Cobalt Blue" is aqua blue). The clear reference lights them.
+OWN_COLOUR = {"genie-decorative-32ml-Ground|Cobalt Blue": "the photo is aqua blue; the catalogue says cobalt"}
+LIT_OWN_MATERIAL = "1. Keep geometry locked to the first image\n2. Glass colour and material from the second image; lighting and finish quality from the third image\n3. Enhance the quality"
+# Plates the catalogue does not list but the product is sold in (Jordan 2026-09-25: the Pear decorative is cobalt and clear;
+# its only photo is the cobalt one, which already renders the Clear plate). Copied from another glass of the same body.
+EXTRA_PLATES = [{"bodyId": "pear-decorative-355ml-Ground", "glass": "Cobalt Blue", "fromGlass": "Clear", "why": "sold in cobalt and clear; the photo is cobalt"}]
+# Bodies whose photo carries a dark seam down the axis (a reflection of the studio, not the glass): erased before rendering.
+ERASE_AXIS_SEAM = {"royal-13ml-13-415"}
 
 
 def ceil16(v: float) -> int:
@@ -121,10 +154,15 @@ def plan() -> dict[str, dict]:
     for c in CUTS:
         if c["file"] or c["source"].startswith("sibling"):
             by_body[c["bodyId"]].append(c)
+    for x in EXTRA_PLATES:
+        base = next((c for c in by_body[x["bodyId"]] if c["glass"] == x["fromGlass"]), None)
+        if base and not any(c["glass"] == x["glass"] for c in by_body[x["bodyId"]]):
+            by_body[x["bodyId"]].append(base | {"glass": x["glass"], "plateKey": f"{x['bodyId']}|{x['glass']}", "extra": x["why"]})
     out = {}
     for body_id, entries in sorted(by_body.items()):
         cut = [e for e in entries if e["file"]]
-        master = next((e for e in cut if e["glass"] == "Clear"), None) or sorted(cut, key=lambda e: e["glass"])[0]
+        wanted = MASTER_GLASS.get(body_id, "Clear")
+        master = next((e for e in cut if e["glass"] == wanted), None) or sorted(cut, key=lambda e: e["glass"])[0]
         w, h = master["width"], master["height"]
         k = LONG_SIDE / max(w, h)
         W, H = ceil16(w * k + 2 * MARGIN), ceil16(h * k + 2 * MARGIN)
@@ -199,6 +237,29 @@ def trimmed(cut: Image.Image, edit: dict | None) -> Image.Image:
     return Image.fromarray(a, "RGBA")
 
 
+def erase_axis_seam(img: Image.Image) -> Image.Image:
+    """Erase a thin dark vertical seam near the body axis (a studio reflection in the photo): where a row's darkest
+    pixel within 6% of the width around the centre is clearly darker than both its neighbourhoods, the pixels
+    within 5 px of it are replaced by the blend of those neighbourhoods."""
+    a = np.asarray(img).astype(np.float32).copy()
+    alpha = a[..., 3] > 127
+    lum = a[..., :3].mean(axis=2)
+    for y in np.where(alpha.any(axis=1))[0]:
+        xs = np.where(alpha[y])[0]
+        if xs.size < 60:
+            continue
+        cx, w = (xs.min() + xs.max()) / 2, xs.max() - xs.min()
+        lo, hi = int(cx - 0.06 * w), int(cx + 0.06 * w)
+        x = lo + int(np.argmin(lum[y, lo:hi]))
+        if x - 14 < xs.min() or x + 14 > xs.max():
+            continue
+        left, right = a[y, x - 14:x - 7, :3].mean(axis=0), a[y, x + 8:x + 15, :3].mean(axis=0)
+        if lum[y, x] < min(left.mean(), right.mean()) - 18:
+            t = np.linspace(0.0, 1.0, 11)[:, None]
+            a[y, x - 5:x + 6, :3] = left[None, :] * (1 - t) + right[None, :] * t
+    return Image.fromarray(a.clip(0, 255).astype(np.uint8), "RGBA")
+
+
 def cylinder(width: int, height: int, colour: np.ndarray) -> np.ndarray:
     """A plain plastic stem: the head's colour, shaded as a cylinder, a rounded end."""
     x = np.linspace(-1.0, 1.0, width)
@@ -254,6 +315,8 @@ def inputs():
         master = body["master"]
         edit = NECK_EDITS.get(body_id)
         cut = Image.open(BASE / "cuts" / master["file"]).convert("RGBA")
+        if body_id in ERASE_AXIS_SEAM:
+            cut = erase_axis_seam(cut)
         full = place(cut, master, master, body)
         full_mask = silhouette(np.asarray(full), body_id in MASK_FROM_INK)
         geo = place(trimmed(cut, edit), master, master, body) if edit else full
@@ -283,19 +346,23 @@ def inputs():
                 on_white(mat).save(d / f"{slug(glass)}-material.png")
                 jobs.append(job | {"role": how, "images": [str(d / "geometry.png"), str(d / f"{slug(glass)}-material.png")]})
                 continue
-            if body_id == PILOT_BODY:
-                continue
-            ref = REFERENCE.get(glass)
-            if ref:
+            ref = REFERENCE.get(glass)   # the pilot body renders too (Jordan: regenerate all of them); dev keeps its Phase 3 plates, push-bodies skips it
+            if f"{body_id}|{glass}" in OWN_COLOUR and e["file"]:
+                on_white(place(Image.open(BASE / "cuts" / e["file"]).convert("RGBA"), e, master, body)).save(d / f"{slug(glass)}-material.png")
+                on_white(fit_reference(Image.open(reference_file("Clear")).convert("RGBA"), body)).save(d / "clear-reference.png")
+                job |= {"role": f"own photo colour ({OWN_COLOUR[f'{body_id}|{glass}']}), lit by the clear reference", "prompt": LIT_OWN_MATERIAL,
+                        "images": [str(d / "geometry.png"), str(d / f"{slug(glass)}-material.png"), str(d / "clear-reference.png")]}
+            elif ref:
                 on_white(fit_reference(Image.open(reference_file(glass)).convert("RGBA"), body)).save(d / f"{ref}-reference.png")
                 images, prompt = [str(d / "geometry.png"), str(d / f"{ref}-reference.png")], (LIT_CLEAR if glass == "Clear" else LIT_COLOUR)
-                if glass == "Frosted":
-                    if e["file"] and e is not master:   # the body's own frosted photo carries the material; the reference lights it
+                if glass in TEXTURED:
+                    word = TEXTURED[glass]
+                    if e["file"] and e is not master:   # the body's own photo of that glass carries the material; the reference lights it
                         on_white(place(Image.open(BASE / "cuts" / e["file"]).convert("RGBA"), e, master, body)).save(d / f"{slug(glass)}-material.png")
-                        images, prompt = [str(d / "geometry.png"), str(d / f"{slug(glass)}-material.png"), str(d / f"{ref}-reference.png")], LIT_FROSTED_OWN
+                        images, prompt = [str(d / "geometry.png"), str(d / f"{slug(glass)}-material.png"), str(d / f"{ref}-reference.png")], LIT_TEXTURED_OWN.format(word=word)
                     else:
-                        prompt = LIT_FROSTED
-                job |= {"role": f"reference glass ({ref}), lit" + (" + own frosted photo" if len(images) == 3 else ""), "prompt": prompt, "images": images}
+                        prompt = LIT_TEXTURED.format(word=word[0].upper() + word[1:])
+                job |= {"role": f"reference glass ({ref}), lit" + (f" + own {glass.lower()} photo" if len(images) == 3 else ""), "prompt": prompt, "images": images}
             elif e is master:
                 on_white(fit_reference(Image.open(PILOT_RENDERS / "clear.png").convert("RGBA"), body)).save(d / "clear-reference.png")
                 job |= {"role": "own colour, lit by the clear reference", "prompt": LIT_OWN_COLOUR, "images": [str(d / "geometry.png"), str(d / "clear-reference.png")]}
@@ -413,9 +480,13 @@ def qa():
                 f[..., :3] = f[..., :3] * al + 255.0 * (1.0 - al)
                 solid = (f[..., 3] > 250) & (f[..., :3].min(axis=2) >= 235)
                 white = np.array([np.bincount(f[..., c][solid].astype(np.int64), minlength=256).argmax() if solid.any() else 255 for c in range(3)], dtype=np.float32)
-                f[..., :3] = np.round(np.minimum(f[..., :3] * (255.0 / white), 255.0) * (BONE / 255.0))
+                levelled = np.minimum(f[..., :3] * (255.0 / white), 255.0)
+                # Clear glass has no colour: any cast the render picked up (the Eternal Flame came out green, Jordan
+                # 2026-09-25) is dropped by keeping luminance only, then the bone tint.
+                lum = levelled[..., 0] * 0.299 + levelled[..., 1] * 0.587 + levelled[..., 2] * 0.114
+                f[..., :3] = np.round(lum[..., None] * (BONE / 255.0))
                 plate = Image.fromarray(f.clip(0, 255).astype(np.uint8), "RGBA")
-                baked = {"bone": "#F5F3EF", "paperWhite": white.astype(int).tolist()}
+                baked = {"bone": "#F5F3EF", "paperWhite": white.astype(int).tolist(), "neutral": True}
             # Anchors and scale from the plate itself: what the components land on is the plate's own outline.
             pm = cp.measure_body(plate)
             plate_alpha = np.asarray(plate.getchannel("A"))

@@ -2,7 +2,7 @@
 """
 Cut the bare glass body for every catalogue body x glass (data/register/bodies/inventory.csv).
 
-  python3 scripts/register/bodies/cut_bodies.py
+  python3 scripts/register/bodies/cut_bodies.py [--only plateKey,plateKey]   # --only re-cuts those plates and merges them into cuts.json
 
 Source, in order:
   1. the master PSD named after one of that body+glass's SKUs: the body is the LARGEST layer standing on
@@ -36,6 +36,7 @@ OUT = ROOT / "output" / "register-bodies" / "cuts"
 CUTS = ROOT / "data" / "register" / "bodies" / "cuts.json"
 OVERRIDES = {k: v for k, v in json.loads((ROOT / "data" / "register" / "bodies" / "source-overrides.json").read_text()).items() if not k.startswith("_")}
 slug = lambda s: s.lower().replace(" ", "-")
+ONLY = {k for k in (sys.argv[sys.argv.index("--only") + 1] if "--only" in sys.argv else "").split(",") if k}
 
 
 def env(name: str) -> str | None:
@@ -69,9 +70,15 @@ def body_from_psd(path: Path, layer_name: str | None = None):
         out = merged.convert("RGBA"); out.putalpha(img.getchannel("A"))
         return out, f" (colour from the saved composite: {', '.join(sorted({l.kind for l in adjusted}))})"
     if layer_name:
-        named = [l for l in layers if l.name.startswith(layer_name)]
+        # An override may name a hidden layer (the sideview photos keep the bare bottle hidden under a capped composite).
+        named = [l for l in psd.descendants() if l.name.startswith(layer_name) and l.kind == "pixel" and l.bbox[2] > l.bbox[0] and l.bbox[3] > l.bbox[1]]
         if len(named) != 1:
             return None, f"override layer {layer_name!r} matched {len(named)} layers"
+        if not named[0].visible:
+            return named[0].topil().convert("RGBA"), f"PSD layer {named[0].name} (override; hidden layer, its own pixels)"
+        if named[0].bbox[0] < 0 or named[0].bbox[1] < 0 or named[0].bbox[2] > psd.width or named[0].bbox[3] > psd.height:
+            # The layer runs past the canvas: take its own pixels, so nothing of the body is clipped away.
+            return named[0].topil().convert("RGBA"), f"PSD layer {named[0].name} (override; layer pixels, bbox {named[0].bbox} runs past the canvas)"
         img, note = colour_from_merged(cp.canvas_of(psd, named))
         return img, f"PSD layer {named[0].name} (override){note}"
     clip = lambda l: (max(0, l.bbox[0]), max(0, l.bbox[1]), min(psd.width, l.bbox[2]), min(psd.height, l.bbox[3]))
@@ -127,6 +134,8 @@ def main():
         if a["status"] != "retired":
             asm[(a["bodyId"], a["glass"])].append(a["websiteSku"])
     results = []
+    if ONLY:
+        rows = [r for r in rows if f"{r['bodyId']}|{r['glass']}" in ONLY]
     for r in rows:
         key = f"{r['bodyId']}|{r['glass']}"
         o = OVERRIDES.get(key, {})
@@ -163,6 +172,10 @@ def main():
             entry["file"] = None
         results.append(entry)
         print(f"{key:44} {('OK ' + str(entry.get('width')) + 'x' + str(entry.get('height'))) if entry['file'] else 'MISSING':14} {how[:90]}")
+    if ONLY:   # merge the re-cut plates into the existing index, keeping its order
+        existing = json.loads(CUTS.read_text())
+        by_key = {e["plateKey"]: e for e in results}
+        results = [by_key.get(e["plateKey"], e) for e in existing] + [e for e in results if e["plateKey"] not in {x["plateKey"] for x in existing}]
     CUTS.write_text(json.dumps(results, indent=1) + "\n")
     ok = [e for e in results if e["file"]]
     print(f"\ncut {len(ok)}/{len(results)}; from PSD {sum(1 for e in ok if e['source'].startswith('PSD'))}, from kits {sum(1 for e in ok if e['source'].startswith('kit'))}")
