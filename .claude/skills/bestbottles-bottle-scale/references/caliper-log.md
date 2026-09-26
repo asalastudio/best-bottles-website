@@ -141,3 +141,63 @@ Jordan: "make any necessary logical adjustments if our caliper is off a millimet
 
 **What the older model had wrong:** the 3D model built before these readings had an overcap of Ø17.6 × 29.6 and a
 collar of Ø17. Use the readings above.
+
+**One sprayer for every 13-415 neck.** Jordan: the same sprayer and overcap fit every 13-415 neck that takes a
+fine-mist sprayer. These numbers therefore hold for all 15 such bodies (listed in `appliesTo`). The dip tube is the
+only part that changes, because it is cut to each bottle's depth.
+
+### Cylinder 5 ml 13-415 (Clear and Cobalt Blue)
+
+Key `cylinder-5ml-13-415`, measured by Jordan on 2026-09-26. The Clear and Cobalt glass give the same numbers.
+
+| Code | Reading |
+|---|---|
+| H | 53.16 |
+| Wb | 17.51 |
+| Hs | 41.32 (base to shoulder) |
+| E | 11.64 (neck Ø) |
+| Fh | ~11.0 |
+| I | 7.49 |
+
+- The site gives 53 × 17 for this bottle, which matches.
+- Still needed: W, Dp, T, Dep and Cap.
+- **Check before modelling:** the 13-415 finish should be the same on every bottle. This one reads E 11.64 and
+  Fh ~11.0, while the Tall Cylinder reads 11.22 and 10.11. Re-measure both bottles on the same points: the neck Ø just
+  under the threads, and Fh from the rim top to where the neck meets the shoulder.
+
+### 13-415 roller insert (metal and plastic ball)
+
+Key `13-415__roller-insert__std`, measured by Jordan on 2026-09-26. The metal and plastic rollers are one design, and
+it fits all 13 of the 13-415 roller bodies.
+
+| Code | Reading |
+|---|---|
+| L | 17.38 (loose, stem tip to ball top) |
+| SL | 7.32 |
+| SOD | 7.62 (mid-length) |
+| STop | 7.80 (just under the flange) |
+| STip | 6.51 (tip; the stem narrows, or "indents in", toward it) |
+| HOD | 9.51 |
+| BallUp | 1.33 (the ball stands 1.30–1.35 out of the housing) |
+
+**Model values (derived):**
+
+- Proud = L − SL = 10.06. This is the ball top above the rim when the roller is seated.
+- The ball Ø stays at 7.79 until it is measured.
+
+**The stem is a press fit.** Its top (7.80) is wider than both bores measured so far: 7.04 on the Tall Cylinder and
+7.49 on the 5 ml. The soft plastic squeezes into the bore, so:
+
+- a seated render narrows the stem to that bottle's bore;
+- the loose view keeps the stem at 7.80 → 6.51.
+
+**The older model is wrong.** It was the 17-415 roller scaled ×0.742:
+
+| | Older model | Reading |
+|---|---|---|
+| Overall length | 15.55 | 17.38 |
+| Ball above the housing | 2.76 | 1.33 |
+| Housing Ø | 9.79 | 9.51 |
+| Stem | 7.20 → 6.77 × 6.68 | 7.80 → 6.51 × 7.32 |
+
+**Still needed:** the ball Ø, and the flange Ø and thickness.
