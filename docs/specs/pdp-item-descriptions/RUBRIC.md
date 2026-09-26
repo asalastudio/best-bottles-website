@@ -5,6 +5,7 @@ Scope: the "Item description" line on the redesigned PDP (`PdpProductInfo`), one
 
 Companion files in this folder:
 
+- `TEMPLATE.md`: the layout, meaning the summary, the bullets and the three-sentence version, based on Baymard, Shopify and Amazon guidance.
 - `community-research.md`: what buyers ask about bottles and applicators on Reddit, with sources.
 - `use-line-audit.csv`: the 99 SKUs whose current "For ..." line contradicts the fitment or is missing.
 
@@ -369,37 +370,31 @@ Words we never use for carry: leak-proof, airtight, spill-proof, TSA-approved. T
 
 ---
 
-## 5. The sentence formula
+## 5. Choosing each field, and the lint rules
 
-**Sentence 1: identity** (up to 20 words). Capacity, glass, shape noun, fitment with its finish, and cap. The current composer's first sentence already does this; keep it.
+The layout lives in `TEMPLATE.md`: a one-sentence summary and three to five labelled bullets on the product page, plus a three-sentence version for compact places. It replaces the identity-first sentence order first proposed here, because the page title above the description already gives capacity, glass colour and family.
 
-> A 9 ml (0.3 oz) amber glass cylinder with a steel roller ball and a white cap.
+This section keeps the rules for choosing what goes in each field.
 
-**Sentence 2: application** (up to 20 words). "For" followed by two to four uses from the mode card:
+**Uses, in the summary.** Two to four uses from the mode card:
 
-- Primary uses first.
-- Ranked by the size band.
-- The size-band context phrase last.
+- Primary uses first, ranked by the size band, with the size phrase last.
 - Legacy "For use with" terms are kept only when they pass the mode's allowed list; the rest are dropped.
 
-> For perfume oil, attar and oil blends diluted in a carrier, sized for a purse or pocket.
-
-**Sentence 3: the deciding fact** (up to 20 words). Exactly one, chosen by this priority:
+**Good to know.** Exactly one fact, chosen by this priority:
 
 1. The mode's guard: a limit that prevents a wrong purchase (BULB, STOPPER, MIST, DROP, PUMP-LOTION).
-2. The neck-system line (CAP, PUMP-SPRAY).
-3. The mode's mechanism line (SPLASH, DAB).
-4. A legacy flag: hand made, engravable, travel cap, weighted base.
-5. The material line (4.4).
-6. The carry line (4.6).
+2. The mode's mechanism line (SPLASH, DAB).
+3. A legacy flag: hand made, engravable, travel cap, weighted base.
+4. The carry line (4.6).
 
-When two short facts fit within 20 words they may share the sentence, joined by a semicolon. There is never a fourth sentence.
+The neck-system line (4.5) has its own field, **Fits**. The material line (4.4) has its own field, **Glass** or **Material**.
 
 ### Lint rules
 
 A test enforces these; see Phase 2.
 
-- 2–3 sentences, 25–55 words, hard cap 60.
+- Word, sentence, bullet and character limits are in TEMPLATE.md §7.
 - No term from the mode's Excluded list.
 - Brand banned list checked with word boundaries. The 2026-05-23 regex has none, so "serum" matches `rum` and "origin" matches `gin`.
 - Claims list: leak-proof (except "not leak-proof"), airtight, spill-proof, UV-proof, blocks UV, preserves, extends shelf life, sterile, ready to fill, universal, fits most, unbreakable, cosmetic-grade, medical-grade, therapeutic, child-resistant.
@@ -410,59 +405,11 @@ A test enforces these; see Phase 2.
 
 ## 6. Worked examples
 
-Each "before" is the live generator's text; each "after" follows this rubric. Word counts are for the "after" text.
+All twelve archetypes are in TEMPLATE.md §6, in both layouts. For comparison, here is what the live generator writes today for the first two.
 
-**1. `GBCylAmb9MtlRollWht`: Cylinder 9 ml, amber, steel roller, 17-415.** (ROLL, purse band)
-
-- *Before, 76 words:* A 9 ml (0.3 oz) amber glass cylinder, fitted with a steel roller ball and a white cap. Straight sides, so a label wraps square. The steel ball lays oil down in a thin, even line and feels cool against the skin. For perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. It stands 70 mm without the cap and 83 mm with it and 20 mm across, on a 17-415 neck. Sold assembled, 724 to a case.
-- *After, 48 words:* A 9 ml (0.3 oz) amber glass cylinder with a steel roller ball and a white cap. For perfume oil, attar and oil blends diluted in a carrier, sized for a purse or pocket. Amber glass reduces the light that reaches the oil; carry it capped and upright.
-
-**2. `GBCylAmb9SpryBlk`: Cylinder 9 ml, amber, fine-mist sprayer.** (MIST; one of the 29 contradictions)
-
-- *Before:* "... A fine-mist pump breaks a thin liquid into a light, even spray. For perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. ..."
-- *After, 39 words:* A 9 ml (0.3 oz) amber glass cylinder with a black fine-mist sprayer under a plastic overcap. For eau de parfum, cologne, body mist and purse-size decants. Thin liquids only: perfume oil and undiluted essential oil clog the sprayer.
-
-**3. `GBCrcl100AnSpBlk`: Circle 100 ml, clear, bulb sprayer.** (BULB; represents 478 SKUs)
-
-- *Before:* "... For cologne, eau de parfum, air freshener, face and body spray and room spray. ..."
-- *After, 45 words:* A 100 ml (3.38 oz) clear glass Circle bottle with a black vintage-style bulb sprayer. For eau de parfum and cologne kept on a dressing table, and for display or gifts. The bulb does not seal the bottle, so it is not a travel bottle.
-
-**4. `GBCrcl100RdcrPnkLthr`: Circle 100 ml, orifice reducer, pink faux-leather cap.** (SPLASH)
-
-- *After, 43 words:* A 100 ml (3.38 oz) clear glass Circle bottle with an orifice reducer under a pink faux-leather cap. For splash cologne, aftershave, perfume oil and beard oil. The reducer turns a pour into a controlled splash or drip; very thick oils drip slowly.
-
-**5. `GBCrcl50SpryMtSl`: Circle 50 ml, perfume spray pump, 18-415.** (PUMP-SPRAY)
-
-- *After, 46 words:* A 50 ml (1.69 oz) clear glass Circle bottle with a matte silver perfume spray pump. For eau de parfum, eau de toilette and cologne at full retail size. The 18-415 neck also takes the lotion pump, dropper, reducer and bulb sprayer sold for this bottle.
-
-**6. `LBCrclFrst100LtnClOvrCap`: Circle 100 ml, frosted, lotion pump, clear overcap.** (PUMP-LOTION)
-
-- *After, 42 words:* A 100 ml (3.38 oz) frosted glass Circle bottle with a lotion pump under a clear overcap. For body lotion, liquid soap, serums and body or hair oil. It pumps liquids that pour; thick creams and body butters belong in a jar.
-
-**7. `GBBstnAmb1ozBlkDrpShnGl`: Boston Round 30 ml, amber, dropper.** (DROP)
-
-- *After, 50 words:* A 30 ml (1 oz) amber glass Boston Round with a glass pipette dropper, a black collar and a rubber bulb. For facial oil, serums, beard oil and oil blends diluted in a carrier. Undiluted essential oils soften rubber, so store those under the screw cap sold for this bottle.
-
-**8. `GBBstnAmb1ozBlkCapSht`: Boston Round 30 ml, amber, screw cap.** (CAP)
-
-- *After, 40 words:* A 30 ml (1 oz) amber glass Boston Round with a black screw cap. For storing essential oils, perfume oil and blends, or splitting a larger bottle. The 20-400 neck also takes the dropper and roll-on sold for this bottle.
-
-**9. `GBAtom10Blk`: metal-shell atomizer 10 ml.** (ATOMIZER)
-
-- *After, 38 words:* A 10 ml (0.34 oz) refillable metal-shell atomizer with a black cap. For carrying a decant of eau de parfum or cologne in a bag or pocket. The shell can be laser-engraved with a name or a logo.
-
-**10. `GB15ApthBlue`: apothecary 15 ml, cobalt blue, ground-glass stopper.** (STOPPER)
-
-- *After, 47 words:* A 15 ml (0.51 oz) cobalt blue glass apothecary bottle with a ground-glass stopper, made by hand. For perfume oil, attar and essential oil kept on a dressing table or shelf. The stopper seats by friction and is not leak-proof, so it is not a travel bottle.
-
-**11. `GB1mlAmbVialWht`: vial 1 ml, amber.** (VIAL)
-
-- *After, 29 words:* A 1 ml (0.03 oz) amber glass vial with a white cap. For perfume and oil samples, testers and swaps. Fill it with a pipette or a small funnel.
-- *Needs:* confirmation of whether the closure is a plug or a screw cap.
-
-**12. `CJClr15Pnk`: cream jar 15 ml, clear, pink lid.** (JAR)
-
-- *After, 31 words:* A 15 ml (0.51 oz) clear glass cream jar with a pink screw lid. For creams, balms, body butter and solid perfume. The wide mouth takes a spatula or a fingertip.
+- **`GBCylAmb9MtlRollWht`**, 76 words:
+  > A 9 ml (0.3 oz) amber glass cylinder, fitted with a steel roller ball and a white cap. Straight sides, so a label wraps square. The steel ball lays oil down in a thin, even line and feels cool against the skin. For perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. It stands 70 mm without the cap and 83 mm with it and 20 mm across, on a 17-415 neck. Sold assembled, 724 to a case.
+- **`GBCylAmb9SpryBlk`**, one of the 29 contradictions, is listed "For perfume or fragrance oil, essential oils, aromatic oils and aromatherapy". Those are the liquids that clog a fine-mist sprayer.
 
 ---
 
@@ -490,16 +437,17 @@ These are the questions where the answer changes the copy. Each has a recommenda
 ### Phase 1: encode the rubric (code)
 
 - Add `src/lib/products/item-description/rubric.ts`. It holds the mode cards, liquid classes, size bands, material lines and guard lines as data, and replaces `DEFAULT_USES_BY_APPLICATOR`.
-- Give `compose.ts` a three-sentence path:
-  - Sentence 1 stays as it is.
+- Have `compose.ts` build the TEMPLATE.md record (`summary`, `included`, `fits`, `glass`, `goodToKnow`) and render both layouts from it:
   - The measurement and shipping sentences are removed. They live in the tech sheet.
-  - The uses sentence filters legacy "For use with" terms through the mode's allowed list, then fills from the card.
-  - Sentence 3 is chosen by the priority in section 5.
+  - The uses filter legacy "For use with" terms through the mode's allowed list, then fill from the card.
+  - Good to know is chosen by the priority in section 5.
+  - Fits is computed per family, capacity, neck and glass colour.
+- `item-descriptions.json` gains `summary` and `bullets`. `PdpProductInfo` renders them, and falls back to `description` (layout A).
 - Keep the runtime resolver order (curated JSON, then composed, then legacy) unchanged, so new SKUs get the same voice at request time.
 
 ### Phase 2: lint as a test
 
-- Add `tests/item-description-rubric.test.ts`. It runs every row of `item-descriptions.json` through the section 5 lint rules and fails on any violation.
+- Add `tests/item-description-rubric.test.ts`. It runs every row of `item-descriptions.json` through the section 5 lint rules and the TEMPLATE.md §7 checklist, and fails on any violation.
 - Keep a snapshot of the 12 worked examples.
 
 ### Phase 3: regenerate from production
