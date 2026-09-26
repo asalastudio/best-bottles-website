@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { ConvexHttpClient } from "convex/browser";
+import type { ConvexHttpClient } from "convex/browser";
 import { api } from "../../convex/_generated/api";
+import { createResilientConvexHttpClient } from "@/lib/convexServerClient";
 import { reportError } from "@/lib/observability/report";
 
 export interface GraceRateLimitConfig {
@@ -15,7 +16,7 @@ function getConvex(): ConvexHttpClient {
   if (!_convex) {
     const url = process.env.NEXT_PUBLIC_CONVEX_URL;
     if (!url) throw new Error("NEXT_PUBLIC_CONVEX_URL is not set");
-    _convex = new ConvexHttpClient(url);
+    _convex = createResilientConvexHttpClient(url);
   }
   return _convex;
 }

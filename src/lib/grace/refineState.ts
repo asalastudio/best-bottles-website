@@ -1,6 +1,5 @@
 import {
     EMPTY_FILTERS,
-    CATALOG_FAMILIES,
     canonicalGlassColor,
     filtersToParams,
     normalizeApplicatorBuckets,
@@ -10,7 +9,6 @@ import {
     type SortValue,
     type ViewMode,
 } from "@/lib/catalogFilters";
-import { familyFinderPath, isFamilyLandingFamily } from "@/lib/products/focused-shopping";
 
 /**
  * Grace speaks the customer's words; the facets speak exact labels. Fold the
@@ -81,25 +79,14 @@ export function graceRefineStateToParams(state: GraceRefineState): URLSearchPara
 }
 
 export function graceRefineDestination(state: GraceRefineState): string {
-    const filters = state.filters;
-    const landingFamily = filters.families.length === 1 && isFamilyLandingFamily(filters.families[0] ?? "")
-        ? filters.families[0]
-        : undefined;
-    const familyLandingSurface = Boolean(
-        landingFamily
-        && !filters.category
-        && !filters.collection
-        && !filters.componentType
-        && !filters.search
-        && filters.priceMin === null
-        && filters.priceMax === null
-        && CATALOG_FAMILIES.includes(landingFamily),
-    );
+    // Always land on the catalogue with the facets in the URL. The family
+    // finder route (/catalog/<family>) has redirected since #221 unless guide=1,
+    // and that redirect forced category=Glass Bottle (zero results for
+    // Atomizer, Aluminum, Plastic, Cream Jar and Lotion families) and dropped
+    // any applicator set that is not an APPLICATOR_NAV group (2026-09-25 audit).
     const params = graceRefineStateToParams(state);
-    if (familyLandingSurface) params.delete("families");
     const query = params.toString();
-    const base = familyLandingSurface && landingFamily ? familyFinderPath(landingFamily) : "/catalog";
-    return `${base}${query ? `?${query}` : ""}`;
+    return `/catalog${query ? `?${query}` : ""}`;
 }
 
 export function inferGraceBroadenScope(customerRequest: string): GraceBroadenScope {

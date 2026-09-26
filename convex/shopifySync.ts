@@ -232,21 +232,25 @@ export const syncInventoryLevel = mutation({
         locationId: v.number(),
         available: v.number(),
     },
+    returns: v.object({
+        updated: v.boolean(),
+        reason: v.optional(v.string()),
+        graceSku: v.optional(v.string()),
+        newStatus: v.optional(v.union(v.string(), v.null())),
+    }),
     handler: async (ctx, args) => {
         verifyWriteToken(args.writeToken);
 
         const variantGid = `gid://shopify/InventoryItem/${args.inventoryItemId}`;
 
-        // Find the product variant with this inventory item ID.
-        // shopifyInventoryItemId is optional and not indexed, so we scan
-        // products. Once the catalog is fully synced this could use a
-        // dedicated index, but the table is ~2,300 rows — safe to scan.
-        const allProducts = await ctx.db.query("products").collect();
-        const product = allProducts.find(
-            (p) =>
-                (p as Record<string, unknown>).shopifyInventoryItemId ===
-                variantGid,
-        );
+        // Indexed lookup. The previous full scan of products read ~16.8 MB per
+        // webhook, over Convex's per-function read limit, so every
+        // inventory_levels/update failed (22,000 times in the three days before
+        // 2026-09-25) and stock never followed Shopify.
+        const product = await ctx.db
+            .query("products")
+            .withIndex("by_shopifyInventoryItemId", (q) => q.eq("shopifyInventoryItemId", variantGid))
+            .first();
 
         if (!product) {
             return { updated: false, reason: "variant_not_found" };

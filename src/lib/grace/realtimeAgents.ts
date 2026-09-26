@@ -36,6 +36,11 @@ export const GRACE_MERCHANDISER_TOOL_NAMES = [
     "displayCatalogStrip",
     "displayShortlist",
     "displayAnatomy",
+    // The instructions tell the main agent to refine the visible catalogue, and
+    // the handoff to the Navigator is reserved for cart, checkout and forms —
+    // until 2026-09-25 only the Navigator held this tool, so the refine never
+    // happened.
+    "setCatalogRefinements",
     "listGraceProjects",
     "proposeProjectSave",
 ] as const satisfies readonly GraceOpenAIToolName[];

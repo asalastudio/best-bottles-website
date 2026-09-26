@@ -1,3 +1,5 @@
+import { stripLocalePrefix } from "@/i18n/paths";
+
 export const GRACE_MINIMUM_CONTENT_WIDTH_PX = 920;
 
 /** Mirrors the drawer's CSS clamp so layout decisions use its resolved pixel width. */
@@ -62,7 +64,9 @@ export function resolveGraceSurface({
 }
 
 export function gracePushEligiblePathname(pathname: string): boolean {
-    return pathname.startsWith("/catalog") || pathname.startsWith("/products/");
+    // Spanish pages carry an /es prefix; the drawer should push them the same way.
+    const path = stripLocalePrefix(pathname);
+    return path.startsWith("/catalog") || path.startsWith("/products/");
 }
 
 export function graceConversationDisposition(

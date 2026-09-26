@@ -1,6 +1,7 @@
 import "server-only";
 import { unstable_cache } from "next/cache";
-import { ConvexHttpClient } from "convex/browser";
+import type { ConvexHttpClient } from "convex/browser";
+import { createResilientConvexHttpClient } from "@/lib/convexServerClient";
 import { api } from "../../../convex/_generated/api";
 import { catalogIncludedAssembly } from "../../../convex/catalogIncludedAssemblies";
 import { builderBodyIdentity, chooserGroupKey, chooserSourceRows, resolveBuilderConfigurations, reviewedCylinderFiveMlRow, type BuilderKit, groupBuilderBodies, isBuilderCandidate, type CatalogRow } from "./model";
@@ -10,7 +11,7 @@ import { readLocalComponentKits } from "../paper-doll/local-component-kits";
 import { loadRegisterKits } from "@/lib/register/load";
 import { assembledKit } from "@/lib/register/stage-kit";
 
-const client = () => new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
+const client = () => createResilientConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
 // Local preview of kits that are extracted but not yet published: BUILDER_LOCAL_KITS
 // names a kits.json staged by scripts/paperdoll/local-kit-overlay.mjs, whose part

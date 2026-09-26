@@ -3,7 +3,7 @@
  * Layer A — Deterministic searchCatalog matrix (families × capacities + applicator spots).
  *
  * Proves Convex `grace.searchCatalog` returns plausible rows for representative queries
- * (same code path Grace uses via /api/elevenlabs/server-tools).
+ * (same code path Grace uses via /api/grace/tools).
  *
  * Usage:
  *   npm run test:grace:matrix

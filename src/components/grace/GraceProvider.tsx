@@ -63,7 +63,9 @@ import {
     buildCatalogSessionNote,
     shouldCompressAfterCatalogResult,
 } from "@/lib/grace/sessionCompression";
-import { normalizeApplicatorBuckets } from "@/lib/catalogFilters";
+import { STANDARD_NECK_FINISHES, normalizeApplicatorBuckets } from "@/lib/catalogFilters";
+import { hasLocalePrefix, localizeHref, stripLocalePrefix } from "@/i18n/paths";
+import type { AppLocale } from "@/i18n/config";
 import { getCanonicalProductSlug } from "@/lib/products/legacy-product-route-overrides";
 import {
     GRACE_MINIMUM_CONTENT_WIDTH_PX,
@@ -412,7 +414,7 @@ function checkRollOnMinimum(query: string, requestedMl: number | null, products:
         .map((p) => p.capacity)
         .filter(Boolean);
     const uniqueSizes = [...new Set(rollOnSizes)].slice(0, 5).join(", ");
-    return `WARNING: We do NOT stock roll-on bottles smaller than 5ml. A ${requestedMl}ml roll-on does NOT exist. Our smallest roll-on is 5ml. Available roll-on sizes: ${uniqueSizes || "5ml, 9ml, 15ml, 28ml, 30ml"}.`;
+    return `WARNING: We do NOT stock roll-on bottles smaller than 5ml. A ${requestedMl}ml roll-on does NOT exist. Our smallest roll-on is 5ml. Available roll-on sizes: ${uniqueSizes || "5, 6, 8, 9, 10, 13, 15, 28, 30, 50 and 60 ml"}.`;
 }
 
 function requestedCapacityMlFromQuery(query?: string): number | null {
@@ -638,11 +640,12 @@ function GraceProviderBase({
             return;
         }
         catalogCallsSinceCompressRef.current = 0;
-        void openAIAdapterRef.current?.compressSession(buildCatalogSessionNote({
-            toolName,
-            summary,
-            resultCount,
-        }));
+        // The compression is a full session.update (~28k characters). Let the
+        // tool output reach the model first instead of racing it on the wire.
+        const note = buildCatalogSessionNote({ toolName, summary, resultCount });
+        setTimeout(() => {
+            void openAIAdapterRef.current?.compressSession(note);
+        }, 250);
     }, []);
 
     // ── Panel state ──────────────────────────────────────────────────────────
@@ -780,17 +783,24 @@ function GraceProviderBase({
     const pendingActionsRef = useRef<import("@/components/GraceContext").GraceAction[]>([]);
 
     // ── Page context ─────────────────────────────────────────────────────────
+    // Spanish pages carry an /es prefix. Read the page through the stripped
+    // path (otherwise every /es page was "other": no product context, no cap
+    // swap, drawer overlaying the page) and put the prefix back on every route
+    // Grace pushes, so a Spanish shopper stays in Spanish (2026-09-25 audit).
+    const localeRef = useRef<AppLocale>("en");
+    localeRef.current = hasLocalePrefix(pathname) ? "es" : "en";
     const pageType = useMemo((): PageContext["pageType"] => {
-        if (pathname === "/") return "home";
-        if (pathname.startsWith("/catalog")) return "catalog";
-        if (pathname.startsWith("/products/")) return "pdp";
-        if (pathname.startsWith("/cart")) return "cart";
-        if (pathname.startsWith("/contact") || pathname.startsWith("/request")) return "contact";
-        if (pathname.startsWith("/about")) return "about";
+        const path = stripLocalePrefix(pathname);
+        if (path === "/") return "home";
+        if (path.startsWith("/catalog")) return "catalog";
+        if (path.startsWith("/products/")) return "pdp";
+        if (path.startsWith("/cart")) return "cart";
+        if (path.startsWith("/contact") || path.startsWith("/request")) return "contact";
+        if (path.startsWith("/about")) return "about";
         return "other";
     }, [pathname]);
 
-    const productSlug = pageType === "pdp" ? (pathname.split("/products/")[1] ?? null) : null;
+    const productSlug = pageType === "pdp" ? (stripLocalePrefix(pathname).split("/products/")[1] ?? null) : null;
     const productGroupResult = useQuery(api.products.getProductGroup, productSlug ? { slug: productSlug } : "skip");
 
     const pageUrl = useMemo(() => {
@@ -1073,7 +1083,7 @@ function GraceProviderBase({
 
         sessionMetricsRef.current.navigations++;
         analytics.graceNavigation({ destination: href, triggeredBy: "product_link" });
-        routerRef.current.push(href);
+        routerRef.current.push(localizeHref(localeRef.current, href));
     }, [announceDestinationToAgent, appendInlineMessage, enterAgenticFollowAlong, rememberDestination]);
     useEffect(() => { completeGraceNavigationRef.current = completeGraceNavigation; }, [completeGraceNavigation]);
 
@@ -1203,7 +1213,7 @@ function GraceProviderBase({
                 const data = await callGraceServerTool<Array<Record<string, unknown>>>("checkCompatibility", { threadSize: params.threadSize });
                 if (data.error) return `${data.error} I could not check thread compatibility for "${params.threadSize}".`;
                 const fitments = Array.isArray(data.result) ? data.result : [];
-                if (fitments.length === 0) return `No bottles found with thread size "${params.threadSize}". Common sizes: 13-415, 15-415, 18-415, 20-410, 24-410, 28-410.`;
+                if (fitments.length === 0) return `No bottles found with thread size "${params.threadSize}". Neck finishes we stock: ${STANDARD_NECK_FINISHES.join(", ")}.`;
                 const lines = [`Bottles compatible with ${params.threadSize} thread (${fitments.length} found):`];
                 for (const f of fitments.slice(0, 10)) lines.push(`  • ${f.bottleName ?? f.bottleCode} — ${f.capacityMl ?? "?"}ml (${f.familyHint ?? "unknown family"})`);
                 if (fitments.length > 10) lines.push(`  ... and ${fitments.length - 10} more`);
@@ -1342,13 +1352,13 @@ function GraceProviderBase({
                     returnRaw: true,
                 });
                 if (data.error) {
-                    routerRef.current.push(fallbackFinderHref);
+                    routerRef.current.push(localizeHref(localeRef.current, fallbackFinderHref));
                     completeGraceNavigationRef.current("I opened the focused finder");
                     return `${data.error} I could not search the catalog right now.`;
                 }
                 const products: ProductCard[] = Array.isArray(data.result) ? data.result : [];
                 if (products.length === 0) {
-                    routerRef.current.push(fallbackFinderHref);
+                    routerRef.current.push(localizeHref(localeRef.current, fallbackFinderHref));
                     completeGraceNavigationRef.current("I opened the focused finder");
                     return "No products found. Try a different description.";
                 }
@@ -1418,7 +1428,7 @@ function GraceProviderBase({
                     enterAgenticFollowAlong(redirectUrl, "voice_navigation");
                 }
                 setTimeout(() => {
-                    routerRef.current.push(redirectUrl);
+                    routerRef.current.push(localizeHref(localeRef.current, redirectUrl));
                     completeGraceNavigationRef.current("I narrowed the catalog for you");
                 }, 500);
                 if (exactSizeFound) {
@@ -1428,7 +1438,7 @@ function GraceProviderBase({
             } catch (e) {
                 console.error("[Grace] showProducts:", e);
                 const finderHref = buildCatalogPath([], params.query, params.family);
-                routerRef.current.push(finderHref);
+                routerRef.current.push(localizeHref(localeRef.current, finderHref));
                 completeGraceNavigationRef.current("I opened the focused finder");
                 return "Catalog search failed.";
             }
@@ -1708,7 +1718,7 @@ function GraceProviderBase({
             }
             rememberDestination(navPath, navTitle);
             setTimeout(() => {
-                routerRef.current.push(navPath);
+                routerRef.current.push(localizeHref(localeRef.current, navPath));
                 completeGraceNavigationRef.current(`Took you to ${navTitle}`);
             }, 500);
             return `Navigating the customer to ${params.title ?? "the page"} now.`;
@@ -1782,7 +1792,7 @@ function GraceProviderBase({
             sessionMetricsRef.current.toolsCalled++;
             sessionMetricsRef.current.toolsUsed.add("submitForm");
             analytics.graceToolCalled({ toolName: "submitForm", success: true, status: "review_required" });
-            routerRef.current.push(formDestination.path);
+            routerRef.current.push(localizeHref(localeRef.current, formDestination.path));
             return "The completed draft is open in a visible form. The customer must review and submit it.";
         },
 
@@ -2129,7 +2139,7 @@ function GraceProviderBase({
                 analytics.graceToolCalled({ toolName: "setCatalogRefinements", success: false, status: "zero_matches" });
                 return `Refine NOT applied: that filter combination matches 0 product groups, so the change was rejected to avoid showing an empty catalog. This is NOT evidence the product doesn't exist — one dimension is wrong (most often a cap/closure color placed in the glass-color facet). Drop the suspect dimension and call searchCatalog with a plain description instead; answer availability ONLY from those rows. Current state remains: ${formatGraceRefineState(current)}`;
             }
-            routerRef.current.replace(graceRefineDestination(next));
+            routerRef.current.replace(localizeHref(localeRef.current, graceRefineDestination(next)));
             sessionMetricsRef.current.toolsCalled++;
             sessionMetricsRef.current.toolsUsed.add("setCatalogRefinements");
             analytics.graceToolCalled({ toolName: "setCatalogRefinements", success: true });
@@ -2181,7 +2191,7 @@ function GraceProviderBase({
             }
             next.set("products", lineItems.map((item) => `${item.name} (SKU: ${item.websiteSku ?? item.sku})`).join("\n"));
             next.set("quantities", lineItems.map((item) => `${item.websiteSku ?? item.sku}: ${item.quantity}`).join("\n"));
-            routerRef.current.push(`/request-quote?${next.toString()}`);
+            routerRef.current.push(localizeHref(localeRef.current, `/request-quote?${next.toString()}`));
             completeGraceNavigationRef.current("Your verified quote draft is ready to review.");
             sessionMetricsRef.current.toolsCalled++;
             sessionMetricsRef.current.toolsUsed.add("prepareQuoteRequest");
@@ -2496,6 +2506,12 @@ function GraceProviderBase({
 
     const handleError = useCallback((error: unknown) => {
         console.error("[Grace] Error:", error);
+        // A server-side Realtime error on a session that is still connected (a
+        // cancelled response, a rejected history edit) is not a lost connection.
+        // Before 2026-09-25 every one of them flipped the UI to "Connection
+        // error", marked voice as failed and inflated the connection-failure
+        // count in analytics.
+        if (openAIAdapterRef.current?.isConnected()) return;
         connectingRef.current = false;
         setGraceStatus("error");
         setErrorMessage(typeof error === "string" ? error : "Connection error");
@@ -2637,7 +2653,12 @@ function GraceProviderBase({
             },
             callbacks: {
                 onConnect: handleConnect,
-                onDisconnect: () => handleDisconnect({ reason: "disconnected" }),
+                // A transport that dropped on its own is transient (the same
+                // class as a 1006 close), so voice gets its auto-reconnect and
+                // text reconnects on the next message.
+                onDisconnect: (details) => handleDisconnect(details?.unexpected
+                    ? { reason: "error", closeCode: 1006, message: "Realtime transport closed unexpectedly" }
+                    : { reason: "disconnected" }),
                 onModeChange: (mode) => handleModeChange({ mode }),
                 onError: handleError,
                 onTranscriptDelta: (text) => handleAgentChatResponsePart({ text, type: "delta" }),
@@ -2894,9 +2915,27 @@ function GraceProviderBase({
         ]);
         setIsAwaitingReply(true);
 
-        if (conversationRef.current?.getId?.()) {
-            conversationRef.current.sendUserMessage(msg);
-        } else {
+        const live = conversationRef.current;
+        let delivered = false;
+        if (live?.getId?.()) {
+            try {
+                live.sendUserMessage(msg);
+                delivered = true;
+            } catch (error) {
+                // The socket died between turns (idle close, network change, tab
+                // sleep). Reconnect with this message queued instead of leaving
+                // the drawer on "thinking" — the 2026-09-25 audit caught exactly
+                // that: an unhandled "WebSocket is not connected" and no reply.
+                console.warn("[Grace] live session dropped before send; reconnecting", error);
+                intentionalEndRef.current = true;
+                try {
+                    await live.endSession?.();
+                } catch {
+                    // Already closed.
+                }
+            }
+        }
+        if (!delivered) {
             // Clear stale error state so the retry can proceed
             setErrorMessage("");
             setGraceStatus("idle");
@@ -2917,7 +2956,7 @@ function GraceProviderBase({
     // ── Navigation handling ──────────────────────────────────────────────────
     const [pendingNavigation, setPendingNavigation] = useState<string | null>(null);
     const onNavigate = useCallback((path: string) => {
-        router.push(path);
+        router.push(localizeHref(localeRef.current, path));
         setPendingNavigation(null);
     }, [router]);
     const clearPendingNavigation = useCallback(() => setPendingNavigation(null), []);

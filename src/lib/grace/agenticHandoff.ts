@@ -1,3 +1,5 @@
+import { stripLocalePrefix } from "@/i18n/paths";
+
 /**
  * Mobile Grace companion: product Q&A can stay in chat for options, but an
  * explicit "take me there" must move the page. A product-link tap or a voice
@@ -26,7 +28,7 @@ export function isGraceMobileViewport(viewportWidth: number): boolean {
 }
 
 export function isGraceProductPageHref(href: string): boolean {
-    const path = href.split("?")[0]?.split("#")[0] ?? "";
+    const path = stripLocalePrefix(href.split("?")[0]?.split("#")[0] ?? "");
     return path.startsWith("/products/") && path.length > "/products/".length;
 }
 

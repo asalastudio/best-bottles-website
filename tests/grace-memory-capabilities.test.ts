@@ -34,13 +34,18 @@ describe("Grace memory, capabilities, and closed-loop evals", () => {
         expect(normalizeRememberNoteKind("nope")).toBeNull();
     });
 
-    it("says plate swaps work on a PDP and glass changes require navigation", () => {
+    it("says plate swaps work on a PDP, glass changes require navigation, and Build Your Bottle is live", () => {
         const onPdp = buildGraceSiteCapabilities({ pageType: "pdp", companionMode: "agentic" });
         expect(onPdp.canSwapCapOnCurrentPdp).toBe(true);
         expect(onPdp.canChangeGlassOrApplicatorWithoutNavigation).toBe(false);
-        expect(onPdp.kitsPublished).toBe(false);
+        // Build Your Bottle (/matrix) shipped on 2026-09-14; until 2026-09-25 Grace
+        // was still told never to advertise a builder.
+        expect(onPdp.kitsPublished).toBe(true);
+        expect(onPdp.buildYourBottleHref).toBe("/matrix");
         expect(onPdp.agenticFollowAlong).toBe(true);
         expect(onPdp.notes.some((note) => note.includes("different product URLs"))).toBe(true);
+        expect(onPdp.notes.some((note) => note.includes("Build Your Bottle is live at /matrix"))).toBe(true);
+        expect(onPdp.notes.some((note) => /never advertise/i.test(note))).toBe(false);
     });
 
     it("splits merchandiser and navigator tools on the same session", () => {

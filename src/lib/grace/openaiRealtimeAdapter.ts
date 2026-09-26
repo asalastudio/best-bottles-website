@@ -5,7 +5,7 @@ import {
     tool,
     type FunctionTool,
 } from "@openai/agents/realtime";
-import { GRACE_REALTIME_MODEL, GRACE_REALTIME_VOICE } from "./openaiRealtimeConfig";
+import { GRACE_REALTIME_MODEL, GRACE_REALTIME_SPEED, GRACE_REALTIME_VOICE } from "./openaiRealtimeConfig";
 import {
     type GraceOpenAIToolSpec,
 } from "./openaiToolSpecs";
@@ -44,7 +44,8 @@ export type GraceRealtimeToolImplementations = Record<string, GraceToolImplement
 
 export type GraceRealtimeCallbacks = {
     onConnect?: () => void;
-    onDisconnect?: () => void;
+    /** `unexpected` is true when the transport dropped on its own (idle close, network change), false for disconnect(). */
+    onDisconnect?: (details?: { unexpected: boolean }) => void;
     onModeChange?: (mode: "speaking" | "listening") => void;
     onTranscriptDelta?: (delta: string) => void;
     onMessage?: (message: { role: GraceRealtimeRole; text: string }) => void;
@@ -59,6 +60,19 @@ export type GraceRealtimeAgentConfig = {
     handoffs?: unknown[];
 };
 
+export type GraceVadEagerness = "low" | "medium" | "high" | "auto";
+
+/**
+ * How quickly the model decides the customer has finished speaking. "low"
+ * (the 2026-09-16 echo fix) waits up to ~8 s of silence; "medium"/"auto" ~4 s;
+ * "high" ~2 s. The mic is now hard-muted while Grace speaks, so the setting is
+ * an env choice for staging trials rather than a constant.
+ */
+export function resolveGraceVadEagerness(raw: string | undefined = process.env.NEXT_PUBLIC_GRACE_VAD_EAGERNESS): GraceVadEagerness {
+    const value = raw?.trim().toLowerCase();
+    return value === "medium" || value === "high" || value === "auto" ? value : "low";
+}
+
 export type GraceRealtimeSessionConfig = {
     model: typeof GRACE_REALTIME_MODEL;
     transport: "webrtc" | "websocket";
@@ -66,6 +80,9 @@ export type GraceRealtimeSessionConfig = {
     config: {
         outputModalities: Array<"text" | "audio">;
         voice: typeof GRACE_REALTIME_VOICE;
+        // The token is minted at 0.9; without this the SDK's first
+        // session.update reset the voice to 1.0.
+        speed: typeof GRACE_REALTIME_SPEED;
         audio: {
             input: {
                 transcription: { model: "gpt-4o-mini-transcribe" };
@@ -74,7 +91,7 @@ export type GraceRealtimeSessionConfig = {
                     type: "semantic_vad";
                     // Low eagerness waits longer before committing a turn so
                     // leftover speaker audio is less likely to become a reply.
-                    eagerness: "low";
+                    eagerness: GraceVadEagerness;
                     // Speaker echo looks like barge-in. Mute + this flag keep
                     // Grace from cutting herself off, then answering the echo.
                     interrupt_response: boolean;
@@ -87,6 +104,8 @@ export type GraceRealtimeSessionConfig = {
     workflowName: "Best Bottles Grace";
 };
 
+export type GraceRealtimeTransportStatus = "connected" | "disconnected" | "connecting" | "disconnecting";
+
 export type GraceRealtimeSessionLike = {
     on(event: string, handler: (...args: unknown[]) => void): unknown;
     connect(options: { apiKey: string }): Promise<void>;
@@ -98,7 +117,18 @@ export type GraceRealtimeSessionLike = {
     close(): void;
     transport?: {
         sendEvent?(event: { type: string }): void;
+        /** The SDK reports socket state on the transport, not as a server event. */
+        on?(event: string, handler: (...args: unknown[]) => void): unknown;
+        status?: GraceRealtimeTransportStatus;
     };
+}
+
+/** The live Realtime transport is gone; reconnect before sending again. */
+export class GraceRealtimeDisconnectedError extends Error {
+    constructor(message = "Grace Realtime is not connected.") {
+        super(message);
+        this.name = "GraceRealtimeDisconnectedError";
+    }
 }
 
 function muteRealtimeMicrophone(session: GraceRealtimeSessionLike, muted: boolean): void {
@@ -208,6 +238,18 @@ export function getGraceRealtimeToolSpecs(context: KnowledgeRequestContext) {
 function toError(value: unknown): Error {
     if (value instanceof Error) return value;
     if (typeof value === "string") return new Error(value);
+    // The server's error event carries { type, code, message }. Keep them, or the
+    // log only ever says "unknown error" (2026-09-25 audit).
+    if (value && typeof value === "object") {
+        const detail = value as { message?: unknown; code?: unknown; type?: unknown };
+        const message = typeof detail.message === "string" && detail.message.trim() ? detail.message.trim() : null;
+        if (message) {
+            const code = typeof detail.code === "string" && detail.code ? detail.code : typeof detail.type === "string" ? detail.type : null;
+            const error = new Error(code ? `${code}: ${message}` : message);
+            error.name = "GraceRealtimeServerError";
+            return error;
+        }
+    }
     return new Error("Grace Realtime encountered an unknown error.");
 }
 
@@ -284,6 +326,9 @@ export function createGraceOpenAIRealtimeAdapter({
     );
     let session: GraceRealtimeSessionLike | null = null;
     let connected = false;
+    // True while we are closing a session ourselves, so the transport's own
+    // "disconnected" report is not mistaken for a dropped connection.
+    let closingIntentionally = false;
     let currentContext = "";
     let catalogNote = "";
     let currentRole: "merchandiser" | "navigator" = "merchandiser";
@@ -341,17 +386,47 @@ export function createGraceOpenAIRealtimeAdapter({
         callbacks.onConnect?.();
     };
 
-    const notifyDisconnected = () => {
+    const notifyDisconnected = (unexpected = false) => {
         if (!connected) return;
         connected = false;
-        callbacks.onDisconnect?.();
+        callbacks.onDisconnect?.({ unexpected });
+    };
+
+    /** The transport's own view, when it exposes one; the SDK's WebSocket and WebRTC transports both do. */
+    const transportDropped = () => {
+        const status = session?.transport?.status;
+        return status === "disconnected" || status === "disconnecting";
+    };
+
+    const isConnected = () => {
+        // The socket can close without any server event (idle timeout, network
+        // change, tab sleep). Before 2026-09-25 nothing noticed, so the next
+        // send threw inside the SDK and the chat sat on "thinking" for good.
+        if (connected && transportDropped()) notifyDisconnected(true);
+        return connected;
     };
 
     const bindEvents = (activeSession: GraceRealtimeSessionLike) => {
         const isCurrentSession = () => session === activeSession;
+
+        activeSession.transport?.on?.("connection_change", (...args: unknown[]) => {
+            if (!isCurrentSession()) return;
+            const status = args[0];
+            if (status === "connected") notifyConnected();
+            if (status === "disconnected") {
+                releaseMicrophone(activeSession);
+                notifyDisconnected(!closingIntentionally);
+            }
+        });
         let assistantSpeaking = false;
         let echoGuardUntil = 0;
         let lastAssistantText = "";
+        // Set when the server heard speech while Grace was talking or in the
+        // echo tail. Only a response that follows such speech is an echo reply;
+        // a response that follows a tool result or a handoff is the real answer
+        // and must not be cancelled (before 2026-09-25 it was, so the customer
+        // had to repeat themselves after every fast tool call).
+        let speechDuringGuard = false;
 
         const rememberAssistantText = (text: string) => {
             const trimmed = text.trim();
@@ -376,11 +451,23 @@ export function createGraceOpenAIRealtimeAdapter({
             callbacks.onModeChange?.("listening");
             echoUnmuteTimer = setTimeout(() => {
                 echoUnmuteTimer = null;
+                speechDuringGuard = false;
                 if (isCurrentSession() && !assistantSpeaking) {
                     muteRealtimeMicrophone(activeSession, false);
                 }
             }, GRACE_VOICE_ECHO_TAIL_MS);
         };
+
+        const cancelEchoReply = () => {
+            speechDuringGuard = false;
+            cancelEchoResponse(activeSession);
+        };
+
+        const echoReplySuspected = () => speechDuringGuard && shouldCancelEchoGeneratedResponse({
+            now: Date.now(),
+            assistantSpeaking,
+            echoGuardUntil,
+        });
 
         activeSession.on("audio_start", () => {
             if (!isCurrentSession()) return;
@@ -422,8 +509,9 @@ export function createGraceOpenAIRealtimeAdapter({
             if (!event) return;
 
             if (event.type === "connection_change") {
+                // Kept for transports that relay their state as a server event.
                 if (event.status === "connected") notifyConnected();
-                if (event.status === "disconnected") notifyDisconnected();
+                if (event.status === "disconnected") notifyDisconnected(!closingIntentionally);
                 return;
             }
 
@@ -433,6 +521,9 @@ export function createGraceOpenAIRealtimeAdapter({
                     assistantSpeaking,
                     echoGuardUntil,
                 })) {
+                    // Remember the speech: the reply it produces arrives as a
+                    // later response.created and must still be cancelled.
+                    speechDuringGuard = true;
                     clearRealtimeInputBuffer(activeSession);
                     if (shouldCancelEchoGeneratedResponse({
                         now: Date.now(),
@@ -445,15 +536,8 @@ export function createGraceOpenAIRealtimeAdapter({
                 return;
             }
 
-            if (
-                event.type === "response.created"
-                && shouldCancelEchoGeneratedResponse({
-                    now: Date.now(),
-                    assistantSpeaking,
-                    echoGuardUntil,
-                })
-            ) {
-                cancelEchoResponse(activeSession);
+            if (event.type === "response.created" && echoReplySuspected()) {
+                cancelEchoReply();
                 return;
             }
 
@@ -463,12 +547,8 @@ export function createGraceOpenAIRealtimeAdapter({
                     || event.type === "output_audio_buffer.started")
                 && !assistantSpeaking
             ) {
-                if (shouldCancelEchoGeneratedResponse({
-                    now: Date.now(),
-                    assistantSpeaking,
-                    echoGuardUntil,
-                })) {
-                    cancelEchoResponse(activeSession);
+                if (echoReplySuspected()) {
+                    cancelEchoReply();
                     return;
                 }
                 beginSpeakingGuard();
@@ -521,8 +601,18 @@ export function createGraceOpenAIRealtimeAdapter({
         async connect({ clientSecret, mode }) {
             if (!clientSecret.trim()) throw new Error("A Realtime client secret is required.");
             if (session) {
-                releaseMicrophone(session);
-                session.close();
+                // Replacing a session is not a disconnect: detach it first so its
+                // transport events are ignored, then let the new connect report.
+                const previous = session;
+                session = null;
+                connected = false;
+                releaseMicrophone(previous);
+                closingIntentionally = true;
+                try {
+                    previous.close();
+                } finally {
+                    closingIntentionally = false;
+                }
             }
 
             currentRole = "merchandiser";
@@ -539,13 +629,14 @@ export function createGraceOpenAIRealtimeAdapter({
                 config: {
                     outputModalities: [mode === "voice" ? "audio" : "text"],
                     voice: GRACE_REALTIME_VOICE,
+                    speed: GRACE_REALTIME_SPEED,
                     audio: {
                         input: {
                             transcription: { model: "gpt-4o-mini-transcribe" },
                             noiseReduction: { type: "far_field" },
                             turnDetection: {
                                 type: "semantic_vad",
-                                eagerness: "low",
+                                eagerness: resolveGraceVadEagerness(),
                                 interrupt_response: false,
                             },
                         },
@@ -576,10 +667,15 @@ export function createGraceOpenAIRealtimeAdapter({
         },
 
         disconnect() {
-            releaseMicrophone(session);
-            session?.close();
+            closingIntentionally = true;
+            try {
+                releaseMicrophone(session);
+                session?.close();
+            } finally {
+                closingIntentionally = false;
+            }
             session = null;
-            notifyDisconnected();
+            notifyDisconnected(false);
         },
 
         interrupt() {
@@ -590,9 +686,7 @@ export function createGraceOpenAIRealtimeAdapter({
             return session !== null;
         },
 
-        isConnected() {
-            return connected;
-        },
+        isConnected,
 
         async sendContext(context) {
             currentContext = context;
@@ -605,10 +699,17 @@ export function createGraceOpenAIRealtimeAdapter({
         },
 
         sendText(text) {
-            if (!session || !connected) throw new Error("Grace Realtime is not connected.");
+            if (!session || !isConnected()) throw new GraceRealtimeDisconnectedError();
             const normalized = text.trim();
             if (!normalized) return;
-            session.sendMessage(normalized);
+            try {
+                session.sendMessage(normalized);
+            } catch (error) {
+                // The SDK throws "WebSocket is not connected" when the socket
+                // closed without telling us; treat that as the disconnect it is.
+                notifyDisconnected(true);
+                throw new GraceRealtimeDisconnectedError(error instanceof Error ? error.message : undefined);
+            }
         },
     };
 }

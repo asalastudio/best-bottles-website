@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { ConvexHttpClient } from "convex/browser";
+import type { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../../convex/_generated/api";
+import { createResilientConvexHttpClient } from "@/lib/convexServerClient";
 import { enforceGraceRateLimit } from "@/lib/graceRateLimitServer";
 import { reportError } from "@/lib/observability/report";
 
@@ -11,7 +12,7 @@ let convexClient: ConvexHttpClient | null = null;
 function getConvex() {
     const url = process.env.NEXT_PUBLIC_CONVEX_URL;
     if (!url) throw new Error("NEXT_PUBLIC_CONVEX_URL is not configured.");
-    convexClient ??= new ConvexHttpClient(url);
+    convexClient ??= createResilientConvexHttpClient(url);
     return convexClient;
 }
 

@@ -1,5 +1,6 @@
 import { getShopCollection } from "./shopCollections";
-import { ConvexHttpClient } from "convex/browser";
+import type { ConvexHttpClient } from "convex/browser";
+import { createResilientConvexHttpClient } from "@/lib/convexServerClient";
 import { unstable_cache } from "next/cache";
 import { api } from "../../convex/_generated/api";
 import {
@@ -36,7 +37,7 @@ let convexClient: ConvexHttpClient | null = null;
 export function getCatalogConvexClient() {
     const url = process.env.NEXT_PUBLIC_CONVEX_URL;
     if (!url) throw new Error("NEXT_PUBLIC_CONVEX_URL is required to render catalog data.");
-    convexClient ??= new ConvexHttpClient(url);
+    convexClient ??= createResilientConvexHttpClient(url);
     return convexClient;
 }
 
@@ -103,7 +104,7 @@ export type CatalogVisibilitySnapshot = {
 // full catalog metadata reads even when its filtered search is already fast.
 const loadCatalogVisibilitySnapshot = unstable_cache(
     async (convexUrl: string): Promise<CatalogVisibilitySnapshot> => {
-        const convex = new ConvexHttpClient(convexUrl);
+        const convex = createResilientConvexHttpClient(convexUrl);
         const [groups, primarySkus] = await Promise.all([
             convex.query(api.products.getAllCatalogGroups, {}),
             convex.query(api.products.getCatalogGroupPrimarySkus, {}),

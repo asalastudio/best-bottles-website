@@ -320,6 +320,7 @@ export default defineSchema({
         .index("by_neckThreadSize", ["neckThreadSize"])
         .index("by_productGroupId", ["productGroupId"]) // Used by getProductGroup to avoid full table scan
         .index("by_shopifyVariantId", ["shopifyVariantId"]) // Webhook sync: inventory updates
+        .index("by_shopifyInventoryItemId", ["shopifyInventoryItemId"]) // Webhook sync: inventory_levels/update lookup
         // Launch gate reads only the blocked rows instead of the full table,
         // which otherwise exceeds Convex's per-function byte limit at 2,330 docs.
         .index("by_shopifySellable", ["shopifySellable"])
