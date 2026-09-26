@@ -217,6 +217,7 @@ export default function PdpStage({
                                                 position: "absolute", display: "block", maxWidth: "none",
                                                 left: `${part.box.leftPct}%`, top: `${part.box.topPct}%`,
                                                 width: `${part.box.widthPct}%`, height: `${part.box.heightPct}%`,
+                                                ...(part.clipBottomPct ? { clipPath: `inset(0 0 ${part.clipBottomPct}% 0)` } : {}),
                                             }}
                                         />
                                     </span>

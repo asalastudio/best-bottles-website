@@ -59,6 +59,8 @@ numbers in `data/register/components/14.3mm-measurements.json`, loaded with `pus
 
 ## Known gaps
 
-- Bulb sprayers keep one cut per finish from one body's photo; the bulb's hang is that photo's.
+- Bulb sprayers keep one cut per finish from one body's photo; the bulb's hang is that photo's. Their dip tube is
+  that photo's length too: the stage clips every behind-glass layer (dip tube, pipette) at the plate's baseline,
+  so a tube cut on the 100 mL Circle never shows below the Round 78's foot (`BEHIND_GLASS_SLOTS`).
 - The reducer insert is not drawn (see above); the Diva ring SKUs and the short shiny-black cap wait on data.
 - Frosted-glass references are used only where a Clear photo of the same SKU does not exist.

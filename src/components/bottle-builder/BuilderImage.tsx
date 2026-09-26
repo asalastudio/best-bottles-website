@@ -9,6 +9,7 @@ import { builderBodyFrame, builderPreviewLayout } from "@/lib/bottle-builder/pre
 import { layerCropStyleForPart, layerTransform, previewFrame } from "@/lib/bottle-builder/preview-frame";
 import { isOptimizableImageUrl, isRegisterAssetUrl } from "@/lib/products/optimizable-image";
 import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/products/register-image";
+import { BEHIND_GLASS_SLOTS } from "@/lib/products/pdp-redesign/stage";
 
 /** Clear glass and the clear dip tube take the stage colour. A published dropper
  * part also contains its metal collar; multiplying a clear dropper assembly
@@ -159,6 +160,18 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
                     <image href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} x="0" y="0"
                         clipPath={`url(#${glassId})`} data-builder-material="glass" style={{ mixBlendMode: "multiply" }}
                         onError={() => onLayerError(part.image.url)} />
+                </g>;
+            }
+            const baselineY = kit?.anchors?.baselineY;
+            if (part.box && BEHIND_GLASS_SLOTS.has(part.slot) && baselineY !== undefined && part.box.y + part.box.height > baselineY + 0.5) {
+                // A behind-glass layer (dip tube, pipette) never shows below the plate's baseline.
+                const visible = Math.max(0, ((baselineY - part.box.y) / part.box.height) * part.image.height);
+                const clipId = `${titleId}-${part.slot}-foot`;
+                return <g key={`${part.slot}-${part.componentId ?? ""}-${part.image.url}:${attempt(part.image.url)}`} transform={layerTransform(transform, part)}>
+                    <defs><clipPath id={clipId} clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width={part.image.width} height={visible} /></clipPath></defs>
+                    <image href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} x="0" y="0" clipPath={`url(#${clipId})`}
+                        style={{ mixBlendMode: blendsIntoGlass(config, part, stage, splitDropper) ? "multiply" : undefined }}
+                        onLoad={markLoaded} onError={() => onLayerError(part.image.url)} data-builder-layer={part.slot} />
                 </g>;
             }
             return <image key={`${part.slot}-${part.componentId ?? ""}-${part.image.url}:${attempt(part.image.url)}`} href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} transform={layerTransform(transform, part)}
