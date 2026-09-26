@@ -44,6 +44,12 @@ describe("group slug applicator intent", () => {
         expect(capacityMlFromSlug("circle-15ml-clear-13-415")).toBe(15);
     });
 
+    it("accepts a decimal millimetre neck (the Tola's 14.3mm) as bottle grammar", () => {
+        expect(parseProductSlug("tola-3ml-clear-14.3mm")?.neck).toBe("14.3mm");
+        expect(groupApplicatorIntent("tola-3ml-clear-14.3mm")).toBe("cap");
+        expect(capacityMlFromSlug("tola-3ml-clear-14.3mm")).toBe(3);
+    });
+
     it("reads sibling applicator suffixes", () => {
         expect(groupApplicatorIntent("circle-15ml-clear-13-415-finemist")).toBe("sprayer");
         expect(groupApplicatorIntent("circle-15ml-clear-13-415-rollon")).toBe("rollon");
