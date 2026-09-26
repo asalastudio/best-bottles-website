@@ -26,13 +26,13 @@ export type Bounds = { left: number; top: number; right: number; bottom: number 
 export const STAGE_CANVAS = { width: 1000, height: 1100 } as const;
 
 /**
- * Where a body stands on the canvas. The pilot datum is the frame most of the
- * 9 mL Cylinder's legacy kits share (data/register/phase4/parity-pilot.json
- * `datum`), so the switch-over keeps the bottle where customers saw it. A body
- * with no entry stands by `datumFromPlate`.
+ * Where a body stands on the canvas. A body with no entry stands by `datumFromPlate`.
+ * The 9 mL Cylinder stands at the storefront's true scale, 10.5 px/mm like every other body:
+ * its Blender plates (data/register/blender-9ml/measurements.json) measure 71.6 mm seat to foot,
+ * so the seat sits 752 px above the shared baseline. (The Phase 3 pilot stood at 286 for its 73.8 mm plate.)
  */
 export const STAGE_DATUMS: Readonly<Record<string, StageDatum>> = {
-    "cylinder-9ml-17-415": { axisX: 500, seatY: 286, baselineY: 1061 },
+    "cylinder-9ml-17-415": { axisX: 500, seatY: 309, baselineY: 1061 },
 };
 
 /** The pilot frame's scale: 775 px for 73.8 mm of glass. */
@@ -59,7 +59,19 @@ export type RegisterPlate = PlateGeometry & { plateKey: string; bodyId: string; 
 /** Which stage views a layer is for: a seated insert (clipped at the rim) for CAP ON and SIDECAR, its full plug for EXPLODED. */
 export type LayerUsage = "seated" | "exploded";
 export type StageViewName = "sidecar" | "capon" | "exploded";
-export type RegisterLayer = LayerGeometry & { slot: KitSlot; url: string; approved: boolean; usage?: LayerUsage | null };
+/**
+ * `glass`: a see-through layer rendered behind one plate glass ("Clear", "Amber", ...); drawn only on that glass. Absent = every glass.
+ * `bodyId`: a layer made for one body. A component with layers for the assembly's body draws only those; other bodies keep its generic layers.
+ */
+export type RegisterLayer = LayerGeometry & { slot: KitSlot; url: string; approved: boolean; usage?: LayerUsage | null; glass?: string | null; bodyId?: string | null };
+
+/** The layers a component draws on one assembly: its layers for that body if it has any, else its generic ones; then the glass filter. */
+export function layersFor(component: { layers: RegisterLayer[] }, assembly: { bodyId: string; glass: string }): RegisterLayer[] {
+    const own = component.layers.filter((layer) => layer.bodyId === assembly.bodyId);
+    const pool = own.length ? own : component.layers.filter((layer) => !layer.bodyId);
+    // A see-through layer belongs to the glass it was rendered behind; another glass draws its own.
+    return pool.filter((layer) => !layer.glass || layer.glass === assembly.glass);
+}
 export type RegisterComponent = { componentId: string; type: string; layers: RegisterLayer[]; approved: boolean };
 export type RegisterBody = {
     bodyId: string; family: string; capacityMl: number | null; neck: string;
@@ -158,7 +170,7 @@ export function kitFromRegister(
     for (const part of assembly.parts) {
         const component = payload.components[part.componentId];
         if (!component) return null;
-        for (const layer of component.layers) layers.push({ ...layer, componentId: part.componentId, role: part.role });
+        for (const layer of layersFor(component, assembly)) layers.push({ ...layer, componentId: part.componentId, role: part.role });
     }
     if (layers.length === 0) return null;
 
