@@ -352,7 +352,7 @@
      "file": "CMP-CAP-PNK-18415-LTR--0-cap.png",
      "width": 794,
      "height": 875,
-     "sha256": "63418091fd5457b015fea7d563ecb9f384bc320cb7bb20d93237e68f0ee678ce",
+     "sha256": "05058e25010d340ada26a7b4710134d02e27087604191a7de3f60cf544ee5c97",
      "pxPerMm": 26.2098,
      "anchor": {
       "x": 409.4,
@@ -365,7 +365,10 @@
    "checks": {
     "registrationIoU": 0.9876,
     "libraryScale": 2.0472,
-    "approvable": true
+    "approvable": true,
+    "specksClearedPx": {
+     "cap": 2160
+    }
    }
   },
   {
@@ -484,7 +487,7 @@
      "file": "CMP-CAP-SSLV-18415-S--0-cap.png",
      "width": 233,
      "height": 236,
-     "sha256": "23b110009dcb021c8426237f8b7e97d622130de1a30f73a85c400626cab04172",
+     "sha256": "47b100d5600877255dfa86c8ecc117f8ecc2e5cad8ae3165a52d64e6f475949c",
      "pxPerMm": 9.558,
      "anchor": {
       "x": 125.1,
@@ -497,7 +500,10 @@
    "checks": {
     "registrationIoU": 0.8469,
     "libraryScale": 0.7466,
-    "approvable": false
+    "approvable": false,
+    "specksClearedPx": {
+     "cap": 26
+    }
    }
   },
   {
@@ -744,7 +750,7 @@
      "file": "CMP-LPM-CPR-18-415--0-pump.png",
      "width": 228,
      "height": 400,
-     "sha256": "2f177bcda74c64e65f49676233c3baeee86b061d79b3c9015df4536ba1333510",
+     "sha256": "972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106",
      "pxPerMm": 8.786,
      "anchor": {
       "x": 114.7,
@@ -772,7 +778,10 @@
    "checks": {
     "registrationIoU": 0.9546,
     "libraryScale": 0.6863,
-    "approvable": true
+    "approvable": true,
+    "specksClearedPx": {
+     "pump": 112
+    }
    }
   },
   {
@@ -804,7 +813,7 @@
      "file": "CMP-LPM-MGLD-18-415--0-pump.png",
      "width": 236,
      "height": 400,
-     "sha256": "9bf0b332f31b19bb20950682f4cfa41491932484add300d78ee57f905391ef4b",
+     "sha256": "39b24dee49ed593591bcc637bcd69b518e1f5d316ae537739782b91f956423bc",
      "pxPerMm": 8.8222,
      "anchor": {
       "x": 118.2,
@@ -832,7 +841,10 @@
    "checks": {
     "registrationIoU": 0.9103,
     "libraryScale": 0.6891,
-    "approvable": true
+    "approvable": true,
+    "specksClearedPx": {
+     "pump": 100
+    }
    }
   },
   {
@@ -1217,7 +1229,7 @@
      "file": "CMP-SPR-BLK-18-415-02--sprayer.png",
      "width": 1628,
      "height": 1800,
-     "sha256": "33a206a1c60bba73428c2691224d325b015c05d1e02f41a1f49c4f4b9bcc8278",
+     "sha256": "8c0a1fc75690da707d6ca5a89cc820b9124ff5af2535eb1fa0e37b1811367505",
      "pxPerMm": 12.8025,
      "anchor": {
       "x": 1483.5,
@@ -1246,7 +1258,10 @@
     "status": "cut from the bottle photo",
     "approvable": true,
     "collarWidthPx": 295,
-    "splitRow": 609
+    "splitRow": 609,
+    "specksClearedPx": {
+     "sprayer": 1084
+    }
    }
   },
   {
@@ -1848,7 +1863,7 @@
      "file": "CMP-SPR-MTCP-18-415-03--0-sprayer.png",
      "width": 229,
      "height": 400,
-     "sha256": "3e202abc21d58540a291c613276788e92e181cd8dbbbe0bae3b999b979372042",
+     "sha256": "8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a",
      "pxPerMm": 9.0702,
      "anchor": {
       "x": 118.5,
@@ -1863,7 +1878,7 @@
      "file": "CMP-SPR-MTCP-18-415-03--overcap.png",
      "width": 392,
      "height": 646,
-     "sha256": "55f08b0f15c5397ec1844175083e8f39b8dee72474b8f9f69e80f93c0cc5926e",
+     "sha256": "9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9",
      "pxPerMm": 12.8025,
      "anchor": {
       "x": 186.5,
@@ -1876,7 +1891,11 @@
    "checks": {
     "registrationIoU": 0.9799,
     "libraryScale": 0.7085,
-    "approvable": true
+    "approvable": true,
+    "specksClearedPx": {
+     "sprayer": 120,
+     "overcap": 8557
+    }
    }
   },
   {
@@ -1908,7 +1927,7 @@
      "file": "CMP-SPR-MTGD-18-415-05--0-sprayer.png",
      "width": 232,
      "height": 400,
-     "sha256": "e485dc376198c07273f8af57baf1e8c297f576a2b2a7686a33af3e2c5a78dc0e",
+     "sha256": "dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed",
      "pxPerMm": 8.7991,
      "anchor": {
       "x": 119.2,
@@ -1936,7 +1955,10 @@
    "checks": {
     "registrationIoU": 0.9376,
     "libraryScale": 0.6873,
-    "approvable": true
+    "approvable": true,
+    "specksClearedPx": {
+     "sprayer": 101
+    }
    }
   },
   {
@@ -2432,7 +2454,7 @@
      "file": "CMP-SPR-WHT-18-415-02--sprayer.png",
      "width": 1628,
      "height": 1737,
-     "sha256": "c878540fd834dec743bd2fea9ee41547d8326560ab21cbda6f28d55f593e4fbc",
+     "sha256": "b56c72b9bf1522d31333604bdf49703812bff10f9a53b21453da8a8b41ff438d",
      "pxPerMm": 12.8025,
      "anchor": {
       "x": 1483.5,
@@ -2461,7 +2483,10 @@
     "status": "cut from the bottle photo",
     "approvable": true,
     "collarWidthPx": 295,
-    "splitRow": 623
+    "splitRow": 623,
+    "specksClearedPx": {
+     "sprayer": 180
+    }
    }
   }
  ]

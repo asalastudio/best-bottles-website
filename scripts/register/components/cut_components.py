@@ -36,6 +36,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw
 from psd_tools import PSDImage
+from scipy import ndimage
 
 ROOT = Path(__file__).resolve().parents[3]
 REGISTER = ROOT / "data" / "register"
@@ -154,6 +155,51 @@ def drop_white_edge_strip(img: Image.Image, min_cols: int = 3) -> tuple[Image.Im
             if 0 <= c < a.shape[1]:
                 a[wh[:, c], c, 3] = 0  # the strip's anti-aliased fringe
             cleared += len(strip)
+    return (Image.fromarray(a), cleared) if cleared else (img, 0)
+
+
+PAPER_SLOTS = {"cap", "overcap"}
+PAPER_MIN_OFFSET_PX = 12
+
+
+def drop_specks(img: Image.Image, slot: str = "") -> tuple[Image.Image, int]:
+    """Clear what is not the part (Jordan 2026-09-26: a white fleck beside the copper 13-415 sprayer and a white paper
+    wedge on its overcap showed in CAP ON). 1) Every front layer: pieces detached from the part and under 1% of it,
+    with the faint haze around them. 2) A coloured cap or overcap: near-white paper outside the row outline of its
+    coloured pixels, a piece at a time, and only a piece that reaches 12 px or more off that outline (a chrome
+    highlight or a gold rim hugs the outline and stays); under 5% of the part in all. A white or clear part (over 30%
+    near-white) keeps step 2 off. The canvas keeps its size."""
+    a = np.asarray(img).copy()
+    solid = a[..., 3] > 40
+    if solid.sum() < 100:
+        return img, 0
+    before = int((a[..., 3] > 0).sum())
+    lab, n = ndimage.label(solid)
+    if n > 1:
+        sizes = ndimage.sum(solid, lab, range(1, n + 1))
+        keep = np.isin(lab, [i + 1 for i, size in enumerate(sizes) if size >= 0.01 * sizes.max()])
+        a[~ndimage.binary_dilation(keep, iterations=3), 3] = 0
+    opaque = a[..., 3] > 128
+    pale = opaque & (a[..., :3].min(axis=2) > 200)
+    coloured = opaque & ~pale
+    if slot in PAPER_SLOTS and opaque.sum() and pale.sum() / opaque.sum() <= 0.3 and coloured.sum() >= 100:
+        rows = np.where(coloured.any(axis=1))[0]
+        left = [(int(np.where(coloured[y])[0].min()), int(y)) for y in rows]
+        right = [(int(np.where(coloured[y])[0].max()), int(y)) for y in rows[::-1]]
+        hull = Image.new("L", img.size, 0)
+        ImageDraw.Draw(hull).polygon(left + right, fill=255)  # row extents: the outline of the coloured pixels
+        inside = ndimage.binary_dilation(np.asarray(hull) > 0, iterations=2)
+        outside = (a[..., 3] > 0) & ~inside
+        off = ndimage.distance_transform_edt(~inside)
+        pieces, count = ndimage.label(outside)
+        paper = np.zeros_like(outside)
+        for i in range(1, count + 1):
+            piece = pieces == i
+            if off[piece].max() >= PAPER_MIN_OFFSET_PX:
+                paper |= piece
+        if 0 < (paper & opaque).sum() < 0.05 * opaque.sum():
+            a[paper, 3] = 0
+    cleared = before - int((a[..., 3] > 0).sum())
     return (Image.fromarray(a), cleared) if cleared else (img, 0)
 
 
@@ -440,6 +486,10 @@ def main() -> int:
             img, strip = drop_white_edge_strip(canvas_of(lib_psd, layers))
             if strip:
                 entry["checks"]["whiteEdgeStripCols"] = strip
+            if slot != "diptube":
+                img, specks = drop_specks(img, slot)
+                if specks:
+                    entry["checks"].setdefault("specksClearedPx", {})[slot] = specks
             name = f"{cid}--{i}-{slot}.png"
             cut, ox, oy = crop_save(img, out_dir / name)
             entry["layers"].append({"slot": slot, "layerName": ", ".join(l.name for l in layers), "file": name, "width": cut.width, "height": cut.height, "sha256": sha(cut),
@@ -452,7 +502,9 @@ def main() -> int:
             caps = [l for l in on.closure if (l.bbox[3] - l.bbox[1]) <= 3 * (l.bbox[2] - l.bbox[0]) and l.bbox[3] <= on.bm["rim"] + 0.25 * body_h]
             over = max(caps or [l for l in on.closure if (l.bbox[3] - l.bbox[1]) <= 3 * (l.bbox[2] - l.bbox[0])] or on.closure, key=lambda l: (l.bbox[2] - l.bbox[0]) * (l.bbox[3] - l.bbox[1]))
             on_px_per_mm = plate["pxPerMm"] * (on.bm["foot"] - on.bm["rim"]) / plate_span
-            img = canvas_of(on.psd, [over])
+            img, specks = drop_specks(canvas_of(on.psd, [over]), "overcap")
+            if specks:
+                entry["checks"].setdefault("specksClearedPx", {})["overcap"] = specks
             name = f"{cid}--overcap.png"
             cut, ox, oy = crop_save(img, out_dir / name)
             entry["layers"].append({"slot": "overcap", "layerName": f"{over.name} ({on.path.name})", "file": name, "width": cut.width, "height": cut.height, "sha256": sha(cut),
