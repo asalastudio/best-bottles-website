@@ -145,7 +145,8 @@ export function useGraceImageUpload() {
                     description,
                     matches: matches.map((m) => ({
                         ...m,
-                        heroImageUrl: null,
+                        // The gateway stamps each raw row with its own released hero (2026-09-26).
+                        heroImageUrl: (m as { heroImageUrl?: string | null }).heroImageUrl ?? null,
                         reasoning: "Matched on shape, capacity, and applicator.",
                     })),
                 };

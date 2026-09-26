@@ -269,7 +269,8 @@ async function jevFor(text: string): Promise<{ answers: GraceIntentAnswers; ms: 
 }
 
 const openai = WITH_GRACE ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY }) : null;
-const GRACE_SYSTEM_PROMPT = WITH_GRACE ? buildSystemPrompt() : "";
+// askGrace reads the text channel (six catalogue tools, links instead of navigation tools).
+const GRACE_SYSTEM_PROMPT = WITH_GRACE ? buildSystemPrompt({ channel: "text" }) : "";
 const SEARCH_TOOL = GRACE_TOOLS.find((tool) => tool.type === "function" && tool.function.name === "searchCatalog")!;
 
 async function graceArgsFor(text: string): Promise<{ args: Record<string, string | null>; ms: number } | { error: string }> {

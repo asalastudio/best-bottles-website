@@ -1,0 +1,135 @@
+# Grace nightly battery against the deployed storefront.
+#
+# Every night this runs the same checks a person would run after a deploy:
+#   1. scripts/diagnose_grace.mjs against staging/production
+#      (https://best-bottles-website.vercel.app): the Realtime token route, the
+#      tool gateway (getCatalogStats + a searchCatalog with a Refine state), one
+#      GPT-5 text turn through /api/grace/chat, and the grace.* Convex queries
+#      on the production deployment.
+#   2. scripts/grace-retrieval-matrix.mjs: families × capacities + applicator
+#      spots through grace.searchCatalog on production Convex.
+#   3. scripts/grace-jev-intent-eval.mts: the 117-case Jev intent eval, so a
+#      Jev-side change shows up as a score drift, not as a customer complaint.
+#
+# A failure opens (or comments on) a GitHub issue labelled `grace-nightly` so it
+# is visible without watching the Actions tab.
+#
+# Secrets: TYPESAFE_API_KEY (Jev eval only). Convex URL and site URL are public.
+name: Grace nightly
+
+on:
+  schedule:
+    # 12:17 UTC = 05:17 Pacific (04:17 in winter): before the working day starts.
+    - cron: "17 12 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: grace-nightly
+  cancel-in-progress: false
+
+env:
+  BASE_URL: https://best-bottles-website.vercel.app
+  # Production Convex deployment (precise-raccoon-123). Public URL, not a secret.
+  NEXT_PUBLIC_CONVEX_URL: https://precise-raccoon-123.convex.cloud
+
+jobs:
+  staging-battery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.17.0
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Both scripts read .env.local at startup; the env above must win.
+      - name: Stub .env.local
+        run: touch .env.local
+
+      - name: Diagnostic (routes, tool gateway, Convex, one text turn)
+        run: npm run diag:grace -- --chat
+
+      - name: searchCatalog matrix (families × capacities)
+        run: npm run test:grace:matrix
+
+      - name: Open or update the failure issue
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const label = "grace-nightly";
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const day = new Date().toISOString().slice(0, 10);
+            const title = `Grace nightly failed (${day})`;
+            const body = [
+              `The nightly Grace battery against ${process.env.BASE_URL} failed on ${day}.`,
+              "",
+              `Run: ${runUrl}`,
+              "",
+              "Reproduce locally:",
+              "```bash",
+              `BASE_URL=${process.env.BASE_URL} NEXT_PUBLIC_CONVEX_URL=${process.env.NEXT_PUBLIC_CONVEX_URL} npm run diag:grace -- --chat`,
+              `NEXT_PUBLIC_CONVEX_URL=${process.env.NEXT_PUBLIC_CONVEX_URL} npm run test:grace:matrix`,
+              "```",
+            ].join("\n");
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: label, per_page: 1,
+            });
+            if (open.length > 0) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner, repo: context.repo.repo, issue_number: open[0].number,
+                body: `Failed again on ${day}: ${runUrl}`,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner, repo: context.repo.repo, title, body, labels: [label],
+              });
+            }
+
+  jev-intent-eval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    env:
+      TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+    steps:
+      - name: Check required secret
+        run: |
+          if [ -z "$TYPESAFE_API_KEY" ]; then
+            echo "::error::TYPESAFE_API_KEY secret is required for the Jev intent eval."
+            exit 1
+          fi
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.17.0
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Stub .env.local
+        run: touch .env.local
+
+      - name: Run Grace Jev intent eval
+        run: npm run eval:grace:jev
+
+      - name: Upload eval results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: grace-nightly-jev-intent-eval
+          path: data/grace-evals/results/
+          if-no-files-found: ignore
+          retention-days: 14

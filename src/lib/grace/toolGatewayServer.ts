@@ -4,7 +4,56 @@ import { createResilientConvexHttpClient } from "@/lib/convexServerClient";
 import { resolveSearchCatalogParameters } from "@/lib/graceToolParamUtils";
 import { enrichSearchCatalogWithJev } from "@/lib/grace/enrichSearchCatalogWithJev";
 import { applyRefineFacets, describeRefineFacets } from "@/lib/grace/refineFacetMatch";
+import { annotateGraceSearchRows, buildGraceSearchTiles, type GraceTileImageSources } from "@/lib/grace/searchTiles";
+import { getCatalogHero } from "@/lib/products/catalog-heroes";
 import { hasCatalogSourceHold, isHiddenCatalogGroup } from "@/lib/products/catalog-listing-visibility";
+
+type GraceTileRow = { slug?: string | null; websiteSku?: string | null; graceSku?: string | null };
+
+/** The catalogue card's hero: the group's released Sunburst hero among the rows the search returned. */
+function heroForSearchGroup(slug: string, rows: readonly GraceTileRow[]): { websiteSku: string; url: string } | null {
+    const hero = getCatalogHero(slug, rows, rows[0]?.websiteSku ?? null);
+    return hero ? { websiteSku: hero.websiteSku, url: hero.url } : null;
+}
+
+/**
+ * Photo sources for Grace's tiles: Sunburst hero first, then the SKU's own
+ * cap-on plate (one plate-index query for the rows without a hero). A plate
+ * lookup failure costs the photos, never the search.
+ */
+async function graceTileImageSources<Row extends GraceTileRow>(
+    convex: Pick<ConvexHttpClient, "query">,
+    rows: readonly Row[],
+): Promise<GraceTileImageSources<Row>> {
+    const withHeroes = annotateGraceSearchRows(rows, { heroForGroup: heroForSearchGroup });
+    const wanted = Array.from(new Set(
+        withHeroes.filter((row) => !row.heroImageUrl && row.websiteSku?.trim()).map((row) => row.websiteSku!.trim()),
+    )).slice(0, 25);
+    let plates: Record<string, { thumb?: string | null; image?: string | null }> = {};
+    if (wanted.length > 0) {
+        try {
+            const found = await convex.query(api.productPlates.forSkus, { skus: wanted });
+            plates = found.plates;
+        } catch (error) {
+            console.warn("[Grace tools] plate lookup failed; tiles keep their heroes only:", error instanceof Error ? error.message : error);
+        }
+    }
+    return {
+        heroForGroup: heroForSearchGroup,
+        plateForSku: (websiteSku) => {
+            const plate = websiteSku ? plates[websiteSku.trim()] : undefined;
+            return plate?.thumb || plate?.image || null;
+        },
+    };
+}
+
+/** "applicator: filter rollon; capFinish: Gold Cap" from Jev's recorded decisions, for the model and the logs. */
+function describeJevDecisions(decisions: Record<string, string> | undefined): string {
+    const parts = Object.entries(decisions ?? {})
+        .filter(([, value]) => typeof value === "string" && value.trim().length > 0)
+        .map(([key, value]) => `${key}: ${value}`);
+    return parts.length > 0 ? parts.join("; ") : "no recorded decisions";
+}
 
 /**
  * Sellable means Shopify says so. A variant ID alone is not enough: hundreds of
@@ -45,7 +94,7 @@ import {
     buildSearchCatalogToolResult,
     emptySearchCatalogHint,
 } from "../../../convex/graceSearchUtils";
-import { noMatchGraceToolResult } from "@/lib/graceToolResults";
+import { noMatchGraceToolResult, type GraceToolResult } from "@/lib/graceToolResults";
 import { searchCatalogServer } from "@/lib/catalogServer";
 import { buildPolicyToolResult } from "@/lib/grace/policyCorpus";
 import type { GraceRefineState } from "@/lib/grace/refineState";
@@ -203,13 +252,37 @@ export async function executeGraceServerTool({
                 // whole sentence went through the storefront's every-word search
                 // instead, "10 ml roll-on bottle with gold cap" found nothing, and
                 // Grace told the customer we do not carry it.
-                const data = await convex.query(
-                    api.grace.searchCatalog,
-                    searchParams
-                );
-                const visible = Array.isArray(data) ? data.filter(isCustomerVisibleRow) : data;
-                const facets = Array.isArray(visible) ? applyRefineFacets(visible, refineState?.filters ?? null) : null;
-                const rows = facets && facets.rows.length > 0 ? facets.rows : (Array.isArray(visible) ? visible : []);
+                const runSearch = async (params: typeof searchParams) => {
+                    const data = await convex.query(api.grace.searchCatalog, params);
+                    const visible = Array.isArray(data) ? data.filter(isCustomerVisibleRow) : data;
+                    const facets = Array.isArray(visible) ? applyRefineFacets(visible, refineState?.filters ?? null) : null;
+                    const rows = facets && facets.rows.length > 0 ? facets.rows : (Array.isArray(visible) ? visible : []);
+                    return { data, visible, facets, rows };
+                };
+                let effectiveParams = searchParams;
+                let search = await runSearch(searchParams);
+                let broadenNote: string | null = null;
+                // Jev safety net: when the filter Jev added empties the search,
+                // run the request once more exactly as the customer wrote it.
+                // Jev is right 97% of the time on the 117-case eval; on the rest
+                // a wrong applicator or family must not turn into "we don't
+                // carry it". The model is told which reading was dropped.
+                if (Array.isArray(search.data) && search.rows.length === 0 && jevEnrichment.applied) {
+                    const asWritten = {
+                        searchTerm: resolved.searchTerm,
+                        categoryLimit: resolved.categoryLimit,
+                        familyLimit: resolved.familyLimit,
+                        applicatorFilter: resolved.applicatorFilter,
+                    };
+                    const retry = await runSearch(asWritten);
+                    if (Array.isArray(retry.data) && retry.rows.length > 0) {
+                        console.info("[Grace/Jev] broadened: enriched search found nothing; the request as written found", retry.rows.length, describeJevDecisions(jevEnrichment.decisions));
+                        search = retry;
+                        effectiveParams = asWritten;
+                        broadenNote = `Jev's reading of the request (${describeJevDecisions(jevEnrichment.decisions)}) matched nothing in the catalogue, so these rows answer the request exactly as the customer wrote it. Do not apply that reading again; describe what these rows show.`;
+                    }
+                }
+                const { data, visible, facets, rows } = search;
                 const refineNote = facets?.active && Array.isArray(visible) && visible.length > 0
                     ? (facets.rows.length === 0
                         ? `ACTIVE REFINE STATE (${describeRefineFacets(facets.active)}) matches none of these ${visible.length} verified rows; they sit outside the customer's current filters. Say that plainly, offer to broaden that dimension, and do not present them as filtered results.`
@@ -225,15 +298,15 @@ export async function executeGraceServerTool({
                         break;
                     }
                     result = noMatchGraceToolResult({
-                        message: `No verified exact match found for "${searchParams.searchTerm}". Do not name or recommend a specific product from memory. You may try ONE broader or reworded search. If a second search for this same request also returns no match, STOP searching — tell the customer plainly that we do not carry it, name the closest real alternatives you have already seen, and ask one narrowing question. Never issue a third reworded search for the same request.${emptySearchCatalogHint(searchParams.searchTerm)}`,
+                        message: `No verified exact match found for "${effectiveParams.searchTerm}". Do not name or recommend a specific product from memory. You may try ONE broader or reworded search. If a second search for this same request also returns no match, STOP searching — tell the customer plainly that we do not carry it, name the closest real alternatives you have already seen, and ask one narrowing question. Never issue a third reworded search for the same request.${emptySearchCatalogHint(effectiveParams.searchTerm)}`,
                         requested: {
-                            searchTerm: searchParams.searchTerm,
-                            familyLimit: searchParams.familyLimit,
-                            applicatorFilter: searchParams.applicatorFilter,
+                            searchTerm: effectiveParams.searchTerm,
+                            familyLimit: effectiveParams.familyLimit,
+                            applicatorFilter: effectiveParams.applicatorFilter,
                         },
                         suggestedQueries: [
-                            searchParams.familyLimit ? `${searchParams.familyLimit} ${searchParams.searchTerm}` : searchParams.searchTerm.replace(/\b10\s*ml\b/i, "9ml"),
-                            searchParams.searchTerm.replace(/\broll[- ]?on\b/i, "roller"),
+                            effectiveParams.familyLimit ? `${effectiveParams.familyLimit} ${effectiveParams.searchTerm}` : effectiveParams.searchTerm.replace(/\b10\s*ml\b/i, "9ml"),
+                            effectiveParams.searchTerm.replace(/\broll[- ]?on\b/i, "roller"),
                         ].filter((q, i, arr) => q.trim() && arr.indexOf(q) === i),
                         warnings: ["Never claim an exact size, SKU, price, stock status, or compatibility unless a tool result returned it."],
                     });
@@ -261,18 +334,42 @@ export async function executeGraceServerTool({
                         dataQualityFlags: p.dataQualityFlags,
                         sourceTrace: p.sourceTrace,
                     }));
+                    if (returnRaw) {
+                        // showProducts and the reference-image match read these
+                        // rows; each carries its own product link and photo too.
+                        result = annotateGraceSearchRows(slim, await graceTileImageSources(convex, slim));
+                        break;
+                    }
                     // The spoken/text model reads the whole tool result before it
                     // can answer; 25 fully described rows run to ~34 KB. Fifteen
                     // rows keep every closure and neck summary while roughly
                     // halving what the model must read per search.
                     const MODEL_ROW_LIMIT = 15;
                     const forModel = slim.length > MODEL_ROW_LIMIT ? slim.slice(0, MODEL_ROW_LIMIT) : slim;
-                    const built = returnRaw ? slim : buildSearchCatalogToolResult(searchParams, forModel);
-                    const countNote = !returnRaw && slim.length > forModel.length
+                    const built = buildSearchCatalogToolResult(effectiveParams, forModel);
+                    const countNote = slim.length > forModel.length
                         ? `${slim.length} verified rows match; the first ${forModel.length} follow. Ask for a narrower size, family or closure colour to see the rest.`
                         : null;
-                    const notes = [refineNote, countNote].filter(Boolean).join("\n");
-                    result = notes && typeof built === "string" ? `${notes}\n\n${built}` : built;
+                    const notes = [broadenNote, refineNote, countNote].filter(Boolean).join("\n");
+                    // The model reads `message`; the chat drawer reads `products`
+                    // to drop tiles that link to the real product page and show
+                    // the group's Sunburst hero or that SKU's own plate. Before
+                    // 2026-09-26 the plain search returned bare text, so its
+                    // tiles had neither.
+                    // ProductCard spells its optional strings as undefined, not null.
+                    const cards = slim.map((p) => ({
+                        ...p,
+                        family: p.family ?? undefined,
+                        capacity: p.capacity ?? undefined,
+                        color: p.color ?? undefined,
+                        slug: p.slug ?? undefined,
+                    }));
+                    const structured: GraceToolResult = {
+                        status: "ok",
+                        message: notes ? `${notes}\n\n${built}` : built,
+                        products: buildGraceSearchTiles(cards, await graceTileImageSources(convex, cards)),
+                    };
+                    result = structured;
                 }
                 break;
             }

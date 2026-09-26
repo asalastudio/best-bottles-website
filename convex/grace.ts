@@ -1145,7 +1145,9 @@ export const askGrace = action({
         // Constitution comes FIRST so the model cannot be overridden by a
         // caller-supplied pageContextBlock. Page context is clearly delimited
         // and length-capped to limit prompt-injection surface.
-        let systemPrompt = buildSystemPrompt();
+        // This action only ever has the six catalogue tools (GRACE_TOOLS), so
+        // it reads the text channel: links instead of navigation tools.
+        let systemPrompt = buildSystemPrompt({ channel: "text" });
         if (isVoice) {
             systemPrompt += VOICE_MODE_ADDENDUM;
         }
