@@ -35,7 +35,15 @@ export async function POST(req: NextRequest) {
         if (rateLimited) return rateLimited;
 
         const body = await req.json();
-        const result = await executePublicGraceToolCall(body, crypto.randomUUID());
+        const requestId = crypto.randomUUID();
+        const startedAt = Date.now();
+        const result = await executePublicGraceToolCall(body, requestId);
+        // One structured line per tool call so a "Grace found nothing" report can
+        // be traced to the exact parameters the model sent (2026-09-25 audit).
+        const summary = body && typeof body === "object"
+            ? JSON.stringify((body as { parameters?: unknown }).parameters ?? {}).slice(0, 400)
+            : "";
+        console.info(`[Grace tools] ${String((body as { tool_name?: unknown })?.tool_name ?? "?")} ${Date.now() - startedAt}ms ${requestId.slice(0, 8)} ${summary}`);
         return NextResponse.json({ result });
     } catch (error) {
         const message = error instanceof Error ? error.message : "";

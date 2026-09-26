@@ -1,6 +1,7 @@
 import "server-only";
 
-import { ConvexHttpClient } from "convex/browser";
+import type { ConvexHttpClient } from "convex/browser";
+import { createResilientConvexHttpClient } from "@/lib/convexServerClient";
 
 /**
  * Shared Convex access for the portal's server-side data layer.
@@ -16,7 +17,7 @@ export function getPortalConvex() {
     if (!convexClient) {
         const url = process.env.NEXT_PUBLIC_CONVEX_URL;
         if (!url) throw new Error("NEXT_PUBLIC_CONVEX_URL is not set");
-        convexClient = new ConvexHttpClient(url);
+        convexClient = createResilientConvexHttpClient(url);
     }
     return convexClient;
 }

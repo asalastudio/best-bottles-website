@@ -5,6 +5,7 @@ import {
     createGraceVoiceMediaStream,
     getGraceRealtimeToolSpecs,
     GraceRealtimeConnectionCancelledError,
+    GraceRealtimeDisconnectedError,
     type GraceRealtimeAgentConfig,
     type GraceRealtimeSessionLike,
 } from "../src/lib/grace/openaiRealtimeAdapter";
@@ -349,6 +350,106 @@ describe("Grace OpenAI Realtime adapter", () => {
         expect(onConnect).not.toHaveBeenCalled();
         expect(adapter.hasSession()).toBe(false);
         expect(adapter.isConnected()).toBe(false);
+    });
+
+    // The SDK reports socket state on the transport ("connection_change"), not
+    // as a server event. Live on 2026-09-25: the WebSocket closed with 1006 while
+    // the page idled, nothing noticed, and the next send threw inside the SDK.
+    class FakeTransportSession extends FakeSession {
+        transportHandlers = new Map<string, Array<(...args: unknown[]) => void>>();
+        transportStatus: "connected" | "disconnected" | "connecting" | "disconnecting" = "connected";
+        override transport = {
+            sendEvent: vi.fn(),
+            on: (event: string, handler: (...args: unknown[]) => void) => {
+                const handlers = this.transportHandlers.get(event) ?? [];
+                handlers.push(handler);
+                this.transportHandlers.set(event, handlers);
+                return this;
+            },
+            get status() {
+                return outer.transportStatus;
+            },
+        };
+        emitTransport(event: string, ...args: unknown[]) {
+            for (const handler of this.transportHandlers.get(event) ?? []) handler(...args);
+        }
+    }
+    // `outer` lets the transport getter reach the session instance.
+    let outer: FakeTransportSession;
+
+    function transportAdapter(callbacks: { onDisconnect?: (details?: { unexpected: boolean }) => void; onConnect?: () => void }) {
+        const session = new FakeTransportSession();
+        outer = session;
+        const adapter = createGraceOpenAIRealtimeAdapter({
+            baseInstructions: "Use verified catalog truth.",
+            toolImplementations: Object.fromEntries(
+                GRACE_OPENAI_TOOL_SPECS.map(({ name }) => [name, vi.fn()]),
+            ),
+            callbacks,
+            dependencies: { createAgent: (config: GraceRealtimeAgentConfig) => config, createSession: () => session },
+        });
+        return { adapter, session };
+    }
+
+    it("notices a transport that dropped on its own and reports it as unexpected", async () => {
+        const onDisconnect = vi.fn();
+        const { adapter, session } = transportAdapter({ onDisconnect });
+        await adapter.connect({ clientSecret: "ek_test", mode: "text" });
+        expect(adapter.isConnected()).toBe(true);
+
+        session.transportStatus = "disconnected";
+        session.emitTransport("connection_change", "disconnected");
+
+        expect(adapter.isConnected()).toBe(false);
+        expect(onDisconnect).toHaveBeenCalledWith({ unexpected: true });
+        expect(() => adapter.sendText("still there?")).toThrow(GraceRealtimeDisconnectedError);
+        expect(session.sendMessage).not.toHaveBeenCalled();
+    });
+
+    it("detects a silent socket close from the transport status before sending", async () => {
+        const onDisconnect = vi.fn();
+        const { adapter, session } = transportAdapter({ onDisconnect });
+        await adapter.connect({ clientSecret: "ek_test", mode: "text" });
+
+        // No event at all — only the transport's status changed.
+        session.transportStatus = "disconnected";
+
+        expect(adapter.isConnected()).toBe(false);
+        expect(onDisconnect).toHaveBeenCalledWith({ unexpected: true });
+    });
+
+    it("turns the SDK's own send failure into a disconnect instead of an unhandled rejection", async () => {
+        const onDisconnect = vi.fn();
+        const { adapter, session } = transportAdapter({ onDisconnect });
+        await adapter.connect({ clientSecret: "ek_test", mode: "text" });
+        session.sendMessage.mockImplementation(() => {
+            throw new Error("WebSocket is not connected. Make sure you call `connect()` before sending events.");
+        });
+
+        expect(() => adapter.sendText("Show me 10 ml roll-on bottles")).toThrow(GraceRealtimeDisconnectedError);
+        expect(adapter.isConnected()).toBe(false);
+        expect(onDisconnect).toHaveBeenCalledWith({ unexpected: true });
+    });
+
+    it("reports its own disconnect() as intentional and a replaced session as no disconnect at all", async () => {
+        const onDisconnect = vi.fn();
+        const onConnect = vi.fn();
+        const { adapter, session } = transportAdapter({ onDisconnect, onConnect });
+        await adapter.connect({ clientSecret: "ek_test", mode: "text" });
+        expect(onConnect).toHaveBeenCalledTimes(1);
+
+        // Reconnect over the live session: the old one closes quietly.
+        session.close.mockImplementation(() => {
+            session.transportStatus = "disconnected";
+            session.emitTransport("connection_change", "disconnected");
+        });
+        await adapter.connect({ clientSecret: "ek_test_2", mode: "text" });
+        expect(onDisconnect).not.toHaveBeenCalled();
+        expect(onConnect).toHaveBeenCalledTimes(2);
+
+        adapter.disconnect();
+        expect(onDisconnect).toHaveBeenCalledTimes(1);
+        expect(onDisconnect).toHaveBeenCalledWith({ unexpected: false });
     });
 
     it("asks Chrome for echo-cancelled microphone audio", async () => {

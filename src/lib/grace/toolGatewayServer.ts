@@ -1,7 +1,45 @@
-import { ConvexHttpClient } from "convex/browser";
+import type { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../convex/_generated/api";
+import { createResilientConvexHttpClient } from "@/lib/convexServerClient";
 import { resolveSearchCatalogParameters } from "@/lib/graceToolParamUtils";
 import { enrichSearchCatalogWithJev } from "@/lib/grace/enrichSearchCatalogWithJev";
+import { applyRefineFacets, describeRefineFacets } from "@/lib/grace/refineFacetMatch";
+import { hasCatalogSourceHold, isHiddenCatalogGroup } from "@/lib/products/catalog-listing-visibility";
+
+/**
+ * Sellable means Shopify says so. A variant ID alone is not enough: hundreds of
+ * variants exist as drafts (schema.ts, shopifySellable). When Shopify's word is
+ * missing, fall back to the older rule so nothing that used to be offered
+ * disappears.
+ */
+function isCheckoutEligible(row: { shopifySellable?: boolean | null; checkoutEligible?: boolean | null; shopifyVariantId?: string | null }): boolean {
+    if (row.shopifySellable === true) return true;
+    if (row.shopifySellable === false) return false;
+    return row.checkoutEligible ?? Boolean(row.shopifyVariantId);
+}
+
+/**
+ * Groups the storefront hides (duplicates, discontinued, source holds), the
+ * Internal category, retired SKUs and discontinued stock never reach a customer
+ * through Grace. The first live turn after the search fix surfaced two
+ * "__RETIRED__" 9 ml Cylinder rows marked Discontinued as the answer to a
+ * 10 ml roll-on request.
+ */
+function isCustomerVisibleRow(row: {
+    slug?: string | null;
+    category?: string | null;
+    websiteSku?: string | null;
+    stockStatus?: string | null;
+    retired?: boolean | null;
+}): boolean {
+    if (row.category === "Internal") return false;
+    if (row.retired === true) return false;
+    if (typeof row.websiteSku === "string" && row.websiteSku.includes("__RETIRED__")) return false;
+    if (typeof row.stockStatus === "string" && /^discontinued$/i.test(row.stockStatus.trim())) return false;
+    const slug = row.slug?.trim();
+    if (slug && (isHiddenCatalogGroup(slug) || hasCatalogSourceHold(slug))) return false;
+    return true;
+}
 import {
     VERIFIED_9ML_CYLINDER_ROLLON_COLORS,
     buildSearchCatalogToolResult,
@@ -23,7 +61,7 @@ function getConvex(): ConvexHttpClient {
     if (!_convex) {
         const url = process.env.NEXT_PUBLIC_CONVEX_URL;
         if (!url) throw new Error("NEXT_PUBLIC_CONVEX_URL is not set");
-        _convex = new ConvexHttpClient(url);
+        _convex = createResilientConvexHttpClient(url);
     }
     return _convex;
 }
@@ -128,7 +166,9 @@ export async function executeGraceServerTool({
                     requestText: typeof parameters.customerRequest === "string"
                         ? parameters.customerRequest
                         : resolved.searchTerm,
-                    timeoutMs: 2500,
+                    // Jev answers in 110–330 ms on the live logs; 1.5 s bounds the tail
+                    // without giving up the enrichment (it was 2.5 s on every search).
+                    timeoutMs: 1500,
                     useCaseTable: true,
                 });
                 const searchParams = {
@@ -144,48 +184,42 @@ export async function executeGraceServerTool({
                 }
                 const returnRaw = wantsRawSearchCatalogResult(parameters);
                 const refineState = parameters.refineState as GraceRefineState | undefined;
-                if (refineState?.filters && refineState.sort && refineState.view) {
-                    const catalog = await searchCatalogServer({
+                if (returnRaw && refineState?.filters && refineState.sort && refineState.view) {
+                    // setCatalogRefinements verifies a filter combination against
+                    // the storefront's own search: the visible catalogue is the
+                    // authority for what a Refine change will show.
+                    result = await searchCatalogServer({
                         filters: refineState.filters,
                         sort: refineState.sort,
                         view: refineState.view,
                         limit: 24,
                         cursor: null,
                     });
-                    if (catalog.items.length === 0) {
-                        result = noMatchGraceToolResult({
-                            message: `No verified products match the active Refine state for "${searchParams.searchTerm}". Keep the active constraints unless the customer explicitly asks to broaden them.`,
-                            requested: { searchTerm: searchParams.searchTerm },
-                            suggestedQueries: [],
-                            warnings: ["Never silently remove a family, capacity, color, applicator, or neck-thread constraint."],
-                        });
-                        break;
-                    }
-                    const primarySkuByGroup = new Map(catalog.primarySkus.map((row) => [String(row.groupId), row]));
-                    const lines = [
-                        `Verified Refine results: ${catalog.totalCount} product group${catalog.totalCount === 1 ? "" : "s"}. Showing ${catalog.items.length}.`,
-                        ...catalog.items.map((group) => {
-                            const primary = primarySkuByGroup.get(String(group._id));
-                            return [
-                                group.displayName,
-                                group.capacity,
-                                group.color,
-                                group.neckThreadSize ? `thread ${group.neckThreadSize}` : null,
-                                primary?.graceSku ? `Grace SKU ${primary.graceSku}` : null,
-                                typeof group.priceRangeMin === "number" ? `from $${group.priceRangeMin.toFixed(2)}` : null,
-                            ].filter(Boolean).join(" — ");
-                        }),
-                    ];
-                    result = returnRaw ? catalog : lines.join("\n");
                     break;
                 }
+                // Grace's own search reads the request the way the customer said
+                // it; the active Refine facets (family, size, glass colour, neck,
+                // applicator, roller) then constrain the rows. Until 2026-09-25 the
+                // whole sentence went through the storefront's every-word search
+                // instead, "10 ml roll-on bottle with gold cap" found nothing, and
+                // Grace told the customer we do not carry it.
                 const data = await convex.query(
                     api.grace.searchCatalog,
                     searchParams
                 );
+                const visible = Array.isArray(data) ? data.filter(isCustomerVisibleRow) : data;
+                const facets = Array.isArray(visible) ? applyRefineFacets(visible, refineState?.filters ?? null) : null;
+                const rows = facets && facets.rows.length > 0 ? facets.rows : (Array.isArray(visible) ? visible : []);
+                const refineNote = facets?.active && Array.isArray(visible) && visible.length > 0
+                    ? (facets.rows.length === 0
+                        ? `ACTIVE REFINE STATE (${describeRefineFacets(facets.active)}) matches none of these ${visible.length} verified rows; they sit outside the customer's current filters. Say that plainly, offer to broaden that dimension, and do not present them as filtered results.`
+                        : facets.excluded > 0
+                            ? `Active Refine state (${describeRefineFacets(facets.active)}) kept ${facets.rows.length} of ${visible.length} verified rows; the rest are outside the current filters.`
+                            : null)
+                    : null;
                 if (!Array.isArray(data)) {
                     result = data;
-                } else if (data.length === 0) {
+                } else if (rows.length === 0) {
                     if (returnRaw) {
                         result = [];
                         break;
@@ -204,12 +238,12 @@ export async function executeGraceServerTool({
                         warnings: ["Never claim an exact size, SKU, price, stock status, or compatibility unless a tool result returned it."],
                     });
                 } else {
-                    const slim = data.map((p) => ({
+                    const slim = rows.map((p) => ({
                         graceSku: p.graceSku,
                         websiteSku: p.websiteSku,
                         itemName: p.itemName,
                         shopifyVariantId: p.shopifyVariantId ?? null,
-                        checkoutEligible: p.checkoutEligible ?? Boolean(p.shopifyVariantId),
+                        checkoutEligible: isCheckoutEligible(p),
                         family: p.family,
                         capacity: p.capacity,
                         capacityMl: p.capacityMl,
@@ -227,7 +261,18 @@ export async function executeGraceServerTool({
                         dataQualityFlags: p.dataQualityFlags,
                         sourceTrace: p.sourceTrace,
                     }));
-                    result = returnRaw ? slim : buildSearchCatalogToolResult(searchParams, slim);
+                    // The spoken/text model reads the whole tool result before it
+                    // can answer; 25 fully described rows run to ~34 KB. Fifteen
+                    // rows keep every closure and neck summary while roughly
+                    // halving what the model must read per search.
+                    const MODEL_ROW_LIMIT = 15;
+                    const forModel = slim.length > MODEL_ROW_LIMIT ? slim.slice(0, MODEL_ROW_LIMIT) : slim;
+                    const built = returnRaw ? slim : buildSearchCatalogToolResult(searchParams, forModel);
+                    const countNote = !returnRaw && slim.length > forModel.length
+                        ? `${slim.length} verified rows match; the first ${forModel.length} follow. Ask for a narrower size, family or closure colour to see the rest.`
+                        : null;
+                    const notes = [refineNote, countNote].filter(Boolean).join("\n");
+                    result = notes && typeof built === "string" ? `${notes}\n\n${built}` : built;
                 }
                 break;
             }
@@ -270,7 +315,7 @@ export async function executeGraceServerTool({
                             websiteSku: d.bottle.websiteSku,
                             itemName: d.bottle.itemName,
                             shopifyVariantId: d.bottle.shopifyVariantId,
-                            checkoutEligible: d.bottle.checkoutEligible ?? Boolean(d.bottle.shopifyVariantId),
+                            checkoutEligible: isCheckoutEligible(d.bottle),
                             family: d.bottle.family,
                             capacity: d.bottle.capacity,
                             color: d.bottle.color,
@@ -362,7 +407,7 @@ export async function executeGraceServerTool({
                         websiteSku: data.websiteSku,
                         itemName: data.itemName,
                         shopifyVariantId: data.shopifyVariantId ?? null,
-                        checkoutEligible: Boolean(data.shopifyVariantId),
+                        checkoutEligible: isCheckoutEligible(data),
                         family: data.family,
                         capacity: data.capacity,
                         capacityMl: data.capacityMl,
@@ -500,7 +545,7 @@ export async function executeGraceServerTool({
                             websiteSku: p.websiteSku ?? null,
                             itemName: p.itemName,
                             shopifyVariantId: p.shopifyVariantId ?? null,
-                            checkoutEligible: p.checkoutEligible ?? Boolean(p.shopifyVariantId),
+                            checkoutEligible: isCheckoutEligible(p),
                             // Fallback path: searchCatalog returns family/slug as
                             // optional, but the primary `groups`-based path infers
                             // them as required strings. Coerce to satisfy the
@@ -547,7 +592,7 @@ export async function executeGraceServerTool({
                             websiteSku: p.websiteSku ?? null,
                             itemName: p.itemName,
                             shopifyVariantId: p.shopifyVariantId ?? null,
-                            checkoutEligible: p.checkoutEligible ?? Boolean(p.shopifyVariantId),
+                            checkoutEligible: isCheckoutEligible(p),
                             family: p.family ?? family,
                             capacity: p.capacity,
                             capacityMl: p.capacityMl,
@@ -585,7 +630,7 @@ export async function executeGraceServerTool({
                             websiteSku: match.websiteSku ?? null,
                             itemName: match.itemName,
                             shopifyVariantId: match.shopifyVariantId ?? null,
-                            checkoutEligible: match.checkoutEligible ?? Boolean(match.shopifyVariantId),
+                            checkoutEligible: isCheckoutEligible(match),
                             family: match.family ?? family,
                             capacity: match.capacity,
                             capacityMl: match.capacityMl,
@@ -643,7 +688,11 @@ export async function executeGraceServerTool({
                         ...variant,
                         websiteSku: product.websiteSku ?? variant.websiteSku ?? null,
                         shopifyVariantId: product.shopifyVariantId ?? null,
-                        checkoutEligible: Boolean(product.shopifyVariantId ?? variant.shopifyVariantId),
+                        checkoutEligible: isCheckoutEligible({
+                            shopifySellable: (product as { shopifySellable?: boolean | null }).shopifySellable
+                                ?? (variant as { shopifySellable?: boolean | null }).shopifySellable,
+                            shopifyVariantId: product.shopifyVariantId ?? variant.shopifyVariantId,
+                        }),
                         webPrice1pc: product.webPrice1pc ?? variant.webPrice1pc,
                         webPrice10pc: product.webPrice10pc ?? variant.webPrice10pc ?? null,
                         webPrice12pc: product.webPrice12pc ?? variant.webPrice12pc ?? null,
@@ -711,7 +760,7 @@ export async function executeGraceServerTool({
                         websiteSku: p.websiteSku,
                         itemName: p.itemName,
                         shopifyVariantId: p.shopifyVariantId ?? null,
-                        checkoutEligible: Boolean(p.shopifyVariantId),
+                        checkoutEligible: isCheckoutEligible(p),
                         family: p.family,
                         capacity: p.capacity,
                         capacityMl: p.capacityMl,

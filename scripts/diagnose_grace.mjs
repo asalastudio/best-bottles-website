@@ -1,16 +1,19 @@
 #!/usr/bin/env node
 /**
- * Grace AI Diagnostic — dependencies, API routes, and catalog tool chain.
+ * Grace AI Diagnostic — environment, the OpenAI Realtime routes, the tool
+ * gateway, and the Convex catalog tool chain.
  *
  * Run:
- *   pnpm diag:grace
- *   node scripts/diagnose_grace.mjs
+ *   npm run diag:grace
+ *   BASE_URL=http://localhost:3000 npm run diag:grace
+ *   BASE_URL=https://best-bottles-website.vercel.app npm run diag:grace   # staging / production
+ *   npm run diag:grace -- --chat        # also sends one GPT-5 text turn (costs a model call)
  *
- * Optional:
- *   BASE_URL=https://bestbottles.company pnpm diag:grace   # production Next app (bestbottles.com is legacy PHP)
+ * Section 2 needs the Next app reachable at BASE_URL. Section 3 needs
+ * NEXT_PUBLIC_CONVEX_URL and hits Convex directly, the same path Grace's tools use.
  *
- * Requires for section 2: dev server (or deployed site) for API checks.
- * Requires for section 3: NEXT_PUBLIC_CONVEX_URL — hits Convex directly (same path as Grace tools).
+ * Rewritten 2026-09-25: the previous version probed the ElevenLabs routes that
+ * were removed in August, so every run reported failures that meant nothing.
  */
 
 import { readFileSync } from "fs";
@@ -24,7 +27,7 @@ try {
     const content = readFileSync(envPath, "utf8");
     for (const line of content.split("\n")) {
         const m = line.match(/^([^#=]+)=(.*)$/);
-        if (m) process.env[m[1].trim()] = m[2].trim().replace(/^["']|["']$/g, "");
+        if (m) process.env[m[1].trim()] ??= m[2].trim().replace(/^["']|["']$/g, "");
     }
 } catch {
     /* ignore */
@@ -33,22 +36,40 @@ try {
 const BASE = process.env.BASE_URL || "http://localhost:3000";
 const CONVEX_URL = process.env.NEXT_PUBLIC_CONVEX_URL || process.env.CONVEX_URL;
 const BASE_ORIGIN = new URL(BASE).origin;
-const SERVER_TOOL_HEADERS = {
+const RUN_CHAT = process.argv.includes("--chat");
+const JSON_HEADERS = {
     "Content-Type": "application/json",
     Origin: BASE_ORIGIN,
 };
 
 async function check(name, fn) {
+    const startedAt = Date.now();
     try {
         const result = await fn();
-        return { name, ok: true, detail: result };
+        return { name, ok: true, detail: result, ms: Date.now() - startedAt };
     } catch (e) {
-        return { name, ok: false, detail: String(e?.message ?? e) };
+        return { name, ok: false, detail: String(e?.message ?? e), ms: Date.now() - startedAt };
     }
 }
 
+function report(label, outcome) {
+    console.log(`   ${label}: ${outcome.ok ? outcome.detail : "FAIL — " + outcome.detail} (${outcome.ms} ms)`);
+}
+
+async function postTool(tool_name, parameters) {
+    const r = await fetch(BASE + "/api/grace/tools", {
+        method: "POST",
+        headers: JSON_HEADERS,
+        body: JSON.stringify({ tool_name, parameters }),
+    });
+    const body = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(`HTTP ${r.status}: ${body.error ?? "Unknown"}`);
+    if (body.error) throw new Error(String(body.error));
+    return body.result;
+}
+
 /**
- * Validates Convex grace.* queries used by ElevenLabs server-tools and text-mode tools.
+ * Validates the Convex grace.* queries the tool gateway and askGrace call.
  */
 async function runCatalogToolDiagnostics() {
     console.log("\n3. Grace catalog tools (Convex — grace.searchCatalog, etc.):");
@@ -61,9 +82,10 @@ async function runCatalogToolDiagnostics() {
     let failed = false;
 
     const run = async (label, fn) => {
+        const startedAt = Date.now();
         try {
             const msg = await fn();
-            console.log(`   [OK] ${label}: ${msg}`);
+            console.log(`   [OK] ${label}: ${msg} (${Date.now() - startedAt} ms)`);
         } catch (e) {
             failed = true;
             console.log(`   [FAIL] ${label}: ${e?.message ?? e}`);
@@ -91,6 +113,12 @@ async function runCatalogToolDiagnostics() {
         const sku = first.graceSku ?? "";
         const name = (first.itemName ?? "").slice(0, 50);
         return `${rows.length} rows; first SKU ${sku || "?"} — ${name}`;
+    });
+
+    await run('searchCatalog("10 ml roll-on bottle")', async () => {
+        const rows = await client.query(api.grace.searchCatalog, { searchTerm: "10 ml roll-on bottle" });
+        if (!Array.isArray(rows) || rows.length === 0) throw new Error("expected 10 ml roll-on rows");
+        return `${rows.length} rows`;
     });
 
     await run("getFamilyOverview(Cylinder)", async () => {
@@ -130,95 +158,100 @@ async function main() {
     console.log("Grace AI Diagnostic\n");
     console.log("─".repeat(50));
 
-    // 1. Env vars (from process — only what's available in Node)
-    const hasConvex = !!process.env.NEXT_PUBLIC_CONVEX_URL;
-    const hasElevenLabsKey = !!process.env.ELEVENLABS_API_KEY;
-    const hasElevenLabsAgent = !!process.env.ELEVENLABS_AGENT_ID;
+    // 1. Env vars (names only; values are never printed)
     console.log("\n1. Environment (this process):");
-    console.log(`   NEXT_PUBLIC_CONVEX_URL: ${hasConvex ? "set" : "MISSING"}`);
-    console.log(`   ELEVENLABS_API_KEY:     ${hasElevenLabsKey ? "set" : "MISSING"}`);
-    console.log(`   ELEVENLABS_AGENT_ID:    ${hasElevenLabsAgent ? "set" : "MISSING"}`);
-    console.log("   OPENAI_API_KEY:         (Convex env — set via `npx convex env set OPENAI_API_KEY xxx`)");
+    for (const [name, note] of [
+        ["NEXT_PUBLIC_CONVEX_URL", "Convex deployment the tools read"],
+        ["OPENAI_API_KEY", "mints the Realtime client secret (/api/openai/realtime-token)"],
+        ["TYPESAFE_API_KEY", "Jev intent enrichment for searchCatalog (optional; Grace works without it)"],
+        ["GRACE_TOOLS_WEBHOOK_SECRET", "cross-origin secret for /api/grace/tools (optional; same-origin calls pass)"],
+    ]) {
+        console.log(`   ${name.padEnd(28)} ${process.env[name] ? "set" : "MISSING"} — ${note}`);
+    }
 
     let exitCode = 0;
 
-    // 2. API routes (requires dev server)
+    // 2. API routes (requires the Next app)
     console.log("\n2. API routes (requires app reachable at " + BASE + "):");
-    const signedUrl = await check("signed-url", async () => {
-        const r = await fetch(BASE + "/api/elevenlabs/signed-url");
+    const token = await check("realtime-token", async () => {
+        const r = await fetch(BASE + "/api/openai/realtime-token");
         const body = await r.json().catch(() => ({}));
         if (!r.ok) throw new Error(`HTTP ${r.status}: ${body.error ?? "Unknown"}`);
-        if (!body.signedUrl) throw new Error("No signedUrl in response");
-        return `OK (${body.signedUrl?.slice?.(0, 50) ?? "unknown"}...)`;
+        if (typeof body.clientSecret !== "string" || !body.clientSecret) throw new Error("No clientSecret in response");
+        return `OK (model ${body.model ?? "?"}, voice ${body.voice ?? "?"})`;
     });
-    console.log(`   /api/elevenlabs/signed-url: ${signedUrl.ok ? signedUrl.detail : "FAIL — " + signedUrl.detail}`);
-    if (!signedUrl.ok) exitCode = 1;
+    report("/api/openai/realtime-token", token);
+    if (!token.ok) exitCode = 1;
 
-    const serverTools = await check("server-tools getCatalogStats", async () => {
-        const r = await fetch(BASE + "/api/elevenlabs/server-tools", {
-            method: "POST",
-            headers: SERVER_TOOL_HEADERS,
-            body: JSON.stringify({ tool_name: "getCatalogStats", parameters: {} }),
-        });
-        const body = await r.json().catch(() => ({}));
-        if (!r.ok) throw new Error(`HTTP ${r.status}: ${body.error ?? "Unknown"}`);
-        if (body.error) throw new Error(String(body.error));
-        const v = body.result?.totalVariants;
+    const stats = await check("tools getCatalogStats", async () => {
+        const result = await postTool("getCatalogStats", {});
+        const v = result?.totalVariants;
         if (typeof v !== "number") throw new Error("result.totalVariants missing");
         return `OK (${v} variants)`;
     });
-    console.log(`   /api/elevenlabs/server-tools (getCatalogStats): ${serverTools.ok ? serverTools.detail : "FAIL — " + serverTools.detail}`);
-    if (!serverTools.ok) exitCode = 1;
+    report("/api/grace/tools (getCatalogStats)", stats);
+    if (!stats.ok) exitCode = 1;
 
-    const serverSearch = await check("server-tools searchCatalog", async () => {
-        const r = await fetch(BASE + "/api/elevenlabs/server-tools", {
-            method: "POST",
-            headers: SERVER_TOOL_HEADERS,
-            body: JSON.stringify({
-                tool_name: "searchCatalog",
-                parameters: { searchTerm: "boston round 15ml", familyLimit: "Boston Round" },
-            }),
+    const search = await check("tools searchCatalog", async () => {
+        // The 2026-09-25 regression: this plain request came back "no verified
+        // matches" whenever the page carried a Refine state.
+        const result = await postTool("searchCatalog", {
+            searchTerm: "10 ml roll-on bottle",
+            refineState: {
+                filters: {
+                    applicators: [], rollerMaterials: [], families: [], colors: [], capacities: [], neckThreadSizes: [],
+                    category: null, collection: null, componentType: null, search: "10 ml roll-on bottle",
+                    priceMin: null, priceMax: null,
+                },
+                sort: "capacity-asc",
+                view: "visual",
+            },
         });
-        const body = await r.json().catch(() => ({}));
-        if (!r.ok) throw new Error(`HTTP ${r.status}: ${body.error ?? "Unknown"}`);
-        if (body.error) throw new Error(String(body.error));
-        const res = body.result;
-        if (Array.isArray(res) && res.length > 0) return `OK (${res.length} products)`;
-        if (typeof res === "string" && res.length > 20) return `OK (text result, ${res.length} chars)`;
-        throw new Error(`unexpected result shape: ${typeof res}`);
+        if (result && typeof result === "object" && result.status === "no_match") throw new Error(`no_match: ${result.message}`);
+        if (Array.isArray(result) && result.length > 0) return `OK (${result.length} products)`;
+        if (typeof result === "string" && result.length > 20) return `OK (text result, ${result.length} chars)`;
+        throw new Error(`unexpected result shape: ${typeof result}`);
     });
-    console.log(`   /api/elevenlabs/server-tools (searchCatalog): ${serverSearch.ok ? serverSearch.detail : "FAIL — " + serverSearch.detail}`);
-    if (!serverSearch.ok) exitCode = 1;
+    report("/api/grace/tools (searchCatalog, with a Refine state)", search);
+    if (!search.ok) exitCode = 1;
 
-    const conversationToken = await check("conversation-token", async () => {
-        const r = await fetch(BASE + "/api/elevenlabs/conversation-token");
-        const body = await r.json().catch(() => ({}));
-        if (!r.ok) throw new Error(`HTTP ${r.status}: ${body.error ?? "Unknown"}`);
-        if (!body.token) throw new Error("No token in response");
-        return "OK";
-    });
-    console.log(`   /api/elevenlabs/conversation-token: ${conversationToken.ok ? conversationToken.detail : "FAIL — " + conversationToken.detail}`);
-    if (!conversationToken.ok) exitCode = 1;
+    if (RUN_CHAT) {
+        const chat = await check("chat", async () => {
+            const r = await fetch(BASE + "/api/grace/chat", {
+                method: "POST",
+                headers: JSON_HEADERS,
+                body: JSON.stringify({ messages: [{ role: "user", content: "Which 10 ml roll-on bottles do you carry?" }] }),
+            });
+            const body = await r.json().catch(() => ({}));
+            if (!r.ok) throw new Error(`HTTP ${r.status}: ${body.error ?? "Unknown"}`);
+            const text = typeof body.message === "string" ? body.message : JSON.stringify(body.message ?? "");
+            if (!text) throw new Error("empty reply");
+            return `OK (${text.length} chars)`;
+        });
+        report("/api/grace/chat (one GPT-5 turn)", chat);
+        if (!chat.ok) exitCode = 1;
+    } else {
+        console.log("   /api/grace/chat: skipped (pass --chat to send one text turn)");
+    }
 
     const catalogDiag = await runCatalogToolDiagnostics();
     if (!catalogDiag.skipped && !catalogDiag.ok) exitCode = 1;
 
     console.log("\n4. Common fixes:");
-    if (!signedUrl.ok) {
-        console.log("   • Voice: Ensure ELEVENLABS_API_KEY and ELEVENLABS_AGENT_ID in .env.local.");
-        console.log("   • Restart dev server after changing env vars.");
-        console.log("   • If you see HTTP 404: start the app (`pnpm dev`) or set BASE_URL to a deployed origin.");
+    if (!token.ok) {
+        console.log("   • Voice/text sessions: OPENAI_API_KEY must be set for the Next app (Vercel env or .env.local).");
+        console.log("   • If you see HTTP 404 or 'fetch failed': start the app (`npm run dev`) or set BASE_URL to a deployed origin.");
+        console.log("   • HTTP 429: the per-IP rate limit (30 tokens/min) tripped; wait a minute.");
     }
-    if (!serverTools.ok || !serverSearch.ok) {
-        console.log("   • Server tools: Ensure NEXT_PUBLIC_CONVEX_URL is set and Convex deployment is reachable.");
+    if (!stats.ok || !search.ok) {
+        console.log("   • Tools: NEXT_PUBLIC_CONVEX_URL must point at a reachable Convex deployment.");
+        console.log("   • A no_match on the plain roll-on search means the gateway is routing Grace's sentence through the storefront's strict search again.");
     }
     if (catalogDiag.skipped) {
-        console.log("   • Catalog section: Set NEXT_PUBLIC_CONVEX_URL in .env.local to validate grace.* queries.");
+        console.log("   • Catalog section: set NEXT_PUBLIC_CONVEX_URL in .env.local to validate grace.* queries.");
     }
-    console.log("   • Text mode / portal Grace: Ensure OPENAI_API_KEY is set in Convex:");
-    console.log("     npx convex env set OPENAI_API_KEY sk-...");
-    console.log("   • If voice drops immediately: Known issue — text mode works as fallback.");
-    console.log("\n   More catalog coverage: pnpm test:grace:matrix");
+    console.log("   • Text fallback (askGrace) runs inside Convex and needs OPENAI_API_KEY there: npx convex env set OPENAI_API_KEY ...");
+    console.log("\n   More catalog coverage: npm run test:grace:matrix");
     console.log("\n" + "─".repeat(50));
     console.log(exitCode === 0 ? "Done — all checks passed." : "Done — some checks failed (see above).");
     process.exit(exitCode);

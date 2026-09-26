@@ -452,7 +452,8 @@ export const searchCatalog = query({
                     websiteSku: p.websiteSku,
                     itemName: p.itemName,
                     shopifyVariantId: p.shopifyVariantId ?? null,
-                    checkoutEligible: Boolean(p.shopifyVariantId),
+                    // Shopify's own word wins; a variant ID alone can be a draft.
+                    checkoutEligible: p.shopifySellable === true || (p.shopifySellable == null && Boolean(p.shopifyVariantId)),
                     category: p.category,
                     family: p.family,
                     capacity: canonicalVariant.capacity
@@ -928,7 +929,7 @@ export const patchKnowledgeEntries = internalMutation({
                 content: `Best Bottles carries thousands of glass and packaging products organised into four primary categories. Grace should ALWAYS call getCatalogStats() to get the live product count — never rely on a number stored in this knowledge entry, as it will go stale.
 
 GLASS BOTTLES (primary product line):
-12 distinct bottle families: Cylinder, Elegant, Circle, Diva, Empire, Slim, Boston Round, Sleek, Diamond, Royal, Round, Square. Available in clear, frosted, and amber glass. Capacities from 5ml sample sizes through 500ml production volumes. All glass meets Type III cosmetic/pharmaceutical standards. UV-resistant amber glass is available across all major families.
+Twenty-four design families, including Cylinder, Elegant, Circle, Diva, Empire, Slim, Boston Round, Sleek, Diamond, Royal, Round, Square, Rectangle, Tulip, Bell, Pillar, Flair, Vial, Apothecary and Decorative — call getFamilyOverview or getCatalogStats for the live list. Glass colours: Clear, Frosted, Amber, Cobalt Blue, Green and Swirl. Capacities from 1 ml sample vials through the 454 ml Cylinder. All glass meets Type III cosmetic/pharmaceutical standards. UV-resistant amber glass is available across the major families.
 
 ALUMINUM BOTTLES:
 Lightweight alternative for travel-size and eco-conscious brands.

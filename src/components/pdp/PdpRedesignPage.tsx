@@ -23,6 +23,12 @@ import type { ProductVariant } from "@/app/products/[slug]/ProductDetailClient";
 import { analytics } from "@/lib/analytics";
 import { checkoutMinimum, isCheckoutReady, isSoldOutStockStatus } from "@/lib/checkout";
 import { dispatchPdpContextChange } from "@/lib/grace/pageContextEvents";
+import {
+    GRACE_PDP_PLATE_EVENT,
+    isGracePdpPlateCommand,
+    matchListedOption,
+    type GracePdpPlateCommand,
+} from "@/lib/grace/pdpPlateSwap";
 import type { PlateRef } from "@/lib/paper-doll/plates";
 import type { ItemDescription } from "@/lib/products/item-description/resolve";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
@@ -137,6 +143,45 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     const views = useMemo(() => availableViews(kit, stageContext), [kit, stageContext]);
     // The requested view survives a SKU change; a SKU without layers shows SIDECAR until one returns.
     const shownView: StageView = views.includes(view) ? view : "sidecar";
+
+    // Grace's configureCurrentProduct lands here as it does on the classic page
+    // (ProductDetailClient). Until 2026-09-25 this page had no listener, so the
+    // tool reported "Updating the bottle…" and nothing moved.
+    useEffect(() => {
+        const onCommand = (event: Event) => {
+            const command = (event as CustomEvent<GracePdpPlateCommand>).detail;
+            if (!isGracePdpPlateCommand(command)) return;
+            setPicks((current) => {
+                if (command.sku) return derivePicks(variants, group, { sku: command.sku, roller: null, cap: null });
+                let next: Picks = { ...current };
+                if (command.rollerVariant && rollers.some((option) => option.id === command.rollerVariant)) {
+                    next = { ...next, roller: command.rollerVariant as RollerId };
+                }
+                if (command.capOption) {
+                    const options = capOptions(variants, next.roller);
+                    const matched = matchListedOption(command.capOption, options.map((option) => option.name));
+                    const option = matched ? options.find((candidate) => candidate.name === matched) : null;
+                    if (option) next = { ...next, cap: option.id };
+                }
+                return next;
+            });
+            // The redesign's views: cap beside (sidecar), cap on, exploded.
+            if (command.viewMode === "assembled") setView("capon");
+            if (command.viewMode === "capOff") setView("sidecar");
+        };
+        window.addEventListener(GRACE_PDP_PLATE_EVENT, onCommand);
+        return () => window.removeEventListener(GRACE_PDP_PLATE_EVENT, onCommand);
+    }, [variants, group, rollers]);
+
+    // A `?sku=` pushed onto the same slug (Grace moving the customer to a sibling
+    // variant) must change the picks; the state initialiser only ran once. This
+    // is React's "adjust state when a prop changes" pattern, applied in render.
+    const requestedSku = searchParams.get("sku");
+    const [appliedSku, setAppliedSku] = useState<string | null>(requestedSku);
+    if (requestedSku && requestedSku !== appliedSku) {
+        setAppliedSku(requestedSku);
+        setPicks(derivePicks(variants, group, { sku: requestedSku, roller: null, cap: null }));
+    }
 
     // The URL carries the picks so every combination is shareable; native history so nothing refetches.
     useEffect(() => {

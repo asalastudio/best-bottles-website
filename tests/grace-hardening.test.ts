@@ -42,7 +42,10 @@ describe("Grace 100-point hardening contracts", () => {
     const specTools = read("src/lib/knowledge/toolSchemas.ts");
 
     expect(route).toContain("shopifyVariantId: p.shopifyVariantId ?? null");
-    expect(route).toContain("checkoutEligible: p.checkoutEligible ?? Boolean(p.shopifyVariantId)");
+    // Since 2026-09-25 the gateway asks Shopify's own sellable flag first; a
+    // variant ID alone can be a draft.
+    expect(route).toContain("checkoutEligible: isCheckoutEligible(p)");
+    expect(route).toContain("if (row.shopifySellable === true) return true;");
     expect(proposeBlock).toContain("websiteSku: p.websiteSku ?? null");
     expect(proposeBlock).toContain("shopifyVariantId: p.shopifyVariantId ?? null");
     expect(proposeBlock).toContain("checkoutEligible: p.checkoutEligible ?? Boolean(p.shopifyVariantId)");

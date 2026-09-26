@@ -42,11 +42,13 @@ describe("Grace Refine state", () => {
         expect(source).toContain("Verified ${verifiedCount} matching");
     });
 
-    it("bridges family discovery to the dedicated family finder", () => {
+    it("keeps a single-family refine on the catalogue with the family in the URL", () => {
+        // /catalog/<family> redirects (since #221) onto category=Glass Bottle and
+        // drops non-nav applicator sets, so Grace never routes through it.
         const state = getGraceRefineState(new URLSearchParams("families=Cylinder"));
-        expect(graceRefineDestination(state)).toBe("/catalog/cylinder?sort=capacity-asc");
+        expect(graceRefineDestination(state)).toBe("/catalog?families=Cylinder&sort=capacity-asc");
         expect(graceRefineDestination(getGraceRefineState(new URLSearchParams("families=Boston+Round"))))
-            .toBe("/catalog/boston-round?sort=capacity-asc");
+            .toBe("/catalog?families=Boston+Round&sort=capacity-asc");
     });
 
     it("inherits every active catalog constraint exactly", () => {
@@ -103,7 +105,7 @@ describe("Grace Refine state", () => {
         ));
 
         expect(graceRefineDestination(state)).toBe(
-            "/catalog/cylinder?applicators=rollon&capacities=9+ml&threads=17-415&sort=capacity-asc",
+            "/catalog?applicators=rollon&families=Cylinder&capacities=9+ml&threads=17-415&sort=capacity-asc",
         );
     });
 

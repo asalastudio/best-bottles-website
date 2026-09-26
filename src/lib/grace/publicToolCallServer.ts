@@ -8,7 +8,7 @@ import {
     executeKnowledgeTool,
 } from "@/lib/knowledge/toolRegistry";
 import type { GraceOpenAIToolName } from "@/lib/knowledge/toolSchemas";
-import { EMPTY_FILTERS, ROLLER_MATERIALS } from "@/lib/catalogFilters";
+import { EMPTY_FILTERS, ROLLER_MATERIALS, SORT_OPTIONS } from "@/lib/catalogFilters";
 import type { GraceRefineState } from "@/lib/grace/refineState";
 import { getShopCollection } from "@/lib/shopCollections";
 
@@ -62,13 +62,13 @@ function assertSafeRefineState(value: unknown): asserts value is GraceRefineStat
         || Object.keys(value.filters).some((key) => !allowedFilterKeys.has(key))) {
         throw new Error("Invalid parameters for public Grace tool: refineState contains undeclared fields");
     }
-    const validSorts = new Set([
-        "featured", "best-match", "price-asc", "price-desc", "name-asc", "name-desc",
-        "capacity-asc", "capacity-desc", "variants-desc",
-    ]);
-    if (!validSorts.has(String(value.sort)) || !new Set(["visual", "line"]).has(String(value.view))) {
-        throw new Error("Invalid parameters for public Grace tool: refineState has an invalid view or sort");
-    }
+    // The sort and view come straight from the catalogue URL the shopper is on.
+    // paramsToFilters accepts any `?sort=` value, so an unknown sort must not
+    // turn every Grace search on that page into a 400; fall back to the default
+    // order instead (2026-09-25 audit).
+    const validSorts = new Set<string>(SORT_OPTIONS.map((option) => option.value));
+    if (!validSorts.has(String(value.sort))) value.sort = "best-match";
+    if (!new Set(["visual", "line"]).has(String(value.view))) value.view = "visual";
     const filters = value.filters;
     const arrayKeys = ["applicators", "families", "colors", "capacities", "neckThreadSizes"];
     for (const key of arrayKeys) {

@@ -29,15 +29,17 @@ export const APPLICATOR_VALUE_ALIASES: Record<string, string> = {
 export const FAMILY_MIN_SIZE_ML: Record<string, number> = {
     "Boston Round": 15,
     Circle: 15,
-    Cylinder: 5,
+    // The Cylinder line starts at the 3.3 ml sample spray; a minimum of 5 made
+    // Grace deny a 3 ml Cylinder that exists (2026-09-25 audit).
+    Cylinder: 3,
     Diva: 30,
     Elegant: 15,
     // Empire's smallest real size is 50ml (also 100ml). 30 caused Grace to
     // assert a non-existent 30ml Empire in both channels and fails the
-    // pivot-empire-15ml eval. Cylinder/Slim minimums remain under review
-    // pending catalog-truth reconciliation (see launch sprint plan).
+    // pivot-empire-15ml eval.
     Empire: 50,
-    Slim: 15,
+    // Slim is sold in 30, 50 and 100 ml; 15 let Grace promise a size we do not carry.
+    Slim: 30,
 };
 
 export type { ShapeMatch } from "../src/lib/graceShapeIntent";
