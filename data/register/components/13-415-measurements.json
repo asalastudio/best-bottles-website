@@ -1,0 +1,1141 @@
+{
+ "neck": "13-415",
+ "psdRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+ "method": "library PSD registered on the closure of a sold SKU's master photo; photo scale tied to the body's register plate by seat-to-foot",
+ "components": [
+  {
+   "componentId": "CMP-CAP-13-415",
+   "websiteSku": "CP13-415SpryBluMt",
+   "type": "fine-mist-sprayer",
+   "psd": "20. Caps/18. 13-415 Sprayers/4. Spry13-415BluMt.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /5. GBCrcl15SpryBluMatt.psd",
+    "sku": "GBCrcl15SpryBluMatt",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 325.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 7",
+    "matchedLayers": [
+     "Layer 13"
+    ],
+    "overcapPsd": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/5. GBCrcl15SpryBluMatt.psd"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 1",
+     "file": "CMP-CAP-13-415--0-sprayer.png",
+     "width": 528,
+     "height": 993,
+     "sha256": "9a41ce1ea4f7e686d39c11b0b76d6bb89cd33bec877e2d4ff5c0f6853328ab90",
+     "pxPerMm": 33.6991,
+     "anchor": {
+      "x": 253.5,
+      "y": 573.0
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 18 (5. GBCrcl15SpryBluMatt.psd)",
+     "file": "CMP-CAP-13-415--overcap.png",
+     "width": 210,
+     "height": 394,
+     "sha256": "d5794d78965a3aea6757349b0d8b412a636d1117fcf899c9d6d423d29d4f3702",
+     "pxPerMm": 11.233,
+     "anchor": {
+      "x": 102.5,
+      "y": 246
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9812,
+    "libraryScale": 3.0,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-CAP-BLK-13-415-01",
+   "websiteSku": "CP13-415SpryBlkMt",
+   "type": "fine-mist-sprayer",
+   "psd": "20. Caps/18. 13-415 Sprayers/1. Spry13-415BlkMt.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /3. GBCrcl15SpryBlkMatt.psd",
+    "sku": "GBCrcl15SpryBlkMatt",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 335.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 7",
+    "matchedLayers": [
+     "Layer 9"
+    ],
+    "overcapPsd": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/3. GBCrcl15SpryBlkMatt.psd"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 1",
+     "file": "CMP-CAP-BLK-13-415-01--0-sprayer.png",
+     "width": 524,
+     "height": 1048,
+     "sha256": "047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d",
+     "pxPerMm": 31.6683,
+     "anchor": {
+      "x": 256.2,
+      "y": 610.2
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 14 (3. GBCrcl15SpryBlkMatt.psd)",
+     "file": "CMP-CAP-BLK-13-415-01--overcap.png",
+     "width": 217,
+     "height": 394,
+     "sha256": "b45348edce87e0f56e9fb934151ebc13cdaf4029209e7e3dbea54d2f27f4d1cc",
+     "pxPerMm": 11.233,
+     "anchor": {
+      "x": 108.5,
+      "y": 242
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9729,
+    "libraryScale": 2.8192,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-CAP-BLK-13-415-02",
+   "websiteSku": "CP13-415SpryBlkSh",
+   "type": "fine-mist-sprayer",
+   "psd": "20. Caps/18. 13-415 Sprayers/3. Spry13-415BlkSh.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /4. GBCrcl15SpryBlkSh.psd",
+    "sku": "GBCrcl15SpryBlkSh",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 325.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 7",
+    "matchedLayers": [
+     "Layer 11"
+    ],
+    "overcapPsd": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/4. GBCrcl15SpryBlkSh.psd"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 1",
+     "file": "CMP-CAP-BLK-13-415-02--0-sprayer.png",
+     "width": 584,
+     "height": 1085,
+     "sha256": "026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854",
+     "pxPerMm": 35.4862,
+     "anchor": {
+      "x": 291.1,
+      "y": 645.8
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 16 (4. GBCrcl15SpryBlkSh.psd)",
+     "file": "CMP-CAP-BLK-13-415-02--overcap.png",
+     "width": 235,
+     "height": 394,
+     "sha256": "0d973b7809b6734336588f87e9718c6698f508987cdad579f4468bfd5776b85f",
+     "pxPerMm": 11.233,
+     "anchor": {
+      "x": 101.5,
+      "y": 245
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9854,
+    "libraryScale": 3.1591,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-CAP-BLK-S-13-415",
+   "websiteSku": "CP13-415BlkSht",
+   "type": "roll-on-cap",
+   "psd": "20. Caps/17. 13-415 Caps /1. CP13-415BlkSht.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/1. GBCrcl15BlkSht.psd",
+    "sku": "GBCrcl15BlkSht",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 350.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 7",
+    "matchedLayers": [
+     "Layer 3"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 1",
+     "file": "CMP-CAP-BLK-S-13-415--0-cap.png",
+     "width": 636,
+     "height": 419,
+     "sha256": "a2829b7bb645e84d48bf0d0f2446b0ba1fca83f79df5a07e68e32725524bde05",
+     "pxPerMm": 37.2019,
+     "anchor": {
+      "x": 308.4,
+      "y": 54.4
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9708,
+    "libraryScale": 3.3118,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-CAP-SGLD-13-415-01",
+   "websiteSku": "CP13-415Gl",
+   "type": "roll-on-cap",
+   "psd": "20. Caps/17. 13-415 Caps /4. CP13-415Gl.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/28. GBCrcl15Gl.psd",
+    "sku": "GBCrcl15Gl",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 455.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 10",
+    "matchedLayers": [
+     "Layer 11"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 2",
+     "file": "CMP-CAP-SGLD-13-415-01--0-cap.png",
+     "width": 470,
+     "height": 702,
+     "sha256": "4eeb615baeff7f098e9a4cf9f6264046a6ec4ef5a25706bef657d78c7a6c8cbf",
+     "pxPerMm": 26.0014,
+     "anchor": {
+      "x": 232.7,
+      "y": 363.9
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9883,
+    "libraryScale": 2.3147,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-CAP-SGLD-13-415-02",
+   "websiteSku": "CP13-415SpryGlMt",
+   "type": "fine-mist-sprayer",
+   "psd": "20. Caps/18. 13-415 Sprayers/6. Spry13-415GlMt.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /7. GBCrcl15SpryGlMatt.psd",
+    "sku": "GBCrcl15SpryGlMatt",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 322.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 7",
+    "matchedLayers": [
+     "Layer 17"
+    ],
+    "overcapPsd": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/7. GBCrcl15SpryGlMatt.psd"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 2",
+     "file": "CMP-CAP-SGLD-13-415-02--0-sprayer.png",
+     "width": 530,
+     "height": 1002,
+     "sha256": "b792a64de8ff90cbc6255fa6ec469113a8cdaa724ca9c9514085a230c3874764",
+     "pxPerMm": 33.1114,
+     "anchor": {
+      "x": 245.4,
+      "y": 575.2
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 22 (7. GBCrcl15SpryGlMatt.psd)",
+     "file": "CMP-CAP-SGLD-13-415-02--overcap.png",
+     "width": 214,
+     "height": 396,
+     "sha256": "b4071730d45aad300557716fd43f4b9c6d1ce86233400e83e3a8e17dec50df33",
+     "pxPerMm": 11.233,
+     "anchor": {
+      "x": 102.5,
+      "y": 242
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9917,
+    "libraryScale": 2.9477,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-CAP-SGLD-13-415-03",
+   "websiteSku": "CP13-415SpryGlSh",
+   "type": "fine-mist-sprayer",
+   "psd": "20. Caps/18. 13-415 Sprayers/5. Spry13-415GlSh.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /6. GBCrcl15SpryGlSh.psd",
+    "sku": "GBCrcl15SpryGlSh",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 325.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 7",
+    "matchedLayers": [
+     "Layer 15"
+    ],
+    "overcapPsd": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/6. GBCrcl15SpryGlSh.psd"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 1",
+     "file": "CMP-CAP-SGLD-13-415-03--0-sprayer.png",
+     "width": 570,
+     "height": 1060,
+     "sha256": "6d1e75eb88437a3ec4913e7fb138b44c625a9c3090c751961e5862c4822d80f7",
+     "pxPerMm": 34.6082,
+     "anchor": {
+      "x": 288.4,
+      "y": 613.5
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 20 (6. GBCrcl15SpryGlSh.psd)",
+     "file": "CMP-CAP-SGLD-13-415-03--overcap.png",
+     "width": 210,
+     "height": 397,
+     "sha256": "77e9889f85b72cf928f2408e9317378bd7444f4e0578b581f91e4c37b3fb96a9",
+     "pxPerMm": 11.233,
+     "anchor": {
+      "x": 102.5,
+      "y": 242
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9956,
+    "libraryScale": 3.0809,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-CAP-SLV-13-415-01",
+   "websiteSku": "CP13-415Sl",
+   "type": "roll-on-cap",
+   "psd": "20. Caps/17. 13-415 Caps /3. CP13-415Sl.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/29. GBCrcl15Sl.psd",
+    "sku": "GBCrcl15Sl",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 455.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 7",
+    "matchedLayers": [
+     "Layer 10"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 3",
+     "file": "CMP-CAP-SLV-13-415-01--0-cap.png",
+     "width": 470,
+     "height": 702,
+     "sha256": "f2c68357745b801401653b316341bc1a31089a918c258e4b682dfa4e81347a42",
+     "pxPerMm": 26.0014,
+     "anchor": {
+      "x": 235.0,
+      "y": 363.9
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9865,
+    "libraryScale": 2.3147,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-CAP-SLV-13-415-02",
+   "websiteSku": "CP13-415SprySlMt",
+   "type": "fine-mist-sprayer",
+   "psd": "20. Caps/18. 13-415 Sprayers/7. Spry13-415SlMt.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /8. GBCrcl15SprySlMatt.psd",
+    "sku": "GBCrcl15SprySlMatt",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 320.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 7",
+    "matchedLayers": [
+     "Layer 19"
+    ],
+    "overcapPsd": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/8. GBCrcl15SprySlMatt.psd"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 1",
+     "file": "CMP-CAP-SLV-13-415-02--0-sprayer.png",
+     "width": 562,
+     "height": 1028,
+     "sha256": "a20e02d4b923a879323b7f3406c9fdfff3cbc35b150ef43570352e336c1dc768",
+     "pxPerMm": 33.513,
+     "anchor": {
+      "x": 282.0,
+      "y": 596.8
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 26 (8. GBCrcl15SprySlMatt.psd)",
+     "file": "CMP-CAP-SLV-13-415-02--overcap.png",
+     "width": 217,
+     "height": 397,
+     "sha256": "1be2d9861e87c29a56140ae74184a378ba2c3fe06305ecf3d2f876b933e42f8f",
+     "pxPerMm": 11.233,
+     "anchor": {
+      "x": 114.5,
+      "y": 245
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9674,
+    "libraryScale": 2.9834,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-CAP-SLV-13-415-03",
+   "websiteSku": "CP13-415SprySlSh",
+   "type": "fine-mist-sprayer",
+   "psd": "20. Caps/18. 13-415 Sprayers/8 Spry13-415SlSh.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /9. GBCrcl15SprySlSh copy.psd",
+    "sku": "GBCrcl15SprySlSh",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 315.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 7",
+    "matchedLayers": [
+     "Layer 21"
+    ],
+    "overcapPsd": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/9. GBCrcl15SprySlSh copy.psd"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 1",
+     "file": "CMP-CAP-SLV-13-415-03--0-sprayer.png",
+     "width": 570,
+     "height": 1060,
+     "sha256": "68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681",
+     "pxPerMm": 34.6082,
+     "anchor": {
+      "x": 276.1,
+      "y": 616.6
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 26 (9. GBCrcl15SprySlSh copy.psd)",
+     "file": "CMP-CAP-SLV-13-415-03--overcap.png",
+     "width": 206,
+     "height": 393,
+     "sha256": "5d55997ab95a26957819244c7f5857179c7f04496a8b1f7cff60282b9b396115",
+     "pxPerMm": 11.233,
+     "anchor": {
+      "x": 97.5,
+      "y": 241
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9815,
+    "libraryScale": 3.0809,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-CAP-WHT-S-13-415",
+   "websiteSku": "CP13-415WhtSht",
+   "type": "roll-on-cap",
+   "psd": "20. Caps/17. 13-415 Caps /2. CP13-415WhtSht.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/2. GBCrcl15WhtSht.psd",
+    "sku": "GBCrcl15WhtSht",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 350.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 7",
+    "matchedLayers": [
+     "Layer 8"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 1",
+     "file": "CMP-CAP-WHT-S-13-415--0-cap.png",
+     "width": 627,
+     "height": 384,
+     "sha256": "af95e942ccfb091386ad4d5b203ac87cd37316ada04ad873e74ada96736018c2",
+     "pxPerMm": 37.0811,
+     "anchor": {
+      "x": 305.7,
+      "y": 19.2
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9041,
+    "libraryScale": 3.3011,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-ROC-BLK-13415-DOT",
+   "websiteSku": "CPRoll13-415BlackDot",
+   "type": "roll-on-cap",
+   "psd": "20. Caps/19. 13-415 Roll on/1. CPRoll13-415BlackDot.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/26. GBCyl5MtlRollBlkDot.psd",
+    "sku": "GBCyl5MtlRollBlkDot",
+    "bodyId": "cylinder-5ml-13-415",
+    "glass": "Clear",
+    "plateKey": "cylinder-5ml-13-415|Clear",
+    "bottlePxPerMm": 11.5625,
+    "rimY": 321,
+    "axisX": 298.0,
+    "seatToFootPx": 630,
+    "plateSeatToFootPx": 1943,
+    "bodyLayer": "Layer 28",
+    "matchedLayers": [
+     "Layer 30"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 2",
+     "file": "CMP-ROC-BLK-13415-DOT--0-cap.png",
+     "width": 217,
+     "height": 300,
+     "sha256": "1600b3dbeb4e0f59186934bb7a5fde2388437fdf0c5b1e12daf5a5a64548f6ba",
+     "pxPerMm": 12.0344,
+     "anchor": {
+      "x": 110.1,
+      "y": 138.1
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9084,
+    "libraryScale": 1.0408,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-ROC-MCPR-13415",
+   "websiteSku": "CPRoll13-415Cu",
+   "type": "roll-on-cap",
+   "psd": "20. Caps/19. 13-415 Roll on/7. CPRoll13-415Cu.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/22. GBCrcl15MtlRollCuMatt.psd",
+    "sku": "GBCrcl15MtlRollCuMatt",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 455.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 31",
+    "matchedLayers": [
+     "Layer 32"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 6",
+     "file": "CMP-ROC-MCPR-13415--0-cap.png",
+     "width": 208,
+     "height": 309,
+     "sha256": "bb805dd4a697892dc283552e9d7b09c75af970f33af7d15bcaeb7ba84eb87911",
+     "pxPerMm": 11.233,
+     "anchor": {
+      "x": 102.5,
+      "y": 159.0
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9869,
+    "libraryScale": 1.0,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-ROC-MGLD-13415",
+   "websiteSku": "CPRoll13-415GlMt",
+   "type": "roll-on-cap",
+   "psd": "20. Caps/19. 13-415 Roll on/5. CPRoll13-415GlMt.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/16. GBCrcl15MtlRollGlMatt.psd",
+    "sku": "GBCrcl15MtlRollGlMatt",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 455.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 28",
+    "matchedLayers": [
+     "Layer 29"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 8",
+     "file": "CMP-ROC-MGLD-13415--0-cap.png",
+     "width": 215,
+     "height": 307,
+     "sha256": "9b832eb09c64205073176388c4d434fa40587551d5aa4aa9e7f614a08761b2a1",
+     "pxPerMm": 11.4032,
+     "anchor": {
+      "x": 110.0,
+      "y": 155.2
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.983,
+    "libraryScale": 1.0152,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-ROC-MSLV-13415",
+   "websiteSku": "CPRoll13-415SlMt",
+   "type": "roll-on-cap",
+   "psd": "20. Caps/19. 13-415 Roll on/3. CPRoll13-415SlMt.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/14. GBCrcl15MtlRollSlMatt.psd",
+    "sku": "GBCrcl15MtlRollSlMatt",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 455.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 27",
+    "matchedLayers": [
+     "Layer 28"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 10",
+     "file": "CMP-ROC-MSLV-13415--0-cap.png",
+     "width": 213,
+     "height": 302,
+     "sha256": "c535b2709d5e55c210eb51b9c0aa8b0a08ed45124355251229ad09eeb403dd82",
+     "pxPerMm": 11.4041,
+     "anchor": {
+      "x": 112.1,
+      "y": 144.1
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9741,
+    "libraryScale": 1.0152,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-ROC-PNK-13415-DOT",
+   "websiteSku": "CPRoll13-415PinkDot",
+   "type": "roll-on-cap",
+   "psd": "20. Caps/19. 13-415 Roll on/4. CPRoll13-415PinkDot.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/12. GBCrcl15MtlRollPinkDot.psd",
+    "sku": "GBCrcl15MtlRollPinkDot",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 455.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 26",
+    "matchedLayers": [
+     "Layer 27"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 9",
+     "file": "CMP-ROC-PNK-13415-DOT--0-cap.png",
+     "width": 215,
+     "height": 297,
+     "sha256": "1bbb0de407e4d8d1eb779bfabc4bf4f1c02546ac9a27d59ffa413d014e682bca",
+     "pxPerMm": 11.6384,
+     "anchor": {
+      "x": 109.1,
+      "y": 134.5
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.952,
+    "libraryScale": 1.0361,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-ROC-SBLK-13415",
+   "websiteSku": "CPRoll13-415BlkSh",
+   "type": "roll-on-cap",
+   "psd": "20. Caps/19. 13-415 Roll on/9. CPRoll13-415BlkSh.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/24. GBCrcl15MtlRollBlkSh.psd",
+    "sku": "GBCrcl15MtlRollBlkSh",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 455.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 34",
+    "matchedLayers": [
+     "Layer 35"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 4",
+     "file": "CMP-ROC-SBLK-13415--0-cap.png",
+     "width": 220,
+     "height": 307,
+     "sha256": "7228d1ea9305176686d176e127e03e21b7156167d8fdc268233e0ba054661a69",
+     "pxPerMm": 11.6342,
+     "anchor": {
+      "x": 109.0,
+      "y": 151.9
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9681,
+    "libraryScale": 1.0357,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-ROC-SGLD-13415",
+   "websiteSku": "CPRoll13-415GlSh",
+   "type": "roll-on-cap",
+   "psd": "20. Caps/19. 13-415 Roll on/8. CPRoll13-415GlSh.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/18. GBCrcl15MtlRollGlSh.psd",
+    "sku": "GBCrcl15MtlRollGlSh",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 455.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 29",
+    "matchedLayers": [
+     "Layer 30"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 5",
+     "file": "CMP-ROC-SGLD-13415--0-cap.png",
+     "width": 218,
+     "height": 315,
+     "sha256": "32efebc48a1661a9be5081b4c6b6eea893cbfeb2b520f38f412e3ae6f9784902",
+     "pxPerMm": 11.5769,
+     "anchor": {
+      "x": 111.6,
+      "y": 159.3
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9491,
+    "libraryScale": 1.0306,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-ROC-SLV-13415-DOT",
+   "websiteSku": "CPRoll13-415SlDot",
+   "type": "roll-on-cap",
+   "psd": "20. Caps/19. 13-415 Roll on/2. CPRoll13-415SlDot.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/10. GBCrcl15MtlRollSlDot.psd",
+    "sku": "GBCrcl15MtlRollSlDot",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 455.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 25",
+    "matchedLayers": [
+     "Layer 26"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 11",
+     "file": "CMP-ROC-SLV-13415-DOT--0-cap.png",
+     "width": 215,
+     "height": 300,
+     "sha256": "1f928aee0555fa6fda688ec546e7c354868af4a1fde46c9dbc64d4c39e3af37b",
+     "pxPerMm": 11.8181,
+     "anchor": {
+      "x": 107.5,
+      "y": 136.4
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9273,
+    "libraryScale": 1.0521,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-ROC-SSLV-13415",
+   "websiteSku": "CPRoll13-415SlSh",
+   "type": "roll-on-cap",
+   "psd": "20. Caps/19. 13-415 Roll on/6. CPRoll13-415SlSh.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/20. GBCrcl15MtlRollSlSh.psd",
+    "sku": "GBCrcl15MtlRollSlSh",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 455.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 30",
+    "matchedLayers": [
+     "Layer 31"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 7",
+     "file": "CMP-ROC-SSLV-13415--0-cap.png",
+     "width": 215,
+     "height": 310,
+     "sha256": "47af502b49bb741db747fd15afd403b51715ddc42a89da0a6d27dbf386fe1706",
+     "pxPerMm": 11.4032,
+     "anchor": {
+      "x": 108.0,
+      "y": 159.3
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9773,
+    "libraryScale": 1.0152,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "CMP-SPR-MTCP-13-415-07",
+   "websiteSku": "CP13-415SpryCuMt",
+   "type": "fine-mist-sprayer",
+   "psd": "20. Caps/18. 13-415 Sprayers/2. Spry13-415CuMt.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /30. GBCrcl15SpryCuMatt.psd",
+    "sku": "GBCrcl15SpryCuMatt",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 320.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 7",
+    "matchedLayers": [
+     "Layer 22"
+    ],
+    "overcapPsd": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/30. GBCrcl15SpryCuMatt.psd"
+   },
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "Layer 2",
+     "file": "CMP-SPR-MTCP-13-415-07--0-sprayer.png",
+     "width": 556,
+     "height": 1034,
+     "sha256": "13222e3b731e9bdc76f3779b90794bab86a93e93c9638d56d908c913b349b2ec",
+     "pxPerMm": 34.3484,
+     "anchor": {
+      "x": 270.4,
+      "y": 602.2
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 10 copy (30. GBCrcl15SpryCuMatt.psd)",
+     "file": "CMP-SPR-MTCP-13-415-07--overcap.png",
+     "width": 236,
+     "height": 420,
+     "sha256": "861d0bbedd74c3b752bdb8f9e025fccfd31d4d04ee4533e1bf0859e01b4e4d90",
+     "pxPerMm": 11.233,
+     "anchor": {
+      "x": 105.5,
+      "y": 265
+     },
+     "z": "front",
+     "explodeIndex": 2
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9971,
+    "libraryScale": 3.0578,
+    "approvable": true
+   }
+  },
+  {
+   "componentId": "LIB-13-415-MtlRollon",
+   "websiteSku": "",
+   "type": "roller-insert",
+   "psd": "20. Caps/25. 13-415  Metal Roll on/1. 13-415MtlRollon.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /26. GBCrcl15MtlRollBlkDot.psd",
+    "sku": "GBCrcl15MtlRollBlkDot",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 317.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 7"
+   },
+   "layers": [
+    {
+     "slot": "roller",
+     "layerName": "Layer 33 (uncapped bottle photo, cleared from 3 px below the rim)",
+     "file": "LIB-13-415-MtlRollon--roller.png",
+     "width": 144,
+     "height": 122,
+     "sha256": "53cf968898a4e0df3ef88e45ed8557bc355e7fd0d82a8ab903b6fc6c185c13e0",
+     "pxPerMm": 11.233,
+     "anchor": {
+      "x": 68.5,
+      "y": 113
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the uncapped bottle photo",
+    "approvable": true,
+    "clippedBelowRimPx": 3
+   }
+  },
+  {
+   "componentId": "LIB-13-415-PlsticRollon",
+   "websiteSku": "",
+   "type": "roller-insert",
+   "psd": "20. Caps/24. 13-415 Roll on/2. 13-415PlsticRollon.psd",
+   "reference": {
+    "psd": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /27. GBCrcl15RollBlkDot.psd",
+    "sku": "GBCrcl15RollBlkDot",
+    "bodyId": "circle-15ml-13-415",
+    "glass": "Clear",
+    "plateKey": "circle-15ml-13-415|Clear",
+    "bottlePxPerMm": 11.233,
+    "rimY": 265,
+    "axisX": 317.5,
+    "seatToFootPx": 729,
+    "plateSeatToFootPx": 1957,
+    "bodyLayer": "Layer 7"
+   },
+   "layers": [
+    {
+     "slot": "roller",
+     "layerName": "Layer 33 (uncapped bottle photo, cleared from 3 px below the rim)",
+     "file": "LIB-13-415-PlsticRollon--roller.png",
+     "width": 136,
+     "height": 119,
+     "sha256": "25a3b7198c2449e8200d03f748fbf04a25c44265cfd3be02030a8b4e595d3e7a",
+     "pxPerMm": 11.233,
+     "anchor": {
+      "x": 66.5,
+      "y": 110
+     },
+     "z": "behind-body",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the uncapped bottle photo",
+    "approvable": true,
+    "clippedBelowRimPx": 3
+   }
+  }
+ ]
+}
