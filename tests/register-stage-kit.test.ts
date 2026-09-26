@@ -49,7 +49,7 @@ describe("kitFromRegister", () => {
 
     it("stands every SKU of the body on the body's fixed datum", () => {
         expect(kit).not.toBeNull();
-        expect(kit.anchors).toMatchObject({ axisX: 500, neckAxisX: 500, seatY: 286, baselineY: 1061 });
+        expect(kit.anchors).toMatchObject({ axisX: 500, neckAxisX: 500, seatY: DATUM.seatY, baselineY: 1061 });
         expect(kit.register).toMatchObject({ bodyId: "cylinder-9ml-17-415", plateKey: PLATE.plateKey, glass: "Clear", datum: DATUM });
         expect(kit.register.pxPerMm).toBeCloseTo(PX_PER_MM, 2);
         expect(kit.sku).toBe("GBCyl9MtlRollBlkDot");
@@ -64,11 +64,11 @@ describe("kitFromRegister", () => {
         const body = kit.parts.find((part) => part.slot === "body")!;
         const scale = PX_PER_MM / 27.2142;
         expect(body.box.x + 383 * scale).toBeCloseTo(500, 1);
-        expect(body.box.y + 167 * scale).toBeCloseTo(286, 1);
+        expect(body.box.y + 167 * scale).toBeCloseTo(DATUM.seatY, 1);
         expect(body.box.y + 2176 * scale).toBeCloseTo(1061, 1);
         expect(body.box.width).toBeCloseTo(768 * scale, 1);
         // bounds are the 20 mm glass, not the plate's canvas
-        expect(body.bounds.top).toBe(286);
+        expect(body.bounds.top).toBe(DATUM.seatY);
         expect(body.bounds.bottom).toBe(1061);
         expect(body.bounds.right - body.bounds.left).toBeCloseTo(20 * PX_PER_MM, 1);
         expect((body.bounds.left + body.bounds.right) / 2).toBeCloseTo(500, 6);
@@ -81,10 +81,10 @@ describe("kitFromRegister", () => {
         const cap = kit.parts.find((part) => part.slot === "cap")!;
         const rollerScale = PX_PER_MM / 12.3676;
         expect(roller.box.x + 91.5 * rollerScale).toBeCloseTo(500, 1);
-        expect(roller.box.y + 126 * rollerScale).toBeCloseTo(286, 1);
+        expect(roller.box.y + 126 * rollerScale).toBeCloseTo(DATUM.seatY, 1);
         const capScale = PX_PER_MM / 15.7596;
         expect(cap.box.x + 163.1 * capScale).toBeCloseTo(500, 1);
-        expect(cap.box.y + 203.5 * capScale).toBeCloseTo(286, 1);
+        expect(cap.box.y + 203.5 * capScale).toBeCloseTo(DATUM.seatY, 1);
         expect(cap.bounds).toEqual({ left: cap.box.x, top: cap.box.y, right: Math.round((cap.box.x + cap.box.width) * 100) / 100, bottom: Math.round((cap.box.y + cap.box.height) * 100) / 100 });
         expect([...kit.parts].sort((a, b) => a.zOrder - b.zOrder).map((part) => part.slot)).toEqual(["roller", "body", "cap"]);
         expect(roller.componentId).toBe(ROLLER.componentId);
@@ -212,5 +212,41 @@ describe("the two stages draw register parts through their boxes", () => {
         const crop = layerCropStyleForPart(body, frame);
         expect(crop).toMatchObject({ left: "0%", top: "0%", width: "100%", height: "100%" });
         expect(layerCropStyleForPart(legacy, { x: 0, y: 0, width: 500, height: 550 })).toMatchObject({ width: "200%", height: "200%" });
+    });
+});
+
+describe("see-through layers (one per glass)", () => {
+    const see = (glass: string) => ({
+        slot: "diptube" as const, z: "front" as const, explodeIndex: 5, usage: "seated" as const, glass,
+        url: `https://blob/register/components/see-${glass}.png`, width: 90, height: 1400, pxPerMm: 25, anchor: { x: 45, y: 20 }, approved: true,
+    });
+    const LOTION = { ...PUMP, layers: [...PUMP.layers, see("Clear"), see("Amber")] };
+    const AMBER = { ...PLATE, plateKey: "cylinder-9ml-17-415|Amber", glass: "Amber", url: "https://blob/register/plates/amber.png" };
+    const payload: RegisterStagePayload = {
+        ...PAYLOAD,
+        plates: { ...PAYLOAD.plates, [AMBER.plateKey]: AMBER },
+        components: { ...PAYLOAD.components, [PUMP.componentId]: LOTION },
+        assemblies: {
+            ...PAYLOAD.assemblies,
+            "LB-CYL-AMB-9ML-LTN-BLK": { graceSku: "LB-CYL-AMB-9ML-LTN-BLK", websiteSku: "LBCylAmb9LtnBlk", bodyId: "cylinder-9ml-17-415", plateKey: AMBER.plateKey, glass: "Amber", neck: "17-415", parts: [{ role: "pump", componentId: PUMP.componentId }], renderable: true, reason: null },
+        },
+    };
+
+    it("draws only the see-through layer rendered behind the SKU's own glass", () => {
+        const clear = kitFromRegister("LB-CYL-CLR-9ML-LTN-BLK", payload)!;
+        const amber = kitFromRegister("LB-CYL-AMB-9ML-LTN-BLK", payload)!;
+        const urls = (kit: typeof clear) => kit.parts.filter((part) => part.slot === "diptube").map((part) => part.image.url);
+        expect(urls(clear)).toEqual(["https://blob/register/components/see-Clear.png"]);
+        expect(urls(amber)).toEqual(["https://blob/register/components/see-Amber.png"]);
+        // glass-less layers (head, collar, overcap) are shared by every glass
+        expect(clear.parts.filter((part) => part.slot !== "diptube" && part.slot !== "body").length).toBe(PUMP.layers.length);
+        expect(amber.parts.filter((part) => part.slot !== "diptube" && part.slot !== "body").length).toBe(PUMP.layers.length);
+    });
+
+    it("keeps the seated see-through layer out of EXPLODED", () => {
+        const clear = kitFromRegister("LB-CYL-CLR-9ML-LTN-BLK", payload)!;
+        const layer = clear.parts.find((part) => part.slot === "diptube")!;
+        expect(layer.views).toEqual(["sidecar", "capon"]);
+        expect(assembledKit(clear).parts.some((part) => part.slot === "diptube")).toBe(true);
     });
 });

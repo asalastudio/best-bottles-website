@@ -124,6 +124,10 @@ export const componentLayerV = v.object({
     // The layer's lowest solid row (image px). With the plate's shoulderY it tells the stage how far a closure reaches under
     // the rim, so a cap measured on a long-necked bottle is lifted clear of a shorter neck's shoulder (Jordan 2026-09-26).
     solidBottomY: v.optional(v.number()),
+    // A part seen THROUGH the glass (a roller stem in the neck, a pump body and dip tube in the bottle) looks
+    // different in every glass, so it carries one layer per glass: the plate glass it was rendered behind
+    // ("Clear", "Amber", ...). The renderer draws it only on that glass; absent = every glass.
+    glass: v.optional(v.string()),
 });
 
 export const componentRegisterFields = {
