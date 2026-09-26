@@ -211,6 +211,17 @@ async function main() {
         if (result && typeof result === "object" && result.status === "no_match") throw new Error(`no_match: ${result.message}`);
         if (Array.isArray(result) && result.length > 0) return `OK (${result.length} products)`;
         if (typeof result === "string" && result.length > 20) return `OK (text result, ${result.length} chars)`;
+        if (result && typeof result === "object" && result.status === "ok" && typeof result.message === "string" && result.message.length > 20) {
+            // Since 2026-09-26 the gateway returns the model text next to the
+            // verified rows, each with its product-page link and its own hero.
+            const tiles = Array.isArray(result.products) ? result.products : [];
+            const linked = tiles.filter((t) => typeof t?.verifiedPdpHref === "string" && t.verifiedPdpHref.startsWith("/products/") && t.verifiedPdpHref.includes("sku=")).length;
+            const sunburst = tiles.filter((t) => t?.heroImageKind === "sunburst").length;
+            const plates = tiles.filter((t) => t?.heroImageKind === "plate").length;
+            const pictured = tiles.filter((t) => typeof t?.heroImageUrl === "string" && t.heroImageUrl.length > 0).length;
+            if (tiles.length > 0 && linked === 0) throw new Error(`${tiles.length} tiles but none carries a /products/…?sku= link`);
+            return `OK (text result, ${result.message.length} chars; ${tiles.length} tiles, ${linked} linked, ${pictured} with photos: ${sunburst} Sunburst heroes, ${plates} plates)`;
+        }
         throw new Error(`unexpected result shape: ${typeof result}`);
     });
     report("/api/grace/tools (searchCatalog, with a Refine state)", search);
@@ -227,7 +238,10 @@ async function main() {
             if (!r.ok) throw new Error(`HTTP ${r.status}: ${body.error ?? "Unknown"}`);
             const text = typeof body.message === "string" ? body.message : JSON.stringify(body.message ?? "");
             if (!text) throw new Error("empty reply");
-            return `OK (${text.length} chars)`;
+            if (/not yet configured|contact the team to enable/i.test(text)) throw new Error(`Grace is unconfigured on this deployment: ${text.slice(0, 80)}`);
+            // The text channel links products it recommends (/products/{slug}?sku=…).
+            const productLinks = (text.match(/\/products\/[^\s)]+\?sku=/g) ?? []).length;
+            return `OK (${text.length} chars, ${productLinks} product link${productLinks === 1 ? "" : "s"})`;
         });
         report("/api/grace/chat (one GPT-5 turn)", chat);
         if (!chat.ok) exitCode = 1;

@@ -1,13 +1,52 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { Fragment, useEffect, useMemo, useRef, type MouseEvent } from "react";
+import Link from "next/link";
 import type { GraceMessage } from "@/components/GraceContext";
 import GraceActionRenderer from "./GraceActionRenderer";
 import { useGrace } from "@/components/useGrace";
 import { analytics } from "@/lib/analytics";
+import { isGraceProductPageHref } from "@/lib/grace/agenticHandoff";
+import { splitGraceMessageLinks } from "@/lib/grace/messageLinks";
 
 interface GraceChatMessageProps {
     message: GraceMessage;
+}
+
+/**
+ * Grace's text with its site links rendered as links. The text fallback has
+ * no navigation tools, so it answers with markdown links to product pages
+ * (see convex/gracePrompt.ts, TEXT_CHANNEL_LINKS); a product link hands off
+ * the same way a product card does.
+ */
+export function GraceMessageText({ text }: { text: string }) {
+    const { followSurfacedProduct } = useGrace();
+    const segments = useMemo(() => splitGraceMessageLinks(text), [text]);
+    return (
+        <>
+            {segments.map((segment, index) => {
+                if (segment.type === "text") return <Fragment key={index}>{segment.text}</Fragment>;
+                const handoff = followSurfacedProduct && isGraceProductPageHref(segment.href)
+                    ? (event: MouseEvent<HTMLAnchorElement>) => {
+                        event.preventDefault();
+                        followSurfacedProduct({ href: segment.href });
+                    }
+                    : undefined;
+                return (
+                    <Link
+                        key={index}
+                        href={segment.href}
+                        onClick={handoff}
+                        data-grace-message-link="true"
+                        className="underline underline-offset-2 decoration-[1px] hover:text-obsidian"
+                        style={{ textDecorationColor: "var(--color-muted-gold)" }}
+                    >
+                        {segment.label}
+                    </Link>
+                );
+            })}
+        </>
+    );
 }
 
 export default function GraceChatMessage({ message }: GraceChatMessageProps) {
@@ -57,7 +96,7 @@ export default function GraceChatMessage({ message }: GraceChatMessageProps) {
             style={message.pinned ? { borderLeft: "2px solid var(--color-muted-gold)" } : undefined}
         >
             <p className="text-[14.5px] leading-[1.65] text-obsidian/85 whitespace-pre-wrap font-sans">
-                {message.content}
+                <GraceMessageText text={message.content} />
             </p>
             {actions.map((action, index) => (
                 <GraceActionRenderer

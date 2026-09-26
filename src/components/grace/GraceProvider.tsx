@@ -67,6 +67,7 @@ import { STANDARD_NECK_FINISHES, normalizeApplicatorBuckets } from "@/lib/catalo
 import { hasLocalePrefix, localizeHref, stripLocalePrefix } from "@/i18n/paths";
 import type { AppLocale } from "@/i18n/config";
 import { getCanonicalProductSlug } from "@/lib/products/legacy-product-route-overrides";
+import { preferHeroRepresentative } from "@/lib/grace/searchTiles";
 import {
     GRACE_MINIMUM_CONTENT_WIDTH_PX,
     gracePushEligiblePathname,
@@ -458,9 +459,9 @@ function selectGraceTileProducts(products: ProductCard[], query?: string, limit 
     const matchingApplicator = scoped.filter((product) => productMatchesApplicatorIntent(product, query));
     if (matchingApplicator.length > 0) scoped = matchingApplicator;
 
-    const deduped = Array.from(
-        new Map(scoped.map((product) => [product.slug || product.graceSku || product.itemName, product] as const)).values(),
-    );
+    // One tile per group, shown through the SKU that owns a released hero so
+    // the photo and the link name the same variant.
+    const deduped = preferHeroRepresentative(scoped as Array<ProductCard & { heroImageUrl?: string | null }>);
 
     return deduped
         .sort((a, b) => {
@@ -524,6 +525,7 @@ async function fetchJsonWithTimeout<T>(
     url: string,
     init: RequestInit,
     timeoutMs = GRACE_TOOL_TIMEOUT_MS,
+    timeoutMessage = "Grace timed out while checking the catalog.",
 ): Promise<{ ok: boolean; status: number; data: T | null; error?: string }> {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), timeoutMs);
@@ -540,7 +542,7 @@ async function fetchJsonWithTimeout<T>(
             status: 0,
             data: null,
             error: error instanceof DOMException && error.name === "AbortError"
-                ? "Grace timed out while checking the catalog."
+                ? timeoutMessage
                 : error instanceof Error ? error.message : "Grace could not reach the catalog.",
         };
     } finally {
@@ -1130,7 +1132,25 @@ function GraceProviderBase({
                             suggestedQueries: data.result.suggestedQueries?.join(", "),
                         });
                     }
-                    noteCatalogTool("searchCatalog", data.result.message, undefined, data.result.status === "ok");
+                    // Since 2026-09-26 the gateway returns the verified rows next
+                    // to the model text, each with its product-page link and its
+                    // own hero, so the tiles no longer fall back to the finder.
+                    const tileSource = data.result.status === "ok" && Array.isArray(data.result.products) ? data.result.products : [];
+                    if (tileSource.length > 0 && shouldAutoDisplayCatalogTiles(params.searchTerm)) {
+                        const finderHref = buildCatalogPath(tileSource, params.searchTerm, params.familyLimit);
+                        const tileProducts = selectGraceTileProducts(tileSource, params.searchTerm).map((product) => ({
+                            ...product,
+                            finderHref,
+                        }));
+                        if (tileProducts.length > 0) {
+                            pendingActionsRef.current.push({
+                                type: "showProductPresentation",
+                                products: tileProducts,
+                                headline: graceTileHeadline(params.searchTerm),
+                            });
+                        }
+                    }
+                    noteCatalogTool("searchCatalog", data.result.message, tileSource.length > 0 ? tileSource.length : undefined, data.result.status === "ok");
                     return data.result.message;
                 }
                 if (typeof data.result === "string") {
@@ -1386,9 +1406,12 @@ function GraceProviderBase({
                         },
                     })
                     : finderHref;
+                // Each tile links to its own verified product page (the gateway
+                // stamps verifiedPdpHref on every raw row); the finder is only the
+                // fallback for a row that cannot name its page.
                 const tileProducts = selectGraceTileProducts(displayProducts, params.query).map((product) => ({
                     ...product,
-                    verifiedPdpHref: directProduct === product ? redirectUrl : finderHref,
+                    verifiedPdpHref: directProduct === product ? redirectUrl : (product.verifiedPdpHref ?? finderHref),
                     finderHref,
                 }));
                 const summary = displayProducts.slice(0, 3).map((p) => [p.itemName, p.capacity, p.color].filter(Boolean).join(" ")).join(", ");
@@ -2715,9 +2738,13 @@ function GraceProviderBase({
             const page = pageContextRef.current;
 
             console.log(`[Grace] Starting ${useTextOnly ? "text" : "voice"} session with OpenAI Realtime...`);
+            // The token route is a connection step, not a catalogue lookup; a
+            // slow mint used to surface as "timed out while checking the catalog".
             const res = await fetchJsonWithTimeout<{ clientSecret?: string; error?: string }>(
                 "/api/openai/realtime-token",
                 { method: "GET" },
+                GRACE_TOOL_TIMEOUT_MS,
+                "Grace timed out while connecting. Please try again.",
             );
             if (!res.ok) throw new Error(res.error ?? "Failed to initialize OpenAI Realtime.");
             const clientSecret = res.data?.clientSecret;
