@@ -84,7 +84,7 @@ This is the source for the approved Tech Sheet additions (COPY-STRATEGY decision
 | Dropper finishes | Collar in the bulb's colour, shiny gold or shiny silver (18-400, 20-400); copper, gold or silver collar (18-415) | Correct in the inventories; one Grace ID says 90 mm for a 66 mm dropper | "Glass pipette dropper, rubber bulb and {finish} collar" | Consistent. Add stem length to the Tech Sheet |
 | Roll-ons | An outer cap over a separate plastic or steel insert | Caps tied to the plastic ball only; inserts not modelled as parts | "Steel Ball" / "Plastic Ball", then "{Finish} Cap" | Consistent. The register models the insert; Convex follows |
 | Reducer | A separate insert under a cap, not a cap finish | Hidden inside assemblies | "Orifice reducer and {finish} cap" | Consistent |
-| Bulb sprayers | "Vintage bulb sprayers", 9 colours, with or without tassel | 9 + 9 components | "Vintage Bulb Spray Bottle" (locked today) | Consistent; the sheets confirm the lock |
+| Bulb sprayers | "Vintage bulb sprayers", 9 colours, with or without tassel | 9 + 9 components | "Vintage Bulb Spray Bottle" (locked 26 Sep) | Part name is now "vintage-style bulb sprayer" (owner, 26 Sep). Print follows; site and Faire titles are an open decision (COPY-STRATEGY §2.4) |
 | Neck notation | "16 mm", "12 mm", "20-410" | `16mm`, `12mm` | Lint rule: always `NN-NNN` | **Amend the lint rule:** GPI finishes as "18-415"; other necks as "16 mm" |
 | Spray and pump attachment | Sold as separate parts by thread | Separate component SKUs per thread | RUBRIC open question: screw-on or crimped? | **Screw-on.** The refill line is allowed on thread-neck sprays and pumps: "The sprayer unscrews, so the bottle can be refilled." Not on sold-complete sets or the 30 ml exception |
 | 9 ml vial (18-400) | Short cap or glass-rod cap | Lists the six 66 mm Boston droppers | DAB: sample vial | **Remove the droppers from the vial's list** (the vial is 47–50 mm tall). Fits: "short screw cap or cap with glass rod" |
@@ -113,7 +113,7 @@ Size decides the noun, not the Convex applicator label, which is inconsistent to
 | Screw-on spray head | fine-mist sprayer | perfume spray pump, atomizer (for this part), microsprayer |
 | Lotion head, 18-415 | lotion pump | treatment/lotion pump |
 | Lotion head, 9 ml Cylinder | treatment pump | — |
-| Vintage bulb head | vintage bulb sprayer (with tassel) | antique sprayer |
+| Vintage-style bulb head | vintage-style bulb sprayer; vintage-style bulb sprayer with tassel (owner direction, 26 Sep 2026: always "vintage-style", never "vintage" alone) | vintage bulb sprayer, antique sprayer |
 | Pour insert | orifice reducer | reducer plug |
 | Dropper | glass pipette dropper, rubber bulb, {finish} collar; stem in mm | trim cap |
 | Glass-rod cap (9 ml vial) | cap with glass rod | applicator cap |

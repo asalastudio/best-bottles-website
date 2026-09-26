@@ -109,7 +109,7 @@ Cylinder, Tall Cylinder, Circle, Round, Elegant, Boston Round, Diva, Empire, Sli
 | ROLL | Roll-On Bottle | |
 | MIST | Fine-Mist Spray Bottle | |
 | PUMP-SPRAY | Perfume Spray Bottle | |
-| BULB | Vintage Bulb Spray Bottle | Locked 2026-09-26. The tassel version is "Vintage Bulb Spray Bottle with Tassel" (tassel groups are separate pages, so the tassel stays in the title). All 478 fit in 60 characters; the longest is exactly 60. "Vintage-Style" would push 194 past the limit, so the description's sentence 1 says "vintage-style" instead. |
+| BULB | Vintage Bulb Spray Bottle | Locked 2026-09-26. The tassel version is "Vintage Bulb Spray Bottle with Tassel" (tassel groups are separate pages, so the tassel stays in the title). All 478 fit in 60 characters; the longest is exactly 60. "Vintage-Style" would push 194 past the limit, so the description's sentence 1 says "vintage-style" instead. **Reopened 26 Sep:** the owner wants "vintage-style bulb" and "vintage-style bulb with tassel". Print uses it from 26 Sep. For titles, against the 25 Sep export (548 bulb rows): "Vintage-Style Bulb Spray Bottle" puts 223 over 60 characters; "Vintage-Style Bulb Sprayer" puts 9 over (the 100 ml frosted Elegant with tassel, 61); "Vintage-Style Bulb Bottle" fits all. Decision pending. |
 | SPLASH | Pour Bottle with Reducer | Best Bottles' naming |
 | POUR | Pour Bottle | Every glass bottle sold with only a screw cap |
 | DROP | Dropper Bottle | |

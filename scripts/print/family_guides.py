@@ -40,6 +40,9 @@ from pathlib import Path
 import segno
 from PIL import Image, ImageChops, ImageFilter
 
+import neck_sheets
+import operations as ops
+
 ROOT = Path(__file__).resolve().parents[2]
 REGISTER = ROOT / "data/register"
 DEFAULT_EXPORT = REGISTER / "source/convex-products-2026-09-25.json.gz"
@@ -98,8 +101,8 @@ FITMENTS = [
     ("Fine-mist sprayer", "Fine-mist sprayer"),
     ("Lotion pump", "Lotion pump"),
     ("Treatment pump", "Treatment pump"),
-    ("Vintage bulb sprayer", "Bulb sprayer"),
-    ("Bulb sprayer with tassel", "Bulb + tassel"),
+    ("Vintage-style bulb sprayer", "Vintage-style bulb"),
+    ("Vintage-style bulb sprayer with tassel", "Vintage-style bulb + tassel"),
     ("Dropper", "Dropper"),
     ("Orifice reducer with cap", "Reducer + cap"),
     ("Screw cap", "Screw cap"),
@@ -120,8 +123,8 @@ USES_BY_FIT = {
     "Fine-mist sprayer": ["spray perfume", "body mist", "room and linen spray"],
     "Lotion pump": ["body lotion", "liquid soap", "serums"],
     "Treatment pump": ["serums", "facial oils"],
-    "Vintage bulb sprayer": ["eau de parfum and cologne kept on a dressing table"],
-    "Bulb sprayer with tassel": ["eau de parfum and cologne kept on a dressing table"],
+    "Vintage-style bulb sprayer": ["eau de parfum and cologne kept on a dressing table"],
+    "Vintage-style bulb sprayer with tassel": ["eau de parfum and cologne kept on a dressing table"],
     "Dropper": ["essential oils", "beard oil", "facial serums"],
     "Orifice reducer with cap": ["splash cologne", "aftershave", "perfume oil"],
     "Screw cap": ["beard oil", "hair oil", "essential oils"],
@@ -137,8 +140,8 @@ CARE_BY_FIT = {
     "Fine-mist sprayer": ("Fine-mist sprayer", "On thread necks the sprayer unscrews, so the bottle can be refilled."),
     "Lotion pump": ("Pump", "For liquids that pour; thick creams belong in a jar."),
     "Treatment pump": ("Pump", "For liquids that pour; thick creams belong in a jar."),
-    "Vintage bulb sprayer": ("Bulb sprayer", "Not a travel bottle."),
-    "Bulb sprayer with tassel": ("Bulb sprayer", "Not a travel bottle."),
+    "Vintage-style bulb sprayer": ("Vintage-style bulb", "Not a travel bottle."),
+    "Vintage-style bulb sprayer with tassel": ("Vintage-style bulb", "Not a travel bottle."),
     "Dropper": ("Dropper", "Store it upright; undiluted essential oil softens the rubber bulb over time."),
     "Orifice reducer with cap": ("Orifice reducer", "The reducer turns a pour into a controlled splash or drip; very thick oils drip slowly."),
     "Screw cap": ("Screw cap", "With no fitment, the oil pours straight from the neck."),
@@ -155,6 +158,10 @@ SHARED_NECKS = {"13-415", "15-415", "17-415", "18-400", "18-415", "20-400"}
 OWN_CLASSES = {"metal-atomizer": "Atomizer", "aluminum-bottle": "Aluminum", "glass-jar": "Jar", "cream-jar": "Jar",
                "plastic-bottle": "Plastic", "glass-Ground": "Stopper"}
 OZ = {118: "4", 120: "4", 227: "8", 355: "12", 454: "16"}
+# Register heights that the sources contradict: printed as "—" until the register is corrected.
+HEIGHT_HOLD = {
+    "vial-9ml-18-400": "register says 79.4 mm; the legacy product pages give 47-50 mm with a cap (18-400 neck sheet README)",
+}
 BOSTON_OZ = {15: "0.5", 30: "1", 60: "2"}
 
 
@@ -285,7 +292,7 @@ def fitment_of(row: dict, klass: str) -> str:
     if app == "Lotion Pump":
         return "Treatment pump" if neck == "17-415" else "Lotion pump"
     if app.startswith("Vintage Bulb Sprayer"):
-        return "Bulb sprayer with tassel" if ("Tassel" in app or "Tsl" in sku) else "Vintage bulb sprayer"
+        return "Vintage-style bulb sprayer with tassel" if ("Tassel" in app or "Tsl" in sku) else "Vintage-style bulb sprayer"
     if app == "Dropper":
         return "Dropper"
     if app == "Reducer":
@@ -361,7 +368,7 @@ def finish_of(row: dict, fitment: str, glass: str) -> str:
             raw, low = ("Clear overcap" if "OvrCap" in sku or "OverCap" in sku else (raw or "Standard")), None
             low = raw.lower()
 
-    bulb = fitment in ("Vintage bulb sprayer", "Bulb sprayer with tassel")
+    bulb = fitment in ("Vintage-style bulb sprayer", "Vintage-style bulb sprayer with tassel")
     if bulb:
         colour = raw.split(" / ")[0].strip() if raw else "Standard"
         if colour.lower().startswith("ivory"):
@@ -440,7 +447,8 @@ def load(export_path: Path) -> tuple[dict[str, Family], dict]:
                 except (TypeError, ValueError):
                     return None
             body = Body(reg["bodyId"], float(row.get("capacityMl") or body_row.get("capacityMl") or 0), reg["neck"],
-                        body_row.get("shape") or "", klass, num(body_row.get("heightWithoutCapMm")),
+                        body_row.get("shape") or "", klass,
+                        None if reg["bodyId"] in HEIGHT_HOLD else num(body_row.get("heightWithoutCapMm")),
                         num(body_row.get("diameterMm")) or num(body_row.get("widthMm")))
             fam.bodies[reg["bodyId"]] = body
         glass = canonical_glass(row.get("color"))
@@ -512,26 +520,35 @@ def prepare(set_name: str, photos: dict[str, Path], px_per_card: int = 1300, pad
         l, r = max(0.0, l - pad), min(1.0, r + pad)
         crop = img.crop((round(l * img.width), round(top * img.width), round(r * img.width), min(img.height, round(bottom * img.width))))
         w, h = r - l, crop.height / img.width
-        crop = crop.resize((max(1, round(w * px_per_card)), max(1, round(h * px_per_card))), Image.LANCZOS)
+        # Never more than twice the source pixels: small sheet thumbnails stay small files.
+        px = min(px_per_card, 2 * img.width)
+        crop = crop.resize((max(1, round(w * px)), max(1, round(h * px))), Image.LANCZOS)
         path = WORK / "images" / f"{set_name}-{sku}.jpg"
         crop.save(path, quality=88)
         out[sku] = {"uri": path.as_uri(), "w": w, "h": h}
     return out
 
 
-def strip(prepared: dict, items: list[tuple[str, str]], width: float, height: float, gap: float = 0.18) -> str:
+def strip(prepared: dict, items: list[tuple[str, str]], width: float, height: float, gap: float = 0.18,
+          raw: bool = False, cls: str = "", min_fig: float = 0.0, scale: float | None = None) -> str:
+    """A row of photographs at one shared scale. `raw` captions are HTML; `min_fig` widens narrow figures
+    (inches) so their captions have room, without changing the picture's size."""
     items = [(s, c) for s, c in items if s in prepared]
     if not items:
         return ""
+    min_fig = min(min_fig, (width - gap * (len(items) - 1)) / len(items))
+    widths = lambda sc: [max(prepared[s]["w"] * sc, min_fig) for s, _ in items]
     total = sum(prepared[s]["w"] for s, _ in items)
     tallest = max(prepared[s]["h"] for s, _ in items)
-    scale = min((width - gap * (len(items) - 1)) / total, height / tallest)
+    scale = scale or min((width - gap * (len(items) - 1)) / total, height / tallest)
+    while sum(widths(scale)) + gap * (len(items) - 1) > width + 1e-6 and scale > 0.01:
+        scale *= 0.97
     figs = "".join(
-        f"<figure style='width:{prepared[s]['w'] * scale:.3f}in'><img src='{prepared[s]['uri']}' alt=''>"
-        + (f"<figcaption>{esc(c)}</figcaption>" if c else "") + "</figure>"
-        for s, c in items
+        f"<figure style='width:{fw:.3f}in'><img style='width:{prepared[s]['w'] * scale:.3f}in' src='{prepared[s]['uri']}' alt=''>"
+        + (f"<figcaption>{c if raw else esc(c)}</figcaption>" if c else "") + "</figure>"
+        for (s, c), fw in zip(items, widths(scale))
     )
-    return f"<div class=strip style='gap:{gap}in'>{figs}</div>"
+    return f"<div class='strip {cls}' style='gap:{gap}in'>{figs}</div>"
 
 
 def pick(items: list[Item], photos: dict[str, Path], **prefer) -> Item | None:
@@ -561,7 +578,8 @@ def plural_fitment(name: str) -> str:
     return {
         "Steel roller ball": "steel roller balls", "Plastic roller ball": "plastic roller balls",
         "Fine-mist sprayer": "fine-mist sprayers", "Lotion pump": "lotion pumps", "Treatment pump": "treatment pumps",
-        "Vintage bulb sprayer": "vintage bulb sprayers", "Bulb sprayer with tassel": "bulb sprayers with tassels",
+        "Vintage-style bulb sprayer": "vintage-style bulb sprayers",
+        "Vintage-style bulb sprayer with tassel": "vintage-style bulb sprayers with tassel",
         "Dropper": "droppers", "Orifice reducer with cap": "orifice reducers with caps", "Screw cap": "screw caps",
         "Cap with glass rod": "caps with a glass rod", "Glass stopper": "glass stoppers", "Flip-top cap": "flip-top caps",
         "Lid": "screw lids", "Atomizer": "",
@@ -581,8 +599,9 @@ def description(fam: Family) -> str:
     # Merge the two roller materials into one phrase.
     if "steel roller balls" in fits and "plastic roller balls" in fits:
         fits = ["steel or plastic roller balls" if f == "steel roller balls" else f for f in fits if f != "plastic roller balls"]
-    if "vintage bulb sprayers" in fits and "bulb sprayers with tassels" in fits:
-        fits = ["vintage bulb sprayers, with or without tassel" if f == "vintage bulb sprayers" else f for f in fits if f != "bulb sprayers with tassels"]
+    if "vintage-style bulb sprayers" in fits and "vintage-style bulb sprayers with tassel" in fits:
+        fits = ["vintage-style bulb sprayers, with or without tassel" if f == "vintage-style bulb sprayers" else f
+                for f in fits if f != "vintage-style bulb sprayers with tassel"]
     second = f"Sold with {join(fits)}." if fits else ""
     uses = []
     for f, _ in ([("", 0)] if fam.name in FAMILY_USES else counts.most_common()):
@@ -702,6 +721,38 @@ table.ls td.na{color:#C9C2B6}
 .reorder .r3{color:var(--second);font-size:6.8pt}
 .note{font-size:6.6pt;color:var(--second);margin-top:.05in}
 
+
+/* fit systems: the neck sheet's matrix */
+.fsx{--acc:#8B6F42}
+.fsx-head{display:grid;grid-template-columns:auto 1fr auto;gap:.22in;align-items:end;border-bottom:1pt solid var(--acc);padding-bottom:.08in;margin-bottom:.14in}
+.fsx-head h1{font-size:30pt;font-weight:600;line-height:.95;color:var(--obsidian);letter-spacing:-.01em}
+.fsx-head .a{font-size:15pt;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--obsidian);line-height:1.1}
+.fsx-head .b{font-size:5.9pt;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--second);margin-top:.04in}
+.fsx-head .src{font-size:6.2pt;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);text-align:right}
+.fsx-head .src span{display:block;color:var(--second);font-weight:500;letter-spacing:.1em;margin-top:.03in}
+.fsx-cards{display:flex;flex-wrap:wrap;gap:.15in .12in}
+.fsx-card{position:relative;border:.6pt solid #D3CBBF;border-radius:4pt;padding:.07in .1in .06in;break-inside:avoid}
+.fsx-card::after{content:'';position:absolute;left:50%;top:100%;height:.15in;border-left:.8pt solid var(--acc)}
+.fsx-card h3{font-size:8.6pt;font-weight:600;color:var(--obsidian)}
+.fsx-card h3 span{font-weight:500;color:var(--obsidian)}
+.fsx-card p{font-size:5.9pt;color:var(--second);margin:.01in 0 .07in}
+.fsx-card .strip figcaption{white-space:normal;line-height:1.2;font-size:5.6pt;color:var(--second)}
+.fsx-rail{position:relative;height:.3in;margin:0 0 .15in;break-after:avoid}
+.fsx-rail::before{content:'';position:absolute;left:0;right:0;top:50%;border-top:1pt solid var(--acc)}
+.fsx-rail span{position:relative;display:block;width:max-content;margin:0 auto;top:50%;transform:translateY(-50%);background:var(--bone);
+  border:1pt solid var(--acc);border-radius:9pt;padding:2.2pt 14pt;font-size:7.4pt;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--acc)}
+.fsx-bottles{display:flex;flex-wrap:wrap;justify-content:center;gap:.15in .1in}
+.fsx-bottle{position:relative;border:.6pt solid #D3CBBF;border-radius:4pt;padding:.06in .05in .05in;
+  text-align:center;break-inside:avoid;display:flex;flex-direction:column;align-items:center}
+.fsx-bottle::before{content:'';position:absolute;left:50%;bottom:100%;height:.15in;border-left:.8pt solid var(--acc)}
+.fsx-bottle h4{font-size:6.5pt;font-weight:600;color:var(--obsidian);line-height:1.2;min-height:2.4em;display:flex;align-items:center}
+.fsx-bottle .ph{display:flex;align-items:flex-end;justify-content:center;margin:.03in 0 .04in}
+.fsx-bottle span{display:block;font-size:5.6pt;line-height:1.35;color:var(--second)}
+.fsx-bottle span.mono{font-family:'IBM Plex Mono',monospace;font-size:5.3pt;color:var(--ink);letter-spacing:-.02em}
+.fsx-bottle span.pg{color:var(--acc);font-weight:600}
+.fsx-foot{margin-top:.1in;font-size:6.6pt;line-height:1.5;color:var(--second)}
+.fsx-foot b{font-size:6pt;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-right:.12in}
+.fsx-foot p+p{margin-top:.03in}
 /* catalogue front matter */
 .cover{page:cover;height:11in;position:relative;break-after:page;display:flex;flex-direction:column;align-items:center}
 .cover .lockup{margin-top:1.1in}
@@ -733,7 +784,113 @@ ul.idx{list-style:none;columns:4;column-gap:.22in;font-family:'IBM Plex Mono',mo
 ul.idx li{display:flex;justify-content:space-between;gap:.06in;break-inside:avoid;border-bottom:.3pt solid #E6E1D8}
 ul.idx li span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 ul.idx li b{font-weight:400;color:#6B6660}
-.back{page:cover;height:11in;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3in;text-align:center}
+.back{page:cover;height:11in;break-before:page;position:relative}
+.back .inner{position:absolute;left:0;right:0;top:3.4in;display:flex;flex-direction:column;align-items:center;gap:.3in;text-align:center}
+/* parts of the book */
+.strip.left{justify-content:flex-start}
+.strip figure img{margin:0 auto}
+.strip figcaption span{display:block;color:var(--muted);font-size:5.8pt}
+.opener{page:cover;height:11in;position:relative;break-before:page;break-after:page}
+.opener .o-text{position:absolute;left:.95in;right:.95in;top:1.7in}
+.o-num{font-size:8pt;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--second)}
+.opener h1{font-size:46pt;font-weight:500;letter-spacing:-.015em;line-height:1.04;color:var(--obsidian);margin-top:.16in}
+.opener .rule{width:.6in;height:1.2pt;background:var(--gold2);margin:.24in 0 .2in}
+.o-lede{font-size:10.4pt;line-height:1.62;max-width:4.9in}
+.opener .o-row{position:absolute;left:.7in;right:.7in;bottom:1.05in}
+ul.parts-toc{line-height:1.62}
+ul.parts-toc li{line-height:1.62}
+ul.parts-toc li.ph{font-weight:600;color:var(--obsidian);margin-top:.07in;break-after:avoid}
+ul.parts-toc li.ph i{border:none}
+ul.parts-toc li.sub span{padding-left:.2in}
+ul.parts-toc li.ph em{font-style:normal;display:inline-block;width:.2in;color:var(--second);font-weight:500}
+.stats{display:grid;grid-template-columns:repeat(6,1fr);gap:.12in;border-top:.75pt solid var(--ink);border-bottom:.5pt solid var(--rule);padding:.1in 0 .08in;margin:.02in 0 0}
+.glance h2.k{margin:.14in 0 .04in}
+.glance table.ref td,.glance table.ref th{padding:1.1pt 6pt 1.1pt 0;font-size:6.8pt}
+.glance .bar{padding:0;line-height:1.36}
+.glance .stats b{font-size:19pt}
+.stats b{display:block;font-size:21pt;font-weight:500;color:var(--obsidian);line-height:1.1}
+.stats span{font-size:5.8pt;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--second)}
+.bars{display:grid;grid-template-columns:1fr 1fr;gap:.42in;break-inside:avoid}
+.bar{display:grid;grid-template-columns:1.9in 1fr .38in;align-items:center;gap:.08in;font-size:6.8pt;padding:.6pt 0;border-bottom:.3pt solid #E6E1D8}
+.bar i{display:block;height:4.5pt;background:var(--ink)}
+.bar em{font-style:normal;text-align:right;color:var(--second)}
+table.ref{margin-bottom:.06in}
+table.ref td,table.ref th{padding:2.5pt 6pt 2.5pt 0;border-bottom:.5pt solid var(--rule);text-align:left;vertical-align:top;font-size:7.2pt}
+table.ref thead th{font-size:5.8pt;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--second);border-bottom:.75pt solid var(--ink)}
+table.ref .r{text-align:right}
+table.ref td.f{font-weight:600;color:var(--obsidian)}
+table.ref td.mono{font-family:'IBM Plex Mono',monospace;font-size:6.6pt}
+table.ref td.x{color:var(--second)}
+table.ref tr{break-inside:avoid}
+table.bodies tr.first td{border-top:.75pt solid #CFC8BE}
+ol.partlist{list-style:none;counter-reset:p;margin:.06in 0 .12in}
+ol.partlist li{counter-increment:p;display:grid;grid-template-columns:.34in 1.6in 1fr .4in;gap:.08in;padding:.08in 0;border-bottom:.5pt solid var(--rule);align-items:baseline}
+ol.partlist li::before{content:counter(p);font-size:15pt;font-weight:500;color:var(--obsidian)}
+ol.partlist b{font-size:9pt;font-weight:600;color:var(--obsidian)}
+ol.partlist span{font-size:7.8pt;line-height:1.5}
+ol.partlist em{font-style:normal;text-align:right;color:var(--second)}
+ul.kv2{list-style:none}
+ul.kv2 li{display:grid;grid-template-columns:1.1in 1fr;gap:.08in;font-size:7.4pt;line-height:1.45;padding:3pt 0;border-bottom:.5pt solid var(--rule)}
+ul.kv2 b{font-weight:600;color:var(--obsidian)}
+table.necks td.p,table.necks th.p{text-align:right;width:.4in;color:var(--second)}
+.fs-head{display:grid;grid-template-columns:2.1in 1fr;gap:.3in;align-items:end;margin:.02in 0 .12in}
+.fs-head h1{font-family:'IBM Plex Mono',monospace;font-size:36pt;font-weight:500;line-height:1;color:var(--obsidian);letter-spacing:-.02em}
+.fs-head .lede{margin:0}
+.fs-meta{font-size:6.8pt;color:var(--second);margin-top:.05in}
+ol.paths{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:.07in .26in;border-top:.75pt solid var(--ink);border-bottom:.5pt solid var(--rule);padding:.09in 0 .08in}
+ol.paths li{font-size:7.2pt;line-height:1.45}
+ol.paths b{display:block;font-size:5.9pt;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--obsidian)}
+.fs-groups{display:flex;flex-wrap:wrap;gap:.18in .26in;align-items:flex-end}
+.fs-group{break-inside:avoid}
+.fs-group h3{font-size:7.2pt;font-weight:600;color:var(--obsidian);border-bottom:.5pt solid var(--rule);padding-bottom:.03in;margin-bottom:.07in;white-space:nowrap}
+.fs-group h3 span{font-weight:400;color:var(--second);margin-left:.05in}
+.fs .strip figcaption{white-space:normal;line-height:1.25;font-size:6pt}
+.fs-bottles .strip{margin-bottom:.12in;break-inside:avoid}
+.fs-bottles .strip figcaption{color:var(--ink);font-weight:500}
+h2.fs-b{break-before:auto}
+.ops .lede{max-width:6.6in}
+.ops p.body{font-size:8pt;margin-bottom:.04in}
+.anatomy{display:flex;gap:.05in;margin:.08in 0 .14in;flex-wrap:wrap}
+.tok{display:flex;flex-direction:column;align-items:flex-start}
+.tok .t{font-size:21pt;color:var(--obsidian);border-bottom:1.4pt solid var(--gold2);padding:0 .03in .04in;line-height:1.1}
+.tok .t.small{font-size:13pt}
+.tok .l{font-size:5.8pt;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--second);margin-top:.06in;padding-left:.03in}
+.tok .m{font-size:7.2pt;padding-left:.03in}
+.anatomy.code{margin:.06in 0 .1in}
+.tokgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:.16in .3in;margin-bottom:.06in}
+.tokgrid table.kvt{margin-bottom:.08in}
+.ops h3,.tokgrid h3{font-size:7.6pt;font-weight:600;color:var(--obsidian);margin-bottom:.04in}
+table.kvt{width:100%}
+table.kvt td{font-size:7pt;padding:1.7pt 6pt 1.7pt 0;border-bottom:.5pt solid var(--rule);vertical-align:top}
+table.kvt td.mono{font-family:'IBM Plex Mono',monospace;color:var(--gold);white-space:nowrap;width:1%}
+ol.rules{list-style:none;counter-reset:r;margin-top:.04in}
+ol.rules li{counter-increment:r;display:grid;grid-template-columns:.36in 1fr;padding:.09in 0;border-bottom:.5pt solid var(--rule);break-inside:avoid;font-size:8pt;line-height:1.5}
+ol.rules li::before{content:counter(r,decimal-leading-zero);font-family:'IBM Plex Mono',monospace;color:var(--second);font-size:8pt}
+ol.rules b{display:block;font-size:9pt;font-weight:600;color:var(--obsidian);margin-bottom:.02in}
+.check{border:.75pt solid var(--ink);padding:.16in .2in;margin-top:.24in;break-inside:avoid}
+.check h3{font-size:8pt;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.06in}
+.check ol{margin-left:.2in}
+.check li{font-size:8.2pt;line-height:1.7}
+.qa{display:grid;grid-template-columns:1fr 1fr;gap:0 .36in}
+.qa div{border-top:.5pt solid var(--rule);padding:.09in 0 .11in;break-inside:avoid}
+.qa h3{font-size:8.6pt}
+.qa p{font-size:7.8pt;line-height:1.55}
+p.formula{font-family:'IBM Plex Mono',monospace;font-size:13pt;color:var(--obsidian);padding:.1in 0;border-top:.75pt solid var(--ink);border-bottom:.5pt solid var(--rule);margin:.04in 0 .1in}
+.chips{display:flex;flex-wrap:wrap;gap:.05in}
+.chips span{border:.5pt solid #CFC8BE;padding:1.6pt 6pt;font-size:6.9pt;border-radius:1pt}
+ol.plain,ul.plain{margin-left:.18in}
+ol.plain li,ul.plain li{font-size:7.6pt;line-height:1.55;padding:1pt 0}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:.2in .26in;margin:.08in 0 .1in}
+.flow div{border-top:1pt solid var(--ink);padding-top:.07in;break-inside:avoid}
+.flow span{font-size:7pt;color:var(--second)}
+.flow b{display:block;font-size:9.6pt;font-weight:600;color:var(--obsidian);margin:.03in 0}
+.flow p{font-size:7.6pt;line-height:1.5}
+.flow i{display:block;font-style:normal;font-size:6.6pt;color:var(--gold);margin-top:.04in}
+dl.gloss{columns:2;column-gap:.42in;margin-top:.06in}
+dl.gloss div{break-inside:avoid;padding:.06in 0;border-bottom:.5pt solid var(--rule)}
+dl.gloss dt{font-weight:600;font-size:8pt;color:var(--obsidian)}
+dl.gloss dd{font-size:7.5pt;line-height:1.5}
+
 .back img.qr{width:1.1in;height:1.1in}
 .back p{font-size:9pt;color:var(--ink)}
 """
@@ -822,14 +979,15 @@ def care_list(fam: Family) -> list[tuple[str, str]]:
     return out
 
 
-def neck_sharing(fam: Family, all_families: dict[str, Family]) -> str:
+def neck_sharing(fam: Family, all_families: dict[str, Family], pages: dict[str, int] | None = None, catalogue: bool = False) -> str:
     lines = []
     for neck in sorted({b.neck for b in fam.bodies.values() if b.neck in SHARED_NECKS and b.klass.startswith("glass")}):
         others = sorted({f.name for f in all_families.values() if f.name != fam.name
                          and any(b.neck == neck and b.klass.startswith("glass") for b in f.bodies.values())},
                         key=lambda n: FAMILY_ORDER.index(n) if n in FAMILY_ORDER else 99)
         if others:
-            lines.append(f"<b class=mono>{esc(neck)}</b> is shared with {esc(join(others))}.")
+            ref = f" (fit system, page {pg(pages, 'fit-' + neck)})" if catalogue and neck in FIT_NECKS else ""
+            lines.append(f"<b class=mono>{esc(neck)}</b> is shared with {esc(join(others))}{ref}.")
     if not lines:
         return ""
     return ("<p class=shared><b>Same neck, same parts.</b> " + " ".join(lines) +
@@ -879,7 +1037,8 @@ def line_sheet(fam: Family) -> str:
     return "".join(tables)
 
 
-def family_section(fam: Family, all_families: dict[str, Family], photos: dict[str, Path], mark: str, marker: bool = False) -> str:
+def family_section(fam: Family, all_families: dict[str, Family], photos: dict[str, Path], mark: str, marker: bool = False,
+                   pages: dict[str, int] | None = None) -> str:
     items = fam.items
     # Hero: one photograph per fitment type, preferring clear glass and the family's most photographed body.
     hero_items = []
@@ -952,7 +1111,7 @@ def family_section(fam: Family, all_families: dict[str, Family], photos: dict[st
     <div><h2 class=k>Use and care</h2>{kv(care)}</div>
   </div>
   {f"<div class=rows><div>{glass_row}</div><div>{size_row}</div></div>" if (glass_row or size_row) else ""}
-  {neck_sharing(fam, all_families)}
+  {neck_sharing(fam, all_families, pages, catalogue=marker)}
   <h2 class='k{" ls-title" if len(items) > 40 else ""}'>Line sheet · {esc(fam.name)}</h2>
   {line_sheet(fam)}
   <p class=note>Item numbers are the website SKUs; type one into the search at {SITE_LABEL}. Prices, stock and pack sizes are on the site
@@ -968,7 +1127,7 @@ USES = [  # the twelve bottle types (RUBRIC.md §4.2; COPY-STRATEGY.md §2.4), w
     ("GBCylAmb9MtlRollBlkDot", "Roll-On Bottle", "Perfume oil, attar and oil blends diluted in a carrier.", "The ball alone is not a seal; carry it capped."),
     ("GBCylAmb9SpryMattSl", "Fine-Mist Spray Bottle", "Spray perfume, body mist, room and linen spray.", "Up to 15 ml: samples and decants."),
     ("GBDiva30SpryMtGl", "Perfume Spray Bottle", "Eau de parfum, eau de toilette and cologne.", "From 25 ml: full retail sizes."),
-    ("GBElg60AnSpTslIvyGl", "Vintage Bulb Spray Bottle", "Eau de parfum and cologne kept on a dressing table.", "Not a travel bottle."),
+    ("GBElg60AnSpTslIvyGl", "Vintage-Style Bulb Spray Bottle", "Eau de parfum and cologne kept on a dressing table.", "Not a travel bottle."),
     ("GBBstnAmb1ozWhtDropperShnGlTrim", "Dropper Bottle", "Essential oils, beard oil and facial serums.", "Releases one drop at a time."),
     ("GBBstnAmb1ozBlkCapSht", "Pour Bottle", "Beard oil, hair oil, body oil and essential oils.", "No fitment; the oil pours from the neck."),
     ("GBDiva30RdcrShnGl", "Pour Bottle with Reducer", "Splash cologne, aftershave, perfume oil, beard oil.", "The reducer slows the pour to a splash or drip."),
@@ -985,7 +1144,7 @@ NECK_ROWS = [  # what fits what (SYNTHESIS.md §1), shared parts first
     ("17-415", "Cylinder 9 ml", "Roll-on cap over a steel or plastic roller ball · fine-mist sprayer · treatment pump"),
     ("18-400", "Boston Round 15 ml · 9 ml vial", "Boston Round: dropper (66 mm stem) or short screw cap. Vial: short screw cap or cap with glass rod"),
     ("18-415", "Circle 50 and 100 · Cylinder 25, 50 and 100 · Diamond 60 · Diva 30, 46 and 100 · Elegant 60 and 100 · Empire 50 and 100 · Grace 55 · Round 78 and 128 · Sleek and Slim 30, 50 and 100 ml",
-     "Fine-mist sprayer · lotion pump · vintage bulb sprayer, with or without tassel · orifice reducer with cap · faux-leather cap · lined cap · dropper on some sizes"),
+     "Fine-mist sprayer · lotion pump · vintage-style bulb sprayer, with or without tassel · orifice reducer with cap · faux-leather cap · lined cap · dropper on some sizes"),
     ("20-400", "Boston Round 30 and 60 ml", "Roll-on cap over a steel or plastic roller ball · dropper (76 mm stem on 30 ml, 90 mm on 60 ml) · short screw cap"),
 ]
 NECK_SETS = [
@@ -1000,34 +1159,156 @@ NECK_SETS = [
 ]
 
 
-def front_matter(order: list[Family], pages: dict[str, int] | None, photos_all: dict[str, Path], mark: str) -> str:
+def pg(pages: dict[str, int] | None, key: str) -> str:
+    """Page number from the first pass, or a two-digit placeholder that keeps the layout stable."""
+    return str(pages.get(key, "00")) if pages else "00"
+
+
+def mk(key: str) -> str:
+    return f"<span class=marker>§SEC:{key}§</span>"
+
+
+FIT_NECKS = ["13-415", "15-415", "17-415", "18-400", "18-415", "20-400"]
+OPS_PAGES = [
+    ("ops-sku", "Reading an item number"), ("ops-fit", "Confirming a fit"), ("ops-questions", "Answering common questions"),
+    ("ops-samples", "Samples and small sizes"), ("ops-naming", "Naming products"), ("ops-describing", "Describing products"),
+    ("ops-bodies", "Every bottle, measured"), ("ops-data", "Where product information lives"), ("ops-glossary", "Glossary"),
+]
+
+
+def cover(order: list[Family], photos_all: dict[str, Path], mark: str) -> str:
     cover_skus = ["GBCylAmb9MtlRollBlkDot", "GBElg60AnSpTslIvyGl", "GBBstnAmb1ozWhtDropperShnGlTrim", "GB15ApthBlue", "GBAtom10Gl"]
     cover_prep = prepare("cover", {s: photos_all[s] for s in cover_skus if s in photos_all}, px_per_card=1200, pad=0.02)
     cover_row = strip(cover_prep, [(s, "") for s in cover_skus], width=7.3, height=3.0, gap=0.04)
     total = sum(len(f.items) for f in order)
-    cover = f"""
+    return f"""
 <section class=cover>
   {lockup(mark, 'big')}
   <h1>The Catalogue</h1>
-  <p class=sub>{len(order)} families · {total:,} items · every fitment and every item number</p>
+  <p class=sub>{len(order)} families · {total:,} items · fit systems, family guides and every item number</p>
   <div class=row>{cover_row}</div>
   <p class=foot>{SITE_LABEL} · {PHONE} · {dt.date.today():%B %Y}</p>
 </section>"""
-    toc_rows = "".join(
-        f"<li><span>{esc(f.name)}</span><i></i><b>{pages.get(f.slug, '00') if pages else '00'}</b></li>" for f in order)
-    toc_rows += "".join(
-        f"<li><span>{esc(label)}</span><i></i><b>{pages.get(key, '00') if pages else '00'}</b></li>"
-        for key, label in (("parts", "Parts sold separately"), ("packaging", "Packaging and accessories"), ("index", "Index by item number")))
-    contents = f"""
+
+
+def contents(order: list[Family], pages: dict[str, int] | None, house: bool) -> str:
+    rows = [("ph", "The range", None), ("sub", "The range at a glance", "glance"), ("sub", "How to use this book", "howto"),
+            ("sub", "Choose by use", "uses"),
+            ("ph", "Fit systems", "part-fit"), ("sub", "What fits what", "necks")]
+    rows += [("sub", f"The {n} neck", f"fit-{n}") for n in FIT_NECKS]
+    rows += [("ph", "The families", "part-families")] + [("sub", f.name, f.slug) for f in order]
+    rows += [("ph", "Parts and packaging", "part-parts"), ("sub", "Parts sold separately", "parts"),
+             ("sub", "Packaging and accessories", "packaging")]
+    if house:
+        rows += [("ph", "Working with the range", "part-ops")] + [("sub", t, k) for k, t in OPS_PAGES]
+    rows += [("ph", "Index by item number", "index")]
+    number = iter(range(1, 10))
+    items = "".join(
+        f"<li class={c}><span>{f'<em>{next(number)}</em>' if c == 'ph' and label != 'Index by item number' else ''}{esc(label)}</span>"
+        f"<i></i><b>{pg(pages, key) if key else ''}</b></li>" for c, label, key in rows)
+    return f"""
 <section class=front>
   <p class=kicker>Contents</p><h1>In this catalogue</h1>
-  <p class=lede>Every bottle is sold empty, with the fitment and cap shown. Each family has a compatibility guide: its sizes and
-  measurements, what fits each size, the finishes, use and care, and a line sheet with every item number. The same guide can
-  be downloaded from each family page at {SITE_LABEL}.</p>
-  <ul class=toc><li><span>Choose by use</span><i></i><b>3</b></li><li><span>What fits what, by neck finish</span><i></i><b>4</b></li>{toc_rows}</ul>
+  <p class=lede>Every bottle is sold empty, with the fitment and cap shown. The book opens with the range as a whole, then the
+  fit systems: the six shared neck finishes, with every part made for each one. Each family then has its compatibility guide,
+  the same one that can be downloaded from its page at {SITE_LABEL}.{" The last part is a working reference for the team." if house else ""}</p>
+  <ul class='toc parts-toc'>{items}</ul>
 </section>"""
+
+
+def opener(num: int, key: str, title: str, lede: str, row_html: str) -> str:
+    return f"""
+<section class=opener>
+  <div class=o-text><p class=o-num>Part {num}{mk(key)}</p><h1>{esc(title)}</h1><div class=rule></div><p class=o-lede>{esc(lede)}</p></div>
+  <div class=o-row>{row_html}</div>
+</section>"""
+
+
+def bar_rows(counter: Counter, labels: list[str]) -> str:
+    top = max(counter.values()) if counter else 1
+    return "".join(f"<div class=bar><span>{esc(l)}</span><i style='width:{counter[l] / top * 100:.1f}%'></i><em>{counter[l]:,}</em></div>"
+                   for l in labels if counter.get(l))
+
+
+def range_glance(order: list[Family], components: list[dict], pages: dict[str, int] | None) -> str:
+    items = [i for f in order for i in f.items]
+    bodies = [b for f in order for b in f.bodies.values()]
+    stats = [(len(order), "Families"), (len(items), "Bottle items"), (len(bodies), "Bottle sizes"),
+             (len({i.glass for i in items}), "Glass colours"), (len(SHARED_NECKS), "Shared necks"),
+             (len([c for c in components if c["websiteSku"] not in PART_EXCLUDE]), "Parts sold separately")]
+    by_fit = Counter(i.fitment for i in items)
+    by_neck = Counter(neck_label(i.neck) if i.neck in SHARED_NECKS else "Complete sets and own class" for i in items)
+    neck_labels = [n for n in FIT_NECKS] + ["Complete sets and own class"]
+    rows = []
+    for f in order:
+        mls = sorted({b.ml for b in f.bodies.values()})
+        cap = f"{size_label(mls[0], f.name, '', '').split(' (')[0]}" + (f" to {mls[-1]:g} ml" if len(mls) > 1 else "")
+        cap = cap.replace(" ml to ", " to ")
+        necks = sorted({neck_label(b.neck) for b in f.bodies.values() if b.neck})
+        neck_text = ", ".join(necks) if len(necks) <= 3 else f"{len(necks)} neck finishes"
+        rows.append(f"<tr><td class=f>{esc(f.name)}</td><td class=r>{len(f.items):,}</td><td class=r>{len(f.bodies)}</td><td>{esc(cap)}</td>"
+                    f"<td class=mono>{esc(neck_text)}</td><td class=r>{len(f.glasses())}</td><td class=r>{len(f.fitments())}</td>"
+                    f"<td class=r>{pg(pages, f.slug)}</td></tr>")
+    return f"""
+<section class='front glance'>
+  <p class=kicker>The range{mk('glance')}</p><h1>The range at a glance</h1>
+  <div class=stats>{''.join(f"<div><b>{n:,}</b><span>{esc(l)}</span></div>" for n, l in stats)}</div>
+  <div class=bars>
+    <div><h2 class=k>Items by fitment</h2>{bar_rows(by_fit, [f for f, _ in FITMENTS])}</div>
+    <div><h2 class=k>Items by neck finish</h2>{bar_rows(by_neck, neck_labels)}
+      <p class=note>Six shared necks carry most of the range.</p></div>
+  </div>
+  <h2 class=k>Families</h2>
+  <table class=ref><thead><tr><th>Family</th><th class=r>Items</th><th class=r>Sizes</th><th>Capacity</th><th>Neck finishes</th>
+    <th class=r>Glass</th><th class=r>Fitments</th><th class=r>Page</th></tr></thead><tbody>{''.join(rows)}</tbody></table>
+</section>"""
+
+
+def how_to_use(pages: dict[str, int] | None, house: bool) -> str:
+    parts = [
+        ("The range", "The numbers, this page, and a guide to choosing a bottle by what goes in it.", "glance"),
+        ("Fit systems", "The six shared necks. Each page shows every part made for the neck and every bottle that has it.", "part-fit"),
+        ("The families", "One compatibility guide per family: sizes and measurements, what fits each size, finishes, use and "
+         "care, and a line sheet with every item number.", "part-families"),
+        ("Parts and packaging", "Caps, rollers, sprayers, pumps and droppers sold on their own, by neck; then gift bags, "
+         "boxes and supplies.", "part-parts"),
+    ]
+    if house:
+        parts.append(("Working with the range", "For the team: item numbers, fit rules, customer questions, naming, "
+                      "every bottle measured, and where product information lives.", "part-ops"))
+    guide = [
+        ("Sizes", "Capacity, neck finish, height without a cap, diameter, glass colours and case quantity."),
+        ("What fits each size", "A dot means Best Bottles sells that size with that part. No dot is not a promise that it fits."),
+        ("Finishes", "Every finish sold for each part, in the words used on the website."),
+        ("Use and care", "What each part is for, and the one thing to know before filling."),
+        ("Line sheet", "Every item number, by size, fitment, finish and glass."),
+        ("QR code", "Opens the family page, with prices and stock."),
+    ]
+    part_rows = "".join(f"<li><b>{esc(t)}</b><span>{esc(d)}</span><em>{pg(pages, k)}</em></li>" for t, d, k in parts)
+    guide_rows = "".join(f"<li><b>{esc(t)}</b><span>{esc(d)}</span></li>" for t, d in guide)
+    return f"""
+<section class='front howto'>
+  <p class=kicker>The range{mk('howto')}</p><h1>How to use this book</h1>
+  <p class=lede>Find a bottle by use, by family or by item number. Find a part by its neck finish: every bottle with the same
+  neck takes the same parts, and the fit system pages show them all.</p>
+  <ol class=partlist>{part_rows}</ol>
+  <div class=two>
+    <div><h2 class=k>Reading a family guide</h2><ul class=kv2>{guide_rows}</ul></div>
+    <div><h2 class=k>Conventions</h2><ul class=kv2>
+      <li><b>Sizes</b><span>Millilitres first; ounces in brackets on the sizes customers name in ounces.</span></li>
+      <li><b>Measurements</b><span>Glass without a cap, in millimetres and inches. Capacities are nominal.</span></li>
+      <li><b>Neck finish</b><span>18-415 means 18 mm across, thread style 415. Necks outside the thread system read "16 mm".</span></li>
+      <li><b>Item numbers</b><span>The website SKUs. Type one into the search at {SITE_LABEL}.</span></li>
+      <li><b>Prices and stock</b><span>Not printed. They are on the website and at {PHONE}.</span></li>
+    </ul></div>
+  </div>
+</section>"""
+
+
+def uses_page(photos_all: dict[str, Path]) -> str:
     use_prep = prepare("uses", {u[0]: photos_all[u[0]] for u in USES if u[0] in photos_all}, px_per_card=900)
     scale = min(min(1.6 / use_prep[s]["w"] for s, *_ in USES if s in use_prep), 1.25 / max(use_prep[s]["h"] for s, *_ in USES if s in use_prep))
+
     def use_img(sku: str) -> str:
         if sku not in use_prep:
             return ""
@@ -1036,32 +1317,369 @@ def front_matter(order: list[Family], pages: dict[str, int] | None, photos_all: 
     cells = "".join(
         f"<div class=cell><div class=ph>{use_img(s)}</div><h3>{esc(n)}</h3><p>{esc(a)}</p><p class=f>{esc(b)}</p></div>"
         for s, n, a, b in USES)
-    uses = f"""
+    return f"""
 <section class=front>
-  <p class=kicker>Choose by use</p><h1>What each bottle is for</h1>
+  <p class=kicker>Choose by use{mk('uses')}</p><h1>What each bottle is for</h1>
   <div class=uses>{cells}</div>
 </section>"""
-    shared = "".join(f"<tr><td class=n>{esc(n)}</td><td class=b>{esc(b)}</td><td>{esc(f)}</td></tr>" for n, b, f in NECK_ROWS)
-    sets = "".join(f"<tr><td class=n>{esc(n)}</td><td class=b>{esc(b)}</td><td>{esc(f)}</td></tr>" for n, b, f in NECK_SETS)
-    necks = f"""
+
+
+def necks_page(pages: dict[str, int] | None) -> str:
+    shared = "".join(f"<tr><td class=n>{esc(n)}</td><td class=b>{esc(b)}</td><td>{esc(f)}</td><td class=p>{pg(pages, 'fit-' + n)}</td></tr>"
+                     for n, b, f in NECK_ROWS)
+    sets = "".join(f"<tr><td class=n>{esc(n)}</td><td class=b>{esc(b)}</td><td>{esc(f)}</td><td class=p></td></tr>" for n, b, f in NECK_SETS)
+    return f"""
 <section class=front>
-  <p class=kicker>Neck finishes</p><h1>What fits what</h1>
+  <p class=kicker>Neck finishes{mk('necks')}</p><h1>What fits what</h1>
   <p class=lede>Caps, rollers, sprayers, pumps and droppers screw onto the neck, so every bottle with the same neck finish shares
   the same parts. In <span class=mono>18-415</span>, 18 is the neck's diameter in millimetres and 415 is the thread style.</p>
-  <table class=necks><thead><tr><th>Neck</th><th>Bottles</th><th>Parts that fit</th></tr></thead><tbody>{shared}</tbody></table>
+  <table class=necks><thead><tr><th>Neck</th><th>Bottles</th><th>Parts that fit</th><th class=p>Page</th></tr></thead><tbody>{shared}</tbody></table>
   <h2 class=k>Sold as complete sets, and bottles in their own class</h2>
   <table class=necks><tbody>{sets}</tbody></table>
   <p class=note>A shared neck is where fit starts, not a guarantee: stem length, dip-tube length and how an insert seats are checked
   bottle by bottle. Each family guide shows the combinations Best Bottles sells.</p>
 </section>"""
-    return cover + contents + uses + necks
+
+
+# --------------------------------------------------------------------------- fit systems (the neck sheets)
+
+# Picture height and width allowance per part group, in inches, and the order groups are laid out in.
+GROUP_SIZE = {"roll-on-cap": (.5, .52), "roller": (.5, .62), "sprayer": (.62, .46), "treatment": (.62, .5), "lotion": (.66, .46),
+              "ribbed": (.42, .58), "short-lined": (.42, .54), "tall-lined": (.56, .54), "faux": (.5, .6), "lined": (.5, .5),
+              "reducer": (.5, .62), "bulb": (.62, .58), "dropper": (.9, .5), "tassel": (.78, .74), "photo": (1.15, .62)}
+GROUP_ORDER = list(GROUP_SIZE)
+
+
+def prepare_each(set_name: str, pics: list[tuple[str, Path, float]], px_per_card: int = 900) -> dict[str, dict]:
+    """Crop each sheet picture on its own, then size it by its width on the sheet (points), so parts and
+    bottles keep the relative sizes the neck sheet gives them."""
+    out = {}
+    for key, path, pt_w in pics:
+        one = prepare(f"{set_name}-{key}", {key: path}, px_per_card=px_per_card, pad=0.03)[key]
+        if pt_w:
+            one = {**one, "w": one["w"] * pt_w / 72, "h": one["h"] * pt_w / 72}
+        out[key] = one
+    return out
+
+
+# What each card says under its title: the neck sheets' card notes, in customer words. (neck, key) overrides key.
+CARD_NOTES = {
+    "roll-on-cap": "Solid and dotted; one cap for either roller ball",
+    "roller": "Plastic or steel ball; the insert is a separate part",
+    "sprayer": "Screw-on spray heads, for thin liquids",
+    ("18-415", "sprayer"): "Check the dip-tube length for each bottle",
+    "treatment": "For lotions and serums, not spray",
+    "lotion": "For liquids that pour; one with a clear overcap",
+    "ribbed": "Black or white, with a white liner",
+    "short-lined": "Black and five metal-look finishes",
+    "tall-lined": "Gold and silver, 24 mm tall; not roll-on caps",
+    "lined": "Screw caps with a liner; not roll-on caps",
+    ("18-415", "lined"): "Short and tall screw caps with a liner",
+    "faux": "Five faux-leather finishes",
+    "reducer": "An insert under the cap; not a cap finish",
+    "bulb": "Nine colours",
+    "tassel": "The same nine colours, with a tassel",
+    "dropper": "Copper, gold or silver collar",
+}
+# The rule printed at the foot of each fit system, after the neck sheets' "thread rule" lines.
+THREAD_RULES = {
+    "13-415": "A 13-415 neck is required. How a roller insert seats, the liner and the sprayer's tube length are still "
+              "checked bottle by bottle. The tall lined caps are 24 mm; the short gold and silver lined caps are separate options.",
+    "15-415": "Two lined caps and five sprayers are made for 15-415. Check a sprayer's dip-tube length before pairing it "
+              "with a bottle it is not sold on.",
+    "17-415": "Choose the 17-415 neck first, then one path: a roller (an insert and one of the roll-on caps), a sprayer or "
+              "a treatment pump. Insert seating and tube length are confirmed for each assembly.",
+    "18-400": "The 66 mm dropper is made for the 15 ml Boston Round. The 9 ml vial takes the short cap or the cap with "
+              "glass rod, not a dropper.",
+    "18-415": "The shared 18-415 neck marks the bottles a part can go on; the parts sold vary by bottle. The reducer is "
+              "an insert under a cap. The 30 ml Cylinder pair has a fixed sprayer and takes none of the other Cylinder options.",
+    "20-400": "Droppers are matched by size: a 76 mm stem for 30 ml and 90 mm for 60 ml. Every roll-on cap fits either "
+              "roller ball.",
+}
+DATA_CARDS = [  # necks without a sheet: (title, fitments, key for its note, note)
+    ("Roll-on caps", ("Steel roller ball",), "photo", "Tall caps over a steel or plastic roller ball; shown on the bottle"),
+    ("Droppers", ("Dropper",), "photo", "Stem matched to the bottle; shown on the bottle"),
+    ("Short screw cap", ("Screw cap",), "photo", "Shown on the bottle"),
+    ("Cap with glass rod", ("Cap with glass rod",), "photo", "For the 9 ml vial"),
+]
+
+
+def neck_bodies(families: dict[str, Family], neck: str) -> list[tuple[Family, Body]]:
+    ordered = sorted(families.values(), key=lambda f: FAMILY_ORDER.index(f.name) if f.name in FAMILY_ORDER else 99)
+    return [(f, b) for f in ordered for b in f.ordered_bodies() if b.neck == neck and b.klass.startswith("glass")]
+
+
+def fit_system_page(neck: str, families: dict[str, Family], photos: dict[str, Path], pages: dict[str, int] | None,
+                    sheet, report: list[str]) -> str:
+    """One neck as a matrix, the way the neck sheets lay it out: part cards, the finish rail, then a card for
+    each bottle. A sheet printed on two pages (18-415) stays two pages."""
+    fb = neck_bodies(families, neck)
+    items = [i for _, b in fb for i in b.items]
+    cards = []  # (sheet page, key, title, count, note, prepared, [(picture key, caption)])
+    if sheet:
+        for g in sorted(sheet.groups, key=lambda g: (g.page, GROUP_ORDER.index(g.key))):
+            pics = [x for x in g.pictures if not x.note]  # "*" parts are seen only on assembled bottles
+            prep = prepare_each(f"fs-{neck}-{g.key}", [(x.path.stem, x.path, x.pt_w) for x in pics])
+            note = CARD_NOTES.get((neck, g.key)) or CARD_NOTES.get(g.key, "")
+            cards.append((g.page, g.key, g.title, str(len(pics)), note, prep, [(x.path.stem, x.finish) for x in pics]))
+    else:
+        main = Counter(i.body for i in items if i.sku in photos).most_common(1)
+        main = main[0][0] if main else None
+        for title, fits, key, note in DATA_CARDS:
+            cand = [i for i in items if i.fitment in fits]
+            finishes = sorted({i.finish for i in cand})
+            chosen = [c for c in (pick([i for i in cand if i.finish == fin], photos, glass="Amber", body=main) for fin in finishes) if c]
+            if not chosen:
+                continue
+            if len(chosen) < len(finishes):
+                note += f" ({len(chosen)} of {len(finishes)} photographed)"
+            prep = prepare(f"fs-{neck}-{slugify(title)}", {c.sku: photos[c.sku] for c in chosen}, px_per_card=1000)
+            cards.append((1, key, title, str(len(finishes)), note, prep, [(c.sku, c.finish) for c in chosen]))
+    bottles = []  # (sheet page, picture key, path, points wide, title, detail lines, family slug)
+    if sheet:
+        for sb in sheet.bodies:
+            fam = families.get(sb.family.replace("Tall ", "", 1)) or families.get(sb.family)
+            body = next((b for b in fam.bodies.values() if b.neck == neck and abs(b.ml - sb.ml) < 0.6), None) if fam else None
+            if not body:
+                report.append(f"- {neck} sheet: {sb.family} {sb.ml:g} ml is not a current body; left out of the fit system page.")
+                continue
+            height = sb.mm or body.height
+            lines = [sb.sku] if sb.sku else []
+            if sb.exception:
+                lines.append(sb.exception)
+            elif height:
+                lines.append(f"{sb.glass} · {height:g} mm" if sb.glass else f"{height:g} mm body")
+            else:
+                lines.append(sb.glass)
+            bottles.append((sb.page, sb.path.stem, sb.path, sb.pt_w, f"{sb.family} {sb.ml:g} ml", lines, fam.slug))
+        prep_b = prepare_each(f"fs-{neck}-bottles", [(k, path, pt) for _, k, path, pt, *_ in bottles], px_per_card=1000)
+    else:
+        for f, b in fb:
+            for g in glass_sorted({i.glass for i in b.items}):
+                pool = [i for i in b.items if i.glass == g]
+                c = pick([i for i in pool if i.fitment == "Screw cap"], photos, glass=g) or pick(pool, photos, glass=g)
+                if c:
+                    bottles.append((1, c.sku, photos[c.sku], 0, f"{f.name} {b.label}", [g + (f" · {b.height:g} mm" if b.height else "")], f.slug))
+        prep_b = prepare(f"fs-{neck}-bottles", {k: path for _, k, path, *_ in bottles}, px_per_card=1000) if bottles else {}
+    sheet_pages = max([c[0] for c in cards] + [b[0] for b in bottles] + [1])
+    most = max([sum(1 for b in bottles if b[0] == n) for n in range(1, sheet_pages + 1)] + [1])
+    per_row = 8 if most > 6 else 6
+    img_h = 1.0 if -(-most // per_row) <= 2 else 0.8
+    card_w = (7.3 - .1 * (per_row - 1)) / per_row
+    scale = min(img_h / max(prep_b[k]["h"] for _, k, *_ in bottles), (card_w - .12) / max(prep_b[k]["w"] for _, k, *_ in bottles)) if bottles else 1
+    out = []
+    for n in range(1, sheet_pages + 1):
+        card_html = []
+        for _, key, title, count, note, prep, pics in (c for c in cards if c[0] == n):
+            h, w = GROUP_SIZE.get(key, (.55, .55))
+            basis = len(pics) * w + .2
+            row = strip(prep, [(k, esc(cap)) for k, cap in pics], width=basis - .2, height=h, gap=.06, raw=True, min_fig=.42)
+            card_html.append(f"<div class=fsx-card style='flex:1 1 {basis:.2f}in'><h3>{esc(title)}<span> / {esc(count)}</span></h3>"
+                             f"<p>{esc(note)}</p>{row}</div>")
+        bottle_html = []
+        for _, k, _, _, title, lines, slug in (b for b in bottles if b[0] == n):
+            img = f"<img style='width:{prep_b[k]['w'] * scale:.3f}in' src='{prep_b[k]['uri']}' alt=''>"
+            detail = "".join(f"<span class={'mono' if re.match(r'^(GB|LB)', line) else 'd'}>{esc(line)}</span>" for line in lines if line)
+            bottle_html.append(f"<div class=fsx-bottle style='width:{card_w:.3f}in'><h4>{esc(title)}</h4><div class=ph style='height:{img_h:.2f}in'>{img}</div>"
+                               f"{detail}<span class=pg>p. {pg(pages, slug)}</span></div>")
+        first = n == 1
+        count = ("Source check · 23 Sep 2026" if sheet else "From the catalogue photography") + (f" · {n:02d} / {sheet_pages:02d}" if sheet_pages > 1 else "")
+        refs = f"Page numbers lead to each family guide; item numbers for every part are on page {pg(pages, 'parts')}."
+        foot = (f"<p><b>Thread rule</b>{esc(THREAD_RULES[neck])} {refs}</p>" if first else f"<p>{refs}</p>")
+        out.append(f"""
+<section class='front fsx'>
+  <div class=fsx-head><h1>{esc(neck)}</h1><div class=t><p class=a>Fit system{mk('fit-' + neck) if first else ''}</p>
+    <p class=b>Parts follow the neck finish across bottle families</p></div>
+    <p class=src>{esc(count)}<span>{len(fb)} bottle sizes · {len(items):,} items</span></p></div>
+  <div class=fsx-cards>{''.join(card_html)}</div>
+  <div class=fsx-rail><span>{esc(neck)} finish</span></div>
+  <div class=fsx-bottles>{''.join(bottle_html)}</div>
+  <div class=fsx-foot>{foot}</div>
+</section>""")
+    return "".join(out)
+
+
+def fit_systems(families: dict[str, Family], photos: dict[str, Path], pages: dict[str, int] | None, sheets: dict, report: list[str]) -> str:
+    return necks_page(pages) + "".join(fit_system_page(n, families, photos, pages, sheets.get(n), report) for n in FIT_NECKS)
+
+
+# --------------------------------------------------------------------------- working with the range (house edition)
+
+
+def ops_sku() -> str:
+    anatomy = "".join(f"<div class=tok><span class='t mono'>{esc(t)}</span><span class=l>{esc(l)}</span><span class=m>{esc(m)}</span></div>"
+                      for t, l, m in ops.SKU_EXAMPLE)
+    tokens = dict(ops.SKU_TOKENS)
+    block = lambda group: (f"<h3>{esc(group)}</h3><table class=kvt>"
+                           + "".join(f"<tr><td class=mono>{esc(c)}</td><td>{esc(m)}</td></tr>" for c, m in tokens[group]) + "</table>")
+    grid = "".join(f"<div>{''.join(block(g) for g in col)}</div>" for col in (("Type", "Glass", "Size"), ("Family",), ("Fitment", "Finish")))
+    parts = "".join(f"<tr><td class=mono>{esc(p)}</td><td>{esc(m)}</td><td class=mono>{esc(e)}</td></tr>" for p, m, e in ops.PART_PREFIXES)
+    code, fields = ops.GRACE_EXAMPLE
+    code_html = "".join(f"<div class=tok><span class='t mono small'>{esc(seg)}</span><span class=l>{esc(f)}</span></div>"
+                        for seg, f in zip(code.split("-", 5), fields))
+    return f"""
+<section class='front ops'>
+  <p class=kicker>Working with the range{mk('ops-sku')}</p><h1>Reading an item number</h1>
+  <p class=lede>Every item has a website item number (its SKU), built from short codes in a fixed order: what it is, the family,
+  the glass, the size, the fitment and the finish. Type the whole number into the search at {SITE_LABEL} to open the item.</p>
+  <div class=anatomy>{anatomy}</div>
+  <div class=tokgrid>{grid}</div>
+  <h2 class=k>Parts sold separately</h2>
+  <table class=ref><thead><tr><th>Starts with</th><th>Part</th><th>Example</th></tr></thead><tbody>{parts}</tbody></table>
+  <h2 class=k>The structured code</h2>
+  <p class=body>Part numbers carry the neck finish after the prefix, then the finish. The product records also give every item a
+  structured code, with the same fields separated by hyphens. The codes grew over time, so a few differ (Sleek is both Slk and
+  Sleek): read a code as a guide and confirm on the product page.</p>
+  <div class='anatomy code'>{code_html}</div>
+</section>"""
+
+
+def ops_fit(pages: dict[str, int] | None) -> str:
+    rules = "".join(f"<li><div><b>{esc(t)}</b>{esc(d)}</div></li>" for t, d in ops.FIT_RULES)
+    check = "".join(f"<li>{esc(c)}</li>" for c in ops.FIT_CHECKLIST)
+    return f"""
+<section class='front ops'>
+  <p class=kicker>Working with the range{mk('ops-fit')}</p><h1>Confirming a fit</h1>
+  <p class=lede>"Which parts fit this bottle?" is the question customers ask most. The answer always starts with the neck
+  finish, and ends with what Best Bottles sells on that bottle. The fit systems start on page {pg(pages, 'part-fit')}.</p>
+  <ol class=rules>{rules}</ol>
+  <div class=check><h3>Before promising a fit</h3><ol>{check}</ol></div>
+</section>"""
+
+
+def ops_questions() -> str:
+    cells = "".join(f"<div><h3>{esc(q)}</h3><p>{esc(a)}</p></div>" for q, a in ops.QUESTIONS)
+    return f"""
+<section class='front ops'>
+  <p class=kicker>Working with the range{mk('ops-questions')}</p><h1>Answering common questions</h1>
+  <p class=lede>Short answers in the words the website uses. Each one follows the claims policy: no bottle is described as
+  leak-proof, airtight, spill-proof or TSA-approved.</p>
+  <div class=qa>{cells}</div>
+</section>"""
+
+
+def ops_samples(order: list[Family], pages: dict[str, int] | None) -> str:
+    bands = "".join(f"<tr><td class=f>{esc(b)}</td><td>{esc(ml)}</td><td>{esc(use)}</td></tr>" for b, ml, use in ops.SIZE_BANDS)
+    rows = []
+    for f in order:
+        for b in f.ordered_bodies():
+            if b.ml <= 5 or f.name == "Vial":
+                fits = [FIT_SHORT.get(x, x) for x in sorted({i.fitment for i in b.items}, key=lambda x: FIT_INDEX.get(x, 99))]
+                rows.append(f"<tr><td class=f>{esc(f.name)}</td><td>{esc(b.label)}</td><td class=mono>{esc(neck_label(b.neck))}</td>"
+                            f"<td>{esc(', '.join(fits))}</td><td class=r>{len(b.items)}</td><td class=r>{pg(pages, f.slug)}</td></tr>")
+    return f"""
+<section class='front ops'>
+  <p class=kicker>Working with the range{mk('ops-samples')}</p><h1>Samples and small sizes</h1>
+  <p class=lede>Size decides what a bottle is for. At 5 ml and under, and for every vial, samples, testers and promotional
+  giveaways come first.</p>
+  <table class=ref><thead><tr><th>Band</th><th>Capacity</th><th>Leads with</th></tr></thead><tbody>{bands}</tbody></table>
+  <h2 class=k>Every sample size in the range</h2>
+  <table class=ref><thead><tr><th>Family</th><th>Size</th><th>Neck</th><th>Sold with</th><th class=r>Items</th><th class=r>Page</th></tr></thead>
+  <tbody>{''.join(rows)}</tbody></table>
+</section>"""
+
+
+def ops_naming() -> str:
+    examples = "".join(f"<tr><td class=mono>{esc(s)}</td><td>{esc(t)}</td><td>{esc(v)}</td></tr>" for s, t, v in ops.TITLE_EXAMPLES)
+    nouns = "".join(f"<span>{esc(n)}</span>" for n in ops.TYPE_NOUNS)
+    units = "".join(f"<tr><td class=f>{esc(a)}</td><td>{esc(b)}</td><td class=x>{esc(c)}</td></tr>" for a, b, c in ops.UNITS)
+    vocab = "".join(f"<tr><td>{esc(a)}</td><td class=x>{esc(b)}</td></tr>" for a, b in ops.VOCABULARY)
+    return f"""
+<section class='front ops'>
+  <p class=kicker>Working with the range{mk('ops-naming')}</p><h1>Naming products</h1>
+  <p class=lede>One name everywhere: the website, checkout, Faire, feeds and print all use the same title, built the same way.
+  Titles stay within 60 characters, Faire's limit.</p>
+  <p class=formula>{esc(ops.TITLE_FORMULA)}</p>
+  <table class=ref><thead><tr><th>Item number</th><th>Title</th><th>Option</th></tr></thead><tbody>{examples}</tbody></table>
+  <h2 class=k>The last words of every title</h2><div class=chips>{nouns}</div>
+  <h2 class=k>Units and names</h2>
+  <table class=ref><thead><tr><th></th><th>Write</th><th>Never</th></tr></thead><tbody>{units}</tbody></table>
+  <h2 class=k>Part names</h2>
+  <table class=ref><thead><tr><th>Write</th><th>Never</th></tr></thead><tbody>{vocab}</tbody></table>
+</section>"""
+
+
+def ops_describing() -> str:
+    fmt = "".join(f"<li>{esc(x)}</li>" for x in ops.DESCRIPTION_FORMAT)
+    never = "".join(f"<tr><td class=f>{esc(a)}</td><td>{esc(b)}</td></tr>" for a, b in ops.NEVER_WORDS)
+    allowed = "".join(f"<li>{esc(a)}</li>" for a in ops.ALLOWED_CLAIMS)
+    check = "".join(f"<li>{esc(c)}</li>" for c in ops.PUBLISH_CHECKLIST)
+    return f"""
+<section class='front ops'>
+  <p class=kicker>Working with the range{mk('ops-describing')}</p><h1>Describing products</h1>
+  <p class=lede>Every description has the same shape, so a customer finds the same facts in the same place on every page.</p>
+  <div class=two>
+    <div><h2 class=k>The item description</h2><ol class=plain>{fmt}</ol></div>
+    <div><h2 class=k>Claims allowed, in these words only</h2><ul class=plain>{allowed}</ul></div>
+  </div>
+  <h2 class=k>Words never used</h2><table class=ref><tbody>{never}</tbody></table>
+  <div class=check><h3>Before publishing a product</h3><ol>{check}</ol></div>
+</section>"""
+
+
+def ops_bodies(order: list[Family], pages: dict[str, int] | None) -> str:
+    rows = []
+    for f in order:
+        first = True
+        for b in f.ordered_bodies():
+            cases = Counter(i.case for i in b.items if i.case)
+            case = f"{cases.most_common(1)[0][0]:,}" if cases else "—"
+            h = f"{b.height:g} mm ({b.height / 25.4:.2f} in)" if b.height else "—"
+            w = f"{b.width:g} mm ({b.width / 25.4:.2f} in)" if b.width else "—"
+            rows.append(f"<tr{' class=first' if first else ''}><td class=f>{esc(f.name) if first else ''}</td><td>{esc(b.label)}</td>"
+                        f"<td class=mono>{esc(neck_label(b.neck))}</td><td>{h}</td><td>{w}</td><td class=r>{case}</td>"
+                        f"<td class=r>{len(b.items)}</td><td>{esc(body_tag(b))}</td><td class=r>{pg(pages, f.slug) if first else ''}</td></tr>")
+            first = False
+    return f"""
+<section class='front ops'>
+  <p class=kicker>Working with the range{mk('ops-bodies')}</p><h1>Every bottle, measured</h1>
+  <p class=lede>Every bottle size in the range, with its neck, height without a cap, diameter or width, and case quantity. Most
+  items are listed at five quantity breaks: 1, 12 and 144 units, then two larger quantities set for each item, the last five
+  times the one before. Prices for every break are on the product page; this book carries none.</p>
+  <table class='ref bodies'><thead><tr><th>Family</th><th>Size</th><th>Neck</th><th>Height, no cap</th><th>Diameter or width</th>
+    <th class=r>Case</th><th class=r>Items</th><th>Note</th><th class=r>Page</th></tr></thead><tbody>{''.join(rows)}</tbody></table>
+</section>"""
+
+
+def ops_data(pages: dict[str, int] | None) -> str:
+    flow = "".join(f"<div><span class=mono>{n:02d}</span><b>{esc(t)}</b><p>{esc(d)}</p><i class=mono>{esc(where)}</i></div>"
+                   for n, (t, d, where) in enumerate(ops.DATA_FLOW, 1))
+    steps = "".join(f"<li>{esc(s)}</li>" for s in ops.REBUILD)
+    lookup = "".join(f"<tr><td class=f>{esc(q)}</td><td>{esc(a)}</td><td class=r>{pg(pages, k) if k else ''}</td></tr>"
+                     for q, a, k in ops.LOOKUP)
+    return f"""
+<section class='front ops'>
+  <p class=kicker>Working with the range{mk('ops-data')}</p><h1>Where product information lives</h1>
+  <p class=lede>Every fact in this book comes from two records: the component register, which says what fits what, and the
+  product records, which hold every item number. Correct a fact there and every surface follows, this book included.</p>
+  <div class=flow>{flow}</div>
+  <h2 class=k>Where to look it up</h2>
+  <table class=ref><tbody>{lookup}</tbody></table>
+  <h2 class=k>Keeping this book current</h2>
+  <ol class=plain>{steps}</ol>
+  <p class=note>This edition was built on {dt.date.today():%d %B %Y}.</p>
+</section>"""
+
+
+def ops_glossary() -> str:
+    items = "".join(f"<div><dt>{esc(t)}</dt><dd>{esc(d)}</dd></div>" for t, d in ops.GLOSSARY)
+    return f"""
+<section class='front ops'>
+  <p class=kicker>Working with the range{mk('ops-glossary')}</p><h1>Glossary</h1>
+  <dl class=gloss>{items}</dl>
+</section>"""
+
+
+def operations_part(order: list[Family], pages: dict[str, int] | None) -> str:
+    return (ops_sku() + ops_fit(pages) + ops_questions() + ops_samples(order, pages) + ops_naming() + ops_describing()
+            + ops_bodies(order, pages) + ops_data(pages) + ops_glossary())
 
 
 # --------------------------------------------------------------------------- parts, packaging, index
 
 PART_NECK_ORDER = ["13-415", "15-415", "17-415", "18-400", "18-415", "20-400", "13-425", "8-425", "22-400", "24-400"]
-PART_ORDER = ["Roll-on cap", "Tall roll-on cap", "Fine-mist sprayer", "Treatment pump", "Lotion pump", "Vintage bulb sprayer",
-              "Bulb sprayer with tassel", "Dropper", "Short ribbed cap", "Short lined cap", "Tall lined cap", "Lined cap",
+PART_ORDER = ["Roll-on cap", "Tall roll-on cap", "Fine-mist sprayer", "Treatment pump", "Lotion pump", "Vintage-style bulb sprayer",
+              "Vintage-style bulb sprayer with tassel", "Dropper", "Short ribbed cap", "Short lined cap", "Tall lined cap", "Lined cap",
               "Faux-leather cap", "Short screw cap", "Tall screw cap", "Screw cap", "Cap with glass rod"]
 PART_EXCLUDE = {"Droppers1ozElg"}  # filed under 17-415 in Convex; its product page says 18-400 (17-415 remedy register)
 
@@ -1098,7 +1716,7 @@ def part_label(r: dict) -> tuple[str, str]:
     if kind in ("vintage-bulb-sprayer", "tassel-bulb-sprayer"):
         colour = next((n for t, n in SKU_FINISH if t in sku.split("18-415")[-1]), None) or sentence(finish)
         colour = {"Matte silver": "Matte silver", "Gold": "Gold"}.get(colour, colour)
-        return ("Bulb sprayer with tassel" if kind.startswith("tassel") else "Vintage bulb sprayer"), colour
+        return ("Vintage-style bulb sprayer with tassel" if kind.startswith("tassel") else "Vintage-style bulb sprayer"), colour
     if kind == "dropper":
         bulb = "White" if re.search(r"white rubber", low) else "Black"
         collar = re.search(r"(shiny gold|shiny silver|shiny copper) collar", low)
@@ -1144,6 +1762,7 @@ def clean_packaging(name: str) -> str:
     text = text.replace('\\', '"').replace('"""', '"').replace('""', '"')
     text = re.sub(r"\s*Size\s*:\s*", ", ", text)
     text = re.sub(r"Christmas green", "Green", text, flags=re.I)
+    text = re.sub(r"\.\s*,", ",", text)
     text = re.sub(r"\s+", " ", text).strip().rstrip(".").strip('" ')
     return text[:1].upper() + text[1:]
 
@@ -1180,11 +1799,11 @@ def index_section(skus: list[str], pages: dict[str, int] | None) -> str:
 
 def back_page(mark: str) -> str:
     return f"""
-<section class=back>
+<section class=back><div class=inner>
   {lockup(mark, 'big')}
   <img class=qr src='{qr(SITE + "?utm_source=print&utm_medium=catalogue&utm_campaign=catalogue")}' alt=''>
   <p>{SITE_LABEL} · {PHONE}</p><p class=note>{IMPRINT}</p>
-</section>"""
+</div></section>"""
 
 
 # --------------------------------------------------------------------------- render
@@ -1217,6 +1836,28 @@ def document(body: str, families: list[Family], title: str, face_css: str) -> st
             f"<title>{esc(title)}</title><style>{face_css}\n{page_css(families, title)}\n{CSS}</style></head><body>{body}</body></html>")
 
 
+def opener_rows(families: dict[str, Family], photos: dict[str, Path], sheets: dict) -> dict[str, str]:
+    """One photograph row per part opener."""
+    rows = {}
+    caps = next(g for g in sheets["17-415"].groups if g.key == "roll-on-cap")
+    prep = prepare("open-fit", {p.path.stem: p.path for p in caps.pictures}, px_per_card=900)
+    rows["fit"] = strip(prep, [(p.path.stem, "") for p in caps.pictures], width=6.9, height=1.25, gap=.16)
+    chosen = []
+    for name in ("Cylinder", "Elegant", "Circle", "Diva", "Empire", "Boston Round", "Round", "Diamond"):
+        c = pick(families[name].items, photos) if name in families else None
+        if c:
+            chosen.append(c)
+    prep = prepare("open-families", {c.sku: photos[c.sku] for c in chosen}, px_per_card=1000)
+    rows["families"] = strip(prep, [(c.sku, "") for c in chosen], width=7.1, height=2.7, gap=.06)
+    tassels = next(g for g in sheets["18-415"].groups if g.key == "tassel")
+    prep = prepare("open-parts", {p.path.stem: p.path for p in tassels.pictures}, px_per_card=900)
+    rows["parts"] = strip(prep, [(p.path.stem, "") for p in tassels.pictures], width=7.1, height=1.5, gap=.1)
+    heads = [x for g in sheets["17-415"].groups if g.key in ("sprayer", "treatment") for x in g.pictures]
+    prep = prepare("open-ops", {x.path.stem: x.path for x in heads}, px_per_card=900)
+    rows["ops"] = strip(prep, [(x.path.stem, "") for x in heads], width=6.9, height=1.4, gap=.16)
+    return rows
+
+
 def main() -> None:
     import pymupdf
 
@@ -1224,6 +1865,9 @@ def main() -> None:
     ap.add_argument("--export", type=Path, default=DEFAULT_EXPORT)
     ap.add_argument("--family", action="append", help="build only these families (repeatable)")
     ap.add_argument("--no-catalogue", action="store_true")
+    ap.add_argument("--no-guides", action="store_true", help="skip the per-family PDFs")
+    ap.add_argument("--edition", choices=["both", "house", "web"], default="both",
+                    help="house: with Working with the range (for the team); web: without it (for download)")
     args = ap.parse_args()
 
     families, meta = load(args.export)
@@ -1240,7 +1884,7 @@ def main() -> None:
               f"({meta.get('deployment')}, collected {meta.get('collectedAt')}). Skipped rows: {meta.get('skipped')}.\n",
               "| Family | Items | Sizes | Fitment types | Photographed items | Pages | Shape line |", "|---|---|---|---|---|---|---|"]
     try:
-        for fam in order:
+        for fam in ([] if args.no_guides else order):
             html_doc = document(family_section(fam, families, photos, mark), [fam], f"{fam.name} · Compatibility guide", face_css)
             path = renderer.pdf(html_doc, guides / f"{fam.slug}.pdf")
             n = pymupdf.open(path).page_count
@@ -1258,38 +1902,76 @@ def main() -> None:
             skus = sorted({i.sku for f in order for i in f.items}
                           | {c["websiteSku"] for c in components if c["websiteSku"] not in PART_EXCLUDE}
                           | {r["websiteSku"] for r in packaging})
+            sheets = {n: neck_sheets.read_sheet(n, WORK / "neck") for n in neck_sheets.SHEETS}
+            rows = opener_rows(families, photos, sheets)
+            fit_report: list[str] = []
 
-            def body(starts, sku_pages):
-                return (front_matter(order, starts, photos, mark)
-                        + "".join(family_section(f, families, photos, mark, marker=True) for f in order)
-                        + parts_section(components) + packaging_section(packaging) + index_section(skus, sku_pages) + back_page(mark))
+            def body(starts, sku_pages, house):
+                parts = [
+                    cover(order, photos, mark), contents(order, starts, house),
+                    range_glance(order, components, starts), how_to_use(starts, house), uses_page(photos),
+                    opener(2, "part-fit", "Fit systems", "Six shared neck finishes carry most of the range. Each of the next "
+                           "pages is one neck: every part made for it, and every bottle that has it.", rows["fit"]),
+                    fit_systems(families, photos, starts, sheets, fit_report),
+                    opener(3, "part-families", "The families", f"{len(order)} families, each with its compatibility guide: sizes "
+                           "and measurements, what fits each size, the finishes, use and care, and every item number.", rows["families"]),
+                    "".join(family_section(f, families, photos, mark, marker=True, pages=starts) for f in order),
+                    opener(4, "part-parts", "Parts and packaging", "Caps, rollers, sprayers, pumps, droppers and vintage-style bulb "
+                           "sprayers sold on their own, by neck finish; then gift bags, boxes and supplies.", rows["parts"]),
+                    parts_section(components), packaging_section(packaging),
+                ]
+                if house:
+                    parts += [opener(5, "part-ops", "Working with the range", "A reference for the Best Bottles team: item numbers, "
+                                     "confirming a fit, answering customers, naming products, every bottle measured, and where "
+                                     "product information lives.", rows["ops"]),
+                              operations_part(order, starts)]
+                parts += [index_section(skus, sku_pages), back_page(mark)]
+                return "".join(parts)
 
             title = "The Catalogue"
-            path = renderer.pdf(document(body(None, None), order, title, face_css), OUT / "best-bottles-catalogue.pdf")
-            doc = pymupdf.open(path)
-            starts, sku_pages, wanted = {}, {}, set(skus)
-            index_page = None
-            for pno in range(doc.page_count):
-                text = doc[pno].get_text()
-                for m in re.findall(r"§(?:FAM|SEC):([a-z0-9-]+)§", text):
-                    starts.setdefault(m, pno + 1)
-                if "§SEC:index§" in text:
-                    index_page = pno
-                if index_page is None:
-                    for w in doc[pno].get_text("words"):
-                        if w[4] in wanted:
-                            sku_pages.setdefault(w[4], pno + 1)
-            path = renderer.pdf(document(body(starts, sku_pages), order, title, face_css), OUT / "best-bottles-catalogue.pdf")
-            missing = sorted(set(skus) - set(sku_pages))
-            if missing:
-                report.append(f"\nItem numbers the index could not place ({len(missing)}): {', '.join(missing[:40])}")
-            data = path.read_bytes()
-            pages = pymupdf.open(path).page_count
-            manifest["catalogue"] = {"file": "best-bottles-catalogue.pdf", "pages": pages, "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()}
-            print(f"catalogue: {pages} pages, {len(data) // 1024} KB")
+            editions = {"house": ("best-bottles-catalogue.pdf", True), "web": ("best-bottles-catalogue-web.pdf", False)}
+            for edition in (["house", "web"] if args.edition == "both" else [args.edition]):
+                filename, house = editions[edition]
+                path = renderer.pdf(document(body(None, None, house), order, title, face_css), OUT / filename)
+                doc = pymupdf.open(path)
+                starts, sku_pages, wanted = {}, {}, set(skus)
+                index_page = None
+                for pno in range(doc.page_count):
+                    text = doc[pno].get_text()
+                    for m in re.findall(r"§(?:FAM|SEC):([a-z0-9-]+)§", text):
+                        starts.setdefault(m, pno + 1)
+                    if "§SEC:index§" in text:
+                        index_page = pno
+                    if index_page is None:
+                        for w in doc[pno].get_text("words"):
+                            if w[4] in wanted:
+                                sku_pages.setdefault(w[4], pno + 1)
+                for sku in sorted(set(skus) - set(sku_pages), key=len, reverse=True):
+                    for pno in range(index_page if index_page is not None else doc.page_count):
+                        if sku in re.sub(r"\s+", "", doc[pno].get_text()):
+                            sku_pages[sku] = pno + 1
+                            break
+                path = renderer.pdf(document(body(starts, sku_pages, house), order, title, face_css), OUT / filename)
+                check = pymupdf.open(path)
+                moved = [k for k, v in starts.items() if not any(f"§{t}:{k}§" in check[v - 1].get_text() for t in ("FAM", "SEC"))
+                         ] if check.page_count >= max(starts.values()) else list(starts)
+                if moved:
+                    report.append(f"\n{edition} edition: page references moved in the second pass for {', '.join(moved)}; rebuild to settle.")
+                missing = sorted(set(skus) - set(sku_pages))
+                if missing and edition == "house":
+                    report.append(f"\nItem numbers the index could not place ({len(missing)}): {', '.join(missing[:40])}")
+                data = path.read_bytes()
+                pages = check.page_count
+                entry = {"file": filename, "pages": pages, "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()}
+                # The web edition is the one published for download; the house edition includes the team reference.
+                manifest["catalogue" if edition == "web" else "houseEdition"] = entry
+                print(f"catalogue ({edition}): {pages} pages, {len(data) // 1024} KB")
+            if fit_report:
+                report.append("\nFit system pages:\n" + "\n".join(dict.fromkeys(fit_report)))
     finally:
         renderer.close()
     (OUT / "manifest.json").write_text(json.dumps(manifest, indent=2))
+    report.append("\nHeights held back (printed as a dash): " + "; ".join(f"`{k}`: {v}" for k, v in HEIGHT_HOLD.items()))
     report.append("\nShape lines marked *draft* are hand-written physical descriptions awaiting Best Bottles' review; the others open with the family name.")
     (OUT / "build-report.md").write_text("\n".join(report) + "\n")
 

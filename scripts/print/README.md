@@ -5,7 +5,8 @@ One build produces every printed and downloadable product document from the same
 | Output | Use |
 |---|---|
 | `out/print/family-guides/<family>.pdf` | The "Compatibility guide (PDF)" link on each family page (`/catalog/<family>`) |
-| `out/print/best-bottles-catalogue.pdf` | The complete catalogue: cover, contents, choose by use, what fits what, every family, back cover |
+| `out/print/best-bottles-catalogue.pdf` | The house edition: the range, fit systems (the neck-sheet matrices), every family, parts and packaging, and "Working with the range" for the team |
+| `out/print/best-bottles-catalogue-web.pdf` | The web edition: the same book without "Working with the range"; this is the one published for download |
 | `out/print/manifest.json` | Pages, size and checksum of each file, and the export it was built from |
 | `out/print/build-report.md` | Items, sizes, fitment types and photographed items per family |
 
@@ -18,7 +19,11 @@ Each family guide contains:
 - the families that share each neck
 - a line sheet with every item number
 
-The complete catalogue is the same family sections in merchandising order, so the two never disagree.
+The catalogue is the same family sections in merchandising order, so the two never disagree.
+
+Two more modules feed the catalogue:
+- `neck_sheets.py` reads the neck-thread sheets in `data/register/source/neck-thread-2026-09-23/`. It finds each part and bottle picture, the label printed under it and the card it sits in. Run it on its own for a contact sheet per neck (`out/print/work/neck/`).
+- `operations.py` holds the words of "Working with the range". Every line restates RUBRIC, COPY-STRATEGY or SYNTHESIS, so change the source document first.
 
 ## Build
 
@@ -27,6 +32,7 @@ pip install pillow segno playwright pymupdf
 python3 scripts/print/family_guides.py                                 # all families + catalogue
 python3 scripts/print/family_guides.py --family "Boston Round"         # one family, for review
 python3 scripts/print/family_guides.py --export <prod-export.json.gz>  # from a fresh production export
+python3 scripts/print/family_guides.py --no-guides --edition house     # the house edition only, for review
 ```
 
 The default export is the 25 September 2026 **development** snapshot in `data/register/source/`. Build published guides from a production export: it has the same shape as `products:getProductExportPage`, which `scripts/register/build_register.py --export` also reads. Rebuild the register first when the catalogue has changed.

@@ -4,9 +4,10 @@
 //   python3 scripts/print/family_guides.py --export <production export>
 //   BLOB_READ_WRITE_TOKEN=... node scripts/print/upload_family_guides.mjs
 //
-// Uploads out/print/family-guides/*.pdf and the complete catalogue to Vercel Blob under content-addressed
-// keys (a rebuilt PDF gets a new URL; nothing is overwritten), then rewrites src/lib/products/family-guides.json
-// so each family page links to its guide. Commit that JSON to publish the links.
+// Uploads out/print/family-guides/*.pdf and the web edition of the catalogue (manifest "catalogue") to Vercel
+// Blob under content-addressed keys (a rebuilt PDF gets a new URL; nothing is overwritten), then rewrites
+// src/lib/products/family-guides.json so each family page links to its guide. Commit that JSON to publish the
+// links. The house edition (manifest "houseEdition"), with the team reference, is never uploaded.
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";

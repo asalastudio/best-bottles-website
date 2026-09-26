@@ -18,6 +18,48 @@ Status: proposed · 2026-09-26 · proof: `prototype/boston-round-proof.pdf` (11 
 
 ---
 
+## Update, 26 September 2026 (evening): the catalogue is also the house reference
+
+Best Bottles asked for three changes to the catalogue:
+- "vintage-style bulb" and "vintage-style bulb with tassel" in place of "vintage bulb";
+- the neck-sheet component matrices built in, laid out the way the sheets are;
+- enough working information that the book serves the team and stakeholders as an operations manual, while still being a catalogue fit for a front or coffee table.
+
+**Two editions from one build.**
+
+| Edition | File | Pages | Use |
+|---|---|---|---|
+| House | `out/print/best-bottles-catalogue.pdf` | 152 | Print and hand over. Parts 1-5, index, back cover |
+| Web | `out/print/best-bottles-catalogue-web.pdf` | 139 | The one `upload_family_guides.mjs` publishes. Parts 1-4, without the team reference |
+
+**The book, part by part:**
+1. **The range.** Contents; the range at a glance (key numbers, items by fitment and by neck, a table of every family); how to use this book; choose by use.
+2. **Fit systems.**
+   - What fits what, with a page reference for each neck.
+   - One matrix page per shared neck (13-415, 15-415, 17-415, 18-400, 20-400) and two for 18-415, as on its sheet. Each page has:
+     - part cards ("Roll-on caps / 9") with every finish photographed
+     - connector lines to the "{neck} finish" rail
+     - a card for each bottle, with its example item number, height and family page
+     - the sheet's thread rule
+   - Photographs come from the 23 September neck-sheet PDFs (`scripts/print/neck_sheets.py` reads them). 18-400 and 20-400 have no sheet PDF in the repository yet, so those two pages use the catalogue photography and say so.
+3. **The families.** The 27 compatibility guides as before, each now naming the page of its neck's fit system.
+4. **Parts and packaging.**
+5. **Working with the range** (house edition only), for the team:
+   - reading an item number (website SKU and structured code)
+   - confirming a fit (seven rules and a checklist)
+   - answering common customer questions
+   - samples and small sizes
+   - naming products, and describing products
+   - every bottle measured (with case quantities and the quantity-break structure, no prices)
+   - where product information lives, and how the book is rebuilt
+   - a glossary
+
+   Every line restates a rule already written in RUBRIC, COPY-STRATEGY or SYNTHESIS (`scripts/print/operations.py` lists the sources). There are no prices and no country of origin, and the book never says it is a gift.
+
+**Held back:** the register gives the 9 ml vial (18-400) a height of 79.4 mm, but the legacy product pages give 47-50 mm with a cap, so the book prints a dash until the register is corrected.
+
+---
+
 ## Update, 26 September 2026: family guides are built
 
 Best Bottles asked for a downloadable compatibility guide on every family page, and for the Boston Round page design across the whole catalogue.

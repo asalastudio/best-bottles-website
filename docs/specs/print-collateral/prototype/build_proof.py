@@ -65,7 +65,7 @@ USES = [
     ("GBCylAmb9MtlRollBlkDot", "Roll-On Bottle", "Perfume oil, attar and oil blends diluted in a carrier.", "The ball alone is not a seal; carry it capped."),
     ("GBCylAmb9SpryMattSl", "Fine-Mist Spray Bottle", "Spray perfume, body mist, room and linen spray.", "At 15 ml and under, used for samples and decants."),
     ("GBDiva30SpryMtGl", "Perfume Spray Bottle", "Eau de parfum, eau de toilette and cologne.", "Each press of the pump meters one spray."),
-    ("GBElg60AnSpTslIvyGl", "Vintage Bulb Spray Bottle", "Eau de parfum and cologne kept on a dressing table.", "Not a travel bottle."),
+    ("GBElg60AnSpTslIvyGl", "Vintage-Style Bulb Spray Bottle", "Eau de parfum and cologne kept on a dressing table.", "Not a travel bottle."),
     ("GBBstnAmb1ozWhtDropperShnGlTrim", "Dropper Bottle", "Essential oils, beard oil and facial serums.", "Releases one drop at a time."),
     ("GBBstnAmb1ozBlkCapSht", "Pour Bottle", "Beard oil, hair oil, body oil and essential oils.", "No fitment; the oil pours from the neck."),
     ("GBDiva30RdcrShnGl", "Pour Bottle with Reducer", "Splash cologne, aftershave, perfume oil, beard oil.", "The reducer slows the pour to a splash or drip."),
@@ -100,7 +100,7 @@ SHARED_NECKS = [
     ("18-415",
      "Circle 50 and 100 · Cylinder 25, 50 and 100 · Diamond 60 · Diva 30, 46 and 100 · Elegant 60 and 100 · "
      "Empire 50 and 100 · Grace 55 · Round 78 and 128 · Sleek and Slim 30, 50 and 100 ml",
-     "Fine-mist sprayer · lotion pump · vintage bulb sprayer, with or without tassel · orifice reducer with cap · "
+     "Fine-mist sprayer · lotion pump · vintage-style bulb sprayer, with or without tassel · orifice reducer with cap · "
      "faux-leather cap · lined cap · dropper (Circle 50, Cylinder 25, Diva 46, Elegant 60, Empire 50, Round 128, "
      "Sleek 30 and Slim 30 ml)"),
     ("20-400", "Boston Round 30 and 60 ml",
