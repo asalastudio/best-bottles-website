@@ -297,6 +297,35 @@ def widen_flange(master: Image.Image) -> tuple[Image.Image, dict]:
     return canvas, {"ballWidth": ball, "flangeWidth": round(flange * f), "flangeStretch": round(f, 4)}
 
 
+def widen_skirt(a: np.ndarray, axis: float, target: float) -> tuple[np.ndarray, dict]:
+    """Widen only a roller layer's skirt (the flat band at its foot that sits on the rim) to `target` px,
+    about the neck axis. The skirt is the run of rows, walking up from the foot, that are at least 94% of
+    the widest row in the lower 40% of the part; the antialiased last rows count with it. Everything above
+    (housing and dome) is left exactly as photographed."""
+    rows = np.where((a[..., 3] > 128).any(axis=1))[0]
+    top, bottom = int(rows.min()), int(rows.max()) + 1
+    widths = [row_width(a, y, y + 1) for y in range(top, bottom)]
+    skirt = max(widths[int(len(widths) * 0.6):])
+    y = bottom - 1
+    while y > top and widths[y - top] < 0.94 * skirt:          # the antialiased foot
+        y -= 1
+    while y > top and widths[y - top] >= 0.94 * skirt:
+        y -= 1
+    band_top = y + 1
+    f = target / skirt
+    meta = {"skirtWidth": skirt, "targetWidth": round(target), "skirtStretch": round(f, 4), "bandTop": band_top, "bandBottom": bottom}
+    if f < 1.03:
+        return a, meta
+    # pad a few transparent rows below the foot so the stretch keeps its antialiasing
+    y1 = min(a.shape[0], bottom + 2)
+    band = Image.fromarray(a[band_top:y1]).convert("RGBa")
+    data = (1 / f, 0, axis - axis / f, 0, 1, 0)
+    wide = np.asarray(band.transform((a.shape[1], y1 - band_top), Image.AFFINE, data, resample=Image.BICUBIC).convert("RGBA"))
+    out = a.copy()
+    out[band_top:y1] = wide
+    return out, meta
+
+
 def roller_ref(kits):
     """Reference crop of the photographed 17-415 metal roller housing above the seat, flat-cut, and
     the Sunburst input: that crop upscaled onto a transparent square canvas."""
@@ -547,8 +576,9 @@ def build(kits, with_roller: bool):
 
     # 5. plastic rollers on the same bottles: the photographed skirt is narrower than the neck it sits on
     #    (each glass was photographed with its own neck width, the roller layer was not resized to match).
-    #    Same rule as the metal housing: the skirt overhangs this glass's threads. The layer is the photo,
-    #    only rescaled about its seat; no regeneration.
+    #    Same rule as the metal housing: the skirt overhangs this glass's threads. Only the flat skirt band
+    #    is widened, about the neck axis; the dome and housing stay the photographed size. (Rescaling the
+    #    whole layer by the skirt ratio, 1.2-1.34x, pushed the dome through the top of every tall cap.)
     for sku, k in sorted(kits.items()):
         if k["familyId"] not in ROLLER_FAMILIES or any(r["sku"] == sku for r in fixes["filledRoller"]):
             continue
@@ -559,18 +589,16 @@ def build(kits, with_roller: bool):
             continue
         seat = k["anchors"]["seatY"]
         a = fetch(rp)
-        skirt = max(row_width(a, y, y + 1) for y in range(int(rp["bounds"]["top"]), int(rp["bounds"]["bottom"])))
         threads = max(row_width(fetch(body), y, y + 1) for y in range(seat + 4, seat + 60))
-        r = threads * FLANGE_OVER_THREADS / max(skirt, 1)
-        if abs(r - 1) < 0.03:
-            continue
         axis = k["anchors"].get("neckAxisX") or k["anchors"]["axisX"]
-        scaled = register(a, axis, rp["bounds"]["bottom"], axis, rp["bounds"]["bottom"], r)      # about the seat, x kept on the axis
-        part = new_part(rp, scaled, "roller", rp["zOrder"], "rollerToNeck")
-        part["scale"] = round(r, 4)
+        widened, meta = widen_skirt(a, axis, threads * FLANGE_OVER_THREADS)
+        if meta["skirtStretch"] < 1.03:
+            continue
+        part = new_part(rp, widened, "roller", rp["zOrder"], "rollerToNeck")
+        part["skirt"] = meta
         parts[parts.index(rp)] = part
         record(sku, parts, ["rollerToNeck"])
-        sheets["rollers"].append((sku, a, scaled, parts))
+        sheets["rollers"].append((sku, a, widened, parts))
 
     (OUT / f"manifest-{TARGET}.json").write_text(json.dumps(manifest, indent=1) + "\n")
     print(f"manifest: {len(manifest['kits'])} kits; mechanism scales {json.dumps(scales)}")
