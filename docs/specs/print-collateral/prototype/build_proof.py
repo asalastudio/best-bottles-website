@@ -209,7 +209,10 @@ def strip(photos: dict, items: list[tuple[str, str]], width: float, height: floa
 def fonts() -> str:
     """Local @font-face rules. Cormorant ships with the site; Inter and Plex Mono are fetched once."""
     FONTS.mkdir(parents=True, exist_ok=True)
-    faces = []
+    faces = [
+        f"@font-face{{font-family:'Montserrat';font-weight:100 900;"
+        f"src:url('{(ROOT / 'public/fonts/montserrat/montserrat-latin-wght-normal.woff2').as_uri()}') format('woff2')}}"
+    ]
     for style in ("normal", "italic"):
         woff = ROOT / f"public/fonts/cormorant/cormorant-latin-wght-{style}.woff2"
         faces.append(
@@ -242,7 +245,7 @@ def qr(url: str) -> str:
 
 
 def wordmark() -> str:
-    src = Image.open(ROOT / "public/brand/best-bottles-wordmark.png")
+    src = Image.open(ROOT / "public/brand/best-bottles-wordmark-supplied.png").convert("RGBA")
     path = IMAGES / "wordmark.png"
     IMAGES.mkdir(parents=True, exist_ok=True)
     src.crop(src.getbbox()).save(path)
@@ -257,11 +260,15 @@ BASE_CSS = """
   --rule:#CDBF9F; --hair:#DDD3BF; --gold:#8B6F42; --gold2:#C5A065;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{background:var(--bone);color:var(--ink);font-family:'Inter',sans-serif;
+html,body{background:var(--bone);color:var(--ink);font-family:'Montserrat',sans-serif;
   -webkit-print-color-adjust:exact;print-color-adjust:exact;font-feature-settings:'tnum' 1,'lnum' 1}
 .page{position:relative;overflow:hidden;background:var(--bone);break-after:page}
 .page:last-child{break-after:auto}
-.serif{font-family:'Cormorant',serif}
+.serif{font-family:'Montserrat',sans-serif;font-weight:600!important;letter-spacing:-.01em}
+.lockup{display:inline-flex;flex-direction:column;align-items:center;gap:.04in}
+.lockup img{height:.12in;width:auto}
+.lockup span{font-size:4.2pt;letter-spacing:.32em;text-indent:.32em;text-transform:uppercase;color:#1D1D1F;white-space:nowrap}
+.lockup.big img{height:.2in}.lockup.big span{font-size:6.6pt}
 .mono{font-family:'IBM Plex Mono',monospace}
 .kicker{font-size:6.2pt;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
 .rule{height:.5pt;background:var(--rule)}
@@ -374,7 +381,7 @@ def insert_pages(data: dict, photos: dict, mark: str) -> tuple[str, str]:
     code = qr(URL + "?utm_source=print&utm_medium=insert&utm_campaign=boston-round")
     front = f"""
 <section class='page insert-front'>
-  <div class=top><img src='{mark}' alt='Best Bottles'><span class=kicker>Family card</span></div>
+  <div class=top><span class=lockup><img src='{mark}' alt='Best Bottles'><span>Fragrance &amp; Beauty Packaging</span></span><span class=kicker>Family card</span></div>
   <div class=hero>{hero}</div>
   <div class=intro>
     <p class=kicker>Glass · 18-400 and 20-400 necks</p>
@@ -409,12 +416,12 @@ def insert_pages(data: dict, photos: dict, mark: str) -> tuple[str, str]:
     css = SMALL_CSS + FIT_CSS + LIST_CSS + """
 .insert-front .hero{position:absolute;left:0;right:0;top:.62in;bottom:2.5in;display:flex;align-items:center;justify-content:center}
 .insert-front .intro{position:absolute;left:.36in;right:.36in;bottom:.34in}
-.insert-front h1{font-size:40pt;font-weight:500;line-height:.95;margin:.05in 0 .07in;letter-spacing:-.005em}
+.insert-front h1{font-size:31pt;font-weight:500;line-height:.95;margin:.05in 0 .07in;letter-spacing:-.005em}
 .insert-front .sizes{font-size:7.4pt;line-height:1.55;color:var(--ink2)}
 .insert-front .goldrule{margin:.11in 0 .09in}
 .insert-front .body{font-size:7.7pt;line-height:1.55;color:var(--ink2)}
 .insert-back .mute{color:var(--mute)}
-.insert-back h2{font-size:21pt;font-weight:500;margin:.1in 0 .06in;line-height:1.05}
+.insert-back h2{font-size:17pt;font-weight:500;margin:.1in 0 .06in;line-height:1.05}
 .insert-back ul.fin{margin-top:.1in}
 .insert-back .note{color:var(--mute);font-size:6.3pt;margin-top:.03in}
 .insert-back .split{display:grid;grid-template-columns:1fr 1.9in;gap:.2in;margin-top:.16in}
@@ -442,7 +449,7 @@ def booklet_pages(data: dict, photos: dict, mark: str) -> tuple[str, str]:
     )
     cover = f"""
 <section class='page b-cover'>
-  <img class=mark src='{mark}' alt='Best Bottles'>
+  <span class='lockup big' style='margin-top:.1in'><img src='{mark}' alt='Best Bottles'><span>Fragrance &amp; Beauty Packaging</span></span>
   <div class=title>
     <p class=kicker>2026 edition</p>
     <h1 class=serif>The Line</h1>
@@ -551,10 +558,10 @@ def booklet_pages(data: dict, photos: dict, mark: str) -> tuple[str, str]:
 .b-cover{display:flex;flex-direction:column;align-items:center}
 .b-cover .mark{height:.13in;width:auto;margin-top:.1in}
 .b-cover .title{text-align:center;margin-top:.9in}
-.b-cover h1{font-size:62pt;font-weight:500;line-height:.9;margin:.1in 0 .12in;letter-spacing:-.01em}
+.b-cover h1{font-size:44pt;font-weight:500;line-height:.9;margin:.1in 0 .12in;letter-spacing:-.01em}
 .b-cover .sub{font-size:8.4pt;color:var(--ink2);letter-spacing:.04em}
 .b-cover .row{position:absolute;left:0;right:0;bottom:.3in}
-.b-contents h2,.b-use h2{font-size:22pt;font-weight:500;margin:.06in 0 .12in;line-height:1}
+.b-contents h2,.b-use h2{font-size:18pt;font-weight:500;margin:.06in 0 .12in;line-height:1}
 .b-use h2.ghost{visibility:hidden}
 .b-contents .lede{font-size:7.4pt;line-height:1.55;color:var(--ink2);margin-bottom:.14in}
 .b-contents .sect{margin:.14in 0 .04in}
@@ -567,10 +574,10 @@ ul.toc.cols li{break-inside:avoid;line-height:1.72}
 .b-use .grid{display:grid;grid-template-columns:1fr 1fr;column-gap:.2in;row-gap:.07in}
 .b-use .cell{border-top:.5pt solid var(--rule);padding-top:.04in}
 .b-use .ph{height:1.22in;display:flex;align-items:flex-end;justify-content:center}
-.b-use h3{font-size:11pt;font-weight:600;line-height:1.05;margin-top:.03in}
+.b-use h3{font-size:8.6pt;font-weight:600;line-height:1.05;margin-top:.03in}
 .b-use .for{font-size:6.4pt;line-height:1.38;color:var(--ink2);margin-top:.02in}
 .b-use .fact{font-size:6.1pt;line-height:1.38;color:var(--gold);margin-top:.01in}
-.b-fits h2{font-size:22pt;font-weight:500;margin:.06in 0 .07in;line-height:1}
+.b-fits h2{font-size:18pt;font-weight:500;margin:.06in 0 .07in;line-height:1}
 .b-fits .lede{font-size:7.3pt;line-height:1.55;color:var(--ink2)}
 .b-fits .lede .mono{color:var(--gold)}
 .b-fits .sect{margin:.1in 0 .02in}
@@ -582,7 +589,7 @@ ul.toc.cols li{break-inside:avoid;line-height:1.72}
 .b-family .head{display:flex;justify-content:space-between}
 .b-family .mute{color:var(--mute)}
 .b-family .sizes{margin-top:.12in}
-.b-family h2{font-size:28pt;font-weight:500;line-height:1;margin:.1in 0 .05in}
+.b-family h2{font-size:22pt;font-weight:500;line-height:1;margin:.1in 0 .05in}
 .b-family .lede{font-size:7.5pt;line-height:1.5;color:var(--ink2)}
 .b-family dl.facts{display:grid;grid-template-columns:.52in 1fr;row-gap:2.5pt;font-size:6.9pt;line-height:1.4;margin:.1in 0 .04in;
   border-top:.5pt solid var(--rule);padding-top:.06in}
@@ -684,12 +691,12 @@ footer{position:absolute;left:.55in;right:.55in;bottom:.32in;display:flex;justif
 .c-left .cap{font-size:6.6pt;color:var(--mute);text-align:center;margin-top:.08in}
 .c-left .titlerow{display:grid;grid-template-columns:2.7in 1fr;gap:.3in;align-items:end;margin-top:.16in;
   border-top:.75pt solid var(--ink);padding-top:.12in}
-.c-left h1{font-size:50pt;font-weight:500;line-height:.92;margin-top:.04in;letter-spacing:-.01em}
+.c-left h1{font-size:38pt;font-weight:500;line-height:.92;margin-top:.04in;letter-spacing:-.01em}
 .c-left .body{font-size:8.5pt;line-height:1.6;color:var(--ink2)}
 .c-left .specs{display:grid;grid-template-columns:repeat(3,1fr);margin-top:.16in;border-top:.5pt solid var(--rule);border-bottom:.5pt solid var(--rule)}
 .c-left .specs>div{padding:.07in 0 .07in .12in;border-left:.5pt solid var(--hair)}
 .c-left .specs>div:first-child{border-left:0;padding-left:0}
-.c-left .specs .k{font-family:'Cormorant',serif;font-size:15pt;font-weight:600}
+.c-left .specs .k{font-size:12pt;font-weight:600}
 .c-left .specs .v{font-size:7.6pt;color:var(--gold);margin-top:.01in}
 .c-left .specs .s{font-size:7pt;color:var(--mute)}
 .c-left .lower{display:grid;grid-template-columns:3.65in 1fr;gap:.3in;margin-top:.18in}
@@ -704,7 +711,7 @@ footer{position:absolute;left:.55in;right:.55in;bottom:.32in;display:flex;justif
   padding:0 0 .05in;border-bottom:.75pt solid var(--ink)}
 .c-right tr.group th{text-align:left;padding:.09in 0 .03in;border-bottom:.5pt solid var(--rule)}
 .c-right tr.group span{margin-right:.16in;font-size:7pt;color:var(--mute);font-weight:400}
-.c-right tr.group span.serif{font-size:13pt;font-weight:600;color:var(--ink)}
+.c-right tr.group span.serif{font-size:11pt;font-weight:600;color:var(--ink)}
 .c-right tr.group span.mono{color:var(--gold)}
 .c-right td{padding:2.1pt 0;border-bottom:.5pt solid var(--hair);vertical-align:top}
 .c-right td.fit{font-weight:600;width:1.12in;color:var(--ink)}

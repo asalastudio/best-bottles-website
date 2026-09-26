@@ -18,6 +18,32 @@ Status: proposed · 2026-09-26 · proof: `prototype/boston-round-proof.pdf` (11 
 
 ---
 
+## Update, 26 September 2026: family guides are built
+
+Best Bottles asked for a downloadable compatibility guide on every family page, and for the Boston Round page design across the whole catalogue.
+
+**The answer: one generator, two outputs, from the same pages.**
+
+- **A guide per family** (`out/print/family-guides/<family>.pdf`, 2–14 pages each, 0.4–1.5 MB).
+  - It is linked from each family page as "Compatibility guide (PDF)".
+  - Each guide covers: sizes and measurements, what fits each size, finishes, use and care, glass and size photographs, the families sharing each neck, and a line sheet with every item number.
+- **The complete catalogue** (`out/print/best-bottles-catalogue.pdf`, 127 pages, about 15 MB). It contains the same family sections in merchandising order, plus:
+  - a cover and contents with page numbers
+  - choose by use, and what fits what
+  - parts sold separately, grouped by neck
+  - packaging and accessories
+  - an index of all 2,368 item numbers with their pages
+  - a back cover
+
+  It is one document for download and for print.
+- **No page per SKU.** Every SKU is already a row in its family's line sheet, and the product page covers the single item. 2,000 near-identical pages would bury the fit information the guides exist to show.
+- **Pre-built, not generated on request.** The guides are built when the catalogue changes, uploaded to Vercel Blob and listed in `src/lib/products/family-guides.json`. Rendering 100 pages with photographs on each click would be slow and fragile.
+- **Brand:** the site's current wordmark lockup and Montserrat; the proof in `prototype/` has been updated to match.
+
+The generator is `scripts/print/family_guides.py`; how to build and publish is in `scripts/print/README.md`. The family-page link is `src/components/catalog/FamilyGuideDownload.tsx`; it shows nothing until a family's guide is published.
+
+---
+
 ## 1. What exists today
 
 | Piece | State | Notes |

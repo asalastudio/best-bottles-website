@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import LocaleLink from "@/components/LocaleLink";
 import { SlidersHorizontal, X } from "@/components/icons";
 import FocusedProductCard from "./FocusedProductCard";
+import FamilyGuideDownload from "./FamilyGuideDownload";
 import {
   APPLICATOR_NAV,
   EMPTY_FILTERS,
@@ -184,6 +185,7 @@ export default function MobileFamilyCatalog(p: Props) {
       <details className={styles.about}>
         <summary>About {p.family === "Atomizer" ? "Atomizers" : `${p.family} bottles`}</summary>
         <p>{p.story}</p>
+        <FamilyGuideDownload family={p.family} />
         {/* Existing editorial photography is retained below the listings. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={p.hero} alt={p.heroAlt} loading="lazy" />
