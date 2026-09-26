@@ -8,11 +8,14 @@
  *   npx tsx scripts/register/blender/push-blender-9ml.ts --dir <final dir> --apply              # upload + write dev, "measured"
  *   npx tsx scripts/register/blender/push-blender-9ml.ts --dir <final dir> --apply --approve    # the same, "approved"
  *   ... --env-dir <checkout>   read .env.local / .env.blob.local from another checkout (default: this repo root)
+ *   ... --deployment prod      PRODUCTION: needs REGISTER_PROD_WRITE_TOKEN in the environment; never the default.
+ *                              Run scripts/register/push-register.ts --deployment prod --apply first (prod's register
+ *                              tables start empty). Images are content-addressed, so a prod run reuses the dev blobs.
  *
  * Reads data/register/blender-9ml/measurements.json (written by the Blender lane's build_assets.py) and the images
  * in --dir. See-through layers carry `glass` (one per plate glass) and `usage: "seated"`; the full plugs and the
  * lifted pump internals carry `usage: "exploded"`. Blob keys are content-addressed and write-once.
- * Dev only: refuses the production deployment.
+ * Dev by default; production only with --deployment prod (Jordan runs it).
  */
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
@@ -46,9 +49,14 @@ type Measurements = {
 async function main() {
     if (!dir) throw new Error("--dir <final dir> is required (the Blender lane's register-9ml-v32/final)");
     const m = JSON.parse(readFileSync(resolve(ROOT, "data", "register", "blender-9ml", "measurements.json"), "utf8")) as Measurements;
-    const url = process.env.NEXT_PUBLIC_CONVEX_URL, token = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
-    if (!url || !token) throw new Error("NEXT_PUBLIC_CONVEX_URL and BEST_BOTTLES_CONVEX_WRITE_TOKEN are required");
-    if (url.includes("precise-raccoon-123")) throw new Error("this loader writes dev only");
+    const PROD_URL = "https://precise-raccoon-123.convex.cloud";
+    const deployment = arg("--deployment") ?? "dev";
+    if (deployment !== "dev" && deployment !== "prod") throw new Error(`--deployment must be dev or prod, not ${deployment}`);
+    const url = deployment === "prod" ? PROD_URL : process.env.NEXT_PUBLIC_CONVEX_URL;
+    const token = deployment === "prod" ? process.env.REGISTER_PROD_WRITE_TOKEN : process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
+    if (!url || !token) throw new Error(deployment === "prod" ? "--deployment prod needs REGISTER_PROD_WRITE_TOKEN in the environment" : "NEXT_PUBLIC_CONVEX_URL and BEST_BOTTLES_CONVEX_WRITE_TOKEN are required");
+    if (deployment === "dev" && url === PROD_URL) throw new Error(".env.local points at prod; refusing to treat it as dev");
+    console.log(`register images -> ${deployment} (${url}) ${apply ? "APPLY" : "dry run"}`);
     if (apply && !process.env.BLOB_READ_WRITE_TOKEN) throw new Error("BLOB_READ_WRITE_TOKEN is not set (vercel env pull .env.blob.local --environment=development)");
     const status = (approve ? "approved" : "measured") as "approved" | "measured";
     const neck = m.bodyId.split("-").slice(-2).join("-");
@@ -89,6 +97,9 @@ async function main() {
     console.log(`\n${uploaded.size} distinct images`);
     if (!apply) { console.log("dry run: nothing uploaded or written. Add --apply."); return; }
     const client = new ConvexHttpClient(url);
+    const before = await client.query(api.register.counts, {});
+    const total = (tally: Record<string, number>) => Object.values(tally).reduce((sum, n) => sum + n, 0);
+    if (!total(before.bodies) || !total(before.components)) throw new Error(`${deployment} has no register rows (${JSON.stringify(before)}); run scripts/register/push-register.ts --deployment ${deployment} --apply first`);
     console.log("plates:", JSON.stringify(await client.mutation(api.register.upsertBodyPlates, { writeToken: token, rows: plates })));
     for (const c of components) console.log(c.componentId, JSON.stringify(await client.mutation(api.register.setComponentLayers, { writeToken: token, ...c })));
     console.log("counts:", JSON.stringify(await client.query(api.register.counts, {})));
