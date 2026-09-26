@@ -5,9 +5,11 @@ Updated 2026-09-26 with Best Bottles' direction:
 
 - Beard oil is named wherever buyers put it.
 - Droppers lead with essential oils, beard oil and facial serums.
-- Bottles sold with only a short screw cap are "pour" bottles.
+- Every glass bottle sold with only a screw cap is a "pour" bottle; with an orifice reducer it is a pour bottle with a reducer.
+- Caps on the 13-415 neck are described as lined caps.
 - Vials are named as drams where the catalogue does.
-- Bottles of 5 ml and under are described first as samples and promotional items.
+- Bottles of 5 ml and under, and every vial, are described first as samples and promotional items.
+
 Scope: the "Item description" line on the redesigned PDP (`PdpProductInfo`), one per SKU, for the 2,113 bottle and jar SKUs in 317 product groups. Components, gift packaging and tools are out of scope; they keep their cleaned legacy text.
 
 Companion files in this folder:
@@ -170,7 +172,7 @@ The customer-facing words for each class. The first column is the internal code 
 
 **Beard oil** (L6) is named wherever buyers put it:
 
-- **Primary** for DROP, POUR and SPLASH.
+- **Primary** for DROP and for pour bottles, with or without a reducer (POUR and SPLASH).
 - **Also** for PUMP-LOTION.
 - **Never** for ROLL, MIST, PUMP-SPRAY or BULB.
 
@@ -243,8 +245,10 @@ Each card sets what the "For ..." sentence may say (**Primary**, then **Also**),
   - Bulbs draw in air and dust (7 threads).
 - **Needs confirmation** from Best Bottles before it ships: do our bulb sprayers seal when not in use?
 
-#### SPLASH: orifice reducer under a cap
+#### SPLASH: pour bottle with an orifice reducer
 
+- **What it is.** A pour bottle with an orifice reducer in the neck, under a screw cap. The reducer slows the pour to a controlled splash or drip. Best Bottles counts it as a pour bottle too.
+- **Type phrase.** "pour bottle with an orifice reducer".
 - **Convex values.** `Reducer`.
 - **Catalogue.** 334 SKUs; 18-415; 25–128 ml.
 - **Primary.** L7 splash cologne and aftershave; L3 perfume oil; L6 beard oil.
@@ -307,15 +311,16 @@ Each card sets what the "For ..." sentence may say (**Primary**, then **Also**),
 #### DAB: glass rod applicator cap
 
 - **Convex values.** `Glass Rod`, `Applicator Cap`.
-- **Catalogue.** 1 SKU.
-- **Primary.** L3 attar and thick perfume oil; samples.
-- **Deciding fact.** "Dab straight from the glass rod; the cap seals the neck between uses."
+- **Catalogue.** 1 SKU: `GB09BlackCapApp`, a 9 ml clear vial on an 18-400 neck with a screw cap that carries a glass rod. It is not part of the 17-415 Cylinder family.
+- **Treated as a sample vial.** Best Bottles, 2026-09-26: it typically serves as a sample vial, so it is the one exception to the 5 ml sample cutoff. Type phrase: "sample vial with a glass dab-on rod".
+- **Primary.** Samples, testers and promotional giveaways of L3 perfume oil and attar.
+- **Deciding fact.** "Dab straight from the glass rod; the cap closes the neck between uses."
 - **Evidence.** Buyers ask for a glass stick, not plastic, and wands suit thick oils (3 threads).
 
-#### POUR: pour bottle (a short screw cap and no fitment)
+#### POUR: pour bottle (a screw cap and no fitment)
 
-- **What it is.** Best Bottles' name for this group: "pour oils". The oil is poured from the neck straight into the hand.
-- **Convex values.** `Cap/Closure`, `N/A` or empty, on a bottle of 100 ml or less. Vials, jars and ground-glass necks are not included.
+- **What it is.** Best Bottles' name for this group: "pour oils". Every glass bottle sold with only a screw cap and no reducer is a pour bottle; the oil is poured from the neck straight into the hand. With an orifice reducer it is still a pour bottle; see SPLASH. The bullets differ by situation: a plain pour bottle gets the "pours from the neck" line, and a reducer bottle gets the reducer line.
+- **Convex values.** `Cap/Closure`, `N/A` or empty, on a glass bottle. Vials, jars and ground-glass necks are not included.
 - **Catalogue.** 94 SKUs:
 
   | Size | SKUs |
@@ -334,16 +339,17 @@ Each card sets what the "For ..." sentence may say (**Primary**, then **Also**),
 - **Deciding fact.**
   1. "It has no fitment, so the oil pours straight from the neck into the hand."
   2. The Fits line names the dropper, rollers or sprayer sold for the same bottle, for buyers who want a fitment later.
-- **Needs confirmation.** Only one catalogue row mentions a cap liner. Say "lined cap" only once Best Bottles confirms which short caps have one.
+- **Lined caps.** On the 13-415 neck the Included bullet names the liner (see 4.7). Elsewhere, including Boston rounds, it does not, until Best Bottles confirms.
 - **Evidence.** "Which parts match" is the most-asked question across all four segments.
 
-**STOCK.** The 4 cap-only bottles over 100 ml (plastic flip-top and aluminum, 118–500 ml) are "stock bottles" for stock or refills, not pour bottles. Three plastic flip-top SKUs (`PbClear4ozFlpWh`, `PbClear8ozFlpWh`, `PbNat16ozFlpWh`) are categorised "Glass Bottle" in production; Phase 5 fixes that.
+**STOCK.** The 4 cap-only bottles over 100 ml are "stock bottles" for stock or refills, not pour bottles. They are plastic flip-top and aluminum, 118–500 ml, not glass with a screw cap. Three plastic flip-top SKUs (`PbClear4ozFlpWh`, `PbClear8ozFlpWh`, `PbNat16ozFlpWh`) are categorised "Glass Bottle" in production. Until Phase 5 fixes that, the generator treats any cap-only bottle over 100 ml as STOCK.
 
 #### VIAL: vials and drams
 
 - **Convex values.** `family = Vial`, including the dram vials sold with a dropper.
 - **Catalogue.** 26 SKUs. The catalogue names them 1 ml, 1.5 ml, 2 ml, 5/8 dram (3 ml) and 1 dram (4 ml), plus two 9 ml cylinder vials.
 - **Type phrase.** "{n} dram vial" when the catalogue names the size in drams, otherwise "sample vial". The page title carries the ml, so "dram" never stands alone.
+- **Sample-first at any size.** Every vial leads with samples, including the two 9 ml cylinder vials on the 18-400 neck (`GB09BlackCapApp` with the glass rod, and `GB09BlackCapSht` with a short cap).
 - **Primary.** Samples, testers, trial sizes and promotional giveaways of L1, L3 or L4. Best Bottles: "drams are for samples".
 - **Deciding fact.** Fill method: "Fill it with a pipette or a small funnel." Name the closure exactly: the 1 ml plug applicator, a short screw cap, or a dropper.
 - **Fix.** 4 SKUs call a press-fit neck screw-capped.
@@ -362,7 +368,7 @@ The size band adds one purpose phrase to the summary and ranks the uses. This co
 
 | Band | ml | Phrase in the summary | Source |
 |---|---|---|---|
-| Sample | 5 or less | **Samples lead.** "for samples and promotional giveaways of {liquids}"; vials add "testers" | Best Bottles: drams, 5 ml bottles, roll-ons and sprays are used for samples and promotional items. Legacy: "Perfume sample vials for promotions" |
+| Sample | 5 or less, and every vial | **Samples lead.** "for samples and promotional giveaways of {liquids}"; vials add "testers" | Best Bottles: drams, 5 ml bottles, roll-ons and sprays are used for samples and promotional items. 5 ml is the cutoff. The exception is the 9 ml glass-rod vial, which serves as a sample vial. Legacy: "Perfume sample vials for promotions" |
 | Small | 6–9 | "sized for samples, promotions and travel" | Legacy: "Small sized bottle for promotion samples and travel" |
 | Purse | 10–15 | "sized for decants, promotions and travel" | Legacy: "good for promotions and decants". Research: 10 ml is the standard roller and the daily-carry decant |
 | Everyday | 25–60 | None, or "in the common 1 oz size" at 30 ml and "2 oz" at 60 ml | 30 ml (1 oz) is the default for beard oil and serums |
@@ -404,6 +410,23 @@ This line answers the most common question across all four research segments: "w
 | POUR, SPLASH, VIAL | No line unless a legacy flag says more. |
 
 Words we never use for carry: leak-proof, airtight, spill-proof, TSA-approved. The only exception is "not leak-proof", which is allowed.
+
+### 4.7 Caps and liners (the Included bullet)
+
+Best Bottles' definition, 2026-09-26: "a lined cap is a cap that fits on the bottle and seals it from leaking."
+
+On the 13-415 neck, used by the 5–30 ml bottles, every screw cap Best Bottles sells has a liner. `convex/component13_415Catalog.ts` records them from the 2026-09-23 source sheet:
+
+| Cap | SKUs | Liner | Included wording |
+|---|---|---|---|
+| Short lined caps: shiny black, copper, matte gold, shiny gold, matte silver, shiny silver | `CP13-415BlkShShtMtl`, `CP13-415CuSht`, `CP13-415GlMattSht`, `CP13-415GlSht`, `CP13-415SlMattSht`, `CP13-415SlSht` | Yes | "Short {finish} lined cap" |
+| Short ribbed caps: black, white | `CP13-415BlkSht`, `CP13-415WhtSht` | White liner at the top (Best Bottles, 2026-09-26) | "Short {black/white} ribbed cap with a white liner" |
+| Tall lined caps: gold, silver | `CP13-415Gl`, `CP13-415Sl` | Yes, per the source sheet | "Tall {gold/silver} lined cap" |
+
+- **Allowed line.** "The liner seals the neck." It may sit in Good to know for pour bottles on the 13-415 neck.
+- **Never.** "Leak-proof", "airtight" or "spill-proof", even for a lined cap.
+- **Other necks.** Boston rounds on 18-400 and 20-400, the 15-415 and 18-415 caps, and caps over a roller or reducer get no liner wording until Best Bottles confirms them.
+- **Never call the six short lined caps "metal caps".** That is Jordan's ruling, recorded in the same file.
 
 ---
 
@@ -467,8 +490,12 @@ These are the questions where the answer changes the copy. Each has a recommenda
 4. **"Tincture" as a dropper use?** Recommended: no, for the food-contact and brand reasons in 4.1.
 5. **Replace the legacy "Item type" line** (for example, "Clear, frosted and colored glass roll-on bottles of capacity range about 1/3oz (from 8ml to 10ml)") with a short rubric label such as "Roll-on bottle · perfume oil and blends"? README §4.6 keeps the Best Bottles text "for now", so this is a separate decision. Recommended: yes, after the descriptions ship.
 
-6. **Pour bottles.** Is "pour bottle" the customer-facing name for every glass bottle sold with only a screw cap, from 5 to 60 ml, not counting vials and jars? And which short caps have a liner, so the copy can say "lined cap"?
-7. **Where samples lead.** At 5 ml and under the summary opens with "samples and promotional giveaways"; from 6 to 15 ml samples and promotions follow the liquids. Recommended: keep the line at 5 ml, as Best Bottles described.
+6. **Pour bottles and liners.** *Resolved 2026-09-26.*
+   - Every glass bottle sold with only a screw cap is a pour bottle, and so is one with an orifice reducer.
+   - Lined caps are the six short 13-415 caps and the two ribbed caps with a white liner.
+   - The two tall lined caps are also lined, per the source sheet.
+   - Other necks remain open. See POUR, SPLASH and 4.7.
+7. **Where samples lead.** *Resolved 2026-09-26.* 5 ml is the cutoff. The exception is the 9 ml glass-rod vial, which is treated as a sample vial; every other vial also leads with samples. From 6 to 15 ml, samples and promotions follow the liquids.
 
 ---
 

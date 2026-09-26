@@ -86,7 +86,8 @@ The generator builds one record per SKU. Both layouts are rendered from it.
 - Start with the type phrase for the dispense mode (table below), then "for", then two to four uses from the mode card, then the size phrase.
 - Do not repeat capacity, glass colour or family. The page title right above already says "9 ml Amber Cylinder Roll-On Bottle".
   - Exception: sizes buyers name in ounces or drams ("in the common 1 oz size", "A 1 dram vial").
-- **At 5 ml and under, samples lead:** "A roll-on bottle for samples and promotional giveaways of perfume oil, attar and carrier-oil blends." Best Bottles' buyers use drams, 5 ml bottles, roll-ons and sprays as samples and promotional items.
+- **At 5 ml and under, and for every vial, samples lead:** "A roll-on bottle for samples and promotional giveaways of perfume oil, attar and carrier-oil blends." Best Bottles' buyers use drams, 5 ml bottles, roll-ons and sprays as samples and promotional items. 5 ml is the cutoff; the 9 ml glass-rod vial is the one exception and reads as a sample vial.
+- **Lined caps** are named in Included only on the 13-415 neck (RUBRIC.md §4.7): "Short matte gold lined cap", "Short black ribbed cap with a white liner".
 - **Beard oil** is named wherever the mode card lists it: droppers, pour bottles and splash bottles (RUBRIC.md §4.1).
 
 ### Bullets
@@ -112,12 +113,12 @@ The generator builds one record per SKU. Both layouts are rendered from it.
 | MIST | fine-mist spray bottle |
 | PUMP-SPRAY | perfume spray bottle |
 | BULB | vintage-style bulb-spray bottle |
-| SPLASH | splash bottle with an orifice reducer |
+| SPLASH | pour bottle with an orifice reducer |
 | PUMP-LOTION | lotion-pump bottle |
 | DROP | dropper bottle |
-| POUR | pour bottle (only a short screw cap; the oil is poured into the hand) |
+| POUR | pour bottle (any glass bottle sold with only a screw cap; the oil is poured into the hand) |
 | STOPPER | stoppered bottle ("stoppered apothecary bottle" when the family is Apothecary) |
-| DAB | dab-on bottle with a glass rod |
+| DAB | sample vial with a glass dab-on rod (the one DAB SKU is the 9 ml glass-rod vial) |
 | VIAL | "{n} dram vial" when the catalogue names the size in drams ("1 dram vial", "5/8 dram vial"), otherwise "sample vial" |
 | JAR | cream jar |
 | ATOMIZER | refillable travel atomizer |
@@ -129,7 +130,7 @@ These follow the size bands in RUBRIC.md §4.3.
 
 | Band | Phrase |
 |---|---|
-| 5 ml or less | Samples lead: "for samples and promotional giveaways of {liquids}"; vials add "testers" |
+| 5 ml or less, and every vial | Samples lead: "for samples and promotional giveaways of {liquids}"; vials add "testers" |
 | 6 to 9 ml | "sized for samples, promotions and travel" |
 | 10 to 15 ml | "sized for decants, promotions and travel" |
 | 25 to 60 ml | None, or "in the common 1 oz size" at 30 ml and "2 oz" at 60 ml |
@@ -174,10 +175,10 @@ Below them come the Tech sheet (capacity, neck finish, glass, fitment, heights, 
 
 ## 6. Worked examples
 
-There are fifteen examples:
+There are sixteen examples:
 
 - the twelve archetypes from RUBRIC.md, with the pour bottle and the 1 dram vial updated
-- three sample sizes: a 5 ml roll-on, a 3.3 ml sprayer and a 5 ml pour bottle
+- four sample sizes: a 5 ml roll-on, a 3.3 ml sprayer, a 5 ml pour bottle with a lined ribbed cap, and the 9 ml glass-rod vial
 
 Each Fits line was checked against the catalogue for the same family, capacity, neck and glass colour. Word counts cover everything shown.
 
@@ -226,11 +227,11 @@ A vintage-style bulb-spray bottle for eau de parfum and cologne kept on a dressi
 
 *Note:* The guard is pending the confirmation in RUBRIC.md §7, item 3.
 
-### 4. Circle 100 ml, clear, orifice reducer, pink faux-leather cap · `GBCrcl100RdcrPnkLthr` (SPLASH)
+### 4. Circle 100 ml, clear, orifice reducer, pink faux-leather cap (pour with reducer) · `GBCrcl100RdcrPnkLthr` (SPLASH)
 
 **Layout B, summary and bullets** (61 words)
 
-A splash bottle with an orifice reducer, for splash cologne, aftershave, perfume oil and beard oil.
+A pour bottle with an orifice reducer, for splash cologne, aftershave, perfume oil and beard oil.
 
 - **Included:** Orifice reducer and pink faux-leather cap, fitted
 - **Fits:** 18-415 neck; also takes the perfume spray pump, lotion pump and bulb sprayer sold for this bottle
@@ -238,7 +239,9 @@ A splash bottle with an orifice reducer, for splash cologne, aftershave, perfume
 
 **Layout A, three sentences** (60 words)
 
-> A splash bottle with an orifice reducer, for splash cologne, aftershave, perfume oil and beard oil. It comes with an orifice reducer and pink faux-leather cap; the 18-415 neck also takes the perfume spray pump, lotion pump and bulb sprayer sold for this bottle. The reducer turns a pour into a controlled splash or drip; very thick oils drip slowly.
+> A pour bottle with an orifice reducer, for splash cologne, aftershave, perfume oil and beard oil. It comes with an orifice reducer and pink faux-leather cap; the 18-415 neck also takes the perfume spray pump, lotion pump and bulb sprayer sold for this bottle. The reducer turns a pour into a controlled splash or drip; very thick oils drip slowly.
+
+*Note:* The same pour bottle without the reducer gets the "pours from the neck" line instead; the reducer line replaces it here.
 
 ### 5. Circle 50 ml, clear, matte silver perfume spray pump · `GBCrcl50SpryMtSl` (PUMP-SPRAY)
 
@@ -302,7 +305,7 @@ A pour bottle for beard oil, hair oil, body oil and essential oils, in the commo
 
 > A pour bottle for beard oil, hair oil, body oil and essential oils, in the common 1 oz size. It comes with a short black screw cap; the 20-400 neck also takes the dropper and the steel and plastic rollers sold for this bottle. It has no fitment, so the oil pours straight from the neck into the hand.
 
-*Note:* Included says "lined" once Best Bottles confirms which short caps have a liner (RUBRIC.md §7, item 6).
+*Note:* Boston round caps are not on the lined list, so Included does not mention a liner (RUBRIC.md §4.7).
 
 ### 9. Apothecary 15 ml, cobalt blue, ground-glass stopper · `GB15ApthBlue` (STOPPER)
 
@@ -391,21 +394,37 @@ A fine-mist spray bottle for samples and promotional giveaways of eau de parfum,
 
 > A fine-mist spray bottle for samples and promotional giveaways of eau de parfum, cologne and body mist. It comes with a black fine-mist sprayer and clear cap. It sprays thin liquids only; perfume oil and undiluted essential oil clog it.
 
-### 15. Cylinder 5 ml, clear, short black cap (pour, sample size) · `GBCyl5BlkSht` (POUR)
+### 15. Cylinder 5 ml, clear, short black ribbed cap (pour, sample size) · `GBCyl5BlkSht` (POUR)
 
-**Layout B, summary and bullets** (53 words)
+**Layout B, summary and bullets** (59 words)
 
 A pour bottle for samples and promotional giveaways of perfume oil, attar and beard oil.
 
-- **Included:** Short black screw cap
-- **Fits:** 13-415 neck; also takes the steel and plastic rollers and the fine-mist sprayer sold for this bottle
-- **Good to know:** It has no fitment, so the oil pours straight from the neck
+- **Included:** Short black ribbed cap with a white liner
+- **Fits:** 13-415 neck; also takes the steel and plastic rollers and fine-mist sprayer sold for this bottle
+- **Good to know:** It has no fitment; the oil pours from the neck and the liner seals it
 
-**Layout A, three sentences** (53 words)
+**Layout A, three sentences** (59 words)
 
-> A pour bottle for samples and promotional giveaways of perfume oil, attar and beard oil. It comes with a short black screw cap; the 13-415 neck also takes the steel and plastic rollers and the fine-mist sprayer sold for this bottle. It has no fitment, so the oil pours straight from the neck.
+> A pour bottle for samples and promotional giveaways of perfume oil, attar and beard oil. It comes with a short black ribbed cap with a white liner; the 13-415 neck also takes the steel and plastic rollers and fine-mist sprayer sold for this bottle. It has no fitment; the oil pours from the neck and the liner seals it.
 
-*Note:* The "into the hand" ending is dropped at sample size, where the bottle is filled and handed out rather than used from.
+*Note:* The black ribbed cap has a white liner (RUBRIC.md §4.7), so Good to know can say the liner seals the neck. The "into the hand" ending is dropped at sample size.
+
+### 16. 9 ml clear vial, black cap with glass rod (sample vial) · `GB09BlackCapApp` (VIAL)
+
+**Layout B, summary and bullets** (58 words)
+
+A sample vial with a glass dab-on rod, for samples, testers and promotional giveaways of perfume oil and attar.
+
+- **Included:** Black screw cap with a glass applicator rod
+- **Fits:** 18-400 neck; also takes the plain short black cap sold for this bottle
+- **Good to know:** Dab straight from the glass rod; the cap closes the neck between uses
+
+**Layout A, three sentences** (58 words)
+
+> A sample vial with a glass dab-on rod, for samples, testers and promotional giveaways of perfume oil and attar. It comes with a black screw cap with a glass applicator rod; the 18-400 neck also takes the plain short black cap sold for this bottle. Dab straight from the glass rod; the cap closes the neck between uses.
+
+*Note:* This is the one exception to the 5 ml sample cutoff. It is not part of the 17-415 Cylinder family.
 
 ---
 
