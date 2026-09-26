@@ -1,3 +1,5 @@
+import { partBoxTransform, type PartBox } from "@/lib/register/stage-kit";
+
 type Bounds = { left: number; top: number; right: number; bottom: number };
 
 /** Fit actual registered product bounds, including tall sprayers and bulb hoses.
@@ -29,6 +31,35 @@ export function previewFrame(anchors: { axisX: number; seatY: number; baselineY:
     const y = Math.min(anchors.baselineY - bodyHeight * 1.43 / scale, top - pad);
     return { x, y, width: Math.max(anchors.axisX + bodyHeight * .55 / scale, right + pad) - x,
         height: Math.max(anchors.baselineY + bodyHeight * .10 / scale, bottom + pad) - y };
+}
+
+type BoxedPart = { image: { width: number; height: number }; box?: PartBox | null };
+
+/** The SVG transform that draws one layer: its registration (if any) applied
+ * to the canvas, after a register part's own placement in its box. A full-canvas
+ * kit layer has no box and keeps its registration transform alone. */
+export function layerTransform(transform: string | undefined, part: BoxedPart): string | undefined {
+    const box = partBoxTransform(part);
+    if (!box) return transform;
+    return transform ? `${transform} ${box}` : box;
+}
+
+/** `layerCropStyle` for a part: a register part's image is its box on the
+ * canvas, a kit layer's image is the whole canvas. */
+export function layerCropStyleForPart(part: BoxedPart, frame: { x: number; y: number; width: number; height: number }) {
+    if (!part.box) return layerCropStyle(part.image, frame);
+    if (!(frame.width > 0 && frame.height > 0 && part.box.width > 0 && part.box.height > 0)) {
+        return { position: "absolute" as const, inset: 0, width: "100%", height: "100%", objectFit: "contain" as const };
+    }
+    return {
+        position: "absolute" as const,
+        left: `${((part.box.x - frame.x) / frame.width) * 100}%`,
+        top: `${((part.box.y - frame.y) / frame.height) * 100}%`,
+        width: `${(part.box.width / frame.width) * 100}%`,
+        height: `${(part.box.height / frame.height) * 100}%`,
+        maxWidth: "none",
+        maxHeight: "none",
+    };
 }
 
 /** CSS crop that matches an SVG viewBox over a registered full-canvas layer.

@@ -113,6 +113,9 @@ export function registerVintagePreview(
         };
     }
     const referenceKit = reference?.previewKit ?? reference?.kit;
+    // A register kit already stands on its body's datum; never re-register it to a
+    // published kit's photographed body, nor a published kit to a register plate.
+    if (config.kit && referenceKit && Boolean(config.kit.register) !== Boolean(referenceKit.register)) return null;
     if (!reference || config.id === reference.id
         || config.bodyId !== reference.bodyId || config.family !== reference.family
         || config.capacityMl !== reference.capacityMl || config.color !== reference.color

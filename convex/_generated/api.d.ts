@@ -73,6 +73,7 @@ import type * as productKits from "../productKits.js";
 import type * as productPlates from "../productPlates.js";
 import type * as products from "../products.js";
 import type * as register from "../register.js";
+import type * as registerStage from "../registerStage.js";
 import type * as registerValidators from "../registerValidators.js";
 import type * as repairCylinderAvailability from "../repairCylinderAvailability.js";
 import type * as repairCylinderPilot from "../repairCylinderPilot.js";
@@ -158,6 +159,7 @@ declare const fullApi: ApiFromModules<{
   productPlates: typeof productPlates;
   products: typeof products;
   register: typeof register;
+  registerStage: typeof registerStage;
   registerValidators: typeof registerValidators;
   repairCylinderAvailability: typeof repairCylinderAvailability;
   repairCylinderPilot: typeof repairCylinderPilot;

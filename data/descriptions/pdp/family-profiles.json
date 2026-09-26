@@ -1,0 +1,1447 @@
+{
+ "generatedAt": "2026-09-25T21:04:57.307Z",
+ "profiles": {
+  "Aluminum Bottle|Aluminum Bottle|100|20-410": {
+   "capacitiesMl": [
+    65,
+    100,
+    120,
+    250,
+    500
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Aluminum Bottle|Aluminum Bottle|120|20-410": {
+   "capacitiesMl": [
+    65,
+    100,
+    120,
+    250,
+    500
+   ],
+   "fitmentsAtNeck": [
+    "Lotion Pump"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Aluminum Bottle|Aluminum Bottle|250|20-410": {
+   "capacitiesMl": [
+    65,
+    100,
+    120,
+    250,
+    500
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Aluminum Bottle|Aluminum Bottle|500|20-410": {
+   "capacitiesMl": [
+    65,
+    100,
+    120,
+    250,
+    500
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Aluminum Bottle|Aluminum Bottle|65|20-410": {
+   "capacitiesMl": [
+    65,
+    100,
+    120,
+    250,
+    500
+   ],
+   "fitmentsAtNeck": [
+    "Lotion Pump"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Apothecary|Glass Bottle|15|Ground": {
+   "capacitiesMl": [
+    15,
+    30,
+    118
+   ],
+   "fitmentsAtNeck": [
+    "Glass Stopper"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Apothecary|Glass Bottle|30|Ground": {
+   "capacitiesMl": [
+    15,
+    30,
+    118
+   ],
+   "fitmentsAtNeck": [
+    "Glass Stopper"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Atomizer|Metal Atomizer|10|17mm": {
+   "capacitiesMl": [
+    5,
+    10
+   ],
+   "fitmentsAtNeck": [
+    "Atomizer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Atomizer|Metal Atomizer|5|10mm": {
+   "capacitiesMl": [
+    5,
+    10
+   ],
+   "fitmentsAtNeck": [
+    "Atomizer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Atomizer|Metal Atomizer|5|13-415": {
+   "capacitiesMl": [
+    5,
+    10
+   ],
+   "fitmentsAtNeck": [
+    "Atomizer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Bell|Glass Bottle|10|13-415": {
+   "capacitiesMl": [
+    10
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer",
+    "Plastic Roller Ball",
+    "Metal Roller Ball"
+   ],
+   "plasticCheaperThanMetal": true
+  },
+  "Boston Round|Glass Bottle|15|18-400": {
+   "capacitiesMl": [
+    15,
+    30,
+    60
+   ],
+   "fitmentsAtNeck": [
+    "Dropper"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Boston Round|Glass Bottle|30|20-400": {
+   "capacitiesMl": [
+    15,
+    30,
+    60
+   ],
+   "fitmentsAtNeck": [
+    "Dropper",
+    "Metal Roller Ball",
+    "Plastic Roller Ball"
+   ],
+   "plasticCheaperThanMetal": true
+  },
+  "Boston Round|Glass Bottle|60|20-400": {
+   "capacitiesMl": [
+    15,
+    30,
+    60
+   ],
+   "fitmentsAtNeck": [
+    "Dropper",
+    "Metal Roller Ball",
+    "Plastic Roller Ball"
+   ],
+   "plasticCheaperThanMetal": true
+  },
+  "Roll-On Cap|Component|0|13-415": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cap/Component|Component|0|13-415": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cap/Closure|Component|0|13-425": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Roll-On Cap|Component|0|15-415": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cap/Closure|Component|0|18-400": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cap/Closure|Component|0|18-415": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cap/Closure|Component|0|20-400": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cap/Closure|Component|0|22-400": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cap/Closure|Component|0|24-400": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cap/Closure|Component|0|8-425": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cap/Closure|Component|30|Press-Fit": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cap/Closure|Component|40|Press-Fit": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cap/Closure|Component|5|Press-Fit": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cap/Closure|Component|0|Specialty": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Circle|Glass Bottle|100|18-415": {
+   "capacitiesMl": [
+    15,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Vintage Bulb Sprayer with Tassel",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Circle|Glass Bottle|15|13-415": {
+   "capacitiesMl": [
+    15,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer",
+    "Plastic Roller Ball",
+    "Metal Roller Ball"
+   ],
+   "plasticCheaperThanMetal": true
+  },
+  "Circle|Glass Bottle|30|15-415": {
+   "capacitiesMl": [
+    15,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Perfume Spray Pump"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Circle|Glass Bottle|50|18-415": {
+   "capacitiesMl": [
+    15,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Vintage Bulb Sprayer with Tassel",
+    "Dropper",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Cream Jar|Glass Jar|15|37mm": {
+   "capacitiesMl": [
+    3,
+    5,
+    15,
+    20,
+    30,
+    40,
+    60,
+    63
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cream Jar|Glass Jar|20|40mm": {
+   "capacitiesMl": [
+    3,
+    5,
+    15,
+    20,
+    30,
+    40,
+    60,
+    63
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cream Jar|Glass Jar|30|45mm": {
+   "capacitiesMl": [
+    3,
+    5,
+    15,
+    20,
+    30,
+    40,
+    60,
+    63
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cream Jar|Glass Jar|3|20mm": {
+   "capacitiesMl": [
+    3,
+    5,
+    15,
+    20,
+    30,
+    40,
+    60,
+    63
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cream Jar|Glass Jar|40|48/400": {
+   "capacitiesMl": [
+    3,
+    5,
+    15,
+    20,
+    30,
+    40,
+    60,
+    63
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cream Jar|Glass Jar|5|27mm": {
+   "capacitiesMl": [
+    3,
+    5,
+    15,
+    20,
+    30,
+    40,
+    60,
+    63
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cream Jar|Cream Jar|5|PRESS-FIT": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cream Jar|Glass Jar|60|58mm": {
+   "capacitiesMl": [
+    3,
+    5,
+    15,
+    20,
+    30,
+    40,
+    60,
+    63
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cream Jar|Glass Jar|63|58mm": {
+   "capacitiesMl": [
+    3,
+    5,
+    15,
+    20,
+    30,
+    40,
+    60,
+    63
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cylinder|Glass Bottle|100|18-415": {
+   "capacitiesMl": [
+    3.3,
+    4,
+    5,
+    5.5,
+    9,
+    25,
+    28,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Vintage Bulb Sprayer with Tassel",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Cylinder|Plastic Bottle|114|null": {
+   "capacitiesMl": [
+    114,
+    227,
+    454
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cylinder|Plastic Bottle|227|null": {
+   "capacitiesMl": [
+    114,
+    227,
+    454
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cylinder|Glass Bottle|25|18-415": {
+   "capacitiesMl": [
+    3.3,
+    4,
+    5,
+    5.5,
+    9,
+    25,
+    28,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Vintage Bulb Sprayer with Tassel",
+    "Dropper",
+    "Fine Mist Sprayer",
+    "Lotion Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Cylinder|Glass Bottle|28|16mm": {
+   "capacitiesMl": [
+    3.3,
+    4,
+    5,
+    5.5,
+    9,
+    25,
+    28,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Metal Roller Ball",
+    "Plastic Roller Ball"
+   ],
+   "plasticCheaperThanMetal": true
+  },
+  "Cylinder|Glass Bottle|3.3|12mm": {
+   "capacitiesMl": [
+    3.3,
+    4,
+    5,
+    5.5,
+    9,
+    25,
+    28,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Cylinder|Glass Bottle|30|18-415": {
+   "capacitiesMl": [
+    3.3,
+    4,
+    5,
+    5.5,
+    9,
+    25,
+    28,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Cylinder|Plastic Bottle|454|null": {
+   "capacitiesMl": [
+    114,
+    227,
+    454
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cylinder|Glass Bottle|4|12mm": {
+   "capacitiesMl": [
+    3.3,
+    4,
+    5,
+    5.5,
+    9,
+    25,
+    28,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Cylinder|Glass Bottle|5.5|13-415": {
+   "capacitiesMl": [
+    3.3,
+    4,
+    5,
+    5.5,
+    9,
+    25,
+    28,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Cylinder|Glass Bottle|50|16mm": {
+   "capacitiesMl": [
+    3.3,
+    4,
+    5,
+    5.5,
+    9,
+    25,
+    28,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Metal Roller Ball",
+    "Plastic Roller Ball"
+   ],
+   "plasticCheaperThanMetal": true
+  },
+  "Cylinder|Glass Bottle|50|18-415": {
+   "capacitiesMl": [
+    3.3,
+    4,
+    5,
+    5.5,
+    9,
+    25,
+    28,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Vintage Bulb Sprayer with Tassel",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Cylinder|Glass Bottle|5|13-415": {
+   "capacitiesMl": [
+    3.3,
+    4,
+    5,
+    5.5,
+    9,
+    25,
+    28,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer",
+    "Metal Roller Ball",
+    "Plastic Roller Ball"
+   ],
+   "plasticCheaperThanMetal": true
+  },
+  "Cylinder|Glass Bottle|9|17-415": {
+   "capacitiesMl": [
+    3.3,
+    4,
+    5,
+    5.5,
+    9,
+    25,
+    28,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer",
+    "Lotion Pump",
+    "Plastic Roller Ball",
+    "Metal Roller Ball"
+   ],
+   "plasticCheaperThanMetal": true
+  },
+  "Cylinder|Glass Bottle|9|13-415": {
+   "capacitiesMl": [
+    3.3,
+    4,
+    5,
+    5.5,
+    9,
+    25,
+    28,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer",
+    "Plastic Roller Ball",
+    "Metal Roller Ball"
+   ],
+   "plasticCheaperThanMetal": true
+  },
+  "Diamond|Glass Bottle|60|18-415": {
+   "capacitiesMl": [
+    60
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Vintage Bulb Sprayer with Tassel",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Diva|Glass Bottle|100|18-415": {
+   "capacitiesMl": [
+    30,
+    46,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Vintage Bulb Sprayer with Tassel",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Diva|Glass Bottle|30|18-415": {
+   "capacitiesMl": [
+    30,
+    46,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Diva|Glass Bottle|46|18-415": {
+   "capacitiesMl": [
+    30,
+    46,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Vintage Bulb Sprayer with Tassel",
+    "Dropper",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Dropper|Component|10|17-415": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Dropper|Component|0|18-400": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Dropper|Component|0|18-415": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Dropper|Component|0|20-400": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Elegant|Glass Bottle|100|18-415": {
+   "capacitiesMl": [
+    15,
+    30,
+    60,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Vintage Bulb Sprayer with Tassel",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Elegant|Glass Bottle|15|13-415": {
+   "capacitiesMl": [
+    15,
+    30,
+    60,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer",
+    "Plastic Roller Ball",
+    "Metal Roller Ball"
+   ],
+   "plasticCheaperThanMetal": true
+  },
+  "Elegant|Glass Bottle|30|15-415": {
+   "capacitiesMl": [
+    15,
+    30,
+    60,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Perfume Spray Pump"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Elegant|Glass Bottle|60|18-415": {
+   "capacitiesMl": [
+    15,
+    30,
+    60,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Vintage Bulb Sprayer with Tassel",
+    "Dropper",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Empire|Glass Bottle|100|18-415": {
+   "capacitiesMl": [
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Vintage Bulb Sprayer with Tassel",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Empire|Glass Bottle|50|18-415": {
+   "capacitiesMl": [
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Vintage Bulb Sprayer with Tassel",
+    "Dropper",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Decorative|Glass Bottle|35|Ground": {
+   "capacitiesMl": [
+    3,
+    4,
+    5,
+    6,
+    10,
+    32,
+    35,
+    355
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Sprayer|Component|0|13-415": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Sprayer|Component|5|13-415": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cap/Closure|Component|0|13-415": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Sprayer|Component|0|15-415": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Sprayer|Component|0|17-415": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Sprayer|Component|0|18-415": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Aluminum Bottle|Component|250|20-410": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Flair|Glass Bottle|15|13-415": {
+   "capacitiesMl": [
+    15
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer",
+    "Plastic Roller Ball",
+    "Metal Roller Ball"
+   ],
+   "plasticCheaperThanMetal": true
+  },
+  "Rectangle|Glass Bottle|10|13-415": {
+   "capacitiesMl": [
+    9,
+    10
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer",
+    "Plastic Roller Ball",
+    "Metal Roller Ball"
+   ],
+   "plasticCheaperThanMetal": true
+  },
+  "Decorative|Glass Bottle|32|Ground": {
+   "capacitiesMl": [
+    3,
+    4,
+    5,
+    6,
+    10,
+    32,
+    35,
+    355
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Gift Bag|Packaging|0|null": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Gift Box|Packaging|0|null": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Grace|Glass Bottle|55|18-415": {
+   "capacitiesMl": [
+    55
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Vintage Bulb Sprayer with Tassel",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Decorative|Glass Bottle|4|8mm": {
+   "capacitiesMl": [
+    3,
+    4,
+    5,
+    6,
+    10,
+    32,
+    35,
+    355
+   ],
+   "fitmentsAtNeck": [
+    "Glass Stopper"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Lotion Bottle|Glass Bottle|30|18mm": {
+   "capacitiesMl": [
+    3,
+    30
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Lotion Bottle|Glass Bottle|3|Snap-On": {
+   "capacitiesMl": [
+    3,
+    30
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Roll-On Cap|Component|0|17-415": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Lotion Pump|Component|0|18-415": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cream Jar|Component|5|37mm": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Decorative|Glass Bottle|10|17.52mm": {
+   "capacitiesMl": [
+    3,
+    4,
+    5,
+    6,
+    10,
+    32,
+    35,
+    355
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Decorative|Glass Bottle|5|17.52mm": {
+   "capacitiesMl": [
+    3,
+    4,
+    5,
+    6,
+    10,
+    32,
+    35,
+    355
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Packaging Supply|Packaging|0|null": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Apothecary|Glass Bottle|118|Ground": {
+   "capacitiesMl": [
+    15,
+    30,
+    118
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Decorative|Glass Bottle|355|Ground": {
+   "capacitiesMl": [
+    3,
+    4,
+    5,
+    6,
+    10,
+    32,
+    35,
+    355
+   ],
+   "fitmentsAtNeck": [
+    "Glass Stopper"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Pillar|Glass Bottle|9|13-415": {
+   "capacitiesMl": [
+    9
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Plastic Bottle|Plastic Bottle|10|null": {
+   "capacitiesMl": [
+    10,
+    30
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Plastic Bottle|Plastic Bottle|30|13-415": {
+   "capacitiesMl": [
+    10,
+    30
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Rectangle|Glass Bottle|9|Ground": {
+   "capacitiesMl": [
+    9,
+    10
+   ],
+   "fitmentsAtNeck": [
+    "Glass Stopper"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Roll-On Cap|Component|30|null": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Cap/Component|Component|0|17-415": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Roll-On Cap|Component|0|20-400": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Round|Glass Bottle|128|18-415": {
+   "capacitiesMl": [
+    78,
+    128
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Vintage Bulb Sprayer with Tassel",
+    "Dropper",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Round|Glass Bottle|78|18-415": {
+   "capacitiesMl": [
+    78,
+    128
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Vintage Bulb Sprayer with Tassel",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Royal|Glass Bottle|13|13-415": {
+   "capacitiesMl": [
+    13,
+    14
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer",
+    "Plastic Roller Ball",
+    "Metal Roller Ball"
+   ],
+   "plasticCheaperThanMetal": true
+  },
+  "Royal|Glass Bottle|14|11mm": {
+   "capacitiesMl": [
+    13,
+    14
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Sleek|Glass Bottle|100|18-415": {
+   "capacitiesMl": [
+    5,
+    8,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Vintage Bulb Sprayer with Tassel",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Sleek|Glass Bottle|30|18-415": {
+   "capacitiesMl": [
+    5,
+    8,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Dropper",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Sleek|Glass Bottle|50|18-415": {
+   "capacitiesMl": [
+    5,
+    8,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Vintage Bulb Sprayer with Tassel",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Sleek|Glass Bottle|5|13-415": {
+   "capacitiesMl": [
+    5,
+    8,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer",
+    "Metal Roller Ball",
+    "Plastic Roller Ball"
+   ],
+   "plasticCheaperThanMetal": true
+  },
+  "Sleek|Glass Bottle|8|13-415": {
+   "capacitiesMl": [
+    5,
+    8,
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer",
+    "Plastic Roller Ball",
+    "Metal Roller Ball"
+   ],
+   "plasticCheaperThanMetal": true
+  },
+  "Slim|Glass Bottle|100|18-415": {
+   "capacitiesMl": [
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Vintage Bulb Sprayer with Tassel",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Slim|Glass Bottle|30|18-415": {
+   "capacitiesMl": [
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Dropper",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Slim|Glass Bottle|50|18-415": {
+   "capacitiesMl": [
+    30,
+    50,
+    100
+   ],
+   "fitmentsAtNeck": [
+    "Vintage Bulb Sprayer",
+    "Vintage Bulb Sprayer with Tassel",
+    "Lotion Pump",
+    "Perfume Spray Pump",
+    "Reducer"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Square|Glass Bottle|15|13-415": {
+   "capacitiesMl": [
+    15
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer",
+    "Metal Roller Ball",
+    "Plastic Roller Ball"
+   ],
+   "plasticCheaperThanMetal": true
+  },
+  "Teardrop|Glass Bottle|9|Ground": {
+   "capacitiesMl": [
+    9
+   ],
+   "fitmentsAtNeck": [
+    "Glass Stopper"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Decorative|Glass Bottle|3|14.3mm": {
+   "capacitiesMl": [
+    3,
+    4,
+    5,
+    6,
+    10,
+    32,
+    35,
+    355
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Decorative|Glass Bottle|6|14.3mm": {
+   "capacitiesMl": [
+    3,
+    4,
+    5,
+    6,
+    10,
+    32,
+    35,
+    355
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Tool|Accessory|0|null": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Tulip|Glass Bottle|5|13-415": {
+   "capacitiesMl": [
+    5,
+    6
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer",
+    "Metal Roller Ball",
+    "Plastic Roller Ball"
+   ],
+   "plasticCheaperThanMetal": true
+  },
+  "Tulip|Glass Bottle|6|13-415": {
+   "capacitiesMl": [
+    5,
+    6
+   ],
+   "fitmentsAtNeck": [
+    "Fine Mist Sprayer",
+    "Metal Roller Ball",
+    "Plastic Roller Ball"
+   ],
+   "plasticCheaperThanMetal": true
+  },
+  "Unknown|Packaging|0|null": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Vial|Glass Bottle|1|Plug": {
+   "capacitiesMl": [
+    1,
+    2,
+    3,
+    4,
+    9
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Vial|Glass Bottle|2|13-425": {
+   "capacitiesMl": [
+    1,
+    2,
+    3,
+    4,
+    9
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Vial|Glass Bottle|2|8-425": {
+   "capacitiesMl": [
+    1,
+    2,
+    3,
+    4,
+    9
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Vial|Glass Bottle|3|13-425": {
+   "capacitiesMl": [
+    1,
+    2,
+    3,
+    4,
+    9
+   ],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  },
+  "Vial|Glass Bottle|4|13-425": {
+   "capacitiesMl": [
+    1,
+    2,
+    3,
+    4,
+    9
+   ],
+   "fitmentsAtNeck": [
+    "Dropper"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Vial|Glass Bottle|9|18-400": {
+   "capacitiesMl": [
+    1,
+    2,
+    3,
+    4,
+    9
+   ],
+   "fitmentsAtNeck": [
+    "Glass Rod"
+   ],
+   "plasticCheaperThanMetal": null
+  },
+  "Sprayer|Component|0|null": {
+   "capacitiesMl": [],
+   "fitmentsAtNeck": [],
+   "plasticCheaperThanMetal": null
+  }
+ }
+}

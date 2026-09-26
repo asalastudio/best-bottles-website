@@ -12,6 +12,13 @@ pipeline/
 data/*
 !data/asset-ledger/
 !data/reconciliation/
+# The product page imports these at build time: the item descriptions and the dimension-drawing
+# geometry. gitignore semantics: a directory excluded by data/* must be re-included before anything
+# inside it can be, so data/register/ comes back only for its drawings/ folder.
+!data/descriptions/
+!data/register/
+data/register/*
+!data/register/drawings/
 docs/
 reference_images/
 Best-Bottles-Orphan-urls/
