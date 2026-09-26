@@ -28,7 +28,8 @@ to `data/register/components/18-415-measurements.json`, and `review-components.p
 - Caps, fine-mist sprayers and lotion pumps: the library PSD (`20. Caps`) is registered on the closure as
   it sits on the photo (silhouette fit; IoU is the self-check, 0.90 or better is approvable). That gives
   the library layer's px/mm and its rim anchor. The overcap is cut from the overcap-on file at the photo's
-  scale.
+  scale: the closure layer that sits on the neck (wide, its bottom near the rim). The tallest layer of that file
+  is the dip tube, and taking it drew a white stripe over the glass in CAP ON (fixed 2026-09-25).
 - Droppers and vintage bulb sprayers: cut from the photo. The dropper library files hold no pixel
   layers, and the bulb-sprayer library files show the bulb on a long hose and dip tube that the product
   photos do not (registering them scored IoU 0.25–0.42). The photographed top is split at its collar: the

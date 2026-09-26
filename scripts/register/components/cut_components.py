@@ -392,7 +392,11 @@ def main() -> int:
                                     "pxPerMm": round(lib_px_per_mm, 4), "anchor": {"x": round(anchor_lib[0] - ox, 1), "y": round(anchor_lib[1] - oy, 1)},
                                     "z": "behind-body" if slot == "diptube" else "front", "explodeIndex": 0 if slot == "diptube" else n - i})
         if ctype in OVERCAP_TYPES and on is not None and on.closure:
-            over = max(on.closure, key=lambda l: l.bbox[3] - l.bbox[1])
+            # The overcap is the closure that sits on the neck: wide, its bottom near the rim. The tallest layer of the
+            # overcap-on file is the dip tube (it drew as a white stripe over the glass in CAP ON, 2026-09-25).
+            body_h = on.bm["foot"] - on.bm["rim"]
+            caps = [l for l in on.closure if (l.bbox[3] - l.bbox[1]) <= 3 * (l.bbox[2] - l.bbox[0]) and l.bbox[3] <= on.bm["rim"] + 0.25 * body_h]
+            over = max(caps or [l for l in on.closure if (l.bbox[3] - l.bbox[1]) <= 3 * (l.bbox[2] - l.bbox[0])] or on.closure, key=lambda l: (l.bbox[2] - l.bbox[0]) * (l.bbox[3] - l.bbox[1]))
             on_px_per_mm = plate["pxPerMm"] * (on.bm["foot"] - on.bm["rim"]) / plate_span
             img = canvas_of(on.psd, [over])
             name = f"{cid}--overcap.png"
