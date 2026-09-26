@@ -178,8 +178,10 @@
     "14.3mm": {
       "kind": "non-thread",
       "bodies": 2,
-      "components": 0,
-      "componentTypes": {},
+      "components": 1,
+      "componentTypes": {
+        "plug-applicator": 1
+      },
       "fitmentTypesObserved": {
         "": 2
       },

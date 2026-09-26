@@ -69,6 +69,8 @@ export type StagePart = {
     zIndex: number;
     /** The part's box in percent of the canvas; absent for a full-canvas layer. */
     box?: { leftPct: number; topPct: number; widthPct: number; heightPct: number };
+    /** Percent of the part's own height hidden from the bottom: a behind-glass layer never shows below the plate's baseline. */
+    clipBottomPct?: number;
 };
 
 export function fullCanvasBox(canvas: { width: number; height: number }): PartBox {
@@ -89,6 +91,9 @@ export type StageLayout = {
 };
 
 const FITMENT_SLOTS: ReadonlySet<string> = new Set(["roller", "fitment", "sprayer", "pump", "collar", "diptube", "bulb", "tassel", "reducer", "pipette"]);
+/** Layers drawn behind the glass. A register plate is opaque, so these show only where they leave the glass; below
+ *  the foot they must not show at all (a tube cut on the 100 mL Circle photo is longer than the Round 78). */
+export const BEHIND_GLASS_SLOTS: ReadonlySet<string> = new Set(["diptube", "pipette"]);
 
 export function isClosureSlot(slot: string): boolean {
     return REMOVABLE_KIT_SLOTS.has(slot);
@@ -173,6 +178,11 @@ export function stageLayout(kit: KitLike | null | undefined, requested: StageVie
 
     const parts: StagePart[] = sorted.map((part, index) => {
         const offset = offsets.get(part) ?? { dx: 0, dy: 0 };
+        let clipBottomPct: number | undefined;
+        if (part.box && BEHIND_GLASS_SLOTS.has(part.slot)) {
+            const over = part.box.y + part.box.height + offset.dy - kit.anchors.baselineY;
+            if (over > 0.5) clipBottomPct = Math.min(100, (over / part.box.height) * 100);
+        }
         return {
             key: `${part.slot}-${index}`,
             slot: part.slot,
@@ -188,6 +198,7 @@ export function stageLayout(kit: KitLike | null | undefined, requested: StageVie
                     heightPct: (part.box.height / canvas.height) * 100,
                 },
             } : {}),
+            ...(clipBottomPct !== undefined ? { clipBottomPct } : {}),
         };
     });
 

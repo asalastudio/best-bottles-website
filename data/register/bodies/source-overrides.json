@@ -136,5 +136,10 @@
  },
  "cylinder-4ml-12mm|Clear": {
   "note": "FLAG: the atomizer's inner tube is part of the body layer"
+ },
+ "slim-50ml-18-415|Clear": {
+  "psd": "2.  18-415 Bottles /15. Slim 50ml/2. Slim 50ml (18-415) Sideviews/Slim 50ml .psd",
+  "layer": "Layer 1",
+  "why": "every product PSD's Slim 50 body layer stops at the shoulder under the cap (no neck); the sideview photo carries the whole bottle (Jordan 2026-09-25: reducers and necks)"
  }
 }

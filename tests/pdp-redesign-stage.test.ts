@@ -119,3 +119,33 @@ describe("crops", () => {
         expect(crop.top).toBeCloseTo(-144 * scale, 5);
     });
 });
+
+describe("behind the glass", () => {
+    /** A register kit: the plate is opaque and the sprayer's dip tube, cut on a taller bottle's photo, runs past the foot. */
+    const REGISTER_KIT: KitLike = {
+        sku: "GBRndFrst78AnSpGl",
+        canvas: { width: 1000, height: 1100 },
+        anchors: { axisX: 500, neckAxisX: 500, seatY: 300, baselineY: 1000 },
+        register: { bodyId: "round-78ml-18-415", plateKey: "round-78ml-18-415|Frosted", glass: "Frosted" },
+        parts: [
+            { slot: "diptube", zOrder: 0, explodeIndex: 0, bounds: { left: 480, top: 300, right: 520, bottom: 1200 }, assembled: { x: 0, y: 0 }, exploded: { dx: 0, dy: 0 }, image: { url: "https://blob/tube.png", width: 40, height: 900 }, box: { x: 480, y: 300, width: 40, height: 900 } },
+            { slot: "body", zOrder: 1, explodeIndex: 0, bounds: { left: 300, top: 300, right: 700, bottom: 1000 }, assembled: { x: 0, y: 0 }, exploded: { dx: 0, dy: 0 }, image: { url: "https://blob/plate.png", width: 500, height: 800 }, box: { x: 250, y: 250, width: 500, height: 800 } },
+            { slot: "sprayer", zOrder: 2, explodeIndex: 1, bounds: { left: 440, top: 120, right: 560, bottom: 300 }, assembled: { x: 0, y: 0 }, exploded: { dx: 0, dy: 0 }, image: { url: "https://blob/sprayer.png", width: 120, height: 180 }, box: { x: 440, y: 120, width: 120, height: 180 } },
+        ],
+    };
+    const context = { family: "Round", capacityMl: 78, color: "Frosted", applicator: "Vintage Bulb Sprayer", websiteSku: "GBRndFrst78AnSpGl" };
+
+    it("clips a dip tube at the plate's baseline when it is seated, and never the plate or the sprayer", () => {
+        const layout = stageLayout(REGISTER_KIT, "capon", context)!;
+        const tube = layout.parts.find((part) => part.slot === "diptube")!;
+        expect(tube.clipBottomPct).toBeCloseTo((200 / 900) * 100, 3);
+        expect(layout.parts.find((part) => part.slot === "body")!.clipBottomPct).toBeUndefined();
+        expect(layout.parts.find((part) => part.slot === "sprayer")!.clipBottomPct).toBeUndefined();
+    });
+
+    it("clips less once the tube is lifted with its sprayer", () => {
+        const seated = stageLayout(REGISTER_KIT, "capon", context)!.parts.find((part) => part.slot === "diptube")!;
+        const lifted = stageLayout(REGISTER_KIT, "exploded", context)?.parts.find((part) => part.slot === "diptube");
+        if (lifted && lifted.dyPct < 0) expect(lifted.clipBottomPct ?? 0).toBeLessThan(seated.clipBottomPct!);
+    });
+});

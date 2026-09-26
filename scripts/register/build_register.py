@@ -95,11 +95,15 @@ LIBRARY_PARTS = [
     {"componentId": "LIB-17-415-MtlRollon", "type": "roller-insert", "neck": "17-415", "rollerMaterial": "metal", "psdStem": None, "itemName": "Metal roller-ball insert, 17-415"},
     {"componentId": "LIB-17-415-PlsticRollon", "type": "roller-insert", "neck": "17-415", "rollerMaterial": "plastic", "psdStem": None, "itemName": "Plastic roller-ball insert, 17-415"},
     {"componentId": "LIB-18-415-Reducer", "type": "reducer", "neck": "18-415", "rollerMaterial": "", "psdStem": "415Reducer", "itemName": "Orifice reducer, 18-415"},
+    # The Tola plug (Jordan 2026-09-25: the plug needs to be separate from the glass). No library PSD: its layers are
+    # cut from the Tola master photo by scripts/register/bodies/build_bodies.py (plug_layers).
+    {"componentId": "LIB-14.3mm-Plug", "type": "plug-applicator", "neck": "14.3mm", "rollerMaterial": "", "psdStem": None, "itemName": "Plug, 14.3 mm (Tola)",
+     "evidence": "library part, not a product (Jordan 2026-09-25); cut from the Tola master photo, GB3TPlGl.psd", "source": "Tola master photo (build_bodies.py plug_layers)"},
 ]
 
 # Own-part builds: which component(s) a sellable assembly is physically made of. Rules are validated neck by
 # neck; the pilot neck is 17-415 (2026-09-25). Other necks record why they are not built yet.
-BUILD_RULE_NECKS = {"17-415"}
+BUILD_RULE_NECKS = {"17-415", "18-415", "14.3mm"}
 FITMENT_BUILD = {  # fitmentType -> (component type, kit slot, roller material)
     "Metal Roller Ball": ("roll-on-cap", "cap", "metal"),
     "Plastic Roller Ball": ("roll-on-cap", "cap", "plastic"),
@@ -107,6 +111,56 @@ FITMENT_BUILD = {  # fitmentType -> (component type, kit slot, roller material)
     "Lotion Pump": ("lotion-pump", "pump", None),
 }
 GLASS_COLOURS = {"clear", "amber", "cobalt blue", "frosted", "swirl", "blue", "green"}
+
+# 18-415 (2026-09-25): every sold SKU spells its own top in its website SKU — `GBDiva46AnSpTslMtSl` is the
+# Diva 46 with the tassel bulb sprayer `AnSpTsl18-415MtS`. The code after the type token is matched
+# against the component's own website SKU, which is more reliable than the Convex capColor field (it
+# leaks the glass colour on the vintage sprayers and the leather caps lose their "Light"). A Reducer SKU
+# is the cap it is sold with: the orifice reducer sits inside the neck under the cap, the page keeps that
+# closure assembled, so the reducer insert is not part of the drawn build. Lotion pumps sold "with clear
+# overcap" (ClOvrCap) are the matte-silver pump under a clear overcap, `Ltn18-415MtSlCl`.
+SKU_TAIL_18415 = [  # (type token in the assembly SKU, component types it names, kit slot)
+    ("AnSpTsl", ("tassel-bulb-sprayer",), "sprayer"),
+    ("AnSp", ("vintage-bulb-sprayer",), "sprayer"),
+    ("Spry", ("fine-mist-sprayer",), "sprayer"),
+    ("Ltn", ("lotion-pump",), "pump"),
+    ("Drp", ("dropper",), "fitment"),
+    ("Rdcr", ("cap", "faux-leather-cap"), "cap"),
+]
+COMPONENT_STEM_18415 = ("CP18-415AnSpTsl", "CP18-415AnSp", "AnSpTsl18-415", "AnSp18-415", "Spry18-415", "Ltn18-415", "Drp18-415", "CP18-415")
+CODE_ALIASES_18415 = {"clovrcap": "mtslcl", "wht": "wh", "mts": "mtsl", "ivylthr": "livylthr", "pnklthr": "lpnklthr"}  # the ivory and pink leather caps are filed as CP18-415LIvyLthr / LPnkLthr
+
+
+def code_key(code: str) -> str:
+    lowered = code.lower()
+    return CODE_ALIASES_18415.get(lowered, lowered)
+
+
+def own_build_18415(assembly: dict, by_neck_type: dict) -> tuple[str, str, str]:
+    """18-415 own parts from the website SKU's type token and finish code (see SKU_TAIL_18415)."""
+    sku = assembly["websiteSku"] or ""
+    for token, ctypes, slot in SKU_TAIL_18415:
+        at = sku.find(token)
+        if at < 0:
+            continue
+        code = sku[at + len(token):]
+        pool = [c for t in ctypes for c in by_neck_type.get(("18-415", t), [])]
+        matches = []
+        for c in pool:
+            stem = c["websiteSku"] or ""
+            for prefix in COMPONENT_STEM_18415:
+                if stem.startswith(prefix):
+                    stem = stem[len(prefix):]
+                    break
+            if code_key(stem) == code_key(code):
+                matches.append(c)
+        if len(matches) == 1:
+            note = " (the orifice reducer sits under the cap; the closure stays assembled)" if token == "Rdcr" else ""
+            return f"{slot}:{matches[0]['componentId']}", "resolved", f"own {matches[0]['type']} matched by SKU code '{code}'{note}"
+        if len(matches) > 1:
+            return "", "unresolved", f"SKU code '{code}' matches {len(matches)} components: " + ", ".join(c["componentId"] for c in matches)
+        return "", "unresolved", f"no current 18-415 {'/'.join(ctypes)} carries the SKU code '{code}'"
+    return "", "unresolved", f"website SKU '{sku}' names no 18-415 top (AnSpTsl, AnSp, Spry, Ltn, Drp, Rdcr)"
 
 
 def colour_key(text: str) -> tuple[str, bool]:
@@ -127,6 +181,13 @@ def own_build(assembly: dict, body_class: str, by_neck_type: dict, library_ids: 
         return "", "unresolved", f"own class {body_class}: no components ruled compatible"
     if neck not in BUILD_RULE_NECKS:
         return "", "unresolved", f"own-part rules not written for {neck or 'no neck'} yet (pilot neck is 17-415)"
+    if neck == "18-415":
+        return own_build_18415(assembly, by_neck_type)
+    if neck == "14.3mm":
+        # The Tola decorative bottles are sold with one closure, the plug photographed in their neck (Jordan 2026-09-25).
+        if "LIB-14.3mm-Plug" not in library_ids:
+            return "", "partial", "no plug registered for 14.3mm"
+        return "cap:LIB-14.3mm-Plug", "resolved", "the 14.3 mm plug: the one closure sold on the Tola neck, cut from the bottle photo"
     rule = FITMENT_BUILD.get(fitment)
     if not rule:
         return "", "unresolved", f"no own-part rule for fitment '{fitment or 'none'}'"
@@ -363,12 +424,12 @@ def main() -> int:
             "componentId": part["componentId"], "sellable": False, "graceSku": "", "websiteSku": "", "type": part["type"], "neck": part["neck"],
             "finish": "", "capColor": "", "capStyle": "", "color": "", "trimColor": "", "applicator": "", "convexFamily": "", "itemName": part["itemName"],
             "status": "current",
-            "typeEvidence": "library part, not a product (Jordan 2026-09-25)" + ("" if psd else "; no master PSD yet, cut from productKits roller layers in Phase 3"),
+            "typeEvidence": part.get("evidence") or ("library part, not a product (Jordan 2026-09-25)" + ("" if psd else "; no master PSD yet, cut from productKits roller layers in Phase 3")),
             "dotted": False, "rollerMaterial": part["rollerMaterial"],
             "psdStem": psd["stem"] if psd else "", "psdLibrary": psd["library"] if psd else "", "psdPath": psd["file"] if psd else "", "psdFolder": psd["folder"] if psd else "",
             "psdMatch": "exact" if psd else "", "psdCanvas": psd["canvas"] if psd else "", "psdHiddenLayers": psd["hiddenLayers"] if psd else "",
             "stockStatus": "", "imageUrl": "", "productUrl": "",
-            "source": "BB-PSD-Files-Master/20. Caps" if psd else "productKits roller layers (Phase 3)", "confidence": "high" if psd else "medium",
+            "source": part.get("source") or ("BB-PSD-Files-Master/20. Caps" if psd else "productKits roller layers (Phase 3)"), "confidence": "high" if psd else "medium",
         })
     library_ids = {part["componentId"] for part in LIBRARY_PARTS}
     by_neck_type: dict[tuple, list] = defaultdict(list)

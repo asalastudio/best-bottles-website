@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 /**
  * Sunburst renders for every catalogue body x glass (jobs from build_bodies.py inputs). Resumable: an
- * existing render is skipped. Four at a time. Same prompts as the approved pilot.
- *   node scripts/register/bodies/render_bodies.mjs [--limit N] [--only bodyId]
+ * existing render is skipped. Four at a time.
+ *   node scripts/register/bodies/render_bodies.mjs [--pass lit] [--limit N] [--only bodyA,bodyB|Glass,...] [--extra "line"] [--dry]
+ * First pass: the approved pilot prompts (locked two-line for a master, MATERIAL for a derived glass).
+ * Second pass (--pass lit): each job carries its own prompt and, for the named neck edits, one extra line.
  */
 import { createReadStream, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
@@ -21,21 +23,28 @@ const MATERIAL = "1. Keep geometry locked to the first image\n2. Glass colour an
 const PRICE = { textIn: 5e-6, imageIn: 8e-6, imageOut: 30e-6 };
 const slug = s => s.toLowerCase().replace(/ /g, "-").replace(/\//g, "-");
 const argv = process.argv.slice(2);
-const limit = argv.includes("--limit") ? Number(argv[argv.indexOf("--limit") + 1]) : Infinity;
-const only = argv.includes("--only") ? argv[argv.indexOf("--only") + 1] : null;
-// --extra adds ONE line to the prompt, for a named retry only (longer prompts make the model re-decide the material).
-const extra = argv.includes("--extra") ? argv[argv.indexOf("--extra") + 1] : null;
+const arg = (name, fallback) => { const i = argv.indexOf(`--${name}`); return i >= 0 && i + 1 < argv.length ? argv[i + 1] : fallback; };
+const pass = arg("pass", "first"), suffix = pass === "first" ? "" : `-${pass}`;
+const JOBS = resolve(BASE, `jobs${suffix}.json`), RENDERS = resolve(BASE, `renders${suffix}`);
+const limit = Number(arg("limit", Infinity));
+const only = new Set((arg("only", "") ?? "").split(",").map(s => s.trim()).filter(Boolean));   // bodyId or bodyId|Glass
+// --extra adds ONE line to every prompt, for a named retry only (longer prompts make the model re-decide the material).
+const extra = arg("extra", null);
+const dry = argv.includes("--dry");
+const skipGlass = new Set((arg("skip-glass", "") ?? "").split(",").map(s => s.trim()).filter(Boolean));   // e.g. --skip-glass Frosted while its recipe is settled
 
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-let jobs = JSON.parse(readFileSync(resolve(BASE, "jobs.json"), "utf8")).filter(j => !only || j.bodyId === only);
-jobs = jobs.filter(j => !existsSync(resolve(BASE, "renders", j.bodyId, `${slug(j.glass)}.png`))).slice(0, limit);
-console.log(`${jobs.length} renders to do`);
+let jobs = JSON.parse(readFileSync(JOBS, "utf8")).filter(j => !only.size || only.has(j.bodyId) || only.has(`${j.bodyId}|${j.glass}`));
+jobs = jobs.filter(j => !skipGlass.has(j.glass) && !existsSync(resolve(RENDERS, j.bodyId, `${slug(j.glass)}.png`))).slice(0, limit);
+console.log(`${jobs.length} renders to do (pass ${pass}) -> ${RENDERS}`);
+const promptFor = job => (job.prompt ?? (job.role === "master" ? LOCKED : MATERIAL)) + (job.extra ? `\n${job.extra}` : "") + (extra ? `\n${extra}` : "");
+if (dry) { for (const j of jobs) console.log(`${j.bodyId} | ${j.glass} | ${j.role} | ${j.background} | ${j.images.length} image(s)\n  ${promptFor(j).replace(/\n/g, " / ")}`); process.exit(0); }
 let spent = 0, done = 0, failed = 0;
 
 async function run(job) {
-    const out = resolve(BASE, "renders", job.bodyId, `${slug(job.glass)}.png`);
+    const out = resolve(RENDERS, job.bodyId, `${slug(job.glass)}.png`);
     mkdirSync(dirname(out), { recursive: true });
-    const prompt = (job.role === "master" ? LOCKED : MATERIAL) + (extra ? `\n${extra}` : "");
+    const prompt = promptFor(job);
     for (let attempt = 1; attempt <= 3; attempt++) {
         const started = Date.now();
         try {

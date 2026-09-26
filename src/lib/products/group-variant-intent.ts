@@ -23,7 +23,7 @@ import {
  *   <family>-<capacity>ml-<colour>-<neck>[-<closure>]
  */
 const PRODUCT_SLUG =
-    /^([a-z]+(?:-[a-z]+)*?)-(\d+(?:\.\d+)?)ml-([a-z]+(?:-[a-z]+)*?)-(\d+-\d+|\d+mm|ground)(?:-([a-z]+(?:-[a-z]+)*))?$/;
+    /^([a-z]+(?:-[a-z]+)*?)-(\d+(?:\.\d+)?)ml-([a-z]+(?:-[a-z]+)*?)-(\d+-\d+|\d+(?:\.\d+)?mm|ground)(?:-([a-z]+(?:-[a-z]+)*))?$/;   // a neck can be a decimal millimetre bore (the Tola's 14.3mm)
 
 const CLOSURE_TOKEN_KIND: Record<string, ApplicatorKind> = {
     rollon: "rollon",
