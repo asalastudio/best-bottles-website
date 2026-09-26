@@ -41,12 +41,20 @@ export default async function MatrixPage({ searchParams }: { searchParams: Promi
 }
 
 async function Builder({ familyParam, collection }: { familyParam?: string; collection?: string }) {
+    // The family list streams into this same response instead of a client fetch
+    // after hydration (requestIdleCallback, then a function call that missed the
+    // CDN every time). Started before anything is awaited and never awaited here:
+    // the chooser paints without it, and a failure falls back to that fetch.
+    const familyList = loadBuilderFamilies().catch(() => null);
     const preferMobile = preferMobileRequest(await headers());
-    const entry = await loadBuilderEntry(familyParam, { family: loadBuilderFamily, families: loadBuilderFamilies });
+    const entry = await loadBuilderEntry(familyParam, {
+        family: loadBuilderFamily,
+        families: async () => (await familyList) ?? loadBuilderFamilies(),
+    });
     // First paint: chooser bodies only (one configuration per glass). The chosen bottle's
     // configurations load from /api/bottle-builder/bodies; Cylinder's HTML drops from 789 KB.
     const bodies = chooserBodies(builderCollectionBodies(entry.bodies, collection));
     return <>
-        <MatrixClient key={`${entry.openFamily}:${collection ?? "all"}`} {...entry} bodies={bodies} preferMobile={preferMobile} />
+        <MatrixClient key={`${entry.openFamily}:${collection ?? "all"}`} {...entry} familyList={familyList} bodies={bodies} preferMobile={preferMobile} />
     </>;
 }

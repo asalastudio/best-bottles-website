@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { loadBuilderBodyKits } from "@/lib/bottle-builder/server";
+import { BUILDER_CDN_CACHE, loadBuilderBodyKits } from "@/lib/bottle-builder/server";
 
 export async function GET(request: Request) {
     const url = new URL(request.url);
@@ -10,7 +10,7 @@ export async function GET(request: Request) {
     }
     try {
         return NextResponse.json({ kits: await loadBuilderBodyKits(family, bodyId) }, {
-            headers: { "Cache-Control": "public, s-maxage=300, stale-while-revalidate=60" },
+            headers: { "Cache-Control": BUILDER_CDN_CACHE },
         });
     } catch {
         return NextResponse.json({ error: "We couldn’t load this bottle’s imagery. Please try again." }, { status: 503 });

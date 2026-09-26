@@ -30,11 +30,18 @@ const reviewed: Record<string, ExactComponentMatch> = {
         evidence: "bottle: \"with short black cap\" (legacy description, no applicator); component 18-400CpShortBlk: \"Black lid or closure for glass bottle, Thread size 18-400\"; 18-400CpAppBlk excluded: \"Black cap with glass rod applicator\"" },
 };
 
+let merged: Record<string, ExactComponentMatch> | undefined;
+
 /** Generated joins (scripts/asset-ledger/build-exact-component-matches.ts):
  * each one names the bottle's own legacy description and the component's
  * catalogue name as evidence, and exists only where the finish-label rule
- * cannot decide. Regenerate rather than edit. */
-export const exactComponentMatches: Record<string, ExactComponentMatch> = {
-    ...(generated as Record<string, ExactComponentMatch>),
-    ...reviewed,
-};
+ * cannot decide. Regenerate rather than edit.
+ *
+ * Merged on first use, not at import: a top-level spread made this module look
+ * side-effectful to webpack, so every client bundle that imports model.ts (the
+ * builder's page chunk) carried the whole 76 KB table although only the
+ * server-side catalogue resolver reads it. */
+export function exactComponentMatch(websiteSku: string): ExactComponentMatch | undefined {
+    merged ??= { ...(generated as Record<string, ExactComponentMatch>), ...reviewed };
+    return Object.prototype.hasOwnProperty.call(merged, websiteSku) ? merged[websiteSku] : undefined;
+}

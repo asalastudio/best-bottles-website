@@ -6,7 +6,7 @@
  * Application code never imports an analytics SDK directly — only this file.
  */
 
-import posthog from "posthog-js";
+import type { PostHog } from "posthog-js";
 import { APPLICATOR_NAV, CATALOG_FAMILIES, type ApplicatorNavValue } from "@/lib/catalogFilters";
 
 // ─── Adapter interface ───────────────────────────────────────────────────────
@@ -15,7 +15,8 @@ import { APPLICATOR_NAV, CATALOG_FAMILIES, type ApplicatorNavValue } from "@/lib
 type Props = Record<string, string | number | boolean | null | undefined>;
 
 interface AnalyticsAdapter {
-  init(token: string, options?: Record<string, unknown>): void;
+  /** Resolves once the SDK has loaded and initialised. */
+  init(token: string, options?: Record<string, unknown>): Promise<void>;
   identify(userId: string, traits?: Props): void;
   reset(): void;
   track(event: string, properties?: Props): void;
@@ -51,8 +52,28 @@ interface AnalyticsAdapter {
 const superProperties: Props = {};
 const eventStartedAt = new Map<string, number>();
 
+/**
+ * posthog-js is ~96 KB gzipped (307 KB raw) of the shell every page had to
+ * download and run before it could hydrate. It now loads when init runs —
+ * AnalyticsProvider's mount effect, after hydration — and calls made before it
+ * is ready wait here in order. That includes calls made before init (a mount
+ * effect that runs ahead of AnalyticsProvider's), which posthog-js itself drops
+ * with an "uninitialized" warning. Capped, so a deployment without a key (init
+ * never runs) holds at most a handful.
+ */
+let posthogReady: PostHog | null = null;
+const PENDING_LIMIT = 100;
+const pendingPosthogCalls: Array<(posthog: PostHog) => void> = [];
+
+function withPosthog(call: (posthog: PostHog) => void) {
+  if (posthogReady) return call(posthogReady);
+  if (pendingPosthogCalls.length >= PENDING_LIMIT) pendingPosthogCalls.shift();
+  pendingPosthogCalls.push(call);
+}
+
 const posthogAdapter: AnalyticsAdapter = {
-  init(token, options) {
+  async init(token, options) {
+    const { default: posthog } = await import("posthog-js");
     posthog.init(token, {
       // Same-origin by default, proxied to PostHog by the /ingest rewrites in
       // next.config.ts. Ad-blockers block us.i.posthog.com by name, and a
@@ -98,22 +119,32 @@ const posthogAdapter: AnalyticsAdapter = {
       person_profiles: "identified_only",
       ...options,
     });
+    posthogReady = posthog;
+    for (const call of pendingPosthogCalls.splice(0)) {
+      try {
+        call(posthog);
+      } catch {
+        // One bad queued call must not drop the rest.
+      }
+    }
   },
   setSessionRecording(enabled) {
     // Guarded: these are no-ops before init, and a replay failure must never
     // take a page down with it.
-    try {
-      if (enabled) posthog.startSessionRecording();
-      else posthog.stopSessionRecording();
-    } catch {
-      // Recording is not worth an exception on a customer's page.
-    }
+    withPosthog((posthog) => {
+      try {
+        if (enabled) posthog.startSessionRecording();
+        else posthog.stopSessionRecording();
+      } catch {
+        // Recording is not worth an exception on a customer's page.
+      }
+    });
   },
   identify(userId, traits) {
-    posthog.identify(userId, traits ? normalizeReservedTraits(traits) : undefined);
+    withPosthog((posthog) => posthog.identify(userId, traits ? normalizeReservedTraits(traits) : undefined));
   },
   reset() {
-    posthog.reset();
+    withPosthog((posthog) => posthog.reset());
     eventStartedAt.clear();
     for (const key of Object.keys(superProperties)) delete superProperties[key];
   },
@@ -124,16 +155,18 @@ const posthogAdapter: AnalyticsAdapter = {
       timing.duration_seconds = Math.round((Date.now() - startedAt) / 100) / 10;
       eventStartedAt.delete(event);
     }
-    posthog.capture(event, { ...superProperties, ...timing, ...(properties ?? {}) });
+    const payload = { ...superProperties, ...timing, ...(properties ?? {}) };
+    withPosthog((posthog) => posthog.capture(event, payload));
   },
   setUserProperties(properties) {
-    posthog.setPersonProperties(normalizeReservedTraits(properties));
+    const traits = normalizeReservedTraits(properties);
+    withPosthog((posthog) => posthog.setPersonProperties(traits));
   },
   registerSuperProperties(properties) {
     Object.assign(superProperties, properties);
   },
   group(groupKey, groupId, traits) {
-    posthog.group(groupKey, groupId, traits);
+    withPosthog((posthog) => posthog.group(groupKey, groupId, traits));
   },
   timeEvent(event) {
     eventStartedAt.set(event, Date.now());
@@ -299,13 +332,18 @@ function safeMobilePdpBase(properties: {
 export const analytics = {
   // ── Setup ────────────────────────────────────────────────────────────────
 
-  init(token: string, options?: Record<string, unknown>) {
-    if (_initialized) return;
+  /** Loads the SDK; resolves once it is initialised (callers need not wait). */
+  init(token: string, options?: Record<string, unknown>): Promise<void> {
+    if (_initialized) return Promise.resolve();
     _initialized = true;
-    adapter.init(token, options);
+    const ready = adapter.init(token, options).catch(() => {
+      // A blocked or failed SDK download must never surface on a customer's page.
+      pendingPosthogCalls.length = 0;
+    });
     for (const pending of pendingFocusedShoppingEvents.splice(0)) {
       adapter.track(pending.event, pending.properties);
     }
+    return ready;
   },
 
   identify(userId: string, traits?: Props) {

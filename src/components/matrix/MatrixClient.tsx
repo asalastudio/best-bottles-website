@@ -5,15 +5,18 @@ import { useRegion } from "@/components/RegionProvider";
 import { capLinerNote, fitmentChoiceHints, fitmentContents } from "@/lib/bottle-builder/fitment-copy";
 import { useEffect, useId, useMemo, useRef, useState, useTransition, useSyncExternalStore, type ReactNode } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { useRouter, useSearchParams } from "next/navigation";
 import { ArrowLeft, ArrowRight, Check, CheckCircle, Minus, Plus, ShieldCheck, SlidersHorizontal, ShoppingBag } from "@/components/icons";
 import { useCart } from "@/components/CartProvider";
 import { useBuilderFamilies } from "@/components/bottle-builder/useBuilderFamilies";
 import { useBuilderKits } from "@/components/bottle-builder/useBuilderKits";
 import { useBuilderBodyConfigurations } from "@/components/bottle-builder/useBuilderBodyConfigurations";
+import { prefetchBody } from "@/components/bottle-builder/builder-requests";
+import { useTileIntent } from "@/components/bottle-builder/useTileIntent";
+import type { BuilderFamily } from "@/lib/bottle-builder/entry";
 import FamilyLoadingStatus from "@/components/bottle-builder/FamilyLoadingStatus";
 import bodyHeightMedia from "@/lib/bottle-builder/body-heights.generated.json";
-import MobileBuilder from "@/components/bottle-builder/MobileBuilder";
 import BuilderImage from "@/components/bottle-builder/BuilderImage";
 import FitmentIllustration from "@/components/bottle-builder/FitmentIllustration";
 import BuilderFinishImage from "@/components/bottle-builder/BuilderFinishImage";
@@ -28,6 +31,9 @@ import hasIncludedCovers from "@/lib/bottle-builder/exposed-sprayers.generated.j
 import { CHOOSER_PRIORITY_TILES } from "@/lib/bottle-builder/mobile-request";
 import { displayImageUrl } from "@/lib/products/optimizable-image";
 import styles from "@/components/bottle-builder/Builder.module.css";
+
+// Phones only: a laptop never renders the mobile builder, so it never downloads it.
+const MobileBuilder = dynamic(() => import("@/components/bottle-builder/MobileBuilder"));
 
 const subscribeMobile = (callback: () => void) => { const query = window.matchMedia("(max-width: 1099px)"); query.addEventListener("change", callback); return () => query.removeEventListener("change", callback); };
 const mobileSnapshot = () => window.matchMedia("(max-width: 1099px)").matches;
@@ -73,15 +79,17 @@ function chooserScale(body: BuilderBody, all: BuilderBody[] = [body]) {
     return 1;
 }
 
-export default function MatrixClient({ families: initialFamilies, openFamily, bodies: initialBodies, preferMobile = false }: {
-    families: { family: string; groups: number }[];
+export default function MatrixClient({ families: initialFamilies, familyList, openFamily, bodies: initialBodies, preferMobile = false }: {
+    families: BuilderFamily[];
+    /** Every eligible family, streamed into the page's own response. */
+    familyList?: Promise<BuilderFamily[] | null>;
     openFamily: string;
     bodies: BuilderBody[];
     preferMobile?: boolean;
 }) {
     const { formatPrice } = useRegion();
     const money = (value: number | null) => (value == null ? "—" : formatPrice(value));
-    const { families, status: familyStatus, retry: retryFamilies } = useBuilderFamilies(initialFamilies);
+    const { families, status: familyStatus, retry: retryFamilies } = useBuilderFamilies(initialFamilies, familyList);
     const familyNotice = <FamilyLoadingStatus status={familyStatus} onRetry={retryFamilies} />;
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -89,6 +97,8 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
     const [selection, setSelection] = useState<BuilderSelection>(emptySelection);
     // First paint is chooser-only; the chosen bottle's configurations load, then its kit layers.
     const chooser = useBuilderBodyConfigurations(openFamily, initialBodies, selection.bodyId, searchParams.get("shop"));
+    // A tile about to be picked starts its configurations and kit layers, so the pick finds them in flight.
+    const prefetchBottle = (bodyId: string) => prefetchBody(openFamily, bodyId, searchParams.get("shop"));
     const bodies = useBuilderKits(openFamily, chooser.bodies, selection.bodyId);
     const [step, setStep] = useState(0);
     const isMobile = useSyncExternalStore(subscribeMobile, mobileSnapshot, serverMobileSnapshot(preferMobile));
@@ -286,7 +296,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
         onUpdate={patch => { update(patch); if (patch.bodyId || patch.color || patch.fitment) setShowCover(false); }} onReset={reset} onFamily={family => { reset(); startTransition(() => router.push(`/matrix?family=${encodeURIComponent(family)}${searchParams.get("shop") ? `&shop=${encodeURIComponent(searchParams.get("shop")!)}` : ""}`)); }} onAdd={addToCart}
         size={size} neck={neck} application={application} onFilter={(filter, value) => { if (filter === "size") setSize(value); else if (filter === "neck") setNeck(value); else setApplication(value); }}
         pending={pending || awaitingBody} bodyNotice={bodyNotice} adding={adding} hydrated={isCartHydrated} error={error} lastAdded={lastAdded} cartProgress={cartProgress}
-        hasIncludedCover={hasIncludedCover} showCover={showCover} onCover={() => setShowCover(value => !value)} chooserScale={b => chooserScale(b, bodies)} />;
+        hasIncludedCover={hasIncludedCover} showCover={showCover} onCover={() => setShowCover(value => !value)} chooserScale={b => chooserScale(b, bodies)} onBodyIntent={prefetchBottle} />;
 
     return <div ref={builderRoot} className={styles.builder} data-bottle-builder data-current-step={step} data-has-bottle={Boolean(body)} aria-busy={pending || adding}>
         <header className={styles.header}>
@@ -334,7 +344,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
                 {bodyNotice}
                 <fieldset ref={optionsScroller} aria-label={titles[step]} disabled={adding || pending} className={styles.optionFieldset}>
                 {step === 0 && <div className={styles.bottleGrid}>
-                    {visibleBodies.map((b, index) => <Option key={b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} selected={body?.id === b.id} onClick={() => chooseBottle(b)}>
+                    {visibleBodies.map((b, index) => <Option key={b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} selected={body?.id === b.id} onClick={() => chooseBottle(b)} onIntent={() => prefetchBottle(b.id)}>
                         <div className={styles.bottleThumb}><BuilderImage config={clearBodyPreview(b)} parts={previewParts(clearBodyPreview(b), "body")} label={`${b.capacityMl} ml ${b.family} bottle`} scale={chooserScale(b, bodies)} thumbnail placeholder priority={index < CHOOSER_PRIORITY_TILES} /></div>
                         <strong>{b.capacityMl} ml</strong>{b.profileLabel !== b.family && <small>{b.profileLabel}</small>}{bodyFrom(b) && <small className={styles.tilePrice}>{bodyFrom(b)}</small>}<span className={styles.neckBadge}>Neck: {b.neck}</span>
                     </Option>)}
@@ -442,9 +452,10 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
     </div>;
 }
 
-function Option({ children, selected, onClick, label, description }: { children: ReactNode; selected: boolean; onClick: () => void; label: string; description?: string }) {
+function Option({ children, selected, onClick, onIntent, label, description }: { children: ReactNode; selected: boolean; onClick: () => void; onIntent?: () => void; label: string; description?: string }) {
     const descriptionId = useId();
-    return <button type="button" className={`${styles.option} ${selected ? styles.selected : ""}`} aria-label={label} aria-describedby={description ? descriptionId : undefined} aria-pressed={selected} onClick={onClick}>
+    const intent = useTileIntent(onIntent);
+    return <button type="button" className={`${styles.option} ${selected ? styles.selected : ""}`} aria-label={label} aria-describedby={description ? descriptionId : undefined} aria-pressed={selected} onClick={onClick} {...intent}>
         {selected && <span className={styles.selectionCheck}><Check size={12} weight="bold" /></span>}{children}{description && <span id={descriptionId} className={styles.optionDescription}>{description}</span>}
     </button>;
 }
