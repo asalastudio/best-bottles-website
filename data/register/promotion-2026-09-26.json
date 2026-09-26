@@ -83,5 +83,14 @@
   "cylinder-9ml-clear-17-415-finemist (turquoise): register",
   "boston-round-30ml-amber-20-400-rollon: not in the register (no 20-400 parts yet); its Shopify photo fallback is a dead URL (404), pre-existing"
  ],
- "notInRegisterYet": "SKUs whose parts are not cut (20-400, 15-415, 18-400, 13-425, 16mm, 12mm, 8-425), the 29 Short Liner Cap SKUs, 29 18-415 RdcrShnBlk SKUs, and prod products newer than the 2026-09-25 dev snapshot (e.g. GBCrcl15BlkShSht) keep their published kit or photo."
+ "notInRegisterYet": "SKUs whose parts are not cut (20-400, 15-415, 18-400, 13-425, 16mm, 12mm, 8-425), the 29 Short Liner Cap SKUs, 29 18-415 RdcrShnBlk SKUs, and prod products newer than the 2026-09-25 dev snapshot (e.g. GBCrcl15BlkShSht) keep their published kit or photo.",
+ "followUps": [
+  {
+   "what": "cylinder-9ml-17-415: the second-pass Sunburst plates replace the Phase 3 pilot plates on dev and prod (Jordan: 'missing the new glass ... the clear glass for the 9 ml')",
+   "how": "push-bodies.ts now loads the pilot body too, its px/mm set to the pilot's seat-to-foot (73.82 mm) so the approved closure-to-glass proportions hold; push-phase3.ts loads its own plates only with --plates",
+   "prod": {
+    "updated": 5
+   }
+  }
+ ]
 }

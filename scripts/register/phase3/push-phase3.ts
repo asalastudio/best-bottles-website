@@ -7,6 +7,7 @@
  *   npx tsx scripts/register/phase3/push-phase3.ts --apply --approve    # the same, marked "approved" (Jordan's sign-off)
  *   ... --approve --except plateKey|componentId,...                     # approve all but the named items
  *   ... --only componentId,...                                           # load only the named components (no plates)
+ *   ... --plates                                                          # also the Phase 3 pilot plates (superseded by push-bodies.ts)
  *   ... --deployment prod                                                   # production: REGISTER_PROD_WRITE_TOKEN (scripts/register/deployment.ts)
  *
  * Reads data/register/phase3/pilot-measurements.json and output/register-phase3/pilot/ (run cut_pilot.py
@@ -60,7 +61,8 @@ async function main() {
     };
 
     const plates = [];
-    for (const p of only.size ? [] : m.plates) {
+    // The pilot's own plates are superseded by its second-pass plates (push-bodies.ts); they load only when asked for.
+    for (const p of only.size || !argv.includes("--plates") ? [] : m.plates) {
         const image = await upload(`register/plates/${m.bodyId}/${p.glass.toLowerCase().replace(/ /g, "-")}/${p.sha256}.png`, p.file, p.width, p.height, p.sha256);
         // A plate that fails the size gate is approved only if it carries a named ruling (checks.acceptedBy).
         const s = p.checks.approvable ? status(p.plateKey) : "measured";

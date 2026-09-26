@@ -11,7 +11,7 @@
  * data/register/bodies/rulings.json. Only plates with status "ok" are approvable; "review" plates load as
  * "measured", and so do plates whose two scales disagree by more than 5% unless rulings.scaleFlags accepts
  * them (Jordan 2026-09-25). A plate named in rulings.hold loads as "measured" with its reason on the row,
- * whatever else says. The pilot body (cylinder-9ml-17-415) is owned by push-phase3.ts and skipped here.
+ * whatever else says. The pilot body (cylinder-9ml-17-415) loads its second-pass plates here too, at the pilot's scale.
  * Blob keys are content-addressed and write-once. Token from .env.local / .env.blob.local.
  */
 import { readFileSync } from "node:fs";
@@ -28,7 +28,15 @@ config({ path: [resolve(ROOT, ".env.local"), resolve(ROOT, ".env.blob.local")], 
 const argv = process.argv.slice(2);
 const apply = argv.includes("--apply"), approve = argv.includes("--approve");
 const except = new Set(argv.includes("--except") ? argv[argv.indexOf("--except") + 1].split(",").map(s => s.trim()) : []);
+// The 9 mL cylinder's second-pass plates replace the Phase 3 pilot's (Jordan 2026-09-26: "we're missing the new glass ... the
+// clear glass for the 9 ml"). Its closures were cut against the pilot's scale (seat to foot 73.82 mm); the second pass measured
+// its own plate at 71.71 mm, so the plate takes the pilot's millimetres and the approved cap-to-glass proportions hold.
 const PILOT = "cylinder-9ml-17-415";
+const PILOT_SEAT_TO_FOOT_MM = (() => {
+    const pilot = JSON.parse(readFileSync(resolve(ROOT, "data", "register", "phase3", "pilot-measurements.json"), "utf8")) as { plates: { pxPerMm: number; anchors: { seatY: number; baselineY: number } }[] };
+    const p = pilot.plates[0];
+    return (p.anchors.baselineY - p.anchors.seatY) / p.pxPerMm;
+})();
 
 type Rulings = { scaleFlags?: { by: string; date: string; ruling: string } | null; hold?: Record<string, string> };
 const RULINGS = JSON.parse(readFileSync(resolve(ROOT, "data", "register", "bodies", "rulings.json"), "utf8")) as Rulings;
@@ -44,7 +52,8 @@ type Plate = {
 
 async function main() {
     const plates = (JSON.parse(readFileSync(resolve(ROOT, "data", "register", "bodies", "bodies-measurements.json"), "utf8")) as Plate[])
-        .filter(p => p.file && p.bodyId !== PILOT);
+        .filter(p => p.file)
+        .map(p => (p.bodyId === PILOT ? { ...p, pxPerMm: Math.round(((p.anchors.baselineY - p.anchors.seatY) / PILOT_SEAT_TO_FOOT_MM) * 1e4) / 1e4 } : p));
     const { deployment, url, token } = registerTarget(process.argv.slice(2));
     console.log(`deployment: ${deployment} (${url})`);
     if (apply && !process.env.BLOB_READ_WRITE_TOKEN) throw new Error("BLOB_READ_WRITE_TOKEN is not set (.env.blob.local)");
