@@ -14,7 +14,7 @@
       "sourceImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBVBlu1o9BlackCapSht.gif",
       "localImageUrl": "/images/pdp/blue-half-dram-vial-2026-09-27/GBVBlu1o9BlackCapSht.png",
       "localSha256": "4ed61c67863bb6be86842dd3c5104139e8a4a77439d214a68a7cfaf6f4ad5691",
-      "commerceStatus": "imported; capacity disagrees with original page"
+      "commerceStatus": "imported; Shopify Admin SKU GB-VIA-BLU-3ML-BLK-S resolves to variant 53343699173668 at $1.08; capacity disagrees with original page"
     },
     {
       "websiteSku": "GBVBlu1o9WhtCapSht",
@@ -23,7 +23,7 @@
       "sourceImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBVBlu1o9WhtCapSht.gif",
       "localImageUrl": "/images/pdp/blue-half-dram-vial-2026-09-27/GBVBlu1o9WhtCapSht.png",
       "localSha256": "c0ea749b23270483642be0f5846c51ba9a3475d1882c860f4be5f47f949c62be",
-      "commerceStatus": "absent from imported catalog and Shopify variant map; image prepared only"
+      "commerceStatus": "absent from imported catalog; read-only Shopify Admin SKU searches for GBVBlu1o9WhtCapSht and GB-VIA-BLU-3ML-WHT-S returned no variants on 2026-09-27; image prepared only"
     }
   ]
 }
