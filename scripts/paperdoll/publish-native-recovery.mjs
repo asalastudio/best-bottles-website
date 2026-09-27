@@ -10,7 +10,6 @@ import { createHash } from "node:crypto";
 import { pathToFileURL } from "node:url";
 import sharp from "sharp";
 import { ConvexHttpClient } from "convex/browser";
-import { createBlobStore, verifyPublicUrl } from "./lib/store-blob.mjs";
 const hash = (b) => createHash("sha256").update(b).digest("hex");
 const read = async (p) => JSON.parse(await fs.readFile(p, "utf8"));
 const save = async (p, data) =>
@@ -432,6 +431,7 @@ export async function run(args = process.argv.slice(2)) {
     return;
   }
   if (!writeToken) throw Error("Write token required");
+  const { createBlobStore, verifyPublicUrl } = await import("./lib/store-blob.mjs");
   const store = createBlobStore(),
     locations = new Map(),
     receipt = {
