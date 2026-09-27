@@ -52,7 +52,8 @@ export type PdpStageProps = {
     onViewChange: (view: StageView) => void;
     kit: KitLike | null;
     context: StageContext;
-    fallbackImageUrl: string | null;
+    fallbackImageUrls: string[];
+    fallbackBodyImageUrl: string | null;
     fallbackAlt: string;
     callouts: Callout[];
     caps: CapRailItem[];
@@ -89,7 +90,7 @@ export function useIsPdpMobile(): boolean {
 }
 
 export default function PdpStage({
-    pickLine, view, availableViews, onViewChange, kit, context, fallbackImageUrl, fallbackAlt, callouts,
+    pickLine, view, availableViews, onViewChange, kit, context, fallbackImageUrls, fallbackBodyImageUrl, fallbackAlt, callouts,
     caps, activeCapId, onCapPick, glasses, onGlassPick, activeCapName, activeGlassLabel,
 }: PdpStageProps) {
     const layout = useMemo(() => stageLayout(kit, view, context), [kit, view, context]);
@@ -98,6 +99,10 @@ export default function PdpStage({
     // proxy cannot reach the Blob host (a local network quirk) the master is shown.
     const [rawUrls, setRawUrls] = useState<ReadonlySet<string>>(() => new Set());
     const showRaw = (url: string) => setRawUrls((current) => (current.has(url) ? current : new Set(current).add(url)));
+    const [failedFallbackUrls, setFailedFallbackUrls] = useState<ReadonlySet<string>>(() => new Set());
+    const fallbackImageUrl = fallbackImageUrls.find((url) => !failedFallbackUrls.has(url))
+        ?? (fallbackBodyImageUrl && !failedFallbackUrls.has(fallbackBodyImageUrl) ? fallbackBodyImageUrl : null);
+    const showingBareBody = Boolean(fallbackImageUrl && fallbackImageUrl === fallbackBodyImageUrl);
     const mobile = useIsPdpMobile();
     const capThumbHeight = mobile ? 42 : 48;
     const glassThumbHeight = mobile ? 60 : 96;
@@ -189,7 +194,7 @@ export default function PdpStage({
                 data-testid="pdp-stage"
                 data-view={view}
                 data-layered={layout ? "true" : "false"}
-                data-source={layout ? (kit?.register ? "register" : "kit") : fallbackImageUrl ? "photo" : "none"}
+                data-source={layout ? (kit?.register ? "register" : "kit") : fallbackImageUrl ? (showingBareBody ? "body" : "photo") : "none"}
             >
                 <div className={styles.stageGrid} data-on={layout?.grid ? "true" : "false"} aria-hidden />
                 <div className={styles.stageBaseline} data-on={layout ? (layout.baseline ? "true" : "false") : "true"} aria-hidden />
@@ -242,7 +247,16 @@ export default function PdpStage({
                     <div className={styles.stageFallback}>
                         {/* Kit layers and plates stay plain <img>: their pixel canvas and alpha must not change. */}
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={displayImageUrl(fallbackImageUrl)} alt={fallbackAlt} decoding="async" />
+                        <img
+                            src={rawUrls.has(fallbackImageUrl) ? fallbackImageUrl : displayImageUrl(fallbackImageUrl)}
+                            alt={showingBareBody ? `${fallbackAlt}, uncapped bottle` : fallbackAlt}
+                            decoding="async"
+                            onError={() => {
+                                if (!rawUrls.has(fallbackImageUrl) && markRegisterOptimizerUnavailable(fallbackImageUrl)) showRaw(fallbackImageUrl);
+                                else setFailedFallbackUrls((current) => new Set(current).add(fallbackImageUrl));
+                            }}
+                        />
+                        {showingBareBody && <span className={styles.bareBodyNote}>Uncapped bottle shown · assembled photo pending</span>}
                     </div>
                 ) : (
                     <div className={styles.stageEmpty}>Photography coming soon</div>

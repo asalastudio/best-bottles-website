@@ -7,7 +7,7 @@
 .page {
     --pdp-ink: #1c1c1e;
     --pdp-page: #faf9f7;
-    --pdp-canvas: #f1ede6;
+    --pdp-canvas: #f5f3ef;
     --pdp-card: #fff;
     --pdp-border: #e6dccd;
     --pdp-border-soft: #ece6dc;
@@ -309,6 +309,16 @@
     max-height: 100%;
     object-fit: contain;
     display: block;
+}
+
+.bareBodyNote {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    color: var(--pdp-secondary);
+    font-size: 11px;
+    text-align: center;
 }
 
 .stageEmpty {

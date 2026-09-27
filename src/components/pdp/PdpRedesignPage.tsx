@@ -32,7 +32,7 @@ import {
 import type { PlateRef } from "@/lib/paper-doll/plates";
 import type { ItemDescription } from "@/lib/products/item-description/resolve";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
-import { isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
+import { pdpFallbackMedia } from "@/lib/products/pdp-redesign/fallback-media";
 import { formatVolumeQtyRange, resolveQuotedUnitPrice } from "@/lib/volumePricing";
 import {
     buildYourBottleHref,
@@ -88,14 +88,6 @@ const ADDED_FLASH_MS = 1800;
 function kitFor(kits: Record<string, KitLike | null>, variant: { websiteSku?: string | null; graceSku?: string | null } | null | undefined): KitLike | null {
     if (!variant) return null;
     return (variant.websiteSku ? kits[variant.websiteSku] : null) ?? (variant.graceSku ? kits[variant.graceSku] : null) ?? null;
-}
-
-/** A photograph the stage may fall back to: never a Sanity render, never a 2020 bestbottles.com store image (the classic page blocks those too). */
-function usableImage(url: string | null | undefined): string | null {
-    if (!url) return null;
-    if (/cdn\.sanity\.io/.test(url)) return null;
-    if (isLegacyBestBottlesImageUrl(url)) return null;
-    return url;
 }
 
 export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, platesBySku, descriptions, collection, familyHref }: PdpRedesignPayload) {
@@ -335,7 +327,11 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     const bodyKit = kit ?? kitFor(kitsBySku, { websiteSku: group.primaryWebsiteSku, graceSku: group.primaryGraceSku });
     const capKits = caps.map((cap) => kitFor(kitsBySku, cap.variants[0])).filter((entry): entry is KitLike => Boolean(entry));
     const plate = selected ? platesBySku[selected.graceSku] ?? (selected.websiteSku ? platesBySku[selected.websiteSku] : undefined) : undefined;
-    const fallbackImage = usableImage(selected?.imageUrl) ?? plate?.image ?? usableImage(group.heroImageUrl) ?? null;
+    const fallbackMedia = pdpFallbackMedia({
+        groupSlug: slug,
+        variant: selected,
+        plateImageUrl: plate?.image ?? null,
+    });
     const swatchStyle = getMaterialSwatchStyle(activeCap?.swatchName ?? capName, {});
     const selectionName = `${glassLabel(group.color)} glass${capName ? ` · ${capName} cap` : fitment ? ` · ${fitment}` : ""}`;
     const stickyLine = `${qty.toLocaleString("en-US")} × ${unitPrice != null ? formatPrice(unitPrice) : "—"} · ${lineLabel(glassName, rollerOption, rollerOption ? null : fitment, capName)}`;
@@ -363,7 +359,8 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                         onViewChange={onView}
                         kit={kit}
                         context={stageContext}
-                        fallbackImageUrl={fallbackImage}
+                        fallbackImageUrls={fallbackMedia.images}
+                        fallbackBodyImageUrl={fallbackMedia.bodyImageUrl}
                         fallbackAlt={title}
                         callouts={buildCallouts(selected, capName)}
                         caps={caps.map((cap) => ({
