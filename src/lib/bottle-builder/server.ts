@@ -118,7 +118,7 @@ const cachedBodyKits = unstable_cache(async (pairs: Array<[string, string | null
         kits[websiteSku] = loaded.get(websiteSku) ?? (graceSku ? loaded.get(graceSku) : undefined) ?? null;
     }
     return kits;
-}, ["bottle-builder-body-kits-v3-roller-seat"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-body-kits-v4-cylinder9-pilot-layers"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 export async function loadBuilderBodyKits(family: string, bodyId: string) {
     if (!family || family.length > 100 || !bodyId || bodyId.length > 200) return {};

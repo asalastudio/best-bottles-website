@@ -16,6 +16,7 @@
 import { compose, footY, frameFromDatum, type Frame, type LayerGeometry, type PlateGeometry } from "./compose";
 import { stackedExplodeOffsets } from "@/lib/products/exploded-stack";
 import { ELEGANT_PHOTO_BODIES } from "./elegant-photo-bodies";
+import { CYLINDER9_PILOT_LAYER_HASHES } from "./cylinder9-pilot-layers";
 
 export type StageDatum = { axisX: number; seatY: number; baselineY: number };
 /** The slots a kit part can occupy (convex/productKits.ts and the register's registerSlotV agree). */
@@ -108,6 +109,8 @@ export type RegisterKitMeta = {
     datum: StageDatum;
     pxPerMm: number;
     componentIds: string[];
+    /** Exact measured 9 mL hardware selected from the promoted register row. */
+    verifiedPilotLayers?: true;
 };
 
 export type RegisterKit = {
@@ -253,8 +256,37 @@ export function kitsFromRegister(payload: RegisterStagePayload, options: { canva
     return kits;
 }
 
-/** The Builder draws one visible insert per roller; PDP stage views retain their full kit. */
-export function assembledKit<T extends { parts: Array<{ slot: KitSlot; componentId: string | null; views?: StageViewName[] }> }>(kit: T): T {
+/**
+ * The promoted 9 mL register rows accumulated hardware crops from several
+ * bottle-color PSDs. Some "diptube" and "roller" crops contain an entire
+ * amber, cobalt, frosted or Swirl bottle. Keep the measured Phase 3 hardware
+ * set and the reviewed short silver-ball insert; if an expected layer is
+ * missing, leave this SKU to the caller's published-kit fallback.
+ */
+export function reconcileCylinder9Kit(kit: RegisterKit): RegisterKit | null {
+    if (kit.register.bodyId !== "cylinder-9ml-17-415") return kit;
+    const expected = new Map<string, Set<string>>();
+    for (const componentId of kit.register.componentIds) {
+        const hashes = CYLINDER9_PILOT_LAYER_HASHES[componentId];
+        if (!hashes) return null;
+        expected.set(componentId, new Set(hashes));
+    }
+    const selected = kit.parts.filter((part) => {
+        if (!part.componentId) return true;
+        const hash = /([a-f0-9]{64})\.png(?:\?|$)/.exec(part.image.url)?.[1];
+        return hash !== undefined && expected.get(part.componentId)?.has(hash);
+    });
+    for (const [componentId, hashes] of expected) {
+        const found = new Set(selected.filter((part) => part.componentId === componentId)
+            .map((part) => /([a-f0-9]{64})\.png(?:\?|$)/.exec(part.image.url)?.[1]));
+        if ([...hashes].some((hash) => !found.has(hash))) return null;
+    }
+    return { ...kit, parts: selected, register: { ...kit.register, verifiedPilotLayers: true } };
+}
+
+/** The Builder draws assembled layers only; the 9 mL pilot has its own reviewed short roller insert. */
+export function assembledKit<T extends { parts: Array<{ slot: KitSlot; componentId: string | null; views?: StageViewName[] }>; register?: { bodyId: string; verifiedPilotLayers?: true } }>(kit: T): T {
+    const cylinder9Pilot = kit.register?.verifiedPilotLayers === true;
     const baseRollers = new Set(kit.parts
         .filter((part) => part.slot === "roller" && part.componentId && !part.views)
         .map((part) => part.componentId));
@@ -264,7 +296,7 @@ export function assembledKit<T extends { parts: Array<{ slot: KitSlot; component
             if (part.views && !part.views.includes("capon")) return false;
             // The original short insert already shows the seated roller. An additional
             // seated photo of the same component paints its long plug through the glass.
-            return part.slot !== "roller" || !part.views || !baseRollers.has(part.componentId);
+            return cylinder9Pilot || part.slot !== "roller" || !part.views || !baseRollers.has(part.componentId);
         }),
     };
 }

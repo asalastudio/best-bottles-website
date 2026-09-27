@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { STAGE_DATUMS, assembledKit, datumFromPlate, kitFromRegister, kitsFromRegister, partBoxTransform, type RegisterStagePayload } from "@/lib/register/stage-kit";
+import { STAGE_DATUMS, assembledKit, datumFromPlate, kitFromRegister, kitsFromRegister, partBoxTransform, reconcileCylinder9Kit, type RegisterStagePayload } from "@/lib/register/stage-kit";
 import { closurePart, fitmentPart, partCrop, stageLayout } from "@/lib/products/pdp-redesign/stage";
 import { layerCropStyleForPart, layerTransform } from "@/lib/bottle-builder/preview-frame";
 import { ELEGANT_PHOTO_BODIES } from "@/lib/register/elegant-photo-bodies";
@@ -176,6 +176,42 @@ describe("kitFromRegister", () => {
         expect(tall.baselineY - tall.seatY).toBeLessThanOrEqual(800);
         const other = kitFromRegister("GB-CYL-CLR-9ML-MRL-BKDT", { ...PAYLOAD, assemblies: { "GB-CYL-CLR-9ML-MRL-BKDT": { ...PAYLOAD.assemblies["GB-CYL-CLR-9ML-MRL-BKDT"]!, bodyId: "elsewhere" } } })!;
         expect(other.anchors.seatY).toBe(datum.seatY);
+    });
+});
+
+describe("9 mL Cylinder promoted-layer reconciliation", () => {
+    const registered = kitFromRegister("GB-CYL-CLR-9ML-MRL-BKDT", PAYLOAD)!;
+    const published = (name: string, hash: string) => `https://blob/register/components/17-415/example/${name}-${hash}.png`;
+    const roller = registered.parts.find((part) => part.slot === "roller")!;
+    const cap = registered.parts.find((part) => part.slot === "cap")!;
+
+    it("retains the measured roller and its short silver-ball correction, but removes full-bottle crops", () => {
+        const measured = { ...roller, image: { ...roller.image, url: published("roller", "d64975a48a1c447a1ab6f2a68a1c5252cf5a56e6d07c41d3ab6b3c17e3f94bba") } };
+        const correction = { ...roller, zOrder: 1, views: ["sidecar", "capon"] as ["sidecar", "capon"], image: { ...roller.image, url: published("roller", "4c3c4a5090ce2c419265e57716991288dc02fc0d0d0a0b2d7c2a91dff5921c48") } };
+        const leakedBottle = { ...roller, zOrder: 3, views: ["sidecar", "capon"] as ["sidecar", "capon"], image: { ...roller.image, url: published("roller", "f8cff0279a097bef36eeab798dbe9559ced76c8c0b51baba465e70c52da2d6bf") } };
+        const measuredCap = { ...cap, image: { ...cap.image, url: published("cap", "560f58877ddc937518530400d3d0132b1391758a93a2ae1b5c0378b495968f79") } };
+        const promoted = { ...registered, parts: [measured, correction, registered.parts.find((part) => part.slot === "body")!, leakedBottle, measuredCap] };
+        const fixed = reconcileCylinder9Kit(promoted)!;
+        expect(fixed.register.verifiedPilotLayers).toBe(true);
+        expect(fixed.parts.map((part) => part.image.url)).toEqual([measured.image.url, correction.image.url, PLATE.url, measuredCap.image.url]);
+        expect(assembledKit(fixed).parts.filter((part) => part.slot === "roller").map((part) => part.image.url)).toEqual([measured.image.url, correction.image.url]);
+        expect(reconcileCylinder9Kit({ ...promoted, parts: promoted.parts.filter((part) => part !== correction) })).toBeNull();
+    });
+
+    it("keeps only the source sprayer, collar and overcap, excluding glass-color dip-tube crops", () => {
+        const componentId = "CMP-SPR-BLK-17-415-01";
+        const source = registered.parts.find((part) => part.slot === "body")!;
+        const hardware = [
+            ["sprayer", "60eefa3c2a0fc252aca1a5cbcacb103f7b8fbe9b1f5d0f160d354b271a1113f6"],
+            ["collar", "dff02db6b0e742574fb4ac8bf36e545ce9d3dc34d5933ad7183b652433061b79"],
+            ["overcap", "01b4b723b9b48da17ac68c109d2c0228c78c38cb165ca8b32a47dbaa6a873387"],
+        ] as const;
+        const parts = hardware.map(([slot, hash], index) => ({ ...roller, slot, componentId, zOrder: index + 1, image: { ...roller.image, url: published(slot, hash) } }));
+        const leakedGlass = { ...roller, slot: "diptube" as const, componentId, image: { ...roller.image, url: published("diptube", "c5c0c53f2e1d9a9f058db1f418e000000000000000000000000000000000000") } };
+        const promoted = { ...registered, register: { ...registered.register, componentIds: [componentId] }, parts: [source, leakedGlass, ...parts] };
+        const fixed = reconcileCylinder9Kit(promoted)!;
+        expect(fixed.parts.map((part) => part.slot)).toEqual(["body", "sprayer", "collar", "overcap"]);
+        expect(fixed.parts.find((part) => part.slot === "body")!.image.url).toBe(PLATE.url);
     });
 });
 
