@@ -100,11 +100,20 @@ Key `cylinder-9ml-13-415`, measured by Jordan on 2026-09-26.
 | T | 13.40 | 12.87 |
 | E | 11.22 | 11.34 |
 | I | 7.04 | 7.3 |
-| Dep | 92.63 (depth rod, rim to inside floor) | 92.70 (newest 09-27 materials scene) |
-| Hh | 0.18 | 0.65 (newest 09-27 materials scene) |
-| Wr | 18.05 | 16.50 (newest 09-27 materials scene) |
+| Dep | 92.63 (depth rod, rim to inside floor) | 92.70 (locked body) |
+| Hh | 0.18 | 0.18 (locked body) |
+| Wr | 18.05 | 18.05 (locked body) |
 
 Still needed: Dp, Hn and Cap.
+
+**LOCKED 2026-09-27 (Jordan: "Bottle is perfect let's lock it now").** The bottle body is locked in
+`~/Documents/Codex/2026-09-24/the-image-is-clearly-the-target/outputs/tall-9ml-13-415-LOCKED-2026-09-27/`.
+- Contents: `LOCK.json`, clear and frosted `.blend` files (read-only, with identical body mesh) and `scripts/verify_lock.py`.
+- Outside: H 105.49, OD 18.35, heel 0.18 on an 18.05 ring.
+- Inside: floor at z 12.79; one nearly straight wall into the rounded U, with no pinch.
+- Capacity to the brim: 9.55 ml, calculated from the mesh, not weighed.
+- Never edit the body mesh. Any change is a new version and needs Jordan's approval.
+- Run `verify_lock.py` on any scene before rendering.
 
 **Depth (Jordan, 2026-09-26, carried over from the materials session):** the depth rod read 92.63 from the rim to the
 inside floor. H − Dep puts the floor at z 12.97 above the standing base. That retires the deep-U model value
