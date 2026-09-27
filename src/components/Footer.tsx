@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useMemo, useState } from "react";
-import BrandWordmark from "./BrandWordmark";
+import BrandBottleMark from "./BrandBottleMark";
 import LocaleLink from "./LocaleLink";
 import { useMutation } from "convex/react";
 import {
@@ -103,7 +103,13 @@ export default function Footer() {
                 <div className="grid gap-12 border-b border-white/12 pb-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-8 lg:pb-16">
                     <div className="lg:col-span-3">
                         <LocaleLink href="/" aria-label={t("home")} className="inline-block transition-opacity hover:opacity-80">
-                            <BrandWordmark tone="light" className="!h-[18px]" />
+                            <span className="flex items-center gap-4">
+                                <BrandBottleMark size={48} reversed />
+                                <span className="flex flex-col gap-2 font-sans text-bone">
+                                    <span className="text-[16px] font-bold tracking-[0.32em]">BEST BOTTLES</span>
+                                    <span className="text-[7px] font-medium tracking-[0.22em]">FRAGRANCE &amp; BEAUTY PACKAGING</span>
+                                </span>
+                            </span>
                         </LocaleLink>
                         <p className="mt-4 max-w-[260px] text-xs leading-relaxed text-white/58">
                             {t("tagline")}

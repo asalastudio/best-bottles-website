@@ -1,0 +1,9 @@
+.mark { display: block; flex: none; }
+.mark[data-motion="idle"] .frontWave, .mark[data-motion="working"] .frontWave { animation: wave 4.2s linear infinite; }
+.mark[data-motion="idle"] .backWave, .mark[data-motion="working"] .backWave { animation: wave 5.6s linear infinite reverse; }
+.mark[data-motion="working"] .frontWave { animation-duration: 1.4s; }
+.mark[data-motion="working"] .backWave { animation-duration: 1.87s; }
+.mark[data-motion="once"] .frontWave { animation: wave 4s linear 1; }
+.mark[data-motion="once"] .backWave { animation: wave 4s linear 1 reverse; }
+@keyframes wave { from { transform: translateX(-100px); } to { transform: translateX(0); } }
+@media (prefers-reduced-motion: reduce) { .mark .frontWave, .mark .backWave { animation: none !important; } }

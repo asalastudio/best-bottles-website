@@ -2,460 +2,157 @@
 
 import { useRef, useEffect, useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-    X,
-    NotePencil,
-    CaretRight,
-    Paperclip,
-    PaperPlaneTilt,
-    ArrowsOutSimple,
-    Package,
-    Compass,
-    Leaf,
-} from "@phosphor-icons/react";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { X, List, Paperclip, ArrowUp, ArrowsOutSimple, CaretRight } from "@phosphor-icons/react";
 import VoiceWaveGlyph from "@/components/grace-workspace/VoiceWaveGlyph";
+import BrandBottleMark from "@/components/BrandBottleMark";
+import LocaleLink from "@/components/LocaleLink";
 import { useGrace } from "@/components/useGrace";
 import { useCopy } from "@/i18n/useCopy";
-import { useIsAuthenticated } from "@/lib/useIsAuthenticated";
 import { useGraceImageUpload } from "@/lib/useGraceImageUpload";
 import GraceChatMessage, { StreamingMessage, ThinkingIndicator } from "./GraceChatMessage";
-import { graceConversationDisposition } from "@/lib/grace/pushLayout";
-
-// Anonymous discovery chip set — PRD v3 spec.
-// (Auth-aware swap to "in project" / "no project" sets lights up once Clerk
-// auth is wired into the public drawer flow — currently anonymous-only.)
-const QUICK_CHIPS = [
-    { label: "Find by fitment", icon: Compass, query: "Help me find a bottle by fitment — I know the neck thread size I need." },
-    { label: "Browse families", icon: Package, query: "Show me all bottle families — I want to browse what's available." },
-    { label: "Match a reference image", icon: Leaf, query: "I have a reference image — help me find a bottle that matches." },
-    { label: "Check compatibility", icon: Package, query: "Help me check which caps or applicators fit a bottle." },
-];
-
-function GraceMark({ size = 56, glow = false }: { size?: number; glow?: boolean }) {
-    return (
-        <div
-            className="relative flex items-center justify-center rounded-[3px]"
-            style={{
-                width: size,
-                height: size,
-                background: "rgba(255, 255, 255, 0.7)",
-                border: "1px solid rgba(29, 29, 31, 0.12)",
-                boxShadow: glow
-                    ? "0 0 0 6px rgba(197,160,101,0.10), 0 8px 24px rgba(29,29,31,0.06)"
-                    : "0 1px 2px rgba(29,29,31,0.04)",
-            }}
-            aria-hidden
-        >
-            <span
-                className="font-cormorant font-semibold leading-none text-obsidian"
-                style={{ fontSize: size * 0.5, letterSpacing: "-0.02em" }}
-            >
-                G
-            </span>
-            <span
-                className="absolute h-[7px] w-[7px] rounded-full bg-muted-gold"
-                style={{ right: -3, top: -3 }}
-                aria-hidden
-            />
-        </div>
-    );
-}
+import GraceOrderList from "./GraceOrderList";
+import GraceCartSummary from "./GraceCartSummary";
+import { useGraceRedesignCopy } from "./redesignCopy";
+import styles from "./GraceShop.module.css";
 
 export default function GraceChatDrawer() {
-    const {
-        panelMode,
-        surface,
-        closePanel,
-        messages,
-        streamingText,
-        isAwaitingReply,
-        input,
-        setInput,
-        send,
-        resetConversation,
-        errorMessage,
-        toggleVoice,
-        voiceEnabled,
-        pageContext,
-    } = useGrace();
+    const { panelMode, surface, closePanel, messages, streamingText, isAwaitingReply, input, setInput, send,
+        resetConversation, errorMessage, toggleVoice, voiceEnabled, pageContext } = useGrace();
     const t = useCopy("grace");
-
-    // Adaptive top-bar microcopy — anonymous flow.
-    // PDP: "Empire Round 50ml" · Catalog with filter: "Catalog · Cylinder" ·
-    // otherwise empty (top bar collapses to brand label).
-    const pageMicrocopy = (() => {
-        if (pageContext?.currentProduct) {
-            const p = pageContext.currentProduct;
-            return [p.family, p.capacity].filter(Boolean).join(" ") || p.name;
-        }
-        if (pageContext?.catalogCategory) return `Catalog · ${pageContext.catalogCategory}`;
-        if (pageContext?.catalogSearch) return `Catalog · "${pageContext.catalogSearch}"`;
-        return "";
-    })();
-
+    const c = useGraceRedesignCopy();
     const router = useRouter();
-    const isAuthed = useIsAuthenticated();
+    const reducedMotion = useReducedMotion();
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [orderListOpen, setOrderListOpen] = useState(false);
     const fileRef = useRef<HTMLInputElement>(null);
-    const { uploadAndAnalyze, status: uploadStatus } = useGraceImageUpload();
-    const isUploading = uploadStatus === "uploading" || uploadStatus === "analyzing" || uploadStatus === "searching";
-
-    const handleAttachClick = () => fileRef.current?.click();
-    const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0];
-        if (!file) return;
-        e.target.value = "";
-        await uploadAndAnalyze(file, { userText: input.trim() || undefined });
-        setInput("");
-    };
-    const isOpen = panelMode === "open";
-    const isOverlay = surface.mode === "overlay";
-    const isMobile = surface.viewportWidth <= 768;
-    const messagesEndRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLTextAreaElement>(null);
+    const panelRef = useRef<HTMLElement>(null);
+    const menuRef = useRef<HTMLDivElement>(null);
+    const menuButtonRef = useRef<HTMLButtonElement>(null);
+    const messagesEndRef = useRef<HTMLDivElement>(null);
+    const { uploadAndAnalyze, status: uploadStatus, error: uploadError } = useGraceImageUpload();
+    const isUploading = ["uploading", "analyzing", "searching"].includes(uploadStatus);
+    const busy = isAwaitingReply || !!streamingText || isUploading;
+    const isOpen = panelMode === "open" && surface.mode !== "owned";
+    const isMobile = surface.viewportWidth <= 768;
+    const isRail = surface.mode === "push";
+    const pageLabel = pageContext?.currentProduct?.name
+        || (pageContext?.catalogSearch ? `${c.catalog} · ${pageContext.catalogSearch}` : pageContext?.catalogCategory ? `${c.catalog} · ${pageContext.catalogCategory}` : null)
+        || (pageContext?.pageType === "home" ? c.home : pageContext?.pageType === "catalog" ? c.catalog : pageContext?.pageType === "cart" ? c.cartPage : pageContext?.currentCollection || c.page);
+    const showPageContext = Boolean(pageContext?.currentProduct || pageContext?.catalogSearch || pageContext?.catalogCategory || pageContext?.currentCollection);
+    const showEmptyState = messages.length === 0 && !busy;
+    const firstQuestion = messages.find(message => message.role === "user")?.content;
 
-    const handleExpand = () => {
-        closePanel();
-        router.push("/grace-workspace");
-    };
+    const handleClose = () => { setMenuOpen(false); closePanel(); };
+    const handleExpand = () => { handleClose(); router.push("/grace-workspace"); };
+    const handleNewChat = () => { setOrderListOpen(false); void resetConversation(); setInput(""); setMenuOpen(false); inputRef.current?.focus(); };
+    const handleSubmit = (event: FormEvent) => { event.preventDefault(); if (input.trim() && !busy) void send(); };
+    const closeMenu = () => { setMenuOpen(false); menuButtonRef.current?.focus(); };
 
     useEffect(() => {
-        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, [messages, streamingText, isAwaitingReply]);
-
-    useEffect(() => {
-        if (isOpen) {
-            const t = setTimeout(() => inputRef.current?.focus(), 350);
-            return () => clearTimeout(t);
-        }
-    }, [isOpen]);
-
-    useEffect(() => {
-        const handleKey = (e: KeyboardEvent) => {
-            if (e.key === "Escape" && isOpen) closePanel();
+        if (!isOpen) return;
+        const previousFocus = document.activeElement as HTMLElement | null;
+        panelRef.current?.focus();
+        return () => {
+            requestAnimationFrame(() => {
+                if (previousFocus?.isConnected && previousFocus !== document.body) previousFocus.focus();
+                else document.querySelector<HTMLButtonElement>("[data-grace-launcher]")?.focus();
+            });
         };
-        window.addEventListener("keydown", handleKey);
-        return () => window.removeEventListener("keydown", handleKey);
-    }, [isOpen, closePanel]);
+    }, [isOpen]);
+    useEffect(() => {
+        messagesEndRef.current?.scrollIntoView({ behavior: reducedMotion ? "instant" : "smooth", block: "end" });
+    }, [messages, streamingText, isAwaitingReply, reducedMotion]);
+    useEffect(() => {
+        if (!isOpen || !isMobile) return;
+        const previous = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+        return () => { document.body.style.overflow = previous; };
+    }, [isOpen, isMobile]);
+    useEffect(() => {
+        if (menuOpen) menuRef.current?.querySelector<HTMLButtonElement>("button")?.focus();
+    }, [menuOpen]);
 
-    const handleSubmit = (e: FormEvent) => {
-        e.preventDefault();
-        if (input.trim()) send();
-    };
-
-    const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-        if (e.key === "Enter" && !e.shiftKey) {
-            e.preventDefault();
-            if (input.trim()) send();
-        }
-    };
-
-    const handleClose = () => {
-        closePanel();
-    };
-
-    const handleNewChat = () => {
-        if (graceConversationDisposition("new-chat") === "reset") {
-            void resetConversation();
-        }
-        setInput("");
-    };
-
-    const [chipsUsed, setChipsUsed] = useState(false);
-
-    const handleChipClick = (query: string) => {
-        setChipsUsed(true);
-        send(query);
-    };
-
-    const userHasInteracted = chipsUsed || messages.some((m) => m.role === "user");
-    const showEmptyState = messages.length === 0 && !userHasInteracted;
-
-    return (
-        <AnimatePresence>
-            {isOpen && surface.mode !== "owned" && (
-                <>
-                    {isOverlay && (
-                        <motion.div
-                            key="grace-backdrop"
-                            initial={false}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.25 }}
-                            onClick={handleClose}
-                            className="fixed inset-0 z-[60]"
-                            style={{ background: "rgba(29, 29, 31, 0.35)", backdropFilter: "blur(2px)" }}
-                            aria-hidden="true"
-                        />
-                    )}
-
-                    <motion.aside
-                        key="grace-drawer"
-                        initial={false}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: "100%" }}
-                        transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-                        className="fixed top-0 right-0 z-[61] flex flex-col"
-                        style={{
-                            width: surface.mode === "push"
-                                ? `${surface.drawerWidth}px`
-                                : isMobile
-                                    ? "100%"
-                                    : "min(440px, 100vw)",
-                            height: "100dvh",
-                            background: "var(--color-bone)",
-                            borderLeft: "1px solid rgba(212, 197, 169, 0.55)",
-                            borderRadius: 0,
-                            boxShadow: "-12px 0 48px rgba(29, 29, 31, 0.09)",
-                            overflow: "hidden",
-                        }}
-                        role="complementary"
-                        aria-label={t("chatAria")}
-                    >
-                        {/* ── Top bar ─────────────────────────────────── */}
-                        <div
-                            className="flex items-center justify-between px-4 py-3 shrink-0 relative"
-                            style={{ borderBottom: "1px solid rgba(212, 197, 169, 0.35)" }}
-                        >
-                            {isMobile && (
-                                <div
-                                    className="absolute -top-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 cursor-pointer pb-4 pr-4 pl-4"
-                                    onClick={handleClose}
-                                >
-                                    <div className="w-10 h-1.5 rounded-full bg-white/30 backdrop-blur-md grace-sheet-handle" />
-                                </div>
-                            )}
-
-                            <div className="flex items-center gap-2.5">
-                                <GraceMark size={26} />
-                                <div className="leading-none min-w-0">
-                                    <div className="font-serif text-[14px] font-medium tracking-[0.02em] text-obsidian">
-                                        Grace
-                                    </div>
-                                    {/* Adaptive microcopy — anonymous PDP shows the current product;
-                                        anonymous catalog shows the active filter; otherwise the brand. */}
-                                    {pageMicrocopy && pageMicrocopy !== "Best Bottles" ? (
-                                        <div className="mt-[2px] text-[9px] tracking-[0.04em] text-slate truncate max-w-[220px]">
-                                            Concierge · {pageMicrocopy}
-                                        </div>
-                                    ) : (
-                                        <div className="mt-[2px] text-[9px] font-semibold uppercase tracking-[0.18em] text-slate">
-                                            Best Bottles
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-
-                            <div className="flex items-center gap-0.5">
-                                <IconBtn
-                                    label="New chat"
-                                    onClick={handleNewChat}
-                                    icon={<NotePencil size={15} />}
-                                />
-                                {isAuthed && (
-                                    <IconBtn
-                                        label="Expand to workspace"
-                                        onClick={handleExpand}
-                                        icon={<ArrowsOutSimple size={15} />}
-                                    />
-                                )}
-                                <IconBtn
-                                    label="Close Grace"
-                                    onClick={handleClose}
-                                    icon={<X size={15} />}
-                                />
-                            </div>
+    return <AnimatePresence>{isOpen && <>
+        {isMobile && <div className={styles.backdrop} aria-hidden="true" />}
+        <motion.aside ref={panelRef} tabIndex={-1} role="dialog" aria-modal={isMobile || undefined} aria-label={t("chatAria")}
+            className={`${styles.panel} ${isRail ? styles.rail : ""}`}
+            style={isRail ? { width: surface.drawerWidth } : undefined}
+            initial={{ opacity: 0, y: reducedMotion ? 0 : 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: reducedMotion ? 0 : 12 }} transition={{ duration: reducedMotion ? 0 : 0.2 }}
+            onKeyDown={event => {
+                if (event.key === "Escape") { event.stopPropagation(); if (menuOpen) closeMenu(); else handleClose(); }
+                if (event.key !== "Tab" || (!isMobile && !menuOpen)) return;
+                const scope = menuOpen ? menuRef.current : panelRef.current;
+                const focusable = scope?.querySelectorAll<HTMLElement>('button:not(:disabled), a[href], textarea:not(:disabled), [tabindex="0"]');
+                if (!focusable?.length) return;
+                const first = focusable[0]; const last = focusable[focusable.length - 1];
+                if (event.shiftKey && (document.activeElement === first || document.activeElement === scope)) { event.preventDefault(); last.focus(); }
+                else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+            }}>
+            <header className={styles.header}>
+                <BrandBottleMark size={26} motion={busy ? "working" : "still"} />
+                <div className={styles.identity}><strong>Grace</strong><span>{c.concierge}</span></div>
+                <button ref={menuButtonRef} type="button" className={styles.menuButton} aria-label={c.menu} aria-expanded={menuOpen} aria-controls="grace-menu" onClick={() => menuOpen ? closeMenu() : setMenuOpen(true)}><List size={17} /></button>
+                <button type="button" aria-label={c.expand} title={c.expand} onClick={handleExpand}><ArrowsOutSimple size={17} /></button>
+                <button type="button" aria-label={c.close} title={c.close} onClick={handleClose}><X size={18} /></button>
+            </header>
+            <div className={styles.main} inert={menuOpen}>
+                <div className={`${styles.feed} ${showEmptyState ? styles.welcome : ""}`}>
+                    {orderListOpen ? <GraceOrderList onClose={() => setOrderListOpen(false)} /> : showEmptyState ? <>
+                        <div className={styles.welcomeContent}>
+                            <div className={styles.greeting}><h2>{c.greeting}</h2></div>
+                            <div className={styles.intents}>{c.intents.map((label, index) => <button key={label} type="button" onClick={() => void send(c.prompts[index])}><span>{label}</span><CaretRight size={14} aria-hidden="true" /></button>)}</div>
                         </div>
-
-                        <div
-                            className="shrink-0 border-b border-champagne/40 bg-white/60 px-4 py-2.5 text-[11px] leading-snug text-slate"
-                            aria-live="polite"
-                        >
-                            <span className="font-semibold text-obsidian">Seeing:</span>{" "}
-                            {pageMicrocopy || "Best Bottles homepage"}
-                        </div>
-
-                        {/* ── Sub-header disclaimer ───────────────────── */}
-                        <div
-                            className="shrink-0 px-4 py-2 text-center text-[10.5px] italic text-slate"
-                            style={{ background: "rgba(245, 243, 239, 0.6)" }}
-                        >
-                            Grace uses real catalog data. Verify before ordering.
-                        </div>
-
-                        {/* ── Body — empty state OR conversation ──────── */}
-                        <div className="flex-1 min-h-0 flex flex-col overflow-hidden">
-                            {showEmptyState ? (
-                                <EmptyState onChip={handleChipClick} />
-                            ) : (
-                                <div className="flex-1 overflow-y-auto px-5 py-4">
-                                    {messages.map((msg) => (
-                                        <GraceChatMessage key={msg.id} message={msg} />
-                                    ))}
-                                    <StreamingMessage text={streamingText} />
-                                    {isAwaitingReply && !streamingText && <ThinkingIndicator />}
-                                    {errorMessage && (
-                                        <div className="mt-4 p-3 rounded-lg bg-red-50 border border-red-100/50">
-                                            <p className="text-[12px] text-red-600 font-sans leading-relaxed text-center">
-                                                {errorMessage}
-                                            </p>
-                                        </div>
-                                    )}
-                                    <div ref={messagesEndRef} />
-                                </div>
-                            )}
-                        </div>
-
-                        {/* ── Composer ────────────────────────────────── */}
-                        <div
-                            className="shrink-0 px-4 py-3"
-                            style={{ paddingBottom: isMobile ? "1rem" : "max(0.75rem, env(safe-area-inset-bottom))" }}
-                        >
-                            <form
-                                onSubmit={handleSubmit}
-                                className="relative bg-white rounded-[3px] transition-colors"
-                                style={{
-                                    border: voiceEnabled
-                                        ? "1px solid var(--color-muted-gold)"
-                                        : "1px solid rgba(29, 29, 31, 0.10)",
-                                    boxShadow: "0 1px 2px rgba(29,29,31,0.03)",
-                                }}
-                            >
-                                <textarea
-                                    ref={inputRef}
-                                    value={input}
-                                    onChange={(e) => setInput(e.target.value)}
-                                    onKeyDown={handleKeyDown}
-                                    placeholder={
-                                        voiceEnabled ? t("listening") : t("askAnything")
-                                    }
-                                    rows={2}
-                                    className="w-full bg-transparent text-[14px] text-obsidian placeholder:text-slate/60 outline-none font-sans resize-none px-3.5 pt-3 pb-2 leading-relaxed"
-                                    autoComplete="off"
-                                />
-                                <div
-                                    className="flex items-center gap-1 px-2 py-2"
-                                    style={{ borderTop: "1px solid rgba(212, 197, 169, 0.35)" }}
-                                >
-                                    <input
-                                        ref={fileRef}
-                                        type="file"
-                                        accept="image/png,image/jpeg,image/jpg,image/webp"
-                                        className="hidden"
-                                        onChange={handleFileChange}
-                                    />
-                                    <button
-                                        type="button"
-                                        aria-label="Attach reference image"
-                                        title={isUploading ? "Working…" : "Attach a reference image"}
-                                        onClick={handleAttachClick}
-                                        disabled={isUploading}
-                                        className="w-8 h-8 rounded-[3px] flex items-center justify-center cursor-pointer text-slate hover:bg-obsidian/[0.04] hover:text-obsidian transition-colors disabled:opacity-50 disabled:cursor-wait"
-                                    >
-                                        <Paperclip size={15} />
-                                    </button>
-                                    <span className="flex-1" />
-                                    <button
-                                        type="button"
-                                        onClick={toggleVoice}
-                                        aria-pressed={voiceEnabled}
-                                        aria-label={voiceEnabled ? t("endVoiceAria") : t("talkWith")}
-                                        title={voiceEnabled ? t("endVoiceTitle") : t("talkWith")}
-                                        className="w-9 h-8 rounded-[3px] flex items-center justify-center cursor-pointer transition-colors"
-                                        style={{
-                                            background: voiceEnabled
-                                                ? "var(--color-muted-gold)"
-                                                : "transparent",
-                                            color: voiceEnabled
-                                                ? "var(--color-obsidian)"
-                                                : "var(--color-slate)",
-                                        }}
-                                    >
-                                        <VoiceWaveGlyph size={16} active={voiceEnabled} />
-                                    </button>
-                                    <button
-                                        type="submit"
-                                        disabled={!input.trim()}
-                                        aria-label="Send"
-                                        className="w-8 h-8 rounded-[3px] flex items-center justify-center cursor-pointer bg-obsidian text-white disabled:opacity-30 disabled:cursor-not-allowed hover:bg-black transition-colors"
-                                    >
-                                        <PaperPlaneTilt size={14} />
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </motion.aside>
-                </>
-            )}
-        </AnimatePresence>
-    );
-}
-
-// ─── Sub-components ──────────────────────────────────────────────────────────
-
-function IconBtn({
-    icon,
-    label,
-    onClick,
-}: {
-    icon: React.ReactNode;
-    label: string;
-    onClick: () => void;
-}) {
-    return (
-        <button
-            onClick={onClick}
-            aria-label={label}
-            title={label}
-            className="w-7 h-7 rounded-[3px] flex items-center justify-center cursor-pointer text-slate hover:bg-obsidian/[0.04] hover:text-obsidian transition-colors"
-        >
-            {icon}
-        </button>
-    );
-}
-
-function EmptyState({ onChip }: { onChip: (q: string) => void }) {
-    // Compact spacing — drawer is now PRD-spec 480px tall, so the empty
-    // state has to fit hero mark + chips + section label without scroll.
-    return (
-        <div className="flex-1 flex flex-col items-center justify-start px-5 pt-5 pb-3 overflow-y-auto">
-            <GraceMark size={44} glow />
-            <div className="mt-3 text-center">
-                <div className="font-serif text-[19px] font-medium text-obsidian tracking-[0.01em] leading-tight">
-                    How can I help?
+                        {showPageContext && <p className={styles.context}><span aria-hidden="true" />{c.seeing} <strong>{pageLabel}</strong></p>}
+                    </> : <>
+                        {showPageContext && <p className={styles.conversationContext}>{c.seeing} <strong>{pageLabel}</strong></p>}
+                        {messages.map(message => <GraceChatMessage key={message.id} message={message} />)}
+                        <StreamingMessage text={streamingText} />
+                        {isAwaitingReply && !streamingText && <ThinkingIndicator />}
+                        <div ref={messagesEndRef} />
+                    </>}
+                    {(errorMessage || uploadError) && <p className={styles.error} role="alert">{errorMessage || uploadError}</p>}
                 </div>
-                <div className="mt-1 text-[11.5px] text-slate leading-relaxed max-w-[300px] mx-auto">
-                    Browse families, check fitments, or describe what you&rsquo;re packaging.
+                <div className={styles.composerArea} hidden={orderListOpen}>
+                    <GraceCartSummary onNavigate={handleClose} />
+                    <form onSubmit={handleSubmit} className={styles.composer} data-has-input={!!input.trim()}>
+                        <input ref={fileRef} type="file" accept="image/png,image/jpeg,image/webp" hidden onChange={async event => {
+                            const file = event.target.files?.[0]; if (!file) return; event.target.value = "";
+                            const draft = input.trim();
+                            setInput("");
+                            await uploadAndAnalyze(file, { userText: draft || undefined });
+                        }} />
+                        <button type="button" aria-label={c.attach} title={`${c.attach} (${c.imageHint})`} disabled={busy} onClick={() => fileRef.current?.click()}><Paperclip size={18} /></button>
+                        <textarea ref={inputRef} value={input} onChange={event => setInput(event.target.value)} aria-label={c.placeholder} placeholder={voiceEnabled ? t("listening") : c.placeholder} rows={1} onKeyDown={event => {
+                            if (event.key === "Enter" && !event.shiftKey && !event.nativeEvent.isComposing) { event.preventDefault(); if (input.trim() && !busy) void send(); }
+                        }} />
+                        {(!input.trim() || voiceEnabled) && <button className={styles.voice} type="button" aria-pressed={voiceEnabled} aria-label={voiceEnabled ? t("endVoiceAria") : t("talkWith")} title={t("talkWith")} onClick={toggleVoice}><VoiceWaveGlyph size={22} color="#E3C07C" active={voiceEnabled} /><span>{voiceEnabled ? c.stopVoice : c.voice}</span></button>}
+                        {!!input.trim() && <button className={styles.send} type="submit" disabled={!input.trim() || busy} aria-label={c.send}><ArrowUp size={18} /></button>}
+                    </form>
+                    <footer className={styles.footer}><span>{c.verify}</span><LocaleLink href="/contact" onClick={handleClose}>{c.person}</LocaleLink></footer>
                 </div>
             </div>
-
-            <div className="mt-4 w-full max-w-[340px] flex flex-col gap-1">
-                <div className="text-[9px] font-semibold uppercase tracking-[0.2em] text-slate/80 px-1 mb-0.5">
-                    Try asking about
+            {menuOpen && <>
+                <button className={styles.menuScrim} aria-label={c.close} onClick={closeMenu} tabIndex={-1} />
+                <div id="grace-menu" ref={menuRef} className={styles.menu} role="region" aria-label={c.menu}>
+                    <button className={styles.newChat} type="button" onClick={handleNewChat} disabled={busy}>＋ {c.newChat}</button>
+                    <nav aria-label={c.account}><h3>{c.account}</h3>
+                        <LocaleLink href="/portal/orders" onClick={handleClose}>{c.orders}<CaretRight size={14} /></LocaleLink>
+                        <LocaleLink href="/request-sample" onClick={handleClose}>{c.samples}<CaretRight size={14} /></LocaleLink>
+                        <button type="button" disabled={busy} onClick={() => { closeMenu(); setOrderListOpen(true); }}>{c.orderList}<CaretRight size={14} /></button>
+                    </nav>
+                    <section className={styles.recent}><h3>{c.conversation}</h3>
+                        {firstQuestion ? <button type="button" onClick={closeMenu}><strong>{firstQuestion}</strong><span>{c.current}</span></button> : <p>{c.noConversation}</p>}
+                        <button type="button" onClick={handleExpand}>{c.workspace}<ArrowsOutSimple size={14} /></button>
+                    </section>
+                    <div className={styles.menuBottom}><GraceCartSummary onNavigate={handleClose} />
+                        <LocaleLink href="/cart" onClick={handleClose}>{c.viewCart}</LocaleLink>
+                        <LocaleLink href="/contact" onClick={handleClose}>{c.person}</LocaleLink>
+                        <div className={styles.policies}><p>{c.disclaimer}</p><LocaleLink href="/privacy" onClick={handleClose}>{c.privacy}</LocaleLink><span aria-hidden="true"> · </span><LocaleLink href="/terms" onClick={handleClose}>{c.terms}</LocaleLink></div>
+                    </div>
                 </div>
-                {QUICK_CHIPS.map((chip) => (
-                    <button
-                        key={chip.label}
-                        onClick={() => onChip(chip.query)}
-                        className="group flex items-center gap-2.5 px-3 py-2 rounded-[3px] text-left cursor-pointer transition-colors hover:bg-obsidian/[0.03]"
-                        style={{ border: "1px solid rgba(212, 197, 169, 0.55)" }}
-                    >
-                        <CaretRight
-                            size={10}
-                            weight="bold"
-                            className="text-muted-gold shrink-0"
-                        />
-                        <chip.icon
-                            size={13}
-                            className="text-slate shrink-0 group-hover:text-obsidian transition-colors"
-                            weight="regular"
-                        />
-                        <span className="text-[12.5px] text-obsidian font-sans leading-snug">
-                            {chip.label}
-                        </span>
-                    </button>
-                ))}
-            </div>
-        </div>
-    );
+            </>}
+        </motion.aside>
+    </>}</AnimatePresence>;
 }

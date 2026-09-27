@@ -49,14 +49,10 @@ describe("responsive shell contract", () => {
         expect(mobileTabs).toContain("animate-grace-pulse-subtle");
         expect(mobileTabs).not.toContain("-mt-6");
         expect(mobileTabs).not.toContain("w-12 h-12");
-        // Desktop-only until agentic follow-along, when the disc must appear
-        // on phones because the PDP hides the tab bar.
-        expect(launcher).toContain('agentic ? "flex" : "hidden xl:flex"');
-        expect(launcher).toContain("xl:flex");
-        expect(launcher).not.toContain("isMobile");
-        expect(launcher).toContain("grace-launcher-agentic-rim");
+        const launcherStyles = read("src/components/grace/GraceLauncher.module.css");
+        expect(launcherStyles).toContain("@media (max-width: 1279px)");
+        expect(launcherStyles).toContain("104px + env(safe-area-inset-bottom)");
         expect(launcher).toContain("data-grace-agentic");
-        expect(globals).toContain("@keyframes grace-launcher-agentic-spin");
         expect(globals).toContain("prefers-reduced-motion: reduce");
     });
 });

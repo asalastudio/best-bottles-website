@@ -65,12 +65,12 @@ function GraceProductTileGrid({
                     {headline}
                 </div>
             )}
-            <div className="grid grid-cols-1 gap-2">
+            <div className="grid grid-cols-3 gap-2">
                 {products.slice(0, 6).map((product) => (
                     <GraceProductCard
                         key={product.slug ?? product.graceSku}
                         product={product}
-                        mode="single"
+                        mode="compact"
                         onAddToShortlist={onAddToShortlist}
                         tierLabel={tierLabel}
                     />

@@ -8,7 +8,7 @@
 export type RailFamily = {
     family: string;
     variantCount: number;
-    imageUrl: string | null;
+    images: Array<{ url: string; kind: "editorial" | "product" }>;
 };
 
 export type RailSession = {
