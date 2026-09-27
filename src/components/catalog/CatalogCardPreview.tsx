@@ -13,6 +13,7 @@ import { resolveCatalogCardVisual } from "@/lib/products/catalog-card-visual";
 import type { ProductCardVariantPreview } from "@/lib/products/product-card-variant-previews";
 import { getReconciledLocalSkuImage, isReconciliationSku, isReconciledLocalSkuAssetUrl } from "@/lib/products/reconciled-sku-images";
 import { isAssembledOneMlVialImage, isOneMlVialGroup, oneMlVialApplicator } from "@/lib/products/one-ml-vial-applicators";
+import { getBlueHalfDramVialImage, isBlueHalfDramVialImage } from "@/lib/products/pdp-sku-image-fallback";
 
 type Props = {
     title: string;
@@ -45,7 +46,7 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
     const assembly = (variant: ProductCardVariantPreview) => {
         const plate = assemblyPlates?.plates[skuOf(variant) ?? ""];
         const vialImage = oneMlVialApplicator(skuOf(variant))?.image;
-        return (vialImage ? [vialImage] : [plate?.thumb, getReconciledLocalSkuImage(skuOf(variant)), variant.imageUrl]).find((url) => url && !failed.has(url));
+        return (vialImage ? [vialImage] : [getBlueHalfDramVialImage(skuOf(variant)), plate?.thumb, getReconciledLocalSkuImage(skuOf(variant)), variant.imageUrl]).find((url) => url && !failed.has(url));
     };
     const primaryPlate = variants[0] ? assemblyPlates?.plates[skuOf(variants[0]) ?? ""] : null;
     const primaryLocal = !isOneMlVialGroup(slug) && !catalogHero && !primaryPlate?.thumb ? getReconciledLocalSkuImage(skuOf(variants[0])) : null;
@@ -60,14 +61,14 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
     // cards show plates already, so the picked cap's full plate simply replaces it.
     const heroSwap = catalogHero && selected ? capSwapFraming(catalogHero.url) : null;
     const heroSwapUrl = heroSwap ? capSwapPlateUrl(heroSwap, selectedPlate) : null;
-    const selectedExactPhoto = selected && isReconciliationSku(skuOf(selected))
-        ? [getReconciledLocalSkuImage(skuOf(selected)), selected.imageUrl].find((url) => url && !failed.has(url))
+    const selectedExactPhoto = selected && (isReconciliationSku(skuOf(selected)) || getBlueHalfDramVialImage(skuOf(selected)))
+        ? [getBlueHalfDramVialImage(skuOf(selected)), getReconciledLocalSkuImage(skuOf(selected)), selected.imageUrl].find((url) => url && !failed.has(url))
         : null;
     const selectedVialImage = oneMlVialApplicator(skuOf(selected))?.image;
     const swapUrl = catalogHero
         ? undefined
         : selected
-            ? (selectedVialImage ? [selectedVialImage] : [selectedPlate?.image, getReconciledLocalSkuImage(skuOf(selected)), selected.imageUrl, assembly(selected)]).find((url) => url && !failed.has(url))
+            ? (selectedVialImage ? [selectedVialImage] : [getBlueHalfDramVialImage(skuOf(selected)), selectedPlate?.image, getReconciledLocalSkuImage(skuOf(selected)), selected.imageUrl, assembly(selected)]).find((url) => url && !failed.has(url))
             : undefined;
     const displayImage = selectedVialImage && failed.has(selectedVialImage) ? null : swapUrl ?? visual.url;
     const fail = (url: string) => setFailed((current) => new Set(current).add(url));
@@ -115,7 +116,9 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
             data-bb-family={family ?? undefined} data-bb-product-group-slug={slug}
             data-bb-website-sku={skuOf(selected) ?? undefined}>
             <Image key={selectedExactPhoto} src={selectedExactPhoto} alt={`${title}, ${selected.label}`}
-                fill className="object-contain" style={isReconciledLocalSkuAssetUrl(selectedExactPhoto) ? { mixBlendMode: "multiply" } : undefined}
+                fill className="object-contain" style={isBlueHalfDramVialImage(selectedExactPhoto)
+                    ? { mixBlendMode: "multiply", transform: "translateY(22%) scale(0.41)" }
+                    : isReconciledLocalSkuAssetUrl(selectedExactPhoto) ? { mixBlendMode: "multiply" } : undefined}
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 onError={() => fail(selectedExactPhoto)} />
         </LocaleLink>;

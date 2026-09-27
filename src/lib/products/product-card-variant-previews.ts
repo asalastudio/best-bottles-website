@@ -4,6 +4,7 @@ import { glassSwatchImage } from "./glass-swatches";
 import { isLegacyBestBottlesImageUrl } from "../productVariantIntegrity";
 import { catalogSearchScore } from "../catalogFilters";
 import { oneMlVialApplicator } from "./one-ml-vial-applicators";
+import { getBlueHalfDramVialImage } from "./pdp-sku-image-fallback";
 
 export type ProductCardVariantPreview = {
     id: string;
@@ -446,6 +447,7 @@ export function getProductCardVariantPreviews(
         if (!label) continue;
 
         const imageUrl = oneMlVialApplicator(variant.websiteSku)?.image
+            ?? getBlueHalfDramVialImage(variant.websiteSku)
             ?? productImageUrl(variant.imageUrl) ?? productImageUrl(variant.imageUrlCapOff);
         const finish = resolveCapFinish(variant);
         const optionType = optionTypeFor(variant, options.groupColor);

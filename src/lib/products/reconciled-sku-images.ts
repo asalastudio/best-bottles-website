@@ -185,5 +185,7 @@ export function isReconciliationSku(websiteSku: string | null | undefined): bool
 }
 
 export function isReconciledLocalSkuAssetUrl(url: string | null | undefined): boolean {
-  return Boolean(url?.startsWith("/images/pdp/reconciled-2026-09-27/") || url?.startsWith("/images/pdp/assembled-vials-2026-09-27/"));
+  return Boolean(url?.startsWith("/images/pdp/reconciled-2026-09-27/")
+    || url?.startsWith("/images/pdp/assembled-vials-2026-09-27/")
+    || url?.startsWith("/images/pdp/blue-half-dram-vial-2026-09-27/"));
 }
