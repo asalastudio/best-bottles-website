@@ -253,13 +253,20 @@ export function kitsFromRegister(payload: RegisterStagePayload, options: { canva
     return kits;
 }
 
-/**
- * The kit as a stage without an EXPLODED view draws it (Build Your Bottle):
- * a seated insert stays, its full plug (an EXPLODED-only layer) is dropped, so
- * the two never paint on top of each other in an assembled preview.
- */
-export function assembledKit<T extends { parts: Array<{ views?: StageViewName[] }> }>(kit: T): T {
-    return { ...kit, parts: kit.parts.filter((part) => !part.views || part.views.includes("capon")) };
+/** The Builder draws one visible insert per roller; PDP stage views retain their full kit. */
+export function assembledKit<T extends { parts: Array<{ slot: KitSlot; componentId: string | null; views?: StageViewName[] }> }>(kit: T): T {
+    const baseRollers = new Set(kit.parts
+        .filter((part) => part.slot === "roller" && part.componentId && !part.views)
+        .map((part) => part.componentId));
+    return {
+        ...kit,
+        parts: kit.parts.filter((part) => {
+            if (part.views && !part.views.includes("capon")) return false;
+            // The original short insert already shows the seated roller. An additional
+            // seated photo of the same component paints its long plug through the glass.
+            return part.slot !== "roller" || !part.views || !baseRollers.has(part.componentId);
+        }),
+    };
 }
 
 /** The SVG/CSS transform that puts a boxed part on the canvas; legacy full-canvas parts need none. */

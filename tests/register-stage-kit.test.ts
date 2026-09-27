@@ -139,6 +139,24 @@ describe("kitFromRegister", () => {
         expect(exploded.parts.find((part) => part.slot === "cap")!.dyPct).toBeLessThan(exploded.parts.find((part) => part.slot === "roller")!.dyPct);
     });
 
+    it("uses the original flat-bottom roller in Builder when extra seated layers share its component", () => {
+        const source = ROLLER.layers[0];
+        const extraSeated = [
+            { ...source, url: "https://blob/register/components/roller-seated-1.png", usage: "seated" as const, height: 330 },
+            { ...source, url: "https://blob/register/components/roller-seated-2.png", usage: "seated" as const, height: 350 },
+        ];
+        const exploded = { ...source, url: "https://blob/register/components/roller-exploded.png", usage: "exploded" as const };
+        const payload = {
+            ...PAYLOAD,
+            components: { ...PAYLOAD.components, [ROLLER.componentId]: { ...ROLLER, layers: [source, ...extraSeated, exploded] } },
+        };
+        const registered = kitFromRegister("GB-CYL-CLR-9ML-MRL-BKDT", payload)!;
+        expect(registered.parts.filter((part) => part.slot === "roller")).toHaveLength(4);
+        expect(assembledKit(registered).parts.filter((part) => part.slot === "roller").map((part) => part.image.url)).toEqual([source.url]);
+        expect(assembledKit(registered).parts.find((part) => part.slot === "cap")).toBeDefined();
+        expect(registered.parts.filter((part) => part.slot === "roller")).toHaveLength(4);
+    });
+
     it("draws nothing for a SKU the register cannot render, and keys the rest by both SKUs", () => {
         expect(kitFromRegister("GB-CYL-CLR-9ML-MRL-TUR", PAYLOAD)).toBeNull();
         expect(kitFromRegister("GB-CYL-CLR-9ML-MRL-GHOST", PAYLOAD)).toBeNull();
