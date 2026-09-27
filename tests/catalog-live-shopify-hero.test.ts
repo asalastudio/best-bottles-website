@@ -47,6 +47,7 @@ describe("resolveLiveCatalogCardHero", () => {
     it("wires the catalog grid through the live-hero resolver", () => {
         const source = readFileSync("src/app/catalog/CatalogClient.tsx", "utf8");
         expect(source).toContain("resolveLiveCatalogCardHero");
-        expect(source).toContain("catalogHero={displayHero}");
+        expect(source).toContain("catalogHero={assembledVialImage ? null : displayHero}");
+        expect(source).toContain("imageUrl={assembledVialImage ?? defaultImageUrl}");
     });
 });

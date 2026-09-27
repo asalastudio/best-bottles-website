@@ -62,7 +62,7 @@ describe("PDP stage mode capabilities", () => {
         expect(productDetailSource).toContain("const publishedKitQuery = useQuery(");
         expect(productDetailSource).toContain("?? publishedKitQuery");
         expect(productDetailSource).toContain("hasReleasedKit: Boolean(selectedKit?.parts?.length)");
-        expect(productDetailSource).toContain("kitQuery={selectedKitQuery}");
+        expect(productDetailSource).toContain("kitQuery={oneMlVialApplicator(selectedVariant?.websiteSku) ? undefined : selectedKitQuery}");
         expect(productDetailSource).toContain("selectedGraceSku={selectedVariant?.graceSku ?? null}");
     });
 
