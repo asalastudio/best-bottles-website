@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { STAGE_DATUMS, assembledKit, datumFromPlate, kitFromRegister, kitsFromRegister, partBoxTransform, type RegisterStagePayload } from "@/lib/register/stage-kit";
+import { STAGE_DATUMS, assembledKit, datumFromPlate, kitFromRegister, kitsFromRegister, partBoxTransform, reconcileCylinder9Kit, type RegisterStagePayload } from "@/lib/register/stage-kit";
 import { closurePart, fitmentPart, partCrop, stageLayout } from "@/lib/products/pdp-redesign/stage";
 import { layerCropStyleForPart, layerTransform } from "@/lib/bottle-builder/preview-frame";
+import { ELEGANT_PHOTO_BODIES } from "@/lib/register/elegant-photo-bodies";
 
 /**
  * The 9 mL Cylinder pilot as the register holds it on dev (Phase 3 measurements):
@@ -138,6 +139,24 @@ describe("kitFromRegister", () => {
         expect(exploded.parts.find((part) => part.slot === "cap")!.dyPct).toBeLessThan(exploded.parts.find((part) => part.slot === "roller")!.dyPct);
     });
 
+    it("uses the original flat-bottom roller in Builder when extra seated layers share its component", () => {
+        const source = ROLLER.layers[0];
+        const extraSeated = [
+            { ...source, url: "https://blob/register/components/roller-seated-1.png", usage: "seated" as const, height: 330 },
+            { ...source, url: "https://blob/register/components/roller-seated-2.png", usage: "seated" as const, height: 350 },
+        ];
+        const exploded = { ...source, url: "https://blob/register/components/roller-exploded.png", usage: "exploded" as const };
+        const payload = {
+            ...PAYLOAD,
+            components: { ...PAYLOAD.components, [ROLLER.componentId]: { ...ROLLER, layers: [source, ...extraSeated, exploded] } },
+        };
+        const registered = kitFromRegister("GB-CYL-CLR-9ML-MRL-BKDT", payload)!;
+        expect(registered.parts.filter((part) => part.slot === "roller")).toHaveLength(4);
+        expect(assembledKit(registered).parts.filter((part) => part.slot === "roller").map((part) => part.image.url)).toEqual([source.url]);
+        expect(assembledKit(registered).parts.find((part) => part.slot === "cap")).toBeDefined();
+        expect(registered.parts.filter((part) => part.slot === "roller")).toHaveLength(4);
+    });
+
     it("draws nothing for a SKU the register cannot render, and keys the rest by both SKUs", () => {
         expect(kitFromRegister("GB-CYL-CLR-9ML-MRL-TUR", PAYLOAD)).toBeNull();
         expect(kitFromRegister("GB-CYL-CLR-9ML-MRL-GHOST", PAYLOAD)).toBeNull();
@@ -157,6 +176,111 @@ describe("kitFromRegister", () => {
         expect(tall.baselineY - tall.seatY).toBeLessThanOrEqual(800);
         const other = kitFromRegister("GB-CYL-CLR-9ML-MRL-BKDT", { ...PAYLOAD, assemblies: { "GB-CYL-CLR-9ML-MRL-BKDT": { ...PAYLOAD.assemblies["GB-CYL-CLR-9ML-MRL-BKDT"]!, bodyId: "elsewhere" } } })!;
         expect(other.anchors.seatY).toBe(datum.seatY);
+    });
+});
+
+describe("9 mL Cylinder promoted-layer reconciliation", () => {
+    const registered = kitFromRegister("GB-CYL-CLR-9ML-MRL-BKDT", PAYLOAD)!;
+    const published = (name: string, hash: string) => `https://blob/register/components/17-415/example/${name}-${hash}.png`;
+    const roller = registered.parts.find((part) => part.slot === "roller")!;
+    const cap = registered.parts.find((part) => part.slot === "cap")!;
+
+    it("retains the measured roller and its short silver-ball correction, but removes full-bottle crops", () => {
+        const measured = { ...roller, image: { ...roller.image, url: published("roller", "d64975a48a1c447a1ab6f2a68a1c5252cf5a56e6d07c41d3ab6b3c17e3f94bba") } };
+        const correction = { ...roller, zOrder: 1, views: ["sidecar", "capon"] as ["sidecar", "capon"], image: { ...roller.image, url: published("roller", "4c3c4a5090ce2c419265e57716991288dc02fc0d0d0a0b2d7c2a91dff5921c48") } };
+        const leakedBottle = { ...roller, zOrder: 3, views: ["sidecar", "capon"] as ["sidecar", "capon"], image: { ...roller.image, url: published("roller", "f8cff0279a097bef36eeab798dbe9559ced76c8c0b51baba465e70c52da2d6bf") } };
+        const measuredCap = { ...cap, image: { ...cap.image, url: published("cap", "560f58877ddc937518530400d3d0132b1391758a93a2ae1b5c0378b495968f79") } };
+        const promoted = { ...registered, parts: [measured, correction, registered.parts.find((part) => part.slot === "body")!, leakedBottle, measuredCap] };
+        const fixed = reconcileCylinder9Kit(promoted)!;
+        expect(fixed.register.verifiedPilotLayers).toBe(true);
+        expect(fixed.parts.map((part) => part.image.url)).toEqual([measured.image.url, correction.image.url, PLATE.url, measuredCap.image.url]);
+        expect(assembledKit(fixed).parts.filter((part) => part.slot === "roller").map((part) => part.image.url)).toEqual([measured.image.url, correction.image.url]);
+        expect(reconcileCylinder9Kit({ ...promoted, parts: promoted.parts.filter((part) => part !== correction) })).toBeNull();
+    });
+
+    it("keeps only the source sprayer, collar and overcap, excluding glass-color dip-tube crops", () => {
+        const componentId = "CMP-SPR-BLK-17-415-01";
+        const source = registered.parts.find((part) => part.slot === "body")!;
+        const hardware = [
+            ["sprayer", "60eefa3c2a0fc252aca1a5cbcacb103f7b8fbe9b1f5d0f160d354b271a1113f6"],
+            ["collar", "dff02db6b0e742574fb4ac8bf36e545ce9d3dc34d5933ad7183b652433061b79"],
+            ["overcap", "01b4b723b9b48da17ac68c109d2c0228c78c38cb165ca8b32a47dbaa6a873387"],
+        ] as const;
+        const parts = hardware.map(([slot, hash], index) => ({ ...roller, slot, componentId, zOrder: index + 1, image: { ...roller.image, url: published(slot, hash) } }));
+        const leakedGlass = { ...roller, slot: "diptube" as const, componentId, image: { ...roller.image, url: published("diptube", "c5c0c53f2e1d9a9f058db1f418e000000000000000000000000000000000000") } };
+        const promoted = { ...registered, register: { ...registered.register, componentIds: [componentId] }, parts: [source, leakedGlass, ...parts] };
+        const fixed = reconcileCylinder9Kit(promoted)!;
+        expect(fixed.parts.map((part) => part.slot)).toEqual(["body", "sprayer", "collar", "overcap"]);
+        expect(fixed.parts.find((part) => part.slot === "body")!.image.url).toBe(PLATE.url);
+    });
+});
+
+describe("Elegant photographed body stand-ins", () => {
+    it("keeps one photo body aligned across cap swaps while preserving register components", () => {
+        const plateKey = "elegant-60ml-18-415|Clear";
+        const plate = { ...PLATE, plateKey, bodyId: "elegant-60ml-18-415", url: "https://blob/register/unfinished-elegant.png" };
+        const first = { ...PAYLOAD.assemblies["GB-CYL-CLR-9ML-MRL-BKDT"]!, bodyId: plate.bodyId, plateKey, graceSku: "GB-ELG-CLR-60ML-SPR-MGLD" };
+        const second = { ...first, graceSku: "GB-ELG-CLR-60ML-SPR-SSLV", websiteSku: "GBElg60SpryShnSl" };
+        const payload: RegisterStagePayload = {
+            ...PAYLOAD,
+            plates: { [plateKey]: plate },
+            bodies: { [plate.bodyId]: { bodyId: plate.bodyId, family: "Elegant", capacityMl: 60, neck: "18-415", dims: { heightBareMm: 86, diameterMm: 54, widthMm: 54 } } },
+            assemblies: { [first.graceSku]: first, [second.graceSku]: second },
+        };
+        const a = kitFromRegister(first.graceSku, payload)!;
+        const b = kitFromRegister(second.graceSku, payload)!;
+        const bodyA = a.parts.find((part) => part.slot === "body")!;
+        const bodyB = b.parts.find((part) => part.slot === "body")!;
+        expect(bodyA.image.url).toBe(ELEGANT_PHOTO_BODIES[plateKey].url);
+        expect(bodyA.image.url).not.toBe(plate.url);
+        expect(bodyA.box).toEqual(bodyB.box);
+        expect(bodyA.bounds).toEqual(bodyB.bounds);
+        expect(a.parts.find((part) => part.slot === "cap")?.image.url).toBe(CAP.layers[0].url);
+        expect(bodyA.box.y + ELEGANT_PHOTO_BODIES[plateKey].bounds.top * (bodyA.box.width / 1000)).toBeCloseTo(a.anchors.seatY, 1);
+        expect(bodyA.box.y + ELEGANT_PHOTO_BODIES[plateKey].bounds.bottom * (bodyA.box.width / 1000)).toBeCloseTo(a.anchors.baselineY, 1);
+    });
+
+    it("omits glass-wall artifacts from wide tube crops but keeps a clean tube in assembled views", () => {
+        const plateKey = "elegant-60ml-18-415|Clear";
+        const plate = { ...PLATE, plateKey, bodyId: "elegant-60ml-18-415" };
+        const wide = { slot: "diptube" as const, z: "front" as const, explodeIndex: 1, url: "https://blob/unfinished-wall.png", width: 1136, height: 1700, pxPerMm: 27.2142, anchor: { x: 568, y: 100 }, approved: true };
+        const narrow = { ...wide, url: "https://blob/clean-tube.png", width: 60, usage: "exploded" as const };
+        const sprayer = { componentId: "CMP-ELG-SPR", type: "sprayer", approved: true, layers: [wide, narrow] };
+        const sku = "GB-ELG-CLR-60ML-SPR";
+        const payload: RegisterStagePayload = {
+            ...PAYLOAD,
+            plates: { [plateKey]: plate },
+            components: { [sprayer.componentId]: sprayer },
+            bodies: { [plate.bodyId]: { bodyId: plate.bodyId, family: "Elegant", capacityMl: 60, neck: "18-415", dims: { heightBareMm: 86, diameterMm: 54, widthMm: 54 } } },
+            assemblies: { [sku]: { graceSku: sku, websiteSku: null, bodyId: plate.bodyId, plateKey, glass: "Clear", neck: "18-415", parts: [{ role: "sprayer", componentId: sprayer.componentId }], renderable: true, reason: null } },
+        };
+        const kit = kitFromRegister(sku, payload)!;
+        expect(kit.parts.filter((part) => part.slot === "diptube").map((part) => part.image.url)).toEqual([narrow.url]);
+        expect(assembledKit(kit).parts.filter((part) => part.slot === "diptube")).toHaveLength(1);
+    });
+
+    it("does not stack promoted duplicate hardware over the photographed Elegant body", () => {
+        const plateKey = "elegant-60ml-18-415|Clear";
+        const plate = { ...PLATE, plateKey, bodyId: "elegant-60ml-18-415" };
+        const hardware = { slot: "sprayer" as const, z: "front" as const, explodeIndex: 1, url: "https://blob/photo-sprayer.png", width: 226, height: 398, pxPerMm: 9, anchor: { x: 113, y: 231 }, approved: true };
+        const cap = { ...hardware, slot: "overcap" as const, url: "https://blob/photo-cap.png", width: 351, height: 599 };
+        const componentId = "CMP-ELG-SPR";
+        const sku = "GB-ELG-CLR-60ML-SPR";
+        const payload: RegisterStagePayload = {
+            ...PAYLOAD,
+            plates: { [plateKey]: plate },
+            components: { [componentId]: { componentId, type: "sprayer", approved: true, layers: [
+                hardware, cap,
+                { ...hardware, url: "https://blob/promoted-sprayer.png", width: 578, height: 1025, pxPerMm: 25 },
+                { ...cap, url: "https://blob/promoted-cap.png", width: 592, height: 1073, pxPerMm: 25 },
+            ] } },
+            bodies: { [plate.bodyId]: { bodyId: plate.bodyId, family: "Elegant", capacityMl: 60, neck: "18-415", dims: { heightBareMm: 86, diameterMm: 54, widthMm: 54 } } },
+            assemblies: { [sku]: { graceSku: sku, websiteSku: null, bodyId: plate.bodyId, plateKey, glass: "Clear", neck: "18-415", parts: [{ role: "sprayer", componentId }], renderable: true, reason: null } },
+        };
+        const kit = kitFromRegister(sku, payload)!;
+        expect(kit.parts.filter((part) => part.slot === "sprayer").map((part) => part.image.url)).toEqual([hardware.url]);
+        expect(kit.parts.filter((part) => part.slot === "overcap").map((part) => part.image.url)).toEqual([cap.url]);
+        expect(kit.parts.find((part) => part.slot === "body")?.image.url).toBe(ELEGANT_PHOTO_BODIES[plateKey].url);
     });
 });
 

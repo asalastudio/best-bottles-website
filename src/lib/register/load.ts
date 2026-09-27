@@ -9,7 +9,7 @@
  */
 import type { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../convex/_generated/api";
-import { kitFromRegister, kitsFromRegister, type RegisterKit, type RegisterStagePayload } from "./stage-kit";
+import { kitFromRegister, kitsFromRegister, reconcileCylinder9Kit, type RegisterKit, type RegisterStagePayload } from "./stage-kit";
 
 const CHUNK = 50;
 
@@ -59,7 +59,10 @@ export async function loadRegisterKits(convex: ConvexHttpClient, graceSkus: Read
     for (let index = 0; index < wanted.length; index += CHUNK) {
         try {
             const payload = await convex.query(api.registerStage.forSkus, { graceSkus: wanted.slice(index, index + CHUNK) }) as RegisterStagePayload;
-            Object.assign(kits, kitsFromRegister(payload));
+            for (const [sku, candidate] of Object.entries(kitsFromRegister(payload))) {
+                const reconciled = reconcileCylinder9Kit(candidate);
+                if (reconciled) kits[sku] = reconciled;
+            }
         } catch (error) {
             // The register is additive: without it the stages draw the legacy kits.
             if (process.env.NODE_ENV !== "production") console.warn("[register] stage lookup unavailable; drawing legacy kits", error instanceof Error ? error.message : error);

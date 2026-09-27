@@ -18,6 +18,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CatalogProductGrid from "@/components/catalog/CatalogProductGrid";
 import { useGrace } from "@/components/useGrace";
 import { getCatalogHero, getCatalogHeroProductHref, resolveLiveCatalogCardHero, type CatalogHero } from "@/lib/products/catalog-heroes";
+import { isOneMlVialGroup, oneMlVialApplicator } from "@/lib/products/one-ml-vial-applicators";
 import { isOptimizableImageUrl } from "@/lib/products/optimizable-image";
 import CatalogCardPreview from "@/components/catalog/CatalogCardPreview";
 import CatalogCardPurchase from "@/components/catalog/CatalogCardPurchase";
@@ -277,6 +278,7 @@ function ProductGroupCard({
     // Each cap dot sells its own SKU; a dot with no sellable row never swaps the card.
     const capPurchases = catalogCardPurchaseOptions(variantSources, previews, customerDisplayName);
     const defaultSku = defaultPurchase?.websiteSku ?? defaultPurchase?.graceSku ?? picturedSku;
+    const assembledVialImage = isOneMlVialGroup(group.slug) ? oneMlVialApplicator(defaultSku)?.image ?? null : null;
     const defaultCap = previews.find((variant) => defaultSku && (variant.websiteSku === defaultSku || variant.graceSku === defaultSku)) ?? previews[0] ?? null;
     const [pickedCapId, setPickedCapId] = useState<string | null>(null);
     const pickedCap = previews.find((variant) => variant.id === pickedCapId && variant.id !== defaultCap?.id && capPurchases[variant.id]) ?? null;
@@ -306,9 +308,9 @@ function ProductGroupCard({
         >
             <CatalogCardPreview
                 title={customerDisplayName}
-                catalogHero={displayHero}
-                imageUrl={defaultImageUrl}
-                heroHoverImageUrl={group.heroHoverImageUrl}
+                catalogHero={assembledVialImage ? null : displayHero}
+                imageUrl={assembledVialImage ?? defaultImageUrl}
+                heroHoverImageUrl={assembledVialImage ? null : group.heroHoverImageUrl}
                 href={pickedCap ? productCardVariantHref(href, pickedCap) : href}
                 variants={previews}
                 family={group.family}

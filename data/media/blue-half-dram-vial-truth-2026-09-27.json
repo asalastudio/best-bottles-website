@@ -1,0 +1,29 @@
+{
+  "bottle": "Blue 5/8-dram vial",
+  "neckThreadSize": "13-425",
+  "legacyCapacityMl": 2,
+  "heightWithCapMm": 29,
+  "heightWithoutCapMm": 27,
+  "diameterMm": 15,
+  "sourceNote": "Both original product pages specify the same bottle dimensions and a short cap pictured beside the uncapped vial. The imported black catalog row currently says 3 mL; reconcile that product data separately from imagery.",
+  "options": [
+    {
+      "websiteSku": "GBVBlu1o9BlackCapSht",
+      "capColor": "Black",
+      "legacyProductUrl": "https://www.bestbottles.com/product/Vial-design-half-dram-blue-glass-black-short-cap",
+      "sourceImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBVBlu1o9BlackCapSht.gif",
+      "localImageUrl": "/images/pdp/blue-half-dram-vial-2026-09-27/GBVBlu1o9BlackCapSht.png",
+      "localSha256": "4ed61c67863bb6be86842dd3c5104139e8a4a77439d214a68a7cfaf6f4ad5691",
+      "commerceStatus": "imported; Shopify Admin SKU GB-VIA-BLU-3ML-BLK-S resolves to variant 53343699173668 at $1.08; capacity disagrees with original page"
+    },
+    {
+      "websiteSku": "GBVBlu1o9WhtCapSht",
+      "capColor": "White",
+      "legacyProductUrl": "https://www.bestbottles.com/product/Vial-design-half-dram-blue-glass-white-short-cap",
+      "sourceImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBVBlu1o9WhtCapSht.gif",
+      "localImageUrl": "/images/pdp/blue-half-dram-vial-2026-09-27/GBVBlu1o9WhtCapSht.png",
+      "localSha256": "c0ea749b23270483642be0f5846c51ba9a3475d1882c860f4be5f47f949c62be",
+      "commerceStatus": "absent from imported catalog; read-only Shopify Admin SKU searches for GBVBlu1o9WhtCapSht and GB-VIA-BLU-3ML-WHT-S returned no variants on 2026-09-27; image prepared only"
+    }
+  ]
+}
