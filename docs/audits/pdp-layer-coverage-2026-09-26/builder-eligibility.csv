@@ -1,4 +1,4 @@
-graceSku,websiteSku,category,family,builderCandidate,reviewedTransparentBody,matrixResolution,queueReason
+graceSku,websiteSku,category,family,builderCandidate,matchingReviewedTransparentBody,matrixResolution,queueReason
 "AB-ALU-CLR-65ML-LPM-BLK","Alu65mlLotionPumpBlack","Aluminum Bottle","Aluminum Bottle","false","false","bottle_listed","own parts unresolved: own class aluminum-bottle: no components ruled compatible"
 "AB-CYL-WHT-65ML-LPM-WHT","Alu65mlLotionPumpWhite","Aluminum Bottle","Aluminum Bottle","false","false","bottle_listed","own parts unresolved: own class aluminum-bottle: no components ruled compatible"
 "AB-ALU-CLR-100ML-SPR-BLK","Alu100mlSprayBlack","Aluminum Bottle","Aluminum Bottle","false","false","bottle_listed","own parts unresolved: own class aluminum-bottle: no components ruled compatible"

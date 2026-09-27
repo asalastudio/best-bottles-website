@@ -121,6 +121,7 @@ export default function PdpBuyBox({
                 <div className={styles.rollerToggle} role="group" aria-label="Roller ball" data-testid="pdp-roller-toggle">
                     {rollers.map((roller) => {
                         const price = rollerUnitPrice(roller.id);
+                        const rollerImage = rollerImages[roller.id];
                         return (
                             <button
                                 key={roller.id}
@@ -130,7 +131,7 @@ export default function PdpBuyBox({
                                 onClick={() => onRoller(roller.id)}
                                 data-roller={roller.id}
                             >
-                                {rollerImages[roller.id] && <Image className={styles.rollerImage} src={rollerImages[roller.id]} alt="" width={44} height={44} loading="lazy" />}
+                                {rollerImage && <Image className={styles.rollerImage} src={rollerImage} alt="" width={44} height={44} loading="lazy" />}
                                 <span>{roller.label}</span>
                                 <span className={styles.rollerPrice}>{price != null ? `${formatPrice(price)}/pc` : ""}</span>
                             </button>

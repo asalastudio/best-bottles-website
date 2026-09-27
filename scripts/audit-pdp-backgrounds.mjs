@@ -21,11 +21,12 @@ const headers = lines.shift().split(",");
 const rows = lines.map((line) => Object.fromEntries(headers.map((key, i) => [key, parseLine(line)[i] ?? ""])))
   .filter((row) => !process.argv.includes("--glass-only") || row.category === "Glass Bottle")
   .slice(0, limit || undefined);
+const rowSku = (row) => row.websiteSku || row.graceSku;
 const client = new ConvexHttpClient(endpoint);
 const plateBySku = {};
 for (let i = 0; i < rows.length; i += 50) {
   const batch = rows.slice(i, i + 50);
-  const result = await client.query(api.productPlates.forSkus, { skus: batch.map((row) => row.websiteSku) });
+  const result = await client.query(api.productPlates.forSkus, { skus: batch.map(rowSku).filter(Boolean) });
   Object.assign(plateBySku, result.plates);
 }
 
@@ -52,7 +53,7 @@ async function probe(url) {
 const results = new Array(rows.length); let next = 0;
 await Promise.all(Array.from({ length: 8 }, async () => {
   while (next < rows.length) {
-    const i = next++; const row = rows[i]; const plate = plateBySku[row.websiteSku];
+    const i = next++; const row = rows[i]; const plate = plateBySku[rowSku(row)];
     const [catalog, exactPlate, capOffPlate] = await Promise.all([
       probe(row.imageUrl), probe(plate?.image), probe(plate?.imageCapOff),
     ]);

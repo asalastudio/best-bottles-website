@@ -19,7 +19,8 @@ const headers = lines.shift()!.split(",");
 const values = (line: string) => [...line.matchAll(/"((?:[^"]|"")*)"|([^,]+)/g)]
     .map(match => (match[1] ?? match[2] ?? "").replaceAll('""', '"'));
 const queue = lines.map(line => Object.fromEntries(headers.map((key, index) => [key, values(line)[index] ?? ""])));
-const targetSkus = new Set(queue.map(row => row.websiteSku));
+const rowSku = (row: Record<string, string>) => row.websiteSku || row.graceSku;
+const targetSkus = new Set(queue.map(rowSku).filter(Boolean));
 const convex = new ConvexHttpClient(url);
 let cursor: string | null = null;
 const products: Array<{ websiteSku?: string | null; graceSku?: string | null }> = [];
@@ -32,28 +33,28 @@ do {
     cursor = page.continueCursor;
 } while (true);
 const bySku = new Map<string, typeof products>();
-for (const product of products) for (const sku of [product.websiteSku, product.graceSku]) {
+for (const product of products) for (const sku of new Set([product.websiteSku, product.graceSku])) {
     if (sku) bySku.set(sku, [...(bySku.get(sku) ?? []), product]);
 }
 const findings = new Map<string, { candidate: boolean; reviewedBody: boolean; reason: string }>();
 for (const family of [...new Set(queue.map(row => row.family))].filter(Boolean)) {
     const data = await convex.query(api.matrix.getFamilyRows, { family });
     if (data.truncated) throw Error(`Matrix truncated: ${family}`);
-    const raw = data.rows.filter(row => targetSkus.has(row.websiteSku ?? ""));
+    const raw = data.rows.filter(row => targetSkus.has(row.websiteSku || row.graceSku || ""));
     const rows = await resolveListedComponents(raw, async sku => {
         const found = bySku.get(sku) ?? [];
         return found.length === 1 ? found[0] as never : null;
     });
-    for (const row of rows) findings.set(row.websiteSku!, {
+    for (const row of rows) findings.set(row.websiteSku || row.graceSku || "", {
         candidate: isBuilderCandidate(row),
         reviewedBody: Boolean(reviewedBodyImage(row)),
         reason: row.resolution,
     });
 }
-const columns = ["graceSku", "websiteSku", "category", "family", "builderCandidate", "reviewedTransparentBody", "matrixResolution", "queueReason"];
+const columns = ["graceSku", "websiteSku", "category", "family", "builderCandidate", "matchingReviewedTransparentBody", "matrixResolution", "queueReason"];
 const csv = (value: unknown) => `"${String(value ?? "").replaceAll('"', '""')}"`;
 writeFileSync(out, columns.join(",") + "\n" + queue.map(row => {
-    const finding = findings.get(row.websiteSku);
+    const finding = findings.get(rowSku(row));
     const values = [row.graceSku, row.websiteSku, row.category, row.family,
         finding?.candidate ?? false, finding?.reviewedBody ?? false, finding?.reason ?? "not in matrix", row.registerReason];
     return values.map(csv).join(",");
