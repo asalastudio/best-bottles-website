@@ -147,7 +147,7 @@ describe("exploded callouts (render only what the field holds)", () => {
         const rows = callouts(VARIANTS[0], "Black with Dots");
         expect(rows.map((row) => row.key)).toEqual(["cap", "fitment", "neck", "body"]);
         expect(rows[0]).toEqual({ key: "cap", title: "CAP", line1: "Black with Dots", line2: "Fits 17-415" });
-        expect(rows[1]).toEqual({ key: "fitment", title: "FITMENT", line1: "Metal Roller Ball plug", line2: "Press-fit into 17-415 neck" });
+        expect(rows[1]).toEqual({ key: "fitment", title: "FITMENT", line1: "Metal Roller Ball insert", line2: "Press-fit into 17-415 neck" });
         expect(rows[2]).toEqual({ key: "neck", title: "NECK THREAD", line1: "17-415", line2: "17 mm outer Ø · 415 finish" });
         expect(rows[3]).toEqual({ key: "body", title: "BODY", line1: "Cobalt Blue glass · 9 ml (0.3 oz)", line2: "H 70 mm · Ø 20 mm · 30 g" });
     });

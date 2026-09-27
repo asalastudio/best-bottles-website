@@ -346,7 +346,7 @@ export function callouts(variant: ProductVariant | null | undefined, capName: st
     const applicator = clean(variant.applicator);
     if (applicator && applicator !== "N/A" && applicator !== "Cap/Closure") {
         const roller = rollerIdFor(applicator);
-        const line1 = roller ? `${displayApplicatorName(applicator)} plug` : displayApplicatorName(applicator);
+        const line1 = roller ? `${displayApplicatorName(applicator)} insert` : displayApplicatorName(applicator);
         const line2 = neck
             ? roller ? `Press-fit into ${neck} neck` : thread ? `Threads onto ${neck} neck` : `Fits ${neck} neck`
             : null;

@@ -124,6 +124,12 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     const glasses = useMemo(() => glassOptions(group, siblings), [group, siblings]);
     const activeGlass = glasses.find((glass) => glass.active) ?? glasses[0] ?? null;
     const rollerOption = rollers.find((option) => option.id === activeRoller) ?? null;
+    const rollerImages = Object.fromEntries(rollers.flatMap((option) => {
+        const variant = resolveVariant(variants, { roller: option.id, cap: picks.cap });
+        const rollerPart = kitFor(kitsBySku, variant)?.parts.find((part) =>
+            part.slot === "roller" && (!part.views || part.views.includes("exploded")));
+        return rollerPart?.image.url ? [[option.id, rollerPart.image.url]] : [];
+    }));
     const fitment = fitmentLabel(selected);
     const kit = kitFor(kitsBySku, selected);
     const glassBodyKit = useCallback((glassSlug: string): KitLike | null => {
@@ -393,6 +399,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                             selectionName={selectionName}
                             rollers={rollers}
                             activeRoller={activeRoller}
+                            rollerImages={rollerImages}
                             rollerUnitPrice={(id) => unitPriceAt(resolveVariant(variants, { roller: id, cap: picks.cap }), qty)}
                             onRoller={onRoller}
                             tiers={tiers}

@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-09-27T03:13:43.939Z",
+  "endpoint": "https://precise-raccoon-123.convex.cloud",
+  "exportedProducts": 2484,
+  "auditedVariants": 2272,
+  "counts": {
+    "flat-image fallback": 226,
+    "legacy kit": 279,
+    "register kit": 1767
+  },
+  "knownFrostedElegant": {
+    "graceSku": "GB-ELG-FRS-15ML-SPR-MGLD",
+    "websiteSku": "GBElgFrst15SpryGlMatt",
+    "category": "Glass Bottle",
+    "family": "Elegant",
+    "capacityMl": 15,
+    "color": "Frosted",
+    "neckThreadSize": "13-415",
+    "applicator": "Fine Mist Sprayer",
+    "capColor": "Matte Gold",
+    "coverage": "flat-image fallback",
+    "registerReason": "no register assembly",
+    "missingLayers": "",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GBElgFrst15SpryGlMatt.gif?v=1788395870",
+    "productUrl": ""
+  }
+}
