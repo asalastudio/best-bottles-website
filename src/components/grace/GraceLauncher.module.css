@@ -1,0 +1,14 @@
+.launcher { position: fixed; right: max(24px,env(safe-area-inset-right)); bottom: max(24px,env(safe-area-inset-bottom)); z-index: 55; display: flex; gap: 12px; align-items: center; justify-content: center; min-width: 52px; height: 56px; padding: 0 17px; border-radius: 30px; border: 1px solid #d9cdb9; background: #faf9f7; color: #1c1c1e; box-shadow: 0 8px 24px #0000001f; cursor: pointer; font-family: var(--font-brand-face),sans-serif; }
+.launcher:focus-visible { outline: 2px solid #9a7a48; outline-offset: 4px; }
+.label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .15em; }
+.unread { position: absolute; right: 0; top: -2px; width: 14px; height: 14px; border: 2px solid #faf9f7; background: #c4964a; border-radius: 50%; }
+.collapsed:not(.edge) { width: 56px; padding: 0; }
+.collapsed:not(.edge) .label { display: none; }
+.edge { right: 0; bottom: auto; top: min(calc(46% + 100px), calc(100dvh - 176px)); flex-direction: column; gap: 12px; padding: 14px 10px; height: auto; min-width: 44px; border-radius: 0; background: #1c1c1e; color: #faf9f7; border-color: #1c1c1e; }
+.edge .label { writing-mode: vertical-rl; transform: rotate(180deg); font-size: 9px; letter-spacing: .2em; }
+.tooltip { position: absolute; bottom: calc(100% + 12px); right: 0; width: max-content; max-width: min(280px,calc(100vw - 48px)); background: #1c1c1e; color: white; padding: 10px 14px; font-size: 12px; line-height: 1.5; pointer-events: none; }
+@media (max-width: 1279px) {
+    .launcher, .edge { top: auto; right: 16px; bottom: calc(86px + env(safe-area-inset-bottom)); height: 52px; width: 52px; min-width: 52px; padding: 0; border-radius: 50%; }
+    .launcher .label { display: none; }
+    .edge { bottom: calc(104px + env(safe-area-inset-bottom)); }
+}

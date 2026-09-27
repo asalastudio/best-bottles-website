@@ -1,0 +1,16 @@
+.sidebar { display: flex; flex-direction: column; flex-shrink: 0; width: 256px; padding: 18px 14px; background: var(--color-obsidian); border-right: 1px solid #ffffff14; }
+.topbar { display: flex; flex-shrink: 0; align-items: center; gap: 14px; padding: 0 24px; height: 60px; border-bottom: 1px solid #d4c5a98c; }
+.mobileBrowse, .mobileMenuClose, .scrim { display: none; }
+.closeGrace { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; padding: 0 13px; border: 1px solid #1c1c1e; border-radius: 3px; background: #fff; color: #1c1c1e; font-size: 12px; font-weight: 600; white-space: nowrap; cursor: pointer; }
+.closeGrace:hover { background: #ece6dc; }
+.closeGrace:focus-visible, .mobileBrowse:focus-visible { outline: 2px solid #9a7a48; outline-offset: 3px; }
+@media(max-width:767px) {
+    .sidebar { display: none; }
+    .sidebar[data-open="true"] { display: flex; position: fixed; top: 60px; bottom: 0; left: 0; z-index: 30; width: min(320px, calc(100vw - 40px)); }
+    .topbar { gap: 8px; padding: 0 12px; }
+    .workspaceName { display: none; }
+    .mobileBrowse { display: flex; align-items: center; justify-content: center; gap: 5px; min-height: 44px; font-size: 12px; cursor: pointer; }
+    .mobileMenuClose { display: block; margin: 0 0 8px auto; color: white; font-size: 12px; padding: 8px; cursor: pointer; }
+    .scrim[data-open="true"] { display: block; position: fixed; inset: 60px 0 0; z-index: 29; background: #0006; }
+    .closeGrace { padding: 0 10px; }
+}

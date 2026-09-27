@@ -1,5 +1,9 @@
 "use client";
 
+import { useState } from "react";
+import LocaleLink from "@/components/LocaleLink";
+import { isCheckoutReady } from "@/lib/checkout";
+import { useAppLocale } from "@/i18n/useCopy";
 import type { ProductCard } from "@/components/GraceContext";
 import { useCart } from "@/components/CartProvider";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
@@ -21,6 +25,8 @@ export interface GraceCtaRowProps {
     /** When false, hides the price text (useful when surrounding component already shows price prominently). */
     showPrice?: boolean;
     compact?: boolean;
+    quantity?: number;
+    stacked?: boolean;
 }
 
 export default function GraceCtaRow({
@@ -30,14 +36,22 @@ export default function GraceCtaRow({
     onAddToShortlist,
     showPrice = true,
     compact = false,
+    quantity = 1,
+    stacked = false,
 }: GraceCtaRowProps) {
-    const { addItems } = useCart();
+    const { addItems, items } = useCart();
+    const es = useAppLocale() === "es";
+    const [added, setAdded] = useState(false);
+    const orderable = isCheckoutReady(product) && typeof product.webPrice1pc === "number" && product.webPrice1pc > 0;
+    const inCart = items.find(item => item.graceSku === product.graceSku)?.quantity ?? 0;
     const customerDisplayName = getCustomerFacingProductName({
         variant: product,
         fallbackName: product.itemName,
     }).displayName;
 
     const handleAdd = () => {
+        if (!orderable) return;
+        setAdded(true);
         if (onAddToCart) {
             onAddToCart();
             return;
@@ -47,9 +61,10 @@ export default function GraceCtaRow({
                 graceSku: product.graceSku,
                 websiteSku: product.websiteSku ?? null,
                 itemName: customerDisplayName,
-                quantity: 1,
+                quantity,
                 unitPrice: product.webPrice1pc ?? null,
-                checkoutEligible: Boolean(product.shopifyVariantId),
+                checkoutEligible: product.checkoutEligible ?? Boolean(product.shopifyVariantId),
+                stockStatus: product.stockStatus,
                 shopifyVariantId: product.shopifyVariantId ?? null,
                 family: product.family,
                 capacity: product.capacity,
@@ -67,13 +82,13 @@ export default function GraceCtaRow({
     const price = product.webPrice1pc;
 
     return (
-        <div className={`flex items-center gap-2 ${compact ? "" : "mt-2.5"}`}>
+        <div className={`flex ${stacked ? "flex-col items-stretch" : "items-center"} gap-2 ${compact ? "" : "mt-2.5"}`}>
             {showPrice && price != null && (
                 <div className="flex items-baseline gap-1.5">
                     <span className="font-serif text-[15px] font-medium text-obsidian leading-none">
                         ${price.toFixed(2)}
                     </span>
-                    <span className="text-[10px] text-slate uppercase tracking-wider">/ unit</span>
+                    <span className="text-[10px] text-slate">{es ? "/ ud." : "/ pc"}</span>
                 </div>
             )}
             {tierLabel && (
@@ -99,7 +114,7 @@ export default function GraceCtaRow({
                     + shortlist
                 </button>
             )}
-            <button
+            {orderable ? <button
                 type="button"
                 onClick={handleAdd}
                 className="rounded-[2px] cursor-pointer transition-colors group"
@@ -115,8 +130,8 @@ export default function GraceCtaRow({
                     borderBottom: "2px solid var(--color-muted-gold)",
                 }}
             >
-                Add to cart
-            </button>
+                {quantity > 1 ? (added && inCart ? `${es ? "En carrito" : "In cart"} · ${inCart}` : `${es ? "Agregar" : "Add"} ${quantity}`) : (es ? "Agregar" : "Add to cart")}
+            </button> : <LocaleLink href="/request-quote" className="text-center text-[10px] underline underline-offset-2">{es ? "Consultar" : "Request quote"}</LocaleLink>}
         </div>
     );
 }
