@@ -258,6 +258,30 @@ describe("Elegant photographed body stand-ins", () => {
         expect(kit.parts.filter((part) => part.slot === "diptube").map((part) => part.image.url)).toEqual([narrow.url]);
         expect(assembledKit(kit).parts.filter((part) => part.slot === "diptube")).toHaveLength(1);
     });
+
+    it("does not stack promoted duplicate hardware over the photographed Elegant body", () => {
+        const plateKey = "elegant-60ml-18-415|Clear";
+        const plate = { ...PLATE, plateKey, bodyId: "elegant-60ml-18-415" };
+        const hardware = { slot: "sprayer" as const, z: "front" as const, explodeIndex: 1, url: "https://blob/photo-sprayer.png", width: 226, height: 398, pxPerMm: 9, anchor: { x: 113, y: 231 }, approved: true };
+        const cap = { ...hardware, slot: "overcap" as const, url: "https://blob/photo-cap.png", width: 351, height: 599 };
+        const componentId = "CMP-ELG-SPR";
+        const sku = "GB-ELG-CLR-60ML-SPR";
+        const payload: RegisterStagePayload = {
+            ...PAYLOAD,
+            plates: { [plateKey]: plate },
+            components: { [componentId]: { componentId, type: "sprayer", approved: true, layers: [
+                hardware, cap,
+                { ...hardware, url: "https://blob/promoted-sprayer.png", width: 578, height: 1025, pxPerMm: 25 },
+                { ...cap, url: "https://blob/promoted-cap.png", width: 592, height: 1073, pxPerMm: 25 },
+            ] } },
+            bodies: { [plate.bodyId]: { bodyId: plate.bodyId, family: "Elegant", capacityMl: 60, neck: "18-415", dims: { heightBareMm: 86, diameterMm: 54, widthMm: 54 } } },
+            assemblies: { [sku]: { graceSku: sku, websiteSku: null, bodyId: plate.bodyId, plateKey, glass: "Clear", neck: "18-415", parts: [{ role: "sprayer", componentId }], renderable: true, reason: null } },
+        };
+        const kit = kitFromRegister(sku, payload)!;
+        expect(kit.parts.filter((part) => part.slot === "sprayer").map((part) => part.image.url)).toEqual([hardware.url]);
+        expect(kit.parts.filter((part) => part.slot === "overcap").map((part) => part.image.url)).toEqual([cap.url]);
+        expect(kit.parts.find((part) => part.slot === "body")?.image.url).toBe(ELEGANT_PHOTO_BODIES[plateKey].url);
+    });
 });
 
 describe("the two stages draw register parts through their boxes", () => {

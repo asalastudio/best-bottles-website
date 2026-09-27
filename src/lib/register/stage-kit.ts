@@ -222,6 +222,18 @@ export function kitFromRegister(
         // The clean central tube was previously EXPLODED-only; draw it inside
         // the photographed glass for the assembled PDP and Builder as well.
         if (narrowTubes.length) parts.push({ ...narrowTubes[0], views: undefined });
+        // Promoted component records may include a second render of the same
+        // sprayer, pump, or overcap from a different source and scale. The original
+        // photographed part is first in each slot; stacking later copies over
+        // it creates the doubled metal and displaced outlines seen on Elegant.
+        const seenHardware = new Set<string>();
+        parts = parts.filter((part) => {
+            if (!part.componentId || !["sprayer", "pump", "overcap"].includes(part.slot)) return true;
+            const key = `${part.componentId}:${part.slot}:${part.views?.join(",") ?? "all"}`;
+            if (seenHardware.has(key)) return false;
+            seenHardware.add(key);
+            return true;
+        });
     }
     // EXPLODED offsets are computed over the parts of each view separately, so a seated insert and its full plug never stack against each other.
     const lifts = stackedExplodeOffsets(parts.filter((part) => !part.views || part.views.includes("exploded")));
