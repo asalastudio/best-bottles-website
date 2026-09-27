@@ -10,6 +10,7 @@
  * the Pack of menu opens as a bottom sheet; both are stylesheet concerns.
  */
 import { useEffect, useId, useRef, useState, type CSSProperties, type KeyboardEvent } from "react";
+import Image from "next/image";
 import styles from "./pdp.module.css";
 import { formatVolumeQtyRange, type DisplayVolumeTier } from "@/lib/volumePricing";
 import { CATALOG_QUANTITY_MAX, parseCatalogQuantity } from "@/lib/products/catalog-card-purchase";
@@ -22,6 +23,7 @@ export type PdpBuyBoxProps = {
     selectionName: string;
     rollers: RollerOption[];
     activeRoller: RollerOption["id"] | null;
+    rollerImages: Partial<Record<RollerOption["id"], string>>;
     rollerUnitPrice: (id: RollerOption["id"]) => number | null;
     onRoller: (id: RollerOption["id"]) => void;
     tiers: DisplayVolumeTier[];
@@ -37,7 +39,7 @@ export type PdpBuyBoxProps = {
 };
 
 export default function PdpBuyBox({
-    swatchStyle, selectionName, rollers, activeRoller, rollerUnitPrice, onRoller,
+    swatchStyle, selectionName, rollers, activeRoller, rollerImages, rollerUnitPrice, onRoller,
     tiers, qty, onQty, unitPrice, lineTotal, addState, onAdd, addedQty, caseQuantity, formatPrice,
 }: PdpBuyBoxProps) {
     const baseId = useId();
@@ -114,9 +116,12 @@ export default function PdpBuyBox({
             </div>
 
             {rollers.length > 1 && (
+                <>
+                <p className={styles.rollerIntro}>Choose the roller-ball insert fitted inside this bottle.</p>
                 <div className={styles.rollerToggle} role="group" aria-label="Roller ball" data-testid="pdp-roller-toggle">
                     {rollers.map((roller) => {
                         const price = rollerUnitPrice(roller.id);
+                        const rollerImage = rollerImages[roller.id];
                         return (
                             <button
                                 key={roller.id}
@@ -126,12 +131,14 @@ export default function PdpBuyBox({
                                 onClick={() => onRoller(roller.id)}
                                 data-roller={roller.id}
                             >
+                                {rollerImage && <Image className={styles.rollerImage} src={rollerImage} alt="" width={44} height={44} loading="lazy" />}
                                 <span>{roller.label}</span>
                                 <span className={styles.rollerPrice}>{price != null ? `${formatPrice(price)}/pc` : ""}</span>
                             </button>
                         );
                     })}
                 </div>
+                </>
             )}
 
             <div className={styles.qtyRow}>

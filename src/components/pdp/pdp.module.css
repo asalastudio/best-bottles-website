@@ -7,7 +7,7 @@
 .page {
     --pdp-ink: #1c1c1e;
     --pdp-page: #faf9f7;
-    --pdp-canvas: #f1ede6;
+    --pdp-canvas: #f5f3ef;
     --pdp-card: #fff;
     --pdp-border: #e6dccd;
     --pdp-border-soft: #ece6dc;
@@ -311,6 +311,16 @@
     display: block;
 }
 
+.bareBodyNote {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    color: var(--pdp-secondary);
+    font-size: 11px;
+    text-align: center;
+}
+
 .stageEmpty {
     position: absolute;
     inset: 0;
@@ -562,16 +572,34 @@
     border: 1px solid var(--pdp-border-strong);
 }
 
+.rollerIntro {
+    margin: 0;
+    color: var(--pdp-muted);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
 .rollerButton {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
     gap: 8px;
     padding: 9px 12px;
     font-size: 12px;
-    white-space: nowrap;
-    min-height: 44px;
+    text-align: center;
+    min-height: 98px;
     transition: background-color .2s, color .2s;
+}
+
+.rollerImage {
+    display: block;
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    padding: 3px;
+    background: #f5f3ef;
+    border-radius: 3px;
 }
 
 .rollerButton[aria-pressed="true"] {
