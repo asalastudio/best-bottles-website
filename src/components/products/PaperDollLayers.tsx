@@ -19,6 +19,7 @@ import { displayImageUrl } from "@/lib/products/optimizable-image";
 import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
 import { REMOVABLE_KIT_SLOTS, withDetachedCapOffsets } from "@/lib/products/kit-frame";
 import { pdpStageFrame, pdpStageTransformCss, type PdpStageView } from "@/lib/products/pdp-stage-frame";
+import { hasRegisterBodyPlate } from "@/lib/products/register-stage-bone";
 
 export type KitQueryResult = FunctionReturnType<typeof api.productKits.forSku> | undefined;
 export type KitView = NonNullable<FunctionReturnType<typeof api.productKits.forSku>>;
@@ -105,6 +106,7 @@ type PaperDollLayersProps = {
 
 export default function PaperDollLayers({ plateUrl, kitParts, alt, onPlateError, className, family, capacityMl, color, view = "assembled", hasCapOffPlate }: PaperDollLayersProps) {
     const stacked = Boolean(kitParts?.length);
+    const boneStage = hasRegisterBodyPlate(kitParts);
     const stageTransform = pdpStageTransformCss(pdpStageFrame({
         family,
         capacityMl,
@@ -114,7 +116,7 @@ export default function PaperDollLayers({ plateUrl, kitParts, alt, onPlateError,
         parts: stacked ? kitParts : null,
     }));
     return (
-        <div className={`relative h-full w-full bg-white ${className ?? ""}`} data-paper-doll={stacked ? "kit" : "plate"}>
+        <div className={`relative h-full w-full ${boneStage ? "bg-bone" : "bg-white"} ${className ?? ""}`} data-paper-doll={stacked ? "kit" : "plate"}>
             <PdpPhotoCanvas>
             <div className="absolute inset-0" style={{ transformOrigin: "0 0", transform: stageTransform }} data-pdp-stage-frame="">
             {!stacked && plateUrl ? (
