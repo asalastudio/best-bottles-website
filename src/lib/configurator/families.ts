@@ -67,8 +67,8 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
   {
     key: "elegant60",
     finish: "18-415",
-    // Elegant stays on its SKU plate/registered layer workflow until its 3D
-    // body and closures receive visual approval across all swatches.
+    // Elegant stays on photographed SKU kits/plates until its shared body
+    // and closures receive visual approval across all swatches.
     photoOnly: true,
     trims: ["CAP_SHINY_BLACK", "CAP_SHINY_GOLD", "CAP_MATTE_GOLD",
             "CAP_MATTE_SILVER", "CAP_SHINY_SILVER", "CAP_COPPER"],

@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { STAGE_DATUMS, assembledKit, datumFromPlate, kitFromRegister, kitsFromRegister, partBoxTransform, type RegisterStagePayload } from "@/lib/register/stage-kit";
 import { closurePart, fitmentPart, partCrop, stageLayout } from "@/lib/products/pdp-redesign/stage";
 import { layerCropStyleForPart, layerTransform } from "@/lib/bottle-builder/preview-frame";
+import { ELEGANT_PHOTO_BODIES } from "@/lib/register/elegant-photo-bodies";
 
 /**
  * The 9 mL Cylinder pilot as the register holds it on dev (Phase 3 measurements):
@@ -157,6 +158,51 @@ describe("kitFromRegister", () => {
         expect(tall.baselineY - tall.seatY).toBeLessThanOrEqual(800);
         const other = kitFromRegister("GB-CYL-CLR-9ML-MRL-BKDT", { ...PAYLOAD, assemblies: { "GB-CYL-CLR-9ML-MRL-BKDT": { ...PAYLOAD.assemblies["GB-CYL-CLR-9ML-MRL-BKDT"]!, bodyId: "elsewhere" } } })!;
         expect(other.anchors.seatY).toBe(datum.seatY);
+    });
+});
+
+describe("Elegant photographed body stand-ins", () => {
+    it("keeps one photo body aligned across cap swaps while preserving register components", () => {
+        const plateKey = "elegant-60ml-18-415|Clear";
+        const plate = { ...PLATE, plateKey, bodyId: "elegant-60ml-18-415", url: "https://blob/register/unfinished-elegant.png" };
+        const first = { ...PAYLOAD.assemblies["GB-CYL-CLR-9ML-MRL-BKDT"]!, bodyId: plate.bodyId, plateKey, graceSku: "GB-ELG-CLR-60ML-SPR-MGLD" };
+        const second = { ...first, graceSku: "GB-ELG-CLR-60ML-SPR-SSLV", websiteSku: "GBElg60SpryShnSl" };
+        const payload: RegisterStagePayload = {
+            ...PAYLOAD,
+            plates: { [plateKey]: plate },
+            bodies: { [plate.bodyId]: { bodyId: plate.bodyId, family: "Elegant", capacityMl: 60, neck: "18-415", dims: { heightBareMm: 86, diameterMm: 54, widthMm: 54 } } },
+            assemblies: { [first.graceSku]: first, [second.graceSku]: second },
+        };
+        const a = kitFromRegister(first.graceSku, payload)!;
+        const b = kitFromRegister(second.graceSku, payload)!;
+        const bodyA = a.parts.find((part) => part.slot === "body")!;
+        const bodyB = b.parts.find((part) => part.slot === "body")!;
+        expect(bodyA.image.url).toBe(ELEGANT_PHOTO_BODIES[plateKey].url);
+        expect(bodyA.image.url).not.toBe(plate.url);
+        expect(bodyA.box).toEqual(bodyB.box);
+        expect(bodyA.bounds).toEqual(bodyB.bounds);
+        expect(a.parts.find((part) => part.slot === "cap")?.image.url).toBe(CAP.layers[0].url);
+        expect(bodyA.box.y + ELEGANT_PHOTO_BODIES[plateKey].bounds.top * (bodyA.box.width / 1000)).toBeCloseTo(a.anchors.seatY, 1);
+        expect(bodyA.box.y + ELEGANT_PHOTO_BODIES[plateKey].bounds.bottom * (bodyA.box.width / 1000)).toBeCloseTo(a.anchors.baselineY, 1);
+    });
+
+    it("omits glass-wall artifacts from wide tube crops but keeps a clean tube in assembled views", () => {
+        const plateKey = "elegant-60ml-18-415|Clear";
+        const plate = { ...PLATE, plateKey, bodyId: "elegant-60ml-18-415" };
+        const wide = { slot: "diptube" as const, z: "front" as const, explodeIndex: 1, url: "https://blob/unfinished-wall.png", width: 1136, height: 1700, pxPerMm: 27.2142, anchor: { x: 568, y: 100 }, approved: true };
+        const narrow = { ...wide, url: "https://blob/clean-tube.png", width: 60, usage: "exploded" as const };
+        const sprayer = { componentId: "CMP-ELG-SPR", type: "sprayer", approved: true, layers: [wide, narrow] };
+        const sku = "GB-ELG-CLR-60ML-SPR";
+        const payload: RegisterStagePayload = {
+            ...PAYLOAD,
+            plates: { [plateKey]: plate },
+            components: { [sprayer.componentId]: sprayer },
+            bodies: { [plate.bodyId]: { bodyId: plate.bodyId, family: "Elegant", capacityMl: 60, neck: "18-415", dims: { heightBareMm: 86, diameterMm: 54, widthMm: 54 } } },
+            assemblies: { [sku]: { graceSku: sku, websiteSku: null, bodyId: plate.bodyId, plateKey, glass: "Clear", neck: "18-415", parts: [{ role: "sprayer", componentId: sprayer.componentId }], renderable: true, reason: null } },
+        };
+        const kit = kitFromRegister(sku, payload)!;
+        expect(kit.parts.filter((part) => part.slot === "diptube").map((part) => part.image.url)).toEqual([narrow.url]);
+        expect(assembledKit(kit).parts.filter((part) => part.slot === "diptube")).toHaveLength(1);
     });
 });
 

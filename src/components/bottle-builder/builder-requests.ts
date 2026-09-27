@@ -32,7 +32,7 @@ export function loadBodyConfigurations(family: string, bodyId: string, shop: str
 
 /** The chosen bottle's kit layers, keyed by configuration id. */
 export function loadBodyKits(family: string, bodyId: string) {
-    return load(`/api/bottle-builder/kits?${query(family, bodyId)}`,
+    return load(`/api/bottle-builder/kits?${query(family, bodyId)}&media=elegant-photo-v2`,
         data => {
             const kits = data && typeof data === "object" ? (data as { kits?: unknown }).kits : null;
             return kits && typeof kits === "object" ? kits as Record<string, BuilderKit | null> : null;

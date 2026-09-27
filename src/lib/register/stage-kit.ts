@@ -15,6 +15,7 @@
  */
 import { compose, footY, frameFromDatum, type Frame, type LayerGeometry, type PlateGeometry } from "./compose";
 import { stackedExplodeOffsets } from "@/lib/products/exploded-stack";
+import { ELEGANT_PHOTO_BODIES } from "./elegant-photo-bodies";
 
 export type StageDatum = { axisX: number; seatY: number; baselineY: number };
 /** The slots a kit part can occupy (convex/productKits.ts and the register's registerSlotV agree). */
@@ -167,7 +168,7 @@ export function kitFromRegister(
     const frame = frameFromDatum(canvas, datum, plate);
     const placements = compose(plate, layers, frame);
 
-    const parts: RegisterKitPart[] = placements.map((placement) => {
+    let parts: RegisterKitPart[] = placements.map((placement) => {
         const box: PartBox = { x: round(placement.x), y: round(placement.y), width: round(placement.width), height: round(placement.height) };
         const isPlate = placement.kind === "plate";
         const source = placement.source as PlacedLayer | RegisterPlate;
@@ -192,6 +193,33 @@ export function kitFromRegister(
             ...(layer?.usage === "seated" ? { views: ["sidecar", "capon"] as StageViewName[] } : layer?.usage === "exploded" ? { views: ["exploded"] as StageViewName[] } : {}),
         };
     });
+    const photoBody = ELEGANT_PHOTO_BODIES[assembly.plateKey];
+    const bodyPart = photoBody && parts.find((part) => part.slot === "body");
+    if (bodyPart && photoBody) {
+        // Map the photo's alpha bounds to the register's shoulder/foot datum
+        // without changing its aspect ratio. Every finish of this glass then
+        // shares the same photographed body and the existing component boxes.
+        const target = bodyPart.bounds;
+        const scale = (target.bottom - target.top) / (photoBody.bounds.bottom - photoBody.bounds.top);
+        const center = (target.left + target.right) / 2;
+        const photoCenter = (photoBody.bounds.left + photoBody.bounds.right) / 2;
+        const x = center - photoCenter * scale;
+        const y = target.top - photoBody.bounds.top * scale;
+        bodyPart.box = { x: round(x), y: round(y), width: round(photoBody.width * scale), height: round(photoBody.height * scale) };
+        bodyPart.bounds = {
+            left: round(x + photoBody.bounds.left * scale), top: round(y + photoBody.bounds.top * scale),
+            right: round(x + photoBody.bounds.right * scale), bottom: round(y + photoBody.bounds.bottom * scale),
+        };
+        bodyPart.image = { ...bodyPart.image, url: photoBody.url, width: photoBody.width, height: photoBody.height };
+        // The register's broad "diptube" crops still contain fragments of the
+        // unfinished glass wall. Keep only the narrow, physical tube layers.
+        const glassWidth = bodyPart.bounds.right - bodyPart.bounds.left;
+        const narrowTubes = parts.filter((part) => part.slot === "diptube" && part.box.width <= glassWidth * 0.25);
+        parts = parts.filter((part) => part.slot !== "diptube");
+        // The clean central tube was previously EXPLODED-only; draw it inside
+        // the photographed glass for the assembled PDP and Builder as well.
+        if (narrowTubes.length) parts.push({ ...narrowTubes[0], views: undefined });
+    }
     // EXPLODED offsets are computed over the parts of each view separately, so a seated insert and its full plug never stack against each other.
     const lifts = stackedExplodeOffsets(parts.filter((part) => !part.views || part.views.includes("exploded")));
     const explodable = parts.filter((part) => !part.views || part.views.includes("exploded"));
