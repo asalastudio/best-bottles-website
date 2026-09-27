@@ -4,9 +4,20 @@
     {
       "name": "next-dev",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
       "port": 3000,
       "autoPort": true
+    },
+    {
+      "name": "next-dev-register-pilot",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "/Users/jordanrichter/Documents/Codex/2026-09-24/the-image-is-clearly-the-target/outputs/register-9ml-v32/next-dev-devconvex.cjs"
+      ],
+      "port": 3217
     }
   ]
 }

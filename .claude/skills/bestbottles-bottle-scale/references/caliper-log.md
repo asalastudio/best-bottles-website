@@ -40,6 +40,8 @@ All values are in mm unless noted.
 | W | body width, front (round bottles: the diameter) |
 | Dp | body depth, side at 90° (round bottles: an ovality check) |
 | Wb | foot width, 1–2 mm above the table |
+| Hh | outside heel height: table to where the straight side starts curving in |
+| Wr | standing ring diameter: the flat circle that touches the table |
 | Hs | shoulder start height (optional) |
 | Hn | neck base height |
 | Fh | finish height, neck base to rim top |
@@ -98,7 +100,9 @@ Key `cylinder-9ml-13-415`, measured by Jordan on 2026-09-26.
 | T | 13.40 | 12.87 |
 | E | 11.22 | 11.34 |
 | I | 7.04 | 7.3 |
-| Dep | 92.63 (depth rod, rim to inside floor) | 92.63 (V48) |
+| Dep | 92.63 (depth rod, rim to inside floor) | 92.70 (newest 09-27 materials scene) |
+| Hh | 0.18 | 0.65 (newest 09-27 materials scene) |
+| Wr | 18.05 | 16.50 (newest 09-27 materials scene) |
 
 Still needed: Dp, Hn and Cap.
 
