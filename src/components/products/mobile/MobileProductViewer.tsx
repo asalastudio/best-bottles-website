@@ -16,6 +16,7 @@ import { useCallback, useId, useMemo, useRef, useState, type KeyboardEvent as Re
 import { X } from "@/components/icons";
 import PaperDollLayers, { type KitPart } from "@/components/products/PaperDollLayers";
 import { displayImageUrl } from "@/lib/products/optimizable-image";
+import { isReconciledLocalSkuAssetUrl } from "@/lib/products/reconciled-sku-images";
 import { hasRegisterBodyPlate } from "@/lib/products/register-stage-bone";
 import type { MobileViewModeOption, ProductViewMode } from "@/lib/products/mobile-pdp-view-modes";
 import {
@@ -245,12 +246,13 @@ export default function MobileProductViewer({
                         className="relative min-h-0 flex-1 touch-none select-none overflow-hidden"
                         {...handlers}
                     >
-                        <div className="absolute inset-0 will-change-transform" style={surfaceStyle}>
+                        <div className={`absolute inset-0 will-change-transform ${isReconciledLocalSkuAssetUrl(fallbackImageUrl) ? "bg-[#f5f3ef]" : ""}`} style={surfaceStyle}>
                             {hasStack ? (
                                 <PaperDollLayers plateUrl={plateUrl} kitParts={kitParts} alt={alt} onPlateError={onPlateError} className="[&_img]:pointer-events-none" family={family} capacityMl={capacityMl} color={color} hasCapOffPlate={hasCapOffPlate} view={viewMode === "capOff" ? "capOff" : "assembled"} />
                             ) : fallbackImageUrl ? (
                                 // eslint-disable-next-line @next/next/no-img-element
-                                <img src={displayImageUrl(fallbackImageUrl)} alt={alt} draggable={false} className="pointer-events-none absolute inset-0 h-full w-full object-contain object-center" />
+                                <img src={displayImageUrl(fallbackImageUrl)} alt={alt} draggable={false} className="pointer-events-none absolute inset-0 h-full w-full object-contain object-center"
+                                    style={isReconciledLocalSkuAssetUrl(fallbackImageUrl) ? { mixBlendMode: "multiply" } : undefined} />
                             ) : (
                                 <div className="absolute inset-0 bg-linen" aria-hidden />
                             )}

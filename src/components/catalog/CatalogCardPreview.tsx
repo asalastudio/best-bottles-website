@@ -11,6 +11,7 @@ import { api } from "../../../convex/_generated/api";
 import { Package } from "@/components/icons";
 import { resolveCatalogCardVisual } from "@/lib/products/catalog-card-visual";
 import type { ProductCardVariantPreview } from "@/lib/products/product-card-variant-previews";
+import { getReconciledLocalSkuImage, isReconciliationSku, isReconciledLocalSkuAssetUrl } from "@/lib/products/reconciled-sku-images";
 
 type Props = {
     title: string;
@@ -42,10 +43,12 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
     const assemblyPlates = useQuery(api.productPlates.forSkus, skus.length ? { skus } : "skip");
     const assembly = (variant: ProductCardVariantPreview) => {
         const plate = assemblyPlates?.plates[skuOf(variant) ?? ""];
-        return [plate?.thumb, variant.imageUrl].find((url) => url && !failed.has(url));
+        return [plate?.thumb, getReconciledLocalSkuImage(skuOf(variant)), variant.imageUrl].find((url) => url && !failed.has(url));
     };
+    const primaryPlate = variants[0] ? assemblyPlates?.plates[skuOf(variants[0]) ?? ""] : null;
+    const primaryLocal = !catalogHero && !primaryPlate?.thumb ? getReconciledLocalSkuImage(skuOf(variants[0])) : null;
     const visual = resolveCatalogCardVisual({
-        heroImageUrl: imageUrl && !failed.has(imageUrl) ? imageUrl : null,
+        heroImageUrl: primaryLocal && !failed.has(primaryLocal) ? primaryLocal : imageUrl && !failed.has(imageUrl) ? imageUrl : null,
         heroHoverImageUrl: heroHoverImageUrl && !failed.has(heroHoverImageUrl) ? heroHoverImageUrl : null,
         heroHovered,
         fallbackImageUrl: variants[0] ? assembly(variants[0]) : null,
@@ -55,10 +58,13 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
     // cards show plates already, so the picked cap's full plate simply replaces it.
     const heroSwap = catalogHero && selected ? capSwapFraming(catalogHero.url) : null;
     const heroSwapUrl = heroSwap ? capSwapPlateUrl(heroSwap, selectedPlate) : null;
+    const selectedExactPhoto = selected && isReconciliationSku(skuOf(selected))
+        ? [getReconciledLocalSkuImage(skuOf(selected)), selected.imageUrl].find((url) => url && !failed.has(url))
+        : null;
     const swapUrl = catalogHero
         ? undefined
         : selected
-            ? [selectedPlate?.image, selected.imageUrl, assembly(selected)].find((url) => url && !failed.has(url))
+            ? [selectedPlate?.image, getReconciledLocalSkuImage(skuOf(selected)), selected.imageUrl, assembly(selected)].find((url) => url && !failed.has(url))
             : undefined;
     const displayImage = swapUrl ?? visual.url;
     const fail = (url: string) => setFailed((current) => new Set(current).add(url));
@@ -96,6 +102,22 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
         </LocaleLink>;
     }
 
+    // A selected SKU without a calibrated swap still shows its own photograph.
+    // Restrict this to the reconciled cohort; an unrelated variant must never
+    // inherit another cap's approved hero image.
+    if (catalogHero && selected && selectedExactPhoto) {
+        return <LocaleLink href={href} aria-label={`View ${title}, ${selected.label}`}
+            className="relative block aspect-[10/11] w-full overflow-hidden bg-[#f5f3ef]"
+            data-visual-mode="selected-exact-photo" data-bb-image-audit="catalog-card"
+            data-bb-family={family ?? undefined} data-bb-product-group-slug={slug}
+            data-bb-website-sku={skuOf(selected) ?? undefined}>
+            <Image key={selectedExactPhoto} src={selectedExactPhoto} alt={`${title}, ${selected.label}`}
+                fill className="object-contain" style={isReconciledLocalSkuAssetUrl(selectedExactPhoto) ? { mixBlendMode: "multiply" } : undefined}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                onError={() => fail(selectedExactPhoto)} />
+        </LocaleLink>;
+    }
+
     if (catalogHero) {
         return <ProductCardImagePreview
             productTitle={title} defaultImage={{ url: approvedHero ? exactVariant?.imageUrl ?? null : imageUrl, alt: title }} catalogHero={catalogHero}
@@ -104,14 +126,15 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
         />;
     }
 
-    return <LocaleLink href={href} aria-label={`View ${title}`} className="relative block aspect-[4/3] w-full overflow-hidden bg-[#f8f6f2] sm:aspect-[10/11]"
+    return <LocaleLink href={href} aria-label={`View ${title}`} className={`relative block aspect-[4/3] w-full overflow-hidden sm:aspect-[10/11] ${isReconciledLocalSkuAssetUrl(displayImage) ? "bg-[#f5f3ef]" : "bg-[#f8f6f2]"}`}
         onPointerEnter={(event) => { if (event.pointerType === "mouse") setHeroHovered(true); }}
         onPointerLeave={() => setHeroHovered(false)} data-visual-mode={swapUrl ? "selected-cap" : visual.mode}
         data-bb-image-audit="catalog-card" data-bb-family={family ?? undefined} data-bb-product-group-slug={slug}
         data-bb-website-sku={skuOf(selected) ?? variants[0]?.websiteSku}>
         {displayImage ? <Image key={displayImage} src={displayImage} alt={selected ? `${title}, ${selected.label}` : title} fill
             unoptimized={displayImage.includes(".public.blob.vercel-storage.com/")}
-            className="object-contain" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-contain" style={isReconciledLocalSkuAssetUrl(displayImage) ? { mixBlendMode: "multiply" } : undefined}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             onError={() => fail(displayImage)} />
             : <span className="flex h-full flex-col items-center justify-center gap-3 text-xs text-slate"><Package className="h-10 w-10" />Product image coming soon</span>}
     </LocaleLink>;

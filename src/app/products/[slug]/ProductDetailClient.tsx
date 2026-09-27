@@ -642,6 +642,8 @@ type VariantImageTile = {
 };
 
 function getVariantTileImageUrl(variant: ProductVariant): string | null {
+    const reconciled = getPdpSkuFallbackImage(variant.websiteSku);
+    if (reconciled) return reconciled;
     const primary = usableProductImageUrl(variant.imageUrl);
     if (primary) return primary;
     if (
@@ -2320,9 +2322,10 @@ export default function ProductDetailClient({
                                             galleryImages.push({ ...image, url: normalizedUrl });
                                         };
 
-                                        if (usableProductImageUrl(selectedVariant?.imageUrl)) {
+                                        const capOnImage = getPdpSkuFallbackImage(selectedVariant?.websiteSku) ?? usableProductImageUrl(selectedVariant?.imageUrl);
+                                        if (capOnImage) {
                                             addGalleryImage({
-                                                url: usableProductImageUrl(selectedVariant?.imageUrl)!,
+                                                url: capOnImage,
                                                 label: "Cap on",
                                                 alt: customerDisplayName,
                                                 auditMeta: {

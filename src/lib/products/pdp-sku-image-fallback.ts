@@ -1,3 +1,5 @@
+import { getReconciledLocalSkuImage, reconciledLocalSkuImages } from "./reconciled-sku-images";
+
 const PDP_SKU_IMAGE_FALLBACKS: Readonly<Record<string, string>> = {
   GBRnd78SpryMtGl: "/images/pdp/round/GBRnd78SpryMtGl.png",
   GBRnd78SpryMtSl: "/images/pdp/round/GBRnd78SpryMtSl.png",
@@ -20,9 +22,9 @@ const PDP_SKU_IMAGE_FALLBACKS: Readonly<Record<string, string>> = {
 
 export function getPdpSkuFallbackImage(websiteSku: string | null | undefined): string | null {
   if (!websiteSku) return null;
-  return PDP_SKU_IMAGE_FALLBACKS[websiteSku] ?? null;
+  return getReconciledLocalSkuImage(websiteSku) ?? PDP_SKU_IMAGE_FALLBACKS[websiteSku] ?? null;
 }
 
 export function getPdpSkuImageFallbacks(): Readonly<Record<string, string>> {
-  return PDP_SKU_IMAGE_FALLBACKS;
+  return { ...PDP_SKU_IMAGE_FALLBACKS, ...reconciledLocalSkuImages };
 }
