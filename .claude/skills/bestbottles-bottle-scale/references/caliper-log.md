@@ -98,8 +98,14 @@ Key `cylinder-9ml-13-415`, measured by Jordan on 2026-09-26.
 | T | 13.40 | 12.87 |
 | E | 11.22 | 11.34 |
 | I | 7.04 | 7.3 |
+| Dep | 92.63 (depth rod, rim to inside floor) | 92.63 (V48) |
 
-Still needed: Dp, Hn, Dep and Cap.
+Still needed: Dp, Hn and Cap.
+
+**Depth (Jordan, 2026-09-26, carried over from the materials session):** the depth rod read 92.63 from the rim to the
+inside floor. H − Dep puts the floor at z 12.97 above the standing base. That retires the deep-U model value
+(Dep 98.6, 10.43 ml). The V48 working glass (`outputs/tall-glass-v37/reflection-isolation-v48`) calculates 10.006 ml,
+but the 5 mm bevel into the wall is still an assumption and the overflow has not been weighed. Do not force 10 ml.
 
 **Shape:** from Jordan's photo IMG_5823, the shoulder is one smooth round from the wall into the neck. The May 2015
 drawing glass had a cone plus a ledge, which read as two steps; do not rebuild it that way.
