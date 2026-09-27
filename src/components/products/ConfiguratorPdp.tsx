@@ -39,6 +39,7 @@ import PdpPhotoCanvas from "./PdpPhotoCanvas";
 import { explodedKitFrame, orderExplodedOvercap, REMOVABLE_KIT_SLOTS, withDetachedCapOffsets } from "@/lib/products/kit-frame";
 import { capacityMlFromSlug, parseProductSlug } from "@/lib/products/group-variant-intent";
 import { pdpStageFrame, pdpStageTransformCss } from "@/lib/products/pdp-stage-frame";
+import { hasRegisterBodyPlate } from "@/lib/products/register-stage-bone";
 
 import { useGLTF } from "@react-three/drei";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
@@ -445,6 +446,7 @@ export default function ConfiguratorPdp({
   const slugParts = parseProductSlug(currentSlug);
   const capacityMl = slugParts?.capacityMl ?? capacityMlFromSlug(currentSlug);
   const heroStage = plateIsReleasedHero && !showKitLayers;
+  const boneStage = heroStage || (showKitLayers && hasRegisterBodyPlate(kitParts));
   const stageTransform = exploded
     ? `translate(${explodedFrame.x}%, ${explodedFrame.y}%) scale(${explodedFrame.scale})`
     : heroStage ? "none" : pdpStageTransformCss(pdpStageFrame({
@@ -478,7 +480,7 @@ export default function ConfiguratorPdp({
           </div>
         </div>
       ) : showPlate ? (
-        <div className={`relative h-full w-full ${heroStage ? "bg-bone" : "bg-white"}`} data-paper-doll={showKitLayers ? "kit" : heroStage ? "hero" : "plate"}>
+        <div className={`relative h-full w-full ${boneStage ? "bg-bone" : "bg-white"}`} data-paper-doll={showKitLayers ? "kit" : heroStage ? "hero" : "plate"}>
           {/* Capacity standard + CAP OFF fit from pdp-capacity-standards.json.
               Circle 15 ml glass is locked smaller than 30 ml; a detached cap
               may shrink the composition but never grow the bottle. */}

@@ -16,6 +16,7 @@ import Link from "next/link";
 import { forwardRef, useLayoutEffect, useRef, useSyncExternalStore, type ReactNode } from "react";
 import { ArrowLeft, ArrowsOutSimple, ShoppingBag } from "@/components/icons";
 import PaperDollLayers, { type KitPart } from "@/components/products/PaperDollLayers";
+import { hasRegisterBodyPlate } from "@/lib/products/register-stage-bone";
 import { displayImageUrl } from "@/lib/products/optimizable-image";
 import { mobilePdpToolbarPaddingTop } from "@/lib/products/mobile-pdp-chrome";
 
@@ -71,7 +72,7 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
         };
     }, []);
     return (
-        <div ref={ref} data-testid="mobile-pdp-hero" className={`relative w-full ${heroStage ? "bg-bone" : "bg-white"}`}>
+        <div ref={ref} data-testid="mobile-pdp-hero" className={`relative w-full ${heroStage || hasRegisterBodyPlate(kitParts) ? "bg-bone" : "bg-white"}`}>
             <div
                 ref={toolbarRef}
                 data-testid="mobile-pdp-hero-toolbar"

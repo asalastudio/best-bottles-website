@@ -16,6 +16,7 @@ import { useCallback, useId, useMemo, useRef, useState, type KeyboardEvent as Re
 import { X } from "@/components/icons";
 import PaperDollLayers, { type KitPart } from "@/components/products/PaperDollLayers";
 import { displayImageUrl } from "@/lib/products/optimizable-image";
+import { hasRegisterBodyPlate } from "@/lib/products/register-stage-bone";
 import type { MobileViewModeOption, ProductViewMode } from "@/lib/products/mobile-pdp-view-modes";
 import {
     IDENTITY_TRANSFORM,
@@ -189,7 +190,7 @@ export default function MobileProductViewer({
                     onEscapeKeyDown={() => onClose()}
                     onPointerDownOutside={(event) => event.preventDefault()}
                     onInteractOutside={(event) => event.preventDefault()}
-                    className="fixed inset-0 z-[80] flex touch-none flex-col bg-white text-obsidian focus:outline-none"
+                    className={`fixed inset-0 z-[80] flex touch-none flex-col text-obsidian focus:outline-none ${hasRegisterBodyPlate(kitParts) ? "bg-bone" : "bg-white"}`}
                     style={{ paddingTop: "env(safe-area-inset-top, 0px)", paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
                 >
                     <header className="flex shrink-0 items-start justify-between gap-3 px-3 pb-2 pt-2">
