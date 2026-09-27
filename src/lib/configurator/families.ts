@@ -1,12 +1,12 @@
 /**
  * Configurator family registry — the data that turns a product-group slug
- * into a live 3D configuration. One entry per onboarded family; the PDP,
+ * into a guided configuration. One entry per onboarded family; the PDP,
  * the configurator and the viewer all resolve from HERE so adding a family
  * never touches component logic again.
  *
- * A family enters this file only when its whole chain is approved:
- * hollow body GLB + thickness bake + locked glass presets + closure GLBs
- * for every base it offers (the configurator-lane skill's checklist).
+ * Geometry is shown only when its whole chain is approved: hollow body GLB,
+ * thickness bake, locked glass presets and closure GLBs for every base.
+ * Photo-only families keep the guided flow on released plates and layers.
  */
 
 import type { GlassPresetId } from "@/lib/materials/glassPresets";
@@ -67,6 +67,9 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
   {
     key: "elegant60",
     finish: "18-415",
+    // Elegant stays on its SKU plate/registered layer workflow until its 3D
+    // body and closures receive visual approval across all swatches.
+    photoOnly: true,
     trims: ["CAP_SHINY_BLACK", "CAP_SHINY_GOLD", "CAP_MATTE_GOLD",
             "CAP_MATTE_SILVER", "CAP_SHINY_SILVER", "CAP_COPPER"],
     // SKU truth (2026-08-31): elegant-60ml sells clear + frosted with
@@ -193,6 +196,7 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
   {
     key: "elegant100",
     finish: "18-415",
+    photoOnly: true,
     trims: ["CAP_SHINY_BLACK", "CAP_SHINY_GOLD", "CAP_MATTE_GOLD",
             "CAP_MATTE_SILVER", "CAP_SHINY_SILVER", "CAP_COPPER"],
     // finemist exists as a lone clear variant, mapped to sprayer like the 60
