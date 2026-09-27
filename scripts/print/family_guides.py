@@ -640,9 +640,13 @@ def fonts_css() -> str:
 
 def wordmark_uri() -> str:
     src = Image.open(ROOT / "public/brand/best-bottles-wordmark-supplied.png").convert("RGBA")
+    box = src.getbbox()  # the artwork's own margins, which set the lockup's proportions
+    # The supplied PNG carries a near-transparent black haze (alpha 1-6) that prints as a grey box; drop it.
+    r, g, b, a = src.split()
+    src = Image.merge("RGBA", (r, g, b, a.point(lambda v: 0 if v < 24 else v)))
     path = WORK / "wordmark.png"
     (WORK).mkdir(parents=True, exist_ok=True)
-    src.crop(src.getbbox()).save(path)
+    src.crop(box).save(path)
     return path.as_uri()
 
 

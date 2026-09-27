@@ -25,6 +25,10 @@ Two more modules feed the catalogue:
 - `neck_sheets.py` reads the neck-thread sheets in `data/register/source/neck-thread-2026-09-23/`. It finds each part and bottle picture, the label printed under it and the card it sits in. Run it on its own for a contact sheet per neck (`out/print/work/neck/`).
 - `operations.py` holds the words of "Working with the range". Every line restates RUBRIC, COPY-STRATEGY or SYNTHESIS, so change the source document first.
 
+## The copy standard as a PDF
+
+`copy_standard_pdf.py` prints `docs/specs/pdp-item-descriptions/` (template, copy strategy, rubric, synthesis, research and the use-line audit) as one PDF to download and keep: `out/print/best-bottles-copy-standard.pdf`. The markdown files stay the source; it needs `pip install markdown-it-py` besides the packages below.
+
 ## Build
 
 ```bash
