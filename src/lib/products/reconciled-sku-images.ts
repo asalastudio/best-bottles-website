@@ -2,6 +2,10 @@
  * A local cutout is used only for an export that passed the extraction checks; component fitment
  * still comes from the register and is never inferred from this image map. */
 export const reconciledLocalSkuImages: Readonly<Record<string, string>> = {
+  "GB1mlAmbVBlk": "/images/pdp/assembled-vials-2026-09-27/GB1mlAmbVBlk.png",
+  "GB1mlAmbVialWht": "/images/pdp/assembled-vials-2026-09-27/GB1mlAmbVialWht.png",
+  "GB1mlVBlk": "/images/pdp/assembled-vials-2026-09-27/GB1mlVBlk.png",
+  "GB1mlVWht": "/images/pdp/assembled-vials-2026-09-27/GB1mlVWht.png",
   "GBElg15BlkShSht": "/images/pdp/reconciled-2026-09-27/GBElg15BlkShSht.webp",
   "GBElg15CuSht": "/images/pdp/reconciled-2026-09-27/GBElg15CuSht.webp",
   "GBElg15GlMattSht": "/images/pdp/reconciled-2026-09-27/GBElg15GlMattSht.webp",
@@ -181,5 +185,5 @@ export function isReconciliationSku(websiteSku: string | null | undefined): bool
 }
 
 export function isReconciledLocalSkuAssetUrl(url: string | null | undefined): boolean {
-  return Boolean(url?.startsWith("/images/pdp/reconciled-2026-09-27/"));
+  return Boolean(url?.startsWith("/images/pdp/reconciled-2026-09-27/") || url?.startsWith("/images/pdp/assembled-vials-2026-09-27/"));
 }

@@ -12,6 +12,7 @@ import { Package } from "@/components/icons";
 import { resolveCatalogCardVisual } from "@/lib/products/catalog-card-visual";
 import type { ProductCardVariantPreview } from "@/lib/products/product-card-variant-previews";
 import { getReconciledLocalSkuImage, isReconciliationSku, isReconciledLocalSkuAssetUrl } from "@/lib/products/reconciled-sku-images";
+import { isAssembledOneMlVialImage, isOneMlVialGroup, oneMlVialApplicator } from "@/lib/products/one-ml-vial-applicators";
 
 type Props = {
     title: string;
@@ -43,10 +44,11 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
     const assemblyPlates = useQuery(api.productPlates.forSkus, skus.length ? { skus } : "skip");
     const assembly = (variant: ProductCardVariantPreview) => {
         const plate = assemblyPlates?.plates[skuOf(variant) ?? ""];
-        return [plate?.thumb, getReconciledLocalSkuImage(skuOf(variant)), variant.imageUrl].find((url) => url && !failed.has(url));
+        const vialImage = oneMlVialApplicator(skuOf(variant))?.image;
+        return (vialImage ? [vialImage] : [plate?.thumb, getReconciledLocalSkuImage(skuOf(variant)), variant.imageUrl]).find((url) => url && !failed.has(url));
     };
     const primaryPlate = variants[0] ? assemblyPlates?.plates[skuOf(variants[0]) ?? ""] : null;
-    const primaryLocal = !catalogHero && !primaryPlate?.thumb ? getReconciledLocalSkuImage(skuOf(variants[0])) : null;
+    const primaryLocal = !isOneMlVialGroup(slug) && !catalogHero && !primaryPlate?.thumb ? getReconciledLocalSkuImage(skuOf(variants[0])) : null;
     const visual = resolveCatalogCardVisual({
         heroImageUrl: primaryLocal && !failed.has(primaryLocal) ? primaryLocal : imageUrl && !failed.has(imageUrl) ? imageUrl : null,
         heroHoverImageUrl: heroHoverImageUrl && !failed.has(heroHoverImageUrl) ? heroHoverImageUrl : null,
@@ -61,12 +63,13 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
     const selectedExactPhoto = selected && isReconciliationSku(skuOf(selected))
         ? [getReconciledLocalSkuImage(skuOf(selected)), selected.imageUrl].find((url) => url && !failed.has(url))
         : null;
+    const selectedVialImage = oneMlVialApplicator(skuOf(selected))?.image;
     const swapUrl = catalogHero
         ? undefined
         : selected
-            ? [selectedPlate?.image, getReconciledLocalSkuImage(skuOf(selected)), selected.imageUrl, assembly(selected)].find((url) => url && !failed.has(url))
+            ? (selectedVialImage ? [selectedVialImage] : [selectedPlate?.image, getReconciledLocalSkuImage(skuOf(selected)), selected.imageUrl, assembly(selected)]).find((url) => url && !failed.has(url))
             : undefined;
-    const displayImage = swapUrl ?? visual.url;
+    const displayImage = selectedVialImage && failed.has(selectedVialImage) ? null : swapUrl ?? visual.url;
     const fail = (url: string) => setFailed((current) => new Set(current).add(url));
 
     const preloadUrls = heroHoverImageUrl ?? "";
@@ -133,7 +136,7 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
         data-bb-website-sku={skuOf(selected) ?? variants[0]?.websiteSku}>
         {displayImage ? <Image key={displayImage} src={displayImage} alt={selected ? `${title}, ${selected.label}` : title} fill
             unoptimized={displayImage.includes(".public.blob.vercel-storage.com/")}
-            className="object-contain" style={isReconciledLocalSkuAssetUrl(displayImage) ? { mixBlendMode: "multiply" } : undefined}
+            className="object-contain" style={isAssembledOneMlVialImage(displayImage) ? { mixBlendMode: "multiply", transform: "scale(0.62)" } : isReconciledLocalSkuAssetUrl(displayImage) ? { mixBlendMode: "multiply" } : undefined}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             onError={() => fail(displayImage)} />
             : <span className="flex h-full flex-col items-center justify-center gap-3 text-xs text-slate"><Package className="h-10 w-10" />Product image coming soon</span>}

@@ -153,7 +153,7 @@ describe("product card variant previews", () => {
         expect(previews[0]?.label).toBe("Short Green Cap");
     });
 
-    it("names a plug vial's swatch by its plug, not a cap length", () => {
+    it("names a 1 ml vial's swatch by its installed applicator, not an imported cap length", () => {
         const previews = getProductCardVariantPreviews(
             [
                 {
@@ -181,7 +181,7 @@ describe("product card variant previews", () => {
             },
         );
 
-        expect(previews.map((preview) => preview.label).sort()).toEqual(["Black Plug", "White Plug"]);
+        expect(previews.map((preview) => preview.label).sort()).toEqual(["Black Applicator", "White Applicator"]);
     });
 });
 

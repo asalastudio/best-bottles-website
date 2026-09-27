@@ -3,6 +3,7 @@ import { normalizeImportedCapColor } from "./cap-finish-evidence";
 import { glassSwatchImage } from "./glass-swatches";
 import { isLegacyBestBottlesImageUrl } from "../productVariantIntegrity";
 import { catalogSearchScore } from "../catalogFilters";
+import { oneMlVialApplicator } from "./one-ml-vial-applicators";
 
 export type ProductCardVariantPreview = {
     id: string;
@@ -305,6 +306,8 @@ function finishFromName(itemName: string | null | undefined): string | null {
 }
 
 function resolveCapFinish(variant: ProductCardVariantPreviewSource): string | null {
+    const vial = oneMlVialApplicator(variant.websiteSku);
+    if (vial) return `${vial.color} Applicator`;
     const capColor = cleanFinishLabel(variant.capColor);
     const capStyle = cleanFinishLabel(variant.capStyle);
     // A plug vial's closure is its plug, so the swatch says "White Plug", not a cap length.
@@ -379,7 +382,7 @@ function previewLabel(variant: ProductCardVariantPreviewSource, groupColor?: str
     const variantColor = cleanLabel(variant.color);
     const groupColorKey = normalizeKey(groupColor);
 
-    if (finish === "Plug" || finish?.endsWith(" Plug")) return finish;
+    if (finish === "Plug" || finish?.endsWith(" Plug") || finish?.endsWith(" Applicator")) return finish;
     if (finish && noun && noun !== "Cap") return `${finish} ${noun}`;
     if (finish) return `${finish} Cap`;
     if (variant.ballMaterial && applicator?.includes("Roller")) return `${variant.ballMaterial} Roller`;
@@ -442,7 +445,8 @@ export function getProductCardVariantPreviews(
         const label = previewLabel(variant, options.groupColor);
         if (!label) continue;
 
-        const imageUrl = productImageUrl(variant.imageUrl) ?? productImageUrl(variant.imageUrlCapOff);
+        const imageUrl = oneMlVialApplicator(variant.websiteSku)?.image
+            ?? productImageUrl(variant.imageUrl) ?? productImageUrl(variant.imageUrlCapOff);
         const finish = resolveCapFinish(variant);
         const optionType = optionTypeFor(variant, options.groupColor);
         const swatchColor = swatchColorFor(finish, variant.color ?? options.groupColor);

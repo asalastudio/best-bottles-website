@@ -16,6 +16,7 @@ import { api } from "../../../convex/_generated/api";
 import { catalogCapPhoto, CATALOG_CAP_FAMILY, type CatalogCapKind } from "@/lib/products/catalog-cap-photos";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import type { ProductCardVariantPreview } from "@/lib/products/product-card-variant-previews";
+import { oneMlVialApplicator } from "@/lib/products/one-ml-vial-applicators";
 
 /** At most this many slots; beyond it, five dots and a "+N" pill. */
 export const CAP_DOT_SLOTS = 6;
@@ -98,7 +99,7 @@ export default function CatalogCapDots({ title, variants, selectedId, onSelect, 
 
     return (
         <div className="flex min-h-6 flex-wrap items-center gap-[7px]" data-testid="catalog-card-caps">
-            <div role="radiogroup" aria-label={`Cap for ${title}`} onKeyDown={move} className="contents">
+            <div role="radiogroup" aria-label={`${variants.every((variant) => oneMlVialApplicator(variant.websiteSku)) ? "Applicator" : "Cap"} for ${title}`} onKeyDown={move} className="contents">
                 {shown.map((variant) => {
                     const active = variant.id === selected.id;
                     return (

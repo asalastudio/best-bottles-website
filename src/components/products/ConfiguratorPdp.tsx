@@ -41,6 +41,7 @@ import { capacityMlFromSlug, parseProductSlug } from "@/lib/products/group-varia
 import { pdpStageFrame, pdpStageTransformCss } from "@/lib/products/pdp-stage-frame";
 import { hasRegisterBodyPlate } from "@/lib/products/register-stage-bone";
 import { isReconciledLocalSkuAssetUrl } from "@/lib/products/reconciled-sku-images";
+import { isAssembledOneMlVialImage } from "@/lib/products/one-ml-vial-applicators";
 
 import { useGLTF } from "@react-three/drei";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
@@ -526,7 +527,7 @@ export default function ConfiguratorPdp({
         // eslint-disable-next-line @next/next/no-img-element
         <img src={displayImageUrl(photoFallback!)} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
              className="h-full w-full object-contain"
-             style={isReconciledLocalSkuAssetUrl(photoFallback) ? { mixBlendMode: "multiply" } : undefined} />
+             style={isAssembledOneMlVialImage(photoFallback) ? { mixBlendMode: "multiply", transform: "scale(0.62)" } : isReconciledLocalSkuAssetUrl(photoFallback) ? { mixBlendMode: "multiply" } : undefined} />
       ) : showLive3d && fam ? (
         <Bottle3DViewer
           bodyId={fam.bodyForGlass?.[glass] ?? fam.bodyDefault}

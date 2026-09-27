@@ -86,7 +86,7 @@ describe("fresh builder purchase reconciliation", () => {
 
 describe("register kits in the builder", () => {
     const PLATE = { plateKey: "cylinder-9ml-17-415|Swirl", bodyId: "cylinder-9ml-17-415", glass: "Swirl", url: "https://blob/register/plates/swirl.png", width: 768, height: 2304, pxPerMm: 27.2142, anchors: { axisX: 383, seatY: 167, baselineY: 2176, shoulderY: 550 }, approved: true };
-    const layer = (slot: string, extra: Record<string, unknown> = {}) => ({ slot, z: "front", explodeIndex: 1, url: `https://blob/register/components/${slot}.png`, width: 172, height: 135, pxPerMm: 12.3676, anchor: { x: 91.5, y: 126 }, approved: true, ...extra });
+    const layer = (slot: string, hash: string, extra: Record<string, unknown> = {}) => ({ slot, z: "front", explodeIndex: 1, url: `https://blob/register/components/${hash}.png`, width: 172, height: 135, pxPerMm: 12.3676, anchor: { x: 91.5, y: 126 }, approved: true, ...extra });
     beforeEach(() => {
         state.rows = [row("GBCylSwrl9MtlRollMattSl", "Matte Silver"), row("GBCylSwrl9MtlRollShnGl", "Shiny Gold")];
         state.kits = {};
@@ -95,10 +95,11 @@ describe("register kits in the builder", () => {
         state.register = {
             plates: { [PLATE.plateKey]: PLATE },
             components: {
-                "CMP-ROC-MSLV-17415": { componentId: "CMP-ROC-MSLV-17415", type: "roll-on-cap", approved: true, layers: [layer("cap")] },
+                "CMP-ROC-MSLV-17415": { componentId: "CMP-ROC-MSLV-17415", type: "roll-on-cap", approved: true, layers: [layer("cap", "269a6debdadd773ab5df125b4cedf15a95c0b9d521b7d385738129cf92b74e3b")] },
                 "LIB-17-415-MtlRollon": { componentId: "LIB-17-415-MtlRollon", type: "roller-insert", approved: true, layers: [
-                    layer("roller", { z: "behind-body", explodeIndex: 0, usage: "seated" }),
-                    layer("roller", { explodeIndex: 0, height: 255, usage: "exploded", url: "https://blob/register/components/roller-exploded.png" }),
+                    layer("roller", "d64975a48a1c447a1ab6f2a68a1c5252cf5a56e6d07c41d3ab6b3c17e3f94bba", { z: "behind-body", explodeIndex: 0 }),
+                    layer("roller", "4c3c4a5090ce2c419265e57716991288dc02fc0d0d0a0b2d7c2a91dff5921c48", { explodeIndex: 0, usage: "seated" }),
+                    layer("roller", "f8cff0279a097bef36eeab798dbe9559ced76c8c0b51baba465e70c52da2d6bf", { explodeIndex: 0, height: 255, usage: "exploded" }),
                 ] },
             },
             bodies: { "cylinder-9ml-17-415": { bodyId: "cylinder-9ml-17-415", family: "Cylinder", capacityMl: 9, neck: "17-415", dims: { heightBareMm: 70, diameterMm: 20, widthMm: 21 } } },
@@ -112,8 +113,11 @@ describe("register kits in the builder", () => {
         const [body] = await loadBuilderFamily("Cylinder");
         const kit = (await loadBuilderBodyKits("Cylinder", body.id))["GBCylSwrl9MtlRollMattSl"]!;
         expect(kit.register?.plateKey).toBe(PLATE.plateKey);
-        expect(kit.parts.map(part => part.slot).sort()).toEqual(["body", "cap", "roller"]);
-        expect(kit.parts.find(part => part.slot === "roller")!.image.url).toBe("https://blob/register/components/roller.png");
+        expect(kit.parts.map(part => part.slot).sort()).toEqual(["body", "cap", "roller", "roller"]);
+        expect(kit.parts.filter(part => part.slot === "roller").map(part => part.image.url)).toEqual([
+            "https://blob/register/components/d64975a48a1c447a1ab6f2a68a1c5252cf5a56e6d07c41d3ab6b3c17e3f94bba.png",
+            "https://blob/register/components/4c3c4a5090ce2c419265e57716991288dc02fc0d0d0a0b2d7c2a91dff5921c48.png",
+        ]);
         state.register = null;
     });
 });

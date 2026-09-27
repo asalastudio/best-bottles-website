@@ -54,6 +54,7 @@ import { bostonClosurePhoto } from "@/lib/products/boston-closure-photos";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { atomizerVariantCardName, isVariantCardFamily } from "@/lib/products/variant-cards";
 import { getReleasedCatalogHero } from "@/lib/products/catalog-heroes";
+import { oneMlVialApplicator } from "@/lib/products/one-ml-vial-applicators";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import { shouldHideAssembledPdpLowerStack } from "@/lib/products/assembled-pdp";
@@ -256,6 +257,8 @@ function getAntiqueBulbVisualIdentity(v: ProductVariant): { label: string; swatc
 
 /** Resolved cap finish for PDP selectors — must match variantSwatchPreview so sparse capColor rows still appear. */
 function resolveVariantCapFinish(v: ProductVariant): { label: string; swatchName: string } {
+    const vial = oneMlVialApplicator(v.websiteSku);
+    if (vial) return { label: `${vial.color} Applicator`, swatchName: vial.color };
     const decorated = decoratedCapFinish(v);
     if (decorated) return { label: decorated, swatchName: decorated };
     if (isAntiqueBulbVariant(v)) {
@@ -1426,7 +1429,7 @@ export default function ProductDetailClient({
 
     // the plate for the selected SKU (productPlates index), by graceSku then websiteSku
     // first and websiteSku second -- the two keys the plate manifests carry
-    const selectedPlate = selectedVariant
+    const selectedPlate = selectedVariant && !oneMlVialApplicator(selectedVariant.websiteSku)
         ? platesBySku[selectedVariant.graceSku]
             ?? (selectedVariant.websiteSku ? platesBySku[selectedVariant.websiteSku] : undefined)
             ?? null
@@ -2167,7 +2170,7 @@ export default function ProductDetailClient({
                             variants={variants}
                             selectedVariant={selectedVariant ?? null}
                             platesBySku={platesBySku}
-                            selectedKitQuery={selectedKitQuery}
+                            selectedKitQuery={oneMlVialApplicator(selectedVariant?.websiteSku) ? undefined : selectedKitQuery}
                             localComponentPreviewSku={localComponentPreviewSku}
                             localKits={localKits}
                             skuImageFallbacks={pdpSkuImageFallbacks}
@@ -2222,7 +2225,7 @@ export default function ProductDetailClient({
                                 heightWithoutCap={selectedVariant?.heightWithoutCap ?? null}
                                 diameter={selectedVariant?.diameter ?? null}
                                 hasApproved3d={focusedPdpCapabilities.has3dMode}
-                                kitQuery={selectedKitQuery}
+                                kitQuery={oneMlVialApplicator(selectedVariant?.websiteSku) ? undefined : selectedKitQuery}
                                 localComponentPreviewSku={localComponentPreviewSku}
                                 localKitPilot={selectedPilot}
                                 selectedGraceSku={selectedVariant?.graceSku ?? null}

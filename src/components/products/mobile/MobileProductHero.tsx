@@ -19,6 +19,7 @@ import PaperDollLayers, { type KitPart } from "@/components/products/PaperDollLa
 import { hasRegisterBodyPlate } from "@/lib/products/register-stage-bone";
 import { displayImageUrl } from "@/lib/products/optimizable-image";
 import { isReconciledLocalSkuAssetUrl } from "@/lib/products/reconciled-sku-images";
+import { isAssembledOneMlVialImage } from "@/lib/products/one-ml-vial-applicators";
 import { mobilePdpToolbarPaddingTop } from "@/lib/products/mobile-pdp-chrome";
 
 const subscribeToHydration = () => () => {};
@@ -113,7 +114,7 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
                 ) : fallbackImageUrl ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={displayImageUrl(fallbackImageUrl, 828)} alt={alt} className="absolute inset-0 h-full w-full object-contain object-center"
-                        style={isReconciledLocalSkuAssetUrl(fallbackImageUrl) ? { mixBlendMode: "multiply" } : undefined} />
+                        style={isAssembledOneMlVialImage(fallbackImageUrl) ? { mixBlendMode: "multiply", transform: "scale(0.62)" } : isReconciledLocalSkuAssetUrl(fallbackImageUrl) ? { mixBlendMode: "multiply" } : undefined} />
                 ) : (
                     <div className="absolute inset-0 bg-linen" aria-hidden />
                 )}
