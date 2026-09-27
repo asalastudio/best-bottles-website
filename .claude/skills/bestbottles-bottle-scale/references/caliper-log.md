@@ -229,3 +229,30 @@ it fits all 13 of the 13-415 roller bodies.
 | Stem | 7.20 → 6.77 × 6.68 | 7.80 → 6.51 × 7.32 |
 
 **Still needed:** the ball Ø, and the flange Ø and thickness.
+
+### 13-415 roll-on caps (carried over from the 2026-09-27 materials session)
+
+Source: the approved tall 9 mL materials package, `docs/reviews/tall-9ml-2026-09-27` on branch
+`codex/tall-9ml-materials-handoff`.
+
+**Long roll-on shell** (`13-415__roll-on-cap__Roll-On`, all 9 finishes)
+
+- **Reading:** OD 16.80.
+- **Given with it:** the glass at or near the shoulder read 18.29 and 18.27. These are logged on the Tall Cylinder row
+  as `shoulderReadings`, with the datums unconfirmed.
+- **Model:**
+  - seated at Z 92.160 mm;
+  - 0.745 mm glass reveal per side;
+  - crown rounding ~0.50 mm, lower edge ~0.13 mm;
+  - height 24.334 mm, which is model-derived, not measured.
+- **Still needed:** height, inside diameter, inside depth, and Asm.
+
+**Short ribbed cap** (`13-415__roll-on-cap__Short`, black and white)
+
+- **Readings:** OD 15.50, H 9.49, rim-wall reading 1.85, Dep 7.17, and 5.40 of smooth front space between the rib groups.
+- **Not yet applied to the model.**
+- **Roof:** 2.32 mm (H − Dep), only if those two datums agree.
+- **Open question:** the inside opening diameter, measured straight across the hole.
+  - Taken as a plain radial wall, 1.85 gives an 11.80 opening. That is narrower than the Tall's 12.37 mouth and its
+    13.23 thread envelope, so 1.85 probably includes a thread ridge.
+- **Superseded, never use:** 9.45 / 2.50 / 7.07.
