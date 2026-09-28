@@ -105,5 +105,6 @@
     "rectangle"
   ],
   "overflowPublishedPlateScale": 0.95,
-  "capOffFitScale": 0.92
+  "capOffFitScale": 0.92,
+  "registerKits": "2026-09-27, Jordan approved (size-consistency audit, step 1): these scales size published plates and the per-SKU kits cut from them. A component-register kit is drawn on its body's px/mm datum, so it skips them and shares one frame with every SKU of its glass (src/lib/products/pdp-redesign/stage.ts, src/lib/register/stage-envelopes.ts). Slim 50 mL had drawn smaller than the 30 mL, Sleek 5 and 30 mL and Circle 15 mL were shrunk twice, and frosted Elegant 60 mL was 25% smaller than clear."
 }

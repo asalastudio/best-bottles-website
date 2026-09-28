@@ -51,6 +51,16 @@ export function registerStageEnabled(): boolean {
     return process.env.NEXT_PUBLIC_REGISTER_STAGE !== "off";
 }
 
+/** The kits a stage draws from one payload: every renderable SKU, with the 9 mL pilot's rows reconciled. */
+export function drawableRegisterKits(payload: RegisterStagePayload): Record<string, RegisterKit> {
+    const kits: Record<string, RegisterKit> = {};
+    for (const [sku, candidate] of Object.entries(kitsFromRegister(payload))) {
+        const reconciled = reconcileCylinder9Kit(candidate);
+        if (reconciled) kits[sku] = reconciled;
+    }
+    return kits;
+}
+
 export async function loadRegisterKits(convex: ConvexHttpClient, graceSkus: ReadonlyArray<string | null | undefined>): Promise<Record<string, RegisterKit>> {
     if (!registerStageEnabled()) return {};
     const wanted = [...new Set(graceSkus.filter((sku): sku is string => typeof sku === "string" && sku.length > 0))];
@@ -59,10 +69,7 @@ export async function loadRegisterKits(convex: ConvexHttpClient, graceSkus: Read
     for (let index = 0; index < wanted.length; index += CHUNK) {
         try {
             const payload = await convex.query(api.registerStage.forSkus, { graceSkus: wanted.slice(index, index + CHUNK) }) as RegisterStagePayload;
-            for (const [sku, candidate] of Object.entries(kitsFromRegister(payload))) {
-                const reconciled = reconcileCylinder9Kit(candidate);
-                if (reconciled) kits[sku] = reconciled;
-            }
+            Object.assign(kits, drawableRegisterKits(payload));
         } catch (error) {
             // The register is additive: without it the stages draw the legacy kits.
             if (process.env.NODE_ENV !== "production") console.warn("[register] stage lookup unavailable; drawing legacy kits", error instanceof Error ? error.message : error);

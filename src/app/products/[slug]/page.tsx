@@ -40,6 +40,7 @@ import { resolveItemDescriptions } from "@/lib/products/item-description/resolve
 import { collectionDescription, collectionFor, derivePicks, resolveVariant, type SiblingGlassGroup } from "@/lib/products/pdp-redesign/model";
 import type { KitLike } from "@/lib/products/pdp-redesign/stage";
 import { loadRegisterKits } from "@/lib/register/load";
+import { loadGlassStageEnvelopes } from "@/lib/register/stage-envelopes";
 import { isSoldOutStockStatus } from "@/lib/checkout";
 
 export const dynamic = "force-dynamic";
@@ -197,6 +198,11 @@ async function loadRedesignPayload(
         if (pair.websiteSku) kitsBySku[pair.websiteSku] = kit;
         if (pair.graceSku) kitsBySku[pair.graceSku] = kit;
     }
+    // One frame per glass: the bounds every SKU of this glass needs, across all its colours and
+    // closures (cached per glass), read while the published kits load.
+    const stageEnvelopesLoad = Object.keys(registerKits).length
+        ? loadGlassStageEnvelopes({ family: data.group.family, capacityMl: data.group.capacityMl ?? null })
+        : Promise.resolve({});
     for (let index = 0; index < pending.length; index += 50) {
         try {
             const chunk = await convex.query(api.productKits.forSkus, { pairs: pending.slice(index, index + 50) });
@@ -230,6 +236,7 @@ async function loadRedesignPayload(
         variants: data.variants,
         siblings,
         kitsBySku,
+        stageEnvelopes: await stageEnvelopesLoad,
         platesBySku,
         descriptions: resolveItemDescriptions(data.variants),
         collection,

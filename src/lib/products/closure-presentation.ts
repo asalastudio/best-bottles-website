@@ -19,3 +19,8 @@ export function allowsExplodedClosure(applicator?: string | null, family?: strin
     if (requiresAssembledClosure(applicator, websiteSku)) return false;
     return !(family === "Boston Round" && ["Metal Roller Ball", "Plastic Roller Ball"].includes(applicator ?? ""));
 }
+
+/** A top whose bulb and hose (and tassel) hang beside and below the glass: catalog applicator identity, as above. */
+export function hangsBesideGlass(applicator?: string | null): boolean {
+    return policy.hangingApplicators.some(value => value.toLowerCase() === applicator?.trim().toLowerCase());
+}

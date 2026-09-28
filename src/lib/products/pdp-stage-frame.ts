@@ -8,6 +8,12 @@
  *
  * CAP OFF never grows the bottle past the locked glass size. A beside-cap
  * composition may shrink further to keep a 4% margin.
+ *
+ * One glass, one size (size-consistency audit 2026-09-27): a register kit is
+ * framed to its body's envelope, the bounds every SKU of that glass needs,
+ * so a cap, fitment or colour swap never rescales or moves the glass. The
+ * capacity locks size plates; a register kit's datum already sizes its glass
+ * in px/mm, so the locks stay off for it.
  */
 
 import { REMOVABLE_KIT_SLOTS, detachedCapOffset } from "./kit-frame";
@@ -20,9 +26,11 @@ import {
     pdpPublishedPlateScale,
 } from "./pdp-capacity-standards";
 
+export type StageBounds = { left: number; top: number; right: number; bottom: number };
+
 type PartBounds = {
     slot?: string;
-    bounds: { left: number; top: number; right: number; bottom: number };
+    bounds: StageBounds;
     exploded?: { dx: number; dy: number };
 };
 
@@ -46,7 +54,11 @@ export function pdpCapacityScale(
     return pdpPublishedPlateScale(family, capacityMl, color);
 }
 
-function unionBounds(parts: readonly PartBounds[]) {
+/**
+ * What the CAP ON and SIDECAR frame must hold for these parts: every part in
+ * place, and each removable closure both seated and parked beside the glass.
+ */
+export function pdpStageBounds(parts: readonly PartBounds[]): StageBounds {
     const body = parts.find(p => p.slot === "body")?.bounds ?? null;
     const boxes = parts.flatMap(part => {
         if (!part.slot || !REMOVABLE_KIT_SLOTS.has(part.slot) || !body) return [part.bounds];
@@ -61,6 +73,14 @@ function unionBounds(parts: readonly PartBounds[]) {
     return {
         left: Math.min(...boxes.map(box => box.left)), right: Math.max(...boxes.map(box => box.right)),
         top: Math.min(...boxes.map(box => box.top)), bottom: Math.max(...boxes.map(box => box.bottom)),
+    };
+}
+
+/** The smallest rectangle holding both. */
+export function mergeStageBounds(a: StageBounds, b: StageBounds): StageBounds {
+    return {
+        left: Math.min(a.left, b.left), top: Math.min(a.top, b.top),
+        right: Math.max(a.right, b.right), bottom: Math.max(a.bottom, b.bottom),
     };
 }
 
@@ -105,6 +125,15 @@ export function pdpStageFrame(input: {
     color?: string | null;
     view: Exclude<PdpStageView, "exploded">;
     parts?: readonly PartBounds[] | null;
+    /**
+     * The bounds shared by every SKU of this glass (`pdpStageBounds` of each,
+     * merged). Framing to it rather than to this SKU's own parts gives every
+     * cap, fitment and colour of the glass one scale and one position, as
+     * Build Your Bottle does. Parts reaching past it widen it; nothing is cut.
+     */
+    envelope?: StageBounds | null;
+    /** False for a register kit: its body datum sizes the glass, so the plate-era capacity lock must not shrink it again. */
+    capacityLock?: boolean;
     /** Apply the same canvas scale to both members of a cap-on/off plate pair. */
     hasCapOffPlate?: boolean;
     width?: number;
@@ -112,7 +141,7 @@ export function pdpStageFrame(input: {
 }): PdpStageFrame {
     const width = input.width ?? PDP_PLATE_CANVAS.width;
     const height = input.height ?? PDP_PLATE_CANVAS.height;
-    const capacityScale = pdpCapacityScale(input.family, input.capacityMl, input.color);
+    const capacityScale = input.capacityLock === false ? 1 : pdpCapacityScale(input.family, input.capacityMl, input.color);
     let scale = capacityScale;
     const detachCap = input.view === "capOff";
 
@@ -124,7 +153,8 @@ export function pdpStageFrame(input: {
 
     const canvasBounds = { left: 0, top: 0, right: width, bottom: height };
     if (input.parts?.length) {
-        const bounds = unionBounds(input.parts);
+        const own = pdpStageBounds(input.parts);
+        const bounds = input.envelope ? mergeStageBounds(input.envelope, own) : own;
         scale = Math.min(scale, fitScale(bounds, width, height));
         return centerFrame(bounds, scale, width, height);
     }

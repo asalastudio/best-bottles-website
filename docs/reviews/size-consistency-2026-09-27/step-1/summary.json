@@ -1,0 +1,45 @@
+{
+  "step": "Size consistency audit, step 1: one frame per glass on the product page, and no plate-era size limits on component-library drawings",
+  "approved": "Jordan, 2026-09-27",
+  "data": "production (precise-raccoon-123), read-only; desktop 1440 x 900, product stage 672 x 540",
+  "method": "The audit's pdp-stage.ts (PR #300) run twice on the same production data: before = main's framing, after = this branch. Before-mode reproduced the original audit exactly (0 of 2,479 SKUs differed). Glass width measured from the drawn images; a SKU is off when its glass is more than 3% from its group's reference.",
+  "perPage": {
+    "note": "What a customer sees in one page's cap and colour swapper: glass width against the page's own component-library variants.",
+    "before": { "pages": 263, "pagesThatChangeSize": 91, "skusOff": 267, "skusOffOver8pct": 212, "allLibraryPages": 152, "allLibraryPagesThatChangeSize": 11 },
+    "after": { "pages": 263, "pagesThatChangeSize": 79, "skusOff": 236, "skusOffOver8pct": 199, "allLibraryPages": 152, "allLibraryPagesThatChangeSize": 0 },
+    "remaining": "Every page still changing size mixes library drawings with store photos or legacy per-SKU kits (steps 3 and 4)."
+  },
+  "libraryFrames": {
+    "note": "Component-library (register) SKUs grouped by glass and frame key: the glass, or one of its hanging tops (vintage bulb sprayer, with or without tassel).",
+    "before": { "skus": 1718, "groups": 78, "groupsWithMoreThanOneFrame": 32, "skusOff": 93 },
+    "after": { "skus": 1718, "groups": 78, "groupsWithMoreThanOneFrame": 0, "skusOff": 38 },
+    "remaining": "All 38 are Elegant 60 mL: its frosted photo body is drawn 5% narrower than the clear plate at the same height (an image fix)."
+  },
+  "perGlassAndFrameKey": {
+    "before": { "skusOff": 397, "skusOffOver8pct": 275, "byCause": { "frame": 89, "photo": 159, "kit": 105, "image": 44 } },
+    "after": { "skusOff": 330, "skusOffOver8pct": 235, "byCause": { "frame": 0, "photo": 160, "kit": 92, "image": 78 } }
+  },
+  "perGlassStrict": {
+    "note": "The audit's original grouping (one reference per glass). The 189 frame differences left are the bulb-sprayer pages, framed on their own by design.",
+    "before": { "skusOff": 684, "skusOffOver8pct": 465, "byCause": { "frame": 368, "photo": 163, "kit": 104, "image": 49 } },
+    "after": { "skusOff": 515, "skusOffOver8pct": 404, "byCause": { "frame": 189, "photo": 160, "kit": 92, "image": 74 } }
+  },
+  "sizeChanges": {
+    "note": "Library SKUs whose drawn glass width changed by more than 3%.",
+    "grew": 771,
+    "shrank": 137,
+    "unchanged": 810,
+    "largestGrowth": { "Slim 50 mL": "+150% (0.40 limit removed)", "Sleek 5 mL": "+56% (0.64)", "Sleek 30 mL": "+52% (0.63)", "Circle 15 mL": "+29% (0.775)", "families with the 0.95 default": "+5%" },
+    "largestShrink": {
+      "Elegant 60 mL plain bulb-sprayer pages": "-17%: five tassel sprayers on the clear plain page are labelled plain in the catalogue, so the page is framed for a tassel",
+      "reducer and dropper pages": "-5% to -10% (Cylinder 25, Slim 30, Diamond 60, Round 78): framed with the same glass's lotion-pump overcap"
+    }
+  },
+  "capacityLadder": {
+    "note": "Glass height on screen for library drawings, standard tops.",
+    "before": { "Slim 30/50/100": "373 / 157 / 393 px", "Sleek 5/8/30/50/100": "154 / 330 / 247 / 373 / 373 px", "Circle 15/50/100": "259 / 372 / 372 px", "Elegant 15/60/100": "316 / 314 / 373 px" },
+    "after": { "Slim 30/50/100": "356 / 393 / 393 px", "Sleek 5/8/30/50/100": "240 / 348 / 376 / 393 / 393 px", "Circle 15/50/100": "334 / 371 / 388 px", "Elegant 15/60/100": "332 / 363 / 382 px" },
+    "caveat": "Every glass taller than 76 mm is drawn 800 px tall by the register datum, so tall capacities differ less than they physically do (unchanged by this step)."
+  },
+  "proofs": ["1-size-limits.webp", "2-one-frame-per-glass.webp", "3-hanging-tops.webp"]
+}
