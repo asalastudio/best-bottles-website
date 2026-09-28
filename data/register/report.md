@@ -1,10 +1,10 @@
 # Component register — Phase 1 reconciliation (2026-09-28)
 
-Source: Convex prod export (2484 rows, collected 2026-09-28T21:48:38Z), PSD library inventory (393 PSDs), body-dims (144 keys), 23 Sep review files (49 items). Read-only.
+Source: Convex prod export (2484 rows, collected 2026-09-28T23:11:06Z), PSD library inventory (393 PSDs), body-dims (146 keys), 23 Sep review files (49 items). Read-only.
 
 ## Totals
 
-- Bodies: **93 current** (0 retired-only) across 32 neck groups
+- Bodies: **94 current** (0 retired-only) across 32 neck groups
 - Components: **149 current**, 0 retired, 15 quarantined; **129 current components have a library PSD** (16 via alias-map, 34 case-insensitive)
 - Assemblies: **2106 verified**, **109 candidate**, **55 quarantine**, **2 retired**, **2 exception**
 - Quarantine rows: 120 (see quarantine.csv)
@@ -25,7 +25,7 @@ Source: Convex prod export (2484 rows, collected 2026-09-28T21:48:38Z), PSD libr
 | 10mm | 1 | 1 | 0 | 0 | 0 | 3 | 0 | 0 |
 | 11mm | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 0 |
 | 12mm | 2 | 1 | 0 | 0 | 4 | 0 | 0 | 0 |
-| 13-415 | 17 | 5 | 33 | 586 | 13 | 0 | 0 | 2 |
+| 13-415 | 18 | 5 | 33 | 586 | 13 | 0 | 0 | 2 |
 | 13-425 | 3 | 4 | 2 | 0 | 16 | 0 | 0 | 0 |
 | 14.3mm | 2 | 1 | 1 | 0 | 2 | 0 | 0 | 0 |
 | 15-415 | 2 | 2 | 7 | 21 | 0 | 0 | 0 | 0 |
@@ -90,7 +90,7 @@ The catalogue gave these parts new graceSkus; each is the same part (same websit
 
 The matrices counted **Glass Bottle** records only; the register also carries atomizers, plastic and aluminium bottles and jars, so both counts are shown.
 
-- ✅ 13-415: glass body formats 15 vs matrix 15 — plus 2 non-glass: atomizer-5ml-13-415 (Metal Atomizer), plastic-bottle-30ml-13-415 (Plastic Bottle)
+- ⚠️ 13-415: glass body formats 16 vs matrix 15 — plus 2 non-glass: atomizer-5ml-13-415 (Metal Atomizer), plastic-bottle-30ml-13-415 (Plastic Bottle)
 - ⚠️ 13-415: glass records 589 incl. 2 retired vs matrix 538 (31 retired); 12 non-glass rows besides
 - ✅ 17-415: assemblies 145 vs matrix 145 — by body: cylinder-9ml-17-415 145
 - ⚠️ 18-415: glass body formats 23 vs matrix 22
@@ -169,10 +169,10 @@ Each sellable assembly names the parts it is physically made of (`buildParts`), 
 | empire-100ml-18-415 | 43 | 0 | 1 |
 | empire-50ml-18-415 | 46 | 0 | 1 |
 | flair-15ml-13-415 | 36 | 0 | 2 |
+| footed-rectangle-10ml-13-415 | 36 | 0 | 2 |
 | grace-55ml-18-415 | 43 | 0 | 0 |
 | pillar-9ml-13-415 | 4 | 0 | 0 |
 | plastic-bottle-30ml-13-415 | 0 | 0 | 3 |
-| rectangle-10ml-13-415 | 72 | 0 | 2 |
 | round-128ml-18-415 | 92 | 0 | 0 |
 | round-78ml-18-415 | 86 | 0 | 0 |
 | royal-13ml-13-415 | 35 | 0 | 2 |
@@ -185,6 +185,7 @@ Each sellable assembly names the parts it is physically made of (`buildParts`), 
 | slim-30ml-18-415 | 37 | 0 | 0 |
 | slim-50ml-18-415 | 43 | 0 | 0 |
 | square-15ml-13-415 | 34 | 0 | 0 |
+| tall-rectangle-10ml-13-415 | 36 | 0 | 0 |
 | tola-decorative-3ml-14.3mm | 1 | 0 | 0 |
 | tola-decorative-6ml-14.3mm | 1 | 0 | 0 |
 | tulip-5ml-13-415 | 36 | 0 | 0 |

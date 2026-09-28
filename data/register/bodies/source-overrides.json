@@ -98,7 +98,7 @@
  "marble-decorative-5ml-17.52mm|Clear": {
   "exclude": "metal-and-wood decorated bottle (wood sleeve, gold base); no bare glass"
  },
- "rectangle-10ml-13-415|Clear": {
+ "tall-rectangle-10ml-13-415|Clear": {
   "stripWhiteGround": true,
   "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
  },
@@ -141,5 +141,9 @@
   "psd": "2.  18-415 Bottles /15. Slim 50ml/2. Slim 50ml (18-415) Sideviews/Slim 50ml .psd",
   "layer": "Layer 1",
   "why": "every product PSD's Slim 50 body layer stops at the shoulder under the cap (no neck); the sideview photo carries the whole bottle (Jordan 2026-09-25: reducers and necks)"
+ },
+ "footed-rectangle-10ml-13-415|Clear": {
+  "stripWhiteGround": true,
+  "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass, as on the Tall Rectangle; flood-filled from the edge and dropped (clear glass only)"
  }
 }

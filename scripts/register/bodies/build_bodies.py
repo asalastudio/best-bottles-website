@@ -5,7 +5,7 @@ glass body from the proper measurements; these become the source-of-truth bodies
 
   python3 scripts/register/bodies/build_bodies.py inputs [--pass lit]                  # geometry + material images per body x glass
   node   scripts/register/bodies/render_bodies.mjs  [--pass lit] [--only a,b|Glass]    # Sunburst (resumable)
-  python3 scripts/register/bodies/build_bodies.py qa [--pass lit] [--only bodyA,bodyB] # fit, lock, bone-bake, measure, sheets
+  python3 scripts/register/bodies/build_bodies.py qa [--pass lit] [--only bodyA,bodyB [--merge]] # fit, lock, bone-bake, measure, sheets
 
 One master geometry per body: its Clear cut, else its first cut glass, enlarged so the body's longest side is
 2000 px on its own canvas (multiples of 16, at least 655,360 px). Every glass of that body takes the master's
@@ -546,7 +546,14 @@ def qa():
             c = r.get("checks", {})
             print(f"  {r['plateKey']}: {r.get('status')} IoU {c.get('fittedIoU')} raw {c.get('rawIoU')} holes {c.get('interiorHolePct')}% px/mm {r.get('pxPerMm')} width {c.get('widthMm')} mm ({c.get('widthErrorPct')}%) seat {r.get('anchors', {}).get('seatY')} foot {r.get('anchors', {}).get('baselineY')}")
         sheets(rows, f"review-sample{SUFFIX}")
-        print("(--only: measurements not written)")
+        if "--merge" not in sys.argv:
+            print("(--only: measurements not written; add --merge to replace just these plates in the measurements)")
+            return
+        # --only --merge (2026-09-28): a body added later is measured on its own; every other plate keeps its numbers
+        mine = {r["plateKey"] for r in results}
+        kept = [m for m in json.loads(MEASURE.read_text()) if m["plateKey"] not in mine]
+        MEASURE.write_text(json.dumps(kept + results, indent=1) + "\n")
+        print(f"merged {len(results)} plate(s) into {MEASURE.relative_to(ROOT)}")
         return
     MEASURE.write_text(json.dumps(results, indent=1) + "\n")
     sheets(rows, f"review-bodies{SUFFIX}")
