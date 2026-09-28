@@ -229,8 +229,8 @@
       "fitmentTypesObserved": {
         "Fine Mist Sprayer": 30,
         "Lotion Pump": 15,
-        "Metal Roller Ball": 49,
-        "Plastic Roller Ball": 51
+        "Metal Roller Ball": 50,
+        "Plastic Roller Ball": 50
       },
       "assemblies": {
         "verified": 145
@@ -272,7 +272,7 @@
     },
     "18-400": {
       "kind": "thread",
-      "bodies": 3,
+      "bodies": 2,
       "components": 8,
       "componentTypes": {
         "cap": 2,
@@ -282,12 +282,11 @@
         "": 4,
         "Dropper": 12,
         "Glass Rod": 1,
-        "N/A": 1,
-        "Reducer": 1
+        "N/A": 1
       },
       "assemblies": {
         "candidate": 1,
-        "verified": 18
+        "verified": 17
       },
       "matrixAcceptance": null
     },
@@ -310,14 +309,14 @@
         "Fine Mist Sprayer": 5,
         "Lotion Pump": 212,
         "Perfume Spray Pump": 168,
-        "Reducer": 345,
+        "Reducer": 346,
         "Vintage Bulb Sprayer": 271,
         "Vintage Bulb Sprayer with Tassel": 234
       },
       "assemblies": {
         "candidate": 47,
         "exception": 2,
-        "verified": 1224
+        "verified": 1225
       },
       "notes": [
         "Reducer is an insert beneath reducer-plus-cap assemblies, not a cap finish.",
