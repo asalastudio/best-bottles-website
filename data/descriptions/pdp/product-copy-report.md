@@ -1,9 +1,9 @@
 # Product copy v2: generator report
 
-Generated 2026-09-28 23:05 from `data/register/source/convex-products-2026-09-25.json.gz` (dev:helpful-elephant-638, 2026-09-25T08:44:26.958Z).
+Generated 2026-09-28 23:25 from `data/register/source/convex-products-2026-09-25.json.gz` (dev:helpful-elephant-638, 2026-09-25T08:44:26.958Z).
 
-- **Products:** 2,183 bottles and jars, in 321 titles (product groups share a title).
-- **Passing every check:** 2,151. **With an error:** 0. **Over a length target only:** 32.
+- **Products:** 2,368 (2,183 bottles and jars, 135 parts, 50 packaging items), in 370 titles (product groups share a title).
+- **Passing every check:** 2,326. **With an error:** 2. **Over a length target only:** 40.
 - **Skipped by the loader:** {'retired': 127}.
 
 ## By dispense mode
@@ -17,8 +17,10 @@ Generated 2026-09-28 23:05 from `data/register/source/convex-products-2026-09-25
 | PUMP_LOTION | 213 | Lotion Pump Bottle |
 | PUMP_SPRAY | 183 | Perfume Spray Bottle |
 | MIST | 169 | Fine-Mist Spray Bottle |
+| PART | 135 | draft rules, by part or packaging kind |
 | POUR | 117 | Pour Bottle |
 | DROP | 81 | Dropper Bottle |
+| PACKAGING | 50 | draft rules, by part or packaging kind |
 | VIAL | 25 | Vial |
 | ATOMIZER | 23 | Travel Atomizer |
 | STOPPER | 19 | Bottle with Glass Stopper |
@@ -33,7 +35,8 @@ Generated 2026-09-28 23:05 from `data/register/source/convex-products-2026-09-25
 
 | Finding | Products |
 |---|---:|
-| target: option N characters | 32 |
+| target: option N characters | 40 |
+| N bullets | 2 |
 
 ## Titles shortened to fit 60 characters
 
@@ -62,6 +65,8 @@ Generated 2026-09-28 23:05 from `data/register/source/convex-products-2026-09-25
 
 ## Products with findings
 
+- `CapBlackPoly22mm-400` (PART): 1 bullets
+- `CP24-400BlkPls` (PART): 1 bullets
 - `GBCyl5RollSlDot` (ROLL): target: option 31 characters
 - `GBCylBlu5RollSlDot` (ROLL): target: option 31 characters
 - `GBCylAmb9RollSlDot` (ROLL): target: option 31 characters
@@ -94,3 +99,11 @@ Generated 2026-09-28 23:05 from `data/register/source/convex-products-2026-09-25
 - `GBFlair15RollSlDot` (ROLL): target: option 31 characters
 - `GBTulipAmb5RollSlDot` (ROLL): target: option 31 characters
 - `GBTulip6RollSlDot` (ROLL): target: option 31 characters
+- `Drp18-40015mlShnSlTrimBlkBulb` (PART): target: option 31 characters
+- `Drp18-40015mlShnSlTrimWhiteBulb` (PART): target: option 31 characters
+- `Drp18-415Cu` (PART): target: option 31 characters
+- `Drp18-415Sl` (PART): target: option 31 characters
+- `Drp20-4001ozShnSlTrimBlkBulb` (PART): target: option 31 characters
+- `Drp20-4001ozlShnSlTrimWhiteBulb` (PART): target: option 31 characters
+- `Drp20-4002ozShnSlTrimBlkBulb` (PART): target: option 31 characters
+- `Drp20-4002ozlShnSlTrimWhiteBulb` (PART): target: option 31 characters

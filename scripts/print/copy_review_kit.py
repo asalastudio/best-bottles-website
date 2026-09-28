@@ -2,10 +2,10 @@
 
     python3 scripts/print/copy_review_kit.py        # writes out/print/best-bottles-copy-review-kit.pdf
 
-Before the new descriptions are generated for every product, one sample per product type and size is reviewed
-on paper (RUBRIC.md §8, Phase 4). This kit lists the 42 bottle samples and 12 parts and packaging samples, and
-shows the review page with three examples written by hand. Once the generator is built, the same page is filled
-for all 54 samples from the generator's own output.
+Before the new copy goes to every product, one sample per product type and size is reviewed on paper (RUBRIC.md
+§8, Phase 4). The book lists the 42 bottle samples and 12 parts and packaging samples, the choices and open
+questions to settle first, and one review page per sample filled from data/descriptions/pdp/product-copy.json
+(run scripts/pdp-descriptions/product_copy.py first).
 
 Reads the product export and the register like family_guides.py; nothing is written to Convex or Shopify.
 """
@@ -22,6 +22,7 @@ import family_guides as fg  # noqa: E402
 
 OUT = fg.OUT / "best-bottles-copy-review-kit.pdf"
 CURRENT = fg.ROOT / "data/descriptions/pdp/item-descriptions.json"
+COPY = fg.ROOT / "data/descriptions/pdp/product-copy.json"  # scripts/pdp-descriptions/product_copy.py
 
 # One bottle per product type and size band, plus the cases this review has to settle.
 SAMPLES = [
@@ -83,36 +84,67 @@ PARTS = [
     ("P12", "FunnelMetalGl", "Funnel", "Tools"),
 ]
 
-# Three review pages written by hand to show the format; the generator writes the rest.
-MOCKS = {
-    "GBCylAmb9MtlRollBlkDot": dict(
-        title="9 ml Amber Cylinder Roll-On Bottle", option="Steel Ball, Black Dotted Cap",
-        sentences=["A roll-on bottle for perfume oil, attar and carrier-oil blends, sized for samples, promotions and travel.",
-                   "The steel ball lays the oil on in a thin, even line."],
-        bullets=[("Included", "Steel roller ball and black dotted cap, fitted"),
-                 ("Fits", "17-415 neck; also takes the plastic roller ball, fine-mist sprayer and treatment pump sold for this bottle"),
-                 ("Glass", "Amber; reduces the light that reaches the oil")],
-        care="Carry it capped and upright; the ball alone is not a seal.",
-        question=""),
-    "GBCrcl100AnSpGl": dict(
-        title="100 ml Clear Circle Vintage-Style Bulb Sprayer", option="Gold Bulb",
-        sentences=["A vintage-style bulb-spray bottle for eau de parfum and cologne kept on a dressing table, and for display or gifts.",
-                   "Squeeze the bulb to spray."],
-        bullets=[("Included", "Gold vintage-style bulb sprayer, packed unattached, and a travel cap"),
-                 ("Fits", "18-415 neck; also takes the fine-mist sprayer, lotion pump and orifice reducer sold for this bottle"),
-                 ("Glass", "Clear; shows the fill level")],
-        care="To carry it, take off the bulb and fit the travel cap.",
-        question="Is the travel cap one of the 18-415 lined caps, and in which colour?"),
-    "Alu100mlSprayBlack": dict(
-        title="100 ml Aluminum Spray Bottle", option="Black Sprayer",
-        sentences=["An aluminum spray bottle for perfume, body mist, room spray and air freshener.",
-                   "The sprayer turns a thin liquid into a fine, even mist."],
-        bullets=[("Included", "Black fine-mist sprayer, fitted"),
-                 ("Fits", "20-410 neck"),
-                 ("Material", "Aluminum; light, and it does not break")],
-        care="Thin liquids only: perfume oil and undiluted essential oil clog the sprayer.",
-        question='Title word: "Spray Bottle" rather than "Perfume Spray Bottle", since aluminum is also sold for room spray?'),
+# Questions printed on one sample's page; questions that touch many pages are on the "Open questions" page.
+QUESTIONS = {
+    "GBMtlRoll28Blk": "Sold complete on a 16 mm neck: does any other part fit it?",
+    "GBSpry3mlClBlk": "Sold complete on a 12 mm neck: is the sprayer crimped on or screwed on?",
+    "GBCylAmb9SpryMattSl": "The overcap comes from the old product pages (29 of 31 of these sprayers): is it on every 17-415 sprayer?",
+    "GBSpry1ozGl": "Fixed top and base in the register: is the sprayer crimped, so the bottle cannot be refilled?",
+    "Alu100mlSprayBlack": "Is the aluminum lined inside, and is there any liquid it should not hold?",
+    "Alu120mlLotionPumpBlack": "Same question as S15: lining, and liquids to avoid.",
+    "GBDiva46AnSpGl": "Which cap is the travel cap (an 18-415 lined cap?), and in which colour?",
+    "GBCrcl100AnSpGl": "Which cap is the travel cap, and in which colour?",
+    "GBDiva30RdcrShnGl": "What plastic is the orifice reducer?",
+    "GBBstn15BlkDrp": "D6: all six dropper finishes are to be added to this bottle. Item numbers and prices are needed.",
+    "GBBstnAmb1ozWhtDropperShnGlTrim": "Is the dropper bulb natural rubber or another material?",
+    "GBCyl5GlMattSht": "The liner line is on every 13-415 cap. Confirm it for the short lined caps.",
+    "GBElg15MinarCu": "Is the minaret cap lined like the other 13-415 caps?",
+    "GB1mlVBlk": "Is the 1 ml closure a plug applicator only, or a plug under a cap?",
+    "GBTrdpBlue": "The old pages say the apothecary stoppers are made by hand. Are the teardrop stoppers too?",
+    "GBAtom10Gl": "Does the atomizer fill from the top or from the bottom?",
+    "CJClr15Pnk": "Is there a liner in the jar lid?",
+    "PbNat16ozFlpWh": "Filed as a glass bottle in production; the correction file moves it to Plastic Bottle. What plastic is it?",
+    "CPRoll13-415SlDot": "Is the roll-on cap sold for both the steel and the plastic roller?",
+    "Spry18-415ShnGl": "Is the dip tube cut for one bottle, or trimmed by the buyer?",
+    "AnSp18-415Red": "Sold alone: does it come with a travel cap?",
+    "Drp20-4001ozWhiteBulb": "The stem is matched to the 30 ml Boston round. Is that right for every 1 oz dropper?",
+    "CP18-415BrwnLthr": "Does the faux-leather cap fit over the reducer only, or on a plain 18-415 neck too?",
+    "OBagGold4x6": "Does the bag close with a drawstring?",
+    "BoxCWndwWhite": "Which bottles fit the size C window box (the name says \"Size 0.75\")?",
+    "FunnelMetalGl": "Which necks does the small funnel fit?",
 }
+
+# Choices the generator makes that the copy standard does not settle yet. Approve or change each.
+CHOICES = [
+    ("Tassel bulbs", "The title says \"with Tassel\", so the option names only the bulb: \"Gold Bulb\", not \"Gold Bulb and Tassel\"."),
+    ("Perfume spray pumps", "The option says \"Matte Gold Sprayer\" and Included says \"fine-mist sprayer\", as the printed catalogue does, "
+                            "instead of \"Pump\", which reads like a lotion pump."),
+    ("Fits line", "\"18-415 neck; takes the fine-mist sprayer, lotion pump and reducer sold for this bottle\". \"Also\" is dropped so "
+                  "the longest lists fit two phone lines; caps are listed as \"caps\"."),
+    ("Vials with a dropper", "Titled \"1 Dram (4 ml) Amber Vial with Dropper\"."),
+    ("Refill line", "Sprayers on a screw neck: \"The sprayer turns a thin liquid into a fine, even mist, and unscrews so the bottle "
+                    "can be refilled.\" Not on crimped or fixed tops."),
+    ("\"Fitted\"", "Included ends with \"fitted\" on rollers, sprayers, pumps, reducers and droppers. The bulb says \"packed unattached\"."),
+    ("No Care note", "Pour bottles, vials, jars and stock bottles have no warning line."),
+    ("Options over 30 characters", "40 labels such as \"Plastic Ball, Silver Dotted Cap\" (31). Keep them, or shorten \"Dotted\" to \"Dot\"."),
+    ("Parts", "\"Roll-On Cap for 13-415 Necks\" with the finish as the option; droppers by bottle: \"Dropper for 30 ml (1 oz) Bottles, "
+              "20-400 Neck\". Counted by the item: \"1, 12 or 144 caps\"."),
+    ("Packaging", "Colour in the title, size as the option: \"Gold Organza Gift Bag\", \"4 x 6 in\"."),
+]
+
+# Questions that touch many pages (most were sent to Abbas on 28 Sep).
+OPEN_QUESTIONS = [
+    ("Shipping", "Do rollers, sprayers, pumps, reducers and droppers ship fitted to the bottle? The copy says \"fitted\"."),
+    ("Travel cap", "Which cap is packed with each bulb sprayer, and in which colour?"),
+    ("Dropper bulb", "Natural rubber, or another material? The Care note names rubber."),
+    ("Plastics", "What plastic are the roller housings and the orifice reducers?"),
+    ("Atomizers", "Do they fill from the top or from the bottom?"),
+    ("Aluminum", "Is it lined inside? Which liquids should it not hold?"),
+    ("18-415 droppers", "Which bottles is each 18-415 dropper's stem cut for?"),
+    ("22-400 and 24-400 caps", "No bottle in the catalogue uses these necks. Which bottles are they for?"),
+    ("Data to correct", "Three plastic flip-top bottles filed as glass; the 4 oz flip-top recorded as 114 ml; "
+                        "the 1.5 ml vial recorded as 2 ml. These go in the correction file."),
+]
 
 CSS = """
 :root{--bone:#F5F3EF;--ink:#2C2C2E;--obsidian:#1D1D1F;--second:#6B6660;--muted:#9A9590;--rule:#DCD7D0;--sunk:#EEEAE3;--gold:#8B6F42;--gold2:#C5A065}
@@ -181,6 +213,13 @@ table.tech td:first-child{color:var(--second);width:1.1in}
 .box .lines div{height:.26in;border-bottom:.5pt solid #B9AE98}
 .box .sign{display:flex;justify-content:space-between;font-size:7pt;color:var(--second);margin-top:.08in}
 .marker{font-size:2pt;color:#F5F3EF}
+p.intro{font-size:8.4pt;color:var(--second);max-width:6in;margin:0 0 .12in}
+table.list td.tick{width:.4in;border-left:.5pt solid var(--rule)}
+.nophoto{font-size:7.4pt;color:var(--muted);align-self:center}
+.nocare{font-size:7.6pt;color:var(--muted);margin:.02in 0}
+.flag{font-size:7pt;color:var(--muted);margin-top:.06in}
+table.tech[small]{font-size:6.8pt}
+table.tech[small] td:first-child{width:.95in}
 """
 
 
@@ -239,50 +278,72 @@ def main() -> None:
         f"<td>{fg.esc(part_name(sku))}</td><td>{fg.esc(kind)}</td><td class=t>{fg.esc(tests)}</td></tr>"
         for pid, sku, kind, tests in PARTS)
 
+    generated = json.load(open(COPY))["bySku"] if COPY.exists() else {}
+    source = json.load(open(COPY)).get("source", {}) if COPY.exists() else {}
+    absent = [s for _, s, *_ in SAMPLES + PARTS if s not in generated]
+    if absent:
+        print("no generated copy for:", ", ".join(absent))
+
     mark = fg.wordmark_uri()
     cover = f"""
 <section class=cover>
   <div class=lockup><img src='{mark}' alt='Best Bottles'><span>Fragrance &amp; Beauty Packaging</span></div>
-  <div class=t><p class=kicker>Product copy review</p><h1>Samples and the review page</h1><div class=rule></div>
-    <p class=lede>The 54 products to review before new copy is written for the whole catalogue, and the page each one will be
-    reviewed on. Mark the list first: swap any sample, add any you want to see.</p></div>
+  <div class=t><p class=kicker>Product copy review</p><h1>54 samples of the new product copy</h1><div class=rule></div>
+    <p class=lede>New titles, options, descriptions and Care notes for one product of every type and size, written by the
+    generator from the rules agreed on 26 and 28 September. Approve, change or rewrite each page; a change to one page changes the
+    rule for every product like it.</p></div>
   <div class=foot><span>For Jordan and Abbas</span><span>{dt.date.today():%d %B %Y}</span></div>
 </section>"""
     how = f"""
 <section>
-  <p class=kicker>How the review works</p><h1 class=p>Review a few, then write them all</h1>
+  <p class=kicker>How the review works</p><h1 class=p>Review 54, then write them all</h1>
   <ol class=steps>
-    <li><div><b>Approve the samples.</b>42 bottles, one for each product type and size, plus 12 parts and packaging items (the lists after this page).
-      Cross out any you don't need and write in any you want to add.</div></li>
-    <li><div><b>Approve the page.</b>The last three pages are review pages written by hand to show the layout. Mark anything about the
-      layout itself: order, what is shown, what is missing.</div></li>
-    <li><div><b>Review the samples.</b>Once the generator is built, it writes all 54 review pages in this layout. Mark each one
-      Approve, Approve with changes, or Rewrite, and write changes on the page.</div></li>
-    <li><div><b>A note changes the rule, not just the page.</b>A change to one 9 ml roll-on changes every 9 ml roll-on. Write "this
-      product only" when a note is meant for one item.</div></li>
-    <li><div><b>Send the pages back.</b>Photos or scans of the marked pages, or typed notes. The notes go into the rules, and every
-      product is generated again from them.</div></li>
+    <li><div><b>Read the two pages after this one.</b>The first lists choices the generator makes that the copy standard did not
+      settle yet; tick or change each. The second lists questions for Best Bottles that affect many products.</div></li>
+    <li><div><b>Review the samples.</b>42 bottles, then 12 parts and packaging items. Mark each page Approve, Approve with changes,
+      or Rewrite, and write changes on the page.</div></li>
+    <li><div><b>A note changes the rule, not just the page.</b>A change to one 9 ml roll-on changes every 9 ml roll-on. Tick
+      "This product only" when a note is meant for one item.</div></li>
+    <li><div><b>Send the pages back.</b>Photos or scans of the marked pages, or typed notes. The notes go into the rules, every
+      product is generated again, and the approved copy goes to the site and Shopify.</div></li>
   </ol>
   <div class=two>
     <div><h2 class=k>What each review page shows</h2><ul class=anat>
       <li><b>A</b><span>Sample number, product type and size, item number</span></li>
       <li><b>B</b><span>The approved photograph</span></li>
-      <li><b>C</b><span>New title and option, with the title's length (60 characters at most, for Faire)</span></li>
-      <li><b>D</b><span>Description: two or three sentences</span></li>
-      <li><b>E</b><span>Included, Fits, Glass or Material, and Good to know when there is one</span></li>
-      <li><b>F</b><span>Care note: the one warning line, in the serif, shown beside the tech sheet on the site</span></li>
+      <li><b>C</b><span>Title and option, with the title's length (60 characters at most, for Faire)</span></li>
+      <li><b>D</b><span>Description: two or three sentences, then the bullets</span></li>
+      <li><b>E</b><span>Care note: the one warning line, in the serif, shown beside the tech sheet on the site</span></li>
+      <li><b>F</b><span>Item-type line, meta description and image alt text</span></li>
       <li><b>G</b><span>Tech sheet: capacity, neck, measurements, sets and case</span></li>
       <li><b>H</b><span>Today's description, for comparison</span></li>
       <li><b>I</b><span>Your marks and notes</span></li></ul></div>
     <div><h2 class=k>Rules already decided</h2><ul class=anat>
       <li><b>1</b><span>Measurements live in the tech sheet, never in the description.</span></li>
-      <li><b>2</b><span>Quantities are sets and cases: 1, 12 and 144 sets, and a case.</span></li>
-      <li><b>3</b><span>One Care note per product, outside the description.</span></li>
+      <li><b>2</b><span>Bottles are sold in sets and cases: 1, 12 and 144 sets, and a case. Parts and packaging are counted by the item.</span></li>
+      <li><b>3</b><span>One Care note per product at most, outside the description.</span></li>
       <li><b>4</b><span>Bulb sprayers ship with a travel cap; no room spray or air freshener on them.</span></li>
       <li><b>5</b><span>Aluminum may say "does not break" and list room spray and air freshener.</span></li>
-      <li><b>6</b><span>"Vintage-Style Bulb Sprayer" in titles; the few over 60 characters are shortened by hand.</span></li>
+      <li><b>6</b><span>Ounces only on Boston rounds and the standard 4, 8, 12 and 16 oz sizes.</span></li>
       <li><b>7</b><span>Only combinations Best Bottles sells are called a fit.</span></li></ul></div>
   </div>
+</section>"""
+    choice_rows = "".join(f"<tr><td class=id>{i}</td><td><b>{fg.esc(k)}</b></td><td>{fg.esc(v)}</td><td class=tick></td></tr>"
+                          for i, (k, v) in enumerate(CHOICES, 1))
+    question_rows = "".join(f"<tr><td class=id>{i}</td><td><b>{fg.esc(k)}</b></td><td>{fg.esc(v)}</td></tr>"
+                            for i, (k, v) in enumerate(OPEN_QUESTIONS, 1))
+    decide = f"""
+<section>
+  <p class=kicker>Before the samples</p><h1 class=p>Choices to approve</h1>
+  <p class=intro>The generator had to settle these to write the copy. Each is applied to every product; tick it, or write the change.</p>
+  <table class=list><thead><tr><th>No.</th><th>Topic</th><th>What the copy does</th><th>OK</th></tr></thead><tbody>{choice_rows}</tbody></table>
+</section>
+<section>
+  <p class=kicker>Before the samples</p><h1 class=p>Open questions for Best Bottles</h1>
+  <p class=intro>Until these are answered the copy says only what is known. Most were sent to Abbas on 28 September.</p>
+  <table class=list><thead><tr><th>No.</th><th>Topic</th><th>Question</th></tr></thead><tbody>{question_rows}</tbody></table>
+  <p class=intro style="margin-top:.16in">Generated from <span class=mono>{fg.esc(source.get("export", ""))}</span>
+  ({fg.esc(source.get("deployment") or "")}). The final run reads production.</p>
 </section>"""
     lists = f"""
 <section>
@@ -298,50 +359,64 @@ def main() -> None:
   sold with that part, by neck, instead of the other parts for one bottle.</p>
 </section>"""
 
+    def tech_rows(sku: str, c: dict) -> str:
+        t = c["tech"]
+        if c["mode"] in ("PART", "PACKAGING"):
+            rows = [("Neck", t.get("neck")), ("Finish", t.get("finish")), ("Stem", f"{t['stemMm']} mm" if t.get("stemMm") else None),
+                    ("Size", t.get("size")), ("Sold as", t.get("soldAs"))]
+        else:
+            item, fam = items[sku]
+            body = fam.bodies[item.body]
+            h = f"{body.height:g} mm ({body.height / 25.4:.2f} in)" if body.height else "—"
+            w = f"{body.width:g} mm ({body.width / 25.4:.2f} in)" if body.width else "—"
+            rows = [("Capacity", t["capacity"]), ("Neck", t["neck"]), ("Height, no cap", h), ("Diameter", w),
+                    ("Material", t["material"]), ("Sold as", t["soldAs"])]
+        return "".join(f"<tr><td>{fg.esc(k)}</td><td>{fg.esc(v)}</td></tr>" for k, v in rows if v)
+
     pages = []
-    ids = {sku: sid for sid, sku, *_ in SAMPLES}
-    for sku, m in sorted(MOCKS.items(), key=lambda kv: next(s for s, x, *_ in SAMPLES if x == kv[0])):
-        item, fam = items[sku]
-        body = fam.bodies[item.body]
-        sid = ids[sku]
-        kind, band = next((k, b) for s, x, k, b, _ in SAMPLES if x == sku)
+    entries = [(sid, sku, f"{kind} · {band}") for sid, sku, kind, band, _ in SAMPLES] + [(pid, sku, kind) for pid, sku, kind, _ in PARTS]
+    for sid, sku, kind in entries:
+        c = generated.get(sku)
+        if not c:
+            continue
         prep = fg.prepare(f"kit-{sku}", {sku: photos[sku]}, px_per_card=1100) if sku in photos else {}
-        photo = f"<img src='{prep[sku]['uri']}' alt=''>" if prep else ""
-        words = sum(len(s.split()) for s in m["sentences"])
-        bullets = "".join(f"<li><b>{fg.esc(k)}:</b> {fg.esc(v)}</li>" for k, v in m["bullets"])
-        h = f"{body.height:g} mm ({body.height / 25.4:.2f} in)" if body.height else "—"
-        w = f"{body.width:g} mm ({body.width / 25.4:.2f} in)" if body.width else "—"
-        case = f"1, 12 or 144 sets, or a case of {item.case:,} sets" if item.case else "1, 12 or 144 sets"
-        material = "Aluminum" if fam.name == "Aluminum Bottle" else f"{item.glass} glass"
-        today = current.get(sku, {}).get("description", "No description today.")
-        question = f"<p class=q><b>Question for Best Bottles:</b> {fg.esc(m['question'])}</p>" if m["question"] else ""
+        photo = f"<img src='{prep[sku]['uri']}' alt=''>" if prep else "<span class=nophoto>No approved photograph yet</span>"
+        words = sum(len(x.split()) for x in c["sentences"])
+        bullets = "".join(f"<li><b>{fg.esc(k)}:</b> {fg.esc(v)}</li>" for k, v in c["bullets"])
+        today = current.get(sku, {}).get("description") or packaging.get(sku, {}).get("itemName") or \
+            components.get(sku, {}).get("itemName") or "No description today."
+        question = f"<p class=q><b>Question for Best Bottles:</b> {fg.esc(QUESTIONS[sku])}</p>" if sku in QUESTIONS else ""
+        findings = [f for f in c["lint"]] + [n for n in c["notes"] if not n.startswith("register status")]
+        flag = f"<p class=flag>Generator note: {fg.esc('; '.join(findings))}</p>" if findings else ""
+        care = f"<p class=care>{fg.esc(c['care'])}</p>" if c["care"] else "<p class=nocare>No Care note for this type.</p>"
+        option = f"<p class=option>Option: {fg.esc(c['option'])}</p>" if c["option"] else ""
         pages.append(f"""
 <section class=review>
-  <div class=head><div><span class=id>{sid}</span><span class=tag>Format sample</span></div>
-    <div class=meta>{fg.esc(kind)} · {fg.esc(band)}<br><span class=mono>{fg.esc(sku)}</span></div></div>
+  <div class=head><div><span class=id>{sid}</span><span class=tag>Generated</span></div>
+    <div class=meta>{fg.esc(kind)}<br><span class=mono>{fg.esc(sku)}</span></div></div>
   <div class=body>
     <div><div class=photo>{photo}</div>
-      <p class=lab>Tech sheet</p>
-      <table class=tech>
-        <tr><td>Capacity</td><td>{fg.esc(body.label)}</td></tr><tr><td>Neck</td><td>{fg.esc(fg.neck_label(body.neck))}</td></tr>
-        <tr><td>Height, no cap</td><td>{h}</td></tr><tr><td>Diameter</td><td>{w}</td></tr>
-        <tr><td>Material</td><td>{fg.esc(material)}</td></tr><tr><td>Sold as</td><td>{fg.esc(case)}</td></tr></table>
-      <p class=lab>Care note</p><p class=care>{fg.esc(m['care'])}</p></div>
+      <p class=lab>Tech sheet</p><table class=tech>{tech_rows(sku, c)}</table>
+      <p class=lab>Care note</p>{care}</div>
     <div>
-      <p class=lab>Title and option</p><p class=title>{fg.esc(m['title'])}</p><p class=option>{fg.esc(m['option'])}</p>
-      <p class=count>Title {len(m['title'])} characters · description {words} words</p>
-      <p class=lab>Description</p><p class=desc>{fg.esc(' '.join(m['sentences']))}</p><ul class=bul>{bullets}</ul>
-      {question}
+      <p class=lab>Title and option</p><p class=title>{fg.esc(c['title'])}</p>{option}
+      <p class=count>Title {len(c['title'])} characters · option {len(c['option'])} · description {words} words</p>
+      <p class=lab>Description</p><p class=desc>{fg.esc(' '.join(c['sentences']))}</p><ul class=bul>{bullets}</ul>
+      {question}{flag}
+      <p class=lab>On the page and in search</p>
+      <table class=tech small><tr><td>Item type</td><td>{fg.esc(c['itemType'])}</td></tr>
+        <tr><td>Meta description</td><td>{fg.esc(c['metaDescription'])}</td></tr>
+        <tr><td>Image alt text</td><td>{fg.esc(c['altText'])}</td></tr></table>
       <p class=lab>Today's description</p><div class=today>{fg.esc(today)}</div>
     </div>
   </div>
   <div class=box><div class=checks><span>Approve</span><span>Approve with changes</span><span>Rewrite</span><span>This product only</span></div>
-    <div class=lines><div></div><div></div><div></div><div></div></div>
+    <div class=lines><div></div><div></div><div></div></div>
     <div class=sign><span>Reviewed by</span><span>Date</span></div></div>
 </section>""")
 
     doc = (f"<!doctype html><html lang='en'><head><meta charset='utf-8'><title>Product copy review</title>"
-           f"<style>{faces()}\n{page_css()}\n{CSS}</style></head><body>{cover}{how}{lists}{''.join(pages)}</body></html>")
+           f"<style>{faces()}\n{page_css()}\n{CSS}</style></head><body>{cover}{how}{decide}{lists}{''.join(pages)}</body></html>")
     renderer = fg.Renderer()
     try:
         path = renderer.pdf(doc, OUT)

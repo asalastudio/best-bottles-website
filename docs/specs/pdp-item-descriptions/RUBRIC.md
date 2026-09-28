@@ -533,7 +533,7 @@ These are the questions where the answer changes the copy. Each has a recommenda
 
 ### Phase 4: review, then ship
 
-- Review one sample per archetype with Jordan and Abbas, and fold in their answers to section 7. *Agreed 2026-09-28: 42 bottles and 12 parts and packaging items, listed in the copy review kit (`scripts/print/copy_review_kit.py`).*
+- Review one sample per archetype with Jordan and Abbas, and fold in their answers to section 7. *Agreed 2026-09-28: 42 bottles and 12 parts and packaging items, listed in the copy review kit (`scripts/print/copy_review_kit.py`).* *2026-09-28, evening: the generator (`scripts/pdp-descriptions/product_copy.py`) writes `data/descriptions/pdp/product-copy.json` for every bottle, part and packaging item, and the kit prints one review page per sample from it, with the choices and open questions to settle first.*
 - Regenerate all 2,113 bottle and jar SKUs, and review the report's per-mode samples.
 - Ship behind the existing curated-JSON path. No schema change is needed.
 

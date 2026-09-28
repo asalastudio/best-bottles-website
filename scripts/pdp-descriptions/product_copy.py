@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import argparse
 import collections
+import csv
 import datetime as dt
 import gzip
 import json
@@ -630,13 +631,13 @@ def lint(c: Copy) -> list[str]:
     if len(c.altText) > ALT_MAX:
         out.append(f"alt text {len(c.altText)} characters")
     words = len(c.paragraph.split())
-    if not 20 <= words <= 55:
+    if not (12 if c.mode in ("PART", "PACKAGING") else 20) <= words <= 55:
         out.append(f"paragraph {words} words")
-    if not 2 <= len(c.sentences) <= 3:
+    if not (1 if c.mode == "PACKAGING" else 2) <= len(c.sentences) <= 3:
         out.append(f"{len(c.sentences)} sentences")
-    if " for " not in c.sentences[0]:
+    if " for " not in c.sentences[0] and c.mode != "PACKAGING":
         out.append("sentence 1 has no 'for'")
-    if not 2 <= len(c.bullets) <= 4:
+    if not (1 if c.mode == "PACKAGING" else 2) <= len(c.bullets) <= 4:
         out.append(f"{len(c.bullets)} bullets")
     for label, text in c.bullets:
         if len(f"{label}: {text}") > BULLET_MAX:
@@ -653,7 +654,7 @@ def lint(c: Copy) -> list[str]:
         out.append("'does not break' outside aluminum")
     if re.search(r"(?<!Faux-)(?<!faux-)\bleather\b", everything, re.I):
         out.append("'leather' without 'faux-'")
-    if re.search(r"(?<!cobalt )\bblue\b", c.title + " " + next((t for l, t in c.bullets if l == "Glass"), ""), re.I):
+    if c.mode not in ("PART", "PACKAGING") and re.search(r"(?<!cobalt )\bblue\b", c.title + " " + next((t for l, t in c.bullets if l == "Glass"), ""), re.I):
         out.append("'blue' without 'cobalt'")
     if re.search(r"\b(?:price|\d+|\$[\d.]+) each\b", everything, re.I):
         out.append("banned word 'each'")
@@ -671,6 +672,221 @@ def lint(c: Copy) -> list[str]:
         if has_word(c.paragraph, word):
             out.append(f"excluded use '{word}' for {c.mode}")
     return out
+
+
+# --------------------------------------------------------------------------- parts and packaging
+# Draft rules, first written for the sample review (P01-P12 in scripts/print/copy_review_kit.py); nothing in the
+# copy standard covers parts yet. Parts are counted by the item, not in sets (COPY-STRATEGY.md §10, decision 9).
+
+# part name (family_guides.part_label) -> (count noun, bottle fitments it is sold with, bottle word, uses, sentence 2, care)
+PART_RULES = {
+    "Roll-on cap": ("caps", {"Steel roller ball", "Plastic roller ball"}, "roll-on bottles", None,
+                    "It screws on over the roller ball.", ""),
+    "Tall roll-on cap": ("caps", {"Steel roller ball", "Plastic roller ball"}, "roll-on bottles", None,
+                         "It screws on over the roller ball.", ""),
+    "Fine-mist sprayer": ("sprayers", {"Fine-mist sprayer"}, "spray bottles", "eau de parfum, cologne and body mist",
+                          "It turns a thin liquid into a fine, even mist.", CARE["MIST"]),
+    "Treatment pump": ("pumps", {"Treatment pump"}, "bottles", "serums, facial oil and body oil",
+                       "Press the pump to dispense; there is no need to tip the bottle.", CARE["PUMP_LOTION"]),
+    "Lotion pump": ("pumps", {"Lotion pump"}, "bottles", "body lotion, liquid soap and serums",
+                    "Press the pump to dispense; there is no need to tip the bottle.", CARE["PUMP_LOTION"]),
+    "Vintage-style bulb sprayer": ("bulb sprayers", {"Vintage-style bulb sprayer", "Vintage-style bulb sprayer with tassel"},
+                                   "bottles", "eau de parfum and cologne kept on a dressing table", "Squeeze the bulb to spray.",
+                                   "To carry the bottle, take off the bulb and fit a cap."),
+    "Vintage-style bulb sprayer with tassel": ("bulb sprayers", {"Vintage-style bulb sprayer", "Vintage-style bulb sprayer with tassel"},
+                                              "bottles", "eau de parfum and cologne kept on a dressing table", "Squeeze the bulb to spray.",
+                                              "To carry the bottle, take off the bulb and fit a cap."),
+    "Dropper": ("droppers", {"Dropper"}, "dropper bottles", "essential oils, beard oil and facial serums",
+                "The glass stem is sized for that bottle.", CARE["DROP"]),
+    "Short ribbed cap": ("caps", {"Screw cap"}, "bottles", None, "It screws onto the neck to close the bottle.", ""),
+    "Short lined cap": ("caps", {"Screw cap"}, "bottles", None, "It screws onto the neck to close the bottle.", ""),
+    "Tall lined cap": ("caps", {"Screw cap"}, "bottles", None, "It screws onto the neck to close the bottle.", ""),
+    "Lined cap": ("caps", {"Screw cap"}, "bottles", None, "It screws onto the neck to close the bottle.", ""),
+    "Faux-leather cap": ("caps", {"Orifice reducer with cap"}, "pour bottles with a reducer", None,
+                         "It screws on over the orifice reducer.", ""),
+    "Short screw cap": ("caps", {"Screw cap", "Dropper"}, "bottles", None, "It screws onto the neck to close the bottle.", ""),
+    "Tall screw cap": ("caps", {"Screw cap"}, "bottles", None, "It screws onto the neck to close the bottle.", ""),
+    "Screw cap": ("caps", {"Screw cap"}, "bottles", None, "It screws onto the neck to close the bottle.", ""),
+    "Cap with glass rod": ("caps", {"Cap with glass rod"}, "sample vials", "dabbing perfume oil and attar",
+                           "The glass rod reaches into the vial and dabs the oil on.", ""),
+}
+DROPPER_STEM_ML = {("18-400", "66"): 15, ("20-400", "76"): 30, ("20-400", "90"): 60}  # the stem matches one Boston round
+
+
+def bottles_for(neck: str, fitments: set[str], families: dict[str, fg.Family], ml: float | None = None) -> list[tuple[str, float]]:
+    pairs = set()
+    for fam in families.values():
+        for body in fam.bodies.values():
+            if body.neck != neck or (ml is not None and body.ml != ml):
+                continue
+            if any(i.fitment in fitments for i in body.items):
+                name = "Tall Cylinder" if fam.name == "Cylinder" and body.ml == 9 and neck == "13-415" else fam.name
+                pairs.add((name, body.ml))
+    return sorted(pairs, key=lambda p: (p[1], p[0]))
+
+
+def bottle_phrase(pairs: list[tuple[str, float]], word: str) -> str:
+    if not pairs:
+        return ""
+    groups: dict[str, list[float]] = {}
+    for name, ml in pairs:
+        groups.setdefault(name, []).append(ml)
+    if len(groups) <= 2 and len(pairs) <= 4:
+        def one(name: str, mls: list[float]) -> str:
+            noun = "vial" if name == "Vial" else name
+            plural = "s" if len(mls) > 1 else ""
+            return f"{join([f'{m:g}' for m in mls])} ml {noun}{plural}"
+        return "the " + join([one(n, m) for n, m in groups.items()])
+    names = list(dict.fromkeys(name for name, _ in pairs))
+    lo, hi = min(ml for _, ml in pairs), max(ml for _, ml in pairs)
+    span = f"{lo:g} ml" if lo == hi else f"{lo:g} to {hi:g} ml"
+    if len(names) <= 3:
+        return f"the {join(names)} {word}, {span}"
+    return f"the {word} from {span}, in {len(names)} shapes"
+
+
+def build_part(comp: dict, row: dict, families: dict[str, fg.Family]) -> Copy | None:
+    part, finish = fg.part_label(comp)
+    base = re.sub(r", \d+ mm stem$", "", part)
+    rule = PART_RULES.get(base)
+    if not rule or not comp.get("neck"):
+        return None
+    count, fitments, word, uses, second, care = rule
+    neck, sku = comp["neck"], comp["websiteSku"]
+    if base.endswith("lined cap") and neck == "18-415":
+        fitments, word = {"Orifice reducer with cap"}, "pour bottles with a reducer"
+        second = "It screws on over the orifice reducer."
+    notes: list[str] = []
+    ml = None
+    stem = re.search(r"(\d+) mm stem", part)
+    if base == "Dropper" and stem:
+        ml = DROPPER_STEM_ML.get((neck, stem.group(1)))
+    pairs = bottles_for(neck, fitments, families, ml)
+    target = bottle_phrase(pairs, word)
+    if base == "Dropper" and not ml:
+        second = "The glass pipette lets the oil out a drop at a time."
+        notes.append("stem length: which bottles each 18-415 dropper is cut for is not recorded")
+    if base == "Dropper" and ml:
+        oz = fg.BOSTON_OZ.get(ml)
+        title = f"Dropper for {ml:g} ml{f' ({oz} oz)' if oz else ''} Bottles, {neck} Neck"
+    else:
+        title = f"{title_case(base)} for {neck} Necks"
+    option = title_case(re.sub(r", white liner$", "", finish)) if finish else ""
+    phrase = lower_first(base)
+    vials = bool(pairs) and all(name == "Vial" for name, _ in pairs)
+    if base in ("Roll-on cap", "Tall roll-on cap", "Faux-leather cap") or (base.endswith("lined cap") and neck == "18-415"):
+        first = f"{article(phrase)} {phrase} for {target or f'the {neck} {word}'}, to replace a cap or change the look of a bottle."
+    elif base == "Cap with glass rod":
+        first = f"A screw cap with a glass rod for {target or 'the 9 ml sample vial'}, for dabbing perfume oil and attar."
+    elif base.endswith("cap"):
+        first = (f"{article(phrase)} {phrase} for {target or f'the {neck} {word}'}, "
+                 f"to close {'a vial' if vials else 'a pour bottle'} or replace a lost cap.")
+    else:
+        first = f"{article(phrase)} {phrase} for {target or f'the {neck} {word}'}, for {uses}."
+    if not pairs:
+        notes.append("no bottle in the catalogue is sold with this part at this neck")
+    fin = lower_first(finish) if finish else ""
+    if base in ("Roll-on cap", "Tall roll-on cap"):
+        included = f"{upper_first(fin)} {phrase}; the roller ball comes with the bottle"
+    elif base == "Short ribbed cap":
+        included = f"Short {fin.split(',')[0]} ribbed cap with a white liner"
+    elif base == "Dropper":
+        m = re.match(r"(\w+) bulb, (.+) collar", fin)
+        included = f"Glass pipette, {m.group(1)} rubber bulb and {m.group(2)} collar" if m else "Glass pipette, rubber bulb and collar"
+    elif base in ("Fine-mist sprayer", "Treatment pump", "Lotion pump"):
+        overcap = " and clear overcap" if "overcap" in fin else ""
+        included = f"{upper_first(re.sub(r', clear overcap$', '', fin))} {phrase} with its dip tube{overcap}"
+    else:
+        included = f"{upper_first(fin)} {phrase}".strip()
+    bullets = [["Included", included]]
+    if pairs:
+        fits = f"{neck} neck; {target}"
+        if len(f"Fits: {fits}") > BULLET_MAX:
+            fits = f"{neck} neck; {bottle_phrase(pairs[:0] or pairs, word)}"
+        bullets.append(["Fits", upper_first(fits) if not fits[0].isdigit() else fits])
+    if base == "Short ribbed cap" or (base in ("Short lined cap", "Tall lined cap") and neck == "13-415"):
+        bullets.append(["Good to know", "The liner seals the neck when capped"])
+    noun = title_case(base)
+    tech = {"neck": neck, "finish": finish, "soldAs": f"1, 12 or 144 {count}"
+            + (f"; a case holds {int(row['caseQuantity']):,}" if row.get("caseQuantity") else "")}
+    if stem:
+        tech["stemMm"] = int(stem.group(1))
+    c = Copy(websiteSku=sku, graceSku=comp.get("graceSku", ""), mode="PART", family=base, title=title, option=option,
+             variantTitle=f"{title} - {option}" if option else title, sentences=[first, second], bullets=bullets, care=care,
+             itemType=f"{upper_first(phrase)} · {neck} neck", metaDescription=first,
+             altText=f"{phrase} for {neck} necks, {fin}".rstrip(", ").lower(), tech=tech, notes=notes)
+    c.lint = lint(c)
+    return c
+
+
+PACKAGING_KINDS = [  # (SKU pattern, title noun, count noun, sentence 1, sentence 2, material)
+    (r"^OBag", "Organza Gift Bag", "bags", "A sheer organza gift bag with a gusseted base, for small bottles, samples and favors.",
+     "Choose the size by the bottle it will hold.", "Organza; sheer"),
+    (r"^VBag", "Velveteen Gift Bag", "bags", "A soft velveteen gift pouch for a small bottle, samples and favors.",
+     "Choose the size by the bottle it will hold.", "Velveteen"),
+    (r"^BoxB|^BoxC", "Window Gift Box", "boxes", "A folding gift box with a window, for a single bottle.",
+     "The window shows the bottle inside.", ""),
+    (r"^BoxE|^BoxWhite", "Gift Box", "boxes", "A gift box for presenting a single bottle or a small set of bottles and parts.", "", ""),
+    (r"^Box-", "Corrugated Shipping Box", "boxes", "A corrugated shipping box for packing and mailing orders of bottles and parts.", "",
+     "Corrugated board"),
+    (r"^Recloseable", "Resealable Plastic Bags", "packets", "Resealable clear plastic bags for packing bottles, parts and samples.",
+     "They come in packets of 100 bags.", "Plastic"),
+    (r"^Funnel|^Plastic$", "Funnel", "funnels", "A small funnel for filling bottles and vials from a larger container.", "", ""),
+]
+
+
+def build_packaging(row: dict) -> Copy | None:
+    sku = row.get("websiteSku") or ""
+    kind = next((k for k in PACKAGING_KINDS if re.search(k[0], sku)), None)
+    if not kind:
+        return None
+    _, noun, count, first, second, material = kind
+    name = fg.clean_packaging(row.get("itemName") or "")
+    colour = (row.get("color") or "").strip()
+    colour = "" if colour.lower() in ("none", "clear", "matte") else colour
+    m = re.search(r"(\d+(?:\.\d+)?)\s*[xX]\s*(\d+(?:\.\d+)?)", sku)
+    notes = []
+    option = ""
+    if noun.endswith("Gift Bag") or noun.startswith("Resealable"):
+        option = f"{m.group(1)} x {m.group(2)} in" if m else ""
+        if not m:
+            notes.append("size not in the item number")
+    if noun == "Window Gift Box":
+        design = re.match(r"(.+?) (?:design )?folding carton", name, re.I)
+        option = title_case(re.sub(r"\s*design$", "", design.group(1), flags=re.I)) if design else ""
+        notes.append("which bottles fit each box size (B, C) is not recorded")
+    if noun == "Funnel":
+        option = "Plastic" if "plastic" in name.lower() else f"{colour} Metal".strip()
+        notes.append("which necks the funnel fits is not recorded")
+    if noun in ("Gift Box", "Corrugated Shipping Box"):
+        m3 = re.search(r"(\d+(?:\.\d+)?)\s*x\s*(\d+(?:\.\d+)?)\s*x\s*(\d+(?:\.\d+)?)", name)
+        option = f"{m3.group(1)} x {m3.group(2)} x {m3.group(3)} in" if m3 else ""
+    finish = re.match(r"(cream matte|white)", name, re.I)
+    title = (f"{colour} {noun}".strip() if noun.endswith("Gift Bag")
+             else f"{title_case(finish.group(1))} {noun}" if noun == "Gift Box" and finish else noun)
+    sentences = [first] + ([second] if second else [])
+    if noun.endswith("Gift Bag"):
+        included = f"{colour} {noun.lower()}".strip()
+    elif noun == "Window Gift Box":
+        included = f"Folding gift box with a window, {option.lower()} design" if option else "Folding gift box with a window"
+    elif noun == "Funnel":
+        included = f"{option.lower()} funnel" if option else "Funnel"
+    else:
+        included = title.lower()
+    if noun.startswith("Resealable"):
+        included = "A packet of 100 resealable bags"
+    bullets = [["Included", upper_first(included)]]
+    if material:
+        bullets.append(["Material", material])
+    size = re.search(r"(\d[\d.]*\s*(?:\"|inches|in)?\s*[xX]\s*\d[\d.]*[^,.]*)", name)
+    tech = {"size": size.group(1).strip() if size else "", "soldAs": f"1, 12 or 144 {count}"
+            + (f"; a case holds {int(row['caseQuantity']):,}" if row.get("caseQuantity") else "")}
+    c = Copy(websiteSku=sku, graceSku=row.get("graceSku") or "", mode="PACKAGING", family=noun, title=title, option=option,
+             variantTitle=f"{title} - {option}" if option else title, sentences=sentences, bullets=bullets, care="",
+             itemType=noun[:1] + noun[1:].lower(), metaDescription=" ".join(sentences), altText=name.lower()[:ALT_MAX],
+             tech=tech, notes=notes)
+    c.lint = lint(c)
+    return c
 
 
 # --------------------------------------------------------------------------- build
@@ -751,6 +967,15 @@ def generate(export: Path) -> tuple[list[Copy], dict]:
             flags = legacy_flags(current.get(item.sku, {}).get("description", ""))
             copies.append(build(item, fam, rows.get(item.sku, {}), flags))
     copies.sort(key=lambda c: (fg.FAMILY_ORDER.index(c.family) if c.family in fg.FAMILY_ORDER else 99, c.title, c.option))
+    parts = []
+    for comp in csv.DictReader(open(fg.REGISTER / "components.csv")):
+        if comp["sellable"] != "True" or comp["status"] != "current" or comp["websiteSku"] in fg.PART_EXCLUDE:
+            continue
+        part = build_part(comp, rows.get(comp["websiteSku"], {}), families)
+        if part:
+            parts.append(part)
+    packaging = [c for c in (build_packaging(r) for r in meta.get("packaging", [])) if c]
+    copies += sorted(parts, key=lambda c: (c.family, c.title, c.option)) + sorted(packaging, key=lambda c: (c.family, c.title, c.option))
     meta = {**{k: v for k, v in emeta.items() if v}, "skipped": meta.get("skipped")}
     return copies, meta
 
@@ -771,7 +996,9 @@ def report(copies: list[Copy], meta: dict, export: Path) -> str:
         f"Generated {dt.datetime.now():%Y-%m-%d %H:%M} from `{export.relative_to(fg.ROOT)}`"
         + (f" ({meta.get('deployment') or meta.get('source') or ''}, {meta.get('collectedAt') or meta.get('exportedAt') or ''})" if meta else "") + ".",
         "",
-        f"- **Products:** {len(copies):,} bottles and jars, in {len(titles):,} titles (product groups share a title).",
+        f"- **Products:** {len(copies):,} ({sum(c.mode not in ('PART', 'PACKAGING') for c in copies):,} bottles and jars, "
+        f"{sum(c.mode == 'PART' for c in copies):,} parts, {sum(c.mode == 'PACKAGING' for c in copies):,} packaging items), "
+        f"in {len(titles):,} titles (product groups share a title).",
         f"- **Passing every check:** {len(copies) - len(failing) - len(over):,}. **With an error:** {len(failing):,}. "
         f"**Over a length target only:** {len(over):,}.",
         f"- **Skipped by the loader:** {meta.get('skipped')}.",
@@ -780,7 +1007,7 @@ def report(copies: list[Copy], meta: dict, export: Path) -> str:
         "",
         "| Mode | Products | Title noun |",
         "|---|---:|---|",
-    ] + [f"| {m} | {n:,} | {MODES[m][0]} |" for m, n in modes.most_common()] + [
+    ] + [f"| {m} | {n:,} | {MODES[m][0] if m in MODES else 'draft rules, by part or packaging kind'} |" for m, n in modes.most_common()] + [
         "",
         "## Findings",
         "",
