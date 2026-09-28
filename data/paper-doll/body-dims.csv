@@ -102,6 +102,8 @@ pillar-9ml-17-415,0,round,,20.0,22.0,,,22.0,,none,convex export (no live data),
 plastic-bottle-10ml-nofinish,1,round,93.8,74.8,23.7,,,23.7,3.96,low,convex export (no live data),single page
 plastic-bottle-30ml-13-415,1,flat,68.0,82.0,,28.0,,28.0,2.43,low,live bestbottles.com,single page
 rectangle-10ml-13-415,60,flat,101.0,113.0,,17.0,17.0,17.0,5.94,low,live bestbottles.com,bare height spread 50.0-101.0mm; width spread 17.0-29.0mm
+footed-rectangle-10ml-13-415,38,flat,50.0,63.0,,29.0,19.0,29.0,1.72,convex-only,convex export (width 29 x depth 19 on 30 of 38 rows),split from rectangle-10ml-13-415 on 2026-09-28: the footed rows; the 23 mm diameter on 8 cap-page rows is not the glass
+tall-rectangle-10ml-13-415,36,flat,101.0,113.0,,17.0,17.0,17.0,5.94,low,live bestbottles.com,split from rectangle-10ml-13-415 on 2026-09-28: the tall rows
 rectangle-9ml-ground,3,round,47.0,64.0,20.0,,,20.0,2.35,high,convex export (no live data),
 rectangle-9ml-ground-glass-neck-with-glass-stopper,3,flat,47.0,64.0,,24.0,,24.0,1.96,high,live bestbottles.com,
 roll-on-cap-0ml-13-415,0,round,,24.0,17.0,,,17.0,,none,convex export (no live data),

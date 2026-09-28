@@ -572,16 +572,40 @@ def main() -> int:
     groups: dict[str, list] = defaultdict(list)
     builder_ids: dict[str, str] = {}
     body_of_row: dict[str, str] = {}
-    for r in bottle_rows:
+    # A body is named by family, capacity and neck, and split by its product pages only where they disagree
+    # (2026-09-28): the Footed and Tall Rectangle 10 mL share all three, but production files them on
+    # footed-rectangle-… and tall-rectangle-… pages, so one body drew both with the tall glass. Where every row of a
+    # body sits on pages of one profile the family still names it, so no other body, and no plate key, moves.
+    def names(r: dict) -> tuple[str, str, str]:
         cap = cap_label(r.get("capacityMl"))
         neck = norm_neck(r.get("neckThreadSize"))
         family = r.get("family") or ""
-        pgs = r.get("productGroupSlug") or ""
-        marker = f"-{cap}ml-"
-        profile = pgs.split(marker)[0] if cap and marker in pgs else slug(family)
         shape = r.get("shape") or ""
         distinct_shape = slug(shape) if shape and slug(shape) not in ("standard", slug(family), slug(r.get("color"))) else ""
-        body_id = f"{distinct_shape + '-' if distinct_shape else ''}{profile}-{cap}ml-{neck or 'no-neck'}"
+        pgs = r.get("productGroupSlug") or ""
+        marker = f"-{cap}ml-"
+        page_profile = pgs.split(marker)[0] if cap and marker in pgs else ""
+        prefix = distinct_shape + "-" if distinct_shape else ""
+        family_body = f"{prefix}{slug(family)}-{cap}ml-{neck or 'no-neck'}"
+        return family_body, page_profile, f"{prefix}{{profile}}-{cap}ml-{neck or 'no-neck'}"
+
+    page_profiles: dict[str, set] = defaultdict(set)
+    split_bodies: set[str] = set()
+    for r in bottle_rows:
+        family_body, page_profile, _ = names(r)
+        if page_profile:
+            page_profiles[family_body].add(page_profile)
+    for r in bottle_rows:
+        family_body, page_profile, pattern = names(r)
+        split = len(page_profiles[family_body]) > 1 and page_profile
+        profile = page_profile if split else slug(r.get("family") or "")
+        body_id = pattern.format(profile=profile) if split else family_body
+        if split:
+            split_bodies.add(body_id)
+        cap = cap_label(r.get("capacityMl"))
+        neck = norm_neck(r.get("neckThreadSize"))
+        shape = r.get("shape") or ""
+        distinct_shape = slug(shape) if shape and slug(shape) not in ("standard", slug(r.get("family") or ""), slug(r.get("color"))) else ""
         groups[body_id].append(r)
         builder_ids[body_id] = f"{profile}-{cap}ml|{neck}|{r.get('category')}" + (f"|{distinct_shape}" if distinct_shape else "")
         body_of_row[r.get("graceSku")] = body_id
@@ -591,7 +615,8 @@ def main() -> int:
         first = members[0]
         neck = norm_neck(first.get("neckThreadSize"))
         cap = cap_label(first.get("capacityMl"))
-        dims = body_dims.get(f"{slug(first.get('family'))}-{cap}ml-{neck}", {})
+        # a split body has its own dims row: the family's row measured both shapes as one
+        dims = body_dims.get(body_id, {}) if body_id in split_bodies else body_dims.get(f"{slug(first.get('family'))}-{cap}ml-{neck}", {})
         representative = sorted(current or members, key=lambda m: (m.get("stockStatus") != "In Stock", m.get("graceSku") or ""))[0]
         cap_off = [m.get("imageUrlCapOff") for m in current if m.get("imageUrlCapOff")]
         body_class, class_source = compatibility_class(first)
