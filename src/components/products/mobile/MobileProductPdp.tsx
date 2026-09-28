@@ -4,6 +4,7 @@ import { useRegion } from "@/components/RegionProvider";
 
 import { verifiedCapOffPhoto } from "@/lib/products/verified-cap-off-photo";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
+import { oneMlVialApplicator } from "@/lib/products/one-ml-vial-applicators";
 
 /**
  * The mobile PDP: one bottle, one property changed at a time. Presentational
@@ -217,7 +218,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     }, []);
 
     /* ── committed selection ─────────────────────────────────────────────── */
-    const committedPlate = plateFor(platesBySku, selectedVariant);
+    const committedPlate = oneMlVialApplicator(selectedVariant?.websiteSku) ? null : plateFor(platesBySku, selectedVariant);
     const currentSku = selectedVariant ? variantSku(selectedVariant) : null;
 
     /* ── preview selection (same group: roller / cap finish) ─────────────── */
@@ -250,11 +251,11 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     // Preview swaps the already-loaded plate only. Fetching and decoding a
     // full kit on every tap is what froze the sheet on a phone.
     const shownVariant = previewSibling?.variant ?? previewInGroup ?? selectedVariant;
-    const shownPlate = previewSibling ? previewSibling.plate : previewInGroup ? plateFor(platesBySku, previewInGroup) : committedPlate;
+    const shownPlate = oneMlVialApplicator(shownVariant?.websiteSku) ? null : previewSibling ? previewSibling.plate : previewInGroup ? plateFor(platesBySku, previewInGroup) : committedPlate;
     const previewing = Boolean(previewSibling?.variant || (previewInGroup && previewInGroup._id !== selectedVariant?._id));
     const assembledOnly = requiresAssembledClosure(shownVariant?.applicator, shownVariant?.websiteSku);
     const pilot = shownVariant?.websiteSku ? localKits[shownVariant.websiteSku] : undefined;
-    const shownKitQuery: KitQueryResult = previewing ? undefined : selectedKitQuery;
+    const shownKitQuery: KitQueryResult = oneMlVialApplicator(shownVariant?.websiteSku) || previewing ? undefined : selectedKitQuery;
     const { kit: shownKit, parts: kitPartsWithCap } = useDecodedKitParts(
         { websiteSku: shownVariant?.websiteSku, graceSku: shownVariant?.graceSku },
         pilot ? (picker.viewMode === "capOff" ? pilot.off : pilot.on) : shownKitQuery,
@@ -536,7 +537,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     const previewingLabel = activeRow && pickerHasPendingChange(picker)
         ? activeRow.options.find((option) => option.id === picker.previewSelectionId)?.label ?? null
         : null;
-    const stickyThumb = committedPlate?.thumb ?? committedPlate?.image ?? selectedVariant?.imageUrl ?? null;
+    const stickyThumb = oneMlVialApplicator(selectedVariant?.websiteSku)?.image ?? committedPlate?.thumb ?? committedPlate?.image ?? selectedVariant?.imageUrl ?? null;
     const eyebrow = [group.category ?? "Glass Bottle", group.family].filter(Boolean).join(" · ");
 
     return (

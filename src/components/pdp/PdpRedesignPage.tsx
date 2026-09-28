@@ -32,7 +32,7 @@ import {
 import type { PlateRef } from "@/lib/paper-doll/plates";
 import type { ItemDescription } from "@/lib/products/item-description/resolve";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
-import { isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
+import { pdpFallbackMedia } from "@/lib/products/pdp-redesign/fallback-media";
 import { formatVolumeQtyRange, resolveQuotedUnitPrice } from "@/lib/volumePricing";
 import {
     buildYourBottleHref,
@@ -62,7 +62,8 @@ import {
     type RollerId,
     type SiblingGlassGroup,
 } from "@/lib/products/pdp-redesign/model";
-import { availableViews, type KitLike, type StageView } from "@/lib/products/pdp-redesign/stage";
+import { availableViews, glassFrame, type KitLike, type StageView } from "@/lib/products/pdp-redesign/stage";
+import type { StageBounds } from "@/lib/products/pdp-stage-frame";
 import styles from "./pdp.module.css";
 import PdpBuyBox, { type AddState } from "./PdpBuyBox";
 import PdpStage from "./PdpStage";
@@ -79,6 +80,8 @@ export type PdpRedesignPayload = {
     kitsBySku: Record<string, KitLike | null>;
     /** For a cap-only group: its glass with a sprayer and with a roller (the strip's fitment tile). */
     fitmentKits?: KitLike[];
+    /** By frame key (register body, or one of its hanging tops): the bounds every SKU of the glass needs, on every page it sells on (src/lib/register/stage-envelopes.ts). */
+    stageEnvelopes?: Record<string, StageBounds>;
     platesBySku: Record<string, PlateRef>;
     /** Curated or composed copy, by website SKU. */
     descriptions: Record<string, ItemDescription>;
@@ -93,15 +96,7 @@ function kitFor(kits: Record<string, KitLike | null>, variant: { websiteSku?: st
     return (variant.websiteSku ? kits[variant.websiteSku] : null) ?? (variant.graceSku ? kits[variant.graceSku] : null) ?? null;
 }
 
-/** A photograph the stage may fall back to: never a Sanity render, never a 2020 bestbottles.com store image (the classic page blocks those too). */
-function usableImage(url: string | null | undefined): string | null {
-    if (!url) return null;
-    if (/cdn\.sanity\.io/.test(url)) return null;
-    if (isLegacyBestBottlesImageUrl(url)) return null;
-    return url;
-}
-
-export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, fitmentKits = [], platesBySku, descriptions, collection, familyHref }: PdpRedesignPayload) {
+export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, fitmentKits = [], stageEnvelopes, platesBySku, descriptions, collection, familyHref }: PdpRedesignPayload) {
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
@@ -127,6 +122,12 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     const glasses = useMemo(() => glassOptions(group, siblings), [group, siblings]);
     const activeGlass = glasses.find((glass) => glass.active) ?? glasses[0] ?? null;
     const rollerOption = rollers.find((option) => option.id === activeRoller) ?? null;
+    const rollerImages = Object.fromEntries(rollers.flatMap((option) => {
+        const variant = resolveVariant(variants, { roller: option.id, cap: picks.cap });
+        const rollerPart = kitFor(kitsBySku, variant)?.parts.find((part) =>
+            part.slot === "roller" && (!part.views || part.views.includes("exploded")));
+        return rollerPart?.image.url ? [[option.id, rollerPart.image.url]] : [];
+    }));
     const fitment = fitmentLabel(selected);
     const kit = kitFor(kitsBySku, selected);
     const glassBodyKit = useCallback((glassSlug: string): KitLike | null => {
@@ -144,6 +145,12 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         applicator: selected?.applicator ?? null, websiteSku: selected?.websiteSku ?? null,
     }), [group.family, group.capacityMl, group.color, selected?.applicator, selected?.websiteSku]);
     const views = useMemo(() => availableViews(kit, stageContext), [kit, stageContext]);
+    // One frame for every SKU of the glass, so a cap or fitment swap never resizes it.
+    const frame = useMemo(() => glassFrame(
+        { kit, applicator: selected?.applicator },
+        variants.map((variant) => ({ kit: kitFor(kitsBySku, variant), applicator: variant.applicator })),
+        stageEnvelopes,
+    ), [kit, selected?.applicator, variants, kitsBySku, stageEnvelopes]);
     // The requested view survives a SKU change; a SKU without layers shows SIDECAR until one returns.
     const shownView: StageView = views.includes(view) ? view : "sidecar";
 
@@ -333,7 +340,11 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     const capKits = caps.map((cap) => kitFor(kitsBySku, cap.variants[0])).filter((entry): entry is KitLike => Boolean(entry));
     const groupKits = variants.map((variant) => kitFor(kitsBySku, variant)).filter((entry): entry is KitLike => Boolean(entry));
     const plate = selected ? platesBySku[selected.graceSku] ?? (selected.websiteSku ? platesBySku[selected.websiteSku] : undefined) : undefined;
-    const fallbackImage = usableImage(selected?.imageUrl) ?? plate?.image ?? usableImage(group.heroImageUrl) ?? null;
+    const fallbackMedia = pdpFallbackMedia({
+        groupSlug: slug,
+        variant: selected,
+        plateImageUrl: plate?.image ?? null,
+    });
     const swatchStyle = getMaterialSwatchStyle(activeCap?.swatchName ?? capName, {});
     const selectionName = `${glassLabel(group.color)} glass${capName ? ` · ${capName} cap` : fitment ? ` · ${fitment}` : ""}`;
     const stickyLine = `${qty.toLocaleString("en-US")} × ${unitPrice != null ? formatPrice(unitPrice) : "—"} · ${lineLabel(glassName, rollerOption, rollerOption ? null : fitment, capName)}`;
@@ -361,7 +372,9 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                         onViewChange={onView}
                         kit={kit}
                         context={stageContext}
-                        fallbackImageUrl={fallbackImage}
+                        glassFrame={frame}
+                        fallbackImageUrls={fallbackMedia.images}
+                        fallbackBodyImageUrl={fallbackMedia.bodyImageUrl}
                         fallbackAlt={title}
                         callouts={buildCallouts(selected, capName)}
                         caps={caps.map((cap) => ({
@@ -397,6 +410,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                             selectionName={selectionName}
                             rollers={rollers}
                             activeRoller={activeRoller}
+                            rollerImages={rollerImages}
                             rollerUnitPrice={(id) => unitPriceAt(resolveVariant(variants, { roller: id, cap: picks.cap }), qty)}
                             onRoller={onRoller}
                             tiers={tiers}

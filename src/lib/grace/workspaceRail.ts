@@ -7,22 +7,12 @@ import { getPortalConvex } from "@/lib/portal/convexClient";
 import { isSanityConfigured } from "@/sanity/lib/client";
 import { editorialImageUrl } from "@/sanity/lib/image";
 import { sanityFetch } from "@/sanity/lib/live";
+import { getCatalogVisibilitySnapshot } from "@/lib/catalogServer";
+import { buildWorkspaceFamilies } from "./workspaceFamilies";
 
-/**
- * Everything the workspace rail needs, resolved on the server.
- *
- * Two reasons this is not a client query:
- *
- *  1. Family thumbnails come from the DESIGNED family cards in Sanity — the
- *     approved bone-ground artwork the homepage and catalog already use. The
- *     rail used to read `productGroups.heroImageUrl`, which points at Shopify
- *     files that have since 404'd, so every tile rendered broken.
- *  2. Session history is a transcript. Resolving the Clerk identity here means
- *     a browser cannot ask for another account's conversations by passing a
- *     different id.
- */
+/** Family imagery uses approved editorial art with exact catalog-photo fallbacks.
+ * Session history stays server-side, resolved against the authenticated viewer. */
 
-const FAMILY_LIMIT = 10;
 const SESSION_LIMIT = 4;
 
 import type { RailFamily, RailSession } from "./workspaceRailTypes";
@@ -80,15 +70,11 @@ async function getRecentSessions(): Promise<RailSession[]> {
 
 async function getFamilies(): Promise<RailFamily[]> {
     try {
-        const [families, artwork] = await Promise.all([
-            getPortalConvex().query(api.products.getPopularFamilies, { limit: FAMILY_LIMIT }),
+        const [snapshot, artwork] = await Promise.all([
+            getCatalogVisibilitySnapshot(),
             getFamilyArtwork(),
         ]);
-        return families.map((f) => ({
-            family: f.family,
-            variantCount: f.variantCount,
-            imageUrl: artwork.get(f.family) ?? null,
-        }));
+        return buildWorkspaceFamilies(snapshot, artwork);
     } catch {
         return [];
     }

@@ -9,6 +9,9 @@ case "${NODE_OPTIONS:-}" in
   *max-old-space-size*) ;;
   *) export NODE_OPTIONS="${NODE_OPTIONS:+$NODE_OPTIONS }--max-old-space-size=6144" ;;
 esac
+# next.config.ts turns webpack's persistent cache off on Vercel. Drop the
+# multi-GB copy Vercel restored so it is not carried into every later build.
+rm -rf .next/cache/webpack
 if [ "$VERCEL_ENV" = "preview" ] && [ "$BB_CONVEX_PREVIEW_DEPLOY" = "true" ]; then
   case "${CONVEX_DEPLOY_KEY:-}" in
     preview:*\|*)

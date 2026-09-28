@@ -79,4 +79,31 @@ describe("cap swap on a hero card", () => {
         expect(container.querySelector('[data-testid="catalog-card-cap-swap"]')).toBeNull();
         expect(container.querySelector("img")?.getAttribute("src")).toBe(hero.url);
     });
+
+    it("shows an exact recovered cap photograph when no calibrated hero swap exists", () => {
+        const elegantHero = getProductHero("GBElg15Gl")!;
+        const selected = { id: "black", label: "Shiny Black", websiteSku: "GBElg15BlkShSht", optionType: "capColor" as const };
+        container = document.createElement("div"); document.body.append(container); root = createRoot(container);
+        act(() => root.render(createElement(CatalogCardPreview, {
+            title: "15 ml Elegant Bottle", catalogHero: elegantHero, imageUrl: null,
+            href: "/products/elegant-15ml", variants: [selected], family: "Elegant",
+            slug: elegantHero.groupSlug, selected,
+        })));
+        expect(container.querySelector("[data-visual-mode='selected-exact-photo']")).not.toBeNull();
+        expect(container.querySelector("img")?.getAttribute("src"))
+            .toBe("/images/pdp/reconciled-2026-09-27/GBElg15BlkShSht.webp");
+        expect((container.querySelector("img") as HTMLElement).style.mixBlendMode).toBe("multiply");
+    });
+
+    it("does not replace an existing published plate with an interim recovered cutout", () => {
+        const sku = "GBElg15BlkShSht";
+        plates.current = { [sku]: plate(sku) };
+        container = document.createElement("div"); document.body.append(container); root = createRoot(container);
+        act(() => root.render(createElement(CatalogCardPreview, {
+            title: "15 ml Elegant Bottle", catalogHero: null, imageUrl: null,
+            href: "/products/elegant-15ml", variants: [{ id: "black", label: "Shiny Black", websiteSku: sku, optionType: "capColor" }],
+            family: "Elegant", slug: "elegant-15ml-clear-13-415", selected: null,
+        })));
+        expect(container.querySelector("img")?.getAttribute("src")).toBe(plate(sku).thumb);
+    });
 });

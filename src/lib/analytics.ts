@@ -400,6 +400,10 @@ export const analytics = {
     adapter.track("Grace Tool Called", properties);
   },
 
+  graceAnswerFeedback(properties: { messageId: string; rating: "helpful" | "unhelpful" }) {
+    adapter.track("Grace Answer Feedback", properties);
+  },
+
   graceNoMatch(properties: {
     searchTerm: string;
     family?: string;

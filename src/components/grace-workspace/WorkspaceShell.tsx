@@ -3,18 +3,21 @@
 import { reportError } from "@/lib/observability/report";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Component, type ErrorInfo, type ReactNode } from "react";
+import { Component, useCallback, useEffect, useRef, useState, type ErrorInfo, type ReactNode } from "react";
 import { useUser, useOrganization } from "@clerk/nextjs";
 import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
-import { useCart } from "@/components/CartProvider";
 import { useGrace } from "@/components/useGrace";
 import { CLERK_ENABLED } from "@/lib/clerk";
-import { ArrowLeft, Plus } from "./icons";
+import { Plus, X } from "./icons";
+import { List } from "@phosphor-icons/react";
+import WorkspaceFamilies from "./WorkspaceFamilies";
+import WorkspaceCart from "./WorkspaceCart";
+import styles from "./WorkspaceShell.module.css";
 import type { RailFamily, RailSession } from "@/lib/grace/workspaceRailTypes";
 
 /**
- * Error boundary scoped to one rail section. Used for the Popular Families
+ * Error boundary scoped to one rail section. Used for the complete family
  * strip — a Convex sync failure (function not yet deployed, schema mismatch)
  * should NOT crash the entire workspace shell. We swallow the error, log it
  * for telemetry, and render a minimal "Nothing yet." fallback in its place.
@@ -42,9 +45,6 @@ class RailSectionErrorBoundary extends Component<
     }
 }
 
-const SIDEBAR_W = 256;
-const TOPBAR_H = 60;
-
 interface ProjectItem {
     name: string;
     sub: string;
@@ -53,7 +53,7 @@ interface ProjectItem {
 interface WorkspaceShellProps {
     children: ReactNode;
     onNewConversation: () => void;
-    /** Bottle families with approved Sanity artwork, resolved on the server. */
+    /** Every listed family, with editorial and catalog imagery resolved on the server. */
     families?: RailFamily[];
     /** This viewer's recent Grace conversations. Empty when signed out. */
     sessions?: RailSession[];
@@ -104,8 +104,30 @@ function WorkspaceShellView({
     organization: WorkspaceOrganization;
 }) {
     const router = useRouter();
-    const { itemCount } = useCart();
-    const { conversationActive } = useGrace();
+    const { conversationActive, endConversation, closePanel } = useGrace();
+    const [familyMenuOpen, setFamilyMenuOpen] = useState(false);
+    const [cartOpen, setCartOpen] = useState(false);
+    const familyMenuRef = useRef<HTMLElement>(null);
+    const browseRef = useRef<HTMLButtonElement>(null);
+    const closeFamilyMenu = useCallback(() => { setFamilyMenuOpen(false); browseRef.current?.focus(); }, []);
+    const closeGrace = useCallback(() => {
+        // Stop microphone/audio and automatic reconnect without clearing the chat.
+        void endConversation();
+        closePanel();
+        router.push("/");
+    }, [endConversation, closePanel, router]);
+    useEffect(() => {
+        const onKeyDown = (event: KeyboardEvent) => {
+            if (event.key !== "Escape" || event.defaultPrevented || cartOpen) return;
+            event.preventDefault();
+            if (familyMenuOpen) closeFamilyMenu(); else closeGrace();
+        };
+        window.addEventListener("keydown", onKeyDown);
+        return () => window.removeEventListener("keydown", onKeyDown);
+    }, [familyMenuOpen, cartOpen, closeFamilyMenu, closeGrace]);
+    useEffect(() => {
+        if (familyMenuOpen) familyMenuRef.current?.querySelector<HTMLButtonElement>("button")?.focus();
+    }, [familyMenuOpen]);
 
     const clerkOrgId = organization?.id ?? null;
     const account = useQuery(
@@ -149,19 +171,22 @@ function WorkspaceShellView({
                 conversation and reads as a tool rather than a page; product
                 artwork never sits on it except small matted thumbnails, so
                 the approved bone-ground imagery is untouched. */}
-            <aside
-                className="hidden md:flex flex-col shrink-0 px-3.5 py-[18px]"
-                style={{
-                    width: SIDEBAR_W,
-                    background: "var(--color-obsidian)",
-                    borderRight: "1px solid rgba(255, 255, 255, 0.08)",
-                }}
-            >
+            <button type="button" className={styles.scrim} data-open={familyMenuOpen} aria-label="Close family menu" tabIndex={-1} onClick={closeFamilyMenu} />
+            <aside ref={familyMenuRef} id="workspace-family-sidebar" className={styles.sidebar} data-open={familyMenuOpen} role={familyMenuOpen ? "dialog" : undefined} aria-modal={familyMenuOpen || undefined} aria-label="Product families"
+                onKeyDown={event => {
+                    if (!familyMenuOpen || event.key !== "Tab") return;
+                    const nodes = familyMenuRef.current?.querySelectorAll<HTMLElement>('button:not(:disabled), a[href]');
+                    if (!nodes?.length) return;
+                    const first = nodes[0]; const last = nodes[nodes.length - 1];
+                    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+                    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+                }}>
+                <button type="button" className={styles.mobileMenuClose} onClick={closeFamilyMenu}>Close menu ×</button>
                 {/* Brand — clicks back to the home site */}
                 <Link
                     href="/"
                     className="flex items-center gap-[9px] rounded-[2px] px-1.5 pb-3.5 pt-1 -mx-1.5 -mt-1 hover:bg-white/[0.06] transition-colors"
-                    title="Back to bestbottles.company"
+                    title="Back to Best Bottles"
                     aria-label="Back to Best Bottles home"
                 >
                     <GraceMark />
@@ -241,7 +266,7 @@ function WorkspaceShellView({
 
                     {/* Ways in, for someone who has never done this before. */}
                     <RailSectionErrorBoundary fallback={null}>
-                        <RailFamilies families={families} />
+                        <WorkspaceFamilies families={families} />
                     </RailSectionErrorBoundary>
                 </div>
 
@@ -297,14 +322,9 @@ function WorkspaceShellView({
             {/* ── Main column ──────────────────────────────────── */}
             <div className="relative flex min-w-0 flex-1 flex-col">
                 {/* Top bar */}
-                <div
-                    className="flex shrink-0 items-center gap-3.5 px-6"
-                    style={{
-                        height: TOPBAR_H,
-                        borderBottom: "1px solid rgba(212, 197, 169, 0.55)",
-                    }}
-                >
-                    <div className="flex min-w-0 flex-1 items-center gap-2.5 overflow-hidden">
+                <div className={styles.topbar}>
+                    <button ref={browseRef} type="button" className={styles.mobileBrowse} aria-label="Browse by family" aria-expanded={familyMenuOpen} aria-controls="workspace-family-sidebar" onClick={() => familyMenuOpen ? closeFamilyMenu() : setFamilyMenuOpen(true)}><List size={18} /> Families</button>
+                    <div className={`${styles.workspaceName} flex min-w-0 flex-1 items-center gap-2.5 overflow-hidden`}>
                         {activeProject ? (
                             <>
                                 <span className="shrink-0 whitespace-nowrap font-serif text-[18px] font-medium tracking-[0.03em]">
@@ -321,16 +341,7 @@ function WorkspaceShellView({
                         )}
                     </div>
 
-                    <div className="flex items-center gap-3.5">
-                        <Link
-                            href="/"
-                            className="inline-flex items-center gap-1.5 rounded-[2px] px-2.5 py-1.5 text-[10.5px] font-semibold uppercase tracking-[0.14em] text-obsidian cursor-pointer hover:bg-obsidian/[0.04] transition-colors"
-                            style={{ border: "1px solid rgba(99, 117, 136, 0.3)" }}
-                            title="Back to bestbottles.company"
-                        >
-                            <ArrowLeft size={12} weight="bold" />
-                            Back to site
-                        </Link>
+                    <div className="ml-auto flex shrink-0 items-center gap-2">
                         {/* Share link only makes sense once a project / shortlist exists.
                             Hidden until that pattern lands; preserves space for future wiring. */}
                         {activeProject && (
@@ -338,34 +349,21 @@ function WorkspaceShellView({
                                 type="button"
                                 disabled
                                 title="Shortlist sharing — coming with the next deploy"
-                                className="rounded-[2px] px-2.5 py-1.5 text-[10.5px] font-semibold uppercase tracking-[0.14em] text-obsidian cursor-not-allowed opacity-50"
+                                className="hidden xl:block rounded-[2px] px-2.5 py-1.5 text-[10.5px] font-semibold uppercase tracking-[0.14em] text-obsidian cursor-not-allowed opacity-50"
                                 style={{ border: "1px solid rgba(99, 117, 136, 0.3)" }}
                             >
                                 Generate share link
                             </button>
                         )}
-                        <button
-                            type="button"
-                            onClick={() => {
-                                // Cart is a Navbar-owned drawer, not a route. Navigate home,
-                                // then dispatch the global open event the Navbar listens for.
-                                router.push("/");
-                                setTimeout(() => {
-                                    window.dispatchEvent(new CustomEvent("open-cart-drawer"));
-                                }, 200);
-                            }}
-                            className="rounded-[2px] bg-obsidian px-2.5 py-1.5 text-[10.5px] font-semibold uppercase tracking-[0.14em] text-white cursor-pointer hover:bg-black transition-colors"
-                            style={{ borderBottom: "2px solid var(--color-muted-gold)" }}
-                        >
-                            Cart · {itemCount}
-                        </button>
+                        <WorkspaceCart open={cartOpen} onOpenChange={open => { if (open) setFamilyMenuOpen(false); setCartOpen(open); }} />
+                        <button type="button" className={styles.closeGrace} onClick={closeGrace} title="Close Grace and return to the shop (Esc)"><X size={18} weight="bold" /> Close Grace</button>
                     </div>
                 </div>
 
                 {/* Main content area. Deliberately flat: the champagne grid
                     that used to sit here read as decoration, and the composer's
                     own shadow gives the canvas all the depth it needs. */}
-                <div className="flex min-h-0 flex-1 flex-col">
+                <div className="flex min-h-0 flex-1 flex-col" inert={familyMenuOpen}>
                     {children}
                 </div>
             </div>
@@ -378,69 +376,6 @@ function Eyebrow({ children }: { children: ReactNode }) {
         <div className="px-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/[0.38]">
             {children}
         </div>
-    );
-}
-
-/**
- * Bottle families as a compact list, not a tile grid.
- *
- * The grid showed six large images and filled half the rail; worse, it read
- * `productGroups.heroImageUrl`, whose Shopify URLs now 404, so every tile
- * rendered broken. Rows show twice as many families in a third of the space,
- * take the approved Sanity artwork the rest of the site uses, and degrade to
- * a lettered chip when a family has no card yet.
- */
-function RailFamilies({ families }: { families: RailFamily[] }) {
-    if (families.length === 0) return null;
-    return (
-        <>
-            <Eyebrow>Browse by family</Eyebrow>
-            <div className="mt-1.5">
-                {families.map((f) => (
-                    <Link
-                        key={f.family}
-                        href={`/catalog?family=${encodeURIComponent(f.family)}`}
-                        className="flex items-center gap-3 rounded-[2px] px-1.5 py-[7px] hover:bg-white/[0.06] transition-colors"
-                        title={`Browse ${f.family}`}
-                    >
-                        <span
-                            className="flex h-[64px] w-[64px] shrink-0 items-center justify-center overflow-hidden rounded-[2px]"
-                            style={{
-                                border: "1px solid rgba(255, 255, 255, 0.12)",
-                                background: "rgba(255, 255, 255, 0.06)",
-                            }}
-                        >
-                            {f.imageUrl ? (
-                                // eslint-disable-next-line @next/next/no-img-element -- Sanity CDN URL; Next/Image needs whitelisted domain config
-                                <img
-                                    src={f.imageUrl}
-                                    alt=""
-                                    className="h-full w-full object-cover"
-                                />
-                            ) : (
-                                <span className="font-cormorant text-[26px] leading-none text-white/40">
-                                    {f.family[0]}
-                                </span>
-                            )}
-                        </span>
-                        <span className="min-w-0 flex-1">
-                            <span className="block truncate text-[13px] text-white/[0.88]">
-                                {f.family}
-                            </span>
-                            <span className="mt-0.5 block text-[10.5px] tabular-nums text-white/35">
-                                {f.variantCount} variants
-                            </span>
-                        </span>
-                    </Link>
-                ))}
-                <Link
-                    href="/catalog"
-                    className="mt-1 block rounded-[2px] px-1.5 py-2 text-[11px] font-medium tracking-[0.04em] text-white/45 hover:bg-white/[0.06] hover:text-white/70 transition-colors"
-                >
-                    All families →
-                </Link>
-            </div>
-        </>
     );
 }
 

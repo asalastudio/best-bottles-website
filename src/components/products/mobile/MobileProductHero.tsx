@@ -16,7 +16,10 @@ import Link from "next/link";
 import { forwardRef, useLayoutEffect, useRef, useSyncExternalStore, type ReactNode } from "react";
 import { ArrowLeft, ArrowsOutSimple, ShoppingBag } from "@/components/icons";
 import PaperDollLayers, { type KitPart } from "@/components/products/PaperDollLayers";
+import { hasRegisterBodyPlate } from "@/lib/products/register-stage-bone";
 import { displayImageUrl } from "@/lib/products/optimizable-image";
+import { isReconciledLocalSkuAssetUrl } from "@/lib/products/reconciled-sku-images";
+import { isAssembledOneMlVialImage } from "@/lib/products/one-ml-vial-applicators";
 import { mobilePdpToolbarPaddingTop } from "@/lib/products/mobile-pdp-chrome";
 
 const subscribeToHydration = () => () => {};
@@ -71,7 +74,7 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
         };
     }, []);
     return (
-        <div ref={ref} data-testid="mobile-pdp-hero" className={`relative w-full ${heroStage ? "bg-bone" : "bg-white"}`}>
+        <div ref={ref} data-testid="mobile-pdp-hero" className={`relative w-full ${heroStage || hasRegisterBodyPlate(kitParts) ? "bg-bone" : "bg-white"}`}>
             <div
                 ref={toolbarRef}
                 data-testid="mobile-pdp-hero-toolbar"
@@ -103,14 +106,15 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
             </div>
             <div
                 data-testid="mobile-pdp-stage"
-                className="relative mx-auto overflow-hidden"
+                className={`relative mx-auto overflow-hidden ${isReconciledLocalSkuAssetUrl(fallbackImageUrl) ? "bg-[#f5f3ef]" : ""}`}
                 style={{ aspectRatio: "10 / 11", width: "min(100%, calc(42svh * 10 / 11))" }}
             >
                 {hasStack ? (
                     <PaperDollLayers plateUrl={plateUrl} kitParts={kitParts} alt={alt} onPlateError={onPlateError} family={heroStage ? null : family} capacityMl={heroStage ? null : capacityMl} color={color} hasCapOffPlate={hasCapOffPlate} view={view} />
                 ) : fallbackImageUrl ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={displayImageUrl(fallbackImageUrl, 828)} alt={alt} className="absolute inset-0 h-full w-full object-contain object-center" />
+                    <img src={displayImageUrl(fallbackImageUrl, 828)} alt={alt} className="absolute inset-0 h-full w-full object-contain object-center"
+                        style={isAssembledOneMlVialImage(fallbackImageUrl) ? { mixBlendMode: "multiply", transform: "scale(0.62)" } : isReconciledLocalSkuAssetUrl(fallbackImageUrl) ? { mixBlendMode: "multiply" } : undefined} />
                 ) : (
                     <div className="absolute inset-0 bg-linen" aria-hidden />
                 )}

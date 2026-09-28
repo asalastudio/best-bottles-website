@@ -6,6 +6,8 @@
     "Reducer",
     "Atomizer"
   ],
-  "assembledExactSkus": ["GBBstn15BlkDrp"],
-  "authority": "Jordan: these are complete top swaps, not cap-off presentations. Exact exception comes from the reviewed Boston catalog/source crosswalk."
+  "assembledExactSkus": ["GBBstn15BlkDrp", "GB1mlAmbVBlk", "GB1mlAmbVialWht", "GB1mlVBlk", "GB1mlVWht"],
+  "authority": "Jordan: these are complete top swaps, not cap-off presentations. The Boston exception comes from the reviewed catalog/source crosswalk. The 1 ml vial applicators are installed in each exact-SKU legacy capped product photo.",
+  "hangingApplicators": ["Vintage Bulb Sprayer", "Vintage Bulb Sprayer with Tassel", "Atomizer"],
+  "hangingAuthority": "A bulb and hose (and a tassel) hang beside and below the glass, so these tops are framed only with each other. Jordan 2026-09-13: the tassel bottle \"has to have its own baseline along with the size\" (scripts/paperdoll/build_plates.py HANGING_CLOSURES). Product page 2026-09-27: every other top on a glass shares one frame; each hanging kind is framed with its own kind and keeps that frame's size and baseline unless its composition needs less to stay uncropped."
 }

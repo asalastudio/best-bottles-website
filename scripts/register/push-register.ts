@@ -7,7 +7,9 @@
  *   npx tsx scripts/register/push-register.ts --deployment prod [--apply]
  *
  * Dry run by default. Additive only: rows are inserted or updated, never deleted;
- * a row Convex has and the register no longer does is reported as stale.
+ * a row Convex has and the register no longer does is reported as stale. An assembly whose
+ * deployed build is resolved and whose new build is not is held (reported, not sent) unless
+ * --allow-downgrade is given: a catalogue edit must not silently stop a SKU from drawing.
  * Dev reads NEXT_PUBLIC_CONVEX_URL and BEST_BOTTLES_CONVEX_WRITE_TOKEN from .env.local.
  * Prod needs REGISTER_PROD_WRITE_TOKEN in the environment and is never the default.
  */
@@ -29,7 +31,7 @@ const flag = (name: string) => argv.includes(name);
 const value = (name: string) => { const i = argv.indexOf(name); return i >= 0 ? argv[i + 1] : undefined; };
 
 type Table = "bodies" | "components" | "assemblies";
-type Diff = { inserted: string[]; updated: { key: string; fields: string[] }[]; unchanged: number; stale: string[] };
+type Diff = { inserted: string[]; updated: { key: string; fields: string[] }[]; unchanged: number; stale: string[]; held: { key: string; reason: string }[] };
 
 function target() {
     const deployment = value("--deployment") ?? "dev";
@@ -75,14 +77,28 @@ async function deployed(client: ConvexHttpClient, token: string, table: Table): 
     }
 }
 
+type BuildLike = { status?: string; reason?: string | null } | undefined;
+
+/** An assembly row that would turn a resolved build (a SKU that draws) into one that does not. */
+function downgrade(row: Record<string, unknown>, current: Record<string, unknown>): string | null {
+    const before = current.build as BuildLike;
+    const after = row.build as BuildLike;
+    if (before?.status !== "resolved" || after?.status === "resolved") return null;
+    return `${after?.status ?? "no build"}: ${after?.reason ?? ""}`;
+}
+
 function diff(local: Record<string, unknown>[], keyOf: (row: Record<string, unknown>) => string, remote: Map<string, Record<string, unknown>> | null): Diff {
-    const result: Diff = { inserted: [], updated: [], unchanged: 0, stale: [] };
+    const result: Diff = { inserted: [], updated: [], unchanged: 0, stale: [], held: [] };
     const seen = new Set<string>();
     for (const row of local) {
         const key = keyOf(row);
         seen.add(key);
         const current = remote?.get(key);
         if (!current) { result.inserted.push(key); continue; }
+        // A catalogue edit can break a build that draws today (a cap style or neck changed in the export); the
+        // deployed row stays until the catalogue is corrected or the downgrade is allowed on purpose.
+        const lost = downgrade(row, current);
+        if (lost && !flag("--allow-downgrade")) { result.held.push({ key, reason: lost }); continue; }
         const fields = Object.keys(row).filter(field => stableJson(row[field]) !== stableJson(current[field]));
         if (fields.length) result.updated.push({ key, fields });
         else result.unchanged++;
@@ -120,6 +136,10 @@ async function main() {
         console.log(`\n${step.table}: ${remote === null ? "register functions not deployed yet; " : ""}insert ${d.inserted.length}, update ${d.updated.length}, unchanged ${d.unchanged}, stale ${d.stale.length}`);
         if (fieldTally.size) console.log(`  changed fields: ${[...fieldTally].map(([f, n]) => `${f} ×${n}`).join(", ")}`);
         if (d.stale.length) console.log(`  stale (in Convex, not in the register; left in place): ${d.stale.slice(0, 10).join(", ")}${d.stale.length > 10 ? " …" : ""}`);
+        if (d.held.length) {
+            console.log(`  held ${d.held.length} (would stop a drawing SKU; deployed row kept, --allow-downgrade to send):`);
+            for (const h of d.held) console.log(`    ${h.key}: ${h.reason}`);
+        }
         if (!apply) continue;
         if (remote === null) throw new Error("deploy the register functions (npx convex dev --once) before --apply");
         const changed = new Set([...d.inserted, ...d.updated.map(u => u.key)]);

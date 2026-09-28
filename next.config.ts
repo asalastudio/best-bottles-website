@@ -64,6 +64,15 @@ const nextConfig: NextConfig = {
     turbopack: {
         root: projectRoot,
     },
+    // Vercel restores .next/cache between builds, and webpack's persistent
+    // cache grew by ~0.7 GB per build (2.5 GB after one clean build). Loading
+    // and re-serializing it pushed the worker past the 8 GB container on
+    // 2026-09-27 (SIGKILL mid-compile). A cold compile costs about a minute
+    // more and peaks far lower, so Vercel builds skip the persistent cache.
+    webpack(config, { dev }) {
+        if (!dev && process.env.VERCEL) config.cache = false;
+        return config;
+    },
     images: {
         remotePatterns: [
             {

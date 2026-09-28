@@ -23,6 +23,7 @@ import {
     bodyPart,
     closureParts,
     stageLayout,
+    type GlassFrame,
     type KitLike,
     type StageContext,
     type StageView,
@@ -52,7 +53,10 @@ export type PdpStageProps = {
     onViewChange: (view: StageView) => void;
     kit: KitLike | null;
     context: StageContext;
-    fallbackImageUrl: string | null;
+    /** The kit's frame on this page (`glassFrame`): every SKU of the glass shares it in CAP ON and SIDECAR. */
+    glassFrame?: GlassFrame | null;
+    fallbackImageUrls: string[];
+    fallbackBodyImageUrl: string | null;
     fallbackAlt: string;
     callouts: Callout[];
     caps: CapRailItem[];
@@ -89,15 +93,19 @@ export function useIsPdpMobile(): boolean {
 }
 
 export default function PdpStage({
-    pickLine, view, availableViews, onViewChange, kit, context, fallbackImageUrl, fallbackAlt, callouts,
+    pickLine, view, availableViews, onViewChange, kit, context, glassFrame = null, fallbackImageUrls, fallbackBodyImageUrl, fallbackAlt, callouts,
     caps, activeCapId, onCapPick, glasses, onGlassPick, activeCapName, activeGlassLabel,
 }: PdpStageProps) {
-    const layout = useMemo(() => stageLayout(kit, view, context), [kit, view, context]);
+    const layout = useMemo(() => stageLayout(kit, view, context, glassFrame ?? {}), [kit, view, context, glassFrame]);
     const railRef = useRef<HTMLDivElement>(null);
     // Register masters are served display-sized through the optimizer; when that
     // proxy cannot reach the Blob host (a local network quirk) the master is shown.
     const [rawUrls, setRawUrls] = useState<ReadonlySet<string>>(() => new Set());
     const showRaw = (url: string) => setRawUrls((current) => (current.has(url) ? current : new Set(current).add(url)));
+    const [failedFallbackUrls, setFailedFallbackUrls] = useState<ReadonlySet<string>>(() => new Set());
+    const fallbackImageUrl = fallbackImageUrls.find((url) => !failedFallbackUrls.has(url))
+        ?? (fallbackBodyImageUrl && !failedFallbackUrls.has(fallbackBodyImageUrl) ? fallbackBodyImageUrl : null);
+    const showingBareBody = Boolean(fallbackImageUrl && fallbackImageUrl === fallbackBodyImageUrl);
     const mobile = useIsPdpMobile();
     const capThumbHeight = mobile ? 42 : 48;
     // Every cap on the rail the same width, so their sides line up; heights follow each cap's true proportions.
@@ -191,7 +199,7 @@ export default function PdpStage({
                 data-testid="pdp-stage"
                 data-view={view}
                 data-layered={layout ? "true" : "false"}
-                data-source={layout ? (kit?.register ? "register" : "kit") : fallbackImageUrl ? "photo" : "none"}
+                data-source={layout ? (kit?.register ? "register" : "kit") : fallbackImageUrl ? (showingBareBody ? "body" : "photo") : "none"}
                 data-studio={layout?.backdrop ? "true" : undefined}
                 style={layout?.backdrop ? { backgroundColor: layout.backdrop.wall } : undefined}
             >
@@ -269,7 +277,16 @@ export default function PdpStage({
                     <div className={styles.stageFallback}>
                         {/* Kit layers and plates stay plain <img>: their pixel canvas and alpha must not change. */}
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={displayImageUrl(fallbackImageUrl)} alt={fallbackAlt} decoding="async" />
+                        <img
+                            src={rawUrls.has(fallbackImageUrl) ? fallbackImageUrl : displayImageUrl(fallbackImageUrl)}
+                            alt={showingBareBody ? `${fallbackAlt}, uncapped bottle` : fallbackAlt}
+                            decoding="async"
+                            onError={() => {
+                                if (!rawUrls.has(fallbackImageUrl) && markRegisterOptimizerUnavailable(fallbackImageUrl)) showRaw(fallbackImageUrl);
+                                else setFailedFallbackUrls((current) => new Set(current).add(fallbackImageUrl));
+                            }}
+                        />
+                        {showingBareBody && <span className={styles.bareBodyNote}>Uncapped bottle shown · assembled photo pending</span>}
                     </div>
                 ) : (
                     <div className={styles.stageEmpty}>Photography coming soon</div>

@@ -8,7 +8,8 @@
     --pdp-ink: #1c1c1e;
     /* One pearl ground under the header, the canvas and the sections, and neutral hairlines, so the warm grey
        studio is the only tone that stands out (Jordan 2026-09-28, option B). White is kept for the order box
-       and the tech sheet; the Build Your Bottle cards take the studio's own wall. */
+       and the tech sheet; the Build Your Bottle cards take the studio's own wall. The canvas is pearl too: a
+       fallback photo baked on bone (#F5F3EF, #295) sits within 1-4 levels of it. */
     --pdp-page: #f6f4f3;
     --pdp-canvas: #f6f4f3;
     --pdp-studio: #f0efeb;
@@ -229,7 +230,6 @@
     overflow: hidden;
     margin-left: 1px;
     height: 540px;
-    background: var(--pdp-studio);
     container-type: size;
     /* The canvas box inside the stage (.stageCanvas, centred by .stageCanvasHost). Callout
        anchors are percentages of the canvas, so the dots and leaders place through these. */
@@ -336,6 +336,16 @@
     max-height: 100%;
     object-fit: contain;
     display: block;
+}
+
+.bareBodyNote {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    color: var(--pdp-secondary);
+    font-size: 11px;
+    text-align: center;
 }
 
 .stageEmpty {
@@ -589,16 +599,34 @@
     border: 1px solid var(--pdp-border-strong);
 }
 
+.rollerIntro {
+    margin: 0;
+    color: var(--pdp-muted);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
 .rollerButton {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
     gap: 8px;
     padding: 9px 12px;
     font-size: 12px;
-    white-space: nowrap;
-    min-height: 44px;
+    text-align: center;
+    min-height: 98px;
     transition: background-color .2s, color .2s;
+}
+
+.rollerImage {
+    display: block;
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    padding: 3px;
+    background: #f5f3ef;
+    border-radius: 3px;
 }
 
 .rollerButton[aria-pressed="true"] {

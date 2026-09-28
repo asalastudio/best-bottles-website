@@ -260,3 +260,6 @@ data/descriptions/pdp/catalog-facts.json
 /output/register-components/
 /output/register-bodies
 /output/register-phase3
+
+# Size consistency audit working files (snapshots, downloaded images, measurements); the summary is in docs/reviews
+/output/size-audit/

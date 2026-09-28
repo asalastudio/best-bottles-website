@@ -23,7 +23,7 @@ import GraceCtaRow from "./GraceCtaRow";
  */
 export interface GraceProductCardProps {
     product: ProductCard & { heroImageUrl?: string | null };
-    mode?: "single" | "shortlist-tile" | "discovery";
+    mode?: "single" | "shortlist-tile" | "discovery" | "compact";
     onAddToShortlist?: (p: ProductCard) => void;
     /** When set, wraps the card image+name in a Link to the PDP. */
     linkToPdp?: boolean;
@@ -80,6 +80,19 @@ export default function GraceProductCard({
             followSurfacedProduct({ href: pdpHref });
         }
         : undefined;
+
+    if (mode === "compact") {
+        return <div className="flex min-w-0 flex-col gap-2 border border-[#e6dccd] bg-white p-2 text-center">
+            <Link href={pdpHref} onClick={productHandoff} data-grace-product-handoff={productHandoff ? "true" : undefined} className="flex flex-col gap-2">
+                <div className="relative h-[88px] w-full">
+                    {hero ? <Image src={hero} alt={customerDisplayName} fill className="object-contain" sizes="120px" unoptimized /> : <FallbackThumb family={product.family} />}
+                </div>
+                <span className="text-[11px] font-medium leading-snug">{customerDisplayName}</span>
+            </Link>
+            <span className="text-[10px] text-slate">{[product.capacity, product.neckThreadSize].filter(Boolean).join(" · ")}</span>
+            <div className="mt-auto"><GraceCtaRow product={product} quantity={144} compact stacked /></div>
+        </div>;
+    }
 
     if (mode === "shortlist-tile") {
         return (
