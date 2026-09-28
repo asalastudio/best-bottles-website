@@ -205,21 +205,38 @@ only part that changes, because it is cut to each bottle's depth.
 
 ### Cylinder 5 ml 13-415 (Clear and Cobalt Blue)
 
-Key `cylinder-5ml-13-415`, measured by Jordan on 2026-09-26. The Clear and Cobalt glass give the same numbers.
+Key `cylinder-5ml-13-415`. Jordan measured it on 2026-09-26 and again on 2026-09-28. The Clear and Cobalt glass give
+the same numbers.
 
-| Code | Reading |
-|---|---|
-| H | 53.16 |
-| Wb | 17.51 |
-| Hs | 41.32 (base to shoulder) |
-| E | 11.64 (neck Ø) |
-| Fh | ~11.0 |
-| I | 7.49 |
+| Code | 2026-09-28 | 2026-09-26 |
+|---|---|---|
+| H | 53.66 | 53.16 |
+| W | 18.08 (widest point) | — |
+| Dp | 18.08 (stated equal to W: round bottle) | — |
+| Wb | no reading given | 17.51 |
+| Hs | 41.55 (base to shoulder) | 41.32 |
+| Fh | 10.72 (neck base to rim top) | ~11.0 |
+| T | 12.75 (outside threads) | — |
+| Bd | 11.54 (ring below the threads) | — |
+| E | — | 11.64 (neck Ø) |
+| I | 7.56 (bore) | 7.49 |
+| Dep | 50.23 | — |
 
-- The site gives 53 × 17 for this bottle, which matches.
-- Still needed: W, Dp, T, Dep and Cap.
+- `values` holds the latest reading for each code. Each pass is kept in its own `readings…` block.
+- Derived from the 09-28 readings:
+  - base thickness: H − Dep = 3.43;
+  - neck base height: H − Fh = 42.94;
+  - shoulder band: 42.94 − 41.55 = 1.39, close to the Tall 9 ml's 1.3 flat shoulder.
+- Capacity: Jordan estimates about 5.5 ml. This is logged as `capacityEstimate`, not `Cap`, because it has not been
+  weighed. Glass weight is unknown.
+- Checks for Jordan:
+  - H is 0.50 taller than on 09-26.
+  - Fh 10.72 was measured, against the 11.0 ruling.
+  - Bd 11.54 and the 09-26 neck Ø 11.64 are probably the same ring.
+- The site gives 53 × 17 for this bottle.
+- Still needed: Wb re-check and a weighed Cap.
 - **13-415 finish rulings (Jordan, 2026-09-26), for both 13-415 cylinders:** neck height Fh = 11.0 and neck Ø E = 11.22.
-  The raw readings (Fh ~11.0 and E 11.64 here, Fh 10.11 on the Tall) stay in `values`; the rulings are in `model`.
+  They stay in `model` until Jordan changes them; the raw readings stay in `values`.
 
 ### 13-415 roller insert (metal and plastic ball)
 
