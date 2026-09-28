@@ -1,0 +1,36 @@
+{
+ "removedAt": "2026-09-28",
+ "deployment": "prod precise-raccoon-123",
+ "approved": "Jordan in chat: \"yes, remove the empty group\"",
+ "why": "The group held only GBCrclFrst50RdcrIvyLthr, which production had filed on an 18-400 neck. scripts/catalog-corrections/2026-09-28-prod-catalogue-drift.mjs corrected the row to match dev and moved it to circle-50ml-frosted-18-415-reducer with its ten siblings, leaving this group empty; its page showed 'Product currently unavailable'.",
+ "checksBeforeRemoval": [
+  "products:getProductGroup lists 0 variants (the by_productGroupId index)",
+  "products.productGroupId is the only field in the schema that references a group by id",
+  "formSubmissions.rfqLineItems[].productGroupSlug may hold the slug as text; it is not a reference and is left as it is",
+  "shopifySync.syncProduct never creates groups or moves variants: an update from Shopify product 10433900773668 matches no group and changes nothing but the variant's Shopify ids"
+ ],
+ "removedWith": "npx convex run productGroupsRebuild:deleteOrphanedGroups '{\"slugs\":[\"circle-50ml-frosted-18-400-reducer\"],\"confirm\":\"DELETE\"}' --prod",
+ "restoreWith": "npx convex run productGroupsRebuild:insertGroup --prod with the document's fields (slug, displayName, family, capacity, capacityMl, color, category, bottleCollection, neckThreadSize, variantCount, priceRangeMin, priceRangeMax), then set shopifyProductId; the document gets a new _id",
+ "shopifyNote": "In Shopify the Ivory Leather variant still belongs to product 10433900773668 (this group's handle). The site sells it by its variant id, so nothing breaks; tidying Shopify is a separate change.",
+ "document": {
+  "_creationTime": 1788480147448.5142,
+  "_id": "kh7cpk4sjv9q2850995kwzbge58ds4dp",
+  "applicatorTypes": [
+   "Reducer"
+  ],
+  "bottleCollection": "Circle",
+  "capacity": "50 ml (1.69 oz)",
+  "capacityMl": 50,
+  "category": "Glass Bottle",
+  "color": "Frosted",
+  "displayName": "50 ml Frosted Circle Reducer Bottle",
+  "family": "Circle",
+  "neckThreadSize": "18-400",
+  "priceRangeMax": 2.35,
+  "priceRangeMin": 2.35,
+  "shopifyProductId": "gid://shopify/Product/10433900773668",
+  "shopifyUpdatedAt": 1790143457858,
+  "slug": "circle-50ml-frosted-18-400-reducer",
+  "variantCount": 1
+ }
+}
