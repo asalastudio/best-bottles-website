@@ -105,6 +105,16 @@ LIBRARY_PARTS = [
      "evidence": "library part, not a product: the cap of the short shiny black reducer SKUs; the catalogue sells only the tall one (CP18-415ShnBlkTall)"},
 ]
 
+# Short caps with liner, 13-415: (componentId, website SKU, finish, colour). See the component loop in build().
+REVIEWED_13415_LINED = [
+    ("CMP-CAP-SBLK-13-415", "CP13-415BlkShShtMtl", "Shiny Black", "Black"),
+    ("CMP-CLS-SHSL-S-13-415-02", "CP13-415SlSht", "Shiny Silver", "Silver"),
+    ("CMP-CLS-MTSL-S-13-415", "CP13-415SlMattSht", "Matte Silver", "Silver"),
+    ("CMP-CLS-SHGD-S-13-415", "CP13-415GlSht", "Shiny Gold", "Gold"),
+    ("CMP-CLS-MTGD-S-13-415", "CP13-415GlMattSht", "Matte Gold", "Gold"),
+    ("CMP-CLS-MTCP-S-13-415", "CP13-415CuSht", "Matte Copper", "Copper"),
+]
+
 # Own-part builds: which component(s) a sellable assembly is physically made of. Rules are validated neck by
 # neck; the pilot neck is 17-415 (2026-09-25). Other necks record why they are not built yet.
 BUILD_RULE_NECKS = {"13-415", "17-415", "18-415", "14.3mm"}
@@ -190,7 +200,7 @@ SKU_TAIL_13415 = [  # (type token in the assembly SKU, component stem prefix, ki
     ("Roll", "CPRoll13-415", "cap", "LIB-13-415-PlsticRollon"),
     ("Spry", "CP13-415Spry", "sprayer", None),
 ]
-CODE_ALIASES_13415 = {"cu": "cumt", "blackdot": "blkdot", "pinkdo": "pinkdot"}  # "PinkDo": GBTallRect10MtlRollPinkDo, a truncated website SKU
+CODE_ALIASES_13415 = {"cu": "cumt", "blackdot": "blkdot", "pinkdo": "pinkdot", "blkshshtmtl": "blkshsht"}  # "BlkShShtMtl": the black lined short cap  # "PinkDo": GBTallRect10MtlRollPinkDo, a truncated website SKU
 
 
 def code_key_13415(code: str) -> str:
@@ -502,6 +512,24 @@ def main() -> int:
         components.append(record)
         if record["graceSku"]:
             component_by_grace[record["graceSku"]] = record
+    # The six short caps with liner (Jordan's caliper 2026-09-27: OD 15.94, H 16.40; identities as in
+    # convex/component13_415Catalog.ts). The export has five of them missing and files the black one as an alias-looking
+    # record with no website SKU, so no Tall 9 mL short-cap SKU could resolve. Their layers come from the Blender lane
+    # (tallcyl-13415-v40, studio v1.3), loaded body by body.
+    for cid, wsku, finish, colour in REVIEWED_13415_LINED:
+        record = component_by_grace.get(cid)
+        fields = {"websiteSku": wsku, "type": "cap", "neck": "13-415", "finish": finish, "capColor": finish, "capStyle": "Short", "color": colour,
+                  "applicator": "Cap/Closure", "itemName": f"{finish} short cap with liner, thread size 13-415", "status": "current",
+                  "typeEvidence": "short cap with liner (Jordan's caliper 2026-09-27); reviewed identity, convex/component13_415Catalog.ts",
+                  "confidence": "high"}
+        if record:
+            record.update(fields)
+            continue
+        record = {"componentId": cid, "sellable": True, "graceSku": cid, "trimColor": "", "convexFamily": "Cap/Closure", "dotted": False, "rollerMaterial": "",
+                  "psdStem": "", "psdLibrary": "", "psdPath": "", "psdFolder": "", "psdMatch": "", "psdCanvas": "", "psdHiddenLayers": "",
+                  "stockStatus": "In Stock", "imageUrl": "", "productUrl": "", "source": "reviewed identity (convex/component13_415Catalog.ts)", **fields}
+        components.append(record)
+        component_by_grace[cid] = record
     # A component keeps its register id when the catalogue re-keys its graceSku: the approved layers in Convex
     # (registerComponents) hang on the id, so a new id would leave every SKU drawing that part without an image.
     # Same part = the same websiteSku and the same master PSD stem as a row of the register being replaced.

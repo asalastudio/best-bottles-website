@@ -1,0 +1,22 @@
+{
+  "cylinder-9ml-13-415|Clear": {
+    "url": "/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+    "width": 1500,
+    "height": 1301,
+    "pxPerMm": 6.0,
+    "axisX": 750.0,
+    "baselineY": 1109.51,
+    "wall": "#f0efeb",
+    "sha256": "d325f4b9cc4c334a27e6de8a17d93157f129cde865503a88c78f50b878320d4e"
+  },
+  "cylinder-9ml-13-415|Frosted": {
+    "url": "/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+    "width": 1500,
+    "height": 1301,
+    "pxPerMm": 6.0,
+    "axisX": 750.0,
+    "baselineY": 1109.51,
+    "wall": "#f0efeb",
+    "sha256": "5417b402f1acbf9e0abce744deeade68c5680809e768023ed4f95ae9916f8d04"
+  }
+}

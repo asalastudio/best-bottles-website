@@ -108,6 +108,8 @@ export default function PdpStage({
     const showingBareBody = Boolean(fallbackImageUrl && fallbackImageUrl === fallbackBodyImageUrl);
     const mobile = useIsPdpMobile();
     const capThumbHeight = mobile ? 42 : 48;
+    // Every cap on the rail the same width, so their sides line up; heights follow each cap's true proportions.
+    const capThumbWidth = mobile ? 30 : 36;
     const glassThumbHeight = mobile ? 60 : 96;
 
     // Mobile strip: keep the selected cap in view on load and on change.
@@ -184,7 +186,7 @@ export default function PdpStage({
                             onClick={() => onCapPick(cap.id)}
                         >
                             {parts.length && cap.kit
-                                ? <PdpKitStackImage parts={parts} canvas={cap.kit.canvas} height={capThumbHeight} />
+                                ? <PdpKitStackImage parts={parts} canvas={cap.kit.canvas} height={capThumbHeight} fit={{ width: capThumbWidth }} />
                                 : <span className={styles.railSwatch} style={getMaterialSwatchStyle(cap.swatchName, {})} aria-hidden />}
                         </button>
                     );
@@ -198,6 +200,8 @@ export default function PdpStage({
                 data-view={view}
                 data-layered={layout ? "true" : "false"}
                 data-source={layout ? (kit?.register ? "register" : "kit") : fallbackImageUrl ? (showingBareBody ? "body" : "photo") : "none"}
+                data-studio={layout?.backdrop ? "true" : undefined}
+                style={layout?.backdrop ? { backgroundColor: layout.backdrop.wall } : undefined}
             >
                 <div className={styles.stageGrid} data-on={layout?.grid ? "true" : "false"} aria-hidden />
                 <div className={styles.stageBaseline} data-on={layout ? (layout.baseline ? "true" : "false") : "true"} aria-hidden />
@@ -205,6 +209,29 @@ export default function PdpStage({
                     <div className={styles.stageCanvasHost} role="img" aria-label={fallbackAlt}>
                         <div className={styles.stageCanvas}>
                             <div className={styles.stageFrame} style={{ transform: layout.frameCss }}>
+                                {layout.backdrop ? (
+                                    // The body's studio: wall, floor and contact shadow, pinned to the kit's baseline.
+                                    // eslint-disable-next-line @next/next/no-img-element
+                                    <img
+                                        src={layout.backdrop.url}
+                                        alt=""
+                                        draggable={false}
+                                        decoding="async"
+                                        className={styles.stageBackdrop}
+                                        style={{
+                                            left: `${layout.backdrop.box.leftPct}%`, top: `${layout.backdrop.box.topPct}%`,
+                                            width: `${layout.backdrop.box.widthPct}%`, height: `${layout.backdrop.box.heightPct}%`,
+                                        }}
+                                    />
+                                ) : null}
+                                {layout.floorShadows.map((shadow) => (
+                                    <span
+                                        key={shadow.key}
+                                        className={styles.stageFloorShadow}
+                                        style={{ left: `${shadow.leftPct}%`, top: `${shadow.topPct}%`, width: `${shadow.widthPct}%`, height: `${shadow.heightPct}%` }}
+                                        aria-hidden
+                                    />
+                                ))}
                                 {layout.parts.map((part) => part.box ? (
                                     // A register part: a native cut-out standing in its box on the canvas. The
                                     // canvas-sized wrapper carries the view offset so the percentages stay the canvas's.

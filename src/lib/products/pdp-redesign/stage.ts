@@ -31,6 +31,7 @@ import {
     type StageBounds,
 } from "@/lib/products/pdp-stage-frame";
 import { allowsExplodedClosure, hangsBesideGlass, requiresAssembledClosure } from "@/lib/products/closure-presentation";
+import { placeStageBackdrop, stageBackdropFor, type StageBackdropPlacement } from "./stage-backdrops";
 
 export type StageView = "sidecar" | "capon" | "exploded";
 
@@ -68,10 +69,10 @@ export type KitPartLike = {
 export type KitLike = {
     sku: string;
     canvas: { width: number; height: number };
-    anchors: { axisX: number; neckAxisX: number | null; seatY: number; baselineY: number };
+    anchors: { axisX: number; neckAxisX: number | null; seatY: number; baselineY: number; pxPerMm?: number | null };
     parts: KitPartLike[];
     /** Set when the kit was composed from the component register rather than published per SKU. */
-    register?: { bodyId: string; plateKey: string; glass: string } | null;
+    register?: { bodyId: string; plateKey: string; glass: string; pxPerMm?: number } | null;
 };
 
 export type StagePart = {
@@ -103,6 +104,10 @@ export type StageLayout = {
     anchors: Partial<Record<"cap" | "fitment" | "neck" | "body", StagePoint>>;
     baseline: boolean;
     grid: boolean;
+    /** The body's studio (wall, floor, contact shadow), drawn under the kit; null keeps the flat canvas. */
+    backdrop: StageBackdropPlacement | null;
+    /** Contact shadows for closures standing on the studio floor (SIDECAR), in percent of the canvas, before the frame transform. */
+    floorShadows: Array<{ key: string; leftPct: number; topPct: number; widthPct: number; heightPct: number }>;
 };
 
 const FITMENT_SLOTS: ReadonlySet<string> = new Set(["roller", "fitment", "sprayer", "pump", "collar", "diptube", "bulb", "tassel", "reducer", "pipette"]);
@@ -322,14 +327,43 @@ export function stageLayout(
         anchors.body = toStagePoint(rightEdge(body, bodyOffset, center(body, bodyOffset).y), frame, canvas);
     }
 
+    // The studio a Blender body was rendered in, for the assembled views (EXPLODED keeps its measuring grid).
+    const studio = kit.register && view !== "exploded" ? stageBackdropFor(kit.register.bodyId, kit.register.glass) : null;
+    const kitPxPerMm = kit.register?.pxPerMm ?? kit.anchors.pxPerMm ?? null;
+    const backdrop = studio && kitPxPerMm ? placeStageBackdrop(studio, { canvas, anchors: kit.anchors, pxPerMm: kitPxPerMm }) : null;
+
+    // A closure set down on the studio floor casts a contact shadow like the glass does (the glass's is in the backdrop).
+    const floorShadows: StageLayout["floorShadows"] = [];
+    if (backdrop && view === "sidecar") {
+        sorted.forEach((part, index) => {
+            const offset = offsets.get(part) ?? { dx: 0, dy: 0 };
+            if (!isClosureSlot(part.slot) || (offset.dx === 0 && offset.dy === 0)) return;
+            const bottom = part.bounds.bottom + offset.dy;
+            if (Math.abs(bottom - kit.anchors.baselineY) > 12) return;   // only a part standing on the floor
+            const width = (part.bounds.right - part.bounds.left) * 1.5;
+            const height = width * 0.22;
+            const centerX = (part.bounds.left + part.bounds.right) / 2 + offset.dx;
+            floorShadows.push({
+                key: `shadow-${part.slot}-${index}`,
+                leftPct: ((centerX - width / 2) / canvas.width) * 100,
+                topPct: ((bottom - height * 0.42) / canvas.height) * 100,
+                widthPct: (width / canvas.width) * 100,
+                heightPct: (height / canvas.height) * 100,
+            });
+        });
+    }
+
     return {
         frame,
         frameCss: pdpStageTransformCss(frame),
         parts,
         canvas,
         anchors,
-        baseline: view !== "exploded",
+        floorShadows,
+        // the studio's own floor replaces the drawn baseline
+        baseline: view !== "exploded" && !backdrop,
         grid: view === "exploded",
+        backdrop,
     };
 }
 
@@ -340,14 +374,18 @@ export function stageLayout(
  * is its box. Used for the cap rail, the glass lineup and the Build Your
  * Bottle tiles.
  */
-export function partCrop(part: KitPartLike, canvas: { width: number; height: number }, height: number, bounds: KitPartLike["bounds"] = part.bounds): { width: number; height: number; imgWidth: number; imgHeight: number; left: number; top: number } {
+export function partCrop(
+    part: KitPartLike, canvas: { width: number; height: number }, height: number, bounds: KitPartLike["bounds"] = part.bounds,
+    /** Size by a fixed width instead (every cap on the rail the same width), or by a shared scale (true relative sizes). */
+    fit?: { width?: number; scale?: number },
+): { width: number; height: number; imgWidth: number; imgHeight: number; left: number; top: number } {
     const box = part.box ?? fullCanvasBox(canvas);
     const boundsW = Math.max(1, bounds.right - bounds.left);
     const boundsH = Math.max(1, bounds.bottom - bounds.top);
-    const scale = height / boundsH;
+    const scale = fit?.scale ?? (fit?.width ? fit.width / boundsW : height / boundsH);
     return {
         width: boundsW * scale,
-        height,
+        height: boundsH * scale,
         imgWidth: box.width * scale,
         imgHeight: box.height * scale,
         left: (box.x - bounds.left) * scale,
@@ -393,6 +431,21 @@ export function closurePart(kit: KitLike | null | undefined): KitPartLike | null
     }
     const candidates = kit.parts.filter((part) => part.slot !== "body");
     return candidates.sort((a, b) => a.bounds.top - b.bounds.top)[0] ?? null;
+}
+
+/**
+ * The overcap a sprayer or pump ships with, seated (Build Your Bottle strip's
+ * tile 03): it comes in the head's own finish, so a matte black sprayer's
+ * tile shows the matte black overcap (Jordan 2026-09-28).
+ */
+export function overcapPart(kit: KitLike | null | undefined): KitPartLike | null {
+    const overcaps = kit?.parts?.filter((part) => part.slot === "overcap") ?? [];
+    return overcaps.find((part) => !part.views || part.views.includes("capon")) ?? overcaps[0] ?? null;
+}
+
+/** True when the kit's closure is a sprayer or pump head (its overcap is the cap). */
+export function hasMechanism(kit: KitLike | null | undefined): boolean {
+    return Boolean(kit?.parts?.some((part) => part.slot === "sprayer" || part.slot === "pump"));
 }
 
 export function bodyPart(kit: KitLike | null | undefined): KitPartLike | null {
