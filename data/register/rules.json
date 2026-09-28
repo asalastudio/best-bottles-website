@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-25",
-  "snapshot": "convex-products-2026-09-25.json.gz",
+  "generatedAt": "2026-09-28",
+  "snapshot": "convex-products-2026-09-28.json.gz",
   "keys": {
     "body": "bodyId = [shape-]profile-<capacity>ml-<neck>",
     "component": "graceSku",
@@ -108,25 +108,25 @@
     "13-415": {
       "kind": "thread",
       "bodies": 17,
-      "components": 27,
+      "components": 32,
       "componentTypes": {
         "fine-mist-sprayer": 12,
-        "roll-on-cap": 13,
+        "roll-on-cap": 18,
         "roller-insert": 2
       },
       "fitmentTypesObserved": {
-        "": 69,
+        "": 140,
         "Atomizer": 9,
-        "Cap/Closure": 22,
+        "Cap/Closure": 31,
         "Fine Mist Sprayer": 126,
         "Metal Roller Ball": 144,
         "N/A": 5,
         "Plastic Roller Ball": 144
       },
       "assemblies": {
-        "candidate": 21,
-        "retired": 31,
-        "verified": 498
+        "candidate": 13,
+        "retired": 2,
+        "verified": 586
       },
       "notes": [
         "Roller insert (plastic or metal ball) is a separate part beneath the roll-on cap; inserts have no standalone component rows.",
@@ -162,17 +162,6 @@
         "bottleRows": 16,
         "source": "small-format-neck-matrix-13-425-8-425-12mm-17x11.pdf"
       }
-    },
-    "13mm": {
-      "kind": "non-thread",
-      "bodies": 0,
-      "components": 0,
-      "componentTypes": {},
-      "fitmentTypesObserved": {},
-      "assemblies": {
-        "retired": 2
-      },
-      "matrixAcceptance": null
     },
     "14.3mm": {
       "kind": "non-thread",
@@ -228,7 +217,7 @@
     },
     "17-415": {
       "kind": "thread",
-      "bodies": 2,
+      "bodies": 1,
       "components": 22,
       "componentTypes": {
         "dropper": 1,
@@ -238,15 +227,13 @@
         "roller-insert": 2
       },
       "fitmentTypesObserved": {
-        "Fine Mist Sprayer": 31,
+        "Fine Mist Sprayer": 30,
         "Lotion Pump": 15,
         "Metal Roller Ball": 50,
         "Plastic Roller Ball": 50
       },
       "assemblies": {
-        "candidate": 2,
-        "retired": 2,
-        "verified": 144
+        "verified": 145
       },
       "notes": [
         "Assembly paths: ROLLER = one insert + one of 10 outer caps; SPRAY = one of 6 fine-mist finishes; PUMP = one of 3 treatment finishes.",
@@ -306,9 +293,9 @@
     "18-415": {
       "kind": "thread",
       "bodies": 23,
-      "components": 48,
+      "components": 49,
       "componentTypes": {
-        "cap": 6,
+        "cap": 7,
         "dropper": 3,
         "faux-leather-cap": 5,
         "fine-mist-sprayer": 8,
@@ -323,13 +310,12 @@
         "Lotion Pump": 212,
         "Perfume Spray Pump": 168,
         "Reducer": 346,
-        "Vintage Bulb Sprayer": 288,
-        "Vintage Bulb Sprayer with Tassel": 208
+        "Vintage Bulb Sprayer": 271,
+        "Vintage Bulb Sprayer with Tassel": 234
       },
       "assemblies": {
-        "candidate": 38,
+        "candidate": 47,
         "exception": 2,
-        "retired": 94,
         "verified": 1225
       },
       "notes": [
@@ -371,11 +357,11 @@
       "fitmentTypesObserved": {
         "": 6,
         "Dropper": 32,
-        "Metal Roller Ball": 33,
+        "Metal Roller Ball": 34,
         "Plastic Roller Ball": 36
       },
       "assemblies": {
-        "verified": 107
+        "verified": 108
       },
       "notes": [
         "A roll-on needs the outer cap AND a plastic or metal roller plug; plugs have no standalone component rows.",
@@ -397,9 +383,8 @@
       "components": 0,
       "componentTypes": {},
       "fitmentTypesObserved": {
-        "": 1,
-        "Fine Mist Sprayer": 2,
-        "Lotion Pump": 4
+        "": 6,
+        "Fine Mist Sprayer": 1
       },
       "assemblies": {
         "candidate": 7
@@ -571,7 +556,7 @@
       },
       "matrixAcceptance": null
     },
-    "Press-Fit": {
+    "SPECIAL": {
       "kind": "non-thread",
       "bodies": 0,
       "components": 0,
@@ -580,7 +565,7 @@
       "assemblies": {},
       "matrixAcceptance": null
     },
-    "Snap-On": {
+    "snap": {
       "kind": "non-thread",
       "bodies": 1,
       "components": 0,
@@ -589,15 +574,6 @@
       "assemblies": {
         "quarantine": 1
       },
-      "matrixAcceptance": null
-    },
-    "Specialty": {
-      "kind": "non-thread",
-      "bodies": 0,
-      "components": 0,
-      "componentTypes": {},
-      "fitmentTypesObserved": {},
-      "assemblies": {},
       "matrixAcceptance": null
     }
   }
