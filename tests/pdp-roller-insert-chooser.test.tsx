@@ -25,7 +25,8 @@ describe("product-page roller insert choice", () => {
             formatPrice: (value: number) => `$${value.toFixed(2)}`,
         })); });
         const images = [...host.querySelectorAll<HTMLImageElement>("[data-testid='pdp-roller-toggle'] img")];
-        expect(images.map((image) => new URL(image.src).searchParams.get("url"))).toEqual([
+        // Register layers are served as they are, not through the image optimiser (#305): the src is the layer itself.
+        expect(images.map((image) => image.getAttribute("src"))).toEqual([
             "https://example.test/metal-insert.png", "https://example.test/plastic-insert.png",
         ]);
         expect(host.textContent).toContain("insert fitted inside this bottle");
