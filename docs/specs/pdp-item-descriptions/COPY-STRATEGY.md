@@ -63,7 +63,7 @@ The same word always means the same thing, on every surface.
 | Item | Write | Never |
 |---|---|---|
 | Capacity | "9 ml" (space, lowercase) | "9ml", "9 mL", "9 ML" |
-| Ounces in titles | Millilitres first, always. Ounces in brackets only on sizes buyers name in ounces: Boston rounds at 15, 30 and 60 ml ("15 ml (0.5 oz)", "30 ml (1 oz)", "60 ml (2 oz)") and the standard ounce sizes 118 and 120 ml "(4 oz)", 227 ml "(8 oz)", 355 ml "(12 oz)" and 454 ml "(16 oz)". Not 128, 250 or 500 ml, which are metric sizes. *Recommendation; see 2.1.1.* | "1/2oz", "3 1/2oz", "1 oz (30 ml)" |
+| Ounces in titles | Millilitres first, always. Ounces in brackets only on sizes buyers name in ounces: Boston rounds at 15, 30 and 60 ml ("15 ml (0.5 oz)", "30 ml (1 oz)", "60 ml (2 oz)") and the standard ounce sizes 118 and 120 ml "(4 oz)", 227 ml "(8 oz)", 355 ml "(12 oz)" and 454 ml "(16 oz)". Not 128, 250 or 500 ml, which are metric sizes. *Approved 2026-09-28; see 2.1.1.* | "1/2oz", "3 1/2oz", "1 oz (30 ml)" |
 | Ounces in the Google feed | Always, from a rounding table ("9 ml (0.3 oz)", "50 ml (1.7 oz)"), never from the computed Convex value "1.01 oz" | |
 | Overlong titles | If a title passes 60 characters, drop the ounce bracket first | |
 | Drams | Vials the catalogue names in drams: "1 Dram (4 ml)", "5/8 Dram (3 ml)" | "dram" without the ml |
@@ -107,13 +107,13 @@ Cylinder, Tall Cylinder, Circle, Round, Elegant, Boston Round, Diva, Empire, Sli
 | Mode (RUBRIC.md) | Title noun | Notes |
 |---|---|---|
 | ROLL | Roll-On Bottle | |
-| MIST | Fine-Mist Spray Bottle | |
-| PUMP-SPRAY | Perfume Spray Bottle | |
+| MIST | Fine-Mist Spray Bottle | Aluminum: "Aluminum Spray Bottle" (approved 2026-09-28; aluminum is also sold for room spray) |
+| PUMP-SPRAY | Perfume Spray Bottle | Aluminum: "Aluminum Spray Bottle" (2026-09-28) |
 | BULB | Vintage-Style Bulb Sprayer | **Approved 2026-09-28:** "Vintage-Style Bulb Sprayer" and "Vintage-Style Bulb Sprayer with Tassel". Against the 25 Sep export, 9 of 548 titles pass 60 characters (the 100 ml frosted Elegant with tassel, at 61); those are shortened by hand. The description, Included bullet and variant label carry the rest ("bulb sprayer", "travel cap"). |
 | SPLASH | Pour Bottle with Reducer | Best Bottles' naming |
 | POUR | Pour Bottle | Every glass bottle sold with only a screw cap |
 | DROP | Dropper Bottle | |
-| PUMP-LOTION | Lotion Pump Bottle | |
+| PUMP-LOTION | Lotion Pump Bottle | Aluminum: "Aluminum Lotion Pump Bottle" (2026-09-28) |
 | STOPPER | Bottle with Glass Stopper | Apothecary family: "Apothecary Bottle with Glass Stopper" |
 | DAB | Sample Vial with Glass Rod | The 9 ml glass-rod vial |
 | VIAL | Vial | Never with a family word ("Vial Vial") |
@@ -394,14 +394,16 @@ The printed pieces are one more channel built from the same record; the plan and
 |---|---|---|
 | 1 | Title formula and vocabulary (sections 2 and 3) | **Locked** |
 | 2 | Bulb sprayers | **Approved 2026-09-28:** "Vintage-Style Bulb Sprayer" and "Vintage-Style Bulb Sprayer with Tassel"; the 9 titles over 60 characters are shortened by hand |
-| 3 | Ounces in titles | **Recommendation revised with evidence (2.1.1); awaiting Best Bottles' OK.** ml first; ounces in brackets on Boston rounds and standard ounce sizes only; always in the Google title |
+| 3 | Ounces in titles | **Approved 2026-09-28.** ml first; ounces in brackets on Boston Rounds (15, 30, 60 ml) and the 4, 8, 12 and 16 oz sizes only; always in the Google title |
 | 4 | Country of origin for Faire "Made in" | **Under confirmation.** Import records point to China (7.4); the "United States" value on Faire today looks wrong. Best Bottles confirms from invoices before the Faire edit |
 | 5 | Overflow capacity, label panel and inch dimensions | **Locked: yes** (rollout step 6) |
 | 6 | Google Merchant feed | **Locked: yes** (rollout step 7) |
 | 7 | Printed catalogue, line booklet and family inserts | **New.** See `../print-collateral/PRINT-PLAN.md` for the formats and the proof |
 | 8 | Neck sheets and component register: cap, sprayer and pump words; what counts as a fit; stopper bottles; stock source | **Approved 2026-09-28:** D1–D5 and D7. D6: all six dropper finishes are offered on the 15 ml clear Boston Round (`SYNTHESIS.md`) |
-| 9 | Quantity words | **Decided 2026-09-28:** "set" and "case" ("1 set", "12 sets", "a case of 724 sets"). Never "piece", "pcs" or "each" |
+| 9 | Quantity words | **Decided 2026-09-28:** bottles are sold in sets and cases ("1 set", "12 sets", "a case of 724 sets"); never "piece", "pcs" or "each". Parts and packaging are **not** sets: they are counted by the item itself ("12 caps", "12 gift bags") |
 | 10 | Aluminum bottles | **Decided 2026-09-28:** may say "does not break"; spray bottles may list room spray and air freshener; lotion-pump bottles lead with lotion (RUBRIC.md 4.4) |
 | 11 | The warning line | **Decided 2026-09-28:** one Care note per product, outside the description, in the editorial serif next to the Tech sheet (TEMPLATE.md amendments) |
 | 12 | Bulb sprayers and travel | **Answered 2026-09-28:** the bulb ships unattached with a travel cap; swap the bulb for the cap to carry it |
 | 13 | Review before generating everything | **Agreed 2026-09-28:** 42 bottles and 12 parts and packaging items, in the copy review kit; Jordan and Abbas mark them up before the full run |
+| 14 | Source for the full run | **Decided 2026-09-28:** production Convex. Jordan runs the export (`CONVEX_URL=https://precise-raccoon-123.convex.cloud node scripts/pdp-descriptions/export-catalog-facts.mjs`); the legacy site takes its inventory from a QuickBooks sync and is not a source |
+| 15 | Going to production | **Approved 2026-09-28:** after the samples are approved, merge to `main` and deploy; push the new titles and descriptions to Shopify; correct the known data errors (frosted stored as clear, missing necks, plastic flip-tops filed as glass) from a prepared correction file |
