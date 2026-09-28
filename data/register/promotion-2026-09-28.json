@@ -1,0 +1,59 @@
+{
+ "promotedAt": "2026-09-28",
+ "by": "Claude on Jordan's instruction in chat (\"Go ahead and run it for us\", after #303 merged)",
+ "mainCommit": "525d2e15 (#303, library refresh from the production catalogue)",
+ "deployment": "prod precise-raccoon-123 (register rows and two component layer sets; the images were already in the shared Blob store)",
+ "token": "REGISTER_PROD_WRITE_TOKEN=$(npx convex env get BEST_BOTTLES_CONVEX_WRITE_TOKEN --prod), never printed",
+ "catalogueCorrectionFirst": {
+  "script": "scripts/catalog-corrections/2026-09-28-prod-catalogue-drift.mjs --prod --apply",
+  "approved": "Jordan (\"yes, run it on production\")",
+  "written": [
+   "GBCylSwrl9RollWht.capStyle: Dot Cap -> Roll-On",
+   "GBCylSwrl9MtlRollWht.capStyle: Dot Cap -> Roll-On",
+   "GBCylSwrl9MtlRollWht.applicator: Plastic Roller Ball -> Metal Roller Ball",
+   "GBCrclFrst50RdcrIvyLthr.neckThreadSize: 18-400 -> 18-415",
+   "GBCrclFrst50RdcrIvyLthr.capColor: Ivory -> Ivory Leather",
+   "GBCrclFrst50RdcrIvyLthr.components: 8 18-400 SKUs -> GBCrclFrst50RdcrBlkLthr's 45 18-415 SKUs",
+   "GBCrclFrst50RdcrIvyLthr moved circle-50ml-frosted-18-400-reducer -> circle-50ml-frosted-18-415-reducer"
+  ],
+  "note": "The emptied group circle-50ml-frosted-18-400-reducer is left in place; its page shows 'Product currently unavailable'."
+ },
+ "steps": [
+  {
+   "loader": "scripts/register/push-register.ts --deployment prod --apply",
+   "bodies": { "inserted": 1, "updated": 92, "stale": 5 },
+   "components": { "inserted": 6, "updated": 158, "stale": 24 },
+   "assemblies": { "inserted": 90, "updated": 2184, "stale": 128, "heldByTheDowngradeGuard": 0 },
+   "checkedBeforeApply": "10 assemblies changed status, all candidate -> verified; none to quarantine or retired"
+  },
+  {
+   "loader": "scripts/register/components/push-components.ts --deployment prod --neck 18-415 --only LIB-18-415-ShnBlkCap,CMP-CAP-SSLV-18415-S --approve --apply",
+   "components": { "approved": 2 },
+   "notes": {
+    "LIB-18-415-ShnBlkCap": "new library part, cut from the master library's CP18-415ShnBlk, IoU 0.933, approved by Jordan 2026-09-28",
+    "CMP-CAP-SSLV-18415-S": "re-seated 1.23 mm lower (anchor y 58.5 -> 46.7, clean_layers.py --reseat), approved by Jordan 2026-09-28"
+   }
+  }
+ ],
+ "prodCountsAfter": {
+  "bodyPlates": { "approved": 106, "measured": 2 },
+  "componentLayers": { "approved": 91, "unmeasured": 97 },
+  "builds": { "resolved": 1960, "unresolved": 442 },
+  "components": { "current": 148, "quarantine": 16, "retired": 24 }
+ },
+ "errors": 0,
+ "theBlocked148": {
+  "note": "The PDP SKUs the 27 Sep size audit found drawing a store photo or an old kit (short caps excluded)",
+  "drawFromTheRegisterNow": 63,
+  "byWhat": { "the push alone": 12, "short shiny black cap": 26, "shiny silver cap re-seated": 25 },
+  "waitingOnPR292": "10 amber 9 mL metal roll-ons: the 9 mL check (#297) needs #292's Blender roller-insert layers",
+  "stillBlocked": 75
+ },
+ "verifiedOnProduction": [
+  "diva-46ml-clear-18-415-reducer?cap=shiny-black: register plate + LIB-18-415-ShnBlkCap",
+  "slim-50ml-clear-18-415-reducer?cap=shiny-silver: register plate + CMP-CAP-SSLV-18415-S (re-seated)",
+  "circle-50ml-frosted-18-415-antiquespray-tassel: register plate + CMP-SPR-BLK-18-415-02",
+  "pillar-9ml-clear-17-415-finemist: pillar-9ml-13-415 plate + CMP-CAP-BLK-13-415-01",
+  "circle-50ml-frosted-18-415-reducer?cap=ivory-leather: register plate + CMP-CAP-IVY-18415-LTR"
+ ]
+}
