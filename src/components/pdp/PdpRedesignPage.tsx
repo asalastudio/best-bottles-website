@@ -12,7 +12,7 @@
  * geometry. Commerce goes through the shared cart, so "In this order" is the
  * cart's own view of this page's lines.
  */
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import LocaleLink from "@/components/LocaleLink";
 import Navbar from "@/components/Navbar";
@@ -31,7 +31,7 @@ import {
 } from "@/lib/grace/pdpPlateSwap";
 import type { PlateRef } from "@/lib/paper-doll/plates";
 import type { ItemDescription } from "@/lib/products/item-description/resolve";
-import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
+import { getMaterialSwatchBackground, getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { pdpFallbackMedia } from "@/lib/products/pdp-redesign/fallback-media";
 import { formatVolumeQtyRange, resolveQuotedUnitPrice } from "@/lib/volumePricing";
 import {
@@ -62,7 +62,7 @@ import {
     type RollerId,
     type SiblingGlassGroup,
 } from "@/lib/products/pdp-redesign/model";
-import { availableViews, glassFrame, type KitLike, type StageView } from "@/lib/products/pdp-redesign/stage";
+import { availableViews, finishPart, glassFrame, type KitLike, type StageView } from "@/lib/products/pdp-redesign/stage";
 import type { StageBounds } from "@/lib/products/pdp-stage-frame";
 import styles from "./pdp.module.css";
 import PdpBuyBox, { type AddState } from "./PdpBuyBox";
@@ -90,6 +90,20 @@ export type PdpRedesignPayload = {
 };
 
 const ADDED_FLASH_MS = 1800;
+
+/**
+ * The finish chip beside the selection name and on each order line: a close crop of the closure's
+ * own render (the cap, or a sprayer's overcap), so the chip shows the material the canvas shows
+ * (Jordan 2026-09-28). The drawn swatch sits under it while it loads and stands in for a SKU with
+ * no drawn closure.
+ */
+function materialSwatch(kit: KitLike | null | undefined, name: string | null | undefined): CSSProperties {
+    const part = finishPart(kit);
+    if (!part) return getMaterialSwatchStyle(name, {});
+    const drawn = getMaterialSwatchBackground(name);
+    // The cap's whole face, a hair inside its edges, so a dotted cap's three columns of dots sit inside the circle.
+    return { background: `url("${part.image.url}") 50% 50% / 96% auto no-repeat${drawn ? `, ${drawn}` : ""}` };
+}
 
 function kitFor(kits: Record<string, KitLike | null>, variant: { websiteSku?: string | null; graceSku?: string | null } | null | undefined): KitLike | null {
     if (!variant) return null;
@@ -320,13 +334,13 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
             const label = lineLabel(glassShortLabel(item.color), roller, roller ? null : fitmentLabel({ applicator: item.applicator ?? null } as ProductVariant), item.capColor ?? null);
             return {
                 key: item.graceSku,
-                swatchStyle: getMaterialSwatchStyle(item.capColor, {}),
+                swatchStyle: materialSwatch(kitFor(kitsBySku, item), item.capColor),
                 label,
                 qty: item.quantity,
                 total: rate * item.quantity,
                 onRemove: () => { removeItem(item.graceSku); analytics.cartItemRemoved({ sku: item.graceSku, name: item.itemName }); },
             };
-        }), [cartItems, pageSlugs, rollers, removeItem]);
+        }), [cartItems, pageSlugs, rollers, removeItem, kitsBySku]);
     const orderTotal = orderLines.reduce((sum, line) => sum + line.total, 0);
     const minimum = useMemo(() => checkoutMinimum(cartItems), [cartItems]);
 
@@ -345,7 +359,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         variant: selected,
         plateImageUrl: plate?.image ?? null,
     });
-    const swatchStyle = getMaterialSwatchStyle(activeCap?.swatchName ?? capName, {});
+    const swatchStyle = materialSwatch(kit, activeCap?.swatchName ?? capName);
     const selectionName = `${glassLabel(group.color)} glass${capName ? ` · ${capName} cap` : fitment ? ` · ${fitment}` : ""}`;
     const stickyLine = `${qty.toLocaleString("en-US")} × ${unitPrice != null ? formatPrice(unitPrice) : "—"} · ${lineLabel(glassName, rollerOption, rollerOption ? null : fitment, capName)}`;
 
