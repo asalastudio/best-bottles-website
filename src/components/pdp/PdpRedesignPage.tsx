@@ -62,7 +62,7 @@ import {
     type RollerId,
     type SiblingGlassGroup,
 } from "@/lib/products/pdp-redesign/model";
-import { availableViews, glassEnvelope, type KitLike, type StageView } from "@/lib/products/pdp-redesign/stage";
+import { availableViews, glassFrame, type KitLike, type StageView } from "@/lib/products/pdp-redesign/stage";
 import type { StageBounds } from "@/lib/products/pdp-stage-frame";
 import styles from "./pdp.module.css";
 import PdpBuyBox, { type AddState } from "./PdpBuyBox";
@@ -143,7 +143,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     }), [group.family, group.capacityMl, group.color, selected?.applicator, selected?.websiteSku]);
     const views = useMemo(() => availableViews(kit, stageContext), [kit, stageContext]);
     // One frame for every SKU of the glass, so a cap or fitment swap never resizes it.
-    const frameEnvelope = useMemo(() => glassEnvelope(
+    const frame = useMemo(() => glassFrame(
         { kit, applicator: selected?.applicator },
         variants.map((variant) => ({ kit: kitFor(kitsBySku, variant), applicator: variant.applicator })),
         stageEnvelopes,
@@ -368,7 +368,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                         onViewChange={onView}
                         kit={kit}
                         context={stageContext}
-                        frameEnvelope={frameEnvelope}
+                        glassFrame={frame}
                         fallbackImageUrls={fallbackMedia.images}
                         fallbackBodyImageUrl={fallbackMedia.bodyImageUrl}
                         fallbackAlt={title}

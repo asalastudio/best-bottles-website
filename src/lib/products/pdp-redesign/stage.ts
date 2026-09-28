@@ -19,7 +19,7 @@
  * `stageFrameKey`), so all its caps, fitments and colours show the glass at
  * one size in one place.
  */
-import { explodedKitFrame, REMOVABLE_KIT_SLOTS, withDetachedCapOffsets } from "@/lib/products/kit-frame";
+import { explodedKitFrame, offBottle, REMOVABLE_KIT_SLOTS, withDetachedCapOffsets, type DetachedLook } from "@/lib/products/kit-frame";
 import { stackedExplodeOffsets } from "@/lib/products/exploded-stack";
 import {
     PDP_PLATE_CANVAS,
@@ -61,6 +61,8 @@ export type KitPartLike = {
     componentId?: string | null;
     /** The views this part is drawn in; absent = every view (a seated insert vs its full plug). */
     views?: StageView[];
+    /** How the part looks parked beside the glass or lifted, when that differs from how it looks seated (src/lib/register/detached-overcaps.ts). */
+    detached?: DetachedLook | null;
 };
 
 export type KitLike = {
@@ -171,12 +173,16 @@ function framedParts(kit: KitLike, parts: readonly KitPartLike[]): KitPartLike[]
         : part);
 }
 
+/** The parts CAP ON and SIDECAR draw (a register insert's EXPLODED-only plug stays out), as their frame must hold them. */
+function seatedFrameParts(kit: KitLike): KitPartLike[] {
+    return framedParts(kit, kit.parts.filter((part) => !part.views || part.views.includes("capon") || part.views.includes("sidecar")));
+}
+
 /** What one kit's CAP ON and SIDECAR frame must hold; null without parts. */
 export function stageFrameBounds(kit: KitLike | null | undefined): StageBounds | null {
     if (!kit?.parts?.length) return null;
-    // A register insert's EXPLODED-only plug stays out.
-    const seated = kit.parts.filter((part) => !part.views || part.views.includes("capon") || part.views.includes("sidecar"));
-    return seated.length ? pdpStageBounds(framedParts(kit, seated)) : null;
+    const seated = seatedFrameParts(kit);
+    return seated.length ? pdpStageBounds(seated) : null;
 }
 
 /**
@@ -207,38 +213,48 @@ export function stageFrameKey(bodyId: string, applicator?: string | null): strin
 
 export type FramedKit = { kit: KitLike | null | undefined; applicator?: string | null };
 
+/** How a kit is framed on its page: the envelope it frames to, and for a hanging top, the envelope of the tops whose baseline it stands on. */
+export type GlassFrame = { envelope: StageBounds | null; standOn: StageBounds | null };
+
 /**
- * The envelope a kit frames to on its page: the shared envelope of its body
+ * A kit's frame on its page. `envelope` is the shared envelope of its body
  * and frame key (every SKU of the glass, from the server), widened by the
- * page's own kits of that key in case the cached one predates them. A legacy
- * kit has none and keeps its own frame.
+ * page's own kits of that key in case the cached one predates them. A
+ * hanging top also gets `standOn`, the envelope of the glass's other tops,
+ * so it keeps their size and baseline where it can (Jordan 2026-09-13). A
+ * legacy kit has neither and keeps its own frame.
  */
-export function glassEnvelope(
+export function glassFrame(
     selected: FramedKit,
     page: ReadonlyArray<FramedKit>,
     envelopes: Readonly<Record<string, StageBounds>> | null | undefined,
-): StageBounds | null {
+): GlassFrame {
     const bodyId = selected.kit?.register?.bodyId;
-    if (!bodyId) return null;
+    if (!bodyId) return { envelope: null, standOn: null };
+    const envelopeOf = (key: string) => {
+        const own = stageEnvelope(page
+            .filter((entry) => entry.kit?.register?.bodyId === bodyId && stageFrameKey(bodyId, entry.applicator) === key)
+            .map((entry) => entry.kit));
+        const shared = envelopes?.[key] ?? null;
+        return shared && own ? mergeStageBounds(shared, own) : shared ?? own;
+    };
     const key = stageFrameKey(bodyId, selected.applicator);
-    const own = stageEnvelope(page
-        .filter((entry) => entry.kit?.register?.bodyId === bodyId && stageFrameKey(bodyId, entry.applicator) === key)
-        .map((entry) => entry.kit));
-    const shared = envelopes?.[key] ?? null;
-    return shared && own ? mergeStageBounds(shared, own) : shared ?? own;
+    return { envelope: envelopeOf(key), standOn: key === bodyId ? null : envelopeOf(bodyId) };
 }
 
 export function stageLayout(
     kit: KitLike | null | undefined,
     requested: StageView,
     context: StageContext,
-    /** `envelope`: the kit's glass envelope (`stageEnvelope`), so every SKU of the glass shares this frame. */
-    options: { envelope?: StageBounds | null } = {},
+    /** The kit's `glassFrame` on its page, so every SKU of the glass shares this frame. */
+    options: Partial<GlassFrame> = {},
 ): StageLayout | null {
     if (!kit?.parts?.length) return null;
     const canvas = kit.canvas ?? PDP_PLATE_CANVAS;
     const view = effectiveView(requested, kit, context);
-    const sorted = [...kit.parts].filter((part) => !part.views || part.views.includes(view)).sort((a, b) => a.zOrder - b.zOrder);
+    // A closure parked beside the glass, and every part lifted in EXPLODED, is drawn as it looks off the bottle.
+    const sorted = [...kit.parts].filter((part) => !part.views || part.views.includes(view)).sort((a, b) => a.zOrder - b.zOrder)
+        .map((part) => view === "exploded" || (view === "sidecar" && isClosureSlot(part.slot)) ? offBottle(part) : part);
     if (!sorted.length) return null;
 
     let offsets: Map<KitPartLike, { dx: number; dy: number }>;
@@ -257,13 +273,14 @@ export function stageLayout(
             part,
             view === "sidecar" && isClosureSlot(part.slot) ? detached[index].exploded : { dx: 0, dy: 0 },
         ]));
-        // The same frame for both views: the bounds reserve the detached cap, so the glass never moves.
+        // The same frame for both views: the bounds reserve the cap seated and parked, so the glass never moves.
         // A register kit also shares it with every SKU of its glass (the envelope), and its datum,
         // not the plate-era capacity lock, sizes the glass.
         frame = pdpStageFrame({
             family: context.family, capacityMl: context.capacityMl, color: context.color,
-            view: "capOff", parts: framedParts(kit, sorted), width: canvas.width, height: canvas.height,
+            view: "capOff", parts: seatedFrameParts(kit), width: canvas.width, height: canvas.height,
             envelope: options.envelope, capacityLock: !kit.register,
+            standOn: options.standOn ? { envelope: options.standOn, baselineY: kit.anchors.baselineY } : null,
         });
     }
 

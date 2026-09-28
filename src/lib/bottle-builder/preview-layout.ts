@@ -1,6 +1,7 @@
 import { previewParts, type BuilderConfiguration, type BuilderPart } from "./model";
 import { canonicalBody, registerVintagePreview, seatPreviewLayers, type PreviewLayer } from "./preview-registration";
 import { previewFrame } from "./preview-frame";
+import { offBottle } from "@/lib/products/kit-frame";
 
 type Stage = "body" | "fitment" | "complete";
 
@@ -11,12 +12,16 @@ export function builderPreviewLayout(config: BuilderConfiguration, parts: Builde
 }: { stage?: Stage; thumbnail?: boolean; showCover?: boolean; bodyReference?: BuilderConfiguration } = {}) {
     const kit = stage === "body" ? config.previewKit ?? config.kit ?? config.chooserKit : config.kit;
     if (!kit) return null;
+    // With the cover off, the overcap stands beside the bottle: drawn as it looks off the bottle
+    // (a clear overcap's empty cover, not the capped photograph's cover over its pump).
+    const parkCover = !thumbnail && !showCover && stage !== "body" && parts.some(part => part.slot === "overcap")
+        && parts.some(part => !["body", "overcap", "diptube"].includes(part.slot));
+    if (parkCover) parts = parts.map(part => part.slot === "overcap" ? offBottle(part) : part);
     const registration = !thumbnail || canonicalBody(config) ? registerVintagePreview(config, parts, bodyReference) : null;
     const anchors = registration?.anchors ?? kit.anchors;
     let layers = registration?.layers ?? parts.map(part => ({ part, bounds: part.bounds, transform: undefined as string | undefined }));
     if (!thumbnail && stage !== "body") layers = seatPreviewLayers(layers, anchors);
-    if (!thumbnail && !showCover && stage !== "body" && layers.some(l => l.part.slot === "overcap")
-        && layers.some(l => !["body", "overcap", "diptube"].includes(l.part.slot))) {
+    if (parkCover) {
         const body = layers.find(l => l.part.slot === "body");
         const baseline = registration?.groundY ?? kit.anchors.baselineY;
         layers = layers.map(l => {

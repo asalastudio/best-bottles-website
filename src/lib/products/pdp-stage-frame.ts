@@ -16,7 +16,7 @@
  * in px/mm, so the locks stay off for it.
  */
 
-import { REMOVABLE_KIT_SLOTS, detachedCapOffset } from "./kit-frame";
+import { REMOVABLE_KIT_SLOTS, detachedCapOffset, type DetachedLook } from "./kit-frame";
 
 import {
     PDP_CAP_OFF_FIT_SCALE,
@@ -32,6 +32,7 @@ type PartBounds = {
     slot?: string;
     bounds: StageBounds;
     exploded?: { dx: number; dy: number };
+    detached?: Pick<DetachedLook, "bounds"> | null;
 };
 
 export const PDP_PLATE_CANVAS = PDP_STANDARD_CANVAS;
@@ -56,18 +57,20 @@ export function pdpCapacityScale(
 
 /**
  * What the CAP ON and SIDECAR frame must hold for these parts: every part in
- * place, and each removable closure both seated and parked beside the glass.
+ * place, and each removable closure both seated and parked beside the glass,
+ * parked as it looks off the bottle (`detached`).
  */
 export function pdpStageBounds(parts: readonly PartBounds[]): StageBounds {
     const body = parts.find(p => p.slot === "body")?.bounds ?? null;
     const boxes = parts.flatMap(part => {
         if (!part.slot || !REMOVABLE_KIT_SLOTS.has(part.slot) || !body) return [part.bounds];
-        const offset = detachedCapOffset({ ...part, exploded: part.exploded ?? { dx: 0, dy: 0 } }, body);
+        const off = part.detached?.bounds ?? part.bounds;
+        const offset = detachedCapOffset({ ...part, bounds: off, exploded: part.exploded ?? { dx: 0, dy: 0 } }, body);
         // Reserve both cap states, keeping scale and bottle position unchanged.
         // Other parts' exploded offsets are never painted in the photo view.
         return [part.bounds, {
-            left: part.bounds.left + offset.dx, right: part.bounds.right + offset.dx,
-            top: part.bounds.top + offset.dy, bottom: part.bounds.bottom + offset.dy,
+            left: off.left + offset.dx, right: off.right + offset.dx,
+            top: off.top + offset.dy, bottom: off.bottom + offset.dy,
         }];
     });
     return {
@@ -112,6 +115,30 @@ function centerFrame(
 }
 
 /**
+ * A hanging top's frame (Jordan 2026-09-13): its composition centred across
+ * the stage at the size its siblings get, or smaller when it needs less to
+ * stay uncropped, with its glass's foot on their baseline, raised only as far
+ * as the composition needs to stay on the stage.
+ */
+function standingFrame(
+    bounds: StageBounds,
+    scale: number,
+    standOn: { envelope: StageBounds; baselineY: number },
+    siblingScale: number,
+    width: number,
+    height: number,
+): PdpStageFrame {
+    const siblings = centerFrame(standOn.envelope, Math.min(siblingScale, fitScale(standOn.envelope, width, height)), width, height);
+    const s = Math.min(scale, siblings.scale);
+    const foot = (siblings.y / 100) * height + standOn.baselineY * siblings.scale;
+    const marginY = height * PDP_SAFE_MARGIN_RATIO;
+    const highest = marginY - bounds.top * s;
+    const lowest = height - marginY - bounds.bottom * s;
+    const y = Math.min(Math.max(foot - standOn.baselineY * s, highest), lowest);
+    return { scale: s, x: centerFrame(bounds, s, width, height).x, y: (y / height) * 100 };
+}
+
+/**
  * Transform that keeps the bottle inside the 10:11 stage.
  * Exploded view is handled separately by `explodedKitFrame`.
  *
@@ -134,6 +161,12 @@ export function pdpStageFrame(input: {
     envelope?: StageBounds | null;
     /** False for a register kit: its body datum sizes the glass, so the plate-era capacity lock must not shrink it again. */
     capacityLock?: boolean;
+    /**
+     * For a hanging top (a bulb sprayer's hose, bulb and tassel): the envelope
+     * of the glass's other tops and this kit's baseline. The frame keeps their
+     * size unless the composition needs less, and stands on their baseline.
+     */
+    standOn?: { envelope: StageBounds; baselineY: number } | null;
     /** Apply the same canvas scale to both members of a cap-on/off plate pair. */
     hasCapOffPlate?: boolean;
     width?: number;
@@ -156,6 +189,7 @@ export function pdpStageFrame(input: {
         const own = pdpStageBounds(input.parts);
         const bounds = input.envelope ? mergeStageBounds(input.envelope, own) : own;
         scale = Math.min(scale, fitScale(bounds, width, height));
+        if (input.standOn) return standingFrame(bounds, scale, input.standOn, capacityScale, width, height);
         return centerFrame(bounds, scale, width, height);
     }
 

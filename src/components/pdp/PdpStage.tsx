@@ -18,12 +18,12 @@ import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/produc
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
 import type { Callout } from "@/lib/products/pdp-redesign/model";
-import type { StageBounds } from "@/lib/products/pdp-stage-frame";
 import {
     STAGE_VIEWS,
     bodyPart,
     closureParts,
     stageLayout,
+    type GlassFrame,
     type KitLike,
     type StageContext,
     type StageView,
@@ -53,8 +53,8 @@ export type PdpStageProps = {
     onViewChange: (view: StageView) => void;
     kit: KitLike | null;
     context: StageContext;
-    /** The kit's glass envelope: every SKU of the glass shares this CAP ON / SIDECAR frame. */
-    frameEnvelope?: StageBounds | null;
+    /** The kit's frame on this page (`glassFrame`): every SKU of the glass shares it in CAP ON and SIDECAR. */
+    glassFrame?: GlassFrame | null;
     fallbackImageUrls: string[];
     fallbackBodyImageUrl: string | null;
     fallbackAlt: string;
@@ -93,10 +93,10 @@ export function useIsPdpMobile(): boolean {
 }
 
 export default function PdpStage({
-    pickLine, view, availableViews, onViewChange, kit, context, frameEnvelope = null, fallbackImageUrls, fallbackBodyImageUrl, fallbackAlt, callouts,
+    pickLine, view, availableViews, onViewChange, kit, context, glassFrame = null, fallbackImageUrls, fallbackBodyImageUrl, fallbackAlt, callouts,
     caps, activeCapId, onCapPick, glasses, onGlassPick, activeCapName, activeGlassLabel,
 }: PdpStageProps) {
-    const layout = useMemo(() => stageLayout(kit, view, context, { envelope: frameEnvelope }), [kit, view, context, frameEnvelope]);
+    const layout = useMemo(() => stageLayout(kit, view, context, glassFrame ?? {}), [kit, view, context, glassFrame]);
     const railRef = useRef<HTMLDivElement>(null);
     // Register masters are served display-sized through the optimizer; when that
     // proxy cannot reach the Blob host (a local network quirk) the master is shown.
