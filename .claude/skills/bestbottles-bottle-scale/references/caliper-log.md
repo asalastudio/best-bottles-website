@@ -106,7 +106,16 @@ Key `cylinder-9ml-13-415`, measured by Jordan on 2026-09-26.
 
 Still needed: Dp, Hn and Cap.
 
-**LOCKED 2026-09-27 (Jordan: "Bottle is perfect let's lock it now").** The bottle body is locked in
+**LOCKED v2 2026-09-27 (Jordan: "shoulder v2 is locked"). Use this, not v1.**
+- Folder: `~/Documents/Codex/2026-09-24/the-image-is-clearly-the-target/outputs/tall-9ml-13-415-LOCKED-v2-2026-09-27/`.
+- v2 has a flat shoulder at 94.49 (Fh 11.0 below the rim) with a 1.3 mm round down to the straight wall.
+- Why: at depth 10.77 the lined short cap could not reach the v1 sloping shoulder.
+- Everything else is unchanged from v1.
+- Fitments sit on the new shoulder: sprayer +1.928, overcaps +2.477, roll-on caps +2.33, ribbed caps +0.60.
+- The lined short caps (no roller) sit on the shoulder.
+- Studio lighting in the lock files is NOT approved.
+
+**v1, superseded:** **LOCKED 2026-09-27 (Jordan: "Bottle is perfect let's lock it now").** The bottle body is locked in
 `~/Documents/Codex/2026-09-24/the-image-is-clearly-the-target/outputs/tall-9ml-13-415-LOCKED-2026-09-27/`.
 - Contents: `LOCK.json`, clear and frosted `.blend` files (read-only, with identical body mesh) and `scripts/verify_lock.py`.
 - Outside: H 105.49, OD 18.35, heel 0.18 on an 18.05 ring.
