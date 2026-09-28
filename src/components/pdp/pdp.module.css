@@ -586,9 +586,10 @@
     gap: 10px;
 }
 
+/* The finish chip: a crop of the closure's own render (materialSwatch), big enough for a dotted cap's dots. */
 .swatchDot {
-    width: 26px;
-    height: 26px;
+    width: 32px;
+    height: 32px;
     flex: none;
     border-radius: 50%;
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .15);
