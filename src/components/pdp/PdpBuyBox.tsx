@@ -131,7 +131,10 @@ export default function PdpBuyBox({
                                 onClick={() => onRoller(roller.id)}
                                 data-roller={roller.id}
                             >
-                                {rollerImage && <Image className={styles.rollerImage} src={rollerImage} alt="" width={44} height={44} loading="lazy" />}
+                                {/* A register layer is already a fixed-size PNG on the Blob CDN: served as is, like the
+                                    stage's layers, rather than re-encoded by the image optimiser (whose private-IP
+                                    guard also rejects the Blob host on NAT64 networks, which left these blank). */}
+                                {rollerImage && <Image className={styles.rollerImage} src={rollerImage} alt="" width={44} height={44} loading="lazy" unoptimized />}
                                 <span>{roller.label}</span>
                                 <span className={styles.rollerPrice}>{price != null ? `${formatPrice(price)}/pc` : ""}</span>
                             </button>

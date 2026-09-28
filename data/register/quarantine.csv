@@ -3,7 +3,6 @@ component,CMP-PLUG-BLK-VIAL,REF-CMP-PLUG-BLK-VIAL,,family=Plug/Applicator,convex
 component,CMP-PLUG-WHT-VIAL,REF-CMP-PLUG-WHT-VIAL,,family=Plug/Applicator,convex:products (prod) 2026-09-28,classify type / confirm neck before listing
 component,CMP-ROC-WHT-03,CPWhite1Oz,,family=Roll-On Cap,convex:products (prod) 2026-09-28,classify type / confirm neck before listing
 component,CMP-SPR-LVN-BULB,AntqSprBulbLavender,,family=Sprayer; SKU/name says bulb,convex:products (prod) 2026-09-28,classify type / confirm neck before listing
-component,CMP-CAP-SBLK-13-415,CP13-415BlkShShtMtl,13-415,family=Cap/Component (alias-looking record),convex:products (prod) 2026-09-28,classify type / confirm neck before listing
 component,CMP-CAP-BDOT-17-415,,17-415,family=Cap/Component (alias-looking record),convex:products (prod) 2026-09-28,classify type / confirm neck before listing
 component,BB-ALU250SPRYBL,Alu250SpryBl,20-410,family=Aluminum Bottle is not a component family,convex:products (prod) 2026-09-28,classify type / confirm neck before listing
 component,BB-CREAMJARAMB5MLSLCAP,CreamJarAmb5mlSlcap,37mm,family=Cream Jar is not a component family,convex:products (prod) 2026-09-28,classify type / confirm neck before listing

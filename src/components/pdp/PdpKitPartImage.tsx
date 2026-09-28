@@ -17,18 +17,20 @@ import { displayImageUrl } from "@/lib/products/optimizable-image";
 import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/products/register-image";
 
 export default function PdpKitPartImage({
-    part, canvas, height, alt = "", className, bounds, style,
+    part, canvas, height, alt = "", className, bounds, style, fit,
 }: {
     part: KitPartLike;
     canvas: { width: number; height: number };
     height: number;
+    /** A fixed width or a shared scale instead of the height (see partCrop). */
+    fit?: { width?: number; scale?: number };
     alt?: string;
     className?: string;
     /** Crop against this rectangle instead of the part's own bounds (a stack of layers shares one). */
     bounds?: KitPartLike["bounds"];
     style?: CSSProperties;
 }) {
-    const crop = partCrop(part, canvas, height, bounds);
+    const crop = partCrop(part, canvas, height, bounds, fit);
     // A register master is served display-sized through the optimizer; if that
     // proxy cannot reach the Blob host (a local network quirk), show the master.
     const [raw, setRaw] = useState(false);
