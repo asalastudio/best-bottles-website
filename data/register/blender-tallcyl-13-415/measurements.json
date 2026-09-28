@@ -1,0 +1,1209 @@
+{
+ "bodyId": "cylinder-9ml-13-415",
+ "createdBy": "outputs/tallcyl-13415-v33 (export_tall.py + build_assets_tall.py)",
+ "pxPerMm": 25.0,
+ "camera": {
+  "type": "orthographic",
+  "tiltDegDown": 3.0,
+  "note": "the 9 mL register camera; anchors are camera projections of 3D points"
+ },
+ "datum": {
+  "seat": "rim centre (0,0,106.2 mm)",
+  "foot": "lowest projected point of the glass",
+  "shoulder": "(0,0,96.75 mm)"
+ },
+ "background": "seen-through background = bone #F5F3EF on Clear, the approved studio on Frosted; transparent outside every part",
+ "notCalipered": "closures are the approved 17-415 models at published 13-415 sizes (caps kx .8985 kz .859, roller .742, mist .85); short caps new",
+ "plates": [
+  {
+   "plateKey": "cylinder-9ml-13-415|Clear",
+   "glass": "Clear",
+   "file": "plates/clear.png",
+   "width": 452,
+   "height": 2670,
+   "sha256": "4072455e5b5e7e8fde92484874ac4d5d4e989e3b7acf630ecfde0475daaf9b3d",
+   "pxPerMm": 25.0,
+   "anchors": {
+    "axisX": 226.0,
+    "seatY": 7.63,
+    "shoulderY": 243.56,
+    "baselineY": 2669.2
+   },
+   "checks": {
+    "seatToFootMm": 106.463,
+    "barrelMm": 18.0,
+    "barrelTargetMm": 18.0,
+    "opaqueInsideSilhouette": true
+   },
+   "source": {
+    "library": "native Blender (outputs/tallcyl-13415-v33/export_tall.py)",
+    "path": "dispenser-finishes-17415-v27/scenes/mist-black-clear.blend",
+    "layer": "Tall cylinder 9 ml drawing (May 2015, 106.2 x O18) built by build-master-scene.py --bottle 009_tall; seen-through background baked bone #F5F3EF"
+   },
+   "geometry": {
+    "height_mm": 106.2,
+    "vertices": 59243,
+    "lights_moved": [
+     "Right band \u2014 glass v24 (bottle only)",
+     "Shoulder highlight \u2014 glass v24",
+     "Edge fill left \u2014 glass v24",
+     "Edge fill right \u2014 glass v24"
+    ],
+    "source": "/Users/jordanrichter/Documents/Codex/2026-09-24/the-image-is-clearly-the-target/outputs/tallcyl-13415-v33/tallcyl-009-master-drawing-heavybase.blend",
+    "source_sha256": "9b50831b43d7d3192ec076c231903a3faf3704bd7699aa424ed2e2118b0cbf13"
+   }
+  },
+  {
+   "plateKey": "cylinder-9ml-13-415|Frosted",
+   "glass": "Frosted",
+   "file": "plates/frosted.png",
+   "width": 452,
+   "height": 2670,
+   "sha256": "276d0518ae0bf742c15b92e37207c7b3027a6dd52b0d7a94b1724daba372f3da",
+   "pxPerMm": 25.0,
+   "anchors": {
+    "axisX": 226.0,
+    "seatY": 7.63,
+    "shoulderY": 243.56,
+    "baselineY": 2669.2
+   },
+   "checks": {
+    "seatToFootMm": 106.463,
+    "barrelMm": 18.0,
+    "barrelTargetMm": 18.0,
+    "opaqueInsideSilhouette": true
+   },
+   "source": {
+    "library": "native Blender (outputs/tallcyl-13415-v33/export_tall.py)",
+    "path": "dispenser-finishes-17415-v27/scenes/mist-black-frosted.blend",
+    "layer": "Tall cylinder 9 ml drawing (May 2015, 106.2 x O18) built by build-master-scene.py --bottle 009_tall; v20 frost + v28 edge, frost band on the tall shoulder"
+   },
+   "geometry": {
+    "height_mm": 106.2,
+    "vertices": 59243,
+    "lights_moved": [
+     "Frost edge left \u2014 v28",
+     "Frost edge right \u2014 v28"
+    ],
+    "source": "/Users/jordanrichter/Documents/Codex/2026-09-24/the-image-is-clearly-the-target/outputs/tallcyl-13415-v33/tallcyl-009-master-drawing-heavybase.blend",
+    "source_sha256": "9b50831b43d7d3192ec076c231903a3faf3704bd7699aa424ed2e2118b0cbf13"
+   }
+  }
+ ],
+ "components": [
+  {
+   "componentId": "CMP-CAP-13-415",
+   "layers": [
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-mist.png",
+     "width": 146,
+     "height": 2664,
+     "sha256": "fe11250ca11328d89a234a43543352355d15214fd507a66eb0f1548ba7e6fc09",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 79.0,
+      "y": 1.63
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Frosted",
+     "file": "see-through/frosted-mist.png",
+     "width": 163,
+     "height": 2313,
+     "sha256": "ea2e5b7a9760852cdbc58f03782b1ca1fb366e08d03fffbb7a678a5738fabb61",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 82.0,
+      "y": 1.63
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Frosted"
+    },
+    {
+     "slot": "sprayer",
+     "layerName": "sprayer blue-matte (all metal: collar + head, white nozzle insert)",
+     "file": "components/CMP-CAP-13-415/sprayer.png",
+     "width": 428,
+     "height": 720,
+     "sha256": "2c9bbe34af93a52ae213b32c77a44f0ea36ae162b4473f12590a8df200fe9621",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 436.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap blue-matte (whole sprayer)",
+     "file": "components/CMP-CAP-13-415/overcap.png",
+     "width": 442,
+     "height": 764,
+     "sha256": "8093230ee7112ad093842e4f40f21341564b491001dec5ec8e9002558c98b8af",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 221.0,
+      "y": 479.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "pump body + dip tube, lifted out",
+     "file": "shared/mist-internals.png",
+     "width": 98,
+     "height": 1742,
+     "sha256": "2a583128cbf8bf4d6aae80e1e04b1c449f263f0955423f940120a1c8e93ca3bf",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 49.0,
+      "y": -45.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-BLK-13-415-01",
+   "layers": [
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-mist.png",
+     "width": 146,
+     "height": 2664,
+     "sha256": "fe11250ca11328d89a234a43543352355d15214fd507a66eb0f1548ba7e6fc09",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 79.0,
+      "y": 1.63
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Frosted",
+     "file": "see-through/frosted-mist.png",
+     "width": 163,
+     "height": 2313,
+     "sha256": "ea2e5b7a9760852cdbc58f03782b1ca1fb366e08d03fffbb7a678a5738fabb61",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 82.0,
+      "y": 1.63
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Frosted"
+    },
+    {
+     "slot": "sprayer",
+     "layerName": "sprayer matte-black (all metal: collar + head, white nozzle insert)",
+     "file": "components/CMP-CAP-BLK-13-415-01/sprayer.png",
+     "width": 428,
+     "height": 720,
+     "sha256": "dd263d77def036dabd1bf99e698c1dd7ec5f31ee86f19bc7568dedc30a25bc60",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 436.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap matte-black (whole sprayer)",
+     "file": "components/CMP-CAP-BLK-13-415-01/overcap.png",
+     "width": 442,
+     "height": 764,
+     "sha256": "8d33b90c5eed510f72ae841807ccc37270868d16e7dc9f1fd6bf0a6cf74a2cb3",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 221.0,
+      "y": 479.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "pump body + dip tube, lifted out",
+     "file": "shared/mist-internals.png",
+     "width": 98,
+     "height": 1742,
+     "sha256": "2a583128cbf8bf4d6aae80e1e04b1c449f263f0955423f940120a1c8e93ca3bf",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 49.0,
+      "y": -45.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-BLK-13-415-02",
+   "layers": [
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-mist.png",
+     "width": 146,
+     "height": 2664,
+     "sha256": "fe11250ca11328d89a234a43543352355d15214fd507a66eb0f1548ba7e6fc09",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 79.0,
+      "y": 1.63
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Frosted",
+     "file": "see-through/frosted-mist.png",
+     "width": 163,
+     "height": 2313,
+     "sha256": "ea2e5b7a9760852cdbc58f03782b1ca1fb366e08d03fffbb7a678a5738fabb61",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 82.0,
+      "y": 1.63
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Frosted"
+    },
+    {
+     "slot": "sprayer",
+     "layerName": "sprayer shiny-black (all metal: collar + head, white nozzle insert)",
+     "file": "components/CMP-CAP-BLK-13-415-02/sprayer.png",
+     "width": 428,
+     "height": 720,
+     "sha256": "88c800295bb9552d2f97053250d5607291fce0f2aee2bae22a50d68058c33b0c",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 436.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap shiny-black (whole sprayer)",
+     "file": "components/CMP-CAP-BLK-13-415-02/overcap.png",
+     "width": 442,
+     "height": 764,
+     "sha256": "1665c84f9cd23dab009a5f547da54b882183db0948e1fadb6fddb22422f15556",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 221.0,
+      "y": 479.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "pump body + dip tube, lifted out",
+     "file": "shared/mist-internals.png",
+     "width": 98,
+     "height": 1742,
+     "sha256": "2a583128cbf8bf4d6aae80e1e04b1c449f263f0955423f940120a1c8e93ca3bf",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 49.0,
+      "y": -45.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-BLK-S-13-415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "short ribbed cap black",
+     "file": "components/CMP-CAP-BLK-S-13-415/cap.png",
+     "width": 450,
+     "height": 308,
+     "sha256": "3fa0cbd78621abe35d56a79505c29a353dc89102e00324e533d0584d13ed1aa1",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 225.0,
+      "y": 36.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-SGLD-13-415-01",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "cap shiny-gold (17-415 shell at 13-415 size)",
+     "file": "components/cap-shiny-gold.png",
+     "width": 428,
+     "height": 592,
+     "sha256": "255065ca9941a09e1c9f7e8bfb5b42ca3835cb82ed3049eee8c7fae1c8932d6d",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 321.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-SGLD-13-415-02",
+   "layers": [
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-mist.png",
+     "width": 146,
+     "height": 2664,
+     "sha256": "fe11250ca11328d89a234a43543352355d15214fd507a66eb0f1548ba7e6fc09",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 79.0,
+      "y": 1.63
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Frosted",
+     "file": "see-through/frosted-mist.png",
+     "width": 163,
+     "height": 2313,
+     "sha256": "ea2e5b7a9760852cdbc58f03782b1ca1fb366e08d03fffbb7a678a5738fabb61",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 82.0,
+      "y": 1.63
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Frosted"
+    },
+    {
+     "slot": "sprayer",
+     "layerName": "sprayer matte-gold (all metal: collar + head, white nozzle insert)",
+     "file": "components/CMP-CAP-SGLD-13-415-02/sprayer.png",
+     "width": 428,
+     "height": 720,
+     "sha256": "555c0d4c47a9f63ac540aef46fcbf7fff9bed696321026c6286fa940230df25e",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 436.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap matte-gold (whole sprayer)",
+     "file": "components/CMP-CAP-SGLD-13-415-02/overcap.png",
+     "width": 442,
+     "height": 764,
+     "sha256": "97031e875dddaf1ba7f223d9215c7e6d7f79155b84078d613c00285e0acd30be",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 221.0,
+      "y": 479.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "pump body + dip tube, lifted out",
+     "file": "shared/mist-internals.png",
+     "width": 98,
+     "height": 1742,
+     "sha256": "2a583128cbf8bf4d6aae80e1e04b1c449f263f0955423f940120a1c8e93ca3bf",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 49.0,
+      "y": -45.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-SGLD-13-415-03",
+   "layers": [
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-mist.png",
+     "width": 146,
+     "height": 2664,
+     "sha256": "fe11250ca11328d89a234a43543352355d15214fd507a66eb0f1548ba7e6fc09",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 79.0,
+      "y": 1.63
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Frosted",
+     "file": "see-through/frosted-mist.png",
+     "width": 163,
+     "height": 2313,
+     "sha256": "ea2e5b7a9760852cdbc58f03782b1ca1fb366e08d03fffbb7a678a5738fabb61",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 82.0,
+      "y": 1.63
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Frosted"
+    },
+    {
+     "slot": "sprayer",
+     "layerName": "sprayer gold (all metal: collar + head, white nozzle insert)",
+     "file": "components/CMP-CAP-SGLD-13-415-03/sprayer.png",
+     "width": 428,
+     "height": 720,
+     "sha256": "5f25ac6746e94210486f5eae451965cd01441c21fffdbaad825714f3748f92cd",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 436.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap gold (whole sprayer)",
+     "file": "components/CMP-CAP-SGLD-13-415-03/overcap.png",
+     "width": 442,
+     "height": 764,
+     "sha256": "52b6055f35546489b0479a05bcd0e447c11952a511b49fa0d912bd55eb670d7e",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 221.0,
+      "y": 479.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "pump body + dip tube, lifted out",
+     "file": "shared/mist-internals.png",
+     "width": 98,
+     "height": 1742,
+     "sha256": "2a583128cbf8bf4d6aae80e1e04b1c449f263f0955423f940120a1c8e93ca3bf",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 49.0,
+      "y": -45.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-SLV-13-415-01",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "cap shiny-silver (17-415 shell at 13-415 size)",
+     "file": "components/cap-shiny-silver.png",
+     "width": 428,
+     "height": 592,
+     "sha256": "3ef1f5792562eaab232c433eec53a754190497c0a7c357397afc64b555876f61",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 321.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-SLV-13-415-02",
+   "layers": [
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-mist.png",
+     "width": 146,
+     "height": 2664,
+     "sha256": "fe11250ca11328d89a234a43543352355d15214fd507a66eb0f1548ba7e6fc09",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 79.0,
+      "y": 1.63
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Frosted",
+     "file": "see-through/frosted-mist.png",
+     "width": 163,
+     "height": 2313,
+     "sha256": "ea2e5b7a9760852cdbc58f03782b1ca1fb366e08d03fffbb7a678a5738fabb61",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 82.0,
+      "y": 1.63
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Frosted"
+    },
+    {
+     "slot": "sprayer",
+     "layerName": "sprayer matte-silver (all metal: collar + head, white nozzle insert)",
+     "file": "components/CMP-CAP-SLV-13-415-02/sprayer.png",
+     "width": 428,
+     "height": 720,
+     "sha256": "a1669a77e49da2401672752f779a4b2ede1a63b4827a3deef8fdc90b2e56769a",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 436.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap matte-silver (whole sprayer)",
+     "file": "components/CMP-CAP-SLV-13-415-02/overcap.png",
+     "width": 442,
+     "height": 764,
+     "sha256": "8af5ef6d6b14514760050ac5bed700c5cef83ee0b4c200c26f1081c0bd8bd09c",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 221.0,
+      "y": 479.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "pump body + dip tube, lifted out",
+     "file": "shared/mist-internals.png",
+     "width": 98,
+     "height": 1742,
+     "sha256": "2a583128cbf8bf4d6aae80e1e04b1c449f263f0955423f940120a1c8e93ca3bf",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 49.0,
+      "y": -45.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-SLV-13-415-03",
+   "layers": [
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-mist.png",
+     "width": 146,
+     "height": 2664,
+     "sha256": "fe11250ca11328d89a234a43543352355d15214fd507a66eb0f1548ba7e6fc09",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 79.0,
+      "y": 1.63
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Frosted",
+     "file": "see-through/frosted-mist.png",
+     "width": 163,
+     "height": 2313,
+     "sha256": "ea2e5b7a9760852cdbc58f03782b1ca1fb366e08d03fffbb7a678a5738fabb61",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 82.0,
+      "y": 1.63
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Frosted"
+    },
+    {
+     "slot": "sprayer",
+     "layerName": "sprayer shiny-silver (all metal: collar + head, white nozzle insert)",
+     "file": "components/CMP-CAP-SLV-13-415-03/sprayer.png",
+     "width": 428,
+     "height": 720,
+     "sha256": "c7f34c5f31401f93596c06112e267da34bf0cb7f82641f4bd9535a65ee4e96db",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 436.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap shiny-silver (whole sprayer)",
+     "file": "components/CMP-CAP-SLV-13-415-03/overcap.png",
+     "width": 442,
+     "height": 764,
+     "sha256": "fdabcc49d6be02304152d706c0a0bb82b6ec7d5f09017be02a76fcc78fe442c2",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 221.0,
+      "y": 479.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "pump body + dip tube, lifted out",
+     "file": "shared/mist-internals.png",
+     "width": 98,
+     "height": 1742,
+     "sha256": "2a583128cbf8bf4d6aae80e1e04b1c449f263f0955423f940120a1c8e93ca3bf",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 49.0,
+      "y": -45.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-WHT-S-13-415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "short ribbed cap white",
+     "file": "components/CMP-CAP-WHT-S-13-415/cap.png",
+     "width": 450,
+     "height": 308,
+     "sha256": "c200df561d8653809b34d808495ec550f6a9f50148795708f7a4f350665b7f3e",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 225.0,
+      "y": 36.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-ROC-BLK-13415-DOT",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "cap black-dotted (17-415 shell at 13-415 size)",
+     "file": "components/cap-black-dotted.png",
+     "width": 428,
+     "height": 592,
+     "sha256": "29fb99bf50eab04f738efd044223aab046deeaa8d35ce4ee6611d9f7f469b627",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 321.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-ROC-MCPR-13415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "cap copper (17-415 shell at 13-415 size)",
+     "file": "components/cap-copper.png",
+     "width": 428,
+     "height": 592,
+     "sha256": "0baf669dd694081f360a587b8b414be052c3f49ce0c7d8a7170e46e4a66371d7",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 321.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-ROC-MGLD-13415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "cap matte-gold (17-415 shell at 13-415 size)",
+     "file": "components/cap-matte-gold.png",
+     "width": 428,
+     "height": 592,
+     "sha256": "264d5337e2d1de15a17ca905d662355e74216db786d262cc0c46c9668aa21be6",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 321.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-ROC-MSLV-13415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "cap matte-silver (17-415 shell at 13-415 size)",
+     "file": "components/cap-matte-silver.png",
+     "width": 428,
+     "height": 592,
+     "sha256": "e3b8a2a251532b0f556e78ba957dc16ae17ed5399c8e1ba867f4e7a1bab9ebc7",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 321.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-ROC-PNK-13415-DOT",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "cap pink-dotted (17-415 shell at 13-415 size)",
+     "file": "components/cap-pink-dotted.png",
+     "width": 428,
+     "height": 592,
+     "sha256": "ea4cb84645a9a5e8d11f4c90a45b5a3aae900e9626225e7617be6a60ed28aef1",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 321.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-ROC-SBLK-13415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "cap shiny-black (17-415 shell at 13-415 size)",
+     "file": "components/cap-shiny-black.png",
+     "width": 428,
+     "height": 592,
+     "sha256": "477930dc70a6b5b9a9acec098f02f6041669c7a8be0b4447d71f11558f82bcf8",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 321.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-ROC-SGLD-13415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "cap shiny-gold (17-415 shell at 13-415 size)",
+     "file": "components/cap-shiny-gold.png",
+     "width": 428,
+     "height": 592,
+     "sha256": "255065ca9941a09e1c9f7e8bfb5b42ca3835cb82ed3049eee8c7fae1c8932d6d",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 321.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-ROC-SLV-13415-DOT",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "cap silver-dotted (17-415 shell at 13-415 size)",
+     "file": "components/cap-silver-dotted.png",
+     "width": 428,
+     "height": 592,
+     "sha256": "3d80480ce0f3b69796db651ce1b1ca50b64d1e939cee110569cb5903ccdcabb7",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 321.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-ROC-SSLV-13415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "cap shiny-silver (17-415 shell at 13-415 size)",
+     "file": "components/cap-shiny-silver.png",
+     "width": 428,
+     "height": 592,
+     "sha256": "3ef1f5792562eaab232c433eec53a754190497c0a7c357397afc64b555876f61",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 321.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-SPR-MTCP-13-415-07",
+   "layers": [
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-mist.png",
+     "width": 146,
+     "height": 2664,
+     "sha256": "fe11250ca11328d89a234a43543352355d15214fd507a66eb0f1548ba7e6fc09",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 79.0,
+      "y": 1.63
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Frosted",
+     "file": "see-through/frosted-mist.png",
+     "width": 163,
+     "height": 2313,
+     "sha256": "ea2e5b7a9760852cdbc58f03782b1ca1fb366e08d03fffbb7a678a5738fabb61",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 82.0,
+      "y": 1.63
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Frosted"
+    },
+    {
+     "slot": "sprayer",
+     "layerName": "sprayer copper (all metal: collar + head, white nozzle insert)",
+     "file": "components/CMP-SPR-MTCP-13-415-07/sprayer.png",
+     "width": 428,
+     "height": 720,
+     "sha256": "a0c83420eb35f571dd53bf783c370ac336c231e7c69bcf3471f7616c951ea0ae",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 436.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap copper (whole sprayer)",
+     "file": "components/CMP-SPR-MTCP-13-415-07/overcap.png",
+     "width": 442,
+     "height": 764,
+     "sha256": "530755c79e3850eef29245013d772e45beaeb6b40d17e3da2314d05cbfb243e8",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 221.0,
+      "y": 479.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "pump body + dip tube, lifted out",
+     "file": "shared/mist-internals.png",
+     "width": 98,
+     "height": 1742,
+     "sha256": "2a583128cbf8bf4d6aae80e1e04b1c449f263f0955423f940120a1c8e93ca3bf",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 49.0,
+      "y": -45.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    }
+   ]
+  },
+  {
+   "componentId": "LIB-13-415-MtlRollon",
+   "layers": [
+    {
+     "slot": "roller",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-roller-metal.png",
+     "width": 309,
+     "height": 356,
+     "sha256": "af014d280d0223ba77c2af6b9c66dc73fa7ed11ba2ab0ddb145a5171cf557b04",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 184.0,
+      "y": 7.63
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "roller",
+     "layerName": "see-through, Frosted",
+     "file": "see-through/frosted-roller-metal.png",
+     "width": 261,
+     "height": 278,
+     "sha256": "b7ccac7d6c3499e1c258e90f095493e14d2456c14ec8856dcb18304eaf2d18f3",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 126.0,
+      "y": 7.63
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Frosted"
+    },
+    {
+     "slot": "roller",
+     "layerName": "roller metal, seated (the glass hides the stem)",
+     "file": "components/LIB-13-415-MtlRollon/roller.png",
+     "width": 278,
+     "height": 395,
+     "sha256": "e4da53f8513c06317c20f1abc3180937c32218b822dddb990e47b0b714b7e766",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 139.0,
+      "y": 222.68
+     },
+     "z": "behind-body",
+     "explodeIndex": 0,
+     "usage": "seated"
+    },
+    {
+     "slot": "roller",
+     "layerName": "roller metal, full plug",
+     "file": "components/LIB-13-415-MtlRollon/roller.png",
+     "width": 278,
+     "height": 395,
+     "sha256": "e4da53f8513c06317c20f1abc3180937c32218b822dddb990e47b0b714b7e766",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 139.0,
+      "y": 222.68
+     },
+     "z": "front",
+     "explodeIndex": 0,
+     "usage": "exploded"
+    }
+   ]
+  },
+  {
+   "componentId": "LIB-13-415-PlsticRollon",
+   "layers": [
+    {
+     "slot": "roller",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-roller-plastic.png",
+     "width": 309,
+     "height": 349,
+     "sha256": "f5ceef814925b40abccf4a05d456b72574455011b9c9d932bf2a91a01d2398e3",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 184.0,
+      "y": 7.63
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "roller",
+     "layerName": "see-through, Frosted",
+     "file": "see-through/frosted-roller-plastic.png",
+     "width": 261,
+     "height": 278,
+     "sha256": "3a9360b91111f3603f4bf15feec81a2e9011f3ad584419b9262cacbe26bed3b1",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 126.0,
+      "y": 7.63
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Frosted"
+    },
+    {
+     "slot": "roller",
+     "layerName": "roller plastic, seated (the glass hides the stem)",
+     "file": "components/LIB-13-415-PlsticRollon/roller.png",
+     "width": 278,
+     "height": 395,
+     "sha256": "6e19975460cf6f86585c9ca2a2ccfcf3406b87bad35ab2844a89c6c60c2acb65",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 139.0,
+      "y": 222.68
+     },
+     "z": "behind-body",
+     "explodeIndex": 0,
+     "usage": "seated"
+    },
+    {
+     "slot": "roller",
+     "layerName": "roller plastic, full plug",
+     "file": "components/LIB-13-415-PlsticRollon/roller.png",
+     "width": 278,
+     "height": 395,
+     "sha256": "6e19975460cf6f86585c9ca2a2ccfcf3406b87bad35ab2844a89c6c60c2acb65",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 139.0,
+      "y": 222.68
+     },
+     "z": "front",
+     "explodeIndex": 0,
+     "usage": "exploded"
+    }
+   ]
+  }
+ ],
+ "seeThroughQa": {
+  "clear-roller-plastic": {
+   "maxErr": 239,
+   "meanErr": 0.5025,
+   "pixels": 58575
+  },
+  "clear-roller-metal": {
+   "maxErr": 239,
+   "meanErr": 0.5023,
+   "pixels": 58727
+  },
+  "clear-mist": {
+   "maxErr": 42,
+   "meanErr": 0.0263,
+   "pixels": 190054
+  },
+  "frosted-roller-plastic": {
+   "maxErr": 203,
+   "meanErr": 0.4348,
+   "pixels": 57132
+  },
+  "frosted-roller-metal": {
+   "maxErr": 203,
+   "meanErr": 0.4337,
+   "pixels": 57120
+  },
+  "frosted-mist": {
+   "maxErr": 21,
+   "meanErr": 0.2508,
+   "pixels": 260343
+  }
+ }
+}
