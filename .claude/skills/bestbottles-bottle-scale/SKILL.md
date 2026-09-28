@@ -1,6 +1,6 @@
 ---
 name: bestbottles-bottle-scale
-description: Best Bottles bottle measurements and hero sizing, end to end. The source-of-truth glass heights (production Convex, grouped into glass bodies), the review sheet prepared for Jordan's boss and reconciling his answers into proposed Convex corrections, the universal scale card (bare glass mm to % of the 10:11 product card, tags S20-S200), the locked Cylinder sizes and their 2026-09-16 amendment, and the photoreal Sunburst hero pipeline that applies them. Use for "bottle heights", "measurements", "source of truth", "how many bottles/bodies", "scale card", "tag this bottle", "how big should this bottle be on the card", "send for review", "reconcile corrections", "resize heroes", "next family's heroes", "sunburst render", "matte silver looks wrong".
+description: Best Bottles bottle measurements and hero sizing, end to end. The source-of-truth glass heights (production Convex, grouped into glass bodies), the review sheet prepared for Jordan's boss and reconciling his answers into proposed Convex corrections, the universal scale card (bare glass mm to % of the 10:11 product card, tags S20-S200), the locked Cylinder sizes and their 2026-09-16 amendment, and the photoreal Sunburst hero pipeline that applies them. Use for "bottle heights", "measurements", "source of truth", "how many bottles/bodies", "scale card", "tag this bottle", "how big should this bottle be on the card", "send for review", "reconcile corrections", "resize heroes", "next family's heroes", "sunburst render", "matte silver looks wrong", "caliper", "measure the bottle", "caliper log", "record measurements", "cap / sprayer / overcap dimensions".
 ---
 
 # Best Bottles: bottle scale, measurements and hero sizing
@@ -19,6 +19,7 @@ are in `references/decisions.md`.
 | Cylinder hero sizes | **Locked** 2026-09-07, **amended** 2026-09-16 (four bodies), both on main | `docs/reviews/cylinder-family-final-manifest-2026-09-07.json` + `docs/reviews/sunburst-heroes-release-5/lock-amendment-2026-09-16.json` |
 | Boston Round 15/30/60 ml | **Locked** 2026-09-12, full-glass % | `data/asset-ledger/bottle-standards.json` |
 | Cylinder photoreal heroes | 45 of 52 live on main (PR #179, merged 2026-09-16); 7 have no PSD | `scripts/hero-pipeline/` |
+| **Caliper Log** (physical measurements, live; pinned in Jordan's sidebar) | Started 2026-09-26: 94 register bodies + 34 closure designs. Measured so far: Tall Cylinder 9 ml 13-415 (partial), 13-415 fine-mist sprayer + overcap (complete) | https://claude.ai/artifact/WBbAwDiM8WKx3u2dfGzvTh · `references/caliper-log.md` |
 
 ## Rules that are not re-derived
 
@@ -29,7 +30,7 @@ are in `references/decisions.md`.
    same height. Fitments ride on top at true proportion.
 3. **Size the glass, never the assembly.** The Cylinder lock measures the glass shoulder; the scale card measures the
    bare glass foot to rim. Neither ever uses the top of a sprayer or cap.
-4. **Measurement truth order:** the reviewer's physical check → exact-SKU legacy site evidence (see
+4. **Measurement truth order:** caliper readings in the **Caliper Log** (workflow G) → the reviewer's physical check → exact-SKU legacy site evidence (see
    `bestbottles-plate-kit-lane`) → production Convex (`measurementSource = best-bottles-master-truth@2026-07-12`)
    → dev Convex, which is stale. Always snapshot production.
 5. **Nothing is written to Convex** until Jordan approves a `proposed-corrections.csv`.
@@ -82,6 +83,21 @@ needs Jordan's explicit yes.
 
 **F. Photoreal heroes for a family**: see `scripts/hero-pipeline/README.md`.
 
+**G. Record and read caliper measurements (the Caliper Log)**
+The Caliper Log is a claude.ai page with a shared database, pinned in Jordan's sidebar:
+https://claude.ai/artifact/WBbAwDiM8WKx3u2dfGzvTh. One row per register body (`bodies`) and per closure design
+(`parts`, every colour of a design shares its numbers). The team types readings there; Claude reads them with the
+`ArtifactData` tool (`list` / `get` on `measurements/<bodyId>` and `partMeasurements/<partKey>`). Field codes, the
+measuring method and the readings so far are in `references/caliper-log.md`.
+- Readings Jordan gives in chat go into the log the same way (`ArtifactData` `set`, keep his raw numbers).
+- "Circumference" in speech means the caliper's diameter reading.
+- When readings disagree physically (for example an overcap whose inside is under the collar it slips over), keep the
+  raw values and add a `model` object with the values the 3D model uses, plus a `modelNote` explaining the adjustment.
+  Never overwrite a raw reading.
+- The body and closure lists are seeded from the register (dev Convex) and only editors can change them. Re-seed after
+  the register gains bodies or components. Document keys replace `/` with `~` (`cream-jar-40ml-48~400`).
+- Blender builds read the log first. Drawings and site dimensions come second (rule 4).
+
 ## Traps already paid for
 
 - **Grouping SKUs into glasses:** a `GBTall…`/`LBTall…` prefix is a tall glass (GBTallCyl9, GBTallRect10). A trailing
@@ -105,6 +121,7 @@ needs Jordan's explicit yes.
 SKILL.md
 references/decisions.md                     what was decided, when, and Jordan's words
 references/approved-sizes-2026-09-16.json   locks, amendment, Boston standards, rim/shoulder ratios, scale card control points
+references/caliper-log.md                   G: the Caliper Log (link, data layout, field codes, method, readings so far)
 scripts/pull_prod_measurements.mjs          A
 scripts/bottle_bodies.py                    A (grouping; imported by B-E)
 scripts/build_measurements_workbook.py      B

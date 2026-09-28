@@ -1,0 +1,334 @@
+# The Caliper Log
+
+The Caliper Log holds physical caliper measurements for every bottle body and closure design. It was started on
+2026-09-26 at Jordan's request: "start tracking the measurements … We're using a caliper." Later that day Jordan asked
+to "lock this sheet in … and then record it in the skill so we could easily pull this back up."
+
+- **Page:** https://claude.ai/artifact/WBbAwDiM8WKx3u2dfGzvTh ("Bottle Caliper Log"). It is pinned in Jordan's
+  claude.ai sidebar.
+- **Tabs:** Bodies · Closures · How to measure. A progress bar spans both lists, and "Copy as CSV" exports everything.
+- **Access:** only the owner and editors can change the body and closure lists. Anyone at Contributor or above can save
+  measurements. Share it from the page's Share menu.
+
+## Data layout
+
+Read and write it with the `ArtifactData` tool, using the page URL above.
+
+| Collection | Key | Written by | Holds |
+|---|---|---|---|
+| `bodies` | register `bodyId` (`/` → `~`) | Claude (seed) | family, capacity, neck, glasses, fitments, plates, `known` site dims + source + confidence, sample SKU, priority (1 = rendered in Blender, 2 = has plates, 3 = no plate) |
+| `parts` | `<neck>__<type>__<style or std>` | Claude (seed) | closure design: name, kind (cap, sprayer, pump, roller, dropper, bulb, plug), `members` (every componentId, SKU and finish), bodies it fits |
+| `measurements` | same key as `bodies` | the page / Claude | `values` {code: mm}, optional `model` + `modelNote`, sampleSku, glass, samples, by, notes, updatedAt |
+| `partMeasurements` | same key as `parts` | the page / Claude | same shape as `measurements` |
+
+The lists were seeded on 2026-09-26 from dev Convex (`register:listPage` + `register:body`, read-only):
+
+- 94 current bodies; 3 retired bodies were left out.
+- 34 closure designs, covering the 142 current components.
+
+Re-seed the lists after the register gains bodies or components.
+
+## Field codes
+
+All values are in mm unless noted.
+
+**Bodies:**
+
+| Code | Measurement |
+|---|---|
+| H | overall height, foot to rim top, bare glass |
+| W | body width, front (round bottles: the diameter) |
+| Dp | body depth, side at 90° (round bottles: an ovality check) |
+| Wb | foot width, 1–2 mm above the table |
+| Hh | outside heel height: table to where the straight side starts curving in |
+| Wr | standing ring diameter: the flat circle that touches the table |
+| Hs | shoulder start height (optional) |
+| Hn | neck base height |
+| Fh | finish height, neck base to rim top |
+| T | thread OD across the crests |
+| E | thread root OD |
+| Bd | bead / collar ring OD (optional) |
+| I | bore ID |
+| Dep | inside depth, rim to floor (base thickness = H − Dep) |
+| Cap | overflow capacity in ml (water to the brim, weighed) |
+| Wt | glass weight in g (optional) |
+
+**Closures:**
+
+| Closure | Codes |
+|---|---|
+| Cap | OD, H, Wall, ID, Dep, Asm |
+| Sprayer / pump | collar COD, CH, CID; step ring SOD, SH; actuator AOD, AH; Asm; optional TubeOD, TubeL; overcap OcOD, OcH, OcWall, OcID |
+| Roller | Ball, FOD, FT, SOD, SL, Proud |
+| Dropper | COD, CH, BOD, BH, POD, PL, Asm |
+| Bulb sprayer | COD, CH, HOD, HH, BD, BL, Hose, Tassel, Asm |
+| Plug / reducer | TD, POD, PL, Hole, Asm |
+
+`Asm` is the closure's height on its bottle (screwed on, table to top). Asm minus the bottle's H is how far the closure
+stands above the rim.
+
+## Method
+
+This summarises the page's "How to measure" tab.
+
+- **Tools:** a digital caliper with 0.01 mm resolution and a depth rod, a flat surface, and a scale that reads 0.01 g.
+- **Setup:** zero the caliper, and re-zero it about every 10 readings.
+- **Readings:** take 3 of each and enter the median. Re-measure if they spread by more than 0.10 mm.
+  - Outside diameters: take the smallest reading, because tilting the caliper only makes it read larger.
+  - Inside diameters: take the largest reading, because tilting only makes it read smaller.
+  - Measure at 90° to the mould seam.
+  - Mark heights with the edge of a piece of tape.
+  - Inside depth: use the depth rod from the rim.
+  - Capacity: fill with water to the brim and weigh it.
+- **Photo:** straight-on, with the lens far away and level and a ruler at the front plane. It captures curves a caliper
+  can't.
+- **Samples:** one clean sample per row, with its SKU and colour noted. Moulds vary by ±0.5–1 mm, so when there are 2–3
+  samples, take the median.
+
+## Readings so far
+
+### Tall Cylinder 9 ml 13-415
+
+Key `cylinder-9ml-13-415`, measured by Jordan on 2026-09-26.
+
+| Code | Reading | Current 3D model |
+|---|---|---|
+| H | 105.60 | 106.2 |
+| W | 18.325 | 18.0 |
+| Wb | 18.00 | — |
+| Fh | 10.11 | 11.5 |
+| T | 13.40 | 12.87 |
+| E | 11.22 | 11.34 |
+| I | 7.04 | 7.3 |
+| Dep | 92.63 (depth rod, rim to inside floor) | 92.70 (locked body) |
+| Hh | 0.18 | 0.18 (locked body) |
+| Wr | 18.05 | 18.05 (locked body) |
+
+Still needed: Dp, Hn and Cap.
+
+**LOCKED v2 2026-09-27 (Jordan: "shoulder v2 is locked"). Use this, not v1.**
+- Folder: `~/Documents/Codex/2026-09-24/the-image-is-clearly-the-target/outputs/tall-9ml-13-415-LOCKED-v2-2026-09-27/`.
+- v2 has a flat shoulder at 94.49 (Fh 11.0 below the rim) with a 1.3 mm round down to the straight wall.
+- Why: at depth 10.77 the lined short cap could not reach the v1 sloping shoulder.
+- Everything else is unchanged from v1.
+- Fitments sit on the new shoulder: sprayer +1.928, overcaps +2.477, roll-on caps +2.33, ribbed caps +0.60.
+- The lined short caps (no roller) sit on the shoulder.
+- Studio lighting in the lock files is NOT approved.
+
+**Studio + hardware v1.3 LOCKED 2026-09-28. The body is untouched and passes the v2 body lock check.**
+- Folder: `~/Documents/Codex/2026-09-24/the-image-is-clearly-the-target/outputs/tall-9ml-13-415-STUDIO-v1.3-LOCKED-2026-09-28/`.
+  It holds the clear and frosted `.blend` files, `STUDIO-LOCK.json` and `scripts/build_v13.sh`.
+- It adds:
+  - the ribbed short caps at the caliper size;
+  - the V63 dip-tube top (see the sprayer section);
+  - a glossy-only edge card behind the bottle, which gives an even outer edge line from shoulder to base (it fixes
+    the bell-shape illusion);
+  - finish colours fitted to the master PSD photos;
+  - the full frost.
+- **Frost ruling (Jordan, 2026-09-28, with photos of the real frosted bottle):** the frost covers the whole exterior
+  from the shoulder to the base, including the bottom face. Only the neck finish is clear. The model uses frost
+  roughness 0.75–0.82, the inner bowl on the body material, and a soft inside haze so no lines show through.
+  Jordan: "The new frost is perfect."
+- Not pushed to dev.
+
+**v1, superseded:** **LOCKED 2026-09-27 (Jordan: "Bottle is perfect let's lock it now").** The bottle body is locked in
+`~/Documents/Codex/2026-09-24/the-image-is-clearly-the-target/outputs/tall-9ml-13-415-LOCKED-2026-09-27/`.
+- Contents: `LOCK.json`, clear and frosted `.blend` files (read-only, with identical body mesh) and `scripts/verify_lock.py`.
+- Outside: H 105.49, OD 18.35, heel 0.18 on an 18.05 ring.
+- Inside: floor at z 12.79; one nearly straight wall into the rounded U, with no pinch.
+- Capacity to the brim: 9.55 ml, calculated from the mesh, not weighed.
+- Never edit the body mesh. Any change is a new version and needs Jordan's approval.
+- Run `verify_lock.py` on any scene before rendering.
+
+**Depth (Jordan, 2026-09-26, carried over from the materials session):** the depth rod read 92.63 from the rim to the
+inside floor. H − Dep puts the floor at z 12.97 above the standing base. That retires the deep-U model value
+(Dep 98.6, 10.43 ml). The V48 working glass (`outputs/tall-glass-v37/reflection-isolation-v48`) calculates 10.006 ml,
+but the 5 mm bevel into the wall is still an assumption and the overflow has not been weighed. Do not force 10 ml.
+
+**Shape:** from Jordan's photo IMG_5823, the shoulder is one smooth round from the wall into the neck. The May 2015
+drawing glass had a cone plus a ledge, which read as two steps; do not rebuild it that way.
+
+**13-415 finish rulings (Jordan, 2026-09-26)** apply to both 13-415 cylinders, this one and the Cylinder 5 ml:
+
+- **Neck height:** Fh = 11.0, measured from the rim top to where the neck meets the shoulder. The raw 10.11 stays in
+  `values`, and 11.0 is in `model`.
+- **Neck Ø:** E = 11.22.
+
+**WIP rebuild:** `outputs/tall-caliper-v36/` (v36) rebuilds this glass to the readings, with the smooth shoulder and
+Fh 11.0.
+
+### 13-415 fine-mist sprayer and overcap
+
+Key `13-415__fine-mist-sprayer__std`, which covers all 12 finishes. Measured by Jordan on 2026-09-26.
+
+| Part | Code | Reading |
+|---|---|---|
+| Collar | COD | 15.39 |
+| Collar | CH | 13.94 |
+| Collar | CID | 12.36 (across its internal threads) |
+| Step ring | SOD | 13.12 |
+| Step ring | SH | 5.00 |
+| Actuator | AOD | 10.47 |
+| Actuator | AH | 8.84 |
+| Sprayer total | CH + SH + AH | 27.78 |
+| Overcap | OcOD | 17.00 |
+| Overcap | OcWall | 0.90 |
+| Overcap | OcID | 15.25 |
+| Overcap | OcH | 30.72 |
+
+**Model adjustment (stored in the `model` field).** The overcap's inside measured 15.25; 17.00 − 2 × 0.90 gives 15.20.
+Either way it is under the collar's 15.39, and a slip-over cap can't be smaller than the collar. The model therefore
+uses:
+
+- collar Ø15.30;
+- overcap inside Ø15.30 with a 0.85 wall.
+
+Jordan: "make any necessary logical adjustments if our caliper is off a millimeter or two."
+
+**Shape, from Jordan's 360° photos (IMG_5813–5819):**
+
+- Collar: its top edge is rounded where it steps in to the step ring.
+- Step ring: its edges are softened.
+- Actuator: a rounded top edge and a nearly flat top, with a small light-grey nozzle insert near the top, facing front.
+- Overcap: a very slightly domed top with a rounded edge.
+- Finish: satin-matte black with broad soft highlights, not mirror gloss.
+
+**Not yet measured:** the dip tube. Jordan said it is "fine as it is for now".
+
+**Sprayer changes since the lock:**
+- Applied 2026-09-27 and in studio v1.3:
+  - a FLAT actuator top with a 0.4 mm round, at z 120.342 on the Tall (Jordan: "looks better");
+  - the white nozzle insert recessed 0.60 mm (Jordan: "Perfect").
+- **V63 dip-tube top (approved 2026-09-28, "new dip tube is approved"):** the pump tailpiece under the collar is a wide,
+  plain, frosted cylinder. The sizes are PHOTO-DERIVED, not caliper readings, and are sized by ratio to the tube because
+  the glass magnifies what is inside it.
+  - Tailpiece Ø3.30 (2.2× the tube).
+  - Flat bottom with a 0.3 round, 6.19 under the collar (z 88.30 on the Tall).
+  - No ring: the line in the wide photo is the glass shoulder.
+  - Hollow core; the tube leaves the bottom directly, with a milky barb filling its top 1.75.
+  - Dip tube Ø1.44, model value, not measured.
+  - It replaces V62, the straight 1.8 mm stem.
+- Still to caliper if possible: tailpiece OD and length, and dip tube OD.
+
+**What the older model had wrong:** the 3D model built before these readings had an overcap of Ø17.6 × 29.6 and a
+collar of Ø17. Use the readings above.
+
+**LOCKED geometry (Jordan, 2026-09-26: "the geometry is perfect, so it needs to be locked in").** The sprayer (collar,
+step ring, actuator, nozzle insert) is locked in `outputs/sprayer-13415-v38/`:
+
+- `sprayer_13415.py`: `build()`, `seat_on()` and `verify()`;
+- `sprayer-13415-locked.blend` and `LOCK.json`.
+
+How it was proven:
+
+- Re-rendering the approved view from the lock matches it pixel for pixel.
+- A build at the Tall's seat is within 0.000007 mm of the locked parts.
+
+How to use it:
+
+- Colour is a material swap only. Render each finish in its approved scene: the v33 `sprayer-scenes` for eight
+  finishes; red comes from the 17-415 v27 scene.
+- The overcap is built to the caliper but is not locked yet.
+
+**One sprayer for every 13-415 neck.** Jordan: the same sprayer and overcap fit every 13-415 neck that takes a
+fine-mist sprayer. These numbers therefore hold for all 15 such bodies (listed in `appliesTo`). The dip tube is the
+only part that changes, because it is cut to each bottle's depth.
+
+### Cylinder 5 ml 13-415 (Clear and Cobalt Blue)
+
+Key `cylinder-5ml-13-415`. Jordan measured it on 2026-09-26 and again on 2026-09-28. The Clear and Cobalt glass give
+the same numbers.
+
+| Code | 2026-09-28 | 2026-09-26 |
+|---|---|---|
+| H | 53.66 | 53.16 |
+| W | 18.08 (widest point) | — |
+| Dp | 18.08 (stated equal to W: round bottle) | — |
+| Wb | no reading given | 17.51 |
+| Hs | 41.55 (base to shoulder) | 41.32 |
+| Fh | 10.72 (neck base to rim top) | ~11.0 |
+| T | 12.75 (outside threads) | — |
+| Bd | 11.54 (ring below the threads) | — |
+| E | — | 11.64 (neck Ø) |
+| I | 7.56 (bore) | 7.49 |
+| Dep | 50.23 | — |
+
+- `values` holds the latest reading for each code. Each pass is kept in its own `readings…` block.
+- Derived from the 09-28 readings:
+  - base thickness: H − Dep = 3.43;
+  - neck base height: H − Fh = 42.94;
+  - shoulder band: 42.94 − 41.55 = 1.39, close to the Tall 9 ml's 1.3 flat shoulder.
+- Capacity: Jordan estimates about 5.5 ml. This is logged as `capacityEstimate`, not `Cap`, because it has not been
+  weighed. Glass weight is unknown.
+- Checks for Jordan:
+  - H is 0.50 taller than on 09-26.
+  - Fh 10.72 was measured, against the 11.0 ruling.
+  - Bd 11.54 and the 09-26 neck Ø 11.64 are probably the same ring.
+- The site gives 53 × 17 for this bottle.
+- Still needed: Wb re-check and a weighed Cap.
+- **13-415 finish rulings (Jordan, 2026-09-26), for both 13-415 cylinders:** neck height Fh = 11.0 and neck Ø E = 11.22.
+  They stay in `model` until Jordan changes them; the raw readings stay in `values`.
+
+### 13-415 roller insert (metal and plastic ball)
+
+Key `13-415__roller-insert__std`, measured by Jordan on 2026-09-26. The metal and plastic rollers are one design, and
+it fits all 13 of the 13-415 roller bodies.
+
+| Code | Reading |
+|---|---|
+| L | 17.38 (loose, stem tip to ball top) |
+| SL | 7.32 |
+| SOD | 7.62 (mid-length) |
+| STop | 7.80 (just under the flange) |
+| STip | 6.51 (tip; the stem narrows, or "indents in", toward it) |
+| HOD | 9.51 |
+| BallUp | 1.33 (the ball stands 1.30–1.35 out of the housing) |
+
+**Model values (derived):**
+
+- Proud = L − SL = 10.06. This is the ball top above the rim when the roller is seated.
+- The ball Ø stays at 7.79 until it is measured.
+
+**The stem is a press fit.** Its top (7.80) is wider than both bores measured so far: 7.04 on the Tall Cylinder and
+7.49 on the 5 ml. The soft plastic squeezes into the bore, so:
+
+- a seated render narrows the stem to that bottle's bore;
+- the loose view keeps the stem at 7.80 → 6.51.
+
+**The older model is wrong.** It was the 17-415 roller scaled ×0.742:
+
+| | Older model | Reading |
+|---|---|---|
+| Overall length | 15.55 | 17.38 |
+| Ball above the housing | 2.76 | 1.33 |
+| Housing Ø | 9.79 | 9.51 |
+| Stem | 7.20 → 6.77 × 6.68 | 7.80 → 6.51 × 7.32 |
+
+**Still needed:** the ball Ø, and the flange Ø and thickness.
+
+### 13-415 roll-on caps (carried over from the 2026-09-27 materials session)
+
+Source: the approved tall 9 mL materials package, `docs/reviews/tall-9ml-2026-09-27` on branch
+`codex/tall-9ml-materials-handoff`.
+
+**Long roll-on shell** (`13-415__roll-on-cap__Roll-On`, all 9 finishes)
+
+- **Reading:** OD 16.80.
+- **Given with it:** the glass at or near the shoulder read 18.29 and 18.27. These are logged on the Tall Cylinder row
+  as `shoulderReadings`, with the datums unconfirmed.
+- **Model:**
+  - seated at Z 92.160 mm;
+  - 0.745 mm glass reveal per side;
+  - crown rounding ~0.50 mm, lower edge ~0.13 mm;
+  - height 24.334 mm, which is model-derived, not measured.
+- **Still needed:** height, inside diameter, inside depth, and Asm.
+
+**Short ribbed cap** (`13-415__roll-on-cap__Short`, black and white)
+
+- **Readings:** OD 15.50, H 9.49, rim-wall reading 1.85, Dep 7.17, and 5.40 of smooth front space between the rib groups.
+- **Not yet applied to the model.**
+- **Roof:** 2.32 mm (H − Dep), only if those two datums agree.
+- **Open question:** the inside opening diameter, measured straight across the hole.
+  - Taken as a plain radial wall, 1.85 gives an 11.80 opening. That is narrower than the Tall's 12.37 mouth and its
+    13.23 thread envelope, so 1.85 probably includes a thread ridge.
+- **Superseded, never use:** 9.45 / 2.50 / 7.07.
