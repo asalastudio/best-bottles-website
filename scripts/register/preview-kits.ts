@@ -1,7 +1,7 @@
 /**
  * Review-sheet helper (local, read-only): compose the register kits the rebuilt register would draw for some SKUs.
  *
- *   npx tsx scripts/register/preview-kits.ts <out.json> <approveIdsCsv|none> SKU…
+ *   npx tsx scripts/register/preview-kits.ts <out.json> <approveIdsCsv|none> [--anchor id:slot:y] [--local-plates] SKU…
  *
  * Plates, bodies and component layers come from production's registerStage.forSkus; each SKU's build comes from the
  * rebuilt register (data/register/assemblies.csv), so a refresh can be previewed before it is pushed. A part
@@ -48,7 +48,9 @@ async function main() {
     // --anchor <componentId>:<slot>:<y>: preview a proposed anchor (layer px) in place of the measured one
     const anchors = new Map<string, number>();
     const skus: string[] = [];
+    let localPlates = false;
     for (let i = 0; i < rest.length; i++) {
+        if (rest[i] === "--local-plates") { localPlates = true; continue; }
         if (rest[i] !== "--anchor") { skus.push(rest[i]); continue; }
         const [id, slot, y] = (rest[++i] ?? "").split(":");
         if (!id || !slot || !Number.isFinite(Number(y))) throw new Error("--anchor takes <componentId>:<slot>:<y>");
@@ -96,6 +98,37 @@ async function main() {
     for (const id of approve) {
         const component = payload.components[id];
         if (component) { component.approved = true; component.layers = component.layers.map((layer) => ({ ...layer, approved: true })); }
+    }
+    if (localPlates) {
+        // --local-plates: each SKU's body and plate as the rebuilt register names them, from the local measurements
+        // (data/register/bodies/bodies-measurements.json, images in output/register-bodies/), for a body not pushed yet
+        const measured = new Map((JSON.parse(fs.readFileSync(resolve(ROOT, "data", "register", "bodies", "bodies-measurements.json"), "utf8")) as Array<{
+            plateKey: string; bodyId: string; glass: string; file: string; width: number; height: number; pxPerMm: number;
+            anchors: { axisX: number; seatY: number; baselineY: number; shoulderY: number | null };
+        }>).map((p) => [p.plateKey, p]));
+        const bodies = new Map(register.bodies.map((b) => [b.bodyId, b]));
+        const num = (value: string | undefined) => (value && Number.isFinite(Number(value)) ? Number(value) : null);
+        for (const graceSku of grace) {
+            const assembly = payload.assemblies[graceSku];
+            const row = local.get(graceSku);
+            if (!assembly || !row) continue;
+            const plateKey = `${row.bodyId}|${row.glass}`;
+            const plate = measured.get(plateKey);
+            const body = bodies.get(row.bodyId);
+            if (!plate || !body) continue;
+            assembly.bodyId = row.bodyId;
+            assembly.plateKey = plateKey;
+            payload.plates[plateKey] = {
+                plateKey, bodyId: row.bodyId, glass: plate.glass, url: `file://${resolve(ROOT, "output", "register-bodies", plate.file)}`,
+                width: plate.width, height: plate.height, pxPerMm: plate.pxPerMm,
+                anchors: { axisX: plate.anchors.axisX, seatY: plate.anchors.seatY, baselineY: plate.anchors.baselineY, shoulderY: plate.anchors.shoulderY ?? null },
+                approved: true,
+            } as RegisterStagePayload["plates"][string];
+            payload.bodies[row.bodyId] = {
+                bodyId: row.bodyId, family: body.family, capacityMl: num(body.capacityMl), neck: body.neck,
+                dims: { heightBareMm: num(body.dimsHeightBareMm), diameterMm: num(body.dimsDiameterMm), widthMm: num(body.widthMm) },
+            } as RegisterStagePayload["bodies"][string];
+        }
     }
     for (const [key, y] of anchors) {
         const [id, slot] = key.split(":");

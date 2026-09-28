@@ -1497,8 +1497,8 @@
   "file": null
  },
  {
-  "plateKey": "rectangle-10ml-13-415|Clear",
-  "bodyId": "rectangle-10ml-13-415",
+  "plateKey": "tall-rectangle-10ml-13-415|Clear",
+  "bodyId": "tall-rectangle-10ml-13-415",
   "glass": "Clear",
   "psd": "5.  13-415 Bottles/16. Tall Rectangular 10ml/1. Tall Rectangular 10ml (uncapped) PSD/1. GBTallRect10BlkSht.psd",
   "override": {
@@ -1506,7 +1506,7 @@
    "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass; flood-filled from the edge and dropped (clear glass only)"
   },
   "source": "PSD layer Layer 10 (white ground stripped)",
-  "file": "rectangle-10ml-13-415--clear.png",
+  "file": "tall-rectangle-10ml-13-415--clear.png",
   "width": 220,
   "height": 1212,
   "sha256": "0d55411aa710fafb7d48495471e3bcaa05f6bffe56c9dfe0f353f33a95c83b41",
@@ -2191,6 +2191,28 @@
    "axisX": 137.5,
    "barrelPx": 255.0,
    "shoulderY": 89
+  }
+ },
+ {
+  "plateKey": "footed-rectangle-10ml-13-415|Clear",
+  "bodyId": "footed-rectangle-10ml-13-415",
+  "glass": "Clear",
+  "psd": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/1. Footed Rect 10ml (Uncapped) PSD/1. GBRect10BlkSht.psd",
+  "override": {
+   "stripWhiteGround": true,
+   "why": "the body layer carries the retoucher's opaque white fill patches beyond the glass, as on the Tall Rectangle; flood-filled from the edge and dropped (clear glass only)"
+  },
+  "source": "PSD layer Layer 4 (white ground stripped)",
+  "file": "footed-rectangle-10ml-13-415--clear.png",
+  "width": 362,
+  "height": 631,
+  "sha256": "67da4515fc227ad82c0dbc73be69100d3b27e232dc7566b20ab9a30aa9492da4",
+  "measured": {
+   "rim": 6,
+   "foot": 625,
+   "axisX": 180.5,
+   "barrelPx": 345.0,
+   "shoulderY": 201
   }
  }
 ]

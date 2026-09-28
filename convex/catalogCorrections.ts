@@ -31,8 +31,15 @@ const fieldsV = v.object({
     capStyle: v.optional(v.union(v.string(), v.null())),
     // 2026-09-25: the ten Minaret dab-on cap SKUs were filed as sprayers or roll-ons; they are caps.
     applicator: v.optional(schema.tables.products.validator.fields.applicator),
+    // 2026-09-28: GBCyl5SpryBlkMatt was the one 5 mL clear Cylinder recorded as 5.5 mL; its name, SKU and seven
+    // siblings say 5 mL. Capacity is identity the Team Hub editor never writes, so it is corrected here, guarded.
+    capacity: v.optional(v.union(v.string(), v.null())),
+    capacityMl: v.optional(v.union(v.number(), v.null())),
 });
 type Fields = Infer<typeof fieldsV>;
+/** A corrected field's value as reported: text for most fields, a number for capacityMl. */
+const fieldValueV = v.union(v.string(), v.number(), v.null());
+type FieldValue = Infer<typeof fieldValueV>;
 
 const groupFieldsV = v.object({
     slug: v.optional(v.string()),
@@ -60,9 +67,9 @@ export const correctProductFields = mutation({
     },
     returns: v.object({
         dryRun: v.boolean(),
-        written: v.array(v.object({ websiteSku: v.string(), field: v.string(), before: v.union(v.string(), v.null()), after: v.union(v.string(), v.null()) })),
+        written: v.array(v.object({ websiteSku: v.string(), field: v.string(), before: fieldValueV, after: fieldValueV })),
         alreadyCorrect: v.array(v.string()),
-        changedSince: v.array(v.object({ websiteSku: v.string(), field: v.string(), now: v.union(v.string(), v.null()) })),
+        changedSince: v.array(v.object({ websiteSku: v.string(), field: v.string(), now: fieldValueV })),
         notFound: v.array(v.string()),
     }),
     handler: async (ctx, args) => {
@@ -73,9 +80,9 @@ export const correctProductFields = mutation({
         const at = Date.now();
         const out = {
             dryRun,
-            written: [] as { websiteSku: string; field: string; before: string | null; after: string | null }[],
+            written: [] as { websiteSku: string; field: string; before: FieldValue; after: FieldValue }[],
             alreadyCorrect: [] as string[],
-            changedSince: [] as { websiteSku: string; field: string; now: string | null }[],
+            changedSince: [] as { websiteSku: string; field: string; now: FieldValue }[],
             notFound: [] as string[],
         };
         for (const entry of args.entries) {
