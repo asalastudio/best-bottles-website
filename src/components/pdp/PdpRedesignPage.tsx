@@ -67,7 +67,8 @@ import styles from "./pdp.module.css";
 import PdpBuyBox, { type AddState } from "./PdpBuyBox";
 import PdpStage from "./PdpStage";
 import { PdpBuildStrip, PdpCollectionBand, PdpOrderLines, PdpProductInfo, PdpStickyBar, PdpTechSheet, type OrderLineView } from "./PdpSections";
-import { drawingFor, drawingStyleFromQuery } from "@/lib/products/pdp-redesign/drawings";
+import { drawingBodyId, drawingFor, drawingStyleFromQuery } from "@/lib/products/pdp-redesign/drawings";
+import { technicalDrawingFor } from "@/lib/products/pdp-redesign/tech-drawing";
 
 export type PdpRedesignPayload = {
     slug: string;
@@ -76,6 +77,8 @@ export type PdpRedesignPayload = {
     siblings: SiblingGlassGroup[];
     /** Published kits for this group's variants and each sibling's primary SKU, by website SKU and Grace SKU. */
     kitsBySku: Record<string, KitLike | null>;
+    /** For a cap-only group: its glass with a sprayer and with a roller (the strip's fitment tile). */
+    fitmentKits?: KitLike[];
     platesBySku: Record<string, PlateRef>;
     /** Curated or composed copy, by website SKU. */
     descriptions: Record<string, ItemDescription>;
@@ -98,7 +101,7 @@ function usableImage(url: string | null | undefined): string | null {
     return url;
 }
 
-export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, platesBySku, descriptions, collection, familyHref }: PdpRedesignPayload) {
+export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, fitmentKits = [], platesBySku, descriptions, collection, familyHref }: PdpRedesignPayload) {
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
@@ -328,6 +331,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     const capacityLabel = `${group.capacityMl != null ? `${group.capacityMl} ml` : group.capacity ?? ""} ${group.family ?? ""}`.trim();
     const bodyKit = kit ?? kitFor(kitsBySku, { websiteSku: group.primaryWebsiteSku, graceSku: group.primaryGraceSku });
     const capKits = caps.map((cap) => kitFor(kitsBySku, cap.variants[0])).filter((entry): entry is KitLike => Boolean(entry));
+    const groupKits = variants.map((variant) => kitFor(kitsBySku, variant)).filter((entry): entry is KitLike => Boolean(entry));
     const plate = selected ? platesBySku[selected.graceSku] ?? (selected.websiteSku ? platesBySku[selected.websiteSku] : undefined) : undefined;
     const fallbackImage = usableImage(selected?.imageUrl) ?? plate?.image ?? usableImage(group.heroImageUrl) ?? null;
     const swatchStyle = getMaterialSwatchStyle(activeCap?.swatchName ?? capName, {});
@@ -424,12 +428,18 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                     glassLabel={glassLabel(group.color)}
                     neck={group.neckThreadSize ?? null}
                     bodyKit={bodyKit}
-                    fitmentKit={kit}
+                    groupKits={groupKits}
+                    fitmentKits={fitmentKits}
                     capKits={capKits}
                     href={buildYourBottleHref(group, collection?.band ?? null)}
                 />
 
-                <PdpTechSheet rows={techSheetRows(selected, group)} onPrint={() => window.print()} drawing={drawingFor(slug, selected, drawingStyleFromQuery(searchParams.get("drawing")))} />
+                <PdpTechSheet
+                    rows={techSheetRows(selected, group)}
+                    pdfHref={`/api/pdf/tech-sheet/${encodeURIComponent(slug)}${selected?.graceSku ? `?sku=${encodeURIComponent(selected.graceSku)}` : ""}`}
+                    drawing={drawingFor(slug, selected, drawingStyleFromQuery(searchParams.get("drawing")))}
+                    technical={technicalDrawingFor(drawingBodyId(slug))}
+                />
 
                 {collection && (
                     <PdpCollectionBand band={collection.band} description={collection.description} familyHref={familyHref} familyLabel={group.family} />

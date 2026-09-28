@@ -149,3 +149,32 @@ describe("behind the glass", () => {
         if (lifted && lifted.dyPct < 0) expect(lifted.clipBottomPct ?? 0).toBeLessThan(seated.clipBottomPct!);
     });
 });
+
+describe("studio backdrop", () => {
+    // The Tall 9 mL 13-415 register kit on the 1000 x 1100 canvas (Frosted, 7.2 px/mm).
+    const TALL: KitLike = {
+        ...KIT,
+        sku: "GBTallCylFrst9SpryBlkSh",
+        anchors: { axisX: 500, neckAxisX: 500, seatY: 300, baselineY: 1061, pxPerMm: 7.2 },
+        register: { bodyId: "cylinder-9ml-13-415", plateKey: "cylinder-9ml-13-415|Frosted", glass: "Frosted", pxPerMm: 7.2 },
+    };
+
+    it("pins the body's studio under the kit, its floor point on the kit's baseline under the axis", () => {
+        const layout = stageLayout(TALL, "capon", CONTEXT)!;
+        const b = layout.backdrop!;
+        expect(b.url).toBe("/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp");
+        // the studio's own floor replaces the drawn baseline
+        expect(layout.baseline).toBe(false);
+        // backdrop px/mm 6 -> kit 7.2: the floor point (750, 1109.51) lands on (500, 1061)
+        const k = 7.2 / 6;
+        expect(b.box.leftPct).toBeCloseTo(((500 - 750 * k) / 1000) * 100, 3);
+        expect(b.box.topPct).toBeCloseTo(((1061 - 1109.51 * k) / 1100) * 100, 3);
+        expect(b.box.widthPct).toBeCloseTo(((1500 * k) / 1000) * 100, 3);
+    });
+
+    it("keeps the measuring grid in EXPLODED and the flat canvas for bodies without a studio", () => {
+        expect(stageLayout(TALL, "exploded", CONTEXT)!.backdrop).toBeNull();
+        expect(stageLayout(KIT, "capon", CONTEXT)!.backdrop).toBeNull();
+        expect(stageLayout({ ...TALL, register: { ...TALL.register!, bodyId: "cylinder-9ml-17-415" } }, "capon", CONTEXT)!.backdrop).toBeNull();
+    });
+});
