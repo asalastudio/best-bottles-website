@@ -1,6 +1,6 @@
 # PDP item descriptions: classification rubric and plan
 
-Status: draft for review · 2026-09-26
+Status: draft for review · 2026-09-26 · decisions in §7 updated 2026-09-28
 Updated 2026-09-26 with Best Bottles' direction:
 
 - Beard oil is named wherever buyers put it.
@@ -238,12 +238,12 @@ Each card sets what the "For ..." sentence may say (**Primary**, then **Also**),
 - **Primary.** L1 eau de parfum and cologne kept on a dressing table; display; gifts.
 - **Excluded.** L2 room spray and "air freshener". Remove both from all 478 SKUs. Also all oils.
 - **Deciding fact.**
-  1. Guard. "The bulb does not seal the bottle, so it is not a travel bottle."
+  1. Carry. "Ships with a travel cap: take off the bulb and fit the cap to carry it." Best Bottles, 2026-09-28: the bulb ships unattached, and every bottle comes with a travel cap.
 - **Evidence.**
   - "More pretty than practical."
   - Bulbs cannot seal, so the contents evaporate.
   - Bulbs draw in air and dust (7 threads).
-- **Needs confirmation** from Best Bottles before it ships: do our bulb sprayers seal when not in use?
+- **Answered 2026-09-28:** the bulb ships unattached with a travel cap for carrying (above). Whether the bulb itself seals when idle is not claimed either way.
 
 #### SPLASH: pour bottle with an orifice reducer
 
@@ -388,7 +388,7 @@ Use a material line only when it changes the use. It competes for sentence 3; it
 | Clear | "Clear glass shows the fill level." Useful for decants and refills. | |
 | Frosted | None. Frosting is a surface finish, not a light filter. | That it protects the contents |
 | Swirl, green, pink, black | None. They are decorative. | |
-| Aluminum | "Aluminum dents rather than shatters." | "unbreakable", "does not break" (in today's copy); compatibility with any liquid until the liner is confirmed |
+| Aluminum | "Aluminum is light and does not break." (Best Bottles, 2026-09-28.) Aluminum spray bottles may list room spray and air freshener among their uses; aluminum lotion-pump bottles list lotion first | "unbreakable", "shatterproof"; compatibility with any liquid until the liner is confirmed |
 | Plastic | None until the resin is recorded. | "BPA-free means oil-safe" |
 
 ### 4.5 Neck system lines (key E)
@@ -405,7 +405,8 @@ This line answers the most common question across all four research segments: "w
 
 | Mode | Travel line |
 |---|---|
-| STOPPER, BULB | Not a travel bottle; this is the guard. |
+| STOPPER | Not a travel bottle; this is the guard. |
+| BULB | Ships with a travel cap: take off the bulb and fit the cap to carry it (2026-09-28). |
 | ROLL, ATOMIZER, DROP | Carry capped and upright. |
 | MIST | Keep the overcap on in a bag, when the SKU has one. |
 | POUR, SPLASH, VIAL | No line unless a legacy flag says more. |
@@ -481,18 +482,18 @@ All sixteen examples are in TEMPLATE.md §5, in the locked format. For compariso
 
 These are the questions where the answer changes the copy. Each has a recommendation.
 
-1. **Show a "not for" guard in customer copy?** Recommended: yes. It is the most useful sentence for five modes, and it stops the most common mis-buys the research found: oil in a sprayer, a bulb sprayer for travel, and undiluted essential oil under a rubber bulb.
-2. **Drop room spray and "air freshener" from the 478 bulb-sprayer SKUs?** Recommended: yes, pending item 3.
+1. **Show a "not for" guard in customer copy?** *Decided 2026-09-28: yes, one line per product, as a Care note outside the description (TEMPLATE.md amendments).* Recommended: yes. It is the most useful sentence for five modes, and it stops the most common mis-buys the research found: oil in a sprayer, a bulb sprayer for travel, and undiluted essential oil under a rubber bulb.
+2. **Drop room spray and "air freshener" from the 478 bulb-sprayer SKUs?** *Decided 2026-09-28: yes for bulb sprayers. Aluminum spray bottles keep both uses (4.4).*
 3. **Facts only Best Bottles can confirm.** Until each is confirmed, the line that depends on it stays out.
-   - Do the bulb sprayers seal when idle?
+   - Do the bulb sprayers seal when idle? *Answered 2026-09-28: they ship with the bulb unattached and a travel cap; swap the bulb for the cap to carry.*
    - Do the perfume spray pumps screw on, or are they crimped? *Answered 2026-09-26: they screw on. The 15-415 and 18-415 sprayers are sold as separate thread parts (neck sheets, SYNTHESIS.md §2). The 30 ml Cylinder spray pair is the exception, with a fixed top.*
-   - What is the dropper bulb made of: natural rubber, nitrile or silicone?
-   - What plastic are the roller housings and the reducer made of?
-   - How are the metal atomizers refilled: bottom-fill or top-fill?
+   - What is the dropper bulb made of: natural rubber, nitrile or silicone? *Asked of Best Bottles, 2026-09-28.*
+   - What plastic are the roller housings and the reducer made of? *Asked of Best Bottles, 2026-09-28.*
+   - How are the metal atomizers refilled: bottom-fill or top-fill? *Asked of Best Bottles, 2026-09-28.*
    - Is the closure on the 1 ml vials a plug or a screw cap? *Answered by the register: a plug (neck `Plug`, 4 assemblies).*
    - What liner, if any, is inside the aluminum bottles?
 4. **"Tincture" as a dropper use?** Recommended: no, for the food-contact and brand reasons in 4.1.
-5. **Replace the legacy "Item type" line** (for example, "Clear, frosted and colored glass roll-on bottles of capacity range about 1/3oz (from 8ml to 10ml)") with a short rubric label such as "Roll-on bottle · perfume oil and blends"? README §4.6 keeps the Best Bottles text "for now", so this is a separate decision. Recommended: yes, after the descriptions ship.
+5. **Replace the legacy "Item type" line** (for example, "Clear, frosted and colored glass roll-on bottles of capacity range about 1/3oz (from 8ml to 10ml)") with a short rubric label such as "Roll-on bottle · perfume oil and blends"? README §4.6 keeps the Best Bottles text "for now", so this is a separate decision. *Decided 2026-09-28: yes, after the descriptions ship.*
 
 6. **Pour bottles and liners.** *Resolved 2026-09-26.*
    - Every glass bottle sold with only a screw cap is a pour bottle, and so is one with an orifice reducer.
@@ -532,7 +533,7 @@ These are the questions where the answer changes the copy. Each has a recommenda
 
 ### Phase 4: review, then ship
 
-- Review one sample per archetype (about 42 SKUs) with Jordan and Abbas, and fold in their answers to section 7.
+- Review one sample per archetype with Jordan and Abbas, and fold in their answers to section 7. *Agreed 2026-09-28: 42 bottles and 12 parts and packaging items, listed in the copy review kit (`scripts/print/copy_review_kit.py`).*
 - Regenerate all 2,113 bottle and jar SKUs, and review the report's per-mode samples.
 - Ship behind the existing curated-JSON path. No schema change is needed.
 

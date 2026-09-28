@@ -176,10 +176,10 @@ These are all recorded in the remedy registers and `data/register/quarantine.csv
 
 | # | Decision | Recommendation |
 |---|---|---|
-| D1 | One cap vocabulary: short lined cap, tall lined cap, lined cap, short ribbed cap, roll-on cap, faux-leather cap, short screw cap. Retire "metal cap", "liner cap" and "travel cap" | Yes; relabel the 13-415, 15-415 and 18-415 sheets |
-| D2 | One part name for every screw-on spray head, "fine-mist sprayer". Title noun by size: "Fine-Mist Spray Bottle" to 15 ml, "Perfume Spray Bottle" from 25 ml | Yes |
-| D3 | "Treatment pump" and "Treatment Pump Bottle" on the 9 ml Cylinder; "lotion pump" on 18-415 | Yes |
-| D4 | Copy and print call only verified assemblies a fit; candidates are never shown as a fit | Yes |
-| D5 | Ground-glass stopper bottles become their own class, like atomizers: the stopper is matched to its bottle and never swapped | Yes (a ruling like 24–25 Sep) |
-| D6 | Boston Round 15 ml clear: add the five missing dropper assemblies, or leave clear as black dropper and cap only | Best Bottles to decide; the parts exist |
-| D7 | One stock source for the site, the feeds and print. `GB1ozApth` and `GB1ozApthBlue` are In Stock in Convex but Out of Stock on the legacy site | Convex, once confirmed. Print shows no stock either way; featured photos use in-stock items (the proof now shows the in-stock 15 ml apothecary bottle) |
+| D1 | One cap vocabulary: short lined cap, tall lined cap, lined cap, short ribbed cap, roll-on cap, faux-leather cap, short screw cap. Retire "metal cap", "liner cap" and "travel cap" as names for these caps. "Travel cap" stays only for the cap packed with each bulb sprayer (2026-09-28) | **Approved 2026-09-28.** Yes; relabel the 13-415, 15-415 and 18-415 sheets |
+| D2 | One part name for every screw-on spray head, "fine-mist sprayer". Title noun by size: "Fine-Mist Spray Bottle" to 15 ml, "Perfume Spray Bottle" from 25 ml | **Approved 2026-09-28.** Yes |
+| D3 | "Treatment pump" and "Treatment Pump Bottle" on the 9 ml Cylinder; "lotion pump" on 18-415 | **Approved 2026-09-28.** Yes |
+| D4 | Copy and print call only verified assemblies a fit; candidates are never shown as a fit | **Approved 2026-09-28.** Yes |
+| D5 | Ground-glass stopper bottles become their own class, like atomizers: the stopper is matched to its bottle and never swapped | **Approved 2026-09-28.** Yes (a ruling like 24–25 Sep) |
+| D6 | Boston Round 15 ml clear: add the five missing dropper assemblies, or leave clear as black dropper and cap only | **Decided 2026-09-28:** offer all six dropper finishes on the 15 ml clear Boston Round, chosen on its page like the amber and cobalt blue. Needs item numbers and prices for the five new combinations |
+| D7 | One stock source for the site, the feeds and print. `GB1ozApth` and `GB1ozApthBlue` are In Stock in Convex but Out of Stock on the legacy site | **Approved 2026-09-28.** Convex, once confirmed. Print shows no stock either way; featured photos use in-stock items (the proof now shows the in-stock 15 ml apothecary bottle) |

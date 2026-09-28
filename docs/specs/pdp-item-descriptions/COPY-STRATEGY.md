@@ -109,7 +109,7 @@ Cylinder, Tall Cylinder, Circle, Round, Elegant, Boston Round, Diva, Empire, Sli
 | ROLL | Roll-On Bottle | |
 | MIST | Fine-Mist Spray Bottle | |
 | PUMP-SPRAY | Perfume Spray Bottle | |
-| BULB | Vintage Bulb Spray Bottle | Locked 2026-09-26. The tassel version is "Vintage Bulb Spray Bottle with Tassel" (tassel groups are separate pages, so the tassel stays in the title). All 478 fit in 60 characters; the longest is exactly 60. "Vintage-Style" would push 194 past the limit, so the description's sentence 1 says "vintage-style" instead. **Reopened 26 Sep:** the owner wants "vintage-style bulb" and "vintage-style bulb with tassel". Print uses it from 26 Sep. For titles, against the 25 Sep export (548 bulb rows): "Vintage-Style Bulb Spray Bottle" puts 223 over 60 characters; "Vintage-Style Bulb Sprayer" puts 9 over (the 100 ml frosted Elegant with tassel, 61); "Vintage-Style Bulb Bottle" fits all. Decision pending. |
+| BULB | Vintage-Style Bulb Sprayer | **Approved 2026-09-28:** "Vintage-Style Bulb Sprayer" and "Vintage-Style Bulb Sprayer with Tassel". Against the 25 Sep export, 9 of 548 titles pass 60 characters (the 100 ml frosted Elegant with tassel, at 61); those are shortened by hand. The description, Included bullet and variant label carry the rest ("bulb sprayer", "travel cap"). |
 | SPLASH | Pour Bottle with Reducer | Best Bottles' naming |
 | POUR | Pour Bottle | Every glass bottle sold with only a screw cap |
 | DROP | Dropper Bottle | |
@@ -146,6 +146,7 @@ These are used in variant labels and in the Included bullet.
 - **Brand guardrails:** no beverage or alcohol words (see `seo-audit-2026-05-23/BRAND-VOICE-GUARDRAILS.md`).
 - **Promotional words:** wholesale (Faire adds it itself), premium, luxury, high quality, best, perfect, bestseller, new, sale.
 - **Claims:** see section 6.
+- **Quantities:** "piece", "pcs", "each", "price each"; write "set" and "case" (decision 9).
 - **Formatting:** ALL CAPS, emojis, ™ ®, 【】 ★ ▶, "w/", "approx.", "qty", "pcs".
 
 ---
@@ -242,7 +243,7 @@ Keep these out of titles, descriptions and meta text. Google bans them there and
 | Food-grade, medical-grade, cosmetic-grade | No documentation |
 | BPA-free | Meaningless for glass |
 | UV protection on clear, frosted or cobalt glass | Only amber filters meaningfully |
-| Shatterproof, unbreakable, thick | Contradicted by breakage reviews |
+| Shatterproof, unbreakable, thick | Contradicted by breakage reviews. Aluminum is the exception for "does not break" (decision 10) |
 | Eco-friendly, recyclable claims beyond the FTC Green Guides | Amazon prohibits eco wording |
 | Therapeutic or health effects | Not a bottle supplier's claim to make |
 | Designer comparisons | Lookalike risk |
@@ -387,15 +388,20 @@ The printed pieces are one more channel built from the same record; the plan and
 
 ---
 
-## 10. Decisions (updated 2026-09-26)
+## 10. Decisions (updated 2026-09-28)
 
 | # | Decision | Status |
 |---|---|---|
 | 1 | Title formula and vocabulary (sections 2 and 3) | **Locked** |
-| 2 | Bulb sprayers | **Locked:** "Vintage Bulb Spray Bottle" and "Vintage Bulb Spray Bottle with Tassel"; all fit in 60 characters |
+| 2 | Bulb sprayers | **Approved 2026-09-28:** "Vintage-Style Bulb Sprayer" and "Vintage-Style Bulb Sprayer with Tassel"; the 9 titles over 60 characters are shortened by hand |
 | 3 | Ounces in titles | **Recommendation revised with evidence (2.1.1); awaiting Best Bottles' OK.** ml first; ounces in brackets on Boston rounds and standard ounce sizes only; always in the Google title |
 | 4 | Country of origin for Faire "Made in" | **Under confirmation.** Import records point to China (7.4); the "United States" value on Faire today looks wrong. Best Bottles confirms from invoices before the Faire edit |
 | 5 | Overflow capacity, label panel and inch dimensions | **Locked: yes** (rollout step 6) |
 | 6 | Google Merchant feed | **Locked: yes** (rollout step 7) |
 | 7 | Printed catalogue, line booklet and family inserts | **New.** See `../print-collateral/PRINT-PLAN.md` for the formats and the proof |
-| 8 | Neck sheets and component register: cap, sprayer and pump words; what counts as a fit; stopper bottles; stock source | **New.** See `SYNTHESIS.md`, decisions D1–D7 |
+| 8 | Neck sheets and component register: cap, sprayer and pump words; what counts as a fit; stopper bottles; stock source | **Approved 2026-09-28:** D1–D5 and D7. D6: all six dropper finishes are offered on the 15 ml clear Boston Round (`SYNTHESIS.md`) |
+| 9 | Quantity words | **Decided 2026-09-28:** "set" and "case" ("1 set", "12 sets", "a case of 724 sets"). Never "piece", "pcs" or "each" |
+| 10 | Aluminum bottles | **Decided 2026-09-28:** may say "does not break"; spray bottles may list room spray and air freshener; lotion-pump bottles lead with lotion (RUBRIC.md 4.4) |
+| 11 | The warning line | **Decided 2026-09-28:** one Care note per product, outside the description, in the editorial serif next to the Tech sheet (TEMPLATE.md amendments) |
+| 12 | Bulb sprayers and travel | **Answered 2026-09-28:** the bulb ships unattached with a travel cap; swap the bulb for the cap to carry it |
+| 13 | Review before generating everything | **Agreed 2026-09-28:** 42 bottles and 12 parts and packaging items, in the copy review kit; Jordan and Abbas mark them up before the full run |

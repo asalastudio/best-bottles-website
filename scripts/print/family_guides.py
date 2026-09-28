@@ -140,8 +140,8 @@ CARE_BY_FIT = {
     "Fine-mist sprayer": ("Fine-mist sprayer", "On thread necks the sprayer unscrews, so the bottle can be refilled."),
     "Lotion pump": ("Pump", "For liquids that pour; thick creams belong in a jar."),
     "Treatment pump": ("Pump", "For liquids that pour; thick creams belong in a jar."),
-    "Vintage-style bulb sprayer": ("Vintage-style bulb", "Not a travel bottle."),
-    "Vintage-style bulb sprayer with tassel": ("Vintage-style bulb", "Not a travel bottle."),
+    "Vintage-style bulb sprayer": ("Vintage-style bulb", "Ships with a travel cap: take off the bulb and fit the cap to carry it."),
+    "Vintage-style bulb sprayer with tassel": ("Vintage-style bulb", "Ships with a travel cap: take off the bulb and fit the cap to carry it."),
     "Dropper": ("Dropper", "Store it upright; undiluted essential oil softens the rubber bulb over time."),
     "Orifice reducer with cap": ("Orifice reducer", "The reducer turns a pour into a controlled splash or drip; very thick oils drip slowly."),
     "Screw cap": ("Screw cap", "With no fitment, the oil pours straight from the neck."),
@@ -1004,7 +1004,7 @@ def line_sheet(fam: Family) -> str:
     for body in fam.ordered_bodies():
         glasses = glass_sorted({i.glass for i in body.items})
         cases = Counter(i.case for i in body.items if i.case)
-        case = f"{cases.most_common(1)[0][0]:,} per case" if cases else ""
+        case = f"{cases.most_common(1)[0][0]:,} sets per case" if cases else ""
         span = 2 + (len(glasses) if len(glasses) <= 3 else 2)
         group = (f"<tr class=group><th colspan={span}><span class=sz>{esc(body.label)}</span>"
                  f"<span class='meta mono'>{esc(neck_label(body.neck))} neck</span><span class=meta>{esc(case)}</span>"
@@ -1131,7 +1131,7 @@ USES = [  # the twelve bottle types (RUBRIC.md §4.2; COPY-STRATEGY.md §2.4), w
     ("GBCylAmb9MtlRollBlkDot", "Roll-On Bottle", "Perfume oil, attar and oil blends diluted in a carrier.", "The ball alone is not a seal; carry it capped."),
     ("GBCylAmb9SpryMattSl", "Fine-Mist Spray Bottle", "Spray perfume, body mist, room and linen spray.", "Up to 15 ml: samples and decants."),
     ("GBDiva30SpryMtGl", "Perfume Spray Bottle", "Eau de parfum, eau de toilette and cologne.", "From 25 ml: full retail sizes."),
-    ("GBElg60AnSpTslIvyGl", "Vintage-Style Bulb Spray Bottle", "Eau de parfum and cologne kept on a dressing table.", "Not a travel bottle."),
+    ("GBElg60AnSpTslIvyGl", "Vintage-Style Bulb Sprayer", "Eau de parfum and cologne kept on a dressing table.", "Ships with a travel cap for carrying."),
     ("GBBstnAmb1ozWhtDropperShnGlTrim", "Dropper Bottle", "Essential oils, beard oil and facial serums.", "Releases one drop at a time."),
     ("GBBstnAmb1ozBlkCapSht", "Pour Bottle", "Beard oil, hair oil, body oil and essential oils.", "No fitment; the oil pours from the neck."),
     ("GBDiva30RdcrShnGl", "Pour Bottle with Reducer", "Splash cologne, aftershave, perfume oil, beard oil.", "The reducer slows the pour to a splash or drip."),
@@ -1638,8 +1638,8 @@ def ops_bodies(order: list[Family], pages: dict[str, int] | None) -> str:
 <section class='front ops'>
   <p class=kicker>Working with the range{mk('ops-bodies')}</p><h1>Every bottle, measured</h1>
   <p class=lede>Every bottle size in the range, with its neck, height without a cap, diameter or width, and case quantity. Most
-  items are listed at five quantity breaks: 1, 12 and 144 units, then two larger quantities set for each item, the last five
-  times the one before. Prices for every break are on the product page; this book carries none.</p>
+  items are sold in sets and cases, at five quantity breaks: 1, 12 and 144 sets, then two larger quantities set for each item,
+  the last five times the one before. Prices for every break are on the product page; this book carries none.</p>
   <table class='ref bodies'><thead><tr><th>Family</th><th>Size</th><th>Neck</th><th>Height, no cap</th><th>Diameter or width</th>
     <th class=r>Case</th><th class=r>Items</th><th>Note</th><th class=r>Page</th></tr></thead><tbody>{''.join(rows)}</tbody></table>
 </section>"""
@@ -1666,7 +1666,7 @@ def ops_data(pages: dict[str, int] | None) -> str:
 
 
 def ops_glossary() -> str:
-    items = "".join(f"<div><dt>{esc(t)}</dt><dd>{esc(d)}</dd></div>" for t, d in ops.GLOSSARY)
+    items = "".join(f"<div><dt>{esc(t)}</dt><dd>{esc(d)}</dd></div>" for t, d in sorted(ops.GLOSSARY))
     return f"""
 <section class='front ops'>
   <p class=kicker>Working with the range{mk('ops-glossary')}</p><h1>Glossary</h1>

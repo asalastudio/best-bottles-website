@@ -65,7 +65,7 @@ USES = [
     ("GBCylAmb9MtlRollBlkDot", "Roll-On Bottle", "Perfume oil, attar and oil blends diluted in a carrier.", "The ball alone is not a seal; carry it capped."),
     ("GBCylAmb9SpryMattSl", "Fine-Mist Spray Bottle", "Spray perfume, body mist, room and linen spray.", "At 15 ml and under, used for samples and decants."),
     ("GBDiva30SpryMtGl", "Perfume Spray Bottle", "Eau de parfum, eau de toilette and cologne.", "Each press of the pump meters one spray."),
-    ("GBElg60AnSpTslIvyGl", "Vintage-Style Bulb Spray Bottle", "Eau de parfum and cologne kept on a dressing table.", "Not a travel bottle."),
+    ("GBElg60AnSpTslIvyGl", "Vintage-Style Bulb Sprayer", "Eau de parfum and cologne kept on a dressing table.", "Ships with a travel cap for carrying."),
     ("GBBstnAmb1ozWhtDropperShnGlTrim", "Dropper Bottle", "Essential oils, beard oil and facial serums.", "Releases one drop at a time."),
     ("GBBstnAmb1ozBlkCapSht", "Pour Bottle", "Beard oil, hair oil, body oil and essential oils.", "No fitment; the oil pours from the neck."),
     ("GBDiva30RdcrShnGl", "Pour Bottle with Reducer", "Splash cologne, aftershave, perfume oil, beard oil.", "The reducer slows the pour to a splash or drip."),

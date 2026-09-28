@@ -76,7 +76,8 @@ QUESTIONS = [
      "every part made for each shared neck."),
     ("Is it leak-proof? Can I fly with it?",
      "No bottle is described as leak-proof, airtight, spill-proof or TSA-approved. Roll-ons, atomizers and droppers "
-     "travel capped and upright. Bulb sprayers and glass stoppers are not travel bottles."),
+     "travel capped and upright. Bulb sprayers ship with a travel cap: swap the bulb for the cap to carry them. Glass "
+     "stoppers are not travel bottles."),
     ("Can I put perfume oil in a sprayer?",
      "No. Sprayers are for thin liquids only: perfume oil and undiluted essential oil clog them. Oils go in a roller, "
      "dropper, reducer or pour bottle."),
@@ -121,7 +122,7 @@ TITLE_EXAMPLES = [
     ("GBCrcl100RdcrPnkLthr", "100 ml Clear Circle Pour Bottle with Reducer", ""),
     ("GBVAmb1DrmWhtCapSht", "1 Dram (4 ml) Amber Vial", ""),
 ]
-TYPE_NOUNS = ["Roll-On Bottle", "Fine-Mist Spray Bottle", "Perfume Spray Bottle", "Vintage-Style Bulb Spray Bottle",
+TYPE_NOUNS = ["Roll-On Bottle", "Fine-Mist Spray Bottle", "Perfume Spray Bottle", "Vintage-Style Bulb Sprayer",
               "Pour Bottle", "Pour Bottle with Reducer", "Dropper Bottle", "Lotion Pump Bottle", "Bottle with Glass Stopper",
               "Sample Vial with Glass Rod", "Vial", "Cream Jar", "Travel Atomizer", "Stock Bottle"]
 DESCRIPTION_FORMAT = [
@@ -132,6 +133,7 @@ DESCRIPTION_FORMAT = [
     "Good to know: one extra verified fact, if there is one.",
 ]
 UNITS = [
+    ("Quantities", "1 set, 12 sets, a case of 724 sets", "piece, pcs, each, price each"),
     ("Capacity", "9 ml", "9ml, 9 mL"),
     ("Ounces", "30 ml (1 oz), on Boston Rounds and 4, 8, 12 and 16 oz sizes", "1 oz (30 ml), 1/2oz"),
     ("Neck finish", "18-415; other necks as 16 mm", "18/415, 18mm"),
@@ -162,7 +164,7 @@ PUBLISH_CHECKLIST = [  # RUBRIC.md §5 lint rules; COPY-STRATEGY.md §2-§3
     "Every part is named in the words on the previous page.",
     "The Fits line lists only parts sold on that bottle.",
     "No claim beyond the four allowed, and no promotional word.",
-    "No price, case count or measurement in the description.",
+    "No price, case count or measurement in the description; quantities are sets and cases.",
     "The amber line appears only on amber glass.",
     "No exclamation points or superlatives.",
 ]
@@ -201,7 +203,7 @@ REBUILD = [
 GLOSSARY = [
     ("Assembly", "A body in one glass colour with one set of parts. Each assembly has its own item number."),
     ("Body", "One glass shape at one capacity and neck finish."),
-    ("Case", "The number of units in a full factory case. It differs by bottle."),
+    ("Case", "The number of sets in a full factory case. It differs by bottle."),
     ("Complete set", "A bottle sold only with its own parts, such as the 16 mm Cylinder or the 13-425 vials."),
     ("Dip tube", "The tube that draws liquid up to a sprayer or pump. Its length must suit the bottle."),
     ("Dram", "A vial size: 1 dram is 4 ml and 5/8 dram is 3 ml."),
@@ -221,5 +223,6 @@ GLOSSARY = [
     ("Roller ball", "A steel or plastic ball in an insert that sits in the neck, under the roll-on cap."),
     ("Short ribbed cap", "The black or white ribbed 13-415 cap with a white liner."),
     ("Treatment pump", "The small pump made for the 9 ml Cylinder on 17-415."),
-    ("Vintage-style bulb sprayer", "A spray head worked by squeezing a rubber bulb, with or without a tassel."),
+    ("Set", "One bottle with the parts it is sold with. Prices are quoted per set: 1, 12 and 144 sets, and by the case."),
+    ("Vintage-style bulb sprayer", "A spray head worked by squeezing a rubber bulb, with or without a tassel. The bulb ships unattached, with a travel cap for carrying."),
 ]

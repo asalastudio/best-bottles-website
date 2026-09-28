@@ -1,6 +1,12 @@
 # PDP item description template
 
-Status: **locked** · 2026-09-26. Best Bottles approved this format.
+Status: **locked** · 2026-09-26. Best Bottles approved this format. **Amended 2026-09-28** (below).
+
+**Amendments, 2026-09-28 (Best Bottles).**
+- **Care note.** The warning line ("Thin liquids only: perfume oil and undiluted essential oil clog the sprayer") moves out of the description. It becomes one Care note per product, at most one line, shown beside the Tech sheet in the brand's editorial serif so it reads as a note rather than sales copy. Sentence 2 then carries how the product works or another deciding fact.
+- **Sets and cases.** Quantities are "1 set", "12 sets", "144 sets" and cases ("a case of 724 sets"). "Piece", "pcs" and "each" are no longer used.
+- **Measurements** (height, diameter, neck) stay in the Tech sheet, never in the description.
+- **Bulb sprayers** ship with the bulb unattached and a travel cap; the carry line says so (RUBRIC.md BULB card).
 
 This file sets how an item description is laid out. `RUBRIC.md` in the same folder sets what it may say: the dispense-mode cards, allowed and excluded uses, guard lines, material lines, caps and liners, and the claims list. The template only arranges what the rubric allows.
 
@@ -150,6 +156,7 @@ In the details column (`PdpProductInfo`):
 1. Item type line
 2. Paragraph
 3. Bullets
+4. Care note (from 2026-09-28): the one warning line, in the editorial serif
 
 Below them come the Tech sheet (capacity, neck finish, glass, fitment, heights, diameter, weight, case pack) and the dimension drawing.
 
