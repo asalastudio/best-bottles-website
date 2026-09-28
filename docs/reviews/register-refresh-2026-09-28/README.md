@@ -28,6 +28,6 @@ Every short cap on every glass that sells a short-cap reducer, at one zoom per g
 ## What the push changes (checked against production, read-only)
 
 - Resolved builds 1,839 → 1,956: 121 new and 1 re-pointed (the Pillar 9 mL sprayer onto its 13-415 body). Of those, 14 draw at once, 29 when the black cap's layer loads, and 79 when the Blender short caps land.
-- No SKU that draws today stops drawing. All 83 bottles whose body, glass or parts change were checked. Three builds the catalogue broke between the 25 and 28 Sep exports are held back by the push's new guard: `GBCylSwrl9RollWht` and `GBCylSwrl9MtlRollWht` became "Dot Cap" (the metal one also "Plastic Roller Ball"), and `GBCrclFrst50RdcrIvyLthr` moved to an 18-400 neck.
+- No SKU that draws today stops drawing. All 83 bottles whose body, glass or parts change were checked. Three builds are held back by the push's new guard because production's catalogue rows disagree with dev's (dev is right): `GBCylSwrl9RollWht` and `GBCylSwrl9MtlRollWht` say "Dot Cap" (the metal one also "Plastic Roller Ball"), and `GBCrclFrst50RdcrIvyLthr` is on an 18-400 neck with 18-400 droppers and a product page of its own. `scripts/catalog-corrections/2026-09-28-prod-catalogue-drift.mjs` makes production match dev.
 - 24 parts the catalogue re-keyed keep their library ids. The approved layers hang on the old ids; production's rows for the new ids are retired and empty.
 - The push only adds and updates. It leaves in place 128 assemblies, 5 bodies and 24 components the rebuild no longer has, all retired or re-keyed.

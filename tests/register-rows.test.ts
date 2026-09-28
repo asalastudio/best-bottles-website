@@ -48,6 +48,7 @@ describe("the committed register shapes cleanly for Convex", () => {
         const parts = rows.components.filter(c => c.componentId.startsWith("LIB-"));
         expect(parts.map(p => p.componentId).sort()).toEqual([
             "LIB-13-415-MtlRollon", "LIB-13-415-PlsticRollon", "LIB-14.3mm-Plug", "LIB-17-415-MtlRollon", "LIB-17-415-PlsticRollon", "LIB-18-415-Reducer",
+            "LIB-18-415-ShnBlkCap",
         ]);
         for (const part of parts) {
             expect(part.sellable).toBe(false);
