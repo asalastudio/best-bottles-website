@@ -619,14 +619,12 @@
     transition: background-color .2s, color .2s;
 }
 
+/* The insert is a transparent register layer: it stands straight on the button, no tile behind it (Jordan 2026-09-28). */
 .rollerImage {
     display: block;
     width: 44px;
     height: 44px;
     object-fit: contain;
-    padding: 3px;
-    background: #f5f3ef;
-    border-radius: 3px;
 }
 
 .rollerButton[aria-pressed="true"] {
