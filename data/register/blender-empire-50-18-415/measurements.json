@@ -1,0 +1,1201 @@
+{
+ "bodyId": "empire-50ml-18-415",
+ "createdBy": "outputs/empire-18415-v34 (export_empire.py + build_assets_empire.py)",
+ "pxPerMm": 25.0,
+ "camera": {
+  "type": "orthographic",
+  "tiltDegDown": 3.0,
+  "note": "the 9 mL register camera; anchors are camera projections of 3D points"
+ },
+ "datum": {
+  "seat": "rim centre (0,0,87.5 mm)",
+  "foot": "lowest projected point of the glass",
+  "shoulder": "flat top (0,0,71.7 mm)"
+ },
+ "background": "seen-through background = bone #F5F3EF; transparent outside every part",
+ "notCalipered": "glass from the drawings (cavity from the 100 drawing, 50 scaled); closures at published 18-415 sizes, PSD proportions",
+ "closureExtentsMm": {
+  "mist:copper": {
+   "bottom_over_shoulder": 0.3,
+   "top_over_shoulder": 41.0,
+   "od": 23.0
+  },
+  "lotion:copper": {
+   "bottom_over_shoulder": 0.3,
+   "top_over_shoulder": 41.0,
+   "od": 23.0
+  },
+  "overcap:copper": {
+   "bottom_over_shoulder": 0.3,
+   "top_over_shoulder": 42.0,
+   "od": 23.6
+  },
+  "mist:matte-gold": {
+   "bottom_over_shoulder": 0.3,
+   "top_over_shoulder": 41.0,
+   "od": 23.0
+  },
+  "lotion:matte-gold": {
+   "bottom_over_shoulder": 0.3,
+   "top_over_shoulder": 41.0,
+   "od": 23.0
+  },
+  "overcap:matte-gold": {
+   "bottom_over_shoulder": 0.3,
+   "top_over_shoulder": 42.0,
+   "od": 23.6
+  },
+  "mist:matte-silver": {
+   "bottom_over_shoulder": 0.3,
+   "top_over_shoulder": 41.0,
+   "od": 23.0
+  },
+  "lotion:matte-silver": {
+   "bottom_over_shoulder": 0.3,
+   "top_over_shoulder": 41.0,
+   "od": 23.0
+  },
+  "overcap:matte-silver": {
+   "bottom_over_shoulder": 0.3,
+   "top_over_shoulder": 42.0,
+   "od": 23.6
+  },
+  "mist:shiny-black": {
+   "bottom_over_shoulder": 0.3,
+   "top_over_shoulder": 41.0,
+   "od": 23.0
+  },
+  "lotion:shiny-black": {
+   "bottom_over_shoulder": 0.3,
+   "top_over_shoulder": 41.0,
+   "od": 23.0
+  },
+  "overcap:shiny-black": {
+   "bottom_over_shoulder": 0.3,
+   "top_over_shoulder": 42.0,
+   "od": 23.6
+  },
+  "mist:gold": {
+   "bottom_over_shoulder": 0.3,
+   "top_over_shoulder": 41.0,
+   "od": 23.0
+  },
+  "lotion:gold": {
+   "bottom_over_shoulder": 0.3,
+   "top_over_shoulder": 41.0,
+   "od": 23.0
+  },
+  "overcap:gold": {
+   "bottom_over_shoulder": 0.3,
+   "top_over_shoulder": 42.0,
+   "od": 23.6
+  },
+  "mist:shiny-silver": {
+   "bottom_over_shoulder": 0.3,
+   "top_over_shoulder": 41.0,
+   "od": 23.0
+  },
+  "lotion:shiny-silver": {
+   "bottom_over_shoulder": 0.3,
+   "top_over_shoulder": 41.0,
+   "od": 23.0
+  },
+  "overcap:shiny-silver": {
+   "bottom_over_shoulder": 0.3,
+   "top_over_shoulder": 42.0,
+   "od": 23.6
+  },
+  "overcap:clear": {
+   "bottom_over_shoulder": 0.3,
+   "top_over_shoulder": 42.0,
+   "od": 23.6
+  },
+  "cap:short-matte-silver": {
+   "bottom_over_shoulder": 0.8,
+   "top_over_shoulder": 19.8,
+   "od": 21.0
+  },
+  "cap:tall-matte-silver": {
+   "bottom_over_shoulder": 0.8,
+   "top_over_shoulder": 26.8,
+   "od": 21.0
+  },
+  "cap:tall-shiny-black": {
+   "bottom_over_shoulder": 0.8,
+   "top_over_shoulder": 26.8,
+   "od": 21.0
+  },
+  "cap:short-gold": {
+   "bottom_over_shoulder": 0.8,
+   "top_over_shoulder": 19.8,
+   "od": 21.0
+  },
+  "cap:short-shiny-silver": {
+   "bottom_over_shoulder": 0.8,
+   "top_over_shoulder": 19.8,
+   "od": 21.0
+  },
+  "cap:tall-white": {
+   "bottom_over_shoulder": 0.8,
+   "top_over_shoulder": 26.8,
+   "od": 21.0
+  }
+ },
+ "plates": [
+  {
+   "plateKey": "empire-50ml-18-415|Clear",
+   "glass": "Clear",
+   "file": "50/plate-clear.png",
+   "width": 928,
+   "height": 2219,
+   "sha256": "925086e474f2d015e153365d1fcc8155e42288b8567924210a045bef4efe8c5d",
+   "pxPerMm": 25.0,
+   "anchors": {
+    "axisX": 464.0,
+    "seatY": 10.49,
+    "shoulderY": 404.95,
+    "baselineY": 2217.89
+   },
+   "checks": {
+    "seatToFootMm": 88.296,
+    "widthMm": 36.96,
+    "widthTargetMm": 37.0
+   },
+   "source": {
+    "library": "native Blender (outputs/empire-18415-v34/export_empire.py)",
+    "path": "dispenser-finishes-17415-v27/scenes/mist-black-clear.blend",
+    "layer": "Empire 50 drawing build (square 37.0, rim 87.5, walls 3.015, base 9.454, cavity 56.92 ml); seen-through background baked bone #F5F3EF"
+   },
+   "geometry": {
+    "height_mm": 87.5,
+    "width_mm": 37.0,
+    "vertices": 76656,
+    "lights_moved": [
+     "Right band \u2014 glass v24 (bottle only)",
+     "Shoulder highlight \u2014 glass v24",
+     "Edge fill left \u2014 glass v24",
+     "Edge fill right \u2014 glass v24"
+    ],
+    "source": "/Users/jordanrichter/Documents/Codex/2026-09-24/the-image-is-clearly-the-target/outputs/empire-18415-v34/empire-50-glass.blend",
+    "source_sha256": "46c7713a8b4ef129a3828b987e1bcf312ae93b270e1e9860ce9c35745a449d22",
+    "material": "CLEAR_OPTICAL_STUDY_NEUTRAL.001 \u2014 luster 1.0 (v24)"
+   }
+  }
+ ],
+ "components": [
+  {
+   "componentId": "CMP-CAP-MSLV-18415-S",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "cap short matte silver (18-415, 21 mm)",
+     "file": "shared/cap-short-matte-silver.png",
+     "width": 528,
+     "height": 503,
+     "sha256": "566e7f1c62f55faaf0d85f0d67e6ac86c0ad349c51fceb37140f55fb3149833d",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 263.0,
+      "y": 113.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-MSLV-18415-T",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "cap tall matte silver (18-415, 21 mm)",
+     "file": "shared/cap-tall-matte-silver.png",
+     "width": 528,
+     "height": 678,
+     "sha256": "707d3b8f9880353573bc20bc9a8120569cfac364454c32918fda95e2bff69dd7",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 263.0,
+      "y": 288.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-SBLK-18415-T",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "cap tall shiny black (18-415, 21 mm)",
+     "file": "shared/cap-tall-shiny-black.png",
+     "width": 528,
+     "height": 678,
+     "sha256": "5c7ec960b82284452c0e0bb23070bbc58038fc61cce46f066e86e3fd70d6960d",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 263.0,
+      "y": 288.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-SGLD-18415-S",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "cap short gold (18-415, 21 mm)",
+     "file": "shared/cap-short-gold.png",
+     "width": 528,
+     "height": 503,
+     "sha256": "edffbf4634287b9b2d25092a237d5111d24fa4e9bcabcf95be17c49ee8e8840e",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 263.0,
+      "y": 113.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-SSLV-18415-S",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "cap short shiny silver (18-415, 21 mm)",
+     "file": "shared/cap-short-shiny-silver.png",
+     "width": 528,
+     "height": 503,
+     "sha256": "d8cccd78a2d918bcbbcab4dd8b1ba228904150bf1f38c3dfd932d56889f09d0a",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 263.0,
+      "y": 113.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-WHT-18415-T",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "cap tall white (18-415, 21 mm)",
+     "file": "shared/cap-tall-white.png",
+     "width": 528,
+     "height": 678,
+     "sha256": "afbfbff7f51326f0cd996626f54b32d3d9cfd7a135708940a740d1711b3a2748",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 263.0,
+      "y": 288.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-LPM-CPR-18-415",
+   "layers": [
+    {
+     "slot": "pump",
+     "layerName": "18-415 lotion pump copper (all metal: collar + head)",
+     "file": "shared/lotion-copper.png",
+     "width": 578,
+     "height": 1040,
+     "sha256": "30cdafafe0c39ba4de05ab7403d596ec0ec801694ce282dc7b0d35098e864716",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 289.0,
+      "y": 636.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap copper",
+     "file": "shared/overcap-copper.png",
+     "width": 592,
+     "height": 1073,
+     "sha256": "9289b26592d0a702ede86d86b2d1ad50bd5e1252099d7b76a659df74e7c9e53f",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 296.0,
+      "y": 669.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "lotion pump body + dip tube, lifted out",
+     "file": "50/lotion-internals.png",
+     "width": 200,
+     "height": 1732,
+     "sha256": "a127121e8e4195378095b0f68a99039562d75c8800e14fc5e4c78bf92ded6c3e",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 100.0,
+      "y": -57.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "50/see-through-lotion.png",
+     "width": 927,
+     "height": 2173,
+     "sha256": "e53034aabd5e548cf64689d2c8d5a774f2291abf77c83a45f22f74cb9f537a21",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 464.0,
+      "y": 10.49
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-LPM-MGLD-18-415",
+   "layers": [
+    {
+     "slot": "pump",
+     "layerName": "18-415 lotion pump matte-gold (all metal: collar + head)",
+     "file": "shared/lotion-matte-gold.png",
+     "width": 578,
+     "height": 1040,
+     "sha256": "e5b070f933a9a61cc7d083216e44f6d3bf5574830d2ebf3deac9accae0802916",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 289.0,
+      "y": 636.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap matte-gold",
+     "file": "shared/overcap-matte-gold.png",
+     "width": 592,
+     "height": 1073,
+     "sha256": "4ff070d4eb1e16ff1b041b172944b640ec467a0a3e602db907a7dade61d20ec2",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 296.0,
+      "y": 669.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "lotion pump body + dip tube, lifted out",
+     "file": "50/lotion-internals.png",
+     "width": 200,
+     "height": 1732,
+     "sha256": "a127121e8e4195378095b0f68a99039562d75c8800e14fc5e4c78bf92ded6c3e",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 100.0,
+      "y": -57.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "50/see-through-lotion.png",
+     "width": 927,
+     "height": 2173,
+     "sha256": "e53034aabd5e548cf64689d2c8d5a774f2291abf77c83a45f22f74cb9f537a21",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 464.0,
+      "y": 10.49
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-LPM-MSLV-18-415-01",
+   "layers": [
+    {
+     "slot": "pump",
+     "layerName": "18-415 lotion pump matte-silver (all metal: collar + head)",
+     "file": "shared/lotion-matte-silver.png",
+     "width": 578,
+     "height": 1040,
+     "sha256": "4117d988bee75ba337386318d2470b92fb659434c56514b8798035f7562e3270",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 289.0,
+      "y": 636.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap matte-silver",
+     "file": "shared/overcap-matte-silver.png",
+     "width": 592,
+     "height": 1073,
+     "sha256": "7bfcb2b084ad53a689b5f2321e9ebaa91d820124c71e334625c4518f1f55fe96",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 296.0,
+      "y": 669.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "lotion pump body + dip tube, lifted out",
+     "file": "50/lotion-internals.png",
+     "width": 200,
+     "height": 1732,
+     "sha256": "a127121e8e4195378095b0f68a99039562d75c8800e14fc5e4c78bf92ded6c3e",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 100.0,
+      "y": -57.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "50/see-through-lotion.png",
+     "width": 927,
+     "height": 2173,
+     "sha256": "e53034aabd5e548cf64689d2c8d5a774f2291abf77c83a45f22f74cb9f537a21",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 464.0,
+      "y": 10.49
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-LPM-MSLV-18-415-02",
+   "layers": [
+    {
+     "slot": "pump",
+     "layerName": "18-415 lotion pump matte-silver (all metal: collar + head)",
+     "file": "shared/lotion-matte-silver.png",
+     "width": 578,
+     "height": 1040,
+     "sha256": "4117d988bee75ba337386318d2470b92fb659434c56514b8798035f7562e3270",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 289.0,
+      "y": 636.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "clear overcap",
+     "file": "shared/overcap-clear.png",
+     "width": 592,
+     "height": 1073,
+     "sha256": "96e5bd1dbd08f545916c955bbf0235a6855143bd7a2e6debaa4c7628d904a963",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 296.0,
+      "y": 669.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "lotion pump body + dip tube, lifted out",
+     "file": "50/lotion-internals.png",
+     "width": 200,
+     "height": 1732,
+     "sha256": "a127121e8e4195378095b0f68a99039562d75c8800e14fc5e4c78bf92ded6c3e",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 100.0,
+      "y": -57.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "50/see-through-lotion.png",
+     "width": 927,
+     "height": 2173,
+     "sha256": "e53034aabd5e548cf64689d2c8d5a774f2291abf77c83a45f22f74cb9f537a21",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 464.0,
+      "y": 10.49
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-LPM-SBLK-18-415",
+   "layers": [
+    {
+     "slot": "pump",
+     "layerName": "18-415 lotion pump shiny-black (all metal: collar + head)",
+     "file": "shared/lotion-shiny-black.png",
+     "width": 578,
+     "height": 1040,
+     "sha256": "647c0af4969c8e8622977ff029cf7a10410f0c2fc145394b8ef2bf55d26e50d1",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 289.0,
+      "y": 636.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap shiny-black",
+     "file": "shared/overcap-shiny-black.png",
+     "width": 592,
+     "height": 1073,
+     "sha256": "db7a898da6907fe5b34c06e6eda5c2341d86dcb53d4d8700a2a672509a7767d7",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 296.0,
+      "y": 669.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "lotion pump body + dip tube, lifted out",
+     "file": "50/lotion-internals.png",
+     "width": 200,
+     "height": 1732,
+     "sha256": "a127121e8e4195378095b0f68a99039562d75c8800e14fc5e4c78bf92ded6c3e",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 100.0,
+      "y": -57.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "50/see-through-lotion.png",
+     "width": 927,
+     "height": 2173,
+     "sha256": "e53034aabd5e548cf64689d2c8d5a774f2291abf77c83a45f22f74cb9f537a21",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 464.0,
+      "y": 10.49
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-LPM-SGLD-18-415",
+   "layers": [
+    {
+     "slot": "pump",
+     "layerName": "18-415 lotion pump gold (all metal: collar + head)",
+     "file": "shared/lotion-gold.png",
+     "width": 578,
+     "height": 1039,
+     "sha256": "2c3805cbff9ea9c1d40e75cb585fba3018ef869821700da20bcb3ce0fd2c2f1f",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 289.0,
+      "y": 636.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap gold",
+     "file": "shared/overcap-gold.png",
+     "width": 592,
+     "height": 1073,
+     "sha256": "817216ebd740575708d2de9706c39a2b64fad395e1b8b3f3524f397319b0ffed",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 296.0,
+      "y": 669.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "lotion pump body + dip tube, lifted out",
+     "file": "50/lotion-internals.png",
+     "width": 200,
+     "height": 1732,
+     "sha256": "a127121e8e4195378095b0f68a99039562d75c8800e14fc5e4c78bf92ded6c3e",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 100.0,
+      "y": -57.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "50/see-through-lotion.png",
+     "width": 927,
+     "height": 2173,
+     "sha256": "e53034aabd5e548cf64689d2c8d5a774f2291abf77c83a45f22f74cb9f537a21",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 464.0,
+      "y": 10.49
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-LPM-SSLV-18-415",
+   "layers": [
+    {
+     "slot": "pump",
+     "layerName": "18-415 lotion pump shiny-silver (all metal: collar + head)",
+     "file": "shared/lotion-shiny-silver.png",
+     "width": 578,
+     "height": 1040,
+     "sha256": "7b1914c19d5179df64234c2677411359eebf98b96351fe0abcd3e288e26b89d4",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 289.0,
+      "y": 636.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap shiny-silver",
+     "file": "shared/overcap-shiny-silver.png",
+     "width": 592,
+     "height": 1073,
+     "sha256": "a3d33f8d624d17f2234cfd756cd2a38cba2525ad6422c0a26ec1c2c5fdcb53ff",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 296.0,
+      "y": 669.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "lotion pump body + dip tube, lifted out",
+     "file": "50/lotion-internals.png",
+     "width": 200,
+     "height": 1732,
+     "sha256": "a127121e8e4195378095b0f68a99039562d75c8800e14fc5e4c78bf92ded6c3e",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 100.0,
+      "y": -57.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "50/see-through-lotion.png",
+     "width": 927,
+     "height": 2173,
+     "sha256": "e53034aabd5e548cf64689d2c8d5a774f2291abf77c83a45f22f74cb9f537a21",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 464.0,
+      "y": 10.49
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-SPR-MTCP-18-415-03",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "18-415 fine-mist sprayer copper (all metal: collar + head)",
+     "file": "shared/mist-copper.png",
+     "width": 578,
+     "height": 1025,
+     "sha256": "17eb0b00c0de8faa3edd706a0ee1fd944e9bbd9eb992a9a2bf6b96e9352e3c93",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 289.0,
+      "y": 621.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap copper",
+     "file": "shared/overcap-copper.png",
+     "width": 592,
+     "height": 1073,
+     "sha256": "9289b26592d0a702ede86d86b2d1ad50bd5e1252099d7b76a659df74e7c9e53f",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 296.0,
+      "y": 669.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "mist pump body + dip tube, lifted out",
+     "file": "50/mist-internals.png",
+     "width": 126,
+     "height": 1728,
+     "sha256": "b222e980155befa08e5c95cce999329f2dda9ea30edf4db9fe8976d0feb4765c",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 63.0,
+      "y": -59.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "50/see-through-mist.png",
+     "width": 927,
+     "height": 2170,
+     "sha256": "0e0da46a1e5c72a9eace84d54c43a7704a24bb63d22651e5fd7fb83923f4a306",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 464.0,
+      "y": 10.49
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-SPR-MTGD-18-415-05",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "18-415 fine-mist sprayer matte-gold (all metal: collar + head)",
+     "file": "shared/mist-matte-gold.png",
+     "width": 578,
+     "height": 1025,
+     "sha256": "b005b3475c04131afcb3c856d2711dada3b636612dd7b6ba961f10bd3f15ba2f",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 289.0,
+      "y": 621.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap matte-gold",
+     "file": "shared/overcap-matte-gold.png",
+     "width": 592,
+     "height": 1073,
+     "sha256": "4ff070d4eb1e16ff1b041b172944b640ec467a0a3e602db907a7dade61d20ec2",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 296.0,
+      "y": 669.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "mist pump body + dip tube, lifted out",
+     "file": "50/mist-internals.png",
+     "width": 126,
+     "height": 1728,
+     "sha256": "b222e980155befa08e5c95cce999329f2dda9ea30edf4db9fe8976d0feb4765c",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 63.0,
+      "y": -59.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "50/see-through-mist.png",
+     "width": 927,
+     "height": 2170,
+     "sha256": "0e0da46a1e5c72a9eace84d54c43a7704a24bb63d22651e5fd7fb83923f4a306",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 464.0,
+      "y": 10.49
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-SPR-MTSL-18-415-06",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "18-415 fine-mist sprayer matte-silver (all metal: collar + head)",
+     "file": "shared/mist-matte-silver.png",
+     "width": 578,
+     "height": 1025,
+     "sha256": "d556358c4fa50cdb2fc93e26c8b8eb52b06ea67c58b58455905830635ffea127",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 289.0,
+      "y": 621.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap matte-silver",
+     "file": "shared/overcap-matte-silver.png",
+     "width": 592,
+     "height": 1073,
+     "sha256": "7bfcb2b084ad53a689b5f2321e9ebaa91d820124c71e334625c4518f1f55fe96",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 296.0,
+      "y": 669.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "mist pump body + dip tube, lifted out",
+     "file": "50/mist-internals.png",
+     "width": 126,
+     "height": 1728,
+     "sha256": "b222e980155befa08e5c95cce999329f2dda9ea30edf4db9fe8976d0feb4765c",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 63.0,
+      "y": -59.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "50/see-through-mist.png",
+     "width": 927,
+     "height": 2170,
+     "sha256": "0e0da46a1e5c72a9eace84d54c43a7704a24bb63d22651e5fd7fb83923f4a306",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 464.0,
+      "y": 10.49
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-SPR-SHBK-18-415-06",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "18-415 fine-mist sprayer shiny-black (all metal: collar + head)",
+     "file": "shared/mist-shiny-black.png",
+     "width": 578,
+     "height": 1025,
+     "sha256": "fdd27b122e91acdc2ca1ba48293f82b67ae95789f19454ba7be3dfb13c46ef7d",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 289.0,
+      "y": 621.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap shiny-black",
+     "file": "shared/overcap-shiny-black.png",
+     "width": 592,
+     "height": 1073,
+     "sha256": "db7a898da6907fe5b34c06e6eda5c2341d86dcb53d4d8700a2a672509a7767d7",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 296.0,
+      "y": 669.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "mist pump body + dip tube, lifted out",
+     "file": "50/mist-internals.png",
+     "width": 126,
+     "height": 1728,
+     "sha256": "b222e980155befa08e5c95cce999329f2dda9ea30edf4db9fe8976d0feb4765c",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 63.0,
+      "y": -59.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "50/see-through-mist.png",
+     "width": 927,
+     "height": 2170,
+     "sha256": "0e0da46a1e5c72a9eace84d54c43a7704a24bb63d22651e5fd7fb83923f4a306",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 464.0,
+      "y": 10.49
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-SPR-SHGD-18-415-05",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "18-415 fine-mist sprayer gold (all metal: collar + head)",
+     "file": "shared/mist-gold.png",
+     "width": 578,
+     "height": 1025,
+     "sha256": "386c40434eb8694ef75235e613e7013d7bcbe6b108ceb45cc87b8806d785cbaf",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 289.0,
+      "y": 621.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap gold",
+     "file": "shared/overcap-gold.png",
+     "width": 592,
+     "height": 1073,
+     "sha256": "817216ebd740575708d2de9706c39a2b64fad395e1b8b3f3524f397319b0ffed",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 296.0,
+      "y": 669.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "mist pump body + dip tube, lifted out",
+     "file": "50/mist-internals.png",
+     "width": 126,
+     "height": 1728,
+     "sha256": "b222e980155befa08e5c95cce999329f2dda9ea30edf4db9fe8976d0feb4765c",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 63.0,
+      "y": -59.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "50/see-through-mist.png",
+     "width": 927,
+     "height": 2170,
+     "sha256": "0e0da46a1e5c72a9eace84d54c43a7704a24bb63d22651e5fd7fb83923f4a306",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 464.0,
+      "y": 10.49
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-SPR-SHSL-18-415-06",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "layerName": "18-415 fine-mist sprayer shiny-silver (all metal: collar + head)",
+     "file": "shared/mist-shiny-silver.png",
+     "width": 578,
+     "height": 1025,
+     "sha256": "f2d458c9b36cba1c0c8d4b98b93a4ec9110f290557f036d0405a22c5c1dfe023",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 289.0,
+      "y": 621.68
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap shiny-silver",
+     "file": "shared/overcap-shiny-silver.png",
+     "width": 592,
+     "height": 1073,
+     "sha256": "a3d33f8d624d17f2234cfd756cd2a38cba2525ad6422c0a26ec1c2c5fdcb53ff",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 296.0,
+      "y": 669.68
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "mist pump body + dip tube, lifted out",
+     "file": "50/mist-internals.png",
+     "width": 126,
+     "height": 1728,
+     "sha256": "b222e980155befa08e5c95cce999329f2dda9ea30edf4db9fe8976d0feb4765c",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 63.0,
+      "y": -59.32
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "50/see-through-mist.png",
+     "width": 927,
+     "height": 2170,
+     "sha256": "0e0da46a1e5c72a9eace84d54c43a7704a24bb63d22651e5fd7fb83923f4a306",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 464.0,
+      "y": 10.49
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    }
+   ]
+  }
+ ],
+ "seeThroughQa": {
+  "mist": {
+   "maxErr": 181,
+   "meanErr": 0.0939
+  },
+  "lotion": {
+   "maxErr": 180,
+   "meanErr": 0.1007
+  }
+ }
+}
