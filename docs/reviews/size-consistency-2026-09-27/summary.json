@@ -1,0 +1,1826 @@
+{
+ "pdp": {
+  "page": "Product page",
+  "glasses": 91,
+  "glassesInconsistent": 54,
+  "glassesMajor": 49,
+  "variants": 2247,
+  "variantsOff": 684,
+  "variantsMajor": 465,
+  "byCause": {
+   "frame": 368,
+   "kit": 104,
+   "photo": 163,
+   "image": 49
+  },
+  "byCauseMajor": {
+   "frame": 215,
+   "photo": 149,
+   "kit": 74,
+   "image": 27
+  },
+  "sources": {
+   "register": 1718,
+   "kit": 326,
+   "photo": 195,
+   "body": 8
+  },
+  "bigger": 306,
+  "smaller": 378
+ },
+ "byb": {
+  "page": "Build Your Bottle (chosen SKU)",
+  "glasses": 43,
+  "glassesInconsistent": 27,
+  "glassesMajor": 25,
+  "variants": 1880,
+  "variantsOff": 128,
+  "variantsMajor": 101,
+  "byCause": {
+   "photo": 41,
+   "frame": 11,
+   "kit": 76
+  },
+  "byCauseMajor": {
+   "photo": 40,
+   "frame": 11,
+   "kit": 50
+  },
+  "sources": {
+   "register": 1586,
+   "photo": 41,
+   "kit": 253
+  },
+  "bigger": 99,
+  "smaller": 29
+ },
+ "bybBody": {
+  "page": "Build Your Bottle (glass step)",
+  "glasses": 43,
+  "glassesInconsistent": 5,
+  "glassesMajor": 3,
+  "variants": 65,
+  "variantsOff": 5,
+  "variantsMajor": 3,
+  "byCause": {
+   "photo": 2,
+   "frame": 1,
+   "kit": 2
+  },
+  "byCauseMajor": {
+   "photo": 2,
+   "frame": 1
+  },
+  "sources": {
+   "register": 40,
+   "photo": 2,
+   "kit": 23
+  },
+  "bigger": 4,
+  "smaller": 1
+ },
+ "geometry": {
+  "measuredOn": "https://best-bottles-website.vercel.app at 1440x900, 2026-09-27",
+  "pdpStageW": 672,
+  "pdpStageH": 540,
+  "bybBoxW": 410,
+  "bybBoxH": 472,
+  "bybBodyBoxW": 410,
+  "bybBodyBoxH": 312
+ },
+ "glasses": {
+  "pdp": [
+   {
+    "label": "Round 78 ml 18-415",
+    "key": "round 78 ml 18-415",
+    "variants": 86,
+    "off": 80,
+    "major": 38,
+    "worst": 0.30982188836876845,
+    "causes": {
+     "kit": 4,
+     "frame": 76
+    },
+    "sources": {
+     "register": 82,
+     "kit": 4
+    },
+    "reference": {
+     "screen": 263.0691808783969,
+     "frameScale": 0.9018884403211864,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Elegant 60 ml 18-415",
+    "key": "elegant 60 ml 18-415",
+    "variants": 94,
+    "off": 59,
+    "major": 48,
+    "worst": 0.37641098555664887,
+    "causes": {
+     "kit": 7,
+     "frame": 52
+    },
+    "sources": {
+     "register": 87,
+     "kit": 7
+    },
+    "reference": {
+     "screen": 193.46956625454553,
+     "frameScale": 0.8,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Diva 46 ml 18-415",
+    "key": "diva 46 ml 18-415",
+    "variants": 102,
+    "off": 49,
+    "major": 25,
+    "worst": 0.192551817109476,
+    "causes": {
+     "frame": 36,
+     "kit": 5,
+     "photo": 8
+    },
+    "sources": {
+     "register": 88,
+     "kit": 6,
+     "photo": 8
+    },
+    "reference": {
+     "screen": 164.93717930506995,
+     "frameScale": 0.95,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Circle 50 ml 18-415",
+    "key": "circle 50 ml 18-415",
+    "variants": 90,
+    "off": 39,
+    "major": 22,
+    "worst": 0.4022297858193309,
+    "causes": {
+     "photo": 9,
+     "frame": 26,
+     "kit": 4
+    },
+    "sources": {
+     "body": 8,
+     "photo": 1,
+     "register": 77,
+     "kit": 4
+    },
+    "reference": {
+     "screen": 277.16639981620557,
+     "frameScale": 0.948,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Round 128 ml 18-415",
+    "key": "round 128 ml 18-415",
+    "variants": 92,
+    "off": 39,
+    "major": 37,
+    "worst": 0.27744870278480704,
+    "causes": {
+     "frame": 36,
+     "kit": 3
+    },
+    "sources": {
+     "register": 88,
+     "kit": 3,
+     "photo": 1
+    },
+    "reference": {
+     "screen": 275.12721768292687,
+     "frameScale": 0.95,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Diamond 60 ml 18-415",
+    "key": "diamond 60 ml 18-415",
+    "variants": 43,
+    "off": 37,
+    "major": 21,
+    "worst": 0.1749601263746703,
+    "causes": {
+     "kit": 2,
+     "frame": 35
+    },
+    "sources": {
+     "register": 41,
+     "kit": 2
+    },
+    "reference": {
+     "screen": 164.61680483998384,
+     "frameScale": 0.9229366165070679,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Cylinder 25 ml 18-415",
+    "key": "cylinder 25 ml 18-415",
+    "variants": 45,
+    "off": 33,
+    "major": 18,
+    "worst": 0.19267410328371648,
+    "causes": {
+     "frame": 31,
+     "kit": 2
+    },
+    "sources": {
+     "register": 43,
+     "kit": 2
+    },
+    "reference": {
+     "screen": 139.27149660674672,
+     "frameScale": 0.9277424322986377,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Empire 100 ml 18-415",
+    "key": "empire 100 ml 18-415",
+    "variants": 44,
+    "off": 29,
+    "major": 22,
+    "worst": 0.22701149425287348,
+    "causes": {
+     "image": 29
+    },
+    "sources": {
+     "kit": 44
+    },
+    "reference": {
+     "screen": 162.29454545454544,
+     "frameScale": 0.95,
+     "basis": "kit",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Elegant 100 ml 18-415",
+    "key": "elegant 100 ml 18-415",
+    "variants": 87,
+    "off": 23,
+    "major": 6,
+    "worst": 0.34415180943093404,
+    "causes": {
+     "photo": 1,
+     "frame": 17,
+     "kit": 5
+    },
+    "sources": {
+     "photo": 1,
+     "register": 81,
+     "kit": 5
+    },
+    "reference": {
+     "screen": 205.96506954545453,
+     "frameScale": 0.95,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Slim 30 ml 18-415",
+    "key": "slim 30 ml 18-415",
+    "variants": 37,
+    "off": 22,
+    "major": 5,
+    "worst": 0.1678435008080128,
+    "causes": {
+     "frame": 20,
+     "kit": 2
+    },
+    "sources": {
+     "register": 35,
+     "kit": 2
+    },
+    "reference": {
+     "screen": 121.48265343307366,
+     "frameScale": 0.9347089194506275,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Circle 100 ml 18-415",
+    "key": "circle 100 ml 18-415",
+    "variants": 86,
+    "off": 22,
+    "major": 22,
+    "worst": 0.13976622137226158,
+    "causes": {
+     "frame": 18,
+     "kit": 4
+    },
+    "sources": {
+     "register": 82,
+     "kit": 4
+    },
+    "reference": {
+     "screen": 281.5815960000001,
+     "frameScale": 0.948,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Boston Round 30 ml 20-400",
+    "key": "boston-round 30 ml 20-400",
+    "variants": 53,
+    "off": 21,
+    "major": 16,
+    "worst": 0.6834089634701048,
+    "causes": {
+     "image": 5,
+     "photo": 16
+    },
+    "sources": {
+     "kit": 37,
+     "photo": 16
+    },
+    "reference": {
+     "screen": 163.97328094302554,
+     "frameScale": 1,
+     "basis": "kit",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Cylinder 9 ml 17-415",
+    "key": "cylinder 9 ml 17-415",
+    "variants": 145,
+    "off": 20,
+    "major": 0,
+    "worst": 0.04888465524079588,
+    "causes": {
+     "kit": 20
+    },
+    "sources": {
+     "register": 95,
+     "kit": 50
+    },
+    "reference": {
+     "screen": 100.13124502840908,
+     "frameScale": 1,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Boston Round 60 ml 20-400",
+    "key": "boston-round 60 ml 20-400",
+    "variants": 55,
+    "off": 19,
+    "major": 16,
+    "worst": 0.5036696144778974,
+    "causes": {
+     "photo": 16,
+     "image": 3
+    },
+    "sources": {
+     "photo": 16,
+     "kit": 39
+    },
+    "reference": {
+     "screen": 164.46129666011788,
+     "frameScale": 0.9941060903732809,
+     "basis": "kit",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Elegant 15 ml 13-415",
+    "key": "elegant 15 ml 13-415",
+    "variants": 74,
+    "off": 16,
+    "major": 16,
+    "worst": 0.28111554193352317,
+    "causes": {
+     "photo": 16
+    },
+    "sources": {
+     "photo": 16,
+     "register": 58
+    },
+    "reference": {
+     "screen": 182.98541144200627,
+     "frameScale": 0.95,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Diva 30 ml 18-415",
+    "key": "diva 30 ml 18-415",
+    "variants": 34,
+    "off": 14,
+    "major": 11,
+    "worst": 0.14560221535552065,
+    "causes": {
+     "frame": 12,
+     "kit": 2
+    },
+    "sources": {
+     "register": 32,
+     "kit": 2
+    },
+    "reference": {
+     "screen": 158.54819185360097,
+     "frameScale": 0.95,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Cylinder 5 ml 13-415",
+    "key": "cylinder 5 ml 13-415",
+    "variants": 70,
+    "off": 13,
+    "major": 13,
+    "worst": 0.39528504627609884,
+    "causes": {
+     "kit": 13
+    },
+    "sources": {
+     "kit": 13,
+     "register": 57
+    },
+    "reference": {
+     "screen": 89.36590370813397,
+     "frameScale": 1,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Tall Cylinder 9 ml 13-415",
+    "key": "cylinder tall 9 ml 13-415",
+    "variants": 72,
+    "off": 12,
+    "major": 12,
+    "worst": 0.22467764608969376,
+    "causes": {
+     "kit": 12
+    },
+    "sources": {
+     "kit": 12,
+     "register": 60
+    },
+    "reference": {
+     "screen": 68.14409140316207,
+     "frameScale": 1.0,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Empire 50 ml 18-415",
+    "key": "empire 50 ml 18-415",
+    "variants": 47,
+    "off": 12,
+    "major": 11,
+    "worst": 0.11372212975627405,
+    "causes": {
+     "frame": 9,
+     "kit": 3
+    },
+    "sources": {
+     "register": 44,
+     "kit": 3
+    },
+    "reference": {
+     "screen": 142.74296590909094,
+     "frameScale": 0.88,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Footed Rectangle 10 ml 13-415",
+    "key": "footed-rectangle 10 ml 13-415",
+    "variants": 38,
+    "off": 8,
+    "major": 8,
+    "worst": 2.4090593114560908,
+    "causes": {
+     "photo": 8
+    },
+    "sources": {
+     "photo": 8,
+     "register": 30
+    },
+    "reference": {
+     "screen": 62.11977576581029,
+     "frameScale": 0.95,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Royal 13 ml 13-415",
+    "key": "royal 13 ml 13-415",
+    "variants": 37,
+    "off": 8,
+    "major": 8,
+    "worst": 0.2698878634237467,
+    "causes": {
+     "photo": 8
+    },
+    "sources": {
+     "photo": 8,
+     "register": 29
+    },
+    "reference": {
+     "screen": 208.2231097847465,
+     "frameScale": 0.95,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Flair 15 ml 13-415",
+    "key": "flair 15 ml 13-415",
+    "variants": 38,
+    "off": 8,
+    "major": 8,
+    "worst": 0.2636867666077629,
+    "causes": {
+     "photo": 8
+    },
+    "sources": {
+     "photo": 8,
+     "register": 30
+    },
+    "reference": {
+     "screen": 166.65522308612444,
+     "frameScale": 1.0,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Circle 30 ml 15-415",
+    "key": "circle 30 ml 15-415",
+    "variants": 7,
+    "off": 7,
+    "major": 3,
+    "worst": 0.2944232535441662,
+    "causes": {
+     "photo": 3,
+     "image": 4
+    },
+    "sources": {
+     "photo": 3,
+     "kit": 4
+    },
+    "reference": {
+     "screen": 260.0387181818182,
+     "frameScale": 0.954,
+     "basis": "kit",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Elegant 30 ml 15-415",
+    "key": "elegant 30 ml 15-415",
+    "variants": 14,
+    "off": 7,
+    "major": 5,
+    "worst": 0.14270050125313283,
+    "causes": {
+     "image": 4,
+     "photo": 3
+    },
+    "sources": {
+     "kit": 11,
+     "photo": 3
+    },
+    "reference": {
+     "screen": 208.9309090909091,
+     "frameScale": 0.95,
+     "basis": "kit",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Sleek 5 ml 13-415",
+    "key": "sleek 5 ml 13-415",
+    "variants": 36,
+    "off": 6,
+    "major": 6,
+    "worst": 1.4929468848283918,
+    "causes": {
+     "photo": 6
+    },
+    "sources": {
+     "photo": 6,
+     "register": 30
+    },
+    "reference": {
+     "screen": 60.542806153846165,
+     "frameScale": 0.64,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Tulip 5 ml 13-415",
+    "key": "tulip 5 ml 13-415",
+    "variants": 36,
+    "off": 6,
+    "major": 6,
+    "worst": 0.6323682593643691,
+    "causes": {
+     "photo": 6
+    },
+    "sources": {
+     "photo": 6,
+     "register": 30
+    },
+    "reference": {
+     "screen": 120.41400515625001,
+     "frameScale": 0.95,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Tulip 6 ml 13-415",
+    "key": "tulip 6 ml 13-415",
+    "variants": 35,
+    "off": 6,
+    "major": 6,
+    "worst": 0.608515335958945,
+    "causes": {
+     "photo": 6
+    },
+    "sources": {
+     "photo": 6,
+     "register": 29
+    },
+    "reference": {
+     "screen": 116.01692307692306,
+     "frameScale": 0.95,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Circle 15 ml 13-415",
+    "key": "circle 15 ml 13-415",
+    "variants": 36,
+    "off": 6,
+    "major": 6,
+    "worst": 0.5002566070276449,
+    "causes": {
+     "photo": 6
+    },
+    "sources": {
+     "photo": 6,
+     "register": 30
+    },
+    "reference": {
+     "screen": 188.9226807416268,
+     "frameScale": 0.775,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Vial 4 ml 13-425",
+    "key": "vial 4 ml 13-425",
+    "variants": 12,
+    "off": 6,
+    "major": 4,
+    "worst": 0.42181865739962254,
+    "causes": {
+     "image": 4,
+     "photo": 2
+    },
+    "sources": {
+     "kit": 9,
+     "photo": 3
+    },
+    "reference": {
+     "screen": 145.97181818181818,
+     "frameScale": 0.95,
+     "basis": "kit",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Sleek 8 ml 13-415",
+    "key": "sleek 8 ml 13-415",
+    "variants": 36,
+    "off": 6,
+    "major": 6,
+    "worst": 0.17531902418832823,
+    "causes": {
+     "photo": 6
+    },
+    "sources": {
+     "photo": 6,
+     "register": 30
+    },
+    "reference": {
+     "screen": 84.61532397017045,
+     "frameScale": 0.95,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Square 15 ml 13-415",
+    "key": "square 15 ml 13-415",
+    "variants": 34,
+    "off": 5,
+    "major": 5,
+    "worst": 0.328255214655534,
+    "causes": {
+     "photo": 5
+    },
+    "sources": {
+     "photo": 5,
+     "register": 29
+    },
+    "reference": {
+     "screen": 142.69847986191024,
+     "frameScale": 1,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Boston Round 15 ml 18-400",
+    "key": "boston-round 15 ml 18-400",
+    "variants": 16,
+    "off": 5,
+    "major": 5,
+    "worst": 0.2681352143077398,
+    "causes": {
+     "photo": 5
+    },
+    "sources": {
+     "photo": 5,
+     "kit": 11
+    },
+    "reference": {
+     "screen": 136.94780058651028,
+     "frameScale": 0.98828125,
+     "basis": "kit",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Tall Rectangle 10 ml 13-415",
+    "key": "tall-rectangle tall 10 ml 13-415",
+    "variants": 36,
+    "off": 5,
+    "major": 0,
+    "worst": 0.03590200071870164,
+    "causes": {
+     "photo": 5
+    },
+    "sources": {
+     "photo": 6,
+     "register": 30
+    },
+    "reference": {
+     "screen": 62.11977576581029,
+     "frameScale": 0.95,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Sleek 50 ml 18-415",
+    "key": "sleek 50 ml 18-415",
+    "variants": 44,
+    "off": 3,
+    "major": 3,
+    "worst": 0.6858216225625913,
+    "causes": {
+     "kit": 3
+    },
+    "sources": {
+     "register": 41,
+     "kit": 3
+    },
+    "reference": {
+     "screen": 74.69247050395258,
+     "frameScale": 0.95,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Sleek 30 ml 18-415",
+    "key": "sleek 30 ml 18-415",
+    "variants": 38,
+    "off": 3,
+    "major": 3,
+    "worst": 0.20135153142209838,
+    "causes": {
+     "photo": 1,
+     "kit": 2
+    },
+    "sources": {
+     "register": 35,
+     "photo": 1,
+     "kit": 2
+    },
+    "reference": {
+     "screen": 74.72493,
+     "frameScale": 0.63,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Vial 1 ml Plug",
+    "key": "vial 1 ml Plug",
+    "variants": 4,
+    "off": 2,
+    "major": 2,
+    "worst": 1.6219394640447264,
+    "causes": {
+     "photo": 2
+    },
+    "sources": {
+     "photo": 4
+    },
+    "reference": {
+     "screen": 28.292727272727276,
+     "frameScale": null,
+     "basis": "photo",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Pillar 9 ml 13-415",
+    "key": "pillar 9 ml 13-415",
+    "variants": 4,
+    "off": 2,
+    "major": 2,
+    "worst": 0.6731040048977104,
+    "causes": {
+     "photo": 2
+    },
+    "sources": {
+     "photo": 2,
+     "register": 2
+    },
+    "reference": {
+     "screen": 125.59671306818183,
+     "frameScale": 1.0,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Diva 100 ml 18-415",
+    "key": "diva 100 ml 18-415",
+    "variants": 43,
+    "off": 2,
+    "major": 2,
+    "worst": 0.5241754367960512,
+    "causes": {
+     "kit": 1,
+     "photo": 1
+    },
+    "sources": {
+     "register": 41,
+     "kit": 1,
+     "photo": 1
+    },
+    "reference": {
+     "screen": 171.67519090909093,
+     "frameScale": 0.95,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Teardrop 9 ml Ground",
+    "key": "teardrop 9 ml Ground",
+    "variants": 3,
+    "off": 2,
+    "major": 2,
+    "worst": 0.47311792069750847,
+    "causes": {
+     "photo": 2
+    },
+    "sources": {
+     "photo": 2,
+     "kit": 1
+    },
+    "reference": {
+     "screen": 201.097265625,
+     "frameScale": 0.98828125,
+     "basis": "kit",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Slim 100 ml 18-415",
+    "key": "slim 100 ml 18-415",
+    "variants": 43,
+    "off": 2,
+    "major": 1,
+    "worst": 0.170006498556468,
+    "causes": {
+     "kit": 2
+    },
+    "sources": {
+     "kit": 2,
+     "register": 40,
+     "photo": 1
+    },
+    "reference": {
+     "screen": 80.13941501976286,
+     "frameScale": 1.0,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Slim 50 ml 18-415",
+    "key": "slim 50 ml 18-415",
+    "variants": 43,
+    "off": 2,
+    "major": 2,
+    "worst": 0.15592091207274272,
+    "causes": {
+     "kit": 2
+    },
+    "sources": {
+     "register": 41,
+     "kit": 2
+    },
+    "reference": {
+     "screen": 38.56193359683795,
+     "frameScale": 0.4,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Sleek 100 ml 18-415",
+    "key": "sleek 100 ml 18-415",
+    "variants": 44,
+    "off": 2,
+    "major": 2,
+    "worst": 0.14171549842721842,
+    "causes": {
+     "kit": 2
+    },
+    "sources": {
+     "register": 41,
+     "kit": 3
+    },
+    "reference": {
+     "screen": 91.90715053475937,
+     "frameScale": 0.95,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Aluminum Bottle 120 ml 20-410",
+    "key": "aluminum-bottle 120 ml 20-410",
+    "variants": 2,
+    "off": 2,
+    "major": 2,
+    "worst": 0.10350248071916301,
+    "causes": {
+     "photo": 2
+    },
+    "sources": {
+     "photo": 2
+    },
+    "reference": {
+     "screen": 111.03818181818181,
+     "frameScale": null,
+     "basis": "photo",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Cylinder 50 ml 18-415",
+    "key": "cylinder 50 ml 18-415",
+    "variants": 43,
+    "off": 2,
+    "major": 2,
+    "worst": 0.10301873892601998,
+    "causes": {
+     "kit": 2
+    },
+    "sources": {
+     "register": 41,
+     "kit": 2
+    },
+    "reference": {
+     "screen": 107.81617755681819,
+     "frameScale": 1,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Cylinder 100 ml 18-415",
+    "key": "cylinder 100 ml 18-415",
+    "variants": 43,
+    "off": 2,
+    "major": 0,
+    "worst": 0.046426886065288775,
+    "causes": {
+     "kit": 2
+    },
+    "sources": {
+     "register": 41,
+     "kit": 2
+    },
+    "reference": {
+     "screen": 83.50494367588932,
+     "frameScale": 1,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Lotion Bottle 30 ml",
+    "key": "lotion-bottle 30 ml",
+    "variants": 2,
+    "off": 2,
+    "major": 0,
+    "worst": 0.045531197301855064,
+    "causes": {
+     "photo": 2
+    },
+    "sources": {
+     "photo": 2
+    },
+    "reference": {
+     "screen": 86.72625,
+     "frameScale": null,
+     "basis": "photo",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Bell 10 ml 13-415",
+    "key": "bell 10 ml 13-415",
+    "variants": 4,
+    "off": 1,
+    "major": 1,
+    "worst": 0.6131154854179441,
+    "causes": {
+     "photo": 1
+    },
+    "sources": {
+     "register": 3,
+     "photo": 1
+    },
+    "reference": {
+     "screen": 133.73330965909093,
+     "frameScale": 1,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Cream Jar 30 ml 45mm",
+    "key": "cream-jar 30 ml 45mm",
+    "variants": 4,
+    "off": 1,
+    "major": 1,
+    "worst": 0.34355453852021356,
+    "causes": {
+     "photo": 1
+    },
+    "sources": {
+     "kit": 3,
+     "photo": 1
+    },
+    "reference": {
+     "screen": 214.52727272727273,
+     "frameScale": 1,
+     "basis": "kit",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Cylinder 3.3 ml 12mm",
+    "key": "cylinder 3.3 ml 12mm",
+    "variants": 2,
+    "off": 1,
+    "major": 1,
+    "worst": 0.3001517794694124,
+    "causes": {
+     "photo": 1
+    },
+    "sources": {
+     "kit": 1,
+     "photo": 1
+    },
+    "reference": {
+     "screen": 119.17314906219151,
+     "frameScale": 0.9990128331688055,
+     "basis": "kit",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Heart 4 ml 8mm",
+    "key": "heart 4 ml 8mm",
+    "variants": 2,
+    "off": 1,
+    "major": 1,
+    "worst": 0.14726877086238233,
+    "causes": {
+     "photo": 1
+    },
+    "sources": {
+     "photo": 1,
+     "kit": 1
+    },
+    "reference": {
+     "screen": 120.74144405866933,
+     "frameScale": 0.7170693686671863,
+     "basis": "kit",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Cream Jar 40 ml 48/400",
+    "key": "cream-jar 40 ml 48/400",
+    "variants": 4,
+    "off": 1,
+    "major": 1,
+    "worst": 0.1253271747498076,
+    "causes": {
+     "photo": 1
+    },
+    "sources": {
+     "kit": 3,
+     "photo": 1
+    },
+    "reference": {
+     "screen": 212.5636363636364,
+     "frameScale": 1,
+     "basis": "kit",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Plastic Bottle 30 ml 13-415",
+    "key": "plastic-bottle 30 ml 13-415",
+    "variants": 3,
+    "off": 1,
+    "major": 1,
+    "worst": 0.10153846153846158,
+    "causes": {
+     "photo": 1
+    },
+    "sources": {
+     "photo": 3
+    },
+    "reference": {
+     "screen": 138.27272727272728,
+     "frameScale": null,
+     "basis": "photo",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Eternal Flame 35 ml Ground",
+    "key": "eternal-flame 35 ml Ground",
+    "variants": 3,
+    "off": 1,
+    "major": 1,
+    "worst": 0.09659863945578229,
+    "causes": {
+     "photo": 1
+    },
+    "sources": {
+     "photo": 3
+    },
+    "reference": {
+     "screen": 200.45454545454544,
+     "frameScale": null,
+     "basis": "photo",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Rectangle 9 ml Ground",
+    "key": "rectangle 9 ml Ground",
+    "variants": 3,
+    "off": 1,
+    "major": 0,
+    "worst": 0.034872761545711506,
+    "causes": {
+     "photo": 1
+    },
+    "sources": {
+     "photo": 3
+    },
+    "reference": {
+     "screen": 144.68181818181816,
+     "frameScale": null,
+     "basis": "photo",
+     "hasRegister": false
+    }
+   }
+  ],
+  "byb": [
+   {
+    "label": "Boston Round 60Ml|20 400|Glass Bottle",
+    "key": "boston-round-60ml|20-400|Glass Bottle",
+    "variants": 43,
+    "off": 20,
+    "major": 20,
+    "worst": 0.4158514877814319,
+    "causes": {
+     "frame": 11,
+     "photo": 9
+    },
+    "sources": {
+     "kit": 34,
+     "photo": 9
+    },
+    "reference": {
+     "screen": 103.9702265882879,
+     "frameScale": 0.31035888533817285,
+     "basis": "kit",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Cylinder 9Ml|17 415|Glass Bottle",
+    "key": "cylinder-9ml|17-415|Glass Bottle",
+    "variants": 143,
+    "off": 20,
+    "major": 0,
+    "worst": 0.0511852542450596,
+    "causes": {
+     "kit": 20
+    },
+    "sources": {
+     "register": 94,
+     "kit": 49
+    },
+    "reference": {
+     "screen": 77.94567468188774,
+     "frameScale": 0.381216523226766,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Boston Round 30Ml|20 400|Glass Bottle",
+    "key": "boston-round-30ml|20-400|Glass Bottle",
+    "variants": 45,
+    "off": 14,
+    "major": 14,
+    "worst": 0.4261428661909008,
+    "causes": {
+     "photo": 14
+    },
+    "sources": {
+     "kit": 31,
+     "photo": 14
+    },
+    "reference": {
+     "screen": 103.47294334833276,
+     "frameScale": 0.31276742910353944,
+     "basis": "kit",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Cylinder 5Ml|13 415|Glass Bottle",
+    "key": "cylinder-5ml|13-415|Glass Bottle",
+    "variants": 58,
+    "off": 13,
+    "major": 13,
+    "worst": 0.3952850462760986,
+    "causes": {
+     "kit": 13
+    },
+    "sources": {
+     "register": 45,
+     "kit": 13
+    },
+    "reference": {
+     "screen": 94.21619402448735,
+     "frameScale": 0.5175529395252548,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Diva 46Ml|18 415|Glass Bottle",
+    "key": "diva-46ml|18-415|Glass Bottle",
+    "variants": 92,
+    "off": 10,
+    "major": 9,
+    "worst": 0.5679684676754215,
+    "causes": {
+     "kit": 3,
+     "photo": 7
+    },
+    "sources": {
+     "register": 81,
+     "kit": 4,
+     "photo": 7
+    },
+    "reference": {
+     "screen": 85.5996805847653,
+     "frameScale": 0.2420350492064575,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Cylinder 9Ml|13 415|Glass Bottle",
+    "key": "cylinder-9ml|13-415|Glass Bottle",
+    "variants": 58,
+    "off": 6,
+    "major": 6,
+    "worst": 0.22467764608969376,
+    "causes": {
+     "kit": 6
+    },
+    "sources": {
+     "register": 46,
+     "kit": 12
+    },
+    "reference": {
+     "screen": 53.52882512787725,
+     "frameScale": 0.38562091503267976,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Round 128Ml|18 415|Glass Bottle",
+    "key": "round-128ml|18-415|Glass Bottle",
+    "variants": 92,
+    "off": 4,
+    "major": 4,
+    "worst": 0.8689702647440634,
+    "causes": {
+     "kit": 3,
+     "photo": 1
+    },
+    "sources": {
+     "kit": 3,
+     "register": 88,
+     "photo": 1
+    },
+    "reference": {
+     "screen": 128.56962174992424,
+     "frameScale": 0.21774692594874437,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Circle 100Ml|18 415|Glass Bottle",
+    "key": "circle-100ml|18-415|Glass Bottle",
+    "variants": 86,
+    "off": 4,
+    "major": 4,
+    "worst": 0.1294343904175823,
+    "causes": {
+     "kit": 4
+    },
+    "sources": {
+     "kit": 4,
+     "register": 82
+    },
+    "reference": {
+     "screen": 157.40593285643735,
+     "frameScale": 0.25991180383599594,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Circle 50Ml|18 415|Glass Bottle",
+    "key": "circle-50ml|18-415|Glass Bottle",
+    "variants": 81,
+    "off": 4,
+    "major": 4,
+    "worst": 0.1096961044418665,
+    "causes": {
+     "kit": 4
+    },
+    "sources": {
+     "kit": 4,
+     "register": 77
+    },
+    "reference": {
+     "screen": 134.96764581872944,
+     "frameScale": 0.22607255968412623,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Round 78Ml|18 415|Glass Bottle",
+    "key": "round-78ml|18-415|Glass Bottle",
+    "variants": 86,
+    "off": 4,
+    "major": 2,
+    "worst": 0.08064692454998368,
+    "causes": {
+     "kit": 4
+    },
+    "sources": {
+     "register": 82,
+     "kit": 4
+    },
+    "reference": {
+     "screen": 117.12251928321174,
+     "frameScale": 0.19714655803574602,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Boston Round 15Ml|18 400|Glass Bottle",
+    "key": "boston-round-15ml|18-400|Glass Bottle",
+    "variants": 13,
+    "off": 3,
+    "major": 3,
+    "worst": 0.42882135426433443,
+    "causes": {
+     "photo": 3
+    },
+    "sources": {
+     "photo": 3,
+     "kit": 10
+    },
+    "reference": {
+     "screen": 90.14814876301935,
+     "frameScale": 0.31967428639368567,
+     "basis": "kit",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Elegant 30Ml|15 415|Glass Bottle",
+    "key": "elegant-30ml|15-415|Glass Bottle",
+    "variants": 14,
+    "off": 3,
+    "major": 3,
+    "worst": 0.15284348647177737,
+    "causes": {
+     "photo": 3
+    },
+    "sources": {
+     "photo": 3,
+     "kit": 11
+    },
+    "reference": {
+     "screen": 179.30193249342184,
+     "frameScale": 0.4112429644344538,
+     "basis": "kit",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Elegant 60Ml|18 415|Glass Bottle",
+    "key": "elegant-60ml|18-415|Glass Bottle",
+    "variants": 84,
+    "off": 3,
+    "major": 2,
+    "worst": 0.11848458370978143,
+    "causes": {
+     "kit": 3
+    },
+    "sources": {
+     "kit": 3,
+     "register": 81
+    },
+    "reference": {
+     "screen": 113.14123378660338,
+     "frameScale": 0.22966737889695124,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Circle 30Ml|15 415|Glass Bottle",
+    "key": "circle-30ml|15-415|Glass Bottle",
+    "variants": 7,
+    "off": 3,
+    "major": 2,
+    "worst": 0.09109382759223639,
+    "causes": {
+     "photo": 3
+    },
+    "sources": {
+     "kit": 4,
+     "photo": 3
+    },
+    "reference": {
+     "screen": 208.53908696049368,
+     "frameScale": 0.39199076496333396,
+     "basis": "kit",
+     "hasRegister": false
+    }
+   },
+   {
+    "label": "Elegant 100Ml|18 415|Glass Bottle",
+    "key": "elegant-100ml|18-415|Glass Bottle",
+    "variants": 83,
+    "off": 2,
+    "major": 2,
+    "worst": 0.15049840284787752,
+    "causes": {
+     "kit": 2
+    },
+    "sources": {
+     "register": 81,
+     "kit": 2
+    },
+    "reference": {
+     "screen": 124.4466058865845,
+     "frameScale": 0.2745740090058859,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Cylinder 25Ml|18 415|Glass Bottle",
+    "key": "cylinder-25ml|18-415|Glass Bottle",
+    "variants": 45,
+    "off": 2,
+    "major": 2,
+    "worst": 0.1137922504511445,
+    "causes": {
+     "kit": 2
+    },
+    "sources": {
+     "register": 43,
+     "kit": 2
+    },
+    "reference": {
+     "screen": 71.89681140801778,
+     "frameScale": 0.23511258833076723,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Cylinder 50Ml|18 415|Glass Bottle",
+    "key": "cylinder-50ml|18-415|Glass Bottle",
+    "variants": 43,
+    "off": 2,
+    "major": 2,
+    "worst": 0.10301873892602009,
+    "causes": {
+     "kit": 2
+    },
+    "sources": {
+     "register": 41,
+     "kit": 2
+    },
+    "reference": {
+     "screen": 70.26620128051802,
+     "frameScale": 0.3199363747993764,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Cylinder 100Ml|18 415|Glass Bottle",
+    "key": "cylinder-100ml|18-415|Glass Bottle",
+    "variants": 43,
+    "off": 2,
+    "major": 0,
+    "worst": 0.04642688606528855,
+    "causes": {
+     "kit": 2
+    },
+    "sources": {
+     "register": 41,
+     "kit": 2
+    },
+    "reference": {
+     "screen": 64.0479239762981,
+     "frameScale": 0.37652511036777503,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Sleek 50Ml|18 415|Glass Bottle",
+    "key": "sleek-50ml|18-415|Glass Bottle",
+    "variants": 42,
+    "off": 1,
+    "major": 1,
+    "worst": 0.6858216225625913,
+    "causes": {
+     "kit": 1
+    },
+    "sources": {
+     "register": 41,
+     "kit": 1
+    },
+    "reference": {
+     "screen": 56.80633903157692,
+     "frameScale": 0.354686498659458,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Slim 50Ml|18 415|Glass Bottle",
+    "key": "slim-50ml|18-415|Glass Bottle",
+    "variants": 42,
+    "off": 1,
+    "major": 1,
+    "worst": 0.15592091207274295,
+    "causes": {
+     "kit": 1
+    },
+    "sources": {
+     "register": 41,
+     "kit": 1
+    },
+    "reference": {
+     "screen": 64.15808071361164,
+     "frameScale": 0.32670337962693663,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Diva 100Ml|18 415|Glass Bottle",
+    "key": "diva-100ml|18-415|Glass Bottle",
+    "variants": 42,
+    "off": 1,
+    "major": 1,
+    "worst": 0.15453225597111997,
+    "causes": {
+     "kit": 1
+    },
+    "sources": {
+     "register": 41,
+     "kit": 1
+    },
+    "reference": {
+     "screen": 107.99241928432204,
+     "frameScale": 0.2933664269743704,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Sleek 100Ml|18 415|Glass Bottle",
+    "key": "sleek-100ml|18-415|Glass Bottle",
+    "variants": 42,
+    "off": 1,
+    "major": 1,
+    "worst": 0.14171549842721842,
+    "causes": {
+     "kit": 1
+    },
+    "sources": {
+     "register": 41,
+     "kit": 1
+    },
+    "reference": {
+     "screen": 72.85295482499863,
+     "frameScale": 0.36967710057741754,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Diva 30Ml|18 415|Glass Bottle",
+    "key": "diva-30ml|18-415|Glass Bottle",
+    "variants": 33,
+    "off": 1,
+    "major": 1,
+    "worst": 0.12363885710793054,
+    "causes": {
+     "kit": 1
+    },
+    "sources": {
+     "register": 32,
+     "kit": 1
+    },
+    "reference": {
+     "screen": 109.40059436675068,
+     "frameScale": 0.32179779796121477,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Slim 100Ml|18 415|Glass Bottle",
+    "key": "slim-100ml|18-415|Glass Bottle",
+    "variants": 40,
+    "off": 1,
+    "major": 1,
+    "worst": 0.12077895249235637,
+    "causes": {
+     "photo": 1
+    },
+    "sources": {
+     "register": 39,
+     "photo": 1
+    },
+    "reference": {
+     "screen": 61.486522250220425,
+     "frameScale": 0.3766472806617527,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Sleek 30Ml|18 415|Glass Bottle",
+    "key": "sleek-30ml|18-415|Glass Bottle",
+    "variants": 33,
+    "off": 1,
+    "major": 1,
+    "worst": 0.1174802888893487,
+    "causes": {
+     "kit": 1
+    },
+    "sources": {
+     "register": 32,
+     "kit": 1
+    },
+    "reference": {
+     "screen": 93.17179738562093,
+     "frameScale": 0.3856209150326798,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Slim 30Ml|18 415|Glass Bottle",
+    "key": "slim-30ml|18-415|Glass Bottle",
+    "variants": 36,
+    "off": 1,
+    "major": 1,
+    "worst": 0.08781659577016021,
+    "causes": {
+     "kit": 1
+    },
+    "sources": {
+     "register": 35,
+     "kit": 1
+    },
+    "reference": {
+     "screen": 91.46262729855482,
+     "frameScale": 0.3454672356531556,
+     "basis": "register",
+     "hasRegister": true
+    }
+   },
+   {
+    "label": "Diamond 60Ml|18 415|Glass Bottle",
+    "key": "diamond-60ml|18-415|Glass Bottle",
+    "variants": 42,
+    "off": 1,
+    "major": 1,
+    "worst": 0.08166140447160752,
+    "causes": {
+     "kit": 1
+    },
+    "sources": {
+     "register": 41,
+     "kit": 1
+    },
+    "reference": {
+     "screen": 88.54040218351399,
+     "frameScale": 0.24369143963944206,
+     "basis": "register",
+     "hasRegister": true
+    }
+   }
+  ]
+ }
+}

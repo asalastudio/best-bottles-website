@@ -1,0 +1,11 @@
+{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "../../..",
+    "paths": {
+      "@/*": ["./src/*"],
+      "server-only": ["./scripts/audit/size-consistency/shims/server-only.ts"],
+      "next/cache": ["./scripts/audit/size-consistency/shims/next-cache.ts"]
+    }
+  }
+}
