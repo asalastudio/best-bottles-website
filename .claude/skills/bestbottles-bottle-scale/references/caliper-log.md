@@ -115,6 +115,22 @@ Still needed: Dp, Hn and Cap.
 - The lined short caps (no roller) sit on the shoulder.
 - Studio lighting in the lock files is NOT approved.
 
+**Studio + hardware v1.3 LOCKED 2026-09-28. The body is untouched and passes the v2 body lock check.**
+- Folder: `~/Documents/Codex/2026-09-24/the-image-is-clearly-the-target/outputs/tall-9ml-13-415-STUDIO-v1.3-LOCKED-2026-09-28/`.
+  It holds the clear and frosted `.blend` files, `STUDIO-LOCK.json` and `scripts/build_v13.sh`.
+- It adds:
+  - the ribbed short caps at the caliper size;
+  - the V63 dip-tube top (see the sprayer section);
+  - a glossy-only edge card behind the bottle, which gives an even outer edge line from shoulder to base (it fixes
+    the bell-shape illusion);
+  - finish colours fitted to the master PSD photos;
+  - the full frost.
+- **Frost ruling (Jordan, 2026-09-28, with photos of the real frosted bottle):** the frost covers the whole exterior
+  from the shoulder to the base, including the bottom face. Only the neck finish is clear. The model uses frost
+  roughness 0.75–0.82, the inner bowl on the body material, and a soft inside haze so no lines show through.
+  Jordan: "The new frost is perfect."
+- Not pushed to dev.
+
 **v1, superseded:** **LOCKED 2026-09-27 (Jordan: "Bottle is perfect let's lock it now").** The bottle body is locked in
 `~/Documents/Codex/2026-09-24/the-image-is-clearly-the-target/outputs/tall-9ml-13-415-LOCKED-2026-09-27/`.
 - Contents: `LOCK.json`, clear and frosted `.blend` files (read-only, with identical body mesh) and `scripts/verify_lock.py`.
@@ -178,6 +194,21 @@ Jordan: "make any necessary logical adjustments if our caliper is off a millimet
 - Finish: satin-matte black with broad soft highlights, not mirror gloss.
 
 **Not yet measured:** the dip tube. Jordan said it is "fine as it is for now".
+
+**Sprayer changes since the lock:**
+- Applied 2026-09-27 and in studio v1.3:
+  - a FLAT actuator top with a 0.4 mm round, at z 120.342 on the Tall (Jordan: "looks better");
+  - the white nozzle insert recessed 0.60 mm (Jordan: "Perfect").
+- **V63 dip-tube top (approved 2026-09-28, "new dip tube is approved"):** the pump tailpiece under the collar is a wide,
+  plain, frosted cylinder. The sizes are PHOTO-DERIVED, not caliper readings, and are sized by ratio to the tube because
+  the glass magnifies what is inside it.
+  - Tailpiece Ø3.30 (2.2× the tube).
+  - Flat bottom with a 0.3 round, 6.19 under the collar (z 88.30 on the Tall).
+  - No ring: the line in the wide photo is the glass shoulder.
+  - Hollow core; the tube leaves the bottom directly, with a milky barb filling its top 1.75.
+  - Dip tube Ø1.44, model value, not measured.
+  - It replaces V62, the straight 1.8 mm stem.
+- Still to caliper if possible: tailpiece OD and length, and dip tube OD.
 
 **What the older model had wrong:** the 3D model built before these readings had an overcap of Ø17.6 × 29.6 and a
 collar of Ø17. Use the readings above.
