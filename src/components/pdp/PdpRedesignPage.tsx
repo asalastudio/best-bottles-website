@@ -62,7 +62,8 @@ import {
     type RollerId,
     type SiblingGlassGroup,
 } from "@/lib/products/pdp-redesign/model";
-import { availableViews, type KitLike, type StageView } from "@/lib/products/pdp-redesign/stage";
+import { availableViews, glassFrame, type KitLike, type StageView } from "@/lib/products/pdp-redesign/stage";
+import type { StageBounds } from "@/lib/products/pdp-stage-frame";
 import styles from "./pdp.module.css";
 import PdpBuyBox, { type AddState } from "./PdpBuyBox";
 import PdpStage from "./PdpStage";
@@ -76,6 +77,8 @@ export type PdpRedesignPayload = {
     siblings: SiblingGlassGroup[];
     /** Published kits for this group's variants and each sibling's primary SKU, by website SKU and Grace SKU. */
     kitsBySku: Record<string, KitLike | null>;
+    /** By frame key (register body, or one of its hanging tops): the bounds every SKU of the glass needs, on every page it sells on (src/lib/register/stage-envelopes.ts). */
+    stageEnvelopes?: Record<string, StageBounds>;
     platesBySku: Record<string, PlateRef>;
     /** Curated or composed copy, by website SKU. */
     descriptions: Record<string, ItemDescription>;
@@ -90,7 +93,7 @@ function kitFor(kits: Record<string, KitLike | null>, variant: { websiteSku?: st
     return (variant.websiteSku ? kits[variant.websiteSku] : null) ?? (variant.graceSku ? kits[variant.graceSku] : null) ?? null;
 }
 
-export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, platesBySku, descriptions, collection, familyHref }: PdpRedesignPayload) {
+export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, stageEnvelopes, platesBySku, descriptions, collection, familyHref }: PdpRedesignPayload) {
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
@@ -139,6 +142,12 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         applicator: selected?.applicator ?? null, websiteSku: selected?.websiteSku ?? null,
     }), [group.family, group.capacityMl, group.color, selected?.applicator, selected?.websiteSku]);
     const views = useMemo(() => availableViews(kit, stageContext), [kit, stageContext]);
+    // One frame for every SKU of the glass, so a cap or fitment swap never resizes it.
+    const frame = useMemo(() => glassFrame(
+        { kit, applicator: selected?.applicator },
+        variants.map((variant) => ({ kit: kitFor(kitsBySku, variant), applicator: variant.applicator })),
+        stageEnvelopes,
+    ), [kit, selected?.applicator, variants, kitsBySku, stageEnvelopes]);
     // The requested view survives a SKU change; a SKU without layers shows SIDECAR until one returns.
     const shownView: StageView = views.includes(view) ? view : "sidecar";
 
@@ -359,6 +368,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                         onViewChange={onView}
                         kit={kit}
                         context={stageContext}
+                        glassFrame={frame}
                         fallbackImageUrls={fallbackMedia.images}
                         fallbackBodyImageUrl={fallbackMedia.bodyImageUrl}
                         fallbackAlt={title}

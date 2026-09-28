@@ -23,6 +23,7 @@ import {
     bodyPart,
     closureParts,
     stageLayout,
+    type GlassFrame,
     type KitLike,
     type StageContext,
     type StageView,
@@ -52,6 +53,8 @@ export type PdpStageProps = {
     onViewChange: (view: StageView) => void;
     kit: KitLike | null;
     context: StageContext;
+    /** The kit's frame on this page (`glassFrame`): every SKU of the glass shares it in CAP ON and SIDECAR. */
+    glassFrame?: GlassFrame | null;
     fallbackImageUrls: string[];
     fallbackBodyImageUrl: string | null;
     fallbackAlt: string;
@@ -90,10 +93,10 @@ export function useIsPdpMobile(): boolean {
 }
 
 export default function PdpStage({
-    pickLine, view, availableViews, onViewChange, kit, context, fallbackImageUrls, fallbackBodyImageUrl, fallbackAlt, callouts,
+    pickLine, view, availableViews, onViewChange, kit, context, glassFrame = null, fallbackImageUrls, fallbackBodyImageUrl, fallbackAlt, callouts,
     caps, activeCapId, onCapPick, glasses, onGlassPick, activeCapName, activeGlassLabel,
 }: PdpStageProps) {
-    const layout = useMemo(() => stageLayout(kit, view, context), [kit, view, context]);
+    const layout = useMemo(() => stageLayout(kit, view, context, glassFrame ?? {}), [kit, view, context, glassFrame]);
     const railRef = useRef<HTMLDivElement>(null);
     // Register masters are served display-sized through the optimizer; when that
     // proxy cannot reach the Blob host (a local network quirk) the master is shown.

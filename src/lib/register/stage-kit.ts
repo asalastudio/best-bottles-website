@@ -16,6 +16,8 @@
 import { compose, footY, frameFromDatum, type Frame, type LayerGeometry, type PlateGeometry } from "./compose";
 import { stackedExplodeOffsets } from "@/lib/products/exploded-stack";
 import { ELEGANT_PHOTO_BODIES } from "./elegant-photo-bodies";
+import { detachedOvercap } from "./detached-overcaps";
+import type { DetachedLook } from "@/lib/products/kit-frame";
 import { CYLINDER9_PILOT_LAYER_HASHES } from "./cylinder9-pilot-layers";
 
 export type StageDatum = { axisX: number; seatY: number; baselineY: number };
@@ -100,6 +102,8 @@ export type RegisterKitPart = {
     componentId: string | null;
     /** The views this part is drawn in; absent = every view. */
     views?: StageViewName[];
+    /** How the part looks off the bottle, when that differs (src/lib/register/detached-overcaps.ts). */
+    detached?: DetachedLook | null;
 };
 
 export type RegisterKitMeta = {
@@ -235,6 +239,11 @@ export function kitFromRegister(
             return true;
         });
     }
+    // A clear overcap parked or lifted off the bottle is drawn as the empty cover, not the capped photograph's cover over its pump.
+    parts = parts.map((part) => {
+        const detached = detachedOvercap(part);
+        return detached ? { ...part, detached } : part;
+    });
     // EXPLODED offsets are computed over the parts of each view separately, so a seated insert and its full plug never stack against each other.
     const lifts = stackedExplodeOffsets(parts.filter((part) => !part.views || part.views.includes("exploded")));
     const explodable = parts.filter((part) => !part.views || part.views.includes("exploded"));

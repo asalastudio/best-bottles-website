@@ -2,6 +2,30 @@ type PartBounds = { bounds: { left: number; top: number; right: number; bottom: 
 
 export const REMOVABLE_KIT_SLOTS: ReadonlySet<string> = new Set(["cap", "overcap"]);
 
+/**
+ * How a part looks off the bottle, when that differs from how it looks seated:
+ * a clear overcap cut from the capped photograph shows the pump through it, so
+ * parked beside the glass it would read as a second pump. Its own image, box
+ * and bounds on the canvas; only its size matters once it is parked or lifted.
+ */
+export type DetachedLook = {
+    image: { url: string; width: number; height: number };
+    box: { x: number; y: number; width: number; height: number };
+    bounds: { left: number; top: number; right: number; bottom: number };
+};
+
+/** A part as it is drawn off the bottle (parked beside the glass, or lifted in EXPLODED). */
+export function offBottle<T extends {
+    image: { url: string; width: number; height: number };
+    box?: DetachedLook["box"] | null;
+    bounds: DetachedLook["bounds"];
+    detached?: DetachedLook | null;
+}>(part: T): T {
+    if (!part.detached) return part;
+    const { image, box, bounds } = part.detached;
+    return { ...part, image: { ...part.image, ...image }, box, bounds };
+}
+
 const DETACHED_CAP_GAP_PX = 24;
 
 /** Legacy kits sorted by photographed bounds can put an overcap below its pump.
