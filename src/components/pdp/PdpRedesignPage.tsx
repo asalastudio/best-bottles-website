@@ -33,6 +33,7 @@ import type { PlateRef } from "@/lib/paper-doll/plates";
 import type { ItemDescription } from "@/lib/products/item-description/resolve";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { pdpFallbackMedia } from "@/lib/products/pdp-redesign/fallback-media";
+import { SITE_NAME } from "@/lib/seo";
 import { formatVolumeQtyRange, resolveQuotedUnitPrice } from "@/lib/volumePricing";
 import {
     buildYourBottleHref,
@@ -46,7 +47,9 @@ import {
     glassOptions,
     glassShortLabel,
     lineLabel,
+    optionLabel,
     pageTitle,
+    variantTitle,
     pickLine,
     pickQuery,
     resolveVariant,
@@ -94,6 +97,11 @@ const ADDED_FLASH_MS = 1800;
 function kitFor(kits: Record<string, KitLike | null>, variant: { websiteSku?: string | null; graceSku?: string | null } | null | undefined): KitLike | null {
     if (!variant) return null;
     return (variant.websiteSku ? kits[variant.websiteSku] : null) ?? (variant.graceSku ? kits[variant.graceSku] : null) ?? null;
+}
+
+/** The browser tab follows the pick; the server titled the page for the SKU it rendered. */
+function renameTab(text: string): void {
+    document.title = text;
 }
 
 export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, fitmentKits = [], stageEnvelopes, platesBySku, descriptions, collection, familyHref }: PdpRedesignPayload) {
@@ -335,6 +343,8 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     const capName = activeCap?.name ?? null;
     const description = selected?.websiteSku ? descriptions[selected.websiteSku] ?? null : null;
     const title = pageTitle(group, fitment);
+    // The headline names the SKU in the buy box: a new cap, roller or finish changes it with the pick.
+    const option = optionLabel(rollerOption, fitment, capName);
     const capacityLabel = `${group.capacityMl != null ? `${group.capacityMl} ml` : group.capacity ?? ""} ${group.family ?? ""}`.trim();
     const bodyKit = kit ?? kitFor(kitsBySku, { websiteSku: group.primaryWebsiteSku, graceSku: group.primaryGraceSku });
     const capKits = caps.map((cap) => kitFor(kitsBySku, cap.variants[0])).filter((entry): entry is KitLike => Boolean(entry));
@@ -348,6 +358,14 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     const swatchStyle = getMaterialSwatchStyle(activeCap?.swatchName ?? capName, {});
     const selectionName = `${glassLabel(group.color)} glass${capName ? ` · ${capName} cap` : fitment ? ` · ${fitment}` : ""}`;
     const stickyLine = `${qty.toLocaleString("en-US")} × ${unitPrice != null ? formatPrice(unitPrice) : "—"} · ${lineLabel(glassName, rollerOption, rollerOption ? null : fitment, capName)}`;
+
+    // The server titles the tab for the SKU it rendered; a pick after that renames the tab with the headline.
+    const firstSku = useRef(selected?.websiteSku ?? null);
+    useEffect(() => {
+        if (!selected?.websiteSku || selected.websiteSku === firstSku.current) return;
+        firstSku.current = null;
+        renameTab(`${variantTitle(title, option)} | ${SITE_NAME}`);
+    }, [selected?.websiteSku, title, option]);
 
     const onAskGrace = useCallback(() => {
         analytics.graceOpenedFromShopping({ source: "pdp", ...(group.family ? { family: group.family } : {}) });
@@ -375,7 +393,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                         glassFrame={frame}
                         fallbackImageUrls={fallbackMedia.images}
                         fallbackBodyImageUrl={fallbackMedia.bodyImageUrl}
-                        fallbackAlt={title}
+                        fallbackAlt={variantTitle(title, option)}
                         callouts={buildCallouts(selected, capName)}
                         caps={caps.map((cap) => ({
                             id: cap.id, name: cap.name, swatchName: cap.swatchName,
@@ -398,7 +416,14 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                     <div className={styles.buy}>
                         <div className={styles.titleBlock}>
                             <span className={styles.eyebrow} data-testid="pdp-eyebrow">{capacityEyebrow(group)}</span>
-                            <h1 className={styles.title} data-testid="pdp-title">{title}</h1>
+                            <h1 className={styles.title} data-testid="pdp-title">
+                                {title}
+                                {option ? (
+                                    <span className={styles.titleOption} data-testid="pdp-title-option">
+                                        <span className={styles.visuallyHidden}> - </span>{option}
+                                    </span>
+                                ) : null}
+                            </h1>
                             <span className={styles.status} data-testid="pdp-status">
                                 <span className={styles.statusDot} data-out={status.inStock ? "false" : "true"} aria-hidden />
                                 {status.text}
