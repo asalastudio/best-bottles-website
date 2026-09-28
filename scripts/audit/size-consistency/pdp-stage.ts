@@ -19,8 +19,17 @@ import path from "node:path";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../convex/_generated/api";
 import { loadRegisterKits } from "@/lib/register/load";
-import { stageLayout, type KitLike } from "@/lib/products/pdp-redesign/stage";
+import { glassStageEnvelopes } from "@/lib/register/stage-envelopes";
+import { effectiveView, glassFrame, stageLayout, type FramedKit, type KitLike } from "@/lib/products/pdp-redesign/stage";
+import { pdpStageFrame, type StageBounds } from "@/lib/products/pdp-stage-frame";
 import { pdpFallbackMedia } from "@/lib/products/pdp-redesign/fallback-media";
+
+/**
+ * AUDIT_MODE=before reproduces the product page before #301 (2026-09-27): each SKU framed to its own parts
+ * (dip tubes unclipped, the seated overcap reserved beside the glass), capacity locks on every kit. The default
+ * mirrors the page since #301: one frame per glass and frame key (glassFrame), no locks on register kits.
+ */
+const BEFORE = process.env.AUDIT_MODE === "before";
 
 const OUT = path.resolve("output/size-audit");
 const URL = process.env.AUDIT_CONVEX_URL;
@@ -72,6 +81,25 @@ async function main() {
         }
     }
 
+    // 2b. One frame per glass: each glass's envelopes from the catalogue and the register, as the page loads them.
+    const envelopesByGlass = new Map<string, Record<string, StageBounds>>();
+    if (!BEFORE) {
+        for (const p of products) {
+            const group = p.productGroupId ? groups.get(p.productGroupId) : undefined;
+            if (!group || !kitFor(kitsBySku, p)?.parts || !(kitFor(kitsBySku, p) as KitLike & { register?: unknown }).register) continue;
+            const glass = { family: group.family, capacityMl: group.capacityMl ?? null };
+            const key = JSON.stringify(glass);
+            if (!envelopesByGlass.has(key)) envelopesByGlass.set(key, await glassStageEnvelopes(convex, glass));
+        }
+    }
+    const groupKits = new Map<string, FramedKit[]>();
+    for (const p of products) {
+        if (!p.productGroupId) continue;
+        const list = groupKits.get(p.productGroupId) ?? [];
+        list.push({ kit: kitFor(kitsBySku, p), applicator: p.applicator });
+        groupKits.set(p.productGroupId, list);
+    }
+
     // 3. Plates, as loadPlatesForVariants reads them.
     const plates: Record<string, { image: string; imageCapOff: string | null }> = {};
     const skus = [...new Set(products.flatMap((p) => [p.graceSku, p.websiteSku]).filter(Boolean))];
@@ -94,7 +122,17 @@ async function main() {
             itemName: p.itemName ?? null, heightWithoutCap: p.heightWithoutCap ?? null, diameter: p.diameter ?? null,
             sellable: p.shopifySellable !== false,
         };
-        const layout = stageLayout(kit, "sidecar", context);
+        const glassKey = group ? JSON.stringify({ family: group.family, capacityMl: group.capacityMl ?? null }) : "";
+        const frame = BEFORE ? {} : glassFrame({ kit, applicator: p.applicator }, (p.productGroupId && groupKits.get(p.productGroupId)) || [{ kit, applicator: p.applicator }], envelopesByGlass.get(glassKey));
+        const layout = stageLayout(kit, "sidecar", context, frame);
+        if (kit && layout && BEFORE) {
+            const view = effectiveView("sidecar", kit, context);
+            const sorted = kit.parts.filter((part) => !part.views || part.views.includes(view)).map((part) => ({ ...part, detached: null }));
+            layout.frame = pdpStageFrame({
+                family: context.family, capacityMl: context.capacityMl, color: context.color,
+                view: "capOff", parts: sorted, width: kit.canvas.width, height: kit.canvas.height,
+            });
+        }
         if (kit && layout) {
             const body = kit.parts.find((part) => part.slot === "body");
             const placed = layout.parts.find((part) => part.slot === "body");

@@ -19,3 +19,8 @@ Re-run (read-only against production):
 
 `output/size-audit/geometry.json` holds the desktop stage sizes measured on production at 1440 x 900
 (product page stage 672 x 540, builder preview 410 x 472, builder glass step 410 x 312).
+
+Since step 1 (#301), `pdp-stage.ts` frames the way the page does: one frame per glass and frame key, read
+from the catalogue and the register (`glassStageEnvelopes`, `glassFrame`), with no capacity locks on
+register kits. `AUDIT_MODE=before` reproduces the page as it was when this audit was taken, so a before/after
+pair can be run on the same data. Step 1's results are in `step-1/`.
