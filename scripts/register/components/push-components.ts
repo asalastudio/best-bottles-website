@@ -6,6 +6,7 @@
  *   npx tsx scripts/register/components/push-components.ts --neck 18-415 --apply              # upload + write as "measured"
  *   npx tsx scripts/register/components/push-components.ts --neck 18-415 --apply --approve    # approvable ones as "approved"
  *   ... --except CMP-A,CMP-B                                                                   # hold back named components
+ *   ... --only CMP-A,CMP-B                                                                     # load only the named components
  *   ... --deployment prod                                                   # production: REGISTER_PROD_WRITE_TOKEN (scripts/register/deployment.ts)
  *
  * Reads data/register/components/<neck>-measurements.json and output/register-components/<neck>/
@@ -30,6 +31,7 @@ const neck = arg("neck", "");
 const apply = argv.includes("--apply");
 const approve = argv.includes("--approve");
 const except = new Set(arg("except", "").split(",").map((s) => s.trim()).filter(Boolean));
+const only = new Set(arg("only", "").split(",").map((s) => s.trim()).filter(Boolean));
 
 type Layer = { slot: string; layerName: string; file: string; width: number; height: number; sha256: string; pxPerMm: number; anchor: { x: number; y: number }; z: string; explodeIndex: number; usage?: "seated" | "exploded"; solidBottomY?: number };
 type Measurements = { neck: string; components: { componentId: string; type: string; layers: Layer[]; checks: Record<string, unknown> }[] };
@@ -47,9 +49,12 @@ async function main() {
         const { url: blobUrl } = store ? await store.putObject(key, bytes, "image/png") : { url: `(dry run) ${key}` };
         return { url: blobUrl, key, sha256, bytes: bytes.length, width, height };
     };
+    const unknown = [...only].filter((id) => !m.components.some((c) => c.componentId === id));
+    if (unknown.length) throw new Error(`--only names components ${neck}-measurements.json does not hold: ${unknown.join(", ")}`);
     const summary = { approved: 0, measured: 0, skipped: 0 };
     const components = [];
     for (const c of m.components) {
+        if (only.size && !only.has(c.componentId)) continue;
         if (!c.layers.length) { summary.skipped++; console.log(`component ${c.componentId}: no layers (${String(c.checks.status ?? "")}), skipped`); continue; }
         const status = approve && c.checks.approvable === true && !except.has(c.componentId) ? "approved" : "measured";
         const layers = [];
@@ -64,9 +69,21 @@ async function main() {
         console.log(`component ${c.componentId}: ${layers.length} layer(s) [${layers.map((l) => l.slot).join(", ")}] ${status}${c.checks.registrationIoU != null ? ` (IoU ${c.checks.registrationIoU})` : ""}`);
     }
     console.log("summary:", JSON.stringify(summary));
-    if (!apply) { console.log("\ndry run: nothing uploaded or written. Add --apply."); return; }
+    // The measurements file holds a component's generic layers. Layers another lane drew for one body (a `bodyId`,
+    // e.g. the Blender Empire caps) are kept as they are: a write that replaced the whole list would erase them.
     const client = new ConvexHttpClient(url);
-    for (const c of components) console.log(c.componentId, JSON.stringify(await client.mutation(api.register.setComponentLayers, { writeToken: token, ...c })));
+    const deployed = new Map((await client.query(api.register.componentsForNeck, { neck })).map((c) => [c.componentId, c]));
+    const bodyLayers = (componentId: string) =>
+        (deployed.get(componentId)?.layers ?? []).filter((layer) => Boolean((layer as { bodyId?: string | null }).bodyId));
+    for (const c of components) {
+        const kept = bodyLayers(c.componentId);
+        if (kept.length) console.log(`component ${c.componentId}: keeps ${kept.length} body layer(s) (${[...new Set(kept.map((l) => (l as { bodyId?: string }).bodyId))].join(", ")})`);
+    }
+    if (!apply) { console.log("\ndry run: nothing uploaded or written. Add --apply."); return; }
+    for (const c of components) {
+        const layers = [...c.layers, ...bodyLayers(c.componentId)] as typeof c.layers;
+        console.log(c.componentId, JSON.stringify(await client.mutation(api.register.setComponentLayers, { writeToken: token, componentId: c.componentId, layers })));
+    }
     console.log("counts:", JSON.stringify(await client.query(api.register.counts, {})));
 }
 

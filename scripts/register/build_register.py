@@ -99,6 +99,10 @@ LIBRARY_PARTS = [
     # cut from the Tola master photo by scripts/register/bodies/build_bodies.py (plug_layers).
     {"componentId": "LIB-14.3mm-Plug", "type": "plug-applicator", "neck": "14.3mm", "rollerMaterial": "", "psdStem": None, "itemName": "Plug, 14.3 mm (Tola)",
      "evidence": "library part, not a product (Jordan 2026-09-25); cut from the Tola master photo, GB3TPlGl.psd", "source": "Tola master photo (build_bodies.py plug_layers)"},
+    # The short shiny black cap (2026-09-28): the cap of every short shiny black reducer SKU (`GBDiva46RdcrShnBlk`).
+    # The catalogue sells only the tall one as a part (CP18-415ShnBlkTall); the master library holds both.
+    {"componentId": "LIB-18-415-ShnBlkCap", "type": "cap", "neck": "18-415", "rollerMaterial": "", "psdStem": "CP18-415ShnBlk", "itemName": "Shiny black cap (short), 18-415",
+     "evidence": "library part, not a product: the cap of the short shiny black reducer SKUs; the catalogue sells only the tall one (CP18-415ShnBlkTall)"},
 ]
 
 # Own-part builds: which component(s) a sellable assembly is physically made of. Rules are validated neck by
@@ -128,7 +132,11 @@ SKU_TAIL_18415 = [  # (type token in the assembly SKU, component types it names,
     ("Rdcr", ("cap", "faux-leather-cap"), "cap"),
 ]
 COMPONENT_STEM_18415 = ("CP18-415AnSpTsl", "CP18-415AnSp", "AnSpTsl18-415", "AnSp18-415", "Spry18-415", "Ltn18-415", "Drp18-415", "CP18-415")
-CODE_ALIASES_18415 = {"clovrcap": "mtslcl", "wht": "wh", "mts": "mtsl", "ivylthr": "livylthr", "pnklthr": "lpnklthr"}  # the ivory and pink leather caps are filed as CP18-415LIvyLthr / LPnkLthr
+CODE_ALIASES_18415 = {"clovrcap": "mtslcl", "clrovrcap": "mtslcl", "wht": "wh", "mts": "mtsl", "ivylthr": "livylthr", "pnklthr": "lpnklthr"}  # the ivory and pink leather caps are filed as CP18-415LIvyLthr / LPnkLthr
+# Lotion SKUs that spell only the pump's finish and its clear overcap, with no `Ltn` token (2026-09-28):
+# `LBSlm100MtSlClOvrCap` is the matte silver pump under the clear overcap. White pumps under a clear overcap
+# (`LBElg100WhtClOvrCp`, the Sleek's rectangular `LBSlk30WhtRectClOverCap`) have no component yet.
+CLEAR_OVERCAP_TAIL = re.compile(r"(?P<pump>MtSl|Wht)(?P<rect>Rect)?Cl(?:Ovr|Over)Ca?p$")
 
 
 def code_key(code: str) -> str:
@@ -147,7 +155,7 @@ def own_build_18415(assembly: dict, by_neck_type: dict) -> tuple[str, str, str]:
         pool = [c for t in ctypes for c in by_neck_type.get(("18-415", t), [])]
         matches = []
         for c in pool:
-            stem = c["websiteSku"] or ""
+            stem = c["websiteSku"] or c["psdStem"] or ""  # a library part is spelled by its master PSD stem
             for prefix in COMPONENT_STEM_18415:
                 if stem.startswith(prefix):
                     stem = stem[len(prefix):]
@@ -160,6 +168,14 @@ def own_build_18415(assembly: dict, by_neck_type: dict) -> tuple[str, str, str]:
         if len(matches) > 1:
             return "", "unresolved", f"SKU code '{code}' matches {len(matches)} components: " + ", ".join(c["componentId"] for c in matches)
         return "", "unresolved", f"no current 18-415 {'/'.join(ctypes)} carries the SKU code '{code}'"
+    overcap = CLEAR_OVERCAP_TAIL.search(sku)
+    if overcap and overcap["pump"] == "MtSl" and not overcap["rect"]:
+        pumps = [c for c in by_neck_type.get(("18-415", "lotion-pump"), []) if code_key((c["websiteSku"] or "").removeprefix("Ltn18-415")) == "mtslcl"]
+        if len(pumps) == 1:
+            return f"pump:{pumps[0]['componentId']}", "resolved", "own lotion-pump matched by the clear-overcap spelling (matte silver pump under the clear overcap)"
+    if overcap:
+        cover = "rectangular clear overcap" if overcap["rect"] else "clear overcap"
+        return "", "unresolved", f"no 18-415 component is the {'white' if overcap['pump'] == 'Wht' else 'matte silver'} lotion pump under the {cover} (a new part, cut from its bottle photos)"
     return "", "unresolved", f"website SKU '{sku}' names no 18-415 top (AnSpTsl, AnSp, Spry, Ltn, Drp, Rdcr)"
 
 
@@ -440,7 +456,8 @@ def main() -> int:
         write_snapshot(data, snapshot)
     rows = data["rows"]
     today = dt.date.today().isoformat()
-    export_note = f"convex:products (dev) {snapshot.name.removeprefix('convex-products-').removesuffix('.json.gz')}"
+    deployment = str(data.get("deployment") or "dev:helpful-elephant-638").split(":")[0]
+    export_note = f"convex:products ({deployment}) {snapshot.name.removeprefix('convex-products-').removesuffix('.json.gz')}"
 
     library_rows = json.loads((PAPER_DOLL / "component-library-inventory.json").read_text())["rows"]
     by_stem = {r["stem"]: r for r in library_rows}
@@ -485,6 +502,24 @@ def main() -> int:
         components.append(record)
         if record["graceSku"]:
             component_by_grace[record["graceSku"]] = record
+    # A component keeps its register id when the catalogue re-keys its graceSku: the approved layers in Convex
+    # (registerComponents) hang on the id, so a new id would leave every SKU drawing that part without an image.
+    # Same part = the same websiteSku and the same master PSD stem as a row of the register being replaced.
+    previous_path = REGISTER / "components.csv"
+    previous_ids: dict[tuple, str] = {}
+    if previous_path.exists():
+        for p in csv.DictReader(previous_path.open()):
+            if p.get("websiteSku") and p.get("componentId"):
+                previous_ids.setdefault((p["websiteSku"], p.get("psdStem") or ""), p["componentId"])
+    live_ids = {c["componentId"] for c in components}
+    carried_ids: list[tuple[str, str]] = []
+    for c in components:
+        old_id = previous_ids.get((c["websiteSku"], c["psdStem"]))
+        if old_id and old_id != c["componentId"] and old_id not in live_ids:
+            carried_ids.append((c["graceSku"], old_id))
+            live_ids.add(old_id)
+            c["componentId"] = old_id
+            c["typeEvidence"] = f"{c['typeEvidence']}; register id {old_id} kept (the catalogue now keys it {c['graceSku']})"
     for part in LIBRARY_PARTS:
         psd = by_stem.get(part["psdStem"]) if part["psdStem"] else None
         components.append({
@@ -566,7 +601,11 @@ def main() -> int:
         for c in ([] if isolated else listed):
             comp = component_by_grace.get(c)
             if comp:
-                (foreign if comp["neck"] and neck and comp["neck"] != neck else resolved).append(f"{c}@{comp['neck']}" if comp["neck"] and neck and comp["neck"] != neck else c)
+                # listed by catalogue graceSku, recorded by register id (the two differ where a re-keyed part kept its id)
+                if comp["neck"] and neck and comp["neck"] != neck:
+                    foreign.append(f"{comp['componentId']}@{comp['neck']}")
+                else:
+                    resolved.append(comp["componentId"])
             elif c in row_by_grace:
                 misfiled.append(f"{c} ({row_by_grace[c].get('category')})")
             elif not GRACE_SKU_RE.match(c):
@@ -700,14 +739,15 @@ def main() -> int:
         + ", ".join(f"{cls} {n}" for cls, n in sorted(ruled_by_class.items())) + ")"
         + (f"; {len(assumed)} bodies still in classes assumed from their category, not yet ruled: " + ", ".join(sorted({b['category'] for b in assumed})) if assumed else "; no body class is assumed — every non-glass category is ruled") + ".", ""]
     lines = [f"# Component register — Phase 1 reconciliation ({today})", "",
-             f"Source: Convex dev export ({len(rows)} rows, collected {str(data.get('collectedAt', ''))[:19]}Z), "
+             f"Source: Convex {deployment} export ({len(rows)} rows, collected {str(data.get('collectedAt', ''))[:19]}Z), "
              f"PSD library inventory ({len(library_rows)} PSDs), body-dims ({len(body_dims)} keys), 23 Sep review files ({len(review_items)} items). Read-only.", "",
              "## Totals", "",
              f"- Bodies: **{sum(1 for b in bodies if b['status'] == 'current')} current** ({sum(1 for b in bodies if b['status'] != 'current')} retired-only) across {len([n for n in all_necks if n])} neck groups",
              f"- Components: **{sum(1 for c in components if c['status'] == 'current')} current**, {sum(1 for c in components if c['status'] == 'retired')} retired, {sum(1 for c in components if c['status'] == 'quarantine')} quarantined; "
              f"**{sum(1 for c in components if c['psdStem'] and c['status'] == 'current')} current components have a library PSD** ({sum(1 for c in components if c['psdMatch'] == 'alias-map')} via alias-map, {sum(1 for c in components if c['psdMatch'] == 'case-insensitive')} case-insensitive)",
              "- Assemblies: " + ", ".join(f"**{n} {s}**" for s, n in sorted(status_counts.items(), key=lambda kv: -kv[1])),
-             f"- Quarantine rows: {len(quarantine)} (see quarantine.csv)", "",
+             f"- Quarantine rows: {len(quarantine)} (see quarantine.csv)",
+             f"- Register ids kept across catalogue re-keys: **{len(carried_ids)}** (the layers stay attached; see below)", "",
              *rulings_lines,
              "## Per neck", "",
              "| neck | bodies | glass variants | components | verified | candidate | quarantine | exception | retired |", "|---|---|---|---|---|---|---|---|---|"]
@@ -717,6 +757,11 @@ def main() -> int:
         na = Counter(a["status"] for a in assemblies if a["neck"] == neck)
         glass = sorted({g for b in nb for g in b["glassVariants"].split("; ") if g})
         lines.append(f"| {neck or '(none)'} | {len(nb)} | {len(glass)} | {len(nc)} | {na.get('verified', 0)} | {na.get('candidate', 0)} | {na.get('quarantine', 0)} | {na.get('exception', 0)} | {na.get('retired', 0)} |")
+    if carried_ids:
+        lines += ["", f"## Register ids kept across catalogue re-keys — {len(carried_ids)}", "",
+                  "The catalogue gave these parts new graceSkus; each is the same part (same websiteSku and master PSD stem), "
+                  "so it keeps its register id and the layers approved on it.", "", "| catalogue graceSku | register id kept |", "|---|---|"]
+        lines += [f"| {new_id} | {old_id} |" for new_id, old_id in carried_ids]
     lines += ["", "## Reconciliation against the 23 Sep matrices", ""]
     check = lambda text, ok: f"- {'✅' if ok else '⚠️'} {text}"
     lines.append("The matrices counted **Glass Bottle** records only; the register also carries atomizers, plastic and aluminium bottles and jars, so both counts are shown.")
