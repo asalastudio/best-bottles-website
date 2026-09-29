@@ -1,33 +1,32 @@
 # Product copy v2: generator report
 
-Generated 2026-09-28 23:25 from `data/register/source/convex-products-2026-09-25.json.gz` (dev:helpful-elephant-638, 2026-09-25T08:44:26.958Z).
+Generated 2026-09-29 21:58 from `data/register/source/convex-products-2026-09-29.json.gz` (prod:precise-raccoon-123, 2026-09-29T09:07:45.606Z).
 
-- **Products:** 2,368 (2,183 bottles and jars, 135 parts, 50 packaging items), in 370 titles (product groups share a title).
-- **Passing every check:** 2,326. **With an error:** 2. **Over a length target only:** 40.
-- **Skipped by the loader:** {'retired': 127}.
+- **Products:** 2,464 (2,273 bottles and jars, 141 parts, 50 packaging items), in 355 titles (product groups share a title).
+- **Passing every check:** 2,422. **With an error:** 2. **Over a length target only:** 40.
+- **Skipped by the loader:** {'retired': 2}.
 
 ## By dispense mode
 
 | Mode | Products | Title noun |
 |---|---:|---|
-| ROLL | 467 | Roll-On Bottle |
-| SPLASH | 346 | Pour Bottle with Reducer |
+| ROLL | 468 | Roll-On Bottle |
+| SPLASH | 347 | Pour Bottle with Reducer |
 | BULB | 266 | Vintage-Style Bulb Sprayer |
-| BULB_TASSEL | 230 | Vintage-Style Bulb Sprayer with Tassel |
-| PUMP_LOTION | 213 | Lotion Pump Bottle |
+| BULB_TASSEL | 239 | Vintage-Style Bulb Sprayer with Tassel |
+| PUMP_LOTION | 212 | Lotion Pump Bottle |
+| POUR | 200 | Pour Bottle |
 | PUMP_SPRAY | 183 | Perfume Spray Bottle |
-| MIST | 169 | Fine-Mist Spray Bottle |
-| PART | 135 | draft rules, by part or packaging kind |
-| POUR | 117 | Pour Bottle |
+| MIST | 170 | Fine-Mist Spray Bottle |
+| PART | 141 | draft rules, by part or packaging kind |
 | DROP | 81 | Dropper Bottle |
 | PACKAGING | 50 | draft rules, by part or packaging kind |
 | VIAL | 25 | Vial |
 | ATOMIZER | 23 | Travel Atomizer |
-| STOPPER | 19 | Bottle with Glass Stopper |
 | JAR | 18 | Cream Jar |
+| STOPPER | 17 | Bottle with Glass Stopper |
 | TREATMENT | 15 | Treatment Pump Bottle |
-| STOCK | 4 | Stock Bottle |
-| ALU_LOTION | 4 | Aluminum Lotion Pump Bottle |
+| STOCK | 6 | Stock Bottle |
 | ALU_SPRAY | 2 | Aluminum Spray Bottle |
 | DAB | 1 | Sample Vial with Glass Rod |
 

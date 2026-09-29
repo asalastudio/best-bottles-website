@@ -1,6 +1,13 @@
 # PDP item description template
 
-Status: **locked** · 2026-09-26. Best Bottles approved this format. **Amended 2026-09-28** (below).
+Status: **locked** · 2026-09-26. Best Bottles approved this format. **Amended 2026-09-28 and 2026-09-29** (below).
+
+**Amendments, 2026-09-29 (Best Bottles' answers).**
+- **Nothing ships fitted.** Rollers, sprayers, pumps, reducers and droppers ship unattached. The Included bullet ends "packed unattached", never "fitted".
+- **Travel caps** come in gold, silver and black. The copy names the colour when the bulb or its collar is gold, silver or black, and says "a travel cap" otherwise (the matching is an assumption to confirm).
+- **Liners.** The 15-415, 18-415 and Boston Round (18-400, 20-400) screw caps have a liner, like the 13-415 caps, and so does the aluminum screw top: "The liner seals the neck when capped" in Good to know.
+- **Atomizers** refill from the top.
+- **Dropper bulbs:** the material is not known, so the copy says "bulb", never "rubber bulb".
 
 **Amendments, 2026-09-28 (Best Bottles).**
 - **Care note.** The warning line ("Thin liquids only: perfume oil and undiluted essential oil clog the sprayer") moves out of the description. It becomes one Care note per product, at most one line, shown beside the Tech sheet in the brand's editorial serif so it reads as a note rather than sales copy. Sentence 2 then carries how the product works or another deciding fact.

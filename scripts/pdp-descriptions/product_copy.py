@@ -31,6 +31,10 @@ import family_guides as fg  # noqa: E402
 OUT_JSON = fg.ROOT / "data/descriptions/pdp/product-copy.json"
 OUT_REPORT = fg.ROOT / "data/descriptions/pdp/product-copy-report.md"
 CURRENT = fg.ROOT / "data/descriptions/pdp/item-descriptions.json"
+LATEST_EXPORT = max((fg.REGISTER / "source").glob("convex-products-*.json.gz"))  # dated names sort by date
+# Screw caps with a liner (Best Bottles: 13-415 on 2026-09-26; 15-415, 18-415 and the Boston Round necks on 2026-09-29)
+LINED_NECKS = {"13-415", "15-415", "18-415", "18-400", "20-400"}
+LINER_LINE = "The liner seals the neck when capped"
 
 TITLE_MAX, OPTION_MAX, VARIANT_MAX, META_MAX, ALT_MAX, BULLET_MAX = 60, 30, 90, 155, 125, 110
 THREAD = re.compile(r"^\d+-\d+$")
@@ -78,7 +82,7 @@ CARE = {
     "BULB": "To carry it, take off the bulb and fit the travel cap.",
     "BULB_TASSEL": "To carry it, take off the bulb and fit the travel cap.",
     "SPLASH": "Very thick oils drip slowly through the reducer.",
-    "DROP": "Store it upright; undiluted essential oil softens the rubber bulb over time.",
+    "DROP": "Store it upright; undiluted essential oil can soften the bulb over time.",
     "STOPPER": "The stopper seats by friction and is not leak-proof, so it is not a travel bottle.",
     "ATOMIZER": "Carry it capped and upright.",
 }
@@ -452,7 +456,7 @@ def sentences_after(item: fg.Item, body: fg.Body, mode: str, flags: set[str]) ->
     if mode == "JAR":
         return ["The wide mouth takes a spatula or a fingertip."]
     if mode == "ATOMIZER":
-        out = ["A metal shell covers the refillable glass vial inside."]
+        out = ["A metal shell covers the glass vial, which refills from the top."]
         if "engravable" in flags:
             out.append("The shell can be laser-engraved.")
         return out
@@ -462,34 +466,44 @@ def sentences_after(item: fg.Item, body: fg.Body, mode: str, flags: set[str]) ->
     return []
 
 
+def travel_cap(finish: str) -> str:
+    """Travel caps come in gold, silver and black (Best Bottles, 2026-09-29). The copy assumes the cap matches a
+    gold, silver or black bulb or collar; for other bulb colours it says only "a travel cap"."""
+    for colour in ("gold", "silver", "black"):
+        if colour in finish:
+            return f"a {colour} travel cap"
+    return "a travel cap"
+
+
 def included_of(item: fg.Item, mode: str, flags: set[str]) -> str:
     fin = finish_words(item)
     low = lower_first(fin)
     overcap = " and plastic overcap" if "overcap" in flags else ""
     if mode == "ROLL":
         ball = "Steel" if item.fitment == "Steel roller ball" else "Plastic"
-        return f"{ball} roller ball and {lower_first(item.finish)}, fitted"
+        return f"{ball} roller ball and {lower_first(item.finish)}, packed unattached"
     if mode in ("MIST", "PUMP_SPRAY", "ALU_SPRAY"):
-        return f"{upper_first(low)} fine-mist sprayer{overcap}, fitted"
+        return f"{upper_first(low)} fine-mist sprayer{overcap}, packed unattached"
     if mode in ("PUMP_LOTION", "TREATMENT", "ALU_LOTION"):
         pump = "treatment pump" if mode == "TREATMENT" else "lotion pump"
         if low == "clear overcap":
-            return f"{upper_first(pump)} and clear overcap, fitted"
-        return f"{upper_first(low)} {pump}{overcap}, fitted"
+            return f"{upper_first(pump)} and clear overcap, packed unattached"
+        return f"{upper_first(low)} {pump}{overcap}, packed unattached"
     if mode in ("BULB", "BULB_TASSEL"):
         tassel = "tassel" if mode == "BULB_TASSEL" else ""
+        cap = travel_cap(low)
         m = re.match(r"ivory, (\w+) collar", low)
         if m:
             extras = f" with {m.group(1)} collar" + (" and tassel" if tassel else "")
-            return f"Ivory bulb sprayer{extras}, packed unattached, and a travel cap"
-        return f"{upper_first(low)} bulb sprayer{' with tassel' if tassel else ''}, packed unattached, and a travel cap"
+            return f"Ivory bulb sprayer{extras}, packed unattached, and {cap}"
+        return f"{upper_first(low)} bulb sprayer{' with tassel' if tassel else ''}, packed unattached, and {cap}"
     if mode == "DROP" or (mode == "VIAL" and item.fitment == "Dropper"):
         m = re.match(r"(\w+) bulb, (.+) collar", low)
         if m:
-            return f"Glass pipette dropper, {m.group(1)} rubber bulb and {m.group(2)} collar"
-        return f"Glass pipette dropper, rubber bulb and {re.sub(r' collar$', '', low)} collar"
+            return f"Glass pipette dropper, {m.group(1)} bulb and {m.group(2)} collar, packed unattached"
+        return f"Glass pipette dropper, bulb and {re.sub(r' collar$', '', low)} collar, packed unattached"
     if mode == "SPLASH":
-        return f"Orifice reducer and {lower_first(item.finish)}, fitted"
+        return f"Orifice reducer and {lower_first(item.finish)}, packed unattached"
     if item.fitment == "Flip-top cap":
         return f"{upper_first(re.sub(r' cap$', '', low))} flip-top cap"
     if mode in ("POUR", "STOCK") or (mode == "VIAL" and item.fitment == "Screw cap"):
@@ -510,7 +524,7 @@ def included_of(item: fg.Item, mode: str, flags: set[str]) -> str:
     if mode == "JAR":
         return f"{upper_first(re.sub(r' lid$', '', low))} screw lid"
     if mode == "ATOMIZER":
-        return "Sprayer and cap, fitted"
+        return "Sprayer and cap"
     return upper_first(low)
 
 
@@ -568,8 +582,11 @@ def glass_of(item: fg.Item, body: fg.Body, row: dict, mode: str) -> tuple[str, s
 
 
 def good_to_know(item: fg.Item, body: fg.Body, mode: str, flags: set[str]) -> str:
-    if mode in ("POUR", "VIAL") and item.neck == "13-415" and item.fitment == "Screw cap" and body.klass != "plastic-bottle":
-        return "The liner seals the neck when capped"
+    if item.fitment == "Screw cap" and body.klass != "plastic-bottle" and (
+            item.neck in LINED_NECKS or (mode == "STOCK" and item.family == "Aluminum Bottle")):
+        return LINER_LINE
+    if mode == "SPLASH" and item.neck in LINED_NECKS:
+        return LINER_LINE
     if mode == "STOPPER" and "handmade" in flags:
         return "Made by hand; each stopper is ground to its own bottle"
     if "weighted" in flags:
@@ -792,7 +809,7 @@ def build_part(comp: dict, row: dict, families: dict[str, fg.Family]) -> Copy | 
         included = f"Short {fin.split(',')[0]} ribbed cap with a white liner"
     elif base == "Dropper":
         m = re.match(r"(\w+) bulb, (.+) collar", fin)
-        included = f"Glass pipette, {m.group(1)} rubber bulb and {m.group(2)} collar" if m else "Glass pipette, rubber bulb and collar"
+        included = f"Glass pipette, {m.group(1)} bulb and {m.group(2)} collar" if m else "Glass pipette, bulb and collar"
     elif base in ("Fine-mist sprayer", "Treatment pump", "Lotion pump"):
         overcap = " and clear overcap" if "overcap" in fin else ""
         included = f"{upper_first(re.sub(r', clear overcap$', '', fin))} {phrase} with its dip tube{overcap}"
@@ -804,8 +821,8 @@ def build_part(comp: dict, row: dict, families: dict[str, fg.Family]) -> Copy | 
         if len(f"Fits: {fits}") > BULLET_MAX:
             fits = f"{neck} neck; {bottle_phrase(pairs[:0] or pairs, word)}"
         bullets.append(["Fits", upper_first(fits) if not fits[0].isdigit() else fits])
-    if base == "Short ribbed cap" or (base in ("Short lined cap", "Tall lined cap") and neck == "13-415"):
-        bullets.append(["Good to know", "The liner seals the neck when capped"])
+    if base.endswith("cap") and neck in LINED_NECKS and base not in ("Roll-on cap", "Tall roll-on cap", "Cap with glass rod"):
+        bullets.append(["Good to know", LINER_LINE])
     noun = title_case(base)
     tech = {"neck": neck, "finish": finish, "soldAs": f"1, 12 or 144 {count}"
             + (f"; a case holds {int(row['caseQuantity']):,}" if row.get("caseQuantity") else "")}
@@ -1031,7 +1048,7 @@ def report(copies: list[Copy], meta: dict, export: Path) -> str:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--export", type=Path, default=fg.DEFAULT_EXPORT)
+    ap.add_argument("--export", type=Path, default=LATEST_EXPORT)
     ap.add_argument("--sku", action="append")
     ap.add_argument("--no-write", action="store_true")
     args = ap.parse_args()

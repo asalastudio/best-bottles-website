@@ -269,7 +269,7 @@ Each card sets what the "For ..." sentence may say (**Primary**, then **Also**),
 - **Also.** Facial oil, hair oil, carrier-oil blends (L5), perfume oil (L3).
 - **Excluded.** L1 and L2; L8 and L9.
 - **Deciding fact.**
-  1. Care. "Store it upright; undiluted essential oil softens the rubber bulb over time." The research signal on rubber bulbs is strong, so the line stays even though essential oils lead the uses.
+  1. Care. "Store it upright; undiluted essential oil can soften the bulb over time." The research signal on rubber bulbs is strong, so the line stays even though essential oils lead the uses. *2026-09-29: Best Bottles does not know the bulb material, so the copy never says "rubber".*
 - **Evidence.**
   - Undiluted essential oil turns rubber bulbs gooey (8+ threads, including a recent post with 2.4K upvotes).
   - A 30 ml amber Boston round with a dropper is the default beard-oil package (DIY segment, section 4).
@@ -427,7 +427,7 @@ On the 13-415 neck, used by the 5–30 ml bottles, every screw cap Best Bottles 
 
 - **Allowed line.** "The liner seals the neck." It may sit in Good to know for pour bottles on the 13-415 neck.
 - **Never.** "Leak-proof", "airtight" or "spill-proof", even for a lined cap.
-- **Other necks.** Boston rounds on 18-400 and 20-400, the 15-415 and 18-415 caps, and caps over a roller or reducer get no liner wording until Best Bottles confirms them.
+- **Other necks.** *Answered 2026-09-29:* the 15-415, 18-415 and Boston Round (18-400, 20-400) screw caps have a liner, and so does the aluminum screw top; they take the same line. Roll-on caps and the vial caps on 13-425 and 8-425 still get no liner wording.
 - **Never call the six short lined caps "metal caps".** That is Jordan's ruling, recorded in the same file.
 
 ---

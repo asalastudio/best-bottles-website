@@ -90,18 +90,14 @@ QUESTIONS = {
     "GBSpry3mlClBlk": "Sold complete on a 12 mm neck: is the sprayer crimped on or screwed on?",
     "GBCylAmb9SpryMattSl": "The overcap comes from the old product pages (29 of 31 of these sprayers): is it on every 17-415 sprayer?",
     "GBSpry1ozGl": "Fixed top and base in the register: is the sprayer crimped, so the bottle cannot be refilled?",
-    "Alu100mlSprayBlack": "Is the aluminum lined inside, and is there any liquid it should not hold?",
-    "Alu120mlLotionPumpBlack": "Same question as S15: lining, and liquids to avoid.",
-    "GBDiva46AnSpGl": "Which cap is the travel cap (an 18-415 lined cap?), and in which colour?",
-    "GBCrcl100AnSpGl": "Which cap is the travel cap, and in which colour?",
+    "Alu100mlSprayBlack": "Is there any liquid the aluminum should not hold?",
+    "Alu120mlLotionPumpBlack": "Same question as S15: liquids to avoid.",
     "GBDiva30RdcrShnGl": "What plastic is the orifice reducer?",
+    "GBRndFrst128AnSpTslRed": "Travel caps come in gold, silver and black. Which one comes with a red bulb (and with pink, lavender and white)?",
     "GBBstn15BlkDrp": "D6: all six dropper finishes are to be added to this bottle. Item numbers and prices are needed.",
-    "GBBstnAmb1ozWhtDropperShnGlTrim": "Is the dropper bulb natural rubber or another material?",
-    "GBCyl5GlMattSht": "The liner line is on every 13-415 cap. Confirm it for the short lined caps.",
-    "GBElg15MinarCu": "Is the minaret cap lined like the other 13-415 caps?",
+    "GBBstnAmb1ozWhtDropperShnGlTrim": "The bulb material is not known yet, so the copy says only \"bulb\". Can the supplier tell us?",
     "GB1mlVBlk": "Is the 1 ml closure a plug applicator only, or a plug under a cap?",
     "GBTrdpBlue": "The old pages say the apothecary stoppers are made by hand. Are the teardrop stoppers too?",
-    "GBAtom10Gl": "Does the atomizer fill from the top or from the bottom?",
     "CJClr15Pnk": "Is there a liner in the jar lid?",
     "PbNat16ozFlpWh": "Filed as a glass bottle in production; the correction file moves it to Plastic Bottle. What plastic is it?",
     "CPRoll13-415SlDot": "Is the roll-on cap sold for both the steel and the plastic roller?",
@@ -124,7 +120,8 @@ CHOICES = [
     ("Vials with a dropper", "Titled \"1 Dram (4 ml) Amber Vial with Dropper\"."),
     ("Refill line", "Sprayers on a screw neck: \"The sprayer turns a thin liquid into a fine, even mist, and unscrews so the bottle "
                     "can be refilled.\" Not on crimped or fixed tops."),
-    ("\"Fitted\"", "Included ends with \"fitted\" on rollers, sprayers, pumps, reducers and droppers. The bulb says \"packed unattached\"."),
+    ("Travel cap colour", "Gold, silver and black caps are matched to a gold, silver or black bulb or collar (\"a gold travel cap\"); "
+                          "other bulb colours say only \"a travel cap\"."),
     ("No Care note", "Pour bottles, vials, jars and stock bottles have no warning line."),
     ("Options over 30 characters", "40 labels such as \"Plastic Ball, Silver Dotted Cap\" (31). Keep them, or shorten \"Dotted\" to \"Dot\"."),
     ("Parts", "\"Roll-On Cap for 13-415 Necks\" with the finish as the option; droppers by bottle: \"Dropper for 30 ml (1 oz) Bottles, "
@@ -133,13 +130,11 @@ CHOICES = [
 ]
 
 # Questions that touch many pages (most were sent to Abbas on 28 Sep).
-OPEN_QUESTIONS = [
-    ("Shipping", "Do rollers, sprayers, pumps, reducers and droppers ship fitted to the bottle? The copy says \"fitted\"."),
-    ("Travel cap", "Which cap is packed with each bulb sprayer, and in which colour?"),
-    ("Dropper bulb", "Natural rubber, or another material? The Care note names rubber."),
-    ("Plastics", "What plastic are the roller housings and the orifice reducers?"),
-    ("Atomizers", "Do they fill from the top or from the bottom?"),
-    ("Aluminum", "Is it lined inside? Which liquids should it not hold?"),
+OPEN_QUESTIONS = [  # answered 29 Sep: shipping (unattached), travel cap colours, atomizer fill, cap liners
+    ("Dropper bulb", "What is the bulb made of? The copy says only \"bulb\" until we know."),
+    ("Travel cap colour", "Which travel cap comes with red, pink, lavender and white bulbs? Does a bulb sprayer sold alone come with one?"),
+    ("Plastics", "What plastic are the roller housings, the orifice reducers and the plastic flip-top bottles?"),
+    ("Aluminum", "Is there any liquid the aluminum bottles should not hold?"),
     ("18-415 droppers", "Which bottles is each 18-415 dropper's stem cut for?"),
     ("22-400 and 24-400 caps", "No bottle in the catalogue uses these necks. Which bottles are they for?"),
     ("Data to correct", "Three plastic flip-top bottles filed as glass; the 4 oz flip-top recorded as 114 ml; "
@@ -251,7 +246,8 @@ def thumb(sku: str, path: Path | None) -> str:
 
 
 def main() -> None:
-    families, meta = fg.load(fg.DEFAULT_EXPORT)
+    export = max((fg.REGISTER / "source").glob("convex-products-*.json.gz"))  # as scripts/pdp-descriptions/product_copy.py
+    families, meta = fg.load(export)
     items = {i.sku: (i, f) for f in families.values() for i in f.items}
     components = {r["websiteSku"]: r for r in csv.DictReader(open(fg.REGISTER / "components.csv"))}
     packaging = {r["websiteSku"]: r for r in meta["packaging"] if r.get("websiteSku")}
@@ -340,7 +336,8 @@ def main() -> None:
 </section>
 <section>
   <p class=kicker>Before the samples</p><h1 class=p>Open questions for Best Bottles</h1>
-  <p class=intro>Until these are answered the copy says only what is known. Most were sent to Abbas on 28 September.</p>
+  <p class=intro>Until these are answered the copy says only what is known. Answered on 29 September and already in the copy:
+  nothing ships fitted, travel cap colours, atomizers refill from the top, and liners on the 15-415, 18-415 and Boston Round caps.</p>
   <table class=list><thead><tr><th>No.</th><th>Topic</th><th>Question</th></tr></thead><tbody>{question_rows}</tbody></table>
   <p class=intro style="margin-top:.16in">Generated from <span class=mono>{fg.esc(source.get("export", ""))}</span>
   ({fg.esc(source.get("deployment") or "")}). The final run reads production.</p>
