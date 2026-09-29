@@ -1,6 +1,6 @@
 # Product copy strategy: titles, descriptions and all product wording
 
-Status: **locked 2026-09-26** (Best Bottles approved sections 1–9 and decisions 1, 2, 4 and 5). The ounce rule in 2.1 is a recommendation still awaiting sign-off; the Faire "Made in" value is under investigation (7.4).
+Status: **locked 2026-09-26** (Best Bottles approved sections 1–9); section 10 lists every decision and its status. The ounce rule in 2.1 was approved on 2026-09-28; the Faire "Made in" value is still under confirmation (7.4, decision 4).
 
 **Companion files in this folder:**
 
@@ -19,7 +19,7 @@ Status: **locked 2026-09-26** (Best Bottles approved sections 1–9 and decision
 2. **Title formula: `{Capacity} {Glass} {Family} {Type}`.** For example, "9 ml Amber Cylinder Roll-On Bottle".
    - Capacity comes first, as it does with nearly every supplier.
    - There is no brand, no pack count and no promotional word.
-   - Titles are 60 characters or less, which is Faire's hard limit. All 2,113 bottles fit. The longest, "100 ml Frosted Elegant Vintage Bulb Spray Bottle with Tassel", is exactly 60.
+   - Titles are 60 characters or less, which is Faire's hard limit. Against the 29 Sep production export every title fits; the longest, "100 ml Clear Cylinder Vintage-Style Bulb Sprayer with Tassel", is exactly 60, and the nine 100 ml frosted Elegant tassel titles are shortened by hand (decision 2).
 3. **Variant name: `{Title} - {Variant label}`.** For example, "9 ml Amber Cylinder Roll-On Bottle - Steel Ball, White Cap".
 4. **Item description: the locked format.** Two or three sentences, then Included, Fits and Glass, plus Good to know when there is an extra verified fact. See `TEMPLATE.md`.
 5. **The Tech Sheet carries the specs; the buy box carries commercial facts.** Price tiers, case pack, minimums and lead times never appear in titles, descriptions or meta text. Google, Faire, Amazon and Etsy all require this.
@@ -187,7 +187,7 @@ A single module, `src/lib/products/naming.ts`, builds every name from the Convex
 
 | SKU | Headline today | Meta name today | New core title |
 |---|---|---|---|
-| `GBCrcl100AnSpBlk` | 100 ml Clear Circle Spray Bottle | 100 ml Clear Circle Vintage-Style Bulb Sprayer Bottle - Black | 100 ml Clear Circle Vintage Bulb Spray Bottle |
+| `GBCrcl100AnSpBlk` | 100 ml Clear Circle Spray Bottle | 100 ml Clear Circle Vintage-Style Bulb Sprayer Bottle - Black | 100 ml Clear Circle Vintage-Style Bulb Sprayer |
 | `GBCrcl100RdcrPnkLthr` | 100 ml Clear Circle Splash-On Bottle | 100 ml Clear Circle Reducer Bottle - Pink Leather Cap | 100 ml Clear Circle Pour Bottle with Reducer |
 | `GBCylAmb9SpryBlk` | 9 ml Amber Cylinder Spray Bottle | 9 ml Amber Cylinder Perfume Spray Bottle - Black | 9 ml Amber Cylinder Fine-Mist Spray Bottle |
 | `GBBstnAmb1ozBlkCapSht` | 30 ml Amber Boston Round Bottle | (varies) | 30 ml (1 oz) Amber Boston Round Pour Bottle |

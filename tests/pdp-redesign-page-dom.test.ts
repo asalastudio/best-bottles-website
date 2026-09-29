@@ -151,7 +151,8 @@ describe("redesigned product page", () => {
         expect(text('[data-testid="pdp-title"]')).toBe("9 ml Cobalt Blue Cylinder Roll-On Bottle - Plastic Ball, Black with Dots Cap");
         expect(text('[data-testid="pdp-title-option"]')).toBe(" - Plastic Ball, Black with Dots Cap");
         expect(text('[data-testid="pdp-pick-line"]')).toBe("COBALT · PLASTIC ROLLER · BLACK WITH DOTS");
-        expect(text('[data-testid="pdp-item-name"]')).toBe("GBCylBlu9RollBlkDot");
+        expect(text('[data-testid="pdp-item-number"]')).toBe("GBCylBlu9RollBlkDot");
+        expect(container.querySelector('[data-testid="pdp-item-number"]')?.previousElementSibling?.textContent).toBe("Item number");
         expect(text('[data-testid="pdp-item-description"]')).toBe("Plastic roller copy.");
         expect(container.querySelector('[data-testid="pdp-item-bullets"]')).toBeNull();
         expect(container.querySelector('[data-testid="pdp-care-note"]')).toBeNull();
@@ -167,14 +168,14 @@ describe("redesigned product page", () => {
         await mount();
         await click('[data-testid="pdp-roller-toggle"] [data-roller="metal"]');
         expect(container.querySelector('[data-testid="pdp-stage"]')?.getAttribute("data-view")).toBe("exploded");
-        expect(text('[data-testid="pdp-item-name"]')).toBe("GBCylBlu9MtlRollBlkDot");
+        expect(text('[data-testid="pdp-item-number"]')).toBe("GBCylBlu9MtlRollBlkDot");
         expect(text('[data-testid="pdp-item-description"]')).toBe("Steel roller copy.");
         expect(container.querySelector('[data-testid="pdp-callouts"]')?.getAttribute("data-on")).toBe("true");
         expect(container.querySelectorAll('[data-testid="pdp-callouts"] [data-callout]').length).toBe(4);
         await click('[data-testid="pdp-cap-rail"] [data-cap-id="matte-copper"]');
         expect(container.querySelector('[data-testid="pdp-stage"]')?.getAttribute("data-view")).toBe("exploded");
         expect(text('[data-testid="pdp-pick-line"]')).toBe("COBALT · METAL ROLLER · MATTE COPPER");
-        expect(text('[data-testid="pdp-item-name"]')).toBe("GBCylBlu9MtlRollMattCu");
+        expect(text('[data-testid="pdp-item-number"]')).toBe("GBCylBlu9MtlRollMattCu");
         // The headline follows the pick, as the buy box does; this SKU has product copy v2, which names it
         expect(text('[data-testid="pdp-title"]')).toBe("9 ml Cobalt Blue Cylinder Roll-On Bottle (copy v2) - Metal Ball, Matte Copper Cap");
         expect(document.title).toBe("9 ml Cobalt Blue Cylinder Roll-On Bottle (copy v2) - Metal Ball, Matte Copper Cap | Best Bottles");
@@ -187,7 +188,7 @@ describe("redesigned product page", () => {
         expect(window.location.search).toBe("?roller=metal&cap=matte-copper");
         // matte copper is not sold on the plastic roller: switching back lands on the first plastic cap
         await click('[data-testid="pdp-roller-toggle"] [data-roller="plastic"]');
-        expect(text('[data-testid="pdp-item-name"]')).toBe("GBCylBlu9RollBlkDot");
+        expect(text('[data-testid="pdp-item-number"]')).toBe("GBCylBlu9RollBlkDot");
     });
 
     it("appends cart lines that the In this order panel lists with the minimum meter", async () => {

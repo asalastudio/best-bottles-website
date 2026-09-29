@@ -469,7 +469,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
 
                         <PdpProductInfo
                             itemType={description?.itemType ?? null}
-                            itemName={selected?.websiteSku ?? selected?.graceSku ?? null}
+                            itemNumber={selected?.websiteSku ?? selected?.graceSku ?? null}
                             description={description?.description ?? null}
                             bullets={copy?.bullets ?? null}
                             care={copy?.care || null}

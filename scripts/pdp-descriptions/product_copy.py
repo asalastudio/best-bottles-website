@@ -1,13 +1,14 @@
 """Product copy v2: the title, option label, description, bullets, Care note and item-type line for every product.
 
-    python3 scripts/pdp-descriptions/product_copy.py                       # the 25 Sep development export
+    python3 scripts/pdp-descriptions/product_copy.py                       # the latest data/register/source export
     python3 scripts/pdp-descriptions/product_copy.py --export data/descriptions/pdp/catalog-facts.json
     python3 scripts/pdp-descriptions/product_copy.py --sku GBCylAmb9MtlRollBlkDot
 
-Writes data/descriptions/pdp/product-copy.json and product-copy-report.md. Nothing is written to Convex, Shopify
-or the site: the site keeps reading item-descriptions.json until the samples are approved and this file is wired in.
+Writes data/descriptions/pdp/product-copy.json (the full draft, every product, for the sample review),
+product-copy.site.json (the products that pass every check; the product page reads it through
+src/lib/products/item-description/product-copy.ts) and product-copy-report.md. Nothing is written to Convex or Shopify.
 
-The rules are the ones in docs/specs/pdp-item-descriptions: the locked format and its 28 Sep amendments
+The rules are the ones in docs/specs/pdp-item-descriptions: the locked format and its 28 and 29 Sep amendments
 (TEMPLATE.md), the mode cards, size bands and claims list (RUBRIC.md), and the titles and vocabulary
 (COPY-STRATEGY.md §2 and §3). Bottles are read through scripts/print/family_guides.py, so the website copy and
 the printed catalogue use the same part and finish words.
@@ -33,7 +34,6 @@ OUT_REPORT = fg.ROOT / "data/descriptions/pdp/product-copy-report.md"
 OUT_SITE = fg.ROOT / "data/descriptions/pdp/product-copy.site.json"  # read by src/lib/products/item-description/product-copy.ts
 SITE_FIELDS = ("title", "option", "variantTitle", "sentences", "bullets", "care", "itemType", "metaDescription", "altText")
 CURRENT = fg.ROOT / "data/descriptions/pdp/item-descriptions.json"
-LATEST_EXPORT = max((fg.REGISTER / "source").glob("convex-products-*.json.gz"))  # dated names sort by date
 # Screw caps with a liner (Best Bottles: 13-415 on 2026-09-26; 15-415, 18-415 and the Boston Round necks on 2026-09-29)
 LINED_NECKS = {"13-415", "15-415", "18-415", "18-400", "20-400"}
 LINER_LINE = "The liner seals the neck when capped"
@@ -1012,7 +1012,7 @@ def report(copies: list[Copy], meta: dict, export: Path) -> str:
     lines = [
         "# Product copy v2: generator report",
         "",
-        f"Generated {dt.datetime.now():%Y-%m-%d %H:%M} from `{export.relative_to(fg.ROOT)}`"
+        f"Generated {dt.datetime.now():%Y-%m-%d %H:%M} from `{shown_path(export)}`"
         + (f" ({meta.get('deployment') or meta.get('source') or ''}, {meta.get('collectedAt') or meta.get('exportedAt') or ''})" if meta else "") + ".",
         "",
         f"- **Products:** {len(copies):,} ({sum(c.mode not in ('PART', 'PACKAGING') for c in copies):,} bottles and jars, "
@@ -1048,12 +1048,26 @@ def report(copies: list[Copy], meta: dict, export: Path) -> str:
     return "\n".join(lines)
 
 
+def latest_export() -> Path:
+    exports = sorted((fg.REGISTER / "source").glob("convex-products-*.json.gz"))  # dated names sort by date
+    if not exports:
+        raise SystemExit("no convex-products-*.json.gz in data/register/source; pass --export")
+    return exports[-1]
+
+
+def shown_path(p: Path) -> str:
+    """The export as recorded in the outputs: relative to the repository when it is inside it."""
+    p = p.resolve()
+    return str(p.relative_to(fg.ROOT)) if p.is_relative_to(fg.ROOT) else str(p)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--export", type=Path, default=LATEST_EXPORT)
+    ap.add_argument("--export", type=Path, help="default: the latest convex-products-*.json.gz in data/register/source")
     ap.add_argument("--sku", action="append")
     ap.add_argument("--no-write", action="store_true")
     args = ap.parse_args()
+    args.export = args.export or latest_export()
     copies, meta = generate(args.export)
     if args.sku:
         for c in copies:
@@ -1065,9 +1079,9 @@ def main() -> None:
         return
     out = {
         "generatedAt": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
-        "source": {"export": str(args.export.relative_to(fg.ROOT)), **{k: v for k, v in meta.items() if k != "skipped"}},
-        "rules": "docs/specs/pdp-item-descriptions (TEMPLATE.md amended 2026-09-28; RUBRIC.md; COPY-STRATEGY.md)",
-        "status": "draft for the sample review; not wired into the site",
+        "source": {"export": shown_path(args.export), **{k: v for k, v in meta.items() if k != "skipped"}},
+        "rules": "docs/specs/pdp-item-descriptions (TEMPLATE.md amended 2026-09-28 and 2026-09-29; RUBRIC.md; COPY-STRATEGY.md)",
+        "status": "full draft for the sample review; product-copy.site.json carries the products the site shows",
         "count": len(copies),
         "bySku": {c.websiteSku: asdict(c) for c in copies},
     }

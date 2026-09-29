@@ -12,6 +12,7 @@ Output: boston-round-proof.pdf next to this file, plus PNG previews in build/pre
 from __future__ import annotations
 
 import html
+import os
 import re
 import statistics
 import subprocess
@@ -28,7 +29,9 @@ CATALOG = ROOT / "public/images/catalog"
 BUILD = HERE / "build"
 IMAGES = BUILD / "images"
 FONTS = BUILD / "fonts"
-CHROME = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
+SANDBOX_CHROME = Path("/opt/pw-browsers/chromium-1194/chrome-linux/chrome")
+# PRINT_CHROME overrides; None lets Playwright use its own Chromium
+CHROME = os.environ.get("PRINT_CHROME") or (str(SANDBOX_CHROME) if SANDBOX_CHROME.exists() else None)
 BONE = (245, 243, 239)
 SITE = "https://www.bestbottles.com"
 PHONE = "1-800-936-3628"

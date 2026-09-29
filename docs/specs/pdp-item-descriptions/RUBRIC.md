@@ -22,7 +22,7 @@ Companion files in this folder:
 
 ## 1. The brief
 
-- **Length.** Two or three sentences, 25 to 55 words, with a hard cap of 60.
+- **Length.** Two or three sentences, 20 to 55 words (TEMPLATE.md), with a hard cap of 60.
 - **Job.** Tell a buyer what the item is, what they can put in it, and the one fact that decides whether it suits their use.
 - **Register.** Informative, not sales copy. There are no superlatives, no "elevate", and no calls to action.
 - **Source rule.** Every word traces to a Convex field, a verified legacy-page fact, or a rule in this rubric. When a field is empty, the sentence that needs it is dropped; nothing is guessed.
@@ -261,7 +261,7 @@ Each card sets what the "For ..." sentence may say (**Primary**, then **Also**),
   - Drip rate depends on how thick the oil is.
   - Thick oils barely come out (8 + 7 threads).
 
-#### DROP: glass pipette dropper with rubber bulb
+#### DROP: glass pipette dropper with a bulb
 
 - **Convex values.** `Dropper`.
 - **Catalogue.** 78 bottle SKUs; 20-400, 18-415, 18-400 and 13-425 necks; 4–128 ml. The default is Boston round, 30 ml, amber or cobalt.
@@ -294,7 +294,7 @@ Each card sets what the "For ..." sentence may say (**Primary**, then **Also**),
 - **Excluded.** Oils.
 - **Deciding fact.**
   1. The engraving flag. "The shell can be laser-engraved."
-  2. Refill method, once confirmed. Bottom-fill and top-fill behave differently.
+  2. Refill method. *Confirmed 2026-09-29: top-fill.* "A metal shell covers the glass vial, which refills from the top."
 - **Evidence.** Travel atomizers leak unless upright, and the refill method is the first question buyers ask (11 threads).
 
 #### STOPPER: ground-glass stopper

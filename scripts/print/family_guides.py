@@ -30,6 +30,7 @@ import gzip
 import hashlib
 import html
 import json
+import os
 import re
 import statistics
 import subprocess
@@ -49,7 +50,9 @@ DEFAULT_EXPORT = REGISTER / "source/convex-products-2026-09-25.json.gz"
 CATALOG_IMAGES = ROOT / "public/images/catalog"
 OUT = ROOT / "out/print"
 WORK = OUT / "work"
-CHROME = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
+SANDBOX_CHROME = Path("/opt/pw-browsers/chromium-1194/chrome-linux/chrome")
+# PRINT_CHROME overrides; None lets Playwright use its own Chromium
+CHROME = os.environ.get("PRINT_CHROME") or (str(SANDBOX_CHROME) if SANDBOX_CHROME.exists() else None)
 BONE = (245, 243, 239)
 SITE = "https://www.bestbottles.com"
 SITE_LABEL = "bestbottles.com"

@@ -277,8 +277,8 @@ def main() -> None:
     generated = json.load(open(COPY))["bySku"] if COPY.exists() else {}
     source = json.load(open(COPY)).get("source", {}) if COPY.exists() else {}
     absent = [s for _, s, *_ in SAMPLES + PARTS if s not in generated]
-    if absent:
-        print("no generated copy for:", ", ".join(absent))
+    if absent:  # a kit with a sample missing would still promise 54 pages
+        raise SystemExit("no generated copy for: " + ", ".join(absent) + ". Run scripts/pdp-descriptions/product_copy.py first.")
 
     mark = fg.wordmark_uri()
     cover = f"""

@@ -82,7 +82,8 @@ export function UnbrokenHyphens({ text }: { text: string }) {
 
 type ProductInfoProps = {
     itemType: string | null;
-    itemName: string | null;
+    /** The website SKU, which buyers quote, search and reorder by (the legacy site labelled it "Item Name"). */
+    itemNumber: string | null;
     description: string | null;
     /** [label, text]: Included, Fits, Glass or Material, Good to know (TEMPLATE.md). */
     bullets?: ReadonlyArray<readonly [string, string]> | null;
@@ -90,11 +91,11 @@ type ProductInfoProps = {
     care?: string | null;
 };
 
-export function PdpProductInfo({ itemType, itemName, description, bullets, care }: ProductInfoProps) {
+export function PdpProductInfo({ itemType, itemNumber, description, bullets, care }: ProductInfoProps) {
     return (
         <dl className={styles.info} data-testid="pdp-product-info">
             {itemType && (<><dt className={styles.infoKey}>Item type</dt><dd>{itemType}</dd></>)}
-            {itemName && (<><dt className={styles.infoKey}>Item name</dt><dd className={styles.infoMono} data-testid="pdp-item-name">{itemName}</dd></>)}
+            {itemNumber && (<><dt className={styles.infoKey}>Item number</dt><dd className={styles.infoMono} data-testid="pdp-item-number">{itemNumber}</dd></>)}
             {description && (
                 <>
                     <dt className={styles.infoKey}>Item description</dt>

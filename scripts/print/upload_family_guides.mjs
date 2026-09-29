@@ -8,6 +8,7 @@
 // Blob under content-addressed keys (a rebuilt PDF gets a new URL; nothing is overwritten), then rewrites
 // src/lib/products/family-guides.json so each family page links to its guide. Commit that JSON to publish the
 // links. The house edition (manifest "houseEdition"), with the team reference, is never uploaded.
+import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -26,6 +27,9 @@ const store = createBlobStore();
 
 async function publish(file, sha256, filename) {
     const bytes = await readFile(path.join(outDir, file));
+    // The key is content-addressed and an existing key is never overwritten, so a PDF rebuilt after the manifest must not reuse it.
+    const actual = createHash("sha256").update(bytes).digest("hex");
+    if (actual !== sha256) throw new Error(`${file}: SHA-256 ${actual} does not match the manifest (${sha256}); rebuild before uploading`);
     const key = `family-guides/${sha256.slice(0, 16)}/${filename}`;
     const { url, existed } = await store.putObject(key, bytes, "application/pdf");
     const check = await verifyPublicUrl(url, { expectedBytes: bytes.length, expectedContentType: "application/pdf" });

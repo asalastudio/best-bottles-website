@@ -1,13 +1,13 @@
 {
- "generatedAt": "2026-09-29T22:01:59+00:00",
+ "generatedAt": "2026-09-29T23:37:04+00:00",
  "source": {
   "export": "data/register/source/convex-products-2026-09-29.json.gz",
   "collectedAt": "2026-09-29T09:07:45.606Z",
   "deployment": "prod:precise-raccoon-123",
   "source": "https://precise-raccoon-123.convex.cloud"
  },
- "rules": "docs/specs/pdp-item-descriptions (TEMPLATE.md amended 2026-09-28; RUBRIC.md; COPY-STRATEGY.md)",
- "status": "draft for the sample review; not wired into the site",
+ "rules": "docs/specs/pdp-item-descriptions (TEMPLATE.md amended 2026-09-28 and 2026-09-29; RUBRIC.md; COPY-STRATEGY.md)",
+ "status": "full draft for the sample review; product-copy.site.json carries the products the site shows",
  "count": 2464,
  "bySku": {
   "LBCyl100LtnCu": {
