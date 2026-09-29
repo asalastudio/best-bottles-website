@@ -1,12 +1,12 @@
-# Component register — Phase 1 reconciliation (2026-09-28)
+# Component register — Phase 1 reconciliation (2026-09-29)
 
-Source: Convex prod export (2484 rows, collected 2026-09-28T23:11:06Z), PSD library inventory (393 PSDs), body-dims (146 keys), 23 Sep review files (49 items). Read-only.
+Source: Convex prod export (2485 rows, collected 2026-09-29T09:07:45Z), PSD library inventory (393 PSDs), body-dims (146 keys), 23 Sep review files (49 items). Read-only.
 
 ## Totals
 
-- Bodies: **94 current** (0 retired-only) across 32 neck groups
+- Bodies: **93 current** (0 retired-only) across 32 neck groups
 - Components: **149 current**, 0 retired, 15 quarantined; **129 current components have a library PSD** (16 via alias-map, 34 case-insensitive)
-- Assemblies: **2106 verified**, **109 candidate**, **55 quarantine**, **2 retired**, **2 exception**
+- Assemblies: **2107 verified**, **109 candidate**, **55 quarantine**, **2 retired**, **2 exception**
 - Quarantine rows: 120 (see quarantine.csv)
 - Register ids kept across catalogue re-keys: **24** (the layers stay attached; see below)
 
@@ -25,7 +25,7 @@ Source: Convex prod export (2484 rows, collected 2026-09-28T23:11:06Z), PSD libr
 | 10mm | 1 | 1 | 0 | 0 | 0 | 3 | 0 | 0 |
 | 11mm | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 0 |
 | 12mm | 2 | 1 | 0 | 0 | 4 | 0 | 0 | 0 |
-| 13-415 | 18 | 5 | 33 | 586 | 13 | 0 | 0 | 2 |
+| 13-415 | 17 | 5 | 33 | 586 | 13 | 0 | 0 | 2 |
 | 13-425 | 3 | 4 | 2 | 0 | 16 | 0 | 0 | 0 |
 | 14.3mm | 2 | 1 | 1 | 0 | 2 | 0 | 0 | 0 |
 | 15-415 | 2 | 2 | 7 | 21 | 0 | 0 | 0 | 0 |
@@ -34,7 +34,7 @@ Source: Convex prod export (2484 rows, collected 2026-09-28T23:11:06Z), PSD libr
 | 17.52mm | 2 | 1 | 0 | 0 | 0 | 2 | 0 | 0 |
 | 17mm | 1 | 4 | 0 | 0 | 11 | 0 | 0 | 0 |
 | 18-400 | 2 | 3 | 8 | 17 | 1 | 0 | 0 | 0 |
-| 18-415 | 23 | 2 | 49 | 1225 | 47 | 0 | 2 | 0 |
+| 18-415 | 23 | 2 | 49 | 1226 | 47 | 0 | 2 | 0 |
 | 18mm | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 0 |
 | 20-400 | 2 | 3 | 20 | 108 | 0 | 0 | 0 | 0 |
 | 20-410 | 5 | 1 | 0 | 0 | 7 | 0 | 0 | 0 |
@@ -90,11 +90,11 @@ The catalogue gave these parts new graceSkus; each is the same part (same websit
 
 The matrices counted **Glass Bottle** records only; the register also carries atomizers, plastic and aluminium bottles and jars, so both counts are shown.
 
-- ⚠️ 13-415: glass body formats 16 vs matrix 15 — plus 2 non-glass: atomizer-5ml-13-415 (Metal Atomizer), plastic-bottle-30ml-13-415 (Plastic Bottle)
+- ✅ 13-415: glass body formats 15 vs matrix 15 — plus 2 non-glass: atomizer-5ml-13-415 (Metal Atomizer), plastic-bottle-30ml-13-415 (Plastic Bottle)
 - ⚠️ 13-415: glass records 589 incl. 2 retired vs matrix 538 (31 retired); 12 non-glass rows besides
 - ✅ 17-415: assemblies 145 vs matrix 145 — by body: cylinder-9ml-17-415 145
 - ⚠️ 18-415: glass body formats 23 vs matrix 22
-- ⚠️ 18-415: current bottle rows 1274 vs matrix 1265
+- ⚠️ 18-415: current bottle rows 1275 vs matrix 1265
 - ⚠️ 18-415: component records 49 vs matrix 64
   - the 23rd 18-415 body is `cylinder-30ml-18-415`: the two fixed-spray exception SKUs, which the matrix keeps in its dashed card
 - ⚠️ 20-400: bottles 108 vs matrix 107; components 20 vs 20
@@ -154,16 +154,15 @@ Each sellable assembly names the parts it is physically made of (`buildParts`), 
 | circle-50ml-18-415 | 91 | 0 | 0 |
 | cylinder-100ml-18-415 | 43 | 0 | 0 |
 | cylinder-25ml-18-415 | 45 | 0 | 0 |
-| cylinder-5.5ml-13-415 | 1 | 0 | 0 |
 | cylinder-50ml-18-415 | 43 | 0 | 0 |
-| cylinder-5ml-13-415 | 70 | 0 | 0 |
+| cylinder-5ml-13-415 | 71 | 0 | 0 |
 | cylinder-9ml-13-415 | 72 | 0 | 0 |
 | cylinder-9ml-17-415 | 145 | 0 | 0 |
 | diamond-60ml-18-415 | 43 | 0 | 0 |
 | diva-100ml-18-415 | 43 | 0 | 0 |
 | diva-30ml-18-415 | 34 | 0 | 0 |
 | diva-46ml-18-415 | 92 | 0 | 10 |
-| elegant-100ml-18-415 | 85 | 0 | 2 |
+| elegant-100ml-18-415 | 86 | 0 | 2 |
 | elegant-15ml-13-415 | 70 | 0 | 4 |
 | elegant-60ml-18-415 | 92 | 0 | 2 |
 | empire-100ml-18-415 | 43 | 0 | 1 |

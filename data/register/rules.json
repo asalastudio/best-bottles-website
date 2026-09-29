@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-28",
-  "snapshot": "convex-products-2026-09-28.json.gz",
+  "generatedAt": "2026-09-29",
+  "snapshot": "convex-products-2026-09-29.json.gz",
   "keys": {
     "body": "bodyId = [shape-]profile-<capacity>ml-<neck>",
     "component": "graceSku",
@@ -107,7 +107,7 @@
     },
     "13-415": {
       "kind": "thread",
-      "bodies": 18,
+      "bodies": 17,
       "components": 33,
       "componentTypes": {
         "cap": 6,
@@ -310,14 +310,14 @@
         "Fine Mist Sprayer": 5,
         "Lotion Pump": 212,
         "Perfume Spray Pump": 168,
-        "Reducer": 346,
-        "Vintage Bulb Sprayer": 271,
-        "Vintage Bulb Sprayer with Tassel": 234
+        "Reducer": 347,
+        "Vintage Bulb Sprayer": 266,
+        "Vintage Bulb Sprayer with Tassel": 239
       },
       "assemblies": {
         "candidate": 47,
         "exception": 2,
-        "verified": 1225
+        "verified": 1226
       },
       "notes": [
         "Reducer is an insert beneath reducer-plus-cap assemblies, not a cap finish.",
