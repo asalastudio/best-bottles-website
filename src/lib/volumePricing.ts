@@ -112,6 +112,34 @@ export function resolveChargedUnitPrice(quantity: number, prices: TierPrices): n
     return resolveVolumeTierUnitPrice(quantity, prices);
 }
 
+export type CartVolumeNudge = { units: number; targetQty: number; price: number; savePct: number };
+
+/**
+ * The cart's "Add N more to unlock 12+ pricing at $X/ea" line. Shown only when checkout charges that tier: while
+ * Shopify bills the flat rate, adding units never reaches the promised price (the product page already stays
+ * quiet in that case and says volume rates are quoted).
+ */
+export function cartVolumeNudge(
+    quantity: number,
+    prices: TierPrices & { unitPrice?: number | null },
+    honored: boolean = VOLUME_TIERS_HONORED_AT_CHECKOUT,
+): CartVolumeNudge | null {
+    if (!honored) return null;
+    const p1 = prices.webPrice1pc ?? prices.unitPrice ?? 0;
+    const p10 = prices.webPrice10pc ?? null;
+    const p12 = prices.webPrice12pc ?? null;
+    if (p1 <= 0) return null;
+    if (p12 != null && quantity < 12 && (p10 == null || quantity >= 10)) {
+        const savePct = Math.round((1 - p12 / p1) * 100);
+        return savePct > 0 ? { units: 12 - quantity, targetQty: 12, price: p12, savePct } : null;
+    }
+    if (p10 != null && quantity < 10) {
+        const savePct = Math.round((1 - p10 / p1) * 100);
+        return savePct > 0 ? { units: 10 - quantity, targetQty: 10, price: p10, savePct } : null;
+    }
+    return null;
+}
+
 /**
  * The best per-unit price obtainable at this quantity *via a quote*, used for
  * display only. Never feed this into a Shopify checkout total.

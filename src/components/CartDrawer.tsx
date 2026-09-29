@@ -10,6 +10,7 @@ import { useCart } from "@/components/CartProvider";
 import { displayApplicatorName } from "@/lib/catalogFilters";
 import { useGrace } from "@/components/useGrace";
 import { ORDER_MINIMUM, checkoutMinimum, checkoutMinimumMessage, isCheckoutReady, splitCheckoutItems } from "@/lib/checkout";
+import { cartVolumeNudge } from "@/lib/volumePricing";
 
 interface CartDrawerProps {
     isOpen: boolean;
@@ -205,36 +206,8 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                                 </div>
                             ) : (
                                 items.map((item, i) => {
-                                    const p1 = item.webPrice1pc ?? item.unitPrice ?? 0;
-                                    const p10 = item.webPrice10pc ?? null;
-                                    const p12 = item.webPrice12pc ?? null;
-
-                                    let nudge = null;
-                                    if (p1 > 0) {
-                                        if (p12 != null && item.quantity < 12 && (p10 == null || item.quantity >= 10)) {
-                                            const unitsToNext = 12 - item.quantity;
-                                            const pct = Math.round((1 - p12 / p1) * 100);
-                                            if (pct > 0) {
-                                                nudge = {
-                                                    units: unitsToNext,
-                                                    targetQty: 12,
-                                                    price: p12,
-                                                    savePct: pct,
-                                                };
-                                            }
-                                        } else if (p10 != null && item.quantity < 10) {
-                                            const unitsToNext = 10 - item.quantity;
-                                            const pct = Math.round((1 - p10 / p1) * 100);
-                                            if (pct > 0) {
-                                                nudge = {
-                                                    units: unitsToNext,
-                                                    targetQty: 10,
-                                                    price: p10,
-                                                    savePct: pct,
-                                                };
-                                            }
-                                        }
-                                    }
+                                    // Only while checkout charges the tier: otherwise the promised price never arrives.
+                                    const nudge = cartVolumeNudge(item.quantity, item);
 
                                     return (
                                         <motion.div

@@ -70,6 +70,20 @@ describe("standard cart checkout actions", () => {
         }
     });
 
+    it("never promises a volume price the checkout does not charge", () => {
+        const item = cartState.items[0] as (typeof cartState.items)[number] & { webPrice1pc?: number; webPrice12pc?: number };
+        Object.assign(item, { quantity: 1, webPrice1pc: 2.5, webPrice12pc: 2 });
+        try {
+            const cartDrawer = renderToStaticMarkup(React.createElement(CartDrawer, { isOpen: true, onClose: vi.fn() }));
+            expect(cartDrawer).toContain("Test Bottle");
+            expect(cartDrawer).not.toContain("to unlock");
+            expect(cartDrawer).not.toMatch(/\+ Add \d+/);
+        } finally {
+            delete item.webPrice1pc;
+            delete item.webPrice12pc;
+        }
+    });
+
     it("keeps cart contents visible while redirecting to secure checkout", () => {
         cartState.isCheckingOut = true;
 
