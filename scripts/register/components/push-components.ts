@@ -33,7 +33,7 @@ const approve = argv.includes("--approve");
 const except = new Set(arg("except", "").split(",").map((s) => s.trim()).filter(Boolean));
 const only = new Set(arg("only", "").split(",").map((s) => s.trim()).filter(Boolean));
 
-type Layer = { slot: string; layerName: string; file: string; width: number; height: number; sha256: string; pxPerMm: number; anchor: { x: number; y: number }; z: string; explodeIndex: number; usage?: "seated" | "exploded"; solidBottomY?: number };
+type Layer = { slot: string; layerName: string; file: string; width: number; height: number; sha256: string; pxPerMm: number; anchor: { x: number; y: number }; z: string; explodeIndex: number; usage?: "seated" | "exploded"; solidBottomY?: number; glass?: string };
 type Measurements = { neck: string; components: { componentId: string; type: string; layers: Layer[]; checks: Record<string, unknown> }[] };
 
 async function main() {
@@ -62,7 +62,7 @@ async function main() {
             const image = await upload(`register/components/${neck}/${c.componentId}/${l.slot}-${l.sha256}.png`, l.file, l.width, l.height, l.sha256);
             layers.push({ slot: l.slot as never, layerName: l.layerName, z: l.z as "front" | "behind-body", image, image2x: null, pxPerMm: l.pxPerMm,
                 anchor: l.anchor, anchorStatus: status as "approved" | "measured", explodeIndex: l.explodeIndex, ...(l.usage ? { usage: l.usage } : {}),
-                ...(l.solidBottomY != null ? { solidBottomY: l.solidBottomY } : {}) });
+                ...(l.solidBottomY != null ? { solidBottomY: l.solidBottomY } : {}), ...(l.glass ? { glass: l.glass } : {}) });   // glass: drawn on that plate glass only
         }
         components.push({ componentId: c.componentId, layers });
         summary[status]++;

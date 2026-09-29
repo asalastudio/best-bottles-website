@@ -94,6 +94,10 @@ LIBRARY_PARTS = [
     {"componentId": "LIB-13-415-PlsticRollon", "type": "roller-insert", "neck": "13-415", "rollerMaterial": "plastic", "psdStem": "13-415PlsticRollon", "itemName": "Plastic roller-ball insert, 13-415"},
     {"componentId": "LIB-17-415-MtlRollon", "type": "roller-insert", "neck": "17-415", "rollerMaterial": "metal", "psdStem": None, "itemName": "Metal roller-ball insert, 17-415"},
     {"componentId": "LIB-17-415-PlsticRollon", "type": "roller-insert", "neck": "17-415", "rollerMaterial": "plastic", "psdStem": None, "itemName": "Plastic roller-ball insert, 17-415"},
+    # The Boston Round's roller inserts (2026-09-29): the master library holds no bare 20-400 roller, so both are cut from
+    # the uncapped Boston Round photos ("1.  20-400 (1 oz & 2 oz) … Boston Round"), as the 13-415 inserts were.
+    {"componentId": "LIB-20-400-MtlRollon", "type": "roller-insert", "neck": "20-400", "rollerMaterial": "metal", "psdStem": None, "itemName": "Metal roller-ball insert, 20-400"},
+    {"componentId": "LIB-20-400-PlsticRollon", "type": "roller-insert", "neck": "20-400", "rollerMaterial": "plastic", "psdStem": None, "itemName": "Plastic roller-ball insert, 20-400"},
     {"componentId": "LIB-18-415-Reducer", "type": "reducer", "neck": "18-415", "rollerMaterial": "", "psdStem": "415Reducer", "itemName": "Orifice reducer, 18-415"},
     # The Tola plug (Jordan 2026-09-25: the plug needs to be separate from the glass). No library PSD: its layers are
     # cut from the Tola master photo by scripts/register/bodies/build_bodies.py (plug_layers).
@@ -117,7 +121,7 @@ REVIEWED_13415_LINED = [
 
 # Own-part builds: which component(s) a sellable assembly is physically made of. Rules are validated neck by
 # neck; the pilot neck is 17-415 (2026-09-25). Other necks record why they are not built yet.
-BUILD_RULE_NECKS = {"13-415", "17-415", "18-415", "14.3mm"}
+BUILD_RULE_NECKS = {"13-415", "17-415", "18-415", "14.3mm", "20-400"}
 FITMENT_BUILD = {  # fitmentType -> (component type, kit slot, roller material)
     "Metal Roller Ball": ("roll-on-cap", "cap", "metal"),
     "Plastic Roller Ball": ("roll-on-cap", "cap", "plastic"),
@@ -251,6 +255,53 @@ def own_build_13415(assembly: dict, by_neck_type: dict, library_ids: set) -> tup
     return "", "unresolved", f"no current 13-415 cap carries the SKU code '{code}' (no component record and no master photo)"
 
 
+# 20-400, the Boston Round 30 and 60 mL (2026-09-29): the website SKU names every part after GBBstn[Amb|Blu]{1oz|2oz}.
+#   MtlRoll[on]<finish> / Roll[on]<finish>          -> the roller insert + the tall roll-on cap CPRoll20-400Tall<finish>
+#   {Blk|Wht}{Drp|Drpr|Dropper}[Shn{Gl|Sl}[Trim]]   -> the dropper of that bulb and collar: 76 mm stem on 1 oz, 90 mm on 2 oz
+#   BlkCapSht                                       -> the short black cap of that size
+# "Blk" and "Gl" alone name the shiny caps: the catalogue calls them Black and (Shiny) Gold, and the tall 20-400 roll-on cap
+# comes only matte or shiny.
+ROLLON_FINISH_20400 = {"mattblk": "MattBlk", "mattgl": "MattGl", "mattsl": "MattSl", "shnblk": "ShnBlk", "shblk": "ShnBlk", "blk": "ShnBlk",
+                       "shngl": "ShnGl", "shgl": "ShnGl", "gl": "ShnGl", "shnsl": "ShnSl"}
+DROPPER_STEM_20400 = {("Blk", ""): "BlckBulb", ("Blk", "Gl"): "ShnGlTrimBlkBulb", ("Blk", "Sl"): "ShnSlTrimBlkBulb",
+                      ("Wht", ""): "WhiteBulb", ("Wht", "Gl"): "lShnGlTrimWhiteBulb", ("Wht", "Sl"): "lShnSlTrimWhiteBulb"}  # "…1ozl…": the catalogue's own spelling
+
+
+def own_build_20400(assembly: dict, by_neck_type: dict, library_ids: set) -> tuple[str, str, str]:
+    """20-400 own parts from the Boston Round website SKU (see ROLLON_FINISH_20400 and DROPPER_STEM_20400)."""
+    sku = assembly["websiteSku"] or ""
+    m = re.match(r"^GBBstn(?:Amb|Blu)?(?P<size>[12])oz(?P<tail>.+)$", sku)
+    if not m:
+        return "", "unresolved", f"website SKU '{sku}' is not a Boston Round 20-400 SKU (GBBstn…1oz/2oz…)"
+    size, tail = f"{m.group('size')}oz", m.group("tail")
+    by_stem = {c["websiteSku"].lower(): c for (neck, _), cs in by_neck_type.items() if neck == "20-400" for c in cs if c["websiteSku"]}
+    roller = re.match(r"^(?P<metal>Mtl)?Roll(?:on)?(?P<finish>[A-Za-z]+)$", tail)
+    if roller:
+        finish = ROLLON_FINISH_20400.get(roller.group("finish").lower())
+        if not finish:
+            return "", "unresolved", f"'{roller.group('finish')}' is not a 20-400 roll-on cap finish (MattBlk, MattGl, MattSl, ShnBlk, ShnGl, ShnSl)"
+        cap = by_stem.get(f"cproll20-400tall{finish}".lower())
+        if not cap:
+            return "", "unresolved", f"no current 20-400 roll-on cap CPRoll20-400Tall{finish}"
+        insert = "LIB-20-400-MtlRollon" if roller.group("metal") else "LIB-20-400-PlsticRollon"
+        if insert not in library_ids:
+            return "", "partial", f"{cap['componentId']} found; {insert} is not registered"
+        return f"roller:{insert}; cap:{cap['componentId']}", "resolved", f"{'metal' if roller.group('metal') else 'plastic'} roller + tall {finish} roll-on cap from the SKU"
+    dropper = re.match(r"^(?P<bulb>Blk|Wht)(?:Dropper|Drpr|Drp)(?:Shn(?P<trim>Gl|Sl)(?:Trim)?)?$", tail)
+    if dropper:
+        stem = f"Drp20-400{size}{DROPPER_STEM_20400[(dropper.group('bulb'), dropper.group('trim') or '')]}"
+        part = by_stem.get(stem.lower())
+        if not part:
+            return "", "unresolved", f"no current 20-400 dropper {stem}"
+        return f"fitment:{part['componentId']}", "resolved", f"{size} dropper ({dropper.group('bulb')} bulb{', ' + dropper.group('trim') + ' collar' if dropper.group('trim') else ''}) from the SKU"
+    if tail == "BlkCapSht":
+        cap = by_stem.get(f"20-400cp{size}shortblk")
+        if not cap:
+            return "", "unresolved", f"no current 20-400 short black cap for {size}"
+        return f"cap:{cap['componentId']}", "resolved", f"short black {size} cap from the SKU"
+    return "", "unresolved", f"website SKU tail '{tail}' names no 20-400 part (roller, dropper or short cap)"
+
+
 def colour_key(text: str) -> tuple[str, bool]:
     """(base colour, dotted). 'Black with Dots' and 'Black Dotted' -> ('black', True); 'Matte Copper' -> ('matte copper', False)."""
     lowered = (text or "").lower()
@@ -273,6 +324,8 @@ def own_build(assembly: dict, body_class: str, by_neck_type: dict, library_ids: 
         return own_build_18415(assembly, by_neck_type)
     if neck == "13-415":
         return own_build_13415(assembly, by_neck_type, library_ids)
+    if neck == "20-400":
+        return own_build_20400(assembly, by_neck_type, library_ids)
     if neck == "14.3mm":
         # The Tola decorative bottles are sold with one closure, the plug photographed in their neck (Jordan 2026-09-25).
         if "LIB-14.3mm-Plug" not in library_ids:

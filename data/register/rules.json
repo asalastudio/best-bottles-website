@@ -349,11 +349,12 @@
     "20-400": {
       "kind": "thread",
       "bodies": 2,
-      "components": 20,
+      "components": 22,
       "componentTypes": {
         "cap": 2,
         "dropper": 12,
-        "roll-on-cap": 6
+        "roll-on-cap": 6,
+        "roller-insert": 2
       },
       "fitmentTypesObserved": {
         "": 6,

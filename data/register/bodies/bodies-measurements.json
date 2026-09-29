@@ -317,29 +317,28 @@
   "bodyId": "boston-round-15ml-18-400",
   "glass": "Amber",
   "status": "ok",
-  "file": "final-lit/boston-round-15ml-18-400/amber.png",
+  "file": "final-hero/boston-round-15ml-18-400/amber.png",
   "width": 992,
   "height": 2192,
-  "sha256": "5fc08a466b203d092f87aae86ddd74ea79cbccead54d3f6a05e2c20a2fc48172",
-  "pxPerMm": 27.9752,
+  "sha256": "213acfa97636e35aefd02f6be31d9e7492938238794b88ac98d5bf1534897065",
+  "pxPerMm": 27.9895,
   "anchors": {
-   "axisX": 493.5,
+   "axisX": 494.0,
    "seatY": 131,
-   "shoulderY": 691,
-   "baselineY": 2096,
-   "barrelAxisX": 495.5,
-   "bodyShoulderY": 722
+   "shoulderY": 720,
+   "baselineY": 2097,
+   "barrelAxisX": 495.5
   },
   "checks": {
-   "rawIoU": 0.9721,
-   "fittedIoU": 0.9862,
-   "edgeP95Px": 8.9,
-   "edgeMaxPx": 26.9,
-   "interiorHolePct": 0.12,
+   "rawIoU": 0.9694,
+   "fittedIoU": 0.983,
+   "edgeP95Px": 13.0,
+   "edgeMaxPx": 27.2,
+   "interiorHolePct": 0.18,
    "edges": "render outline",
-   "widthMm": 26.52,
+   "widthMm": 26.58,
    "referenceWidthMm": 25.0,
-   "widthErrorPct": 6.1
+   "widthErrorPct": 6.3
   },
   "measurements": {
    "heightBareMm": 68.0,
@@ -350,14 +349,14 @@
   },
   "scale": {
    "basis": "height",
-   "byHeight": 27.9752,
-   "byWidth": 29.68,
-   "gapPct": -5.7,
+   "byHeight": 27.9895,
+   "byWidth": 29.76,
+   "gapPct": -5.9,
    "flag": true
   },
   "source": {
    "masterGlass": "Clear",
-   "role": "reference glass (amber), lit",
+   "role": "shared amber: the approved 60 mL amber hero (GBBstnAmb2ozBlkCapSht) as the reference for every size",
    "cut": "PSD layer Layer 2",
    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/1. GBBstnAmb15mlBlkCapSht.psd",
    "derivedFrom": "1105f938d17004c0904ffcb86a1f13a6a3b7aaea1ae01877a8f71c5103d6880a",
@@ -367,10 +366,10 @@
   "render": {
    "model": "gpt-image-2.5-sunburst",
    "quality": "high",
-   "costUsd": 0.0575,
-   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour, material and lighting from the second image\n3. Enhance the quality",
+   "costUsd": 0.0576,
+   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour, material and lighting from the second image\n3. Enhance the quality\n4. Deep brown amber glass, the same colour and depth as the second image: not golden, not orange",
    "extra": null,
-   "pass": "lit"
+   "pass": "hero"
   }
  },
  {
@@ -378,29 +377,28 @@
   "bodyId": "boston-round-15ml-18-400",
   "glass": "Clear",
   "status": "ok",
-  "file": "final-lit/boston-round-15ml-18-400/clear.png",
+  "file": "final-hero/boston-round-15ml-18-400/clear.png",
   "width": 992,
   "height": 2192,
-  "sha256": "3aa0df926906ec37e4c8c618032a797fdb58f2d10934708845d7a61fb07bf399",
+  "sha256": "5519efaae3d84cfe0fb2f370cc6baff3606f7bd1dda86c6cddbe419d194eba7f",
   "pxPerMm": 27.9752,
   "anchors": {
-   "axisX": 490.5,
+   "axisX": 493.0,
    "seatY": 131,
-   "shoulderY": 632,
+   "shoulderY": 713,
    "baselineY": 2096,
-   "barrelAxisX": 495.0,
-   "bodyShoulderY": 711
+   "barrelAxisX": 495.5
   },
   "checks": {
-   "rawIoU": 0.9817,
-   "fittedIoU": 0.9851,
+   "rawIoU": 0.9805,
+   "fittedIoU": 0.9855,
    "edgeP95Px": 9.0,
-   "edgeMaxPx": 32.6,
-   "interiorHolePct": 0.04,
+   "edgeMaxPx": 30.4,
+   "interiorHolePct": 0.02,
    "edges": "render outline",
-   "widthMm": 26.52,
+   "widthMm": 26.49,
    "referenceWidthMm": 25.0,
-   "widthErrorPct": 6.1
+   "widthErrorPct": 6.0
   },
   "measurements": {
    "heightBareMm": 68.0,
@@ -412,13 +410,13 @@
   "scale": {
    "basis": "height",
    "byHeight": 27.9752,
-   "byWidth": 29.68,
-   "gapPct": -5.7,
+   "byWidth": 29.64,
+   "gapPct": -5.6,
    "flag": true
   },
   "source": {
    "masterGlass": "Clear",
-   "role": "reference glass (clear), lit",
+   "role": "shared clear: the 30 mL first-test render as the reference for every size",
    "cut": "PSD layer Layer 4",
    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/3. Clear Bottle (.5ounce:15ml) (capped)/Clear Dropper Bottler 1.5 ounce Alternating Caps (capped)/1. GBBstn15BlkCapSht.psd",
    "derivedFrom": "3fef727ee139ea73d5a5c7ecc0bcefd86817e1d093b9f758f826fc057fb256c6",
@@ -427,19 +425,19 @@
   "bakedOnBone": {
    "bone": "#F5F3EF",
    "paperWhite": [
-    252,
-    252,
-    252
+    254,
+    254,
+    254
    ],
    "neutral": true
   },
   "render": {
    "model": "gpt-image-2.5-sunburst",
    "quality": "high",
-   "costUsd": 0.0575,
-   "prompt": "1. Keep geometry locked to the first image\n2. Lighting and finish quality from the second image; the glass stays colourless and clear\n3. Enhance the quality",
+   "costUsd": 0.0576,
+   "prompt": "1. Keep geometry locked to the first image\n2. Lighting and finish quality from the second image; the glass stays colourless and clear\n3. Enhance the quality\n4. Crystal-clear colourless glass with the finish of the second image: no haze, no milky tint",
    "extra": null,
-   "pass": "lit"
+   "pass": "hero"
   }
  },
  {
@@ -447,29 +445,28 @@
   "bodyId": "boston-round-15ml-18-400",
   "glass": "Cobalt Blue",
   "status": "ok",
-  "file": "final-lit/boston-round-15ml-18-400/cobalt-blue.png",
+  "file": "final-hero/boston-round-15ml-18-400/cobalt-blue.png",
   "width": 992,
   "height": 2192,
-  "sha256": "3ea2751c45c446a6e62928556d39c09b7092f1fcbca8a9961ddbd9f2c19b50fd",
+  "sha256": "de927345e77767a032d7f643529c741160113aeedf785ee5513a81bb65acc4e5",
   "pxPerMm": 27.9752,
   "anchors": {
-   "axisX": 493.0,
-   "seatY": 130,
-   "shoulderY": 634,
-   "baselineY": 2095,
-   "barrelAxisX": 496.5,
-   "bodyShoulderY": 715
+   "axisX": 491.5,
+   "seatY": 131,
+   "shoulderY": 701,
+   "baselineY": 2096,
+   "barrelAxisX": 496.5
   },
   "checks": {
-   "rawIoU": 0.9799,
-   "fittedIoU": 0.9827,
-   "edgeP95Px": 11.0,
-   "edgeMaxPx": 32.9,
-   "interiorHolePct": 0.17,
+   "rawIoU": 0.9661,
+   "fittedIoU": 0.9806,
+   "edgeP95Px": 14.0,
+   "edgeMaxPx": 31.3,
+   "interiorHolePct": 0.19,
    "edges": "render outline",
-   "widthMm": 26.56,
+   "widthMm": 26.59,
    "referenceWidthMm": 25.0,
-   "widthErrorPct": 6.2
+   "widthErrorPct": 6.4
   },
   "measurements": {
    "heightBareMm": 68.0,
@@ -481,13 +478,13 @@
   "scale": {
    "basis": "height",
    "byHeight": 27.9752,
-   "byWidth": 29.72,
-   "gapPct": -5.9,
+   "byWidth": 29.76,
+   "gapPct": -6.0,
    "flag": true
   },
   "source": {
    "masterGlass": "Clear",
-   "role": "reference glass (cobalt-blue), lit",
+   "role": "shared cobalt via the 30 mL attempt-3 render (closer shape; the 60 mL reference narrowed the 15 mL neck)",
    "cut": "PSD layer Layer 2",
    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/1. GBBstnBlu15BlkCapSht.psd",
    "derivedFrom": "57a20ce7a7ed9724482375c0925bade791ac51f3a22c552b0621d90543c3d95d",
@@ -497,10 +494,10 @@
   "render": {
    "model": "gpt-image-2.5-sunburst",
    "quality": "high",
-   "costUsd": 0.0575,
-   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour, material and lighting from the second image\n3. Enhance the quality",
+   "costUsd": 0.0576,
+   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour, material and lighting from the second image\n3. Enhance the quality\n4. Deep cobalt blue glass, the same colour and depth as the second image: not bright, not electric",
    "extra": null,
-   "pass": "lit"
+   "pass": "hero"
   }
  },
  {
@@ -508,29 +505,28 @@
   "bodyId": "boston-round-30ml-20-400",
   "glass": "Amber",
   "status": "ok",
-  "file": "final-lit/boston-round-30ml-20-400/amber.png",
+  "file": "final-hero/boston-round-30ml-20-400/amber.png",
   "width": 1072,
   "height": 2192,
-  "sha256": "4a10b68b344f88f34b4091fb85244b67ecc69ca2dc2a3d2cd18ee99c380ec9c1",
+  "sha256": "8f2827198a660d2da500b04853a9310c33227a5888016d6b0ec1604bd86232e7",
   "pxPerMm": 24.2897,
   "anchors": {
-   "axisX": 529.2,
+   "axisX": 530.5,
    "seatY": 128,
-   "shoulderY": 614,
+   "shoulderY": 693,
    "baselineY": 2096,
-   "barrelAxisX": 536.0,
-   "bodyShoulderY": 696
+   "barrelAxisX": 536.5
   },
   "checks": {
-   "rawIoU": 0.9786,
-   "fittedIoU": 0.9851,
-   "edgeP95Px": 11.1,
-   "edgeMaxPx": 32.0,
-   "interiorHolePct": 0.15,
+   "rawIoU": 0.9711,
+   "fittedIoU": 0.9841,
+   "edgeP95Px": 11.0,
+   "edgeMaxPx": 30.9,
+   "interiorHolePct": 0.14,
    "edges": "render outline",
-   "widthMm": 34.09,
+   "widthMm": 34.01,
    "referenceWidthMm": 33.0,
-   "widthErrorPct": 3.3
+   "widthErrorPct": 3.0
   },
   "measurements": {
    "heightBareMm": 78.0,
@@ -542,13 +538,13 @@
   "scale": {
    "basis": "height",
    "byHeight": 24.2897,
-   "byWidth": 25.0909,
-   "gapPct": -3.2,
+   "byWidth": 25.0303,
+   "gapPct": -3.0,
    "flag": false
   },
   "source": {
    "masterGlass": "Clear",
-   "role": "reference glass (amber), lit",
+   "role": "shared amber: the approved 60 mL amber hero (GBBstnAmb2ozBlkCapSht) as the reference for every size",
    "cut": "PSD layer Layer 5",
    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/1. Amber Bottle (1oz)/Amber - Alternating Caps/1. GBBstnAmb1ozMtlRollonMattSl.psd",
    "derivedFrom": "f7c461e2f4d671a328d38e60a269f656f71c64369f89ba1ed95d059f50088636",
@@ -558,10 +554,10 @@
   "render": {
    "model": "gpt-image-2.5-sunburst",
    "quality": "high",
-   "costUsd": 0.0605,
-   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour, material and lighting from the second image\n3. Enhance the quality",
+   "costUsd": 0.0606,
+   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour, material and lighting from the second image\n3. Enhance the quality\n4. Deep brown amber glass, the same colour and depth as the second image: not golden, not orange",
    "extra": null,
-   "pass": "lit"
+   "pass": "hero"
   }
  },
  {
@@ -569,25 +565,92 @@
   "bodyId": "boston-round-30ml-20-400",
   "glass": "Clear",
   "status": "ok",
-  "file": "final-lit/boston-round-30ml-20-400/clear.png",
+  "file": "final-hero/boston-round-30ml-20-400/clear.png",
   "width": 1072,
   "height": 2192,
-  "sha256": "0a0b0816e6558b96a777d1f402974f252451a66510f045239be4079bcdab6389",
+  "sha256": "d808172772697322ff5b8034c56ec82f9facf99a11b5b1604fc51e906cfa020a",
   "pxPerMm": 24.2897,
   "anchors": {
    "axisX": 530.5,
    "seatY": 128,
-   "shoulderY": 614,
+   "shoulderY": 692,
    "baselineY": 2096,
-   "barrelAxisX": 536.0,
-   "bodyShoulderY": 697
+   "barrelAxisX": 536.5
   },
   "checks": {
-   "rawIoU": 0.9649,
-   "fittedIoU": 0.9847,
+   "rawIoU": 0.9722,
+   "fittedIoU": 0.9842,
    "edgeP95Px": 11.0,
-   "edgeMaxPx": 31.2,
-   "interiorHolePct": 0.07,
+   "edgeMaxPx": 35.0,
+   "interiorHolePct": 0.1,
+   "edges": "render outline",
+   "widthMm": 34.01,
+   "referenceWidthMm": 33.0,
+   "widthErrorPct": 3.0
+  },
+  "measurements": {
+   "heightBareMm": 78.0,
+   "diameterMm": 33.0,
+   "widthMm": 33.0,
+   "apparentHeightMm": 81.02,
+   "dimsConfidence": "low"
+  },
+  "scale": {
+   "basis": "height",
+   "byHeight": 24.2897,
+   "byWidth": 25.0303,
+   "gapPct": -3.0,
+   "flag": false
+  },
+  "source": {
+   "masterGlass": "Clear",
+   "role": "shared clear: the 30 mL first-test render as the reference for every size",
+   "cut": "PSD layer Layer 22 (override)",
+   "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/1. GBBstn1ozMtlRollonMattSl.psd",
+   "derivedFrom": "c47c1146007f7ff25d0c8e4741ca92fb1dc281a259c305ca0c727a455752a223",
+   "neckEdit": null
+  },
+  "bakedOnBone": {
+   "bone": "#F5F3EF",
+   "paperWhite": [
+    254,
+    254,
+    254
+   ],
+   "neutral": true
+  },
+  "render": {
+   "model": "gpt-image-2.5-sunburst",
+   "quality": "high",
+   "costUsd": 0.0606,
+   "prompt": "1. Keep geometry locked to the first image\n2. Lighting and finish quality from the second image; the glass stays colourless and clear\n3. Enhance the quality\n4. Crystal-clear colourless glass with the finish of the second image: no haze, no milky tint",
+   "extra": null,
+   "pass": "hero"
+  }
+ },
+ {
+  "plateKey": "boston-round-30ml-20-400|Cobalt Blue",
+  "bodyId": "boston-round-30ml-20-400",
+  "glass": "Cobalt Blue",
+  "status": "ok",
+  "file": "final-hero/boston-round-30ml-20-400/cobalt-blue.png",
+  "width": 1072,
+  "height": 2192,
+  "sha256": "45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d",
+  "pxPerMm": 24.2897,
+  "anchors": {
+   "axisX": 528.5,
+   "seatY": 128,
+   "shoulderY": 692,
+   "baselineY": 2096,
+   "barrelAxisX": 536.0
+  },
+  "checks": {
+   "rawIoU": 0.9764,
+   "fittedIoU": 0.9841,
+   "edgeP95Px": 9.8,
+   "edgeMaxPx": 32.6,
+   "interiorHolePct": 0.17,
    "edges": "render outline",
    "widthMm": 33.97,
    "referenceWidthMm": 33.0,
@@ -609,76 +672,7 @@
   },
   "source": {
    "masterGlass": "Clear",
-   "role": "reference glass (clear), lit",
-   "cut": "PSD layer Layer 22 (override)",
-   "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/1. GBBstn1ozMtlRollonMattSl.psd",
-   "derivedFrom": "c47c1146007f7ff25d0c8e4741ca92fb1dc281a259c305ca0c727a455752a223",
-   "neckEdit": null
-  },
-  "bakedOnBone": {
-   "bone": "#F5F3EF",
-   "paperWhite": [
-    252,
-    253,
-    253
-   ],
-   "neutral": true
-  },
-  "render": {
-   "model": "gpt-image-2.5-sunburst",
-   "quality": "high",
-   "costUsd": 0.0605,
-   "prompt": "1. Keep geometry locked to the first image\n2. Lighting and finish quality from the second image; the glass stays colourless and clear\n3. Enhance the quality",
-   "extra": null,
-   "pass": "lit"
-  }
- },
- {
-  "plateKey": "boston-round-30ml-20-400|Cobalt Blue",
-  "bodyId": "boston-round-30ml-20-400",
-  "glass": "Cobalt Blue",
-  "status": "ok",
-  "file": "final-lit/boston-round-30ml-20-400/cobalt-blue.png",
-  "width": 1072,
-  "height": 2192,
-  "sha256": "669b4257647401cc6f3dce67df49127b764daf4128a0df994b779e9e80b47e99",
-  "pxPerMm": 24.2897,
-  "anchors": {
-   "axisX": 527.5,
-   "seatY": 128,
-   "shoulderY": 614,
-   "baselineY": 2096,
-   "barrelAxisX": 536.5,
-   "bodyShoulderY": 692
-  },
-  "checks": {
-   "rawIoU": 0.9814,
-   "fittedIoU": 0.9853,
-   "edgeP95Px": 9.2,
-   "edgeMaxPx": 31.0,
-   "interiorHolePct": 0.16,
-   "edges": "render outline",
-   "widthMm": 34.05,
-   "referenceWidthMm": 33.0,
-   "widthErrorPct": 3.2
-  },
-  "measurements": {
-   "heightBareMm": 78.0,
-   "diameterMm": 33.0,
-   "widthMm": 33.0,
-   "apparentHeightMm": 81.02,
-   "dimsConfidence": "low"
-  },
-  "scale": {
-   "basis": "height",
-   "byHeight": 24.2897,
-   "byWidth": 25.0606,
-   "gapPct": -3.1,
-   "flag": false
-  },
-  "source": {
-   "masterGlass": "Clear",
-   "role": "reference glass (cobalt-blue), lit",
+   "role": "shared cobalt: the 60 mL attempt-2 render as the reference for every size",
    "cut": "PSD layer Layer 5",
    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/2. Cobalt Blue Bottle (1oz)/Cobalt Blue - Alternating Caps /1. GBBstnBlu1ozMtlRollonMattSl.psd",
    "derivedFrom": "5bbd4677068426a3ec7e040ffe29ee176261c82597cdee6b1e359f3f2c6a0e95",
@@ -688,10 +682,10 @@
   "render": {
    "model": "gpt-image-2.5-sunburst",
    "quality": "high",
-   "costUsd": 0.0605,
-   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour, material and lighting from the second image\n3. Enhance the quality",
+   "costUsd": 0.0606,
+   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour, material and lighting from the second image\n3. Enhance the quality\n4. Deep cobalt blue glass, the same colour and depth as the second image: not bright, not electric",
    "extra": null,
-   "pass": "lit"
+   "pass": "hero"
   }
  },
  {
@@ -699,29 +693,28 @@
   "bodyId": "boston-round-60ml-20-400",
   "glass": "Amber",
   "status": "ok",
-  "file": "final-lit/boston-round-60ml-20-400/amber.png",
+  "file": "final-hero/boston-round-60ml-20-400/amber.png",
   "width": 928,
   "height": 2192,
-  "sha256": "676d7a02c95060f0cfce0933be7f3f748c44cb6d8cc8b5eb17ec6143bfec48fc",
-  "pxPerMm": 17.7529,
+  "sha256": "8eef8c733ee54fc9c84f6d77ad6937e2d08fbcca0c006f30565aecb883e5cb85",
+  "pxPerMm": 17.7734,
   "anchors": {
-   "axisX": 463.5,
+   "axisX": 462.8,
    "seatY": 364,
-   "shoulderY": 719,
-   "baselineY": 2096,
-   "barrelAxisX": 463.0,
-   "bodyShoulderY": 833
+   "shoulderY": 839,
+   "baselineY": 2098,
+   "barrelAxisX": 463.0
   },
   "checks": {
-   "rawIoU": 0.9678,
-   "fittedIoU": 0.9847,
-   "edgeP95Px": 11.0,
-   "edgeMaxPx": 25.3,
+   "rawIoU": 0.9707,
+   "fittedIoU": 0.9843,
+   "edgeP95Px": 8.1,
+   "edgeMaxPx": 26.9,
    "interiorHolePct": 0.2,
    "edges": "render outline",
-   "widthMm": 39.15,
+   "widthMm": 38.99,
    "referenceWidthMm": 39.0,
-   "widthErrorPct": 0.4
+   "widthErrorPct": -0.0
   },
   "measurements": {
    "heightBareMm": 94.0,
@@ -732,14 +725,14 @@
   },
   "scale": {
    "basis": "height",
-   "byHeight": 17.7529,
-   "byWidth": 17.8205,
-   "gapPct": -0.4,
+   "byHeight": 17.7734,
+   "byWidth": 17.7692,
+   "gapPct": 0.0,
    "flag": false
   },
   "source": {
    "masterGlass": "Clear",
-   "role": "reference glass (amber), lit",
+   "role": "shared amber: the approved 60 mL amber hero (GBBstnAmb2ozBlkCapSht) as the reference for every size",
    "cut": "sibling: the Amber PSD holds only the cap; the body is flattened into the background",
    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/1. Amber Bottle (2 ounce:60 ml)/Amber - Alternating Caps/1. GBBstnAmb2ozMtlRollonMattSl.psd",
    "derivedFrom": null,
@@ -749,10 +742,10 @@
   "render": {
    "model": "gpt-image-2.5-sunburst",
    "quality": "high",
-   "costUsd": 0.0534,
-   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour, material and lighting from the second image\n3. Enhance the quality\n4. The mouth of the bottle is open and empty: no roller ball or plastic insert in the neck",
+   "costUsd": 0.0536,
+   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour, material and lighting from the second image\n3. Enhance the quality\n4. The mouth of the bottle is open and empty: no roller ball or plastic insert in the neck\n5. Deep brown amber glass, the same colour and depth as the second image: not golden, not orange",
    "extra": "4. The mouth of the bottle is open and empty: no roller ball or plastic insert in the neck",
-   "pass": "lit"
+   "pass": "hero"
   }
  },
  {
@@ -760,94 +753,24 @@
   "bodyId": "boston-round-60ml-20-400",
   "glass": "Clear",
   "status": "ok",
-  "file": "final-lit/boston-round-60ml-20-400/clear.png",
+  "file": "final-hero/boston-round-60ml-20-400/clear.png",
   "width": 928,
   "height": 2192,
-  "sha256": "53c63a8ce6dad42768ff4142250c6cf4241fabf5b94f5ae426dcb2adda234fc5",
+  "sha256": "f5843f966a54e2359dfff5e53b364a512d97b6951f6b895577d0959a725c55ee",
   "pxPerMm": 17.7631,
   "anchors": {
-   "axisX": 462.5,
+   "axisX": 463.5,
    "seatY": 364,
-   "shoulderY": 719,
+   "shoulderY": 836,
    "baselineY": 2097,
-   "barrelAxisX": 463.5,
-   "bodyShoulderY": 810
+   "barrelAxisX": 464.0
   },
   "checks": {
-   "rawIoU": 0.8881,
-   "fittedIoU": 0.9805,
-   "edgeP95Px": 14.1,
-   "edgeMaxPx": 25.6,
-   "interiorHolePct": 0.04,
-   "edges": "render outline",
-   "widthMm": 39.07,
-   "referenceWidthMm": 39.0,
-   "widthErrorPct": 0.2
-  },
-  "measurements": {
-   "heightBareMm": 94.0,
-   "diameterMm": 39.0,
-   "widthMm": 39.0,
-   "apparentHeightMm": 97.56,
-   "dimsConfidence": "high"
-  },
-  "scale": {
-   "basis": "height",
-   "byHeight": 17.7631,
-   "byWidth": 17.7949,
-   "gapPct": -0.2,
-   "flag": false
-  },
-  "source": {
-   "masterGlass": "Clear",
-   "role": "reference glass (clear), lit",
-   "cut": "PSD layer Layer 11 (override)",
-   "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/10. GBBstn2ozRollonMattGl.psd",
-   "derivedFrom": "139d1b0201168666064a793e5fafb93836efe5aa0360465fae0522421bcdaaee",
-   "neckEdit": "roller ball"
-  },
-  "bakedOnBone": {
-   "bone": "#F5F3EF",
-   "paperWhite": [
-    252,
-    252,
-    253
-   ],
-   "neutral": true
-  },
-  "render": {
-   "model": "gpt-image-2.5-sunburst",
-   "quality": "high",
-   "costUsd": 0.0535,
-   "prompt": "1. Keep geometry locked to the first image\n2. Lighting and finish quality from the second image; the glass stays colourless and clear\n3. Enhance the quality\n4. The mouth of the bottle is open and empty: no roller ball or plastic insert in the neck",
-   "extra": "4. The mouth of the bottle is open and empty: no roller ball or plastic insert in the neck",
-   "pass": "lit"
-  }
- },
- {
-  "plateKey": "boston-round-60ml-20-400|Cobalt Blue",
-  "bodyId": "boston-round-60ml-20-400",
-  "glass": "Cobalt Blue",
-  "status": "ok",
-  "file": "final-lit/boston-round-60ml-20-400/cobalt-blue.png",
-  "width": 928,
-  "height": 2192,
-  "sha256": "4b1fbd2aaba13c17f22b3c9eccd9f4fd4817b0f96831cb61a61f2892c410bb55",
-  "pxPerMm": 17.7631,
-  "anchors": {
-   "axisX": 463.0,
-   "seatY": 364,
-   "shoulderY": 719,
-   "baselineY": 2097,
-   "barrelAxisX": 463.0,
-   "bodyShoulderY": 801
-  },
-  "checks": {
-   "rawIoU": 0.8921,
-   "fittedIoU": 0.9753,
-   "edgeP95Px": 22.6,
+   "rawIoU": 0.9672,
+   "fittedIoU": 0.9844,
+   "edgeP95Px": 9.0,
    "edgeMaxPx": 26.9,
-   "interiorHolePct": 0.2,
+   "interiorHolePct": 0.18,
    "edges": "render outline",
    "widthMm": 39.01,
    "referenceWidthMm": 39.0,
@@ -869,7 +792,75 @@
   },
   "source": {
    "masterGlass": "Clear",
-   "role": "reference glass (cobalt-blue), lit",
+   "role": "shared clear: the 30 mL first-test render as the reference for every size",
+   "cut": "PSD layer Layer 11 (override)",
+   "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/10. GBBstn2ozRollonMattGl.psd",
+   "derivedFrom": "139d1b0201168666064a793e5fafb93836efe5aa0360465fae0522421bcdaaee",
+   "neckEdit": "roller ball"
+  },
+  "bakedOnBone": {
+   "bone": "#F5F3EF",
+   "paperWhite": [
+    254,
+    254,
+    254
+   ],
+   "neutral": true
+  },
+  "render": {
+   "model": "gpt-image-2.5-sunburst",
+   "quality": "high",
+   "costUsd": 0.0536,
+   "prompt": "1. Keep geometry locked to the first image\n2. Lighting and finish quality from the second image; the glass stays colourless and clear\n3. Enhance the quality\n4. The mouth of the bottle is open and empty: no roller ball or plastic insert in the neck\n5. Crystal-clear colourless glass with the finish of the second image: no haze, no milky tint",
+   "extra": "4. The mouth of the bottle is open and empty: no roller ball or plastic insert in the neck",
+   "pass": "hero"
+  }
+ },
+ {
+  "plateKey": "boston-round-60ml-20-400|Cobalt Blue",
+  "bodyId": "boston-round-60ml-20-400",
+  "glass": "Cobalt Blue",
+  "status": "ok",
+  "file": "final-hero/boston-round-60ml-20-400/cobalt-blue.png",
+  "width": 928,
+  "height": 2192,
+  "sha256": "9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3",
+  "pxPerMm": 17.7631,
+  "anchors": {
+   "axisX": 464.5,
+   "seatY": 365,
+   "shoulderY": 821,
+   "baselineY": 2098,
+   "barrelAxisX": 464.0
+  },
+  "checks": {
+   "rawIoU": 0.8836,
+   "fittedIoU": 0.982,
+   "edgeP95Px": 11.0,
+   "edgeMaxPx": 22.5,
+   "interiorHolePct": 0.24,
+   "edges": "render outline",
+   "widthMm": 39.01,
+   "referenceWidthMm": 39.0,
+   "widthErrorPct": 0.0
+  },
+  "measurements": {
+   "heightBareMm": 94.0,
+   "diameterMm": 39.0,
+   "widthMm": 39.0,
+   "apparentHeightMm": 97.56,
+   "dimsConfidence": "high"
+  },
+  "scale": {
+   "basis": "height",
+   "byHeight": 17.7631,
+   "byWidth": 17.7692,
+   "gapPct": -0.0,
+   "flag": false
+  },
+  "source": {
+   "masterGlass": "Clear",
+   "role": "shared cobalt: the 60 mL attempt-2 render as the reference for every size",
    "cut": "sibling: the Cobalt PSD holds only the cap; the body is flattened into the background",
    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/2. Cobalt Blue Bottle (2 ounce:60 ml)/Cobalt Blue 2oz - Alternating Caps  /1. GBBstnBlu2ozMtlRollonMattSl.psd",
    "derivedFrom": null,
@@ -879,10 +870,10 @@
   "render": {
    "model": "gpt-image-2.5-sunburst",
    "quality": "high",
-   "costUsd": 0.0534,
-   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour, material and lighting from the second image\n3. Enhance the quality\n4. The mouth of the bottle is open and empty: no roller ball or plastic insert in the neck",
+   "costUsd": 0.0536,
+   "prompt": "1. Keep geometry locked to the first image\n2. Glass colour, material and lighting from the second image\n3. Enhance the quality\n4. The mouth of the bottle is open and empty: no roller ball or plastic insert in the neck\n5. Deep cobalt blue glass, the same colour and depth as the second image: not bright, not electric",
    "extra": "4. The mouth of the bottle is open and empty: no roller ball or plastic insert in the neck",
-   "pass": "lit"
+   "pass": "hero"
   }
  },
  {

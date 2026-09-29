@@ -28,7 +28,7 @@ type Cut = {
         type: string;
         layers: Array<{
             slot: string; z: "behind-body" | "front"; explodeIndex: number; file: string; width: number; height: number;
-            pxPerMm: number; anchor: { x: number; y: number }; solidBottomY?: number;
+            pxPerMm: number; anchor: { x: number; y: number }; solidBottomY?: number; glass?: string;
         }>;
     };
 };
@@ -91,6 +91,7 @@ async function main() {
                     url: `file://${resolve(ROOT, "output", "register-components", cut.neck, layer.file)}`,
                     width: layer.width, height: layer.height, pxPerMm: layer.pxPerMm, anchor: layer.anchor, approved: false,
                     ...(layer.solidBottomY !== undefined ? { solidBottomY: layer.solidBottomY } : {}),
+                    ...(layer.glass ? { glass: layer.glass } : {}),
                 })),
             };
         }
