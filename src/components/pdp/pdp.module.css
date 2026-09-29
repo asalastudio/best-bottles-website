@@ -1842,3 +1842,75 @@
     clip-path: inset(50%);
     white-space: nowrap;
 }
+
+/* ── the canvas magnifier (Jordan 2026-09-29) ─────────────────────────────
+   The studio, the glass and every closure scale as one layer; the point under the
+   pointer stays put, so moving it pans. The lens button sits in the stage's corner. */
+.stageZoom {
+    position: absolute;
+    inset: 0;
+    transform-origin: 50% 42%;
+    transition: transform .28s var(--pdp-ease);
+}
+
+.stage[data-zoomable="true"] {
+    cursor: zoom-in;
+}
+
+.stage[data-zoomed="true"] {
+    cursor: zoom-out;
+}
+
+.stage[data-zoomed="true"] .stageZoom {
+    will-change: transform;
+}
+
+/* Discreet by default (Jordan 2026-09-29: "it makes it very busy"): a thin muted lens, no disc; it firms up when
+   the stage is hovered or the button has keyboard focus, and becomes a small dark chip while zoomed so the way out is
+   plain. On touch screens there is no hover, so it keeps a steady middle strength. */
+.zoomButton {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 5;
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--pdp-muted);
+    opacity: .45;
+    cursor: pointer;
+    transition: opacity .2s, color .2s, background .2s;
+}
+
+.stage:hover .zoomButton,
+.zoomButton:focus-visible {
+    opacity: 1;
+    color: var(--pdp-ink);
+}
+
+.zoomButton[aria-pressed="true"] {
+    opacity: 1;
+    background: rgba(28, 28, 30, .78);
+    color: #fff;
+}
+
+.zoomButton:focus-visible {
+    outline: 1px solid var(--pdp-gold);
+    outline-offset: 2px;
+}
+
+@media (hover: none) {
+    .zoomButton {
+        opacity: .7;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .stageZoom {
+        transition: none;
+    }
+}

@@ -8,8 +8,12 @@
  * Imagery is kit layers only (bare body, fitment, cap as true-alpha layers on
  * the canvas). A SKU with no kit falls back to its catalogue photograph in
  * SIDECAR, and the other views are disabled with a tooltip.
+ *
+ * The magnifier (`stage-zoom.ts`): click the bottle or the lens button to zoom
+ * 2.5x; the point under the pointer stays put, so moving it (or dragging a
+ * finger) pans. Click again, press Escape or the button to zoom out.
  */
-import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent } from "react";
 import styles from "./pdp.module.css";
 import PdpKitPartImage from "./PdpKitPartImage";
 import PdpKitStackImage from "./PdpKitStackImage";
@@ -18,6 +22,7 @@ import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/produc
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
 import type { Callout } from "@/lib/products/pdp-redesign/model";
+import { DEFAULT_ZOOM_ORIGIN, STAGE_ZOOM, STAGE_ZOOM_TAP_SLOP_PX, zoomOriginAt, type ZoomOrigin } from "@/lib/products/pdp-redesign/stage-zoom";
 import {
     STAGE_VIEWS,
     bodyPart,
@@ -124,7 +129,37 @@ export default function PdpStage({
         }
     }, [activeCapId]);
 
-    const showCallouts = Boolean(layout?.grid) && callouts.length > 0;
+    // ── the magnifier
+    // A zoom belongs to the view it was made in: switching views drops it.
+    const [zoomState, setZoomState] = useState<{ origin: ZoomOrigin; view: StageView } | null>(null);
+    const zoom = zoomState && zoomState.view === view ? zoomState.origin : null;
+    const setZoom = (origin: ZoomOrigin | null) => setZoomState(origin ? { origin, view } : null);
+    const pressRef = useRef<{ x: number; y: number; moved: boolean } | null>(null);
+    const zoomable = Boolean(layout || fallbackImageUrl);
+    useEffect(() => {
+        if (!zoom) return;
+        const onKey = (event: KeyboardEvent) => { if (event.key === "Escape") setZoomState(null); };
+        window.addEventListener("keydown", onKey);
+        return () => window.removeEventListener("keydown", onKey);
+    }, [zoom]);
+    const originAt = (event: ReactPointerEvent<HTMLDivElement>) => zoomOriginAt(event.clientX, event.clientY, event.currentTarget.getBoundingClientRect());
+    const onStagePointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
+        pressRef.current = { x: event.clientX, y: event.clientY, moved: false };
+    };
+    const onStagePointerMove = (event: ReactPointerEvent<HTMLDivElement>) => {
+        const press = pressRef.current;
+        if (press && Math.hypot(event.clientX - press.x, event.clientY - press.y) > STAGE_ZOOM_TAP_SLOP_PX) press.moved = true;
+        if (zoom) setZoom(originAt(event));
+    };
+    const onStagePointerUp = (event: ReactPointerEvent<HTMLDivElement>) => {
+        const press = pressRef.current;
+        pressRef.current = null;
+        if (!zoomable || event.button > 0 || (press && press.moved)) return;
+        if ((event.target as HTMLElement).closest("button")) return;
+        setZoom(zoom ? null : originAt(event));
+    };
+
+    const showCallouts = Boolean(layout?.grid) && callouts.length > 0 && !zoom;
     const calloutRows = useMemo(() => {
         if (!layout) return [];
         const rows = callouts.map((callout) => ({ callout, anchor: layout.anchors[callout.key] ?? null, shiftPct: 0 }));
@@ -201,10 +236,21 @@ export default function PdpStage({
                 data-layered={layout ? "true" : "false"}
                 data-source={layout ? (kit?.register ? "register" : "kit") : fallbackImageUrl ? (showingBareBody ? "body" : "photo") : "none"}
                 data-studio={layout?.backdrop ? "true" : undefined}
-                style={layout?.backdrop ? { backgroundColor: layout.backdrop.wall } : undefined}
+                data-zoomable={zoomable ? "true" : undefined}
+                data-zoomed={zoom ? "true" : undefined}
+                style={{ ...(layout?.backdrop ? { backgroundColor: layout.backdrop.wall } : {}), touchAction: zoom ? "none" : undefined }}
+                onPointerDown={onStagePointerDown}
+                onPointerMove={onStagePointerMove}
+                onPointerUp={onStagePointerUp}
+                onPointerCancel={() => { pressRef.current = null; }}
             >
                 <div className={styles.stageGrid} data-on={layout?.grid ? "true" : "false"} aria-hidden />
                 <div className={styles.stageBaseline} data-on={layout ? (layout.baseline ? "true" : "false") : "true"} aria-hidden />
+                <div
+                    className={styles.stageZoom}
+                    data-testid="pdp-stage-zoom"
+                    style={zoom ? { transform: `scale(${STAGE_ZOOM})`, transformOrigin: `${zoom.xPct}% ${zoom.yPct}%` } : undefined}
+                >
                 {layout ? (
                     <div className={styles.stageCanvasHost} role="img" aria-label={fallbackAlt}>
                         <div className={styles.stageCanvas}>
@@ -291,6 +337,26 @@ export default function PdpStage({
                 ) : (
                     <div className={styles.stageEmpty}>Photography coming soon</div>
                 )}
+                </div>
+
+                {zoomable ? (
+                    <button
+                        type="button"
+                        className={styles.zoomButton}
+                        aria-pressed={Boolean(zoom)}
+                        aria-label={zoom ? "Zoom out" : "Zoom in"}
+                        title={zoom ? "Zoom out (Esc)" : "Zoom in: or click the bottle, then move to look around"}
+                        onClick={() => setZoom(zoom ? null : DEFAULT_ZOOM_ORIGIN)}
+                        data-testid="pdp-zoom"
+                    >
+                        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round">
+                            <circle cx="10.5" cy="10.5" r="6.5" />
+                            <path d="M15.3 15.3 20 20" />
+                            <path d="M7.8 10.5h5.4" />
+                            {zoom ? null : <path d="M10.5 7.8v5.4" />}
+                        </svg>
+                    </button>
+                ) : null}
 
                 <div className={styles.callouts} data-on={showCallouts ? "true" : "false"} aria-hidden={!showCallouts} data-testid="pdp-callouts">
                     {calloutRows.map(({ callout, anchor, shiftPct }) => {
