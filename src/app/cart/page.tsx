@@ -6,6 +6,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useCart } from "@/components/CartProvider";
+import { displayApplicatorName } from "@/lib/catalogFilters";
 import { ArrowRight, Minus, Plus, ShoppingBag, Trash, WarningCircle } from "@/components/icons";
 import { checkoutMinimum, checkoutMinimumMessage, isCheckoutReady, splitCheckoutItems } from "@/lib/checkout";
 
@@ -75,7 +76,7 @@ export default function CartPage() {
                                                     <h2 className="font-serif text-xl font-medium leading-snug text-obsidian">{item.itemName}</h2>
                                                     <p className="mt-1 text-xs uppercase tracking-wider text-slate">SKU {item.graceSku}</p>
                                                     <p className="mt-2 text-sm text-slate">
-                                                        {[item.family, item.capacity, item.color, item.applicator, item.capColor].filter(Boolean).join(" · ") || "Product details pending"}
+                                                        {[item.family, item.capacity, item.color, item.applicator ? displayApplicatorName(item.applicator) : null, item.capColor].filter(Boolean).join(" · ") || "Product details pending"}
                                                     </p>
                                                     {!isCheckoutReady(item) && (
                                                         <p className="mt-2 inline-flex rounded-sm border border-amber-200 bg-amber-50 px-2 py-1 text-[11px] font-semibold uppercase tracking-wider text-amber-700">

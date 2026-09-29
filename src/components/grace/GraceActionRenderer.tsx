@@ -5,6 +5,7 @@ import type { MouseEvent } from "react";
 import type { GraceAction, ProductCard } from "@/components/GraceContext";
 import { useGrace } from "@/components/useGrace";
 import { isGraceProductPageHref } from "@/lib/grace/agenticHandoff";
+import { displayApplicatorName } from "@/lib/catalogFilters";
 import PatternA_SingleSku from "./patterns/PatternA_SingleSku";
 import PatternB_FamilyCard from "./patterns/PatternB_FamilyCard";
 import PatternC_ComponentsTray from "./patterns/PatternC_ComponentsTray";
@@ -107,7 +108,7 @@ function CartProposal({
                     <div key={p.graceSku} className="flex items-start justify-between gap-3 text-[12px] text-obsidian/80">
                         <div>
                             <div className="font-medium text-obsidian">{p.itemName}</div>
-                            <div className="text-slate">{[p.capacity, p.color, p.applicator].filter(Boolean).join(" · ")}</div>
+                            <div className="text-slate">{[p.capacity, p.color, p.applicator ? displayApplicatorName(p.applicator) : null].filter(Boolean).join(" · ")}</div>
                         </div>
                         <div className="text-right whitespace-nowrap">
                             <div>×{p.quantity}</div>
