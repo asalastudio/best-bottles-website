@@ -15,6 +15,8 @@ import PdpDimensionDrawing from "./PdpDimensionDrawing";
 import type { DrawingSpec } from "@/lib/products/pdp-redesign/drawings";
 import PdpTechnicalDrawing from "./PdpTechnicalDrawing";
 import type { TechnicalDrawingData } from "@/lib/products/pdp-redesign/tech-drawing";
+import PdpLabelPlacement from "./PdpLabelPlacement";
+import { LABEL_FIT_DISCLAIMER, labelFitRows, type LabelFit } from "@/lib/products/pdp-redesign/label-fit";
 import { useIsPdpMobile } from "./PdpStage";
 import { ORDER_MINIMUM } from "@/lib/checkout";
 import type { CollectionBand, TechRow } from "@/lib/products/pdp-redesign/model";
@@ -201,13 +203,15 @@ export function PdpBuildStrip({
 
 // ── Tech sheet ────────────────────────────────────────────────────────────────
 
-export function PdpTechSheet({ rows, pdfHref = null, drawing = null, technical = null }: {
+export function PdpTechSheet({ rows, pdfHref = null, drawing = null, technical = null, labelFit = null }: {
     rows: TechRow[];
     /** The branded tech-sheet PDF for this SKU. */
     pdfHref?: string | null;
     drawing?: DrawingSpec | null;
     /** A section of the locked Blender body with the caliper figures; drawn in place of the traced art. */
     technical?: TechnicalDrawingData | null;
+    /** Where a label goes on this bottle and how big it can be (label-fit.ts); custom shapes have none. */
+    labelFit?: LabelFit | null;
 }) {
     if (rows.length === 0) return null;
     const kind = technical ? "technical" : drawing ? "art" : "none";
@@ -231,6 +235,25 @@ export function PdpTechSheet({ rows, pdfHref = null, drawing = null, technical =
                     </div>
                 </div>
             </div>
+            {labelFit ? (
+                <div className={styles.labelFit} data-testid="pdp-label-fit" data-source={labelFit.source}>
+                    <div className={styles.labelFitDrawing}>
+                        <PdpLabelPlacement fit={labelFit} />
+                    </div>
+                    <div>
+                        <div className={styles.techHead}>
+                            <span className={styles.techLabel}>LABEL PLACEMENT</span>
+                        </div>
+                        <div className={styles.labelFitRows}>
+                            {labelFitRows(labelFit).map((row) => (
+                                <div key={row.k} className={styles.techRow}><span>{row.k}</span><span>{row.v}</span></div>
+                            ))}
+                        </div>
+                        {labelFit.note ? <p className={styles.labelFitNote}>{labelFit.note}</p> : null}
+                        <p className={styles.labelFitDisclaimer} data-testid="pdp-label-fit-disclaimer">{LABEL_FIT_DISCLAIMER}</p>
+                    </div>
+                </div>
+            ) : null}
         </section>
     );
 }
