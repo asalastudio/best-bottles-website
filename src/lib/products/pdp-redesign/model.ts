@@ -15,7 +15,7 @@ import type { ProductGroupPayload, ProductVariant } from "@/app/products/[slug]/
 import { decoratedCapFinish } from "@/lib/products/decorated-cap-finish";
 import { normalizeImportedCapColor } from "@/lib/products/cap-finish-evidence";
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
-import { catalogFitmentLabel, displayApplicatorName } from "@/lib/catalogFilters";
+import { CANONICAL_GLASS_COLORS, canonicalGlassColor, catalogFitmentLabel, displayApplicatorName } from "@/lib/catalogFilters";
 import { SHOP_COLLECTIONS, matchesShopCollection, shopCollectionHref } from "@/lib/shopCollections";
 import { activeVolumeTierIndex, buildDisplayVolumeTiers, type DisplayVolumeTier } from "@/lib/volumePricing";
 import { isSoldOutStockStatus } from "@/lib/checkout";
@@ -224,6 +224,11 @@ export function glassLabel(color: string | null | undefined): string {
     return value;
 }
 
+/**
+ * The glass lineup under the canvas, in ONE fixed order whichever glass the page is on (Jordan 2026-09-29: picking
+ * Cobalt sent it to the front and swapped the row). The catalogue's own glass order (Clear, Frosted, Amber, Cobalt
+ * Blue, ...) comes first; a glass it does not know follows, by name. `active` marks the page's own glass.
+ */
 export function glassOptions(group: Pick<PdpGroup, "slug" | "color" | "primaryWebsiteSku" | "primaryGraceSku">, siblings: readonly SiblingGlassGroup[]): GlassOption[] {
     const seen = new Set<string>();
     const out: GlassOption[] = [];
@@ -236,7 +241,11 @@ export function glassOptions(group: Pick<PdpGroup, "slug" | "color" | "primaryWe
     };
     push(group.slug, group.color, true, group.primaryWebsiteSku, group.primaryGraceSku);
     for (const sibling of siblings) push(sibling.slug, sibling.color, false, sibling.primaryWebsiteSku, sibling.primaryGraceSku);
-    return out;
+    const rank = (option: GlassOption) => {
+        const known = CANONICAL_GLASS_COLORS.indexOf((canonicalGlassColor(option.label) ?? "") as (typeof CANONICAL_GLASS_COLORS)[number]);
+        return known >= 0 ? known : CANONICAL_GLASS_COLORS.length;
+    };
+    return out.sort((a, b) => rank(a) - rank(b) || a.label.localeCompare(b.label));
 }
 
 // ── copy lines ────────────────────────────────────────────────────────────────
