@@ -124,44 +124,34 @@
     text-transform: uppercase;
 }
 
+/* The view switch is a hairline box again: the chosen view filled ink with white type, the others ink on white
+   (Jordan 2026-09-29: "bring the nice hairline box back ... filled with only black, with a white background like
+   before"; #308 had taken it down to a line under the word). The cap rail and the glass keep their line. */
 .viewSwitch {
     display: flex;
     flex: none;
+    border: 1px solid var(--pdp-border-strong);
+    background: var(--pdp-card);
 }
 
-/* Selection across the canvas is one ink hairline under the chosen item (Jordan 2026-09-28): the view's word,
-   the cap in the rail, the glass's name. No fills, no boxes. */
 .viewButton {
-    --pad-l: 10px;
-    --pad-r: 10px;
-    position: relative;
     font-size: 11px;
     letter-spacing: .12em;
-    padding: 6px var(--pad-r) 6px var(--pad-l);
+    padding: 6px 12px;
     white-space: nowrap;
     min-height: 30px;
-    color: var(--pdp-secondary);
-    transition: color .2s;
-}
-
-/* The last word ends on the stage's right edge. */
-.viewButton:last-child {
-    --pad-r: 0px;
-}
-
-.viewButton:hover,
-.viewButton[aria-pressed="true"] {
     color: var(--pdp-ink);
+    background: var(--pdp-card);
+    transition: background-color .2s, color .2s;
 }
 
-.viewButton[aria-pressed="true"]::after {
-    content: "";
-    position: absolute;
-    left: var(--pad-l);
-    right: calc(var(--pad-r) + .12em);
-    bottom: 3px;
-    height: 1px;
+.viewButton:not(:disabled):not([aria-pressed="true"]):hover {
+    background: var(--pdp-hover);
+}
+
+.viewButton[aria-pressed="true"] {
     background: var(--pdp-ink);
+    color: #fff;
 }
 
 .viewButton:disabled {
@@ -1327,8 +1317,9 @@
             "lineup";
     }
 
+    /* On a phone the stage is the screen: the switch's box keeps the same 12px from the edge as the pick line. */
     .canvasHead {
-        padding: 10px 0 0 12px;
+        padding: 10px 12px 0;
         gap: 8px;
     }
 
@@ -1338,12 +1329,9 @@
     }
 
     .viewButton {
-        --pad-l: 8px;
-        --pad-r: 8px;
-        font-size: 9.5px;
+        font-size: 10px;
         letter-spacing: .1em;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding: 5px 8px;
         min-height: 30px;
     }
 
