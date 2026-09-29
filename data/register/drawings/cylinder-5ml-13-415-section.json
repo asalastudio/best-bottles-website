@@ -2,8 +2,8 @@
  "body": "cylinder-5ml-13-415",
  "title": "Cylinder 5 ml, 13-415",
  "scale": 2,
- "source": "Axial section (plane y=0) of the Cylinder 5 mL body v6 (2.0 mm walls, 0.10 mm taper a side, the shoulder down over 2.9 mm) in the studio v1.3 file (Cyl-5ml-13-415_clear_STUDIO-v1.4-body-v6.blend), mm, z up from the standing ring; simplified to 8 microns. The figures are Jordan's caliper readings (Bottle Caliper Log, cylinder-5ml-13-415), drawn at the model's own datums.",
- "sourceSha256": "dc82460807e4aa9498add9a5998698b73c7ddbb9bf82b2faffa26203788f6a39",
+ "source": "Axial section (plane y=0) of the Cylinder 5 mL body v6.1 (2.0 mm walls, 0.10 mm taper a side, the shoulder down over 2.9 mm, 1.2 mm heel) in the studio v1.3 file (Cyl-5ml-13-415_clear_STUDIO-v1.4-body-v6.1.blend), mm, z up from the standing ring; simplified to 8 microns. The figures are Jordan's caliper readings (Bottle Caliper Log, cylinder-5ml-13-415), drawn at the model's own datums.",
+ "sourceSha256": "799c9f8fad92bae4112a465c40ed49e94b2aab2877c18851641ceaf27b1c1c5a",
  "units": "mm",
  "section": {
   "right": [
@@ -12,52 +12,64 @@
     0.22
    ],
    [
-    7.457,
+    6.75,
     0.22
    ],
    [
-    7.535,
-    0.216
+    6.925,
+    0.188
    ],
    [
-    7.673,
-    0.186
+    7.187,
+    0.068
    ],
    [
-    7.998,
-    0.034
+    7.362,
+    0.008
    ],
    [
-    8.13,
-    0.0
+    7.811,
+    0.003
    ],
    [
-    8.362,
-    0.034
+    7.967,
+    0.023
    ],
    [
-    8.507,
-    0.095
+    8.192,
+    0.091
    ],
    [
-    8.637,
-    0.182
+    8.399,
+    0.202
    ],
    [
-    8.748,
-    0.292
+    8.524,
+    0.298
    ],
    [
-    8.835,
-    0.423
+    8.684,
+    0.469
    ],
    [
-    8.914,
-    0.644
+    8.772,
+    0.6
    ],
    [
-    8.93,
-    0.8
+    8.841,
+    0.741
+   ],
+   [
+    8.892,
+    0.889
+   ],
+   [
+    8.922,
+    1.043
+   ],
+   [
+    8.932,
+    1.2
    ],
    [
     9.03,
@@ -1006,51 +1018,59 @@
     39.613
    ],
    [
-    -8.93,
-    0.8
+    -8.932,
+    1.2
    ],
    [
-    -8.914,
-    0.644
+    -8.909,
+    0.966
    ],
    [
-    -8.835,
-    0.423
+    -8.841,
+    0.741
    ],
    [
-    -8.748,
-    0.292
+    -8.772,
+    0.6
    ],
    [
-    -8.637,
-    0.182
+    -8.684,
+    0.469
    ],
    [
-    -8.507,
-    0.095
+    -8.524,
+    0.298
    ],
    [
-    -8.362,
-    0.034
+    -8.399,
+    0.202
    ],
    [
-    -8.13,
-    0.0
+    -8.192,
+    0.091
    ],
    [
-    -7.998,
-    0.034
+    -7.967,
+    0.023
    ],
    [
-    -7.673,
-    0.186
+    -7.811,
+    0.003
    ],
    [
-    -7.535,
-    0.216
+    -7.362,
+    0.008
    ],
    [
-    -7.457,
+    -7.187,
+    0.068
+   ],
+   [
+    -6.925,
+    0.188
+   ],
+   [
+    -6.75,
     0.22
    ],
    [
