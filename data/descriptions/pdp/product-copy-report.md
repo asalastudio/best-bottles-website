@@ -1,6 +1,6 @@
 # Product copy v2: generator report
 
-Generated 2026-09-29 21:58 from `data/register/source/convex-products-2026-09-29.json.gz` (prod:precise-raccoon-123, 2026-09-29T09:07:45.606Z).
+Generated 2026-09-29 22:01 from `data/register/source/convex-products-2026-09-29.json.gz` (prod:precise-raccoon-123, 2026-09-29T09:07:45.606Z).
 
 - **Products:** 2,464 (2,273 bottles and jars, 141 parts, 50 packaging items), in 355 titles (product groups share a title).
 - **Passing every check:** 2,422. **With an error:** 2. **Over a length target only:** 40.

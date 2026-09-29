@@ -3,6 +3,9 @@
  * curated JSON is 1 MB and must never reach a client bundle).
  *
  * Order of truth:
+ *   0. data/descriptions/pdp/product-copy.site.json, product copy v2 from the
+ *      copy standard (docs/specs/pdp-item-descriptions), by website SKU, then
+ *      by Grace SKU; it also carries the title, bullets and Care note;
  *   1. data/descriptions/pdp/item-descriptions.json, the reviewed copy the
  *      generator wrote from the legacy site plus the catalogue (by website
  *      SKU, then by Grace SKU);
@@ -16,6 +19,7 @@ import profiles from "../../../../data/descriptions/pdp/family-profiles.json";
 import { cleanedLegacyText, composeItemDescription, type ComposeInput, type FamilyProfile } from "./compose";
 import { customerItemType, resolveItemType } from "./item-type";
 import { displayVintageWording } from "../../vintageWording";
+import { productCopyFor, type ProductCopy } from "./product-copy";
 
 type CuratedEntry = {
     websiteSku: string;
@@ -37,7 +41,7 @@ type ProfilesFile = { profiles: Record<string, FamilyProfile> };
 const CURATED = curated as unknown as CuratedFile;
 const PROFILES = (profiles as unknown as ProfilesFile).profiles;
 
-export type ItemDescriptionSource = "curated" | "composed" | "legacy";
+export type ItemDescriptionSource = "copy" | "curated" | "composed" | "legacy";
 
 export type ItemDescription = {
     description: string;
@@ -45,6 +49,8 @@ export type ItemDescription = {
     source: ItemDescriptionSource;
     /** The legacy bestbottles.com page the facts were read from, when one exists. */
     legacyUrl: string | null;
+    /** Product copy v2 for this SKU, when the generator covers it: title, bullets, Care note, meta and alt text. */
+    copy?: ProductCopy | null;
 };
 
 export type DescribableVariant = ComposeInput & {
@@ -70,6 +76,10 @@ export function familyProfileFor(variant: Pick<ComposeInput, "family" | "categor
 }
 
 export function resolveItemDescription(variant: DescribableVariant): ItemDescription | null {
+    const copy = productCopyFor(variant);
+    if (copy) {
+        return { description: copy.sentences.join(" "), itemType: copy.itemType, source: "copy", legacyUrl: null, copy };
+    }
     const entry = curatedItemDescription(variant);
     if (entry) {
         return { description: displayVintageWording(entry.description), itemType: customerItemType(entry.itemType), source: "curated", legacyUrl: entry.legacyUrl };

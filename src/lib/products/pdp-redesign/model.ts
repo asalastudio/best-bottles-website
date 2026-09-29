@@ -303,6 +303,15 @@ export function optionLabel(roller: RollerOption | null, fitment: string | null,
     return ball ? `${ball}, ${label}` : label;
 }
 
+/** The option line for a SKU as the page shows it after these picks (the server titles the tab with it). */
+export function pageOptionLabel(variants: readonly ProductVariant[], picks: Picks, selected: ProductVariant | null): string | null {
+    if (!selected) return null;
+    const activeRoller = rollerIdFor(selected.applicator) ?? picks.roller;
+    const roller = rollerOptions(variants).find((option) => option.id === activeRoller) ?? null;
+    const cap = capOptionFor(selected, capOptions(variants, picks.roller));
+    return optionLabel(roller, fitmentLabel(selected), cap?.name ?? null);
+}
+
 /** "9 ml Clear Cylinder Bottle - Matte Gold Cap": the title with its option, for the browser tab. */
 export function variantTitle(title: string, option: string | null): string {
     return option ? `${title} - ${option}` : title;

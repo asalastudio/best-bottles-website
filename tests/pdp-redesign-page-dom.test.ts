@@ -90,7 +90,19 @@ const payload: PdpRedesignPayload = {
     descriptions: {
         GBCylBlu9RollBlkDot: { description: "Plastic roller copy.", itemType: "Roll-on bottles", source: "curated", legacyUrl: null },
         GBCylBlu9MtlRollBlkDot: { description: "Steel roller copy.", itemType: "Roll-on bottles", source: "curated", legacyUrl: null },
-        GBCylBlu9MtlRollMattCu: { description: "Matte copper copy.", itemType: "Roll-on bottles", source: "curated", legacyUrl: null },
+        GBCylBlu9MtlRollMattCu: {
+            description: "A roll-on bottle for perfume oil. The steel ball lays the oil on in a thin, even line.",
+            itemType: "Roll-on bottle · 17-415 neck", source: "copy", legacyUrl: null,
+            copy: {
+                title: "9 ml Cobalt Blue Cylinder Roll-On Bottle (copy v2)", option: "Steel Ball, Matte Copper Cap",
+                variantTitle: "9 ml Cobalt Blue Cylinder Roll-On Bottle (copy v2) - Steel Ball, Matte Copper Cap",
+                sentences: ["A roll-on bottle for perfume oil.", "The steel ball lays the oil on in a thin, even line."],
+                bullets: [["Included", "Steel roller ball and matte copper cap, packed unattached"], ["Glass", "Cobalt blue"]],
+                care: "Carry it capped and upright; the ball alone is not a seal.",
+                itemType: "Roll-on bottle · 17-415 neck", metaDescription: "A roll-on bottle for perfume oil.",
+                altText: "9 ml cobalt blue glass cylinder roll-on bottle with steel roller ball and matte copper cap",
+            },
+        },
     },
     collection: { band: { key: "roll-on-bottles", title: "Roll-On Bottles", subtitle: "A precise, personal application.", href: "/catalog?shop=roll-on-bottles&sort=capacity-asc", image: "/assets/homepage/collection-roll-on-bottles-bone-v3.webp" }, description: "A precise, personal application. 30 roll-on bottles." },
     familyHref: "/catalog?family=Cylinder",
@@ -141,6 +153,8 @@ describe("redesigned product page", () => {
         expect(text('[data-testid="pdp-pick-line"]')).toBe("COBALT · PLASTIC ROLLER · BLACK WITH DOTS");
         expect(text('[data-testid="pdp-item-name"]')).toBe("GBCylBlu9RollBlkDot");
         expect(text('[data-testid="pdp-item-description"]')).toBe("Plastic roller copy.");
+        expect(container.querySelector('[data-testid="pdp-item-bullets"]')).toBeNull();
+        expect(container.querySelector('[data-testid="pdp-care-note"]')).toBeNull();
         expect(text('[data-testid="pdp-status"]')).toContain("In stock · ships in 1–3 business days · 724 per case");
         expect(container.querySelectorAll('[data-testid="pdp-stage"] img[data-slot]').length).toBe(3);
         expect(container.querySelector('[data-testid="pdp-stage"]')?.getAttribute("data-view")).toBe("sidecar");
@@ -161,9 +175,14 @@ describe("redesigned product page", () => {
         expect(container.querySelector('[data-testid="pdp-stage"]')?.getAttribute("data-view")).toBe("exploded");
         expect(text('[data-testid="pdp-pick-line"]')).toBe("COBALT · METAL ROLLER · MATTE COPPER");
         expect(text('[data-testid="pdp-item-name"]')).toBe("GBCylBlu9MtlRollMattCu");
-        // The headline follows the pick, as the buy box does
-        expect(text('[data-testid="pdp-title"]')).toBe("9 ml Cobalt Blue Cylinder Roll-On Bottle - Metal Ball, Matte Copper Cap");
-        expect(document.title).toBe("9 ml Cobalt Blue Cylinder Roll-On Bottle - Metal Ball, Matte Copper Cap | Best Bottles");
+        // The headline follows the pick, as the buy box does; this SKU has product copy v2, which names it
+        expect(text('[data-testid="pdp-title"]')).toBe("9 ml Cobalt Blue Cylinder Roll-On Bottle (copy v2) - Metal Ball, Matte Copper Cap");
+        expect(document.title).toBe("9 ml Cobalt Blue Cylinder Roll-On Bottle (copy v2) - Metal Ball, Matte Copper Cap | Best Bottles");
+        expect(text('[data-testid="pdp-item-description"]')).toBe("A roll-on bottle for perfume oil. The steel ball lays the oil on in a thin, even line.");
+        expect([...container.querySelectorAll('[data-testid="pdp-item-bullets"] li')].map((li) => li.textContent)).toEqual([
+            "Included: Steel roller ball and matte copper cap, packed unattached", "Glass: Cobalt blue",
+        ]);
+        expect(text('[data-testid="pdp-care-note"]')).toBe("Carry it capped and upright; the ball alone is not a seal.");
         expect(text('[data-testid="pdp-add"]')).toBe("Add to cart · $0.77");
         expect(window.location.search).toBe("?roller=metal&cap=matte-copper");
         // matte copper is not sold on the plastic roller: switching back lands on the first plastic cap

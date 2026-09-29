@@ -30,6 +30,8 @@ import family_guides as fg  # noqa: E402
 
 OUT_JSON = fg.ROOT / "data/descriptions/pdp/product-copy.json"
 OUT_REPORT = fg.ROOT / "data/descriptions/pdp/product-copy-report.md"
+OUT_SITE = fg.ROOT / "data/descriptions/pdp/product-copy.site.json"  # read by src/lib/products/item-description/product-copy.ts
+SITE_FIELDS = ("title", "option", "variantTitle", "sentences", "bullets", "care", "itemType", "metaDescription", "altText")
 CURRENT = fg.ROOT / "data/descriptions/pdp/item-descriptions.json"
 LATEST_EXPORT = max((fg.REGISTER / "source").glob("convex-products-*.json.gz"))  # dated names sort by date
 # Screw caps with a liner (Best Bottles: 13-415 on 2026-09-26; 15-415, 18-415 and the Boston Round necks on 2026-09-29)
@@ -1070,6 +1072,13 @@ def main() -> None:
         "bySku": {c.websiteSku: asdict(c) for c in copies},
     }
     OUT_JSON.write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n")
+    # The site file: only what the product page shows, for products that pass every check (errors fall back to today's copy)
+    site = {
+        "generatedAt": out["generatedAt"], "source": out["source"],
+        "bySku": {c.websiteSku: {k: getattr(c, k) for k in SITE_FIELDS} for c in copies if not errors(c)},
+        "graceToWebsite": {c.graceSku: c.websiteSku for c in copies if c.graceSku and not errors(c)},
+    }
+    OUT_SITE.write_text(json.dumps(site, ensure_ascii=False, separators=(",", ":")) + "\n")
     OUT_REPORT.write_text(report(copies, meta, args.export))
     failing = sum(1 for c in copies if errors(c))
     print(f"{OUT_JSON.relative_to(fg.ROOT)}: {len(copies)} products, {failing} with errors, "

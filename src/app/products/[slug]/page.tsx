@@ -37,7 +37,8 @@ import {
 import PdpRedesignPage, { type PdpRedesignPayload } from "@/components/pdp/PdpRedesignPage";
 import { parseProductSlug } from "@/lib/products/group-variant-intent";
 import { resolveItemDescriptions } from "@/lib/products/item-description/resolve";
-import { collectionDescription, collectionFor, derivePicks, resolveVariant, type SiblingGlassGroup } from "@/lib/products/pdp-redesign/model";
+import { collectionDescription, collectionFor, derivePicks, pageOptionLabel, resolveVariant, variantTitle, type SiblingGlassGroup } from "@/lib/products/pdp-redesign/model";
+import { productCopyFor } from "@/lib/products/item-description/product-copy";
 import type { KitLike } from "@/lib/products/pdp-redesign/stage";
 import { loadRegisterKits } from "@/lib/register/load";
 import { loadGlassStageEnvelopes } from "@/lib/register/stage-envelopes";
@@ -288,13 +289,14 @@ export async function generateMetadata({
         ? data?.variants.find((candidate) => candidate.websiteSku === requestedSku || candidate.graceSku === requestedSku) ?? null
         : null;
     // The redesigned page carries its picks in the URL (?roller=&cap=, or ?sku= from a card or Grace).
-    const pickedVariant = data && redesignApplies(activeSlug, data)
-        ? resolveVariant(data.variants, derivePicks(data.variants, data.group, {
+    const pagePicks = data && redesignApplies(activeSlug, data)
+        ? derivePicks(data.variants, data.group, {
             roller: typeof resolvedParams?.roller === "string" ? resolvedParams.roller : null,
             cap: typeof resolvedParams?.cap === "string" ? resolvedParams.cap : null,
             sku: typeof requestedSku === "string" ? requestedSku : null,
-        }))
+        })
         : null;
+    const pickedVariant = data && pagePicks ? resolveVariant(data.variants, pagePicks) : null;
     const variant = skuVariant ?? pickedVariant ?? getPrimaryVariant(data);
 
     if (!group) {
@@ -304,15 +306,21 @@ export async function generateMetadata({
         };
     }
 
+    // Product copy v2 names the page as the headline does: its title, then the option picked on the page.
+    const copy = variant ? productCopyFor(variant) : null;
+    const copyName = copy && data && pagePicks && pickedVariant
+        ? variantTitle(copy.title, pageOptionLabel(data.variants, pagePicks, pickedVariant))
+        : null;
     const customerName = (skuVariant
         ? atomizerVariantCardName(group.capacityMl ?? getReleasedCatalogHero(group.slug, skuVariant.websiteSku)?.capacityMl, skuVariant)
         : null)
+        ?? copyName
         ?? getCustomerFacingProductName({
             group,
             variant,
             fallbackName: group.displayName,
         }).displayName;
-    const description = chooseCanonicalProductDescription({
+    const description = copy?.metaDescription ?? chooseCanonicalProductDescription({
         groupDescription: group.groupDescription ?? null,
         variantDescription: variant?.itemDescription ?? null,
         graceDescription: variant?.graceDescription ?? null,
