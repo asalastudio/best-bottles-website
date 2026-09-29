@@ -37,6 +37,38 @@ describe("technical drawing data", () => {
     });
 });
 
+describe("the 5 mL cylinder's drawing", () => {
+    const data = technicalDrawingFor("cylinder-5ml-13-415");
+
+    it("is one closed outline, drawn at 2:1, topping out at its own rim", () => {
+        expect(data).not.toBeNull();
+        const { section, datums } = data!;
+        expect(data!.scale).toBe(2);
+        expect(section.right[0]).toEqual([0, 0.22]);
+        expect(section.right.at(-1)).toEqual([0, datums.floorZ]);
+        expect(section.left[0]).toEqual([0, datums.floorZ]);
+        expect(section.left.at(-1)).toEqual([0, 0.22]);
+        expect(Math.max(...section.right.map(([, z]) => z))).toBeCloseTo(datums.rimZ, 2);
+        expect(Math.max(...section.right.map(([x]) => x))).toBeCloseTo(datums.bodyR, 2);
+    });
+
+    it("shares the Tall's 13-415 neck, 51.94 mm lower", () => {
+        const tall = technicalDrawingFor("cylinder-9ml-13-415")!.datums;
+        const { datums } = data!;
+        for (const key of ["boreR", "neckR", "threadR"] as const) expect(datums[key]).toBe(tall[key]);
+        expect(tall.rimZ - datums.rimZ).toBeCloseTo(51.94, 2);
+        expect(tall.threadCrestZ - datums.threadCrestZ).toBeCloseTo(51.94, 2);
+    });
+
+    it("lists its own caliper figures", () => {
+        const rows = drawingFigureRows(data!);
+        expect(rows.find((row) => row.label === "Height")?.value).toBe("53.55 mm");
+        expect(rows.find((row) => row.label === "Body")?.value).toBe("Ø 18.06 mm");
+        expect(rows.find((row) => row.label === "Foot")?.value).toBe("Ø 17.51 mm");
+        expect(rows.find((row) => row.label === "Capacity")?.value).toBe("≈ 5.5 ml");
+    });
+});
+
 describe("drawing geometry", () => {
     const square: Point[] = [[0, 0], [2, 0], [2, 2], [0, 2]];
 

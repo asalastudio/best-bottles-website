@@ -3,7 +3,8 @@
  * axis, drawn as a half section (outside on the left with the cavity as a
  * hidden line, the cut glass hatched on the right), a 3:1 detail of the neck
  * finish, and the caliper figures. Units are millimetres (1 viewBox unit =
- * 1 mm on the main view), so the page card and the PDF draw the same sheet.
+ * 1 mm on a 1:1 main view; a short bottle's data sets a larger scale), so the
+ * page card and the PDF draw the same sheet.
  * Pure SVG with no hooks: it renders on the page and in the PDF template.
  */
 import type { ReactNode } from "react";
@@ -29,14 +30,17 @@ const LINE = 0.32;
 const TEXT = 3;
 const SMALL = 2.5;
 
-// Main view, 1:1: the axis and the standing ring.
+// Main view: the axis and the standing ring (the scale comes with the data).
 const AX = 30;
 const BASE_Y = 138;
-// Neck detail, 3:1: its axis, the rim line and where the cut stops.
+// Neck detail, 3:1: its axis, the rim line, and, measured down from the rim (every 13-415 neck is the same finish),
+// where the cut stops, the centre of the call-out on the main view and the height of the bore's figure.
 const DETAIL = 3;
 const DX = 92;
 const RIM_Y = 22;
-const DETAIL_CUT_Z = 91.2;
+const DETAIL_CUT_DEPTH = 14.29;
+const CALLOUT_DEPTH = 5.89;
+const BORE_DIM_DEPTH = 4.09;
 
 function Arrow({ x, y, dir }: { x: number; y: number; dir: "up" | "down" | "left" | "right" }) {
     const l = 1.6, w = 0.5;
@@ -83,9 +87,10 @@ export default function PdpTechnicalDrawing({ data, idPrefix = "td" }: { data: T
     const { section, datums: d, figures: f } = data;
     const hatch = `${idPrefix}-hatch`;
 
-    // ── main view (1:1)
-    const mx = (x: number) => AX + x;
-    const my = (z: number) => BASE_Y - z;
+    // ── main view
+    const scale = data.scale ?? 1;
+    const mx = (x: number) => AX + x * scale;
+    const my = (z: number) => BASE_Y - z * scale;
     const left = splitLeftHalf(section.left, d.rimZ);
     const rightPath = pathOf(section.right, mx, my, true);
     const rimOuterR = Math.max(...section.right.filter((p) => p[1] >= d.rimZ - 1e-3).map((p) => p[0]));
@@ -93,10 +98,11 @@ export default function PdpTechnicalDrawing({ data, idPrefix = "td" }: { data: T
     // ── neck detail (3:1)
     const dxf = (x: number) => DX + x * DETAIL;
     const dyf = (z: number) => RIM_Y + (d.rimZ - z) * DETAIL;
-    const detailRight = clipPolygonAbove(section.right, DETAIL_CUT_Z);
-    const detailOutside = clipPolylineAbove(left.outside, DETAIL_CUT_Z);
-    const detailInside = clipPolylineAbove(left.inside, DETAIL_CUT_Z);
-    const cutY = dyf(DETAIL_CUT_Z);
+    const cutZ = d.rimZ - DETAIL_CUT_DEPTH;
+    const detailRight = clipPolygonAbove(section.right, cutZ);
+    const detailOutside = clipPolylineAbove(left.outside, cutZ);
+    const detailInside = clipPolylineAbove(left.inside, cutZ);
+    const cutY = dyf(cutZ);
 
     const heightText = formatMm(f.heightMm.value);
     const depthText = formatMm(f.insideDepthMm.value);
@@ -116,7 +122,7 @@ export default function PdpTechnicalDrawing({ data, idPrefix = "td" }: { data: T
     })();
 
     const figureLabel: ReactNode = (
-        <text x={AX} y={H - 2} fontSize={SMALL} fill={MUTED} textAnchor="middle" letterSpacing={0.3}>HALF SECTION · 1:1</text>
+        <text x={AX} y={H - 2} fontSize={SMALL} fill={MUTED} textAnchor="middle" letterSpacing={0.3}>HALF SECTION · {scale}:1</text>
     );
 
     return (
@@ -157,8 +163,8 @@ export default function PdpTechnicalDrawing({ data, idPrefix = "td" }: { data: T
             <HDim y={my(0) + 5.6} x1={mx(-d.bodyR)} x2={mx(d.bodyR)} text={`Ø ${formatMm(f.diameterMm.value)}`} below />
 
             {/* the detail's call-out on the main view */}
-            <circle cx={AX} cy={my(99.6)} r={9.2} fill="none" stroke={GOLD} strokeWidth={HAIR} strokeDasharray="1.2 0.8" />
-            <text x={AX + 7.4} y={my(99.6) - 7.4} fontSize={TEXT} fontWeight={600} fill={GOLD}>A</text>
+            <circle cx={AX} cy={my(d.rimZ - CALLOUT_DEPTH)} r={9.2 * scale} fill="none" stroke={GOLD} strokeWidth={HAIR} strokeDasharray="1.2 0.8" />
+            <text x={AX + 7.4 * scale} y={my(d.rimZ - CALLOUT_DEPTH) - 7.4 * scale} fontSize={TEXT} fontWeight={600} fill={GOLD}>A</text>
             {figureLabel}
 
             {/* ── neck detail, 3:1 ──────────────────────────────── */}
@@ -174,7 +180,7 @@ export default function PdpTechnicalDrawing({ data, idPrefix = "td" }: { data: T
             <HDim y={RIM_Y - 5.4} x1={dxf(-d.threadR)} x2={dxf(d.threadR)} text={`Ø ${formatMm(f.threadMm.value)}  T`} />
 
             {/* I: the bore */}
-            <HDim y={dyf(101.4)} x1={dxf(-d.boreR)} x2={dxf(d.boreR)} text={`Ø ${formatMm(f.boreMm.value)}  I`} />
+            <HDim y={dyf(d.rimZ - BORE_DIM_DEPTH)} x1={dxf(-d.boreR)} x2={dxf(d.boreR)} text={`Ø ${formatMm(f.boreMm.value)}  I`} />
 
             {/* E: the plain neck under the thread */}
             <HDim y={dyf(d.neckPlainZ)} x1={dxf(-d.neckR)} x2={dxf(d.neckR)} text={`Ø ${formatMm(f.neckMm.value)}  E`} />

@@ -9,6 +9,7 @@
  * model's own datums. A body without a section keeps the older art or none.
  */
 import tall9 from "../../../../data/register/drawings/cylinder-9ml-13-415-section.json";
+import cyl5 from "../../../../data/register/drawings/cylinder-5ml-13-415-section.json";
 
 export type Point = [number, number];
 
@@ -18,6 +19,8 @@ export type TechnicalDrawingData = {
     body: string;
     title: string;
     source: string;
+    /** The main view's scale (2 = 2:1); absent = 1:1. A short bottle is drawn larger so it fills the sheet. */
+    scale?: number;
     section: { right: Point[]; left: Point[] };
     datums: {
         rimZ: number;
@@ -46,6 +49,7 @@ export type TechnicalDrawingData = {
 const SECTIONS: Record<string, TechnicalDrawingData> = {
     // JSON arrays type as number[][]; each point is an [x, z] pair.
     [tall9.body]: tall9 as unknown as TechnicalDrawingData,
+    [cyl5.body]: cyl5 as unknown as TechnicalDrawingData,
 };
 
 export function technicalDrawingFor(bodyId: string | null | undefined): TechnicalDrawingData | null {
