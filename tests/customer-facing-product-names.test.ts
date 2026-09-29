@@ -219,6 +219,39 @@ describe("customer-facing product names", () => {
         expect(result.displayName).not.toContain(variant.websiteSku);
     });
 
+    it("names a bulb sprayer only on bulb sprayer evidence", () => {
+        // A rubber-bulb dropper sold on its own read "0 ml Dropper Vintage-Style Bulb Sprayer Bottle - White".
+        expect(
+            getCustomerFacingProductName({
+                group: { displayName: "Dropper — Thread 18-400", family: "Dropper", capacity: "0 ml (0 oz)", capacityMl: 0, category: "Component" },
+                variant: { itemName: "White rubber bulb dropper with white cap. Glass stem length is 66 mm", websiteSku: "Drp18-40015mlWhiteBulb", category: "Component", capColor: "White" },
+            }).displayName,
+        ).toBe("Dropper — Thread 18-400 - White");
+        // A heart bottle with a tassel is not a bulb sprayer with a tassel.
+        expect(
+            getCustomerFacingProductName({
+                group: { displayName: "4 ml Frosted Heart Bottle with Tassel", family: "Decorative", capacity: "4 ml (0.14 oz)", capacityMl: 4, color: "Frosted", category: "Glass Bottle" },
+                variant: { itemName: "Heart design 4 ml frosted glass bottle with red tassel", websiteSku: "GBHeartFrst4TslRed", category: "Glass Bottle" },
+                fallbackName: "4 ml Frosted Heart Bottle with Tassel",
+            }).displayName,
+        ).toBe("4 ml Frosted Heart Bottle with Tassel");
+    });
+
+    it("names a bulb sprayer sold on its own by its page, not as a 0 ml bottle", () => {
+        expect(
+            getCustomerFacingProductName({
+                group: { displayName: "Vintage Bulb Sprayer with Tassel — Thread 18-415", family: "Sprayer", capacity: "0 ml (0 oz)", capacityMl: 0, category: "Component" },
+                variant: { itemName: "Lavender Antique or Vintage style bulb sprayer with silver fittings and tassel. Thread Size 18-415", websiteSku: "AnSpTsl18-415Lvn", category: "Component", capColor: "Lavender" },
+            }).displayName,
+        ).toBe("Vintage-Style Bulb Sprayer with Tassel — Thread 18-415 - Lavender");
+        expect(
+            getCustomerFacingProductName({
+                group: { displayName: "Vintage Bulb Sprayer — Thread 18-415", family: "Sprayer", category: "Component" },
+                fallbackName: "Vintage Bulb Sprayer — Thread 18-415",
+            }).displayName,
+        ).toBe("Vintage-Style Bulb Sprayer — Thread 18-415");
+    });
+
     it("rewrites stored Vintage Bulb display names in the fallback path", () => {
         expect(
             getCustomerFacingProductName({

@@ -1,3 +1,5 @@
+import { displayVintageWording } from "./vintageWording";
+
 export const CANONICAL_PRODUCT_MODEL_VERSION = "2026-05-14.v1";
 
 export type CanonicalSourceSystem =
@@ -370,6 +372,11 @@ export function descriptionConflictsWithApplicators(
 }
 
 export function chooseCanonicalProductDescription(input: DescriptionInput): string | null {
+    const chosen = pickCanonicalProductDescription(input);
+    return chosen ? displayVintageWording(chosen) : null;
+}
+
+function pickCanonicalProductDescription(input: DescriptionInput): string | null {
     const variantDescription = cleanString(input.variantDescription) ?? cleanString(input.graceDescription);
     const groupDescription = cleanString(input.groupDescription);
     if (!groupDescription) return variantDescription;
