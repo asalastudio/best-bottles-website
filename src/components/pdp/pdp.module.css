@@ -976,6 +976,10 @@
     color: var(--pdp-ink);
 }
 
+.nowrap {
+    white-space: nowrap;
+}
+
 /* The Care note: one warning line, set apart from the sales copy in the editorial serif. */
 .careNote {
     font-family: var(--font-editorial);

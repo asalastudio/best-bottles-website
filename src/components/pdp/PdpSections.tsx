@@ -66,6 +66,20 @@ export function PdpOrderLines({
 
 // ── Product information ───────────────────────────────────────────────────────
 
+/** A headline that never breaks inside "Roll-On", "Vintage-Style" or "Fine-Mist": hyphenated words stay whole. */
+export function UnbrokenHyphens({ text }: { text: string }) {
+    return (
+        <>
+            {text.split(" ").map((word, index) => (
+                <span key={index}>
+                    {index > 0 ? " " : null}
+                    {word.includes("-") ? <span className={styles.nowrap}>{word}</span> : word}
+                </span>
+            ))}
+        </>
+    );
+}
+
 type ProductInfoProps = {
     itemType: string | null;
     itemName: string | null;

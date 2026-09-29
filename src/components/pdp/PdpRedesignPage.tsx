@@ -70,7 +70,7 @@ import type { StageBounds } from "@/lib/products/pdp-stage-frame";
 import styles from "./pdp.module.css";
 import PdpBuyBox, { type AddState } from "./PdpBuyBox";
 import PdpStage from "./PdpStage";
-import { PdpBuildStrip, PdpCollectionBand, PdpOrderLines, PdpProductInfo, PdpStickyBar, PdpTechSheet, type OrderLineView } from "./PdpSections";
+import { PdpBuildStrip, PdpCollectionBand, PdpOrderLines, PdpProductInfo, PdpStickyBar, PdpTechSheet, UnbrokenHyphens, type OrderLineView } from "./PdpSections";
 import { drawingBodyId, drawingFor, drawingStyleFromQuery } from "@/lib/products/pdp-redesign/drawings";
 import { technicalDrawingFor } from "@/lib/products/pdp-redesign/tech-drawing";
 
@@ -433,7 +433,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                         <div className={styles.titleBlock}>
                             <span className={styles.eyebrow} data-testid="pdp-eyebrow">{capacityEyebrow(group)}</span>
                             <h1 className={styles.title} data-testid="pdp-title">
-                                {title}
+                                <UnbrokenHyphens text={title} />
                                 {option ? (
                                     <span className={styles.titleOption} data-testid="pdp-title-option">
                                         <span className={styles.visuallyHidden}> - </span>{option}
