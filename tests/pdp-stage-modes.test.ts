@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it, vi } from "vitest";
 import PdpStageModeDock from "../src/components/products/PdpStageModeDock";
+import { familyForSlugOrDerived } from "../src/lib/configurator/families";
 import {
     getPdpStageModes,
     hasRealPdpDimensions,
@@ -34,6 +35,19 @@ describe("PDP stage mode capabilities", () => {
         expect(modeIds({ hasApprovedGeometry: true, productFamily: "Diva" })).not.toContain("3d");
     });
 
+    it("keeps Elegant 15, 60, and 100 ml on plates and layers, without a 3D mode", () => {
+        for (const slug of [
+            "elegant-15ml-clear-13-415-finemist",
+            "elegant-60ml-clear-18-415-perfumespray",
+            "elegant-100ml-frosted-18-415-lotionpump",
+        ]) {
+            const family = familyForSlugOrDerived(slug);
+            expect(family?.photoOnly, slug).toBe(true);
+            expect(modeIds({ hasApprovedImageOrPlate: true, hasApprovedGeometry: true, photoOnly: family?.photoOnly, productFamily: "Elegant" }), slug)
+                .toEqual(["photo"]);
+        }
+    });
+
     it("offers Exploded only for a released kit", () => {
         expect(modeIds({ hasReleasedExplodedKit: false })).not.toContain("exploded");
         expect(modeIds({ hasReleasedExplodedKit: true })).toContain("exploded");
@@ -48,7 +62,7 @@ describe("PDP stage mode capabilities", () => {
         expect(productDetailSource).toContain("const publishedKitQuery = useQuery(");
         expect(productDetailSource).toContain("?? publishedKitQuery");
         expect(productDetailSource).toContain("hasReleasedKit: Boolean(selectedKit?.parts?.length)");
-        expect(productDetailSource).toContain("kitQuery={selectedKitQuery}");
+        expect(productDetailSource).toContain("kitQuery={oneMlVialApplicator(selectedVariant?.websiteSku) ? undefined : selectedKitQuery}");
         expect(productDetailSource).toContain("selectedGraceSku={selectedVariant?.graceSku ?? null}");
     });
 

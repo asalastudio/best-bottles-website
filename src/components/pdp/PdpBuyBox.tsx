@@ -1,15 +1,19 @@
 "use client";
 
 /**
- * The buy box (design 3a §4.4): selection row, roller toggle, Pack of menu
- * with the quantity stepper, Add to Cart, and the case link. Pricing shown is
- * the active break's unit rate (the same rule as the catalog card); whether
- * checkout bills the break is `volumePricing.ts`'s concern.
+ * The buy box (design 3a §4.4): selection row, roller toggle, Set of menu
+ * with the quantity stepper, Add to Cart, and the case link. A set is one
+ * bottle with its closure (and roller ball): ten sets are ten bottles, ten
+ * balls, ten caps (Jordan 2026-09-29), so prices read per set. Pricing shown
+ * is the active break's unit rate (the same rule as the catalog card); whether
+ * checkout bills the break is `volumePricing.ts`'s concern. The roller choice
+ * shows no price of its own: the set price above the button already follows it.
  *
  * On mobile the Add to Cart button lives in the sticky bar (option 4a) and
- * the Pack of menu opens as a bottom sheet; both are stylesheet concerns.
+ * the Set of menu opens as a bottom sheet; both are stylesheet concerns.
  */
 import { useEffect, useId, useRef, useState, type CSSProperties, type KeyboardEvent } from "react";
+import Image from "next/image";
 import styles from "./pdp.module.css";
 import { formatVolumeQtyRange, type DisplayVolumeTier } from "@/lib/volumePricing";
 import { CATALOG_QUANTITY_MAX, parseCatalogQuantity } from "@/lib/products/catalog-card-purchase";
@@ -22,7 +26,7 @@ export type PdpBuyBoxProps = {
     selectionName: string;
     rollers: RollerOption[];
     activeRoller: RollerOption["id"] | null;
-    rollerUnitPrice: (id: RollerOption["id"]) => number | null;
+    rollerImages: Partial<Record<RollerOption["id"], string>>;
     onRoller: (id: RollerOption["id"]) => void;
     tiers: DisplayVolumeTier[];
     qty: number;
@@ -37,7 +41,7 @@ export type PdpBuyBoxProps = {
 };
 
 export default function PdpBuyBox({
-    swatchStyle, selectionName, rollers, activeRoller, rollerUnitPrice, onRoller,
+    swatchStyle, selectionName, rollers, activeRoller, rollerImages, onRoller,
     tiers, qty, onQty, unitPrice, lineTotal, addState, onAdd, addedQty, caseQuantity, formatPrice,
 }: PdpBuyBoxProps) {
     const baseId = useId();
@@ -114,9 +118,11 @@ export default function PdpBuyBox({
             </div>
 
             {rollers.length > 1 && (
+                <>
+                <p className={styles.rollerIntro}>Choose the roller-ball insert fitted inside this bottle.</p>
                 <div className={styles.rollerToggle} role="group" aria-label="Roller ball" data-testid="pdp-roller-toggle">
                     {rollers.map((roller) => {
-                        const price = rollerUnitPrice(roller.id);
+                        const rollerImage = rollerImages[roller.id];
                         return (
                             <button
                                 key={roller.id}
@@ -126,12 +132,16 @@ export default function PdpBuyBox({
                                 onClick={() => onRoller(roller.id)}
                                 data-roller={roller.id}
                             >
+                                {/* A register layer is already a fixed-size PNG on the Blob CDN: served as is, like the
+                                    stage's layers, rather than re-encoded by the image optimiser (whose private-IP
+                                    guard also rejects the Blob host on NAT64 networks, which left these blank). */}
+                                {rollerImage && <Image className={styles.rollerImage} src={rollerImage} alt="" width={44} height={44} loading="lazy" unoptimized />}
                                 <span>{roller.label}</span>
-                                <span className={styles.rollerPrice}>{price != null ? `${formatPrice(price)}/pc` : ""}</span>
                             </button>
                         );
                     })}
                 </div>
+                </>
             )}
 
             <div className={styles.qtyRow}>
@@ -148,7 +158,7 @@ export default function PdpBuyBox({
                         onKeyDown={(event) => { if (event.key === "ArrowDown" || event.key === "ArrowUp") { event.preventDefault(); openMenu(); } }}
                         data-testid="pdp-pack-toggle"
                     >
-                        <span>Pack of <b>{packLabel}</b>{unitPrice != null ? ` · ${formatPrice(unitPrice)}/pc` : ""}</span>
+                        <span>Set of <b>{packLabel}</b>{unitPrice != null ? ` · ${formatPrice(unitPrice)}/set` : ""}</span>
                         <span className={styles.packChevron} aria-hidden>{menuOpen ? "▴" : "▾"}</span>
                     </button>
                     {menuOpen && (
@@ -166,8 +176,8 @@ export default function PdpBuyBox({
                                         onClick={() => { commit(tier.minQty, "tier"); closeMenu(true); }}
                                         data-tier-min={tier.minQty}
                                     >
-                                        <span>{formatVolumeQtyRange(tier.minQty, tier.maxQty)} pcs</span>
-                                        <span><b>{formatPrice(tier.unitPrice)}</b>/pc{tier.savePct > 0 ? <span className={styles.packSave}>{tier.savePct}% off</span> : null}</span>
+                                        <span>{formatVolumeQtyRange(tier.minQty, tier.maxQty)} sets</span>
+                                        <span><b>{formatPrice(tier.unitPrice)}</b>/set{tier.savePct > 0 ? <span className={styles.packSave}>{tier.savePct}% off</span> : null}</span>
                                     </button>
                                 ))}
                             </div>

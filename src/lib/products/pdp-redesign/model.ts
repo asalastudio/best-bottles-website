@@ -268,13 +268,15 @@ export function pageTitle(group: Pick<PdpGroup, "family" | "capacity" | "capacit
     const capacity = group.capacityMl != null ? `${group.capacityMl} ml` : clean(group.capacity)?.split(" (")[0] ?? "";
     const glass = glassLabel(group.color);
     const family = clean(group.family) ?? "Bottle";
+    // A bulb sprayer page is named as the tab title names it, tassel included: it is not a plain "Spray Bottle".
     const type = fitment
-        ? /roller/i.test(fitment) ? "Roll-On Bottle"
-            : /spray/i.test(fitment) ? "Spray Bottle"
-                : /pump/i.test(fitment) ? "Pump Bottle"
-                    : /dropper/i.test(fitment) ? "Dropper Bottle"
-                        : /reducer|splash/i.test(fitment) ? "Splash-On Bottle"
-                            : `${fitment} Bottle`
+        ? /bulb sprayer/i.test(fitment) ? `Vintage-Style Bulb Sprayer Bottle${/tassel/i.test(fitment) ? " with Tassel" : ""}`
+            : /roller/i.test(fitment) ? "Roll-On Bottle"
+                : /spray/i.test(fitment) ? "Spray Bottle"
+                    : /pump/i.test(fitment) ? "Pump Bottle"
+                        : /dropper/i.test(fitment) ? "Dropper Bottle"
+                            : /reducer|splash/i.test(fitment) ? "Splash-On Bottle"
+                                : `${fitment} Bottle`
         : "Bottle";
     return `${capacity} ${glass} ${family} ${type}`.replace(/\s+/g, " ").trim();
 }
@@ -373,7 +375,7 @@ export function callouts(variant: ProductVariant | null | undefined, capName: st
     const applicator = clean(variant.applicator);
     if (applicator && applicator !== "N/A" && applicator !== "Cap/Closure") {
         const roller = rollerIdFor(applicator);
-        const line1 = roller ? `${displayApplicatorName(applicator)} plug` : displayApplicatorName(applicator);
+        const line1 = roller ? `${displayApplicatorName(applicator)} insert` : displayApplicatorName(applicator);
         const line2 = neck
             ? roller ? `Press-fit into ${neck} neck` : thread ? `Threads onto ${neck} neck` : `Fits ${neck} neck`
             : null;

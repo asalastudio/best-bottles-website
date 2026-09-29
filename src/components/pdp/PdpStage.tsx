@@ -8,8 +8,12 @@
  * Imagery is kit layers only (bare body, fitment, cap as true-alpha layers on
  * the canvas). A SKU with no kit falls back to its catalogue photograph in
  * SIDECAR, and the other views are disabled with a tooltip.
+ *
+ * The magnifier (`stage-zoom.ts`): click the bottle or the lens button to zoom
+ * 2.5x; the point under the pointer stays put, so moving it (or dragging a
+ * finger) pans. Click again, press Escape or the button to zoom out.
  */
-import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent } from "react";
 import styles from "./pdp.module.css";
 import PdpKitPartImage from "./PdpKitPartImage";
 import PdpKitStackImage from "./PdpKitStackImage";
@@ -18,11 +22,13 @@ import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/produc
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
 import type { Callout } from "@/lib/products/pdp-redesign/model";
+import { DEFAULT_ZOOM_ORIGIN, STAGE_ZOOM, STAGE_ZOOM_TAP_SLOP_PX, zoomOriginAt, type ZoomOrigin } from "@/lib/products/pdp-redesign/stage-zoom";
 import {
     STAGE_VIEWS,
     bodyPart,
     closureParts,
     stageLayout,
+    type GlassFrame,
     type KitLike,
     type StageContext,
     type StageView,
@@ -52,7 +58,10 @@ export type PdpStageProps = {
     onViewChange: (view: StageView) => void;
     kit: KitLike | null;
     context: StageContext;
-    fallbackImageUrl: string | null;
+    /** The kit's frame on this page (`glassFrame`): every SKU of the glass shares it in CAP ON and SIDECAR. */
+    glassFrame?: GlassFrame | null;
+    fallbackImageUrls: string[];
+    fallbackBodyImageUrl: string | null;
     fallbackAlt: string;
     callouts: Callout[];
     caps: CapRailItem[];
@@ -89,17 +98,23 @@ export function useIsPdpMobile(): boolean {
 }
 
 export default function PdpStage({
-    pickLine, view, availableViews, onViewChange, kit, context, fallbackImageUrl, fallbackAlt, callouts,
+    pickLine, view, availableViews, onViewChange, kit, context, glassFrame = null, fallbackImageUrls, fallbackBodyImageUrl, fallbackAlt, callouts,
     caps, activeCapId, onCapPick, glasses, onGlassPick, activeCapName, activeGlassLabel,
 }: PdpStageProps) {
-    const layout = useMemo(() => stageLayout(kit, view, context), [kit, view, context]);
+    const layout = useMemo(() => stageLayout(kit, view, context, glassFrame ?? {}), [kit, view, context, glassFrame]);
     const railRef = useRef<HTMLDivElement>(null);
     // Register masters are served display-sized through the optimizer; when that
     // proxy cannot reach the Blob host (a local network quirk) the master is shown.
     const [rawUrls, setRawUrls] = useState<ReadonlySet<string>>(() => new Set());
     const showRaw = (url: string) => setRawUrls((current) => (current.has(url) ? current : new Set(current).add(url)));
+    const [failedFallbackUrls, setFailedFallbackUrls] = useState<ReadonlySet<string>>(() => new Set());
+    const fallbackImageUrl = fallbackImageUrls.find((url) => !failedFallbackUrls.has(url))
+        ?? (fallbackBodyImageUrl && !failedFallbackUrls.has(fallbackBodyImageUrl) ? fallbackBodyImageUrl : null);
+    const showingBareBody = Boolean(fallbackImageUrl && fallbackImageUrl === fallbackBodyImageUrl);
     const mobile = useIsPdpMobile();
     const capThumbHeight = mobile ? 42 : 48;
+    // Every cap on the rail the same width, so their sides line up; heights follow each cap's true proportions.
+    const capThumbWidth = mobile ? 30 : 36;
     const glassThumbHeight = mobile ? 60 : 96;
 
     // Mobile strip: keep the selected cap in view on load and on change.
@@ -114,7 +129,37 @@ export default function PdpStage({
         }
     }, [activeCapId]);
 
-    const showCallouts = Boolean(layout?.grid) && callouts.length > 0;
+    // ── the magnifier
+    // A zoom belongs to the view it was made in: switching views drops it.
+    const [zoomState, setZoomState] = useState<{ origin: ZoomOrigin; view: StageView } | null>(null);
+    const zoom = zoomState && zoomState.view === view ? zoomState.origin : null;
+    const setZoom = (origin: ZoomOrigin | null) => setZoomState(origin ? { origin, view } : null);
+    const pressRef = useRef<{ x: number; y: number; moved: boolean } | null>(null);
+    const zoomable = Boolean(layout || fallbackImageUrl);
+    useEffect(() => {
+        if (!zoom) return;
+        const onKey = (event: KeyboardEvent) => { if (event.key === "Escape") setZoomState(null); };
+        window.addEventListener("keydown", onKey);
+        return () => window.removeEventListener("keydown", onKey);
+    }, [zoom]);
+    const originAt = (event: ReactPointerEvent<HTMLDivElement>) => zoomOriginAt(event.clientX, event.clientY, event.currentTarget.getBoundingClientRect());
+    const onStagePointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
+        pressRef.current = { x: event.clientX, y: event.clientY, moved: false };
+    };
+    const onStagePointerMove = (event: ReactPointerEvent<HTMLDivElement>) => {
+        const press = pressRef.current;
+        if (press && Math.hypot(event.clientX - press.x, event.clientY - press.y) > STAGE_ZOOM_TAP_SLOP_PX) press.moved = true;
+        if (zoom) setZoom(originAt(event));
+    };
+    const onStagePointerUp = (event: ReactPointerEvent<HTMLDivElement>) => {
+        const press = pressRef.current;
+        pressRef.current = null;
+        if (!zoomable || event.button > 0 || (press && press.moved)) return;
+        if ((event.target as HTMLElement).closest("button")) return;
+        setZoom(zoom ? null : originAt(event));
+    };
+
+    const showCallouts = Boolean(layout?.grid) && callouts.length > 0 && !zoom;
     const calloutRows = useMemo(() => {
         if (!layout) return [];
         const rows = callouts.map((callout) => ({ callout, anchor: layout.anchors[callout.key] ?? null, shiftPct: 0 }));
@@ -176,7 +221,7 @@ export default function PdpStage({
                             onClick={() => onCapPick(cap.id)}
                         >
                             {parts.length && cap.kit
-                                ? <PdpKitStackImage parts={parts} canvas={cap.kit.canvas} height={capThumbHeight} />
+                                ? <PdpKitStackImage parts={parts} canvas={cap.kit.canvas} height={capThumbHeight} fit={{ width: capThumbWidth }} />
                                 : <span className={styles.railSwatch} style={getMaterialSwatchStyle(cap.swatchName, {})} aria-hidden />}
                         </button>
                     );
@@ -189,14 +234,50 @@ export default function PdpStage({
                 data-testid="pdp-stage"
                 data-view={view}
                 data-layered={layout ? "true" : "false"}
-                data-source={layout ? (kit?.register ? "register" : "kit") : fallbackImageUrl ? "photo" : "none"}
+                data-source={layout ? (kit?.register ? "register" : "kit") : fallbackImageUrl ? (showingBareBody ? "body" : "photo") : "none"}
+                data-studio={layout?.backdrop ? "true" : undefined}
+                data-zoomable={zoomable ? "true" : undefined}
+                data-zoomed={zoom ? "true" : undefined}
+                style={{ ...(layout?.backdrop ? { backgroundColor: layout.backdrop.wall } : {}), touchAction: zoom ? "none" : undefined }}
+                onPointerDown={onStagePointerDown}
+                onPointerMove={onStagePointerMove}
+                onPointerUp={onStagePointerUp}
+                onPointerCancel={() => { pressRef.current = null; }}
             >
                 <div className={styles.stageGrid} data-on={layout?.grid ? "true" : "false"} aria-hidden />
                 <div className={styles.stageBaseline} data-on={layout ? (layout.baseline ? "true" : "false") : "true"} aria-hidden />
+                <div
+                    className={styles.stageZoom}
+                    data-testid="pdp-stage-zoom"
+                    style={zoom ? { transform: `scale(${STAGE_ZOOM})`, transformOrigin: `${zoom.xPct}% ${zoom.yPct}%` } : undefined}
+                >
                 {layout ? (
                     <div className={styles.stageCanvasHost} role="img" aria-label={fallbackAlt}>
                         <div className={styles.stageCanvas}>
                             <div className={styles.stageFrame} style={{ transform: layout.frameCss }}>
+                                {layout.backdrop ? (
+                                    // The body's studio: wall, floor and contact shadow, pinned to the kit's baseline.
+                                    // eslint-disable-next-line @next/next/no-img-element
+                                    <img
+                                        src={layout.backdrop.url}
+                                        alt=""
+                                        draggable={false}
+                                        decoding="async"
+                                        className={styles.stageBackdrop}
+                                        style={{
+                                            left: `${layout.backdrop.box.leftPct}%`, top: `${layout.backdrop.box.topPct}%`,
+                                            width: `${layout.backdrop.box.widthPct}%`, height: `${layout.backdrop.box.heightPct}%`,
+                                        }}
+                                    />
+                                ) : null}
+                                {layout.floorShadows.map((shadow) => (
+                                    <span
+                                        key={shadow.key}
+                                        className={styles.stageFloorShadow}
+                                        style={{ left: `${shadow.leftPct}%`, top: `${shadow.topPct}%`, width: `${shadow.widthPct}%`, height: `${shadow.heightPct}%` }}
+                                        aria-hidden
+                                    />
+                                ))}
                                 {layout.parts.map((part) => part.box ? (
                                     // A register part: a native cut-out standing in its box on the canvas. The
                                     // canvas-sized wrapper carries the view offset so the percentages stay the canvas's.
@@ -242,11 +323,40 @@ export default function PdpStage({
                     <div className={styles.stageFallback}>
                         {/* Kit layers and plates stay plain <img>: their pixel canvas and alpha must not change. */}
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={displayImageUrl(fallbackImageUrl)} alt={fallbackAlt} decoding="async" />
+                        <img
+                            src={rawUrls.has(fallbackImageUrl) ? fallbackImageUrl : displayImageUrl(fallbackImageUrl)}
+                            alt={showingBareBody ? `${fallbackAlt}, uncapped bottle` : fallbackAlt}
+                            decoding="async"
+                            onError={() => {
+                                if (!rawUrls.has(fallbackImageUrl) && markRegisterOptimizerUnavailable(fallbackImageUrl)) showRaw(fallbackImageUrl);
+                                else setFailedFallbackUrls((current) => new Set(current).add(fallbackImageUrl));
+                            }}
+                        />
+                        {showingBareBody && <span className={styles.bareBodyNote}>Uncapped bottle shown · assembled photo pending</span>}
                     </div>
                 ) : (
                     <div className={styles.stageEmpty}>Photography coming soon</div>
                 )}
+                </div>
+
+                {zoomable ? (
+                    <button
+                        type="button"
+                        className={styles.zoomButton}
+                        aria-pressed={Boolean(zoom)}
+                        aria-label={zoom ? "Zoom out" : "Zoom in"}
+                        title={zoom ? "Zoom out (Esc)" : "Zoom in: or click the bottle, then move to look around"}
+                        onClick={() => setZoom(zoom ? null : DEFAULT_ZOOM_ORIGIN)}
+                        data-testid="pdp-zoom"
+                    >
+                        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round">
+                            <circle cx="10.5" cy="10.5" r="6.5" />
+                            <path d="M15.3 15.3 20 20" />
+                            <path d="M7.8 10.5h5.4" />
+                            {zoom ? null : <path d="M10.5 7.8v5.4" />}
+                        </svg>
+                    </button>
+                ) : null}
 
                 <div className={styles.callouts} data-on={showCallouts ? "true" : "false"} aria-hidden={!showCallouts} data-testid="pdp-callouts">
                     {calloutRows.map(({ callout, anchor, shiftPct }) => {

@@ -1,0 +1,457 @@
+[
+ {
+  "at": "2026-09-29T08:17:18.139Z",
+  "step": "rename-old",
+  "product": 10433899069732,
+  "variant": 53343675482404,
+  "from": "GB-CIR-FRS-100ML-ASP-01",
+  "to": "GB-CIR-FRS-100ML-ASP-01-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:19.226Z",
+  "step": "rename-old",
+  "product": 10433899069732,
+  "variant": 53343675777316,
+  "from": "GB-CIR-FRS-100ML-ASP-02",
+  "to": "GB-CIR-FRS-100ML-ASP-02-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:20.290Z",
+  "step": "rename-old",
+  "product": 10433899069732,
+  "variant": 53343675810084,
+  "from": "GB-CIR-FRS-100ML-ASP-03",
+  "to": "GB-CIR-FRS-100ML-ASP-03-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:21.346Z",
+  "step": "rename-old",
+  "product": 10433899069732,
+  "variant": 53343675842852,
+  "from": "GB-CIR-FRS-100ML-ASP-04",
+  "to": "GB-CIR-FRS-100ML-ASP-04-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:22.422Z",
+  "step": "rename-old",
+  "product": 10433899069732,
+  "variant": 53343675875620,
+  "from": "GB-CIR-FRS-100ML-ASP-05",
+  "to": "GB-CIR-FRS-100ML-ASP-05-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:23.445Z",
+  "step": "rename-old",
+  "product": 10433899069732,
+  "variant": 53343675908388,
+  "from": "GB-CIR-FRS-100ML-ASP-06",
+  "to": "GB-CIR-FRS-100ML-ASP-06-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:24.664Z",
+  "step": "add-variant",
+  "product": 10433900413220,
+  "handle": "circle-100ml-frosted-18-415-antiquespray-tassel",
+  "variant": 67575554670884,
+  "sku": "GB-CIR-FRS-100ML-ASP-01",
+  "from": 53343675482404
+ },
+ {
+  "at": "2026-09-29T08:17:25.870Z",
+  "step": "add-variant",
+  "product": 10433900413220,
+  "handle": "circle-100ml-frosted-18-415-antiquespray-tassel",
+  "variant": 67575554736420,
+  "sku": "GB-CIR-FRS-100ML-ASP-02",
+  "from": 53343675777316
+ },
+ {
+  "at": "2026-09-29T08:17:27.042Z",
+  "step": "add-variant",
+  "product": 10433900413220,
+  "handle": "circle-100ml-frosted-18-415-antiquespray-tassel",
+  "variant": 67575554801956,
+  "sku": "GB-CIR-FRS-100ML-ASP-03",
+  "from": 53343675810084
+ },
+ {
+  "at": "2026-09-29T08:17:28.152Z",
+  "step": "add-variant",
+  "product": 10433900413220,
+  "handle": "circle-100ml-frosted-18-415-antiquespray-tassel",
+  "variant": 67575554900260,
+  "sku": "GB-CIR-FRS-100ML-ASP-04",
+  "from": 53343675842852
+ },
+ {
+  "at": "2026-09-29T08:17:29.397Z",
+  "step": "add-variant",
+  "product": 10433900413220,
+  "handle": "circle-100ml-frosted-18-415-antiquespray-tassel",
+  "variant": 67575554933028,
+  "sku": "GB-CIR-FRS-100ML-ASP-05",
+  "from": 53343675875620
+ },
+ {
+  "at": "2026-09-29T08:17:30.556Z",
+  "step": "add-variant",
+  "product": 10433900413220,
+  "handle": "circle-100ml-frosted-18-415-antiquespray-tassel",
+  "variant": 67575554998564,
+  "sku": "GB-CIR-FRS-100ML-ASP-06",
+  "from": 53343675908388
+ },
+ {
+  "at": "2026-09-29T08:17:31.988Z",
+  "step": "rename-old",
+  "product": 10433890386212,
+  "variant": 53343606898980,
+  "from": "GB-RND-FRS-128ML-ASP-08",
+  "to": "GB-RND-FRS-128ML-ASP-08-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:33.109Z",
+  "step": "rename-old",
+  "product": 10433890386212,
+  "variant": 53343606931748,
+  "from": "GB-RND-FRS-128ML-ASP-02",
+  "to": "GB-RND-FRS-128ML-ASP-02-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:34.182Z",
+  "step": "rename-old",
+  "product": 10433890386212,
+  "variant": 53343606964516,
+  "from": "GB-RND-FRS-128ML-ASP-03",
+  "to": "GB-RND-FRS-128ML-ASP-03-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:35.255Z",
+  "step": "rename-old",
+  "product": 10433890386212,
+  "variant": 53343606997284,
+  "from": "GB-RND-FRS-128ML-ASP-04",
+  "to": "GB-RND-FRS-128ML-ASP-04-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:36.298Z",
+  "step": "rename-old",
+  "product": 10433890386212,
+  "variant": 53343607030052,
+  "from": "GB-RND-FRS-128ML-ASP-05",
+  "to": "GB-RND-FRS-128ML-ASP-05-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:37.341Z",
+  "step": "rename-old",
+  "product": 10433890386212,
+  "variant": 53343607062820,
+  "from": "GB-RND-FRS-128ML-ASP-07",
+  "to": "GB-RND-FRS-128ML-ASP-07-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:38.398Z",
+  "step": "rename-old",
+  "product": 10433890386212,
+  "variant": 53343607095588,
+  "from": "GB-RND-FRS-128ML-ASP-09",
+  "to": "GB-RND-FRS-128ML-ASP-09-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:39.486Z",
+  "step": "rename-old",
+  "product": 10433890386212,
+  "variant": 53343607128356,
+  "from": "GB-RND-FRS-128ML-ASP-06",
+  "to": "GB-RND-FRS-128ML-ASP-06-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:40.542Z",
+  "step": "rename-old",
+  "product": 10433890386212,
+  "variant": 53343607193892,
+  "from": "GB-RND-FRS-128ML-ASP-01",
+  "to": "GB-RND-FRS-128ML-ASP-01-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:42.240Z",
+  "step": "create-product",
+  "product": 15357491085604,
+  "handle": "round-128ml-frosted-18-415-antiquespray-tassel",
+  "title": "128 ml Frosted Round Vintage-Style Bulb Sprayer Bottle with Tassel",
+  "variants": [
+   {
+    "id": 67575555326244,
+    "sku": "GB-RND-FRS-128ML-ASP-08"
+   },
+   {
+    "id": 67575555359012,
+    "sku": "GB-RND-FRS-128ML-ASP-02"
+   },
+   {
+    "id": 67575555391780,
+    "sku": "GB-RND-FRS-128ML-ASP-03"
+   },
+   {
+    "id": 67575555424548,
+    "sku": "GB-RND-FRS-128ML-ASP-04"
+   },
+   {
+    "id": 67575555457316,
+    "sku": "GB-RND-FRS-128ML-ASP-05"
+   },
+   {
+    "id": 67575555490084,
+    "sku": "GB-RND-FRS-128ML-ASP-07"
+   },
+   {
+    "id": 67575555522852,
+    "sku": "GB-RND-FRS-128ML-ASP-09"
+   },
+   {
+    "id": 67575555555620,
+    "sku": "GB-RND-FRS-128ML-ASP-06"
+   },
+   {
+    "id": 67575555588388,
+    "sku": "GB-RND-FRS-128ML-ASP-01"
+   }
+  ]
+ },
+ {
+  "at": "2026-09-29T08:17:43.681Z",
+  "step": "rename-old",
+  "product": 10433897791780,
+  "variant": 53343666602276,
+  "from": "GB-CIR-CLR-50ML-ASP-02",
+  "to": "GB-CIR-CLR-50ML-ASP-02-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:44.745Z",
+  "step": "rename-old",
+  "product": 10433897791780,
+  "variant": 53343666635044,
+  "from": "GB-CIR-CLR-50ML-ASP-01",
+  "to": "GB-CIR-CLR-50ML-ASP-01-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:45.871Z",
+  "step": "add-variant",
+  "product": 10433897890084,
+  "handle": "circle-50ml-clear-18-415-antiquespray-tassel",
+  "variant": 67575555686692,
+  "sku": "GB-CIR-CLR-50ML-ASP-02",
+  "from": 53343666602276
+ },
+ {
+  "at": "2026-09-29T08:17:47.044Z",
+  "step": "add-variant",
+  "product": 10433897890084,
+  "handle": "circle-50ml-clear-18-415-antiquespray-tassel",
+  "variant": 67575555752228,
+  "sku": "GB-CIR-CLR-50ML-ASP-01",
+  "from": 53343666635044
+ },
+ {
+  "at": "2026-09-29T08:17:48.465Z",
+  "step": "rename-old",
+  "product": 10433897922852,
+  "variant": 53343667388708,
+  "from": "GB-CIR-FRS-50ML-ASP-01",
+  "to": "GB-CIR-FRS-50ML-ASP-01-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:49.516Z",
+  "step": "rename-old",
+  "product": 10433897922852,
+  "variant": 53343667683620,
+  "from": "GB-CIR-FRS-50ML-ASP-05",
+  "to": "GB-CIR-FRS-50ML-ASP-05-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:50.560Z",
+  "step": "rename-old",
+  "product": 10433897922852,
+  "variant": 53343667716388,
+  "from": "GB-CIR-FRS-50ML-ASP-03",
+  "to": "GB-CIR-FRS-50ML-ASP-03-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:51.796Z",
+  "step": "rename-old",
+  "product": 10433897922852,
+  "variant": 53343667749156,
+  "from": "GB-CIR-FRS-50ML-ASP-04",
+  "to": "GB-CIR-FRS-50ML-ASP-04-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:52.862Z",
+  "step": "rename-old",
+  "product": 10433897922852,
+  "variant": 53343667781924,
+  "from": "GB-CIR-FRS-50ML-ASP-09",
+  "to": "GB-CIR-FRS-50ML-ASP-09-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:53.940Z",
+  "step": "rename-old",
+  "product": 10433897922852,
+  "variant": 53343667814692,
+  "from": "GB-CIR-FRS-50ML-ASP-07",
+  "to": "GB-CIR-FRS-50ML-ASP-07-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:55.008Z",
+  "step": "rename-old",
+  "product": 10433897922852,
+  "variant": 53343667847460,
+  "from": "GB-CIR-FRS-50ML-ASP-08",
+  "to": "GB-CIR-FRS-50ML-ASP-08-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:56.072Z",
+  "step": "rename-old",
+  "product": 10433897922852,
+  "variant": 53343667880228,
+  "from": "GB-CIR-FRS-50ML-ASP-06",
+  "to": "GB-CIR-FRS-50ML-ASP-06-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:57.131Z",
+  "step": "rename-old",
+  "product": 10433897922852,
+  "variant": 53343667912996,
+  "from": "GB-CIR-FRS-50ML-ASP-02",
+  "to": "GB-CIR-FRS-50ML-ASP-02-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:17:58.835Z",
+  "step": "create-product",
+  "product": 15357491380516,
+  "handle": "circle-50ml-frosted-18-415-antiquespray-tassel",
+  "title": "50 ml Frosted Circle Vintage-Style Bulb Sprayer Bottle with Tassel",
+  "variants": [
+   {
+    "id": 67575556014372,
+    "sku": "GB-CIR-FRS-50ML-ASP-01"
+   },
+   {
+    "id": 67575556047140,
+    "sku": "GB-CIR-FRS-50ML-ASP-05"
+   },
+   {
+    "id": 67575556079908,
+    "sku": "GB-CIR-FRS-50ML-ASP-03"
+   },
+   {
+    "id": 67575556112676,
+    "sku": "GB-CIR-FRS-50ML-ASP-04"
+   },
+   {
+    "id": 67575556145444,
+    "sku": "GB-CIR-FRS-50ML-ASP-09"
+   },
+   {
+    "id": 67575556178212,
+    "sku": "GB-CIR-FRS-50ML-ASP-07"
+   },
+   {
+    "id": 67575556210980,
+    "sku": "GB-CIR-FRS-50ML-ASP-08"
+   },
+   {
+    "id": 67575556243748,
+    "sku": "GB-CIR-FRS-50ML-ASP-06"
+   },
+   {
+    "id": 67575556276516,
+    "sku": "GB-CIR-FRS-50ML-ASP-02"
+   }
+  ]
+ },
+ {
+  "at": "2026-09-29T08:18:00.271Z",
+  "step": "rename-old",
+  "product": 10433894908196,
+  "variant": 53343642976548,
+  "from": "GB-ELG-CLR-60ML-ASP-02",
+  "to": "GB-ELG-CLR-60ML-ASP-02-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:18:01.345Z",
+  "step": "rename-old",
+  "product": 10433894908196,
+  "variant": 53343643009316,
+  "from": "GB-ELG-CLR-60ML-ASP-05",
+  "to": "GB-ELG-CLR-60ML-ASP-05-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:18:02.357Z",
+  "step": "rename-old",
+  "product": 10433894908196,
+  "variant": 53343643042084,
+  "from": "GB-ELG-CLR-60ML-ASP-04",
+  "to": "GB-ELG-CLR-60ML-ASP-04-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:18:03.389Z",
+  "step": "rename-old",
+  "product": 10433894908196,
+  "variant": 53343643074852,
+  "from": "GB-ELG-CLR-60ML-ASP-03",
+  "to": "GB-ELG-CLR-60ML-ASP-03-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:18:04.440Z",
+  "step": "rename-old",
+  "product": 10433894908196,
+  "variant": 53343643107620,
+  "from": "GB-ELG-CLR-60ML-ASP-01",
+  "to": "GB-ELG-CLR-60ML-ASP-01-MOVED-TO-TASSEL"
+ },
+ {
+  "at": "2026-09-29T08:18:05.619Z",
+  "step": "add-variant",
+  "product": 10433895399716,
+  "handle": "elegant-60ml-clear-18-415-antiquespray-tassel",
+  "variant": 67575556473124,
+  "sku": "GB-ELG-CLR-60ML-ASP-02",
+  "from": 53343642976548
+ },
+ {
+  "at": "2026-09-29T08:18:06.751Z",
+  "step": "add-variant",
+  "product": 10433895399716,
+  "handle": "elegant-60ml-clear-18-415-antiquespray-tassel",
+  "variant": 67575556538660,
+  "sku": "GB-ELG-CLR-60ML-ASP-05",
+  "from": 53343643009316
+ },
+ {
+  "at": "2026-09-29T08:18:07.916Z",
+  "step": "add-variant",
+  "product": 10433895399716,
+  "handle": "elegant-60ml-clear-18-415-antiquespray-tassel",
+  "variant": 67575556604196,
+  "sku": "GB-ELG-CLR-60ML-ASP-04",
+  "from": 53343643042084
+ },
+ {
+  "at": "2026-09-29T08:18:09.118Z",
+  "step": "add-variant",
+  "product": 10433895399716,
+  "handle": "elegant-60ml-clear-18-415-antiquespray-tassel",
+  "variant": 67575556669732,
+  "sku": "GB-ELG-CLR-60ML-ASP-03",
+  "from": 53343643074852
+ },
+ {
+  "at": "2026-09-29T08:18:10.293Z",
+  "step": "add-variant",
+  "product": 10433895399716,
+  "handle": "elegant-60ml-clear-18-415-antiquespray-tassel",
+  "variant": 67575556735268,
+  "sku": "GB-ELG-CLR-60ML-ASP-01",
+  "from": 53343643107620
+ }
+]

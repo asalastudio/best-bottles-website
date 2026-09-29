@@ -40,6 +40,7 @@ import { resolveItemDescriptions } from "@/lib/products/item-description/resolve
 import { collectionDescription, collectionFor, derivePicks, resolveVariant, type SiblingGlassGroup } from "@/lib/products/pdp-redesign/model";
 import type { KitLike } from "@/lib/products/pdp-redesign/stage";
 import { loadRegisterKits } from "@/lib/register/load";
+import { loadGlassStageEnvelopes } from "@/lib/register/stage-envelopes";
 import { isSoldOutStockStatus } from "@/lib/checkout";
 
 export const dynamic = "force-dynamic";
@@ -149,6 +150,9 @@ function redesignApplies(slug: string, data: ProductGroupPayload): boolean {
     return parseProductSlug(slug) !== null;
 }
 
+/** The fitment groups a cap-only glass is also sold as, in the strip's order (spray, then roller). */
+const STRIP_FITMENT_CLOSURES = ["finemist", "rollon"] as const;
+
 async function loadRedesignPayload(
     data: ProductGroupPayload,
     activeSlug: string,
@@ -197,6 +201,11 @@ async function loadRedesignPayload(
         if (pair.websiteSku) kitsBySku[pair.websiteSku] = kit;
         if (pair.graceSku) kitsBySku[pair.graceSku] = kit;
     }
+    // One frame per glass: the bounds every SKU of this glass needs, across all its colours and
+    // closures (cached per glass), read while the published kits load.
+    const stageEnvelopesLoad = Object.keys(registerKits).length
+        ? loadGlassStageEnvelopes({ family: data.group.family, capacityMl: data.group.capacityMl ?? null })
+        : Promise.resolve({});
     for (let index = 0; index < pending.length; index += 50) {
         try {
             const chunk = await convex.query(api.productKits.forSkus, { pairs: pending.slice(index, index + 50) });
@@ -210,6 +219,27 @@ async function loadRedesignPayload(
             }
         } catch (error) {
             console.error("[pdp] kit lookup failed; rendering without layers", error);
+        }
+    }
+
+    // A cap-only group has no fitment of its own: the Build Your Bottle strip's fitment tile shows this
+    // glass's sprayer and both roller inserts, and its cap tile adds the roll-on caps that come with the
+    // rollers (Jordan 2026-09-28), from every SKU of those groups.
+    const fitmentKits: KitLike[] = [];
+    if (parseProductSlug(activeSlug)?.closure === null) {
+        const groups = await Promise.all(STRIP_FITMENT_CLOSURES.map(async (closure) => {
+            try {
+                const payload = await convex.query(api.products.getProductGroup, { slug: `${activeSlug}-${closure}` }) as ProductGroupPayload | null;
+                return payload ? filterVariantsForGroupIntent(`${activeSlug}-${closure}`, filterVariantsForProductGroup(payload.group, payload.variants)) : [];
+            } catch {
+                return [];
+            }
+        }));
+        const found = groups.flat().filter((variant) => Boolean(variant.graceSku));
+        const kits = found.length ? await loadRegisterKits(convex, found.map((variant) => variant.graceSku)).catch(() => ({} as Record<string, KitLike>)) : {};
+        for (const variant of found) {
+            const kit = kits[variant.graceSku] ?? (variant.websiteSku ? kits[variant.websiteSku] : undefined);
+            if (kit) fitmentKits.push(kit as KitLike);
         }
     }
 
@@ -230,6 +260,8 @@ async function loadRedesignPayload(
         variants: data.variants,
         siblings,
         kitsBySku,
+        fitmentKits,
+        stageEnvelopes: await stageEnvelopesLoad,
         platesBySku,
         descriptions: resolveItemDescriptions(data.variants),
         collection,

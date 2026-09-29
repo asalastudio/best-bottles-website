@@ -15,6 +15,10 @@
  */
 import { compose, footY, frameFromDatum, type Frame, type LayerGeometry, type PlateGeometry } from "./compose";
 import { stackedExplodeOffsets } from "@/lib/products/exploded-stack";
+import { ELEGANT_PHOTO_BODIES } from "./elegant-photo-bodies";
+import { detachedOvercap } from "./detached-overcaps";
+import type { DetachedLook } from "@/lib/products/kit-frame";
+import { CYLINDER9_PILOT_LAYER_HASHES } from "./cylinder9-pilot-layers";
 
 export type StageDatum = { axisX: number; seatY: number; baselineY: number };
 /** The slots a kit part can occupy (convex/productKits.ts and the register's registerSlotV agree). */
@@ -26,13 +30,13 @@ export type Bounds = { left: number; top: number; right: number; bottom: number 
 export const STAGE_CANVAS = { width: 1000, height: 1100 } as const;
 
 /**
- * Where a body stands on the canvas. The pilot datum is the frame most of the
- * 9 mL Cylinder's legacy kits share (data/register/phase4/parity-pilot.json
- * `datum`), so the switch-over keeps the bottle where customers saw it. A body
- * with no entry stands by `datumFromPlate`.
+ * Where a body stands on the canvas. A body with no entry stands by `datumFromPlate`.
+ * The 9 mL Cylinder stands at the storefront's true scale, 10.5 px/mm like every other body:
+ * its Blender plates (data/register/blender-9ml/measurements.json) measure 71.6 mm seat to foot,
+ * so the seat sits 752 px above the shared baseline. (The Phase 3 pilot stood at 286 for its 73.8 mm plate.)
  */
 export const STAGE_DATUMS: Readonly<Record<string, StageDatum>> = {
-    "cylinder-9ml-17-415": { axisX: 500, seatY: 286, baselineY: 1061 },
+    "cylinder-9ml-17-415": { axisX: 500, seatY: 309, baselineY: 1061 },
 };
 
 /** The pilot frame's scale: 775 px for 73.8 mm of glass. */
@@ -59,7 +63,19 @@ export type RegisterPlate = PlateGeometry & { plateKey: string; bodyId: string; 
 /** Which stage views a layer is for: a seated insert (clipped at the rim) for CAP ON and SIDECAR, its full plug for EXPLODED. */
 export type LayerUsage = "seated" | "exploded";
 export type StageViewName = "sidecar" | "capon" | "exploded";
-export type RegisterLayer = LayerGeometry & { slot: KitSlot; url: string; approved: boolean; usage?: LayerUsage | null };
+/**
+ * `glass`: a see-through layer rendered behind one plate glass ("Clear", "Amber", ...); drawn only on that glass. Absent = every glass.
+ * `bodyId`: a layer made for one body. A component with layers for the assembly's body draws only those; other bodies keep its generic layers.
+ */
+export type RegisterLayer = LayerGeometry & { slot: KitSlot; url: string; approved: boolean; usage?: LayerUsage | null; glass?: string | null; bodyId?: string | null };
+
+/** The layers a component draws on one assembly: its layers for that body if it has any, else its generic ones; then the glass filter. */
+export function layersFor(component: { layers: RegisterLayer[] }, assembly: { bodyId: string; glass: string }): RegisterLayer[] {
+    const own = component.layers.filter((layer) => layer.bodyId === assembly.bodyId);
+    const pool = own.length ? own : component.layers.filter((layer) => !layer.bodyId);
+    // A see-through layer belongs to the glass it was rendered behind; another glass draws its own.
+    return pool.filter((layer) => !layer.glass || layer.glass === assembly.glass);
+}
 export type RegisterComponent = { componentId: string; type: string; layers: RegisterLayer[]; approved: boolean };
 export type RegisterBody = {
     bodyId: string; family: string; capacityMl: number | null; neck: string;
@@ -98,6 +114,8 @@ export type RegisterKitPart = {
     componentId: string | null;
     /** The views this part is drawn in; absent = every view. */
     views?: StageViewName[];
+    /** How the part looks off the bottle, when that differs (src/lib/register/detached-overcaps.ts). */
+    detached?: DetachedLook | null;
 };
 
 export type RegisterKitMeta = {
@@ -107,6 +125,8 @@ export type RegisterKitMeta = {
     datum: StageDatum;
     pxPerMm: number;
     componentIds: string[];
+    /** Exact measured 9 mL hardware selected from the promoted register row. */
+    verifiedPilotLayers?: true;
 };
 
 export type RegisterKit = {
@@ -158,7 +178,7 @@ export function kitFromRegister(
     for (const part of assembly.parts) {
         const component = payload.components[part.componentId];
         if (!component) return null;
-        for (const layer of component.layers) layers.push({ ...layer, componentId: part.componentId, role: part.role });
+        for (const layer of layersFor(component, assembly)) layers.push({ ...layer, componentId: part.componentId, role: part.role });
     }
     if (layers.length === 0) return null;
 
@@ -167,7 +187,7 @@ export function kitFromRegister(
     const frame = frameFromDatum(canvas, datum, plate);
     const placements = compose(plate, layers, frame);
 
-    const parts: RegisterKitPart[] = placements.map((placement) => {
+    let parts: RegisterKitPart[] = placements.map((placement) => {
         const box: PartBox = { x: round(placement.x), y: round(placement.y), width: round(placement.width), height: round(placement.height) };
         const isPlate = placement.kind === "plate";
         const source = placement.source as PlacedLayer | RegisterPlate;
@@ -191,6 +211,50 @@ export function kitFromRegister(
             componentId: layer?.componentId ?? null,
             ...(layer?.usage === "seated" ? { views: ["sidecar", "capon"] as StageViewName[] } : layer?.usage === "exploded" ? { views: ["exploded"] as StageViewName[] } : {}),
         };
+    });
+    const photoBody = ELEGANT_PHOTO_BODIES[assembly.plateKey];
+    const bodyPart = photoBody && parts.find((part) => part.slot === "body");
+    if (bodyPart && photoBody) {
+        // Map the photo's alpha bounds to the register's shoulder/foot datum
+        // without changing its aspect ratio. Every finish of this glass then
+        // shares the same photographed body and the existing component boxes.
+        const target = bodyPart.bounds;
+        const scale = (target.bottom - target.top) / (photoBody.bounds.bottom - photoBody.bounds.top);
+        const center = (target.left + target.right) / 2;
+        const photoCenter = (photoBody.bounds.left + photoBody.bounds.right) / 2;
+        const x = center - photoCenter * scale;
+        const y = target.top - photoBody.bounds.top * scale;
+        bodyPart.box = { x: round(x), y: round(y), width: round(photoBody.width * scale), height: round(photoBody.height * scale) };
+        bodyPart.bounds = {
+            left: round(x + photoBody.bounds.left * scale), top: round(y + photoBody.bounds.top * scale),
+            right: round(x + photoBody.bounds.right * scale), bottom: round(y + photoBody.bounds.bottom * scale),
+        };
+        bodyPart.image = { ...bodyPart.image, url: photoBody.url, width: photoBody.width, height: photoBody.height };
+        // The register's broad "diptube" crops still contain fragments of the
+        // unfinished glass wall. Keep only the narrow, physical tube layers.
+        const glassWidth = bodyPart.bounds.right - bodyPart.bounds.left;
+        const narrowTubes = parts.filter((part) => part.slot === "diptube" && part.box.width <= glassWidth * 0.25);
+        parts = parts.filter((part) => part.slot !== "diptube");
+        // The clean central tube was previously EXPLODED-only; draw it inside
+        // the photographed glass for the assembled PDP and Builder as well.
+        if (narrowTubes.length) parts.push({ ...narrowTubes[0], views: undefined });
+        // Promoted component records may include a second render of the same
+        // sprayer, pump, or overcap from a different source and scale. The original
+        // photographed part is first in each slot; stacking later copies over
+        // it creates the doubled metal and displaced outlines seen on Elegant.
+        const seenHardware = new Set<string>();
+        parts = parts.filter((part) => {
+            if (!part.componentId || !["sprayer", "pump", "overcap"].includes(part.slot)) return true;
+            const key = `${part.componentId}:${part.slot}:${part.views?.join(",") ?? "all"}`;
+            if (seenHardware.has(key)) return false;
+            seenHardware.add(key);
+            return true;
+        });
+    }
+    // A clear overcap parked or lifted off the bottle is drawn as the empty cover, not the capped photograph's cover over its pump.
+    parts = parts.map((part) => {
+        const detached = detachedOvercap(part);
+        return detached ? { ...part, detached } : part;
     });
     // EXPLODED offsets are computed over the parts of each view separately, so a seated insert and its full plug never stack against each other.
     const lifts = stackedExplodeOffsets(parts.filter((part) => !part.views || part.views.includes("exploded")));
@@ -226,12 +290,48 @@ export function kitsFromRegister(payload: RegisterStagePayload, options: { canva
 }
 
 /**
- * The kit as a stage without an EXPLODED view draws it (Build Your Bottle):
- * a seated insert stays, its full plug (an EXPLODED-only layer) is dropped, so
- * the two never paint on top of each other in an assembled preview.
+ * The promoted 9 mL register rows accumulated hardware crops from several
+ * bottle-color PSDs. Some "diptube" and "roller" crops contain an entire
+ * amber, cobalt, frosted or Swirl bottle. Keep the measured Phase 3 hardware
+ * set and the reviewed short silver-ball insert; if an expected layer is
+ * missing, leave this SKU to the caller's published-kit fallback.
  */
-export function assembledKit<T extends { parts: Array<{ views?: StageViewName[] }> }>(kit: T): T {
-    return { ...kit, parts: kit.parts.filter((part) => !part.views || part.views.includes("capon")) };
+export function reconcileCylinder9Kit(kit: RegisterKit): RegisterKit | null {
+    if (kit.register.bodyId !== "cylinder-9ml-17-415") return kit;
+    const expected = new Map<string, Set<string>>();
+    for (const componentId of kit.register.componentIds) {
+        const hashes = CYLINDER9_PILOT_LAYER_HASHES[componentId];
+        if (!hashes) return null;
+        expected.set(componentId, new Set(hashes));
+    }
+    const selected = kit.parts.filter((part) => {
+        if (!part.componentId) return true;
+        const hash = /([a-f0-9]{64})\.png(?:\?|$)/.exec(part.image.url)?.[1];
+        return hash !== undefined && expected.get(part.componentId)?.has(hash);
+    });
+    for (const [componentId, hashes] of expected) {
+        const found = new Set(selected.filter((part) => part.componentId === componentId)
+            .map((part) => /([a-f0-9]{64})\.png(?:\?|$)/.exec(part.image.url)?.[1]));
+        if ([...hashes].some((hash) => !found.has(hash))) return null;
+    }
+    return { ...kit, parts: selected, register: { ...kit.register, verifiedPilotLayers: true } };
+}
+
+/** The Builder draws assembled layers only; the 9 mL pilot has its own reviewed short roller insert. */
+export function assembledKit<T extends { parts: Array<{ slot: KitSlot; componentId: string | null; views?: StageViewName[] }>; register?: { bodyId: string; verifiedPilotLayers?: true } }>(kit: T): T {
+    const cylinder9Pilot = kit.register?.verifiedPilotLayers === true;
+    const baseRollers = new Set(kit.parts
+        .filter((part) => part.slot === "roller" && part.componentId && !part.views)
+        .map((part) => part.componentId));
+    return {
+        ...kit,
+        parts: kit.parts.filter((part) => {
+            if (part.views && !part.views.includes("capon")) return false;
+            // The original short insert already shows the seated roller. An additional
+            // seated photo of the same component paints its long plug through the glass.
+            return cylinder9Pilot || part.slot !== "roller" || !part.views || !baseRollers.has(part.componentId);
+        }),
+    };
 }
 
 /** The SVG/CSS transform that puts a boxed part on the canvas; legacy full-canvas parts need none. */

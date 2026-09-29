@@ -37,6 +37,24 @@ describe("catalog top previews", () => {
     it("shows cap finishes within one roller assembly, without doubling the count", () => {
         expect(getCatalogCardVariantPreviews(variants, options).map(v => v.id)).toEqual(["metal-black", "metal-gold"]);
     });
+    it("swaps the two installed applicators within each 1 ml vial glass color", () => {
+        for (const [glass, skus] of [
+            ["Amber", ["GB1mlAmbVBlk", "GB1mlAmbVialWht"]],
+            ["Clear", ["GB1mlVBlk", "GB1mlVWht"]],
+        ] as const) {
+            const previews = getCatalogCardVariantPreviews(skus.map((websiteSku, index) => ({
+                id: websiteSku,
+                websiteSku,
+                color: glass,
+                capColor: index === 0 ? "Black" : "White",
+                capStyle: index === 0 ? "Applicator" : "Tall",
+                imageUrl: `https://cdn.shopify.com/${websiteSku}.png`,
+            })), { productTitle: `1 ml ${glass} Vial`, groupColor: glass, productHref: `/products/vial-1ml-${glass.toLowerCase()}-Plug` });
+            expect(previews.map((preview) => preview.label)).toEqual(["Black Applicator", "White Applicator"]);
+            expect(previews.map((preview) => preview.imageUrl)).toEqual(skus.map((sku) => `/images/pdp/assembled-vials-2026-09-27/${sku}.png`));
+            expect(previews.map((preview) => new URL(productCardVariantHref(`/products/vial-1ml-${glass.toLowerCase()}-Plug`, preview), "https://bestbottles.com").searchParams.get("sku"))).toEqual(skus);
+        }
+    });
     it("respects a material filter and ranks a searched finish first", () => {
         const result = getCatalogCardVariantPreviews(variants, { ...options, rollerMaterials: ["plastic"], search: "gold cylinder" });
         expect(result.map(v => v.id)).toEqual(["plastic-gold", "plastic-black"]);

@@ -1968,7 +1968,7 @@
   "pxPerMm": 12.1162,
   "anchors": {
    "axisX": 364.5,
-   "seatY": 196,
+   "seatY": 212,
    "shoulderY": 427,
    "baselineY": 2096,
    "barrelAxisX": 368.0,
@@ -3162,7 +3162,7 @@
   "pxPerMm": 16.6456,
   "anchors": {
    "axisX": 643.0,
-   "seatY": 113,
+   "seatY": 151,
    "shoulderY": 446,
    "baselineY": 2095,
    "barrelAxisX": 647.0,
@@ -4847,11 +4847,11 @@
   }
  },
  {
-  "plateKey": "rectangle-10ml-13-415|Clear",
-  "bodyId": "rectangle-10ml-13-415",
+  "plateKey": "tall-rectangle-10ml-13-415|Clear",
+  "bodyId": "tall-rectangle-10ml-13-415",
   "glass": "Clear",
   "status": "ok",
-  "file": "final-lit/rectangle-10ml-13-415/clear.png",
+  "file": "final-lit/tall-rectangle-10ml-13-415/clear.png",
   "width": 736,
   "height": 2192,
   "sha256": "a2cc5ff0520a9a58785027e05dc42ebe6615e14575ec32a84cc24da6a436d60b",
@@ -4913,7 +4913,10 @@
    "prompt": "1. Keep geometry locked to the first image\n2. Lighting and finish quality from the second image; the glass stays colourless and clear\n3. Enhance the quality",
    "extra": null,
    "pass": "lit"
-  }
+  },
+  "notes": [
+   "2026-09-28: re-keyed from rectangle-10ml-13-415; this is the Tall Rectangle glass (16. Tall Rectangular 10ml), the footed rows moved to footed-rectangle-10ml-13-415"
+  ]
  },
  {
   "plateKey": "rectangle-9ml-Ground|Clear",
@@ -7018,6 +7021,74 @@
    "model": "gpt-image-2.5-sunburst",
    "quality": "high",
    "costUsd": 0.07,
+   "prompt": "1. Keep geometry locked to the first image\n2. Lighting and finish quality from the second image; the glass stays colourless and clear\n3. Enhance the quality",
+   "extra": null,
+   "pass": "lit"
+  }
+ },
+ {
+  "plateKey": "footed-rectangle-10ml-13-415|Clear",
+  "bodyId": "footed-rectangle-10ml-13-415",
+  "glass": "Clear",
+  "status": "ok",
+  "file": "final-lit/footed-rectangle-10ml-13-415/clear.png",
+  "width": 1344,
+  "height": 2192,
+  "sha256": "9467f39302483f3f4fd7be936a93c986dbe1eb3d1911d3e53c6a0105425665a2",
+  "pxPerMm": 37.208,
+  "anchors": {
+   "axisX": 656.5,
+   "seatY": 134,
+   "shoulderY": 750,
+   "baselineY": 2097,
+   "barrelAxisX": 672.0
+  },
+  "checks": {
+   "rawIoU": 0.9873,
+   "fittedIoU": 0.9887,
+   "edgeP95Px": 11.2,
+   "edgeMaxPx": 36.7,
+   "interiorHolePct": 0.04,
+   "edges": "render outline",
+   "widthMm": 29.46,
+   "referenceWidthMm": 29.0,
+   "widthErrorPct": 1.6
+  },
+  "measurements": {
+   "heightBareMm": 50.0,
+   "diameterMm": 29.0,
+   "widthMm": 29.0,
+   "apparentHeightMm": 52.76,
+   "dimsConfidence": "convex-only"
+  },
+  "scale": {
+   "basis": "height",
+   "byHeight": 37.208,
+   "byWidth": 37.7931,
+   "gapPct": -1.5,
+   "flag": false
+  },
+  "source": {
+   "masterGlass": "Clear",
+   "role": "reference glass (clear), lit",
+   "cut": "PSD layer Layer 4 (white ground stripped)",
+   "psd": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/1. Footed Rect 10ml (Uncapped) PSD/1. GBRect10BlkSht.psd",
+   "derivedFrom": "67da4515fc227ad82c0dbc73be69100d3b27e232dc7566b20ab9a30aa9492da4",
+   "neckEdit": null
+  },
+  "bakedOnBone": {
+   "bone": "#F5F3EF",
+   "paperWhite": [
+    252,
+    252,
+    252
+   ],
+   "neutral": true
+  },
+  "render": {
+   "model": "gpt-image-2.5-sunburst",
+   "quality": "high",
+   "costUsd": 0.0755,
    "prompt": "1. Keep geometry locked to the first image\n2. Lighting and finish quality from the second image; the glass stays colourless and clear\n3. Enhance the quality",
    "extra": null,
    "pass": "lit"

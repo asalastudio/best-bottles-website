@@ -12,7 +12,7 @@
  * geometry. Commerce goes through the shared cart, so "In this order" is the
  * cart's own view of this page's lines.
  */
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import LocaleLink from "@/components/LocaleLink";
 import Navbar from "@/components/Navbar";
@@ -31,8 +31,8 @@ import {
 } from "@/lib/grace/pdpPlateSwap";
 import type { PlateRef } from "@/lib/paper-doll/plates";
 import type { ItemDescription } from "@/lib/products/item-description/resolve";
-import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
-import { isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
+import { getMaterialSwatchBackground, getMaterialSwatchStyle } from "@/lib/products/material-swatches";
+import { pdpFallbackMedia } from "@/lib/products/pdp-redesign/fallback-media";
 import { SITE_NAME } from "@/lib/seo";
 import { formatVolumeQtyRange, resolveQuotedUnitPrice } from "@/lib/volumePricing";
 import {
@@ -65,12 +65,14 @@ import {
     type RollerId,
     type SiblingGlassGroup,
 } from "@/lib/products/pdp-redesign/model";
-import { availableViews, type KitLike, type StageView } from "@/lib/products/pdp-redesign/stage";
+import { availableViews, finishPart, glassFrame, type KitLike, type StageView } from "@/lib/products/pdp-redesign/stage";
+import type { StageBounds } from "@/lib/products/pdp-stage-frame";
 import styles from "./pdp.module.css";
 import PdpBuyBox, { type AddState } from "./PdpBuyBox";
 import PdpStage from "./PdpStage";
 import { PdpBuildStrip, PdpCollectionBand, PdpOrderLines, PdpProductInfo, PdpStickyBar, PdpTechSheet, type OrderLineView } from "./PdpSections";
-import { drawingFor, drawingStyleFromQuery } from "@/lib/products/pdp-redesign/drawings";
+import { drawingBodyId, drawingFor, drawingStyleFromQuery } from "@/lib/products/pdp-redesign/drawings";
+import { technicalDrawingFor } from "@/lib/products/pdp-redesign/tech-drawing";
 
 export type PdpRedesignPayload = {
     slug: string;
@@ -79,6 +81,10 @@ export type PdpRedesignPayload = {
     siblings: SiblingGlassGroup[];
     /** Published kits for this group's variants and each sibling's primary SKU, by website SKU and Grace SKU. */
     kitsBySku: Record<string, KitLike | null>;
+    /** For a cap-only group: its glass with a sprayer and with a roller (the strip's fitment tile). */
+    fitmentKits?: KitLike[];
+    /** By frame key (register body, or one of its hanging tops): the bounds every SKU of the glass needs, on every page it sells on (src/lib/register/stage-envelopes.ts). */
+    stageEnvelopes?: Record<string, StageBounds>;
     platesBySku: Record<string, PlateRef>;
     /** Curated or composed copy, by website SKU. */
     descriptions: Record<string, ItemDescription>;
@@ -88,17 +94,23 @@ export type PdpRedesignPayload = {
 
 const ADDED_FLASH_MS = 1800;
 
+/**
+ * The finish chip beside the selection name and on each order line: a close crop of the closure's
+ * own render (the cap, or a sprayer's overcap), so the chip shows the material the canvas shows
+ * (Jordan 2026-09-28). The drawn swatch sits under it while it loads and stands in for a SKU with
+ * no drawn closure.
+ */
+function materialSwatch(kit: KitLike | null | undefined, name: string | null | undefined): CSSProperties {
+    const part = finishPart(kit);
+    if (!part) return getMaterialSwatchStyle(name, {});
+    const drawn = getMaterialSwatchBackground(name);
+    // The cap's whole face, a hair inside its edges, so a dotted cap's three columns of dots sit inside the circle.
+    return { background: `url("${part.image.url}") 50% 50% / 96% auto no-repeat${drawn ? `, ${drawn}` : ""}` };
+}
+
 function kitFor(kits: Record<string, KitLike | null>, variant: { websiteSku?: string | null; graceSku?: string | null } | null | undefined): KitLike | null {
     if (!variant) return null;
     return (variant.websiteSku ? kits[variant.websiteSku] : null) ?? (variant.graceSku ? kits[variant.graceSku] : null) ?? null;
-}
-
-/** A photograph the stage may fall back to: never a Sanity render, never a 2020 bestbottles.com store image (the classic page blocks those too). */
-function usableImage(url: string | null | undefined): string | null {
-    if (!url) return null;
-    if (/cdn\.sanity\.io/.test(url)) return null;
-    if (isLegacyBestBottlesImageUrl(url)) return null;
-    return url;
 }
 
 /** The browser tab follows the pick; the server titled the page for the SKU it rendered. */
@@ -106,7 +118,7 @@ function renameTab(text: string): void {
     document.title = text;
 }
 
-export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, platesBySku, descriptions, collection, familyHref }: PdpRedesignPayload) {
+export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, fitmentKits = [], stageEnvelopes, platesBySku, descriptions, collection, familyHref }: PdpRedesignPayload) {
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
@@ -132,6 +144,12 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     const glasses = useMemo(() => glassOptions(group, siblings), [group, siblings]);
     const activeGlass = glasses.find((glass) => glass.active) ?? glasses[0] ?? null;
     const rollerOption = rollers.find((option) => option.id === activeRoller) ?? null;
+    const rollerImages = Object.fromEntries(rollers.flatMap((option) => {
+        const variant = resolveVariant(variants, { roller: option.id, cap: picks.cap });
+        const rollerPart = kitFor(kitsBySku, variant)?.parts.find((part) =>
+            part.slot === "roller" && (!part.views || part.views.includes("exploded")));
+        return rollerPart?.image.url ? [[option.id, rollerPart.image.url]] : [];
+    }));
     const fitment = fitmentLabel(selected);
     const kit = kitFor(kitsBySku, selected);
     const glassBodyKit = useCallback((glassSlug: string): KitLike | null => {
@@ -149,6 +167,12 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         applicator: selected?.applicator ?? null, websiteSku: selected?.websiteSku ?? null,
     }), [group.family, group.capacityMl, group.color, selected?.applicator, selected?.websiteSku]);
     const views = useMemo(() => availableViews(kit, stageContext), [kit, stageContext]);
+    // One frame for every SKU of the glass, so a cap or fitment swap never resizes it.
+    const frame = useMemo(() => glassFrame(
+        { kit, applicator: selected?.applicator },
+        variants.map((variant) => ({ kit: kitFor(kitsBySku, variant), applicator: variant.applicator })),
+        stageEnvelopes,
+    ), [kit, selected?.applicator, variants, kitsBySku, stageEnvelopes]);
     // The requested view survives a SKU change; a SKU without layers shows SIDECAR until one returns.
     const shownView: StageView = views.includes(view) ? view : "sidecar";
 
@@ -318,13 +342,13 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
             const label = lineLabel(glassShortLabel(item.color), roller, roller ? null : fitmentLabel({ applicator: item.applicator ?? null } as ProductVariant), item.capColor ?? null);
             return {
                 key: item.graceSku,
-                swatchStyle: getMaterialSwatchStyle(item.capColor, {}),
+                swatchStyle: materialSwatch(kitFor(kitsBySku, item), item.capColor),
                 label,
                 qty: item.quantity,
                 total: rate * item.quantity,
                 onRemove: () => { removeItem(item.graceSku); analytics.cartItemRemoved({ sku: item.graceSku, name: item.itemName }); },
             };
-        }), [cartItems, pageSlugs, rollers, removeItem]);
+        }), [cartItems, pageSlugs, rollers, removeItem, kitsBySku]);
     const orderTotal = orderLines.reduce((sum, line) => sum + line.total, 0);
     const minimum = useMemo(() => checkoutMinimum(cartItems), [cartItems]);
 
@@ -338,9 +362,14 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     const capacityLabel = `${group.capacityMl != null ? `${group.capacityMl} ml` : group.capacity ?? ""} ${group.family ?? ""}`.trim();
     const bodyKit = kit ?? kitFor(kitsBySku, { websiteSku: group.primaryWebsiteSku, graceSku: group.primaryGraceSku });
     const capKits = caps.map((cap) => kitFor(kitsBySku, cap.variants[0])).filter((entry): entry is KitLike => Boolean(entry));
+    const groupKits = variants.map((variant) => kitFor(kitsBySku, variant)).filter((entry): entry is KitLike => Boolean(entry));
     const plate = selected ? platesBySku[selected.graceSku] ?? (selected.websiteSku ? platesBySku[selected.websiteSku] : undefined) : undefined;
-    const fallbackImage = usableImage(selected?.imageUrl) ?? plate?.image ?? usableImage(group.heroImageUrl) ?? null;
-    const swatchStyle = getMaterialSwatchStyle(activeCap?.swatchName ?? capName, {});
+    const fallbackMedia = pdpFallbackMedia({
+        groupSlug: slug,
+        variant: selected,
+        plateImageUrl: plate?.image ?? null,
+    });
+    const swatchStyle = materialSwatch(kit, activeCap?.swatchName ?? capName);
     const selectionName = `${glassLabel(group.color)} glass${capName ? ` · ${capName} cap` : fitment ? ` · ${fitment}` : ""}`;
     const stickyLine = `${qty.toLocaleString("en-US")} × ${unitPrice != null ? formatPrice(unitPrice) : "—"} · ${lineLabel(glassName, rollerOption, rollerOption ? null : fitment, capName)}`;
 
@@ -375,7 +404,9 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                         onViewChange={onView}
                         kit={kit}
                         context={stageContext}
-                        fallbackImageUrl={fallbackImage}
+                        glassFrame={frame}
+                        fallbackImageUrls={fallbackMedia.images}
+                        fallbackBodyImageUrl={fallbackMedia.bodyImageUrl}
                         fallbackAlt={variantTitle(title, option)}
                         callouts={buildCallouts(selected, capName)}
                         caps={caps.map((cap) => ({
@@ -418,7 +449,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                             selectionName={selectionName}
                             rollers={rollers}
                             activeRoller={activeRoller}
-                            rollerUnitPrice={(id) => unitPriceAt(resolveVariant(variants, { roller: id, cap: picks.cap }), qty)}
+                            rollerImages={rollerImages}
                             onRoller={onRoller}
                             tiers={tiers}
                             qty={qty}
@@ -449,12 +480,18 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                     glassLabel={glassLabel(group.color)}
                     neck={group.neckThreadSize ?? null}
                     bodyKit={bodyKit}
-                    fitmentKit={kit}
+                    groupKits={groupKits}
+                    fitmentKits={fitmentKits}
                     capKits={capKits}
                     href={buildYourBottleHref(group, collection?.band ?? null)}
                 />
 
-                <PdpTechSheet rows={techSheetRows(selected, group)} onPrint={() => window.print()} drawing={drawingFor(slug, selected, drawingStyleFromQuery(searchParams.get("drawing")))} />
+                <PdpTechSheet
+                    rows={techSheetRows(selected, group)}
+                    pdfHref={`/api/pdf/tech-sheet/${encodeURIComponent(slug)}${selected?.graceSku ? `?sku=${encodeURIComponent(selected.graceSku)}` : ""}`}
+                    drawing={drawingFor(slug, selected, drawingStyleFromQuery(searchParams.get("drawing")))}
+                    technical={technicalDrawingFor(drawingBodyId(slug))}
+                />
 
                 {collection && (
                     <PdpCollectionBand band={collection.band} description={collection.description} familyHref={familyHref} familyLabel={group.family} />

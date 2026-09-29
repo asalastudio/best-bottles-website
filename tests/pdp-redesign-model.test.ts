@@ -7,6 +7,7 @@ import {
     collectionDescription,
     collectionFor,
     derivePicks,
+    fitmentLabel,
     glassOptions,
     lineLabel,
     optionLabel,
@@ -131,6 +132,16 @@ describe("copy", () => {
         expect(pageTitle(GROUP, "Metal roller")).toBe("9 ml Cobalt Blue Cylinder Roll-On Bottle");
     });
 
+    it("titles a bulb sprayer page as the tab title does, tassel included", () => {
+        const diva = { ...GROUP, family: "Diva", capacityMl: 46, color: "Clear" };
+        expect(pageTitle(diva, fitmentLabel(variant({ websiteSku: "GBDiva46AnSpBlk", graceSku: "A", applicator: "Vintage Bulb Sprayer" }))))
+            .toBe("46 ml Clear Diva Vintage-Style Bulb Sprayer Bottle");
+        expect(pageTitle(diva, fitmentLabel(variant({ websiteSku: "GBDiva46AnSpTslBlk", graceSku: "B", applicator: "Vintage Bulb Sprayer with Tassel" }))))
+            .toBe("46 ml Clear Diva Vintage-Style Bulb Sprayer Bottle with Tassel");
+        expect(pageTitle(diva, fitmentLabel(variant({ websiteSku: "GBDiva46SpryBlk", graceSku: "C", applicator: "Fine Mist Sprayer" }))))
+            .toBe("46 ml Clear Diva Spray Bottle");
+    });
+
     it("names the selected option with the title, whatever part the page sells", () => {
         const roller = rollerOptions(VARIANTS)[0];
         expect(optionLabel(roller, "Metal roller", "Black with Dots")).toBe("Metal Ball, Black with Dots Cap");
@@ -164,7 +175,7 @@ describe("exploded callouts (render only what the field holds)", () => {
         const rows = callouts(VARIANTS[0], "Black with Dots");
         expect(rows.map((row) => row.key)).toEqual(["cap", "fitment", "neck", "body"]);
         expect(rows[0]).toEqual({ key: "cap", title: "CAP", line1: "Black with Dots", line2: "Fits 17-415" });
-        expect(rows[1]).toEqual({ key: "fitment", title: "FITMENT", line1: "Metal Roller Ball plug", line2: "Press-fit into 17-415 neck" });
+        expect(rows[1]).toEqual({ key: "fitment", title: "FITMENT", line1: "Metal Roller Ball insert", line2: "Press-fit into 17-415 neck" });
         expect(rows[2]).toEqual({ key: "neck", title: "NECK THREAD", line1: "17-415", line2: "17 mm outer Ø · 415 finish" });
         expect(rows[3]).toEqual({ key: "body", title: "BODY", line1: "Cobalt Blue glass · 9 ml (0.3 oz)", line2: "H 70 mm · Ø 20 mm · 30 g" });
     });

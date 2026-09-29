@@ -13,11 +13,25 @@
  *
  * Callout anchors are read off the real part bounds after framing, so the
  * leaders point at the layers actually on screen.
+ *
+ * A register kit's CAP ON and SIDECAR frame holds its glass's envelope, the
+ * bounds every SKU of that body needs (`stageEnvelope`, keyed by
+ * `stageFrameKey`), so all its caps, fitments and colours show the glass at
+ * one size in one place.
  */
-import { explodedKitFrame, REMOVABLE_KIT_SLOTS, withDetachedCapOffsets } from "@/lib/products/kit-frame";
+import { explodedKitFrame, offBottle, REMOVABLE_KIT_SLOTS, withDetachedCapOffsets, type DetachedLook } from "@/lib/products/kit-frame";
 import { stackedExplodeOffsets } from "@/lib/products/exploded-stack";
-import { PDP_PLATE_CANVAS, pdpStageFrame, pdpStageTransformCss, type PdpStageFrame } from "@/lib/products/pdp-stage-frame";
-import { allowsExplodedClosure, requiresAssembledClosure } from "@/lib/products/closure-presentation";
+import {
+    PDP_PLATE_CANVAS,
+    mergeStageBounds,
+    pdpStageBounds,
+    pdpStageFrame,
+    pdpStageTransformCss,
+    type PdpStageFrame,
+    type StageBounds,
+} from "@/lib/products/pdp-stage-frame";
+import { allowsExplodedClosure, hangsBesideGlass, requiresAssembledClosure } from "@/lib/products/closure-presentation";
+import { placeStageBackdrop, stageBackdropFor, type StageBackdropPlacement } from "./stage-backdrops";
 
 export type StageView = "sidecar" | "capon" | "exploded";
 
@@ -48,15 +62,17 @@ export type KitPartLike = {
     componentId?: string | null;
     /** The views this part is drawn in; absent = every view (a seated insert vs its full plug). */
     views?: StageView[];
+    /** How the part looks parked beside the glass or lifted, when that differs from how it looks seated (src/lib/register/detached-overcaps.ts). */
+    detached?: DetachedLook | null;
 };
 
 export type KitLike = {
     sku: string;
     canvas: { width: number; height: number };
-    anchors: { axisX: number; neckAxisX: number | null; seatY: number; baselineY: number };
+    anchors: { axisX: number; neckAxisX: number | null; seatY: number; baselineY: number; pxPerMm?: number | null };
     parts: KitPartLike[];
     /** Set when the kit was composed from the component register rather than published per SKU. */
-    register?: { bodyId: string; plateKey: string; glass: string } | null;
+    register?: { bodyId: string; plateKey: string; glass: string; pxPerMm?: number } | null;
 };
 
 export type StagePart = {
@@ -88,6 +104,10 @@ export type StageLayout = {
     anchors: Partial<Record<"cap" | "fitment" | "neck" | "body", StagePoint>>;
     baseline: boolean;
     grid: boolean;
+    /** The body's studio (wall, floor, contact shadow), drawn under the kit; null keeps the flat canvas. */
+    backdrop: StageBackdropPlacement | null;
+    /** Contact shadows for closures standing on the studio floor (SIDECAR), in percent of the canvas, before the frame transform. */
+    floorShadows: Array<{ key: string; leftPct: number; topPct: number; widthPct: number; heightPct: number }>;
 };
 
 const FITMENT_SLOTS: ReadonlySet<string> = new Set(["roller", "fitment", "sprayer", "pump", "collar", "diptube", "bulb", "tassel", "reducer", "pipette"]);
@@ -146,11 +166,100 @@ function toStagePoint(point: { x: number; y: number }, frame: PdpStageFrame, can
     };
 }
 
-export function stageLayout(kit: KitLike | null | undefined, requested: StageView, context: StageContext): StageLayout | null {
+/**
+ * The parts as the CAP ON / SIDECAR frame must hold them. A behind-glass
+ * register layer is painted clipped at the glass's foot (see stageLayout),
+ * so the frame stops there too rather than reserving room for a hidden tube.
+ */
+function framedParts(kit: KitLike, parts: readonly KitPartLike[]): KitPartLike[] {
+    const foot = kit.anchors.baselineY;
+    return parts.map((part) => part.box && BEHIND_GLASS_SLOTS.has(part.slot) && part.bounds.bottom > foot
+        ? { ...part, bounds: { ...part.bounds, bottom: Math.max(part.bounds.top, foot) } }
+        : part);
+}
+
+/** The parts CAP ON and SIDECAR draw (a register insert's EXPLODED-only plug stays out), as their frame must hold them. */
+function seatedFrameParts(kit: KitLike): KitPartLike[] {
+    return framedParts(kit, kit.parts.filter((part) => !part.views || part.views.includes("capon") || part.views.includes("sidecar")));
+}
+
+/** What one kit's CAP ON and SIDECAR frame must hold; null without parts. */
+export function stageFrameBounds(kit: KitLike | null | undefined): StageBounds | null {
+    if (!kit?.parts?.length) return null;
+    const seated = seatedFrameParts(kit);
+    return seated.length ? pdpStageBounds(seated) : null;
+}
+
+/**
+ * One frame per glass: the bounds every kit of a body needs, merged. Pass
+ * only kits standing on the same datum (one register body); legacy kits are
+ * each registered to their own plate and keep their own frame.
+ */
+export function stageEnvelope(kits: Iterable<KitLike | null | undefined>): StageBounds | null {
+    let envelope: StageBounds | null = null;
+    for (const kit of kits) {
+        const bounds = stageFrameBounds(kit);
+        if (bounds) envelope = envelope ? mergeStageBounds(envelope, bounds) : bounds;
+    }
+    return envelope;
+}
+
+/**
+ * Which frame a SKU of a register body shares. Every top on a glass shares
+ * one, except the hanging ones (the vintage bulb sprayers, with and without
+ * a tassel): a hose, bulb and tassel reach far beside and below the glass, and
+ * each sells on its own pages, so each shares a frame only with its own kind
+ * rather than shrink every page of the glass (up to 44% on the Round 78 mL).
+ * `applicator` is the catalogue's, the field the pages are built from.
+ */
+export function stageFrameKey(bodyId: string, applicator?: string | null): string {
+    return hangsBesideGlass(applicator) ? `${bodyId}|${applicator!.trim().toLowerCase()}` : bodyId;
+}
+
+export type FramedKit = { kit: KitLike | null | undefined; applicator?: string | null };
+
+/** How a kit is framed on its page: the envelope it frames to, and for a hanging top, the envelope of the tops whose baseline it stands on. */
+export type GlassFrame = { envelope: StageBounds | null; standOn: StageBounds | null };
+
+/**
+ * A kit's frame on its page. `envelope` is the shared envelope of its body
+ * and frame key (every SKU of the glass, from the server), widened by the
+ * page's own kits of that key in case the cached one predates them. A
+ * hanging top also gets `standOn`, the envelope of the glass's other tops,
+ * so it keeps their size and baseline where it can (Jordan 2026-09-13). A
+ * legacy kit has neither and keeps its own frame.
+ */
+export function glassFrame(
+    selected: FramedKit,
+    page: ReadonlyArray<FramedKit>,
+    envelopes: Readonly<Record<string, StageBounds>> | null | undefined,
+): GlassFrame {
+    const bodyId = selected.kit?.register?.bodyId;
+    if (!bodyId) return { envelope: null, standOn: null };
+    const envelopeOf = (key: string) => {
+        const own = stageEnvelope(page
+            .filter((entry) => entry.kit?.register?.bodyId === bodyId && stageFrameKey(bodyId, entry.applicator) === key)
+            .map((entry) => entry.kit));
+        const shared = envelopes?.[key] ?? null;
+        return shared && own ? mergeStageBounds(shared, own) : shared ?? own;
+    };
+    const key = stageFrameKey(bodyId, selected.applicator);
+    return { envelope: envelopeOf(key), standOn: key === bodyId ? null : envelopeOf(bodyId) };
+}
+
+export function stageLayout(
+    kit: KitLike | null | undefined,
+    requested: StageView,
+    context: StageContext,
+    /** The kit's `glassFrame` on its page, so every SKU of the glass shares this frame. */
+    options: Partial<GlassFrame> = {},
+): StageLayout | null {
     if (!kit?.parts?.length) return null;
     const canvas = kit.canvas ?? PDP_PLATE_CANVAS;
     const view = effectiveView(requested, kit, context);
-    const sorted = [...kit.parts].filter((part) => !part.views || part.views.includes(view)).sort((a, b) => a.zOrder - b.zOrder);
+    // A closure parked beside the glass, and every part lifted in EXPLODED, is drawn as it looks off the bottle.
+    const sorted = [...kit.parts].filter((part) => !part.views || part.views.includes(view)).sort((a, b) => a.zOrder - b.zOrder)
+        .map((part) => view === "exploded" || (view === "sidecar" && isClosureSlot(part.slot)) ? offBottle(part) : part);
     if (!sorted.length) return null;
 
     let offsets: Map<KitPartLike, { dx: number; dy: number }>;
@@ -169,10 +278,14 @@ export function stageLayout(kit: KitLike | null | undefined, requested: StageVie
             part,
             view === "sidecar" && isClosureSlot(part.slot) ? detached[index].exploded : { dx: 0, dy: 0 },
         ]));
-        // The same frame for both views: unionBounds reserves the detached cap, so the glass never moves.
+        // The same frame for both views: the bounds reserve the cap seated and parked, so the glass never moves.
+        // A register kit also shares it with every SKU of its glass (the envelope), and its datum,
+        // not the plate-era capacity lock, sizes the glass.
         frame = pdpStageFrame({
             family: context.family, capacityMl: context.capacityMl, color: context.color,
-            view: "capOff", parts: sorted, width: canvas.width, height: canvas.height,
+            view: "capOff", parts: seatedFrameParts(kit), width: canvas.width, height: canvas.height,
+            envelope: options.envelope, capacityLock: !kit.register,
+            standOn: options.standOn ? { envelope: options.standOn, baselineY: kit.anchors.baselineY } : null,
         });
     }
 
@@ -214,14 +327,43 @@ export function stageLayout(kit: KitLike | null | undefined, requested: StageVie
         anchors.body = toStagePoint(rightEdge(body, bodyOffset, center(body, bodyOffset).y), frame, canvas);
     }
 
+    // The studio a Blender body was rendered in, for the assembled views (EXPLODED keeps its measuring grid).
+    const studio = kit.register && view !== "exploded" ? stageBackdropFor(kit.register.bodyId, kit.register.glass) : null;
+    const kitPxPerMm = kit.register?.pxPerMm ?? kit.anchors.pxPerMm ?? null;
+    const backdrop = studio && kitPxPerMm ? placeStageBackdrop(studio, { canvas, anchors: kit.anchors, pxPerMm: kitPxPerMm }) : null;
+
+    // A closure set down on the studio floor casts a contact shadow like the glass does (the glass's is in the backdrop).
+    const floorShadows: StageLayout["floorShadows"] = [];
+    if (backdrop && view === "sidecar") {
+        sorted.forEach((part, index) => {
+            const offset = offsets.get(part) ?? { dx: 0, dy: 0 };
+            if (!isClosureSlot(part.slot) || (offset.dx === 0 && offset.dy === 0)) return;
+            const bottom = part.bounds.bottom + offset.dy;
+            if (Math.abs(bottom - kit.anchors.baselineY) > 12) return;   // only a part standing on the floor
+            const width = (part.bounds.right - part.bounds.left) * 1.5;
+            const height = width * 0.22;
+            const centerX = (part.bounds.left + part.bounds.right) / 2 + offset.dx;
+            floorShadows.push({
+                key: `shadow-${part.slot}-${index}`,
+                leftPct: ((centerX - width / 2) / canvas.width) * 100,
+                topPct: ((bottom - height * 0.42) / canvas.height) * 100,
+                widthPct: (width / canvas.width) * 100,
+                heightPct: (height / canvas.height) * 100,
+            });
+        });
+    }
+
     return {
         frame,
         frameCss: pdpStageTransformCss(frame),
         parts,
         canvas,
         anchors,
-        baseline: view !== "exploded",
+        floorShadows,
+        // the studio's own floor replaces the drawn baseline
+        baseline: view !== "exploded" && !backdrop,
         grid: view === "exploded",
+        backdrop,
     };
 }
 
@@ -232,14 +374,18 @@ export function stageLayout(kit: KitLike | null | undefined, requested: StageVie
  * is its box. Used for the cap rail, the glass lineup and the Build Your
  * Bottle tiles.
  */
-export function partCrop(part: KitPartLike, canvas: { width: number; height: number }, height: number, bounds: KitPartLike["bounds"] = part.bounds): { width: number; height: number; imgWidth: number; imgHeight: number; left: number; top: number } {
+export function partCrop(
+    part: KitPartLike, canvas: { width: number; height: number }, height: number, bounds: KitPartLike["bounds"] = part.bounds,
+    /** Size by a fixed width instead (every cap on the rail the same width), or by a shared scale (true relative sizes). */
+    fit?: { width?: number; scale?: number },
+): { width: number; height: number; imgWidth: number; imgHeight: number; left: number; top: number } {
     const box = part.box ?? fullCanvasBox(canvas);
     const boundsW = Math.max(1, bounds.right - bounds.left);
     const boundsH = Math.max(1, bounds.bottom - bounds.top);
-    const scale = height / boundsH;
+    const scale = fit?.scale ?? (fit?.width ? fit.width / boundsW : height / boundsH);
     return {
         width: boundsW * scale,
-        height,
+        height: boundsH * scale,
         imgWidth: box.width * scale,
         imgHeight: box.height * scale,
         left: (box.x - bounds.left) * scale,
@@ -285,6 +431,31 @@ export function closurePart(kit: KitLike | null | undefined): KitPartLike | null
     }
     const candidates = kit.parts.filter((part) => part.slot !== "body");
     return candidates.sort((a, b) => a.bounds.top - b.bounds.top)[0] ?? null;
+}
+
+/**
+ * The overcap a sprayer or pump ships with, seated (Build Your Bottle strip's
+ * tile 03): it comes in the head's own finish, so a matte black sprayer's
+ * tile shows the matte black overcap (Jordan 2026-09-28).
+ */
+export function overcapPart(kit: KitLike | null | undefined): KitPartLike | null {
+    const overcaps = kit?.parts?.filter((part) => part.slot === "overcap") ?? [];
+    return overcaps.find((part) => !part.views || part.views.includes("capon")) ?? overcaps[0] ?? null;
+}
+
+/**
+ * The layer that carries the finish a buyer picks, for the material chip beside the selection:
+ * the overcap (it ships in the sprayer's or pump's finish), else the cap. Never the glass, and
+ * never an insert or dip tube, which are the same for every finish.
+ */
+export function finishPart(kit: KitLike | null | undefined): KitPartLike | null {
+    const part = overcapPart(kit) ?? closurePart(kit);
+    return part && (part.slot === "cap" || part.slot === "overcap" || part.slot === "sprayer" || part.slot === "pump") ? part : null;
+}
+
+/** True when the kit's closure is a sprayer or pump head (its overcap is the cap). */
+export function hasMechanism(kit: KitLike | null | undefined): boolean {
+    return Boolean(kit?.parts?.some((part) => part.slot === "sprayer" || part.slot === "pump"));
 }
 
 export function bodyPart(kit: KitLike | null | undefined): KitPartLike | null {

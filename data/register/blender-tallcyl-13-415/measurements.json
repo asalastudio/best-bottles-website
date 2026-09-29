@@ -1,0 +1,1199 @@
+{
+ "bodyId": "cylinder-9ml-13-415",
+ "createdBy": "outputs/tallcyl-13415-v40-2026-09-28 (export_v13.py + build_assets_v13.py), studio v1.3",
+ "pxPerMm": 25.0,
+ "camera": {
+  "type": "orthographic",
+  "tiltDegDown": 3.0,
+  "note": "the 9 mL register camera; anchors are camera projections of 3D points"
+ },
+ "datum": {
+  "seat": "rim centre (0,0,105.49 mm)",
+  "foot": "lowest projected point of the glass",
+  "shoulder": "(0,0,94.49 mm)"
+ },
+ "background": "seen through the glass: the v1.3 studio backdrop (displays as bone #F5F3EF); transparent outside every part",
+ "calipered": "body LOCKED v2 to the caliper; sprayer (flat top, 0.60 recess), lined and ribbed short caps, roll-on caps OD to the caliper; V63 tailpiece photo-derived",
+ "plates": [
+  {
+   "plateKey": "cylinder-9ml-13-415|Clear",
+   "glass": "Clear",
+   "file": "plates/clear.png",
+   "width": 462,
+   "height": 2656,
+   "sha256": "15ba3fdd00c1384064230ec9f1d2bba7ceec5d2f47f2d24b01657778dc719f2c",
+   "pxPerMm": 25.0,
+   "anchors": {
+    "axisX": 231.0,
+    "seatY": 9.36,
+    "shoulderY": 283.98,
+    "baselineY": 2654.8
+   },
+   "checks": {
+    "seatToFootMm": 105.818,
+    "barrelMm": 18.32,
+    "barrelTargetMm": 18.35,
+    "opaqueInsideSilhouette": true
+   },
+   "source": {
+    "library": "native Blender (outputs/tallcyl-13415-v40-2026-09-28/export_v13.py)",
+    "path": "tall-9ml-13-415-STUDIO-v1.3-LOCKED-2026-09-28/Tall-9ml-13-415_clear_STUDIO-v1.3.blend",
+    "layer": "Tall Cylinder 9 mL body LOCKED v2 (caliper: H 105.49, OD 18.35, flat shoulder 94.49), studio v1.3 (pale warm grey, glossy-only edge card); seen through: the studio backdrop, which displays as bone"
+   },
+   "geometry": {
+    "height_mm": 105.49,
+    "od_mm": 18.35,
+    "lock": "tall-9ml-13-415-LOCKED-v2-2026-09-27",
+    "studio": "tall-9ml-13-415-STUDIO-v1.3-LOCKED-2026-09-28"
+   }
+  },
+  {
+   "plateKey": "cylinder-9ml-13-415|Frosted",
+   "glass": "Frosted",
+   "file": "plates/frosted.png",
+   "width": 462,
+   "height": 2656,
+   "sha256": "5483adf5a547d2dbe1298800e6ad06c0efd8615940bed0e3650e978a83095a2c",
+   "pxPerMm": 25.0,
+   "anchors": {
+    "axisX": 231.0,
+    "seatY": 9.36,
+    "shoulderY": 283.98,
+    "baselineY": 2654.8
+   },
+   "checks": {
+    "seatToFootMm": 105.818,
+    "barrelMm": 18.32,
+    "barrelTargetMm": 18.35,
+    "opaqueInsideSilhouette": true
+   },
+   "source": {
+    "library": "native Blender (outputs/tallcyl-13415-v40-2026-09-28/export_v13.py)",
+    "path": "tall-9ml-13-415-STUDIO-v1.3-LOCKED-2026-09-28/Tall-9ml-13-415_frosted_STUDIO-v1.3.blend",
+    "layer": "Tall Cylinder 9 mL body LOCKED v2 (caliper: H 105.49, OD 18.35, flat shoulder 94.49), studio v1.3 (pale warm grey, glossy-only edge card); full acid-etch frost shoulder to base, neck clear"
+   },
+   "geometry": {
+    "height_mm": 105.49,
+    "od_mm": 18.35,
+    "lock": "tall-9ml-13-415-LOCKED-v2-2026-09-27",
+    "studio": "tall-9ml-13-415-STUDIO-v1.3-LOCKED-2026-09-28"
+   }
+  }
+ ],
+ "components": [
+  {
+   "componentId": "CMP-CAP-13-415",
+   "layers": [
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-mist.png",
+     "width": 143,
+     "height": 2319,
+     "sha256": "834ec8b19dddaf40aa19edb9e133d78bf99c97efe35235d1a367c91339b4f643",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 59.0,
+      "y": 0.36
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Frosted",
+     "file": "see-through/frosted-mist.png",
+     "width": 459,
+     "height": 2319,
+     "sha256": "a9b2697a64a8969a695b2120b2b7817a2909b9621441f302b4bf3b69d37568c6",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 229.0,
+      "y": 0.36
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Frosted"
+    },
+    {
+     "slot": "sprayer",
+     "layerName": "sprayer blue-matte (all metal: collar + step ring + flat actuator, recessed white nozzle)",
+     "file": "components/sprayer-blue-matte.png",
+     "width": 385,
+     "height": 712,
+     "sha256": "072c629f7d92a933e4089f8c03e584980256a88a0fc08021fa8add365b426c9e",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 193.0,
+      "y": 426.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap blue-matte (whole sprayer)",
+     "file": "components/overcap-blue-matte.png",
+     "width": 428,
+     "height": 783,
+     "sha256": "1d96b170362cb8e9d3677d42017b59aac87017174af432e1f6059721a668d5cb",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 496.36
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "V63 pump tailpiece + dip tube, lifted out",
+     "file": "shared/mist-internals.png",
+     "width": 110,
+     "height": 2257,
+     "sha256": "35fb424806c266ad33e79db794217e62c49e5aa25104d9071f5fd87f9380e688",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 43.0,
+      "y": -45.64
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-BLK-13-415-01",
+   "layers": [
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-mist.png",
+     "width": 143,
+     "height": 2319,
+     "sha256": "834ec8b19dddaf40aa19edb9e133d78bf99c97efe35235d1a367c91339b4f643",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 59.0,
+      "y": 0.36
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Frosted",
+     "file": "see-through/frosted-mist.png",
+     "width": 459,
+     "height": 2319,
+     "sha256": "a9b2697a64a8969a695b2120b2b7817a2909b9621441f302b4bf3b69d37568c6",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 229.0,
+      "y": 0.36
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Frosted"
+    },
+    {
+     "slot": "sprayer",
+     "layerName": "sprayer matte-black (all metal: collar + step ring + flat actuator, recessed white nozzle)",
+     "file": "components/sprayer-matte-black.png",
+     "width": 386,
+     "height": 712,
+     "sha256": "d8bec1ef79019326aadd602c3dd3450f0b90533938be759cf30827707fe5a0ea",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 193.0,
+      "y": 426.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap matte-black (whole sprayer)",
+     "file": "components/overcap-matte-black.png",
+     "width": 428,
+     "height": 783,
+     "sha256": "5088de2996649ad9b83f70579842e3e23551492f6d9e7d290df5272b41cd6065",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 496.36
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "V63 pump tailpiece + dip tube, lifted out",
+     "file": "shared/mist-internals.png",
+     "width": 110,
+     "height": 2257,
+     "sha256": "35fb424806c266ad33e79db794217e62c49e5aa25104d9071f5fd87f9380e688",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 43.0,
+      "y": -45.64
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-BLK-13-415-02",
+   "layers": [
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-mist.png",
+     "width": 143,
+     "height": 2319,
+     "sha256": "834ec8b19dddaf40aa19edb9e133d78bf99c97efe35235d1a367c91339b4f643",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 59.0,
+      "y": 0.36
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Frosted",
+     "file": "see-through/frosted-mist.png",
+     "width": 459,
+     "height": 2319,
+     "sha256": "a9b2697a64a8969a695b2120b2b7817a2909b9621441f302b4bf3b69d37568c6",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 229.0,
+      "y": 0.36
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Frosted"
+    },
+    {
+     "slot": "sprayer",
+     "layerName": "sprayer shiny-black (all metal: collar + step ring + flat actuator, recessed white nozzle)",
+     "file": "components/sprayer-shiny-black.png",
+     "width": 386,
+     "height": 712,
+     "sha256": "89f5d44301f184ae8fd4e63f79e5cc3f8766513cbd2e4d4d6e9b170d3e58d2a8",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 193.0,
+      "y": 426.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap shiny-black (whole sprayer)",
+     "file": "components/overcap-shiny-black.png",
+     "width": 428,
+     "height": 783,
+     "sha256": "e38f5276720e5771a3afa79a361e1b655481c8c6788bff5c0792821896ba2a15",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 496.36
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "V63 pump tailpiece + dip tube, lifted out",
+     "file": "shared/mist-internals.png",
+     "width": 110,
+     "height": 2257,
+     "sha256": "35fb424806c266ad33e79db794217e62c49e5aa25104d9071f5fd87f9380e688",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 43.0,
+      "y": -45.64
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-BLK-S-13-415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "short ribbed cap black (OD 15.50 x 9.49, caliper)",
+     "file": "components/short-black.png",
+     "width": 390,
+     "height": 257,
+     "sha256": "df3b5176c9a9723d4c3d14bf3a5e25104096e10de55ca4e3cf9437bd6f434a67",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 195.0,
+      "y": 67.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-SGLD-13-415-01",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "roll-on cap shiny-gold (OD 16.80, seated on the shoulder)",
+     "file": "components/cap-shiny-gold.png",
+     "width": 422,
+     "height": 631,
+     "sha256": "0f2e011c6b7ab32f46f7309e0cb4857441603219f9dc35935de04f9ebdde1545",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 211.0,
+      "y": 344.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-SGLD-13-415-02",
+   "layers": [
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-mist.png",
+     "width": 143,
+     "height": 2319,
+     "sha256": "834ec8b19dddaf40aa19edb9e133d78bf99c97efe35235d1a367c91339b4f643",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 59.0,
+      "y": 0.36
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Frosted",
+     "file": "see-through/frosted-mist.png",
+     "width": 459,
+     "height": 2319,
+     "sha256": "a9b2697a64a8969a695b2120b2b7817a2909b9621441f302b4bf3b69d37568c6",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 229.0,
+      "y": 0.36
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Frosted"
+    },
+    {
+     "slot": "sprayer",
+     "layerName": "sprayer matte-gold (all metal: collar + step ring + flat actuator, recessed white nozzle)",
+     "file": "components/sprayer-matte-gold.png",
+     "width": 385,
+     "height": 712,
+     "sha256": "ed4e54e11e274207dc43b26e513c42acb00bf458f4e4aa571bcbc8e97e8ab589",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 193.0,
+      "y": 426.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap matte-gold (whole sprayer)",
+     "file": "components/overcap-matte-gold.png",
+     "width": 428,
+     "height": 783,
+     "sha256": "3f49003ed439620c0bd14048481b905d106eb0395bb44fe73d8bbc64bb8d4e76",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 496.36
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "V63 pump tailpiece + dip tube, lifted out",
+     "file": "shared/mist-internals.png",
+     "width": 110,
+     "height": 2257,
+     "sha256": "35fb424806c266ad33e79db794217e62c49e5aa25104d9071f5fd87f9380e688",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 43.0,
+      "y": -45.64
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-SGLD-13-415-03",
+   "layers": [
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-mist.png",
+     "width": 143,
+     "height": 2319,
+     "sha256": "834ec8b19dddaf40aa19edb9e133d78bf99c97efe35235d1a367c91339b4f643",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 59.0,
+      "y": 0.36
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Frosted",
+     "file": "see-through/frosted-mist.png",
+     "width": 459,
+     "height": 2319,
+     "sha256": "a9b2697a64a8969a695b2120b2b7817a2909b9621441f302b4bf3b69d37568c6",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 229.0,
+      "y": 0.36
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Frosted"
+    },
+    {
+     "slot": "sprayer",
+     "layerName": "sprayer gold (all metal: collar + step ring + flat actuator, recessed white nozzle)",
+     "file": "components/sprayer-gold.png",
+     "width": 386,
+     "height": 712,
+     "sha256": "1eb0c9b67ad1e7b74f3d3d45c4e400f4a4d62c0b19950c44822cccfa68f34eba",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 193.0,
+      "y": 426.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap gold (whole sprayer)",
+     "file": "components/overcap-gold.png",
+     "width": 428,
+     "height": 783,
+     "sha256": "b09e578a7e782b26e898e07944ed2c4ec01613da2388b6846c159f6d8ddc586d",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 496.36
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "V63 pump tailpiece + dip tube, lifted out",
+     "file": "shared/mist-internals.png",
+     "width": 110,
+     "height": 2257,
+     "sha256": "35fb424806c266ad33e79db794217e62c49e5aa25104d9071f5fd87f9380e688",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 43.0,
+      "y": -45.64
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-SLV-13-415-01",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "roll-on cap shiny-silver (OD 16.80, seated on the shoulder)",
+     "file": "components/cap-shiny-silver.png",
+     "width": 422,
+     "height": 631,
+     "sha256": "be765db5b8f521550a58d443dd3de3c1293f51dfba196e295cee1792208157c3",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 211.0,
+      "y": 344.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-SLV-13-415-02",
+   "layers": [
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-mist.png",
+     "width": 143,
+     "height": 2319,
+     "sha256": "834ec8b19dddaf40aa19edb9e133d78bf99c97efe35235d1a367c91339b4f643",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 59.0,
+      "y": 0.36
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Frosted",
+     "file": "see-through/frosted-mist.png",
+     "width": 459,
+     "height": 2319,
+     "sha256": "a9b2697a64a8969a695b2120b2b7817a2909b9621441f302b4bf3b69d37568c6",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 229.0,
+      "y": 0.36
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Frosted"
+    },
+    {
+     "slot": "sprayer",
+     "layerName": "sprayer matte-silver (all metal: collar + step ring + flat actuator, recessed white nozzle)",
+     "file": "components/sprayer-matte-silver.png",
+     "width": 385,
+     "height": 712,
+     "sha256": "52cca6c395908a850bc9326c1d2f26eec328853d1b8116b7fe3423418addb3db",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 193.0,
+      "y": 426.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap matte-silver (whole sprayer)",
+     "file": "components/overcap-matte-silver.png",
+     "width": 428,
+     "height": 783,
+     "sha256": "9c8b5a8d63fe9c0d191a04e24ca4531c56124ab14912386699f17362d69798e9",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 496.36
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "V63 pump tailpiece + dip tube, lifted out",
+     "file": "shared/mist-internals.png",
+     "width": 110,
+     "height": 2257,
+     "sha256": "35fb424806c266ad33e79db794217e62c49e5aa25104d9071f5fd87f9380e688",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 43.0,
+      "y": -45.64
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-SLV-13-415-03",
+   "layers": [
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-mist.png",
+     "width": 143,
+     "height": 2319,
+     "sha256": "834ec8b19dddaf40aa19edb9e133d78bf99c97efe35235d1a367c91339b4f643",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 59.0,
+      "y": 0.36
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Frosted",
+     "file": "see-through/frosted-mist.png",
+     "width": 459,
+     "height": 2319,
+     "sha256": "a9b2697a64a8969a695b2120b2b7817a2909b9621441f302b4bf3b69d37568c6",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 229.0,
+      "y": 0.36
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Frosted"
+    },
+    {
+     "slot": "sprayer",
+     "layerName": "sprayer shiny-silver (all metal: collar + step ring + flat actuator, recessed white nozzle)",
+     "file": "components/sprayer-shiny-silver.png",
+     "width": 386,
+     "height": 712,
+     "sha256": "5c846a2db23faf515260b24a688420cd62e9534ead4500288d27d96036104f0c",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 193.0,
+      "y": 426.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap shiny-silver (whole sprayer)",
+     "file": "components/overcap-shiny-silver.png",
+     "width": 428,
+     "height": 783,
+     "sha256": "813387e8c39c1e5a0f5758907c4eee045ac280af6f565b614626225328b0a235",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 496.36
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "V63 pump tailpiece + dip tube, lifted out",
+     "file": "shared/mist-internals.png",
+     "width": 110,
+     "height": 2257,
+     "sha256": "35fb424806c266ad33e79db794217e62c49e5aa25104d9071f5fd87f9380e688",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 43.0,
+      "y": -45.64
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-WHT-S-13-415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "short ribbed cap white (OD 15.50 x 9.49, caliper)",
+     "file": "components/short-white.png",
+     "width": 390,
+     "height": 257,
+     "sha256": "ef7fce8e5d2906a0d4ac8a7d2bb22fced6034e3261d43f313397fa4287389584",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 195.0,
+      "y": 67.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-ROC-BLK-13415-DOT",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "roll-on cap black-dotted (OD 16.80, seated on the shoulder)",
+     "file": "components/cap-black-dotted.png",
+     "width": 422,
+     "height": 631,
+     "sha256": "afd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 211.0,
+      "y": 344.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-ROC-MCPR-13415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "roll-on cap copper (OD 16.80, seated on the shoulder)",
+     "file": "components/cap-copper.png",
+     "width": 422,
+     "height": 631,
+     "sha256": "9b809c36ba0aadbc40fad0e4774107fb7cbd1394d564636aff6dc3ec89519cd8",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 211.0,
+      "y": 344.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-ROC-MGLD-13415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "roll-on cap matte-gold (OD 16.80, seated on the shoulder)",
+     "file": "components/cap-matte-gold.png",
+     "width": 422,
+     "height": 631,
+     "sha256": "40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 211.0,
+      "y": 344.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-ROC-MSLV-13415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "roll-on cap matte-silver (OD 16.80, seated on the shoulder)",
+     "file": "components/cap-matte-silver.png",
+     "width": 422,
+     "height": 631,
+     "sha256": "023bc67c73ef9b901c4750fb23b4da2b5e302dabea4c6d37cb899615d8769153",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 211.0,
+      "y": 344.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-ROC-PNK-13415-DOT",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "roll-on cap pink-dotted (OD 16.80, seated on the shoulder)",
+     "file": "components/cap-pink-dotted.png",
+     "width": 422,
+     "height": 631,
+     "sha256": "f263dadacb6769adff754964cb575628ae1bd438f0bd51588d2399b0a13027a1",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 211.0,
+      "y": 344.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-ROC-SBLK-13415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "roll-on cap shiny-black (OD 16.80, seated on the shoulder)",
+     "file": "components/cap-shiny-black.png",
+     "width": 422,
+     "height": 631,
+     "sha256": "a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 211.0,
+      "y": 344.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-ROC-SGLD-13415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "roll-on cap shiny-gold (OD 16.80, seated on the shoulder)",
+     "file": "components/cap-shiny-gold.png",
+     "width": 422,
+     "height": 631,
+     "sha256": "0f2e011c6b7ab32f46f7309e0cb4857441603219f9dc35935de04f9ebdde1545",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 211.0,
+      "y": 344.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-ROC-SLV-13415-DOT",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "roll-on cap silver-dotted (OD 16.80, seated on the shoulder)",
+     "file": "components/cap-silver-dotted.png",
+     "width": 422,
+     "height": 631,
+     "sha256": "e1f9bbd394c9039b84cd87e5f6d3b8f13d70be009c12520bf90e196ed70f4b86",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 211.0,
+      "y": 344.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-ROC-SSLV-13415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "roll-on cap shiny-silver (OD 16.80, seated on the shoulder)",
+     "file": "components/cap-shiny-silver.png",
+     "width": 422,
+     "height": 631,
+     "sha256": "be765db5b8f521550a58d443dd3de3c1293f51dfba196e295cee1792208157c3",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 211.0,
+      "y": 344.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-SPR-MTCP-13-415-07",
+   "layers": [
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-mist.png",
+     "width": 143,
+     "height": 2319,
+     "sha256": "834ec8b19dddaf40aa19edb9e133d78bf99c97efe35235d1a367c91339b4f643",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 59.0,
+      "y": 0.36
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Frosted",
+     "file": "see-through/frosted-mist.png",
+     "width": 459,
+     "height": 2319,
+     "sha256": "a9b2697a64a8969a695b2120b2b7817a2909b9621441f302b4bf3b69d37568c6",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 229.0,
+      "y": 0.36
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Frosted"
+    },
+    {
+     "slot": "sprayer",
+     "layerName": "sprayer matte-copper (all metal: collar + step ring + flat actuator, recessed white nozzle)",
+     "file": "components/sprayer-matte-copper.png",
+     "width": 385,
+     "height": 712,
+     "sha256": "24f8adb1f0947e45d503281708be185fa84d41e0a940c8c448a2b58e3277e7a0",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 193.0,
+      "y": 426.36
+     },
+     "z": "front",
+     "explodeIndex": 1
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap matte-copper (whole sprayer)",
+     "file": "components/overcap-matte-copper.png",
+     "width": 428,
+     "height": 783,
+     "sha256": "58300a8b0ed2f129f9c50c2fc5137235c0ee657d48b3f2974f650d6ae056810b",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 496.36
+     },
+     "z": "front",
+     "explodeIndex": 2
+    },
+    {
+     "slot": "diptube",
+     "layerName": "V63 pump tailpiece + dip tube, lifted out",
+     "file": "shared/mist-internals.png",
+     "width": 110,
+     "height": 2257,
+     "sha256": "35fb424806c266ad33e79db794217e62c49e5aa25104d9071f5fd87f9380e688",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 43.0,
+      "y": -45.64
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    }
+   ]
+  },
+  {
+   "componentId": "LIB-13-415-MtlRollon",
+   "layers": [
+    {
+     "slot": "roller",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-roller-metal.png",
+     "width": 385,
+     "height": 2313,
+     "sha256": "7b1a4dc07e1016142162a68daf2200446d2124c548851dda0221f630e773dc93",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 155.0,
+      "y": 8.36
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "roller",
+     "layerName": "see-through, Frosted",
+     "file": "see-through/frosted-roller-metal.png",
+     "width": 384,
+     "height": 1020,
+     "sha256": "0ff041f04686a074238b13f6177bb1af2963d531751abaf7e5251e4bc2a2c4ee",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 229.0,
+      "y": 8.36
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Frosted"
+    },
+    {
+     "slot": "roller",
+     "layerName": "roller metal, seated (the glass hides the stem)",
+     "file": "components/roller-metal.png",
+     "width": 282,
+     "height": 433,
+     "sha256": "21b3ac34990036064878e735d7eb702a6f37a23ebcd09bebdf93edac8cd15089",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 141.0,
+      "y": 244.36
+     },
+     "z": "behind-body",
+     "explodeIndex": 0,
+     "usage": "seated"
+    },
+    {
+     "slot": "roller",
+     "layerName": "roller metal, full plug",
+     "file": "components/roller-metal.png",
+     "width": 282,
+     "height": 433,
+     "sha256": "21b3ac34990036064878e735d7eb702a6f37a23ebcd09bebdf93edac8cd15089",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 141.0,
+      "y": 244.36
+     },
+     "z": "front",
+     "explodeIndex": 0,
+     "usage": "exploded"
+    }
+   ]
+  },
+  {
+   "componentId": "LIB-13-415-PlsticRollon",
+   "layers": [
+    {
+     "slot": "roller",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-roller-plastic.png",
+     "width": 385,
+     "height": 2314,
+     "sha256": "03b5e1649f40edfd082faf29cd7c4ab39f553972033e3a459de144954fe4cbee",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 155.0,
+      "y": 8.36
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "roller",
+     "layerName": "see-through, Frosted",
+     "file": "see-through/frosted-roller-plastic.png",
+     "width": 384,
+     "height": 1020,
+     "sha256": "2759fccafd4381e10e8c18a8b12c912a2967785bc6ad4477569d7b4884606584",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 229.0,
+      "y": 8.36
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Frosted"
+    },
+    {
+     "slot": "roller",
+     "layerName": "roller plastic, seated (the glass hides the stem)",
+     "file": "components/roller-plastic.png",
+     "width": 282,
+     "height": 433,
+     "sha256": "5d2e753e4dd5543956a7a2f12e7f0fe7678eb82d561d3c7eba555780485c36cb",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 141.0,
+      "y": 244.36
+     },
+     "z": "behind-body",
+     "explodeIndex": 0,
+     "usage": "seated"
+    },
+    {
+     "slot": "roller",
+     "layerName": "roller plastic, full plug",
+     "file": "components/roller-plastic.png",
+     "width": 282,
+     "height": 433,
+     "sha256": "5d2e753e4dd5543956a7a2f12e7f0fe7678eb82d561d3c7eba555780485c36cb",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 141.0,
+      "y": 244.36
+     },
+     "z": "front",
+     "explodeIndex": 0,
+     "usage": "exploded"
+    }
+   ]
+  }
+ ],
+ "seeThroughQa": {
+  "clear-roller-plastic": {
+   "maxErr": 238,
+   "meanErr": 0.7689,
+   "pixels": 70868
+  },
+  "clear-roller-metal": {
+   "maxErr": 239,
+   "meanErr": 0.772,
+   "pixels": 70665
+  },
+  "clear-mist": {
+   "maxErr": 40,
+   "meanErr": 0.0545,
+   "pixels": 190673
+  },
+  "frosted-roller-plastic": {
+   "maxErr": 238,
+   "meanErr": 0.7489,
+   "pixels": 54357
+  },
+  "frosted-roller-metal": {
+   "maxErr": 239,
+   "meanErr": 0.7521,
+   "pixels": 54358
+  },
+  "frosted-mist": {
+   "maxErr": 109,
+   "meanErr": 0.5076,
+   "pixels": 267193
+  }
+ }
+}

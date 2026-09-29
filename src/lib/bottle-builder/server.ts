@@ -46,7 +46,7 @@ export const loadBuilderFamily = unstable_cache(async (family: string) => {
     const data = await familyRows(family);
     if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${family}`);
     return slimBuilderBodies(await loadBuilderBodies(data.rows));
-}, ["bottle-builder-family-chooser-v6-unavailable-bulbs"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-family-chooser-v7-elegant-photo"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 export const loadBuilderFamilies = unstable_cache(async () => {
     const families = await client().query(api.matrix.listFamilies, {});
@@ -118,7 +118,7 @@ const cachedBodyKits = unstable_cache(async (pairs: Array<[string, string | null
         kits[websiteSku] = loaded.get(websiteSku) ?? (graceSku ? loaded.get(graceSku) : undefined) ?? null;
     }
     return kits;
-}, ["bottle-builder-body-kits-v1"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-body-kits-v5-elegant-photo-hardware"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 export async function loadBuilderBodyKits(family: string, bodyId: string) {
     if (!family || family.length > 100 || !bodyId || bodyId.length > 200) return {};

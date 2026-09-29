@@ -679,8 +679,8 @@ function GraceProviderBase({
         drawerWidth: resolveGraceDrawerWidth(viewportWidth),
         minimumContentWidth: GRACE_MINIMUM_CONTENT_WIDTH_PX,
         ownsViewport: pathname.startsWith("/grace-workspace") || pathname.startsWith("/executive"),
-        pushEligible: gracePushEligiblePathname(pathname),
-    }), [isOpen, pathname, viewportWidth]);
+        pushEligible: companionMode === "agentic" && gracePushEligiblePathname(pathname),
+    }), [isOpen, pathname, viewportWidth, companionMode]);
 
     const openPanel = useCallback((options?: GraceOpenPanelOptions) => {
         setPanelMode("open");

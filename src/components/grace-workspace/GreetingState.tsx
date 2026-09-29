@@ -206,7 +206,7 @@ export default function GreetingState({
 
                 {/* Footer note */}
                 <div className="mt-5 text-center text-[11px] tracking-[0.04em] text-slate">
-                    A division of Nemat International · 2,300 SKUs · 37 families
+                    A division of Nemat International · Bottles, closures & packaging
                 </div>
             </div>
         </div>

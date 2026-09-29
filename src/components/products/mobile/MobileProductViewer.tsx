@@ -16,6 +16,9 @@ import { useCallback, useId, useMemo, useRef, useState, type KeyboardEvent as Re
 import { X } from "@/components/icons";
 import PaperDollLayers, { type KitPart } from "@/components/products/PaperDollLayers";
 import { displayImageUrl } from "@/lib/products/optimizable-image";
+import { isReconciledLocalSkuAssetUrl } from "@/lib/products/reconciled-sku-images";
+import { isAssembledOneMlVialImage } from "@/lib/products/one-ml-vial-applicators";
+import { hasRegisterBodyPlate } from "@/lib/products/register-stage-bone";
 import type { MobileViewModeOption, ProductViewMode } from "@/lib/products/mobile-pdp-view-modes";
 import {
     IDENTITY_TRANSFORM,
@@ -189,7 +192,7 @@ export default function MobileProductViewer({
                     onEscapeKeyDown={() => onClose()}
                     onPointerDownOutside={(event) => event.preventDefault()}
                     onInteractOutside={(event) => event.preventDefault()}
-                    className="fixed inset-0 z-[80] flex touch-none flex-col bg-white text-obsidian focus:outline-none"
+                    className={`fixed inset-0 z-[80] flex touch-none flex-col text-obsidian focus:outline-none ${hasRegisterBodyPlate(kitParts) ? "bg-bone" : "bg-white"}`}
                     style={{ paddingTop: "env(safe-area-inset-top, 0px)", paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
                 >
                     <header className="flex shrink-0 items-start justify-between gap-3 px-3 pb-2 pt-2">
@@ -244,12 +247,13 @@ export default function MobileProductViewer({
                         className="relative min-h-0 flex-1 touch-none select-none overflow-hidden"
                         {...handlers}
                     >
-                        <div className="absolute inset-0 will-change-transform" style={surfaceStyle}>
+                        <div className={`absolute inset-0 will-change-transform ${isReconciledLocalSkuAssetUrl(fallbackImageUrl) ? "bg-[#f5f3ef]" : ""}`} style={surfaceStyle}>
                             {hasStack ? (
                                 <PaperDollLayers plateUrl={plateUrl} kitParts={kitParts} alt={alt} onPlateError={onPlateError} className="[&_img]:pointer-events-none" family={family} capacityMl={capacityMl} color={color} hasCapOffPlate={hasCapOffPlate} view={viewMode === "capOff" ? "capOff" : "assembled"} />
                             ) : fallbackImageUrl ? (
                                 // eslint-disable-next-line @next/next/no-img-element
-                                <img src={displayImageUrl(fallbackImageUrl)} alt={alt} draggable={false} className="pointer-events-none absolute inset-0 h-full w-full object-contain object-center" />
+                                <img src={displayImageUrl(fallbackImageUrl)} alt={alt} draggable={false} className="pointer-events-none absolute inset-0 h-full w-full object-contain object-center"
+                                    style={isAssembledOneMlVialImage(fallbackImageUrl) ? { mixBlendMode: "multiply", transform: "scale(0.62)" } : isReconciledLocalSkuAssetUrl(fallbackImageUrl) ? { mixBlendMode: "multiply" } : undefined} />
                             ) : (
                                 <div className="absolute inset-0 bg-linen" aria-hidden />
                             )}

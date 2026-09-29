@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { classifyUses, parseLegacyDescription, parseUses, stripLegacyFraming } from "@/lib/products/item-description/legacy-facts";
 import { composeItemDescription, millimetres, type ComposeInput } from "@/lib/products/item-description/compose";
 import { fallbackItemType, normalizeLegacyItemType } from "@/lib/products/item-description/item-type";
+import { displayVintageWording } from "@/lib/vintageWording";
 import { curatedItemDescription, resolveItemDescription } from "@/lib/products/item-description/resolve";
 
 const COBALT_ROLLON: ComposeInput = {
@@ -176,6 +177,23 @@ describe("item type", () => {
             .toBe("Clear, frosted and colored glass roll-on bottles with steel or plastic roller balls");
         expect(fallbackItemType({ category: "Glass Jar", family: "Cream Jar" })).toBe("Cream jars");
     });
+
+    it("says vintage-style bulb sprayer where the legacy heading said antique style", () => {
+        expect(normalizeLegacyItemType("Antique Style Bulb Spray Bottles")).toBe("Vintage-Style Bulb Sprayer Bottles");
+        expect(fallbackItemType({ category: "Glass Bottle", family: "Diva", applicator: "Vintage Bulb Sprayer with Tassel" }))
+            .toBe("Vintage-style bulb sprayer bottles");
+        expect(fallbackItemType({ category: "Glass Bottle", family: "Diva", applicator: "Dropper" })).toBe("Dropper bottles");
+    });
+});
+
+describe("vintage wording", () => {
+    it("rewrites the legacy 'Antique or Vintage style' in sentence copy", () => {
+        expect(displayVintageWording("Lavender Antique or Vintage style bulb sprayer with silver fittings and tassel."))
+            .toBe("Lavender vintage-style bulb sprayer with silver fittings and tassel.");
+        expect(displayVintageWording("Antique or vintage style bulb sprayers. Antique or Vintage style bulb sprayer with Gold fittings."))
+            .toBe("Vintage-style bulb sprayers. Vintage-style bulb sprayer with Gold fittings.");
+        expect(displayVintageWording("Black vintage style bulb sprayer with shiny silver collar cap.")).toBe("Black vintage style bulb sprayer with shiny silver collar cap.");
+    });
 });
 
 describe("resolver", () => {
@@ -191,5 +209,15 @@ describe("resolver", () => {
         expect(resolved?.source).toBe("composed");
         expect(resolved?.description).toContain("fitted with a steel roller ball");
         expect(resolved?.itemType).toContain("roll-on bottles");
+    });
+
+    it("gives the curated bulb sprayer copy the site's vintage-style wording", () => {
+        // Curated copy is looked up by website SKU first; the rest of the input only matters when it is missing.
+        const bottle = resolveItemDescription({ ...COBALT_ROLLON, websiteSku: "GBDiva46AnSpBlk", graceSku: null });
+        expect(bottle?.source).toBe("curated");
+        expect(bottle?.itemType).toBe("Vintage-Style Bulb Sprayer Bottles");
+        const part = resolveItemDescription({ ...COBALT_ROLLON, websiteSku: "AnSpTsl18-415Lvn", graceSku: null });
+        expect(part?.description).toMatch(/^Lavender vintage-style bulb sprayer/);
+        expect(part?.description).not.toMatch(/antique/i);
     });
 });

@@ -548,7 +548,7 @@
      "pxPerMm": 9.558,
      "anchor": {
       "x": 115.5,
-      "y": 58.5
+      "y": 46.7
      },
      "z": "front",
      "explodeIndex": 1,
@@ -558,7 +558,7 @@
    "checks": {
     "registrationIoU": 0.8469,
     "libraryScale": 0.7466,
-    "approvable": false,
+    "approvable": true,
     "specksClearedPx": {
      "cap": 26
     },
@@ -567,7 +567,22 @@
       "cap",
       1.004
      ]
-    ]
+    ],
+    "reseat": {
+     "cap": {
+      "like": [
+       "CMP-CAP-MSLV-18415-S",
+       "CMP-CAP-SGLD-18415-S",
+       "LIB-18-415-ShnBlkCap"
+      ],
+      "reachMm": 17.92,
+      "reachMmBefore": 16.69,
+      "anchorYBefore": 58.5,
+      "anchorYAfter": 46.7,
+      "movedMm": 1.23
+     }
+    },
+    "approvedBy": "Jordan 2026-09-28 (review sheet https://claude.ai/artifact/9wm8KymJWTTxu3iKcQfByj)"
    }
   },
   {
@@ -2746,6 +2761,57 @@
     "specksClearedPx": {
      "sprayer": 180
     }
+   }
+  },
+  {
+   "componentId": "LIB-18-415-ShnBlkCap",
+   "websiteSku": "",
+   "type": "cap",
+   "psd": "20. Caps/6. 18-415 Caps/3. CP18-415ShnBlk.psd",
+   "reference": {
+    "psd": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/3. GBCrcl100RdcrShnBlk.psd",
+    "sku": "GBCrcl100RdcrShnBlk",
+    "bodyId": "circle-100ml-18-415",
+    "glass": "Clear",
+    "plateKey": "circle-100ml-18-415|Clear",
+    "bottlePxPerMm": 12.8025,
+    "rimY": 212,
+    "axisX": 810.5,
+    "seatToFootPx": 1456,
+    "plateSeatToFootPx": 1978,
+    "bodyLayer": "Layer 1",
+    "matchedLayers": [
+     "Layer 2"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 1 copy, Layer 1 copy",
+     "file": "LIB-18-415-ShnBlkCap--0-cap.png",
+     "width": 245,
+     "height": 235,
+     "sha256": "da8783aa11ef90ea2c0ae5dedb79ee25c192073123dad3722319690dda82f655",
+     "pxPerMm": 9.4721,
+     "anchor": {
+      "x": 122.5,
+      "y": 51.2
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 219
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9333,
+    "libraryScale": 0.7399,
+    "approvable": true,
+    "recentredMm": [
+     [
+      "cap",
+      -0.19
+     ]
+    ]
    }
   }
  ]

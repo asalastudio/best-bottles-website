@@ -39,6 +39,9 @@ import PdpPhotoCanvas from "./PdpPhotoCanvas";
 import { explodedKitFrame, orderExplodedOvercap, REMOVABLE_KIT_SLOTS, withDetachedCapOffsets } from "@/lib/products/kit-frame";
 import { capacityMlFromSlug, parseProductSlug } from "@/lib/products/group-variant-intent";
 import { pdpStageFrame, pdpStageTransformCss } from "@/lib/products/pdp-stage-frame";
+import { hasRegisterBodyPlate } from "@/lib/products/register-stage-bone";
+import { isReconciledLocalSkuAssetUrl } from "@/lib/products/reconciled-sku-images";
+import { isAssembledOneMlVialImage } from "@/lib/products/one-ml-vial-applicators";
 
 import { useGLTF } from "@react-three/drei";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
@@ -445,6 +448,7 @@ export default function ConfiguratorPdp({
   const slugParts = parseProductSlug(currentSlug);
   const capacityMl = slugParts?.capacityMl ?? capacityMlFromSlug(currentSlug);
   const heroStage = plateIsReleasedHero && !showKitLayers;
+  const boneStage = heroStage || (showKitLayers && hasRegisterBodyPlate(kitParts));
   const stageTransform = exploded
     ? `translate(${explodedFrame.x}%, ${explodedFrame.y}%) scale(${explodedFrame.scale})`
     : heroStage ? "none" : pdpStageTransformCss(pdpStageFrame({
@@ -465,7 +469,7 @@ export default function ConfiguratorPdp({
   const showPhoto = !showPlate && !(show3d && has3d) && Boolean(photoFallback);
   const showLive3d = !showPlate && !showPhoto && has3d;
   const stage = (
-    <div className="relative h-full w-full overflow-hidden">
+    <div className={`relative h-full w-full overflow-hidden ${showPhoto && isReconciledLocalSkuAssetUrl(photoFallback) ? "bg-[#f5f3ef]" : ""}`}>
       {showDimensions ? (
         <div className="flex h-full w-full items-center justify-center bg-linen px-8 py-10">
           <div className="w-full max-w-sm border-y border-champagne/70">
@@ -478,7 +482,7 @@ export default function ConfiguratorPdp({
           </div>
         </div>
       ) : showPlate ? (
-        <div className={`relative h-full w-full ${heroStage ? "bg-bone" : "bg-white"}`} data-paper-doll={showKitLayers ? "kit" : heroStage ? "hero" : "plate"}>
+        <div className={`relative h-full w-full ${boneStage ? "bg-bone" : "bg-white"}`} data-paper-doll={showKitLayers ? "kit" : heroStage ? "hero" : "plate"}>
           {/* Capacity standard + CAP OFF fit from pdp-capacity-standards.json.
               Circle 15 ml glass is locked smaller than 30 ml; a detached cap
               may shrink the composition but never grow the bottle. */}
@@ -522,7 +526,8 @@ export default function ConfiguratorPdp({
       ) : showPhoto ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img src={displayImageUrl(photoFallback!)} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
-             className="h-full w-full object-contain" />
+             className="h-full w-full object-contain"
+             style={isAssembledOneMlVialImage(photoFallback) ? { mixBlendMode: "multiply", transform: "scale(0.62)" } : isReconciledLocalSkuAssetUrl(photoFallback) ? { mixBlendMode: "multiply" } : undefined} />
       ) : showLive3d && fam ? (
         <Bottle3DViewer
           bodyId={fam.bodyForGlass?.[glass] ?? fam.bodyDefault}

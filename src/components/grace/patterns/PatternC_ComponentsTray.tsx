@@ -73,7 +73,7 @@ export default function PatternC_ComponentsTray({ payload, onAddToShortlist }: P
                                     <div className="font-serif text-[12px] font-medium text-obsidian leading-tight truncate">
                                         {c.itemName}
                                     </div>
-                                    {c.fitmentVerified !== false && (
+                                    {c.fitmentVerified === true && (
                                         <div
                                             className="flex items-center gap-1 mt-0.5 text-[9px] font-semibold tracking-wider"
                                             style={{ color: "var(--color-gold-dim)" }}
@@ -87,6 +87,8 @@ export default function PatternC_ComponentsTray({ payload, onAddToShortlist }: P
                                             product={c}
                                             onAddToShortlist={onAddToShortlist}
                                             compact
+                                            stacked
+                                            quantity={144}
                                             showPrice={true}
                                         />
                                     </div>

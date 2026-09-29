@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
     activeVolumeTierIndex,
     buildDisplayVolumeTiers,
+    cartVolumeNudge,
     formatVolumeQtyRange,
 } from "../src/lib/volumePricing";
 
@@ -61,5 +62,24 @@ describe("Baymard volume-tier display", () => {
 
     it("hides a single 1-pc rate so the table is never a one-row decoration", () => {
         expect(buildDisplayVolumeTiers({ webPrice1pc: 0.61 })).toEqual([]);
+    });
+});
+
+describe("cart volume nudge", () => {
+    const prices = { webPrice1pc: 2.5, webPrice10pc: 2.25, webPrice12pc: 2, unitPrice: 2.5 };
+
+    it("promises no tier price while checkout bills the flat rate", () => {
+        expect(cartVolumeNudge(1, prices, false)).toBeNull();
+        expect(cartVolumeNudge(11, prices, false)).toBeNull();
+        // The setting is off unless NEXT_PUBLIC_VOLUME_TIERS_HONORED_AT_CHECKOUT=true, as in production today.
+        expect(cartVolumeNudge(1, prices)).toBeNull();
+    });
+
+    it("names the next break once checkout honours it", () => {
+        expect(cartVolumeNudge(1, prices, true)).toEqual({ units: 9, targetQty: 10, price: 2.25, savePct: 10 });
+        expect(cartVolumeNudge(10, prices, true)).toEqual({ units: 2, targetQty: 12, price: 2, savePct: 20 });
+        expect(cartVolumeNudge(12, prices, true)).toBeNull();
+        expect(cartVolumeNudge(1, { webPrice1pc: 2.5, webPrice12pc: 2.5 }, true)).toBeNull();
+        expect(cartVolumeNudge(1, { unitPrice: null, webPrice12pc: 2 }, true)).toBeNull();
     });
 });

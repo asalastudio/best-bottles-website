@@ -152,7 +152,7 @@ describe("Grace 100-point hardening contracts", () => {
     expect(context).toContain("actions?: GraceAction[]");
     expect(provider).toContain("const actions = pendingActionsRef.current.splice(0)");
     expect(provider).toContain("mergeGraceActions");
-    expect(message).toContain("const actions = message.actions");
+    expect(message).toContain("message.actions ?? (message.action ? [message.action] : [])");
     expect(message).toContain("actions.map");
     expect(message).toContain("analytics.graceMultiActionRendered");
     expect(drawer).toContain("const showEmptyState = messages.length === 0");

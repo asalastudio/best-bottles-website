@@ -65,7 +65,7 @@ describe("bottle requests shared by the tile prefetch and the pick", () => {
         expect(fetcher).toHaveBeenCalledTimes(2);
         expect(fetcher.mock.calls.map(([url]) => url)).toEqual([
             "/api/bottle-builder/bodies?family=Cylinder&bodyId=cylinder-9ml%7C17-415%7CGlass%20Bottle",
-            "/api/bottle-builder/kits?family=Cylinder&bodyId=cylinder-9ml%7C17-415%7CGlass%20Bottle",
+            "/api/bottle-builder/kits?family=Cylinder&bodyId=cylinder-9ml%7C17-415%7CGlass%20Bottle&media=elegant-photo-hardware-v5",
         ]);
     });
 

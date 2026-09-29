@@ -124,6 +124,14 @@ export const componentLayerV = v.object({
     // The layer's lowest solid row (image px). With the plate's shoulderY it tells the stage how far a closure reaches under
     // the rim, so a cap measured on a long-necked bottle is lifted clear of a shorter neck's shoulder (Jordan 2026-09-26).
     solidBottomY: v.optional(v.number()),
+    // A part seen THROUGH the glass (a roller stem in the neck, a pump body and dip tube in the bottle) looks
+    // different in every glass, so it carries one layer per glass: the plate glass it was rendered behind
+    // ("Clear", "Amber", ...). The renderer draws it only on that glass; absent = every glass.
+    glass: v.optional(v.string()),
+    // A layer made for one body (a native render of that bottle's own fitment) carries its bodyId. When a component
+    // has layers for the assembly's body, the renderer draws ONLY those; every other body keeps the generic layers
+    // (absent bodyId). So one body's closures can be re-rendered without changing any other body that shares them.
+    bodyId: v.optional(v.string()),
 });
 
 export const componentRegisterFields = {

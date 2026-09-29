@@ -63,7 +63,11 @@ if (fields.changedSince.length) console.log(`  changed since, left alone: ${fiel
 if (fields.notFound.length) console.log(`  not found: ${fields.notFound.join(", ")}`);
 if (fields.changedSince.length || fields.notFound.length) process.exitCode = 1;
 
+// The dry run reads each target page: it used to print "would move" for all ten even after they had moved (29 Sep).
+const pages = new Map();
 for (const [websiteSku, , , groupSlug] of MINARETS) {
+    if (!pages.has(groupSlug)) pages.set(groupSlug, await client.query("products:getProductGroup", { slug: groupSlug }));
+    if (pages.get(groupSlug)?.variants.some((variant) => variant.websiteSku === websiteSku)) { console.log(`  ${websiteSku} already on ${groupSlug}`); continue; }
     if (!apply) { console.log(`  would move ${websiteSku} → ${groupSlug}`); continue; }
     const result = await client.mutation("products:moveProductToGroup", { writeToken, websiteSku, groupSlug });
     console.log(`  ${result.moved ? "moved" : "NOT moved"} ${websiteSku}: ${result.from ?? "?"} → ${result.to} (${result.detail})`);

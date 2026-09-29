@@ -1,0 +1,140 @@
+{
+ "bodyId": "cylinder-9ml-13-415",
+ "createdBy": "outputs/tallcyl-13415-v40-2026-09-28 (export_v13.py + build_assets_v13.py), studio v1.3",
+ "pxPerMm": 25.0,
+ "camera": {
+  "type": "orthographic",
+  "tiltDegDown": 3.0,
+  "note": "the 9 mL register camera; anchors are camera projections of 3D points"
+ },
+ "datum": {
+  "seat": "rim centre (0,0,105.49 mm)",
+  "foot": "lowest projected point of the glass",
+  "shoulder": "(0,0,94.49 mm)"
+ },
+ "background": "seen through the glass: the v1.3 studio backdrop (displays as bone #F5F3EF); transparent outside every part",
+ "calipered": "body LOCKED v2 to the caliper; sprayer (flat top, 0.60 recess), lined and ribbed short caps, roll-on caps OD to the caliper; V63 tailpiece photo-derived",
+ "plates": [],
+ "components": [
+  {
+   "componentId": "CMP-CAP-SBLK-13-415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "short cap with liner shiny-black (OD 15.94 x 16.40, caliper; sits on the shoulder)",
+     "file": "components/liner-shiny-black.png",
+     "width": 402,
+     "height": 431,
+     "sha256": "672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 201.0,
+      "y": 145.35
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CLS-MTCP-S-13-415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "short cap with liner matte-copper (OD 15.94 x 16.40, caliper; sits on the shoulder)",
+     "file": "components/liner-matte-copper.png",
+     "width": 401,
+     "height": 431,
+     "sha256": "32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 200.0,
+      "y": 145.35
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CLS-MTGD-S-13-415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "short cap with liner matte-gold (OD 15.94 x 16.40, caliper; sits on the shoulder)",
+     "file": "components/liner-matte-gold.png",
+     "width": 401,
+     "height": 431,
+     "sha256": "fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 200.0,
+      "y": 145.35
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CLS-MTSL-S-13-415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "short cap with liner matte-silver (OD 15.94 x 16.40, caliper; sits on the shoulder)",
+     "file": "components/liner-matte-silver.png",
+     "width": 401,
+     "height": 431,
+     "sha256": "c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 200.0,
+      "y": 145.35
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CLS-SHGD-S-13-415",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "short cap with liner shiny-gold (OD 15.94 x 16.40, caliper; sits on the shoulder)",
+     "file": "components/liner-shiny-gold.png",
+     "width": 402,
+     "height": 432,
+     "sha256": "1336d3427f5b4014f74a933ee3a9302e9c14adff553e127df2ea2b7f809c2064",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 201.0,
+      "y": 146.35
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CLS-SHSL-S-13-415-02",
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "short cap with liner shiny-silver (OD 15.94 x 16.40, caliper; sits on the shoulder)",
+     "file": "components/liner-shiny-silver.png",
+     "width": 402,
+     "height": 432,
+     "sha256": "ad476da805a7e2287f6ba115876b26ca13c96f290cb2ae72b4c25e81fe7b700f",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 201.0,
+      "y": 146.35
+     },
+     "z": "front",
+     "explodeIndex": 1
+    }
+   ]
+  }
+ ]
+}

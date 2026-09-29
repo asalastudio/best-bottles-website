@@ -5,6 +5,7 @@
  *   npx tsx scripts/register/bodies/push-bodies.ts                    # dry run
  *   npx tsx scripts/register/bodies/push-bodies.ts --apply            # upload + write as "measured"
  *   npx tsx scripts/register/bodies/push-bodies.ts --apply --approve [--except plateKey,...]
+ *   ... --only plateKey,...                                                  # load only the named plates
  *   ... --deployment prod                                                   # production: REGISTER_PROD_WRITE_TOKEN (scripts/register/deployment.ts)
  *
  * Reads data/register/bodies/bodies-measurements.json, output/register-bodies/final/ and the rulings in
@@ -28,6 +29,7 @@ config({ path: [resolve(ROOT, ".env.local"), resolve(ROOT, ".env.blob.local")], 
 const argv = process.argv.slice(2);
 const apply = argv.includes("--apply"), approve = argv.includes("--approve");
 const except = new Set(argv.includes("--except") ? argv[argv.indexOf("--except") + 1].split(",").map(s => s.trim()) : []);
+const only = new Set(argv.includes("--only") ? argv[argv.indexOf("--only") + 1].split(",").map(s => s.trim()).filter(Boolean) : []);
 const PILOT = "cylinder-9ml-17-415";
 
 type Rulings = { scaleFlags?: { by: string; date: string; ruling: string } | null; hold?: Record<string, string> };
@@ -44,7 +46,9 @@ type Plate = {
 
 async function main() {
     const plates = (JSON.parse(readFileSync(resolve(ROOT, "data", "register", "bodies", "bodies-measurements.json"), "utf8")) as Plate[])
-        .filter(p => p.file && p.bodyId !== PILOT);
+        .filter(p => p.file && p.bodyId !== PILOT && (!only.size || only.has(p.plateKey)));
+    const unknown = [...only].filter(key => !plates.some(p => p.plateKey === key));
+    if (unknown.length) throw new Error(`--only names plates bodies-measurements.json does not hold: ${unknown.join(", ")}`);
     const { deployment, url, token } = registerTarget(process.argv.slice(2));
     console.log(`deployment: ${deployment} (${url})`);
     if (apply && !process.env.BLOB_READ_WRITE_TOKEN) throw new Error("BLOB_READ_WRITE_TOKEN is not set (.env.blob.local)");

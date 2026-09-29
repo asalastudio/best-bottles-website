@@ -6,24 +6,28 @@
 
 .page {
     --pdp-ink: #1c1c1e;
-    --pdp-page: #faf9f7;
-    --pdp-canvas: #f1ede6;
+    /* One pearl ground under the header, the canvas and the sections, and neutral hairlines, so the warm grey
+       studio is the only tone that stands out (Jordan 2026-09-28, option B). White is kept for the order box
+       and the tech sheet; the Build Your Bottle cards take the studio's own wall. The canvas is pearl too: a
+       fallback photo baked on bone (#F5F3EF, #295) sits within 1-4 levels of it. */
+    --pdp-page: #f6f4f3;
+    --pdp-canvas: #f6f4f3;
+    --pdp-studio: #f0efeb;
     --pdp-card: #fff;
-    --pdp-border: #e6dccd;
-    --pdp-border-soft: #ece6dc;
-    --pdp-border-strong: #d9cdb9;
-    --pdp-divider: #e3dccf;
-    --pdp-switch-border: #cfc3ae;
+    --pdp-border: #e6e2df;
+    --pdp-border-soft: #ece9e6;
+    --pdp-border-strong: #d5d0cc;
+    --pdp-divider: #e6e2df;
     --pdp-gold: #9a7a48;
     --pdp-secondary: #5d6b7e;
     --pdp-muted: #8a93a0;
     --pdp-body: #4d5767;
     --pdp-green: #4f8a5b;
-    --pdp-tile: #f8f6f2;
-    --pdp-panel: #f4f2ee;
-    --pdp-hover: #f1ebe0;
-    --pdp-baseline: #ddd3c3;
-    --pdp-grid: #f7f4ee;
+    --pdp-tile: #f8f7f5;
+    --pdp-panel: #f2f0ed;
+    --pdp-hover: #efece9;
+    --pdp-baseline: #dad6d2;
+    --pdp-grid: #f3f1ef;
     --pdp-ease: cubic-bezier(.2, .7, .2, 1);
     background: var(--pdp-page);
     color: var(--pdp-ink);
@@ -92,7 +96,7 @@
 
 .canvas {
     display: grid;
-    grid-template-columns: 92px minmax(0, 1fr);
+    grid-template-columns: 68px minmax(0, 1fr);
     grid-template-areas:
         "head head"
         "rail stage"
@@ -106,7 +110,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 12px;
-    padding: 12px 16px 0;
+    padding: 12px 0 0 16px;   /* the view switch ends flush with the stage's right edge (Jordan 2026-09-28) */
 }
 
 .pickLine {
@@ -122,22 +126,42 @@
 
 .viewSwitch {
     display: flex;
-    border: 1px solid var(--pdp-switch-border);
     flex: none;
 }
 
+/* Selection across the canvas is one ink hairline under the chosen item (Jordan 2026-09-28): the view's word,
+   the cap in the rail, the glass's name. No fills, no boxes. */
 .viewButton {
+    --pad-l: 10px;
+    --pad-r: 10px;
+    position: relative;
     font-size: 11px;
     letter-spacing: .12em;
-    padding: 6px 12px;
+    padding: 6px var(--pad-r) 6px var(--pad-l);
     white-space: nowrap;
     min-height: 30px;
-    transition: background-color .2s, color .2s;
+    color: var(--pdp-secondary);
+    transition: color .2s;
 }
 
+/* The last word ends on the stage's right edge. */
+.viewButton:last-child {
+    --pad-r: 0px;
+}
+
+.viewButton:hover,
 .viewButton[aria-pressed="true"] {
+    color: var(--pdp-ink);
+}
+
+.viewButton[aria-pressed="true"]::after {
+    content: "";
+    position: absolute;
+    left: var(--pad-l);
+    right: calc(var(--pad-r) + .12em);
+    bottom: 3px;
+    height: 1px;
     background: var(--pdp-ink);
-    color: #fff;
 }
 
 .viewButton:disabled {
@@ -186,12 +210,14 @@
 }
 
 .railButton {
-    width: 64px;
-    height: 56px;
+    flex: none;   /* the track scrolls; a squeezed button would let a tall sprayer overlap the next */
+    width: 52px;
+    min-height: 32px;
+    padding: 4px 0 5px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    border-bottom: 2px solid transparent;
+    border-bottom: 1px solid transparent;
     opacity: .6;
     transition: opacity .2s, border-color .2s;
 }
@@ -285,6 +311,26 @@
     transition: transform .6s var(--pdp-ease);
 }
 
+/* A Blender body's studio (wall, floor, contact shadow), under every part; it moves with the frame. */
+.stageBackdrop {
+    position: absolute;
+    display: block;
+    max-width: none;
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* A closure standing on the studio floor: the same soft contact as the glass's (a dark core at the foot, a wide halo). */
+.stageFloorShadow {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(50% 18% at 50% 42%, rgba(46, 38, 30, .46), rgba(46, 38, 30, 0) 100%),
+        radial-gradient(50% 50% at 50% 46%, rgba(46, 38, 30, .16), rgba(46, 38, 30, 0) 100%);
+}
+
 .stagePart {
     position: absolute;
     inset: 0;
@@ -309,6 +355,16 @@
     max-height: 100%;
     object-fit: contain;
     display: block;
+}
+
+.bareBodyNote {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    color: var(--pdp-secondary);
+    font-size: 11px;
+    text-align: center;
 }
 
 .stageEmpty {
@@ -430,19 +486,10 @@
     gap: 6px;
     padding: 8px 0 6px;
     min-height: 44px;
-    border: 1px solid transparent;
-    transition: border-color .2s;
 }
 
-/* The chosen glass wears a hairline square, never a filled box (Jordan 2026-09-25). */
-.glassButton[aria-pressed="true"] {
-    border-color: var(--pdp-ink);
-}
-
-/* A glass with nothing in stock: a dotted hairline, whether or not it is the one on the canvas. */
+/* A glass with nothing in stock: its name keeps a dotted hairline, whether or not it is the one on the canvas. */
 .glassButton[data-unavailable="true"] {
-    border-style: dotted;
-    border-color: var(--pdp-ink);
     opacity: .55;
 }
 
@@ -453,10 +500,18 @@
 .glassName {
     font-size: 12px;
     white-space: nowrap;
+    padding-bottom: 4px;
+    border-bottom: 1px solid transparent;
 }
 
+/* The chosen glass: the hairline under its name (it wore a square until 2026-09-28). */
 .glassButton[aria-pressed="true"] .glassName {
     font-weight: 600;
+    border-bottom-color: var(--pdp-ink);
+}
+
+.glassButton[data-unavailable="true"] .glassName {
+    border-bottom: 1px dotted var(--pdp-ink);
 }
 
 .glassTile {
@@ -531,9 +586,10 @@
     gap: 10px;
 }
 
+/* The finish chip: a crop of the closure's own render (materialSwatch), big enough for a dotted cap's dots. */
 .swatchDot {
-    width: 26px;
-    height: 26px;
+    width: 32px;
+    height: 32px;
     flex: none;
     border-radius: 50%;
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .15);
@@ -562,25 +618,37 @@
     border: 1px solid var(--pdp-border-strong);
 }
 
+.rollerIntro {
+    margin: 0;
+    color: var(--pdp-muted);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
 .rollerButton {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
     gap: 8px;
     padding: 9px 12px;
     font-size: 12px;
-    white-space: nowrap;
-    min-height: 44px;
+    text-align: center;
+    min-height: 98px;
     transition: background-color .2s, color .2s;
+}
+
+/* The insert is a transparent register layer: it stands straight on the button, no tile behind it (Jordan 2026-09-28). */
+.rollerImage {
+    display: block;
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
 }
 
 .rollerButton[aria-pressed="true"] {
     background: var(--pdp-ink);
     color: #fff;
-}
-
-.rollerPrice {
-    opacity: .7;
 }
 
 .qtyRow {
@@ -949,8 +1017,8 @@
 }
 
 .tile {
-    background: var(--pdp-tile);
-    border: 1px solid var(--pdp-border);
+    background: var(--pdp-studio);
+    border: 1px solid transparent;
     padding: 18px;
     display: flex;
     flex-direction: column;
@@ -974,6 +1042,21 @@
     overflow: hidden;
 }
 
+.tileWell[data-align="baseline"] {
+    align-items: flex-end;
+    padding-bottom: 14px;
+}
+
+/* A full range of parts wraps into rows on one baseline per row, at one true scale. */
+.tileWell[data-many="true"] {
+    height: auto;
+    min-height: 120px;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    gap: 7px 5px;
+    padding: 6px 0 12px;
+}
+
 .tileTitle {
     font-size: 14px;
     font-weight: 600;
@@ -988,8 +1071,8 @@
 }
 
 .tileCta {
-    background: var(--pdp-tile);
-    border: 1px solid var(--pdp-border);
+    background: var(--pdp-studio);
+    border: 1px solid transparent;
     padding: 24px;
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
@@ -1079,14 +1162,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: repeating-linear-gradient(45deg, #efeae2 0 6px, #f8f6f2 6px 12px);
+    background: repeating-linear-gradient(45deg, #ece9e6 0 6px, #f6f4f3 6px 12px);
     font: 10px ui-monospace, Menlo, monospace;
-    color: #8a7f70;
+    color: #8a8580;
     text-align: center;
     padding: 8px;
 }
 
 /* A real drawing: the trace on the card's white, figures in the page's type. */
+/* No drawing for this body yet: the figures take the whole card rather than a placeholder. */
+.tech[data-drawing="none"] {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+/* The Blender section with its neck detail and caliper table (tech-drawing.ts) needs room to read. */
+.tech[data-drawing="technical"] {
+    grid-template-columns: 400px minmax(0, 1fr);
+    gap: 40px;
+}
+
+.techDrawing[data-kind="technical"] {
+    aspect-ratio: auto;
+    display: block;
+    background: #fff;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+}
+
 .techDrawing[data-has-drawing="true"] {
     aspect-ratio: 200 / 280;
     background: #fff;
@@ -1127,7 +1230,7 @@
     display: grid;
     grid-template-columns: 150px 1fr;
     padding: 7px 0;
-    border-bottom: 1px solid #f0ebe3;
+    border-bottom: 1px solid var(--pdp-border-soft);
     font-size: 12px;
 }
 
@@ -1225,7 +1328,7 @@
     }
 
     .canvasHead {
-        padding: 10px 12px 0;
+        padding: 10px 0 0 12px;
         gap: 8px;
     }
 
@@ -1235,9 +1338,12 @@
     }
 
     .viewButton {
+        --pad-l: 8px;
+        --pad-r: 8px;
         font-size: 9.5px;
         letter-spacing: .1em;
-        padding: 5px 8px;
+        padding-top: 5px;
+        padding-bottom: 5px;
         min-height: 30px;
     }
 
@@ -1314,8 +1420,8 @@
 
     .railButton {
         flex: none;
-        width: 48px;
-        height: 52px;
+        width: 44px;
+        height: 60px;
         scroll-snap-align: center;
     }
 
@@ -1438,7 +1544,7 @@
         display: inline;
     }
 
-    /* Pack of: a bottom sheet instead of a popover. */
+    /* Set of: a bottom sheet instead of a popover. */
     .packMenu {
         position: fixed;
         left: 0;
@@ -1596,6 +1702,11 @@
         display: none;
     }
 
+    .techDrawing[data-kind="technical"] {
+        display: block;
+        margin-bottom: 14px;
+    }
+
     .techLabel {
         font-size: 10px;
     }
@@ -1730,4 +1841,76 @@
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     white-space: nowrap;
+}
+
+/* ── the canvas magnifier (Jordan 2026-09-29) ─────────────────────────────
+   The studio, the glass and every closure scale as one layer; the point under the
+   pointer stays put, so moving it pans. The lens button sits in the stage's corner. */
+.stageZoom {
+    position: absolute;
+    inset: 0;
+    transform-origin: 50% 42%;
+    transition: transform .28s var(--pdp-ease);
+}
+
+.stage[data-zoomable="true"] {
+    cursor: zoom-in;
+}
+
+.stage[data-zoomed="true"] {
+    cursor: zoom-out;
+}
+
+.stage[data-zoomed="true"] .stageZoom {
+    will-change: transform;
+}
+
+/* Discreet by default (Jordan 2026-09-29: "it makes it very busy"): a thin muted lens, no disc; it firms up when
+   the stage is hovered or the button has keyboard focus, and becomes a small dark chip while zoomed so the way out is
+   plain. On touch screens there is no hover, so it keeps a steady middle strength. */
+.zoomButton {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 5;
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--pdp-muted);
+    opacity: .45;
+    cursor: pointer;
+    transition: opacity .2s, color .2s, background .2s;
+}
+
+.stage:hover .zoomButton,
+.zoomButton:focus-visible {
+    opacity: 1;
+    color: var(--pdp-ink);
+}
+
+.zoomButton[aria-pressed="true"] {
+    opacity: 1;
+    background: rgba(28, 28, 30, .78);
+    color: #fff;
+}
+
+.zoomButton:focus-visible {
+    outline: 1px solid var(--pdp-gold);
+    outline-offset: 2px;
+}
+
+@media (hover: none) {
+    .zoomButton {
+        opacity: .7;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .stageZoom {
+        transition: none;
+    }
 }

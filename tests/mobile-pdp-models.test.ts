@@ -359,8 +359,9 @@ describe("mobile PDP wiring", () => {
         expect(pdp).toContain("openGraceFromPdp({ enableVoice: true });");
         expect(pdp).toContain('openGracePanel({ source: "pdp", enableVoice: options?.enableVoice });');
         const drawer = read("src/components/grace/GraceChatDrawer.tsx");
-        expect(drawer).toContain('height: "100dvh"');
-        expect(drawer).toContain('background: "rgba(29, 29, 31, 0.35)"');
+        const drawerStyles = read("src/components/grace/GraceShop.module.css");
+        expect(drawerStyles).toContain("height: 100dvh");
+        expect(drawerStyles).toContain(".backdrop");
         expect(drawer).not.toContain("measureGraceDockedSheet");
         expect(drawer).not.toContain("visualViewport");
     });

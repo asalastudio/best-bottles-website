@@ -27,8 +27,7 @@ export default function GraceWorkspaceClient({
         voiceEnabled,
         errorMessage,
         closePanel,
-        endConversation,
-        conversationActive,
+        resetConversation,
     } = useGrace();
 
     // Close the side drawer if it was open — workspace owns the screen here.
@@ -54,7 +53,7 @@ export default function GraceWorkspaceClient({
     };
 
     const handleNewConversation = () => {
-        if (conversationActive) endConversation();
+        void resetConversation();
         setChatStarted(false);
         setInput("");
     };
