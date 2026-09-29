@@ -73,6 +73,7 @@ import PdpStage from "./PdpStage";
 import { PdpBuildStrip, PdpCollectionBand, PdpOrderLines, PdpProductInfo, PdpStickyBar, PdpTechSheet, UnbrokenHyphens, type OrderLineView } from "./PdpSections";
 import { drawingBodyId, drawingFor, drawingStyleFromQuery } from "@/lib/products/pdp-redesign/drawings";
 import { technicalDrawingFor } from "@/lib/products/pdp-redesign/tech-drawing";
+import { labelFitFor } from "@/lib/products/pdp-redesign/label-fit";
 
 export type PdpRedesignPayload = {
     slug: string;
@@ -495,6 +496,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                     pdfHref={`/api/pdf/tech-sheet/${encodeURIComponent(slug)}${selected?.graceSku ? `?sku=${encodeURIComponent(selected.graceSku)}` : ""}`}
                     drawing={drawingFor(slug, selected, drawingStyleFromQuery(searchParams.get("drawing")))}
                     technical={technicalDrawingFor(drawingBodyId(slug))}
+                    labelFit={labelFitFor(drawingBodyId(slug))}
                 />
 
                 {collection && (

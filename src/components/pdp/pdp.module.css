@@ -1256,6 +1256,54 @@
     color: var(--pdp-secondary);
 }
 
+/* Label placement (label-fit.ts), the tech sheet's lower half: the same card continues below the figures,
+   with the bottle and its flat label on the left and the label figures on the right. */
+.tech:has(+ .labelFit) {
+    border-bottom: 0;
+}
+
+.labelFit {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: 40px;
+    background: var(--pdp-card);
+    border: 1px solid var(--pdp-border);
+    border-top: 0;
+    padding: 0 24px 24px;
+}
+
+.labelFit::before {
+    content: "";
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--pdp-border-soft);
+    margin-bottom: -16px;
+}
+
+.labelFitDrawing {
+    min-width: 0;
+    background: #fff;
+}
+
+.labelFitRows .techRow {
+    grid-template-columns: 150px 1fr;
+}
+
+.labelFitNote {
+    margin: 12px 0 0;
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--pdp-body);
+}
+
+.labelFitDisclaimer {
+    margin: 14px 0 0;
+    padding: 10px 12px;
+    background: var(--pdp-panel);
+    font-size: 11px;
+    line-height: 1.6;
+    color: var(--pdp-secondary);
+}
+
 /* ── collection band ────────────────────────────────────────────────────── */
 
 .collectionWrap {
@@ -1739,6 +1787,24 @@
         grid-template-columns: 130px 1fr;
         padding: 6px 0;
         font-size: 11.5px;
+    }
+
+    .labelFit {
+        display: block;
+        padding: 0 14px 14px;
+    }
+
+    .labelFit::before {
+        display: block;
+        margin-bottom: 14px;
+    }
+
+    .labelFitDrawing {
+        margin-bottom: 14px;
+    }
+
+    .labelFitRows .techRow {
+        grid-template-columns: 130px 1fr;
     }
 
     .collectionWrap {

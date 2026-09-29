@@ -7,6 +7,7 @@ import { selectPrimaryProductVariant } from "@/lib/products/pdp-relations";
 import { capacityEyebrow, fitmentLabel, glassLabel, pageTitle, techSheetRows } from "@/lib/products/pdp-redesign/model";
 import { drawingBodyId } from "@/lib/products/pdp-redesign/drawings";
 import { technicalDrawingFor } from "@/lib/products/pdp-redesign/tech-drawing";
+import { labelFitFor } from "@/lib/products/pdp-redesign/label-fit";
 import { resolveItemDescriptions } from "@/lib/products/item-description/resolve";
 import { renderCatalogPdf } from "@/lib/pdf/catalog/puppeteer";
 import { renderTechSheetHtml } from "@/lib/pdf/tech-sheet/template";
@@ -17,8 +18,9 @@ export const maxDuration = 60;
 
 /**
  * GET /api/pdf/tech-sheet/<group slug>?sku=<grace or website SKU>
- * The product page's "Download PDF": one branded US Letter page for the SKU
- * on screen (the group's primary SKU when none is given). ?format=html
+ * The product page's "Download PDF": a branded US Letter tech sheet for the SKU
+ * on screen (the group's primary SKU when none is given), plus the label
+ * placement and label template pages when the bottle takes a standard label. ?format=html
  * returns the page before printing, for checking the layout.
  */
 export async function GET(req: Request, { params }: { params: Promise<{ slug: string }> }) {
@@ -50,6 +52,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ slug: st
         rows: techSheetRows(variant, payload.group),
         description: description[variant.websiteSku ?? variant.graceSku]?.description ?? null,
         technical: technicalDrawingFor(drawingBodyId(slug)),
+        labelFit: labelFitFor(drawingBodyId(slug)),
         wordmarkUrl: `${origin}/brand/best-bottles-wordmark-supplied.png`,
         generatedAt: new Date(),
     });
