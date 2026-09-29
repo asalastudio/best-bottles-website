@@ -1968,7 +1968,7 @@
   "pxPerMm": 12.1162,
   "anchors": {
    "axisX": 364.5,
-   "seatY": 196,
+   "seatY": 212,
    "shoulderY": 427,
    "baselineY": 2096,
    "barrelAxisX": 368.0,
@@ -3162,7 +3162,7 @@
   "pxPerMm": 16.6456,
   "anchors": {
    "axisX": 643.0,
-   "seatY": 113,
+   "seatY": 151,
    "shoulderY": 446,
    "baselineY": 2095,
    "barrelAxisX": 647.0,
