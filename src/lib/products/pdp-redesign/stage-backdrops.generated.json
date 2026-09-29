@@ -18,5 +18,25 @@
     "baselineY": 1109.51,
     "wall": "#f4f3f2",
     "sha256": "e104db9c5b1a6bc061e9811edd7c1f005380f217f8c2278d367b3adef17e755c"
+  },
+  "cylinder-5ml-13-415|Clear": {
+    "url": "/images/pdp/backdrops/cylinder-5ml-13-415-clear.webp",
+    "width": 1500,
+    "height": 1301,
+    "pxPerMm": 6.0,
+    "axisX": 750.0,
+    "baselineY": 1109.51,
+    "wall": "#f3f2f1",
+    "sha256": "a41824fa06510e3ef3244cc6e6c49640ea60d9caddacd94e51538e494e641ce6"
+  },
+  "cylinder-5ml-13-415|Cobalt Blue": {
+    "url": "/images/pdp/backdrops/cylinder-5ml-13-415-cobalt.webp",
+    "width": 1500,
+    "height": 1301,
+    "pxPerMm": 6.0,
+    "axisX": 750.0,
+    "baselineY": 1109.51,
+    "wall": "#f3f2f1",
+    "sha256": "6ca8aa12ce5c1cc259b44ae13337b0b8c9f27266f3e30de1f984d13ccf3fbb06"
   }
 }
