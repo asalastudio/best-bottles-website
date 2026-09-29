@@ -27,7 +27,7 @@
     "axisX": 750.0,
     "baselineY": 1109.51,
     "wall": "#f3f2f1",
-    "sha256": "a41824fa06510e3ef3244cc6e6c49640ea60d9caddacd94e51538e494e641ce6"
+    "sha256": "83c61826ba175f2cbaafda66a6d4a93d88a72221d12aa831d8070dcfba9ca09c"
   },
   "cylinder-5ml-13-415|Cobalt Blue": {
     "url": "/images/pdp/backdrops/cylinder-5ml-13-415-cobalt.webp",
@@ -37,6 +37,6 @@
     "axisX": 750.0,
     "baselineY": 1109.51,
     "wall": "#f3f2f1",
-    "sha256": "6ca8aa12ce5c1cc259b44ae13337b0b8c9f27266f3e30de1f984d13ccf3fbb06"
+    "sha256": "2476c60cea17b2e3561324d356b3adb2f84df6f0aeb869054b8ef402995ed8f4"
   }
 }
