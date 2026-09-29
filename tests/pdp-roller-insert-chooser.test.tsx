@@ -20,7 +20,7 @@ describe("product-page roller insert choice", () => {
             ],
             activeRoller: "metal",
             rollerImages: { metal: "https://example.test/metal-insert.png", plastic: "https://example.test/plastic-insert.png" },
-            rollerUnitPrice: () => 1.5, onRoller, tiers: [], qty: 1, onQty: vi.fn(), unitPrice: 1.5,
+            onRoller, tiers: [{ minQty: 1, maxQty: 11, unitPrice: 1.5, savePct: 0, saveEach: 0, appliesAtCheckout: true }], qty: 1, onQty: vi.fn(), unitPrice: 1.5,
             lineTotal: 1.5, addState: "add", onAdd: vi.fn(), addedQty: null, caseQuantity: null,
             formatPrice: (value: number) => `$${value.toFixed(2)}`,
         })); });
@@ -30,6 +30,9 @@ describe("product-page roller insert choice", () => {
             "https://example.test/metal-insert.png", "https://example.test/plastic-insert.png",
         ]);
         expect(host.textContent).toContain("insert fitted inside this bottle");
+        // The roller buttons carry no price of their own; the buy box prices whole sets (Jordan 2026-09-29).
+        expect(host.querySelector("[data-testid='pdp-roller-toggle']")?.textContent).not.toMatch(/\$/);
+        expect(host.querySelector("[data-testid='pdp-pack-toggle']")?.textContent).toContain("Set of 1 · $1.50/set");
         expect(host.querySelector("[data-roller='metal']")?.getAttribute("aria-pressed")).toBe("true");
         await act(async () => { host.querySelector<HTMLButtonElement>("[data-roller='plastic']")!.click(); });
         expect(onRoller).toHaveBeenCalledWith("plastic");

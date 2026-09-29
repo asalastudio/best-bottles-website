@@ -450,7 +450,6 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                             rollers={rollers}
                             activeRoller={activeRoller}
                             rollerImages={rollerImages}
-                            rollerUnitPrice={(id) => unitPriceAt(resolveVariant(variants, { roller: id, cap: picks.cap }), qty)}
                             onRoller={onRoller}
                             tiers={tiers}
                             qty={qty}
