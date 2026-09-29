@@ -9,6 +9,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import FinderNavigationMemory from "@/components/catalog/FinderNavigationMemory";
 import FocusedApplicationCards from "@/components/catalog/FocusedApplicationCards";
 import FocusedSizeCards from "@/components/catalog/FocusedSizeCards";
+import FamilyGuideDownload from "@/components/catalog/FamilyGuideDownload";
 import FocusedFinderControls, { exclusiveFacetValue, type FocusedFinderOption } from "@/components/catalog/FocusedFinderControls";
 import FocusedFinderResults from "@/components/catalog/FocusedFinderResults";
 import {
@@ -426,6 +427,7 @@ export default function FamilyPageClient({
                                 {familyLabel}
                             </h1>
                             <p className="mt-3 max-w-2xl text-sm leading-6 text-slate">{story}</p>
+                            <FamilyGuideDownload family={family} className="mt-3" />
                         </div>
                         <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
                             <a

@@ -207,6 +207,8 @@
     "bottleFamily": "Familia de frascos",
     "findFamilyProducts": "Ver productos {family}",
     "familySizes": "Tamaños",
+    "compatibilityGuide": "Guía de compatibilidad (PDF)",
+    "compatibilityGuideMeta": "{pages} páginas · {size}",
     "familyIntro": "Los frascos {family} se ofrecen en distintos sistemas de dosificación y capacidades. Empieza por el aplicador que necesita tu fórmula y luego compara los productos mayoristas exactos.",
     "shopByCollection": "Ver por colección",
     "buildFromCollection": "Arma tu frasco desde esta colección →",

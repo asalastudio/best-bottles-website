@@ -211,13 +211,26 @@ describe("resolver", () => {
         expect(resolved?.itemType).toContain("roll-on bottles");
     });
 
-    it("gives the curated bulb sprayer copy the site's vintage-style wording", () => {
-        // Curated copy is looked up by website SKU first; the rest of the input only matters when it is missing.
+    it("serves product copy v2 first: title, paragraph, bullets, Care note and item type", () => {
+        // Looked up by website SKU first; the rest of the input only matters when the SKU is missing.
         const bottle = resolveItemDescription({ ...COBALT_ROLLON, websiteSku: "GBDiva46AnSpBlk", graceSku: null });
-        expect(bottle?.source).toBe("curated");
-        expect(bottle?.itemType).toBe("Vintage-Style Bulb Sprayer Bottles");
+        expect(bottle?.source).toBe("copy");
+        expect(bottle?.itemType).toBe("Vintage-style bulb sprayer · 18-415 neck");
+        expect(bottle?.copy?.title).toBe("46 ml Clear Diva Vintage-Style Bulb Sprayer");
+        expect(bottle?.description).toBe(bottle?.copy?.sentences.join(" "));
+        expect(bottle?.copy?.bullets[0]).toEqual(["Included", "Black bulb sprayer, packed unattached, and a black travel cap"]);
+        expect(bottle?.copy?.care).toBe("To carry it, take off the bulb and fit the travel cap.");
         const part = resolveItemDescription({ ...COBALT_ROLLON, websiteSku: "AnSpTsl18-415Lvn", graceSku: null });
-        expect(part?.description).toMatch(/^Lavender vintage-style bulb sprayer/);
+        expect(part?.source).toBe("copy");
+        expect(part?.description).toMatch(/^A vintage-style bulb sprayer with tassel/);
         expect(part?.description).not.toMatch(/antique/i);
+        const byGrace = resolveItemDescription({ ...COBALT_ROLLON, websiteSku: null, graceSku: "GB-CYL-BLU-9ML-MRL-BKDT" });
+        expect(byGrace?.copy?.title).toBe("9 ml Cobalt Blue Cylinder Roll-On Bottle");
+    });
+
+    it("keeps the curated copy for a SKU product copy v2 does not cover", () => {
+        const resolved = resolveItemDescription({ ...COBALT_ROLLON, websiteSku: "CJ30BlkCap", graceSku: null });
+        expect(resolved?.source).toBe("curated");
+        expect(resolved?.copy).toBeUndefined();
     });
 });

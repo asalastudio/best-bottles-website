@@ -66,12 +66,51 @@ export function PdpOrderLines({
 
 // ── Product information ───────────────────────────────────────────────────────
 
-export function PdpProductInfo({ itemType, itemName, description }: { itemType: string | null; itemName: string | null; description: string | null }) {
+/** A headline that never breaks inside "Roll-On", "Vintage-Style" or "Fine-Mist": hyphenated words stay whole. */
+export function UnbrokenHyphens({ text }: { text: string }) {
+    return (
+        <>
+            {text.split(" ").map((word, index) => (
+                <span key={index}>
+                    {index > 0 ? " " : null}
+                    {word.includes("-") ? <span className={styles.nowrap}>{word}</span> : word}
+                </span>
+            ))}
+        </>
+    );
+}
+
+type ProductInfoProps = {
+    itemType: string | null;
+    itemName: string | null;
+    description: string | null;
+    /** [label, text]: Included, Fits, Glass or Material, Good to know (TEMPLATE.md). */
+    bullets?: ReadonlyArray<readonly [string, string]> | null;
+    /** The one warning line, set apart in the editorial serif (TEMPLATE.md amendment, 2026-09-28). */
+    care?: string | null;
+};
+
+export function PdpProductInfo({ itemType, itemName, description, bullets, care }: ProductInfoProps) {
     return (
         <dl className={styles.info} data-testid="pdp-product-info">
             {itemType && (<><dt className={styles.infoKey}>Item type</dt><dd>{itemType}</dd></>)}
             {itemName && (<><dt className={styles.infoKey}>Item name</dt><dd className={styles.infoMono} data-testid="pdp-item-name">{itemName}</dd></>)}
-            {description && (<><dt className={styles.infoKey}>Item description</dt><dd className={styles.infoDescription} data-testid="pdp-item-description">{description}</dd></>)}
+            {description && (
+                <>
+                    <dt className={styles.infoKey}>Item description</dt>
+                    <dd className={styles.infoDescription}>
+                        <span data-testid="pdp-item-description">{description}</span>
+                        {bullets && bullets.length > 0 && (
+                            <ul className={styles.infoBullets} data-testid="pdp-item-bullets">
+                                {bullets.map(([label, text]) => (
+                                    <li key={label}><span className={styles.infoBulletLabel}>{label}:</span> {text}</li>
+                                ))}
+                            </ul>
+                        )}
+                    </dd>
+                </>
+            )}
+            {care && (<><dt className={styles.infoKey}>Care</dt><dd className={styles.careNote} data-testid="pdp-care-note">{care}</dd></>)}
         </dl>
     );
 }

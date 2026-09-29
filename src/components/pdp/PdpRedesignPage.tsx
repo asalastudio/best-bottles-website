@@ -70,7 +70,7 @@ import type { StageBounds } from "@/lib/products/pdp-stage-frame";
 import styles from "./pdp.module.css";
 import PdpBuyBox, { type AddState } from "./PdpBuyBox";
 import PdpStage from "./PdpStage";
-import { PdpBuildStrip, PdpCollectionBand, PdpOrderLines, PdpProductInfo, PdpStickyBar, PdpTechSheet, type OrderLineView } from "./PdpSections";
+import { PdpBuildStrip, PdpCollectionBand, PdpOrderLines, PdpProductInfo, PdpStickyBar, PdpTechSheet, UnbrokenHyphens, type OrderLineView } from "./PdpSections";
 import { drawingBodyId, drawingFor, drawingStyleFromQuery } from "@/lib/products/pdp-redesign/drawings";
 import { technicalDrawingFor } from "@/lib/products/pdp-redesign/tech-drawing";
 
@@ -151,6 +151,9 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         return rollerPart?.image.url ? [[option.id, rollerPart.image.url]] : [];
     }));
     const fitment = fitmentLabel(selected);
+    // Product copy v2 (scripts/pdp-descriptions/product_copy.py) names the product when it covers this SKU.
+    const copy = useMemo(() => (selected?.websiteSku ? descriptions[selected.websiteSku]?.copy ?? null : null), [descriptions, selected?.websiteSku]);
+    const title = useMemo(() => copy?.title ?? pageTitle(group, fitment), [copy, group, fitment]);
     const kit = kitFor(kitsBySku, selected);
     const glassBodyKit = useCallback((glassSlug: string): KitLike | null => {
         if (glassSlug === slug) return kit ?? kitFor(kitsBySku, { websiteSku: group.primaryWebsiteSku, graceSku: group.primaryGraceSku }) ?? variants.map((variant) => kitFor(kitsBySku, variant)).find(Boolean) ?? null;
@@ -302,7 +305,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         const tier = tiers.length ? formatVolumeQtyRange(tiers[tiers.reduce((acc, t, i) => (qty >= t.minQty ? i : acc), 0)].minQty, tiers[tiers.reduce((acc, t, i) => (qty >= t.minQty ? i : acc), 0)].maxQty) : null;
         addItems([{
             graceSku: selected.graceSku,
-            itemName: pageTitle(group, fitment),
+            itemName: title,
             quantity: qty,
             unitPrice: selected.webPrice1pc ?? null,
             checkoutEligible: checkoutReady,
@@ -325,12 +328,12 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
             priceTiers: selected.priceTiers?.map((t) => ({ minQty: t.minQty, unitPrice: t.unitPrice })) ?? null,
         }]);
         analytics.pdpAddLine({ group: slug, sku: selected.websiteSku, qty, tier });
-        analytics.cartItemAdded({ sku: selected.graceSku, name: pageTitle(group, fitment), quantity: qty, unitPrice: selected.webPrice1pc, family: group.family, capacity: group.capacity ?? undefined, source: "pdp" });
+        analytics.cartItemAdded({ sku: selected.graceSku, name: title, quantity: qty, unitPrice: selected.webPrice1pc, family: group.family, capacity: group.capacity ?? undefined, source: "pdp" });
         setAddedQty(qty);
         setQty(1);
         if (addedTimer.current != null) window.clearTimeout(addedTimer.current);
         addedTimer.current = window.setTimeout(() => setAddedQty(null), ADDED_FLASH_MS);
-    }, [selected, addState, tiers, qty, addItems, group, fitment, checkoutReady, slug, activeCap?.name]);
+    }, [selected, addState, tiers, qty, addItems, group, title, checkoutReady, slug, activeCap?.name]);
 
     // ── in this order: the cart's view of this page's lines ───────────────
     const pageSlugs = useMemo(() => new Set([slug, ...siblings.map((sibling) => sibling.slug)]), [slug, siblings]);
@@ -356,7 +359,6 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     const glassName = activeGlass?.shortLabel ?? glassShortLabel(group.color);
     const capName = activeCap?.name ?? null;
     const description = selected?.websiteSku ? descriptions[selected.websiteSku] ?? null : null;
-    const title = pageTitle(group, fitment);
     // The headline names the SKU in the buy box: a new cap, roller or finish changes it with the pick.
     const option = optionLabel(rollerOption, fitment, capName);
     const capacityLabel = `${group.capacityMl != null ? `${group.capacityMl} ml` : group.capacity ?? ""} ${group.family ?? ""}`.trim();
@@ -407,7 +409,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                         glassFrame={frame}
                         fallbackImageUrls={fallbackMedia.images}
                         fallbackBodyImageUrl={fallbackMedia.bodyImageUrl}
-                        fallbackAlt={variantTitle(title, option)}
+                        fallbackAlt={copy?.altText ?? variantTitle(title, option)}
                         callouts={buildCallouts(selected, capName)}
                         caps={caps.map((cap) => ({
                             id: cap.id, name: cap.name, swatchName: cap.swatchName,
@@ -431,7 +433,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                         <div className={styles.titleBlock}>
                             <span className={styles.eyebrow} data-testid="pdp-eyebrow">{capacityEyebrow(group)}</span>
                             <h1 className={styles.title} data-testid="pdp-title">
-                                {title}
+                                <UnbrokenHyphens text={title} />
                                 {option ? (
                                     <span className={styles.titleOption} data-testid="pdp-title-option">
                                         <span className={styles.visuallyHidden}> - </span>{option}
@@ -469,6 +471,8 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                             itemType={description?.itemType ?? null}
                             itemName={selected?.websiteSku ?? selected?.graceSku ?? null}
                             description={description?.description ?? null}
+                            bullets={copy?.bullets ?? null}
+                            care={copy?.care || null}
                         />
 
                         <button type="button" className={styles.graceButton} onClick={onAskGrace} data-testid="pdp-ask-grace">Ask Grace about fitment</button>

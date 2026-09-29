@@ -207,6 +207,8 @@
     "bottleFamily": "Bottle family",
     "findFamilyProducts": "Find {family} products",
     "familySizes": "Sizes",
+    "compatibilityGuide": "Compatibility guide (PDF)",
+    "compatibilityGuideMeta": "{pages} pages · {size}",
     "familyIntro": "{family} glass is offered across dispensing systems and capacities. Start with the application your formula needs, then compare exact wholesale products.",
     "shopByCollection": "Shop by collection",
     "buildFromCollection": "Build from this collection →",

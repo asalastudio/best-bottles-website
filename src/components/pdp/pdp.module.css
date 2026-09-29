@@ -951,6 +951,34 @@
     text-wrap: pretty;
 }
 
+.infoBullets {
+    margin: 8px 0 0;
+    padding-left: 16px;
+    list-style: disc;
+}
+
+.infoBullets li {
+    margin: 3px 0;
+}
+
+.infoBulletLabel {
+    font-weight: 600;
+    color: var(--pdp-ink);
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+/* The Care note: one warning line, set apart from the sales copy in the editorial serif. */
+.careNote {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.4;
+    text-wrap: pretty;
+}
+
 .graceButton {
     border: 1px solid var(--pdp-border-strong);
     text-align: center;
