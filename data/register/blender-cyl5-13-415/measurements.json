@@ -45,9 +45,9 @@
     "height_mm": 53.55,
     "od_mm": 18.06,
     "finish_height_mm": 11.0,
-    "capacity_ml": 5.535,
+    "capacity_ml": 6.257,
     "lock": "Bottle | Cylinder 5 ml 13-415 body v6.3a",
-    "studio": "Cyl-5ml-13-415_clear_STUDIO-v1.3.blend"
+    "studio": "Cyl-5ml-13-415_clear_STUDIO-v1.4-body-v6.3a.blend"
    }
   },
   {
@@ -79,9 +79,9 @@
     "height_mm": 53.55,
     "od_mm": 18.06,
     "finish_height_mm": 11.0,
-    "capacity_ml": 5.535,
+    "capacity_ml": 6.257,
     "lock": "Bottle | Cylinder 5 ml 13-415 body v6.3a",
-    "studio": "Cyl-5ml-13-415_cobalt_STUDIO-v1.3.blend"
+    "studio": "Cyl-5ml-13-415_cobalt_STUDIO-v1.4-body-v6.3a.blend"
    }
   }
  ],

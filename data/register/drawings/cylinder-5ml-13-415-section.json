@@ -2,7 +2,7 @@
  "body": "cylinder-5ml-13-415",
  "title": "Cylinder 5 ml, 13-415",
  "scale": 2,
- "source": "Axial section (plane y=0) of the Cylinder 5 mL body v6.3a (2.0 mm walls, 0.10 mm taper a side, the shoulder down over 2.9 mm, a 2.0 mm heel whose bend starts 2.6 mm up) in the studio v1.3 file (Cyl-5ml-13-415_clear_STUDIO-v1.4-body-v6.3a.blend), mm, z up from the standing ring; simplified to 8 microns. The figures are Jordan's caliper readings (Bottle Caliper Log, cylinder-5ml-13-415), drawn at the model's own datums.",
+ "source": "Axial section (plane y=0) of the Cylinder 5 mL body v6.3a (2.0 mm walls, 0.10 mm taper a side, the shoulder down over 2.9 mm, a 2.0 mm heel whose bend starts 2.6 mm up) in the studio v1.4 file (Cyl-5ml-13-415_clear_STUDIO-v1.4-body-v6.3a.blend), mm, z up from the standing ring; simplified to 8 microns. The figures are Jordan's caliper readings (Bottle Caliper Log, cylinder-5ml-13-415), drawn at the model's own datums.",
  "sourceSha256": "c9b98229bafdba181fb30bf305e30a424b913cca15c8af2a7e860f80428225bc",
  "units": "mm",
  "section": {
@@ -1138,7 +1138,7 @@
   "overflowMl": {
    "value": 6.3,
    "label": "Capacity",
-   "source": "calculated from the v6 model (2.0 mm walls), 6.257 ml; not weighed"
+   "source": "calculated from the v6.3a model (2.0 mm walls), 6.257 ml; not weighed"
   }
  }
 }
