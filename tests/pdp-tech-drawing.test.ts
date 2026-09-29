@@ -65,7 +65,7 @@ describe("the 5 mL cylinder's drawing", () => {
         expect(rows.find((row) => row.label === "Height")?.value).toBe("53.55 mm");
         expect(rows.find((row) => row.label === "Body")?.value).toBe("Ø 18.06 mm");
         expect(rows.find((row) => row.label === "Foot")?.value).toBe("Ø 17.51 mm");
-        expect(rows.find((row) => row.label === "Capacity")?.value).toBe("≈ 5.5 ml");
+        expect(rows.find((row) => row.label === "Capacity")?.value).toBe("≈ 6.3 ml");
     });
 });
 
