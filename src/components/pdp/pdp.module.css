@@ -651,10 +651,6 @@
     color: #fff;
 }
 
-.rollerPrice {
-    opacity: .7;
-}
-
 .qtyRow {
     display: flex;
     gap: 8px;
@@ -1548,7 +1544,7 @@
         display: inline;
     }
 
-    /* Pack of: a bottom sheet instead of a popover. */
+    /* Set of: a bottom sheet instead of a popover. */
     .packMenu {
         position: fixed;
         left: 0;
