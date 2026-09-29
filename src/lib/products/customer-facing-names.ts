@@ -178,10 +178,13 @@ function productEvidence(variant?: CustomerFacingNameVariantInput | null, group?
 }
 
 function productTypeFromEvidence(evidence: string): { label: string; source: string } | null {
-    if (/\b(ast|tassel)\b/i.test(evidence) || /ansptsl|tassel/.test(evidence)) {
+    // Only bulb sprayer evidence names a bulb sprayer: a rubber-bulb dropper ("…WhiteBulb") and the heart bottle
+    // with a tassel are not one, and a tassel alone does not make one.
+    const bulbSprayer = /\b(asp|ast)\b/i.test(evidence) || /ansp|vintage|antique|bulb spray/.test(evidence);
+    if (bulbSprayer && (/\b(ast|tassel)\b/i.test(evidence) || /ansptsl|tassel/.test(evidence))) {
         return { label: "Vintage-Style Bulb Sprayer Bottle with Tassel", source: "tassel sprayer evidence" };
     }
-    if (/\b(asp)\b/i.test(evidence) || /ansp|vintage|antique|bulb/.test(evidence)) {
+    if (bulbSprayer) {
         return { label: "Vintage-Style Bulb Sprayer Bottle", source: "vintage-style bulb sprayer evidence" };
     }
     if (/\b(spr)\b/i.test(evidence) || /spry|perfume spray|spray pump|fine mist|sprayer/.test(evidence)) {
@@ -323,10 +326,35 @@ function buildFallback(args: CustomerFacingNameArgs): CustomerFacingProductName 
     };
 }
 
+function isComponent(args: CustomerFacingNameArgs): boolean {
+    return key(args.variant?.category ?? args.group?.category) === "component";
+}
+
+/**
+ * A part sold on its own (a bulb sprayer, dropper, pump or cap) is named as its page is ("Vintage Bulb Sprayer
+ * with Tassel — Thread 18-415"), with the SKU's finish: composed like a bottle it read "0 ml Sprayer Vintage-Style
+ * Bulb Sprayer Bottle", a capacity, glass and bottle it does not have.
+ */
+function componentName(args: CustomerFacingNameArgs): CustomerFacingProductName {
+    const base = clean(args.group?.displayName) ?? clean(args.fallbackName) ?? clean(args.variant?.itemName) ?? "Best Bottles Component";
+    const finish = resolveFinish(args.variant);
+    const displayName = displayApplicatorName(`${base}${finish && !key(base).includes(key(finish)) ? ` - ${finish}` : ""}`);
+    return {
+        displayName,
+        shortName: displayName,
+        variantLabel: finish,
+        seoName: displayName,
+        altText: displayName,
+        confidence: clean(args.group?.displayName) ? "high" : "fallback",
+        sourceReason: "component page name",
+    };
+}
+
 export function getCustomerFacingProductName(args: CustomerFacingNameArgs): CustomerFacingProductName {
     // A name staff typed on purpose wins over the generated one, as written. The SKU's finish is still
     // appended ("… - Shiny Gold"), so the variants of one product stay told apart the way they are now.
     const custom = clean(args.group?.customName);
+    if (!custom && isComponent(args)) return componentName(args);
     const baseName = custom ?? composeBaseName(args.group, args.variant);
     if (!baseName) return buildFallback(args);
 

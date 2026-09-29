@@ -7,6 +7,7 @@ import {
     collectionDescription,
     collectionFor,
     derivePicks,
+    fitmentLabel,
     glassOptions,
     lineLabel,
     optionLabel,
@@ -129,6 +130,16 @@ describe("copy", () => {
         expect(lineLabel("Cobalt", roller, null, "Black with Dots")).toBe("Cobalt · Metal · Black with Dots");
         expect(capacityEyebrow(GROUP)).toBe("CYLINDER · 9 ML · 17-415");
         expect(pageTitle(GROUP, "Metal roller")).toBe("9 ml Cobalt Blue Cylinder Roll-On Bottle");
+    });
+
+    it("titles a bulb sprayer page as the tab title does, tassel included", () => {
+        const diva = { ...GROUP, family: "Diva", capacityMl: 46, color: "Clear" };
+        expect(pageTitle(diva, fitmentLabel(variant({ websiteSku: "GBDiva46AnSpBlk", graceSku: "A", applicator: "Vintage Bulb Sprayer" }))))
+            .toBe("46 ml Clear Diva Vintage-Style Bulb Sprayer Bottle");
+        expect(pageTitle(diva, fitmentLabel(variant({ websiteSku: "GBDiva46AnSpTslBlk", graceSku: "B", applicator: "Vintage Bulb Sprayer with Tassel" }))))
+            .toBe("46 ml Clear Diva Vintage-Style Bulb Sprayer Bottle with Tassel");
+        expect(pageTitle(diva, fitmentLabel(variant({ websiteSku: "GBDiva46SpryBlk", graceSku: "C", applicator: "Fine Mist Sprayer" }))))
+            .toBe("46 ml Clear Diva Spray Bottle");
     });
 
     it("names the selected option with the title, whatever part the page sells", () => {

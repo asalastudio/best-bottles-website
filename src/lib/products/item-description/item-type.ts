@@ -21,12 +21,22 @@ const TYPO_FIXES: Array<[RegExp, string]> = [
     [/\s+/g, " "],
 ];
 
+/**
+ * The legacy heading "Antique Style Bulb Spray Bottles" names the bottles the site sells as vintage-style bulb
+ * sprayers everywhere else (the tab title, the picker, the filters), so the item type says that too.
+ */
+export function customerItemType(value: string): string {
+    return value
+        .replace(/\bAntique Style Bulb Spray Bottles\b/g, "Vintage-Style Bulb Sprayer Bottles")
+        .replace(/\bAntique style bulb spray bottles\b/g, "Vintage-style bulb sprayer bottles");
+}
+
 export function normalizeLegacyItemType(raw: string | null | undefined): string | null {
     if (typeof raw !== "string") return null;
     let value = raw.trim();
     if (!value) return null;
     for (const [pattern, replacement] of TYPO_FIXES) value = value.replace(pattern, replacement);
-    value = value.replace(/\.\s*$/, "").trim();
+    value = customerItemType(value.replace(/\.\s*$/, "").trim());
     return value.length ? value.charAt(0).toUpperCase() + value.slice(1) : null;
 }
 
@@ -49,7 +59,7 @@ export function fallbackItemType({ category, family, applicator }: ItemTypeInput
     if (/roller/i.test(app)) return "Clear, frosted and colored glass roll-on bottles with steel or plastic roller balls";
     if (app === "Fine Mist Sprayer") return "Refillable glass bottles with fine mist sprayers";
     if (app === "Perfume Spray Pump") return "Classic perfume spray glass bottles";
-    if (/bulb/i.test(app)) return "Antique style bulb spray bottles";
+    if (/bulb/i.test(app)) return "Vintage-style bulb sprayer bottles";
     if (app === "Lotion Pump") return "Lotion bottles";
     if (app === "Dropper") return "Dropper bottles";
     if (app === "Reducer") return "Classic glass bottles with reducers and attractive caps";

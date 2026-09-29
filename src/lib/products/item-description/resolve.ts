@@ -14,7 +14,8 @@
 import curated from "../../../../data/descriptions/pdp/item-descriptions.json";
 import profiles from "../../../../data/descriptions/pdp/family-profiles.json";
 import { cleanedLegacyText, composeItemDescription, type ComposeInput, type FamilyProfile } from "./compose";
-import { resolveItemType } from "./item-type";
+import { customerItemType, resolveItemType } from "./item-type";
+import { displayVintageWording } from "../../vintageWording";
 
 type CuratedEntry = {
     websiteSku: string;
@@ -71,7 +72,7 @@ export function familyProfileFor(variant: Pick<ComposeInput, "family" | "categor
 export function resolveItemDescription(variant: DescribableVariant): ItemDescription | null {
     const entry = curatedItemDescription(variant);
     if (entry) {
-        return { description: entry.description, itemType: entry.itemType, source: "curated", legacyUrl: entry.legacyUrl };
+        return { description: displayVintageWording(entry.description), itemType: customerItemType(entry.itemType), source: "curated", legacyUrl: entry.legacyUrl };
     }
     const itemType = resolveItemType({ category: variant.category, family: variant.family, applicator: variant.applicator });
     const composed = composeItemDescription({
@@ -79,9 +80,9 @@ export function resolveItemDescription(variant: DescribableVariant): ItemDescrip
         legacyDescription: variant.legacyDescription ?? variant.itemDescription ?? null,
         familyProfile: variant.familyProfile ?? familyProfileFor(variant),
     });
-    if (composed) return { description: composed.text, itemType, source: "composed", legacyUrl: null };
+    if (composed) return { description: displayVintageWording(composed.text), itemType, source: "composed", legacyUrl: null };
     const legacy = cleanedLegacyText(variant.itemDescription);
-    if (legacy) return { description: legacy, itemType, source: "legacy", legacyUrl: null };
+    if (legacy) return { description: displayVintageWording(legacy), itemType, source: "legacy", legacyUrl: null };
     return null;
 }
 

@@ -85,3 +85,19 @@ describe("standard cart checkout actions", () => {
         }
     });
 });
+
+describe("cart wording", () => {
+    it("names a bulb sprayer the way the rest of the site does", () => {
+        const item = cartState.items[0] as (typeof cartState.items)[number] & { applicator?: string };
+        Object.assign(item, { applicator: "Vintage Bulb Sprayer with Tassel" });
+        try {
+            for (const markup of [renderToStaticMarkup(React.createElement(CartDrawer, { isOpen: true, onClose: vi.fn() })), renderToStaticMarkup(React.createElement(CartPage))]) {
+                expect(markup).toContain("Vintage-Style Bulb Sprayer with Tassel");
+                expect(markup).not.toContain("Vintage Bulb Sprayer");
+            }
+        } finally {
+            delete item.applicator;
+        }
+    });
+});
+

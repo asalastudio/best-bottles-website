@@ -7,6 +7,7 @@ import Link from "next/link";
 import { X, ShoppingBag, Plus, Minus, Trash, ArrowRight, WarningCircle } from "@/components/icons";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "@/components/CartProvider";
+import { displayApplicatorName } from "@/lib/catalogFilters";
 import { useGrace } from "@/components/useGrace";
 import { ORDER_MINIMUM, checkoutMinimum, checkoutMinimumMessage, isCheckoutReady, splitCheckoutItems } from "@/lib/checkout";
 
@@ -257,7 +258,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                                                     <div className="text-[12px] text-slate mb-2 space-y-0.5">
                                                         <p>{[item.family, item.capacity, item.color].filter(Boolean).join(" · ") || "Product details pending"}</p>
                                                         {(item.applicator || item.capColor || item.neckThreadSize) && (
-                                                            <p>{[item.applicator, item.capColor, item.neckThreadSize ? `Thread: ${item.neckThreadSize}` : null].filter(Boolean).join(" · ")}</p>
+                                                            <p>{[item.applicator ? displayApplicatorName(item.applicator) : null, item.capColor, item.neckThreadSize ? `Thread: ${item.neckThreadSize}` : null].filter(Boolean).join(" · ")}</p>
                                                         )}
                                                     </div>
                                                     <p className="text-[10px] text-slate/70 font-mono uppercase tracking-wide mb-2">

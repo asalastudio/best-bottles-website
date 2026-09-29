@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { displayApplicatorName } from "@/lib/catalogFilters";
 import { ArrowLeft, Send, CheckCircle2, Loader2 } from "@/components/icons";
 import { useMutation } from "convex/react";
 import { api } from "../../convex/_generated/api";
@@ -277,7 +278,7 @@ export default function FormPage({ formType, title, subtitle, fields }: FormPage
                                                             SKU {item.websiteSku ?? item.sku}
                                                         </p>
                                                         <p className="mt-1 text-xs text-slate">
-                                                            {[item.family, item.capacity, item.color, item.applicator, item.capColor].filter(Boolean).join(" · ")}
+                                                            {[item.family, item.capacity, item.color, item.applicator ? displayApplicatorName(item.applicator) : null, item.capColor].filter(Boolean).join(" · ")}
                                                         </p>
                                                     </div>
                                                     <input
