@@ -21,32 +21,32 @@
    "glass": "Clear",
    "file": "plates/clear.png",
    "width": 454,
-   "height": 1358,
-   "sha256": "f510d65fd3a6967cf6a4cc1a29fca22803153b99ece2286e38555ccaf2cfdada",
+   "height": 1356,
+   "sha256": "e95783e905fefd8f5fdc9815f5a3193f8fdc21f59ff747d5a0991dd1249d6b6e",
    "pxPerMm": 25.0,
    "anchors": {
     "axisX": 227.0,
     "seatY": 9.07,
     "shoulderY": 283.7,
-    "baselineY": 1356.15
+    "baselineY": 1355.12
    },
    "checks": {
-    "seatToFootMm": 53.883,
+    "seatToFootMm": 53.842,
     "barrelMm": 18.0,
     "barrelTargetMm": 18.06,
     "opaqueInsideSilhouette": true
    },
    "source": {
     "library": "native Blender (outputs/cyl5-13415-register-2026-09-28/export_cyl5.py)",
-    "path": "cyl5-13415-v6-review-2026-09-29/Cyl-5ml-13-415_clear_STUDIO-v1.4-body-v6.1.blend",
-    "layer": "Cylinder 5 mL 13-415 body v6.1 (caliper: H 53.55, OD 18.06 under the shoulder tapering 0.10 a side to the heel, finish 11.0; 2.0 mm walls, ~6.3 ml; the shoulder down over 2.9 mm, 1.2 mm heel (v6.1); Jordan 2026-09-29), studio v1.4 (neutral studio, black side cards; cobalt: no sweep reflection, density 2200); seen through: the studio backdrop, which displays as bone"
+    "path": "cyl5-13415-v6-review-2026-09-29/Cyl-5ml-13-415_clear_STUDIO-v1.4-body-v6.3a.blend",
+    "layer": "Cylinder 5 mL 13-415 body v6.3a (caliper: H 53.55, OD 18.06 under the shoulder tapering 0.10 a side to the heel, finish 11.0; 2.0 mm walls, ~6.3 ml; the shoulder down over 2.9 mm, 2.0 mm heel bending from 2.6 mm up (v6.3a); Jordan 2026-09-29), studio v1.4 (neutral studio, black side cards; cobalt: no sweep reflection, density 2200); seen through: the studio backdrop, which displays as bone"
    },
    "geometry": {
     "height_mm": 53.55,
     "od_mm": 18.06,
     "finish_height_mm": 11.0,
     "capacity_ml": 5.535,
-    "lock": "Bottle | Cylinder 5 ml 13-415 body v6.1",
+    "lock": "Bottle | Cylinder 5 ml 13-415 body v6.3a",
     "studio": "Cyl-5ml-13-415_clear_STUDIO-v1.3.blend"
    }
   },
@@ -55,32 +55,32 @@
    "glass": "Cobalt Blue",
    "file": "plates/cobalt.png",
    "width": 454,
-   "height": 1358,
-   "sha256": "c98d31c8a1cfbd2c80a1ef5dd312f237c398f1bbe836f9488e7757f908931ce2",
+   "height": 1356,
+   "sha256": "67c6220028e4971254c9b4f51d4736a434c215e7494e897061c482e2021ecd45",
    "pxPerMm": 25.0,
    "anchors": {
     "axisX": 227.0,
     "seatY": 9.07,
     "shoulderY": 283.7,
-    "baselineY": 1356.15
+    "baselineY": 1355.12
    },
    "checks": {
-    "seatToFootMm": 53.883,
+    "seatToFootMm": 53.842,
     "barrelMm": 18.0,
     "barrelTargetMm": 18.06,
     "opaqueInsideSilhouette": true
    },
    "source": {
     "library": "native Blender (outputs/cyl5-13415-register-2026-09-28/export_cyl5.py)",
-    "path": "cyl5-13415-v6-review-2026-09-29/Cyl-5ml-13-415_cobalt_STUDIO-v1.4-body-v6.1.blend",
-    "layer": "Cylinder 5 mL 13-415 body v6.1 (caliper: H 53.55, OD 18.06 under the shoulder tapering 0.10 a side to the heel, finish 11.0; 2.0 mm walls, ~6.3 ml; the shoulder down over 2.9 mm, 1.2 mm heel (v6.1); Jordan 2026-09-29), studio v1.4 (neutral studio, black side cards; cobalt: no sweep reflection, density 2200); cobalt: one glass material, matched to the master photo GBCylBlu5BlkSht"
+    "path": "cyl5-13415-v6-review-2026-09-29/Cyl-5ml-13-415_cobalt_STUDIO-v1.4-body-v6.3a.blend",
+    "layer": "Cylinder 5 mL 13-415 body v6.3a (caliper: H 53.55, OD 18.06 under the shoulder tapering 0.10 a side to the heel, finish 11.0; 2.0 mm walls, ~6.3 ml; the shoulder down over 2.9 mm, 2.0 mm heel bending from 2.6 mm up (v6.3a); Jordan 2026-09-29), studio v1.4 (neutral studio, black side cards; cobalt: no sweep reflection, density 2200); cobalt: one glass material, matched to the master photo GBCylBlu5BlkSht"
    },
    "geometry": {
     "height_mm": 53.55,
     "od_mm": 18.06,
     "finish_height_mm": 11.0,
     "capacity_ml": 5.535,
-    "lock": "Bottle | Cylinder 5 ml 13-415 body v6.1",
+    "lock": "Bottle | Cylinder 5 ml 13-415 body v6.3a",
     "studio": "Cyl-5ml-13-415_cobalt_STUDIO-v1.3.blend"
    }
   }
@@ -94,8 +94,8 @@
      "layerName": "see-through, Clear",
      "file": "see-through/clear-mist.png",
      "width": 146,
-     "height": 1265,
-     "sha256": "ec1e6e26af62ba9390241a4d8656926bcaacaa28c89362626e19e013c2a6e442",
+     "height": 1266,
+     "sha256": "c9a32a00d1a7a43888fa240f39f4f319ad7cbaaa8874764ed9a409a5c9ffda4c",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
@@ -110,13 +110,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 285,
-     "height": 1275,
-     "sha256": "db929cdcea7a9bb6e8a4b2207300e4325926d7241d2b6c20acaa4cc525bad312",
+     "width": 199,
+     "height": 1269,
+     "sha256": "72f993730ab752fb0f614a72f55e1a01c0c3f50476ed5d80b9c20af080cbe488",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
-      "y": 9.07
+      "y": 3.07
      },
      "z": "front",
      "explodeIndex": 5,
@@ -129,7 +129,7 @@
      "file": "shared/mist-internals.png",
      "width": 109,
      "height": 1197,
-     "sha256": "0e1f8d52e8f408d2c90cf83ba97d05a3d30e2a726f60765dc05ef5969d324999",
+     "sha256": "4ec34f372ef7155046699d7707ae3607e97b8943e64d8e06279e771d8c2c2edb",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 42.0,
@@ -181,8 +181,8 @@
      "layerName": "see-through, Clear",
      "file": "see-through/clear-mist.png",
      "width": 146,
-     "height": 1265,
-     "sha256": "ec1e6e26af62ba9390241a4d8656926bcaacaa28c89362626e19e013c2a6e442",
+     "height": 1266,
+     "sha256": "c9a32a00d1a7a43888fa240f39f4f319ad7cbaaa8874764ed9a409a5c9ffda4c",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
@@ -197,13 +197,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 285,
-     "height": 1275,
-     "sha256": "db929cdcea7a9bb6e8a4b2207300e4325926d7241d2b6c20acaa4cc525bad312",
+     "width": 199,
+     "height": 1269,
+     "sha256": "72f993730ab752fb0f614a72f55e1a01c0c3f50476ed5d80b9c20af080cbe488",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
-      "y": 9.07
+      "y": 3.07
      },
      "z": "front",
      "explodeIndex": 5,
@@ -216,7 +216,7 @@
      "file": "shared/mist-internals.png",
      "width": 109,
      "height": 1197,
-     "sha256": "0e1f8d52e8f408d2c90cf83ba97d05a3d30e2a726f60765dc05ef5969d324999",
+     "sha256": "4ec34f372ef7155046699d7707ae3607e97b8943e64d8e06279e771d8c2c2edb",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 42.0,
@@ -331,8 +331,8 @@
      "layerName": "see-through, Clear",
      "file": "see-through/clear-mist.png",
      "width": 146,
-     "height": 1265,
-     "sha256": "ec1e6e26af62ba9390241a4d8656926bcaacaa28c89362626e19e013c2a6e442",
+     "height": 1266,
+     "sha256": "c9a32a00d1a7a43888fa240f39f4f319ad7cbaaa8874764ed9a409a5c9ffda4c",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
@@ -347,13 +347,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 285,
-     "height": 1275,
-     "sha256": "db929cdcea7a9bb6e8a4b2207300e4325926d7241d2b6c20acaa4cc525bad312",
+     "width": 199,
+     "height": 1269,
+     "sha256": "72f993730ab752fb0f614a72f55e1a01c0c3f50476ed5d80b9c20af080cbe488",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
-      "y": 9.07
+      "y": 3.07
      },
      "z": "front",
      "explodeIndex": 5,
@@ -366,7 +366,7 @@
      "file": "shared/mist-internals.png",
      "width": 109,
      "height": 1197,
-     "sha256": "0e1f8d52e8f408d2c90cf83ba97d05a3d30e2a726f60765dc05ef5969d324999",
+     "sha256": "4ec34f372ef7155046699d7707ae3607e97b8943e64d8e06279e771d8c2c2edb",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 42.0,
@@ -418,8 +418,8 @@
      "layerName": "see-through, Clear",
      "file": "see-through/clear-mist.png",
      "width": 146,
-     "height": 1265,
-     "sha256": "ec1e6e26af62ba9390241a4d8656926bcaacaa28c89362626e19e013c2a6e442",
+     "height": 1266,
+     "sha256": "c9a32a00d1a7a43888fa240f39f4f319ad7cbaaa8874764ed9a409a5c9ffda4c",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
@@ -434,13 +434,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 285,
-     "height": 1275,
-     "sha256": "db929cdcea7a9bb6e8a4b2207300e4325926d7241d2b6c20acaa4cc525bad312",
+     "width": 199,
+     "height": 1269,
+     "sha256": "72f993730ab752fb0f614a72f55e1a01c0c3f50476ed5d80b9c20af080cbe488",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
-      "y": 9.07
+      "y": 3.07
      },
      "z": "front",
      "explodeIndex": 5,
@@ -453,7 +453,7 @@
      "file": "shared/mist-internals.png",
      "width": 109,
      "height": 1197,
-     "sha256": "0e1f8d52e8f408d2c90cf83ba97d05a3d30e2a726f60765dc05ef5969d324999",
+     "sha256": "4ec34f372ef7155046699d7707ae3607e97b8943e64d8e06279e771d8c2c2edb",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 42.0,
@@ -526,8 +526,8 @@
      "layerName": "see-through, Clear",
      "file": "see-through/clear-mist.png",
      "width": 146,
-     "height": 1265,
-     "sha256": "ec1e6e26af62ba9390241a4d8656926bcaacaa28c89362626e19e013c2a6e442",
+     "height": 1266,
+     "sha256": "c9a32a00d1a7a43888fa240f39f4f319ad7cbaaa8874764ed9a409a5c9ffda4c",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
@@ -542,13 +542,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 285,
-     "height": 1275,
-     "sha256": "db929cdcea7a9bb6e8a4b2207300e4325926d7241d2b6c20acaa4cc525bad312",
+     "width": 199,
+     "height": 1269,
+     "sha256": "72f993730ab752fb0f614a72f55e1a01c0c3f50476ed5d80b9c20af080cbe488",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
-      "y": 9.07
+      "y": 3.07
      },
      "z": "front",
      "explodeIndex": 5,
@@ -561,7 +561,7 @@
      "file": "shared/mist-internals.png",
      "width": 109,
      "height": 1197,
-     "sha256": "0e1f8d52e8f408d2c90cf83ba97d05a3d30e2a726f60765dc05ef5969d324999",
+     "sha256": "4ec34f372ef7155046699d7707ae3607e97b8943e64d8e06279e771d8c2c2edb",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 42.0,
@@ -613,8 +613,8 @@
      "layerName": "see-through, Clear",
      "file": "see-through/clear-mist.png",
      "width": 146,
-     "height": 1265,
-     "sha256": "ec1e6e26af62ba9390241a4d8656926bcaacaa28c89362626e19e013c2a6e442",
+     "height": 1266,
+     "sha256": "c9a32a00d1a7a43888fa240f39f4f319ad7cbaaa8874764ed9a409a5c9ffda4c",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
@@ -629,13 +629,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 285,
-     "height": 1275,
-     "sha256": "db929cdcea7a9bb6e8a4b2207300e4325926d7241d2b6c20acaa4cc525bad312",
+     "width": 199,
+     "height": 1269,
+     "sha256": "72f993730ab752fb0f614a72f55e1a01c0c3f50476ed5d80b9c20af080cbe488",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
-      "y": 9.07
+      "y": 3.07
      },
      "z": "front",
      "explodeIndex": 5,
@@ -648,7 +648,7 @@
      "file": "shared/mist-internals.png",
      "width": 109,
      "height": 1197,
-     "sha256": "0e1f8d52e8f408d2c90cf83ba97d05a3d30e2a726f60765dc05ef5969d324999",
+     "sha256": "4ec34f372ef7155046699d7707ae3607e97b8943e64d8e06279e771d8c2c2edb",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 42.0,
@@ -1015,8 +1015,8 @@
      "layerName": "see-through, Clear",
      "file": "see-through/clear-mist.png",
      "width": 146,
-     "height": 1265,
-     "sha256": "ec1e6e26af62ba9390241a4d8656926bcaacaa28c89362626e19e013c2a6e442",
+     "height": 1266,
+     "sha256": "c9a32a00d1a7a43888fa240f39f4f319ad7cbaaa8874764ed9a409a5c9ffda4c",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
@@ -1031,13 +1031,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 285,
-     "height": 1275,
-     "sha256": "db929cdcea7a9bb6e8a4b2207300e4325926d7241d2b6c20acaa4cc525bad312",
+     "width": 199,
+     "height": 1269,
+     "sha256": "72f993730ab752fb0f614a72f55e1a01c0c3f50476ed5d80b9c20af080cbe488",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
-      "y": 9.07
+      "y": 3.07
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1050,7 +1050,7 @@
      "file": "shared/mist-internals.png",
      "width": 109,
      "height": 1197,
-     "sha256": "0e1f8d52e8f408d2c90cf83ba97d05a3d30e2a726f60765dc05ef5969d324999",
+     "sha256": "4ec34f372ef7155046699d7707ae3607e97b8943e64d8e06279e771d8c2c2edb",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 42.0,
@@ -1102,8 +1102,8 @@
      "layerName": "see-through, Clear",
      "file": "see-through/clear-roller-metal.png",
      "width": 310,
-     "height": 379,
-     "sha256": "3bb56822e4d83a736ea9d5fd266ed2ce1db709df3b8487862ee2e99cccdca66c",
+     "height": 1266,
+     "sha256": "6ca5a91cb0d5dcfb82b245208f7604d254bc314dec9badf0e4546d32dd959606",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 155.0,
@@ -1118,9 +1118,9 @@
      "slot": "roller",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-roller-metal.png",
-     "width": 381,
-     "height": 471,
-     "sha256": "4739089be4a0be7596727d596d4ef894c88ae7a2d63b932c7048f3cf6b50dc01",
+     "width": 310,
+     "height": 1356,
+     "sha256": "f0d31ac7c2954ddfc048de8a4d06ded1b86669e56c88e24c675b46894b12a3aa",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 155.0,
@@ -1173,8 +1173,8 @@
      "layerName": "see-through, Clear",
      "file": "see-through/clear-roller-plastic.png",
      "width": 310,
-     "height": 379,
-     "sha256": "310668abbb1e76c1a6bd7878a2d5986186817a20f54b3825264da8bcf955f8b7",
+     "height": 1266,
+     "sha256": "11b47181657a1cd20cb09a0a0d792a3b02a9bea9e4f5fc63432facd5c6812682",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 155.0,
@@ -1189,9 +1189,9 @@
      "slot": "roller",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-roller-plastic.png",
-     "width": 381,
-     "height": 471,
-     "sha256": "641ab17a2fa7bb54145d3833cf83d07478877bb791d2e9ffdae31269484b785d",
+     "width": 310,
+     "height": 379,
+     "sha256": "6ffd88ef98b4803a9f75d91044e084c65ba2c21eea5f186aa87b5af7a9d84ab2",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 155.0,
@@ -1239,34 +1239,34 @@
  ],
  "seeThroughQa": {
   "clear-roller-plastic": {
-   "maxErr": 231,
-   "meanErr": 1.3752,
-   "pixels": 66230
+   "maxErr": 234,
+   "meanErr": 1.3881,
+   "pixels": 67143
   },
   "clear-roller-metal": {
-   "maxErr": 231,
-   "meanErr": 1.3817,
-   "pixels": 66293
+   "maxErr": 234,
+   "meanErr": 1.3945,
+   "pixels": 67017
   },
   "clear-mist": {
-   "maxErr": 28,
-   "meanErr": 0.1169,
-   "pixels": 113317
+   "maxErr": 26,
+   "meanErr": 0.1198,
+   "pixels": 114120
   },
   "cobalt-roller-plastic": {
-   "maxErr": 203,
-   "meanErr": 1.293,
-   "pixels": 71541
+   "maxErr": 199,
+   "meanErr": 1.2932,
+   "pixels": 71651
   },
   "cobalt-roller-metal": {
-   "maxErr": 204,
-   "meanErr": 1.3016,
-   "pixels": 71510
+   "maxErr": 199,
+   "meanErr": 1.3015,
+   "pixels": 71735
   },
   "cobalt-mist": {
-   "maxErr": 31,
-   "meanErr": 0.0923,
-   "pixels": 113689
+   "maxErr": 58,
+   "meanErr": 0.0908,
+   "pixels": 113547
   }
  }
 }
