@@ -9,6 +9,7 @@ import {
     derivePicks,
     glassOptions,
     lineLabel,
+    optionLabel,
     pageTitle,
     pickLine,
     pickQuery,
@@ -18,6 +19,7 @@ import {
     statusLine,
     techSheetRows,
     unitPriceAt,
+    variantTitle,
 } from "@/lib/products/pdp-redesign/model";
 
 function variant(overrides: Partial<ProductVariant> & { websiteSku: string; graceSku: string }): ProductVariant {
@@ -127,6 +129,21 @@ describe("copy", () => {
         expect(lineLabel("Cobalt", roller, null, "Black with Dots")).toBe("Cobalt · Metal · Black with Dots");
         expect(capacityEyebrow(GROUP)).toBe("CYLINDER · 9 ML · 17-415");
         expect(pageTitle(GROUP, "Metal roller")).toBe("9 ml Cobalt Blue Cylinder Roll-On Bottle");
+    });
+
+    it("names the selected option with the title, whatever part the page sells", () => {
+        const roller = rollerOptions(VARIANTS)[0];
+        expect(optionLabel(roller, "Metal roller", "Black with Dots")).toBe("Metal Ball, Black with Dots Cap");
+        expect(optionLabel(null, null, "Matte Gold")).toBe("Matte Gold Cap");
+        expect(optionLabel(null, "Cap", "Shiny Black Short")).toBe("Short Shiny Black Cap");
+        expect(optionLabel(null, "Fine mist spray", "Shiny Black")).toBe("Shiny Black Sprayer");
+        expect(optionLabel(null, "Lotion pump", "Matte Silver")).toBe("Matte Silver Pump");
+        expect(optionLabel(null, "Vintage-style bulb sprayer with tassel", "Gold")).toBe("Gold Bulb");
+        expect(optionLabel(null, "Reducer", "Pink Faux Leather")).toBe("Pink Faux Leather Cap");
+        expect(optionLabel(null, "Glass stopper", "Clear")).toBe("Clear");
+        expect(optionLabel(null, null, null)).toBeNull();
+        expect(variantTitle("9 ml Clear Cylinder Bottle", "Matte Gold Cap")).toBe("9 ml Clear Cylinder Bottle - Matte Gold Cap");
+        expect(variantTitle("9 ml Clear Cylinder Bottle", null)).toBe("9 ml Clear Cylinder Bottle");
     });
 
     it("reads stock and case pack for the status line", () => {

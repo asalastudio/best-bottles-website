@@ -279,6 +279,33 @@ export function pageTitle(group: Pick<PdpGroup, "family" | "capacity" | "capacit
     return `${capacity} ${glass} ${family} ${type}`.replace(/\s+/g, " ").trim();
 }
 
+/**
+ * The selected option, shown with the title so the headline names the SKU in the buy box
+ * (COPY-STRATEGY.md §2.5): "Matte Gold Cap", "Metal Ball, Black with Dots Cap", "Shiny Black Sprayer", "Gold Bulb".
+ * Null when the page has nothing to pick.
+ */
+export function optionLabel(roller: RollerOption | null, fitment: string | null, cap: string | null): string | null {
+    const finish = clean(cap);
+    const ball = roller ? `${roller.shortLabel} Ball` : null;
+    if (!finish) return ball;
+    // capOptions names a height or style after the finish ("Shiny Black Short"); a title reads it first.
+    const qualified = finish.match(/^(.+) (Short|Tall)$/i);
+    const name = qualified ? `${qualified[2]} ${qualified[1]}` : finish;
+    const part = /stopper|rod/i.test(fitment ?? "") ? null
+        : /bulb/i.test(fitment ?? "") ? "Bulb"
+            : /spray|mist/i.test(fitment ?? "") ? "Sprayer"
+                : /pump/i.test(fitment ?? "") ? "Pump"
+                    : /dropper/i.test(fitment ?? "") ? "Dropper"
+                        : "Cap";
+    const label = part && !new RegExp(`\\b${part}$`, "i").test(name) ? `${name} ${part}` : name;
+    return ball ? `${ball}, ${label}` : label;
+}
+
+/** "9 ml Clear Cylinder Bottle - Matte Gold Cap": the title with its option, for the browser tab. */
+export function variantTitle(title: string, option: string | null): string {
+    return option ? `${title} - ${option}` : title;
+}
+
 export const SHIPS_IN_COPY = "ships in 1–3 business days";
 
 export function statusLine(variant: ProductVariant | null | undefined): { inStock: boolean; text: string } {
