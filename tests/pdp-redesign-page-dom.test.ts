@@ -136,7 +136,8 @@ describe("redesigned product page", () => {
     it("opens on the group's primary SKU with the canvas, buy box and curated description", async () => {
         await mount();
         expect(text('[data-testid="pdp-eyebrow"]')).toBe("CYLINDER · 9 ML · 17-415");
-        expect(text('[data-testid="pdp-title"]')).toBe("9 ml Cobalt Blue Cylinder Roll-On Bottle");
+        expect(text('[data-testid="pdp-title"]')).toBe("9 ml Cobalt Blue Cylinder Roll-On Bottle - Plastic Ball, Black with Dots Cap");
+        expect(text('[data-testid="pdp-title-option"]')).toBe(" - Plastic Ball, Black with Dots Cap");
         expect(text('[data-testid="pdp-pick-line"]')).toBe("COBALT · PLASTIC ROLLER · BLACK WITH DOTS");
         expect(text('[data-testid="pdp-item-name"]')).toBe("GBCylBlu9RollBlkDot");
         expect(text('[data-testid="pdp-item-description"]')).toBe("Plastic roller copy.");
@@ -160,6 +161,9 @@ describe("redesigned product page", () => {
         expect(container.querySelector('[data-testid="pdp-stage"]')?.getAttribute("data-view")).toBe("exploded");
         expect(text('[data-testid="pdp-pick-line"]')).toBe("COBALT · METAL ROLLER · MATTE COPPER");
         expect(text('[data-testid="pdp-item-name"]')).toBe("GBCylBlu9MtlRollMattCu");
+        // The headline follows the pick, as the buy box does
+        expect(text('[data-testid="pdp-title"]')).toBe("9 ml Cobalt Blue Cylinder Roll-On Bottle - Metal Ball, Matte Copper Cap");
+        expect(document.title).toBe("9 ml Cobalt Blue Cylinder Roll-On Bottle - Metal Ball, Matte Copper Cap | Best Bottles");
         expect(text('[data-testid="pdp-add"]')).toBe("Add to cart · $0.77");
         expect(window.location.search).toBe("?roller=metal&cap=matte-copper");
         // matte copper is not sold on the plastic roller: switching back lands on the first plastic cap

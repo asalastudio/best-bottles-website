@@ -586,9 +586,10 @@
     gap: 10px;
 }
 
+/* The finish chip: a crop of the closure's own render (materialSwatch), big enough for a dotted cap's dots. */
 .swatchDot {
-    width: 26px;
-    height: 26px;
+    width: 32px;
+    height: 32px;
     flex: none;
     border-radius: 50%;
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .15);
@@ -1822,4 +1823,26 @@
     .callouts {
         transition: none;
     }
+}
+
+/* The selected option under the title: it changes with every cap, roller or finish pick. */
+.titleOption {
+    display: block;
+    margin-top: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: .01em;
+    text-transform: none;
+    color: var(--pdp-secondary);
+}
+
+.visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
 }

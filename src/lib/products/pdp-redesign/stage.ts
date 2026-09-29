@@ -443,6 +443,16 @@ export function overcapPart(kit: KitLike | null | undefined): KitPartLike | null
     return overcaps.find((part) => !part.views || part.views.includes("capon")) ?? overcaps[0] ?? null;
 }
 
+/**
+ * The layer that carries the finish a buyer picks, for the material chip beside the selection:
+ * the overcap (it ships in the sprayer's or pump's finish), else the cap. Never the glass, and
+ * never an insert or dip tube, which are the same for every finish.
+ */
+export function finishPart(kit: KitLike | null | undefined): KitPartLike | null {
+    const part = overcapPart(kit) ?? closurePart(kit);
+    return part && (part.slot === "cap" || part.slot === "overcap" || part.slot === "sprayer" || part.slot === "pump") ? part : null;
+}
+
 /** True when the kit's closure is a sprayer or pump head (its overcap is the cap). */
 export function hasMechanism(kit: KitLike | null | undefined): boolean {
     return Boolean(kit?.parts?.some((part) => part.slot === "sprayer" || part.slot === "pump"));

@@ -12,7 +12,7 @@
  * geometry. Commerce goes through the shared cart, so "In this order" is the
  * cart's own view of this page's lines.
  */
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import LocaleLink from "@/components/LocaleLink";
 import Navbar from "@/components/Navbar";
@@ -31,8 +31,9 @@ import {
 } from "@/lib/grace/pdpPlateSwap";
 import type { PlateRef } from "@/lib/paper-doll/plates";
 import type { ItemDescription } from "@/lib/products/item-description/resolve";
-import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
+import { getMaterialSwatchBackground, getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { pdpFallbackMedia } from "@/lib/products/pdp-redesign/fallback-media";
+import { SITE_NAME } from "@/lib/seo";
 import { formatVolumeQtyRange, resolveQuotedUnitPrice } from "@/lib/volumePricing";
 import {
     buildYourBottleHref,
@@ -46,7 +47,9 @@ import {
     glassOptions,
     glassShortLabel,
     lineLabel,
+    optionLabel,
     pageTitle,
+    variantTitle,
     pickLine,
     pickQuery,
     resolveVariant,
@@ -62,7 +65,7 @@ import {
     type RollerId,
     type SiblingGlassGroup,
 } from "@/lib/products/pdp-redesign/model";
-import { availableViews, glassFrame, type KitLike, type StageView } from "@/lib/products/pdp-redesign/stage";
+import { availableViews, finishPart, glassFrame, type KitLike, type StageView } from "@/lib/products/pdp-redesign/stage";
 import type { StageBounds } from "@/lib/products/pdp-stage-frame";
 import styles from "./pdp.module.css";
 import PdpBuyBox, { type AddState } from "./PdpBuyBox";
@@ -91,9 +94,28 @@ export type PdpRedesignPayload = {
 
 const ADDED_FLASH_MS = 1800;
 
+/**
+ * The finish chip beside the selection name and on each order line: a close crop of the closure's
+ * own render (the cap, or a sprayer's overcap), so the chip shows the material the canvas shows
+ * (Jordan 2026-09-28). The drawn swatch sits under it while it loads and stands in for a SKU with
+ * no drawn closure.
+ */
+function materialSwatch(kit: KitLike | null | undefined, name: string | null | undefined): CSSProperties {
+    const part = finishPart(kit);
+    if (!part) return getMaterialSwatchStyle(name, {});
+    const drawn = getMaterialSwatchBackground(name);
+    // The cap's whole face, a hair inside its edges, so a dotted cap's three columns of dots sit inside the circle.
+    return { background: `url("${part.image.url}") 50% 50% / 96% auto no-repeat${drawn ? `, ${drawn}` : ""}` };
+}
+
 function kitFor(kits: Record<string, KitLike | null>, variant: { websiteSku?: string | null; graceSku?: string | null } | null | undefined): KitLike | null {
     if (!variant) return null;
     return (variant.websiteSku ? kits[variant.websiteSku] : null) ?? (variant.graceSku ? kits[variant.graceSku] : null) ?? null;
+}
+
+/** The browser tab follows the pick; the server titled the page for the SKU it rendered. */
+function renameTab(text: string): void {
+    document.title = text;
 }
 
 export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, fitmentKits = [], stageEnvelopes, platesBySku, descriptions, collection, familyHref }: PdpRedesignPayload) {
@@ -320,13 +342,13 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
             const label = lineLabel(glassShortLabel(item.color), roller, roller ? null : fitmentLabel({ applicator: item.applicator ?? null } as ProductVariant), item.capColor ?? null);
             return {
                 key: item.graceSku,
-                swatchStyle: getMaterialSwatchStyle(item.capColor, {}),
+                swatchStyle: materialSwatch(kitFor(kitsBySku, item), item.capColor),
                 label,
                 qty: item.quantity,
                 total: rate * item.quantity,
                 onRemove: () => { removeItem(item.graceSku); analytics.cartItemRemoved({ sku: item.graceSku, name: item.itemName }); },
             };
-        }), [cartItems, pageSlugs, rollers, removeItem]);
+        }), [cartItems, pageSlugs, rollers, removeItem, kitsBySku]);
     const orderTotal = orderLines.reduce((sum, line) => sum + line.total, 0);
     const minimum = useMemo(() => checkoutMinimum(cartItems), [cartItems]);
 
@@ -335,6 +357,8 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     const capName = activeCap?.name ?? null;
     const description = selected?.websiteSku ? descriptions[selected.websiteSku] ?? null : null;
     const title = pageTitle(group, fitment);
+    // The headline names the SKU in the buy box: a new cap, roller or finish changes it with the pick.
+    const option = optionLabel(rollerOption, fitment, capName);
     const capacityLabel = `${group.capacityMl != null ? `${group.capacityMl} ml` : group.capacity ?? ""} ${group.family ?? ""}`.trim();
     const bodyKit = kit ?? kitFor(kitsBySku, { websiteSku: group.primaryWebsiteSku, graceSku: group.primaryGraceSku });
     const capKits = caps.map((cap) => kitFor(kitsBySku, cap.variants[0])).filter((entry): entry is KitLike => Boolean(entry));
@@ -345,9 +369,17 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         variant: selected,
         plateImageUrl: plate?.image ?? null,
     });
-    const swatchStyle = getMaterialSwatchStyle(activeCap?.swatchName ?? capName, {});
+    const swatchStyle = materialSwatch(kit, activeCap?.swatchName ?? capName);
     const selectionName = `${glassLabel(group.color)} glass${capName ? ` · ${capName} cap` : fitment ? ` · ${fitment}` : ""}`;
     const stickyLine = `${qty.toLocaleString("en-US")} × ${unitPrice != null ? formatPrice(unitPrice) : "—"} · ${lineLabel(glassName, rollerOption, rollerOption ? null : fitment, capName)}`;
+
+    // The server titles the tab for the SKU it rendered; a pick after that renames the tab with the headline.
+    const firstSku = useRef(selected?.websiteSku ?? null);
+    useEffect(() => {
+        if (!selected?.websiteSku || selected.websiteSku === firstSku.current) return;
+        firstSku.current = null;
+        renameTab(`${variantTitle(title, option)} | ${SITE_NAME}`);
+    }, [selected?.websiteSku, title, option]);
 
     const onAskGrace = useCallback(() => {
         analytics.graceOpenedFromShopping({ source: "pdp", ...(group.family ? { family: group.family } : {}) });
@@ -375,7 +407,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                         glassFrame={frame}
                         fallbackImageUrls={fallbackMedia.images}
                         fallbackBodyImageUrl={fallbackMedia.bodyImageUrl}
-                        fallbackAlt={title}
+                        fallbackAlt={variantTitle(title, option)}
                         callouts={buildCallouts(selected, capName)}
                         caps={caps.map((cap) => ({
                             id: cap.id, name: cap.name, swatchName: cap.swatchName,
@@ -398,7 +430,14 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                     <div className={styles.buy}>
                         <div className={styles.titleBlock}>
                             <span className={styles.eyebrow} data-testid="pdp-eyebrow">{capacityEyebrow(group)}</span>
-                            <h1 className={styles.title} data-testid="pdp-title">{title}</h1>
+                            <h1 className={styles.title} data-testid="pdp-title">
+                                {title}
+                                {option ? (
+                                    <span className={styles.titleOption} data-testid="pdp-title-option">
+                                        <span className={styles.visuallyHidden}> - </span>{option}
+                                    </span>
+                                ) : null}
+                            </h1>
                             <span className={styles.status} data-testid="pdp-status">
                                 <span className={styles.statusDot} data-out={status.inStock ? "false" : "true"} aria-hidden />
                                 {status.text}

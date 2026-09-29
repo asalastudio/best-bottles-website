@@ -6,8 +6,8 @@
     "pxPerMm": 6.0,
     "axisX": 750.0,
     "baselineY": 1109.51,
-    "wall": "#f0efeb",
-    "sha256": "d325f4b9cc4c334a27e6de8a17d93157f129cde865503a88c78f50b878320d4e"
+    "wall": "#f4f3f2",
+    "sha256": "ba84ef7fa9cc6a3a5017b93e804d4e216c244d0f503df7dffbe843e5093727e6"
   },
   "cylinder-9ml-13-415|Frosted": {
     "url": "/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
@@ -16,7 +16,7 @@
     "pxPerMm": 6.0,
     "axisX": 750.0,
     "baselineY": 1109.51,
-    "wall": "#f0efeb",
-    "sha256": "5417b402f1acbf9e0abce744deeade68c5680809e768023ed4f95ae9916f8d04"
+    "wall": "#f4f3f2",
+    "sha256": "e104db9c5b1a6bc061e9811edd7c1f005380f217f8c2278d367b3adef17e755c"
   }
 }

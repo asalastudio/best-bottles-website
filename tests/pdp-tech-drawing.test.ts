@@ -8,7 +8,7 @@ import {
     technicalDrawingFor,
     type Point,
 } from "@/lib/products/pdp-redesign/tech-drawing";
-import { hasMechanism, overcapPart, type KitLike, type KitPartLike } from "@/lib/products/pdp-redesign/stage";
+import { finishPart, hasMechanism, overcapPart, type KitLike, type KitPartLike } from "@/lib/products/pdp-redesign/stage";
 
 describe("technical drawing data", () => {
     const data = technicalDrawingFor("cylinder-9ml-13-415");
@@ -83,5 +83,12 @@ describe("strip parts", () => {
         expect(overcapPart(sprayer)?.image.url).toBe("overcap-sidecar-capon.png");
         expect(hasMechanism(kit([part("body"), part("cap")]))).toBe(false);
         expect(overcapPart(kit([part("body"), part("cap")]))).toBeNull();
+    });
+
+    it("takes the finish chip from the overcap, else the cap, never the glass or an insert", () => {
+        expect(finishPart(kit([part("body"), part("sprayer"), part("overcap", ["sidecar", "capon"])]))?.slot).toBe("overcap");
+        expect(finishPart(kit([part("body"), part("roller"), part("cap")]))?.slot).toBe("cap");
+        expect(finishPart(kit([part("body"), part("roller")]))).toBeNull();
+        expect(finishPart(null)).toBeNull();
     });
 });
