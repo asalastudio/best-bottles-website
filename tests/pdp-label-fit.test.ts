@@ -133,6 +133,22 @@ describe("label placement drawing", () => {
         }
     });
 
+    it("gives every measurement on the drawing its unit", () => {
+        const texts = (svg: string) => [...svg.matchAll(/<text[^>]*>([^<]*)<\/text>/g)].map((m) => m[1]);
+        for (const fit of fits) {
+            const svg = renderToStaticMarkup(createElement(PdpLabelPlacement, { fit, idPrefix: "t" }));
+            for (const text of texts(svg).filter((t) => /\d/.test(t) && !t.startsWith("FLAT LABEL"))) {
+                expect(text, fit.body).toMatch(/\d mm\b/);
+            }
+        }
+        const rollOn = texts(renderToStaticMarkup(createElement(PdpLabelPlacement, { fit: labelFitFor("cylinder-9ml-17-415")!, idPrefix: "t" })));
+        expect(rollOn).toEqual(expect.arrayContaining(["70 mm", "Ø 20 mm", "49 mm label", "3.25 mm", "60 mm wrap", "front 25.1 mm"]));
+        const empire = texts(renderToStaticMarkup(createElement(PdpLabelPlacement, { fit: labelFitFor("empire-100ml-18-415")!, idPrefix: "t" })));
+        expect(empire).toEqual(expect.arrayContaining(["107.12 mm", "45.4 mm face", "80.1 mm label", "5 mm", "35.4 mm"]));
+        const circle = texts(renderToStaticMarkup(createElement(PdpLabelPlacement, { fit: labelFitFor("circle-50ml-18-415")!, idPrefix: "t" })));
+        expect(circle).toEqual(expect.arrayContaining(["87.7 mm", "72.5 mm disc", "Ø 50.8 mm shown · max Ø 62 mm"]));
+    });
+
     it("prints the template at true size", () => {
         const fit = labelFitFor("cylinder-9ml-17-415")!;
         const template = renderToStaticMarkup(createElement(PdpLabelTemplate, { fit }));

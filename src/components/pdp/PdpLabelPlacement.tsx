@@ -218,7 +218,7 @@ export default function PdpLabelPlacement({ fit, idPrefix = "lp" }: { fit: Label
             {/* overall height */}
             <Ext x1={AX - finishHalf - 0.8} y1={finishTop} x2={AX - half - 9} y2={finishTop} />
             <Ext x1={AX - half - 0.8} y1={BY} x2={AX - half - 9} y2={BY} />
-            <VDim x={AX - half - 7.5} y1={finishTop} y2={BY} text={`${formatLabelMm(g.heightMm)}`} />
+            <VDim x={AX - half - 7.5} y1={finishTop} y2={BY} text={`${formatLabelMm(g.heightMm)} mm`} />
 
             {/* width under the foot */}
             <Ext x1={AX - half} y1={BY + 0.8} x2={AX - half} y2={BY + 6.4} />
@@ -227,7 +227,7 @@ export default function PdpLabelPlacement({ fit, idPrefix = "lp" }: { fit: Label
                 y={BY + 5.2}
                 x1={AX - half}
                 x2={AX + half}
-                text={disc ? `${formatLabelMm(g.widthMm)} disc` : fit.shape === "face" ? `${formatLabelMm(g.widthMm)} face` : `Ø ${formatLabelMm(g.widthMm)}`}
+                text={disc ? `${formatLabelMm(g.widthMm)} mm disc` : fit.shape === "face" ? `${formatLabelMm(g.widthMm)} mm face` : `Ø ${formatLabelMm(g.widthMm)} mm`}
                 below
             />
 
@@ -236,11 +236,11 @@ export default function PdpLabelPlacement({ fit, idPrefix = "lp" }: { fit: Label
                 <g>
                     <Ext x1={onBottle.x + onBottle.w + 0.8} y1={labelTop} x2={AX + half + 8.5} y2={labelTop} />
                     <Ext x1={onBottle.x + onBottle.w + 0.8} y1={labelTop + labelH} x2={AX + half + 8.5} y2={labelTop + labelH} />
-                    <VDim x={AX + half + 7} y1={labelTop} y2={labelTop + labelH} text={`${formatLabelMm(lab.heightMm)} label`} side="right" />
+                    <VDim x={AX + half + 7} y1={labelTop} y2={labelTop + labelH} text={`${formatLabelMm(lab.heightMm)} mm label`} side="right" />
                     {lab.fromBaseMm * scale > 3.2 ? (
                         <VDim x={AX + half + 7} y1={labelTop + labelH} y2={BY} text="" side="right" />
                     ) : null}
-                    <text x={AX + half + 9.5} y={BY - 0.4} fontSize={SMALL} fill={MUTED}>{formatLabelMm(lab.fromBaseMm)}</text>
+                    <text x={AX + half + 9.5} y={BY - 0.4} fontSize={SMALL} fill={MUTED}>{`${formatLabelMm(lab.fromBaseMm)} mm`}</text>
                 </g>
             ) : null}
 
@@ -255,7 +255,7 @@ export default function PdpLabelPlacement({ fit, idPrefix = "lp" }: { fit: Label
                     <circle cx={TX + tw / 2} cy={discCentre} r={(lab.widthMm / 2) * scale} fill="none" stroke={GOLD} strokeWidth={HAIR} strokeDasharray="1.4 0.9" />
                     <SampleArt cx={TX + tw / 2} top={discCentre - ((stockRound ?? lab.widthMm) / 2) * scale * 0.7} w={(stockRound ?? lab.widthMm) * scale * 0.7} h={(stockRound ?? lab.widthMm) * scale * 0.7} />
                     <text x={TX + tw / 2} y={discCentre - (lab.widthMm / 2) * scale - 2} fontSize={TEXT} fontWeight={500} fill={INK} textAnchor="middle">
-                        {stockRound ? `Ø ${formatLabelMm(Math.round(stockRound * 10) / 10)} shown · max Ø ${formatLabelMm(lab.widthMm)}` : `max Ø ${formatLabelMm(lab.widthMm)}`}
+                        {stockRound ? `Ø ${formatLabelMm(Math.round(stockRound * 10) / 10)} mm shown · max Ø ${formatLabelMm(lab.widthMm)} mm` : `max Ø ${formatLabelMm(lab.widthMm)} mm`}
                     </text>
                 </g>
             ) : (
@@ -270,9 +270,9 @@ export default function PdpLabelPlacement({ fit, idPrefix = "lp" }: { fit: Label
                     ) : null}
                     <CropMarks x={TX} y={labelTop} w={tw} h={labelH} />
                     <SampleArt cx={TX + tw / 2} top={labelTop} w={front ? front * scale : tw} h={labelH} />
-                    <HDim y={labelTop - bleed - 3} x1={TX} x2={TX + tw} text={`${formatLabelMm(lab.widthMm)}${fit.shape === "wrap" && lab.panels === 1 ? " wrap" : ""}`} />
+                    <HDim y={labelTop - bleed - 3} x1={TX} x2={TX + tw} text={`${formatLabelMm(lab.widthMm)} mm${fit.shape === "wrap" && lab.panels === 1 ? " wrap" : ""}`} />
                     {front ? (
-                        <HDim y={labelTop + labelH + bleed + 3.2} x1={TX + (tw - front * scale) / 2} x2={TX + (tw + front * scale) / 2} text={`front ${formatLabelMm(front)}`} below />
+                        <HDim y={labelTop + labelH + bleed + 3.2} x1={TX + (tw - front * scale) / 2} x2={TX + (tw + front * scale) / 2} text={`front ${formatLabelMm(front)} mm`} below />
                     ) : null}
                 </g>
             )}
