@@ -133,6 +133,19 @@ describe("builder catalog boundary", () => {
         expect(silver.closure).toBe("White Bulb, Shiny Silver Trim Collar");
         expect(groupBuilderBodies([plain, gold, silver])[0].configurations).toHaveLength(3);
     });
+    it("tells apart two SKUs that share a name but not a part, instead of dropping both", () => {
+        const base = configuration();
+        const named = (id: string, closure: string, websiteSku: string, name = "part") => ({ ...base, id, closure, finishComponent: { ...base.finishComponent, websiteSku, name } });
+        // 2026-09-30: the frosted Elegant 15 matte and shiny black sprayers were both "Black".
+        const listed = (configs: BuilderConfiguration[]) => groupBuilderBodies(configs).flatMap(body => body.configurations.map(c => `${c.id}:${c.closure}`)).sort();
+        expect(listed([named("A", "Black", "CP13-415SpryBlkMt"), named("B", "Black", "CP13-415SpryBlkSh")])).toEqual(["A:Matte Black", "B:Shiny Black"]);
+        // The Slim 100 lotion pump with and without its clear overcap.
+        expect(listed([named("C", "Matte Silver", "Ltn18-415MtSl"), named("D", "Matte Silver", "Ltn18-415MtSlCl", "Matte silver lotion pump, clear overcap")]))
+            .toEqual(["C:Matte Silver", "D:Matte Silver, Clear Overcap"]);
+        // Identical parts, or a new name that collides with another option, still drop the set.
+        expect(listed([named("E", "Matte Silver", "Ltn18-415MtSl"), named("F", "Matte Silver", "Ltn18-415MtSl")])).toEqual([]);
+        expect(listed([named("A", "Black", "CP13-415SpryBlkMt"), named("B", "Black", "CP13-415SpryBlkSh"), named("G", "Matte Black", "CP13-415SpryBlkMt")])).toEqual(["G:Matte Black"]);
+    });
     it("takes tall or short from the listed cap's own name, not the row's capStyle", () => {
         // Diva 46 frosted reducer: both rows say capStyle Tall; the caps are named Tall and Short
         const reducer = (websiteSku: string, capName: string, capSku: string) => catalogConfigurationFromRow(fixture({

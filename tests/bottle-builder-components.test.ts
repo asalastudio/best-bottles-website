@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import { listedReplacementSku, resolveListedComponents, restoreListedComponent, unavailableVintageFinishes, type ActiveComponent } from "@/lib/bottle-builder/components";
-import { assessBuilderConfiguration, compatibleFinishComponent, reviewedFitmentImage, type BuilderConfiguration, type CatalogRow } from "@/lib/bottle-builder/model";
+import { assessBuilderConfiguration, compatibleFinishComponent, dropperLook, reviewedFitmentImage, type BuilderConfiguration, type CatalogRow } from "@/lib/bottle-builder/model";
 const sku = "CP13-415SpryBlkMt";
 const part = { websiteSku: `${sku}__RETIRED__OLD__document`, graceSku: "OLD", shopifySellable: false, itemName: "Matte black sprayer", imageUrl: null, stockStatus: null, capColor: null, webPrice1pc: .65, webPrice12pc: .62, productGroupSlug: null, shopifyVariantId: "old" };
 const active: ActiveComponent = { websiteSku: sku, graceSku: "CURRENT", neckThreadSize: "13-415", shopifyVariantId: "current", shopifySellable: true };
@@ -115,6 +115,25 @@ describe("source-backed exact component matches", () => {
         for (const change of [{ stockStatus: "Out of Stock" }, { websiteSku: "Ltn18-415MtSl__RETIRED__OLD__record" }]) {
             expect(compatibleFinishComponent({ ...pump, components: { "Lotion Pump": [{ ...component("Ltn18-415MtSl"), ...change }] } })).toBeNull();
         }
+    });
+    it("falls back to the row's stated cap colour when its SKU uses older shorthand, never to a guess", () => {
+        // 2026-09-30: GBBstn2ozMtlRollGl ("Gl") is catalogued as Shiny Gold; the Boston roll-on caps are shiny and matte.
+        const roller: CatalogRow = { ...row, family: "Boston Round", capacityMl: 60, neckThreadSize: "20-400", applicator: "Metal Roller Ball", capColor: "Shiny Gold",
+            websiteSku: "GBBstn2ozMtlRollGl", components: { "Roll-On Cap": [component("CPRoll20-400TallShnGl"), component("CPRoll20-400TallMattGl")] } };
+        expect(compatibleFinishComponent(roller)?.websiteSku).toBe("CPRoll20-400TallShnGl");
+        // A stated colour as vague as the SKU ("Gold") does not choose between shiny and matte.
+        expect(compatibleFinishComponent({ ...roller, capColor: "Gold" })).toBeNull();
+    });
+    it("pairs a dropper by its bulb colour, trim and size", () => {
+        expect(dropperLook("GBBstn2ozBlkDrprShnGlTrim")).toBe("2|black|shngl");
+        expect(dropperLook("Drp20-4002ozShnGlTrimBlkBulb")).toBe("2|black|shngl");
+        expect(dropperLook("GBBstnBlu2ozBlkDropper")).toBe("2|black|");
+        expect(dropperLook("CP18-415ShnGl")).toBeNull();
+        const dropper: CatalogRow = { ...row, family: "Boston Round", capacityMl: 60, neckThreadSize: "20-400", applicator: "Dropper", capColor: "Black", websiteSku: "GBBstn2ozBlkDrprShnGlTrim",
+            components: { Dropper: [component("Drp20-4002ozShnGlTrimBlkBulb"), component("Drp20-4002ozShnSlTrimBlkBulb"), component("Drp20-4002ozlShnGlTrimWhiteBulb"), component("Drp20-4001ozShnGlTrimBlkBulb")] } };
+        expect(compatibleFinishComponent(dropper)?.websiteSku).toBe("Drp20-4002ozShnGlTrimBlkBulb");
+        // No white bulb with a silver trim is listed: nothing is guessed.
+        expect(compatibleFinishComponent({ ...dropper, websiteSku: "GBBstn2ozWhtDrprShnSlTrim" })).toBeNull();
     });
     it("allows an exact included pump when its separate loose product is unpublished", () => {
         const unpublished = { ...component("Ltn18-415MtSl"), shopifySellable: false };

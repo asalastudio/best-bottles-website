@@ -219,7 +219,11 @@ export async function loadBuilderBodies(rows: CatalogRow[], options: KitLoadOpti
         for (const [sku, kit] of extra) own.set(sku, kit);
     }
     const configurations = candidates.map(row => own.get(row.websiteSku!) ?? own.get(row.graceSku!) ?? null);
-    const listingProofs = candidates.map(row => proofs.get(chooserGroupKey(row)) ?? null);
+    // A glass listed from reviewed body photos has no group proof, so a row there with no plate photo of its own
+    // was dropped even with a complete component-library kit (the tassel sprayers split out on 29 Sep; 2026-09-30
+    // audit). That kit is its listing proof.
+    const listingProofs = candidates.map((row, i) => proofs.get(chooserGroupKey(row))
+        ?? (configurations[i]?.register ? bareChooserKit(configurations[i]!) ?? null : null));
     const bodies = groupBuilderBodies(resolveBuilderConfigurations(candidates, configurations, plateUrls, listingProofs).filter(config => config !== null));
     for (const row of reviewedRows) {
         const unavailable = unavailableVintageFinishes(row, activeBySku);
