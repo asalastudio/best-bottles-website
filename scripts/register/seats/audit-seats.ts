@@ -48,7 +48,12 @@ const MIN_DROP_MM = 0.2;
 const RIM_COVER_MM = 0.5;
 // Jordan 2026-09-30: "short ribbed caps and boston rounds dont need to be moved". A Boston round's cap sits on the bead of
 // a long neck; a short ribbed cap is too short to reach a long 13-415 neck's shoulder and shows some neck (as approved 28 Sep).
-const LEFT_ALONE_BODY = (bodyId: string) => bodyId.startsWith("boston-round-");
+// Jordan 2026-09-30 (9 mL 17-415): "the caps are sitting on the shoulder. They look like they're overlapping". Its
+// measured Blender scenes already seat every closure physically: the collar's 17.4 mm skirt stops on the shoulder slope
+// at 58.50 mm (the master photos show the ~1.2 mm of shoulder below the band), the roll-on cap at 58.31. The 2D gap
+// read at the closure's edge columns is the shoulder rounding, and dropping by it sank caps and collars over the barrel.
+const SEATED_IN_3D = new Set(["cylinder-9ml-17-415"]);
+const LEFT_ALONE_BODY = (bodyId: string) => bodyId.startsWith("boston-round-") || SEATED_IN_3D.has(bodyId);
 const SHORT_RIBBED_CAPS = new Set(["CMP-CAP-BLK-S-13-415", "CMP-CAP-WHT-S-13-415"]);
 const LEFT_ALONE = (bodyId: string, closure: string) => LEFT_ALONE_BODY(bodyId) || closure.split("+").some((id) => SHORT_RIBBED_CAPS.has(id));
 
