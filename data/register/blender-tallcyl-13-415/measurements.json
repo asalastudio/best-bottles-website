@@ -103,14 +103,14 @@
     },
     {
      "slot": "diptube",
-     "layerName": "see-through, Frosted",
-     "file": "see-through/frosted-mist.png",
-     "width": 459,
+     "layerName": "see-through, Frosted (the clear tube, frosted: scripts/register/blender/thin_frosted_tube.py)",
+     "file": "see-through/frosted-mist-thin.png",
+     "width": 143,
      "height": 2319,
-     "sha256": "a9b2697a64a8969a695b2120b2b7817a2909b9621441f302b4bf3b69d37568c6",
+     "sha256": "f62d509cc88934e5226865107cf62f0b6c89a835acbff0154276cfdccbf6ca1e",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 229.0,
+      "x": 59.0,
       "y": 0.36
      },
      "z": "front",
@@ -188,14 +188,14 @@
     },
     {
      "slot": "diptube",
-     "layerName": "see-through, Frosted",
-     "file": "see-through/frosted-mist.png",
-     "width": 459,
+     "layerName": "see-through, Frosted (the clear tube, frosted: scripts/register/blender/thin_frosted_tube.py)",
+     "file": "see-through/frosted-mist-thin.png",
+     "width": 143,
      "height": 2319,
-     "sha256": "a9b2697a64a8969a695b2120b2b7817a2909b9621441f302b4bf3b69d37568c6",
+     "sha256": "f62d509cc88934e5226865107cf62f0b6c89a835acbff0154276cfdccbf6ca1e",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 229.0,
+      "x": 59.0,
       "y": 0.36
      },
      "z": "front",
@@ -273,14 +273,14 @@
     },
     {
      "slot": "diptube",
-     "layerName": "see-through, Frosted",
-     "file": "see-through/frosted-mist.png",
-     "width": 459,
+     "layerName": "see-through, Frosted (the clear tube, frosted: scripts/register/blender/thin_frosted_tube.py)",
+     "file": "see-through/frosted-mist-thin.png",
+     "width": 143,
      "height": 2319,
-     "sha256": "a9b2697a64a8969a695b2120b2b7817a2909b9621441f302b4bf3b69d37568c6",
+     "sha256": "f62d509cc88934e5226865107cf62f0b6c89a835acbff0154276cfdccbf6ca1e",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 229.0,
+      "x": 59.0,
       "y": 0.36
      },
      "z": "front",
@@ -398,14 +398,14 @@
     },
     {
      "slot": "diptube",
-     "layerName": "see-through, Frosted",
-     "file": "see-through/frosted-mist.png",
-     "width": 459,
+     "layerName": "see-through, Frosted (the clear tube, frosted: scripts/register/blender/thin_frosted_tube.py)",
+     "file": "see-through/frosted-mist-thin.png",
+     "width": 143,
      "height": 2319,
-     "sha256": "a9b2697a64a8969a695b2120b2b7817a2909b9621441f302b4bf3b69d37568c6",
+     "sha256": "f62d509cc88934e5226865107cf62f0b6c89a835acbff0154276cfdccbf6ca1e",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 229.0,
+      "x": 59.0,
       "y": 0.36
      },
      "z": "front",
@@ -483,14 +483,14 @@
     },
     {
      "slot": "diptube",
-     "layerName": "see-through, Frosted",
-     "file": "see-through/frosted-mist.png",
-     "width": 459,
+     "layerName": "see-through, Frosted (the clear tube, frosted: scripts/register/blender/thin_frosted_tube.py)",
+     "file": "see-through/frosted-mist-thin.png",
+     "width": 143,
      "height": 2319,
-     "sha256": "a9b2697a64a8969a695b2120b2b7817a2909b9621441f302b4bf3b69d37568c6",
+     "sha256": "f62d509cc88934e5226865107cf62f0b6c89a835acbff0154276cfdccbf6ca1e",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 229.0,
+      "x": 59.0,
       "y": 0.36
      },
      "z": "front",
@@ -588,14 +588,14 @@
     },
     {
      "slot": "diptube",
-     "layerName": "see-through, Frosted",
-     "file": "see-through/frosted-mist.png",
-     "width": 459,
+     "layerName": "see-through, Frosted (the clear tube, frosted: scripts/register/blender/thin_frosted_tube.py)",
+     "file": "see-through/frosted-mist-thin.png",
+     "width": 143,
      "height": 2319,
-     "sha256": "a9b2697a64a8969a695b2120b2b7817a2909b9621441f302b4bf3b69d37568c6",
+     "sha256": "f62d509cc88934e5226865107cf62f0b6c89a835acbff0154276cfdccbf6ca1e",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 229.0,
+      "x": 59.0,
       "y": 0.36
      },
      "z": "front",
@@ -673,14 +673,14 @@
     },
     {
      "slot": "diptube",
-     "layerName": "see-through, Frosted",
-     "file": "see-through/frosted-mist.png",
-     "width": 459,
+     "layerName": "see-through, Frosted (the clear tube, frosted: scripts/register/blender/thin_frosted_tube.py)",
+     "file": "see-through/frosted-mist-thin.png",
+     "width": 143,
      "height": 2319,
-     "sha256": "a9b2697a64a8969a695b2120b2b7817a2909b9621441f302b4bf3b69d37568c6",
+     "sha256": "f62d509cc88934e5226865107cf62f0b6c89a835acbff0154276cfdccbf6ca1e",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 229.0,
+      "x": 59.0,
       "y": 0.36
      },
      "z": "front",
@@ -958,14 +958,14 @@
     },
     {
      "slot": "diptube",
-     "layerName": "see-through, Frosted",
-     "file": "see-through/frosted-mist.png",
-     "width": 459,
+     "layerName": "see-through, Frosted (the clear tube, frosted: scripts/register/blender/thin_frosted_tube.py)",
+     "file": "see-through/frosted-mist-thin.png",
+     "width": 143,
      "height": 2319,
-     "sha256": "a9b2697a64a8969a695b2120b2b7817a2909b9621441f302b4bf3b69d37568c6",
+     "sha256": "f62d509cc88934e5226865107cf62f0b6c89a835acbff0154276cfdccbf6ca1e",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 229.0,
+      "x": 59.0,
       "y": 0.36
      },
      "z": "front",

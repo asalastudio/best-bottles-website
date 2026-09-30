@@ -20,7 +20,7 @@
  * Dev by default; production only with --deployment prod (Jordan runs it).
  */
 import { createHash } from "node:crypto";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { config } from "dotenv";
 import { ConvexHttpClient } from "convex/browser";
@@ -63,7 +63,10 @@ async function main() {
     const store = apply ? createBlobStore() : null;
     const uploaded = new Map<string, string>();
     const upload = async (key: string, a: Asset) => {
-        const bytes = readFileSync(resolve(dir, a.file));
+        // A layer made after the lane (the Tall 9 mL thin frosted dip tube, 2026-09-30) lives beside
+        // measurements.json in this repo, so a full re-push keeps it instead of restoring the old render.
+        const inDir = resolve(dir, a.file);
+        const bytes = readFileSync(existsSync(inDir) ? inDir : resolve(ROOT, "data", "register", dataName, a.file));
         // Blob keys are content-addressed and never overwritten: a --dir holding other renders under the same names
         // would otherwise publish the wrong image under this key for good.
         const actual = createHash("sha256").update(bytes).digest("hex");
