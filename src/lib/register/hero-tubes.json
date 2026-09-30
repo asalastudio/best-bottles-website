@@ -1,0 +1,2410 @@
+{
+ "_doc": "Dip tube + pump shaft layers cut from the released catalogue heroes (scripts/register/tubes/). Key: plateKey|family (bulb, tassel, spray, lotion). seated: the tube in the glass (SIDECAR, CAP ON), the hero's own pixels; exploded: the tube lifted out with its actuator (EXPLODED), the same cut cleaned to stand alone (the clear bottle's for frosted glass, a plain glass's for ribbed or faceted glass). x, y: the layer's top-left on its plate, plate px; it draws at the plate's own scale. from: own = this slot's hero; bulb/tassel = the twin bulb sprayer's; clear = the clear bottle's, frosted.",
+ "tubes": {
+  "bell-10ml-13-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/bell-10ml-13-415-clear-spray.31977577fbed.png",
+    "width": 165,
+    "height": 1816,
+    "x": 559,
+    "y": 156
+   },
+   "exploded": {
+    "url": "/images/register/tubes/bell-10ml-13-415-clear-spray-exploded.ded02a6d8371.png",
+    "width": 165,
+    "height": 1795,
+    "x": 559,
+    "y": 156
+   },
+   "from": "own",
+   "hero": "/images/catalog/batch6-approved-2026-09-25/GBBell10SpryBlkSh.3e5001a30f38.webp",
+   "fit": 0.6185
+  },
+  "circle-100ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/circle-100ml-18-415-clear-bulb.02664e0b1065.png",
+    "width": 319,
+    "height": 1797,
+    "x": 810,
+    "y": 119
+   },
+   "exploded": {
+    "url": "/images/register/tubes/circle-100ml-18-415-clear-bulb-exploded.89bff94e38b3.png",
+    "width": 319,
+    "height": 1770,
+    "x": 810,
+    "y": 119
+   },
+   "from": "own",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBCrcl100AnSpGl.8228b5f240a3.png",
+   "fit": 0.5323
+  },
+  "circle-100ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/circle-100ml-18-415-clear-lotion.f61264181b0f.png",
+    "width": 317,
+    "height": 1797,
+    "x": 770,
+    "y": 119
+   },
+   "exploded": {
+    "url": "/images/register/tubes/circle-100ml-18-415-clear-lotion-exploded.fda5b963e83d.png",
+    "width": 317,
+    "height": 1515,
+    "x": 770,
+    "y": 119
+   },
+   "from": "own",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/LBCrcl100LtnMtGl.5daeea49fca6.png",
+   "fit": 0.5078
+  },
+  "circle-100ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/circle-100ml-18-415-clear-spray.e8658673aef6.png",
+    "width": 301,
+    "height": 1797,
+    "x": 740,
+    "y": 119
+   },
+   "exploded": {
+    "url": "/images/register/tubes/circle-100ml-18-415-clear-spray-exploded.49174cf5cb9b.png",
+    "width": 301,
+    "height": 1629,
+    "x": 740,
+    "y": 119
+   },
+   "from": "own",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBCrcl100SpryMtGl.692f63084431.png",
+   "fit": 0.5074
+  },
+  "circle-100ml-18-415|Clear|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/circle-100ml-18-415-clear-tassel.5115d9bb3111.png",
+    "width": 308,
+    "height": 1797,
+    "x": 799,
+    "y": 119
+   },
+   "exploded": {
+    "url": "/images/register/tubes/circle-100ml-18-415-clear-tassel-exploded.6dfe1c290b8d.png",
+    "width": 308,
+    "height": 1746,
+    "x": 799,
+    "y": 119
+   },
+   "from": "own",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBCrcl100AnSpTslGl.b41e9e6bd027.png",
+   "fit": 0.3513
+  },
+  "circle-100ml-18-415|Frosted|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/circle-100ml-18-415-frosted-bulb.2c32dccad6b0.png",
+    "width": 319,
+    "height": 1796,
+    "x": 808,
+    "y": 119
+   },
+   "exploded": {
+    "url": "/images/register/tubes/circle-100ml-18-415-frosted-bulb-exploded.76188660da8a.png",
+    "width": 319,
+    "height": 1769,
+    "x": 808,
+    "y": 119
+   },
+   "from": "clear",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBCrcl100AnSpGl.8228b5f240a3.png",
+   "fit": 0.5323
+  },
+  "circle-100ml-18-415|Frosted|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/circle-100ml-18-415-frosted-lotion.de9733f49188.png",
+    "width": 317,
+    "height": 1796,
+    "x": 768,
+    "y": 119
+   },
+   "exploded": {
+    "url": "/images/register/tubes/circle-100ml-18-415-frosted-lotion-exploded.8ad650464d4c.png",
+    "width": 317,
+    "height": 1514,
+    "x": 768,
+    "y": 119
+   },
+   "from": "clear",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/LBCrcl100LtnMtGl.5daeea49fca6.png",
+   "fit": 0.5078
+  },
+  "circle-100ml-18-415|Frosted|spray": {
+   "seated": {
+    "url": "/images/register/tubes/circle-100ml-18-415-frosted-spray.cfd5af977415.png",
+    "width": 301,
+    "height": 1796,
+    "x": 738,
+    "y": 119
+   },
+   "exploded": {
+    "url": "/images/register/tubes/circle-100ml-18-415-frosted-spray-exploded.02dafa3c9d3b.png",
+    "width": 301,
+    "height": 1628,
+    "x": 738,
+    "y": 119
+   },
+   "from": "clear",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBCrcl100SpryMtGl.692f63084431.png",
+   "fit": 0.5074
+  },
+  "circle-100ml-18-415|Frosted|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/circle-100ml-18-415-frosted-tassel.9b7c01d05caf.png",
+    "width": 308,
+    "height": 1796,
+    "x": 797,
+    "y": 119
+   },
+   "exploded": {
+    "url": "/images/register/tubes/circle-100ml-18-415-frosted-tassel-exploded.943cc41db7e5.png",
+    "width": 308,
+    "height": 1745,
+    "x": 797,
+    "y": 119
+   },
+   "from": "clear",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBCrcl100AnSpTslGl.b41e9e6bd027.png",
+   "fit": 0.3513
+  },
+  "circle-15ml-13-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/circle-15ml-13-415-clear-spray.133e0c1c55e6.png",
+    "width": 262,
+    "height": 1699,
+    "x": 808,
+    "y": 139
+   },
+   "exploded": {
+    "url": "/images/register/tubes/circle-15ml-13-415-clear-spray-exploded.013547dabd32.png",
+    "width": 262,
+    "height": 1629,
+    "x": 808,
+    "y": 139
+   },
+   "from": "own",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBCrcl15SpryGlMatt.f2dde5199378.png",
+   "fit": 0.4904
+  },
+  "circle-50ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/circle-50ml-18-415-clear-bulb.cc910eddc1c2.png",
+    "width": 137,
+    "height": 1809,
+    "x": 828,
+    "y": 155
+   },
+   "exploded": {
+    "url": "/images/register/tubes/circle-50ml-18-415-clear-bulb-exploded.475bc6bc8ffc.png",
+    "width": 137,
+    "height": 1716,
+    "x": 828,
+    "y": 155
+   },
+   "from": "own",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBCrcl50AnSpGl.2c0ef5604292.png",
+   "fit": 0.5554
+  },
+  "circle-50ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/circle-50ml-18-415-clear-lotion.d6c084f618ee.png",
+    "width": 150,
+    "height": 1809,
+    "x": 848,
+    "y": 155
+   },
+   "exploded": {
+    "url": "/images/register/tubes/circle-50ml-18-415-clear-lotion-exploded.1245309b23a8.png",
+    "width": 150,
+    "height": 1731,
+    "x": 848,
+    "y": 155
+   },
+   "from": "own",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/LBCrcl50LtnMtGl.0d65f37b7203.png",
+   "fit": 0.5263
+  },
+  "circle-50ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/circle-50ml-18-415-clear-spray.52b0ddfd23c5.png",
+    "width": 148,
+    "height": 1809,
+    "x": 855,
+    "y": 155
+   },
+   "exploded": {
+    "url": "/images/register/tubes/circle-50ml-18-415-clear-spray-exploded.b5f75104a5ae.png",
+    "width": 148,
+    "height": 1766,
+    "x": 855,
+    "y": 155
+   },
+   "from": "own",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBCrcl50SpryMtGl.9b911e5dbbe5.png",
+   "fit": 0.517
+  },
+  "circle-50ml-18-415|Clear|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/circle-50ml-18-415-clear-tassel.cc910eddc1c2.png",
+    "width": 137,
+    "height": 1809,
+    "x": 828,
+    "y": 155
+   },
+   "exploded": {
+    "url": "/images/register/tubes/circle-50ml-18-415-clear-tassel-exploded.475bc6bc8ffc.png",
+    "width": 137,
+    "height": 1716,
+    "x": 828,
+    "y": 155
+   },
+   "from": "bulb",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBCrcl50AnSpGl.2c0ef5604292.png",
+   "fit": 0.5554
+  },
+  "circle-50ml-18-415|Frosted|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/circle-50ml-18-415-frosted-bulb.c8232b1a415f.png",
+    "width": 137,
+    "height": 1809,
+    "x": 828,
+    "y": 155
+   },
+   "exploded": {
+    "url": "/images/register/tubes/circle-50ml-18-415-frosted-bulb-exploded.475bc6bc8ffc.png",
+    "width": 137,
+    "height": 1716,
+    "x": 828,
+    "y": 155
+   },
+   "from": "clear",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBCrcl50AnSpGl.2c0ef5604292.png",
+   "fit": 0.5554
+  },
+  "circle-50ml-18-415|Frosted|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/circle-50ml-18-415-frosted-lotion.e37419d297a2.png",
+    "width": 150,
+    "height": 1809,
+    "x": 848,
+    "y": 155
+   },
+   "exploded": {
+    "url": "/images/register/tubes/circle-50ml-18-415-frosted-lotion-exploded.1245309b23a8.png",
+    "width": 150,
+    "height": 1731,
+    "x": 848,
+    "y": 155
+   },
+   "from": "clear",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/LBCrcl50LtnMtGl.0d65f37b7203.png",
+   "fit": 0.5263
+  },
+  "circle-50ml-18-415|Frosted|spray": {
+   "seated": {
+    "url": "/images/register/tubes/circle-50ml-18-415-frosted-spray.e7be58697679.png",
+    "width": 148,
+    "height": 1809,
+    "x": 854,
+    "y": 155
+   },
+   "exploded": {
+    "url": "/images/register/tubes/circle-50ml-18-415-frosted-spray-exploded.b5f75104a5ae.png",
+    "width": 148,
+    "height": 1766,
+    "x": 854,
+    "y": 155
+   },
+   "from": "clear",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBCrcl50SpryMtGl.9b911e5dbbe5.png",
+   "fit": 0.517
+  },
+  "circle-50ml-18-415|Frosted|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/circle-50ml-18-415-frosted-tassel.c8232b1a415f.png",
+    "width": 137,
+    "height": 1809,
+    "x": 828,
+    "y": 155
+   },
+   "exploded": {
+    "url": "/images/register/tubes/circle-50ml-18-415-frosted-tassel-exploded.475bc6bc8ffc.png",
+    "width": 137,
+    "height": 1716,
+    "x": 828,
+    "y": 155
+   },
+   "from": "clear",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBCrcl50AnSpGl.2c0ef5604292.png",
+   "fit": 0.5554
+  },
+  "cylinder-100ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/cylinder-100ml-18-415-clear-bulb.678fa5f50092.png",
+    "width": 72,
+    "height": 1768,
+    "x": 381,
+    "y": 212
+   },
+   "exploded": {
+    "url": "/images/register/tubes/cylinder-100ml-18-415-clear-bulb-exploded.b0f6d8bcfc1e.png",
+    "width": 72,
+    "height": 1548,
+    "x": 381,
+    "y": 212
+   },
+   "from": "tassel",
+   "hero": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl100AnSpTslMtSl.7c088c6921a3.png",
+   "fit": 0.5748
+  },
+  "cylinder-100ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/cylinder-100ml-18-415-clear-lotion.d5bc7b4d31d2.png",
+    "width": 138,
+    "height": 1768,
+    "x": 295,
+    "y": 212
+   },
+   "exploded": {
+    "url": "/images/register/tubes/cylinder-100ml-18-415-clear-lotion-exploded.966c63deaa44.png",
+    "width": 138,
+    "height": 1762,
+    "x": 295,
+    "y": 212
+   },
+   "from": "own",
+   "hero": "/images/catalog/cylinder-pilot-2026-09-22/LBCyl100LtnMtGl.8ef2159eee21.png",
+   "fit": 0.5889
+  },
+  "cylinder-100ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/cylinder-100ml-18-415-clear-spray.a941bb7850ca.png",
+    "width": 213,
+    "height": 1768,
+    "x": 296,
+    "y": 212
+   },
+   "exploded": {
+    "url": "/images/register/tubes/cylinder-100ml-18-415-clear-spray-exploded.7b1bd400415b.png",
+    "width": 213,
+    "height": 1748,
+    "x": 296,
+    "y": 212
+   },
+   "from": "own",
+   "hero": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl100SpryMtGl.c238fe44a86e.png",
+   "fit": 0.6451
+  },
+  "cylinder-100ml-18-415|Clear|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/cylinder-100ml-18-415-clear-tassel.678fa5f50092.png",
+    "width": 72,
+    "height": 1768,
+    "x": 381,
+    "y": 212
+   },
+   "exploded": {
+    "url": "/images/register/tubes/cylinder-100ml-18-415-clear-tassel-exploded.b0f6d8bcfc1e.png",
+    "width": 72,
+    "height": 1548,
+    "x": 381,
+    "y": 212
+   },
+   "from": "own",
+   "hero": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl100AnSpTslMtSl.7c088c6921a3.png",
+   "fit": 0.5748
+  },
+  "cylinder-25ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/cylinder-25ml-18-415-clear-bulb.b0706bff000d.png",
+    "width": 125,
+    "height": 269,
+    "x": 397,
+    "y": 1667
+   },
+   "exploded": {
+    "url": "/images/register/tubes/cylinder-25ml-18-415-clear-bulb-exploded.7c045566c0b5.png",
+    "width": 125,
+    "height": 258,
+    "x": 397,
+    "y": 1667
+   },
+   "from": "own",
+   "hero": "/images/catalog/cylinder-pilot-2026-09-22/GBcyl25AnSpIvyGl.bfadd47f97fe.png",
+   "fit": 0.5065
+  },
+  "cylinder-25ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/cylinder-25ml-18-415-clear-lotion.8365ab47547d.png",
+    "width": 205,
+    "height": 1789,
+    "x": 359,
+    "y": 147
+   },
+   "exploded": {
+    "url": "/images/register/tubes/cylinder-25ml-18-415-clear-lotion-exploded.c5acf4f22982.png",
+    "width": 205,
+    "height": 1696,
+    "x": 359,
+    "y": 147
+   },
+   "from": "own",
+   "hero": "/images/catalog/cylinder-pilot-2026-09-22/LBCyl25LtnMtGl.d5caeec0df28.png",
+   "fit": 0.5577
+  },
+  "cylinder-25ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/cylinder-25ml-18-415-clear-spray.3752f87634f0.png",
+    "width": 209,
+    "height": 1789,
+    "x": 449,
+    "y": 147
+   },
+   "exploded": {
+    "url": "/images/register/tubes/cylinder-25ml-18-415-clear-spray-exploded.21e7e431f804.png",
+    "width": 209,
+    "height": 1657,
+    "x": 449,
+    "y": 147
+   },
+   "from": "own",
+   "hero": "/images/catalog/cylinder-pilot-2026-09-22/GBcyl25SpryMtGl.511d21e7dee0.png",
+   "fit": 0.4237
+  },
+  "cylinder-25ml-18-415|Clear|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/cylinder-25ml-18-415-clear-tassel.caa707ee1dd2.png",
+    "width": 137,
+    "height": 1789,
+    "x": 405,
+    "y": 147
+   },
+   "exploded": {
+    "url": "/images/register/tubes/cylinder-25ml-18-415-clear-tassel-exploded.18441c7c600b.png",
+    "width": 137,
+    "height": 1505,
+    "x": 405,
+    "y": 147
+   },
+   "from": "own",
+   "hero": "/images/catalog/cylinder-pilot-2026-09-22/GBcyl25AnSpTslIvyGl.ab184134a30b.png",
+   "fit": 0.4605
+  },
+  "cylinder-50ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/cylinder-50ml-18-415-clear-bulb.ba2aef567f79.png",
+    "width": 144,
+    "height": 1797,
+    "x": 358,
+    "y": 180
+   },
+   "exploded": {
+    "url": "/images/register/tubes/cylinder-50ml-18-415-clear-bulb-exploded.d899eb905755.png",
+    "width": 144,
+    "height": 1279,
+    "x": 358,
+    "y": 180
+   },
+   "from": "own",
+   "hero": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl50AnSpMtSl.d9f827180268.png",
+   "fit": 0.6074
+  },
+  "cylinder-50ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/cylinder-50ml-18-415-clear-lotion.ccb9d199ae0e.png",
+    "width": 158,
+    "height": 1797,
+    "x": 326,
+    "y": 180
+   },
+   "exploded": {
+    "url": "/images/register/tubes/cylinder-50ml-18-415-clear-lotion-exploded.cdf086d02661.png",
+    "width": 158,
+    "height": 1753,
+    "x": 326,
+    "y": 180
+   },
+   "from": "own",
+   "hero": "/images/catalog/cylinder-pilot-2026-09-22/LBCyl50LtnMtGl.147afe555981.png",
+   "fit": 0.4823
+  },
+  "cylinder-50ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/cylinder-50ml-18-415-clear-spray.2058245482d9.png",
+    "width": 125,
+    "height": 1797,
+    "x": 317,
+    "y": 180
+   },
+   "exploded": {
+    "url": "/images/register/tubes/cylinder-50ml-18-415-clear-spray-exploded.96e3e1ff6d9d.png",
+    "width": 125,
+    "height": 1754,
+    "x": 317,
+    "y": 180
+   },
+   "from": "own",
+   "hero": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl50SpryMtGl.88aa74a09984.png",
+   "fit": 0.548
+  },
+  "cylinder-50ml-18-415|Clear|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/cylinder-50ml-18-415-clear-tassel.3ee823f9a262.png",
+    "width": 138,
+    "height": 1797,
+    "x": 321,
+    "y": 180
+   },
+   "exploded": {
+    "url": "/images/register/tubes/cylinder-50ml-18-415-clear-tassel-exploded.c730b0d05603.png",
+    "width": 138,
+    "height": 1716,
+    "x": 321,
+    "y": 180
+   },
+   "from": "own",
+   "hero": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl50AnSpTslMtSl.42c6d85c1a49.png",
+   "fit": 0.6619
+  },
+  "diamond-60ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/diamond-60ml-18-415-clear-bulb.3aebeaed0e97.png",
+    "width": 245,
+    "height": 1786,
+    "x": 352,
+    "y": 145
+   },
+   "exploded": {
+    "url": "/images/register/tubes/diamond-60ml-18-415-clear-bulb-exploded.af9a4fd49caf.png",
+    "width": 123,
+    "height": 1742,
+    "x": 595,
+    "y": 145
+   },
+   "from": "own",
+   "hero": "/images/catalog/batch3-approved-2026-09-25/GBDmnd2ozAnSpMtSl.2d63ba35de24.webp",
+   "fit": 0.5557
+  },
+  "diamond-60ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/diamond-60ml-18-415-clear-lotion.20389d321831.png",
+    "width": 295,
+    "height": 1786,
+    "x": 369,
+    "y": 145
+   },
+   "exploded": {
+    "url": "/images/register/tubes/diamond-60ml-18-415-clear-lotion-exploded.0dd6f1e87e9c.png",
+    "width": 235,
+    "height": 1742,
+    "x": 448,
+    "y": 145
+   },
+   "from": "own",
+   "hero": "/images/catalog/batch3-approved-2026-09-25/LBDmnd2ozLtnMtGl.ffcbd375c5f2.webp",
+   "fit": 0.5518
+  },
+  "diamond-60ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/diamond-60ml-18-415-clear-spray.94be7122ba39.png",
+    "width": 255,
+    "height": 1786,
+    "x": 318,
+    "y": 145
+   },
+   "exploded": {
+    "url": "/images/register/tubes/diamond-60ml-18-415-clear-spray-exploded.5015a04db113.png",
+    "width": 363,
+    "height": 1742,
+    "x": 450,
+    "y": 145
+   },
+   "from": "own",
+   "hero": "/images/catalog/batch3-approved-2026-09-25/GBDmnd2ozSpryMtGl.6a7292a0159d.webp",
+   "fit": 0.5682
+  },
+  "diamond-60ml-18-415|Clear|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/diamond-60ml-18-415-clear-tassel.3aebeaed0e97.png",
+    "width": 245,
+    "height": 1786,
+    "x": 352,
+    "y": 145
+   },
+   "exploded": {
+    "url": "/images/register/tubes/diamond-60ml-18-415-clear-tassel-exploded.af9a4fd49caf.png",
+    "width": 123,
+    "height": 1742,
+    "x": 595,
+    "y": 145
+   },
+   "from": "bulb",
+   "hero": "/images/catalog/batch3-approved-2026-09-25/GBDmnd2ozAnSpMtSl.2d63ba35de24.webp",
+   "fit": 0.5557
+  },
+  "diva-100ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/diva-100ml-18-415-clear-bulb.472c1a898e07.png",
+    "width": 99,
+    "height": 999,
+    "x": 760,
+    "y": 739
+   },
+   "exploded": {
+    "url": "/images/register/tubes/diva-100ml-18-415-clear-bulb-exploded.383a3c37b7df.png",
+    "width": 99,
+    "height": 1556,
+    "x": 666,
+    "y": 151
+   },
+   "from": "own",
+   "hero": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva100AnSpGl.4367e12baa85.png",
+   "fit": 0.5203
+  },
+  "diva-100ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/diva-100ml-18-415-clear-lotion.270a002b3cf7.png",
+    "width": 181,
+    "height": 1103,
+    "x": 667,
+    "y": 638
+   },
+   "exploded": {
+    "url": "/images/register/tubes/diva-100ml-18-415-clear-lotion-exploded.2d386fd504c1.png",
+    "width": 190,
+    "height": 1556,
+    "x": 548,
+    "y": 151
+   },
+   "from": "own",
+   "hero": "/images/catalog/boston-diva-approved-2026-09-23/LBDiva100LtnMtGl.4b6cda8805b2.png",
+   "fit": 0.3549
+  },
+  "diva-100ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/diva-100ml-18-415-clear-spray.63ab248fefa8.png",
+    "width": 206,
+    "height": 1105,
+    "x": 637,
+    "y": 636
+   },
+   "exploded": {
+    "url": "/images/register/tubes/diva-100ml-18-415-clear-spray-exploded.4a96af1c252c.png",
+    "width": 293,
+    "height": 1556,
+    "x": 549,
+    "y": 151
+   },
+   "from": "own",
+   "hero": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva100SpryMtGl.89a35e039bed.png",
+   "fit": 0.3631
+  },
+  "diva-100ml-18-415|Clear|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/diva-100ml-18-415-clear-tassel.472c1a898e07.png",
+    "width": 99,
+    "height": 999,
+    "x": 760,
+    "y": 739
+   },
+   "exploded": {
+    "url": "/images/register/tubes/diva-100ml-18-415-clear-tassel-exploded.383a3c37b7df.png",
+    "width": 99,
+    "height": 1556,
+    "x": 666,
+    "y": 151
+   },
+   "from": "bulb",
+   "hero": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva100AnSpGl.4367e12baa85.png",
+   "fit": 0.5203
+  },
+  "diva-30ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/diva-30ml-18-415-clear-bulb.ac398613d705.png",
+    "width": 166,
+    "height": 1652,
+    "x": 516,
+    "y": 157
+   },
+   "exploded": {
+    "url": "/images/register/tubes/diva-30ml-18-415-clear-bulb-exploded.c2c332284d45.png",
+    "width": 135,
+    "height": 1605,
+    "x": 647,
+    "y": 157
+   },
+   "from": "own",
+   "hero": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva30AnSpGl.800616d6d88a.png",
+   "fit": 0.447
+  },
+  "diva-30ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/diva-30ml-18-415-clear-lotion.41dcc00e0df7.png",
+    "width": 90,
+    "height": 1653,
+    "x": 593,
+    "y": 157
+   },
+   "exploded": {
+    "url": "/images/register/tubes/diva-30ml-18-415-clear-lotion-exploded.2021160f7aa6.png",
+    "width": 260,
+    "height": 1604,
+    "x": 485,
+    "y": 157
+   },
+   "from": "own",
+   "hero": "/images/catalog/boston-diva-approved-2026-09-23/LBDiva30LtnMtGl.7e5ebd0bfc2d.png",
+   "fit": 0.4207
+  },
+  "diva-30ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/diva-30ml-18-415-clear-spray.d8e1e53a4bbc.png",
+    "width": 99,
+    "height": 1653,
+    "x": 590,
+    "y": 157
+   },
+   "exploded": {
+    "url": "/images/register/tubes/diva-30ml-18-415-clear-spray-exploded.142009bf189e.png",
+    "width": 401,
+    "height": 1605,
+    "x": 487,
+    "y": 157
+   },
+   "from": "own",
+   "hero": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva30SpryMtGl.77d1379385e4.png",
+   "fit": 0.466
+  },
+  "diva-46ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/diva-46ml-18-415-clear-bulb.92fbd37eb113.png",
+    "width": 110,
+    "height": 967,
+    "x": 457,
+    "y": 790
+   },
+   "exploded": {
+    "url": "/images/register/tubes/diva-46ml-18-415-clear-bulb-exploded.bb18ed4e8da9.png",
+    "width": 124,
+    "height": 1588,
+    "x": 650,
+    "y": 146
+   },
+   "from": "own",
+   "hero": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46AnSpGl.cff146902751.png",
+   "fit": 0.453
+  },
+  "diva-46ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/diva-46ml-18-415-clear-lotion.9c89d7e77acd.png",
+    "width": 61,
+    "height": 1586,
+    "x": 605,
+    "y": 146
+   },
+   "exploded": {
+    "url": "/images/register/tubes/diva-46ml-18-415-clear-lotion-exploded.d939bb920709.png",
+    "width": 237,
+    "height": 1587,
+    "x": 502,
+    "y": 146
+   },
+   "from": "own",
+   "hero": "/images/catalog/boston-diva-approved-2026-09-23/LBDiva46LtnMtGl.61883994f283.png",
+   "fit": 0.4994
+  },
+  "diva-46ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/diva-46ml-18-415-clear-spray.092342096694.png",
+    "width": 178,
+    "height": 1630,
+    "x": 462,
+    "y": 146
+   },
+   "exploded": {
+    "url": "/images/register/tubes/diva-46ml-18-415-clear-spray-exploded.bde184d2cd33.png",
+    "width": 366,
+    "height": 1588,
+    "x": 504,
+    "y": 146
+   },
+   "from": "own",
+   "hero": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46SpryMtGl.3a43b073b7ef.png",
+   "fit": 0.4659
+  },
+  "diva-46ml-18-415|Clear|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/diva-46ml-18-415-clear-tassel.92fbd37eb113.png",
+    "width": 110,
+    "height": 967,
+    "x": 457,
+    "y": 790
+   },
+   "exploded": {
+    "url": "/images/register/tubes/diva-46ml-18-415-clear-tassel-exploded.bb18ed4e8da9.png",
+    "width": 124,
+    "height": 1588,
+    "x": 650,
+    "y": 146
+   },
+   "from": "bulb",
+   "hero": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46AnSpGl.cff146902751.png",
+   "fit": 0.453
+  },
+  "diva-46ml-18-415|Frosted|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/diva-46ml-18-415-frosted-bulb.2b9e639c743a.png",
+    "width": 110,
+    "height": 967,
+    "x": 457,
+    "y": 790
+   },
+   "exploded": {
+    "url": "/images/register/tubes/diva-46ml-18-415-frosted-bulb-exploded.2866383ef84a.png",
+    "width": 124,
+    "height": 1588,
+    "x": 650,
+    "y": 146
+   },
+   "from": "clear",
+   "hero": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46AnSpGl.cff146902751.png",
+   "fit": 0.453
+  },
+  "diva-46ml-18-415|Frosted|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/diva-46ml-18-415-frosted-lotion.1b79c3e09333.png",
+    "width": 61,
+    "height": 1587,
+    "x": 605,
+    "y": 146
+   },
+   "exploded": {
+    "url": "/images/register/tubes/diva-46ml-18-415-frosted-lotion-exploded.6e507557556c.png",
+    "width": 237,
+    "height": 1587,
+    "x": 502,
+    "y": 146
+   },
+   "from": "clear",
+   "hero": "/images/catalog/boston-diva-approved-2026-09-23/LBDiva46LtnMtGl.61883994f283.png",
+   "fit": 0.4994
+  },
+  "diva-46ml-18-415|Frosted|spray": {
+   "seated": {
+    "url": "/images/register/tubes/diva-46ml-18-415-frosted-spray.257fc4bad9b3.png",
+    "width": 178,
+    "height": 1631,
+    "x": 462,
+    "y": 146
+   },
+   "exploded": {
+    "url": "/images/register/tubes/diva-46ml-18-415-frosted-spray-exploded.145817254c0d.png",
+    "width": 366,
+    "height": 1589,
+    "x": 504,
+    "y": 146
+   },
+   "from": "clear",
+   "hero": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46SpryMtGl.3a43b073b7ef.png",
+   "fit": 0.4659
+  },
+  "diva-46ml-18-415|Frosted|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/diva-46ml-18-415-frosted-tassel.2b9e639c743a.png",
+    "width": 110,
+    "height": 967,
+    "x": 457,
+    "y": 790
+   },
+   "exploded": {
+    "url": "/images/register/tubes/diva-46ml-18-415-frosted-tassel-exploded.2866383ef84a.png",
+    "width": 124,
+    "height": 1588,
+    "x": 650,
+    "y": 146
+   },
+   "from": "clear",
+   "hero": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46AnSpGl.cff146902751.png",
+   "fit": 0.453
+  },
+  "elegant-100ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/elegant-100ml-18-415-clear-bulb.9174f1977708.png",
+    "width": 293,
+    "height": 1814,
+    "x": 536,
+    "y": 107
+   },
+   "exploded": {
+    "url": "/images/register/tubes/elegant-100ml-18-415-clear-bulb-exploded.e5bd52274223.png",
+    "width": 293,
+    "height": 1512,
+    "x": 536,
+    "y": 107
+   },
+   "from": "own",
+   "hero": "/images/catalog/elegant-approved-2026-09-23/GBElg100AnSpGl.7dd5b42e9d0a.png",
+   "fit": 0.5294
+  },
+  "elegant-100ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/elegant-100ml-18-415-clear-lotion.a923bb2c941c.png",
+    "width": 212,
+    "height": 1814,
+    "x": 621,
+    "y": 107
+   },
+   "exploded": {
+    "url": "/images/register/tubes/elegant-100ml-18-415-clear-lotion-exploded.b2851eecc848.png",
+    "width": 212,
+    "height": 1755,
+    "x": 621,
+    "y": 107
+   },
+   "from": "own",
+   "hero": "/images/catalog/elegant-approved-2026-09-23/LBElg100LtnMtGl.e4fa765d2c7a.png",
+   "fit": 0.5326
+  },
+  "elegant-100ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/elegant-100ml-18-415-clear-spray.77eff8aa5b26.png",
+    "width": 414,
+    "height": 1814,
+    "x": 489,
+    "y": 107
+   },
+   "exploded": {
+    "url": "/images/register/tubes/elegant-100ml-18-415-clear-spray-exploded.850623e1f5f3.png",
+    "width": 414,
+    "height": 1801,
+    "x": 489,
+    "y": 107
+   },
+   "from": "own",
+   "hero": "/images/catalog/elegant-approved-2026-09-23/GBElg100SpryMtGl.d8ba293e7aeb.png",
+   "fit": 0.4424
+  },
+  "elegant-100ml-18-415|Clear|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/elegant-100ml-18-415-clear-tassel.17eef92dd971.png",
+    "width": 183,
+    "height": 1814,
+    "x": 538,
+    "y": 107
+   },
+   "exploded": {
+    "url": "/images/register/tubes/elegant-100ml-18-415-clear-tassel-exploded.e687ae1bb5a6.png",
+    "width": 183,
+    "height": 1622,
+    "x": 538,
+    "y": 107
+   },
+   "from": "own",
+   "hero": "/images/catalog/elegant-approved-2026-09-23/GBElg100AnSpTslIvyGl.ea331e5dfb29.png",
+   "fit": 0.4358
+  },
+  "elegant-100ml-18-415|Frosted|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/elegant-100ml-18-415-frosted-bulb.5bb3a051d21a.png",
+    "width": 293,
+    "height": 1815,
+    "x": 544,
+    "y": 107
+   },
+   "exploded": {
+    "url": "/images/register/tubes/elegant-100ml-18-415-frosted-bulb-exploded.9831b0be9ae2.png",
+    "width": 293,
+    "height": 1513,
+    "x": 544,
+    "y": 107
+   },
+   "from": "clear",
+   "hero": "/images/catalog/elegant-approved-2026-09-23/GBElg100AnSpGl.7dd5b42e9d0a.png",
+   "fit": 0.5294
+  },
+  "elegant-100ml-18-415|Frosted|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/elegant-100ml-18-415-frosted-lotion.ae1ae7ee77ea.png",
+    "width": 212,
+    "height": 1815,
+    "x": 629,
+    "y": 107
+   },
+   "exploded": {
+    "url": "/images/register/tubes/elegant-100ml-18-415-frosted-lotion-exploded.675dc1b2bb5d.png",
+    "width": 212,
+    "height": 1756,
+    "x": 629,
+    "y": 107
+   },
+   "from": "clear",
+   "hero": "/images/catalog/elegant-approved-2026-09-23/LBElg100LtnMtGl.e4fa765d2c7a.png",
+   "fit": 0.5326
+  },
+  "elegant-100ml-18-415|Frosted|spray": {
+   "seated": {
+    "url": "/images/register/tubes/elegant-100ml-18-415-frosted-spray.470555d979f9.png",
+    "width": 414,
+    "height": 1815,
+    "x": 497,
+    "y": 107
+   },
+   "exploded": {
+    "url": "/images/register/tubes/elegant-100ml-18-415-frosted-spray-exploded.46ce9305b05a.png",
+    "width": 414,
+    "height": 1802,
+    "x": 497,
+    "y": 107
+   },
+   "from": "clear",
+   "hero": "/images/catalog/elegant-approved-2026-09-23/GBElg100SpryMtGl.d8ba293e7aeb.png",
+   "fit": 0.4424
+  },
+  "elegant-100ml-18-415|Frosted|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/elegant-100ml-18-415-frosted-tassel.c37d58d7d14b.png",
+    "width": 183,
+    "height": 1815,
+    "x": 546,
+    "y": 107
+   },
+   "exploded": {
+    "url": "/images/register/tubes/elegant-100ml-18-415-frosted-tassel-exploded.7f5da04c9ce7.png",
+    "width": 183,
+    "height": 1623,
+    "x": 546,
+    "y": 107
+   },
+   "from": "clear",
+   "hero": "/images/catalog/elegant-approved-2026-09-23/GBElg100AnSpTslIvyGl.ea331e5dfb29.png",
+   "fit": 0.4358
+  },
+  "elegant-15ml-13-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/elegant-15ml-13-415-clear-spray.5b8f22c28119.png",
+    "width": 353,
+    "height": 1836,
+    "x": 565,
+    "y": 129
+   },
+   "exploded": {
+    "url": "/images/register/tubes/elegant-15ml-13-415-clear-spray-exploded.26cbf88c113d.png",
+    "width": 353,
+    "height": 1769,
+    "x": 565,
+    "y": 129
+   },
+   "from": "own",
+   "hero": "/images/catalog/elegant-approved-2026-09-23/GBElg15SpryGlMatt.615cd05227bc.png",
+   "fit": 0.4541
+  },
+  "elegant-15ml-13-415|Frosted|spray": {
+   "seated": {
+    "url": "/images/register/tubes/elegant-15ml-13-415-frosted-spray.c95d76ad8886.png",
+    "width": 353,
+    "height": 1836,
+    "x": 570,
+    "y": 129
+   },
+   "exploded": {
+    "url": "/images/register/tubes/elegant-15ml-13-415-frosted-spray-exploded.26cbf88c113d.png",
+    "width": 353,
+    "height": 1769,
+    "x": 570,
+    "y": 129
+   },
+   "from": "clear",
+   "hero": "/images/catalog/elegant-approved-2026-09-23/GBElg15SpryGlMatt.615cd05227bc.png",
+   "fit": 0.4541
+  },
+  "elegant-60ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/elegant-60ml-18-415-clear-bulb.054733089510.png",
+    "width": 120,
+    "height": 1818,
+    "x": 677,
+    "y": 124
+   },
+   "exploded": {
+    "url": "/images/register/tubes/elegant-60ml-18-415-clear-bulb-exploded.514e43309b33.png",
+    "width": 120,
+    "height": 1727,
+    "x": 677,
+    "y": 124
+   },
+   "from": "own",
+   "hero": "/images/catalog/elegant-approved-2026-09-23/GBElg60AnSpGl.b2c544a4cfb7.png",
+   "fit": 0.5158
+  },
+  "elegant-60ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/elegant-60ml-18-415-clear-lotion.9d47eb558261.png",
+    "width": 176,
+    "height": 1818,
+    "x": 646,
+    "y": 124
+   },
+   "exploded": {
+    "url": "/images/register/tubes/elegant-60ml-18-415-clear-lotion-exploded.ba20764bae8e.png",
+    "width": 176,
+    "height": 1734,
+    "x": 646,
+    "y": 124
+   },
+   "from": "own",
+   "hero": "/images/catalog/elegant-approved-2026-09-23/LBElg60LtnMtGl.65bd4d5cf600.png",
+   "fit": 0.4208
+  },
+  "elegant-60ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/elegant-60ml-18-415-clear-spray.9589f4c4fa09.png",
+    "width": 451,
+    "height": 1818,
+    "x": 526,
+    "y": 124
+   },
+   "exploded": {
+    "url": "/images/register/tubes/elegant-60ml-18-415-clear-spray-exploded.e75047f83eaf.png",
+    "width": 451,
+    "height": 1717,
+    "x": 526,
+    "y": 124
+   },
+   "from": "own",
+   "hero": "/images/catalog/elegant-approved-2026-09-23/GBElg60SpryMtGl.7a8783986d0a.png",
+   "fit": 0.4721
+  },
+  "elegant-60ml-18-415|Clear|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/elegant-60ml-18-415-clear-tassel.1810b0921392.png",
+    "width": 355,
+    "height": 1818,
+    "x": 559,
+    "y": 124
+   },
+   "exploded": {
+    "url": "/images/register/tubes/elegant-60ml-18-415-clear-tassel-exploded.b18eb15a4df7.png",
+    "width": 355,
+    "height": 1808,
+    "x": 559,
+    "y": 124
+   },
+   "from": "own",
+   "hero": "/images/catalog/elegant-approved-2026-09-23/GBElg60AnSpTslIvyGl.12b3ed29ce2c.png",
+   "fit": 0.5599
+  },
+  "elegant-60ml-18-415|Frosted|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/elegant-60ml-18-415-frosted-bulb.f289681c5262.png",
+    "width": 120,
+    "height": 1818,
+    "x": 675,
+    "y": 124
+   },
+   "exploded": {
+    "url": "/images/register/tubes/elegant-60ml-18-415-frosted-bulb-exploded.514e43309b33.png",
+    "width": 120,
+    "height": 1727,
+    "x": 675,
+    "y": 124
+   },
+   "from": "clear",
+   "hero": "/images/catalog/elegant-approved-2026-09-23/GBElg60AnSpGl.b2c544a4cfb7.png",
+   "fit": 0.5158
+  },
+  "elegant-60ml-18-415|Frosted|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/elegant-60ml-18-415-frosted-lotion.bb1fedc7da3a.png",
+    "width": 176,
+    "height": 1818,
+    "x": 644,
+    "y": 124
+   },
+   "exploded": {
+    "url": "/images/register/tubes/elegant-60ml-18-415-frosted-lotion-exploded.ba20764bae8e.png",
+    "width": 176,
+    "height": 1734,
+    "x": 644,
+    "y": 124
+   },
+   "from": "clear",
+   "hero": "/images/catalog/elegant-approved-2026-09-23/LBElg60LtnMtGl.65bd4d5cf600.png",
+   "fit": 0.4208
+  },
+  "elegant-60ml-18-415|Frosted|spray": {
+   "seated": {
+    "url": "/images/register/tubes/elegant-60ml-18-415-frosted-spray.c88c6d5fec79.png",
+    "width": 451,
+    "height": 1818,
+    "x": 524,
+    "y": 124
+   },
+   "exploded": {
+    "url": "/images/register/tubes/elegant-60ml-18-415-frosted-spray-exploded.e75047f83eaf.png",
+    "width": 451,
+    "height": 1717,
+    "x": 524,
+    "y": 124
+   },
+   "from": "clear",
+   "hero": "/images/catalog/elegant-approved-2026-09-23/GBElg60SpryMtGl.7a8783986d0a.png",
+   "fit": 0.4721
+  },
+  "elegant-60ml-18-415|Frosted|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/elegant-60ml-18-415-frosted-tassel.28c7c7f95be8.png",
+    "width": 355,
+    "height": 1818,
+    "x": 557,
+    "y": 124
+   },
+   "exploded": {
+    "url": "/images/register/tubes/elegant-60ml-18-415-frosted-tassel-exploded.b18eb15a4df7.png",
+    "width": 355,
+    "height": 1808,
+    "x": 557,
+    "y": 124
+   },
+   "from": "clear",
+   "hero": "/images/catalog/elegant-approved-2026-09-23/GBElg60AnSpTslIvyGl.12b3ed29ce2c.png",
+   "fit": 0.5599
+  },
+  "empire-100ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/empire-100ml-18-415-clear-bulb.8e0bc53f4347.png",
+    "width": 200,
+    "height": 1752,
+    "x": 394,
+    "y": 133
+   },
+   "exploded": {
+    "url": "/images/register/tubes/empire-100ml-18-415-clear-bulb-exploded.4e791ce9175b.png",
+    "width": 200,
+    "height": 1537,
+    "x": 394,
+    "y": 133
+   },
+   "from": "own",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBEmp100AnSpGl.3fbe017a5989.png",
+   "fit": 0.5629
+  },
+  "empire-100ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/empire-100ml-18-415-clear-lotion.7bff4a5fa960.png",
+    "width": 128,
+    "height": 1739,
+    "x": 480,
+    "y": 133
+   },
+   "exploded": {
+    "url": "/images/register/tubes/empire-100ml-18-415-clear-lotion-exploded.45bbd9ea0283.png",
+    "width": 128,
+    "height": 1644,
+    "x": 480,
+    "y": 133
+   },
+   "from": "own",
+   "hero": "psd:2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/22.  100 Empire, Ltn & Spry, capped/12. LBEmp100LtnMtGl.psd",
+   "fit": 0.5637
+  },
+  "empire-100ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/empire-100ml-18-415-clear-spray.545fa0538cce.png",
+    "width": 129,
+    "height": 1744,
+    "x": 502,
+    "y": 133
+   },
+   "exploded": {
+    "url": "/images/register/tubes/empire-100ml-18-415-clear-spray-exploded.8023ba8f5bdf.png",
+    "width": 129,
+    "height": 1665,
+    "x": 502,
+    "y": 133
+   },
+   "from": "own",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBEmp100SpryMtGl.8ac2c42b7237.png",
+   "fit": 0.543
+  },
+  "empire-100ml-18-415|Clear|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/empire-100ml-18-415-clear-tassel.8e0bc53f4347.png",
+    "width": 200,
+    "height": 1752,
+    "x": 394,
+    "y": 133
+   },
+   "exploded": {
+    "url": "/images/register/tubes/empire-100ml-18-415-clear-tassel-exploded.4e791ce9175b.png",
+    "width": 200,
+    "height": 1537,
+    "x": 394,
+    "y": 133
+   },
+   "from": "bulb",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBEmp100AnSpGl.3fbe017a5989.png",
+   "fit": 0.5629
+  },
+  "empire-50ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/empire-50ml-18-415-clear-bulb.24c429bb270c.png",
+    "width": 110,
+    "height": 1623,
+    "x": 450,
+    "y": 147
+   },
+   "exploded": {
+    "url": "/images/register/tubes/empire-50ml-18-415-clear-bulb-exploded.13f547921b8c.png",
+    "width": 110,
+    "height": 1491,
+    "x": 450,
+    "y": 147
+   },
+   "from": "own",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBEmp50AnSpGl.45b60c7ad00d.png",
+   "fit": 0.5601
+  },
+  "empire-50ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/empire-50ml-18-415-clear-lotion.100424d362f1.png",
+    "width": 106,
+    "height": 1618,
+    "x": 464,
+    "y": 147
+   },
+   "exploded": {
+    "url": "/images/register/tubes/empire-50ml-18-415-clear-lotion-exploded.5fec0780fc22.png",
+    "width": 106,
+    "height": 1489,
+    "x": 464,
+    "y": 147
+   },
+   "from": "own",
+   "hero": "psd:2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/21.  50 Empire, Ltn & Spry, capped/12. LBEmp50LtnMtGl.psd",
+   "fit": 0.5734
+  },
+  "empire-50ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/empire-50ml-18-415-clear-spray.dcb167b9e11c.png",
+    "width": 175,
+    "height": 1623,
+    "x": 487,
+    "y": 147
+   },
+   "exploded": {
+    "url": "/images/register/tubes/empire-50ml-18-415-clear-spray-exploded.bcaeb3949ecb.png",
+    "width": 175,
+    "height": 1576,
+    "x": 487,
+    "y": 147
+   },
+   "from": "own",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBEmp50SpryMtGl.565b535c4096.png",
+   "fit": 0.5701
+  },
+  "empire-50ml-18-415|Clear|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/empire-50ml-18-415-clear-tassel.24c429bb270c.png",
+    "width": 110,
+    "height": 1623,
+    "x": 450,
+    "y": 147
+   },
+   "exploded": {
+    "url": "/images/register/tubes/empire-50ml-18-415-clear-tassel-exploded.13f547921b8c.png",
+    "width": 110,
+    "height": 1491,
+    "x": 450,
+    "y": 147
+   },
+   "from": "bulb",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBEmp50AnSpGl.45b60c7ad00d.png",
+   "fit": 0.5601
+  },
+  "flair-15ml-13-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/flair-15ml-13-415-clear-spray.817ffcb0b479.png",
+    "width": 209,
+    "height": 1856,
+    "x": 417,
+    "y": 154
+   },
+   "exploded": {
+    "url": "/images/register/tubes/flair-15ml-13-415-clear-spray-exploded.cf3a41b07b20.png",
+    "width": 156,
+    "height": 1790,
+    "x": 711,
+    "y": 154
+   },
+   "from": "own",
+   "hero": "/images/catalog/batch6-approved-2026-09-25/GBFlair15SpryGlMatt.a0a7d9d36c67.webp",
+   "fit": 0.5334
+  },
+  "footed-rectangle-10ml-13-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/footed-rectangle-10ml-13-415-clear-spray.8b6b38a3a9c2.png",
+    "width": 134,
+    "height": 1763,
+    "x": 627,
+    "y": 134
+   },
+   "exploded": {
+    "url": "/images/register/tubes/footed-rectangle-10ml-13-415-clear-spray-exploded.7960223e26e0.png",
+    "width": 134,
+    "height": 1611,
+    "x": 627,
+    "y": 134
+   },
+   "from": "own",
+   "hero": "/images/catalog/batch3-approved-2026-09-25/GBRect10SpryGlMatt.43e762e807cb.webp",
+   "fit": 0.4429
+  },
+  "grace-55ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/grace-55ml-18-415-clear-bulb.9dcbb3eaa34d.png",
+    "width": 178,
+    "height": 1762,
+    "x": 377,
+    "y": 134
+   },
+   "exploded": {
+    "url": "/images/register/tubes/grace-55ml-18-415-clear-bulb-exploded.207a13945cd2.png",
+    "width": 178,
+    "height": 1432,
+    "x": 377,
+    "y": 134
+   },
+   "from": "own",
+   "hero": "/images/catalog/next-batch-approved-2026-09-25/GBGrce55AnSpMtSl.6de57d8c0ecc.webp",
+   "fit": 0.5328
+  },
+  "grace-55ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/grace-55ml-18-415-clear-lotion.44f4ea97ebdd.png",
+    "width": 166,
+    "height": 1762,
+    "x": 478,
+    "y": 134
+   },
+   "exploded": {
+    "url": "/images/register/tubes/grace-55ml-18-415-clear-lotion-exploded.727164268795.png",
+    "width": 166,
+    "height": 1718,
+    "x": 478,
+    "y": 134
+   },
+   "from": "own",
+   "hero": "/images/catalog/next-batch-approved-2026-09-25/LBGrce55LtnMtGl.1f39434ac858.webp",
+   "fit": 0.445
+  },
+  "grace-55ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/grace-55ml-18-415-clear-spray.d16747c78ebb.png",
+    "width": 200,
+    "height": 1762,
+    "x": 494,
+    "y": 134
+   },
+   "exploded": {
+    "url": "/images/register/tubes/grace-55ml-18-415-clear-spray-exploded.fe016c356011.png",
+    "width": 200,
+    "height": 1422,
+    "x": 494,
+    "y": 134
+   },
+   "from": "own",
+   "hero": "/images/catalog/next-batch-approved-2026-09-25/GBGrce55SpryMtGl.4a8a018848dc.webp",
+   "fit": 0.4714
+  },
+  "grace-55ml-18-415|Clear|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/grace-55ml-18-415-clear-tassel.9dcbb3eaa34d.png",
+    "width": 178,
+    "height": 1762,
+    "x": 377,
+    "y": 134
+   },
+   "exploded": {
+    "url": "/images/register/tubes/grace-55ml-18-415-clear-tassel-exploded.207a13945cd2.png",
+    "width": 178,
+    "height": 1432,
+    "x": 377,
+    "y": 134
+   },
+   "from": "bulb",
+   "hero": "/images/catalog/next-batch-approved-2026-09-25/GBGrce55AnSpMtSl.6de57d8c0ecc.webp",
+   "fit": 0.5328
+  },
+  "pillar-9ml-13-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/pillar-9ml-13-415-clear-spray.43c2a5c33486.png",
+    "width": 251,
+    "height": 1813,
+    "x": 473,
+    "y": 138
+   },
+   "exploded": {
+    "url": "/images/register/tubes/pillar-9ml-13-415-clear-spray-exploded.58e82b3e4793.png",
+    "width": 251,
+    "height": 1739,
+    "x": 473,
+    "y": 138
+   },
+   "from": "own",
+   "hero": "/images/catalog/batch6-approved-2026-09-25/GBPillar9SpryBlkMatt.46ad573b869d.webp",
+   "fit": 0.6894
+  },
+  "round-128ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/round-128ml-18-415-clear-bulb.2b08c08cbd45.png",
+    "width": 148,
+    "height": 1820,
+    "x": 880,
+    "y": 119
+   },
+   "exploded": {
+    "url": "/images/register/tubes/round-128ml-18-415-clear-bulb-exploded.42af4a884961.png",
+    "width": 148,
+    "height": 1774,
+    "x": 880,
+    "y": 119
+   },
+   "from": "own",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBRnd128AnSpGl.5f06c6212640.png",
+   "fit": 0.5028
+  },
+  "round-128ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/round-128ml-18-415-clear-lotion.c2b8c172455c.png",
+    "width": 155,
+    "height": 1820,
+    "x": 852,
+    "y": 119
+   },
+   "exploded": {
+    "url": "/images/register/tubes/round-128ml-18-415-clear-lotion-exploded.6ddce62226a4.png",
+    "width": 155,
+    "height": 1774,
+    "x": 852,
+    "y": 119
+   },
+   "from": "own",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/LBRnd128LtnMtGl.03526c3eb1fd.png",
+   "fit": 0.4701
+  },
+  "round-128ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/round-128ml-18-415-clear-spray.91d840663572.png",
+    "width": 302,
+    "height": 1825,
+    "x": 897,
+    "y": 119
+   },
+   "exploded": {
+    "url": "/images/register/tubes/round-128ml-18-415-clear-spray-exploded.cd48467e41d6.png",
+    "width": 302,
+    "height": 1559,
+    "x": 897,
+    "y": 119
+   },
+   "from": "own",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBRnd128SpryMtGl.3b739a7147e4.png",
+   "fit": 0.3512
+  },
+  "round-128ml-18-415|Clear|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/round-128ml-18-415-clear-tassel.2b08c08cbd45.png",
+    "width": 148,
+    "height": 1820,
+    "x": 880,
+    "y": 119
+   },
+   "exploded": {
+    "url": "/images/register/tubes/round-128ml-18-415-clear-tassel-exploded.42af4a884961.png",
+    "width": 148,
+    "height": 1774,
+    "x": 880,
+    "y": 119
+   },
+   "from": "bulb",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBRnd128AnSpGl.5f06c6212640.png",
+   "fit": 0.5028
+  },
+  "round-128ml-18-415|Frosted|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/round-128ml-18-415-frosted-bulb.0486d20ea582.png",
+    "width": 148,
+    "height": 1818,
+    "x": 881,
+    "y": 119
+   },
+   "exploded": {
+    "url": "/images/register/tubes/round-128ml-18-415-frosted-bulb-exploded.807ee2d66ac4.png",
+    "width": 148,
+    "height": 1772,
+    "x": 881,
+    "y": 119
+   },
+   "from": "clear",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBRnd128AnSpGl.5f06c6212640.png",
+   "fit": 0.5028
+  },
+  "round-128ml-18-415|Frosted|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/round-128ml-18-415-frosted-lotion.2049c52f0d73.png",
+    "width": 155,
+    "height": 1818,
+    "x": 853,
+    "y": 119
+   },
+   "exploded": {
+    "url": "/images/register/tubes/round-128ml-18-415-frosted-lotion-exploded.86eaf7a074e4.png",
+    "width": 155,
+    "height": 1772,
+    "x": 853,
+    "y": 119
+   },
+   "from": "clear",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/LBRnd128LtnMtGl.03526c3eb1fd.png",
+   "fit": 0.4701
+  },
+  "round-128ml-18-415|Frosted|spray": {
+   "seated": {
+    "url": "/images/register/tubes/round-128ml-18-415-frosted-spray.ea80210baa49.png",
+    "width": 302,
+    "height": 1823,
+    "x": 898,
+    "y": 119
+   },
+   "exploded": {
+    "url": "/images/register/tubes/round-128ml-18-415-frosted-spray-exploded.ff81fd7e6728.png",
+    "width": 302,
+    "height": 1557,
+    "x": 898,
+    "y": 119
+   },
+   "from": "clear",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBRnd128SpryMtGl.3b739a7147e4.png",
+   "fit": 0.3512
+  },
+  "round-128ml-18-415|Frosted|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/round-128ml-18-415-frosted-tassel.0486d20ea582.png",
+    "width": 148,
+    "height": 1818,
+    "x": 881,
+    "y": 119
+   },
+   "exploded": {
+    "url": "/images/register/tubes/round-128ml-18-415-frosted-tassel-exploded.807ee2d66ac4.png",
+    "width": 148,
+    "height": 1772,
+    "x": 881,
+    "y": 119
+   },
+   "from": "clear",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBRnd128AnSpGl.5f06c6212640.png",
+   "fit": 0.5028
+  },
+  "round-78ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/round-78ml-18-415-clear-bulb.ac5263866737.png",
+    "width": 239,
+    "height": 1840,
+    "x": 875,
+    "y": 133
+   },
+   "exploded": {
+    "url": "/images/register/tubes/round-78ml-18-415-clear-bulb-exploded.3632075673db.png",
+    "width": 239,
+    "height": 1697,
+    "x": 875,
+    "y": 133
+   },
+   "from": "own",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBRnd78AnSpGl.8e40a4048bbd.png",
+   "fit": 0.3595
+  },
+  "round-78ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/round-78ml-18-415-clear-lotion.42780ee3ce0d.png",
+    "width": 139,
+    "height": 1820,
+    "x": 836,
+    "y": 133
+   },
+   "exploded": {
+    "url": "/images/register/tubes/round-78ml-18-415-clear-lotion-exploded.b1d1d5263461.png",
+    "width": 139,
+    "height": 1780,
+    "x": 836,
+    "y": 133
+   },
+   "from": "own",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/LBRnd78LtnCu.126a7866e19f.png",
+   "fit": 0.3824
+  },
+  "round-78ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/round-78ml-18-415-clear-spray.a1de0dea28e6.png",
+    "width": 256,
+    "height": 1840,
+    "x": 868,
+    "y": 133
+   },
+   "exploded": {
+    "url": "/images/register/tubes/round-78ml-18-415-clear-spray-exploded.75dd7a12351c.png",
+    "width": 256,
+    "height": 1584,
+    "x": 868,
+    "y": 133
+   },
+   "from": "own",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBRnd78SpryCu.2da76c836a2c.png",
+   "fit": 0.3652
+  },
+  "round-78ml-18-415|Clear|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/round-78ml-18-415-clear-tassel.ac5263866737.png",
+    "width": 239,
+    "height": 1840,
+    "x": 875,
+    "y": 133
+   },
+   "exploded": {
+    "url": "/images/register/tubes/round-78ml-18-415-clear-tassel-exploded.3632075673db.png",
+    "width": 239,
+    "height": 1697,
+    "x": 875,
+    "y": 133
+   },
+   "from": "bulb",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBRnd78AnSpGl.8e40a4048bbd.png",
+   "fit": 0.3595
+  },
+  "round-78ml-18-415|Frosted|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/round-78ml-18-415-frosted-bulb.c6a134a243a7.png",
+    "width": 239,
+    "height": 1840,
+    "x": 876,
+    "y": 133
+   },
+   "exploded": {
+    "url": "/images/register/tubes/round-78ml-18-415-frosted-bulb-exploded.3632075673db.png",
+    "width": 239,
+    "height": 1697,
+    "x": 876,
+    "y": 133
+   },
+   "from": "clear",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBRnd78AnSpGl.8e40a4048bbd.png",
+   "fit": 0.3595
+  },
+  "round-78ml-18-415|Frosted|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/round-78ml-18-415-frosted-lotion.69f3d24488e8.png",
+    "width": 139,
+    "height": 1820,
+    "x": 836,
+    "y": 133
+   },
+   "exploded": {
+    "url": "/images/register/tubes/round-78ml-18-415-frosted-lotion-exploded.b1d1d5263461.png",
+    "width": 139,
+    "height": 1780,
+    "x": 836,
+    "y": 133
+   },
+   "from": "clear",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/LBRnd78LtnCu.126a7866e19f.png",
+   "fit": 0.3824
+  },
+  "round-78ml-18-415|Frosted|spray": {
+   "seated": {
+    "url": "/images/register/tubes/round-78ml-18-415-frosted-spray.7ef3217dc7be.png",
+    "width": 256,
+    "height": 1840,
+    "x": 868,
+    "y": 133
+   },
+   "exploded": {
+    "url": "/images/register/tubes/round-78ml-18-415-frosted-spray-exploded.75dd7a12351c.png",
+    "width": 256,
+    "height": 1584,
+    "x": 868,
+    "y": 133
+   },
+   "from": "clear",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBRnd78SpryCu.2da76c836a2c.png",
+   "fit": 0.3652
+  },
+  "round-78ml-18-415|Frosted|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/round-78ml-18-415-frosted-tassel.c6a134a243a7.png",
+    "width": 239,
+    "height": 1840,
+    "x": 876,
+    "y": 133
+   },
+   "exploded": {
+    "url": "/images/register/tubes/round-78ml-18-415-frosted-tassel-exploded.3632075673db.png",
+    "width": 239,
+    "height": 1697,
+    "x": 876,
+    "y": 133
+   },
+   "from": "clear",
+   "hero": "/images/catalog/cre-pilot-2026-09-22/GBRnd78AnSpGl.8e40a4048bbd.png",
+   "fit": 0.3595
+  },
+  "royal-13ml-13-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/royal-13ml-13-415-clear-spray.2db33c2a7c36.png",
+    "width": 289,
+    "height": 1734,
+    "x": 690,
+    "y": 141
+   },
+   "exploded": {
+    "url": "/images/register/tubes/royal-13ml-13-415-clear-spray-exploded.178065d2b997.png",
+    "width": 289,
+    "height": 1568,
+    "x": 690,
+    "y": 141
+   },
+   "from": "own",
+   "hero": "/images/catalog/batch6-approved-2026-09-25/GBRoyal13SpryGlMatt.de76eb96d0e1.webp",
+   "fit": 0.6202
+  },
+  "sleek-100ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/sleek-100ml-18-415-clear-bulb.df6e693fa698.png",
+    "width": 224,
+    "height": 1720,
+    "x": 321,
+    "y": 115
+   },
+   "exploded": {
+    "url": "/images/register/tubes/sleek-100ml-18-415-clear-bulb-exploded.8df53cc2cfdb.png",
+    "width": 224,
+    "height": 1713,
+    "x": 321,
+    "y": 115
+   },
+   "from": "own",
+   "hero": "/images/catalog/sleek-approved-2026-09-23/GBSlk100AnSpGl.fcb38308d06e.png",
+   "fit": 0.5701
+  },
+  "sleek-100ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/sleek-100ml-18-415-clear-lotion.1fec2722a9ca.png",
+    "width": 116,
+    "height": 1720,
+    "x": 357,
+    "y": 115
+   },
+   "exploded": {
+    "url": "/images/register/tubes/sleek-100ml-18-415-clear-lotion-exploded.8ec615cb0fbf.png",
+    "width": 116,
+    "height": 1713,
+    "x": 357,
+    "y": 115
+   },
+   "from": "own",
+   "hero": "/images/catalog/sleek-approved-2026-09-23/LBSlk100LtnMtGl.cdcdeb3409a3.png",
+   "fit": 0.5722
+  },
+  "sleek-100ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/sleek-100ml-18-415-clear-spray.ce9528f18669.png",
+    "width": 104,
+    "height": 1720,
+    "x": 346,
+    "y": 115
+   },
+   "exploded": {
+    "url": "/images/register/tubes/sleek-100ml-18-415-clear-spray-exploded.3476b3390fa7.png",
+    "width": 104,
+    "height": 1713,
+    "x": 346,
+    "y": 115
+   },
+   "from": "own",
+   "hero": "/images/catalog/sleek-approved-2026-09-23/GBSlk100SpryMtGl.e22c297f7c54.png",
+   "fit": 0.5943
+  },
+  "sleek-100ml-18-415|Clear|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/sleek-100ml-18-415-clear-tassel.09eb536f4c42.png",
+    "width": 98,
+    "height": 1720,
+    "x": 325,
+    "y": 115
+   },
+   "exploded": {
+    "url": "/images/register/tubes/sleek-100ml-18-415-clear-tassel-exploded.d38cf633829e.png",
+    "width": 98,
+    "height": 1492,
+    "x": 325,
+    "y": 115
+   },
+   "from": "own",
+   "hero": "/images/catalog/sleek-approved-2026-09-23/GBSlk100AnSpTslIvyGl.39fd0161f755.png",
+   "fit": 0.5599
+  },
+  "sleek-30ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/sleek-30ml-18-415-clear-bulb.bb8fd4c41b01.png",
+    "width": 140,
+    "height": 1790,
+    "x": 348,
+    "y": 116
+   },
+   "exploded": {
+    "url": "/images/register/tubes/sleek-30ml-18-415-clear-bulb-exploded.9459b3fced43.png",
+    "width": 140,
+    "height": 1677,
+    "x": 348,
+    "y": 116
+   },
+   "from": "own",
+   "hero": "/images/catalog/sleek-approved-2026-09-23/GBSlk30AnSpGl.95ca224380d6.png",
+   "fit": 0.6422
+  },
+  "sleek-30ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/sleek-30ml-18-415-clear-lotion.b3b0902703af.png",
+    "width": 176,
+    "height": 1790,
+    "x": 361,
+    "y": 116
+   },
+   "exploded": {
+    "url": "/images/register/tubes/sleek-30ml-18-415-clear-lotion-exploded.611832009119.png",
+    "width": 176,
+    "height": 1781,
+    "x": 361,
+    "y": 116
+   },
+   "from": "own",
+   "hero": "/images/catalog/sleek-approved-2026-09-23/LBSlk30LtnMtGl.4e7f63d5aa6e.png",
+   "fit": 0.5055
+  },
+  "sleek-30ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/sleek-30ml-18-415-clear-spray.e1788d8737c5.png",
+    "width": 114,
+    "height": 1790,
+    "x": 364,
+    "y": 116
+   },
+   "exploded": {
+    "url": "/images/register/tubes/sleek-30ml-18-415-clear-spray-exploded.cf7d690f8e88.png",
+    "width": 114,
+    "height": 1728,
+    "x": 364,
+    "y": 116
+   },
+   "from": "own",
+   "hero": "/images/catalog/sleek-approved-2026-09-23/GBSlk30SpryMtGl.4bbaa5fcf6e1.png",
+   "fit": 0.5562
+  },
+  "sleek-50ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/sleek-50ml-18-415-clear-bulb.515c808c5566.png",
+    "width": 175,
+    "height": 1765,
+    "x": 261,
+    "y": 114
+   },
+   "exploded": {
+    "url": "/images/register/tubes/sleek-50ml-18-415-clear-bulb-exploded.1dea046682a9.png",
+    "width": 175,
+    "height": 1435,
+    "x": 261,
+    "y": 114
+   },
+   "from": "own",
+   "hero": "/images/catalog/sleek-approved-2026-09-23/GBSlk50AnSpGl.0df795a44844.png",
+   "fit": 0.5983
+  },
+  "sleek-50ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/sleek-50ml-18-415-clear-lotion.10eddb90ccd5.png",
+    "width": 141,
+    "height": 1765,
+    "x": 264,
+    "y": 114
+   },
+   "exploded": {
+    "url": "/images/register/tubes/sleek-50ml-18-415-clear-lotion-exploded.75312592b247.png",
+    "width": 141,
+    "height": 1711,
+    "x": 264,
+    "y": 114
+   },
+   "from": "own",
+   "hero": "/images/catalog/sleek-approved-2026-09-23/LBSlk50LtnMtGl.8cdeee69fc92.png",
+   "fit": 0.5048
+  },
+  "sleek-50ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/sleek-50ml-18-415-clear-spray.eff6ba6432bf.png",
+    "width": 74,
+    "height": 1765,
+    "x": 314,
+    "y": 114
+   },
+   "exploded": {
+    "url": "/images/register/tubes/sleek-50ml-18-415-clear-spray-exploded.c19e95ff0656.png",
+    "width": 74,
+    "height": 1712,
+    "x": 314,
+    "y": 114
+   },
+   "from": "own",
+   "hero": "/images/catalog/sleek-approved-2026-09-23/GBSlk50SpryMtGl.b28e5855217c.png",
+   "fit": 0.5885
+  },
+  "sleek-50ml-18-415|Clear|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/sleek-50ml-18-415-clear-tassel.e7e781d818a4.png",
+    "width": 158,
+    "height": 1765,
+    "x": 265,
+    "y": 114
+   },
+   "exploded": {
+    "url": "/images/register/tubes/sleek-50ml-18-415-clear-tassel-exploded.decc3231a13b.png",
+    "width": 158,
+    "height": 1607,
+    "x": 265,
+    "y": 114
+   },
+   "from": "own",
+   "hero": "/images/catalog/sleek-approved-2026-09-23/GBSlk50AnSpTslIvyGl.261dcc49adb3.png",
+   "fit": 0.6125
+  },
+  "sleek-5ml-13-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/sleek-5ml-13-415-clear-spray.b79140957e76.png",
+    "width": 225,
+    "height": 1782,
+    "x": 370,
+    "y": 143
+   },
+   "exploded": {
+    "url": "/images/register/tubes/sleek-5ml-13-415-clear-spray-exploded.86c312044d6d.png",
+    "width": 225,
+    "height": 1718,
+    "x": 370,
+    "y": 143
+   },
+   "from": "own",
+   "hero": "/images/catalog/sleek-approved-2026-09-23/GBSleek5SpryGlMatt.e4fb3f2e58be.png",
+   "fit": 0.4617
+  },
+  "sleek-8ml-13-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/sleek-8ml-13-415-clear-spray.a765b5e987a6.png",
+    "width": 127,
+    "height": 1829,
+    "x": 365,
+    "y": 141
+   },
+   "exploded": {
+    "url": "/images/register/tubes/sleek-8ml-13-415-clear-spray-exploded.85d811c70e66.png",
+    "width": 127,
+    "height": 1708,
+    "x": 365,
+    "y": 141
+   },
+   "from": "own",
+   "hero": "/images/catalog/sleek-approved-2026-09-23/GBSleek8SpryGlMatt.60c365466266.png",
+   "fit": 0.4414
+  },
+  "slim-100ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/slim-100ml-18-415-clear-bulb.5128daf37386.png",
+    "width": 101,
+    "height": 1748,
+    "x": 264,
+    "y": 126
+   },
+   "exploded": {
+    "url": "/images/register/tubes/slim-100ml-18-415-clear-bulb-exploded.946808c54b33.png",
+    "width": 101,
+    "height": 1453,
+    "x": 264,
+    "y": 126
+   },
+   "from": "own",
+   "hero": "/images/catalog/next-four-approved-2026-09-24/GBSlm100AnSpGl.25a94a0e0123.webp",
+   "fit": 0.8164
+  },
+  "slim-100ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/slim-100ml-18-415-clear-lotion.fe4a5c4ff7e2.png",
+    "width": 158,
+    "height": 1749,
+    "x": 303,
+    "y": 126
+   },
+   "exploded": {
+    "url": "/images/register/tubes/slim-100ml-18-415-clear-lotion-exploded.b6a3b42dfbb6.png",
+    "width": 158,
+    "height": 1546,
+    "x": 303,
+    "y": 126
+   },
+   "from": "own",
+   "hero": "/images/catalog/next-four-approved-2026-09-24/LBSlm100LtnMtGl.ac6ba9bffe49.webp",
+   "fit": 0.5331
+  },
+  "slim-100ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/slim-100ml-18-415-clear-spray.4b60410178ce.png",
+    "width": 149,
+    "height": 1749,
+    "x": 264,
+    "y": 126
+   },
+   "exploded": {
+    "url": "/images/register/tubes/slim-100ml-18-415-clear-spray-exploded.5adf571966a5.png",
+    "width": 149,
+    "height": 1659,
+    "x": 264,
+    "y": 126
+   },
+   "from": "own",
+   "hero": "/images/catalog/next-four-approved-2026-09-24/GBSlm100SpryMtGl.a6b33de271bb.webp",
+   "fit": 0.5872
+  },
+  "slim-100ml-18-415|Clear|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/slim-100ml-18-415-clear-tassel.29afd495f48a.png",
+    "width": 82,
+    "height": 1747,
+    "x": 282,
+    "y": 126
+   },
+   "exploded": {
+    "url": "/images/register/tubes/slim-100ml-18-415-clear-tassel-exploded.6a89adde115b.png",
+    "width": 82,
+    "height": 1214,
+    "x": 282,
+    "y": 126
+   },
+   "from": "own",
+   "hero": "/images/catalog/next-four-approved-2026-09-24/GBSlm100AnSpTslGl.1b367d9b11ed.webp",
+   "fit": 0.7577
+  },
+  "slim-30ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/slim-30ml-18-415-clear-bulb.d1b5416b2e0c.png",
+    "width": 133,
+    "height": 1652,
+    "x": 334,
+    "y": 147
+   },
+   "exploded": {
+    "url": "/images/register/tubes/slim-30ml-18-415-clear-bulb-exploded.a1ab4b103249.png",
+    "width": 133,
+    "height": 1335,
+    "x": 334,
+    "y": 147
+   },
+   "from": "own",
+   "hero": "/images/catalog/next-four-approved-2026-09-24/GBSlm30AnSpGl.f8f876caada0.webp",
+   "fit": 0.7294
+  },
+  "slim-30ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/slim-30ml-18-415-clear-lotion.2fea47bb6411.png",
+    "width": 136,
+    "height": 1652,
+    "x": 373,
+    "y": 147
+   },
+   "exploded": {
+    "url": "/images/register/tubes/slim-30ml-18-415-clear-lotion-exploded.88f9090adced.png",
+    "width": 136,
+    "height": 1473,
+    "x": 373,
+    "y": 147
+   },
+   "from": "own",
+   "hero": "/images/catalog/next-four-approved-2026-09-24/LBSlm30LtnMtGl.b85c9a6a04c1.webp",
+   "fit": 0.5253
+  },
+  "slim-30ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/slim-30ml-18-415-clear-spray.a8a7de148501.png",
+    "width": 224,
+    "height": 1652,
+    "x": 373,
+    "y": 147
+   },
+   "exploded": {
+    "url": "/images/register/tubes/slim-30ml-18-415-clear-spray-exploded.3e93b242d8bb.png",
+    "width": 224,
+    "height": 1548,
+    "x": 373,
+    "y": 147
+   },
+   "from": "own",
+   "hero": "/images/catalog/next-four-approved-2026-09-24/GBSlm30SpryMtGl.16752112606e.webp",
+   "fit": 0.5207
+  },
+  "slim-50ml-18-415|Clear|bulb": {
+   "seated": {
+    "url": "/images/register/tubes/slim-50ml-18-415-clear-bulb.cb1481c1388a.png",
+    "width": 110,
+    "height": 1793,
+    "x": 252,
+    "y": 108
+   },
+   "exploded": {
+    "url": "/images/register/tubes/slim-50ml-18-415-clear-bulb-exploded.1d6e590e377a.png",
+    "width": 110,
+    "height": 1521,
+    "x": 252,
+    "y": 108
+   },
+   "from": "own",
+   "hero": "/images/catalog/next-four-approved-2026-09-24/GBSlm50AnSpGl.b886a4abdd3e.webp",
+   "fit": 0.4289
+  },
+  "slim-50ml-18-415|Clear|lotion": {
+   "seated": {
+    "url": "/images/register/tubes/slim-50ml-18-415-clear-lotion.66ac9c23db1b.png",
+    "width": 127,
+    "height": 1793,
+    "x": 310,
+    "y": 108
+   },
+   "exploded": {
+    "url": "/images/register/tubes/slim-50ml-18-415-clear-lotion-exploded.af53af5efc84.png",
+    "width": 127,
+    "height": 1711,
+    "x": 310,
+    "y": 108
+   },
+   "from": "own",
+   "hero": "/images/catalog/next-four-approved-2026-09-24/LBSlm50LtnMtGl.66a0148ef00a.webp",
+   "fit": 0.4162
+  },
+  "slim-50ml-18-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/slim-50ml-18-415-clear-spray.2519f2611dd4.png",
+    "width": 197,
+    "height": 1793,
+    "x": 256,
+    "y": 108
+   },
+   "exploded": {
+    "url": "/images/register/tubes/slim-50ml-18-415-clear-spray-exploded.8db002b5691c.png",
+    "width": 197,
+    "height": 1547,
+    "x": 256,
+    "y": 108
+   },
+   "from": "own",
+   "hero": "/images/catalog/next-four-approved-2026-09-24/GBSlm50SpryMtGl.81391eda7725.webp",
+   "fit": 0.4273
+  },
+  "slim-50ml-18-415|Clear|tassel": {
+   "seated": {
+    "url": "/images/register/tubes/slim-50ml-18-415-clear-tassel.cb1481c1388a.png",
+    "width": 110,
+    "height": 1793,
+    "x": 252,
+    "y": 108
+   },
+   "exploded": {
+    "url": "/images/register/tubes/slim-50ml-18-415-clear-tassel-exploded.1d6e590e377a.png",
+    "width": 110,
+    "height": 1521,
+    "x": 252,
+    "y": 108
+   },
+   "from": "bulb",
+   "hero": "/images/catalog/next-four-approved-2026-09-24/GBSlm50AnSpGl.b886a4abdd3e.webp",
+   "fit": 0.4289
+  },
+  "square-15ml-13-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/square-15ml-13-415-clear-spray.3ada26625602.png",
+    "width": 136,
+    "height": 1756,
+    "x": 582,
+    "y": 140
+   },
+   "exploded": {
+    "url": "/images/register/tubes/square-15ml-13-415-clear-spray-exploded.9bcac5ad5bf1.png",
+    "width": 136,
+    "height": 1615,
+    "x": 582,
+    "y": 140
+   },
+   "from": "own",
+   "hero": "/images/catalog/batch6-approved-2026-09-25/GBSqr15SpryGlMatt.d356c8ec38ae.webp",
+   "fit": 0.4501
+  },
+  "tall-rectangle-10ml-13-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/tall-rectangle-10ml-13-415-clear-spray.901831eb0865.png",
+    "width": 93,
+    "height": 1804,
+    "x": 329,
+    "y": 120
+   },
+   "exploded": {
+    "url": "/images/register/tubes/tall-rectangle-10ml-13-415-clear-spray-exploded.d72527b9ae34.png",
+    "width": 93,
+    "height": 1784,
+    "x": 329,
+    "y": 120
+   },
+   "from": "own",
+   "hero": "/images/catalog/batch3-approved-2026-09-25/GBTallRect10SpryGlMatt.145bd5e6ba64.webp",
+   "fit": 0.6197
+  },
+  "tulip-5ml-13-415|Amber|spray": {
+   "seated": null,
+   "exploded": {
+    "url": "/images/register/tubes/tulip-5ml-13-415-amber-spray-exploded.1748262df9a1.png",
+    "width": 261,
+    "height": 1433,
+    "x": 577,
+    "y": 152
+   },
+   "from": "borrowed for EXPLODED: tulip-6ml-13-415|Clear|spray"
+  },
+  "tulip-6ml-13-415|Clear|spray": {
+   "seated": {
+    "url": "/images/register/tubes/tulip-6ml-13-415-clear-spray.6b7e544a6a38.png",
+    "width": 262,
+    "height": 1716,
+    "x": 571,
+    "y": 147
+   },
+   "exploded": {
+    "url": "/images/register/tubes/tulip-6ml-13-415-clear-spray-exploded.19c83eb6243d.png",
+    "width": 262,
+    "height": 1438,
+    "x": 571,
+    "y": 147
+   },
+   "from": "own",
+   "hero": "/images/catalog/batch3-approved-2026-09-25/GBTulip6SpryGlMatt.0512863cd272.webp",
+   "fit": 0.5749
+  }
+ }
+}

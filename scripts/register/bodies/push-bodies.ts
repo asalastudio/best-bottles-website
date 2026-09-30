@@ -10,9 +10,9 @@
  *
  * Reads data/register/bodies/bodies-measurements.json, output/register-bodies/final/ and the rulings in
  * data/register/bodies/rulings.json. Only plates with status "ok" are approvable; "review" plates load as
- * "measured", and so do plates whose two scales disagree by more than 5% unless rulings.scaleFlags accepts
- * them (Jordan 2026-09-25). A plate named in rulings.hold loads as "measured" with its reason on the row,
- * whatever else says. The pilot body (cylinder-9ml-17-415) is owned by push-phase3.ts and skipped here.
+ * "measured" unless Jordan named them in rulings.reviewStatus.named, and so do plates whose two scales disagree
+ * by more than 5% unless rulings.scaleFlags accepts them (Jordan 2026-09-25). A plate named in rulings.hold loads
+ * as "measured" with its reason on the row, whatever else says. The pilot body (cylinder-9ml-17-415) is owned by push-phase3.ts and skipped here.
  * Blob keys are content-addressed and write-once. Token from .env.local / .env.blob.local.
  */
 import { readFileSync } from "node:fs";
@@ -32,9 +32,11 @@ const except = new Set(argv.includes("--except") ? argv[argv.indexOf("--except")
 const only = new Set(argv.includes("--only") ? argv[argv.indexOf("--only") + 1].split(",").map(s => s.trim()).filter(Boolean) : []);
 const PILOT = "cylinder-9ml-17-415";
 
-type Rulings = { scaleFlags?: { by: string; date: string; ruling: string } | null; hold?: Record<string, string> };
+type Rulings = { scaleFlags?: { by: string; date: string; ruling: string } | null; hold?: Record<string, string>;
+    reviewStatus?: { named?: Record<string, string> } };
 const RULINGS = JSON.parse(readFileSync(resolve(ROOT, "data", "register", "bodies", "rulings.json"), "utf8")) as Rulings;
 const HOLD = RULINGS.hold ?? {};
+const NAMED = RULINGS.reviewStatus?.named ?? {};
 
 type Plate = {
     plateKey: string; bodyId: string; glass: string; status: string; file: string; width: number; height: number; sha256: string; pxPerMm: number;
@@ -57,12 +59,14 @@ async function main() {
     const tally: Record<string, number> = {};
     for (const p of plates) {
         const held = HOLD[p.plateKey];
-        const approvable = p.status === "ok" && (!p.scale.flag || Boolean(RULINGS.scaleFlags));
+        const named = p.status === "review" ? NAMED[p.plateKey] : undefined;
+        const approvable = (p.status === "ok" || Boolean(named)) && (!p.scale.flag || Boolean(RULINGS.scaleFlags));
         const status = approve && approvable && !held && !except.has(p.plateKey) ? "approved" : "measured";
         tally[status] = (tally[status] ?? 0) + 1;
         if (held) console.log(`  hold ${p.plateKey}: ${held}`);
         const measuredBy = "scripts/register/bodies/build_bodies.py"
             + (p.scale.flag && RULINGS.scaleFlags && !held ? `; scale flag (${p.scale.basis} basis, gap ${p.scale.gapPct}%) accepted: ${RULINGS.scaleFlags.by} ${RULINGS.scaleFlags.date}` : "")
+            + (named && !held ? `; outline gate review: ${named}` : "")
             + (held ? `; held: ${held}` : "");
         const key = `register/plates/${p.bodyId}/${p.glass.toLowerCase().replace(/ /g, "-")}/${p.sha256}.png`;
         const bytes = readFileSync(resolve(BASE, p.file));

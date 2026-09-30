@@ -20,6 +20,7 @@ import { detachedOvercap } from "./detached-overcaps";
 import type { DetachedLook } from "@/lib/products/kit-frame";
 import { CYLINDER9_PILOT_LAYER_HASHES } from "./cylinder9-pilot-layers";
 import { closureDropMm, closureSeatSignature } from "./seat-drops";
+import { heroTube, type HeroTubeLayer } from "./dip-tubes";
 
 export type StageDatum = { axisX: number; seatY: number; baselineY: number };
 /** The slots a kit part can occupy (convex/productKits.ts and the register's registerSlotV agree). */
@@ -259,6 +260,29 @@ export function kitFromRegister(
             seenHardware.add(key);
             return true;
         });
+    }
+    // A sprayer or a pump on a catalogue plate draws the shaft and tube cut from that glass's catalogue hero
+    // (dip-tubes.ts), in front of the glass and under the hardware. It replaces the shared tube drawn behind the plate,
+    // which the bone-baked glass hides. A measured Blender set (every layer made for this body) keeps its own tube.
+    const tube = layers.every((layer) => layer.bodyId === assembly.bodyId) ? null : heroTube(assembly, payload.components, plate, frame);
+    if (tube) {
+        const ordered = parts.filter((part) => part.slot !== "diptube").sort((a, b) => a.zOrder - b.zOrder);
+        // The tube shares its actuator's explodeIndex and component: EXPLODED lifts them out together, the whole mechanism.
+        const holder = ordered.filter((part) => part.componentId === tube.componentId && part.slot !== "overcap");
+        const explodeIndex = holder.length ? Math.min(...holder.map((part) => part.explodeIndex)) : 0;
+        const tubePart = (layer: HeroTubeLayer, views?: StageViewName[]): RegisterKitPart => ({
+            slot: "diptube", variantKey: null, zOrder: 0, explodeIndex,
+            bounds: { left: layer.box.x, top: layer.box.y, right: round(layer.box.x + layer.box.width), bottom: round(layer.box.y + layer.box.height) },
+            assembled: { x: 0, y: 0 }, exploded: { dx: 0, dy: 0 },
+            image: { url: layer.url, key: "", sha256: "", bytes: 0, width: layer.width, height: layer.height },
+            image2x: null, mask: null, derivation: "psd-layer", box: layer.box, componentId: tube.componentId,
+            ...(views ? { views } : {}),
+        });
+        const tubes = tube.exploded
+            ? [...(tube.seated ? [tubePart(tube.seated, ["sidecar", "capon"])] : []), tubePart(tube.exploded, ["exploded"])]
+            : tube.seated ? [tubePart(tube.seated)] : [];
+        ordered.splice(ordered.findIndex((part) => part.slot === "body") + 1, 0, ...tubes);
+        parts = ordered.map((part, zOrder) => ({ ...part, zOrder }));
     }
     // A clear overcap parked or lifted off the bottle is drawn as the empty cover, not the capped photograph's cover over its pump.
     parts = parts.map((part) => {

@@ -1,5 +1,5 @@
 {
-  "_doc": "Jordan's rulings on the catalogue Sunburst plates, applied by scripts/register/bodies/push-bodies.ts. scaleFlags: when set, a plate whose height-based and width-based scales disagree by more than 5% is still approved; the plate's own px/mm is the truth and components tie to it by seat-to-foot (docs/COMPONENT_REGISTER_COMPONENTS.md). hold: a plate loads as measured (not drawn) until it is re-rendered; the reason is recorded on the row. secondPass.released: plates Jordan held on the first pass that the second pass (--pass lit) re-rendered; they load by the normal rule on DEV for review, and production promotion stays a separate step.",
+  "_doc": "Jordan's rulings on the catalogue Sunburst plates, applied by scripts/register/bodies/push-bodies.ts. scaleFlags: when set, a plate whose height-based and width-based scales disagree by more than 5% is still approved; the plate's own px/mm is the truth and components tie to it by seat-to-foot (docs/COMPONENT_REGISTER_COMPONENTS.md). hold: a plate loads as measured (not drawn) until it is re-rendered; the reason is recorded on the row. secondPass.released: plates Jordan held on the first pass that the second pass (--pass lit) re-rendered; they load by the normal rule on DEV for review, and production promotion stays a separate step. reviewStatus.named: plates the outline gate marked review that Jordan looked at and named; they approve like an ok plate, with the naming recorded on the row.",
   "scaleFlags": {
     "by": "Jordan",
     "date": "2026-09-25",
@@ -8,7 +8,10 @@
   "reviewStatus": {
     "by": "Jordan",
     "date": "2026-09-25",
-    "ruling": "the six plates the outline gate marked review (Diamond 60, Empire 100, Round 128 x2, Vial 1 ml plug x2) stay measured until named"
+    "ruling": "the six plates the outline gate marked review (Diamond 60, Empire 100, Round 128 x2, Vial 1 ml plug x2) stay measured until named",
+    "named": {
+      "empire-100ml-18-415|Clear": "fitted IoU 0.968 under the 0.97 gate, drawn 4.1% wide; named by Jordan 2026-09-30 from the before/after sheet ('Empire 100, which is approved, so let's go')"
+    }
   },
   "secondPass": {
     "by": "Jordan",
@@ -37,7 +40,7 @@
     "scope": "every plate and component that passed its gate: 106 plates (second pass), and the 13-415, 14.3mm, 17-415 and 18-415 components; they load approved on dev. Production promotion remains a separate step.",
     "held": {
       "cream-jar-20ml-40mm|White": "hold above (the cut is not the jar)",
-      "empire-100ml-18-415|Clear": "fitted IoU 0.968, under the 0.97 gate",
+      "empire-100ml-18-415|Clear": "fitted IoU 0.968, under the 0.97 gate -> named by Jordan 2026-09-30 (reviewStatus.named)",
       "CMP-CAP-SSLV-18415-S": "registration IoU 0.847, under the 0.90 gate"
     }
   }
