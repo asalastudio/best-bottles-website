@@ -247,12 +247,12 @@
      "slot": "diptube",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-lotion.png",
-     "width": 244,
+     "width": 202,
      "height": 1790,
-     "sha256": "01636e601f44a603680c40cd95f35506527f84a1eb9e2c21ec1b9aae32a9bd6c",
+     "sha256": "ead20a68592b47436b2fbdcb4ca1526eac0547d9a56751e2a13319f16f498967",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 137.0,
+      "x": 101.0,
       "y": -1.32
      },
      "z": "front",
@@ -264,13 +264,13 @@
      "slot": "diptube",
      "layerName": "see-through, Amber",
      "file": "see-through/amber-lotion.png",
-     "width": 239,
-     "height": 1703,
-     "sha256": "815afd983fff5607aff2b5b61162fa7f3db77e1beb0454eb00c3541e966c6e20",
+     "width": 202,
+     "height": 1702,
+     "sha256": "b05217c0324676982c15767900933c6ee08fa6971e0b3f9de4a61ecc70cbf0ab",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 107.0,
-      "y": 0.68
+      "x": 101.0,
+      "y": -0.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -281,13 +281,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-lotion.png",
-     "width": 240,
-     "height": 1719,
-     "sha256": "f7ad2eeafa35a71b34a880447195ec48058df4781a8b88840e8be743e49c976e",
+     "width": 212,
+     "height": 1711,
+     "sha256": "545a5667796d78480eacd156c1c342d28e263f68c15101210d4afd14554cf94c",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 107.0,
-      "y": 9.68
+      "x": 101.0,
+      "y": 1.68
      },
      "z": "front",
      "explodeIndex": 5,
@@ -299,12 +299,12 @@
      "layerName": "see-through, Frosted",
      "file": "see-through/frosted-lotion.png",
      "width": 484,
-     "height": 1787,
-     "sha256": "aafd0c9f0f7430ac709e924a11f7d23059137da79944e55af4981afeca8a9c11",
+     "height": 1710,
+     "sha256": "6ba8330ae57a67da02f33a04ca4aac431dd410938f92e5032e4ea2d44ef24f2e",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 242.0,
-      "y": -0.32
+      "y": 7.68
      },
      "z": "front",
      "explodeIndex": 5,
@@ -316,8 +316,8 @@
      "layerName": "see-through, Swirl",
      "file": "see-through/swirl-lotion.png",
      "width": 483,
-     "height": 1789,
-     "sha256": "c546535df3f1e2d4d7482aa29bff0833857674ca49b6f96a3831e2fb0551bd21",
+     "height": 1783,
+     "sha256": "910917ba4a3708d723cab41ecbb9136338cd4d5715bc79bc6a7a2599ca2fdac9",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 241.0,
@@ -377,12 +377,12 @@
      "slot": "diptube",
      "layerName": "lotion pump body + dip tube, lifted out",
      "file": "shared/lotion-internals.png",
-     "width": 182,
+     "width": 170,
      "height": 1634,
-     "sha256": "91dc0b24a3f5abf7f3980195262aba9c3d233d06f301899db96aa7f8ee8b4b6f",
+     "sha256": "675be4723cd5b9f1de7516721880a824090178a4cd132035b5c84c9f3fee81a8",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 91.0,
+      "x": 85.0,
       "y": -52.32
      },
      "z": "front",
@@ -398,12 +398,12 @@
      "slot": "diptube",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-lotion.png",
-     "width": 244,
+     "width": 202,
      "height": 1790,
-     "sha256": "01636e601f44a603680c40cd95f35506527f84a1eb9e2c21ec1b9aae32a9bd6c",
+     "sha256": "ead20a68592b47436b2fbdcb4ca1526eac0547d9a56751e2a13319f16f498967",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 137.0,
+      "x": 101.0,
       "y": -1.32
      },
      "z": "front",
@@ -415,13 +415,13 @@
      "slot": "diptube",
      "layerName": "see-through, Amber",
      "file": "see-through/amber-lotion.png",
-     "width": 239,
-     "height": 1703,
-     "sha256": "815afd983fff5607aff2b5b61162fa7f3db77e1beb0454eb00c3541e966c6e20",
+     "width": 202,
+     "height": 1702,
+     "sha256": "b05217c0324676982c15767900933c6ee08fa6971e0b3f9de4a61ecc70cbf0ab",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 107.0,
-      "y": 0.68
+      "x": 101.0,
+      "y": -0.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -432,13 +432,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-lotion.png",
-     "width": 240,
-     "height": 1719,
-     "sha256": "f7ad2eeafa35a71b34a880447195ec48058df4781a8b88840e8be743e49c976e",
+     "width": 212,
+     "height": 1711,
+     "sha256": "545a5667796d78480eacd156c1c342d28e263f68c15101210d4afd14554cf94c",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 107.0,
-      "y": 9.68
+      "x": 101.0,
+      "y": 1.68
      },
      "z": "front",
      "explodeIndex": 5,
@@ -450,12 +450,12 @@
      "layerName": "see-through, Frosted",
      "file": "see-through/frosted-lotion.png",
      "width": 484,
-     "height": 1787,
-     "sha256": "aafd0c9f0f7430ac709e924a11f7d23059137da79944e55af4981afeca8a9c11",
+     "height": 1710,
+     "sha256": "6ba8330ae57a67da02f33a04ca4aac431dd410938f92e5032e4ea2d44ef24f2e",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 242.0,
-      "y": -0.32
+      "y": 7.68
      },
      "z": "front",
      "explodeIndex": 5,
@@ -467,8 +467,8 @@
      "layerName": "see-through, Swirl",
      "file": "see-through/swirl-lotion.png",
      "width": 483,
-     "height": 1789,
-     "sha256": "c546535df3f1e2d4d7482aa29bff0833857674ca49b6f96a3831e2fb0551bd21",
+     "height": 1783,
+     "sha256": "910917ba4a3708d723cab41ecbb9136338cd4d5715bc79bc6a7a2599ca2fdac9",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 241.0,
@@ -528,12 +528,12 @@
      "slot": "diptube",
      "layerName": "lotion pump body + dip tube, lifted out",
      "file": "shared/lotion-internals.png",
-     "width": 182,
+     "width": 170,
      "height": 1634,
-     "sha256": "91dc0b24a3f5abf7f3980195262aba9c3d233d06f301899db96aa7f8ee8b4b6f",
+     "sha256": "675be4723cd5b9f1de7516721880a824090178a4cd132035b5c84c9f3fee81a8",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 91.0,
+      "x": 85.0,
       "y": -52.32
      },
      "z": "front",
@@ -549,12 +549,12 @@
      "slot": "diptube",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-lotion.png",
-     "width": 244,
+     "width": 202,
      "height": 1790,
-     "sha256": "01636e601f44a603680c40cd95f35506527f84a1eb9e2c21ec1b9aae32a9bd6c",
+     "sha256": "ead20a68592b47436b2fbdcb4ca1526eac0547d9a56751e2a13319f16f498967",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 137.0,
+      "x": 101.0,
       "y": -1.32
      },
      "z": "front",
@@ -566,13 +566,13 @@
      "slot": "diptube",
      "layerName": "see-through, Amber",
      "file": "see-through/amber-lotion.png",
-     "width": 239,
-     "height": 1703,
-     "sha256": "815afd983fff5607aff2b5b61162fa7f3db77e1beb0454eb00c3541e966c6e20",
+     "width": 202,
+     "height": 1702,
+     "sha256": "b05217c0324676982c15767900933c6ee08fa6971e0b3f9de4a61ecc70cbf0ab",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 107.0,
-      "y": 0.68
+      "x": 101.0,
+      "y": -0.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -583,13 +583,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-lotion.png",
-     "width": 240,
-     "height": 1719,
-     "sha256": "f7ad2eeafa35a71b34a880447195ec48058df4781a8b88840e8be743e49c976e",
+     "width": 212,
+     "height": 1711,
+     "sha256": "545a5667796d78480eacd156c1c342d28e263f68c15101210d4afd14554cf94c",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 107.0,
-      "y": 9.68
+      "x": 101.0,
+      "y": 1.68
      },
      "z": "front",
      "explodeIndex": 5,
@@ -601,12 +601,12 @@
      "layerName": "see-through, Frosted",
      "file": "see-through/frosted-lotion.png",
      "width": 484,
-     "height": 1787,
-     "sha256": "aafd0c9f0f7430ac709e924a11f7d23059137da79944e55af4981afeca8a9c11",
+     "height": 1710,
+     "sha256": "6ba8330ae57a67da02f33a04ca4aac431dd410938f92e5032e4ea2d44ef24f2e",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 242.0,
-      "y": -0.32
+      "y": 7.68
      },
      "z": "front",
      "explodeIndex": 5,
@@ -618,8 +618,8 @@
      "layerName": "see-through, Swirl",
      "file": "see-through/swirl-lotion.png",
      "width": 483,
-     "height": 1789,
-     "sha256": "c546535df3f1e2d4d7482aa29bff0833857674ca49b6f96a3831e2fb0551bd21",
+     "height": 1783,
+     "sha256": "910917ba4a3708d723cab41ecbb9136338cd4d5715bc79bc6a7a2599ca2fdac9",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 241.0,
@@ -679,12 +679,12 @@
      "slot": "diptube",
      "layerName": "lotion pump body + dip tube, lifted out",
      "file": "shared/lotion-internals.png",
-     "width": 182,
+     "width": 170,
      "height": 1634,
-     "sha256": "91dc0b24a3f5abf7f3980195262aba9c3d233d06f301899db96aa7f8ee8b4b6f",
+     "sha256": "675be4723cd5b9f1de7516721880a824090178a4cd132035b5c84c9f3fee81a8",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 91.0,
+      "x": 85.0,
       "y": -52.32
      },
      "z": "front",
@@ -2061,9 +2061,9 @@
    "pixels": 162891
   },
   "clear-lotion": {
-   "maxErr": 18,
-   "meanErr": 0.0597,
-   "pixels": 269096
+   "maxErr": 17,
+   "meanErr": 0.056,
+   "pixels": 258455
   },
   "amber-roller-plastic": {
    "maxErr": 236,
@@ -2082,8 +2082,8 @@
   },
   "amber-lotion": {
    "maxErr": 16,
-   "meanErr": 0.0637,
-   "pixels": 266112
+   "meanErr": 0.0641,
+   "pixels": 256627
   },
   "cobalt-roller-plastic": {
    "maxErr": 236,
@@ -2102,8 +2102,8 @@
   },
   "cobalt-lotion": {
    "maxErr": 33,
-   "meanErr": 0.0763,
-   "pixels": 267905
+   "meanErr": 0.0749,
+   "pixels": 258047
   },
   "frosted-roller-plastic": {
    "maxErr": 240,
@@ -2121,9 +2121,9 @@
    "pixels": 245274
   },
   "frosted-lotion": {
-   "maxErr": 145,
-   "meanErr": 0.8162,
-   "pixels": 464464
+   "maxErr": 82,
+   "meanErr": 0.9546,
+   "pixels": 352247
   },
   "swirl-roller-plastic": {
    "maxErr": 241,
@@ -2141,9 +2141,9 @@
    "pixels": 289088
   },
   "swirl-lotion": {
-   "maxErr": 129,
-   "meanErr": 0.2951,
-   "pixels": 474512
+   "maxErr": 119,
+   "meanErr": 0.263,
+   "pixels": 441531
   }
  },
  "detachedOvercap": {
