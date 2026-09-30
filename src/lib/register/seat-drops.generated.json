@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-30T18:40:16.668Z",
+ "generatedAt": "2026-09-30T19:50:17.897Z",
  "rule": "scripts/register/seats/audit-seats.ts --write on prod: each closure lowered by the background showing under its edge (> 0.2 mm) so the edge rests on the shoulder, but never so far that its top comes within 0.5 mm of the glass rim (limitedByRim); Boston rounds (20-400) and the short ribbed caps left alone (Jordan 2026-09-30); cylinder-9ml-17-415 re-measured on dev 2026-09-30 (a Swirl closure takes its Clear twin's gap)",
  "entries": {
   "00554b66012bbb": {
@@ -92,6 +92,12 @@
    "closure": "CMP-SPR-MTGD-18-415-05",
    "skus": 1
   },
+  "02d72da21cbb6d": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
+   "closure": "CMP-SPR-SLV-17-415",
+   "skus": 1
+  },
   "02ec0dd604e96d": {
    "dropMm": 0.67,
    "plateKey": "elegant-15ml-13-415|Clear",
@@ -168,12 +174,6 @@
    "dropMm": 2.22,
    "plateKey": "diva-46ml-18-415|Frosted",
    "closure": "CMP-SPR-IVSL-18-415-02",
-   "skus": 1
-  },
-  "0605a02b02ac54": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Clear",
-   "closure": "CMP-SPR-CLR-17-415",
    "skus": 1
   },
   "064383e8121b1b": {
@@ -306,12 +306,6 @@
    "dropMm": 0.29,
    "plateKey": "elegant-100ml-18-415|Frosted",
    "closure": "CMP-SPR-IVGD-18-415-01",
-   "skus": 1
-  },
-  "0a7b172312fde4": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Frosted",
-   "closure": "CMP-SPR-CLR-17-415",
    "skus": 1
   },
   "0adc3ea317a604": {
@@ -500,6 +494,12 @@
    "closure": "CMP-LPM-SSLV-18-415",
    "skus": 1
   },
+  "12ed851a05eac3": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Clear",
+   "closure": "CMP-LPM-BLK-17-415",
+   "skus": 1
+  },
   "12ee83751ba7b6": {
    "dropMm": 2.23,
    "plateKey": "diva-30ml-18-415|Clear",
@@ -542,17 +542,17 @@
    "closure": "LIB-13-415-MtlRollon+CMP-ROC-SSLV-13415",
    "skus": 2
   },
-  "1579e6a808ce9f": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Amber",
-   "closure": "CMP-LPM-MSLV-17-415",
-   "skus": 1
-  },
   "15830b6607dad5": {
    "dropMm": 0.67,
    "plateKey": "elegant-15ml-13-415|Clear",
    "closure": "LIB-13-415-MtlRollon+CMP-ROC-BLK-13415-DOT",
    "skus": 2
+  },
+  "158b43c916a38c": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Amber",
+   "closure": "CMP-SPR-SSLV-17-415",
+   "skus": 1
   },
   "15d1891c1f1899": {
    "dropMm": 0.29,
@@ -564,12 +564,6 @@
    "dropMm": 0.79,
    "plateKey": "round-128ml-18-415|Frosted",
    "closure": "CMP-SPR-SHBK-18-415-06",
-   "skus": 1
-  },
-  "15fd847b1a8b76": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Amber",
-   "closure": "CMP-SPR-SSLV-17-415",
    "skus": 1
   },
   "160a7ae207eaeb": {
@@ -674,16 +668,16 @@
    "closure": "CMP-CAP-MSLV-18415-S",
    "skus": 1
   },
+  "19189c5d16a596": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Amber",
+   "closure": "CMP-SPR-CLR-17-415",
+   "skus": 1
+  },
   "193f8eb61d6e19": {
    "dropMm": 0.22,
    "plateKey": "round-128ml-18-415|Clear",
    "closure": "CMP-CAP-MSLV-18415-S",
-   "skus": 1
-  },
-  "195209571066d8": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
-   "closure": "CMP-SPR-CLR-17-415",
    "skus": 1
   },
   "19ac88c70c5a00": {
@@ -758,6 +752,12 @@
    "closure": "CMP-CAP-SSLV-18415-S",
    "skus": 1
   },
+  "1c0026a101c16a": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Frosted",
+   "closure": "CMP-SPR-RED-17-415",
+   "skus": 1
+  },
   "1c11b8f21d4f19": {
    "dropMm": 0.46,
    "plateKey": "empire-50ml-18-415|Clear",
@@ -768,12 +768,6 @@
    "dropMm": 2.39,
    "plateKey": "elegant-60ml-18-415|Frosted",
    "closure": "CMP-CAP-SSLV-18415-S",
-   "skus": 1
-  },
-  "1c6ec1d01a59ab": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Amber",
-   "closure": "CMP-LPM-SGLD-17-415",
    "skus": 1
   },
   "1c89a7e802c10b": {
@@ -1028,12 +1022,6 @@
    "closure": "LIB-18-415-ShnBlkCap",
    "skus": 1
   },
-  "2616c0db15b788": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Clear",
-   "closure": "CMP-LPM-SGLD-17-415",
-   "skus": 1
-  },
   "264173a5129f64": {
    "dropMm": 1.52,
    "plateKey": "sleek-5ml-13-415|Clear",
@@ -1058,6 +1046,12 @@
    "closure": "CMP-SPR-MTCP-18-415-03",
    "skus": 1
   },
+  "26e16c3613b135": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Frosted",
+   "closure": "CMP-LPM-MSLV-17-415",
+   "skus": 1
+  },
   "26edb394016421": {
    "dropMm": 2.58,
    "plateKey": "diva-46ml-18-415|Clear",
@@ -1075,6 +1069,12 @@
    "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
    "closure": "LIB-17-415-MtlRollon+CMP-ROC-MGLD-17415",
    "skus": 2
+  },
+  "27145ab0061a3d": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
+   "closure": "CMP-SPR-SSLV-17-415",
+   "skus": 1
   },
   "27709f7811f585": {
    "dropMm": 0.67,
@@ -1176,12 +1176,6 @@
    "dropMm": 0.39,
    "plateKey": "cylinder-100ml-18-415|Clear",
    "closure": "CMP-SPR-LVN-18-415-01",
-   "skus": 1
-  },
-  "2bbf6ade11c169": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Swirl",
-   "closure": "CMP-LPM-SGLD-17-415",
    "skus": 1
   },
   "2c98ebb6122b4d": {
@@ -1352,6 +1346,12 @@
    "closure": "LIB-13-415-MtlRollon+CMP-ROC-MGLD-13415",
    "skus": 2
   },
+  "32ea668d168d7e": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Amber",
+   "closure": "CMP-LPM-MSLV-17-415",
+   "skus": 1
+  },
   "33d06c5f178ba2": {
    "dropMm": 0.95,
    "plateKey": "elegant-15ml-13-415|Frosted",
@@ -1386,12 +1386,6 @@
    "dropMm": 2.51,
    "plateKey": "elegant-60ml-18-415|Frosted",
    "closure": "CMP-LPM-MSLV-18-415-01",
-   "skus": 1
-  },
-  "36147ae407716f": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Frosted",
-   "closure": "CMP-SPR-RED-17-415",
    "skus": 1
   },
   "364262460ca687": {
@@ -1490,6 +1484,12 @@
    "closure": "CMP-SPR-GLD-18415-TSL",
    "skus": 1
   },
+  "3ad903ab1271c0": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Amber",
+   "closure": "CMP-LPM-SGLD-17-415",
+   "skus": 1
+  },
   "3ae7d68700a59e": {
    "dropMm": 0.35,
    "plateKey": "sleek-50ml-18-415|Clear",
@@ -1556,24 +1556,6 @@
    "closure": "CMP-CAP-PNK-18-415",
    "skus": 1
   },
-  "3d04d26a134b9d": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Swirl",
-   "closure": "CMP-SPR-SLV-17-415",
-   "skus": 1
-  },
-  "3d12ece70051ac": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Frosted",
-   "closure": "CMP-SPR-SLV-17-415",
-   "skus": 1
-  },
-  "3d34d69112186c": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Swirl",
-   "closure": "CMP-SPR-SSLV-17-415",
-   "skus": 1
-  },
   "3d6f6df41f4547": {
    "dropMm": 0.95,
    "plateKey": "square-15ml-13-415|Clear",
@@ -1620,6 +1602,12 @@
    "dropMm": 2.39,
    "plateKey": "elegant-60ml-18-415|Frosted",
    "closure": "CMP-CAP-SGLD-18415-S",
+   "skus": 1
+  },
+  "401352d20a4e19": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Amber",
+   "closure": "CMP-SPR-RED-17-415",
    "skus": 1
   },
   "4016beb91cfce8": {
@@ -1820,12 +1808,6 @@
    "closure": "CMP-SPR-SHBK-18-415-06",
    "skus": 1
   },
-  "46eb6a4a17892b": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Clear",
-   "closure": "CMP-SPR-BLK-17-415-01",
-   "skus": 1
-  },
   "470d96570f3a0e": {
    "dropMm": 1.62,
    "plateKey": "sleek-5ml-13-415|Clear",
@@ -1862,6 +1844,12 @@
    "closure": "CMP-SPR-MTSL-18-415-06",
    "skus": 1
   },
+  "4857b55003e509": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Frosted",
+   "closure": "CMP-SPR-BLK-17-415-01",
+   "skus": 1
+  },
   "4869613b19568e": {
    "dropMm": 0.72,
    "plateKey": "elegant-100ml-18-415|Frosted",
@@ -1879,12 +1867,6 @@
    "plateKey": "tulip-5ml-13-415|Amber",
    "closure": "LIB-13-415-MtlRollon+CMP-ROC-MGLD-13415",
    "skus": 2
-  },
-  "49018d831e18d8": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Frosted",
-   "closure": "CMP-LPM-SGLD-17-415",
-   "skus": 1
   },
   "4958effe0a448d": {
    "dropMm": 1.62,
@@ -1944,18 +1926,6 @@
    "dropMm": 0.45,
    "plateKey": "slim-30ml-18-415|Clear",
    "closure": "CMP-LPM-CPR-18-415",
-   "skus": 1
-  },
-  "4b3e4067112160": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Frosted",
-   "closure": "CMP-LPM-MSLV-17-415",
-   "skus": 1
-  },
-  "4b8182910a415c": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Frosted",
-   "closure": "CMP-SPR-SGLD-17-415",
    "skus": 1
   },
   "4ba05c9a0518ef": {
@@ -2034,6 +2004,12 @@
    "dropMm": 1.25,
    "plateKey": "elegant-60ml-18-415|Frosted",
    "closure": "CMP-SPR-RED-18-415-01",
+   "skus": 1
+  },
+  "4fb514f417af5f": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
+   "closure": "CMP-LPM-SGLD-17-415",
    "skus": 1
   },
   "4fef16af06adfa": {
@@ -2258,6 +2234,12 @@
    "closure": "CMP-LPM-SGLD-18-415",
    "skus": 1
   },
+  "58699d97145320": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Swirl",
+   "closure": "CMP-SPR-CLR-17-415",
+   "skus": 1
+  },
   "586da67f198b52": {
    "dropMm": 0.9,
    "plateKey": "slim-30ml-18-415|Clear",
@@ -2324,6 +2306,12 @@
    "closure": "CMP-LPM-MSLV-18-415-01",
    "skus": 1
   },
+  "5b70641109dcd8": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Amber",
+   "closure": "CMP-SPR-SGLD-17-415",
+   "skus": 1
+  },
   "5be31b9412f3ef": {
    "dropMm": 0.94,
    "plateKey": "circle-50ml-18-415|Frosted",
@@ -2378,12 +2366,6 @@
    "closure": "CMP-CAP-MSLV-18415-T",
    "skus": 1
   },
-  "5da5d02f0d08f0": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Clear",
-   "closure": "CMP-LPM-MSLV-17-415",
-   "skus": 1
-  },
   "5dbfd5e00d3dd5": {
    "dropMm": 1.64,
    "plateKey": "diva-46ml-18-415|Clear",
@@ -2436,12 +2418,6 @@
    "dropMm": 0.59,
    "plateKey": "slim-100ml-18-415|Clear",
    "closure": "CMP-CAP-PNK-18415-LTR",
-   "skus": 1
-  },
-  "5f2f208001ab3b": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
-   "closure": "CMP-SPR-RED-17-415",
    "skus": 1
   },
   "5f2fd4a319aa8e": {
@@ -2527,12 +2503,6 @@
    "plateKey": "elegant-15ml-13-415|Frosted",
    "closure": "LIB-13-415-MtlRollon+CMP-ROC-SLV-13415-DOT",
    "skus": 2
-  },
-  "62f8badb138752": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Amber",
-   "closure": "CMP-LPM-BLK-17-415",
-   "skus": 1
   },
   "643f356a1d9d67": {
    "dropMm": 0.35,
@@ -2690,6 +2660,12 @@
    "closure": "CMP-CAP-SGLD-13-415-01",
    "skus": 1
   },
+  "689c5d26184ea7": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
+   "closure": "CMP-LPM-BLK-17-415",
+   "skus": 1
+  },
   "68c346b402248b": {
    "dropMm": 0.31,
    "plateKey": "slim-50ml-18-415|Clear",
@@ -2756,12 +2732,6 @@
    "closure": "CMP-SPR-IVGD-18-415-01",
    "skus": 1
   },
-  "6b5d93b415287f": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Amber",
-   "closure": "CMP-SPR-SLV-17-415",
-   "skus": 1
-  },
   "6b7e74680eb28d": {
    "dropMm": 0.77,
    "plateKey": "slim-50ml-18-415|Clear",
@@ -2822,6 +2792,12 @@
    "closure": "LIB-17-415-MtlRollon+CMP-ROC-MGLD-17415",
    "skus": 2
   },
+  "6d788808181899": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Clear",
+   "closure": "CMP-SPR-SGLD-17-415",
+   "skus": 1
+  },
   "6d7d17480e19a5": {
    "dropMm": 0.46,
    "plateKey": "slim-50ml-18-415|Clear",
@@ -2864,6 +2840,12 @@
    "closure": "CMP-LPM-MGLD-18-415",
    "skus": 1
   },
+  "6e5191d90a1e08": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Swirl",
+   "closure": "CMP-LPM-BLK-17-415",
+   "skus": 1
+  },
   "6e5ba795057134": {
    "dropMm": 1.28,
    "plateKey": "circle-100ml-18-415|Clear",
@@ -2888,12 +2870,6 @@
    "closure": "CMP-SPR-SHBK-18-415-06",
    "skus": 1
   },
-  "6f81138a037789": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Swirl",
-   "closure": "CMP-LPM-MSLV-17-415",
-   "skus": 1
-  },
   "6fbdc408057669": {
    "dropMm": 2.39,
    "plateKey": "elegant-60ml-18-415|Frosted",
@@ -2910,12 +2886,6 @@
    "dropMm": 2.22,
    "plateKey": "diva-46ml-18-415|Clear",
    "closure": "CMP-SPR-WHT-18-415-01",
-   "skus": 1
-  },
-  "7059f29b07ab24": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
-   "closure": "CMP-LPM-MSLV-17-415",
    "skus": 1
   },
   "706b629214b2df": {
@@ -2952,6 +2922,12 @@
    "dropMm": 1.87,
    "plateKey": "diva-46ml-18-415|Frosted",
    "closure": "CMP-SPR-RED-18-415-01",
+   "skus": 1
+  },
+  "71773066057f75": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Clear",
+   "closure": "CMP-SPR-CLR-17-415",
    "skus": 1
   },
   "718802af1500bc": {
@@ -3098,6 +3074,12 @@
    "closure": "CMP-SPR-MSLV-18-415-02",
    "skus": 1
   },
+  "769b04f406f03d": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
+   "closure": "CMP-SPR-SGLD-17-415",
+   "skus": 1
+  },
   "76a9e755091a7e": {
    "dropMm": 1.29,
    "plateKey": "diva-46ml-18-415|Clear",
@@ -3126,6 +3108,12 @@
    "dropMm": 0.43,
    "plateKey": "diva-30ml-18-415|Clear",
    "closure": "CMP-SPR-IVSL-18-415-01",
+   "skus": 1
+  },
+  "78839abb06878e": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Swirl",
+   "closure": "CMP-SPR-SSLV-17-415",
    "skus": 1
   },
   "7920c8da11d42f": {
@@ -3296,6 +3284,12 @@
    "closure": "CMP-CAP-BRN-18415-LTR",
    "skus": 1
   },
+  "7e8f18b71839ce": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Swirl",
+   "closure": "CMP-SPR-SGLD-17-415",
+   "skus": 1
+  },
   "7eb87e0e0b92cb": {
    "dropMm": 0.67,
    "plateKey": "elegant-15ml-13-415|Clear",
@@ -3380,12 +3374,6 @@
    "closure": "LIB-17-415-MtlRollon+CMP-ROC-MSLV-17415",
    "skus": 2
   },
-  "81b9cd461dce03": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Clear",
-   "closure": "CMP-SPR-SSLV-17-415",
-   "skus": 1
-  },
   "81fea0451d47d4": {
    "dropMm": 0.57,
    "plateKey": "square-15ml-13-415|Clear",
@@ -3458,12 +3446,6 @@
    "closure": "CMP-LPM-MSLV-18-415-01",
    "skus": 1
   },
-  "855e76ac12607b": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Amber",
-   "closure": "CMP-SPR-CLR-17-415",
-   "skus": 1
-  },
   "85da0387088690": {
    "dropMm": 0.88,
    "plateKey": "diva-100ml-18-415|Clear",
@@ -3498,6 +3480,12 @@
    "dropMm": 0.25,
    "plateKey": "sleek-30ml-18-415|Clear",
    "closure": "CMP-SPR-SHBK-18-415-06",
+   "skus": 1
+  },
+  "872426af0a920e": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Swirl",
+   "closure": "CMP-SPR-BLK-17-415-01",
    "skus": 1
   },
   "87282cd01cbe8b": {
@@ -3668,28 +3656,16 @@
    "closure": "CMP-CAP-MSLV-18415-T",
    "skus": 1
   },
-  "8d260cc7038dec": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Amber",
-   "closure": "CMP-SPR-RED-17-415",
-   "skus": 1
-  },
   "8d299d261ab573": {
    "dropMm": 0.56,
    "plateKey": "round-128ml-18-415|Clear",
    "closure": "CMP-SPR-MTSL-18-415-06",
    "skus": 1
   },
-  "8d577942071543": {
+  "8d490c2100fa78": {
    "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Clear",
-   "closure": "CMP-LPM-BLK-17-415",
-   "skus": 1
-  },
-  "8d85253f03fe64": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
-   "closure": "CMP-LPM-SGLD-17-415",
+   "plateKey": "cylinder-9ml-17-415|Amber",
+   "closure": "CMP-SPR-BLK-17-415-01",
    "skus": 1
   },
   "8dce053d0a5ce2": {
@@ -3746,6 +3722,12 @@
    "closure": "CMP-CAP-WHT-18415-T",
    "skus": 1
   },
+  "8f9b43f407bc61": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Frosted",
+   "closure": "CMP-SPR-SSLV-17-415",
+   "skus": 1
+  },
   "8fdb1f410d4104": {
    "dropMm": 0.76,
    "plateKey": "tulip-5ml-13-415|Amber",
@@ -3786,12 +3768,6 @@
    "dropMm": 0.22,
    "plateKey": "slim-30ml-18-415|Clear",
    "closure": "CMP-CAP-WHT-18415-T",
-   "skus": 1
-  },
-  "912e425d08b8d8": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
-   "closure": "CMP-SPR-SGLD-17-415",
    "skus": 1
   },
   "9171e83d195d9e": {
@@ -3876,12 +3852,6 @@
    "dropMm": 0.57,
    "plateKey": "square-15ml-13-415|Clear",
    "closure": "CMP-CAP-SLV-13-415-03",
-   "skus": 1
-  },
-  "93b1b0c2174c11": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Swirl",
-   "closure": "CMP-SPR-CLR-17-415",
    "skus": 1
   },
   "9430db1f0e4366": {
@@ -3998,10 +3968,22 @@
    "closure": "CMP-SPR-MTGD-18-415-05",
    "skus": 1
   },
+  "9895a1d61d7959": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Clear",
+   "closure": "CMP-SPR-SLV-17-415",
+   "skus": 1
+  },
   "98c5606a017f6d": {
    "dropMm": 1.14,
    "plateKey": "elegant-60ml-18-415|Clear",
    "closure": "CMP-CAP-BRN-18415-LTR",
+   "skus": 1
+  },
+  "98eb4ba401fadd": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
+   "closure": "CMP-SPR-BLK-17-415-01",
    "skus": 1
   },
   "9905e1e71f2218": {
@@ -4088,9 +4070,9 @@
    "closure": "LIB-18-415-ShnBlkCap",
    "skus": 1
   },
-  "9bda291d13e1e4": {
+  "9b5d72620a7eb3": {
    "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Swirl",
+   "plateKey": "cylinder-9ml-17-415|Frosted",
    "closure": "CMP-LPM-BLK-17-415",
    "skus": 1
   },
@@ -4134,6 +4116,12 @@
    "dropMm": 0.39,
    "plateKey": "slim-100ml-18-415|Clear",
    "closure": "CMP-LPM-MGLD-18-415",
+   "skus": 1
+  },
+  "9e5cb18a18e5b1": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
+   "closure": "CMP-SPR-CLR-17-415",
    "skus": 1
   },
   "9efc02c71a2872": {
@@ -4400,12 +4388,6 @@
    "closure": "CMP-SPR-WHT-18-415-02",
    "skus": 1
   },
-  "a79fea52006dbb": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Frosted",
-   "closure": "CMP-SPR-BLK-17-415-01",
-   "skus": 1
-  },
   "a8a9e6be0f5837": {
    "dropMm": 0.38,
    "plateKey": "sleek-100ml-18-415|Clear",
@@ -4434,6 +4416,12 @@
    "dropMm": 2.44,
    "plateKey": "elegant-100ml-18-415|Frosted",
    "closure": "CMP-SPR-SHSL-18-415-06",
+   "skus": 1
+  },
+  "aa8d9c9e138149": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Frosted",
+   "closure": "CMP-SPR-SLV-17-415",
    "skus": 1
   },
   "aac98310180061": {
@@ -4484,10 +4472,22 @@
    "closure": "LIB-17-415-MtlRollon+CMP-ROC-SLV-17415-DOT",
    "skus": 2
   },
+  "ab4155ea1cb909": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
+   "closure": "CMP-LPM-MSLV-17-415",
+   "skus": 1
+  },
   "ab52bd9914eb60": {
    "dropMm": 1.99,
    "plateKey": "diva-46ml-18-415|Clear",
    "closure": "CMP-CAP-PNK-18415-LTR",
+   "skus": 1
+  },
+  "ab5ba8fc164f11": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Clear",
+   "closure": "CMP-SPR-SSLV-17-415",
    "skus": 1
   },
   "ab79533b042d22": {
@@ -4722,6 +4722,12 @@
    "dropMm": 1.33,
    "plateKey": "grace-55ml-18-415|Clear",
    "closure": "CMP-CAP-BLK-18415-LTR",
+   "skus": 1
+  },
+  "b4a9f0d8158633": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Frosted",
+   "closure": "CMP-LPM-SGLD-17-415",
    "skus": 1
   },
   "b4b29a4618898b": {
@@ -4988,6 +4994,12 @@
    "closure": "CMP-LPM-SGLD-18-415",
    "skus": 1
   },
+  "bef2ab750a498e": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
+   "closure": "CMP-SPR-RED-17-415",
+   "skus": 1
+  },
   "bef952b80b627f": {
    "dropMm": 0.67,
    "plateKey": "elegant-15ml-13-415|Frosted",
@@ -5016,6 +5028,12 @@
    "dropMm": 0.57,
    "plateKey": "sleek-100ml-18-415|Clear",
    "closure": "CMP-SPR-SHGD-18-415-05",
+   "skus": 1
+  },
+  "bfef9fac0a4ae3": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Swirl",
+   "closure": "CMP-SPR-RED-17-415",
    "skus": 1
   },
   "c0b684d9054ad4": {
@@ -5052,12 +5070,6 @@
    "dropMm": 1.65,
    "plateKey": "circle-50ml-18-415|Clear",
    "closure": "CMP-LPM-SGLD-18-415",
-   "skus": 1
-  },
-  "c1cc133a0441d3": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Frosted",
-   "closure": "CMP-LPM-BLK-17-415",
    "skus": 1
   },
   "c2f993550c6198": {
@@ -5114,12 +5126,6 @@
    "closure": "CMP-SPR-BLK-18-415-02",
    "skus": 1
   },
-  "c4f76eb60a4fdf": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
-   "closure": "CMP-SPR-BLK-17-415-01",
-   "skus": 1
-  },
   "c594e14b156d28": {
    "dropMm": 0.49,
    "plateKey": "round-78ml-18-415|Frosted",
@@ -5142,12 +5148,6 @@
    "dropMm": 0.43,
    "plateKey": "circle-100ml-18-415|Frosted",
    "closure": "CMP-SPR-MSLV-18-415-02",
-   "skus": 1
-  },
-  "c66b9c191e682c": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Clear",
-   "closure": "CMP-SPR-SGLD-17-415",
    "skus": 1
   },
   "c675fdfc0b1795": {
@@ -5252,6 +5252,12 @@
    "closure": "CMP-SPR-IVGD-18-415-01",
    "skus": 1
   },
+  "cace2a89158b3e": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Swirl",
+   "closure": "CMP-LPM-SGLD-17-415",
+   "skus": 1
+  },
   "cb0547dd1bd900": {
    "dropMm": 0.57,
    "plateKey": "sleek-100ml-18-415|Clear",
@@ -5268,12 +5274,6 @@
    "dropMm": 0.29,
    "plateKey": "diva-100ml-18-415|Clear",
    "closure": "CMP-CAP-SGLD-18415-S",
-   "skus": 1
-  },
-  "cbb795ba116e0f": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
-   "closure": "CMP-SPR-SSLV-17-415",
    "skus": 1
   },
   "cc26db8912cb0a": {
@@ -5420,12 +5420,6 @@
    "closure": "CMP-CAP-BRN-18415-LTR",
    "skus": 1
   },
-  "d134f9d30f071a": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Amber",
-   "closure": "CMP-SPR-BLK-17-415-01",
-   "skus": 1
-  },
   "d14fcce90cd6f8": {
    "dropMm": 0.94,
    "plateKey": "circle-50ml-18-415|Frosted",
@@ -5564,6 +5558,12 @@
    "closure": "CMP-SPR-IVGD-18-415-01",
    "skus": 1
   },
+  "d4a4cd2b0f52ca": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Amber",
+   "closure": "CMP-LPM-BLK-17-415",
+   "skus": 1
+  },
   "d4c62f860499c3": {
    "dropMm": 0.69,
    "plateKey": "empire-50ml-18-415|Clear",
@@ -5690,12 +5690,6 @@
    "closure": "CMP-CAP-IVY-18415-LTR",
    "skus": 1
   },
-  "d955e4e40be889": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Amber",
-   "closure": "CMP-SPR-SGLD-17-415",
-   "skus": 1
-  },
   "d97001721fda51": {
    "dropMm": 1.18,
    "plateKey": "circle-50ml-18-415|Clear",
@@ -5804,16 +5798,16 @@
    "closure": "CMP-CAP-SSLV-18415-S",
    "skus": 1
   },
-  "ddbae42f0bcb1c": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Clear",
-   "closure": "CMP-SPR-SLV-17-415",
-   "skus": 1
-  },
   "ddbd310307d378": {
    "dropMm": 1.88,
    "plateKey": "circle-50ml-18-415|Clear",
    "closure": "CMP-LPM-CPR-18-415",
+   "skus": 1
+  },
+  "ddd9f890040a03": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Clear",
+   "closure": "CMP-LPM-SGLD-17-415",
    "skus": 1
   },
   "ddde9c3b147e62": {
@@ -5882,12 +5876,6 @@
    "closure": "CMP-CAP-IVY-18415-LTR",
    "skus": 1
   },
-  "e0a4b6fe1f44b3": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Frosted",
-   "closure": "CMP-SPR-SSLV-17-415",
-   "skus": 1
-  },
   "e0a8d3591569da": {
    "dropMm": 0.58,
    "plateKey": "diva-100ml-18-415|Clear",
@@ -5898,12 +5886,6 @@
    "dropMm": 2.77,
    "plateKey": "diva-100ml-18-415|Clear",
    "closure": "CMP-CAP-PNK-18415-LTR",
-   "skus": 1
-  },
-  "e13937f3090138": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
-   "closure": "CMP-SPR-SLV-17-415",
    "skus": 1
   },
   "e15fafe202ce6b": {
@@ -5928,6 +5910,12 @@
    "dropMm": 0.57,
    "plateKey": "square-15ml-13-415|Clear",
    "closure": "CMP-CAP-SLV-13-415-01",
+   "skus": 1
+  },
+  "e253a0811ed406": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Amber",
+   "closure": "CMP-SPR-SLV-17-415",
    "skus": 1
   },
   "e2b021c80bf0d7": {
@@ -5978,6 +5966,12 @@
    "closure": "CMP-CAP-MSLV-18415-T",
    "skus": 1
   },
+  "e460aedb0d4c0c": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Swirl",
+   "closure": "CMP-LPM-MSLV-17-415",
+   "skus": 1
+  },
   "e4817f0b0c93f4": {
    "dropMm": 1.87,
    "plateKey": "diva-46ml-18-415|Clear",
@@ -5988,12 +5982,6 @@
    "dropMm": 0.72,
    "plateKey": "elegant-100ml-18-415|Clear",
    "closure": "CMP-CAP-BLK-18415-LTR",
-   "skus": 1
-  },
-  "e4d0578516895c": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Swirl",
-   "closure": "CMP-SPR-BLK-17-415-01",
    "skus": 1
   },
   "e4f371990af00a": {
@@ -6048,6 +6036,12 @@
    "dropMm": 0.88,
    "plateKey": "sleek-50ml-18-415|Clear",
    "closure": "CMP-CAP-BLK-18415-LTR",
+   "skus": 1
+  },
+  "e603670809e699": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Clear",
+   "closure": "CMP-SPR-BLK-17-415-01",
    "skus": 1
   },
   "e61d4a88169865": {
@@ -6108,6 +6102,12 @@
    "dropMm": 0.68,
    "plateKey": "elegant-60ml-18-415|Clear",
    "closure": "CMP-CAP-SGLD-18415-S",
+   "skus": 1
+  },
+  "e8915c3f07c53c": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Swirl",
+   "closure": "CMP-SPR-SLV-17-415",
    "skus": 1
   },
   "e8a2a1d9043ae8": {
@@ -6194,12 +6194,6 @@
    "closure": "LIB-17-415-MtlRollon+CMP-ROC-BLK-17415-DOT",
    "skus": 2
   },
-  "ecf386ca1817e7": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Swirl",
-   "closure": "CMP-SPR-SGLD-17-415",
-   "skus": 1
-  },
   "ecfdbcc41d4ee3": {
    "dropMm": 0.25,
    "plateKey": "sleek-30ml-18-415|Clear",
@@ -6210,6 +6204,12 @@
    "dropMm": 0.44,
    "plateKey": "diva-100ml-18-415|Clear",
    "closure": "CMP-SPR-GLD-18-415-02",
+   "skus": 1
+  },
+  "ed3cd240151c69": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Frosted",
+   "closure": "CMP-SPR-SGLD-17-415",
    "skus": 1
   },
   "ed705086153f95": {
@@ -6228,12 +6228,6 @@
    "dropMm": 1.33,
    "plateKey": "sleek-8ml-13-415|Clear",
    "closure": "CMP-CAP-SLV-13-415-01",
-   "skus": 1
-  },
-  "edd682f916b7a6": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Swirl",
-   "closure": "CMP-SPR-RED-17-415",
    "skus": 1
   },
   "ede5f9f91c1b0a": {
@@ -6350,6 +6344,12 @@
    "closure": "CMP-CAP-BLK-18415-LTR",
    "skus": 1
   },
+  "f292b4290c5dfa": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Clear",
+   "closure": "CMP-SPR-RED-17-415",
+   "skus": 1
+  },
   "f2a4a47b11679e": {
    "dropMm": 0.67,
    "plateKey": "tulip-5ml-13-415|Amber",
@@ -6452,18 +6452,6 @@
    "closure": "CMP-SPR-IVSL-18-415-02",
    "skus": 1
   },
-  "f72303fe0e55e7": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
-   "closure": "CMP-LPM-BLK-17-415",
-   "skus": 1
-  },
-  "f838fc9c1a055f": {
-   "dropMm": 1.71,
-   "plateKey": "cylinder-9ml-17-415|Clear",
-   "closure": "CMP-SPR-RED-17-415",
-   "skus": 1
-  },
   "f876d8eb1df370": {
    "dropMm": 2.12,
    "plateKey": "circle-50ml-18-415|Clear",
@@ -6560,6 +6548,12 @@
    "closure": "CMP-SPR-GLD-18-415-02",
    "skus": 1
   },
+  "fc6848ee13ab65": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Clear",
+   "closure": "CMP-LPM-MSLV-17-415",
+   "skus": 1
+  },
   "fc9acc870fe3de": {
    "dropMm": 1.52,
    "plateKey": "sleek-5ml-13-415|Clear",
@@ -6618,6 +6612,12 @@
    "dropMm": 0.39,
    "plateKey": "cylinder-100ml-18-415|Clear",
    "closure": "CMP-CAP-MSLV-18415-S",
+   "skus": 1
+  },
+  "ff0e2c4e1ffba5": {
+   "dropMm": 1.71,
+   "plateKey": "cylinder-9ml-17-415|Frosted",
+   "closure": "CMP-SPR-CLR-17-415",
    "skus": 1
   },
   "ff21d1af1c15d2": {

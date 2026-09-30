@@ -332,13 +332,13 @@
      "slot": "pump",
      "layerName": "lotion head (actuator + sleeve)",
      "file": "shared/lotion-head.png",
-     "width": 398,
-     "height": 506,
-     "sha256": "a78c69dd9c7758c71afea755bef94c4e616ffb8f62540fcb35b79432673da966",
+     "width": 380,
+     "height": 494,
+     "sha256": "2b22b52abaa1296f29f6781d9186be75277b36ed6e15a71045bf08d666a47e64",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 199.0,
-      "y": 541.68
+      "x": 190.0,
+      "y": 530.68
      },
      "z": "front",
      "explodeIndex": 3
@@ -348,23 +348,23 @@
      "layerName": "collar black",
      "file": "components/CMP-LPM-BLK-17-415/collar.png",
      "width": 502,
-     "height": 389,
-     "sha256": "c89d849ca17b2cd83b9ecb853b76734df679d5824178696466de7717cddd18fe",
+     "height": 390,
+     "sha256": "34429e321f917537ac59089ebff88dcddf79e82f0cb3b306b3bca78f83d1a7a3",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 251.0,
-      "y": 55.68
+      "y": 56.68
      },
      "z": "front",
      "explodeIndex": 1
     },
     {
      "slot": "overcap",
-     "layerName": "translucent overcap",
-     "file": "shared/overcap.png",
+     "layerName": "clear overcap, seated over the lotion head",
+     "file": "shared/overcap-seated-lotion.png",
      "width": 427,
      "height": 569,
-     "sha256": "88609a047352705642caddcdc343477c16c2a94c1c0743f8eb7df2d03a78a771",
+     "sha256": "b5f3c4d65b0deaba3cb493567995c68c4a8541ed42f14668faa3cbd1d1454ef6",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 213.0,
@@ -483,13 +483,13 @@
      "slot": "pump",
      "layerName": "lotion head (actuator + sleeve)",
      "file": "shared/lotion-head.png",
-     "width": 398,
-     "height": 506,
-     "sha256": "a78c69dd9c7758c71afea755bef94c4e616ffb8f62540fcb35b79432673da966",
+     "width": 380,
+     "height": 494,
+     "sha256": "2b22b52abaa1296f29f6781d9186be75277b36ed6e15a71045bf08d666a47e64",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 199.0,
-      "y": 541.68
+      "x": 190.0,
+      "y": 530.68
      },
      "z": "front",
      "explodeIndex": 3
@@ -499,23 +499,23 @@
      "layerName": "collar matte-silver",
      "file": "components/CMP-LPM-MSLV-17-415/collar.png",
      "width": 502,
-     "height": 389,
-     "sha256": "39aab71a73762be999cdbbbb3283714040a30d47daa71d3c116f4e9a76d32228",
+     "height": 390,
+     "sha256": "1ca0add7d54cdaedf31eff8e40fb193b72057f1902a2c127cae342f53e39bfc4",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 251.0,
-      "y": 55.68
+      "y": 56.68
      },
      "z": "front",
      "explodeIndex": 1
     },
     {
      "slot": "overcap",
-     "layerName": "translucent overcap",
-     "file": "shared/overcap.png",
+     "layerName": "clear overcap, seated over the lotion head",
+     "file": "shared/overcap-seated-lotion.png",
      "width": 427,
      "height": 569,
-     "sha256": "88609a047352705642caddcdc343477c16c2a94c1c0743f8eb7df2d03a78a771",
+     "sha256": "b5f3c4d65b0deaba3cb493567995c68c4a8541ed42f14668faa3cbd1d1454ef6",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 213.0,
@@ -634,13 +634,13 @@
      "slot": "pump",
      "layerName": "lotion head (actuator + sleeve)",
      "file": "shared/lotion-head.png",
-     "width": 398,
-     "height": 506,
-     "sha256": "a78c69dd9c7758c71afea755bef94c4e616ffb8f62540fcb35b79432673da966",
+     "width": 380,
+     "height": 494,
+     "sha256": "2b22b52abaa1296f29f6781d9186be75277b36ed6e15a71045bf08d666a47e64",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 199.0,
-      "y": 541.68
+      "x": 190.0,
+      "y": 530.68
      },
      "z": "front",
      "explodeIndex": 3
@@ -650,23 +650,23 @@
      "layerName": "collar gold",
      "file": "components/CMP-LPM-SGLD-17-415/collar.png",
      "width": 502,
-     "height": 389,
-     "sha256": "ac75fcbc8ddd4a8819e82b25668fb867a09dcc3ed9206965953efbb2d750d17d",
+     "height": 390,
+     "sha256": "7dc5ccb725f5868f09026383c5079387c066dbcc05d4fdae87723222fc4fcf1d",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 251.0,
-      "y": 55.68
+      "y": 56.68
      },
      "z": "front",
      "explodeIndex": 1
     },
     {
      "slot": "overcap",
-     "layerName": "translucent overcap",
-     "file": "shared/overcap.png",
+     "layerName": "clear overcap, seated over the lotion head",
+     "file": "shared/overcap-seated-lotion.png",
      "width": 427,
      "height": 569,
-     "sha256": "88609a047352705642caddcdc343477c16c2a94c1c0743f8eb7df2d03a78a771",
+     "sha256": "b5f3c4d65b0deaba3cb493567995c68c4a8541ed42f14668faa3cbd1d1454ef6",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 213.0,
@@ -985,13 +985,13 @@
      "slot": "sprayer",
      "layerName": "mist head (actuator + sleeve)",
      "file": "shared/mist-head.png",
-     "width": 398,
-     "height": 495,
-     "sha256": "d6520dc2785a6d8c70a7ffa596ee70160a048bd243342a2d8e6025a9701fa550",
+     "width": 390,
+     "height": 477,
+     "sha256": "b8b8824a9c0e1597a56bdb2712a7e82190b8b0dd0d6d45da467e51873a583dd3",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 199.0,
-      "y": 530.68
+      "x": 195.0,
+      "y": 513.68
      },
      "z": "front",
      "explodeIndex": 3
@@ -1002,7 +1002,7 @@
      "file": "components/CMP-SPR-BLK-17-415-01/collar.png",
      "width": 502,
      "height": 389,
-     "sha256": "5502ae25508f0e2efcf003254a9e55b7e99b5acabd6b722f51837ef2487748c9",
+     "sha256": "8c6f6359674ce298481c1d74905220267c48a2af90b4501ce59e8cf0917f2ca4",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 251.0,
@@ -1013,11 +1013,11 @@
     },
     {
      "slot": "overcap",
-     "layerName": "translucent overcap",
-     "file": "shared/overcap.png",
+     "layerName": "clear overcap, seated over the mist head",
+     "file": "shared/overcap-seated-mist.png",
      "width": 427,
      "height": 569,
-     "sha256": "88609a047352705642caddcdc343477c16c2a94c1c0743f8eb7df2d03a78a771",
+     "sha256": "6f140877bdf765f9da7c44b5425ed07446cdfe2af7f1cbe06589ec062980384d",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 213.0,
@@ -1136,13 +1136,13 @@
      "slot": "sprayer",
      "layerName": "mist head (actuator + sleeve)",
      "file": "shared/mist-head.png",
-     "width": 398,
-     "height": 495,
-     "sha256": "d6520dc2785a6d8c70a7ffa596ee70160a048bd243342a2d8e6025a9701fa550",
+     "width": 390,
+     "height": 477,
+     "sha256": "b8b8824a9c0e1597a56bdb2712a7e82190b8b0dd0d6d45da467e51873a583dd3",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 199.0,
-      "y": 530.68
+      "x": 195.0,
+      "y": 513.68
      },
      "z": "front",
      "explodeIndex": 3
@@ -1153,7 +1153,7 @@
      "file": "components/CMP-SPR-CLR-17-415/collar.png",
      "width": 502,
      "height": 389,
-     "sha256": "534a1fd1bcd210fd1bac5ad6a5f8726df6619ba1919f9fa4ec7d0b9abd0fee3a",
+     "sha256": "c7ed6e77e66ce291908df11dc0a5338606dee24711e751998c1d6fdb181d928e",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 251.0,
@@ -1164,11 +1164,11 @@
     },
     {
      "slot": "overcap",
-     "layerName": "translucent overcap",
-     "file": "shared/overcap.png",
+     "layerName": "clear overcap, seated over the mist head",
+     "file": "shared/overcap-seated-mist.png",
      "width": 427,
      "height": 569,
-     "sha256": "88609a047352705642caddcdc343477c16c2a94c1c0743f8eb7df2d03a78a771",
+     "sha256": "6f140877bdf765f9da7c44b5425ed07446cdfe2af7f1cbe06589ec062980384d",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 213.0,
@@ -1287,13 +1287,13 @@
      "slot": "sprayer",
      "layerName": "mist head (actuator + sleeve)",
      "file": "shared/mist-head.png",
-     "width": 398,
-     "height": 495,
-     "sha256": "d6520dc2785a6d8c70a7ffa596ee70160a048bd243342a2d8e6025a9701fa550",
+     "width": 390,
+     "height": 477,
+     "sha256": "b8b8824a9c0e1597a56bdb2712a7e82190b8b0dd0d6d45da467e51873a583dd3",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 199.0,
-      "y": 530.68
+      "x": 195.0,
+      "y": 513.68
      },
      "z": "front",
      "explodeIndex": 3
@@ -1304,7 +1304,7 @@
      "file": "components/CMP-SPR-RED-17-415/collar.png",
      "width": 502,
      "height": 389,
-     "sha256": "93b0d437dcdb49aefde8a0b20f32e192fcaa88a48c46d67ceb5e629b502cdcb6",
+     "sha256": "b96661c6184a0b338ffdabf21fcceb3ff802059c8f7f571639616bf42a2e98c8",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 251.0,
@@ -1315,11 +1315,11 @@
     },
     {
      "slot": "overcap",
-     "layerName": "translucent overcap",
-     "file": "shared/overcap.png",
+     "layerName": "clear overcap, seated over the mist head",
+     "file": "shared/overcap-seated-mist.png",
      "width": 427,
      "height": 569,
-     "sha256": "88609a047352705642caddcdc343477c16c2a94c1c0743f8eb7df2d03a78a771",
+     "sha256": "6f140877bdf765f9da7c44b5425ed07446cdfe2af7f1cbe06589ec062980384d",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 213.0,
@@ -1438,13 +1438,13 @@
      "slot": "sprayer",
      "layerName": "mist head (actuator + sleeve)",
      "file": "shared/mist-head.png",
-     "width": 398,
-     "height": 495,
-     "sha256": "d6520dc2785a6d8c70a7ffa596ee70160a048bd243342a2d8e6025a9701fa550",
+     "width": 390,
+     "height": 477,
+     "sha256": "b8b8824a9c0e1597a56bdb2712a7e82190b8b0dd0d6d45da467e51873a583dd3",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 199.0,
-      "y": 530.68
+      "x": 195.0,
+      "y": 513.68
      },
      "z": "front",
      "explodeIndex": 3
@@ -1455,7 +1455,7 @@
      "file": "components/CMP-SPR-SGLD-17-415/collar.png",
      "width": 502,
      "height": 389,
-     "sha256": "60c68ad248e615a13628ead69c54fa187481ddc4631ed880190e3922683b62e2",
+     "sha256": "0f9cfe543ca209a790a2e7f44bf13310a512c76d5bdbc8b7c277a292575b8498",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 251.0,
@@ -1466,11 +1466,11 @@
     },
     {
      "slot": "overcap",
-     "layerName": "translucent overcap",
-     "file": "shared/overcap.png",
+     "layerName": "clear overcap, seated over the mist head",
+     "file": "shared/overcap-seated-mist.png",
      "width": 427,
      "height": 569,
-     "sha256": "88609a047352705642caddcdc343477c16c2a94c1c0743f8eb7df2d03a78a771",
+     "sha256": "6f140877bdf765f9da7c44b5425ed07446cdfe2af7f1cbe06589ec062980384d",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 213.0,
@@ -1589,13 +1589,13 @@
      "slot": "sprayer",
      "layerName": "mist head (actuator + sleeve)",
      "file": "shared/mist-head.png",
-     "width": 398,
-     "height": 495,
-     "sha256": "d6520dc2785a6d8c70a7ffa596ee70160a048bd243342a2d8e6025a9701fa550",
+     "width": 390,
+     "height": 477,
+     "sha256": "b8b8824a9c0e1597a56bdb2712a7e82190b8b0dd0d6d45da467e51873a583dd3",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 199.0,
-      "y": 530.68
+      "x": 195.0,
+      "y": 513.68
      },
      "z": "front",
      "explodeIndex": 3
@@ -1606,7 +1606,7 @@
      "file": "components/CMP-SPR-SLV-17-415/collar.png",
      "width": 502,
      "height": 389,
-     "sha256": "f97afb36b3a86af66be6daed423877fe9dc640c638ee685723e7083b0183444c",
+     "sha256": "9ea55b3cbeada69df1ad0d69222f1048cc493e8c4b513c46ddacebf2b0f55413",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 251.0,
@@ -1617,11 +1617,11 @@
     },
     {
      "slot": "overcap",
-     "layerName": "translucent overcap",
-     "file": "shared/overcap.png",
+     "layerName": "clear overcap, seated over the mist head",
+     "file": "shared/overcap-seated-mist.png",
      "width": 427,
      "height": 569,
-     "sha256": "88609a047352705642caddcdc343477c16c2a94c1c0743f8eb7df2d03a78a771",
+     "sha256": "6f140877bdf765f9da7c44b5425ed07446cdfe2af7f1cbe06589ec062980384d",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 213.0,
@@ -1740,13 +1740,13 @@
      "slot": "sprayer",
      "layerName": "mist head (actuator + sleeve)",
      "file": "shared/mist-head.png",
-     "width": 398,
-     "height": 495,
-     "sha256": "d6520dc2785a6d8c70a7ffa596ee70160a048bd243342a2d8e6025a9701fa550",
+     "width": 390,
+     "height": 477,
+     "sha256": "b8b8824a9c0e1597a56bdb2712a7e82190b8b0dd0d6d45da467e51873a583dd3",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 199.0,
-      "y": 530.68
+      "x": 195.0,
+      "y": 513.68
      },
      "z": "front",
      "explodeIndex": 3
@@ -1757,7 +1757,7 @@
      "file": "components/CMP-SPR-SSLV-17-415/collar.png",
      "width": 502,
      "height": 389,
-     "sha256": "0550bdba88ecb31fc98311c998826f091a4c1ffb53057e9abfd0fee30fd638d0",
+     "sha256": "e89e797a92e8068d22fc10d573f25da3ec711c413f886a22095013942546b6fe",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 251.0,
@@ -1768,11 +1768,11 @@
     },
     {
      "slot": "overcap",
-     "layerName": "translucent overcap",
-     "file": "shared/overcap.png",
+     "layerName": "clear overcap, seated over the mist head",
+     "file": "shared/overcap-seated-mist.png",
      "width": 427,
      "height": 569,
-     "sha256": "88609a047352705642caddcdc343477c16c2a94c1c0743f8eb7df2d03a78a771",
+     "sha256": "6f140877bdf765f9da7c44b5425ed07446cdfe2af7f1cbe06589ec062980384d",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 213.0,
@@ -2144,6 +2144,36 @@
    "maxErr": 129,
    "meanErr": 0.2951,
    "pixels": 474512
+  }
+ },
+ "detachedOvercap": {
+  "file": "shared/overcap-detached.png",
+  "width": 427,
+  "height": 569,
+  "sha256": "5da332fd23020edfeb58cf7a0e6cd8c83c61244ff48016939744c16cd279103d",
+  "coverWidth": 424,
+  "seated": {
+   "mist": {
+    "sha256": "6f140877bdf765f9da7c44b5425ed07446cdfe2af7f1cbe06589ec062980384d",
+    "coverWidth": 424,
+    "components": [
+     "CMP-SPR-BLK-17-415-01",
+     "CMP-SPR-CLR-17-415",
+     "CMP-SPR-RED-17-415",
+     "CMP-SPR-SGLD-17-415",
+     "CMP-SPR-SLV-17-415",
+     "CMP-SPR-SSLV-17-415"
+    ]
+   },
+   "lotion": {
+    "sha256": "b5f3c4d65b0deaba3cb493567995c68c4a8541ed42f14668faa3cbd1d1454ef6",
+    "coverWidth": 424,
+    "components": [
+     "CMP-LPM-BLK-17-415",
+     "CMP-LPM-MSLV-17-415",
+     "CMP-LPM-SGLD-17-415"
+    ]
+   }
   }
  }
 }
