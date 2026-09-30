@@ -9,11 +9,27 @@ import { reviewed13_415Component, reviewed13_415Label } from "./component13_415C
 export function createComponentProductResolver(ctx: QueryCtx) {
     const records = new Map<string, Promise<Doc<"products"> | null>>();
     const replacements = new Map<string, Promise<Doc<"products">[]>>();
+    const byWebsiteSku = new Map<string, Promise<Doc<"products"> | null>>();
     return async (item: NormalizedComponent, neck: string) => {
         if (!records.has(item.graceSku)) records.set(item.graceSku, ctx.db.query("products")
             .withIndex("by_graceSku", q => q.eq("graceSku", item.graceSku)).take(2)
             .then(matches => matches.length === 1 ? matches[0] : null));
         let product = await records.get(item.graceSku)!;
+        // The reviewed 13-415 sheet files seven fine-mist sprayers under their current
+        // Grace SKUs (CMP-CAP-BLK-13-415-01, …). A catalogue that still carries the legacy
+        // CMP-SPR-…-07 codes (production on 2026-09-30; dev was updated) has no row under
+        // the current code, so every 13-415 bottle lost those seven sprayers in Build Your
+        // Bottle. Find the part by its reviewed website SKU, and accept it only under one of
+        // the sheet's two codes for that exact sprayer.
+        const reviewedIdentity = !product && neck === "13-415" ? reviewed13_415Component(item.graceSku, item.websiteSku) : null;
+        if (reviewedIdentity?.legacyGraceSku) {
+            const sku = reviewedIdentity.websiteSku;
+            if (!byWebsiteSku.has(sku)) byWebsiteSku.set(sku, ctx.db.query("products")
+                .withIndex("by_websiteSku", q => q.eq("websiteSku", sku)).take(2)
+                .then(matches => matches.length === 1 ? matches[0] : null));
+            const candidate = await byWebsiteSku.get(sku)!;
+            if (candidate && (candidate.graceSku === reviewedIdentity.graceSku || candidate.graceSku === reviewedIdentity.legacyGraceSku)) product = candidate;
+        }
         if (!product) return null;
         const marker = `__RETIRED__${item.graceSku}__`;
         const index = product.websiteSku.indexOf(marker);

@@ -40,4 +40,21 @@ describe("exact catalog component products", () => {
         expect(await resolve([product({ category: "Glass Bottle" })])).toBeNull();
         expect(await resolve([product({ neckThreadSize: "13-415" })])).toBeNull();
     });
+    it("finds a reviewed 13-415 sprayer the catalogue still files under its legacy Grace SKU", async () => {
+        // Production, 2026-09-30: CP13-415SpryBlkMt is CMP-SPR-MTBK-13-415-07; the reviewed sheet
+        // calls it CMP-CAP-BLK-13-415-01. Seven of eight 13-415 sprayers dropped out of the builder.
+        const sprayer = { ...part, graceSku: "CMP-CAP-BLK-13-415-01", websiteSku: "CP13-415SpryBlkMt" } as NormalizedComponent;
+        const legacy = product({ graceSku: "CMP-SPR-MTBK-13-415-07", websiteSku: "CP13-415SpryBlkMt", neckThreadSize: "13-415" });
+        const run = (products: Product[], item = sprayer) => convexTest(schema, modules).run(async ctx => {
+            for (const p of products) await ctx.db.insert("products", p);
+            return createComponentProductResolver(ctx)(item, "13-415");
+        });
+        expect(await run([legacy])).toMatchObject({ graceSku: "CMP-SPR-MTBK-13-415-07", websiteSku: "CP13-415SpryBlkMt", stockStatus: "In Stock" });
+        // A catalogue already on the current code resolves directly, as before.
+        expect(await run([product({ graceSku: "CMP-CAP-BLK-13-415-01", websiteSku: "CP13-415SpryBlkMt", neckThreadSize: "13-415" })]))
+            .toMatchObject({ graceSku: "CMP-CAP-BLK-13-415-01" });
+        // Never another finish filed under that website SKU, and never outside 13-415.
+        expect(await run([product({ graceSku: "CMP-SPR-MTGD-13-415-07", websiteSku: "CP13-415SpryBlkMt", neckThreadSize: "13-415" })])).toBeNull();
+        expect(await run([legacy], { ...sprayer, graceSku: "CMP-CAP-BLK-13-415-99" } as NormalizedComponent)).toBeNull();
+    });
 });
