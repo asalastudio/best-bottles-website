@@ -2,7 +2,7 @@
 import React, { act } from "react";
 import { createRoot } from "react-dom/client";
 import { it, expect, vi } from "vitest";
-import { useBuilderKits } from "@/components/bottle-builder/useBuilderKits";
+import { KIT_RETRY_DELAYS_MS, useBuilderKits } from "@/components/bottle-builder/useBuilderKits";
 import type { BuilderConfiguration, BuilderKit } from "@/lib/bottle-builder/model";
 import { slimBuilderBodies } from "@/lib/bottle-builder/payload";
 
@@ -21,8 +21,8 @@ const bodies = slimBuilderBodies([{
     } as BuilderConfiguration],
 }]);
 
-function Harness({ bodyId }: { bodyId: string | null }) {
-    const hydrated = useBuilderKits("Cylinder", bodies, bodyId);
+function Harness({ bodyId, family = "Cylinder" }: { bodyId: string | null; family?: string }) {
+    const hydrated = useBuilderKits(family, bodies, bodyId);
     return <span>{hydrated[0]?.configurations[0]?.kit ? "layered" : "chooser"}</span>;
 }
 
@@ -42,6 +42,34 @@ it("loads kit layers only after a bottle is selected", async () => {
         expect(el.textContent).toBe("layered");
     } finally {
         act(() => root.unmount());
+        vi.unstubAllGlobals();
+    }
+});
+
+it("asks again when the kits request fails, instead of leaving the finishes without images", async () => {
+    vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
+    vi.useFakeTimers();
+    // A family of its own: the shared request map already holds the first test's answer.
+    const fetcher = vi.fn()
+        .mockResolvedValueOnce({ ok: false, status: 503, json: async () => ({ error: "We couldn’t load this bottle’s imagery." }) })
+        .mockResolvedValueOnce({ ok: false, status: 503, json: async () => ({ error: "We couldn’t load this bottle’s imagery." }) })
+        .mockResolvedValueOnce({ ok: true, json: async () => ({ kits: { Cylinder9MetalBlack: kit } }) });
+    vi.stubGlobal("fetch", fetcher);
+    const el = document.createElement("div");
+    const root = createRoot(el);
+    try {
+        await act(async () => root.render(<Harness family="Cylinder-retry" bodyId={bodies[0]!.id} />));
+        expect(fetcher).toHaveBeenCalledTimes(1);
+        expect(el.textContent).toBe("chooser");
+        await act(async () => { await vi.advanceTimersByTimeAsync(KIT_RETRY_DELAYS_MS[0]); });
+        expect(fetcher).toHaveBeenCalledTimes(2);
+        expect(el.textContent).toBe("chooser");
+        await act(async () => { await vi.advanceTimersByTimeAsync(KIT_RETRY_DELAYS_MS[1]); });
+        expect(fetcher).toHaveBeenCalledTimes(3);
+        expect(el.textContent).toBe("layered");
+    } finally {
+        act(() => root.unmount());
+        vi.useRealTimers();
         vi.unstubAllGlobals();
     }
 });

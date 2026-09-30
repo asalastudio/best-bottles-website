@@ -12,7 +12,9 @@ export async function GET(request: Request) {
         return NextResponse.json({ kits: await loadBuilderBodyKits(family, bodyId) }, {
             headers: { "Cache-Control": BUILDER_CDN_CACHE },
         });
-    } catch {
+    } catch (error) {
+        // Uncached 503: the browser retries, and the data cache keeps its last good entry.
+        console.error("[builder] kits load failed", family, bodyId, error instanceof Error ? error.message : error);
         return NextResponse.json({ error: "We couldn’t load this bottle’s imagery. Please try again." }, { status: 503 });
     }
 }

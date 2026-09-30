@@ -3,9 +3,14 @@
  * page and Build Your Bottle). One `registerStage:forSkus` round trip per 50
  * Grace SKUs, then `kitsFromRegister` on the payload. Anything the register
  * cannot draw is simply absent from the result, so a caller falls through to
- * the legacy kit. A deployment without the register functions (production
- * until the register merges) or a failed call yields an empty map, never an
- * error. `NEXT_PUBLIC_REGISTER_STAGE=off` turns the register off everywhere.
+ * the legacy kit. By default a failed call yields what was drawn so far, never
+ * an error, and the product page (rendered per request) draws the rest from
+ * the legacy kits. `strict` callers cache what they draw — Build Your Bottle
+ * keeps a bottle's kits for an hour and the CDN serves them for a day after
+ * that — so for them a failed call throws: the cache keeps its last good entry
+ * instead of storing a half-legacy one, which is how finishes lost their
+ * register images until the next refresh. `NEXT_PUBLIC_REGISTER_STAGE=off`
+ * turns the register off everywhere.
  */
 import type { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../convex/_generated/api";
@@ -61,7 +66,11 @@ export function drawableRegisterKits(payload: RegisterStagePayload): Record<stri
     return kits;
 }
 
-export async function loadRegisterKits(convex: ConvexHttpClient, graceSkus: ReadonlyArray<string | null | undefined>): Promise<Record<string, RegisterKit>> {
+export async function loadRegisterKits(
+    convex: ConvexHttpClient,
+    graceSkus: ReadonlyArray<string | null | undefined>,
+    { strict = false }: { strict?: boolean } = {},
+): Promise<Record<string, RegisterKit>> {
     if (!registerStageEnabled()) return {};
     const wanted = [...new Set(graceSkus.filter((sku): sku is string => typeof sku === "string" && sku.length > 0))];
     if (wanted.length === 0) return {};
@@ -71,8 +80,10 @@ export async function loadRegisterKits(convex: ConvexHttpClient, graceSkus: Read
             const payload = await convex.query(api.registerStage.forSkus, { graceSkus: wanted.slice(index, index + CHUNK) }) as RegisterStagePayload;
             Object.assign(kits, drawableRegisterKits(payload));
         } catch (error) {
+            // Logged in production too: this failure used to be silent there.
+            console.error(`[register] stage lookup failed${strict ? "" : "; drawing legacy kits"}`, error instanceof Error ? error.message : error);
+            if (strict) throw error;
             // The register is additive: without it the stages draw the legacy kits.
-            if (process.env.NODE_ENV !== "production") console.warn("[register] stage lookup unavailable; drawing legacy kits", error instanceof Error ? error.message : error);
             return kits;
         }
     }
@@ -87,7 +98,8 @@ export async function loadRegisterKits(convex: ConvexHttpClient, graceSkus: Read
                 kits[FROSTED_ELEGANT_GOLD.websiteSku] = kit;
             }
         } catch (error) {
-            if (process.env.NODE_ENV !== "production") console.warn("[register] frosted Elegant kit unavailable", error instanceof Error ? error.message : error);
+            console.error("[register] frosted Elegant kit unavailable", error instanceof Error ? error.message : error);
+            if (strict) throw error;
         }
     }
     return kits;
