@@ -11,6 +11,9 @@
  * draws the component's generic layers draws it. Images are content-addressed in the one public Blob store both
  * deployments read, so nothing is uploaded. Production writes only with --deployment prod --apply (Jordan's OK).
  *
+ * --from-body <bodyId> picks the source when two bodies carry the same image (the short 13-415 caps are one render
+ * shared by the Tall 9 mL and the 5 mL Cylinder).
+ *
  * 2026-09-30: production's LIB-17-415-MtlRollon had only the pilot crop (d64975…). reconcileCylinder9Kit also
  * requires the reviewed seated insert (4c3c4a…), so all 50 9 mL 17-415 metal-roller SKUs fell back to the old photo
  * kits in Build Your Bottle and on the product page.
@@ -25,7 +28,7 @@ const ROOT = resolve(__dirname, "..", "..", "..");
 config({ path: [resolve(ROOT, ".env.local")], quiet: true });
 const argv = process.argv.slice(2);
 const arg = (name: string) => (argv.includes(`--${name}`) ? argv[argv.indexOf(`--${name}`) + 1] : undefined);
-const neck = arg("neck"), componentId = arg("component"), sha = arg("sha"), usage = arg("usage");
+const neck = arg("neck"), componentId = arg("component"), sha = arg("sha"), usage = arg("usage"), fromBody = arg("from-body");
 const apply = argv.includes("--apply");
 
 type Layer = { image: { sha256: string; url: string }; slot: string; z: string; usage?: string; glass?: string; bodyId?: string; anchorStatus: string };
@@ -40,7 +43,7 @@ async function main() {
 
     const source = (await new ConvexHttpClient(sourceUrl).query(api.register.componentsForNeck, { neck }))
         .find(c => c.componentId === componentId);
-    const matches = ((source?.layers ?? []) as Layer[]).filter(l => l.image.sha256.startsWith(sha) && (!usage || l.usage === usage));
+    const matches = ((source?.layers ?? []) as Layer[]).filter(l => l.image.sha256.startsWith(sha) && (!usage || l.usage === usage) && (!fromBody || l.bodyId === fromBody));
     if (matches.length !== 1) throw new Error(`dev ${componentId}: ${matches.length} layers match ${sha}${usage ? ` (${usage})` : ""}; need exactly one`);
     const { bodyId: _bodyId, ...layer } = matches[0];
 
