@@ -15,8 +15,8 @@
  *   ... --deployment dev    --out <dir> (default output/seat-audit)
  *
  * --write lowers every closure whose gap exceeds 0.2 mm by that gap, but no further than keeps its top 0.5 mm above the glass
- * rim (a short cap on a long neck cannot reach the shoulder; it is lowered as far as it still covers the rim). Boston rounds (20-400) are left alone: their
- * caps sit on the bead at the top of a long neck, as the real bottles do (Jordan to confirm).
+ * rim. Left where they are (Jordan 2026-09-30): Boston rounds (20-400), whose caps sit on the bead at the top of a long neck
+ * as the real bottles do, and the short ribbed caps (13-415 black and white), too short to reach a long neck's shoulder.
  */
 import fs from "node:fs";
 import { resolve } from "node:path";
@@ -39,7 +39,11 @@ const outDir = resolve(ROOT, arg("--out") ?? "output/seat-audit");
 const URLS: Record<string, string> = { dev: "https://helpful-elephant-638.convex.cloud", prod: "https://precise-raccoon-123.convex.cloud" };
 const MIN_DROP_MM = 0.2;
 const RIM_COVER_MM = 0.5;
-const LEFT_ALONE = (bodyId: string) => bodyId.startsWith("boston-round-");
+// Jordan 2026-09-30: "short ribbed caps and boston rounds dont need to be moved". A Boston round's cap sits on the bead of
+// a long neck; a short ribbed cap is too short to reach a long 13-415 neck's shoulder and shows some neck (as approved 28 Sep).
+const LEFT_ALONE_BODY = (bodyId: string) => bodyId.startsWith("boston-round-");
+const SHORT_RIBBED_CAPS = new Set(["CMP-CAP-BLK-S-13-415", "CMP-CAP-WHT-S-13-415"]);
+const LEFT_ALONE = (bodyId: string, closure: string) => LEFT_ALONE_BODY(bodyId) || closure.split("+").some((id) => SHORT_RIBBED_CAPS.has(id));
 
 type Alpha = { w: number; h: number; a: Uint8Array };
 const bytes = new Map<string, Promise<Buffer>>();
@@ -156,7 +160,7 @@ async function main() {
     if (write) {
         const groups = new Map<string, Array<Record<string, unknown>>>();
         for (const r of measured) {
-            if (!r.signature || LEFT_ALONE(r.bodyId as string)) continue;
+            if (!r.signature || LEFT_ALONE(r.bodyId as string, r.closure as string)) continue;
             const list = groups.get(r.signature as string) ?? [];
             list.push(r); groups.set(r.signature as string, list);
         }
@@ -171,7 +175,7 @@ async function main() {
         const file = resolve(ROOT, "src/lib/register/seat-drops.generated.json");
         fs.writeFileSync(file, JSON.stringify({
             generatedAt: new Date().toISOString(),
-            rule: `scripts/register/seats/audit-seats.ts --write on ${deployment}: each closure lowered by the background showing under its edge (> ${MIN_DROP_MM} mm) so the edge rests on the shoulder, but never so far that its top comes within ${RIM_COVER_MM} mm of the glass rim (limitedByRim); Boston rounds (20-400) left alone`,
+            rule: `scripts/register/seats/audit-seats.ts --write on ${deployment}: each closure lowered by the background showing under its edge (> ${MIN_DROP_MM} mm) so the edge rests on the shoulder, but never so far that its top comes within ${RIM_COVER_MM} mm of the glass rim (limitedByRim); Boston rounds (20-400) and the short ribbed caps left alone (Jordan 2026-09-30)`,
             entries,
         }, null, 1) + "\n");
         console.log(`wrote ${Object.keys(entries).length} drops (${Object.values(entries).reduce((n, e) => n + e.skus, 0)} SKUs) to ${file}`);
