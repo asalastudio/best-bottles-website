@@ -1,0 +1,1552 @@
+{
+ "neck": "20-400",
+ "psdRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+ "method": "library PSD registered on the closure of a sold SKU's master photo; photo scale tied to the body's register plate by seat-to-foot",
+ "components": [
+  {
+   "componentId": "CMP-CAP-BLK-20-400-1OZ",
+   "websiteSku": "20-400cp1ozShortBlk",
+   "type": "cap",
+   "psd": "20. Caps/2. 20-400  Cap/28. CP20-4001ozShortBlk.psd",
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/17. GBBstn1ozBlkCapSht.psd",
+    "sku": "GBBstn1ozBlkCapSht",
+    "bodyId": "boston-round-30ml-20-400",
+    "glass": "Clear",
+    "plateKey": "boston-round-30ml-20-400|Clear",
+    "bottlePxPerMm": 11.6758,
+    "rimY": 470,
+    "axisX": 283.5,
+    "seatToFootPx": 946,
+    "plateSeatToFootPx": 1968,
+    "bodyLayer": "Layer 22",
+    "matchedLayers": [
+     "Layer 23"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 6",
+     "file": "CMP-CAP-BLK-20-400-1OZ--0-cap.png",
+     "width": 299,
+     "height": 157,
+     "sha256": "021ceabd0255303507a4fc4b7594aa0d2ffa7c0c1b79d8469b07b7cd03e97804",
+     "pxPerMm": 11.5559,
+     "anchor": {
+      "x": 149.0,
+      "y": 23.8
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 145
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.958,
+    "libraryScale": 0.9897,
+    "approvable": true,
+    "specksClearedPx": {
+     "cap": 194
+    },
+    "recentredMm": [
+     [
+      "cap",
+      -0.173
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "CMP-CAP-BLK-20-400-2OZ",
+   "websiteSku": "20-400Cp2ozShortBlk",
+   "type": "cap",
+   "psd": "20. Caps/5. 18-400 Cap/27. CP20-4002ozShortBlk.psd",
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/17. GBBstn2ozBlkCapSht.psd",
+    "sku": "GBBstn2ozBlkCapSht",
+    "bodyId": "boston-round-60ml-20-400",
+    "glass": "Clear",
+    "plateKey": "boston-round-60ml-20-400|Clear",
+    "bottlePxPerMm": 11.8387,
+    "rimY": 315,
+    "axisX": 300.0,
+    "seatToFootPx": 1155,
+    "plateSeatToFootPx": 1733,
+    "bodyLayer": "Layer 6",
+    "matchedLayers": [
+     "Layer 7"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 6",
+     "file": "CMP-CAP-BLK-20-400-2OZ--0-cap.png",
+     "width": 299,
+     "height": 157,
+     "sha256": "021ceabd0255303507a4fc4b7594aa0d2ffa7c0c1b79d8469b07b7cd03e97804",
+     "pxPerMm": 11.7573,
+     "anchor": {
+      "x": 149.0,
+      "y": 23.9
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 145
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9853,
+    "libraryScale": 0.9931,
+    "approvable": true,
+    "specksClearedPx": {
+     "cap": 194
+    },
+    "recentredMm": [
+     [
+      "cap",
+      0.34
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "CMP-DRP-BKGD-20400-76",
+   "websiteSku": "Drp20-4001ozShnGlTrimBlkBulb",
+   "type": "dropper",
+   "psd": "20. Caps/3. 20-400 Droppers/11. DRP20-4001ozShnGlTrimBlkBulb.psd",
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/12. GBBstn1ozBlkDrpShnGlTrim.psd",
+    "sku": "GBBstn1ozBlkDrpShnGlTrim",
+    "bodyId": "boston-round-30ml-20-400",
+    "glass": "Clear",
+    "plateKey": "boston-round-30ml-20-400|Clear",
+    "bottlePxPerMm": 11.6758,
+    "rimY": 470,
+    "axisX": 283.5,
+    "seatToFootPx": 946,
+    "plateSeatToFootPx": 1968,
+    "bodyLayer": "Layer 22"
+   },
+   "layers": [
+    {
+     "slot": "fitment",
+     "layerName": "Layer 23, Layer 25 (bottle photo)",
+     "file": "CMP-DRP-BKGD-20400-76--fitment.png",
+     "width": 312,
+     "height": 382,
+     "sha256": "e7605d712db1308eca5efde4b785ee63cb23d389cc84d4d0e728974bc3bbac83",
+     "pxPerMm": 11.6758,
+     "anchor": {
+      "x": 154.5,
+      "y": 261
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 376
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 23, Layer 25 (bottle photo, below the collar from row 586)",
+     "file": "CMP-DRP-BKGD-20400-76--pipette.png",
+     "width": 303,
+     "height": 717,
+     "sha256": "861bf17c8f66f9efec51c830f525d323e67e50a7df98a4f7a7948d4843e30525",
+     "pxPerMm": 11.6758,
+     "anchor": {
+      "x": 150.5,
+      "y": -110
+     },
+     "z": "behind-body",
+     "explodeIndex": 0,
+     "solidBottomY": 710
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 23, Layer 25 (bottle photo, the tube seen through Clear glass)",
+     "file": "CMP-DRP-BKGD-20400-76--pipette-clear.png",
+     "width": 91,
+     "height": 718,
+     "sha256": "ef73dde8f0a62e6e742e943d9dd4a07bfd38891eec23ab45de0066de61ce3933",
+     "pxPerMm": 11.6758,
+     "anchor": {
+      "x": 35.5,
+      "y": -109
+     },
+     "z": "front",
+     "explodeIndex": 0,
+     "glass": "Clear"
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 286,
+    "splitRow": 586,
+    "retouchTrimmed": {
+     "fromRowUnderRimMm": 9.85,
+     "px": 290
+    },
+    "recentredMm": [
+     [
+      "fitment",
+      0.771
+     ],
+     [
+      "pipette",
+      0.771
+     ],
+     [
+      "pipette",
+      0.771
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "CMP-DRP-BKGD-20400-90",
+   "websiteSku": "Drp20-4002ozShnGlTrimBlkBulb",
+   "type": "dropper",
+   "psd": "20. Caps/3. 20-400 Droppers/17. DRP20-4002ozShnGlTrimBlkBulb.psd",
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/12. GBBstn2ozBlkDropperShnGlTrim.psd",
+    "sku": "GBBstn2ozBlkDrprShnGlTrim",
+    "bodyId": "boston-round-60ml-20-400",
+    "glass": "Clear",
+    "plateKey": "boston-round-60ml-20-400|Clear",
+    "bottlePxPerMm": 11.8387,
+    "rimY": 315,
+    "axisX": 300.0,
+    "seatToFootPx": 1155,
+    "plateSeatToFootPx": 1733,
+    "bodyLayer": "Layer 6"
+   },
+   "layers": [
+    {
+     "slot": "fitment",
+     "layerName": "Layer 7, Layer 9 (bottle photo)",
+     "file": "CMP-DRP-BKGD-20400-90--fitment.png",
+     "width": 312,
+     "height": 382,
+     "sha256": "09e33df6adfa30562042870b4d88935a82458bf0b0e8a264bfc2c910eb271d2e",
+     "pxPerMm": 11.8387,
+     "anchor": {
+      "x": 160.0,
+      "y": 254
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 376
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 7, Layer 9 (bottle photo, below the collar from row 473)",
+     "file": "CMP-DRP-BKGD-20400-90--pipette.png",
+     "width": 251,
+     "height": 865,
+     "sha256": "2d383b9c6b2b140ff7bd8f85b4cab68a220fb99ef887f96094d04a0a4dc9e3d5",
+     "pxPerMm": 11.8387,
+     "anchor": {
+      "x": 148.0,
+      "y": -152
+     },
+     "z": "behind-body",
+     "explodeIndex": 0,
+     "solidBottomY": 857
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 7, Layer 9 (bottle photo, the tube seen through Clear glass)",
+     "file": "CMP-DRP-BKGD-20400-90--pipette-clear.png",
+     "width": 109,
+     "height": 901,
+     "sha256": "185ab8583bfe46e33adaf74d3e25778262f78d66b17f4e2dc018492f3b5b91eb",
+     "pxPerMm": 11.8387,
+     "anchor": {
+      "x": 56.0,
+      "y": -116
+     },
+     "z": "front",
+     "explodeIndex": 0,
+     "glass": "Clear"
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 286,
+    "splitRow": 473,
+    "retouchTrimmed": {
+     "fromRowUnderRimMm": 10.31,
+     "px": 9013
+    },
+    "recentredMm": [
+     [
+      "fitment",
+      -0.169
+     ],
+     [
+      "pipette",
+      -0.169
+     ],
+     [
+      "pipette",
+      -0.169
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "CMP-DRP-BKSL-20400-90",
+   "websiteSku": "Drp20-4002ozShnSlTrimBlkBulb",
+   "type": "dropper",
+   "psd": "20. Caps/3. 20-400 Droppers/15. DRP20-4002ozShnSlTrimBlkBulb.psd",
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/15. GBBstn2ozBlkDropperShnSlTrim.psd",
+    "sku": "GBBstn2ozBlkDrprShnSlTrim",
+    "bodyId": "boston-round-60ml-20-400",
+    "glass": "Clear",
+    "plateKey": "boston-round-60ml-20-400|Clear",
+    "bottlePxPerMm": 11.8387,
+    "rimY": 315,
+    "axisX": 300.0,
+    "seatToFootPx": 1155,
+    "plateSeatToFootPx": 1733,
+    "bodyLayer": "Layer 6"
+   },
+   "layers": [
+    {
+     "slot": "fitment",
+     "layerName": "Layer 7, Layer 12 (bottle photo)",
+     "file": "CMP-DRP-BKSL-20400-90--fitment.png",
+     "width": 314,
+     "height": 386,
+     "sha256": "84329a2d2770f2e906ab442b11c966f4d5ae98535fa28c7932255597af66aec9",
+     "pxPerMm": 11.8387,
+     "anchor": {
+      "x": 163.0,
+      "y": 260
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 380
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 7, Layer 12 (bottle photo, below the collar from row 473)",
+     "file": "CMP-DRP-BKSL-20400-90--pipette.png",
+     "width": 251,
+     "height": 865,
+     "sha256": "2d383b9c6b2b140ff7bd8f85b4cab68a220fb99ef887f96094d04a0a4dc9e3d5",
+     "pxPerMm": 11.8387,
+     "anchor": {
+      "x": 148.0,
+      "y": -152
+     },
+     "z": "behind-body",
+     "explodeIndex": 0,
+     "solidBottomY": 857
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 7, Layer 12 (bottle photo, the tube seen through Clear glass)",
+     "file": "CMP-DRP-BKSL-20400-90--pipette-clear.png",
+     "width": 109,
+     "height": 903,
+     "sha256": "f6c416546cf0c44a7e1fc89e77efbb960b72641062cffd28aa56ce56d36f297d",
+     "pxPerMm": 11.8387,
+     "anchor": {
+      "x": 56.0,
+      "y": -114
+     },
+     "z": "front",
+     "explodeIndex": 0,
+     "glass": "Clear"
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 289,
+    "splitRow": 473,
+    "retouchTrimmed": {
+     "fromRowUnderRimMm": 10.14,
+     "px": 9409
+    },
+    "recentredMm": [
+     [
+      "fitment",
+      -0.169
+     ],
+     [
+      "pipette",
+      -0.169
+     ],
+     [
+      "pipette",
+      -0.169
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "CMP-DRP-BLK-20400-76MM-01",
+   "websiteSku": "Drp20-4001ozBlckBulb",
+   "type": "dropper",
+   "psd": "20. Caps/3. 20-400 Droppers/8. DRP20-4001ozBlckBulb.psd",
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/16. GBBstn1ozBlkDrp.psd",
+    "sku": "GBBstn1ozBlkDrp",
+    "bodyId": "boston-round-30ml-20-400",
+    "glass": "Clear",
+    "plateKey": "boston-round-30ml-20-400|Clear",
+    "bottlePxPerMm": 11.6758,
+    "rimY": 470,
+    "axisX": 283.5,
+    "seatToFootPx": 946,
+    "plateSeatToFootPx": 1968,
+    "bodyLayer": "Layer 22"
+   },
+   "layers": [
+    {
+     "slot": "fitment",
+     "layerName": "Layer 23, ' (bottle photo)",
+     "file": "CMP-DRP-BLK-20400-76MM-01--fitment.png",
+     "width": 328,
+     "height": 384,
+     "sha256": "e636a33d7fa37d0530db4959d91432ab193b0d5601fe272fd082d97a745ae6ee",
+     "pxPerMm": 11.6758,
+     "anchor": {
+      "x": 161.5,
+      "y": 262
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 378
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 23, ' (bottle photo, below the collar from row 588)",
+     "file": "CMP-DRP-BLK-20400-76MM-01--pipette.png",
+     "width": 273,
+     "height": 715,
+     "sha256": "87369e7f06247569b010f80a7e1e8cd0cb50f0f9ce01e32ddceaf7beccce7387",
+     "pxPerMm": 11.6758,
+     "anchor": {
+      "x": 143.5,
+      "y": -112
+     },
+     "z": "behind-body",
+     "explodeIndex": 0,
+     "solidBottomY": 708
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 23, ' (bottle photo, the tube seen through Clear glass)",
+     "file": "CMP-DRP-BLK-20400-76MM-01--pipette-clear.png",
+     "width": 91,
+     "height": 717,
+     "sha256": "ac3b990f3ae260cf02d91245aae706a09bf2cb344e776b7c59365c9ad624a85b",
+     "pxPerMm": 11.6758,
+     "anchor": {
+      "x": 36.5,
+      "y": -110
+     },
+     "z": "front",
+     "explodeIndex": 0,
+     "glass": "Clear"
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 263,
+    "splitRow": 588,
+    "retouchTrimmed": {
+     "fromRowUnderRimMm": 9.94,
+     "px": 468
+    },
+    "recentredMm": [
+     [
+      "fitment",
+      0.685
+     ],
+     [
+      "pipette",
+      0.685
+     ],
+     [
+      "pipette",
+      0.685
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "CMP-DRP-BLK-20400-90",
+   "websiteSku": "Drp20-4002ozBlckBulb",
+   "type": "dropper",
+   "psd": "20. Caps/3. 20-400 Droppers/14. DRP20-4002ozBlckBulb.psd",
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/16. GBBstn2ozBlkDrp.psd",
+    "sku": "GBBstn2ozBlkDrpr",
+    "bodyId": "boston-round-60ml-20-400",
+    "glass": "Clear",
+    "plateKey": "boston-round-60ml-20-400|Clear",
+    "bottlePxPerMm": 11.8387,
+    "rimY": 315,
+    "axisX": 300.0,
+    "seatToFootPx": 1155,
+    "plateSeatToFootPx": 1733,
+    "bodyLayer": "Layer 6"
+   },
+   "layers": [
+    {
+     "slot": "fitment",
+     "layerName": "Layer 7, ' (bottle photo)",
+     "file": "CMP-DRP-BLK-20400-90--fitment.png",
+     "width": 341,
+     "height": 401,
+     "sha256": "87f311ae81a645ec627583f725d921861609960c3fc47af78212e5135f20bc6b",
+     "pxPerMm": 11.8387,
+     "anchor": {
+      "x": 176.0,
+      "y": 269
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 395
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 7, ' (bottle photo, below the collar from row 476)",
+     "file": "CMP-DRP-BLK-20400-90--pipette.png",
+     "width": 249,
+     "height": 862,
+     "sha256": "c2f919bb2f271e34d839e782ca900fe48dbe7a1c15561e426b5919dad038fa10",
+     "pxPerMm": 11.8387,
+     "anchor": {
+      "x": 148.0,
+      "y": -155
+     },
+     "z": "behind-body",
+     "explodeIndex": 0,
+     "solidBottomY": 854
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 7, ' (bottle photo, the tube seen through Clear glass)",
+     "file": "CMP-DRP-BLK-20400-90--pipette-clear.png",
+     "width": 109,
+     "height": 897,
+     "sha256": "6f295f84a7a62ff6d216edc6634076eb5ad1fb5dc696f8f278714f378b5500c4",
+     "pxPerMm": 11.8387,
+     "anchor": {
+      "x": 56.0,
+      "y": -120
+     },
+     "z": "front",
+     "explodeIndex": 0,
+     "glass": "Clear"
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 273,
+    "splitRow": 476,
+    "retouchTrimmed": {
+     "fromRowUnderRimMm": 10.64,
+     "px": 8581
+    },
+    "recentredMm": [
+     [
+      "fitment",
+      -0.169
+     ],
+     [
+      "pipette",
+      -0.169
+     ],
+     [
+      "pipette",
+      -0.169
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "CMP-DRP-WHT-20400-76",
+   "websiteSku": "Drp20-4001ozWhiteBulb",
+   "type": "dropper",
+   "psd": "20. Caps/3. 20-400 Droppers/7.  DRP20-4001ozWhiteBulb.psd",
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/11. GBBstn1ozWhtDrp.psd",
+    "sku": "GBBstn1ozWhtDrp",
+    "bodyId": "boston-round-30ml-20-400",
+    "glass": "Clear",
+    "plateKey": "boston-round-30ml-20-400|Clear",
+    "bottlePxPerMm": 11.6758,
+    "rimY": 470,
+    "axisX": 283.5,
+    "seatToFootPx": 946,
+    "plateSeatToFootPx": 1968,
+    "bodyLayer": "Layer 22"
+   },
+   "layers": [
+    {
+     "slot": "fitment",
+     "layerName": "Layer 23, Layer 24 (bottle photo)",
+     "file": "CMP-DRP-WHT-20400-76--fitment.png",
+     "width": 298,
+     "height": 396,
+     "sha256": "24393f05ef2d53855da778d9355a8f36ab4fe255aed66a4aa778526b4a6b232d",
+     "pxPerMm": 11.6758,
+     "anchor": {
+      "x": 148.5,
+      "y": 274
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 390
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 23, Layer 24 (bottle photo, below the collar from row 587)",
+     "file": "CMP-DRP-WHT-20400-76--pipette.png",
+     "width": 295,
+     "height": 716,
+     "sha256": "9629d664689fce406445db2ffe0cc78d26a2f8d09c46a8f74348bf8c8dd57e38",
+     "pxPerMm": 11.6758,
+     "anchor": {
+      "x": 146.5,
+      "y": -111
+     },
+     "z": "behind-body",
+     "explodeIndex": 0,
+     "solidBottomY": 709
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 23, Layer 24 (bottle photo, the tube seen through Clear glass)",
+     "file": "CMP-DRP-WHT-20400-76--pipette-clear.png",
+     "width": 91,
+     "height": 717,
+     "sha256": "242ec9813154c0c62c87bf3b42f7017f58a8331f09f16a37c76c1cd3b24df4f9",
+     "pxPerMm": 11.6758,
+     "anchor": {
+      "x": 34.5,
+      "y": -110
+     },
+     "z": "front",
+     "explodeIndex": 0,
+     "glass": "Clear"
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 273,
+    "splitRow": 587,
+    "retouchTrimmed": {
+     "fromRowUnderRimMm": 9.94,
+     "px": 279
+    },
+    "recentredMm": [
+     [
+      "fitment",
+      0.856
+     ],
+     [
+      "pipette",
+      0.856
+     ],
+     [
+      "pipette",
+      0.856
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "CMP-DRP-WHT-20400-90",
+   "websiteSku": "Drp20-4002ozWhiteBulb",
+   "type": "dropper",
+   "psd": "20. Caps/3. 20-400 Droppers/13. DRP20-4002ozWhiteBulb.psd",
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/11. GBBstn2ozWhtDropper.psd",
+    "sku": "GBBstn2ozWhtDrpr",
+    "bodyId": "boston-round-60ml-20-400",
+    "glass": "Clear",
+    "plateKey": "boston-round-60ml-20-400|Clear",
+    "bottlePxPerMm": 11.8387,
+    "rimY": 315,
+    "axisX": 300.0,
+    "seatToFootPx": 1155,
+    "plateSeatToFootPx": 1733,
+    "bodyLayer": "Layer 6"
+   },
+   "layers": [
+    {
+     "slot": "fitment",
+     "layerName": "Layer 7, Layer 8 (bottle photo)",
+     "file": "CMP-DRP-WHT-20400-90--fitment.png",
+     "width": 298,
+     "height": 398,
+     "sha256": "21793c06baa2059bbfbf36e5b869a22b847e777428ec1d28b85171f2c47eb5f1",
+     "pxPerMm": 11.8387,
+     "anchor": {
+      "x": 156.0,
+      "y": 270
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 392
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 7, Layer 8 (bottle photo, below the collar from row 476)",
+     "file": "CMP-DRP-WHT-20400-90--pipette.png",
+     "width": 249,
+     "height": 862,
+     "sha256": "c2f919bb2f271e34d839e782ca900fe48dbe7a1c15561e426b5919dad038fa10",
+     "pxPerMm": 11.8387,
+     "anchor": {
+      "x": 148.0,
+      "y": -155
+     },
+     "z": "behind-body",
+     "explodeIndex": 0,
+     "solidBottomY": 854
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 7, Layer 8 (bottle photo, the tube seen through Clear glass)",
+     "file": "CMP-DRP-WHT-20400-90--pipette-clear.png",
+     "width": 109,
+     "height": 901,
+     "sha256": "0c88ee20983a7a0ff2f0dfa9cc5c9a746a8c098e46996b61f8b6e3ddc3added8",
+     "pxPerMm": 11.8387,
+     "anchor": {
+      "x": 56.0,
+      "y": -116
+     },
+     "z": "front",
+     "explodeIndex": 0,
+     "glass": "Clear"
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 272,
+    "splitRow": 476,
+    "retouchTrimmed": {
+     "fromRowUnderRimMm": 10.31,
+     "px": 9602
+    },
+    "recentredMm": [
+     [
+      "fitment",
+      -0.169
+     ],
+     [
+      "pipette",
+      -0.169
+     ],
+     [
+      "pipette",
+      -0.169
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "CMP-DRP-WTGD-20400-76",
+   "websiteSku": "Drp20-4001ozlShnGlTrimWhiteBulb",
+   "type": "dropper",
+   "psd": "20. Caps/3. 20-400 Droppers/10. DRP20-4001ozlShnGlTrimWhiteBulb.psd",
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/13. GBBstn1ozWhtDrpShnGlTrim.psd",
+    "sku": "GBBstn1ozWhtDrpShnGlTrim",
+    "bodyId": "boston-round-30ml-20-400",
+    "glass": "Clear",
+    "plateKey": "boston-round-30ml-20-400|Clear",
+    "bottlePxPerMm": 11.6758,
+    "rimY": 470,
+    "axisX": 283.5,
+    "seatToFootPx": 946,
+    "plateSeatToFootPx": 1968,
+    "bodyLayer": "Layer 22"
+   },
+   "layers": [
+    {
+     "slot": "fitment",
+     "layerName": "Layer 23, Layer 21 (bottle photo)",
+     "file": "CMP-DRP-WTGD-20400-76--fitment.png",
+     "width": 296,
+     "height": 352,
+     "sha256": "dfedeb227c034fe6a3a0db9c07f8bf2d2bd147cf198cbd07bff3f0f37d8861ce",
+     "pxPerMm": 11.6758,
+     "anchor": {
+      "x": 148.5,
+      "y": 229
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 346
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 23, Layer 21 (bottle photo, below the collar from row 589)",
+     "file": "CMP-DRP-WTGD-20400-76--pipette.png",
+     "width": 288,
+     "height": 714,
+     "sha256": "70dd63bd8dccbce9463729ed958df16de97706f892ecb6eacf0bdd94030c29ee",
+     "pxPerMm": 11.6758,
+     "anchor": {
+      "x": 144.5,
+      "y": -113
+     },
+     "z": "behind-body",
+     "explodeIndex": 0,
+     "solidBottomY": 707
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 23, Layer 21 (bottle photo, the tube seen through Clear glass)",
+     "file": "CMP-DRP-WTGD-20400-76--pipette-clear.png",
+     "width": 91,
+     "height": 716,
+     "sha256": "fe455927dcb7782c70d0d92ff416abb36a0d2f3936e3641f7a1e171b90647866",
+     "pxPerMm": 11.6758,
+     "anchor": {
+      "x": 38.5,
+      "y": -111
+     },
+     "z": "front",
+     "explodeIndex": 0,
+     "glass": "Clear"
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 273,
+    "splitRow": 589,
+    "retouchTrimmed": {
+     "fromRowUnderRimMm": 10.02,
+     "px": 550
+    },
+    "recentredMm": [
+     [
+      "fitment",
+      0.514
+     ],
+     [
+      "pipette",
+      0.514
+     ],
+     [
+      "pipette",
+      0.514
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "CMP-DRP-WTGD-20400-90",
+   "websiteSku": "Drp20-4002ozlShnGlTrimWhiteBulb",
+   "type": "dropper",
+   "psd": "20. Caps/3. 20-400 Droppers/16. DRP20-4002ozlShnGlTrimWhiteBulb.psd",
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/13. GBBstn2ozWhtDropperShnGlTrim.psd",
+    "sku": "GBBstn2ozWhtDrprShnGlTrim",
+    "bodyId": "boston-round-60ml-20-400",
+    "glass": "Clear",
+    "plateKey": "boston-round-60ml-20-400|Clear",
+    "bottlePxPerMm": 11.8387,
+    "rimY": 315,
+    "axisX": 300.0,
+    "seatToFootPx": 1155,
+    "plateSeatToFootPx": 1733,
+    "bodyLayer": "Layer 6"
+   },
+   "layers": [
+    {
+     "slot": "fitment",
+     "layerName": "Layer 7, Layer 4 (bottle photo)",
+     "file": "CMP-DRP-WTGD-20400-90--fitment.png",
+     "width": 314,
+     "height": 401,
+     "sha256": "d98b2ddbaaa92c570fe1c0496b023f1fdc3f7949e56990b64a809c2c65a7dac2",
+     "pxPerMm": 11.8387,
+     "anchor": {
+      "x": 164.0,
+      "y": 271
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 395
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 7, Layer 4 (bottle photo, below the collar from row 473)",
+     "file": "CMP-DRP-WTGD-20400-90--pipette.png",
+     "width": 251,
+     "height": 865,
+     "sha256": "2d383b9c6b2b140ff7bd8f85b4cab68a220fb99ef887f96094d04a0a4dc9e3d5",
+     "pxPerMm": 11.8387,
+     "anchor": {
+      "x": 148.0,
+      "y": -152
+     },
+     "z": "behind-body",
+     "explodeIndex": 0,
+     "solidBottomY": 857
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 7, Layer 4 (bottle photo, the tube seen through Clear glass)",
+     "file": "CMP-DRP-WTGD-20400-90--pipette-clear.png",
+     "width": 109,
+     "height": 899,
+     "sha256": "d6ef310427447b44e886934f7381118e9eb460de476ef0b273d4c405a45ef029",
+     "pxPerMm": 11.8387,
+     "anchor": {
+      "x": 56.0,
+      "y": -118
+     },
+     "z": "front",
+     "explodeIndex": 0,
+     "glass": "Clear"
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 290,
+    "splitRow": 473,
+    "retouchTrimmed": {
+     "fromRowUnderRimMm": 10.47,
+     "px": 8470
+    },
+    "recentredMm": [
+     [
+      "fitment",
+      -0.169
+     ],
+     [
+      "pipette",
+      -0.169
+     ],
+     [
+      "pipette",
+      -0.169
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "CMP-DRP-WTSL-20400-76",
+   "websiteSku": "Drp20-4001ozlShnSlTrimWhiteBulb",
+   "type": "dropper",
+   "psd": "20. Caps/3. 20-400 Droppers/12. DRP20-4001ozlShnSlTrimWhiteBulb.psd",
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/14. GBBstn1ozWhtDrpShnSlTrim.psd",
+    "sku": "GBBstn1ozWhtDrpShnSlTrim",
+    "bodyId": "boston-round-30ml-20-400",
+    "glass": "Clear",
+    "plateKey": "boston-round-30ml-20-400|Clear",
+    "bottlePxPerMm": 11.6758,
+    "rimY": 470,
+    "axisX": 283.5,
+    "seatToFootPx": 946,
+    "plateSeatToFootPx": 1968,
+    "bodyLayer": "Layer 22"
+   },
+   "layers": [
+    {
+     "slot": "fitment",
+     "layerName": "Layer 23, Layer 26 (bottle photo)",
+     "file": "CMP-DRP-WTSL-20400-76--fitment.png",
+     "width": 301,
+     "height": 350,
+     "sha256": "9e26315952150d0b33f628eb2ff3fbdc54ad6b3b17f97b032d01294360e00a02",
+     "pxPerMm": 11.6758,
+     "anchor": {
+      "x": 148.5,
+      "y": 232
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 344
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 23, Layer 26 (bottle photo, below the collar from row 583)",
+     "file": "CMP-DRP-WTSL-20400-76--pipette.png",
+     "width": 294,
+     "height": 720,
+     "sha256": "9996932baf6fab476e44305bc8d3dfdfee73f330b558cfe632acb6643decb72c",
+     "pxPerMm": 11.6758,
+     "anchor": {
+      "x": 145.5,
+      "y": -107
+     },
+     "z": "behind-body",
+     "explodeIndex": 0,
+     "solidBottomY": 713
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 23, Layer 26 (bottle photo, the tube seen through Clear glass)",
+     "file": "CMP-DRP-WTSL-20400-76--pipette-clear.png",
+     "width": 91,
+     "height": 721,
+     "sha256": "33d2568f77769ac03ced1220d46fd7abe03a5e42a0306bf49058241fa70694ad",
+     "pxPerMm": 11.6758,
+     "anchor": {
+      "x": 35.5,
+      "y": -106
+     },
+     "z": "front",
+     "explodeIndex": 0,
+     "glass": "Clear"
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 280,
+    "splitRow": 583,
+    "retouchTrimmed": {
+     "fromRowUnderRimMm": 9.59,
+     "px": 282
+    },
+    "recentredMm": [
+     [
+      "fitment",
+      0.771
+     ],
+     [
+      "pipette",
+      0.771
+     ],
+     [
+      "pipette",
+      0.771
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "CMP-DRP-WTSL-20400-90",
+   "websiteSku": "Drp20-4002ozlShnSlTrimWhiteBulb",
+   "type": "dropper",
+   "psd": "20. Caps/3. 20-400 Droppers/18. DRP20-4002ozlShnSlTrimWhiteBulb.psd",
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/14. GBBstn2ozWhtDropperShnSlTrim.psd",
+    "sku": "GBBstn2ozWhtDrprShnSlTrim",
+    "bodyId": "boston-round-60ml-20-400",
+    "glass": "Clear",
+    "plateKey": "boston-round-60ml-20-400|Clear",
+    "bottlePxPerMm": 11.8387,
+    "rimY": 315,
+    "axisX": 300.0,
+    "seatToFootPx": 1155,
+    "plateSeatToFootPx": 1733,
+    "bodyLayer": "Layer 6"
+   },
+   "layers": [
+    {
+     "slot": "fitment",
+     "layerName": "Layer 7, Layer 11 (bottle photo)",
+     "file": "CMP-DRP-WTSL-20400-90--fitment.png",
+     "width": 325,
+     "height": 380,
+     "sha256": "eaa4d095aeb763a973030d6054ea1d75f6b9656a12bdf62992939bef1bc35913",
+     "pxPerMm": 11.8387,
+     "anchor": {
+      "x": 171.0,
+      "y": 252
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 374
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 7, Layer 11 (bottle photo, below the collar from row 472)",
+     "file": "CMP-DRP-WTSL-20400-90--pipette.png",
+     "width": 252,
+     "height": 866,
+     "sha256": "df14cd969b7aa4ffa2ac64149d5815522ea4abfd57617129d793c7a1ee45b2fc",
+     "pxPerMm": 11.8387,
+     "anchor": {
+      "x": 149.0,
+      "y": -151
+     },
+     "z": "behind-body",
+     "explodeIndex": 0,
+     "solidBottomY": 858
+    },
+    {
+     "slot": "pipette",
+     "layerName": "Layer 7, Layer 11 (bottle photo, the tube seen through Clear glass)",
+     "file": "CMP-DRP-WTSL-20400-90--pipette-clear.png",
+     "width": 109,
+     "height": 901,
+     "sha256": "9be4f5f59981392d063f8ff942dbc1127700f594ef89f18eb996f3a3d7d66ae2",
+     "pxPerMm": 11.8387,
+     "anchor": {
+      "x": 56.0,
+      "y": -116
+     },
+     "z": "front",
+     "explodeIndex": 0,
+     "glass": "Clear"
+    }
+   ],
+   "checks": {
+    "status": "cut from the bottle photo",
+    "approvable": true,
+    "collarWidthPx": 302,
+    "splitRow": 472,
+    "retouchTrimmed": {
+     "fromRowUnderRimMm": 10.31,
+     "px": 8678
+    },
+    "recentredMm": [
+     [
+      "fitment",
+      -0.169
+     ],
+     [
+      "pipette",
+      -0.169
+     ],
+     [
+      "pipette",
+      -0.169
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "CMP-ROC-MBLK-20400-T",
+   "websiteSku": "CPRoll20-400TallMattBlk",
+   "type": "roll-on-cap",
+   "psd": "20. Caps/1. 20-400 Roll on caps /Roll on caps/25. CPRoll20-400TallMattBlk.psd",
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/3. GBBstn1ozMtlRollonMattBlk.psd",
+    "sku": "GBBstn1ozMtlRollonMattBlk",
+    "bodyId": "boston-round-30ml-20-400",
+    "glass": "Clear",
+    "plateKey": "boston-round-30ml-20-400|Clear",
+    "bottlePxPerMm": 11.6758,
+    "rimY": 487,
+    "axisX": 457.5,
+    "seatToFootPx": 946,
+    "plateSeatToFootPx": 1968,
+    "bodyLayer": "Layer 22",
+    "matchedLayers": [
+     "Layer 29"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 8",
+     "file": "CMP-ROC-MBLK-20400-T--0-cap.png",
+     "width": 306,
+     "height": 481,
+     "sha256": "59c27a9edea1d7284b1e1b485f30e719fb0313982203dd523a32f8fde66765df",
+     "pxPerMm": 11.7162,
+     "anchor": {
+      "x": 153.5,
+      "y": 226.8
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 473
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9935,
+    "libraryScale": 1.0035,
+    "approvable": true,
+    "recentredMm": [
+     [
+      "cap",
+      0.128
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "CMP-ROC-MGLD-20400-T",
+   "websiteSku": "CPRoll20-400TallMattGl",
+   "type": "roll-on-cap",
+   "psd": "20. Caps/1. 20-400 Roll on caps /Roll on caps/21. CPRoll20-400TallMattGl.psd",
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/5. GBBstn1ozMtlRollonMattGl.psd",
+    "sku": "GBBstn1ozMtlRollonMattGl",
+    "bodyId": "boston-round-30ml-20-400",
+    "glass": "Clear",
+    "plateKey": "boston-round-30ml-20-400|Clear",
+    "bottlePxPerMm": 11.6758,
+    "rimY": 483,
+    "axisX": 463.5,
+    "seatToFootPx": 946,
+    "plateSeatToFootPx": 1968,
+    "bodyLayer": "Layer 22",
+    "matchedLayers": [
+     "Layer 30"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 8",
+     "file": "CMP-ROC-MGLD-20400-T--0-cap.png",
+     "width": 322,
+     "height": 472,
+     "sha256": "6a2d6d0a50e3608b6e94698f03cc753981073afdce0207ae69c31a72bd79a591",
+     "pxPerMm": 11.6758,
+     "anchor": {
+      "x": 158.0,
+      "y": 233.0
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 458
+    }
+   ],
+   "checks": {
+    "registrationIoU": 1.0,
+    "libraryScale": 1.0,
+    "approvable": true,
+    "recentredMm": [
+     [
+      "cap",
+      0.642
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "CMP-ROC-MSLV-20400-T",
+   "websiteSku": "CPRoll20-400TallMattSl",
+   "type": "roll-on-cap",
+   "psd": "20. Caps/1. 20-400 Roll on caps /Roll on caps/20. CPRoll20-400TallMattSl.psd",
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/1. GBBstn1ozMtlRollonMattSl.psd",
+    "sku": "GBBstn1ozMtlRollonMattSl",
+    "bodyId": "boston-round-30ml-20-400",
+    "glass": "Clear",
+    "plateKey": "boston-round-30ml-20-400|Clear",
+    "bottlePxPerMm": 11.6758,
+    "rimY": 483,
+    "axisX": 464.5,
+    "seatToFootPx": 946,
+    "plateSeatToFootPx": 1968,
+    "bodyLayer": "Layer 22",
+    "matchedLayers": [
+     "Layer 26"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 4",
+     "file": "CMP-ROC-MSLV-20400-T--0-cap.png",
+     "width": 305,
+     "height": 444,
+     "sha256": "2c113f753401da07dba95940d10f2096ae23de2a725a402a56265f1ffd252d8f",
+     "pxPerMm": 11.6347,
+     "anchor": {
+      "x": 155.0,
+      "y": 207.3
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 433
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9959,
+    "libraryScale": 0.9965,
+    "approvable": true,
+    "recentredMm": [
+     [
+      "cap",
+      0.258
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "CMP-ROC-SBLK-20400-T",
+   "websiteSku": "CPRoll20-400TallShnBlk",
+   "type": "roll-on-cap",
+   "psd": null,
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/19. GBBstn1ozRollShBlk.psd",
+    "sku": "GBBstn1ozRollShBlk",
+    "bodyId": "boston-round-30ml-20-400",
+    "glass": "Clear",
+    "plateKey": "boston-round-30ml-20-400|Clear",
+    "bottlePxPerMm": 11.6758,
+    "rimY": 483,
+    "axisX": 451.5,
+    "seatToFootPx": 946,
+    "plateSeatToFootPx": 1968,
+    "bodyLayer": "Layer 22"
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 35 (capped bottle photo)",
+     "file": "CMP-ROC-SBLK-20400-T--cap.png",
+     "width": 303,
+     "height": 481,
+     "sha256": "29eff31ea076e47407b931f3e7bf3e9b59c904ee08ea31ff719225fbbc2c5046",
+     "pxPerMm": 11.6758,
+     "anchor": {
+      "x": 150.5,
+      "y": 228
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 471
+    }
+   ],
+   "checks": {
+    "status": "cut from the capped Boston Round photo (cut_boston_parts.py)",
+    "approvable": true,
+    "whiteGroundClearedPx": {
+     "body": 6260,
+     "part": 73
+    },
+    "specksCleared": 0,
+    "libraryNotUsed": "23. CPRoll20-400TallShnBlk.psd is a wider, squatter cap than the photographed one (IoU 0.66)",
+    "recentredMm": [
+     [
+      "cap",
+      0.086
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "CMP-ROC-SGLD-20400-T",
+   "websiteSku": "CPRoll20-400TallShnGl",
+   "type": "roll-on-cap",
+   "psd": "20. Caps/1. 20-400 Roll on caps /Roll on caps/22. CPRoll20-400TallShnGl.psd",
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/4. GBBstn1ozMtlRollonGl.psd",
+    "sku": "GBBstn1ozMtlRollonGl",
+    "bodyId": "boston-round-30ml-20-400",
+    "glass": "Clear",
+    "plateKey": "boston-round-30ml-20-400|Clear",
+    "bottlePxPerMm": 11.6758,
+    "rimY": 483,
+    "axisX": 454.5,
+    "seatToFootPx": 946,
+    "plateSeatToFootPx": 1968,
+    "bodyLayer": "Layer 22",
+    "matchedLayers": [
+     "Layer 29"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 7",
+     "file": "CMP-ROC-SGLD-20400-T--0-cap.png",
+     "width": 316,
+     "height": 470,
+     "sha256": "ab39a16dd6d379d79ad614b08970f4461218ca3782dee78c93668c5f6313727f",
+     "pxPerMm": 11.7547,
+     "anchor": {
+      "x": 157.0,
+      "y": 232.5
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 460
+    }
+   ],
+   "checks": {
+    "registrationIoU": 0.9869,
+    "libraryScale": 1.0068,
+    "approvable": true,
+    "recentredMm": [
+     [
+      "cap",
+      0.553
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "CMP-ROC-SSLV-20400-T",
+   "websiteSku": "CPRoll20-400TallShnSl",
+   "type": "roll-on-cap",
+   "psd": "20. Caps/1. 20-400 Roll on caps /Roll on caps/26. CPRoll20-400TallShnSl.psd",
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/2. GBBstn1ozMtlRollonShnSl.psd",
+    "sku": "GBBstn1ozMtlRollonShnSl",
+    "bodyId": "boston-round-30ml-20-400",
+    "glass": "Clear",
+    "plateKey": "boston-round-30ml-20-400|Clear",
+    "bottlePxPerMm": 11.6758,
+    "rimY": 483,
+    "axisX": 458.5,
+    "seatToFootPx": 946,
+    "plateSeatToFootPx": 1968,
+    "bodyLayer": "Layer 22",
+    "matchedLayers": [
+     "Layer 27"
+    ]
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "Layer 5",
+     "file": "CMP-ROC-SSLV-20400-T--0-cap.png",
+     "width": 312,
+     "height": 449,
+     "sha256": "a1e8c6e42f2d7d114ce464f52d040ffa61a7ace11f4bb24f0c5a42748afa79a4",
+     "pxPerMm": 11.6758,
+     "anchor": {
+      "x": 156.5,
+      "y": 213.0
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 436
+    }
+   ],
+   "checks": {
+    "registrationIoU": 1.0,
+    "libraryScale": 1.0,
+    "approvable": true,
+    "recentredMm": [
+     [
+      "cap",
+      0.514
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "LIB-20-400-MtlRollon",
+   "websiteSku": "",
+   "type": "roller-insert",
+   "psd": null,
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/1. Amber Bottle (1oz)/Amber - Alternating Caps/2. GBBstnAmb1ozMtlRollonShnSl.psd",
+    "sku": "GBBstnAmb1ozMtlRollonShnSl",
+    "bodyId": "boston-round-30ml-20-400",
+    "glass": "Amber",
+    "plateKey": "boston-round-30ml-20-400|Amber",
+    "bottlePxPerMm": 11.6882,
+    "rimY": 515,
+    "axisX": 279.0,
+    "seatToFootPx": 947,
+    "plateSeatToFootPx": 1968,
+    "bodyLayer": "Layer 5"
+   },
+   "layers": [
+    {
+     "slot": "roller",
+     "layerName": "Layer 7 (uncapped bottle photo, white patch cleared, cleared from 3 px below the rim)",
+     "file": "LIB-20-400-MtlRollon--roller.png",
+     "width": 220,
+     "height": 166,
+     "sha256": "655ee3b81fb3254a98e868d6a62299eb34036994444c2b822c1bdea1bf8440c6",
+     "pxPerMm": 11.6882,
+     "anchor": {
+      "x": 108.0,
+      "y": 157
+     },
+     "z": "behind-body",
+     "explodeIndex": 0,
+     "solidBottomY": 160
+    }
+   ],
+   "checks": {
+    "status": "cut from the uncapped Boston Round photo (cut_boston_parts.py)",
+    "approvable": true,
+    "whiteGroundClearedPx": {
+     "body": 618466,
+     "part": 20668
+    },
+    "specksCleared": 20,
+    "clippedBelowRimPx": 3,
+    "recentredMm": [
+     [
+      "roller",
+      0.342
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "LIB-20-400-PlsticRollon",
+   "websiteSku": "",
+   "type": "roller-insert",
+   "psd": null,
+   "reference": {
+    "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/1. Amber Bottle (1oz)/Amber - Alternating Caps/7. GBBstnAmb1ozRollonShnSl.psd",
+    "sku": "GBBstnAmb1ozRollonShnSl",
+    "bodyId": "boston-round-30ml-20-400",
+    "glass": "Amber",
+    "plateKey": "boston-round-30ml-20-400|Amber",
+    "bottlePxPerMm": 11.6882,
+    "rimY": 515,
+    "axisX": 279.0,
+    "seatToFootPx": 947,
+    "plateSeatToFootPx": 1968,
+    "bodyLayer": "Layer 5"
+   },
+   "layers": [
+    {
+     "slot": "roller",
+     "layerName": "Layer 13 (uncapped bottle photo, white patch cleared, cleared from 3 px below the rim)",
+     "file": "LIB-20-400-PlsticRollon--roller.png",
+     "width": 222,
+     "height": 172,
+     "sha256": "4a7c27668a1c9cf706a3e72ff5a83f41d557554c44b25cfad8aa838e9981b0f1",
+     "pxPerMm": 11.6882,
+     "anchor": {
+      "x": 110.0,
+      "y": 163
+     },
+     "z": "behind-body",
+     "explodeIndex": 0,
+     "solidBottomY": 166
+    }
+   ],
+   "checks": {
+    "status": "cut from the uncapped Boston Round photo (cut_boston_parts.py)",
+    "approvable": true,
+    "whiteGroundClearedPx": {
+     "body": 618466,
+     "part": 309
+    },
+    "specksCleared": 0,
+    "clippedBelowRimPx": 3,
+    "recentredMm": [
+     [
+      "roller",
+      0.257
+     ]
+    ]
+   }
+  }
+ ]
+}

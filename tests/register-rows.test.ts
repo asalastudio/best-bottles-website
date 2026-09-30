@@ -48,7 +48,7 @@ describe("the committed register shapes cleanly for Convex", () => {
         const parts = rows.components.filter(c => c.componentId.startsWith("LIB-"));
         expect(parts.map(p => p.componentId).sort()).toEqual([
             "LIB-13-415-MtlRollon", "LIB-13-415-PlsticRollon", "LIB-14.3mm-Plug", "LIB-17-415-MtlRollon", "LIB-17-415-PlsticRollon", "LIB-18-415-Reducer",
-            "LIB-18-415-ShnBlkCap",
+            "LIB-18-415-ShnBlkCap", "LIB-20-400-MtlRollon", "LIB-20-400-PlsticRollon",
         ]);
         for (const part of parts) {
             expect(part.sellable).toBe(false);
@@ -86,9 +86,26 @@ describe("the committed register shapes cleanly for Convex", () => {
 
     it("never builds an assembly outside the validated necks", () => {
         // The own-part rules written so far (BUILD_RULE_NECKS in scripts/register/build_register.py): the 17-415 pilot,
-        // 18-415 and the 14.3 mm Tola plug (2026-09-25), 13-415 (2026-09-26).
+        // 18-415 and the 14.3 mm Tola plug (2026-09-25), 13-415 (2026-09-26), the Boston Round 20-400 (2026-09-29).
         const built = rows.assemblies.filter(a => a.build.status !== "unresolved");
-        expect(new Set(built.map(a => a.neck))).toEqual(new Set(["13-415", "17-415", "18-415", "14.3mm"]));
+        expect(new Set(built.map(a => a.neck))).toEqual(new Set(["13-415", "17-415", "18-415", "14.3mm", "20-400"]));
+    });
+
+    it("builds every Boston Round 20-400 bottle from its own parts", () => {
+        const boston = rows.assemblies.filter(a => a.neck === "20-400");
+        expect(boston).toHaveLength(108);
+        expect(boston.filter(a => a.build.status === "resolved")).toHaveLength(108);
+        const parts = (sku: string) => rows.assemblies.find(a => a.websiteSku === sku)?.build.parts.map(p => p.componentId);
+        // A roll-on: its roller material's insert under the named tall cap.
+        expect(parts("GBBstn1ozRollonShnSl")).toEqual(["LIB-20-400-PlsticRollon", "CMP-ROC-SSLV-20400-T"]);
+        expect(parts("GBBstnBlu2ozMtlRollonShnSl")).toEqual(["LIB-20-400-MtlRollon", "CMP-ROC-SSLV-20400-T"]);
+        // A bare "Blk" or "Gl" names the shiny cap: the photos show shiny caps (Jordan 2026-09-29).
+        expect(parts("GBBstn1ozMtlRollonBlk")).toEqual(["LIB-20-400-MtlRollon", "CMP-ROC-SBLK-20400-T"]);
+        expect(parts("GBBstnAmb1ozRollonGl")).toEqual(["LIB-20-400-PlsticRollon", "CMP-ROC-SGLD-20400-T"]);
+        // A dropper is one part, sized to its bottle; the short black cap is the size's own.
+        expect(parts("GBBstn2ozBlkDrpr")).toEqual(["CMP-DRP-BLK-20400-90"]);
+        expect(parts("GBBstn1ozBlkDrp")).toEqual(["CMP-DRP-BLK-20400-76MM-01"]);
+        expect(parts("GBBstnAmb1ozBlkCapSht")).toEqual(["CMP-CAP-BLK-20-400-1OZ"]);
     });
 
     it("builds a 13-415 roll-on from its SKU: the roller material's insert under the named cap", () => {

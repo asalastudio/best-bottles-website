@@ -5,7 +5,7 @@ Source: Convex prod export (2485 rows, collected 2026-09-29T09:07:45Z), PSD libr
 ## Totals
 
 - Bodies: **93 current** (0 retired-only) across 32 neck groups
-- Components: **149 current**, 0 retired, 15 quarantined; **129 current components have a library PSD** (16 via alias-map, 34 case-insensitive)
+- Components: **151 current**, 0 retired, 15 quarantined; **129 current components have a library PSD** (16 via alias-map, 34 case-insensitive)
 - Assemblies: **2107 verified**, **109 candidate**, **55 quarantine**, **2 retired**, **2 exception**
 - Quarantine rows: 120 (see quarantine.csv)
 - Register ids kept across catalogue re-keys: **24** (the layers stay attached; see below)
@@ -36,7 +36,7 @@ Source: Convex prod export (2485 rows, collected 2026-09-29T09:07:45Z), PSD libr
 | 18-400 | 2 | 3 | 8 | 17 | 1 | 0 | 0 | 0 |
 | 18-415 | 23 | 2 | 49 | 1226 | 47 | 0 | 2 | 0 |
 | 18mm | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 0 |
-| 20-400 | 2 | 3 | 20 | 108 | 0 | 0 | 0 | 0 |
+| 20-400 | 2 | 3 | 22 | 108 | 0 | 0 | 0 | 0 |
 | 20-410 | 5 | 1 | 0 | 0 | 7 | 0 | 0 | 0 |
 | 20mm | 1 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | 22-400 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
@@ -97,7 +97,7 @@ The matrices counted **Glass Bottle** records only; the register also carries at
 - ⚠️ 18-415: current bottle rows 1275 vs matrix 1265
 - ⚠️ 18-415: component records 49 vs matrix 64
   - the 23rd 18-415 body is `cylinder-30ml-18-415`: the two fixed-spray exception SKUs, which the matrix keeps in its dashed card
-- ⚠️ 20-400: bottles 108 vs matrix 107; components 20 vs 20
+- ⚠️ 20-400: bottles 108 vs matrix 107; components 22 vs 20
 - ✅ 16mm: assemblies 8 vs matrix 8 — by body: cylinder-28ml-16mm 4, cylinder-50ml-16mm 4
 - ✅ 13-425: bottle rows 16 vs matrix 16
 - ✅ 8-425: bottle rows 4 vs matrix 4
@@ -114,18 +114,19 @@ The matrices counted **Glass Bottle** records only; the register also carries at
 | 17-415 |  |  | 1 |  | 6 | 3 |  |  |  | 10 | 2 |  |  |
 | 18-400 | 2 |  | 6 |  |  |  |  |  |  |  |  |  |  |
 | 18-415 | 7 |  | 3 | 5 | 8 | 7 |  | 1 |  |  |  | 9 | 9 |
-| 20-400 | 2 |  | 12 |  |  |  |  |  |  | 6 |  |  |  |
+| 20-400 | 2 |  | 12 |  |  |  |  |  |  | 6 | 2 |  |  |
 | 22-400 | 1 |  |  |  |  |  |  |  |  |  |  |  |  |
 | 24-400 | 1 |  |  |  |  |  |  |  |  |  |  |  |  |
 | 8-425 | 5 |  |  |  |  |  |  |  |  |  |  |  |  |
 
-## Library gaps — 20 current components with no PSD in 20. Caps / 21. Tassels
+## Library gaps — 22 current components with no PSD in 20. Caps / 21. Tassels
 
 - **13-415** (10): CP13-415BlkShShtMtl [cap], CP13-415CuSht [cap], CP13-415GlMattSht [cap], CP13-415GlSht [cap], CP13-415SlMattSht [cap], CP13-415SlSht [cap], 13-415CAP4SpryCuMt [fine-mist-sprayer], 13-415CAP4SpryGlSh [fine-mist-sprayer], 13-415CAP4SprySlMt [fine-mist-sprayer], GBATom5RedBurg [fine-mist-sprayer]
 - **13-425** (2): CP13-425Blk [cap], CP13-425Wht [cap]
 - **14.3mm** (1): LIB-14.3mm-Plug [plug-applicator]
 - **17-415** (3): Droppers1ozElg [dropper], LIB-17-415-MtlRollon [roller-insert], LIB-17-415-PlsticRollon [roller-insert]
 - **18-415** (2): 18-415CAP4SpryMtGl [fine-mist-sprayer], 18-415CAP4SpryShnBlk [fine-mist-sprayer]
+- **20-400** (2): LIB-20-400-MtlRollon [roller-insert], LIB-20-400-PlsticRollon [roller-insert]
 - **22-400** (1): CapBlackPoly22mm-400 [cap]
 - **24-400** (1): CP24-400BlkPls [cap]
 
@@ -141,7 +142,7 @@ The matrices counted **Glass Bottle** records only; the register also carries at
 | Convex websiteSku | library stem | folder(s) | match |
 |---|---|---|---|
 
-## Own-part builds — rules written for 13-415, 14.3mm, 17-415, 18-415
+## Own-part builds — rules written for 13-415, 14.3mm, 17-415, 18-415, 20-400
 
 Each sellable assembly names the parts it is physically made of (`buildParts`), matched uniquely on neck, component type, cap colour and dotted/plain. Roller balls add the neck's roller insert. A row that does not match exactly one part stays `unresolved` with the reason; nothing is guessed (Jordan 2026-09-25: wording errors wait for Convex corrections).
 
@@ -149,6 +150,8 @@ Each sellable assembly names the parts it is physically made of (`buildParts`), 
 |---|---|---|---|
 | atomizer-5ml-13-415 | 0 | 0 | 9 |
 | bell-10ml-13-415 | 4 | 0 | 0 |
+| boston-round-30ml-20-400 | 53 | 0 | 0 |
+| boston-round-60ml-20-400 | 55 | 0 | 0 |
 | circle-100ml-18-415 | 86 | 0 | 0 |
 | circle-15ml-13-415 | 36 | 0 | 0 |
 | circle-50ml-18-415 | 91 | 0 | 0 |

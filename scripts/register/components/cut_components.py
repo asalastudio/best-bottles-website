@@ -42,8 +42,12 @@ ROOT = Path(__file__).resolve().parents[3]
 REGISTER = ROOT / "data" / "register"
 INVENTORY = json.loads((ROOT / "data" / "paper-doll" / "component-library-inventory.json").read_text())
 PSD_ROOT = Path(INVENTORY["root"])
-BOTTLE_FOLDERS = {"18-415": PSD_ROOT / "2.  18-415 Bottles ", "13-415": PSD_ROOT / "5.  13-415 Bottles"}
+BOTTLE_FOLDERS = {"18-415": PSD_ROOT / "2.  18-415 Bottles ", "13-415": PSD_ROOT / "5.  13-415 Bottles",
+                  # the Boston Round 30 and 60 mL (2026-09-29); the folder also holds the 15 mL 18-400 masters, which no 20-400 SKU names
+                  "20-400": PSD_ROOT / "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round"}
 ALPHA = 128
+# Parts another script cuts: this one skips them and keeps their entries, even on a full run.
+OWN_CUTTER = {"20-400": ({"LIB-20-400-MtlRollon", "LIB-20-400-PlsticRollon", "CMP-ROC-SBLK-20400-T"}, "scripts/register/components/cut_boston_parts.py")}
 MIN_IOU_APPROVABLE = 0.90
 SLOT_BY_TYPE = {"roll-on-cap": "cap", "cap": "cap", "faux-leather-cap": "cap", "fine-mist-sprayer": "sprayer", "lotion-pump": "pump",
                 "vintage-bulb-sprayer": "sprayer", "tassel-bulb-sprayer": "sprayer", "dropper": "fitment", "reducer": "reducer", "roller-insert": "roller"}
@@ -300,6 +304,46 @@ def split_below_collar(img: Image.Image, rim: int, axis: float) -> tuple[Image.I
     return Image.fromarray(above_a), Image.fromarray(below_a), split, collar_w
 
 
+def trim_under_collar(img: Image.Image, rim: int, px_per_mm: float) -> tuple[Image.Image, int | None, int]:
+    """The Boston Round dropper masters (20-400) carry a soft white retouch patch under the collar, the same pixels on
+    every 60 mL master. It is as wide as the collar, so split_below_collar keeps it in front of the glass, and on amber
+    or cobalt it drew as a pale band under the collar (2026-09-29). The collar is solid down to its bottom edge (about
+    10 mm under the rim on both sizes) and the patch is not: the layer is cleared from the first row, 8 mm or more under
+    the rim, where fewer than 60% of the collar's fully opaque width remains. Returns the image, that row and the pixels
+    cleared."""
+    a = np.asarray(img).copy()
+    full = (a[..., 3] >= 250).sum(axis=1)
+    collar = float(np.median(full[rim + 2: rim + int(6 * px_per_mm)]))
+    for y in range(rim + int(8 * px_per_mm), a.shape[0]):
+        if full[y] < 0.6 * collar:
+            cleared = int((a[y:, :, 3] > 0).sum())
+            a[y:, :, 3] = 0
+            return Image.fromarray(a), y, cleared
+    return img, None, 0
+
+
+def see_through_tube(img: Image.Image, top_row: int, axis: float, rim: int, px_per_mm: float) -> Image.Image | None:
+    """The pipette as a Clear bottle's photo shows it through the glass, for a layer drawn in front of the Clear plate
+    only (the register's plates are opaque, so the pipette behind them never shows; on amber and cobalt it does not
+    show in the photos either). Only the tube's own column is kept, its width measured 20-40 mm under the rim where
+    nothing else is, from the collar's bottom edge down to the tip: the retouch haze beside it stays out."""
+    a = np.asarray(img).copy()
+    ax = int(round(axis))
+    halves = []
+    for y in range(rim + int(20 * px_per_mm), min(a.shape[0], rim + int(40 * px_per_mm))):
+        xs = np.where(a[y, :, 3] > ALPHA)[0]
+        xs = xs[np.abs(xs - ax) < 12 * px_per_mm]
+        if len(xs):
+            halves.append(max(ax - xs.min(), xs.max() - ax))
+    if not halves:
+        return None
+    half = int(np.median(halves)) + 2
+    keep = np.zeros(a.shape[:2], dtype=bool)
+    keep[top_row:, max(0, ax - half): ax + half + 1] = True
+    a[~keep, 3] = 0
+    return Image.fromarray(a) if (a[..., 3] > 0).sum() > 50 else None
+
+
 def iou_after_fit(lib: np.ndarray, ref: np.ndarray) -> tuple[float, float, tuple[float, float]]:
     """Scale lib's silhouette to ref's bbox width, align bbox bottoms and centres; (IoU, scale, lib->ref offset)."""
     ll, lt, lr, lb = box(lib)
@@ -322,13 +366,22 @@ def sku_of(path: Path) -> str:
     return re.sub(r"\s+copy$", "", re.sub(r"^\d+\.\s*", "", path.stem).strip())
 
 
+def master_key(sku: str, neck: str) -> str:
+    """The key a master is filed under. The Boston Round masters spell the SKUs their own way ("GBBstn2ozWhtDropper",
+    "GBBstn1ozRollMattGl" for the catalogue's "GBBstn2ozWhtDrpr" and "GBBstn1ozRollonMattGl"), so on 20-400 the dropper and
+    roller words are read as one."""
+    if neck != "20-400":
+        return sku
+    return re.sub(r"Rollon", "Roll", re.sub(r"Dropper|Drpr", "Drp", sku))
+
+
 def index_masters(neck: str) -> dict[str, list[Path]]:
     """Every per-SKU master under the neck's bottle tree, by website SKU (side views and cap sheets excluded)."""
     files: dict[str, list[Path]] = {}
     for p in sorted(BOTTLE_FOLDERS[neck].rglob("*.psd")):
-        if any(word in str(p).lower() for word in ("sideview", "side view", "18415 caps", "caps 13-415", "capped images", "thumbnail")):
+        if any(word in str(p).lower() for word in ("sideview", "side view", "18415 caps", "caps 13-415", "capped images", "thumbnail", "high res caps")):
             continue
-        files.setdefault(sku_of(p), []).append(p)
+        files.setdefault(master_key(sku_of(p), neck), []).append(p)
     return files
 
 
@@ -404,6 +457,11 @@ def main() -> int:
     for cid in todo:
         c = comps[cid]
         ctype = c["type"]
+        if cid in OWN_CUTTER.get(neck, (set(), ""))[0]:
+            # the Boston Round inserts sit on white masking shapes, as do their bodies, and the library's tall shiny
+            # black cap is not the photographed one: cut_boston_parts.py cuts these three
+            print(f"{cid:26} {ctype:20} skipped here ({OWN_CUTTER[neck][1]})")
+            continue
         primary = SLOT_BY_TYPE.get(ctype, "fitment")
         entry = {"componentId": cid, "websiteSku": c["websiteSku"], "type": ctype, "psd": f"{c['psdLibrary']}/{c['psdPath']}" if c["psdPath"] else None,
                  "reference": None, "layers": [], "checks": {}}
@@ -412,9 +470,9 @@ def main() -> int:
         chosen = None
         for body_id, glass, sku in cands:
             plate = plates.get((body_id, glass))
-            if not plate or sku not in masters:
+            if not plate or master_key(sku, neck) not in masters:
                 continue
-            refs = [r for r in (open_ref(p) for p in masters[sku]) if r and r.usable]
+            refs = [r for r in (open_ref(p) for p in masters[master_key(sku, neck)]) if r and r.usable]
             if not refs:
                 continue
             exposed = next((r for r in refs if r.exposed), None)
@@ -464,6 +522,9 @@ def main() -> int:
                 continue
             img = canvas_of(ref.psd, ref.closure)
             above, below, split_row, collar_w = split_below_collar(img, ref.bm["rim"], ref.bm["axisX"])
+            trimmed_row, trimmed_px = None, 0
+            if neck == "20-400" and ctype == "dropper":
+                above, trimmed_row, trimmed_px = trim_under_collar(above, ref.bm["rim"], ref_px_per_mm)
             layer_names = ", ".join(l.name for l in ref.closure)
             name = f"{cid}--{primary}.png"
             cut, ox, oy = crop_save(above, out_dir / name)
@@ -477,7 +538,16 @@ def main() -> int:
                 entry["layers"].append({"slot": bslot, "layerName": layer_names + f" (bottle photo, below the collar from row {split_row})", "file": bname, "width": bcut.width, "height": bcut.height,
                                         "sha256": sha(bcut), "pxPerMm": round(ref_px_per_mm, 4), "anchor": {"x": round(ref.bm["axisX"] - bx, 1), "y": round(ref.bm["rim"] - by, 1)},
                                         "z": "behind-body", "explodeIndex": 0})
+            if trimmed_row is not None and glass == "Clear" and (tube := see_through_tube(img, trimmed_row, ref.bm["axisX"], ref.bm["rim"], ref_px_per_mm)):
+                # the Boston Round's clear photos show the pipette through the glass; today's pages show it too (2026-09-29)
+                tname = f"{cid}--pipette-clear.png"
+                tcut, tx, ty = crop_save(tube, out_dir / tname)
+                entry["layers"].append({"slot": BELOW_SLOT.get(ctype, "diptube"), "layerName": layer_names + " (bottle photo, the tube seen through Clear glass)", "file": tname,
+                                        "width": tcut.width, "height": tcut.height, "sha256": sha(tcut), "pxPerMm": round(ref_px_per_mm, 4),
+                                        "anchor": {"x": round(ref.bm["axisX"] - tx, 1), "y": round(ref.bm["rim"] - ty, 1)}, "z": "front", "explodeIndex": 0, "glass": "Clear"})
             entry["checks"] = {"status": "cut from the bottle photo", "approvable": True, "collarWidthPx": collar_w, "splitRow": split_row}
+            if trimmed_row is not None:
+                entry["checks"]["retouchTrimmed"] = {"fromRowUnderRimMm": round((trimmed_row - ref.bm["rim"]) / ref_px_per_mm, 2), "px": trimmed_px}
             if (moved := recentre(entry, out_dir)):
                 entry["checks"]["recentredMm"] = moved
             review.append((f"{cid} · photo cut · {sku}", cut, None, ctype))
@@ -576,12 +646,16 @@ def main() -> int:
         if entry["type"] in OFF_AXIS_TYPES:  # a bulb and hose hang beside the bottle: not a reach down the neck
             continue
         for layer in entry["layers"]:
+            if layer.get("glass"):  # seen through the glass, not a closure down the neck: its tip would lift the whole top
+                continue
             layer["solidBottomY"] = solid_bottom(Image.open(out_dir / layer["file"]).convert("RGBA"))
     measure_path.parent.mkdir(parents=True, exist_ok=True)
-    if only and measure_path.exists():  # a partial run replaces only the components it processed
+    if measure_path.exists():  # a partial run replaces only the components it processed; another script's parts always stay
         previous = json.loads(measure_path.read_text())
         done = {c["componentId"] for c in result["components"]}
-        result["components"] = sorted([c for c in previous.get("components", []) if c["componentId"] not in done] + result["components"], key=lambda c: c["componentId"])
+        owned = OWN_CUTTER.get(neck, (set(), ""))[0]
+        kept = [c for c in previous.get("components", []) if c["componentId"] not in done and (only or c["componentId"] in owned)]
+        result["components"] = sorted(kept + result["components"], key=lambda c: c["componentId"])
     measure_path.write_text(json.dumps(result, indent=1) + "\n")
 
     # review sheet: photo closure | registered library outline over it | (or the photo cut alone)
