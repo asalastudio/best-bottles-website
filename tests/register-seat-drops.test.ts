@@ -26,8 +26,11 @@ describe("closure seat drops (caps rest on the shoulder, Jordan 2026-09-30)", ()
         if (!signature) return;
         expect(closureDropMm(signature)).toBe(entry.dropMm);
         setSeatDropsEnabled(false);
-        expect(closureDropMm(signature)).toBe(0);
-        setSeatDropsEnabled(true);
+        try {
+            expect(closureDropMm(signature)).toBe(0);
+        } finally {
+            setSeatDropsEnabled(true);
+        }
     });
 
     it("never lowers a closure by more than the audit allows", () => {

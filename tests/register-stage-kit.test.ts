@@ -215,6 +215,32 @@ describe("9 mL Cylinder promoted-layer reconciliation", () => {
     });
 });
 
+describe("9 mL Cylinder body-scoped Blender layers (Jordan 2026-09-30)", () => {
+    const own = (component: typeof CAP | typeof ROLLER) => ({
+        ...component,
+        layers: [
+            ...component.layers,  // the shared crops stay in the row; the body draws only its own
+            ...component.layers.map((layer) => ({ ...layer, url: layer.url.replace(".png", "-blender.png"), bodyId: "cylinder-9ml-17-415" })),
+        ],
+    });
+    const payload: RegisterStagePayload = { ...PAYLOAD, components: { ...PAYLOAD.components, [CAP.componentId]: own(CAP), [ROLLER.componentId]: own(ROLLER) } };
+
+    it("draws the body's own layers as they are, with no pilot pin", () => {
+        const kit = kitFromRegister("GB-CYL-CLR-9ML-MRL-BKDT", payload)!;
+        expect(kit.register.bodyLayers).toBe(true);
+        expect(reconcileCylinder9Kit(kit)).toBe(kit);
+        expect(kit.parts.filter((part) => part.componentId).map((part) => part.image.url).sort())
+            .toEqual(["https://blob/register/components/cap-blender.png", "https://blob/register/components/roller-blender.png"]);
+    });
+
+    it("keeps the pin for a kit that still mixes in the shared crops", () => {
+        const mixed: RegisterStagePayload = { ...PAYLOAD, components: { ...PAYLOAD.components, [CAP.componentId]: own(CAP) } };
+        const kit = kitFromRegister("GB-CYL-CLR-9ML-MRL-BKDT", mixed)!;
+        expect(kit.register.bodyLayers).toBeUndefined();
+        expect(reconcileCylinder9Kit(kit)).toBeNull();
+    });
+});
+
 describe("Elegant photographed body stand-ins", () => {
     it("keeps one photo body aligned across cap swaps while preserving register components", () => {
         const plateKey = "elegant-60ml-18-415|Clear";

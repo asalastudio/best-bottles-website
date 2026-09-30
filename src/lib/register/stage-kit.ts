@@ -131,6 +131,8 @@ export type RegisterKitMeta = {
     seatDropMm?: number;
     /** Exact measured 9 mL hardware selected from the promoted register row. */
     verifiedPilotLayers?: true;
+    /** Every component layer was made for this body (a measured Blender set), none of the shared photo crops. */
+    bodyLayers?: true;
 };
 
 export type RegisterKit = {
@@ -279,7 +281,10 @@ export function kitFromRegister(
         parts,
         three: null,
         conflicts: [],
-        register: { bodyId: assembly.bodyId, plateKey: assembly.plateKey, glass: assembly.glass, datum, pxPerMm: round(frame.pxPerMm), componentIds, seatSignature, seatDropMm },
+        register: {
+            bodyId: assembly.bodyId, plateKey: assembly.plateKey, glass: assembly.glass, datum, pxPerMm: round(frame.pxPerMm), componentIds, seatSignature, seatDropMm,
+            ...(layers.every((layer) => layer.bodyId === assembly.bodyId) ? { bodyLayers: true as const } : {}),
+        },
     };
 }
 
@@ -302,9 +307,11 @@ export function kitsFromRegister(payload: RegisterStagePayload, options: { canva
  * amber, cobalt, frosted or Swirl bottle. Keep the measured Phase 3 hardware
  * set and the reviewed short silver-ball insert; if an expected layer is
  * missing, leave this SKU to the caller's published-kit fallback.
+ * A kit drawn entirely from the body's own layers (the measured Blender set,
+ * Jordan 2026-09-30) never touches those crops and is drawn as it is.
  */
 export function reconcileCylinder9Kit(kit: RegisterKit): RegisterKit | null {
-    if (kit.register.bodyId !== "cylinder-9ml-17-415") return kit;
+    if (kit.register.bodyId !== "cylinder-9ml-17-415" || kit.register.bodyLayers) return kit;
     const expected = new Map<string, Set<string>>();
     for (const componentId of kit.register.componentIds) {
         const hashes = CYLINDER9_PILOT_LAYER_HASHES[componentId];

@@ -13,6 +13,7 @@
  *   npx tsx scripts/register/seats/audit-seats.ts --raw                # prod, drops OFF: where compose() alone puts them
  *   npx tsx scripts/register/seats/audit-seats.ts --write              # measure --raw and write src/lib/register/seat-drops.generated.json
  *   ... --deployment dev    --out <dir> (default output/seat-audit)
+ *   ... --only-body <bodyId>   measure one body; with --write, replace only that body's entries in the table
  *
  * --write lowers every closure whose gap exceeds 0.2 mm by that gap, but no further than keeps its top 0.5 mm above the glass
  * rim. Left where they are (Jordan 2026-09-30): Boston rounds (20-400), whose caps sit on the bead at the top of a long neck
@@ -35,6 +36,12 @@ const arg = (name: string) => (argv.includes(name) ? argv[argv.indexOf(name) + 1
 const write = argv.includes("--write");
 const raw = write || argv.includes("--raw");
 const deployment = arg("--deployment") ?? "prod";
+const onlyBody = arg("--only-body");
+if (argv.includes("--only-body") && (!onlyBody || onlyBody.startsWith("--"))) {
+    // without a body id, --write would replace the whole table
+    console.error("--only-body needs a body id, e.g. --only-body cylinder-9ml-17-415");
+    process.exit(1);
+}
 const outDir = resolve(ROOT, arg("--out") ?? "output/seat-audit");
 const URLS: Record<string, string> = { dev: "https://helpful-elephant-638.convex.cloud", prod: "https://precise-raccoon-123.convex.cloud" };
 const MIN_DROP_MM = 0.2;
@@ -125,7 +132,9 @@ async function main() {
     setSeatDropsEnabled(!raw);
     fs.mkdirSync(outDir, { recursive: true });
     const register = readRegister(resolve(ROOT, "data", "register"));
-    const skus = register.assemblies.filter((a) => a.buildStatus === "resolved" && !["quarantine", "retired"].includes(a.status)).map((a) => a.graceSku);
+    const skus = register.assemblies
+        .filter((a) => a.buildStatus === "resolved" && !["quarantine", "retired"].includes(a.status) && (!onlyBody || a.bodyId === onlyBody))
+        .map((a) => a.graceSku);
     const bySku = new Map(register.assemblies.map((a) => [a.graceSku, a]));
     const client = new ConvexHttpClient(URLS[deployment]);
     const payload: RegisterStagePayload = { plates: {}, components: {}, bodies: {}, assemblies: {} };
@@ -149,7 +158,7 @@ async function main() {
         rows.push({ sku, websiteSku: row.websiteSku, bodyId: row.bodyId, plateKey: assembly.plateKey, fitment: row.fitmentType, capColor: row.capColor,
             signature, droppedMm: kit.register.seatDropMm ?? 0, closure: kit.register.componentIds.join("+"), ...(m ?? { gapMm: null }) });
     }
-    const name = raw ? "raw" : "seated";
+    const name = `${raw ? "raw" : "seated"}${onlyBody ? `-${onlyBody}` : ""}`;
     fs.writeFileSync(resolve(outDir, `${deployment}-${name}.json`), JSON.stringify(rows, null, 1));
     const measured = rows.filter((r) => typeof r.gapMm === "number");
     const band = (g: number) => (g <= 0.2 ? "resting (<=0.2)" : g <= 0.6 ? "0.2-0.6" : g <= 1 ? "0.6-1.0" : g <= 2 ? "1-2" : ">2");
@@ -158,6 +167,15 @@ async function main() {
     console.log(`${deployment} ${name}: ${rows.length} SKUs drawn, ${measured.length} measured, gaps`, bands);
 
     if (write) {
+        // A Swirl plate is its body's Clear glass with a carved surface: the carve notches the silhouette at the shoulder's
+        // outer edge, where the widest gap column falls (9 mL 17-415: 4.6 mm there against 1.7 on Clear, under 1 mm one
+        // column in). A Swirl closure takes the gap its Clear twin measured.
+        const clearGap = new Map<string, number>();
+        for (const r of measured) if ((r.plateKey as string).endsWith("|Clear")) clearGap.set(`${r.bodyId}|${r.closure}`, r.gapMm as number);
+        for (const r of measured) {
+            const twin = (r.plateKey as string).endsWith("|Swirl") ? clearGap.get(`${r.bodyId}|${r.closure}`) : undefined;
+            if (twin !== undefined) r.gapMm = twin;
+        }
         const groups = new Map<string, Array<Record<string, unknown>>>();
         for (const r of measured) {
             if (!r.signature || LEFT_ALONE(r.bodyId as string, r.closure as string)) continue;
@@ -173,11 +191,17 @@ async function main() {
             if (drop > MIN_DROP_MM) entries[signature] = { dropMm: Math.round(drop * 100) / 100, plateKey: list[0].plateKey as string, closure: list[0].closure as string, skus: list.length, ...(maxDrop < gap ? { limitedByRim: true as const } : {}) };
         }
         const file = resolve(ROOT, "src/lib/register/seat-drops.generated.json");
-        fs.writeFileSync(file, JSON.stringify({
-            generatedAt: new Date().toISOString(),
-            rule: `scripts/register/seats/audit-seats.ts --write on ${deployment}: each closure lowered by the background showing under its edge (> ${MIN_DROP_MM} mm) so the edge rests on the shoulder, but never so far that its top comes within ${RIM_COVER_MM} mm of the glass rim (limitedByRim); Boston rounds (20-400) and the short ribbed caps left alone (Jordan 2026-09-30)`,
-            entries,
-        }, null, 1) + "\n");
+        let rule = `scripts/register/seats/audit-seats.ts --write on ${deployment}: each closure lowered by the background showing under its edge (> ${MIN_DROP_MM} mm) so the edge rests on the shoulder, but never so far that its top comes within ${RIM_COVER_MM} mm of the glass rim (limitedByRim); Boston rounds (20-400) and the short ribbed caps left alone (Jordan 2026-09-30); a Swirl closure takes its Clear twin's gap`;
+        let all: Record<string, unknown> = entries;
+        if (onlyBody) {
+            // keep every other body's entries; this body's are replaced (its old entries name images it no longer draws)
+            const previous = JSON.parse(fs.readFileSync(file, "utf8")) as { rule: string; entries: Record<string, { plateKey: string }> };
+            const kept = Object.fromEntries(Object.entries(previous.entries).filter(([, e]) => !e.plateKey.startsWith(`${onlyBody}|`)));
+            all = Object.fromEntries(Object.entries({ ...kept, ...entries }).sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0)));
+            const note = `; ${onlyBody} re-measured on ${deployment} ${new Date().toISOString().slice(0, 10)} (a Swirl closure takes its Clear twin's gap)`;
+            rule = previous.rule.replace(new RegExp(`; ${onlyBody} re-measured on [^;]*`), "") + note;
+        }
+        fs.writeFileSync(file, JSON.stringify({ generatedAt: new Date().toISOString(), rule, entries: all }, null, 1) + "\n");
         console.log(`wrote ${Object.keys(entries).length} drops (${Object.values(entries).reduce((n, e) => n + e.skus, 0)} SKUs) to ${file}`);
     }
 }
