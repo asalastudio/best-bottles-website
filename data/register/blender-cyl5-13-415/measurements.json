@@ -1,6 +1,6 @@
 {
  "bodyId": "cylinder-5ml-13-415",
- "createdBy": "outputs/cyl5-13415-register-2026-09-28 (export_cyl5.py + build_assets_cyl5.py), body v6, studio v1.4; closures from outputs/tallcyl-13415-v40-2026-09-28",
+ "createdBy": "outputs/cyl5-13415-register-v7e-2026-09-29 (export_cyl5.py + build_assets_cyl5.py), body v7e, studio v1.5; closures from outputs/tallcyl-13415-v40-2026-09-28",
  "pxPerMm": 25.0,
  "camera": {
   "type": "orthographic",
@@ -8,80 +8,80 @@
   "note": "the 9 mL register camera; anchors are camera projections of 3D points"
  },
  "datum": {
-  "seat": "rim centre (0,0,53.55 mm)",
+  "seat": "rim centre (0,0,53.12 mm)",
   "foot": "lowest projected point of the glass",
-  "shoulder": "(0,0,42.55 mm): the Tall shoulder datum carried down with the neck (11.0 under the rim)"
+  "shoulder": "(0,0,42.12 mm): the Tall shoulder datum carried down with the neck (11.0 under the rim)"
  },
  "background": "seen through the glass: the v1.3 studio backdrop (displays as bone #F5F3EF); transparent outside every part",
- "calipered": "body v6 to the caliper (H 53.55, OD 18.06 widest, finish 11.0) with Jordan's 2026-09-29 shape: 2.0 mm walls, 0.10 mm taper a side, shoulder down over 2.9 mm; closures as the Tall 9 mL 13-415 lane (sprayer, lined and ribbed short caps, roll-on caps OD to the caliper); dip tube shortened to 0.5 mm above the 5 mL floor",
+ "calipered": "body v7e to Jordan's 2026-09-29 readings (H 53.12, OD 17.66 at the shoulder, bottom 17.48, finish 11.0 as ruled, inside depth 48.75, bore 7.45) and foot photos; closures as the Tall 9 mL 13-415 lane (sprayer, lined and ribbed short caps, roll-on caps), seated on the shoulder dome; dip tube shortened to 0.5 mm above the 4.37 mm floor",
  "reusedFrom": "data/register/blender-tallcyl-13-415 (+ -liners): every cap, sprayer, overcap and roller layer, same files and anchors",
  "plates": [
   {
    "plateKey": "cylinder-5ml-13-415|Clear",
    "glass": "Clear",
    "file": "plates/clear.png",
-   "width": 454,
-   "height": 1356,
-   "sha256": "e95783e905fefd8f5fdc9815f5a3193f8fdc21f59ff747d5a0991dd1249d6b6e",
+   "width": 444,
+   "height": 1344,
+   "sha256": "b0e5bc75ebddb2a0e2c60ae57fbe3533c28fc86ff36d646a83ed84936c28a5f5",
    "pxPerMm": 25.0,
    "anchors": {
-    "axisX": 227.0,
-    "seatY": 9.07,
-    "shoulderY": 283.7,
-    "baselineY": 1355.12
+    "axisX": 222.0,
+    "seatY": 8.81,
+    "shoulderY": 283.43,
+    "baselineY": 1343.22
    },
    "checks": {
-    "seatToFootMm": 53.842,
-    "barrelMm": 18.0,
-    "barrelTargetMm": 18.06,
+    "seatToFootMm": 53.376,
+    "barrelMm": 17.52,
+    "barrelTargetMm": 17.66,
     "opaqueInsideSilhouette": true
    },
    "source": {
-    "library": "native Blender (outputs/cyl5-13415-register-2026-09-28/export_cyl5.py)",
-    "path": "cyl5-13415-v6-review-2026-09-29/Cyl-5ml-13-415_clear_STUDIO-v1.4-body-v6.3a.blend",
-    "layer": "Cylinder 5 mL 13-415 body v6.3a (caliper: H 53.55, OD 18.06 under the shoulder tapering 0.10 a side to the heel, finish 11.0; 2.0 mm walls, ~6.3 ml; the shoulder down over 2.9 mm, 2.0 mm heel bending from 2.6 mm up (v6.3a); Jordan 2026-09-29), studio v1.4 (neutral studio, black side cards; cobalt: no sweep reflection, density 2200); seen through: the studio backdrop, which displays as bone"
+    "library": "native Blender (outputs/cyl5-13415-register-v7e-2026-09-29/export_cyl5.py)",
+    "path": "cyl5-13415-v7-review-2026-09-29/Cyl-5ml-13-415_clear_STUDIO-v1.5-body-v7e.blend",
+    "layer": "Cylinder 5 mL 13-415 body v7e (Jordan 2026-09-29 measurement session: H 53.12, OD 17.66 under the shoulder tapering 0.11 a side to the heel, finish 11.0 as ruled; walls set to hold 5.5 ml; inside depth 48.75, floor 4.37; the shoulder dome kept, it traces the real bottle's outline; heel arc 2.2 wide x 2.6 tall and a ring of 64 small glass beads at the foot, from his foot photos), studio v1.5 (neutral studio, black side cards, two soft strip lights; cobalt matched to the live 9 mL cobalt plate); seen through: the studio backdrop, which displays as bone"
    },
    "geometry": {
-    "height_mm": 53.55,
-    "od_mm": 18.06,
+    "height_mm": 53.12,
+    "od_mm": 17.66,
     "finish_height_mm": 11.0,
-    "capacity_ml": 5.535,
-    "lock": "Bottle | Cylinder 5 ml 13-415 body v6.3a",
-    "studio": "Cyl-5ml-13-415_clear_STUDIO-v1.3.blend"
+    "capacity_ml": 5.503,
+    "lock": "Bottle | Cylinder 5 ml 13-415 body v7e",
+    "studio": "Cyl-5ml-13-415_clear_STUDIO-v1.5-body-v7e.blend"
    }
   },
   {
    "plateKey": "cylinder-5ml-13-415|Cobalt Blue",
    "glass": "Cobalt Blue",
    "file": "plates/cobalt.png",
-   "width": 454,
-   "height": 1356,
-   "sha256": "67c6220028e4971254c9b4f51d4736a434c215e7494e897061c482e2021ecd45",
+   "width": 444,
+   "height": 1344,
+   "sha256": "74499b4f42e1a22e8ce9deca2dcb5d08de044e4a0b0e96ebf3c0233f0dae007e",
    "pxPerMm": 25.0,
    "anchors": {
-    "axisX": 227.0,
-    "seatY": 9.07,
-    "shoulderY": 283.7,
-    "baselineY": 1355.12
+    "axisX": 222.0,
+    "seatY": 8.81,
+    "shoulderY": 283.43,
+    "baselineY": 1343.22
    },
    "checks": {
-    "seatToFootMm": 53.842,
-    "barrelMm": 18.0,
-    "barrelTargetMm": 18.06,
+    "seatToFootMm": 53.376,
+    "barrelMm": 17.52,
+    "barrelTargetMm": 17.66,
     "opaqueInsideSilhouette": true
    },
    "source": {
-    "library": "native Blender (outputs/cyl5-13415-register-2026-09-28/export_cyl5.py)",
-    "path": "cyl5-13415-v6-review-2026-09-29/Cyl-5ml-13-415_cobalt_STUDIO-v1.4-body-v6.3a.blend",
-    "layer": "Cylinder 5 mL 13-415 body v6.3a (caliper: H 53.55, OD 18.06 under the shoulder tapering 0.10 a side to the heel, finish 11.0; 2.0 mm walls, ~6.3 ml; the shoulder down over 2.9 mm, 2.0 mm heel bending from 2.6 mm up (v6.3a); Jordan 2026-09-29), studio v1.4 (neutral studio, black side cards; cobalt: no sweep reflection, density 2200); cobalt: one glass material, matched to the master photo GBCylBlu5BlkSht"
+    "library": "native Blender (outputs/cyl5-13415-register-v7e-2026-09-29/export_cyl5.py)",
+    "path": "cyl5-13415-v7-review-2026-09-29/Cyl-5ml-13-415_cobalt_STUDIO-v1.5-body-v7e.blend",
+    "layer": "Cylinder 5 mL 13-415 body v7e (Jordan 2026-09-29 measurement session: H 53.12, OD 17.66 under the shoulder tapering 0.11 a side to the heel, finish 11.0 as ruled; walls set to hold 5.5 ml; inside depth 48.75, floor 4.37; the shoulder dome kept, it traces the real bottle's outline; heel arc 2.2 wide x 2.6 tall and a ring of 64 small glass beads at the foot, from his foot photos), studio v1.5 (neutral studio, black side cards, two soft strip lights; cobalt matched to the live 9 mL cobalt plate); cobalt: one glass material, absorption colour (0.04,0.49,0.992), density 2000, no sweep reflection"
    },
    "geometry": {
-    "height_mm": 53.55,
-    "od_mm": 18.06,
+    "height_mm": 53.12,
+    "od_mm": 17.66,
     "finish_height_mm": 11.0,
-    "capacity_ml": 5.535,
-    "lock": "Bottle | Cylinder 5 ml 13-415 body v6.3a",
-    "studio": "Cyl-5ml-13-415_cobalt_STUDIO-v1.3.blend"
+    "capacity_ml": 5.503,
+    "lock": "Bottle | Cylinder 5 ml 13-415 body v7e",
+    "studio": "Cyl-5ml-13-415_cobalt_STUDIO-v1.5-body-v7e.blend"
    }
   }
  ],
@@ -93,13 +93,13 @@
      "slot": "diptube",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-mist.png",
-     "width": 146,
-     "height": 1266,
-     "sha256": "c9a32a00d1a7a43888fa240f39f4f319ad7cbaaa8874764ed9a409a5c9ffda4c",
+     "width": 147,
+     "height": 1227,
+     "sha256": "5143b07ff4d8380e33c3f4b8d9e805be50a735afc9bf9cfe81aece4ddf238085",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
-      "y": 0.07
+      "y": 0.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -110,13 +110,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 199,
-     "height": 1269,
-     "sha256": "72f993730ab752fb0f614a72f55e1a01c0c3f50476ed5d80b9c20af080cbe488",
+     "width": 307,
+     "height": 1344,
+     "sha256": "ccc03ff96b75eb58f2b5cb80c928743f73a7de24d2305b09f368739d1f222f4f",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 59.0,
-      "y": 3.07
+      "x": 220.0,
+      "y": 8.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -128,12 +128,12 @@
      "layerName": "V63 pump tailpiece + dip tube (shortened to the 5 mL), lifted out",
      "file": "shared/mist-internals.png",
      "width": 109,
-     "height": 1197,
-     "sha256": "4ec34f372ef7155046699d7707ae3607e97b8943e64d8e06279e771d8c2c2edb",
+     "height": 1159,
+     "sha256": "74d019c3d82a452cdde1f58b728cdcb874f4e2e9f366a977a823855da4d4ca27",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 42.0,
-      "y": -45.92
+      "y": -46.19
      },
      "z": "front",
      "explodeIndex": 4,
@@ -149,11 +149,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 193.0,
-      "y": 414.86
+      "y": 413.09
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 0.46
+     "seatedOnDomeMm": 0.531
     },
     {
      "slot": "overcap",
@@ -165,28 +165,28 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 214.0,
-      "y": 464.76
+      "y": 457.71
      },
      "z": "front",
      "explodeIndex": 2,
-     "seatedOnDomeMm": 1.264
+     "seatedOnDomeMm": 1.546
     }
    ]
   },
   {
-   "componentId": "CMP-CAP-BLK-13-415-02",
+   "componentId": "CMP-CAP-BLK-13-415-01",
    "layers": [
     {
      "slot": "diptube",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-mist.png",
-     "width": 146,
-     "height": 1266,
-     "sha256": "c9a32a00d1a7a43888fa240f39f4f319ad7cbaaa8874764ed9a409a5c9ffda4c",
+     "width": 147,
+     "height": 1227,
+     "sha256": "5143b07ff4d8380e33c3f4b8d9e805be50a735afc9bf9cfe81aece4ddf238085",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
-      "y": 0.07
+      "y": 0.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -197,13 +197,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 199,
-     "height": 1269,
-     "sha256": "72f993730ab752fb0f614a72f55e1a01c0c3f50476ed5d80b9c20af080cbe488",
+     "width": 307,
+     "height": 1344,
+     "sha256": "ccc03ff96b75eb58f2b5cb80c928743f73a7de24d2305b09f368739d1f222f4f",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 59.0,
-      "y": 3.07
+      "x": 220.0,
+      "y": 8.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -215,12 +215,99 @@
      "layerName": "V63 pump tailpiece + dip tube (shortened to the 5 mL), lifted out",
      "file": "shared/mist-internals.png",
      "width": 109,
-     "height": 1197,
-     "sha256": "4ec34f372ef7155046699d7707ae3607e97b8943e64d8e06279e771d8c2c2edb",
+     "height": 1159,
+     "sha256": "74d019c3d82a452cdde1f58b728cdcb874f4e2e9f366a977a823855da4d4ca27",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 42.0,
-      "y": -45.92
+      "y": -46.19
+     },
+     "z": "front",
+     "explodeIndex": 4,
+     "usage": "exploded"
+    },
+    {
+     "slot": "sprayer",
+     "layerName": "sprayer matte-black (all metal: collar + step ring + flat actuator, recessed white nozzle)",
+     "file": "components/sprayer-matte-black.png",
+     "width": 386,
+     "height": 712,
+     "sha256": "d8bec1ef79019326aadd602c3dd3450f0b90533938be759cf30827707fe5a0ea",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 193.0,
+      "y": 413.09
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "seatedOnDomeMm": 0.531
+    },
+    {
+     "slot": "overcap",
+     "layerName": "metal overcap matte-black (whole sprayer)",
+     "file": "components/overcap-matte-black.png",
+     "width": 428,
+     "height": 783,
+     "sha256": "5088de2996649ad9b83f70579842e3e23551492f6d9e7d290df5272b41cd6065",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 214.0,
+      "y": 457.71
+     },
+     "z": "front",
+     "explodeIndex": 2,
+     "seatedOnDomeMm": 1.546
+    }
+   ]
+  },
+  {
+   "componentId": "CMP-CAP-BLK-13-415-02",
+   "layers": [
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Clear",
+     "file": "see-through/clear-mist.png",
+     "width": 147,
+     "height": 1227,
+     "sha256": "5143b07ff4d8380e33c3f4b8d9e805be50a735afc9bf9cfe81aece4ddf238085",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 59.0,
+      "y": 0.81
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Clear"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "see-through, Cobalt Blue",
+     "file": "see-through/cobalt-mist.png",
+     "width": 307,
+     "height": 1344,
+     "sha256": "ccc03ff96b75eb58f2b5cb80c928743f73a7de24d2305b09f368739d1f222f4f",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 220.0,
+      "y": 8.81
+     },
+     "z": "front",
+     "explodeIndex": 5,
+     "usage": "seated",
+     "glass": "Cobalt Blue"
+    },
+    {
+     "slot": "diptube",
+     "layerName": "V63 pump tailpiece + dip tube (shortened to the 5 mL), lifted out",
+     "file": "shared/mist-internals.png",
+     "width": 109,
+     "height": 1159,
+     "sha256": "74d019c3d82a452cdde1f58b728cdcb874f4e2e9f366a977a823855da4d4ca27",
+     "pxPerMm": 25.0,
+     "anchor": {
+      "x": 42.0,
+      "y": -46.19
      },
      "z": "front",
      "explodeIndex": 4,
@@ -236,11 +323,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 193.0,
-      "y": 414.86
+      "y": 413.09
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 0.46
+     "seatedOnDomeMm": 0.531
     },
     {
      "slot": "overcap",
@@ -252,11 +339,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 214.0,
-      "y": 464.76
+      "y": 457.71
      },
      "z": "front",
      "explodeIndex": 2,
-     "seatedOnDomeMm": 1.264
+     "seatedOnDomeMm": 1.546
     }
    ]
   },
@@ -273,11 +360,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 195.0,
-      "y": 55.23
+      "y": 53.33
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 0.485
+     "seatedOnDomeMm": 0.561
     }
    ]
   },
@@ -294,11 +381,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 201.0,
-      "y": 128.2
+      "y": 125.27
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 0.686
+     "seatedOnDomeMm": 0.803
     }
    ]
   },
@@ -315,11 +402,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 211.0,
-      "y": 316.09
+      "y": 310.21
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 1.131
+     "seatedOnDomeMm": 1.366
     }
    ]
   },
@@ -330,13 +417,13 @@
      "slot": "diptube",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-mist.png",
-     "width": 146,
-     "height": 1266,
-     "sha256": "c9a32a00d1a7a43888fa240f39f4f319ad7cbaaa8874764ed9a409a5c9ffda4c",
+     "width": 147,
+     "height": 1227,
+     "sha256": "5143b07ff4d8380e33c3f4b8d9e805be50a735afc9bf9cfe81aece4ddf238085",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
-      "y": 0.07
+      "y": 0.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -347,13 +434,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 199,
-     "height": 1269,
-     "sha256": "72f993730ab752fb0f614a72f55e1a01c0c3f50476ed5d80b9c20af080cbe488",
+     "width": 307,
+     "height": 1344,
+     "sha256": "ccc03ff96b75eb58f2b5cb80c928743f73a7de24d2305b09f368739d1f222f4f",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 59.0,
-      "y": 3.07
+      "x": 220.0,
+      "y": 8.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -365,12 +452,12 @@
      "layerName": "V63 pump tailpiece + dip tube (shortened to the 5 mL), lifted out",
      "file": "shared/mist-internals.png",
      "width": 109,
-     "height": 1197,
-     "sha256": "4ec34f372ef7155046699d7707ae3607e97b8943e64d8e06279e771d8c2c2edb",
+     "height": 1159,
+     "sha256": "74d019c3d82a452cdde1f58b728cdcb874f4e2e9f366a977a823855da4d4ca27",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 42.0,
-      "y": -45.92
+      "y": -46.19
      },
      "z": "front",
      "explodeIndex": 4,
@@ -386,11 +473,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 193.0,
-      "y": 414.86
+      "y": 413.09
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 0.46
+     "seatedOnDomeMm": 0.531
     },
     {
      "slot": "overcap",
@@ -402,11 +489,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 214.0,
-      "y": 464.76
+      "y": 457.71
      },
      "z": "front",
      "explodeIndex": 2,
-     "seatedOnDomeMm": 1.264
+     "seatedOnDomeMm": 1.546
     }
    ]
   },
@@ -417,13 +504,13 @@
      "slot": "diptube",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-mist.png",
-     "width": 146,
-     "height": 1266,
-     "sha256": "c9a32a00d1a7a43888fa240f39f4f319ad7cbaaa8874764ed9a409a5c9ffda4c",
+     "width": 147,
+     "height": 1227,
+     "sha256": "5143b07ff4d8380e33c3f4b8d9e805be50a735afc9bf9cfe81aece4ddf238085",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
-      "y": 0.07
+      "y": 0.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -434,13 +521,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 199,
-     "height": 1269,
-     "sha256": "72f993730ab752fb0f614a72f55e1a01c0c3f50476ed5d80b9c20af080cbe488",
+     "width": 307,
+     "height": 1344,
+     "sha256": "ccc03ff96b75eb58f2b5cb80c928743f73a7de24d2305b09f368739d1f222f4f",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 59.0,
-      "y": 3.07
+      "x": 220.0,
+      "y": 8.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -452,12 +539,12 @@
      "layerName": "V63 pump tailpiece + dip tube (shortened to the 5 mL), lifted out",
      "file": "shared/mist-internals.png",
      "width": 109,
-     "height": 1197,
-     "sha256": "4ec34f372ef7155046699d7707ae3607e97b8943e64d8e06279e771d8c2c2edb",
+     "height": 1159,
+     "sha256": "74d019c3d82a452cdde1f58b728cdcb874f4e2e9f366a977a823855da4d4ca27",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 42.0,
-      "y": -45.92
+      "y": -46.19
      },
      "z": "front",
      "explodeIndex": 4,
@@ -473,11 +560,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 193.0,
-      "y": 414.86
+      "y": 413.09
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 0.46
+     "seatedOnDomeMm": 0.531
     },
     {
      "slot": "overcap",
@@ -489,11 +576,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 214.0,
-      "y": 464.76
+      "y": 457.71
      },
      "z": "front",
      "explodeIndex": 2,
-     "seatedOnDomeMm": 1.264
+     "seatedOnDomeMm": 1.546
     }
    ]
   },
@@ -510,11 +597,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 211.0,
-      "y": 316.09
+      "y": 310.21
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 1.131
+     "seatedOnDomeMm": 1.366
     }
    ]
   },
@@ -525,13 +612,13 @@
      "slot": "diptube",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-mist.png",
-     "width": 146,
-     "height": 1266,
-     "sha256": "c9a32a00d1a7a43888fa240f39f4f319ad7cbaaa8874764ed9a409a5c9ffda4c",
+     "width": 147,
+     "height": 1227,
+     "sha256": "5143b07ff4d8380e33c3f4b8d9e805be50a735afc9bf9cfe81aece4ddf238085",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
-      "y": 0.07
+      "y": 0.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -542,13 +629,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 199,
-     "height": 1269,
-     "sha256": "72f993730ab752fb0f614a72f55e1a01c0c3f50476ed5d80b9c20af080cbe488",
+     "width": 307,
+     "height": 1344,
+     "sha256": "ccc03ff96b75eb58f2b5cb80c928743f73a7de24d2305b09f368739d1f222f4f",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 59.0,
-      "y": 3.07
+      "x": 220.0,
+      "y": 8.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -560,12 +647,12 @@
      "layerName": "V63 pump tailpiece + dip tube (shortened to the 5 mL), lifted out",
      "file": "shared/mist-internals.png",
      "width": 109,
-     "height": 1197,
-     "sha256": "4ec34f372ef7155046699d7707ae3607e97b8943e64d8e06279e771d8c2c2edb",
+     "height": 1159,
+     "sha256": "74d019c3d82a452cdde1f58b728cdcb874f4e2e9f366a977a823855da4d4ca27",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 42.0,
-      "y": -45.92
+      "y": -46.19
      },
      "z": "front",
      "explodeIndex": 4,
@@ -581,11 +668,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 193.0,
-      "y": 414.86
+      "y": 413.09
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 0.46
+     "seatedOnDomeMm": 0.531
     },
     {
      "slot": "overcap",
@@ -597,11 +684,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 214.0,
-      "y": 464.76
+      "y": 457.71
      },
      "z": "front",
      "explodeIndex": 2,
-     "seatedOnDomeMm": 1.264
+     "seatedOnDomeMm": 1.546
     }
    ]
   },
@@ -612,13 +699,13 @@
      "slot": "diptube",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-mist.png",
-     "width": 146,
-     "height": 1266,
-     "sha256": "c9a32a00d1a7a43888fa240f39f4f319ad7cbaaa8874764ed9a409a5c9ffda4c",
+     "width": 147,
+     "height": 1227,
+     "sha256": "5143b07ff4d8380e33c3f4b8d9e805be50a735afc9bf9cfe81aece4ddf238085",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
-      "y": 0.07
+      "y": 0.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -629,13 +716,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 199,
-     "height": 1269,
-     "sha256": "72f993730ab752fb0f614a72f55e1a01c0c3f50476ed5d80b9c20af080cbe488",
+     "width": 307,
+     "height": 1344,
+     "sha256": "ccc03ff96b75eb58f2b5cb80c928743f73a7de24d2305b09f368739d1f222f4f",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 59.0,
-      "y": 3.07
+      "x": 220.0,
+      "y": 8.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -647,12 +734,12 @@
      "layerName": "V63 pump tailpiece + dip tube (shortened to the 5 mL), lifted out",
      "file": "shared/mist-internals.png",
      "width": 109,
-     "height": 1197,
-     "sha256": "4ec34f372ef7155046699d7707ae3607e97b8943e64d8e06279e771d8c2c2edb",
+     "height": 1159,
+     "sha256": "74d019c3d82a452cdde1f58b728cdcb874f4e2e9f366a977a823855da4d4ca27",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 42.0,
-      "y": -45.92
+      "y": -46.19
      },
      "z": "front",
      "explodeIndex": 4,
@@ -668,11 +755,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 193.0,
-      "y": 414.86
+      "y": 413.09
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 0.46
+     "seatedOnDomeMm": 0.531
     },
     {
      "slot": "overcap",
@@ -684,11 +771,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 214.0,
-      "y": 464.76
+      "y": 457.71
      },
      "z": "front",
      "explodeIndex": 2,
-     "seatedOnDomeMm": 1.264
+     "seatedOnDomeMm": 1.546
     }
    ]
   },
@@ -705,11 +792,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 195.0,
-      "y": 55.23
+      "y": 53.33
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 0.485
+     "seatedOnDomeMm": 0.561
     }
    ]
   },
@@ -726,11 +813,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 200.0,
-      "y": 128.2
+      "y": 125.27
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 0.686
+     "seatedOnDomeMm": 0.803
     }
    ]
   },
@@ -747,11 +834,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 200.0,
-      "y": 128.2
+      "y": 125.27
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 0.686
+     "seatedOnDomeMm": 0.803
     }
    ]
   },
@@ -768,11 +855,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 200.0,
-      "y": 128.2
+      "y": 125.27
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 0.686
+     "seatedOnDomeMm": 0.803
     }
    ]
   },
@@ -789,11 +876,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 201.0,
-      "y": 129.2
+      "y": 126.27
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 0.686
+     "seatedOnDomeMm": 0.803
     }
    ]
   },
@@ -810,11 +897,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 201.0,
-      "y": 129.2
+      "y": 126.27
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 0.686
+     "seatedOnDomeMm": 0.803
     }
    ]
   },
@@ -831,11 +918,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 211.0,
-      "y": 316.09
+      "y": 310.21
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 1.131
+     "seatedOnDomeMm": 1.366
     }
    ]
   },
@@ -852,11 +939,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 211.0,
-      "y": 316.09
+      "y": 310.21
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 1.131
+     "seatedOnDomeMm": 1.366
     }
    ]
   },
@@ -873,11 +960,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 211.0,
-      "y": 316.09
+      "y": 310.21
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 1.131
+     "seatedOnDomeMm": 1.366
     }
    ]
   },
@@ -894,11 +981,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 211.0,
-      "y": 316.09
+      "y": 310.21
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 1.131
+     "seatedOnDomeMm": 1.366
     }
    ]
   },
@@ -915,11 +1002,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 211.0,
-      "y": 316.09
+      "y": 310.21
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 1.131
+     "seatedOnDomeMm": 1.366
     }
    ]
   },
@@ -936,11 +1023,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 211.0,
-      "y": 316.09
+      "y": 310.21
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 1.131
+     "seatedOnDomeMm": 1.366
     }
    ]
   },
@@ -957,11 +1044,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 211.0,
-      "y": 316.09
+      "y": 310.21
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 1.131
+     "seatedOnDomeMm": 1.366
     }
    ]
   },
@@ -978,11 +1065,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 211.0,
-      "y": 316.09
+      "y": 310.21
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 1.131
+     "seatedOnDomeMm": 1.366
     }
    ]
   },
@@ -999,11 +1086,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 211.0,
-      "y": 316.09
+      "y": 310.21
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 1.131
+     "seatedOnDomeMm": 1.366
     }
    ]
   },
@@ -1014,13 +1101,13 @@
      "slot": "diptube",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-mist.png",
-     "width": 146,
-     "height": 1266,
-     "sha256": "c9a32a00d1a7a43888fa240f39f4f319ad7cbaaa8874764ed9a409a5c9ffda4c",
+     "width": 147,
+     "height": 1227,
+     "sha256": "5143b07ff4d8380e33c3f4b8d9e805be50a735afc9bf9cfe81aece4ddf238085",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 59.0,
-      "y": 0.07
+      "y": 0.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1031,13 +1118,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 199,
-     "height": 1269,
-     "sha256": "72f993730ab752fb0f614a72f55e1a01c0c3f50476ed5d80b9c20af080cbe488",
+     "width": 307,
+     "height": 1344,
+     "sha256": "ccc03ff96b75eb58f2b5cb80c928743f73a7de24d2305b09f368739d1f222f4f",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 59.0,
-      "y": 3.07
+      "x": 220.0,
+      "y": 8.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1049,12 +1136,12 @@
      "layerName": "V63 pump tailpiece + dip tube (shortened to the 5 mL), lifted out",
      "file": "shared/mist-internals.png",
      "width": 109,
-     "height": 1197,
-     "sha256": "4ec34f372ef7155046699d7707ae3607e97b8943e64d8e06279e771d8c2c2edb",
+     "height": 1159,
+     "sha256": "74d019c3d82a452cdde1f58b728cdcb874f4e2e9f366a977a823855da4d4ca27",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 42.0,
-      "y": -45.92
+      "y": -46.19
      },
      "z": "front",
      "explodeIndex": 4,
@@ -1070,11 +1157,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 193.0,
-      "y": 414.86
+      "y": 413.09
      },
      "z": "front",
      "explodeIndex": 1,
-     "seatedOnDomeMm": 0.46
+     "seatedOnDomeMm": 0.531
     },
     {
      "slot": "overcap",
@@ -1086,11 +1173,11 @@
      "pxPerMm": 25.0,
      "anchor": {
       "x": 214.0,
-      "y": 464.76
+      "y": 457.71
      },
      "z": "front",
      "explodeIndex": 2,
-     "seatedOnDomeMm": 1.264
+     "seatedOnDomeMm": 1.546
     }
    ]
   },
@@ -1101,13 +1188,13 @@
      "slot": "roller",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-roller-metal.png",
-     "width": 310,
-     "height": 1266,
-     "sha256": "6ca5a91cb0d5dcfb82b245208f7604d254bc314dec9badf0e4546d32dd959606",
+     "width": 376,
+     "height": 753,
+     "sha256": "34e2954cb7e7d56b7e140e9d6d521a34bb3b73e687b33ea5759c571b823ff1c5",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 155.0,
-      "y": 9.07
+      "y": 8.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1118,13 +1205,13 @@
      "slot": "roller",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-roller-metal.png",
-     "width": 310,
-     "height": 1356,
-     "sha256": "f0d31ac7c2954ddfc048de8a4d06ded1b86669e56c88e24c675b46894b12a3aa",
+     "width": 375,
+     "height": 1344,
+     "sha256": "a4c222f262d43f1a1a54126f26344c2bae9b6ccc6e1b663156f3c8964bcbcad6",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 155.0,
-      "y": 9.07
+      "x": 220.0,
+      "y": 8.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1172,13 +1259,13 @@
      "slot": "roller",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-roller-plastic.png",
-     "width": 310,
-     "height": 1266,
-     "sha256": "11b47181657a1cd20cb09a0a0d792a3b02a9bea9e4f5fc63432facd5c6812682",
+     "width": 376,
+     "height": 753,
+     "sha256": "3193bc13264ad86541cdf3bc5f6474d445b2e4bd263b1503212b9556e70b89ee",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 155.0,
-      "y": 9.07
+      "y": 8.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1189,13 +1276,13 @@
      "slot": "roller",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-roller-plastic.png",
-     "width": 310,
-     "height": 379,
-     "sha256": "6ffd88ef98b4803a9f75d91044e084c65ba2c21eea5f186aa87b5af7a9d84ab2",
+     "width": 375,
+     "height": 1344,
+     "sha256": "40a5e9b03a89ea775c8afad5d01508c6d06d159e669b270f03403ca2b34ef592",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 155.0,
-      "y": 9.07
+      "x": 220.0,
+      "y": 8.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1239,34 +1326,34 @@
  ],
  "seeThroughQa": {
   "clear-roller-plastic": {
-   "maxErr": 234,
-   "meanErr": 1.3881,
-   "pixels": 67143
+   "maxErr": 236,
+   "meanErr": 1.4954,
+   "pixels": 64922
   },
   "clear-roller-metal": {
-   "maxErr": 234,
-   "meanErr": 1.3945,
-   "pixels": 67017
+   "maxErr": 236,
+   "meanErr": 1.5016,
+   "pixels": 64865
   },
   "clear-mist": {
-   "maxErr": 26,
-   "meanErr": 0.1198,
-   "pixels": 114120
+   "maxErr": 49,
+   "meanErr": 0.104,
+   "pixels": 111033
   },
   "cobalt-roller-plastic": {
-   "maxErr": 199,
-   "meanErr": 1.2932,
-   "pixels": 71651
+   "maxErr": 202,
+   "meanErr": 1.3883,
+   "pixels": 72784
   },
   "cobalt-roller-metal": {
-   "maxErr": 199,
-   "meanErr": 1.3015,
-   "pixels": 71735
+   "maxErr": 202,
+   "meanErr": 1.3981,
+   "pixels": 72664
   },
   "cobalt-mist": {
-   "maxErr": 58,
-   "meanErr": 0.0908,
-   "pixels": 113547
+   "maxErr": 92,
+   "meanErr": 0.1022,
+   "pixels": 114796
   }
  }
 }

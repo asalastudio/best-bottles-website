@@ -44,28 +44,28 @@ describe("the 5 mL cylinder's drawing", () => {
         expect(data).not.toBeNull();
         const { section, datums } = data!;
         expect(data!.scale).toBe(2);
-        expect(section.right[0]).toEqual([0, 0.22]);
+        expect(section.right[0]).toEqual([0, 0.12]);
         expect(section.right.at(-1)).toEqual([0, datums.floorZ]);
         expect(section.left[0]).toEqual([0, datums.floorZ]);
-        expect(section.left.at(-1)).toEqual([0, 0.22]);
+        expect(section.left.at(-1)).toEqual([0, 0.12]);
         expect(Math.max(...section.right.map(([, z]) => z))).toBeCloseTo(datums.rimZ, 2);
         expect(Math.max(...section.right.map(([x]) => x))).toBeCloseTo(datums.bodyR, 2);
     });
 
-    it("shares the Tall's 13-415 neck, 51.94 mm lower", () => {
+    it("shares the Tall's 13-415 neck, 52.37 mm lower", () => {
         const tall = technicalDrawingFor("cylinder-9ml-13-415")!.datums;
         const { datums } = data!;
         for (const key of ["boreR", "neckR", "threadR"] as const) expect(datums[key]).toBe(tall[key]);
-        expect(tall.rimZ - datums.rimZ).toBeCloseTo(51.94, 2);
-        expect(tall.threadCrestZ - datums.threadCrestZ).toBeCloseTo(51.94, 2);
+        expect(tall.rimZ - datums.rimZ).toBeCloseTo(52.37, 2);
+        expect(tall.threadCrestZ - datums.threadCrestZ).toBeCloseTo(52.37, 2);
     });
 
     it("lists its own caliper figures", () => {
         const rows = drawingFigureRows(data!);
-        expect(rows.find((row) => row.label === "Height")?.value).toBe("53.55 mm");
-        expect(rows.find((row) => row.label === "Body")?.value).toBe("Ø 18.06 mm");
+        expect(rows.find((row) => row.label === "Height")?.value).toBe("53.12 mm");
+        expect(rows.find((row) => row.label === "Body")?.value).toBe("Ø 17.69 mm");
         expect(rows.find((row) => row.label === "Foot")?.value).toBe("Ø 17.51 mm");
-        expect(rows.find((row) => row.label === "Capacity")?.value).toBe("≈ 6.3 ml");
+        expect(rows.find((row) => row.label === "Capacity")?.value).toBe("≈ 5.5 ml");
     });
 });
 
