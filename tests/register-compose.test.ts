@@ -82,6 +82,18 @@ describe("register compose: placement", () => {
         expect(shoulderLiftMm(shouldered, [{ ...deep, usage: "exploded" }])).toBe(0);
     });
 
+    it("lowers the closure onto the shoulder and leaves the insert, dip tube and exploded parts where they are (Jordan 2026-09-30)", () => {
+        const collar: LayerGeometry = { ...cap, slot: "collar", explodeIndex: 1 };
+        const tube: LayerGeometry = { ...cap, slot: "diptube", explodeIndex: 5 };
+        const plug: LayerGeometry = { ...cap, slot: "cap", usage: "exploded", explodeIndex: 6 };
+        const at = (placed: ReturnType<typeof compose>, layer: LayerGeometry) => placed.find((p) => p.source === layer)!.y;
+        const seated = compose(plate, [cap, collar, tube, plug, roller], frame);
+        const lowered = compose(plate, [cap, collar, tube, plug, roller], frame, { closureDropMm: 1.5 });
+        expect(at(lowered, cap) - at(seated, cap)).toBeCloseTo(1.5 * frame.pxPerMm, 6);
+        expect(at(lowered, collar) - at(seated, collar)).toBeCloseTo(1.5 * frame.pxPerMm, 6);
+        for (const fixed of [tube, plug, roller]) expect(at(lowered, fixed)).toBeCloseTo(at(seated, fixed), 6);
+    });
+
     it("expresses a placement as percentages of the stage box", () => {
         const style = placementStyle(placePlate(plate, frame, 0), frame);
         expect(style.position).toBe("absolute");
