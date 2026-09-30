@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 import { getFunctionName } from "convex/server";
 import type { BuilderKit, CatalogRow } from "@/lib/bottle-builder/model";
 
-const state = vi.hoisted(() => ({ rows: [] as unknown[], kits: {} as Record<string, unknown>, truncated: false, missingPlates: [] as string[], register: null as unknown }));
+const state = vi.hoisted(() => ({ rows: [] as unknown[], kits: {} as Record<string, unknown>, truncated: false, missingPlates: [] as string[], register: null as unknown, registerDown: false }));
 vi.mock("server-only", () => ({}));
 vi.mock("next/cache", () => ({ unstable_cache: (fn: unknown) => fn }));
 vi.mock("@/lib/paper-doll/local-component-kits", () => ({ readLocalComponentKits: () => null }));
@@ -13,12 +13,14 @@ vi.mock("convex/browser", () => ({ ConvexHttpClient: class {
             case "productKits:forSkus": return Object.fromEntries(args.pairs!.map(p => [p.websiteSku, state.kits[p.websiteSku] ?? null]));
             case "productPlates:forSkus": return { plates: Object.fromEntries(args.skus!.filter(sku => !state.missingPlates.includes(sku)).map(sku => [sku, { image: `https://example.com/${sku}.png` }])) };
             case "products:lookupSku": return null;
-            case "registerStage:forSkus": return state.register ?? { plates: {}, components: {}, bodies: {}, assemblies: {} };
+            case "registerStage:forSkus":
+                if (state.registerDown) throw new Error("register down");
+                return state.register ?? { plates: {}, components: {}, bodies: {}, assemblies: {} };
             default: throw new Error(`Unexpected query: ${getFunctionName(ref)}`);
         }
     }
 } }));
-import { freshConfiguration, loadBuilderBodies, loadBuilderBodyKits, loadBuilderFamily } from "@/lib/bottle-builder/server";
+import { freshConfiguration, loadBuilderBodies, loadBuilderBodyKits, loadBuilderFamily, loadBuilderFamilyOrUncached } from "@/lib/bottle-builder/server";
 
 function row(sku: string, finish: string): CatalogRow {
     return { websiteSku: sku, graceSku: `grace-${sku}`, family: "Cylinder", capacityMl: 9,
@@ -119,5 +121,27 @@ describe("register kits in the builder", () => {
             "https://blob/register/components/4c3c4a5090ce2c419265e57716991288dc02fc0d0d0a0b2d7c2a91dff5921c48.png",
         ]);
         state.register = null;
+    });
+    it("a failed register lookup fails the cached reads instead of storing published or missing images; the purchase check still answers", async () => {
+        const error = vi.spyOn(console, "error").mockImplementation(() => undefined);
+        try {
+            const [body] = await loadBuilderFamily("Cylinder");
+            state.registerDown = true;
+            // The kits route answers an uncached 503 and its data cache keeps the last good entry.
+            await expect(loadBuilderBodyKits("Cylinder", body.id)).rejects.toThrow("register down");
+            await expect(loadBuilderFamily("Cylinder")).rejects.toThrow("register down");
+            // With nothing cached to fall back on, the page still opens on the published kits: this request only, flagged uncached.
+            state.kits = { GBCylSwrl9MtlRollMattSl: kit("GBCylSwrl9MtlRollMattSl") };
+            const fallback = await loadBuilderFamilyOrUncached("Cylinder");
+            expect(fallback.cached).toBe(false);
+            expect(fallback.bodies.map(item => item.id)).toEqual([body.id]);
+            // Add-to-cart's uncached check is not blocked by a register hiccup.
+            expect((await freshConfiguration("Cylinder", "GBCylSwrl9MtlRollMattSl"))?.id).toBe("GBCylSwrl9MtlRollMattSl");
+            expect(error).toHaveBeenCalledWith(expect.stringContaining("[register] stage lookup failed"), "register down");
+        } finally {
+            state.registerDown = false;
+            state.register = null;
+            error.mockRestore();
+        }
     });
 });

@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import BuilderLoading from "@/components/bottle-builder/BuilderLoading";
 import { loadBuilderEntry } from "@/lib/bottle-builder/entry";
 import MatrixClient from "@/components/matrix/MatrixClient";
-import { loadBuilderFamilies, loadBuilderFamily } from "@/lib/bottle-builder/server";
+import { loadBuilderFamilies, loadBuilderFamilyOrUncached } from "@/lib/bottle-builder/server";
 import { chooserBodies } from "@/lib/bottle-builder/payload";
 import { preferMobileRequest } from "@/lib/bottle-builder/mobile-request";
 import { SITE_URL, buildBreadcrumbJsonLd } from "@/lib/seo";
@@ -48,7 +48,7 @@ async function Builder({ familyParam, collection }: { familyParam?: string; coll
     const familyList = loadBuilderFamilies().catch(() => null);
     const preferMobile = preferMobileRequest(await headers());
     const entry = await loadBuilderEntry(familyParam, {
-        family: loadBuilderFamily,
+        family: async name => (await loadBuilderFamilyOrUncached(name)).bodies,
         families: async () => (await familyList) ?? loadBuilderFamilies(),
     });
     // First paint: chooser bodies only (one configuration per glass). The chosen bottle's

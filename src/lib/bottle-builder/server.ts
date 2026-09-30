@@ -45,8 +45,25 @@ export const BUILDER_FAMILIES_CDN_CACHE = "public, s-maxage=3600, stale-while-re
 export const loadBuilderFamily = unstable_cache(async (family: string) => {
     const data = await familyRows(family);
     if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${family}`);
-    return slimBuilderBodies(await loadBuilderBodies(data.rows));
+    return slimBuilderBodies(await loadBuilderBodies(data.rows, { strictRegister: true }));
 }, ["bottle-builder-family-chooser-v7-elegant-photo"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+
+/** The cached family. When the cache has no entry to fall back on (a new key, an
+ * eviction) and the register lookup fails, this one request builds the family
+ * leniently instead — published kits where the register could not answer — and
+ * reports `cached: false`, so the caller keeps it out of the CDN: the builder
+ * degrades for one view instead of erroring. A stale entry never gets here; its
+ * failed refresh keeps serving the last good copy. */
+export async function loadBuilderFamilyOrUncached(family: string): Promise<{ bodies: Awaited<ReturnType<typeof loadBuilderFamily>>; cached: boolean }> {
+    try {
+        return { bodies: await loadBuilderFamily(family), cached: true };
+    } catch (error) {
+        console.error("[builder] family load failed; building this request uncached", family, error instanceof Error ? error.message : error);
+        const data = await familyRows(family);
+        if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${family}`);
+        return { bodies: slimBuilderBodies(await loadBuilderBodies(data.rows, { strictRegister: false })), cached: false };
+    }
+}
 
 export const loadBuilderFamilies = unstable_cache(async () => {
     const families = await client().query(api.matrix.listFamilies, {});
@@ -69,14 +86,20 @@ export const loadBuilderFamilies = unstable_cache(async () => {
     return available.filter(family => family !== null);
 }, ["bottle-builder-families-bare-v8-tall9-caps"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
-async function loadKitsForRows(rows: Array<{ websiteSku: string | null; graceSku: string | null }>): Promise<Map<string, BuilderKit | null>> {
+/** `strictRegister`: a failed register lookup throws instead of drawing the
+ * published kits. Every cached caller sets it, so a Convex hiccup leaves the
+ * data cache on its last good entry (and the route answers 503, uncached)
+ * rather than storing an hour of half-legacy or missing images. */
+type KitLoadOptions = { strictRegister: boolean };
+
+async function loadKitsForRows(rows: Array<{ websiteSku: string | null; graceSku: string | null }>, { strictRegister }: KitLoadOptions): Promise<Map<string, BuilderKit | null>> {
     const result = new Map<string, BuilderKit | null>();
     const pending: Array<{ websiteSku: string | null; graceSku: string | null }> = [];
     const convex = client();
     // The component register draws a SKU from its glass's one plate and the shared
     // component layers, every SKU of a body on one datum; a staged local kit still
     // wins (an explicit preview), and anything the register cannot draw is published.
-    const registered = await loadRegisterKits(convex, rows.map(row => row.graceSku));
+    const registered = await loadRegisterKits(convex, rows.map(row => row.graceSku), { strict: strictRegister });
     for (const row of rows) {
         const local = localKits();
         const staged = local && ((row.websiteSku && local[row.websiteSku]) || (row.graceSku && local[row.graceSku]));
@@ -112,7 +135,7 @@ async function loadKitsForRows(rows: Array<{ websiteSku: string | null; graceSku
 // catalogue is a new entry rather than a stale one; the tag clears it with the
 // family. Callers resolve the body first, so junk ids never reach the cache.
 const cachedBodyKits = unstable_cache(async (pairs: Array<[string, string | null]>) => {
-    const loaded = await loadKitsForRows(pairs.map(([websiteSku, graceSku]) => ({ websiteSku, graceSku })));
+    const loaded = await loadKitsForRows(pairs.map(([websiteSku, graceSku]) => ({ websiteSku, graceSku })), { strictRegister: true });
     const kits: Record<string, BuilderKit | null> = {};
     for (const [websiteSku, graceSku] of pairs) {
         kits[websiteSku] = loaded.get(websiteSku) ?? (graceSku ? loaded.get(graceSku) : undefined) ?? null;
@@ -142,12 +165,12 @@ async function loadPlateUrls(convex: ConvexHttpClient, rows: CatalogRow[]) {
 
 /** One published kit per bottle × glass that has no reviewed body image.
  * Sibling finishes list from that proof; their layers load after selection. */
-async function loadChooserKits(candidates: CatalogRow[]): Promise<{
+async function loadChooserKits(candidates: CatalogRow[], options: KitLoadOptions): Promise<{
     own: Map<string, BuilderKit | null>;
     proofs: Map<string, BuilderKit>;
 }> {
     const primary = chooserSourceRows(candidates);
-    const own = await loadKitsForRows(primary);
+    const own = await loadKitsForRows(primary, options);
     const proofs = new Map<string, BuilderKit>();
     const missed: CatalogRow[] = [];
     for (const row of primary) {
@@ -160,7 +183,7 @@ async function loadChooserKits(candidates: CatalogRow[]): Promise<{
         const missing = new Set(missed.map(chooserGroupKey));
         const seen = new Set(primary.map(row => row.websiteSku));
         const fallbacks = candidates.filter(row => missing.has(chooserGroupKey(row)) && !seen.has(row.websiteSku));
-        const extra = await loadKitsForRows(fallbacks);
+        const extra = await loadKitsForRows(fallbacks, options);
         for (const [sku, kit] of extra) own.set(sku, kit);
         for (const row of fallbacks) {
             const key = chooserGroupKey(row);
@@ -173,7 +196,7 @@ async function loadChooserKits(candidates: CatalogRow[]): Promise<{
     return { own, proofs };
 }
 
-export async function loadBuilderBodies(rows: CatalogRow[]) {
+export async function loadBuilderBodies(rows: CatalogRow[], options: KitLoadOptions = { strictRegister: true }) {
     const convex = client();
     const reviewedRows = rows.map(reviewedCylinderFiveMlRow);
     const activeBySku = new Map<string, ActiveComponent | null>();
@@ -183,7 +206,7 @@ export async function loadBuilderBodies(rows: CatalogRow[]) {
         return product;
     });
     const candidates = resolved.filter(isBuilderCandidate);
-    const chooserReady = loadChooserKits(candidates);
+    const chooserReady = loadChooserKits(candidates, options);
     const [plateUrls, { own, proofs }] = await Promise.all([loadPlateUrls(convex, candidates), chooserReady]);
     // A newly recovered finish may have no plate; a source-reviewed cap
     // assembly may have a plate but no registered bare body. Either way, its
@@ -192,7 +215,7 @@ export async function loadBuilderBodies(rows: CatalogRow[]) {
     const missingKits = candidates.filter((row, index) =>
         (!plateUrls[index] || Boolean(catalogIncludedAssembly(row))) && !own.has(row.websiteSku!));
     if (missingKits.length) {
-        const extra = await loadKitsForRows(missingKits);
+        const extra = await loadKitsForRows(missingKits, options);
         for (const [sku, kit] of extra) own.set(sku, kit);
     }
     const configurations = candidates.map(row => own.get(row.websiteSku!) ?? own.get(row.graceSku!) ?? null);
@@ -226,6 +249,7 @@ export async function freshConfiguration(family: string, sku: string) {
     // an arbitrary SKU during purchase validation.
     const bodyId = builderBodyIdentity(target[0]).bodyId;
     const sameBody = rows.filter(row => builderBodyIdentity(row).bodyId === bodyId);
-    const bodies = await loadBuilderBodies(sameBody);
+    // Uncached purchase check: a register hiccup must not block add-to-cart.
+    const bodies = await loadBuilderBodies(sameBody, { strictRegister: false });
     return bodies.flatMap(body => body.configurations).find(config => config.id === sku) ?? null;
 }
