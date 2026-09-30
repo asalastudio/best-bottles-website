@@ -19,6 +19,7 @@ import { ELEGANT_PHOTO_BODIES } from "./elegant-photo-bodies";
 import { detachedOvercap } from "./detached-overcaps";
 import type { DetachedLook } from "@/lib/products/kit-frame";
 import { CYLINDER9_PILOT_LAYER_HASHES } from "./cylinder9-pilot-layers";
+import { closureDropMm, closureSeatSignature } from "./seat-drops";
 
 export type StageDatum = { axisX: number; seatY: number; baselineY: number };
 /** The slots a kit part can occupy (convex/productKits.ts and the register's registerSlotV agree). */
@@ -125,6 +126,9 @@ export type RegisterKitMeta = {
     datum: StageDatum;
     pxPerMm: number;
     componentIds: string[];
+    /** The closure's seat entry (seat-drops.ts) and how far it was lowered onto the shoulder, mm. */
+    seatSignature?: string | null;
+    seatDropMm?: number;
     /** Exact measured 9 mL hardware selected from the promoted register row. */
     verifiedPilotLayers?: true;
 };
@@ -185,7 +189,10 @@ export function kitFromRegister(
     const canvas = options.canvas ?? STAGE_CANVAS;
     const datum = options.datum ?? stageDatum(assembly.bodyId, plate, canvas);
     const frame = frameFromDatum(canvas, datum, plate);
-    const placements = compose(plate, layers, frame);
+    // Every closure rests its edge on the shoulder (seat-drops.ts, measured by scripts/register/seats/audit-seats.ts).
+    const seatSignature = closureSeatSignature(plate.url, layers);
+    const seatDropMm = closureDropMm(seatSignature);
+    const placements = compose(plate, layers, frame, { closureDropMm: seatDropMm });
 
     let parts: RegisterKitPart[] = placements.map((placement) => {
         const box: PartBox = { x: round(placement.x), y: round(placement.y), width: round(placement.width), height: round(placement.height) };
@@ -272,7 +279,7 @@ export function kitFromRegister(
         parts,
         three: null,
         conflicts: [],
-        register: { bodyId: assembly.bodyId, plateKey: assembly.plateKey, glass: assembly.glass, datum, pxPerMm: round(frame.pxPerMm), componentIds },
+        register: { bodyId: assembly.bodyId, plateKey: assembly.plateKey, glass: assembly.glass, datum, pxPerMm: round(frame.pxPerMm), componentIds, seatSignature, seatDropMm },
     };
 }
 

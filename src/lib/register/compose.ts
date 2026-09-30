@@ -129,19 +129,33 @@ export function shoulderLiftMm(plate: PlateGeometry, layers: readonly LayerGeome
     return reachMm > clearanceMm ? reachMm - clearanceMm : 0;
 }
 
-/** Everything the canvas draws, in draw order. The front layers are lifted clear of the shoulder (shoulderLiftMm). */
+/** Parts that stay where their anchor puts them when the closure is seated onto the shoulder: they live inside the neck. */
+export const SEAT_FIXED_SLOTS: ReadonlySet<string> = new Set(["roller", "diptube", "internals"]);
+
+/** A layer that travels with the closure when it is seated down onto the shoulder: the cap, overcap, collar, pump or dropper head. */
+export function isSeatedClosureLayer(layer: LayerGeometry): boolean {
+    return layer.z !== "behind-body" && layer.usage !== "exploded" && !SEAT_FIXED_SLOTS.has(layer.slot);
+}
+
+/**
+ * Everything the canvas draws, in draw order. The front layers are lifted clear of the shoulder (shoulderLiftMm);
+ * `closureDropMm` then lowers the closure itself (isSeatedClosureLayer) until its edge rests on the shoulder
+ * (seat-drops.ts; Jordan 2026-09-30). Inserts and dip tubes keep their place in the neck.
+ */
 export function compose<P extends PlateGeometry, L extends LayerGeometry>(
     plate: P,
     layers: readonly L[],
     frame: Frame,
+    options: { closureDropMm?: number } = {},
 ): Array<Placement<P> | Placement<L>> {
     const { behind, front } = orderLayers(layers);
     const liftPx = shoulderLiftMm(plate, layers) * frame.pxPerMm;
+    const dropPx = (options.closureDropMm ?? 0) * frame.pxPerMm;
     const out: Array<Placement<P> | Placement<L>> = [];
     let z = 0;
     for (const layer of behind) out.push(placeLayer(layer, frame, z++));
     out.push(placePlate(plate, frame, z++));
-    for (const layer of front) out.push(placeLayer(layer, frame, z++, liftPx));
+    for (const layer of front) out.push(placeLayer(layer, frame, z++, isSeatedClosureLayer(layer) ? liftPx - dropPx : liftPx));
     return out;
 }
 
