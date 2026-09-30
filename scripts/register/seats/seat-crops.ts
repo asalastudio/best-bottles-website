@@ -18,7 +18,14 @@ const [out, list] = argv;
 const URLS: Record<string, string> = { dev: "https://helpful-elephant-638.convex.cloud", prod: "https://precise-raccoon-123.convex.cloud" };
 const esc = (text: string) => text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 const bytes = new Map<string, Buffer>();
-const get = async (url: string) => { if (!bytes.has(url)) bytes.set(url, Buffer.from(await (await fetch(url)).arrayBuffer())); return bytes.get(url)!; };
+const get = async (url: string) => {
+    if (!bytes.has(url)) {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`${response.status} ${response.statusText}: ${url}`);
+        bytes.set(url, Buffer.from(await response.arrayBuffer()));
+    }
+    return bytes.get(url)!;
+};
 
 async function main() {
     setSeatDropsEnabled(!argv.includes("--raw"));

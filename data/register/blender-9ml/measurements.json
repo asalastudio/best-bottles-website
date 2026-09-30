@@ -1,6 +1,6 @@
 {
  "bodyId": "cylinder-9ml-17-415",
- "createdBy": "outputs/register-9ml-v32 (export.py + build_assets.py)",
+ "createdBy": "outputs/cyl9-17415-studio-2026-09-30 (export.py + restudio.py + build_assets.py)",
  "pxPerMm": 25.0,
  "camera": {
   "type": "orthographic",
@@ -12,7 +12,7 @@
   "foot": "lowest projected point of the glass",
   "shoulder": "(0,0,59.14 mm)"
  },
- "background": "seen-through background = bone #F5F3EF (calibrated under Filmic); transparent outside every part",
+ "background": "the approved Tall 9 mL studio v1.3 seen through every glass (camera rays on it are holdout); transparent outside every part",
  "plates": [
   {
    "plateKey": "cylinder-9ml-17-415|Clear",
@@ -20,7 +20,7 @@
    "file": "plates/clear.png",
    "width": 486,
    "height": 1802,
-   "sha256": "6599ad9298127d061a4b4263a7c436c6851aa9d1ee663d5b6d910d649264f7f3",
+   "sha256": "6ab851b603457da335f376baad6751e57bfb749f5c1a66100d5b172a8457716e",
    "pxPerMm": 25.0,
    "anchors": {
     "axisX": 243.0,
@@ -35,9 +35,9 @@
     "opaqueInsideSilhouette": true
    },
    "source": {
-    "library": "native Blender (outputs/register-9ml-v32/export.py)",
+    "library": "native Blender (outputs/cyl9-17415-studio-2026-09-30/export.py + restudio.py)",
     "path": "dispenser-finishes-17415-v27/scenes/mist-black-clear.blend",
-    "layer": "v31 rounded shoulder on the 71.31 master; seen-through background baked bone #F5F3EF"
+    "layer": "v31 rounded shoulder on the 71.31 master; Tall 9 mL studio v1.3 seen through the glass"
    },
    "geometry": {
     "shoulder_v31": {
@@ -61,7 +61,7 @@
    "file": "plates/amber.png",
    "width": 486,
    "height": 1802,
-   "sha256": "7d68d6bbcbe9a9e1e0a1f0a340288c9abe35a18b1cb14d017cca4ad5e560841d",
+   "sha256": "3d7d7923c69933a526f8f7753dbee17ba4d0aec7b18748e36597ac988eb6c7af",
    "pxPerMm": 25.0,
    "anchors": {
     "axisX": 243.0,
@@ -76,9 +76,9 @@
     "opaqueInsideSilhouette": true
    },
    "source": {
-    "library": "native Blender (outputs/register-9ml-v32/export.py)",
+    "library": "native Blender (outputs/cyl9-17415-studio-2026-09-30/export.py + restudio.py)",
     "path": "dispenser-finishes-17415-v27/scenes/mist-black-amber.blend",
-    "layer": "v31 rounded shoulder on the 71.31 master; seen-through background baked bone #F5F3EF"
+    "layer": "v31 rounded shoulder on the 71.31 master; Tall 9 mL studio v1.3 seen through the glass"
    },
    "geometry": {
     "shoulder_v31": {
@@ -102,7 +102,7 @@
    "file": "plates/cobalt.png",
    "width": 486,
    "height": 1802,
-   "sha256": "67ecd292bf099c6a97d9ff19af79e71579ecc0b5891e8ac8e5bcb698d0eb9144",
+   "sha256": "2b6022e26886b4d6aa42d810b302c6f8f1ecb8029d173c06a474ed0fa140bedf",
    "pxPerMm": 25.0,
    "anchors": {
     "axisX": 243.0,
@@ -117,9 +117,9 @@
     "opaqueInsideSilhouette": true
    },
    "source": {
-    "library": "native Blender (outputs/register-9ml-v32/export.py)",
+    "library": "native Blender (outputs/cyl9-17415-studio-2026-09-30/export.py + restudio.py)",
     "path": "dispenser-finishes-17415-v27/scenes/mist-black-cobalt.blend",
-    "layer": "v31 rounded shoulder on the 71.31 master; seen-through background baked bone #F5F3EF"
+    "layer": "v31 rounded shoulder on the 71.31 master; Tall 9 mL studio v1.3 seen through the glass"
    },
    "geometry": {
     "shoulder_v31": {
@@ -143,7 +143,7 @@
    "file": "plates/frosted.png",
    "width": 486,
    "height": 1802,
-   "sha256": "68ebe21f69bcf23f803c9bbfc66946dd3674e01fbc01fcb270121a8d268d361e",
+   "sha256": "3b1344c51c61db51d4cb0a38a1ff9f5c35f5191ffd0189673a1588d50f63d034",
    "pxPerMm": 25.0,
    "anchors": {
     "axisX": 243.0,
@@ -158,9 +158,9 @@
     "opaqueInsideSilhouette": true
    },
    "source": {
-    "library": "native Blender (outputs/register-9ml-v32/export.py)",
+    "library": "native Blender (outputs/cyl9-17415-studio-2026-09-30/export.py + restudio.py)",
     "path": "dispenser-finishes-17415-v27/scenes/mist-black-frosted.blend",
-    "layer": "v31 rounded shoulder on the 71.31 master; seen-through background baked bone #F5F3EF"
+    "layer": "v31 rounded shoulder on the 71.31 master; Tall 9 mL studio v1.3 seen through the glass"
    },
    "geometry": {
     "shoulder_v31": {
@@ -184,7 +184,7 @@
    "file": "plates/swirl.png",
    "width": 486,
    "height": 1802,
-   "sha256": "95d3052bc56950e361d2d008d49d347582780edb970d22cb42f6aec8282e5055",
+   "sha256": "6ffd0b965c79658b0093b2fc49142b1ea0a520865501d651ff2871deb1d7d777",
    "pxPerMm": 25.0,
    "anchors": {
     "axisX": 243.0,
@@ -199,9 +199,9 @@
     "opaqueInsideSilhouette": true
    },
    "source": {
-    "library": "native Blender (outputs/register-9ml-v32/export.py)",
+    "library": "native Blender (outputs/cyl9-17415-studio-2026-09-30/export.py + restudio.py)",
     "path": "dispenser-finishes-17415-v27/scenes/mist-black-clear.blend",
-    "layer": "v29 swirl carve on the 71.31 master; seen-through background baked bone #F5F3EF"
+    "layer": "v29 swirl carve on the 71.31 master; Tall 9 mL studio v1.3 seen through the glass"
    },
    "geometry": {
     "swirl": {
@@ -247,13 +247,13 @@
      "slot": "diptube",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-lotion.png",
-     "width": 235,
-     "height": 1800,
-     "sha256": "dc8c62bc2d22085e843fbd7e1740cd6d0095b8882bc8a60d8428ce6427f18fa7",
+     "width": 244,
+     "height": 1790,
+     "sha256": "87faeba9e0936192742ea44f5e8ecce8e24b953064a060979950e98a80511c0d",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 128.0,
-      "y": 9.68
+      "x": 137.0,
+      "y": -1.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -264,13 +264,13 @@
      "slot": "diptube",
      "layerName": "see-through, Amber",
      "file": "see-through/amber-lotion.png",
-     "width": 218,
-     "height": 1701,
-     "sha256": "2171a9ba6c962a8286083f0589a7073798d0d615d649a657afc42c680cd2a00a",
+     "width": 214,
+     "height": 1703,
+     "sha256": "e86c1280da4b993253ef8e2cfd095a954a754aec75a0dfe1872f8d60baf19a99",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 107.0,
-      "y": -1.32
+      "y": 0.68
      },
      "z": "front",
      "explodeIndex": 5,
@@ -281,13 +281,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-lotion.png",
-     "width": 218,
-     "height": 1790,
-     "sha256": "8e5a7282c6fa54074965283383ff10192a4fb143024bff5c63cccc33446e67c3",
+     "width": 484,
+     "height": 1801,
+     "sha256": "b650d36582859ec057a4fef89cf218e162e3e6dffeff45e02a8364fe5a11c31d",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 107.0,
-      "y": -0.32
+      "x": 242.0,
+      "y": 9.68
      },
      "z": "front",
      "explodeIndex": 5,
@@ -299,8 +299,8 @@
      "layerName": "see-through, Frosted",
      "file": "see-through/frosted-lotion.png",
      "width": 484,
-     "height": 1791,
-     "sha256": "53d9a2a4e4dee0ed7f4689a282f8af2f651e16674cdd3881e9f6a7ad8df0a288",
+     "height": 1787,
+     "sha256": "dfe99b73d9346c3433ae45fcba895688f150503849ed625b253145e47346d5eb",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 242.0,
@@ -315,13 +315,13 @@
      "slot": "diptube",
      "layerName": "see-through, Swirl",
      "file": "see-through/swirl-lotion.png",
-     "width": 478,
-     "height": 1800,
-     "sha256": "637575e5b7203fb422a7ff9b86d2ede33f5e62b87381ce73b51ba04b6677241b",
+     "width": 481,
+     "height": 1789,
+     "sha256": "e2e621341a66297332df3061268e4448a09fd2ca46e867788370e03e1b054d1e",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 237.0,
-      "y": 9.68
+      "x": 239.0,
+      "y": -1.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -334,7 +334,7 @@
      "file": "shared/lotion-head.png",
      "width": 380,
      "height": 494,
-     "sha256": "f387b74f5d780e84b194f3c8c39e3810ebc63ae60aff969c52b49a56286b519c",
+     "sha256": "847f65da8370637a8f559e73337b2ecddb22826ad7e21c8c908af40766d4f287",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 190.0,
@@ -349,7 +349,7 @@
      "file": "components/CMP-LPM-BLK-17-415/collar.png",
      "width": 502,
      "height": 395,
-     "sha256": "44a2f6741f17e6cd1c95699753738d43023860943f78ff8dedd26d1e2463f215",
+     "sha256": "f42fb1b553d560b01dc12dc0066885de31b0d6eb3ebdd9375683ea9feb069946",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 251.0,
@@ -364,7 +364,7 @@
      "file": "shared/overcap.png",
      "width": 427,
      "height": 569,
-     "sha256": "3e9592335a2e26b658cc40fdccb255e0c8f859cc850e43be69349676f821f88c",
+     "sha256": "88609a047352705642caddcdc343477c16c2a94c1c0743f8eb7df2d03a78a771",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 213.0,
@@ -379,7 +379,7 @@
      "file": "shared/lotion-internals.png",
      "width": 182,
      "height": 1634,
-     "sha256": "6740d75f69c7e8a4293b333674a5a7e4267f333693a269247183eed53e0fd741",
+     "sha256": "28960427400f216203ea6f2c9a8527920ab78873318863e4d257d9b8d4489d6e",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 91.0,
@@ -398,13 +398,13 @@
      "slot": "diptube",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-lotion.png",
-     "width": 235,
-     "height": 1800,
-     "sha256": "dc8c62bc2d22085e843fbd7e1740cd6d0095b8882bc8a60d8428ce6427f18fa7",
+     "width": 244,
+     "height": 1790,
+     "sha256": "87faeba9e0936192742ea44f5e8ecce8e24b953064a060979950e98a80511c0d",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 128.0,
-      "y": 9.68
+      "x": 137.0,
+      "y": -1.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -415,13 +415,13 @@
      "slot": "diptube",
      "layerName": "see-through, Amber",
      "file": "see-through/amber-lotion.png",
-     "width": 218,
-     "height": 1701,
-     "sha256": "2171a9ba6c962a8286083f0589a7073798d0d615d649a657afc42c680cd2a00a",
+     "width": 214,
+     "height": 1703,
+     "sha256": "e86c1280da4b993253ef8e2cfd095a954a754aec75a0dfe1872f8d60baf19a99",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 107.0,
-      "y": -1.32
+      "y": 0.68
      },
      "z": "front",
      "explodeIndex": 5,
@@ -432,13 +432,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-lotion.png",
-     "width": 218,
-     "height": 1790,
-     "sha256": "8e5a7282c6fa54074965283383ff10192a4fb143024bff5c63cccc33446e67c3",
+     "width": 484,
+     "height": 1801,
+     "sha256": "b650d36582859ec057a4fef89cf218e162e3e6dffeff45e02a8364fe5a11c31d",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 107.0,
-      "y": -0.32
+      "x": 242.0,
+      "y": 9.68
      },
      "z": "front",
      "explodeIndex": 5,
@@ -450,8 +450,8 @@
      "layerName": "see-through, Frosted",
      "file": "see-through/frosted-lotion.png",
      "width": 484,
-     "height": 1791,
-     "sha256": "53d9a2a4e4dee0ed7f4689a282f8af2f651e16674cdd3881e9f6a7ad8df0a288",
+     "height": 1787,
+     "sha256": "dfe99b73d9346c3433ae45fcba895688f150503849ed625b253145e47346d5eb",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 242.0,
@@ -466,13 +466,13 @@
      "slot": "diptube",
      "layerName": "see-through, Swirl",
      "file": "see-through/swirl-lotion.png",
-     "width": 478,
-     "height": 1800,
-     "sha256": "637575e5b7203fb422a7ff9b86d2ede33f5e62b87381ce73b51ba04b6677241b",
+     "width": 481,
+     "height": 1789,
+     "sha256": "e2e621341a66297332df3061268e4448a09fd2ca46e867788370e03e1b054d1e",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 237.0,
-      "y": 9.68
+      "x": 239.0,
+      "y": -1.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -485,7 +485,7 @@
      "file": "shared/lotion-head.png",
      "width": 380,
      "height": 494,
-     "sha256": "f387b74f5d780e84b194f3c8c39e3810ebc63ae60aff969c52b49a56286b519c",
+     "sha256": "847f65da8370637a8f559e73337b2ecddb22826ad7e21c8c908af40766d4f287",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 190.0,
@@ -500,7 +500,7 @@
      "file": "components/CMP-LPM-MSLV-17-415/collar.png",
      "width": 502,
      "height": 395,
-     "sha256": "003154aa8b8f7afcfdff8b70a399a6600ae64bf835e65a92cfe88610071fbbeb",
+     "sha256": "40d935a27425cd4f9d0be88e61ed34b34588576baadfc21a0531d63c317910b6",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 251.0,
@@ -515,7 +515,7 @@
      "file": "shared/overcap.png",
      "width": 427,
      "height": 569,
-     "sha256": "3e9592335a2e26b658cc40fdccb255e0c8f859cc850e43be69349676f821f88c",
+     "sha256": "88609a047352705642caddcdc343477c16c2a94c1c0743f8eb7df2d03a78a771",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 213.0,
@@ -530,7 +530,7 @@
      "file": "shared/lotion-internals.png",
      "width": 182,
      "height": 1634,
-     "sha256": "6740d75f69c7e8a4293b333674a5a7e4267f333693a269247183eed53e0fd741",
+     "sha256": "28960427400f216203ea6f2c9a8527920ab78873318863e4d257d9b8d4489d6e",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 91.0,
@@ -549,13 +549,13 @@
      "slot": "diptube",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-lotion.png",
-     "width": 235,
-     "height": 1800,
-     "sha256": "dc8c62bc2d22085e843fbd7e1740cd6d0095b8882bc8a60d8428ce6427f18fa7",
+     "width": 244,
+     "height": 1790,
+     "sha256": "87faeba9e0936192742ea44f5e8ecce8e24b953064a060979950e98a80511c0d",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 128.0,
-      "y": 9.68
+      "x": 137.0,
+      "y": -1.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -566,13 +566,13 @@
      "slot": "diptube",
      "layerName": "see-through, Amber",
      "file": "see-through/amber-lotion.png",
-     "width": 218,
-     "height": 1701,
-     "sha256": "2171a9ba6c962a8286083f0589a7073798d0d615d649a657afc42c680cd2a00a",
+     "width": 214,
+     "height": 1703,
+     "sha256": "e86c1280da4b993253ef8e2cfd095a954a754aec75a0dfe1872f8d60baf19a99",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 107.0,
-      "y": -1.32
+      "y": 0.68
      },
      "z": "front",
      "explodeIndex": 5,
@@ -583,13 +583,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-lotion.png",
-     "width": 218,
-     "height": 1790,
-     "sha256": "8e5a7282c6fa54074965283383ff10192a4fb143024bff5c63cccc33446e67c3",
+     "width": 484,
+     "height": 1801,
+     "sha256": "b650d36582859ec057a4fef89cf218e162e3e6dffeff45e02a8364fe5a11c31d",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 107.0,
-      "y": -0.32
+      "x": 242.0,
+      "y": 9.68
      },
      "z": "front",
      "explodeIndex": 5,
@@ -601,8 +601,8 @@
      "layerName": "see-through, Frosted",
      "file": "see-through/frosted-lotion.png",
      "width": 484,
-     "height": 1791,
-     "sha256": "53d9a2a4e4dee0ed7f4689a282f8af2f651e16674cdd3881e9f6a7ad8df0a288",
+     "height": 1787,
+     "sha256": "dfe99b73d9346c3433ae45fcba895688f150503849ed625b253145e47346d5eb",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 242.0,
@@ -617,13 +617,13 @@
      "slot": "diptube",
      "layerName": "see-through, Swirl",
      "file": "see-through/swirl-lotion.png",
-     "width": 478,
-     "height": 1800,
-     "sha256": "637575e5b7203fb422a7ff9b86d2ede33f5e62b87381ce73b51ba04b6677241b",
+     "width": 481,
+     "height": 1789,
+     "sha256": "e2e621341a66297332df3061268e4448a09fd2ca46e867788370e03e1b054d1e",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 237.0,
-      "y": 9.68
+      "x": 239.0,
+      "y": -1.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -636,7 +636,7 @@
      "file": "shared/lotion-head.png",
      "width": 380,
      "height": 494,
-     "sha256": "f387b74f5d780e84b194f3c8c39e3810ebc63ae60aff969c52b49a56286b519c",
+     "sha256": "847f65da8370637a8f559e73337b2ecddb22826ad7e21c8c908af40766d4f287",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 190.0,
@@ -651,7 +651,7 @@
      "file": "components/CMP-LPM-SGLD-17-415/collar.png",
      "width": 502,
      "height": 395,
-     "sha256": "eff104117c7048ab96ea41166ed0e45f29c18a8988cd45926667b5fedee69ea2",
+     "sha256": "facd0c2862e7ea111f2e9b05a9494a5839f0d2202be0c5692fd568d676db2ec7",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 251.0,
@@ -666,7 +666,7 @@
      "file": "shared/overcap.png",
      "width": 427,
      "height": 569,
-     "sha256": "3e9592335a2e26b658cc40fdccb255e0c8f859cc850e43be69349676f821f88c",
+     "sha256": "88609a047352705642caddcdc343477c16c2a94c1c0743f8eb7df2d03a78a771",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 213.0,
@@ -681,7 +681,7 @@
      "file": "shared/lotion-internals.png",
      "width": 182,
      "height": 1634,
-     "sha256": "6740d75f69c7e8a4293b333674a5a7e4267f333693a269247183eed53e0fd741",
+     "sha256": "28960427400f216203ea6f2c9a8527920ab78873318863e4d257d9b8d4489d6e",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 91.0,
@@ -702,7 +702,7 @@
      "file": "components/CMP-ROC-BLK-17415-DOT/cap.png",
      "width": 476,
      "height": 687,
-     "sha256": "7f39b8959f1c2b0640f3ce7b1ee55cf3a8375b055d9936884244a0d36680b76f",
+     "sha256": "a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 238.0,
@@ -722,7 +722,7 @@
      "file": "components/CMP-ROC-CPR-17415/cap.png",
      "width": 476,
      "height": 687,
-     "sha256": "c9bb4ab609e3f7cd7da8eb47c7fc6fe409ac485d138c268e3b4a3f6d27477177",
+     "sha256": "7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 238.0,
@@ -742,7 +742,7 @@
      "file": "components/CMP-ROC-MGLD-17415/cap.png",
      "width": 476,
      "height": 687,
-     "sha256": "e149724593f75e59c9f05852af7be86c05bd3dd0a9dff00b617400bd72a75f5b",
+     "sha256": "f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 238.0,
@@ -762,7 +762,7 @@
      "file": "components/CMP-ROC-MSLV-17415/cap.png",
      "width": 476,
      "height": 687,
-     "sha256": "afe0bf712b8c6bee98c640b7e336907666b006e79cdc51bf9f0fb548f82eb5cc",
+     "sha256": "a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 238.0,
@@ -782,7 +782,7 @@
      "file": "components/CMP-ROC-PNK-17415-DOT/cap.png",
      "width": 476,
      "height": 687,
-     "sha256": "9081e91e8629c5bf99279b8d42c7fe4e98d8c464e4030b5e3de1ab25b0809879",
+     "sha256": "03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 238.0,
@@ -802,7 +802,7 @@
      "file": "components/CMP-ROC-SBLK-17415/cap.png",
      "width": 476,
      "height": 687,
-     "sha256": "ee3770c081b73d0d84fb32eb219f042d53522a52cce094a5c3e5b6048a640221",
+     "sha256": "525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 238.0,
@@ -822,7 +822,7 @@
      "file": "components/CMP-ROC-SGLD-17415/cap.png",
      "width": 476,
      "height": 687,
-     "sha256": "7105af54d798733ec60ed6b7bb56969ecb70c9f5603739e09f41534568204dec",
+     "sha256": "432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 238.0,
@@ -842,7 +842,7 @@
      "file": "components/CMP-ROC-SLV-17415-DOT/cap.png",
      "width": 476,
      "height": 687,
-     "sha256": "cf6793e66a698869830f6dec14adc4e637c07516d6f06eeadd265abd0a088549",
+     "sha256": "ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 238.0,
@@ -862,7 +862,7 @@
      "file": "components/CMP-ROC-SSLV-17415/cap.png",
      "width": 476,
      "height": 687,
-     "sha256": "739b1d35a4c8ec4309d03bd4c5cb089de83b256b78f3b2ec9ed9922986b2bc36",
+     "sha256": "e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 238.0,
@@ -882,7 +882,7 @@
      "file": "components/CMP-ROC-WHT-17415/cap.png",
      "width": 476,
      "height": 687,
-     "sha256": "ace47f3070629f367f7393f6a1c19186180bd1ea623d0509dcb953cc657dd32a",
+     "sha256": "8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 238.0,
@@ -900,13 +900,13 @@
      "slot": "diptube",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-mist.png",
-     "width": 211,
+     "width": 153,
      "height": 1791,
-     "sha256": "51627df058ee56aa01bfb4e1d06c624e8f64ccf7f234715f3be6e75a5ed747fe",
+     "sha256": "901c4e83f96cb91d5e62d755b13a99465e22a00cccef093ffd17804af200c9f6",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 108.0,
-      "y": 0.68
+      "x": 79.0,
+      "y": -0.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -918,12 +918,12 @@
      "layerName": "see-through, Amber",
      "file": "see-through/amber-mist.png",
      "width": 148,
-     "height": 1652,
-     "sha256": "ce8f61d4de67e435966ebdc34d246f5878d165622718a6c18af9ce6c867d934c",
+     "height": 1655,
+     "sha256": "91b71f2751ec999e0436963f8fb7a2f0c3c666cc7f2c899cf28e0cf9f7dda070",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 74.0,
-      "y": -3.32
+      "y": -0.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -934,13 +934,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 148,
-     "height": 1661,
-     "sha256": "6fa14d17db32553d44bd07ea977c4824603fcc11b1eee569fe9b8780486da9d2",
+     "width": 484,
+     "height": 1792,
+     "sha256": "57ee1d173b0ca5ab469e798ed4126c4e218e045ecdecb94b5f5455d35051e09a",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 74.0,
-      "y": -2.32
+      "x": 242.0,
+      "y": 0.68
      },
      "z": "front",
      "explodeIndex": 5,
@@ -951,12 +951,12 @@
      "slot": "diptube",
      "layerName": "see-through, Frosted",
      "file": "see-through/frosted-mist.png",
-     "width": 178,
-     "height": 1655,
-     "sha256": "d77764c61497d029b5a0a26c4efa2949ec8564aba10732a767838a135142b768",
+     "width": 444,
+     "height": 1681,
+     "sha256": "f08a465b231041464344da0a6db06dab9ea78c5d334a6dd060a8a4b8e1679df3",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 95.0,
+      "x": 202.0,
       "y": -0.32
      },
      "z": "front",
@@ -968,12 +968,12 @@
      "slot": "diptube",
      "layerName": "see-through, Swirl",
      "file": "see-through/swirl-mist.png",
-     "width": 468,
-     "height": 1781,
-     "sha256": "c5c0c53f2e1d9a9f058db1f418e54c09292b8bb47793f136cc4d1b8dffae5df1",
+     "width": 480,
+     "height": 1790,
+     "sha256": "1b4c0fd2fd062d6f87a28831f04b543f4ef986450a6a4e005939394cacdc7f65",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 227.0,
+      "x": 239.0,
       "y": -0.32
      },
      "z": "front",
@@ -987,7 +987,7 @@
      "file": "shared/mist-head.png",
      "width": 390,
      "height": 477,
-     "sha256": "9acd90df37d47dfcf75c6e4015b9b46ad76fb0c0ade3d9c7ea5ae50decf021ba",
+     "sha256": "693b6a8784e40b851ab21e2828dd6e3edca1c68c41bb46c91916203850772e31",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 195.0,
@@ -1002,7 +1002,7 @@
      "file": "components/CMP-SPR-BLK-17-415-01/collar.png",
      "width": 502,
      "height": 395,
-     "sha256": "615239ff80bcf9eee99f3bf4fa283c92fd65911b4b294ea671c54a32c248aa00",
+     "sha256": "da51b7dfb19fad84dec2187f54cdd59234867d660360ee160248f0ab68c1aa17",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 251.0,
@@ -1017,7 +1017,7 @@
      "file": "shared/overcap.png",
      "width": 427,
      "height": 569,
-     "sha256": "3e9592335a2e26b658cc40fdccb255e0c8f859cc850e43be69349676f821f88c",
+     "sha256": "88609a047352705642caddcdc343477c16c2a94c1c0743f8eb7df2d03a78a771",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 213.0,
@@ -1032,7 +1032,7 @@
      "file": "shared/mist-internals.png",
      "width": 116,
      "height": 1586,
-     "sha256": "627788939770e2435ccba54ef2f9292b430ae1f105c0dbf391b535ccfa24ae3a",
+     "sha256": "e64249d99fe6197eafaf9a785bf544701fabc4b53c7fa11052981d9022fa58eb",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 58.0,
@@ -1051,13 +1051,13 @@
      "slot": "diptube",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-mist.png",
-     "width": 211,
+     "width": 153,
      "height": 1791,
-     "sha256": "51627df058ee56aa01bfb4e1d06c624e8f64ccf7f234715f3be6e75a5ed747fe",
+     "sha256": "901c4e83f96cb91d5e62d755b13a99465e22a00cccef093ffd17804af200c9f6",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 108.0,
-      "y": 0.68
+      "x": 79.0,
+      "y": -0.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1069,12 +1069,12 @@
      "layerName": "see-through, Amber",
      "file": "see-through/amber-mist.png",
      "width": 148,
-     "height": 1652,
-     "sha256": "ce8f61d4de67e435966ebdc34d246f5878d165622718a6c18af9ce6c867d934c",
+     "height": 1655,
+     "sha256": "91b71f2751ec999e0436963f8fb7a2f0c3c666cc7f2c899cf28e0cf9f7dda070",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 74.0,
-      "y": -3.32
+      "y": -0.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1085,13 +1085,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 148,
-     "height": 1661,
-     "sha256": "6fa14d17db32553d44bd07ea977c4824603fcc11b1eee569fe9b8780486da9d2",
+     "width": 484,
+     "height": 1792,
+     "sha256": "57ee1d173b0ca5ab469e798ed4126c4e218e045ecdecb94b5f5455d35051e09a",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 74.0,
-      "y": -2.32
+      "x": 242.0,
+      "y": 0.68
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1102,12 +1102,12 @@
      "slot": "diptube",
      "layerName": "see-through, Frosted",
      "file": "see-through/frosted-mist.png",
-     "width": 178,
-     "height": 1655,
-     "sha256": "d77764c61497d029b5a0a26c4efa2949ec8564aba10732a767838a135142b768",
+     "width": 444,
+     "height": 1681,
+     "sha256": "f08a465b231041464344da0a6db06dab9ea78c5d334a6dd060a8a4b8e1679df3",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 95.0,
+      "x": 202.0,
       "y": -0.32
      },
      "z": "front",
@@ -1119,12 +1119,12 @@
      "slot": "diptube",
      "layerName": "see-through, Swirl",
      "file": "see-through/swirl-mist.png",
-     "width": 468,
-     "height": 1781,
-     "sha256": "c5c0c53f2e1d9a9f058db1f418e54c09292b8bb47793f136cc4d1b8dffae5df1",
+     "width": 480,
+     "height": 1790,
+     "sha256": "1b4c0fd2fd062d6f87a28831f04b543f4ef986450a6a4e005939394cacdc7f65",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 227.0,
+      "x": 239.0,
       "y": -0.32
      },
      "z": "front",
@@ -1138,7 +1138,7 @@
      "file": "shared/mist-head.png",
      "width": 390,
      "height": 477,
-     "sha256": "9acd90df37d47dfcf75c6e4015b9b46ad76fb0c0ade3d9c7ea5ae50decf021ba",
+     "sha256": "693b6a8784e40b851ab21e2828dd6e3edca1c68c41bb46c91916203850772e31",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 195.0,
@@ -1153,7 +1153,7 @@
      "file": "components/CMP-SPR-CLR-17-415/collar.png",
      "width": 502,
      "height": 395,
-     "sha256": "c2c77107d14ebbf65c585905f2c8a8df6db7b4adef639473b1ddb0d44366ddc1",
+     "sha256": "1211d6ec9083a318a90fb89dc16f6412fede824d0082f8c2389d15abeaf4f280",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 251.0,
@@ -1168,7 +1168,7 @@
      "file": "shared/overcap.png",
      "width": 427,
      "height": 569,
-     "sha256": "3e9592335a2e26b658cc40fdccb255e0c8f859cc850e43be69349676f821f88c",
+     "sha256": "88609a047352705642caddcdc343477c16c2a94c1c0743f8eb7df2d03a78a771",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 213.0,
@@ -1183,7 +1183,7 @@
      "file": "shared/mist-internals.png",
      "width": 116,
      "height": 1586,
-     "sha256": "627788939770e2435ccba54ef2f9292b430ae1f105c0dbf391b535ccfa24ae3a",
+     "sha256": "e64249d99fe6197eafaf9a785bf544701fabc4b53c7fa11052981d9022fa58eb",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 58.0,
@@ -1202,13 +1202,13 @@
      "slot": "diptube",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-mist.png",
-     "width": 211,
+     "width": 153,
      "height": 1791,
-     "sha256": "51627df058ee56aa01bfb4e1d06c624e8f64ccf7f234715f3be6e75a5ed747fe",
+     "sha256": "901c4e83f96cb91d5e62d755b13a99465e22a00cccef093ffd17804af200c9f6",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 108.0,
-      "y": 0.68
+      "x": 79.0,
+      "y": -0.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1220,12 +1220,12 @@
      "layerName": "see-through, Amber",
      "file": "see-through/amber-mist.png",
      "width": 148,
-     "height": 1652,
-     "sha256": "ce8f61d4de67e435966ebdc34d246f5878d165622718a6c18af9ce6c867d934c",
+     "height": 1655,
+     "sha256": "91b71f2751ec999e0436963f8fb7a2f0c3c666cc7f2c899cf28e0cf9f7dda070",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 74.0,
-      "y": -3.32
+      "y": -0.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1236,13 +1236,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 148,
-     "height": 1661,
-     "sha256": "6fa14d17db32553d44bd07ea977c4824603fcc11b1eee569fe9b8780486da9d2",
+     "width": 484,
+     "height": 1792,
+     "sha256": "57ee1d173b0ca5ab469e798ed4126c4e218e045ecdecb94b5f5455d35051e09a",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 74.0,
-      "y": -2.32
+      "x": 242.0,
+      "y": 0.68
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1253,12 +1253,12 @@
      "slot": "diptube",
      "layerName": "see-through, Frosted",
      "file": "see-through/frosted-mist.png",
-     "width": 178,
-     "height": 1655,
-     "sha256": "d77764c61497d029b5a0a26c4efa2949ec8564aba10732a767838a135142b768",
+     "width": 444,
+     "height": 1681,
+     "sha256": "f08a465b231041464344da0a6db06dab9ea78c5d334a6dd060a8a4b8e1679df3",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 95.0,
+      "x": 202.0,
       "y": -0.32
      },
      "z": "front",
@@ -1270,12 +1270,12 @@
      "slot": "diptube",
      "layerName": "see-through, Swirl",
      "file": "see-through/swirl-mist.png",
-     "width": 468,
-     "height": 1781,
-     "sha256": "c5c0c53f2e1d9a9f058db1f418e54c09292b8bb47793f136cc4d1b8dffae5df1",
+     "width": 480,
+     "height": 1790,
+     "sha256": "1b4c0fd2fd062d6f87a28831f04b543f4ef986450a6a4e005939394cacdc7f65",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 227.0,
+      "x": 239.0,
       "y": -0.32
      },
      "z": "front",
@@ -1289,7 +1289,7 @@
      "file": "shared/mist-head.png",
      "width": 390,
      "height": 477,
-     "sha256": "9acd90df37d47dfcf75c6e4015b9b46ad76fb0c0ade3d9c7ea5ae50decf021ba",
+     "sha256": "693b6a8784e40b851ab21e2828dd6e3edca1c68c41bb46c91916203850772e31",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 195.0,
@@ -1304,7 +1304,7 @@
      "file": "components/CMP-SPR-RED-17-415/collar.png",
      "width": 502,
      "height": 395,
-     "sha256": "bd852e1ff7333980e27c315ef46fb59e56093c4e19530514364f5c66b700e4e8",
+     "sha256": "034842088ba8ff9719ba5753e653d481d529dbb3a1fd9aeb9fd75c320b9f1969",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 251.0,
@@ -1319,7 +1319,7 @@
      "file": "shared/overcap.png",
      "width": 427,
      "height": 569,
-     "sha256": "3e9592335a2e26b658cc40fdccb255e0c8f859cc850e43be69349676f821f88c",
+     "sha256": "88609a047352705642caddcdc343477c16c2a94c1c0743f8eb7df2d03a78a771",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 213.0,
@@ -1334,7 +1334,7 @@
      "file": "shared/mist-internals.png",
      "width": 116,
      "height": 1586,
-     "sha256": "627788939770e2435ccba54ef2f9292b430ae1f105c0dbf391b535ccfa24ae3a",
+     "sha256": "e64249d99fe6197eafaf9a785bf544701fabc4b53c7fa11052981d9022fa58eb",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 58.0,
@@ -1353,13 +1353,13 @@
      "slot": "diptube",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-mist.png",
-     "width": 211,
+     "width": 153,
      "height": 1791,
-     "sha256": "51627df058ee56aa01bfb4e1d06c624e8f64ccf7f234715f3be6e75a5ed747fe",
+     "sha256": "901c4e83f96cb91d5e62d755b13a99465e22a00cccef093ffd17804af200c9f6",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 108.0,
-      "y": 0.68
+      "x": 79.0,
+      "y": -0.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1371,12 +1371,12 @@
      "layerName": "see-through, Amber",
      "file": "see-through/amber-mist.png",
      "width": 148,
-     "height": 1652,
-     "sha256": "ce8f61d4de67e435966ebdc34d246f5878d165622718a6c18af9ce6c867d934c",
+     "height": 1655,
+     "sha256": "91b71f2751ec999e0436963f8fb7a2f0c3c666cc7f2c899cf28e0cf9f7dda070",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 74.0,
-      "y": -3.32
+      "y": -0.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1387,13 +1387,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 148,
-     "height": 1661,
-     "sha256": "6fa14d17db32553d44bd07ea977c4824603fcc11b1eee569fe9b8780486da9d2",
+     "width": 484,
+     "height": 1792,
+     "sha256": "57ee1d173b0ca5ab469e798ed4126c4e218e045ecdecb94b5f5455d35051e09a",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 74.0,
-      "y": -2.32
+      "x": 242.0,
+      "y": 0.68
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1404,12 +1404,12 @@
      "slot": "diptube",
      "layerName": "see-through, Frosted",
      "file": "see-through/frosted-mist.png",
-     "width": 178,
-     "height": 1655,
-     "sha256": "d77764c61497d029b5a0a26c4efa2949ec8564aba10732a767838a135142b768",
+     "width": 444,
+     "height": 1681,
+     "sha256": "f08a465b231041464344da0a6db06dab9ea78c5d334a6dd060a8a4b8e1679df3",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 95.0,
+      "x": 202.0,
       "y": -0.32
      },
      "z": "front",
@@ -1421,12 +1421,12 @@
      "slot": "diptube",
      "layerName": "see-through, Swirl",
      "file": "see-through/swirl-mist.png",
-     "width": 468,
-     "height": 1781,
-     "sha256": "c5c0c53f2e1d9a9f058db1f418e54c09292b8bb47793f136cc4d1b8dffae5df1",
+     "width": 480,
+     "height": 1790,
+     "sha256": "1b4c0fd2fd062d6f87a28831f04b543f4ef986450a6a4e005939394cacdc7f65",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 227.0,
+      "x": 239.0,
       "y": -0.32
      },
      "z": "front",
@@ -1440,7 +1440,7 @@
      "file": "shared/mist-head.png",
      "width": 390,
      "height": 477,
-     "sha256": "9acd90df37d47dfcf75c6e4015b9b46ad76fb0c0ade3d9c7ea5ae50decf021ba",
+     "sha256": "693b6a8784e40b851ab21e2828dd6e3edca1c68c41bb46c91916203850772e31",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 195.0,
@@ -1455,7 +1455,7 @@
      "file": "components/CMP-SPR-SGLD-17-415/collar.png",
      "width": 502,
      "height": 395,
-     "sha256": "75da73663571fcc0b0e46756f08652efd5a2ba18ea551b86ed0c054a4d49720e",
+     "sha256": "22f76381d5466d0f41fda58c8fe86ea4dbb05842d52545cddb42a2e335eeb515",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 251.0,
@@ -1470,7 +1470,7 @@
      "file": "shared/overcap.png",
      "width": 427,
      "height": 569,
-     "sha256": "3e9592335a2e26b658cc40fdccb255e0c8f859cc850e43be69349676f821f88c",
+     "sha256": "88609a047352705642caddcdc343477c16c2a94c1c0743f8eb7df2d03a78a771",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 213.0,
@@ -1485,7 +1485,7 @@
      "file": "shared/mist-internals.png",
      "width": 116,
      "height": 1586,
-     "sha256": "627788939770e2435ccba54ef2f9292b430ae1f105c0dbf391b535ccfa24ae3a",
+     "sha256": "e64249d99fe6197eafaf9a785bf544701fabc4b53c7fa11052981d9022fa58eb",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 58.0,
@@ -1504,13 +1504,13 @@
      "slot": "diptube",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-mist.png",
-     "width": 211,
+     "width": 153,
      "height": 1791,
-     "sha256": "51627df058ee56aa01bfb4e1d06c624e8f64ccf7f234715f3be6e75a5ed747fe",
+     "sha256": "901c4e83f96cb91d5e62d755b13a99465e22a00cccef093ffd17804af200c9f6",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 108.0,
-      "y": 0.68
+      "x": 79.0,
+      "y": -0.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1522,12 +1522,12 @@
      "layerName": "see-through, Amber",
      "file": "see-through/amber-mist.png",
      "width": 148,
-     "height": 1652,
-     "sha256": "ce8f61d4de67e435966ebdc34d246f5878d165622718a6c18af9ce6c867d934c",
+     "height": 1655,
+     "sha256": "91b71f2751ec999e0436963f8fb7a2f0c3c666cc7f2c899cf28e0cf9f7dda070",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 74.0,
-      "y": -3.32
+      "y": -0.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1538,13 +1538,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 148,
-     "height": 1661,
-     "sha256": "6fa14d17db32553d44bd07ea977c4824603fcc11b1eee569fe9b8780486da9d2",
+     "width": 484,
+     "height": 1792,
+     "sha256": "57ee1d173b0ca5ab469e798ed4126c4e218e045ecdecb94b5f5455d35051e09a",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 74.0,
-      "y": -2.32
+      "x": 242.0,
+      "y": 0.68
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1555,12 +1555,12 @@
      "slot": "diptube",
      "layerName": "see-through, Frosted",
      "file": "see-through/frosted-mist.png",
-     "width": 178,
-     "height": 1655,
-     "sha256": "d77764c61497d029b5a0a26c4efa2949ec8564aba10732a767838a135142b768",
+     "width": 444,
+     "height": 1681,
+     "sha256": "f08a465b231041464344da0a6db06dab9ea78c5d334a6dd060a8a4b8e1679df3",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 95.0,
+      "x": 202.0,
       "y": -0.32
      },
      "z": "front",
@@ -1572,12 +1572,12 @@
      "slot": "diptube",
      "layerName": "see-through, Swirl",
      "file": "see-through/swirl-mist.png",
-     "width": 468,
-     "height": 1781,
-     "sha256": "c5c0c53f2e1d9a9f058db1f418e54c09292b8bb47793f136cc4d1b8dffae5df1",
+     "width": 480,
+     "height": 1790,
+     "sha256": "1b4c0fd2fd062d6f87a28831f04b543f4ef986450a6a4e005939394cacdc7f65",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 227.0,
+      "x": 239.0,
       "y": -0.32
      },
      "z": "front",
@@ -1591,7 +1591,7 @@
      "file": "shared/mist-head.png",
      "width": 390,
      "height": 477,
-     "sha256": "9acd90df37d47dfcf75c6e4015b9b46ad76fb0c0ade3d9c7ea5ae50decf021ba",
+     "sha256": "693b6a8784e40b851ab21e2828dd6e3edca1c68c41bb46c91916203850772e31",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 195.0,
@@ -1606,7 +1606,7 @@
      "file": "components/CMP-SPR-SLV-17-415/collar.png",
      "width": 502,
      "height": 395,
-     "sha256": "bb63685595b4dd64c5ac85b95d647b41dde747a0bd411373175997917f72afd0",
+     "sha256": "aea8f877cdfedf6faba12e3434adef8a51cf308fdddcd8b7febef5ad2322bece",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 251.0,
@@ -1621,7 +1621,7 @@
      "file": "shared/overcap.png",
      "width": 427,
      "height": 569,
-     "sha256": "3e9592335a2e26b658cc40fdccb255e0c8f859cc850e43be69349676f821f88c",
+     "sha256": "88609a047352705642caddcdc343477c16c2a94c1c0743f8eb7df2d03a78a771",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 213.0,
@@ -1636,7 +1636,7 @@
      "file": "shared/mist-internals.png",
      "width": 116,
      "height": 1586,
-     "sha256": "627788939770e2435ccba54ef2f9292b430ae1f105c0dbf391b535ccfa24ae3a",
+     "sha256": "e64249d99fe6197eafaf9a785bf544701fabc4b53c7fa11052981d9022fa58eb",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 58.0,
@@ -1655,13 +1655,13 @@
      "slot": "diptube",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-mist.png",
-     "width": 211,
+     "width": 153,
      "height": 1791,
-     "sha256": "51627df058ee56aa01bfb4e1d06c624e8f64ccf7f234715f3be6e75a5ed747fe",
+     "sha256": "901c4e83f96cb91d5e62d755b13a99465e22a00cccef093ffd17804af200c9f6",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 108.0,
-      "y": 0.68
+      "x": 79.0,
+      "y": -0.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1673,12 +1673,12 @@
      "layerName": "see-through, Amber",
      "file": "see-through/amber-mist.png",
      "width": 148,
-     "height": 1652,
-     "sha256": "ce8f61d4de67e435966ebdc34d246f5878d165622718a6c18af9ce6c867d934c",
+     "height": 1655,
+     "sha256": "91b71f2751ec999e0436963f8fb7a2f0c3c666cc7f2c899cf28e0cf9f7dda070",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 74.0,
-      "y": -3.32
+      "y": -0.32
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1689,13 +1689,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 148,
-     "height": 1661,
-     "sha256": "6fa14d17db32553d44bd07ea977c4824603fcc11b1eee569fe9b8780486da9d2",
+     "width": 484,
+     "height": 1792,
+     "sha256": "57ee1d173b0ca5ab469e798ed4126c4e218e045ecdecb94b5f5455d35051e09a",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 74.0,
-      "y": -2.32
+      "x": 242.0,
+      "y": 0.68
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1706,12 +1706,12 @@
      "slot": "diptube",
      "layerName": "see-through, Frosted",
      "file": "see-through/frosted-mist.png",
-     "width": 178,
-     "height": 1655,
-     "sha256": "d77764c61497d029b5a0a26c4efa2949ec8564aba10732a767838a135142b768",
+     "width": 444,
+     "height": 1681,
+     "sha256": "f08a465b231041464344da0a6db06dab9ea78c5d334a6dd060a8a4b8e1679df3",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 95.0,
+      "x": 202.0,
       "y": -0.32
      },
      "z": "front",
@@ -1723,12 +1723,12 @@
      "slot": "diptube",
      "layerName": "see-through, Swirl",
      "file": "see-through/swirl-mist.png",
-     "width": 468,
-     "height": 1781,
-     "sha256": "c5c0c53f2e1d9a9f058db1f418e54c09292b8bb47793f136cc4d1b8dffae5df1",
+     "width": 480,
+     "height": 1790,
+     "sha256": "1b4c0fd2fd062d6f87a28831f04b543f4ef986450a6a4e005939394cacdc7f65",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 227.0,
+      "x": 239.0,
       "y": -0.32
      },
      "z": "front",
@@ -1742,7 +1742,7 @@
      "file": "shared/mist-head.png",
      "width": 390,
      "height": 477,
-     "sha256": "9acd90df37d47dfcf75c6e4015b9b46ad76fb0c0ade3d9c7ea5ae50decf021ba",
+     "sha256": "693b6a8784e40b851ab21e2828dd6e3edca1c68c41bb46c91916203850772e31",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 195.0,
@@ -1757,7 +1757,7 @@
      "file": "components/CMP-SPR-SSLV-17-415/collar.png",
      "width": 502,
      "height": 395,
-     "sha256": "619c8505c809e6009e930824218f799053318eaaefc28173afd5fd64722e0613",
+     "sha256": "8b648a26ed3aae495ef1d907abf84b6d8e98064ca9e1c920448c742dd7aa628a",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 251.0,
@@ -1772,7 +1772,7 @@
      "file": "shared/overcap.png",
      "width": 427,
      "height": 569,
-     "sha256": "3e9592335a2e26b658cc40fdccb255e0c8f859cc850e43be69349676f821f88c",
+     "sha256": "88609a047352705642caddcdc343477c16c2a94c1c0743f8eb7df2d03a78a771",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 213.0,
@@ -1787,7 +1787,7 @@
      "file": "shared/mist-internals.png",
      "width": 116,
      "height": 1586,
-     "sha256": "627788939770e2435ccba54ef2f9292b430ae1f105c0dbf391b535ccfa24ae3a",
+     "sha256": "e64249d99fe6197eafaf9a785bf544701fabc4b53c7fa11052981d9022fa58eb",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 58.0,
@@ -1806,12 +1806,12 @@
      "slot": "roller",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-roller-metal.png",
-     "width": 370,
-     "height": 1801,
-     "sha256": "38230c977c03edcf62681608a198cd395a392f708ba5d284cecf958d943b9245",
+     "width": 339,
+     "height": 1800,
+     "sha256": "984db336768a94de302f1bc6d70cd1d191bcc551ec79506da7753cb4a9858bd2",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 171.0,
+      "x": 168.0,
       "y": 9.68
      },
      "z": "front",
@@ -1823,12 +1823,12 @@
      "slot": "roller",
      "layerName": "see-through, Amber",
      "file": "see-through/amber-roller-metal.png",
-     "width": 339,
-     "height": 1676,
-     "sha256": "090bc121d68fa21fa11221388bba9c7f18dd731435f36836757efdca9ba0ef71",
+     "width": 345,
+     "height": 353,
+     "sha256": "858b4c5e3f8297c799ab196b0a1ad05ff80bb90dc0c2cbd630ddc1190c0c0302",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 169.0,
+      "x": 173.0,
       "y": 9.68
      },
      "z": "front",
@@ -1840,12 +1840,12 @@
      "slot": "roller",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-roller-metal.png",
-     "width": 339,
+     "width": 484,
      "height": 1800,
-     "sha256": "9df7c680ffb819f85c36e10ec84e54b95649810c8629e74a787cedc39550486c",
+     "sha256": "1bd6edb04abb3a465bb3d88452e6e0a71506abb4f06a1712feba5a0002b0f66f",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 169.0,
+      "x": 242.0,
       "y": 9.68
      },
      "z": "front",
@@ -1857,12 +1857,12 @@
      "slot": "roller",
      "layerName": "see-through, Frosted",
      "file": "see-through/frosted-roller-metal.png",
-     "width": 414,
-     "height": 1801,
-     "sha256": "bf1120937fe57349a1b98f00d74100653d50825a1fb1d43f274418638acaa5c1",
+     "width": 357,
+     "height": 368,
+     "sha256": "deec4c9ea63e7cce7f569b665c075b4e3369a4933c315db9ea4f075b247bb1dd",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 234.0,
+      "x": 186.0,
       "y": 9.68
      },
      "z": "front",
@@ -1874,12 +1874,12 @@
      "slot": "roller",
      "layerName": "see-through, Swirl",
      "file": "see-through/swirl-roller-metal.png",
-     "width": 396,
-     "height": 1800,
-     "sha256": "f8cff0279a097bef36eeab798dbe9559ced76c8c0b51baba465e70c52da2d6bf",
+     "width": 478,
+     "height": 1738,
+     "sha256": "08f4b904b36257f3fed41317fc622a0a5cb5162c23c0c59bf0029993cade3dbe",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 155.0,
+      "x": 237.0,
       "y": 9.68
      },
      "z": "front",
@@ -1893,7 +1893,7 @@
      "file": "components/LIB-17-415-MtlRollon/roller.png",
      "width": 374,
      "height": 531,
-     "sha256": "4c3c4a5090ce2c419265e57716991288dc02fc0d0d0a0b2d7c2a91dff5921c48",
+     "sha256": "63eff96be1fdb5837b7fe046aad481af65a4ecb2d36b8c3c8d8c058decbdd146",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 187.0,
@@ -1909,7 +1909,7 @@
      "file": "components/LIB-17-415-MtlRollon/roller.png",
      "width": 374,
      "height": 531,
-     "sha256": "4c3c4a5090ce2c419265e57716991288dc02fc0d0d0a0b2d7c2a91dff5921c48",
+     "sha256": "63eff96be1fdb5837b7fe046aad481af65a4ecb2d36b8c3c8d8c058decbdd146",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 187.0,
@@ -1928,12 +1928,12 @@
      "slot": "roller",
      "layerName": "see-through, Clear",
      "file": "see-through/clear-roller-plastic.png",
-     "width": 370,
-     "height": 1801,
-     "sha256": "2a4784953296420e38b6719daf0278f480390eba367e5867c8d5af8f2ccfb526",
+     "width": 339,
+     "height": 1800,
+     "sha256": "74196cf733bd135ca8394cc956222e2cd688f40bbb8bf8e4280f8ba0af361ca5",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 171.0,
+      "x": 168.0,
       "y": 9.68
      },
      "z": "front",
@@ -1945,12 +1945,12 @@
      "slot": "roller",
      "layerName": "see-through, Amber",
      "file": "see-through/amber-roller-plastic.png",
-     "width": 339,
-     "height": 1676,
-     "sha256": "e26ac76d76f8b683225efeca1f19003db93c87307803bafe3923e3bd856a4315",
+     "width": 345,
+     "height": 353,
+     "sha256": "d8ea65fe2ab7396907b0983aca0a6d8f2c2de8eff0bc60050598e20db0392c9a",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 169.0,
+      "x": 173.0,
       "y": 9.68
      },
      "z": "front",
@@ -1962,12 +1962,12 @@
      "slot": "roller",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-roller-plastic.png",
-     "width": 339,
+     "width": 484,
      "height": 1800,
-     "sha256": "71211a8a7a78e0c32d0873c95105349d4f310be68f346636e463c6c6845b281b",
+     "sha256": "5c35d8458d421844dc118c30b930b66b9af69917f715dd987dbd638e347d05c8",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 169.0,
+      "x": 242.0,
       "y": 9.68
      },
      "z": "front",
@@ -1979,12 +1979,12 @@
      "slot": "roller",
      "layerName": "see-through, Frosted",
      "file": "see-through/frosted-roller-plastic.png",
-     "width": 414,
-     "height": 1801,
-     "sha256": "9bf0828f1c4ce2e7e792c3f9d8b6d01c002b1d8f0d33fd6a6709b2db9346c4be",
+     "width": 357,
+     "height": 368,
+     "sha256": "23e860678f88e4bf605f5bdfd4d30ea64802247f7042ed2fe46f85acd02c49b3",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 234.0,
+      "x": 186.0,
       "y": 9.68
      },
      "z": "front",
@@ -1996,12 +1996,12 @@
      "slot": "roller",
      "layerName": "see-through, Swirl",
      "file": "see-through/swirl-roller-plastic.png",
-     "width": 396,
-     "height": 1800,
-     "sha256": "3b5ee7c70db905b0d1b91e145953b9138787e8fc11a296bc960e51f557f9f4b1",
+     "width": 478,
+     "height": 1738,
+     "sha256": "f3d9198363fc78de202fbbe78c5a1bcbfde5e8a66b1c6ca4a28f9a7b947db446",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 155.0,
+      "x": 237.0,
       "y": 9.68
      },
      "z": "front",
@@ -2015,7 +2015,7 @@
      "file": "components/LIB-17-415-PlsticRollon/roller.png",
      "width": 374,
      "height": 531,
-     "sha256": "2f6da69ea656f1de05e7562c9c5ecd415cb3e9f4f36ea15628e87dc9d394ece1",
+     "sha256": "44fe7e9ab18e362658698b4f5b2dba59e82eaf5f048d9579f6eb56a2a1ddcfad",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 187.0,
@@ -2031,7 +2031,7 @@
      "file": "components/LIB-17-415-PlsticRollon/roller.png",
      "width": 374,
      "height": 531,
-     "sha256": "2f6da69ea656f1de05e7562c9c5ecd415cb3e9f4f36ea15628e87dc9d394ece1",
+     "sha256": "44fe7e9ab18e362658698b4f5b2dba59e82eaf5f048d9579f6eb56a2a1ddcfad",
      "pxPerMm": 25.0,
      "anchor": {
       "x": 187.0,
@@ -2046,104 +2046,104 @@
  ],
  "seeThroughQa": {
   "clear-roller-plastic": {
-   "maxErr": 238,
-   "meanErr": 0.9521,
-   "pixels": 88985
+   "maxErr": 241,
+   "meanErr": 0.9722,
+   "pixels": 94367
   },
   "clear-roller-metal": {
-   "maxErr": 238,
-   "meanErr": 0.9518,
-   "pixels": 89017
+   "maxErr": 242,
+   "meanErr": 0.9722,
+   "pixels": 94083
   },
   "clear-mist": {
-   "maxErr": 201,
-   "meanErr": 0.0345,
-   "pixels": 162394
+   "maxErr": 17,
+   "meanErr": 0.0735,
+   "pixels": 163605
   },
   "clear-lotion": {
-   "maxErr": 201,
-   "meanErr": 0.0461,
-   "pixels": 265823
+   "maxErr": 18,
+   "meanErr": 0.0523,
+   "pixels": 269215
   },
   "amber-roller-plastic": {
-   "maxErr": 173,
-   "meanErr": 0.6407,
-   "pixels": 73058
+   "maxErr": 236,
+   "meanErr": 0.9967,
+   "pixels": 72853
   },
   "amber-roller-metal": {
-   "maxErr": 173,
-   "meanErr": 0.6396,
-   "pixels": 73042
+   "maxErr": 236,
+   "meanErr": 0.9965,
+   "pixels": 72875
   },
   "amber-mist": {
-   "maxErr": 13,
-   "meanErr": 0.0282,
-   "pixels": 160396
+   "maxErr": 17,
+   "meanErr": 0.0866,
+   "pixels": 162544
   },
   "amber-lotion": {
-   "maxErr": 28,
-   "meanErr": 0.0245,
-   "pixels": 264717
+   "maxErr": 22,
+   "meanErr": 0.0659,
+   "pixels": 265264
   },
   "cobalt-roller-plastic": {
-   "maxErr": 172,
-   "meanErr": 0.6498,
-   "pixels": 79041
+   "maxErr": 236,
+   "meanErr": 0.9863,
+   "pixels": 101340
   },
   "cobalt-roller-metal": {
-   "maxErr": 172,
-   "meanErr": 0.6486,
-   "pixels": 78888
+   "maxErr": 236,
+   "meanErr": 0.9862,
+   "pixels": 101208
   },
   "cobalt-mist": {
-   "maxErr": 18,
-   "meanErr": 0.0331,
-   "pixels": 161437
+   "maxErr": 162,
+   "meanErr": 0.0828,
+   "pixels": 166143
   },
   "cobalt-lotion": {
-   "maxErr": 28,
-   "meanErr": 0.0294,
-   "pixels": 265372
+   "maxErr": 159,
+   "meanErr": 0.0636,
+   "pixels": 271486
   },
   "frosted-roller-plastic": {
-   "maxErr": 171,
-   "meanErr": 1.0672,
-   "pixels": 93877
+   "maxErr": 240,
+   "meanErr": 0.9657,
+   "pixels": 82935
   },
   "frosted-roller-metal": {
-   "maxErr": 171,
-   "meanErr": 1.0688,
-   "pixels": 93989
+   "maxErr": 240,
+   "meanErr": 0.9654,
+   "pixels": 82776
   },
   "frosted-mist": {
-   "maxErr": 58,
-   "meanErr": 0.3397,
-   "pixels": 205730
+   "maxErr": 86,
+   "meanErr": 0.5703,
+   "pixels": 339164
   },
   "frosted-lotion": {
-   "maxErr": 100,
-   "meanErr": 0.4883,
-   "pixels": 299239
+   "maxErr": 141,
+   "meanErr": 0.6613,
+   "pixels": 537468
   },
   "swirl-roller-plastic": {
-   "maxErr": 238,
-   "meanErr": 0.9856,
-   "pixels": 102097
+   "maxErr": 241,
+   "meanErr": 1.0496,
+   "pixels": 105857
   },
   "swirl-roller-metal": {
-   "maxErr": 238,
-   "meanErr": 0.9851,
-   "pixels": 102304
+   "maxErr": 241,
+   "meanErr": 1.049,
+   "pixels": 106114
   },
   "swirl-mist": {
-   "maxErr": 76,
-   "meanErr": 0.1008,
-   "pixels": 261751
+   "maxErr": 120,
+   "meanErr": 0.2751,
+   "pixels": 304234
   },
   "swirl-lotion": {
-   "maxErr": 149,
-   "meanErr": 0.1454,
-   "pixels": 409543
+   "maxErr": 118,
+   "meanErr": 0.3078,
+   "pixels": 485680
   }
  }
 }
