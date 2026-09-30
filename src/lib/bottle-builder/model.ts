@@ -106,6 +106,18 @@ export function reviewed13_415CylinderCapLabel(row: CatalogRow, fitment: string,
  * Neck equality and another finish on a complete SKU are not sufficient.
  * Standalone component publication is independent of the complete assembly's
  * eligibility, checked by isBuilderCandidate and again at cart preflight. */
+/** A dropper's look from its SKU: size, bulb colour and trim ("GBBstn2ozBlkDrprShnGlTrim" and
+ * "Drp20-4002ozShnGlTrimBlkBulb" are both 2 oz, black bulb, shiny gold trim). The neck is dropped
+ * first so "20-400" + "2oz" does not read as 4002 oz. */
+export function dropperLook(websiteSku: string): string | null {
+    const sku = websiteSku.replace(/\d{2}-\d{3}/g, "");
+    const bulb = /(Blck|Blk|Black|White|Wht)(?=Dropper|Drpr|Drp|Bulb)/i.exec(sku)?.[1];
+    if (!bulb) return null;
+    const size = /(\d+(?:\.\d+)?)oz/i.exec(sku)?.[1] ?? "";
+    const trim = /(ShnGl|ShnSl|MtGl|MtSl|Gl|Sl)Trim/i.exec(sku)?.[1]?.toLowerCase() ?? "";
+    return `${size}|${/^w/i.test(bulb) ? "white" : "black"}|${trim}`;
+}
+
 export function compatibleFinishComponent(row: CatalogRow) {
     const correction = row.reviewedComponentCorrections?.find(c => c.reviewCaseId === row.websiteSku);
     if (correction) {
@@ -139,11 +151,26 @@ export function compatibleFinishComponent(row: CatalogRow) {
         : kind === "Dropper" ? /^Drp/i : /^(CP(?!Roll|.*(?:Spry|AnSp))|\d+-\d+cp)/i;
     const finish = getFinishFromWebsiteSku(row.websiteSku)?.label ?? row.capColor?.trim();
     if (!finish && !exact) return null;
-    const matches = (row.components[kind] ?? []).filter(part => part.websiteSku && part.graceSku
+    const eligible = (row.components[kind] ?? []).filter(part => part.websiteSku && part.graceSku
         && !/__RETIRED__/i.test(part.websiteSku)
         && !/out of stock|discontinued|unavailable/i.test(part.stockStatus ?? "")
-        && skuPattern.test(part.websiteSku) && part.websiteSku.includes(row.neckThreadSize ?? "invalid")
-        && (exact ? part.websiteSku === exact.componentSku : getFinishFromWebsiteSku(part.websiteSku)?.label === finish));
+        && skuPattern.test(part.websiteSku) && part.websiteSku.includes(row.neckThreadSize ?? "invalid"));
+    const finishOf = (part: (typeof eligible)[number]) => getFinishFromWebsiteSku(part.websiteSku)?.label;
+    let matches = exact ? eligible.filter(part => part.websiteSku === exact.componentSku) : eligible.filter(part => finishOf(part) === finish);
+    // Fallbacks, each only when the exact finish finds nothing (2026-09-30: these SKUs drew on their product
+    // pages but were never offered in Build Your Bottle). The row's stated cap colour, when it only adds to
+    // the SKU's older shorthand (the Boston roll-on "RollGl" is catalogued as Shiny Gold); never one that
+    // contradicts the SKU.
+    const stated = row.capColor?.trim();
+    const words = (value: string) => value.toLowerCase().split(/[^a-z]+/).filter(Boolean);
+    const refines = Boolean(stated && finish && stated !== finish && words(finish).every(word => words(stated).includes(word)));
+    if (!exact && !matches.length && refines) matches = eligible.filter(part => finishOf(part) === stated);
+    // Droppers carry no finish token: pair the bulb colour, trim and size named in both SKUs
+    // (GBBstn2ozBlkDrprShnGlTrim ↔ Drp20-4002ozShnGlTrimBlkBulb).
+    if (!exact && !matches.length && kind === "Dropper") {
+        const look = dropperLook(row.websiteSku ?? "");
+        if (look) matches = eligible.filter(part => dropperLook(part.websiteSku!) === look);
+    }
     if (matches.length !== 1) return null;
     const part = matches[0];
     return { websiteSku: part.websiteSku!, imageUrl: part.imageUrl ?? null, name: part.itemName ?? kind };
@@ -396,6 +423,15 @@ export function resolveBuilderConfigurations(
 
 const titleCase = (value: string) => value.trim().toLowerCase().replace(/\b[a-z]/g, c => c.toUpperCase());
 
+/** Names for options that would otherwise share one: each part's own finish, else a clear overcap told apart. */
+function distinctClosures(configs: BuilderConfiguration[]): BuilderConfiguration[] | null {
+    const labels = configs.map(config => getFinishFromWebsiteSku(config.finishComponent.websiteSku)?.label ?? null);
+    if (labels.every(Boolean) && new Set(labels).size === configs.length) return configs.map((config, i) => ({ ...config, closure: labels[i]! }));
+    const overcap = configs.map(config => /Cl$|clear overcap/i.test(`${config.finishComponent.websiteSku} ${config.finishComponent.name}`));
+    if (configs.length === 2 && overcap.filter(Boolean).length === 1) return configs.map((config, i) => overcap[i] ? { ...config, closure: `${config.closure}, Clear Overcap` } : config);
+    return null;
+}
+
 export function groupBuilderBodies(configurations: BuilderConfiguration[]): BuilderBody[] {
     const groups = new Map<string, BuilderBody>();
     const identities = new Map<string, BuilderConfiguration[]>();
@@ -403,11 +439,24 @@ export function groupBuilderBodies(configurations: BuilderConfiguration[]): Buil
         const key = JSON.stringify([config.bodyId, config.color, config.fitment, config.closure]);
         identities.set(key, [...(identities.get(key) ?? []), config]);
     }
-    // Ambiguous selection tuples must not silently choose an arbitrary SKU.
-    for (const entries of identities.values()) {
+    // Ambiguous selection tuples must not silently choose an arbitrary SKU. SKUs that share a name but not a part
+    // are told apart by their parts (2026-09-30: frosted Elegant 15 matte and shiny black sprayers were both
+    // "Black"; the Slim 100 lotion pump with and without its clear overcap both "Matte Silver"). A new name that
+    // would collide with another option drops the set, as before.
+    const taken = new Set(identities.keys());
+    const listed: BuilderConfiguration[] = [];
+    for (const [key, entries] of identities) {
         const unique = [...new Map(entries.map(config => [config.id, config])).values()];
-        if (unique.length !== 1) continue;
-        const config = unique[0];
+        if (unique.length === 1) { listed.push(unique[0]); continue; }
+        const renamed = distinctClosures(unique);
+        if (!renamed) continue;
+        taken.delete(key);
+        const keys = renamed.map(config => JSON.stringify([config.bodyId, config.color, config.fitment, config.closure]));
+        if (new Set(keys).size !== keys.length || keys.some(k => taken.has(k))) { taken.add(key); continue; }
+        keys.forEach(k => taken.add(k));
+        listed.push(...renamed);
+    }
+    for (const config of listed) {
         const group = groups.get(config.bodyId) ?? {
             id: config.bodyId, profileLabel: config.profileLabel, family: config.family, capacityMl: config.capacityMl, neck: config.neck, configurations: [],
         };
