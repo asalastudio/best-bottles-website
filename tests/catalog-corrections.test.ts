@@ -68,6 +68,19 @@ describe("catalogue corrections (guarded, conditional, logged)", () => {
         expect(again.alreadyCorrect.sort()).toEqual([`${bottle.websiteSku}.heightWithCap`, `${bottle.websiteSku}.neckThreadSize`]);
     });
 
+    it("corrects a bottle's height without cap and diameter", async () => {
+        const t = convexTest(schema, modules);
+        const id = await t.run(ctx => ctx.db.insert("products", bottle as never));
+        const entries = [{
+            websiteSku: bottle.websiteSku,
+            expect: { heightWithoutCap: "57 mm", diameter: "21 ±0.5 mm" },
+            patch: { heightWithoutCap: "56.8 mm", diameter: "20.9 mm" },
+        }];
+        const wet = await t.mutation(fn("correctProductFields"), { writeToken: token, dryRun: false, reason: "test", entries });
+        expect(wet.written.map(describeWrite).sort()).toEqual(["diameter:21 ±0.5 mm→20.9 mm", "heightWithoutCap:57 mm→56.8 mm"]);
+        expect(await t.run(ctx => ctx.db.get(id))).toMatchObject({ heightWithoutCap: "56.8 mm", diameter: "20.9 mm" });
+    });
+
     it("refuses without the write token and refuses an unknown SKU", async () => {
         const t = convexTest(schema, modules);
         await expect(t.mutation(fn("correctProductFields"), { writeToken: "wrong", reason: "test", entries: [] })).rejects.toThrow(/unauthorized/);
