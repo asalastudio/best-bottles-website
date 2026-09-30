@@ -37,6 +37,11 @@ const write = argv.includes("--write");
 const raw = write || argv.includes("--raw");
 const deployment = arg("--deployment") ?? "prod";
 const onlyBody = arg("--only-body");
+if (argv.includes("--only-body") && (!onlyBody || onlyBody.startsWith("--"))) {
+    // without a body id, --write would replace the whole table
+    console.error("--only-body needs a body id, e.g. --only-body cylinder-9ml-17-415");
+    process.exit(1);
+}
 const outDir = resolve(ROOT, arg("--out") ?? "output/seat-audit");
 const URLS: Record<string, string> = { dev: "https://helpful-elephant-638.convex.cloud", prod: "https://precise-raccoon-123.convex.cloud" };
 const MIN_DROP_MM = 0.2;
