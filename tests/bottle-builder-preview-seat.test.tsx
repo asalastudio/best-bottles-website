@@ -154,9 +154,10 @@ it("shares the body size across material photos without substituting their glass
 });
 
 
-it("blends only the clear tube through tall-nine frosted glass, keeping its finish opaque", () => {
+it("draws the tall-nine frosted dip tube as rendered, not multiplied into a grey band", () => {
+    // Jordan, 30 Sep: since the Tall 9 mL studio set the frosted tube is a soft see-through render
+    // the width of the glass; multiplying it drew a wide grey band with a ragged edge.
     const frosted = { ...config, capacityMl: 9, neck: "13-415", color: "Frosted" };
     act(() => root.render(<BuilderImage config={frosted} parts={previewParts(frosted, "complete")} stage="complete" label="frosted tall cylinder" />));
-    expect((el.querySelector('[data-builder-layer="diptube"]') as SVGImageElement).style.mixBlendMode).toBe("multiply");
-    for (const slot of ["body", "sprayer", "overcap"]) expect((el.querySelector(`[data-builder-layer="${slot}"]`) as SVGImageElement).style.mixBlendMode).toBe("");
+    for (const slot of ["body", "diptube", "sprayer", "overcap"]) expect((el.querySelector(`[data-builder-layer="${slot}"]`) as SVGImageElement).style.mixBlendMode).toBe("");
 });

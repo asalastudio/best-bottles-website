@@ -18,8 +18,9 @@ import { BEHIND_GLASS_SLOTS } from "@/lib/products/pdp-redesign/stage";
 function blendsIntoGlass(config: BuilderConfiguration, part: BuilderPart, stage: "body" | "fitment" | "complete", splitDropper: boolean) {
     // A register plate is baked on the stage bone (#F5F3EF) already; multiplying it would darken the glass.
     if (part.box && part.slot === "body") return false;
-    if (part.slot === "diptube" && config.family === "Cylinder" && config.capacityMl === 9
-        && config.neck === "13-415" && config.color === "Frosted") return true;
+    // Frosted glass draws its dip tube as rendered. Since the Tall 9 mL studio set (28 Sep) the
+    // frosted tube is a soft see-through render the width of the glass; the multiply that suited
+    // the 23 Sep cut-out turned it into a wide grey band with a ragged edge (Jordan, 30 Sep).
     if (part.slot === "pipette") return config.color !== "Clear";
     return config.color === "Clear" && (part.slot === "diptube"
         || (part.slot === "body" && (stage === "body" || config.fitment !== "Dropper" || splitDropper)));
