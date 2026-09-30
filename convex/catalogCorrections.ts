@@ -35,6 +35,10 @@ const fieldsV = v.object({
     // siblings say 5 mL. Capacity is identity the Team Hub editor never writes, so it is corrected here, guarded.
     capacity: v.optional(v.union(v.string(), v.null())),
     capacityMl: v.optional(v.union(v.number(), v.null())),
+    // 2026-09-30: the 5 mL Cylinder's sizes came from the legacy site ("53 ±1 mm", "17 ±0.5 mm", five at "60 ±1 mm");
+    // Jordan's caliper readings replace them.
+    heightWithoutCap: v.optional(v.union(v.string(), v.null())),
+    diameter: v.optional(v.union(v.string(), v.null())),
 });
 type Fields = Infer<typeof fieldsV>;
 /** A corrected field's value as reported: text for most fields, a number for capacityMl. */

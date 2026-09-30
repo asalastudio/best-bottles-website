@@ -1,0 +1,958 @@
+[
+ {
+  "websiteSku": "GBCyl5BlkShSht",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "55 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "58.8 mm"
+  },
+  "why": "lined short cap: 53.12 + cap 16.40 - inside depth 10.77"
+ },
+ {
+  "websiteSku": "GBCyl5BlkSht",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "55 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "55.4 mm"
+  },
+  "why": "ribbed short cap: 53.12 + cap 9.49 - inside depth 7.17"
+ },
+ {
+  "websiteSku": "GBCyl5CuSht",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "55 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "58.8 mm"
+  },
+  "why": "lined short cap: 53.12 + cap 16.40 - inside depth 10.77"
+ },
+ {
+  "websiteSku": "GBCyl5Gl",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm"
+  },
+  "why": "unchanged (sprayer / regular cap)"
+ },
+ {
+  "websiteSku": "GBCyl5GlMattSht",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "55 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "58.8 mm"
+  },
+  "why": "lined short cap: 53.12 + cap 16.40 - inside depth 10.77"
+ },
+ {
+  "websiteSku": "GBCyl5GlSht",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "55 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "58.8 mm"
+  },
+  "why": "lined short cap: 53.12 + cap 16.40 - inside depth 10.77"
+ },
+ {
+  "websiteSku": "GBCyl5MtlRollBlkDot",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCyl5MtlRollBlkSh",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCyl5MtlRollCuMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCyl5MtlRollGlMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCyl5MtlRollGlSh",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCyl5MtlRollPinkDot",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCyl5MtlRollSlDot",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCyl5MtlRollSlMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCyl5MtlRollSlSh",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCyl5RollBlkDot",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCyl5RollBlkSh",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCyl5RollCuMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCyl5RollGlMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCyl5RollGlSh",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCyl5RollPinkDot",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCyl5RollSlDot",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCyl5RollSlMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCyl5RollSlSh",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCyl5Sl",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm"
+  },
+  "why": "unchanged (sprayer / regular cap)"
+ },
+ {
+  "websiteSku": "GBCyl5SlMattSht",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "55 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "58.8 mm"
+  },
+  "why": "lined short cap: 53.12 + cap 16.40 - inside depth 10.77"
+ },
+ {
+  "websiteSku": "GBCyl5SlSht",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "55 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "58.8 mm"
+  },
+  "why": "lined short cap: 53.12 + cap 16.40 - inside depth 10.77"
+ },
+ {
+  "websiteSku": "GBCyl5SpryBlkMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm"
+  },
+  "why": "unchanged (sprayer / regular cap)"
+ },
+ {
+  "websiteSku": "GBCyl5SpryBlkSh",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm"
+  },
+  "why": "unchanged (sprayer / regular cap)"
+ },
+ {
+  "websiteSku": "GBCyl5SpryBluMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm"
+  },
+  "why": "unchanged (sprayer / regular cap)"
+ },
+ {
+  "websiteSku": "GBCyl5SpryCuMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm"
+  },
+  "why": "unchanged (sprayer / regular cap)"
+ },
+ {
+  "websiteSku": "GBCyl5SpryGlMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm"
+  },
+  "why": "unchanged (sprayer / regular cap)"
+ },
+ {
+  "websiteSku": "GBCyl5SpryGlSh",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm"
+  },
+  "why": "unchanged (sprayer / regular cap)"
+ },
+ {
+  "websiteSku": "GBCyl5SprySlMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm"
+  },
+  "why": "unchanged (sprayer / regular cap)"
+ },
+ {
+  "websiteSku": "GBCyl5SprySlSh",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm"
+  },
+  "why": "unchanged (sprayer / regular cap)"
+ },
+ {
+  "websiteSku": "GBCyl5WhtSht",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "55 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "55.4 mm"
+  },
+  "why": "ribbed short cap: 53.12 + cap 9.49 - inside depth 7.17"
+ },
+ {
+  "websiteSku": "GBCylBlu5BlkShSht",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm Item Diameter: 17 \u00b10.",
+   "diameter": "18.4",
+   "heightWithCap": "59 \u00b11 mm Item Height without C"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "58.8 mm"
+  },
+  "why": "lined short cap: 53.12 + cap 16.40 - inside depth 10.77"
+ },
+ {
+  "websiteSku": "GBCylBlu5BlkSht",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "55 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "55.4 mm"
+  },
+  "why": "ribbed short cap: 53.12 + cap 9.49 - inside depth 7.17"
+ },
+ {
+  "websiteSku": "GBCylBlu5CuSht",
+  "expect": {
+   "heightWithoutCap": "60 \u00b11 mm",
+   "diameter": "18 \u00b10.5 mm",
+   "heightWithCap": "80 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "58.8 mm"
+  },
+  "why": "lined short cap: 53.12 + cap 16.40 - inside depth 10.77"
+ },
+ {
+  "websiteSku": "GBCylBlu5Gl",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm"
+  },
+  "why": "unchanged (sprayer / regular cap)"
+ },
+ {
+  "websiteSku": "GBCylBlu5GlMattSht",
+  "expect": {
+   "heightWithoutCap": "60 \u00b11 mm",
+   "diameter": "18 \u00b10.5 mm",
+   "heightWithCap": "80 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "58.8 mm"
+  },
+  "why": "lined short cap: 53.12 + cap 16.40 - inside depth 10.77"
+ },
+ {
+  "websiteSku": "GBCylBlu5GlSht",
+  "expect": {
+   "heightWithoutCap": "60 \u00b11 mm",
+   "diameter": "18 \u00b10.5 mm",
+   "heightWithCap": "80 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "58.8 mm"
+  },
+  "why": "lined short cap: 53.12 + cap 16.40 - inside depth 10.77"
+ },
+ {
+  "websiteSku": "GBCylBlu5MtlRollBlkDot",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCylBlu5MtlRollBlkSh",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCylBlu5MtlRollCuMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCylBlu5MtlRollGlMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCylBlu5MtlRollGlSh",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCylBlu5MtlRollPinkDot",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCylBlu5MtlRollSlDot",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCylBlu5MtlRollSlMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCylBlu5MtlRollSlSh",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCylBlu5RollBlkDot",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCylBlu5RollBlkSh",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCylBlu5RollCuMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCylBlu5RollGlMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCylBlu5RollGlSh",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCylBlu5RollPinkDot",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCylBlu5RollSlDot",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCylBlu5RollSlMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCylBlu5RollSlSh",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm",
+   "heightWithCap": "65 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "65.95 mm"
+  },
+  "why": "roll-on set, caliper"
+ },
+ {
+  "websiteSku": "GBCylBlu5Sl",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm"
+  },
+  "why": "unchanged (sprayer / regular cap)"
+ },
+ {
+  "websiteSku": "GBCylBlu5SlMattSht",
+  "expect": {
+   "heightWithoutCap": "60 \u00b11 mm",
+   "diameter": "18 \u00b10.5 mm",
+   "heightWithCap": "80 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "58.8 mm"
+  },
+  "why": "lined short cap: 53.12 + cap 16.40 - inside depth 10.77"
+ },
+ {
+  "websiteSku": "GBCylBlu5SlSht",
+  "expect": {
+   "heightWithoutCap": "60 \u00b11 mm",
+   "diameter": "18 \u00b10.5 mm",
+   "heightWithCap": "80 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "58.8 mm"
+  },
+  "why": "lined short cap: 53.12 + cap 16.40 - inside depth 10.77"
+ },
+ {
+  "websiteSku": "GBCylBlu5SpryBlkSh",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm"
+  },
+  "why": "unchanged (sprayer / regular cap)"
+ },
+ {
+  "websiteSku": "GBCylBlu5SpryBluMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm"
+  },
+  "why": "unchanged (sprayer / regular cap)"
+ },
+ {
+  "websiteSku": "GBCylBlu5SpryCuMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm"
+  },
+  "why": "unchanged (sprayer / regular cap)"
+ },
+ {
+  "websiteSku": "GBCylBlu5SpryGlMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm"
+  },
+  "why": "unchanged (sprayer / regular cap)"
+ },
+ {
+  "websiteSku": "GBCylBlu5SpryGlSh",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm"
+  },
+  "why": "unchanged (sprayer / regular cap)"
+ },
+ {
+  "websiteSku": "GBCylBlu5SprySlMatt",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm"
+  },
+  "why": "unchanged (sprayer / regular cap)"
+ },
+ {
+  "websiteSku": "GBCylBlu5SprySlSh",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "17 \u00b10.5 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm"
+  },
+  "why": "unchanged (sprayer / regular cap)"
+ },
+ {
+  "websiteSku": "GBCylBlu5WhtSht",
+  "expect": {
+   "heightWithoutCap": "53 \u00b11 mm",
+   "diameter": "18 \u00b10.5 mm",
+   "heightWithCap": "80 \u00b11 mm"
+  },
+  "patch": {
+   "heightWithoutCap": "53.12 mm",
+   "diameter": "17.69 mm",
+   "heightWithCap": "55.4 mm"
+  },
+  "why": "ribbed short cap: 53.12 + cap 9.49 - inside depth 7.17"
+ }
+]
