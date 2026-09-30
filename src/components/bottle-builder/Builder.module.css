@@ -113,7 +113,6 @@
 .case button { text-decoration: underline; text-underline-offset: 3px; color: #806336; margin-left: 4px; }
 .minimum { margin: 15px 0 18px; font-size: 12px; color: var(--quiet); line-height: 1.6; }
 /* price on screen from the first click (2026-09-24 audit): tile prices, the running price, and the minimum-order meter */
-.option .tilePrice { display: block; margin-top: 5px; font-size: 12px; font-weight: 600; color: #252523; font-variant-numeric: tabular-nums; }
 .fromPrice { display: grid; gap: 4px; padding-bottom: 14px; }
 .fromPrice strong { font-size: 21px; font-weight: 600; letter-spacing: -.02em; color: #252523; font-variant-numeric: tabular-nums; }
 .fromPrice small { font-size: 12px; color: var(--quiet); line-height: 1.5; }

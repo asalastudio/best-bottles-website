@@ -162,8 +162,6 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
     const possible = configuration ? [configuration] : fitment ? current.fitted : color ? current.colored : body?.configurations ?? [];
     // Chooser-only bodies carry the server's precomputed minimums until their configurations arrive.
     const fromLabel = (min: number | null | undefined) => min == null ? null : `from ${money(min)}`;
-    const bodyFrom = (b: BuilderBody) => b.chooserOnly ? fromLabel(b.priceFrom) : priceFrom(b.configurations);
-    const colorFrom = (b: BuilderBody, c: string) => b.chooserOnly ? fromLabel(b.colorPriceFrom?.[c]) : priceFrom(b.configurations.filter(config => config.color === c));
     const possibleFrom = body?.chooserOnly ? (color ? fromLabel(body.colorPriceFrom?.[color]) : fromLabel(body.priceFrom)) : priceFrom(possible);
     const buildCents = Math.round((order.total ?? 0) * 100);
     const cartCents = Math.round(cartProgress.subtotal * 100);
@@ -346,7 +344,7 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
                 {step === 0 && <div className={styles.bottleGrid}>
                     {visibleBodies.map((b, index) => <Option key={b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} selected={body?.id === b.id} onClick={() => chooseBottle(b)} onIntent={() => prefetchBottle(b.id)}>
                         <div className={styles.bottleThumb}><BuilderImage config={clearBodyPreview(b)} parts={previewParts(clearBodyPreview(b), "body")} label={`${b.capacityMl} ml ${b.family} bottle`} scale={chooserScale(b, bodies)} thumbnail placeholder priority={index < CHOOSER_PRIORITY_TILES} /></div>
-                        <strong>{b.capacityMl} ml</strong>{b.profileLabel !== b.family && <small>{b.profileLabel}</small>}{bodyFrom(b) && <small className={styles.tilePrice}>{bodyFrom(b)}</small>}<span className={styles.neckBadge}>Neck: {b.neck}</span>
+                        <strong>{b.capacityMl} ml</strong>{b.profileLabel !== b.family && <small>{b.profileLabel}</small>}<span className={styles.neckBadge}>Neck: {b.neck}</span>
                     </Option>)}
                 </div>}
                 {step === 0 && !visibleBodies.length && <div className={styles.empty}><h3>No bottles for these choices.</h3><p>Try another size or bottle family.</p><button className={styles.secondary} onClick={() => { setSize(""); setNeck(""); setApplication(""); }}>Clear filters</button><Link href={catalogHref}>Explore the full catalog <ArrowRight size={15} /></Link></div>}
@@ -355,7 +353,7 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
                     <div className={styles.compatibilityContext}><ShieldCheck size={18} /><span><strong>{body.capacityMl} ml {body.profileLabel}</strong><span>Neck: {body.neck} · Every glass below is this bottle</span></span></div>
                     <div className={styles.colorGrid}>
                         {current.colors.map(c => { const example = body.configurations.find(config => config.color === c)!; return <Option key={c} label={c} selected={color === c} onClick={() => update({ color: c, fitment: null, closure: null })}>
-                            <div className={styles.colorThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} thumbnail placeholder /></div><strong>{c}</strong>{colorFrom(body, c) && <small className={styles.tilePrice}>{colorFrom(body, c)}</small>}
+                            <div className={styles.colorThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} thumbnail placeholder /></div><strong>{c}</strong>
                         </Option>; })}
                     </div>
                 </>}
@@ -367,7 +365,7 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
                         const count = availableCount + unavailableCount;
                         return <Option key={f} label={displayApplicatorName(f)} description={fitmentChoiceHints[f] ?? fitmentDescriptions[f]} selected={fitment === f} onClick={() => { update({ fitment: f, closure: null }); setShowCover(false); }}>
                             <div className={styles.componentThumb}><FitmentIllustration fitment={f} neck={body?.neck} /></div>
-                            <strong>{displayApplicatorName(f)}</strong><small>{count} {/(Roller|Cap)/.test(f) ? (count === 1 ? "cap option" : "cap options") : (count === 1 ? "finish" : "finishes")}{unavailableCount > 0 ? ` · ${availableCount} available` : ""}</small>{priceFrom(current.colored.filter(c => c.fitment === f)) && <small className={styles.tilePrice}>{priceFrom(current.colored.filter(c => c.fitment === f))}</small>}
+                            <strong>{displayApplicatorName(f)}</strong><small>{count} {/(Roller|Cap)/.test(f) ? (count === 1 ? "cap option" : "cap options") : (count === 1 ? "finish" : "finishes")}{unavailableCount > 0 ? ` · ${availableCount} available` : ""}</small>
                         </Option>;
                     })}</div> : <>
                         <div className={styles.selectedFitment}><div><strong>{displayApplicatorName(fitment ?? "")}</strong><small>{body?.neck} neck · {color} glass</small></div>
@@ -376,7 +374,7 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
                             <p>{current.closures.length === 1 ? `This ${finishLabel.toLowerCase()} is included with your bottle.` : `Select your ${finishLabel.toLowerCase()} to see the complete bottle.`}</p>
                             {capLinerNote(body?.neck, fitment) && <p className={styles.linerNote}>{capLinerNote(body?.neck, fitment)}</p>}
                         <div className={styles.closureGrid}>{current.fitted.map(c => <Option key={c.id} label={c.closure} selected={closure === c.closure} onClick={() => { update({ closure: c.closure }); setShowCover(false); }}>
-                                <div className={styles.closureThumb}><BuilderFinishImage config={c} /></div><strong>{c.closure}</strong>{priceFrom([c]) && <small className={styles.tilePrice}>{priceFrom([c])}</small>}
+                                <div className={styles.closureThumb}><BuilderFinishImage config={c} /></div><strong>{c.closure}</strong>
                             </Option>)}{unavailableFinishes.map(option => <button type="button" disabled key={option.id} className={`${styles.option} ${styles.unavailableOption}`} aria-label={`${option.closure} — Out of stock`}>
                                 <div className={styles.closureThumb}>
                                     {/* eslint-disable-next-line @next/next/no-img-element */}
