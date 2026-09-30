@@ -263,3 +263,6 @@ data/descriptions/pdp/catalog-facts.json
 
 # Size consistency audit working files (snapshots, downloaded images, measurements); the summary is in docs/reviews
 /output/size-audit/
+
+# Dip tube cuts from catalogue heroes: fits, warps and cuts (scripts/register/tubes/cut_heroes.py)
+/output/register-tubes/

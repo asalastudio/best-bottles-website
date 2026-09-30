@@ -3,6 +3,7 @@ import { STAGE_DATUMS, assembledKit, datumFromPlate, kitFromRegister, kitsFromRe
 import { closurePart, fitmentPart, partCrop, stageLayout } from "@/lib/products/pdp-redesign/stage";
 import { layerCropStyleForPart, layerTransform } from "@/lib/bottle-builder/preview-frame";
 import { ELEGANT_PHOTO_BODIES } from "@/lib/register/elegant-photo-bodies";
+import heroTubes from "@/lib/register/hero-tubes.json";
 
 /**
  * The 9 mL Cylinder pilot as the register holds it on dev (Phase 3 measurements):
@@ -422,5 +423,124 @@ describe("body-scoped layers", () => {
 
     it("keeps the generic layers for every other body that shares the component", () => {
         expect(capUrls("GB-CYL-CLR-5ML-CAP")).toEqual([CAP.layers[0].url]);
+    });
+});
+
+describe("the shaft and dip tube cut from each glass's catalogue hero (Jordan 2026-09-30)", () => {
+    type Layer = { url: string; width: number; height: number; x: number; y: number };
+    const TUBES = heroTubes.tubes as unknown as Record<string, { seated: Layer | null; exploded: Layer | null }>;
+    const EMPIRE = {
+        plateKey: "empire-100ml-18-415|Clear", bodyId: "empire-100ml-18-415", glass: "Clear",
+        url: "https://blob/register/plates/empire-100.png", width: 1136, height: 2192, pxPerMm: 17.6494,
+        anchors: { axisX: 565.5, seatY: 133, baselineY: 2096, shoulderY: 422 }, approved: true,
+    };
+    const FROSTED = { ...EMPIRE, plateKey: "circle-50ml-18-415|Frosted", bodyId: "circle-50ml-18-415", glass: "Frosted", url: "https://blob/register/plates/circle-50-frosted.png" };
+    const AMBER = { ...EMPIRE, plateKey: "tulip-5ml-13-415|Amber", bodyId: "tulip-5ml-13-415", glass: "Amber", url: "https://blob/register/plates/tulip-5-amber.png" };
+    const bulbSprayer = { slot: "sprayer" as const, z: "front" as const, explodeIndex: 1, url: "https://blob/bulb.png", width: 520, height: 350, pxPerMm: 7, anchor: { x: 440, y: 180 }, approved: true };
+    const sharedTube = { slot: "diptube" as const, z: "behind-body" as const, explodeIndex: 0, url: "https://blob/shared-tube.png", width: 172, height: 900, pxPerMm: 7, anchor: { x: 86, y: 0 }, approved: true };
+    const BULB = { componentId: "CMP-SPR-BLK-18-415-02", type: "vintage-bulb-sprayer", approved: true, layers: [bulbSprayer, sharedTube] };
+    const TASSEL = { ...BULB, componentId: "CMP-SPR-GLD-18415-TSL", type: "tassel-bulb-sprayer" };
+    const PERFUME = { componentId: "CMP-SPR-MTCP-18-415-03", type: "fine-mist-sprayer", approved: true, layers: [
+        { ...bulbSprayer, url: "https://blob/perfume-pump.png", width: 182, height: 317, anchor: { x: 91, y: 150 } },
+        { ...bulbSprayer, slot: "overcap" as const, explodeIndex: 2, url: "https://blob/perfume-overcap.png", width: 220, height: 363, anchor: { x: 110, y: 200 } },
+    ] };
+    const REDUCER = { componentId: "LIB-18-415-ShnBlkCap", type: "reducer-cap", approved: true, layers: [{ ...bulbSprayer, slot: "cap" as const, url: "https://blob/cap.png", width: 245, height: 235, anchor: { x: 122, y: 150 } }] };
+    const assembly = (graceSku: string, plate: typeof EMPIRE, role: string, componentId: string) => ({
+        graceSku, websiteSku: graceSku, bodyId: plate.bodyId, plateKey: plate.plateKey, glass: plate.glass, neck: "18-415",
+        parts: [{ role, componentId }], renderable: true, reason: null,
+    });
+    const payload: RegisterStagePayload = {
+        plates: { [EMPIRE.plateKey]: EMPIRE, [FROSTED.plateKey]: FROSTED, [AMBER.plateKey]: AMBER },
+        components: { [BULB.componentId]: BULB, [TASSEL.componentId]: TASSEL, [PERFUME.componentId]: PERFUME, [REDUCER.componentId]: REDUCER },
+        bodies: { [EMPIRE.bodyId]: { bodyId: EMPIRE.bodyId, family: "Empire", capacityMl: 100, neck: "18-415", dims: { heightBareMm: 107, diameterMm: 46, widthMm: 46 } } },
+        assemblies: {
+            BULB: assembly("BULB", EMPIRE, "sprayer", BULB.componentId),
+            TASSEL: assembly("TASSEL", EMPIRE, "sprayer", TASSEL.componentId),
+            PERFUME: assembly("PERFUME", EMPIRE, "sprayer", PERFUME.componentId),
+            REDUCER: assembly("REDUCER", EMPIRE, "cap", REDUCER.componentId),
+            FROSTED: assembly("FROSTED", FROSTED, "sprayer", PERFUME.componentId),
+            AMBER: assembly("AMBER", AMBER, "sprayer", PERFUME.componentId),
+        },
+    };
+    const tubes = (sku: string, p = payload) => kitFromRegister(sku, p)!.parts.filter((part) => part.slot === "diptube");
+
+    it("draws the glass's own hero cut in front of the glass and under the sprayer, at the plate's scale", () => {
+        const kit = kitFromRegister("BULB", payload)!;
+        const layer = TUBES["empire-100ml-18-415|Clear|bulb"].seated!;
+        const [tube, lifted] = tubes("BULB");
+        expect(tubes("BULB")).toHaveLength(2);
+        expect(tube.image).toMatchObject({ url: layer.url, width: layer.width, height: layer.height });
+        expect(tube.views).toEqual(["sidecar", "capon"]);
+        expect(lifted.image.url).toBe(TUBES["empire-100ml-18-415|Clear|bulb"].exploded!.url);
+        expect(lifted.views).toEqual(["exploded"]);
+        expect(tube.componentId).toBe(BULB.componentId);
+        expect(kit.parts.map((part) => part.slot)).toEqual(["body", "diptube", "diptube", "sprayer"]);
+        expect(kit.parts.map((part) => part.zOrder)).toEqual([0, 1, 2, 3]);
+        const body = kit.parts.find((part) => part.slot === "body")!;
+        const scale = body.box.width / EMPIRE.width;
+        expect(tube.box.x).toBeCloseTo(body.box.x + layer.x * scale, 1);
+        expect(tube.box.y).toBeCloseTo(body.box.y + layer.y * scale, 1);
+        expect(tube.box.width).toBeCloseTo(layer.width * scale, 1);
+        expect(tube.box.height).toBeCloseTo(layer.height * scale, 1);
+        // The shared tube drawn behind the bone-baked plate is gone.
+        expect(kit.parts.some((part) => part.image.url === sharedTube.url)).toBe(false);
+    });
+
+    it("gives each fitment family its own cut, frosted glass its own layer, and a cap none", () => {
+        expect(tubes("TASSEL")[0].image.url).toBe(TUBES["empire-100ml-18-415|Clear|tassel"].seated!.url);
+        expect(tubes("PERFUME")[0].image.url).toBe(TUBES["empire-100ml-18-415|Clear|spray"].seated!.url);
+        expect(tubes("FROSTED")[0].image.url).toBe(TUBES["circle-50ml-18-415|Frosted|spray"].seated!.url);
+        expect(tubes("REDUCER")).toEqual([]);
+    });
+
+    it("lifts out with its actuator in EXPLODED: one unit, the whole mechanism above the glass", () => {
+        // Jordan 30 Sep: "attaching it to the actual actuator and then expanding out so that they can see the whole mechanism".
+        const kit = kitFromRegister("BULB", payload)!;
+        // EXPLODED draws the tube cleaned to stand alone (the seated one keeps the hero's glass around it).
+        const tube = tubes("BULB").find((part) => part.views?.includes("exploded"))!;
+        expect(tube.views).toEqual(["exploded"]);
+        const sprayer = kit.parts.find((part) => part.slot === "sprayer")!;
+        const body = kit.parts.find((part) => part.slot === "body")!;
+        expect(tube.exploded).toEqual(sprayer.exploded);
+        expect(tube.exploded.dy).toBeLessThan(0);
+        // The tube's end clears the neck: the mechanism stands whole above the glass.
+        expect(tube.bounds.bottom + tube.exploded.dy).toBeLessThan(body.bounds.top);
+        // The overcap is its own unit, stacked above the mechanism.
+        const perfume = kitFromRegister("PERFUME", payload)!;
+        const overcap = perfume.parts.find((part) => part.slot === "overcap")!;
+        const perfumeTube = perfume.parts.find((part) => part.slot === "diptube" && part.views?.includes("exploded"))!;
+        expect(overcap.bounds.bottom + overcap.exploded.dy).toBeLessThan(perfumeTube.bounds.top + perfumeTube.exploded.dy);
+    });
+
+    it("out of frosted glass draws the clear bottle's clear tube; a glass that hides its tube shows it only when lifted out", () => {
+        const frosted = kitFromRegister("FROSTED", payload)!.parts.filter((part) => part.slot === "diptube");
+        expect(frosted.map((part) => [part.image.url, part.views])).toEqual([
+            [TUBES["circle-50ml-18-415|Frosted|spray"].seated!.url, ["sidecar", "capon"]],
+            [TUBES["circle-50ml-18-415|Frosted|spray"].exploded!.url, ["exploded"]],
+        ]);
+        expect(frosted[1].exploded.dy).toBeLessThan(0);
+        const amber = kitFromRegister("AMBER", payload)!;
+        expect(amber.parts.filter((part) => part.slot === "diptube").map((part) => [part.image.url, part.views]))
+            .toEqual([[TUBES["tulip-5ml-13-415|Amber|spray"].exploded!.url, ["exploded"]]]);
+        expect(assembledKit(amber).parts.some((part) => part.slot === "diptube")).toBe(false);
+    });
+
+    it("leaves a glass with no cut, and a measured Blender set, with their own tubes", () => {
+        const other = { ...EMPIRE, plateKey: "unlisted-50ml-18-415|Clear", bodyId: "unlisted-50ml-18-415" };
+        const own = { ...sharedTube, z: "front" as const, url: "https://blob/blender-tube.png", bodyId: EMPIRE.bodyId };
+        const blender = { ...BULB, componentId: "CMP-BLENDER", layers: [{ ...bulbSprayer, bodyId: EMPIRE.bodyId }, own] };
+        const p: RegisterStagePayload = {
+            ...payload,
+            plates: { ...payload.plates, [other.plateKey]: other },
+            components: { ...payload.components, [blender.componentId]: blender },
+            assemblies: { ...payload.assemblies, UNLISTED: assembly("UNLISTED", other, "sprayer", BULB.componentId), BLENDER: assembly("BLENDER", EMPIRE, "sprayer", blender.componentId) },
+        };
+        expect(tubes("UNLISTED", p).map((part) => part.image.url)).toEqual([sharedTube.url]);
+        expect(tubes("BLENDER", p).map((part) => part.image.url)).toEqual([own.url]);
+    });
+
+    it("the builder draws the cut at one scale, as it draws every register part", () => {
+        const [tube] = tubes("BULB");
+        expect(partBoxTransform(tube)).toBe(`translate(${tube.box.x} ${tube.box.y}) scale(${tube.box.width / tube.image.width})`);
     });
 });

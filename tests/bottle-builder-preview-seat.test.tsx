@@ -161,3 +161,14 @@ it("draws the tall-nine frosted dip tube as rendered, not multiplied into a grey
     act(() => root.render(<BuilderImage config={frosted} parts={previewParts(frosted, "complete")} stage="complete" label="frosted tall cylinder" />));
     for (const slot of ["body", "diptube", "sprayer", "overcap"]) expect((el.querySelector(`[data-builder-layer="${slot}"]`) as SVGImageElement).style.mixBlendMode).toBe("");
 });
+
+it("draws a catalogue hero's shaft and tube as cut, not multiplied into the glass", () => {
+    // Jordan 30 Sep: the tube shows the pump shaft it rides into; a multiply would erase the white shaft.
+    const sprayer = structuredClone(config);
+    sprayer.kit!.parts = sprayer.kit!.parts.map((p) => p.slot === "diptube" ? { ...p, image: { ...p.image, url: "/images/register/tubes/empire-100ml-18-415-clear-spray.0123456789ab.png" } } : p);
+    act(() => root.render(<BuilderImage config={sprayer} parts={previewParts(sprayer, "complete")} stage="complete" label="hero tube" />));
+    expect((el.querySelector('[data-builder-layer="diptube"]') as SVGImageElement).style.mixBlendMode).toBe("");
+    // Any other clear-glass dip tube still takes the glass's colour.
+    act(() => root.render(<BuilderImage config={config} parts={previewParts(config, "complete")} stage="complete" label="shared tube" />));
+    expect((el.querySelector('[data-builder-layer="diptube"]') as SVGImageElement).style.mixBlendMode).toBe("multiply");
+});

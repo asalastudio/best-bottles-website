@@ -22,6 +22,9 @@ function blendsIntoGlass(config: BuilderConfiguration, part: BuilderPart, stage:
     // frosted tube is a soft see-through render the width of the glass; the multiply that suited
     // the 23 Sep cut-out turned it into a wide grey band with a ragged edge (Jordan, 30 Sep).
     if (part.slot === "pipette") return config.color !== "Clear";
+    // The shaft and tube cut from a catalogue hero (src/lib/register/dip-tubes.ts) are the hero's own pixels, white shaft
+    // included; multiplying would erase the shaft into the glass.
+    if (part.slot === "diptube" && part.image.url.startsWith("/images/register/tubes/")) return false;
     return config.color === "Clear" && (part.slot === "diptube"
         || (part.slot === "body" && (stage === "body" || config.fitment !== "Dropper" || splitDropper)));
 }
