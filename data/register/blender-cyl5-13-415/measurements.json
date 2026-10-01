@@ -56,7 +56,7 @@
    "file": "plates/cobalt.png",
    "width": 444,
    "height": 1344,
-   "sha256": "74499b4f42e1a22e8ce9deca2dcb5d08de044e4a0b0e96ebf3c0233f0dae007e",
+   "sha256": "11d77adc9e862d5208688f922461dbda629c0d0c0a765215bd1374586065509b",
    "pxPerMm": 25.0,
    "anchors": {
     "axisX": 222.0,
@@ -72,7 +72,7 @@
    },
    "source": {
     "library": "native Blender (outputs/cyl5-13415-register-v7e-2026-09-29/export_cyl5.py)",
-    "path": "cyl5-13415-v7-review-2026-09-29/Cyl-5ml-13-415_cobalt_STUDIO-v1.5-body-v7e.blend",
+    "path": "cyl5-13415-register-cobalt-v34-2026-09-30/Cyl-5ml-13-415_cobalt_STUDIO-v1.5-c34-body-v7e.blend",
     "layer": "Cylinder 5 mL 13-415 body v7e (Jordan 2026-09-29 measurement session: H 53.12, OD 17.66 under the shoulder tapering 0.11 a side to the heel, finish 11.0 as ruled; walls set to hold 5.5 ml; inside depth 48.75, floor 4.37; the shoulder dome kept, it traces the real bottle's outline; heel arc 2.2 wide x 2.6 tall and a ring of 64 small glass beads at the foot, from his foot photos), studio v1.5 (neutral studio, black side cards, two soft strip lights; cobalt matched to the live 9 mL cobalt plate); cobalt: one glass material, absorption colour (0.04,0.49,0.992), density 2000, no sweep reflection"
    },
    "geometry": {
@@ -81,7 +81,7 @@
     "finish_height_mm": 11.0,
     "capacity_ml": 5.503,
     "lock": "Bottle | Cylinder 5 ml 13-415 body v7e",
-    "studio": "Cyl-5ml-13-415_cobalt_STUDIO-v1.5-body-v7e.blend"
+    "studio": "Cyl-5ml-13-415_cobalt_STUDIO-v1.5-c34-body-v7e.blend"
    }
   }
  ],
@@ -110,13 +110,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 307,
-     "height": 1344,
-     "sha256": "ccc03ff96b75eb58f2b5cb80c928743f73a7de24d2305b09f368739d1f222f4f",
+     "width": 142,
+     "height": 1228,
+     "sha256": "4d0ef8bcf5f2c768245df8b33aee94f14630b6e9c91a7295124211ed6aca1007",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 220.0,
-      "y": 8.81
+      "x": 59.0,
+      "y": 1.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -197,13 +197,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 307,
-     "height": 1344,
-     "sha256": "ccc03ff96b75eb58f2b5cb80c928743f73a7de24d2305b09f368739d1f222f4f",
+     "width": 142,
+     "height": 1228,
+     "sha256": "4d0ef8bcf5f2c768245df8b33aee94f14630b6e9c91a7295124211ed6aca1007",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 220.0,
-      "y": 8.81
+      "x": 59.0,
+      "y": 1.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -284,13 +284,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 307,
-     "height": 1344,
-     "sha256": "ccc03ff96b75eb58f2b5cb80c928743f73a7de24d2305b09f368739d1f222f4f",
+     "width": 142,
+     "height": 1228,
+     "sha256": "4d0ef8bcf5f2c768245df8b33aee94f14630b6e9c91a7295124211ed6aca1007",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 220.0,
-      "y": 8.81
+      "x": 59.0,
+      "y": 1.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -434,13 +434,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 307,
-     "height": 1344,
-     "sha256": "ccc03ff96b75eb58f2b5cb80c928743f73a7de24d2305b09f368739d1f222f4f",
+     "width": 142,
+     "height": 1228,
+     "sha256": "4d0ef8bcf5f2c768245df8b33aee94f14630b6e9c91a7295124211ed6aca1007",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 220.0,
-      "y": 8.81
+      "x": 59.0,
+      "y": 1.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -521,13 +521,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 307,
-     "height": 1344,
-     "sha256": "ccc03ff96b75eb58f2b5cb80c928743f73a7de24d2305b09f368739d1f222f4f",
+     "width": 142,
+     "height": 1228,
+     "sha256": "4d0ef8bcf5f2c768245df8b33aee94f14630b6e9c91a7295124211ed6aca1007",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 220.0,
-      "y": 8.81
+      "x": 59.0,
+      "y": 1.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -629,13 +629,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 307,
-     "height": 1344,
-     "sha256": "ccc03ff96b75eb58f2b5cb80c928743f73a7de24d2305b09f368739d1f222f4f",
+     "width": 142,
+     "height": 1228,
+     "sha256": "4d0ef8bcf5f2c768245df8b33aee94f14630b6e9c91a7295124211ed6aca1007",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 220.0,
-      "y": 8.81
+      "x": 59.0,
+      "y": 1.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -716,13 +716,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 307,
-     "height": 1344,
-     "sha256": "ccc03ff96b75eb58f2b5cb80c928743f73a7de24d2305b09f368739d1f222f4f",
+     "width": 142,
+     "height": 1228,
+     "sha256": "4d0ef8bcf5f2c768245df8b33aee94f14630b6e9c91a7295124211ed6aca1007",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 220.0,
-      "y": 8.81
+      "x": 59.0,
+      "y": 1.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1118,13 +1118,13 @@
      "slot": "diptube",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-mist.png",
-     "width": 307,
-     "height": 1344,
-     "sha256": "ccc03ff96b75eb58f2b5cb80c928743f73a7de24d2305b09f368739d1f222f4f",
+     "width": 142,
+     "height": 1228,
+     "sha256": "4d0ef8bcf5f2c768245df8b33aee94f14630b6e9c91a7295124211ed6aca1007",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 220.0,
-      "y": 8.81
+      "x": 59.0,
+      "y": 1.81
      },
      "z": "front",
      "explodeIndex": 5,
@@ -1205,12 +1205,12 @@
      "slot": "roller",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-roller-metal.png",
-     "width": 375,
-     "height": 1344,
-     "sha256": "a4c222f262d43f1a1a54126f26344c2bae9b6ccc6e1b663156f3c8964bcbcad6",
+     "width": 310,
+     "height": 378,
+     "sha256": "af89cb09fd3ed13788dce568f4d425304766ab4073a91687a7e23a88e95cca94",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 220.0,
+      "x": 155.0,
       "y": 8.81
      },
      "z": "front",
@@ -1276,12 +1276,12 @@
      "slot": "roller",
      "layerName": "see-through, Cobalt Blue",
      "file": "see-through/cobalt-roller-plastic.png",
-     "width": 375,
-     "height": 1344,
-     "sha256": "40a5e9b03a89ea775c8afad5d01508c6d06d159e669b270f03403ca2b34ef592",
+     "width": 310,
+     "height": 378,
+     "sha256": "7caab629b848f681454f0a74dc0ba6cf11c6109c6d5a7e50c0c4c0ea4857bc6b",
      "pxPerMm": 25.0,
      "anchor": {
-      "x": 220.0,
+      "x": 155.0,
       "y": 8.81
      },
      "z": "front",
@@ -1341,19 +1341,19 @@
    "pixels": 111033
   },
   "cobalt-roller-plastic": {
-   "maxErr": 202,
-   "meanErr": 1.3883,
-   "pixels": 72784
+   "maxErr": 199,
+   "meanErr": 1.3796,
+   "pixels": 71483
   },
   "cobalt-roller-metal": {
-   "maxErr": 202,
-   "meanErr": 1.3981,
-   "pixels": 72664
+   "maxErr": 200,
+   "meanErr": 1.3893,
+   "pixels": 71628
   },
   "cobalt-mist": {
-   "maxErr": 92,
-   "meanErr": 0.1022,
-   "pixels": 114796
+   "maxErr": 38,
+   "meanErr": 0.0933,
+   "pixels": 113294
   }
  }
 }
