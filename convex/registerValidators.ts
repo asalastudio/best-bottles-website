@@ -23,6 +23,8 @@ export const registerSlotV = v.union(
     v.literal("body"), v.literal("fitment"), v.literal("roller"), v.literal("cap"), v.literal("overcap"),
     v.literal("sprayer"), v.literal("pump"), v.literal("diptube"), v.literal("collar"), v.literal("bulb"),
     v.literal("tassel"), v.literal("reducer"), v.literal("pipette"),
+    // 2026-10-01: a decorative band on the glass's shoulder, under the closure (the Diva 46 jeweled rings)
+    v.literal("ring"),
 );
 
 export const confidenceV = v.union(v.literal("high"), v.literal("medium"), v.literal("low"));
@@ -42,6 +44,7 @@ export const componentTypeV = v.union(
     v.literal("lotion-pump"), v.literal("dropper"), v.literal("plug-applicator"),
     v.literal("roller-insert"), v.literal("reducer"), v.literal("wand"),
     v.literal("cap-review"), v.literal("sprayer-review"), v.literal("review"),
+    v.literal("ring"),
 );
 
 export const assemblyStatusV = v.union(

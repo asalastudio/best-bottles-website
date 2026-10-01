@@ -2764,6 +2764,170 @@
    }
   },
   {
+   "componentId": "LIB-18-415-DivaRngBlk",
+   "websiteSku": "",
+   "type": "ring",
+   "psd": null,
+   "reference": {
+    "psd": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/60. GBDiva46AnSpBlkBlkRng.psd",
+    "sku": "GBDiva46AnSpBlkRng",
+    "bodyId": "diva-46ml-18-415",
+    "glass": "Clear",
+    "plateKey": "diva-46ml-18-415|Clear",
+    "bottlePxPerMm": 13.4032,
+    "rimY": 437,
+    "axisX": 789.0,
+    "seatToFootPx": 1255,
+    "plateSeatToFootPx": 1951,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "ring",
+     "layerName": "Layer 35 (60. GBDiva46AnSpBlkBlkRng.psd)",
+     "file": "LIB-18-415-DivaRngBlk--ring.png",
+     "width": 661,
+     "height": 170,
+     "sha256": "34fbfa1869082033939289c83406ab9594cb1bdbc75e24d7ca56d203cc1e2bfe",
+     "pxPerMm": 13.4032,
+     "anchor": {
+      "x": 332.0,
+      "y": -283
+     },
+     "z": "front",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the Diva 46 ring bottle photo (cut_diva_rings.py); the ring is its own layer there",
+    "approvable": true,
+    "specksCleared": 0
+   }
+  },
+  {
+   "componentId": "LIB-18-415-DivaRngIvy",
+   "websiteSku": "",
+   "type": "ring",
+   "psd": null,
+   "reference": {
+    "psd": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/62. GBDiva46AnSpIvySlIvyRng.psd",
+    "sku": "GBDiva46AnSpIvySlRng",
+    "bodyId": "diva-46ml-18-415",
+    "glass": "Clear",
+    "plateKey": "diva-46ml-18-415|Clear",
+    "bottlePxPerMm": 13.4032,
+    "rimY": 437,
+    "axisX": 789.0,
+    "seatToFootPx": 1255,
+    "plateSeatToFootPx": 1951,
+    "bodyLayer": "Layer 34"
+   },
+   "layers": [
+    {
+     "slot": "ring",
+     "layerName": "Layer 35 (62. GBDiva46AnSpIvySlIvyRng.psd)",
+     "file": "LIB-18-415-DivaRngIvy--ring.png",
+     "width": 660,
+     "height": 170,
+     "sha256": "fefc73305264a4a22af4551904f7c9f64e0f12057368563bcb3db9ae3701881f",
+     "pxPerMm": 13.4032,
+     "anchor": {
+      "x": 333.0,
+      "y": -277
+     },
+     "z": "front",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the Diva 46 ring bottle photo (cut_diva_rings.py); the ring is its own layer there",
+    "approvable": true,
+    "specksCleared": 0
+   }
+  },
+  {
+   "componentId": "LIB-18-415-DivaRngLvn",
+   "websiteSku": "",
+   "type": "ring",
+   "psd": null,
+   "reference": {
+    "psd": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/66. GBDiva46AnSpLvnLvnRng.psd",
+    "sku": "GBDiva46AnSpLvnRng",
+    "bodyId": "diva-46ml-18-415",
+    "glass": "Clear",
+    "plateKey": "diva-46ml-18-415|Clear",
+    "bottlePxPerMm": 13.4032,
+    "rimY": 437,
+    "axisX": 789.0,
+    "seatToFootPx": 1255,
+    "plateSeatToFootPx": 1951,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "ring",
+     "layerName": "Layer 30 (66. GBDiva46AnSpLvnLvnRng.psd)",
+     "file": "LIB-18-415-DivaRngLvn--ring.png",
+     "width": 659,
+     "height": 171,
+     "sha256": "7b4bb96fc4fb728643a6b1b2a272a516d6c26dd661c45892ec81de274702954a",
+     "pxPerMm": 13.4032,
+     "anchor": {
+      "x": 332.0,
+      "y": -277
+     },
+     "z": "front",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the Diva 46 ring bottle photo (cut_diva_rings.py); the ring is its own layer there",
+    "approvable": true,
+    "specksCleared": 0
+   }
+  },
+  {
+   "componentId": "LIB-18-415-DivaRngRed",
+   "websiteSku": "",
+   "type": "ring",
+   "psd": null,
+   "reference": {
+    "psd": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/68. GBDiva46AnSpRedRedRng.psd",
+    "sku": "GBDiva46AnSpRedRng",
+    "bodyId": "diva-46ml-18-415",
+    "glass": "Clear",
+    "plateKey": "diva-46ml-18-415|Clear",
+    "bottlePxPerMm": 13.4032,
+    "rimY": 437,
+    "axisX": 789.0,
+    "seatToFootPx": 1255,
+    "plateSeatToFootPx": 1951,
+    "bodyLayer": "Layer 1"
+   },
+   "layers": [
+    {
+     "slot": "ring",
+     "layerName": "Redrng (68. GBDiva46AnSpRedRedRng.psd)",
+     "file": "LIB-18-415-DivaRngRed--ring.png",
+     "width": 661,
+     "height": 171,
+     "sha256": "6046326de5f426d4315de6590c2a81a44df22f9e03f4cee049c5312c8bf3027b",
+     "pxPerMm": 13.4032,
+     "anchor": {
+      "x": 334.0,
+      "y": -284
+     },
+     "z": "front",
+     "explodeIndex": 0
+    }
+   ],
+   "checks": {
+    "status": "cut from the Diva 46 ring bottle photo (cut_diva_rings.py); the ring is its own layer there",
+    "approvable": true,
+    "specksCleared": 0
+   }
+  },
+  {
    "componentId": "LIB-18-415-ShnBlkCap",
    "websiteSku": "",
    "type": "cap",

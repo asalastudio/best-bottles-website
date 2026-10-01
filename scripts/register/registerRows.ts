@@ -15,10 +15,10 @@ export type CsvRecord = Record<string, string>;
 
 export const COMPONENT_TYPES = [
     "cap", "roll-on-cap", "faux-leather-cap", "fine-mist-sprayer", "vintage-bulb-sprayer", "tassel-bulb-sprayer",
-    "lotion-pump", "dropper", "plug-applicator", "roller-insert", "reducer", "wand", "cap-review", "sprayer-review", "review",
+    "lotion-pump", "dropper", "plug-applicator", "roller-insert", "reducer", "ring", "wand", "cap-review", "sprayer-review", "review",
 ] as const;
 export const SLOTS = [
-    "body", "fitment", "roller", "cap", "overcap", "sprayer", "pump", "diptube", "collar", "bulb", "tassel", "reducer", "pipette",
+    "body", "fitment", "roller", "cap", "overcap", "sprayer", "pump", "diptube", "collar", "bulb", "tassel", "reducer", "pipette", "ring",
 ] as const;
 const ASSEMBLY_STATUSES = ["verified", "candidate", "exception", "quarantine", "retired"] as const;
 const BUILD_STATUSES = ["resolved", "partial", "unresolved"] as const;

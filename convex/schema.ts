@@ -23,7 +23,7 @@ const plateAssetV = v.object({
 const kitSlotV = v.union(
     v.literal("body"), v.literal("fitment"), v.literal("roller"), v.literal("cap"), v.literal("overcap"),
     v.literal("sprayer"), v.literal("pump"), v.literal("diptube"), v.literal("collar"), v.literal("bulb"),
-    v.literal("tassel"), v.literal("reducer"), v.literal("pipette"),
+    v.literal("tassel"), v.literal("reducer"), v.literal("pipette"), v.literal("ring"),
 );
 
 const portalAddress = v.object({
