@@ -155,6 +155,8 @@ export const revertChange = mutation({
         const change = await ctx.db.get(args.changeId);
         if (!change) return { ok: false as const, error: "That history entry no longer exists." };
         if (change.revertedBy) return { ok: false as const, error: "That change has already been reverted." };
+        // Fitment rules are not Team Hub fields; their correction script reverts them (expect and patch swapped).
+        if (change.targetType === "fitment") return { ok: false as const, error: "Fitment rule changes are reverted with their correction script." };
         const expect = { [change.field]: JSON.parse(change.after) }, patch = { [change.field]: JSON.parse(change.before) };
         const result = change.targetType === "product"
             ? await applyProductPatch(ctx, change.targetId as Id<"products">, expect, patch, args.actor, "team-hub-revert", change._id)

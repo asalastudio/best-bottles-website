@@ -137,4 +137,63 @@ describe("catalogue corrections (guarded, conditional, logged)", () => {
         expect(again.outcome).toBe("already-correct");
         expect(await changeLog(t)).toHaveLength(1);
     });
+
+    it("moves a bottle and its group to another family conditionally, and refuses a blank group family", async () => {
+        const t = convexTest(schema, modules);
+        const plastic = { ...bottle, websiteSku: "PbClear4ozFlpWh", graceSku: "PB-CLR-114ML-FLP-WHT", family: "Cylinder", category: "Plastic Bottle", bottleCollection: null, neckThreadSize: null };
+        const productId = await t.run(ctx => ctx.db.insert("products", plastic as never));
+        const groupId = await t.run(ctx => ctx.db.insert("productGroups", { ...group, slug: "cylinder-118ml-clear", family: "Cylinder", category: "Plastic Bottle", bottleCollection: null, neckThreadSize: null } as never));
+        const product = await t.mutation(fn("correctProductFields"), { writeToken: token, dryRun: false, reason: "test",
+            entries: [{ websiteSku: plastic.websiteSku, expect: { family: "Cylinder", bottleCollection: null }, patch: { family: "Plastic Bottle", bottleCollection: "Plastic Bottle" } }] });
+        expect(product.written.map(describeWrite).sort()).toEqual(["bottleCollection:null→Plastic Bottle", "family:Cylinder→Plastic Bottle"]);
+        const groupResult = await t.mutation(fn("correctGroupFields"), { writeToken: token, dryRun: false, reason: "test",
+            entries: [{ slug: "cylinder-118ml-clear", expect: { family: "Cylinder", bottleCollection: null }, patch: { family: "Plastic Bottle", bottleCollection: "Plastic Bottle" } }] });
+        expect(groupResult.written.map(describeWrite).sort()).toEqual(["bottleCollection:null→Plastic Bottle", "family:Cylinder→Plastic Bottle"]);
+        expect(await t.run(ctx => ctx.db.get(productId))).toMatchObject({ family: "Plastic Bottle", bottleCollection: "Plastic Bottle", category: "Plastic Bottle" });
+        expect(await t.run(ctx => ctx.db.get(groupId))).toMatchObject({ family: "Plastic Bottle", slug: "cylinder-118ml-clear" });
+        await expect(t.mutation(fn("correctGroupFields"), { writeToken: token, dryRun: false, reason: "test",
+            entries: [{ slug: "cylinder-118ml-clear", expect: { family: "Plastic Bottle" }, patch: { family: " " } }] })).rejects.toThrow(/must be a name/);
+    });
+
+    it("corrects a bottle's name and description conditionally (checklist 1i)", async () => {
+        const t = convexTest(schema, modules);
+        const silver = "Square design 15ml, 1/2oz Clear glass bottle with short shiny silver cap.";
+        const black = "Square design 15ml, 1/2oz Clear glass bottle with short shiny black cap.";
+        const id = await t.run(ctx => ctx.db.insert("products", { ...bottle, websiteSku: "GBSqr15BlkShSht", graceSku: "GB-SQR-CLR-15ML-SBLK-S",
+            itemName: silver, itemDescription: silver } as never));
+        const result = await t.mutation(fn("correctProductFields"), { writeToken: token, dryRun: false, reason: "test",
+            entries: [{ websiteSku: "GBSqr15BlkShSht", expect: { itemName: silver, itemDescription: silver }, patch: { itemName: black, itemDescription: black } }] });
+        expect(result.written.map(describeWrite).sort()).toEqual([`itemDescription:${silver}→${black}`, `itemName:${silver}→${black}`]);
+        expect(await t.run(ctx => ctx.db.get(id))).toMatchObject({ itemName: black, itemDescription: black });
+        // A name someone has since edited is left alone.
+        const again = await t.mutation(fn("correctProductFields"), { writeToken: token, dryRun: false, reason: "test",
+            entries: [{ websiteSku: "GBSqr15BlkShSht", expect: { itemName: silver }, patch: { itemName: "another name" } }] });
+        expect(again.changedSince).toEqual([{ websiteSku: "GBSqr15BlkShSht", field: "itemName", now: black }]);
+    });
+
+    it("changes one fitment marker conditionally, keeping the rule's other markers, and logs it", async () => {
+        const t = convexTest(schema, modules);
+        const markers = { "Bulb Sprayer": "✓", Dropper: "—", "Lotion Pump": "✓", Reducer: "✓", "Short Cap with Liner": "✓", Sprayer: "✓" };
+        const id = await t.run(ctx => ctx.db.insert("fitments", { threadSize: "18-415", bottleName: "Sleek 30ml", bottleCode: null, familyHint: "sleek", capacityMl: 30, components: markers }));
+        await t.run(ctx => ctx.db.insert("fitments", { threadSize: "13-415", bottleName: "Sleek 30ml", bottleCode: null, familyHint: "sleek", capacityMl: 30, components: markers }));
+        const entries = [{ bottleName: "Sleek 30ml", threadSize: "18-415", expect: { components: { Dropper: "—" } }, patch: { components: { Dropper: "✓" } } }];
+        const dry = await t.mutation(fn("correctFitmentRules"), { writeToken: token, reason: "test", entries });
+        expect(dry.written).toEqual([{ rule: "Sleek 30ml 18-415", field: "components.Dropper", before: "—", after: "✓" }]);
+        expect((await t.run(ctx => ctx.db.get(id)))?.components).toEqual(markers);
+
+        const wet = await t.mutation(fn("correctFitmentRules"), { writeToken: token, dryRun: false, reason: "test", entries });
+        expect(wet.written).toHaveLength(1);
+        expect((await t.run(ctx => ctx.db.get(id)))?.components).toEqual({ ...markers, Dropper: "✓" });
+        const log = await changeLog(t);
+        expect(log.map(l => [l.targetType, l.label, l.field, l.before, l.after])).toEqual([["fitment", "Sleek 30ml 18-415", "components.Dropper", '"—"', '"✓"']]);
+
+        const again = await t.mutation(fn("correctFitmentRules"), { writeToken: token, dryRun: false, reason: "test", entries });
+        expect(again.alreadyCorrect).toEqual(["Sleek 30ml 18-415.components.Dropper"]);
+        const capacity = await t.mutation(fn("correctFitmentRules"), { writeToken: token, dryRun: false, reason: "test",
+            entries: [{ bottleName: "Sleek 30ml", threadSize: "18-415", expect: { capacityMl: 29 }, patch: { capacityMl: 31 } },
+                { bottleName: "Sleek 31ml", threadSize: "18-415", expect: {}, patch: { capacityMl: 31 } }] });
+        expect(capacity.changedSince).toEqual([{ rule: "Sleek 30ml 18-415", field: "capacityMl", now: 30 }]);
+        expect(capacity.notFound).toEqual(["Sleek 31ml 18-415"]);
+        expect(await changeLog(t)).toHaveLength(1);
+    });
 });
