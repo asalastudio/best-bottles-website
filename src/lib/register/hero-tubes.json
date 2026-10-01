@@ -1295,17 +1295,17 @@
   },
   "empire-100ml-18-415|Clear|lotion": {
    "seated": {
-    "url": "/images/register/tubes/empire-100ml-18-415-clear-lotion.7bff4a5fa960.png",
-    "width": 128,
-    "height": 1739,
-    "x": 480,
+    "url": "/images/register/tubes/empire-100ml-18-415-clear-lotion.02241694f4a9.png",
+    "width": 171,
+    "height": 1662,
+    "x": 476,
     "y": 133
    },
    "exploded": {
-    "url": "/images/register/tubes/empire-100ml-18-415-clear-lotion-exploded.45bbd9ea0283.png",
-    "width": 128,
-    "height": 1644,
-    "x": 480,
+    "url": "/images/register/tubes/empire-100ml-18-415-clear-lotion-exploded.3e49ec6631bc.png",
+    "width": 171,
+    "height": 1650,
+    "x": 476,
     "y": 133
    },
    "from": "own",
@@ -1371,17 +1371,17 @@
   },
   "empire-50ml-18-415|Clear|lotion": {
    "seated": {
-    "url": "/images/register/tubes/empire-50ml-18-415-clear-lotion.100424d362f1.png",
-    "width": 106,
-    "height": 1618,
-    "x": 464,
+    "url": "/images/register/tubes/empire-50ml-18-415-clear-lotion.9634656e06d7.png",
+    "width": 158,
+    "height": 1531,
+    "x": 455,
     "y": 147
    },
    "exploded": {
-    "url": "/images/register/tubes/empire-50ml-18-415-clear-lotion-exploded.5fec0780fc22.png",
-    "width": 106,
-    "height": 1489,
-    "x": 464,
+    "url": "/images/register/tubes/empire-50ml-18-415-clear-lotion-exploded.4c04f993844d.png",
+    "width": 158,
+    "height": 1514,
+    "x": 455,
     "y": 147
    },
    "from": "own",

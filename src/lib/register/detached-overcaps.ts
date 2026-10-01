@@ -119,6 +119,18 @@ export const DETACHED_OVERCAPS: Readonly<Record<string, DetachedOvercap>> = {
         coverWidth: 424,
         source: "Blender, 9 mL Cylinder 17-415 v34: the empty clear overcap (seated over the lotion head: b5f3c4d65b0d…)",
     },
+    // The white rectangular pump's clear cover (2026-10-01, checklist 6a): no photo shows it off the bottle, so it is a
+    // gpt-image-2.5-sunburst edit of the seated cover with its geometry locked, fitted to the seated cover's box and cut
+    // with its silhouette (scripts/register/components/cut_white_pump.py).
+    "LIB-18-415-WhtPumpClOvrCp": {
+        seatedLayerSha256: "13ae16acc25d08039dbbfdb29a3f2b7524633a1390b6548b03d4366621249835",
+        seatedCoverWidth: 356,
+        url: "/assets/register/overcaps/ltn-18-415-white-rect-clear-overcap.webp",
+        width: 561,
+        height: 686,
+        coverWidth: 540,
+        source: "gpt-image-2.5-sunburst edit of the seated cover (54. LBElg60WhtClOvrCp.psd), geometry locked; cut with the seated silhouette",
+    },
 };
 
 const round = (value: number) => Math.round(value * 100) / 100;
