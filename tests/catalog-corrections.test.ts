@@ -155,6 +155,22 @@ describe("catalogue corrections (guarded, conditional, logged)", () => {
             entries: [{ slug: "cylinder-118ml-clear", expect: { family: "Plastic Bottle" }, patch: { family: " " } }] })).rejects.toThrow(/must be a name/);
     });
 
+    it("corrects a bottle's name and description conditionally (checklist 1i)", async () => {
+        const t = convexTest(schema, modules);
+        const silver = "Square design 15ml, 1/2oz Clear glass bottle with short shiny silver cap.";
+        const black = "Square design 15ml, 1/2oz Clear glass bottle with short shiny black cap.";
+        const id = await t.run(ctx => ctx.db.insert("products", { ...bottle, websiteSku: "GBSqr15BlkShSht", graceSku: "GB-SQR-CLR-15ML-SBLK-S",
+            itemName: silver, itemDescription: silver } as never));
+        const result = await t.mutation(fn("correctProductFields"), { writeToken: token, dryRun: false, reason: "test",
+            entries: [{ websiteSku: "GBSqr15BlkShSht", expect: { itemName: silver, itemDescription: silver }, patch: { itemName: black, itemDescription: black } }] });
+        expect(result.written.map(describeWrite).sort()).toEqual([`itemDescription:${silver}→${black}`, `itemName:${silver}→${black}`]);
+        expect(await t.run(ctx => ctx.db.get(id))).toMatchObject({ itemName: black, itemDescription: black });
+        // A name someone has since edited is left alone.
+        const again = await t.mutation(fn("correctProductFields"), { writeToken: token, dryRun: false, reason: "test",
+            entries: [{ websiteSku: "GBSqr15BlkShSht", expect: { itemName: silver }, patch: { itemName: "another name" } }] });
+        expect(again.changedSince).toEqual([{ websiteSku: "GBSqr15BlkShSht", field: "itemName", now: black }]);
+    });
+
     it("changes one fitment marker conditionally, keeping the rule's other markers, and logs it", async () => {
         const t = convexTest(schema, modules);
         const markers = { "Bulb Sprayer": "✓", Dropper: "—", "Lotion Pump": "✓", Reducer: "✓", "Short Cap with Liner": "✓", Sprayer: "✓" };

@@ -36,6 +36,13 @@ const reviewed: Record<string, ExactComponentMatch> = {
     // "shiny silver collar" and joined the shiny silver mist sprayer Spry18-415ShnSl, which a bulb-sprayer bottle never lists.
     GBDiva46AnSpLvnRng: { family: "Diva", capacityMl: 46, color: "Clear", neck: "18-415", applicator: "Vintage Bulb Sprayer", componentSku: "AnSp18-415Lvn",
         evidence: "bottle: \"with lavendar vintage style bulb sprayer with shiny silver collar cap and jeweled silver ring\" (legacy page, 2026-10-01); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings\"" },
+    // Checklist 1h (Jordan, 2026-10-01): once its cap colour reads Black, two listed 18-400 caps do too, the plain short cap
+    // and the glass-rod applicator cap. The vial is sold with the short cap, as the Boston 15 short-cap bottles above are.
+    GB09BlackCapSht: { family: "Vial", capacityMl: 9, color: "Clear", neck: "18-400", applicator: null, componentSku: "18-400CpShortBlk",
+        evidence: "bottle: \"Cylinder design 9 ml clear glass vial with black short cap\" (legacy page, 2026-10-01); component 18-400CpShortBlk: \"Black lid or closure for glass bottle, Thread size 18-400\"; 18-400CpAppBlk excluded: \"Black cap with glass rod applicator\"" },
+    // Checklist 4c (Jordan, 2026-10-01): it lists a short and a tall black 8-425 cap; its name and page say short.
+    GBVialClr2mlBlackCap: { family: "Vial", capacityMl: 2, color: "Clear", neck: "8-425", applicator: null, componentSku: "8-425CpShortBlack",
+        evidence: "bottle: \"Vial design 2 ml clear glass vial with short black cap\" (legacy page, 2026-10-01); component 8-425CpShortBlack: \"Black lid or closure for glass bottle, Thread size 8-425\"; CP8-425TallBlack excluded (tall)" },
 };
 
 let merged: Record<string, ExactComponentMatch> | undefined;

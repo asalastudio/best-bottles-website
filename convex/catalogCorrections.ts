@@ -43,6 +43,11 @@ const fieldsV = v.object({
     // glass Cylinder family; they belong with the other plastic bottles (Jordan, Build Your Bottle checklist 8b).
     family: v.optional(v.union(v.string(), v.null())),
     bottleCollection: v.optional(v.union(v.string(), v.null())),
+    // 2026-10-01: GBSqr15BlkShSht's name and description both say "short shiny silver cap", copied from its
+    // bestbottles.com page; its SKU, cap colour and both photos show the short shiny black cap (checklist 1i).
+    // The Team Hub editor writes descriptions but never names.
+    itemName: v.optional(v.string()),
+    itemDescription: v.optional(v.union(v.string(), v.null())),
 });
 type Fields = Infer<typeof fieldsV>;
 /** A corrected field's value as reported: text for most fields, a number for capacityMl. */
