@@ -1249,6 +1249,158 @@
    }
   },
   {
+   "componentId": "LIB-13-415-MinarCu",
+   "websiteSku": "",
+   "type": "cap",
+   "psd": null,
+   "reference": {
+    "photo": "https://www.bestbottles.com/images/store/caps/13-415MinarCu.png",
+    "finish": "Matte Copper",
+    "cappedPhotos": {
+     "GBElg15MinarCu": {
+      "plate": "elegant-15ml-13-415|Clear",
+      "score": 0.361,
+      "heightMm": 31.74,
+      "topAboveRimMm": 29.53,
+      "bottomBelowRimMm": 2.08
+     },
+     "GBElgFrst15MinarCu": {
+      "plate": "elegant-15ml-13-415|Frosted",
+      "score": 0.222,
+      "heightMm": 31.19,
+      "topAboveRimMm": 19.2,
+      "bottomBelowRimMm": 11.87
+     },
+     "GBFlair15MinarCu": {
+      "plate": "flair-15ml-13-415|Clear",
+      "score": 0.516,
+      "heightMm": 22.52,
+      "topAboveRimMm": 12.76,
+      "bottomBelowRimMm": 9.67
+     },
+     "GBRect10MinarCu": {
+      "plate": "footed-rectangle-10ml-13-415|Clear",
+      "score": 0.537,
+      "heightMm": 20.4,
+      "topAboveRimMm": 9.69,
+      "bottomBelowRimMm": 10.63
+     },
+     "GBRoyal13MinarCu": {
+      "plate": "royal-13ml-13-415|Clear",
+      "score": 0.641,
+      "heightMm": 25.42,
+      "topAboveRimMm": 14.32,
+      "bottomBelowRimMm": 11.0
+     }
+    },
+    "topAboveRimMm": 12.4
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "bestbottles.com caps/13-415MinarCu.png",
+     "file": "LIB-13-415-MinarCu--cap.png",
+     "width": 300,
+     "height": 361,
+     "sha256": "ed694918bb6c5383995ba81c186ce208c533f6e20e6569c6948e235418175d06",
+     "pxPerMm": 15.3205,
+     "anchor": {
+      "x": 150.0,
+      "y": 196.0
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 355
+    }
+   ],
+   "checks": {
+    "status": "cut from bestbottles.com's photos (cut_minaret.py); no library PSD or master photo holds the Minaret",
+    "approvable": true,
+    "heightMm": 22.78,
+    "recentredMm": [
+     [
+      "cap",
+      -0.098
+     ]
+    ]
+   }
+  },
+  {
+   "componentId": "LIB-13-415-MinarSl",
+   "websiteSku": "",
+   "type": "cap",
+   "psd": null,
+   "reference": {
+    "photo": "https://www.bestbottles.com/images/store/caps/13-415MinarCu.png",
+    "finish": "Shiny Silver",
+    "cappedPhotos": {
+     "GBElg15MinarCu": {
+      "plate": "elegant-15ml-13-415|Clear",
+      "score": 0.361,
+      "heightMm": 31.74,
+      "topAboveRimMm": 29.53,
+      "bottomBelowRimMm": 2.08
+     },
+     "GBElgFrst15MinarCu": {
+      "plate": "elegant-15ml-13-415|Frosted",
+      "score": 0.222,
+      "heightMm": 31.19,
+      "topAboveRimMm": 19.2,
+      "bottomBelowRimMm": 11.87
+     },
+     "GBFlair15MinarCu": {
+      "plate": "flair-15ml-13-415|Clear",
+      "score": 0.516,
+      "heightMm": 22.52,
+      "topAboveRimMm": 12.76,
+      "bottomBelowRimMm": 9.67
+     },
+     "GBRect10MinarCu": {
+      "plate": "footed-rectangle-10ml-13-415|Clear",
+      "score": 0.537,
+      "heightMm": 20.4,
+      "topAboveRimMm": 9.69,
+      "bottomBelowRimMm": 10.63
+     },
+     "GBRoyal13MinarCu": {
+      "plate": "royal-13ml-13-415|Clear",
+      "score": 0.641,
+      "heightMm": 25.42,
+      "topAboveRimMm": 14.32,
+      "bottomBelowRimMm": 11.0
+     }
+    },
+    "topAboveRimMm": 12.4
+   },
+   "layers": [
+    {
+     "slot": "cap",
+     "layerName": "gpt-image-2.5-sunburst edit of LIB-13-415-MinarCu (geometry locked), cut with its silhouette",
+     "file": "LIB-13-415-MinarSl--cap.png",
+     "width": 300,
+     "height": 361,
+     "sha256": "5d51734e32b8ec05174ccbe1f140389f406353d7ed69d186df60af759b85782d",
+     "pxPerMm": 15.3205,
+     "anchor": {
+      "x": 150.0,
+      "y": 196.0
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 358
+    }
+   ],
+   "checks": {
+    "status": "cut from bestbottles.com's photos (cut_minaret.py); no library PSD or master photo holds the Minaret",
+    "approvable": true,
+    "heightMm": 22.78,
+    "renderBoxFit": {
+     "x": 1.0015,
+     "y": 1.0013
+    }
+   }
+  },
+  {
    "componentId": "LIB-13-415-MtlRollon",
    "websiteSku": "",
    "type": "roller-insert",
