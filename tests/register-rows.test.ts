@@ -47,12 +47,22 @@ describe("the committed register shapes cleanly for Convex", () => {
     it("registers the library parts as non-sellable components keyed LIB-<neck>-<name>", () => {
         const parts = rows.components.filter(c => c.componentId.startsWith("LIB-"));
         expect(parts.map(p => p.componentId).sort()).toEqual([
-            "LIB-13-415-MtlRollon", "LIB-13-415-PlsticRollon", "LIB-14.3mm-Plug", "LIB-17-415-MtlRollon", "LIB-17-415-PlsticRollon", "LIB-18-415-Reducer",
+            "LIB-13-415-MinarCu", "LIB-13-415-MinarSl", "LIB-13-415-MtlRollon", "LIB-13-415-PlsticRollon", "LIB-14.3mm-Plug", "LIB-17-415-MtlRollon", "LIB-17-415-PlsticRollon", "LIB-18-415-Reducer",
             "LIB-18-415-ShnBlkCap", "LIB-18-415-WhtPumpClOvrCp", "LIB-20-400-MtlRollon", "LIB-20-400-PlsticRollon",
         ]);
         for (const part of parts) {
             expect(part.sellable).toBe(false);
             expect(part.graceSku).toBeNull();
+        }
+    });
+
+    it("caps every Minaret bottle with the Minaret of its finish (checklist 7a)", () => {
+        const minarets = rows.assemblies.filter(a => /Minar(Cu|Sl)$/.test(a.websiteSku ?? ""));
+        expect(minarets).toHaveLength(10);
+        for (const assembly of minarets) {
+            const finish = assembly.websiteSku!.endsWith("MinarCu") ? "Cu" : "Sl";
+            expect(assembly.build.status).toBe("resolved");
+            expect(assembly.build.parts).toEqual([{ role: "cap", componentId: `LIB-13-415-Minar${finish}` }]);
         }
     });
 

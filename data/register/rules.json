@@ -108,9 +108,9 @@
     "13-415": {
       "kind": "thread",
       "bodies": 17,
-      "components": 33,
+      "components": 35,
       "componentTypes": {
-        "cap": 6,
+        "cap": 8,
         "fine-mist-sprayer": 12,
         "roll-on-cap": 13,
         "roller-insert": 2

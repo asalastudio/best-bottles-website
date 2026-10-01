@@ -5,7 +5,7 @@ Source: Convex prod export (2485 rows, collected 2026-09-29T09:07:45Z), PSD libr
 ## Totals
 
 - Bodies: **93 current** (0 retired-only) across 32 neck groups
-- Components: **152 current**, 0 retired, 15 quarantined; **129 current components have a library PSD** (16 via alias-map, 34 case-insensitive)
+- Components: **154 current**, 0 retired, 15 quarantined; **129 current components have a library PSD** (16 via alias-map, 34 case-insensitive)
 - Assemblies: **2107 verified**, **109 candidate**, **55 quarantine**, **2 retired**, **2 exception**
 - Quarantine rows: 120 (see quarantine.csv)
 - Register ids kept across catalogue re-keys: **24** (the layers stay attached; see below)
@@ -25,7 +25,7 @@ Source: Convex prod export (2485 rows, collected 2026-09-29T09:07:45Z), PSD libr
 | 10mm | 1 | 1 | 0 | 0 | 0 | 3 | 0 | 0 |
 | 11mm | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 0 |
 | 12mm | 2 | 1 | 0 | 0 | 4 | 0 | 0 | 0 |
-| 13-415 | 17 | 5 | 33 | 586 | 13 | 0 | 0 | 2 |
+| 13-415 | 17 | 5 | 35 | 586 | 13 | 0 | 0 | 2 |
 | 13-425 | 3 | 4 | 2 | 0 | 16 | 0 | 0 | 0 |
 | 14.3mm | 2 | 1 | 1 | 0 | 2 | 0 | 0 | 0 |
 | 15-415 | 2 | 2 | 7 | 21 | 0 | 0 | 0 | 0 |
@@ -107,7 +107,7 @@ The matrices counted **Glass Bottle** records only; the register also carries at
 
 | neck | cap | cap-review | dropper | faux-leather-cap | fine-mist-sprayer | lotion-pump | plug-applicator | reducer | review | roll-on-cap | roller-insert | tassel-bulb-sprayer | vintage-bulb-sprayer |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 13-415 | 6 |  |  |  | 12 |  |  |  |  | 13 | 2 |  |  |
+| 13-415 | 8 |  |  |  | 12 |  |  |  |  | 13 | 2 |  |  |
 | 13-425 | 2 |  |  |  |  |  |  |  |  |  |  |  |  |
 | 14.3mm |  |  |  |  |  |  | 1 |  |  |  |  |  |  |
 | 15-415 |  |  |  |  | 5 |  |  |  |  | 2 |  |  |  |
@@ -119,9 +119,9 @@ The matrices counted **Glass Bottle** records only; the register also carries at
 | 24-400 | 1 |  |  |  |  |  |  |  |  |  |  |  |  |
 | 8-425 | 5 |  |  |  |  |  |  |  |  |  |  |  |  |
 
-## Library gaps — 23 current components with no PSD in 20. Caps / 21. Tassels
+## Library gaps — 25 current components with no PSD in 20. Caps / 21. Tassels
 
-- **13-415** (10): CP13-415BlkShShtMtl [cap], CP13-415CuSht [cap], CP13-415GlMattSht [cap], CP13-415GlSht [cap], CP13-415SlMattSht [cap], CP13-415SlSht [cap], 13-415CAP4SpryCuMt [fine-mist-sprayer], 13-415CAP4SpryGlSh [fine-mist-sprayer], 13-415CAP4SprySlMt [fine-mist-sprayer], GBATom5RedBurg [fine-mist-sprayer]
+- **13-415** (12): CP13-415BlkShShtMtl [cap], CP13-415CuSht [cap], CP13-415GlMattSht [cap], CP13-415GlSht [cap], CP13-415SlMattSht [cap], CP13-415SlSht [cap], 13-415CAP4SpryCuMt [fine-mist-sprayer], 13-415CAP4SpryGlSh [fine-mist-sprayer], 13-415CAP4SprySlMt [fine-mist-sprayer], GBATom5RedBurg [fine-mist-sprayer], LIB-13-415-MinarCu [cap], LIB-13-415-MinarSl [cap]
 - **13-425** (2): CP13-425Blk [cap], CP13-425Wht [cap]
 - **14.3mm** (1): LIB-14.3mm-Plug [plug-applicator]
 - **17-415** (3): Droppers1ozElg [dropper], LIB-17-415-MtlRollon [roller-insert], LIB-17-415-PlsticRollon [roller-insert]
@@ -166,18 +166,18 @@ Each sellable assembly names the parts it is physically made of (`buildParts`), 
 | diva-30ml-18-415 | 34 | 0 | 0 |
 | diva-46ml-18-415 | 92 | 0 | 10 |
 | elegant-100ml-18-415 | 88 | 0 | 0 |
-| elegant-15ml-13-415 | 70 | 0 | 4 |
+| elegant-15ml-13-415 | 74 | 0 | 0 |
 | elegant-60ml-18-415 | 94 | 0 | 0 |
 | empire-100ml-18-415 | 44 | 0 | 0 |
 | empire-50ml-18-415 | 47 | 0 | 0 |
-| flair-15ml-13-415 | 36 | 0 | 2 |
-| footed-rectangle-10ml-13-415 | 36 | 0 | 2 |
+| flair-15ml-13-415 | 38 | 0 | 0 |
+| footed-rectangle-10ml-13-415 | 38 | 0 | 0 |
 | grace-55ml-18-415 | 43 | 0 | 0 |
 | pillar-9ml-13-415 | 4 | 0 | 0 |
 | plastic-bottle-30ml-13-415 | 0 | 0 | 3 |
 | round-128ml-18-415 | 92 | 0 | 0 |
 | round-78ml-18-415 | 86 | 0 | 0 |
-| royal-13ml-13-415 | 35 | 0 | 2 |
+| royal-13ml-13-415 | 37 | 0 | 0 |
 | sleek-100ml-18-415 | 44 | 0 | 0 |
 | sleek-30ml-18-415 | 38 | 0 | 0 |
 | sleek-50ml-18-415 | 44 | 0 | 0 |
@@ -196,8 +196,6 @@ Each sellable assembly names the parts it is physically made of (`buildParts`), 
 Unresolved, by reason (Convex corrections):
 
 - **9** — own class metal-atomizer: no components ruled compatible: GBAtom5Blk, GBAtom5BlkDot, GBAtom5Blu, GBAtom5Gl, GBAtom5Red, GBAtom5Sl, GBAtom5SlDot, GBAtom5SlStars, GBAtom5PnkDot
-- **5** — no current 13-415 cap carries the SKU code 'MinarCu' (no component record and no master photo): GBElg15MinarCu, GBElgFrst15MinarCu, GBFlair15MinarCu, GBRect10MinarCu, GBRoyal13MinarCu
-- **5** — no current 13-415 cap carries the SKU code 'MinarSl' (no component record and no master photo): GBElg15MinarSl, GBElgFrst15MinarSl, GBFlair15MinarSl, GBRect10MinarSl, GBRoyal13MinarSl
 - **3** — own class plastic-bottle: no components ruled compatible: PB1ozSpryNat, PB1ozSprySl, PB1ozClearcap
 - **1** — no current 18-415 vintage-bulb-sprayer carries the SKU code 'BlkRng': GBDiva46AnSpBlkRng
 - **1** — no current 18-415 vintage-bulb-sprayer carries the SKU code 'IvySlRng': GBDiva46AnSpIvySlRng

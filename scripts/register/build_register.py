@@ -116,6 +116,18 @@ LIBRARY_PARTS = [
      "itemName": "White rectangular lotion pump with clear overcap, 18-415",
      "evidence": "library part, not a product: the pump every white-pump clear-overcap SKU is sold with (Jordan, checklist 6a, 2026-10-01)",
      "source": "Elegant 60 master photos 54./55. LBElg60WhtClOvrCp.psd (cut_white_pump.py)"},
+    # The Minaret cap (2026-10-01, Build Your Bottle checklist 7a): the matte copper and shiny silver Minarets are sold only
+    # on their bottles (Elegant 15 clear and frosted, Flair 15, Footed Rectangle 10, Royal 13), and no library PSD or master
+    # photo holds them. scripts/register/components/cut_minaret.py cuts the copper from bestbottles.com's photo of the cap
+    # and regenerates the silver from it (Jordan: the silver from the copper, in gpt-image-2.5-sunburst).
+    {"componentId": "LIB-13-415-MinarCu", "type": "cap", "neck": "13-415", "rollerMaterial": "", "psdStem": None,
+     "itemName": "Matte copper Minaret cap, 13-415",
+     "evidence": "library part, not a product: the cap of the five matte copper Minaret SKUs (Jordan, checklist 7a, 2026-10-01)",
+     "source": "bestbottles.com images/store/caps/13-415MinarCu.png (cut_minaret.py)"},
+    {"componentId": "LIB-13-415-MinarSl", "type": "cap", "neck": "13-415", "rollerMaterial": "", "psdStem": None,
+     "itemName": "Shiny silver Minaret cap, 13-415",
+     "evidence": "library part, not a product: the cap of the five shiny silver Minaret SKUs (Jordan, checklist 7a, 2026-10-01)",
+     "source": "gpt-image-2.5-sunburst edit of LIB-13-415-MinarCu, geometry locked (cut_minaret.py)"},
 ]
 WHITE_PUMP = "LIB-18-415-WhtPumpClOvrCp"
 
@@ -220,6 +232,10 @@ SKU_TAIL_13415 = [  # (type token in the assembly SKU, component stem prefix, ki
 CODE_ALIASES_13415 = {"cu": "cumt", "blackdot": "blkdot", "pinkdo": "pinkdot", "blkshshtmtl": "blkshsht"}  # "BlkShShtMtl": the black lined short cap  # "PinkDo": GBTallRect10MtlRollPinkDo, a truncated website SKU
 
 
+# The Minarets are library parts (no product to match a stem against): the SKU code names the finish.
+MINARET_13415 = {"MinarCu": "LIB-13-415-MinarCu", "MinarSl": "LIB-13-415-MinarSl"}
+
+
 def code_key_13415(code: str) -> str:
     lowered = code.lower().replace("matt", "mt")
     return CODE_ALIASES_13415.get(lowered, lowered)
@@ -260,6 +276,9 @@ def own_build_13415(assembly: dict, by_neck_type: dict, library_ids: set) -> tup
     code = tail.group("code") if tail else ""
     if not code:
         return "", "unresolved", f"website SKU '{sku}' names no 13-415 top (MtlRoll, Roll, Spry or a cap code)"
+    minaret = MINARET_13415.get(code)
+    if minaret and minaret in library_ids:
+        return f"cap:{minaret}", "resolved", f"own cap matched by SKU code '{code}' (the Minaret, a library part)"
     matches = stem_matches("CP13-415", code, exclude=("CP13-415Spry",))
     if len(matches) == 1:
         return f"cap:{matches[0]['componentId']}", "resolved", f"own cap matched by SKU code '{code}'"

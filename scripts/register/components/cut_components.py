@@ -49,7 +49,9 @@ ALPHA = 128
 # Parts another script cuts: this one skips them and keeps their entries, even on a full run.
 OWN_CUTTER = {"20-400": ({"LIB-20-400-MtlRollon", "LIB-20-400-PlsticRollon", "CMP-ROC-SBLK-20400-T"}, "scripts/register/components/cut_boston_parts.py"),
               # the white pump under the clear overcap has no library PSD: both its layers come from its bottle photos
-              "18-415": ({"LIB-18-415-WhtPumpClOvrCp"}, "scripts/register/components/cut_white_pump.py")}
+              "18-415": ({"LIB-18-415-WhtPumpClOvrCp"}, "scripts/register/components/cut_white_pump.py"),
+              # the Minaret has no library PSD: bestbottles.com's photo of the copper cap, the silver regenerated from it
+              "13-415": ({"LIB-13-415-MinarCu", "LIB-13-415-MinarSl"}, "scripts/register/components/cut_minaret.py")}
 MIN_IOU_APPROVABLE = 0.90
 SLOT_BY_TYPE = {"roll-on-cap": "cap", "cap": "cap", "faux-leather-cap": "cap", "fine-mist-sprayer": "sprayer", "lotion-pump": "pump",
                 "vintage-bulb-sprayer": "sprayer", "tassel-bulb-sprayer": "sprayer", "dropper": "fitment", "reducer": "reducer", "roller-insert": "roller"}
