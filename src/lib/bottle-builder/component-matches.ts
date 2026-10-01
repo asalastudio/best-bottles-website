@@ -28,6 +28,14 @@ const reviewed: Record<string, ExactComponentMatch> = {
         evidence: "bottle: \"with short black cap\" (legacy description, no applicator); component 18-400CpShortBlk: \"Black lid or closure for glass bottle, Thread size 18-400\"; 18-400CpAppBlk excluded: \"Black cap with glass rod applicator\"" },
     GBBstnBlu15BlkCapSht: { family: "Boston Round", capacityMl: 15, color: "Cobalt Blue", neck: "18-400", applicator: null, componentSku: "18-400CpShortBlk",
         evidence: "bottle: \"with short black cap\" (legacy description, no applicator); component 18-400CpShortBlk: \"Black lid or closure for glass bottle, Thread size 18-400\"; 18-400CpAppBlk excluded: \"Black cap with glass rod applicator\"" },
+    // Build Your Bottle checklist 9a (Jordan, 2026-10-01). The generated join still names the applicator the catalogue
+    // used before the 29 Sep tassel split, so the builder rejected it and never offered this bottle.
+    GBElg60AnSpTslRed: { family: "Elegant", capacityMl: 60, color: "Clear", neck: "18-415", applicator: "Vintage Bulb Sprayer with Tassel", componentSku: "AnSpTsl18-415Red",
+        evidence: "bottle: \"with Red vintage style bulb sprayer with tassel with shiny silver collar cap\" (legacy page, 2026-10-01); component AnSpTsl18-415Red: \"Red, Antique or Vintage style bulb sprayer with Silver fittings and tassel. Thread Size 18-415\"" },
+    // Checklist 9b (Jordan, 2026-10-01). The legacy description spells lavender "lavendar", so the generator read only
+    // "shiny silver collar" and joined the shiny silver mist sprayer Spry18-415ShnSl, which a bulb-sprayer bottle never lists.
+    GBDiva46AnSpLvnRng: { family: "Diva", capacityMl: 46, color: "Clear", neck: "18-415", applicator: "Vintage Bulb Sprayer", componentSku: "AnSp18-415Lvn",
+        evidence: "bottle: \"with lavendar vintage style bulb sprayer with shiny silver collar cap and jeweled silver ring\" (legacy page, 2026-10-01); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings\"" },
 };
 
 let merged: Record<string, ExactComponentMatch> | undefined;

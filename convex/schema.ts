@@ -1226,8 +1226,8 @@ export default defineSchema({
      * Values are JSON strings: a name, a status and a five-rung price ladder share one column.
      */
     catalogChangeLog: defineTable({
-        targetType: v.union(v.literal("product"), v.literal("group")),
-        targetId: v.string(),                       // products / productGroups _id
+        targetType: v.union(v.literal("product"), v.literal("group"), v.literal("fitment")),
+        targetId: v.string(),                       // products / productGroups / fitments _id
         label: v.string(),                          // website SKU or group slug, for reading the log
         field: v.string(),
         before: v.string(),

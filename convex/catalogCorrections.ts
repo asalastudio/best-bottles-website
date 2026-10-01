@@ -39,6 +39,10 @@ const fieldsV = v.object({
     // Jordan's caliper readings replace them.
     heightWithoutCap: v.optional(v.union(v.string(), v.null())),
     diameter: v.optional(v.union(v.string(), v.null())),
+    // 2026-10-01: three plastic flip-top bottles (PbClear4ozFlpWh, PbClear8ozFlpWh, PbNat16ozFlpWh) were filed in the
+    // glass Cylinder family; they belong with the other plastic bottles (Jordan, Build Your Bottle checklist 8b).
+    family: v.optional(v.union(v.string(), v.null())),
+    bottleCollection: v.optional(v.union(v.string(), v.null())),
 });
 type Fields = Infer<typeof fieldsV>;
 /** A corrected field's value as reported: text for most fields, a number for capacityMl. */
@@ -48,12 +52,15 @@ type FieldValue = Infer<typeof fieldValueV>;
 const groupFieldsV = v.object({
     slug: v.optional(v.string()),
     neckThreadSize: v.optional(v.union(v.string(), v.null())),
+    // 2026-10-01: the plastic flip-top groups move to the Plastic Bottle family with their bottles.
+    family: v.optional(v.string()),
+    bottleCollection: v.optional(v.union(v.string(), v.null())),
 });
-type GroupFields = { slug?: string; neckThreadSize?: string | null };
+type GroupFields = { slug?: string; neckThreadSize?: string | null; family?: string; bottleCollection?: string | null };
 
 async function logChange(
     ctx: MutationCtx,
-    entry: { targetType: "product" | "group"; targetId: string; label: string; field: string; before: unknown; after: unknown; at: number; reason: string },
+    entry: { targetType: "product" | "group" | "fitment"; targetId: string; label: string; field: string; before: unknown; after: unknown; at: number; reason: string },
 ) {
     await ctx.db.insert("catalogChangeLog", {
         targetType: entry.targetType, targetId: entry.targetId, label: entry.label, field: entry.field,
@@ -157,6 +164,9 @@ export const correctGroupFields = mutation({
                     const taken = await ctx.db.query("productGroups").withIndex("by_slug", q => q.eq("slug", target)).first();
                     if (taken) throw new Error(`slug "${target}" already belongs to another group`);
                     write.slug = target;
+                } else if (field === "family") {
+                    if (typeof target !== "string" || !target.trim()) throw new Error("a group's family must be a name");
+                    write.family = target;
                 } else {
                     write[field] = target;
                 }
@@ -166,6 +176,82 @@ export const correctGroupFields = mutation({
                 }
             }
             if (!dryRun && Object.keys(write).length) await ctx.db.patch(row._id, write);
+        }
+        return out;
+    },
+});
+
+/** A fitment rule's correctable values: its capacity, and any of its component markers ("✓" fits, "—" does not). */
+const fitmentFieldsV = v.object({
+    capacityMl: v.optional(v.union(v.number(), v.null())),
+    components: v.optional(v.record(v.string(), v.string())),
+});
+const fitmentValueV = v.union(v.string(), v.number(), v.null());
+
+/**
+ * Same contract for the fitments table, which had no write path (Jordan, Build Your Bottle checklist 2026-10-01: the
+ * "Sleek 30ml" rule said droppers don't fit although the catalogue sells three Sleek 30 dropper bottles). A rule is
+ * named by its bottle name and thread; `components` names only the markers to change, each guarded by its own
+ * `expect`, and the rest of the rule's markers are kept. Each value written leaves one catalogChangeLog entry
+ * (target "fitment", field "capacityMl" or "components.<marker>").
+ */
+export const correctFitmentRules = mutation({
+    args: {
+        writeToken: v.string(),
+        dryRun: v.optional(v.boolean()),
+        reason: v.string(),
+        entries: v.array(v.object({ bottleName: v.string(), threadSize: v.string(), expect: fitmentFieldsV, patch: fitmentFieldsV })),
+    },
+    returns: v.object({
+        dryRun: v.boolean(),
+        written: v.array(v.object({ rule: v.string(), field: v.string(), before: fitmentValueV, after: fitmentValueV })),
+        alreadyCorrect: v.array(v.string()),
+        changedSince: v.array(v.object({ rule: v.string(), field: v.string(), now: fitmentValueV })),
+        notFound: v.array(v.string()),
+    }),
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+        if (args.entries.length > 50) throw new Error("at most 50 entries per call");
+        if (!args.reason.trim()) throw new Error("a reason is required");
+        const dryRun = args.dryRun !== false;
+        const at = Date.now();
+        const out = {
+            dryRun,
+            written: [] as { rule: string; field: string; before: string | number | null; after: string | number | null }[],
+            alreadyCorrect: [] as string[],
+            changedSince: [] as { rule: string; field: string; now: string | number | null }[],
+            notFound: [] as string[],
+        };
+        for (const entry of args.entries) {
+            const label = `${entry.bottleName} ${entry.threadSize}`;
+            const rows = (await ctx.db.query("fitments").withIndex("by_bottleName", q => q.eq("bottleName", entry.bottleName)).take(10))
+                .filter(row => row.threadSize === entry.threadSize);
+            if (rows.length !== 1) { out.notFound.push(label); continue; }
+            const row = rows[0];
+            const markers = { ...((row.components ?? {}) as Record<string, string>) };
+            const write: { capacityMl?: number | null; components?: Record<string, string> } = {};
+            const changes: { field: string; before: string | number | null; after: string | number | null }[] = [];
+            if ("capacityMl" in entry.patch) {
+                const now = row.capacityMl ?? null, target = entry.patch.capacityMl ?? null;
+                if (now === target) out.alreadyCorrect.push(`${label}.capacityMl`);
+                else if (!("capacityMl" in entry.expect) || now !== (entry.expect.capacityMl ?? null)) out.changedSince.push({ rule: label, field: "capacityMl", now });
+                else { write.capacityMl = target; changes.push({ field: "capacityMl", before: now, after: target }); }
+            }
+            for (const [marker, target] of Object.entries(entry.patch.components ?? {})) {
+                const now = markers[marker] ?? null;
+                const field = `components.${marker}`;
+                if (now === target) { out.alreadyCorrect.push(`${label}.${field}`); continue; }
+                const expected = entry.expect.components?.[marker];
+                if (expected === undefined || now !== expected) { out.changedSince.push({ rule: label, field, now }); continue; }
+                markers[marker] = target;
+                write.components = markers;
+                changes.push({ field, before: now, after: target });
+            }
+            for (const change of changes) {
+                out.written.push({ rule: label, ...change });
+                if (!dryRun) await logChange(ctx, { targetType: "fitment", targetId: String(row._id), label, field: change.field, before: change.before, after: change.after, at, reason: args.reason });
+            }
+            if (!dryRun && changes.length) await ctx.db.patch(row._id, write);
         }
         return out;
     },
