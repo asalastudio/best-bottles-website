@@ -96,18 +96,27 @@ export function placeLayer<L extends LayerGeometry>(layer: L, frame: Frame, zInd
 }
 
 /**
- * Draw order: behind-body layers (explodeIndex ascending), the plate, front layers (explodeIndex descending) with
- * the overcap moved over the mechanism it covers and under the collar (a one-piece sprayer has no collar layer, so
- * its overcap draws last and hides it, as the 13-415 metal overcaps do).
+ * Parts that belong to the glass, not to the closure: a decorative band on the shoulder, under the closure's collar
+ * (the Diva 46 jeweled rings, 2026-10-01). Each stands where its anchor puts it on the plate, as photographed: never
+ * lifted clear of the shoulder or lowered with the closure, never measured as the closure's reach, and drawn on the
+ * glass before every other front layer, so the collar sits over it.
+ */
+export const BODY_FIXED_SLOTS: ReadonlySet<string> = new Set(["ring"]);
+
+/**
+ * Draw order: behind-body layers (explodeIndex ascending), the plate, the parts fixed to the glass, then the other
+ * front layers (explodeIndex descending) with the overcap moved over the mechanism it covers and under the collar (a
+ * one-piece sprayer has no collar layer, so its overcap draws last and hides it, as the 13-415 metal overcaps do).
  */
 export function orderLayers<L extends LayerGeometry>(layers: readonly L[]): { behind: L[]; front: L[] } {
     const behind = layers.filter((layer) => layer.z === "behind-body").sort((a, b) => a.explodeIndex - b.explodeIndex);
-    const sorted = layers.filter((layer) => layer.z !== "behind-body").sort((a, b) => b.explodeIndex - a.explodeIndex);
+    const onGlass = layers.filter((layer) => layer.z !== "behind-body" && BODY_FIXED_SLOTS.has(layer.slot));
+    const sorted = layers.filter((layer) => layer.z !== "behind-body" && !BODY_FIXED_SLOTS.has(layer.slot)).sort((a, b) => b.explodeIndex - a.explodeIndex);
     const overcaps = sorted.filter((layer) => layer.slot === "overcap");
     const rest = sorted.filter((layer) => layer.slot !== "overcap");
     const at = rest.findIndex((layer) => layer.slot === "collar");
     const front = at < 0 ? [...rest, ...overcaps] : [...rest.slice(0, at), ...overcaps, ...rest.slice(at)];
-    return { behind, front };
+    return { behind, front: [...onGlass, ...front] };
 }
 
 /**
@@ -123,7 +132,7 @@ export function shoulderLiftMm(plate: PlateGeometry, layers: readonly LayerGeome
     const clearanceMm = (shoulder - plate.anchors.seatY) / plate.pxPerMm;
     let reachMm = -Infinity;
     for (const layer of layers) {
-        if (layer.z === "behind-body" || layer.usage === "exploded" || layer.solidBottomY == null) continue;
+        if (layer.z === "behind-body" || layer.usage === "exploded" || layer.solidBottomY == null || BODY_FIXED_SLOTS.has(layer.slot)) continue;
         reachMm = Math.max(reachMm, (layer.solidBottomY - layer.anchor.y) / layer.pxPerMm);
     }
     return reachMm > clearanceMm ? reachMm - clearanceMm : 0;
@@ -134,13 +143,13 @@ export const SEAT_FIXED_SLOTS: ReadonlySet<string> = new Set(["roller", "diptube
 
 /** A layer that travels with the closure when it is seated down onto the shoulder: the cap, overcap, collar, pump or dropper head. */
 export function isSeatedClosureLayer(layer: LayerGeometry): boolean {
-    return layer.z !== "behind-body" && layer.usage !== "exploded" && !SEAT_FIXED_SLOTS.has(layer.slot);
+    return layer.z !== "behind-body" && layer.usage !== "exploded" && !SEAT_FIXED_SLOTS.has(layer.slot) && !BODY_FIXED_SLOTS.has(layer.slot);
 }
 
 /**
  * Everything the canvas draws, in draw order. The front layers are lifted clear of the shoulder (shoulderLiftMm);
  * `closureDropMm` then lowers the closure itself (isSeatedClosureLayer) until its edge rests on the shoulder
- * (seat-drops.ts; Jordan 2026-09-30). Inserts and dip tubes keep their place in the neck.
+ * (seat-drops.ts; Jordan 2026-09-30). Inserts and dip tubes keep their place in the neck; a ring stays on the glass.
  */
 export function compose<P extends PlateGeometry, L extends LayerGeometry>(
     plate: P,
@@ -155,7 +164,10 @@ export function compose<P extends PlateGeometry, L extends LayerGeometry>(
     let z = 0;
     for (const layer of behind) out.push(placeLayer(layer, frame, z++));
     out.push(placePlate(plate, frame, z++));
-    for (const layer of front) out.push(placeLayer(layer, frame, z++, isSeatedClosureLayer(layer) ? liftPx - dropPx : liftPx));
+    for (const layer of front) {
+        const lift = BODY_FIXED_SLOTS.has(layer.slot) ? 0 : isSeatedClosureLayer(layer) ? liftPx - dropPx : liftPx;
+        out.push(placeLayer(layer, frame, z++, lift));
+    }
     return out;
 }
 

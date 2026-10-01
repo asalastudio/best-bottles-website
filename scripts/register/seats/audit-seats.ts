@@ -32,7 +32,7 @@ import { ConvexHttpClient } from "convex/browser";
 import { anyApi } from "convex/server";
 import { drawableRegisterKits } from "../../../src/lib/register/load";
 import type { RegisterKit, RegisterStagePayload } from "../../../src/lib/register/stage-kit";
-import { SEAT_FIXED_SLOTS } from "../../../src/lib/register/compose";
+import { BODY_FIXED_SLOTS, SEAT_FIXED_SLOTS } from "../../../src/lib/register/compose";
 import { setSeatDropsEnabled } from "../../../src/lib/register/seat-drops";
 import { parseBuildParts, readRegister } from "../registerRows";
 
@@ -102,7 +102,8 @@ async function measure(kit: RegisterKit, platePxPerMm: number): Promise<SeatMeas
     const parts = [...kit.parts].filter((p) => !p.views || p.views.includes("capon")).sort((a, b) => a.zOrder - b.zOrder);
     const body = parts.find((p) => p.slot === "body");
     if (!body) return null;
-    const closure = parts.filter((p) => p.zOrder > body.zOrder && !SEAT_FIXED_SLOTS.has(p.slot) && !(p as { detached?: unknown }).detached);
+    // A ring on the glass (BODY_FIXED_SLOTS) is not the closure: the gap is the one under the closure's own edge.
+    const closure = parts.filter((p) => p.zOrder > body.zOrder && !SEAT_FIXED_SLOTS.has(p.slot) && !BODY_FIXED_SLOTS.has(p.slot) && !(p as { detached?: unknown }).detached);
     if (!closure.length) return null;
     // the frame's own scale: an Elegant photographed body is drawn at a different image scale than its plate
     const pxmm = kit.anchors.pxPerMm ?? (body.box.width / body.image.width) * platePxPerMm;

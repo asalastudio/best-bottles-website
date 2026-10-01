@@ -24,7 +24,7 @@ import { heroTube, type HeroTubeLayer } from "./dip-tubes";
 
 export type StageDatum = { axisX: number; seatY: number; baselineY: number };
 /** The slots a kit part can occupy (convex/productKits.ts and the register's registerSlotV agree). */
-export type KitSlot = "body" | "fitment" | "roller" | "cap" | "overcap" | "sprayer" | "pump" | "diptube" | "collar" | "bulb" | "tassel" | "reducer" | "pipette";
+export type KitSlot = "body" | "fitment" | "roller" | "cap" | "overcap" | "sprayer" | "pump" | "diptube" | "collar" | "bulb" | "tassel" | "reducer" | "pipette" | "ring";
 export type PartBox = { x: number; y: number; width: number; height: number };
 export type Bounds = { left: number; top: number; right: number; bottom: number };
 

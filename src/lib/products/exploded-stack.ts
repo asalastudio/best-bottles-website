@@ -1,3 +1,5 @@
+import { BODY_FIXED_SLOTS } from "../register/compose";
+
 /**
  * EXPLODED view: every part lifts straight up and stacks above the glass in
  * assembly order, one gap apart. A physical part is one unit: a sprayer or
@@ -8,7 +10,8 @@
  *
  * Shared by the register kits (src/lib/register/stage-kit.ts) and the
  * published kits (src/lib/products/pdp-redesign/stage.ts), so both stages
- * explode the same way.
+ * explode the same way. A part fixed to the glass (a Diva 46 jeweled ring)
+ * stays on it with the body.
  */
 export type ExplodablePart = {
     slot: string;
@@ -36,8 +39,9 @@ export function stackedExplodeOffsets(parts: readonly ExplodablePart[], gap = EX
     const body = parts.find((part) => part.slot === "body");
     const glassTop = body ? body.bounds.top : Math.min(...parts.map((part) => part.bounds.top));
     const units = new Map<string, { explodeIndex: number; top: number; bottom: number; indexes: number[] }>();
+    const staysOnGlass = (part: ExplodablePart) => part.slot === "body" || BODY_FIXED_SLOTS.has(part.slot);
     parts.forEach((part, index) => {
-        if (part.slot === "body") return;
+        if (staysOnGlass(part)) return;
         const key = explodeUnitKey(part);
         const unit = units.get(key);
         if (unit) {
@@ -50,7 +54,7 @@ export function stackedExplodeOffsets(parts: readonly ExplodablePart[], gap = EX
         }
     });
     const offsets = new Map<number, { dx: number; dy: number }>();
-    parts.forEach((part, index) => { if (part.slot === "body") offsets.set(index, { dx: 0, dy: 0 }); });
+    parts.forEach((part, index) => { if (staysOnGlass(part)) offsets.set(index, { dx: 0, dy: 0 }); });
     let ceiling = glassTop - gap;
     for (const unit of [...units.values()].sort((a, b) => a.explodeIndex - b.explodeIndex || b.bottom - a.bottom)) {
         const dy = Math.round((ceiling - unit.bottom) * 100) / 100;

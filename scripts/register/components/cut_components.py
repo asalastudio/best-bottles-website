@@ -46,14 +46,21 @@ BOTTLE_FOLDERS = {"18-415": PSD_ROOT / "2.  18-415 Bottles ", "13-415": PSD_ROOT
                   # the Boston Round 30 and 60 mL (2026-09-29); the folder also holds the 15 mL 18-400 masters, which no 20-400 SKU names
                   "20-400": PSD_ROOT / "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round"}
 ALPHA = 128
-# Parts another script cuts: this one skips them and keeps their entries, even on a full run.
-OWN_CUTTER = {"20-400": ({"LIB-20-400-MtlRollon", "LIB-20-400-PlsticRollon", "CMP-ROC-SBLK-20400-T"}, "scripts/register/components/cut_boston_parts.py"),
-              # the white pump under the clear overcap has no library PSD: both its layers come from its bottle photos
-              "18-415": ({"LIB-18-415-WhtPumpClOvrCp"}, "scripts/register/components/cut_white_pump.py"),
-              # the Minaret has no library PSD: bestbottles.com's photo of the copper cap, the silver regenerated from it
-              "13-415": ({"LIB-13-415-MinarCu", "LIB-13-415-MinarSl"}, "scripts/register/components/cut_minaret.py")}
+# Parts another script cuts: this one skips them and keeps their entries, even on a full run. Neck -> {componentId: script}.
+OWN_CUTTER = {
+    "20-400": dict.fromkeys(("LIB-20-400-MtlRollon", "LIB-20-400-PlsticRollon", "CMP-ROC-SBLK-20400-T"), "scripts/register/components/cut_boston_parts.py"),
+    "18-415": {
+        # the white pump under the clear overcap has no library PSD: both its layers come from its bottle photos
+        "LIB-18-415-WhtPumpClOvrCp": "scripts/register/components/cut_white_pump.py",
+        # the Diva 46 jeweled rings: each is its own layer on a Diva 46 bottle photo
+        **dict.fromkeys(("LIB-18-415-DivaRngBlk", "LIB-18-415-DivaRngIvy", "LIB-18-415-DivaRngLvn", "LIB-18-415-DivaRngRed"),
+                        "scripts/register/components/cut_diva_rings.py"),
+    },
+    # the Minaret has no library PSD: bestbottles.com's photo of the copper cap, the silver regenerated from it
+    "13-415": dict.fromkeys(("LIB-13-415-MinarCu", "LIB-13-415-MinarSl"), "scripts/register/components/cut_minaret.py"),
+}
 MIN_IOU_APPROVABLE = 0.90
-SLOT_BY_TYPE = {"roll-on-cap": "cap", "cap": "cap", "faux-leather-cap": "cap", "fine-mist-sprayer": "sprayer", "lotion-pump": "pump",
+SLOT_BY_TYPE = {"ring": "ring", "roll-on-cap": "cap", "cap": "cap", "faux-leather-cap": "cap", "fine-mist-sprayer": "sprayer", "lotion-pump": "pump",
                 "vintage-bulb-sprayer": "sprayer", "tassel-bulb-sprayer": "sprayer", "dropper": "fitment", "reducer": "reducer", "roller-insert": "roller"}
 ONE_IMAGE_TYPES = {"cap", "faux-leather-cap", "roll-on-cap"}      # a cap is one part however many layers drew it
 # Cut from the bottle photo, not the library: the dropper library files hold no pixel layers, and the
@@ -461,10 +468,10 @@ def main() -> int:
     for cid in todo:
         c = comps[cid]
         ctype = c["type"]
-        if cid in OWN_CUTTER.get(neck, (set(), ""))[0]:
-            # the Boston Round inserts sit on white masking shapes, as do their bodies, and the library's tall shiny
+        if cid in OWN_CUTTER.get(neck, {}):
+            # e.g. the Boston Round inserts sit on white masking shapes, as do their bodies, and the library's tall shiny
             # black cap is not the photographed one: cut_boston_parts.py cuts these three
-            print(f"{cid:26} {ctype:20} skipped here ({OWN_CUTTER[neck][1]})")
+            print(f"{cid:26} {ctype:20} skipped here ({OWN_CUTTER[neck][cid]})")
             continue
         primary = SLOT_BY_TYPE.get(ctype, "fitment")
         entry = {"componentId": cid, "websiteSku": c["websiteSku"], "type": ctype, "psd": f"{c['psdLibrary']}/{c['psdPath']}" if c["psdPath"] else None,
@@ -657,7 +664,7 @@ def main() -> int:
     if measure_path.exists():  # a partial run replaces only the components it processed; another script's parts always stay
         previous = json.loads(measure_path.read_text())
         done = {c["componentId"] for c in result["components"]}
-        owned = OWN_CUTTER.get(neck, (set(), ""))[0]
+        owned = set(OWN_CUTTER.get(neck, {}))
         kept = [c for c in previous.get("components", []) if c["componentId"] not in done and (only or c["componentId"] in owned)]
         result["components"] = sorted(kept + result["components"], key=lambda c: c["componentId"])
     measure_path.write_text(json.dumps(result, indent=1) + "\n")

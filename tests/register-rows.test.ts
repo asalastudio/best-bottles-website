@@ -47,12 +47,28 @@ describe("the committed register shapes cleanly for Convex", () => {
     it("registers the library parts as non-sellable components keyed LIB-<neck>-<name>", () => {
         const parts = rows.components.filter(c => c.componentId.startsWith("LIB-"));
         expect(parts.map(p => p.componentId).sort()).toEqual([
-            "LIB-13-415-MinarCu", "LIB-13-415-MinarSl", "LIB-13-415-MtlRollon", "LIB-13-415-PlsticRollon", "LIB-14.3mm-Plug", "LIB-17-415-MtlRollon", "LIB-17-415-PlsticRollon", "LIB-18-415-Reducer",
+            "LIB-13-415-MinarCu", "LIB-13-415-MinarSl", "LIB-13-415-MtlRollon", "LIB-13-415-PlsticRollon", "LIB-14.3mm-Plug", "LIB-17-415-MtlRollon", "LIB-17-415-PlsticRollon",
+            "LIB-18-415-DivaRngBlk", "LIB-18-415-DivaRngIvy", "LIB-18-415-DivaRngLvn", "LIB-18-415-DivaRngRed", "LIB-18-415-Reducer",
             "LIB-18-415-ShnBlkCap", "LIB-18-415-WhtPumpClOvrCp", "LIB-20-400-MtlRollon", "LIB-20-400-PlsticRollon",
         ]);
         for (const part of parts) {
             expect(part.sellable).toBe(false);
             expect(part.graceSku).toBeNull();
+        }
+    });
+
+    it("builds every Diva 46 ring bulb sprayer from its bulb and its jeweled ring (checklist 9b)", () => {
+        const rings = rows.assemblies.filter(a => /^GBDiva46AnSp(Tsl)?\w+Rng$/.test(a.websiteSku ?? ""));
+        expect(rings).toHaveLength(10);
+        const stones: Record<string, string> = { Blk: "Blk", IvySl: "Ivy", Wht: "Ivy", Lvn: "Lvn", Red: "Red" };
+        for (const assembly of rings) {
+            const bulb = /AnSp(?:Tsl)?(\w+)Rng$/.exec(assembly.websiteSku!)![1];
+            expect(assembly.build.status, assembly.websiteSku!).toBe("resolved");
+            expect(assembly.build.parts.map(p => p.role)).toEqual(["sprayer", "ring"]);
+            expect(assembly.build.parts[1].componentId).toBe(`LIB-18-415-DivaRng${stones[bulb]}`);
+            // the bulb is the one its plain-bulb sibling builds from
+            const sibling = rows.assemblies.find(a => a.websiteSku === assembly.websiteSku!.replace(/Rng$/, ""));
+            if (sibling) expect(assembly.build.parts[0]).toEqual(sibling.build.parts[0]);
         }
     });
 

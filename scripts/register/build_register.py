@@ -128,7 +128,21 @@ LIBRARY_PARTS = [
      "itemName": "Shiny silver Minaret cap, 13-415",
      "evidence": "library part, not a product: the cap of the five shiny silver Minaret SKUs (Jordan, checklist 7a, 2026-10-01)",
      "source": "gpt-image-2.5-sunburst edit of LIB-13-415-MinarCu, geometry locked (cut_minaret.py)"},
+    # The Diva 46 jeweled rings (2026-10-01, Build Your Bottle checklist 9b): an ornate silver band set with coloured stones
+    # that sits on the glass's shoulder under the bulb sprayer's collar. Ten Diva 46 bulb sprayers are sold with one (the
+    # ...Rng SKUs) and it is not sold loose. The master library photographs each ring bottle with the ring on its own
+    # layer (60.-69. GBDiva46AnSp...Rng.psd); scripts/register/components/cut_diva_rings.py cuts them. The white bulb's
+    # ring is the ivory one (clear stones): the two photos' ring layers are the same pixels.
+    *[{"componentId": f"LIB-18-415-DivaRng{code}", "type": "ring", "neck": "18-415", "rollerMaterial": "", "psdStem": None,
+       "itemName": f"Diva 46 jeweled ring, {stones} stones",
+       "evidence": f"library part, not a product: the ring of the Diva 46 {stones}-stone ring bulb sprayers (Jordan, checklist 9b, 2026-10-01)",
+       "source": f"BB-PSD-Files-Master Diva (Clear) 46ml PSD, {psd} (cut_diva_rings.py)"}
+      for code, stones, psd in (("Blk", "black", "60. GBDiva46AnSpBlkBlkRng.psd"), ("Ivy", "clear", "62. GBDiva46AnSpIvySlIvyRng.psd"),
+                                ("Lvn", "lavender", "66. GBDiva46AnSpLvnLvnRng.psd"), ("Red", "red", "68. GBDiva46AnSpRedRedRng.psd"))],
 ]
+# A ring bulb sprayer's SKU spells its bulb, then "Rng": the bulb's own code names the ring's stones.
+DIVA_RING_18415 = {"Blk": "LIB-18-415-DivaRngBlk", "IvySl": "LIB-18-415-DivaRngIvy", "Wht": "LIB-18-415-DivaRngIvy",
+                   "Lvn": "LIB-18-415-DivaRngLvn", "Red": "LIB-18-415-DivaRngRed"}
 WHITE_PUMP = "LIB-18-415-WhtPumpClOvrCp"
 
 # Short caps with liner, 13-415: (componentId, website SKU, finish, colour). See the component loop in build().
@@ -189,6 +203,12 @@ def own_build_18415(assembly: dict, by_neck_type: dict) -> tuple[str, str, str]:
         if at < 0:
             continue
         code = sku[at + len(token):]
+        ring = None
+        if token in ("AnSpTsl", "AnSp") and code.endswith("Rng"):
+            code = code[:-len("Rng")]
+            ring = DIVA_RING_18415.get(code)
+            if not ring or not any(c["componentId"] == ring for c in by_neck_type.get(("18-415", "ring"), [])):
+                return "", "unresolved", f"no Diva jeweled ring is registered for the bulb code '{code}'"
         pool = [c for t in ctypes for c in by_neck_type.get(("18-415", t), [])]
         matches = []
         for c in pool:
@@ -201,6 +221,9 @@ def own_build_18415(assembly: dict, by_neck_type: dict) -> tuple[str, str, str]:
                 matches.append(c)
         if len(matches) == 1:
             note = " (the orifice reducer sits under the cap; the closure stays assembled)" if token == "Rdcr" else ""
+            if ring:
+                return (f"{slot}:{matches[0]['componentId']}; ring:{ring}", "resolved",
+                        f"own {matches[0]['type']} matched by SKU code '{code}', with its jeweled ring on the shoulder (a library part)")
             return f"{slot}:{matches[0]['componentId']}", "resolved", f"own {matches[0]['type']} matched by SKU code '{code}'{note}"
         if len(matches) > 1:
             return "", "unresolved", f"SKU code '{code}' matches {len(matches)} components: " + ", ".join(c["componentId"] for c in matches)

@@ -94,6 +94,21 @@ describe("register compose: placement", () => {
         for (const fixed of [tube, plug, roller]) expect(at(lowered, fixed)).toBeCloseTo(at(seated, fixed), 6);
     });
 
+    it("keeps a ring on the glass: drawn first in front of it, never lifted, lowered or counted as the closure's reach (Diva 46, 2026-10-01)", () => {
+        const shouldered: PlateGeometry = { ...plate, anchors: { ...plate.anchors, shoulderY: plate.anchors.seatY + 13 * plate.pxPerMm } };
+        const deep: LayerGeometry = { ...cap, slot: "sprayer", pxPerMm: 10, anchor: { x: cap.anchor.x, y: 50 }, solidBottomY: 200 };   // 2 mm past the shoulder
+        // the band reaches 30 mm under the rim, far past the shoulder, and must not lift the sprayer further
+        const ring: LayerGeometry = { slot: "ring", z: "front", explodeIndex: 0, width: 660, height: 170, pxPerMm: 10, anchor: { x: 330, y: -200 }, solidBottomY: 160 };
+        expect(shoulderLiftMm(shouldered, [deep, ring])).toBeCloseTo(shoulderLiftMm(shouldered, [deep]), 6);
+        expect(orderLayers([deep, ring]).front.map((l) => l.slot)).toEqual(["ring", "sprayer"]);
+        const at = (placed: ReturnType<typeof compose>, layer: LayerGeometry) => placed.find((p) => p.source === layer)!;
+        for (const placed of [compose(shouldered, [deep, ring], frame), compose(shouldered, [deep, ring], frame, { closureDropMm: 1.5 })]) {
+            const r = at(placed, ring);
+            expect(r.y + ring.anchor.y * r.scale).toBeCloseTo(frame.seatY, 6);   // exactly where the photo puts it
+            expect(r.zIndex).toBeLessThan(at(placed, deep).zIndex);
+        }
+    });
+
     it("expresses a placement as percentages of the stage box", () => {
         const style = placementStyle(placePlate(plate, frame, 0), frame);
         expect(style.position).toBe("absolute");

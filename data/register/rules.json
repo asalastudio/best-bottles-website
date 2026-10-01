@@ -294,7 +294,7 @@
     "18-415": {
       "kind": "thread",
       "bodies": 23,
-      "components": 50,
+      "components": 54,
       "componentTypes": {
         "cap": 7,
         "dropper": 3,
@@ -302,6 +302,7 @@
         "fine-mist-sprayer": 8,
         "lotion-pump": 8,
         "reducer": 1,
+        "ring": 4,
         "tassel-bulb-sprayer": 9,
         "vintage-bulb-sprayer": 9
       },
