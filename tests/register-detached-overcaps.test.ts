@@ -23,3 +23,22 @@ describe("detached overcaps: the 9 mL Cylinder 17-415 clear cover (Jordan 2026-0
         expect(detachedOvercap({ ...part, image: { ...part.image, url: "https://blob/overcap-0000.png" } })).toBeNull();
     });
 });
+
+describe("detached overcaps: the white rectangular pump's clear cover (checklist 6a, 2026-10-01)", () => {
+    const entry = DETACHED_OVERCAPS["LIB-18-415-WhtPumpClOvrCp"];
+
+    it("parks an empty cover of its own, served at the size the entry records", async () => {
+        const sharp = (await import("sharp")).default;
+        const meta = await sharp(`public${entry.url}`).metadata();
+        expect([meta.width, meta.height]).toEqual([entry.width, entry.height]);
+    });
+
+    it("stands it where the seated cover stands, at the seated cover's width", () => {
+        const part = { slot: "overcap", componentId: "LIB-18-415-WhtPumpClOvrCp", image: { url: `https://blob/overcap-${entry.seatedLayerSha256}.png`, width: 379 }, box: { x: 376.5, y: -56.9, width: 251, height: 306 } };
+        const look = detachedOvercap(part)!;
+        expect(look.image.url).toBe(entry.url);
+        const coverWidthOnStage = look.box.width * (entry.coverWidth / entry.width);
+        expect(coverWidthOnStage).toBeCloseTo(251 * (entry.seatedCoverWidth / 379), 1);
+        expect(look.box.y + look.box.height).toBeCloseTo(-56.9 + 306, 1);
+    });
+});

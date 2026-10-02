@@ -3,6 +3,8 @@
 The tube's centre line is traced as one smooth path (dynamic programming over the hero-vs-plate difference) from
 just under the collar to where the tube ends; each row keeps the connected band around the path (the wide shaft
 under the collar, then the tube). Inside the band the layer is the hero's own pixels, fully opaque.
+
+A master library photograph that keeps the tube on its own layer needs no tracing: cut_layer() takes that layer.
 """
 import numpy as np
 from scipy import ndimage
@@ -113,3 +115,42 @@ def cut(plate, warped, anchors, px_per_mm, floor_y):
             "endMmAboveFoot": round((base - end) / px_per_mm, 1), "floorMmAboveFoot": round((base - floor_y) / px_per_mm, 1),
             "noise": round(noise, 1)}
     return layer[y0:y1_, x0_:x1_], info
+
+
+def cut_layer(layer, anchors, px_per_mm, floor_y):
+    """The tube from a master photograph that keeps it on its own layer (the retoucher's cut-out), warped onto the plate.
+    Tracing it against the glass broke it into dashes where the Empire's thick walls refract (Jordan 2026-10-01: "make
+    sure dip tube is properly visible"); the layer is whole. Only what cut() adds is added: rows past the glass's inner
+    floor go, and the shaft's first clean rows are carried up to the neck's seat, so any collar sits on it."""
+    layer = layer.astype(float).copy()
+    seat, base = int(anchors["seatY"]), int(anchors["baselineY"])
+    layer[min(int(floor_y + 1.5 * px_per_mm), base):, :, 3] = 0
+    alpha = layer[..., 3]
+    rows = np.where((alpha > 5).any(axis=1))[0]
+    if rows.size == 0:
+        return None, "the tube layer does not reach the plate"
+    top, end = int(rows.min()), int(rows.max())
+    widths = (alpha > 128).sum(axis=1).astype(float)
+    solid = widths[top:end + 1] > 0
+    if solid.sum() < 10:
+        return None, "the tube layer is too faint"
+    tube_w = float(np.median(widths[top:end + 1][solid][int(0.5 * solid.sum()):]))
+    shaft_end = top
+    for y in range(top, min(end, top + int(25 * px_per_mm)) + 1):
+        if widths[y] > 1.6 * tube_w:
+            shaft_end = y
+    first = top + int(1.0 * px_per_mm)
+    run = alpha[first] > 128
+    if run.any():
+        xs = np.where(run)[0]
+        a, b = xs.min(), xs.max() + 1
+        profile = layer[first, a:b].copy()
+        for y in range(seat, first):
+            layer[y] = 0
+            layer[y, a:b] = profile
+    yy, xx = np.where(layer[..., 3] > 5)
+    y0, y1, x0, x1 = yy.min(), yy.max() + 1, xx.min(), xx.max() + 1
+    info = {"collarBottomY": top, "shaftEndY": int(shaft_end), "tubeEndY": end, "bbox": [int(x0), int(y0), int(x1 - x0), int(y1 - y0)],
+            "endMmAboveFoot": round((base - end) / px_per_mm, 1), "floorMmAboveFoot": round((base - floor_y) / px_per_mm, 1),
+            "noise": None}
+    return layer[y0:y1, x0:x1].clip(0, 255).astype(np.uint8), info
