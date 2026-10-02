@@ -8,16 +8,16 @@ Scope: the approved minimum/CTA/navigation clarification only. Stacked on PR #34
 - Both cart surfaces show the remaining amount, minimum and **checkout-ready** subtotal directly beside Checkout. The button references the live, atomic status notice with `aria-describedby`.
 - Quote-only value is explicitly excluded. Currency amounts use the existing `RegionProvider` formatter; converted estimates explain the fixed $50 USD minimum and USD checkout.
 - The drawer's quieter Continue shopping button closes it, preserving the current route and focus behavior. Continue building appears only on the actual matrix page.
-- Cart-page return links preserve the last browsing path/query in tab-scoped session storage. Only known internal shopping routes pass validation, including localized paths. External/auth/API/cart paths, control characters and encoded path tricks are rejected. Missing/unavailable storage falls back to `/catalog` (localized when applicable). No browser-history back redirect is used.
+- Cart-page return links preserve the last browsing path and allowlisted structured browsing parameters in tab-scoped session storage. Free-text search, nested `from` URLs, unknown/auth/tracking parameters, unsafe parameter values, and all fragments are omitted. Existing stored returns are sanitized on tracker mount; hash-only changes intentionally have no effect. Only known internal shopping routes pass validation, including localized paths. External/auth/API/cart paths, control characters and encoded path tricks are rejected. Missing/unavailable storage falls back to `/catalog` (localized when applicable). No browser-history back redirect is used.
 - A small scroll-containment change keeps the drawer footer reachable on short mobile screens with long quote/currency explanations.
 
 ## Validation
 
 - Full suite: **303 files passed, 2 skipped; 2,766 tests passed, 7 skipped**.
-- Focused tests: **71 passed**, including PR #348 cart recovery, minimum, readiness and existing wholesale fallback tests.
+- Focused tests after return-URL hardening: **82 passed**, including PR #348 cart recovery, minimum, readiness and existing wholesale fallback tests.
 - Changed-file lint: clean. Full lint: **0 errors, 87 existing warnings**.
 - Browser component fixture: 390×844 and 320×568; disabled minimum explanation, quote/currency state, scrollable footer, Continue shopping close, and keyboard focus wrap checked. Fixture stubs cart services and site chrome; it is not a live/authenticated Shopify checkout test.
-- Full typecheck/build results are recorded in the PR once complete. On the user's machine, default TypeScript resolution stalled reading unrelated iCloud-backed parent `Documents/node_modules`; a separate `/tmp` validation copy avoids that unrelated dependency tree.
+- Exact-head CI/build results are recorded in the PR; historical results for d8081126 do not establish results for a later head. On the user's machine, default TypeScript resolution stalled reading unrelated iCloud-backed parent `Documents/node_modules`; a separate `/tmp` validation copy avoids that unrelated dependency tree.
 
 ## Explicit dependencies and limits
 

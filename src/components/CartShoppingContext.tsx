@@ -26,10 +26,15 @@ export function CartShoppingTracker() {
     const pathname = usePathname();
     const searchParams = useSearchParams();
     useEffect(() => {
-        const path = validateShoppingReturn(`${pathname}${searchParams.size ? `?${searchParams}` : ""}${window.location.hash}`);
-        if (!path) return;
         try {
-            window.sessionStorage.setItem(CART_SHOPPING_RETURN_KEY, path);
+            const stored = window.sessionStorage.getItem(CART_SHOPPING_RETURN_KEY);
+            // Hash-only changes intentionally have no effect: fragments are never
+            // recorded, and legacy stored queries/fragments are sanitized here.
+            const path = validateShoppingReturn(`${pathname}${searchParams.size ? `?${searchParams}` : ""}`)
+                ?? validateShoppingReturn(stored);
+            if (path === stored) return;
+            if (path) window.sessionStorage.setItem(CART_SHOPPING_RETURN_KEY, path);
+            else window.sessionStorage.removeItem(CART_SHOPPING_RETURN_KEY);
             window.dispatchEvent(new Event(CHANGE_EVENT));
         } catch {
             // Storage may be unavailable; the cart still offers the catalog fallback.

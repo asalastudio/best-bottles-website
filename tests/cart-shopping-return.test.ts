@@ -3,10 +3,12 @@ import { isBuilderShoppingPath, validateShoppingReturn } from "@/lib/cartShoppin
 
 describe("safe cart shopping destinations", () => {
     it.each([
-        "/catalog?category=Component&search=13-415#results",
+        "/catalog?category=Component&threads=13-415",
         "/products/elegant-15ml-clear-13-415?cap=silver",
         "/matrix?family=Elegant",
-        "/es/catalog?search=botella",
+        "/es/catalog?category=Component",
+        "/catalog/cylinder?colors=Cobalt",
+        "/es/catalog/application/essential-oils?capacities=15+ml",
         "/es/matrix?family=Elegant",
         "/bottle-families",
         "/collections/boston-round-30ml",
@@ -18,6 +20,41 @@ describe("safe cart shopping destinations", () => {
         "/cart", "/es/cart", "/api/redirect?url=https://evil.example", "/sign-in?redirect_url=https://evil.example",
         "/portal", "/matrix-evil", "/products", "/products/%ZZ", "/products/%5c", "/catalog/%252e%252e/sign-in",
     ])("rejects non-browsing or unsafe path %s", path => expect(validateShoppingReturn(path)).toBeNull());
+
+    it("preserves actual SKU/cap/roller picks, builder family/shop and catalog filters", () => {
+        expect(validateShoppingReturn("/products/elegant?sku=GB-ELG-CLR-15ML-SLV-T-01&cap=silver&roller=metal&qty=100&applicator=Metal+Roller+Ball"))
+            .toBe("/products/elegant?sku=GB-ELG-CLR-15ML-SLV-T-01&cap=silver&roller=metal&qty=100&applicator=Metal+Roller+Ball");
+        expect(validateShoppingReturn("/es/matrix?family=Boston+Round&shop=roll-on-bottles&from=grace"))
+            .toBe("/es/matrix?family=Boston+Round&shop=roll-on-bottles");
+        const result = new URL(validateShoppingReturn("/catalog?category=Glass+Bottle&families=Cylinder,Elegant&colors=Clear&colors=Cobalt&capacities=15+ml&threads=13-415&priceMin=1.25&priceMax=10&sort=capacity-asc&view=line&scope=all")!, "https://example.test");
+        expect(result.searchParams.get("families")).toBe("Cylinder,Elegant");
+        expect(result.searchParams.getAll("colors")).toEqual(["Clear", "Cobalt"]);
+        expect(result.searchParams.get("capacities")).toBe("15 ml");
+        expect(result.searchParams.get("threads")).toBe("13-415");
+        expect(result.searchParams.get("priceMin")).toBe("1.25");
+        expect(result.searchParams.get("sort")).toBe("capacity-asc");
+        expect(result.searchParams.get("view")).toBe("line");
+    });
+
+    it("drops auth, personal, unknown and nested URL fields plus all fragments", () => {
+        expect(validateShoppingReturn("/products/elegant?cap=silver&token=secret&access_token=secret&code=secret&auth=secret&email=buyer%40example.test&customer_id=123&note=private&from=%2Fcatalog%3Ftoken%3Dsecret#access_token=secret"))
+            .toBe("/products/elegant?cap=silver");
+        expect(validateShoppingReturn("/catalog?category=Component&search=buyer%40example.test&utm_source=private#results"))
+            .toBe("/catalog?category=Component");
+        expect(validateShoppingReturn("/catalog?search=13-415#filters")).toBe("/catalog");
+        expect(validateShoppingReturn("/collections?sku=PRIVATE#private")).toBe("/collections");
+    });
+
+    it.each(["buyer%40example.test", "https%3A%2F%2Fprivate.test", "%2540private", "%0Asecret", "%3Cscript%3E"])("drops unsafe content inside allowlisted values: %s", value => {
+        expect(validateShoppingReturn(`/products/elegant?sku=${value}&cap=silver`)).toBe("/products/elegant?cap=silver");
+        expect(validateShoppingReturn(`/matrix?family=${value}`)).toBe("/matrix");
+    });
+
+    it("validates bounded numeric values and does not propagate unrelated route parameters", () => {
+        expect(validateShoppingReturn("/products/elegant?qty=-1&priceMin=2&family=Elegant&sku=VALID&sku=OTHER")).toBe("/products/elegant?sku=VALID");
+        expect(validateShoppingReturn("/catalog?priceMin=NaN&priceMax=-2&view=private&scope=private")).toBe("/catalog");
+        expect(validateShoppingReturn(`/products/elegant?sku=${"a".repeat(81)}`)).toBe("/products/elegant");
+    });
 
     it("only names the actual matrix route as a builder", () => {
         expect(isBuilderShoppingPath("/es/matrix?family=Elegant")).toBe(true);
