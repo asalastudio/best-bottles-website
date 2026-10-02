@@ -49,11 +49,10 @@ describe("Grace refine facets applied to Grace's own search rows", () => {
     });
 
     it("expands a capacity range the way the catalogue does", () => {
-        const facets = activeRefineFacets({ ...EMPTY_FILTERS, capacities: ["6-15"] });
+        const facets = activeRefineFacets({ ...EMPTY_FILTERS, capacities: ["6-15ml"] });
         // Whatever the range key expands to, both 9 ml and 10 ml rows must survive it.
-        if (facets && facets.capacityMls.length > 0) {
-            expect(rows.filter((row) => rowMatchesRefineFacets(row, facets))).toHaveLength(rows.length);
-        }
+        expect(facets).not.toBeNull();
+        expect(rows.filter((row) => rowMatchesRefineFacets(row, facets!))).toHaveLength(rows.length);
     });
 
     it("reports how many rows the active facets excluded, so the gateway can say so", () => {
@@ -70,5 +69,24 @@ describe("Grace refine facets applied to Grace's own search rows", () => {
         const facets = activeRefineFacets({ ...EMPTY_FILTERS, applicators: ["capclosure"] })!;
         // "N/A" is not a closure applicator value; the row must not match.
         expect(rowMatchesRefineFacets(rows[4], facets)).toBe(false);
+    });
+});
+
+
+describe("shared catalogue Specialty semantics", () => {
+    it("keeps 16mm Cylinder and excludes Elegant 13-415, Ground and missing necks", () => {
+        const candidates = [
+            { ...rows[0], graceSku: "elegant", neckThreadSize: "13-415" },
+            { ...rows[0], graceSku: "cylinder", family: "Cylinder", capacityMl: 28, neckThreadSize: "16mm" },
+            { ...rows[0], graceSku: "ground", neckThreadSize: "Ground" },
+            { ...rows[0], graceSku: "missing", neckThreadSize: null },
+        ];
+        expect(applyRefineFacets(candidates, { neckThreadSizes: ["specialty"] }).rows.map((r) => r.graceSku)).toEqual(["cylinder"]);
+        expect(applyRefineFacets(candidates, { neckThreadSizes: ["specialty", "13-415"] }).rows.map((r) => r.graceSku)).toEqual(["elegant", "cylinder"]);
+        expect(applyRefineFacets(candidates, { neckThreadSizes: ["ground"] }).rows.map((r) => r.graceSku)).toEqual(["ground"]);
+    });
+    it("evaluates range boundaries directly, including sizes absent from preset expansion", () => {
+        const candidates = [5, 5.5, 6, 9, 15, 15.1, 16].map((capacityMl) => ({ capacityMl }));
+        expect(applyRefineFacets(candidates, { capacities: ["6-15ml"] }).rows.map((r) => r.capacityMl)).toEqual([5.5, 6, 9, 15]);
     });
 });

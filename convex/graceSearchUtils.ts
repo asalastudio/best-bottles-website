@@ -1,4 +1,4 @@
-import { detectCanonicalGlassColor, detectCatalogFamily } from "../src/lib/catalogFilters";
+import { canonicalGlassColor, detectCapFinish, detectCanonicalGlassColor, detectCatalogFamily } from "../src/lib/catalogFilters";
 /**
  * Grace AI — Search utilities for catalog queries.
  *
@@ -118,6 +118,46 @@ export function normalizeApplicatorValue(value: string | null | undefined): stri
     if (!value) return null;
     const normalized = APPLICATOR_VALUE_ALIASES[value.trim().toLowerCase()];
     return normalized ?? value.trim();
+}
+
+/** Parse one millilitre amount without truncating decimal sizes (3.3ml, 1.5ml). */
+export function detectCapacityMl(term: string): number | null {
+    const match = term.match(/\b(\d+(?:\.\d+)?)\s*ml\b/i);
+    return match ? Number(match[1]) : null;
+}
+
+/** Hard variant requirements must hold for every retrieval and coverage source. */
+export function catalogVariantMatcher(input: {
+    searchTerm: string;
+    familyLimit?: string;
+    applicatorFilter?: string;
+}) {
+    const term = normalizeSearchTerm(input.searchTerm);
+    // Bind material to the roller, not to a nearby metal cap or bottle shell.
+    const materialMatch = term.match(/\b(metal|plastic)(?:\s+(?:and|or)\s+(metal|plastic))?\s+roller(?:s|\s*balls?)?\b/i);
+    const materials = materialMatch ? new Set([materialMatch[1], materialMatch[2]].filter(Boolean)) : null;
+    const allowed = input.applicatorFilter
+        ? new Set(input.applicatorFilter.split(",").map(normalizeApplicatorValue).filter(Boolean).map((v) => v!.toLowerCase()))
+        : null;
+    const namedFamily = detectCatalogFamily(term);
+    const namedColor = detectCatalogColor(term);
+    const namedCapacity = detectCapacityMl(term);
+    const exactVariant = Boolean(materials || (namedFamily && namedColor && namedCapacity !== null));
+    const family = input.familyLimit ?? (exactVariant ? namedFamily : null);
+    const color = exactVariant ? namedColor : null;
+    const capacity = exactVariant ? namedCapacity : null;
+    const capPhrase = term.match(/\b([a-z]+(?:[ -][a-z]+){0,3})\s+cap\b/i)?.[1];
+    const capFinish = exactVariant && capPhrase ? detectCapFinish(capPhrase.replace(/-/g, " ")) : null;
+    return (row: SearchCandidate & { capColor?: string | null }) => {
+        const applicator = normalizeApplicatorValue(row.applicator)?.toLowerCase() ?? "";
+        if (allowed && !allowed.has(applicator)) return false;
+        if (materials && ![...materials].some((m) => applicator === `${m} roller ball`)) return false;
+        if (family && row.family !== family) return false;
+        if (color && canonicalGlassColor(row.color) !== color) return false;
+        if (capacity !== null && row.capacityMl !== capacity) return false;
+        if (capFinish && detectCapFinish(row.capColor ?? "") !== capFinish) return false;
+        return true;
+    };
 }
 
 // ─── Detection functions ────────────────────────────────────────────────────
@@ -429,8 +469,7 @@ export function buildSearchCatalogToolResult(
         input.familyLimit
         ?? detectCatalogFamily(termLower)
         ?? null;
-    const capMatch = termForCap.match(/\b(\d+)\s*ml\b/i);
-    const detectedCapMl = capMatch ? parseInt(capMatch[1]) : null;
+    const detectedCapMl = detectCapacityMl(termForCap);
     const requestedColor = detectRequestedColorToken(term);
     const applicatorIntent = detectApplicatorIntent(termForCap);
     const asksForColorCoverage = /\b(all|every|each|available)\b.*\bcolou?rs?\b|\bcolou?rs?\b.*\b(all|every|each|available)\b/i.test(term);

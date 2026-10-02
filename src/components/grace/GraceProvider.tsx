@@ -45,6 +45,8 @@ import { useGraceMemory } from "@/lib/grace/useGraceMemory";
 import { isGraceToolResult } from "@/lib/graceToolResults";
 import {
     applyGraceRefinementRequest,
+    inheritGraceRefineDestination,
+    graceSearchRefineState,
     formatGraceRefineState,
     getGraceRefineState,
     graceRefineDestination,
@@ -1365,10 +1367,15 @@ function GraceProviderBase({
 
         showProducts: async (params: { query: string; family?: string }) => {
             try {
-                const fallbackFinderHref = buildCatalogPath([], params.query, params.family);
+                const currentRefineState = graceSearchRefineState(
+                    pageContextRef.current?.refineState ?? getGraceRefineState(new URLSearchParams()),
+                    params.query ?? "", params.family,
+                );
+                const fallbackFinderHref = inheritGraceRefineDestination(buildCatalogPath([], params.query, params.family), currentRefineState);
                 const data = await callGraceServerTool<ProductCard[]>("searchCatalog", {
                     searchTerm: params.query ?? "",
                     familyLimit: params.family,
+                    refineState: currentRefineState,
                     returnRaw: true,
                 });
                 if (data.error) {
@@ -1378,9 +1385,7 @@ function GraceProviderBase({
                 }
                 const products: ProductCard[] = Array.isArray(data.result) ? data.result : [];
                 if (products.length === 0) {
-                    routerRef.current.push(localizeHref(localeRef.current, fallbackFinderHref));
-                    completeGraceNavigationRef.current("I opened the focused finder");
-                    return "No products found. Try a different description.";
+                    return "No verified products matched this request within the active filters. No product cards were added and the catalogue was not changed. Do not claim the product is unavailable or that a new refinement was applied; ask whether the customer wants to broaden a criterion.";
                 }
 
                 const capMatch = params.query?.match(/\b(\d+(?:\.\d+)?)\s*ml\b/i);
@@ -1392,7 +1397,7 @@ function GraceProviderBase({
                 const exactSizeFound = !sizeWarning;
                 const directProduct = exactSizeFound ? selectDirectProductMatch(products, params.query) : null;
                 const displayProducts = directProduct ? [directProduct] : products;
-                const finderHref = buildCatalogPath(displayProducts, params.query, params.family);
+                const finderHref = inheritGraceRefineDestination(buildCatalogPath(displayProducts, params.query, params.family), currentRefineState);
                 const redirectUrl = directProduct
                     ? await resolveGraceDirectHitHref({
                         directHit: directProduct,
@@ -1460,7 +1465,13 @@ function GraceProviderBase({
                 return `${sizeWarning} Opening the catalog with the closest matches: ${summary}.`;
             } catch (e) {
                 console.error("[Grace] showProducts:", e);
-                const finderHref = buildCatalogPath([], params.query, params.family);
+                const finderHref = inheritGraceRefineDestination(
+                    buildCatalogPath([], params.query, params.family),
+                    graceSearchRefineState(
+                        pageContextRef.current?.refineState ?? getGraceRefineState(new URLSearchParams()),
+                        params.query ?? "", params.family,
+                    ),
+                );
                 routerRef.current.push(localizeHref(localeRef.current, finderHref));
                 completeGraceNavigationRef.current("I opened the focused finder");
                 return "Catalog search failed.";
@@ -2097,6 +2108,7 @@ function GraceProviderBase({
             category?: string | null;
             collection?: string | null;
             applicators?: string[] | string | null;
+            rollerMaterials?: string[] | string | null;
             families?: string[] | string | null;
             colors?: string[] | string | null;
             capacities?: string[] | string | null;
@@ -2122,11 +2134,13 @@ function GraceProviderBase({
             if (typeof params.priceMin === "number") proposal.priceMin = params.priceMin;
             if (typeof params.priceMax === "number") proposal.priceMax = params.priceMax;
             const applicators = asArray(params.applicators);
+            const rollerMaterials = asArray(params.rollerMaterials);
             const families = asArray(params.families);
             const colors = asArray(params.colors);
             const capacities = asArray(params.capacities);
             const neckThreadSizes = asArray(params.neckThreadSizes);
             if (applicators) proposal.applicators = normalizeApplicatorBuckets(applicators);
+            if (rollerMaterials) proposal.rollerMaterials = rollerMaterials.filter((value): value is "metal" | "plastic" => value === "metal" || value === "plastic");
             if (families) proposal.families = families;
             if (colors) proposal.colors = colors;
             if (capacities) proposal.capacities = capacities;
@@ -2143,6 +2157,7 @@ function GraceProviderBase({
                 familyLimit: null,
                 applicatorFilter: null,
                 refineState: next,
+                verifyRefinements: true,
                 returnRaw: true,
             });
             if (refinementVerification.error) {

@@ -84,3 +84,12 @@ describe("Grace OpenAI tool contract", () => {
     });
 
 });
+
+
+it("exposes the shared roller, range and Specialty vocabulary", () => {
+    const refine = GRACE_OPENAI_TOOL_SPECS.find((tool) => tool.name === "setCatalogRefinements")!;
+    expect(refine.parameters.properties.rollerMaterials.items).toEqual({ type: "string", enum: ["metal", "plastic"] });
+    expect(refine.parameters.properties.capacities.description).toContain("6-15ml");
+    expect(refine.parameters.properties.capacities.description).not.toContain("EXACT SET");
+    expect(refine.parameters.properties.neckThreadSizes.description).toContain("specialty");
+});
