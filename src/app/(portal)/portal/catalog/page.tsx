@@ -36,7 +36,7 @@ export default async function PortalCatalog({
             <PageHeader
                 eyebrow="Catalogue"
                 title="Products"
-                subtitle="Search the full catalogue and add what you need straight to your order. Prices shown are your account's tier pricing."
+                subtitle="Choose a quantity break to see published unit prices and totals, then add items to your order. Account pricing and checkout availability are confirmed separately."
             />
 
             <CatalogLineItems
