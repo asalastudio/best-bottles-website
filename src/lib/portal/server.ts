@@ -5,6 +5,7 @@ import { api } from "../../../convex/_generated/api";
 import type { Id } from "../../../convex/_generated/dataModel";
 import { getPortalConvex, getPortalConvexWriteToken } from "./convexClient";
 import { normalizeAddress, validateAddress, type PortalAddress } from "./address";
+import { verifyPortalOrganizationMembership } from "./membership";
 import { CLERK_ENABLED } from "@/lib/clerk";
 import { getUserEmailAddresses } from "@/lib/teamAccess";
 import {
@@ -53,11 +54,13 @@ export async function getPortalAddresses(): Promise<{
     shippingAddress: PortalAddress | null;
     billingAddress: PortalAddress | null;
     shopifyCustomerId: string | null;
+    clerkOrgId: string | null;
+    addressVersion: number;
 }> {
-    if (!CLERK_ENABLED) return { shippingAddress: null, billingAddress: null, shopifyCustomerId: null };
+    if (!CLERK_ENABLED) return { shippingAddress: null, billingAddress: null, shopifyCustomerId: null, clerkOrgId: null, addressVersion: 0 };
 
     const viewer = await getPortalViewer();
-    if (!viewer.clerkUserId || !viewer.clerkOrgId) return { shippingAddress: null, billingAddress: null, shopifyCustomerId: null };
+    if (!viewer.clerkUserId || !viewer.clerkOrgId) return { shippingAddress: null, billingAddress: null, shopifyCustomerId: null, clerkOrgId: null, addressVersion: 0 };
 
     const account = await getPortalConvex().query(api.portal.getAccountByOrg, {
         writeToken: getPortalConvexWriteToken(),
@@ -68,15 +71,22 @@ export async function getPortalAddresses(): Promise<{
         shippingAddress: account?.shippingAddress ? normalizeAddress(account.shippingAddress) : null,
         billingAddress: account?.billingAddress ? normalizeAddress(account.billingAddress) : null,
         shopifyCustomerId: account?.shopifyCustomerId ?? null,
+        clerkOrgId: viewer.clerkOrgId,
+        addressVersion: account?.addressVersion ?? 0,
     };
 }
 
 /** Save locally and record a durable intent for reviewed Shopify reconciliation. */
 export async function savePortalAddressesForViewer(input: {
+    expectedOrgId: string; expectedVersion: number; requestId: string;
     shippingAddress: Partial<PortalAddress>;
     billingAddress?: Partial<PortalAddress> | null;
-}): Promise<{ ok: boolean; errors: ReturnType<typeof validateAddress>; shopifyWarning: string | null }> {
+}): Promise<{ ok: boolean; errors: ReturnType<typeof validateAddress>; shopifyWarning: string | null; message?: string }> {
     const viewer = await requirePortalViewer();
+    if (input.expectedOrgId !== viewer.clerkOrgId) return { ok: false, errors: {}, shopifyWarning: null, message: "Your organization changed. Reload this page before saving." };
+    if (!Number.isSafeInteger(input.expectedVersion) || input.expectedVersion < 0 || !/^[A-Za-z0-9_-]{8,100}$/.test(input.requestId)) return { ok: false, errors: {}, shopifyWarning: null, message: "Reload this page before saving the address." };
+    // Unlike a cached page/session claim, this rechecks membership for each save.
+    await verifyPortalOrganizationMembership(viewer);
 
     const shippingAddress = normalizeAddress(input.shippingAddress);
     const errors = validateAddress(shippingAddress);
@@ -88,13 +98,21 @@ export async function savePortalAddressesForViewer(input: {
         if (Object.keys(billingErrors).length > 0) return { ok: false, errors: billingErrors, shopifyWarning: null };
     }
 
-    await getPortalConvex().mutation(api.portal.saveAccountAddress, {
-        writeToken: getPortalConvexWriteToken(),
-        clerkOrgId: viewer.clerkOrgId,
-        clerkUserId: viewer.clerkUserId,
-        shippingAddress,
-        billingAddress,
-    });
+    try {
+        await getPortalConvex().mutation(api.portal.saveAccountAddress, {
+            writeToken: getPortalConvexWriteToken(),
+            clerkOrgId: viewer.clerkOrgId,
+            clerkUserId: viewer.clerkUserId,
+            expectedVersion: input.expectedVersion, requestId: input.requestId,
+            shippingAddress,
+            billingAddress,
+        });
+    } catch (error) {
+        if (error instanceof Error && /address_version_conflict|address_request_reused/.test(error.message)) {
+            return { ok: false, errors: {}, shopifyWarning: null, message: "This address changed after you opened the form. Reload and review it before saving again." };
+        }
+        throw error;
+    }
 
     const account = await getPortalConvex().query(api.portal.getAccountByOrg, {
         writeToken: getPortalConvexWriteToken(),

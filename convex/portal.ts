@@ -934,6 +934,8 @@ export const saveAccountAddress = mutation({
         writeToken: v.string(),
         clerkOrgId: v.string(),
         clerkUserId: v.string(),
+        expectedVersion: v.number(),
+        requestId: v.string(),
         shippingAddress: portalAddressValidator,
         billingAddress: v.optional(portalAddressValidator),
     },

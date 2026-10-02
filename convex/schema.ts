@@ -488,6 +488,7 @@ export default defineSchema({
         billingAddress: v.optional(portalAddress),
         addressUpdatedAt: v.optional(v.number()),
         addressUpdatedBy: v.optional(v.string()),
+        addressVersion: v.optional(v.number()),
         addressRevision: v.optional(v.number()),
         addressSyncStatus: v.optional(v.union(v.literal("awaiting_identity"), v.literal("awaiting_review"))),
     })
@@ -500,11 +501,17 @@ export default defineSchema({
     // Durable intent only: no default-address writer or automatic retry is enabled.
     portalAddressReconciliations: defineTable({
         clerkOrgId: v.string(), revision: v.number(),
-        shippingAddress: portalAddress,
+        shippingAddress: v.optional(portalAddress),
         shopifyCustomerId: v.optional(v.string()),
         state: v.union(v.literal("awaiting_identity"), v.literal("awaiting_review"), v.literal("superseded")),
         requestedAt: v.number(), requestedBy: v.string(),
     }).index("by_org_revision", ["clerkOrgId", "revision"]),
+
+    // Minimal idempotency receipts: no address/contact payloads are retained.
+    portalAddressSaveRequests: defineTable({
+        clerkOrgId: v.string(), requestId: v.string(), fingerprint: v.string(),
+        requestedBy: v.string(), requestedAt: v.number(), resultVersion: v.number(),
+    }).index("by_org_request", ["clerkOrgId", "requestId"]),
 
     // Resale certificates — the seller's-permit record behind tax exemption.
     //

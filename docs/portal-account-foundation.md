@@ -31,15 +31,59 @@ without an organization must select/create their real organization first. Server
 reads keep their existing credential/tenant guards. Staff listing paginates real
 Clerk organizations and staff saves verify the selected organization still exists.
 
+## Effective pending-profile permissions
+
+A pending record has `taxExempt: false` and no assigned account number, tier,
+manager, membership date, billing email or Shopify customer. It grants no Clerk
+role, team access, Shopify role, catalog assignment, customer token or exemption.
+The existing authenticated organization-scoped portal reads, local draft editing,
+certificate submission and local address saving remain available. Certificate
+submission is a request for staff review, not approval. Shopify draft submission
+requires the identity helper, which returns `account_review_required` for a
+pending profile even if it already carries a legacy customer ID.
+
+This is not a global wholesale purchase-approval gate: the pre-existing public
+checkout can still fall back to anonymous checkout. Filling staff profile fields
+marks them complete, not purchase-approved. Global checkout approval and native
+buyer-session activation remain separate release work; do not claim pending
+profiles close that existing checkout gap.
+
+## Stack dependency
+
+This account-only diff is based on PR352's `cb9687320d32a4d3d781b62fb03c17b1cc21a853`,
+which includes merged main/PR344 and the customer-declared certificate-expiration
+work. It remains stacked on PR352 to preserve the guarded certificate status
+projections and account/action components it extends. A base of merged PR344 alone
+would omit that certificate workflow. No account changes belong in PR352 itself.
+
 ## Address reconciliation
 
-Identical normalized saves retain one shipping revision. Changed shipping creates
+Each address save verifies current Clerk membership and compares the form's
+expected organization with the server session. This check is scoped to provisioning
+and address saves; it does not claim universal membership-revocation protection
+for other portal actions. The form also carries an expected address version and a
+stable request ID. Convex atomically enforces the version and stores a payload
+fingerprint receipt. A → B → delayed retry A and concurrent stale edits cannot
+replace B. Billing edits advance the address version as well; shipping revisions
+advance only when a new shipping snapshot is needed.
+
+Identical normalized retries retain one shipping revision. Changed shipping creates
 a new snapshot and supersedes the prior unsent intent. Billing-only changes do not
 create shipping revisions. The current intent starts `awaiting_identity` or
 `awaiting_review`; explicitly linking an existing customer advances only the
 current unsent intent to review, idempotently. No state in this implementation
 claims `synced`, sends Shopify writes, or retries remote writes. Both customer and
 staff pages expose the pending/unverified status.
+
+Superseding an unsent intent removes its full address/contact payload in the same
+transaction, retaining minimal revision, actor and target metadata. Retry receipts
+contain a request-salted payload hash and audit metadata, never raw address fields.
+Only the current account and current pending intent retain the shipping address.
+No bulk production purge or scheduled retention job runs in this PR. Before a
+sender or cleanup job is enabled, approve a bounded metadata retention period
+(proposed: 30 days for superseded intents and retry receipts), audit requirements,
+and a deletion dry run. Never reset the monotonically increasing account version;
+it continues to reject stale forms even after old receipts are eventually removed.
 
 This intentionally replaces the prior best-effort default-address mirror, which
 could overwrite Shopify and returned apparent success when no customer existed.
@@ -49,6 +93,10 @@ A subsequent dispatcher must atomically claim the current revision, compare the
 reviewed remote baseline, fence uncertain outcomes, verify readback before marking
 synced, and never replay superseded revisions. No background worker is enabled by
 this PR. The unused legacy helper is not proof of an active sync service.
+
+The address mutation now requires its concurrency envelope. Backend/frontend must
+be released together after approval; forms rendered before that release must be
+reloaded. This PR performs no deployment or migration.
 
 ## Concrete production repair packet — not executed
 

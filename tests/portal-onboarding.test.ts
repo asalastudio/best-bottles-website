@@ -38,14 +38,33 @@ describe("portal onboarding server boundary", () => {
         expect(mocks.memberships).toHaveBeenLastCalledWith({ userId: "user_verified", offset: 100, limit: 100 });
         expect(mocks.mutation).toHaveBeenCalledTimes(1);
     });
-    it("does not implicitly create or attach a Shopify customer for a pending profile", async () => {
-        mocks.query.mockResolvedValue({ profileStatus: "pending" });
+    it.each([undefined, "123"])("does not activate a Shopify customer for a pending profile with legacy customer %s", async shopifyCustomerId => {
+        mocks.query.mockResolvedValue({ profileStatus: "pending", shopifyCustomerId });
         expect(await ensureShopifyCustomerForOrg("org_verified", { fallbackEmail: "buyer@example.test" })).toEqual({ status: "unavailable", reason: "account_review_required" });
         expect(mocks.mutation).not.toHaveBeenCalled();
     });
+    it("rejects stale organization forms before attempting any write", async () => {
+        const result = await savePortalAddressesForViewer({ shippingAddress: address, expectedOrgId: "org_previous", expectedVersion: 0, requestId: "request_a_0001" });
+        expect(result.ok).toBe(false); expect(result.message).toContain("organization changed");
+        expect(mocks.mutation).not.toHaveBeenCalled();
+    });
+    it("rechecks current membership for every address save and fails closed on revocation", async () => {
+        mocks.memberships.mockResolvedValueOnce({ data: [], totalCount: 0 });
+        await expect(savePortalAddressesForViewer({ shippingAddress: address, expectedOrgId: "org_verified", expectedVersion: 0, requestId: "request_a_0001" })).rejects.toThrow("active_organization_membership_required");
+        expect(mocks.mutation).not.toHaveBeenCalled();
+    });
+    it("rejects missing preconditions and returns an actionable conflict without retrying", async () => {
+        const input = { shippingAddress: address, expectedOrgId: "org_verified", expectedVersion: 0, requestId: "request_a_0001" };
+        expect((await savePortalAddressesForViewer({ ...input, expectedVersion: Number.NaN })).ok).toBe(false);
+        expect(mocks.mutation).not.toHaveBeenCalled();
+        mocks.mutation.mockRejectedValueOnce(new Error("address_version_conflict"));
+        const result = await savePortalAddressesForViewer(input);
+        expect(result.ok).toBe(false); expect(result.message).toContain("Reload and review");
+        expect(mocks.mutation).toHaveBeenCalledTimes(1); expect(mocks.query).not.toHaveBeenCalled();
+    });
     it.each([undefined, "123"])("reports a local save honestly with customer %s and never overwrites Shopify", async shopifyCustomerId => {
         mocks.query.mockResolvedValue({ shopifyCustomerId });
-        const result = await savePortalAddressesForViewer({ shippingAddress: address });
+        const result = await savePortalAddressesForViewer({ shippingAddress: address, expectedOrgId: "org_verified", expectedVersion: 0, requestId: "request_a_0001" });
         expect(result).toMatchObject({ ok: true });
         expect(result.shopifyWarning).toContain(shopifyCustomerId ? "review is pending" : "linking is pending");
         expect(mocks.mutation).toHaveBeenCalledWith(api.portal.saveAccountAddress, expect.objectContaining({ clerkOrgId: "org_verified", clerkUserId: "user_verified", shippingAddress: address }));

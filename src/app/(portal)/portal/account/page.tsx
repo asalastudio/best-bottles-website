@@ -1,3 +1,4 @@
+import { randomUUID } from "node:crypto";
 import { ensurePortalProfileForViewer } from "@/lib/portal/onboarding";
 import CertificateStatusRefresh from "@/components/portal/CertificateStatusRefresh";
 export const dynamic = "force-dynamic";
@@ -114,6 +115,10 @@ export default async function PortalAccount() {
                                   : "Shopify address sync: not verified."}
                         </p>
                         <PortalAddressForm
+                            key={`${addresses.clerkOrgId}:${addresses.addressVersion}`}
+                            expectedOrgId={addresses.clerkOrgId ?? account.clerkOrgId}
+                            expectedVersion={addresses.addressVersion}
+                            requestId={randomUUID()}
                             shippingAddress={addresses.shippingAddress}
                             billingAddress={addresses.billingAddress}
                             action={saveAddressAction}
