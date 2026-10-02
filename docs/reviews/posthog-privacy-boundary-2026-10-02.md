@@ -41,7 +41,7 @@ Tests exercise unknown/private/localized routes, SDK-readiness races, URL and ev
 - Full suite: `npx vitest run --maxWorkers=4` — 311 files passed, 2 skipped; 2,869 tests passed, 7 skipped.
 - `npm run lint` — zero errors, 86 existing warnings; focused lint on changed files — zero warnings/errors.
 - `npx tsc --noEmit --typeRoots ./node_modules/@types` — passed.
-- The production build compiled successfully with CI placeholder configuration; complete build validation remains pending its TypeScript phase at PR preparation.
+- The production build compiled successfully with CI placeholder configuration, then stalled in its TypeScript phase. The local build was stopped; complete production build validation remains unverified. Standalone checkout-local typechecking passed.
 
 An unrestricted parallel suite run timed out in two unrelated existing test files; both passed in isolation (9/9) and the complete four-worker rerun passed. No test timeout/configuration change is included.
 
