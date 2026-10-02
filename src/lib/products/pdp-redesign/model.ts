@@ -17,7 +17,7 @@ import { normalizeImportedCapColor } from "@/lib/products/cap-finish-evidence";
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
 import { catalogFitmentLabel, displayApplicatorName } from "@/lib/catalogFilters";
 import { SHOP_COLLECTIONS, matchesShopCollection, shopCollectionHref } from "@/lib/shopCollections";
-import { activeVolumeTierIndex, buildDisplayVolumeTiers, type DisplayVolumeTier } from "@/lib/volumePricing";
+import { resolveChargedUnitPrice, buildDisplayVolumeTiers, type DisplayVolumeTier } from "@/lib/volumePricing";
 import { isSoldOutStockStatus } from "@/lib/checkout";
 
 export type PdpGroup = ProductGroupPayload["group"];
@@ -343,12 +343,10 @@ export function tiersFor(variant: ProductVariant | null | undefined): DisplayVol
     });
 }
 
-/** The published rate at a quantity: the active break, else the 1-piece price. */
+/** The purchasable rate: match the cart and the configured checkout policy. */
 export function unitPriceAt(variant: ProductVariant | null | undefined, qty: number): number | null {
     if (!variant?.webPrice1pc) return null;
-    const tiers = tiersFor(variant);
-    if (tiers.length === 0) return variant.webPrice1pc;
-    return tiers[activeVolumeTierIndex(tiers, qty)]?.unitPrice ?? variant.webPrice1pc;
+    return resolveChargedUnitPrice(qty, variant);
 }
 
 // ── exploded callouts ─────────────────────────────────────────────────────────

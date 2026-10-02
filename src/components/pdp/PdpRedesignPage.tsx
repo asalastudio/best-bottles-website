@@ -34,7 +34,7 @@ import type { ItemDescription } from "@/lib/products/item-description/resolve";
 import { getMaterialSwatchBackground, getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { pdpFallbackMedia } from "@/lib/products/pdp-redesign/fallback-media";
 import { SITE_NAME } from "@/lib/seo";
-import { formatVolumeQtyRange, resolveQuotedUnitPrice } from "@/lib/volumePricing";
+import { formatVolumeQtyRange } from "@/lib/volumePricing";
 import {
     buildYourBottleHref,
     callouts as buildCallouts,
@@ -308,7 +308,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
             graceSku: selected.graceSku,
             itemName: title,
             quantity: qty,
-            unitPrice: selected.webPrice1pc ?? null,
+            unitPrice,
             checkoutEligible: checkoutReady,
             stockStatus: selected.stockStatus,
             shopifyVariantId: selected.shopifyVariantId ?? null,
@@ -329,19 +329,19 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
             priceTiers: selected.priceTiers?.map((t) => ({ minQty: t.minQty, unitPrice: t.unitPrice })) ?? null,
         }]);
         analytics.pdpAddLine({ group: slug, sku: selected.websiteSku, qty, tier });
-        analytics.cartItemAdded({ sku: selected.graceSku, name: title, quantity: qty, unitPrice: selected.webPrice1pc, family: group.family, capacity: group.capacity ?? undefined, source: "pdp" });
+        analytics.cartItemAdded({ sku: selected.graceSku, name: title, quantity: qty, unitPrice, family: group.family, capacity: group.capacity ?? undefined, source: "pdp" });
         setAddedQty(qty);
         setQty(1);
         if (addedTimer.current != null) window.clearTimeout(addedTimer.current);
         addedTimer.current = window.setTimeout(() => setAddedQty(null), ADDED_FLASH_MS);
-    }, [selected, addState, tiers, qty, addItems, group, title, checkoutReady, slug, activeCap?.name]);
+    }, [selected, addState, tiers, qty, unitPrice, addItems, group, title, checkoutReady, slug, activeCap?.name]);
 
     // ── in this order: the cart's view of this page's lines ───────────────
     const pageSlugs = useMemo(() => new Set([slug, ...siblings.map((sibling) => sibling.slug)]), [slug, siblings]);
     const orderLines = useMemo<OrderLineView[]>(() => cartItems
         .filter((item) => item.productGroupSlug && pageSlugs.has(item.productGroupSlug))
         .map((item) => {
-            const rate = resolveQuotedUnitPrice(item.quantity, item) ?? item.unitPrice ?? 0;
+            const rate = item.unitPrice ?? 0;
             const roller = rollers.find((option) => option.id === rollerIdFor(item.applicator)) ?? null;
             const label = lineLabel(glassShortLabel(item.color), roller, roller ? null : fitmentLabel({ applicator: item.applicator ?? null } as ProductVariant), item.capColor ?? null);
             return {

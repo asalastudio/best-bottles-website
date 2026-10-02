@@ -133,13 +133,27 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
     useEffect(() => {
         const loaded = loadCartFromStorage();
-        setItems(loaded);
+        // Saved carts may have been priced under an earlier checkout policy.
+        setItems(loaded.map((item) => ({
+            ...item,
+            unitPrice: resolveUnitPrice(item.quantity, {
+                ...item,
+                webPrice1pc: item.webPrice1pc ?? item.unitPrice,
+            }),
+        })));
         setHydrated(true);
     }, []);
 
     useEffect(() => {
         if (hydrated) saveCartToStorage(items);
     }, [items, hydrated]);
+
+    useEffect(() => {
+        // Back can restore the page from bfcache with its redirecting state intact.
+        const onPageShow = () => setIsCheckingOut(false);
+        window.addEventListener("pageshow", onPageShow);
+        return () => window.removeEventListener("pageshow", onPageShow);
+    }, []);
 
     const itemCount = items.reduce((sum, i) => sum + i.quantity, 0);
 
@@ -321,7 +335,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
                 redirectToCheckout({
                     checkoutUrl,
                     navigationTarget: window,
-                    onNavigationConfirmed: () => saveCartToStorage([]),
+                    // Departure is not payment confirmation. Keep the cart so Back,
+                    // a declined payment, or an abandoned checkout can recover it.
+                    onNavigationConfirmed: () => setIsCheckingOut(false),
                 });
                 redirectStarted = true;
             } else if (data.unmatchedSkus?.length) {

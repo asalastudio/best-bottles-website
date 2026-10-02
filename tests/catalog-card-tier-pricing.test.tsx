@@ -77,8 +77,8 @@ describe("Pack of menu on the catalog card (design 8a)", () => {
         expect(toggle.getAttribute("aria-expanded")).toBe("false");
         expect(menu()).toBeNull();
         expect(el.querySelector("dialog")).toBeNull();
-        // No quote footnote: the ladder's rates are the prices (Jordan, 2026-09-25).
-        expect(el.querySelector('[data-testid="catalog-card-tier-footnote"]')).toBeNull();
+        // Published volume rates cannot masquerade as the online purchase price.
+        expect(el.querySelector('[data-testid="catalog-card-tier-footnote"]')?.textContent).toMatch(/quote/i);
         expect($("catalog-card-add").textContent).toBe("Add to cart · $0.92");
 
         click(toggle);
@@ -86,15 +86,15 @@ describe("Pack of menu on the catalog card (design 8a)", () => {
         expect(menu()?.getAttribute("role")).toBe("listbox");
         expect(toggle.getAttribute("aria-controls")).toBe(menu()?.id);
         const rows = $$("catalog-card-tier-row");
-        // Every break shows its range and its rate, nothing else — no "Quote" mark on any of them.
-        expect(rows.map((row) => row.textContent)).toEqual(["1–11$0.92", "12–47$0.76", "48–143$0.64", "144–499$0.56", "500+$0.53"]);
-        expect(el.textContent).not.toMatch(/quote/i);
+        // Show the source ladder, with unhonored rates explicitly labeled.
+        expect(rows.map((row) => row.textContent)).toEqual(["1–11$0.92", "12–47$0.76 by quote", "48–143$0.64 by quote", "144–499$0.56 by quote", "500+$0.53 by quote"]);
+        expect(el.textContent).toMatch(/quote/i);
         expect(rows.map((row) => row.getAttribute("aria-label"))).toEqual([
             "1–11 units at $0.92 each",
-            "12–47 units at $0.76 each, save 17%",
-            "48–143 units at $0.64 each, save 30%",
-            "144–499 units at $0.56 each, save 39%",
-            "500+ units at $0.53 each, save 42%",
+            "12–47 units at $0.76 each, by quote",
+            "48–143 units at $0.64 each, by quote",
+            "144–499 units at $0.56 each, by quote",
+            "500+ units at $0.53 each, by quote",
         ]);
         expect(rows.map((row) => row.getAttribute("aria-selected"))).toEqual(["true", "false", "false", "false", "false"]);
         expect(document.activeElement).toBe(rows[0]);
@@ -102,7 +102,7 @@ describe("Pack of menu on the catalog card (design 8a)", () => {
         expect(track.mock.calls[0][1]).toEqual({ ...base, quantity: 1, tier: "1–11" });
     });
 
-    it("picking a break sets the quantity, and the headline and button follow that break's rate", () => {
+    it("picking a break sets the quantity while headline and button match checkout", () => {
         card();
         click($("catalog-card-pack-toggle"));
         click($$("catalog-card-tier-row")[3]);
@@ -110,13 +110,13 @@ describe("Pack of menu on the catalog card (design 8a)", () => {
         expect(document.activeElement).toBe($("catalog-card-pack-toggle"));
         expect(($("catalog-card-qty") as HTMLInputElement).value).toBe("144");
         expect($("catalog-card-pack-toggle").textContent).toBe("Pack of 144▾");
-        // Price consistency: the break's rate is the price; headline × quantity = button.
-        expect($("catalog-card-price").textContent).toBe("$0.56/pc · 144–499 pcs");
-        expect($("catalog-card-add").textContent).toBe("Add to cart · $80.64");
+        // Price consistency: the online rate × quantity = button and cart.
+        expect($("catalog-card-price").textContent).toBe("$0.92/pc · 144–499 pcs");
+        expect($("catalog-card-add").textContent).toBe("Add to cart · $132.48");
         expect($("catalog-card-add").dataset.quote).toBeUndefined();
-        expect(el.querySelector('[data-testid="catalog-card-tier-footnote"]')).toBeNull();
+        expect(el.querySelector('[data-testid="catalog-card-tier-footnote"]')?.textContent).toMatch(/quote/i);
         expect(el.querySelector('[data-testid="catalog-card-request-quote"]')).toBeNull();
-        expect(el.textContent).not.toMatch(/quote/i);
+        expect(el.textContent).toMatch(/quote/i);
         expect(events()).toEqual(["tier_pricing_opened", "tier_selected", "tier_pricing_closed"]);
         expect(track.mock.calls[1]).toEqual(["tier_selected", { ...base, quantity: 144, tier: "144–499" }]);
     });
@@ -157,8 +157,8 @@ describe("Pack of menu on the catalog card (design 8a)", () => {
         type(qty, "600");
         expect(el.querySelector('[data-testid="catalog-card-qty-error"]')).toBeNull();
         expect($("catalog-card-pack-toggle").textContent).toBe("Pack of 500+▾");
-        expect($("catalog-card-price").textContent).toBe("$0.53/pc · 500+ pcs");
-        expect($("catalog-card-add").textContent).toBe("Add to cart · $318.00");
+        expect($("catalog-card-price").textContent).toBe("$0.92/pc · 500+ pcs");
+        expect($("catalog-card-add").textContent).toBe("Add to cart · $552.00");
         act(() => { qty.dispatchEvent(new FocusEvent("focusout", { bubbles: true })); });
         expect(track.mock.calls.at(-1)).toEqual(["quantity_changed", { ...base, quantity: 600, tier: "500+", source: "input" }]);
         expect(el.querySelector('label[for="' + qty.id + '"]')?.textContent).toBe("Quantity");

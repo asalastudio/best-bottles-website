@@ -121,7 +121,7 @@ describe("ladder and headline", () => {
         expect(activeCatalogTier(tiers, 499)?.minQty).toBe(144);
         expect(activeCatalogTier(tiers, 500)?.minQty).toBe(500);
         expect(activeCatalogTier(tiers, null)).toBeNull();
-        expect(describeCatalogTier(tiers[3])).toBe("144–499 units at $0.56 each, save 39%");
+        expect(describeCatalogTier(tiers[3])).toBe("144–499 units at $0.56 each, by quote");
         expect(describeCatalogTier(tiers[0])).toBe("1–11 units at $0.92 each");
     });
 
