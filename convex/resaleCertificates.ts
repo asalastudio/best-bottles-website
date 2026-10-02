@@ -15,10 +15,10 @@
  * into the new one, so "what were we relying on last March" stays answerable.
  */
 
-import { mutation, query } from "./_generated/server";
+import { mutation } from "./_generated/server";
 import { v } from "convex/values";
 import type { Doc } from "./_generated/dataModel";
-import { verifyWriteToken } from "./portalAuth";
+import { serverQuery, verifyWriteToken } from "./portalAuth";
 
 function normalizeState(raw: string): string {
     const code = raw.trim().toUpperCase();
@@ -105,7 +105,7 @@ export const submitResaleCertificate = mutation({
     },
 });
 
-export const listCertificatesByOrg = query({
+export const listCertificatesByOrg = serverQuery({
     args: { clerkOrgId: v.string() },
     handler: async (ctx, args) => {
         const certs = await ctx.db
@@ -123,7 +123,7 @@ export const listCertificatesByOrg = query({
  * Evaluates expiry at read time rather than trusting `status`, so a certificate
  * that lapsed since the last sweep does not read as active.
  */
-export const getActiveCertificateForOrg = query({
+export const getActiveCertificateForOrg = serverQuery({
     args: { clerkOrgId: v.string() },
     handler: async (ctx, args) => {
         const now = Date.now();
@@ -148,7 +148,7 @@ export const getActiveCertificateForOrg = query({
  * verifying against the issuing state's registry is the whole job, and a row
  * without a viewable document cannot be reviewed.
  */
-export const listPendingCertificates = query({
+export const listPendingCertificates = serverQuery({
     args: {},
     handler: async (ctx) => {
         const pending = await ctx.db
@@ -177,7 +177,7 @@ export const listPendingCertificates = query({
  * lapsed (the account is being under-taxed). Both are computed here rather than
  * read off `status`, which is only as fresh as the last sweep.
  */
-export const listAllCertificates = query({
+export const listAllCertificates = serverQuery({
     args: {},
     handler: async (ctx) => {
         const certs = await ctx.db.query("resaleCertificates").collect();

@@ -3,7 +3,7 @@ import "server-only";
 import { auth } from "@clerk/nextjs/server";
 import { api } from "../../../convex/_generated/api";
 import { CLERK_ENABLED } from "@/lib/clerk";
-import { getPortalConvex } from "@/lib/portal/convexClient";
+import { getPortalConvex, getPortalConvexWriteToken } from "@/lib/portal/convexClient";
 import { isSanityConfigured } from "@/sanity/lib/client";
 import { editorialImageUrl } from "@/sanity/lib/image";
 import { sanityFetch } from "@/sanity/lib/live";
@@ -54,6 +54,7 @@ async function getRecentSessions(): Promise<RailSession[]> {
         if (!userId) return [];
 
         const rows = await getPortalConvex().query(api.graceSessions.listForViewer, {
+            writeToken: getPortalConvexWriteToken(),
             clerkUserId: userId,
             clerkOrgId: orgId ?? undefined,
         });

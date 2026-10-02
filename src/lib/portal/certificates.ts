@@ -73,9 +73,11 @@ export async function getCertificatesForViewer(): Promise<{
     const viewer = await requirePortalViewer();
     const [certificates, active] = await Promise.all([
         getPortalConvex().query(api.resaleCertificates.listCertificatesByOrg, {
+            writeToken: getPortalConvexWriteToken(),
             clerkOrgId: viewer.clerkOrgId,
         }),
         getPortalConvex().query(api.resaleCertificates.getActiveCertificateForOrg, {
+            writeToken: getPortalConvexWriteToken(),
             clerkOrgId: viewer.clerkOrgId,
         }),
     ]);
@@ -96,7 +98,7 @@ export async function getCertificatesForViewer(): Promise<{
  */
 export async function listAllCertificatesForStaff() {
     await requireStaffViewer();
-    const data = await getPortalConvex().query(api.resaleCertificates.listAllCertificates, {});
+    const data = await getPortalConvex().query(api.resaleCertificates.listAllCertificates, { writeToken: getPortalConvexWriteToken() });
 
     const exposure = new Map<string, PendingWindowOrders | null>();
     await Promise.all(
@@ -127,7 +129,7 @@ export async function listPendingCertificatesForStaff() {
     await requireStaffViewer();
     return await getPortalConvex().query(
         api.resaleCertificates.listPendingCertificates,
-        {},
+        { writeToken: getPortalConvexWriteToken() },
     );
 }
 

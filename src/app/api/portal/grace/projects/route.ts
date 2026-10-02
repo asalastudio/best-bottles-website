@@ -4,6 +4,8 @@ import {
     saveProductToGraceProjectForViewer,
 } from "@/lib/portal/server";
 
+// Use backend errors only to choose a status. Validation errors can include
+// request arguments, including the server credential; never echo their text.
 function statusForPortalError(error: unknown) {
     const message = error instanceof Error ? error.message : "";
     if (message === "Unauthenticated") return 401;
@@ -19,7 +21,7 @@ export async function GET() {
         return NextResponse.json({ projects: workspace.projects });
     } catch (error) {
         return NextResponse.json(
-            { error: error instanceof Error ? error.message : "Unable to load Grace projects." },
+            { error: "Unable to load Grace projects." },
             { status: statusForPortalError(error) },
         );
     }
@@ -48,7 +50,7 @@ export async function POST(req: NextRequest) {
         return NextResponse.json(result);
     } catch (error) {
         return NextResponse.json(
-            { error: error instanceof Error ? error.message : "Unable to save the Grace project." },
+            { error: "Unable to save the Grace project." },
             { status: statusForPortalError(error) },
         );
     }

@@ -101,6 +101,7 @@ export async function setDraftLinesForViewer(
 export async function getDraftForViewer(draftId: string) {
     const viewer = await requirePortalViewer();
     return await getPortalConvex().query(api.portal.getDraftById, {
+        writeToken: getPortalConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
         draftId: draftId as Id<"portalDrafts">,
     });
@@ -123,6 +124,7 @@ export async function submitDraftForViewer(draftId: string): Promise<SubmitDraft
     const viewer = await requirePortalViewer();
 
     const draft = await getPortalConvex().query(api.portal.getDraftById, {
+        writeToken: getPortalConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
         draftId: draftId as Id<"portalDrafts">,
     });
@@ -162,6 +164,7 @@ export async function submitDraftForViewer(draftId: string): Promise<SubmitDraft
     }
 
     const account = await getPortalConvex().query(api.portal.getAccountByOrg, {
+        writeToken: getPortalConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
     });
 
@@ -261,7 +264,7 @@ export async function addSkuToOpenDraftForViewer(args: {
         return { ok: false, reason: resolution?.reason === "no_price" ? "no_price" : "unknown_sku" };
     }
 
-    const drafts = await convex.query(api.portal.listDraftsByOrg, { clerkOrgId: viewer.clerkOrgId });
+    const drafts = await convex.query(api.portal.listDraftsByOrg, { writeToken: getPortalConvexWriteToken(), clerkOrgId: viewer.clerkOrgId });
 
     let target = args.draftId
         ? drafts.find((draft) => draft._id === args.draftId)
@@ -275,7 +278,7 @@ export async function addSkuToOpenDraftForViewer(args: {
             writeToken: getPortalConvexWriteToken(),
             clerkOrgId: viewer.clerkOrgId,
         });
-        const refreshed = await convex.query(api.portal.listDraftsByOrg, { clerkOrgId: viewer.clerkOrgId });
+        const refreshed = await convex.query(api.portal.listDraftsByOrg, { writeToken: getPortalConvexWriteToken(), clerkOrgId: viewer.clerkOrgId });
         target = refreshed.find((draft) => draft._id === created.draftId);
         if (!target) return { ok: false, reason: "draft_closed" };
     }

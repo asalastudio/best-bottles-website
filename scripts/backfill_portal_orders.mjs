@@ -201,7 +201,7 @@ info(`Store:  ${DOMAIN}`);
 info(`Convex: ${process.env.NEXT_PUBLIC_CONVEX_URL}`);
 info(`Mode:   ${apply ? `${R}APPLY${X}` : `${G}DRY-RUN${X}`}${sinceArg ? ` · since ${sinceArg}` : ""}`);
 
-const accounts = await convex.query("portal:listPortalAccounts", {});
+const accounts = await convex.query("portal:listPortalAccounts", { writeToken: process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN });
 const linked = accounts.filter(
     (a) => a.shopifyCustomerId && (!onlyOrg || a.clerkOrgId === onlyOrg),
 );

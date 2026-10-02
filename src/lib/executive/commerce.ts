@@ -2,7 +2,7 @@ import "server-only";
 
 import { adminGraphQL } from "@/lib/shopify";
 import { api } from "../../../convex/_generated/api";
-import { getPortalConvex } from "@/lib/portal/convexClient";
+import { getPortalConvex, getPortalConvexWriteToken } from "@/lib/portal/convexClient";
 
 /**
  * Live commerce facts for the Executive Hub.
@@ -142,7 +142,7 @@ export async function getExecutiveCommerce(): Promise<ExecutiveCommerce> {
         ? bots.map((b) => b.node.createdAt).sort()[0].slice(0, 10)
         : null;
 
-    const accounts = await getPortalConvex().query(api.portal.listPortalAccounts, {});
+    const accounts = await getPortalConvex().query(api.portal.listPortalAccounts, { writeToken: getPortalConvexWriteToken() });
 
     const byLocation = new Map<string, { label: string; provinceCode: string | null; countryCode: string; count: number }>();
     for (const account of accounts) {
@@ -159,7 +159,7 @@ export async function getExecutiveCommerce(): Promise<ExecutiveCommerce> {
         });
     }
 
-    const drafts = await getPortalConvex().query(api.portal.getTeamHubQueues, {});
+    const drafts = await getPortalConvex().query(api.portal.getTeamHubQueues, { writeToken: getPortalConvexWriteToken() });
 
     // Twelve months of order counts, including the empty ones — a series that
     // silently omits months with nothing in them draws a busier business than

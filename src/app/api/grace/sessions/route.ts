@@ -78,8 +78,12 @@ export async function POST(req: NextRequest) {
         });
         return NextResponse.json({ ok: true, id });
     } catch (error) {
-        const message = error instanceof Error ? error.message : "Unable to record the session.";
-        const status = message.includes("session_owned_by_other_user") ? 403 : 500;
-        return NextResponse.json({ error: message }, { status });
+        // Convex validation errors may embed the server credential in their
+        // argument dump. Preserve ownership status without returning raw text.
+        const ownedByOther = error instanceof Error && error.message.includes("session_owned_by_other_user");
+        return NextResponse.json(
+            { error: ownedByOther ? "This session belongs to another user." : "Unable to record the session." },
+            { status: ownedByOther ? 403 : 500 },
+        );
     }
 }

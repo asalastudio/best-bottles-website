@@ -7,12 +7,19 @@
  * identity itself, so a browser can neither forge another customer's
  * identity nor file a session under another organization.
  *
+ * Reads use the same server credential: caller-supplied Clerk IDs are only
+ * trusted after the backend authenticates the Next.js server. The server must
+ * resolve the viewer and active organization from Clerk, never request input.
+ * A browser's claimed user/org IDs are not authorization, even if signed in.
+ *
  * One row per client session id, replaced on every sync — the client is the
  * source of truth for the transcript while the session is live.
  */
 
 import { mutation, query } from "./_generated/server";
 import { v } from "convex/values";
+import { doc } from "convex-helpers/validators";
+import schema from "./schema";
 import type { Doc } from "./_generated/dataModel";
 import { verifyWriteToken } from "./portalAuth";
 
@@ -25,6 +32,29 @@ const SESSIONS_PER_ORG = 50;
 
 const roleValidator = v.union(v.literal("user"), v.literal("grace"));
 const messageValidator = v.object({ role: roleValidator, text: v.string() });
+
+const summaryValidator = v.object({
+    _id: v.id("graceSessions"),
+    sessionId: v.string(),
+    title: v.string(),
+    surface: v.string(),
+    companionMode: v.string(),
+    startedAt: v.number(),
+    lastMessageAt: v.number(),
+    endedAt: v.union(v.number(), v.null()),
+    messageCount: v.number(),
+    clerkUserId: v.string(),
+    preview: v.union(v.string(), v.null()),
+});
+
+/** The active organization's sessions and the viewer's unassigned sessions. */
+function canReadSession(row: Doc<"graceSessions">, viewer: {
+    clerkUserId: string;
+    clerkOrgId?: string;
+}) {
+    return Boolean(viewer.clerkOrgId && row.clerkOrgId === viewer.clerkOrgId)
+        || (!row.clerkOrgId && row.clerkUserId === viewer.clerkUserId);
+}
 
 function clip(value: string, max: number): string {
     const trimmed = value.trim();
@@ -138,8 +168,10 @@ function summarize(row: Doc<"graceSessions">) {
  * owned by nobody the portal queries, and invisible forever.
  */
 export const listForViewer = query({
-    args: { clerkOrgId: v.optional(v.string()), clerkUserId: v.string() },
+    args: { writeToken: v.string(), clerkOrgId: v.optional(v.string()), clerkUserId: v.string() },
+    returns: v.array(summaryValidator),
     handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
         const byOrg = args.clerkOrgId
             ? await ctx.db
                 .query("graceSessions")
@@ -155,7 +187,9 @@ export const listForViewer = query({
             .take(SESSIONS_PER_ORG);
 
         const merged = new Map<string, Doc<"graceSessions">>();
-        for (const row of [...byOrg, ...byUser]) merged.set(row._id, row);
+        for (const row of [...byOrg, ...byUser]) {
+            if (canReadSession(row, args)) merged.set(row._id, row);
+        }
 
         return [...merged.values()]
             .sort((a, b) => b.lastMessageAt - a.lastMessageAt)
@@ -166,27 +200,17 @@ export const listForViewer = query({
 
 /** Newest first. Summaries only — the transcript comes from `getForViewer`. */
 export const listByOrg = query({
-    args: { clerkOrgId: v.string() },
+    args: { writeToken: v.string(), clerkOrgId: v.string() },
+    returns: v.array(summaryValidator),
     handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
         const rows = await ctx.db
             .query("graceSessions")
             .withIndex("by_orgId", (q) => q.eq("clerkOrgId", args.clerkOrgId))
             .order("desc")
             .take(SESSIONS_PER_ORG);
 
-        return rows.map((row) => ({
-            _id: row._id,
-            sessionId: row.sessionId,
-            title: row.title,
-            surface: row.surface,
-            companionMode: row.companionMode,
-            startedAt: row.startedAt,
-            lastMessageAt: row.lastMessageAt,
-            endedAt: row.endedAt ?? null,
-            messageCount: row.messageCount,
-            clerkUserId: row.clerkUserId,
-            preview: derivePreview(row.messages),
-        }));
+        return rows.map(summarize);
     },
 });
 
@@ -200,16 +224,17 @@ export const listByOrg = query({
  */
 export const getForViewer = query({
     args: {
+        writeToken: v.string(),
         clerkOrgId: v.string(),
         clerkUserId: v.string(),
         sessionId: v.id("graceSessions"),
     },
+    returns: v.union(doc(schema, "graceSessions"), v.null()),
     handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
         const row = await ctx.db.get(args.sessionId);
         if (!row) return null;
-        const ownedByOrg = row.clerkOrgId === args.clerkOrgId;
-        const ownedByViewer = row.clerkUserId === args.clerkUserId && !row.clerkOrgId;
-        if (!ownedByOrg && !ownedByViewer) return null;
+        if (!canReadSession(row, args)) return null;
         return row;
     },
 });

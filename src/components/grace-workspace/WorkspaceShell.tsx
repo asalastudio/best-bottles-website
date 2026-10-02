@@ -5,8 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Component, useCallback, useEffect, useRef, useState, type ErrorInfo, type ReactNode } from "react";
 import { useUser, useOrganization } from "@clerk/nextjs";
-import { useQuery } from "convex/react";
-import { api } from "../../../convex/_generated/api";
+import { useWorkspaceAccount } from "./useWorkspaceAccount";
 import { useGrace } from "@/components/useGrace";
 import { CLERK_ENABLED } from "@/lib/clerk";
 import { Plus, X } from "./icons";
@@ -60,6 +59,7 @@ interface WorkspaceShellProps {
 }
 
 type WorkspaceUser = {
+    id?: string;
     firstName?: string | null;
     lastName?: string | null;
     imageUrl?: string | null;
@@ -130,14 +130,9 @@ function WorkspaceShellView({
     }, [familyMenuOpen]);
 
     const clerkOrgId = organization?.id ?? null;
-    const account = useQuery(
-        api.portal.getAccountByOrg,
-        clerkOrgId ? { clerkOrgId } : "skip",
-    );
-    const projects = useQuery(
-        api.portal.listGraceProjectsByOrg,
-        clerkOrgId ? { clerkOrgId } : "skip",
-    );
+    const workspaceAccount = useWorkspaceAccount(user?.id ?? null, clerkOrgId);
+    const account = workspaceAccount?.account;
+    const projects = workspaceAccount?.projects;
 
     // The rail shows the newest project only. A list of older ones repeated
     // what /portal/grace already does better, and crowded out the two things

@@ -58,6 +58,7 @@ describe("submitResaleCertificate", () => {
         await submit(t, { issuingState: " ca " });
 
         const certs = await t.query(api.resaleCertificates.listCertificatesByOrg, {
+            writeToken: WRITE_TOKEN,
             clerkOrgId: ORG,
         });
         expect(certs[0].issuingState).toBe("CA");
@@ -82,12 +83,13 @@ describe("submitResaleCertificate", () => {
         await submit(t, { permitNumber: "OLD-1" });
         await submit(t, { permitNumber: "NEW-2" });
 
-        const pending = await t.query(api.resaleCertificates.listPendingCertificates, {});
+        const pending = await t.query(api.resaleCertificates.listPendingCertificates, { writeToken: WRITE_TOKEN });
         expect(pending).toHaveLength(1);
         expect(pending[0].permitNumber).toBe("NEW-2");
 
         // The superseded row is kept as history, not deleted.
         const all = await t.query(api.resaleCertificates.listCertificatesByOrg, {
+            writeToken: WRITE_TOKEN,
             clerkOrgId: ORG,
         });
         expect(all).toHaveLength(2);
@@ -110,6 +112,7 @@ describe("approveResaleCertificate", () => {
         });
 
         const active = await t.query(api.resaleCertificates.getActiveCertificateForOrg, {
+            writeToken: WRITE_TOKEN,
             clerkOrgId: ORG,
         });
         expect(active?.status).toBe("approved");
@@ -127,6 +130,7 @@ describe("approveResaleCertificate", () => {
         });
 
         const active = await t.query(api.resaleCertificates.getActiveCertificateForOrg, {
+            writeToken: WRITE_TOKEN,
             clerkOrgId: ORG,
         });
         // Approval in Convex is not exemption in Shopify.
@@ -151,11 +155,13 @@ describe("approveResaleCertificate", () => {
         });
 
         const all = await t.query(api.resaleCertificates.listCertificatesByOrg, {
+            writeToken: WRITE_TOKEN,
             clerkOrgId: ORG,
         });
         expect(all.filter((c) => c.status === "approved")).toHaveLength(1);
 
         const active = await t.query(api.resaleCertificates.getActiveCertificateForOrg, {
+            writeToken: WRITE_TOKEN,
             clerkOrgId: ORG,
         });
         expect(active?.permitNumber).toBe("SECOND");
@@ -225,7 +231,7 @@ describe("rejectResaleCertificate", () => {
         });
 
         expect(
-            await t.query(api.resaleCertificates.getActiveCertificateForOrg, { clerkOrgId: ORG }),
+            await t.query(api.resaleCertificates.getActiveCertificateForOrg, { writeToken: WRITE_TOKEN, clerkOrgId: ORG }),
         ).toBeNull();
     });
 });
@@ -244,7 +250,7 @@ describe("expiry", () => {
         });
 
         expect(
-            await t.query(api.resaleCertificates.getActiveCertificateForOrg, { clerkOrgId: ORG }),
+            await t.query(api.resaleCertificates.getActiveCertificateForOrg, { writeToken: WRITE_TOKEN, clerkOrgId: ORG }),
         ).not.toBeNull();
 
         await new Promise((resolve) => setTimeout(resolve, 80));
@@ -252,7 +258,7 @@ describe("expiry", () => {
         // Still status "approved" in the row, but expired in fact — the read
         // must not trust the stale status.
         expect(
-            await t.query(api.resaleCertificates.getActiveCertificateForOrg, { clerkOrgId: ORG }),
+            await t.query(api.resaleCertificates.getActiveCertificateForOrg, { writeToken: WRITE_TOKEN, clerkOrgId: ORG }),
         ).toBeNull();
     });
 
