@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import { gunzipSync } from "node:zlib";
 import { describe, expect, it, vi } from "vitest";
 import { FAQ_POLICY_ENTRIES, FAQ_POLICY_SOURCE, buildFaqPolicyPrompt } from "../src/lib/faqPolicy";
-import { buildSystemPrompt, SALES_FLOW } from "../convex/gracePrompt";
+import { buildSystemPrompt, SALES_FLOW, VOICE_MODE_ADDENDUM } from "../convex/gracePrompt";
 import { GRACE_TOOLS } from "../convex/graceToolDefs";
 import { GRACE_REALTIME_INSTRUCTIONS } from "../src/lib/grace/realtimeInstructions";
 import { buildPolicyToolResult, selectPolicySections } from "../src/lib/grace/policyCorpus";
@@ -99,8 +99,9 @@ describe("policy parity across Grace channels", () => {
         for (const channel of ["text", "browser"] as const) {
             const prompt = buildSystemPrompt({ channel });
             expect(prompt.split(buildFaqPolicyPrompt())).toHaveLength(2);
+            expect(prompt).toContain("Never present fitment information as a commercial guarantee.");
             for (const entry of FAQ_POLICY_ENTRIES) expect(prompt).toContain(entry.a);
-            for (const stale of ["within 30 days", "POLICY FACTS — MEMORISE", "POLICIES & LOGISTICS", "ONLY fall back to sample", "there's no unit minimum"])
+            for (const stale of ["within 30 days", "POLICY FACTS — MEMORISE", "POLICIES & LOGISTICS", "ONLY fall back to sample", "there's no unit minimum", "System Guarantee", "GUARANTEED to fit", "9.98mm to 10.04mm", "will seat perfectly", "every closure perfectly matches"])
                 expect(prompt).not.toContain(stale);
         }
         expect(GRACE_TOOLS.filter((tool) => tool.type === "function").map((tool) => tool.function.name)).not.toContain("getPolicy");
@@ -108,6 +109,19 @@ describe("policy parity across Grace channels", () => {
         expect(readFileSync("src/app/api/grace/chat/route.ts", "utf8")).toContain("api.grace.askGrace");
         expect(readFileSync("convex/grace.ts", "utf8")).toContain('buildSystemPrompt({ channel: "text" })');
         expect(SALES_FLOW).not.toContain("No unit minimums");
+    });
+
+    it("allows requested verified sample item codes in every prompt mode without inventing decoration minimums", () => {
+        for (const prompt of [buildSystemPrompt({ channel: "text" }), buildSystemPrompt({ channel: "browser" }), VOICE_MODE_ADDENDUM]) {
+            expect(prompt).toContain("Only when the customer requests item codes for a sample-order email");
+            expect(prompt).toContain("exact websiteSku values from verified catalog tool rows");
+            expect(prompt).toContain("If a websiteSku is unavailable, ask the team to verify the item code");
+            for (const stale of ["No SKU codes", "NEVER say SKU codes", "1,000+ unit minimum", "50–100 units"])
+                expect(prompt).not.toContain(stale);
+        }
+        const text = buildSystemPrompt({ channel: "text" });
+        expect(text).toContain("Screen printing: ask the team to confirm");
+        expect(text).toContain("Digital printing: ask the team to confirm");
     });
 
     it("requires Realtime lookup for all policy topics and leaves real gaps explicit", () => {

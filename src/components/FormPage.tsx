@@ -222,7 +222,7 @@ export default function FormPage({ formType, title, subtitle, fields }: FormPage
                     <h1 className="font-serif text-3xl text-obsidian mb-3">Thank You</h1>
                     <p className="text-slate text-sm leading-relaxed mb-8">
                         {formType === "sample"
-                            ? "We've received your sample request. Our team will review it and get back to you within 1-2 business days."
+                            ? "We've received your sample inquiry."
                             : formType === "quote"
                             ? "Your quote request has been submitted. Our sales team will prepare a custom quote and reach out shortly."
                             : "Your message has been received. We'll get back to you as soon as possible."}

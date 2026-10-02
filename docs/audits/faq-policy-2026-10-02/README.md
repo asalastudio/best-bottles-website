@@ -23,7 +23,7 @@ Jordan designated https://www.bestbottles.com/faq.php the sole approved current 
 | Fallback | `/api/grace/chat` → `convex/grace.askGrace` → `buildSystemPrompt({ channel: "text" })` → `buildFaqPolicyPrompt()` |
 | Browser prompt endpoint | `buildSystemPrompt()` → same generated policy block |
 
-The fallback still has its existing six catalog tools; it does not receive instructions to call a nonexistent `getPolicy`. No gateway/catalog/navigation implementation or tool definition changed. Prompt policy duplication and conflicting sample upsell/guarantee claims were removed. Non-policy retrieval, channel capability, and navigation instructions remain in place.
+The fallback still has its existing six catalog tools; it does not receive instructions to call a nonexistent `getPolicy`. No gateway/catalog/navigation implementation or tool definition changed. Follow-up review also removed the remaining blanket system-fit guarantee and unverified decoration quantity minimums, allowed requested sample-email item codes only from verified `websiteSku` values in every prompt mode, and removed the sample form success branch's unsupported 1–2-business-day response promise. A DOM regression submits the actual sample page through the real FormPage success branch; only the persistence boundary and site chrome are mocked. Prompt policy duplication and conflicting sample upsell/guarantee claims were removed. Non-policy retrieval, channel capability, and navigation instructions remain in place.
 
 ## Source verification matrix
 
