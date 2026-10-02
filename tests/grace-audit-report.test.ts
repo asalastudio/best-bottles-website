@@ -62,8 +62,8 @@ describe("scenario catalogue", () => {
     it("guards the two historical critical failures", () => {
         // Policy fabrication: the audit must reject the invented damage window.
         const policy = GRACE_AUDIT_SCENARIOS.find((s) => s.id === "D13");
-        expect(policy?.expect.mustIncludeAll).toContain("7 days");
-        expect(policy?.expect.mustNotInclude).toContain("2 business days");
+        expect(policy?.expect.mustIncludeAll).toContain("7 business days");
+        expect(policy?.expect.mustNotInclude).toContain("30 days");
 
         // SKU false-negatives: real SKUs must never be denied.
         const sku = GRACE_AUDIT_SCENARIOS.find((s) => s.id === "A1b");
