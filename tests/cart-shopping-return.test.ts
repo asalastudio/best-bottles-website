@@ -45,6 +45,35 @@ describe("safe cart shopping destinations", () => {
         expect(validateShoppingReturn("/collections?sku=PRIVATE#private")).toBe("/collections");
     });
 
+    it.each(["category", "family", "families"])("preserves the known Cap/Closure catalog %s", key => {
+        const path = `/catalog?${key}=Cap%2FClosure`;
+        expect(validateShoppingReturn(path)).toBe(path);
+    });
+
+    it("preserves Cap/Closure alongside comma-separated and repeated component families", () => {
+        const path = "/es/catalog?families=Cap%2FClosure%2CSprayer&families=Dropper";
+        expect(validateShoppingReturn(path)).toBe(path);
+    });
+
+    it.each(["https%3A%2F%2Fevil.test", "%2F%2Fevil.test", "Cap%2FClosure%2Fevil", "Cap%2FClosure%2C%2F%2Fevil.test"])("rejects arbitrary slash-bearing catalog values: %s", value => {
+        expect(validateShoppingReturn(`/catalog?category=${value}&family=${value}&families=${value}`)).toBe("/catalog");
+    });
+
+    it("limits the slash-label exception to relevant catalog filters", () => {
+        expect(validateShoppingReturn("/catalog?shop=Cap%2FClosure&colors=Cap%2FClosure")).toBe("/catalog");
+        expect(validateShoppingReturn("/products/elegant?cap=Cap%2FClosure")).toBe("/products/elegant");
+        expect(validateShoppingReturn("/matrix?family=Cap%2FClosure")).toBe("/matrix");
+    });
+
+    it.each([1, 9999, 10000, 99999])("preserves valid PDP quantity %s", quantity => {
+        const path = `/products/elegant?qty=${quantity}`;
+        expect(validateShoppingReturn(path)).toBe(path);
+    });
+
+    it.each(["0", "-1", "1.5", "100000", "01", "1e4"])("drops invalid PDP quantity %s", quantity => {
+        expect(validateShoppingReturn(`/products/elegant?qty=${quantity}`)).toBe("/products/elegant");
+    });
+
     it.each(["buyer%40example.test", "https%3A%2F%2Fprivate.test", "%2540private", "%0Asecret", "%3Cscript%3E"])("drops unsafe content inside allowlisted values: %s", value => {
         expect(validateShoppingReturn(`/products/elegant?sku=${value}&cap=silver`)).toBe("/products/elegant?cap=silver");
         expect(validateShoppingReturn(`/matrix?family=${value}`)).toBe("/matrix");

@@ -13,8 +13,8 @@ Scope: the approved minimum/CTA/navigation clarification only. Stacked on PR #34
 
 ## Validation
 
-- Full suite: **303 files passed, 2 skipped; 2,766 tests passed, 7 skipped**.
-- Focused tests after return-URL hardening: **82 passed**, including PR #348 cart recovery, minimum, readiness and existing wholesale fallback tests.
+- Historical full local suite at `a0b44a71`: **303 files passed, 2 skipped; 2,777 tests passed, 7 skipped**. Fresh exact-head CI is required after each correction.
+- Focused tests after catalog-label and quantity corrections: **101 passed**, including PR #348 cart recovery, minimum, readiness and existing wholesale fallback tests. Regression coverage preserves the exact `Cap/Closure` category/component-family label (including multi-value families), rejects arbitrary slash-bearing values, and preserves PDP quantities 1–99,999 while rejecting out-of-range or malformed quantities.
 - Changed-file lint: clean. Full lint: **0 errors, 87 existing warnings**.
 - Browser component fixture: 390×844 and 320×568; disabled minimum explanation, quote/currency state, scrollable footer, Continue shopping close, and keyboard focus wrap checked. Fixture stubs cart services and site chrome; it is not a live/authenticated Shopify checkout test.
 - Exact-head CI/build results are recorded in the PR; historical results for d8081126 do not establish results for a later head. On the user's machine, default TypeScript resolution stalled reading unrelated iCloud-backed parent `Documents/node_modules`; a separate `/tmp` validation copy avoids that unrelated dependency tree.

@@ -21,9 +21,15 @@ function shoppingParams(path: string, params: URLSearchParams): string {
     for (const [key, value] of params) {
         // Structured catalog labels/SKUs only: no emails, URLs, encoded payloads
         // or controls, including under an otherwise recognized parameter name.
-        if (!allowed.has(key) || !value || value.length > 160 || !/^[a-zA-Z0-9 _.,()\-]+$/.test(value)) continue;
+        if (!allowed.has(key) || !value || value.length > 160) continue;
+        // Cap/Closure is a literal category/component-family label. Permit only
+        // that slash-bearing token in catalog facets, never arbitrary slashes.
+        const catalogLabels = allowed === CATALOG_PARAMS && ["category", "family", "families"].includes(key);
+        const labels = catalogLabels && MULTI_VALUE_PARAMS.has(key) ? value.split(",") : [value];
+        if (!labels.every(label => /^[a-zA-Z0-9 _.,()\-]+$/.test(label) || (catalogLabels && label === "Cap/Closure"))) continue;
         if (key === "sku" && !/^[a-zA-Z0-9_.-]{1,80}$/.test(value)) continue;
-        if (key === "qty" && !/^[1-9]\d{0,3}$/.test(value)) continue;
+        // Match the redesigned PDP's supported 1–99,999 quantity range.
+        if (key === "qty" && !/^[1-9]\d{0,4}$/.test(value)) continue;
         if ((key === "priceMin" || key === "priceMax") && !/^\d{1,6}(?:\.\d{1,2})?$/.test(value)) continue;
         if (key === "view" && value !== "line" && value !== "visual") continue;
         if (key === "scope" && value !== "all") continue;
