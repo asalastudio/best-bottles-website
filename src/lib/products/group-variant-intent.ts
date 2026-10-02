@@ -132,14 +132,15 @@ function applyOpenMouthFinishAllowlist<T extends SkuApplicatorSignals>(
 ): T[] {
     if (!isSquare15OpenMouthSlug(slug)) return [...variants];
     if (intent && intent !== "cap") return [...variants];
-    const allowed = variants.filter((variant) => isAllowedSquare15OpenMouthFinish(variant));
-    return allowed.length > 0 ? allowed : [...variants];
+    // This is an explicit commercial restriction, not an inferred vocabulary:
+    // a partial catalog response must not re-enable an unapproved cap.
+    return variants.filter((variant) => isAllowedSquare15OpenMouthFinish(variant));
 }
 
 /**
  * Keep only variants that belong on this product page. Fail open when the
- * filter would empty the group (unknown SKU vocabulary) so a page still
- * renders; a Cap page with real cap SKUs plus leaked spray rows keeps the caps.
+ * inferred filter would empty the group (unknown SKU vocabulary) so a page still
+ * renders; explicit finish allowlists remain closed even when no approved row is present.
  */
 export function filterVariantsForGroupIntent<T extends SkuApplicatorSignals>(
     slug: string,
