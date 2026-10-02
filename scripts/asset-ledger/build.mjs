@@ -142,8 +142,12 @@ const isRetiredScopeHold = (product) => product?.stockStatus === "Discontinued" 
     typeof product?.importSource === "string" && product.importSource.includes(":retired") && !product?.productGroupId;
 
 // ---------- local kit + plate ledgers ----------
+// Live PROD kit census is 2026-09-20 (1,728 kit_complete / 555 no_kit / 2,283 plates).
+// The 2026-09-08 ledger (420 kit_complete / 411 candidate / 927 held) is obsolete after
+// the Sep 19 kit ship — do not treat it as current. Override ASSET_LEDGER_KIT_LEDGER
+// only to replay a historical CSV.
 const kitCsv = new Map();
-const csvPath = process.env.ASSET_LEDGER_KIT_LEDGER ?? path.join(root, "docs/reviews/catalog-kit-completion-2026-09-08/kit-completion-ledger.csv");
+const csvPath = process.env.ASSET_LEDGER_KIT_LEDGER ?? path.join(root, "docs/reviews/catalog-kit-completion-2026-09-20/kit-completion-ledger.csv");
 if (existsSync(csvPath)) {
     const [head, ...lines] = readFileSync(csvPath, "utf8").trim().split("\n"); const cols = head.split(",");
     for (const line of lines) { const cells = line.match(/("([^"]|"")*"|[^,]*)(,|$)/g).map((c) => c.replace(/,$/, "").replace(/^"|"$/g, "").replace(/""/g, '"')); const rec = Object.fromEntries(cols.map((c, i) => [c, cells[i]])); kitCsv.set(rec.websiteSku, rec); }
@@ -265,7 +269,8 @@ for (const sku of [...skus].sort()) {
     else if (kc?.state === "kit_candidate") kit = { state: "candidate", reason: kc.reason || undefined };
     else if (kc?.state === "held_with_reason") kit = { state: "held", reason: kc.reason };
     else if (kc?.state === "kit_not_applicable") kit = { state: "not-applicable", reason: kc.reason || undefined };
-    else if (kc?.state === "kit_complete") kit = { state: convex ? "stale" : "unknown", reason: "complete on 2026-09-08 but not served by Convex today" };
+    else if (kc?.state === "no_kit") kit = { state: plate.state.startsWith("plated") ? "none" : "no-plate", reason: kc.reason || undefined };
+    else if (kc?.state === "kit_complete") kit = { state: convex ? "stale" : "unknown", reason: "marked kit_complete on the 2026-09-20 live census but not served by Convex today" };
     else if (kv) kit = { state: kv.status };
     else kit = { state: plate.state.startsWith("plated") ? "none" : "no-plate" };
     const bostonKit = bostonKitApprovals.get(sku);
@@ -381,7 +386,7 @@ for (const family of families) {
 const out = { schemaVersion: 2, sourceRecovery, platePreparation, bottleStandards:readJson(path.join(root,"data/asset-ledger/bottle-standards.json")), groupRows, reviewAudit, scope: {catalogReconciled:false, reviewOnly:rows.filter(r=>!r.productRecord).length, groupRecords:groups.length, duplicateProductRecords:products.filter(p=>p.websiteSku).length-new Set(products.filter(p=>p.websiteSku).map(p=>p.websiteSku)).size, missingSkuRecords: products.filter(p=>!p.websiteSku).map(p=>({id:p._id,family:p.family,itemName:p.itemName,productGroupId:p.productGroupId})), catalogRecordCount:products.length, localPlateCandidates:localCandidates.size, sourceHolds:sourceHolds.size, note:"Current catalog snapshot; live legacy variant scope and physical bottle groups still require reconciliation."}, generatedAt: new Date().toISOString(), deployment, sources, states: {
     hero: { indexed: "registry row, file on disk, bytes match the manifest", "indexed-stale": "indexed, but a newer approved lock exists — a release will repoint it", "indexed-missing-file": "registry row points at a file that is not on disk", "indexed-manifest-mismatch": "the file on disk does not match the manifest hash", "approved-not-indexed": "approved and locked by hash; no registry row yet", "approved-not-locked": "approved on a card; not yet locked", changes_requested: "Jordan asked for a change on the latest card", rejected: "rejected on the latest card", pending: "on a card, decision pending", rendered: "an image exists on a card; no decision", none: "no hero image anywhere" },
     plate: { "plated-approved-legacy-source": "Current paired views match Jordan’s exact approved original-source exception; master PSD provenance is not claimed", plated: "front + cap-off plate served by Convex, glass the right size, built from the PSD master", "plated-no-capoff-by-design": "two-piece product (bulb, tassel, atomizer, reducer, dropper): served, no cap to take off", "plated-wrong-size": "served, but the glass is more than 5% off its bottle's width — the plate is wrong and must be rebuilt", "plated-legacy-source": "served, but built from a legacy website GIF rather than the PSD master — to be rebuilt", "plated-cap-on-only": "front plate only; this product should have a cap-off view and does not", hold: "held with a reason, no plate", none: "no plate", "not-applicable": "not a bottle (component, packaging, gift bag/box)", unknown: "Convex not read" },
-    kit: { live: "kit served by Convex and registered to the current plate", stale: "kit exists but not registered to the served plate", "approved-not-published": "approved on a kit card; not published", changes_requested: "change requested on the latest kit card", rejected: "rejected on the latest kit card", pending: "on a kit card, decision pending", candidate: "kit candidate (2026-09-08 ledger)", held: "held with a reason (2026-09-08 ledger)", "not-applicable": "no kit for this product kind", rendered: "kit image on a card, no decision", none: "plated, no kit work", "no-plate": "no plate, so no kit" },
+    kit: { live: "kit served by Convex and registered to the current plate", stale: "kit exists but not registered to the served plate", "approved-not-published": "approved on a kit card; not published", changes_requested: "change requested on the latest kit card", rejected: "rejected on the latest kit card", pending: "on a kit card, decision pending", candidate: "historical kit candidate (obsolete 2026-09-08 ledger only)", held: "historical hold (obsolete 2026-09-08 ledger only)", "not-applicable": "no kit for this product kind", rendered: "kit image on a card, no decision", none: "plated, no kit work", "no-plate": "no plate, so no kit" },
 }, scoring: {
     hero: "per PRODUCT GROUP — the catalogue shows one hero per group, so a family is scored on groups covered, not SKUs",
     plate: "per SKU that is a bottle; complete only when the plate is served, the right size for its bottle, from the PSD master or an explicitly approved exact-source release exception, and has its cap-off view unless the product is two-piece",

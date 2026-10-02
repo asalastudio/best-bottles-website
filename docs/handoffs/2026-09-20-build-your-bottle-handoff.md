@@ -198,11 +198,11 @@ Most relevant memory files: `project_builder_architecture_findings_2026_09_20.md
 
 ## 2. State of production (verified)
 
-- **1,724 kits on PROD, integrity clean** (`productKits:integrity`). Was 420 two days ago.
+- **1,728 kits on PROD, integrity clean** (`productKits:integrity`). Live census 2026-09-20: `docs/reviews/catalog-kit-completion-2026-09-20/` (full 1,582 / capSplit 146 / bodyOnly 0). The Sep 8 ledger's 420 kit complete is obsolete.
   - +683 on 09-19 (Elegant 203, Diva 129, Circle 109, Round 104, Boston 83, Empire 55) — cut 09-16, never published until then.
   - +621 on 09-19 (25 families, cut from the plates production actually serves). Jordan's words: "ok lets ship The 621 prepared kits".
   - 13 Boston Round roller kits **updated** 09-20 on his phrase "ship Boston Round corrected rollers 2026-09-20".
-- **2,283 plates on PROD.** 2,168 are bottles (115 are Component products, which get no kit). **80% of plated bottles have a kit** (1,724 / 2,168); 444 do not.
+- **2,283 plates on PROD.** 555 plates have no served kit (≈415 bottle-family + ≈140 component/loose-fitment). An earlier same-day note used 1,724 kits / 444 bottle gaps; the live plate×kit join is 1,728 / 555.
 - DEV has fewer kits: 7 families (Boston Round, Circle, Diva, Elegant, Round, Sleek, Tulip) were refused on
   dev because dev's plates are newer renders than prod's. That is correct behaviour, not a bug.
 - **DEV Convex is behind main:** PR #201 added `productKits:forSkus`; it is deployed to PROD only. `/matrix`

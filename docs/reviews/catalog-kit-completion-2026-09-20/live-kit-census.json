@@ -1,0 +1,606 @@
+{
+  "generatedAt": "2026-09-20T21:20:10Z",
+  "deployment": "https://precise-raccoon-123.convex.cloud",
+  "source": "live Convex productPlates.families/byFamily + productKits.forSkus + productKits.integrity",
+  "platesUnique": 2283,
+  "kitsIntegrityRows": 1728.0,
+  "kitsServedByForSkus": 1728,
+  "platesWithoutServedKit": 555,
+  "completeness": {
+    "full": 1582,
+    "capSplit": 146
+  },
+  "note": "forSkus returns null when kit plateSha256 does not match published plate (stale) OR no kit. integrity counts all kit rows including any that forSkus would hide.",
+  "byFamilyName": {
+    "Cylinder 9 ml (0.3 oz) Frosted": {
+      "capSplit": 28,
+      "has_kit": 65,
+      "full": 37
+    },
+    "Cylinder 9 ml (0.3 oz) Clear": {
+      "capSplit": 28,
+      "has_kit": 62,
+      "full": 34,
+      "no_kit": 3
+    },
+    "Cylinder 50 ml (1.69 oz) Clear": {
+      "capSplit": 12,
+      "has_kit": 47,
+      "full": 35
+    },
+    "Cylinder 25 ml (0.85 oz) Clear": {
+      "full": 33,
+      "has_kit": 45,
+      "capSplit": 12
+    },
+    "Elegant 60ml Frosted 18 415": {
+      "full": 45,
+      "has_kit": 45,
+      "no_kit": 2
+    },
+    "Diva 46ml Clear 18 415": {
+      "full": 44,
+      "has_kit": 44,
+      "no_kit": 11
+    },
+    "Empire 50ml Clear 18 415": {
+      "full": 44,
+      "has_kit": 44,
+      "no_kit": 3
+    },
+    "Cylinder 100 ml (3.38 oz) Clear": {
+      "full": 31,
+      "has_kit": 43,
+      "capSplit": 12
+    },
+    "Elegant 60ml Clear 18 415": {
+      "full": 43,
+      "has_kit": 43,
+      "no_kit": 4
+    },
+    "Elegant 100ml Frosted 18 415": {
+      "full": 42,
+      "has_kit": 42,
+      "no_kit": 1
+    },
+    "Circle 100ml Frosted 18 415": {
+      "full": 41,
+      "has_kit": 41,
+      "no_kit": 2
+    },
+    "Empire 100ml Clear 18 415": {
+      "full": 41,
+      "has_kit": 41,
+      "no_kit": 3
+    },
+    "Slim 50ml Clear 18 415": {
+      "full": 41,
+      "has_kit": 41,
+      "no_kit": 2
+    },
+    "Elegant 100ml Clear 18 415": {
+      "full": 40,
+      "has_kit": 40,
+      "no_kit": 4
+    },
+    "Round 128ml Clear 18 415": {
+      "full": 40,
+      "has_kit": 40,
+      "no_kit": 6
+    },
+    "Circle 50ml Clear 18 415": {
+      "full": 39,
+      "has_kit": 39,
+      "no_kit": 7
+    },
+    "Diva 46 ml \u2014 Frosted": {
+      "full": 38,
+      "has_kit": 38,
+      "no_kit": 2
+    },
+    "Round 78ml Frosted 18 415": {
+      "no_kit": 5,
+      "full": 38,
+      "has_kit": 38
+    },
+    "Sleek 100ml Clear 18 415": {
+      "full": 37,
+      "has_kit": 37,
+      "no_kit": 7
+    },
+    "Circle 100ml Clear 18 415": {
+      "no_kit": 7,
+      "full": 36,
+      "has_kit": 36
+    },
+    "Diva 100ml Clear 18 415": {
+      "full": 36,
+      "has_kit": 36,
+      "no_kit": 7
+    },
+    "Round 78ml Clear 18 415": {
+      "full": 36,
+      "has_kit": 36,
+      "no_kit": 7
+    },
+    "Sleek 50ml Clear 18 415": {
+      "full": 36,
+      "has_kit": 36,
+      "no_kit": 7
+    },
+    "Slim 30ml Clear 18 415": {
+      "full": 36,
+      "has_kit": 36,
+      "no_kit": 1
+    },
+    "Cylinder 5 ml (0.17 oz) Clear": {
+      "capSplit": 24,
+      "has_kit": 35,
+      "full": 11
+    },
+    "Cylinder 5 ml (0.17 oz) Cobalt Blue": {
+      "capSplit": 28,
+      "has_kit": 35,
+      "full": 7
+    },
+    "Grace 55ml Clear 18 415": {
+      "full": 35,
+      "has_kit": 35,
+      "no_kit": 8
+    },
+    "Diva 30ml Clear 18 415": {
+      "full": 34,
+      "has_kit": 34
+    },
+    "Round 128ml Frosted 18 415": {
+      "full": 31,
+      "has_kit": 31,
+      "no_kit": 15
+    },
+    "Cylinder 9 ml (0.3 oz) Amber": {
+      "full": 29,
+      "has_kit": 29
+    },
+    "Diamond 60ml Clear 18 415": {
+      "full": 29,
+      "has_kit": 29,
+      "no_kit": 14
+    },
+    "Flair 15ml Clear 13 415": {
+      "full": 29,
+      "has_kit": 29,
+      "no_kit": 1
+    },
+    "Rectangle 10ml Clear 13 415": {
+      "full": 29,
+      "has_kit": 29,
+      "no_kit": 29
+    },
+    "Sleek 8ml Clear 13 415": {
+      "full": 28,
+      "has_kit": 28,
+      "no_kit": 2
+    },
+    "Circle 15ml Clear 13 415": {
+      "full": 27,
+      "has_kit": 27,
+      "no_kit": 3
+    },
+    "Cylinder 9 ml (0.3 oz) Cobalt Blue": {
+      "full": 27,
+      "has_kit": 27,
+      "no_kit": 2
+    },
+    "Elegant 15ml Clear 13 415": {
+      "full": 27,
+      "has_kit": 27,
+      "no_kit": 4
+    },
+    "Tulip 5ml Amber 13 415": {
+      "full": 27,
+      "has_kit": 27,
+      "no_kit": 3
+    },
+    "Royal 13ml Clear 13 415": {
+      "full": 26,
+      "has_kit": 26,
+      "no_kit": 3
+    },
+    "Elegant 15ml Frosted 13 415": {
+      "full": 24,
+      "has_kit": 24,
+      "no_kit": 4
+    },
+    "Sleek 30ml Clear 18 415": {
+      "no_kit": 14,
+      "full": 23,
+      "has_kit": 23
+    },
+    "Cylinder 9 ml (0.3 oz) Swirl": {
+      "full": 22,
+      "has_kit": 22,
+      "no_kit": 7
+    },
+    "Slim 100ml Clear 18 415": {
+      "no_kit": 21,
+      "full": 22,
+      "has_kit": 22
+    },
+    "Circle 50ml Frosted 18 415": {
+      "full": 19,
+      "has_kit": 19,
+      "no_kit": 16
+    },
+    "Boston Round 60ml Cobalt Blue 20 400": {
+      "full": 16,
+      "has_kit": 16,
+      "no_kit": 1
+    },
+    "Boston Round 30ml Amber 20 400": {
+      "no_kit": 3,
+      "full": 15,
+      "has_kit": 15
+    },
+    "Boston Round 30ml Clear 20 400": {
+      "full": 12,
+      "has_kit": 12,
+      "no_kit": 6
+    },
+    "Boston Round 60ml Amber 20 400": {
+      "full": 12,
+      "has_kit": 12,
+      "no_kit": 6
+    },
+    "Boston Round 60ml Clear 20 400": {
+      "no_kit": 8,
+      "full": 11,
+      "has_kit": 11
+    },
+    "Boston Round 30ml Cobalt Blue 20 400": {
+      "no_kit": 7,
+      "full": 10,
+      "has_kit": 10
+    },
+    "Square 15ml Clear 13 415": {
+      "full": 10,
+      "has_kit": 10,
+      "no_kit": 19
+    },
+    "Elegant 30ml Frosted 15 415": {
+      "full": 7,
+      "has_kit": 7
+    },
+    "Boston Round 15ml Amber 18 400": {
+      "full": 6,
+      "has_kit": 6,
+      "no_kit": 1
+    },
+    "Boston Round 15ml Cobalt Blue 18 400": {
+      "no_kit": 2,
+      "full": 5,
+      "has_kit": 5
+    },
+    "Circle 30ml Clear 15 415": {
+      "full": 4,
+      "has_kit": 4,
+      "no_kit": 3
+    },
+    "Cylinder 28 ml (0.95 oz) Clear": {
+      "full": 4,
+      "has_kit": 4
+    },
+    "Elegant 30ml Clear 15 415": {
+      "no_kit": 3,
+      "full": 4,
+      "has_kit": 4
+    },
+    "Vial 4ml Blue 13 425": {
+      "full": 3,
+      "has_kit": 3
+    },
+    "Vial 4ml Green 13 425": {
+      "full": 3,
+      "has_kit": 3
+    },
+    "Cream Jar 15ml Clear 37mm": {
+      "full": 2,
+      "has_kit": 2
+    },
+    "Cream Jar 30ml Frosted 45mm": {
+      "full": 2,
+      "has_kit": 2
+    },
+    "Cream Jar 40ml Frosted 48 400": {
+      "full": 2,
+      "has_kit": 2
+    },
+    "Cream Jar 5ml Amber 27mm": {
+      "full": 2,
+      "has_kit": 2
+    },
+    "Cylinder 30 ml (1.01 oz) Clear": {
+      "capSplit": 2,
+      "has_kit": 2
+    },
+    "Cylinder 4 ml (0.14 oz) Clear": {
+      "full": 2,
+      "has_kit": 2
+    },
+    "Vial 2ml Amber 8 425": {
+      "full": 2,
+      "has_kit": 2
+    },
+    "Vial 2ml Clear 8 425": {
+      "full": 2,
+      "has_kit": 2
+    },
+    "Vial 4ml Amber 13 425": {
+      "full": 2,
+      "has_kit": 2,
+      "no_kit": 1
+    },
+    "Vial 9ml Clear 18 400": {
+      "full": 2,
+      "has_kit": 2
+    },
+    "Atomizer 10ml Black 17mm": {
+      "full": 1,
+      "has_kit": 1,
+      "no_kit": 1
+    },
+    "Atomizer 5ml Clear 10mm": {
+      "full": 1,
+      "has_kit": 1,
+      "no_kit": 3
+    },
+    "Circle 50ml Frosted 18 400": {
+      "full": 1,
+      "has_kit": 1
+    },
+    "Cream Jar 20ml White 40mm": {
+      "full": 1,
+      "has_kit": 1
+    },
+    "Cream Jar 30ml Amber 45mm": {
+      "full": 1,
+      "has_kit": 1,
+      "no_kit": 1
+    },
+    "Cream Jar 40ml Amber 48 400": {
+      "full": 1,
+      "has_kit": 1,
+      "no_kit": 1
+    },
+    "Cream Jar 5ml Clear 27mm": {
+      "full": 1,
+      "has_kit": 1
+    },
+    "Cream Jar 63ml White 58mm": {
+      "full": 1,
+      "has_kit": 1
+    },
+    "Cylinder 3.3 ml (0.1 oz) Clear": {
+      "no_kit": 1,
+      "full": 1,
+      "has_kit": 1
+    },
+    "Cylinder 5.5 ml (1/6 oz) Clear": {
+      "full": 1,
+      "has_kit": 1
+    },
+    "Decorative 4ml Frosted 8mm": {
+      "full": 1,
+      "has_kit": 1,
+      "no_kit": 1
+    },
+    "Vial 4ml Clear 13 425": {
+      "full": 1,
+      "has_kit": 1,
+      "no_kit": 2
+    },
+    "Teardrop 9ml Clear Ground": {
+      "full": 1,
+      "has_kit": 1
+    },
+    "Aluminum Bottle": {
+      "no_kit": 2
+    },
+    "Aluminum Bottle 120ml Clear 20 410": {
+      "no_kit": 2
+    },
+    "Aluminum Bottle 250ml Clear 20 410": {
+      "no_kit": 1
+    },
+    "Aluminum Bottle 65ml Clear 20 410": {
+      "no_kit": 1
+    },
+    "Aluminum Bottle 65ml White 20 410": {
+      "no_kit": 1
+    },
+    "Apothecary 118ml Clear Ground": {
+      "no_kit": 1
+    },
+    "Apothecary 15ml Cobalt Blue Ground": {
+      "no_kit": 1
+    },
+    "Apothecary 30ml Clear Ground": {
+      "no_kit": 1
+    },
+    "Apothecary 30ml Cobalt Blue Ground": {
+      "no_kit": 1
+    },
+    "Apothecary 30ml Green Ground": {
+      "no_kit": 1
+    },
+    "Atomizer 10ml Clear 17mm": {
+      "no_kit": 6
+    },
+    "Atomizer 10ml Cobalt Blue 17mm": {
+      "no_kit": 1
+    },
+    "Atomizer 10ml Green 17mm": {
+      "no_kit": 1
+    },
+    "Atomizer 10ml Pink 17mm": {
+      "no_kit": 1
+    },
+    "Atomizer 5ml Black 10mm": {
+      "no_kit": 3
+    },
+    "Atomizer 5ml Clear 13 415": {
+      "no_kit": 3
+    },
+    "Atomizer 5ml Cobalt Blue 10mm": {
+      "no_kit": 1
+    },
+    "Atomizer 5ml Pink 10mm": {
+      "no_kit": 1
+    },
+    "Bell": {
+      "no_kit": 4
+    },
+    "Boston Round 15ml Clear 18 400": {
+      "no_kit": 2
+    },
+    "Cap Closure 18 415": {
+      "no_kit": 10
+    },
+    "Cap Closure 20 400": {
+      "no_kit": 2
+    },
+    "Cap Closure 8 425": {
+      "no_kit": 2
+    },
+    "Cylinder 114 ml (3.85 oz) Clear": {
+      "no_kit": 1
+    },
+    "Cylinder 227 ml (7.68 oz) Clear": {
+      "no_kit": 1
+    },
+    "Cream Jar 3ml Clear 20mm": {
+      "no_kit": 1
+    },
+    "Cream Jar 60ml Frosted 58mm": {
+      "no_kit": 1
+    },
+    "Cylinder 454 ml (15.35 oz) Clear": {
+      "no_kit": 1
+    },
+    "Decorative 10ml Clear 17 52mm": {
+      "no_kit": 1
+    },
+    "Decorative 32ml Clear Ground": {
+      "no_kit": 1
+    },
+    "Decorative 32ml Cobalt Blue Ground": {
+      "no_kit": 1
+    },
+    "Decorative 355ml Clear Ground": {
+      "no_kit": 1
+    },
+    "Decorative 35ml Clear Ground": {
+      "no_kit": 1
+    },
+    "Decorative 35ml Cobalt Blue Ground": {
+      "no_kit": 1
+    },
+    "Decorative 35ml Green Ground": {
+      "no_kit": 1
+    },
+    "Decorative 3ml Clear 14 3mm": {
+      "no_kit": 1
+    },
+    "Decorative 5ml Clear 17 52mm": {
+      "no_kit": 1
+    },
+    "Decorative 6ml Clear 14 3mm": {
+      "no_kit": 1
+    },
+    "Dropper 18 400": {
+      "no_kit": 6
+    },
+    "Dropper 18 415": {
+      "no_kit": 3
+    },
+    "Dropper 20 400": {
+      "no_kit": 12
+    },
+    "Lotion Bottle 30ml Clear 18mm": {
+      "no_kit": 1
+    },
+    "Lotion Bottle 3ml Clear Snap On": {
+      "no_kit": 1
+    },
+    "Lotion Pump 18 415": {
+      "no_kit": 7
+    },
+    "Pillar": {
+      "no_kit": 4
+    },
+    "Plastic Bottle 30ml Clear 13 415": {
+      "no_kit": 3
+    },
+    "Rectangle 9ml Clear Ground": {
+      "no_kit": 3
+    },
+    "Roll On Cap 13 415": {
+      "no_kit": 13
+    },
+    "Roll On Cap 15 415": {
+      "no_kit": 2
+    },
+    "Roll On Cap 17 415": {
+      "no_kit": 13
+    },
+    "Roll On Cap 20 400": {
+      "no_kit": 6
+    },
+    "Royal 14ml Clear 11mm": {
+      "no_kit": 1
+    },
+    "Sleek 5ml Clear 13 415": {
+      "no_kit": 30
+    },
+    "Sprayer 13 415": {
+      "no_kit": 5
+    },
+    "Sprayer 15 415": {
+      "no_kit": 5
+    },
+    "Sprayer 17 415": {
+      "no_kit": 6
+    },
+    "Sprayer 18 415": {
+      "no_kit": 23
+    },
+    "Tulip 6ml Clear 13 415": {
+      "no_kit": 30
+    },
+    "Vial": {
+      "no_kit": 3
+    },
+    "Vial 1ml Amber Plug": {
+      "no_kit": 2
+    },
+    "Vial 1ml Clear Plug": {
+      "no_kit": 2
+    },
+    "Vial 2ml Amber 13 425": {
+      "no_kit": 1
+    },
+    "Teardrop 9ml Cobalt Blue Ground": {
+      "no_kit": 1
+    },
+    "Teardrop 9ml Green Ground": {
+      "no_kit": 1
+    }
+  },
+  "sep8LedgerCompare": {
+    "kit_complete_then": 420,
+    "kit_candidate_then": 411,
+    "held_then": 927,
+    "kits_integrity_now": 1728.0,
+    "kits_served_now": 1728
+  },
+  "sep19ShipUniqueSkus": 1304
+}

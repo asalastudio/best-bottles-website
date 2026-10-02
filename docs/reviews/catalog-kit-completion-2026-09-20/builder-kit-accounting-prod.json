@@ -1,0 +1,302 @@
+{
+  "generatedAt": "2026-09-20T21:20:41Z",
+  "deployment": "https://precise-raccoon-123.convex.cloud",
+  "note": "Builder funnel configs vs productKits.forSkus on PROD. Local candidate batches not included (those were Sep 16 pre-ship).",
+  "families": [
+    {
+      "family": "Cylinder",
+      "configurations": 290,
+      "kitFull": 228,
+      "kitCapSplit": 62,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Elegant",
+      "configurations": 225,
+      "kitFull": 207,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 18
+    },
+    {
+      "family": "Circle",
+      "configurations": 185,
+      "kitFull": 150,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 35
+    },
+    {
+      "family": "Diva",
+      "configurations": 157,
+      "kitFull": 137,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 20
+    },
+    {
+      "family": "Boston Round",
+      "configurations": 104,
+      "kitFull": 78,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 26
+    },
+    {
+      "family": "Round",
+      "configurations": 91,
+      "kitFull": 77,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 14
+    },
+    {
+      "family": "Empire",
+      "configurations": 55,
+      "kitFull": 49,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 6
+    },
+    {
+      "family": "Sleek",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Slim",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Sprayer",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Rectangle",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Tulip",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Diamond",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Grace",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Cap/Closure",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Roll-On Cap",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Flair",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Royal",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Square",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Vial",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Atomizer",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Dropper",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Gift Bag",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Cream Jar",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Gift Box",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Decorative",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Packaging Supply",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Lotion Pump",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Aluminum Bottle",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Bell",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Apothecary",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Lotion Bottle",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Pillar",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Plastic Bottle",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Teardrop",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    },
+    {
+      "family": "Tool",
+      "configurations": 0,
+      "kitFull": 0,
+      "kitCapSplit": 0,
+      "kitBodyOnly": 0,
+      "none": 0
+    }
+  ],
+  "totals": {
+    "configurations": 1107,
+    "kitFull": 926,
+    "kitCapSplit": 62,
+    "kitBodyOnly": 0,
+    "none": 119
+  }
+}
