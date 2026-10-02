@@ -6,6 +6,7 @@
  */
 
 import { createHmac, timingSafeEqual } from "crypto";
+import { orderStatusFromEvidence, sourceTimestamp } from "../../convex/lib/shopifyOrderTruth";
 
 // ─── HMAC verification ──────────────────────────────────────────────────────
 
@@ -146,6 +147,9 @@ export interface WebhookOrderFulfillment {
     id?: number;
     order_id?: number;
     created_at?: string | null;
+    updated_at?: string | null;
+    status?: string | null;
+    tracking_info?: Array<{ company: string | null; number: string | null; url: string | null }>;
     /** Shopify's delivery state: "in_transit", "delivered", "out_for_delivery", … */
     shipment_status: string | null;
     tracking_company: string | null;
@@ -173,22 +177,42 @@ export interface WebhookFulfillment extends WebhookOrderFulfillment {
  *
  * Shopify exposes tracking in both singular and plural forms and does not
  * always agree with itself about which is populated, so both are read. A
- * shipment with no tracking number at all is still worth keeping — it tells
- * the customer part of the order has left, which is more than silence.
+ * fulfillment with no tracking number is still kept, without claiming it has
+ * left the warehouse. Provider shipment state is independent of label creation.
  */
 export function shipmentFromFulfillment(fulfillment: WebhookOrderFulfillment) {
-    const trackingNumber =
-        fulfillment.tracking_number ?? fulfillment.tracking_numbers?.[0] ?? undefined;
-    const trackingUrl = fulfillment.tracking_url ?? fulfillment.tracking_urls?.[0] ?? undefined;
-    const shippedAt = fulfillment.created_at ? new Date(fulfillment.created_at).getTime() : undefined;
+    // Preserve tuple positions: filtering numbers/URLs independently pairs the wrong box.
+    const tracking = fulfillment.tracking_info?.map((t) => ({
+        trackingNumber: t.number || undefined, trackingUrl: t.url || undefined,
+        carrier: t.company || undefined,
+    })) ?? Array.from({ length: Math.max(fulfillment.tracking_numbers?.length ?? 0, fulfillment.tracking_urls?.length ?? 0) }, (_, i) => ({
+        trackingNumber: fulfillment.tracking_numbers?.[i] || undefined,
+        trackingUrl: fulfillment.tracking_urls?.[i] || undefined,
+        carrier: fulfillment.tracking_company || undefined,
+    }));
+    const singular = {
+        trackingNumber: fulfillment.tracking_number || undefined,
+        trackingUrl: fulfillment.tracking_url || undefined,
+        carrier: fulfillment.tracking_company || undefined,
+    };
+    if ((singular.trackingNumber || singular.trackingUrl) && !tracking.some((t) =>
+        t.trackingNumber === singular.trackingNumber && t.trackingUrl === singular.trackingUrl)) {
+        tracking.push(singular);
+    }
+    const packages = tracking.filter((t) => t.trackingNumber || t.trackingUrl);
+    const primary = packages[0];
 
     return {
         shopifyFulfillmentId: fulfillment.id === undefined ? undefined : String(fulfillment.id),
-        trackingNumber: trackingNumber || undefined,
+        trackingNumber: primary?.trackingNumber,
         carrier: fulfillment.tracking_company || undefined,
-        trackingUrl: trackingUrl || undefined,
+        trackingUrl: primary?.trackingUrl,
         shipmentStatus: fulfillment.shipment_status || undefined,
-        shippedAt: Number.isFinite(shippedAt) ? shippedAt : undefined,
+        fulfillmentStatus: fulfillment.status || undefined,
+        sourceUpdatedAt: sourceTimestamp(fulfillment.updated_at),
+        fulfillmentCreatedAt: sourceTimestamp(fulfillment.created_at),
+        // created_at is when fulfillment was recorded, not carrier pickup.
+        packages,
         estimatedDelivery: formatEstimatedDelivery(fulfillment.estimated_delivery_at),
         lineItems: fulfillment.line_items?.map((item) => ({
             sku: item.sku?.trim() || "—",
@@ -217,6 +241,7 @@ export interface WebhookOrder {
     id: number;
     name: string;
     created_at: string;
+    updated_at?: string;
     cancelled_at: string | null;
     /** "fulfilled" | "partial" | null */
     fulfillment_status: string | null;
@@ -228,25 +253,10 @@ export interface WebhookOrder {
     shipping_address?: { city?: string | null; province_code?: string | null } | null;
 }
 
-/**
- * Collapse Shopify's separate cancel flag, fulfilment status and per-shipment
- * delivery state into the four states the portal shows.
- *
- * Cancellation wins over everything: a cancelled order that was already shipped
- * must not keep reading as in transit.
- */
+/** Cancellation and complete fulfillment are separate from shipment delivery. */
 export function orderStatusFromShopify(
     order: Pick<WebhookOrder, "cancelled_at" | "fulfillment_status" | "fulfillments">,
-): "processing" | "in_transit" | "delivered" | "cancelled" {
-    if (order.cancelled_at) return "cancelled";
-
-    const shipments = order.fulfillments ?? [];
-    const delivered = shipments.length > 0
-        && shipments.every((f) => f.shipment_status === "delivered");
-    if (delivered) return "delivered";
-
-    if (order.fulfillment_status === "fulfilled" || order.fulfillment_status === "partial") {
-        return "in_transit";
-    }
-    return "processing";
+) {
+    return orderStatusFromEvidence(Boolean(order.cancelled_at), order.fulfillment_status,
+        (order.fulfillments ?? []).map((f) => ({ shipmentStatus: f.shipment_status ?? undefined, fulfillmentStatus: f.status ?? undefined })));
 }

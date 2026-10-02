@@ -2,7 +2,12 @@ import { mutation } from "./_generated/server";
 import { v } from "convex/values";
 import type { Doc } from "./_generated/dataModel";
 import { serverQuery, verifyWriteToken } from "./portalAuth";
+import { orderStatusFromEvidence } from "./lib/shopifyOrderTruth";
 import { captureServerEvent, distinctIdFor } from "./posthog";
+
+function visibleOrderStatus(order: Doc<"portalOrders">) {
+    return order.source === "shopify" && order.sourceUpdatedAt === undefined ? "unknown" as const : order.status;
+}
 
 function orderTotal(order: Doc<"portalOrders">): number | null {
     if (typeof order.totalAmount === "number") return order.totalAmount;
@@ -66,7 +71,7 @@ export const getShellData = serverQuery({
 
         return {
             account,
-            inTransitCount: orders.filter((order) => order.status === "in_transit").length,
+            inTransitCount: orders.filter((order) => visibleOrderStatus(order) === "in_transit").length,
             draftCount: drafts.filter((draft) => draft.status !== "submitted").length,
         };
     },
@@ -257,9 +262,9 @@ export const getDashboardData = serverQuery({
         const startOfYear = new Date(now.getFullYear(), 0, 1).getTime();
 
         const activeOrders = orders.filter(
-            (order) => order.status === "processing" || order.status === "in_transit"
+            (order) => visibleOrderStatus(order) !== "delivered" && visibleOrderStatus(order) !== "cancelled"
         );
-        const deliveredOrders = orders.filter((order) => order.status === "delivered");
+        const deliveredOrders = orders.filter((order) => visibleOrderStatus(order) === "delivered");
         const ytdSpend = deliveredOrders.reduce(
             (sum, order) => sum + (order.orderDate >= startOfYear ? orderTotal(order) ?? 0 : 0),
             0
@@ -297,7 +302,7 @@ export const getDashboardData = serverQuery({
             stats: {
                 ytdSpend,
                 activeOrderCount: activeOrders.length,
-                inTransitCount: orders.filter((order) => order.status === "in_transit").length,
+                inTransitCount: orders.filter((order) => visibleOrderStatus(order) === "in_transit").length,
                 unitsInFlight,
                 // `availableCredit` used to be `100_000 - ytdSpend`. There is no
                 // credit facility and no net terms at Best Bottles, so that
@@ -309,7 +314,7 @@ export const getDashboardData = serverQuery({
             activeOrders: activeOrders.slice(0, 4).map((order) => ({
                 _id: order._id,
                 orderId: order.orderId,
-                status: order.status,
+                status: visibleOrderStatus(order),
                 estimatedDelivery: order.estimatedDelivery ?? null,
                 totalAmount: orderTotal(order),
                 itemCount: orderItemCount(order),
@@ -342,7 +347,7 @@ export const listOrdersByOrg = serverQuery({
         return orders.map((order) => ({
             _id: order._id,
             orderId: order.orderId,
-            status: order.status,
+            status: visibleOrderStatus(order),
             orderDate: order.orderDate,
             estimatedDelivery: order.estimatedDelivery ?? null,
             carrier: order.carrier ?? null,
@@ -351,6 +356,11 @@ export const listOrdersByOrg = serverQuery({
             itemCount: orderItemCount(order),
             primaryLineItem: order.lineItems[0] ?? null,
             lineItems: order.lineItems,
+            source: order.source ?? null,
+            sourceUpdatedAt: order.sourceUpdatedAt ?? null,
+            shipmentSnapshotComplete: order.shipmentSnapshotComplete ?? false,
+            syncedAt: order.source === "shopify" ? order.updatedAt ?? null : null,
+            shopifyFulfillmentStatus: order.shopifyFulfillmentStatus ?? null,
             shipments: order.shipments ?? [],
             shipTo: order.shipTo ?? null,
         }));
@@ -374,7 +384,7 @@ export const getOrderForOrg = serverQuery({
         return {
             _id: order._id,
             orderId: order.orderId,
-            status: order.status,
+            status: visibleOrderStatus(order),
             orderDate: order.orderDate,
             estimatedDelivery: order.estimatedDelivery ?? null,
             carrier: order.carrier ?? null,
@@ -382,6 +392,10 @@ export const getOrderForOrg = serverQuery({
             totalAmount: orderTotal(order),
             itemCount: orderItemCount(order),
             lineItems: order.lineItems,
+            sourceUpdatedAt: order.sourceUpdatedAt ?? null,
+            shipmentSnapshotComplete: order.shipmentSnapshotComplete ?? false,
+            syncedAt: order.source === "shopify" ? order.updatedAt ?? null : null,
+            shopifyFulfillmentStatus: order.shopifyFulfillmentStatus ?? null,
             shipments: order.shipments ?? [],
             shipTo: order.shipTo ?? null,
             source: order.source ?? null,
@@ -622,9 +636,9 @@ export const renameGraceProject = mutation({
  *     that already exists for exactly this purpose. An order from a retail
  *     buyer with no portal account is not an error — it is simply not a portal
  *     order, and is skipped.
- *  2. **Idempotent.** Shopify redelivers webhooks and sends several updates per
- *     order. Keyed on the numeric Shopify id, a repeat patches the existing row
- *     rather than adding a second copy of the same order.
+ *  2. **Idempotent and ordered.** Shopify order and fulfillment versions are
+ *     compared independently. Equal/older versions do not overwrite data or
+ *     refresh its receipt time. The order id remains the unique row key.
  *  3. **Never overwrites QuickBooks history.** A row sourced from the
  *     historical book is left alone; the two sources share a table but not a
  *     record.
@@ -636,11 +650,18 @@ export const upsertOrderFromShopify = mutation({
         shopifyCustomerId: v.optional(v.string()),
         orderName: v.string(),
         orderDate: v.number(),
+        sourceUpdatedAt: v.optional(v.number()),
+        shopifyFulfillmentStatus: v.optional(v.union(v.string(), v.null())),
+        shopifyCancelledAt: v.optional(v.number()),
         status: v.union(
             v.literal("processing"),
             v.literal("in_transit"),
             v.literal("delivered"),
             v.literal("cancelled"),
+            v.literal("partially_fulfilled"),
+            v.literal("label_created"),
+            v.literal("delivery_problem"),
+            v.literal("unknown"),
         ),
         lineItems: v.array(v.object({
             sku: v.string(),
@@ -659,6 +680,15 @@ export const upsertOrderFromShopify = mutation({
             carrier: v.optional(v.string()),
             trackingUrl: v.optional(v.string()),
             shipmentStatus: v.optional(v.string()),
+            fulfillmentStatus: v.optional(v.string()),
+            sourceUpdatedAt: v.optional(v.number()),
+            fulfillmentCreatedAt: v.optional(v.number()),
+            packages: v.optional(v.array(v.object({
+                trackingNumber: v.optional(v.string()),
+                trackingUrl: v.optional(v.string()),
+                carrier: v.optional(v.string()),
+            }))),
+
             shippedAt: v.optional(v.number()),
             estimatedDelivery: v.optional(v.string()),
             lineItems: v.optional(v.array(v.object({
@@ -668,6 +698,11 @@ export const upsertOrderFromShopify = mutation({
             }))),
         }))),
     },
+    returns: v.union(
+        v.object({ skipped: v.string(), orderId: v.optional(v.id("portalOrders")) }),
+        v.object({ updated: v.literal(true), orderId: v.id("portalOrders") }),
+        v.object({ created: v.literal(true), orderId: v.id("portalOrders") }),
+    ),
     handler: async (ctx, args) => {
         verifyWriteToken(args.writeToken);
 
@@ -688,49 +723,79 @@ export const upsertOrderFromShopify = mutation({
             return { skipped: "no_portal_account" as const };
         }
 
-        const now = Date.now();
-        const fields = {
-            clerkOrgId: account.clerkOrgId,
-            orderId: args.orderName,
-            lineItems: args.lineItems,
-            status: args.status,
-            orderDate: args.orderDate,
-            estimatedDelivery: args.estimatedDelivery,
-            trackingNumber: args.trackingNumber,
-            carrier: args.carrier,
-            shipments: args.shipments,
-            shipTo: args.shipTo,
-            totalAmount: args.totalAmount,
-            source: "shopify" as const,
-            shopifyOrderId: args.shopifyOrderId,
-            updatedAt: now,
-        };
-
         const existing = await ctx.db
             .query("portalOrders")
             .withIndex("by_shopifyOrderId", (q) => q.eq("shopifyOrderId", args.shopifyOrderId))
-            .first();
-
+            .unique();
+        if (existing?.source === "quickbooks") {
+            return { skipped: "owned_by_quickbooks" as const, orderId: existing._id };
+        }
+        // Fail closed for old callers: receipt time is never a source version.
+        if (args.sourceUpdatedAt === undefined || !Number.isFinite(args.sourceUpdatedAt)) {
+            return { skipped: "missing_source_version" as const };
+        }
+        const replaceOrder = !existing || existing.sourceUpdatedAt === undefined
+            || args.sourceUpdatedAt > existing.sourceUpdatedAt;
+        const shipments = [...(existing?.shipments ?? [])];
+        let shipmentsChanged = false;
+        for (const incoming of args.shipments ?? []) {
+            if (!incoming.shopifyFulfillmentId || incoming.sourceUpdatedAt === undefined
+                || !Number.isFinite(incoming.sourceUpdatedAt)) continue;
+            const index = shipments.findIndex((s) => s.shopifyFulfillmentId === incoming.shopifyFulfillmentId);
+            const previous = shipments[index];
+            if (previous?.sourceUpdatedAt !== undefined && incoming.sourceUpdatedAt <= previous.sourceUpdatedAt) continue;
+            // An old order snapshot cannot resurrect a previously unseen old fulfillment.
+            if (index < 0 && existing?.sourceUpdatedAt !== undefined
+                && args.sourceUpdatedAt < existing.sourceUpdatedAt
+                && incoming.sourceUpdatedAt <= existing.sourceUpdatedAt) continue;
+            if (index < 0) shipments.push(incoming);
+            else shipments[index] = incoming;
+            shipmentsChanged = true;
+        }
+        // Missing/empty fulfillment arrays must not prove that the saved
+        // delivered boxes cover a newly fulfilled remainder of this order.
+        const incomingComplete = args.shipments !== undefined
+            && (args.shipments.length > 0 || shipments.length === 0)
+            && args.shipments.every((s) => s.shopifyFulfillmentId && s.sourceUpdatedAt !== undefined && Number.isFinite(s.sourceUpdatedAt));
+        const sameOrderVersion = args.sourceUpdatedAt === existing?.sourceUpdatedAt;
+        const shipmentSnapshotComplete = replaceOrder ? incomingComplete
+            : existing?.shipmentSnapshotComplete === true || (sameOrderVersion && incomingComplete);
+        const completenessChanged = shipmentSnapshotComplete !== (existing?.shipmentSnapshotComplete ?? false);
+        if (existing && !replaceOrder && !shipmentsChanged && !completenessChanged) {
+            return { skipped: "stale_or_duplicate" as const, orderId: existing._id };
+        }
+        const fulfillmentStatus = replaceOrder ? args.shopifyFulfillmentStatus : existing?.shopifyFulfillmentStatus;
+        const cancelledAt = replaceOrder ? args.shopifyCancelledAt : existing?.shopifyCancelledAt;
+        const primary = shipments.find((s) => s.fulfillmentStatus !== "cancelled" && s.trackingNumber)
+            ?? shipments.find((s) => s.fulfillmentStatus !== "cancelled");
+        const fields = {
+            ...(replaceOrder ? {
+                clerkOrgId: account.clerkOrgId,
+                orderId: args.orderName,
+                lineItems: args.lineItems,
+                orderDate: args.orderDate,
+                shipTo: args.shipTo,
+                totalAmount: args.totalAmount,
+                sourceUpdatedAt: args.sourceUpdatedAt,
+                shopifyFulfillmentStatus: args.shopifyFulfillmentStatus,
+                shopifyCancelledAt: args.shopifyCancelledAt,
+            } : {
+                clerkOrgId: existing!.clerkOrgId, orderId: existing!.orderId,
+                lineItems: existing!.lineItems, orderDate: existing!.orderDate,
+            }),
+            status: orderStatusFromEvidence(Boolean(cancelledAt), fulfillmentStatus, shipments.map((s) => s.sourceUpdatedAt === undefined ? {} : s), shipmentSnapshotComplete),
+            shipmentSnapshotComplete,
+            trackingNumber: primary?.trackingNumber,
+            carrier: primary?.carrier,
+            estimatedDelivery: primary?.estimatedDelivery,
+            shipments,
+            source: "shopify" as const,
+            shopifyOrderId: args.shopifyOrderId,
+            // Time of last accepted source change, untouched by retries/replays.
+            updatedAt: Date.now(),
+        };
         if (existing) {
-            if (existing.source === "quickbooks") {
-                return { skipped: "owned_by_quickbooks" as const, orderId: existing._id };
-            }
-            // Shopify's order payloads do not always carry the fulfilments — an
-            // `orders/updated` fired by an unrelated edit can arrive with none.
-            // Patching that over a row a fulfilment webhook just populated would
-            // make a shipped order look unshipped and lose the tracking number,
-            // so absent shipment data leaves what is already stored alone.
-            const patch = { ...fields };
-            if (!args.shipments || args.shipments.length === 0) {
-                const kept = existing.shipments ?? [];
-                if (kept.length > 0) {
-                    patch.shipments = kept;
-                    patch.trackingNumber = existing.trackingNumber;
-                    patch.carrier = existing.carrier;
-                    patch.estimatedDelivery = existing.estimatedDelivery;
-                }
-            }
-            await ctx.db.patch(existing._id, patch);
+            await ctx.db.patch(existing._id, fields);
             return { updated: true as const, orderId: existing._id };
         }
 
