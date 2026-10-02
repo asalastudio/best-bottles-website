@@ -67,6 +67,7 @@ import type * as paperDoll from "../paperDoll.js";
 import type * as patchFromMasterV83 from "../patchFromMasterV83.js";
 import type * as portal from "../portal.js";
 import type * as portalAccountFoundation from "../portalAccountFoundation.js";
+import type * as portalBuyerBindings from "../portalBuyerBindings.js";
 import type * as portalAuth from "../portalAuth.js";
 import type * as posthog from "../posthog.js";
 import type * as pricing from "../pricing.js";
@@ -158,6 +159,7 @@ declare const fullApi: ApiFromModules<{
   patchFromMasterV83: typeof patchFromMasterV83;
   portal: typeof portal;
   portalAccountFoundation: typeof portalAccountFoundation;
+  portalBuyerBindings: typeof portalBuyerBindings;
   portalAuth: typeof portalAuth;
   posthog: typeof posthog;
   pricing: typeof pricing;
