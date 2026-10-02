@@ -9,6 +9,7 @@ export class GraceCatalogTurn {
     private revision = 0;
     private request = "";
     private active = false;
+    private voiceItemId: string | null = null;
     private verified: { ticket: GraceCatalogTicket; message: string } | null = null;
 
     constructor(private readonly clearPendingDisplays: () => void = () => {}) {}
@@ -19,11 +20,25 @@ export class GraceCatalogTurn {
         this.active = true;
     }
 
+    beginVoice(itemId: string): void {
+        if (this.active && this.voiceItemId === itemId) return;
+        this.begin("");
+        this.voiceItemId = itemId;
+    }
+
+    /** Transcription is asynchronous: enrich its existing turn, never start one. */
+    completeVoiceTranscript(itemId: string | undefined, request: string): boolean {
+        if (!this.active || !itemId || this.voiceItemId !== itemId) return false;
+        this.request = request;
+        return true;
+    }
+
     interrupt(): void { this.invalidate(); }
 
     private invalidate(): void {
         this.generation++;
         this.active = false;
+        this.voiceItemId = null;
         this.verified = null;
         this.clearPendingDisplays();
     }
@@ -57,7 +72,9 @@ export class GraceCatalogTurn {
     displayBlock(ticket: GraceCatalogTicket): string | null {
         if (!this.isCurrent(ticket)) return STALE_CATALOG_ACTION;
         if (this.verified && this.isCurrent(this.verified.ticket)
-            && preserveVerifiedGraceCatalogView(ticket.request, this.verified.ticket.request)) {
+            // A matching late transcript enriches this generation without
+            // invalidating work captured before the transcript was available.
+            && preserveVerifiedGraceCatalogView(this.request, this.request)) {
             return `${this.verified.message} Keep this requested catalogue view open; do not replace it with a single product page.`;
         }
         return null;

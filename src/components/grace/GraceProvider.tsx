@@ -2613,13 +2613,17 @@ function GraceProviderBase({
     // Track whether onMessage fires after streaming completes
     const streamingFinalizedRef = useRef(false);
 
-    const handleMessage = useCallback((payload: { message: string; source?: string; role?: string }) => {
+    const handleMessage = useCallback((payload: { message: string; source?: string; role?: string; voiceItemId?: string }) => {
         const role = payload.role === "user" ? "user" as const : "grace" as const;
         const text = payload.message;
         const norm = normalizeGraceMessageText(text);
 
         if (role === "user") {
-            catalogTurnRef.current.begin(text);
+            if (payload.source === "openai-realtime") {
+                if (!catalogTurnRef.current.completeVoiceTranscript(payload.voiceItemId, text)) return;
+            } else {
+                catalogTurnRef.current.begin(text);
+            }
             // Append voice transcripts; skip if send() already inserted an identical line
             setMessages((prev) => {
                 const lastUser = [...prev].reverse().find((m) => m.role === "user");
@@ -2744,14 +2748,15 @@ function GraceProviderBase({
                 onDisconnect: (details) => handleDisconnect(details?.unexpected
                     ? { reason: "error", closeCode: 1006, message: "Realtime transport closed unexpectedly" }
                     : { reason: "disconnected" }),
-                onUserSpeechStarted: () => catalogTurnRef.current.interrupt(),
+                onUserSpeechStarted: (itemId) => catalogTurnRef.current.beginVoice(itemId),
                 onModeChange: (mode) => handleModeChange({ mode }),
                 onError: handleError,
                 onTranscriptDelta: (text) => handleAgentChatResponsePart({ text, type: "delta" }),
-                onMessage: ({ role, text }) => handleMessage({
+                onMessage: ({ role, text, voiceItemId }) => handleMessage({
                     message: text,
                     role: role === "assistant" ? "assistant" : "user",
                     source: "openai-realtime",
+                    voiceItemId,
                 }),
             },
         }),

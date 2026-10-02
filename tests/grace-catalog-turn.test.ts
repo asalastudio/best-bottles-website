@@ -11,6 +11,45 @@ function deferred<T>() {
 afterEach(() => vi.useRealTimers());
 
 describe("Grace catalogue async turn ownership", () => {
+    it("starts voice work before transcription and enriches without invalidating its refinement", () => {
+        const turns = new GraceCatalogTurn();
+        turns.beginVoice("audio-1");
+        const ticket = turns.beginRefinement();
+        expect(turns.commitRefinement(ticket, "one group", vi.fn())).toBe(true);
+        expect(turns.completeVoiceTranscript("audio-1", "Open the catalogue filtered to Elegant")).toBe(true);
+        expect(turns.isCurrent(ticket)).toBe(true);
+        expect(turns.capture().request).toBe("Open the catalogue filtered to Elegant");
+        expect(turns.displayBlock(ticket)).toContain("Keep this requested catalogue view open");
+    });
+
+    it("does not let an older transcript replace a newer voice or typed turn", () => {
+        const turns = new GraceCatalogTurn();
+        turns.beginVoice("audio-1");
+        const old = turns.capture();
+        turns.beginVoice("audio-2");
+        const current = turns.capture();
+        expect(turns.completeVoiceTranscript("audio-1", "Old request")).toBe(false);
+        expect(turns.isCurrent(old)).toBe(false);
+        expect(turns.isCurrent(current)).toBe(true);
+        expect(turns.completeVoiceTranscript("audio-2", "New voice request")).toBe(true);
+        turns.begin("New typed request");
+        expect(turns.completeVoiceTranscript("audio-2", "Late voice request")).toBe(false);
+        expect(turns.capture().request).toBe("New typed request");
+    });
+
+    it("does not reactivate interrupted voice work on late or unidentified transcription", () => {
+        const turns = new GraceCatalogTurn();
+        turns.beginVoice("audio-1");
+        turns.interrupt();
+        expect(turns.completeVoiceTranscript("audio-1", "Late request")).toBe(false);
+        expect(turns.completeVoiceTranscript(undefined, "Unidentified request")).toBe(false);
+        expect(turns.isCurrent(turns.capture())).toBe(false);
+        turns.beginVoice("audio-2");
+        const ticket = turns.capture();
+        turns.beginVoice("audio-2");
+        expect(turns.isCurrent(ticket)).toBe(true);
+    });
+
     it("does not stamp an old verification onto a newer identical request", async () => {
         const turns = new GraceCatalogTurn();
         const request = "Open the catalogue filtered to Elegant";
