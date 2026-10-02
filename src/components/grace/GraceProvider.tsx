@@ -45,6 +45,7 @@ import { useGraceMemory } from "@/lib/grace/useGraceMemory";
 import { isGraceToolResult } from "@/lib/graceToolResults";
 import {
     applyGraceRefinementRequest,
+    graceCatalogLookupRefineState,
     inheritGraceRefineDestination,
     graceSearchRefineState,
     formatGraceRefineState,
@@ -765,6 +766,7 @@ function GraceProviderBase({
     // ── Messages & streaming ─────────────────────────────────────────────────
     const [messages, setMessages] = useState<GraceMessage[]>([]);
     const messagesRef = useRef<GraceMessage[]>([]);
+    const latestCustomerRequestRef = useRef("");
     useEffect(() => { messagesRef.current = messages; }, [messages]);
     const [streamingText, setStreamingText] = useState("");
     const [isAwaitingReply, setIsAwaitingReply] = useState(false);
@@ -1105,7 +1107,7 @@ function GraceProviderBase({
                         params.applicatorFilter.split(","),
                     );
                 }
-                const inheritedRefine = applyGraceRefinementRequest(currentRefine, searchProposal, params.searchTerm ?? "");
+                const inheritedRefine = graceCatalogLookupRefineState(currentRefine, searchProposal, params.searchTerm ?? "", latestCustomerRequestRef.current);
                 const data = await callGraceServerTool<ProductCard[] | string>("searchCatalog", {
                     searchTerm: params.searchTerm ?? "",
                     categoryLimit: params.categoryLimit,
@@ -2583,6 +2585,7 @@ function GraceProviderBase({
         const norm = normalizeGraceMessageText(text);
 
         if (role === "user") {
+            latestCustomerRequestRef.current = text;
             // Append voice transcripts; skip if send() already inserted an identical line
             setMessages((prev) => {
                 const lastUser = [...prev].reverse().find((m) => m.role === "user");
@@ -2834,6 +2837,7 @@ function GraceProviderBase({
         await endConversation();
         setMessages([]);
         messagesRef.current = [];
+        latestCustomerRequestRef.current = "";
         setInput("");
         setErrorMessage("");
         setBrowsingHistory([]);
@@ -2959,6 +2963,7 @@ function GraceProviderBase({
     const send = useCallback(async (text?: string) => {
         const msg = (text ?? input).trim();
         if (!msg) return;
+        latestCustomerRequestRef.current = msg;
         setInput("");
 
         setMessages((prev) => [
