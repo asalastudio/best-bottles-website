@@ -42,12 +42,11 @@ Scope: order/fulfillment normalization, persisted snapshot ordering, existing po
 ## Verification
 
 - Focused tests: 58 passed across order sync, tracking, snapshot adapter, signed webhook route and rendered detail.
-- Full suite initial run: 310 passed files / 2 skipped; 2,863 passed tests / 7 skipped.
-- Expanded full suite: 311 passed files / 2 skipped, one existing preview-build fixture timed out under concurrent machine load (5-second test limit). The isolated retest passed all 5 preview-build tests; the timed-out test completed in 360 ms.
+- Final full suite (`vitest run --maxWorkers=4`): **312 passed files / 2 skipped; 2,873 passed tests / 7 skipped**, exit 0. An earlier unrestricted run had one unrelated preview-build fixture timeout under concurrent machine load; its isolated retest and the final complete run passed.
 - TypeScript: passed in `/tmp/bb-order-truth-verify` against copied source and this repository's installed dependencies, with `--noEmit --typeRoots ./node_modules/@types`. Typechecking in the Documents worktree stalled reading an unrelated ancestor `Documents/node_modules/@types/prop-types/package.json`; those stalled processes were stopped. An empty log was not counted as a pass.
 - Full ESLint: zero errors, 87 existing warnings. Changed TypeScript files lint clean.
 - Shopify GraphQL operation validated successfully with the connected schema validator and locally against bundled schema `2025-10`. The repository still requests API version `2025-01`; updating that shared API pin is outside this change. No live order query was executed to establish the effective runtime version.
-- Production build: result recorded below. CI placeholder config used; no customer credentials copied into this worktree.
+- Production build (`npm run build -- --webpack`): **passed**, exit 0, including TypeScript, 61 static pages and sitemap generation, in the isolated verification directory. CI placeholder config used; no customer credentials copied into this worktree. The original attempt compiled but hit a redundant-checkout disk/cache limit and the ancestor type-resolution stall. Redundant content-addressed Git copies were removed, source stayed intact, and the successful build was rerun in isolation. Placeholder-generated sitemap changes were restored before handoff.
 
 ## Runtime evidence and remaining limits
 
