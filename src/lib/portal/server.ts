@@ -243,6 +243,7 @@ export async function getPortalGraceWorkspace(projectId?: string) {
 export async function getPortalGraceSessions() {
     const viewer = await requirePortalViewer();
     const sessions = await getPortalConvex().query(api.graceSessions.listForViewer, {
+        writeToken: getPortalConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
         clerkUserId: viewer.clerkUserId,
     });
@@ -252,6 +253,7 @@ export async function getPortalGraceSessions() {
 export async function getPortalGraceSession(sessionId: string) {
     const viewer = await requirePortalViewer();
     return await getPortalConvex().query(api.graceSessions.getForViewer, {
+        writeToken: getPortalConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
         clerkUserId: viewer.clerkUserId,
         sessionId: sessionId as Id<"graceSessions">,
