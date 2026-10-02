@@ -5,6 +5,7 @@ import { serverQuery, verifyWriteToken } from "./portalAuth";
 import { accountCertificateStatus } from "./certificateWorkflow";
 import { reconcileAddressIdentity, saveAddressReconciliation } from "./lib/portalAccountFoundation";
 import { captureServerEvent, distinctIdFor } from "./posthog";
+import { draftOrderTotal } from "../src/lib/portal/draft-pricing";
 
 function orderTotal(order: Doc<"portalOrders">): number | null {
     if (typeof order.totalAmount === "number") return order.totalAmount;
@@ -795,10 +796,7 @@ export const setDraftLineItems = mutation({
             }
         }
 
-        const totalAmount = args.lineItems.reduce(
-            (sum, line) => sum + (line.unitPrice ?? 0) * line.quantity,
-            0,
-        );
+        const totalAmount = draftOrderTotal(args.lineItems);
 
         await ctx.db.patch(draft._id, {
             lineItems: args.lineItems,

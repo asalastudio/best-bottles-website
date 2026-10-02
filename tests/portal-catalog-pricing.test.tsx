@@ -31,13 +31,18 @@ describe("buyer portal uses the exact public catalog and server draft ladder", (
         const publicRate = activeCatalogTier(catalogCardTiers(variant), quantity)?.unitPrice;
         const display = portalCatalogPrice(item().purchaseVariant, String(quantity));
         const [resolved] = await resolveDraftLines([{ sku: source.websiteSku, quantity }]);
-        expect(display).toMatchObject({ quantity, unitPrice: rate, total: Math.round(rate * 100) * quantity / 100, error: null });
+        expect(display).toMatchObject({ quantity, unitPrice: rate, total: rate * quantity, error: null });
         expect(publicRate).toBe(rate); expect(resolved).toMatchObject({ ok: true, line: { sku: source.websiteSku, quantity, unitPrice: rate } });
     });
     it("shows 60 × $0.84 = $50.40 without using the group's cheaper starting price", () => {
         const html = renderToStaticMarkup(createElement(PortalCatalogPurchase, { item: item(), quantityText: "60", onQuantityChange: vi.fn(), onAdd: vi.fn(), pending: false, justAdded: false }));
         expect(html).toContain("$0.84 / ea"); expect(html).toContain("Add · $50.40"); expect(html).not.toContain("$0.10");
         expect(html).toContain("Pack of"); expect(html).toContain("12–143 · $0.84 / ea"); expect(html).toContain('value="12" selected');
+    });
+    it("keeps fractional-cent unit precision and formats the extended total after multiplication", () => {
+        const fractional = { ...source, webPrice1pc: .845, priceTiers: [{ minQty: 1, unitPrice: .845 }, { minQty: 144, unitPrice: .795 }] };
+        const html = renderToStaticMarkup(createElement(PortalCatalogPurchase, { item: item([fractional]), quantityText: "60", onQuantityChange: vi.fn(), onAdd: vi.fn(), pending: false, justAdded: false }));
+        expect(html).toContain("$0.845 / ea"); expect(html).toContain("Add · $50.70"); expect(html).not.toContain("$51.00");
     });
     it("never substitutes a sibling's ladder when the ordered SKU is missing", () => {
         const sibling = { ...source, id: "sibling", graceSku: "Other", websiteSku: "OTHER", webPrice1pc: .10, priceTiers: [{ minQty: 1, unitPrice: .10 }] };

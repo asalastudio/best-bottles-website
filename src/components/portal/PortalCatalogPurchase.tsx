@@ -8,6 +8,9 @@ import { formatVolumeQtyRange } from "@/lib/volumePricing";
 import { portalCatalogPrice } from "@/lib/portal/catalog-pricing";
 
 const money = (value: number) => value.toLocaleString("en-US", { style: "currency", currency: "USD" });
+const unitMoney = (value: number) => value.toLocaleString("en-US", {
+    style: "currency", currency: "USD", minimumFractionDigits: 2, maximumFractionDigits: 20,
+});
 
 export default function PortalCatalogPurchase({ item, quantityText, onQuantityChange, onAdd, pending, justAdded }: {
     item: CatalogLineItem; quantityText: string; onQuantityChange: (value: string) => void;
@@ -24,7 +27,7 @@ export default function PortalCatalogPurchase({ item, quantityText, onQuantityCh
         <div className="min-w-[240px] space-y-2 text-left" data-testid="portal-catalog-purchase">
             <div className="flex flex-wrap items-center justify-between gap-3">
                 <span className="text-sm tabular-nums" aria-live="polite">
-                    {price.unitPrice !== null ? `${money(price.unitPrice)} / ea` : "Enter quantity"}
+                    {price.unitPrice !== null ? `${unitMoney(price.unitPrice)} / ea` : "Enter quantity"}
                 </span>
                 {tiers.length > 0 && <label className="flex items-center gap-2 text-xs" htmlFor={`${id}-pack`}>
                     Pack of
@@ -33,7 +36,7 @@ export default function PortalCatalogPurchase({ item, quantityText, onQuantityCh
                         onChange={event => onQuantityChange(event.target.value)}
                         className="min-h-11 max-w-[200px] rounded-md border border-neutral-400 bg-white px-2 text-neutral-900">
                         {tiers.map(tier => <option key={tier.minQty} value={tier.minQty}>
-                            {formatVolumeQtyRange(tier.minQty, tier.maxQty)} · {money(tier.unitPrice)} / ea
+                            {formatVolumeQtyRange(tier.minQty, tier.maxQty)} · {unitMoney(tier.unitPrice)} / ea
                         </option>)}
                     </select>
                 </label>}
