@@ -71,8 +71,8 @@ describe("Mizan UX recovery guardrails", () => {
         expect(resources).toContain("Can I use any applicator with any bottle?");
         expect(resources).toContain("Talk with Grace");
         expect(resources).toContain("Open Grace");
-        expect(resources).toContain('id: "neck-size"');
-        expect(resources).toContain('id: "case-quantity"');
+        expect(resources).toContain('id: "neck-size-basics"');
+        expect(resources).toContain('id: "case-quantity-basics"');
     });
 
     it("captures May 4 stakeholder regressions for search, guided sizing, Grace tiles, and compatibility ordering", () => {

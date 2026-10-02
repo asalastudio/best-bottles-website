@@ -207,8 +207,8 @@ export const GRACE_AUDIT_SCENARIOS: AuditScenario[] = [
         expect: {
             mustAnswer: true,
             mustCallAnyTool: ["getPolicy"],
-            mustIncludeAll: ["7 days", "30 days"],
-            mustNotInclude: ["2 business days", "48 hours"],
+            mustIncludeAll: ["7 business days", "15 days"],
+            mustNotInclude: ["30 days", "damaged items within 48 hours"],
         },
     },
     {

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BookOpen, Wrench, ChatCircle, FileText, BookMarked } from "@/components/icons";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { FAQ_POLICY_ENTRIES, FAQ_POLICY_SOURCE } from "@/lib/faqPolicy";
 import { SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -24,19 +25,19 @@ const RESOURCES = [
         title: "Compatibility Guides",
         description: "Understand neck finishes, thread sizes, and which closures work with which bottles. Our fitment system makes it foolproof.",
         cta: "Browse Catalog",
-        href: "/resources#neck-size",
+        href: "/resources#neck-size-basics",
     },
     {
         icon: BookOpen,
         title: "Frequently Asked Questions",
-        description: "From minimum order quantities to lead times, compatibility to UV protection — find answers to the questions brands ask most.",
-        cta: "Contact Us",
-        href: "/contact",
+        description: "Ordering, shipping, payments, and returns from our approved FAQ.",
+        cta: "Read FAQ",
+        href: "/resources#faq",
     },
     {
         icon: FileText,
         title: "Request a Quote",
-        description: "Need volume pricing or custom packaging? Submit a quote request and our team will prepare a tailored proposal within 48 hours.",
+        description: "Need volume pricing or custom packaging? Submit a quote request to discuss your project with our team.",
         cta: "Request Quote",
         href: "/request-quote",
     },
@@ -49,15 +50,7 @@ const RESOURCES = [
     },
 ];
 
-const FAQ_ITEMS = [
-    { id: "minimum-order", q: "What is the minimum order quantity?", a: "There's no strict piece count — our minimum order is approximately $50. You can mix and match bottles and components to reach that threshold." },
-    { id: "neck-size", q: "How do I know which cap fits my bottle?", a: "Every bottle in our catalog lists its neck finish, such as 18-415 or 20-400. Match the bottle neck finish to the cap, sprayer, dropper, reducer, or roller, then verify the selected SKU before ordering." },
-    { id: "custom-etching", q: "Do you offer custom etching?", a: "We offer etching services on select bottles, including atomizers. Contact us to discuss your project and we'll let you know what's possible." },
-    { id: "lead-times", q: "What are your lead times?", a: "Standard stock orders ship within 3-5 business days. Larger or specialty orders may require additional lead time depending on quantities." },
-    { id: "essential-oils", q: "Are your bottles safe for essential oils?", a: "Our glass bottles are Type III soda-lime glass, suitable for cosmetic and pharmaceutical use. Amber and cobalt blue options offer UV protection for light-sensitive formulations." },
-    { id: "case-quantity", q: "How many bottles come in a case?", a: "Case quantity can vary by product and selected SKU. Check the specific product detail page for the bottle, color, size, and applicator configuration you plan to order." },
-    { id: "international-shipping", q: "Do you ship internationally?", a: "We primarily serve the domestic US market with competitive shipping rates. For international inquiries, contact us and we'll see what we can do." },
-] as const;
+const FAQ_ITEMS = FAQ_POLICY_ENTRIES;
 
 const PACKAGING_BASICS = [
     {
@@ -93,7 +86,6 @@ const PACKAGING_BASICS = [
 function buildResourcesFaqJsonLd() {
     const entries = [
         ...FAQ_ITEMS.map((item) => ({ question: item.q, answer: item.a })),
-        ...PACKAGING_BASICS.map((item) => ({ question: item.question, answer: item.answer })),
     ];
 
     return {
@@ -176,9 +168,10 @@ export default function ResourcesPage() {
             </section>
 
             {/* FAQ */}
-            <section className="py-16 px-6 bg-white/50 border-y border-champagne/30">
+            <section id="faq" className="py-16 px-6 bg-white/50 border-y border-champagne/30">
                 <div className="max-w-[800px] mx-auto">
                     <h2 className="font-serif text-3xl text-obsidian mb-10 text-center">Frequently Asked Questions</h2>
+                    <p className="text-sm text-slate mb-8">Answers follow our <a href={FAQ_POLICY_SOURCE.url} className="text-muted-gold underline">approved FAQ</a>, verified {FAQ_POLICY_SOURCE.verifiedOn}.</p>
                     <div className="space-y-6">
                         {FAQ_ITEMS.map((item) => (
                             <div key={item.q} id={item.id} className="scroll-mt-32 border-b border-champagne/30 pb-6">
