@@ -32,11 +32,16 @@ export const beginSync = mutation({
     },
 });
 export const finishSync = mutation({
-    args: { writeToken: v.string(), certificateId: v.id("resaleCertificates"), attemptId: v.string(), exemptionCode: v.optional(v.string()), failureCode: v.optional(v.string()) },
+    args: { writeToken: v.string(), certificateId: v.id("resaleCertificates"), attemptId: v.string(), exemptionCode: v.optional(v.string()), failureCode: v.optional(v.string()), uncertain: v.optional(v.boolean()) },
     handler: async (ctx, args) => {
         verifyWriteToken(args.writeToken);
         const cert = await ctx.db.get(args.certificateId);
         if (!cert || cert.syncAttemptId !== args.attemptId) throw new Error("stale_sync_attempt");
+        if (args.uncertain) {
+            await ctx.db.patch(cert._id, { syncFailure: "reconciliation_required" });
+            await enqueueCertificateEvent(ctx, cert._id, "sync_failed");
+            return { exemptionLive: false, syncBlockedReason: "reconciliation_required" };
+        }
         if (args.exemptionCode) {
             if (cert.status !== "approved" || (cert.expiresAt !== undefined && cert.expiresAt <= Date.now())) {
                 // Shopify may have accepted a write near expiry: retain the lock for reconciliation.

@@ -64,7 +64,7 @@ function StatusTag({ row }: { row: { status: string; lapsed: boolean; awaitingSh
     if (row.lapsed) return <PortalTag variant="muted">Lapsed</PortalTag>;
     if (row.status === "approved") {
         return row.awaitingShopifySync
-            ? <PortalTag variant="gold">Not synced</PortalTag>
+            ? <PortalTag variant="gold">Sync unconfirmed</PortalTag>
             : <PortalTag variant="green">Exempt</PortalTag>;
     }
     if (row.status === "pending") return <PortalTag variant="gold">Awaiting review</PortalTag>;
@@ -114,8 +114,8 @@ export default async function CertificateReviewQueue({ searchParams }: { searchP
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-6">
                     <Stat label="Awaiting review" value={counts.pending} tone="gold" />
-                    <Stat label="Tax exempt" value={counts.approved} tone="green" />
-                    <Stat label="Not synced" value={counts.awaitingSync} tone="red" />
+                    <Stat label="Review approved" value={counts.approved} tone="muted" />
+                    <Stat label="Sync unconfirmed" value={counts.awaitingSync} tone="red" />
                     <Stat label="Lapsed" value={counts.lapsed} tone="red" />
                     <Stat label="Expired" value={counts.expired} tone="muted" />
                     <Stat label="Rejected" value={counts.rejected} tone="muted" />
@@ -133,7 +133,7 @@ export default async function CertificateReviewQueue({ searchParams }: { searchP
                                 <li key={row._id} className="font-sans text-[13px] text-neutral-600">
                                     <span className="font-medium text-neutral-900">{row.companyName}</span>
                                     {row.awaitingShopifySync && !row.lapsed && (
-                                        <> — approved but never written to Shopify. This account is still being charged tax.</>
+                                        <> — review approved; checkout sync is unconfirmed. Verify Shopify status before retrying.</>
                                     )}
                                     {row.lapsed && (
                                         <> — expired {formatDate(row.expiresAt)}. Shopify may still be exempting it.</>

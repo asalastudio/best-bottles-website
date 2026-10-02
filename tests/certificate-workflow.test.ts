@@ -7,7 +7,7 @@ import { api } from "../convex/_generated/api";
 import type { Id } from "../convex/_generated/dataModel";
 vi.mock("server-only", () => ({}));
 import { validateCertificateBytes } from "../src/lib/portal/certificateDocumentValidation";
-import { syncCertificate, type CertificateSyncAdapter } from "../src/lib/portal/certificateSync";
+import { CertificateWriteNotAppliedError, syncCertificate, type CertificateSyncAdapter } from "../src/lib/portal/certificateSync";
 import { deliverCertificateNotification, type NotificationAdapter } from "../src/lib/portal/certificateNotifications";
 const modules = import.meta.glob("../convex/**/*.ts");
 const writeToken = "synthetic-only-server-token";
@@ -67,7 +67,7 @@ describe("synthetic certificate workflow", () => {
         await approve(t, certificateId);
         for (const view of await accountViews(t)) expect(view).toMatchObject({ taxExempt: false, certificateTaxStatus: "sync_pending" });
         const adapter = syncAdapter(t);
-        vi.mocked(adapter.write).mockRejectedValueOnce(new Error("synthetic transport failure"));
+        vi.mocked(adapter.write).mockRejectedValueOnce(new CertificateWriteNotAppliedError("synthetic authoritative rejection"));
         expect(await syncCertificate(certificateId, adapter, true)).toMatchObject({ exemptionLive: false });
         expect((await t.query(api.resaleCertificates.getActiveCertificateForOrg, { writeToken, clerkOrgId }))?.status).toBe("approved");
         expect(await syncCertificate(certificateId, adapter, true)).toEqual({ exemptionLive: true });
@@ -119,6 +119,27 @@ describe("synthetic certificate workflow", () => {
         expect(adapter.write).toHaveBeenCalledTimes(1);
         expect((await t.query(api.certificateWorkflow.reconciliationPlan, { writeToken }))[0].action).toBe("review_incomplete_sync");
         expect((await t.query(api.resaleCertificates.getActiveCertificateForOrg, { writeToken, clerkOrgId }))?.shopifySyncedAt).toBeUndefined();
+    });
+    it("fences an accepted Shopify write with a lost response through retry, replacement review and expiry", async () => {
+        const t = await setup(); const { storageId } = await upload(t);
+        const certificateId = await submit(t, storageId); await approve(t, certificateId);
+        let externalExempt = false;
+        const adapter = syncAdapter(t);
+        adapter.write = vi.fn(async () => { externalExempt = true; throw new Error("response lost after provider accepted write"); });
+        expect(await syncCertificate(certificateId, adapter, true)).toMatchObject({ syncBlockedReason: "reconciliation_required" });
+        expect(externalExempt).toBe(true);
+        const cert = await t.run(ctx => ctx.db.get(certificateId));
+        expect(cert?.syncAttemptId).toBeTruthy();
+        expect(cert?.syncFailure).toBe("reconciliation_required");
+        expect(cert?.shopifySyncedAt).toBeUndefined();
+        await expect(syncCertificate(certificateId, syncAdapter(t), true)).rejects.toThrow(/sync_in_progress/);
+        const replacement = await submit(t, storageId);
+        await expect(approve(t, replacement)).rejects.toThrow(/sync_in_progress/);
+        await t.run(ctx => ctx.db.patch(certificateId, { expiresAt: Date.now() - 1 }));
+        await expect(t.mutation(api.resaleCertificates.expireLapsedCertificates, { writeToken })).rejects.toThrow(/sync_in_progress/);
+        expect((await t.query(api.certificateWorkflow.reconciliationPlan, { writeToken }))[0]).toMatchObject({ certificateId, action: "review_incomplete_sync" });
+        for (const view of await accountViews(t)) expect(view?.certificateTaxStatus).toBe("review_required");
+        expect(adapter.write).toHaveBeenCalledTimes(1);
     });
     it("plans expired exemption reconciliation without mutation or revoking a newer active exemption", async () => {
         const t = await setup(); const { storageId } = await upload(t); const certificateId = await submit(t, storageId); await approve(t, certificateId);

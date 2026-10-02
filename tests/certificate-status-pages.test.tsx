@@ -1,7 +1,7 @@
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { beforeEach, describe, expect, it, vi } from "vitest";
-const mocks = vi.hoisted(() => ({ dashboard: vi.fn(), account: vi.fn(), shell: vi.fn(), certificates: vi.fn(), accounts: vi.fn() }));
+const mocks = vi.hoisted(() => ({ dashboard: vi.fn(), account: vi.fn(), shell: vi.fn(), certificates: vi.fn(), accounts: vi.fn(), queue: vi.fn() }));
 vi.mock("server-only", () => ({}));
 vi.mock("next/link", () => ({ default: ({ children, href }: { children: React.ReactNode; href: string }) => <a href={href}>{children}</a> }));
 vi.mock("@/components/portal/CertificateStatusRefresh", () => ({ default: () => null }));
@@ -9,13 +9,15 @@ vi.mock("@/components/portal/PortalAddressForm", () => ({ default: () => null })
 vi.mock("@/components/portal/PortalAccountForm", () => ({ default: () => null }));
 vi.mock("@/components/portal/ResaleCertificateForm", () => ({ default: () => null }));
 vi.mock("@/lib/portal/server", () => ({ getPortalDashboardData: mocks.dashboard, getPortalAccountData: mocks.account, getPortalAddresses: async () => ({}), getPortalShellData: mocks.shell }));
-vi.mock("@/lib/portal/certificates", () => ({ getCertificatesForViewer: mocks.certificates }));
+vi.mock("@/lib/portal/certificates", () => ({ getCertificatesForViewer: mocks.certificates, listAllCertificatesForStaff: mocks.queue }));
 vi.mock("@/lib/portal/accounts", () => ({ listPortalAccountsForStaff: mocks.accounts, listClerkOrganizationsForStaff: async () => [] }));
 vi.mock("../src/app/(portal)/portal/actions", () => ({ saveAddressAction: vi.fn(), createDraftAction: vi.fn(), createCertificateUploadUrlAction: vi.fn(), submitCertificateAction: vi.fn(), validateCertificateUploadAction: vi.fn() }));
 vi.mock("../src/app/team/portal-accounts/actions", () => ({ upsertPortalAccountAction: vi.fn() }));
 import Dashboard from "../src/app/(portal)/portal/page";
 import Account from "../src/app/(portal)/portal/account/page";
 import Certificates from "../src/app/(portal)/portal/tax-exemption/page";
+vi.mock("@/components/portal/CertificateReviewActions", () => ({ default: () => null }));
+import ReviewQueue from "../src/app/team/resale-certificates/page";
 import TeamAccounts from "../src/app/team/portal-accounts/page";
 const account = { _id: "fixture", clerkOrgId: "org_fixture", companyName: "Fixture", accountNumber: "TEST-1", tier: "test", accountManager: "Test", memberSince: "2026", taxExempt: false, certificateTaxStatus: "sync_pending" };
 beforeEach(() => {
@@ -35,4 +37,26 @@ describe("consistent customer/staff status rendering", () => {
         expect(renderToStaticMarkup(await Certificates())).not.toContain("has been notified");
         expect(renderToStaticMarkup(await TeamAccounts())).toContain("/team/resale-certificates?org=org_fixture");
     });
+    it("labels active approvals as review decisions and makes no unsupported checkout-tax claim", async () => {
+        mocks.queue.mockResolvedValue({ counts: { pending: 0, approved: 1, awaitingSync: 1, lapsed: 0, expired: 0, rejected: 0 }, certificates: [{ _id: "cert", status: "approved", lapsed: false, awaitingShopifySync: true, companyName: "Fixture", legalBusinessName: "Fixture", issuingState: "CA", permitNumber: "TEST", submittedAt: 1, notifications: [] }] });
+        const html = renderToStaticMarkup(await ReviewQueue({}));
+        expect(html).toContain("Review approved");
+        expect(html).not.toContain("Tax exempt");
+        expect(html).not.toContain("still being charged tax");
+        expect(html).not.toContain("never written to Shopify");
+        expect(html).toContain("checkout sync is unconfirmed");
+    });
+    it("keeps lapsed exemption uncertainty visible while a replacement is under review", async () => {
+        mocks.shell.mockResolvedValue({ account: { ...account, certificateTaxStatus: "review_required" } });
+        mocks.certificates.mockResolvedValue({ active: null, asOf: 100, certificates: [
+            { _id: "replacement", status: "pending", permitNumber: "TEST", issuingState: "CA", submittedAt: 50, legalBusinessName: "Fixture" },
+            { _id: "old", status: "approved", expiresAt: 40, shopifySyncedAt: 20, permitNumber: "OLD-TEST", issuingState: "CA", submittedAt: 1, legalBusinessName: "Fixture" },
+        ] });
+        const html = renderToStaticMarkup(await Certificates());
+        expect(html).toContain("Under review");
+        expect(html).toContain("Checkout status needs review");
+        expect(html).toContain("A previous exemption may still apply");
+        expect(html).not.toContain("are charged sales tax");
+    });
+
 });

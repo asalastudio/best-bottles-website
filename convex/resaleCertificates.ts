@@ -179,8 +179,8 @@ export const listPendingCertificates = serverQuery({
  * Every certificate, newest first, joined to the account that submitted it.
  *
  * The queue alone hides the two states that actually cost money: an approval
- * that never reached Shopify (the account is still being taxed) and one that has
- * lapsed (the account is being under-taxed). Both are computed here rather than
+ * without a confirmed Shopify receipt and one that has lapsed. Neither proves
+ * the current checkout tax state without reconciliation. Both are computed here rather than
  * read off `status`, which is only as fresh as the last sweep.
  */
 export const listAllCertificates = serverQuery({
@@ -214,8 +214,7 @@ export const listAllCertificates = serverQuery({
                     documentUrl: cert.documentStorageId
                         ? await ctx.storage.getUrl(cert.documentStorageId)
                         : null,
-                    // Approved here but never written to Shopify: the customer
-                    // believes they are exempt and checkout still charges tax.
+                    // Missing receipt is unconfirmed, not proof that Shopify did not write.
                     awaitingShopifySync: cert.status === "approved" && !cert.shopifySyncedAt,
                     // Past its expiry but not yet swept — Shopify may still be
                     // exempting this account.

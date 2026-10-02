@@ -73,13 +73,19 @@ export default async function PortalTaxExemption() {
                     </div>
 
                     {!active.shopifySyncedAt && (
-                        // Approved here but never written to Shopify — checkout will
-                        // still charge tax, so say so rather than imply otherwise.
+                        // An approval is not proof of the current checkout state.
                         <p className="font-sans text-[12px] text-amber-700 mt-4 pt-4 border-t border-neutral-100">
-                            This exemption hasn&rsquo;t finished syncing to checkout yet. Orders placed
+                            Checkout sync is not yet confirmed. Orders placed
                             right now may still be taxed. Your status is visible to staff; email delivery is not active.
                         </p>
                     )}
+                </div>
+            )}
+
+            {shell.account?.certificateTaxStatus === "review_required" && (
+                <div className="mb-5 rounded-lg border border-amber-200 bg-white px-5 py-5">
+                    <p className="text-sm font-medium">Checkout status needs review</p>
+                    <p className="mt-1.5 text-sm text-neutral-500">A previous exemption may still apply while staff reconciles checkout. A replacement submission does not confirm or remove it.</p>
                 </div>
             )}
 
@@ -89,8 +95,8 @@ export default async function PortalTaxExemption() {
                     <p className="font-sans text-[13px] text-neutral-500 mt-1.5 leading-relaxed">
                         Submitted {formatDate(pending.submittedAt)}. A Best Bottles employee is
                         verifying permit {pending.permitNumber} against {pending.issuingState}&rsquo;s
-                        registry. Orders placed now are charged sales tax; once approved, tax comes
-                        off after checkout sync is confirmed.
+                        registry. Approval and successful checkout sync are required to confirm
+                        this submission&rsquo;s exemption.
                     </p>
                 </div>
             )}

@@ -90,7 +90,7 @@ export default function ResaleCertificateForm({
                 </p>
                 <p className="font-sans text-[13px] text-neutral-500 mt-1.5 leading-relaxed">
                     A Best Bottles employee will verify the permit against the issuing
-                    state&rsquo;s registry. Orders placed meanwhile are charged sales tax; checkout exemption is confirmed only after a successful sync.
+                    state&rsquo;s registry. This submission does not confirm or change checkout exemption. Staff must approve it and confirm checkout sync.
                 </p>
             </div>
         );
