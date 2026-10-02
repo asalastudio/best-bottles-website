@@ -6,6 +6,7 @@ import { decodeImage } from "@/lib/paper-doll/decode-image";
 import type { LocalKitPilot } from "@/lib/products/local-kit-pilot";
 import type { BuilderKit } from "@/lib/bottle-builder/model";
 import { verifiedCapOffPhoto } from "@/lib/products/verified-cap-off-photo";
+import { pdpVariantFacts } from "@/lib/products/pdp-variant-facts";
 import { normalizeImportedCapColor } from "@/lib/products/cap-finish-evidence";
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
 import { useState, useEffect, useMemo, useRef, useCallback } from "react";
@@ -1606,17 +1607,20 @@ export default function ProductDetailClient({
         const seenColors = new Set<string>();
         const list = [];
 
-        const currentColor = group.color ?? "Clear";
-        seenColors.add(currentColor.toLowerCase());
-        list.push({
-            slug: activeSlug,
-            color: currentColor,
-            displayName: group.displayName || "",
-            isActive: true
-        });
+        const currentColor = pdpVariantFacts(selectedVariant, group.color).color;
+        if (currentColor) {
+            seenColors.add(currentColor.toLowerCase());
+            list.push({
+                slug: activeSlug,
+                color: currentColor,
+                displayName: group.displayName || "",
+                isActive: true
+            });
+        }
 
         for (const sib of siblingGroups) {
-            const sibColor = sib.color ?? "Clear";
+            const sibColor = sib.color;
+            if (!sibColor) continue;
             const key = sibColor.toLowerCase();
             if (!seenColors.has(key)) {
                 seenColors.add(key);
@@ -1629,7 +1633,7 @@ export default function ProductDetailClient({
             }
         }
         return list;
-    }, [group, activeSlug, siblingGroups]);
+    }, [group, activeSlug, siblingGroups, selectedVariant]);
 
     const sameApplicationGroups = useMemo(() => {
         if (!group) return [];
@@ -2214,6 +2218,7 @@ export default function ProductDetailClient({
                     {isFocusedPurchasePdp && group.slug ? (
                         <div className="mb-8 lg:mb-14">
                             <ConfiguratorPdp
+                                variantFacts={pdpVariantFacts(selectedVariant, group.color)}
                                 applicator={activeApplicator}
                                 catalogFamily={group.family}
                                 currentSlug={group.slug}

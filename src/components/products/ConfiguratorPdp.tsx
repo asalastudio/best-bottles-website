@@ -27,6 +27,7 @@ import { ArrowLeft, HandGrabbing,
 import { GLASS_PRESETS, type GlassPresetId } from "@/lib/materials/glassPresets";
 import { familyForSlugOrDerived, glassFromSlug, type ClosureBase }
   from "@/lib/configurator/families";
+import type { pdpVariantFacts } from "@/lib/products/pdp-variant-facts";
 import { CLOSURE_META } from "@/lib/configurator/useCases";
 import { swatchFor, type SwatchableMaterial } from "@/lib/materials/materialSwatch";
 import type { FocusedProductPresentation } from "@/lib/products/focused-product-presentation";
@@ -143,9 +144,10 @@ export default function ConfiguratorPdp({
   onProductUrlChange,
   plateImage = null, plateImageCapOff = null, plateIsReleasedHero = false, variantImageUrl = null,
   heightWithCap = null, heightWithoutCap = null, diameter = null, hasApproved3d = false, kitQuery, selectedGraceSku,
-  productPresentation, applicator, catalogFamily, localKitPilot, localComponentPreviewSku,
+  productPresentation, applicator, catalogFamily, localKitPilot, localComponentPreviewSku, variantFacts,
 }: {
   currentSlug: string;
+  variantFacts?: ReturnType<typeof pdpVariantFacts>;
   /** paper-doll plate for the SELECTED SKU (productPlates index, served from Vercel Blob): the
    *  stage leads with this photograph; 3D is a toggle on top of it */
   plateImage?: string | null;
@@ -326,7 +328,7 @@ export default function ConfiguratorPdp({
   const committedToken = currentSlug.split("-").pop() ?? "";
   const committedBase: ClosureBase =
     fam?.closureFromSlug[committedToken]
-    ?? (!isBottle ? "none" : /roll-?on/.test(currentSlug) ? "roller" : fam?.derived ? "none" : "sprayer");
+    ?? (!isBottle ? "none" : /roll-?on/.test(currentSlug) ? "roller" : !fam || fam.derived ? "none" : "sprayer");
 
   const [capMatLocal, setCapMat] = useState("ANSP_BLACK");
   const [trimMatLocal, setTrimMat] = useState(
@@ -495,7 +497,7 @@ export default function ConfiguratorPdp({
               mounted made every colourway change refetch a plate nobody sees. */}
           {!showKitLayers && (
             // eslint-disable-next-line @next/next/no-img-element
-            <img key={plate!} src={displayImageUrl(plate!)} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
+            <img key={plate!} src={displayImageUrl(plate!)} alt={`${groupTitle} — ${variantFacts?.closure ?? activeMeta?.name ?? ""}`}
                  width={1000} height={1100} decoding="async"
                  onError={() => markPlateBroken(plate!)}
                  className="absolute inset-0 h-full w-full object-contain" />
@@ -525,7 +527,7 @@ export default function ConfiguratorPdp({
         </div>
       ) : showPhoto ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={displayImageUrl(photoFallback!)} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
+        <img src={displayImageUrl(photoFallback!)} alt={`${groupTitle} — ${variantFacts?.closure ?? activeMeta?.name ?? ""}`}
              className="h-full w-full object-contain"
              style={isAssembledOneMlVialImage(photoFallback) ? { mixBlendMode: "multiply", transform: "scale(0.62)" } : isReconciledLocalSkuAssetUrl(photoFallback) ? { mixBlendMode: "multiply" } : undefined} />
       ) : showLive3d && fam ? (
@@ -842,7 +844,8 @@ export default function ConfiguratorPdp({
   );
 
   /* ------------------------------------------------- guided column */
-  const glassLabel = glassOptions?.find((g) => g.active)?.label ?? GLASS_PRESETS[glass]?.label ?? glass;
+  const glassLabel = variantFacts?.color ?? glassOptions?.find((g) => g.active)?.label ?? (fam ? GLASS_PRESETS[glass]?.label : null);
+  const closureLabel = variantFacts?.closure ?? (fam ? activeMeta?.name : null);
   const finishLabel = activeCapOption ?? capOptions?.[0] ?? null;
   const resolvedSku = websiteSku ?? skuLabel ?? null;
   const copySku = () => {
@@ -897,9 +900,9 @@ export default function ConfiguratorPdp({
   /* Your Configuration — the spec card with the resolved SKU */
   const configRows: Array<[string, string]> = isBottle ? [
       ["Family", groupTitle],
-      ["Glass Finish", glassLabel],
+      ...(glassLabel ? [["Glass Finish", glassLabel] as [string, string]] : []),
       ...(neckSize ? [["Neck Finish", neckSize] as [string, string]] : []),
-      ["Closure", activeMeta?.name ?? "Bottle only"],
+      ...(closureLabel ? [["Closure", closureLabel] as [string, string]] : []),
       ...(finishLabel ? [["Closure Finish", finishLabel] as [string, string]] : []),
       ...(canCap ? [["View", withCap ? "Cap on" : "Cap off"] as [string, string]] : []),
     ] : [

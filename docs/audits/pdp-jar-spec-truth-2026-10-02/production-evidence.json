@@ -1,0 +1,87 @@
+{
+  "source": "Read-only products:getProductGroup on https://precise-raccoon-123.convex.cloud",
+  "observedDate": "2026-10-02",
+  "groups": [
+    {
+      "slug": "cream-jar-30ml-mixed",
+      "color": null,
+      "variants": [
+        {
+          "websiteSku": "CJAmb30BlkCap",
+          "graceSku": "CJ-JAR-AMB-30ML-BLK",
+          "color": null,
+          "applicator": null,
+          "capColor": "Black",
+          "capStyle": null,
+          "itemName": "Cream glass jar style 30 ml amber bottle with black cap. For use with body butters, creams, thick lotions. Price each"
+        },
+        {
+          "websiteSku": "CJAmb30SlCap",
+          "graceSku": "CJ-JAR-AMB-30ML-SLV",
+          "color": null,
+          "applicator": null,
+          "capColor": "Silver",
+          "capStyle": null,
+          "itemName": "Cream glass jar style 30 ml amber bottle with silver cap. For use with body butters, creams, thick lotions. Price each"
+        },
+        {
+          "websiteSku": "CJFrst30BlkCap",
+          "graceSku": "CJ-JAR-FRS-30ML-BLK",
+          "color": null,
+          "applicator": null,
+          "capColor": "Black",
+          "capStyle": null,
+          "itemName": "Cream glass jar style 30 ml frosted bottle with black cap. For use with body butters, creams, thick lotions. Small trial or sample size. Great for promotions. Price each"
+        },
+        {
+          "websiteSku": "CJFrst30SlCap",
+          "graceSku": "CJ-JAR-FRS-30ML-SLV",
+          "color": null,
+          "applicator": null,
+          "capColor": "Silver",
+          "capStyle": null,
+          "itemName": "Cream jar style 30 ml frosted bottle with silver cap . For use with body butters, creams, thick lotions. Small trial or sample size. Great for promotions. Price each"
+        }
+      ]
+    },
+    {
+      "slug": "cream-jar-15ml-mixed",
+      "color": null,
+      "variants": [
+        {
+          "websiteSku": "CJClr15Pnk",
+          "graceSku": "CJ-JAR-CLR-15ML-PNK",
+          "color": null,
+          "applicator": null,
+          "capColor": "Pink",
+          "capStyle": null,
+          "itemName": "Plastic, cream jar style 15 ml bottle with pink cap. For use with body butters, creams, and thick lotions. Small trial or sample size. Great for promotions. Price each"
+        },
+        {
+          "websiteSku": "CJClr15Wht",
+          "graceSku": "CJ-JAR-CLR-15ML-WHT",
+          "color": null,
+          "applicator": null,
+          "capColor": "White",
+          "capStyle": null,
+          "itemName": "Plastic, cream jar style 15 ml bottle with white cap. For use with body butters, creams, and thick lotions. Small trial or sample size. Great for promotions. Price each"
+        }
+      ]
+    },
+    {
+      "slug": "cream-jar-60ml-mixed",
+      "color": null,
+      "variants": [
+        {
+          "websiteSku": "CreamJarFrstdPlsBlkPls2oz",
+          "graceSku": "CJ-JAR-FRS-60ML",
+          "color": null,
+          "applicator": null,
+          "capColor": "Frosted",
+          "capStyle": null,
+          "itemName": "Frosted plastic Cream jar bottle with clear cap. Capacity: 63 ml"
+        }
+      ]
+    }
+  ]
+}
