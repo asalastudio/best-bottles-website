@@ -5,6 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import ConvexClientProvider from "@/components/ConvexClientProvider";
 import { CartProvider } from "@/components/CartProvider";
 import { RegionProvider } from "@/components/RegionProvider";
+import { CartShoppingTracker } from "@/components/CartShoppingContext";
 import {
     SanityMegaMenuProvider,
     type MegaMenuPanelsData,
@@ -42,6 +43,7 @@ function ProviderContent({
         <RegionProvider initialMarketCode={initialMarketCode}>
         <ConvexClientProvider withClerk={withClerk}>
             <CartProvider>
+                <Suspense fallback={null}><CartShoppingTracker /></Suspense>
                 <Suspense
                     fallback={
                         <div className="min-h-screen bg-bone flex items-center justify-center">
