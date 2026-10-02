@@ -1,6 +1,6 @@
 # Reseller certificate workflow — inactive integration proposal
 
-Base: security PR344 `c7c3faac` (includes released Grace #345). Separate feature branch; do not merge it ahead of the security patch or deploy a stale Convex tree.
+Base: released main `00809768` (security #344, Grace #345 and Team Hub #353 preserved). This remains a separate draft feature; no production deployment is authorized.
 
 ## Behavior
 
@@ -29,10 +29,18 @@ One isolated TEST Clerk org with a customer and staff viewer, a dedicated TEST p
 
 Activating expiry reconciliation needs a separately approved cadence, dry-run reviewed target list, Shopify read-back/receipt reconciliation, exemption-code preservation policy, newer-approval checks and rollback. No actual revoke operation is implemented or scheduled here. Old `expireLapsedCertificates` remains unscheduled and now refuses to run through an in-flight sync.
 
+## Customer-declared expiration
+
+The buyer form has a labeled native date/calendar input and explicit choices for no expiration on the document or uncertainty. The additive optional `resaleCertificates.customerDeclaredExpiration` stores `{kind: "date", date: "YYYY-MM-DD"}`, `{kind: "none"}` or `{kind: "unspecified"}`. Old records/callers may omit it and display Not provided; no backfill is required. This is a code/schema proposal only, not a deployed schema change.
+
+Dates preserve the document's calendar value without local-time conversion. Impossible dates, timestamps and invalid choices are rejected in the server action and/or backend validator. Valid past dates are accepted as a factual declaration for staff review and visibly flagged; they never authorize checkout exemption. Each replacement stores its own choice, retaining prior declarations in history rather than inheriting a stale date. The date picker clears when changing to no expiration/unspecified.
+
+The customer declaration is labeled unverified in staff review and history. It never sets, extends or clears staff-controlled `expiresAt`, and is not used by approval, sync or expiry eligibility. Staff verify the supporting document and independently enter Staff-verified expiration; no buyer value is prefilled there. Existing staff expiry validation (future timestamp, UTC end-of-day for date input) remains in effect. The production email/tax activation guards are unchanged.
+
 ## Validation
 
 Synthetic integration covers owner-bound HTTP upload and PDF parsing, cross-org rejection, ticket replay, missing supporting documents, review/checkout separation, failed sync retry, repeated sync idempotency, all four account-data projections, outbox event uniqueness, notification transport retry with stable keys and canonical recipients, uncertain sync receipt, and read-only expiry planning. Separate browser tests cover stale upload completion, oversized replacement and focused-form refresh. Parser tests cover real generated fixtures and malformed/type/size failures. All service calls in these tests are mocks or in-memory Convex operations.
 
-Verification completed locally: 312 test files passed (2 skipped), 2,845 tests passed (7 skipped), including the final server-authorization and independent-review regressions. The review correction adds accepted-write/lost-response fencing and staff/customer status rendering cases. `tsc --noEmit` and changed-file lint also pass after the correction. The initial production webpack build (including TypeScript, all 61 static pages and sitemap generation), changed-file ESLint (zero errors; existing/generated-file warnings only), and `git diff --check` passed. The build used placeholder Convex/website values and Clerk disabled; it did not exercise live authenticated integrations. Generated sitemap and Next type-reference changes were restored. Synthetic token/document markers were absent from generated browser assets.
+Latest integrated verification: 314 test files passed (2 skipped), 2,878 tests passed (7 skipped), including customer-declared expiration, server authorization, independent-review regressions and current main. The full run used four workers; an earlier default-worker run timed out in the unrelated PDP suite, which passed in isolation and in the integrated rerun. Expiration coverage includes calendar form data, malformed/leap dates, timezone stability, none/unspecified/legacy values, replacement history, past-date warnings and separation from staff-verified expiry. Changed-file lint has zero errors (one existing unused-variable warning). Previous workflow verification: 312 test files passed (2 skipped), 2,845 tests passed (7 skipped). The review correction adds accepted-write/lost-response fencing and staff/customer status rendering cases. `tsc --noEmit` and changed-file lint also pass after the correction. The initial production webpack build (including TypeScript, all 61 static pages and sitemap generation), changed-file ESLint (zero errors; existing/generated-file warnings only), and `git diff --check` passed. The build used placeholder Convex/website values and Clerk disabled; it did not exercise live authenticated integrations. Generated sitemap and Next type-reference changes were restored. Synthetic token/document markers were absent from generated browser assets.
 
 Implementation references: pdf-lib PDFDocument.load and page APIs https://pdf-lib.js.org/docs/api/classes/pdfdocument ; Sharp metadata/decode https://sharp.pixelplumbing.com/api-input/ .

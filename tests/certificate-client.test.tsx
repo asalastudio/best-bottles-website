@@ -25,6 +25,22 @@ async function choose(file: File) {
 }
 const storageValue = () => (container.querySelector('input[name="documentStorageId"]') as HTMLInputElement).value;
 describe("certificate browser flow", () => {
+    it("offers an accessible native calendar and clears a date when the declaration type changes", async () => {
+        await render();
+        const date = container.querySelector<HTMLInputElement>('input[name="customerExpirationDate"]')!;
+        expect(date.type).toBe("date"); expect(date.required).toBe(true);
+        expect(container.querySelector('label[for="customerExpirationDate"]')?.textContent).toBe("Expiration date");
+        date.value = "2028-02-29";
+        expect(new FormData(container.querySelector("form")!).get("customerExpirationDate")).toBe("2028-02-29");
+        const select = container.querySelector<HTMLSelectElement>('select[name="customerExpirationKind"]')!;
+        await act(async () => { select.value = "none"; select.dispatchEvent(new Event("change", { bubbles: true })); });
+        expect(container.querySelector('input[name="customerExpirationDate"]')).toBeNull();
+        expect(new FormData(container.querySelector("form")!).get("customerExpirationKind")).toBe("none");
+        await act(async () => { select.value = "date"; select.dispatchEvent(new Event("change", { bubbles: true })); });
+        expect(container.querySelector<HTMLInputElement>('input[name="customerExpirationDate"]')!.value).toBe("");
+        await act(async () => { select.value = "unspecified"; select.dispatchEvent(new Event("change", { bubbles: true })); });
+        expect(new FormData(container.querySelector("form")!).get("customerExpirationDate")).toBeNull();
+    });
     it("clears an earlier valid attachment when its replacement is oversized", async () => {
         await render(); await choose(new File(["fixture"], "test.pdf", { type: "application/pdf" }));
         expect(storageValue()).toBe("verified-storage");

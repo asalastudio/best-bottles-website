@@ -1,4 +1,5 @@
 import "server-only";
+import type { CustomerDeclaredExpiration } from "./certificateExpiration";
 import { randomBytes, createHash } from "node:crypto";
 import { readBoundedDocument, validateCertificateBytes } from "./certificateDocumentValidation";
 import { syncCertificate } from "./certificateSync";
@@ -56,6 +57,7 @@ export async function submitResaleCertificateForViewer(input: {
     issuingState: string;
     permitNumber: string;
     documentStorageId?: string;
+    customerDeclaredExpiration?: CustomerDeclaredExpiration;
 }) {
     const viewer = await requirePortalViewer();
 
@@ -75,6 +77,7 @@ export async function submitResaleCertificateForViewer(input: {
             issuingState: input.issuingState,
             permitNumber: input.permitNumber,
             documentStorageId: input.documentStorageId as Id<"_storage"> | undefined,
+            customerDeclaredExpiration: input.customerDeclaredExpiration,
         },
     );
 }

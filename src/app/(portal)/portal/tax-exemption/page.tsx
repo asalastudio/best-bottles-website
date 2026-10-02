@@ -1,3 +1,4 @@
+import { customerDeclaredExpirationLabel, customerDeclaredExpirationIsPast } from "@/lib/portal/certificateExpiration";
 export const dynamic = "force-dynamic";
 
 import { PageHeader, PortalTag } from "@/components/portal/ui";
@@ -98,6 +99,8 @@ export default async function PortalTaxExemption() {
                         registry. Approval and successful checkout sync are required to confirm
                         this submission&rsquo;s exemption.
                     </p>
+                    <p className="mt-2 text-[13px] text-neutral-600">Your declared expiration (not yet verified): {customerDeclaredExpirationLabel(pending.customerDeclaredExpiration)}</p>
+                    {customerDeclaredExpirationIsPast(pending.customerDeclaredExpiration, asOf) && <p className="mt-1 text-xs text-amber-700">This is a past date. Staff will check the supporting document.</p>}
                 </div>
             )}
 
@@ -140,6 +143,7 @@ export default async function PortalTaxExemption() {
                             >
                                 <p data-label="Business" className="font-sans text-[13px] text-neutral-900">
                                     {cert.legalBusinessName}
+                                    <span className="mt-1 block text-xs text-neutral-500">Declared expiration: {customerDeclaredExpirationLabel(cert.customerDeclaredExpiration)}</span>
                                 </p>
                                 <p data-label="State" className="font-sans text-[13px] text-neutral-500">{cert.issuingState}</p>
                                 <p data-label="Submitted" className="font-sans text-[13px] text-neutral-500 tabular-nums">

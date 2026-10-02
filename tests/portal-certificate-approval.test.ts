@@ -130,6 +130,13 @@ describe("submitResaleCertificateForViewer", () => {
         expect(convexMutation).not.toHaveBeenCalled();
     });
 
+    it("forwards the declaration with server-derived ownership and no staff expiry", async () => {
+        await submitResaleCertificateForViewer({ legalBusinessName: "Fixture", issuingState: "CA", permitNumber: "TEST", customerDeclaredExpiration: { kind: "date", date: "2028-02-29" } });
+        const args = convexMutation.mock.calls[0][1];
+        expect(args).toMatchObject({ clerkOrgId: "org_1", clerkUserId: "user_buyer", writeToken: "test-token", customerDeclaredExpiration: { kind: "date", date: "2028-02-29" } });
+        expect(args).not.toHaveProperty("expiresAt");
+    });
+
     it("accepts a supported state", async () => {
         convexMutation.mockResolvedValue({ certificateId: "cert_2" });
         const result = await submitResaleCertificateForViewer({

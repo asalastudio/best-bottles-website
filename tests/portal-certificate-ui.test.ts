@@ -58,6 +58,23 @@ describe("submitCertificateAction", () => {
         expect(result).toEqual({ ok: true, error: null });
     });
 
+    it("passes a date-only declaration without assigning staff expiry", async () => {
+        const result = await submitCertificateAction(EMPTY, form({ ...VALID, customerExpirationKind: "date", customerExpirationDate: "2028-02-29", expiresAt: "4102444800000" }));
+        expect(result.ok).toBe(true);
+        const input = submitResaleCertificateForViewer.mock.calls[0][0];
+        expect(input.customerDeclaredExpiration).toEqual({ kind: "date", date: "2028-02-29" });
+        expect(input).not.toHaveProperty("expiresAt");
+    });
+    it.each(["", "2027-02-29", "2028-02-30", "2028-01-01T23:00:00Z"])("gives a safe date error for %s", async (customerExpirationDate) => {
+        const result = await submitCertificateAction(EMPTY, form({ ...VALID, customerExpirationKind: "date", customerExpirationDate }));
+        expect(result.ok).toBe(false);
+        expect(result.error).toMatch(/valid expiration date/);
+        expect(submitResaleCertificateForViewer).not.toHaveBeenCalled();
+    });
+    it.each(["none", "unspecified"])("allows an explicit %s declaration without a date", async (customerExpirationKind) => {
+        expect((await submitCertificateAction(EMPTY, form({ ...VALID, customerExpirationKind }))).ok).toBe(true);
+        expect(submitResaleCertificateForViewer.mock.calls[0][0].customerDeclaredExpiration).toEqual({ kind: customerExpirationKind });
+    });
     it("names the missing field rather than failing generically", async () => {
         const noName = await submitCertificateAction(EMPTY, form({ ...VALID, legalBusinessName: "  " }));
         expect(noName.error).toMatch(/legal business name/i);

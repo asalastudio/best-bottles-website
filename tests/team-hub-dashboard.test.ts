@@ -13,6 +13,7 @@ describe("Team Hub dashboard catalog", () => {
     const tools = buildTeamHubTools({
         shopifyAdminHref: "https://admin.shopify.com/store/best-bottles",
         madisonStudioHref: "https://app.madisonstudio.io",
+        launchReadinessHref: "https://docs.google.com/spreadsheets/d/test-checklist/edit",
     });
 
     it("keeps every staff surface in a named operations group", () => {
@@ -78,6 +79,7 @@ describe("Team Hub dashboard catalog", () => {
             "/grace-workspace",
         ]);
         expect(external).toEqual([
+            "Launch Readiness",
             "Backend Shopify Admin",
             "Madison Studio",
             "Best Bottles Packaging Studio",

@@ -15,6 +15,7 @@
  * into the new one, so "what were we relying on last March" stays answerable.
  */
 
+import { parseCustomerDeclaredExpiration, customerDeclaredExpirationIsPast } from "../src/lib/portal/certificateExpiration";
 import { mutation } from "./_generated/server";
 import { v } from "convex/values";
 import type { Doc } from "./_generated/dataModel";
@@ -65,7 +66,13 @@ export const submitResaleCertificate = mutation({
         issuingState: v.string(),
         permitNumber: v.string(),
         documentStorageId: v.optional(v.id("_storage")),
+        customerDeclaredExpiration: v.optional(v.union(
+            v.object({ kind: v.literal("date"), date: v.string() }),
+            v.object({ kind: v.literal("none") }),
+            v.object({ kind: v.literal("unspecified") }),
+        )),
     },
+    returns: v.object({ certificateId: v.id("resaleCertificates") }),
     handler: async (ctx, args) => {
         verifyWriteToken(args.writeToken);
 
@@ -74,6 +81,10 @@ export const submitResaleCertificate = mutation({
 
         const issuingState = normalizeState(args.issuingState);
         const permitNumber = normalizePermitNumber(args.permitNumber);
+        const customerDeclaredExpiration = parseCustomerDeclaredExpiration(
+            args.customerDeclaredExpiration?.kind,
+            args.customerDeclaredExpiration?.kind === "date" ? args.customerDeclaredExpiration.date : undefined,
+        );
 
         await requireVerifiedDocument(ctx, args.documentStorageId, args.clerkOrgId, args.clerkUserId);
 
@@ -101,6 +112,7 @@ export const submitResaleCertificate = mutation({
             issuingState,
             permitNumber,
             documentStorageId: args.documentStorageId,
+            customerDeclaredExpiration,
             status: "pending",
             submittedAt: Date.now(),
             submittedBy: args.clerkUserId,
@@ -206,6 +218,7 @@ export const listAllCertificates = serverQuery({
                 return {
                     ...cert,
                     documentVerified,
+                    customerDeclaredExpirationIsPast: customerDeclaredExpirationIsPast(cert.customerDeclaredExpiration, now),
                     notifications: (await ctx.db.query("certificateNotifications").withIndex("by_certificate", q => q.eq("certificateId", cert._id)).collect()).map(n => ({ event: n.event, audience: n.audience, status: n.status, attempts: n.attempts })),
                     companyName: account?.companyName ?? "Unknown account",
                     accountNumber: account?.accountNumber ?? null,

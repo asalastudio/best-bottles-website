@@ -9,9 +9,10 @@ export default function CertificateReviewActions({ certificateId, retry = false,
     return <div className="mt-4 border-t border-neutral-100 pt-4 text-sm">
         <form action={approve} className="flex items-end gap-3">
             <input type="hidden" name="certificateId" value={certificateId} />
-            {!retry && <label>Expires<input type="date" name="expiresAt" className="ml-2 rounded border p-2" /></label>}
+            {!retry && <label>Staff-verified expiration<input type="date" name="expiresAt" aria-describedby={`verified-expiration-${certificateId}`} className="ml-2 rounded border p-2" /></label>}
             <button disabled={approving || rejecting || !hasDocument} className="rounded bg-neutral-900 px-3 py-2 text-white disabled:opacity-40">{approving ? "Saving…" : retry ? "Retry checkout sync" : "Approve review"}</button>
         </form>
+        {!retry && <p id={`verified-expiration-${certificateId}`} className="mt-2 text-xs text-neutral-500">Verify the document before entering this date. Leave blank only if staff confirms no expiration; the customer&rsquo;s entry is not copied here.</p>}
         {!hasDocument && <p>A verified supporting document is required before approval.</p>}
         {!retry && <form action={reject} className="mt-3 flex gap-2">
             <input type="hidden" name="certificateId" value={certificateId} />

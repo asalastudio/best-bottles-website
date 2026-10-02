@@ -9,6 +9,7 @@ vi.mock("server-only", () => ({}));
 import { validateCertificateBytes } from "../src/lib/portal/certificateDocumentValidation";
 import { CertificateWriteNotAppliedError, syncCertificate, type CertificateSyncAdapter } from "../src/lib/portal/certificateSync";
 import { deliverCertificateNotification, type NotificationAdapter } from "../src/lib/portal/certificateNotifications";
+import type { CustomerDeclaredExpiration } from "../src/lib/portal/certificateExpiration";
 const modules = import.meta.glob("../convex/**/*.ts");
 const writeToken = "synthetic-only-server-token";
 const clerkOrgId = "org_fixture", clerkUserId = "user_fixture";
@@ -32,8 +33,8 @@ async function upload(t: ReturnType<typeof convexTest>) {
     const storageId = await t.mutation(api.certificateDocuments.markVerified, { ...scope, documentId, ...validation });
     return { storageId, documentId, ticket };
 }
-async function submit(t: ReturnType<typeof convexTest>, storageId: Id<"_storage">) {
-    return (await t.mutation(api.resaleCertificates.submitResaleCertificate, { ...scope, legalBusinessName: "Fixture LLC", issuingState: "CA", permitNumber: "TEST-NOT-A-PERMIT", documentStorageId: storageId })).certificateId;
+async function submit(t: ReturnType<typeof convexTest>, storageId: Id<"_storage">, customerDeclaredExpiration?: CustomerDeclaredExpiration) {
+    return (await t.mutation(api.resaleCertificates.submitResaleCertificate, { ...scope, legalBusinessName: "Fixture LLC", issuingState: "CA", permitNumber: "TEST-NOT-A-PERMIT", documentStorageId: storageId, customerDeclaredExpiration })).certificateId;
 }
 async function approve(t: ReturnType<typeof convexTest>, certificateId: Id<"resaleCertificates">) {
     return t.mutation(api.resaleCertificates.approveResaleCertificate, { writeToken, certificateId, reviewerClerkUserId: "staff_fixture" });
@@ -77,6 +78,38 @@ describe("synthetic certificate workflow", () => {
         const events = await t.query(api.certificateNotifications.list, { writeToken, certificateId });
         expect(events.map(e => e.eventKey)).toHaveLength(new Set(events.map(e => e.eventKey)).size);
         expect(events.map(e => e.event)).toEqual(expect.arrayContaining(["submitted", "approved", "sync_failed", "synced"]));
+    });
+    it("keeps declared expiry unverified, validates before replacement, and preserves each submission's declaration", async () => {
+        const t = await setup(); const { storageId } = await upload(t);
+        const first = await submit(t, storageId, { kind: "date", date: "2000-01-01" });
+        expect(await t.run(ctx => ctx.db.get(first))).toMatchObject({ status: "pending", customerDeclaredExpiration: { kind: "date", date: "2000-01-01" } });
+        expect((await t.run(ctx => ctx.db.get(first)))?.expiresAt).toBeUndefined();
+        expect((await t.query(api.resaleCertificates.listAllCertificates, { writeToken })).certificates[0].customerDeclaredExpirationIsPast).toBe(true);
+        for (const invalid of ["2027-02-29", "2028-02-30", "2028-01-01T00:00:00Z"]) {
+            await expect(submit(t, storageId, { kind: "date", date: invalid })).rejects.toThrow(/invalid_customer_declared_expiration/);
+        }
+        expect((await t.run(ctx => ctx.db.get(first)))?.status).toBe("pending");
+        const none = await submit(t, storageId, { kind: "none" });
+        expect(await t.run(ctx => ctx.db.get(first))).toMatchObject({ status: "revoked", customerDeclaredExpiration: { kind: "date", date: "2000-01-01" } });
+        expect((await t.run(ctx => ctx.db.get(none)))?.customerDeclaredExpiration).toEqual({ kind: "none" });
+        const unspecified = await submit(t, storageId, { kind: "unspecified" });
+        expect((await t.run(ctx => ctx.db.get(unspecified)))?.customerDeclaredExpiration).toEqual({ kind: "unspecified" });
+        const legacy = await submit(t, storageId);
+        expect((await t.run(ctx => ctx.db.get(legacy)))?.customerDeclaredExpiration).toBeUndefined();
+        expect(await t.query(api.resaleCertificates.getActiveCertificateForOrg, { writeToken, clerkOrgId })).toBeNull();
+    });
+    it("never grants or extends verified expiry from a customer's declaration", async () => {
+        const t = await setup(); const { storageId } = await upload(t);
+        const certificateId = await submit(t, storageId, { kind: "date", date: "2099-12-31" });
+        expect(await t.query(api.resaleCertificates.getActiveCertificateForOrg, { writeToken, clerkOrgId })).toBeNull();
+        const verifiedExpiry = Date.now() + 86400_000;
+        await t.mutation(api.resaleCertificates.approveResaleCertificate, { writeToken, certificateId, reviewerClerkUserId: "staff_fixture", expiresAt: verifiedExpiry });
+        await submit(t, storageId, { kind: "none" });
+        const active = await t.query(api.resaleCertificates.getActiveCertificateForOrg, { writeToken, clerkOrgId });
+        expect(active?._id).toBe(certificateId);
+        expect(active?.expiresAt).toBe(verifiedExpiry);
+        expect(active?.shopifySyncedAt).toBeUndefined();
+        expect(active?.customerDeclaredExpiration).toEqual({ kind: "date", date: "2099-12-31" });
     });
     it("rejects ownership forgery, replayed tickets, unverified and absent documents before review", async () => {
         const t = await setup(); const { documentId, storageId, ticket } = await upload(t);

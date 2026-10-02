@@ -34,6 +34,7 @@ export default function ResaleCertificateForm({
         error: null,
     });
 
+    const [expirationKind, setExpirationKind] = useState("date");
     const [storageId, setStorageId] = useState("");
     const [fileName, setFileName] = useState("");
     const [uploading, setUploading] = useState(false);
@@ -135,6 +136,31 @@ export default function ResaleCertificateForm({
                         className={fieldClass}
                     />
                 </div>
+
+                <fieldset className="sm:col-span-2">
+                    <legend className={labelClass}>Expiration on your certificate</legend>
+                    <div className="grid gap-3 sm:grid-cols-2">
+                        <div>
+                            <label className={labelClass} htmlFor="customerExpirationKind">Expiration details</label>
+                            <select id="customerExpirationKind" name="customerExpirationKind" value={expirationKind}
+                                onChange={(event) => setExpirationKind(event.target.value)} className={fieldClass}
+                                aria-describedby="customer-expiration-help">
+                                <option value="date">Has an expiration date</option>
+                                <option value="none">No expiration on the document</option>
+                                <option value="unspecified">I&rsquo;m not sure</option>
+                            </select>
+                        </div>
+                        {expirationKind === "date" && <div>
+                            <label className={labelClass} htmlFor="customerExpirationDate">Expiration date</label>
+                            <input id="customerExpirationDate" name="customerExpirationDate" type="date" required
+                                className={fieldClass} aria-describedby="customer-expiration-help" />
+                        </div>}
+                    </div>
+                    <p id="customer-expiration-help" className="mt-1.5 text-[12px] text-neutral-500">
+                        Enter the date printed on the document. Past dates can be submitted for review.
+                        Best Bottles will verify it; this entry does not grant or extend tax exemption.
+                    </p>
+                </fieldset>
 
                 <div className="sm:col-span-2">
                     <label className={labelClass} htmlFor="certificateDocument">

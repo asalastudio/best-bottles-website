@@ -521,6 +521,12 @@ export default defineSchema({
         issuingState: v.string(),                    // two-letter code, e.g. "CA"
         permitNumber: v.string(),                    // CDTFA seller's permit no. or state equivalent
         documentStorageId: v.optional(v.id("_storage")), // uploaded CDTFA-230 or equivalent
+        // Unverified customer declaration, separate from staff-approved expiresAt.
+        customerDeclaredExpiration: v.optional(v.union(
+            v.object({ kind: v.literal("date"), date: v.string() }),
+            v.object({ kind: v.literal("none") }),
+            v.object({ kind: v.literal("unspecified") }),
+        )),
 
         status: v.union(
             v.literal("pending"),

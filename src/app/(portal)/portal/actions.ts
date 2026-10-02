@@ -1,5 +1,7 @@
 "use server";
 
+import { parseCustomerDeclaredExpiration } from "@/lib/portal/certificateExpiration";
+
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import type { SubmitDraftState } from "@/components/portal/SubmitDraftForm";
@@ -157,12 +159,23 @@ export async function submitCertificateAction(
         return { ok: false, error: "Attach a photo or PDF of the certificate — we can't verify a permit number on its own." };
     }
 
+    let customerDeclaredExpiration;
+    try {
+        customerDeclaredExpiration = parseCustomerDeclaredExpiration(
+            formData.has("customerExpirationKind") ? String(formData.get("customerExpirationKind")) : undefined,
+            String(formData.get("customerExpirationDate") ?? "").trim(),
+        );
+    } catch {
+        return { ok: false, error: "Enter a valid expiration date from the document, or choose no expiration / not sure." };
+    }
+
     try {
         await submitResaleCertificateForViewer({
             legalBusinessName,
             issuingState,
             permitNumber,
             documentStorageId: documentStorageId || undefined,
+            customerDeclaredExpiration,
         });
     } catch (err) {
         const message = err instanceof Error ? err.message : String(err);

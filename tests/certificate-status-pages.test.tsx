@@ -59,4 +59,15 @@ describe("consistent customer/staff status rendering", () => {
         expect(html).not.toContain("are charged sales tax");
     });
 
+    it.each([
+        [{ kind: "date", date: "2000-01-01" }, "2000-01-01", true],
+        [{ kind: "none" }, "No expiration on document", false],
+        [undefined, "Not provided", false],
+    ])("shows the customer's declaration as unverified in the staff queue", async (customerDeclaredExpiration, label, past) => {
+        mocks.queue.mockResolvedValue({ counts: { pending: 1, approved: 0, awaitingSync: 0, lapsed: 0, expired: 0, rejected: 0 }, certificates: [{ _id: "cert", status: "pending", companyName: "Fixture", legalBusinessName: "Fixture", issuingState: "CA", permitNumber: "TEST", submittedAt: 1, notifications: [], customerDeclaredExpiration, customerDeclaredExpirationIsPast: past }] });
+        const html = renderToStaticMarkup(await ReviewQueue({}));
+        expect(html).toContain(`Customer-declared expiration (unverified): ${label}`);
+        expect(html.includes("Past date — check the supporting document")).toBe(past);
+    });
+
 });

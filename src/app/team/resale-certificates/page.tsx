@@ -1,3 +1,4 @@
+import { customerDeclaredExpirationLabel } from "@/lib/portal/certificateExpiration";
 export const dynamic = "force-dynamic";
 
 import Link from "next/link";
@@ -169,6 +170,10 @@ export default async function CertificateReviewQueue({ searchParams }: { searchP
                                             {cert.legalBusinessName} · {cert.issuingState} · permit{" "}
                                             <span className="tabular-nums">{cert.permitNumber}</span>
                                         </p>
+                                        <p className="mt-2 text-[13px] text-neutral-700">
+                                            Customer-declared expiration (unverified): {customerDeclaredExpirationLabel(cert.customerDeclaredExpiration)}
+                                        </p>
+                                        {cert.customerDeclaredExpirationIsPast && <p className="text-xs text-amber-700">Past date — check the supporting document before approval.</p>}
                                         {/* Verification is a per-state errand — there is no
                                             nationwide registry — so the reviewer gets the
                                             issuing state's own lookup rather than a search box
@@ -272,6 +277,7 @@ export default async function CertificateReviewQueue({ searchParams }: { searchP
                                         <p className="font-sans text-[13px] text-neutral-900">{row.companyName}</p>
                                         <p className="font-sans text-[12px] text-neutral-400">{row.legalBusinessName}</p>
                                         <p className="text-xs">{row.billingEmail ?? "No billing contact"}</p>
+                                        <p className="text-xs">Customer-declared expiration (unverified): {customerDeclaredExpirationLabel(row.customerDeclaredExpiration)}</p>
                                         {row.documentUrl && <Link href={row.documentUrl} target="_blank" rel="noopener noreferrer" className="text-xs underline">View supporting document</Link>}
                                         {row.syncAttemptId && <p className="text-xs text-amber-700">A sync attempt is awaiting confirmation. Reconcile it before retrying.</p>}
                                         {row.syncFailure && <p className="text-xs text-amber-700">Checkout sync needs attention.</p>}
