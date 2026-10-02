@@ -24,7 +24,7 @@ describe("public capture boundary", () => {
     ])("drops every supported capture type on %s", (route) => {
         expect(mayRecordSession(route)).toBe(false);
         vi.stubGlobal("window", { location: { pathname: route } });
-        for (const name of ["$autocapture", "$pageview", "$pageleave", "$snapshot", "$$heatmap", "$dead_click", "Grace Tool Called"]) {
+        for (const name of ["$autocapture", "$pageview", "$pageleave", "$snapshot", "$$heatmap", "$dead_click", "$exception", "Grace Tool Called"]) {
             expect(beforeSendPublicEvent(event(name))).toBeNull();
         }
     });
@@ -81,10 +81,17 @@ describe("public capture boundary", () => {
         expect(sdk.stopSessionRecording).toHaveBeenCalled();
         window.history.replaceState({}, "", "/catalog");
         analytics.catalogFiltered({ searchTerm: "private", resultCount: 4 });
-        analytics.graceToolCalled({ toolName: "searchCatalog", searchTerm: "private", success: true });
+        analytics.graceToolCalled({ toolName: "searchCatalog", searchTerm: "private", family: "private-model-family", success: true, errorCode: "private-error" });
+        analytics.graceNoMatch({ searchTerm: "private", family: "private-family", suggestedQueries: "private" });
         analytics.graceNavigation({ destination: "/catalog?q=private", triggeredBy: "tool", query: "private" });
         expect(JSON.stringify(sdk.capture.mock.calls)).not.toContain("private");
         expect(sdk.capture.mock.calls[0]).toEqual(["Catalog Filtered", { resultCount: 4 }]);
+    });
+
+    it("blocks remotely enabled exception events and unreviewed array payloads", () => {
+        expect(CAPTURE_PRIVACY_CONFIG.capture_exceptions).toBe(false);
+        expect(beforeSendPublicEvent(event("$exception", { $exception_list: [{ value: "private error" }] }))).toBeNull();
+        expect(beforeSendPublicEvent(event("custom", { resultCount: 2, $exception_list: [{ value: "private" }], extra: [{ value: "private" }] }))?.properties).toEqual({ resultCount: 2 });
     });
 
     it("blocks network bodies while sanitizing replay metadata URLs", () => {

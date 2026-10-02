@@ -6,6 +6,7 @@
  * Application code never imports an analytics SDK directly — only this file.
  */
 
+import { captureIdentityRevision, identityCaptureReady, reconcileCaptureIdentity, setCaptureIdentity, type AnalyticsIdentity } from "@/lib/analytics/captureIdentity";
 import type { PostHog } from "posthog-js";
 import { CAPTURE_PRIVACY_CONFIG, mayCaptureNow, minimizeProperties } from "@/lib/analytics/capturePrivacy";
 import { APPLICATOR_NAV, CATALOG_FAMILIES, type ApplicatorNavValue } from "@/lib/catalogFilters";
@@ -73,8 +74,13 @@ function withPosthog(call: (posthog: PostHog) => void) {
 }
 
 function withPublicPosthog(call: (posthog: PostHog) => void) {
-  if (!mayCaptureNow()) return;
-  withPosthog((posthog) => { if (mayCaptureNow()) call(posthog); });
+  if (!mayCaptureNow() || !identityCaptureReady()) return;
+  const revision = captureIdentityRevision();
+  withPosthog((posthog) => {
+    if (!mayCaptureNow() || !identityCaptureReady() || revision !== captureIdentityRevision()) return;
+    reconcileCaptureIdentity(posthog, true);
+    call(posthog);
+  });
 }
 
 const posthogAdapter: AnalyticsAdapter = {
@@ -98,6 +104,7 @@ const posthogAdapter: AnalyticsAdapter = {
       disable_session_recording: true,
     });
     posthogReady = posthog;
+    reconcileCaptureIdentity(posthog, mayCaptureNow());
     for (const call of pendingPosthogCalls.splice(0)) {
       try {
         call(posthog);
@@ -111,7 +118,7 @@ const posthogAdapter: AnalyticsAdapter = {
     // take a page down with it.
     withPosthog((posthog) => {
       try {
-        if (enabled && mayCaptureNow()) posthog.startSessionRecording();
+        if (enabled && mayCaptureNow() && identityCaptureReady()) posthog.startSessionRecording();
         else posthog.stopSessionRecording();
       } catch {
         // Recording is not worth an exception on a customer's page.
@@ -324,6 +331,11 @@ export const analytics = {
     return ready;
   },
 
+  syncIdentity(identity: AnalyticsIdentity) {
+    if (setCaptureIdentity(identity)) eventStartedAt.clear();
+    withPosthog((posthog) => reconcileCaptureIdentity(posthog, mayCaptureNow()));
+  },
+
   identify(userId: string, traits?: Props) {
     adapter.identify(userId, traits);
   },
@@ -379,7 +391,14 @@ export const analytics = {
     durationMs?: number;
     errorCode?: string;
   }) {
-    adapter.track("Grace Tool Called", properties);
+    const family = safeFamily(properties.family);
+    adapter.track("Grace Tool Called", {
+      toolName: properties.toolName,
+      success: properties.success,
+      status: properties.status,
+      durationMs: properties.durationMs,
+      ...(family ? { family } : {}),
+    });
   },
 
   graceAnswerFeedback(properties: { messageId: string; rating: "helpful" | "unhelpful" }) {
@@ -391,7 +410,8 @@ export const analytics = {
     family?: string;
     suggestedQueries?: string;
   }) {
-    adapter.track("Grace No Match", properties);
+    const family = safeFamily(properties.family);
+    adapter.track("Grace No Match", family ? { family } : {});
   },
 
   graceConnectionFailed(properties: {

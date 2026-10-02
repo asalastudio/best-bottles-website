@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { useAuth } from "@clerk/nextjs";
 import { useCart } from "@/components/CartProvider";
 import { usePathname } from "next/navigation";
@@ -21,30 +21,30 @@ const ANALYTICS_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY?.trim();
 function AnalyticsProviderBase({
   userId,
   isSignedIn,
+  isLoaded,
+  organizationId,
 }: {
   userId: string | null;
   isSignedIn: boolean;
+  isLoaded: boolean;
+  organizationId: string | null;
 }) {
   const { itemCount } = useCart();
   const pathname = usePathname();
-  const prevUserIdRef = useRef<string | null>(null);
-
   useEffect(() => {
     if (!ANALYTICS_KEY) return;
+    analytics.syncIdentity(isLoaded ? {
+      userId: isSignedIn ? userId : null,
+      organizationId: isSignedIn ? organizationId : null,
+    } : null);
+  }, [isLoaded, isSignedIn, userId, organizationId, pathname]);
+
+  useEffect(() => {
+    if (!ANALYTICS_KEY || !isLoaded) return;
     void analytics.init(ANALYTICS_KEY).then(() => {
       analytics.setSessionRecording(mayRecordSession(window.location.pathname));
     });
-  }, []);
-
-  useEffect(() => {
-    if (isSignedIn && userId && userId !== prevUserIdRef.current) {
-      prevUserIdRef.current = userId;
-      analytics.identify(userId);
-    } else if (!isSignedIn && prevUserIdRef.current) {
-      prevUserIdRef.current = null;
-      analytics.reset();
-    }
-  }, [isSignedIn, userId]);
+  }, [isLoaded]);
 
   useEffect(() => {
     analytics.setSuperProperties({
@@ -68,20 +68,22 @@ function AnalyticsProviderBase({
     // decided once at init: this is a single-page app, so a customer can walk
     // from the catalogue into the portal without a page load, and a recording
     // started on the storefront would happily follow them in.
-    analytics.setSessionRecording(ANALYTICS_KEY ? mayRecordSession(pathname) : false);
-    if (ANALYTICS_KEY) analytics.pageViewed();
-  }, [pathname]);
+    analytics.setSessionRecording(ANALYTICS_KEY && isLoaded ? mayRecordSession(pathname) : false);
+    if (ANALYTICS_KEY && isLoaded) analytics.pageViewed();
+  }, [pathname, isLoaded]);
 
   return null;
 }
 
 function AnalyticsProviderWithClerk() {
-  const { userId, isSignedIn } = useAuth();
+  const { userId, isSignedIn, isLoaded, orgId } = useAuth();
 
   return (
     <AnalyticsProviderBase
       userId={userId ?? null}
       isSignedIn={!!isSignedIn}
+      isLoaded={isLoaded}
+      organizationId={orgId ?? null}
     />
   );
 }
@@ -91,5 +93,5 @@ export function AnalyticsProvider({ withClerk = false }: { withClerk?: boolean }
     return <AnalyticsProviderWithClerk />;
   }
 
-  return <AnalyticsProviderBase userId={null} isSignedIn={false} />;
+  return <AnalyticsProviderBase userId={null} isSignedIn={false} isLoaded organizationId={null} />;
 }

@@ -1,4 +1,6 @@
 // @vitest-environment jsdom
+import { ExceptionObserver } from "posthog-js/lib/src/extensions/exception-autocapture";
+import { LazyLoadedSessionRecording } from "posthog-js/lib/src/extensions/replay/external/lazy-loaded-session-recorder";
 import { BrowserAutocapture } from "posthog-js/lib/src/browser-autocapture";
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
@@ -17,7 +19,7 @@ vi.mock("@/components/grace/GraceActionRenderer", () => ({ default: () => <a hre
 afterEach(() => { document.body.innerHTML = ""; state.pathname = "/catalog"; window.history.replaceState({}, "", "/"); });
 
 describe("replay serialization of sensitive UI", () => {
-    it("blocks rendered Grace messages, uploads, actions, streams and Clerk content", () => {
+    it("blocks synthetic content in full snapshots and emitted incremental mutations", async () => {
         document.body.innerHTML = renderToStaticMarkup(<>
             <GraceChatMessage message={{ id: "synthetic", role: "user", content: "private-user-message" } as never} />
             <GraceChatMessage message={{ id: "synthetic-2", role: "assistant", content: "private-assistant-message", action: { type: "anything" } } as never} />
@@ -37,10 +39,35 @@ describe("replay serialization of sensitive UI", () => {
         });
         try {
             record.takeFullSnapshot();
-            const full = snapshots.filter(e => e.type === EventType.FullSnapshot);
-            expect(full.length).toBeGreaterThan(0);
-            expect(JSON.stringify(full)).not.toContain("private-");
+            expect(snapshots.some(e => e.type === EventType.FullSnapshot)).toBe(true);
+            const heading = document.querySelector("h1")!;
+            heading.textContent = "private-updated-heading";
+            heading.setAttribute("title", "private-updated-attribute");
+            const privateRoot = document.querySelector("[data-ph-private]")!;
+            privateRoot.insertAdjacentHTML("beforeend", '<p>private-new-chat</p><img src="https://example.com/private-upload.png"/>');
+            document.body.insertAdjacentHTML("beforeend", '<style>.private-style { content: "private-style-text" }</style><canvas data-label="private-canvas"></canvas>');
+            await new Promise(resolve => setTimeout(resolve, 0));
+            expect(snapshots.some(e => e.type === EventType.IncrementalSnapshot)).toBe(true);
+            // Inspect every emitted event, not only FullSnapshot. Metadata here
+            // uses a clean synthetic URL; the SDK metadata mask is tested separately.
+            expect(JSON.stringify(snapshots)).not.toContain("private-");
         } finally { stop?.(); }
+    });
+
+    it("the pinned SDK masks replay metadata and overrides remote exception/canvas enablement", () => {
+        const recorder = Object.assign(Object.create(LazyLoadedSessionRecording.prototype), {
+            _instance: { config: CAPTURE_PRIVACY_CONFIG },
+        });
+        const masked = Reflect.get(recorder, "_maskReplayUrl").call(recorder, "https://www.bestbottles.com/catalog?q=private-query#private-fragment");
+        expect(masked).toBe("https://www.bestbottles.com/catalog");
+        const observer = Object.assign(Object.create(ExceptionObserver.prototype), {
+            _instance: { config: CAPTURE_PRIVACY_CONFIG }, _remoteEnabled: true,
+        });
+        expect(Reflect.get(observer, "_requiredConfig").call(observer)).toEqual({
+            capture_unhandled_errors: false, capture_unhandled_rejections: false, capture_console_errors: false,
+        });
+        expect(CAPTURE_PRIVACY_CONFIG.session_recording?.captureCanvas?.recordCanvas).toBe(false);
+        expect(CAPTURE_PRIVACY_CONFIG.session_recording?.canvasCapture?.maskRegionsFn?.(document.createElement("canvas"))).toBeNull();
     });
 
     it("the pinned SDK excludes Grace/auth subtrees and private routes from autocapture", () => {

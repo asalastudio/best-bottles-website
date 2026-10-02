@@ -15,6 +15,7 @@ These are source-level exposure paths, not evidence that private user data was a
 ## Change scope
 
 - `src/lib/analytics/sessionReplayScope.ts`: reviewed public-route allowlist, also used to construct the SDK autocapture URL allowlist. Unknown, malformed, authenticated, cart, and form routes fail closed. English and `/es` storefront routes are covered.
+- `src/lib/analytics/captureIdentity.ts`: local auth-context revisions reset stale persisted identity/groups on login/logout/user/organization changes, including blocked routes; bind only on public routes after auth resolves; discard queued events from older identities. Organization IDs are not transmitted.
 - `src/lib/analytics/capturePrivacy.ts`: shared event-time guard, URL query/hash removal, raw text/identity-property redaction, autocapture DOM exclusions, and replay masking/blocking.
 - `src/lib/analytics.ts`: apply those constraints after optional init config, check routes both before queueing and when the SDK becomes ready, and expose explicit pageviews.
 - `src/components/AnalyticsProvider.tsx`: scoped SPA pageviews/replay; stop sending name, email and signup date. Existing pseudonymous user IDs remain supported on reviewed public routes.
@@ -27,9 +28,21 @@ No `GraceProvider.tsx` or other source file from PR #350 is changed. No dependen
 
 ## Deliberate capture limitations
 
+**Temporary privacy gate, not delivered heatmap visibility:** public heatmaps/dead clicks remain an unmet part of the broader request. A safe mechanism must retain public-page points while excluding private overlays and preventing buffered points from crossing route/overlay boundaries before eventual activation. No capture re-enablement is included.
+
 The pinned `posthog-js` 1.433.2 `Heatmaps._capture` buffers pointer data by full URL across route changes and provides no subtree ignore hook. This draft disables heatmaps and dead clicks and also rejects their outbound events. Re-enablement needs a separately reviewed overlay/buffer policy and synthetic verification. Existing public event counts remain available; raw DOM text/attributes are not analytics dimensions.
 
-Replay masks all text and all string DOM attributes, blocks Grace/Clerk/private-route subtrees and hidden/file inputs, disables console/performance/JSON-LD collection, and rejects network payloads. This intentionally reduces replay visual fidelity (including image/style attributes). The masking callback retains only scrubbed public metadata URLs. Local settings take precedence over remote masking in the pinned SDK, but actual deployed behavior and recorder asset versions remain unverified.
+Replay masks all text and all string DOM attributes, blocks Grace/Clerk/private-route subtrees and hidden/file inputs, disables exception/console/performance/JSON-LD/font/canvas collection, and rejects network payloads. This intentionally reduces replay visual fidelity (including image/style attributes). The masking callback retains only scrubbed public metadata URLs. Local settings take precedence over remote masking in the pinned SDK, but actual deployed behavior and recorder asset versions remain unverified.
+
+## Independent-review corrections and remaining proof limits
+
+The initial draft dropped identity calls on private routes while remembering the user as identified. The corrected lifecycle waits for auth, resets previous identity even on private routes, retries binding on public return, and rechecks queued calls against the latest auth revision. Synthetic tests cover blocked-route login/logout, user/organization changes, delayed SDK loading, stale queued events, and actual provider dependency wiring.
+
+The pinned exception observer follows remote settings when `capture_exceptions` is omitted. It is now explicitly false; the outbound boundary rejects `$exception` and exception properties and drops arrays (none are in the adapter's explicit event schemas). A synthetic test exercises the actual pinned exception configuration resolver with remote enablement set true.
+
+The rrweb test now inspects **all emitted events** from the exercised full-snapshot and incremental text/attribute/blocked-subtree mutation scenarios, including added style/canvas nodes. A separate test exercises the actual SDK replay URL-mask method. These are bounded synthetic proofs: they do **not** establish end-to-end privacy for compressed outbound transport, every CSSOM mutation, third-party plugins/custom rrweb events, or future/unversioned remotely served recorder assets. Canvas/media/style/script nodes are blocked, network payloads rejected, and several optional streams disabled, but complete browser/transport validation remains required before activation or relaxing these gates. No actual private replay was inspected.
+
+Grace tool/no-match events also construct explicit payloads and admit only known catalog family vocabulary; model-supplied search, suggestions and error codes are omitted.
 
 New routes and new private overlays need review. The URL allowlist describes known public route shapes; it is not proof that a particular dynamic product/blog slug exists.
 
@@ -38,10 +51,10 @@ New routes and new private overlays need review. The URL allowlist describes kno
 Tests exercise unknown/private/localized routes, SDK-readiness races, URL and event redaction, privacy-config precedence, real pinned-SDK autocapture exclusions, actual rrweb serialization of synthetic private content, rendered route/drawer boundaries, and truthful status copy. All SDK transport calls are mocked or absent; no live project token is used.
 
 - Focused privacy/replay checks passed, including direct tests against the pinned SDK and its rrweb serializer.
-- Full suite: `npx vitest run --maxWorkers=4` — 311 files passed, 2 skipped; 2,869 tests passed, 7 skipped.
+- Full suite: `npx vitest run --maxWorkers=4` — 313 files passed, 2 skipped; 2,877 tests passed, 7 skipped.
 - `npm run lint` — zero errors, 86 existing warnings; focused lint on changed files — zero warnings/errors.
 - `npx tsc --noEmit --typeRoots ./node_modules/@types` — passed.
-- The production build compiled successfully with CI placeholder configuration, then stalled in its TypeScript phase. The local build was stopped; complete production build validation remains unverified. Standalone checkout-local typechecking passed.
+- On the initial head, the production build compiled successfully with CI placeholder configuration, then stalled in its TypeScript phase. The local build was stopped; complete production build validation remains unverified. Standalone checkout-local typechecking passed. The subsequent remote CI build and Vercel preview for `8d61b06` both completed successfully; that result does not certify later review-fix commits.
 
 An unrestricted parallel suite run timed out in two unrelated existing test files; both passed in isolation (9/9) and the complete four-worker rerun passed. No test timeout/configuration change is included.
 

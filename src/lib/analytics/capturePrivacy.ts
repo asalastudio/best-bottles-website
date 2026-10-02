@@ -1,8 +1,9 @@
+import { identityCaptureReady } from "./captureIdentity";
 import type { CaptureResult, PostHogConfig } from "posthog-js";
 import { mayRecordSession, publicCapturePath, PUBLIC_CAPTURE_URL_PATTERNS } from "./sessionReplayScope";
 
 // Both the SDK's autocapture class and replay's blockSelector are required.
-export const PRIVATE_CAPTURE_SELECTOR = '[data-ph-private], [data-ph-mask], .ph-no-capture, .cl-rootBox, .cl-userButtonPopoverCard, .cl-modalContent, input[type="hidden"], input[type="file"]';
+export const PRIVATE_CAPTURE_SELECTOR = '[data-ph-private], [data-ph-mask], .ph-no-capture, .cl-rootBox, .cl-userButtonPopoverCard, .cl-modalContent, input[type="hidden"], input[type="file"], style, script, canvas, iframe, object, embed, audio, video';
 
 export function mayCaptureNow(): boolean {
     return typeof window !== "undefined" && mayRecordSession(window.location.pathname);
@@ -18,7 +19,7 @@ export function safeCaptureUrl(value: unknown): string | undefined {
 }
 
 // Free text, model outputs and customer identifiers are not CRO dimensions.
-const PRIVATE_KEYS = /^(?:\$?name|\$?email|signUpDate|searchTerm|query|suggestedQueries|messageId|orderId|error|reason|\$elements|\$elements_chain|\$element_selectors|\$selected_content|\$event_target|\$title|\$set|\$set_once|\$initial_.*|utm_.*|\$search_.*)$/i;
+const PRIVATE_KEYS = /^(?:\$?name|\$?email|signUpDate|searchTerm|query|suggestedQueries|messageId|orderId|error|reason|\$elements|\$elements_chain|\$element_selectors|\$selected_content|\$exception.*|\$event_target|\$title|\$set|\$set_once|\$initial_.*|utm_.*|\$search_.*)$/i;
 const URL_KEYS = /(?:url|href|pathname|destination|referrer)$/i;
 export function minimizeProperties(properties: Record<string, unknown>): Record<string, unknown> {
     const result: Record<string, unknown> = {};
@@ -27,7 +28,10 @@ export function minimizeProperties(properties: Record<string, unknown>): Record<
         if (URL_KEYS.test(key)) {
             const url = safeCaptureUrl(value);
             if (url) result[key] = url;
-        } else if (value && typeof value === "object" && !Array.isArray(value)) {
+        } else if (Array.isArray(value)) {
+            // No application event schema in this adapter accepts arrays.
+            continue;
+        } else if (value && typeof value === "object") {
             result[key] = minimizeProperties(value as Record<string, unknown>);
         } else result[key] = value;
     }
@@ -35,9 +39,9 @@ export function minimizeProperties(properties: Record<string, unknown>): Record<
 }
 
 export function beforeSendPublicEvent(event: CaptureResult | null): CaptureResult | null {
-    if (!event || !mayCaptureNow()) return null;
+    if (!event || !mayCaptureNow() || !identityCaptureReady()) return null;
     // Heatmaps buffer across routes and have no subtree exclusion in our pinned SDK.
-    if (event.event === "$$heatmap" || event.event === "$dead_click") return null;
+    if (event.event === "$$heatmap" || event.event === "$dead_click" || event.event === "$exception") return null;
     const eventUrl = event.properties?.$current_url;
     if (eventUrl && !safeCaptureUrl(eventUrl)) return null;
     // Replay is already masked/blocked before serialization. Do not alter rrweb data.
@@ -61,6 +65,7 @@ export const CAPTURE_PRIVACY_CONFIG: Partial<PostHogConfig> = {
     capture_pageleave: false,
     enable_recording_console_log: false,
     capture_performance: false,
+    capture_exceptions: false,
     disable_capture_url_hashes: true,
     before_send: beforeSendPublicEvent,
     session_recording: {
@@ -70,6 +75,10 @@ export const CAPTURE_PRIVACY_CONFIG: Partial<PostHogConfig> = {
         blockSelector: PRIVATE_CAPTURE_SELECTOR,
         recordCrossOriginIframes: false,
         captureJsonLd: false,
+        collectFonts: false,
+        inlineStylesheet: false,
+        captureCanvas: { recordCanvas: false },
+        canvasCapture: { maskRegionsFn: () => null },
         // Also handles replay metadata URLs; drop all network payloads.
         maskCapturedNetworkRequestFn: (request) => {
             if (Object.keys(request).some((key) => key !== "name")) return null;
