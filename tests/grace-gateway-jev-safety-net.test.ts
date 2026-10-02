@@ -1,4 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
+import { getGraceRefineState } from "../src/lib/grace/refineState";
 import { getFunctionName } from "convex/server";
 import { isGraceToolResult, type GraceToolResult } from "../src/lib/graceToolResults";
 
@@ -6,6 +7,7 @@ import { isGraceToolResult, type GraceToolResult } from "../src/lib/graceToolRes
 // so its tile must carry that SKU's own released hero; GBNoHero999 has none.
 const state = vi.hoisted(() => ({
     calls: [] as Array<Record<string, unknown>>,
+    refinementCalls: [] as Array<Record<string, unknown>>,
     plateLookups: [] as string[][],
     rows: [
         {
@@ -59,12 +61,20 @@ vi.mock("@/lib/convexServerClient", () => ({
                     conflicts: [],
                 };
             }
+            if (name === "products:lookupSku") return { product: { ...state.rows[0], priceTiers: [{ minQty: 12, unitPrice: 0.84, totalPrice: 10.08 }] }, slug: state.rows[0].slug };
             if (name !== "grace:searchCatalog") throw new Error(`Unexpected query: ${name}`);
             state.calls.push(args);
             // Jev's applicator reading matches nothing; the request as written does.
             return args.applicatorFilter ? [] : state.rows;
         },
     }),
+}));
+
+vi.mock("@/lib/catalogServer", () => ({
+    searchCatalogServer: async (args: Record<string, unknown>) => {
+        state.refinementCalls.push(args);
+        return { totalCount: 15, items: [{ slug: "specialty-group" }] };
+    },
 }));
 
 vi.mock("@/lib/grace/enrichSearchCatalogWithJev", () => ({
@@ -128,5 +138,51 @@ describe("Grace tool gateway: Jev safety net and search tiles", () => {
             heroImageUrl: "https://blob.example/plates/GBNoHero999-thumb.png",
             heroImageKind: "plate",
         });
+    });
+});
+
+
+describe("active Refine survives raw searches and zero matches", () => {
+    it("returns a filtered raw row array, not the group verification envelope", async () => {
+        const { executeGraceServerTool } = await import("../src/lib/grace/toolGatewayServer");
+        const raw = await executeGraceServerTool({ toolName: "searchCatalog", parameters: {
+            searchTerm: "Elegant roller", returnRaw: true,
+            refineState: getGraceRefineState(new URLSearchParams("roller=metal")),
+        } });
+        expect((raw as typeof state.rows).map((row) => row.websiteSku)).toEqual(["GBElgFrst15MtlRollGlSh"]);
+    });
+    it.each([true, false])("does not restore excluded rows after zero matches, raw=%s", async (returnRaw) => {
+        const { executeGraceServerTool } = await import("../src/lib/grace/toolGatewayServer");
+        const result = await executeGraceServerTool({ toolName: "searchCatalog", parameters: {
+            searchTerm: "Elegant roller", returnRaw,
+            refineState: getGraceRefineState(new URLSearchParams("threads=specialty")),
+        } });
+        if (returnRaw) expect(result).toEqual([]);
+        else {
+            expect(result).toMatchObject({ status: "no_match" });
+            expect((result as GraceToolResult).products ?? []).toEqual([]);
+            expect((result as GraceToolResult).message).not.toContain("tell the customer plainly that we do not carry it");
+        }
+    });
+});
+
+
+it("uses the storefront group envelope only for explicit refinement verification", async () => {
+    const { executeGraceServerTool } = await import("../src/lib/grace/toolGatewayServer");
+    const refineState = getGraceRefineState(new URLSearchParams("threads=specialty"));
+    const result = await executeGraceServerTool({ toolName: "searchCatalog", parameters: {
+        searchTerm: "catalog refinement", returnRaw: true, verifyRefinements: true, refineState,
+    } });
+    expect(result).toMatchObject({ totalCount: 15 });
+    expect(state.refinementCalls.at(-1)?.filters).toEqual(refineState.filters);
+});
+
+it("exact SKU gateway preserves price tiers and supplies a verified clickable product URL", async () => {
+    const { executeGraceServerTool } = await import("../src/lib/grace/toolGatewayServer");
+    const result = await executeGraceServerTool({ toolName: "getProductBySku", parameters: { sku: state.rows[0].websiteSku } });
+    expect(result).toMatchObject({
+        found: true, websiteSku: state.rows[0].websiteSku, neckThreadSize: "13-415",
+        priceTiers: [{ minQty: 12, unitPrice: 0.84, totalPrice: 10.08 }],
+        verifiedPdpHref: `/products/${state.rows[0].slug}?sku=${state.rows[0].websiteSku}`,
     });
 });

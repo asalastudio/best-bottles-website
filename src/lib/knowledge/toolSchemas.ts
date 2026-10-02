@@ -1,5 +1,10 @@
 import {
     APPLICATOR_BUCKET_VALUES,
+    CAPACITY_RANGES,
+    ROLLER_MATERIALS,
+    STANDARD_NECK_FINISHES,
+    SPECIALTY_NECK_VALUE,
+    GROUND_NECK_VALUE,
     CANONICAL_GLASS_COLORS,
     CATALOG_CATEGORY_VALUES as CANONICAL_CATALOG_CATEGORY_VALUES,
     CATALOG_FAMILIES,
@@ -107,7 +112,7 @@ export const GRACE_OPENAI_TOOL_SPECS = [
         familyLimit: nullableString(`Exact family constraint, or null. Valid values: ${quoteList(CATALOG_FAMILIES)}. Any other spelling matches nothing.`),
         applicatorFilter: nullableString(`Comma-separated EXACT catalog applicator values, or null. Valid values: ${quoteList(PRODUCT_APPLICATOR_VALUES)}. Do NOT pass the canonical Refine bucket slugs here (${APPLICATOR_BUCKET_VALUES.join(", ")}) — those belong to setCatalogRefinements.applicators and match NOTHING in this tool, silently filtering out the products you are looking for. When unsure, pass null and read the applicator field on the returned rows.`),
     }),
-    spec("getProductBySku", "Look up ONE exact product by its SKU code. REQUIRED whenever the customer names or types a SKU (e.g. GB-CYL-CLR-9ML-T-08, CMP-CAP-SBLK-13-415) — searchCatalog is a name search and does NOT reliably match SKU codes. Accepts Grace or website SKUs. Also REQUIRED for any quantity/volume price quote: the result's priceTiers array is the full published quantity-break ladder (minQty/unitPrice/totalPrice, typically 5 breaks up to 1000+ pcs) — quote tiers from it verbatim and never extrapolate a bulk price. A null/found:false result means the code was not found as written; it does NOT mean the product is unavailable.", {
+    spec("getProductBySku", "Look up ONE exact product by its SKU code. REQUIRED whenever the customer names or types a SKU (e.g. GB-CYL-CLR-9ML-T-08, CMP-CAP-SBLK-13-415) — searchCatalog is a name search and does NOT reliably match SKU codes. Accepts Grace or website SKUs. Also REQUIRED for any quantity/volume price quote: the result's priceTiers array is the full published quantity-break ladder (minQty/unitPrice/totalPrice, typically 5 breaks up to 1000+ pcs) — quote tiers from it verbatim and never extrapolate a bulk price. When the customer asks for a link, include the returned verifiedPdpHref as a clickable Markdown link. A null/found:false result means the code was not found as written; it does NOT mean the product is unavailable.", {
         sku: string("The exact SKU code the customer supplied, e.g. 'GB-CYL-CLR-9ML-T-08'."),
     }),
     spec("getPolicy", "Return verbatim published policy text for shipping, delivery times, international duties, damaged or incorrect items, returns, restocking, and support contact. REQUIRED before stating any policy term, window, or timeframe — never answer a policy question from memory.", {
@@ -201,16 +206,20 @@ export const GRACE_OPENAI_TOOL_SPECS = [
         rollerVariant: nullableString("metal or plastic when they asked to change the roller, or null."),
         viewMode: nullableString("assembled (cap on) or capOff, or null."),
     }),
-    spec("setCatalogRefinements", "Update the visible catalog while inheriting every active Refine constraint unless the customer's exact words explicitly broaden one dimension.", {
+    spec("setCatalogRefinements", "Update the visible catalog while inheriting every active Refine constraint unless the customer's exact words explicitly broaden one dimension. When asked to clear previous filters or start over, call this tool with that exact customerRequest and only the newly requested constraints.", {
         customerRequest: string("The customer's exact current request; used to authorize any broadening."),
         search: nullableString("New search phrase, or null to preserve the active search."),
         category: nullableCategory("Requested category — must be one of the listed exact values, or null. There is NO stock/availability filter: never claim results were limited to in-stock items."),
         collection: nullableString("Requested collection, or null."),
         applicators: nullableApplicatorArray("Requested canonical Refine applicator buckets, or null."),
+        rollerMaterials: {
+            ...nullableStringArray("Requested roller material, metal or plastic, or null. Use with applicators:['rollon']."),
+            items: { type: "string", enum: [...ROLLER_MATERIALS] },
+        },
         families: nullableStringArray(`Requested exact family values, or null. Valid values: ${quoteList(CATALOG_FAMILIES)}.`),
         colors: nullableStringArray(`Requested exact GLASS color values, or null. Canonical values: ${quoteList(CANONICAL_GLASS_COLORS)} ('Blue' and 'Cobalt' fold into 'Cobalt Blue'). This facet filters the BOTTLE GLASS only — cap, closure, plug, applicator, and trim colors are NOT refinable and a closure color placed here matches nothing (e.g. colors:['Black'] for a 'black plug' request matches nothing — Black is not a glass colour; the bottle glass is usually amber or clear). Pink/lavender/red/dots/stars/shiny/matte metals are cap or atomizer finishes — never glass; put those in searchCatalog searchTerm (e.g. 'Pink with Dots Cap' or 'Pink with Dots atomizer') instead. When the customer's color word describes the cap/plug/applicator, pass null here and use searchCatalog instead, answering from the rows' cap/closure colors.`),
-        capacities: nullableStringArray("Requested exact capacity labels, or null. This is an EXACT SET, not a range: to honour 'under 15ml' or '15ml and smaller' you must enumerate every qualifying capacity (e.g. ['1 ml','3 ml','5 ml','9 ml','15 ml']). If you do not enumerate them, the size constraint is NOT applied — do not tell the customer the results are limited by size."),
-        neckThreadSizes: nullableStringArray("Requested exact GPI neck threads, or null."),
+        capacities: nullableStringArray(`Exact capacity labels (e.g. '3.3 ml') or shared catalogue range tokens: ${quoteList(CAPACITY_RANGES.map((range) => range.value))}. Use '6-15ml' for 6–15 ml. Multiple values are ORed; null preserves the current selection. Do not invent arbitrary range tokens or claim unsupported bounds.`),
+        neckThreadSizes: nullableStringArray(`Neck finishes: ${quoteList(STANDARD_NECK_FINISHES)}, '${GROUND_NECK_VALUE}' for ground glass, '${SPECIALTY_NECK_VALUE}' for nonstandard necks, or an exact stored neck value. Specialty excludes standard GPI and ground-glass necks. Null preserves the current selection.`),
         componentType: nullableString("Requested component type, or null."),
         priceMin: nullableNumber("Requested minimum price, or null."),
         priceMax: nullableNumber("Requested maximum price, or null. Price IS a true range filter."),

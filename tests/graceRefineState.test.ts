@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
 import {
     applyGraceRefinementRequest,
+    inheritGraceRefineDestination,
+    graceSearchRefineState,
     formatGraceRefineState,
     graceRefineDestination,
     getGraceRefineState,
@@ -148,4 +150,50 @@ describe("Grace Refine state", () => {
         expect(context).toContain("Neck thread: 17-415");
         expect(context).toContain("Do not remove or replace");
     });
+});
+
+
+it("clears previous Specialty before applying the 6–15ml metal roll-on range", () => {
+    const current = getGraceRefineState(new URLSearchParams("threads=specialty&families=Cylinder"));
+    const next = applyGraceRefinementRequest(current, { capacities: ["6–15 ml"], applicators: ["rollon"], rollerMaterials: ["metal"] }, "Clear previous filters and show 6–15ml metal roll-ons");
+    expect(next.filters.neckThreadSizes).toEqual([]);
+    expect(next.filters.families).toEqual([]);
+    expect(next.filters.capacities).toEqual(["6-15ml"]);
+    expect(next.filters.rollerMaterials).toEqual(["metal"]);
+    expect(graceRefineDestination(next)).toContain("roller=metal");
+});
+
+
+it("keeps Specialty and metal on a showProducts catalogue destination", () => {
+    const state = getGraceRefineState(new URLSearchParams("threads=specialty&roller=metal&applicators=rollon"));
+    const href = inheritGraceRefineDestination("/catalog?families=Cylinder&capacities=28+ml", state);
+    const next = getGraceRefineState(new URL(href, "https://catalog.invalid").searchParams);
+    expect(next.filters.neckThreadSizes).toEqual(["specialty"]);
+    expect(next.filters.rollerMaterials).toEqual(["metal"]);
+    expect(next.filters.families).toEqual(["Cylinder"]);
+});
+
+it("showProducts passes Refine through its raw search and never navigates on a zero match", () => {
+    const source = readFileSync("src/components/grace/GraceProvider.tsx", "utf8");
+    const block = source.slice(source.indexOf("showProducts: async"), source.indexOf("showProductPresentation:"));
+    expect(block).toContain("refineState: currentRefineState");
+    const empty = block.slice(block.indexOf("if (products.length === 0)"), block.indexOf("const capMatch"));
+    expect(empty).not.toContain("routerRef.current.push");
+    expect(empty).toContain("No verified products matched");
+});
+
+
+it("changes only glass colour across a Cylinder 9ml 17-415 roll-on follow-up", () => {
+    const first = graceSearchRefineState(getGraceRefineState(new URLSearchParams()), "Cylinder 9ml Cobalt Blue roll-on 17-415");
+    const next = graceSearchRefineState(first, "Make that Amber instead. Keep Cylinder, 9ml, roll-on and 17-415 the same");
+    expect(next.filters.colors).toEqual(["Amber"]);
+    expect(next.filters.families).toEqual(["Cylinder"]);
+    expect(next.filters.capacities).toEqual(["9 ml"]);
+    expect(next.filters.neckThreadSizes).toEqual(["17-415"]);
+    expect(next.filters.applicators).toEqual(["rollon"]);
+    const href = inheritGraceRefineDestination("/catalog?families=Cylinder&search=9ml&applicators=rollon", next);
+    const visible = getGraceRefineState(new URL(href, "https://catalog.invalid").searchParams);
+    expect(visible.filters.colors).toEqual(["Amber"]);
+    expect(visible.filters.neckThreadSizes).toEqual(["17-415"]);
+    expect(visible.filters.search).toBe("");
 });

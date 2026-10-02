@@ -1,6 +1,7 @@
 import {
     APPLICATOR_BUCKETS,
-    SPECIALTY_NECK_VALUE,
+    neckSelectionMatches,
+    capacitySelectionMatches,
     canonicalGlassColor,
     expandCapacityFilterValues,
     parseCapacityLabelMl,
@@ -105,24 +106,17 @@ function applicatorBucketOf(value: string | null | undefined): string | null {
 
 export function rowMatchesRefineFacets(row: RefineFacetRow, facets: ActiveRefineFacets): boolean {
     if (facets.families.length && !(row.family && facets.families.includes(row.family))) return false;
-    if (facets.capacityMls.length) {
+    if (facets.capacityLabels.length) {
         const ml = typeof row.capacityMl === "number"
             ? row.capacityMl
             : row.capacity ? parseCapacityLabelMl(row.capacity) : null;
-        if (ml == null || !facets.capacityMls.some((value) => Math.abs(value - ml) < 1e-6)) return false;
+        if (!capacitySelectionMatches(ml, facets.capacityLabels)) return false;
     }
     if (facets.colors.length) {
         const colour = canonicalGlassColor(row.canonicalColor ?? row.color ?? row.rawColor ?? null);
         if (!colour || !facets.colors.includes(colour)) return false;
     }
-    if (facets.neckThreadSizes.length) {
-        const explicit = facets.neckThreadSizes.filter((value) => value !== SPECIALTY_NECK_VALUE);
-        const wantsSpecialty = facets.neckThreadSizes.includes(SPECIALTY_NECK_VALUE);
-        const neck = row.neckThreadSize?.trim() ?? "";
-        // "Specialty" means every non-standard neck; without that list here a
-        // specialty selection is never used to exclude a row.
-        if (!explicit.includes(neck) && !wantsSpecialty) return false;
-    }
+    if (!neckSelectionMatches(facets.neckThreadSizes, row.neckThreadSize)) return false;
     if (facets.applicators.length) {
         const bucket = applicatorBucketOf(row.applicator);
         if (!bucket || !facets.applicators.includes(bucket)) return false;

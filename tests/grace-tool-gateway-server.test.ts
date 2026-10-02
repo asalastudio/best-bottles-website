@@ -110,3 +110,11 @@ describe("provider-neutral Grace tool executor", () => {
         }, "request-test", execute)).rejects.toThrow("missing_scope:customer_project.read.self");
     });
 });
+
+
+it("keeps refinement verification separate from raw row requests at the public boundary", () => {
+    const base = { searchTerm: "catalog refinement", returnRaw: true, refineState: getGraceRefineState(new URLSearchParams("threads=specialty")) };
+    const parsed = parsePublicGraceToolCall({ tool_name: "searchCatalog", parameters: { ...base, verifyRefinements: true } });
+    expect(parsed.gatewayParameters.verifyRefinements).toBe(true);
+    expect(() => parsePublicGraceToolCall({ tool_name: "searchCatalog", parameters: { ...base, verifyRefinements: "true" } })).toThrow("verifyRefinements must be boolean");
+});

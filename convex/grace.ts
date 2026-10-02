@@ -1,6 +1,7 @@
 import { canonicalGlassColor, detectCatalogFamily } from "../src/lib/catalogFilters";
 import { query, mutation, internalMutation, action } from "./_generated/server";
 import { v } from "convex/values";
+import { filter } from "convex-helpers/server/filter";
 import { api } from "./_generated/api";
 import OpenAI from "openai";
 import {
@@ -19,6 +20,8 @@ import {
 } from "./graceToolDefs";
 import {
     normalizeSearchTerm,
+    detectCapacityMl,
+    catalogVariantMatcher,
     normalizeApplicatorValue,
     detectCatalogColor,
     detectApplicatorIntent,
@@ -73,6 +76,7 @@ export const searchCatalog = query({
         const termLower = searchTermToUse.toLowerCase();
         const detectedColor = detectCatalogColor(termLower);
         const applicatorIntent = detectApplicatorIntent(searchTermToUse);
+        const matchesVariant = catalogVariantMatcher(args);
 
         // When an applicator filter is active, take more results before filtering
         const takeCount = args.applicatorFilter ? 100 : 25;
@@ -95,8 +99,7 @@ export const searchCatalog = query({
         // 2. OR if user explicitly asked for "30ml roll-on", we want to proactively include the 28ml cylinders too.
         const isRollOnSearch = /\b(roll|roller|ball)\b/i.test(searchTermToUse);
         const is30mlSearch = /\b30\s*ml\b/i.test(searchTermToUse);
-        const capacityMatchEarly = searchTermToUse.match(/\b(\d+)\s*ml\b/i);
-        const requestedMlFromTerm = capacityMatchEarly ? parseInt(capacityMatchEarly[1]) : null;
+        const requestedMlFromTerm = detectCapacityMl(searchTermToUse);
 
         // Merge roller fallback whenever roll-on + capacity is specified (not only when the
         // primary search returns few hits), so 9ml roll-on Cylinders are not buried under
@@ -117,9 +120,8 @@ export const searchCatalog = query({
             // Intelligent size matching:
             // If they ask for 30ml roll-on, we also want to surface the 28ml Cylinder variants.
             const targetCapacities = new Set<number>();
-            const capacityMatch = searchTermToUse.match(/\b(\d+)\s*ml\b/i);
-            if (capacityMatch) {
-                const ml = parseInt(capacityMatch[1]);
+            const ml = detectCapacityMl(searchTermToUse);
+            if (ml !== null) {
                 targetCapacities.add(ml);
                 if (ml === 30 && isRollOnSearch) targetCapacities.add(28); // Proactively include 28ml
             }
@@ -149,8 +151,7 @@ export const searchCatalog = query({
         const detectedFamily = args.familyLimit
             ?? detectCatalogFamily(termLower)
             ?? null;
-        const capMatch = searchTermToUse.match(/\b(\d+)\s*ml\b/i);
-        const detectedCapMl = capMatch ? parseInt(capMatch[1]) : null;
+        const detectedCapMl = detectCapacityMl(searchTermToUse);
 
         // Shape detection: "flat bottle" → Elegant, Flair; "square" → Square, Elegant, etc.
         // Geometric truth is secondary — customer visual impression drives the search.
@@ -326,9 +327,13 @@ export const searchCatalog = query({
                     if (familyCount[fam] > PER_FAMILY_CAP) continue;
 
                     const variantTakeCount = isBroadCapacityBrowse ? 1 : 8;
-                    let variants = await ctx.db.query("products")
-                        .withIndex("by_productGroupId", (q) => q.eq("productGroupId", group._id))
-                        .take(variantTakeCount);
+                    // Filter the indexed group stream BEFORE taking representatives:
+                    // the requested metal/cap variant can occur after eight plastic rows.
+                    let variants = await filter(
+                        ctx.db.query("products")
+                            .withIndex("by_productGroupId", (q) => q.eq("productGroupId", group._id)),
+                        matchesVariant,
+                    ).take(variantTakeCount);
                     if (applicatorIntent === "rollon") {
                         variants = variants.filter((v) => /(roller|roll)/i.test(v.applicator ?? ""));
                     } else if (applicatorIntent === "spray") {
@@ -377,23 +382,6 @@ export const searchCatalog = query({
             }
         }
 
-        // Apply applicator filter in JS after fetching (Convex search index doesn't support OR filters)
-        if (args.applicatorFilter) {
-            const allowed = new Set(
-                args.applicatorFilter
-                    .split(",")
-                    .map((s) => normalizeApplicatorValue(s))
-                    .filter((s): s is string => Boolean(s))
-                    .map((s) => s.toLowerCase())
-            );
-            results = results
-                .filter((p) => {
-                    const normalizedApplicator = normalizeApplicatorValue(p.applicator);
-                    return normalizedApplicator ? allowed.has(normalizedApplicator.toLowerCase()) : false;
-                })
-                .slice(0, 25);
-        }
-
         // When shape intent overrides the literal family match, or adjacent expansion
         // triggered, don't boost the detected family in scoring — all shape-group families
         // should rank equally based on the customer's visual impression.
@@ -409,6 +397,7 @@ export const searchCatalog = query({
             shapeAlsoFamilies: shapeMatch?.also,
         };
         const sorted = dedupeCatalogResults([...structuredResults, ...results])
+            .filter(matchesVariant)
             .sort((a, b) => scoreCatalogResult(b, scoreMeta) - scoreCatalogResult(a, scoreMeta));
 
         const resultLimit = isBroadCapacityBrowse
@@ -420,7 +409,7 @@ export const searchCatalog = query({
         if (is9mlCylinderRollOnContext) {
             results = ensureVerified9mlCylinderRollOnCoverage(
                 results,
-                verified9mlCylinderRollOnCandidates,
+                verified9mlCylinderRollOnCandidates.filter(matchesVariant),
                 resultLimit,
             );
         }
