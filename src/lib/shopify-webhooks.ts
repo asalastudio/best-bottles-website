@@ -149,6 +149,8 @@ export interface WebhookOrderFulfillment {
     created_at?: string | null;
     updated_at?: string | null;
     status?: string | null;
+    /** GraphQL display state; separate from carrier shipment evidence. */
+    display_status?: string | null;
     tracking_info?: Array<{ company: string | null; number: string | null; url: string | null }>;
     /** Shopify's delivery state: "in_transit", "delivered", "out_for_delivery", … */
     shipment_status: string | null;
@@ -208,6 +210,7 @@ export function shipmentFromFulfillment(fulfillment: WebhookOrderFulfillment) {
         carrier: fulfillment.tracking_company || undefined,
         trackingUrl: primary?.trackingUrl,
         shipmentStatus: fulfillment.shipment_status || undefined,
+        displayStatus: fulfillment.display_status || undefined,
         fulfillmentStatus: fulfillment.status || undefined,
         sourceUpdatedAt: sourceTimestamp(fulfillment.updated_at),
         fulfillmentCreatedAt: sourceTimestamp(fulfillment.created_at),

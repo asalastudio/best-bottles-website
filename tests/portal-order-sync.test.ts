@@ -295,3 +295,22 @@ describe("same-version source collisions", () => {
         expect(await saved(t)).toMatchObject({ status: "delivered", sourceConflict: false });
     });
 });
+
+
+it.each([true, false])("keeps equivalent REST/GraphQL shipment evidence conflict-free (GraphQL first: %s)", async (graphqlFirst) => {
+    const t = convexTest(schema, modules);
+    await seedAccount(t, SHOPIFY_CUSTOMER);
+    const rest = { ...shipment(100), shipmentStatus: undefined };
+    const graphql = { ...rest, displayStatus: "FULFILLED" };
+    const payload = { shopifyFulfillmentStatus: "fulfilled" };
+    await order(t, { ...payload, shipments: [graphqlFirst ? graphql : rest] });
+    await order(t, { ...payload, shipments: [graphqlFirst ? rest : graphql] });
+    const after = await saved(t);
+    expect(after).toMatchObject({ status: "unknown", sourceConflict: false,
+        shipments: [expect.objectContaining({ displayStatus: "FULFILLED" })] });
+    expect(await order(t, { ...payload, shipments: [graphql] })).toMatchObject({ skipped: "stale_or_duplicate" });
+    expect(await order(t, { ...payload, shipments: [rest] })).toMatchObject({ skipped: "stale_or_duplicate" });
+    expect(await saved(t)).toEqual(after);
+    await order(t, { ...payload, shipments: [{ ...graphql, displayStatus: "SUBMITTED" }] });
+    expect((await saved(t))?.sourceConflict).toBe(true);
+});

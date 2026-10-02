@@ -682,6 +682,7 @@ export const upsertOrderFromShopify = mutation({
             carrier: v.optional(v.string()),
             trackingUrl: v.optional(v.string()),
             shipmentStatus: v.optional(v.string()),
+            displayStatus: v.optional(v.string()),
             fulfillmentStatus: v.optional(v.string()),
             sourceUpdatedAt: v.optional(v.number()),
             fulfillmentCreatedAt: v.optional(v.number()),
@@ -763,10 +764,21 @@ export const upsertOrderFromShopify = mutation({
                 // A collision is ambiguous, not a duplicate. Preserve source
                 // values and mark uncertainty exactly once; never choose the
                 // last-arriving same-version payload as authority.
-                const previousSource = { ...previous, sourceConflict: undefined };
+                // REST has no GraphQL displayStatus field. Compare it only
+                // when both sources supplied it; absence is not disagreement.
+                const compareDisplay = previous.displayStatus !== undefined && incoming.displayStatus !== undefined;
+                const previousSource = { ...previous, sourceConflict: undefined,
+                    displayStatus: compareDisplay ? previous.displayStatus : undefined };
+                const incomingSource = { ...incoming, displayStatus: compareDisplay ? incoming.displayStatus : undefined };
                 if (incoming.sourceUpdatedAt === previous.sourceUpdatedAt && !previous.sourceConflict
-                    && !sameSourceValue(previousSource, incoming)) {
+                    && !sameSourceValue(previousSource, incomingSource)) {
                     shipments[index] = { ...previous, sourceConflict: true };
+                    shipmentsChanged = true;
+                } else if (incoming.sourceUpdatedAt === previous.sourceUpdatedAt && !previous.sourceConflict
+                    && previous.displayStatus === undefined && incoming.displayStatus !== undefined) {
+                    // Same-version equivalent evidence may enrich a missing
+                    // source-specific field once; replays remain no-ops.
+                    shipments[index] = { ...previous, displayStatus: incoming.displayStatus };
                     shipmentsChanged = true;
                 }
                 continue;

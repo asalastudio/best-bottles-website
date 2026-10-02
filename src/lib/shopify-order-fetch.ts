@@ -13,6 +13,12 @@ import type { WebhookOrder } from "./shopify-webhooks";
  * Also used by the backfill, so history and live updates cannot disagree about
  * what an order looks like.
  */
+const CARRIER_DISPLAY_STATES = new Set([
+    "ATTEMPTED_DELIVERY", "CARRIER_PICKED_UP", "CONFIRMED", "DELAYED", "DELIVERED",
+    "FAILURE", "IN_TRANSIT", "LABEL_PRINTED", "LABEL_PURCHASED", "LABEL_VOIDED",
+    "NOT_DELIVERED", "OUT_FOR_DELIVERY", "PICKED_UP", "READY_FOR_PICKUP",
+]);
+
 export async function fetchOrderForSync(numericOrderId: string): Promise<WebhookOrder | null> {
     const data = await adminGraphQL<{
         order: {
@@ -135,9 +141,11 @@ export async function fetchOrderForSync(numericOrderId: string): Promise<Webhook
             updated_at: f.updatedAt,
             status: f.status.toLowerCase(),
             tracking_info: f.trackingInfo,
-            // displayStatus is upper-case (IN_TRANSIT); the portal's status
-            // mapper compares against Shopify's lower-case shipment_status.
-            shipment_status: f.displayStatus ? f.displayStatus.toLowerCase() : null,
+            // FULFILLED/MARKED_AS_FULFILLED/SUBMITTED describe fulfillment
+            // workflow, not carrier movement. Preserve the raw display value.
+            display_status: f.displayStatus,
+            shipment_status: f.displayStatus && CARRIER_DISPLAY_STATES.has(f.displayStatus)
+                ? f.displayStatus.toLowerCase() : null,
             tracking_company: f.trackingInfo[0]?.company ?? null,
             tracking_number: f.trackingInfo[0]?.number ?? null,
             tracking_url: f.trackingInfo[0]?.url ?? null,

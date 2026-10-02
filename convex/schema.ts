@@ -576,6 +576,7 @@ export default defineSchema({
             trackingUrl: v.optional(v.string()),
             /** Shopify delivery state: in_transit, out_for_delivery, delivered… */
             shipmentStatus: v.optional(v.string()),
+            displayStatus: v.optional(v.string()),
             fulfillmentStatus: v.optional(v.string()),
             sourceConflict: v.optional(v.boolean()),
             sourceUpdatedAt: v.optional(v.number()),

@@ -59,3 +59,30 @@ describe("GraphQL snapshot to portal boundary", () => {
         expect(() => assertFulfillmentSnapshot({ ...order, fulfillments: [] }, event)).toThrow("snapshot_not_current");
     });
 });
+
+it("canonicalizes equivalent REST and GraphQL unfulfilled snapshots before conflict comparison", async () => {
+    const data = fixture();
+    data.order.displayFulfillmentStatus = "UNFULFILLED";
+    data.order.fulfillments = [];
+    read.mockResolvedValue(data);
+    const fetched = (await fetchOrderForSync("123"))!;
+    const rest = { ...fetched, fulfillment_status: null };
+    const graphqlArgs = orderSyncArgs(fetched);
+    const restArgs = orderSyncArgs(rest);
+    expect(graphqlArgs.shopifyFulfillmentStatus).toBeNull();
+    expect(graphqlArgs.status).toBe("processing");
+    expect(graphqlArgs).toEqual(restArgs);
+});
+
+it.each(["FULFILLED", "MARKED_AS_FULFILLED", "SUBMITTED", "FUTURE_WORKFLOW_STATE"])("does not confuse GraphQL %s display state with REST carrier shipment status", async (displayStatus) => {
+    const data = fixture();
+    data.order.displayFulfillmentStatus = "FULFILLED";
+    data.order.fulfillments[0].displayStatus = displayStatus;
+    read.mockResolvedValue(data);
+    const fetched = (await fetchOrderForSync("123"))!;
+    const rest = { ...fetched, fulfillments: fetched.fulfillments!.map((f) => ({ ...f, display_status: undefined, shipment_status: null })) };
+    expect(orderSyncArgs(fetched).shipments?.[0].displayStatus).toBe(displayStatus);
+    expect(orderSyncArgs(fetched).status).toBe("unknown");
+    expect(orderSyncArgs(fetched).shipments?.[0].shipmentStatus)
+        .toEqual(orderSyncArgs(rest).shipments?.[0].shipmentStatus);
+});
