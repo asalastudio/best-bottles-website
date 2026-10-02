@@ -49,6 +49,7 @@ export default async function TeamPage({ searchParams }: TeamPageProps) {
     const tools = buildTeamHubTools({
         shopifyAdminHref: getShopifyAdminHref(),
         madisonStudioHref: getMadisonStudioHref(),
+        launchReadinessHref: "https://docs.google.com/spreadsheets/d/1bSbiMrRbjoik5muw_JDbpr8F53nWmLjQruMgX8zte-0/edit",
     });
 
     // Local preview runs without Clerk, so the staff gate behind the queue

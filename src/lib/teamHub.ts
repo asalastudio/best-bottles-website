@@ -47,9 +47,10 @@ export type TeamHubTool = {
 type TeamHubHrefDeps = {
     shopifyAdminHref: string;
     madisonStudioHref: string;
+    launchReadinessHref: string;
 };
 
-export function buildTeamHubTools({ shopifyAdminHref, madisonStudioHref }: TeamHubHrefDeps): TeamHubTool[] {
+export function buildTeamHubTools({ shopifyAdminHref, madisonStudioHref, launchReadinessHref }: TeamHubHrefDeps): TeamHubTool[] {
     return [
         {
             name: "Certificate Review Queue",
@@ -66,6 +67,14 @@ export function buildTeamHubTools({ shopifyAdminHref, madisonStudioHref }: TeamH
             badge: "B2B",
             section: "operations",
             quick: true,
+        },
+        {
+            name: "Launch Readiness",
+            href: launchReadinessHref,
+            description: "Open the editable launch checklist in Google Sheets. Access is managed in Google Sheets.",
+            badge: "Checklist",
+            section: "operations",
+            external: true,
         },
         {
             name: "Edit Products",
