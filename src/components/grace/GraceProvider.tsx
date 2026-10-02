@@ -2620,9 +2620,11 @@ function GraceProviderBase({
 
         if (role === "user") {
             if (payload.source === "openai-realtime") {
+                // Reply state starts at speech onset: ASR can finish after the answer.
                 if (!catalogTurnRef.current.completeVoiceTranscript(payload.voiceItemId, text)) return;
             } else {
                 catalogTurnRef.current.begin(text);
+                setIsAwaitingReply(true);
             }
             // Append voice transcripts; skip if send() already inserted an identical line
             setMessages((prev) => {
@@ -2632,7 +2634,6 @@ function GraceProviderBase({
                 }
                 return [...prev, { role: "user", content: text, id: nextMsgId() }];
             });
-            setIsAwaitingReply(true);
             return;
         }
 
@@ -2748,7 +2749,10 @@ function GraceProviderBase({
                 onDisconnect: (details) => handleDisconnect(details?.unexpected
                     ? { reason: "error", closeCode: 1006, message: "Realtime transport closed unexpectedly" }
                     : { reason: "disconnected" }),
-                onUserSpeechStarted: (itemId) => catalogTurnRef.current.beginVoice(itemId),
+                onUserSpeechStarted: (itemId) => {
+                    catalogTurnRef.current.beginVoice(itemId);
+                    setIsAwaitingReply(true);
+                },
                 onModeChange: (mode) => handleModeChange({ mode }),
                 onError: handleError,
                 onTranscriptDelta: (text) => handleAgentChatResponsePart({ text, type: "delta" }),
