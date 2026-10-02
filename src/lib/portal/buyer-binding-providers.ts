@@ -4,7 +4,7 @@ import { z } from "zod";
 import { api } from "../../../convex/_generated/api";
 import type { BuyerScope } from "../../../convex/lib/buyerBinding";
 import { getPortalConvex, getPortalConvexWriteToken } from "./convexClient";
-import { requireStaffViewer } from "./staff";
+import { requireFreshBindingStaff } from "./buyer-binding-staff";
 import { createBuyerBindingService, type BindingConfig, type BindingTarget, type BuyerSessionProof,
     type ClerkBuyerEvidence, type ShopifyBuyerEvidence } from "./buyer-binding";
 
@@ -101,7 +101,7 @@ export function createServerBuyerBindings(config: BindingConfig,
     const pinned = structuredClone(config);
     const credential = () => { assertInstance(pinned); return getPortalConvexWriteToken(); };
     return createBuyerBindingService({ config: pinned,
-        requireStaff: async () => { assertInstance(pinned); return requireStaffViewer(); },
+        requireStaff: async () => { assertInstance(pinned); return requireFreshBindingStaff(); },
         readViewer: async () => {
             assertInstance(pinned);
             const { userId, orgId } = await auth();
