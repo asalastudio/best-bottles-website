@@ -1,10 +1,14 @@
-# Native B2B pilot — preparation, not activation
+# Native B2B pilot — integration preparation
 
 The selected route uses Shopify Plus company catalogs and volume pricing. This draft adds a server-only native-price/cart adapter and tests; **no production route imports it**. It does not complete the live pricing fix, gate the existing anonymous route, replace Clerk, configure auth, or provision Shopify data. PR349's Function proposal remains held.
 
+**Subsequent live pilot status:** Jordan separately approved the exact buyer/company/location and whole-product publication scope at 04:01 UTC on October 2. The isolated company/location, Ordering only assignment, catalog/publication and exact one-variant native ladder were provisioned and independently read back. All 34 global prices/inventory policies/quantities and the 33 siblings' contextual base prices were unchanged. No order, invitation, tax exemption, certificate approval or auth/settings change occurred. Private execution IDs and rollback evidence are outside this PR. The initial audit and proposed diff below are retained as pre-execution history, not a claim that provisioning is still pending.
+
+See [authentication and HTTP integration](auth-integration.md) for the current blocker, tested pilot-only handler composition, exact proposed preview callback, and user-selected location verification. This handler is not mounted until the real session resolver and order policy exist; no production route or storefront component uses it.
+
 ## Scope and evidence
 
-Jordan authorized fixing the reproduced Elegant mismatch on October 2. Parent subsequently confirmed the approved-wholesale-only/no-card-before-approval requirement and accepted native Shopify B2B. Parent is obtaining one existing approved company/buyer or explicitly designated test buyer. No company/customer identity is guessed here.
+Jordan authorized fixing the reproduced Elegant mismatch on October 2. Parent subsequently confirmed the approved-wholesale-only/no-card-before-approval requirement and accepted native Shopify B2B. The approved existing buyer and isolated company/location were resolved in the private execution record; no identity was guessed.
 
 The directly reviewed source is the legacy exact-SKU ladder in `data/audits/legacy-tier-pricing-2026-07-20/tiers.jsonl` (GBElg15MtlRollSlSh). September25 PR271/commit3154b414 established tiers shown as prices; this proposal does not reinstate quote labels. Legacy pack totals have different rounding; this pilot uses the approved displayed unit rates, so 60×$0.84=$50.40 before tax/shipping.
 
@@ -25,7 +29,7 @@ Current counterexample: `src/lib/portal/wholesaleCheckout.ts` deliberately retur
 
 The preview/pricing method is ready for the PDP/cart integration but is not yet called by either. This is a reusable preparation seam, not evidence of hosted parity. Each checkout request creates a new cart; persistent cart update/buyer-switch integration and server-owned cart storage are still required for a full release. Native Shopify handles hosted quantities, but that behavior still needs the pilot verification below.
 
-## Proposed exact pilot diff (not executed)
+## Original pilot diff (subsequently executed under separate approval)
 
 See `pilot.json`. Before applying, refresh store/variant/SKU/currency and current catalogs/assignments; halt on drift. Resolve the one named buyer read-only; record exact IDs in a private review packet, not a public PR.
 
@@ -38,7 +42,7 @@ See `pilot.json`. Before applying, refresh store/variant/SKU/currency and curren
 
 ## Authentication and policy actions requiring separate concrete review
 
-Preserve Clerk. Inspect existing OIDC/Customer Account API configuration first. If missing, prepare exact Clerk OAuth application, Shopify identity-provider client binding, callback/logout URLs and requested scopes for action-time approval. A Clerk OAuth client is not a Shopify pricing app. Do not print or ask the user to send passwords/tokens. No installation, OAuth exchange, secret transfer, callback edit or IdP activation happened here.
+Preserve Clerk. Inspect existing Customer Account API client configuration first. Review its client registration, callback/origin and secure server-session configuration before any changes. A separate Shopify customer sign-in can supply the buyer token; federating Shopify to Clerk through OIDC is optional and requires separate approval. See auth-integration.md for the exact proposed preview callback. Do not print or ask the user to send passwords/tokens. No OAuth exchange, secret transfer, callback edit or IdP activation happened here.
 
 The server resolver must verify Clerk user/org, the user's own Shopify Customer Account token/expiry, authorized company contact/location, current ordering permission, and application approval. Do not reuse the organization billing customer as every user's identity. Keep tokens server-side; expose only display-safe prices. Any per-order review policy belongs in `assertOrderAllowed`; passing a no-op like the synthetic unit tests is not a production implementation.
 
@@ -46,7 +50,7 @@ Before release, replace the legacy anonymous fallback and cover every payable en
 
 ## Verification and rollback
 
-Local checks: 49 new native B2B tests; 22 existing Shopify adapter tests; 43 existing checkout/draft/fallback tests (114 total). Changed-file ESLint passed; `tsc --noEmit` passed; production `npm run build -- --webpack` passed with CI placeholder environment values. Shopify's Storefront schema validator accepted both operations; neither was executed against the live store. Build-generated files were restored. Full repository test suite and authenticated hosted checkout were not run for this preparation draft.
+Local checks: 49 new native B2B tests; 22 existing Shopify adapter tests; 43 existing checkout/draft/fallback tests (114 total). Changed-file ESLint passed; `tsc --noEmit` passed; production `npm run build -- --webpack` passed with CI placeholder environment values. Shopify's Storefront schema validator accepted both operations; neither was executed against the live store. Build-generated files were restored. The subsequent exact-head CI at f4287855 passed 301 test files (3 skipped), 2793 tests (9 skipped), typecheck, lint (0 errors / 87 existing warnings) and production webpack build. Authenticated hosted checkout has not been verified. The follow-up HTTP integration adds 27 tests; its 98-test targeted run passed. Final-head CI is recorded on the PR.
 
 All local fixtures use synthetic buyer/contact/location IDs and never call live Shopify. Boundary expectations:1/11→$0.88;12/13/60/143→$0.84;144/145/287→$0.79;288/289/1439→$0.75;1440/1441→$0.69. Tests compare preview with the mocked native cart response, including60=$50.40, not a real hosted checkout.
 
