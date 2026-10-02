@@ -57,6 +57,8 @@ function order(t: ReturnType<typeof convexTest>, overrides: Record<string, unkno
         orderName: "#1003",
         orderDate: 1_700_000_000_000,
         status: "processing",
+        sourceUpdatedAt: 100,
+        shopifyFulfillmentStatus: null,
         lineItems: [{ sku: "GB-ELG-30", description: "Elegant 30ml", quantity: 500, unitPrice: 0.64 }],
         totalAmount: 320,
         ...overrides,
@@ -120,11 +122,11 @@ describe("upsertOrderFromShopify", () => {
         expect(await order(t, { shopifyCustomerId: undefined })).toMatchObject({ skipped: "no_customer" });
     });
 
-    it("patches on redelivery instead of duplicating the order", async () => {
+    it("accepts newer source evidence without duplicating the order", async () => {
         const t = convexTest(schema, modules);
         await seedAccount(t, SHOPIFY_CUSTOMER);
         await order(t);
-        const second = await order(t, { status: "in_transit", trackingNumber: "794622836420", carrier: "FedEx" });
+        const second = await order(t, { sourceUpdatedAt: 200, shopifyFulfillmentStatus: "fulfilled", shipments: [{ shopifyFulfillmentId: "f1", sourceUpdatedAt: 200, shipmentStatus: "in_transit", trackingNumber: "794622836420", carrier: "FedEx" }] });
         expect(second).toMatchObject({ updated: true });
 
         const rows = await t.query(api.portal.listOrdersByOrg, { writeToken: WRITE_TOKEN, clerkOrgId: ORG });
@@ -153,4 +155,162 @@ describe("upsertOrderFromShopify", () => {
         expect(rows).toHaveLength(1);
         expect(rows[0].orderId).toBe("QB-77");
     });
+});
+
+async function saved(t: ReturnType<typeof convexTest>) {
+    return t.query(api.portal.getOrderForOrg, { writeToken: WRITE_TOKEN, clerkOrgId: ORG, orderId: "#1003" });
+}
+const shipment = (sourceUpdatedAt: number, shipmentStatus = "delivered") => ({
+    shopifyFulfillmentId: "f1", sourceUpdatedAt, shipmentStatus, fulfillmentStatus: "success",
+    trackingNumber: "box-1", packages: [{ trackingNumber: "box-1" }, { trackingNumber: "box-2", trackingUrl: "https://carrier.test/2" }],
+});
+
+describe("source ordering and truthful freshness", () => {
+    it("ignores exact duplicate and older payloads without refreshing timestamps", async () => {
+        const t = convexTest(schema, modules);
+        await seedAccount(t, SHOPIFY_CUSTOMER);
+        const payload = { sourceUpdatedAt: 200, shopifyFulfillmentStatus: "fulfilled", shipments: [shipment(200)] };
+        await order(t, payload);
+        const before = await saved(t);
+        expect(await order(t, payload)).toMatchObject({ skipped: "stale_or_duplicate" });
+        expect(await order(t, { sourceUpdatedAt: 100, totalAmount: 999, shipments: [shipment(100, "label_printed")] }))
+            .toMatchObject({ skipped: "stale_or_duplicate" });
+        expect(await saved(t)).toEqual(before);
+        expect(before).toMatchObject({ status: "delivered", sourceUpdatedAt: 200, totalAmount: 320 });
+        expect(before?.shipments[0].packages).toHaveLength(2);
+    });
+
+    it("updates a fulfillment independently of the order version and does not regress it in a later order snapshot", async () => {
+        const t = convexTest(schema, modules);
+        await seedAccount(t, SHOPIFY_CUSTOMER);
+        await order(t, { shopifyFulfillmentStatus: "fulfilled", shipments: [shipment(100, "label_printed")] });
+        expect((await saved(t))?.status).toBe("label_created");
+        await order(t, { shopifyFulfillmentStatus: "fulfilled", shipments: [shipment(300)] });
+        expect(await saved(t)).toMatchObject({ status: "delivered", sourceUpdatedAt: 100 });
+        await order(t, { sourceUpdatedAt: 200, shopifyFulfillmentStatus: "fulfilled", shipments: [shipment(200, "in_transit")] });
+        expect(await saved(t)).toMatchObject({ status: "delivered", sourceUpdatedAt: 200, shipments: [expect.objectContaining({ sourceUpdatedAt: 300 })] });
+    });
+
+    it("keeps shipment evidence on a newer order edit with no fulfillment data, but preserves a remaining unfulfilled balance", async () => {
+        const t = convexTest(schema, modules);
+        await seedAccount(t, SHOPIFY_CUSTOMER);
+        await order(t, { shopifyFulfillmentStatus: "fulfilled", shipments: [shipment(100)] });
+        await order(t, { sourceUpdatedAt: 200, shopifyFulfillmentStatus: "partial" });
+        expect(await saved(t)).toMatchObject({ status: "partially_fulfilled", shipments: [expect.objectContaining({ trackingNumber: "box-1" })] });
+    });
+
+    it("keeps cancellation on stale order replay even when carrier evidence advances", async () => {
+        const t = convexTest(schema, modules);
+        await seedAccount(t, SHOPIFY_CUSTOMER);
+        await order(t, { sourceUpdatedAt: 200, shopifyCancelledAt: 200, shipments: [shipment(100)] });
+        await order(t, { sourceUpdatedAt: 100, shipments: [shipment(300)] });
+        expect(await saved(t)).toMatchObject({ status: "cancelled", sourceUpdatedAt: 200 });
+    });
+
+    it("does not interpret an unversioned legacy record as verified delivered", async () => {
+        const t = convexTest(schema, modules);
+        await seedAccount(t, SHOPIFY_CUSTOMER);
+        await t.run((ctx) => ctx.db.insert("portalOrders", {
+            clerkOrgId: ORG, orderId: "#1003", lineItems: [], status: "delivered", orderDate: 1,
+            source: "shopify", shopifyOrderId: "10577681285412", updatedAt: 900,
+        }));
+        expect(await saved(t)).toMatchObject({ status: "unknown", sourceUpdatedAt: null });
+        expect(await order(t, { sourceUpdatedAt: undefined })).toMatchObject({ skipped: "missing_source_version" });
+        await order(t, { sourceUpdatedAt: 200, shopifyFulfillmentStatus: "fulfilled", shipments: [shipment(200)] });
+        expect((await saved(t))?.status).toBe("delivered");
+    });
+
+    it("uses newer cancellation of a fulfillment and retains all tracking packages in list and detail", async () => {
+        const t = convexTest(schema, modules);
+        await seedAccount(t, SHOPIFY_CUSTOMER);
+        await order(t, { shopifyFulfillmentStatus: "fulfilled", shipments: [shipment(100)] });
+        await order(t, { shipments: [{ ...shipment(200), fulfillmentStatus: "cancelled" }] });
+        expect(await saved(t)).toMatchObject({ status: "unknown", trackingNumber: null });
+        const rows = await t.query(api.portal.listOrdersByOrg, { writeToken: WRITE_TOKEN, clerkOrgId: ORG });
+        expect(rows[0]).toMatchObject({ sourceUpdatedAt: 100, shipments: [expect.objectContaining({ fulfillmentStatus: "cancelled", packages: shipment(200).packages })] });
+        expect(rows[0].syncedAt).toEqual((await saved(t))?.syncedAt);
+    });
+});
+
+describe("complete-order delivery evidence", () => {
+    it("does not call a newly fulfilled remainder delivered using only an older saved box", async () => {
+        const t = convexTest(schema, modules);
+        await seedAccount(t, SHOPIFY_CUSTOMER);
+        await order(t, { shopifyFulfillmentStatus: "partial", shipments: [shipment(100)] });
+        await order(t, { sourceUpdatedAt: 200, shopifyFulfillmentStatus: "fulfilled" });
+        expect(await saved(t)).toMatchObject({ status: "unknown", shipmentSnapshotComplete: false });
+        // A complete snapshot at the same parent version can recover completeness.
+        await order(t, { sourceUpdatedAt: 200, shopifyFulfillmentStatus: "fulfilled", shipments: [shipment(100), { ...shipment(200), shopifyFulfillmentId: "f2" }] });
+        expect(await saved(t)).toMatchObject({ status: "delivered", shipmentSnapshotComplete: true });
+    });
+});
+
+it("does not turn a newer cancellation into whole-order delivery by excluding the cancelled boxes", async () => {
+    const t = convexTest(schema, modules);
+    await seedAccount(t, SHOPIFY_CUSTOMER);
+    await order(t, { shopifyFulfillmentStatus: "fulfilled", shipments: [
+        shipment(100), { ...shipment(100, "in_transit"), shopifyFulfillmentId: "f2" },
+    ] });
+    expect((await saved(t))?.status).toBe("in_transit");
+    await order(t, { sourceUpdatedAt: 90, shipments: [{ ...shipment(200, "in_transit"), shopifyFulfillmentId: "f2", fulfillmentStatus: "cancelled" }] });
+    expect(await saved(t)).toMatchObject({ status: "unknown", shopifyFulfillmentStatus: "fulfilled" });
+    // A newer parent flag alone still does not prove how the cancelled items
+    // were resolved; no delivered quantities are assigned to replacement boxes.
+    await order(t, { sourceUpdatedAt: 300, shopifyFulfillmentStatus: "fulfilled", shipments: [
+        shipment(100), { ...shipment(200, "in_transit"), shopifyFulfillmentId: "f2", fulfillmentStatus: "cancelled" },
+    ] });
+    expect((await saved(t))?.status).toBe("unknown");
+});
+
+describe("same-version source collisions", () => {
+    it("exposes conflicting carrier evidence without overwriting it and clears only on a newer fulfillment", async () => {
+        const t = convexTest(schema, modules);
+        await seedAccount(t, SHOPIFY_CUSTOMER);
+        const parent = { shopifyFulfillmentStatus: "fulfilled" };
+        await order(t, { ...parent, shipments: [shipment(100, "in_transit")] });
+        expect(await order(t, { ...parent, shipments: [shipment(100, "delivered")] })).toMatchObject({ updated: true });
+        const conflicted = await saved(t);
+        expect(conflicted).toMatchObject({ status: "unknown", sourceConflict: true, sourceUpdatedAt: 100,
+            shipments: [expect.objectContaining({ shipmentStatus: "in_transit", sourceUpdatedAt: 100, sourceConflict: true })],
+        });
+        // Retrying the contradictory snapshot (including a backfill at the same
+        // version) does not refresh receipt time or choose a winner.
+        expect(await order(t, { ...parent, shipments: [shipment(100, "delivered")] })).toMatchObject({ skipped: "stale_or_duplicate" });
+        expect(await saved(t)).toEqual(conflicted);
+        await order(t, { ...parent, sourceUpdatedAt: 200, shipments: [shipment(100, "delivered")] });
+        expect((await saved(t))?.sourceConflict).toBe(true);
+        await order(t, { ...parent, sourceUpdatedAt: 200, shipments: [shipment(201, "delivered")] });
+        expect(await saved(t)).toMatchObject({ status: "delivered", sourceConflict: false });
+    });
+
+    it("flags conflicting parent quantities/status and does not clear that conflict with a newer child", async () => {
+        const t = convexTest(schema, modules);
+        await seedAccount(t, SHOPIFY_CUSTOMER);
+        await order(t, { shopifyFulfillmentStatus: "partial", shipments: [shipment(100)] });
+        await order(t, { shopifyFulfillmentStatus: "fulfilled", totalAmount: 999, shipments: [shipment(100)] });
+        expect(await saved(t)).toMatchObject({ status: "unknown", sourceConflict: true, totalAmount: 320, shopifyFulfillmentStatus: "partial" });
+        await order(t, { shopifyFulfillmentStatus: "partial", shipments: [shipment(200)] });
+        expect((await saved(t))?.sourceConflict).toBe(true);
+        await order(t, { sourceUpdatedAt: 300, shopifyFulfillmentStatus: "fulfilled", shipments: [shipment(200)] });
+        expect(await saved(t)).toMatchObject({ status: "delivered", sourceConflict: false });
+    });
+});
+
+
+it.each([true, false])("keeps equivalent REST/GraphQL shipment evidence conflict-free (GraphQL first: %s)", async (graphqlFirst) => {
+    const t = convexTest(schema, modules);
+    await seedAccount(t, SHOPIFY_CUSTOMER);
+    const rest = { ...shipment(100), shipmentStatus: undefined };
+    const graphql = { ...rest, displayStatus: "FULFILLED" };
+    const payload = { shopifyFulfillmentStatus: "fulfilled" };
+    await order(t, { ...payload, shipments: [graphqlFirst ? graphql : rest] });
+    await order(t, { ...payload, shipments: [graphqlFirst ? rest : graphql] });
+    const after = await saved(t);
+    expect(after).toMatchObject({ status: "unknown", sourceConflict: false,
+        shipments: [expect.objectContaining({ displayStatus: "FULFILLED" })] });
+    expect(await order(t, { ...payload, shipments: [graphql] })).toMatchObject({ skipped: "stale_or_duplicate" });
+    expect(await order(t, { ...payload, shipments: [rest] })).toMatchObject({ skipped: "stale_or_duplicate" });
+    expect(await saved(t)).toEqual(after);
+    await order(t, { ...payload, shipments: [{ ...graphql, displayStatus: "SUBMITTED" }] });
+    expect((await saved(t))?.sourceConflict).toBe(true);
 });

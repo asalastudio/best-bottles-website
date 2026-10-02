@@ -40,7 +40,7 @@ describe("shipmentFromFulfillment", () => {
         expect(shipment.trackingUrl).toContain("fedex.com");
         expect(shipment.shipmentStatus).toBe("delivered");
         expect(shipment.estimatedDelivery).toBe("Sep 12, 2026");
-        expect(shipment.shippedAt).toBe(new Date("2026-09-10T16:00:00Z").getTime());
+        expect(shipment.fulfillmentCreatedAt).toBe(new Date("2026-09-10T16:00:00Z").getTime());
     });
 
     it("reads the plural tracking fields Shopify sometimes sends instead", () => {
@@ -57,8 +57,7 @@ describe("shipmentFromFulfillment", () => {
     });
 
     it("keeps a shipment that has no tracking number yet", () => {
-        // "Part of your order has left" is more than silence, so a fulfilment
-        // created before the label is bought must not be dropped.
+        // A label is useful evidence but does not mean a package has left.
         const shipment = shipmentFromFulfillment({
             shipment_status: "label_printed",
             tracking_company: null,
@@ -114,7 +113,7 @@ describe("formatEstimatedDelivery", () => {
 });
 
 describe("orderStatusFromShopify", () => {
-    it("reports in transit while only some of the order has shipped", () => {
+    it("preserves partial fulfillment while some shipments are still in transit", () => {
         expect(
             orderStatusFromShopify({
                 cancelled_at: null,
@@ -124,7 +123,7 @@ describe("orderStatusFromShopify", () => {
                     { shipment_status: "out_for_delivery", tracking_company: "UPS", tracking_number: "2" },
                 ],
             }),
-        ).toBe("in_transit");
+        ).toBe("partially_fulfilled");
     });
 
     it("reports delivered only once every shipment has arrived", () => {
@@ -160,5 +159,56 @@ describe("parseWebhookTopic", () => {
     it("still refuses anything it does not handle", () => {
         expect(parseWebhookTopic("customers/redact")).toBeNull();
         expect(parseWebhookTopic(null)).toBeNull();
+    });
+});
+
+describe("shipment evidence boundaries", () => {
+    it.each([
+        ["partial", "delivered", "partially_fulfilled"],
+        [null, "delivered", "unknown"],
+        ["fulfilled", "label_printed", "label_created"],
+        ["fulfilled", "label_purchased", "label_created"],
+        ["fulfilled", "confirmed", "unknown"],
+        ["fulfilled", "ready_for_pickup", "unknown"],
+        ["fulfilled", "carrier_picked_up", "in_transit"],
+        ["fulfilled", null, "unknown"],
+        ["fulfilled", "success", "unknown"],
+        ["fulfilled", "new_provider_status", "unknown"],
+        ["fulfilled", "failure", "delivery_problem"],
+        ["fulfilled", "attempted_delivery", "delivery_problem"],
+        ["fulfilled", "out_for_delivery", "in_transit"],
+    ])("maps %s / %s conservatively to %s", (fulfillment_status, shipment_status, expected) => {
+        expect(orderStatusFromShopify({ cancelled_at: null, fulfillment_status,
+            fulfillments: [{ shipment_status, status: "success", tracking_number: "1", tracking_company: "Carrier" }],
+        })).toBe(expected);
+    });
+
+    it("does not use a cancelled fulfillment as delivery evidence", () => {
+        expect(orderStatusFromShopify({ cancelled_at: null, fulfillment_status: "fulfilled",
+            fulfillments: [{ shipment_status: "delivered", status: "cancelled", tracking_number: "1", tracking_company: null }],
+        })).toBe("unknown");
+    });
+
+    it("keeps all REST tracking positions including URL-only entries and a distinct singular value", () => {
+        const result = shipmentFromFulfillment({ ...FEDEX, tracking_number: "extra", tracking_url: "https://carrier.test/extra",
+            tracking_numbers: ["one", "", "three"], tracking_urls: ["", "https://carrier.test/two", "https://carrier.test/three"],
+        });
+        expect(result.packages.map((p) => [p.trackingNumber, p.trackingUrl])).toEqual([
+            ["one", undefined], [undefined, "https://carrier.test/two"], ["three", "https://carrier.test/three"], ["extra", "https://carrier.test/extra"],
+        ]);
+    });
+
+    it("preserves GraphQL tracking tuples and each carrier without crossing missing values", () => {
+        const result = shipmentFromFulfillment({ ...FEDEX, tracking_number: null, tracking_url: null,
+            tracking_info: [{ number: "one", url: null, company: "UPS" }, { number: null, url: "https://carrier.test/two", company: "FedEx" }],
+            updated_at: "2026-09-11T16:00:00Z", status: "success",
+        });
+        expect(result.packages).toEqual([
+            { trackingNumber: "one", trackingUrl: undefined, carrier: "UPS" },
+            { trackingNumber: undefined, trackingUrl: "https://carrier.test/two", carrier: "FedEx" },
+        ]);
+        expect(result.fulfillmentStatus).toBe("success");
+        expect(result.sourceUpdatedAt).toBe(Date.parse("2026-09-11T16:00:00Z"));
+        expect(result).not.toHaveProperty("shippedAt");
     });
 });

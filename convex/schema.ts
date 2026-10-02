@@ -546,8 +546,17 @@ export default defineSchema({
             v.literal("in_transit"),
             v.literal("delivered"),
             v.literal("cancelled"),
+            v.literal("partially_fulfilled"),
+            v.literal("label_created"),
+            v.literal("delivery_problem"),
+            v.literal("unknown"),
         ),
         orderDate: v.number(),
+        sourceUpdatedAt: v.optional(v.number()),
+        shipmentSnapshotComplete: v.optional(v.boolean()),
+        orderSourceConflict: v.optional(v.boolean()),
+        shopifyFulfillmentStatus: v.optional(v.union(v.string(), v.null())),
+        shopifyCancelledAt: v.optional(v.number()),
         estimatedDelivery: v.optional(v.string()),
         // Kept for rows written before shipments existed, and still filled from
         // the first shipment so anything reading a single number keeps working.
@@ -567,6 +576,17 @@ export default defineSchema({
             trackingUrl: v.optional(v.string()),
             /** Shopify delivery state: in_transit, out_for_delivery, delivered… */
             shipmentStatus: v.optional(v.string()),
+            displayStatus: v.optional(v.string()),
+            fulfillmentStatus: v.optional(v.string()),
+            sourceConflict: v.optional(v.boolean()),
+            sourceUpdatedAt: v.optional(v.number()),
+            fulfillmentCreatedAt: v.optional(v.number()),
+            packages: v.optional(v.array(v.object({
+                trackingNumber: v.optional(v.string()),
+                trackingUrl: v.optional(v.string()),
+                carrier: v.optional(v.string()),
+            }))),
+
             shippedAt: v.optional(v.number()),
             estimatedDelivery: v.optional(v.string()),
             /** What travelled in this box, so a partial shipment is legible. */

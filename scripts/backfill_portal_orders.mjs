@@ -23,6 +23,9 @@ import { readFileSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 import { ConvexHttpClient } from "convex/browser";
+import { require as requireTs } from "tsx/cjs/api";
+const { fetchOrderForSync } = requireTs("../src/lib/shopify-order-fetch.ts", import.meta.url);
+const { orderSyncArgs } = requireTs("../src/lib/shopify-order-sync.ts", import.meta.url);
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
@@ -71,103 +74,6 @@ async function admin(query, variables) {
     return json.data;
 }
 
-const numericId = (gid) => String(gid).split("/").pop();
-
-const ORDER_FIELDS = `
-    id
-    name
-    createdAt
-    cancelledAt
-    displayFulfillmentStatus
-    currentTotalPriceSet { shopMoney { amount } }
-    totalPriceSet { shopMoney { amount } }
-    customer { id }
-    shippingAddress { city provinceCode }
-    lineItems(first: 100) {
-        edges { node { sku title name quantity originalUnitPriceSet { shopMoney { amount } } } }
-    }
-    fulfillments(first: 50) {
-        id
-        createdAt
-        displayStatus
-        trackingInfo { company number url }
-        estimatedDeliveryAt
-        fulfillmentLineItems(first: 100) {
-            edges { node { quantity lineItem { sku title name } } }
-        }
-    }
-`;
-
-function formatEstimatedDelivery(value) {
-    if (!value) return undefined;
-    const at = new Date(value);
-    if (Number.isNaN(at.getTime())) return undefined;
-    // UTC on purpose: Shopify sends midnight UTC, which a US host renders as
-    // the previous day — an ETA that reads a day early.
-    return at.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
-}
-
-function statusFor(order) {
-    if (order.cancelledAt) return "cancelled";
-    const shipments = order.fulfillments ?? [];
-    if (shipments.length > 0 && shipments.every((f) => (f.displayStatus ?? "").toLowerCase() === "delivered")) {
-        return "delivered";
-    }
-    if (order.displayFulfillmentStatus === "FULFILLED" || order.displayFulfillmentStatus === "PARTIALLY_FULFILLED") {
-        return "in_transit";
-    }
-    return "processing";
-}
-
-function toMutationArgs(order) {
-    const shipments = (order.fulfillments ?? []).map((f) => {
-        const shippedAt = f.createdAt ? new Date(f.createdAt).getTime() : undefined;
-        return {
-            shopifyFulfillmentId: numericId(f.id),
-            trackingNumber: f.trackingInfo?.[0]?.number || undefined,
-            carrier: f.trackingInfo?.[0]?.company || undefined,
-            trackingUrl: f.trackingInfo?.[0]?.url || undefined,
-            shipmentStatus: f.displayStatus ? f.displayStatus.toLowerCase() : undefined,
-            shippedAt: Number.isFinite(shippedAt) ? shippedAt : undefined,
-            estimatedDelivery: formatEstimatedDelivery(f.estimatedDeliveryAt),
-            lineItems: f.fulfillmentLineItems.edges.map(({ node }) => ({
-                sku: node.lineItem.sku?.trim() || "—",
-                description: node.lineItem.name?.trim() || node.lineItem.title,
-                quantity: node.quantity,
-            })),
-        };
-    });
-    const primary = shipments.find((s) => s.trackingNumber) ?? shipments[0] ?? null;
-    const priceText = order.currentTotalPriceSet?.shopMoney.amount ?? order.totalPriceSet?.shopMoney.amount ?? null;
-    const total = priceText === null ? undefined : Number(priceText);
-    const shipTo = order.shippingAddress
-        ? [order.shippingAddress.city, order.shippingAddress.provinceCode].filter(Boolean).join(", ") || undefined
-        : undefined;
-
-    return {
-        writeToken: process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN,
-        shopifyOrderId: numericId(order.id),
-        shopifyCustomerId: order.customer ? numericId(order.customer.id) : undefined,
-        orderName: order.name,
-        orderDate: new Date(order.createdAt).getTime(),
-        status: statusFor(order),
-        lineItems: order.lineItems.edges.map(({ node }) => ({
-            sku: node.sku?.trim() || "—",
-            description: node.name?.trim() || node.title,
-            quantity: node.quantity,
-            unitPrice: node.originalUnitPriceSet?.shopMoney.amount == null
-                ? undefined
-                : Number(node.originalUnitPriceSet.shopMoney.amount),
-        })),
-        totalAmount: Number.isFinite(total) ? total : undefined,
-        trackingNumber: primary?.trackingNumber,
-        carrier: primary?.carrier,
-        estimatedDelivery: primary?.estimatedDelivery,
-        shipments: shipments.length > 0 ? shipments : undefined,
-        shipTo,
-    };
-}
-
 async function ordersForCustomer(customerId) {
     const collected = [];
     let cursor = null;
@@ -180,7 +86,7 @@ async function ordersForCustomer(customerId) {
         const data = await admin(
             `query BackfillOrders($q: String!, $after: String) {
                 orders(first: 50, query: $q, after: $after, sortKey: CREATED_AT) {
-                    edges { cursor node { ${ORDER_FIELDS} } }
+                    edges { cursor node { id } }
                     pageInfo { hasNextPage }
                 }
             }`,
@@ -229,17 +135,20 @@ for (const account of linked) {
         continue;
     }
 
-    for (const order of orders) {
+    for (const orderRef of orders) {
+        const order = await fetchOrderForSync(orderRef.id.split("/").pop());
+        if (!order) throw new Error("shopify_order_not_found");
+        const normalized = orderSyncArgs(order);
         const shipmentCount = order.fulfillments?.length ?? 0;
-        const tracked = (order.fulfillments ?? []).filter((f) => f.trackingInfo?.[0]?.number).length;
-        const label = `${order.name.padEnd(8)} ${statusFor(order).padEnd(11)} ${shipmentCount} shipment(s), ${tracked} tracked`;
+        const tracked = (order.fulfillments ?? []).filter((f) => f.tracking_info?.some((t) => t.number)).length;
+        const label = `${order.name.padEnd(8)} ${normalized.status.padEnd(11)} ${shipmentCount} shipment(s), ${tracked} tracked`;
 
         if (!apply) {
             info(label);
             continue;
         }
 
-        const result = await convex.mutation("portal:upsertOrderFromShopify", toMutationArgs(order));
+        const result = await convex.mutation("portal:upsertOrderFromShopify", { writeToken: process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN, ...normalized });
         if (result.skipped) {
             warn(`${label} → skipped (${result.skipped})`);
         } else {
