@@ -4,15 +4,11 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState, useTransition } from "react";
 import type { CatalogLineItem } from "@/lib/products/catalog-line-items";
+import PortalCatalogPurchase from "./PortalCatalogPurchase";
 
 export type AddToOrderResult =
     | { ok: true; draftId: string; draftName: string; quantity: number }
     | { ok: false; message: string };
-
-function money(value: number | null) {
-    if (typeof value !== "number") return "—";
-    return value.toLocaleString("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 2 });
-}
 
 const cell = "px-3 py-2.5 font-sans text-[13px] align-middle";
 const headCell =
@@ -49,95 +45,6 @@ function Thumb({ item }: { item: CatalogLineItem }) {
     );
 }
 
-function QuantityStepper({
-    value,
-    onChange,
-    disabled,
-    label,
-}: {
-    value: number;
-    onChange: (next: number) => void;
-    disabled?: boolean;
-    label: string;
-}) {
-    const clamp = (n: number) => Math.max(1, Math.min(999_999, Math.floor(n) || 1));
-    return (
-        <span
-            className="inline-flex items-center rounded-md border overflow-hidden"
-            style={{ borderColor: "var(--color-rule)", background: "var(--color-surface)" }}
-        >
-            <button
-                type="button"
-                disabled={disabled}
-                onClick={() => onChange(clamp(value - 1))}
-                aria-label={`Decrease quantity for ${label}`}
-                className="h-8 w-7 leading-none text-[color:var(--color-text-secondary)] hover:bg-[color:var(--color-surface-sunken)] disabled:opacity-40"
-            >
-                −
-            </button>
-            <input
-                aria-label={`Quantity for ${label}`}
-                value={value}
-                inputMode="numeric"
-                disabled={disabled}
-                onChange={(e) => onChange(clamp(Number(e.target.value)))}
-                className="w-12 h-8 text-center font-sans text-[13px] tabular-nums bg-transparent border-0 outline-none text-[color:var(--color-text-primary)] [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-            />
-            <button
-                type="button"
-                disabled={disabled}
-                onClick={() => onChange(clamp(value + 1))}
-                aria-label={`Increase quantity for ${label}`}
-                className="h-8 w-7 leading-none text-[color:var(--color-text-secondary)] hover:bg-[color:var(--color-surface-sunken)] disabled:opacity-40"
-            >
-                +
-            </button>
-        </span>
-    );
-}
-
-function AddControl({
-    item,
-    onAdd,
-    pending,
-    justAdded,
-}: {
-    item: CatalogLineItem;
-    onAdd: (quantity: number) => void;
-    pending: boolean;
-    justAdded: boolean;
-}) {
-    const [quantity, setQuantity] = useState(1);
-
-    if (!item.orderableSku) {
-        return (
-            <span className="font-sans text-[12px] text-[color:var(--color-text-muted)]">Quote only</span>
-        );
-    }
-
-    return (
-        <span className="inline-flex items-center gap-2 justify-end">
-            <QuantityStepper value={quantity} onChange={setQuantity} disabled={pending} label={item.displayName} />
-            <button
-                type="button"
-                disabled={pending}
-                onClick={() => onAdd(quantity)}
-                className="h-8 px-3 font-sans text-[12.5px] font-medium rounded-md transition-colors disabled:opacity-50"
-                style={
-                    justAdded
-                        ? {
-                              background: "var(--color-status-positive-surface)",
-                              color: "var(--color-status-positive-text)",
-                          }
-                        : { background: "var(--color-text-primary)", color: "var(--color-surface)" }
-                }
-            >
-                {justAdded ? "Added" : "Add"}
-            </button>
-        </span>
-    );
-}
-
 /**
  * The catalogue as line items.
  *
@@ -161,6 +68,7 @@ export default function CatalogLineItems({
     const router = useRouter();
     const searchParams = useSearchParams();
     const [term, setTerm] = useState(initialSearch);
+    const [quantities, setQuantities] = useState<Record<string, string>>({});
     const [pendingSku, setPendingSku] = useState<string | null>(null);
     const [addedSku, setAddedSku] = useState<string | null>(null);
     const [notice, setNotice] = useState<
@@ -287,7 +195,6 @@ export default function CatalogLineItems({
                                 <th className={`${headCell} text-left`}>Capacity</th>
                                 <th className={`${headCell} text-left`}>Colour</th>
                                 <th className={`${headCell} text-left`}>Neck</th>
-                                <th className={`${headCell} text-right`}>From</th>
                                 <th className={`${headCell} text-right`}>Add to order</th>
                             </tr>
                         </thead>
@@ -326,12 +233,11 @@ export default function CatalogLineItems({
                                     <td className={cell} style={{ color: "var(--color-text-secondary)" }}>{item.capacity ?? "—"}</td>
                                     <td className={cell} style={{ color: "var(--color-text-secondary)" }}>{item.color ?? "—"}</td>
                                     <td className={cell} style={{ color: "var(--color-text-secondary)" }}>{item.neckThreadSize ?? "—"}</td>
-                                    <td className={`${cell} text-right tabular-nums`} style={{ color: "var(--color-text-primary)" }}>
-                                        {money(item.priceFrom)}
-                                    </td>
                                     <td className={`${cell} text-right`}>
-                                        <AddControl
+                                        <PortalCatalogPurchase
                                             item={item}
+                                            quantityText={quantities[item.groupId] ?? "1"}
+                                            onQuantityChange={(value) => setQuantities(current => ({ ...current, [item.groupId]: value }))}
                                             pending={pendingSku === item.orderableSku}
                                             justAdded={addedSku === item.orderableSku}
                                             onAdd={(quantity) => void add(item, quantity)}
@@ -367,11 +273,10 @@ export default function CatalogLineItems({
                             {[item.capacity, item.color, item.neckThreadSize].filter(Boolean).join(" · ") || "—"}
                         </p>
                         <div className="flex items-center justify-between gap-2 mt-2.5">
-                            <span className="font-sans text-[13px] tabular-nums" style={{ color: "var(--color-text-primary)" }}>
-                                from {money(item.priceFrom)}
-                            </span>
-                            <AddControl
+                            <PortalCatalogPurchase
                                 item={item}
+                                quantityText={quantities[item.groupId] ?? "1"}
+                                onQuantityChange={(value) => setQuantities(current => ({ ...current, [item.groupId]: value }))}
                                 pending={pendingSku === item.orderableSku}
                                 justAdded={addedSku === item.orderableSku}
                                 onAdd={(quantity) => void add(item, quantity)}
