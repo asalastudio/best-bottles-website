@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { useAuth, useUser } from "@clerk/nextjs";
+import { useEffect } from "react";
+import { useAuth } from "@clerk/nextjs";
 import { useCart } from "@/components/CartProvider";
 import { usePathname } from "next/navigation";
 import { analytics } from "@/lib/analytics";
@@ -21,47 +21,30 @@ const ANALYTICS_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY?.trim();
 function AnalyticsProviderBase({
   userId,
   isSignedIn,
-  user,
+  isLoaded,
+  organizationId,
 }: {
   userId: string | null;
   isSignedIn: boolean;
-  user: {
-    fullName?: string | null;
-    primaryEmailAddress?: { emailAddress?: string | null } | null;
-    createdAt?: Date | null;
-  } | null;
+  isLoaded: boolean;
+  organizationId: string | null;
 }) {
   const { itemCount } = useCart();
   const pathname = usePathname();
-  const prevUserIdRef = useRef<string | null>(null);
-
   useEffect(() => {
     if (!ANALYTICS_KEY) return;
-    // The initial route decides whether recording starts at all. Calling
-    // startSessionRecording() after an init that disabled it does not
-    // reliably take effect — the recorder script is never fetched — so the
-    // first page must be decided here rather than corrected afterwards.
-    // Still fail-closed: an unrecognised path disables it.
-    analytics.init(ANALYTICS_KEY, {
-      disable_session_recording: !mayRecordSession(window.location.pathname),
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- init runs once; the
-    // route is read from the live location, not from a render-time value.
-  }, []);
+    analytics.syncIdentity(isLoaded ? {
+      userId: isSignedIn ? userId : null,
+      organizationId: isSignedIn ? organizationId : null,
+    } : null);
+  }, [isLoaded, isSignedIn, userId, organizationId, pathname]);
 
   useEffect(() => {
-    if (isSignedIn && userId && userId !== prevUserIdRef.current) {
-      prevUserIdRef.current = userId;
-      analytics.identify(userId, {
-        $name: user?.fullName ?? undefined,
-        $email: user?.primaryEmailAddress?.emailAddress ?? undefined,
-        signUpDate: user?.createdAt?.toISOString() ?? undefined,
-      });
-    } else if (!isSignedIn && prevUserIdRef.current) {
-      prevUserIdRef.current = null;
-      analytics.reset();
-    }
-  }, [isSignedIn, userId, user]);
+    if (!ANALYTICS_KEY || !isLoaded) return;
+    void analytics.init(ANALYTICS_KEY).then(() => {
+      analytics.setSessionRecording(mayRecordSession(window.location.pathname));
+    });
+  }, [isLoaded]);
 
   useEffect(() => {
     analytics.setSuperProperties({
@@ -85,21 +68,22 @@ function AnalyticsProviderBase({
     // decided once at init: this is a single-page app, so a customer can walk
     // from the catalogue into the portal without a page load, and a recording
     // started on the storefront would happily follow them in.
-    analytics.setSessionRecording(ANALYTICS_KEY ? mayRecordSession(pathname) : false);
-  }, [pathname]);
+    analytics.setSessionRecording(ANALYTICS_KEY && isLoaded ? mayRecordSession(pathname) : false);
+    if (ANALYTICS_KEY && isLoaded) analytics.pageViewed();
+  }, [pathname, isLoaded]);
 
   return null;
 }
 
 function AnalyticsProviderWithClerk() {
-  const { userId, isSignedIn } = useAuth();
-  const { user } = useUser();
+  const { userId, isSignedIn, isLoaded, orgId } = useAuth();
 
   return (
     <AnalyticsProviderBase
       userId={userId ?? null}
       isSignedIn={!!isSignedIn}
-      user={user ?? null}
+      isLoaded={isLoaded}
+      organizationId={orgId ?? null}
     />
   );
 }
@@ -109,5 +93,5 @@ export function AnalyticsProvider({ withClerk = false }: { withClerk?: boolean }
     return <AnalyticsProviderWithClerk />;
   }
 
-  return <AnalyticsProviderBase userId={null} isSignedIn={false} user={null} />;
+  return <AnalyticsProviderBase userId={null} isSignedIn={false} isLoaded organizationId={null} />;
 }

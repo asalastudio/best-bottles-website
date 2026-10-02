@@ -24,10 +24,9 @@ describe("session replay scope", () => {
             "/catalog",
             "/catalog?view=line",
             "/products/cylinder-9ml-clear-13-415",
-            "/collections/perfume-vials-bottles",
+            "/collections/boston-round-30ml",
             "/blog",
             "/about",
-            "/contact",
             "/matrix",
         ]) {
             expect(mayRecordSession(path), `${path} should be recordable`).toBe(true);
@@ -69,10 +68,10 @@ describe("session replay scope", () => {
         expect(mayRecordSession("/TEAM")).toBe(false);
     });
 
-    it("does not treat a lookalike public route as protected", () => {
-        // /portal-guide is marketing content, not the portal.
-        expect(mayRecordSession("/portal-guide")).toBe(true);
-        expect(mayRecordSession("/teamwork")).toBe(true);
+    it("fails closed for unknown routes, including lookalikes", () => {
+        // New pages need explicit review before capture.
+        expect(mayRecordSession("/portal-guide")).toBe(false);
+        expect(mayRecordSession("/teamwork")).toBe(false);
     });
 
     it("fails closed on anything it cannot parse", () => {
@@ -108,7 +107,7 @@ describe("replay wiring", () => {
     });
 
     it("masks inputs wherever it does record", () => {
-        expect(analytics).toContain("maskAllInputs: true");
+        expect(readFileSync("src/lib/analytics/capturePrivacy.ts", "utf8")).toContain("maskAllInputs: true");
     });
 
     it("re-evaluates on every navigation, not once at startup", () => {

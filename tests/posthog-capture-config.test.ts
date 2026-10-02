@@ -14,15 +14,11 @@ const analytics = readFileSync(resolve(process.cwd(), "src/lib/analytics.ts"), "
 const nextConfig = readFileSync(resolve(process.cwd(), "next.config.ts"), "utf8");
 
 describe("PostHog capture configuration", () => {
-    it("captures heatmaps, which autocapture does not cover", () => {
-        // Autocapture records click EVENTS. Heatmaps are a separate stream —
-        // pointer position, scroll depth, rageclicks — and are off unless asked
-        // for. Pinned in code rather than left to the project's remote toggle.
-        expect(analytics).toContain("capture_heatmaps: true");
-    });
-
-    it("captures dead clicks", () => {
-        expect(analytics).toContain("capture_dead_clicks: true");
+    it("defers heatmaps and dead clicks until sensitive-overlay exclusion is verified", () => {
+        const privacy = readFileSync("src/lib/analytics/capturePrivacy.ts", "utf8");
+        expect(privacy).toContain("capture_heatmaps: false");
+        expect(privacy).toContain("capture_dead_clicks: false");
+        expect(analytics).toContain("...CAPTURE_PRIVACY_CONFIG");
     });
 
     it("keeps session recording off until masking has been decided", () => {
