@@ -21,8 +21,12 @@ export function pdpVariantFacts(variant: VariantFactsSource | null | undefined, 
         ?? (bodyColor ? bodyColor[1].replace(/\b\w/g, (letter) => letter.toUpperCase()) : null)
         ?? known(groupColor);
     const applicator = known(variant?.applicator);
+    // Inclusion must be affirmative. Missing structured fields are not license
+    // to turn compatibility, optional parts, or a negated cap into an assembly.
+    const includedCap = /\bwith\s+(?:(?:black|white|silver|gold|clear|pink|blue|green|red|frosted)\s+)?cap\b/i.test(name)
+        && !/\b(?:no|not|without|optional|optionally|separate|separately|compatible|can|may|available)\b/i.test(name);
     const closure = applicator === "Cap/Closure"
         ? known(variant?.capStyle) ?? "Cap/Closure"
-        : applicator ?? known(variant?.capStyle) ?? (/\bwith\s+(?:[\w-]+\s+){0,4}cap\b/i.test(name) ? "Cap" : null);
+        : applicator ?? known(variant?.capStyle) ?? (includedCap ? "Cap" : null);
     return { color, closure };
 }

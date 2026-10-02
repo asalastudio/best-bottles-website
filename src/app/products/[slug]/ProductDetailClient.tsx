@@ -43,7 +43,7 @@ import PdpDiscoverySections, {
     type PdpCompatibilityComponent,
     type PdpCompatibilityPayload,
 } from "@/components/products/PdpDiscoverySections";
-import { closureTokenFromSlug, familyForSlug, familyForSlugOrDerived, glassFromSlug, colourTokenFromSlug, PRESET_FOR_COLOUR }
+import { closureTokenFromSlug, familyForSlug, familyForSlugOrDerived, glassFromSlug, PRESET_FOR_COLOUR }
   from "@/lib/configurator/families";
 import { GLASS_PRESETS } from "@/lib/materials/glassPresets";
 import { analytics } from "@/lib/analytics";
@@ -1662,12 +1662,13 @@ export default function ProductDetailClient({
             const seen = new Set<string>();
             const out: Array<{ id: string; label: string; href: string; active: boolean; imageUrl?: string | null }> = [];
             const push = (slug: string, color: string | null, imageUrl: string | null, active: boolean) => {
-                const token = colourTokenFromSlug(slug) ?? slug;
+                if (!color) return;
+                const token = color.toLowerCase().replace(/\s+/g, "-");
                 if (seen.has(token)) return;
                 seen.add(token);
-                out.push({ id: PRESET_FOR_COLOUR[token] ?? token, label: color ?? "Clear", href: `/products/${slug}`, active, imageUrl });
+                out.push({ id: PRESET_FOR_COLOUR[token] ?? token, label: color, href: `/products/${slug}`, active, imageUrl });
             };
-            push(group.slug, group.color ?? null, group.heroImageUrl ?? null, true);
+            push(group.slug, pdpVariantFacts(selectedVariant, group.color).color, group.heroImageUrl ?? null, true);
             for (const sib of siblingGroups) push(sib.slug, sib.color, null, false);
             return out;
         }
@@ -1686,7 +1687,7 @@ export default function ProductDetailClient({
                 imageUrl: sibling.heroImageUrl,
             }];
         });
-    }, [group?.slug, group?.color, group?.heroImageUrl, siblingGroups, uniqueColorGroups, sameApplicationGroups]);
+    }, [group?.slug, group?.color, group?.heroImageUrl, siblingGroups, uniqueColorGroups, sameApplicationGroups, selectedVariant]);
 
     // Mobile PDP: the sticky bar hides while a picker is open, and its anchor is
     // the mobile purchase block (the desktop anchor is display:none below md).

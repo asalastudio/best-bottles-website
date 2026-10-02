@@ -49,6 +49,18 @@ describe("classic jar selected-SKU facts", () => {
         }
     });
 
+    it.each([
+        "Bottle with no cap",
+        "Bottle with black cap sold separately",
+        "Bottle with black cap. Cap is not included.",
+        "Bottle with optional black cap",
+        "Bottle compatible with black cap",
+        "Bottle can be used with black cap",
+        "Bottle without cap",
+    ])("does not infer an included closure from %s", (itemName) => {
+        expect(pdpVariantFacts({ itemName }).closure).toBeNull();
+    });
+
     it("leaves unknown facts absent on an unmapped route", () => {
         expect(pdpVariantFacts({ itemName: "Container with black cap" })).toEqual({ color: null, closure: "Cap" });
         expect(pdpVariantFacts({})).toEqual({ color: null, closure: null });
@@ -56,6 +68,10 @@ describe("classic jar selected-SKU facts", () => {
         expect(html).not.toContain("Glass Finish");
         expect(html).not.toContain("Fine Mist Spray");
         expect(html).not.toContain("Bottle only");
+    });
+
+    it("does not revive a clear preset when selected facts are unknown on a derived route", () => {
+        expect(renderFacts("cream-jar-30ml-amber-45mm", pdpVariantFacts({}))).not.toContain("Glass Finish");
     });
 
     it("prefers structured selected-SKU facts, then explicit body wording, then group color", () => {

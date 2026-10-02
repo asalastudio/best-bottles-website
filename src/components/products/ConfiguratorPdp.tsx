@@ -844,7 +844,7 @@ export default function ConfiguratorPdp({
   );
 
   /* ------------------------------------------------- guided column */
-  const glassLabel = variantFacts?.color ?? glassOptions?.find((g) => g.active)?.label ?? (fam ? GLASS_PRESETS[glass]?.label : null);
+  const glassLabel = variantFacts ? variantFacts.color : glassOptions?.find((g) => g.active)?.label ?? (fam ? GLASS_PRESETS[glass]?.label : null);
   const closureLabel = variantFacts?.closure ?? (fam ? activeMeta?.name : null);
   const finishLabel = activeCapOption ?? capOptions?.[0] ?? null;
   const resolvedSku = websiteSku ?? skuLabel ?? null;

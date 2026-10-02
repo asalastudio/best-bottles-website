@@ -79,9 +79,38 @@
           "applicator": null,
           "capColor": "Frosted",
           "capStyle": null,
-          "itemName": "Frosted plastic Cream jar bottle with clear cap. Capacity: 63 ml"
+          "itemName": "Frosted plastic Cream jar bottle with clear cap. Capacity: 63 ml",
+          "category": "Glass Jar",
+          "capacity": "60 ml (2.03 oz)",
+          "capacityMl": 60,
+          "capacityOz": 2.03,
+          "neckThreadSize": "58mm",
+          "productUrl": "https://www.bestbottles.com/product/Cream-jar-Plastic-Frosted-Black-cap-2oz",
+          "itemDescription": "Frosted plastic Cream jar bottle with clear cap. Capacity: 63 ml"
         }
-      ]
+      ],
+      "groupFacts": {
+        "category": "Glass Jar",
+        "capacity": "60 ml (2.03 oz)",
+        "capacityMl": 60,
+        "neckThreadSize": "58mm"
+      }
     }
-  ]
+  ],
+  "legacy60mlEvidence": {
+    "productUrl": "https://www.bestbottles.com/product/Cream-jar-Plastic-Frosted-Black-cap-2oz",
+    "websiteSku": "CreamJarFrstdPlsBlkPls2oz",
+    "itemType": "Cream Jars",
+    "itemName": "CreamJarFrstdPlsBlkPls2oz",
+    "itemDescription": "Frosted plastic Cream jar bottle with clear cap. Capacity: 63 ml Purchase:",
+    "capacityRaw": "60 ml (2.03 oz)",
+    "capacityMl": 60,
+    "neckThreadSize": "58mm",
+    "closureType": null,
+    "imageFile": "CJFrstdPlsBlkPls2oz.gif",
+    "family": null,
+    "color": null,
+    "applicator": null,
+    "capFinish": "Black"
+  }
 }
