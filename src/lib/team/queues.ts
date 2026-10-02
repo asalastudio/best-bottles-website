@@ -1,7 +1,7 @@
 import "server-only";
 
 import { api } from "../../../convex/_generated/api";
-import { getPortalConvex } from "@/lib/portal/convexClient";
+import { getPortalConvex, getPortalConvexWriteToken } from "@/lib/portal/convexClient";
 import { requireStaffViewer } from "@/lib/portal/staff";
 
 export type TeamHubQueues = {
@@ -23,7 +23,7 @@ export type TeamHubQueues = {
  */
 export async function getTeamHubQueues(): Promise<TeamHubQueues> {
     await requireStaffViewer();
-    return await getPortalConvex().query(api.portal.getTeamHubQueues, {});
+    return await getPortalConvex().query(api.portal.getTeamHubQueues, { writeToken: getPortalConvexWriteToken() });
 }
 
 export type QueueItem = {

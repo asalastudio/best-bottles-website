@@ -102,7 +102,7 @@ describe("upsertOrderFromShopify", () => {
         const result = await order(t);
         expect(result).toMatchObject({ created: true });
 
-        const rows = await t.query(api.portal.listOrdersByOrg, { clerkOrgId: ORG });
+        const rows = await t.query(api.portal.listOrdersByOrg, { writeToken: WRITE_TOKEN, clerkOrgId: ORG });
         expect(rows).toHaveLength(1);
         expect(rows[0].orderId).toBe("#1003");
     });
@@ -111,7 +111,7 @@ describe("upsertOrderFromShopify", () => {
         const t = convexTest(schema, modules);
         await seedAccount(t, "some-other-customer");
         expect(await order(t)).toMatchObject({ skipped: "no_portal_account" });
-        expect(await t.query(api.portal.listOrdersByOrg, { clerkOrgId: ORG })).toHaveLength(0);
+        expect(await t.query(api.portal.listOrdersByOrg, { writeToken: WRITE_TOKEN, clerkOrgId: ORG })).toHaveLength(0);
     });
 
     it("skips a guest checkout with no customer at all", async () => {
@@ -127,7 +127,7 @@ describe("upsertOrderFromShopify", () => {
         const second = await order(t, { status: "in_transit", trackingNumber: "794622836420", carrier: "FedEx" });
         expect(second).toMatchObject({ updated: true });
 
-        const rows = await t.query(api.portal.listOrdersByOrg, { clerkOrgId: ORG });
+        const rows = await t.query(api.portal.listOrdersByOrg, { writeToken: WRITE_TOKEN, clerkOrgId: ORG });
         expect(rows).toHaveLength(1);
         expect(rows[0].status).toBe("in_transit");
         expect(rows[0].trackingNumber).toBe("794622836420");
@@ -149,7 +149,7 @@ describe("upsertOrderFromShopify", () => {
         });
 
         expect(await order(t)).toMatchObject({ skipped: "owned_by_quickbooks" });
-        const rows = await t.query(api.portal.listOrdersByOrg, { clerkOrgId: ORG });
+        const rows = await t.query(api.portal.listOrdersByOrg, { writeToken: WRITE_TOKEN, clerkOrgId: ORG });
         expect(rows).toHaveLength(1);
         expect(rows[0].orderId).toBe("QB-77");
     });

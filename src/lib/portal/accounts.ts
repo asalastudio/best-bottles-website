@@ -23,7 +23,7 @@ export interface ClerkOrgOption {
 
 export async function listPortalAccountsForStaff() {
     await requireStaffViewer();
-    return await getPortalConvex().query(api.portal.listPortalAccounts, {});
+    return await getPortalConvex().query(api.portal.listPortalAccounts, { writeToken: getPortalConvexWriteToken() });
 }
 
 /**
@@ -37,7 +37,7 @@ export async function listClerkOrganizationsForStaff(): Promise<ClerkOrgOption[]
     await requireStaffViewer();
 
     const [accounts, client] = await Promise.all([
-        getPortalConvex().query(api.portal.listPortalAccounts, {}),
+        getPortalConvex().query(api.portal.listPortalAccounts, { writeToken: getPortalConvexWriteToken() }),
         clerkClient(),
     ]);
 

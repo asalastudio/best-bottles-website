@@ -58,9 +58,10 @@ export async function getPortalAddresses(): Promise<{
     if (!CLERK_ENABLED) return { shippingAddress: null, billingAddress: null, shopifyCustomerId: null };
 
     const viewer = await getPortalViewer();
-    if (!viewer.clerkOrgId) return { shippingAddress: null, billingAddress: null, shopifyCustomerId: null };
+    if (!viewer.clerkUserId || !viewer.clerkOrgId) return { shippingAddress: null, billingAddress: null, shopifyCustomerId: null };
 
     const account = await getPortalConvex().query(api.portal.getAccountByOrg, {
+        writeToken: getPortalConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
     });
 
@@ -104,6 +105,7 @@ export async function savePortalAddressesForViewer(input: {
     });
 
     const account = await getPortalConvex().query(api.portal.getAccountByOrg, {
+        writeToken: getPortalConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
     });
 
@@ -124,7 +126,7 @@ export async function savePortalAddressesForViewer(input: {
 
 export async function getPortalShellData() {
     const viewer = await getPortalViewer();
-    if (!viewer.clerkOrgId) {
+    if (!viewer.clerkUserId || !viewer.clerkOrgId) {
         return {
             viewer,
             account: null,
@@ -134,6 +136,7 @@ export async function getPortalShellData() {
     }
 
     const shell = await getPortalConvex().query(api.portal.getShellData, {
+        writeToken: getPortalConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
     });
 
@@ -164,6 +167,7 @@ export async function getPortalDashboardData() {
 
     const viewer = await requirePortalViewer();
     const dashboard = await getPortalConvex().query(api.portal.getDashboardData, {
+        writeToken: getPortalConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
     });
     return { viewer, ...dashboard };
@@ -176,6 +180,7 @@ export async function getPortalOrdersData() {
 
     const viewer = await requirePortalViewer();
     const orders = await getPortalConvex().query(api.portal.listOrdersByOrg, {
+        writeToken: getPortalConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
     });
     return { viewer, orders };
@@ -185,9 +190,10 @@ export async function getPortalOrder(orderId: string) {
     if (!CLERK_ENABLED) return null;
 
     const viewer = await getPortalViewer();
-    if (!viewer.clerkOrgId) return null;
+    if (!viewer.clerkUserId || !viewer.clerkOrgId) return null;
 
     return await getPortalConvex().query(api.portal.getOrderForOrg, {
+        writeToken: getPortalConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
         orderId,
     });
@@ -200,9 +206,11 @@ export async function getPortalAccountData() {
 
     const viewer = await requirePortalViewer();
     const account = await getPortalConvex().query(api.portal.getAccountByOrg, {
+        writeToken: getPortalConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
     });
     const orders = await getPortalConvex().query(api.portal.listOrdersByOrg, {
+        writeToken: getPortalConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
     });
     return { viewer, account, orders };
@@ -215,6 +223,7 @@ export async function getPortalDraftsData() {
 
     const viewer = await requirePortalViewer();
     const drafts = await getPortalConvex().query(api.portal.listDraftsByOrg, {
+        writeToken: getPortalConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
     });
     return { viewer, drafts };
@@ -232,6 +241,7 @@ export async function getPortalGraceWorkspace(projectId?: string) {
 
     const viewer = await requirePortalViewer();
     const workspace = await getPortalConvex().query(api.portal.getGraceWorkspaceByOrg, {
+        writeToken: getPortalConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
         projectId: (projectId ?? undefined) as never,
     });
@@ -383,6 +393,7 @@ export async function ensureShopifyCustomerForOrg(
     opts: { fallbackEmail?: string | null; clerkUserId?: string | null } = {},
 ): Promise<PortalIdentity> {
     const account = await getPortalConvex().query(api.portal.getAccountByOrg, {
+        writeToken: getPortalConvexWriteToken(),
         clerkOrgId,
     });
     if (!account) return { status: "unavailable", reason: "no_portal_account" };
@@ -446,7 +457,7 @@ export async function ensurePortalShopifyCustomer(): Promise<PortalIdentity> {
     if (!CLERK_ENABLED) return { status: "unavailable", reason: "clerk_disabled" };
 
     const viewer = await getPortalViewer();
-    if (!viewer.clerkOrgId) return { status: "unavailable", reason: "no_organization" };
+    if (!viewer.clerkUserId || !viewer.clerkOrgId) return { status: "unavailable", reason: "no_organization" };
 
     // Only here is a Clerk address an acceptable seed: it is the viewer's own
     // account. Unverified addresses are excluded by getUserEmailAddresses.

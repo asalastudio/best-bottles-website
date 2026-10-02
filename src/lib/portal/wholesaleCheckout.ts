@@ -3,7 +3,7 @@ import "server-only";
 import type { CheckoutLineItem } from "@/lib/shopify";
 import { createWholesaleDraftOrder } from "@/lib/shopify-draft-orders";
 import { api } from "../../../convex/_generated/api";
-import { getPortalConvex } from "./convexClient";
+import { getPortalConvex, getPortalConvexWriteToken } from "./convexClient";
 import { ensurePortalShopifyCustomer, getPortalViewer } from "./server";
 
 /**
@@ -20,12 +20,13 @@ export async function resolveWholesaleCheckoutUrl(
 ): Promise<{ checkoutUrl: string; draftOrderId: string; totalTax: string } | null> {
     try {
         const viewer = await getPortalViewer();
-        if (!viewer.clerkOrgId) return null;
+        if (!viewer.clerkUserId || !viewer.clerkOrgId) return null;
 
         const identity = await ensurePortalShopifyCustomer();
         if (identity.status !== "linked") return null;
 
         const account = await getPortalConvex().query(api.portal.getAccountByOrg, {
+            writeToken: getPortalConvexWriteToken(),
             clerkOrgId: viewer.clerkOrgId,
         });
 

@@ -1,7 +1,7 @@
-import { mutation, query } from "./_generated/server";
+import { mutation } from "./_generated/server";
 import { v } from "convex/values";
 import type { Doc } from "./_generated/dataModel";
-import { verifyWriteToken } from "./portalAuth";
+import { serverQuery, verifyWriteToken } from "./portalAuth";
 import { captureServerEvent, distinctIdFor } from "./posthog";
 
 function orderTotal(order: Doc<"portalOrders">): number | null {
@@ -46,7 +46,7 @@ function sortByNewest<T extends { updatedAt?: number; orderDate?: number; create
     });
 }
 
-export const getShellData = query({
+export const getShellData = serverQuery({
     args: { clerkOrgId: v.string() },
     handler: async (ctx, args) => {
         const account = await ctx.db
@@ -72,7 +72,7 @@ export const getShellData = query({
     },
 });
 
-export const getAccountByOrg = query({
+export const getAccountByOrg = serverQuery({
     args: { clerkOrgId: v.string() },
     handler: async (ctx, args) => {
         return await ctx.db
@@ -83,7 +83,7 @@ export const getAccountByOrg = query({
 });
 
 /** Every wholesale account. Staff-only — the caller must gate before using it. */
-export const listPortalAccounts = query({
+export const listPortalAccounts = serverQuery({
     args: {},
     handler: async (ctx) => {
         const accounts = await ctx.db.query("portalAccounts").collect();
@@ -154,7 +154,7 @@ export const upsertPortalAccount = mutation({
 
 // Reverse lookup for Shopify webhooks, which arrive carrying a customer ID and
 // no notion of a Clerk organization.
-export const getAccountByShopifyCustomerId = query({
+export const getAccountByShopifyCustomerId = serverQuery({
     args: { shopifyCustomerId: v.string() },
     handler: async (ctx, args) => {
         return await ctx.db
@@ -229,7 +229,7 @@ export const linkShopifyCustomer = mutation({
     },
 });
 
-export const getDashboardData = query({
+export const getDashboardData = serverQuery({
     args: { clerkOrgId: v.string() },
     handler: async (ctx, args) => {
         const account = await ctx.db
@@ -329,7 +329,7 @@ export const getDashboardData = query({
     },
 });
 
-export const listOrdersByOrg = query({
+export const listOrdersByOrg = serverQuery({
     args: { clerkOrgId: v.string() },
     handler: async (ctx, args) => {
         const orders = sortByNewest(
@@ -362,7 +362,7 @@ export const listOrdersByOrg = query({
  * an order name belonging to another organization reads as absent rather than
  * as a permission error, which would confirm it exists.
  */
-export const getOrderForOrg = query({
+export const getOrderForOrg = serverQuery({
     args: { clerkOrgId: v.string(), orderId: v.string() },
     handler: async (ctx, args) => {
         const order = await ctx.db
@@ -390,7 +390,7 @@ export const getOrderForOrg = query({
     },
 });
 
-export const listDraftsByOrg = query({
+export const listDraftsByOrg = serverQuery({
     args: { clerkOrgId: v.string() },
     handler: async (ctx, args) => {
         const drafts = sortByNewest(
@@ -472,7 +472,7 @@ export const createDraftFromOrder = mutation({
     },
 });
 
-export const listGraceProjectsByOrg = query({
+export const listGraceProjectsByOrg = serverQuery({
     args: { clerkOrgId: v.string() },
     handler: async (ctx, args) => {
         const projects = sortByNewest(
@@ -494,7 +494,7 @@ export const listGraceProjectsByOrg = query({
     },
 });
 
-export const getGraceWorkspaceByOrg = query({
+export const getGraceWorkspaceByOrg = serverQuery({
     args: {
         clerkOrgId: v.string(),
         projectId: v.optional(v.id("graceProjects")),
@@ -741,7 +741,7 @@ export const upsertOrderFromShopify = mutation({
 
 // ─── Draft editing ──────────────────────────────────────────────────────────
 
-export const getDraftById = query({
+export const getDraftById = serverQuery({
     args: { clerkOrgId: v.string(), draftId: v.id("portalDrafts") },
     handler: async (ctx, args) => {
         const draft = await ctx.db.get(args.draftId);
@@ -963,7 +963,7 @@ export const saveAccountAddress = mutation({
  *
  * Staff-only. The caller must gate before using it.
  */
-export const getTeamHubQueues = query({
+export const getTeamHubQueues = serverQuery({
     args: {},
     returns: v.object({
         certificatesAwaitingReview: v.number(),

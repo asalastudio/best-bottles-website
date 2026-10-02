@@ -10,9 +10,15 @@
  */
 
 import { convexTest } from "convex-test";
-import { describe, expect, it, beforeEach } from "vitest";
+import { describe, expect, it, beforeEach, vi } from "vitest";
 import schema from "../convex/schema";
 import { api } from "../convex/_generated/api";
+
+// Draft/authorization tests do not run the separate analytics component.
+vi.mock("../convex/posthog", async (importOriginal) => ({
+    ...await importOriginal<typeof import("../convex/posthog")>(),
+    captureServerEvent: vi.fn(),
+}));
 
 const modules = import.meta.glob("../convex/**/*.ts");
 
@@ -100,6 +106,7 @@ describe("getDraftById", () => {
         const t = convexTest(schema, modules);
         const draftId = await seed(t);
         const seen = await t.query(api.portal.getDraftById, {
+            writeToken: WRITE_TOKEN,
             clerkOrgId: OTHER_ORG,
             draftId: draftId as never,
         });
@@ -126,6 +133,7 @@ describe("markDraftSubmitted", () => {
         await submit(t, draftId);
 
         const draft = await t.query(api.portal.getDraftById, {
+            writeToken: WRITE_TOKEN,
             clerkOrgId: ORG,
             draftId: draftId as never,
         });
