@@ -3,6 +3,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 const mocks = vi.hoisted(() => ({ dashboard: vi.fn(), account: vi.fn(), shell: vi.fn(), certificates: vi.fn(), accounts: vi.fn(), queue: vi.fn() }));
 vi.mock("server-only", () => ({}));
+vi.mock("@/lib/portal/onboarding", () => ({ ensurePortalProfileForViewer: vi.fn() }));
 vi.mock("next/link", () => ({ default: ({ children, href }: { children: React.ReactNode; href: string }) => <a href={href}>{children}</a> }));
 vi.mock("@/components/portal/CertificateStatusRefresh", () => ({ default: () => null }));
 vi.mock("@/components/portal/PortalAddressForm", () => ({ default: () => null }));

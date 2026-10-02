@@ -453,16 +453,19 @@ export default defineSchema({
     // Seeded manually from QuickBooks; shopifyCustomerId nullable until Shopify goes live.
     portalAccounts: defineTable({
         clerkOrgId: v.string(),
-        accountNumber: v.string(),
+        profileStatus: v.optional(v.union(v.literal("pending"), v.literal("complete"))),
+        profileCreatedAt: v.optional(v.number()),
+        profileCreatedBy: v.optional(v.string()),
+        accountNumber: v.optional(v.string()),
         companyName: v.string(),
-        tier: v.string(),                           // e.g. "The Scaler"
-        accountManager: v.string(),
+        tier: v.optional(v.string()),                           // e.g. "The Scaler"
+        accountManager: v.optional(v.string()),
         // Best Bottles extends no credit — there is no Net 30/60/90 and no
         // credit facility. The field survives only so rows seeded before that
         // was settled still validate; nothing reads it and nothing writes it.
         netTerms: v.optional(v.string()),
         taxExempt: v.boolean(),
-        memberSince: v.string(),                    // e.g. "March 2021"
+        memberSince: v.optional(v.string()),                    // e.g. "March 2021"
         shopifyCustomerId: v.optional(v.string()),  // nullable until Shopify sync
 
         // ─── Identity bridge (Clerk org ↔ Shopify customer) ───────────────
@@ -485,12 +488,23 @@ export default defineSchema({
         billingAddress: v.optional(portalAddress),
         addressUpdatedAt: v.optional(v.number()),
         addressUpdatedBy: v.optional(v.string()),
+        addressRevision: v.optional(v.number()),
+        addressSyncStatus: v.optional(v.union(v.literal("awaiting_identity"), v.literal("awaiting_review"))),
     })
         .index("by_clerkOrgId", ["clerkOrgId"])
         .index("by_accountNumber", ["accountNumber"])
         // Reverse lookup: Shopify order/customer webhooks arrive with a customer
         // ID and must find the owning org without scanning every account.
         .index("by_shopifyCustomerId", ["shopifyCustomerId"]),
+
+    // Durable intent only: no default-address writer or automatic retry is enabled.
+    portalAddressReconciliations: defineTable({
+        clerkOrgId: v.string(), revision: v.number(),
+        shippingAddress: portalAddress,
+        shopifyCustomerId: v.optional(v.string()),
+        state: v.union(v.literal("awaiting_identity"), v.literal("awaiting_review"), v.literal("superseded")),
+        requestedAt: v.number(), requestedBy: v.string(),
+    }).index("by_org_revision", ["clerkOrgId", "revision"]),
 
     // Resale certificates — the seller's-permit record behind tax exemption.
     //

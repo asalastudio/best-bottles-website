@@ -3,6 +3,7 @@ import { v } from "convex/values";
 import type { Doc } from "./_generated/dataModel";
 import { serverQuery, verifyWriteToken } from "./portalAuth";
 import { accountCertificateStatus } from "./certificateWorkflow";
+import { reconcileAddressIdentity, saveAddressReconciliation } from "./lib/portalAccountFoundation";
 import { captureServerEvent, distinctIdFor } from "./posthog";
 
 function orderTotal(order: Doc<"portalOrders">): number | null {
@@ -126,6 +127,7 @@ export const upsertPortalAccount = mutation({
             .unique();
 
         const fields = {
+            profileStatus: "complete" as const,
             accountNumber: args.accountNumber,
             companyName: args.companyName,
             tier: args.tier,
@@ -223,6 +225,7 @@ export const linkShopifyCustomer = mutation({
             shopifyCustomerLinkedBy: account.shopifyCustomerLinkedBy ?? args.clerkUserId,
         });
 
+        await reconcileAddressIdentity(ctx, account, args.shopifyCustomerId);
         return {
             accountId: account._id,
             shopifyCustomerId: args.shopifyCustomerId,
@@ -944,12 +947,7 @@ export const saveAccountAddress = mutation({
             .unique();
         if (!account) throw new Error("account_not_found");
 
-        await ctx.db.patch(account._id, {
-            shippingAddress: args.shippingAddress,
-            billingAddress: args.billingAddress,
-            addressUpdatedAt: Date.now(),
-            addressUpdatedBy: args.clerkUserId,
-        });
+        await saveAddressReconciliation(ctx, account, args);
         return null;
     },
 });

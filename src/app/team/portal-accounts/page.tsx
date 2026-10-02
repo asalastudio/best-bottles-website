@@ -11,7 +11,6 @@ import { upsertPortalAccountAction } from "./actions";
 export const metadata = { title: { absolute: "Wholesale Accounts — Best Bottles" } };
 
 const FALLBACK_TIERS = ["The Scaler", "The Builder"];
-const FALLBACK_TERMS = ["Net 15", "Net 30", "Net 45", "Net 60", "Prepaid"];
 
 function AccessDenied() {
     return (
@@ -46,7 +45,7 @@ export default async function PortalAccountsPage() {
 
     // Offer what this business actually uses rather than a taxonomy invented
     // here, falling back only when there is nothing to learn from yet.
-    const knownTiers = [...new Set(accounts.map((a) => a.tier).filter(Boolean))];
+    const knownTiers = [...new Set(accounts.map((a) => a.tier).filter((tier): tier is string => Boolean(tier)))];
 
     return (
         <div className="min-h-screen bg-neutral-50 px-6 py-10">
@@ -62,7 +61,7 @@ export default async function PortalAccountsPage() {
                         </h1>
                         <p className="font-sans text-sm text-neutral-500 mt-1">
                             A portal account is what turns a Clerk organization into a wholesale
-                            customer with pricing, terms and tax status.
+                            profile. Pricing, Shopify linkage and certificate approval require separate review.
                         </p>
                     </div>
                     <Link
@@ -98,10 +97,10 @@ export default async function PortalAccountsPage() {
                                         <Link href={`/team/resale-certificates?org=${encodeURIComponent(account.clerkOrgId)}`}>{account.companyName}</Link>
                                     </p>
                                     <p className="font-sans text-[12px] text-neutral-400 tabular-nums">
-                                        {account.accountNumber}
+                                        {account.accountNumber ?? "Profile awaiting review"}
                                     </p>
                                 </div>
-                                <p className="font-sans text-[13px] text-neutral-500">{account.tier}</p>
+                                <p className="font-sans text-[13px] text-neutral-500">{account.tier ?? "Not assigned"}</p>
                                 <p className="font-sans text-[12px] text-neutral-400 truncate">
                                     {account.billingEmail ?? (
                                         // Without this, an approved certificate has nowhere to go.
@@ -121,6 +120,11 @@ export default async function PortalAccountsPage() {
                                         </span>
                                     ) : (
                                         <span className="text-amber-700">No shipping address</span>
+                                    )}
+                                    {account.shippingAddress && (
+                                        <span className="block text-amber-700">
+                                            {account.addressSyncStatus === "awaiting_identity" ? "Shopify link pending" : account.addressSyncStatus === "awaiting_review" ? "Shopify address review pending" : "Shopify address unverified"}
+                                        </span>
                                     )}
                                 </p>
                                 <div className="flex justify-end">

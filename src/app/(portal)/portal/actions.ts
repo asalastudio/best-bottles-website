@@ -120,7 +120,7 @@ export async function saveAddressAction(
     return {
         ok: true,
         errors: {},
-        message: result.shopifyWarning ?? "Address saved. Orders will ship here.",
+        message: result.shopifyWarning ?? "Address saved in your portal. Existing order addresses are unchanged.",
     };
 }
 

@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import type { Metadata } from "next";
 import PortalChrome from "@/components/portal/PortalChrome";
 import { CLERK_ENABLED } from "@/lib/clerk";
+import { ensurePortalProfileForViewer } from "@/lib/portal/onboarding";
 import { getPortalShellData } from "@/lib/portal/server";
 
 export const dynamic = "force-dynamic";
@@ -30,6 +31,7 @@ export default async function PortalLayout({ children }: { children: ReactNode }
         );
     }
 
+    await ensurePortalProfileForViewer();
     const shell = await getPortalShellData();
 
     return (
@@ -48,7 +50,7 @@ export default async function PortalLayout({ children }: { children: ReactNode }
                         </h1>
                         <p className="font-sans text-sm leading-relaxed text-neutral-500">
                             Your account is signed in, but there is no active Clerk organization selected for this session yet.
-                            Once an organization is active, orders, drafts, and account data will sync to the portal automatically.
+                            Once an organization is active, we can create your portal profile. Shopify linking and wholesale approval require review.
                         </p>
                     </div>
                 </div>
