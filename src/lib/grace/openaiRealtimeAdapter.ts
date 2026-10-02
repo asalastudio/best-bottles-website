@@ -46,6 +46,7 @@ export type GraceRealtimeCallbacks = {
     onConnect?: () => void;
     /** `unexpected` is true when the transport dropped on its own (idle close, network change), false for disconnect(). */
     onDisconnect?: (details?: { unexpected: boolean }) => void;
+    onUserSpeechStarted?: () => void;
     onModeChange?: (mode: "speaking" | "listening") => void;
     onTranscriptDelta?: (delta: string) => void;
     onMessage?: (message: { role: GraceRealtimeRole; text: string }) => void;
@@ -532,6 +533,8 @@ export function createGraceOpenAIRealtimeAdapter({
                     })) {
                         cancelEchoResponse(activeSession);
                     }
+                } else {
+                    callbacks.onUserSpeechStarted?.();
                 }
                 return;
             }

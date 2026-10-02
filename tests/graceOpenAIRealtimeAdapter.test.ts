@@ -210,12 +210,13 @@ describe("Grace OpenAI Realtime adapter", () => {
         const session = new FakeSession();
         const onModeChange = vi.fn();
         const onMessage = vi.fn();
+        const onUserSpeechStarted = vi.fn();
         const adapter = createGraceOpenAIRealtimeAdapter({
             baseInstructions: "Truth first.",
             toolImplementations: Object.fromEntries(
                 GRACE_OPENAI_TOOL_SPECS.map(({ name }) => [name, vi.fn()]),
             ),
-            callbacks: { onModeChange, onMessage },
+            callbacks: { onModeChange, onMessage, onUserSpeechStarted },
             dependencies: {
                 createAgent: (config) => config,
                 createSession: () => session,
@@ -242,6 +243,7 @@ describe("Grace OpenAI Realtime adapter", () => {
             type: "input_audio_buffer.speech_started",
         });
         expect(session.interrupt).toHaveBeenCalledTimes(1);
+        expect(onUserSpeechStarted).not.toHaveBeenCalled();
         session.emit("transport_event", {
             type: "response.created",
         });
@@ -255,6 +257,8 @@ describe("Grace OpenAI Realtime adapter", () => {
 
         await vi.advanceTimersByTimeAsync(GRACE_VOICE_ECHO_TAIL_MS);
         expect(session.mute).toHaveBeenCalledWith(false);
+        session.emit("transport_event", { type: "input_audio_buffer.speech_started" });
+        expect(onUserSpeechStarted).toHaveBeenCalledOnce();
 
         session.emit("transport_event", {
             type: "conversation.item.input_audio_transcription.completed",
