@@ -175,8 +175,11 @@ it("keeps Specialty and metal on a showProducts catalogue destination", () => {
 
 it("showProducts passes Refine through its raw search and never navigates on a zero match", () => {
     const source = readFileSync("src/components/grace/GraceProvider.tsx", "utf8");
-    const block = source.slice(source.indexOf("showProducts: async"), source.indexOf("showProductPresentation:"));
+    const block = source.slice(source.indexOf("showProducts: async"), source.indexOf("compareProducts: async"));
     expect(block).toContain("refineState: currentRefineState");
+    const fallback = block.slice(block.lastIndexOf("catch (e)"));
+    expect(fallback).toContain("inheritGraceRefineDestination(");
+    expect(fallback).toContain("graceSearchRefineState(");
     const empty = block.slice(block.indexOf("if (products.length === 0)"), block.indexOf("const capMatch"));
     expect(empty).not.toContain("routerRef.current.push");
     expect(empty).toContain("No verified products matched");

@@ -1465,7 +1465,13 @@ function GraceProviderBase({
                 return `${sizeWarning} Opening the catalog with the closest matches: ${summary}.`;
             } catch (e) {
                 console.error("[Grace] showProducts:", e);
-                const finderHref = buildCatalogPath([], params.query, params.family);
+                const finderHref = inheritGraceRefineDestination(
+                    buildCatalogPath([], params.query, params.family),
+                    graceSearchRefineState(
+                        pageContextRef.current?.refineState ?? getGraceRefineState(new URLSearchParams()),
+                        params.query ?? "", params.family,
+                    ),
+                );
                 routerRef.current.push(localizeHref(localeRef.current, finderHref));
                 completeGraceNavigationRef.current("I opened the focused finder");
                 return "Catalog search failed.";
