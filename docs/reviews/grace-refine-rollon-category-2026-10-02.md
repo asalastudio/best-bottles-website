@@ -25,3 +25,8 @@ In another fresh browser on `/catalog?applicators=rollon&capacities=6-15ml&color
 Keep the latest actual customer request in a ref for typed and transcribed input. Only a leading explicit independent/unrelated/separate question marker clears inherited facets for the lookup. The visible catalogue is unchanged, the new tool proposal still applies, and ordinary/ambiguous follow-ups retain their existing constraints. Reset the ref when starting a new conversation. Tests cover the recorded spray query and a stock query, immutability of visible state, ordinary follow-ups and a negated independent marker.
 
 Focused final suite:74tests/7files pass. This does not claim to fix all policy/hours/voice-link behavior. A rendered product href is not proof that its click handler works; the parent's separately reported link-click behavior remains outside this scoped correction.
+
+
+## Preview caught a second navigation step
+
+Preview50f9977e correctly verified one group with all five facets and reported18variants, but a subsequent model showProducts call redirected the shopper from the requested filtered catalogue to the sole matching PDP. The automated browser assertion correctly failed. Preserve a successfully verified catalogue request through later display calls in that same customer turn; new turns and direct-PDP requests remain free to navigate. Return complete-page group variant totals with verification, labelled as totals before variant-specific filters, so Grace can distinguish bottle cards from variants without another display/navigation call. Three additional regressions cover the turn-scoped guard; focused suite now77tests/7files. Earlier green CI and Ready preview on50f9977e are not final-head validation of this correction.

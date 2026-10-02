@@ -178,6 +178,12 @@ export function applyGraceRefinementRequest(
     return { filters, sort: current.sort, view: current.view };
 }
 
+/** A later display call must not replace a catalogue view just verified for this turn. */
+export function preserveVerifiedGraceCatalogView(customerRequest: string, verifiedRequest: string | undefined): boolean {
+    return customerRequest === verifiedRequest
+        && /\b(?:open|show|browse|view)\b[\s\S]{0,80}\bcatalog(?:ue)?\b/i.test(customerRequest);
+}
+
 /** An explicitly unrelated lookup may leave the visible catalogue unchanged. */
 export function graceCatalogLookupRefineState(
     current: GraceRefineState,

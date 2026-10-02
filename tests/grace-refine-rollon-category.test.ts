@@ -56,7 +56,7 @@ describe("Grace typed roll-on refinement category", () => {
     });
 });
 
-import { graceCatalogLookupRefineState } from "@/lib/grace/refineState";
+import { graceCatalogLookupRefineState, preserveVerifiedGraceCatalogView } from "@/lib/grace/refineState";
 
 describe("explicitly independent catalogue questions", () => {
     const active = () => getGraceRefineState(new URLSearchParams("applicators=rollon&capacities=6-15ml&colors=Clear&roller=metal&threads=13-415"));
@@ -74,5 +74,20 @@ describe("explicitly independent catalogue questions", () => {
         const current = active();
         const next = graceCatalogLookupRefineState(current, { search: "Amber bottle" }, "Amber bottle", request);
         expect(next.filters).toMatchObject({ applicators: ["rollon"], capacities: ["6-15ml"], colors: ["Clear"], rollerMaterials: ["metal"], neckThreadSizes: ["13-415"] });
+    });
+});
+
+
+describe("verified catalogue navigation stays authoritative for the current turn", () => {
+    it("keeps the requested catalogue open if showProducts is called after successful refinement", () => {
+        expect(preserveVerifiedGraceCatalogView(request, request)).toBe(true);
+    });
+    it("does not block a later request to open a product", () => {
+        expect(preserveVerifiedGraceCatalogView("Open that bottle", request)).toBe(false);
+    });
+    it("does not block direct product browsing or independent catalogue research", () => {
+        for (const text of ["Show me the Elegant bottle", "Independent stock question: check the catalogue for bags"])
+            expect(preserveVerifiedGraceCatalogView(text, text)).toBe(false);
+        expect(preserveVerifiedGraceCatalogView(request, undefined)).toBe(false);
     });
 });

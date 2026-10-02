@@ -46,6 +46,7 @@ import { isGraceToolResult } from "@/lib/graceToolResults";
 import {
     applyGraceRefinementRequest,
     graceCatalogLookupRefineState,
+    preserveVerifiedGraceCatalogView,
     inheritGraceRefineDestination,
     graceSearchRefineState,
     formatGraceRefineState,
@@ -767,6 +768,7 @@ function GraceProviderBase({
     const [messages, setMessages] = useState<GraceMessage[]>([]);
     const messagesRef = useRef<GraceMessage[]>([]);
     const latestCustomerRequestRef = useRef("");
+    const verifiedCatalogRequestRef = useRef<{ request: string; message: string } | null>(null);
     useEffect(() => { messagesRef.current = messages; }, [messages]);
     const [streamingText, setStreamingText] = useState("");
     const [isAwaitingReply, setIsAwaitingReply] = useState(false);
@@ -1368,6 +1370,9 @@ function GraceProviderBase({
         },
 
         showProducts: async (params: { query: string; family?: string }) => {
+            if (preserveVerifiedGraceCatalogView(latestCustomerRequestRef.current, verifiedCatalogRequestRef.current?.request)) {
+                return `${verifiedCatalogRequestRef.current!.message} Keep this requested catalogue view open; do not replace it with a single product page.`;
+            }
             try {
                 const currentRefineState = graceSearchRefineState(
                     pageContextRef.current?.refineState ?? getGraceRefineState(new URLSearchParams()),
@@ -2152,7 +2157,7 @@ function GraceProviderBase({
             const next = applyGraceRefinementRequest(current, proposal, params.customerRequest ?? "");
             const refinementVerification = await callGraceServerTool<{
                 totalCount?: number;
-                items?: unknown[];
+                items?: Array<{ variantCount?: number }>;
             }>("searchCatalog", {
                 searchTerm: next.filters.search || params.customerRequest || "catalog refinement",
                 categoryLimit: null,
@@ -2183,7 +2188,13 @@ function GraceProviderBase({
             sessionMetricsRef.current.toolsCalled++;
             sessionMetricsRef.current.toolsUsed.add("setCatalogRefinements");
             analytics.graceToolCalled({ toolName: "setCatalogRefinements", success: true });
-            return `Verified ${verifiedCount} matching product group${verifiedCount === 1 ? "" : "s"} and updated the visible Refine state. ${formatGraceRefineState(next)}`;
+            const groups = refinementVerification.result?.items ?? [];
+            const variantNote = groups.length === verifiedCount && groups.every(group => typeof group.variantCount === "number")
+                ? ` These ${verifiedCount} bottle cards contain ${groups.reduce((count, group) => count + group.variantCount!, 0)} product variants in total, before variant-specific filters; variants are not separate bottle cards.`
+                : "";
+            const message = `Verified ${verifiedCount} matching product group${verifiedCount === 1 ? "" : "s"} and updated the visible Refine state.${variantNote} ${formatGraceRefineState(next)}`;
+            verifiedCatalogRequestRef.current = { request: latestCustomerRequestRef.current, message };
+            return message;
         },
 
         prepareQuoteRequest: async (params: {
@@ -2585,6 +2596,7 @@ function GraceProviderBase({
         const norm = normalizeGraceMessageText(text);
 
         if (role === "user") {
+            if (latestCustomerRequestRef.current !== text) verifiedCatalogRequestRef.current = null;
             latestCustomerRequestRef.current = text;
             // Append voice transcripts; skip if send() already inserted an identical line
             setMessages((prev) => {
@@ -2838,6 +2850,7 @@ function GraceProviderBase({
         setMessages([]);
         messagesRef.current = [];
         latestCustomerRequestRef.current = "";
+        verifiedCatalogRequestRef.current = null;
         setInput("");
         setErrorMessage("");
         setBrowsingHistory([]);
@@ -2964,6 +2977,7 @@ function GraceProviderBase({
         const msg = (text ?? input).trim();
         if (!msg) return;
         latestCustomerRequestRef.current = msg;
+        verifiedCatalogRequestRef.current = null;
         setInput("");
 
         setMessages((prev) => [
