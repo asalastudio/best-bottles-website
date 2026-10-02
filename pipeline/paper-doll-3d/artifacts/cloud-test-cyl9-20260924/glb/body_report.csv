@@ -1,0 +1,2 @@
+grace_sku,status,detail,measured
+LBCylAmb9LtnBlk,PASS,"artifacts/cloud-test-cyl9-20260924/glb/Cyl-round-17-415-70x20.glb [round, from LBCylAmb9LtnBlk.png, 78304 faces] spliced 17-415 (traced neck 17.63 -> drawing 13.76mm, r@datum 6.86 -> 7.40mm, blend 1.2mm) thread-audit PASS",height_mm=70.0 diameter_mm=20.0
