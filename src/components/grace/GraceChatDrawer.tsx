@@ -77,7 +77,8 @@ export default function GraceChatDrawer() {
     return <AnimatePresence>{isOpen && <>
         {isMobile && <div className={styles.backdrop} aria-hidden="true" />}
         <motion.aside ref={panelRef} tabIndex={-1} role="dialog" aria-modal={isMobile || undefined} aria-label={t("chatAria")}
-            className={`${styles.panel} ${isRail ? styles.rail : ""}`}
+            data-ph-private data-ph-mask
+            className={`ph-no-capture ph-no-heatmaps ph-block ${styles.panel} ${isRail ? styles.rail : ""}`}
             style={isRail ? { width: surface.drawerWidth } : undefined}
             initial={{ opacity: 0, y: reducedMotion ? 0 : 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: reducedMotion ? 0 : 12 }} transition={{ duration: reducedMotion ? 0 : 0.2 }}
             onKeyDown={event => {

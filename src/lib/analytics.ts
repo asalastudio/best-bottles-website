@@ -7,6 +7,7 @@
  */
 
 import type { PostHog } from "posthog-js";
+import { CAPTURE_PRIVACY_CONFIG, mayCaptureNow, minimizeProperties } from "@/lib/analytics/capturePrivacy";
 import { APPLICATOR_NAV, CATALOG_FAMILIES, type ApplicatorNavValue } from "@/lib/catalogFilters";
 
 // ─── Adapter interface ───────────────────────────────────────────────────────
@@ -71,6 +72,11 @@ function withPosthog(call: (posthog: PostHog) => void) {
   pendingPosthogCalls.push(call);
 }
 
+function withPublicPosthog(call: (posthog: PostHog) => void) {
+  if (!mayCaptureNow()) return;
+  withPosthog((posthog) => { if (mayCaptureNow()) call(posthog); });
+}
+
 const posthogAdapter: AnalyticsAdapter = {
   async init(token, options) {
     const { default: posthog } = await import("posthog-js");
@@ -85,39 +91,11 @@ const posthogAdapter: AnalyticsAdapter = {
       // real app, not at our proxy path.
       ui_host: "https://us.posthog.com",
 
-      autocapture: true,
-      capture_pageview: true,
-
-      // Heatmaps are a separate stream from autocapture: pointer position,
-      // scroll depth and rageclicks, none of which autocapture records. Pinned
-      // here rather than left to the project's remote toggle so the behaviour
-      // is visible in the codebase instead of depending on a setting nobody
-      // remembers changing.
-      capture_heatmaps: true,
-      // Clicks on things that are not clickable. On a catalogue this is the
-      // highest-signal thing PostHog collects — it finds the places people
-      // expect an affordance that is not there.
-      capture_dead_clicks: true,
-
-      // Recording never starts on its own. MixpanelProvider turns it on per
-      // route, and only for pages sessionReplayScope allows — so a page that
-      // has not been considered is not recorded by default.
-      //
-      // The earlier reasoning here was wrong and is worth correcting: the
-      // concern is NOT SKUs and slugs. Those are public, and PostHog already
-      // receives them in the pageview URLs. The concern is the authenticated
-      // surfaces — shipping addresses, billing emails, permit numbers,
-      // uploaded certificates — which are rendered text that input masking
-      // would not touch.
-      disable_session_recording: true,
-      session_recording: {
-        maskAllInputs: true,
-        // Belt and braces for anything rendered rather than typed.
-        maskTextSelector: "[data-ph-mask]",
-      },
-
       person_profiles: "identified_only",
       ...options,
+      ...CAPTURE_PRIVACY_CONFIG,
+      // Recording starts only after the provider commits a reviewed public route.
+      disable_session_recording: true,
     });
     posthogReady = posthog;
     for (const call of pendingPosthogCalls.splice(0)) {
@@ -133,7 +111,7 @@ const posthogAdapter: AnalyticsAdapter = {
     // take a page down with it.
     withPosthog((posthog) => {
       try {
-        if (enabled) posthog.startSessionRecording();
+        if (enabled && mayCaptureNow()) posthog.startSessionRecording();
         else posthog.stopSessionRecording();
       } catch {
         // Recording is not worth an exception on a customer's page.
@@ -141,7 +119,7 @@ const posthogAdapter: AnalyticsAdapter = {
     });
   },
   identify(userId, traits) {
-    withPosthog((posthog) => posthog.identify(userId, traits ? normalizeReservedTraits(traits) : undefined));
+    withPublicPosthog((posthog) => posthog.identify(userId, traits ? minimizeProperties(normalizeReservedTraits(traits)) : undefined));
   },
   reset() {
     withPosthog((posthog) => posthog.reset());
@@ -155,18 +133,18 @@ const posthogAdapter: AnalyticsAdapter = {
       timing.duration_seconds = Math.round((Date.now() - startedAt) / 100) / 10;
       eventStartedAt.delete(event);
     }
-    const payload = { ...superProperties, ...timing, ...(properties ?? {}) };
-    withPosthog((posthog) => posthog.capture(event, payload));
+    const payload = minimizeProperties({ ...superProperties, ...timing, ...(properties ?? {}) });
+    withPublicPosthog((posthog) => posthog.capture(event, payload));
   },
   setUserProperties(properties) {
-    const traits = normalizeReservedTraits(properties);
-    withPosthog((posthog) => posthog.setPersonProperties(traits));
+    const traits = minimizeProperties(normalizeReservedTraits(properties));
+    withPublicPosthog((posthog) => posthog.setPersonProperties(traits));
   },
   registerSuperProperties(properties) {
-    Object.assign(superProperties, properties);
+    Object.assign(superProperties, minimizeProperties(properties));
   },
   group(groupKey, groupId, traits) {
-    withPosthog((posthog) => posthog.group(groupKey, groupId, traits));
+    withPublicPosthog((posthog) => posthog.group(groupKey, groupId, traits ? minimizeProperties(traits) : undefined));
   },
   timeEvent(event) {
     eventStartedAt.set(event, Date.now());
@@ -357,6 +335,10 @@ export const analytics = {
   setSessionRecording(enabled: boolean) {
     if (!_initialized) return;
     adapter.setSessionRecording(enabled);
+  },
+
+  pageViewed() {
+    adapter.track("$pageview");
   },
 
   reset() {

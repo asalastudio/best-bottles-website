@@ -3,6 +3,7 @@ import React, { act } from "react";
 import { createRoot, type Root } from "react-dom/client";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import GraceChatDrawer from "@/components/grace/GraceChatDrawer";
+import { PRIVATE_CAPTURE_SELECTOR } from "@/lib/analytics/capturePrivacy";
 import GraceCtaRow from "@/components/grace/cards/GraceCtaRow";
 import GraceOrderList from "@/components/grace/GraceOrderList";
 
@@ -56,6 +57,8 @@ describe("Grace redesign interactions", () => {
         expect(container.querySelector('a[href="/terms"]')).not.toBeNull();
         await act(async () => button("Upload an order list").click());
         expect(container.querySelector('textarea[id="grace-order-list"]')).not.toBeNull();
+        expect(container.querySelector('textarea[id="grace-order-list"]')?.closest(PRIVATE_CAPTURE_SELECTOR)).not.toBeNull();
+        expect(container.querySelector('[role="dialog"]')?.classList.contains("ph-no-capture")).toBe(true);
     });
     it("closes the menu before closing Grace on Escape", async () => {
         await act(async () => root.render(<GraceChatDrawer />));

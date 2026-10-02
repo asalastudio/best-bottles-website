@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { useAuth, useUser } from "@clerk/nextjs";
+import { useAuth } from "@clerk/nextjs";
 import { useCart } from "@/components/CartProvider";
 import { usePathname } from "next/navigation";
 import { analytics } from "@/lib/analytics";
@@ -21,15 +21,9 @@ const ANALYTICS_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY?.trim();
 function AnalyticsProviderBase({
   userId,
   isSignedIn,
-  user,
 }: {
   userId: string | null;
   isSignedIn: boolean;
-  user: {
-    fullName?: string | null;
-    primaryEmailAddress?: { emailAddress?: string | null } | null;
-    createdAt?: Date | null;
-  } | null;
 }) {
   const { itemCount } = useCart();
   const pathname = usePathname();
@@ -37,31 +31,20 @@ function AnalyticsProviderBase({
 
   useEffect(() => {
     if (!ANALYTICS_KEY) return;
-    // The initial route decides whether recording starts at all. Calling
-    // startSessionRecording() after an init that disabled it does not
-    // reliably take effect — the recorder script is never fetched — so the
-    // first page must be decided here rather than corrected afterwards.
-    // Still fail-closed: an unrecognised path disables it.
-    analytics.init(ANALYTICS_KEY, {
-      disable_session_recording: !mayRecordSession(window.location.pathname),
+    void analytics.init(ANALYTICS_KEY).then(() => {
+      analytics.setSessionRecording(mayRecordSession(window.location.pathname));
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- init runs once; the
-    // route is read from the live location, not from a render-time value.
   }, []);
 
   useEffect(() => {
     if (isSignedIn && userId && userId !== prevUserIdRef.current) {
       prevUserIdRef.current = userId;
-      analytics.identify(userId, {
-        $name: user?.fullName ?? undefined,
-        $email: user?.primaryEmailAddress?.emailAddress ?? undefined,
-        signUpDate: user?.createdAt?.toISOString() ?? undefined,
-      });
+      analytics.identify(userId);
     } else if (!isSignedIn && prevUserIdRef.current) {
       prevUserIdRef.current = null;
       analytics.reset();
     }
-  }, [isSignedIn, userId, user]);
+  }, [isSignedIn, userId]);
 
   useEffect(() => {
     analytics.setSuperProperties({
@@ -86,6 +69,7 @@ function AnalyticsProviderBase({
     // from the catalogue into the portal without a page load, and a recording
     // started on the storefront would happily follow them in.
     analytics.setSessionRecording(ANALYTICS_KEY ? mayRecordSession(pathname) : false);
+    if (ANALYTICS_KEY) analytics.pageViewed();
   }, [pathname]);
 
   return null;
@@ -93,13 +77,11 @@ function AnalyticsProviderBase({
 
 function AnalyticsProviderWithClerk() {
   const { userId, isSignedIn } = useAuth();
-  const { user } = useUser();
 
   return (
     <AnalyticsProviderBase
       userId={userId ?? null}
       isSignedIn={!!isSignedIn}
-      user={user ?? null}
     />
   );
 }
@@ -109,5 +91,5 @@ export function AnalyticsProvider({ withClerk = false }: { withClerk?: boolean }
     return <AnalyticsProviderWithClerk />;
   }
 
-  return <AnalyticsProviderBase userId={null} isSignedIn={false} user={null} />;
+  return <AnalyticsProviderBase userId={null} isSignedIn={false} />;
 }

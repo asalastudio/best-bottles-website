@@ -18,7 +18,10 @@ vi.mock("posthog-js", () => ({
 import { analytics } from "@/lib/analytics";
 
 // posthog-js loads on init (it left the shell bundle); once loaded, calls reach it synchronously.
-beforeAll(() => analytics.init("phc_test"));
+beforeAll(() => {
+  vi.stubGlobal("window", { location: { pathname: "/catalog" } });
+  return analytics.init("phc_test");
+});
 
 beforeEach(() => {
   track.mockClear();
@@ -56,7 +59,7 @@ describe("catalog grid quick-add analytics", () => {
     ]);
     expect(track.mock.calls[1][1]).toEqual({ ...base, quantity: 144, tier: "144–499" });
     expect(track.mock.calls[2][1]).toEqual({ ...base, quantity: 145, tier: "144–499", source: "stepper" });
-    expect(track.mock.calls[5][1]).toEqual({ ...base, quantity: 0, tier: null, error: "not-purchasable" });
+    expect(track.mock.calls[5][1]).toEqual({ ...base, quantity: 0, tier: null });
     expect(track.mock.calls[6][1]).toEqual({ ...base, quantity: 145, tier: "144–499" });
   });
 });
