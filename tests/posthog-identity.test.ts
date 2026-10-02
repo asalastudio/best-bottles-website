@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { beforeEach, describe, expect, it, vi } from "vitest";
-const sdk = vi.hoisted(() => ({ init: vi.fn(), reset: vi.fn(), identify: vi.fn(), capture: vi.fn() }));
+const sdk = vi.hoisted(() => ({ init: vi.fn(), consent: { reset: vi.fn() }, reset: vi.fn(), identify: vi.fn(), capture: vi.fn() }));
 vi.mock("posthog-js", () => ({ default: sdk }));
 beforeEach(() => { vi.resetModules(); vi.clearAllMocks(); window.history.replaceState({}, "", "/catalog"); });
 const identity = (userId: string | null, organizationId: string | null = null) => ({ userId, organizationId });
