@@ -1,0 +1,29 @@
+{
+  "status": "proposed-not-applied",
+  "store": "bestbottles-1580.myshopify.com",
+  "catalogTitle": "Best Bottles — Elegant B2B pilot",
+  "currency": "USD",
+  "websiteSku": "GBElg15MtlRollSlSh",
+  "shopifySku": "GB-ELG-CLR-15ML-MRL-SSLV",
+  "variantId": "gid://shopify/ProductVariant/53343615680804",
+  "source": "data/audits/legacy-tier-pricing-2026-07-20/tiers.jsonl",
+  "approvedBuyer": null,
+  "companyId": null,
+  "companyLocationId": null,
+  "companyContactId": null,
+  "customerId": null,
+  "quantityRule": { "minimum": 1, "increment": 1, "maximum": null },
+  "tiers": [
+    { "minimumQuantity": 1, "unitCents": 88 },
+    { "minimumQuantity": 12, "unitCents": 84 },
+    { "minimumQuantity": 144, "unitCents": 79 },
+    { "minimumQuantity": 288, "unitCents": 75 },
+    { "minimumQuantity": 1440, "unitCents": 69 }
+  ],
+  "baseVariantPriceChange": false,
+  "inventoryChange": false,
+  "paymentTermsChange": false,
+  "automaticDiscountChange": false,
+  "shopWideSettingsChange": false,
+  "placeOrder": false
+}

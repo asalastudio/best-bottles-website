@@ -1,0 +1,57 @@
+# Native B2B pilot — preparation, not activation
+
+The selected route uses Shopify Plus company catalogs and volume pricing. This draft adds a server-only native-price/cart adapter and tests; **no production route imports it**. It does not complete the live pricing fix, gate the existing anonymous route, replace Clerk, configure auth, or provision Shopify data. PR349's Function proposal remains held.
+
+## Scope and evidence
+
+Jordan authorized fixing the reproduced Elegant mismatch on October 2. Parent subsequently confirmed the approved-wholesale-only/no-card-before-approval requirement and accepted native Shopify B2B. Parent is obtaining one existing approved company/buyer or explicitly designated test buyer. No company/customer identity is guessed here.
+
+The directly reviewed source is the legacy exact-SKU ladder in `data/audits/legacy-tier-pricing-2026-07-20/tiers.jsonl` (GBElg15MtlRollSlSh). September25 PR271/commit3154b414 established tiers shown as prices; this proposal does not reinstate quote labels. Legacy pack totals have different rounding; this pilot uses the approved displayed unit rates, so 60×$0.84=$50.40 before tax/shipping.
+
+October2 read-only connected Admin audit: Plus/USD; zero companies/locations/company catalogs; one US market price list with zero fixed prices/rules. Shopify SKU GB-ELG-CLR-15ML-MRL-SSLV maps to variant53343615680804, base$0.88, no native breaks, min/increment1, maxnull. New customer accounts are enabled but checkout login is optional. This is not evidence of an approved buyer.
+
+Primary client evidence was subsequently recovered and read: Abbas's September17,2026 email **RE: Check and Pricing Questions** to Jordan (Gmail message1a0b0fc2e6a6d680). It confirms wholesale-only purchasing, no card before first-time-buyer approval, payment when placing/completing the order, shipping-department capture/void responsibilities, and customer consent before quantity reductions/substitutions/price increases. Inventory and certificate checks usually take one day. It does not fully specify account-versus-each-order approval or settle store-wide manual-capture configuration. `docs/grace_knowledge_faq.md` mentions $50; `src/lib/checkout.ts` hardcodes it. Neither is independently certified as the current approved minimum here. No minimum is invented or changed by this draft. The required `assertOrderAllowed` integration must implement the verified policy before any payable URL is returned. Private source link is retained in the local pilot review packet; no client email body is committed.
+
+Current counterexample: `src/lib/portal/wholesaleCheckout.ts` deliberately returns null on missing identity/errors; `src/app/api/shopify/resolve-variants/route.ts` then creates anonymous Storefront/permalink checkout. Portal tax copy says “Anyone can buy.” Tax exemption approval is not wholesale ordering approval. The new adapter has no such fallback, but these existing routes remain unchanged pending coordinated integration with the portal/security owner.
+
+## What the code prepares
+
+- Contextual native product prices, quantity rules and complete breaks with the same customer access token/location used for cart creation. API2026-04, no shared cache, redacted upstream GraphQL/HTTP errors.
+- Trusted exact variant/SKU enrollment and entire-ladder comparison, including inactive higher tiers: an unconfigured or stale catalog cannot silently fall back to base prices.
+- Per-variant merged quantities, integer cents, quantity rules, fresh native lookup on every request, separate preview and checkout entry points. Browser price fields are ignored.
+- Required server-loaded approved access and a required order-policy callback. The actual Clerk/Shopify session resolver is deliberately absent; no request-body approval stub exists.
+- Approval recheck before creating a cart; returned company/contact/location, line identity, quantity, unit amount, total and subtotal must agree before returning its checkout URL. Missing context, pagination, price drift, inventory reduction and API failure throw without anonymous fallback.
+- Pilot is USD, fixed unit rates without additional discount stacking, at most250 input lines. It rejects unsupported native data instead of broadening the pilot.
+
+The preview/pricing method is ready for the PDP/cart integration but is not yet called by either. This is a reusable preparation seam, not evidence of hosted parity. Each checkout request creates a new cart; persistent cart update/buyer-switch integration and server-owned cart storage are still required for a full release. Native Shopify handles hosted quantities, but that behavior still needs the pilot verification below.
+
+## Proposed exact pilot diff (not executed)
+
+See `pilot.json`. Before applying, refresh store/variant/SKU/currency and current catalogs/assignments; halt on drift. Resolve the one named buyer read-only; record exact IDs in a private review packet, not a public PR.
+
+1. Create one isolated company catalog named **Best Bottles — Elegant B2B pilot**, one USD price list and a publication containing only the verified Elegant variant's product. Shopify publication operates at product level: verify sibling variants are not unintentionally purchasable; do not claim variant-only publication. The headless pilot enrollment accepts only the verified variant. If siblings can be purchased through another entry, restrict the pilot to an authorized test store or resolve that exposure before approval.
+2. Fixed base$0.88; breaks12=$0.84,144=$0.79,288=$0.75,1440=$0.69; quantity minimum1/increment1/no maximum. Do not confuse the12 break with a12-unit order multiple.
+3. Since the audited store had zero B2B companies, provisioning may be necessary: create exactly one named company/location, associate the existing approved Shopify customer as its contact, grant ordering access only for that location, and assign only the pilot catalog. Review the prospective company/location/contact fields before any write. Do not create an arbitrary test customer or infer approval from Clerk membership/email match/tax exemption.
+4. Leave base product prices, all other catalog prices/assignments, inventory, taxes, credit terms, automatic discounts, notifications, storefront publication and shop-wide login settings unchanged. No automatic approval of other accounts. No email invitations are authorized by this plan.
+
+**Smallest approval question, after buyer resolution and publication-scope check:** “Approve the displayed one-company/location pilot for [verified company and buyer], assigning the isolated Elegant catalog with unit rates $0.88 / $0.84 at12 / $0.79 at144 / $0.75 at288 / $0.69 at1440, and performing cart/checkout checks without placing an order?” The bracketed identity must be resolved before asking; current `null` fields are blockers, not default values or approval targets. If provisioning is needed, attach its exact before/after record fields to that question. This does not approve shop-wide settings/auth activation.
+
+## Authentication and policy actions requiring separate concrete review
+
+Preserve Clerk. Inspect existing OIDC/Customer Account API configuration first. If missing, prepare exact Clerk OAuth application, Shopify identity-provider client binding, callback/logout URLs and requested scopes for action-time approval. A Clerk OAuth client is not a Shopify pricing app. Do not print or ask the user to send passwords/tokens. No installation, OAuth exchange, secret transfer, callback edit or IdP activation happened here.
+
+The server resolver must verify Clerk user/org, the user's own Shopify Customer Account token/expiry, authorized company contact/location, current ordering permission, and application approval. Do not reuse the organization billing customer as every user's identity. Keep tokens server-side; expose only display-safe prices. Any per-order review policy belongs in `assertOrderAllowed`; passing a no-op like the synthetic unit tests is not a production implementation.
+
+Before release, replace the legacy anonymous fallback and cover every payable entry path (main checkout, portal drafts, restored carts, direct Shopify access). Decide account-only versus per-order approval and confirm the merchandise minimum from primary client evidence. A shop-wide login requirement is a separate settings diff and does not by itself enforce B2B approval. Coordinate reserved portal/security files with their owner.
+
+## Verification and rollback
+
+Local checks: 49 new native B2B tests; 22 existing Shopify adapter tests; 43 existing checkout/draft/fallback tests (114 total). Changed-file ESLint passed; `tsc --noEmit` passed; production `npm run build -- --webpack` passed with CI placeholder environment values. Shopify's Storefront schema validator accepted both operations; neither was executed against the live store. Build-generated files were restored. Full repository test suite and authenticated hosted checkout were not run for this preparation draft.
+
+All local fixtures use synthetic buyer/contact/location IDs and never call live Shopify. Boundary expectations:1/11→$0.88;12/13/60/143→$0.84;144/145/287→$0.79;288/289/1439→$0.75;1440/1441→$0.69. Tests compare preview with the mocked native cart response, including60=$50.40, not a real hosted checkout.
+
+After exact pilot approval: sign in as the approved buyer; verify each boundary in native contextual product response, PDP, cart and hosted checkout. Test increasing/decreasing quantity in both cart and hosted checkout, split/merged quantities, unrelated variants, browser tampering, expired token, pending/revoked access, location switch, persistence/back navigation, minimum policy, API errors and missing/stale catalog data. Stop before order submission. Low quantities may need a separate fixture to meet a confirmed order minimum. Above-stock quantities require an authorized test-store fixture; do not alter production inventory to force the test. The reported60→50 stock issue remains independent.
+
+Capture before-state and all created IDs. On failed pilot, disable its headless route/enrollment and remove only the newly added catalog assignment and contact ordering permission; preserve preexisting access. Restore changed values only if still equal to this pilot's after-state. Archive the isolated catalog and retain evidence; do not delete an existing buyer/company or broadly revert other work. Leave authentication unchanged unless a separate approved auth rollback applies. Any pilot-created open checkout URLs require explicit review because disabling the headless entry alone may not revoke them.
+
+Primary docs: [native quantity pricing](https://help.shopify.com/en/manual/b2b/catalogs/quantity-pricing), [headless buyer context](https://shopify.dev/docs/storefronts/headless/bring-your-own-stack/b2b), [Clerk integration](https://clerk.com/docs/guides/development/integrations/platforms/shopify), [company requests/approval](https://help.shopify.com/en/manual/b2b/companies-and-customers/company-account-requests).
