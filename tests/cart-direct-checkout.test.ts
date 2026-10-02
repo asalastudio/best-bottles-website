@@ -22,6 +22,8 @@ const { cartState } = vi.hoisted(() => ({
     },
 }));
 
+vi.mock("next/navigation", () => ({ usePathname: () => "/catalog" }));
+
 vi.mock("@/components/CartProvider", () => ({
     useCart: () => cartState,
 }));
@@ -61,11 +63,13 @@ describe("standard cart checkout actions", () => {
         }
     });
 
-    it("blocks checkout below the combined minimum and offers another build", () => {
+    it("blocks checkout below the combined minimum and offers contextual shopping", () => {
         cartState.items[0].quantity = 1;
         for (const markup of [renderToStaticMarkup(React.createElement(CartDrawer, { isOpen: true, onClose: vi.fn() })), renderToStaticMarkup(React.createElement(CartPage))]) {
             expect(markup).toContain("Add $47.50 more to check out.");
-            expect(markup).toContain("Continue building");
+            expect(markup).toContain("Continue shopping");
+            expect(markup).not.toContain("Continue building");
+            expect(markup).toContain("Checkout requires a $50.00 minimum.");
             expect(markup).toMatch(/disabled=""[^>]*data-testid="(?:checkout-start-button|cart-page-checkout-button)"/);
         }
     });

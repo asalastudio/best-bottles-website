@@ -4,12 +4,15 @@ import { useRegion } from "@/components/RegionProvider";
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import CartMinimumNotice from "@/components/CartMinimumNotice";
+import { isBuilderShoppingPath } from "@/lib/cartShoppingReturn";
 import { X, ShoppingBag, Plus, Minus, Trash, ArrowRight, WarningCircle } from "@/components/icons";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "@/components/CartProvider";
 import { displayApplicatorName } from "@/lib/catalogFilters";
 import { useGrace } from "@/components/useGrace";
-import { ORDER_MINIMUM, checkoutMinimum, checkoutMinimumMessage, isCheckoutReady, splitCheckoutItems } from "@/lib/checkout";
+import { ORDER_MINIMUM, checkoutMinimum, isCheckoutReady, splitCheckoutItems } from "@/lib/checkout";
 import { cartVolumeNudge } from "@/lib/volumePricing";
 
 interface CartDrawerProps {
@@ -19,6 +22,8 @@ interface CartDrawerProps {
 
 export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
     const { formatPrice } = useRegion();
+    const pathname = usePathname();
+    const shoppingLabel = isBuilderShoppingPath(pathname ?? "") ? "Continue building" : "Continue shopping";
     const { items, itemCount, removeItem, updateQuantity, checkout, isCheckingOut, checkoutError, isCartHydrated } = useCart();
     const { openPanel: openGracePanel } = useGrace();
     const drawerRef = useRef<HTMLDivElement>(null);
@@ -176,8 +181,8 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                             <div className="relative px-6 py-3 shrink-0 bg-white/40 border-b border-champagne/30">
                                 <p className="font-sans text-[12px] text-obsidian font-medium mb-2">
                                     {minimum.met
-                                        ? "You've reached the $50 order minimum."
-                                        : `${formatPrice(minimum.remaining)} away from the $50 order minimum`}
+                                        ? `You've reached the ${formatPrice(ORDER_MINIMUM)} order minimum.`
+                                        : `${formatPrice(minimum.remaining)} away from the ${formatPrice(ORDER_MINIMUM)} order minimum`}
                                 </p>
                                 <div className="h-1.5 w-full bg-champagne/30 rounded-full overflow-hidden">
                                     <motion.div
@@ -203,6 +208,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                                     <ShoppingBag className="text-champagne mb-4" size={48} />
                                     <p className="font-serif text-lg text-obsidian/60 mb-2">Your cart is empty</p>
                                     <p className="text-sm text-slate">Browse our catalog or ask Grace, your AI Bottling Specialist, to find the right bottle and fitment.</p>
+                                    <button type="button" onClick={onClose} className="mt-4 min-h-11 px-4 text-sm font-medium text-obsidian underline underline-offset-4">{shoppingLabel}</button>
                                 </div>
                             ) : (
                                 items.map((item, i) => {
@@ -308,7 +314,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                         {/* Footer */}
                         {items.length > 0 && (
                             <div
-                                className="shrink-0 px-6 py-5 bg-white border-t border-champagne/30"
+                                className="max-h-[65%] shrink-0 overflow-y-auto overscroll-contain px-6 py-5 bg-white border-t border-champagne/30"
                             >
                                 {checkoutError && (
                                     <div role="alert" className="mb-3 text-xs text-red-700 bg-red-50 border border-red-200 rounded-lg px-3 py-2.5">
@@ -331,18 +337,22 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                                     <span className="font-serif text-2xl font-medium text-obsidian">{formatPrice(subtotal)}</span>
                                 </div>
 
-                            <p className="mt-4 text-sm text-slate" role="status">{checkoutMinimumMessage(minimum)}</p>
-                            {!minimum.met && <Link href="/matrix" onClick={onClose} className="mt-3 flex min-h-11 items-center justify-center rounded-sm bg-muted-gold px-5 py-3 font-semibold text-white">Continue building</Link>}
+                                <CartMinimumNotice id="cart-drawer-minimum" minimum={minimum} hasQuoteItems={quoteOnlyItems.length > 0} />
                                 <button
                                     onClick={checkout}
                                     disabled={isCheckingOut || !minimum.met}
+                                    aria-describedby="cart-drawer-minimum"
                                     data-testid="checkout-start-button"
-                                    className="group w-full flex items-center justify-center gap-2.5 py-4 rounded-xl font-medium text-[14px] tracking-wide transition-all duration-300 cursor-pointer relative overflow-hidden bg-obsidian text-bone hover:bg-obsidian/90 disabled:opacity-50"
+                                    className="group w-full flex items-center justify-center gap-2.5 py-4 rounded-xl font-medium text-[14px] tracking-wide transition-all duration-300 cursor-pointer relative overflow-hidden bg-obsidian text-bone hover:bg-obsidian/90 disabled:cursor-not-allowed disabled:opacity-50"
                                     style={{ boxShadow: "0 4px 20px rgba(29,29,31,0.15)" }}
                                 >
                                     <span className="absolute inset-0 liquid-shimmer opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true" />
                                     <span className="relative">{isCheckingOut ? "Redirecting to secure checkout…" : "Proceed to Checkout"}</span>
                                     <ArrowRight className="relative transition-transform duration-300 group-hover:translate-x-0.5" size={16} />
+                                </button>
+
+                                <button type="button" onClick={onClose} className="mt-2 flex min-h-11 w-full items-center justify-center text-sm font-medium text-slate underline underline-offset-4 hover:text-obsidian">
+                                    {shoppingLabel}
                                 </button>
 
                                 {items.some((item) => item.neckThreadSize || (item.compatibleCount ?? 0) > 0) && (

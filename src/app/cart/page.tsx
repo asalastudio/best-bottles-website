@@ -3,15 +3,20 @@
 import { useRegion } from "@/components/RegionProvider";
 
 import Link from "next/link";
+import CartMinimumNotice from "@/components/CartMinimumNotice";
+import { useCartShoppingReturn } from "@/components/CartShoppingContext";
+import { isBuilderShoppingPath } from "@/lib/cartShoppingReturn";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useCart } from "@/components/CartProvider";
 import { displayApplicatorName } from "@/lib/catalogFilters";
 import { ArrowRight, Minus, Plus, ShoppingBag, Trash, WarningCircle } from "@/components/icons";
-import { checkoutMinimum, checkoutMinimumMessage, isCheckoutReady, splitCheckoutItems } from "@/lib/checkout";
+import { checkoutMinimum, isCheckoutReady, splitCheckoutItems } from "@/lib/checkout";
 
 export default function CartPage() {
     const { formatPrice } = useRegion();
+    const shoppingReturn = useCartShoppingReturn();
+    const shoppingLabel = isBuilderShoppingPath(shoppingReturn) ? "Continue building" : "Continue shopping";
     const {
         items,
         itemCount,
@@ -39,8 +44,8 @@ export default function CartPage() {
                             Review SKUs, quantities, and pricing before checkout. Shopify verifies checkout availability and final pricing when you proceed.
                         </p>
                     </div>
-                    <Link href="/catalog" className="text-sm font-semibold text-obsidian underline underline-offset-4 hover:text-muted-gold">
-                        Continue browsing
+                    <Link href={shoppingReturn} className="inline-flex min-h-11 items-center text-sm font-semibold text-obsidian underline underline-offset-4 hover:text-muted-gold">
+                        {shoppingLabel}
                     </Link>
                 </div>
 
@@ -57,8 +62,8 @@ export default function CartPage() {
                         <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-slate">
                             Browse the catalog or ask Grace to help you find a bottle, cap, or complete packaging set.
                         </p>
-                        <Link href="/catalog" className="mt-6 inline-flex items-center justify-center bg-obsidian px-6 py-3 text-xs font-bold uppercase tracking-widest text-bone hover:bg-muted-gold">
-                            Browse Catalog
+                        <Link href={shoppingReturn} className="mt-6 inline-flex items-center justify-center bg-obsidian px-6 py-3 text-xs font-bold uppercase tracking-widest text-bone hover:bg-muted-gold">
+                            {shoppingLabel}
                         </Link>
                     </div>
                 ) : (
@@ -148,17 +153,22 @@ export default function CartPage() {
                                     <p>{checkoutError}</p>
                                 </div>
                             )}
-                            <p className="mt-4 text-sm text-slate" role="status">{checkoutMinimumMessage(minimum)}</p>
-                            {!minimum.met && <Link href="/matrix" className="mt-3 flex min-h-11 items-center justify-center rounded-sm bg-muted-gold px-5 py-3 font-semibold text-white">Continue building</Link>}
+                            <div className="mt-4">
+                                <CartMinimumNotice id="cart-page-minimum" minimum={minimum} hasQuoteItems={quoteOnlyItems.length > 0} />
+                            </div>
                             <button
                                 onClick={checkout}
                                 disabled={isCheckingOut || !minimum.met}
+                                aria-describedby="cart-page-minimum"
                                 data-testid="cart-page-checkout-button"
-                                className="mt-5 flex w-full items-center justify-center gap-2 bg-obsidian px-5 py-4 text-sm font-semibold text-bone hover:bg-muted-gold disabled:cursor-not-allowed disabled:opacity-50"
+                                className="flex w-full items-center justify-center gap-2 bg-obsidian px-5 py-4 text-sm font-semibold text-bone hover:bg-muted-gold disabled:cursor-not-allowed disabled:opacity-50"
                             >
                                 <span>{isCheckingOut ? "Redirecting to secure checkout..." : "Proceed to Checkout"}</span>
                                 <ArrowRight size={16} />
                             </button>
+                            <Link href={shoppingReturn} className="mt-2 flex min-h-11 items-center justify-center text-sm font-medium text-slate underline underline-offset-4 hover:text-obsidian">
+                                {shoppingLabel}
+                            </Link>
                         </aside>
                     </div>
                 )}
