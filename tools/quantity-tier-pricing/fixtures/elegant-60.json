@@ -1,0 +1,50 @@
+{
+  "cart": {
+    "lines": [
+      {
+        "id": "gid://shopify/CartLine/1",
+        "quantity": 60,
+        "cost": {
+          "amountPerQuantity": {
+            "currencyCode": "USD"
+          }
+        },
+        "sellingPlanAllocation": null,
+        "merchandise": {
+          "__typename": "ProductVariant",
+          "id": "gid://shopify/ProductVariant/123",
+          "tiers": {
+            "jsonValue": {
+              "version": 1,
+              "variantId": "gid://shopify/ProductVariant/123",
+              "currency": "USD",
+              "sourceRevision": "legacy-GBElg15MtlRollSlSh-2026-10-02-rounded-unit-rates",
+              "tiers": [
+                {
+                  "minQty": 1,
+                  "unitCents": 88
+                },
+                {
+                  "minQty": 12,
+                  "unitCents": 84
+                },
+                {
+                  "minQty": 144,
+                  "unitCents": 79
+                },
+                {
+                  "minQty": 288,
+                  "unitCents": 75
+                },
+                {
+                  "minQty": 1440,
+                  "unitCents": 69
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

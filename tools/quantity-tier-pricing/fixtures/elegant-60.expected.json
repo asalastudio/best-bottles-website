@@ -1,0 +1,16 @@
+{
+  "operations": [
+    {
+      "lineUpdate": {
+        "cartLineId": "gid://shopify/CartLine/1",
+        "price": {
+          "adjustment": {
+            "fixedPricePerUnit": {
+              "amount": "0.84"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

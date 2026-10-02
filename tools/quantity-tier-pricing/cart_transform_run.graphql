@@ -1,0 +1,17 @@
+query Input {
+  cart {
+    lines {
+      id
+      quantity
+      cost { amountPerQuantity { currencyCode } }
+      sellingPlanAllocation { sellingPlan { id } }
+      merchandise {
+        __typename
+        ... on ProductVariant {
+          id
+          tiers: metafield(namespace: "custom", key: "bb_volume_tiers") { jsonValue }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+name: Quantity tier pricing candidate
+on:
+  pull_request:
+    paths:
+      - 'tools/quantity-tier-pricing/**'
+      - '.github/workflows/quantity-tier-pricing.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/quantity-tier-pricing/**'
+      - '.github/workflows/quantity-tier-pricing.yml'
+permissions:
+  contents: read
+jobs:
+  pricing-core:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt
+      - name: Check formatting
+        run: cargo fmt --manifest-path tools/quantity-tier-pricing/Cargo.toml -- --check
+      - name: Test core (no Shopify access)
+        run: cargo test --locked --manifest-path tools/quantity-tier-pricing/Cargo.toml
