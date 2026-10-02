@@ -15,10 +15,14 @@
  * into the new one, so "what were we relying on last March" stays answerable.
  */
 
+import { parseCustomerDeclaredExpiration, customerDeclaredExpirationIsPast } from "../src/lib/portal/certificateExpiration";
 import { mutation } from "./_generated/server";
 import { v } from "convex/values";
 import type { Doc } from "./_generated/dataModel";
 import { serverQuery, verifyWriteToken } from "./portalAuth";
+import { requireVerifiedDocument } from "./certificateDocuments";
+import { enqueueCertificateEvent } from "./certificateNotifications";
+import { requireNoSyncInProgress } from "./certificateWorkflow";
 
 function normalizeState(raw: string): string {
     const code = raw.trim().toUpperCase();
@@ -62,7 +66,13 @@ export const submitResaleCertificate = mutation({
         issuingState: v.string(),
         permitNumber: v.string(),
         documentStorageId: v.optional(v.id("_storage")),
+        customerDeclaredExpiration: v.optional(v.union(
+            v.object({ kind: v.literal("date"), date: v.string() }),
+            v.object({ kind: v.literal("none") }),
+            v.object({ kind: v.literal("unspecified") }),
+        )),
     },
+    returns: v.object({ certificateId: v.id("resaleCertificates") }),
     handler: async (ctx, args) => {
         verifyWriteToken(args.writeToken);
 
@@ -71,6 +81,12 @@ export const submitResaleCertificate = mutation({
 
         const issuingState = normalizeState(args.issuingState);
         const permitNumber = normalizePermitNumber(args.permitNumber);
+        const customerDeclaredExpiration = parseCustomerDeclaredExpiration(
+            args.customerDeclaredExpiration?.kind,
+            args.customerDeclaredExpiration?.kind === "date" ? args.customerDeclaredExpiration.date : undefined,
+        );
+
+        await requireVerifiedDocument(ctx, args.documentStorageId, args.clerkOrgId, args.clerkUserId);
 
         // A second submission replaces an earlier one still awaiting review —
         // otherwise the queue accumulates duplicates of the same business and a
@@ -96,11 +112,13 @@ export const submitResaleCertificate = mutation({
             issuingState,
             permitNumber,
             documentStorageId: args.documentStorageId,
+            customerDeclaredExpiration,
             status: "pending",
             submittedAt: Date.now(),
             submittedBy: args.clerkUserId,
         });
 
+        await enqueueCertificateEvent(ctx, certificateId, "submitted");
         return { certificateId };
     },
 });
@@ -173,8 +191,8 @@ export const listPendingCertificates = serverQuery({
  * Every certificate, newest first, joined to the account that submitted it.
  *
  * The queue alone hides the two states that actually cost money: an approval
- * that never reached Shopify (the account is still being taxed) and one that has
- * lapsed (the account is being under-taxed). Both are computed here rather than
+ * without a confirmed Shopify receipt and one that has lapsed. Neither proves
+ * the current checkout tax state without reconciliation. Both are computed here rather than
  * read off `status`, which is only as fresh as the last sweep.
  */
 export const listAllCertificates = serverQuery({
@@ -190,6 +208,8 @@ export const listAllCertificates = serverQuery({
         const rows = await Promise.all(
             certs.map(async (cert) => {
                 const account = byOrg.get(cert.clerkOrgId);
+                let documentVerified = false;
+                try { await requireVerifiedDocument(ctx, cert.documentStorageId, cert.clerkOrgId); documentVerified = true; } catch { /* Legacy/missing document: require replacement before approval. */ }
                 const lapsed =
                     cert.status === "approved" &&
                     cert.expiresAt !== undefined &&
@@ -197,6 +217,9 @@ export const listAllCertificates = serverQuery({
 
                 return {
                     ...cert,
+                    documentVerified,
+                    customerDeclaredExpirationIsPast: customerDeclaredExpirationIsPast(cert.customerDeclaredExpiration, now),
+                    notifications: (await ctx.db.query("certificateNotifications").withIndex("by_certificate", q => q.eq("certificateId", cert._id)).collect()).map(n => ({ event: n.event, audience: n.audience, status: n.status, attempts: n.attempts })),
                     companyName: account?.companyName ?? "Unknown account",
                     accountNumber: account?.accountNumber ?? null,
                     billingEmail: account?.billingEmail ?? null,
@@ -204,8 +227,7 @@ export const listAllCertificates = serverQuery({
                     documentUrl: cert.documentStorageId
                         ? await ctx.storage.getUrl(cert.documentStorageId)
                         : null,
-                    // Approved here but never written to Shopify: the customer
-                    // believes they are exempt and checkout still charges tax.
+                    // Missing receipt is unconfirmed, not proof that Shopify did not write.
                     awaitingShopifySync: cert.status === "approved" && !cert.shopifySyncedAt,
                     // Past its expiry but not yet swept — Shopify may still be
                     // exempting this account.
@@ -244,6 +266,9 @@ export const approveResaleCertificate = mutation({
         if (!cert) throw new Error("certificate_not_found");
         if (cert.status !== "pending") throw new Error("certificate_not_pending");
 
+        await requireVerifiedDocument(ctx, cert.documentStorageId, cert.clerkOrgId);
+        await requireNoSyncInProgress(ctx, cert.clerkOrgId);
+
         if (args.expiresAt !== undefined && args.expiresAt <= Date.now()) {
             throw new Error("expiry_must_be_in_the_future");
         }
@@ -272,6 +297,8 @@ export const approveResaleCertificate = mutation({
             reviewNote: args.reviewNote,
             expiresAt: args.expiresAt,
         });
+
+        await enqueueCertificateEvent(ctx, cert._id, "approved");
 
         // Deliberately does NOT set shopifyExemptionCode — the exemption is not
         // real until it is written onto the Shopify customer.
@@ -307,6 +334,7 @@ export const rejectResaleCertificate = mutation({
             reviewNote,
         });
 
+        await enqueueCertificateEvent(ctx, cert._id, "rejected");
         return { certificateId: cert._id };
     },
 });
@@ -328,13 +356,16 @@ export const markCertificateSyncedToShopify = mutation({
 
         const cert = await ctx.db.get(args.certificateId);
         if (!cert) throw new Error("certificate_not_found");
-        if (cert.status !== "approved") throw new Error("certificate_not_approved");
+        if (cert.status !== "approved" || (cert.expiresAt !== undefined && cert.expiresAt <= Date.now())) throw new Error("certificate_not_approved");
+        await requireVerifiedDocument(ctx, cert.documentStorageId, cert.clerkOrgId);
+        await requireNoSyncInProgress(ctx, cert.clerkOrgId);
 
         await ctx.db.patch(cert._id, {
             shopifyExemptionCode: args.shopifyExemptionCode,
             shopifySyncedAt: Date.now(),
         });
 
+        await enqueueCertificateEvent(ctx, cert._id, "synced");
         return { certificateId: cert._id };
     },
 });
@@ -367,6 +398,7 @@ export const expireLapsedCertificates = mutation({
         for (const cert of approved) {
             if (cert.expiresAt === undefined || cert.expiresAt > now) continue;
 
+            await requireNoSyncInProgress(ctx, cert.clerkOrgId);
             await ctx.db.patch(cert._id, { status: "expired" });
             expired.push({
                 certificateId: cert._id,

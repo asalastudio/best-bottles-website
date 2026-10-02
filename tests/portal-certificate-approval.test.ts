@@ -59,6 +59,9 @@ const {
     approveCertificateAsStaff,
     listPendingCertificatesForStaff,
     submitResaleCertificateForViewer,
+    generateCertificateUploadUrlForViewer,
+    validateUploadedCertificateForViewer,
+    retryCertificateSyncAsStaff,
 } = await import("../src/lib/portal/certificates");
 
 const STAFF = { id: "user_staff", publicMetadata: {}, emails: ["staff@nematinternational.com"] };
@@ -101,82 +104,13 @@ describe("staff gate", () => {
 
 // ─── Happy path ─────────────────────────────────────────────────────────────
 
-describe("approveCertificateAsStaff", () => {
-    it("writes the state's exemption code and records the sync", async () => {
+describe("approval activation boundary", () => {
+    it("saves the reviewer decision but does not write Shopify while activation is held", async () => {
         const result = await approveCertificateAsStaff({ certificateId: "cert_1" });
-
-        expect(result.exemptionLive).toBe(true);
-        expect(result.shopifyExemptionCode).toBe("US_CA_RESELLER_EXEMPTION");
-
-        expect(setShopifyCustomerTaxExempt).toHaveBeenCalledWith(
-            "gid://shopify/Customer/99",
-            true,
-            ["US_CA_RESELLER_EXEMPTION"],
-        );
-
-        // markCertificateSyncedToShopify runs only after the Shopify write.
-        const synced = convexMutation.mock.calls.find(
-            ([, args]) => (args as { shopifyExemptionCode?: string }).shopifyExemptionCode,
-        );
-        expect(synced).toBeDefined();
-    });
-
-    it("never seeds the customer with the reviewing employee's email", async () => {
-        await approveCertificateAsStaff({ certificateId: "cert_1" });
-        // Called with the org alone — no fallbackEmail from the staff session.
-        expect(ensureShopifyCustomerForOrg).toHaveBeenCalledWith("org_1");
-    });
-});
-
-// ─── Approved, but not exempt ───────────────────────────────────────────────
-
-describe("approval without a live exemption", () => {
-    it("reports scope failure instead of claiming tax is handled", async () => {
-        ensureShopifyCustomerForOrg.mockResolvedValue({
-            status: "unavailable",
-            reason: "shopify_scope_missing",
-            detail: "needs write_customers",
-        });
-
-        const result = await approveCertificateAsStaff({ certificateId: "cert_1" });
-
-        expect(result.approved).toBe(true);
-        expect(result.exemptionLive).toBe(false);
-        expect(result.syncBlockedReason).toBe("shopify_scope_missing");
+        expect(result).toMatchObject({ approved: true, exemptionLive: false, syncBlockedReason: "activation_required" });
         expect(setShopifyCustomerTaxExempt).not.toHaveBeenCalled();
-    });
-
-    it("reports a missing billing email", async () => {
-        ensureShopifyCustomerForOrg.mockResolvedValue({
-            status: "unavailable",
-            reason: "no_billing_email",
-        });
-
-        const result = await approveCertificateAsStaff({ certificateId: "cert_1" });
-        expect(result.exemptionLive).toBe(false);
-        expect(result.syncBlockedReason).toBe("no_billing_email");
-    });
-
-    it("does not record a sync when the Shopify write throws", async () => {
-        setShopifyCustomerTaxExempt.mockRejectedValue(new Error("Shopify GQL: boom"));
-
-        const result = await approveCertificateAsStaff({ certificateId: "cert_1" });
-
-        expect(result.exemptionLive).toBe(false);
-        expect(result.syncBlockedReason).toBe("shopify_write_failed");
-
-        const synced = convexMutation.mock.calls.find(
-            ([, args]) => (args as { shopifyExemptionCode?: string }).shopifyExemptionCode,
-        );
-        expect(synced).toBeUndefined();
-    });
-
-    it("keeps the Convex approval even when the sync fails", async () => {
-        setShopifyCustomerTaxExempt.mockRejectedValue(new Error("boom"));
-        const result = await approveCertificateAsStaff({ certificateId: "cert_1" });
-        // The employee's decision is a real fact; the account is simply still
-        // taxed until the sync is retried.
-        expect(result.approved).toBe(true);
+        expect(ensureShopifyCustomerForOrg).not.toHaveBeenCalled();
+        expect(convexMutation).toHaveBeenCalledTimes(1);
     });
 });
 
@@ -196,6 +130,13 @@ describe("submitResaleCertificateForViewer", () => {
         expect(convexMutation).not.toHaveBeenCalled();
     });
 
+    it("forwards the declaration with server-derived ownership and no staff expiry", async () => {
+        await submitResaleCertificateForViewer({ legalBusinessName: "Fixture", issuingState: "CA", permitNumber: "TEST", customerDeclaredExpiration: { kind: "date", date: "2028-02-29" } });
+        const args = convexMutation.mock.calls[0][1];
+        expect(args).toMatchObject({ clerkOrgId: "org_1", clerkUserId: "user_buyer", writeToken: "test-token", customerDeclaredExpiration: { kind: "date", date: "2028-02-29" } });
+        expect(args).not.toHaveProperty("expiresAt");
+    });
+
     it("accepts a supported state", async () => {
         convexMutation.mockResolvedValue({ certificateId: "cert_2" });
         const result = await submitResaleCertificateForViewer({
@@ -204,5 +145,34 @@ describe("submitResaleCertificateForViewer", () => {
             permitNumber: "1234",
         });
         expect(result.certificateId).toBe("cert_2");
+    });
+});
+
+
+describe("document and retry authorization", () => {
+    it("issues an upload ticket only after Clerk-derived customer scope", async () => {
+        const previous = process.env.NEXT_PUBLIC_CONVEX_URL;
+        process.env.NEXT_PUBLIC_CONVEX_URL = "https://synthetic.convex.cloud";
+        try {
+            convexMutation.mockResolvedValue("document_fixture");
+            const result = await generateCertificateUploadUrlForViewer();
+            expect(result.url).toBe("https://synthetic.convex.site/certificate-upload");
+            expect(result.ticket).toMatch(/^[a-f0-9]{64}$/);
+            expect(convexMutation.mock.calls[0][1]).toMatchObject({ clerkOrgId: "org_1", clerkUserId: "user_buyer", writeToken: "test-token" });
+            expect(JSON.stringify(convexMutation.mock.calls[0][1])).not.toContain(result.ticket);
+        } finally { if (previous === undefined) delete process.env.NEXT_PUBLIC_CONVEX_URL; else process.env.NEXT_PUBLIC_CONVEX_URL = previous; }
+    });
+    it("denies a foreign document before fetching any bytes", async () => {
+        convexQuery.mockRejectedValue(new Error("document_not_available"));
+        const fetch = vi.spyOn(globalThis, "fetch");
+        await expect(validateUploadedCertificateForViewer("foreign_document")).rejects.toThrow(/document_not_available/);
+        expect(convexQuery.mock.calls.at(-1)?.[1]).toMatchObject({ documentId: "foreign_document", clerkOrgId: "org_1", clerkUserId: "user_buyer" });
+        expect(fetch).not.toHaveBeenCalled(); fetch.mockRestore();
+    });
+    it("denies customer review retry at the staff gate", async () => {
+        hasTeamHubAccess.mockReturnValue(false);
+        await expect(retryCertificateSyncAsStaff("cert_1")).rejects.toThrow(/staff_access_required/);
+        expect(setShopifyCustomerTaxExempt).not.toHaveBeenCalled();
+        expect(convexMutation).not.toHaveBeenCalled();
     });
 });

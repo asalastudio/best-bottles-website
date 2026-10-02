@@ -1,3 +1,4 @@
+import CertificateStatusRefresh from "@/components/portal/CertificateStatusRefresh";
 export const dynamic = "force-dynamic";
 import Link from "next/link";
 import { PageHeader, PortalTag } from "@/components/portal/ui";
@@ -21,6 +22,7 @@ export default async function PortalAccount() {
 
     return (
         <div className="mx-auto max-w-[1200px] px-4 py-4 lg:px-6 lg:py-6">
+            <CertificateStatusRefresh />
             <PageHeader eyebrow="Account" title="Account & Pricing" />
 
             {account ? (
@@ -30,7 +32,7 @@ export default async function PortalAccount() {
                             <h2 className="font-sans text-[14px] font-semibold text-neutral-900">Account Details</h2>
                             <div className="flex items-center gap-2">
                                 <PortalTag variant={account.taxExempt ? "green" : "muted"}>
-                                    {account.taxExempt ? "Tax Exempt" : "Taxable"}
+                                    {account.certificateTaxStatus === "review_required" ? "Checkout status needs review" : account.certificateTaxStatus === "sync_pending" ? "Approved · sync pending" : account.certificateTaxStatus === "under_review" ? "Under review" : account.taxExempt ? "Tax Exempt" : "Taxable"}
                                 </PortalTag>
                             </div>
                         </div>

@@ -25,7 +25,12 @@ beforeEach(() => {
     process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN = WRITE_TOKEN;
 });
 
-function submit(t: ReturnType<typeof convexTest>, overrides: Record<string, unknown> = {}) {
+async function submit(t: ReturnType<typeof convexTest>, overrides: Record<string, unknown> = {}) {
+    const storageId = await t.run(async ctx => {
+        const storageId = await ctx.storage.store(new Blob(["synthetic-document"], { type: "application/pdf" }));
+        await ctx.db.insert("certificateDocuments", { clerkOrgId: ORG, clerkUserId: USER, ticketHash: "fixture", expiresAt: Date.now() + 60_000, storageId, status: "verified", contentType: "application/pdf", size: 18, verifiedAt: Date.now() });
+        return storageId;
+    });
     return t.mutation(api.resaleCertificates.submitResaleCertificate, {
         writeToken: WRITE_TOKEN,
         clerkOrgId: ORG,
@@ -33,6 +38,7 @@ function submit(t: ReturnType<typeof convexTest>, overrides: Record<string, unkn
         legalBusinessName: "Lumière Atelier LLC",
         issuingState: "CA",
         permitNumber: "123-456789",
+        documentStorageId: storageId,
         ...overrides,
     });
 }
