@@ -4,7 +4,7 @@ import { createResilientConvexHttpClient } from "@/lib/convexServerClient";
 import { resolveSearchCatalogParameters } from "@/lib/graceToolParamUtils";
 import { enrichSearchCatalogWithJev } from "@/lib/grace/enrichSearchCatalogWithJev";
 import { applyRefineFacets, describeRefineFacets } from "@/lib/grace/refineFacetMatch";
-import { annotateGraceSearchRows, buildGraceSearchTiles, type GraceTileImageSources } from "@/lib/grace/searchTiles";
+import { annotateGraceSearchRows, buildGraceSearchTiles, graceVerifiedProductHref, type GraceTileImageSources } from "@/lib/grace/searchTiles";
 import { getCatalogHero } from "@/lib/products/catalog-heroes";
 import { hasCatalogSourceHold, isHiddenCatalogGroup } from "@/lib/products/catalog-listing-visibility";
 
@@ -233,7 +233,7 @@ export async function executeGraceServerTool({
                 }
                 const returnRaw = wantsRawSearchCatalogResult(parameters);
                 const refineState = parameters.refineState as GraceRefineState | undefined;
-                if (returnRaw && refineState?.filters && refineState.sort && refineState.view) {
+                if (returnRaw && parameters.verifyRefinements === true && refineState?.filters && refineState.sort && refineState.view) {
                     // setCatalogRefinements verifies a filter combination against
                     // the storefront's own search: the visible catalogue is the
                     // authority for what a Refine change will show.
@@ -256,7 +256,7 @@ export async function executeGraceServerTool({
                     const data = await convex.query(api.grace.searchCatalog, params);
                     const visible = Array.isArray(data) ? data.filter(isCustomerVisibleRow) : data;
                     const facets = Array.isArray(visible) ? applyRefineFacets(visible, refineState?.filters ?? null) : null;
-                    const rows = facets && facets.rows.length > 0 ? facets.rows : (Array.isArray(visible) ? visible : []);
+                    const rows = facets ? facets.rows : (Array.isArray(visible) ? visible : []);
                     return { data, visible, facets, rows };
                 };
                 let effectiveParams = searchParams;
@@ -298,7 +298,7 @@ export async function executeGraceServerTool({
                         break;
                     }
                     result = noMatchGraceToolResult({
-                        message: `No verified exact match found for "${effectiveParams.searchTerm}". Do not name or recommend a specific product from memory. You may try ONE broader or reworded search. If a second search for this same request also returns no match, STOP searching — tell the customer plainly that we do not carry it, name the closest real alternatives you have already seen, and ask one narrowing question. Never issue a third reworded search for the same request.${emptySearchCatalogHint(effectiveParams.searchTerm)}`,
+                        message: `No verified exact match found for "${effectiveParams.searchTerm}". Do not name or recommend a specific product from memory. You may try ONE broader or reworded search. If a second search for this same request also returns no match, STOP searching — say you could not verify a match within the requested criteria, and ask one narrowing question. An empty or filtered search is not proof that a product is unavailable. Never issue a third reworded search for the same request.${emptySearchCatalogHint(effectiveParams.searchTerm)}`,
                         requested: {
                             searchTerm: effectiveParams.searchTerm,
                             familyLimit: effectiveParams.familyLimit,
@@ -523,6 +523,7 @@ export async function executeGraceServerTool({
                         stockStatus: data.stockStatus,
                         // PDP slug so Grace can navigate straight to this product.
                         slug: found?.slug ?? null,
+                        verifiedPdpHref: graceVerifiedProductHref({ ...data, slug: found?.slug }),
                         // Hero image from product group (catalog renders this);
                         // fall back to per-product imageUrl when group hero missing.
                         heroImageUrl: data.imageUrl ?? null,

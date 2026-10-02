@@ -1,9 +1,12 @@
 import {
     EMPTY_FILTERS,
     canonicalGlassColor,
+    detectCatalogFamily,
+    detectCanonicalGlassColor,
     filtersToParams,
     normalizeApplicatorBuckets,
     normalizeCapacityFilterValue,
+    resolveCapacityRange,
     paramsToFilters,
     type CatalogFilters,
     type SortValue,
@@ -18,7 +21,7 @@ import {
 function canonicalizeProposal(proposal: GraceRefinementProposal): GraceRefinementProposal {
     const out: GraceRefinementProposal = { ...proposal };
     if (Array.isArray(proposal.capacities)) {
-        out.capacities = Array.from(new Set(proposal.capacities.map((value) => normalizeCapacityFilterValue(String(value)))));
+        out.capacities = Array.from(new Set(proposal.capacities.map((value) => resolveCapacityRange(String(value))?.value ?? normalizeCapacityFilterValue(String(value)))));
     }
     if (Array.isArray(proposal.colors)) {
         out.colors = Array.from(new Set(
@@ -183,4 +186,28 @@ export function formatGraceRefineState(state: GraceRefineState): string {
     lines.push(`Sort: ${state.sort} | View: ${state.view}`);
     lines.push("Do not remove or replace an active constraint unless the customer explicitly asks to broaden that dimension.");
     return lines.join("\n");
+}
+
+/** Preserve active facets when showProducts builds a catalogue destination from its rows. */
+export function inheritGraceRefineDestination(href: string, current: GraceRefineState | null | undefined): string {
+    if (!current) return href;
+    const proposed = getGraceRefineState(new URL(href, "https://catalog.invalid").searchParams);
+    return graceRefineDestination(applyGraceRefinementRequest(current, proposed.filters, ""));
+}
+
+/** Explicit query dimensions replace that dimension while preserving all others. */
+export function graceSearchRefineState(current: GraceRefineState, query: string, family?: string): GraceRefineState {
+    const next = applyGraceRefinementRequest(current, { search: query }, query);
+    const namedFamily = family ?? detectCatalogFamily(query);
+    const color = detectCanonicalGlassColor(query);
+    const capacity = query.match(/\b(\d+(?:\.\d+)?)\s*ml\b/i);
+    const neck = query.match(/\b\d{1,2}-\d{3}\b/);
+    const material = query.match(/\b(metal|plastic)\s+(?:roller|roll-on|roll on)\b/i);
+    if (namedFamily) next.filters.families = [namedFamily];
+    if (color) next.filters.colors = [color];
+    if (capacity) next.filters.capacities = [`${Number(capacity[1])} ml`];
+    if (neck) next.filters.neckThreadSizes = [neck[0]];
+    if (material) next.filters.rollerMaterials = [material[1].toLowerCase() as "metal" | "plastic"];
+    if (/\b(?:roller|roll-on|roll on)\b/i.test(query)) next.filters.applicators = ["rollon"];
+    return next;
 }

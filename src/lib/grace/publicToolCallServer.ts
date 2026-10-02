@@ -202,7 +202,10 @@ export function parsePublicGraceToolCall(body: unknown): PublicGraceToolCall {
         return { authorizationName, authorizationParameters, gatewayName: name, gatewayParameters, refineState };
     }
     if (authorizationName === "searchCatalog") {
-        const { returnRaw, refineState: rawRefineState, ...declared } = parameters;
+        const { returnRaw, verifyRefinements, refineState: rawRefineState, ...declared } = parameters;
+        if (verifyRefinements !== undefined && typeof verifyRefinements !== "boolean") {
+            throw new Error("Invalid parameters for public Grace tool searchCatalog: verifyRefinements must be boolean");
+        }
         if (returnRaw !== undefined && typeof returnRaw !== "boolean") {
             throw new Error("Invalid parameters for public Grace tool searchCatalog: returnRaw must be boolean");
         }
@@ -214,6 +217,7 @@ export function parsePublicGraceToolCall(body: unknown): PublicGraceToolCall {
         gatewayParameters = {
             ...authorizationParameters,
             ...(returnRaw === undefined ? {} : { returnRaw }),
+            ...(verifyRefinements === undefined ? {} : { verifyRefinements }),
             ...(refineState ? { refineState } : {}),
         };
     } else {
