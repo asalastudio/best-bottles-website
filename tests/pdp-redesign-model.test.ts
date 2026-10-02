@@ -112,14 +112,40 @@ describe("picks", () => {
         expect(slugifyPick("Black & Gold Stripe")).toBe("black-and-gold-stripe");
     });
 
-    it("lists the glass options this group first", () => {
+    it("lists the glass options in one fixed order, marking this group's own", () => {
         const glasses = glassOptions(GROUP, [
             { slug: "cylinder-9ml-clear-17-415-rollon", color: "Clear", displayName: "Cylinder 9ml Clear" },
             { slug: "cylinder-9ml-blue-17-415-rollon", color: "Blue", displayName: "duplicate blue" },
         ]);
-        expect(glasses.map((glass) => glass.label)).toEqual(["Cobalt Blue", "Clear"]);
-        expect(glasses[0].active).toBe(true);
-        expect(glasses[0].shortLabel).toBe("Cobalt");
+        expect(glasses.map((glass) => glass.label)).toEqual(["Clear", "Cobalt Blue"]);
+        expect(glasses.map((glass) => glass.active)).toEqual([false, true]);
+        expect(glasses[1].shortLabel).toBe("Cobalt");
+    });
+
+    it("keeps the same order and slugs whichever glass the page is on, so picking one never reshuffles the row", () => {
+        const clear = { slug: "cylinder-5ml-clear-13-415", color: "Clear", primaryWebsiteSku: "a", primaryGraceSku: "a" };
+        const cobalt = { slug: "cylinder-5ml-cobalt-blue-13-415", color: "Cobalt Blue", primaryWebsiteSku: "b", primaryGraceSku: "b" };
+        const amber = { slug: "cylinder-5ml-amber-13-415", color: "Amber", primaryWebsiteSku: "c", primaryGraceSku: "c" };
+        const on = (page: typeof clear, others: (typeof clear)[]) => glassOptions(page, others.map((g) => ({ ...g, displayName: g.slug })));
+        const fromClear = on(clear, [cobalt, amber]);
+        const fromCobalt = on(cobalt, [amber, clear]);
+        const fromAmber = on(amber, [cobalt, clear]);
+        const order = fromClear.map((glass) => glass.slug);
+        expect(order).toEqual([clear.slug, amber.slug, cobalt.slug]);
+        expect(fromCobalt.map((glass) => glass.slug)).toEqual(order);
+        expect(fromAmber.map((glass) => glass.slug)).toEqual(order);
+        expect(fromCobalt.find((glass) => glass.active)?.slug).toBe(cobalt.slug);
+    });
+
+    it("puts a glass the catalogue does not know after the known ones, by name", () => {
+        const glasses = glassOptions(
+            { slug: "x-plum", color: "Plum", primaryWebsiteSku: null, primaryGraceSku: null },
+            [
+                { slug: "x-clear", color: "Clear", displayName: "c" },
+                { slug: "x-mauve", color: "Mauve", displayName: "m" },
+            ],
+        );
+        expect(glasses.map((glass) => glass.label)).toEqual(["Clear", "Mauve", "Plum"]);
     });
 });
 
