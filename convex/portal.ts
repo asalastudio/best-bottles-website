@@ -2,7 +2,7 @@ import { mutation } from "./_generated/server";
 import { v } from "convex/values";
 import type { Doc } from "./_generated/dataModel";
 import { serverQuery, verifyWriteToken } from "./portalAuth";
-import { orderStatusFromEvidence } from "./lib/shopifyOrderTruth";
+import { orderStatusFromEvidence, sameSourceValue } from "./lib/shopifyOrderTruth";
 import { captureServerEvent, distinctIdFor } from "./posthog";
 
 function visibleOrderStatus(order: Doc<"portalOrders">) {
@@ -359,6 +359,7 @@ export const listOrdersByOrg = serverQuery({
             source: order.source ?? null,
             sourceUpdatedAt: order.sourceUpdatedAt ?? null,
             shipmentSnapshotComplete: order.shipmentSnapshotComplete ?? false,
+            sourceConflict: Boolean(order.orderSourceConflict || order.shipments?.some((s) => s.sourceConflict)),
             syncedAt: order.source === "shopify" ? order.updatedAt ?? null : null,
             shopifyFulfillmentStatus: order.shopifyFulfillmentStatus ?? null,
             shipments: order.shipments ?? [],
@@ -394,6 +395,7 @@ export const getOrderForOrg = serverQuery({
             lineItems: order.lineItems,
             sourceUpdatedAt: order.sourceUpdatedAt ?? null,
             shipmentSnapshotComplete: order.shipmentSnapshotComplete ?? false,
+            sourceConflict: Boolean(order.orderSourceConflict || order.shipments?.some((s) => s.sourceConflict)),
             syncedAt: order.source === "shopify" ? order.updatedAt ?? null : null,
             shopifyFulfillmentStatus: order.shopifyFulfillmentStatus ?? null,
             shipments: order.shipments ?? [],
@@ -736,6 +738,20 @@ export const upsertOrderFromShopify = mutation({
         }
         const replaceOrder = !existing || existing.sourceUpdatedAt === undefined
             || args.sourceUpdatedAt > existing.sourceUpdatedAt;
+        const sameOrderVersion = args.sourceUpdatedAt === existing?.sourceUpdatedAt;
+        const orderSourceConflict = replaceOrder ? false : Boolean(existing?.orderSourceConflict)
+            || (sameOrderVersion && !sameSourceValue({
+                orderId: existing!.orderId, orderDate: existing!.orderDate, lineItems: existing!.lineItems,
+                totalAmount: existing!.totalAmount, shipTo: existing!.shipTo,
+                shopifyFulfillmentStatus: existing!.shopifyFulfillmentStatus,
+                shopifyCancelledAt: existing!.shopifyCancelledAt,
+            }, {
+                orderId: args.orderName, orderDate: args.orderDate, lineItems: args.lineItems,
+                totalAmount: args.totalAmount, shipTo: args.shipTo,
+                shopifyFulfillmentStatus: args.shopifyFulfillmentStatus,
+                shopifyCancelledAt: args.shopifyCancelledAt,
+            }));
+        const orderConflictChanged = orderSourceConflict !== (existing?.orderSourceConflict ?? false);
         const shipments = [...(existing?.shipments ?? [])];
         let shipmentsChanged = false;
         for (const incoming of args.shipments ?? []) {
@@ -743,13 +759,24 @@ export const upsertOrderFromShopify = mutation({
                 || !Number.isFinite(incoming.sourceUpdatedAt)) continue;
             const index = shipments.findIndex((s) => s.shopifyFulfillmentId === incoming.shopifyFulfillmentId);
             const previous = shipments[index];
-            if (previous?.sourceUpdatedAt !== undefined && incoming.sourceUpdatedAt <= previous.sourceUpdatedAt) continue;
+            if (previous?.sourceUpdatedAt !== undefined && incoming.sourceUpdatedAt <= previous.sourceUpdatedAt) {
+                // A collision is ambiguous, not a duplicate. Preserve source
+                // values and mark uncertainty exactly once; never choose the
+                // last-arriving same-version payload as authority.
+                const previousSource = { ...previous, sourceConflict: undefined };
+                if (incoming.sourceUpdatedAt === previous.sourceUpdatedAt && !previous.sourceConflict
+                    && !sameSourceValue(previousSource, incoming)) {
+                    shipments[index] = { ...previous, sourceConflict: true };
+                    shipmentsChanged = true;
+                }
+                continue;
+            }
             // An old order snapshot cannot resurrect a previously unseen old fulfillment.
             if (index < 0 && existing?.sourceUpdatedAt !== undefined
                 && args.sourceUpdatedAt < existing.sourceUpdatedAt
                 && incoming.sourceUpdatedAt <= existing.sourceUpdatedAt) continue;
             if (index < 0) shipments.push(incoming);
-            else shipments[index] = incoming;
+            else shipments[index] = incoming; // A strictly newer entity clears its conflict.
             shipmentsChanged = true;
         }
         // Missing/empty fulfillment arrays must not prove that the saved
@@ -757,11 +784,10 @@ export const upsertOrderFromShopify = mutation({
         const incomingComplete = args.shipments !== undefined
             && (args.shipments.length > 0 || shipments.length === 0)
             && args.shipments.every((s) => s.shopifyFulfillmentId && s.sourceUpdatedAt !== undefined && Number.isFinite(s.sourceUpdatedAt));
-        const sameOrderVersion = args.sourceUpdatedAt === existing?.sourceUpdatedAt;
         const shipmentSnapshotComplete = replaceOrder ? incomingComplete
             : existing?.shipmentSnapshotComplete === true || (sameOrderVersion && incomingComplete);
         const completenessChanged = shipmentSnapshotComplete !== (existing?.shipmentSnapshotComplete ?? false);
-        if (existing && !replaceOrder && !shipmentsChanged && !completenessChanged) {
+        if (existing && !replaceOrder && !shipmentsChanged && !completenessChanged && !orderConflictChanged) {
             return { skipped: "stale_or_duplicate" as const, orderId: existing._id };
         }
         const fulfillmentStatus = replaceOrder ? args.shopifyFulfillmentStatus : existing?.shopifyFulfillmentStatus;
@@ -783,15 +809,18 @@ export const upsertOrderFromShopify = mutation({
                 clerkOrgId: existing!.clerkOrgId, orderId: existing!.orderId,
                 lineItems: existing!.lineItems, orderDate: existing!.orderDate,
             }),
-            status: orderStatusFromEvidence(Boolean(cancelledAt), fulfillmentStatus, shipments.map((s) => s.sourceUpdatedAt === undefined ? {} : s), shipmentSnapshotComplete),
+            status: orderSourceConflict || (!cancelledAt && shipments.some((s) => s.sourceConflict))
+                ? "unknown" as const
+                : orderStatusFromEvidence(Boolean(cancelledAt), fulfillmentStatus, shipments.map((s) => s.sourceUpdatedAt === undefined ? {} : s), shipmentSnapshotComplete),
             shipmentSnapshotComplete,
+            orderSourceConflict,
             trackingNumber: primary?.trackingNumber,
             carrier: primary?.carrier,
             estimatedDelivery: primary?.estimatedDelivery,
             shipments,
             source: "shopify" as const,
             shopifyOrderId: args.shopifyOrderId,
-            // Time of last accepted source change, untouched by retries/replays.
+            // Last accepted source evidence/conflict; exact retries do not refresh it.
             updatedAt: Date.now(),
         };
         if (existing) {

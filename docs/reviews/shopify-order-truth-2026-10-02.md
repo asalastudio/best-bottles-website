@@ -24,7 +24,8 @@ Scope: order/fulfillment normalization, persisted snapshot ordering, existing po
 - Missing or invalid source timestamps fail closed. Signed webhook requests return 500 so Shopify can retry; direct legacy mutation callers without a source version are skipped. New timestamps are never inferred from receipt time.
 - Fulfillment events fetch their parent order. If the fetched fulfillment is missing or older than the triggering event, the request returns 500 without writing rather than acknowledging an update that was not observed.
 - Missing shipment arrays do not delete saved tracking. A newer order snapshot without shipment coverage cannot reuse an older delivered box as evidence that a newly fulfilled remainder arrived. A complete snapshot at the same parent version can restore the completeness flag.
-- Equal-version conflicting data is conservatively ignored. This is resource-version idempotency, not an event-log/dedup table. No new persistent access or permission was added.
+- Equal-version contradictions preserve stored values and set `orderSourceConflict` or shipment `sourceConflict`. List/detail expose combined `sourceConflict`, and the aggregate becomes unknown (a non-conflicting parent cancellation still wins over carrier ambiguity). The first contradiction records its receipt; repeated contradictions and exact duplicates make no further write. Only a strictly newer version clears that entity's conflict. Same-version authority resolution remains an explicit follow-up; a backfill cannot silently overwrite it. No new access or permission was added.
+- Cancelled fulfillments are not proof that their ordered items were refunded, removed, or delivered in replacement boxes. Without item-level resolution evidence they block whole-order delivered, even when remaining active boxes are delivered and the saved parent still says fulfilled.
 
 ## Acceptance coverage (fixtures only)
 
@@ -32,7 +33,7 @@ Scope: order/fulfillment normalization, persisted snapshot ordering, existing po
 - Full delivered, mixed delivery, failures, attempted delivery, pickup/confirmation ambiguity, cancelled fulfillments and new provider strings.
 - Multiple tracking tuples, unequal/empty plural fields, singular fallback, per-package carriers and GraphQL tuple preservation.
 - ID upsert, account-owner lookup, guest/retail skips, write-token rejection and QuickBooks protection.
-- Duplicates, equal-version conflicts and old replays leave source fields, prices, shipment evidence and local freshness unchanged.
+- Exact duplicates and old replays leave source fields, prices, shipment evidence and local freshness unchanged. Same-version contradictions retain those source values, flag uncertainty once and remain idempotent on repeated collision delivery.
 - Newer fulfillment with unchanged/older parent version; newer parent with older fulfillment evidence; parent cancellation survives carrier updates; omitted shipments preserve tracking.
 - Legacy row uncertainty; full list/detail package projection; snapshot completeness recovery after omitted remainder evidence.
 - Signed webhook ingress, rejected HMAC before any I/O, missing timestamp rejection and lagging-read retry.
@@ -41,12 +42,12 @@ Scope: order/fulfillment normalization, persisted snapshot ordering, existing po
 
 ## Verification
 
-- Focused tests: 58 passed across order sync, tracking, snapshot adapter, signed webhook route and rendered detail.
-- Final full suite (`vitest run --maxWorkers=4`): **312 passed files / 2 skipped; 2,873 passed tests / 7 skipped**, exit 0. An earlier unrestricted run had one unrelated preview-build fixture timeout under concurrent machine load; its isolated retest and the final complete run passed.
+- Focused tests after review remediation: 62 passed across order sync, tracking, snapshot adapter, signed webhook route and rendered detail.
+- Final full suite (`vitest run --maxWorkers=4`): **312 passed files / 2 skipped; 2,877 passed tests / 7 skipped**, exit 0. An earlier unrestricted run had one unrelated preview-build fixture timeout under concurrent machine load; its isolated retest and the final complete run passed.
 - TypeScript: passed in `/tmp/bb-order-truth-verify` against copied source and this repository's installed dependencies, with `--noEmit --typeRoots ./node_modules/@types`. Typechecking in the Documents worktree stalled reading an unrelated ancestor `Documents/node_modules/@types/prop-types/package.json`; those stalled processes were stopped. An empty log was not counted as a pass.
 - Full ESLint: zero errors, 87 existing warnings. Changed TypeScript files lint clean.
 - Shopify GraphQL operation validated successfully with the connected schema validator and locally against bundled schema `2025-10`. The repository still requests API version `2025-01`; updating that shared API pin is outside this change. No live order query was executed to establish the effective runtime version.
-- Production build (`npm run build -- --webpack`): **passed**, exit 0, including TypeScript, 61 static pages and sitemap generation, in the isolated verification directory. CI placeholder config used; no customer credentials copied into this worktree. The original attempt compiled but hit a redundant-checkout disk/cache limit and the ancestor type-resolution stall. Redundant content-addressed Git copies were removed, source stayed intact, and the successful build was rerun in isolation. Placeholder-generated sitemap changes were restored before handoff.
+- Local production build before independent-review remediation (`41ce8c24`, `npm run build -- --webpack`): **passed**, exit 0, including TypeScript, 61 static pages and sitemap generation, in the isolated verification directory. Final remediated-head remote build/preview status is tracked on the PR. CI placeholder config used; no customer credentials copied into this worktree. The original attempt compiled but hit a redundant-checkout disk/cache limit and the ancestor type-resolution stall. Redundant content-addressed Git copies were removed, source stayed intact, and the successful build was rerun in isolation. Placeholder-generated sitemap changes were restored before handoff.
 
 ## Runtime evidence and remaining limits
 
@@ -56,7 +57,17 @@ This work proves defects in current main and fixes exercised by local fixtures. 
 2. No scheduled order reconciliation was found in `convex/crons.ts`. Webhook registration, delivery health, missing historical orders and legacy rows need separate read-only production assessment and an approved reconciliation/backfill plan. Timestamp guards cannot recover an event never received.
 3. `listOrdersByOrg` and other existing portal reads still collect an organization's orders without pagination. Very large histories remain a scalability gap; no cross-account access pattern was changed.
 4. Source freshness is available, but no freshness SLA or “currently live” claim is established. Grace should state the saved source update time, preserve uncertainty, and not invent carrier events, delivery dates or per-package item allocations.
-5. Schema changes are additive optional metadata and widened order status literals. They have not been applied to a runtime deployment. Backend/schema and frontend rollout must be coordinated later; older order writers without source versions will be rejected/skipped after rollout.
-6. Account provisioning and address mapping are owned by task `01a0fa06-ded6-741b-beb2-d50b3ac3d057`; certificate/security workflow by `01a0fa0a-37dc-77ee-aec1-05a84d58a068`. Overlapping order-only sections and the `portalOrders` schema block were reported before editing.
+5. Orders received before account linkage are acknowledged with `no_portal_account`; linking later does not replay them. Historical visibility and the existing Shopify API scopes have not been verified in production. Same-version conflicts remain unknown pending newer source evidence or a separately reviewed authoritative-repair path.
+6. Schema changes are additive optional metadata and widened order status literals. They have not been applied to a runtime deployment. Backend/schema and frontend rollout must be coordinated later; older order writers without source versions will be rejected/skipped after rollout.
+7. Account provisioning and address mapping are owned by task `01a0fa06-ded6-741b-beb2-d50b3ac3d057`; certificate/security workflow by `01a0fa0a-37dc-77ee-aec1-05a84d58a068`. Overlapping order-only sections and the `portalOrders` schema block were reported before editing.
 
 Provider references: [webhook ordering and reconciliation](https://shopify.dev/docs/apps/build/webhooks#ordering-event-data), [fulfillment shipment/status/tracking semantics](https://shopify.dev/docs/api/admin-rest/latest/resources/fulfillment), [GraphQL fulfillment fields](https://shopify.dev/docs/api/admin-graphql/latest/objects/Fulfillment), [display-status vocabulary](https://shopify.dev/docs/api/admin-graphql/latest/enums/FulfillmentDisplayStatus).
+
+
+## Independent-review remediation
+
+The reviewer reproduced parent order v100 / fulfilled with f1 delivered and f2 in transit, followed by an older parent v90 carrying f2 cancellation v200. The initial aggregate excluded f2 and incorrectly returned delivered. A regression failed on the prior head and now requires unknown; a newer parent fulfilled flag alone cannot resolve the cancelled item's quantities.
+
+The reviewer also identified a same-version carrier correction (in transit v100 to delivered v100). It now creates explicit uncertainty rather than silently skipping the contradictory evidence. Tests prove source values are preserved, repeated collisions do not refresh receipt time, newer parent data cannot clear a child conflict, newer child data cannot clear a parent conflict, and a strictly newer version clears only the affected entity. The portal renders the conflict message.
+
+Next-phase minimum: complete nested pagination and bounded portal history reads; audit account-linked order coverage and webhook delivery health using existing read access; prepare an incremental reconciliation dry run with overlap/watermark, explicit orphan-before-link recovery, and a reviewed policy for same-version collisions and cancelled-item replacement/refund allocations. Applying historical repairs, enabling schedules, or expanding historical-order scopes requires separate authorization. No automatic writer or same-version force override is introduced here.

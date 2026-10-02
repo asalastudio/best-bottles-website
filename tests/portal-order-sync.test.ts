@@ -166,16 +166,16 @@ const shipment = (sourceUpdatedAt: number, shipmentStatus = "delivered") => ({
 });
 
 describe("source ordering and truthful freshness", () => {
-    it("ignores duplicate/equal-version conflicts and older payloads without refreshing timestamps", async () => {
+    it("ignores exact duplicate and older payloads without refreshing timestamps", async () => {
         const t = convexTest(schema, modules);
         await seedAccount(t, SHOPIFY_CUSTOMER);
-        await order(t, { sourceUpdatedAt: 200, shopifyFulfillmentStatus: "fulfilled", shipments: [shipment(200)] });
+        const payload = { sourceUpdatedAt: 200, shopifyFulfillmentStatus: "fulfilled", shipments: [shipment(200)] };
+        await order(t, payload);
         const before = await saved(t);
-        for (const sourceUpdatedAt of [200, 100, 200]) {
-            expect(await order(t, { sourceUpdatedAt, totalAmount: 999, shipments: [shipment(sourceUpdatedAt, "label_printed")] }))
-                .toMatchObject({ skipped: "stale_or_duplicate" });
-            expect(await saved(t)).toEqual(before);
-        }
+        expect(await order(t, payload)).toMatchObject({ skipped: "stale_or_duplicate" });
+        expect(await order(t, { sourceUpdatedAt: 100, totalAmount: 999, shipments: [shipment(100, "label_printed")] }))
+            .toMatchObject({ skipped: "stale_or_duplicate" });
+        expect(await saved(t)).toEqual(before);
         expect(before).toMatchObject({ status: "delivered", sourceUpdatedAt: 200, totalAmount: 320 });
         expect(before?.shipments[0].packages).toHaveLength(2);
     });
@@ -242,5 +242,56 @@ describe("complete-order delivery evidence", () => {
         // A complete snapshot at the same parent version can recover completeness.
         await order(t, { sourceUpdatedAt: 200, shopifyFulfillmentStatus: "fulfilled", shipments: [shipment(100), { ...shipment(200), shopifyFulfillmentId: "f2" }] });
         expect(await saved(t)).toMatchObject({ status: "delivered", shipmentSnapshotComplete: true });
+    });
+});
+
+it("does not turn a newer cancellation into whole-order delivery by excluding the cancelled boxes", async () => {
+    const t = convexTest(schema, modules);
+    await seedAccount(t, SHOPIFY_CUSTOMER);
+    await order(t, { shopifyFulfillmentStatus: "fulfilled", shipments: [
+        shipment(100), { ...shipment(100, "in_transit"), shopifyFulfillmentId: "f2" },
+    ] });
+    expect((await saved(t))?.status).toBe("in_transit");
+    await order(t, { sourceUpdatedAt: 90, shipments: [{ ...shipment(200, "in_transit"), shopifyFulfillmentId: "f2", fulfillmentStatus: "cancelled" }] });
+    expect(await saved(t)).toMatchObject({ status: "unknown", shopifyFulfillmentStatus: "fulfilled" });
+    // A newer parent flag alone still does not prove how the cancelled items
+    // were resolved; no delivered quantities are assigned to replacement boxes.
+    await order(t, { sourceUpdatedAt: 300, shopifyFulfillmentStatus: "fulfilled", shipments: [
+        shipment(100), { ...shipment(200, "in_transit"), shopifyFulfillmentId: "f2", fulfillmentStatus: "cancelled" },
+    ] });
+    expect((await saved(t))?.status).toBe("unknown");
+});
+
+describe("same-version source collisions", () => {
+    it("exposes conflicting carrier evidence without overwriting it and clears only on a newer fulfillment", async () => {
+        const t = convexTest(schema, modules);
+        await seedAccount(t, SHOPIFY_CUSTOMER);
+        const parent = { shopifyFulfillmentStatus: "fulfilled" };
+        await order(t, { ...parent, shipments: [shipment(100, "in_transit")] });
+        expect(await order(t, { ...parent, shipments: [shipment(100, "delivered")] })).toMatchObject({ updated: true });
+        const conflicted = await saved(t);
+        expect(conflicted).toMatchObject({ status: "unknown", sourceConflict: true, sourceUpdatedAt: 100,
+            shipments: [expect.objectContaining({ shipmentStatus: "in_transit", sourceUpdatedAt: 100, sourceConflict: true })],
+        });
+        // Retrying the contradictory snapshot (including a backfill at the same
+        // version) does not refresh receipt time or choose a winner.
+        expect(await order(t, { ...parent, shipments: [shipment(100, "delivered")] })).toMatchObject({ skipped: "stale_or_duplicate" });
+        expect(await saved(t)).toEqual(conflicted);
+        await order(t, { ...parent, sourceUpdatedAt: 200, shipments: [shipment(100, "delivered")] });
+        expect((await saved(t))?.sourceConflict).toBe(true);
+        await order(t, { ...parent, sourceUpdatedAt: 200, shipments: [shipment(201, "delivered")] });
+        expect(await saved(t)).toMatchObject({ status: "delivered", sourceConflict: false });
+    });
+
+    it("flags conflicting parent quantities/status and does not clear that conflict with a newer child", async () => {
+        const t = convexTest(schema, modules);
+        await seedAccount(t, SHOPIFY_CUSTOMER);
+        await order(t, { shopifyFulfillmentStatus: "partial", shipments: [shipment(100)] });
+        await order(t, { shopifyFulfillmentStatus: "fulfilled", totalAmount: 999, shipments: [shipment(100)] });
+        expect(await saved(t)).toMatchObject({ status: "unknown", sourceConflict: true, totalAmount: 320, shopifyFulfillmentStatus: "partial" });
+        await order(t, { shopifyFulfillmentStatus: "partial", shipments: [shipment(200)] });
+        expect((await saved(t))?.sourceConflict).toBe(true);
+        await order(t, { sourceUpdatedAt: 300, shopifyFulfillmentStatus: "fulfilled", shipments: [shipment(200)] });
+        expect(await saved(t)).toMatchObject({ status: "delivered", sourceConflict: false });
     });
 });

@@ -554,6 +554,7 @@ export default defineSchema({
         orderDate: v.number(),
         sourceUpdatedAt: v.optional(v.number()),
         shipmentSnapshotComplete: v.optional(v.boolean()),
+        orderSourceConflict: v.optional(v.boolean()),
         shopifyFulfillmentStatus: v.optional(v.union(v.string(), v.null())),
         shopifyCancelledAt: v.optional(v.number()),
         estimatedDelivery: v.optional(v.string()),
@@ -576,6 +577,7 @@ export default defineSchema({
             /** Shopify delivery state: in_transit, out_for_delivery, delivered… */
             shipmentStatus: v.optional(v.string()),
             fulfillmentStatus: v.optional(v.string()),
+            sourceConflict: v.optional(v.boolean()),
             sourceUpdatedAt: v.optional(v.number()),
             fulfillmentCreatedAt: v.optional(v.number()),
             packages: v.optional(v.array(v.object({

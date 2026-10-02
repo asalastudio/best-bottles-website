@@ -18,7 +18,7 @@ export function orderSyncArgs(order: WebhookOrder) {
         shopifyOrderId: String(order.id),
         shopifyCustomerId: order.customer ? String(order.customer.id) : undefined,
         orderName: order.name, orderDate, sourceUpdatedAt,
-        shopifyFulfillmentStatus: order.fulfillment_status,
+        shopifyFulfillmentStatus: order.fulfillment_status === "unfulfilled" ? null : order.fulfillment_status,
         shopifyCancelledAt: sourceTimestamp(order.cancelled_at),
         status: orderStatusFromShopify(order),
         lineItems: order.line_items.map((item) => ({

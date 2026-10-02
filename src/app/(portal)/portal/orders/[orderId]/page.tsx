@@ -98,6 +98,12 @@ export default async function PortalOrderDetail({
                 </p>
             )}
 
+            {order.sourceConflict && (
+                <p className="font-sans text-[12px] mb-4 text-[color:var(--color-text-secondary)]">
+                    Some saved Shopify details conflict. Current tracking needs verification.
+                </p>
+            )}
+
             {/* ─── Tracking ───────────────────────────────────────────────── */}
             <section className="mb-4">
                 <h2 className="font-sans text-[14px] font-semibold mb-2 text-[color:var(--color-text-primary)]">

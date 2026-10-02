@@ -37,3 +37,10 @@ describe("order detail truth", () => {
         expect(html).not.toContain("Delivered");
     });
 });
+
+it("renders saved-source ambiguity explicitly", async () => {
+    mocks.getOrder.mockResolvedValue({ ...base, sourceConflict: true });
+    const html = renderToStaticMarkup(await Detail({ params: Promise.resolve({ orderId: "123" }) }));
+    expect(html).toContain("Some saved Shopify details conflict");
+    expect(html).toContain("Status unavailable");
+});
