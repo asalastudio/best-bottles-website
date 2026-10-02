@@ -1,0 +1,85 @@
+{
+  "pulledAt": "2026-09-23",
+  "storefront": "https://best-bottles-website.vercel.app/",
+  "legacy": "https://www.bestbottles.com/",
+  "github": "https://github.com/asalastudio/best-bottles-website/tree/main/public/assets/homepage",
+  "currentHero": {
+    "liveScene": "empire-niche",
+    "stagePx": [3584, 1024],
+    "stageRatio": "3.5:1",
+    "desktopBoxHeightPx": 685,
+    "waterStillPx": [2688, 1152],
+    "waterStillRatio": "7:3",
+    "waterCss": { "below1100": "16/9", "mobile": "6/5" },
+    "paths": {
+      "v8Base": "/assets/hero/v8/base.webp",
+      "v8Manifest": "/assets/hero/v8/manifest.json",
+      "waterRebuilt": "/assets/homepage/hero-empire-water-rebuilt.webp",
+      "obsidianStage": "/assets/homepage/hero-obsidian-water-stage.webp"
+    }
+  },
+  "stoneFormation": {
+    "liveHomepageHero": false,
+    "familyPortraits4x5": [
+      "/assets/homepage/diva-stone.webp",
+      "/assets/homepage/grace-stone.webp",
+      "/assets/homepage/empire-stone.webp",
+      "/assets/homepage/round-stone.webp"
+    ],
+    "obsidianWater": [
+      "/assets/homepage/hero-obsidian-water-stage.webp",
+      "/assets/homepage/hero-empire-water-rebuilt.webp"
+    ]
+  },
+  "skus": [
+    {
+      "role": "46ml Diva black leather reducer",
+      "websiteSku": "GBDiva46RdcrBlkLthr",
+      "graceSku": "GB-DVA-CLR-46ML-RDC-BKLT",
+      "groupSlug": "diva-46ml-clear-18-415-reducer",
+      "newPdp": "https://best-bottles-website.vercel.app/products/diva-46ml-clear-18-415-reducer?sku=GBDiva46RdcrBlkLthr",
+      "legacyPdp": "https://www.bestbottles.com/product/diva-design-46-ml-glass-bottle-reducer-black-faux-leather-cap",
+      "bestStill": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/diva-46ml-clear-18-415/GBDiva46RdcrBlkLthr/d683e2ae2c4ed9d9283eb772e2d321f39b4d4a39006b85a3201e490018475375.front-on-1000x1100.webp",
+      "legacyEnlarged": "https://www.bestbottles.com/images/store/enlarged_pics/GBDiva46RdcrBlkLthr.gif",
+      "shopify": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GBDiva46RdcrBlkLthr.png",
+      "groupHeroNotThisSku": {
+        "websiteSku": "GBDiva46RdcrShnGl",
+        "graceSku": "GB-DVA-CLR-46ML-RDC-SGLD",
+        "url": "/images/catalog/bone-review/GBDiva46RdcrShnGl.382e9a542b9b.png"
+      }
+    },
+    {
+      "role": "Grace 55ml black vintage bulb",
+      "websiteSku": "GBGrce55AnSpBlk",
+      "graceSku": "GB-GRC-CLR-55ML-ASP-BLK",
+      "groupSlug": "grace-55ml-clear-18-415-antiquespray",
+      "newPdp": "https://best-bottles-website.vercel.app/products/grace-55ml-clear-18-415-antiquespray?sku=GBGrce55AnSpBlk",
+      "legacyPdp": "https://www.bestbottles.com/product/grace-design-55-ml-glass-bottle-black-vintage-style-bulb-sprayer-shiny-silver-collar-cap",
+      "bestStill": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpBlk/1af39978ead8d390c234269f62f0994abc751b727c14ebf525d712399011bd5d.front-on-1000x1100.webp",
+      "legacyEnlarged": "https://www.bestbottles.com/images/store/enlarged_pics/GBGrce55AnSpBlk.gif",
+      "shopify": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GBGrce55AnSpBlk.png",
+      "alternateBlackBulbInCurrentWaterHero": {
+        "websiteSku": "GBEmp50AnSpBlk",
+        "graceSku": "GB-EMP-CLR-50ML-ASP-BLK",
+        "legacyEnlarged": "https://www.bestbottles.com/images/store/enlarged_pics/GBEmp50AnSpBlk.gif",
+        "v8Frame": "/assets/hero/v8/frame-GBEmp50AnSpBlk.webp"
+      }
+    },
+    {
+      "role": "100ml Empire red vintage bulb with tassel",
+      "websiteSku": "GBEmp100AnSpTslRed",
+      "graceSku": "GB-EMP-CLR-100ML-AST-RED",
+      "groupSlug": "empire-100ml-clear-18-415-antiquespray-tassel",
+      "newPdp": "https://best-bottles-website.vercel.app/products/empire-100ml-clear-18-415-antiquespray-tassel?sku=GBEmp100AnSpTslRed",
+      "legacyPdp": "https://www.bestbottles.com/product/empire-design-100-ml-glass-bottle-red-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "bestStill": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-100ml-clear-18-415/GBEmp100AnSpTslRed/5d2944d3f2d0381dc22fc97721a5898d024d7f2c9e4b995226a07035f9979f2d.front-on-1000x1100.webp",
+      "highestResLive": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-EMP-CLR-100ML-AST-RED.png?v=1785361005",
+      "legacyEnlarged": "https://www.bestbottles.com/images/store/enlarged_pics/GBEmp100AnSpTslRed.gif",
+      "groupHeroNotThisSku": {
+        "websiteSku": "GBEmp100AnSpTslGl",
+        "graceSku": "GB-EMP-CLR-100ML-AST-GLD",
+        "url": "/images/catalog/bone-review/GBEmp100AnSpTslGl.3212b05eabbc.png"
+      }
+    }
+  ]
+}
