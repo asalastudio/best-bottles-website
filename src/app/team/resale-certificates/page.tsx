@@ -5,7 +5,8 @@ import { PortalTag } from "@/components/portal/ui";
 import { listAllCertificatesForStaff } from "@/lib/portal/certificates";
 import { isStaffAccessError } from "@/lib/portal/staff";
 import { permitVerificationLinks } from "@/lib/portal/permitVerification";
-import { approveCertificateAction, rejectCertificateAction } from "@/app/(portal)/portal/actions";
+import CertificateReviewActions from "@/components/portal/CertificateReviewActions";
+import CertificateStatusRefresh from "@/components/portal/CertificateStatusRefresh";
 
 export const metadata = { title: { absolute: "Certificate Review Queue — Best Bottles" } };
 
@@ -44,10 +45,6 @@ function AccessDenied() {
     );
 }
 
-const inputClass =
-    "h-8 px-2 font-sans text-[13px] text-neutral-900 bg-white border border-neutral-300 rounded-md " +
-    "focus:outline-none focus:border-neutral-500";
-
 function Stat({ label, value, tone }: { label: string; value: number; tone: "gold" | "green" | "red" | "muted" }) {
     const toneClass = {
         gold: "text-amber-700",
@@ -76,7 +73,7 @@ function StatusTag({ row }: { row: { status: string; lapsed: boolean; awaitingSh
     return <PortalTag variant="muted">Superseded</PortalTag>;
 }
 
-export default async function CertificateReviewQueue() {
+export default async function CertificateReviewQueue({ searchParams }: { searchParams?: Promise<{ org?: string }> }) {
     let data;
     try {
         data = await listAllCertificatesForStaff();
@@ -85,7 +82,9 @@ export default async function CertificateReviewQueue() {
         throw err;
     }
 
-    const { certificates, counts } = data;
+    const filter = (await searchParams)?.org;
+    const certificates = filter ? data.certificates.filter(c => c.clerkOrgId === filter) : data.certificates;
+    const { counts } = data;
     const pending = certificates.filter((c) => c.status === "pending");
     const attention = certificates.filter((c) => c.awaitingShopifySync || c.lapsed);
 
@@ -145,6 +144,8 @@ export default async function CertificateReviewQueue() {
                     </div>
                 )}
 
+                <CertificateStatusRefresh />
+                <p className="mb-4 text-sm text-neutral-500">Email delivery and automatic checkout sync are not activated.</p>
                 <h2 className="font-sans text-[13px] font-semibold text-neutral-900 mb-3">
                     Awaiting review ({pending.length})
                 </h2>
@@ -241,35 +242,7 @@ export default async function CertificateReviewQueue() {
                                     </div>
                                 )}
 
-                                <div className="flex flex-wrap items-end gap-6 mt-4 pt-4 border-t border-neutral-100">
-                                    <form action={approveCertificateAction} className="flex items-end gap-2">
-                                        <input type="hidden" name="certificateId" value={cert._id} />
-                                        <div>
-                                            <label className="block font-sans text-[11px] font-medium text-neutral-500 uppercase tracking-wide mb-1.5"
-                                                htmlFor={`expiry-${cert._id}`}>Expires</label>
-                                            <input id={`expiry-${cert._id}`} type="date" name="expiresAt" className={inputClass} />
-                                        </div>
-                                        <button type="submit"
-                                            className="h-8 px-3 font-sans text-[13px] font-medium rounded-md border bg-neutral-900 text-white border-neutral-900 hover:bg-neutral-800">
-                                            Approve
-                                        </button>
-                                    </form>
-
-                                    <form action={rejectCertificateAction} className="flex items-end gap-2 flex-1 min-w-[300px]">
-                                        <input type="hidden" name="certificateId" value={cert._id} />
-                                        <div className="flex-1">
-                                            <label className="block font-sans text-[11px] font-medium text-neutral-500 uppercase tracking-wide mb-1.5"
-                                                htmlFor={`reason-${cert._id}`}>Reason (shown to the customer)</label>
-                                            <input id={`reason-${cert._id}`} name="reviewNote" required
-                                                placeholder="e.g. Permit number not found in the CDTFA registry"
-                                                className={`${inputClass} w-full`} />
-                                        </div>
-                                        <button type="submit"
-                                            className="h-8 px-3 font-sans text-[13px] font-medium rounded-md border bg-white text-neutral-700 border-neutral-300 hover:bg-neutral-50">
-                                            Reject
-                                        </button>
-                                    </form>
-                                </div>
+                                <CertificateReviewActions certificateId={cert._id} hasDocument={Boolean(cert.documentUrl && cert.documentVerified)} />
                             </div>
                         ))}
                     </div>
@@ -298,6 +271,12 @@ export default async function CertificateReviewQueue() {
                                     <div>
                                         <p className="font-sans text-[13px] text-neutral-900">{row.companyName}</p>
                                         <p className="font-sans text-[12px] text-neutral-400">{row.legalBusinessName}</p>
+                                        <p className="text-xs">{row.billingEmail ?? "No billing contact"}</p>
+                                        {row.documentUrl && <Link href={row.documentUrl} target="_blank" rel="noopener noreferrer" className="text-xs underline">View supporting document</Link>}
+                                        {row.syncAttemptId && <p className="text-xs text-amber-700">A sync attempt is awaiting confirmation. Reconcile it before retrying.</p>}
+                                        {row.syncFailure && <p className="text-xs text-amber-700">Checkout sync needs attention.</p>}
+                                        {row.awaitingShopifySync && !row.lapsed && <CertificateReviewActions certificateId={row._id} retry />}
+                                        <p className="text-xs text-neutral-500">Notifications: {row.notifications.map(n => `${n.event} (${n.audience}): ${n.status}`).join("; ") || "No recorded delivery events"}</p>
                                     </div>
                                     <p className="font-sans text-[13px] text-neutral-500">{row.issuingState}</p>
                                     <p className="font-sans text-[13px] text-neutral-500 tabular-nums">{row.permitNumber}</p>

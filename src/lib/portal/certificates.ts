@@ -1,4 +1,7 @@
 import "server-only";
+import { randomBytes, createHash } from "node:crypto";
+import { readBoundedDocument, validateCertificateBytes } from "./certificateDocumentValidation";
+import { syncCertificate } from "./certificateSync";
 
 import { api } from "../../../convex/_generated/api";
 import type { Doc, Id } from "../../../convex/_generated/dataModel";
@@ -6,7 +9,6 @@ import { CLERK_ENABLED } from "@/lib/clerk";
 import { listTaxedOrdersForEmailSince, type PendingWindowOrders } from "@/lib/shopify-orders";
 import {
     setShopifyCustomerTaxExempt,
-    ShopifyCustomerScopeError,
     usResellerExemptionFor,
 } from "@/lib/shopify-customers";
 import { getPortalConvex, getPortalConvexWriteToken } from "./convexClient";
@@ -27,11 +29,26 @@ import { requireStaffViewer } from "./staff";
 // ─── Customer side ──────────────────────────────────────────────────────────
 
 export async function generateCertificateUploadUrlForViewer() {
-    await requirePortalViewer();
-    return await getPortalConvex().mutation(
-        api.resaleCertificates.generateCertificateUploadUrl,
-        { writeToken: getPortalConvexWriteToken() },
-    );
+    const viewer = await requirePortalViewer();
+    const ticket = randomBytes(32).toString("hex");
+    const documentId = await getPortalConvex().mutation(api.certificateDocuments.issue, {
+        writeToken: getPortalConvexWriteToken(), clerkOrgId: viewer.clerkOrgId,
+        clerkUserId: viewer.clerkUserId, ticketHash: createHash("sha256").update(ticket).digest("hex"),
+    });
+    const deployment = new URL(process.env.NEXT_PUBLIC_CONVEX_URL ?? "");
+    if (!deployment.hostname.endsWith(".convex.cloud")) throw new Error("upload_endpoint_not_configured");
+    deployment.hostname = deployment.hostname.replace(/\.convex\.cloud$/, ".convex.site");
+    return { url: `${deployment.origin}/certificate-upload`, ticket, documentId: String(documentId) };
+}
+
+export async function validateUploadedCertificateForViewer(documentId: string) {
+    const viewer = await requirePortalViewer();
+    const scope = { documentId: documentId as Id<"certificateDocuments">, clerkOrgId: viewer.clerkOrgId, clerkUserId: viewer.clerkUserId, writeToken: getPortalConvexWriteToken() };
+    const doc = await getPortalConvex().query(api.certificateDocuments.forValidation, scope);
+    if (!doc.url) throw new Error("document_not_available");
+    const response = await fetch(doc.url, { cache: "no-store", signal: AbortSignal.timeout(20_000) });
+    const validation = await validateCertificateBytes(await readBoundedDocument(response), response.headers.get("content-type")?.split(";")[0] ?? "");
+    return getPortalConvex().mutation(api.certificateDocuments.markVerified, { ...scope, ...validation });
 }
 
 export async function submitResaleCertificateForViewer(input: {
@@ -65,10 +82,11 @@ export async function submitResaleCertificateForViewer(input: {
 export async function getCertificatesForViewer(): Promise<{
     certificates: Doc<"resaleCertificates">[];
     active: Doc<"resaleCertificates"> | null;
+    asOf: number;
 }> {
     // Annotated because the Clerk-disabled early return would otherwise narrow
     // `certificates` to never[], and callers could not read a row's fields.
-    if (!CLERK_ENABLED) return { certificates: [], active: null };
+    if (!CLERK_ENABLED) return { certificates: [], active: null, asOf: Date.now() };
 
     const viewer = await requirePortalViewer();
     const [certificates, active] = await Promise.all([
@@ -82,7 +100,7 @@ export async function getCertificatesForViewer(): Promise<{
         }),
     ]);
 
-    return { certificates, active };
+    return { certificates, active, asOf: Date.now() };
 }
 
 // ─── Staff review queue ─────────────────────────────────────────────────────
@@ -133,103 +151,31 @@ export async function listPendingCertificatesForStaff() {
     );
 }
 
-export type ApprovalOutcome = {
-    certificateId: string;
-    /** Always true once this resolves — the Convex record is approved. */
-    approved: true;
-    /** Whether Shopify now actually exempts this account. */
-    exemptionLive: boolean;
-    shopifyExemptionCode?: string;
-    /** Why the exemption did not reach Shopify, when it did not. */
-    syncBlockedReason?:
-        | "no_portal_account"
-        | "no_billing_email"
-        | "shopify_scope_missing"
-        | "unsupported_issuing_state"
-        | "shopify_write_failed";
-    syncDetail?: string;
-};
+export type ApprovalOutcome = { certificateId: string; approved: true; exemptionLive: boolean; syncBlockedReason?: string };
 
-/**
- * Approve a certificate and push the exemption to Shopify.
- *
- * The Convex approval is committed first and is never rolled back if the Shopify
- * write fails: the employee's decision is a real fact worth keeping, and the
- * account is simply still taxed until the sync is retried. The returned
- * `exemptionLive` is what the UI must show — not the approval itself.
- */
-export async function approveCertificateAsStaff(input: {
-    certificateId: string;
-    expiresAt?: number;
-    reviewNote?: string;
-}): Promise<ApprovalOutcome> {
+async function syncApprovedCertificate(certificateId: string) {
+    const convex = getPortalConvex();
+    const writeToken = getPortalConvexWriteToken();
+    const id = certificateId as Id<"resaleCertificates">;
+    return syncCertificate(certificateId, {
+        begin: (_id, attemptId) => convex.mutation(api.certificateWorkflow.beginSync, { writeToken, certificateId: id, attemptId }),
+        finish: (_id, attemptId, result) => convex.mutation(api.certificateWorkflow.finishSync, { writeToken, certificateId: id, attemptId, ...result }),
+        resolveCustomer: ensureShopifyCustomerForOrg,
+        exemptionFor: usResellerExemptionFor,
+        write: async (customerId, code) => { await setShopifyCustomerTaxExempt(`gid://shopify/Customer/${customerId}`, true, [code]); },
+    });
+}
+export async function approveCertificateAsStaff(input: { certificateId: string; expiresAt?: number; reviewNote?: string }): Promise<ApprovalOutcome> {
     const staff = await requireStaffViewer();
-    const certificateId = input.certificateId as Id<"resaleCertificates">;
-
-    const approved = await getPortalConvex().mutation(
-        api.resaleCertificates.approveResaleCertificate,
-        {
-            writeToken: getPortalConvexWriteToken(),
-            certificateId,
-            reviewerClerkUserId: staff.clerkUserId,
-            expiresAt: input.expiresAt,
-            reviewNote: input.reviewNote,
-        },
-    );
-
-    const base = { certificateId: String(approved.certificateId), approved: true as const };
-
-    const exemptionCode = usResellerExemptionFor(approved.issuingState);
-    if (!exemptionCode) {
-        return { ...base, exemptionLive: false, syncBlockedReason: "unsupported_issuing_state" };
-    }
-
-    // No fallback email: this account's own billing address, or nothing. A
-    // reviewer's address must never become the customer of record.
-    const identity = await ensureShopifyCustomerForOrg(approved.clerkOrgId);
-    if (identity.status === "unavailable") {
-        return {
-            ...base,
-            exemptionLive: false,
-            syncBlockedReason:
-                identity.reason === "shopify_scope_missing"
-                    ? "shopify_scope_missing"
-                    : identity.reason === "no_billing_email"
-                      ? "no_billing_email"
-                      : "no_portal_account",
-            syncDetail: identity.detail,
-        };
-    }
-
-    try {
-        await setShopifyCustomerTaxExempt(
-            `gid://shopify/Customer/${identity.shopifyCustomerId}`,
-            true,
-            [exemptionCode],
-        );
-    } catch (err) {
-        return {
-            ...base,
-            exemptionLive: false,
-            syncBlockedReason:
-                err instanceof ShopifyCustomerScopeError
-                    ? "shopify_scope_missing"
-                    : "shopify_write_failed",
-            syncDetail: err instanceof Error ? err.message : String(err),
-        };
-    }
-
-    // Recorded only now, so shopifySyncedAt never overstates what happened.
-    await getPortalConvex().mutation(
-        api.resaleCertificates.markCertificateSyncedToShopify,
-        {
-            writeToken: getPortalConvexWriteToken(),
-            certificateId,
-            shopifyExemptionCode: exemptionCode,
-        },
-    );
-
-    return { ...base, exemptionLive: true, shopifyExemptionCode: exemptionCode };
+    const result = await getPortalConvex().mutation(api.resaleCertificates.approveResaleCertificate, {
+        writeToken: getPortalConvexWriteToken(), certificateId: input.certificateId as Id<"resaleCertificates">,
+        reviewerClerkUserId: staff.clerkUserId, expiresAt: input.expiresAt, reviewNote: input.reviewNote,
+    });
+    return { certificateId: String(result.certificateId), approved: true, ...await syncApprovedCertificate(input.certificateId) };
+}
+export async function retryCertificateSyncAsStaff(certificateId: string) {
+    await requireStaffViewer();
+    return syncApprovedCertificate(certificateId);
 }
 
 export async function rejectCertificateAsStaff(input: {

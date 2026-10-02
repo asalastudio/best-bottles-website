@@ -1,3 +1,4 @@
+import CertificateStatusRefresh from "@/components/portal/CertificateStatusRefresh";
 export const dynamic = "force-dynamic";
 
 import Link from "next/link";
@@ -50,6 +51,7 @@ export default async function PortalAccountsPage() {
     return (
         <div className="min-h-screen bg-neutral-50 px-6 py-10">
             <div className="max-w-[1000px] mx-auto">
+                <CertificateStatusRefresh />
                 <div className="flex items-end justify-between mb-6">
                     <div>
                         <p className="font-sans text-[11px] font-medium text-neutral-400 uppercase tracking-wide mb-1">
@@ -93,7 +95,7 @@ export default async function PortalAccountsPage() {
                             >
                                 <div>
                                     <p className="font-sans text-[13px] font-medium text-neutral-900">
-                                        {account.companyName}
+                                        <Link href={`/team/resale-certificates?org=${encodeURIComponent(account.clerkOrgId)}`}>{account.companyName}</Link>
                                     </p>
                                     <p className="font-sans text-[12px] text-neutral-400 tabular-nums">
                                         {account.accountNumber}
@@ -123,7 +125,7 @@ export default async function PortalAccountsPage() {
                                 </p>
                                 <div className="flex justify-end">
                                     <PortalTag variant={account.taxExempt ? "green" : "muted"}>
-                                        {account.taxExempt ? "Exempt" : "Taxable"}
+                                        {account.certificateTaxStatus === "review_required" ? "Check sync" : account.certificateTaxStatus === "sync_pending" ? "Sync pending" : account.certificateTaxStatus === "under_review" ? "Under review" : account.taxExempt ? "Exempt" : "Taxable"}
                                     </PortalTag>
                                 </div>
                             </div>

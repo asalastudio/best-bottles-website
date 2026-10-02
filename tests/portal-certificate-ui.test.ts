@@ -121,8 +121,8 @@ describe("tax exemption page", () => {
         expect(page).toMatch(/may still be taxed/i);
     });
 
-    it("does not offer the form while a submission is under review", () => {
-        expect(page).toContain("{!pending && !active && (");
+    it("allows a replacement document before approval", () => {
+        expect(page).toContain("{!active && (");
     });
 });
 
@@ -152,6 +152,6 @@ describe("staff review queue", () => {
     });
 
     it("requires a rejection reason", () => {
-        expect(page).toMatch(/name="reviewNote"[\s\S]{0,120}required/);
+        expect(read("src/components/portal/CertificateReviewActions.tsx")).toMatch(/name="reviewNote"[\s\S]{0,120}required/);
     });
 });

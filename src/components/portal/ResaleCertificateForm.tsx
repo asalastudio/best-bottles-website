@@ -5,18 +5,7 @@ import { PortalButton } from "@/components/portal/ui";
 import { US_STATES } from "@/lib/portal/usStates";
 import type { CertificateSubmitState } from "@/app/(portal)/portal/actions";
 
-/**
- * Resale certificate submission.
- *
- * The document is uploaded straight to Convex storage from the browser, so the
- * file never travels through a server action — a scanned permit can be several
- * megabytes, comfortably past the body limit a form post should carry. Only the
- * resulting storage id is submitted.
- */
-
-// The 50 states plus DC — Shopify issues a reseller exemption for each. Kept
-// here rather than imported so this stays a client module.
-
+/** Owner-bound upload bypasses server-action body limits; server validates bytes before submission. */
 
 const MAX_BYTES = 15 * 1024 * 1024;
 
@@ -29,9 +18,11 @@ const fieldClass =
 export default function ResaleCertificateForm({
     createUploadUrl,
     submitAction,
+    validateUpload,
     defaultBusinessName,
 }: {
-    createUploadUrl: () => Promise<string>;
+    createUploadUrl: () => Promise<{ url: string; ticket: string; documentId: string }>;
+    validateUpload: (documentId: string) => Promise<{ storageId: string | null; error: string | null }>;
     submitAction: (
         prev: CertificateSubmitState,
         formData: FormData,
@@ -48,38 +39,46 @@ export default function ResaleCertificateForm({
     const [uploading, setUploading] = useState(false);
     const [uploadError, setUploadError] = useState<string | null>(null);
     const fileInput = useRef<HTMLInputElement>(null);
+    const uploadVersion = useRef(0);
 
     async function handleFile(event: React.ChangeEvent<HTMLInputElement>) {
         const file = event.target.files?.[0];
         if (!file) return;
 
+        const version = ++uploadVersion.current;
+        setStorageId("");
+        setFileName("");
         setUploadError(null);
-        if (file.size > MAX_BYTES) {
-            setUploadError("That file is over 15 MB. Upload a smaller scan or a PDF.");
+        if (!file.size || !["application/pdf", "image/png", "image/jpeg"].includes(file.type) || file.size > MAX_BYTES) {
+            setUploadError("Choose a PDF, PNG or JPEG under 15 MB.");
+            setUploading(false);
             if (fileInput.current) fileInput.current.value = "";
             return;
         }
 
         setUploading(true);
         try {
-            const url = await createUploadUrl();
-            const res = await fetch(url, {
+            const upload = await createUploadUrl();
+            const res = await fetch(upload.url, {
                 method: "POST",
-                headers: { "Content-Type": file.type || "application/octet-stream" },
+                headers: { "Content-Type": file.type, Authorization: `Bearer ${upload.ticket}` },
                 body: file,
             });
             if (!res.ok) throw new Error(String(res.status));
 
-            const { storageId: id } = (await res.json()) as { storageId: string };
-            setStorageId(id);
+            const result = await validateUpload(upload.documentId);
+            if (version !== uploadVersion.current) return;
+            if (!result.storageId) throw new Error("Document validation failed");
+            setStorageId(result.storageId);
             setFileName(file.name);
         } catch {
-            setUploadError("That upload didn't complete. Check your connection and try again.");
+            if (version !== uploadVersion.current) return;
+            setUploadError("That document could not be read. Try an unencrypted PDF or a clear PNG/JPEG.");
             setStorageId("");
             setFileName("");
             if (fileInput.current) fileInput.current.value = "";
         } finally {
-            setUploading(false);
+            if (version === uploadVersion.current) setUploading(false);
         }
     }
 
@@ -91,8 +90,7 @@ export default function ResaleCertificateForm({
                 </p>
                 <p className="font-sans text-[13px] text-neutral-500 mt-1.5 leading-relaxed">
                     A Best Bottles employee will verify the permit against the issuing
-                    state&rsquo;s registry. Orders placed meanwhile are charged sales tax; once
-                    approved, tax comes off automatically at checkout.
+                    state&rsquo;s registry. Orders placed meanwhile are charged sales tax; checkout exemption is confirmed only after a successful sync.
                 </p>
             </div>
         );
