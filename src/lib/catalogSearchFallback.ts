@@ -19,6 +19,8 @@ import {
     neckSelectionMatches,
     sortCatalogFeatured,
 } from "@/lib/catalogFilters";
+import { filterVariantsForProductGroup } from "@/lib/productVariantIntegrity";
+import { filterVariantsForGroupIntent } from "@/lib/products/group-variant-intent";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { isVisibleCatalogGroup, isMissingHeroSource } from "@/lib/products/catalog-listing-visibility";
 
@@ -128,6 +130,37 @@ export interface CatalogSearchResultShape {
     variantPreviewRows: CatalogSearchVariantPreviewRow[];
 }
 
+/** Apply the PDP's approved assembly scope before any catalog swatch or quick-add is built. */
+export function scopeCatalogPurchaseData(input: {
+    groups: CatalogSearchGroup[];
+    primarySkus: CatalogSearchPrimarySku[];
+    variantPreviewRows: CatalogSearchVariantPreviewRow[];
+}): Pick<CatalogSearchResultShape, "primarySkus" | "variantPreviewRows"> {
+    const groups = new Map(input.groups.map(group => [group._id, group]));
+    const variantPreviewRows = input.variantPreviewRows.map(row => {
+        const group = groups.get(row.groupId);
+        return { ...row, variants: group
+            ? filterVariantsForGroupIntent(group.slug, filterVariantsForProductGroup(group, row.variants))
+            : row.variants.filter(variant => !isMissingHeroSource(variant)) };
+    });
+    const primarySkus = input.primarySkus.map(primary => {
+        const group = groups.get(primary.groupId);
+        const raw = input.variantPreviewRows.find(row => row.groupId === primary.groupId)?.variants ?? [];
+        const scoped = variantPreviewRows.find(row => row.groupId === primary.groupId)?.variants ?? [];
+        const matchesPrimary = scoped.some(variant =>
+            (primary.websiteSku && variant.websiteSku === primary.websiteSku)
+            || (primary.graceSku && variant.graceSku === primary.graceSku));
+        // Empty preview data can retain a primary identity, but never one
+        // excluded by an explicit finish allowlist or source hold.
+        const primaryAllowed = !isMissingHeroSource(primary) && (raw.length > 0
+            ? matchesPrimary
+            : !group || filterVariantsForGroupIntent(group.slug, [primary]).length > 0);
+        if (primaryAllowed) return primary;
+        return { groupId: primary.groupId, websiteSku: scoped[0]?.websiteSku ?? null, graceSku: scoped[0]?.graceSku ?? null };
+    });
+    return { primarySkus, variantPreviewRows };
+}
+
 function countBy<T>(items: T[], keyFn: (item: T) => string | null | undefined): Record<string, number> {
     const counts: Record<string, number> = {};
     for (const item of items) {
@@ -148,10 +181,7 @@ export function buildCatalogSearchResult(input: {
     limit: number;
     cursor?: string | null;
 }): CatalogSearchResultShape {
-    input = { ...input,
-        primarySkus: input.primarySkus.filter(row => !isMissingHeroSource(row)),
-        variantPreviewRows: input.variantPreviewRows.map(row => ({ ...row, variants: row.variants.filter(variant => !isMissingHeroSource(variant)) })),
-    };
+    input = { ...input, ...scopeCatalogPurchaseData(input) };
     const groups = input.groups.filter((group) => !getLegacyProductRouteOverride(group.slug) && isVisibleCatalogGroup(group, input.variantPreviewRows.find(row => row.groupId === group._id)?.variants));
     const skuMap = new Map(input.primarySkus.map((row) => [row.groupId, row.websiteSku ?? row.graceSku ?? ""]));
     const filters = input.filters;
