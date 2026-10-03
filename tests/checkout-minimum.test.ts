@@ -54,6 +54,23 @@ describe("checkout server minimum", () => {
         expect(mocks.wholesale).not.toHaveBeenCalled();
         expect(mocks.anonymous).not.toHaveBeenCalled();
     });
+    it("checks the Elegant order minimum at the same flat Shopify rate shown by PDP and cart", async () => {
+        mocks.direct.mockResolvedValue([{ variantId: "123", sku: "GBElg15MtlRollSlSh", available: true, price: "0.88" }]);
+        const elegantLine = { sku: "GB-ELG-CLR-15ML-MRL-SSLV", websiteSku: "GBElg15MtlRollSlSh", shopifyVariantId: "123" };
+        const below = await request([{ ...elegantLine, quantity: 56, unitPrice: 100 }]);
+        expect(below.status).toBe(422);
+        expect(await below.json()).toMatchObject({ subtotal: 49.28, remaining: 0.72 });
+        expect(mocks.anonymous).not.toHaveBeenCalled();
+
+        for (const quantity of [57, 60]) {
+            // Even a browser-supplied quote rate is ignored. Shopify receives
+            // the verified variant + original quantity, never an override.
+            expect((await request([{ ...elegantLine, quantity, unitPrice: 0.84 }])).status).toBe(200);
+            expect(mocks.anonymous).toHaveBeenLastCalledWith([{
+                variantId: "123", sku: elegantLine.sku, quantity,
+            }]);
+        }
+    });
     it("combines direct and fallback variants using fresh prices", async () => {
         mocks.fallback.mockResolvedValue([{ sku: "B", variantId: "2", available: true, price: "30.00" }]);
         const response = await request([{ sku: "A", shopifyVariantId: "1", quantity: 1 }, { sku: "B", quantity: 1 }]);

@@ -13,10 +13,8 @@
  *
  * Pricing comes from the assembly's published ladder through
  * `catalog-card-purchase.ts` → `volumePricing.ts`; nothing here restates a
- * price. Every break's rate is shown as the price (Jordan, 2026-09-25: no
- * "Quote" marks on the card): the headline follows the active break and the
- * button total is that rate × quantity. Whether checkout bills the break is
- * `NEXT_PUBLIC_VOLUME_TIERS_HONORED_AT_CHECKOUT`'s concern, not the card's.
+ * price. Purchase totals follow the same checkout policy as the cart; published
+ * volume rates are labeled when they require a quote.
  */
 
 import LocaleLink from "@/components/LocaleLink";
@@ -37,7 +35,7 @@ import {
     type CatalogCartContext,
     type CatalogPurchaseVariant,
 } from "@/lib/products/catalog-card-purchase";
-import { formatVolumeQtyRange, type DisplayVolumeTier } from "@/lib/volumePricing";
+import { formatVolumeQtyRange, resolveChargedUnitPrice, type DisplayVolumeTier } from "@/lib/volumePricing";
 import { useRegion } from "@/components/RegionProvider";
 
 /** Telemetry is best-effort: a tracking failure must never block or misreport a cart update. */
@@ -199,7 +197,7 @@ export default function CatalogCardPurchase({
             sku: variant.graceSku,
             name: title,
             quantity: qty,
-            unitPrice: variant.webPrice1pc,
+            unitPrice: resolveChargedUnitPrice(qty, variant),
             family: context.family ?? undefined,
             capacity: context.capacity ?? undefined,
             source: "catalog",
@@ -225,8 +223,8 @@ export default function CatalogCardPurchase({
         );
     }
 
-    // The active break's rate is the price: headline × quantity = button total.
-    const activeUnitPrice = activeTier?.unitPrice ?? variant.webPrice1pc;
+    // Purchase totals must match the shared cart, including at quantity breaks.
+    const activeUnitPrice = resolveChargedUnitPrice(qty ?? 1, variant) ?? variant.webPrice1pc;
     const subtotal = (qty ?? 0) * activeUnitPrice;
 
     const addLabel = soldOut
@@ -313,7 +311,7 @@ export default function CatalogCardPurchase({
                                             className={`flex w-full items-center justify-between gap-3 px-3 py-[9px] text-left text-[13px] tabular-nums focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-[#9a7a48] ${active ? "bg-[#1c1c1e] text-white" : "text-[#1c1c1e] hover:bg-[#f1ebe0]"}`}
                                         >
                                             <span className="whitespace-nowrap">{formatVolumeQtyRange(tier.minQty, tier.maxQty)}</span>
-                                            <b className="whitespace-nowrap font-semibold">{formatPrice(tier.unitPrice)}</b>
+                                            <b className="whitespace-nowrap font-semibold">{formatPrice(tier.unitPrice)}{!tier.appliesAtCheckout ? " by quote" : ""}</b>
                                         </button>
                                     );
                                 })}
@@ -366,6 +364,11 @@ export default function CatalogCardPurchase({
                 </div>
             </div>
 
+            {tiers.some((tier) => !tier.appliesAtCheckout) && (
+                <p className="text-[11px] text-[#5d6b7e]" data-testid="catalog-card-tier-footnote">
+                    Online price shown. Volume rates require a quote.
+                </p>
+            )}
             {error && (
                 <p id={`${baseId}-error`} role="alert" className="-mt-1 text-[11px] font-medium text-red-700" data-testid="catalog-card-qty-error">
                     {error}

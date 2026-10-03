@@ -5,9 +5,8 @@
  * with the quantity stepper, Add to Cart, and the case link. A set is one
  * bottle with its closure (and roller ball): ten sets are ten bottles, ten
  * balls, ten caps (Jordan 2026-09-29), so prices read per set. Pricing shown
- * is the active break's unit rate (the same rule as the catalog card); whether
- * checkout bills the break is `volumePricing.ts`'s concern. The roller choice
- * shows no price of its own: the set price above the button already follows it.
+ * follows the shared checkout policy; published quote rates stay labeled.
+ * The roller choice shows no price of its own: the set price above the button already follows it.
  *
  * On mobile the Add to Cart button lives in the sticky bar (option 4a) and
  * the Set of menu opens as a bottom sheet; both are stylesheet concerns.
@@ -177,7 +176,7 @@ export default function PdpBuyBox({
                                         data-tier-min={tier.minQty}
                                     >
                                         <span>{formatVolumeQtyRange(tier.minQty, tier.maxQty)} sets</span>
-                                        <span><b>{formatPrice(tier.unitPrice)}</b>/set{tier.savePct > 0 ? <span className={styles.packSave}>{tier.savePct}% off</span> : null}</span>
+                                        <span><b>{formatPrice(tier.unitPrice)}</b>/set{!tier.appliesAtCheckout ? <span className={styles.packSave}>by quote</span> : tier.savePct > 0 ? <span className={styles.packSave}>{tier.savePct}% off</span> : null}</span>
                                     </button>
                                 ))}
                             </div>
@@ -222,10 +221,12 @@ export default function PdpBuyBox({
                 >
                     {caseQuantity && caseQuantity > 1 ? `+ Add a case (${caseQuantity.toLocaleString("en-US")})` : "Case quantity on request"}
                 </button>
-                <span className={styles.buyFootNote}>
-                    <span className={styles.buyFootNoteDesktop}>1–11 rate billed online; 12+ confirmed on a quote</span>
-                    <span className={styles.buyFootNoteMobile}>12+ rates confirmed on a quote</span>
-                </span>
+                {tiers.some((tier) => !tier.appliesAtCheckout) && (
+                    <span className={styles.buyFootNote}>
+                        <span className={styles.buyFootNoteDesktop}>Online price shown; volume rates by quote</span>
+                        <span className={styles.buyFootNoteMobile}>Volume rates by quote</span>
+                    </span>
+                )}
             </div>
         </div>
     );

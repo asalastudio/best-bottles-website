@@ -13,6 +13,7 @@ import type { CartItem } from "@/components/CartProvider";
 import { isSoldOutStockStatus } from "@/lib/checkout";
 import {
     activeVolumeTierIndex,
+    resolveChargedUnitPrice,
     buildDisplayVolumeTiers,
     formatVolumeQtyRange,
     type DisplayVolumeTier,
@@ -189,6 +190,7 @@ const usd = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD",
 /** Screen-reader sentence for a tier row. */
 export function describeCatalogTier(tier: DisplayVolumeTier, formatPrice: (usd: number) => string = (value) => usd.format(value)): string {
     const base = `${formatVolumeQtyRange(tier.minQty, tier.maxQty)} units at ${formatPrice(tier.unitPrice)} each`;
+    if (!tier.appliesAtCheckout) return `${base}, by quote`;
     return tier.savePct > 0 ? `${base}, save ${tier.savePct}%` : base;
 }
 
@@ -208,7 +210,7 @@ export function buildCatalogCartItem(variant: CatalogPurchaseVariant, quantity: 
         graceSku: variant.graceSku,
         itemName: context.title,
         quantity,
-        unitPrice: variant.webPrice1pc,
+        unitPrice: resolveChargedUnitPrice(quantity, variant),
         checkoutEligible: isCatalogVariantPurchasable(variant),
         stockStatus: variant.stockStatus,
         shopifyVariantId: variant.shopifyVariantId,

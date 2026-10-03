@@ -188,10 +188,10 @@ describe("copy", () => {
         expect(statusLine(VARIANTS[4]).text).toBe("Out of stock · 724 per case");
     });
 
-    it("prices the active break", () => {
+    it("uses the checkout rate at every quantity while tiers require a quote", () => {
         expect(unitPriceAt(VARIANTS[0], 1)).toBe(0.85);
-        expect(unitPriceAt(VARIANTS[0], 12)).toBe(0.81);
-        expect(unitPriceAt(VARIANTS[0], 600)).toBe(0.72);
+        expect(unitPriceAt(VARIANTS[0], 12)).toBe(0.85);
+        expect(unitPriceAt(VARIANTS[0], 600)).toBe(0.85);
         expect(unitPriceAt(VARIANTS[4], 500)).toBe(0.76);
     });
 });

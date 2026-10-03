@@ -6,6 +6,13 @@ import type { CatalogSearchResultShape } from "../src/lib/catalogSearchFallback"
 import { buildCatalogSearchResult } from "../src/lib/catalogSearchFallback";
 import { EMPTY_FILTERS } from "../src/lib/catalogFilters";
 
+// A catalog card must never sell a cap which the destination PDP excludes.
+import { getCatalogCardVariantPreviews } from "../src/lib/products/product-card-variant-previews";
+import { catalogCardPurchaseOptions, resolveCatalogCardPurchaseVariant } from "../src/lib/products/catalog-card-purchase";
+import { filterVariantsForGroupIntent } from "../src/lib/products/group-variant-intent";
+import { derivePicks, resolveVariant } from "../src/lib/products/pdp-redesign/model";
+import { elegant } from "./fixtures/elegant-tier-pricing";
+
 function resultFixture(): CatalogSearchResultShape {
     return {
         items: [
@@ -117,5 +124,58 @@ describe("catalog result canonicalization", () => {
             "100 ml",
             "250 ml",
         ]);
+    });
+});
+
+function squareFixture() {
+    const result = resultFixture();
+    const skuCaps = [
+        ["GBSqr15CuSht", "Short Matte Copper", 0.60],
+        ["GBSqr15BlkSht", "Short Black", 0.44],
+        ["GBSqr15WhtSht", "Short White", 0.44],
+        ["GBSqr15Gl", "Shiny Gold", 0.60],
+        ["GBSqr15Sl", "Shiny Silver", 0.60],
+    ] as const;
+    const variants = skuCaps.map(([websiteSku, capColor, webPrice1pc]) => ({
+        ...elegant, _id: websiteSku, id: websiteSku, websiteSku, graceSku: `grace-${websiteSku}`, itemName: `${capColor} cap`,
+        family: "Square", capColor, webPrice1pc, webPrice12pc: null, priceTiers: null, applicator: null, capStyle: null, imageUrl: null, imageUrlCapOff: null, capHeight: null, ballMaterial: null,
+    }));
+    const group = { ...result.items[1], _id: "square", slug: "square-15ml-clear-13-415", family: "Square", capacityMl: 15, neckThreadSize: "13-415", primaryWebsiteSku: "GBSqr15CuSht", primaryGraceSku: "grace-GBSqr15CuSht" };
+    return { result: { ...result, items: [group], primarySkus: [{ groupId: "square", websiteSku: "GBSqr15CuSht", graceSku: "grace-GBSqr15CuSht" }], variantPreviewRows: [{ groupId: "square", variants }] }, group, variants };
+}
+
+describe("catalog/PDP Square finish agreement", () => {
+    for (const mode of ["server", "fallback"] as const) {
+        it(`${mode} excludes unapproved quick-add finishes and preserves each approved SKU on the PDP`, () => {
+            const { result: fixture, group, variants } = squareFixture();
+            const result = mode === "server" ? sanitizeCatalogResult(fixture) : buildCatalogSearchResult({
+                groups: fixture.items, primarySkus: fixture.primarySkus, variantPreviewRows: fixture.variantPreviewRows,
+                filters: EMPTY_FILTERS, sort: "featured", view: "visual", limit: 24,
+            });
+            const rows = result.variantPreviewRows[0].variants;
+            expect(rows.map(row => row.websiteSku)).toEqual(["GBSqr15BlkSht", "GBSqr15WhtSht", "GBSqr15Gl", "GBSqr15Sl"]);
+            expect(result.primarySkus[0].websiteSku).toBe("GBSqr15BlkSht");
+            const previews = getCatalogCardVariantPreviews(rows, { productTitle: "15 ml Clear Square", productHref: `/products/${group.slug}` });
+            const purchases = catalogCardPurchaseOptions(rows, previews, "15 ml Clear Square");
+            expect(Object.values(purchases).map(row => row.websiteSku)).not.toContain("GBSqr15CuSht");
+            expect(resolveCatalogCardPurchaseVariant(rows, { picturedSku: "GBSqr15CuSht", productTitle: "Square" })?.websiteSku).toBe("GBSqr15BlkSht");
+            const pdpRows = filterVariantsForGroupIntent(group.slug, variants);
+            for (const preview of previews) {
+                const sku = new URL(preview.href!, "https://example.test").searchParams.get("sku")!;
+                const picked = resolveVariant(pdpRows, derivePicks(pdpRows, group, { sku }));
+                expect(picked?.websiteSku).toBe(sku);
+                expect(purchases[preview.id].websiteSku).toBe(sku);
+                expect(purchases[preview.id].webPrice1pc).toBe(picked?.webPrice1pc);
+            }
+        });
+    }
+
+    it("does not reopen the explicit Square allowlist when only an unapproved SKU is returned", () => {
+        const { result, group, variants } = squareFixture();
+        result.variantPreviewRows[0].variants = [variants[0]];
+        expect(filterVariantsForGroupIntent(group.slug, [variants[0]])).toEqual([]);
+        const scoped = sanitizeCatalogResult(result);
+        expect(scoped.variantPreviewRows[0].variants).toEqual([]);
+        expect(scoped.primarySkus[0].websiteSku).toBeNull();
     });
 });
