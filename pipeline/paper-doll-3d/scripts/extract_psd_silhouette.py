@@ -117,6 +117,48 @@ def body_layer(psd_path, want_aspect=None):
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--sku", default=None)
+# --psd/--as bypass the SKU index entirely, for sources whose FILENAMES were
+# destroyed but whose FOLDER names survived.
+#
+# The Boston Round library is the case that forced this. Its 97 PSDs carry
+# DOS 8.3 truncations — 10GBBS~1.PSD, 6GBBST~1.PSD — so build_index() keys
+# them as "10gbbs1" and no SKU will ever match. That is the whole reason
+# Boston Round had 0 silhouettes while holding 120 SKUs across three bodies:
+# not a missing source, a destroyed filename.
+#
+# Renaming 97 files is the wrong fix, because the lane needs ONE silhouette
+# per BODY, not per SKU (BODY-COUNT-LOCK.md — glass colour is chosen in the
+# browser, so amber/cobalt/clear roll-ons are one piece of glass). The FOLDER
+# names are intact and carry exactly the distinction that matters:
+#   "1. Amber Bottle (1 ounce/30 ml) Roll on"  -> body 78x33 20-400
+#   "1. Amber Bottle (2 ounce/60 ml) Roll on"  -> body 94x39 20-400
+# So: point at one file, name the output after the body, move on.
+#
+# BOSTON ROUND ITSELF STILL DOES NOT WORK, and this flag is not why. Its PSDs
+# turned out to be FLATTENED COMPOSITES — the 2 oz roll-on carries only
+# Background (no alpha), one full-canvas 945x1500 layer, and two small
+# fragments of 0.80 and 1.50 aspect. Nothing at the catalogue's 2.41. Run with
+# --aspect and the picker returns the full canvas, which passes silently and
+# yields a silhouette 34-45% wrong; the aspect gate is what caught it. The
+# skill states the rule this confirms: psd_tools cannot split what was never
+# separate.
+#
+# Boston Round must come from the SHOPIFY RENDERS instead — Convex holds an
+# imageUrl for all 114 of its products and 0 without — thresholded the way
+# scripts/paper-doll-3d/extract-silhouette.py handles flattened photos.
+# ALWAYS check the extracted aspect against the catalogue before building on
+# a silhouette; a wrong one looks entirely plausible.
+#
+# NOTE those folder names contain U+F022 where the "/" belongs — a private-use
+# character from a Mac slash substitution. glob() with a typed "/" silently
+# matches nothing; os.listdir and find both work. Quote paths and never
+# reconstruct these names by hand.
+ap.add_argument("--psd", default=None,
+                help="path to ONE psd, bypassing the SKU->file index")
+ap.add_argument("--as", dest="as_name", default=None,
+                help="output stem when using --psd (use the body id)")
+ap.add_argument("--aspect", type=float, default=None,
+                help="expected height/width, to pick the body layer (with --psd)")
 ap.add_argument("--from-csv", default=None, help="CSV with a grace_sku column")
 ap.add_argument("--limit", type=int, default=None)
 ap.add_argument("--src", default=str(DEFAULT_SRC))
@@ -131,7 +173,12 @@ def expected_aspect(row):
     return (h / across) if (h and across) else None
 
 skus, aspects = [], {}
-if a.sku:
+if a.psd:
+    if not a.as_name:
+        sys.exit("--psd needs --as NAME (use the body id, not a SKU)")
+    skus = [a.as_name]
+    aspects[a.as_name] = a.aspect
+elif a.sku:
     skus = [a.sku]
     if a.from_csv:
         with open(a.from_csv, newline="", encoding="utf-8") as f:
@@ -155,8 +202,8 @@ for sku in skus:
     dst = outdir / f"{sku}.png"
     if dst.exists():
         made += 1; continue
-    p = find_psd(a.src, sku)
-    if p is None:
+    p = pathlib.Path(a.psd) if a.psd else find_psd(a.src, sku)
+    if p is None or not p.exists():
         missing += 1; continue
     arr = body_layer(p, aspects.get(sku))
     if arr is None:
