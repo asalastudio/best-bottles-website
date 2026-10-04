@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import type { Metadata } from "next";
 import PortalChrome from "@/components/portal/PortalChrome";
 import { CLERK_ENABLED } from "@/lib/clerk";
-import { ensurePortalProfileForViewer } from "@/lib/portal/onboarding";
+import { ensurePortalProfileForViewerSafely } from "@/lib/portal/onboarding";
 import { getPortalShellData } from "@/lib/portal/server";
 
 export const dynamic = "force-dynamic";
@@ -31,7 +31,24 @@ export default async function PortalLayout({ children }: { children: ReactNode }
         );
     }
 
-    await ensurePortalProfileForViewer();
+    if (await ensurePortalProfileForViewerSafely() === "no_access") {
+        return (
+            <div className="min-h-screen bg-bone px-6 py-24">
+                <div className="max-w-[760px] mx-auto bg-white border border-champagne/40 rounded-xl px-8 py-8">
+                    <p className="text-[11px] uppercase tracking-[0.28em] text-muted-gold font-semibold mb-3">
+                        Client Portal
+                    </p>
+                    <h1 className="font-serif text-3xl text-obsidian mb-3">
+                        You no longer have access to this organization
+                    </h1>
+                    <p className="text-sm text-slate leading-relaxed">
+                        Your sign-in is still active, but this account is not a member of the selected organization.
+                        Switch to another organization, or contact Best Bottles if you think this is a mistake.
+                    </p>
+                </div>
+            </div>
+        );
+    }
     const shell = await getPortalShellData();
 
     return (

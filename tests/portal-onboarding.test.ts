@@ -5,7 +5,7 @@ vi.mock("@/lib/clerk", () => ({ CLERK_ENABLED: true }));
 vi.mock("@clerk/nextjs/server", () => ({ auth: mocks.auth, currentUser: vi.fn(), clerkClient: async () => ({ users: { getOrganizationMembershipList: mocks.memberships } }) }));
 vi.mock("@/lib/portal/convexClient", () => ({ getPortalConvex: () => ({ mutation: mocks.mutation, query: mocks.query }), getPortalConvexWriteToken: mocks.token }));
 vi.mock("@/lib/portal/addressSync", () => ({ pushAddressToShopifyCustomer: mocks.push }));
-import { ensurePortalProfileForViewer } from "../src/lib/portal/onboarding";
+import { ensurePortalProfileForViewer, ensurePortalProfileForViewerSafely } from "../src/lib/portal/onboarding";
 import { savePortalAddressesForViewer, ensureShopifyCustomerForOrg } from "../src/lib/portal/server";
 import { api } from "../convex/_generated/api";
 const address = { contactName: "Test Buyer", company: "Fixture", phone: "+15555550123", address1: "1 Test St", address2: "", city: "Test", provinceCode: "CA", zip: "90001", countryCode: "US" };
@@ -31,6 +31,17 @@ describe("portal onboarding server boundary", () => {
         mocks.memberships.mockRejectedValueOnce(new Error("Clerk unavailable"));
         await expect(ensurePortalProfileForViewer()).rejects.toThrow("Clerk unavailable");
         expect(mocks.mutation).not.toHaveBeenCalled(); expect(mocks.token).not.toHaveBeenCalled();
+    });
+    it("reports a revoked membership and survives an outage when rendering pages", async () => {
+        const logged = vi.spyOn(console, "error").mockImplementation(() => {});
+        mocks.memberships.mockResolvedValueOnce({ data: [], totalCount: 0 });
+        expect(await ensurePortalProfileForViewerSafely()).toBe("no_access");
+        mocks.memberships.mockRejectedValueOnce(new Error("Clerk unavailable"));
+        expect(await ensurePortalProfileForViewerSafely()).toBe("unavailable");
+        expect(logged).toHaveBeenCalledWith("[portal:ensure_profile_failed]", { message: "Clerk unavailable" });
+        expect(await ensurePortalProfileForViewerSafely()).toBe("ok");
+        expect(mocks.mutation).toHaveBeenCalledTimes(1);
+        logged.mockRestore();
     });
     it("finds a membership beyond the first hundred", async () => {
         mocks.memberships.mockResolvedValueOnce({ data: Array.from({ length: 100 }, (_, i) => ({ organization: { id: `org_${i}`, name: "Other" } })), totalCount: 101 });

@@ -1,5 +1,5 @@
 import { randomUUID } from "node:crypto";
-import { ensurePortalProfileForViewer } from "@/lib/portal/onboarding";
+import { ensurePortalProfileForViewerSafely } from "@/lib/portal/onboarding";
 import CertificateStatusRefresh from "@/components/portal/CertificateStatusRefresh";
 export const dynamic = "force-dynamic";
 import Link from "next/link";
@@ -14,7 +14,7 @@ function formatCurrency(value: number | null | undefined) {
 }
 
 export default async function PortalAccount() {
-    await ensurePortalProfileForViewer();
+    await ensurePortalProfileForViewerSafely();
     const [{ account, orders }, addresses] = await Promise.all([
         getPortalAccountData(),
         getPortalAddresses(),
