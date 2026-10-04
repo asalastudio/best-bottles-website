@@ -1,3 +1,5 @@
+import { randomUUID } from "node:crypto";
+import { ensurePortalProfileForViewerSafely } from "@/lib/portal/onboarding";
 import CertificateStatusRefresh from "@/components/portal/CertificateStatusRefresh";
 export const dynamic = "force-dynamic";
 import Link from "next/link";
@@ -12,6 +14,7 @@ function formatCurrency(value: number | null | undefined) {
 }
 
 export default async function PortalAccount() {
+    await ensurePortalProfileForViewerSafely();
     const [{ account, orders }, addresses] = await Promise.all([
         getPortalAccountData(),
         getPortalAddresses(),
@@ -25,6 +28,9 @@ export default async function PortalAccount() {
             <CertificateStatusRefresh />
             <PageHeader eyebrow="Account" title="Account & Pricing" />
 
+            {account?.profileStatus === "pending" && (
+                <p className="mb-4 text-sm text-amber-800">Your portal profile is ready. Our team still needs to review your wholesale account and Shopify linkage. Pricing and tax approval are separate.</p>
+            )}
             {account ? (
                 <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1fr_320px]">
                     <div className="bg-white rounded-lg border border-neutral-200">
@@ -49,7 +55,7 @@ export default async function PortalAccount() {
                                     <p className="font-sans text-[11px] font-medium text-neutral-400 uppercase tracking-wide mb-1">
                                         {label}
                                     </p>
-                                    <p className="font-sans text-[14px] text-neutral-900">{value}</p>
+                                    <p className="font-sans text-[14px] text-neutral-900">{value ?? "Awaiting review"}</p>
                                 </div>
                             ))}
                         </div>
@@ -60,7 +66,7 @@ export default async function PortalAccount() {
                             Account Manager
                         </p>
                         <p className="font-sans text-[16px] font-semibold text-neutral-900">
-                            {account.accountManager}
+                            {account.accountManager ?? "Best Bottles sales"}
                         </p>
                         <p className="font-sans text-[13px] text-neutral-500 mt-1 mb-4">
                             Contact your account manager for custom pricing, samples, or support with order changes.
@@ -71,7 +77,7 @@ export default async function PortalAccount() {
                             somewhere real: the sales inbox and the contact form. */}
                         <div className="flex flex-col gap-2">
                             <a
-                                href={`mailto:sales@bestbottles.com?subject=${encodeURIComponent(`Best Bottles account ${account.accountNumber} — ${account.companyName}`)}`}
+                                href={`mailto:sales@bestbottles.com?subject=${encodeURIComponent(`Best Bottles account ${account.accountNumber ?? "pending"} — ${account.companyName}`)}`}
                                 className="inline-flex h-11 min-h-11 items-center justify-center px-3 text-[13px] font-sans font-medium rounded-md bg-neutral-900 text-white hover:bg-neutral-800 transition-colors lg:h-8 lg:min-h-8"
                             >
                                 Email your account manager
@@ -99,11 +105,20 @@ export default async function PortalAccount() {
                             )}
                         </div>
                         <p className="font-sans text-[13px] text-neutral-500 mb-3">
-                            Where your orders ship, and the contact a freight carrier calls to
-                            book delivery. We keep this on your Shopify record too, so the
-                            warehouse ships to the same place.
+                            Your saved address is used for future portal order requests. Billing stays in your portal; existing order addresses are unchanged.
+                        </p>
+                        <p className="mb-3 text-sm text-amber-800">
+                            {account.addressSyncStatus === "awaiting_identity"
+                                ? "Shopify address sync: account linking pending."
+                                : account.addressSyncStatus === "awaiting_review"
+                                  ? "Shopify address sync: review pending."
+                                  : "Shopify address sync: not verified."}
                         </p>
                         <PortalAddressForm
+                            key={`${addresses.clerkOrgId}:${addresses.addressVersion}`}
+                            expectedOrgId={addresses.clerkOrgId ?? account.clerkOrgId}
+                            expectedVersion={addresses.addressVersion}
+                            requestId={randomUUID()}
                             shippingAddress={addresses.shippingAddress}
                             billingAddress={addresses.billingAddress}
                             action={saveAddressAction}

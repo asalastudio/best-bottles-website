@@ -105,13 +105,17 @@ export async function saveAddressAction(
 
     const separateBilling = formData.get("separateBilling") === "on";
 
+    const rawVersion = String(formData.get("expectedVersion") ?? "");
     const result = await savePortalAddressesForViewer({
+        expectedOrgId: String(formData.get("expectedOrgId") ?? ""),
+        expectedVersion: /^\d+$/.test(rawVersion) ? Number(rawVersion) : Number.NaN,
+        requestId: String(formData.get("requestId") ?? ""),
         shippingAddress: read(""),
         billingAddress: separateBilling ? read("billing_") : null,
     });
 
     if (!result.ok) {
-        return { ok: false, errors: result.errors, message: "Check the highlighted fields." };
+        return { ok: false, errors: result.errors, message: result.message ?? "Check the highlighted fields." };
     }
 
     revalidatePath("/portal/account");
@@ -120,7 +124,7 @@ export async function saveAddressAction(
     return {
         ok: true,
         errors: {},
-        message: result.shopifyWarning ?? "Address saved. Orders will ship here.",
+        message: result.shopifyWarning ?? "Address saved in your portal. Existing order addresses are unchanged.",
     };
 }
 

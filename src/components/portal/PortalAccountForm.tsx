@@ -18,10 +18,6 @@ const fieldClass =
     "w-full h-9 px-3 font-sans text-sm text-neutral-900 bg-white border border-neutral-300 rounded-md " +
     "focus:outline-none focus:border-neutral-500 focus:ring-1 focus:ring-neutral-300";
 
-function thisMonth() {
-    return new Date().toLocaleDateString("en-US", { month: "long", year: "numeric" });
-}
-
 export default function PortalAccountForm({
     organizations,
     action,
@@ -38,7 +34,7 @@ export default function PortalAccountForm({
     return (
         <form action={formAction} className="bg-white rounded-lg border border-neutral-200 px-5 py-5">
             <h2 className="font-sans text-[14px] font-semibold text-neutral-900 mb-1">
-                New wholesale account
+                Complete or update wholesale account
             </h2>
             <p className="font-sans text-[13px] text-neutral-500 mb-5">
                 Selecting an organization that already has an account updates it instead.
@@ -51,11 +47,11 @@ export default function PortalAccountForm({
                         <option value="" disabled>
                             {available.length > 0
                                 ? "Select an organization"
-                                : "Every organization already has an account"}
+                                : "Select an existing organization to review"}
                         </option>
                         {organizations.map((org) => (
                             <option key={org.id} value={org.id}>
-                                {org.name}{org.linked ? " — already onboarded" : ""}
+                                {org.name}{org.linked ? " — profile exists" : ""}
                             </option>
                         ))}
                     </select>
@@ -84,18 +80,13 @@ export default function PortalAccountForm({
                 </div>
 
                 <div>
-                    <label className={labelClass} htmlFor="netTerms">Payment terms</label>
-                    <input id="netTerms" name="netTerms" required list="known-terms" defaultValue="Net 30" className={fieldClass} />
-                    </div>
-
-                <div>
                     <label className={labelClass} htmlFor="accountManager">Account manager</label>
                     <input id="accountManager" name="accountManager" required className={fieldClass} />
                 </div>
 
                 <div>
                     <label className={labelClass} htmlFor="memberSince">Member since</label>
-                    <input id="memberSince" name="memberSince" required defaultValue={thisMonth()} className={fieldClass} />
+                    <input id="memberSince" name="memberSince" required className={fieldClass} />
                 </div>
 
                 <div className="sm:col-span-2">

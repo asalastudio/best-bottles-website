@@ -42,7 +42,12 @@ export async function listClerkOrganizationsForStaff(): Promise<ClerkOrgOption[]
     ]);
 
     const claimed = new Set(accounts.map((account) => account.clerkOrgId));
-    const { data } = await client.organizations.getOrganizationList({ limit: 100 });
+    const data = [];
+    for (let offset = 0; ; offset += 100) {
+        const page = await client.organizations.getOrganizationList({ limit: 100, offset });
+        data.push(...page.data);
+        if (!page.data.length || offset + page.data.length >= page.totalCount) break;
+    }
 
     return data
         .map((org) => ({ id: org.id, name: org.name, linked: claimed.has(org.id) }))
@@ -62,6 +67,10 @@ export interface UpsertAccountInput {
 export async function upsertPortalAccountAsStaff(input: UpsertAccountInput) {
     await requireStaffViewer();
 
+    // A submitted option can be forged or refer to a deleted organization.
+    const client = await clerkClient();
+    const org = await client.organizations.getOrganization({ organizationId: input.clerkOrgId });
+    if (org.id !== input.clerkOrgId) throw new Error("organization_mismatch");
     return await getPortalConvex().mutation(api.portal.upsertPortalAccount, {
         writeToken: getPortalConvexWriteToken(),
         clerkOrgId: input.clerkOrgId,
