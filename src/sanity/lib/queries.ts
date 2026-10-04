@@ -130,6 +130,15 @@ export const JOURNAL_SLUGS_QUERY = `
   }
 `;
 
+/** The published journal posts /blog/[slug] serves, for /server-sitemap.xml. */
+export const JOURNAL_SITEMAP_QUERY = `
+  *[_type == "journal" && defined(slug.current) && defined(publishedAt)] | order(publishedAt desc) {
+    "slug": slug.current,
+    publishedAt,
+    _updatedAt
+  }
+`;
+
 import { client, isSanityConfigured } from "./client";
 import { authenticatedServerClient, previewServerClient } from "./serverClient";
 import {

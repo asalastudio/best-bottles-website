@@ -2,8 +2,10 @@ import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 import { NextResponse, type NextFetchEvent, type NextRequest } from "next/server";
 import { CLERK_ENABLED } from "@/lib/clerk";
 import { LOCALE_HEADER, PATHNAME_HEADER } from "@/i18n/config";
-import { hasLocalePrefix } from "@/i18n/paths";
+import { hasLocalePrefix, localizeHref } from "@/i18n/paths";
 import { localeAfterProxyPass, resolveLocale } from "@/i18n/resolveLocale";
+import { productSlugExists } from "@/lib/crawl/catalog-product-slugs";
+import { NOT_FOUND_REWRITE_PATH, crawlRouteStatus } from "@/lib/crawl/route-status";
 
 const isPortalRoute = createRouteMatcher(["/portal(.*)", "/api/portal(.*)"]);
 
@@ -60,6 +62,21 @@ export default async function proxy(req: NextRequest, event: NextFetchEvent) {
         return NextResponse.redirect(url);
     }
 
+    // Real status codes for crawlers: legacy product aliases 308 to their
+    // canonical slug, and unknown products/families 404 instead of a page that
+    // says "not found" under a 200 (see src/lib/crawl/route-status.ts).
+    const crawlStatus = await crawlRouteStatus({
+        pathname: resolved.kind === "rewrite" ? resolved.rewritePath : pathname,
+        method: req.method,
+        headers: req.headers,
+        searchParams: req.nextUrl.searchParams,
+    }, productSlugExists);
+    if (crawlStatus.kind === "redirect") {
+        const url = req.nextUrl.clone();
+        url.pathname = resolved.kind === "rewrite" ? localizeHref("es", crawlStatus.pathname) : crawlStatus.pathname;
+        return NextResponse.redirect(url, 308);
+    }
+
     // Next re-invokes proxy on the rewrite destination. Keep Spanish from the
     // first pass instead of treating `/catalog` as a fresh English request.
     const locale = localeAfterProxyPass(pathname, incomingLocale);
@@ -76,13 +93,16 @@ export default async function proxy(req: NextRequest, event: NextFetchEvent) {
         return clerkRes;
     }
 
-    const localized = resolved.kind === "rewrite"
-        ? NextResponse.rewrite(new URL(`${resolved.rewritePath}${req.nextUrl.search}`, req.url), {
+    const rewritePath = crawlStatus.kind === "not-found"
+        ? NOT_FOUND_REWRITE_PATH
+        : resolved.kind === "rewrite" ? resolved.rewritePath : null;
+    const localized = rewritePath
+        ? NextResponse.rewrite(new URL(`${rewritePath}${req.nextUrl.search}`, req.url), {
             request: { headers: requestHeaders },
         })
         : (clerkRes instanceof NextResponse ? clerkRes : NextResponse.next({ request: { headers: requestHeaders } }));
 
-    if (resolved.kind === "rewrite" && clerkRes) {
+    if (rewritePath && clerkRes) {
         copyDownstreamHeaders(clerkRes, localized);
     }
     setRequestHeader(localized, LOCALE_HEADER, locale);

@@ -1,9 +1,8 @@
 import { readKitPilot } from "../../../../scripts/asset-ledger/kit-pilot.mjs";
 import { localPdpComponentKits } from "@/lib/paper-doll/local-component-kits";
 import { hasCatalogSourceHold } from "@/lib/products/catalog-listing-visibility";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import type { Metadata } from "next";
-import { redirect } from "next/navigation";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../convex/_generated/api";
 import ProductDetailClient, {
@@ -21,6 +20,7 @@ import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { resolveProductPageRedirectTarget } from "@/lib/products/pdp-redirect";
+import { productPageRobots } from "@/lib/products/pdp-robots";
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import { filterVariantsForGroupIntent } from "@/lib/products/group-variant-intent";
 import type { PdpBlock } from "@/components/PdpBlocks";
@@ -300,10 +300,10 @@ export async function generateMetadata({
     const variant = skuVariant ?? pickedVariant ?? getPrimaryVariant(data);
 
     if (!group) {
-        return {
-            title: { absolute: `Product Not Found | ${SITE_NAME}` },
-            robots: { index: false, follow: true },
-        };
+        // The page answers 404 for this slug, and Next adds its own
+        // <meta name="robots" content="noindex"> to every 404; a robots value
+        // here would print a second tag.
+        return { title: { absolute: `Product Not Found | ${SITE_NAME}` } };
     }
 
     // Product copy v2 names the page as the headline does: its title, then the option picked on the page.
@@ -333,6 +333,7 @@ export async function generateMetadata({
     return {
         title: { absolute: `${customerName} | ${SITE_NAME}` },
         description,
+        ...productPageRobots(data),
         alternates: { canonical: `${SITE_URL}/products/${activeSlug}` },
         openGraph: {
             title: `${customerName} | ${SITE_NAME}`,
@@ -358,13 +359,17 @@ export default async function ProductPage({
     searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
     const [{ slug }, resolvedSearchParams] = await Promise.all([params, searchParams]);
+    // The proxy already answers these before the page renders (a real 308 and
+    // 404, src/lib/crawl/route-status.ts); these calls cover client-side
+    // navigations and a catalogue the proxy could not reach.
     const redirectTarget = resolveProductPageRedirectTarget(slug, resolvedSearchParams);
-    if (redirectTarget) redirect(redirectTarget);
+    if (redirectTarget) permanentRedirect(redirectTarget);
     const legacyRouteOverride = getLegacyProductRouteOverride(slug);
 
     const activeSlug = legacyRouteOverride ?? slug;
     if (hasCatalogSourceHold(activeSlug)) notFound();
     const data = await getProductData(activeSlug);
+    if (!data) notFound();
     const primaryVariant = getPrimaryVariant(data);
     const [siblingGroups, pdpBlocks, platesBySku, relations, compatibility] = await Promise.all([
         getSiblingGroups(data, activeSlug),
