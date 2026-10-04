@@ -310,12 +310,12 @@ export function ExecutiveBoard({
                             }
                         />
                         <ExecutiveFigure
-                            value={analyticsConfigured ? "Collecting" : null}
+                            value={analyticsConfigured ? "Configured" : null}
                             label="PostHog"
                             availability={
                                 analyticsConfigured
-                                    ? { state: "partial", note: "Configured. Figures appear here once there is traffic to report." }
-                                    : { state: "unavailable", note: "No project token on this deployment, so nothing is being recorded." }
+                                    ? { state: "partial", note: "Unverified: a project token is present. Ingestion, consent, replay, and heatmap availability have not been checked." }
+                                    : { state: "unavailable", note: "No project token is configured on this deployment. Collection status is unverified." }
                             }
                         />
                         <ExecutiveFigure

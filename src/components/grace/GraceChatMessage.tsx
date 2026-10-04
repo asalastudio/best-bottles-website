@@ -71,7 +71,7 @@ export default function GraceChatMessage({ message }: GraceChatMessageProps) {
 
     if (isUser) {
         return (
-            <div className="flex justify-end mb-3">
+            <div data-ph-private data-ph-mask className="ph-no-capture ph-block flex justify-end mb-3">
                 <div className="max-w-[85%] px-3.5 py-2.5 text-[13px] leading-relaxed text-white bg-[#1c1c1e] break-words">
                     {message.attachments?.map((a) => (
                         a.url && a.mime.startsWith("image/") ? (
@@ -93,7 +93,8 @@ export default function GraceChatMessage({ message }: GraceChatMessageProps) {
 
     return (
         <div
-            className={`mb-4 ${message.pinned ? "pl-3" : ""}`}
+            data-ph-private data-ph-mask
+            className={`ph-no-capture ph-block mb-4 ${message.pinned ? "pl-3" : ""}`}
             style={message.pinned ? { borderLeft: "2px solid var(--color-muted-gold)" } : undefined}
         >
             <p className="border border-[#e6dccd] bg-white px-3 py-2.5 text-[13px] leading-[1.65] text-obsidian whitespace-pre-wrap break-words font-sans">
@@ -128,7 +129,7 @@ export function StreamingMessage({ text }: StreamingMessageProps) {
     if (!text) return null;
 
     return (
-        <div className="mb-4">
+        <div data-ph-private data-ph-mask className="ph-no-capture ph-block mb-4">
             <p className="border border-[#e6dccd] bg-white px-3 py-2.5 text-[13px] leading-[1.65] text-obsidian whitespace-pre-wrap break-words font-sans">
                 {text}
                 <span className="inline-block w-[3px] h-[16px] bg-obsidian/30 ml-0.5 animate-pulse rounded-[1px] align-text-bottom" />
