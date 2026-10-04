@@ -453,16 +453,19 @@ export default defineSchema({
     // Seeded manually from QuickBooks; shopifyCustomerId nullable until Shopify goes live.
     portalAccounts: defineTable({
         clerkOrgId: v.string(),
-        accountNumber: v.string(),
+        profileStatus: v.optional(v.union(v.literal("pending"), v.literal("complete"))),
+        profileCreatedAt: v.optional(v.number()),
+        profileCreatedBy: v.optional(v.string()),
+        accountNumber: v.optional(v.string()),
         companyName: v.string(),
-        tier: v.string(),                           // e.g. "The Scaler"
-        accountManager: v.string(),
+        tier: v.optional(v.string()),                           // e.g. "The Scaler"
+        accountManager: v.optional(v.string()),
         // Best Bottles extends no credit — there is no Net 30/60/90 and no
         // credit facility. The field survives only so rows seeded before that
         // was settled still validate; nothing reads it and nothing writes it.
         netTerms: v.optional(v.string()),
         taxExempt: v.boolean(),
-        memberSince: v.string(),                    // e.g. "March 2021"
+        memberSince: v.optional(v.string()),                    // e.g. "March 2021"
         shopifyCustomerId: v.optional(v.string()),  // nullable until Shopify sync
 
         // ─── Identity bridge (Clerk org ↔ Shopify customer) ───────────────
@@ -485,6 +488,9 @@ export default defineSchema({
         billingAddress: v.optional(portalAddress),
         addressUpdatedAt: v.optional(v.number()),
         addressUpdatedBy: v.optional(v.string()),
+        addressVersion: v.optional(v.number()),
+        addressRevision: v.optional(v.number()),
+        addressSyncStatus: v.optional(v.union(v.literal("awaiting_identity"), v.literal("awaiting_review"))),
     })
         .index("by_clerkOrgId", ["clerkOrgId"])
         .index("by_accountNumber", ["accountNumber"])
@@ -492,18 +498,56 @@ export default defineSchema({
         // ID and must find the owning org without scanning every account.
         .index("by_shopifyCustomerId", ["shopifyCustomerId"]),
 
+    // Durable intent only: no default-address writer or automatic retry is enabled.
+    portalAddressReconciliations: defineTable({
+        clerkOrgId: v.string(), revision: v.number(),
+        shippingAddress: v.optional(portalAddress),
+        shopifyCustomerId: v.optional(v.string()),
+        state: v.union(v.literal("awaiting_identity"), v.literal("awaiting_review"), v.literal("superseded")),
+        requestedAt: v.number(), requestedBy: v.string(),
+    }).index("by_org_revision", ["clerkOrgId", "revision"]),
+
+    // Minimal idempotency receipts: no address/contact payloads are retained.
+    portalAddressSaveRequests: defineTable({
+        clerkOrgId: v.string(), requestId: v.string(), fingerprint: v.string(),
+        requestedBy: v.string(), requestedAt: v.number(), resultVersion: v.number(),
+    }).index("by_org_request", ["clerkOrgId", "requestId"]),
+
     // Resale certificates — the seller's-permit record behind tax exemption.
     //
     // `portalAccounts.taxExempt` is a bare boolean and is the WRONG model: a
     // certificate is issued by a specific state, carries a permit number, is
     // approved by a named employee, and EXPIRES. One row per submission, kept as
     // history — never overwritten — so a lapsed certificate stays auditable.
+    certificateDocuments: defineTable({
+        clerkOrgId: v.string(), clerkUserId: v.string(), ticketHash: v.string(),
+        expiresAt: v.number(), storageId: v.optional(v.id("_storage")),
+        status: v.union(v.literal("issued"), v.literal("uploading"), v.literal("uploaded"), v.literal("verified")),
+        contentType: v.optional(v.string()), size: v.optional(v.number()), verifiedAt: v.optional(v.number()),
+    }).index("by_ticket", ["ticketHash"]).index("by_storage", ["storageId"]),
+
+    certificateNotifications: defineTable({
+        certificateId: v.id("resaleCertificates"), eventKey: v.string(),
+        event: v.union(v.literal("submitted"), v.literal("approved"), v.literal("rejected"), v.literal("sync_failed"), v.literal("synced")),
+        audience: v.union(v.literal("customer"), v.literal("staff")),
+        status: v.union(v.literal("pending"), v.literal("blocked"), v.literal("sending"), v.literal("sent"), v.literal("failed")),
+        createdAt: v.number(), attempts: v.number(), attemptId: v.optional(v.string()),
+        nextAttemptAt: v.optional(v.number()), sentAt: v.optional(v.number()),
+        providerMessageId: v.optional(v.string()), failureCode: v.optional(v.string()),
+    }).index("by_event", ["eventKey"]).index("by_certificate", ["certificateId"]),
+
     resaleCertificates: defineTable({
         clerkOrgId: v.string(),
         legalBusinessName: v.string(),
         issuingState: v.string(),                    // two-letter code, e.g. "CA"
         permitNumber: v.string(),                    // CDTFA seller's permit no. or state equivalent
         documentStorageId: v.optional(v.id("_storage")), // uploaded CDTFA-230 or equivalent
+        // Unverified customer declaration, separate from staff-approved expiresAt.
+        customerDeclaredExpiration: v.optional(v.union(
+            v.object({ kind: v.literal("date"), date: v.string() }),
+            v.object({ kind: v.literal("none") }),
+            v.object({ kind: v.literal("unspecified") }),
+        )),
 
         status: v.union(
             v.literal("pending"),
@@ -525,6 +569,9 @@ export default defineSchema({
         // Shopify are separate facts and must not be conflated.
         shopifyExemptionCode: v.optional(v.string()),
         shopifySyncedAt: v.optional(v.number()),
+        syncAttemptId: v.optional(v.string()), syncStartedAt: v.optional(v.number()),
+        syncFailure: v.optional(v.string()),
+
     })
         .index("by_orgId", ["clerkOrgId"])
         .index("by_status", ["status"])

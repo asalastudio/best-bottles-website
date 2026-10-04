@@ -81,7 +81,9 @@ export default function PortalAddressForm({
     shippingAddress,
     billingAddress,
     action,
+    expectedOrgId, expectedVersion, requestId,
 }: {
+    expectedOrgId: string; expectedVersion: number; requestId: string;
     shippingAddress: PortalAddress | null;
     billingAddress: PortalAddress | null;
     action: (prev: AddressFormState, formData: FormData) => Promise<AddressFormState>;
@@ -102,6 +104,9 @@ export default function PortalAddressForm({
             className="rounded-lg border px-5 py-5"
             style={{ borderColor: "var(--color-rule)", background: "var(--color-surface)" }}
         >
+            <input type="hidden" name="expectedOrgId" value={expectedOrgId} />
+            <input type="hidden" name="expectedVersion" value={expectedVersion} />
+            <input type="hidden" name="requestId" value={requestId} />
             <div className="grid gap-4 sm:grid-cols-2">
                 <Field name="contactName" defaultValue={ship.contactName} errors={state.errors} required autoComplete="name" />
                 <Field name="phone" defaultValue={ship.phone} errors={state.errors} required autoComplete="tel" placeholder="(510) 555-0142" />

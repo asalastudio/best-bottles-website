@@ -1,4 +1,5 @@
 import { ORDER_STATUS_LABELS, type OrderStatus } from "@/../convex/lib/shopifyOrderTruth";
+import CertificateStatusRefresh from "@/components/portal/CertificateStatusRefresh";
 import Link from "next/link";
 import { PortalTag, StatCard, PortalButton } from "@/components/portal/ui";
 import { getPortalDashboardData } from "@/lib/portal/server";
@@ -37,6 +38,7 @@ export default async function PortalDashboard() {
     return (
         <div className="mx-auto max-w-[1200px] px-4 py-4 lg:px-6 lg:py-6">
 
+            <CertificateStatusRefresh />
             {/* Welcome bar */}
             <div className="mb-5 flex flex-col gap-3 lg:mb-6 lg:flex-row lg:items-center lg:justify-between">
                 <div className="min-w-0">
@@ -44,7 +46,7 @@ export default async function PortalDashboard() {
                         Welcome back, {companyName}
                     </h1>
                     <p className="mt-0.5 font-sans text-sm text-neutral-400">
-                        {accountNumber} · {account?.taxExempt ? "Tax Exempt" : "Taxable"}
+                        {accountNumber} · {account?.certificateTaxStatus === "review_required" ? "Checkout status needs review" : account?.certificateTaxStatus === "sync_pending" ? "Approved · sync pending" : account?.certificateTaxStatus === "under_review" ? "Under review" : account?.taxExempt ? "Tax Exempt" : "Taxable"}
                     </p>
                 </div>
                 <div className="flex flex-wrap items-center gap-2">

@@ -3,6 +3,8 @@ import { v } from "convex/values";
 import type { Doc } from "./_generated/dataModel";
 import { serverQuery, verifyWriteToken } from "./portalAuth";
 import { orderStatusFromEvidence, sameSourceValue } from "./lib/shopifyOrderTruth";
+import { accountCertificateStatus } from "./certificateWorkflow";
+import { reconcileAddressIdentity, saveAddressReconciliation } from "./lib/portalAccountFoundation";
 import { captureServerEvent, distinctIdFor } from "./posthog";
 
 function visibleOrderStatus(order: Doc<"portalOrders">) {
@@ -70,7 +72,7 @@ export const getShellData = serverQuery({
             .collect();
 
         return {
-            account,
+            account: await accountCertificateStatus(ctx, account),
             inTransitCount: orders.filter((order) => visibleOrderStatus(order) === "in_transit").length,
             draftCount: drafts.filter((draft) => draft.status !== "submitted").length,
         };
@@ -80,10 +82,11 @@ export const getShellData = serverQuery({
 export const getAccountByOrg = serverQuery({
     args: { clerkOrgId: v.string() },
     handler: async (ctx, args) => {
-        return await ctx.db
+        const account = await ctx.db
             .query("portalAccounts")
             .withIndex("by_clerkOrgId", (q) => q.eq("clerkOrgId", args.clerkOrgId))
             .unique();
+        return accountCertificateStatus(ctx, account);
     },
 });
 
@@ -92,7 +95,7 @@ export const listPortalAccounts = serverQuery({
     args: {},
     handler: async (ctx) => {
         const accounts = await ctx.db.query("portalAccounts").collect();
-        return accounts.sort((a, b) => a.companyName.localeCompare(b.companyName));
+        return Promise.all(accounts.sort((a, b) => a.companyName.localeCompare(b.companyName)).map(account => accountCertificateStatus(ctx, account))).then(rows => rows.filter((row): row is NonNullable<typeof row> => row !== null));
     },
 });
 
@@ -129,6 +132,7 @@ export const upsertPortalAccount = mutation({
             .unique();
 
         const fields = {
+            profileStatus: "complete" as const,
             accountNumber: args.accountNumber,
             companyName: args.companyName,
             tier: args.tier,
@@ -226,6 +230,7 @@ export const linkShopifyCustomer = mutation({
             shopifyCustomerLinkedBy: account.shopifyCustomerLinkedBy ?? args.clerkUserId,
         });
 
+        await reconcileAddressIdentity(ctx, account, args.shopifyCustomerId);
         return {
             accountId: account._id,
             shopifyCustomerId: args.shopifyCustomerId,
@@ -298,7 +303,7 @@ export const getDashboardData = serverQuery({
             .slice(0, 3);
 
         return {
-            account,
+            account: await accountCertificateStatus(ctx, account),
             stats: {
                 ytdSpend,
                 activeOrderCount: activeOrders.length,
@@ -1035,6 +1040,8 @@ export const saveAccountAddress = mutation({
         writeToken: v.string(),
         clerkOrgId: v.string(),
         clerkUserId: v.string(),
+        expectedVersion: v.number(),
+        requestId: v.string(),
         shippingAddress: portalAddressValidator,
         billingAddress: v.optional(portalAddressValidator),
     },
@@ -1048,12 +1055,7 @@ export const saveAccountAddress = mutation({
             .unique();
         if (!account) throw new Error("account_not_found");
 
-        await ctx.db.patch(account._id, {
-            shippingAddress: args.shippingAddress,
-            billingAddress: args.billingAddress,
-            addressUpdatedAt: Date.now(),
-            addressUpdatedBy: args.clerkUserId,
-        });
+        await saveAddressReconciliation(ctx, account, args);
         return null;
     },
 });
