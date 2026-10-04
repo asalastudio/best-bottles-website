@@ -20,7 +20,7 @@ export const NEVER_RECORD_PREFIXES = [
     "/account", "/auth", "/cart", "/contact", "/request-quote", "/request-sample",
 ] as const;
 
-export function publicCapturePath(value: string | null | undefined): string | null {
+function normalizeCapturePath(value: string | null | undefined): string | null {
     if (typeof value !== "string" || !value) return null;
     // Reject ambiguous/encoded paths before URL normalisation resolves dot segments.
     if (/[\\%\s]/.test(value.split(/[?#]/, 1)[0]) || /(?:^|\/)\.{1,2}(?:\/|$)/.test(value)) return null;
@@ -31,8 +31,24 @@ export function publicCapturePath(value: string | null | undefined): string | nu
         else return null;
     } catch { return null; }
     // The app serves Spanish through an /es rewrite. Other locale prefixes fail closed.
-    path = path.replace(/^\/es(?=\/|$)/, "") || "/";
-    return PUBLIC_ROUTES.some((route) => route.test(path)) ? path : null;
+    return path.replace(/^\/es(?=\/|$)/, "") || "/";
+}
+
+export function publicCapturePath(value: string | null | undefined): string | null {
+    const path = normalizeCapturePath(value);
+    return path !== null && PUBLIC_ROUTES.some((route) => route.test(path)) ? path : null;
+}
+
+/**
+ * The cart page is private for replay and autocapture, but the named cart and
+ * checkout events (counts, totals and SKUs only) are the purchase funnel and
+ * may be sent from it. See CART_EVENTS in capturePrivacy.ts.
+ */
+const CART_ROUTES = [/^\/cart\/?$/];
+
+export function cartCapturePath(value: string | null | undefined): string | null {
+    const path = normalizeCapturePath(value);
+    return path !== null && CART_ROUTES.some((route) => route.test(path)) ? path : null;
 }
 
 export function mayRecordSession(pathname: string | null | undefined): boolean {

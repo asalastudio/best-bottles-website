@@ -8,7 +8,7 @@
 
 import { captureIdentityRevision, identityCaptureReady, reconcileCaptureIdentity, setCaptureIdentity, type AnalyticsIdentity } from "@/lib/analytics/captureIdentity";
 import type { PostHog } from "posthog-js";
-import { CAPTURE_PRIVACY_CONFIG, mayCaptureNow, minimizeProperties } from "@/lib/analytics/capturePrivacy";
+import { CAPTURE_PRIVACY_CONFIG, CART_EVENTS, mayCaptureEventNow, mayCaptureNow, minimizeProperties } from "@/lib/analytics/capturePrivacy";
 import { APPLICATOR_NAV, CATALOG_FAMILIES, type ApplicatorNavValue } from "@/lib/catalogFilters";
 
 // ─── Adapter interface ───────────────────────────────────────────────────────
@@ -73,12 +73,13 @@ function withPosthog(call: (posthog: PostHog) => void) {
   pendingPosthogCalls.push(call);
 }
 
-function withPublicPosthog(call: (posthog: PostHog) => void) {
-  if (!mayCaptureNow() || !identityCaptureReady()) return;
+function withPublicPosthog(call: (posthog: PostHog) => void, eventName?: string) {
+  if (!mayCaptureEventNow(eventName) || !identityCaptureReady()) return;
   const revision = captureIdentityRevision();
   withPosthog((posthog) => {
-    if (!mayCaptureNow() || !identityCaptureReady() || revision !== captureIdentityRevision()) return;
-    reconcileCaptureIdentity(posthog, true);
+    if (!mayCaptureEventNow(eventName) || !identityCaptureReady() || revision !== captureIdentityRevision()) return;
+    // Identify only on reviewed public routes; a cart event alone never does.
+    reconcileCaptureIdentity(posthog, mayCaptureNow());
     call(posthog);
   });
 }
@@ -140,8 +141,8 @@ const posthogAdapter: AnalyticsAdapter = {
       timing.duration_seconds = Math.round((Date.now() - startedAt) / 100) / 10;
       eventStartedAt.delete(event);
     }
-    const payload = minimizeProperties({ ...superProperties, ...timing, ...(properties ?? {}) });
-    withPublicPosthog((posthog) => posthog.capture(event, payload));
+    const payload = minimizeProperties({ ...superProperties, ...timing, ...(properties ?? {}) }, CART_EVENTS.has(event));
+    withPublicPosthog((posthog) => posthog.capture(event, payload), event);
   },
   setUserProperties(properties) {
     const traits = minimizeProperties(normalizeReservedTraits(properties));

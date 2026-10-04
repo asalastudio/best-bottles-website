@@ -15,6 +15,43 @@ const event = (name: string, properties = {}): CaptureResult => ({ event: name, 
 beforeEach(() => { vi.clearAllMocks(); vi.resetModules(); window.history.replaceState({}, "", "/catalog"); });
 afterEach(() => { vi.unstubAllGlobals(); });
 
+describe("cart funnel events on the cart page", () => {
+    beforeEach(() => { window.history.replaceState({}, "", "/cart?ref=private@example.com"); });
+
+    it.each(["Cart Item Added", "Cart Item Removed", "Checkout Started", "Checkout Redirected", "Checkout Failed"])(
+        "keeps %s with counts, totals and SKUs, and the cart path without its query", (name) => {
+            const result = beforeSendPublicEvent(event(name, {
+                itemCount: 2, cartTotal: 61.5, skus: "GB-CYL-CLR-9ML-SPR-SBLK", error: "private message",
+                $current_url: "https://www.bestbottles.com/cart?ref=private@example.com#x",
+                $set: { email: "private@example.com" },
+            }));
+            expect(result?.properties).toEqual({
+                itemCount: 2, cartTotal: 61.5, skus: "GB-CYL-CLR-9ML-SPR-SBLK", $current_url: "https://www.bestbottles.com/cart",
+            });
+        });
+
+    it("still drops every other event on the cart page", () => {
+        for (const name of ["$autocapture", "$pageview", "$pageleave", "$snapshot", "$$heatmap", "$dead_click", "$exception", "Grace Tool Called", "Catalog Filtered"]) {
+            expect(beforeSendPublicEvent(event(name, { $current_url: "https://www.bestbottles.com/cart" }))).toBeNull();
+        }
+    });
+
+    it("does not open private routes to cart events", () => {
+        for (const route of ["/portal/orders", "/contact", "/cart/private", "/es/cart/x", "/%63art"]) {
+            window.history.replaceState({}, "", route);
+            expect(beforeSendPublicEvent(event("Checkout Started", { itemCount: 1 }))).toBeNull();
+        }
+    });
+
+    it("sends checkoutStarted from the cart page through the adapter", async () => {
+        const { analytics } = await import("@/lib/analytics");
+        await analytics.init("test-only");
+        analytics.checkoutStarted({ itemCount: 1, cartTotal: 12, skus: "GB-CYL-CLR-9ML-SPR-SBLK" });
+        expect(sdk.capture).toHaveBeenCalledWith("Checkout Started", expect.objectContaining({ itemCount: 1, cartTotal: 12 }));
+        expect(sdk.identify).not.toHaveBeenCalled();
+    });
+});
+
 describe("public capture boundary", () => {
     it.each([
         "/new-private-route", "/account/address", "/auth/callback", "/portal/account", "/team/resale-certificates",
