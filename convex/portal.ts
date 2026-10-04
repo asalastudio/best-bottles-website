@@ -2,6 +2,7 @@ import { mutation } from "./_generated/server";
 import { v } from "convex/values";
 import type { Doc } from "./_generated/dataModel";
 import { serverQuery, verifyWriteToken } from "./portalAuth";
+import { accountCertificateStatus } from "./certificateWorkflow";
 import { captureServerEvent, distinctIdFor } from "./posthog";
 
 function orderTotal(order: Doc<"portalOrders">): number | null {
@@ -65,7 +66,7 @@ export const getShellData = serverQuery({
             .collect();
 
         return {
-            account,
+            account: await accountCertificateStatus(ctx, account),
             inTransitCount: orders.filter((order) => order.status === "in_transit").length,
             draftCount: drafts.filter((draft) => draft.status !== "submitted").length,
         };
@@ -75,10 +76,11 @@ export const getShellData = serverQuery({
 export const getAccountByOrg = serverQuery({
     args: { clerkOrgId: v.string() },
     handler: async (ctx, args) => {
-        return await ctx.db
+        const account = await ctx.db
             .query("portalAccounts")
             .withIndex("by_clerkOrgId", (q) => q.eq("clerkOrgId", args.clerkOrgId))
             .unique();
+        return accountCertificateStatus(ctx, account);
     },
 });
 
@@ -87,7 +89,7 @@ export const listPortalAccounts = serverQuery({
     args: {},
     handler: async (ctx) => {
         const accounts = await ctx.db.query("portalAccounts").collect();
-        return accounts.sort((a, b) => a.companyName.localeCompare(b.companyName));
+        return Promise.all(accounts.sort((a, b) => a.companyName.localeCompare(b.companyName)).map(account => accountCertificateStatus(ctx, account))).then(rows => rows.filter((row): row is NonNullable<typeof row> => row !== null));
     },
 });
 
@@ -293,7 +295,7 @@ export const getDashboardData = serverQuery({
             .slice(0, 3);
 
         return {
-            account,
+            account: await accountCertificateStatus(ctx, account),
             stats: {
                 ytdSpend,
                 activeOrderCount: activeOrders.length,

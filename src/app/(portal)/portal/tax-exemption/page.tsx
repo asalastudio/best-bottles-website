@@ -1,10 +1,12 @@
+import { customerDeclaredExpirationLabel, customerDeclaredExpirationIsPast } from "@/lib/portal/certificateExpiration";
 export const dynamic = "force-dynamic";
 
 import { PageHeader, PortalTag } from "@/components/portal/ui";
+import CertificateStatusRefresh from "@/components/portal/CertificateStatusRefresh";
 import ResaleCertificateForm from "@/components/portal/ResaleCertificateForm";
 import { getCertificatesForViewer } from "@/lib/portal/certificates";
 import { getPortalShellData } from "@/lib/portal/server";
-import { createCertificateUploadUrlAction, submitCertificateAction } from "../actions";
+import { createCertificateUploadUrlAction, submitCertificateAction, validateCertificateUploadAction } from "../actions";
 
 function formatDate(value: number | undefined) {
     if (!value) return "—";
@@ -30,7 +32,7 @@ function statusVariant(status: string): "gold" | "green" | "muted" {
 }
 
 export default async function PortalTaxExemption() {
-    const [{ certificates, active }, shell] = await Promise.all([
+    const [{ certificates, active, asOf }, shell] = await Promise.all([
         getCertificatesForViewer(),
         getPortalShellData(),
     ]);
@@ -43,6 +45,7 @@ export default async function PortalTaxExemption() {
 
     return (
         <div className="mx-auto max-w-[900px] px-4 py-4 lg:px-6 lg:py-6">
+            <CertificateStatusRefresh />
             <PageHeader
                 eyebrow="Tax Exemption"
                 title="Resale certificate"
@@ -67,17 +70,23 @@ export default async function PortalTaxExemption() {
                                 </dd>
                             </dl>
                         </div>
-                        <PortalTag variant="green">Tax Exempt</PortalTag>
+                        <PortalTag variant={active.shopifySyncedAt ? "green" : "gold"}>{active.shopifySyncedAt ? "Checkout exempt" : "Approved · sync pending"}</PortalTag>
                     </div>
 
                     {!active.shopifySyncedAt && (
-                        // Approved here but never written to Shopify — checkout will
-                        // still charge tax, so say so rather than imply otherwise.
+                        // An approval is not proof of the current checkout state.
                         <p className="font-sans text-[12px] text-amber-700 mt-4 pt-4 border-t border-neutral-100">
-                            This exemption hasn&rsquo;t finished syncing to checkout yet. Orders placed
-                            right now may still be taxed — your account manager has been notified.
+                            Checkout sync is not yet confirmed. Orders placed
+                            right now may still be taxed. Your status is visible to staff; email delivery is not active.
                         </p>
                     )}
+                </div>
+            )}
+
+            {shell.account?.certificateTaxStatus === "review_required" && (
+                <div className="mb-5 rounded-lg border border-amber-200 bg-white px-5 py-5">
+                    <p className="text-sm font-medium">Checkout status needs review</p>
+                    <p className="mt-1.5 text-sm text-neutral-500">A previous exemption may still apply while staff reconciles checkout. A replacement submission does not confirm or remove it.</p>
                 </div>
             )}
 
@@ -87,9 +96,11 @@ export default async function PortalTaxExemption() {
                     <p className="font-sans text-[13px] text-neutral-500 mt-1.5 leading-relaxed">
                         Submitted {formatDate(pending.submittedAt)}. A Best Bottles employee is
                         verifying permit {pending.permitNumber} against {pending.issuingState}&rsquo;s
-                        registry. Orders placed now are charged sales tax; once approved, tax comes
-                        off automatically.
+                        registry. Approval and successful checkout sync are required to confirm
+                        this submission&rsquo;s exemption.
                     </p>
+                    <p className="mt-2 text-[13px] text-neutral-600">Your declared expiration (not yet verified): {customerDeclaredExpirationLabel(pending.customerDeclaredExpiration)}</p>
+                    {customerDeclaredExpirationIsPast(pending.customerDeclaredExpiration, asOf) && <p className="mt-1 text-xs text-amber-700">This is a past date. Staff will check the supporting document.</p>}
                 </div>
             )}
 
@@ -107,10 +118,11 @@ export default async function PortalTaxExemption() {
                 </div>
             )}
 
-            {!pending && !active && (
+            {!active && (
                 <ResaleCertificateForm
                     createUploadUrl={createCertificateUploadUrlAction}
                     submitAction={submitCertificateAction}
+                    validateUpload={validateCertificateUploadAction}
                     defaultBusinessName={shell.account?.companyName}
                 />
             )}
@@ -131,6 +143,7 @@ export default async function PortalTaxExemption() {
                             >
                                 <p data-label="Business" className="font-sans text-[13px] text-neutral-900">
                                     {cert.legalBusinessName}
+                                    <span className="mt-1 block text-xs text-neutral-500">Declared expiration: {customerDeclaredExpirationLabel(cert.customerDeclaredExpiration)}</span>
                                 </p>
                                 <p data-label="State" className="font-sans text-[13px] text-neutral-500">{cert.issuingState}</p>
                                 <p data-label="Submitted" className="font-sans text-[13px] text-neutral-500 tabular-nums">
@@ -138,7 +151,7 @@ export default async function PortalTaxExemption() {
                                 </p>
                                 <div data-label="Status" className="flex justify-end">
                                     <PortalTag variant={statusVariant(cert.status)}>
-                                        {STATUS_LABEL[cert.status] ?? cert.status}
+                                        {cert.status === "approved" && cert.expiresAt !== undefined && cert.expiresAt <= asOf ? "Expired" : cert.status === "approved" && !cert.shopifySyncedAt ? "Approved · sync pending" : STATUS_LABEL[cert.status] ?? cert.status}
                                     </PortalTag>
                                 </div>
                             </div>

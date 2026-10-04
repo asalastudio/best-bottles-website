@@ -1,5 +1,7 @@
 "use server";
 
+import { parseCustomerDeclaredExpiration } from "@/lib/portal/certificateExpiration";
+
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import type { SubmitDraftState } from "@/components/portal/SubmitDraftForm";
@@ -20,6 +22,8 @@ import {
 } from "@/lib/portal/server";
 import {
     approveCertificateAsStaff,
+    retryCertificateSyncAsStaff,
+    validateUploadedCertificateForViewer,
     generateCertificateUploadUrlForViewer,
     rejectCertificateAsStaff,
     submitResaleCertificateForViewer,
@@ -126,6 +130,11 @@ export async function createCertificateUploadUrlAction() {
     return await generateCertificateUploadUrlForViewer();
 }
 
+export async function validateCertificateUploadAction(documentId: string) {
+    try { return { storageId: String(await validateUploadedCertificateForViewer(documentId)), error: null }; }
+    catch { return { storageId: null, error: "Upload a readable, unencrypted PDF, PNG or JPEG under 15 MB." }; }
+}
+
 export type CertificateSubmitState = { error: string | null; ok: boolean };
 
 const STATE_NAMES: Record<string, string> = { XX: "that state" };
@@ -150,12 +159,23 @@ export async function submitCertificateAction(
         return { ok: false, error: "Attach a photo or PDF of the certificate — we can't verify a permit number on its own." };
     }
 
+    let customerDeclaredExpiration;
+    try {
+        customerDeclaredExpiration = parseCustomerDeclaredExpiration(
+            formData.has("customerExpirationKind") ? String(formData.get("customerExpirationKind")) : undefined,
+            String(formData.get("customerExpirationDate") ?? "").trim(),
+        );
+    } catch {
+        return { ok: false, error: "Enter a valid expiration date from the document, or choose no expiration / not sure." };
+    }
+
     try {
         await submitResaleCertificateForViewer({
             legalBusinessName,
             issuingState,
             permitNumber,
             documentStorageId: documentStorageId || undefined,
+            customerDeclaredExpiration,
         });
     } catch (err) {
         const message = err instanceof Error ? err.message : String(err);
@@ -168,34 +188,44 @@ export async function submitCertificateAction(
         return { ok: false, error: "We couldn't submit that certificate. Try again, or contact your account manager." };
     }
 
-    revalidatePath("/portal/tax-exemption");
-    revalidatePath("/portal");
+    revalidateCertificateViews();
     return { ok: true, error: null };
 }
 
-export async function approveCertificateAction(formData: FormData) {
+function revalidateCertificateViews() {
+    for (const path of ["/portal/tax-exemption", "/portal", "/portal/account", "/team", "/team/portal-accounts", "/team/resale-certificates"]) revalidatePath(path);
+}
+export type CertificateReviewState = { ok: boolean; message: string };
+const reviewError = { ok: false, message: "The review could not be saved. Check that the document is verified and the submission is still pending." };
+export async function approveCertificateAction(formData: FormData): Promise<CertificateReviewState> {
     const certificateId = String(formData.get("certificateId") ?? "");
     const expiryRaw = String(formData.get("expiresAt") ?? "").trim();
-    if (!certificateId) return;
-
-    // A date input gives a local calendar day; certificates lapse at end of day.
-    const expiresAt = expiryRaw ? new Date(`${expiryRaw}T23:59:59`).getTime() : undefined;
-
-    await approveCertificateAsStaff({
-        certificateId,
-        expiresAt: Number.isFinite(expiresAt) ? expiresAt : undefined,
-    });
-
-    revalidatePath("/team/resale-certificates");
+    if (!certificateId) return reviewError;
+    // Explicit UTC date boundary avoids host-local date differences.
+    const expiresAt = expiryRaw ? new Date(`${expiryRaw}T23:59:59.999Z`).getTime() : undefined;
+    if (expiryRaw && (!/^\d{4}-\d{2}-\d{2}$/.test(expiryRaw) || !Number.isFinite(expiresAt) || new Date(expiresAt!).toISOString().slice(0, 10) !== expiryRaw)) return { ok: false, message: "Choose a valid expiry date." };
+    try {
+        const result = await approveCertificateAsStaff({ certificateId, expiresAt });
+        revalidateCertificateViews();
+        return { ok: true, message: result.exemptionLive ? "Review approved; checkout exemption confirmed." : "Review approved. Checkout exemption is not confirmed; sync requires attention. Email delivery is not active." };
+    } catch { return reviewError; }
 }
-
-export async function rejectCertificateAction(formData: FormData) {
+export async function retryCertificateSyncAction(formData: FormData): Promise<CertificateReviewState> {
+    try {
+        const result = await retryCertificateSyncAsStaff(String(formData.get("certificateId") ?? ""));
+        revalidateCertificateViews();
+        return { ok: result.exemptionLive, message: result.exemptionLive ? "Checkout exemption confirmed." : result.syncBlockedReason === "activation_required" ? "Checkout sync is not activated. No Shopify changes were made." : "Checkout sync needs attention. The review decision has not changed." };
+    } catch { return { ok: false, message: "Sync is already in progress or this certificate is no longer eligible. Refresh to check its status." }; }
+}
+export async function rejectCertificateAction(formData: FormData): Promise<CertificateReviewState> {
     const certificateId = String(formData.get("certificateId") ?? "");
     const reviewNote = String(formData.get("reviewNote") ?? "").trim();
-    if (!certificateId || !reviewNote) return;
-
-    await rejectCertificateAsStaff({ certificateId, reviewNote });
-    revalidatePath("/team/resale-certificates");
+    if (!certificateId || !reviewNote) return { ok: false, message: "Enter a rejection reason for the customer." };
+    try {
+        await rejectCertificateAsStaff({ certificateId, reviewNote });
+        revalidateCertificateViews();
+        return { ok: true, message: "Rejection saved and visible in the customer portal. Email delivery is not active." };
+    } catch { return reviewError; }
 }
 
 // ─── Order pad ──────────────────────────────────────────────────────────────

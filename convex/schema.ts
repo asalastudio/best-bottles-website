@@ -498,12 +498,35 @@ export default defineSchema({
     // certificate is issued by a specific state, carries a permit number, is
     // approved by a named employee, and EXPIRES. One row per submission, kept as
     // history — never overwritten — so a lapsed certificate stays auditable.
+    certificateDocuments: defineTable({
+        clerkOrgId: v.string(), clerkUserId: v.string(), ticketHash: v.string(),
+        expiresAt: v.number(), storageId: v.optional(v.id("_storage")),
+        status: v.union(v.literal("issued"), v.literal("uploading"), v.literal("uploaded"), v.literal("verified")),
+        contentType: v.optional(v.string()), size: v.optional(v.number()), verifiedAt: v.optional(v.number()),
+    }).index("by_ticket", ["ticketHash"]).index("by_storage", ["storageId"]),
+
+    certificateNotifications: defineTable({
+        certificateId: v.id("resaleCertificates"), eventKey: v.string(),
+        event: v.union(v.literal("submitted"), v.literal("approved"), v.literal("rejected"), v.literal("sync_failed"), v.literal("synced")),
+        audience: v.union(v.literal("customer"), v.literal("staff")),
+        status: v.union(v.literal("pending"), v.literal("blocked"), v.literal("sending"), v.literal("sent"), v.literal("failed")),
+        createdAt: v.number(), attempts: v.number(), attemptId: v.optional(v.string()),
+        nextAttemptAt: v.optional(v.number()), sentAt: v.optional(v.number()),
+        providerMessageId: v.optional(v.string()), failureCode: v.optional(v.string()),
+    }).index("by_event", ["eventKey"]).index("by_certificate", ["certificateId"]),
+
     resaleCertificates: defineTable({
         clerkOrgId: v.string(),
         legalBusinessName: v.string(),
         issuingState: v.string(),                    // two-letter code, e.g. "CA"
         permitNumber: v.string(),                    // CDTFA seller's permit no. or state equivalent
         documentStorageId: v.optional(v.id("_storage")), // uploaded CDTFA-230 or equivalent
+        // Unverified customer declaration, separate from staff-approved expiresAt.
+        customerDeclaredExpiration: v.optional(v.union(
+            v.object({ kind: v.literal("date"), date: v.string() }),
+            v.object({ kind: v.literal("none") }),
+            v.object({ kind: v.literal("unspecified") }),
+        )),
 
         status: v.union(
             v.literal("pending"),
@@ -525,6 +548,9 @@ export default defineSchema({
         // Shopify are separate facts and must not be conflated.
         shopifyExemptionCode: v.optional(v.string()),
         shopifySyncedAt: v.optional(v.number()),
+        syncAttemptId: v.optional(v.string()), syncStartedAt: v.optional(v.number()),
+        syncFailure: v.optional(v.string()),
+
     })
         .index("by_orgId", ["clerkOrgId"])
         .index("by_status", ["status"])
