@@ -1,5 +1,6 @@
 import { isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
+import { resolveCatalogCardPurchaseVariant, type CatalogPurchaseVariant } from "./catalog-card-purchase";
 import {
     resolveCatalogGroupSku,
     catalogGroupSkuLabel,
@@ -35,6 +36,8 @@ export type CatalogLineItem = {
     variantCount: number;
     priceFrom: number | null;
     thumbnailUrl: string | null;
+    /** Exact ordered SKU's published ladder; never the group's cheapest sibling. */
+    purchaseVariant?: CatalogPurchaseVariant | null;
 };
 
 type VariantPreview = CatalogSearchVariantPreviewRow["variants"][number];
@@ -87,6 +90,10 @@ export function buildCatalogLineItem(
     const sku = resolveCatalogGroupSku(group._id, result.primarySkus ?? [], result.variantPreviewRows ?? []);
     const variants = result.variantPreviewRows?.find((row) => row.groupId === group._id)?.variants ?? [];
     const variant = pickRepresentativeVariant(variants, sku.websiteSku ?? sku.graceSku);
+    const orderableSku = sku.websiteSku ?? sku.graceSku ?? null;
+    const purchase = resolveCatalogCardPurchaseVariant(variants, { primarySku: orderableSku, productTitle: group.displayName });
+    const purchaseVariant = purchase && orderableSku
+        && (purchase.websiteSku === orderableSku || purchase.graceSku === orderableSku) ? purchase : null;
 
     return {
         groupId: group._id,
@@ -109,6 +116,7 @@ export function buildCatalogLineItem(
         variantCount: group.variantCount,
         priceFrom: group.priceRangeMin,
         thumbnailUrl: getCatalogVariantThumbnail(variant) ?? usableProductImageUrl(group.heroImageUrl),
+        purchaseVariant,
     };
 }
 

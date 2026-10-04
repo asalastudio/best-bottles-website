@@ -128,12 +128,17 @@ export default async function PortalAccount() {
             ) : (
                 <div className="bg-white rounded-lg border border-neutral-200 px-6 py-6">
                     <h2 className="font-sans text-[18px] font-semibold text-neutral-900 mb-2">
-                        Account sync pending
+                        Your account is still being prepared
                     </h2>
                     <p className="font-sans text-sm text-neutral-500 leading-relaxed">
-                        Your Clerk organization is active, but there is no matching `portalAccounts` record in Convex yet.
-                        Once your account is seeded, this page will show live terms, tax status, account manager, and spend.
+                        Your organization is selected, but your account details are not available yet.
+                        Refresh this page to try again. If the address form still does not appear, contact Best Bottles so we can finish setting up your account.
                     </p>
+                    <div className="mt-4 flex flex-wrap gap-4 text-sm">
+                        <a href="/portal/account" className="underline underline-offset-4">Refresh account</a>
+                        <a href="mailto:sales@bestbottles.com?subject=Portal%20account%20setup%20and%20shipping%20address" className="underline underline-offset-4">Contact Best Bottles</a>
+                        <Link href="/portal/drafts" className="underline underline-offset-4">Return to saved orders</Link>
+                    </div>
                 </div>
             )}
         </div>
