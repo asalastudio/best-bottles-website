@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import FormPage from "@/components/FormPage";
+import { FAQ_POLICY_ENTRIES } from "@/lib/faqPolicy";
 import { SITE_URL } from "@/lib/seo";
 
 const FIELDS = [
@@ -26,7 +27,7 @@ export default function RequestSamplePage() {
             <FormPage
                 formType="sample"
                 title="Request a Sample"
-                subtitle="Experience the quality of our glass firsthand. Tell us what you're looking for and we'll put together a curated sample package."
+                subtitle={FAQ_POLICY_ENTRIES.find((entry) => entry.id === "samples")!.a}
                 fields={FIELDS}
             />
         </Suspense>

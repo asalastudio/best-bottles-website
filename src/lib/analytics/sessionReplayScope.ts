@@ -1,55 +1,56 @@
-/**
- * Which pages may be recorded.
- *
- * Session replay captures the rendered DOM, so the question is not "is this
- * page interesting" but "what is on it". The storefront is a public catalogue —
- * every slug and price on it is already served to anyone who asks, and the
- * pageview URLs PostHog already receives carry the same slugs. There is
- * nothing there to protect.
- *
- * The authenticated surfaces are a different matter. The portal carries
- * shipping addresses, billing emails, order values and seller's-permit
- * numbers; /team carries the certificate queue with uploaded documents;
- * /executive carries the business figures. None of that should reach a
- * recording, and input masking does not help, because most of it is rendered
- * text rather than form values.
- *
- * Evaluated fail-closed: anything unparseable or unexpected returns false, so a
- * new authenticated route is not recorded merely because nobody remembered to
- * add it here.
- */
-const NEVER_RECORD = [
-    "/portal",
-    "/team",
-    "/executive",
-    "/studio",
-    "/sign-in",
-    "/sign-up",
-    // The public Grace workspace takes free-text prompts, which people use to
-    // describe their own unreleased products.
-    "/grace-workspace",
+/** Reviewed public routes only. New routes remain private until reviewed here. */
+const PUBLIC_ROUTES = [
+    /^\/$/,
+    /^\/(?:catalog|collections|bottle-families|matrix|about|blog|resources|privacy|terms|shipping-returns)\/?$/,
+    /^\/catalog\/[a-z0-9-]+\/?$/,
+    /^\/catalog\/application\/[a-z0-9-]+\/?$/,
+    /^\/(?:products|blog)\/[a-z0-9-]+\/?$/,
+    /^\/collections\/boston-round-30ml\/?$/,
+];
+
+// PostHog checks full URLs at the DOM event, before collecting element properties.
+export const PUBLIC_CAPTURE_URL_PATTERNS = PUBLIC_ROUTES.map((route) => new RegExp(
+    `^https?://[^/?#]+(?:/es)?${route.source.slice(1, -1)}(?:[?#].*)?$`,
+));
+PUBLIC_CAPTURE_URL_PATTERNS.push(/^https?:\/\/[^/?#]+\/es(?:[?#].*)?$/);
+
+// Retained as documentation for callers; this is NOT the capture policy.
+export const NEVER_RECORD_PREFIXES = [
+    "/portal", "/team", "/executive", "/studio", "/sign-in", "/sign-up", "/grace-workspace",
+    "/account", "/auth", "/cart", "/contact", "/request-quote", "/request-sample",
 ] as const;
 
-export function mayRecordSession(pathname: string | null | undefined): boolean {
-    if (typeof pathname !== "string" || pathname.length === 0) return false;
-
-    let normalized: string;
+function normalizeCapturePath(value: string | null | undefined): string | null {
+    if (typeof value !== "string" || !value) return null;
+    // Reject ambiguous/encoded paths before URL normalisation resolves dot segments.
+    if (/[\\%\s]/.test(value.split(/[?#]/, 1)[0]) || /(?:^|\/)\.{1,2}(?:\/|$)/.test(value)) return null;
+    let path: string;
     try {
-        // Accept a full URL or a bare path; anything unparseable is not recorded.
-        normalized = pathname.startsWith("http") ? new URL(pathname).pathname : pathname;
-    } catch {
-        return false;
-    }
-
-    if (!normalized.startsWith("/")) return false;
-
-    // Strip the query and hash before matching. Without this "/portal?x=1"
-    // does not equal "/portal" and does not start with "/portal/", so it falls
-    // through the deny list and gets recorded — which is the exact failure this
-    // module exists to prevent, and it is completely silent.
-    const lower = normalized.split(/[?#]/, 1)[0].toLowerCase();
-
-    return !NEVER_RECORD.some((prefix) => lower === prefix || lower.startsWith(`${prefix}/`));
+        if (/^https?:\/\//.test(value)) path = new URL(value).pathname;
+        else if (value.startsWith("/") && !value.startsWith("//")) path = value.split(/[?#]/, 1)[0];
+        else return null;
+    } catch { return null; }
+    // The app serves Spanish through an /es rewrite. Other locale prefixes fail closed.
+    return path.replace(/^\/es(?=\/|$)/, "") || "/";
 }
 
-export const NEVER_RECORD_PREFIXES: readonly string[] = NEVER_RECORD;
+export function publicCapturePath(value: string | null | undefined): string | null {
+    const path = normalizeCapturePath(value);
+    return path !== null && PUBLIC_ROUTES.some((route) => route.test(path)) ? path : null;
+}
+
+/**
+ * The cart page is private for replay and autocapture, but the named cart and
+ * checkout events (counts, totals and SKUs only) are the purchase funnel and
+ * may be sent from it. See CART_EVENTS in capturePrivacy.ts.
+ */
+const CART_ROUTES = [/^\/cart\/?$/];
+
+export function cartCapturePath(value: string | null | undefined): string | null {
+    const path = normalizeCapturePath(value);
+    return path !== null && CART_ROUTES.some((route) => route.test(path)) ? path : null;
+}
+
+export function mayRecordSession(pathname: string | null | undefined): boolean {
+    return publicCapturePath(pathname) !== null;
+}
