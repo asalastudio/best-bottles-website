@@ -1,3 +1,4 @@
+import { ORDER_STATUS_LABELS, type OrderStatus } from "@/../convex/lib/shopifyOrderTruth";
 export const dynamic = "force-dynamic";
 
 import Link from "next/link";
@@ -16,6 +17,11 @@ function formatDate(value: number | null | undefined) {
     return new Date(value).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
 }
 
+function formatTimestamp(value: number | null | undefined) {
+    if (value == null) return "not recorded";
+    return new Date(value).toLocaleString("en-US", { timeZone: "UTC", timeZoneName: "short" });
+}
+
 function statusVariant(status: string): "muted" | "blue" | "green" | "gold" {
     if (status === "in_transit") return "blue";
     if (status === "delivered") return "green";
@@ -24,12 +30,9 @@ function statusVariant(status: string): "muted" | "blue" | "green" | "gold" {
 }
 
 function statusLabel(status: string) {
-    switch (status) {
-        case "in_transit": return "In transit";
-        case "processing": return "Processing";
-        case "delivered": return "Delivered";
-        default: return "Cancelled";
-    }
+    if (status === "in_review") return "In Review";
+    if (status === "draft") return "Draft";
+    return ORDER_STATUS_LABELS[status as OrderStatus] ?? "Status unavailable";
 }
 
 /**
@@ -47,11 +50,15 @@ const SHIPMENT_STATUS: Record<string, string> = {
     out_for_delivery: "Out for delivery",
     delivered: "Delivered",
     failure: "Delivery problem",
-    success: "Delivered",
+    success: "Fulfillment completed",
+    cancelled: "Fulfillment cancelled",
+    canceled: "Fulfillment cancelled",
+    not_delivered: "Delivery problem",
+    picked_up: "Picked up",
 };
 
 function shipmentStatusLabel(status: string | undefined) {
-    if (!status) return "Shipped";
+    if (!status) return "Shipment status unavailable";
     return SHIPMENT_STATUS[status] ?? status.replace(/_/g, " ");
 }
 
@@ -84,6 +91,19 @@ export default async function PortalOrderDetail({
                 <PortalTag variant={statusVariant(order.status)}>{statusLabel(order.status)}</PortalTag>
             </PageHeader>
 
+            {order.source === "shopify" && (
+                <p className="font-sans text-[12px] mb-4 text-[color:var(--color-text-secondary)]">
+                    Saved Shopify update: {formatTimestamp(order.sourceUpdatedAt)} · Received: {formatTimestamp(order.syncedAt)}.
+                    Shipment updates can have separate times. This is saved tracking information.
+                </p>
+            )}
+
+            {order.sourceConflict && (
+                <p className="font-sans text-[12px] mb-4 text-[color:var(--color-text-secondary)]">
+                    Some saved Shopify details conflict. Current tracking needs verification.
+                </p>
+            )}
+
             {/* ─── Tracking ───────────────────────────────────────────────── */}
             <section className="mb-4">
                 <h2 className="font-sans text-[14px] font-semibold mb-2 text-[color:var(--color-text-primary)]">
@@ -96,9 +116,7 @@ export default async function PortalOrderDetail({
                         style={{ borderColor: "var(--color-rule)", background: "var(--color-surface)" }}
                     >
                         <p className="font-sans text-[13px] text-[color:var(--color-text-secondary)]">
-                            {order.status === "cancelled"
-                                ? "This order was cancelled, so nothing shipped."
-                                : "Nothing has shipped yet. Tracking appears here as soon as Best Bottles books the freight."}
+                            No shipment details are available in the latest saved update. Contact Best Bottles for current tracking.
                         </p>
                     </div>
                 ) : (
@@ -113,39 +131,31 @@ export default async function PortalOrderDetail({
                                     <div className="min-w-0">
                                         <p className="font-sans text-[13px] font-medium text-[color:var(--color-text-primary)]">
                                             {order.shipments.length > 1 ? `Shipment ${i + 1} · ` : ""}
-                                            {shipmentStatusLabel(shipment.shipmentStatus)}
+                                            {shipmentStatusLabel(shipment.fulfillmentStatus === "cancelled" ? "cancelled" : shipment.shipmentStatus)}
                                         </p>
                                         <p className="font-sans text-[12.5px] mt-1 text-[color:var(--color-text-secondary)]">
                                             {[
                                                 shipment.carrier,
-                                                shipment.shippedAt ? `shipped ${formatDate(shipment.shippedAt)}` : null,
+                                                shipment.fulfillmentCreatedAt ? `fulfillment recorded ${formatDate(shipment.fulfillmentCreatedAt)}` : null,
                                                 shipment.estimatedDelivery ? `due ${shipment.estimatedDelivery}` : null,
+                                                `tracking updated ${formatTimestamp(shipment.sourceUpdatedAt)}`,
                                             ]
                                                 .filter(Boolean)
                                                 .join(" · ") || "Carrier not recorded"}
                                         </p>
-                                        {shipment.trackingNumber && (
-                                            <p className="font-mono text-[12px] mt-1.5 text-[color:var(--color-text-secondary)]">
-                                                {shipment.trackingNumber}
-                                            </p>
-                                        )}
                                     </div>
-
-                                    {/* Shopify resolves the carrier's own page for
-                                        known carriers. When it does not, the number
-                                        is still shown — it is what the customer
-                                        quotes on the phone. */}
-                                    {shipment.trackingUrl && (
-                                        <a
-                                            href={shipment.trackingUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="shrink-0 inline-flex items-center justify-center h-8 px-3 font-sans text-[12.5px] font-medium rounded-md"
-                                            style={{ background: "var(--color-text-primary)", color: "var(--color-surface)" }}
-                                        >
-                                            Track shipment ↗
-                                        </a>
-                                    )}
+                                    <div className="flex flex-col gap-2">
+                                        {(shipment.packages ?? [{ trackingNumber: shipment.trackingNumber, trackingUrl: shipment.trackingUrl, carrier: shipment.carrier }]).map((pkg, j) => (
+                                            <div key={j} className="font-sans text-[12.5px] text-[color:var(--color-text-secondary)]">
+                                                <span>{pkg.carrier} {pkg.trackingNumber}</span>
+                                                {pkg.trackingUrl && /^https?:\/\//i.test(pkg.trackingUrl) && (
+                                                    <a href={pkg.trackingUrl} target="_blank" rel="noopener noreferrer" className="ml-3 underline underline-offset-2">
+                                                        Track package ↗
+                                                    </a>
+                                                )}
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
 
                                 {shipment.lineItems && shipment.lineItems.length > 0 && (

@@ -13,12 +13,19 @@ import type { WebhookOrder } from "./shopify-webhooks";
  * Also used by the backfill, so history and live updates cannot disagree about
  * what an order looks like.
  */
+const CARRIER_DISPLAY_STATES = new Set([
+    "ATTEMPTED_DELIVERY", "CARRIER_PICKED_UP", "CONFIRMED", "DELAYED", "DELIVERED",
+    "FAILURE", "IN_TRANSIT", "LABEL_PRINTED", "LABEL_PURCHASED", "LABEL_VOIDED",
+    "NOT_DELIVERED", "OUT_FOR_DELIVERY", "PICKED_UP", "READY_FOR_PICKUP",
+]);
+
 export async function fetchOrderForSync(numericOrderId: string): Promise<WebhookOrder | null> {
     const data = await adminGraphQL<{
         order: {
             id: string;
             name: string;
             createdAt: string;
+            updatedAt: string;
             cancelledAt: string | null;
             displayFulfillmentStatus: string | null;
             currentTotalPriceSet: { shopMoney: { amount: string } } | null;
@@ -26,6 +33,7 @@ export async function fetchOrderForSync(numericOrderId: string): Promise<Webhook
             customer: { id: string } | null;
             shippingAddress: { city: string | null; provinceCode: string | null } | null;
             lineItems: {
+                pageInfo: { hasNextPage: boolean };
                 edges: Array<{ node: {
                     sku: string | null;
                     title: string;
@@ -37,10 +45,13 @@ export async function fetchOrderForSync(numericOrderId: string): Promise<Webhook
             fulfillments: Array<{
                 id: string;
                 createdAt: string | null;
+                updatedAt: string;
+                status: string;
                 displayStatus: string | null;
                 trackingInfo: Array<{ company: string | null; number: string | null; url: string | null }>;
                 estimatedDeliveryAt: string | null;
                 fulfillmentLineItems: {
+                    pageInfo: { hasNextPage: boolean };
                     edges: Array<{ node: {
                         quantity: number;
                         lineItem: { sku: string | null; title: string; name: string | null };
@@ -54,6 +65,7 @@ export async function fetchOrderForSync(numericOrderId: string): Promise<Webhook
                 id
                 name
                 createdAt
+                updatedAt
                 cancelledAt
                 displayFulfillmentStatus
                 currentTotalPriceSet { shopMoney { amount } }
@@ -61,6 +73,7 @@ export async function fetchOrderForSync(numericOrderId: string): Promise<Webhook
                 customer { id }
                 shippingAddress { city provinceCode }
                 lineItems(first: 100) {
+                    pageInfo { hasNextPage }
                     edges { node {
                         sku title name quantity
                         originalUnitPriceSet { shopMoney { amount } }
@@ -69,10 +82,13 @@ export async function fetchOrderForSync(numericOrderId: string): Promise<Webhook
                 fulfillments(first: 50) {
                     id
                     createdAt
+                    updatedAt
+                    status
                     displayStatus
                     trackingInfo { company number url }
                     estimatedDeliveryAt
                     fulfillmentLineItems(first: 100) {
+                        pageInfo { hasNextPage }
                         edges { node { quantity lineItem { sku title name } } }
                     }
                 }
@@ -84,12 +100,21 @@ export async function fetchOrderForSync(numericOrderId: string): Promise<Webhook
     const order = data.order;
     if (!order) return null;
 
+    // Do not turn a truncated snapshot into "all delivered" or a complete item list.
+    // Fulfillments is a bounded list, without a pageInfo cursor; conservatively
+    // reject the boundary until full reconciliation/pagination is implemented.
+    if (order.lineItems.pageInfo.hasNextPage || order.fulfillments.length >= 50
+        || order.fulfillments.some((f) => f.fulfillmentLineItems.pageInfo.hasNextPage)) {
+        throw new Error("shopify_order_snapshot_incomplete");
+    }
+
     const numericId = (gid: string) => gid.split("/").pop() ?? gid;
 
     return {
         id: Number(numericId(order.id)),
         name: order.name,
         created_at: order.createdAt,
+        updated_at: order.updatedAt,
         cancelled_at: order.cancelledAt,
         // GraphQL reports FULFILLED / PARTIALLY_FULFILLED / UNFULFILLED; the
         // shared status mapper speaks the REST vocabulary the webhooks use.
@@ -98,7 +123,7 @@ export async function fetchOrderForSync(numericOrderId: string): Promise<Webhook
                 ? "fulfilled"
                 : order.displayFulfillmentStatus === "PARTIALLY_FULFILLED"
                   ? "partial"
-                  : null,
+                  : order.displayFulfillmentStatus?.toLowerCase() ?? null,
         current_total_price: order.currentTotalPriceSet?.shopMoney.amount ?? null,
         total_price: order.totalPriceSet?.shopMoney.amount ?? null,
         customer: order.customer ? { id: Number(numericId(order.customer.id)) } : null,
@@ -113,14 +138,17 @@ export async function fetchOrderForSync(numericOrderId: string): Promise<Webhook
             id: Number(numericId(f.id)),
             order_id: Number(numericId(order.id)),
             created_at: f.createdAt,
-            // displayStatus is upper-case (IN_TRANSIT); the portal's status
-            // mapper compares against Shopify's lower-case shipment_status.
-            shipment_status: f.displayStatus ? f.displayStatus.toLowerCase() : null,
+            updated_at: f.updatedAt,
+            status: f.status.toLowerCase(),
+            tracking_info: f.trackingInfo,
+            // FULFILLED/MARKED_AS_FULFILLED/SUBMITTED describe fulfillment
+            // workflow, not carrier movement. Preserve the raw display value.
+            display_status: f.displayStatus,
+            shipment_status: f.displayStatus && CARRIER_DISPLAY_STATES.has(f.displayStatus)
+                ? f.displayStatus.toLowerCase() : null,
             tracking_company: f.trackingInfo[0]?.company ?? null,
             tracking_number: f.trackingInfo[0]?.number ?? null,
             tracking_url: f.trackingInfo[0]?.url ?? null,
-            tracking_urls: f.trackingInfo.map((t) => t.url).filter((u): u is string => Boolean(u)),
-            tracking_numbers: f.trackingInfo.map((t) => t.number).filter((n): n is string => Boolean(n)),
             estimated_delivery_at: f.estimatedDeliveryAt,
             line_items: f.fulfillmentLineItems.edges.map(({ node }) => ({
                 sku: node.lineItem.sku,

@@ -1,3 +1,4 @@
+import { ORDER_STATUS_LABELS, type OrderStatus } from "@/../convex/lib/shopifyOrderTruth";
 export const dynamic = "force-dynamic";
 import Link from "next/link";
 import { PageHeader, PortalButton, PortalTag } from "@/components/portal/ui";
@@ -25,16 +26,9 @@ function statusVariant(status: string): "muted" | "blue" | "green" | "gold" {
 }
 
 function statusLabel(status: string) {
-    switch (status) {
-        case "in_transit":
-            return "In Transit";
-        case "processing":
-            return "Processing";
-        case "delivered":
-            return "Delivered";
-        default:
-            return "Cancelled";
-    }
+    if (status === "in_review") return "In Review";
+    if (status === "draft") return "Draft";
+    return ORDER_STATUS_LABELS[status as OrderStatus] ?? "Status unavailable";
 }
 
 const colClass = "grid grid-cols-[100px_1fr_150px_120px_100px_110px] gap-4 items-center";
@@ -101,12 +95,12 @@ export default async function PortalOrders() {
                                 click deeper. Several shipments collapse to a count
                                 that opens the order. */}
                             <div data-label="Tracking" className="min-w-0">
-                                {order.shipments.length > 1 ? (
+                                {order.shipments.length > 1 || order.shipments.some((s) => (s.packages?.length ?? 0) > 1) ? (
                                     <Link
                                         href={`/portal/orders/${encodeURIComponent(order.orderId)}`}
                                         className="font-sans text-[13px] text-neutral-900 underline underline-offset-2"
                                     >
-                                        {order.shipments.length} shipments
+                                        View packages
                                     </Link>
                                 ) : order.shipments[0]?.trackingUrl ? (
                                     <a

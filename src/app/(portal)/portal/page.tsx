@@ -1,3 +1,4 @@
+import { ORDER_STATUS_LABELS, type OrderStatus } from "@/../convex/lib/shopifyOrderTruth";
 import CertificateStatusRefresh from "@/components/portal/CertificateStatusRefresh";
 import Link from "next/link";
 import { PortalTag, StatCard, PortalButton } from "@/components/portal/ui";
@@ -24,20 +25,9 @@ function statusVariant(status: string): "muted" | "blue" | "green" | "gold" {
 }
 
 function statusLabel(status: string) {
-    switch (status) {
-        case "in_transit":
-            return "In Transit";
-        case "processing":
-            return "Processing";
-        case "delivered":
-            return "Delivered";
-        case "cancelled":
-            return "Cancelled";
-        case "in_review":
-            return "In Review";
-        default:
-            return "Draft";
-    }
+    if (status === "in_review") return "In Review";
+    if (status === "draft") return "Draft";
+    return ORDER_STATUS_LABELS[status as OrderStatus] ?? "Status unavailable";
 }
 
 export default async function PortalDashboard() {
@@ -78,7 +68,7 @@ export default async function PortalDashboard() {
             <div className="mb-5 grid grid-cols-2 gap-2.5 lg:mb-6 lg:grid-cols-4 lg:gap-3">
                 <StatCard href="/portal/orders" label="YTD Spend" numericValue={stats.ytdSpend} format={formatCurrency} sub="Delivered orders this year" highlight />
                 <StatCard href="/portal/orders" label="Active Orders" numericValue={stats.activeOrderCount} sub={`${stats.inTransitCount} in transit`} />
-                <StatCard href="/portal/orders" label="Units In Flight" numericValue={stats.unitsInFlight} sub="Across active shipments" />
+                <StatCard href="/portal/orders" label="Units On Open Orders" numericValue={stats.unitsInFlight} sub="Across active orders" />
                 <StatCard href="/portal/drafts" label="Open Drafts" numericValue={stats.openDraftCount} sub={account ? account.tier : "Available after account sync"} />
             </div>
 
