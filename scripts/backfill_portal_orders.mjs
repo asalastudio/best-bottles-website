@@ -34,7 +34,8 @@ try {
     const content = readFileSync(resolve(ROOT, ".env.local"), "utf8");
     for (const line of content.split("\n")) {
         const m = line.match(/^([^#=]+)=(.*)$/);
-        if (m) process.env[m[1].trim()] = m[2].trim().replace(/^["']|["']$/g, "");
+        // Values set on the command line win, so a production run cannot be silently pointed back at .env.local's dev deployment.
+        if (m && process.env[m[1].trim()] === undefined) process.env[m[1].trim()] = m[2].trim().replace(/^["']|["']$/g, "");
     }
 } catch { /* ok */ }
 
