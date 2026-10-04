@@ -1,5 +1,6 @@
 import { defineSchema, defineTable } from "convex/server";
 import { v } from "convex/values";
+import { buyerScopeFields, buyerProofV, buyerBindingStateV } from "./lib/buyerBinding";
 import {
     anchorStatusV,
     assemblyRegisterFields,
@@ -39,6 +40,14 @@ const portalAddress = v.object({
 });
 
 export default defineSchema({
+    // Purchase-only per-user binding. No customer data is projected to an organization.
+    portalBuyerBindings: defineTable({
+        ...buyerScopeFields, customerId: v.string(), proof: buyerProofV,
+        state: buyerBindingStateV, version: v.number(), proposedBy: v.string(), proposedAt: v.number(),
+        reviewedBy: v.optional(v.string()), reviewedAt: v.optional(v.number()),
+        revokedBy: v.optional(v.string()), revokedAt: v.optional(v.number()),
+    }).index("by_scope", ["clerkInstanceHost", "clerkUserId", "clerkOrgId", "shopDomain"])
+        .index("by_shop_customer", ["shopDomain", "customerId"]),
     // Stakeholder decisions only; these tables never change product/component associations.
     componentReconciliationReviews: defineTable({
         caseId: v.string(), evidenceSha: v.string(), revision: v.number(), decision: v.string(),
