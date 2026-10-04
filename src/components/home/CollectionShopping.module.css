@@ -335,14 +335,19 @@
   position:absolute;
   inset:0;
 }
-.stoneArt::before {
-  content:"";
+.stoneMirror {
   position:absolute;
   inset:0 0 auto;
   height:max(0px,var(--stone-offset));
+  overflow:hidden;
   /* Reflect only the empty top strip to meet the lowered image without a seam. */
-  background:url('/assets/homepage/diva-circle-hero-ivory-marble.png') center top / 100% auto no-repeat;
   transform:scaleY(-1);
+}
+.stoneMirrorImage {
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:none;
 }
 .stoneImage {
   display:block;
@@ -393,7 +398,7 @@
   .hero[data-scene="diva-circle-stone"] {display:flex;flex-direction:column;aspect-ratio:auto;height:auto}
   .hero[data-scene="diva-circle-stone"] .stoneArt {position:relative;inset:auto;width:100%;aspect-ratio:1.35}
   .hero[data-scene="diva-circle-stone"] .stoneArt {--stone-offset:24px;overflow:hidden}
-  .hero[data-scene="diva-circle-stone"] .stoneArt::before {background-position:right top;background-size:auto calc(100vw / 1.35)}
+  .hero[data-scene="diva-circle-stone"] .stoneMirrorImage {position:absolute;top:0;right:0;width:auto;height:calc(100vw / 1.35)}
   .hero[data-scene="diva-circle-stone"] .stoneImage {
     height:100%;object-fit:cover;object-position:right center;
     transform:translateY(var(--stone-offset));
