@@ -6,6 +6,8 @@ import {
     GraceRealtimeConfigError,
     createGraceRealtimeClientSecret,
 } from "@/lib/grace/openaiRealtimeConfig";
+import { classifyOpenAIFailure, graceFailureNotice } from "@/lib/grace/openaiFailure";
+import { reportGraceOpenAIFailure } from "@/lib/grace/reportOpenAIFailure";
 
 export async function GET(req: NextRequest) {
     const rateLimited = await enforceGraceRateLimit(req, {
@@ -26,10 +28,14 @@ export async function GET(req: NextRequest) {
         });
     } catch (error) {
         const status = error instanceof GraceRealtimeConfigError ? error.statusCode : 500;
-        const message = error instanceof GraceRealtimeConfigError
-            ? error.message
-            : "Unable to initialize Grace voice.";
-        console.error("[openai/realtime-token]", error);
-        return NextResponse.json({ error: message }, { status });
+        const failure = error instanceof GraceRealtimeConfigError ? error.failure : classifyOpenAIFailure(error);
+        reportGraceOpenAIFailure(failure, { route: "realtime-token", model: GRACE_REALTIME_MODEL });
+        // `error` is what the Grace panel shows, so it carries the honest
+        // notice; `code` and `reason` are stable for the UI and for monitoring.
+        const notice = graceFailureNotice(failure.reason);
+        return NextResponse.json(
+            { error: notice.message, code: notice.code, reason: failure.reason },
+            { status },
+        );
     }
 }
