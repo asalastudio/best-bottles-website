@@ -46,9 +46,10 @@ export type GraceRealtimeCallbacks = {
     onConnect?: () => void;
     /** `unexpected` is true when the transport dropped on its own (idle close, network change), false for disconnect(). */
     onDisconnect?: (details?: { unexpected: boolean }) => void;
+    onUserSpeechStarted?: (itemId: string) => void;
     onModeChange?: (mode: "speaking" | "listening") => void;
     onTranscriptDelta?: (delta: string) => void;
-    onMessage?: (message: { role: GraceRealtimeRole; text: string }) => void;
+    onMessage?: (message: { role: GraceRealtimeRole; text: string; voiceItemId?: string }) => void;
     onError?: (error: Error) => void;
 };
 
@@ -427,6 +428,7 @@ export function createGraceOpenAIRealtimeAdapter({
         // and must not be cancelled (before 2026-09-25 it was, so the customer
         // had to repeat themselves after every fast tool call).
         let speechDuringGuard = false;
+        let acceptedVoiceItemId: string | null = null;
 
         const rememberAssistantText = (text: string) => {
             const trimmed = text.trim();
@@ -532,6 +534,9 @@ export function createGraceOpenAIRealtimeAdapter({
                     })) {
                         cancelEchoResponse(activeSession);
                     }
+                } else if (typeof event.item_id === "string") {
+                    acceptedVoiceItemId = event.item_id;
+                    callbacks.onUserSpeechStarted?.(event.item_id);
                 }
                 return;
             }
@@ -559,7 +564,11 @@ export function createGraceOpenAIRealtimeAdapter({
                 && typeof event.transcript === "string"
                 && event.transcript.trim()
             ) {
-                if (shouldIgnoreVoiceUserTranscript({
+                const voiceItemId = typeof event.item_id === "string" ? event.item_id : undefined;
+                // A response (including audio/tools) can precede transcription.
+                // Judge accepted speech at onset, not by later assistant audio.
+                if (voiceItemId && voiceItemId !== acceptedVoiceItemId) return;
+                if (!voiceItemId && shouldIgnoreVoiceUserTranscript({
                     now: Date.now(),
                     assistantSpeaking,
                     echoGuardUntil,
@@ -577,7 +586,7 @@ export function createGraceOpenAIRealtimeAdapter({
                     }
                     return;
                 }
-                callbacks.onMessage?.({ role: "user", text: event.transcript.trim() });
+                callbacks.onMessage?.({ role: "user", text: event.transcript.trim(), ...(voiceItemId ? { voiceItemId } : {}) });
                 return;
             }
 
