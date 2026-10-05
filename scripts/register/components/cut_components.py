@@ -47,7 +47,9 @@ BOTTLE_FOLDERS = {"18-415": PSD_ROOT / "2.  18-415 Bottles ", "13-415": PSD_ROOT
                   "20-400": PSD_ROOT / "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round"}
 ALPHA = 128
 # Parts another script cuts: this one skips them and keeps their entries, even on a full run.
-OWN_CUTTER = {"20-400": ({"LIB-20-400-MtlRollon", "LIB-20-400-PlsticRollon", "CMP-ROC-SBLK-20400-T"}, "scripts/register/components/cut_boston_parts.py")}
+OWN_CUTTER = {"20-400": ({"LIB-20-400-MtlRollon", "LIB-20-400-PlsticRollon", "CMP-ROC-SBLK-20400-T"}, "scripts/register/components/cut_boston_parts.py"),
+              # the white pump under the clear overcap has no library PSD: both its layers come from its bottle photos
+              "18-415": ({"LIB-18-415-WhtPumpClOvrCp"}, "scripts/register/components/cut_white_pump.py")}
 MIN_IOU_APPROVABLE = 0.90
 SLOT_BY_TYPE = {"roll-on-cap": "cap", "cap": "cap", "faux-leather-cap": "cap", "fine-mist-sprayer": "sprayer", "lotion-pump": "pump",
                 "vintage-bulb-sprayer": "sprayer", "tassel-bulb-sprayer": "sprayer", "dropper": "fitment", "reducer": "reducer", "roller-insert": "roller"}

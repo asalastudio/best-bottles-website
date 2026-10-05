@@ -2813,6 +2813,86 @@
      ]
     ]
    }
+  },
+  {
+   "componentId": "LIB-18-415-WhtPumpClOvrCp",
+   "websiteSku": "",
+   "type": "lotion-pump",
+   "psd": null,
+   "reference": {
+    "psd": "2.  18-415 Bottles /17. Elegant 60ml/1. Elegant 60ml PSD/55. LBElg60WhtClOvrCp.psd",
+    "sku": "LBElg60WhtClOvrCp",
+    "bodyId": "elegant-60ml-18-415",
+    "glass": "Clear",
+    "plateKey": "elegant-60ml-18-415|Clear",
+    "bottlePxPerMm": 13.2495,
+    "rimY": 498,
+    "axisX": 650.0,
+    "seatToFootPx": 1208,
+    "plateSeatToFootPx": 1973,
+    "bodyLayer": "Layer 22",
+    "overcapPsd": "2.  18-415 Bottles /17. Elegant 60ml/1. Elegant 60ml PSD/54. LBElg60WhtClOvrCp.psd"
+   },
+   "layers": [
+    {
+     "slot": "pump",
+     "layerName": "Layer 2 copy (55. LBElg60WhtClOvrCp.psd)",
+     "file": "LIB-18-415-WhtPumpClOvrCp--0-pump.png",
+     "width": 380,
+     "height": 602,
+     "sha256": "25c3d0557906a8824e68ca309440d7cf3df382ab92a1c485f85bb19d26b4554c",
+     "pxPerMm": 13.2495,
+     "anchor": {
+      "x": 189.0,
+      "y": 382
+     },
+     "z": "front",
+     "explodeIndex": 1,
+     "solidBottomY": 596
+    },
+    {
+     "slot": "overcap",
+     "layerName": "Layer 1 copy (54. LBElg60WhtClOvrCp.psd), rows 36-471",
+     "file": "LIB-18-415-WhtPumpClOvrCp--overcap.png",
+     "width": 379,
+     "height": 462,
+     "sha256": "13ae16acc25d08039dbbfdb29a3f2b7524633a1390b6548b03d4366621249835",
+     "pxPerMm": 13.2495,
+     "anchor": {
+      "x": 186.5,
+      "y": 480
+     },
+     "z": "front",
+     "explodeIndex": 2,
+     "solidBottomY": 456
+    }
+   ],
+   "checks": {
+    "status": "cut from the Elegant 60 bottle photos (cut_white_pump.py); no library PSD holds this pump",
+    "approvable": true,
+    "specksCleared": {
+     "pump": 0,
+     "overcap": 0
+    },
+    "coverRows": [
+     36,
+     471
+    ],
+    "photoScales": {
+     "exposed": 13.2495,
+     "capped": 13.2495
+    },
+    "recentredMm": [
+     [
+      "pump",
+      1.057
+     ],
+     [
+      "overcap",
+      1.925
+     ]
+    ]
+   }
   }
  ]
 }

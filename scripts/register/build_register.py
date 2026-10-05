@@ -107,7 +107,17 @@ LIBRARY_PARTS = [
     # The catalogue sells only the tall one as a part (CP18-415ShnBlkTall); the master library holds both.
     {"componentId": "LIB-18-415-ShnBlkCap", "type": "cap", "neck": "18-415", "rollerMaterial": "", "psdStem": "CP18-415ShnBlk", "itemName": "Shiny black cap (short), 18-415",
      "evidence": "library part, not a product: the cap of the short shiny black reducer SKUs; the catalogue sells only the tall one (CP18-415ShnBlkTall)"},
+    # The white rectangular pump under the clear overcap (2026-10-01, Build Your Bottle checklist 6a): every white-pump
+    # clear-overcap SKU (Elegant 60/100 clear and frosted, Sleek 30/50/100, Empire 50/100) is sold with it, and it is not
+    # sold loose. The master library holds it only on those bottle photos, the same pump on all of them (collar 26.0-27.5 mm,
+    # head 22.2-23.1 mm on six photos), so scripts/register/components/cut_white_pump.py cuts the pump from the Elegant 60
+    # pump-exposed photo and the cover from its capped twin.
+    {"componentId": "LIB-18-415-WhtPumpClOvrCp", "type": "lotion-pump", "neck": "18-415", "rollerMaterial": "", "psdStem": None,
+     "itemName": "White rectangular lotion pump with clear overcap, 18-415",
+     "evidence": "library part, not a product: the pump every white-pump clear-overcap SKU is sold with (Jordan, checklist 6a, 2026-10-01)",
+     "source": "Elegant 60 master photos 54./55. LBElg60WhtClOvrCp.psd (cut_white_pump.py)"},
 ]
+WHITE_PUMP = "LIB-18-415-WhtPumpClOvrCp"
 
 # Short caps with liner, 13-415: (componentId, website SKU, finish, colour). See the component loop in build().
 REVIEWED_13415_LINED = [
@@ -149,7 +159,8 @@ COMPONENT_STEM_18415 = ("CP18-415AnSpTsl", "CP18-415AnSp", "AnSpTsl18-415", "AnS
 CODE_ALIASES_18415 = {"clovrcap": "mtslcl", "clrovrcap": "mtslcl", "wht": "wh", "mts": "mtsl", "ivylthr": "livylthr", "pnklthr": "lpnklthr"}  # the ivory and pink leather caps are filed as CP18-415LIvyLthr / LPnkLthr
 # Lotion SKUs that spell only the pump's finish and its clear overcap, with no `Ltn` token (2026-09-28):
 # `LBSlm100MtSlClOvrCap` is the matte silver pump under the clear overcap. White pumps under a clear overcap
-# (`LBElg100WhtClOvrCp`, the Sleek's rectangular `LBSlk30WhtRectClOverCap`) have no component yet.
+# (`LBElg100WhtClOvrCp`, the Sleek's `LBSlk30WhtRectClOverCap`) are the library part WHITE_PUMP (2026-10-01): the Sleek's
+# "Rect" names the same rectangular cover, on the same pump, as every other one.
 CLEAR_OVERCAP_TAIL = re.compile(r"(?P<pump>MtSl|Wht)(?P<rect>Rect)?Cl(?:Ovr|Over)Ca?p$")
 
 
@@ -187,6 +198,8 @@ def own_build_18415(assembly: dict, by_neck_type: dict) -> tuple[str, str, str]:
         pumps = [c for c in by_neck_type.get(("18-415", "lotion-pump"), []) if code_key((c["websiteSku"] or "").removeprefix("Ltn18-415")) == "mtslcl"]
         if len(pumps) == 1:
             return f"pump:{pumps[0]['componentId']}", "resolved", "own lotion-pump matched by the clear-overcap spelling (matte silver pump under the clear overcap)"
+    if overcap and overcap["pump"] == "Wht" and any(c["componentId"] == WHITE_PUMP for c in by_neck_type.get(("18-415", "lotion-pump"), [])):
+        return f"pump:{WHITE_PUMP}", "resolved", "own lotion-pump matched by the clear-overcap spelling (white rectangular pump under the clear overcap, a library part)"
     if overcap:
         cover = "rectangular clear overcap" if overcap["rect"] else "clear overcap"
         return "", "unresolved", f"no 18-415 component is the {'white' if overcap['pump'] == 'Wht' else 'matte silver'} lotion pump under the {cover} (a new part, cut from its bottle photos)"
