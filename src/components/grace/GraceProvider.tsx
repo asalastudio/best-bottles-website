@@ -61,6 +61,7 @@ import {
 import { GRACE_REALTIME_INSTRUCTIONS } from "@/lib/grace/realtimeInstructions";
 import { formatGraceMemoryLines, normalizeRememberNoteKind, resolveRememberNoteHref, type GraceMemoryNote } from "@/lib/grace/memoryNotes";
 import { buildGraceSiteCapabilities } from "@/lib/grace/siteCapabilities";
+import { isGraceFailureCode } from "@/lib/grace/openaiFailure";
 import {
     buildCatalogSessionNote,
     shouldCompressAfterCatalogResult,
@@ -2924,7 +2925,9 @@ function GraceProviderBase({
 
     const pendingMessageRef = useRef<string | null>(null);
 
-    const sendWithOpenAITextFallback = useCallback(async (message: string): Promise<boolean> => {
+    const sendWithOpenAITextFallback = useCallback(async (
+        message: string,
+    ): Promise<{ delivered: true } | { delivered: false; notice?: string }> => {
         const history = messagesRef.current.map((entry) => ({
             role: entry.role === "grace" ? "assistant" as const : "user" as const,
             content: entry.content,
@@ -2933,7 +2936,7 @@ function GraceProviderBase({
         if (!last || last.role !== "user" || normalizeGraceMessageText(last.content) !== normalizeGraceMessageText(message)) {
             history.push({ role: "user", content: message });
         }
-        const response = await fetchJsonWithTimeout<{ message?: string; error?: string }>(
+        const response = await fetchJsonWithTimeout<{ message?: string; error?: string; code?: string }>(
             "/api/grace/chat",
             {
                 method: "POST",
@@ -2948,12 +2951,20 @@ function GraceProviderBase({
             },
             30_000,
         );
-        if (!response.ok || !response.data?.message) return false;
+        if (!response.ok || !response.data?.message) {
+            // An OpenAI outage or busy spell comes back with a stable code and
+            // an honest line. Show that line as a notice, never as something
+            // Grace said, and keep it out of the history sent on the next turn.
+            return {
+                delivered: false,
+                notice: isGraceFailureCode(response.data?.code) && response.error ? response.error : undefined,
+            };
+        }
         handleMessage({ message: response.data.message, role: "assistant", source: "openai-text-fallback" });
         setErrorMessage("");
         setVoiceFailed(false);
         setGraceStatus("idle");
-        return true;
+        return { delivered: true };
     }, [handleMessage]);
 
     const send = useCallback(async (text?: string) => {
@@ -2996,10 +3007,10 @@ function GraceProviderBase({
             const connected = await startConversation(true);
             if (!connected) {
                 pendingMessageRef.current = null;
-                const recovered = await sendWithOpenAITextFallback(msg);
-                if (!recovered) {
+                const fallback = await sendWithOpenAITextFallback(msg);
+                if (!fallback.delivered) {
                     setIsAwaitingReply(false);
-                    setErrorMessage("Grace is temporarily unavailable. Please try again.");
+                    setErrorMessage(fallback.notice ?? "Grace is temporarily unavailable. Please try again.");
                 }
             }
         }

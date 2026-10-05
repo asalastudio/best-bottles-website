@@ -4,6 +4,8 @@ import { api } from "../../../../../convex/_generated/api";
 import { createResilientConvexHttpClient } from "@/lib/convexServerClient";
 import { enforceGraceRateLimit } from "@/lib/graceRateLimitServer";
 import { reportError } from "@/lib/observability/report";
+import { normalizeGraceTextReply } from "@/lib/grace/openaiFailure";
+import { reportGraceOpenAIFailure } from "@/lib/grace/reportOpenAIFailure";
 
 type ChatMessage = { role: "user" | "assistant"; content: string };
 
@@ -42,14 +44,39 @@ export async function POST(req: NextRequest) {
             return NextResponse.json({ error: "A user message is required." }, { status: 400 });
         }
 
-        const message = await getConvex().action(api.grace.askGrace, {
+        const raw: unknown = await getConvex().action(api.grace.askGraceReply, {
             messages,
             voiceMode: false,
             pageContextBlock: typeof body.pageContextBlock === "string"
                 ? body.pageContextBlock.slice(0, 2000)
                 : undefined,
         });
-        return NextResponse.json({ message });
+        const reply = normalizeGraceTextReply(raw);
+        if (!reply) throw new Error("askGraceReply returned no message.");
+        if (!reply.failure) return NextResponse.json({ message: reply.message });
+
+        // The turn failed. Report it (Convex has no Sentry) and answer with a
+        // non-2xx status, the honest notice and a stable code, so the panel
+        // shows a system notice instead of presenting it as Grace's reply.
+        const { failure } = reply;
+        if (failure.reason === "internal") {
+            reportError(new Error("Grace text turn failed inside askGraceReply."), {
+                area: "grace-chat",
+                tags: { mode: "text", reason: failure.reason },
+            });
+        } else {
+            reportGraceOpenAIFailure(
+                { reason: failure.reason, status: failure.status, code: failure.openaiCode, type: failure.type },
+                { route: "grace-chat", model: failure.model, attempts: failure.attempts },
+            );
+        }
+        return NextResponse.json(
+            { error: reply.message, code: failure.code, reason: failure.reason },
+            {
+                status: failure.code === "grace_error" ? 502 : 503,
+                headers: failure.code === "grace_busy" ? { "Retry-After": "5" } : undefined,
+            },
+        );
     } catch (error) {
         reportError(error, { area: "grace-chat", tags: { mode: "text" } });
         return NextResponse.json({ error: "Grace is temporarily unavailable." }, { status: 502 });
