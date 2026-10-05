@@ -1,6 +1,8 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
+import { PRIVATE_PATH_PREFIXES } from "@/lib/crawl/robots";
+import { buildPageSitemap } from "@/lib/crawl/sitemap";
 
 const root = process.cwd();
 
@@ -36,21 +38,23 @@ describe("June 15 launch readiness guardrails", () => {
     });
 
     it("keeps launch-noise and private routes out of public sitemap surfaces", () => {
-        const sitemapConfig = readRepoFile("next-sitemap.config.js");
+        const sitemapPaths = buildPageSitemap("https://www.bestbottles.com", new Date(0))
+            .map((entry) => entry.url.replace("https://www.bestbottles.com", "") || "/");
 
         for (const route of [
-            "/api/*",
-            "/portal/*",
-            "/studio/*",
-            "/sign-in/*",
-            "/sign-up/*",
+            "/api/",
+            "/portal",
+            "/studio",
+            "/sign-in",
+            "/sign-up",
             "/example",
             "/fitment-demo",
             "/tech-stack",
             "/cart",
             "/grace-workspace",
         ]) {
-            expect(sitemapConfig).toContain(route);
+            expect(PRIVATE_PATH_PREFIXES).toContain(route);
+            expect(sitemapPaths.some((path) => path.startsWith(route))).toBe(false);
         }
     });
 

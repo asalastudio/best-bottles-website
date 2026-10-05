@@ -1,27 +1,21 @@
 import { getServerSideSitemap, ISitemapField } from "next-sitemap";
-import { ConvexHttpClient } from "convex/browser";
-import { api } from "../../../convex/_generated/api";
-import { client as sanityClient, isSanityConfigured } from "@/sanity/lib/client";
+import { getCatalogVisibilitySnapshot } from "@/lib/catalogServer";
+import { sitemapProductSlugs } from "@/lib/crawl/sitemap";
 import { SITE_URL } from "@/lib/seo";
-
-// Lazy so the module loads cleanly during `next build`'s page-data
-// collection even when NEXT_PUBLIC_CONVEX_URL is unset on the build env.
-function getConvexClient(): ConvexHttpClient | null {
-  const url = process.env.NEXT_PUBLIC_CONVEX_URL;
-  if (!url) return null;
-  return new ConvexHttpClient(url);
-}
+import { client as sanityClient, isSanityConfigured } from "@/sanity/lib/client";
+import { JOURNAL_SITEMAP_QUERY } from "@/sanity/lib/queries";
 
 export async function GET() {
   const fields: ISitemapField[] = [];
 
-  const convex = getConvexClient();
   try {
-    if (!convex) throw new Error("NEXT_PUBLIC_CONVEX_URL is not set");
-    const groups = await convex.query(api.products.getAllCatalogGroups, {});
-    for (const g of groups as Array<{ slug: string }>) {
+    // The same catalogue snapshot the catalogue grid filters with, so the
+    // sitemap lists the product pages the site itself links to and nothing
+    // that redirects, is held back, or has nothing to sell.
+    const snapshot = await getCatalogVisibilitySnapshot();
+    for (const slug of sitemapProductSlugs(snapshot.groups, snapshot.variantPreviewRows)) {
       fields.push({
-        loc: `${SITE_URL}/products/${g.slug}`,
+        loc: `${SITE_URL}/products/${encodeURIComponent(slug)}`,
         lastmod: new Date().toISOString(),
         changefreq: "weekly",
         priority: 0.8,
@@ -33,13 +27,13 @@ export async function GET() {
 
   if (isSanityConfigured) {
     try {
-      const posts = await sanityClient.fetch<Array<{ slug: string; publishedAt?: string }>>(
-        `*[_type == "journalPost" && defined(slug.current)] | order(publishedAt desc) { "slug": slug.current, publishedAt }`
-      );
+      // Journal posts are the "journal" document type (src/app/blog/[slug]).
+      const posts = await sanityClient.fetch<Array<{ slug: string; publishedAt?: string; _updatedAt?: string }>>(JOURNAL_SITEMAP_QUERY);
       for (const p of posts) {
+        const modified = p._updatedAt ?? p.publishedAt;
         fields.push({
-          loc: `${SITE_URL}/blog/${p.slug}`,
-          lastmod: p.publishedAt ? new Date(p.publishedAt).toISOString() : new Date().toISOString(),
+          loc: `${SITE_URL}/blog/${encodeURIComponent(p.slug)}`,
+          lastmod: modified ? new Date(modified).toISOString() : new Date().toISOString(),
           changefreq: "monthly",
           priority: 0.6,
         });

@@ -5,6 +5,8 @@
  * logic so every page stays consistent without duplication.
  */
 
+import type { Metadata } from "next";
+
 export const PRODUCTION_SITE_URL = "https://www.bestbottles.com";
 // Pre-cutover, the Vercel staging URL is acting as production. Allow it
 // alongside the canonical domain until DNS, Sanity CORS, and Clerk allowed
@@ -27,6 +29,17 @@ export const SITE_DESCRIPTION =
   "2,300+ premium glass bottles, sprayers, and packaging components from Nemat International. 20+ years of expertise. Low MOQs, volume pricing, and dedicated support for scaling brands.";
 
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-default.png`;
+
+/**
+ * Site-wide robots metadata. No index/follow value: indexing is the default
+ * without one, and an explicit "index, follow" on every page contradicted the
+ * `<meta name="robots" content="noindex">` Next adds to 404s, so those pages
+ * printed both. Pages that must stay out of search set their own `robots`.
+ * Google's preview limits stay site-wide.
+ */
+export const DEFAULT_ROBOTS = {
+  googleBot: { "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 },
+} as const satisfies Metadata["robots"];
 
 // ─── Structured Data Builders ────────────────────────────────────────────────
 

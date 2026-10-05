@@ -13,6 +13,7 @@ import {
   SITE_TAGLINE,
   SITE_DESCRIPTION,
   DEFAULT_OG_IMAGE,
+  DEFAULT_ROBOTS,
   buildOrganizationJsonLd,
   buildWebSiteJsonLd,
 } from "@/lib/seo";
@@ -59,11 +60,7 @@ export async function generateMetadata(): Promise<Metadata> {
     authors: [{ name: "Best Bottles", url: SITE_URL }],
     creator: "Nemat International",
     publisher: "Best Bottles",
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 },
-    },
+    robots: DEFAULT_ROBOTS,
     openGraph: {
       type: "website",
       locale: og.locale,

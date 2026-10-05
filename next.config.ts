@@ -115,6 +115,18 @@ const nextConfig: NextConfig = {
                 destination: "/team/products/new",
                 permanent: false,
             },
+            // The Build Your Bottle builder lives at /matrix; the name people
+            // type (and link to) answered 404.
+            {
+                source: "/build-your-bottle",
+                destination: "/matrix",
+                permanent: true,
+            },
+            {
+                source: "/es/build-your-bottle",
+                destination: "/es/matrix",
+                permanent: true,
+            },
             // ── Legacy /product/ → new /products/ (singular → plural) ──────
             {
                 source: "/product/:slug",

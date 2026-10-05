@@ -1,5 +1,7 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
+import { buildRobots } from "@/lib/crawl/robots";
+import { buildPageSitemap } from "@/lib/crawl/sitemap";
 
 const read = (path: string) => readFileSync(path, "utf8");
 
@@ -32,13 +34,14 @@ describe("site health invariants", () => {
     });
 
     it("keeps internal and account routes out of the public sitemap and robots file", () => {
-        const sitemap = read("next-sitemap.config.js");
-        const robots = read("public/robots.txt");
+        const robots = buildRobots("https://www.bestbottles.com");
+        const sitemapUrls = buildPageSitemap("https://www.bestbottles.com", new Date(0)).map((entry) => entry.url);
         const lab = read("src/app/lab/layout.tsx");
         const dev = read("src/app/dev/layout.tsx");
-        for (const path of ["/team/", "/executive", "/lab/", "/dev/"]) {
-            expect(sitemap).toContain(`"${path}"`);
-            expect(robots).toContain(`Disallow: ${path}`);
+        const disallow = [robots.rules].flat().flatMap((rule) => [rule.disallow ?? []].flat());
+        for (const path of ["/team", "/executive", "/lab/", "/dev/"]) {
+            expect(disallow).toContain(path);
+            expect(sitemapUrls.some((url) => url.startsWith(`https://www.bestbottles.com${path}`))).toBe(false);
         }
         expect(lab).toContain("index: false");
         expect(dev).toContain("index: false");

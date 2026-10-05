@@ -33,7 +33,7 @@ Remaining cost is architectural (force-dynamic catalog/PDP, homepage as a client
 | Analytics | PostHog via `/ingest` proxy; Sentry via `/monitoring-tunnel` |
 | Images | `next/image` + many raw `<img>` heroes; Sanity, Shopify, Supabase, Vercel Blob, Convex storage |
 | Caching | Homepage browse `unstable_cache` 60s; builder families 300s; catalog/PDP `force-dynamic` |
-| Deploy | Vercel; `next-sitemap` postbuild |
+| Deploy | Vercel (`scripts/vercel-build.sh`); robots.txt and sitemaps are app routes (`src/app/robots.ts`, `src/app/sitemap.ts`, `src/app/server-sitemap.xml`) since the next-sitemap postbuild never ran there |
 | Testing | Vitest (no Playwright in `package.json`; this pass used the local Playwright MCP) |
 
 Root providers on every public page: Clerk (optional) → Region → Convex → Cart → Grace → mega menu → MobileTabBar → analytics.
