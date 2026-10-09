@@ -3,8 +3,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: one reading column on the bone ground; items are white work-order rows keyed by a request code. */
+/* Layout: one reading column on the bone ground; items are white work-order rows keyed by a request code.
+   Light only, by choice (Jordan, 9 Oct): the form keeps the site's bone and gold look for every viewer, whatever their theme. */
 :root {
+  color-scheme: light;
   --bg: #F5F3EF;
   --surface: #FFFFFF;
   --sunken: #F4F2EF;
@@ -21,18 +23,6 @@
   --font-body: "Montserrat", "Helvetica Neue", Arial, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
   --radius: 10px;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #151412; --surface: #1F1D1A; --sunken: #262320; --ink: #F1EEE9; --muted: #A69F96;
-    --rule: #3A3631; --gold: #D2B27A; --gold-ink: #DDBF8A; --gold-wash: #2F2A21;
-    --block: #E58C74; --block-wash: #3A2420; --ok: #86C9A1; --ok-wash: #1F3328; color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #151412; --surface: #1F1D1A; --sunken: #262320; --ink: #F1EEE9; --muted: #A69F96;
-  --rule: #3A3631; --gold: #D2B27A; --gold-ink: #DDBF8A; --gold-wash: #2F2A21;
-  --block: #E58C74; --block-wash: #3A2420; --ok: #86C9A1; --ok-wash: #1F3328; color-scheme: dark;
 }
 * { box-sizing: border-box; }
 body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.55; }
