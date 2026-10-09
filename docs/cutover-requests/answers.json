@@ -1,0 +1,789 @@
+{
+  "form": "https://claude.ai/artifact/ScK99Dz3LU5RVgkwQpy61u",
+  "formSource": "docs/cutover-requests/cutover-requests.html",
+  "syncedAt": "2026-10-09T23:20:28.478Z",
+  "lastAnswerAt": null,
+  "totals": {
+    "requests": 51,
+    "answered": 0,
+    "neededForLaunch": 26,
+    "neededForLaunchAnswered": 0,
+    "withNoteOnly": 0
+  },
+  "redactedNumbers": 0,
+  "ignoredDocuments": [],
+  "requests": [
+    {
+      "id": "G-1",
+      "section": "Google accounts",
+      "title": "Google Analytics access",
+      "owners": [
+        "Aamir"
+      ],
+      "neededForLaunch": true,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "G-2",
+      "section": "Google accounts",
+      "title": "Google Search Console access",
+      "owners": [
+        "Aamir"
+      ],
+      "neededForLaunch": true,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "G-3",
+      "section": "Google accounts",
+      "title": "Bing Webmaster Tools access",
+      "owners": [
+        "Aamir"
+      ],
+      "neededForLaunch": false,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "G-4",
+      "section": "Google accounts",
+      "title": "Google Ads and Shopping",
+      "owners": [
+        "Aamir",
+        "Abbas"
+      ],
+      "neededForLaunch": true,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "G-5",
+      "section": "Google accounts",
+      "title": "“Sign in with Google” for customers",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": true,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "D-1",
+      "section": "Domain, DNS and email",
+      "title": "Who controls the domain",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": true,
+      "type": "fields",
+      "answered": false,
+      "answer": {},
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "D-2",
+      "section": "Domain, DNS and email",
+      "title": "Copy of the current DNS records",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": true,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "D-3",
+      "section": "Domain, DNS and email",
+      "title": "Where the current site is hosted",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": true,
+      "type": "fields",
+      "answered": false,
+      "answer": {},
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "D-4",
+      "section": "Domain, DNS and email",
+      "title": "Launch date",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": true,
+      "type": "text",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "D-5",
+      "section": "Domain, DNS and email",
+      "title": "Orders on the old site at switch-over",
+      "owners": [
+        "Abbas",
+        "Shipping team"
+      ],
+      "neededForLaunch": true,
+      "type": "fields",
+      "answered": false,
+      "answer": {},
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "P-1",
+      "section": "Payments",
+      "title": "Is Shopify Payments switched on?",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": true,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "P-2",
+      "section": "Payments",
+      "title": "When cards are charged",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": true,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "P-3",
+      "section": "Payments",
+      "title": "Orders that wait more than 7 days",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": false,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "P-4",
+      "section": "Payments",
+      "title": "Shipping team Shopify logins",
+      "owners": [
+        "Abbas",
+        "Shipping team"
+      ],
+      "neededForLaunch": true,
+      "type": "text",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "S-1",
+      "section": "Shipping and FedEx",
+      "title": "How shipping is priced at checkout",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": true,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "S-2",
+      "section": "Shipping and FedEx",
+      "title": "Remove the $0 shipping rate",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": true,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "S-3",
+      "section": "Shipping and FedEx",
+      "title": "Connect your FedEx account",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": true,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "S-4",
+      "section": "Shipping and FedEx",
+      "title": "Your FedEx discount",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": true,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "S-5",
+      "section": "Shipping and FedEx",
+      "title": "FedEx services to offer",
+      "owners": [
+        "Abbas",
+        "Shipping team"
+      ],
+      "neededForLaunch": true,
+      "type": "multi",
+      "answered": false,
+      "answer": [],
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "S-6",
+      "section": "Shipping and FedEx",
+      "title": "Ship-from address and pickup",
+      "owners": [
+        "Shipping team"
+      ],
+      "neededForLaunch": true,
+      "type": "fields",
+      "answered": false,
+      "answer": {},
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "S-7",
+      "section": "Shipping and FedEx",
+      "title": "Boxes and packing",
+      "owners": [
+        "Shipping team"
+      ],
+      "neededForLaunch": true,
+      "type": "fields",
+      "answered": false,
+      "answer": {},
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "S-8",
+      "section": "Shipping and FedEx",
+      "title": "Large orders and freight",
+      "owners": [
+        "Abbas",
+        "Shipping team"
+      ],
+      "neededForLaunch": true,
+      "type": "fields",
+      "answered": false,
+      "answer": {},
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "S-9",
+      "section": "Shipping and FedEx",
+      "title": "International shipping",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": true,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "S-10",
+      "section": "Shipping and FedEx",
+      "title": "How labels are printed",
+      "owners": [
+        "Shipping team"
+      ],
+      "neededForLaunch": false,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "S-11",
+      "section": "Shipping and FedEx",
+      "title": "Glass protection defaults",
+      "owners": [
+        "Abbas",
+        "Shipping team"
+      ],
+      "neededForLaunch": false,
+      "type": "fields",
+      "answered": false,
+      "answer": {},
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "S-12",
+      "section": "Shipping and FedEx",
+      "title": "A shipping-rate app, if needed",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": false,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "QB-1",
+      "section": "QuickBooks and order import",
+      "title": "QuickBooks edition and year",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": false,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "QB-2",
+      "section": "QuickBooks and order import",
+      "title": "Where QuickBooks runs",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": false,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "QB-3",
+      "section": "QuickBooks and order import",
+      "title": "How a web order should appear in QuickBooks",
+      "owners": [
+        "Accountant"
+      ],
+      "neededForLaunch": false,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "QB-4",
+      "section": "QuickBooks and order import",
+      "title": "Customers in QuickBooks",
+      "owners": [
+        "Accountant"
+      ],
+      "neededForLaunch": false,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "QB-5",
+      "section": "QuickBooks and order import",
+      "title": "Item codes in QuickBooks",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": false,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "QB-6",
+      "section": "QuickBooks and order import",
+      "title": "Item list export",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": false,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "QB-7",
+      "section": "QuickBooks and order import",
+      "title": "Customer list export",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": false,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "QB-8",
+      "section": "QuickBooks and order import",
+      "title": "Who owns stock counts",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": false,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "QB-9",
+      "section": "QuickBooks and order import",
+      "title": "Sales tax items in QuickBooks",
+      "owners": [
+        "Accountant"
+      ],
+      "neededForLaunch": false,
+      "type": "text",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "QB-10",
+      "section": "QuickBooks and order import",
+      "title": "Accounts to post to",
+      "owners": [
+        "Accountant"
+      ],
+      "neededForLaunch": false,
+      "type": "fields",
+      "answered": false,
+      "answer": {},
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "QB-11",
+      "section": "QuickBooks and order import",
+      "title": "What goes wrong with Webgility",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": false,
+      "type": "multi",
+      "answered": false,
+      "answer": [],
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "QB-12",
+      "section": "QuickBooks and order import",
+      "title": "Which Transaction Pro you use",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": false,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "QB-13",
+      "section": "QuickBooks and order import",
+      "title": "The Nemat International website",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": false,
+      "type": "fields",
+      "answered": false,
+      "answer": {},
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "QB-14",
+      "section": "QuickBooks and order import",
+      "title": "Past orders in the customer portal",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": false,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "QB-15",
+      "section": "QuickBooks and order import",
+      "title": "Accountant or bookkeeper",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": false,
+      "type": "fields",
+      "answered": false,
+      "answer": {},
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "T-1",
+      "section": "Sales tax",
+      "title": "Is $0 sales tax intended?",
+      "owners": [
+        "Accountant",
+        "Abbas"
+      ],
+      "neededForLaunch": true,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "T-2",
+      "section": "Sales tax",
+      "title": "What county is for",
+      "owners": [
+        "Accountant"
+      ],
+      "neededForLaunch": false,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "T-3",
+      "section": "Sales tax",
+      "title": "Tax while a certificate is under review",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": false,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "C-1",
+      "section": "Catalog and content",
+      "title": "Dropper bulb materials",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": false,
+      "type": "text",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "C-2",
+      "section": "Catalog and content",
+      "title": "13 products still in Draft",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": true,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "C-3",
+      "section": "Catalog and content",
+      "title": "Out of stock or discontinued at launch",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": false,
+      "type": "text",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "C-4",
+      "section": "Catalog and content",
+      "title": "Spanish reviewer",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": false,
+      "type": "text",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "N-1",
+      "section": "Notifications and customer accounts",
+      "title": "Who receives which email",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": true,
+      "type": "fields",
+      "answered": false,
+      "answer": {},
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "N-2",
+      "section": "Notifications and customer accounts",
+      "title": "Sender address for customer emails",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": true,
+      "type": "text",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    },
+    {
+      "id": "N-3",
+      "section": "Notifications and customer accounts",
+      "title": "How customers get portal accounts",
+      "owners": [
+        "Abbas"
+      ],
+      "neededForLaunch": true,
+      "type": "choice",
+      "answered": false,
+      "answer": "",
+      "note": "",
+      "answeredBy": null,
+      "answeredAt": null
+    }
+  ]
+}
