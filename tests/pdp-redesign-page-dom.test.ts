@@ -87,6 +87,7 @@ const payload: PdpRedesignPayload = {
         GBCylAmb9RollBlkDot: kit("GBCylAmb9RollBlkDot"),
     },
     platesBySku: {},
+    fallbackBySku: {},
     descriptions: {
         GBCylBlu9RollBlkDot: { description: "Plastic roller copy.", itemType: "Roll-on bottles", source: "curated", legacyUrl: null },
         GBCylBlu9MtlRollBlkDot: { description: "Steel roller copy.", itemType: "Roll-on bottles", source: "curated", legacyUrl: null },

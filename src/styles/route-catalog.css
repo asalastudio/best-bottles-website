@@ -1,0 +1,5 @@
+@import "tailwindcss" source(none);
+@import "./tailwind-theme.css";
+
+@source "../components/catalog";
+@source "../app/catalog";

@@ -2,7 +2,7 @@ import { getLegacyProductRouteOverride } from "./legacy-product-route-overrides"
 
 export type ProductPageSearchParams = Record<string, string | string[] | undefined>;
 
-function searchParamsToString(input: ProductPageSearchParams): string {
+export function searchParamsToString(input: ProductPageSearchParams): string {
     const params = new URLSearchParams();
     for (const [key, value] of Object.entries(input)) {
         if (Array.isArray(value)) value.forEach((item) => params.append(key, item));

@@ -48,6 +48,8 @@ export default function PdpKitPartImage({
                 alt={alt}
                 draggable={false}
                 decoding="async"
+                loading="lazy"
+                fetchPriority="low"
                 onError={() => { if (src !== part.image.url && markRegisterOptimizerUnavailable(part.image.url)) setRaw(true); }}
                 style={{ position: "absolute", left: crop.left, top: crop.top, width: crop.imgWidth, height: crop.imgHeight, maxWidth: "none", display: "block" }}
             />

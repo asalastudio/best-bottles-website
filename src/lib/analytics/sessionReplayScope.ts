@@ -51,6 +51,17 @@ export function cartCapturePath(value: string | null | undefined): string | null
     return path !== null && CART_ROUTES.some((route) => route.test(path)) ? path : null;
 }
 
-export function mayRecordSession(pathname: string | null | undefined): boolean {
+export function mayRecordSession(
+    pathname: string | null | undefined,
+    options?: { mobile?: boolean },
+): boolean {
+    if (options?.mobile) return false;
+    if (
+        typeof window !== "undefined"
+        && typeof window.matchMedia === "function"
+        && window.matchMedia("(max-width: 899px)").matches
+    ) {
+        return false;
+    }
     return publicCapturePath(pathname) !== null;
 }

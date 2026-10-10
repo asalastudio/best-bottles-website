@@ -2,6 +2,7 @@
 /* Editorial images here are collection navigation, never SKU plates. */
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useRef, useState, type MouseEvent } from "react";
+import Image from "next/image";
 import type { HomepageData } from "@/sanity/lib/queries";
 import { editorialImageUrl } from "@/sanity/lib/image";
 import { FAMILY_ART, familyCardSources } from "@/lib/homepageFamilyArt";
@@ -186,7 +187,17 @@ function FamiliesRail({ cards, familyCounts }: { cards?: HomepageData["designFam
                     return (
                         <LocaleLink key={c.family} href={familyFinderHref(c.family)} className={`${styles.card} ${styles.familyCard}`}>
                             {/* The near-square card art suits the 1:1 frame at every width. */}
-                            {art && <img className={styles.familyImage} src={art.mobile} alt={`${localizeFamilyName(locale, c.family)} bottle family`} width={800} height={800} loading="lazy" />}
+                            {art && (
+                                <Image
+                                    className={styles.familyImage}
+                                    src={art.mobile}
+                                    alt={`${localizeFamilyName(locale, c.family)} bottle family`}
+                                    width={800}
+                                    height={800}
+                                    sizes="(max-width: 640px) calc((100vw - 54px) / 2), (max-width: 1100px) calc((100vw - 120px) / 3), calc((min(100vw, 1280px) - 204px) / 4)"
+                                    loading="lazy"
+                                />
+                            )}
                             <span className={styles.familyFooter}>
                                 <span className={styles.familyName}>{label}</span>
                                 {count ? <span className={styles.familyCount}>{t("shopFamilyItems", { count })}</span> : null}

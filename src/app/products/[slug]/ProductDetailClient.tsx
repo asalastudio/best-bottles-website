@@ -18,6 +18,7 @@ import {
     ShoppingBag, ArrowLeft, Package,
     Check, Truck,
 } from "@/components/icons";
+import "@/styles/route-classic-pdp.css";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Breadcrumbs, { type BreadcrumbStep } from "@/components/Breadcrumbs";

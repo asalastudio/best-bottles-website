@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import LocaleLink from "@/components/LocaleLink";
 import { House, GridFour, Wrench, User, X, Microphone } from "@/components/icons";
-import { motion, AnimatePresence } from "framer-motion";
 import { useGrace } from "@/components/useGrace";
 import { analytics } from "@/lib/analytics";
 import { stripLocalePrefix } from "@/i18n/paths";
@@ -137,15 +136,8 @@ export default function MobileTabBar() {
                         const isGrace = tab.key === "grace";
                         return (
                             <div key={tab.key} className="relative flex-1 flex items-center justify-center h-full min-w-[44px]">
-                                <AnimatePresence>
                                 {isGrace && showGraceTooltip && (
-                                        <motion.div
-                                            initial={{ opacity: 0, y: 6 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            exit={{ opacity: 0, y: 4 }}
-                                            transition={{ duration: 0.2 }}
-                                            className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-[200px] z-[60]"
-                                        >
+                                        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-[200px] z-[60]">
                                             <div className="bg-obsidian text-bone text-xs rounded-xl shadow-xl px-3 py-2.5 pr-7 relative">
                                                 <p className="leading-snug">
                                                     {isProductPage ? grace("tooltipPdp") : grace("tooltipGeneral")}
@@ -159,13 +151,13 @@ export default function MobileTabBar() {
                                                 </button>
                                             </div>
                                             <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-obsidian rotate-45" />
-                                        </motion.div>
+                                        </div>
                                     )}
-                                </AnimatePresence>
                                 <button
                                     role="tab"
                                     aria-selected={false}
                                     aria-label={isGrace ? grace("askAria") : tab.label}
+                                    data-grace-open={isGrace ? "" : undefined}
                                     onClick={() => handleAction()}
                                     className="group w-full flex items-center justify-center h-full min-w-[44px] cursor-pointer"
                                 >

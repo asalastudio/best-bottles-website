@@ -1,3 +1,4 @@
+import "@/styles/route-internal.css";
 import type { Metadata } from "next";
 import GraceWorkspaceClient from "./GraceWorkspaceClient";
 import { getWorkspaceRailData } from "@/lib/grace/workspaceRail";

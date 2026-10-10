@@ -1,4 +1,31 @@
 @import "tailwindcss";
+@import "../styles/tailwind-theme.css";
+
+/* Route trees below have their own Tailwind entry so this sheet, which blocks
+   every page, does not carry homepage, classic PDP, catalog, or internal utilities. */
+@source not "../components/HomePage.tsx";
+@source not "../components/home";
+@source not "../components/products";
+@source not "../components/catalog";
+@source not "../components/team";
+@source not "../components/portal";
+@source not "../components/executive";
+@source not "../components/grace-workspace";
+@source not "../components/bottle-builder";
+@source not "../components/matrix";
+@source not "../components/FitmentDrawer.tsx";
+@source not "../components/FitmentCarousel.tsx";
+@source not "../components/PdpBlocks.tsx";
+@source not "../components/CartDrawer.tsx";
+@source not "../app/products";
+@source not "../app/catalog";
+@source not "../app/(portal)";
+@source not "../app/team";
+@source not "../app/lab";
+@source not "../app/executive";
+@source not "../app/grace-workspace";
+@source not "../app/matrix";
+
 
 /* ── shadcn/ui radius token (used by shadcn components) ─────────────────── */
 :root {
@@ -6,112 +33,6 @@
   --mobile-tab-bar-height: calc(3.5rem + 1px); /* 56px rail + 1px top border */
   --mobile-tab-bar-clearance: calc(var(--mobile-tab-bar-height) + env(safe-area-inset-bottom, 0px));
 }
-
-@theme {
-  /* ── Brand palette (defined first — shadcn mappings reference these) ─── */
-  --color-obsidian: #1D1D1F;
-  --color-bone: #F5F3EF;
-  --color-muted-gold: #C5A065;
-  --color-slate: #637588;
-  --color-champagne: #D4C5A9;
-  --color-linen: #FAF8F5;
-  --color-travertine: #EEE6D4;
-  /* Secondary contrast tones for product grids */
-  --color-parchment: #ECE5D8;   /* warm amber-beige — grid wrappers, filter sidebar, section contrast */
-  --color-warm-white: #FDFBF8;  /* near-white with warmth — browsing areas, card-friendly backgrounds */
-  /* Portal palette extensions */
-  --color-ash: #9A9590;
-  --color-ink: #2C2C2E;
-  --color-gold-dim: #8B6F42;
-
-
-  /* ── shadcn/ui Tailwind v4 color mappings ──────────────────────────────
-     Maps semantic shadcn tokens → Best Bottles brand colors.
-     Enables bg-primary, text-muted-foreground, etc. to use brand palette. */
-  --color-background: var(--color-linen);
-  --color-foreground: var(--color-obsidian);
-  --color-card: var(--color-linen);
-  --color-card-foreground: var(--color-obsidian);
-  --color-primary: var(--color-muted-gold);
-  --color-primary-foreground: var(--color-obsidian);
-  --color-secondary: var(--color-travertine);
-  --color-secondary-foreground: var(--color-obsidian);
-  --color-muted: var(--color-champagne);
-  --color-muted-foreground: var(--color-ash);
-  --color-accent: var(--color-travertine);
-  --color-accent-foreground: var(--color-obsidian);
-  --color-border: var(--color-champagne);
-  --color-input: var(--color-champagne);
-  --color-ring: var(--color-muted-gold);
-  --color-destructive: #ef4444;
-  --color-destructive-foreground: #ffffff;
-  --color-popover: var(--color-linen);
-  --color-popover-foreground: var(--color-obsidian);
-
-  /* ── Typography ───────────────────────────────────────────────────────── */
-  --font-brand: var(--font-brand-face), "Montserrat", Arial, ui-sans-serif, sans-serif;
-  --font-sans: var(--font-brand);
-  /* Sitewide the "serif" slot IS the brand face (Jordan, 2026-09-14: Montserrat everywhere; Garamond only on the
-     blog). The blog layout carries `.editorial`, which restores EB Garamond for its own subtree. */
-  --font-serif: var(--font-brand);
-  --font-editorial: var(--font-eb-garamond), ui-serif, Georgia, "Times New Roman", serif;
-}
-
-/* ── Interface tokens ─────────────────────────────────────────────────────
-   `static` is load-bearing: Tailwind v4 tree-shakes theme variables that no
-   utility class references, and these are read through inline `var()` as well
-   as through utilities. Without it they silently resolve to nothing, which
-   collapses every icon that sizes itself from one. */
-@theme static {
-  /* ── Interface surfaces ───────────────────────────────────────────────
-     A calm B2B register: warm neutrals, one charcoal, colour only where it
-     carries meaning. Brand warmth lives in the grounds and in photography,
-     not in the controls.
-
-     The rule that keeps this coherent: GOLD IS NOT DECORATION. It marks the
-     destination you are on and deliberate brand emphasis. When gold appears on
-     two things at once, neither reads as selected — which is exactly what the
-     mobile bar does today with Home and Grace both gold.
-
-     Surfaces run from the warmest ground outward to the coolest content, so a
-     card reads as lifted without needing a heavy border:
-       page (bone) → rail (linen) → card (white) → sunken panel */
-  --color-surface: #FFFFFF;          /* cards and content areas */
-  --color-surface-rail: var(--color-linen);   /* persistent navigation */
-  --color-surface-sunken: #F4F2EF;   /* supporting panels, table headers */
-  --color-surface-selected: #E8E4DE; /* the current navigation row */
-  --color-rule: #DCD7D0;             /* dividers, inputs, card edges */
-
-  /* One charcoal for body text and every standard icon. `ink` already held
-     it; these name the roles so a component never reaches for a raw hex. */
-  --color-text-primary: var(--color-ink);
-  --color-text-secondary: #6B6660;   /* labels and supporting copy */
-  --color-text-muted: var(--color-ash);
-
-  /* ── Status ───────────────────────────────────────────────────────────
-     Each pair is a pale ground with text dark enough to clear WCAG AA on it.
-     A status colour never appears without words: the badge says "Tax exempt",
-     the green only agrees with it. Colour alone is invisible to a reader who
-     cannot distinguish it and meaningless to one who has not learned the
-     convention. */
-  --color-status-positive-surface: #E6EFE1;
-  --color-status-positive-text: #2F5233;
-  --color-status-warning-surface: #F5EDD6;
-  --color-status-warning-text: #6B5220;
-  --color-status-info-surface: #DEE3EE;
-  --color-status-info-text: #33415C;
-  --color-status-neutral-surface: var(--color-surface-sunken);
-  --color-status-neutral-text: var(--color-text-secondary);
-
-  /* ── Icons ────────────────────────────────────────────────────────────
-     One outline family at a consistent weight. Mobile gets the heavier stroke
-     because fine hairlines disappear at arm's length on a phone. */
-  --icon-size-desktop: 20px;
-  --icon-size-mobile: 24px;
-  --icon-stroke-desktop: 1.5px;
-  --icon-stroke-mobile: 2px;
-}
-
 
 /* Display + accent utilities: brand face sitewide; `.editorial` (blog) restores the serifs. Title case is kept. */
 .font-display {
@@ -867,5 +788,26 @@ img.app-wordmark {
 @media (max-width: 1099px) {
   /* The shared footer must also reflow when builder customers enlarge text. */
   body:has([data-mobile-builder]) footer .grid > * { min-width: 0; overflow-wrap: anywhere; }
+}
+
+/* Mobile paint: drop backdrop filters and large shadows. Desktop rules are unchanged. */
+@media (max-width: 899px) {
+  .backdrop-blur,
+  .backdrop-blur-sm,
+  .backdrop-blur-md,
+  .backdrop-blur-lg,
+  .backdrop-blur-xl,
+  .backdrop-blur-2xl,
+  .backdrop-blur-3xl,
+  .bb-blur {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  .shadow-lg,
+  .shadow-xl,
+  .shadow-2xl,
+  .bb-blur {
+    box-shadow: none !important;
+  }
 }
 

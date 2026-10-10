@@ -12,6 +12,7 @@ import {
     MagnifyingGlass as Search, X, Package, CaretDown as ChevronDown, CaretUp as ChevronUp,
     SlidersHorizontal, ArrowsDownUp as ArrowUpDown, SquaresFour as LayoutGrid, List, Plus, Minus, ShoppingCart, ChatCircle as MessageCircle, Sparkles,
 } from "@/components/icons";
+import "@/styles/route-catalog.css";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Breadcrumbs from "@/components/Breadcrumbs";

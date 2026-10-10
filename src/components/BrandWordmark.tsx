@@ -16,12 +16,13 @@ export default function BrandWordmark({ className, tone = "dark", tagline = fals
     const light = tone === "light";
     const mark = (
         <Image
-            src="/brand/best-bottles-wordmark-supplied.png"
+            src="/brand/best-bottles-wordmark.webp"
             alt="Best Bottles"
             width={968}
             height={76}
-            priority
-            unoptimized
+            loading="eager"
+            fetchPriority="low"
+            sizes="(max-width: 640px) 242px, 357px"
             className={[styles.wordmark, light ? styles.light : "", tagline ? styles.inLockup : "", tagline ? "" : (className ?? "")].filter(Boolean).join(" ")}
         />
     );
