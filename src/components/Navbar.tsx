@@ -8,7 +8,7 @@ import {
     Flask, Diamond, ArrowRight, ArrowLeft, SprayBottle,
 } from "@/components/icons";
 import { useCart } from "@/components/CartProvider";
-import CartDrawer from "./CartDrawer";
+import dynamic from "next/dynamic";
 import AnnouncementMarquee from "./AnnouncementMarquee";
 import BrandWordmark from "./BrandWordmark";
 import RegionSelector from "./RegionSelector";
@@ -19,6 +19,8 @@ import { urlFor } from "@/sanity/lib/image";
 import { MEGA_MENU_PANELS, type MegaMenuId, type MegaMenuPanelContent } from "@/lib/megaMenu";
 import { localizeHref } from "@/i18n/paths";
 import { useAppLocale, useCopy } from "@/i18n/useCopy";
+
+const CartDrawer = dynamic(() => import("./CartDrawer"));
 
 interface NavbarProps {
     variant?: "home" | "catalog";
@@ -125,6 +127,11 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
         }
     };
     const [cartOpen, setCartOpen] = useState(false);
+    const [cartMounted, setCartMounted] = useState(false);
+    const openCart = useCallback(() => {
+        setCartMounted(true);
+        setCartOpen(true);
+    }, []);
     const [mounted, setMounted] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [isDictating, setIsDictating] = useState(false);
@@ -148,10 +155,10 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
 
     // Allow other components to open the cart drawer via custom event
     useEffect(() => {
-        const handler = () => setCartOpen(true);
+        const handler = () => openCart();
         window.addEventListener("open-cart-drawer", handler);
         return () => window.removeEventListener("open-cart-drawer", handler);
-    }, []);
+    }, [openCart]);
 
     useEffect(() => {
         if (initialSearchValue !== undefined) {
@@ -369,7 +376,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                 {builderMobile && <div className="builder-mobile-brand">
                     <LocaleLink href="/catalog" aria-label={t("backToBottles")}><ArrowLeft size={22} /></LocaleLink>
                     <p className="builder-mobile-title">{t("buildYourBottle")}</p>
-                    <button aria-label={`Cart${mounted && isCartHydrated ? `, ${itemCount} items` : ""}`} onClick={() => setCartOpen(true)}><ShoppingBag size={24} />{mounted && isCartHydrated && itemCount > 0 && <span>{itemCount > 99 ? "99+" : itemCount}</span>}</button>
+                    <button aria-label={`Cart${mounted && isCartHydrated ? `, ${itemCount} items` : ""}`} onClick={openCart}><ShoppingBag size={24} />{mounted && isCartHydrated && itemCount > 0 && <span>{itemCount > 99 ? "99+" : itemCount}</span>}</button>
                 </div>}
                 <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
                     {/* Row 1: desktop = [reserved: region/currency] | centred wordmark | search + actions. mobile = hamburger | centred wordmark | spacer */}
@@ -453,7 +460,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
 
                             <button
                                 aria-label="Cart"
-                                onClick={() => setCartOpen(true)}
+                                onClick={openCart}
                                 className={`${variant === "catalog" ? "flex" : "hidden xl:flex"} items-center p-2 hover:text-muted-gold transition-colors relative cursor-pointer`}
                             >
                                 <ShoppingBag className="text-obsidian" size={20} />
@@ -581,7 +588,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                 </div>
             </header>
 
-            <CartDrawer isOpen={cartOpen} onClose={() => setCartOpen(false)} />
+            {cartMounted ? <CartDrawer isOpen={cartOpen} onClose={() => setCartOpen(false)} /> : null}
 
             {/* Overlay */}
             {activeMega && (

@@ -572,9 +572,12 @@ async function callGraceServerTool<T>(
 export default function GraceProvider({
     children,
     userId = null,
+    publishValue,
 }: {
-    children: ReactNode;
+    children?: ReactNode;
     userId?: string | null;
+    /** When set, a parent owns the context provider so this module can load after first paint without remounting the page. */
+    publishValue?: (value: GraceContextValue) => void;
 }) {
     const router = useRouter();
     const pathname = usePathname();
@@ -3277,6 +3280,12 @@ export default function GraceProvider({
         activeForm, updateFormField, submitActiveForm, dismissActiveForm,
         voiceFailed, graceQuery, pageContext, browsingHistory, stopSpeaking, ownerKey,
     ]);
+
+    useEffect(() => {
+        publishValue?.(contextValue);
+    }, [publishValue, contextValue]);
+
+    if (publishValue) return null;
 
     return (
         <GraceContext.Provider value={contextValue}>

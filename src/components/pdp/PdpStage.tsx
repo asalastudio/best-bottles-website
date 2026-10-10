@@ -283,6 +283,8 @@ export default function PdpStage({
                                         alt=""
                                         draggable={false}
                                         decoding="async"
+                                        loading="lazy"
+                                        fetchPriority="low"
                                         className={styles.stageBackdrop}
                                         style={{
                                             left: `${layout.backdrop.box.leftPct}%`, top: `${layout.backdrop.box.topPct}%`,
@@ -350,6 +352,8 @@ export default function PdpStage({
                                             alt=""
                                             draggable={false}
                                             decoding="async"
+                                            loading="lazy"
+                                            fetchPriority="low"
                                             onError={() => { if (markRegisterOptimizerUnavailable(part.url)) showRaw(part.url); }}
                                             style={boxStyle}
                                         />
@@ -363,6 +367,8 @@ export default function PdpStage({
                                         alt=""
                                         draggable={false}
                                         decoding="async"
+                                        loading="lazy"
+                                        fetchPriority="low"
                                         className={styles.stagePart}
                                         data-slot={part.slot}
                                         style={{ transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex }}

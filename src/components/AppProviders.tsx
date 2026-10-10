@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, type ReactNode } from "react";
+import { type ReactNode } from "react";
 import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 import ConvexClientProvider from "@/components/ConvexClientProvider";
@@ -11,7 +11,7 @@ import {
     type MegaMenuPanelsData,
 } from "@/components/SanityMegaMenuProvider";
 import MobileTabBar from "@/components/mobile/MobileTabBar";
-import GraceProvider from "@/components/grace/GraceProvider";
+import GraceProviderGate from "@/components/grace/GraceProviderGate";
 import GraceChat from "@/components/grace/GraceChat";
 import GraceLauncher from "@/components/grace/GraceLauncher";
 import GraceLayoutShell from "@/components/grace/GraceLayoutShell";
@@ -53,20 +53,12 @@ function ProviderContent({
     );
     const grace = withClerk
         ? <GraceProviderWithClerk>{shell}<GraceChat /><GraceLauncher /></GraceProviderWithClerk>
-        : <GraceProvider>{shell}<GraceChat /><GraceLauncher /></GraceProvider>;
+        : <GraceProviderGate>{shell}<GraceChat /><GraceLauncher /></GraceProviderGate>;
     return (
         <RegionProvider initialMarketCode={initialMarketCode}>
         <ConvexClientProvider withClerk={withClerk}>
             <CartProvider>
-                <Suspense
-                    fallback={
-                        <div className="min-h-screen bg-bone flex items-center justify-center">
-                            <div className="w-10 h-10 border-2 border-muted-gold/30 border-t-muted-gold rounded-full animate-spin" />
-                        </div>
-                    }
-                >
-                    {grace}
-                </Suspense>
+                {grace}
                 <AnalyticsProvider withClerk={withClerk} />
             </CartProvider>
         </ConvexClientProvider>

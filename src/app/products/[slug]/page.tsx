@@ -2,6 +2,7 @@ import { readKitPilot } from "../../../../scripts/asset-ledger/kit-pilot.mjs";
 import { localPdpComponentKits } from "@/lib/paper-doll/local-component-kits";
 import { hasCatalogSourceHold } from "@/lib/products/catalog-listing-visibility";
 import { notFound, permanentRedirect } from "next/navigation";
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../convex/_generated/api";
@@ -12,9 +13,8 @@ import type {
     ProductVariant,
 } from "./ProductDetailClient";
 import nextDynamic from "next/dynamic";
-import { isSanityConfigured } from "@/sanity/lib/client";
-import { sanityFetch } from "@/sanity/lib/live";
-import SanityLiveVisualEditing from "@/components/SanityLiveVisualEditing";
+import { client as sanityClient, isSanityConfigured } from "@/sanity/lib/client";
+import { unstable_cache } from "next/cache";
 import Footer from "@/components/Footer";
 import { SITE_NAME, SITE_URL, buildBreadcrumbJsonLd, buildProductJsonLd } from "@/lib/seo";
 import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
@@ -28,7 +28,6 @@ import type { PdpBlock } from "@/components/PdpBlocks";
 import { loadPlatesForVariants } from "@/lib/paper-doll/plates";
 import { atomizerVariantCardName, isVariantCardFamily, withReleasedHeroStages } from "@/lib/products/variant-cards";
 import { getReleasedCatalogHero } from "@/lib/products/catalog-heroes";
-import { headers } from "next/headers";
 import { readCompletion } from "../../../../scripts/asset-ledger/plate-completion.mjs";
 import { localBostonPreview, previewPlates } from "../../../../scripts/asset-ledger/product-preview.mjs";
 import {
@@ -48,8 +47,14 @@ import { isSoldOutStockStatus } from "@/lib/checkout";
 const PdpRedesignPage = nextDynamic(() => import("@/components/pdp/PdpRedesignPage"));
 const ProductDetailClient = nextDynamic(() => import("./ProductDetailClient"));
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+// On-demand ISR. An empty generateStaticParams list keeps `next build` from
+// prerendering every slug (CI has no live catalog). The first request writes
+// the HTML; the next 5 minutes are served from that cache.
+export const revalidate = 300;
+
+export function generateStaticParams() {
+    return [];
+}
 
 function getConvexClient() {
     const url = process.env.NEXT_PUBLIC_CONVEX_URL;
@@ -119,20 +124,18 @@ async function getPrimaryCompatibility(data: ProductGroupPayload | null): Promis
 async function getPdpBlocks(activeSlug: string, family: string | null | undefined): Promise<PdpBlock[]> {
     if (!isSanityConfigured || !activeSlug || !family) return [];
     try {
-        // Live, draft-aware fetch: published blocks for visitors, draft blocks with
-        // click-to-edit overlays inside the Studio's Presentation tool.
-        const [groupRes, familyRes] = await Promise.all([
-            sanityFetch({
-                query: `*[_type == "productGroupContent" && slug.current == $slug][0] { pageBlocks, overrideTemplate }`,
-                params: { slug: activeSlug },
-            }),
-            sanityFetch({
-                query: `*[_type == "productFamilyContent" && family == $family][0] { pageBlocks }`,
-                params: { family },
-            }),
+        // Published content only. sanityFetch() reads draft mode and would make
+        // this route dynamic, which streams the LCP image after the loading shell.
+        const [groupContent, familyContent] = await Promise.all([
+            sanityClient.fetch<{ pageBlocks?: PdpBlock[]; overrideTemplate?: boolean } | null>(
+                `*[_type == "productGroupContent" && slug.current == $slug][0] { pageBlocks, overrideTemplate }`,
+                { slug: activeSlug },
+            ),
+            sanityClient.fetch<{ pageBlocks?: PdpBlock[] } | null>(
+                `*[_type == "productFamilyContent" && family == $family][0] { pageBlocks }`,
+                { family },
+            ),
         ]);
-        const groupContent = groupRes.data as { pageBlocks?: PdpBlock[]; overrideTemplate?: boolean } | null;
-        const familyContent = familyRes.data as { pageBlocks?: PdpBlock[] } | null;
         const groupBlocks = groupContent?.pageBlocks ?? [];
         const familyBlocks = familyContent?.pageBlocks ?? [];
         return groupContent?.overrideTemplate ? groupBlocks : [...groupBlocks, ...familyBlocks];
@@ -274,19 +277,23 @@ async function loadRedesignPayload(
     };
 }
 
+const loadCachedGroup = unstable_cache(async (slug: string) => {
+    const data = await getProductData(slug);
+    return data ? JSON.parse(JSON.stringify(data)) as ProductGroupPayload : null;
+}, ["pdp-group-v2"], { revalidate: 300 });
+
 export async function generateMetadata({
     params,
-    searchParams,
 }: {
     params: Promise<{ slug: string }>;
-    searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }): Promise<Metadata> {
     const { slug } = await params;
     const activeSlug = getLegacyProductRouteOverride(slug) ?? slug;
-    const data = await getProductData(activeSlug);
+    const data = await loadCachedGroup(activeSlug);
     const group = data?.group;
-    // A variant-card family's catalog card links with ?sku=; title the page for that finish.
-    const resolvedParams = await searchParams;
+    // Query-specific titles (?sku=, ?roller=, ?cap=) are not in the cached HTML.
+    // The document title follows the group's default pick; the client updates it.
+    const resolvedParams = undefined as { sku?: string; roller?: string; cap?: string } | undefined;
     const requestedSku = resolvedParams?.sku;
     const skuVariant = isVariantCardFamily(group?.family) && typeof requestedSku === "string"
         // The PDP's own colour picker writes the Grace SKU; catalog cards write the website SKU.
@@ -355,47 +362,72 @@ export async function generateMetadata({
     };
 }
 
+const loadCachedPage = unstable_cache(async (slug: string) => {
+    const data = await getProductData(slug);
+    if (!data) return null;
+    const siblingGroups = await getSiblingGroups(data, slug);
+    const platesBySku = await loadPlatesForVariants(
+        getConvexClient(),
+        (data.variants ?? []).flatMap((variant) => [variant.graceSku, variant.websiteSku]),
+        slug,
+    );
+    if (redesignApplies(slug, data)) {
+        const payload = await loadRedesignPayload(data, slug, siblingGroups, platesBySku);
+        return JSON.parse(JSON.stringify({ kind: "redesign" as const, data, payload })) as {
+            kind: "redesign";
+            data: ProductGroupPayload;
+            payload: PdpRedesignPayload;
+        };
+    }
+    const [pdpBlocks, relations, compatibility] = await Promise.all([
+        getPdpBlocks(slug, data.group.family),
+        getFocusedPdpRelations(slug),
+        getPrimaryCompatibility(data),
+    ]);
+    return JSON.parse(JSON.stringify({
+        kind: "classic" as const,
+        data,
+        siblingGroups,
+        platesBySku,
+        pdpBlocks,
+        relations,
+        compatibility,
+    })) as {
+        kind: "classic";
+        data: ProductGroupPayload;
+        siblingGroups: SiblingGroup[];
+        platesBySku: Awaited<ReturnType<typeof loadPlatesForVariants>>;
+        pdpBlocks: PdpBlock[];
+        relations: FocusedPdpRelations | null;
+        compatibility: PdpCompatibilityPayload | null;
+    };
+}, ["pdp-page-v2"], { revalidate: 300 });
+
 export default async function ProductPage({
     params,
-    searchParams,
 }: {
     params: Promise<{ slug: string }>;
-    searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
-    const [{ slug }, resolvedSearchParams] = await Promise.all([params, searchParams]);
+    const { slug } = await params;
     // The proxy already answers these before the page renders (a real 308 and
     // 404, src/lib/crawl/route-status.ts); these calls cover client-side
     // navigations and a catalogue the proxy could not reach.
-    const redirectTarget = resolveProductPageRedirectTarget(slug, resolvedSearchParams);
+    // The cached page cannot read the query string, so a legacy alias drops it.
+    const redirectTarget = resolveProductPageRedirectTarget(slug, {});
     if (redirectTarget) permanentRedirect(redirectTarget);
     const legacyRouteOverride = getLegacyProductRouteOverride(slug);
 
     const activeSlug = legacyRouteOverride ?? slug;
     if (hasCatalogSourceHold(activeSlug)) notFound();
-    const data = await getProductData(activeSlug);
+    const cached = await loadCachedPage(activeSlug);
+    if (!cached) notFound();
+    const data = cached.data;
     if (!data) notFound();
     const primaryVariant = getPrimaryVariant(data);
-    const [siblingGroups, pdpBlocks, platesBySku, relations, compatibility] = await Promise.all([
-        getSiblingGroups(data, activeSlug),
-        getPdpBlocks(activeSlug, data?.group.family),
-        // The plates for THIS group's variants, from the Convex index -- never
-        // the whole catalogue, and never a throw: a missing plate costs the
-        // customer the plate, not the page.
-        loadPlatesForVariants(
-            getConvexClient(),
-            (data?.variants ?? []).flatMap((variant) => [variant.graceSku, variant.websiteSku]),
-            activeSlug,
-        ),
-        getFocusedPdpRelations(activeSlug),
-        getPrimaryCompatibility(data),
-    ]);
-    const group = data?.group;
+    const group = data.group;
     const variant = primaryVariant;
-    const localComponentKits = localPdpComponentKits((await headers()).get('host'), resolvedSearchParams.assetPreview, data?.variants ?? []);
-    const localAssetPreview = localBostonPreview(process.env.NODE_ENV, (await headers()).get('host'), resolvedSearchParams.assetPreview) && group?.family === 'Boston Round';
-    const completion = localAssetPreview ? await readCompletion(process.cwd()) : null;
-    const displayedPlates = localAssetPreview ? previewPlates(completion, group?._id, data?.variants ?? [], platesBySku) : platesBySku;
-    const pilot = localAssetPreview ? await readKitPilot(process.cwd(), group, displayedPlates) : {kits:{},plates:displayedPlates};
+    // Asset preview reads the host header. That opts the route into dynamic
+    // rendering, so the cached storefront does not overlay local Boston plates.
     const customerName = group
         ? getCustomerFacingProductName({ group, variant, fallbackName: group.displayName }).displayName
         : "";
@@ -433,8 +465,7 @@ export default async function ProductPage({
         ])
         : null;
 
-    if (data && redesignApplies(activeSlug, data)) {
-        const payload = await loadRedesignPayload(data, activeSlug, siblingGroups, platesBySku);
+    if (cached.kind === "redesign") {
         return (
             <>
                 {productJsonLd && (
@@ -449,20 +480,20 @@ export default async function ProductPage({
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
                     />
                 )}
-                <PdpRedesignPage
-                    {...payload}
-                    initialSearch={{
-                        roller: typeof resolvedSearchParams.roller === "string" ? resolvedSearchParams.roller : null,
-                        cap: typeof resolvedSearchParams.cap === "string" ? resolvedSearchParams.cap : null,
-                        sku: typeof resolvedSearchParams.sku === "string" ? resolvedSearchParams.sku : null,
-                        qty: typeof resolvedSearchParams.qty === "string" ? resolvedSearchParams.qty : null,
-                        drawing: typeof resolvedSearchParams.drawing === "string" ? resolvedSearchParams.drawing : null,
-                    }}
-                />
+                <PdpRedesignPage {...cached.payload} />
                 <Footer />
             </>
         );
     }
+
+    const { siblingGroups, platesBySku, pdpBlocks, relations, compatibility } = cached;
+    // Asset preview reads the host header. That opts the route into dynamic
+    // rendering, so the cached storefront does not overlay local Boston plates.
+    const localComponentKits = localPdpComponentKits(null, undefined, data.variants ?? []);
+    const localAssetPreview = localBostonPreview(process.env.NODE_ENV, null, undefined) && group?.family === "Boston Round";
+    const completion = localAssetPreview ? await readCompletion(process.cwd()) : null;
+    const displayedPlates = localAssetPreview ? previewPlates(completion, group?._id, data?.variants ?? [], platesBySku) : platesBySku;
+    const pilot = localAssetPreview ? await readKitPilot(process.cwd(), group, displayedPlates) : {kits:{},plates:displayedPlates};
 
     return (
         <>
@@ -478,6 +509,7 @@ export default async function ProductPage({
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
                 />
             )}
+            <Suspense fallback={null}>
             <ProductDetailClient
                 slug={activeSlug}
                 initialData={data}
@@ -491,7 +523,7 @@ export default async function ProductPage({
                 localAssetPreview={localAssetPreview}
                 localAssetVersion={completion ? `${completion.token}:${completion.revision}` : ''}
             />
-            <SanityLiveVisualEditing />
+            </Suspense>
             <Footer />
         </>
     );

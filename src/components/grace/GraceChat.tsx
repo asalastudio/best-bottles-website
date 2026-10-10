@@ -24,17 +24,12 @@ export default function GraceChat() {
             if (target.closest("[data-grace-launcher], [data-grace-open]")) arm();
         };
         document.addEventListener("pointerdown", onPointerDown, true);
-        let idleId: number | undefined;
-        let timerId: number | undefined;
-        if (typeof window.requestIdleCallback === "function") {
-            idleId = window.requestIdleCallback(arm, { timeout: 4000 });
-        } else {
-            timerId = window.setTimeout(arm, 2500);
-        }
+        // A long timer, not requestIdleCallback: idle fires during the first
+        // quiet moment and pulls framer-motion onto the LCP path.
+        const timerId = window.setTimeout(arm, 8000);
         return () => {
             document.removeEventListener("pointerdown", onPointerDown, true);
-            if (idleId !== undefined) window.cancelIdleCallback(idleId);
-            if (timerId !== undefined) window.clearTimeout(timerId);
+            window.clearTimeout(timerId);
         };
     }, [armed, open]);
 

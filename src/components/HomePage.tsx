@@ -8,7 +8,6 @@ import {
     ArrowRight, Lightning, ShoppingBag, MagnifyingGlass, Compass, CaretRight, Check, ShieldCheck, ChatCircle,
     Flower, Drop, SprayBottle, Gift, Flask, Sparkle,
 } from "@/components/icons";
-import { motion } from "framer-motion";
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import homeStyles from "@/components/home/HomeCatalogBrowser.module.css";
@@ -31,16 +30,10 @@ import {
     HOME_SAMPLE_FEATURE,
 } from "@/lib/homepageMerchandising";
 
-const FadeUp = ({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) => (
-    <motion.div
-        initial={false}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay }}
-        className={className}
-    >
+const FadeUp = ({ children, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) => (
+    <div className={className}>
         {children}
-    </motion.div>
+    </div>
 );
 
 const DEFAULT_ARTICLES = [
@@ -146,13 +139,13 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
                         );
                     })
                 ) : (
-                    <motion.div initial={{ scale: 1.05 }} animate={{ scale: 1 }} transition={{ duration: 8, ease: "easeOut" }} className="relative w-full h-full">
+                    <div className="relative w-full h-full">
                         {showVideo ? (
                             <video src={videoUrl} poster={posterUrl || undefined} autoPlay muted loop playsInline className="w-full h-full object-cover object-[80%_78%] md:object-[70%_center]" />
                         ) : (
                             <Image src={imageUrl || "/assets/Hero-BB.png"} alt="Luxury perfume glass atomizer bottle" fill className="object-cover object-[80%_78%] md:object-[70%_center]" priority unoptimized={!!imageUrl} />
                         )}
-                    </motion.div>
+                    </div>
                 )}
                 <div className="absolute inset-0 z-[1] bg-gradient-to-r from-obsidian/75 via-obsidian/40 to-transparent md:from-obsidian/55 md:via-obsidian/25" />
             </div>

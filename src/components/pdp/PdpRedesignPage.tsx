@@ -229,6 +229,24 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         setPicks(derivePicks(variants, group, { sku: requestedSku, roller: null, cap: null }));
     }
 
+    // The cached HTML is the group's default pick. A shared ?sku= / ?roller= / ?cap=
+    // is applied after paint, and only when it selects a different option, so the
+    // LCP image does not swap when the URL already matches that default.
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const sku = params.get("sku");
+        const roller = params.get("roller");
+        const cap = params.get("cap");
+        const qtyParam = params.get("qty");
+        if (qtyParam) {
+            const parsed = Number.parseInt(qtyParam, 10);
+            if (Number.isFinite(parsed)) setQty(Math.max(1, Math.min(99_999, parsed)));
+        }
+        if (!sku && !roller && !cap) return;
+        const next = derivePicks(variants, group, { sku, roller, cap });
+        setPicks((current) => (current.roller === next.roller && current.cap === next.cap ? current : next));
+    }, [variants, group]);
+
     // The URL carries the picks so every combination is shareable; native history so nothing refetches.
     useEffect(() => {
         if (typeof window === "undefined") return;

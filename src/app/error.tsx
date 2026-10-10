@@ -1,6 +1,5 @@
 "use client";
 
-import * as Sentry from "@sentry/nextjs";
 import Link from "next/link";
 import { useEffect } from "react";
 
@@ -15,7 +14,9 @@ export default function RouteError({
         // Logged from an effect (not the render body) so StrictMode does not
         // double-report, and forwarded to Sentry with the Next.js digest.
         console.error("[RouteError]", error?.message, error?.digest);
-        Sentry.captureException(error);
+        void import("@sentry/nextjs").then((Sentry) => {
+            Sentry.captureException(error);
+        });
     }, [error]);
 
     return (

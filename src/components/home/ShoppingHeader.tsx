@@ -8,7 +8,7 @@ import BrandWordmark from '@/components/BrandWordmark';
 import RegionSelector from '@/components/RegionSelector';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import LocaleLink from '@/components/LocaleLink';
-import CartDrawer from '@/components/CartDrawer';
+import dynamic from 'next/dynamic';
 import { useGrace } from '@/components/useGrace';
 import { CaretDown, List, MagnifyingGlass, ShoppingBag, User, X } from '@/components/icons';
 import { FAMILY_ART, familySketchSrc } from '@/lib/homepageFamilyArt';
@@ -19,12 +19,15 @@ import { localizeHref } from '@/i18n/paths';
 import { useAppLocale, useCopy } from '@/i18n/useCopy';
 import styles from './CollectionShopping.module.css';
 
+const CartDrawer = dynamic(() => import('@/components/CartDrawer'));
+
 type MegaMenu = 'families' | 'collections' | 'search';
 
 export default function ShoppingHeader() {
     const [menu, setMenu] = useState(false);
     const [activeMega, setActiveMega] = useState<MegaMenu | null>(null);
     const [cart, setCart] = useState(false);
+    const [cartMounted, setCartMounted] = useState(false);
     const header = useRef<HTMLElement>(null);
     const { itemCount, isCartHydrated } = useCart();
     const { open } = useGrace();
@@ -42,7 +45,7 @@ export default function ShoppingHeader() {
         const closeOutside = (event: PointerEvent) => {
             if (!header.current?.contains(event.target as Node)) setActiveMega(null);
         };
-        const openCart = () => setCart(true);
+        const openCart = () => { setCartMounted(true); setCart(true); };
         window.addEventListener('keydown', close);
         window.addEventListener('pointerdown', closeOutside);
         window.addEventListener('open-cart-drawer', openCart);
@@ -79,7 +82,7 @@ export default function ShoppingHeader() {
                     <button type="button" className={styles.searchTrigger} aria-expanded={activeMega === 'search'} aria-controls="search-mega-menu" onClick={() => toggleMega('search')}><MagnifyingGlass size={18}/><span>{t('search')}</span></button>
                     <button className={styles.grace} data-grace-open="" onClick={() => open()}>{t('askGrace')}</button>
                     <LocaleLink className={styles.portal} href="/sign-in?redirect_url=%2Fportal" aria-label={t('signInPortal')}><User size={22}/></LocaleLink>
-                    <button className={styles.cartButton} aria-label={isCartHydrated ? t('openCartWithCount', { count: itemCount }) : t('openCart')} onClick={() => setCart(true)}><ShoppingBag size={22}/>{isCartHydrated && itemCount > 0 && <span>{itemCount}</span>}</button>
+                    <button className={styles.cartButton} aria-label={isCartHydrated ? t('openCartWithCount', { count: itemCount }) : t('openCart')} onClick={() => { setCartMounted(true); setCart(true); }}><ShoppingBag size={22}/>{isCartHydrated && itemCount > 0 && <span>{itemCount}</span>}</button>
                 </div>
             </div>
             <nav className={styles.nav} aria-label={t('mainNav')}>
@@ -115,6 +118,6 @@ export default function ShoppingHeader() {
                 <RegionSelector inline className={styles.regionMobile}/>
             </nav>}
         </header>
-        <CartDrawer isOpen={cart} onClose={() => setCart(false)}/>
+        {cartMounted ? <CartDrawer isOpen={cart} onClose={() => setCart(false)}/> : null}
     </>;
 }
