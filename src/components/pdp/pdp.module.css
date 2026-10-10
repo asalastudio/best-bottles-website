@@ -1416,6 +1416,19 @@
         margin-left: 0;
     }
 
+    /* The product photo is the mobile LCP element. It is in the first HTML at
+       full opacity. Transitions on the stage used to interpolate transform and
+       opacity after hydration, which holds the paint until script runs. */
+    .stageZoom,
+    .stageFrame,
+    .stagePart,
+    .stageFallback,
+    .stageFallback img {
+        opacity: 1;
+        animation: none;
+        transition: none;
+    }
+
     .stageBaseline {
         left: 24px;
         right: 24px;

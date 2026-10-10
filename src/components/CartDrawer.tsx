@@ -5,6 +5,7 @@ import { useRegion } from "@/components/RegionProvider";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { X, ShoppingBag, Plus, Minus, Trash, ArrowRight, WarningCircle } from "@/components/icons";
+import "@/styles/route-cart.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "@/components/CartProvider";
 import { displayApplicatorName } from "@/lib/catalogFilters";

@@ -1,0 +1,15 @@
+@import "tailwindcss" source(none);
+@import "./tailwind-theme.css";
+
+@source "../components/team";
+@source "../components/portal";
+@source "../components/executive";
+@source "../components/grace-workspace";
+@source "../components/bottle-builder";
+@source "../components/matrix";
+@source "../app/(portal)";
+@source "../app/team";
+@source "../app/lab";
+@source "../app/executive";
+@source "../app/grace-workspace";
+@source "../app/matrix";

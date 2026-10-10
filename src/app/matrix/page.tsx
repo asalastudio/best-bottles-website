@@ -1,3 +1,4 @@
+import "@/styles/route-internal.css";
 import Link from "next/link";
 import { headers } from "next/headers";
 import { getShopCollection, shopCollectionHref } from "@/lib/shopCollections";

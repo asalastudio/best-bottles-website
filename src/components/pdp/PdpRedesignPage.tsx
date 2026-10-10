@@ -229,9 +229,10 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         setPicks(derivePicks(variants, group, { sku: requestedSku, roller: null, cap: null }));
     }
 
-    // The cached HTML is the group's default pick. A shared ?sku= / ?roller= / ?cap=
-    // is applied after paint, and only when it selects a different option, so the
-    // LCP image does not swap when the URL already matches that default.
+    // The server already applied ?sku= / ?roller= / ?cap= to the first HTML.
+    // This only catches a client-side URL change that did not rerender the page,
+    // and it skips the update when the pick already matches so the LCP image
+    // does not swap after paint.
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
         const sku = params.get("sku");

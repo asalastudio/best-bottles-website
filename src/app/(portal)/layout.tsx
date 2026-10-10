@@ -1,3 +1,4 @@
+import "@/styles/route-internal.css";
 import { ReactNode } from "react";
 import type { Metadata } from "next";
 import PortalChrome from "@/components/portal/PortalChrome";

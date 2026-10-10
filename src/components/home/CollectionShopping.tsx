@@ -13,6 +13,7 @@ import StoneHeroArt from './StoneHeroArt';
 import LocaleLink from '@/components/LocaleLink';
 import { localizeCollectionName, localizeCollectionSubtitle } from '@/i18n/catalogCopy';
 import { useAppLocale, useCopy } from '@/i18n/useCopy';
+import "@/styles/route-home.css";
 import styles from './CollectionShopping.module.css';
 import ShopThreeWays from './ShopThreeWays';
 import { collectionCardImage } from './collectionCardImage';

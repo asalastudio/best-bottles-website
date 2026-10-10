@@ -96,7 +96,8 @@ describe("Paper Doll draft preview contract", () => {
     it("keeps draft reads server-only; the product page reads plates from the index, never a Sanity draft", () => {
         const serverClientSource = readFileSync("src/sanity/lib/serverClient.ts", "utf8");
         const queriesSource = readFileSync("src/sanity/lib/queries.ts", "utf8");
-        const productPageSource = readFileSync("src/app/products/[slug]/page.tsx", "utf8");
+        const productPageSource = readFileSync("src/app/products/[slug]/productPageData.ts", "utf8");
+        const classicPageSource = readFileSync("src/app/legacy-product/[slug]/page.tsx", "utf8");
 
         expect(serverClientSource).toContain('import "server-only"');
         expect(serverClientSource).toContain('createServerClient("previewDrafts")');
@@ -110,9 +111,11 @@ describe("Paper Doll draft preview contract", () => {
         // Only the explicit local review may overlay candidates. Ordinary
         // product requests retain the Convex plate index; a variant-card family
         // (Atomizer) swaps in only its RELEASED catalog hero, never a draft.
-        expect(productPageSource).toContain("platesBySku={localAssetPreview ? pilot.plates : withReleasedHeroStages(group, data?.variants ?? [], platesBySku)}");
+        expect(classicPageSource).toContain("platesBySku={localAssetPreview ? pilot.plates : withReleasedHeroStages(group, data?.variants ?? [], platesBySku)}");
         expect(productPageSource).not.toContain("isPaperDollDraftPreviewAllowed");
         expect(productPageSource).not.toContain("paperDollPreview");
+        expect(classicPageSource).not.toContain("isPaperDollDraftPreviewAllowed");
+        expect(classicPageSource).not.toContain("paperDollPreview");
     });
 
     it("preflights each draft configuration without throwing or substituting layers", () => {

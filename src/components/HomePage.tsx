@@ -10,6 +10,7 @@ import {
 } from "@/components/icons";
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
+import "@/styles/route-home.css";
 import homeStyles from "@/components/home/HomeCatalogBrowser.module.css";
 import ShoppingHeader from "@/components/home/ShoppingHeader";
 import CollectionShopping from "@/components/home/CollectionShopping";
