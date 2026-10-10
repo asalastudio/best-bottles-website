@@ -21,6 +21,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const css = readFileSync(resolve(process.cwd(), "src/app/globals.css"), "utf8");
+const theme = readFileSync(resolve(process.cwd(), "src/styles/tailwind-theme.css"), "utf8");
 
 /** Walk the file tracking comment state, the way a CSS parser does. */
 function scanComments(source: string) {
@@ -102,15 +103,18 @@ describe("globals.css", () => {
         // These live in `@theme static` on purpose: Tailwind v4 tree-shakes
         // theme variables no utility class references, and an inline var() does
         // not count as a reference — without `static` the icon tokens vanish
-        // from the built stylesheet and every rail icon collapses.
-        expect(css).toContain("@theme static");
+        // from the built stylesheet and every rail icon collapses. The theme
+        // is a separate entry so route sheets can share it without duplicating
+        // it into the layout sheet's source; globals must still import it.
+        expect(css).toContain('@import "../styles/tailwind-theme.css"');
+        expect(theme).toContain("@theme static");
         for (const token of [
             "--color-surface-rail",
             "--color-rule",
             "--color-text-primary",
             "--icon-size-desktop",
         ]) {
-            expect(css, `${token} missing`).toContain(token);
+            expect(theme, `${token} missing`).toContain(token);
         }
     });
 });

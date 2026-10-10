@@ -42,6 +42,10 @@ export const NOT_IN_SITEMAP: Readonly<Record<string, string>> = {
     "/catalog/[family]": "redirects to /catalog?families=… unless ?guide=1",
     "/catalog/application/[application]": "redirects to /catalog?applicators=… unless ?guide=1",
     "/products/[slug]": "listed per product in /server-sitemap.xml",
+    // Classic families render here so the redesigned PDP stays free of Three.js.
+    // The canonical URL remains /products/[slug] (a temporary redirect), which
+    // the server sitemap already lists per product.
+    "/legacy-product/[slug]": "classic product HTML; canonical URL stays /products/[slug]",
     "/blog/[slug]": "listed per post in /server-sitemap.xml",
 };
 
