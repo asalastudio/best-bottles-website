@@ -13,8 +13,10 @@ export default function StoneHeroArt() {
     return (
         <div className={styles.stoneArt}>
             {/* Mirrors the top strip of the photograph into the gap above the lowered
-                image. Same src and sizes as the hero, and eager so it joins the hero's
-                in-flight request: the browser downloads the photograph once. */}
+                image. Same src and sizes as the hero so the browser downloads it once.
+                This img is first in the document, and React emits the image preload from
+                the first tag. It needs fetchPriority high too, or that preload stays
+                low and the visible hero cannot raise it. */}
             <div className={styles.stoneMirror} aria-hidden="true">
                 <Image
                     src={STONE_HERO_SRC}
@@ -22,6 +24,7 @@ export default function StoneHeroArt() {
                     width={1672}
                     height={941}
                     loading="eager"
+                    fetchPriority="high"
                     sizes={STONE_HERO_SIZES}
                     className={styles.stoneMirrorImage}
                 />
