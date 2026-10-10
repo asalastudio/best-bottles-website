@@ -166,6 +166,7 @@ export default function MobileTabBar() {
                                     role="tab"
                                     aria-selected={false}
                                     aria-label={isGrace ? grace("askAria") : tab.label}
+                                    data-grace-open={isGrace ? "" : undefined}
                                     onClick={() => handleAction()}
                                     className="group w-full flex items-center justify-center h-full min-w-[44px] cursor-pointer"
                                 >

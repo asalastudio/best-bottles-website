@@ -14,10 +14,11 @@
  * finger) pans. Click again, press Escape or the button to zoom out.
  */
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent } from "react";
+import Image from "next/image";
 import styles from "./pdp.module.css";
 import PdpKitPartImage from "./PdpKitPartImage";
 import PdpKitStackImage from "./PdpKitStackImage";
-import { displayImageUrl } from "@/lib/products/optimizable-image";
+import { displayImageUrl, isOptimizableImageUrl } from "@/lib/products/optimizable-image";
 import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/products/register-image";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
@@ -33,6 +34,24 @@ import {
     type StageContext,
     type StageView,
 } from "@/lib/products/pdp-redesign/stage";
+
+const LCP_SIZES = "(max-width: 899px) 92vw, 480px";
+
+function canOptimizeProductImage(url: string): boolean {
+    if (url.startsWith("/_next/")) return false;
+    if (url.startsWith("/") && !url.startsWith("//")) return true;
+    if (isOptimizableImageUrl(url)) return true;
+    try {
+        const host = new URL(url).hostname;
+        return host === "cdn.sanity.io"
+            || host === "yzy7l20k4yt6znzz.public.blob.vercel-storage.com"
+            || host === "www.bestbottles.com"
+            || host.endsWith(".convex.cloud")
+            || host.endsWith(".convex.site");
+    } catch {
+        return false;
+    }
+}
 
 export type CapRailItem = {
     id: string;
@@ -102,6 +121,7 @@ export default function PdpStage({
     caps, activeCapId, onCapPick, glasses, onGlassPick, activeCapName, activeGlassLabel,
 }: PdpStageProps) {
     const layout = useMemo(() => stageLayout(kit, view, context, glassFrame ?? {}), [kit, view, context, glassFrame]);
+    const lcpKey = layout?.parts.find((part) => part.slot === "body")?.key ?? layout?.parts[0]?.key ?? null;
     const railRef = useRef<HTMLDivElement>(null);
     // Register masters are served display-sized through the optimizer; when that
     // proxy cannot reach the Blob host (a local network quirk) the master is shown.
@@ -278,7 +298,44 @@ export default function PdpStage({
                                         aria-hidden
                                     />
                                 ))}
-                                {layout.parts.map((part) => part.box ? (
+                                {layout.parts.map((part) => {
+                                    const lcp = part.key === lcpKey;
+                                    const boxStyle = part.box ? {
+                                        position: "absolute" as const, display: "block" as const, maxWidth: "none",
+                                        left: `${part.box.leftPct}%`, top: `${part.box.topPct}%`,
+                                        width: `${part.box.widthPct}%`, height: `${part.box.heightPct}%`,
+                                        ...(part.clipBottomPct ? { clipPath: `inset(0 0 ${part.clipBottomPct}% 0)` } : {}),
+                                    } : undefined;
+                                    if (lcp) {
+                                        const image = (
+                                            <Image
+                                                src={part.url}
+                                                alt={fallbackAlt}
+                                                width={layout.canvas.width}
+                                                height={layout.canvas.height}
+                                                priority
+                                                fetchPriority="high"
+                                                sizes={LCP_SIZES}
+                                                unoptimized={rawUrls.has(part.url) || !canOptimizeProductImage(part.url)}
+                                                draggable={false}
+                                                className={part.box ? undefined : styles.stagePart}
+                                                data-slot={part.slot}
+                                                onError={() => { if (markRegisterOptimizerUnavailable(part.url)) showRaw(part.url); }}
+                                                style={part.box ? boxStyle : { transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex }}
+                                            />
+                                        );
+                                        return part.box ? (
+                                            <span
+                                                key={part.key}
+                                                className={styles.stagePart}
+                                                data-slot={part.slot}
+                                                style={{ transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex }}
+                                            >
+                                                {image}
+                                            </span>
+                                        ) : <span key={part.key}>{image}</span>;
+                                    }
+                                    return part.box ? (
                                     // A register part: a native cut-out standing in its box on the canvas. The
                                     // canvas-sized wrapper carries the view offset so the percentages stay the canvas's.
                                     <span
@@ -294,16 +351,11 @@ export default function PdpStage({
                                             draggable={false}
                                             decoding="async"
                                             onError={() => { if (markRegisterOptimizerUnavailable(part.url)) showRaw(part.url); }}
-                                            style={{
-                                                position: "absolute", display: "block", maxWidth: "none",
-                                                left: `${part.box.leftPct}%`, top: `${part.box.topPct}%`,
-                                                width: `${part.box.widthPct}%`, height: `${part.box.heightPct}%`,
-                                                ...(part.clipBottomPct ? { clipPath: `inset(0 0 ${part.clipBottomPct}% 0)` } : {}),
-                                            }}
+                                            style={boxStyle}
                                         />
                                     </span>
                                 ) : (
-                                    // Kit layers stay plain <img>: their pixel canvas and alpha must not change.
+                                    // Closure layers stay plain <img>: their pixel canvas and alpha must not change.
                                     // eslint-disable-next-line @next/next/no-img-element
                                     <img
                                         key={part.key}
@@ -315,18 +367,22 @@ export default function PdpStage({
                                         data-slot={part.slot}
                                         style={{ transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex }}
                                     />
-                                ))}
+                                );
+                                })}
                             </div>
                         </div>
                     </div>
                 ) : fallbackImageUrl ? (
                     <div className={styles.stageFallback}>
-                        {/* Kit layers and plates stay plain <img>: their pixel canvas and alpha must not change. */}
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                            src={rawUrls.has(fallbackImageUrl) ? fallbackImageUrl : displayImageUrl(fallbackImageUrl)}
+                        <Image
+                            src={fallbackImageUrl}
                             alt={showingBareBody ? `${fallbackAlt}, uncapped bottle` : fallbackAlt}
-                            decoding="async"
+                            width={1000}
+                            height={1100}
+                            priority
+                            fetchPriority="high"
+                            sizes={LCP_SIZES}
+                            unoptimized={rawUrls.has(fallbackImageUrl) || !canOptimizeProductImage(fallbackImageUrl)}
                             onError={() => {
                                 if (!rawUrls.has(fallbackImageUrl) && markRegisterOptimizerUnavailable(fallbackImageUrl)) showRaw(fallbackImageUrl);
                                 else setFailedFallbackUrls((current) => new Set(current).add(fallbackImageUrl));

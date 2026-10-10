@@ -75,6 +75,9 @@ describe("session replay scope", () => {
     });
 
     it("fails closed on anything it cannot parse", () => {
+        expect(mayRecordSession("/", { mobile: true })).toBe(false);
+        expect(mayRecordSession("/catalog", { mobile: true })).toBe(false);
+        expect(mayRecordSession("/products/cylinder-3-3ml-clear-12mm-finemist", { mobile: true })).toBe(false);
         expect(mayRecordSession(null)).toBe(false);
         expect(mayRecordSession(undefined)).toBe(false);
         expect(mayRecordSession("")).toBe(false);

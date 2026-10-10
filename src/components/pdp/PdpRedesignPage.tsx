@@ -13,7 +13,7 @@
  * cart's own view of this page's lines.
  */
 import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import LocaleLink from "@/components/LocaleLink";
 import Navbar from "@/components/Navbar";
 import { useCart } from "@/components/CartProvider";
@@ -91,6 +91,17 @@ export type PdpRedesignPayload = {
     descriptions: Record<string, ItemDescription>;
     collection: { band: CollectionBand; description: string } | null;
     familyHref: string;
+    /**
+     * Server-resolved query. Kept off useSearchParams so the stage image is in
+     * the first HTML instead of the root Suspense spinner.
+     */
+    initialSearch?: {
+        roller?: string | null;
+        cap?: string | null;
+        sku?: string | null;
+        qty?: string | null;
+        drawing?: string | null;
+    };
 };
 
 const ADDED_FLASH_MS = 1800;
@@ -119,22 +130,21 @@ function renameTab(text: string): void {
     document.title = text;
 }
 
-export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, fitmentKits = [], stageEnvelopes, platesBySku, descriptions, collection, familyHref }: PdpRedesignPayload) {
+export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, fitmentKits = [], stageEnvelopes, platesBySku, descriptions, collection, familyHref, initialSearch }: PdpRedesignPayload) {
     const router = useRouter();
     const pathname = usePathname();
-    const searchParams = useSearchParams();
     const { formatPrice } = useRegion();
     const { items: cartItems, addItems, removeItem } = useCart();
     const { openPanel: openGrace } = useGrace();
 
     const rollers = useMemo(() => rollerOptions(variants), [variants]);
     const [picks, setPicks] = useState<Picks>(() => derivePicks(variants, group, {
-        roller: searchParams.get("roller"),
-        cap: searchParams.get("cap"),
-        sku: searchParams.get("sku"),
+        roller: initialSearch?.roller ?? null,
+        cap: initialSearch?.cap ?? null,
+        sku: initialSearch?.sku ?? null,
     }));
     const [view, setView] = useState<StageView>("sidecar");
-    const [qty, setQty] = useState<number>(() => Math.max(1, Math.min(99_999, Number.parseInt(searchParams.get("qty") ?? "1", 10) || 1)));
+    const [qty, setQty] = useState<number>(() => Math.max(1, Math.min(99_999, Number.parseInt(initialSearch?.qty ?? "1", 10) || 1)));
     const [addedQty, setAddedQty] = useState<number | null>(null);
     const addedTimer = useRef<number | null>(null);
 
@@ -212,7 +222,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     // A `?sku=` pushed onto the same slug (Grace moving the customer to a sibling
     // variant) must change the picks; the state initialiser only ran once. This
     // is React's "adjust state when a prop changes" pattern, applied in render.
-    const requestedSku = searchParams.get("sku");
+    const requestedSku = initialSearch?.sku ?? null;
     const [appliedSku, setAppliedSku] = useState<string | null>(requestedSku);
     if (requestedSku && requestedSku !== appliedSku) {
         setAppliedSku(requestedSku);
@@ -494,7 +504,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                 <PdpTechSheet
                     rows={techSheetRows(selected, group)}
                     pdfHref={`/api/pdf/tech-sheet/${encodeURIComponent(slug)}${selected?.graceSku ? `?sku=${encodeURIComponent(selected.graceSku)}` : ""}`}
-                    drawing={drawingFor(slug, selected, drawingStyleFromQuery(searchParams.get("drawing")))}
+                    drawing={drawingFor(slug, selected, drawingStyleFromQuery(initialSearch?.drawing ?? null))}
                     technical={technicalDrawingFor(drawingBodyId(slug))}
                     labelFit={labelFitFor(drawingBodyId(slug))}
                 />

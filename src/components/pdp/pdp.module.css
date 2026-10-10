@@ -1891,6 +1891,14 @@
         background: var(--pdp-border-strong);
         color: var(--pdp-secondary);
     }
+
+    .stageFloorShadow {
+        background: none;
+    }
+
+    .packMenu {
+        box-shadow: none;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {

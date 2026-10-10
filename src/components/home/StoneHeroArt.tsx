@@ -31,7 +31,7 @@ export default function StoneHeroArt() {
                 alt="Frosted Diva bottle with a black leather-textured cap on a lower ivory marble step, beside a clear Circle bottle with a red vintage bulb and tassel"
                 width={1672}
                 height={941}
-                preload
+                priority
                 fetchPriority="high"
                 sizes={STONE_HERO_SIZES}
                 className={styles.stoneImage}

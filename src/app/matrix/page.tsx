@@ -8,7 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BuilderLoading from "@/components/bottle-builder/BuilderLoading";
 import { loadBuilderEntry } from "@/lib/bottle-builder/entry";
-import MatrixClient from "@/components/matrix/MatrixClient";
+import BuilderClient from "@/components/matrix/BuilderClient";
 import { loadBuilderFamilies, loadBuilderFamilyOrUncached } from "@/lib/bottle-builder/server";
 import { chooserBodies } from "@/lib/bottle-builder/payload";
 import { preferMobileRequest } from "@/lib/bottle-builder/mobile-request";
@@ -55,6 +55,6 @@ async function Builder({ familyParam, collection }: { familyParam?: string; coll
     // configurations load from /api/bottle-builder/bodies; Cylinder's HTML drops from 789 KB.
     const bodies = chooserBodies(builderCollectionBodies(entry.bodies, collection));
     return <>
-        <MatrixClient key={`${entry.openFamily}:${collection ?? "all"}`} {...entry} familyList={familyList} bodies={bodies} preferMobile={preferMobile} />
+        <BuilderClient key={`${entry.openFamily}:${collection ?? "all"}`} {...entry} familyList={familyList} bodies={bodies} preferMobile={preferMobile} />
     </>;
 }

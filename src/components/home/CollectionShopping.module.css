@@ -413,3 +413,12 @@
   .hero[data-scene="diva-circle-stone"] .primary,
   .hero[data-scene="diva-circle-stone"] .secondary {font-size:11px;padding:12px 16px;min-height:44px}
 }
+
+.heroArtMobile { display: none; }
+@media (max-width: 640px) {
+  .heroArtDesktop { display: none; }
+  .heroArtMobile { display: block; }
+}
+@media (max-width: 899px) {
+  .megaMenu { box-shadow: none; }
+}

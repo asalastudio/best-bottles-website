@@ -5,12 +5,13 @@ import { notFound, permanentRedirect } from "next/navigation";
 import type { Metadata } from "next";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../convex/_generated/api";
-import ProductDetailClient, {
-    type PdpCompatibilityPayload,
-    type ProductGroupPayload,
-    type SiblingGroup,
-    type ProductVariant,
+import type {
+    PdpCompatibilityPayload,
+    ProductGroupPayload,
+    SiblingGroup,
+    ProductVariant,
 } from "./ProductDetailClient";
+import nextDynamic from "next/dynamic";
 import { isSanityConfigured } from "@/sanity/lib/client";
 import { sanityFetch } from "@/sanity/lib/live";
 import SanityLiveVisualEditing from "@/components/SanityLiveVisualEditing";
@@ -34,7 +35,7 @@ import {
     selectPrimaryProductVariant,
     type FocusedPdpRelations,
 } from "@/lib/products/pdp-relations";
-import PdpRedesignPage, { type PdpRedesignPayload } from "@/components/pdp/PdpRedesignPage";
+import type { PdpRedesignPayload } from "@/components/pdp/PdpRedesignPage";
 import { parseProductSlug } from "@/lib/products/group-variant-intent";
 import { resolveItemDescriptions } from "@/lib/products/item-description/resolve";
 import { collectionDescription, collectionFor, derivePicks, pageOptionLabel, resolveVariant, variantTitle, type SiblingGlassGroup } from "@/lib/products/pdp-redesign/model";
@@ -43,6 +44,9 @@ import type { KitLike } from "@/lib/products/pdp-redesign/stage";
 import { loadRegisterKits } from "@/lib/register/load";
 import { loadGlassStageEnvelopes } from "@/lib/register/stage-envelopes";
 import { isSoldOutStockStatus } from "@/lib/checkout";
+
+const PdpRedesignPage = nextDynamic(() => import("@/components/pdp/PdpRedesignPage"));
+const ProductDetailClient = nextDynamic(() => import("./ProductDetailClient"));
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -445,7 +449,16 @@ export default async function ProductPage({
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
                     />
                 )}
-                <PdpRedesignPage {...payload} />
+                <PdpRedesignPage
+                    {...payload}
+                    initialSearch={{
+                        roller: typeof resolvedSearchParams.roller === "string" ? resolvedSearchParams.roller : null,
+                        cap: typeof resolvedSearchParams.cap === "string" ? resolvedSearchParams.cap : null,
+                        sku: typeof resolvedSearchParams.sku === "string" ? resolvedSearchParams.sku : null,
+                        qty: typeof resolvedSearchParams.qty === "string" ? resolvedSearchParams.qty : null,
+                        drawing: typeof resolvedSearchParams.drawing === "string" ? resolvedSearchParams.drawing : null,
+                    }}
+                />
                 <Footer />
             </>
         );

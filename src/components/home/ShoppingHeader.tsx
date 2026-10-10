@@ -77,7 +77,7 @@ export default function ShoppingHeader() {
                 <LocaleLink href="/" className={styles.brand} aria-label={t('home')}><BrandWordmark tagline/></LocaleLink>
                 <div className={styles.headerRight}>
                     <button type="button" className={styles.searchTrigger} aria-expanded={activeMega === 'search'} aria-controls="search-mega-menu" onClick={() => toggleMega('search')}><MagnifyingGlass size={18}/><span>{t('search')}</span></button>
-                    <button className={styles.grace} onClick={() => open()}>{t('askGrace')}</button>
+                    <button className={styles.grace} data-grace-open="" onClick={() => open()}>{t('askGrace')}</button>
                     <LocaleLink className={styles.portal} href="/sign-in?redirect_url=%2Fportal" aria-label={t('signInPortal')}><User size={22}/></LocaleLink>
                     <button className={styles.cartButton} aria-label={isCartHydrated ? t('openCartWithCount', { count: itemCount }) : t('openCart')} onClick={() => setCart(true)}><ShoppingBag size={22}/>{isCartHydrated && itemCount > 0 && <span>{itemCount}</span>}</button>
                 </div>

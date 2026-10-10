@@ -33,7 +33,7 @@ import { displayImageUrl } from "@/lib/products/optimizable-image";
 import styles from "@/components/bottle-builder/Builder.module.css";
 
 // Phones only: a laptop never renders the mobile builder, so it never downloads it.
-const MobileBuilder = dynamic(() => import("@/components/bottle-builder/MobileBuilder"));
+const MobileBuilder = dynamic(() => import("@/components/bottle-builder/MobileBuilder"), { ssr: false });
 
 const subscribeMobile = (callback: () => void) => { const query = window.matchMedia("(max-width: 1099px)"); query.addEventListener("change", callback); return () => query.removeEventListener("change", callback); };
 const mobileSnapshot = () => window.matchMedia("(max-width: 1099px)").matches;

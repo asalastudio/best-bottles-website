@@ -869,3 +869,24 @@ img.app-wordmark {
   body:has([data-mobile-builder]) footer .grid > * { min-width: 0; overflow-wrap: anywhere; }
 }
 
+/* Mobile paint: drop backdrop filters and large shadows. Desktop rules are unchanged. */
+@media (max-width: 899px) {
+  .backdrop-blur,
+  .backdrop-blur-sm,
+  .backdrop-blur-md,
+  .backdrop-blur-lg,
+  .backdrop-blur-xl,
+  .backdrop-blur-2xl,
+  .backdrop-blur-3xl,
+  .bb-blur {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  .shadow-lg,
+  .shadow-xl,
+  .shadow-2xl,
+  .bb-blur {
+    box-shadow: none !important;
+  }
+}
+

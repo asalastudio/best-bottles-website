@@ -2,6 +2,7 @@
 /* Editorial images here are collection navigation, never SKU plates. */
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
+import Image from 'next/image';
 import type { HomepageData } from '@/sanity/lib/queries';
 import { editorialImageUrl } from '@/sanity/lib/image';
 import { familyFinderHref } from '@/lib/products/focused-shopping';
@@ -18,6 +19,63 @@ import { collectionCardImage } from './collectionCardImage';
 import type { HomeBrowseData } from '@/lib/homepageBrowse';
 
 const asset = (name: string) => `/assets/homepage/${name}.webp`;
+
+function heroImageUnoptimized(src: string): boolean {
+    if (src.startsWith('/') && !src.startsWith('//')) return false;
+    try {
+        const host = new URL(src).hostname;
+        return host !== 'cdn.sanity.io'
+            && host !== 'cdn.shopify.com'
+            && host !== 'yzy7l20k4yt6znzz.public.blob.vercel-storage.com'
+            && host !== 'www.bestbottles.com';
+    } catch {
+        return true;
+    }
+}
+
+function HeroLcpImage({ desktop, mobile }: { desktop: string; mobile: string }) {
+    const alt = 'Glass perfume bottles with red vintage style bulb sprayers on a stone platform';
+    if (desktop === mobile) {
+        return (
+            <Image
+                className={styles.heroArt}
+                src={desktop}
+                alt={alt}
+                width={1800}
+                height={1000}
+                priority
+                fetchPriority="high"
+                sizes="100vw"
+                unoptimized={heroImageUnoptimized(desktop)}
+            />
+        );
+    }
+    return (
+        <>
+            <Image
+                className={`${styles.heroArt} ${styles.heroArtMobile}`}
+                src={mobile}
+                alt={alt}
+                width={860}
+                height={860}
+                priority
+                fetchPriority="high"
+                sizes="100vw"
+                unoptimized={heroImageUnoptimized(mobile)}
+            />
+            <Image
+                className={`${styles.heroArt} ${styles.heroArtDesktop}`}
+                src={desktop}
+                alt=""
+                width={1800}
+                height={1000}
+                sizes="100vw"
+                loading="lazy"
+                unoptimized={heroImageUnoptimized(desktop)}
+            />
+        </>
+    );
+}
 const cmsImage = editorialImageUrl;
 export function CollectionGrid({ cards, all = false }: { cards?: HomepageData['collectionCards']; all?: boolean }) {
     const rail = useRef<HTMLDivElement>(null);
@@ -66,7 +124,7 @@ export function ShoppingHero({ slides, hotspots }: {slides?:HomepageData['heroSl
     }, [slide]);
     const t = useCopy('home');
     return <section className={styles.hero} data-scene={!slide ? scene : undefined} aria-label={t("featuredBottles")}>
-        {slide?.mediaType==='video' && slide.video?.asset?.url ? <video ref={heroVideo} className={styles.heroArt} src={slide.video.asset.url} poster={cmsImage(slide.videoPoster,1800)} autoPlay muted loop playsInline/> : !slide ? (scene==='diva-circle-stone' ? <StoneHeroArt/> : scene==='empire-niche' ? <EmpireFitmentHero hotspots={heroHotspots}/> : <ImmersiveHeroArt/>) : <picture><source media="(max-width:640px)" srcSet={mobile}/><img className={styles.heroArt} src={desktop} alt="Glass perfume bottles with red vintage style bulb sprayers on a stone platform" fetchPriority="high"/></picture>}
+        {slide?.mediaType==='video' && slide.video?.asset?.url ? <video ref={heroVideo} className={styles.heroArt} src={slide.video.asset.url} poster={cmsImage(slide.videoPoster,1800)} autoPlay muted loop playsInline/> : !slide ? (scene==='diva-circle-stone' ? <StoneHeroArt/> : scene==='empire-niche' ? <EmpireFitmentHero hotspots={heroHotspots}/> : <ImmersiveHeroArt/>) : <HeroLcpImage desktop={desktop} mobile={mobile} />}
         <div className={styles.heroCopy}>
             <h1>{slide?.headline || <><span>{t("headlineA")}</span><span>{t("headlineB")}</span></>}</h1>
             <p className={styles.heroLead}>{slide?.subheadline || t("lead")}</p>
