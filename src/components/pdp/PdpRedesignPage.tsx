@@ -32,7 +32,6 @@ import {
 import type { PlateRef } from "@/lib/paper-doll/plates";
 import type { ItemDescription } from "@/lib/products/item-description/resolve";
 import { getMaterialSwatchBackground, getMaterialSwatchStyle } from "@/lib/products/material-swatches";
-import { pdpFallbackMedia } from "@/lib/products/pdp-redesign/fallback-media";
 import { SITE_NAME } from "@/lib/seo";
 import { formatVolumeQtyRange, resolveQuotedUnitPrice } from "@/lib/volumePricing";
 import {
@@ -87,6 +86,11 @@ export type PdpRedesignPayload = {
     /** By frame key (register body, or one of its hanging tops): the bounds every SKU of the glass needs, on every page it sells on (src/lib/register/stage-envelopes.ts). */
     stageEnvelopes?: Record<string, StageBounds>;
     platesBySku: Record<string, PlateRef>;
+    /**
+     * Exact-SKU fallback photos, keyed by website SKU and Grace SKU.
+     * Resolved on the server so the client does not download the catalog hero table.
+     */
+    fallbackBySku: Record<string, { images: string[]; bodyImageUrl: string | null }>;
     /** Curated or composed copy, by website SKU. */
     descriptions: Record<string, ItemDescription>;
     collection: { band: CollectionBand; description: string } | null;
@@ -130,7 +134,7 @@ function renameTab(text: string): void {
     document.title = text;
 }
 
-export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, fitmentKits = [], stageEnvelopes, platesBySku, descriptions, collection, familyHref, initialSearch }: PdpRedesignPayload) {
+export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, fitmentKits = [], stageEnvelopes, platesBySku, fallbackBySku, descriptions, collection, familyHref, initialSearch }: PdpRedesignPayload) {
     const router = useRouter();
     const pathname = usePathname();
     const { formatPrice } = useRegion();
@@ -395,12 +399,9 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     const bodyKit = kit ?? kitFor(kitsBySku, { websiteSku: group.primaryWebsiteSku, graceSku: group.primaryGraceSku });
     const capKits = caps.map((cap) => kitFor(kitsBySku, cap.variants[0])).filter((entry): entry is KitLike => Boolean(entry));
     const groupKits = variants.map((variant) => kitFor(kitsBySku, variant)).filter((entry): entry is KitLike => Boolean(entry));
-    const plate = selected ? platesBySku[selected.graceSku] ?? (selected.websiteSku ? platesBySku[selected.websiteSku] : undefined) : undefined;
-    const fallbackMedia = pdpFallbackMedia({
-        groupSlug: slug,
-        variant: selected,
-        plateImageUrl: plate?.image ?? null,
-    });
+    const fallbackMedia = (selected?.websiteSku ? fallbackBySku[selected.websiteSku] : undefined)
+        ?? (selected?.graceSku ? fallbackBySku[selected.graceSku] : undefined)
+        ?? { images: [], bodyImageUrl: null };
     const swatchStyle = materialSwatch(kit, activeCap?.swatchName ?? capName);
     const selectionName = `${glassLabel(group.color)} glass${capName ? ` · ${capName} cap` : fitment ? ` · ${fitment}` : ""}`;
     const stickyLine = `${qty.toLocaleString("en-US")} × ${unitPrice != null ? formatPrice(unitPrice) : "—"} · ${lineLabel(glassName, rollerOption, rollerOption ? null : fitment, capName)}`;

@@ -21,6 +21,7 @@ import { parseProductSlug } from "@/lib/products/group-variant-intent";
 import { isVariantCardFamily } from "@/lib/products/variant-cards";
 import { resolveItemDescriptions } from "@/lib/products/item-description/resolve";
 import { collectionDescription, collectionFor, type SiblingGlassGroup } from "@/lib/products/pdp-redesign/model";
+import { pdpFallbackMedia } from "@/lib/products/pdp-redesign/fallback-media";
 import type { KitLike } from "@/lib/products/pdp-redesign/stage";
 import { loadRegisterKits } from "@/lib/register/load";
 import { loadGlassStageEnvelopes } from "@/lib/register/stage-envelopes";
@@ -221,6 +222,18 @@ export async function loadRedesignPayload(
         }
     }
 
+    const fallbackBySku: PdpRedesignPayload["fallbackBySku"] = {};
+    for (const variant of data.variants) {
+        const plate = platesBySku[variant.graceSku] ?? (variant.websiteSku ? platesBySku[variant.websiteSku] : undefined);
+        const media = pdpFallbackMedia({
+            groupSlug: activeSlug,
+            variant,
+            plateImageUrl: plate?.image ?? null,
+        });
+        if (variant.websiteSku) fallbackBySku[variant.websiteSku] = media;
+        if (variant.graceSku && variant.graceSku !== variant.websiteSku) fallbackBySku[variant.graceSku] = media;
+    }
+
     const band = collectionFor(data.group);
     let collection: PdpRedesignPayload["collection"] = null;
     if (band) {
@@ -241,6 +254,7 @@ export async function loadRedesignPayload(
         fitmentKits,
         stageEnvelopes: await stageEnvelopesLoad,
         platesBySku,
+        fallbackBySku,
         descriptions: resolveItemDescriptions(data.variants),
         collection,
         familyHref: `/catalog?family=${encodeURIComponent(data.group.family)}`,
@@ -291,5 +305,5 @@ export const loadCachedPage = unstable_cache(async (slug: string) => {
         relations: FocusedPdpRelations | null;
         compatibility: PdpCompatibilityPayload | null;
     };
-}, ["pdp-page-v2"], { revalidate: 300 });
+}, ["pdp-page-v3"], { revalidate: 300 });
 
