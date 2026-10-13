@@ -16,6 +16,7 @@ import {
 } from "@phosphor-icons/react";
 import { api } from "../../convex/_generated/api";
 import { useCopy } from "@/i18n/useCopy";
+import { useGrace } from "./useGrace";
 
 const FOOTER_GROUPS = [
     {
@@ -34,8 +35,7 @@ const FOOTER_GROUPS = [
             ["buildYourBottle", "/matrix"],
             ["packagingInsights", "/blog"],
             ["shippingReturns", "/shipping-returns"],
-            ["helpMeChoose", "/#find-your-bottle"],
-            ["talkWithGrace", "/#find-your-bottle"],
+            ["helpMeChoose", "/matrix"],
         ],
     },
     {
@@ -55,6 +55,7 @@ const SERVICE_ITEMS = [
 ] as const;
 
 export default function Footer() {
+    const { open: openGrace } = useGrace();
     const submitForm = useMutation(api.forms.submit);
     const [email, setEmail] = useState("");
     const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -142,6 +143,13 @@ export default function Footer() {
                                         </LocaleLink>
                                     </li>
                                 ))}
+                                {group.titleKey === "resources" && (
+                                    <li>
+                                        <button type="button" onClick={() => openGrace()} className="text-left text-xs text-white/58 transition-colors hover:text-muted-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold">
+                                            {t("talkWithGrace")}
+                                        </button>
+                                    </li>
+                                )}
                                 {group.titleKey === "company" && (
                                     <li>
                                         <a href="https://www.nematinternational.com" className="text-xs text-white/58 transition-colors hover:text-muted-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold">

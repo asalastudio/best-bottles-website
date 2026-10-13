@@ -74,7 +74,7 @@ Stages stay separate: built locally → browser verified → visually approved �
 
 ## What is needed next
 
-Restore browser permission for local and production testing, and reconnect `/Volumes/Achive` or provide the master PSD library's new path. Then complete source-faithful pilot corrections and rendered QA before requesting artwork approval. No approval to merge, publish or write production data has been assumed. Pricing, shipping, Grace and accounts remain outside this programme.
+Master source access is restored and verified. Agent browser permission remains denied even after the app update; Jordan authorized a manual browser-verification path. Complete source-faithful pilot corrections and recorded manual QA before requesting artwork approval. No approval to merge, publish or write production data has been assumed. Pricing, shipping, Grace and accounts remain outside this programme.
 
 
 Evidence root: `/Users/jordanrichter/Documents/Codex/2026-10-01/users-jordanrichter-projects-clients-nemat-international/outputs/media-completion-2026-10-12`
@@ -94,3 +94,16 @@ Boston15 now has 27 supported offline stage renders across 21 source combination
 The tassel extraction defect is reproduced: omitted Photoshop adjustments produced gold hardware for four silver finishes. All four previous output pixel hashes match after their recorded cleanup. The saved census maps these to 104 served configurations, with four additional served Diva ring fallback paths kept separate pending their drawing review. The local extractor now holds adjusted photo cuts instead of silently approving the wrong colour. Replacement artwork is still pending. See TASSEL-ADJUSTMENT-REVIEW.md.
 
 No merge, publication, production write or deployment occurred. Catalogue totals remain the saved audit counts, not a fresh live census.
+
+
+## 13 October launch continuation and manual QA path
+
+Jordan confirmed the client has answered none of the 51 cutover requests. The current ownership split preserves client-only decisions while engineering preparation proceeds. The 20 meeting-input packets overlap those requests and are not additional independent blockers. Fresh read-only GitHub and Linear receipts, all 53 historical launch actions with current tracker labels, and all 51 request ownership splits are preserved under `launch-continuation-2026-10-13` in the programme output directory.
+
+The local preview restarted and reported Ready on localhost:3005; no page request was made. A 124-record Boston manual results sheet starts entirely pending. See LAUNCH-CONTINUATION-2026-10-13.md and MANUAL-BROWSER-CHECKLIST.md.
+
+Two confirmed footer dead-anchor links were repaired locally: Help me choose opens Builder; Talk with Grace uses the existing shared chat control. TypeScript passes; manual interaction is pending. A fresh focused run passed 24 image-recovery/composition tests across five files.
+
+Photoshop is installed and running. A hash-verified copy of the black-tassel source and a native export script are prepared under `source-recovery-2026-10-13/tassel-source-review/photoshop-native-pilot`. Native menu/file-dialog interactions have not produced an export; no native pilot output exists and this route is not yet validated. Original master and working-copy hashes remain identical. The UI may still show an unfinished Go to Folder dialog. No broad batch was executed.
+
+No merge, publication, production data load or deployment occurred. Work remaining on our side is not complete; client answers are not being used as a reason to stop independent repairs.
