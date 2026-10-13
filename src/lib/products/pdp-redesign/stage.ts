@@ -133,11 +133,19 @@ export type StageContext = {
 
 /** Which views the stage can honestly show for this SKU. */
 export function availableViews(kit: KitLike | null | undefined, context: StageContext): StageView[] {
-    const views: StageView[] = ["sidecar"];
-    if (!kit?.parts?.length) return views;
-    views.push("capon");
+    if (!kit?.parts?.length) return ["sidecar"];
+    // A dropper's photographed pipette stays in the glass under the approved
+    // assembled-top policy. SIDECAR would render the identical assembled stack.
+    if (requiresAssembledClosure(context.applicator, context.websiteSku)) return ["capon"];
+    const views: StageView[] = ["sidecar", "capon"];
     if (allowsExplodedClosure(context.applicator, context.family, context.websiteSku)) views.push("exploded");
     return views;
+}
+
+/** A flat fallback photograph has no detached-cap view. */
+export function stageViewLabel(view: StageView, kit: KitLike | null | undefined): string {
+    if (view === "sidecar" && !kit?.parts?.length) return "PHOTO";
+    return STAGE_VIEWS.find((option) => option.id === view)!.label;
 }
 
 /** Sidecar collapses to the assembled stack when the closure must stay on (droppers, reducers, bulb sprayers). */

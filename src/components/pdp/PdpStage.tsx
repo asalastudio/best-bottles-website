@@ -28,6 +28,7 @@ import {
     bodyPart,
     closureParts,
     stageLayout,
+    stageViewLabel,
     type GlassFrame,
     type KitLike,
     type StageContext,
@@ -189,11 +190,11 @@ export default function PdpStage({
                                 className={styles.viewButton}
                                 aria-pressed={view === option.id}
                                 disabled={!enabled}
-                                title={enabled ? undefined : "Layered view not yet available"}
+                                title={enabled ? undefined : !layout ? "Additional views not yet available" : availableViews.includes("sidecar") ? "Exploded view not available for this closure" : "This closure is shown assembled"}
                                 onClick={() => onViewChange(option.id)}
                                 data-testid={`pdp-view-${option.id}`}
                             >
-                                {option.label}
+                                {stageViewLabel(option.id, kit)}
                             </button>
                         );
                     })}
@@ -245,7 +246,6 @@ export default function PdpStage({
                 onPointerCancel={() => { pressRef.current = null; }}
             >
                 <div className={styles.stageGrid} data-on={layout?.grid ? "true" : "false"} aria-hidden />
-                <div className={styles.stageBaseline} data-on={layout ? (layout.baseline ? "true" : "false") : "true"} aria-hidden />
                 <div
                     className={styles.stageZoom}
                     data-testid="pdp-stage-zoom"

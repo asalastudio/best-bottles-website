@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState, type CSSProperties, type ReactNode } from "react";
+import { useCallback, useEffect, useId, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import Image from "next/image";
 import { dropperGlassStartY } from "@/lib/bottle-builder/dropper-compositing";
 import exposedSprayers from "@/lib/bottle-builder/exposed-sprayers.generated.json";
@@ -64,6 +64,30 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     // unavailable" up until the shopper picked something else. A layer that errors
     // is remounted once, which fetches it again; only a second error gives up.
     const [retriedUrls, setRetriedUrls] = useState<readonly string[]>([]);
+    const recoveredUrls = useRef(new Set<string>());
+    const retryFailedImage = useCallback(() => {
+        if (!failedUrl) return;
+        setRetriedUrls(list => list.filter(url => url !== failedUrl));
+        setFailedUrl(null);
+    }, [failedUrl]);
+    useEffect(() => {
+        if (!failedUrl) return;
+        // An immediate remount can fail again before a mobile connection has
+        // recovered. Allow one delayed recovery per asset, plus online/manual
+        // recovery, without retrying a genuinely missing asset indefinitely.
+        let timer: ReturnType<typeof setTimeout> | undefined;
+        if (!recoveredUrls.current.has(failedUrl) && navigator.onLine !== false) {
+            timer = setTimeout(() => {
+                recoveredUrls.current.add(failedUrl);
+                retryFailedImage();
+            }, 1500);
+        }
+        window.addEventListener("online", retryFailedImage);
+        return () => {
+            if (timer !== undefined) clearTimeout(timer);
+            window.removeEventListener("online", retryFailedImage);
+        };
+    }, [failedUrl, retryFailedImage]);
     const retryOrFail = (url: string) => {
         if (!retriedUrls.includes(url)) {
             setRetriedUrls(list => list.includes(url) ? list : [...list, url]);
@@ -101,8 +125,21 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
         ...(priority ? { fetchPriority: "high" as const } : {}),
     };
 
+    const unavailable = (canRetry: boolean) => <span data-builder-image-failure>
+        <span role="img" aria-label={label}>Image unavailable</span>
+        {/* Thumbnails live inside a button or radio label. They recover on the
+            timer/online event; a nested interactive control is invalid there. */}
+        {canRetry && !thumbnail && <button type="button" aria-label={`Try loading ${label} again`} onClick={event => {
+            // Chooser images sit inside selectable tiles; retrying the image
+            // must not select a different bottle or advance the Builder.
+            event.preventDefault();
+            event.stopPropagation();
+            retryFailedImage();
+        }}>Try again</button>}
+    </span>;
+
     if (!kit) {
-        if (!fallbackUrl || failedUrl === fallbackUrl) return <span role="img" aria-label={label}>Image unavailable</span>;
+        if (!fallbackUrl || failedUrl === fallbackUrl) return unavailable(Boolean(fallbackUrl));
         // The body or exact assembly keeps its registered frame while Next
         // delivers a display-sized copy instead of the source-resolution file.
         const dimensions = stage === "complete" ? { width: 1000, height: 1100 } : config.bodyImage ?? { width: 1000, height: 1100 };
@@ -112,7 +149,7 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
             onError={() => onLayerError(fallbackUrl)} style={{ width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", objectFit: "contain", objectPosition: "center", mixBlendMode: config.color === "Clear" && stage !== "complete" ? "multiply" : undefined, transform: expanded ? undefined : `scale(${Math.min(1, scale) * .88})`, transformOrigin: expanded ? "center center" : "bottom center" }} />);
     }
     const failed = layers.some(({ part }) => part.image.url === failedUrl);
-    if (!parts.length || failed) return <span role="img" aria-label={label}>Image unavailable</span>;
+    if (!parts.length || failed) return unavailable(failed);
     const { x, y, width, height } = !thumbnail && frameConfigurations?.length && layout
         ? builderBodyFrame(config, frameConfigurations, bodyReference, layout, { expanded })
         : previewFrame(layout?.anchors ?? kit.anchors, layers.map(layer => layer.bounds), { scale, thumbnail, expanded });
