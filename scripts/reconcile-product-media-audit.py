@@ -170,11 +170,16 @@ def main():
             [str(prior / file)], 'Recheck exact current mapping; preserve approved body geometry; replace failed parts only after pilot review.',
             ['Exact finish and glass on both surfaces', 'Supported views actually change', 'Continuous correctly seated tube/pipette', 'Current-hash visual approval'], linear=linear)
     earlier_builds = read(prior / 'builder-67-drawing-backlog.json')['rows']
+    stack_file = e / 'drawing-stack/assemblies.json'
+    stack_rows = read(stack_file) if stack_file.exists() else None
     add('BBM-DRAWING-STACK-001', 'Review existing drawing stack #341 → #342 → #343 before rebuilding', 'pr_release_queue',
+        [r['websiteSku'] for r in stack_rows] if stack_rows is not None else
         [r['websiteSku'] for r in earlier_builds if r.get('localBuildStatus') == 'resolved'], ['PDP', 'Builder'],
-        [str(e / 'open-prs.json'), str(prior / 'builder-67-drawing-backlog.json')],
+        [str(e / 'open-prs.json'), str(prior / 'builder-67-drawing-backlog.json')] +
+        ([str(stack_file), str(e / 'drawing-stack/summary.json'), str(e / 'drawing-stack/prs.json')] if stack_rows is not None else []),
         'Reconcile the exact branch assets and rules against current main. Preserve stack order and validate all expanded scopes before any approved merge or data load.',
-        ['Exact component source hashes retained', 'All affected combinations reviewed', 'Stack integration passes tests', 'Separate merge/asset/data approvals'], implementation='historical_local_builds_not_recertified')
+        ['Exact component source hashes retained', 'All affected combinations reviewed', 'Stack integration passes tests', 'Separate merge/asset/data approvals'],
+        implementation='pr_source_reconciled_visual_review_pending' if stack_rows is not None else 'historical_local_builds_not_recertified')
     add('BBM-FINISH-MIGRATION-001', 'PR #347 finish-image migration remains held', 'pr_release_queue', [], ['PDP', 'Builder'],
         [str(e / 'open-prs.json'), 'https://github.com/asalastudio/best-bottles-website/pull/347'],
         'Read the exact asset manifest and approval state; verify hosted assets before changing frontend references.',

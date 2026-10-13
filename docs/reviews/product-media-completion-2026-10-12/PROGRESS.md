@@ -64,7 +64,7 @@ The original master-library symlink resolves to an unavailable Achive volume. Pr
 
 1. Validate these shared fixes locally on desktop/mobile, including transient failure recovery and the exact reported pages. Reconcile against #368's overlapping PDP/Builder changes before release.
 2. Correct and approve the three pilot families with mounted exact masters. Use preserved geometry/Blender if image editing cannot retain geometry. Then expand family work, with a contact sheet and every-combination browser matrix.
-3. Review existing #341 → #342 → #343 drawing stack in that order. Its historical 26 locally resolved backlog entries and reported expanded 29-build scope require exact branch/asset checks; neither is recertified here.
+3. Review existing #341 → #342 → #343 drawing stack in that order. Source reconciliation now verifies seven new parts and 29 newly resolved assembly records; 26 are offered in the saved Builder census. A source-only combined-tree check passes 73 targeted tests. Original asset hashes and rendered appearance remain unverified; see DRAWING-STACK-REVIEW.md.
 4. Keep #347 finish-image migration held. #368 is also a draft with overlapping source changes. #340 and #345 are merged, but that is not media release acceptance. Additional open drawing/factual work such as #296 and #354 must be reconciled against exact scope.
 5. For each family, prepare CI evidence, approved hashes, publication/reference payload and rollback receipt. Ask for the user's explicit merge/publication/production-write approval only with a concrete reviewed release.
 6. After approved release, repeat exact configuration checks against production. Close each issue only with live evidence.
