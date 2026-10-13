@@ -98,6 +98,8 @@ def main():
                            assetsPublished='not_verified', referencesLoaded='not_verified', deployed='not_verified', verifiedLive=False))
 
     missing = [r for r in production['rows'] if r['status'] == 'no_verified_source']
+    minaret_file = e / 'elegant-minaret-diagnosis.json'
+    minaret_diagnoses = {r['websiteSku']: r for r in read(minaret_file)['rows']} if minaret_file.exists() else {}
     for r in missing:
         p = product_ids[r['productId']]
         scope = classify(p)
@@ -110,6 +112,14 @@ def main():
             ['Exact SKU identity confirmed', 'Hosted candidate decodes at required dimensions', 'Visual approval at current hash', 'PDP/catalogue/checkout identity checked after approved release'],
             certainty='data_gap_confirmed' if scope not in ['retired', 'reference_component', 'test_record'] else 'non_customer_scope',
             linear=['ASA-104', 'ASA-89'], record_ids=[p['_id']])
+        diagnosis = minaret_diagnoses.get(r['websiteSku'])
+        if diagnosis and diagnosis['diagnosis'] == 'no_complete_assembly_media_path':
+            issues[-1]['surfaces'].append('Builder availability')
+            issues[-1]['evidence'].append({'path': str(minaret_file), 'websiteSku': r['websiteSku'],
+                'finding': 'Exact included-assembly identity and sellability pass; reviewed body exists; exact plate, legacy kit and renderable register build absent in saved evidence.'})
+            issues[-1]['proposedRepair'] = diagnosis['repair']
+            issues[-1]['acceptanceCriteria'].extend(['Exact source-backed assembly becomes selectable in Builder',
+                'PDP-to-Builder handoff selects this exact SKU; no sibling finish substitution'])
 
     add('BBM-RETRY-001', 'Builder image stays unavailable after transient failures', 'shared_loading', list(served), ['Builder'],
         [str(e / 'retry-before.log'), str(e / 'retry-nesting-before.log'), str(e / 'retry-final.log')],
@@ -118,6 +128,14 @@ def main():
         certainty='confirmed_shared_defect', implementation='built_locally',
         reproduction='Fail both optimized and raw image requests, then restore connectivity. The previous implementation remains unavailable. All configurations are exposed to this shared path; this is not a claim that all fail.')
     pdp_skus = [p.get('websiteSku') for p in products if p.get('productGroupId') and classify(p) == 'catalogue_candidate']
+    shopify_pdp_skus = [p.get('websiteSku') for p in products if p.get('websiteSku') in pdp_skus
+                       and (p.get('imageUrl') or '').startswith('https://cdn.shopify.com/')]
+    add('BBM-PDP-RECOVERY-001', 'PDP optimizer failure discards Shopify image without trying its original', 'shared_loading', shopify_pdp_skus, ['PDP'],
+        [str(e / 'pdp-image-recovery-before.log'), str(e / 'pdp-image-recovery-after.log')],
+        'Try the exact original URL once after an optimized image fails. Advance to the next exact-SKU fallback only when that original fails too. Preserve per-URL recovery state.',
+        ['Shopify optimizer failure recovers to original', 'Direct-source failure does not loop', 'SKU changes do not inherit another URL failure', 'Actual mobile/network recovery verified'],
+        certainty='confirmed_shared_defect', implementation='built_locally',
+        reproduction='With no renderable kit, fail the optimized Shopify photo request. Before the fix the next source or empty state appears without trying the original. Listed SKU count is exposure through Shopify photo metadata, not witnessed failures or proof that each SKU uses fallback.')
     add('BBM-PDP-BASELINE-001', 'Decorative baseline obstructs bottle presentation', 'shared_presentation', pdp_skus, ['PDP'],
         ['User screenshot 2026-10-01 14:44', 'src/components/pdp/PdpStage.tsx', str(e / 'pdp-tests.log')],
         'Remove decorative stageBaseline element and CSS; preserve geometry datums.', ['Line absent on desktop/mobile PDP', 'Bottle and cap seating unchanged'],

@@ -17,7 +17,7 @@ import { useEffect, useMemo, useRef, useState, type CSSProperties, type PointerE
 import styles from "./pdp.module.css";
 import PdpKitPartImage from "./PdpKitPartImage";
 import PdpKitStackImage from "./PdpKitStackImage";
-import { displayImageUrl } from "@/lib/products/optimizable-image";
+import { displayImageUrl, isOptimizableImageUrl } from "@/lib/products/optimizable-image";
 import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/products/register-image";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
@@ -328,7 +328,12 @@ export default function PdpStage({
                             alt={showingBareBody ? `${fallbackAlt}, uncapped bottle` : fallbackAlt}
                             decoding="async"
                             onError={() => {
-                                if (!rawUrls.has(fallbackImageUrl) && markRegisterOptimizerUnavailable(fallbackImageUrl)) showRaw(fallbackImageUrl);
+                                if (!rawUrls.has(fallbackImageUrl) && isOptimizableImageUrl(fallbackImageUrl)) {
+                                    // Shopify and local photos also pass through the optimizer.
+                                    // Try their original URL once before rejecting this exact image.
+                                    markRegisterOptimizerUnavailable(fallbackImageUrl);
+                                    showRaw(fallbackImageUrl);
+                                }
                                 else setFailedFallbackUrls((current) => new Set(current).add(fallbackImageUrl));
                             }}
                         />
