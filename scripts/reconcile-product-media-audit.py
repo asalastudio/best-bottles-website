@@ -249,6 +249,11 @@ def main():
                 'Resolve exact SKU scope from linked source evidence; reproduce before repairing.',
                 ['Exact affected SKUs enumerated', 'Issue reproduced or disproved with current evidence', 'Applicable views visually accepted'], linear=[item['id']])
 
+    local_issues = Path(__file__).resolve().parents[1] / 'docs/reviews/product-media-completion-2026-10-12/local-integration-issues.json'
+    if local_issues.exists():
+        existing = {issue['id'] for issue in issues}
+        issues.extend(issue for issue in read(local_issues) if issue['id'] not in existing)
+
     issue_ids = {}
     for issue in issues:
         for id in issue['recordIds']:
@@ -287,7 +292,7 @@ def main():
         nonCustomerImageGapRecords=len(excluded_gaps),
         developmentImageGapRecords=development['summary']['needsRecovery'],
         issueRecords=len(issues), issueCertaintyCounts=dict(Counter(i['certainty'] for i in issues)),
-        confirmedUniqueTechnicalDefects=sum(i['certainty'] in ['confirmed_shared_defect', 'confirmed_reference_defect'] for i in issues),
+        confirmedUniqueTechnicalDefects=sum(i['certainty'] in ['confirmed_shared_defect', 'confirmed_reference_defect', 'confirmed_local_integration_defect'] for i in issues),
         notes=['Issue records include queues and historical holds; do not sum them as independent customer defects.',
                'Live Builder coverage is bounded to locally enumerated body IDs checked against live APIs; remote-only cached bodies are not independently enumerated.',
                'Shared-path impact counts are exposure, not a count of witnessed failures.',

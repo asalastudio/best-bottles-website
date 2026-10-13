@@ -123,7 +123,9 @@ export function shoulderLiftMm(plate: PlateGeometry, layers: readonly LayerGeome
     const clearanceMm = (shoulder - plate.anchors.seatY) / plate.pxPerMm;
     let reachMm = -Infinity;
     for (const layer of layers) {
-        if (layer.z === "behind-body" || layer.usage === "exploded" || layer.solidBottomY == null) continue;
+        // A photographed pipette may draw in front of opaque clear-glass artwork,
+        // but its tip is inside the bottle and cannot define the closure's reach.
+        if (layer.z === "behind-body" || layer.slot === "pipette" || layer.usage === "exploded" || layer.solidBottomY == null) continue;
         reachMm = Math.max(reachMm, (layer.solidBottomY - layer.anchor.y) / layer.pxPerMm);
     }
     return reachMm > clearanceMm ? reachMm - clearanceMm : 0;
