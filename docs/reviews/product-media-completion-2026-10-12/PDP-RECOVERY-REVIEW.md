@@ -17,7 +17,7 @@ An offline diagnostic executes the current identity, eligibility and complete-ph
 | GBElgFrst15MinarCu | Pass | Present | Missing | Neither | Absent |
 | GBElgFrst15MinarSl | Pass | Present | Missing | Neither | Absent |
 
-The three missing options have no complete assembly media path in that snapshot. Recover an exact reviewed assembly plate or finish the approved component assembly release. Do not loosen compatibility or insert a sibling photograph. These are already represented in the image-gap backlog; they are not three additional duplicate issues.
+The three missing options have no complete assembly media path in that snapshot. Recover an exact reviewed assembly plate or finish the approved component assembly release. Do not loosen compatibility or insert a sibling photograph. Their remote catalogue photos passed the earlier delivery audit. They are separate from the 30 catalogue image gaps: the missing proof is the approved assembly media path required for Builder. BBM-MINARET-AVAILABILITY-001 groups these three SKUs and links the overlapping drawing-stack issue, without counting them as three new shared technical defects.
 
 Evidence: `evidence/elegant-minaret-diagnosis.json`. This is an offline diagnosis with saved data, not a new live UI observation.
 

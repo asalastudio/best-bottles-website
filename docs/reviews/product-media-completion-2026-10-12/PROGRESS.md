@@ -22,7 +22,7 @@ The branch is `codex/product-media-completion-2026-10-12`, based on current-main
 - [Separate development image-gap list](development-image-gaps.csv)
 - [Held artwork comparison](pilots/review.html)
 
-The register has **61 records**, including grouped review queues and historical holds. This is not a claim of 61 independent customer defects. Exact SKUs and served configuration IDs are recorded separately per issue. Five distinct technical defects are confirmed from source/tests/delivery: four local UI/loading fixes and one broken hosted group-hero reference. Root causes of the remaining data gaps and reported visual faults still need verification.
+The register has **62 records**, including grouped review queues and historical holds. This is not a claim of 62 independent customer defects. Exact SKUs and served configuration IDs are recorded separately per issue. Five distinct technical defects are confirmed from source/tests/delivery: four local UI/loading fixes and one broken hosted group-hero reference. Root causes of the remaining data gaps and reported visual faults still need verification.
 
 ## Current evidence, with denominators
 

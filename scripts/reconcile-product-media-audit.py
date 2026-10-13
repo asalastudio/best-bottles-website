@@ -32,7 +32,7 @@ def table_csv(path, rows):
         Path(path).write_text('')
         return
     with Path(path).open('w', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(f, fieldnames=list(dict.fromkeys(k for row in rows for k in row)))
         writer.writeheader()
         writer.writerows({k: json.dumps(v, ensure_ascii=False) if isinstance(v, (list, dict)) else v for k, v in row.items()} for row in rows)
 
@@ -112,14 +112,17 @@ def main():
             ['Exact SKU identity confirmed', 'Hosted candidate decodes at required dimensions', 'Visual approval at current hash', 'PDP/catalogue/checkout identity checked after approved release'],
             certainty='data_gap_confirmed' if scope not in ['retired', 'reference_component', 'test_record'] else 'non_customer_scope',
             linear=['ASA-104', 'ASA-89'], record_ids=[p['_id']])
-        diagnosis = minaret_diagnoses.get(r['websiteSku'])
-        if diagnosis and diagnosis['diagnosis'] == 'no_complete_assembly_media_path':
-            issues[-1]['surfaces'].append('Builder availability')
-            issues[-1]['evidence'].append({'path': str(minaret_file), 'websiteSku': r['websiteSku'],
-                'finding': 'Exact included-assembly identity and sellability pass; reviewed body exists; exact plate, legacy kit and renderable register build absent in saved evidence.'})
-            issues[-1]['proposedRepair'] = diagnosis['repair']
-            issues[-1]['acceptanceCriteria'].extend(['Exact source-backed assembly becomes selectable in Builder',
-                'PDP-to-Builder handoff selects this exact SKU; no sibling finish substitution'])
+    minaret_gaps = [r for r in minaret_diagnoses.values() if r['diagnosis'] == 'no_complete_assembly_media_path']
+    if minaret_gaps:
+        add('BBM-MINARET-AVAILABILITY-001', 'Three Elegant15 Minaret options lack a Builder assembly media path',
+            'builder_media_availability', [r['websiteSku'] for r in minaret_gaps], ['Builder availability', 'PDP-to-Builder handoff'],
+            [str(minaret_file), str(e / 'production/audit.json'), str(e / 'drawing-stack/assemblies.json')],
+            'Recover and approve an exact assembly plate or release the reviewed component build. Existing remote catalogue photos are healthy but are not registered assembly-media proof. Preserve identity/compatibility gates.',
+            ['Exact source-backed assembly becomes selectable in Builder', 'PDP-to-Builder handoff selects this exact SKU',
+             'No sibling finish substitution', 'Rendered finish, seating and cart identity verified'],
+            certainty='confirmed_media_path_gap',
+            reproduction='Offline exact-source identity and sellability pass, with a reviewed bare body; saved plate/kit/register paths are absent. Clear copper is the control: it has a plate and is offered. Rendered browser reproduction remains pending.')
+        issues[-1]['candidateConfigurationCount'] = len(minaret_gaps)
 
     add('BBM-RETRY-001', 'Builder image stays unavailable after transient failures', 'shared_loading', list(served), ['Builder'],
         [str(e / 'retry-before.log'), str(e / 'retry-nesting-before.log'), str(e / 'retry-final.log')],
