@@ -14,7 +14,7 @@ The master library is readable at `/Volumes/Achive/Client Work/Nemat-Internation
 
 The clear Round78 shiny-silver sprayer PSD has a complete mechanism and curved dip tube on `Layer 25`. The capped counterpart has it on `Layer 27`. The frosted shiny-silver masters have no separate tube layer. Restoring the clear tube is supported by its own source; a frosted presentation still needs registration and visibility review.
 
-The black and red tassel masters visibly have silver hardware. Ivory and white masters were reopened and inventoried; their finish still needs enlarged visual review against the affected exact SKUs. The original library includes both ivory/gold and ivory/silver components, so colour alone cannot select the correction.
+The black and red tassel masters visibly have silver hardware. Ivory/silver and white component masters were subsequently visually inspected and also show silver hardware. See TASSEL-ADJUSTMENT-REVIEW.md for the reproduced adjustment-loss cause and exact SKU scope. The original library includes both ivory/gold and ivory/silver components, so colour alone cannot select the correction.
 
 The transparent-image preview exposed hidden RGB as apparent white specks. The alpha-composited contact sheet removes that ambiguity. The silver source collar still has a visible pale fringe. A separate contour-opening experiment did not solve that fringe and was not adopted. Its outputs remain preserved for comparison.
 

@@ -225,6 +225,23 @@ def main():
         [r.get('websiteSku') for r in tassels], ['PDP', 'Builder'], [str(prior / 'tassel-affected-skus.csv'), str(prior / 'tassel-verification.json')],
         'Review silver PSD/catalogue evidence against current layers; prepare silver hardware correction only for the exact four compatible finishes.',
         ['Metal finish matches source', 'Hose/bulb colour retained', 'All affected assemblies reviewed'], linear=['ASA-206'])
+    tassel_proposal = out / 'source-recovery-2026-10-13/tassel-source-review/proposed-correction.json'
+    if tassel_proposal.exists():
+        proposal = read(tassel_proposal)
+        issue = issues[-1]
+        issue.update(kind='source_extraction', certainty='confirmed_shared_defect',
+                     implementation='extraction_guard_built_locally_replacement_assets_pending',
+                     browserVerification='blocked_by_saved_permission',
+                     registeredAffectedSkuCount=proposal['registeredUniqueSkus'],
+                     pendingDrawingSkus=proposal['historicalOnlySkus'],
+                     scopeNote=proposal['scopeNote'],
+                     reproduction='Recompose the recorded tassel PSD pixel layers without their masked adjustment stack. After the recorded speck cleanup, all four silver-finish exports match the old pixel hashes exactly but show gold hardware. Original embedded previews and separate component masters show silver.',
+                     proposedRepair=proposal['proposedRepair'],
+                     prCi='local_3_python_regressions_pass', merged='not_merged', assetsPublished='not_published',
+                     referencesLoaded='not_loaded', deployed='not_deployed')
+        issue['evidence'].extend([str(tassel_proposal), str(tassel_proposal.parent / 'extraction-regression-receipt.json'),
+                                  str(tassel_proposal.parent / 'hardware-comparison.jpg'),
+                                  'scripts/register/components/cut_components.py:photo_canvas_of'])
     add('BBM-FITMENT-SCOPE-001', '5 ml fitments hidden by spray collection scope', 'scope_behavior',
         [p.get('websiteSku') for p in products if p.get('family') == 'Cylinder' and p.get('capacityMl') == 5], ['Builder'],
         [str(prior / '5ml-fitment-check'), 'src/lib/bottle-builder/collections.ts'],

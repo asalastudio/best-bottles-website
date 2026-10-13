@@ -10,7 +10,7 @@
 3. PDP controls honor the existing assembled-closure policy, label a flat fallback PHOTO, and select a supported view after SKU changes.
 4. PDP Shopify photos retry their original URL after an optimizer failure before advancing to another image.
 
-The branch is `codex/product-media-completion-2026-10-12`, based on current-main commit `5c019e69002bb943d1cf55fe7e78745125bd1cd5`. The divergent original checkout and prior assets were preserved. No fixes have been merged, deployed, published to Blob, or loaded into production data during this run.
+The branch is `codex/product-media-completion-2026-10-12`, based on the recovered main snapshot at commit `5c019e69002bb943d1cf55fe7e78745125bd1cd5`. The divergent original checkout and prior assets were preserved. No fixes have been merged, deployed, published to Blob, or loaded into production data during this run.
 
 ## One issue list
 
@@ -22,7 +22,7 @@ The branch is `codex/product-media-completion-2026-10-12`, based on current-main
 - [Separate development image-gap list](development-image-gaps.csv)
 - [Held artwork comparison](pilots/review.html)
 
-The register has **63 records**, including grouped review queues and historical holds. This is not a claim of 62 independent customer defects. Exact SKUs and served configuration IDs are recorded separately per issue. Five distinct technical defects are confirmed from source/tests/delivery: four local UI/loading fixes and one broken hosted group-hero reference. Root causes of the remaining data gaps and reported visual faults still need verification.
+The register has **63 records**, including grouped review queues and historical holds. This is not a claim of 63 independent customer defects. Exact SKUs and served configuration IDs are recorded separately per issue. Seven distinct technical defects are confirmed from source/tests/delivery: four local UI/loading fixes, one broken hosted group-hero reference, one local Boston pipette placement defect and one tassel adjustment-loss defect. Root causes of the remaining data gaps and reported visual faults still need verification.
 
 ## Current evidence, with denominators
 
@@ -86,3 +86,11 @@ See PDP-RECOVERY-REVIEW.md: the three Elegant15 Minaret omissions are media-path
 ## Boston15 placement fix
 
 The 21 offline source assemblies exposed a pipette seating defect. The local fix restores six clear-glass dropper heads; 46 register tests pass. See [Boston15 placement review](BOSTON15-PLACEMENT-REVIEW.md). Browser verification remains blocked by saved permission settings.
+
+## 13 October continuation: supported views and tassel root cause
+
+Boston15 now has 27 supported offline stage renders across 21 source combinations; no detected clipping or movement between Cap On and Sidecar. See BOSTON15-STAGE-VIEWS.md. Browser verification remains blocked by the saved permission setting.
+
+The tassel extraction defect is reproduced: omitted Photoshop adjustments produced gold hardware for four silver finishes. All four previous output pixel hashes match after their recorded cleanup. The saved census maps these to 104 served configurations, with four additional served Diva ring fallback paths kept separate pending their drawing review. The local extractor now holds adjusted photo cuts instead of silently approving the wrong colour. Replacement artwork is still pending. See TASSEL-ADJUSTMENT-REVIEW.md.
+
+No merge, publication, production write or deployment occurred. Catalogue totals remain the saved audit counts, not a fresh live census.
