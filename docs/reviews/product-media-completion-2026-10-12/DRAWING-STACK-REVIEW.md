@@ -16,7 +16,7 @@ The other three are in-stock/sellable catalogue records in that snapshot:
 - GBElgFrst15MinarCu — Frosted Elegant15, matte copper Minaret.
 - GBElgFrst15MinarSl — Frosted Elegant15, shiny silver Minaret.
 
-They require explicit Builder scope/eligibility investigation. All three lack an exact legacy kit in the saved export; that alone does not prove why they are excluded. Their current catalogue status must not be treated as retired or intentionally outside Builder without further evidence.
+Subsequent offline diagnosis confirms identity and eligibility pass for all three, but the saved media lacks any exact assembly plate, legacy kit or renderable register path. See PDP-RECOVERY-REVIEW.md. They must not be classified as retired or deliberately outside Builder.
 
 ## Integration evidence
 

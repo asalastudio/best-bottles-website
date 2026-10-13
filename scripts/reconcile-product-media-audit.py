@@ -206,6 +206,12 @@ def main():
         [str(e / 'open-prs.json'), str(e / 'pr-368.diff')],
         'Rebase the focused media patch against the ultimately approved performance branch. Review PdpStage, PdpRedesignPage, CSS and Matrix boundaries explicitly.',
         ['No duplicate selector/view logic', 'Recovery survives performance refactor', 'Desktop/mobile visual checks'], implementation='integration_pending')
+    integration_file = e / 'pr-368-integration/candidate.json'
+    if integration_file.exists():
+        issues[-1]['implementation'] = 'local_integration_candidate_tested'
+        issues[-1]['evidence'].extend([str(integration_file), str(e / 'pr-368-integration/expanded-sources-before.log'),
+            str(e / 'pr-368-integration/expanded-sources-after.log'), str(e / 'pr-368-integration/integration-resolution.patch')])
+        issues[-1]['proposedRepair'] = 'Apply the reviewed resolution to the exact combined revision: retain mobile LCP CSS without the decorative baseline; recover originals for every newly optimized photo/body source. Candidate is local only; PR and browser gates remain open.'
     add('BBM-GLASS-ORDER-001', 'Stationary glass selector correction requires deployed-path confirmation', 'behavior_review', pdp_skus, ['PDP'],
         ['src/lib/products/pdp-redesign/model.ts:glassOptions'],
         'Current main already sorts glass options independently of active selection. Verify navigation and current deployed order before changing code again.',

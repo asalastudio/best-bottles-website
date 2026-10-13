@@ -8,6 +8,7 @@
 1. Builder images recover after transient optimized/raw loading failures: one bounded delayed retry, connectivity recovery, and manual recovery on full previews. Thumbnail recovery does not introduce nested buttons or select an item.
 2. Removed the decorative horizontal line behind PDP bottles. Registration and seating datums remain intact.
 3. PDP controls honor the existing assembled-closure policy, label a flat fallback PHOTO, and select a supported view after SKU changes.
+4. PDP Shopify photos retry their original URL after an optimizer failure before advancing to another image.
 
 The branch is `codex/product-media-completion-2026-10-12`, based on current-main commit `5c019e69002bb943d1cf55fe7e78745125bd1cd5`. The divergent original checkout and prior assets were preserved. No fixes have been merged, deployed, published to Blob, or loaded into production data during this run.
 
@@ -21,7 +22,7 @@ The branch is `codex/product-media-completion-2026-10-12`, based on current-main
 - [Separate development image-gap list](development-image-gaps.csv)
 - [Held artwork comparison](pilots/review.html)
 
-The register has **60 records**, including grouped review queues and historical holds. This is not a claim of 60 independent customer defects. Exact SKUs and served configuration IDs are recorded separately per issue. Four distinct technical defects are confirmed from source/tests/delivery: three local UI/loading fixes and one broken hosted group-hero reference. Root causes of the remaining data gaps and reported visual faults still need verification.
+The register has **61 records**, including grouped review queues and historical holds. This is not a claim of 61 independent customer defects. Exact SKUs and served configuration IDs are recorded separately per issue. Five distinct technical defects are confirmed from source/tests/delivery: four local UI/loading fixes and one broken hosted group-hero reference. Root causes of the remaining data gaps and reported visual faults still need verification.
 
 ## Current evidence, with denominators
 
@@ -53,7 +54,7 @@ The original master-library symlink resolves to an unavailable Achive volume. Pr
 
 ## Verification completed
 
-- 43 tests passed across six targeted Builder/PDP files, including failure-before/fix-after retry and view-control regressions.
+- 46 tests passed across seven targeted Builder/PDP files, including failure-before/fix-after retry and view-control regressions.
 - TypeScript check passed; `git diff --check` passed.
 - Reconciliation validation passed: unique record IDs, served/replay identity sets, 30/3/5 gap split, 965 policy exposure, 12 held 13-425 records and four held Vial4 dropper records.
 - Independent source review found no remaining actionable defect in the local UI fixes. Three audit-count/provenance findings were corrected; see REVIEW.md.
@@ -77,3 +78,7 @@ Restore browser permission for local and production testing, and reconnect `/Vol
 
 
 Evidence root: `/Users/jordanrichter/Documents/Codex/2026-10-01/users-jordanrichter-projects-clients-nemat-international/outputs/media-completion-2026-10-12`
+
+## Additional reconciliation
+
+See PDP-RECOVERY-REVIEW.md: the three Elegant15 Minaret omissions are media-path gaps, with identity/eligibility passing. PR #368 has a saved local CSS/recovery resolution with 54 passing targeted tests; it is not merged or applied to the remote PR.
