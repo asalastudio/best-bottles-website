@@ -50,7 +50,7 @@ Five image-editing candidates cover Round78 clear/frosted, Boston15 amber/cobalt
 
 The first pass fails the accuracy gate: normalized Boston widths differ approximately 9–11% from the source assembly; other candidates have alpha-edge, tube, mechanism or hardware geometry concerns. These are finish studies, not approved replacement artwork. No generated candidate was installed in the component register or public asset paths. Pilot approval should follow geometry correction, not override known errors.
 
-The original master-library symlink resolves to an unavailable Achive volume. Prior extracts and recorded hashes survive, but original PSD layers cannot currently be re-opened or freshly certified. See `pilots/master-lineage-check.json`.
+Source access was restored on 13 October. All 14 Boston source/reference hash checks matched, and seven hardware parts plus twelve pipette layers were re-extracted locally. A new isolated component edit remains held for contour and edge checks. See `SOURCE-RECOVERY-2026-10-13.md`; `pilots/master-lineage-check.json` retains the earlier unavailable-volume finding as historical evidence.
 
 ## Verification completed
 

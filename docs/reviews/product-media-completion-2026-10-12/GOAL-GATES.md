@@ -1,6 +1,8 @@
 # Goal gate audit — 13 October 2026
 
-**Full objective remains unachieved. Work is blocked at exact-source production and rendered verification.**
+**Update: source access was restored on 13 October. Local source work has resumed. Rendered browser verification remains pending.**
+
+See SOURCE-RECOVERY-2026-10-13.md for the fresh source checks. The earlier blocker account below is historical.
 
 The preceding goal turn made concrete progress: local PDP recovery fix d6efe647, reproduced and corrected #368 integration candidate, and offline Elegant15 Minaret diagnosis. The same missing-master and denied-browser conditions have persisted through at least three consecutive goal turns. Safe source-only work identified in those turns has been completed and saved; further acceptance or source-faithful production requires restored access. No denied browser target was retried through a different route.
 
@@ -19,7 +21,7 @@ The preceding goal turn made concrete progress: local PDP recovery fix d6efe647,
 ## Required external changes
 
 1. Restore browser permission for the local preview and production site. Prior attempts were declined; no new permission or user authorization overriding that denial has arrived.
-2. Mount `/Volumes/Achive`, or supply the new location of `BB-PSD-Files-Master`. The master symlink still exists but its target is absent, freshly checked this turn.
+2. Resolved: `/Volumes/Achive` is mounted and the master files are readable. All 14 Boston source/reference hash checks passed; 19 component layers were re-extracted locally.
 
 Once restored: reopen/hash exact PSD layers, correct the pilots without changing geometry, inspect exact rendered SKUs and supported views, request approval of technically compliant pilots, then continue family completion. Do not approve the current failed geometry as a shortcut.
 
