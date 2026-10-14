@@ -10,6 +10,16 @@ function config(id: string, left: number, top = 235, height = 745): BuilderConfi
 }
 
 describe('vintage bottle registration', () => {
+    it('does not replace a measured Empire register plate with the legacy canonical photograph', () => {
+        const source = { ...config('empire-tassel', 340, 265, 800), family: 'Empire', capacityMl: 100 } as BuilderConfiguration;
+        source.kit!.register = { bodyId: 'empire-100ml-18-415', plateKey: 'empire-100ml-18-415|Clear', glass: 'Clear',
+            datum: { axisX: 500, seatY: 265, baselineY: 1065 }, pxPerMm: 10, componentIds: ['CMP-SPR-BLK-18-415-02'] };
+        const before = structuredClone(source.kit);
+        expect(registerVintagePreview(source, source.kit!.parts)).toBeNull();
+        const legacy = { ...config('empire-legacy', 437, 244, 833), family: 'Empire', capacityMl: 100 } as BuilderConfiguration;
+        expect(registerVintagePreview(source, source.kit!.parts, legacy)).toBeNull();
+        expect(source.kit).toEqual(before);
+    });
     it('keeps a legacy combined diptube/pump layer in its existing draw order', () => {
         const reference = config('reference', 400);
         const source = config('covered-pump', 430);

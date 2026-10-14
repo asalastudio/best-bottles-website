@@ -1,4 +1,26 @@
+## 2026-10-13 — seated Square tube feedback
+
+- User rejected the Square 15 ml black-sprayer tube as appearing pasted onto the exterior.
+- Removed the exposed-tube contrast boost from seated views in local PDP and Builder. Exploded retains its treatment; Builder enlargement remains a seated view.
+- Rebuilt all 42 offline views (seven finishes, three views, two snapshots). 63 focused tests and TypeScript pass. Original pixels and registration unchanged.
+- Browser verification and visual acceptance remain pending. Nothing published.
+- Homepage creative research is paused while this product-media feedback is addressed. Three art directions were researched; no homepage replacement or generated hero has been delivered.
+
 # Execution ledger — updated 13 October 2026
+
+## Latest checkpoint — 13 October, tube audit and environment alignment
+
+- One backlog now contains **69 issue/review records**. This is not 69 unique defects; grouped queues and existing technical causes overlap.
+- All ten Diva ring combinations are prepared locally. The first four are owner-approved; six new assemblies await review. Both database payloads pass the ten exact local guards.
+- Tube audit inventoried 1,260 production and 1,291 development candidate SKUs; all 442 tube/pipette URLs decoded. Fifty-five hero-layer entries have continuity flags; these are review candidates, not accepted or independently counted defects.
+- Square 15 ml spray: intact source tube integrated locally for seven finishes and all supported views. The user approved the clearer lighting direction. The original source pixels carry a local contrast treatment; generated pixels with outline drift are excluded. Forty-two offline renders across two environment snapshots are saved; final assembly/browser acceptance is pending.
+- Round 78, Empire 50 and the remaining flagged families are **not cleared**. Source layers exist; body-specific registration, length, material and supported-view review remain.
+- Local uses development Convex. Fresh comparison found 96 production SKU keys absent locally and 2,194 primary URL differences among matching keys. URL drift is not a defect count. A controlled production-matched read-only preview baseline is still needed; no environment or data was changed.
+- Boston's recovered 21 source combinations remain offline candidates; do not describe the whole set as integrated in the UI.
+- Agent browser access was freshly denied by a saved permission; no bypass was attempted. Localhost remains running for manual checks. No publish, merge or production write.
+
+See [DIP-TUBE-AUDIT.md](DIP-TUBE-AUDIT.md) and [DIVA-RINGS-LOCAL.md](DIVA-RINGS-LOCAL.md). The complete local evidence is under `/Users/jordanrichter/Documents/Codex/2026-10-01/users-jordanrichter-projects-clients-nemat-international/outputs/media-completion-2026-10-12`.
+
 
 
 **Updated 13 October 2026. In progress; not ready for final acceptance or release.** The directory retains its original 2026-10-12 session date. Evidence spans 12–13 October.
@@ -104,6 +126,58 @@ The local preview restarted and reported Ready on localhost:3005; no page reques
 
 Two confirmed footer dead-anchor links were repaired locally: Help me choose opens Builder; Talk with Grace uses the existing shared chat control. TypeScript passes; manual interaction is pending. A fresh focused run passed 24 image-recovery/composition tests across five files.
 
-Photoshop is installed and running. A hash-verified copy of the black-tassel source and a native export script are prepared under `source-recovery-2026-10-13/tassel-source-review/photoshop-native-pilot`. Native menu/file-dialog interactions have not produced an export; no native pilot output exists and this route is not yet validated. Original master and working-copy hashes remain identical. The UI may still show an unfinished Go to Folder dialog. No broad batch was executed.
+Jordan manually ran the prepared black-tassel export script in Photoshop. The native full image and transparent closure export now exist under `source-recovery-2026-10-13/tassel-source-review/photoshop-native-pilot`. Photoshop 27.8.0 retained the adjustment layers; master and working-copy hashes remained unchanged. The hardware is silver with residual gold edge fringes. No broad batch was executed.
+
+The authorized native image-generation edit produced `black-tassel-generated-pilot-v1.png`, with its prompt, hashes, validation and before/after comparison saved alongside the native export. The tool did not expose a model version. The candidate removes the visible gold tint but changes the silhouette: full-frame scale-normalized alpha-mask IoU is 0.9612 overall and 0.9252 in the hardware region, with output 1322×1190 versus source 2136×1925. These are diagnostic comparisons, not an acceptance threshold or approval. Edge artifacts and changed hardware contours keep this candidate held. No generated image was integrated into the register, published or approved. Next repair must preserve the native geometry while correcting the fringe; red, white and ivory/silver exports remain unfinished.
 
 No merge, publication, production data load or deployment occurred. Work remaining on our side is not complete; client answers are not being used as a reason to stop independent repairs.
+
+## 13 October: black tassel fringe corrected from native source
+
+`black-tassel-closure-silver-fringe-v1.png` is complete locally. A deterministic colour correction on the native Photoshop PNG neutralizes 10,331 warm hardware pixels while preserving linear-light luminance within 8-bit rounding. This uses the native exported pixels, not the held generated candidate. The original 2136×1925 canvas, every alpha value and every pixel outside the recorded colour mask are byte-identical after saving and reopening. Registration displacement is zero. Both master PSD and working copy retain their recorded SHA-256 hashes.
+
+The corrected head/collar and full component were inspected against the native export, including light and dark backgrounds. The gold fringe is removed without changing the outline. Source edge softness remains; no silhouette cleanup, resampling or texture replacement was applied. Script, correction mask, PNG, comparison and validation receipt are saved in `source-recovery-2026-10-13/tassel-source-review/photoshop-native-pilot/` under the evidence root above.
+
+This finishes the black pilot's fringe correction. Owner visual approval, source exports for red/white/ivory-silver, exact assembly and browser verification, and approved release remain open. No register asset or live reference changed.
+
+## 13 October: approved pilot extended to three silver finishes
+
+Jordan approved the corrected black asset and authorized the same method for red, white and ivory/silver. All three native Photoshop 27.8.0 exports and deterministic fringe corrections are now complete locally. Separate native hardware and textile masks restrict the correction to exposed metal and protect every pixel containing textile ink.
+
+| Finish | Hardware pixels corrected | Alpha changes | Textile pixel changes | Registration movement |
+| --- | ---: | ---: | ---: | ---: |
+| Red / silver | 5,059 | 0 | 0 | 0 px |
+| White / silver | 5,066 | 0 | 0 | 0 px |
+| Ivory / silver | 5,065 | 0 | 0 | 0 px |
+
+Each image retains the 2136×1925 source canvas and exact alpha mask; pixels outside the correction mask are byte-identical. Master and working-copy hashes passed before/after checks. The separate ivory/gold master is unchanged. Agent review of full components and enlarged hardware on light and dark backgrounds confirms the residual gold is neutralized with the original geometry and textile colour preserved.
+
+Evidence is under `source-recovery-2026-10-13/tassel-source-review/photoshop-native-family/`: three `*-closure-silver-fringe-v1.png` files, source/export receipts, scripts, masks, `family-validation.json` and `silver-tassel-family-review.jpg`. An initial logging-method error stopped after red; the corrected native batch exported all three successfully. The first-attempt receipt is retained.
+
+Artwork production for these three requested components is complete locally. At this checkpoint owner review and integration remained pending; the next entry supersedes those statuses. The shared issue stays open; no register reference or live data changed.
+
+## 13 October: all four approved and integrated locally
+
+Jordan approved all four corrected source assets and authorized local integration, explicitly withholding publication. All 104 register-backed bottle combinations now resolve to the approved development-only assets through the shared PDP/Builder loader. Exact composition geometry and body-specific tubes are preserved. Offline checks cover 208 complete renders, 624 Builder stage/cover states, and all 104 PDP selection and finish-thumbnail mappings. No clipping was detected. Ten family sheets were inspected.
+
+The contact review found a separate Empire100 Builder registration defect. The legacy body substitution was incorrectly applied to measured register kits. The source-preserving guard is fixed locally and covered by a regression; 48 focused tests and TypeScript pass. The issue inventory now contains 64 issue/review records and eight confirmed technical causes; these are not additive affected-SKU counts.
+
+Browser access is still denied by the saved permission setting. Browser/device/cart-presentation checks, four Diva ring assemblies, broader Empire browser regression and release approval remain open. Four standalone sprayer records are separately classified. Nothing was published, merged, loaded or deployed. See [local integration evidence and gates](TASSEL-LOCAL-INTEGRATION.md).
+
+## 13 October: four Diva tassel jeweled rings integrated locally
+
+The four requested black, ivory/silver, red and white/silver Diva46 ring assemblies now use their own exact tassel PSD ring crops and the approved silver heads. Development-only composition preserves existing bottle, tube and head registration. Selectively recovered the ring placement rules from PR #343; no branch merge, catalogue import or publication occurred.
+
+Offline evidence covers four exact PDP and Builder selections, eight complete renders, 24 Builder states and source hashes. No bounds failures. The ivory PDP selector collision is fixed: its ring choice previously resolved to the plain ivory SKU. All four labels now identify Jeweled Ring. The previous 104 non-ring selection checks still pass; 141 focused tests and TypeScript pass.
+
+The backlog now contains 65 issue/review records and nine confirmed technical causes, not 65 independent customer-visible failures. Production ring records remain unresolved. Browser/device/cart-presentation verification and owner approval of the four new assemblies remain pending. The other six PR #343 ring builds and four standalone sprayer records are separate. See [Diva local evidence and gates](DIVA-RINGS-LOCAL.md).
+
+## 13 October — Empire production-matched pilot
+
+Eight Empire 50 ml lotion finishes now have local source-backed candidates, including the recovered white rectangular pump. 24 offline PDP renders, 48 Builder layout states and 18 focused tests completed. Empire PDP/Builder now replay an explicit production snapshot locally; catalogue cards remain development data. Browser and owner acceptance remain pending. No release. See /Users/jordanrichter/Documents/Codex/2026-10-01/users-jordanrichter-projects-clients-nemat-international/outputs/media-completion-2026-10-12/empire50-production-pilot/STATUS.md. Catalogue execution index: /Users/jordanrichter/Documents/Codex/2026-10-01/users-jordanrichter-projects-clients-nemat-international/outputs/media-completion-2026-10-12/family-execution-queue.csv.
+
+Final pilot follow-up: the exact Empire catalogue-family filter now also replays captured production metadata and published card imagery. Global/mixed catalogue browsing remains development. Focused checks increased to 20; visual/browser acceptance remains pending.
+
+## Bare-glass correction — supersedes tube-only acceptance scope
+
+User identified the embedded reducer in the Empire body. Confirmed in source PSD body layers. Empire bare-master acceptance is now explicitly held. Draft 50 ml and 100 ml open-neck images generated but not integrated; geometry review pending. Standalone 18-415 reducer source recovered. Catalogue master inventory: 105 glass body/neck/colour keys, 96 existing plates and nine missing. These are scope counts, not defect counts. See /Users/jordanrichter/Documents/Codex/2026-10-01/users-jordanrichter-projects-clients-nemat-international/outputs/media-completion-2026-10-12/bare-glass-masters-2026-10-13/README.md.

@@ -1,0 +1,76 @@
+[
+  {
+    "plateKey": "empire-50ml-18-415|Clear",
+    "expectedPlate": {
+      "anchors": {
+        "axisX": 519,
+        "baselineY": 2096,
+        "seatY": 147,
+        "shoulderY": 515
+      },
+      "approved": true,
+      "bodyId": "empire-50ml-18-415",
+      "glass": "Clear",
+      "height": 2192,
+      "plateKey": "empire-50ml-18-415|Clear",
+      "pxPerMm": 21.3272,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/empire-50ml-18-415/clear/d260dcd1fd95003ad6a9cb4398f5ef34f0b6ca2cdda79833daa9bb7b1f27d4aa.png",
+      "width": 1056
+    },
+    "url": "/local-media/empire-bare-glass/empire-50ml-empty.f500e3f2cf9e.png",
+    "sha256": "f500e3f2cf9ea2e04361ae3ab0fbeb2cd05877bd1854e6a240bc4bc69b1740a1",
+    "bytes": 1367773,
+    "width": 871,
+    "height": 1806,
+    "landmarks": {
+      "axisX": 434,
+      "seatY": 124,
+      "shoulderY": 430,
+      "baselineY": 1728,
+      "left": 101,
+      "right": 768
+    },
+    "physicalGuide": {
+      "heightMm": 88,
+      "widthMm": 37
+    },
+    "visualApproval": false
+  },
+  {
+    "plateKey": "empire-100ml-18-415|Clear",
+    "expectedPlate": {
+      "anchors": {
+        "axisX": 565.5,
+        "baselineY": 2096,
+        "seatY": 133,
+        "shoulderY": 422
+      },
+      "approved": true,
+      "bodyId": "empire-100ml-18-415",
+      "glass": "Clear",
+      "height": 2192,
+      "plateKey": "empire-100ml-18-415|Clear",
+      "pxPerMm": 17.6494,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/empire-100ml-18-415/clear/97ed31088574714b12da6de6653d7c1fcab8117a4b3c941722f4f4b39eabfa23.png",
+      "width": 1136
+    },
+    "url": "/local-media/empire-bare-glass/empire-100ml-empty.ed5a12c41022.png",
+    "sha256": "ed5a12c41022c347e4fa386b13f07f5279864ccc172f7adfb9fa6369890b9218",
+    "bytes": 1416240,
+    "width": 871,
+    "height": 1806,
+    "landmarks": {
+      "axisX": 435,
+      "seatY": 128,
+      "shoulderY": 380,
+      "baselineY": 1675,
+      "left": 118,
+      "right": 753
+    },
+    "physicalGuide": {
+      "heightMm": 107,
+      "widthMm": 46
+    },
+    "visualApproval": false
+  }
+]

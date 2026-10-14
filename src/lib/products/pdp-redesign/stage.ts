@@ -32,6 +32,7 @@ import {
 } from "@/lib/products/pdp-stage-frame";
 import { allowsExplodedClosure, hangsBesideGlass, requiresAssembledClosure } from "@/lib/products/closure-presentation";
 import { placeStageBackdrop, stageBackdropFor, type StageBackdropPlacement } from "./stage-backdrops";
+import { throughGlassAppearance, type ThroughGlass } from '@/lib/register/through-glass';
 
 export type StageView = "sidecar" | "capon" | "exploded";
 
@@ -44,6 +45,7 @@ export const STAGE_VIEWS: ReadonlyArray<{ id: StageView; label: string }> = [
 export type PartBox = { x: number; y: number; width: number; height: number };
 
 export type KitPartLike = {
+    throughGlass?: ThroughGlass;
     slot: string;
     zOrder: number;
     explodeIndex: number;
@@ -76,6 +78,7 @@ export type KitLike = {
 };
 
 export type StagePart = {
+    throughGlass?: NonNullable<ReturnType<typeof throughGlassAppearance>>;
     key: string;
     slot: string;
     url: string;
@@ -299,12 +302,14 @@ export function stageLayout(
 
     const parts: StagePart[] = sorted.map((part, index) => {
         const offset = offsets.get(part) ?? { dx: 0, dy: 0 };
+        const throughGlass = throughGlassAppearance(part, view);
         let clipBottomPct: number | undefined;
         if (part.box && BEHIND_GLASS_SLOTS.has(part.slot)) {
             const over = part.box.y + part.box.height + offset.dy - kit.anchors.baselineY;
             if (over > 0.5) clipBottomPct = Math.min(100, (over / part.box.height) * 100);
         }
         return {
+            ...(throughGlass ? { throughGlass } : {}),
             key: `${part.slot}-${index}`,
             slot: part.slot,
             url: part.image.url,

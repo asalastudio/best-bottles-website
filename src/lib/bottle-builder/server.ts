@@ -10,8 +10,9 @@ import { bareChooserKit, slimBuilderBodies } from "./payload";
 import { readLocalComponentKits } from "../paper-doll/local-component-kits";
 import { loadRegisterKits } from "@/lib/register/load";
 import { assembledKit } from "@/lib/register/stage-kit";
+import { withLocalMediaBaseline, localMediaBaselineCacheKey } from "@/lib/register/local-media-baseline";
 
-const client = () => createResilientConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
+const client = (family?: string) => withLocalMediaBaseline(createResilientConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!), family);
 
 // Local preview of kits that are extracted but not yet published: BUILDER_LOCAL_KITS
 // names a kits.json staged by scripts/paperdoll/local-kit-overlay.mjs, whose part
@@ -31,6 +32,9 @@ const KIT_BATCH = 50;
 // old without risk. Was 300 s, which put a visitor on the cold path every five
 // minutes per family (2026-09-24 first-open measurement).
 const FAMILY_CACHE_SECONDS = 60 * 60;
+// Keep the approved local review assets out of existing cached hosted kits.
+// Production cache identity and production imagery stay unchanged.
+const localMediaCache = process.env.NODE_ENV === "development" ? ["local-empire-native-vintage-v8", localMediaBaselineCacheKey()] : [];
 
 /** CDN policy for the builder's JSON routes: fresh for a while, then served
  * stale while one background request refreshes it, so an expiry never makes a
@@ -46,7 +50,7 @@ export const loadBuilderFamily = unstable_cache(async (family: string) => {
     const data = await familyRows(family);
     if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${family}`);
     return slimBuilderBodies(await loadBuilderBodies(data.rows, { strictRegister: true }));
-}, ["bottle-builder-family-chooser-v7-elegant-photo"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-family-chooser-v7-elegant-photo", ...localMediaCache], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 /** The cached family. When the cache has no entry to fall back on (a new key, an
  * eviction) and the register lookup fails, this one request builds the family
@@ -77,14 +81,14 @@ export const loadBuilderFamilies = unstable_cache(async () => {
             const data = await familyRows(name);
             if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${name}`);
             const resolved = await resolveListedComponents(data.rows.map(reviewedCylinderFiveMlRow), async sku =>
-                (await client().query(api.products.lookupSku, { sku }))?.product ?? null);
+                (await client(name).query(api.products.lookupSku, { sku }))?.product ?? null);
             const groups = new Set(resolved.filter(isBuilderCandidate).map(row => builderBodyIdentity(row).bodyId)).size;
             // A single bottle with an orderable compatible finish is enough.
             available[index] = groups ? { family: name, groups } : null;
         }
     }));
     return available.filter(family => family !== null);
-}, ["bottle-builder-families-bare-v8-tall9-caps"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-families-bare-v8-tall9-caps", ...localMediaCache], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 /** `strictRegister`: a failed register lookup throws instead of drawing the
  * published kits. Every cached caller sets it, so a Convex hiccup leaves the
@@ -141,7 +145,7 @@ const cachedBodyKits = unstable_cache(async (pairs: Array<[string, string | null
         kits[websiteSku] = loaded.get(websiteSku) ?? (graceSku ? loaded.get(graceSku) : undefined) ?? null;
     }
     return kits;
-}, ["bottle-builder-body-kits-v5-elegant-photo-hardware"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-body-kits-v5-elegant-photo-hardware", ...localMediaCache], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 export async function loadBuilderBodyKits(family: string, bodyId: string) {
     if (!family || family.length > 100 || !bodyId || bodyId.length > 200) return {};
@@ -197,7 +201,7 @@ async function loadChooserKits(candidates: CatalogRow[], options: KitLoadOptions
 }
 
 export async function loadBuilderBodies(rows: CatalogRow[], options: KitLoadOptions = { strictRegister: true }) {
-    const convex = client();
+    const convex = client(rows[0]?.family ?? undefined);
     const reviewedRows = rows.map(reviewedCylinderFiveMlRow);
     const activeBySku = new Map<string, ActiveComponent | null>();
     const resolved = await resolveListedComponents(reviewedRows, async sku => {

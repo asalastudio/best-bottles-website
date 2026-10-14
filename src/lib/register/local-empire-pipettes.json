@@ -1,0 +1,92 @@
+[
+  {
+    "websiteSku": "GBEmp50DrpSl",
+    "url": "/local-media/empire-bare-glass/GBEmp50DrpSl-pipette.b4662058b9a9.webp",
+    "sha256": "b4662058b9a93077d2f48811387e53be8f0b7fd3c076b4b33c6704cb0e823fed",
+    "bytes": 15094,
+    "width": 1000,
+    "height": 1100,
+    "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/b4662058b9a93077d2f48811387e53be8f0b7fd3c076b4b33c6704cb0e823fed.pipette.webp",
+    "sourceBounds": {
+      "bottom": 923,
+      "left": 463,
+      "right": 543,
+      "top": 396
+    },
+    "sourceBodyBounds": {
+      "bottom": 1063,
+      "left": 329,
+      "right": 680,
+      "top": 230
+    },
+    "expectedUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-DRP-SSLV-18415/pipette-a76f594f97ab646b404a6aa2914fbca51135c485a62bd7fe293418607e225c3f.png",
+    "expectedWidth": 272,
+    "expectedHeight": 807,
+    "expectedAnchor": {
+      "x": 170,
+      "y": -265
+    },
+    "registration": "Exact-SKU published photographic pipette, uniform legacy body rim-to-foot scale; original photographed head seated 4 stage pixels inside its closure. Visual review pending.",
+    "expectedPxPerMm": 13.0144
+  },
+  {
+    "websiteSku": "GBEmp50DrpGl",
+    "url": "/local-media/empire-bare-glass/GBEmp50DrpGl-pipette.a149748c4228.webp",
+    "sha256": "a149748c4228e53171095b7298b76a528681e4b4f7182f87bc4f84da080f5014",
+    "bytes": 16318,
+    "width": 1000,
+    "height": 1100,
+    "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/a149748c4228e53171095b7298b76a528681e4b4f7182f87bc4f84da080f5014.pipette.webp",
+    "sourceBounds": {
+      "bottom": 923,
+      "left": 463,
+      "right": 543,
+      "top": 396
+    },
+    "sourceBodyBounds": {
+      "bottom": 1063,
+      "left": 329,
+      "right": 680,
+      "top": 230
+    },
+    "expectedUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-DRP-SGLD-18415/pipette-c107345f6b44c10ea2fea2aae48ddd89d534134ae7ae31b6d841b86596e29661.png",
+    "expectedWidth": 340,
+    "expectedHeight": 808,
+    "expectedAnchor": {
+      "x": 169.5,
+      "y": -261
+    },
+    "registration": "Exact-SKU published photographic pipette, uniform legacy body rim-to-foot scale; original photographed head seated 4 stage pixels inside its closure. Visual review pending.",
+    "expectedPxPerMm": 13.0144
+  },
+  {
+    "websiteSku": "GBEmp50DrpCu",
+    "url": "/local-media/empire-bare-glass/GBEmp50DrpCu-pipette.d2cc62edb36e.webp",
+    "sha256": "d2cc62edb36ef2def7808ca5730c1653670c7a82f59c9a7f0522460731a4904f",
+    "bytes": 15836,
+    "width": 1000,
+    "height": 1100,
+    "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/d2cc62edb36ef2def7808ca5730c1653670c7a82f59c9a7f0522460731a4904f.pipette.webp",
+    "sourceBounds": {
+      "bottom": 921,
+      "left": 462,
+      "right": 543,
+      "top": 395
+    },
+    "sourceBodyBounds": {
+      "bottom": 1063,
+      "left": 331,
+      "right": 682,
+      "top": 230
+    },
+    "expectedUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-DRP-CPR-18415/pipette-05c061b9a41a08e14302e2cbe89aaae4be3599f876adbff0ccc94e05a6f47c15.png",
+    "expectedWidth": 273,
+    "expectedHeight": 807,
+    "expectedAnchor": {
+      "x": 170.8,
+      "y": -265
+    },
+    "registration": "Exact-SKU published photographic pipette, uniform legacy body rim-to-foot scale; original photographed head seated 4 stage pixels inside its closure. Visual review pending.",
+    "expectedPxPerMm": 13.0144
+  }
+]

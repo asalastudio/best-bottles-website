@@ -41,3 +41,7 @@ Exact assembly CSV changes understate the full QA scope: shared renderer changes
 These results reduce reconstruction work and establish a concrete release review scope. They do not authorize merging the stack or importing its data.
 
 Evidence root: `/Users/jordanrichter/Documents/Codex/2026-10-01/users-jordanrichter-projects-clients-nemat-international/outputs/media-completion-2026-10-12`
+
+## Later 13 October update: four tassel ring combinations
+
+The archive drive is accessible. Reopened all four exact tassel masters and recovered their own ring crops with hashes and measured registration. These supersede the earlier plain-bulb ring sources for this local four-SKU slice. Integrated four development-only assemblies and selectively recovered ring renderer rules; the PR stack was not merged. The other six ring builds remain separate. See [DIVA-RINGS-LOCAL.md](DIVA-RINGS-LOCAL.md) for the current evidence and pending browser/owner/release gates.

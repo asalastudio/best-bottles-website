@@ -15,8 +15,11 @@
 import type { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../convex/_generated/api";
 import { kitFromRegister, kitsFromRegister, reconcileCylinder9Kit, type RegisterKit, type RegisterStagePayload } from "./stage-kit";
+import { localTasselMedia } from "./local-tassel-media";
+import { localEmpireBareGlass } from "./local-empire-bare-glass";
+import { localEmpireWhitePumpPayload } from "./local-empire-white-pump";
+import { localDivaRingChunkSize, localDivaRingDependencies, localDivaRingPayload } from "./local-diva-rings";
 
-const CHUNK = 50;
 
 // The frosted Elegant matte-gold spray SKU entered the live catalog after the
 // register snapshot. Both of its exact parts are already approved in the same
@@ -59,9 +62,9 @@ export function registerStageEnabled(): boolean {
 /** The kits a stage draws from one payload: every renderable SKU, with the 9 mL pilot's rows reconciled. */
 export function drawableRegisterKits(payload: RegisterStagePayload): Record<string, RegisterKit> {
     const kits: Record<string, RegisterKit> = {};
-    for (const [sku, candidate] of Object.entries(kitsFromRegister(payload))) {
+    for (const [sku, candidate] of Object.entries(kitsFromRegister(localEmpireWhitePumpPayload(localDivaRingPayload(payload))))) {
         const reconciled = reconcileCylinder9Kit(candidate);
-        if (reconciled) kits[sku] = reconciled;
+        if (reconciled) kits[sku] = localEmpireBareGlass(localTasselMedia(reconciled), payload.plates[reconciled.register.plateKey]);
     }
     return kits;
 }
@@ -75,9 +78,11 @@ export async function loadRegisterKits(
     const wanted = [...new Set(graceSkus.filter((sku): sku is string => typeof sku === "string" && sku.length > 0))];
     if (wanted.length === 0) return {};
     const kits: Record<string, RegisterKit> = {};
-    for (let index = 0; index < wanted.length; index += CHUNK) {
+    // Reserve slots for the exact local ring siblings; the public query caps at 50.
+    const chunk = localDivaRingChunkSize();
+    for (let index = 0; index < wanted.length; index += chunk) {
         try {
-            const payload = await convex.query(api.registerStage.forSkus, { graceSkus: wanted.slice(index, index + CHUNK) }) as RegisterStagePayload;
+            const payload = await convex.query(api.registerStage.forSkus, { graceSkus: localDivaRingDependencies(wanted.slice(index, index + chunk)) }) as RegisterStagePayload;
             Object.assign(kits, drawableRegisterKits(payload));
         } catch (error) {
             // Logged in production too: this failure used to be silent there.

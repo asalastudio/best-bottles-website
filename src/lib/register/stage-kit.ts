@@ -21,10 +21,11 @@ import type { DetachedLook } from "@/lib/products/kit-frame";
 import { CYLINDER9_PILOT_LAYER_HASHES } from "./cylinder9-pilot-layers";
 import { closureDropMm, closureSeatSignature } from "./seat-drops";
 import { heroTube, type HeroTubeLayer } from "./dip-tubes";
+import type { ThroughGlass } from './through-glass';
 
 export type StageDatum = { axisX: number; seatY: number; baselineY: number };
 /** The slots a kit part can occupy (convex/productKits.ts and the register's registerSlotV agree). */
-export type KitSlot = "body" | "fitment" | "roller" | "cap" | "overcap" | "sprayer" | "pump" | "diptube" | "collar" | "bulb" | "tassel" | "reducer" | "pipette";
+export type KitSlot = "body" | "fitment" | "roller" | "cap" | "overcap" | "sprayer" | "pump" | "diptube" | "collar" | "bulb" | "tassel" | "reducer" | "pipette" | "ring";
 export type PartBox = { x: number; y: number; width: number; height: number };
 export type Bounds = { left: number; top: number; right: number; bottom: number };
 
@@ -99,6 +100,7 @@ export type RegisterStagePayload = {
 // ---------- the kit shape both stages draw ----------
 
 export type RegisterKitPart = {
+    throughGlass?: ThroughGlass;
     slot: KitSlot;
     variantKey: string | null;
     zOrder: number;

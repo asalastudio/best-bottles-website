@@ -25,11 +25,12 @@ import type { ConvexHttpClient } from "convex/browser";
 import { createResilientConvexHttpClient } from "@/lib/convexServerClient";
 import { api } from "../../../convex/_generated/api";
 import { drawableRegisterKits, registerStageEnabled } from "./load";
+import { localDivaRingChunkSize, localDivaRingDependencies } from "./local-diva-rings";
 import type { RegisterKit, RegisterStagePayload } from "./stage-kit";
 import { stageEnvelope, stageFrameKey } from "@/lib/products/pdp-redesign/stage";
 import type { StageBounds } from "@/lib/products/pdp-stage-frame";
+import { withLocalMediaBaseline, localMediaBaselineCacheKey } from "./local-media-baseline";
 
-const CHUNK = 50;
 const ENVELOPE_CACHE_SECONDS = 60 * 60;
 
 /** The catalogue's family and capacity of a page's glass. */
@@ -49,9 +50,10 @@ export async function glassStageEnvelopes(convex: Pick<ConvexHttpClient, "query"
     }
     const skus = [...applicatorOf.keys()];
     const kits = new Map<string, RegisterKit[]>();
-    for (let index = 0; index < skus.length; index += CHUNK) {
-        const chunk = skus.slice(index, index + CHUNK);
-        const drawable = drawableRegisterKits(await convex.query(api.registerStage.forSkus, { graceSkus: chunk }) as RegisterStagePayload);
+    const chunkSize = localDivaRingChunkSize();
+    for (let index = 0; index < skus.length; index += chunkSize) {
+        const chunk = skus.slice(index, index + chunkSize);
+        const drawable = drawableRegisterKits(await convex.query(api.registerStage.forSkus, { graceSkus: localDivaRingDependencies(chunk) }) as RegisterStagePayload);
         for (const sku of chunk) {
             const kit = drawable[sku];
             if (!kit) continue;
@@ -69,8 +71,8 @@ export async function glassStageEnvelopes(convex: Pick<ConvexHttpClient, "query"
 
 const cachedGlassEnvelopes = unstable_cache(
     async (family: string, capacityMl: number | null) =>
-        glassStageEnvelopes(createResilientConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!), { family, capacityMl }),
-    ["pdp-glass-stage-envelopes-v1"],
+        glassStageEnvelopes(withLocalMediaBaseline(createResilientConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!), family), { family, capacityMl }),
+    ["pdp-glass-stage-envelopes-v1", ...(process.env.NODE_ENV === "development" ? ["local-empire-native-vintage-v7", localMediaBaselineCacheKey()] : [])],
     { revalidate: ENVELOPE_CACHE_SECONDS, tags: ["bottle-components"] },
 );
 

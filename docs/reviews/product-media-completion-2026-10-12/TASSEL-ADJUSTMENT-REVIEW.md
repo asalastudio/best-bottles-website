@@ -41,3 +41,21 @@ Under the programme output directory, `source-recovery-2026-10-13/tassel-source-
 - `proposed-correction.json`: exact affected components, saved before records, protected gold component and release gates.
 
 The existing issue `BBM-TASSEL-METAL-001` / Linear reference `ASA-206` is updated locally. No Linear message or external issue change was sent.
+
+## Black pilot correction completed locally
+
+The native Photoshop export is successful. Jordan ran the script against the verified working copy; both PSD hashes remain unchanged. A native generated edit was tested and held because it altered geometry and reduced resolution.
+
+The accepted local repair method for the black pilot is deterministic warm-colour neutralization on the full-resolution Photoshop export. `photoshop-native-pilot/black-tassel-closure-silver-fringe-v1.png` changes 10,331 hardware pixels only. Save/reopen verification confirms every alpha value and every pixel outside the correction mask is unchanged. Canvas size remains 2136×1925; silhouette overlap is exactly 1 and displacement is zero. Linear-light luminance changes only through 8-bit rounding. The script checks native source, master and working-copy hashes before and after correction.
+
+Agent visual review of full-component and enlarged hardware comparisons on light and dark backgrounds confirms the gold fringe is removed. Existing source edge softness is preserved. The reproducible script, mask, validation receipt and `silver-fringe-v1-comparison.jpg` are alongside the output. Owner artwork approval remains pending. The black pilot is not integrated or published; the other three silver finishes and every affected assembly still require completion and verification. The shared issue stays open.
+
+## Family extension after owner approval
+
+Jordan subsequently approved the black correction and authorized the same method for red, white and ivory/silver. Those three outputs are now complete under `photoshop-native-family/`. Native Photoshop exports retained the original adjustment stack. Separate hardware/textile exports supplied protection masks for the deterministic colour correction. Changed hardware pixels: red 5,059; white 5,066; ivory/silver 5,065. All three have zero alpha changes, zero textile changes, zero changes outside the correction masks and zero registration displacement. Original resolution is preserved. All master and working-copy hashes are unchanged, including the protected ivory/gold master.
+
+The full-component/light-background comparison and enlarged dark-background checks passed agent visual review. See `family-validation.json` and `silver-tassel-family-review.jpg` for exact evidence. Black is owner-approved; the three new finished images are ready for owner review. Source edge softness and the original red bulb/hose junction remain as photographed. No source geometry was reconstructed. Integration, exact assembly checks, browser/live verification and release approval remain open.
+
+## Superseding approval and integration checkpoint
+
+Jordan subsequently approved all four corrected assets. They are integrated locally for 104 register-backed PDP/Builder combinations, with source geometry and body-specific tubes preserved. Offline assembly, exact SKU and thumbnail checks are complete; browser acceptance is pending because the supported browser tool still denies access. Four Diva ring builds and four standalone component records remain separately classified. See [TASSEL-LOCAL-INTEGRATION.md](TASSEL-LOCAL-INTEGRATION.md) for results, the newly corrected Empire Builder registration issue, and release gates. No publication or live reference change occurred.

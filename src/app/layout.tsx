@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import LocalMediaReviewBanner from '@/components/LocalMediaReviewBanner';
 import { brandFace, cormorant, ebGaramond } from "./fonts";
 import "./globals.css";
 import { cookies, headers } from "next/headers";
@@ -120,6 +121,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} className={`${brandFace.variable} ${cormorant.variable} ${ebGaramond.variable}`}>
       <body className="antialiased selection:bg-muted-gold/20 selection:text-obsidian">
+        <LocalMediaReviewBanner />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(buildOrganizationJsonLd()) }}

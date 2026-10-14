@@ -1,0 +1,81 @@
+{
+  "url": "/local-media/empire-bare-glass/reducer-18-415.57762272c362.png",
+  "width": 114,
+  "height": 128,
+  "sha256": "57762272c36205187a394244ca5281adac35d272c9a3e7c3eb8aacf944e689b5",
+  "bytes": 16202,
+  "source": {
+    "source": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/20. Caps/23. 18-415 Reducer/18-415Reducer.psd",
+    "sha256": "64d269c34ba00ad242a426b4aa18be4259aa858e123561ab7a5ce8392fd31bfa",
+    "size": [
+      674,
+      978
+    ],
+    "layers": [
+      {
+        "index": 0,
+        "name": "Background",
+        "kind": "pixel",
+        "bbox": [
+          0,
+          0,
+          674,
+          978
+        ],
+        "visible": true
+      },
+      {
+        "index": 1,
+        "name": "Layer 1",
+        "kind": "pixel",
+        "bbox": [
+          17,
+          303,
+          641,
+          710
+        ],
+        "visible": false
+      },
+      {
+        "index": 2,
+        "name": "Layer 2",
+        "kind": "pixel",
+        "bbox": [
+          280,
+          425,
+          394,
+          553
+        ],
+        "visible": true
+      }
+    ]
+  },
+  "websiteSkus": [
+    "GBEmp100RdcrShnGl",
+    "GBEmp100RdcrShnBlkTall",
+    "GBEmp100RdcrBrwnLthr",
+    "GBEmp100RdcrLBrwnLthr",
+    "GBEmp100RdcrShnSl",
+    "GBEmp100RdcrMtSlTall",
+    "GBEmp100RdcrMtSl",
+    "GBEmp100RdcrWht",
+    "GBEmp100RdcrPnkLthr",
+    "GBEmp100RdcrIvyLthr",
+    "GBEmp100RdcrShnBlk",
+    "GBEmp50RdcrBlkLthr",
+    "GBEmp100RdcrBlkLthr",
+    "GBEmp50RdcrShnSl",
+    "GBEmp50RdcrShnGl",
+    "GBEmp50RdcrShnBlk",
+    "GBEmp50RdcrIvyLthr",
+    "GBEmp50RdcrPnkLthr",
+    "GBEmp50RdcrShnBlkTall",
+    "GBEmp50RdcrBrwnLthr",
+    "GBEmp50RdcrLBrwnLthr",
+    "GBEmp50RdcrMtSlTall",
+    "GBEmp50RdcrMtSl",
+    "GBEmp50RdcrWht"
+  ],
+  "registration": "Proposed visual placement within the photographed neck; no new physical reducer dimensions inferred. Owner seating review pending.",
+  "visualApproval": false
+}

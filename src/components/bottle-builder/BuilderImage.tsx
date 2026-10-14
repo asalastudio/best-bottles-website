@@ -10,6 +10,8 @@ import { layerCropStyleForPart, layerTransform, previewFrame } from "@/lib/bottl
 import { isOptimizableImageUrl, isRegisterAssetUrl } from "@/lib/products/optimizable-image";
 import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/products/register-image";
 import { BEHIND_GLASS_SLOTS } from "@/lib/products/pdp-redesign/stage";
+import { sourceTubeMaterialFilter } from "@/lib/register/source-tube-material";
+import { throughGlassAppearance } from '@/lib/register/through-glass';
 
 /** Clear glass and the clear dip tube take the stage colour. A published dropper
  * part also contains its metal collar; multiplying a clear dropper assembly
@@ -24,7 +26,8 @@ function blendsIntoGlass(config: BuilderConfiguration, part: BuilderPart, stage:
     if (part.slot === "pipette") return config.color !== "Clear";
     // The shaft and tube cut from a catalogue hero (src/lib/register/dip-tubes.ts) are the hero's own pixels, white shaft
     // included; multiplying would erase the shaft into the glass.
-    if (part.slot === "diptube" && part.image.url.startsWith("/images/register/tubes/")) return false;
+    if (part.slot === "diptube" && (part.image.url.startsWith("/images/register/tubes/")
+        || part.image.url.startsWith("/local-media/source-tubes/"))) return false;
     return config.color === "Clear" && (part.slot === "diptube"
         || (part.slot === "body" && (stage === "body" || config.fitment !== "Dropper" || splitDropper)));
 }
@@ -187,6 +190,17 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     return wrap(<svg role="img" aria-labelledby={titleId} viewBox={`${x} ${y} ${width} ${height}`} width="400" height="520" preserveAspectRatio="xMidYMid meet" style={{ display: "block", width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", margin: expanded ? "0 auto" : undefined, overflow: expanded ? "visible" : "hidden" }}>
         <title id={titleId}>{label}</title>
         {layers.map(({ part, transform }) => {
+            const through = throughGlassAppearance(part, showCover ? 'capon' : 'sidecar');
+            if (through) {
+                const clipId = `${titleId}-${part.slot}-cavity`;
+                return <g key={`${part.slot}:${part.componentId}:${attempt(part.image.url)}`} transform={layerTransform(transform, part)}
+                    style={{ opacity: through.opacity, mixBlendMode: through.blendMode }}>
+                    <defs><clipPath id={clipId}><polygon points={through.clipPoints} /></clipPath></defs>
+                    <image href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height}
+                        style={{ filter: sourceTubeMaterialFilter(part.image.url, showCover ? 'capon' : 'sidecar') }}
+                        clipPath={`url(#${clipId})`} onLoad={markLoaded} onError={() => onLayerError(part.image.url)} data-builder-layer={part.slot} />
+                </g>;
+            }
             const glassY = splitDropper ? dropperGlassStartY(part) : undefined;
             if (glassY !== undefined) {
                 const opaqueId = `${titleId}-${part.slot}-opaque`, glassId = `${titleId}-${part.slot}-glass`;
@@ -211,12 +225,12 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
                 return <g key={`${part.slot}-${part.componentId ?? ""}-${part.image.url}:${attempt(part.image.url)}`} transform={layerTransform(transform, part)}>
                     <defs><clipPath id={clipId} clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width={part.image.width} height={visible} /></clipPath></defs>
                     <image href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} x="0" y="0" clipPath={`url(#${clipId})`}
-                        style={{ mixBlendMode: blendsIntoGlass(config, part, stage, splitDropper) ? "multiply" : undefined }}
+                        style={{ filter: sourceTubeMaterialFilter(part.image.url, showCover ? 'capon' : 'sidecar'), mixBlendMode: blendsIntoGlass(config, part, stage, splitDropper) ? "multiply" : undefined }}
                         onLoad={markLoaded} onError={() => onLayerError(part.image.url)} data-builder-layer={part.slot} />
                 </g>;
             }
             return <image key={`${part.slot}-${part.componentId ?? ""}-${part.image.url}:${attempt(part.image.url)}`} href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} transform={layerTransform(transform, part)}
-                x="0" y="0" style={{ mixBlendMode: blendsIntoGlass(config, part, stage, splitDropper) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined }}
+                x="0" y="0" style={{ filter: sourceTubeMaterialFilter(part.image.url, showCover ? 'capon' : 'sidecar'), mixBlendMode: blendsIntoGlass(config, part, stage, splitDropper) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined }}
                 onLoad={markLoaded} onError={() => onLayerError(part.image.url)} data-builder-layer={part.slot} />;
         })}
 
