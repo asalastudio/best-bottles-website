@@ -17,6 +17,7 @@ export default function MediaReviewPage() {
     const kits = drawableRegisterKits(baseline.snapshot.register);
     return <main style={{ maxWidth: 1000, margin: '40px auto', padding: 24 }}>
         <h1>Empire · empty bottle masters</h1>
+        <p><Link href="/team/media-review/round78">Next batch: Round 78 ml spray tubes, clear and frosted</Link></p>
         <p>The new 50 ml and 100 ml masters are applied locally to 90 registered assemblies. One 100 ml white-pump combination still uses its older fallback and is held for source recovery. Nothing has been published.</p>
         <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>{masters.map(m => <figure key={m.plateKey} style={{ margin: 0 }}><img src={m.url} alt={`Empty Empire ${m.physicalGuide.heightMm === 88 ? 50 : 100} ml glass master`} style={{ height: 300, width: 'auto' }} /><figcaption>{m.physicalGuide.heightMm} × {m.physicalGuide.widthMm} mm dimension guide</figcaption></figure>)}</div>
         <p><Link href="/catalog/empire">Open the production-matched Empire catalogue</Link>. Cards retain their captured published imagery; proposed assemblies appear on PDP and Builder.</p>

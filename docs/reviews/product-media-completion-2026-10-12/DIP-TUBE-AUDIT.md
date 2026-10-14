@@ -4,7 +4,9 @@
 
 ## Latest continuation
 
-Fresh backend metadata and explicit runtime-mode counts are saved in [dip-tube-continuation-2026-10-13/STATUS.md](/Users/jordanrichter/Documents/Codex/2026-10-01/users-jordanrichter-projects-clients-nemat-international/outputs/media-completion-2026-10-12/dip-tube-continuation-2026-10-13/STATUS.md). This is the current tube checkpoint. The whole-media inventory has 11,585 historical URLs; the refreshed tube subset has 443 URLs / 272 hashes. No browser or visual acceptance is inferred.
+14 October: the twelve Round 78 ml clear and frosted fine-mist spray combinations now use an intact native Photoshop tube locally. All 12 pass current development source guards. Offline evidence covers 36 PDP and 72 Builder layouts; 3,136 tests, TypeScript and changed-source lint pass. Browser and owner visual acceptance remain pending. See [ROUND78-SOURCE-TUBES-LOCAL.md](ROUND78-SOURCE-TUBES-LOCAL.md). This checkpoint supersedes the Round spray implementation status below; the older inventory counts remain historical.
+
+Earlier backend metadata and explicit runtime-mode counts are saved in [dip-tube-continuation-2026-10-13/STATUS.md](/Users/jordanrichter/Documents/Codex/2026-10-01/users-jordanrichter-projects-clients-nemat-international/outputs/media-completion-2026-10-12/dip-tube-continuation-2026-10-13/STATUS.md). The whole-media inventory has 11,585 historical URLs; that tube subset has 443 URLs / 272 hashes. No browser or visual acceptance is inferred.
 
 The exporter now validates expanded-shaft continuity before any asset writes and preserves previous PNGs. Four exporter regression tests and four existing source-tube tests pass. No batch re-export was run.
 

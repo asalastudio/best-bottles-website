@@ -1,3 +1,12 @@
+## 2026-10-14: Round 78 ml spray source batch
+
+- Screenshot follow-up: removed the seated Round tube's gray cast by preserving native white highlights. Re-rendered all 108 offline layouts; 12 exposed and 24 bare Builder images are byte-identical, while 72 seated images changed. Fourteen focused tests and TypeScript pass. Final full-suite verification includes this correction.
+- Twelve local candidates use the complete native Photoshop tube: six clear and six frosted spray finishes. Bottle geometry and seated hardware are unchanged; bottles remain empty.
+- Fresh production metadata supplies the offline baseline; current development records accept all twelve exact source guards.
+- Checked 36 offline PDP and 72 offline Builder layouts. Full suite with two workers: 3,136 tests passed, 7 skipped. TypeScript and changed-source lint pass.
+- Browser, physical iPhone and owner visual acceptance remain pending. The custom review rasterizer does not establish full UI rendering parity.
+- This batch is prepared for code review with publication disabled. No publication or backend writes. See [ROUND78-SOURCE-TUBES-LOCAL.md](ROUND78-SOURCE-TUBES-LOCAL.md).
+
 ## 2026-10-13 — seated Square tube feedback
 
 - User rejected the Square 15 ml black-sprayer tube as appearing pasted onto the exterior.
