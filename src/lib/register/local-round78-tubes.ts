@@ -1,4 +1,5 @@
-import source from './local-round78-tubes.json';
+import spraySource from './local-round78-tubes.json';
+import lotionSource from './local-round78-lotion-tubes.json';
 import type { RegisterComponent, RegisterKit, RegisterPlate } from './stage-kit';
 import { stackedExplodeOffsets } from '../products/exploded-stack';
 
@@ -9,13 +10,16 @@ import { stackedExplodeOffsets } from '../products/exploded-stack';
 export function localRound78Tubes(kit: RegisterKit, plate: RegisterPlate | undefined,
     components: Readonly<Record<string, RegisterComponent>>): RegisterKit {
     if (process.env.NODE_ENV !== 'development' || process.env.VERCEL || !plate) return kit;
+    const source = [spraySource, lotionSource].find(s => s.plates.some(p => p.websiteSkus.includes(kit.sku)));
+    if (!source) return kit;
     const row=source.plates.find(r=>r.websiteSkus.includes(kit.sku));
     if(!row) return kit;
     const expected=row.expectedPlate;
     if(plate.approved!==expected.approved||plate.bodyId!==expected.bodyId || plate.glass!==expected.glass || plate.url!==expected.url
         ||plate.width!==expected.width||plate.height!==expected.height||plate.pxPerMm!==expected.pxPerMm
         ||Object.entries(expected.anchors).some(([k,v])=>plate.anchors[k as keyof typeof plate.anchors]!==v))return kit;
-    const body=kit.parts.find(p=>p.slot==='body'), holder=kit.parts.find(p=>p.slot==='sprayer');
+    const holderSlot = source === lotionSource ? 'pump' : 'sprayer';
+    const body=kit.parts.find(p=>p.slot==='body'), holder=kit.parts.find(p=>p.slot===holderSlot);
     const component=holder?.componentId?components[holder.componentId]:undefined;
     const matched=source.components.find(c=>c.componentId===component?.componentId);
     // Development also carries Empire-specific layers on these shared parts.
@@ -37,7 +41,12 @@ export function localRound78Tubes(kit: RegisterKit, plate: RegisterPlate | undef
     const shoulder=body.box.y+plate.anchors.shoulderY*plateScale;
     const scale=(body.bounds.bottom-shoulder)/(source.bodyBaselineY-source.bodyShoulderY);
     const x=kit.anchors.axisX-source.headAnchorX*scale;
-    const y=holder.bounds.bottom-2-source.meaningfulBounds.top*scale;
+    const pumpLayer = source === lotionSource ? matched.layers.find(p => p.slot === 'pump' && p.url === holder.image.url) : undefined;
+    if (source === lotionSource && (!pumpLayer || typeof pumpLayer.solidBottomY !== 'number')) return kit;
+    // Pump images contain transparent rows below their solid collar. Join to
+    // that measured edge, not to the padded image rectangle.
+    const holderBottom = pumpLayer ? holder.box.y + pumpLayer.solidBottomY * holder.box.height / pumpLayer.height : holder.bounds.bottom;
+    const y=holderBottom-2-source.meaningfulBounds.top*scale;
     const box={x:round(x),y:round(y),width:round(source.width*scale),height:round(source.height*scale)};
     const bounds={left:round(x+source.meaningfulBounds.left*scale),right:round(x+source.meaningfulBounds.right*scale),
         top:round(y+source.meaningfulBounds.top*scale),bottom:round(y+source.meaningfulBounds.bottom*scale)};

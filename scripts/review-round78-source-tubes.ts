@@ -17,6 +17,12 @@ import { throughGlassAppearance } from '../src/lib/register/through-glass';
 
 const [snapshotFile, out] = process.argv.slice(2);
 const baselineOnly = process.env.BB_MEDIA_BASELINE_ONLY === '1';
+const applicator = process.env.BB_MEDIA_REVIEW_APPLICATOR ?? 'Perfume Spray Pump';
+const family = process.env.BB_MEDIA_REVIEW_FAMILY ?? 'Round';
+const capacity = Number(process.env.BB_MEDIA_REVIEW_CAPACITY ?? 78);
+assert((family === 'Round' && capacity === 78 && ['Perfume Spray Pump', 'Lotion Pump'].includes(applicator)) || (family === 'Diva' && capacity === 46 && applicator === 'Perfume Spray Pump'), 'Only scoped Round 78 spray/lotion and Diva 46 spray review is supported');
+const expectedCount = applicator === 'Lotion Pump' ? 14 : 12;
+const reviewLabel = `${family} ${capacity} ${applicator === 'Lotion Pump' ? 'lotion' : 'spray'} tube review`;
 assert(snapshotFile && out, 'Supply saved family-baseline.json and output directory');
 const s = JSON.parse(fs.readFileSync(snapshotFile, 'utf8'));
 const renders = path.join(out, 'renders'), cache = path.join(out, 'render-cache');
@@ -70,7 +76,7 @@ async function main() {
     Object.assign(process.env,{NODE_ENV:baselineOnly?'production':'development'}); delete process.env.VERCEL;
     const kits = drawableRegisterKits(s.register);
     const sample = process.env.BB_MEDIA_REVIEW_SAMPLE_SKUS?.split(',');
-    const rows = s.matrix.rows.filter((r:any)=>r.family==='Round'&&r.capacityMl===78&&r.applicator==='Perfume Spray Pump'&&(!sample||sample.includes(r.websiteSku)));
+    const rows = s.matrix.rows.filter((r:any)=>r.family===family&&r.capacityMl===capacity&&r.applicator===applicator&&(!sample||sample.includes(r.websiteSku)));
     const lookups = new Map(Object.entries(s.lookups));
     for (const entry of Object.values(s.lookups) as any[]) if(entry?.product?.graceSku) lookups.set(entry.product.graceSku,entry);
     const resolved = await resolveListedComponents(rows.map(reviewedCylinderFiveMlRow),async sku=>{assert(lookups.has(sku),`Uncaptured lookup ${sku}`);return (lookups.get(sku) as any)?.product??null;});
@@ -91,8 +97,8 @@ async function main() {
         results.push({websiteSku:row.websiteSku,capacityMl:row.capacityMl,applicator:row.applicator,finish:row.capColor,bodyUrl:body.image.url,bodyBounds:body.bounds,
             reducer:kit.parts.some(p=>p.slot==='reducer'),pdp:views,builder,browserVerified:false});
     }
-    const summary = {method:'Offline shared PDP and Builder layout functions with custom rasterizer; not full BuilderImage camera/blending or browser acceptance',sourceSnapshot:s.capturedAt,generatedAt:new Date().toISOString(),scope:rows.length,integrated:results.length,held,pdpRenders:results.reduce((n,r)=>n+r.pdp.length,0),builderRenders:results.length*6,reducerAssemblies:results.filter(r=>r.reducer).length,browserVerified:false,published:false,results};
-    if(!sample){assert.equal(rows.length,12);assert.equal(results.length,12);assert.equal(held.length,0);}
+    const summary = {applicator,reviewMode:baselineOnly?'published-baseline':'local-candidate',method:'Offline shared PDP and Builder layout functions with custom rasterizer; not full BuilderImage camera/blending or browser acceptance',sourceSnapshot:s.capturedAt,generatedAt:new Date().toISOString(),scope:rows.length,integrated:results.length,held,pdpRenders:results.reduce((n,r)=>n+r.pdp.length,0),builderRenders:results.length*6,reducerAssemblies:results.filter(r=>r.reducer).length,browserVerified:false,published:false,results};
+    if(!sample){assert.equal(rows.length,expectedCount);assert.equal(results.length,expectedCount);assert.equal(held.length,0);}
     fs.writeFileSync(path.join(out,'verification.json'),JSON.stringify(summary,null,2));
     const checks=['websiteSku,surface,view,device,status'];
     for(const r of results) for(const device of ['desktop','physical-iPhone']) {
@@ -101,7 +107,7 @@ async function main() {
     }
     fs.writeFileSync(path.join(out,'manual-ui-checks.csv'),checks.join('\n')+'\n');
     const selections: any[]=[];
-    for (const size of [78]) for (const app of ['Reducer','Perfume Spray Pump','Lotion Pump','Vintage Bulb Sprayer','Vintage Bulb Sprayer with Tassel']) {
+    for (const size of [capacity]) for (const app of ['Reducer','Perfume Spray Pump','Lotion Pump','Vintage Bulb Sprayer','Vintage Bulb Sprayer with Tassel']) {
         const r=results.find(r=>r.capacityMl===size&&r.applicator===app&&/Blk|MtGl/.test(r.websiteSku))??results.find(r=>r.capacityMl===size&&r.applicator===app);
         if(r)selections.push(r);
     }
@@ -122,7 +128,7 @@ async function main() {
         }
         await sharp({create:{width:1400,height:Math.ceil(selected.length/7)*260,channels:3,background:'#f5f3ef'}}).composite(tiles).jpeg({quality:95}).toFile(path.join(out,`all-pdp-views-${Math.floor(start/42)+1}.jpg`));
     }
-    fs.writeFileSync(path.join(out,'review.html'),`<!doctype html><meta name="viewport" content="width=device-width"><title>Round 78 source-tube review</title><style>body{font:16px system-ui;background:#f5f3ef;color:#222;margin:24px}section{border-top:1px solid #ccc;padding:20px 0}img{width:250px;max-width:45vw}figure{display:inline-block;margin:8px}h2{font-size:18px}</style><h1>Round 78 source-tube review</h1><p>${results.length} source-tube assemblies, ${held.length} held. Offline shared-layout renders, not browser screenshots. Nothing published. Bottle and hardware sources remain unchanged. Tube registration is a local review candidate.</p><p>Held: ${held.map(r=>r.websiteSku).join(', ')}.</p>${results.map(r=>`<section><h2>${r.websiteSku} · ${r.capacityMl} ml · ${r.applicator}</h2>${r.pdp.map((v:any)=>`<figure><img src="renders/${v.file}"><figcaption>PDP ${v.view}</figcaption></figure>`).join('')}${['body','fitment','complete'].map(stage=>`<figure><img src="renders/${r.websiteSku}-builder-${stage}-off.png"><figcaption>Builder ${stage}</figcaption></figure>`).join('')}</section>`).join('')}`);
+    fs.writeFileSync(path.join(out,'review.html'),`<!doctype html><meta name="viewport" content="width=device-width"><title>${reviewLabel}</title><style>body{font:16px system-ui;background:#f5f3ef;color:#222;margin:24px}section{border-top:1px solid #ccc;padding:20px 0}img{width:250px;max-width:45vw}figure{display:inline-block;margin:8px}h2{font-size:18px}</style><h1>${reviewLabel}</h1><p>${results.length} ${baselineOnly ? 'baseline' : 'local candidate'} assemblies, ${held.length} held. Offline shared-layout renders, not browser screenshots. Nothing published. Bottle and hardware sources remain unchanged. ${baselineOnly ? 'No repair is applied in this baseline.' : 'Tube registration is a local review candidate.'}</p><p>Held: ${held.map(r=>r.websiteSku).join(', ')}.</p>${results.map(r=>`<section><h2>${r.websiteSku} · ${r.capacityMl} ml · ${r.applicator}</h2>${r.pdp.map((v:any)=>`<figure><img src="renders/${v.file}"><figcaption>PDP ${v.view}</figcaption></figure>`).join('')}${['body','fitment','complete'].map(stage=>`<figure><img src="renders/${r.websiteSku}-builder-${stage}-off.png"><figcaption>Builder ${stage}</figcaption></figure>`).join('')}</section>`).join('')}`);
     console.log(JSON.stringify({...summary,results:undefined}));
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});

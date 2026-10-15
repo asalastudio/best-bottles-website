@@ -1,3 +1,20 @@
+## 2026-10-14: Copper caps and Diva 46 ml spray candidates
+
+- Cleaned both Round 78 ml lotion copper caps by removing only the pure white exterior retouch paint from alpha. All original metal pixels, surviving alpha and placement are unchanged.
+- Regenerated all fourteen lotion combinations: 116/126 PNGs unchanged, ten changed only on the two copper variants. All 108 earlier Round spray PNGs remain byte-identical.
+- Prepared twelve Diva 46 ml spray reuse candidates, six clear and six frosted. Recovered twelve exact legacy pages and 48 gallery assets; hash checked 36 source PSDs. The Diva masters lack an isolated complete tube, so the candidate reuses the intact source from the exact same six registered sprayers, with uniform fitting and explicit owner/physical fit review still pending.
+- All twelve exact source guards pass on both captured production and current development payloads. Offline review covers 36 PDP and 72 Builder layouts. Exact prior tube metadata is also guarded against future registration changes.
+- Final full suite: 348 passed suites and 3,144 passed tests, with two suites and seven tests skipped, using two workers and all scoped source snapshots. TypeScript, changed application/test lint and whitespace checks pass. Independent review reports no important issue. No publication, backend deployment or reference mutation.
+- Review: `/team/media-review/diva46` and `/team/media-review/round78/lotion`. See [batch evidence](COPPER-CAPS-AND-DIVA46-LOCAL.md).
+
+## 2026-10-14: Round 78 ml lotion local candidates
+
+- Fourteen exact combinations, seven clear and seven frosted, now use the complete native tube from the restored Achive archive. All 39 recorded PSD candidates were hash checked and inspected.
+- Final offline evidence covers 42 PDP and 84 Builder layouts. Exact source guards activate all fourteen unique SKUs in both production and development captures. Bottles remain empty; original tube pixels and proportions are preserved.
+- Corrected the visible head join against the pump solid edge, excluding transparent padding. Seventeen focused tests, TypeScript and changed-source lint pass after that correction. The full suite before this final join correction passed 3,139 tests, with seven skipped. All 108 earlier spray render PNGs are byte-identical.
+- Copper overcap artwork remains held for an existing white retouch polygon. All fourteen candidates need browser, phone and owner acceptance. This batch is uncommitted and unpublished.
+- Review: `/team/media-review/round78/lotion`. See [source evidence](ROUND78-LOTION-SOURCE-RECOVERY.md) and [remaining catalogue review scope](DIP-TUBE-REMAINING-WORK-2026-10-14.md).
+
 ## 2026-10-14: Round 78 ml spray source batch
 
 - Screenshot follow-up: removed the seated Round tube's gray cast by preserving native white highlights. Re-rendered all 108 offline layouts; 12 exposed and 24 bare Builder images are byte-identical, while 72 seated images changed. Fourteen focused tests and TypeScript pass. Final full-suite verification includes this correction.

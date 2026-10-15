@@ -72,7 +72,7 @@ export async function glassStageEnvelopes(convex: Pick<ConvexHttpClient, "query"
 const cachedGlassEnvelopes = unstable_cache(
     async (family: string, capacityMl: number | null) =>
         glassStageEnvelopes(withLocalMediaBaseline(createResilientConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!), family), { family, capacityMl }),
-    ["pdp-glass-stage-envelopes-v1", ...(process.env.NODE_ENV === "development" ? ["local-media-round78-source-v8", localMediaBaselineCacheKey()] : [])],
+    ["pdp-glass-stage-envelopes-v1", ...(process.env.NODE_ENV === "development" ? ["local-media-diva46-copper-v10", localMediaBaselineCacheKey()] : [])],
     { revalidate: ENVELOPE_CACHE_SECONDS, tags: ["bottle-components"] },
 );
 

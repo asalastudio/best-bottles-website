@@ -1,0 +1,37 @@
+{
+  "websiteSkus": [
+    "LBRnd78LtnCu",
+    "LBRndFrst78LtnCu"
+  ],
+  "componentId": "CMP-LPM-CPR-18-415",
+  "slot": "overcap",
+  "expectedLayer": {
+    "anchor": {
+      "x": 207,
+      "y": 408
+    },
+    "approved": true,
+    "explodeIndex": 2,
+    "height": 648,
+    "pxPerMm": 12.8025,
+    "slot": "overcap",
+    "solidBottomY": 635,
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-CPR-18-415/overcap-bfba49c70defb6ddc31527dd8e74970467b87043bd83986cf1a9cd9780fcb056.png",
+    "width": 419,
+    "z": "front"
+  },
+  "sourceSha256": "f7156f77cb2bda4f5688e96f11e10019a706cbdb7ffcad5efd8d1771ed442166",
+  "url": "/local-media/copper-caps/round78-lotion.be75859d4a21.png",
+  "sha256": "be75859d4a21f860b18e2ef45beae16890bc94ff685be62759abc2ca22deed36",
+  "bytes": 374755,
+  "width": 419,
+  "height": 648,
+  "cleanup": {
+    "removedPureWhitePixels": 12612,
+    "changedCopperPixels": 0,
+    "method": "Source white retouch paint excluded from alpha; original RGB, metal alpha, dimensions and registration retained. Built-in image edit used for cleanup reference only; generated copper pixels excluded."
+  },
+  "visuallyApproved": false,
+  "expectedComponentType": "lotion-pump",
+  "sourceFileName": "published-overcap.png"
+}

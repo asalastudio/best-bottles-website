@@ -1,0 +1,442 @@
+{
+  "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+  "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+  "bytes": 32974,
+  "width": 115,
+  "height": 689,
+  "holderSlot": "pump",
+  "source": {
+    "sku": "LBRnd78LtnMtGl",
+    "path": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /9. Round 78ml/1. Round 78ml PSD/12. LBRnd78LtnMtGl.psd",
+    "sha256": "07ec72ef1df8fe4709ba9fd3d109dd39d04a5c83c4ba0fa05bc1f017b56d8e26",
+    "size": [
+      1050,
+      1488
+    ],
+    "layers": [
+      {
+        "index": 0,
+        "name": "Background",
+        "kind": "pixel",
+        "bbox": [
+          0,
+          0,
+          1050,
+          1488
+        ],
+        "visible": true,
+        "opacity": 255,
+        "mask": false,
+        "blendMode": "BlendMode.NORMAL"
+      },
+      {
+        "index": 1,
+        "name": "Layer 16",
+        "kind": "pixel",
+        "bbox": [
+          16,
+          253,
+          1042,
+          1425
+        ],
+        "visible": true,
+        "opacity": 255,
+        "mask": false,
+        "blendMode": "BlendMode.NORMAL",
+        "file": "12._LBRnd78LtnMtGl-layer-1.png",
+        "sha256": "a2ff047fc680fe0e223c369daabcab37737a7865d53f01b6d4080b0742eececb",
+        "width": 1026,
+        "height": 1172
+      },
+      {
+        "index": 2,
+        "name": "Layer 12",
+        "kind": "pixel",
+        "bbox": [
+          155,
+          613,
+          701,
+          1320
+        ],
+        "visible": false,
+        "opacity": 255,
+        "mask": false,
+        "blendMode": "BlendMode.NORMAL",
+        "file": "12._LBRnd78LtnMtGl-layer-2.png",
+        "sha256": "c630eca8e80b18968ebc1ecdefb9babfadc1ad5da1a8f7e2e1aaadf98059ca77",
+        "width": 546,
+        "height": 707
+      },
+      {
+        "index": 3,
+        "name": "\\",
+        "kind": "pixel",
+        "bbox": [
+          497,
+          634,
+          612,
+          1323
+        ],
+        "visible": true,
+        "opacity": 255,
+        "mask": false,
+        "blendMode": "BlendMode.NORMAL",
+        "file": "12._LBRnd78LtnMtGl-layer-3.png",
+        "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+        "width": 115,
+        "height": 689
+      },
+      {
+        "index": 4,
+        "name": "Layer 14",
+        "kind": "pixel",
+        "bbox": [
+          367,
+          55,
+          699,
+          644
+        ],
+        "visible": true,
+        "opacity": 255,
+        "mask": false,
+        "blendMode": "BlendMode.NORMAL",
+        "file": "12._LBRnd78LtnMtGl-layer-4.png",
+        "sha256": "602b4f28bc598739cca15c031d233291054293d516c0cbc6dd9d3e50a30da012",
+        "width": 332,
+        "height": 589
+      }
+    ]
+  },
+  "bodyShoulderY": 637,
+  "bodyBaselineY": 1420,
+  "headAnchorX": 51.5,
+  "meaningfulBounds": {
+    "left": 5,
+    "top": 6,
+    "right": 108,
+    "bottom": 689
+  },
+  "innerFloorMmAboveFoot": 6.5,
+  "floorSource": "data/register/tubes/hero-sources.json floorMmAboveFoot.values.round-78ml-18-415",
+  "plates": [
+    {
+      "websiteSkus": [
+        "LBRnd78LtnMtGl",
+        "LBRnd78LtnShnGl",
+        "LBRnd78LtnShnBlk",
+        "LBRnd78LtnMtSl",
+        "LBRnd78LtnShnSl",
+        "LBRnd78LtnCu",
+        "LBRnd78LtnClOvrCap"
+      ],
+      "expectedPlate": {
+        "anchors": {
+          "axisX": 914,
+          "baselineY": 2096,
+          "seatY": 133,
+          "shoulderY": 631
+        },
+        "approved": true,
+        "bodyId": "round-78ml-18-415",
+        "glass": "Clear",
+        "height": 2192,
+        "plateKey": "round-78ml-18-415|Clear",
+        "pxPerMm": 24.9215,
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+        "width": 1840
+      }
+    },
+    {
+      "websiteSkus": [
+        "LBRndFrst78LtnMtGl",
+        "LBRndFrst78LtnShnGl",
+        "LBRndFrst78LtnShnBlk",
+        "LBRndFrst78LtnMtSl",
+        "LBRndFrst78LtnShnSl",
+        "LBRndFrst78LtnCu",
+        "LBRndFrst78LtnClOvrCap"
+      ],
+      "expectedPlate": {
+        "anchors": {
+          "axisX": 914.5,
+          "baselineY": 2096,
+          "seatY": 133,
+          "shoulderY": 631
+        },
+        "approved": true,
+        "bodyId": "round-78ml-18-415",
+        "glass": "Frosted",
+        "height": 2192,
+        "plateKey": "round-78ml-18-415|Frosted",
+        "pxPerMm": 24.9215,
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+        "width": 1840
+      }
+    }
+  ],
+  "components": [
+    {
+      "approved": true,
+      "componentId": "CMP-LPM-CPR-18-415",
+      "layers": [
+        {
+          "anchor": {
+            "x": 113,
+            "y": 236.2
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 400,
+          "pxPerMm": 8.786,
+          "slot": "pump",
+          "solidBottomY": 391,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-CPR-18-415/pump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png",
+          "width": 228,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 207,
+            "y": 408
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 648,
+          "pxPerMm": 12.8025,
+          "slot": "overcap",
+          "solidBottomY": 635,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-CPR-18-415/overcap-bfba49c70defb6ddc31527dd8e74970467b87043bd83986cf1a9cd9780fcb056.png",
+          "width": 419,
+          "z": "front"
+        }
+      ],
+      "type": "lotion-pump"
+    },
+    {
+      "approved": true,
+      "componentId": "CMP-LPM-MGLD-18-415",
+      "layers": [
+        {
+          "anchor": {
+            "x": 118.2,
+            "y": 242.1
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 400,
+          "pxPerMm": 8.8222,
+          "slot": "pump",
+          "solidBottomY": 393,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MGLD-18-415/pump-39b24dee49ed593591bcc637bcd69b518e1f5d316ae537739782b91f956423bc.png",
+          "width": 236,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 176.5,
+            "y": 356
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 602,
+          "pxPerMm": 12.8025,
+          "slot": "overcap",
+          "solidBottomY": 591,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MGLD-18-415/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png",
+          "width": 349,
+          "z": "front"
+        }
+      ],
+      "type": "lotion-pump"
+    },
+    {
+      "approved": true,
+      "componentId": "CMP-LPM-MSLV-18-415-01",
+      "layers": [
+        {
+          "anchor": {
+            "x": 278.5,
+            "y": 570.7
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 995,
+          "pxPerMm": 23.1664,
+          "slot": "pump",
+          "solidBottomY": 988,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-01/pump-0cc427bbd8ed00ae446a8a4e5fec65e8a3f68476b7f4cf11c6398f51825987bb.png",
+          "width": 552,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 175.5,
+            "y": 354
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 600,
+          "pxPerMm": 12.8025,
+          "slot": "overcap",
+          "solidBottomY": 587,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-01/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png",
+          "width": 345,
+          "z": "front"
+        }
+      ],
+      "type": "lotion-pump"
+    },
+    {
+      "approved": true,
+      "componentId": "CMP-LPM-MSLV-18-415-02",
+      "layers": [
+        {
+          "anchor": {
+            "x": 283.5,
+            "y": 552.8
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 981,
+          "pxPerMm": 23.0964,
+          "slot": "pump",
+          "solidBottomY": 969,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-02/pump-c4e70e2d9fcd9d18fd74b384607f1faed235200eafc355f70caf5f83ba538bc9.png",
+          "width": 565,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 163,
+            "y": 406
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 652,
+          "pxPerMm": 12.8025,
+          "slot": "overcap",
+          "solidBottomY": 636,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-02/overcap-c4d4b9daf52cfda14d1e92d111a8c19467beadf960e1cfb558f7ed466e7966a3.png",
+          "width": 322,
+          "z": "front"
+        }
+      ],
+      "type": "lotion-pump"
+    },
+    {
+      "approved": true,
+      "componentId": "CMP-LPM-SBLK-18-415",
+      "layers": [
+        {
+          "anchor": {
+            "x": 119,
+            "y": 228.6
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 400,
+          "pxPerMm": 9.1446,
+          "slot": "pump",
+          "solidBottomY": 394,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SBLK-18-415/pump-7fd1cfbea3ed6283b4937b6c0f9d3416bc379da9fabc13b1bc4d460e74d71176.png",
+          "width": 233,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 176,
+            "y": 352
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 596,
+          "pxPerMm": 12.8025,
+          "slot": "overcap",
+          "solidBottomY": 587,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SBLK-18-415/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png",
+          "width": 349,
+          "z": "front"
+        }
+      ],
+      "type": "lotion-pump"
+    },
+    {
+      "approved": true,
+      "componentId": "CMP-LPM-SGLD-18-415",
+      "layers": [
+        {
+          "anchor": {
+            "x": 122,
+            "y": 227.9
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 400,
+          "pxPerMm": 9.4085,
+          "slot": "pump",
+          "solidBottomY": 393,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SGLD-18-415/pump-07155152afd69e8ef46c789f986353c6a4246c8dd0d9b47d32454294c1f0159b.png",
+          "width": 239,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 168.8,
+            "y": 357
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 594,
+          "pxPerMm": 12.8025,
+          "slot": "overcap",
+          "solidBottomY": 583,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SGLD-18-415/overcap-de0582dafa63fd693f9e22125610b5f4a1f04826f3fa392a85afa7169befeced.png",
+          "width": 343,
+          "z": "front"
+        }
+      ],
+      "type": "lotion-pump"
+    },
+    {
+      "approved": true,
+      "componentId": "CMP-LPM-SSLV-18-415",
+      "layers": [
+        {
+          "anchor": {
+            "x": 115.5,
+            "y": 229.9
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 400,
+          "pxPerMm": 9.2722,
+          "slot": "pump",
+          "solidBottomY": 395,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SSLV-18-415/pump-5ab4afef966a38362aa7e46a12c8f076a476dc3c005f0425521645c0c8b662c4.png",
+          "width": 231,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 175.5,
+            "y": 354
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 599,
+          "pxPerMm": 12.8025,
+          "slot": "overcap",
+          "solidBottomY": 583,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SSLV-18-415/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png",
+          "width": 351,
+          "z": "front"
+        }
+      ],
+      "type": "lotion-pump"
+    }
+  ],
+  "capturedAt": "2026-10-14T16:28:58.881Z",
+  "registration": "Uniform meaningful source-glass shoulder to foot; original complete layer pixels and aspect ratio preserved. Visible head seats two canvas pixels inside the captured pump solidBottomY, excluding transparent pump padding.",
+  "sourceMatchEvidence": "39 exact master candidates hashed and inspected for narrow layers. The clean visible complete tube in the matte-gold capped source matches the hollow insert in the exact solid-cap and clear-overcap legacy photos. All seven lotion mechanisms are exact captured approved components for the same 78 ml bottle.",
+  "visuallyApproved": false
+}

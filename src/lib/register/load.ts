@@ -17,6 +17,8 @@ import { api } from "../../../convex/_generated/api";
 import { kitFromRegister, kitsFromRegister, reconcileCylinder9Kit, type RegisterKit, type RegisterStagePayload } from "./stage-kit";
 import { localTasselMedia } from "./local-tassel-media";
 import { localEmpireBareGlass } from "./local-empire-bare-glass";
+import { localDiva46Tubes } from "./local-diva46-tubes";
+import { localCopperCaps } from "./local-copper-caps";
 import { localRound78Tubes } from "./local-round78-tubes";
 import { localEmpireWhitePumpPayload } from "./local-empire-white-pump";
 import { localDivaRingChunkSize, localDivaRingDependencies, localDivaRingPayload } from "./local-diva-rings";
@@ -67,7 +69,7 @@ export function drawableRegisterKits(payload: RegisterStagePayload): Record<stri
         const reconciled = reconcileCylinder9Kit(candidate);
         if (reconciled) {
             const plate=payload.plates[reconciled.register.plateKey];
-            kits[sku] = localRound78Tubes(localEmpireBareGlass(localTasselMedia(reconciled), plate), plate, payload.components);
+            kits[sku] = localCopperCaps(localDiva46Tubes(localRound78Tubes(localEmpireBareGlass(localTasselMedia(reconciled), plate), plate, payload.components), plate, payload.components), payload.components);
         }
     }
     return kits;

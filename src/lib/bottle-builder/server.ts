@@ -34,7 +34,7 @@ const KIT_BATCH = 50;
 const FAMILY_CACHE_SECONDS = 60 * 60;
 // Keep the approved local review assets out of existing cached hosted kits.
 // Production cache identity and production imagery stay unchanged.
-const localMediaCache = process.env.NODE_ENV === "development" ? ["local-media-round78-source-v9", localMediaBaselineCacheKey()] : [];
+const localMediaCache = process.env.NODE_ENV === "development" ? ["local-media-diva46-copper-v11", localMediaBaselineCacheKey()] : [];
 
 /** CDN policy for the builder's JSON routes: fresh for a while, then served
  * stale while one background request refreshes it, so an expiry never makes a
