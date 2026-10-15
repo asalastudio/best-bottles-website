@@ -16,8 +16,9 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent } from "react";
 import styles from "./pdp.module.css";
 import PdpKitPartImage from "./PdpKitPartImage";
+import { sourceTubeMaterialFilter } from "@/lib/register/source-tube-material";
 import PdpKitStackImage from "./PdpKitStackImage";
-import { displayImageUrl } from "@/lib/products/optimizable-image";
+import { displayImageUrl, isOptimizableImageUrl } from "@/lib/products/optimizable-image";
 import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/products/register-image";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
@@ -28,6 +29,7 @@ import {
     bodyPart,
     closureParts,
     stageLayout,
+    stageViewLabel,
     type GlassFrame,
     type KitLike,
     type StageContext,
@@ -189,11 +191,11 @@ export default function PdpStage({
                                 className={styles.viewButton}
                                 aria-pressed={view === option.id}
                                 disabled={!enabled}
-                                title={enabled ? undefined : "Layered view not yet available"}
+                                title={enabled ? undefined : !layout ? "Additional views not yet available" : availableViews.includes("sidecar") ? "Exploded view not available for this closure" : "This closure is shown assembled"}
                                 onClick={() => onViewChange(option.id)}
                                 data-testid={`pdp-view-${option.id}`}
                             >
-                                {option.label}
+                                {stageViewLabel(option.id, kit)}
                             </button>
                         );
                     })}
@@ -245,7 +247,6 @@ export default function PdpStage({
                 onPointerCancel={() => { pressRef.current = null; }}
             >
                 <div className={styles.stageGrid} data-on={layout?.grid ? "true" : "false"} aria-hidden />
-                <div className={styles.stageBaseline} data-on={layout ? (layout.baseline ? "true" : "false") : "true"} aria-hidden />
                 <div
                     className={styles.stageZoom}
                     data-testid="pdp-stage-zoom"
@@ -285,7 +286,8 @@ export default function PdpStage({
                                         key={part.key}
                                         className={styles.stagePart}
                                         data-slot={part.slot}
-                                        style={{ transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex }}
+                                        style={{ transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex,
+                                            opacity: part.throughGlass?.opacity, mixBlendMode: part.throughGlass?.blendMode }}
                                     >
                                         {/* eslint-disable-next-line @next/next/no-img-element */}
                                         <img
@@ -298,7 +300,9 @@ export default function PdpStage({
                                                 position: "absolute", display: "block", maxWidth: "none",
                                                 left: `${part.box.leftPct}%`, top: `${part.box.topPct}%`,
                                                 width: `${part.box.widthPct}%`, height: `${part.box.heightPct}%`,
-                                                ...(part.clipBottomPct ? { clipPath: `inset(0 0 ${part.clipBottomPct}% 0)` } : {}),
+                                                filter: sourceTubeMaterialFilter(part.url, view),
+                                                ...(part.throughGlass ? { clipPath: part.throughGlass.clipPath }
+                                                    : part.clipBottomPct ? { clipPath: `inset(0 0 ${part.clipBottomPct}% 0)` } : {}),
                                             }}
                                         />
                                     </span>
@@ -328,7 +332,12 @@ export default function PdpStage({
                             alt={showingBareBody ? `${fallbackAlt}, uncapped bottle` : fallbackAlt}
                             decoding="async"
                             onError={() => {
-                                if (!rawUrls.has(fallbackImageUrl) && markRegisterOptimizerUnavailable(fallbackImageUrl)) showRaw(fallbackImageUrl);
+                                if (!rawUrls.has(fallbackImageUrl) && isOptimizableImageUrl(fallbackImageUrl)) {
+                                    // Shopify and local photos also pass through the optimizer.
+                                    // Try their original URL once before rejecting this exact image.
+                                    markRegisterOptimizerUnavailable(fallbackImageUrl);
+                                    showRaw(fallbackImageUrl);
+                                }
                                 else setFailedFallbackUrls((current) => new Set(current).add(fallbackImageUrl));
                             }}
                         />

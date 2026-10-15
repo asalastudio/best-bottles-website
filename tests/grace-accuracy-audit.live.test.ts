@@ -13,7 +13,8 @@
  * Run:
  *   GRACE_LIVE_AUDIT=1 npx vitest run tests/grace-accuracy-audit.live.test.ts
  */
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
+vi.mock("server-only", () => ({}));
 import { writeFileSync, mkdirSync } from "node:fs";
 import { GRACE_REALTIME_INSTRUCTIONS } from "../src/lib/grace/realtimeInstructions";
 import { GRACE_OPENAI_TOOL_SPECS } from "../src/lib/knowledge/toolSchemas";

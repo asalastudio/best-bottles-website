@@ -32,6 +32,7 @@ import {
 } from "@/lib/products/pdp-stage-frame";
 import { allowsExplodedClosure, hangsBesideGlass, requiresAssembledClosure } from "@/lib/products/closure-presentation";
 import { placeStageBackdrop, stageBackdropFor, type StageBackdropPlacement } from "./stage-backdrops";
+import { throughGlassAppearance, type ThroughGlass } from '@/lib/register/through-glass';
 
 export type StageView = "sidecar" | "capon" | "exploded";
 
@@ -44,6 +45,7 @@ export const STAGE_VIEWS: ReadonlyArray<{ id: StageView; label: string }> = [
 export type PartBox = { x: number; y: number; width: number; height: number };
 
 export type KitPartLike = {
+    throughGlass?: ThroughGlass;
     slot: string;
     zOrder: number;
     explodeIndex: number;
@@ -76,6 +78,7 @@ export type KitLike = {
 };
 
 export type StagePart = {
+    throughGlass?: NonNullable<ReturnType<typeof throughGlassAppearance>>;
     key: string;
     slot: string;
     url: string;
@@ -133,11 +136,19 @@ export type StageContext = {
 
 /** Which views the stage can honestly show for this SKU. */
 export function availableViews(kit: KitLike | null | undefined, context: StageContext): StageView[] {
-    const views: StageView[] = ["sidecar"];
-    if (!kit?.parts?.length) return views;
-    views.push("capon");
+    if (!kit?.parts?.length) return ["sidecar"];
+    // A dropper's photographed pipette stays in the glass under the approved
+    // assembled-top policy. SIDECAR would render the identical assembled stack.
+    if (requiresAssembledClosure(context.applicator, context.websiteSku)) return ["capon"];
+    const views: StageView[] = ["sidecar", "capon"];
     if (allowsExplodedClosure(context.applicator, context.family, context.websiteSku)) views.push("exploded");
     return views;
+}
+
+/** A flat fallback photograph has no detached-cap view. */
+export function stageViewLabel(view: StageView, kit: KitLike | null | undefined): string {
+    if (view === "sidecar" && !kit?.parts?.length) return "PHOTO";
+    return STAGE_VIEWS.find((option) => option.id === view)!.label;
 }
 
 /** Sidecar collapses to the assembled stack when the closure must stay on (droppers, reducers, bulb sprayers). */
@@ -291,12 +302,14 @@ export function stageLayout(
 
     const parts: StagePart[] = sorted.map((part, index) => {
         const offset = offsets.get(part) ?? { dx: 0, dy: 0 };
+        const throughGlass = throughGlassAppearance(part, view);
         let clipBottomPct: number | undefined;
         if (part.box && BEHIND_GLASS_SLOTS.has(part.slot)) {
             const over = part.box.y + part.box.height + offset.dy - kit.anchors.baselineY;
             if (over > 0.5) clipBottomPct = Math.min(100, (over / part.box.height) * 100);
         }
         return {
+            ...(throughGlass ? { throughGlass } : {}),
             key: `${part.slot}-${index}`,
             slot: part.slot,
             url: part.image.url,

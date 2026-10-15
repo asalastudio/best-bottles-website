@@ -32,3 +32,6 @@ dist/
 
 # Preserved generation sources and local review artifacts are not storefront assets.
 output/
+
+# Local artwork candidates require a separate approval and release.
+public/local-media/

@@ -1,0 +1,77 @@
+{
+  "snapshotCapturedAt": "2026-10-14T20:15:40.028Z",
+  "rows": [
+    {
+      "websiteSku": "GBDiva46SpryMtGl",
+      "color": "Clear",
+      "capColor": "Matte Gold",
+      "productGroupSlug": "diva-46ml-clear-18-415-perfumespray"
+    },
+    {
+      "websiteSku": "GBDiva46SpryShnGl",
+      "color": "Clear",
+      "capColor": "Shiny Gold",
+      "productGroupSlug": "diva-46ml-clear-18-415-perfumespray"
+    },
+    {
+      "websiteSku": "GBDiva46SpryShnBlk",
+      "color": "Clear",
+      "capColor": "Shiny Black",
+      "productGroupSlug": "diva-46ml-clear-18-415-perfumespray"
+    },
+    {
+      "websiteSku": "GBDiva46SpryMtSl",
+      "color": "Clear",
+      "capColor": "Matte Silver",
+      "productGroupSlug": "diva-46ml-clear-18-415-perfumespray"
+    },
+    {
+      "websiteSku": "GBDiva46SpryShnSl",
+      "color": "Clear",
+      "capColor": "Shiny Silver",
+      "productGroupSlug": "diva-46ml-clear-18-415-perfumespray"
+    },
+    {
+      "websiteSku": "GBDivaFrst46SpryMtGl",
+      "color": "Frosted",
+      "capColor": "Clear",
+      "productGroupSlug": "diva-46ml-frosted-18-415-perfumespray"
+    },
+    {
+      "websiteSku": "GBDivaFrst46SpryShnGl",
+      "color": "Frosted",
+      "capColor": "Clear",
+      "productGroupSlug": "diva-46ml-frosted-18-415-perfumespray"
+    },
+    {
+      "websiteSku": "GBDivaFrst46SpryShnBlk",
+      "color": "Frosted",
+      "capColor": "Clear",
+      "productGroupSlug": "diva-46ml-frosted-18-415-perfumespray"
+    },
+    {
+      "websiteSku": "GBDivaFrst46SpryMtSl",
+      "color": "Frosted",
+      "capColor": "Clear",
+      "productGroupSlug": "diva-46ml-frosted-18-415-perfumespray"
+    },
+    {
+      "websiteSku": "GBDivaFrst46SpryShnSl",
+      "color": "Frosted",
+      "capColor": "Clear",
+      "productGroupSlug": "diva-46ml-frosted-18-415-perfumespray"
+    },
+    {
+      "websiteSku": "GBDiva46SpryCu",
+      "color": "Clear",
+      "capColor": "Copper",
+      "productGroupSlug": "diva-46ml-clear-18-415-perfumespray"
+    },
+    {
+      "websiteSku": "GBDivaFrst46SpryCu",
+      "color": "Frosted",
+      "capColor": "Clear",
+      "productGroupSlug": "diva-46ml-frosted-18-415-perfumespray"
+    }
+  ]
+}

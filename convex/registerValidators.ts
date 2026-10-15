@@ -22,7 +22,7 @@ export const registerAssetV = v.object({
 export const registerSlotV = v.union(
     v.literal("body"), v.literal("fitment"), v.literal("roller"), v.literal("cap"), v.literal("overcap"),
     v.literal("sprayer"), v.literal("pump"), v.literal("diptube"), v.literal("collar"), v.literal("bulb"),
-    v.literal("tassel"), v.literal("reducer"), v.literal("pipette"),
+    v.literal("tassel"), v.literal("reducer"), v.literal("pipette"), v.literal("ring"),
 );
 
 export const confidenceV = v.union(v.literal("high"), v.literal("medium"), v.literal("low"));

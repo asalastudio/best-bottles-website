@@ -10,7 +10,8 @@
  *   GRACE_LIVE_BATTERY=1 npx vitest run tests/grace-navigation-battery.live.test.ts
  * (requires OPENAI_API_KEY and NEXT_PUBLIC_CONVEX_URL in the environment)
  */
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
+vi.mock("server-only", () => ({}));
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../convex/_generated/api";
 import { GRACE_REALTIME_INSTRUCTIONS } from "../src/lib/grace/realtimeInstructions";

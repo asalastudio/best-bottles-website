@@ -266,20 +266,6 @@
     opacity: 1;
 }
 
-.stageBaseline {
-    position: absolute;
-    left: 40px;
-    right: 40px;
-    bottom: 38px;
-    border-top: 1px solid var(--pdp-baseline);
-    opacity: 1;
-    transition: opacity .4s;
-}
-
-.stageBaseline[data-on="false"] {
-    opacity: 0;
-}
-
 /* The 10:11 plate canvas, centred in whatever box the stage gives it. */
 .stageCanvasHost {
     position: absolute;
@@ -1416,12 +1402,6 @@
         margin-left: 0;
     }
 
-    .stageBaseline {
-        left: 24px;
-        right: 24px;
-        bottom: 30px;
-    }
-
     .callout {
         right: 10px;
         gap: 6px;
@@ -1897,7 +1877,6 @@
     .stageFrame,
     .stagePart,
     .stageGrid,
-    .stageBaseline,
     .callouts {
         transition: none;
     }

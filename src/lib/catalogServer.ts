@@ -23,6 +23,7 @@ import {
 } from "@/lib/catalogFilters";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { isVisibleCatalogGroup, isMissingHeroSource } from "@/lib/products/catalog-listing-visibility";
+import { localMediaBaseline } from "@/lib/register/local-media-baseline";
 
 export type CatalogSearchArgs = {
     filters: Partial<CatalogFilters>;
@@ -177,6 +178,13 @@ export function normalizeCatalogSearchArgs(args: CatalogSearchArgs): CatalogSear
 
 export async function searchCatalogServer(args: CatalogSearchArgs): Promise<CatalogSearchResultShape> {
     const normalizedArgs = normalizeCatalogSearchArgs(args);
+    const baseline = localMediaBaseline()?.snapshot;
+    // An exact family filter can be replayed without mixing catalogue environments.
+    // Global/multi-family browsing retains its ordinary development backend.
+    if (baseline && normalizedArgs.filters.families.length === 1 && normalizedArgs.filters.families[0] === baseline.family) {
+        if (!baseline.catalog) throw new Error('Refresh the local media snapshot with catalogue records before reviewing this family.');
+        return buildCatalogSearchResult({ ...baseline.catalog, ...normalizedArgs });
+    }
     const convex = getCatalogConvexClient();
     const { shopCollection, ...backendFilters } = normalizedArgs.filters;
     // Shop collections and product types that span several stored categories
