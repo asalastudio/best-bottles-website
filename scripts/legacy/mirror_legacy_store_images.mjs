@@ -23,6 +23,7 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const PUBLIC_DIR = path.join(ROOT, "public");
+const STORE_DIR = path.join(PUBLIC_DIR, "images", "store");
 const MANIFEST = path.join(ROOT, "docs/legacy-store-images/manifest.json");
 const URL_PATTERN = /https?:\/\/(?:www\.)?bestbottles\.com\/images\/store\/[^"'\s\\)]*\.(?:gif|png|jpe?g|webp)/gi;
 
@@ -39,6 +40,11 @@ function canonical(url) {
     return { url: `https://www.bestbottles.com${pathname}`, path: decodeURIComponent(pathname) };
 }
 
+/** Encoded "../" survives URL parsing and becomes real traversal once decoded. */
+function insideStore(p) {
+    return path.resolve(PUBLIC_DIR, `.${p}`).startsWith(STORE_DIR + path.sep);
+}
+
 const inputs = process.argv.slice(2);
 if (inputs.length === 0) {
     console.error("Pass at least one file to scan for legacy image URLs.");
@@ -46,25 +52,37 @@ if (inputs.length === 0) {
 }
 
 const previous = existsSync(MANIFEST) ? JSON.parse(readFileSync(MANIFEST, "utf8")) : { files: [] };
-const wanted = new Map(previous.files.map((f) => [f.path, f.url]));
+const recorded = new Map(previous.files.map((f) => [f.path, f]));
+const failures = [];
+const wanted = new Map();
+const want = (p, url) => {
+    if (insideStore(p)) wanted.set(p, url);
+    else failures.push(`outside public/images/store: ${p}`);
+};
+for (const f of previous.files) want(f.path, f.url);
 for (const file of inputs) {
     for (const match of readFileSync(file, "utf8").matchAll(URL_PATTERN)) {
         const { url, path: p } = canonical(match[0]);
-        wanted.set(p, url);
+        want(p, url);
     }
 }
 
 const files = [];
-const failures = [];
 for (const [p, url] of [...wanted].sort(([a], [b]) => a.localeCompare(b))) {
-    const dest = path.join(PUBLIC_DIR, p);
+    const dest = path.resolve(PUBLIC_DIR, `.${p}`);
     let bytes;
     if (existsSync(dest)) {
         bytes = readFileSync(dest);
+        const prior = recorded.get(p);
+        if (prior && createHash("sha256").update(bytes).digest("hex") !== prior.sha256) {
+            failures.push(`changed since it was recorded: ${p}`);
+            files.push(prior);
+            continue;
+        }
     } else {
         const res = await fetch(url);
         if (!res.ok) {
-            failures.push(`${res.status} ${url}`);
+            failures.push(`HTTP ${res.status}: ${url}`);
             continue;
         }
         bytes = Buffer.from(await res.arrayBuffer());
@@ -80,11 +98,12 @@ for (const [p, url] of [...wanted].sort(([a], [b]) => a.localeCompare(b))) {
     });
 }
 
+if (failures.length) {
+    // Keep the previous manifest so a later run still knows every recorded file.
+    console.error(`${failures.length} problem(s); manifest left unchanged:\n${failures.join("\n")}`);
+    process.exit(1);
+}
 mkdirSync(path.dirname(MANIFEST), { recursive: true });
 writeFileSync(MANIFEST, `${JSON.stringify({ source: "https://www.bestbottles.com", files }, null, 1)}\n`);
 const total = files.reduce((n, f) => n + f.bytes, 0);
 console.log(`${files.length} files mirrored (${(total / 1e6).toFixed(1)} MB); manifest: ${path.relative(ROOT, MANIFEST)}`);
-if (failures.length) {
-    console.error(`${failures.length} could not be downloaded:\n${failures.join("\n")}`);
-    process.exit(1);
-}
