@@ -20,6 +20,7 @@ import {
     statusLine,
     techSheetRows,
     unitPriceAt,
+    chargedUnitPriceAt,
     variantTitle,
 } from "@/lib/products/pdp-redesign/model";
 
@@ -193,6 +194,17 @@ describe("copy", () => {
         expect(unitPriceAt(VARIANTS[0], 12)).toBe(0.81);
         expect(unitPriceAt(VARIANTS[0], 600)).toBe(0.72);
         expect(unitPriceAt(VARIANTS[4], 500)).toBe(0.76);
+    });
+
+    it("charges the 1–11 rate at every quantity while volume rates are quoted", () => {
+        expect(chargedUnitPriceAt(VARIANTS[0], 1)).toBe(0.85);
+        expect(chargedUnitPriceAt(VARIANTS[0], 12)).toBe(0.85);
+        expect(chargedUnitPriceAt(VARIANTS[0], 600)).toBe(0.85);
+        expect(chargedUnitPriceAt(null, 12)).toBeNull();
+        // The 9 Oct case: clear Elegant ×60 at $0.88, 12+ quoted at $0.84. The page totals $52.80, as the cart does.
+        const elegant = { ...VARIANTS[0], webPrice1pc: 0.88, webPrice12pc: 0.84, priceTiers: [{ minQty: 1, unitPrice: 0.88 }, { minQty: 12, unitPrice: 0.84 }] };
+        expect(unitPriceAt(elegant, 60)).toBe(0.84);
+        expect(Math.round((chargedUnitPriceAt(elegant, 60) ?? 0) * 60 * 100) / 100).toBe(52.8);
     });
 });
 

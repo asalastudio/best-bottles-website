@@ -179,6 +179,10 @@ describe("Grace 100-point hardening contracts", () => {
     const proposeBlock = provider.slice(proposeStart, navigateStart);
 
     expect(proposeBlock).toContain('type: "proposeCartAdd"');
+    // The card totals at the catalog's online unit price, not a rate the model carried over.
+    expect(proposeBlock).toContain('callGraceServerTool<ProductCard | null>("getProductBySku", { graceSku: p.graceSku })');
+    expect(proposeBlock).toContain("data.result?.onlineUnitPrice ?? data.result?.webPrice1pc");
+    expect(proposeBlock).toContain("unitPrice: online, webPrice1pc: online, webPrice10pc: null, webPrice12pc: null");
     expect(proposeBlock).toContain("analytics.graceCartProposalShown");
     expect(proposeBlock).toContain("Math.max(1, Math.floor(Number(p.quantity) || 1))");
     expect(proposeBlock).not.toContain("addToCart(");

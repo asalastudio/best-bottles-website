@@ -1,4 +1,5 @@
 import { canonicalGlassColor, detectCapFinish, detectCanonicalGlassColor, detectCatalogFamily } from "../src/lib/catalogFilters";
+import { GRACE_ONLINE_PRICING_RULE, forGraceModel, rowsCarryPrices, type QuoteOnlyVolumeRate } from "../src/lib/grace/onlinePricing";
 /**
  * Grace AI — Search utilities for catalog queries.
  *
@@ -459,6 +460,11 @@ export function buildSearchCatalogToolResult(
         neckThreadSize?: string | null;
         capColor?: string | null;
         dataQualityFlags?: CanonicalProductDataQualityFlag[] | string[] | null;
+        webPrice1pc?: number | null;
+        webPrice10pc?: number | null;
+        webPrice12pc?: number | null;
+        onlineUnitPrice?: number | null;
+        quoteOnlyVolumeRates?: QuoteOnlyVolumeRate[];
     }>
 ): string {
     const warnings: string[] = [];
@@ -646,9 +652,14 @@ export function buildSearchCatalogToolResult(
         }
     }
 
+    // The model reads every row's price as onlineUnitPrice + quoteOnlyVolumeRates
+    // (src/lib/grace/onlinePricing.ts): no webPrice10pc/webPrice12pc column for it
+    // to multiply by a quantity and present as an online total.
+    if (rowsCarryPrices(data)) warnings.unshift(GRACE_ONLINE_PRICING_RULE);
+    const rows = JSON.stringify(data.map(forGraceModel), null, 2);
     return warnings.length > 0
-        ? `${warnings.join("\n")}\n\nSEARCH RESULTS:\n${JSON.stringify(data, null, 2)}`
-        : JSON.stringify(data, null, 2);
+        ? `${warnings.join("\n")}\n\nSEARCH RESULTS:\n${rows}`
+        : rows;
 }
 
 export function buildBottleComponentsToolResult(data: {
@@ -656,13 +667,26 @@ export function buildBottleComponentsToolResult(data: {
         itemName: string;
         neckThreadSize?: string | null;
         category?: string | null;
+        webPrice1pc?: number | null;
+        webPrice10pc?: number | null;
+        webPrice12pc?: number | null;
     };
     componentTypes: string[];
     totalComponents: number;
     components: Record<string, unknown>;
 }): string {
     const thread = data.bottle.neckThreadSize ?? "unknown";
+    // Bottle and component prices reach the model as onlineUnitPrice +
+    // quoteOnlyVolumeRates, never as webPrice10pc/webPrice12pc columns.
+    const components = Object.fromEntries(Object.entries(data.components).map(([type, items]) => [
+        type,
+        Array.isArray(items)
+            ? items.map((item) => (item && typeof item === "object" ? forGraceModel(item as Record<string, unknown>) : item))
+            : items,
+    ]));
+    const forModel = { ...data, bottle: forGraceModel(data.bottle), components };
     return [
+        GRACE_ONLINE_PRICING_RULE,
         "COMPATIBILITY RULE: Physical fit is determined by matching NECK THREAD (finish). The bottle's neck thread size is the primary key — use it when explaining what closures or applicators fit.",
         `BOTTLE NECK THREAD: ${thread}. State this specification when the customer asks what fits. If thread is unknown or missing, say so and rely on COMPONENT DATA only.`,
         "COMPONENT DATA lists what we catalog for this bottle after fitment rules; for thread-only questions you may also use checkCompatibility with this thread size.",
@@ -672,6 +696,6 @@ export function buildBottleComponentsToolResult(data: {
         `TOTAL COMPATIBLE COMPONENTS: ${data.totalComponents}`,
         "",
         "COMPONENT DATA:",
-        JSON.stringify(data, null, 2),
+        JSON.stringify(forModel, null, 2),
     ].join("\n");
 }

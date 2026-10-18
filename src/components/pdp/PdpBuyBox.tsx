@@ -4,10 +4,12 @@
  * The buy box (design 3a §4.4): selection row, roller toggle, Set of menu
  * with the quantity stepper, Add to Cart, and the case link. A set is one
  * bottle with its closure (and roller ball): ten sets are ten bottles, ten
- * balls, ten caps (Jordan 2026-09-29), so prices read per set. Pricing shown
- * is the active break's unit rate (the same rule as the catalog card); whether
- * checkout bills the break is `volumePricing.ts`'s concern. The roller choice
- * shows no price of its own: the set price above the button already follows it.
+ * balls, ten caps (Jordan 2026-09-29), so prices read per set. The Set of
+ * menu lists every break's rate; a break checkout does not bill is marked
+ * "on quote". `unitPrice` and `lineTotal` are what the cart will charge (the
+ * 1–11 rate at any quantity while 12+ is quoted, Jordan 2026-10-17), so the
+ * Add to cart total always matches the cart. The roller choice shows no price
+ * of its own: the set price above the button already follows it.
  *
  * On mobile the Add to Cart button lives in the sticky bar (option 4a) and
  * the Set of menu opens as a bottom sheet; both are stylesheet concerns.
@@ -67,6 +69,9 @@ export default function PdpBuyBox({
     const activeIndex = tiers.reduce((acc, tier, index) => (qty >= tier.minQty ? index : acc), -1);
     const activeTier = activeIndex >= 0 ? tiers[activeIndex] : null;
     const packLabel = activeTier ? `${activeTier.minQty.toLocaleString("en-US")}${activeTier.maxQty == null ? "+" : ""}` : "1";
+    // The break's own rate, marked when only a quote confirms it; the button total below stays the cart's.
+    const packRate = activeTier?.unitPrice ?? unitPrice;
+    const packOnQuote = activeTier != null && !activeTier.appliesAtCheckout;
     const { error } = parseCatalogQuantity(qtyText);
 
     const commit = (next: number, source: "stepper" | "input" | "tier" | "case") => {
@@ -158,7 +163,7 @@ export default function PdpBuyBox({
                         onKeyDown={(event) => { if (event.key === "ArrowDown" || event.key === "ArrowUp") { event.preventDefault(); openMenu(); } }}
                         data-testid="pdp-pack-toggle"
                     >
-                        <span>Set of <b>{packLabel}</b>{unitPrice != null ? ` · ${formatPrice(unitPrice)}/set` : ""}</span>
+                        <span>Set of <b>{packLabel}</b>{packRate != null ? ` · ${formatPrice(packRate)}/set${packOnQuote ? " on quote" : ""}` : ""}</span>
                         <span className={styles.packChevron} aria-hidden>{menuOpen ? "▴" : "▾"}</span>
                     </button>
                     {menuOpen && (
@@ -177,7 +182,7 @@ export default function PdpBuyBox({
                                         data-tier-min={tier.minQty}
                                     >
                                         <span>{formatVolumeQtyRange(tier.minQty, tier.maxQty)} sets</span>
-                                        <span><b>{formatPrice(tier.unitPrice)}</b>/set{tier.savePct > 0 ? <span className={styles.packSave}>{tier.savePct}% off</span> : null}</span>
+                                        <span><b>{formatPrice(tier.unitPrice)}</b>/set{tier.appliesAtCheckout ? "" : " on quote"}{tier.savePct > 0 ? <span className={styles.packSave}>{tier.savePct}% off</span> : null}</span>
                                     </button>
                                 ))}
                             </div>
