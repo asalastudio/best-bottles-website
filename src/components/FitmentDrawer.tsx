@@ -61,7 +61,7 @@ export default function FitmentDrawer({ isOpen, onClose, bottleSku, quantity = 1
         <>
             {/* Backdrop */}
             <div
-                className="fixed inset-0 z-40 transition-opacity"
+                className="bb-blur fixed inset-0 z-40 transition-opacity"
                 style={{ background: "rgba(29, 29, 31, 0.45)", backdropFilter: "blur(4px)" }}
                 onClick={onClose}
                 aria-hidden="true"
@@ -69,7 +69,7 @@ export default function FitmentDrawer({ isOpen, onClose, bottleSku, quantity = 1
 
             {/* Drawer */}
             <div
-                className="fixed top-0 right-0 h-full w-full max-w-[420px] md:max-w-[760px] shadow-2xl z-50 transform transition-transform duration-300 ease-in-out border-l flex flex-col"
+                className="bb-blur fixed top-0 right-0 h-full w-full max-w-[420px] md:max-w-[760px] shadow-2xl z-50 transform transition-transform duration-300 ease-in-out border-l flex flex-col"
                 style={{
                     background: "rgba(250, 248, 245, 0.95)", // Matches CartDrawer (linen/bone mix)
                     backdropFilter: "blur(28px) saturate(180%)",

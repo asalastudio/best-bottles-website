@@ -17,7 +17,13 @@ it("waits for auth and reconciles on route, user, organization and logout change
     vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
     const container = document.createElement("div");
     const root = createRoot(container);
-    const render = () => act(async () => root.render(<AnalyticsProvider withClerk />));
+    const render = async () => {
+        await act(async () => { root.render(<AnalyticsProvider withClerk />); });
+        // Clerk identity is a separate chunk; wait until that bridge has mounted.
+        for (let i = 0; i < 20 && analytics.syncIdentity.mock.calls.length === 0; i++) {
+            await act(async () => { await new Promise((resolve) => setTimeout(resolve, 0)); });
+        }
+    };
     try {
         await render();
         expect(analytics.syncIdentity).toHaveBeenLastCalledWith(null);

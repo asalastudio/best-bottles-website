@@ -115,6 +115,9 @@ describe("focused PDP mobile purchase surface", () => {
         expect(container.querySelector('img[src="https://example.test/recovered-off.webp"]')).toBeNull();
         const modeButton = (label: string) => [...container.querySelectorAll<HTMLButtonElement>('[aria-label="Product view"] button')].find(b => b.textContent === label)!;
         await act(async () => { modeButton("Exploded").click(); });
+        for (let i = 0; i < 20 && !container.querySelector('img[src="https://example.test/old-kit.webp"]'); i++) {
+            await act(async () => { await new Promise((resolve) => setTimeout(resolve, 0)); });
+        }
         expect(container.querySelector('img[src="https://example.test/old-kit.webp"]')).not.toBeNull();
         expect(container.querySelector('img[src="https://example.test/capped.webp"]')).toBeNull();
         const returnButton = [...container.querySelectorAll<HTMLButtonElement>("button")].find(b => b.textContent === "Back to photo");

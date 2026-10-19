@@ -32,6 +32,7 @@ export default function PdpGraceTrigger() {
 
     return (
         <button
+            data-grace-open=""
             onClick={handleClick}
             className="group flex items-center gap-2 text-slate hover:text-obsidian transition-colors duration-200"
             aria-label="Talk with Grace — fitment and pricing help"

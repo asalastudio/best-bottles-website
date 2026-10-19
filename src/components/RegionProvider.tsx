@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import {
     DEFAULT_MARKET_CODE,
     REGION_COOKIE,
@@ -28,6 +28,15 @@ const COOKIE_MAX_AGE = 60 * 60 * 24 * 365;
 
 export function RegionProvider({ children, initialMarketCode }: { children: ReactNode; initialMarketCode?: string | null }) {
     const [code, setCode] = useState<MarketCode>(isMarketCode(initialMarketCode) ? initialMarketCode : DEFAULT_MARKET_CODE);
+
+    // The root layout no longer reads cookies, so a returning buyer's market
+    // is applied after the first paint. USD is the server HTML.
+    useEffect(() => {
+        if (isMarketCode(initialMarketCode)) return;
+        const match = document.cookie.match(new RegExp(`(?:^|; )${REGION_COOKIE}=([^;]*)`));
+        const value = match?.[1] ? decodeURIComponent(match[1]) : null;
+        if (isMarketCode(value)) setCode(value); // eslint-disable-line react-hooks/set-state-in-effect -- cookie is not available during SSR
+    }, [initialMarketCode]);
 
     const setMarket = useCallback((next: MarketCode) => {
         setCode(next);

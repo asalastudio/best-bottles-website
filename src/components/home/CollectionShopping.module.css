@@ -402,6 +402,8 @@
   .hero[data-scene="diva-circle-stone"] .stoneImage {
     height:100%;object-fit:cover;object-position:right center;
     transform:translateY(var(--stone-offset));
+    opacity:1;
+    animation:none;
   }
   .hero[data-scene="diva-circle-stone"] .heroCopy {
     position:relative;top:auto;left:auto;transform:none;order:0;
@@ -412,4 +414,13 @@
   .hero[data-scene="diva-circle-stone"] .buttons {flex-direction:row;gap:10px}
   .hero[data-scene="diva-circle-stone"] .primary,
   .hero[data-scene="diva-circle-stone"] .secondary {font-size:11px;padding:12px 16px;min-height:44px}
+}
+
+.heroArtMobile { display: none; }
+@media (max-width: 640px) {
+  .heroArtDesktop { display: none; }
+  .heroArtMobile { display: block; }
+}
+@media (max-width: 899px) {
+  .megaMenu { box-shadow: none; }
 }

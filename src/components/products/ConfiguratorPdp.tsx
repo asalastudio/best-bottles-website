@@ -42,8 +42,6 @@ import { pdpStageFrame, pdpStageTransformCss } from "@/lib/products/pdp-stage-fr
 import { hasRegisterBodyPlate } from "@/lib/products/register-stage-bone";
 import { isReconciledLocalSkuAssetUrl } from "@/lib/products/reconciled-sku-images";
 import { isAssembledOneMlVialImage } from "@/lib/products/one-ml-vial-applicators";
-
-import { useGLTF } from "@react-three/drei";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
 import FocusedPdpLayout from "./FocusedPdpLayout";
 import type { LocalKitPilot } from "@/lib/products/local-kit-pilot";
@@ -79,6 +77,7 @@ const COMPONENT_FAMILY: Partial<Record<ClosureBase, string>> = {
   // (18-415CpRdcr…) are published in the cap-closure family
   reducer: "cap-closure",
 };
+const ExplodedViewer = dynamic(() => import("./ExplodedViewer"), { ssr: false });
 const Bottle3DViewer = dynamic(() => import("./Bottle3DViewer"), {
   ssr: false,
   loading: () => (
@@ -365,9 +364,14 @@ export default function ConfiguratorPdp({
       const b = fam.bodyForGlass?.[g];
       if (b) ids.add(b);
     }
-    for (const id of ids) {
-      try { useGLTF.preload(`/models/bodies-thickness/${id}.glb`); } catch {}
-    }
+    let cancelled = false;
+    void import("@react-three/drei").then(({ useGLTF }) => {
+      if (cancelled) return;
+      for (const id of ids) {
+        try { useGLTF.preload(`/models/bodies-thickness/${id}.glb`); } catch { /* missing body */ }
+      }
+    });
+    return () => { cancelled = true; };
   }, [fam]);
 
   const activeMeta = activeBase === "none" ? null : CLOSURE_META[activeBase] ?? null;
@@ -503,16 +507,16 @@ export default function ConfiguratorPdp({
           {/* the kit, stacked in z-order. Every part was written on the plate's
               own canvas, so they need no positioning here -- they line up by
               construction, which is what keeps the bottle still. */}
-          {showKitLayers && kitParts?.map((part) => (
+          {showKitLayers && exploded && kitParts ? (
+            <ExplodedViewer parts={kitParts} groupTitle={groupTitle} />
+          ) : showKitLayers && kitParts?.map((part) => (
             // eslint-disable-next-line @next/next/no-img-element
             <img key={part.slot} src={displayImageUrl(part.image.url)}
                  alt={part.slot === "body" ? `${groupTitle} bottle` : `${part.slot} — ${part.variantKey ?? ""}`}
                  width={part.image.width} height={part.image.height} decoding="async"
                  style={{
                    zIndex: part.zOrder,
-                   // offsets are plate pixels on a 1000x1100 canvas; the image IS the
-                   // canvas here, so a percentage of its own box is the same distance
-                   transform: exploded || (capOff && REMOVABLE_KIT_SLOTS.has(part.slot))
+                   transform: capOff && REMOVABLE_KIT_SLOTS.has(part.slot)
                      ? `translate(${(part.exploded.dx / 10).toFixed(2)}%, ${(part.exploded.dy / 11).toFixed(2)}%)`
                      : "translate(0, 0)",
                  }}

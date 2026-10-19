@@ -1,6 +1,7 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 import { NextResponse, type NextFetchEvent, type NextRequest } from "next/server";
 import { CLERK_ENABLED } from "@/lib/clerk";
+import { isClerkRoute } from "@/lib/clerkRoutes";
 import { LOCALE_HEADER, PATHNAME_HEADER } from "@/i18n/config";
 import { hasLocalePrefix, localizeHref } from "@/i18n/paths";
 import { localeAfterProxyPass, resolveLocale } from "@/i18n/resolveLocale";
@@ -88,7 +89,9 @@ export default async function proxy(req: NextRequest, event: NextFetchEvent) {
     requestHeaders.set(LOCALE_HEADER, locale);
     requestHeaders.set(PATHNAME_HEADER, originalPath);
 
-    const clerkRes = await clerk(req, event);
+    // Skip the Clerk handshake on storefront documents. Account, checkout, and
+    // auth API routes still run clerkMiddleware so auth() can resolve a session.
+    const clerkRes = CLERK_ENABLED && isClerkRoute(pathname) ? await clerk(req, event) : null;
     if (clerkRes && clerkRes.status >= 300 && clerkRes.status < 400) {
         return clerkRes;
     }

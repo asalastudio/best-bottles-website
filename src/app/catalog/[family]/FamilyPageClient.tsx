@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import "@/styles/route-catalog.css";
 import MobileFamilyCatalog from "@/components/catalog/MobileFamilyCatalog";
 import mobileStyles from "@/components/catalog/MobileFamilyCatalog.module.css";
 import Navbar from "@/components/Navbar";

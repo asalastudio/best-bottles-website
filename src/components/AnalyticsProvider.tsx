@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect } from "react";
-import { useAuth } from "@clerk/nextjs";
+import dynamic from "next/dynamic";
 import { useCart } from "@/components/CartProvider";
 import { usePathname } from "next/navigation";
 import { analytics } from "@/lib/analytics";
 import { mayRecordSession } from "@/lib/analytics/sessionReplayScope";
+
+const AnalyticsClerkBridge = dynamic(() => import("@/components/AnalyticsClerkBridge"));
 
 /**
  * The analytics token used to be a hardcoded Mixpanel key, which meant every
@@ -18,7 +20,7 @@ import { mayRecordSession } from "@/lib/analytics/sessionReplayScope";
  */
 const ANALYTICS_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY?.trim();
 
-function AnalyticsProviderBase({
+export function AnalyticsProviderBase({
   userId,
   isSignedIn,
   isLoaded,
@@ -41,9 +43,37 @@ function AnalyticsProviderBase({
 
   useEffect(() => {
     if (!ANALYTICS_KEY || !isLoaded) return;
-    void analytics.init(ANALYTICS_KEY).then(() => {
-      analytics.setSessionRecording(mayRecordSession(window.location.pathname));
-    });
+    let cancelled = false;
+    let idleId: number | undefined;
+    let timerId: number | undefined;
+
+    const start = () => {
+      if (cancelled) return;
+      const run = () => {
+        if (cancelled) return;
+        void analytics.init(ANALYTICS_KEY).then(() => {
+          if (!cancelled) analytics.setSessionRecording(mayRecordSession(window.location.pathname));
+        });
+      };
+      if (typeof window.requestIdleCallback === "function") {
+        idleId = window.requestIdleCallback(run, { timeout: 4000 });
+      } else {
+        timerId = window.setTimeout(run, 1);
+      }
+    };
+
+    if (document.readyState === "complete") {
+      start();
+    } else {
+      window.addEventListener("load", start, { once: true });
+    }
+
+    return () => {
+      cancelled = true;
+      window.removeEventListener("load", start);
+      if (idleId !== undefined) window.cancelIdleCallback(idleId);
+      if (timerId !== undefined) window.clearTimeout(timerId);
+    };
   }, [isLoaded]);
 
   useEffect(() => {
@@ -75,22 +105,9 @@ function AnalyticsProviderBase({
   return null;
 }
 
-function AnalyticsProviderWithClerk() {
-  const { userId, isSignedIn, isLoaded, orgId } = useAuth();
-
-  return (
-    <AnalyticsProviderBase
-      userId={userId ?? null}
-      isSignedIn={!!isSignedIn}
-      isLoaded={isLoaded}
-      organizationId={orgId ?? null}
-    />
-  );
-}
-
 export function AnalyticsProvider({ withClerk = false }: { withClerk?: boolean }) {
   if (withClerk) {
-    return <AnalyticsProviderWithClerk />;
+    return <AnalyticsClerkBridge />;
   }
 
   return <AnalyticsProviderBase userId={null} isSignedIn={false} isLoaded organizationId={null} />;

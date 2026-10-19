@@ -1,44 +1,33 @@
 import type { Metadata } from "next";
-import { getLocale } from "next-intl/server";
-import { HOMEPAGE_QUERY, type HomepageData } from "@/sanity/lib/queries";
-import { sanityFetch } from "@/sanity/lib/live";
-import { isSanityConfigured } from "@/sanity/lib/client";
+import { unstable_cache } from "next/cache";
+import { getHomepageData } from "@/sanity/lib/queries";
 import HomePage from "@/components/HomePage";
 import { getHomepageBrowse } from "@/lib/homepageBrowse.server";
-import SanityLiveVisualEditing from "@/components/SanityLiveVisualEditing";
-import { defaultLocale, isLocale, type AppLocale } from "@/i18n/config";
 import { buildHreflangAlternates } from "@/i18n/metadata";
+
+export const revalidate = 60;
+
+const getCachedHomepageContent = unstable_cache(
+    () => getHomepageData(),
+    ["homepage-sanity-v1"],
+    { revalidate: 60 },
+);
 
 // Self-referential canonical for the homepage. Kept here (not on the root
 // layout) so interior pages inherit no canonical — each public page sets its
 // own, and internal/noindex pages emit none instead of the homepage URL.
-export async function generateMetadata(): Promise<Metadata> {
-    const localeValue = await getLocale();
-    const locale: AppLocale = isLocale(localeValue) ? localeValue : defaultLocale;
-    const path = locale === "es" ? "/es" : "/";
+// English alternates only: the locale header would make this route dynamic.
+export function generateMetadata(): Metadata {
     return {
-        alternates: buildHreflangAlternates(path),
+        alternates: buildHreflangAlternates("/"),
     };
 }
 
 export default async function Page() {
-    // Live, draft-aware fetch: published content for visitors, draft content with
-    // click-to-edit overlays inside the Studio's Presentation tool.
     const browsePromise = getHomepageBrowse().catch(() => null);
-    let homepageData: HomepageData | null = null;
-    if (isSanityConfigured) {
-        try {
-            const { data } = await sanityFetch({ query: HOMEPAGE_QUERY });
-            homepageData = (data as HomepageData) ?? null;
-        } catch {
-            homepageData = null;
-        }
-    }
+    const homepageData = await getCachedHomepageContent().catch(() => null);
 
     return (
-        <>
-            <HomePage homepageData={homepageData} browseData={await browsePromise} />
-            <SanityLiveVisualEditing />
-        </>
+        <HomePage homepageData={homepageData} browseData={await browsePromise} />
     );
 }

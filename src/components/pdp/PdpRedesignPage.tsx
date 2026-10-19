@@ -13,7 +13,7 @@
  * cart's own view of this page's lines.
  */
 import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import LocaleLink from "@/components/LocaleLink";
 import Navbar from "@/components/Navbar";
 import { useCart } from "@/components/CartProvider";
@@ -32,7 +32,6 @@ import {
 import type { PlateRef } from "@/lib/paper-doll/plates";
 import type { ItemDescription } from "@/lib/products/item-description/resolve";
 import { getMaterialSwatchBackground, getMaterialSwatchStyle } from "@/lib/products/material-swatches";
-import { pdpFallbackMedia } from "@/lib/products/pdp-redesign/fallback-media";
 import { SITE_NAME } from "@/lib/seo";
 import { formatVolumeQtyRange, resolveQuotedUnitPrice } from "@/lib/volumePricing";
 import {
@@ -87,10 +86,26 @@ export type PdpRedesignPayload = {
     /** By frame key (register body, or one of its hanging tops): the bounds every SKU of the glass needs, on every page it sells on (src/lib/register/stage-envelopes.ts). */
     stageEnvelopes?: Record<string, StageBounds>;
     platesBySku: Record<string, PlateRef>;
+    /**
+     * Exact-SKU fallback photos, keyed by website SKU and Grace SKU.
+     * Resolved on the server so the client does not download the catalog hero table.
+     */
+    fallbackBySku: Record<string, { images: string[]; bodyImageUrl: string | null }>;
     /** Curated or composed copy, by website SKU. */
     descriptions: Record<string, ItemDescription>;
     collection: { band: CollectionBand; description: string } | null;
     familyHref: string;
+    /**
+     * Server-resolved query. Kept off useSearchParams so the stage image is in
+     * the first HTML instead of the root Suspense spinner.
+     */
+    initialSearch?: {
+        roller?: string | null;
+        cap?: string | null;
+        sku?: string | null;
+        qty?: string | null;
+        drawing?: string | null;
+    };
 };
 
 const ADDED_FLASH_MS = 1800;
@@ -119,22 +134,21 @@ function renameTab(text: string): void {
     document.title = text;
 }
 
-export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, fitmentKits = [], stageEnvelopes, platesBySku, descriptions, collection, familyHref }: PdpRedesignPayload) {
+export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, fitmentKits = [], stageEnvelopes, platesBySku, fallbackBySku, descriptions, collection, familyHref, initialSearch }: PdpRedesignPayload) {
     const router = useRouter();
     const pathname = usePathname();
-    const searchParams = useSearchParams();
     const { formatPrice } = useRegion();
     const { items: cartItems, addItems, removeItem } = useCart();
     const { openPanel: openGrace } = useGrace();
 
     const rollers = useMemo(() => rollerOptions(variants), [variants]);
     const [picks, setPicks] = useState<Picks>(() => derivePicks(variants, group, {
-        roller: searchParams.get("roller"),
-        cap: searchParams.get("cap"),
-        sku: searchParams.get("sku"),
+        roller: initialSearch?.roller ?? null,
+        cap: initialSearch?.cap ?? null,
+        sku: initialSearch?.sku ?? null,
     }));
     const [view, setView] = useState<StageView>("sidecar");
-    const [qty, setQty] = useState<number>(() => Math.max(1, Math.min(99_999, Number.parseInt(searchParams.get("qty") ?? "1", 10) || 1)));
+    const [qty, setQty] = useState<number>(() => Math.max(1, Math.min(99_999, Number.parseInt(initialSearch?.qty ?? "1", 10) || 1)));
     const [addedQty, setAddedQty] = useState<number | null>(null);
     const addedTimer = useRef<number | null>(null);
 
@@ -212,12 +226,31 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     // A `?sku=` pushed onto the same slug (Grace moving the customer to a sibling
     // variant) must change the picks; the state initialiser only ran once. This
     // is React's "adjust state when a prop changes" pattern, applied in render.
-    const requestedSku = searchParams.get("sku");
+    const requestedSku = initialSearch?.sku ?? null;
     const [appliedSku, setAppliedSku] = useState<string | null>(requestedSku);
     if (requestedSku && requestedSku !== appliedSku) {
         setAppliedSku(requestedSku);
         setPicks(derivePicks(variants, group, { sku: requestedSku, roller: null, cap: null }));
     }
+
+    // The server already applied ?sku= / ?roller= / ?cap= to the first HTML.
+    // This only catches a client-side URL change that did not rerender the page,
+    // and it skips the update when the pick already matches so the LCP image
+    // does not swap after paint.
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const sku = params.get("sku");
+        const roller = params.get("roller");
+        const cap = params.get("cap");
+        const qtyParam = params.get("qty");
+        if (qtyParam) {
+            const parsed = Number.parseInt(qtyParam, 10);
+            if (Number.isFinite(parsed)) setQty(Math.max(1, Math.min(99_999, parsed)));
+        }
+        if (!sku && !roller && !cap) return;
+        const next = derivePicks(variants, group, { sku, roller, cap });
+        setPicks((current) => (current.roller === next.roller && current.cap === next.cap ? current : next));
+    }, [variants, group]);
 
     // The URL carries the picks so every combination is shareable; native history so nothing refetches.
     useEffect(() => {
@@ -366,12 +399,9 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     const bodyKit = kit ?? kitFor(kitsBySku, { websiteSku: group.primaryWebsiteSku, graceSku: group.primaryGraceSku });
     const capKits = caps.map((cap) => kitFor(kitsBySku, cap.variants[0])).filter((entry): entry is KitLike => Boolean(entry));
     const groupKits = variants.map((variant) => kitFor(kitsBySku, variant)).filter((entry): entry is KitLike => Boolean(entry));
-    const plate = selected ? platesBySku[selected.graceSku] ?? (selected.websiteSku ? platesBySku[selected.websiteSku] : undefined) : undefined;
-    const fallbackMedia = pdpFallbackMedia({
-        groupSlug: slug,
-        variant: selected,
-        plateImageUrl: plate?.image ?? null,
-    });
+    const fallbackMedia = (selected?.websiteSku ? fallbackBySku[selected.websiteSku] : undefined)
+        ?? (selected?.graceSku ? fallbackBySku[selected.graceSku] : undefined)
+        ?? { images: [], bodyImageUrl: null };
     const swatchStyle = materialSwatch(kit, activeCap?.swatchName ?? capName);
     const selectionName = `${glassLabel(group.color)} glass${capName ? ` · ${capName} cap` : fitment ? ` · ${fitment}` : ""}`;
     const stickyLine = `${qty.toLocaleString("en-US")} × ${unitPrice != null ? formatPrice(unitPrice) : "—"} · ${lineLabel(glassName, rollerOption, rollerOption ? null : fitment, capName)}`;
@@ -494,7 +524,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                 <PdpTechSheet
                     rows={techSheetRows(selected, group)}
                     pdfHref={`/api/pdf/tech-sheet/${encodeURIComponent(slug)}${selected?.graceSku ? `?sku=${encodeURIComponent(selected.graceSku)}` : ""}`}
-                    drawing={drawingFor(slug, selected, drawingStyleFromQuery(searchParams.get("drawing")))}
+                    drawing={drawingFor(slug, selected, drawingStyleFromQuery(initialSearch?.drawing ?? null))}
                     technical={technicalDrawingFor(drawingBodyId(slug))}
                     labelFit={labelFitFor(drawingBodyId(slug))}
                 />

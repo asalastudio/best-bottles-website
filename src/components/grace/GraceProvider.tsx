@@ -1,10 +1,9 @@
 "use client";
 
-import { usePathname, useSearchParams, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useQuery, useMutation } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import { useCart } from "@/components/CartProvider";
-import { useAuth } from "@clerk/nextjs";
 import {
     useState,
     useRef,
@@ -52,12 +51,11 @@ import {
     graceRefineDestination,
     type GraceRefinementProposal,
 } from "@/lib/grace/refineState";
-import {
-    createGraceOpenAIRealtimeAdapter,
-    GraceRealtimeConnectionCancelledError,
-    type GraceOpenAIRealtimeAdapter,
-    type GraceRealtimeToolImplementations,
+import type {
+    GraceOpenAIRealtimeAdapter,
+    GraceRealtimeToolImplementations,
 } from "@/lib/grace/openaiRealtimeAdapter";
+import { createLazyGraceRealtimeAdapter } from "@/lib/grace/lazyRealtimeAdapter";
 import { GRACE_REALTIME_INSTRUCTIONS } from "@/lib/grace/realtimeInstructions";
 import { formatGraceMemoryLines, normalizeRememberNoteKind, resolveRememberNoteHref, type GraceMemoryNote } from "@/lib/grace/memoryNotes";
 import { buildGraceSiteCapabilities } from "@/lib/grace/siteCapabilities";
@@ -571,16 +569,42 @@ async function callGraceServerTool<T>(
 
 // ─── Provider ────────────────────────────────────────────────────────────────
 
-function GraceProviderBase({
+export default function GraceProvider({
     children,
-    userId,
+    userId = null,
+    publishValue,
 }: {
-    children: ReactNode;
-    userId: string | null;
+    children?: ReactNode;
+    userId?: string | null;
+    /** When set, a parent owns the context provider so this module can load after first paint without remounting the page. */
+    publishValue?: (value: GraceContextValue) => void;
 }) {
     const router = useRouter();
     const pathname = usePathname();
-    const searchParams = useSearchParams();
+    // Read the query from the window after mount. useSearchParams() suspends
+    // the whole provider tree into the root spinner, so the hero and product
+    // LCP images never land in the first HTML.
+    const [searchParams, setSearchParams] = useState(() => new URLSearchParams());
+    useEffect(() => {
+        const sync = () => setSearchParams(new URLSearchParams(window.location.search));
+        sync();
+        const pushState = history.pushState.bind(history);
+        const replaceState = history.replaceState.bind(history);
+        history.pushState = (...args: Parameters<History["pushState"]>) => {
+            pushState(...args);
+            sync();
+        };
+        history.replaceState = (...args: Parameters<History["replaceState"]>) => {
+            replaceState(...args);
+            sync();
+        };
+        window.addEventListener("popstate", sync);
+        return () => {
+            history.pushState = pushState;
+            history.replaceState = replaceState;
+            window.removeEventListener("popstate", sync);
+        };
+    }, [pathname]);
     const { addItems: addToCart, items: cartItems } = useCart();
     const cartItemsRef = useRef(cartItems);
     useEffect(() => { cartItemsRef.current = cartItems; }, [cartItems]);
@@ -2687,7 +2711,7 @@ function GraceProviderBase({
     }, []);
 
     const openAIAdapter = useMemo<GraceOpenAIRealtimeAdapter>(() =>
-        createGraceOpenAIRealtimeAdapter({
+        createLazyGraceRealtimeAdapter({
             baseInstructions: GRACE_REALTIME_INSTRUCTIONS,
             toolImplementations: clientTools as unknown as GraceRealtimeToolImplementations,
             knowledgeContext: {
@@ -2788,7 +2812,7 @@ function GraceProviderBase({
             }
             return true;
         } catch (err) {
-            if (err instanceof GraceRealtimeConnectionCancelledError) return false;
+            if (err instanceof Error && err.name === "GraceRealtimeConnectionCancelledError") return false;
             console.error("[Grace] Connection failed:", err);
             connectingRef.current = false;
             setGraceStatus("error");
@@ -3257,6 +3281,12 @@ function GraceProviderBase({
         voiceFailed, graceQuery, pageContext, browsingHistory, stopSpeaking, ownerKey,
     ]);
 
+    useEffect(() => {
+        publishValue?.(contextValue);
+    }, [publishValue, contextValue]);
+
+    if (publishValue) return null;
+
     return (
         <GraceContext.Provider value={contextValue}>
             {children}
@@ -3264,21 +3294,3 @@ function GraceProviderBase({
     );
 }
 
-function GraceProviderWithClerk({ children }: { children: ReactNode }) {
-    const { userId } = useAuth();
-    return <GraceProviderBase userId={userId ?? null}>{children}</GraceProviderBase>;
-}
-
-export default function GraceProvider({
-    children,
-    withClerk = false,
-}: {
-    children: ReactNode;
-    withClerk?: boolean;
-}) {
-    if (withClerk) {
-        return <GraceProviderWithClerk>{children}</GraceProviderWithClerk>;
-    }
-
-    return <GraceProviderBase userId={null}>{children}</GraceProviderBase>;
-}

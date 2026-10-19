@@ -60,6 +60,10 @@ const nextConfig: NextConfig = {
         // Vercel's standard build container OOM-killed the webpack worker on
         // 2026-09-14; this trades a little build time for a lower peak heap.
         webpackMemoryOptimizations: true,
+        // Loose chunking merged the homepage, catalog, and portal CSS into one
+        // render-blocking sheet linked from the root layout. Strict keeps each
+        // route's CSS on that route so the product page does not wait on it.
+        cssChunking: "strict",
     },
     turbopack: {
         root: projectRoot,

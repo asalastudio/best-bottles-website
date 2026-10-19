@@ -5,6 +5,7 @@ import { useRegion } from "@/components/RegionProvider";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { X, ShoppingBag, Plus, Minus, Trash, ArrowRight, WarningCircle } from "@/components/icons";
+import "@/styles/route-cart.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "@/components/CartProvider";
 import { displayApplicatorName } from "@/lib/catalogFilters";
@@ -105,7 +106,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
                         onClick={onClose}
-                        className="fixed left-0 right-0 top-0 bottom-[var(--mobile-tab-bar-clearance)] z-[70] xl:inset-0"
+                        className="bb-blur fixed left-0 right-0 top-0 bottom-[var(--mobile-tab-bar-clearance)] z-[70] xl:inset-0"
                         style={{
                             background: "rgba(29, 29, 31, 0.45)",
                             backdropFilter: "blur(4px)",
@@ -121,7 +122,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                         animate={{ x: 0, opacity: 1 }}
                         exit={{ x: "100%", opacity: 0 }}
                         transition={{ type: "spring", stiffness: 300, damping: 35 }}
-                        className="fixed top-0 right-0 bottom-[var(--mobile-tab-bar-clearance)] z-[70] w-full max-w-[560px] flex flex-col xl:bottom-0"
+                        className="bb-blur fixed top-0 right-0 bottom-[var(--mobile-tab-bar-clearance)] z-[70] w-full max-w-[560px] flex flex-col xl:bottom-0"
                         style={{
                             background: "rgba(250, 248, 245, 0.95)",
                             backdropFilter: "blur(28px) saturate(180%)",

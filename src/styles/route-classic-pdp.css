@@ -1,0 +1,8 @@
+@import "tailwindcss" source(none);
+@import "./tailwind-theme.css";
+
+@source "../components/products";
+@source "../components/FitmentDrawer.tsx";
+@source "../components/FitmentCarousel.tsx";
+@source "../components/PdpBlocks.tsx";
+@source "../app/products";

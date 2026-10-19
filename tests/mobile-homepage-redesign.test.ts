@@ -60,10 +60,11 @@ describe("mobile homepage redesign", () => {
         expect(families.slice(0, 4)).toEqual(["Cylinder", "Boston Round", "Round", "Circle"]);
         // The 1:1 family cards use the near-square v4 crops at every width.
         expect(html).not.toContain("family-cylinder-desktop-v4");
-        expect(html).toContain('src="/assets/homepage/family-cylinder-mobile-v4.webp"');
-        expect(html).toContain('src="/assets/homepage/family-boston-round-mobile-v4.webp"');
-        expect(html).toContain('src="/assets/homepage/family-round-mobile-v4.webp"');
-        expect(html).toContain('src="/assets/homepage/family-circle-mobile-v4.webp"');
+        expect(html).toContain("family-cylinder-mobile-v4.webp");
+        expect(html).toContain("family-boston-round-mobile-v4.webp");
+        expect(html).toContain("family-round-mobile-v4.webp");
+        expect(html).toContain("family-circle-mobile-v4.webp");
+        expect(html).toContain("sizes=\"(max-width: 640px) calc((100vw - 54px) / 2), (max-width: 1100px) calc((100vw - 120px) / 3), calc((min(100vw, 1280px) - 204px) / 4)\"");
         expect(html).not.toContain("family-elegant-desktop-v4");
     });
 

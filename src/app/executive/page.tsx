@@ -1,3 +1,4 @@
+import "@/styles/route-internal.css";
 import type { Metadata } from "next";
 import { auth, currentUser } from "@clerk/nextjs/server";
 

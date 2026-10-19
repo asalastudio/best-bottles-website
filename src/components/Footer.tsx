@@ -3,7 +3,6 @@
 import { useCallback, useMemo, useState } from "react";
 import BrandBottleMark from "./BrandBottleMark";
 import LocaleLink from "./LocaleLink";
-import { useMutation } from "convex/react";
 import {
     ArrowRight,
     ChatCircle,
@@ -14,7 +13,6 @@ import {
     ShieldCheck,
     Truck,
 } from "@phosphor-icons/react";
-import { api } from "../../convex/_generated/api";
 import { useCopy } from "@/i18n/useCopy";
 
 const FOOTER_GROUPS = [
@@ -55,7 +53,6 @@ const SERVICE_ITEMS = [
 ] as const;
 
 export default function Footer() {
-    const submitForm = useMutation(api.forms.submit);
     const [email, setEmail] = useState("");
     const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
     const t = useCopy("footer");
@@ -65,7 +62,16 @@ export default function Footer() {
         if (!email.trim() || status === "submitting") return;
         setStatus("submitting");
         try {
-            await submitForm({
+            // Convex stays off the first load. The client is fetched only when
+            // someone actually subscribes.
+            const [{ ConvexHttpClient }, { api }] = await Promise.all([
+                import("convex/browser"),
+                import("../../convex/_generated/api"),
+            ]);
+            const url = process.env.NEXT_PUBLIC_CONVEX_URL;
+            if (!url) throw new Error("Missing catalog connection");
+            const client = new ConvexHttpClient(url);
+            await client.mutation(api.forms.submit, {
                 formType: "newsletter",
                 email: email.trim(),
                 source: "Global Footer Newsletter",
@@ -75,7 +81,7 @@ export default function Footer() {
         } catch {
             setStatus("error");
         }
-    }, [email, status, submitForm]);
+    }, [email, status]);
 
     const socialLinks = useMemo(() => [
         { label: "Instagram", href: "https://www.instagram.com/nematinternational/", icon: InstagramLogo },
