@@ -17,7 +17,7 @@ import { normalizeImportedCapColor } from "@/lib/products/cap-finish-evidence";
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
 import { CANONICAL_GLASS_COLORS, canonicalGlassColor, catalogFitmentLabel, displayApplicatorName } from "@/lib/catalogFilters";
 import { SHOP_COLLECTIONS, matchesShopCollection, shopCollectionHref } from "@/lib/shopCollections";
-import { activeVolumeTierIndex, buildDisplayVolumeTiers, type DisplayVolumeTier } from "@/lib/volumePricing";
+import { activeVolumeTierIndex, buildDisplayVolumeTiers, resolveChargedUnitPrice, type DisplayVolumeTier } from "@/lib/volumePricing";
 import { isSoldOutStockStatus } from "@/lib/checkout";
 
 export type PdpGroup = ProductGroupPayload["group"];
@@ -352,12 +352,28 @@ export function tiersFor(variant: ProductVariant | null | undefined): DisplayVol
     });
 }
 
-/** The published rate at a quantity: the active break, else the 1-piece price. */
+/** The published rate at a quantity: the active break, else the 1-piece price. A quote rate above 11; never a cart price. */
 export function unitPriceAt(variant: ProductVariant | null | undefined, qty: number): number | null {
     if (!variant?.webPrice1pc) return null;
     const tiers = tiersFor(variant);
     if (tiers.length === 0) return variant.webPrice1pc;
     return tiers[activeVolumeTierIndex(tiers, qty)]?.unitPrice ?? variant.webPrice1pc;
+}
+
+/**
+ * What the cart charges per set at a quantity. While volume rates are confirmed
+ * on a quote (Jordan, 17 Oct 2026) that is the 1–11 rate at every quantity: on
+ * 9 Oct the buy box showed 60 × $0.84 = $50.40 for a set the cart billed at
+ * 60 × $0.88 = $52.80.
+ */
+export function chargedUnitPriceAt(variant: ProductVariant | null | undefined, qty: number): number | null {
+    if (!variant?.webPrice1pc) return null;
+    return resolveChargedUnitPrice(qty, {
+        webPrice1pc: variant.webPrice1pc,
+        webPrice10pc: variant.webPrice10pc,
+        webPrice12pc: variant.webPrice12pc,
+        priceTiers: variant.priceTiers?.map((tier) => ({ minQty: tier.minQty, unitPrice: tier.unitPrice })) ?? null,
+    });
 }
 
 // ── exploded callouts ─────────────────────────────────────────────────────────

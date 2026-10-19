@@ -91,12 +91,12 @@ const productProposal = {
         itemName: string("Verified customer-facing product name."),
         graceSku: string("Exact Grace SKU returned by a catalog tool."),
         quantity: { type: "integer", minimum: 1, description: "Requested whole-unit quantity greater than zero." },
-        webPrice1pc: nullableNumber("Verified one-piece price, or null when unavailable."),
+        webPrice1pc: nullableNumber("The row's onlineUnitPrice: what online checkout bills per piece at every quantity, or null when unavailable. Never a volume rate."),
         websiteSku: nullableString("Website SKU returned by the catalog, or null."),
         shopifyVariantId: nullableString("Shopify variant ID returned by the catalog, or null."),
         checkoutEligible: nullableBoolean("Whether the returned product is checkout eligible."),
-        webPrice10pc: nullableNumber("Verified ten-piece price, or null."),
-        webPrice12pc: nullableNumber("Verified twelve-piece price, or null."),
+        webPrice10pc: nullableNumber("Pass null. Volume rates are confirmed on a quote and are never staged in a cart."),
+        webPrice12pc: nullableNumber("Pass null. Volume rates are confirmed on a quote and are never staged in a cart."),
     },
     required: [
         "itemName", "graceSku", "quantity", "webPrice1pc", "websiteSku",
@@ -106,13 +106,13 @@ const productProposal = {
 };
 
 export const GRACE_OPENAI_TOOL_SPECS = [
-    spec("searchCatalog", "Search live Best Bottles product truth before making any product, price, stock, size, color, or SKU claim.", {
+    spec("searchCatalog", "Search live Best Bottles product truth before making any product, price, stock, size, color, or SKU claim. Each row's onlineUnitPrice is billed online at every quantity; its quoteOnlyVolumeRates are confirmed on a quote only.", {
         searchTerm: string("Natural-language product request including known size, family, color, or applicator."),
         categoryLimit: nullableCategory("Exact category constraint — must be one of the listed exact values, or null."),
         familyLimit: nullableString(`Exact family constraint, or null. Valid values: ${quoteList(CATALOG_FAMILIES)}. Any other spelling matches nothing.`),
         applicatorFilter: nullableString(`Comma-separated EXACT catalog applicator values, or null. Valid values: ${quoteList(PRODUCT_APPLICATOR_VALUES)}. Do NOT pass the canonical Refine bucket slugs here (${APPLICATOR_BUCKET_VALUES.join(", ")}) — those belong to setCatalogRefinements.applicators and match NOTHING in this tool, silently filtering out the products you are looking for. When unsure, pass null and read the applicator field on the returned rows.`),
     }),
-    spec("getProductBySku", "Look up ONE exact product by its SKU code. REQUIRED whenever the customer names or types a SKU (e.g. GB-CYL-CLR-9ML-T-08, CMP-CAP-SBLK-13-415) — searchCatalog is a name search and does NOT reliably match SKU codes. Accepts Grace or website SKUs. Also REQUIRED for any quantity/volume price quote: the result's priceTiers array is the full published quantity-break ladder (minQty/unitPrice/totalPrice, typically 5 breaks up to 1000+ pcs) — quote tiers from it verbatim and never extrapolate a bulk price. When the customer asks for a link, include the returned verifiedPdpHref as a clickable Markdown link. A null/found:false result means the code was not found as written; it does NOT mean the product is unavailable.", {
+    spec("getProductBySku", "Look up ONE exact product by its SKU code. REQUIRED whenever the customer names or types a SKU (e.g. GB-CYL-CLR-9ML-T-08, CMP-CAP-SBLK-13-415) — searchCatalog is a name search and does NOT reliably match SKU codes. Accepts Grace or website SKUs. Also REQUIRED for any quantity/volume price question. onlineUnitPrice is what online checkout bills per piece at EVERY quantity (online total = onlineUnitPrice × quantity). quoteOnlyVolumeRates is the published quantity-break list (fromQty/quotedUnitPrice): those rates are confirmed on a quote at /request-quote, never billed online — say 'from $X each at N+ pieces, confirmed on a quote', never multiply one by a quantity or call it an online price, and never extrapolate a rate the list does not contain. When the customer asks for a link, include the returned verifiedPdpHref as a clickable Markdown link. A null/found:false result means the code was not found as written; it does NOT mean the product is unavailable.", {
         sku: string("The exact SKU code the customer supplied, e.g. 'GB-CYL-CLR-9ML-T-08'."),
     }),
     spec("getPolicy", "Return verbatim published policy text for shipping, delivery times, international duties, damaged or incorrect items, returns, restocking, and support contact. REQUIRED before stating any policy term, window, or timeframe — never answer a policy question from memory.", {

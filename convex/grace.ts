@@ -48,6 +48,7 @@ import {
     type GraceIntentAnswers,
 } from "../src/lib/grace/jevIntent";
 import { enrichSearchCatalogWithJev } from "../src/lib/grace/enrichSearchCatalogWithJev";
+import { GRACE_PRICE_STATS_BASIS } from "../src/lib/grace/onlinePricing";
 import {
     GRACE_OPENAI_FAILURE_LOG_TAG,
     callOpenAIWithRetry,
@@ -558,6 +559,7 @@ export const getPriceStats = query({
             });
             return {
                 scope: family,
+                priceBasis: GRACE_PRICE_STATS_BASIS,
                 pricedProducts: priced.length,
                 minPrice: priced[0].webPrice1pc,
                 maxPrice: priced[priced.length - 1].webPrice1pc,
@@ -593,6 +595,7 @@ export const getPriceStats = query({
         });
         return {
             scope: "catalog",
+            priceBasis: GRACE_PRICE_STATS_BASIS,
             minPrice: ranged[0].priceRangeMin,
             maxPrice: Math.max(...ranged.map((g) => (g.priceRangeMax as number) ?? 0)),
             cheapestGroups: ranged.slice(0, 3).map(pickGroup),
@@ -690,7 +693,7 @@ export const getFamilyOverview = query({
             colors: [...colors].sort(),
             threadSizes: [...threads].sort(),
             applicatorTypes: applicatorList,
-            priceRange: { min: minPrice === Infinity ? null : minPrice, max: maxPrice || null },
+            priceRange: { min: minPrice === Infinity ? null : minPrice, max: maxPrice || null, basis: GRACE_PRICE_STATS_BASIS },
             ...(graceHint ? { graceHint } : {}),
         };
     },

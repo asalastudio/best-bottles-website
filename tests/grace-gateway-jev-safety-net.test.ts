@@ -61,7 +61,7 @@ vi.mock("@/lib/convexServerClient", () => ({
                     conflicts: [],
                 };
             }
-            if (name === "products:lookupSku") return { product: { ...state.rows[0], priceTiers: [{ minQty: 12, unitPrice: 0.84, totalPrice: 10.08 }] }, slug: state.rows[0].slug };
+            if (name === "products:lookupSku") return { product: { ...state.rows[0], webPrice12pc: 1.44, priceTiers: [{ minQty: 1, unitPrice: 1.5, totalPrice: 1.5 }, { minQty: 12, unitPrice: 1.44, totalPrice: 17.28 }, { minQty: 144, unitPrice: 1.38, totalPrice: 198.72 }] }, slug: state.rows[0].slug };
             if (name !== "grace:searchCatalog") throw new Error(`Unexpected query: ${name}`);
             state.calls.push(args);
             // Jev's applicator reading matches nothing; the request as written does.
@@ -106,6 +106,10 @@ describe("Grace tool gateway: Jev safety net and search tiles", () => {
         expect(structured.status).toBe("ok");
         expect(structured.message).toContain("Jev's reading of the request (applicator: filter finemist) matched nothing in the catalogue");
         expect(structured.message).toContain("GBElgFrst15MtlRollGlSh");
+        // Every price the model reads is the online unit price, led by the rule; no tier column.
+        expect(structured.message).toContain("PRICING: onlineUnitPrice is the per-piece price online checkout bills at EVERY quantity");
+        expect(structured.message).toContain('"onlineUnitPrice": 1.5');
+        expect(structured.message).not.toMatch(/webPrice/);
 
         const tiles = (structured.products ?? []) as Array<{ verifiedPdpHref?: string | null; heroImageUrl?: string | null; heroImageKind?: string | null; websiteSku?: string | null }>;
         expect(tiles.map((tile) => tile.websiteSku)).toEqual(["GBElgFrst15MtlRollGlSh", "GBNoHero999"]);
@@ -177,12 +181,22 @@ it("uses the storefront group envelope only for explicit refinement verification
     expect(state.refinementCalls.at(-1)?.filters).toEqual(refineState.filters);
 });
 
-it("exact SKU gateway preserves price tiers and supplies a verified clickable product URL", async () => {
+it("exact SKU gateway gives the agent the online price, the ladder as quote-only rates, and a verified product URL", async () => {
     const { executeGraceServerTool } = await import("../src/lib/grace/toolGatewayServer");
     const result = await executeGraceServerTool({ toolName: "getProductBySku", parameters: { sku: state.rows[0].websiteSku } });
     expect(result).toMatchObject({
         found: true, websiteSku: state.rows[0].websiteSku, neckThreadSize: "13-415",
-        priceTiers: [{ minQty: 12, unitPrice: 0.84, totalPrice: 10.08 }],
+        onlineUnitPrice: 1.5,
+        quoteOnlyVolumeRates: [{ fromQty: 12, quotedUnitPrice: 1.44 }, { fromQty: 144, quotedUnitPrice: 1.38 }],
+        pricingRule: expect.stringContaining("NOT billed online"),
         verifiedPdpHref: `/products/${state.rows[0].slug}?sku=${state.rows[0].websiteSku}`,
     });
+    for (const field of ["webPrice1pc", "webPrice10pc", "webPrice12pc", "priceTiers"]) expect(result).not.toHaveProperty(field);
+});
+
+it("card SKU lookups keep webPrice1pc for cart staging, equal to the online price, with no tier columns", async () => {
+    const { executeGraceServerTool } = await import("../src/lib/grace/toolGatewayServer");
+    const result = await executeGraceServerTool({ toolName: "displayProductCard", parameters: { graceSku: state.rows[0].graceSku } });
+    expect(result).toMatchObject({ webPrice1pc: 1.5, onlineUnitPrice: 1.5, quoteOnlyVolumeRates: [{ fromQty: 12, quotedUnitPrice: 1.44 }, { fromQty: 144, quotedUnitPrice: 1.38 }] });
+    for (const field of ["webPrice10pc", "webPrice12pc", "priceTiers"]) expect(result).not.toHaveProperty(field);
 });

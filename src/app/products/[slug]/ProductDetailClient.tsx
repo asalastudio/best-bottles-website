@@ -65,6 +65,7 @@ import {
     activeVolumeTierIndex,
     buildDisplayVolumeTiers,
     formatVolumeQtyRange,
+    resolveChargedUnitPrice,
 } from "@/lib/volumePricing";
 import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
 import { resolveFocusedPdpCapabilities } from "@/lib/products/focused-pdp-rollout";
@@ -885,8 +886,15 @@ function TierLadder({
     const unitsToNext = next ? next.minQty - qty : 0;
     const firstQuoteQty = tiers.find((tier) => !tier.appliesAtCheckout)?.minQty ?? null;
     const caseQty = variant.caseQuantity && variant.caseQuantity > 1 ? variant.caseQuantity : null;
-    const quotedCaseUnit = caseQty
-        ? tiers.reduce((price, tier) => (caseQty >= tier.minQty ? tier.unitPrice : price), p1)
+    // The case shortcut sets the quantity, so it shows what the cart will charge for a
+    // case (the 1–11 rate while 12+ is quoted); the table above lists the quote rates.
+    const caseUnit = caseQty
+        ? resolveChargedUnitPrice(caseQty, {
+            webPrice1pc: p1,
+            webPrice10pc: variant.webPrice10pc,
+            webPrice12pc: variant.webPrice12pc,
+            priceTiers: variant.priceTiers ?? null,
+        })
         : null;
 
     const cell = compact ? "px-1.5 py-1.5" : "px-2 py-2.5";
@@ -973,7 +981,7 @@ function TierLadder({
                 </tbody>
             </table>
 
-            {caseQty && quotedCaseUnit != null && onQtyChange ? (
+            {caseQty && caseUnit != null && onQtyChange ? (
                 <button
                     type="button"
                     onClick={() => onQtyChange(caseQty)}
@@ -988,9 +996,9 @@ function TierLadder({
                             <span className="text-slate"> · {caseQty.toLocaleString("en-US")} units</span>
                         </span>
                         <span className="text-sm tabular-nums text-obsidian">
-                            {formatPrice(quotedCaseUnit)}
+                            {formatPrice(caseUnit)}
                             <span className="ml-0.5 text-slate">/ea</span>
-                            <span className="ml-2 text-slate">{formatPrice(quotedCaseUnit * caseQty)}</span>
+                            <span className="ml-2 text-slate">{formatPrice(caseUnit * caseQty)}</span>
                         </span>
                     </span>
                 </button>

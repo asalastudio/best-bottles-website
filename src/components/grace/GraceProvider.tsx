@@ -174,7 +174,7 @@ function formatPageContextForGrace(
         if (p.neckThreadSize) lines.push(`Neck thread: ${p.neckThreadSize}`);
         if (p.variantCount != null) lines.push(`Variants in this group: ${p.variantCount}`);
         if (p.capsSummary) lines.push(`Cap / closure options (from variants): ${p.capsSummary}`);
-        if (p.webPrice1pc) lines.push(`From: $${p.webPrice1pc.toFixed(2)}/pc`);
+        if (p.webPrice1pc) lines.push(`Online price: $${p.webPrice1pc.toFixed(2)} each at any quantity (volume rates are confirmed on a quote)`);
         lines.push(
             "CONTEXT NOTE: For compatible closures and caps, call getBottleComponents with the selected website SKU when present. Do not describe a previous applicator or glass color as current.",
         );
@@ -1502,7 +1502,7 @@ function GraceProviderBase({
             } catch (e) { console.error("[Grace] compareProducts:", e); return "Comparison failed."; }
         },
 
-        proposeCartAdd: (params: { products: Array<{
+        proposeCartAdd: async (params: { products: Array<{
             itemName: string;
             graceSku: string;
             websiteSku?: string | null;
@@ -1543,7 +1543,7 @@ function GraceProviderBase({
             } else {
                 rawProducts = params.products ?? [];
             }
-            const products: PendingCartProduct[] = rawProducts.map((p) => ({
+            const proposed: PendingCartProduct[] = rawProducts.map((p) => ({
                 graceSku: p.graceSku,
                 websiteSku: p.websiteSku ?? null,
                 itemName: p.itemName,
@@ -1561,7 +1561,21 @@ function GraceProviderBase({
                 capColor: p.capColor,
                 stockStatus: p.stockStatus,
             }));
-            if (products.length === 0) return "No products specified to add.";
+            if (proposed.length === 0) return "No products specified to add.";
+            // The card totals at the catalog's online unit price, never a number the model
+            // carried over: a quote-only volume rate there would total the card and the cart
+            // line below what checkout bills (9 Oct: Elegant ×60 at $50.40, billed $52.80).
+            const products: PendingCartProduct[] = await Promise.all(proposed.map(async (p) => {
+                try {
+                    const data = await callGraceServerTool<ProductCard | null>("getProductBySku", { graceSku: p.graceSku });
+                    const online = data.result?.onlineUnitPrice ?? data.result?.webPrice1pc ?? null;
+                    return typeof online === "number" && online > 0
+                        ? { ...p, unitPrice: online, webPrice1pc: online, webPrice10pc: null, webPrice12pc: null }
+                        : p;
+                } catch {
+                    return p;
+                }
+            }));
             try {
                 const confirmationId = `cart-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
                 pendingActionsRef.current.push({
