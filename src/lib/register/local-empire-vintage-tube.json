@@ -1,0 +1,122 @@
+{
+  "url": "/local-media/source-tubes/vintage-native.71770023cad9.png",
+  "sha256": "71770023cad9f40e5385a29830ebc0d8b362cef9554f778051584e6502e08667",
+  "bytes": 47671,
+  "width": 132,
+  "height": 1069,
+  "source": "/Users/jordanrichter/Documents/Codex/2026-10-01/users-jordanrichter-projects-clients-nemat-international/outputs/media-completion-2026-10-12/source-recovery-2026-10-13/tassel-source-review/photoshop-native-pilot/black-tassel-source-copy.psd",
+  "sourceSha256": "e3edf19e0182192de577f513239fbdc59e61d3195240827261f582068a3d8ef2",
+  "layerIndex": 1,
+  "layerName": "Layer 4 copy",
+  "sourceBounds": [
+    1389,
+    628,
+    1521,
+    1697
+  ],
+  "pxPerMm": 12.8025,
+  "axisX": 89,
+  "outline": [
+    [
+      60,
+      8
+    ],
+    [
+      116,
+      16
+    ],
+    [
+      119,
+      100
+    ],
+    [
+      125,
+      200
+    ],
+    [
+      130,
+      300
+    ],
+    [
+      129,
+      400
+    ],
+    [
+      124,
+      500
+    ],
+    [
+      115,
+      600
+    ],
+    [
+      100,
+      700
+    ],
+    [
+      83,
+      800
+    ],
+    [
+      68,
+      900
+    ],
+    [
+      56,
+      1000
+    ],
+    [
+      52,
+      1060
+    ],
+    [
+      1,
+      1060
+    ],
+    [
+      5,
+      1000
+    ],
+    [
+      17,
+      900
+    ],
+    [
+      35,
+      800
+    ],
+    [
+      52,
+      700
+    ],
+    [
+      68,
+      600
+    ],
+    [
+      78,
+      500
+    ],
+    [
+      83,
+      400
+    ],
+    [
+      80,
+      300
+    ],
+    [
+      75,
+      200
+    ],
+    [
+      65,
+      100
+    ]
+  ],
+  "expectedUrls": [
+    "/images/register/tubes/empire-50ml-18-415-clear-tassel.24c429bb270c.png",
+    "/images/register/tubes/empire-50ml-18-415-clear-bulb.24c429bb270c.png"
+  ],
+  "registration": "Native Photoshop tube RGBA preserved. Uniform registered 18-415 component scale; top seated under collar; visible length cut at cavity floor with a display polygon. Source outline excludes surrounding retouch scraps. Local Empire 50 ml seated review only."
+}

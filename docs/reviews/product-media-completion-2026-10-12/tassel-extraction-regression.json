@@ -1,0 +1,62 @@
+[
+  {
+    "componentId": "CMP-SPR-BLK-18-415-02",
+    "recordedPixelSha256": "8c0a1fc75690da707d6ca5a89cc820b9124ff5af2535eb1fa0e37b1811367505",
+    "reproducedPixelSha256": "33a206a1c60bba73428c2691224d325b015c05d1e02f41a1f49c4f4b9bcc8278",
+    "exactPixelMatch": false,
+    "guard": "Photo cut requires adjustment-aware source export: Black & White 1 (blackandwhite), Brightness/Contrast 2 (brightnesscontrast), Black & White 2 (blackandwhite)",
+    "sourcePath": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/48. GBCrcl100AnSpTslBlk.psd",
+    "sourceSha256": "e3edf19e0182192de577f513239fbdc59e61d3195240827261f582068a3d8ef2",
+    "afterRecordedSpeckCleanupPixelSha256": "8c0a1fc75690da707d6ca5a89cc820b9124ff5af2535eb1fa0e37b1811367505",
+    "afterRecordedSpeckCleanupMatches": true,
+    "cleanupRemovedPixels": 1084
+  },
+  {
+    "componentId": "CMP-SPR-RED-18-415-02",
+    "recordedPixelSha256": "de03bde7cdcbb3b85f17572ad955744fb6a518ca3a26f782e005b5f97e77b302",
+    "reproducedPixelSha256": "de03bde7cdcbb3b85f17572ad955744fb6a518ca3a26f782e005b5f97e77b302",
+    "exactPixelMatch": true,
+    "guard": "Photo cut requires adjustment-aware source export: Black & White 1 (blackandwhite), Brightness/Contrast 2 (brightnesscontrast), Black & White 2 (blackandwhite)",
+    "sourcePath": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/47. GBCrcl100AnSpTslRed.psd",
+    "sourceSha256": "58206d2149ddfddfb67ef8292f1882d8ee86bde4b9599e1f35fff103d54d4fa8",
+    "afterRecordedSpeckCleanupPixelSha256": "de03bde7cdcbb3b85f17572ad955744fb6a518ca3a26f782e005b5f97e77b302",
+    "afterRecordedSpeckCleanupMatches": true,
+    "cleanupRemovedPixels": 0
+  },
+  {
+    "componentId": "CMP-SPR-WHT-18-415-02",
+    "recordedPixelSha256": "b56c72b9bf1522d31333604bdf49703812bff10f9a53b21453da8a8b41ff438d",
+    "reproducedPixelSha256": "c878540fd834dec743bd2fea9ee41547d8326560ab21cbda6f28d55f593e4fbc",
+    "exactPixelMatch": false,
+    "guard": "Photo cut requires adjustment-aware source export: Black & White 1 (blackandwhite), Brightness/Contrast 1 (brightnesscontrast), Brightness/Contrast 2 (brightnesscontrast), Black & White 2 (blackandwhite)",
+    "sourcePath": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/45. GBCrcl100AnSpTslWht.psd",
+    "sourceSha256": "ceb575fc3c45711e27c3ebd7e0f0efca7f0b2e45bb9b355eb87603b176cc874f",
+    "afterRecordedSpeckCleanupPixelSha256": "b56c72b9bf1522d31333604bdf49703812bff10f9a53b21453da8a8b41ff438d",
+    "afterRecordedSpeckCleanupMatches": true,
+    "cleanupRemovedPixels": 180
+  },
+  {
+    "componentId": "CMP-SPR-IVSL-18-415-02",
+    "recordedPixelSha256": "65295d990e4ec3833f3c24a9c153b765fcae099643486058ef07215b7f38df4d",
+    "reproducedPixelSha256": "65295d990e4ec3833f3c24a9c153b765fcae099643486058ef07215b7f38df4d",
+    "exactPixelMatch": true,
+    "guard": "Photo cut requires adjustment-aware source export: Black & White 1 (blackandwhite), Brightness/Contrast 1 (brightnesscontrast), Brightness/Contrast 2 (brightnesscontrast), Black & White 2 (blackandwhite)",
+    "sourcePath": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/44. GBCrcl100AnSpTslIvySl.psd",
+    "sourceSha256": "3fc7b23cf20ca9d2448d0406d1655328b2b8cb890eb911344407d490fe81c97d",
+    "afterRecordedSpeckCleanupPixelSha256": "65295d990e4ec3833f3c24a9c153b765fcae099643486058ef07215b7f38df4d",
+    "afterRecordedSpeckCleanupMatches": true,
+    "cleanupRemovedPixels": 0
+  },
+  {
+    "componentId": "CMP-SPR-IVGD-18-415-02",
+    "recordedPixelSha256": "65295d990e4ec3833f3c24a9c153b765fcae099643486058ef07215b7f38df4d",
+    "reproducedPixelSha256": "65295d990e4ec3833f3c24a9c153b765fcae099643486058ef07215b7f38df4d",
+    "exactPixelMatch": true,
+    "guard": "allowed: no active adjustments",
+    "sourcePath": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/43. GBCrcl100AnSpTslIvyGl.psd",
+    "sourceSha256": "fbcd3fd109fcc69b9d526b2d4059a0419e3da24898560e2b7db0fd1645d6a4ae",
+    "afterRecordedSpeckCleanupPixelSha256": "65295d990e4ec3833f3c24a9c153b765fcae099643486058ef07215b7f38df4d",
+    "afterRecordedSpeckCleanupMatches": true,
+    "cleanupRemovedPixels": 0
+  }
+]

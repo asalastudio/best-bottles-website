@@ -43,6 +43,7 @@ import type { KitLike } from "@/lib/products/pdp-redesign/stage";
 import { loadRegisterKits } from "@/lib/register/load";
 import { loadGlassStageEnvelopes } from "@/lib/register/stage-envelopes";
 import { isSoldOutStockStatus } from "@/lib/checkout";
+import { withLocalMediaBaseline } from "@/lib/register/local-media-baseline";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -50,7 +51,7 @@ export const revalidate = 0;
 function getConvexClient() {
     const url = process.env.NEXT_PUBLIC_CONVEX_URL;
     if (!url) throw new Error("NEXT_PUBLIC_CONVEX_URL is required to render product pages.");
-    return new ConvexHttpClient(url);
+    return withLocalMediaBaseline(new ConvexHttpClient(url));
 }
 
 function isShopifyCdnImageUrl(value: string | null | undefined): boolean {

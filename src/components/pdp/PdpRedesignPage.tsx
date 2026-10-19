@@ -177,8 +177,8 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         variants.map((variant) => ({ kit: kitFor(kitsBySku, variant), applicator: variant.applicator })),
         stageEnvelopes,
     ), [kit, selected?.applicator, variants, kitsBySku, stageEnvelopes]);
-    // The requested view survives a SKU change; a SKU without layers shows SIDECAR until one returns.
-    const shownView: StageView = views.includes(view) ? view : "sidecar";
+    // Preserve the requested view when supported; otherwise show this SKU's first available view.
+    const shownView: StageView = views.includes(view) ? view : views[0];
 
     // Grace's configureCurrentProduct lands here as it does on the classic page
     // (ProductDetailClient). Until 2026-09-25 this page had no listener, so the

@@ -95,6 +95,9 @@ export function placeLayer<L extends LayerGeometry>(layer: L, frame: Frame, zInd
     };
 }
 
+/** Decorative rings stay on their measured glass datum in every view. */
+export const BODY_FIXED_SLOTS: ReadonlySet<string> = new Set(["ring"]);
+
 /**
  * Draw order: behind-body layers (explodeIndex ascending), the plate, front layers (explodeIndex descending) with
  * the overcap moved over the mechanism it covers and under the collar (a one-piece sprayer has no collar layer, so
@@ -102,12 +105,13 @@ export function placeLayer<L extends LayerGeometry>(layer: L, frame: Frame, zInd
  */
 export function orderLayers<L extends LayerGeometry>(layers: readonly L[]): { behind: L[]; front: L[] } {
     const behind = layers.filter((layer) => layer.z === "behind-body").sort((a, b) => a.explodeIndex - b.explodeIndex);
-    const sorted = layers.filter((layer) => layer.z !== "behind-body").sort((a, b) => b.explodeIndex - a.explodeIndex);
+    const onGlass = layers.filter((layer) => layer.z !== "behind-body" && BODY_FIXED_SLOTS.has(layer.slot));
+    const sorted = layers.filter((layer) => layer.z !== "behind-body" && !BODY_FIXED_SLOTS.has(layer.slot)).sort((a, b) => b.explodeIndex - a.explodeIndex);
     const overcaps = sorted.filter((layer) => layer.slot === "overcap");
     const rest = sorted.filter((layer) => layer.slot !== "overcap");
     const at = rest.findIndex((layer) => layer.slot === "collar");
     const front = at < 0 ? [...rest, ...overcaps] : [...rest.slice(0, at), ...overcaps, ...rest.slice(at)];
-    return { behind, front };
+    return { behind, front: [...onGlass, ...front] };
 }
 
 /**
@@ -123,7 +127,9 @@ export function shoulderLiftMm(plate: PlateGeometry, layers: readonly LayerGeome
     const clearanceMm = (shoulder - plate.anchors.seatY) / plate.pxPerMm;
     let reachMm = -Infinity;
     for (const layer of layers) {
-        if (layer.z === "behind-body" || layer.usage === "exploded" || layer.solidBottomY == null) continue;
+        // A photographed pipette may draw in front of opaque clear-glass artwork,
+        // but its tip is inside the bottle and cannot define the closure's reach.
+        if (layer.z === "behind-body" || layer.slot === "pipette" || layer.usage === "exploded" || layer.solidBottomY == null || BODY_FIXED_SLOTS.has(layer.slot)) continue;
         reachMm = Math.max(reachMm, (layer.solidBottomY - layer.anchor.y) / layer.pxPerMm);
     }
     return reachMm > clearanceMm ? reachMm - clearanceMm : 0;
@@ -134,7 +140,7 @@ export const SEAT_FIXED_SLOTS: ReadonlySet<string> = new Set(["roller", "diptube
 
 /** A layer that travels with the closure when it is seated down onto the shoulder: the cap, overcap, collar, pump or dropper head. */
 export function isSeatedClosureLayer(layer: LayerGeometry): boolean {
-    return layer.z !== "behind-body" && layer.usage !== "exploded" && !SEAT_FIXED_SLOTS.has(layer.slot);
+    return layer.z !== "behind-body" && layer.usage !== "exploded" && !SEAT_FIXED_SLOTS.has(layer.slot) && !BODY_FIXED_SLOTS.has(layer.slot);
 }
 
 /**
@@ -155,7 +161,7 @@ export function compose<P extends PlateGeometry, L extends LayerGeometry>(
     let z = 0;
     for (const layer of behind) out.push(placeLayer(layer, frame, z++));
     out.push(placePlate(plate, frame, z++));
-    for (const layer of front) out.push(placeLayer(layer, frame, z++, isSeatedClosureLayer(layer) ? liftPx - dropPx : liftPx));
+    for (const layer of front) out.push(placeLayer(layer, frame, z++, BODY_FIXED_SLOTS.has(layer.slot) ? 0 : isSeatedClosureLayer(layer) ? liftPx - dropPx : liftPx));
     return out;
 }
 

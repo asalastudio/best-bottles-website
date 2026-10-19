@@ -1,0 +1,710 @@
+[
+  {
+    "websiteSku": "GBDiva46AnSpTslBlkRng",
+    "graceSku": "GB-DVA-CLR-46ML-T-06",
+    "donorGraceSku": "GB-DVA-CLR-46ML-AST-BLK",
+    "sprayerComponentId": "CMP-SPR-BLK-18-415-02",
+    "ringComponentId": "LOCAL-DIVA46-TASSEL-RING-BLK",
+    "bodyId": "diva-46ml-18-415",
+    "plateKey": "diva-46ml-18-415|Clear",
+    "source": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/61. GBDiva46AnSpTslBlkBlkRng.psd",
+    "sourceSha256": "da39a5e7d4126d1d16c4810fa13b03bc0e3984fdf4f09e312b8116af6533562e",
+    "layerName": "Layer 44",
+    "sha256": "cdb67479d1f1c4e197426596efd70f547c555046b6d355f432ca739373336a47",
+    "bytes": 133667,
+    "url": "/local-media/diva-rings/blk-cdb67479d1f1c4e197426596efd70f547c555046b6d355f432ca739373336a47.png",
+    "width": 661,
+    "height": 170,
+    "pxPerMm": 13.4032,
+    "anchor": {
+      "x": 332,
+      "y": -284
+    },
+    "crop": {
+      "left": 925,
+      "top": 710
+    },
+    "sourceBodyOverlapMaxDelta": 255,
+    "sourceBodyHiddenNeckCropPx": 35,
+    "sourceGlass": {
+      "rim": 452,
+      "foot": 1681,
+      "axisX": 1257,
+      "barrelPx": 534
+    },
+    "recoveredRimY": 426,
+    "expectedPlate": {
+      "anchors": {
+        "axisX": 622,
+        "baselineY": 2097,
+        "seatY": 146,
+        "shoulderY": 563
+      },
+      "approved": true,
+      "bodyId": "diva-46ml-18-415",
+      "glass": "Clear",
+      "height": 2192,
+      "plateKey": "diva-46ml-18-415|Clear",
+      "pxPerMm": 20.8364,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/diva-46ml-18-415/clear/e1f942bf4757cf6dae7d9e073b5ff9769d90db384a899ef6b4ab95d7773cd493.png",
+      "width": 1248
+    }
+  },
+  {
+    "websiteSku": "GBDiva46AnSpTslIvySlRng",
+    "graceSku": "GB-DVA-CLR-46ML-T-07",
+    "donorGraceSku": "GB-DVA-CLR-46ML-AST-IVSL",
+    "sprayerComponentId": "CMP-SPR-IVSL-18-415-02",
+    "ringComponentId": "LOCAL-DIVA46-TASSEL-RING-IVYSL",
+    "bodyId": "diva-46ml-18-415",
+    "plateKey": "diva-46ml-18-415|Clear",
+    "source": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/64. GBDiva46AnSpTslIvySlIvyRng.psd",
+    "sourceSha256": "a5a27c9e0c0f2dda1a9049b16f8275ba7f413493ecddfe6b7544d565348cf7ce",
+    "layerName": "Layer 42",
+    "sha256": "ad0f41d01009a5a968e3c7d6f3af52083f9decfe4f9c4ddfeeba6963278d30fe",
+    "bytes": 133330,
+    "url": "/local-media/diva-rings/ivysl-ad0f41d01009a5a968e3c7d6f3af52083f9decfe4f9c4ddfeeba6963278d30fe.png",
+    "width": 661,
+    "height": 170,
+    "pxPerMm": 13.4032,
+    "anchor": {
+      "x": 329,
+      "y": -284
+    },
+    "crop": {
+      "left": 928,
+      "top": 740
+    },
+    "sourceBodyOverlapMaxDelta": 255,
+    "sourceBodyHiddenNeckCropPx": 35,
+    "sourceGlass": {
+      "rim": 482,
+      "foot": 1711,
+      "axisX": 1257,
+      "barrelPx": 534
+    },
+    "recoveredRimY": 456,
+    "expectedPlate": {
+      "anchors": {
+        "axisX": 622,
+        "baselineY": 2097,
+        "seatY": 146,
+        "shoulderY": 563
+      },
+      "approved": true,
+      "bodyId": "diva-46ml-18-415",
+      "glass": "Clear",
+      "height": 2192,
+      "plateKey": "diva-46ml-18-415|Clear",
+      "pxPerMm": 20.8364,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/diva-46ml-18-415/clear/e1f942bf4757cf6dae7d9e073b5ff9769d90db384a899ef6b4ab95d7773cd493.png",
+      "width": 1248
+    }
+  },
+  {
+    "websiteSku": "GBDiva46AnSpTslRedRng",
+    "graceSku": "GB-DVA-CLR-46ML-T-09",
+    "donorGraceSku": "GB-DVA-CLR-46ML-AST-RED",
+    "sprayerComponentId": "CMP-SPR-RED-18-415-02",
+    "ringComponentId": "LOCAL-DIVA46-TASSEL-RING-RED",
+    "bodyId": "diva-46ml-18-415",
+    "plateKey": "diva-46ml-18-415|Clear",
+    "source": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/69. GBDiva46AnSpTslRedRedRng.psd",
+    "sourceSha256": "fe9fc8dd56278ffe085299e89e5005201e0e1eae9bccfaa4917141dfd29074a6",
+    "layerName": "Redrng",
+    "sha256": "37ab13cc6d5f1a0d07895a722c7132dc737af1577ac04e622dadf463794a0d61",
+    "bytes": 137959,
+    "url": "/local-media/diva-rings/red-37ab13cc6d5f1a0d07895a722c7132dc737af1577ac04e622dadf463794a0d61.png",
+    "width": 661,
+    "height": 171,
+    "pxPerMm": 13.4032,
+    "anchor": {
+      "x": 332,
+      "y": -283
+    },
+    "crop": {
+      "left": 928,
+      "top": 689
+    },
+    "sourceBodyOverlapMaxDelta": 255,
+    "sourceBodyHiddenNeckCropPx": 35,
+    "sourceGlass": {
+      "rim": 432,
+      "foot": 1661,
+      "axisX": 1260,
+      "barrelPx": 534
+    },
+    "recoveredRimY": 406,
+    "expectedPlate": {
+      "anchors": {
+        "axisX": 622,
+        "baselineY": 2097,
+        "seatY": 146,
+        "shoulderY": 563
+      },
+      "approved": true,
+      "bodyId": "diva-46ml-18-415",
+      "glass": "Clear",
+      "height": 2192,
+      "plateKey": "diva-46ml-18-415|Clear",
+      "pxPerMm": 20.8364,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/diva-46ml-18-415/clear/e1f942bf4757cf6dae7d9e073b5ff9769d90db384a899ef6b4ab95d7773cd493.png",
+      "width": 1248
+    }
+  },
+  {
+    "websiteSku": "GBDiva46AnSpTslWhtRng",
+    "graceSku": "GB-DVA-CLR-46ML-T-10",
+    "donorGraceSku": "GB-DVA-CLR-46ML-AST-WHT",
+    "sprayerComponentId": "CMP-SPR-WHT-18-415-02",
+    "ringComponentId": "LOCAL-DIVA46-TASSEL-RING-WHT",
+    "bodyId": "diva-46ml-18-415",
+    "plateKey": "diva-46ml-18-415|Clear",
+    "source": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/64. GBDiva46AnSpTslWhtRng.psd",
+    "sourceSha256": "5a64a39a3bbec1203d6573a74bfe2d7e92700e39a3bd90a885ac4cc84a496feb",
+    "layerName": "Layer 43",
+    "sha256": "cb71e83b9d0607021e1a993481e9a209810ad440fc580090857fdbb566f7899e",
+    "bytes": 133341,
+    "url": "/local-media/diva-rings/wht-cb71e83b9d0607021e1a993481e9a209810ad440fc580090857fdbb566f7899e.png",
+    "width": 661,
+    "height": 170,
+    "pxPerMm": 13.4032,
+    "anchor": {
+      "x": 330,
+      "y": -284
+    },
+    "crop": {
+      "left": 927,
+      "top": 750
+    },
+    "sourceBodyOverlapMaxDelta": 255,
+    "sourceBodyHiddenNeckCropPx": 35,
+    "sourceGlass": {
+      "rim": 492,
+      "foot": 1721,
+      "axisX": 1257,
+      "barrelPx": 534
+    },
+    "recoveredRimY": 466,
+    "expectedPlate": {
+      "anchors": {
+        "axisX": 622,
+        "baselineY": 2097,
+        "seatY": 146,
+        "shoulderY": 563
+      },
+      "approved": true,
+      "bodyId": "diva-46ml-18-415",
+      "glass": "Clear",
+      "height": 2192,
+      "plateKey": "diva-46ml-18-415|Clear",
+      "pxPerMm": 20.8364,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/diva-46ml-18-415/clear/e1f942bf4757cf6dae7d9e073b5ff9769d90db384a899ef6b4ab95d7773cd493.png",
+      "width": 1248
+    }
+  },
+  {
+    "websiteSku": "GBDiva46AnSpBlkRng",
+    "graceSku": "GB-DVA-CLR-46ML-T-01",
+    "donorGraceSku": "GB-DVA-CLR-46ML-ASP-BLK",
+    "sprayerComponentId": "CMP-SPR-BKSL-18-415-02",
+    "ringComponentId": "LOCAL-DIVA46-RING-GBDiva46AnSpBlkRng",
+    "bodyId": "diva-46ml-18-415",
+    "plateKey": "diva-46ml-18-415|Clear",
+    "source": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/60. GBDiva46AnSpBlkBlkRng.psd",
+    "sourceSha256": "309b2419e266107274362ab759576201e0b892aa9018307c41e6f7a36e049633",
+    "layerName": "Layer 35",
+    "bodyLayer": "Layer 1",
+    "sha256": "cdb67479d1f1c4e197426596efd70f547c555046b6d355f432ca739373336a47",
+    "bytes": 133667,
+    "url": "/local-media/diva-rings/GBDiva46AnSpBlkRng-cdb67479d1f1c4e197426596efd70f547c555046b6d355f432ca739373336a47.png",
+    "width": 661,
+    "height": 170,
+    "pxPerMm": 13.4032,
+    "anchor": {
+      "x": 332.0,
+      "y": -283
+    },
+    "crop": {
+      "left": 457,
+      "top": 720
+    },
+    "sourceGlass": {
+      "rim": 437,
+      "foot": 1692,
+      "axisX": 789.0,
+      "barrelPx": 543.0
+    },
+    "expectedPlate": {
+      "anchors": {
+        "axisX": 622,
+        "baselineY": 2097,
+        "seatY": 146,
+        "shoulderY": 563
+      },
+      "approved": true,
+      "bodyId": "diva-46ml-18-415",
+      "glass": "Clear",
+      "height": 2192,
+      "plateKey": "diva-46ml-18-415|Clear",
+      "pxPerMm": 20.8364,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/diva-46ml-18-415/clear/e1f942bf4757cf6dae7d9e073b5ff9769d90db384a899ef6b4ab95d7773cd493.png",
+      "width": 1248
+    },
+    "expectedSprayer": {
+      "approved": true,
+      "componentId": "CMP-SPR-BKSL-18-415-02",
+      "layers": [
+        {
+          "anchor": {
+            "x": 789.5,
+            "y": 396
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 624,
+          "pxPerMm": 12.8025,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-BKSL-18-415-02/sprayer-56014b6a9c88597dae905be7f316d6e959c759b6049fa902e038cf9ce2c4c82b.png",
+          "width": 931,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 165.5,
+            "y": -216
+          },
+          "approved": true,
+          "explodeIndex": 0,
+          "height": 1079,
+          "pxPerMm": 12.8025,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-BKSL-18-415-02/diptube-24a0336827af08588ef9607a78314cb32c7bca7420aa606553d39e63863c8244.png",
+          "width": 307,
+          "z": "behind-body"
+        }
+      ],
+      "type": "vintage-bulb-sprayer"
+    }
+  },
+  {
+    "websiteSku": "GBDiva46AnSpIvySlRng",
+    "graceSku": "GB-DVA-CLR-46ML-T-02",
+    "donorGraceSku": "GB-DVA-CLR-46ML-ASP-IVSL",
+    "sprayerComponentId": "CMP-SPR-IVSL-18-415-01",
+    "ringComponentId": "LOCAL-DIVA46-RING-GBDiva46AnSpIvySlRng",
+    "bodyId": "diva-46ml-18-415",
+    "plateKey": "diva-46ml-18-415|Clear",
+    "source": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/62. GBDiva46AnSpIvySlIvyRng.psd",
+    "sourceSha256": "0cbdb36625b3968018e7be0476b97b98ff05be606d9dbd248632ecbbc50337e3",
+    "layerName": "Layer 35",
+    "bodyLayer": "Layer 34",
+    "sha256": "8398946219234f07d76f425f031a7dd9ec42b881f80968fcbeefc526bc79880a",
+    "bytes": 135013,
+    "url": "/local-media/diva-rings/GBDiva46AnSpIvySlRng-8398946219234f07d76f425f031a7dd9ec42b881f80968fcbeefc526bc79880a.png",
+    "width": 660,
+    "height": 170,
+    "pxPerMm": 13.4032,
+    "anchor": {
+      "x": 333.0,
+      "y": -277
+    },
+    "crop": {
+      "left": 456,
+      "top": 714
+    },
+    "sourceGlass": {
+      "rim": 437,
+      "foot": 1692,
+      "axisX": 789.0,
+      "barrelPx": 543.0
+    },
+    "expectedPlate": {
+      "anchors": {
+        "axisX": 622,
+        "baselineY": 2097,
+        "seatY": 146,
+        "shoulderY": 563
+      },
+      "approved": true,
+      "bodyId": "diva-46ml-18-415",
+      "glass": "Clear",
+      "height": 2192,
+      "plateKey": "diva-46ml-18-415|Clear",
+      "pxPerMm": 20.8364,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/diva-46ml-18-415/clear/e1f942bf4757cf6dae7d9e073b5ff9769d90db384a899ef6b4ab95d7773cd493.png",
+      "width": 1248
+    },
+    "expectedSprayer": {
+      "approved": true,
+      "componentId": "CMP-SPR-IVSL-18-415-01",
+      "layers": [
+        {
+          "anchor": {
+            "x": 756.5,
+            "y": 365
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 594,
+          "pxPerMm": 12.8025,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-IVSL-18-415-01/sprayer-52d56b0edf6a752c7686ab3caefd1a5aa3c1f60e5f39ce1197b090b127412ff0.png",
+          "width": 895,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 160.5,
+            "y": -217
+          },
+          "approved": true,
+          "explodeIndex": 0,
+          "height": 1078,
+          "pxPerMm": 12.8025,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-IVSL-18-415-01/diptube-96f18e9202029effdeed49f523d72d9ecf27eae6ccc7a3328f65af45e273ca45.png",
+          "width": 241,
+          "z": "behind-body"
+        }
+      ],
+      "type": "vintage-bulb-sprayer"
+    }
+  },
+  {
+    "websiteSku": "GBDiva46AnSpWhtRng",
+    "graceSku": "GB-DVA-CLR-46ML-T-11",
+    "donorGraceSku": "GB-DVA-CLR-46ML-ASP-WHT",
+    "sprayerComponentId": "CMP-SPR-WHT-18-415-01",
+    "ringComponentId": "LOCAL-DIVA46-RING-GBDiva46AnSpWhtRng",
+    "bodyId": "diva-46ml-18-415",
+    "plateKey": "diva-46ml-18-415|Clear",
+    "source": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/63. GBDiva46AnSpWhtRng.psd",
+    "sourceSha256": "64f7cc63d4f6a662d878d6017dbe96f3595fd89d6133e5dcb66e41131bafc827",
+    "layerName": "Layer 38",
+    "bodyLayer": "Layer 37",
+    "sha256": "8398946219234f07d76f425f031a7dd9ec42b881f80968fcbeefc526bc79880a",
+    "bytes": 135013,
+    "url": "/local-media/diva-rings/GBDiva46AnSpWhtRng-8398946219234f07d76f425f031a7dd9ec42b881f80968fcbeefc526bc79880a.png",
+    "width": 660,
+    "height": 170,
+    "pxPerMm": 13.4032,
+    "anchor": {
+      "x": 333.0,
+      "y": -277
+    },
+    "crop": {
+      "left": 456,
+      "top": 714
+    },
+    "sourceGlass": {
+      "rim": 437,
+      "foot": 1692,
+      "axisX": 789.0,
+      "barrelPx": 543.0
+    },
+    "expectedPlate": {
+      "anchors": {
+        "axisX": 622,
+        "baselineY": 2097,
+        "seatY": 146,
+        "shoulderY": 563
+      },
+      "approved": true,
+      "bodyId": "diva-46ml-18-415",
+      "glass": "Clear",
+      "height": 2192,
+      "plateKey": "diva-46ml-18-415|Clear",
+      "pxPerMm": 20.8364,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/diva-46ml-18-415/clear/e1f942bf4757cf6dae7d9e073b5ff9769d90db384a899ef6b4ab95d7773cd493.png",
+      "width": 1248
+    },
+    "expectedSprayer": {
+      "approved": true,
+      "componentId": "CMP-SPR-WHT-18-415-01",
+      "layers": [
+        {
+          "anchor": {
+            "x": 791.5,
+            "y": 395
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 621,
+          "pxPerMm": 12.8025,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-WHT-18-415-01/sprayer-dc778d02391bae45222b728542eec2cbaba5d42d7d96c0d8ec4e7fa2680c5d33.png",
+          "width": 935,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 164.5,
+            "y": -214
+          },
+          "approved": true,
+          "explodeIndex": 0,
+          "height": 1081,
+          "pxPerMm": 12.8025,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-WHT-18-415-01/diptube-347ab1692692da32b086c29d77a22dfecfa87ca9c975b10b8f3c7be98bcde119.png",
+          "width": 308,
+          "z": "behind-body"
+        }
+      ],
+      "type": "vintage-bulb-sprayer"
+    }
+  },
+  {
+    "websiteSku": "GBDiva46AnSpLvnRng",
+    "graceSku": "GB-DVA-CLR-46ML-T-04",
+    "donorGraceSku": "GB-DVA-CLR-46ML-T-03",
+    "sprayerComponentId": "CMP-SPR-LVN-18-415-01",
+    "ringComponentId": "LOCAL-DIVA46-RING-GBDiva46AnSpLvnRng",
+    "bodyId": "diva-46ml-18-415",
+    "plateKey": "diva-46ml-18-415|Clear",
+    "source": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/66. GBDiva46AnSpLvnLvnRng.psd",
+    "sourceSha256": "ce4310e95fab147e000efba6413471d9974ee9cd64faaa7870a481f654e40ed9",
+    "layerName": "Layer 30",
+    "bodyLayer": "Layer 1",
+    "sha256": "660bc4181cac48161489cab494b53ef153260723b01f1c1be2b8118725e3798f",
+    "bytes": 136271,
+    "url": "/local-media/diva-rings/GBDiva46AnSpLvnRng-660bc4181cac48161489cab494b53ef153260723b01f1c1be2b8118725e3798f.png",
+    "width": 659,
+    "height": 171,
+    "pxPerMm": 13.4032,
+    "anchor": {
+      "x": 332.0,
+      "y": -277
+    },
+    "crop": {
+      "left": 457,
+      "top": 714
+    },
+    "sourceGlass": {
+      "rim": 437,
+      "foot": 1692,
+      "axisX": 789.0,
+      "barrelPx": 543.0
+    },
+    "expectedPlate": {
+      "anchors": {
+        "axisX": 622,
+        "baselineY": 2097,
+        "seatY": 146,
+        "shoulderY": 563
+      },
+      "approved": true,
+      "bodyId": "diva-46ml-18-415",
+      "glass": "Clear",
+      "height": 2192,
+      "plateKey": "diva-46ml-18-415|Clear",
+      "pxPerMm": 20.8364,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/diva-46ml-18-415/clear/e1f942bf4757cf6dae7d9e073b5ff9769d90db384a899ef6b4ab95d7773cd493.png",
+      "width": 1248
+    },
+    "expectedSprayer": {
+      "approved": true,
+      "componentId": "CMP-SPR-LVN-18-415-01",
+      "layers": [
+        {
+          "anchor": {
+            "x": 760.5,
+            "y": 382
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 615,
+          "pxPerMm": 12.8025,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-LVN-18-415-01/sprayer-fb3882c11bede6f49e7741c52e8376b1aa7ecd94fa2f910e52eaa98ec005ece4.png",
+          "width": 909,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 165.5,
+            "y": -221
+          },
+          "approved": true,
+          "explodeIndex": 0,
+          "height": 1074,
+          "pxPerMm": 12.8025,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-LVN-18-415-01/diptube-1143c9c604151cceb939ac6486824ee4b4c787400c70f558236a252d3b6e3616.png",
+          "width": 218,
+          "z": "behind-body"
+        }
+      ],
+      "type": "vintage-bulb-sprayer"
+    }
+  },
+  {
+    "websiteSku": "GBDiva46AnSpTslLvnRng",
+    "graceSku": "GB-DVA-CLR-46ML-T-08",
+    "donorGraceSku": "GB-DVA-CLR-46ML-AST-LVN",
+    "sprayerComponentId": "CMP-SPR-LVN-18-415-02",
+    "ringComponentId": "LOCAL-DIVA46-RING-GBDiva46AnSpTslLvnRng",
+    "bodyId": "diva-46ml-18-415",
+    "plateKey": "diva-46ml-18-415|Clear",
+    "source": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/67. GBDiva46AnSpTslLvnLvnRng.psd",
+    "sourceSha256": "2dc46ece56a431140e4a064b7e3e93a410126092e24892f6daf202bdac8309e0",
+    "layerName": "Layer 39",
+    "bodyLayer": "Layer 1",
+    "sha256": "769d8d445b8a9504e6f855ed1b46b7fe2e9db98dd848d623dc3051220502139a",
+    "bytes": 136213,
+    "url": "/local-media/diva-rings/GBDiva46AnSpTslLvnRng-769d8d445b8a9504e6f855ed1b46b7fe2e9db98dd848d623dc3051220502139a.png",
+    "width": 659,
+    "height": 171,
+    "pxPerMm": 13.4032,
+    "anchor": {
+      "x": 330.0,
+      "y": -283
+    },
+    "crop": {
+      "left": 954,
+      "top": 734
+    },
+    "sourceGlass": {
+      "rim": 451,
+      "foot": 1706,
+      "axisX": 1284.0,
+      "barrelPx": 543.0
+    },
+    "expectedPlate": {
+      "anchors": {
+        "axisX": 622,
+        "baselineY": 2097,
+        "seatY": 146,
+        "shoulderY": 563
+      },
+      "approved": true,
+      "bodyId": "diva-46ml-18-415",
+      "glass": "Clear",
+      "height": 2192,
+      "plateKey": "diva-46ml-18-415|Clear",
+      "pxPerMm": 20.8364,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/diva-46ml-18-415/clear/e1f942bf4757cf6dae7d9e073b5ff9769d90db384a899ef6b4ab95d7773cd493.png",
+      "width": 1248
+    },
+    "expectedSprayer": {
+      "approved": true,
+      "componentId": "CMP-SPR-LVN-18-415-02",
+      "layers": [
+        {
+          "anchor": {
+            "x": 1446.5,
+            "y": 313
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 1739,
+          "pxPerMm": 12.8025,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-LVN-18-415-02/sprayer-f7d88c6ee47c769a088b231b5df53883c7ec262ec08badeed0633db1771c8b3b.png",
+          "width": 1595,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 169.5,
+            "y": -209
+          },
+          "approved": true,
+          "explodeIndex": 0,
+          "height": 1086,
+          "pxPerMm": 12.8025,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-LVN-18-415-02/diptube-a2a023ea66d9ec4c9e95efadf3a1b0b4bcad90f9881292d8703136d0f7050c4a.png",
+          "width": 317,
+          "z": "behind-body"
+        }
+      ],
+      "type": "tassel-bulb-sprayer"
+    }
+  },
+  {
+    "websiteSku": "GBDiva46AnSpRedRng",
+    "graceSku": "GB-DVA-CLR-46ML-T-05",
+    "donorGraceSku": "GB-DVA-CLR-46ML-ASP-RED",
+    "sprayerComponentId": "CMP-SPR-RED-18-415-01",
+    "ringComponentId": "LOCAL-DIVA46-RING-GBDiva46AnSpRedRng",
+    "bodyId": "diva-46ml-18-415",
+    "plateKey": "diva-46ml-18-415|Clear",
+    "source": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/68. GBDiva46AnSpRedRedRng.psd",
+    "sourceSha256": "d3c93848a6a7d8b85723b142568cd727ffd1bdbcfc559a37c0b930dab7a84918",
+    "layerName": "Redrng",
+    "bodyLayer": "Layer 1",
+    "sha256": "845491f35e5f4f44f56669d9910318df08977e74bad75ceac914dd03cdf3909e",
+    "bytes": 138392,
+    "url": "/local-media/diva-rings/GBDiva46AnSpRedRng-845491f35e5f4f44f56669d9910318df08977e74bad75ceac914dd03cdf3909e.png",
+    "width": 661,
+    "height": 171,
+    "pxPerMm": 13.4032,
+    "anchor": {
+      "x": 334.0,
+      "y": -284
+    },
+    "crop": {
+      "left": 455,
+      "top": 721
+    },
+    "sourceGlass": {
+      "rim": 437,
+      "foot": 1692,
+      "axisX": 789.0,
+      "barrelPx": 543.0
+    },
+    "expectedPlate": {
+      "anchors": {
+        "axisX": 622,
+        "baselineY": 2097,
+        "seatY": 146,
+        "shoulderY": 563
+      },
+      "approved": true,
+      "bodyId": "diva-46ml-18-415",
+      "glass": "Clear",
+      "height": 2192,
+      "plateKey": "diva-46ml-18-415|Clear",
+      "pxPerMm": 20.8364,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/diva-46ml-18-415/clear/e1f942bf4757cf6dae7d9e073b5ff9769d90db384a899ef6b4ab95d7773cd493.png",
+      "width": 1248
+    },
+    "expectedSprayer": {
+      "approved": true,
+      "componentId": "CMP-SPR-RED-18-415-01",
+      "layers": [
+        {
+          "anchor": {
+            "x": 790.5,
+            "y": 402
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 630,
+          "pxPerMm": 12.8025,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-RED-18-415-01/sprayer-de409ea9e8d475eb4fa76257d368108c228a606f892cfc5089d80386b9ce8dca.png",
+          "width": 937,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 165.5,
+            "y": -216
+          },
+          "approved": true,
+          "explodeIndex": 0,
+          "height": 1079,
+          "pxPerMm": 12.8025,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-RED-18-415-01/diptube-080fab704543ae3f1c2791e4cb635300821c7e62c5b58f524a24a693560f4f1e.png",
+          "width": 312,
+          "z": "behind-body"
+        }
+      ],
+      "type": "vintage-bulb-sprayer"
+    }
+  }
+]

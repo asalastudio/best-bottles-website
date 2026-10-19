@@ -1,0 +1,52 @@
+[
+  {
+    "id": "BBM-PIPETTE-SEATING-001",
+    "title": "Front pipette incorrectly lifts the dropper head out of view",
+    "kind": "shared_composition",
+    "certainty": "confirmed_local_integration_defect",
+    "websiteSkus": [
+      "GBBstn15BlkDrp",
+      "GBBstn15BlkDrpGlTrim",
+      "GBBstn15BlkDrprSlTrim",
+      "GBBstn15WhtDrp",
+      "GBBstn15WhtDrpGlTrim",
+      "GBBstn15WhtDrprSlTrim"
+    ],
+    "recordIds": [
+      "kd7ed9dfgkccbz1b39e6eqxhr982b3xz"
+    ],
+    "affectedSkuCount": 6,
+    "configurationIds": [],
+    "affectedConfigurationCount": 0,
+    "candidateConfigurationCount": 6,
+    "surfaces": [
+      "offline register composition",
+      "PDP and Builder after candidate integration"
+    ],
+    "reproduction": "Compose a clear Boston15 extraction with its photographed front pipette. shoulderLiftMm uses the pipette tip as closure reach, lifting the hardware above the canvas. Reproduced on all six clear dropper source candidates.",
+    "evidence": [
+      "/Users/jordanrichter/Documents/Codex/2026-10-01/users-jordanrichter-projects-clients-nemat-international/outputs/media-completion-2026-10-12/source-recovery-2026-10-13/source-assemblies/before-contact-sheet.jpg",
+      "/Users/jordanrichter/Documents/Codex/2026-10-01/users-jordanrichter-projects-clients-nemat-international/outputs/media-completion-2026-10-12/source-recovery-2026-10-13/source-assemblies/contact-sheet.jpg",
+      "/Users/jordanrichter/Documents/Codex/2026-10-01/users-jordanrichter-projects-clients-nemat-international/outputs/media-completion-2026-10-12/source-recovery-2026-10-13/pipette-before.log",
+      "/Users/jordanrichter/Documents/Codex/2026-10-01/users-jordanrichter-projects-clients-nemat-international/outputs/media-completion-2026-10-12/source-recovery-2026-10-13/pipette-after.log"
+    ],
+    "proposedRepair": "Exclude pipette tips from the closure reach calculation while preserving their movement with the attached front closure.",
+    "acceptanceCriteria": [
+      "Dropper head placement unchanged when its internal pipette is added",
+      "All six clear candidates retain their heads in offline CAP ON output",
+      "Amber, cobalt and short-cap placements unchanged",
+      "Verify supported PDP and Builder views after catalogue and artwork approval"
+    ],
+    "linear": [],
+    "implementation": "built_locally_regression_verified",
+    "browserVerification": "blocked_by_saved_permission",
+    "visualApproval": "pending",
+    "prCi": "local_46_tests_pass",
+    "merged": "not_merged",
+    "assetsPublished": "not_published",
+    "referencesLoaded": "not_loaded",
+    "deployed": "not_deployed",
+    "verifiedLive": false,
+    "scopeNote": "6 source candidates; 1 matching records in saved catalogue. No current served configuration is claimed broken by these unshipped layers."
+  }
+]

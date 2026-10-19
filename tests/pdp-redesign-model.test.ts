@@ -88,6 +88,27 @@ describe("picks", () => {
         expect(capOptions(VARIANTS, "plastic").map((option) => option.id)).toEqual(["black-with-dots", "shiny-black"]);
     });
 
+    it("keeps all four Diva jeweled-ring choices distinct from their plain tassel siblings", () => {
+        const finishes = [
+            ["Blk", "Black"], ["IvySl", "Ivory Silver"], ["Red", "Red"], ["Wht", "White"],
+        ];
+        const rows = finishes.flatMap(([suffix, color]) => [false, true].map(ring => variant({
+            websiteSku: `GBDiva46AnSpTsl${suffix}${ring ? "Rng" : ""}`,
+            graceSku: `${suffix}-${ring}`, applicator: "Vintage Bulb Sprayer with Tassel",
+            capColor: ring ? "Clear" : color, capStyle: ring ? "Tall" : "Spray",
+            itemDescription: `Diva bottle with shiny silver collar cap${ring ? " and jeweled silver ring" : ""}.`,
+        })));
+        const options = capOptions(rows, null);
+        expect(new Set(options.map(o => o.id)).size).toBe(8);
+        for (const row of rows) {
+            const picks = derivePicks(rows, GROUP, { sku: row.websiteSku });
+            expect(resolveVariant(rows, picks)?.websiteSku).toBe(row.websiteSku);
+            const query = new URLSearchParams(pickQuery(picks, []));
+            expect(resolveVariant(rows, derivePicks(rows, GROUP, { cap: query.get("cap") }))?.websiteSku).toBe(row.websiteSku);
+            if (row.websiteSku.endsWith("Rng")) expect(options.find(o => o.id === picks.cap)?.name).toContain("Jeweled Ring");
+        }
+    });
+
     it("hides the roller toggle when a group sells one material", () => {
         expect(rollerOptions(VARIANTS.filter((row) => /Mtl/.test(row.websiteSku)))).toEqual([]);
     });

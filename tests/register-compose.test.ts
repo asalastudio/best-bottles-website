@@ -82,6 +82,23 @@ describe("register compose: placement", () => {
         expect(shoulderLiftMm(shouldered, [{ ...deep, usage: "exploded" }])).toBe(0);
     });
 
+    it("keeps a clear-glass dropper head seated when its photographed pipette extends into the bottle", () => {
+        const bottle: PlateGeometry = { width: 300, height: 900, pxPerMm: 10, anchors: { axisX: 150, seatY: 50, shoulderY: 200, baselineY: 800 } };
+        const head: LayerGeometry = { slot: "fitment", z: "front", explodeIndex: 1, width: 220, height: 300, pxPerMm: 10, anchor: { x: 110, y: 200 }, solidBottomY: 295 };
+        const pipette: LayerGeometry = { slot: "pipette", z: "front", explodeIndex: 0, width: 30, height: 700, pxPerMm: 10, anchor: { x: 15, y: 0 }, solidBottomY: 690 };
+        const localFrame: Frame = { width: 1000, height: 1100, axisX: 500, seatY: 300, pxPerMm: 10 };
+        const alone = compose(bottle, [head], localFrame);
+        const together = compose(bottle, [head, pipette], localFrame);
+        expect(shoulderLiftMm(bottle, [head, pipette])).toBe(0);
+        expect(together.find(p => p.source === head)?.y).toBe(alone.find(p => p.source === head)?.y);
+        // A photographed front pipette still travels with its attached head when
+        // an explicit seating correction moves the whole closure.
+        const lowered = compose(bottle, [head, pipette], localFrame, { closureDropMm: 1.5 });
+        for (const part of [head, pipette]) {
+            expect(lowered.find(p => p.source === part)!.y - together.find(p => p.source === part)!.y).toBeCloseTo(15, 6);
+        }
+    });
+
     it("lowers the closure onto the shoulder and leaves the insert, dip tube and exploded parts where they are (Jordan 2026-09-30)", () => {
         const collar: LayerGeometry = { ...cap, slot: "collar", explodeIndex: 1 };
         const tube: LayerGeometry = { ...cap, slot: "diptube", explodeIndex: 5 };
@@ -92,6 +109,21 @@ describe("register compose: placement", () => {
         expect(at(lowered, cap) - at(seated, cap)).toBeCloseTo(1.5 * frame.pxPerMm, 6);
         expect(at(lowered, collar) - at(seated, collar)).toBeCloseTo(1.5 * frame.pxPerMm, 6);
         for (const fixed of [tube, plug, roller]) expect(at(lowered, fixed)).toBeCloseTo(at(seated, fixed), 6);
+    });
+
+    it("keeps a ring on the glass: drawn first in front of it, never lifted, lowered or counted as the closure's reach (Diva 46, 2026-10-01)", () => {
+        const shouldered: PlateGeometry = { ...plate, anchors: { ...plate.anchors, shoulderY: plate.anchors.seatY + 13 * plate.pxPerMm } };
+        const deep: LayerGeometry = { ...cap, slot: "sprayer", pxPerMm: 10, anchor: { x: cap.anchor.x, y: 50 }, solidBottomY: 200 };   // 2 mm past the shoulder
+        // the band reaches 30 mm under the rim, far past the shoulder, and must not lift the sprayer further
+        const ring: LayerGeometry = { slot: "ring", z: "front", explodeIndex: 0, width: 660, height: 170, pxPerMm: 10, anchor: { x: 330, y: -200 }, solidBottomY: 160 };
+        expect(shoulderLiftMm(shouldered, [deep, ring])).toBeCloseTo(shoulderLiftMm(shouldered, [deep]), 6);
+        expect(orderLayers([deep, ring]).front.map((l) => l.slot)).toEqual(["ring", "sprayer"]);
+        const at = (placed: ReturnType<typeof compose>, layer: LayerGeometry) => placed.find((p) => p.source === layer)!;
+        for (const placed of [compose(shouldered, [deep, ring], frame), compose(shouldered, [deep, ring], frame, { closureDropMm: 1.5 })]) {
+            const r = at(placed, ring);
+            expect(r.y + ring.anchor.y * r.scale).toBeCloseTo(frame.seatY, 6);   // exactly where the photo puts it
+            expect(r.zIndex).toBeLessThan(at(placed, deep).zIndex);
+        }
     });
 
     it("expresses a placement as percentages of the stage box", () => {

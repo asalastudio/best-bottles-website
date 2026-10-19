@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { availableViews, closurePart, effectiveView, partCrop, stageLayout, type KitLike } from "@/lib/products/pdp-redesign/stage";
+import { availableViews, stageViewLabel, closurePart, effectiveView, partCrop, stageLayout, type KitLike } from "@/lib/products/pdp-redesign/stage";
 
 /** The published cobalt 9 ml metal roll-on kit (GBCylBlu9MtlRollBlkDot on dev), parts as stored. */
 const KIT: KitLike = {
@@ -23,9 +23,17 @@ describe("views", () => {
 
     it("keeps assembled closures assembled and never explodes a Boston roller", () => {
         const dropper = { ...CONTEXT, applicator: "Dropper" };
+        expect(availableViews(KIT, dropper)).toEqual(["capon"]);
         expect(effectiveView("sidecar", KIT, dropper)).toBe("capon");
         expect(effectiveView("exploded", KIT, dropper)).toBe("capon");
         expect(availableViews(KIT, { ...CONTEXT, family: "Boston Round" })).toEqual(["sidecar", "capon"]);
+    });
+});
+
+describe("fallback view labels", () => {
+    it("identifies a flat photograph and restores the sidecar label for a real kit", () => {
+        expect(stageViewLabel("sidecar", null)).toBe("PHOTO");
+        expect(stageViewLabel("sidecar", KIT)).toBe("SIDECAR");
     });
 });
 

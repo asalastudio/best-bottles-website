@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState, type CSSProperties, type ReactNode } from "react";
+import { useCallback, useEffect, useId, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import Image from "next/image";
 import { dropperGlassStartY } from "@/lib/bottle-builder/dropper-compositing";
 import exposedSprayers from "@/lib/bottle-builder/exposed-sprayers.generated.json";
@@ -10,6 +10,8 @@ import { layerCropStyleForPart, layerTransform, previewFrame } from "@/lib/bottl
 import { isOptimizableImageUrl, isRegisterAssetUrl } from "@/lib/products/optimizable-image";
 import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/products/register-image";
 import { BEHIND_GLASS_SLOTS } from "@/lib/products/pdp-redesign/stage";
+import { sourceTubeMaterialFilter } from "@/lib/register/source-tube-material";
+import { throughGlassAppearance } from '@/lib/register/through-glass';
 
 /** Clear glass and the clear dip tube take the stage colour. A published dropper
  * part also contains its metal collar; multiplying a clear dropper assembly
@@ -24,7 +26,8 @@ function blendsIntoGlass(config: BuilderConfiguration, part: BuilderPart, stage:
     if (part.slot === "pipette") return config.color !== "Clear";
     // The shaft and tube cut from a catalogue hero (src/lib/register/dip-tubes.ts) are the hero's own pixels, white shaft
     // included; multiplying would erase the shaft into the glass.
-    if (part.slot === "diptube" && part.image.url.startsWith("/images/register/tubes/")) return false;
+    if (part.slot === "diptube" && (part.image.url.startsWith("/images/register/tubes/")
+        || part.image.url.startsWith("/local-media/source-tubes/"))) return false;
     return config.color === "Clear" && (part.slot === "diptube"
         || (part.slot === "body" && (stage === "body" || config.fitment !== "Dropper" || splitDropper)));
 }
@@ -64,6 +67,30 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     // unavailable" up until the shopper picked something else. A layer that errors
     // is remounted once, which fetches it again; only a second error gives up.
     const [retriedUrls, setRetriedUrls] = useState<readonly string[]>([]);
+    const recoveredUrls = useRef(new Set<string>());
+    const retryFailedImage = useCallback(() => {
+        if (!failedUrl) return;
+        setRetriedUrls(list => list.filter(url => url !== failedUrl));
+        setFailedUrl(null);
+    }, [failedUrl]);
+    useEffect(() => {
+        if (!failedUrl) return;
+        // An immediate remount can fail again before a mobile connection has
+        // recovered. Allow one delayed recovery per asset, plus online/manual
+        // recovery, without retrying a genuinely missing asset indefinitely.
+        let timer: ReturnType<typeof setTimeout> | undefined;
+        if (!recoveredUrls.current.has(failedUrl) && navigator.onLine !== false) {
+            timer = setTimeout(() => {
+                recoveredUrls.current.add(failedUrl);
+                retryFailedImage();
+            }, 1500);
+        }
+        window.addEventListener("online", retryFailedImage);
+        return () => {
+            if (timer !== undefined) clearTimeout(timer);
+            window.removeEventListener("online", retryFailedImage);
+        };
+    }, [failedUrl, retryFailedImage]);
     const retryOrFail = (url: string) => {
         if (!retriedUrls.includes(url)) {
             setRetriedUrls(list => list.includes(url) ? list : [...list, url]);
@@ -101,8 +128,21 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
         ...(priority ? { fetchPriority: "high" as const } : {}),
     };
 
+    const unavailable = (canRetry: boolean) => <span data-builder-image-failure>
+        <span role="img" aria-label={label}>Image unavailable</span>
+        {/* Thumbnails live inside a button or radio label. They recover on the
+            timer/online event; a nested interactive control is invalid there. */}
+        {canRetry && !thumbnail && <button type="button" aria-label={`Try loading ${label} again`} onClick={event => {
+            // Chooser images sit inside selectable tiles; retrying the image
+            // must not select a different bottle or advance the Builder.
+            event.preventDefault();
+            event.stopPropagation();
+            retryFailedImage();
+        }}>Try again</button>}
+    </span>;
+
     if (!kit) {
-        if (!fallbackUrl || failedUrl === fallbackUrl) return <span role="img" aria-label={label}>Image unavailable</span>;
+        if (!fallbackUrl || failedUrl === fallbackUrl) return unavailable(Boolean(fallbackUrl));
         // The body or exact assembly keeps its registered frame while Next
         // delivers a display-sized copy instead of the source-resolution file.
         const dimensions = stage === "complete" ? { width: 1000, height: 1100 } : config.bodyImage ?? { width: 1000, height: 1100 };
@@ -112,7 +152,7 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
             onError={() => onLayerError(fallbackUrl)} style={{ width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", objectFit: "contain", objectPosition: "center", mixBlendMode: config.color === "Clear" && stage !== "complete" ? "multiply" : undefined, transform: expanded ? undefined : `scale(${Math.min(1, scale) * .88})`, transformOrigin: expanded ? "center center" : "bottom center" }} />);
     }
     const failed = layers.some(({ part }) => part.image.url === failedUrl);
-    if (!parts.length || failed) return <span role="img" aria-label={label}>Image unavailable</span>;
+    if (!parts.length || failed) return unavailable(failed);
     const { x, y, width, height } = !thumbnail && frameConfigurations?.length && layout
         ? builderBodyFrame(config, frameConfigurations, bodyReference, layout, { expanded })
         : previewFrame(layout?.anchors ?? kit.anchors, layers.map(layer => layer.bounds), { scale, thumbnail, expanded });
@@ -150,6 +190,17 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     return wrap(<svg role="img" aria-labelledby={titleId} viewBox={`${x} ${y} ${width} ${height}`} width="400" height="520" preserveAspectRatio="xMidYMid meet" style={{ display: "block", width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", margin: expanded ? "0 auto" : undefined, overflow: expanded ? "visible" : "hidden" }}>
         <title id={titleId}>{label}</title>
         {layers.map(({ part, transform }) => {
+            const through = throughGlassAppearance(part, showCover ? 'capon' : 'sidecar');
+            if (through) {
+                const clipId = `${titleId}-${part.slot}-cavity`;
+                return <g key={`${part.slot}:${part.componentId}:${attempt(part.image.url)}`} transform={layerTransform(transform, part)}
+                    style={{ opacity: through.opacity, mixBlendMode: through.blendMode }}>
+                    <defs><clipPath id={clipId}><polygon points={through.clipPoints} /></clipPath></defs>
+                    <image href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height}
+                        style={{ filter: sourceTubeMaterialFilter(part.image.url, showCover ? 'capon' : 'sidecar') }}
+                        clipPath={`url(#${clipId})`} onLoad={markLoaded} onError={() => onLayerError(part.image.url)} data-builder-layer={part.slot} />
+                </g>;
+            }
             const glassY = splitDropper ? dropperGlassStartY(part) : undefined;
             if (glassY !== undefined) {
                 const opaqueId = `${titleId}-${part.slot}-opaque`, glassId = `${titleId}-${part.slot}-glass`;
@@ -174,12 +225,12 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
                 return <g key={`${part.slot}-${part.componentId ?? ""}-${part.image.url}:${attempt(part.image.url)}`} transform={layerTransform(transform, part)}>
                     <defs><clipPath id={clipId} clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width={part.image.width} height={visible} /></clipPath></defs>
                     <image href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} x="0" y="0" clipPath={`url(#${clipId})`}
-                        style={{ mixBlendMode: blendsIntoGlass(config, part, stage, splitDropper) ? "multiply" : undefined }}
+                        style={{ filter: sourceTubeMaterialFilter(part.image.url, showCover ? 'capon' : 'sidecar'), mixBlendMode: blendsIntoGlass(config, part, stage, splitDropper) ? "multiply" : undefined }}
                         onLoad={markLoaded} onError={() => onLayerError(part.image.url)} data-builder-layer={part.slot} />
                 </g>;
             }
             return <image key={`${part.slot}-${part.componentId ?? ""}-${part.image.url}:${attempt(part.image.url)}`} href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} transform={layerTransform(transform, part)}
-                x="0" y="0" style={{ mixBlendMode: blendsIntoGlass(config, part, stage, splitDropper) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined }}
+                x="0" y="0" style={{ filter: sourceTubeMaterialFilter(part.image.url, showCover ? 'capon' : 'sidecar'), mixBlendMode: blendsIntoGlass(config, part, stage, splitDropper) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined }}
                 onLoad={markLoaded} onError={() => onLayerError(part.image.url)} data-builder-layer={part.slot} />;
         })}
 

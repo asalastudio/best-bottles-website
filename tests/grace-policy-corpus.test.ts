@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { gunzipSync } from "node:zlib";
 import { describe, expect, it, vi } from "vitest";
+vi.mock("server-only", () => ({}));
 import { FAQ_POLICY_ENTRIES, FAQ_POLICY_SOURCE, buildFaqPolicyPrompt } from "../src/lib/faqPolicy";
 import { buildSystemPrompt, SALES_FLOW, VOICE_MODE_ADDENDUM } from "../convex/gracePrompt";
 import { GRACE_TOOLS } from "../convex/graceToolDefs";

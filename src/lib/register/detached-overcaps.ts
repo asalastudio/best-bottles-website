@@ -134,7 +134,13 @@ export function detachedOvercap(part: {
     image: { url: string; width: number };
     box: { x: number; y: number; width: number; height: number };
 }): DetachedLook | null {
-    const entry = part.slot === "overcap" && part.componentId ? DETACHED_OVERCAPS[part.componentId] : undefined;
+    const localWhite: DetachedOvercap | undefined = process.env.NODE_ENV === 'development' && !process.env.VERCEL && part.componentId === 'LIB-18-415-WhtPumpClOvrCp' ? {
+        seatedLayerSha256: '13ae16acc25d08039dbbfdb29a3f2b7524633a1390b6548b03d4366621249835',
+        seatedCoverWidth: 356, coverWidth: 540, width: 561, height: 686,
+        url: '/local-media/empire-white-pump/empty-overcap-69af0e4a1bcf0063f72641fc1fd062f099ffd9046252b6286a28d8bc07026f9a.webp',
+        source: 'Preserved PR 341 empty-cover candidate; local review pending.',
+    } : undefined;
+    const entry = part.slot === "overcap" && part.componentId ? localWhite ?? DETACHED_OVERCAPS[part.componentId] : undefined;
     if (!entry || !part.image.url.includes(`${entry.seatedLayerSha256}.png`) || part.image.width <= 0) return null;
     const scale = (part.box.width / part.image.width) * (entry.seatedCoverWidth / entry.coverWidth);
     const width = entry.width * scale;
