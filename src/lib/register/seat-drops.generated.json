@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-09-30T20:01:15.217Z",
- "rule": "scripts/register/seats/audit-seats.ts --write on prod: each closure lowered by the background showing under its edge (> 0.2 mm) so the edge rests on the shoulder, but never so far that its top comes within 0.5 mm of the glass rim (limitedByRim); Boston rounds (20-400) and the short ribbed caps left alone (Jordan 2026-09-30); cylinder-9ml-17-415 re-measured on dev 2026-09-30 (a Swirl closure takes its Clear twin's gap)",
+ "generatedAt": "2026-10-01T12:55:38.353Z",
+ "rule": "scripts/register/seats/audit-seats.ts --write on prod: each closure lowered by the background showing under its edge (> 0.2 mm) so the edge rests on the shoulder, but never so far that its top comes within 0.5 mm of the glass rim (limitedByRim); Boston rounds (20-400) and the short ribbed caps left alone (Jordan 2026-09-30); cylinder-9ml-17-415 re-measured on dev 2026-09-30 (a Swirl closure takes its Clear twin's gap); LIB-18-415-WhtPumpClOvrCp measured from its local cut on prod plates 2026-10-01, before it was pushed",
  "entries": {
   "00554b66012bbb": {
    "dropMm": 0.38,
@@ -84,6 +84,12 @@
    "dropMm": 0.59,
    "plateKey": "grace-55ml-18-415|Clear",
    "closure": "CMP-SPR-MTGD-18-415-05",
+   "skus": 1
+  },
+  "02cd8a3300e0fa": {
+   "dropMm": 2.62,
+   "plateKey": "elegant-60ml-18-415|Frosted",
+   "closure": "LIB-18-415-WhtPumpClOvrCp",
    "skus": 1
   },
   "02ec0dd604e96d": {
@@ -1118,6 +1124,12 @@
    "closure": "CMP-SPR-MSLV-18-415-01",
    "skus": 1
   },
+  "2cc862c2004349": {
+   "dropMm": 0.38,
+   "plateKey": "sleek-100ml-18-415|Clear",
+   "closure": "LIB-18-415-WhtPumpClOvrCp",
+   "skus": 1
+  },
   "2cf2dcac0f4299": {
    "dropMm": 0.67,
    "plateKey": "tulip-5ml-13-415|Amber",
@@ -1188,6 +1200,12 @@
    "dropMm": 0.9,
    "plateKey": "round-128ml-18-415|Frosted",
    "closure": "CMP-CAP-WHT-18415-T",
+   "skus": 1
+  },
+  "30df5b200582bb": {
+   "dropMm": 1.49,
+   "plateKey": "empire-50ml-18-415|Clear",
+   "closure": "LIB-18-415-WhtPumpClOvrCp",
    "skus": 1
   },
   "311c74f61aea49": {
@@ -1314,6 +1332,12 @@
    "dropMm": 0.67,
    "plateKey": "round-128ml-18-415|Frosted",
    "closure": "CMP-CAP-MSLV-18415-T",
+   "skus": 1
+  },
+  "37b0d52a0683eb": {
+   "dropMm": 1.38,
+   "plateKey": "sleek-30ml-18-415|Clear",
+   "closure": "LIB-18-415-WhtPumpClOvrCp",
    "skus": 1
   },
   "37e7540a097223": {
@@ -1794,6 +1818,12 @@
    "dropMm": 0.45,
    "plateKey": "slim-30ml-18-415|Clear",
    "closure": "CMP-LPM-CPR-18-415",
+   "skus": 1
+  },
+  "4b39d6d600e5b7": {
+   "dropMm": 1.14,
+   "plateKey": "elegant-60ml-18-415|Clear",
+   "closure": "LIB-18-415-WhtPumpClOvrCp",
    "skus": 1
   },
   "4ba05c9a0518ef": {
@@ -3038,6 +3068,12 @@
    "closure": "LIB-13-415-MtlRollon+CMP-ROC-MCPR-13415",
    "skus": 2
   },
+  "7f12907207ed5f": {
+   "dropMm": 0.42,
+   "plateKey": "empire-100ml-18-415|Clear",
+   "closure": "LIB-18-415-WhtPumpClOvrCp",
+   "skus": 1
+  },
   "7f25bd2f1a97c0": {
    "dropMm": 0.28,
    "plateKey": "circle-100ml-18-415|Frosted",
@@ -3902,6 +3938,12 @@
    "closure": "CMP-CAP-SLV-13-415-02",
    "skus": 1
   },
+  "a368fd9f061db2": {
+   "dropMm": 1.06,
+   "plateKey": "sleek-50ml-18-415|Clear",
+   "closure": "LIB-18-415-WhtPumpClOvrCp",
+   "skus": 1
+  },
   "a36f80401ae3bd": {
    "dropMm": 1.87,
    "plateKey": "diva-46ml-18-415|Frosted",
@@ -4748,6 +4790,12 @@
    "closure": "CMP-SPR-MTGD-18-415-05",
    "skus": 1
   },
+  "c97e359b1d2ba0": {
+   "dropMm": 0.29,
+   "plateKey": "elegant-100ml-18-415|Clear",
+   "closure": "LIB-18-415-WhtPumpClOvrCp",
+   "skus": 1
+  },
   "c9fcd5cd1384ec": {
    "dropMm": 1.57,
    "plateKey": "round-128ml-18-415|Frosted",
@@ -4932,6 +4980,12 @@
    "dropMm": 0.77,
    "plateKey": "slim-50ml-18-415|Clear",
    "closure": "CMP-CAP-BRN-18415-LTR",
+   "skus": 1
+  },
+  "d133f3321ea1a1": {
+   "dropMm": 2.3,
+   "plateKey": "elegant-100ml-18-415|Frosted",
+   "closure": "LIB-18-415-WhtPumpClOvrCp",
    "skus": 1
   },
   "d14fcce90cd6f8": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29",
+  "generatedAt": "2026-10-01",
   "snapshot": "convex-products-2026-09-29.json.gz",
   "keys": {
     "body": "bodyId = [shape-]profile-<capacity>ml-<neck>",
@@ -294,13 +294,13 @@
     "18-415": {
       "kind": "thread",
       "bodies": 23,
-      "components": 49,
+      "components": 50,
       "componentTypes": {
         "cap": 7,
         "dropper": 3,
         "faux-leather-cap": 5,
         "fine-mist-sprayer": 8,
-        "lotion-pump": 7,
+        "lotion-pump": 8,
         "reducer": 1,
         "tassel-bulb-sprayer": 9,
         "vintage-bulb-sprayer": 9
