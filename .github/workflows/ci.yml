@@ -32,7 +32,7 @@ jobs:
         run: npm run lint
 
       - name: Unit tests
-        run: npx vitest run --maxWorkers=4 --testTimeout=15000
+        run: npx vitest run --maxWorkers=2 --testTimeout=15000
 
       - name: Production-mode build, release off
         # Match the Webpack compiler used by scripts/vercel-build.sh.
@@ -55,7 +55,7 @@ jobs:
 
       - name: Smoke compiled off build
         run: |
-          npm run start -- --hostname 127.0.0.1 --port 3021 > /tmp/bb-smoke-off-server.log 2>&1 &
+          node node_modules/next/dist/bin/next start --hostname 127.0.0.1 --port 3021 > /tmp/bb-smoke-off-server.log 2>&1 &
           task_server_pid=$!
           trap 'kill "$task_server_pid" 2>/dev/null || true' EXIT
           node scripts/media-release/smoke-built.mjs http://127.0.0.1:3021 off
@@ -81,7 +81,7 @@ jobs:
 
       - name: Smoke compiled all build
         run: |
-          npm run start -- --hostname 127.0.0.1 --port 3021 > /tmp/bb-smoke-all-server.log 2>&1 &
+          node node_modules/next/dist/bin/next start --hostname 127.0.0.1 --port 3021 > /tmp/bb-smoke-all-server.log 2>&1 &
           task_server_pid=$!
           trap 'kill "$task_server_pid" 2>/dev/null || true' EXIT
           node scripts/media-release/smoke-built.mjs http://127.0.0.1:3021 all

@@ -106,6 +106,7 @@ tests/fixtures/media-release/diva.json
 tests/fixtures/media-release/empire.json
 tests/fixtures/media-release/round-lotion.json
 tests/fixtures/media-release/round.json
+tests/focused-pdp-mobile-dom.test.ts
 tests/isolated-preview-proxy.test.ts
 tests/media-preview-auth.test.ts
 tests/media-release-client.test.tsx

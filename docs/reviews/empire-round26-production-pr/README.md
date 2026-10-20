@@ -43,7 +43,7 @@ Diva and Round lotion require their own future release review. None of these app
 
 ## Staging and rollout sequence
 
-Each production build must be staged without assigning production domains, using Vercel's staged production workflow. Verify project, commit, `target=production`, mode and backend on the resulting deployment. Record the deployment ID before testing. A staged production build can later be promoted without rebuilding. [Vercel staging and promotion](https://vercel.com/docs/deployments/promoting-a-deployment#staging-and-promoting-a-production-deployment).
+Each production build must be staged without assigning production domains, using Vercel's staged production workflow (`vercel deploy --prod --skip-domain` in the verified project). The build gate validates approval metadata; it cannot enforce CLI flags or domain assignment. Confirm the live aliases are unchanged immediately after staging. Verify project, commit, `target=production`, mode and backend on the resulting deployment. Record the deployment ID before testing. A staged production build can later be promoted without rebuilding. [Vercel staging and promotion](https://vercel.com/docs/deployments/promoting-a-deployment#staging-and-promoting-a-production-deployment).
 
 | Step | Selection | Acceptance before traffic or expansion |
 | --- | --- | --- |
@@ -88,6 +88,8 @@ This is a deliberately invalid example, not authorization. Supply a completed re
 ```
 
 ## Evidence
+
+The existing focused-PDP DOM test now imports its component during collection. Its timed assertions no longer include cold module compilation; all assertions are unchanged. CI uses two workers to keep full-suite memory use bounded.
 
 The first compiled-app smoke check exposed an existing middleware problem: Clerk required keys before reaching the disabled-auth callback. The focused patch now carries the same small disabled-mode guard used by the reviewed integration preview. No production authentication bypass is permitted by the production build controls.
 

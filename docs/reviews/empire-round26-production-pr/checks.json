@@ -26,7 +26,7 @@
   "localRunCaveats": [
     "The unchanged main baseline hit the focused-PDP cold-import timeout; its isolated rerun passed all 4 tests.",
     "Full candidate tests alongside compilation hit that timeout and the existing 120-second four-family reconciliation timeout. No failing assertions remain in the focused release tests.",
-    "CI separates tests from builds and uses four test workers with a 15-second default cold-import timeout; existing explicit test timeouts are retained.",
+    "CI separates tests from builds and uses two test workers with a 15-second default test timeout; existing explicit test timeouts are retained.",
     "The initial off build compiled and typechecked, but its HTTP smoke check exposed the existing disabled-auth Clerk initialization issue. The focused guard is tested; CI must rebuild and smoke-test the corrected commit."
   ],
   "notPerformed": [
