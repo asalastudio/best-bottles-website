@@ -1,0 +1,2224 @@
+{
+  "kind": "planning-inventory-not-publisher-input",
+  "executable": false,
+  "productionWritesAuthorized": false,
+  "scopeCount": 52,
+  "proposedFirstCanary": [
+    "GBEmp50SpryMtGl",
+    "GBEmp100SpryMtGl"
+  ],
+  "sourceIntegrationCommit": "8312ccfc",
+  "releaseRevision": null,
+  "productionTarget": null,
+  "rollbackSnapshot": null,
+  "rows": [
+    {
+      "websiteSku": "GBEmp100SpryMtGl",
+      "graceSku": "GB-EMP-CLR-100ML-SPR-MGLD",
+      "groupSlug": "empire-100ml-clear-18-415-perfumespray",
+      "group": "empire",
+      "batch": "1-empire-canary",
+      "bottleColor": "Clear",
+      "capacityMl": 100,
+      "description": "100 ml Clear Empire bottle with Matte Gold sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/empire-bare-glass/GBEmp100SpryMtGl-shared-catalog.f288887aedc8.png",
+        "sha256": "f288887aedc8337bfcdbf6357396f37e17259cdd9ece7d9bf2d9b68dd8ae2ada",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "927d4a63e71156dafb9d7ba6c9f19d452416fd362e5014dc6ea22a25cb7e4cdc",
+      "plateKey": "empire-100ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-MTGD-18-415-05"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBEmp50SpryMtGl",
+      "graceSku": "GB-EMP-CLR-50ML-SPR-MGLD",
+      "groupSlug": "empire-50ml-clear-18-415-perfumespray",
+      "group": "empire",
+      "batch": "1-empire-canary",
+      "bottleColor": "Clear",
+      "capacityMl": 50,
+      "description": "50 ml Clear Empire bottle with Matte Gold sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/empire-bare-glass/GBEmp50SpryMtGl-shared-catalog.7580022c9950.png",
+        "sha256": "7580022c995036c9626d1fdba70105775b77dfc1e3149703b6be223e662584ea",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "ffe64c1fccb55028a75a97ca52b0e39d8a7c975ae6690d497eddd34ce7b95c3e",
+      "plateKey": "empire-50ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-MTGD-18-415-05"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBEmp100SpryCu",
+      "graceSku": "GB-EMP-CLR-100ML-SPR-CPR",
+      "groupSlug": "empire-100ml-clear-18-415-perfumespray",
+      "group": "empire",
+      "batch": "2-empire-remaining",
+      "bottleColor": "Clear",
+      "capacityMl": 100,
+      "description": "100 ml Clear Empire bottle with Copper sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/empire-bare-glass/GBEmp100SpryCu-shared-catalog.3fe8c5f88a2a.png",
+        "sha256": "3fe8c5f88a2ac160f1f1dc9524054e271a489f4b2d505ca0cc6f3adbc67a9e11",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "ea1b4d2ee7852c19c1631b9098685b9de2778337077a4dea7b63332b0b537548",
+      "plateKey": "empire-100ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-MTCP-18-415-03"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBEmp100SpryMtSl",
+      "graceSku": "GB-EMP-CLR-100ML-SPR-MSLV",
+      "groupSlug": "empire-100ml-clear-18-415-perfumespray",
+      "group": "empire",
+      "batch": "2-empire-remaining",
+      "bottleColor": "Clear",
+      "capacityMl": 100,
+      "description": "100 ml Clear Empire bottle with Matte Silver sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/empire-bare-glass/GBEmp100SpryMtSl-shared-catalog.4fcfba3540fb.png",
+        "sha256": "4fcfba3540fbf6666c33b95f9839b5995439aaebde865120318d11521345d019",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "3987e418f2649630a579d582e73ca896bb61986bba25a5d5f672962432439df1",
+      "plateKey": "empire-100ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-MTSL-18-415-06"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBEmp100SpryShnBlk",
+      "graceSku": "GB-EMP-CLR-100ML-SPR-SBLK",
+      "groupSlug": "empire-100ml-clear-18-415-perfumespray",
+      "group": "empire",
+      "batch": "2-empire-remaining",
+      "bottleColor": "Clear",
+      "capacityMl": 100,
+      "description": "100 ml Clear Empire bottle with Shiny Black sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/empire-bare-glass/GBEmp100SpryShnBlk-shared-catalog.9fbc969f99e1.png",
+        "sha256": "9fbc969f99e189bcc5c55b5e50a9de2e2ffb45329de596c22cb63af341626591",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "3d23268a44decb83b766c46b53177d2ef40cfed420ac7c53288ff8978d5ffa01",
+      "plateKey": "empire-100ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-SHBK-18-415-06"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBEmp100SpryShnGl",
+      "graceSku": "GB-EMP-CLR-100ML-SPR-SGLD",
+      "groupSlug": "empire-100ml-clear-18-415-perfumespray",
+      "group": "empire",
+      "batch": "2-empire-remaining",
+      "bottleColor": "Clear",
+      "capacityMl": 100,
+      "description": "100 ml Clear Empire bottle with Shiny Gold sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/empire-bare-glass/GBEmp100SpryShnGl-shared-catalog.87fa84ab1249.png",
+        "sha256": "87fa84ab124966d779467bf47bbef4dbed22fbd540108b7fc1f377dc1c90085b",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "a5113c572d330e6d40156b9257fa71c5c870af4756e1c61246702d6c91ed2f8e",
+      "plateKey": "empire-100ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-SHGD-18-415-05"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBEmp100SpryShnSl",
+      "graceSku": "GB-EMP-CLR-100ML-SPR-SSLV",
+      "groupSlug": "empire-100ml-clear-18-415-perfumespray",
+      "group": "empire",
+      "batch": "2-empire-remaining",
+      "bottleColor": "Clear",
+      "capacityMl": 100,
+      "description": "100 ml Clear Empire bottle with Shiny Silver sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/empire-bare-glass/GBEmp100SpryShnSl-shared-catalog.b102e2ecee7c.png",
+        "sha256": "b102e2ecee7c6ad55097bf8051e11596a38afd5cfe035a58a5d365bfb639a979",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "60d291fc6d239ecbec0efd1819d78aa4cf3808f8d8faf4907b7ad7caff4f7a37",
+      "plateKey": "empire-100ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-SHSL-18-415-06"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBEmp50SpryCu",
+      "graceSku": "GB-EMP-CLR-50ML-SPR-CPR",
+      "groupSlug": "empire-50ml-clear-18-415-perfumespray",
+      "group": "empire",
+      "batch": "2-empire-remaining",
+      "bottleColor": "Clear",
+      "capacityMl": 50,
+      "description": "50 ml Clear Empire bottle with Copper sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/empire-bare-glass/GBEmp50SpryCu-shared-catalog.a493cba8116e.png",
+        "sha256": "a493cba8116e830d1b1ea2659003b15d0734e503b1f97eb73fe5dca6cb5ec838",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "51c0a550868ec2764868c5ad1f37ba9135de9b21b84282ff6578b977df225af1",
+      "plateKey": "empire-50ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-MTCP-18-415-03"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBEmp50SpryMtSl",
+      "graceSku": "GB-EMP-CLR-50ML-SPR-MSLV",
+      "groupSlug": "empire-50ml-clear-18-415-perfumespray",
+      "group": "empire",
+      "batch": "2-empire-remaining",
+      "bottleColor": "Clear",
+      "capacityMl": 50,
+      "description": "50 ml Clear Empire bottle with Matte Silver sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/empire-bare-glass/GBEmp50SpryMtSl-shared-catalog.5cbe4f3825ba.png",
+        "sha256": "5cbe4f3825ba839fd94cd3c38240dd0bac7ef939579f4f96df6dc06d74ae6286",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "f9f1f158288fb6b7ad4a7f3b0f80bc0f51f75690d318375150905c501d9e7b46",
+      "plateKey": "empire-50ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-MTSL-18-415-06"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBEmp50SpryShnBlk",
+      "graceSku": "GB-EMP-CLR-50ML-SPR-SBLK",
+      "groupSlug": "empire-50ml-clear-18-415-perfumespray",
+      "group": "empire",
+      "batch": "2-empire-remaining",
+      "bottleColor": "Clear",
+      "capacityMl": 50,
+      "description": "50 ml Clear Empire bottle with Shiny Black sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/empire-bare-glass/GBEmp50SpryShnBlk-shared-catalog.713b9d68412f.png",
+        "sha256": "713b9d68412fb0846de7ee68c0a1f84d1138efb62c73777b057a5b40a99a4fb6",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "0ce8ed1a8486a98a1d8c9e0d7df63590caacd770cf7fdf350351f221bf1315de",
+      "plateKey": "empire-50ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-SHBK-18-415-06"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBEmp50SpryShnGl",
+      "graceSku": "GB-EMP-CLR-50ML-SPR-SGLD",
+      "groupSlug": "empire-50ml-clear-18-415-perfumespray",
+      "group": "empire",
+      "batch": "2-empire-remaining",
+      "bottleColor": "Clear",
+      "capacityMl": 50,
+      "description": "50 ml Clear Empire bottle with Shiny Gold sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/empire-bare-glass/GBEmp50SpryShnGl-shared-catalog.8c00a2f63c65.png",
+        "sha256": "8c00a2f63c652c86b85e48080e55cd1e8d4b6670d09a9d9fa753eaab77e6d084",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "2850169efe41a5198c8ddf63e259cb48a661965bd7c232127c04d0f2d45d0603",
+      "plateKey": "empire-50ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-SHGD-18-415-05"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBEmp50SpryShnSl",
+      "graceSku": "GB-EMP-CLR-50ML-SPR-SSLV",
+      "groupSlug": "empire-50ml-clear-18-415-perfumespray",
+      "group": "empire",
+      "batch": "2-empire-remaining",
+      "bottleColor": "Clear",
+      "capacityMl": 50,
+      "description": "50 ml Clear Empire bottle with Shiny Silver sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/empire-bare-glass/GBEmp50SpryShnSl-shared-catalog.63eefb858852.png",
+        "sha256": "63eefb85885225425daa74a073b6ee06389598128ca17440a8c9c771f4fcce43",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "5e85f169438afc00874fa40b5cb8c96a8737aec3a29c4fc12e2be82c91341b7d",
+      "plateKey": "empire-50ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-SHSL-18-415-06"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "LBEmp100WhtClOvrCp",
+      "graceSku": "LB-EMP-CLR-100ML-LPM-OVCP-T",
+      "groupSlug": "empire-100ml-clear-18-415-lotionpump",
+      "group": "empire",
+      "batch": "2-empire-remaining",
+      "bottleColor": "Clear",
+      "capacityMl": 100,
+      "description": "100 ml Clear Empire bottle with White pump with clear overcap and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/empire-bare-glass/LBEmp100WhtClOvrCp-shared-catalog.6c0335cd32e4.png",
+        "sha256": "6c0335cd32e4d4b3f45e504e7686f148ab13de12bc5ecf7df8aa37be3495df7c",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "b0c0d59d0dec1320161b2a3ba429e594e80686aaf3c62055b90671e580453d24",
+      "plateKey": "empire-100ml-18-415|Clear",
+      "componentIds": [
+        "LIB-18-415-WhtPumpClOvrCp"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "LBEmp50WhtClOvrCp",
+      "graceSku": "LB-EMP-CLR-50ML-LPM-OVCP-T",
+      "groupSlug": "empire-50ml-clear-18-415-lotionpump",
+      "group": "empire",
+      "batch": "2-empire-remaining",
+      "bottleColor": "Clear",
+      "capacityMl": 50,
+      "description": "50 ml Clear Empire bottle with White pump with clear overcap and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/empire-bare-glass/LBEmp50WhtClOvrCp-shared-catalog.0c9c203d4591.png",
+        "sha256": "0c9c203d4591e29fc94fc34a43d9dd629a894b1026b406c790ca3246f544c4fe",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "ec73823c9871dc678d0774c391bcf064c6b0ac82644b9e42031b014527243b6c",
+      "plateKey": "empire-50ml-18-415|Clear",
+      "componentIds": [
+        "LIB-18-415-WhtPumpClOvrCp"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBRnd78SpryCu",
+      "graceSku": "GB-RND-CLR-78ML-SPR-CPR",
+      "groupSlug": "round-78ml-clear-18-415-perfumespray",
+      "group": "round78-spray",
+      "batch": "3-round78-sprays",
+      "bottleColor": "Clear",
+      "capacityMl": 78,
+      "description": "78 ml Clear Round bottle with Copper sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-pilot/GBRnd78SpryCu-shared-catalog.fc78436ff5db.png",
+        "sha256": "fc78436ff5db33076675e83914319c881ed305b0f523be2f6d4f827d8f1870b8",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "64d81b3ad76bb27630d99de33f92ce976ce39cb557f665849527adf422601e1b",
+      "plateKey": "round-78ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-MTCP-18-415-03"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBRnd78SpryMtGl",
+      "graceSku": "GB-RND-CLR-78ML-SPR-MGLD",
+      "groupSlug": "round-78ml-clear-18-415-perfumespray",
+      "group": "round78-spray",
+      "batch": "3-round78-sprays",
+      "bottleColor": "Clear",
+      "capacityMl": 78,
+      "description": "78 ml Clear Round bottle with Matte Gold sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-pilot/GBRnd78SpryMtGl-shared-catalog.515bdef76e64.png",
+        "sha256": "515bdef76e64df516b1562d3cc9cc1d4d33c591366e1398db8775a1093b3b1d6",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "85af9c3f829c052e66128110e762f6aed8e5bd03cc3dfdf968436f515517cbad",
+      "plateKey": "round-78ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-MTGD-18-415-05"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBRnd78SpryMtSl",
+      "graceSku": "GB-RND-CLR-78ML-SPR-MSLV",
+      "groupSlug": "round-78ml-clear-18-415-perfumespray",
+      "group": "round78-spray",
+      "batch": "3-round78-sprays",
+      "bottleColor": "Clear",
+      "capacityMl": 78,
+      "description": "78 ml Clear Round bottle with Matte Silver sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-pilot/GBRnd78SpryMtSl-shared-catalog.89e992101be2.png",
+        "sha256": "89e992101be2d23eb61a895b37998cacb18c2cd7e4e2ea674db96f24d5af6df0",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "0f1458ad4d0758f5a688893c2edd981df99318f9dcd72b3fb5ffa90166987ff8",
+      "plateKey": "round-78ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-MTSL-18-415-06"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBRnd78SpryShnBlk",
+      "graceSku": "GB-RND-CLR-78ML-SPR-SBLK",
+      "groupSlug": "round-78ml-clear-18-415-perfumespray",
+      "group": "round78-spray",
+      "batch": "3-round78-sprays",
+      "bottleColor": "Clear",
+      "capacityMl": 78,
+      "description": "78 ml Clear Round bottle with Shiny Black sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-pilot/GBRnd78SpryShnBlk-shared-catalog.bba51de97217.png",
+        "sha256": "bba51de97217751f2e441630cafaa0207999d867bcf4403d1d55382a8afa0275",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "15186f9c600c9d5783f350a60632a3e6b95329096649c66a8684f0617f50ea24",
+      "plateKey": "round-78ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-SHBK-18-415-06"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBRnd78SpryShnGl",
+      "graceSku": "GB-RND-CLR-78ML-SPR-SGLD",
+      "groupSlug": "round-78ml-clear-18-415-perfumespray",
+      "group": "round78-spray",
+      "batch": "3-round78-sprays",
+      "bottleColor": "Clear",
+      "capacityMl": 78,
+      "description": "78 ml Clear Round bottle with Shiny Gold sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-pilot/GBRnd78SpryShnGl-shared-catalog.158384c42a2e.png",
+        "sha256": "158384c42a2e4d6adceed230697445cb0bf41a9956cd1b3833bbf12f44f2efa3",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "973377a1f224d73b4d39ac5fc8babd4b2640ca91072a40820fb0dbae52f8b921",
+      "plateKey": "round-78ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-SHGD-18-415-05"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBRnd78SpryShnSl",
+      "graceSku": "GB-RND-CLR-78ML-SPR-SSLV",
+      "groupSlug": "round-78ml-clear-18-415-perfumespray",
+      "group": "round78-spray",
+      "batch": "3-round78-sprays",
+      "bottleColor": "Clear",
+      "capacityMl": 78,
+      "description": "78 ml Clear Round bottle with Shiny Silver sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-pilot/GBRnd78SpryShnSl-shared-catalog.dfbc0784912a.png",
+        "sha256": "dfbc0784912aed51ea448fc2e0853dbf809a4b5eada0babcd32c051ab6efcbcb",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "698c97a500bc60397eb557bfece72f3e6fe4a8ad58a033d57a20b46d4b8fe724",
+      "plateKey": "round-78ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-SHSL-18-415-06"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBRndFrst78SpryCu",
+      "graceSku": "GB-RND-FRS-78ML-SPR-CPR",
+      "groupSlug": "round-78ml-frosted-18-415-perfumespray",
+      "group": "round78-spray",
+      "batch": "3-round78-sprays",
+      "bottleColor": "Frosted",
+      "capacityMl": 78,
+      "description": "78 ml Frosted Round bottle with Copper sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-pilot/GBRndFrst78SpryCu-shared-catalog.ffbf828bbdaa.png",
+        "sha256": "ffbf828bbdaafed94b484ce4be95293b193287d47b8038ad41374974ae4c3254",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "ab78e639e021758bbf5196411553d3f5c52d070ac93edebb6c93a2c35f3acef2",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "componentIds": [
+        "CMP-SPR-MTCP-18-415-03"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBRndFrst78SpryMtGl",
+      "graceSku": "GB-RND-FRS-78ML-SPR-MGLD",
+      "groupSlug": "round-78ml-frosted-18-415-perfumespray",
+      "group": "round78-spray",
+      "batch": "3-round78-sprays",
+      "bottleColor": "Frosted",
+      "capacityMl": 78,
+      "description": "78 ml Frosted Round bottle with Matte Gold sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-pilot/GBRndFrst78SpryMtGl-shared-catalog.9cc726a91ca4.png",
+        "sha256": "9cc726a91ca4753a0f0b3a2fbb16807f9d1413b711403343853907e767ec0265",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "38f032f9675260fc2ab592c1b1026ab5f91d4dccf652c09bc7404325c3fd9c43",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "componentIds": [
+        "CMP-SPR-MTGD-18-415-05"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBRndFrst78SpryMtSl",
+      "graceSku": "GB-RND-FRS-78ML-SPR-MSLV",
+      "groupSlug": "round-78ml-frosted-18-415-perfumespray",
+      "group": "round78-spray",
+      "batch": "3-round78-sprays",
+      "bottleColor": "Frosted",
+      "capacityMl": 78,
+      "description": "78 ml Frosted Round bottle with Matte Silver sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-pilot/GBRndFrst78SpryMtSl-shared-catalog.b378bdef422f.png",
+        "sha256": "b378bdef422fb899cc41544aa39fa62e47658e2779feb2fc1375d088155f96ef",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "ba7da87afb27cd33c3531867c79805bd273fd174855d33e4f63c62fc4f37744b",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "componentIds": [
+        "CMP-SPR-MTSL-18-415-06"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBRndFrst78SpryShnBlk",
+      "graceSku": "GB-RND-FRS-78ML-SPR-SBLK",
+      "groupSlug": "round-78ml-frosted-18-415-perfumespray",
+      "group": "round78-spray",
+      "batch": "3-round78-sprays",
+      "bottleColor": "Frosted",
+      "capacityMl": 78,
+      "description": "78 ml Frosted Round bottle with Shiny Black sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-pilot/GBRndFrst78SpryShnBlk-shared-catalog.5689174dc313.png",
+        "sha256": "5689174dc313d7c1baab7b61a9b9d692cd9c376b0432f7299ad3f1bfc56ba949",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "6637704fbcfc97ca5c8e7b94f86b8f0681ea8a40a70d1e4e3db9dc9fb9e5ac7b",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "componentIds": [
+        "CMP-SPR-SHBK-18-415-06"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBRndFrst78SpryShnGl",
+      "graceSku": "GB-RND-FRS-78ML-SPR-SGLD",
+      "groupSlug": "round-78ml-frosted-18-415-perfumespray",
+      "group": "round78-spray",
+      "batch": "3-round78-sprays",
+      "bottleColor": "Frosted",
+      "capacityMl": 78,
+      "description": "78 ml Frosted Round bottle with Shiny Gold sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-pilot/GBRndFrst78SpryShnGl-shared-catalog.299f3bc1227a.png",
+        "sha256": "299f3bc1227ab863fd4e443612b280ab00c4c7cdf575aee5d4f0820772cdeda7",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "82f10145e5567c9b04292c613211fc83dc3b720dcba936f842b4fc20c3171ff3",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "componentIds": [
+        "CMP-SPR-SHGD-18-415-05"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBRndFrst78SpryShnSl",
+      "graceSku": "GB-RND-FRS-78ML-SPR-SSLV",
+      "groupSlug": "round-78ml-frosted-18-415-perfumespray",
+      "group": "round78-spray",
+      "batch": "3-round78-sprays",
+      "bottleColor": "Frosted",
+      "capacityMl": 78,
+      "description": "78 ml Frosted Round bottle with Shiny Silver sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-pilot/GBRndFrst78SpryShnSl-shared-catalog.f000bbc5ba6b.png",
+        "sha256": "f000bbc5ba6beba0914dcaeb9c3ec8d91a7c7f20e7de03644d9f00c79c243b68",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "b02371ee0f46e3880d043a66f12ec971a270536dd67e05fb17dfd3d561dbe05a",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "componentIds": [
+        "CMP-SPR-SHSL-18-415-06"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "LBRnd78LtnClOvrCap",
+      "graceSku": "LB-RND-CLR-78ML-LPM-COCP",
+      "groupSlug": "round-78ml-clear-18-415-lotionpump",
+      "group": "round78-lotion",
+      "batch": "4-round78-lotion-after-approval",
+      "bottleColor": "Clear",
+      "capacityMl": 78,
+      "description": "78 ml Clear Round bottle with matte silver lotion pump and clear overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-lotion-pilot/LBRnd78LtnClOvrCap-shared-catalog.5a6aea98b830.png",
+        "sha256": "5a6aea98b830bc50e87d88ca314c07941fbb959eaab466af20b39c3ad523dcb5",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "01b859a856a1c41f8b9ccf6426a97951384fe1f2e4079ff9870b52fb649f377c",
+      "plateKey": "round-78ml-18-415|Clear",
+      "componentIds": [
+        "CMP-LPM-MSLV-18-415-02"
+      ],
+      "visualApproval": "pending-final-visual-approval",
+      "remainingGate": "final-visual-approval",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "LBRnd78LtnCu",
+      "graceSku": "LB-RND-CLR-78ML-LPM-CPR",
+      "groupSlug": "round-78ml-clear-18-415-lotionpump",
+      "group": "round78-lotion",
+      "batch": "4-round78-lotion-after-approval",
+      "bottleColor": "Clear",
+      "capacityMl": 78,
+      "description": "78 ml Clear Round bottle with Copper lotion pump and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-lotion-pilot/LBRnd78LtnCu-shared-catalog.e3fd0877bc15.png",
+        "sha256": "e3fd0877bc15120e5a1ad6202c3fc1c90b8712bbadfabedbe86933029778a4a8",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "a232a2eb1dc8d11603356a6cf70a8ff1cf0b261f00b8933eb0de1a33934c1607",
+      "plateKey": "round-78ml-18-415|Clear",
+      "componentIds": [
+        "CMP-LPM-CPR-18-415"
+      ],
+      "visualApproval": "pending-final-visual-approval",
+      "remainingGate": "final-visual-approval",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "LBRnd78LtnMtGl",
+      "graceSku": "LB-RND-CLR-78ML-LPM-MGLD",
+      "groupSlug": "round-78ml-clear-18-415-lotionpump",
+      "group": "round78-lotion",
+      "batch": "4-round78-lotion-after-approval",
+      "bottleColor": "Clear",
+      "capacityMl": 78,
+      "description": "78 ml Clear Round bottle with Matte Gold lotion pump and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-lotion-pilot/LBRnd78LtnMtGl-shared-catalog.41ee7331dfc8.png",
+        "sha256": "41ee7331dfc84598ec0c49b7bc843471f89b8636f7348836615c72421d8be5be",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "e0488f6f2a21d0d40fda0722697790a8965585b658cfc266e5aa6688c1c51ee4",
+      "plateKey": "round-78ml-18-415|Clear",
+      "componentIds": [
+        "CMP-LPM-MGLD-18-415"
+      ],
+      "visualApproval": "pending-final-visual-approval",
+      "remainingGate": "final-visual-approval",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "LBRnd78LtnMtSl",
+      "graceSku": "LB-RND-CLR-78ML-LPM-MSLV",
+      "groupSlug": "round-78ml-clear-18-415-lotionpump",
+      "group": "round78-lotion",
+      "batch": "4-round78-lotion-after-approval",
+      "bottleColor": "Clear",
+      "capacityMl": 78,
+      "description": "78 ml Clear Round bottle with Matte Silver lotion pump and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-lotion-pilot/LBRnd78LtnMtSl-shared-catalog.82b224cb65a2.png",
+        "sha256": "82b224cb65a22cbd9d10e0b9a4029e1af01889822bac85382ef704cff31515e4",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "f49b9f18e56353d36f26b4ca6e6e3902dca6571582af35aedbe019b9b971405d",
+      "plateKey": "round-78ml-18-415|Clear",
+      "componentIds": [
+        "CMP-LPM-MSLV-18-415-01"
+      ],
+      "visualApproval": "pending-final-visual-approval",
+      "remainingGate": "final-visual-approval",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "LBRnd78LtnShnBlk",
+      "graceSku": "LB-RND-CLR-78ML-LPM-SBLK",
+      "groupSlug": "round-78ml-clear-18-415-lotionpump",
+      "group": "round78-lotion",
+      "batch": "4-round78-lotion-after-approval",
+      "bottleColor": "Clear",
+      "capacityMl": 78,
+      "description": "78 ml Clear Round bottle with Shiny Black lotion pump and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-lotion-pilot/LBRnd78LtnShnBlk-shared-catalog.c804fe625383.png",
+        "sha256": "c804fe625383e7b491c15878bc30aed51caaefab64acabe9a4ea7c81913896a2",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "e4aaa4a557a5200756709dc78d9dd293f8835006638caee38de2498b51c658b5",
+      "plateKey": "round-78ml-18-415|Clear",
+      "componentIds": [
+        "CMP-LPM-SBLK-18-415"
+      ],
+      "visualApproval": "pending-final-visual-approval",
+      "remainingGate": "final-visual-approval",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "LBRnd78LtnShnGl",
+      "graceSku": "LB-RND-CLR-78ML-LPM-SGLD",
+      "groupSlug": "round-78ml-clear-18-415-lotionpump",
+      "group": "round78-lotion",
+      "batch": "4-round78-lotion-after-approval",
+      "bottleColor": "Clear",
+      "capacityMl": 78,
+      "description": "78 ml Clear Round bottle with Shiny Gold lotion pump and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-lotion-pilot/LBRnd78LtnShnGl-shared-catalog.fcb3457ee046.png",
+        "sha256": "fcb3457ee046bcfa30c39a0d3a0343651658fb48815a52e5eccdb992b5fa8813",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "d47eed2a484149f7681da6ae719a8b074148f99d8a2e9377ebb0275f6e551521",
+      "plateKey": "round-78ml-18-415|Clear",
+      "componentIds": [
+        "CMP-LPM-SGLD-18-415"
+      ],
+      "visualApproval": "pending-final-visual-approval",
+      "remainingGate": "final-visual-approval",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "LBRnd78LtnShnSl",
+      "graceSku": "LB-RND-CLR-78ML-LPM-SSLV",
+      "groupSlug": "round-78ml-clear-18-415-lotionpump",
+      "group": "round78-lotion",
+      "batch": "4-round78-lotion-after-approval",
+      "bottleColor": "Clear",
+      "capacityMl": 78,
+      "description": "78 ml Clear Round bottle with Shiny Silver lotion pump and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-lotion-pilot/LBRnd78LtnShnSl-shared-catalog.7c5be87f489f.png",
+        "sha256": "7c5be87f489f23d0a52b1d21910a5954f380f996b55d3f1fae68a9419f997347",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "550cf6fdae82fc91e48cafebeb68bffa87870d45b6a6cd6d27fa7da05a9962c8",
+      "plateKey": "round-78ml-18-415|Clear",
+      "componentIds": [
+        "CMP-LPM-SSLV-18-415"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "LBRndFrst78LtnClOvrCap",
+      "graceSku": "LB-RND-FRS-78ML-T",
+      "groupSlug": "round-78ml-frosted-18-415-lotionpump",
+      "group": "round78-lotion",
+      "batch": "4-round78-lotion-after-approval",
+      "bottleColor": "Frosted",
+      "capacityMl": 78,
+      "description": "78 ml Frosted Round bottle with matte silver lotion pump and clear overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-lotion-pilot/LBRndFrst78LtnClOvrCap-shared-catalog.9488f2b0d866.png",
+        "sha256": "9488f2b0d866d36661ecb43019031112cf4c2c5e23c4fd1150e1b4c9ff8679d2",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "0385031466d2842407a0245b1af9bd7e87e7eef48b394b02227902f00c39c234",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "componentIds": [
+        "CMP-LPM-MSLV-18-415-02"
+      ],
+      "visualApproval": "pending-final-visual-approval",
+      "remainingGate": "final-visual-approval",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "LBRndFrst78LtnCu",
+      "graceSku": "LB-RND-FRS-78ML-01",
+      "groupSlug": "round-78ml-frosted-18-415-lotionpump",
+      "group": "round78-lotion",
+      "batch": "4-round78-lotion-after-approval",
+      "bottleColor": "Frosted",
+      "capacityMl": 78,
+      "description": "78 ml Frosted Round bottle with Copper lotion pump and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-lotion-pilot/LBRndFrst78LtnCu-shared-catalog.679bc55de619.png",
+        "sha256": "679bc55de619243dcef8d017cbe37c5e0e3619f4ac8ac09b8a09e4469e98f008",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "6fb17a9b216fa9939ab73a9c7a11daa0f726e1925f2abb791f8f3f9d782c46ec",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "componentIds": [
+        "CMP-LPM-CPR-18-415"
+      ],
+      "visualApproval": "pending-final-visual-approval",
+      "remainingGate": "final-visual-approval",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "LBRndFrst78LtnMtGl",
+      "graceSku": "LB-RND-FRS-78ML-02",
+      "groupSlug": "round-78ml-frosted-18-415-lotionpump",
+      "group": "round78-lotion",
+      "batch": "4-round78-lotion-after-approval",
+      "bottleColor": "Frosted",
+      "capacityMl": 78,
+      "description": "78 ml Frosted Round bottle with Matte Gold lotion pump and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-lotion-pilot/LBRndFrst78LtnMtGl-shared-catalog.e3f567612598.png",
+        "sha256": "e3f567612598b9d251ac6c92ec9931ec0fa8c657e8d1c65eaf0f7378b6d72851",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "bf14944146b429feb1d093d636e06bb90489109cded063babee3e28391bb8222",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "componentIds": [
+        "CMP-LPM-MGLD-18-415"
+      ],
+      "visualApproval": "pending-final-visual-approval",
+      "remainingGate": "final-visual-approval",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "LBRndFrst78LtnMtSl",
+      "graceSku": "LB-RND-FRS-78ML-03",
+      "groupSlug": "round-78ml-frosted-18-415-lotionpump",
+      "group": "round78-lotion",
+      "batch": "4-round78-lotion-after-approval",
+      "bottleColor": "Frosted",
+      "capacityMl": 78,
+      "description": "78 ml Frosted Round bottle with Matte Silver lotion pump and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-lotion-pilot/LBRndFrst78LtnMtSl-shared-catalog.458efdc1bd35.png",
+        "sha256": "458efdc1bd353563c511712085f29a7e2a6e0e31ceff0176a40a8a9f8a2c1c8d",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "6e352ecafdf15174e0b4c2c1440e896c8fe3829579024400b14ea8bef9ee0434",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "componentIds": [
+        "CMP-LPM-MSLV-18-415-01"
+      ],
+      "visualApproval": "pending-final-visual-approval",
+      "remainingGate": "final-visual-approval",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "LBRndFrst78LtnShnBlk",
+      "graceSku": "LB-RND-FRS-78ML-04",
+      "groupSlug": "round-78ml-frosted-18-415-lotionpump",
+      "group": "round78-lotion",
+      "batch": "4-round78-lotion-after-approval",
+      "bottleColor": "Frosted",
+      "capacityMl": 78,
+      "description": "78 ml Frosted Round bottle with Shiny Black lotion pump and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-lotion-pilot/LBRndFrst78LtnShnBlk-shared-catalog.69e3abc6ee73.png",
+        "sha256": "69e3abc6ee73036759298f5cf1226568d53d0162330192bb2e0a4be0d51c49a7",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "10fdc6eb7ed7271a9cc15640f9718da5b098a8325a12247413b0ca30a9531bcb",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "componentIds": [
+        "CMP-LPM-SBLK-18-415"
+      ],
+      "visualApproval": "pending-final-visual-approval",
+      "remainingGate": "final-visual-approval",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "LBRndFrst78LtnShnGl",
+      "graceSku": "LB-RND-FRS-78ML-05",
+      "groupSlug": "round-78ml-frosted-18-415-lotionpump",
+      "group": "round78-lotion",
+      "batch": "4-round78-lotion-after-approval",
+      "bottleColor": "Frosted",
+      "capacityMl": 78,
+      "description": "78 ml Frosted Round bottle with Shiny Gold lotion pump and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-lotion-pilot/LBRndFrst78LtnShnGl-shared-catalog.b54e686a8479.png",
+        "sha256": "b54e686a8479e365c7fcf3405bc7452c31f9d96b6e9de50b497ac7772f081cb9",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "41573bb5dd2b76eb493de60e13439a1c11a88dbc9daf2eb009789946f0fbd94d",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "componentIds": [
+        "CMP-LPM-SGLD-18-415"
+      ],
+      "visualApproval": "pending-final-visual-approval",
+      "remainingGate": "final-visual-approval",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "LBRndFrst78LtnShnSl",
+      "graceSku": "LB-RND-FRS-78ML-06",
+      "groupSlug": "round-78ml-frosted-18-415-lotionpump",
+      "group": "round78-lotion",
+      "batch": "4-round78-lotion-after-approval",
+      "bottleColor": "Frosted",
+      "capacityMl": 78,
+      "description": "78 ml Frosted Round bottle with Shiny Silver lotion pump and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/round78-lotion-pilot/LBRndFrst78LtnShnSl-shared-catalog.6b12ab831eb8.png",
+        "sha256": "6b12ab831eb868e5dd2e0d6920aa6fecc6b698bfb2d8d9312716dfa27271323c",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "9f76a20ebbdf1acfbc63fa910b0c7979e9b394f064f444b03cca638a96b99f75",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "componentIds": [
+        "CMP-LPM-SSLV-18-415"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "technical-release-preparation",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBDiva46SpryCu",
+      "graceSku": "GB-DVA-CLR-46ML-SPR-CPR",
+      "groupSlug": "diva-46ml-clear-18-415-perfumespray",
+      "group": "diva46-spray",
+      "batch": "5-diva46-after-source-fit",
+      "bottleColor": "Clear",
+      "capacityMl": 46,
+      "description": "46 ml Clear Diva bottle with Copper sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/diva46-pilot/GBDiva46SpryCu-shared-catalog.eef806d7d4b2.png",
+        "sha256": "eef806d7d4b22fd2e3e361cdb1508c04dfcc27c2e75b26d0845a288c1085c7a0",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "1f01d6a8e87855409ec36c6eaaa51455299b4604884b8c451d4827f242cb0de8",
+      "plateKey": "diva-46ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-MTCP-18-415-03"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "source-fit-verification",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBDiva46SpryMtGl",
+      "graceSku": "GB-DVA-CLR-46ML-SPR-MGLD",
+      "groupSlug": "diva-46ml-clear-18-415-perfumespray",
+      "group": "diva46-spray",
+      "batch": "5-diva46-after-source-fit",
+      "bottleColor": "Clear",
+      "capacityMl": 46,
+      "description": "46 ml Clear Diva bottle with Matte Gold sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/diva46-pilot/GBDiva46SpryMtGl-shared-catalog.4f8cf860ead5.png",
+        "sha256": "4f8cf860ead598932f8ccc8d51599a8b475ff35d7518c6c255c11551c982c732",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "f610181dbb961aa1ee0eaa3f3cb6dcdd044799b2d95836366e0e09e474fdc115",
+      "plateKey": "diva-46ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-MTGD-18-415-05"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "source-fit-verification",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBDiva46SpryMtSl",
+      "graceSku": "GB-DVA-CLR-46ML-SPR-MSLV",
+      "groupSlug": "diva-46ml-clear-18-415-perfumespray",
+      "group": "diva46-spray",
+      "batch": "5-diva46-after-source-fit",
+      "bottleColor": "Clear",
+      "capacityMl": 46,
+      "description": "46 ml Clear Diva bottle with Matte Silver sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/diva46-pilot/GBDiva46SpryMtSl-shared-catalog.00ba18173887.png",
+        "sha256": "00ba1817388783450a7c3691934bd32e305e3532c90f33e44aab1ea83206e117",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "96d09820d78b5e60b13dfda7871d62e3bb951435a8b7c27175a133faf59b0f72",
+      "plateKey": "diva-46ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-MTSL-18-415-06"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "source-fit-verification",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBDiva46SpryShnBlk",
+      "graceSku": "GB-DVA-CLR-46ML-SPR-SBLK",
+      "groupSlug": "diva-46ml-clear-18-415-perfumespray",
+      "group": "diva46-spray",
+      "batch": "5-diva46-after-source-fit",
+      "bottleColor": "Clear",
+      "capacityMl": 46,
+      "description": "46 ml Clear Diva bottle with Shiny Black sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/diva46-pilot/GBDiva46SpryShnBlk-shared-catalog.f9df84308b46.png",
+        "sha256": "f9df84308b46b3214f4bb58a9d1a3586910804fbd16ec9be9eb6f9994af8e46a",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "73dd4551c095a382ea8e095610fbdd59006a58e7ff4b533d096973c045dda236",
+      "plateKey": "diva-46ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-SHBK-18-415-06"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "source-fit-verification",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBDiva46SpryShnGl",
+      "graceSku": "GB-DVA-CLR-46ML-SPR-SGLD",
+      "groupSlug": "diva-46ml-clear-18-415-perfumespray",
+      "group": "diva46-spray",
+      "batch": "5-diva46-after-source-fit",
+      "bottleColor": "Clear",
+      "capacityMl": 46,
+      "description": "46 ml Clear Diva bottle with Shiny Gold sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/diva46-pilot/GBDiva46SpryShnGl-shared-catalog.814312600589.png",
+        "sha256": "814312600589bfeef69efc1326b6e1519ccab1407150f4a859721e28db1b7862",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "b1da190592472797f7f5af8c9fa4d3dd6c3c9139a434c253a57f6d2958d1ae17",
+      "plateKey": "diva-46ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-SHGD-18-415-05"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "source-fit-verification",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBDiva46SpryShnSl",
+      "graceSku": "GB-DVA-CLR-46ML-SPR-SSLV",
+      "groupSlug": "diva-46ml-clear-18-415-perfumespray",
+      "group": "diva46-spray",
+      "batch": "5-diva46-after-source-fit",
+      "bottleColor": "Clear",
+      "capacityMl": 46,
+      "description": "46 ml Clear Diva bottle with Shiny Silver sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/diva46-pilot/GBDiva46SpryShnSl-shared-catalog.5e8d85f6c571.png",
+        "sha256": "5e8d85f6c57116a10f0b7065f4ffdbfd6bc30f30ef71500a9b8bc6d0f65bdf1e",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "c8a6f65ab6540af324f6ce6795adc6dad4ccb4789279bd7b45452884c1263473",
+      "plateKey": "diva-46ml-18-415|Clear",
+      "componentIds": [
+        "CMP-SPR-SHSL-18-415-06"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "source-fit-verification",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBDivaFrst46SpryCu",
+      "graceSku": "GB-DVA-FRS-46ML-01",
+      "groupSlug": "diva-46ml-frosted-18-415-perfumespray",
+      "group": "diva46-spray",
+      "batch": "5-diva46-after-source-fit",
+      "bottleColor": "Frosted",
+      "capacityMl": 46,
+      "description": "46 ml Frosted Diva bottle with Copper sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/diva46-pilot/GBDivaFrst46SpryCu-shared-catalog.41943698acf0.png",
+        "sha256": "41943698acf0d6fed40ffbd4755aac8058bc4b3267e0d2fd834bde93591852aa",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "64ca4d23356eeb8b9124ae922854a478ec887b9d41c1895d4e7a877bbf215f2b",
+      "plateKey": "diva-46ml-18-415|Frosted",
+      "componentIds": [
+        "CMP-SPR-MTCP-18-415-03"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "source-fit-verification",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBDivaFrst46SpryMtGl",
+      "graceSku": "GB-DVA-FRS-46ML-02",
+      "groupSlug": "diva-46ml-frosted-18-415-perfumespray",
+      "group": "diva46-spray",
+      "batch": "5-diva46-after-source-fit",
+      "bottleColor": "Frosted",
+      "capacityMl": 46,
+      "description": "46 ml Frosted Diva bottle with Matte Gold sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/diva46-pilot/GBDivaFrst46SpryMtGl-shared-catalog.834f6a2ed88b.png",
+        "sha256": "834f6a2ed88b2f8a1f1ac45dc4579d4f8dd61712c24c35db36b0e3213b9063b1",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "1f47e27686800d61e3d009781458b6cb509e9d3ba57375ffdab7b2f5000cd8f4",
+      "plateKey": "diva-46ml-18-415|Frosted",
+      "componentIds": [
+        "CMP-SPR-MTGD-18-415-05"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "source-fit-verification",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBDivaFrst46SpryMtSl",
+      "graceSku": "GB-DVA-FRS-46ML-03",
+      "groupSlug": "diva-46ml-frosted-18-415-perfumespray",
+      "group": "diva46-spray",
+      "batch": "5-diva46-after-source-fit",
+      "bottleColor": "Frosted",
+      "capacityMl": 46,
+      "description": "46 ml Frosted Diva bottle with Matte Silver sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/diva46-pilot/GBDivaFrst46SpryMtSl-shared-catalog.c91b08a32bcf.png",
+        "sha256": "c91b08a32bcf95b6d1ef56184fece7896e18e2191eb9ea18424126ece6e97141",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "dd535c8df0012a5312923c36398e231eef1362e8053292f285ca604b728c0b09",
+      "plateKey": "diva-46ml-18-415|Frosted",
+      "componentIds": [
+        "CMP-SPR-MTSL-18-415-06"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "source-fit-verification",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBDivaFrst46SpryShnBlk",
+      "graceSku": "GB-DVA-FRS-46ML-04",
+      "groupSlug": "diva-46ml-frosted-18-415-perfumespray",
+      "group": "diva46-spray",
+      "batch": "5-diva46-after-source-fit",
+      "bottleColor": "Frosted",
+      "capacityMl": 46,
+      "description": "46 ml Frosted Diva bottle with Shiny Black sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/diva46-pilot/GBDivaFrst46SpryShnBlk-shared-catalog.44dd05347b87.png",
+        "sha256": "44dd05347b87cc099f355b3caaa593ec778b2c4a8a909784d09c95488d0755e9",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "fa7eea556b2b1005bf9a80d259a7d2a8e0d6255c497997ff3ca00aa38dbf8e32",
+      "plateKey": "diva-46ml-18-415|Frosted",
+      "componentIds": [
+        "CMP-SPR-SHBK-18-415-06"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "source-fit-verification",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBDivaFrst46SpryShnGl",
+      "graceSku": "GB-DVA-FRS-46ML-05",
+      "groupSlug": "diva-46ml-frosted-18-415-perfumespray",
+      "group": "diva46-spray",
+      "batch": "5-diva46-after-source-fit",
+      "bottleColor": "Frosted",
+      "capacityMl": 46,
+      "description": "46 ml Frosted Diva bottle with Shiny Gold sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/diva46-pilot/GBDivaFrst46SpryShnGl-shared-catalog.8706eebe9901.png",
+        "sha256": "8706eebe9901afee63bc5f2a554d08fe2089765cd15a5e31587559ba6abf95c4",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "168847935d07cb91d1456d2f881c23c5db05a201668b916f2799383e319d982a",
+      "plateKey": "diva-46ml-18-415|Frosted",
+      "componentIds": [
+        "CMP-SPR-SHGD-18-415-05"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "source-fit-verification",
+      "approvedForProduction": false,
+      "requiresRing": false
+    },
+    {
+      "websiteSku": "GBDivaFrst46SpryShnSl",
+      "graceSku": "GB-DVA-FRS-46ML-06",
+      "groupSlug": "diva-46ml-frosted-18-415-perfumespray",
+      "group": "diva46-spray",
+      "batch": "5-diva46-after-source-fit",
+      "bottleColor": "Frosted",
+      "capacityMl": 46,
+      "description": "46 ml Frosted Diva bottle with Shiny Silver sprayer and overcap beside",
+      "catalog": {
+        "localUrl": "/local-media/diva46-pilot/GBDivaFrst46SpryShnSl-shared-catalog.0920db0542cc.png",
+        "sha256": "0920db0542cc2989e9e856634b12ceede2255d9b62dc981a192dd548802b1f8d",
+        "width": 1200,
+        "height": 1320,
+        "hostedUrl": null
+      },
+      "assemblySha256": "86c6656e434094cd706121331504f3c65e9f7299bcd63cd61a4bcf4cb3602ed3",
+      "plateKey": "diva-46ml-18-415|Frosted",
+      "componentIds": [
+        "CMP-SPR-SHSL-18-415-06"
+      ],
+      "visualApproval": "accepted-in-conversation",
+      "remainingGate": "source-fit-verification",
+      "approvedForProduction": false,
+      "requiresRing": false
+    }
+  ],
+  "localAssets": [
+    {
+      "path": "public/local-media/copper-caps/round78-lotion.be75859d4a21.png",
+      "url": "/local-media/copper-caps/round78-lotion.be75859d4a21.png",
+      "sha256": "be75859d4a21f860b18e2ef45beae16890bc94ff685be62759abc2ca22deed36",
+      "bytes": 374755,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBRnd78LtnCu",
+        "LBRndFrst78LtnCu"
+      ]
+    },
+    {
+      "path": "public/local-media/diva46-pilot/GBDiva46SpryCu-shared-catalog.eef806d7d4b2.png",
+      "url": "/local-media/diva46-pilot/GBDiva46SpryCu-shared-catalog.eef806d7d4b2.png",
+      "sha256": "eef806d7d4b22fd2e3e361cdb1508c04dfcc27c2e75b26d0845a288c1085c7a0",
+      "bytes": 476945,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBDiva46SpryCu"
+      ]
+    },
+    {
+      "path": "public/local-media/diva46-pilot/GBDiva46SpryMtGl-shared-catalog.4f8cf860ead5.png",
+      "url": "/local-media/diva46-pilot/GBDiva46SpryMtGl-shared-catalog.4f8cf860ead5.png",
+      "sha256": "4f8cf860ead598932f8ccc8d51599a8b475ff35d7518c6c255c11551c982c732",
+      "bytes": 456647,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBDiva46SpryMtGl"
+      ]
+    },
+    {
+      "path": "public/local-media/diva46-pilot/GBDiva46SpryMtSl-shared-catalog.00ba18173887.png",
+      "url": "/local-media/diva46-pilot/GBDiva46SpryMtSl-shared-catalog.00ba18173887.png",
+      "sha256": "00ba1817388783450a7c3691934bd32e305e3532c90f33e44aab1ea83206e117",
+      "bytes": 379798,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBDiva46SpryMtSl"
+      ]
+    },
+    {
+      "path": "public/local-media/diva46-pilot/GBDiva46SpryShnBlk-shared-catalog.f9df84308b46.png",
+      "url": "/local-media/diva46-pilot/GBDiva46SpryShnBlk-shared-catalog.f9df84308b46.png",
+      "sha256": "f9df84308b46b3214f4bb58a9d1a3586910804fbd16ec9be9eb6f9994af8e46a",
+      "bytes": 377630,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBDiva46SpryShnBlk"
+      ]
+    },
+    {
+      "path": "public/local-media/diva46-pilot/GBDiva46SpryShnGl-shared-catalog.814312600589.png",
+      "url": "/local-media/diva46-pilot/GBDiva46SpryShnGl-shared-catalog.814312600589.png",
+      "sha256": "814312600589bfeef69efc1326b6e1519ccab1407150f4a859721e28db1b7862",
+      "bytes": 475514,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBDiva46SpryShnGl"
+      ]
+    },
+    {
+      "path": "public/local-media/diva46-pilot/GBDiva46SpryShnSl-shared-catalog.5e8d85f6c571.png",
+      "url": "/local-media/diva46-pilot/GBDiva46SpryShnSl-shared-catalog.5e8d85f6c571.png",
+      "sha256": "5e8d85f6c57116a10f0b7065f4ffdbfd6bc30f30ef71500a9b8bc6d0f65bdf1e",
+      "bytes": 379012,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBDiva46SpryShnSl"
+      ]
+    },
+    {
+      "path": "public/local-media/diva46-pilot/GBDivaFrst46SpryCu-shared-catalog.41943698acf0.png",
+      "url": "/local-media/diva46-pilot/GBDivaFrst46SpryCu-shared-catalog.41943698acf0.png",
+      "sha256": "41943698acf0d6fed40ffbd4755aac8058bc4b3267e0d2fd834bde93591852aa",
+      "bytes": 380787,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBDivaFrst46SpryCu"
+      ]
+    },
+    {
+      "path": "public/local-media/diva46-pilot/GBDivaFrst46SpryMtGl-shared-catalog.834f6a2ed88b.png",
+      "url": "/local-media/diva46-pilot/GBDivaFrst46SpryMtGl-shared-catalog.834f6a2ed88b.png",
+      "sha256": "834f6a2ed88b2f8a1f1ac45dc4579d4f8dd61712c24c35db36b0e3213b9063b1",
+      "bytes": 360373,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBDivaFrst46SpryMtGl"
+      ]
+    },
+    {
+      "path": "public/local-media/diva46-pilot/GBDivaFrst46SpryMtSl-shared-catalog.c91b08a32bcf.png",
+      "url": "/local-media/diva46-pilot/GBDivaFrst46SpryMtSl-shared-catalog.c91b08a32bcf.png",
+      "sha256": "c91b08a32bcf95b6d1ef56184fece7896e18e2191eb9ea18424126ece6e97141",
+      "bytes": 287326,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBDivaFrst46SpryMtSl"
+      ]
+    },
+    {
+      "path": "public/local-media/diva46-pilot/GBDivaFrst46SpryShnBlk-shared-catalog.44dd05347b87.png",
+      "url": "/local-media/diva46-pilot/GBDivaFrst46SpryShnBlk-shared-catalog.44dd05347b87.png",
+      "sha256": "44dd05347b87cc099f355b3caaa593ec778b2c4a8a909784d09c95488d0755e9",
+      "bytes": 289091,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBDivaFrst46SpryShnBlk"
+      ]
+    },
+    {
+      "path": "public/local-media/diva46-pilot/GBDivaFrst46SpryShnGl-shared-catalog.8706eebe9901.png",
+      "url": "/local-media/diva46-pilot/GBDivaFrst46SpryShnGl-shared-catalog.8706eebe9901.png",
+      "sha256": "8706eebe9901afee63bc5f2a554d08fe2089765cd15a5e31587559ba6abf95c4",
+      "bytes": 378127,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBDivaFrst46SpryShnGl"
+      ]
+    },
+    {
+      "path": "public/local-media/diva46-pilot/GBDivaFrst46SpryShnSl-shared-catalog.0920db0542cc.png",
+      "url": "/local-media/diva46-pilot/GBDivaFrst46SpryShnSl-shared-catalog.0920db0542cc.png",
+      "sha256": "0920db0542cc2989e9e856634b12ceede2255d9b62dc981a192dd548802b1f8d",
+      "bytes": 289270,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBDivaFrst46SpryShnSl"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp100SpryCu-native-tube.940914eda692.png",
+      "url": "/local-media/empire-bare-glass/GBEmp100SpryCu-native-tube.940914eda692.png",
+      "sha256": "940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd",
+      "bytes": 33509,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp100SpryCu"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp100SpryCu-shared-catalog.3fe8c5f88a2a.png",
+      "url": "/local-media/empire-bare-glass/GBEmp100SpryCu-shared-catalog.3fe8c5f88a2a.png",
+      "sha256": "3fe8c5f88a2ac160f1f1dc9524054e271a489f4b2d505ca0cc6f3adbc67a9e11",
+      "bytes": 401992,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp100SpryCu"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp100SpryMtGl-shared-catalog.f288887aedc8.png",
+      "url": "/local-media/empire-bare-glass/GBEmp100SpryMtGl-shared-catalog.f288887aedc8.png",
+      "sha256": "f288887aedc8337bfcdbf6357396f37e17259cdd9ece7d9bf2d9b68dd8ae2ada",
+      "bytes": 383043,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp100SpryMtGl"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp100SpryMtSl-native-tube.6880c1c5e262.png",
+      "url": "/local-media/empire-bare-glass/GBEmp100SpryMtSl-native-tube.6880c1c5e262.png",
+      "sha256": "6880c1c5e26265666c258d02c493d09c10547fe8848aa792c6f82a1d9380927c",
+      "bytes": 36850,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp100SpryMtSl"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp100SpryMtSl-shared-catalog.4fcfba3540fb.png",
+      "url": "/local-media/empire-bare-glass/GBEmp100SpryMtSl-shared-catalog.4fcfba3540fb.png",
+      "sha256": "4fcfba3540fbf6666c33b95f9839b5995439aaebde865120318d11521345d019",
+      "bytes": 329628,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp100SpryMtSl"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp100SpryShnBlk-native-tube.940914eda692.png",
+      "url": "/local-media/empire-bare-glass/GBEmp100SpryShnBlk-native-tube.940914eda692.png",
+      "sha256": "940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd",
+      "bytes": 33509,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp100SpryShnBlk"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp100SpryShnBlk-shared-catalog.9fbc969f99e1.png",
+      "url": "/local-media/empire-bare-glass/GBEmp100SpryShnBlk-shared-catalog.9fbc969f99e1.png",
+      "sha256": "9fbc969f99e189bcc5c55b5e50a9de2e2ffb45329de596c22cb63af341626591",
+      "bytes": 329821,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp100SpryShnBlk"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp100SpryShnGl-native-tube.220a0365f812.png",
+      "url": "/local-media/empire-bare-glass/GBEmp100SpryShnGl-native-tube.220a0365f812.png",
+      "sha256": "220a0365f812852ed6b04122635c405a296d4086f744ebb9fa5e8e87ead39909",
+      "bytes": 36343,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp100SpryShnGl"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp100SpryShnGl-shared-catalog.87fa84ab1249.png",
+      "url": "/local-media/empire-bare-glass/GBEmp100SpryShnGl-shared-catalog.87fa84ab1249.png",
+      "sha256": "87fa84ab124966d779467bf47bbef4dbed22fbd540108b7fc1f377dc1c90085b",
+      "bytes": 399448,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp100SpryShnGl"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp100SpryShnSl-native-tube.940914eda692.png",
+      "url": "/local-media/empire-bare-glass/GBEmp100SpryShnSl-native-tube.940914eda692.png",
+      "sha256": "940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd",
+      "bytes": 33509,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp100SpryShnSl"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp100SpryShnSl-shared-catalog.b102e2ecee7c.png",
+      "url": "/local-media/empire-bare-glass/GBEmp100SpryShnSl-shared-catalog.b102e2ecee7c.png",
+      "sha256": "b102e2ecee7c6ad55097bf8051e11596a38afd5cfe035a58a5d365bfb639a979",
+      "bytes": 328879,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp100SpryShnSl"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp50SpryCu-native-tube.abd1dd749986.png",
+      "url": "/local-media/empire-bare-glass/GBEmp50SpryCu-native-tube.abd1dd749986.png",
+      "sha256": "abd1dd749986c006f412ebfc4f6cec3847b800dc1898021b494f29583665cb37",
+      "bytes": 27380,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp50SpryCu"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp50SpryCu-shared-catalog.a493cba8116e.png",
+      "url": "/local-media/empire-bare-glass/GBEmp50SpryCu-shared-catalog.a493cba8116e.png",
+      "sha256": "a493cba8116e830d1b1ea2659003b15d0734e503b1f97eb73fe5dca6cb5ec838",
+      "bytes": 398393,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp50SpryCu"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp50SpryMtGl-shared-catalog.7580022c9950.png",
+      "url": "/local-media/empire-bare-glass/GBEmp50SpryMtGl-shared-catalog.7580022c9950.png",
+      "sha256": "7580022c995036c9626d1fdba70105775b77dfc1e3149703b6be223e662584ea",
+      "bytes": 375664,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp50SpryMtGl"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp50SpryMtSl-native-tube.bf29cf892dca.png",
+      "url": "/local-media/empire-bare-glass/GBEmp50SpryMtSl-native-tube.bf29cf892dca.png",
+      "sha256": "bf29cf892dca0895bb25b16fa775d02765c6e6e5d6382dbdb8e426208cab986a",
+      "bytes": 25593,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp50SpryMtSl"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp50SpryMtSl-shared-catalog.5cbe4f3825ba.png",
+      "url": "/local-media/empire-bare-glass/GBEmp50SpryMtSl-shared-catalog.5cbe4f3825ba.png",
+      "sha256": "5cbe4f3825ba839fd94cd3c38240dd0bac7ef939579f4f96df6dc06d74ae6286",
+      "bytes": 298913,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp50SpryMtSl"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp50SpryShnBlk-native-tube.951ca106760f.png",
+      "url": "/local-media/empire-bare-glass/GBEmp50SpryShnBlk-native-tube.951ca106760f.png",
+      "sha256": "951ca106760f2b34381c4ea32452423e7632c12293def5e1d27c2b5bf79c4167",
+      "bytes": 25470,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp50SpryShnBlk"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp50SpryShnBlk-shared-catalog.713b9d68412f.png",
+      "url": "/local-media/empire-bare-glass/GBEmp50SpryShnBlk-shared-catalog.713b9d68412f.png",
+      "sha256": "713b9d68412fb0846de7ee68c0a1f84d1138efb62c73777b057a5b40a99a4fb6",
+      "bytes": 299408,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp50SpryShnBlk"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp50SpryShnGl-native-tube.63ca6264b0f1.png",
+      "url": "/local-media/empire-bare-glass/GBEmp50SpryShnGl-native-tube.63ca6264b0f1.png",
+      "sha256": "63ca6264b0f11daeace215730ff5ef425e451bc83e531f85a52e11890f013edc",
+      "bytes": 25579,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp50SpryShnGl"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp50SpryShnGl-shared-catalog.8c00a2f63c65.png",
+      "url": "/local-media/empire-bare-glass/GBEmp50SpryShnGl-shared-catalog.8c00a2f63c65.png",
+      "sha256": "8c00a2f63c652c86b85e48080e55cd1e8d4b6670d09a9d9fa753eaab77e6d084",
+      "bytes": 393827,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp50SpryShnGl"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp50SpryShnSl-native-tube.63ca6264b0f1.png",
+      "url": "/local-media/empire-bare-glass/GBEmp50SpryShnSl-native-tube.63ca6264b0f1.png",
+      "sha256": "63ca6264b0f11daeace215730ff5ef425e451bc83e531f85a52e11890f013edc",
+      "bytes": 25579,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp50SpryShnSl"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/GBEmp50SpryShnSl-shared-catalog.63eefb858852.png",
+      "url": "/local-media/empire-bare-glass/GBEmp50SpryShnSl-shared-catalog.63eefb858852.png",
+      "sha256": "63eefb85885225425daa74a073b6ee06389598128ca17440a8c9c771f4fcce43",
+      "bytes": 299519,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp50SpryShnSl"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/LBEmp100WhtClOvrCp-native-tube.d8ba369f9439.png",
+      "url": "/local-media/empire-bare-glass/LBEmp100WhtClOvrCp-native-tube.d8ba369f9439.png",
+      "sha256": "d8ba369f94392fd2b5d8b02d4f6718acf5926f084b92a6e518b9f0970e7b5396",
+      "bytes": 46800,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBEmp100WhtClOvrCp"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/LBEmp100WhtClOvrCp-shared-catalog.6c0335cd32e4.png",
+      "url": "/local-media/empire-bare-glass/LBEmp100WhtClOvrCp-shared-catalog.6c0335cd32e4.png",
+      "sha256": "6c0335cd32e4d4b3f45e504e7686f148ab13de12bc5ecf7df8aa37be3495df7c",
+      "bytes": 321955,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBEmp100WhtClOvrCp"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/LBEmp50WhtClOvrCp-shared-catalog.0c9c203d4591.png",
+      "url": "/local-media/empire-bare-glass/LBEmp50WhtClOvrCp-shared-catalog.0c9c203d4591.png",
+      "sha256": "0c9c203d4591e29fc94fc34a43d9dd629a894b1026b406c790ca3246f544c4fe",
+      "bytes": 288579,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBEmp50WhtClOvrCp"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/empire-100ml-107x46.1abdf390058c.png",
+      "url": "/local-media/empire-bare-glass/empire-100ml-107x46.1abdf390058c.png",
+      "sha256": "1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f",
+      "bytes": 1140744,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp100SpryCu",
+        "GBEmp100SpryMtGl",
+        "GBEmp100SpryMtSl",
+        "GBEmp100SpryShnBlk",
+        "GBEmp100SpryShnGl",
+        "GBEmp100SpryShnSl",
+        "LBEmp100WhtClOvrCp"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/empire-100ml-native-spray-tube.883a216fc61f.png",
+      "url": "/local-media/empire-bare-glass/empire-100ml-native-spray-tube.883a216fc61f.png",
+      "sha256": "883a216fc61f92a2ec8371eea59aa547b4db841240c8b2296cc505d8045ff2f0",
+      "bytes": 33508,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp100SpryMtGl"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/empire-50ml-empty-alpha.0fce3a2c6bb1.png",
+      "url": "/local-media/empire-bare-glass/empire-50ml-empty-alpha.0fce3a2c6bb1.png",
+      "sha256": "0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f",
+      "bytes": 1321128,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp50SpryCu",
+        "GBEmp50SpryMtGl",
+        "GBEmp50SpryMtSl",
+        "GBEmp50SpryShnBlk",
+        "GBEmp50SpryShnGl",
+        "GBEmp50SpryShnSl",
+        "LBEmp50WhtClOvrCp"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-bare-glass/empire-50ml-native-spray-tube.7d755598ba26.png",
+      "url": "/local-media/empire-bare-glass/empire-50ml-native-spray-tube.7d755598ba26.png",
+      "sha256": "7d755598ba26efc496f5cd05fb5930132eb0af6d4a99d8bd95da3f937ccc6d90",
+      "bytes": 25595,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBEmp50SpryMtGl"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-white-pump/overcap-13ae16acc25d08039dbbfdb29a3f2b7524633a1390b6548b03d4366621249835.png",
+      "url": "/local-media/empire-white-pump/overcap-13ae16acc25d08039dbbfdb29a3f2b7524633a1390b6548b03d4366621249835.png",
+      "sha256": "36239bb9f037ae8625f5ba384b13c15d2be7e07e868769c725447463bc012eb2",
+      "bytes": 103245,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBEmp100WhtClOvrCp",
+        "LBEmp50WhtClOvrCp"
+      ]
+    },
+    {
+      "path": "public/local-media/empire-white-pump/pump-25c3d0557906a8824e68ca309440d7cf3df382ab92a1c485f85bb19d26b4554c.png",
+      "url": "/local-media/empire-white-pump/pump-25c3d0557906a8824e68ca309440d7cf3df382ab92a1c485f85bb19d26b4554c.png",
+      "sha256": "216a1943193e66319db55a705eb731dc9af5e5ce8713609b7c9218195e464dd8",
+      "bytes": 72142,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBEmp100WhtClOvrCp",
+        "LBEmp50WhtClOvrCp"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-lotion-pilot/LBRnd78LtnClOvrCap-shared-catalog.5a6aea98b830.png",
+      "url": "/local-media/round78-lotion-pilot/LBRnd78LtnClOvrCap-shared-catalog.5a6aea98b830.png",
+      "sha256": "5a6aea98b830bc50e87d88ca314c07941fbb959eaab466af20b39c3ad523dcb5",
+      "bytes": 298554,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBRnd78LtnClOvrCap"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-lotion-pilot/LBRnd78LtnCu-shared-catalog.e3fd0877bc15.png",
+      "url": "/local-media/round78-lotion-pilot/LBRnd78LtnCu-shared-catalog.e3fd0877bc15.png",
+      "sha256": "e3fd0877bc15120e5a1ad6202c3fc1c90b8712bbadfabedbe86933029778a4a8",
+      "bytes": 412802,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBRnd78LtnCu"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-lotion-pilot/LBRnd78LtnMtGl-shared-catalog.41ee7331dfc8.png",
+      "url": "/local-media/round78-lotion-pilot/LBRnd78LtnMtGl-shared-catalog.41ee7331dfc8.png",
+      "sha256": "41ee7331dfc84598ec0c49b7bc843471f89b8636f7348836615c72421d8be5be",
+      "bytes": 393043,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBRnd78LtnMtGl"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-lotion-pilot/LBRnd78LtnMtSl-shared-catalog.82b224cb65a2.png",
+      "url": "/local-media/round78-lotion-pilot/LBRnd78LtnMtSl-shared-catalog.82b224cb65a2.png",
+      "sha256": "82b224cb65a22cbd9d10e0b9a4029e1af01889822bac85382ef704cff31515e4",
+      "bytes": 298609,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBRnd78LtnMtSl"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-lotion-pilot/LBRnd78LtnShnBlk-shared-catalog.c804fe625383.png",
+      "url": "/local-media/round78-lotion-pilot/LBRnd78LtnShnBlk-shared-catalog.c804fe625383.png",
+      "sha256": "c804fe625383e7b491c15878bc30aed51caaefab64acabe9a4ea7c81913896a2",
+      "bytes": 295101,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBRnd78LtnShnBlk"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-lotion-pilot/LBRnd78LtnShnGl-shared-catalog.fcb3457ee046.png",
+      "url": "/local-media/round78-lotion-pilot/LBRnd78LtnShnGl-shared-catalog.fcb3457ee046.png",
+      "sha256": "fcb3457ee046bcfa30c39a0d3a0343651658fb48815a52e5eccdb992b5fa8813",
+      "bytes": 413248,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBRnd78LtnShnGl"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-lotion-pilot/LBRnd78LtnShnSl-shared-catalog.7c5be87f489f.png",
+      "url": "/local-media/round78-lotion-pilot/LBRnd78LtnShnSl-shared-catalog.7c5be87f489f.png",
+      "sha256": "7c5be87f489f23d0a52b1d21910a5954f380f996b55d3f1fae68a9419f997347",
+      "bytes": 298163,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBRnd78LtnShnSl"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-lotion-pilot/LBRndFrst78LtnClOvrCap-shared-catalog.9488f2b0d866.png",
+      "url": "/local-media/round78-lotion-pilot/LBRndFrst78LtnClOvrCap-shared-catalog.9488f2b0d866.png",
+      "sha256": "9488f2b0d866d36661ecb43019031112cf4c2c5e23c4fd1150e1b4c9ff8679d2",
+      "bytes": 319575,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBRndFrst78LtnClOvrCap"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-lotion-pilot/LBRndFrst78LtnCu-shared-catalog.679bc55de619.png",
+      "url": "/local-media/round78-lotion-pilot/LBRndFrst78LtnCu-shared-catalog.679bc55de619.png",
+      "sha256": "679bc55de619243dcef8d017cbe37c5e0e3619f4ac8ac09b8a09e4469e98f008",
+      "bytes": 427552,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBRndFrst78LtnCu"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-lotion-pilot/LBRndFrst78LtnMtGl-shared-catalog.e3f567612598.png",
+      "url": "/local-media/round78-lotion-pilot/LBRndFrst78LtnMtGl-shared-catalog.e3f567612598.png",
+      "sha256": "e3f567612598b9d251ac6c92ec9931ec0fa8c657e8d1c65eaf0f7378b6d72851",
+      "bytes": 408073,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBRndFrst78LtnMtGl"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-lotion-pilot/LBRndFrst78LtnMtSl-shared-catalog.458efdc1bd35.png",
+      "url": "/local-media/round78-lotion-pilot/LBRndFrst78LtnMtSl-shared-catalog.458efdc1bd35.png",
+      "sha256": "458efdc1bd353563c511712085f29a7e2a6e0e31ceff0176a40a8a9f8a2c1c8d",
+      "bytes": 320044,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBRndFrst78LtnMtSl"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-lotion-pilot/LBRndFrst78LtnShnBlk-shared-catalog.69e3abc6ee73.png",
+      "url": "/local-media/round78-lotion-pilot/LBRndFrst78LtnShnBlk-shared-catalog.69e3abc6ee73.png",
+      "sha256": "69e3abc6ee73036759298f5cf1226568d53d0162330192bb2e0a4be0d51c49a7",
+      "bytes": 320593,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBRndFrst78LtnShnBlk"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-lotion-pilot/LBRndFrst78LtnShnGl-shared-catalog.b54e686a8479.png",
+      "url": "/local-media/round78-lotion-pilot/LBRndFrst78LtnShnGl-shared-catalog.b54e686a8479.png",
+      "sha256": "b54e686a8479e365c7fcf3405bc7452c31f9d96b6e9de50b497ac7772f081cb9",
+      "bytes": 434009,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBRndFrst78LtnShnGl"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-lotion-pilot/LBRndFrst78LtnShnSl-shared-catalog.6b12ab831eb8.png",
+      "url": "/local-media/round78-lotion-pilot/LBRndFrst78LtnShnSl-shared-catalog.6b12ab831eb8.png",
+      "sha256": "6b12ab831eb868e5dd2e0d6920aa6fecc6b698bfb2d8d9312716dfa27271323c",
+      "bytes": 322802,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBRndFrst78LtnShnSl"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-pilot/GBRnd78SpryCu-shared-catalog.fc78436ff5db.png",
+      "url": "/local-media/round78-pilot/GBRnd78SpryCu-shared-catalog.fc78436ff5db.png",
+      "sha256": "fc78436ff5db33076675e83914319c881ed305b0f523be2f6d4f827d8f1870b8",
+      "bytes": 411582,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBRnd78SpryCu"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-pilot/GBRnd78SpryMtGl-shared-catalog.515bdef76e64.png",
+      "url": "/local-media/round78-pilot/GBRnd78SpryMtGl-shared-catalog.515bdef76e64.png",
+      "sha256": "515bdef76e64df516b1562d3cc9cc1d4d33c591366e1398db8775a1093b3b1d6",
+      "bytes": 386973,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBRnd78SpryMtGl"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-pilot/GBRnd78SpryMtSl-shared-catalog.89e992101be2.png",
+      "url": "/local-media/round78-pilot/GBRnd78SpryMtSl-shared-catalog.89e992101be2.png",
+      "sha256": "89e992101be2d23eb61a895b37998cacb18c2cd7e4e2ea674db96f24d5af6df0",
+      "bytes": 289499,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBRnd78SpryMtSl"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-pilot/GBRnd78SpryShnBlk-shared-catalog.bba51de97217.png",
+      "url": "/local-media/round78-pilot/GBRnd78SpryShnBlk-shared-catalog.bba51de97217.png",
+      "sha256": "bba51de97217751f2e441630cafaa0207999d867bcf4403d1d55382a8afa0275",
+      "bytes": 289575,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBRnd78SpryShnBlk"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-pilot/GBRnd78SpryShnGl-shared-catalog.158384c42a2e.png",
+      "url": "/local-media/round78-pilot/GBRnd78SpryShnGl-shared-catalog.158384c42a2e.png",
+      "sha256": "158384c42a2e4d6adceed230697445cb0bf41a9956cd1b3833bbf12f44f2efa3",
+      "bytes": 405873,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBRnd78SpryShnGl"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-pilot/GBRnd78SpryShnSl-shared-catalog.dfbc0784912a.png",
+      "url": "/local-media/round78-pilot/GBRnd78SpryShnSl-shared-catalog.dfbc0784912a.png",
+      "sha256": "dfbc0784912aed51ea448fc2e0853dbf809a4b5eada0babcd32c051ab6efcbcb",
+      "bytes": 291643,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBRnd78SpryShnSl"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-pilot/GBRndFrst78SpryCu-shared-catalog.ffbf828bbdaa.png",
+      "url": "/local-media/round78-pilot/GBRndFrst78SpryCu-shared-catalog.ffbf828bbdaa.png",
+      "sha256": "ffbf828bbdaafed94b484ce4be95293b193287d47b8038ad41374974ae4c3254",
+      "bytes": 430746,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBRndFrst78SpryCu"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-pilot/GBRndFrst78SpryMtGl-shared-catalog.9cc726a91ca4.png",
+      "url": "/local-media/round78-pilot/GBRndFrst78SpryMtGl-shared-catalog.9cc726a91ca4.png",
+      "sha256": "9cc726a91ca4753a0f0b3a2fbb16807f9d1413b711403343853907e767ec0265",
+      "bytes": 407364,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBRndFrst78SpryMtGl"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-pilot/GBRndFrst78SpryMtSl-shared-catalog.b378bdef422f.png",
+      "url": "/local-media/round78-pilot/GBRndFrst78SpryMtSl-shared-catalog.b378bdef422f.png",
+      "sha256": "b378bdef422fb899cc41544aa39fa62e47658e2779feb2fc1375d088155f96ef",
+      "bytes": 312777,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBRndFrst78SpryMtSl"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-pilot/GBRndFrst78SpryShnBlk-shared-catalog.5689174dc313.png",
+      "url": "/local-media/round78-pilot/GBRndFrst78SpryShnBlk-shared-catalog.5689174dc313.png",
+      "sha256": "5689174dc313d7c1baab7b61a9b9d692cd9c376b0432f7299ad3f1bfc56ba949",
+      "bytes": 316874,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBRndFrst78SpryShnBlk"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-pilot/GBRndFrst78SpryShnGl-shared-catalog.299f3bc1227a.png",
+      "url": "/local-media/round78-pilot/GBRndFrst78SpryShnGl-shared-catalog.299f3bc1227a.png",
+      "sha256": "299f3bc1227ab863fd4e443612b280ab00c4c7cdf575aee5d4f0820772cdeda7",
+      "bytes": 430208,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBRndFrst78SpryShnGl"
+      ]
+    },
+    {
+      "path": "public/local-media/round78-pilot/GBRndFrst78SpryShnSl-shared-catalog.f000bbc5ba6b.png",
+      "url": "/local-media/round78-pilot/GBRndFrst78SpryShnSl-shared-catalog.f000bbc5ba6b.png",
+      "sha256": "f000bbc5ba6beba0914dcaeb9c3ec8d91a7c7f20e7de03644d9f00c79c243b68",
+      "bytes": 317489,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBRndFrst78SpryShnSl"
+      ]
+    },
+    {
+      "path": "public/local-media/source-tubes/empire50-white-lotion.121928bb048d.png",
+      "url": "/local-media/source-tubes/empire50-white-lotion.121928bb048d.png",
+      "sha256": "121928bb048d3a62ea8589b6c0c1c64e711a2575654bed3d5162f1d074995f79",
+      "bytes": 49531,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBEmp50WhtClOvrCp"
+      ]
+    },
+    {
+      "path": "public/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+      "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+      "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+      "bytes": 32974,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "LBRnd78LtnClOvrCap",
+        "LBRnd78LtnCu",
+        "LBRnd78LtnMtGl",
+        "LBRnd78LtnMtSl",
+        "LBRnd78LtnShnBlk",
+        "LBRnd78LtnShnGl",
+        "LBRnd78LtnShnSl",
+        "LBRndFrst78LtnClOvrCap",
+        "LBRndFrst78LtnCu",
+        "LBRndFrst78LtnMtGl",
+        "LBRndFrst78LtnMtSl",
+        "LBRndFrst78LtnShnBlk",
+        "LBRndFrst78LtnShnGl",
+        "LBRndFrst78LtnShnSl"
+      ]
+    },
+    {
+      "path": "public/local-media/source-tubes/round78-spray.d4949a59193c.png",
+      "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+      "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+      "bytes": 25708,
+      "hostedUrl": null,
+      "uploaded": false,
+      "usedBySkus": [
+        "GBDiva46SpryCu",
+        "GBDiva46SpryMtGl",
+        "GBDiva46SpryMtSl",
+        "GBDiva46SpryShnBlk",
+        "GBDiva46SpryShnGl",
+        "GBDiva46SpryShnSl",
+        "GBDivaFrst46SpryCu",
+        "GBDivaFrst46SpryMtGl",
+        "GBDivaFrst46SpryMtSl",
+        "GBDivaFrst46SpryShnBlk",
+        "GBDivaFrst46SpryShnGl",
+        "GBDivaFrst46SpryShnSl",
+        "GBRnd78SpryCu",
+        "GBRnd78SpryMtGl",
+        "GBRnd78SpryMtSl",
+        "GBRnd78SpryShnBlk",
+        "GBRnd78SpryShnGl",
+        "GBRnd78SpryShnSl",
+        "GBRndFrst78SpryCu",
+        "GBRndFrst78SpryMtGl",
+        "GBRndFrst78SpryMtSl",
+        "GBRndFrst78SpryShnBlk",
+        "GBRndFrst78SpryShnGl",
+        "GBRndFrst78SpryShnSl"
+      ]
+    }
+  ]
+}

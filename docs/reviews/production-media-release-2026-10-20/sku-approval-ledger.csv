@@ -1,0 +1,53 @@
+websiteSku,group,batch,description,visualApproval,remainingGate,approvedForProduction,requiresRing
+GBEmp100SpryMtGl,empire,1-empire-canary,100 ml Clear Empire bottle with Matte Gold sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBEmp50SpryMtGl,empire,1-empire-canary,50 ml Clear Empire bottle with Matte Gold sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBEmp100SpryCu,empire,2-empire-remaining,100 ml Clear Empire bottle with Copper sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBEmp100SpryMtSl,empire,2-empire-remaining,100 ml Clear Empire bottle with Matte Silver sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBEmp100SpryShnBlk,empire,2-empire-remaining,100 ml Clear Empire bottle with Shiny Black sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBEmp100SpryShnGl,empire,2-empire-remaining,100 ml Clear Empire bottle with Shiny Gold sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBEmp100SpryShnSl,empire,2-empire-remaining,100 ml Clear Empire bottle with Shiny Silver sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBEmp50SpryCu,empire,2-empire-remaining,50 ml Clear Empire bottle with Copper sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBEmp50SpryMtSl,empire,2-empire-remaining,50 ml Clear Empire bottle with Matte Silver sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBEmp50SpryShnBlk,empire,2-empire-remaining,50 ml Clear Empire bottle with Shiny Black sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBEmp50SpryShnGl,empire,2-empire-remaining,50 ml Clear Empire bottle with Shiny Gold sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBEmp50SpryShnSl,empire,2-empire-remaining,50 ml Clear Empire bottle with Shiny Silver sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+LBEmp100WhtClOvrCp,empire,2-empire-remaining,100 ml Clear Empire bottle with White pump with clear overcap and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+LBEmp50WhtClOvrCp,empire,2-empire-remaining,50 ml Clear Empire bottle with White pump with clear overcap and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBRnd78SpryCu,round78-spray,3-round78-sprays,78 ml Clear Round bottle with Copper sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBRnd78SpryMtGl,round78-spray,3-round78-sprays,78 ml Clear Round bottle with Matte Gold sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBRnd78SpryMtSl,round78-spray,3-round78-sprays,78 ml Clear Round bottle with Matte Silver sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBRnd78SpryShnBlk,round78-spray,3-round78-sprays,78 ml Clear Round bottle with Shiny Black sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBRnd78SpryShnGl,round78-spray,3-round78-sprays,78 ml Clear Round bottle with Shiny Gold sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBRnd78SpryShnSl,round78-spray,3-round78-sprays,78 ml Clear Round bottle with Shiny Silver sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBRndFrst78SpryCu,round78-spray,3-round78-sprays,78 ml Frosted Round bottle with Copper sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBRndFrst78SpryMtGl,round78-spray,3-round78-sprays,78 ml Frosted Round bottle with Matte Gold sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBRndFrst78SpryMtSl,round78-spray,3-round78-sprays,78 ml Frosted Round bottle with Matte Silver sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBRndFrst78SpryShnBlk,round78-spray,3-round78-sprays,78 ml Frosted Round bottle with Shiny Black sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBRndFrst78SpryShnGl,round78-spray,3-round78-sprays,78 ml Frosted Round bottle with Shiny Gold sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBRndFrst78SpryShnSl,round78-spray,3-round78-sprays,78 ml Frosted Round bottle with Shiny Silver sprayer and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+LBRnd78LtnClOvrCap,round78-lotion,4-round78-lotion-after-approval,78 ml Clear Round bottle with matte silver lotion pump and clear overcap beside,pending-final-visual-approval,final-visual-approval,False,False
+LBRnd78LtnCu,round78-lotion,4-round78-lotion-after-approval,78 ml Clear Round bottle with Copper lotion pump and overcap beside,pending-final-visual-approval,final-visual-approval,False,False
+LBRnd78LtnMtGl,round78-lotion,4-round78-lotion-after-approval,78 ml Clear Round bottle with Matte Gold lotion pump and overcap beside,pending-final-visual-approval,final-visual-approval,False,False
+LBRnd78LtnMtSl,round78-lotion,4-round78-lotion-after-approval,78 ml Clear Round bottle with Matte Silver lotion pump and overcap beside,pending-final-visual-approval,final-visual-approval,False,False
+LBRnd78LtnShnBlk,round78-lotion,4-round78-lotion-after-approval,78 ml Clear Round bottle with Shiny Black lotion pump and overcap beside,pending-final-visual-approval,final-visual-approval,False,False
+LBRnd78LtnShnGl,round78-lotion,4-round78-lotion-after-approval,78 ml Clear Round bottle with Shiny Gold lotion pump and overcap beside,pending-final-visual-approval,final-visual-approval,False,False
+LBRnd78LtnShnSl,round78-lotion,4-round78-lotion-after-approval,78 ml Clear Round bottle with Shiny Silver lotion pump and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+LBRndFrst78LtnClOvrCap,round78-lotion,4-round78-lotion-after-approval,78 ml Frosted Round bottle with matte silver lotion pump and clear overcap beside,pending-final-visual-approval,final-visual-approval,False,False
+LBRndFrst78LtnCu,round78-lotion,4-round78-lotion-after-approval,78 ml Frosted Round bottle with Copper lotion pump and overcap beside,pending-final-visual-approval,final-visual-approval,False,False
+LBRndFrst78LtnMtGl,round78-lotion,4-round78-lotion-after-approval,78 ml Frosted Round bottle with Matte Gold lotion pump and overcap beside,pending-final-visual-approval,final-visual-approval,False,False
+LBRndFrst78LtnMtSl,round78-lotion,4-round78-lotion-after-approval,78 ml Frosted Round bottle with Matte Silver lotion pump and overcap beside,pending-final-visual-approval,final-visual-approval,False,False
+LBRndFrst78LtnShnBlk,round78-lotion,4-round78-lotion-after-approval,78 ml Frosted Round bottle with Shiny Black lotion pump and overcap beside,pending-final-visual-approval,final-visual-approval,False,False
+LBRndFrst78LtnShnGl,round78-lotion,4-round78-lotion-after-approval,78 ml Frosted Round bottle with Shiny Gold lotion pump and overcap beside,pending-final-visual-approval,final-visual-approval,False,False
+LBRndFrst78LtnShnSl,round78-lotion,4-round78-lotion-after-approval,78 ml Frosted Round bottle with Shiny Silver lotion pump and overcap beside,accepted-in-conversation,technical-release-preparation,False,False
+GBDiva46SpryCu,diva46-spray,5-diva46-after-source-fit,46 ml Clear Diva bottle with Copper sprayer and overcap beside,accepted-in-conversation,source-fit-verification,False,False
+GBDiva46SpryMtGl,diva46-spray,5-diva46-after-source-fit,46 ml Clear Diva bottle with Matte Gold sprayer and overcap beside,accepted-in-conversation,source-fit-verification,False,False
+GBDiva46SpryMtSl,diva46-spray,5-diva46-after-source-fit,46 ml Clear Diva bottle with Matte Silver sprayer and overcap beside,accepted-in-conversation,source-fit-verification,False,False
+GBDiva46SpryShnBlk,diva46-spray,5-diva46-after-source-fit,46 ml Clear Diva bottle with Shiny Black sprayer and overcap beside,accepted-in-conversation,source-fit-verification,False,False
+GBDiva46SpryShnGl,diva46-spray,5-diva46-after-source-fit,46 ml Clear Diva bottle with Shiny Gold sprayer and overcap beside,accepted-in-conversation,source-fit-verification,False,False
+GBDiva46SpryShnSl,diva46-spray,5-diva46-after-source-fit,46 ml Clear Diva bottle with Shiny Silver sprayer and overcap beside,accepted-in-conversation,source-fit-verification,False,False
+GBDivaFrst46SpryCu,diva46-spray,5-diva46-after-source-fit,46 ml Frosted Diva bottle with Copper sprayer and overcap beside,accepted-in-conversation,source-fit-verification,False,False
+GBDivaFrst46SpryMtGl,diva46-spray,5-diva46-after-source-fit,46 ml Frosted Diva bottle with Matte Gold sprayer and overcap beside,accepted-in-conversation,source-fit-verification,False,False
+GBDivaFrst46SpryMtSl,diva46-spray,5-diva46-after-source-fit,46 ml Frosted Diva bottle with Matte Silver sprayer and overcap beside,accepted-in-conversation,source-fit-verification,False,False
+GBDivaFrst46SpryShnBlk,diva46-spray,5-diva46-after-source-fit,46 ml Frosted Diva bottle with Shiny Black sprayer and overcap beside,accepted-in-conversation,source-fit-verification,False,False
+GBDivaFrst46SpryShnGl,diva46-spray,5-diva46-after-source-fit,46 ml Frosted Diva bottle with Shiny Gold sprayer and overcap beside,accepted-in-conversation,source-fit-verification,False,False
+GBDivaFrst46SpryShnSl,diva46-spray,5-diva46-after-source-fit,46 ml Frosted Diva bottle with Shiny Silver sprayer and overcap beside,accepted-in-conversation,source-fit-verification,False,False

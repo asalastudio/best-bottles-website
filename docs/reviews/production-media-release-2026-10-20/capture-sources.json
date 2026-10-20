@@ -1,0 +1,22 @@
+[
+  {
+    "group": "empire",
+    "archivedPath": "working/output/empire-completion-pilot/kits.json",
+    "sourceSha256": "db090d4a229a13148d5ccaa4cedf954dbd17c5c7bdf3be1c5fe99a9cf39270c2"
+  },
+  {
+    "group": "round78-spray",
+    "archivedPath": "working/output/round78-spray-completion/kits.json",
+    "sourceSha256": "e3da25f45c8b2f35721555bdd34d293436c0b391e6f4653cda85bb3e1e3dac0e"
+  },
+  {
+    "group": "round78-lotion",
+    "archivedPath": "working/output/round78-lotion-completion/kits.json",
+    "sourceSha256": "a731533b72a841061c995be216ccdcd5b69642f2b20672819fb4ae93fa8ab063"
+  },
+  {
+    "group": "diva46-spray",
+    "archivedPath": "working/output/diva46-spray-completion/kits.json",
+    "sourceSha256": "e69390b1a2c221e447ad890bcd49fede366579faab4000470fa52f6e1764d9ea"
+  }
+]

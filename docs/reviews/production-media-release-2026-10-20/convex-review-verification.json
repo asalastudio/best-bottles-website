@@ -1,0 +1,22 @@
+{
+  "scope": "Local definitions and handler gate probe only, not a deployed Convex test",
+  "slotValidatorsCompared": [
+    "register",
+    "kitMutation",
+    "kitTable",
+    "componentTable",
+    "assemblyTable"
+  ],
+  "previousSlotsRetained": 13,
+  "newSlots": [
+    "ring"
+  ],
+  "wrongWriteTokenRejectedBeforeDbAccess": true,
+  "authorizedEmptyBatchesWriteNothing": true,
+  "csvImporterAcceptsSprayer": true,
+  "csvImporterAcceptsRing": false,
+  "ringImporterError": "assembly review-only build role: 'ring' is not one of body, fitment, roller, cap, overcap, sprayer, pump, diptube, collar, bulb, tassel, reducer, pipette",
+  "networkCalls": 0,
+  "databaseCalls": 0,
+  "productionChanges": 0
+}
