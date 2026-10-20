@@ -109,6 +109,52 @@ describe("picks", () => {
         }
     });
 
+    it("keeps reducer tall caps distinct when the imported cap fields omit height", () => {
+        for (const size of [50, 100]) {
+            const rows = ["ShnBlk", "MtSl"].flatMap(finish => [false, true].map(tall => variant({
+                websiteSku: `GBEmp${size}Rdcr${finish}${tall ? "Tall" : ""}`,
+                graceSku: `${size}-${finish}-${tall}`, applicator: "Reducer",
+                capColor: finish === "MtSl" ? "Matte Silver" : "Shiny Black",
+                capStyle: "Screw Cap", capHeight: null,
+                itemName: `Empire design ${size} ml clear glass bottle with reducer and ${tall ? "tall " : ""}${finish === "MtSl" ? "silver matte" : "black shiny"} cap.`,
+            })));
+            expect(capOptions(rows, null)).toHaveLength(4);
+            for (const row of rows) {
+                const picks = derivePicks(rows, GROUP, { sku: row.websiteSku });
+                expect(resolveVariant(rows, picks)?.websiteSku).toBe(row.websiteSku);
+                const query = new URLSearchParams(pickQuery(picks, []));
+                expect(resolveVariant(rows, derivePicks(rows, GROUP, { cap: query.get("cap") }))?.websiteSku).toBe(row.websiteSku);
+            }
+        }
+    });
+
+    it("does not mistake a tall bottle description for a tall cap", () => {
+        const rows = [false, true].map(tall => variant({
+            websiteSku: `example-${tall}`, graceSku: `example-${tall}`,
+            capColor: "Black", capStyle: "Screw Cap", capHeight: null,
+            itemName: tall ? "Tall glass bottle with black cap." : "Glass bottle with black cap.",
+        }));
+        expect(capOptions(rows, null)).toHaveLength(1);
+    });
+
+    it("keeps ivory bulb sprayers distinct by the explicitly described collar finish", () => {
+        for (const tassel of ["", "Tsl"]) {
+            const rows = ["Gold", "Silver"].map(collar => variant({
+                websiteSku: `GBDiva46AnSp${tassel}Ivy${collar === "Gold" ? "Gl" : "Sl"}`,
+                graceSku: `${tassel}-${collar}`, capColor: "Ivory", capStyle: "Spray",
+                applicator: tassel ? "Vintage Bulb Sprayer with Tassel" : "Vintage Bulb Sprayer",
+                itemName: `Diva clear glass bottle with ivory vintage style bulb sprayer with shiny ${collar.toLowerCase()} collar cap.`,
+            }));
+            expect(capOptions(rows, null).map(o => o.name)).toEqual(["Ivory Gold", "Ivory Silver"]);
+            for (const row of rows) {
+                const picks = derivePicks(rows, GROUP, { sku: row.websiteSku });
+                expect(resolveVariant(rows, picks)?.websiteSku).toBe(row.websiteSku);
+                const query = new URLSearchParams(pickQuery(picks, []));
+                expect(resolveVariant(rows, derivePicks(rows, GROUP, { cap: query.get("cap") }))?.websiteSku).toBe(row.websiteSku);
+            }
+        }
+    });
+
     it("hides the roller toggle when a group sells one material", () => {
         expect(rollerOptions(VARIANTS.filter((row) => /Mtl/.test(row.websiteSku)))).toEqual([]);
     });

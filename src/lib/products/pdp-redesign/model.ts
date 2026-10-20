@@ -75,12 +75,18 @@ function clean(value: string | null | undefined): string | null {
 
 /** The finish a cap is sold as: "Black with Dots", "Matte Copper", "Shiny Silver". */
 export function capFinishName(variant: ProductVariant): string {
-    const finish = baseCapFinishName(variant);
+    let finish = baseCapFinishName(variant);
+    const description = `${variant.itemName ?? ""} ${variant.itemDescription ?? ""}`;
+    // Imported ivory bulb options can omit the collar finish in capColor.
+    // Keep the gold and silver assemblies distinct using their explicit copy.
+    if (/^ivory$/i.test(finish) && /vintage.*bulb/i.test(variant.applicator ?? "")) {
+        const collar = description.match(/\b(?:shiny\s+)?(gold|silver)\s+collar\s+cap\b/i)?.[1];
+        if (collar) finish = `Ivory ${collar[0].toUpperCase()}${collar.slice(1).toLowerCase()}`;
+    }
     // Catalogue ring rows have generic capColor and sometimes an imported
     // "Tall" style. The described jewelry is a separate purchasable option.
     // Include it before slugging: "Ivory + Silver" otherwise collides with
     // the non-ring "Ivory Silver" option and selects the wrong SKU.
-    const description = `${variant.itemName ?? ""} ${variant.itemDescription ?? ""}`;
     return /\bjewell?ed\b[^.]*\bring\b/i.test(description) && !/\bring\b/i.test(finish)
         ? `${finish}, Jeweled Ring` : finish;
 }
@@ -101,7 +107,12 @@ function capQualifier(variant: ProductVariant): string | null {
     if (height && /^(short|tall)$/i.test(height)) return height;
     const style = clean(variant.capStyle);
     if (style && /^(short|tall|faux leather|minaret|leather)$/i.test(style)) return style;
-    return null;
+    // Some reducer imports omit capHeight and use the generic "Screw Cap"
+    // style for both profiles. Preserve the explicit cap description so an
+    // exact tall-cap SKU does not resolve to its regular-cap sibling.
+    const description = `${variant.itemName ?? ""} ${variant.itemDescription ?? ""}`;
+    const describedHeight = description.match(/\b(short|tall)\s+(?:(?:black|white|silver|gold|copper|shiny|matte|ribbed|smooth|metal|plastic)\s+){0,4}cap\b/i)?.[1];
+    return describedHeight ? describedHeight[0].toUpperCase() + describedHeight.slice(1).toLowerCase() : null;
 }
 
 /** The pills a group offers for one applicator: unique finishes, qualified by cap style only when two finishes collide. */
