@@ -32,6 +32,11 @@ async function json(path, options) {
 }
 (async () => {
   const report = { origin, mode, revision, checkedAt: new Date().toISOString(), families: [], bodies: [], variants: [], conflicts: [], immutableAssets: 0 };
+  const localKitAssets = new Set();
+  function collectAssets(value) {
+    if (typeof value === 'string' && value.startsWith('/') && fs.existsSync(`public${value}`)) localKitAssets.add(value);
+    else if (value && typeof value === 'object') Object.values(value).forEach(collectAssets);
+  }
   const familyPath = `/api/bottle-builder/families?mediaRevision=${encodeURIComponent(revision)}`;
   for (let i = 0; i < 2; i++) {
     const res = await json(familyPath);
@@ -47,6 +52,7 @@ async function json(path, options) {
       const params = new URLSearchParams({ family, bodyId, mediaRevision: revision });
       const configs = await json(`/api/bottle-builder/bodies?${params}`);
       const loaded = await json(`/api/bottle-builder/kits?${params}`);
+      collectAssets(loaded.data);
       assert.equal(configs.revision, revision); assert.equal(loaded.revision, revision);
       const warm = await json(`/api/bottle-builder/kits?${params}`);
       assert.deepEqual(warm.data, loaded.data);
@@ -70,6 +76,13 @@ async function json(path, options) {
   }
   assert.equal(report.variants.length, 26);
   assert.equal(report.variants.filter(v => v.released).length, expected.length);
+  for (const path of localKitAssets) {
+    const res = await request(path); assert.equal(res.status, 200, `Kit asset unavailable: ${path}`);
+    const actual = crypto.createHash('sha256').update(Buffer.from(await res.arrayBuffer())).digest('hex');
+    const expected = crypto.createHash('sha256').update(fs.readFileSync(`public${path}`)).digest('hex');
+    assert.equal(actual, expected, `Kit asset changed: ${path}`);
+  }
+  report.localKitAssetsVerified = localKitAssets.size;
   const wrong = mode === 'off' ? `${manifest.revision}:all` : 'media-off-v1';
   for (const route of ['families', 'bodies', 'kits']) {
     for (let i = 0; i < 2; i++) {

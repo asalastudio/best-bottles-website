@@ -43,7 +43,14 @@ for f in (root/'public').iterdir():
     if f.is_file() and f.suffix.lower() in ['.png','.jpg','.webp','.ico','.svg','.txt','.json']:
         shutil.copy2(f,stage/'public'/f.name)
 # Directly referenced interface assets, and every exact SKU's previous hero.
-script='''const fs=require('node:fs');const m=require('./src/lib/media-release/manifest.json');const {getProductHero}=require('./src/lib/products/catalog-heroes');process.env.NEXT_PUBLIC_BB_MEDIA_RELEASE='off';console.log(JSON.stringify(m.entries.map(e=>getProductHero(e.websiteSku)?.url).filter(Boolean)));'''
+script='''process.env.NODE_ENV='production';process.env.NEXT_PUBLIC_BB_MEDIA_RELEASE='off';
+const m=require('./src/lib/media-release/manifest.json');const {getProductHero}=require('./src/lib/products/catalog-heroes');
+const recipes=require('./src/lib/media-release/recipes.json');const {drawableRegisterKits}=require('./src/lib/register/load');
+const payload={assemblies:{},plates:{},bodies:{},components:{}};
+for(const recipe of Object.values(recipes)){const s=recipe.sources[0];payload.assemblies[s.assembly.graceSku]=s.assembly;payload.plates[s.assembly.plateKey]=s.plate;payload.bodies[s.assembly.bodyId]=s.body;Object.assign(payload.components,s.components);}
+const paths=new Set(m.entries.map(e=>getProductHero(e.websiteSku)?.url).filter(Boolean));
+function walk(v){if(typeof v==='string'&&v.startsWith('/'))paths.add(v);else if(v&&typeof v==='object')Object.values(v).forEach(walk);}
+walk(drawableRegisterKits(payload));console.log(JSON.stringify([...paths]));'''
 paths=set(json.loads(subprocess.check_output(['node','--import','tsx','-e',script],text=True)))
 for f in (root/'src').rglob('*'):
     if f.suffix in ['.ts','.tsx','.css']:
@@ -56,6 +63,6 @@ config=json.loads((root/'vercel.json').read_text());config.pop('crons',None)
 (stage/'vercel.json').write_text(json.dumps(config,indent=2)+'\n')
 (stage/'.vercelignore').write_text('node_modules/\n.next/\n.vercel/\n.env*\n*.tsbuildinfo\n')
 files={str(p.relative_to(stage)):hashlib.sha256(p.read_bytes()).hexdigest() for p in stage.rglob('*') if p.is_file()}
-receipt={'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'files':files,'count':len(files),'bytes':sum((stage/p).stat().st_size for p in files),'adjustments':['No Vercel crons in the isolated preview','Only scoped media and interface assets copied','Build-time data imports retained; local review data and tests excluded']}
+receipt={'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'files':files,'count':len(files),'bytes':sum((stage/p).stat().st_size for p in files),'adjustments':['No Vercel crons in the isolated preview','Scoped release, previous kit assets and interface assets copied','Build-time data imports and helper modules retained; local review data and tests excluded']}
 (root/'docs/reviews/isolated-preview-deployment-2026-10-20/frontend-package.json').write_text(json.dumps(receipt,indent=2)+'\n')
 print(json.dumps({'path':str(stage),'files':len(files),'MB':round(receipt['bytes']/1e6,1)}))
