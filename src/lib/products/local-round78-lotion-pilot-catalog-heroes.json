@@ -1,0 +1,40 @@
+[
+  {
+    "groupSlug": "round-78ml-clear-18-415-lotionpump",
+    "websiteSku": "LBRnd78LtnShnSl",
+    "graceSku": "LB-RND-CLR-78ML-LPM-SSLV",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343694553380",
+    "family": "Round",
+    "capacityMl": 78,
+    "bottleColor": "Clear",
+    "url": "/local-media/round78-lotion-pilot/LBRnd78LtnShnSl-shared-catalog.7c5be87f489f.png",
+    "alt": "78 ml Clear Round bottle with Shiny Silver lotion pump and overcap beside",
+    "width": 1200,
+    "height": 1320,
+    "presentation": "Empty \u00b7 cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "round-78ml-frosted-18-415-lotionpump",
+    "websiteSku": "LBRndFrst78LtnShnSl",
+    "graceSku": "LB-RND-FRS-78ML-06",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343695274276",
+    "family": "Round",
+    "capacityMl": 78,
+    "bottleColor": "Frosted",
+    "url": "/local-media/round78-lotion-pilot/LBRndFrst78LtnShnSl-shared-catalog.6b12ab831eb8.png",
+    "alt": "78 ml Frosted Round bottle with Shiny Silver lotion pump and overcap beside",
+    "width": 1200,
+    "height": 1320,
+    "presentation": "Empty \u00b7 cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  }
+]

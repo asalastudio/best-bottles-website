@@ -1,0 +1,576 @@
+[
+  {
+    "websiteSku": "GBEmp50SpryMtSl",
+    "url": "/local-media/empire-bare-glass/GBEmp50SpryMtSl-shared-catalog.5cbe4f3825ba.png",
+    "sha256": "5cbe4f3825ba839fd94cd3c38240dd0bac7ef939579f4f96df6dc06d74ae6286",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "/local-media/empire-bare-glass/empire-50ml-empty-alpha.0fce3a2c6bb1.png",
+        "sha256": "0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f",
+        "bytes": 1321128
+      },
+      {
+        "url": "/local-media/empire-bare-glass/GBEmp50SpryMtSl-native-tube.bf29cf892dca.png",
+        "sha256": "bf29cf892dca0895bb25b16fa775d02765c6e6e5d6382dbdb8e426208cab986a",
+        "bytes": 25593
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/sprayer-5c50ea9efde8b3535c6330bf6b21429e2300857f9ba7d9c47677349dce048cef.png",
+        "sha256": "ed138b1a40c93e646abb42f96b5a382edb327465adc944545ff27220b35a75b3",
+        "bytes": 39076
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png",
+        "sha256": "f3ef537447a0e2d27134d72a871e057b5480dffc252d4f21531f271fdb075f71",
+        "bytes": 75860
+      }
+    ],
+    "frame": {
+      "x": -9.809260142933226,
+      "y": -107.16989807128903,
+      "width": 1232.2069602272727,
+      "height": 1355.42765625
+    },
+    "originalViewBox": "-604.063504 -145.8135040000002 2208.627008 1523.697008",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Matte Silver sprayer",
+    "size": 50
+  },
+  {
+    "websiteSku": "GBEmp50SpryShnSl",
+    "url": "/local-media/empire-bare-glass/GBEmp50SpryShnSl-shared-catalog.63eefb858852.png",
+    "sha256": "63eefb85885225425daa74a073b6ee06389598128ca17440a8c9c771f4fcce43",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "/local-media/empire-bare-glass/empire-50ml-empty-alpha.0fce3a2c6bb1.png",
+        "sha256": "0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f",
+        "bytes": 1321128
+      },
+      {
+        "url": "/local-media/empire-bare-glass/GBEmp50SpryShnSl-native-tube.63ca6264b0f1.png",
+        "sha256": "63ca6264b0f11daeace215730ff5ef425e451bc83e531f85a52e11890f013edc",
+        "bytes": 25579
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/sprayer-a26b031f10138c75eae2c73ead6908b1896facdfee8e4a690d34e2f0c2a49616.png",
+        "sha256": "d6b38068d4f00a2716e56799ed870b8df22a22b7961e1159d4df8125925e1c1d",
+        "bytes": 41289
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png",
+        "sha256": "a960223629d4e2f5446809d1ded2cf9f04d05c813f6c3639ae345e524c558c6a",
+        "bytes": 86874
+      }
+    ],
+    "frame": {
+      "x": -12.315702126242854,
+      "y": -116.10749343872067,
+      "width": 1241.3298295454545,
+      "height": 1365.4628125
+    },
+    "originalViewBox": "-604.063504 -145.8135040000002 2208.627008 1523.697008",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Shiny Silver sprayer",
+    "size": 50
+  },
+  {
+    "websiteSku": "GBEmp50SpryShnGl",
+    "url": "/local-media/empire-bare-glass/GBEmp50SpryShnGl-shared-catalog.8c00a2f63c65.png",
+    "sha256": "8c00a2f63c652c86b85e48080e55cd1e8d4b6670d09a9d9fa753eaab77e6d084",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "/local-media/empire-bare-glass/empire-50ml-empty-alpha.0fce3a2c6bb1.png",
+        "sha256": "0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f",
+        "bytes": 1321128
+      },
+      {
+        "url": "/local-media/empire-bare-glass/GBEmp50SpryShnGl-native-tube.63ca6264b0f1.png",
+        "sha256": "63ca6264b0f11daeace215730ff5ef425e451bc83e531f85a52e11890f013edc",
+        "bytes": 25579
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/sprayer-41f38526607d7ec57dcc6c175773a0ec77889e76f1bd23f478cc2292b6497846.png",
+        "sha256": "ff179fd5c59620080bcdf17bf3665021008b1779e0584a179a8ca75cb3d032b1",
+        "bytes": 88567
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/overcap-177601ce48e6d817e1fbeebf18246c078cca84cedbce281747026dc3ef8abb38.png",
+        "sha256": "1506ab24d979eda6cba1a817cfa863905e6070e07756a8aff2e6c8db4f54db00",
+        "bytes": 188231
+      }
+    ],
+    "frame": {
+      "x": -8.301610773259995,
+      "y": -102.8834983825684,
+      "width": 1227.8316761363637,
+      "height": 1350.61484375
+    },
+    "originalViewBox": "-604.063504 -145.8135040000002 2208.627008 1523.697008",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Shiny Gold sprayer",
+    "size": 50
+  },
+  {
+    "websiteSku": "GBEmp50SpryShnBlk",
+    "url": "/local-media/empire-bare-glass/GBEmp50SpryShnBlk-shared-catalog.713b9d68412f.png",
+    "sha256": "713b9d68412fb0846de7ee68c0a1f84d1138efb62c73777b057a5b40a99a4fb6",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "/local-media/empire-bare-glass/empire-50ml-empty-alpha.0fce3a2c6bb1.png",
+        "sha256": "0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f",
+        "bytes": 1321128
+      },
+      {
+        "url": "/local-media/empire-bare-glass/GBEmp50SpryShnBlk-native-tube.951ca106760f.png",
+        "sha256": "951ca106760f2b34381c4ea32452423e7632c12293def5e1d27c2b5bf79c4167",
+        "bytes": 25470
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/sprayer-9d494fd880618a93df237d4a4ce12c35c13cc5b98af531044a943793654e9994.png",
+        "sha256": "ce3d4751ac8cd8014143123314a802569dd2cb65cf5e3972928956031c09a512",
+        "bytes": 36674
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png",
+        "sha256": "271573d8c23a35eb19a8e2136c494e91ff5c319b5811a21945cbaeab0f1a5ac2",
+        "bytes": 81639
+      }
+    ],
+    "frame": {
+      "x": -13.937418434836673,
+      "y": -117.94289390563961,
+      "width": 1243.2032670454546,
+      "height": 1367.52359375
+    },
+    "originalViewBox": "-604.063504 -145.8135040000002 2208.627008 1523.697008",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Shiny Black sprayer",
+    "size": 50
+  },
+  {
+    "websiteSku": "GBEmp50SpryMtGl",
+    "url": "/local-media/empire-bare-glass/GBEmp50SpryMtGl-shared-catalog.7580022c9950.png",
+    "sha256": "7580022c995036c9626d1fdba70105775b77dfc1e3149703b6be223e662584ea",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "/local-media/empire-bare-glass/empire-50ml-empty-alpha.0fce3a2c6bb1.png",
+        "sha256": "0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f",
+        "bytes": 1321128
+      },
+      {
+        "url": "/local-media/empire-bare-glass/empire-50ml-native-spray-tube.7d755598ba26.png",
+        "sha256": "7d755598ba26efc496f5cd05fb5930132eb0af6d4a99d8bd95da3f937ccc6d90",
+        "bytes": 25595
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/sprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png",
+        "sha256": "41688cb5fc3608eef96295e07cab51a64a7cc321ba92e3a82b3be58a3b65cf97",
+        "bytes": 80326
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png",
+        "sha256": "2e13c3f6090b95e2839dbc75e0537d2b6940a1b0fe10def4c8c5a20f656dbb52",
+        "bytes": 196848
+      }
+    ],
+    "frame": {
+      "x": -19.66248945756388,
+      "y": -129.1604873657227,
+      "width": 1254.653409090909,
+      "height": 1380.11875
+    },
+    "originalViewBox": "-604.063504 -145.8135040000002 2208.627008 1523.697008",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Matte Gold sprayer",
+    "size": 50
+  },
+  {
+    "websiteSku": "GBEmp50SpryCu",
+    "url": "/local-media/empire-bare-glass/GBEmp50SpryCu-shared-catalog.a493cba8116e.png",
+    "sha256": "a493cba8116e830d1b1ea2659003b15d0734e503b1f97eb73fe5dca6cb5ec838",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "/local-media/empire-bare-glass/empire-50ml-empty-alpha.0fce3a2c6bb1.png",
+        "sha256": "0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f",
+        "bytes": 1321128
+      },
+      {
+        "url": "/local-media/empire-bare-glass/GBEmp50SpryCu-native-tube.abd1dd749986.png",
+        "sha256": "abd1dd749986c006f412ebfc4f6cec3847b800dc1898021b494f29583665cb37",
+        "bytes": 27380
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/sprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png",
+        "sha256": "ec9873b841cd763deefcdc87b5d90772fc5862cb99e7b5ba84b85cc30079f491",
+        "bytes": 101622
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/overcap-9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9.png",
+        "sha256": "d7bd26752b4c1827fa5b14860fc87b16bd865e1c074e18b205703397ae42766e",
+        "bytes": 169164
+      }
+    ],
+    "frame": {
+      "x": 3.636680464311098,
+      "y": -112.31130157470704,
+      "width": 1237.454971590909,
+      "height": 1361.20046875
+    },
+    "originalViewBox": "-604.063504 -145.8135040000002 2208.627008 1523.697008",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Copper sprayer",
+    "size": 50
+  },
+  {
+    "websiteSku": "GBEmp100SpryCu",
+    "url": "/local-media/empire-bare-glass/GBEmp100SpryCu-shared-catalog.3fe8c5f88a2a.png",
+    "sha256": "3fe8c5f88a2ac160f1f1dc9524054e271a489f4b2d505ca0cc6f3adbc67a9e11",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "/local-media/empire-bare-glass/empire-100ml-107x46.1abdf390058c.png",
+        "sha256": "1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f",
+        "bytes": 1140744
+      },
+      {
+        "url": "/local-media/empire-bare-glass/GBEmp100SpryCu-native-tube.940914eda692.png",
+        "sha256": "940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd",
+        "bytes": 33509
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/sprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png",
+        "sha256": "ec9873b841cd763deefcdc87b5d90772fc5862cb99e7b5ba84b85cc30079f491",
+        "bytes": 101622
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/overcap-9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9.png",
+        "sha256": "d7bd26752b4c1827fa5b14860fc87b16bd865e1c074e18b205703397ae42766e",
+        "bytes": 169164
+      }
+    ],
+    "frame": {
+      "x": -20.812746914950253,
+      "y": -80.88599395751953,
+      "width": 1235.9978693181818,
+      "height": 1359.59765625
+    },
+    "originalViewBox": "-409.8003440000001 -75.9103439999999 1820.1506880000002 1251.4906879999999",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Copper sprayer",
+    "size": 100
+  },
+  {
+    "websiteSku": "GBEmp100SpryMtGl",
+    "url": "/local-media/empire-bare-glass/GBEmp100SpryMtGl-shared-catalog.f288887aedc8.png",
+    "sha256": "f288887aedc8337bfcdbf6357396f37e17259cdd9ece7d9bf2d9b68dd8ae2ada",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "/local-media/empire-bare-glass/empire-100ml-107x46.1abdf390058c.png",
+        "sha256": "1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f",
+        "bytes": 1140744
+      },
+      {
+        "url": "/local-media/empire-bare-glass/empire-100ml-native-spray-tube.883a216fc61f.png",
+        "sha256": "883a216fc61f92a2ec8371eea59aa547b4db841240c8b2296cc505d8045ff2f0",
+        "bytes": 33508
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/sprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png",
+        "sha256": "41688cb5fc3608eef96295e07cab51a64a7cc321ba92e3a82b3be58a3b65cf97",
+        "bytes": 80326
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png",
+        "sha256": "2e13c3f6090b95e2839dbc75e0537d2b6940a1b0fe10def4c8c5a20f656dbb52",
+        "bytes": 196848
+      }
+    ],
+    "frame": {
+      "x": -40.46215320933959,
+      "y": -95.71737655639652,
+      "width": 1251.136647727273,
+      "height": 1376.2503125
+    },
+    "originalViewBox": "-409.8003440000001 -75.9103439999999 1820.1506880000002 1251.4906879999999",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Matte Gold sprayer",
+    "size": 100
+  },
+  {
+    "websiteSku": "GBEmp100SpryShnGl",
+    "url": "/local-media/empire-bare-glass/GBEmp100SpryShnGl-shared-catalog.87fa84ab1249.png",
+    "sha256": "87fa84ab124966d779467bf47bbef4dbed22fbd540108b7fc1f377dc1c90085b",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "/local-media/empire-bare-glass/empire-100ml-107x46.1abdf390058c.png",
+        "sha256": "1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f",
+        "bytes": 1140744
+      },
+      {
+        "url": "/local-media/empire-bare-glass/GBEmp100SpryShnGl-native-tube.220a0365f812.png",
+        "sha256": "220a0365f812852ed6b04122635c405a296d4086f744ebb9fa5e8e87ead39909",
+        "bytes": 36343
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/sprayer-41f38526607d7ec57dcc6c175773a0ec77889e76f1bd23f478cc2292b6497846.png",
+        "sha256": "ff179fd5c59620080bcdf17bf3665021008b1779e0584a179a8ca75cb3d032b1",
+        "bytes": 88567
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/overcap-177601ce48e6d817e1fbeebf18246c078cca84cedbce281747026dc3ef8abb38.png",
+        "sha256": "1506ab24d979eda6cba1a817cfa863905e6070e07756a8aff2e6c8db4f54db00",
+        "bytes": 188231
+      }
+    ],
+    "frame": {
+      "x": -30.627132346413305,
+      "y": -73.14538757324215,
+      "width": 1228.0967329545454,
+      "height": 1350.90640625
+    },
+    "originalViewBox": "-409.8003440000001 -75.9103439999999 1820.1506880000002 1251.4906879999999",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Shiny Gold sprayer",
+    "size": 100
+  },
+  {
+    "websiteSku": "GBEmp100SpryShnBlk",
+    "url": "/local-media/empire-bare-glass/GBEmp100SpryShnBlk-shared-catalog.9fbc969f99e1.png",
+    "sha256": "9fbc969f99e189bcc5c55b5e50a9de2e2ffb45329de596c22cb63af341626591",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "/local-media/empire-bare-glass/empire-100ml-107x46.1abdf390058c.png",
+        "sha256": "1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f",
+        "bytes": 1140744
+      },
+      {
+        "url": "/local-media/empire-bare-glass/GBEmp100SpryShnBlk-native-tube.940914eda692.png",
+        "sha256": "940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd",
+        "bytes": 33509
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/sprayer-9d494fd880618a93df237d4a4ce12c35c13cc5b98af531044a943793654e9994.png",
+        "sha256": "ce3d4751ac8cd8014143123314a802569dd2cb65cf5e3972928956031c09a512",
+        "bytes": 36674
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png",
+        "sha256": "271573d8c23a35eb19a8e2136c494e91ff5c319b5811a21945cbaeab0f1a5ac2",
+        "bytes": 81639
+      }
+    ],
+    "frame": {
+      "x": -35.254908891157584,
+      "y": -85.51438644409177,
+      "width": 1240.722159090909,
+      "height": 1364.794375
+    },
+    "originalViewBox": "-409.8003440000001 -75.9103439999999 1820.1506880000002 1251.4906879999999",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Shiny Black sprayer",
+    "size": 100
+  },
+  {
+    "websiteSku": "GBEmp100SpryMtSl",
+    "url": "/local-media/empire-bare-glass/GBEmp100SpryMtSl-shared-catalog.4fcfba3540fb.png",
+    "sha256": "4fcfba3540fbf6666c33b95f9839b5995439aaebde865120318d11521345d019",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "/local-media/empire-bare-glass/empire-100ml-107x46.1abdf390058c.png",
+        "sha256": "1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f",
+        "bytes": 1140744
+      },
+      {
+        "url": "/local-media/empire-bare-glass/GBEmp100SpryMtSl-native-tube.6880c1c5e262.png",
+        "sha256": "6880c1c5e26265666c258d02c493d09c10547fe8848aa792c6f82a1d9380927c",
+        "bytes": 36850
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/sprayer-5c50ea9efde8b3535c6330bf6b21429e2300857f9ba7d9c47677349dce048cef.png",
+        "sha256": "ed138b1a40c93e646abb42f96b5a382edb327465adc944545ff27220b35a75b3",
+        "bytes": 39076
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png",
+        "sha256": "f3ef537447a0e2d27134d72a871e057b5480dffc252d4f21531f271fdb075f71",
+        "bytes": 75860
+      }
+    ],
+    "frame": {
+      "x": -32.82497780539768,
+      "y": -78.5489840698242,
+      "width": 1233.6123579545454,
+      "height": 1356.97359375
+    },
+    "originalViewBox": "-409.8003440000001 -75.9103439999999 1820.1506880000002 1251.4906879999999",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Matte Silver sprayer",
+    "size": 100
+  },
+  {
+    "websiteSku": "GBEmp100SpryShnSl",
+    "url": "/local-media/empire-bare-glass/GBEmp100SpryShnSl-shared-catalog.b102e2ecee7c.png",
+    "sha256": "b102e2ecee7c6ad55097bf8051e11596a38afd5cfe035a58a5d365bfb639a979",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "/local-media/empire-bare-glass/empire-100ml-107x46.1abdf390058c.png",
+        "sha256": "1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f",
+        "bytes": 1140744
+      },
+      {
+        "url": "/local-media/empire-bare-glass/GBEmp100SpryShnSl-native-tube.940914eda692.png",
+        "sha256": "940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd",
+        "bytes": 33509
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/sprayer-a26b031f10138c75eae2c73ead6908b1896facdfee8e4a690d34e2f0c2a49616.png",
+        "sha256": "d6b38068d4f00a2716e56799ed870b8df22a22b7961e1159d4df8125925e1c1d",
+        "bytes": 41289
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png",
+        "sha256": "a960223629d4e2f5446809d1ded2cf9f04d05c813f6c3639ae345e524c558c6a",
+        "bytes": 86874
+      }
+    ],
+    "frame": {
+      "x": -33.4672529740767,
+      "y": -83.10898406982426,
+      "width": 1238.266903409091,
+      "height": 1362.09359375
+    },
+    "originalViewBox": "-409.8003440000001 -75.9103439999999 1820.1506880000002 1251.4906879999999",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Shiny Silver sprayer",
+    "size": 100
+  },
+  {
+    "websiteSku": "LBEmp100WhtClOvrCp",
+    "url": "/local-media/empire-bare-glass/LBEmp100WhtClOvrCp-shared-catalog.6c0335cd32e4.png",
+    "sha256": "6c0335cd32e4d4b3f45e504e7686f148ab13de12bc5ecf7df8aa37be3495df7c",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "/local-media/empire-bare-glass/empire-100ml-107x46.1abdf390058c.png",
+        "sha256": "1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f",
+        "bytes": 1140744
+      },
+      {
+        "url": "/local-media/empire-bare-glass/LBEmp100WhtClOvrCp-native-tube.d8ba369f9439.png",
+        "sha256": "d8ba369f94392fd2b5d8b02d4f6718acf5926f084b92a6e518b9f0970e7b5396",
+        "bytes": 46800
+      },
+      {
+        "url": "/local-media/empire-white-pump/pump-25c3d0557906a8824e68ca309440d7cf3df382ab92a1c485f85bb19d26b4554c.png",
+        "sha256": "216a1943193e66319db55a705eb731dc9af5e5ce8713609b7c9218195e464dd8",
+        "bytes": 72142
+      },
+      {
+        "url": "/local-media/empire-white-pump/empty-overcap-69af0e4a1bcf0063f72641fc1fd062f099ffd9046252b6286a28d8bc07026f9a.webp",
+        "sha256": "69af0e4a1bcf0063f72641fc1fd062f099ffd9046252b6286a28d8bc07026f9a",
+        "bytes": 33756
+      }
+    ],
+    "frame": {
+      "x": -38.80451715642755,
+      "y": -97.07398788452144,
+      "width": 1252.5214488636364,
+      "height": 1377.77359375
+    },
+    "originalViewBox": "-409.8003440000001 -75.9103439999999 1820.1506880000002 1251.4906879999999",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "White pump with clear overcap",
+    "size": 100
+  },
+  {
+    "websiteSku": "LBEmp50WhtClOvrCp",
+    "url": "/local-media/empire-bare-glass/LBEmp50WhtClOvrCp-shared-catalog.0c9c203d4591.png",
+    "sha256": "0c9c203d4591e29fc94fc34a43d9dd629a894b1026b406c790ca3246f544c4fe",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "/local-media/empire-bare-glass/empire-50ml-empty-alpha.0fce3a2c6bb1.png",
+        "sha256": "0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f",
+        "bytes": 1321128
+      },
+      {
+        "url": "/local-media/source-tubes/empire50-white-lotion.121928bb048d.png",
+        "sha256": "121928bb048d3a62ea8589b6c0c1c64e711a2575654bed3d5162f1d074995f79",
+        "bytes": 49531
+      },
+      {
+        "url": "/local-media/empire-white-pump/pump-25c3d0557906a8824e68ca309440d7cf3df382ab92a1c485f85bb19d26b4554c.png",
+        "sha256": "216a1943193e66319db55a705eb731dc9af5e5ce8713609b7c9218195e464dd8",
+        "bytes": 72142
+      },
+      {
+        "url": "/local-media/empire-white-pump/empty-overcap-69af0e4a1bcf0063f72641fc1fd062f099ffd9046252b6286a28d8bc07026f9a.webp",
+        "sha256": "69af0e4a1bcf0063f72641fc1fd062f099ffd9046252b6286a28d8bc07026f9a",
+        "bytes": 33756
+      }
+    ],
+    "frame": {
+      "x": -24.47089899236505,
+      "y": -144.18569614410399,
+      "width": 1269.9901988636364,
+      "height": 1396.98921875
+    },
+    "originalViewBox": "-604.063504 -145.8135040000002 2208.627008 1523.697008",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "White pump with clear overcap",
+    "size": 50
+  }
+]

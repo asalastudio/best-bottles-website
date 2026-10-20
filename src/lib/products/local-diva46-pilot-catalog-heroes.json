@@ -1,0 +1,40 @@
+[
+  {
+    "groupSlug": "diva-46ml-clear-18-415-perfumespray",
+    "websiteSku": "GBDiva46SpryShnSl",
+    "graceSku": "GB-DVA-CLR-46ML-SPR-SSLV",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343620563236",
+    "family": "Diva",
+    "capacityMl": 46,
+    "bottleColor": "Clear",
+    "url": "/local-media/diva46-pilot/GBDiva46SpryShnSl-shared-catalog.5e8d85f6c571.png",
+    "alt": "46 ml Clear Diva bottle with Shiny Silver sprayer and overcap beside",
+    "width": 1200,
+    "height": 1320,
+    "presentation": "Empty \u00b7 cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "diva-46ml-frosted-18-415-perfumespray",
+    "websiteSku": "GBDivaFrst46SpryShnSl",
+    "graceSku": "GB-DVA-FRS-46ML-06",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343624462628",
+    "family": "Diva",
+    "capacityMl": 46,
+    "bottleColor": "Frosted",
+    "url": "/local-media/diva46-pilot/GBDivaFrst46SpryShnSl-shared-catalog.0920db0542cc.png",
+    "alt": "46 ml Frosted Diva bottle with Shiny Silver sprayer and overcap beside",
+    "width": 1200,
+    "height": 1320,
+    "presentation": "Empty \u00b7 cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  }
+]

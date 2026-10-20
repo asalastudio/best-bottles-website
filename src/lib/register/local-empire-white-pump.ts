@@ -1,9 +1,15 @@
 import candidate from './local-empire-white-pump.json';
+import candidate100 from './local-empire-100ml-white-pump.json';
 import type { RegisterStagePayload } from './stage-kit';
 
 /** Review-only completion of this exact unresolved SKU. Never replaces a released assembly. */
 export function localEmpireWhitePumpPayload(payload: RegisterStagePayload): RegisterStagePayload {
     if (process.env.NODE_ENV !== 'development' || process.env.VERCEL) return payload;
+    return [candidate, candidate100].reduce(completeCandidate, payload);
+}
+
+function completeCandidate(payload: RegisterStagePayload, candidate: Pick<typeof candidate100,
+    'websiteSku' | 'graceSku' | 'expectedAssembly' | 'expectedPlate' | 'component'>): RegisterStagePayload {
     const expected = candidate.expectedAssembly;
     const assembly = payload.assemblies[candidate.graceSku];
     const plate = payload.plates[expected.plateKey];

@@ -35,7 +35,7 @@ suite('captured family through real server loaders (offline)', () => {
             const own = bodies.find(b => b.capacityMl === size)!;
             expect(own.configurations.every(c => c.bodyImage?.url.startsWith('/local-media/empire-bare-glass/'))).toBe(true);
             const loaded = await loadBuilderBodyKits('Empire', own.id);
-            const corrected = snapshot.matrix.rows.filter((r: any) => r.capacityMl === size && r.websiteSku !== 'LBEmp100WhtClOvrCp');
+            const corrected = snapshot.matrix.rows.filter((r: any) => r.capacityMl === size);
             for (const row of corrected) expect(loaded[row.websiteSku]?.parts.find(p => p.slot === 'body')?.image.url, row.websiteSku).toContain('/local-media/empire-bare-glass/');
         }
     });

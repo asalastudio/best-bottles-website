@@ -2,6 +2,9 @@ import assets from './local-empire-bare-glass.json';
 import reducer from './local-empire-reducer.json';
 import pipetteSources from './local-empire-pipettes.json';
 import vintageTube from './local-empire-vintage-tube.json';
+import empire100SprayTube from './local-empire-100ml-spray-tube.json';
+import additionalSprayTubes from './local-empire-additional-spray-tubes.json';
+import whitePumpTube from './local-empire-100ml-white-pump-tube.json';
 import type { RegisterKit, RegisterPlate } from './stage-kit';
 
 /** Chooser and glass swatches can render a body without loading a full kit. */
@@ -76,6 +79,37 @@ export function localEmpireBareGlass(kit: RegisterKit, plate: RegisterPlate | un
             bounds: { left: box.x, top: box.y, right: round(box.x + box.width), bottom: round(box.y + box.height) },
             box, exploded: { dx: 0, dy: 0 } });
         parts = parts.map((p, zOrder) => ({ ...p, zOrder }));
+    }
+    // Exact source recovery for every Empire spray SKU. Both
+    // views use one continuous native PSD tube, aligned beneath its sprayer.
+    const sourceTube = [empire100SprayTube, ...additionalSprayTubes].find(row => row.websiteSku === kit.sku && row.plateKey === kit.register.plateKey);
+    const spray = sourceTube && parts.find(p => p.slot === 'sprayer' && p.componentId === sourceTube.componentId
+        && p.image.url === sourceTube.expectedSprayerUrl);
+    if (sourceTube && spray) {
+        const tubeScale = (replacement.bounds.bottom - replacement.bounds.top) / sourceTube.sourceBodyHeight;
+        const tx = kit.anchors.axisX - sourceTube.axisX * tubeScale;
+        const ty = spray.box.y + spray.box.height * sourceTube.visibleBottomFraction - 2;
+        parts = parts.map(p => p.slot === 'diptube' && sourceTube.expectedUrls.includes(p.image.url)
+            ? { ...p, image: { url: sourceTube.url, key: sourceTube.url,
+                sha256: sourceTube.sha256, bytes: sourceTube.bytes,
+                width: sourceTube.width, height: sourceTube.height },
+                box: { x: round(tx), y: round(ty), width: round(sourceTube.width * tubeScale), height: round(sourceTube.height * tubeScale) },
+                bounds: { left: round(tx), top: round(ty), right: round(tx + sourceTube.width * tubeScale), bottom: round(ty + sourceTube.height * tubeScale) } }
+            : p);
+    }
+    const pump = kit.sku === whitePumpTube.websiteSku && kit.register.plateKey === whitePumpTube.plateKey
+        ? parts.find(p => p.slot === 'pump' && p.componentId === whitePumpTube.componentId && p.image.url === whitePumpTube.expectedPumpUrl)
+        : undefined;
+    if (pump) {
+        const tubeScale = (replacement.bounds.bottom - replacement.bounds.top) / whitePumpTube.sourceBodyHeight;
+        const tx = kit.anchors.axisX - whitePumpTube.axisX * tubeScale;
+        const ty = pump.box.y + pump.box.height * whitePumpTube.visibleBottomFraction - 2;
+        parts = parts.map(p => p.slot === 'diptube' && whitePumpTube.expectedUrls.includes(p.image.url)
+            ? { ...p, image: { url: whitePumpTube.url, key: whitePumpTube.url, sha256: whitePumpTube.sha256,
+                bytes: whitePumpTube.bytes, width: whitePumpTube.width, height: whitePumpTube.height },
+                box: { x: round(tx), y: round(ty), width: round(whitePumpTube.width * tubeScale), height: round(whitePumpTube.height * tubeScale) },
+                bounds: { left: round(tx), top: round(ty), right: round(tx + whitePumpTube.width * tubeScale), bottom: round(ty + whitePumpTube.height * tubeScale) } }
+            : p);
     }
     // Follow the visible inner cavity of each generated master, not its outer
     // foot. This hides original-photo rim/base scraps carried by narrow cuts.

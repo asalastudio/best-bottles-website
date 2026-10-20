@@ -1,0 +1,86 @@
+[
+  {
+    "websiteSku": "GBDiva46SpryShnSl",
+    "url": "/local-media/diva46-pilot/GBDiva46SpryShnSl-shared-catalog.5e8d85f6c571.png",
+    "sha256": "5e8d85f6c57116a10f0b7065f4ffdbfd6bc30f30ef71500a9b8bc6d0f65bdf1e",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/diva-46ml-18-415/clear/e1f942bf4757cf6dae7d9e073b5ff9769d90db384a899ef6b4ab95d7773cd493.png",
+        "sha256": "72792c951091e9a8efe49d578992352658935ec8bf8b3fb623c4a4d7e8ad3a81",
+        "bytes": 1706253
+      },
+      {
+        "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+        "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+        "bytes": 25708
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/sprayer-a26b031f10138c75eae2c73ead6908b1896facdfee8e4a690d34e2f0c2a49616.png",
+        "sha256": "d6b38068d4f00a2716e56799ed870b8df22a22b7961e1159d4df8125925e1c1d",
+        "bytes": 41289
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png",
+        "sha256": "a960223629d4e2f5446809d1ded2cf9f04d05c813f6c3639ae345e524c558c6a",
+        "bytes": 86874
+      }
+    ],
+    "frame": {
+      "x": 3.108026955344485,
+      "y": -91.14554336547849,
+      "width": 1215.7967329545454,
+      "height": 1337.37640625
+    },
+    "originalViewBox": "-580.778368 -90.69836800000007 2161.556736 1457.1167360000002",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Shiny Silver sprayer",
+    "size": 46,
+    "glass": "Clear"
+  },
+  {
+    "websiteSku": "GBDivaFrst46SpryShnSl",
+    "url": "/local-media/diva46-pilot/GBDivaFrst46SpryShnSl-shared-catalog.0920db0542cc.png",
+    "sha256": "0920db0542cc2989e9e856634b12ceede2255d9b62dc981a192dd548802b1f8d",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/diva-46ml-18-415/frosted/e5432192d6476eee0221a9c693761dbea054276e7cc330e7d5653fa1c6d78205.png",
+        "sha256": "25421a4669bbac44117bcce3966a4394e70170603eaa7bec2bce1964f69047b1",
+        "bytes": 1475544
+      },
+      {
+        "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+        "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+        "bytes": 25708
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/sprayer-a26b031f10138c75eae2c73ead6908b1896facdfee8e4a690d34e2f0c2a49616.png",
+        "sha256": "d6b38068d4f00a2716e56799ed870b8df22a22b7961e1159d4df8125925e1c1d",
+        "bytes": 41289
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png",
+        "sha256": "a960223629d4e2f5446809d1ded2cf9f04d05c813f6c3639ae345e524c558c6a",
+        "bytes": 86874
+      }
+    ],
+    "frame": {
+      "x": 2.8743078058415676,
+      "y": -92.15742568969733,
+      "width": 1216.3941761363637,
+      "height": 1338.0335937500001
+    },
+    "originalViewBox": "-580.778368 -90.69836800000007 2161.556736 1457.1167360000002",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Shiny Silver sprayer",
+    "size": 46,
+    "glass": "Frosted"
+  }
+]

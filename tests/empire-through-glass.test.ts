@@ -9,7 +9,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 import { drawableRegisterKits } from '../src/lib/register/load';
 import { stageLayout } from '../src/lib/products/pdp-redesign/stage';
 import { throughGlassAppearance } from '../src/lib/register/through-glass';
-import { assembledKit } from '../src/lib/register/stage-kit';
+import { assembledKit, kitsFromRegister } from '../src/lib/register/stage-kit';
 
 const file = process.env.BB_MEDIA_REVIEW_SNAPSHOT;
 afterEach(() => vi.unstubAllEnvs());
@@ -59,7 +59,7 @@ afterEach(() => vi.unstubAllEnvs());
         const floor = Math.max(...p.throughGlass!.clip.map(p=>p[1]));
         expect(p.bounds.bottom).toBeLessThanOrEqual(floor-2);
     });
-    it('removes the old source photograph’s glass-base pixels from the new foot', async () => {
+    it('keeps the glass foot clean with the native tube, even before cavity clipping', async () => {
         vi.stubEnv('NODE_ENV', 'development'); vi.stubEnv('VERCEL', '');
         const s = JSON.parse(fs.readFileSync(file!, 'utf8'));
         const kit = drawableRegisterKits(s.register).GBEmp100SpryMtGl;
@@ -73,16 +73,18 @@ afterEach(() => vi.unstubAllEnvs());
         }
         const b = await image(body,false);
         async function render(extra: string) { return sharp(Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1100"><rect width="100%" height="100%" fill="#f5f3ef"/>${b}${extra}</svg>`)).removeAlpha().raw().toBuffer(); }
-        const [bare,old,fixed] = await Promise.all([render(''),render(await image(tube,false)),render(await image(tube,true))]);
+        const oldTube = kitsFromRegister(s.register).GBEmp100SpryMtGl.parts.find(p=>p.slot==='diptube'&&p.views?.includes('capon'))!;
+        const [bare,old,native,fixed] = await Promise.all([render(''),render(await image(oldTube,false)),render(await image(tube,false)),render(await image(tube,true))]);
         const floor=Math.max(...tube.throughGlass!.clip.map(p=>p[1]));
         function difference(bytes: Buffer) {let sum=0,n=0;for(let y=Math.ceil(floor+8);y<1050;y++)for(let x=460;x<540;x++)for(let c=0;c<3;c++){const i=(y*1000+x)*3+c;sum+=Math.abs(bytes[i]-bare[i]);n++;}return sum/n;}
         expect(difference(old)).toBeGreaterThan(1);
+        expect(difference(native)).toBeLessThan(0.1);
         expect(difference(fixed)).toBeLessThan(0.1);
     });
     it('renders the treatment in both real display components', () => {
         vi.stubEnv('NODE_ENV', 'development'); vi.stubEnv('VERCEL', '');
         const s = JSON.parse(fs.readFileSync(file!, 'utf8'));
-        for(const sku of ['GBEmp100SpryMtGl', 'GBEmp50AnSpTslBlk']) {
+        for(const sku of s.matrix.rows.filter((r: any) => /Emp.*(Spry|WhtClOvr)/.test(r.websiteSku)).map((r: any) => r.websiteSku).concat('GBEmp50AnSpTslBlk')) {
         const kit = drawableRegisterKits(s.register)[sku];
         const row = s.matrix.rows.find((r: any) => r.websiteSku === kit.sku);
         const builder = renderToStaticMarkup(createElement(BuilderImage, { config: {

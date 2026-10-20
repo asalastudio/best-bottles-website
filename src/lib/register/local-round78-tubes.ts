@@ -1,5 +1,7 @@
 import spraySource from './local-round78-tubes.json';
 import lotionSource from './local-round78-lotion-tubes.json';
+import pilot from './local-round78-two-bottle-pilot.json';
+import additionalSprayJoins from './local-round78-additional-spray-joins.json';
 import type { RegisterComponent, RegisterKit, RegisterPlate } from './stage-kit';
 import { stackedExplodeOffsets } from '../products/exploded-stack';
 
@@ -45,7 +47,13 @@ export function localRound78Tubes(kit: RegisterKit, plate: RegisterPlate | undef
     if (source === lotionSource && (!pumpLayer || typeof pumpLayer.solidBottomY !== 'number')) return kit;
     // Pump images contain transparent rows below their solid collar. Join to
     // that measured edge, not to the padded image rectangle.
-    const holderBottom = pumpLayer ? holder.box.y + pumpLayer.solidBottomY * holder.box.height / pumpLayer.height : holder.bounds.bottom;
+    const sprayJoin = source === spraySource ? [pilot, ...additionalSprayJoins].find(join =>
+        join.websiteSkus.includes(kit.sku) && holder.componentId === join.componentId
+        && holder.image.url === join.sprayerUrl && holder.image.height === join.sprayerHeight
+        && matched.layers.some(p => p.slot === 'sprayer' && p.solidBottomY === join.solidBottomY)) : undefined;
+    const holderBottom = pumpLayer ? holder.box.y + pumpLayer.solidBottomY * holder.box.height / pumpLayer.height
+        : sprayJoin ? holder.box.y + sprayJoin.solidBottomY * holder.box.height / sprayJoin.sprayerHeight
+        : holder.bounds.bottom;
     const y=holderBottom-2-source.meaningfulBounds.top*scale;
     const box={x:round(x),y:round(y),width:round(source.width*scale),height:round(source.height*scale)};
     const bounds={left:round(x+source.meaningfulBounds.left*scale),right:round(x+source.meaningfulBounds.right*scale),

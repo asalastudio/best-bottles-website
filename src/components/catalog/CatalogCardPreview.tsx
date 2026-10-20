@@ -1,7 +1,7 @@
 "use client";
 
 import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
-import { getCatalogHeroStyle, type CatalogHero } from "@/lib/products/catalog-heroes";
+import { getCatalogHeroStyle, getCatalogHeroProductHref, getProductHero, isLocalReviewHero, type CatalogHero } from "@/lib/products/catalog-heroes";
 import { capSwapFraming, capSwapPlateBox, capSwapPlateUrl } from "@/lib/products/catalog-cap-swap";
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -61,8 +61,10 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
     // cards show plates already, so the picked cap's full plate simply replaces it.
     const heroSwap = catalogHero && selected ? capSwapFraming(catalogHero.url) : null;
     const heroSwapUrl = heroSwap ? capSwapPlateUrl(heroSwap, selectedPlate) : null;
-    const selectedExactPhoto = selected && (isReconciliationSku(skuOf(selected)) || getBlueHalfDramVialImage(skuOf(selected)))
-        ? [getBlueHalfDramVialImage(skuOf(selected)), getReconciledLocalSkuImage(skuOf(selected)), selected.imageUrl].find((url) => url && !failed.has(url))
+    const selectedHero = selected ? getProductHero(skuOf(selected)) : null;
+    const selectedLocalHero = isLocalReviewHero(selectedHero) && selectedHero?.groupSlug === slug ? selectedHero : null;
+    const selectedExactPhoto = selected && (selectedLocalHero || isLocalReviewHero(catalogHero) || isReconciliationSku(skuOf(selected)) || getBlueHalfDramVialImage(skuOf(selected)))
+        ? [selectedLocalHero?.url, isLocalReviewHero(catalogHero) ? assembly(selected) : null, getBlueHalfDramVialImage(skuOf(selected)), getReconciledLocalSkuImage(skuOf(selected)), selected.imageUrl].find((url) => url && !failed.has(url))
         : null;
     const selectedVialImage = oneMlVialApplicator(skuOf(selected))?.image;
     const swapUrl = catalogHero
@@ -109,8 +111,8 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
     // A selected SKU without a calibrated swap still shows its own photograph.
     // Restrict this to the reconciled cohort; an unrelated variant must never
     // inherit another cap's approved hero image.
-    if (catalogHero && selected && selectedExactPhoto) {
-        return <LocaleLink href={href} aria-label={`View ${title}, ${selected.label}`}
+    if ((catalogHero || selectedLocalHero) && selected && selectedExactPhoto) {
+        return <LocaleLink href={selectedLocalHero ? getCatalogHeroProductHref(selectedLocalHero, href) : href} aria-label={`View ${title}, ${selected.label}`}
             className="relative block aspect-[10/11] w-full overflow-hidden bg-[#f5f3ef]"
             data-visual-mode="selected-exact-photo" data-bb-image-audit="catalog-card"
             data-bb-family={family ?? undefined} data-bb-product-group-slug={slug}

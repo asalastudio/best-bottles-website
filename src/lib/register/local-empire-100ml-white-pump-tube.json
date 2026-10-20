@@ -1,0 +1,35 @@
+{
+  "url": "/local-media/empire-bare-glass/LBEmp100WhtClOvrCp-native-tube.d8ba369f9439.png",
+  "sha256": "d8ba369f94392fd2b5d8b02d4f6718acf5926f084b92a6e518b9f0970e7b5396",
+  "bytes": 46800,
+  "width": 174,
+  "height": 1063,
+  "sourcePath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images/2. 18-415 Bottles/22. Empire Bottle 100ml/1. Empire 100ml PSD/52. LBEmp100WhtClOvrCp.psd",
+  "sourceSha256": "7e59c65bbbb43f2e372830dd2a2e60beb02039f86cfda7cd68214c9790fd65ea",
+  "sourceLayer": "Layer 23",
+  "sourceLayerIndex": 2,
+  "sourceLayerBounds": [
+    462,
+    715,
+    636,
+    1803
+  ],
+  "sourceCrop": [
+    0,
+    0,
+    174,
+    1063
+  ],
+  "method": "native RGBA crop; excludes the disconnected off-canvas fragment; source pixels unchanged",
+  "websiteSku": "LBEmp100WhtClOvrCp",
+  "plateKey": "empire-100ml-18-415|Clear",
+  "componentId": "LIB-18-415-WhtPumpClOvrCp",
+  "axisX": 111,
+  "sourceBodyHeight": 1504,
+  "expectedUrls": [
+    "/images/register/tubes/empire-100ml-18-415-clear-lotion.7bff4a5fa960.png",
+    "/images/register/tubes/empire-100ml-18-415-clear-lotion-exploded.45bbd9ea0283.png"
+  ],
+  "expectedPumpUrl": "/local-media/empire-white-pump/pump-25c3d0557906a8824e68ca309440d7cf3df382ab92a1c485f85bb19d26b4554c.png",
+  "visibleBottomFraction": 0.9900332225913622
+}

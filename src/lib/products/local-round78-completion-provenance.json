@@ -1,0 +1,506 @@
+[
+  {
+    "websiteSku": "GBRnd78SpryCu",
+    "url": "/local-media/round78-pilot/GBRnd78SpryCu-shared-catalog.fc78436ff5db.png",
+    "sha256": "fc78436ff5db33076675e83914319c881ed305b0f523be2f6d4f827d8f1870b8",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+        "sha256": "861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf",
+        "bytes": 1345403
+      },
+      {
+        "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+        "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+        "bytes": 25708
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/sprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png",
+        "sha256": "ec9873b841cd763deefcdc87b5d90772fc5862cb99e7b5ba84b85cc30079f491",
+        "bytes": 101622
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/overcap-9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9.png",
+        "sha256": "d7bd26752b4c1827fa5b14860fc87b16bd865e1c074e18b205703397ae42766e",
+        "bytes": 169164
+      }
+    ],
+    "frame": {
+      "x": 4.116421924937754,
+      "y": -151.73727783203128,
+      "width": 1277.816335227273,
+      "height": 1405.59796875
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Copper sprayer",
+    "size": 78,
+    "glass": "Clear"
+  },
+  {
+    "websiteSku": "GBRndFrst78SpryCu",
+    "url": "/local-media/round78-pilot/GBRndFrst78SpryCu-shared-catalog.ffbf828bbdaa.png",
+    "sha256": "ffbf828bbdaafed94b484ce4be95293b193287d47b8038ad41374974ae4c3254",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+        "sha256": "a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388",
+        "bytes": 2240120
+      },
+      {
+        "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+        "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+        "bytes": 25708
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/sprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png",
+        "sha256": "ec9873b841cd763deefcdc87b5d90772fc5862cb99e7b5ba84b85cc30079f491",
+        "bytes": 101622
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/overcap-9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9.png",
+        "sha256": "d7bd26752b4c1827fa5b14860fc87b16bd865e1c074e18b205703397ae42766e",
+        "bytes": 169164
+      }
+    ],
+    "frame": {
+      "x": 4.016453968394785,
+      "y": -151.73727783203128,
+      "width": 1277.816335227273,
+      "height": 1405.59796875
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Copper sprayer",
+    "size": 78,
+    "glass": "Frosted"
+  },
+  {
+    "websiteSku": "GBRnd78SpryMtGl",
+    "url": "/local-media/round78-pilot/GBRnd78SpryMtGl-shared-catalog.515bdef76e64.png",
+    "sha256": "515bdef76e64df516b1562d3cc9cc1d4d33c591366e1398db8775a1093b3b1d6",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+        "sha256": "861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf",
+        "bytes": 1345403
+      },
+      {
+        "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+        "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+        "bytes": 25708
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/sprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png",
+        "sha256": "41688cb5fc3608eef96295e07cab51a64a7cc321ba92e3a82b3be58a3b65cf97",
+        "bytes": 80326
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png",
+        "sha256": "2e13c3f6090b95e2839dbc75e0537d2b6940a1b0fe10def4c8c5a20f656dbb52",
+        "bytes": 196848
+      }
+    ],
+    "frame": {
+      "x": -19.932036659934283,
+      "y": -165.4400810241699,
+      "width": 1291.8032670454545,
+      "height": 1420.98359375
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Matte Gold sprayer",
+    "size": 78,
+    "glass": "Clear"
+  },
+  {
+    "websiteSku": "GBRnd78SpryMtSl",
+    "url": "/local-media/round78-pilot/GBRnd78SpryMtSl-shared-catalog.89e992101be2.png",
+    "sha256": "89e992101be2d23eb61a895b37998cacb18c2cd7e4e2ea674db96f24d5af6df0",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+        "sha256": "861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf",
+        "bytes": 1345403
+      },
+      {
+        "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+        "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+        "bytes": 25708
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/sprayer-5c50ea9efde8b3535c6330bf6b21429e2300857f9ba7d9c47677349dce048cef.png",
+        "sha256": "ed138b1a40c93e646abb42f96b5a382edb327465adc944545ff27220b35a75b3",
+        "bytes": 39076
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png",
+        "sha256": "f3ef537447a0e2d27134d72a871e057b5480dffc252d4f21531f271fdb075f71",
+        "bytes": 75860
+      }
+    ],
+    "frame": {
+      "x": -10.072669428045174,
+      "y": -143.01627479553224,
+      "width": 1268.9144886363638,
+      "height": 1395.8059375
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Matte Silver sprayer",
+    "size": 78,
+    "glass": "Clear"
+  },
+  {
+    "websiteSku": "GBRnd78SpryShnGl",
+    "url": "/local-media/round78-pilot/GBRnd78SpryShnGl-shared-catalog.158384c42a2e.png",
+    "sha256": "158384c42a2e4d6adceed230697445cb0bf41a9956cd1b3833bbf12f44f2efa3",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+        "sha256": "861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf",
+        "bytes": 1345403
+      },
+      {
+        "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+        "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+        "bytes": 25708
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/sprayer-41f38526607d7ec57dcc6c175773a0ec77889e76f1bd23f478cc2292b6497846.png",
+        "sha256": "ff179fd5c59620080bcdf17bf3665021008b1779e0584a179a8ca75cb3d032b1",
+        "bytes": 88567
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/overcap-177601ce48e6d817e1fbeebf18246c078cca84cedbce281747026dc3ef8abb38.png",
+        "sha256": "1506ab24d979eda6cba1a817cfa863905e6070e07756a8aff2e6c8db4f54db00",
+        "bytes": 188231
+      }
+    ],
+    "frame": {
+      "x": -10.198547224565004,
+      "y": -141.70527080535885,
+      "width": 1267.576278409091,
+      "height": 1394.33390625
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Shiny Gold sprayer",
+    "size": 78,
+    "glass": "Clear"
+  },
+  {
+    "websiteSku": "GBRnd78SpryShnBlk",
+    "url": "/local-media/round78-pilot/GBRnd78SpryShnBlk-shared-catalog.bba51de97217.png",
+    "sha256": "bba51de97217751f2e441630cafaa0207999d867bcf4403d1d55382a8afa0275",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+        "sha256": "861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf",
+        "bytes": 1345403
+      },
+      {
+        "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+        "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+        "bytes": 25708
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/sprayer-9d494fd880618a93df237d4a4ce12c35c13cc5b98af531044a943793654e9994.png",
+        "sha256": "ce3d4751ac8cd8014143123314a802569dd2cb65cf5e3972928956031c09a512",
+        "bytes": 36674
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png",
+        "sha256": "271573d8c23a35eb19a8e2136c494e91ff5c319b5811a21945cbaeab0f1a5ac2",
+        "bytes": 81639
+      }
+    ],
+    "frame": {
+      "x": -12.583670182661535,
+      "y": -151.04187974929812,
+      "width": 1277.106534090909,
+      "height": 1404.8171875
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Shiny Black sprayer",
+    "size": 78,
+    "glass": "Clear"
+  },
+  {
+    "websiteSku": "GBRndFrst78SpryMtSl",
+    "url": "/local-media/round78-pilot/GBRndFrst78SpryMtSl-shared-catalog.b378bdef422f.png",
+    "sha256": "b378bdef422fb899cc41544aa39fa62e47658e2779feb2fc1375d088155f96ef",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+        "sha256": "a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388",
+        "bytes": 2240120
+      },
+      {
+        "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+        "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+        "bytes": 25708
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/sprayer-5c50ea9efde8b3535c6330bf6b21429e2300857f9ba7d9c47677349dce048cef.png",
+        "sha256": "ed138b1a40c93e646abb42f96b5a382edb327465adc944545ff27220b35a75b3",
+        "bytes": 39076
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png",
+        "sha256": "f3ef537447a0e2d27134d72a871e057b5480dffc252d4f21531f271fdb075f71",
+        "bytes": 75860
+      }
+    ],
+    "frame": {
+      "x": -10.172667902166268,
+      "y": -143.01627479553224,
+      "width": 1268.9144886363638,
+      "height": 1395.8059375
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Matte Silver sprayer",
+    "size": 78,
+    "glass": "Frosted"
+  },
+  {
+    "websiteSku": "GBRndFrst78SpryShnSl",
+    "url": "/local-media/round78-pilot/GBRndFrst78SpryShnSl-shared-catalog.f000bbc5ba6b.png",
+    "sha256": "f000bbc5ba6beba0914dcaeb9c3ec8d91a7c7f20e7de03644d9f00c79c243b68",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+        "sha256": "a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388",
+        "bytes": 2240120
+      },
+      {
+        "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+        "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+        "bytes": 25708
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/sprayer-a26b031f10138c75eae2c73ead6908b1896facdfee8e4a690d34e2f0c2a49616.png",
+        "sha256": "d6b38068d4f00a2716e56799ed870b8df22a22b7961e1159d4df8125925e1c1d",
+        "bytes": 41289
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png",
+        "sha256": "a960223629d4e2f5446809d1ded2cf9f04d05c813f6c3639ae345e524c558c6a",
+        "bytes": 86874
+      }
+    ],
+    "frame": {
+      "x": -12.924339155717348,
+      "y": -153.07108394145962,
+      "width": 1279.177840909091,
+      "height": 1407.095625
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Shiny Silver sprayer",
+    "size": 78,
+    "glass": "Frosted"
+  },
+  {
+    "websiteSku": "GBRnd78SpryShnSl",
+    "url": "/local-media/round78-pilot/GBRnd78SpryShnSl-shared-catalog.dfbc0784912a.png",
+    "sha256": "dfbc0784912aed51ea448fc2e0853dbf809a4b5eada0babcd32c051ab6efcbcb",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+        "sha256": "861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf",
+        "bytes": 1345403
+      },
+      {
+        "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+        "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+        "bytes": 25708
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/sprayer-a26b031f10138c75eae2c73ead6908b1896facdfee8e4a690d34e2f0c2a49616.png",
+        "sha256": "d6b38068d4f00a2716e56799ed870b8df22a22b7961e1159d4df8125925e1c1d",
+        "bytes": 41289
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png",
+        "sha256": "a960223629d4e2f5446809d1ded2cf9f04d05c813f6c3639ae345e524c558c6a",
+        "bytes": 86874
+      }
+    ],
+    "frame": {
+      "x": -12.824340681596254,
+      "y": -153.07108394145962,
+      "width": 1279.177840909091,
+      "height": 1407.095625
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Shiny Silver sprayer",
+    "size": 78,
+    "glass": "Clear"
+  },
+  {
+    "websiteSku": "GBRndFrst78SpryShnGl",
+    "url": "/local-media/round78-pilot/GBRndFrst78SpryShnGl-shared-catalog.299f3bc1227a.png",
+    "sha256": "299f3bc1227ab863fd4e443612b280ab00c4c7cdf575aee5d4f0820772cdeda7",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+        "sha256": "a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388",
+        "bytes": 2240120
+      },
+      {
+        "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+        "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+        "bytes": 25708
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/sprayer-41f38526607d7ec57dcc6c175773a0ec77889e76f1bd23f478cc2292b6497846.png",
+        "sha256": "ff179fd5c59620080bcdf17bf3665021008b1779e0584a179a8ca75cb3d032b1",
+        "bytes": 88567
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/overcap-177601ce48e6d817e1fbeebf18246c078cca84cedbce281747026dc3ef8abb38.png",
+        "sha256": "1506ab24d979eda6cba1a817cfa863905e6070e07756a8aff2e6c8db4f54db00",
+        "bytes": 188231
+      }
+    ],
+    "frame": {
+      "x": -10.298545698686098,
+      "y": -141.70527080535885,
+      "width": 1267.576278409091,
+      "height": 1394.33390625
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Shiny Gold sprayer",
+    "size": 78,
+    "glass": "Frosted"
+  },
+  {
+    "websiteSku": "GBRndFrst78SpryShnBlk",
+    "url": "/local-media/round78-pilot/GBRndFrst78SpryShnBlk-shared-catalog.5689174dc313.png",
+    "sha256": "5689174dc313d7c1baab7b61a9b9d692cd9c376b0432f7299ad3f1bfc56ba949",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+        "sha256": "a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388",
+        "bytes": 2240120
+      },
+      {
+        "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+        "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+        "bytes": 25708
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/sprayer-9d494fd880618a93df237d4a4ce12c35c13cc5b98af531044a943793654e9994.png",
+        "sha256": "ce3d4751ac8cd8014143123314a802569dd2cb65cf5e3972928956031c09a512",
+        "bytes": 36674
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png",
+        "sha256": "271573d8c23a35eb19a8e2136c494e91ff5c319b5811a21945cbaeab0f1a5ac2",
+        "bytes": 81639
+      }
+    ],
+    "frame": {
+      "x": -12.68366865678263,
+      "y": -151.04187974929812,
+      "width": 1277.106534090909,
+      "height": 1404.8171875
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Shiny Black sprayer",
+    "size": 78,
+    "glass": "Frosted"
+  },
+  {
+    "websiteSku": "GBRndFrst78SpryMtGl",
+    "url": "/local-media/round78-pilot/GBRndFrst78SpryMtGl-shared-catalog.9cc726a91ca4.png",
+    "sha256": "9cc726a91ca4753a0f0b3a2fbb16807f9d1413b711403343853907e767ec0265",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+        "sha256": "a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388",
+        "bytes": 2240120
+      },
+      {
+        "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+        "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+        "bytes": 25708
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/sprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png",
+        "sha256": "41688cb5fc3608eef96295e07cab51a64a7cc321ba92e3a82b3be58a3b65cf97",
+        "bytes": 80326
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png",
+        "sha256": "2e13c3f6090b95e2839dbc75e0537d2b6940a1b0fe10def4c8c5a20f656dbb52",
+        "bytes": 196848
+      }
+    ],
+    "frame": {
+      "x": -20.032035134055377,
+      "y": -165.4400810241699,
+      "width": 1291.8032670454545,
+      "height": 1420.98359375
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Matte Gold sprayer",
+    "size": 78,
+    "glass": "Frosted"
+  }
+]

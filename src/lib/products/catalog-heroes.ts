@@ -1,3 +1,11 @@
+import divaPilotRows from "./local-diva46-pilot-catalog-heroes.json";
+import divaAdditionalRows from "./local-diva46-additional-catalog-heroes.json";
+import roundLotionPilotRows from "./local-round78-lotion-pilot-catalog-heroes.json";
+import roundLotionAdditionalRows from "./local-round78-lotion-additional-catalog-heroes.json";
+import roundAdditionalRows from "./local-round78-additional-catalog-heroes.json";
+import roundPilotRows from "./local-round78-pilot-catalog-heroes.json";
+import additionalEmpireRows from "./local-empire-additional-catalog-heroes.json";
+import localEmpireRow from "./local-empire-catalog-hero.json";
 import heroRows from "./catalog-heroes.json";
 import pilotRows from "./catalog-hero-pilot.json";
 import crePilotRows from "./catalog-hero-cre-pilot.json";
@@ -16,6 +24,15 @@ const completePilotRows = [...pilotRows, ...crePilotRows, ...elegantReleaseRows,
 function activePilotRows(): CatalogHero[] {
     return process.env.NEXT_PUBLIC_CATALOG_HERO_PILOT === "families-2026-09-22"
         ? completePilotRows : pilotRows;
+}
+
+/** Exact-SKU local review only; never enters a production or Vercel build. */
+function localReviewHeroes(): CatalogHero[] {
+    return process.env.NODE_ENV === "development" && !process.env.VERCEL ? [localEmpireRow, ...additionalEmpireRows, ...roundPilotRows, ...roundAdditionalRows, ...divaPilotRows, ...divaAdditionalRows, ...roundLotionPilotRows, ...roundLotionAdditionalRows] : [];
+}
+export function isLocalReviewHero(hero?: CatalogHero | null): boolean {
+    const local = localReviewHeroes().find(row => row.websiteSku === hero?.websiteSku);
+    return Boolean(local && hero && hero.websiteSku === local.websiteSku && hero.groupSlug === local.groupSlug && hero.url === local.url);
 }
 
 /** Explicit build opt-in: staging candidates do not become a production release. */
@@ -60,6 +77,8 @@ function isPilotHero(hero?: CatalogHero | null): boolean {
 /** Exact SKU lookup only: never borrow another finish or applicator's photo. */
 export function getProductHero(websiteSku?: string | null): CatalogHero | null {
     if (!websiteSku) return null;
+    const local = localReviewHeroes().find(row => row.websiteSku === websiteSku);
+    if (local?.websiteSku === websiteSku) return local;
     return (isCatalogHeroPilotEnabled() ? activePilotRows().find(row => row.websiteSku === websiteSku) : null) ?? bySku.get(websiteSku) ?? null;
 }
 
@@ -73,6 +92,11 @@ export function getReleasedCatalogHero(groupSlug: string, websiteSku?: string | 
 
 /** Only select an assembly still present in the filtered catalog result. */
 export function getCatalogHero(groupSlug: string, variants: readonly { websiteSku?: string | null }[], preferredWebsiteSku?: string | null): CatalogHero | null {
+    const local = localReviewHeroes().find(row => row.groupSlug === groupSlug
+        && variants.some(v => v.websiteSku === row.websiteSku)
+        && (!preferredWebsiteSku || preferredWebsiteSku.trim().toLowerCase() === row.websiteSku.toLowerCase()));
+    if (local?.groupSlug === groupSlug && variants.some(v => v.websiteSku === local.websiteSku)
+        && (!preferredWebsiteSku || preferredWebsiteSku.trim().toLowerCase() === local.websiteSku.toLowerCase())) return local;
     const slugs = recordedGroupSlugs(groupSlug);
     const eligible = isCatalogHeroPilotEnabled() ? activePilotRows().filter(candidate =>
         slugs.includes(candidate.groupSlug) && variants.some(variant => variant.websiteSku === candidate.websiteSku),
@@ -128,7 +152,7 @@ export function resolveLiveCatalogCardHero(input: {
     const heroImageUrl = input.heroImageUrl?.trim() || null;
     // Only an exact, still-visible assembly can supersede a live group photo.
     // Keeping this ahead of Shopify precedence is essential for staging review.
-    if (isPilotHero(input.staticHero) && input.variants?.some(variant => variant.websiteSku === input.staticHero?.websiteSku)) {
+    if ((isLocalReviewHero(input.staticHero) || isPilotHero(input.staticHero)) && input.variants?.some(variant => variant.websiteSku === input.staticHero?.websiteSku)) {
         const hero = input.staticHero!;
         return { catalogHero: hero, imageUrl: hero.url, picturedWebsiteSku: hero.websiteSku };
     }

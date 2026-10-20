@@ -1,0 +1,35 @@
+{
+  "websiteSku": "GBEmp100SpryMtGl",
+  "plateKey": "empire-100ml-18-415|Clear",
+  "componentId": "CMP-SPR-MTGD-18-415-05",
+  "url": "/local-media/empire-bare-glass/empire-100ml-native-spray-tube.883a216fc61f.png",
+  "sha256": "883a216fc61f92a2ec8371eea59aa547b4db841240c8b2296cc505d8045ff2f0",
+  "bytes": 33508,
+  "width": 99,
+  "height": 994,
+  "axisX": 50,
+  "sourceBodyHeight": 1504,
+  "sourcePath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /22. Empire Bottle 100ml/1. Empire 100ml PSD/13. GBEmp100SpryMtGl.psd",
+  "sourceSha256": "df29040b2adc183eb2adee458455e4247887b1f4d7874ff20e22416b8953ea70",
+  "sourceLayer": "Layer 16",
+  "sourceLayerIndex": 2,
+  "sourceLayerBounds": [
+    183,
+    670,
+    412,
+    2582
+  ],
+  "sourceCrop": [
+    130,
+    0,
+    229,
+    994
+  ],
+  "method": "native RGBA crop of continuous source housing and tube; off-canvas disconnected scrap excluded",
+  "expectedUrls": [
+    "/images/register/tubes/empire-100ml-18-415-clear-spray.545fa0538cce.png",
+    "/images/register/tubes/empire-100ml-18-415-clear-spray-exploded.8023ba8f5bdf.png"
+  ],
+  "expectedSprayerUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/sprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png",
+  "visibleBottomFraction": 0.975
+}

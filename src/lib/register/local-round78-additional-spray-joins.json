@@ -1,0 +1,52 @@
+[
+  {
+    "websiteSkus": [
+      "GBRnd78SpryCu",
+      "GBRndFrst78SpryCu"
+    ],
+    "componentId": "CMP-SPR-MTCP-18-415-03",
+    "sprayerUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/sprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png",
+    "sprayerHeight": 400,
+    "solidBottomY": 391
+  },
+  {
+    "websiteSkus": [
+      "GBRnd78SpryMtGl",
+      "GBRndFrst78SpryMtGl"
+    ],
+    "componentId": "CMP-SPR-MTGD-18-415-05",
+    "sprayerUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/sprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png",
+    "sprayerHeight": 400,
+    "solidBottomY": 390
+  },
+  {
+    "websiteSkus": [
+      "GBRnd78SpryMtSl",
+      "GBRndFrst78SpryMtSl"
+    ],
+    "componentId": "CMP-SPR-MTSL-18-415-06",
+    "sprayerUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/sprayer-5c50ea9efde8b3535c6330bf6b21429e2300857f9ba7d9c47677349dce048cef.png",
+    "sprayerHeight": 397,
+    "solidBottomY": 391
+  },
+  {
+    "websiteSkus": [
+      "GBRnd78SpryShnBlk",
+      "GBRndFrst78SpryShnBlk"
+    ],
+    "componentId": "CMP-SPR-SHBK-18-415-06",
+    "sprayerUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/sprayer-9d494fd880618a93df237d4a4ce12c35c13cc5b98af531044a943793654e9994.png",
+    "sprayerHeight": 400,
+    "solidBottomY": 393
+  },
+  {
+    "websiteSkus": [
+      "GBRnd78SpryShnGl",
+      "GBRndFrst78SpryShnGl"
+    ],
+    "componentId": "CMP-SPR-SHGD-18-415-05",
+    "sprayerUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/sprayer-41f38526607d7ec57dcc6c175773a0ec77889e76f1bd23f478cc2292b6497846.png",
+    "sprayerHeight": 400,
+    "solidBottomY": 392
+  }
+]

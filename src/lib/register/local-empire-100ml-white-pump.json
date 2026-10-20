@@ -1,0 +1,90 @@
+{
+  "websiteSku": "LBEmp100WhtClOvrCp",
+  "graceSku": "LB-EMP-CLR-100ML-LPM-OVCP-T",
+  "expectedAssembly": {
+    "bodyId": "empire-100ml-18-415",
+    "glass": "Clear",
+    "graceSku": "LB-EMP-CLR-100ML-LPM-OVCP-T",
+    "neck": "18-415",
+    "parts": [],
+    "plateKey": "empire-100ml-18-415|Clear",
+    "reason": "own parts unresolved: no 18-415 component is the white lotion pump under the clear overcap (a new part, cut from its bottle photos)",
+    "renderable": false,
+    "websiteSku": "LBEmp100WhtClOvrCp"
+  },
+  "expectedPlate": {
+    "anchors": {
+      "axisX": 565.5,
+      "baselineY": 2096,
+      "seatY": 133,
+      "shoulderY": 422
+    },
+    "approved": true,
+    "bodyId": "empire-100ml-18-415",
+    "glass": "Clear",
+    "height": 2192,
+    "plateKey": "empire-100ml-18-415|Clear",
+    "pxPerMm": 17.6494,
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/empire-100ml-18-415/clear/97ed31088574714b12da6de6653d7c1fcab8117a4b3c941722f4f4b39eabfa23.png",
+    "width": 1136
+  },
+  "component": {
+    "componentId": "LIB-18-415-WhtPumpClOvrCp",
+    "type": "lotion-pump",
+    "layers": [
+      {
+        "slot": "pump",
+        "layerName": "Layer 2 copy (55. LBElg60WhtClOvrCp.psd)",
+        "file": "LIB-18-415-WhtPumpClOvrCp--0-pump.png",
+        "width": 380,
+        "height": 602,
+        "sha256": "25c3d0557906a8824e68ca309440d7cf3df382ab92a1c485f85bb19d26b4554c",
+        "pxPerMm": 13.2495,
+        "anchor": {
+          "x": 189.0,
+          "y": 382
+        },
+        "z": "front",
+        "explodeIndex": 1,
+        "solidBottomY": 596,
+        "fileSha256": "216a1943193e66319db55a705eb731dc9af5e5ce8713609b7c9218195e464dd8",
+        "url": "/local-media/empire-white-pump/pump-25c3d0557906a8824e68ca309440d7cf3df382ab92a1c485f85bb19d26b4554c.png",
+        "approved": true
+      },
+      {
+        "slot": "overcap",
+        "layerName": "Layer 1 copy (54. LBElg60WhtClOvrCp.psd), rows 36-471",
+        "file": "LIB-18-415-WhtPumpClOvrCp--overcap.png",
+        "width": 379,
+        "height": 462,
+        "sha256": "13ae16acc25d08039dbbfdb29a3f2b7524633a1390b6548b03d4366621249835",
+        "pxPerMm": 13.2495,
+        "anchor": {
+          "x": 186.5,
+          "y": 480
+        },
+        "z": "front",
+        "explodeIndex": 2,
+        "solidBottomY": 456,
+        "fileSha256": "36239bb9f037ae8625f5ba384b13c15d2be7e07e868769c725447463bc012eb2",
+        "url": "/local-media/empire-white-pump/overcap-13ae16acc25d08039dbbfdb29a3f2b7524633a1390b6548b03d4366621249835.png",
+        "approved": true
+      }
+    ],
+    "approved": true
+  },
+  "visualApproval": false,
+  "sourceReference": {
+    "psd": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images/2. 18-415 Bottles/22. Empire Bottle 100ml/1. Empire 100ml PSD/52. LBEmp100WhtClOvrCp.psd",
+    "sourceSha256": "7e59c65bbbb43f2e372830dd2a2e60beb02039f86cfda7cd68214c9790fd65ea",
+    "pumpLayer": "Layer 2 copy",
+    "pumpBounds": [
+      386,
+      101,
+      754,
+      691
+    ],
+    "hardware": "Same white 18-415 pump as 50 ml, retained library source pixels and registration. Exact 100 ml PSD visually checked.",
+    "emptyCover": "Existing local PR 341 empty-overcap candidate, still awaiting owner visual approval."
+  }
+}

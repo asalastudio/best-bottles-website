@@ -1,3 +1,5 @@
+import additionalSprayTubes from './local-empire-additional-spray-tubes.json';
+import empire100SprayTube from './local-empire-100ml-spray-tube.json';
 import sources from './local-source-tubes.json';
 import vintageTube from './local-empire-vintage-tube.json';
 import round78 from './local-round78-tubes.json';
@@ -14,6 +16,6 @@ export function sourceTubeMaterialFilter(url: string, view: 'sidecar' | 'capon' 
     // Round's source is photographed through glass. Keep its white highlights
     // neutral: darkening them turns the entire pump into a gray silhouette.
     if (url === vintageTube.url && view !== 'exploded') return 'brightness(0.96)';
-    return view === 'exploded' && (sources.some(source => source.url === url) || url === round78.url || url === round78Lotion.url)
+    return view === 'exploded' && ([empire100SprayTube, ...additionalSprayTubes].some(row => row.url === url) || sources.some(source => source.url === url) || url === round78.url || url === round78Lotion.url)
         ? 'brightness(0.625) contrast(4)' : undefined;
 }

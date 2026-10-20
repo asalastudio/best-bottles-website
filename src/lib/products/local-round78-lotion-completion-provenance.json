@@ -1,0 +1,590 @@
+[
+  {
+    "websiteSku": "LBRnd78LtnMtGl",
+    "url": "/local-media/round78-lotion-pilot/LBRnd78LtnMtGl-shared-catalog.41ee7331dfc8.png",
+    "sha256": "41ee7331dfc84598ec0c49b7bc843471f89b8636f7348836615c72421d8be5be",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+        "sha256": "861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf",
+        "bytes": 1345403
+      },
+      {
+        "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+        "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+        "bytes": 32974
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MGLD-18-415/pump-39b24dee49ed593591bcc637bcd69b518e1f5d316ae537739782b91f956423bc.png",
+        "sha256": "278fe7f188430d8b83c18a5cb9221ef0a9c33e303a4d551dc2e746f35acd465b",
+        "bytes": 82910
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MGLD-18-415/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png",
+        "sha256": "2e13c3f6090b95e2839dbc75e0537d2b6940a1b0fe10def4c8c5a20f656dbb52",
+        "bytes": 196848
+      }
+    ],
+    "frame": {
+      "x": -24.412008250843314,
+      "y": -174.2180730438232,
+      "width": 1300.7632102272726,
+      "height": 1430.83953125
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Matte Gold lotion pump",
+    "size": 78,
+    "glass": "Clear"
+  },
+  {
+    "websiteSku": "LBRnd78LtnShnGl",
+    "url": "/local-media/round78-lotion-pilot/LBRnd78LtnShnGl-shared-catalog.fcb3457ee046.png",
+    "sha256": "fcb3457ee046bcfa30c39a0d3a0343651658fb48815a52e5eccdb992b5fa8813",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+        "sha256": "861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf",
+        "bytes": 1345403
+      },
+      {
+        "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+        "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+        "bytes": 32974
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SGLD-18-415/pump-07155152afd69e8ef46c789f986353c6a4246c8dd0d9b47d32454294c1f0159b.png",
+        "sha256": "03c8e952ce1c82e4da04bbf3b93cb5ff717486d3efab7e404537536f22b759c0",
+        "bytes": 89639
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SGLD-18-415/overcap-de0582dafa63fd693f9e22125610b5f4a1f04826f3fa392a85afa7169befeced.png",
+        "sha256": "06c1e5ffc8ae3d0aa90407055e97b7694d8a81dd989d65b753c10ca04136a618",
+        "bytes": 187782
+      }
+    ],
+    "frame": {
+      "x": -7.766586997292279,
+      "y": -136.9400810241699,
+      "width": 1262.7123579545455,
+      "height": 1388.98359375
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Shiny Gold lotion pump",
+    "size": 78,
+    "glass": "Clear"
+  },
+  {
+    "websiteSku": "LBRnd78LtnShnBlk",
+    "url": "/local-media/round78-lotion-pilot/LBRnd78LtnShnBlk-shared-catalog.c804fe625383.png",
+    "sha256": "c804fe625383e7b491c15878bc30aed51caaefab64acabe9a4ea7c81913896a2",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+        "sha256": "861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf",
+        "bytes": 1345403
+      },
+      {
+        "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+        "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+        "bytes": 32974
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SBLK-18-415/pump-7fd1cfbea3ed6283b4937b6c0f9d3416bc379da9fabc13b1bc4d460e74d71176.png",
+        "sha256": "6cc716f91c7c0531f098b8789d3666b7735e3e006851b9ee285d1d2e39a336b4",
+        "bytes": 37222
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SBLK-18-415/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png",
+        "sha256": "271573d8c23a35eb19a8e2136c494e91ff5c319b5811a21945cbaeab0f1a5ac2",
+        "bytes": 81639
+      }
+    ],
+    "frame": {
+      "x": -9.971312228116062,
+      "y": -145.9232813453674,
+      "width": 1271.881818181818,
+      "height": 1399.07
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Shiny Black lotion pump",
+    "size": 78,
+    "glass": "Clear"
+  },
+  {
+    "websiteSku": "LBRnd78LtnMtSl",
+    "url": "/local-media/round78-lotion-pilot/LBRnd78LtnMtSl-shared-catalog.82b224cb65a2.png",
+    "sha256": "82b224cb65a22cbd9d10e0b9a4029e1af01889822bac85382ef704cff31515e4",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+        "sha256": "861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf",
+        "bytes": 1345403
+      },
+      {
+        "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+        "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+        "bytes": 32974
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-01/pump-0cc427bbd8ed00ae446a8a4e5fec65e8a3f68476b7f4cf11c6398f51825987bb.png",
+        "sha256": "976e421755bf3e03caac8127ec0c522e0e960ba65162f05b8219642bf7525c30",
+        "bytes": 209267
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-01/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png",
+        "sha256": "f3ef537447a0e2d27134d72a871e057b5480dffc252d4f21531f271fdb075f71",
+        "bytes": 75860
+      }
+    ],
+    "frame": {
+      "x": -9.403564314408754,
+      "y": -141.70527080535885,
+      "width": 1267.576278409091,
+      "height": 1394.33390625
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Matte Silver lotion pump",
+    "size": 78,
+    "glass": "Clear"
+  },
+  {
+    "websiteSku": "LBRnd78LtnShnSl",
+    "url": "/local-media/round78-lotion-pilot/LBRnd78LtnShnSl-shared-catalog.7c5be87f489f.png",
+    "sha256": "7c5be87f489f23d0a52b1d21910a5954f380f996b55d3f1fae68a9419f997347",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+        "sha256": "861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf",
+        "bytes": 1345403
+      },
+      {
+        "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+        "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+        "bytes": 32974
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SSLV-18-415/pump-5ab4afef966a38362aa7e46a12c8f076a476dc3c005f0425521645c0c8b662c4.png",
+        "sha256": "091bd119ea1617aa8fc8e302e5588eaa37c5b4f61eab36815d243b48f21ea672",
+        "bytes": 43214
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SSLV-18-415/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png",
+        "sha256": "a960223629d4e2f5446809d1ded2cf9f04d05c813f6c3639ae345e524c558c6a",
+        "bytes": 86874
+      }
+    ],
+    "frame": {
+      "x": -7.971925908869025,
+      "y": -143.56347160339362,
+      "width": 1269.4730113636365,
+      "height": 1396.4203125000001
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Shiny Silver lotion pump",
+    "size": 78,
+    "glass": "Clear"
+  },
+  {
+    "websiteSku": "LBRnd78LtnCu",
+    "url": "/local-media/round78-lotion-pilot/LBRnd78LtnCu-shared-catalog.e3fd0877bc15.png",
+    "sha256": "e3fd0877bc15120e5a1ad6202c3fc1c90b8712bbadfabedbe86933029778a4a8",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+        "sha256": "861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf",
+        "bytes": 1345403
+      },
+      {
+        "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+        "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+        "bytes": 32974
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-CPR-18-415/pump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png",
+        "sha256": "c81514a001b22bb6517817ae3396103562b8135937c2218de30a08191592b3db",
+        "bytes": 101117
+      },
+      {
+        "url": "/local-media/copper-caps/round78-lotion.be75859d4a21.png",
+        "sha256": "be75859d4a21f860b18e2ef45beae16890bc94ff685be62759abc2ca22deed36",
+        "bytes": 374755
+      }
+    ],
+    "frame": {
+      "x": 6.657693897594072,
+      "y": -167.74288326263434,
+      "width": 1294.1538352272728,
+      "height": 1423.5692187500001
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Copper lotion pump",
+    "size": 78,
+    "glass": "Clear"
+  },
+  {
+    "websiteSku": "LBRndFrst78LtnMtGl",
+    "url": "/local-media/round78-lotion-pilot/LBRndFrst78LtnMtGl-shared-catalog.e3f567612598.png",
+    "sha256": "e3f567612598b9d251ac6c92ec9931ec0fa8c657e8d1c65eaf0f7378b6d72851",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+        "sha256": "a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388",
+        "bytes": 2240120
+      },
+      {
+        "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+        "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+        "bytes": 32974
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MGLD-18-415/pump-39b24dee49ed593591bcc637bcd69b518e1f5d316ae537739782b91f956423bc.png",
+        "sha256": "278fe7f188430d8b83c18a5cb9221ef0a9c33e303a4d551dc2e746f35acd465b",
+        "bytes": 82910
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MGLD-18-415/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png",
+        "sha256": "2e13c3f6090b95e2839dbc75e0537d2b6940a1b0fe10def4c8c5a20f656dbb52",
+        "bytes": 196848
+      }
+    ],
+    "frame": {
+      "x": -24.512006724964408,
+      "y": -174.2180730438232,
+      "width": 1300.7632102272726,
+      "height": 1430.83953125
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Matte Gold lotion pump",
+    "size": 78,
+    "glass": "Frosted"
+  },
+  {
+    "websiteSku": "LBRndFrst78LtnShnGl",
+    "url": "/local-media/round78-lotion-pilot/LBRndFrst78LtnShnGl-shared-catalog.b54e686a8479.png",
+    "sha256": "b54e686a8479e365c7fcf3405bc7452c31f9d96b6e9de50b497ac7772f081cb9",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+        "sha256": "a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388",
+        "bytes": 2240120
+      },
+      {
+        "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+        "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+        "bytes": 32974
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SGLD-18-415/pump-07155152afd69e8ef46c789f986353c6a4246c8dd0d9b47d32454294c1f0159b.png",
+        "sha256": "03c8e952ce1c82e4da04bbf3b93cb5ff717486d3efab7e404537536f22b759c0",
+        "bytes": 89639
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SGLD-18-415/overcap-de0582dafa63fd693f9e22125610b5f4a1f04826f3fa392a85afa7169befeced.png",
+        "sha256": "06c1e5ffc8ae3d0aa90407055e97b7694d8a81dd989d65b753c10ca04136a618",
+        "bytes": 187782
+      }
+    ],
+    "frame": {
+      "x": -7.866585471413373,
+      "y": -136.9400810241699,
+      "width": 1262.7123579545455,
+      "height": 1388.98359375
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Shiny Gold lotion pump",
+    "size": 78,
+    "glass": "Frosted"
+  },
+  {
+    "websiteSku": "LBRndFrst78LtnShnBlk",
+    "url": "/local-media/round78-lotion-pilot/LBRndFrst78LtnShnBlk-shared-catalog.69e3abc6ee73.png",
+    "sha256": "69e3abc6ee73036759298f5cf1226568d53d0162330192bb2e0a4be0d51c49a7",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+        "sha256": "a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388",
+        "bytes": 2240120
+      },
+      {
+        "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+        "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+        "bytes": 32974
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SBLK-18-415/pump-7fd1cfbea3ed6283b4937b6c0f9d3416bc379da9fabc13b1bc4d460e74d71176.png",
+        "sha256": "6cc716f91c7c0531f098b8789d3666b7735e3e006851b9ee285d1d2e39a336b4",
+        "bytes": 37222
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SBLK-18-415/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png",
+        "sha256": "271573d8c23a35eb19a8e2136c494e91ff5c319b5811a21945cbaeab0f1a5ac2",
+        "bytes": 81639
+      }
+    ],
+    "frame": {
+      "x": -10.071310702237156,
+      "y": -145.9232813453674,
+      "width": 1271.881818181818,
+      "height": 1399.07
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Shiny Black lotion pump",
+    "size": 78,
+    "glass": "Frosted"
+  },
+  {
+    "websiteSku": "LBRndFrst78LtnMtSl",
+    "url": "/local-media/round78-lotion-pilot/LBRndFrst78LtnMtSl-shared-catalog.458efdc1bd35.png",
+    "sha256": "458efdc1bd353563c511712085f29a7e2a6e0e31ceff0176a40a8a9f8a2c1c8d",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+        "sha256": "a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388",
+        "bytes": 2240120
+      },
+      {
+        "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+        "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+        "bytes": 32974
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-01/pump-0cc427bbd8ed00ae446a8a4e5fec65e8a3f68476b7f4cf11c6398f51825987bb.png",
+        "sha256": "976e421755bf3e03caac8127ec0c522e0e960ba65162f05b8219642bf7525c30",
+        "bytes": 209267
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-01/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png",
+        "sha256": "f3ef537447a0e2d27134d72a871e057b5480dffc252d4f21531f271fdb075f71",
+        "bytes": 75860
+      }
+    ],
+    "frame": {
+      "x": -9.503562788529848,
+      "y": -141.70527080535885,
+      "width": 1267.576278409091,
+      "height": 1394.33390625
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Matte Silver lotion pump",
+    "size": 78,
+    "glass": "Frosted"
+  },
+  {
+    "websiteSku": "LBRndFrst78LtnShnSl",
+    "url": "/local-media/round78-lotion-pilot/LBRndFrst78LtnShnSl-shared-catalog.6b12ab831eb8.png",
+    "sha256": "6b12ab831eb868e5dd2e0d6920aa6fecc6b698bfb2d8d9312716dfa27271323c",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+        "sha256": "a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388",
+        "bytes": 2240120
+      },
+      {
+        "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+        "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+        "bytes": 32974
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SSLV-18-415/pump-5ab4afef966a38362aa7e46a12c8f076a476dc3c005f0425521645c0c8b662c4.png",
+        "sha256": "091bd119ea1617aa8fc8e302e5588eaa37c5b4f61eab36815d243b48f21ea672",
+        "bytes": 43214
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SSLV-18-415/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png",
+        "sha256": "a960223629d4e2f5446809d1ded2cf9f04d05c813f6c3639ae345e524c558c6a",
+        "bytes": 86874
+      }
+    ],
+    "frame": {
+      "x": -8.071924382990119,
+      "y": -143.56347160339362,
+      "width": 1269.4730113636365,
+      "height": 1396.4203125000001
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Shiny Silver lotion pump",
+    "size": 78,
+    "glass": "Frosted"
+  },
+  {
+    "websiteSku": "LBRndFrst78LtnCu",
+    "url": "/local-media/round78-lotion-pilot/LBRndFrst78LtnCu-shared-catalog.679bc55de619.png",
+    "sha256": "679bc55de619243dcef8d017cbe37c5e0e3619f4ac8ac09b8a09e4469e98f008",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+        "sha256": "a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388",
+        "bytes": 2240120
+      },
+      {
+        "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+        "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+        "bytes": 32974
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-CPR-18-415/pump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png",
+        "sha256": "c81514a001b22bb6517817ae3396103562b8135937c2218de30a08191592b3db",
+        "bytes": 101117
+      },
+      {
+        "url": "/local-media/copper-caps/round78-lotion.be75859d4a21.png",
+        "sha256": "be75859d4a21f860b18e2ef45beae16890bc94ff685be62759abc2ca22deed36",
+        "bytes": 374755
+      }
+    ],
+    "frame": {
+      "x": 6.557664905894853,
+      "y": -167.74288326263434,
+      "width": 1294.1538352272728,
+      "height": 1423.5692187500001
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Copper lotion pump",
+    "size": 78,
+    "glass": "Frosted"
+  },
+  {
+    "websiteSku": "LBRnd78LtnClOvrCap",
+    "url": "/local-media/round78-lotion-pilot/LBRnd78LtnClOvrCap-shared-catalog.5a6aea98b830.png",
+    "sha256": "5a6aea98b830bc50e87d88ca314c07941fbb959eaab466af20b39c3ad523dcb5",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+        "sha256": "861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf",
+        "bytes": 1345403
+      },
+      {
+        "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+        "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+        "bytes": 32974
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-02/pump-c4e70e2d9fcd9d18fd74b384607f1faed235200eafc355f70caf5f83ba538bc9.png",
+        "sha256": "04f97d643c4a78cc93fab56a961256484ef1cba8fcd20a8367fe79b72331511e",
+        "bytes": 234383
+      },
+      {
+        "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+        "sha256": "d5fcb1b4c473157f98b9bad266c115a5a8ff59d829edbe8f4ead0e6541054828",
+        "bytes": 40566
+      }
+    ],
+    "frame": {
+      "x": -25.941833357377504,
+      "y": -133.59987319946288,
+      "width": 1259.302840909091,
+      "height": 1385.233125
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Clear Overcap lotion pump",
+    "size": 78,
+    "glass": "Clear"
+  },
+  {
+    "websiteSku": "LBRndFrst78LtnClOvrCap",
+    "url": "/local-media/round78-lotion-pilot/LBRndFrst78LtnClOvrCap-shared-catalog.9488f2b0d866.png",
+    "sha256": "9488f2b0d866d36661ecb43019031112cf4c2c5e23c4fd1150e1b4c9ff8679d2",
+    "width": 1200,
+    "height": 1320,
+    "source": "actual Builder sidecar SVG, exact original layer bytes embedded",
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+        "sha256": "a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388",
+        "bytes": 2240120
+      },
+      {
+        "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+        "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+        "bytes": 32974
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-02/pump-c4e70e2d9fcd9d18fd74b384607f1faed235200eafc355f70caf5f83ba538bc9.png",
+        "sha256": "04f97d643c4a78cc93fab56a961256484ef1cba8fcd20a8367fe79b72331511e",
+        "bytes": 234383
+      },
+      {
+        "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+        "sha256": "d5fcb1b4c473157f98b9bad266c115a5a8ff59d829edbe8f4ead0e6541054828",
+        "bytes": 40566
+      }
+    ],
+    "frame": {
+      "x": -26.041831831498598,
+      "y": -133.59987319946288,
+      "width": 1259.302840909091,
+      "height": 1385.233125
+    },
+    "originalViewBox": "-788.3009519999998 -174.09095200000002 2576.6019039999996 1730.1419039999998",
+    "pageErrors": [],
+    "exactSku": true,
+    "finish": "Clear Overcap lotion pump",
+    "size": 78,
+    "glass": "Frosted"
+  }
+]

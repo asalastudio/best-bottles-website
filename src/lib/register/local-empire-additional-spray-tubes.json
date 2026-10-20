@@ -1,0 +1,387 @@
+[
+  {
+    "websiteSku": "GBEmp50SpryMtGl",
+    "plateKey": "empire-50ml-18-415|Clear",
+    "componentId": "CMP-SPR-MTGD-18-415-05",
+    "url": "/local-media/empire-bare-glass/empire-50ml-native-spray-tube.7d755598ba26.png",
+    "sha256": "7d755598ba26efc496f5cd05fb5930132eb0af6d4a99d8bd95da3f937ccc6d90",
+    "bytes": 25595,
+    "width": 86,
+    "height": 726,
+    "axisX": 44,
+    "sourceBodyHeight": 1268,
+    "sourcePath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images/2. 18-415 Bottles/21. Empire 50ml/1. Empire 50ml PSD/13. GBEmp50SpryMtGl.psd",
+    "sourceSha256": "4fc23d4c6cfd197531e43236163aff97e739af8c51c1f5f3aeb03562c9293e9a",
+    "sourceLayer": "Layer 18",
+    "sourceLayerIndex": 2,
+    "sourceLayerBounds": [
+      186,
+      673,
+      382,
+      2317
+    ],
+    "sourceCrop": [
+      110,
+      0,
+      196,
+      726
+    ],
+    "method": "native RGBA crop of continuous source housing and tube; disconnected off-canvas scrap excluded",
+    "expectedUrls": [
+      "/images/register/tubes/empire-50ml-18-415-clear-spray.dcb167b9e11c.png",
+      "/images/register/tubes/empire-50ml-18-415-clear-spray-exploded.bcaeb3949ecb.png"
+    ],
+    "expectedSprayerUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/sprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png",
+    "visibleBottomFraction": 0.975
+  },
+  {
+    "url": "/local-media/empire-bare-glass/GBEmp50SpryMtSl-native-tube.bf29cf892dca.png",
+    "sha256": "bf29cf892dca0895bb25b16fa775d02765c6e6e5d6382dbdb8e426208cab986a",
+    "bytes": 25593,
+    "width": 86,
+    "height": 726,
+    "sourcePath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images/2. 18-415 Bottles/21. Empire 50ml/1. Empire 50ml PSD/23. GBEmp50SpryMtSl.psd",
+    "sourceSha256": "3141136904d525e512ae66d4c6d292342fd2f15b98b19cb4d8379e09a15c2a5a",
+    "sourceLayer": "Layer 29",
+    "sourceLayerIndex": 2,
+    "sourceLayerBounds": [
+      176,
+      673,
+      372,
+      2317
+    ],
+    "sourceCrop": [
+      110,
+      0,
+      196,
+      726
+    ],
+    "method": "native RGBA crop; excludes the disconnected off-canvas fragment; source pixels unchanged",
+    "websiteSku": "GBEmp50SpryMtSl",
+    "plateKey": "empire-50ml-18-415|Clear",
+    "componentId": "CMP-SPR-MTSL-18-415-06",
+    "axisX": 44,
+    "sourceBodyHeight": 1268,
+    "expectedUrls": [
+      "/images/register/tubes/empire-50ml-18-415-clear-spray.dcb167b9e11c.png",
+      "/images/register/tubes/empire-50ml-18-415-clear-spray-exploded.bcaeb3949ecb.png"
+    ],
+    "expectedSprayerUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/sprayer-5c50ea9efde8b3535c6330bf6b21429e2300857f9ba7d9c47677349dce048cef.png",
+    "visibleBottomFraction": 0.982367758186398
+  },
+  {
+    "url": "/local-media/empire-bare-glass/GBEmp50SpryShnGl-native-tube.63ca6264b0f1.png",
+    "sha256": "63ca6264b0f11daeace215730ff5ef425e451bc83e531f85a52e11890f013edc",
+    "bytes": 25579,
+    "width": 86,
+    "height": 726,
+    "sourcePath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images/2. 18-415 Bottles/21. Empire 50ml/1. Empire 50ml PSD/15. GBEmp50SpryShnGl.psd",
+    "sourceSha256": "fd7c406468105b16eef600e9f5ac247f1c72547b57c85c8649386abd91e28a05",
+    "sourceLayer": "Layer 18",
+    "sourceLayerIndex": 2,
+    "sourceLayerBounds": [
+      181,
+      673,
+      377,
+      2317
+    ],
+    "sourceCrop": [
+      110,
+      0,
+      196,
+      726
+    ],
+    "method": "native RGBA crop; excludes the disconnected off-canvas fragment; source pixels unchanged",
+    "websiteSku": "GBEmp50SpryShnGl",
+    "plateKey": "empire-50ml-18-415|Clear",
+    "componentId": "CMP-SPR-SHGD-18-415-05",
+    "axisX": 44,
+    "sourceBodyHeight": 1268,
+    "expectedUrls": [
+      "/images/register/tubes/empire-50ml-18-415-clear-spray.dcb167b9e11c.png",
+      "/images/register/tubes/empire-50ml-18-415-clear-spray-exploded.bcaeb3949ecb.png"
+    ],
+    "expectedSprayerUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/sprayer-41f38526607d7ec57dcc6c175773a0ec77889e76f1bd23f478cc2292b6497846.png",
+    "visibleBottomFraction": 0.9775
+  },
+  {
+    "url": "/local-media/empire-bare-glass/GBEmp50SpryShnSl-native-tube.63ca6264b0f1.png",
+    "sha256": "63ca6264b0f11daeace215730ff5ef425e451bc83e531f85a52e11890f013edc",
+    "bytes": 25579,
+    "width": 86,
+    "height": 726,
+    "sourcePath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images/2. 18-415 Bottles/21. Empire 50ml/1. Empire 50ml PSD/29. GBEmp50SpryShnSl.psd",
+    "sourceSha256": "136b26fb2c9e4cf66acbc9daff97e74285e185fb979db82983dec3f6c2f7dc14",
+    "sourceLayer": "Layer 35",
+    "sourceLayerIndex": 2,
+    "sourceLayerBounds": [
+      171,
+      673,
+      367,
+      2317
+    ],
+    "sourceCrop": [
+      110,
+      0,
+      196,
+      726
+    ],
+    "method": "native RGBA crop; excludes the disconnected off-canvas fragment; source pixels unchanged",
+    "websiteSku": "GBEmp50SpryShnSl",
+    "plateKey": "empire-50ml-18-415|Clear",
+    "componentId": "CMP-SPR-SHSL-18-415-06",
+    "axisX": 44,
+    "sourceBodyHeight": 1268,
+    "expectedUrls": [
+      "/images/register/tubes/empire-50ml-18-415-clear-spray.dcb167b9e11c.png",
+      "/images/register/tubes/empire-50ml-18-415-clear-spray-exploded.bcaeb3949ecb.png"
+    ],
+    "expectedSprayerUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/sprayer-a26b031f10138c75eae2c73ead6908b1896facdfee8e4a690d34e2f0c2a49616.png",
+    "visibleBottomFraction": 0.9824120603015075
+  },
+  {
+    "url": "/local-media/empire-bare-glass/GBEmp50SpryShnBlk-native-tube.951ca106760f.png",
+    "sha256": "951ca106760f2b34381c4ea32452423e7632c12293def5e1d27c2b5bf79c4167",
+    "bytes": 25470,
+    "width": 86,
+    "height": 726,
+    "sourcePath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images/2. 18-415 Bottles/21. Empire 50ml/1. Empire 50ml PSD/19. GBEmp50SpryShnBlk.psd",
+    "sourceSha256": "1ed1c84d33f324ea6157529f9235ff3f211c439d20f5c391da56bf7af726f9fe",
+    "sourceLayer": "Layer 26",
+    "sourceLayerIndex": 2,
+    "sourceLayerBounds": [
+      174,
+      673,
+      370,
+      2317
+    ],
+    "sourceCrop": [
+      110,
+      0,
+      196,
+      726
+    ],
+    "method": "native RGBA crop; excludes the disconnected off-canvas fragment; source pixels unchanged",
+    "websiteSku": "GBEmp50SpryShnBlk",
+    "plateKey": "empire-50ml-18-415|Clear",
+    "componentId": "CMP-SPR-SHBK-18-415-06",
+    "axisX": 44,
+    "sourceBodyHeight": 1268,
+    "expectedUrls": [
+      "/images/register/tubes/empire-50ml-18-415-clear-spray.dcb167b9e11c.png",
+      "/images/register/tubes/empire-50ml-18-415-clear-spray-exploded.bcaeb3949ecb.png"
+    ],
+    "expectedSprayerUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/sprayer-9d494fd880618a93df237d4a4ce12c35c13cc5b98af531044a943793654e9994.png",
+    "visibleBottomFraction": 0.9825
+  },
+  {
+    "url": "/local-media/empire-bare-glass/GBEmp50SpryCu-native-tube.abd1dd749986.png",
+    "sha256": "abd1dd749986c006f412ebfc4f6cec3847b800dc1898021b494f29583665cb37",
+    "bytes": 27380,
+    "width": 89,
+    "height": 766,
+    "sourcePath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images/2. 18-415 Bottles/21. Empire 50ml/1. Empire 50ml PSD/59. GBEmp50SpryCu.psd",
+    "sourceSha256": "ae0f6ebd37af2c840b3c2a5e333647c15001c2ce80c8e844da8c6515d106be81",
+    "sourceLayer": "Layer 31",
+    "sourceLayerIndex": 2,
+    "sourceLayerBounds": [
+      160,
+      674,
+      364,
+      2410
+    ],
+    "sourceCrop": [
+      115,
+      0,
+      204,
+      766
+    ],
+    "method": "native RGBA crop; excludes the disconnected off-canvas fragment; source pixels unchanged",
+    "websiteSku": "GBEmp50SpryCu",
+    "plateKey": "empire-50ml-18-415|Clear",
+    "componentId": "CMP-SPR-MTCP-18-415-03",
+    "axisX": 46,
+    "sourceBodyHeight": 1268,
+    "expectedUrls": [
+      "/images/register/tubes/empire-50ml-18-415-clear-spray.dcb167b9e11c.png",
+      "/images/register/tubes/empire-50ml-18-415-clear-spray-exploded.bcaeb3949ecb.png"
+    ],
+    "expectedSprayerUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/sprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png",
+    "visibleBottomFraction": 0.9775
+  },
+  {
+    "url": "/local-media/empire-bare-glass/GBEmp100SpryMtSl-native-tube.6880c1c5e262.png",
+    "sha256": "6880c1c5e26265666c258d02c493d09c10547fe8848aa792c6f82a1d9380927c",
+    "bytes": 36850,
+    "width": 99,
+    "height": 994,
+    "sourcePath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images/2. 18-415 Bottles/22. Empire Bottle 100ml/1. Empire 100ml PSD/23. GBEmp100SpryMtSl.psd",
+    "sourceSha256": "7a2833bf1290a96bb5f2cfd12b8fc99d59a69dc24e51e1ad078948ce3421f8c4",
+    "sourceLayer": "Layer 25",
+    "sourceLayerIndex": 2,
+    "sourceLayerBounds": [
+      199,
+      670,
+      428,
+      2582
+    ],
+    "sourceCrop": [
+      130,
+      0,
+      229,
+      994
+    ],
+    "method": "native RGBA crop; excludes the disconnected off-canvas fragment; source pixels unchanged",
+    "websiteSku": "GBEmp100SpryMtSl",
+    "plateKey": "empire-100ml-18-415|Clear",
+    "componentId": "CMP-SPR-MTSL-18-415-06",
+    "axisX": 50,
+    "sourceBodyHeight": 1504,
+    "expectedUrls": [
+      "/images/register/tubes/empire-100ml-18-415-clear-spray.545fa0538cce.png",
+      "/images/register/tubes/empire-100ml-18-415-clear-spray-exploded.8023ba8f5bdf.png"
+    ],
+    "expectedSprayerUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/sprayer-5c50ea9efde8b3535c6330bf6b21429e2300857f9ba7d9c47677349dce048cef.png",
+    "visibleBottomFraction": 0.982367758186398
+  },
+  {
+    "url": "/local-media/empire-bare-glass/GBEmp100SpryShnGl-native-tube.220a0365f812.png",
+    "sha256": "220a0365f812852ed6b04122635c405a296d4086f744ebb9fa5e8e87ead39909",
+    "bytes": 36343,
+    "width": 99,
+    "height": 994,
+    "sourcePath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images/2. 18-415 Bottles/22. Empire Bottle 100ml/1. Empire 100ml PSD/15. GBEmp100SpryShnGl.psd",
+    "sourceSha256": "39976255ee7a3af003badc66eab77897e635276cff2985c6a461cfefe7b2e2c1",
+    "sourceLayer": "Layer 19",
+    "sourceLayerIndex": 2,
+    "sourceLayerBounds": [
+      195,
+      670,
+      424,
+      2582
+    ],
+    "sourceCrop": [
+      130,
+      0,
+      229,
+      994
+    ],
+    "method": "native RGBA crop; excludes the disconnected off-canvas fragment; source pixels unchanged",
+    "websiteSku": "GBEmp100SpryShnGl",
+    "plateKey": "empire-100ml-18-415|Clear",
+    "componentId": "CMP-SPR-SHGD-18-415-05",
+    "axisX": 50,
+    "sourceBodyHeight": 1504,
+    "expectedUrls": [
+      "/images/register/tubes/empire-100ml-18-415-clear-spray.545fa0538cce.png",
+      "/images/register/tubes/empire-100ml-18-415-clear-spray-exploded.8023ba8f5bdf.png"
+    ],
+    "expectedSprayerUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/sprayer-41f38526607d7ec57dcc6c175773a0ec77889e76f1bd23f478cc2292b6497846.png",
+    "visibleBottomFraction": 0.9775
+  },
+  {
+    "url": "/local-media/empire-bare-glass/GBEmp100SpryShnSl-native-tube.940914eda692.png",
+    "sha256": "940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd",
+    "bytes": 33509,
+    "width": 99,
+    "height": 994,
+    "sourcePath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images/2. 18-415 Bottles/22. Empire Bottle 100ml/1. Empire 100ml PSD/29. GBEmp100SpryShnSl.psd",
+    "sourceSha256": "82488d84576f5472e941eb7423c1eaf17cdbfff14db7829ddf1027ee587e9440",
+    "sourceLayer": "Layer 20",
+    "sourceLayerIndex": 2,
+    "sourceLayerBounds": [
+      186,
+      664,
+      415,
+      2576
+    ],
+    "sourceCrop": [
+      130,
+      0,
+      229,
+      994
+    ],
+    "method": "native RGBA crop; excludes the disconnected off-canvas fragment; source pixels unchanged",
+    "websiteSku": "GBEmp100SpryShnSl",
+    "plateKey": "empire-100ml-18-415|Clear",
+    "componentId": "CMP-SPR-SHSL-18-415-06",
+    "axisX": 50,
+    "sourceBodyHeight": 1504,
+    "expectedUrls": [
+      "/images/register/tubes/empire-100ml-18-415-clear-spray.545fa0538cce.png",
+      "/images/register/tubes/empire-100ml-18-415-clear-spray-exploded.8023ba8f5bdf.png"
+    ],
+    "expectedSprayerUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/sprayer-a26b031f10138c75eae2c73ead6908b1896facdfee8e4a690d34e2f0c2a49616.png",
+    "visibleBottomFraction": 0.9824120603015075
+  },
+  {
+    "url": "/local-media/empire-bare-glass/GBEmp100SpryShnBlk-native-tube.940914eda692.png",
+    "sha256": "940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd",
+    "bytes": 33509,
+    "width": 99,
+    "height": 994,
+    "sourcePath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images/2. 18-415 Bottles/22. Empire Bottle 100ml/1. Empire 100ml PSD/19. GBEmp100SpryShnBlk.psd",
+    "sourceSha256": "53607011e342f97ae8d733b6225017e5bc6a1fac94708e48464f7380da1391c7",
+    "sourceLayer": "Layer 22",
+    "sourceLayerIndex": 2,
+    "sourceLayerBounds": [
+      207,
+      670,
+      436,
+      2582
+    ],
+    "sourceCrop": [
+      130,
+      0,
+      229,
+      994
+    ],
+    "method": "native RGBA crop; excludes the disconnected off-canvas fragment; source pixels unchanged",
+    "websiteSku": "GBEmp100SpryShnBlk",
+    "plateKey": "empire-100ml-18-415|Clear",
+    "componentId": "CMP-SPR-SHBK-18-415-06",
+    "axisX": 50,
+    "sourceBodyHeight": 1504,
+    "expectedUrls": [
+      "/images/register/tubes/empire-100ml-18-415-clear-spray.545fa0538cce.png",
+      "/images/register/tubes/empire-100ml-18-415-clear-spray-exploded.8023ba8f5bdf.png"
+    ],
+    "expectedSprayerUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/sprayer-9d494fd880618a93df237d4a4ce12c35c13cc5b98af531044a943793654e9994.png",
+    "visibleBottomFraction": 0.9825
+  },
+  {
+    "url": "/local-media/empire-bare-glass/GBEmp100SpryCu-native-tube.940914eda692.png",
+    "sha256": "940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd",
+    "bytes": 33509,
+    "width": 99,
+    "height": 994,
+    "sourcePath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images/2. 18-415 Bottles/22. Empire Bottle 100ml/1. Empire 100ml PSD/56. GBEmp100SpryCu.psd",
+    "sourceSha256": "fe296fbc04b3f4fbe1d6df59a25d4ff65676a6b28534606e6247369bc0bca1c6",
+    "sourceLayer": "Layer 20",
+    "sourceLayerIndex": 2,
+    "sourceLayerBounds": [
+      182,
+      670,
+      411,
+      2582
+    ],
+    "sourceCrop": [
+      130,
+      0,
+      229,
+      994
+    ],
+    "method": "native RGBA crop; excludes the disconnected off-canvas fragment; source pixels unchanged",
+    "websiteSku": "GBEmp100SpryCu",
+    "plateKey": "empire-100ml-18-415|Clear",
+    "componentId": "CMP-SPR-MTCP-18-415-03",
+    "axisX": 50,
+    "sourceBodyHeight": 1504,
+    "expectedUrls": [
+      "/images/register/tubes/empire-100ml-18-415-clear-spray.545fa0538cce.png",
+      "/images/register/tubes/empire-100ml-18-415-clear-spray-exploded.8023ba8f5bdf.png"
+    ],
+    "expectedSprayerUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/sprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png",
+    "visibleBottomFraction": 0.9775
+  }
+]

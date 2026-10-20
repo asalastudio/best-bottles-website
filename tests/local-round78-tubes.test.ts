@@ -6,6 +6,8 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 import { drawableRegisterKits } from '../src/lib/register/load';
 import { throughGlassAppearance } from '../src/lib/register/through-glass';
 import source from '../src/lib/register/local-round78-tubes.json';
+import pilot from '../src/lib/register/local-round78-two-bottle-pilot.json';
+import additionalJoins from '../src/lib/register/local-round78-additional-spray-joins.json';
 import { sourceTubeMaterialFilter } from '../src/lib/register/source-tube-material';
 
 const file = process.env.BB_ROUND78_SNAPSHOT;
@@ -39,7 +41,8 @@ it('preserves the recovered source bytes and complete continuous tube', async ()
             expect(seated.image.url,sku).toBe(source.url);
             expect(exposed.image.url,sku).toBe(source.url);
             expect(seated.box.width/seated.image.width).toBeCloseTo(seated.box.height/seated.image.height,3);
-            expect(Math.abs(seated.bounds.top-sprayer.bounds.bottom)).toBeLessThanOrEqual(2.1);
+            const join = [pilot, ...additionalJoins].find(j => j.websiteSkus.includes(sku))!;
+            expect(Math.abs(seated.bounds.top-(sprayer.box.y+sprayer.box.height*join.solidBottomY/join.sprayerHeight))).toBeLessThanOrEqual(2.1);
             expect(seated.bounds.bottom).toBeLessThan(Math.max(...seated.throughGlass!.clip.map(p=>p[1])));
             expect(exposed.exploded).toEqual(sprayer.exploded);
             expect(throughGlassAppearance(exposed,'exploded')).toBeNull();
