@@ -23,6 +23,7 @@ The manifest is the complete SKU allowlist. `scope.csv` lists its 26 variants an
 - The default is `off`. Supported active selections are `empire-round26-03baed749353:canary` (2), `:empire` (14), and `:all` (26). These are compiled settings; changing an environment value alone cannot change an existing deployment.
 - The Vercel build wrapper runs preflight and then Next. It has no Convex deployment path. Backend deployment keys and the previous backend-deploy opt-in are rejected, including with the media release off.
 - Direct Next builds run the same gate. Production startup does not recheck an expired build approval.
+- Credential-free local and isolated review builds honor the existing disabled-auth setting before entering Clerk. The normal enabled-auth middleware path is unchanged and is tested.
 - Production builds, including the new-code/off baseline, require a server-only `BB_MEDIA_PRODUCTION_APPROVAL` record. It must match the release, full commit SHA, project, backend and one stage, name an operator and approval reference, identify a rollback deployment, and expire within 24 hours. No live approval record is included or supplied.
 - The production target is `asala/best-bottles-website`, project `prj_GHwEFaEB2YYcMKetaompX9fGC4mR`, team `team_CGyACzn1BhcZitDAKUiZRzax`, backend `https://precise-raccoon-123.convex.cloud`. Production authentication must stay enabled.
 - Active isolated preview builds, and off builds on this release branch, are restricted to project `prj_JFb1sYpDTmvfUR2qfOOL9TJmF5yt` and backend `https://beloved-wildcat-265.convex.cloud`. They reject inherited service write credentials.
@@ -87,6 +88,8 @@ This is a deliberately invalid example, not authorization. Supply a completed re
 ```
 
 ## Evidence
+
+The first compiled-app smoke check exposed an existing middleware problem: Clerk required keys before reaching the disabled-auth callback. The focused patch now carries the same small disabled-mode guard used by the reviewed integration preview. No production authentication bypass is permitted by the production build controls.
 
 `checks.json` records checks completed at commit time and the remaining validation. The final PR head's CI check and `media-release-smoke` artifact provide the automated results. `production-source-check.json` records public read-only production checks, not production deployment approval. `diff-inventory.txt` lists every changed path against the recorded main base. The draft PR's Files changed tab is the exact patch, including binary assets.
 

@@ -97,6 +97,7 @@ src/lib/register/source-tube-material.ts
 src/lib/register/stage-envelopes.ts
 src/lib/register/stage-kit.ts
 src/lib/register/through-glass.ts
+src/proxy.ts
 tests/bottle-builder-family-discovery.test.tsx
 tests/bottle-builder-kits-hydrate.test.tsx
 tests/bottle-builder-load-speed.test.tsx
@@ -105,6 +106,8 @@ tests/fixtures/media-release/diva.json
 tests/fixtures/media-release/empire.json
 tests/fixtures/media-release/round-lotion.json
 tests/fixtures/media-release/round.json
+tests/isolated-preview-proxy.test.ts
+tests/media-preview-auth.test.ts
 tests/media-release-client.test.tsx
 tests/media-release-controls.test.ts
 tests/media-release-rendering.test.tsx
