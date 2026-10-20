@@ -1,0 +1,24 @@
+{
+  "base": "a892d9b0016a164918a373829490b255bf0fba62",
+  "branch": "checkpoint/local-media-2026-10-20",
+  "fullGitIntegrity": "passed after first three checkpoint commits",
+  "gitObjectAlternates": false,
+  "configuredRemotes": 0,
+  "originalWorkingFilesRehashedUnchanged": 1559,
+  "originalImplementationFilesByteIdentical": 144,
+  "archivedFilesVerified": 4993,
+  "additionalEarlierCheckoutHelpers": 8,
+  "selectedTestFilesPassed": 17,
+  "selectedTestsPassed": 81,
+  "selectedTestsSkipped": 0,
+  "typecheck": "passed",
+  "targetedLint": {
+    "errors": 0,
+    "warnings": 19,
+    "ignoredScriptsIncludedInWarningCount": true
+  },
+  "fullSuiteAndProductionBuild": "not run for this checkpoint",
+  "pushed": false,
+  "merged": false,
+  "productionChanged": false
+}

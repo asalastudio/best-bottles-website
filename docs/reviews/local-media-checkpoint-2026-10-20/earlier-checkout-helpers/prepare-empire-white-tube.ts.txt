@@ -1,0 +1,16 @@
+import fs from 'node:fs';import path from 'node:path';import sharp from 'sharp';import {createHash} from 'node:crypto';import assert from 'node:assert/strict';import {drawableRegisterKits} from '../src/lib/register/load';
+const out=process.argv[2];assert(out);
+async function main(){
+ Object.assign(process.env,{NODE_ENV:'development'});
+ const snapshot=JSON.parse(fs.readFileSync(out+'/family-baseline.json','utf8'));
+ const kit=drawableRegisterKits(snapshot.register)['LBEmp50WhtClOvrCp'];assert(kit);
+ const plate=snapshot.register.plates['empire-50ml-18-415|Clear'];const pump=kit.parts.find(p=>p.slot==='pump')!;const body=kit.parts.find(p=>p.slot==='body')!;assert(pump?.box&&body?.box);
+ const source=JSON.parse(fs.readFileSync(out+'/source/white-source-inspection.json','utf8'))[1];
+ assert.equal(createHash('sha256').update(fs.readFileSync(source.source)).digest('hex'),source.sha256);
+ const crop={left:55,top:0,width:110,height:786};const bytes=await sharp(out+'/source/white-57-2.png').extract(crop).png().toBuffer();const sha=createHash('sha256').update(bytes).digest('hex');const url='/local-media/source-tubes/empire50-white-lotion.'+sha.slice(0,12)+'.png';fs.writeFileSync(path.join(process.cwd(),'public',url),bytes);
+ const scale=(plate.anchors.baselineY-plate.anchors.seatY)/(1707-439);const plateToStage=body.box.height/plate.height;
+ const component=JSON.parse(fs.readFileSync('src/lib/register/local-empire-white-pump.json','utf8')).component;const layer=component.layers.find((l:any)=>l.slot==='pump');const expectedPumpLayers={[component.componentId]:Object.fromEntries(['url','width','height','pxPerMm','anchor'].map(k=>[k,layer[k]]))};
+ const row={expectedPumpLayers,key:'empire-50ml-18-415|Clear|lotion',componentIds:['LIB-18-415-WhtPumpClOvrCp'],expectedPlate:plate,url,sha256:sha,width:crop.width,height:crop.height,scale,x:plate.anchors.axisX+(crop.left-104)*scale,y:plate.anchors.seatY+(pump.box.y+pump.box.height-2-kit.anchors.seatY)/plateToStage-7*scale,source:source.source,sourceSha256:source.sha256,layerIndex:2,layerName:'Layer 32',sourceBodyBounds:[272,439,803,1707],sourceTubeBounds:[421,705,586,1881],sourceCrop:crop,registration:'Exact Empire white pump source tube, unchanged RGBA inside padded meaningful bounds; uniform source rim-to-foot scale. Head centered on original head axis and seated 2 stage pixels inside recovered white pump. Candidate pending review.',visuallyApproved:false};
+ const file='src/lib/register/local-source-tubes.json';const rows=JSON.parse(fs.readFileSync(file,'utf8'));fs.writeFileSync(file,JSON.stringify([...rows.filter((r:any)=>!r.componentIds?.includes('LIB-18-415-WhtPumpClOvrCp')),row],null,2)+'\n');
+ fs.writeFileSync(out+'/white-tube-candidate.json',JSON.stringify({row,pumpBox:pump.box,plateToStage},null,2));console.log({url,pump:pump.box,row});
+}main();

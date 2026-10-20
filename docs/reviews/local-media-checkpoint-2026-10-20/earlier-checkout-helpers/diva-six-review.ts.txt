@@ -1,0 +1,24 @@
+import fs from 'node:fs'; import path from 'node:path'; import sharp from 'sharp';
+import allRings from '../src/lib/register/local-diva-rings.json';
+async function main() {
+const root='/Users/jordanrichter/Documents/Codex/2026-10-01/users-jordanrichter-projects-clients-nemat-international/outputs/media-completion-2026-10-12/diva-six-local-2026-10-13';
+const scope=JSON.parse(fs.readFileSync(path.join(root,'scope.json'),'utf8'));
+const rings=allRings.filter(r=>scope.some((s:any)=>s.websiteSku===r.websiteSku));
+const verification=JSON.parse(fs.readFileSync(path.join(root,'verification.json'),'utf8'));
+const selections=JSON.parse(fs.readFileSync(path.join(root,'selection-verification.json'),'utf8'));
+const entries=[]; const tiles=[];
+for(const [i,r] of rings.entries()) {
+ const v=verification.rows.find((v:any)=>v.websiteSku===r.websiteSku), sel=selections.rows.find((v:any)=>v.websiteSku===r.websiteSku);
+ const source=path.basename(r.source)+'.jpg';
+ const files=[source,v.pdpFile,v.builderFile];
+ const images=await Promise.all(files.map(file=>sharp(path.join(root,file)).resize(300,360,{fit:'contain',background:'#f5f3ef'}).toBuffer()));
+ const heading=Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="900" height="55"><text x="10" y="19" font-size="14">${r.websiteSku}</text><text x="10" y="43" font-size="12">Photoshop master</text><text x="310" y="43" font-size="12">Local PDP - offline</text><text x="610" y="43" font-size="12">Local Builder - offline</text></svg>`);
+ const tile=await sharp({create:{width:900,height:415,channels:3,background:'#f5f3ef'}}).composite([{input:heading,left:0,top:0},...images.map((input,j)=>({input,left:j*300,top:55}))]).png().toBuffer();
+ tiles.push({input:tile,left:i%2*900,top:Math.floor(i/2)*415});
+ entries.push(`<section><h2>${r.websiteSku}</h2><p>${r.graceSku} · ${v.finish}</p><div class="images">${files.map((f,j)=>`<figure><a href="${encodeURI(f)}"><img src="${encodeURI(f)}"></a><figcaption>${['Photoshop master','Local PDP (offline)','Local Builder (offline)'][j]}</figcaption></figure>`).join('')}</div><p><a href="${sel.pdpUrl}">Open exact local product selection</a> · <a href="http://localhost:3005/build-your-bottle">Open local Builder</a></p><p>Source layer: ${r.layerName}. Canvas/crop: ${r.width} × ${r.height}. Ring pixels and existing body/head geometry preserved.</p></section>`);
+}
+await sharp({create:{width:1800,height:Math.ceil(rings.length/2)*415,channels:3,background:'#f5f3ef'}}).composite(tiles).jpeg({quality:94}).toFile(path.join(root,'source-comparison.jpg'));
+fs.writeFileSync(path.join(root,'review.html'),`<!doctype html><html><head><meta charset="utf-8"><title>Diva 46 — six local ring assemblies</title><style>body{font:16px/1.5 system-ui;margin:40px auto;max-width:1200px;color:#252525;background:#f5f3ef}section{border-top:1px solid #bbb;margin-top:40px;padding-top:20px}.images{display:flex}figure{margin:10px;flex:1}img{width:100%}a{color:#73592d}h1{font-weight:500}</style></head><body><h1>Diva 46 ml — six jeweled-ring combinations</h1><p>Local development review · 13 October 2026 · Nothing published.</p><p>6 exact PDP and Builder selections, 12 offline renders, 36 Builder states. Each source ring was recovered from its matching PSD; existing measured sprayer heads and the approved glass are preserved.</p><p><strong>Remaining:</strong> owner approval of these assemblies and browser checks on desktop/mobile, zoom, handoff, cart and iPhone Safari. The saved browser permission denial remains unresolved; these images are offline evidence, not browser screenshots. Cap On is supported; Sidecar and Exploded are unavailable for these assembled bulb sprayers.</p><p><a href="manual-browser-matrix.csv">Pending manual browser matrix</a> · <a href="verification.json">Geometry and identity evidence</a> · <a href="selection-verification.json">Exact PDP URLs</a></p>${entries.join('')}</body></html>`);
+
+}
+main().catch(e=>{console.error(e);process.exitCode=1});

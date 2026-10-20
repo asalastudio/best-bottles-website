@@ -1,0 +1,5 @@
+import fs from 'node:fs';import {drawableRegisterKits} from '../src/lib/register/load';
+const dir='/Users/jordanrichter/Documents/Codex/2026-10-01/users-jordanrichter-projects-clients-nemat-international/outputs/media-completion-2026-10-12/dip-tube-audit-2026-10-13';
+Object.assign(process.env,{NODE_ENV:'development'});
+const payload=JSON.parse(fs.readFileSync(dir+'/production-register.json','utf8'));const kits=drawableRegisterKits(payload);
+for (const sku of ['GBSqr15SpryGlMatt','GBRnd78SpryShnSl','GBTulipAmb5SpryGlSh','LBEmp50LtnMtGl']) {const k=kits[sku];console.log(JSON.stringify({sku,anchors:k?.anchors,register:k?.register,parts:k?.parts.map(p=>({slot:p.slot,box:p.box,exploded:p.exploded,url:p.image.url,views:p.views}))}));}

@@ -1,0 +1,12 @@
+import fs from 'node:fs';import path from 'node:path';import {ConvexHttpClient} from 'convex/browser';import {api} from '../convex/_generated/api';
+async function main(){
+const root='/Users/jordanrichter/Documents/Codex/2026-10-01/users-jordanrichter-projects-clients-nemat-international/outputs/media-completion-2026-10-12',prev=root+'/diva-ring-local-2026-10-13',dest=root+'/diva-six-local-2026-10-13';
+const products=JSON.parse(fs.readFileSync(prev+'/products.json','utf8'));const targets=['GBDiva46AnSpBlkRng','GBDiva46AnSpIvySlRng','GBDiva46AnSpWhtRng','GBDiva46AnSpLvnRng','GBDiva46AnSpTslLvnRng','GBDiva46AnSpRedRng'];
+const rows=products.filter((p:any)=>targets.includes(p.websiteSku));if(rows.length!==6)throw Error('Expected six exact rows');
+const skuNames=targets.flatMap(s=>[s,s.replace(/Rng$/,'')]);const skus=products.filter((p:any)=>skuNames.includes(p.websiteSku)).map((p:any)=>p.graceSku);
+const c=new ConvexHttpClient('https://precise-raccoon-123.convex.cloud');const fresh=await c.query(api.registerStage.forSkus,{graceSkus:skus});const before=JSON.parse(fs.readFileSync(prev+'/register-stage.json','utf8'));
+for(const k of ['assemblies','bodies','components','plates'] as const)Object.assign(before[k],fresh[k]);
+fs.writeFileSync(dest+'/register-stage.json',JSON.stringify(before));fs.writeFileSync(dest+'/fresh-ring-query.json',JSON.stringify({collectedAt:new Date().toISOString(),source:'production read-only registerStage.forSkus',graceSkus:skus,payload:fresh},null,2));
+for(const f of ['products.json','matrix-families.json','groups.json'])fs.copyFileSync(prev+'/'+f,dest+'/'+f);
+fs.writeFileSync(dest+'/scope.json',JSON.stringify(rows,null,2));console.log('Fresh exact records:',skus.length,'; six products scoped.');
+}main();

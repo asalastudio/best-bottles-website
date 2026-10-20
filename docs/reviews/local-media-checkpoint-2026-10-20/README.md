@@ -48,6 +48,12 @@ Fresh checkpoint verification: 17 test files, 81 tests passed, with no skipped t
 
 Validation reused the original checkout's installed dependencies through a temporary ignored symlink; this is removed after verification. Reinstall from the lockfile for independent integration validation. External helper scripts retain original absolute paths for fidelity and are historical evidence, not portable release commands. `dump-kit.mts` is preserved byte-for-byte as `dump-kit.mts.txt` so its ad hoc imports do not enter the application's TypeScript build. The original filename is retained in the archive.
 
+## Final preservation checks
+
+The self-contained repository passed `git fsck --full --no-reflogs` after the first three checkpoint commits. It has no alternates file and no configured remotes. All 1,559 preserved working files in the original running checkout were rehashed and remain unchanged.
+
+Eight additional untracked helpers in the earlier source checkout were also preserved under `earlier-checkout-helpers/`, each as a text file with its original path and SHA-256 recorded in `manifest.json`. They are historical scripts, not newly tested application code. This supplemental copy is in Git and outside the main archive, whose verified checksum remains unchanged.
+
 ## Before push or merge
 
 1. Review the staged commit scope and the latest lotion acceptance. Do not rewrite approval history from passing tests.
