@@ -1,3 +1,4 @@
+import { mediaRevision } from "../media-release/release";
 /**
  * One frame per glass on the product page (size-consistency audit 2026-09-27).
  *
@@ -51,7 +52,7 @@ export async function glassStageEnvelopes(convex: Pick<ConvexHttpClient, "query"
     const kits = new Map<string, RegisterKit[]>();
     for (let index = 0; index < skus.length; index += CHUNK) {
         const chunk = skus.slice(index, index + CHUNK);
-        const drawable = drawableRegisterKits(await convex.query(api.registerStage.forSkus, { graceSkus: chunk }) as RegisterStagePayload);
+        const drawable = drawableRegisterKits(await convex.query(api.registerStage.forSkus, { graceSkus: chunk }) as RegisterStagePayload, { strict: true });
         for (const sku of chunk) {
             const kit = drawable[sku];
             if (!kit) continue;
@@ -70,7 +71,7 @@ export async function glassStageEnvelopes(convex: Pick<ConvexHttpClient, "query"
 const cachedGlassEnvelopes = unstable_cache(
     async (family: string, capacityMl: number | null) =>
         glassStageEnvelopes(createResilientConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!), { family, capacityMl }),
-    ["pdp-glass-stage-envelopes-v1"],
+    ["pdp-glass-stage-envelopes-v1", mediaRevision()],
     { revalidate: ENVELOPE_CACHE_SECONDS, tags: ["bottle-components"] },
 );
 

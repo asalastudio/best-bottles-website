@@ -1,6 +1,8 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import config from "../next.config";
+import makeConfig from "../next.config";
+import { PHASE_PRODUCTION_BUILD } from "next/constants";
+const config = makeConfig(PHASE_PRODUCTION_BUILD);
 
 describe("production build memory isolation", () => {
     it("keeps the Webpack worker enabled after Sentry adds its custom hook", () => {

@@ -1,3 +1,5 @@
+import { mediaReleaseMode } from "../media-release/release";
+import { applyMediaRelease } from "../media-release/kits";
 /**
  * Server-side loader for register-drawn kits (Phase 5 consumers: the product
  * page and Build Your Bottle). One `registerStage:forSkus` round trip per 50
@@ -57,7 +59,20 @@ export function registerStageEnabled(): boolean {
 }
 
 /** The kits a stage draws from one payload: every renderable SKU, with the 9 mL pilot's rows reconciled. */
-export function drawableRegisterKits(payload: RegisterStagePayload): Record<string, RegisterKit> {
+export function drawableRegisterKits(payload: RegisterStagePayload, { strict = false }: { strict?: boolean } = {}): Record<string, RegisterKit> {
+    if (mediaReleaseMode() !== 'off') {
+        const previous = Object.fromEntries(Object.entries(kitsFromRegister(payload)).flatMap(([sku, kit]) => {
+            const reconciled = reconcileCylinder9Kit(kit);
+            return reconciled ? [[sku, reconciled]] : [];
+        }));
+        const released = applyMediaRelease(payload, previous);
+        if (released.rejected.length) {
+            if (strict) throw new Error(`[media-release] source mismatch for ${released.rejected.join(', ')}`);
+            console.error('[media-release] source mismatch; retaining previous media', released.rejected);
+        }
+        return released.kits;
+    }
+
     const kits: Record<string, RegisterKit> = {};
     for (const [sku, candidate] of Object.entries(kitsFromRegister(payload))) {
         const reconciled = reconcileCylinder9Kit(candidate);
@@ -78,7 +93,7 @@ export async function loadRegisterKits(
     for (let index = 0; index < wanted.length; index += CHUNK) {
         try {
             const payload = await convex.query(api.registerStage.forSkus, { graceSkus: wanted.slice(index, index + CHUNK) }) as RegisterStagePayload;
-            Object.assign(kits, drawableRegisterKits(payload));
+            Object.assign(kits, drawableRegisterKits(payload, { strict }));
         } catch (error) {
             // Logged in production too: this failure used to be silent there.
             console.error(`[register] stage lookup failed${strict ? "" : "; drawing legacy kits"}`, error instanceof Error ? error.message : error);

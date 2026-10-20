@@ -1,0 +1,193 @@
+{
+  "checkedAt": "2026-10-20T17:52:21.788Z",
+  "backend": "https://precise-raccoon-123.convex.cloud",
+  "operation": "Public registerStage.forSkus and products.getBySku queries only; no writes.",
+  "release": "empire-round26-03baed749353",
+  "requested": 26,
+  "sourceAccepted": 26,
+  "rejected": [],
+  "identities": [
+    {
+      "sku": "GBEmp100SpryMtGl",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBEmp50SpryMtGl",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBEmp100SpryCu",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBEmp100SpryMtSl",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBEmp100SpryShnBlk",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBEmp100SpryShnGl",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBEmp100SpryShnSl",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBEmp50SpryCu",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBEmp50SpryMtSl",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBEmp50SpryShnBlk",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBEmp50SpryShnGl",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBEmp50SpryShnSl",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "LBEmp100WhtClOvrCp",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "LBEmp50WhtClOvrCp",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBRnd78SpryCu",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBRnd78SpryMtGl",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBRnd78SpryMtSl",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBRnd78SpryShnBlk",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBRnd78SpryShnGl",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBRnd78SpryShnSl",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBRndFrst78SpryCu",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBRndFrst78SpryMtGl",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBRndFrst78SpryMtSl",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBRndFrst78SpryShnBlk",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBRndFrst78SpryShnGl",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    },
+    {
+      "sku": "GBRndFrst78SpryShnSl",
+      "sourceAccepted": true,
+      "exists": true,
+      "websiteSkuMatches": true,
+      "shopifyVariantMatches": true
+    }
+  ]
+}
