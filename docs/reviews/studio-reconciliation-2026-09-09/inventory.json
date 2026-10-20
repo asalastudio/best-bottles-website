@@ -1,0 +1,212 @@
+{
+  "main": "0417a361d7f91327a9b0ee0464c47a05fa5e07d3",
+  "source": "a691fd691eceb57a00d958dab55c4f2c4881eece",
+  "mergeBase": "1a8e123821963dbcbcddaee1cd6b3442041a1b3c",
+  "files": [
+    {
+      "path": ".claude/launch.json",
+      "category": "historical-instructions",
+      "patch": "docs/reviews/studio-reconciliation-2026-09-09/patches/historical-instructions/.claude__launch.json.patch",
+      "status": "preserved as historical patch; not applied to runtime or current catalog"
+    },
+    {
+      "path": ".claude/skills/bestbottles-bottle-bodies-3d/SKILL.md",
+      "category": "historical-instructions",
+      "patch": "docs/reviews/studio-reconciliation-2026-09-09/patches/historical-instructions/.claude__skills__bestbottles-bottle-bodies-3d__SKILL.md.patch",
+      "status": "preserved as historical patch; not applied to runtime or current catalog"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "design/wholesale-matrix/CatalogQA.dc.html",
+      "category": "design",
+      "patch": "docs/reviews/studio-reconciliation-2026-09-09/patches/design/design__wholesale-matrix__CatalogQA.dc.html.patch",
+      "status": "preserved as historical patch; not applied to runtime or current catalog"
+    },
+    {
+      "path": "design/wholesale-matrix/ComponentPicker.dc.html",
+      "category": "design",
+      "patch": "docs/reviews/studio-reconciliation-2026-09-09/patches/design/design__wholesale-matrix__ComponentPicker.dc.html.patch",
+      "status": "preserved as historical patch; not applied to runtime or current catalog"
+    },
+    {
+      "path": "design/wholesale-matrix/Main.dc.html",
+      "category": "design",
+      "patch": "docs/reviews/studio-reconciliation-2026-09-09/patches/design/design__wholesale-matrix__Main.dc.html.patch",
+      "status": "preserved as historical patch; not applied to runtime or current catalog"
+    },
+    {
+      "path": "design/wholesale-matrix/MobileFlow.dc.html",
+      "category": "design",
+      "patch": "docs/reviews/studio-reconciliation-2026-09-09/patches/design/design__wholesale-matrix__MobileFlow.dc.html.patch",
+      "status": "preserved as historical patch; not applied to runtime or current catalog"
+    },
+    {
+      "path": "design/wholesale-matrix/WholesaleOnboarding.dc.html",
+      "category": "design",
+      "patch": "docs/reviews/studio-reconciliation-2026-09-09/patches/design/design__wholesale-matrix__WholesaleOnboarding.dc.html.patch",
+      "status": "preserved as historical patch; not applied to runtime or current catalog"
+    },
+    {
+      "path": "design/wholesale-matrix/canvas.json",
+      "category": "design",
+      "patch": "docs/reviews/studio-reconciliation-2026-09-09/patches/design/design__wholesale-matrix__canvas.json.patch",
+      "status": "preserved as historical patch; not applied to runtime or current catalog"
+    },
+    {
+      "path": "design/wholesale-matrix/wholesale-matrix.html",
+      "category": "design",
+      "patch": "docs/reviews/studio-reconciliation-2026-09-09/patches/design/design__wholesale-matrix__wholesale-matrix.html.patch",
+      "status": "preserved as historical patch; not applied to runtime or current catalog"
+    },
+    {
+      "path": "package.json",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "pipeline/paper-doll-3d/data/body-demand-merged.json",
+      "category": "coverage",
+      "patch": "docs/reviews/studio-reconciliation-2026-09-09/patches/coverage/pipeline__paper-doll-3d__data__body-demand-merged.json.patch",
+      "status": "preserved as historical patch; not applied to runtime or current catalog"
+    },
+    {
+      "path": "pipeline/paper-doll-3d/data/body-demand.json",
+      "category": "coverage",
+      "patch": "docs/reviews/studio-reconciliation-2026-09-09/patches/coverage/pipeline__paper-doll-3d__data__body-demand.json.patch",
+      "status": "preserved as historical patch; not applied to runtime or current catalog"
+    },
+    {
+      "path": "pipeline/paper-doll-3d/data/body-families-merged.json",
+      "category": "coverage",
+      "patch": "docs/reviews/studio-reconciliation-2026-09-09/patches/coverage/pipeline__paper-doll-3d__data__body-families-merged.json.patch",
+      "status": "preserved as historical patch; not applied to runtime or current catalog"
+    },
+    {
+      "path": "pipeline/paper-doll-3d/data/body-families.json",
+      "category": "coverage",
+      "patch": "docs/reviews/studio-reconciliation-2026-09-09/patches/coverage/pipeline__paper-doll-3d__data__body-families.json.patch",
+      "status": "preserved as historical patch; not applied to runtime or current catalog"
+    },
+    {
+      "path": "pipeline/paper-doll-3d/data/shape-clarification-queue.csv",
+      "category": "coverage",
+      "patch": "docs/reviews/studio-reconciliation-2026-09-09/patches/coverage/pipeline__paper-doll-3d__data__shape-clarification-queue.csv.patch",
+      "status": "preserved as historical patch; not applied to runtime or current catalog"
+    },
+    {
+      "path": "pipeline/paper-doll-3d/scripts/body_coverage.py",
+      "category": "coverage",
+      "patch": "docs/reviews/studio-reconciliation-2026-09-09/patches/coverage/pipeline__paper-doll-3d__scripts__body_coverage.py.patch",
+      "status": "preserved as historical patch; not applied to runtime or current catalog"
+    },
+    {
+      "path": "pipeline/paper-doll-3d/scripts/extract_psd_silhouette.py",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "pipeline/paper-doll-3d/scripts/make_universal_softbox.py",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "pipeline/paper-doll-3d/scripts/material_lock.py",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "pipeline/paper-doll-3d/studio-universal-softbox.hdr",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "public/env/studio-universal-softbox.hdr",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "public/models/closures/BB_SPR_NOZZLE_18415.glb",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "public/models/materials.json",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "public/models/materials.lock.json",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "public/models/tokens.json",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "scripts/materials/contact-sheet.mjs",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "scripts/materials/port-tokens.mjs",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "src/app/dev/lighting-test/LightingTest.tsx",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "src/app/dev/material-lab/MaterialLab.tsx",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "src/app/lab/bottle-3d/BottleViewer.tsx",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "src/components/products/Bottle3DViewer.tsx",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "src/components/products/ProductStage.tsx",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "src/components/products/StudioEnvironment.tsx",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "src/lib/materials/colorManagement.ts",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "src/lib/materials/glassPresets.ts",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "src/lib/materials/studioPresets.ts",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    },
+    {
+      "path": "tsconfig.json",
+      "category": "render",
+      "status": "ported onto current main; conflicts reconciled; visual release held"
+    }
+  ]
+}
