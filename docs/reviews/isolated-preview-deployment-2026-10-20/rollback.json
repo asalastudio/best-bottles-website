@@ -1,0 +1,20 @@
+{
+  "alias": "best-bottles-media-review-asala.vercel.app",
+  "active": {
+    "id": "dpl_H2DazCqcMZdA6S22hQB9STRUn73Z",
+    "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app",
+    "target": null,
+    "mode": "all"
+  },
+  "off": {
+    "id": "dpl_B5Wm8yc1RtFHtRTJPCbKkJPno5ch",
+    "url": "https://best-bottles-media-review-d2cjq6sql-asala.vercel.app",
+    "target": null,
+    "mode": "off"
+  },
+  "checkedAt": "2026-10-20T17:10:41.744Z",
+  "oldTabRequestedRefresh": true,
+  "refreshRecovered": true,
+  "recoveredRevision": "media-off-v1",
+  "activeRestored": true
+}

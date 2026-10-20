@@ -1,0 +1,19 @@
+{
+  "origin": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app",
+  "route": "/products/empire-100ml-clear-18-415-perfumespray?sku=GBEmp100SpryMtGl",
+  "layout": {
+    "viewportWidth": 1440,
+    "documentWidth": 1440
+  },
+  "descriptionLayout": {
+    "parentWidth": 429,
+    "parentScrollWidth": 429,
+    "lineRightEdges": [
+      1392.90625,
+      1377.515625,
+      1223.59375
+    ],
+    "whiteSpace": "normal"
+  },
+  "result": "No horizontal document or description overflow at 1440 px."
+}

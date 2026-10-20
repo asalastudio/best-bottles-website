@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-20T16:24:30.376073+00:00",
+  "fullSuite": {
+    "command": "npx vitest run --maxWorkers=2 --testTimeout=15000",
+    "passed": 3149,
+    "skipped": 42,
+    "filesPassed": 352,
+    "filesSkipped": 12,
+    "initialAttempt": "Default-concurrency run timed out in the first focused-pdp-mobile-dom test and caused three cascading failures. All four passed in isolation, then the complete suite passed with bounded concurrency.",
+    "finalRun": "Passed after the POST-header fix"
+  },
+  "typescript": {
+    "fullRepository": "passed",
+    "packagedApplication": "passed"
+  },
+  "lint": {
+    "nextConfigAndPreviewBackend": "passed",
+    "hostedAcceptanceScript": "ignored by existing ESLint configuration; checked with node --check"
+  },
+  "finalSourceCommit": "d4509096",
+  "targetedFixChecks": {
+    "testsPassed": 20,
+    "typescript": "passed",
+    "lint": "passed",
+    "regression": "Clerk-disabled middleware preserves POST transport headers"
+  }
+}

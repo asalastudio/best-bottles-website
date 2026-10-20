@@ -12,14 +12,35 @@ assert(process.env.VERCEL_OIDC_TOKEN);
       ...route.request().headers(), 'x-vercel-trusted-oidc-idp-token': process.env.VERCEL_OIDC_TOKEN,
     } }));
     const page = await context.newPage(), errors = [], failures = [];
+    if (route.startsWith('/catalog')) await page.setViewportSize({ width: 1440, height: 2400 });
     page.on('pageerror', e => errors.push(e.message));
     page.on('response', r => { if (r.status() >= 400) failures.push({ url: r.url(), status: r.status() }); });
     await page.goto(origin + route, { waitUntil: 'networkidle', timeout: 60000 });
+    if (route.startsWith('/catalog')) {
+      await page.locator('article').last().scrollIntoViewIfNeeded();
+      await page.waitForLoadState('networkidle');
+      await page.evaluate(async () => {
+        await Promise.all([...document.querySelectorAll('article img')].map(async image => {
+          const decoded = new Image(); decoded.src = image.currentSrc || image.src;
+          await decoded.decode();
+        }));
+        scrollTo({ top: 0, behavior: 'instant' });
+      });
+    }
     await page.screenshot({ path: `/tmp/bb-${label}.png`, fullPage: true });
     const data = await page.evaluate(() => ({
       text: document.body.innerText.slice(0, 9000),
       buttons: [...document.querySelectorAll('button')].map(b => ({ text: b.innerText, label: b.getAttribute('aria-label'), disabled: b.disabled })),
       images: [...document.images].map(i => ({ src: i.getAttribute('src'), loaded: i.complete && i.naturalWidth > 0 })),
+      layout: { viewportWidth: innerWidth, documentWidth: document.documentElement.scrollWidth },
+      descriptionLayout: (() => {
+        const description = document.querySelector('[data-testid="pdp-item-description"]');
+        if (!description) return null;
+        return { parentWidth: description.parentElement.clientWidth,
+          parentScrollWidth: description.parentElement.scrollWidth,
+          lineRightEdges: [...description.getClientRects()].map(rect => rect.right),
+          whiteSpace: getComputedStyle(description).whiteSpace };
+      })(),
       stages: [...document.querySelectorAll('[data-paper-doll], [data-testid="pdp-stage"], [data-bb-image-audit]')].map(e => ({ attributes: [...e.attributes].filter(a => a.name.startsWith('data-')).map(a => [a.name, a.value]) })),
     }));
     fs.writeFileSync(`/tmp/bb-${label}.json`, JSON.stringify({ ...data, errors, failures }, null, 2));

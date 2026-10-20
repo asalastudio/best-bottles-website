@@ -47,9 +47,23 @@ async function revisionAtAlias(wanted) {
     await page.getByRole('button', { name: 'Refresh bottle builder', exact: true }).waitFor({ timeout: 30000 });
     report.oldTabRequestedRefresh = true;
     await page.screenshot({ path: `${output}/rollback-old-tab-refresh.png`, fullPage: false });
-    await page.getByRole('button', { name: 'Refresh bottle builder', exact: true }).click();
-    await page.locator('[data-bottle-builder]').waitFor({ timeout: 30000 });
+    await Promise.all([
+      page.waitForEvent('domcontentloaded', { timeout: 30000 }),
+      page.getByRole('button', { name: 'Refresh bottle builder', exact: true }).click(),
+    ]);
+    await page.waitForLoadState('networkidle');
+    await page.locator('[data-bottle-builder]:visible').first().waitFor({ timeout: 30000 });
+    const recovered = page.waitForResponse(response =>
+      new URL(response.url()).pathname === '/api/bottle-builder/bodies' &&
+      response.status() === 200 && response.headers()['x-bb-media-revision'] === 'media-off-v1',
+    { timeout: 30000 });
+    await page.getByRole('button', { name: /^100 ml, 18-415 neck/ }).click();
+    await recovered;
+    await page.getByRole('button', { name: 'Choose Your Fitment', exact: true }).first().click();
+    await page.getByRole('button', { name: 'Perfume Sprayer', exact: true }).waitFor();
     report.refreshRecovered = true;
+    report.recoveredRevision = 'media-off-v1';
+    await page.screenshot({ path: `${output}/rollback-refreshed-builder.png`, fullPage: false });
   } finally {
     point(active); await revisionAtAlias(revision);
     report.activeRestored = true;

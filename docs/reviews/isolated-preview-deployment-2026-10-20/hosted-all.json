@@ -1,0 +1,894 @@
+{
+  "origin": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app",
+  "mode": "all",
+  "revision": "empire-round26-03baed749353:all",
+  "checkedAt": "2026-10-20T17:06:51.876Z",
+  "families": [
+    {
+      "data": {
+        "families": [
+          {
+            "family": "Empire",
+            "groups": 2
+          },
+          {
+            "family": "Round",
+            "groups": 1
+          }
+        ]
+      },
+      "cache": "MISS",
+      "revision": "empire-round26-03baed749353:all"
+    },
+    {
+      "data": {
+        "families": [
+          {
+            "family": "Empire",
+            "groups": 2
+          },
+          {
+            "family": "Round",
+            "groups": 1
+          }
+        ]
+      },
+      "cache": "HIT",
+      "revision": "empire-round26-03baed749353:all"
+    }
+  ],
+  "bodies": [
+    {
+      "family": "Empire",
+      "bodyId": "empire-50ml|18-415|Glass Bottle",
+      "configurations": 7,
+      "kits": 7,
+      "cache": [
+        "MISS",
+        "HIT"
+      ]
+    },
+    {
+      "family": "Empire",
+      "bodyId": "empire-100ml|18-415|Glass Bottle",
+      "configurations": 7,
+      "kits": 7,
+      "cache": [
+        "MISS",
+        "HIT"
+      ]
+    },
+    {
+      "family": "Round",
+      "bodyId": "round-78ml|18-415|Glass Bottle",
+      "configurations": 12,
+      "kits": 12,
+      "cache": [
+        "MISS",
+        "HIT"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "sku": "LBEmp50WhtClOvrCp",
+      "family": "Empire",
+      "bodyId": "empire-50ml|18-415|Glass Bottle",
+      "capacityMl": 50,
+      "neck": "18-415",
+      "color": "Clear",
+      "fitment": "Lotion Pump",
+      "closure": "White rectangular pump, clear overcap",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/121928bb048d3a62ea8589b6c0c1c64e711a2575654bed3d5162f1d074995f79.png"
+        },
+        {
+          "slot": "pump",
+          "url": "/media-releases/empire-round26-03baed749353/216a1943193e66319db55a705eb731dc9af5e5ce8713609b7c9218195e464dd8.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/36239bb9f037ae8625f5ba384b13c15d2be7e07e868769c725447463bc012eb2.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp50SpryCu",
+      "family": "Empire",
+      "bodyId": "empire-50ml|18-415|Glass Bottle",
+      "capacityMl": 50,
+      "neck": "18-415",
+      "color": "Clear",
+      "fitment": "Perfume Sprayer",
+      "closure": "Copper",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/abd1dd749986c006f412ebfc4f6cec3847b800dc1898021b494f29583665cb37.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/ec9873b841cd763deefcdc87b5d90772fc5862cb99e7b5ba84b85cc30079f491.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/d7bd26752b4c1827fa5b14860fc87b16bd865e1c074e18b205703397ae42766e.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp50SpryMtGl",
+      "family": "Empire",
+      "bodyId": "empire-50ml|18-415|Glass Bottle",
+      "capacityMl": 50,
+      "neck": "18-415",
+      "color": "Clear",
+      "fitment": "Perfume Sprayer",
+      "closure": "Matte Gold",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/7d755598ba26efc496f5cd05fb5930132eb0af6d4a99d8bd95da3f937ccc6d90.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/41688cb5fc3608eef96295e07cab51a64a7cc321ba92e3a82b3be58a3b65cf97.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/2e13c3f6090b95e2839dbc75e0537d2b6940a1b0fe10def4c8c5a20f656dbb52.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp50SpryMtSl",
+      "family": "Empire",
+      "bodyId": "empire-50ml|18-415|Glass Bottle",
+      "capacityMl": 50,
+      "neck": "18-415",
+      "color": "Clear",
+      "fitment": "Perfume Sprayer",
+      "closure": "Matte Silver",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/bf29cf892dca0895bb25b16fa775d02765c6e6e5d6382dbdb8e426208cab986a.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/ed138b1a40c93e646abb42f96b5a382edb327465adc944545ff27220b35a75b3.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/f3ef537447a0e2d27134d72a871e057b5480dffc252d4f21531f271fdb075f71.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp50SpryShnBlk",
+      "family": "Empire",
+      "bodyId": "empire-50ml|18-415|Glass Bottle",
+      "capacityMl": 50,
+      "neck": "18-415",
+      "color": "Clear",
+      "fitment": "Perfume Sprayer",
+      "closure": "Shiny Black",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/951ca106760f2b34381c4ea32452423e7632c12293def5e1d27c2b5bf79c4167.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/ce3d4751ac8cd8014143123314a802569dd2cb65cf5e3972928956031c09a512.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/271573d8c23a35eb19a8e2136c494e91ff5c319b5811a21945cbaeab0f1a5ac2.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp50SpryShnGl",
+      "family": "Empire",
+      "bodyId": "empire-50ml|18-415|Glass Bottle",
+      "capacityMl": 50,
+      "neck": "18-415",
+      "color": "Clear",
+      "fitment": "Perfume Sprayer",
+      "closure": "Shiny Gold",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/63ca6264b0f11daeace215730ff5ef425e451bc83e531f85a52e11890f013edc.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/ff179fd5c59620080bcdf17bf3665021008b1779e0584a179a8ca75cb3d032b1.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/1506ab24d979eda6cba1a817cfa863905e6070e07756a8aff2e6c8db4f54db00.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp50SpryShnSl",
+      "family": "Empire",
+      "bodyId": "empire-50ml|18-415|Glass Bottle",
+      "capacityMl": 50,
+      "neck": "18-415",
+      "color": "Clear",
+      "fitment": "Perfume Sprayer",
+      "closure": "Shiny Silver",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/63ca6264b0f11daeace215730ff5ef425e451bc83e531f85a52e11890f013edc.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/d6b38068d4f00a2716e56799ed870b8df22a22b7961e1159d4df8125925e1c1d.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/a960223629d4e2f5446809d1ded2cf9f04d05c813f6c3639ae345e524c558c6a.png"
+        }
+      ]
+    },
+    {
+      "sku": "LBEmp100WhtClOvrCp",
+      "family": "Empire",
+      "bodyId": "empire-100ml|18-415|Glass Bottle",
+      "capacityMl": 100,
+      "neck": "18-415",
+      "color": "Clear",
+      "fitment": "Lotion Pump",
+      "closure": "White rectangular pump, clear overcap",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/d8ba369f94392fd2b5d8b02d4f6718acf5926f084b92a6e518b9f0970e7b5396.png"
+        },
+        {
+          "slot": "pump",
+          "url": "/media-releases/empire-round26-03baed749353/216a1943193e66319db55a705eb731dc9af5e5ce8713609b7c9218195e464dd8.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/36239bb9f037ae8625f5ba384b13c15d2be7e07e868769c725447463bc012eb2.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp100SpryCu",
+      "family": "Empire",
+      "bodyId": "empire-100ml|18-415|Glass Bottle",
+      "capacityMl": 100,
+      "neck": "18-415",
+      "color": "Clear",
+      "fitment": "Perfume Sprayer",
+      "closure": "Copper",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/ec9873b841cd763deefcdc87b5d90772fc5862cb99e7b5ba84b85cc30079f491.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/d7bd26752b4c1827fa5b14860fc87b16bd865e1c074e18b205703397ae42766e.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp100SpryMtGl",
+      "family": "Empire",
+      "bodyId": "empire-100ml|18-415|Glass Bottle",
+      "capacityMl": 100,
+      "neck": "18-415",
+      "color": "Clear",
+      "fitment": "Perfume Sprayer",
+      "closure": "Matte Gold",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/883a216fc61f92a2ec8371eea59aa547b4db841240c8b2296cc505d8045ff2f0.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/41688cb5fc3608eef96295e07cab51a64a7cc321ba92e3a82b3be58a3b65cf97.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/2e13c3f6090b95e2839dbc75e0537d2b6940a1b0fe10def4c8c5a20f656dbb52.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp100SpryMtSl",
+      "family": "Empire",
+      "bodyId": "empire-100ml|18-415|Glass Bottle",
+      "capacityMl": 100,
+      "neck": "18-415",
+      "color": "Clear",
+      "fitment": "Perfume Sprayer",
+      "closure": "Matte Silver",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/6880c1c5e26265666c258d02c493d09c10547fe8848aa792c6f82a1d9380927c.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/ed138b1a40c93e646abb42f96b5a382edb327465adc944545ff27220b35a75b3.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/f3ef537447a0e2d27134d72a871e057b5480dffc252d4f21531f271fdb075f71.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp100SpryShnBlk",
+      "family": "Empire",
+      "bodyId": "empire-100ml|18-415|Glass Bottle",
+      "capacityMl": 100,
+      "neck": "18-415",
+      "color": "Clear",
+      "fitment": "Perfume Sprayer",
+      "closure": "Shiny Black",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/ce3d4751ac8cd8014143123314a802569dd2cb65cf5e3972928956031c09a512.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/271573d8c23a35eb19a8e2136c494e91ff5c319b5811a21945cbaeab0f1a5ac2.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp100SpryShnGl",
+      "family": "Empire",
+      "bodyId": "empire-100ml|18-415|Glass Bottle",
+      "capacityMl": 100,
+      "neck": "18-415",
+      "color": "Clear",
+      "fitment": "Perfume Sprayer",
+      "closure": "Shiny Gold",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/220a0365f812852ed6b04122635c405a296d4086f744ebb9fa5e8e87ead39909.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/ff179fd5c59620080bcdf17bf3665021008b1779e0584a179a8ca75cb3d032b1.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/1506ab24d979eda6cba1a817cfa863905e6070e07756a8aff2e6c8db4f54db00.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp100SpryShnSl",
+      "family": "Empire",
+      "bodyId": "empire-100ml|18-415|Glass Bottle",
+      "capacityMl": 100,
+      "neck": "18-415",
+      "color": "Clear",
+      "fitment": "Perfume Sprayer",
+      "closure": "Shiny Silver",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/d6b38068d4f00a2716e56799ed870b8df22a22b7961e1159d4df8125925e1c1d.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/a960223629d4e2f5446809d1ded2cf9f04d05c813f6c3639ae345e524c558c6a.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBRnd78SpryCu",
+      "family": "Round",
+      "bodyId": "round-78ml|18-415|Glass Bottle",
+      "capacityMl": 78,
+      "neck": "18-415",
+      "color": "Clear",
+      "fitment": "Perfume Sprayer",
+      "closure": "Copper",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/ec9873b841cd763deefcdc87b5d90772fc5862cb99e7b5ba84b85cc30079f491.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/d7bd26752b4c1827fa5b14860fc87b16bd865e1c074e18b205703397ae42766e.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBRnd78SpryMtGl",
+      "family": "Round",
+      "bodyId": "round-78ml|18-415|Glass Bottle",
+      "capacityMl": 78,
+      "neck": "18-415",
+      "color": "Clear",
+      "fitment": "Perfume Sprayer",
+      "closure": "Matte Gold",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/41688cb5fc3608eef96295e07cab51a64a7cc321ba92e3a82b3be58a3b65cf97.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/2e13c3f6090b95e2839dbc75e0537d2b6940a1b0fe10def4c8c5a20f656dbb52.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBRnd78SpryMtSl",
+      "family": "Round",
+      "bodyId": "round-78ml|18-415|Glass Bottle",
+      "capacityMl": 78,
+      "neck": "18-415",
+      "color": "Clear",
+      "fitment": "Perfume Sprayer",
+      "closure": "Matte Silver",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/ed138b1a40c93e646abb42f96b5a382edb327465adc944545ff27220b35a75b3.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/f3ef537447a0e2d27134d72a871e057b5480dffc252d4f21531f271fdb075f71.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBRnd78SpryShnBlk",
+      "family": "Round",
+      "bodyId": "round-78ml|18-415|Glass Bottle",
+      "capacityMl": 78,
+      "neck": "18-415",
+      "color": "Clear",
+      "fitment": "Perfume Sprayer",
+      "closure": "Shiny Black",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/ce3d4751ac8cd8014143123314a802569dd2cb65cf5e3972928956031c09a512.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/271573d8c23a35eb19a8e2136c494e91ff5c319b5811a21945cbaeab0f1a5ac2.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBRnd78SpryShnGl",
+      "family": "Round",
+      "bodyId": "round-78ml|18-415|Glass Bottle",
+      "capacityMl": 78,
+      "neck": "18-415",
+      "color": "Clear",
+      "fitment": "Perfume Sprayer",
+      "closure": "Shiny Gold",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/ff179fd5c59620080bcdf17bf3665021008b1779e0584a179a8ca75cb3d032b1.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/1506ab24d979eda6cba1a817cfa863905e6070e07756a8aff2e6c8db4f54db00.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBRnd78SpryShnSl",
+      "family": "Round",
+      "bodyId": "round-78ml|18-415|Glass Bottle",
+      "capacityMl": 78,
+      "neck": "18-415",
+      "color": "Clear",
+      "fitment": "Perfume Sprayer",
+      "closure": "Shiny Silver",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/d6b38068d4f00a2716e56799ed870b8df22a22b7961e1159d4df8125925e1c1d.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/a960223629d4e2f5446809d1ded2cf9f04d05c813f6c3639ae345e524c558c6a.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBRndFrst78SpryCu",
+      "family": "Round",
+      "bodyId": "round-78ml|18-415|Glass Bottle",
+      "capacityMl": 78,
+      "neck": "18-415",
+      "color": "Frosted",
+      "fitment": "Perfume Sprayer",
+      "closure": "Copper",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/ec9873b841cd763deefcdc87b5d90772fc5862cb99e7b5ba84b85cc30079f491.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/d7bd26752b4c1827fa5b14860fc87b16bd865e1c074e18b205703397ae42766e.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBRndFrst78SpryMtGl",
+      "family": "Round",
+      "bodyId": "round-78ml|18-415|Glass Bottle",
+      "capacityMl": 78,
+      "neck": "18-415",
+      "color": "Frosted",
+      "fitment": "Perfume Sprayer",
+      "closure": "Matte Gold",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/41688cb5fc3608eef96295e07cab51a64a7cc321ba92e3a82b3be58a3b65cf97.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/2e13c3f6090b95e2839dbc75e0537d2b6940a1b0fe10def4c8c5a20f656dbb52.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBRndFrst78SpryMtSl",
+      "family": "Round",
+      "bodyId": "round-78ml|18-415|Glass Bottle",
+      "capacityMl": 78,
+      "neck": "18-415",
+      "color": "Frosted",
+      "fitment": "Perfume Sprayer",
+      "closure": "Matte Silver",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/ed138b1a40c93e646abb42f96b5a382edb327465adc944545ff27220b35a75b3.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/f3ef537447a0e2d27134d72a871e057b5480dffc252d4f21531f271fdb075f71.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBRndFrst78SpryShnBlk",
+      "family": "Round",
+      "bodyId": "round-78ml|18-415|Glass Bottle",
+      "capacityMl": 78,
+      "neck": "18-415",
+      "color": "Frosted",
+      "fitment": "Perfume Sprayer",
+      "closure": "Shiny Black",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/ce3d4751ac8cd8014143123314a802569dd2cb65cf5e3972928956031c09a512.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/271573d8c23a35eb19a8e2136c494e91ff5c319b5811a21945cbaeab0f1a5ac2.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBRndFrst78SpryShnGl",
+      "family": "Round",
+      "bodyId": "round-78ml|18-415|Glass Bottle",
+      "capacityMl": 78,
+      "neck": "18-415",
+      "color": "Frosted",
+      "fitment": "Perfume Sprayer",
+      "closure": "Shiny Gold",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/ff179fd5c59620080bcdf17bf3665021008b1779e0584a179a8ca75cb3d032b1.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/1506ab24d979eda6cba1a817cfa863905e6070e07756a8aff2e6c8db4f54db00.png"
+        }
+      ]
+    },
+    {
+      "sku": "GBRndFrst78SpryShnSl",
+      "family": "Round",
+      "bodyId": "round-78ml|18-415|Glass Bottle",
+      "capacityMl": 78,
+      "neck": "18-415",
+      "color": "Frosted",
+      "fitment": "Perfume Sprayer",
+      "closure": "Shiny Silver",
+      "released": true,
+      "identityValidated": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/media-releases/empire-round26-03baed749353/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/media-releases/empire-round26-03baed749353/d6b38068d4f00a2716e56799ed870b8df22a22b7961e1159d4df8125925e1c1d.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "/media-releases/empire-round26-03baed749353/a960223629d4e2f5446809d1ded2cf9f04d05c813f6c3639ae345e524c558c6a.png"
+        }
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "route": "families",
+      "status": 409,
+      "cacheControl": "no-store",
+      "revision": "empire-round26-03baed749353:all"
+    },
+    {
+      "route": "families",
+      "status": 409,
+      "cacheControl": "no-store",
+      "revision": "empire-round26-03baed749353:all"
+    },
+    {
+      "route": "bodies",
+      "status": 409,
+      "cacheControl": "no-store",
+      "revision": "empire-round26-03baed749353:all"
+    },
+    {
+      "route": "bodies",
+      "status": 409,
+      "cacheControl": "no-store",
+      "revision": "empire-round26-03baed749353:all"
+    },
+    {
+      "route": "kits",
+      "status": 409,
+      "cacheControl": "no-store",
+      "revision": "empire-round26-03baed749353:all"
+    },
+    {
+      "route": "kits",
+      "status": 409,
+      "cacheControl": "no-store",
+      "revision": "empire-round26-03baed749353:all"
+    }
+  ],
+  "immutableAssets": 57,
+  "localKitAssetsVerified": 39
+}

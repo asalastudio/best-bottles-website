@@ -1,0 +1,42 @@
+{
+  "firstDeployment": {
+    "id": "dpl_ASAJ7ikvnFf35cckdNYMQe15MYTm",
+    "projectId": "prj_JFb1sYpDTmvfUR2qfOOL9TJmF5yt",
+    "unexpectedTarget": "production",
+    "mediaMode": "off",
+    "resolution": "Canceled while building; existing production project was never targeted."
+  },
+  "firstPreviewBuild": {
+    "id": "dpl_H62i9rEfT6hSWjZ5Z9BMJ6Gq7AJD",
+    "target": "staging",
+    "result": "Failed because the scoped package omitted app-imported helper modules. Packager now follows relative imports; corrected package passed TypeScript."
+  },
+  "canceledCanary": "dpl_AXjh52xJc3dezUJgczpcjMn24Yh1",
+  "temporaryProject": {
+    "id": "prj_lqJWWJ3h4Odz9aPvqIcaRshBaRUq",
+    "name": "tmp",
+    "cause": "CLI env run resolved node incorrectly in its child PATH. Retried with the absolute Node executable.",
+    "deployments": 0,
+    "repositoryLink": null,
+    "resolution": "Empty project deleted after verification."
+  },
+  "firstCompletedPreview": {
+    "id": "dpl_61jqhPic2tgHcLb6EhYRTXsyKZZb",
+    "build": "READY",
+    "acceptance": "Not accepted as rollback baseline. Browser found a missing wordmark and POST transport headers dropped in Clerk-disabled middleware. Both corrected in d4509096; preserved headers regression passed."
+  },
+  "canceledCorrectedCanary": "dpl_4nDnd72oiBooFavctHHRkHmfokAn",
+  "rollbackAssetCompleteness": {
+    "testedDeployment": "dpl_JA2c18YfJV81QUR9tYriE7pLP9xv",
+    "catalogBrowser": "No page errors or failed requests after the POST/wordmark fix",
+    "identityValidation": "All 26 variants passed before the asset check stopped on an omitted previous tube file",
+    "missingLocalKitImages": 8,
+    "fixCommit": "2198126b",
+    "resolution": "Packager derives previous kit assets from the exact approved source recipes; hosted acceptance hashes every local kit file in each mode."
+  },
+  "verificationHarness": {
+    "imageCapture": "Waits for decoded pixels and finite CSS animations before capture. Uses a tall viewport for deferred catalog rows.",
+    "selectors": "Uses explicit image containers and the main fitment button; waits for the refreshed document before checking rollback recovery.",
+    "applicationImpact": "These corrections change QA scripts only. The deployed application remains 2198126b."
+  }
+}

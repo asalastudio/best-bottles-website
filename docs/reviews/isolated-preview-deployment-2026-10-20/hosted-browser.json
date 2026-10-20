@@ -1,0 +1,689 @@
+{
+  "origin": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app",
+  "mode": "all",
+  "checkedAt": "2026-10-20T17:08:13.180Z",
+  "catalog": [
+    {
+      "sku": "GBEmp100SpryMtGl",
+      "image": "/media-releases/empire-round26-03baed749353/f288887aedc8337bfcdbf6357396f37e17259cdd9ece7d9bf2d9b68dd8ae2ada.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp50SpryMtGl",
+      "image": "/media-releases/empire-round26-03baed749353/7580022c995036c9626d1fdba70105775b77dfc1e3149703b6be223e662584ea.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp100SpryCu",
+      "image": "/media-releases/empire-round26-03baed749353/3fe8c5f88a2ac160f1f1dc9524054e271a489f4b2d505ca0cc6f3adbc67a9e11.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp100SpryMtSl",
+      "image": "/media-releases/empire-round26-03baed749353/4fcfba3540fbf6666c33b95f9839b5995439aaebde865120318d11521345d019.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp100SpryShnBlk",
+      "image": "/media-releases/empire-round26-03baed749353/9fbc969f99e189bcc5c55b5e50a9de2e2ffb45329de596c22cb63af341626591.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp100SpryShnGl",
+      "image": "/media-releases/empire-round26-03baed749353/87fa84ab124966d779467bf47bbef4dbed22fbd540108b7fc1f377dc1c90085b.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp100SpryShnSl",
+      "image": "/media-releases/empire-round26-03baed749353/b102e2ecee7c6ad55097bf8051e11596a38afd5cfe035a58a5d365bfb639a979.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp50SpryCu",
+      "image": "/media-releases/empire-round26-03baed749353/a493cba8116e830d1b1ea2659003b15d0734e503b1f97eb73fe5dca6cb5ec838.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp50SpryMtSl",
+      "image": "/media-releases/empire-round26-03baed749353/5cbe4f3825ba839fd94cd3c38240dd0bac7ef939579f4f96df6dc06d74ae6286.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp50SpryShnBlk",
+      "image": "/media-releases/empire-round26-03baed749353/713b9d68412fb0846de7ee68c0a1f84d1138efb62c73777b057a5b40a99a4fb6.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp50SpryShnGl",
+      "image": "/media-releases/empire-round26-03baed749353/8c00a2f63c652c86b85e48080e55cd1e8d4b6670d09a9d9fa753eaab77e6d084.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp50SpryShnSl",
+      "image": "/media-releases/empire-round26-03baed749353/63eefb85885225425daa74a073b6ee06389598128ca17440a8c9c771f4fcce43.png",
+      "rendered": true
+    },
+    {
+      "sku": "LBEmp100WhtClOvrCp",
+      "image": "/media-releases/empire-round26-03baed749353/6c0335cd32e4d4b3f45e504e7686f148ab13de12bc5ecf7df8aa37be3495df7c.png",
+      "rendered": true
+    },
+    {
+      "sku": "LBEmp50WhtClOvrCp",
+      "image": "/media-releases/empire-round26-03baed749353/0c9c203d4591e29fc94fc34a43d9dd629a894b1026b406c790ca3246f544c4fe.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBRnd78SpryCu",
+      "image": "/media-releases/empire-round26-03baed749353/fc78436ff5db33076675e83914319c881ed305b0f523be2f6d4f827d8f1870b8.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBRnd78SpryMtGl",
+      "image": "/media-releases/empire-round26-03baed749353/515bdef76e64df516b1562d3cc9cc1d4d33c591366e1398db8775a1093b3b1d6.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBRnd78SpryMtSl",
+      "image": "/media-releases/empire-round26-03baed749353/89e992101be2d23eb61a895b37998cacb18c2cd7e4e2ea674db96f24d5af6df0.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBRnd78SpryShnBlk",
+      "image": "/media-releases/empire-round26-03baed749353/bba51de97217751f2e441630cafaa0207999d867bcf4403d1d55382a8afa0275.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBRnd78SpryShnGl",
+      "image": "/media-releases/empire-round26-03baed749353/158384c42a2e4d6adceed230697445cb0bf41a9956cd1b3833bbf12f44f2efa3.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBRnd78SpryShnSl",
+      "image": "/media-releases/empire-round26-03baed749353/dfbc0784912aed51ea448fc2e0853dbf809a4b5eada0babcd32c051ab6efcbcb.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBRndFrst78SpryCu",
+      "image": "/media-releases/empire-round26-03baed749353/ffbf828bbdaafed94b484ce4be95293b193287d47b8038ad41374974ae4c3254.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBRndFrst78SpryMtGl",
+      "image": "/media-releases/empire-round26-03baed749353/9cc726a91ca4753a0f0b3a2fbb16807f9d1413b711403343853907e767ec0265.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBRndFrst78SpryMtSl",
+      "image": "/media-releases/empire-round26-03baed749353/b378bdef422fb899cc41544aa39fa62e47658e2779feb2fc1375d088155f96ef.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBRndFrst78SpryShnBlk",
+      "image": "/media-releases/empire-round26-03baed749353/5689174dc313d7c1baab7b61a9b9d692cd9c376b0432f7299ad3f1bfc56ba949.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBRndFrst78SpryShnGl",
+      "image": "/media-releases/empire-round26-03baed749353/299f3bc1227ab863fd4e443612b280ab00c4c7cdf575aee5d4f0820772cdeda7.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBRndFrst78SpryShnSl",
+      "image": "/media-releases/empire-round26-03baed749353/f000bbc5ba6beba0914dcaeb9c3ec8d91a7c7f20e7de03644d9f00c79c243b68.png",
+      "rendered": true
+    }
+  ],
+  "pdp": [
+    {
+      "sku": "GBEmp100SpryMtGl",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp50SpryMtGl",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp100SpryCu",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp100SpryMtSl",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp100SpryShnBlk",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp100SpryShnGl",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp100SpryShnSl",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp50SpryCu",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp50SpryMtSl",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp50SpryShnBlk",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp50SpryShnGl",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp50SpryShnSl",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "LBEmp100WhtClOvrCp",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "LBEmp50WhtClOvrCp",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBRnd78SpryCu",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBRnd78SpryMtGl",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBRnd78SpryMtSl",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBRnd78SpryShnBlk",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBRnd78SpryShnGl",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBRnd78SpryShnSl",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBRndFrst78SpryCu",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBRndFrst78SpryMtGl",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBRndFrst78SpryMtSl",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBRndFrst78SpryShnBlk",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBRndFrst78SpryShnGl",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBRndFrst78SpryShnSl",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    }
+  ],
+  "builder": [
+    {
+      "sku": "LBEmp50WhtClOvrCp",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png",
+        "/media-releases/empire-round26-03baed749353/121928bb048d3a62ea8589b6c0c1c64e711a2575654bed3d5162f1d074995f79.png",
+        "/media-releases/empire-round26-03baed749353/216a1943193e66319db55a705eb731dc9af5e5ce8713609b7c9218195e464dd8.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp50SpryCu",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png",
+        "/media-releases/empire-round26-03baed749353/abd1dd749986c006f412ebfc4f6cec3847b800dc1898021b494f29583665cb37.png",
+        "/media-releases/empire-round26-03baed749353/ec9873b841cd763deefcdc87b5d90772fc5862cb99e7b5ba84b85cc30079f491.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp50SpryMtGl",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png",
+        "/media-releases/empire-round26-03baed749353/7d755598ba26efc496f5cd05fb5930132eb0af6d4a99d8bd95da3f937ccc6d90.png",
+        "/media-releases/empire-round26-03baed749353/41688cb5fc3608eef96295e07cab51a64a7cc321ba92e3a82b3be58a3b65cf97.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp50SpryMtSl",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png",
+        "/media-releases/empire-round26-03baed749353/bf29cf892dca0895bb25b16fa775d02765c6e6e5d6382dbdb8e426208cab986a.png",
+        "/media-releases/empire-round26-03baed749353/ed138b1a40c93e646abb42f96b5a382edb327465adc944545ff27220b35a75b3.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp50SpryShnBlk",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png",
+        "/media-releases/empire-round26-03baed749353/951ca106760f2b34381c4ea32452423e7632c12293def5e1d27c2b5bf79c4167.png",
+        "/media-releases/empire-round26-03baed749353/ce3d4751ac8cd8014143123314a802569dd2cb65cf5e3972928956031c09a512.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp50SpryShnGl",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png",
+        "/media-releases/empire-round26-03baed749353/63ca6264b0f11daeace215730ff5ef425e451bc83e531f85a52e11890f013edc.png",
+        "/media-releases/empire-round26-03baed749353/ff179fd5c59620080bcdf17bf3665021008b1779e0584a179a8ca75cb3d032b1.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp50SpryShnSl",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png",
+        "/media-releases/empire-round26-03baed749353/63ca6264b0f11daeace215730ff5ef425e451bc83e531f85a52e11890f013edc.png",
+        "/media-releases/empire-round26-03baed749353/d6b38068d4f00a2716e56799ed870b8df22a22b7961e1159d4df8125925e1c1d.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "LBEmp100WhtClOvrCp",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png",
+        "/media-releases/empire-round26-03baed749353/d8ba369f94392fd2b5d8b02d4f6718acf5926f084b92a6e518b9f0970e7b5396.png",
+        "/media-releases/empire-round26-03baed749353/216a1943193e66319db55a705eb731dc9af5e5ce8713609b7c9218195e464dd8.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp100SpryCu",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png",
+        "/media-releases/empire-round26-03baed749353/940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd.png",
+        "/media-releases/empire-round26-03baed749353/ec9873b841cd763deefcdc87b5d90772fc5862cb99e7b5ba84b85cc30079f491.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp100SpryMtGl",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png",
+        "/media-releases/empire-round26-03baed749353/883a216fc61f92a2ec8371eea59aa547b4db841240c8b2296cc505d8045ff2f0.png",
+        "/media-releases/empire-round26-03baed749353/41688cb5fc3608eef96295e07cab51a64a7cc321ba92e3a82b3be58a3b65cf97.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp100SpryMtSl",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png",
+        "/media-releases/empire-round26-03baed749353/6880c1c5e26265666c258d02c493d09c10547fe8848aa792c6f82a1d9380927c.png",
+        "/media-releases/empire-round26-03baed749353/ed138b1a40c93e646abb42f96b5a382edb327465adc944545ff27220b35a75b3.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp100SpryShnBlk",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png",
+        "/media-releases/empire-round26-03baed749353/940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd.png",
+        "/media-releases/empire-round26-03baed749353/ce3d4751ac8cd8014143123314a802569dd2cb65cf5e3972928956031c09a512.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp100SpryShnGl",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png",
+        "/media-releases/empire-round26-03baed749353/220a0365f812852ed6b04122635c405a296d4086f744ebb9fa5e8e87ead39909.png",
+        "/media-releases/empire-round26-03baed749353/ff179fd5c59620080bcdf17bf3665021008b1779e0584a179a8ca75cb3d032b1.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp100SpryShnSl",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png",
+        "/media-releases/empire-round26-03baed749353/940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd.png",
+        "/media-releases/empire-round26-03baed749353/d6b38068d4f00a2716e56799ed870b8df22a22b7961e1159d4df8125925e1c1d.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBRnd78SpryCu",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf.png",
+        "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png",
+        "/media-releases/empire-round26-03baed749353/ec9873b841cd763deefcdc87b5d90772fc5862cb99e7b5ba84b85cc30079f491.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBRnd78SpryMtGl",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf.png",
+        "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png",
+        "/media-releases/empire-round26-03baed749353/41688cb5fc3608eef96295e07cab51a64a7cc321ba92e3a82b3be58a3b65cf97.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBRnd78SpryMtSl",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf.png",
+        "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png",
+        "/media-releases/empire-round26-03baed749353/ed138b1a40c93e646abb42f96b5a382edb327465adc944545ff27220b35a75b3.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBRnd78SpryShnBlk",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf.png",
+        "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png",
+        "/media-releases/empire-round26-03baed749353/ce3d4751ac8cd8014143123314a802569dd2cb65cf5e3972928956031c09a512.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBRnd78SpryShnGl",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf.png",
+        "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png",
+        "/media-releases/empire-round26-03baed749353/ff179fd5c59620080bcdf17bf3665021008b1779e0584a179a8ca75cb3d032b1.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBRnd78SpryShnSl",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf.png",
+        "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png",
+        "/media-releases/empire-round26-03baed749353/d6b38068d4f00a2716e56799ed870b8df22a22b7961e1159d4df8125925e1c1d.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBRndFrst78SpryCu",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png",
+        "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png",
+        "/media-releases/empire-round26-03baed749353/ec9873b841cd763deefcdc87b5d90772fc5862cb99e7b5ba84b85cc30079f491.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBRndFrst78SpryMtGl",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png",
+        "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png",
+        "/media-releases/empire-round26-03baed749353/41688cb5fc3608eef96295e07cab51a64a7cc321ba92e3a82b3be58a3b65cf97.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBRndFrst78SpryMtSl",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png",
+        "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png",
+        "/media-releases/empire-round26-03baed749353/ed138b1a40c93e646abb42f96b5a382edb327465adc944545ff27220b35a75b3.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBRndFrst78SpryShnBlk",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png",
+        "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png",
+        "/media-releases/empire-round26-03baed749353/ce3d4751ac8cd8014143123314a802569dd2cb65cf5e3972928956031c09a512.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBRndFrst78SpryShnGl",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png",
+        "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png",
+        "/media-releases/empire-round26-03baed749353/ff179fd5c59620080bcdf17bf3665021008b1779e0584a179a8ca75cb3d032b1.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBRndFrst78SpryShnSl",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png",
+        "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png",
+        "/media-releases/empire-round26-03baed749353/d6b38068d4f00a2716e56799ed870b8df22a22b7961e1159d4df8125925e1c1d.png"
+      ],
+      "rendered": true
+    }
+  ],
+  "mobile": [
+    {
+      "sku": "LBEmp50WhtClOvrCp",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png",
+        "/media-releases/empire-round26-03baed749353/121928bb048d3a62ea8589b6c0c1c64e711a2575654bed3d5162f1d074995f79.png",
+        "/media-releases/empire-round26-03baed749353/216a1943193e66319db55a705eb731dc9af5e5ce8713609b7c9218195e464dd8.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBRndFrst78SpryCu",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png",
+        "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png",
+        "/media-releases/empire-round26-03baed749353/ec9873b841cd763deefcdc87b5d90772fc5862cb99e7b5ba84b85cc30079f491.png"
+      ],
+      "rendered": true
+    }
+  ],
+  "errors": [],
+  "failedResponses": [],
+  "metadataPrefetchResponses": [
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    }
+  ],
+  "sitemapDirectGet": {
+    "status": 200,
+    "contentType": "application/xml"
+  }
+}

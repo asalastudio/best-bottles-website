@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-20T17:13:52.699299+00:00",
+  "projectId": "prj_GHwEFaEB2YYcMKetaompX9fGC4mR",
+  "production": {
+    "id": "dpl_FZdQy7vDFtxNDCTqgZxMTWQTmk2G",
+    "url": "best-bottles-website-f2k7obp6l-asala.vercel.app",
+    "readyState": "READY",
+    "target": "production",
+    "alias": [
+      "best-bottles-website.vercel.app",
+      "best-bottles-website-asala.vercel.app",
+      "best-bottles-website-git-main-asala.vercel.app"
+    ],
+    "createdAt": 1792391702743
+  },
+  "remoteMain": "c0a861f85b0508304343c4202ccd2fa59c248f53",
+  "remoteReviewBranch": "2198126bf89e7a7961ac7ef1187eff8cac22e8db",
+  "reviewProject": {
+    "id": "prj_JFb1sYpDTmvfUR2qfOOL9TJmF5yt",
+    "gitConnected": false,
+    "ssoProtection": {
+      "deploymentType": "all"
+    },
+    "publicPreviewEnvironmentKeys": [
+      "NEXT_PUBLIC_BB_MEDIA_RELEASE",
+      "NEXT_PUBLIC_CLERK_ENABLED",
+      "NEXT_PUBLIC_CONVEX_URL",
+      "NEXT_PUBLIC_REGISTER_STAGE"
+    ]
+  }
+}

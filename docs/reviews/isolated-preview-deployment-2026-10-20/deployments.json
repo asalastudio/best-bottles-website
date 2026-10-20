@@ -1,0 +1,46 @@
+[
+  {
+    "mode": "off",
+    "id": "dpl_B5Wm8yc1RtFHtRTJPCbKkJPno5ch",
+    "url": "https://best-bottles-media-review-d2cjq6sql-asala.vercel.app",
+    "sourceCommit": "2198126bf89e7a7961ac7ef1187eff8cac22e8db",
+    "projectId": "prj_JFb1sYpDTmvfUR2qfOOL9TJmF5yt",
+    "acceptance": "HTTP passed",
+    "readyState": "READY",
+    "target": null,
+    "verifiedAt": "2026-10-20T17:13:52.699299+00:00"
+  },
+  {
+    "mode": "canary",
+    "id": "dpl_CsJiwZLpTPwttS7Zi9L3b5FHVGtu",
+    "url": "https://best-bottles-media-review-db3iap83l-asala.vercel.app",
+    "sourceCommit": "2198126bf89e7a7961ac7ef1187eff8cac22e8db",
+    "projectId": "prj_JFb1sYpDTmvfUR2qfOOL9TJmF5yt",
+    "acceptance": "HTTP passed",
+    "readyState": "READY",
+    "target": null,
+    "verifiedAt": "2026-10-20T17:13:52.699299+00:00"
+  },
+  {
+    "mode": "empire",
+    "id": "dpl_Dn1V3gye44tUZau7Yy6MZHANP7kd",
+    "url": "https://best-bottles-media-review-ae199i9sk-asala.vercel.app",
+    "sourceCommit": "2198126bf89e7a7961ac7ef1187eff8cac22e8db",
+    "projectId": "prj_JFb1sYpDTmvfUR2qfOOL9TJmF5yt",
+    "acceptance": "HTTP passed",
+    "readyState": "READY",
+    "target": null,
+    "verifiedAt": "2026-10-20T17:13:52.699299+00:00"
+  },
+  {
+    "mode": "all",
+    "id": "dpl_H2DazCqcMZdA6S22hQB9STRUn73Z",
+    "url": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app",
+    "sourceCommit": "2198126bf89e7a7961ac7ef1187eff8cac22e8db",
+    "projectId": "prj_JFb1sYpDTmvfUR2qfOOL9TJmF5yt",
+    "acceptance": "HTTP passed",
+    "readyState": "READY",
+    "target": null,
+    "verifiedAt": "2026-10-20T17:13:52.699299+00:00"
+  }
+]

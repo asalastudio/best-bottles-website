@@ -32,7 +32,7 @@ async function json(path, options) {
 }
 (async () => {
   const report = { origin, mode, revision, checkedAt: new Date().toISOString(), families: [], bodies: [], variants: [], conflicts: [], immutableAssets: 0 };
-  const localKitAssets = new Set();
+  const localKitAssets = new Set(JSON.parse(fs.readFileSync(`${output}/baseline-local-assets.json`)).map(asset => asset.url));
   function collectAssets(value) {
     if (typeof value === 'string' && value.startsWith('/') && fs.existsSync(`public${value}`)) localKitAssets.add(value);
     else if (value && typeof value === 'object') Object.values(value).forEach(collectAssets);

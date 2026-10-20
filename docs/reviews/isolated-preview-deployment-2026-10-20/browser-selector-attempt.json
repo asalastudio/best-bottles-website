@@ -1,0 +1,13 @@
+{
+  "origin": "https://best-bottles-media-review-c2u7ho0v8-asala.vercel.app",
+  "mode": "all",
+  "checkedAt": "2026-10-20T17:07:28.799Z",
+  "catalog": [],
+  "pdp": [],
+  "builder": [],
+  "mobile": [],
+  "errors": [],
+  "failedResponses": [],
+  "metadataPrefetchResponses": [],
+  "failure": "locator.evaluate: Error: strict mode violation: locator('article').filter({ has: locator('[data-bb-product-group-slug=\"empire-100ml-clear-18-415-perfumespray\"]') }).first().locator('[data-bb-image-audit=\"catalog-card\"]') resolved to 2 elements:\n    1) <div data-bb-family=\"Empire\" data-bb-studio-hero=\"true\" data-bb-image-audit=\"catalog-card\" data-bb-website-sku=\"GBEmp100SpryMtGl\" data-bb-grace-sku=\"GB-EMP-CLR-100ML-SPR-MGLD\" data-bb-product-group-slug=\"empire-100ml-clear-18-415-perfumespray\" data-bb-shopify-variant-id=\"gid://shopify/ProductVariant/53343651037476\" class=\"relative w-full overflow-hidden aspect-[10/11] ProductCardImagePreview_heroFrame__fyHgR\">…</div> aka locator('article:nth-child(6) > div > .relative')\n    2) <img loading=\"lazy\" decoding=\"async\" data-nimg=\"fill\" class=\"object-contain\" data-bb-family=\"Empire\" data-bb-hero-state=\"empty\" data-bb-image-audit=\"catalog-card\" data-bb-website-sku=\"GBEmp100SpryMtGl\" data-bb-grace-sku=\"GB-EMP-CLR-100ML-SPR-MGLD\" data-bb-product-group-slug=\"empire-100ml-clear-18-415-perfumespray\" data-bb-shopify-variant-id=\"gid://shopify/ProductVariant/53343651037476\" alt=\"100 ml Clear Empire bottle with Matte Gold sprayer and overcap beside\" sizes=\"(max-width: 639px) calc(100vw -…/> aka getByRole('img', { name: '100 ml Clear Empire bottle with Matte Gold sprayer and overcap beside' })\n\nCall log:\n\u001b[2m  - waiting for locator('article').filter({ has: locator('[data-bb-product-group-slug=\"empire-100ml-clear-18-415-perfumespray\"]') }).first().locator('[data-bb-image-audit=\"catalog-card\"]')\u001b[22m\n"
+}

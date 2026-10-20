@@ -1,0 +1,75 @@
+{
+  "origin": "https://best-bottles-media-review-db3iap83l-asala.vercel.app",
+  "mode": "canary",
+  "checkedAt": "2026-10-20T16:56:51.211Z",
+  "catalog": [
+    {
+      "sku": "GBEmp100SpryMtGl",
+      "image": "/media-releases/empire-round26-03baed749353/f288887aedc8337bfcdbf6357396f37e17259cdd9ece7d9bf2d9b68dd8ae2ada.png",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp50SpryMtGl",
+      "image": "/media-releases/empire-round26-03baed749353/7580022c995036c9626d1fdba70105775b77dfc1e3149703b6be223e662584ea.png",
+      "rendered": true
+    }
+  ],
+  "pdp": [
+    {
+      "sku": "GBEmp100SpryMtGl",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp50SpryMtGl",
+      "clientFinishSelection": true,
+      "source": "register",
+      "view": "exploded",
+      "rendered": true
+    }
+  ],
+  "builder": [
+    {
+      "sku": "GBEmp50SpryMtGl",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png",
+        "/media-releases/empire-round26-03baed749353/7d755598ba26efc496f5cd05fb5930132eb0af6d4a99d8bd95da3f937ccc6d90.png",
+        "/media-releases/empire-round26-03baed749353/41688cb5fc3608eef96295e07cab51a64a7cc321ba92e3a82b3be58a3b65cf97.png"
+      ],
+      "rendered": true
+    },
+    {
+      "sku": "GBEmp100SpryMtGl",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png",
+        "/media-releases/empire-round26-03baed749353/883a216fc61f92a2ec8371eea59aa547b4db841240c8b2296cc505d8045ff2f0.png",
+        "/media-releases/empire-round26-03baed749353/41688cb5fc3608eef96295e07cab51a64a7cc321ba92e3a82b3be58a3b65cf97.png"
+      ],
+      "rendered": true
+    }
+  ],
+  "mobile": [
+    {
+      "sku": "GBEmp50SpryMtGl",
+      "expectedParts": [
+        "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png",
+        "/media-releases/empire-round26-03baed749353/7d755598ba26efc496f5cd05fb5930132eb0af6d4a99d8bd95da3f937ccc6d90.png",
+        "/media-releases/empire-round26-03baed749353/41688cb5fc3608eef96295e07cab51a64a7cc321ba92e3a82b3be58a3b65cf97.png"
+      ],
+      "rendered": true
+    }
+  ],
+  "errors": [],
+  "failedResponses": [
+    {
+      "url": "https://best-bottles-media-review-db3iap83l-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    },
+    {
+      "url": "https://best-bottles-media-review-db3iap83l-asala.vercel.app/sitemap.xml?_rsc=wZaBdm8dB4G2qhHZ",
+      "status": 404
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-20T17:13:52.699299+00:00",
+  "url": "https://beloved-wildcat-265.convex.cloud",
+  "functions": 39,
+  "readOnly": true,
+  "environmentVariables": 0,
+  "tables": {
+    "products": {
+      "rows": 32,
+      "matchesSeed": true,
+      "sha256": "3ccf9ffcb86bd4a693f7f5d845e9183f414393eabef8cea09419144318f41d29"
+    },
+    "productGroups": {
+      "rows": 6,
+      "matchesSeed": true,
+      "sha256": "51583ece5dde2c9f81e262807afa8144e7d67edf93b9925974210e123d9dbf2b"
+    },
+    "registerAssemblies": {
+      "rows": 26,
+      "matchesSeed": true,
+      "sha256": "99b95f4c1c128e896ba537d2a64129fecd3cf804364ddc9c4e450fca49d7a31e"
+    },
+    "registerBodies": {
+      "rows": 3,
+      "matchesSeed": true,
+      "sha256": "eaff5ccd209ba4e40a1dfaf62faf62f67ab75eb5d941e1009f1e44620e5689f3"
+    },
+    "registerBodyPlates": {
+      "rows": 4,
+      "matchesSeed": true,
+      "sha256": "3ff3fb8df856fab9358a4c133194bc7cbe53e0c12b10e65e19ded09af0a96f3f"
+    },
+    "registerComponents": {
+      "rows": 6,
+      "matchesSeed": true,
+      "sha256": "4ec72938e0bfae7cf91f3e0eedf0857b84fa8430fd7e34efeb90fb89c1ac23c3"
+    },
+    "productKits": {
+      "rows": 26,
+      "matchesSeed": true,
+      "sha256": "48200f18d88bd34db2332ae00f6a688ce07271a8ccc29bf25fc8e7e7712c68ee"
+    },
+    "productPlates": {
+      "rows": 26,
+      "matchesSeed": true,
+      "sha256": "7f45240815052d991548510614301396105eafcfe4f9f75ed572ce44bf23892f"
+    },
+    "fitments": {
+      "rows": 28,
+      "matchesSeed": true,
+      "sha256": "fe7151060aad709248bcc951bdfeade3d84efbd8956d4080e256f1b31f92d553"
+    }
+  }
+}
