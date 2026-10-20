@@ -35,7 +35,7 @@ while pending:
             if declaration.exists():shutil.copy2(declaration,stage/declaration.relative_to(root))
 # Keep app-wide interface artwork and Builder cutouts. Review archives, unrelated
 # catalog families, 3D source libraries and PSD masters are not this media preview.
-publicFolders=['assets/hero','assets/homepage','images/bottle-builder','fonts','media-releases']
+publicFolders=['assets/hero','assets/homepage','images/bottle-builder','brand','fonts','media-releases']
 for name in publicFolders:
     source=root/'public'/name
     if source.exists():shutil.copytree(source,stage/'public'/name)
@@ -54,7 +54,7 @@ for url in paths:
         dest=stage/'public'/url.lstrip('/');dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(f,dest)
 config=json.loads((root/'vercel.json').read_text());config.pop('crons',None)
 (stage/'vercel.json').write_text(json.dumps(config,indent=2)+'\n')
-(stage/'.vercelignore').write_text('node_modules/\n.next/\n.vercel/\n.env*\n')
+(stage/'.vercelignore').write_text('node_modules/\n.next/\n.vercel/\n.env*\n*.tsbuildinfo\n')
 files={str(p.relative_to(stage)):hashlib.sha256(p.read_bytes()).hexdigest() for p in stage.rglob('*') if p.is_file()}
 receipt={'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'files':files,'count':len(files),'bytes':sum((stage/p).stat().st_size for p in files),'adjustments':['No Vercel crons in the isolated preview','Only scoped media and interface assets copied','Build-time data imports retained; local review data and tests excluded']}
 (root/'docs/reviews/isolated-preview-deployment-2026-10-20/frontend-package.json').write_text(json.dumps(receipt,indent=2)+'\n')

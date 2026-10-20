@@ -27,7 +27,7 @@ async function request(path, options = {}) {
 async function json(path, options) {
   const res = await request(path, options);
   const text = await res.text();
-  assert.equal(res.status, 200, `${path}: ${res.status} ${text.slice(0, 200)}`);
+  assert.equal(res.status, 200, `${path}: ${res.status} ${text.slice(0, 200)}${options?.body ? ` request=${options.body}` : ''}`);
   return { data: JSON.parse(text), cache: res.headers.get('x-vercel-cache'), revision: res.headers.get('x-bb-media-revision') };
 }
 (async () => {
@@ -64,7 +64,7 @@ async function json(path, options) {
         });
         assert.equal(validated.data.configuration.id, config.id);
         assert.equal(validated.data.configuration.product.shopifyVariantId, entry.hero.shopifyVariantId);
-        report.variants.push({ sku: config.id, released, identityValidated: true, parts: kit.parts.map(p => ({ slot: p.slot, url: p.image.url })) });
+        report.variants.push({ sku: config.id, family, bodyId, capacityMl: config.capacityMl, neck: config.neck, color: config.color, fitment: config.fitment, closure: config.closure, released, identityValidated: true, parts: kit.parts.map(p => ({ slot: p.slot, url: p.image.url })) });
       }
     }
   }

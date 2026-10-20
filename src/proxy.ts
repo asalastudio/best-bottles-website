@@ -90,7 +90,9 @@ export default async function proxy(req: NextRequest, event: NextFetchEvent) {
 
     // Clerk validates its keys before invoking our callback. Honor the explicit
     // disabled mode before entering its middleware so isolated previews need no live credentials.
-    const clerkRes = CLERK_ENABLED ? await clerk(req, event) : NextResponse.next();
+    const clerkRes = CLERK_ENABLED ? await clerk(req, event) : NextResponse.next({
+        request: { headers: requestHeaders },
+    });
     if (clerkRes && clerkRes.status >= 300 && clerkRes.status < 400) {
         return clerkRes;
     }
