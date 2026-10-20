@@ -1,3 +1,4 @@
+import { mediaRevision } from "../media-release/release";
 import "server-only";
 import { unstable_cache } from "next/cache";
 import type { ConvexHttpClient } from "convex/browser";
@@ -46,7 +47,7 @@ export const loadBuilderFamily = unstable_cache(async (family: string) => {
     const data = await familyRows(family);
     if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${family}`);
     return slimBuilderBodies(await loadBuilderBodies(data.rows, { strictRegister: true }));
-}, ["bottle-builder-family-chooser-v7-elegant-photo"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-family-chooser-v7-elegant-photo", mediaRevision()], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 /** The cached family. When the cache has no entry to fall back on (a new key, an
  * eviction) and the register lookup fails, this one request builds the family
@@ -84,7 +85,7 @@ export const loadBuilderFamilies = unstable_cache(async () => {
         }
     }));
     return available.filter(family => family !== null);
-}, ["bottle-builder-families-bare-v8-tall9-caps"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-families-bare-v8-tall9-caps", mediaRevision()], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 /** `strictRegister`: a failed register lookup throws instead of drawing the
  * published kits. Every cached caller sets it, so a Convex hiccup leaves the
@@ -141,7 +142,7 @@ const cachedBodyKits = unstable_cache(async (pairs: Array<[string, string | null
         kits[websiteSku] = loaded.get(websiteSku) ?? (graceSku ? loaded.get(graceSku) : undefined) ?? null;
     }
     return kits;
-}, ["bottle-builder-body-kits-v5-elegant-photo-hardware"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-body-kits-v5-elegant-photo-hardware", mediaRevision()], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 export async function loadBuilderBodyKits(family: string, bodyId: string) {
     if (!family || family.length > 100 || !bodyId || bodyId.length > 200) return {};

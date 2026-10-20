@@ -10,6 +10,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { ArrowLeft, ArrowRight, Check, CheckCircle, Minus, Plus, ShieldCheck, SlidersHorizontal, ShoppingBag } from "@/components/icons";
 import { useCart } from "@/components/CartProvider";
 import { useBuilderFamilies } from "@/components/bottle-builder/useBuilderFamilies";
+import { useMediaRevisionMismatch } from "@/components/bottle-builder/media-revision-notice";
 import { useBuilderKits } from "@/components/bottle-builder/useBuilderKits";
 import { useBuilderBodyConfigurations } from "@/components/bottle-builder/useBuilderBodyConfigurations";
 import { prefetchBody } from "@/components/bottle-builder/builder-requests";
@@ -99,6 +100,7 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
     const chooser = useBuilderBodyConfigurations(openFamily, initialBodies, selection.bodyId, searchParams.get("shop"));
     // A tile about to be picked starts its configurations and kit layers, so the pick finds them in flight.
     const prefetchBottle = (bodyId: string) => prefetchBody(openFamily, bodyId, searchParams.get("shop"));
+    const mediaNeedsRefresh = useMediaRevisionMismatch();
     const bodies = useBuilderKits(openFamily, chooser.bodies, selection.bodyId);
     const [step, setStep] = useState(0);
     const isMobile = useSyncExternalStore(subscribeMobile, mobileSnapshot, serverMobileSnapshot(preferMobile));
@@ -288,6 +290,12 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
         </button> : <button className={styles.primary} disabled={!order.canAdd || adding || !isCartHydrated} onClick={addToCart}>
             {adding ? "Checking your bottle…" : "Add to Cart"} {!adding && <ShoppingBag size={17} />}
         </button>;
+
+    if (mediaNeedsRefresh) return <section role="alert" className="mx-auto max-w-xl p-8">
+        <h2 className="text-xl">The bottle images have been updated.</h2>
+        <p className="my-4">Refresh to load the current images and continue building your bottle.</p>
+        <button className={styles.primary} onClick={() => window.location.reload()}>Refresh bottle builder</button>
+    </section>;
 
     if (isMobile) return <MobileBuilder familyNotice={familyNotice} families={families} family={openFamily} bodies={bodies}
         selection={selection} current={current} order={order} stage={step} onStage={next => { setStep(next); setError(""); }} priceRange={priceRange}

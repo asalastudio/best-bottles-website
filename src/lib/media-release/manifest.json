@@ -1,0 +1,849 @@
+{
+  "revision": "empire-round26-03baed749353",
+  "defaultMode": "off",
+  "productionApproved": false,
+  "entries": [
+    {
+      "websiteSku": "GBEmp100SpryMtGl",
+      "graceSku": "GB-EMP-CLR-100ML-SPR-MGLD",
+      "stage": "canary",
+      "hero": {
+        "groupSlug": "empire-100ml-clear-18-415-perfumespray",
+        "websiteSku": "GBEmp100SpryMtGl",
+        "graceSku": "GB-EMP-CLR-100ML-SPR-MGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343651037476",
+        "family": "Empire",
+        "capacityMl": 100,
+        "bottleColor": "Clear",
+        "url": "/media-releases/empire-round26-03baed749353/f288887aedc8337bfcdbf6357396f37e17259cdd9ece7d9bf2d9b68dd8ae2ada.png",
+        "alt": "100 ml Clear Empire bottle with Matte Gold sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png",
+        "width": 871,
+        "height": 1806
+      },
+      "approvedAssemblySha256": "927d4a63e71156dafb9d7ba6c9f19d452416fd362e5014dc6ea22a25cb7e4cdc"
+    },
+    {
+      "websiteSku": "GBEmp50SpryMtGl",
+      "graceSku": "GB-EMP-CLR-50ML-SPR-MGLD",
+      "stage": "canary",
+      "hero": {
+        "groupSlug": "empire-50ml-clear-18-415-perfumespray",
+        "websiteSku": "GBEmp50SpryMtGl",
+        "graceSku": "GB-EMP-CLR-50ML-SPR-MGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343635865892",
+        "family": "Empire",
+        "capacityMl": 50,
+        "bottleColor": "Clear",
+        "url": "/media-releases/empire-round26-03baed749353/7580022c995036c9626d1fdba70105775b77dfc1e3149703b6be223e662584ea.png",
+        "alt": "50 ml Clear Empire bottle with Matte Gold sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png",
+        "width": 871,
+        "height": 1806
+      },
+      "approvedAssemblySha256": "ffe64c1fccb55028a75a97ca52b0e39d8a7c975ae6690d497eddd34ce7b95c3e"
+    },
+    {
+      "websiteSku": "GBEmp100SpryCu",
+      "graceSku": "GB-EMP-CLR-100ML-SPR-CPR",
+      "stage": "empire",
+      "hero": {
+        "groupSlug": "empire-100ml-clear-18-415-perfumespray",
+        "websiteSku": "GBEmp100SpryCu",
+        "graceSku": "GB-EMP-CLR-100ML-SPR-CPR",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343651004708",
+        "family": "Empire",
+        "capacityMl": 100,
+        "bottleColor": "Clear",
+        "url": "/media-releases/empire-round26-03baed749353/3fe8c5f88a2ac160f1f1dc9524054e271a489f4b2d505ca0cc6f3adbc67a9e11.png",
+        "alt": "100 ml Clear Empire bottle with Copper sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png",
+        "width": 871,
+        "height": 1806
+      },
+      "approvedAssemblySha256": "ea1b4d2ee7852c19c1631b9098685b9de2778337077a4dea7b63332b0b537548"
+    },
+    {
+      "websiteSku": "GBEmp100SpryMtSl",
+      "graceSku": "GB-EMP-CLR-100ML-SPR-MSLV",
+      "stage": "empire",
+      "hero": {
+        "groupSlug": "empire-100ml-clear-18-415-perfumespray",
+        "websiteSku": "GBEmp100SpryMtSl",
+        "graceSku": "GB-EMP-CLR-100ML-SPR-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343651135780",
+        "family": "Empire",
+        "capacityMl": 100,
+        "bottleColor": "Clear",
+        "url": "/media-releases/empire-round26-03baed749353/4fcfba3540fbf6666c33b95f9839b5995439aaebde865120318d11521345d019.png",
+        "alt": "100 ml Clear Empire bottle with Matte Silver sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png",
+        "width": 871,
+        "height": 1806
+      },
+      "approvedAssemblySha256": "3987e418f2649630a579d582e73ca896bb61986bba25a5d5f672962432439df1"
+    },
+    {
+      "websiteSku": "GBEmp100SpryShnBlk",
+      "graceSku": "GB-EMP-CLR-100ML-SPR-SBLK",
+      "stage": "empire",
+      "hero": {
+        "groupSlug": "empire-100ml-clear-18-415-perfumespray",
+        "websiteSku": "GBEmp100SpryShnBlk",
+        "graceSku": "GB-EMP-CLR-100ML-SPR-SBLK",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343651103012",
+        "family": "Empire",
+        "capacityMl": 100,
+        "bottleColor": "Clear",
+        "url": "/media-releases/empire-round26-03baed749353/9fbc969f99e189bcc5c55b5e50a9de2e2ffb45329de596c22cb63af341626591.png",
+        "alt": "100 ml Clear Empire bottle with Shiny Black sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png",
+        "width": 871,
+        "height": 1806
+      },
+      "approvedAssemblySha256": "3d23268a44decb83b766c46b53177d2ef40cfed420ac7c53288ff8978d5ffa01"
+    },
+    {
+      "websiteSku": "GBEmp100SpryShnGl",
+      "graceSku": "GB-EMP-CLR-100ML-SPR-SGLD",
+      "stage": "empire",
+      "hero": {
+        "groupSlug": "empire-100ml-clear-18-415-perfumespray",
+        "websiteSku": "GBEmp100SpryShnGl",
+        "graceSku": "GB-EMP-CLR-100ML-SPR-SGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343651070244",
+        "family": "Empire",
+        "capacityMl": 100,
+        "bottleColor": "Clear",
+        "url": "/media-releases/empire-round26-03baed749353/87fa84ab124966d779467bf47bbef4dbed22fbd540108b7fc1f377dc1c90085b.png",
+        "alt": "100 ml Clear Empire bottle with Shiny Gold sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png",
+        "width": 871,
+        "height": 1806
+      },
+      "approvedAssemblySha256": "a5113c572d330e6d40156b9257fa71c5c870af4756e1c61246702d6c91ed2f8e"
+    },
+    {
+      "websiteSku": "GBEmp100SpryShnSl",
+      "graceSku": "GB-EMP-CLR-100ML-SPR-SSLV",
+      "stage": "empire",
+      "hero": {
+        "groupSlug": "empire-100ml-clear-18-415-perfumespray",
+        "websiteSku": "GBEmp100SpryShnSl",
+        "graceSku": "GB-EMP-CLR-100ML-SPR-SSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343651168548",
+        "family": "Empire",
+        "capacityMl": 100,
+        "bottleColor": "Clear",
+        "url": "/media-releases/empire-round26-03baed749353/b102e2ecee7c6ad55097bf8051e11596a38afd5cfe035a58a5d365bfb639a979.png",
+        "alt": "100 ml Clear Empire bottle with Shiny Silver sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png",
+        "width": 871,
+        "height": 1806
+      },
+      "approvedAssemblySha256": "60d291fc6d239ecbec0efd1819d78aa4cf3808f8d8faf4907b7ad7caff4f7a37"
+    },
+    {
+      "websiteSku": "GBEmp50SpryCu",
+      "graceSku": "GB-EMP-CLR-50ML-SPR-CPR",
+      "stage": "empire",
+      "hero": {
+        "groupSlug": "empire-50ml-clear-18-415-perfumespray",
+        "websiteSku": "GBEmp50SpryCu",
+        "graceSku": "GB-EMP-CLR-50ML-SPR-CPR",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343635898660",
+        "family": "Empire",
+        "capacityMl": 50,
+        "bottleColor": "Clear",
+        "url": "/media-releases/empire-round26-03baed749353/a493cba8116e830d1b1ea2659003b15d0734e503b1f97eb73fe5dca6cb5ec838.png",
+        "alt": "50 ml Clear Empire bottle with Copper sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png",
+        "width": 871,
+        "height": 1806
+      },
+      "approvedAssemblySha256": "51c0a550868ec2764868c5ad1f37ba9135de9b21b84282ff6578b977df225af1"
+    },
+    {
+      "websiteSku": "GBEmp50SpryMtSl",
+      "graceSku": "GB-EMP-CLR-50ML-SPR-MSLV",
+      "stage": "empire",
+      "hero": {
+        "groupSlug": "empire-50ml-clear-18-415-perfumespray",
+        "websiteSku": "GBEmp50SpryMtSl",
+        "graceSku": "GB-EMP-CLR-50ML-SPR-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343635734820",
+        "family": "Empire",
+        "capacityMl": 50,
+        "bottleColor": "Clear",
+        "url": "/media-releases/empire-round26-03baed749353/5cbe4f3825ba839fd94cd3c38240dd0bac7ef939579f4f96df6dc06d74ae6286.png",
+        "alt": "50 ml Clear Empire bottle with Matte Silver sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png",
+        "width": 871,
+        "height": 1806
+      },
+      "approvedAssemblySha256": "f9f1f158288fb6b7ad4a7f3b0f80bc0f51f75690d318375150905c501d9e7b46"
+    },
+    {
+      "websiteSku": "GBEmp50SpryShnBlk",
+      "graceSku": "GB-EMP-CLR-50ML-SPR-SBLK",
+      "stage": "empire",
+      "hero": {
+        "groupSlug": "empire-50ml-clear-18-415-perfumespray",
+        "websiteSku": "GBEmp50SpryShnBlk",
+        "graceSku": "GB-EMP-CLR-50ML-SPR-SBLK",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343635833124",
+        "family": "Empire",
+        "capacityMl": 50,
+        "bottleColor": "Clear",
+        "url": "/media-releases/empire-round26-03baed749353/713b9d68412fb0846de7ee68c0a1f84d1138efb62c73777b057a5b40a99a4fb6.png",
+        "alt": "50 ml Clear Empire bottle with Shiny Black sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png",
+        "width": 871,
+        "height": 1806
+      },
+      "approvedAssemblySha256": "0ce8ed1a8486a98a1d8c9e0d7df63590caacd770cf7fdf350351f221bf1315de"
+    },
+    {
+      "websiteSku": "GBEmp50SpryShnGl",
+      "graceSku": "GB-EMP-CLR-50ML-SPR-SGLD",
+      "stage": "empire",
+      "hero": {
+        "groupSlug": "empire-50ml-clear-18-415-perfumespray",
+        "websiteSku": "GBEmp50SpryShnGl",
+        "graceSku": "GB-EMP-CLR-50ML-SPR-SGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343635800356",
+        "family": "Empire",
+        "capacityMl": 50,
+        "bottleColor": "Clear",
+        "url": "/media-releases/empire-round26-03baed749353/8c00a2f63c652c86b85e48080e55cd1e8d4b6670d09a9d9fa753eaab77e6d084.png",
+        "alt": "50 ml Clear Empire bottle with Shiny Gold sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png",
+        "width": 871,
+        "height": 1806
+      },
+      "approvedAssemblySha256": "2850169efe41a5198c8ddf63e259cb48a661965bd7c232127c04d0f2d45d0603"
+    },
+    {
+      "websiteSku": "GBEmp50SpryShnSl",
+      "graceSku": "GB-EMP-CLR-50ML-SPR-SSLV",
+      "stage": "empire",
+      "hero": {
+        "groupSlug": "empire-50ml-clear-18-415-perfumespray",
+        "websiteSku": "GBEmp50SpryShnSl",
+        "graceSku": "GB-EMP-CLR-50ML-SPR-SSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343635767588",
+        "family": "Empire",
+        "capacityMl": 50,
+        "bottleColor": "Clear",
+        "url": "/media-releases/empire-round26-03baed749353/63eefb85885225425daa74a073b6ee06389598128ca17440a8c9c771f4fcce43.png",
+        "alt": "50 ml Clear Empire bottle with Shiny Silver sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png",
+        "width": 871,
+        "height": 1806
+      },
+      "approvedAssemblySha256": "5e85f169438afc00874fa40b5cb8c96a8737aec3a29c4fc12e2be82c91341b7d"
+    },
+    {
+      "websiteSku": "LBEmp100WhtClOvrCp",
+      "graceSku": "LB-EMP-CLR-100ML-LPM-OVCP-T",
+      "stage": "empire",
+      "hero": {
+        "groupSlug": "empire-100ml-clear-18-415-lotionpump",
+        "websiteSku": "LBEmp100WhtClOvrCp",
+        "graceSku": "LB-EMP-CLR-100ML-LPM-OVCP-T",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343612633380",
+        "family": "Empire",
+        "capacityMl": 100,
+        "bottleColor": "Clear",
+        "url": "/media-releases/empire-round26-03baed749353/6c0335cd32e4d4b3f45e504e7686f148ab13de12bc5ecf7df8aa37be3495df7c.png",
+        "alt": "100 ml Clear Empire bottle with White pump with clear overcap and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png",
+        "width": 871,
+        "height": 1806
+      },
+      "approvedAssemblySha256": "b0c0d59d0dec1320161b2a3ba429e594e80686aaf3c62055b90671e580453d24"
+    },
+    {
+      "websiteSku": "LBEmp50WhtClOvrCp",
+      "graceSku": "LB-EMP-CLR-50ML-LPM-OVCP-T",
+      "stage": "empire",
+      "hero": {
+        "groupSlug": "empire-50ml-clear-18-415-lotionpump",
+        "websiteSku": "LBEmp50WhtClOvrCp",
+        "graceSku": "LB-EMP-CLR-50ML-LPM-OVCP-T",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343690916132",
+        "family": "Empire",
+        "capacityMl": 50,
+        "bottleColor": "Clear",
+        "url": "/media-releases/empire-round26-03baed749353/0c9c203d4591e29fc94fc34a43d9dd629a894b1026b406c790ca3246f544c4fe.png",
+        "alt": "50 ml Clear Empire bottle with White pump with clear overcap and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png",
+        "width": 871,
+        "height": 1806
+      },
+      "approvedAssemblySha256": "ec73823c9871dc678d0774c391bcf064c6b0ac82644b9e42031b014527243b6c"
+    },
+    {
+      "websiteSku": "GBRnd78SpryCu",
+      "graceSku": "GB-RND-CLR-78ML-SPR-CPR",
+      "stage": "round",
+      "hero": {
+        "groupSlug": "round-78ml-clear-18-415-perfumespray",
+        "websiteSku": "GBRnd78SpryCu",
+        "graceSku": "GB-RND-CLR-78ML-SPR-CPR",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343646482724",
+        "family": "Round",
+        "capacityMl": 78,
+        "bottleColor": "Clear",
+        "url": "/media-releases/empire-round26-03baed749353/fc78436ff5db33076675e83914319c881ed305b0f523be2f6d4f827d8f1870b8.png",
+        "alt": "78 ml Clear Round bottle with Copper sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf.png",
+        "width": 1840,
+        "height": 2192
+      },
+      "approvedAssemblySha256": "64d81b3ad76bb27630d99de33f92ce976ce39cb557f665849527adf422601e1b"
+    },
+    {
+      "websiteSku": "GBRnd78SpryMtGl",
+      "graceSku": "GB-RND-CLR-78ML-SPR-MGLD",
+      "stage": "round",
+      "hero": {
+        "groupSlug": "round-78ml-clear-18-415-perfumespray",
+        "websiteSku": "GBRnd78SpryMtGl",
+        "graceSku": "GB-RND-CLR-78ML-SPR-MGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343646515492",
+        "family": "Round",
+        "capacityMl": 78,
+        "bottleColor": "Clear",
+        "url": "/media-releases/empire-round26-03baed749353/515bdef76e64df516b1562d3cc9cc1d4d33c591366e1398db8775a1093b3b1d6.png",
+        "alt": "78 ml Clear Round bottle with Matte Gold sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf.png",
+        "width": 1840,
+        "height": 2192
+      },
+      "approvedAssemblySha256": "85af9c3f829c052e66128110e762f6aed8e5bd03cc3dfdf968436f515517cbad"
+    },
+    {
+      "websiteSku": "GBRnd78SpryMtSl",
+      "graceSku": "GB-RND-CLR-78ML-SPR-MSLV",
+      "stage": "round",
+      "hero": {
+        "groupSlug": "round-78ml-clear-18-415-perfumespray",
+        "websiteSku": "GBRnd78SpryMtSl",
+        "graceSku": "GB-RND-CLR-78ML-SPR-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343646548260",
+        "family": "Round",
+        "capacityMl": 78,
+        "bottleColor": "Clear",
+        "url": "/media-releases/empire-round26-03baed749353/89e992101be2d23eb61a895b37998cacb18c2cd7e4e2ea674db96f24d5af6df0.png",
+        "alt": "78 ml Clear Round bottle with Matte Silver sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf.png",
+        "width": 1840,
+        "height": 2192
+      },
+      "approvedAssemblySha256": "0f1458ad4d0758f5a688893c2edd981df99318f9dcd72b3fb5ffa90166987ff8"
+    },
+    {
+      "websiteSku": "GBRnd78SpryShnBlk",
+      "graceSku": "GB-RND-CLR-78ML-SPR-SBLK",
+      "stage": "round",
+      "hero": {
+        "groupSlug": "round-78ml-clear-18-415-perfumespray",
+        "websiteSku": "GBRnd78SpryShnBlk",
+        "graceSku": "GB-RND-CLR-78ML-SPR-SBLK",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343646613796",
+        "family": "Round",
+        "capacityMl": 78,
+        "bottleColor": "Clear",
+        "url": "/media-releases/empire-round26-03baed749353/bba51de97217751f2e441630cafaa0207999d867bcf4403d1d55382a8afa0275.png",
+        "alt": "78 ml Clear Round bottle with Shiny Black sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf.png",
+        "width": 1840,
+        "height": 2192
+      },
+      "approvedAssemblySha256": "15186f9c600c9d5783f350a60632a3e6b95329096649c66a8684f0617f50ea24"
+    },
+    {
+      "websiteSku": "GBRnd78SpryShnGl",
+      "graceSku": "GB-RND-CLR-78ML-SPR-SGLD",
+      "stage": "round",
+      "hero": {
+        "groupSlug": "round-78ml-clear-18-415-perfumespray",
+        "websiteSku": "GBRnd78SpryShnGl",
+        "graceSku": "GB-RND-CLR-78ML-SPR-SGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343646581028",
+        "family": "Round",
+        "capacityMl": 78,
+        "bottleColor": "Clear",
+        "url": "/media-releases/empire-round26-03baed749353/158384c42a2e4d6adceed230697445cb0bf41a9956cd1b3833bbf12f44f2efa3.png",
+        "alt": "78 ml Clear Round bottle with Shiny Gold sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf.png",
+        "width": 1840,
+        "height": 2192
+      },
+      "approvedAssemblySha256": "973377a1f224d73b4d39ac5fc8babd4b2640ca91072a40820fb0dbae52f8b921"
+    },
+    {
+      "websiteSku": "GBRnd78SpryShnSl",
+      "graceSku": "GB-RND-CLR-78ML-SPR-SSLV",
+      "stage": "round",
+      "hero": {
+        "groupSlug": "round-78ml-clear-18-415-perfumespray",
+        "websiteSku": "GBRnd78SpryShnSl",
+        "graceSku": "GB-RND-CLR-78ML-SPR-SSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343646646564",
+        "family": "Round",
+        "capacityMl": 78,
+        "bottleColor": "Clear",
+        "url": "/media-releases/empire-round26-03baed749353/dfbc0784912aed51ea448fc2e0853dbf809a4b5eada0babcd32c051ab6efcbcb.png",
+        "alt": "78 ml Clear Round bottle with Shiny Silver sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf.png",
+        "width": 1840,
+        "height": 2192
+      },
+      "approvedAssemblySha256": "698c97a500bc60397eb557bfece72f3e6fe4a8ad58a033d57a20b46d4b8fe724"
+    },
+    {
+      "websiteSku": "GBRndFrst78SpryCu",
+      "graceSku": "GB-RND-FRS-78ML-SPR-CPR",
+      "stage": "round",
+      "hero": {
+        "groupSlug": "round-78ml-frosted-18-415-perfumespray",
+        "websiteSku": "GBRndFrst78SpryCu",
+        "graceSku": "GB-RND-FRS-78ML-SPR-CPR",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343647105316",
+        "family": "Round",
+        "capacityMl": 78,
+        "bottleColor": "Frosted",
+        "url": "/media-releases/empire-round26-03baed749353/ffbf828bbdaafed94b484ce4be95293b193287d47b8038ad41374974ae4c3254.png",
+        "alt": "78 ml Frosted Round bottle with Copper sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png",
+        "width": 1840,
+        "height": 2192
+      },
+      "approvedAssemblySha256": "ab78e639e021758bbf5196411553d3f5c52d070ac93edebb6c93a2c35f3acef2"
+    },
+    {
+      "websiteSku": "GBRndFrst78SpryMtGl",
+      "graceSku": "GB-RND-FRS-78ML-SPR-MGLD",
+      "stage": "round",
+      "hero": {
+        "groupSlug": "round-78ml-frosted-18-415-perfumespray",
+        "websiteSku": "GBRndFrst78SpryMtGl",
+        "graceSku": "GB-RND-FRS-78ML-SPR-MGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343647269156",
+        "family": "Round",
+        "capacityMl": 78,
+        "bottleColor": "Frosted",
+        "url": "/media-releases/empire-round26-03baed749353/9cc726a91ca4753a0f0b3a2fbb16807f9d1413b711403343853907e767ec0265.png",
+        "alt": "78 ml Frosted Round bottle with Matte Gold sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png",
+        "width": 1840,
+        "height": 2192
+      },
+      "approvedAssemblySha256": "38f032f9675260fc2ab592c1b1026ab5f91d4dccf652c09bc7404325c3fd9c43"
+    },
+    {
+      "websiteSku": "GBRndFrst78SpryMtSl",
+      "graceSku": "GB-RND-FRS-78ML-SPR-MSLV",
+      "stage": "round",
+      "hero": {
+        "groupSlug": "round-78ml-frosted-18-415-perfumespray",
+        "websiteSku": "GBRndFrst78SpryMtSl",
+        "graceSku": "GB-RND-FRS-78ML-SPR-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343647170852",
+        "family": "Round",
+        "capacityMl": 78,
+        "bottleColor": "Frosted",
+        "url": "/media-releases/empire-round26-03baed749353/b378bdef422fb899cc41544aa39fa62e47658e2779feb2fc1375d088155f96ef.png",
+        "alt": "78 ml Frosted Round bottle with Matte Silver sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png",
+        "width": 1840,
+        "height": 2192
+      },
+      "approvedAssemblySha256": "ba7da87afb27cd33c3531867c79805bd273fd174855d33e4f63c62fc4f37744b"
+    },
+    {
+      "websiteSku": "GBRndFrst78SpryShnBlk",
+      "graceSku": "GB-RND-FRS-78ML-SPR-SBLK",
+      "stage": "round",
+      "hero": {
+        "groupSlug": "round-78ml-frosted-18-415-perfumespray",
+        "websiteSku": "GBRndFrst78SpryShnBlk",
+        "graceSku": "GB-RND-FRS-78ML-SPR-SBLK",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343647236388",
+        "family": "Round",
+        "capacityMl": 78,
+        "bottleColor": "Frosted",
+        "url": "/media-releases/empire-round26-03baed749353/5689174dc313d7c1baab7b61a9b9d692cd9c376b0432f7299ad3f1bfc56ba949.png",
+        "alt": "78 ml Frosted Round bottle with Shiny Black sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png",
+        "width": 1840,
+        "height": 2192
+      },
+      "approvedAssemblySha256": "6637704fbcfc97ca5c8e7b94f86b8f0681ea8a40a70d1e4e3db9dc9fb9e5ac7b"
+    },
+    {
+      "websiteSku": "GBRndFrst78SpryShnGl",
+      "graceSku": "GB-RND-FRS-78ML-SPR-SGLD",
+      "stage": "round",
+      "hero": {
+        "groupSlug": "round-78ml-frosted-18-415-perfumespray",
+        "websiteSku": "GBRndFrst78SpryShnGl",
+        "graceSku": "GB-RND-FRS-78ML-SPR-SGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343647138084",
+        "family": "Round",
+        "capacityMl": 78,
+        "bottleColor": "Frosted",
+        "url": "/media-releases/empire-round26-03baed749353/299f3bc1227ab863fd4e443612b280ab00c4c7cdf575aee5d4f0820772cdeda7.png",
+        "alt": "78 ml Frosted Round bottle with Shiny Gold sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png",
+        "width": 1840,
+        "height": 2192
+      },
+      "approvedAssemblySha256": "82f10145e5567c9b04292c613211fc83dc3b720dcba936f842b4fc20c3171ff3"
+    },
+    {
+      "websiteSku": "GBRndFrst78SpryShnSl",
+      "graceSku": "GB-RND-FRS-78ML-SPR-SSLV",
+      "stage": "round",
+      "hero": {
+        "groupSlug": "round-78ml-frosted-18-415-perfumespray",
+        "websiteSku": "GBRndFrst78SpryShnSl",
+        "graceSku": "GB-RND-FRS-78ML-SPR-SSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343647203620",
+        "family": "Round",
+        "capacityMl": 78,
+        "bottleColor": "Frosted",
+        "url": "/media-releases/empire-round26-03baed749353/f000bbc5ba6beba0914dcaeb9c3ec8d91a7c7f20e7de03644d9f00c79c243b68.png",
+        "alt": "78 ml Frosted Round bottle with Shiny Silver sprayer and overcap beside",
+        "width": 1200,
+        "height": 1320,
+        "presentation": "Empty · cap beside",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "bodyImage": {
+        "url": "/media-releases/empire-round26-03baed749353/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png",
+        "width": 1840,
+        "height": 2192
+      },
+      "approvedAssemblySha256": "b02371ee0f46e3880d043a66f12ec971a270536dd67e05fb17dfd3d561dbe05a"
+    }
+  ],
+  "assetMap": {
+    "/local-media/empire-bare-glass/GBEmp100SpryCu-native-tube.940914eda692.png": "/media-releases/empire-round26-03baed749353/940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd.png",
+    "/local-media/empire-bare-glass/GBEmp100SpryCu-shared-catalog.3fe8c5f88a2a.png": "/media-releases/empire-round26-03baed749353/3fe8c5f88a2ac160f1f1dc9524054e271a489f4b2d505ca0cc6f3adbc67a9e11.png",
+    "/local-media/empire-bare-glass/GBEmp100SpryMtGl-shared-catalog.f288887aedc8.png": "/media-releases/empire-round26-03baed749353/f288887aedc8337bfcdbf6357396f37e17259cdd9ece7d9bf2d9b68dd8ae2ada.png",
+    "/local-media/empire-bare-glass/GBEmp100SpryMtSl-native-tube.6880c1c5e262.png": "/media-releases/empire-round26-03baed749353/6880c1c5e26265666c258d02c493d09c10547fe8848aa792c6f82a1d9380927c.png",
+    "/local-media/empire-bare-glass/GBEmp100SpryMtSl-shared-catalog.4fcfba3540fb.png": "/media-releases/empire-round26-03baed749353/4fcfba3540fbf6666c33b95f9839b5995439aaebde865120318d11521345d019.png",
+    "/local-media/empire-bare-glass/GBEmp100SpryShnBlk-native-tube.940914eda692.png": "/media-releases/empire-round26-03baed749353/940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd.png",
+    "/local-media/empire-bare-glass/GBEmp100SpryShnBlk-shared-catalog.9fbc969f99e1.png": "/media-releases/empire-round26-03baed749353/9fbc969f99e189bcc5c55b5e50a9de2e2ffb45329de596c22cb63af341626591.png",
+    "/local-media/empire-bare-glass/GBEmp100SpryShnGl-native-tube.220a0365f812.png": "/media-releases/empire-round26-03baed749353/220a0365f812852ed6b04122635c405a296d4086f744ebb9fa5e8e87ead39909.png",
+    "/local-media/empire-bare-glass/GBEmp100SpryShnGl-shared-catalog.87fa84ab1249.png": "/media-releases/empire-round26-03baed749353/87fa84ab124966d779467bf47bbef4dbed22fbd540108b7fc1f377dc1c90085b.png",
+    "/local-media/empire-bare-glass/GBEmp100SpryShnSl-native-tube.940914eda692.png": "/media-releases/empire-round26-03baed749353/940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd.png",
+    "/local-media/empire-bare-glass/GBEmp100SpryShnSl-shared-catalog.b102e2ecee7c.png": "/media-releases/empire-round26-03baed749353/b102e2ecee7c6ad55097bf8051e11596a38afd5cfe035a58a5d365bfb639a979.png",
+    "/local-media/empire-bare-glass/GBEmp50SpryCu-native-tube.abd1dd749986.png": "/media-releases/empire-round26-03baed749353/abd1dd749986c006f412ebfc4f6cec3847b800dc1898021b494f29583665cb37.png",
+    "/local-media/empire-bare-glass/GBEmp50SpryCu-shared-catalog.a493cba8116e.png": "/media-releases/empire-round26-03baed749353/a493cba8116e830d1b1ea2659003b15d0734e503b1f97eb73fe5dca6cb5ec838.png",
+    "/local-media/empire-bare-glass/GBEmp50SpryMtGl-shared-catalog.7580022c9950.png": "/media-releases/empire-round26-03baed749353/7580022c995036c9626d1fdba70105775b77dfc1e3149703b6be223e662584ea.png",
+    "/local-media/empire-bare-glass/GBEmp50SpryMtSl-native-tube.bf29cf892dca.png": "/media-releases/empire-round26-03baed749353/bf29cf892dca0895bb25b16fa775d02765c6e6e5d6382dbdb8e426208cab986a.png",
+    "/local-media/empire-bare-glass/GBEmp50SpryMtSl-shared-catalog.5cbe4f3825ba.png": "/media-releases/empire-round26-03baed749353/5cbe4f3825ba839fd94cd3c38240dd0bac7ef939579f4f96df6dc06d74ae6286.png",
+    "/local-media/empire-bare-glass/GBEmp50SpryShnBlk-native-tube.951ca106760f.png": "/media-releases/empire-round26-03baed749353/951ca106760f2b34381c4ea32452423e7632c12293def5e1d27c2b5bf79c4167.png",
+    "/local-media/empire-bare-glass/GBEmp50SpryShnBlk-shared-catalog.713b9d68412f.png": "/media-releases/empire-round26-03baed749353/713b9d68412fb0846de7ee68c0a1f84d1138efb62c73777b057a5b40a99a4fb6.png",
+    "/local-media/empire-bare-glass/GBEmp50SpryShnGl-native-tube.63ca6264b0f1.png": "/media-releases/empire-round26-03baed749353/63ca6264b0f11daeace215730ff5ef425e451bc83e531f85a52e11890f013edc.png",
+    "/local-media/empire-bare-glass/GBEmp50SpryShnGl-shared-catalog.8c00a2f63c65.png": "/media-releases/empire-round26-03baed749353/8c00a2f63c652c86b85e48080e55cd1e8d4b6670d09a9d9fa753eaab77e6d084.png",
+    "/local-media/empire-bare-glass/GBEmp50SpryShnSl-native-tube.63ca6264b0f1.png": "/media-releases/empire-round26-03baed749353/63ca6264b0f11daeace215730ff5ef425e451bc83e531f85a52e11890f013edc.png",
+    "/local-media/empire-bare-glass/GBEmp50SpryShnSl-shared-catalog.63eefb858852.png": "/media-releases/empire-round26-03baed749353/63eefb85885225425daa74a073b6ee06389598128ca17440a8c9c771f4fcce43.png",
+    "/local-media/empire-bare-glass/LBEmp100WhtClOvrCp-native-tube.d8ba369f9439.png": "/media-releases/empire-round26-03baed749353/d8ba369f94392fd2b5d8b02d4f6718acf5926f084b92a6e518b9f0970e7b5396.png",
+    "/local-media/empire-bare-glass/LBEmp100WhtClOvrCp-shared-catalog.6c0335cd32e4.png": "/media-releases/empire-round26-03baed749353/6c0335cd32e4d4b3f45e504e7686f148ab13de12bc5ecf7df8aa37be3495df7c.png",
+    "/local-media/empire-bare-glass/LBEmp50WhtClOvrCp-shared-catalog.0c9c203d4591.png": "/media-releases/empire-round26-03baed749353/0c9c203d4591e29fc94fc34a43d9dd629a894b1026b406c790ca3246f544c4fe.png",
+    "/local-media/empire-bare-glass/empire-100ml-107x46.1abdf390058c.png": "/media-releases/empire-round26-03baed749353/1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f.png",
+    "/local-media/empire-bare-glass/empire-100ml-native-spray-tube.883a216fc61f.png": "/media-releases/empire-round26-03baed749353/883a216fc61f92a2ec8371eea59aa547b4db841240c8b2296cc505d8045ff2f0.png",
+    "/local-media/empire-bare-glass/empire-50ml-empty-alpha.0fce3a2c6bb1.png": "/media-releases/empire-round26-03baed749353/0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f.png",
+    "/local-media/empire-bare-glass/empire-50ml-native-spray-tube.7d755598ba26.png": "/media-releases/empire-round26-03baed749353/7d755598ba26efc496f5cd05fb5930132eb0af6d4a99d8bd95da3f937ccc6d90.png",
+    "/local-media/empire-white-pump/empty-overcap-69af0e4a1bcf0063f72641fc1fd062f099ffd9046252b6286a28d8bc07026f9a.webp": "/media-releases/empire-round26-03baed749353/69af0e4a1bcf0063f72641fc1fd062f099ffd9046252b6286a28d8bc07026f9a.webp",
+    "/local-media/empire-white-pump/overcap-13ae16acc25d08039dbbfdb29a3f2b7524633a1390b6548b03d4366621249835.png": "/media-releases/empire-round26-03baed749353/36239bb9f037ae8625f5ba384b13c15d2be7e07e868769c725447463bc012eb2.png",
+    "/local-media/empire-white-pump/pump-25c3d0557906a8824e68ca309440d7cf3df382ab92a1c485f85bb19d26b4554c.png": "/media-releases/empire-round26-03baed749353/216a1943193e66319db55a705eb731dc9af5e5ce8713609b7c9218195e464dd8.png",
+    "/local-media/round78-pilot/GBRnd78SpryCu-shared-catalog.fc78436ff5db.png": "/media-releases/empire-round26-03baed749353/fc78436ff5db33076675e83914319c881ed305b0f523be2f6d4f827d8f1870b8.png",
+    "/local-media/round78-pilot/GBRnd78SpryMtGl-shared-catalog.515bdef76e64.png": "/media-releases/empire-round26-03baed749353/515bdef76e64df516b1562d3cc9cc1d4d33c591366e1398db8775a1093b3b1d6.png",
+    "/local-media/round78-pilot/GBRnd78SpryMtSl-shared-catalog.89e992101be2.png": "/media-releases/empire-round26-03baed749353/89e992101be2d23eb61a895b37998cacb18c2cd7e4e2ea674db96f24d5af6df0.png",
+    "/local-media/round78-pilot/GBRnd78SpryShnBlk-shared-catalog.bba51de97217.png": "/media-releases/empire-round26-03baed749353/bba51de97217751f2e441630cafaa0207999d867bcf4403d1d55382a8afa0275.png",
+    "/local-media/round78-pilot/GBRnd78SpryShnGl-shared-catalog.158384c42a2e.png": "/media-releases/empire-round26-03baed749353/158384c42a2e4d6adceed230697445cb0bf41a9956cd1b3833bbf12f44f2efa3.png",
+    "/local-media/round78-pilot/GBRnd78SpryShnSl-shared-catalog.dfbc0784912a.png": "/media-releases/empire-round26-03baed749353/dfbc0784912aed51ea448fc2e0853dbf809a4b5eada0babcd32c051ab6efcbcb.png",
+    "/local-media/round78-pilot/GBRndFrst78SpryCu-shared-catalog.ffbf828bbdaa.png": "/media-releases/empire-round26-03baed749353/ffbf828bbdaafed94b484ce4be95293b193287d47b8038ad41374974ae4c3254.png",
+    "/local-media/round78-pilot/GBRndFrst78SpryMtGl-shared-catalog.9cc726a91ca4.png": "/media-releases/empire-round26-03baed749353/9cc726a91ca4753a0f0b3a2fbb16807f9d1413b711403343853907e767ec0265.png",
+    "/local-media/round78-pilot/GBRndFrst78SpryMtSl-shared-catalog.b378bdef422f.png": "/media-releases/empire-round26-03baed749353/b378bdef422fb899cc41544aa39fa62e47658e2779feb2fc1375d088155f96ef.png",
+    "/local-media/round78-pilot/GBRndFrst78SpryShnBlk-shared-catalog.5689174dc313.png": "/media-releases/empire-round26-03baed749353/5689174dc313d7c1baab7b61a9b9d692cd9c376b0432f7299ad3f1bfc56ba949.png",
+    "/local-media/round78-pilot/GBRndFrst78SpryShnGl-shared-catalog.299f3bc1227a.png": "/media-releases/empire-round26-03baed749353/299f3bc1227ab863fd4e443612b280ab00c4c7cdf575aee5d4f0820772cdeda7.png",
+    "/local-media/round78-pilot/GBRndFrst78SpryShnSl-shared-catalog.f000bbc5ba6b.png": "/media-releases/empire-round26-03baed749353/f000bbc5ba6beba0914dcaeb9c3ec8d91a7c7f20e7de03644d9f00c79c243b68.png",
+    "/local-media/source-tubes/empire50-white-lotion.121928bb048d.png": "/media-releases/empire-round26-03baed749353/121928bb048d3a62ea8589b6c0c1c64e711a2575654bed3d5162f1d074995f79.png",
+    "/local-media/source-tubes/round78-spray.d4949a59193c.png": "/media-releases/empire-round26-03baed749353/d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf.png",
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/overcap-9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9.png": "/media-releases/empire-round26-03baed749353/d7bd26752b4c1827fa5b14860fc87b16bd865e1c074e18b205703397ae42766e.png",
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/sprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png": "/media-releases/empire-round26-03baed749353/ec9873b841cd763deefcdc87b5d90772fc5862cb99e7b5ba84b85cc30079f491.png",
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png": "/media-releases/empire-round26-03baed749353/2e13c3f6090b95e2839dbc75e0537d2b6940a1b0fe10def4c8c5a20f656dbb52.png",
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/sprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png": "/media-releases/empire-round26-03baed749353/41688cb5fc3608eef96295e07cab51a64a7cc321ba92e3a82b3be58a3b65cf97.png",
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png": "/media-releases/empire-round26-03baed749353/f3ef537447a0e2d27134d72a871e057b5480dffc252d4f21531f271fdb075f71.png",
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/sprayer-5c50ea9efde8b3535c6330bf6b21429e2300857f9ba7d9c47677349dce048cef.png": "/media-releases/empire-round26-03baed749353/ed138b1a40c93e646abb42f96b5a382edb327465adc944545ff27220b35a75b3.png",
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png": "/media-releases/empire-round26-03baed749353/271573d8c23a35eb19a8e2136c494e91ff5c319b5811a21945cbaeab0f1a5ac2.png",
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/sprayer-9d494fd880618a93df237d4a4ce12c35c13cc5b98af531044a943793654e9994.png": "/media-releases/empire-round26-03baed749353/ce3d4751ac8cd8014143123314a802569dd2cb65cf5e3972928956031c09a512.png",
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/overcap-177601ce48e6d817e1fbeebf18246c078cca84cedbce281747026dc3ef8abb38.png": "/media-releases/empire-round26-03baed749353/1506ab24d979eda6cba1a817cfa863905e6070e07756a8aff2e6c8db4f54db00.png",
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/sprayer-41f38526607d7ec57dcc6c175773a0ec77889e76f1bd23f478cc2292b6497846.png": "/media-releases/empire-round26-03baed749353/ff179fd5c59620080bcdf17bf3665021008b1779e0584a179a8ca75cb3d032b1.png",
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png": "/media-releases/empire-round26-03baed749353/a960223629d4e2f5446809d1ded2cf9f04d05c813f6c3639ae345e524c558c6a.png",
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/sprayer-a26b031f10138c75eae2c73ead6908b1896facdfee8e4a690d34e2f0c2a49616.png": "/media-releases/empire-round26-03baed749353/d6b38068d4f00a2716e56799ed870b8df22a22b7961e1159d4df8125925e1c1d.png",
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png": "/media-releases/empire-round26-03baed749353/861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf.png",
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png": "/media-releases/empire-round26-03baed749353/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png"
+  }
+}

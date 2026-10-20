@@ -1,12 +1,22 @@
 {
   "buildCommand": "bash scripts/vercel-build.sh",
   "crons": [
-    { "path": "/api/bottle-builder/warm", "schedule": "0 * * * *" }
+    {
+      "path": "/api/bottle-builder/warm",
+      "schedule": "0 * * * *"
+    }
   ],
   "functions": {
     "src/app/api/pdf/catalog/route.ts": {
       "maxDuration": 300,
       "memory": 2048
+    }
+  },
+  "git": {
+    "deploymentEnabled": {
+      "main": false,
+      "release/empire-round26-production": false,
+      "integration/local-media-main-2026-10-20": false
     }
   }
 }

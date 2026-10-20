@@ -28,7 +28,7 @@ function Harness({ bodyId, family = "Cylinder" }: { bodyId: string | null; famil
 
 it("loads kit layers only after a bottle is selected", async () => {
     vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
-    const fetcher = vi.fn(async (_url: RequestInfo | URL) => ({ ok: true, json: async () => ({ kits: { Cylinder9MetalBlack: kit } }) }));
+    const fetcher = vi.fn(async (_url: RequestInfo | URL) => ({ ok: true, headers: new Headers({ "X-BB-Media-Revision": "media-off-v1" }), json: async () => ({ kits: { Cylinder9MetalBlack: kit } }) }));
     vi.stubGlobal("fetch", fetcher);
     const el = document.createElement("div");
     const root = createRoot(el);
@@ -53,7 +53,7 @@ it("asks again when the kits request fails, instead of leaving the finishes with
     const fetcher = vi.fn()
         .mockResolvedValueOnce({ ok: false, status: 503, json: async () => ({ error: "We couldn’t load this bottle’s imagery." }) })
         .mockResolvedValueOnce({ ok: false, status: 503, json: async () => ({ error: "We couldn’t load this bottle’s imagery." }) })
-        .mockResolvedValueOnce({ ok: true, json: async () => ({ kits: { Cylinder9MetalBlack: kit } }) });
+        .mockResolvedValueOnce({ ok: true, headers: new Headers({ "X-BB-Media-Revision": "media-off-v1" }), json: async () => ({ kits: { Cylinder9MetalBlack: kit } }) });
     vi.stubGlobal("fetch", fetcher);
     const el = document.createElement("div");
     const root = createRoot(el);

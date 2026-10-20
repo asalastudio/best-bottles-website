@@ -16,6 +16,7 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent } from "react";
 import styles from "./pdp.module.css";
 import PdpKitPartImage from "./PdpKitPartImage";
+import { sourceTubeMaterialFilter } from "@/lib/register/source-tube-material";
 import PdpKitStackImage from "./PdpKitStackImage";
 import { displayImageUrl } from "@/lib/products/optimizable-image";
 import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/products/register-image";
@@ -285,7 +286,8 @@ export default function PdpStage({
                                         key={part.key}
                                         className={styles.stagePart}
                                         data-slot={part.slot}
-                                        style={{ transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex }}
+                                        style={{ transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex,
+                                            opacity: part.throughGlass?.opacity, mixBlendMode: part.throughGlass?.blendMode }}
                                     >
                                         {/* eslint-disable-next-line @next/next/no-img-element */}
                                         <img
@@ -298,7 +300,9 @@ export default function PdpStage({
                                                 position: "absolute", display: "block", maxWidth: "none",
                                                 left: `${part.box.leftPct}%`, top: `${part.box.topPct}%`,
                                                 width: `${part.box.widthPct}%`, height: `${part.box.heightPct}%`,
-                                                ...(part.clipBottomPct ? { clipPath: `inset(0 0 ${part.clipBottomPct}% 0)` } : {}),
+                                                filter: sourceTubeMaterialFilter(part.url, view),
+                                                ...(part.throughGlass ? { clipPath: part.throughGlass.clipPath }
+                                                    : part.clipBottomPct ? { clipPath: `inset(0 0 ${part.clipBottomPct}% 0)` } : {}),
                                             }}
                                         />
                                     </span>

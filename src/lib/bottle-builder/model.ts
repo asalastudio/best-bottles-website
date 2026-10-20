@@ -1,3 +1,5 @@
+import { releaseBodyImage } from "../media-release/release";
+import type { ThroughGlass } from "../register/through-glass";
 import { exactComponentMatch } from "./component-matches";
 import { catalogIncludedAssembly } from "../../../convex/catalogIncludedAssemblies";
 import { sourceComponentLink, sourceComponentLinks } from "./source-component-links";
@@ -23,7 +25,7 @@ export type CatalogRow = Omit<MatrixRow, "resolution"> & {
 };
 type PublishedKit = NonNullable<FunctionReturnType<typeof api.productKits.forSku>>;
 /** A published kit layer (a full-canvas image), or a register part standing in its own box on the canvas (src/lib/register/stage-kit.ts). */
-export type BuilderPart = PublishedKit["parts"][number] & { box?: PartBox | null; componentId?: string | null; detached?: DetachedLook | null };
+export type BuilderPart = PublishedKit["parts"][number] & { box?: PartBox | null; componentId?: string | null; detached?: DetachedLook | null; throughGlass?: ThroughGlass };
 /** A published per-SKU kit, or one composed from the component register (`register` set): one plate per glass, shared component layers, one datum per body. */
 export type BuilderKit = Omit<PublishedKit, "parts"> & { parts: BuilderPart[]; register?: RegisterKitMeta | null };
 export type BuilderConfiguration = {
@@ -177,6 +179,8 @@ export function compatibleFinishComponent(row: CatalogRow) {
 }
 
 export function reviewedBodyImage(row: CatalogRow) {
+    const released = releaseBodyImage(row.websiteSku);
+    if (released) return released;
     const media = bodyMedia as Record<string, { url: string; width: number; height: number }>;
     // Distinct moulds of one family and capacity (Footed vs Tall Rectangle 10 ml)
     // carry their own reviewed body, keyed by the group profile; the family key

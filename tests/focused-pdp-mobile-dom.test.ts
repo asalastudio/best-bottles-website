@@ -1,6 +1,7 @@
 // @vitest-environment jsdom
 import { act, createElement } from "react";
 import { createRoot } from "react-dom/client";
+import ConfiguratorPdp from "../src/components/products/ConfiguratorPdp";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 vi.mock("convex/react", () => ({ useQuery: () => [] }));
@@ -56,7 +57,6 @@ afterEach(() => {
 
 describe("focused PDP mobile purchase surface", () => {
     it("shows exact local-review components in both Photo cap states without opting another SKU into review", async () => {
-        const { default: ConfiguratorPdp } = await import("../src/components/products/ConfiguratorPdp");
         installInstantImageDecode();
         sessionStorage.removeItem("bb:pdp-stage");
         const container = document.createElement("div");
@@ -86,7 +86,6 @@ describe("focused PDP mobile purchase surface", () => {
         await act(async () => { root.unmount(); });
     });
     it("keeps exact cap-on and cap-off photographs after kit decode and reserves kit layers for exploded mode", async () => {
-        const { default: ConfiguratorPdp } = await import("../src/components/products/ConfiguratorPdp");
         installInstantImageDecode();
         sessionStorage.removeItem("bb:pdp-stage");
         const container = document.createElement("div");
@@ -129,7 +128,6 @@ describe("focused PDP mobile purchase surface", () => {
         await act(async () => { root.unmount(); });
     });
     it("contains option overflow at the real closure rail rather than the 390px page", async () => {
-        const { default: ConfiguratorPdp } = await import("../src/components/products/ConfiguratorPdp");
         const container = document.createElement("div");
         containers.push(container);
         container.style.width = "390px";
@@ -168,7 +166,6 @@ describe("focused PDP mobile purchase surface", () => {
     });
 
     it("synchronously gates A kit layers while B is pending or has no kit, then restores only B's exact kit", async () => {
-        const { default: ConfiguratorPdp } = await import("../src/components/products/ConfiguratorPdp");
         installInstantImageDecode();
         sessionStorage.setItem("bb:pdp-stage", "exploded");
         const container = document.createElement("div");

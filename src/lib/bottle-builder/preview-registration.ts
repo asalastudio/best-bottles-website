@@ -1,3 +1,4 @@
+import { releaseBodyImage } from "../media-release/release";
 import type { BuilderConfiguration, BuilderPart } from "./model";
 import canonicalBodies from "./canonical-bodies.generated.json";
 
@@ -93,6 +94,12 @@ export function registerVintagePreview(
     reference?: BuilderConfiguration,
 ) {
     const canonical = canonicalBody(config);
+    const sourceKit = config.kit ?? config.previewKit ?? config.chooserKit;
+    const releasedBody = releaseBodyImage(config.id);
+    const hasReleasedPlate = sourceKit?.register && releasedBody
+        && parts.some(part => part.slot === "body" && part.image.url === releasedBody.url);
+    // Released assemblies already carry their approved measured glass and seating.
+    if (hasReleasedPlate) return null;
     if (canonical) {
         const own = parts.find(part => part.slot === "body");
         if (!own || (config.kit ?? config.previewKit ?? config.chooserKit)?.completeness !== "full") return null;
