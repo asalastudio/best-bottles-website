@@ -1,0 +1,9 @@
+{
+  "files": 4993,
+  "sourceBytes": 1943288717,
+  "archive": "local-work-preservation.tar.gz",
+  "archiveBytes": 1397019231,
+  "sha256": "dd81bd7a24e76e0aecf92784deb973ef729e673f3302af94d666216b9d995345",
+  "allArchivedBytesMatchSource": true,
+  "secretPatternScan": "No matches for configured high-confidence patterns; not a comprehensive secret audit"
+}

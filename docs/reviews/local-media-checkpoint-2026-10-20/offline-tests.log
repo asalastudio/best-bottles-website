@@ -1,0 +1,29 @@
+
+ RUN  v3.2.4 /Users/jordanrichter/.codex/visualizations/2026/10/19/01a15606-c4e4-7692-9d6e-773c45309fd7/git-checkpoint-20261020/repository
+
+ ✓ tests/local-round78-lotion-tubes.test.ts (3 tests) 128ms
+ ✓ tests/local-round78-spray-completion.test.ts (2 tests) 194ms
+ ✓ tests/local-round78-lotion-completion.test.ts (2 tests) 236ms
+ ✓ tests/local-round78-lotion-pilot.test.ts (2 tests) 224ms
+ ✓ tests/local-diva46-spray-completion.test.ts (2 tests) 255ms
+ ✓ tests/local-empire-completion.test.ts (3 tests) 737ms
+   ✓ Empire remaining source completion > does not replace a released white assembly or a changed plate  632ms
+ ✓ tests/local-media-baseline.integration.test.ts (3 tests) 1101ms
+   ✓ captured family through real server loaders (offline) > loads the actual Builder family and full kits with captured production data  892ms
+ ✓ tests/local-diva46-two-bottle-pilot.test.ts (2 tests) 138ms
+ ✓ tests/pdp-redesign-model.test.ts (21 tests) 49ms
+ ✓ tests/local-diva46-tubes.test.ts (3 tests) 97ms
+ ✓ tests/local-round78-two-bottle-pilot.test.ts (2 tests) 124ms
+ ✓ tests/local-round78-tubes.test.ts (5 tests) 201ms
+ ✓ tests/register-compose.test.ts (11 tests) 20ms
+ ✓ tests/local-empire-pilot.test.ts (5 tests) 32ms
+ ✓ tests/local-empire-catalog-hero.test.ts (3 tests) 30ms
+ ✓ tests/empire-through-glass.test.ts (5 tests) 814ms
+ ✓ tests/local-empire-bare-glass.test.ts (7 tests) 2162ms
+   ✓ Empire local master assets > preserves the transparent exterior and interior; 50 ml RGB and the 100 ml neck remain unchanged  387ms
+   ✓ Empire masters on the complete captured family > uses the continuous native spray tube in both views, joined to its exact sprayer  1272ms
+
+ Test Files  17 passed (17)
+      Tests  81 passed (81)
+   Start at  07:36:20
+   Duration  3.24s (transform 1.40s, setup 0ms, collect 5.90s, tests 6.54s, environment 4ms, prepare 1.79s)

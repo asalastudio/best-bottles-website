@@ -1,0 +1,7 @@
+import fs from 'node:fs';
+import {drawableRegisterKits} from '/private/tmp/best-bottles-empire-alpha-20261019/src/lib/register/load.ts';
+const p='/Users/jordanrichter/Documents/Codex/2026-10-01/users-jordanrichter-projects-clients-nemat-international/outputs/media-completion-2026-10-12/empire50-production-pilot/family-baseline.json';
+process.env.NODE_ENV='development';delete process.env.VERCEL;
+const kit=drawableRegisterKits(JSON.parse(fs.readFileSync(p,'utf8')).register).GBEmp100SpryMtGl;
+fs.writeFileSync('/private/tmp/bb-empire-alpha-evidence/current-kit.json',JSON.stringify(kit,null,2));
+console.log(JSON.stringify({anchors:kit.anchors,parts:kit.parts.map(p=>({slot:p.slot,box:p.box,bounds:p.bounds,views:p.views,url:p.image.url}))},null,2));

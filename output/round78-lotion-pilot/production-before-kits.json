@@ -1,0 +1,7218 @@
+{
+  "LB-RND-CLR-78ML-LPM-COCP": {
+    "sku": "LBRnd78LtnClOvrCap",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 442.02,
+          "bottom": 962.81
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 437.45,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-02",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 442.02,
+          "bottom": 962.81
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.81
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 437.45,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-02",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 375.33,
+          "top": 17.91,
+          "right": 623.79,
+          "bottom": 449.3
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.81
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-02/pump-c4e70e2d9fcd9d18fd74b384607f1faed235200eafc355f70caf5f83ba538bc9.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 565,
+          "height": 981
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 375.33,
+          "y": 17.91,
+          "width": 248.46,
+          "height": 431.39
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-02"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 370.69,
+          "top": -61.09,
+          "right": 626.14,
+          "bottom": 456.16
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1188.06
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-02/overcap-c4d4b9daf52cfda14d1e92d111a8c19467beadf960e1cfb558f7ed466e7966a3.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 322,
+          "height": 652
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 370.69,
+          "y": -61.09,
+          "width": 255.45,
+          "height": 517.25
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-02",
+        "detached": {
+          "image": {
+            "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+            "width": 299,
+            "height": 346
+          },
+          "box": {
+            "x": 382.24,
+            "y": 187.29,
+            "width": 232.35,
+            "height": 268.87
+          },
+          "bounds": {
+            "left": 382.24,
+            "top": 187.29,
+            "right": 614.59,
+            "bottom": 456.16
+          }
+        }
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-MSLV-18-415-02"
+      ],
+      "seatSignature": "62589b20025b15",
+      "seatDropMm": 0
+    }
+  },
+  "LBRnd78LtnClOvrCap": {
+    "sku": "LBRnd78LtnClOvrCap",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 442.02,
+          "bottom": 962.81
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 437.45,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-02",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 442.02,
+          "bottom": 962.81
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.81
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 437.45,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-02",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 375.33,
+          "top": 17.91,
+          "right": 623.79,
+          "bottom": 449.3
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.81
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-02/pump-c4e70e2d9fcd9d18fd74b384607f1faed235200eafc355f70caf5f83ba538bc9.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 565,
+          "height": 981
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 375.33,
+          "y": 17.91,
+          "width": 248.46,
+          "height": 431.39
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-02"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 370.69,
+          "top": -61.09,
+          "right": 626.14,
+          "bottom": 456.16
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1188.06
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-02/overcap-c4d4b9daf52cfda14d1e92d111a8c19467beadf960e1cfb558f7ed466e7966a3.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 322,
+          "height": 652
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 370.69,
+          "y": -61.09,
+          "width": 255.45,
+          "height": 517.25
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-02",
+        "detached": {
+          "image": {
+            "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+            "width": 299,
+            "height": 346
+          },
+          "box": {
+            "x": 382.24,
+            "y": 187.29,
+            "width": 232.35,
+            "height": 268.87
+          },
+          "bounds": {
+            "left": 382.24,
+            "top": 187.29,
+            "right": 614.59,
+            "bottom": 456.16
+          }
+        }
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-MSLV-18-415-02"
+      ],
+      "seatSignature": "62589b20025b15",
+      "seatDropMm": 0
+    }
+  },
+  "LB-RND-CLR-78ML-LPM-CPR": {
+    "sku": "LBRnd78LtnCu",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 437.95,
+          "bottom": 958.74
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 433.37,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-CPR-18-415",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 437.95,
+          "bottom": 958.74
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -721.74
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 433.37,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-CPR-18-415",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 369.37,
+          "top": -12.04,
+          "right": 632.93,
+          "bottom": 450.35
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -721.74
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-CPR-18-415/pump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 228,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 369.37,
+          "y": -12.04,
+          "width": 263.56,
+          "height": 462.39
+        },
+        "componentId": "CMP-LPM-CPR-18-415"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 335.78,
+          "top": -62.68,
+          "right": 668.18,
+          "bottom": 451.39
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1209.17
+        },
+        "image": {
+          "url": "/local-media/copper-caps/round78-lotion.be75859d4a21.png",
+          "key": "/local-media/copper-caps/round78-lotion.be75859d4a21.png",
+          "sha256": "be75859d4a21f860b18e2ef45beae16890bc94ff685be62759abc2ca22deed36",
+          "bytes": 374755,
+          "width": 419,
+          "height": 648
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 335.78,
+          "y": -62.68,
+          "width": 332.4,
+          "height": 514.07
+        },
+        "componentId": "CMP-LPM-CPR-18-415"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-CPR-18-415"
+      ],
+      "seatSignature": "759ca79d0ac43c",
+      "seatDropMm": 0
+    }
+  },
+  "LBRnd78LtnCu": {
+    "sku": "LBRnd78LtnCu",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 437.95,
+          "bottom": 958.74
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 433.37,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-CPR-18-415",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 437.95,
+          "bottom": 958.74
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -721.74
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 433.37,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-CPR-18-415",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 369.37,
+          "top": -12.04,
+          "right": 632.93,
+          "bottom": 450.35
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -721.74
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-CPR-18-415/pump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 228,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 369.37,
+          "y": -12.04,
+          "width": 263.56,
+          "height": 462.39
+        },
+        "componentId": "CMP-LPM-CPR-18-415"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 335.78,
+          "top": -62.68,
+          "right": 668.18,
+          "bottom": 451.39
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1209.17
+        },
+        "image": {
+          "url": "/local-media/copper-caps/round78-lotion.be75859d4a21.png",
+          "key": "/local-media/copper-caps/round78-lotion.be75859d4a21.png",
+          "sha256": "be75859d4a21f860b18e2ef45beae16890bc94ff685be62759abc2ca22deed36",
+          "bytes": 374755,
+          "width": 419,
+          "height": 648
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 335.78,
+          "y": -62.68,
+          "width": 332.4,
+          "height": 514.07
+        },
+        "componentId": "CMP-LPM-CPR-18-415"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-CPR-18-415"
+      ],
+      "seatSignature": "759ca79d0ac43c",
+      "seatDropMm": 0
+    }
+  },
+  "LB-RND-CLR-78ML-LPM-MGLD": {
+    "sku": "LBRnd78LtnMtGl",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 432.72,
+          "bottom": 953.51
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 428.15,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MGLD-18-415",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 432.72,
+          "bottom": 953.51
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -716.51
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 428.15,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MGLD-18-415",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 363.92,
+          "top": -17.72,
+          "right": 635.61,
+          "bottom": 442.78
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -716.51
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MGLD-18-415/pump-39b24dee49ed593591bcc637bcd69b518e1f5d316ae537739782b91f956423bc.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 236,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 363.92,
+          "y": -17.72,
+          "width": 271.69,
+          "height": 460.5
+        },
+        "componentId": "CMP-LPM-MGLD-18-415"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 359.98,
+          "top": -21.42,
+          "right": 636.85,
+          "bottom": 456.16
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1214.39
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MGLD-18-415/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 349,
+          "height": 602
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 359.98,
+          "y": -21.42,
+          "width": 276.87,
+          "height": 477.58
+        },
+        "componentId": "CMP-LPM-MGLD-18-415"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-MGLD-18-415"
+      ],
+      "seatSignature": "0cb381a9006b20",
+      "seatDropMm": 0
+    }
+  },
+  "LBRnd78LtnMtGl": {
+    "sku": "LBRnd78LtnMtGl",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 432.72,
+          "bottom": 953.51
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 428.15,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MGLD-18-415",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 432.72,
+          "bottom": 953.51
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -716.51
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 428.15,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MGLD-18-415",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 363.92,
+          "top": -17.72,
+          "right": 635.61,
+          "bottom": 442.78
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -716.51
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MGLD-18-415/pump-39b24dee49ed593591bcc637bcd69b518e1f5d316ae537739782b91f956423bc.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 236,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 363.92,
+          "y": -17.72,
+          "width": 271.69,
+          "height": 460.5
+        },
+        "componentId": "CMP-LPM-MGLD-18-415"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 359.98,
+          "top": -21.42,
+          "right": 636.85,
+          "bottom": 456.16
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1214.39
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MGLD-18-415/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 349,
+          "height": 602
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 359.98,
+          "y": -21.42,
+          "width": 276.87,
+          "height": 477.58
+        },
+        "componentId": "CMP-LPM-MGLD-18-415"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-MGLD-18-415"
+      ],
+      "seatSignature": "0cb381a9006b20",
+      "seatDropMm": 0
+    }
+  },
+  "LB-RND-CLR-78ML-LPM-MSLV": {
+    "sku": "LBRnd78LtnMtSl",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 441.95,
+          "bottom": 962.74
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 437.38,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-01",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 441.95,
+          "bottom": 962.74
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.74
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 437.38,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-01",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 377.9,
+          "top": 10.8,
+          "right": 619.91,
+          "bottom": 447.02
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.74
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-01/pump-0cc427bbd8ed00ae446a8a4e5fec65e8a3f68476b7f4cf11c6398f51825987bb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 552,
+          "height": 995
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 377.9,
+          "y": 10.8,
+          "width": 242.01,
+          "height": 436.22
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-01"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.77,
+          "top": -19.84,
+          "right": 634.47,
+          "bottom": 456.15
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1195.09
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-01/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 345,
+          "height": 600
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.77,
+          "y": -19.84,
+          "width": 273.7,
+          "height": 475.99
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-01"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-MSLV-18-415-01"
+      ],
+      "seatSignature": "0cd6fbd41290f5",
+      "seatDropMm": 0
+    }
+  },
+  "LBRnd78LtnMtSl": {
+    "sku": "LBRnd78LtnMtSl",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 441.95,
+          "bottom": 962.74
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 437.38,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-01",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 441.95,
+          "bottom": 962.74
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.74
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 437.38,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-01",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 377.9,
+          "top": 10.8,
+          "right": 619.91,
+          "bottom": 447.02
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.74
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-01/pump-0cc427bbd8ed00ae446a8a4e5fec65e8a3f68476b7f4cf11c6398f51825987bb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 552,
+          "height": 995
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 377.9,
+          "y": 10.8,
+          "width": 242.01,
+          "height": 436.22
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-01"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.77,
+          "top": -19.84,
+          "right": 634.47,
+          "bottom": 456.15
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1195.09
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-01/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 345,
+          "height": 600
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.77,
+          "y": -19.84,
+          "width": 273.7,
+          "height": 475.99
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-01"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-MSLV-18-415-01"
+      ],
+      "seatSignature": "0cd6fbd41290f5",
+      "seatDropMm": 0
+    }
+  },
+  "LB-RND-CLR-78ML-LPM-SBLK": {
+    "sku": "LBRnd78LtnShnBlk",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 442.7,
+          "bottom": 963.49
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 438.12,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SBLK-18-415",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 442.7,
+          "bottom": 963.49
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -726.49
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 438.12,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SBLK-18-415",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 367.83,
+          "top": 7.1,
+          "right": 626.61,
+          "bottom": 451.36
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -726.49
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SBLK-18-415/pump-7fd1cfbea3ed6283b4937b6c0f9d3416bc379da9fabc13b1bc4d460e74d71176.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 233,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 367.83,
+          "y": 7.1,
+          "width": 258.78,
+          "height": 444.26
+        },
+        "componentId": "CMP-LPM-SBLK-18-415"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.38,
+          "top": -18.25,
+          "right": 637.25,
+          "bottom": 454.57
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1197.96
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SBLK-18-415/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 349,
+          "height": 596
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.38,
+          "y": -18.25,
+          "width": 276.87,
+          "height": 472.82
+        },
+        "componentId": "CMP-LPM-SBLK-18-415"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-SBLK-18-415"
+      ],
+      "seatSignature": "7659243c1c4ea5",
+      "seatDropMm": 0
+    }
+  },
+  "LBRnd78LtnShnBlk": {
+    "sku": "LBRnd78LtnShnBlk",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 442.7,
+          "bottom": 963.49
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 438.12,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SBLK-18-415",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 442.7,
+          "bottom": 963.49
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -726.49
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 438.12,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SBLK-18-415",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 367.83,
+          "top": 7.1,
+          "right": 626.61,
+          "bottom": 451.36
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -726.49
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SBLK-18-415/pump-7fd1cfbea3ed6283b4937b6c0f9d3416bc379da9fabc13b1bc4d460e74d71176.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 233,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 367.83,
+          "y": 7.1,
+          "width": 258.78,
+          "height": 444.26
+        },
+        "componentId": "CMP-LPM-SBLK-18-415"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.38,
+          "top": -18.25,
+          "right": 637.25,
+          "bottom": 454.57
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1197.96
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SBLK-18-415/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 349,
+          "height": 596
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.38,
+          "y": -18.25,
+          "width": 276.87,
+          "height": 472.82
+        },
+        "componentId": "CMP-LPM-SBLK-18-415"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-SBLK-18-415"
+      ],
+      "seatSignature": "7659243c1c4ea5",
+      "seatDropMm": 0
+    }
+  },
+  "LB-RND-CLR-78ML-LPM-SGLD": {
+    "sku": "LBRnd78LtnShnGl",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 437.22,
+          "bottom": 958.01
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 432.65,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SGLD-18-415",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 437.22,
+          "bottom": 958.01
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -721.01
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 432.65,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SGLD-18-415",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 368.3,
+          "top": 14.98,
+          "right": 626.3,
+          "bottom": 446.78
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -721.01
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SGLD-18-415/pump-07155152afd69e8ef46c789f986353c6a4246c8dd0d9b47d32454294c1f0159b.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 239,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 368.3,
+          "y": 14.98,
+          "width": 258,
+          "height": 431.8
+        },
+        "componentId": "CMP-LPM-SGLD-18-415"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 366.09,
+          "top": -22.22,
+          "right": 638.2,
+          "bottom": 449.01
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1179.04
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SGLD-18-415/overcap-de0582dafa63fd693f9e22125610b5f4a1f04826f3fa392a85afa7169befeced.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 343,
+          "height": 594
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 366.09,
+          "y": -22.22,
+          "width": 272.11,
+          "height": 471.23
+        },
+        "componentId": "CMP-LPM-SGLD-18-415"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-SGLD-18-415"
+      ],
+      "seatSignature": "044842fd06eea4",
+      "seatDropMm": 0
+    }
+  },
+  "LBRnd78LtnShnGl": {
+    "sku": "LBRnd78LtnShnGl",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 437.22,
+          "bottom": 958.01
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 432.65,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SGLD-18-415",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 437.22,
+          "bottom": 958.01
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -721.01
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 432.65,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SGLD-18-415",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 368.3,
+          "top": 14.98,
+          "right": 626.3,
+          "bottom": 446.78
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -721.01
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SGLD-18-415/pump-07155152afd69e8ef46c789f986353c6a4246c8dd0d9b47d32454294c1f0159b.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 239,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 368.3,
+          "y": 14.98,
+          "width": 258,
+          "height": 431.8
+        },
+        "componentId": "CMP-LPM-SGLD-18-415"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 366.09,
+          "top": -22.22,
+          "right": 638.2,
+          "bottom": 449.01
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1179.04
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SGLD-18-415/overcap-de0582dafa63fd693f9e22125610b5f4a1f04826f3fa392a85afa7169befeced.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 343,
+          "height": 594
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 366.09,
+          "y": -22.22,
+          "width": 272.11,
+          "height": 471.23
+        },
+        "componentId": "CMP-LPM-SGLD-18-415"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-SGLD-18-415"
+      ],
+      "seatSignature": "044842fd06eea4",
+      "seatDropMm": 0
+    }
+  },
+  "LB-RND-CLR-78ML-LPM-SSLV": {
+    "sku": "LBRnd78LtnShnSl",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 439.84,
+          "bottom": 960.63
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 435.27,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SSLV-18-415",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 439.84,
+          "bottom": 960.63
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -723.63
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 435.27,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SSLV-18-415",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 373.48,
+          "top": 9.17,
+          "right": 626.51,
+          "bottom": 447.32
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -723.63
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SSLV-18-415/pump-5ab4afef966a38362aa7e46a12c8f076a476dc3c005f0425521645c0c8b662c4.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 231,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.48,
+          "y": 9.17,
+          "width": 253.03,
+          "height": 438.15
+        },
+        "componentId": "CMP-LPM-SSLV-18-415"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.77,
+          "top": -19.84,
+          "right": 639.23,
+          "bottom": 455.36
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1193.82
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SSLV-18-415/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 351,
+          "height": 599
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.77,
+          "y": -19.84,
+          "width": 278.46,
+          "height": 475.2
+        },
+        "componentId": "CMP-LPM-SSLV-18-415"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-SSLV-18-415"
+      ],
+      "seatSignature": "61e4649500d530",
+      "seatDropMm": 0
+    }
+  },
+  "LBRnd78LtnShnSl": {
+    "sku": "LBRnd78LtnShnSl",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 439.84,
+          "bottom": 960.63
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 435.27,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SSLV-18-415",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 439.84,
+          "bottom": 960.63
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -723.63
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 435.27,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SSLV-18-415",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 373.48,
+          "top": 9.17,
+          "right": 626.51,
+          "bottom": 447.32
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -723.63
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SSLV-18-415/pump-5ab4afef966a38362aa7e46a12c8f076a476dc3c005f0425521645c0c8b662c4.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 231,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.48,
+          "y": 9.17,
+          "width": 253.03,
+          "height": 438.15
+        },
+        "componentId": "CMP-LPM-SSLV-18-415"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.77,
+          "top": -19.84,
+          "right": 639.23,
+          "bottom": 455.36
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1193.82
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SSLV-18-415/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 351,
+          "height": 599
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.77,
+          "y": -19.84,
+          "width": 278.46,
+          "height": 475.2
+        },
+        "componentId": "CMP-LPM-SSLV-18-415"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-SSLV-18-415"
+      ],
+      "seatSignature": "61e4649500d530",
+      "seatDropMm": 0
+    }
+  },
+  "LB-RND-FRS-78ML-01": {
+    "sku": "LBRndFrst78LtnCu",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 437.95,
+          "bottom": 958.74
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 433.37,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-CPR-18-415",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 437.95,
+          "bottom": 958.74
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -721.74
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 433.37,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-CPR-18-415",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 369.37,
+          "top": -12.04,
+          "right": 632.93,
+          "bottom": 450.35
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -721.74
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-CPR-18-415/pump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 228,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 369.37,
+          "y": -12.04,
+          "width": 263.56,
+          "height": 462.39
+        },
+        "componentId": "CMP-LPM-CPR-18-415"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 335.78,
+          "top": -62.68,
+          "right": 668.18,
+          "bottom": 451.39
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1209.17
+        },
+        "image": {
+          "url": "/local-media/copper-caps/round78-lotion.be75859d4a21.png",
+          "key": "/local-media/copper-caps/round78-lotion.be75859d4a21.png",
+          "sha256": "be75859d4a21f860b18e2ef45beae16890bc94ff685be62759abc2ca22deed36",
+          "bytes": 374755,
+          "width": 419,
+          "height": 648
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 335.78,
+          "y": -62.68,
+          "width": 332.4,
+          "height": 514.07
+        },
+        "componentId": "CMP-LPM-CPR-18-415"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-CPR-18-415"
+      ],
+      "seatSignature": "3a3aa00f017c6a",
+      "seatDropMm": 0
+    }
+  },
+  "LBRndFrst78LtnCu": {
+    "sku": "LBRndFrst78LtnCu",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 437.95,
+          "bottom": 958.74
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 433.37,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-CPR-18-415",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 437.95,
+          "bottom": 958.74
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -721.74
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 433.37,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-CPR-18-415",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 369.37,
+          "top": -12.04,
+          "right": 632.93,
+          "bottom": 450.35
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -721.74
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-CPR-18-415/pump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 228,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 369.37,
+          "y": -12.04,
+          "width": 263.56,
+          "height": 462.39
+        },
+        "componentId": "CMP-LPM-CPR-18-415"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 335.78,
+          "top": -62.68,
+          "right": 668.18,
+          "bottom": 451.39
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1209.17
+        },
+        "image": {
+          "url": "/local-media/copper-caps/round78-lotion.be75859d4a21.png",
+          "key": "/local-media/copper-caps/round78-lotion.be75859d4a21.png",
+          "sha256": "be75859d4a21f860b18e2ef45beae16890bc94ff685be62759abc2ca22deed36",
+          "bytes": 374755,
+          "width": 419,
+          "height": 648
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 335.78,
+          "y": -62.68,
+          "width": 332.4,
+          "height": 514.07
+        },
+        "componentId": "CMP-LPM-CPR-18-415"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-CPR-18-415"
+      ],
+      "seatSignature": "3a3aa00f017c6a",
+      "seatDropMm": 0
+    }
+  },
+  "LB-RND-FRS-78ML-02": {
+    "sku": "LBRndFrst78LtnMtGl",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 432.72,
+          "bottom": 953.51
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 428.15,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MGLD-18-415",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 432.72,
+          "bottom": 953.51
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -716.51
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 428.15,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MGLD-18-415",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 363.92,
+          "top": -17.72,
+          "right": 635.61,
+          "bottom": 442.78
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -716.51
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MGLD-18-415/pump-39b24dee49ed593591bcc637bcd69b518e1f5d316ae537739782b91f956423bc.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 236,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 363.92,
+          "y": -17.72,
+          "width": 271.69,
+          "height": 460.5
+        },
+        "componentId": "CMP-LPM-MGLD-18-415"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 359.98,
+          "top": -21.42,
+          "right": 636.85,
+          "bottom": 456.16
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1214.39
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MGLD-18-415/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 349,
+          "height": 602
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 359.98,
+          "y": -21.42,
+          "width": 276.87,
+          "height": 477.58
+        },
+        "componentId": "CMP-LPM-MGLD-18-415"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-MGLD-18-415"
+      ],
+      "seatSignature": "a7415197117902",
+      "seatDropMm": 0
+    }
+  },
+  "LBRndFrst78LtnMtGl": {
+    "sku": "LBRndFrst78LtnMtGl",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 432.72,
+          "bottom": 953.51
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 428.15,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MGLD-18-415",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 432.72,
+          "bottom": 953.51
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -716.51
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 428.15,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MGLD-18-415",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 363.92,
+          "top": -17.72,
+          "right": 635.61,
+          "bottom": 442.78
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -716.51
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MGLD-18-415/pump-39b24dee49ed593591bcc637bcd69b518e1f5d316ae537739782b91f956423bc.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 236,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 363.92,
+          "y": -17.72,
+          "width": 271.69,
+          "height": 460.5
+        },
+        "componentId": "CMP-LPM-MGLD-18-415"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 359.98,
+          "top": -21.42,
+          "right": 636.85,
+          "bottom": 456.16
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1214.39
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MGLD-18-415/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 349,
+          "height": 602
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 359.98,
+          "y": -21.42,
+          "width": 276.87,
+          "height": 477.58
+        },
+        "componentId": "CMP-LPM-MGLD-18-415"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-MGLD-18-415"
+      ],
+      "seatSignature": "a7415197117902",
+      "seatDropMm": 0
+    }
+  },
+  "LB-RND-FRS-78ML-03": {
+    "sku": "LBRndFrst78LtnMtSl",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 441.95,
+          "bottom": 962.74
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 437.38,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-01",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 441.95,
+          "bottom": 962.74
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.74
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 437.38,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-01",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 377.9,
+          "top": 10.8,
+          "right": 619.91,
+          "bottom": 447.02
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.74
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-01/pump-0cc427bbd8ed00ae446a8a4e5fec65e8a3f68476b7f4cf11c6398f51825987bb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 552,
+          "height": 995
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 377.9,
+          "y": 10.8,
+          "width": 242.01,
+          "height": 436.22
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-01"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.77,
+          "top": -19.84,
+          "right": 634.47,
+          "bottom": 456.15
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1195.09
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-01/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 345,
+          "height": 600
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.77,
+          "y": -19.84,
+          "width": 273.7,
+          "height": 475.99
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-01"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-MSLV-18-415-01"
+      ],
+      "seatSignature": "f9b0c222015af7",
+      "seatDropMm": 0
+    }
+  },
+  "LBRndFrst78LtnMtSl": {
+    "sku": "LBRndFrst78LtnMtSl",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 441.95,
+          "bottom": 962.74
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 437.38,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-01",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 441.95,
+          "bottom": 962.74
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.74
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 437.38,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-01",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 377.9,
+          "top": 10.8,
+          "right": 619.91,
+          "bottom": 447.02
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.74
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-01/pump-0cc427bbd8ed00ae446a8a4e5fec65e8a3f68476b7f4cf11c6398f51825987bb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 552,
+          "height": 995
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 377.9,
+          "y": 10.8,
+          "width": 242.01,
+          "height": 436.22
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-01"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.77,
+          "top": -19.84,
+          "right": 634.47,
+          "bottom": 456.15
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1195.09
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-01/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 345,
+          "height": 600
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.77,
+          "y": -19.84,
+          "width": 273.7,
+          "height": 475.99
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-01"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-MSLV-18-415-01"
+      ],
+      "seatSignature": "f9b0c222015af7",
+      "seatDropMm": 0
+    }
+  },
+  "LB-RND-FRS-78ML-04": {
+    "sku": "LBRndFrst78LtnShnBlk",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 442.7,
+          "bottom": 963.49
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 438.12,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SBLK-18-415",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 442.7,
+          "bottom": 963.49
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -726.49
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 438.12,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SBLK-18-415",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 367.83,
+          "top": 7.1,
+          "right": 626.61,
+          "bottom": 451.36
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -726.49
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SBLK-18-415/pump-7fd1cfbea3ed6283b4937b6c0f9d3416bc379da9fabc13b1bc4d460e74d71176.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 233,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 367.83,
+          "y": 7.1,
+          "width": 258.78,
+          "height": 444.26
+        },
+        "componentId": "CMP-LPM-SBLK-18-415"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.38,
+          "top": -18.25,
+          "right": 637.25,
+          "bottom": 454.57
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1197.96
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SBLK-18-415/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 349,
+          "height": 596
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.38,
+          "y": -18.25,
+          "width": 276.87,
+          "height": 472.82
+        },
+        "componentId": "CMP-LPM-SBLK-18-415"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-SBLK-18-415"
+      ],
+      "seatSignature": "fbea4636157c23",
+      "seatDropMm": 0
+    }
+  },
+  "LBRndFrst78LtnShnBlk": {
+    "sku": "LBRndFrst78LtnShnBlk",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 442.7,
+          "bottom": 963.49
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 438.12,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SBLK-18-415",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 442.7,
+          "bottom": 963.49
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -726.49
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 438.12,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SBLK-18-415",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 367.83,
+          "top": 7.1,
+          "right": 626.61,
+          "bottom": 451.36
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -726.49
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SBLK-18-415/pump-7fd1cfbea3ed6283b4937b6c0f9d3416bc379da9fabc13b1bc4d460e74d71176.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 233,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 367.83,
+          "y": 7.1,
+          "width": 258.78,
+          "height": 444.26
+        },
+        "componentId": "CMP-LPM-SBLK-18-415"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.38,
+          "top": -18.25,
+          "right": 637.25,
+          "bottom": 454.57
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1197.96
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SBLK-18-415/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 349,
+          "height": 596
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.38,
+          "y": -18.25,
+          "width": 276.87,
+          "height": 472.82
+        },
+        "componentId": "CMP-LPM-SBLK-18-415"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-SBLK-18-415"
+      ],
+      "seatSignature": "fbea4636157c23",
+      "seatDropMm": 0
+    }
+  },
+  "LB-RND-FRS-78ML-05": {
+    "sku": "LBRndFrst78LtnShnGl",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 437.22,
+          "bottom": 958.01
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 432.65,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SGLD-18-415",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 437.22,
+          "bottom": 958.01
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -721.01
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 432.65,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SGLD-18-415",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 368.3,
+          "top": 14.98,
+          "right": 626.3,
+          "bottom": 446.78
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -721.01
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SGLD-18-415/pump-07155152afd69e8ef46c789f986353c6a4246c8dd0d9b47d32454294c1f0159b.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 239,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 368.3,
+          "y": 14.98,
+          "width": 258,
+          "height": 431.8
+        },
+        "componentId": "CMP-LPM-SGLD-18-415"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 366.09,
+          "top": -22.22,
+          "right": 638.2,
+          "bottom": 449.01
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1179.04
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SGLD-18-415/overcap-de0582dafa63fd693f9e22125610b5f4a1f04826f3fa392a85afa7169befeced.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 343,
+          "height": 594
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 366.09,
+          "y": -22.22,
+          "width": 272.11,
+          "height": 471.23
+        },
+        "componentId": "CMP-LPM-SGLD-18-415"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-SGLD-18-415"
+      ],
+      "seatSignature": "f83ffeeb0d3a86",
+      "seatDropMm": 0
+    }
+  },
+  "LBRndFrst78LtnShnGl": {
+    "sku": "LBRndFrst78LtnShnGl",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 437.22,
+          "bottom": 958.01
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 432.65,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SGLD-18-415",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 437.22,
+          "bottom": 958.01
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -721.01
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 432.65,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SGLD-18-415",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 368.3,
+          "top": 14.98,
+          "right": 626.3,
+          "bottom": 446.78
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -721.01
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SGLD-18-415/pump-07155152afd69e8ef46c789f986353c6a4246c8dd0d9b47d32454294c1f0159b.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 239,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 368.3,
+          "y": 14.98,
+          "width": 258,
+          "height": 431.8
+        },
+        "componentId": "CMP-LPM-SGLD-18-415"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 366.09,
+          "top": -22.22,
+          "right": 638.2,
+          "bottom": 449.01
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1179.04
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SGLD-18-415/overcap-de0582dafa63fd693f9e22125610b5f4a1f04826f3fa392a85afa7169befeced.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 343,
+          "height": 594
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 366.09,
+          "y": -22.22,
+          "width": 272.11,
+          "height": 471.23
+        },
+        "componentId": "CMP-LPM-SGLD-18-415"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-SGLD-18-415"
+      ],
+      "seatSignature": "f83ffeeb0d3a86",
+      "seatDropMm": 0
+    }
+  },
+  "LB-RND-FRS-78ML-06": {
+    "sku": "LBRndFrst78LtnShnSl",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 439.84,
+          "bottom": 960.63
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 435.27,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SSLV-18-415",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 439.84,
+          "bottom": 960.63
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -723.63
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 435.27,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SSLV-18-415",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 373.48,
+          "top": 9.17,
+          "right": 626.51,
+          "bottom": 447.32
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -723.63
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SSLV-18-415/pump-5ab4afef966a38362aa7e46a12c8f076a476dc3c005f0425521645c0c8b662c4.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 231,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.48,
+          "y": 9.17,
+          "width": 253.03,
+          "height": 438.15
+        },
+        "componentId": "CMP-LPM-SSLV-18-415"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.77,
+          "top": -19.84,
+          "right": 639.23,
+          "bottom": 455.36
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1193.82
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SSLV-18-415/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 351,
+          "height": 599
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.77,
+          "y": -19.84,
+          "width": 278.46,
+          "height": 475.2
+        },
+        "componentId": "CMP-LPM-SSLV-18-415"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-SSLV-18-415"
+      ],
+      "seatSignature": "d0b9c8531f9fca",
+      "seatDropMm": 0
+    }
+  },
+  "LBRndFrst78LtnShnSl": {
+    "sku": "LBRndFrst78LtnShnSl",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 439.84,
+          "bottom": 960.63
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 435.27,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SSLV-18-415",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 439.84,
+          "bottom": 960.63
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -723.63
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 435.27,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-SSLV-18-415",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 373.48,
+          "top": 9.17,
+          "right": 626.51,
+          "bottom": 447.32
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -723.63
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SSLV-18-415/pump-5ab4afef966a38362aa7e46a12c8f076a476dc3c005f0425521645c0c8b662c4.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 231,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.48,
+          "y": 9.17,
+          "width": 253.03,
+          "height": 438.15
+        },
+        "componentId": "CMP-LPM-SSLV-18-415"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.77,
+          "top": -19.84,
+          "right": 639.23,
+          "bottom": 455.36
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1193.82
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SSLV-18-415/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 351,
+          "height": 599
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.77,
+          "y": -19.84,
+          "width": 278.46,
+          "height": 475.2
+        },
+        "componentId": "CMP-LPM-SSLV-18-415"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-SSLV-18-415"
+      ],
+      "seatSignature": "d0b9c8531f9fca",
+      "seatDropMm": 0
+    }
+  },
+  "LB-RND-FRS-78ML-T": {
+    "sku": "LBRndFrst78LtnClOvrCap",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 442.02,
+          "bottom": 962.81
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 437.45,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-02",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 442.02,
+          "bottom": 962.81
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.81
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 437.45,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-02",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 375.33,
+          "top": 17.91,
+          "right": 623.79,
+          "bottom": 449.3
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.81
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-02/pump-c4e70e2d9fcd9d18fd74b384607f1faed235200eafc355f70caf5f83ba538bc9.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 565,
+          "height": 981
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 375.33,
+          "y": 17.91,
+          "width": 248.46,
+          "height": 431.39
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-02"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 370.69,
+          "top": -61.09,
+          "right": 626.14,
+          "bottom": 456.16
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1188.06
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-02/overcap-c4d4b9daf52cfda14d1e92d111a8c19467beadf960e1cfb558f7ed466e7966a3.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 322,
+          "height": 652
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 370.69,
+          "y": -61.09,
+          "width": 255.45,
+          "height": 517.25
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-02",
+        "detached": {
+          "image": {
+            "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+            "width": 299,
+            "height": 346
+          },
+          "box": {
+            "x": 382.24,
+            "y": 187.29,
+            "width": 232.35,
+            "height": 268.87
+          },
+          "bounds": {
+            "left": 382.24,
+            "top": 187.29,
+            "right": 614.59,
+            "bottom": 456.16
+          }
+        }
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-MSLV-18-415-02"
+      ],
+      "seatSignature": "4ce8123e0d104f",
+      "seatDropMm": 0
+    }
+  },
+  "LBRndFrst78LtnClOvrCap": {
+    "sku": "LBRndFrst78LtnClOvrCap",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 442.02,
+          "bottom": 962.81
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 437.45,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-02",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 464.54,
+          "right": 543.08,
+          "top": 442.02,
+          "bottom": 962.81
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.81
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "key": "/local-media/source-tubes/round78-lotion.0f77b81d87fa.png",
+          "sha256": "0f77b81d87fa01f0315c8e3058ab8c3b3c2c02746a9d1679507189217603afd7",
+          "bytes": 32974,
+          "width": 115,
+          "height": 689
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 460.73,
+          "y": 437.45,
+          "width": 87.69,
+          "height": 525.37
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-02",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "pump",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 375.33,
+          "top": 17.91,
+          "right": 623.79,
+          "bottom": 449.3
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.81
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-02/pump-c4e70e2d9fcd9d18fd74b384607f1faed235200eafc355f70caf5f83ba538bc9.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 565,
+          "height": 981
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 375.33,
+          "y": 17.91,
+          "width": 248.46,
+          "height": 431.39
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-02"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 370.69,
+          "top": -61.09,
+          "right": 626.14,
+          "bottom": 456.16
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1188.06
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-02/overcap-c4d4b9daf52cfda14d1e92d111a8c19467beadf960e1cfb558f7ed466e7966a3.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 322,
+          "height": 652
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 370.69,
+          "y": -61.09,
+          "width": 255.45,
+          "height": 517.25
+        },
+        "componentId": "CMP-LPM-MSLV-18-415-02",
+        "detached": {
+          "image": {
+            "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+            "width": 299,
+            "height": 346
+          },
+          "box": {
+            "x": 382.24,
+            "y": 187.29,
+            "width": 232.35,
+            "height": 268.87
+          },
+          "bounds": {
+            "left": 382.24,
+            "top": 187.29,
+            "right": 614.59,
+            "bottom": 456.16
+          }
+        }
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-LPM-MSLV-18-415-02"
+      ],
+      "seatSignature": "4ce8123e0d104f",
+      "seatDropMm": 0
+    }
+  }
+}

@@ -1,0 +1,722 @@
+[
+  {
+    "path": "src/components/catalog/CatalogCardPreview.tsx",
+    "bytes": 10427,
+    "sha256": "433885adc7aeab09c1ff902df9bf2cbd05ce561be9a36e2112885f6d4c12d312"
+  },
+  {
+    "path": "src/lib/bottle-builder/server.ts",
+    "bytes": 16589,
+    "sha256": "c6a5ca42446860fffc14585946c24e114fc66e20e6172a1d568c171f37f065fe"
+  },
+  {
+    "path": "src/lib/products/catalog-heroes.ts",
+    "bytes": 10138,
+    "sha256": "eb2bda164319e2f7aa880fcd135952a50c2f10f6bff9d2727bd0f1786bc991d7"
+  },
+  {
+    "path": "src/lib/products/pdp-redesign/model.ts",
+    "bytes": 28607,
+    "sha256": "c3ba0dc5112ddddeb62e6b99f6b33922d33793b1a93bd2ee6cd61eacceb6d069"
+  },
+  {
+    "path": "src/lib/register/local-empire-bare-glass.json",
+    "bytes": 3281,
+    "sha256": "64d83737229112e233fa814c00232b17d9d01280e989f1d93227db248bd2be09"
+  },
+  {
+    "path": "src/lib/register/local-empire-bare-glass.ts",
+    "bytes": 11737,
+    "sha256": "4e825bd4a677075cd2c2c009d4d3d2ef64dc7045934417b264849334c6befd64"
+  },
+  {
+    "path": "src/lib/register/local-empire-white-pump.ts",
+    "bytes": 2118,
+    "sha256": "c48379df642ece959f12af779d94c0ba4e34038b10428ebf8bdc9c20f78c1541"
+  },
+  {
+    "path": "src/lib/register/local-round78-tubes.ts",
+    "bytes": 5918,
+    "sha256": "5355a689c3de974ec42f9121efc4745e96784675badf9b081aa08093cae48706"
+  },
+  {
+    "path": "src/lib/register/source-tube-material.ts",
+    "bytes": 1439,
+    "sha256": "e01908d215b3d2e5bee1bf87f6d72193e21367bac073ed65c689f4f2aad429e4"
+  },
+  {
+    "path": "tests/empire-through-glass.test.ts",
+    "bytes": 7810,
+    "sha256": "f94c7fe75ad18c18662ceac81bb8b1cc8bd5f52eacdd6d35e131cf37d33f5701"
+  },
+  {
+    "path": "tests/local-empire-bare-glass.test.ts",
+    "bytes": 10629,
+    "sha256": "ace80a51080a6808272bca8be566f8f70a6e895aeeb945ad19ac6f1a0f188a90"
+  },
+  {
+    "path": "tests/local-media-baseline.integration.test.ts",
+    "bytes": 4292,
+    "sha256": "4ac50d594d2060c865eda75b5d5f05b7c8862fd23ab357f5b5cb053f34fe9107"
+  },
+  {
+    "path": "tests/local-round78-tubes.test.ts",
+    "bytes": 5474,
+    "sha256": "87923ee61833f7e34e6e4742ab0b174f88fbee8dd29668354978e75a14299bc5"
+  },
+  {
+    "path": "tests/pdp-redesign-model.test.ts",
+    "bytes": 17890,
+    "sha256": "9e65a93a630d8afeb43d5ab49965e3edce7676d81ae72ea443689ed03fff077f"
+  },
+  {
+    "path": "public/local-media/diva46-pilot/GBDiva46SpryCu-shared-catalog.eef806d7d4b2.png",
+    "bytes": 476945,
+    "sha256": "eef806d7d4b22fd2e3e361cdb1508c04dfcc27c2e75b26d0845a288c1085c7a0"
+  },
+  {
+    "path": "public/local-media/diva46-pilot/GBDiva46SpryMtGl-shared-catalog.4f8cf860ead5.png",
+    "bytes": 456647,
+    "sha256": "4f8cf860ead598932f8ccc8d51599a8b475ff35d7518c6c255c11551c982c732"
+  },
+  {
+    "path": "public/local-media/diva46-pilot/GBDiva46SpryMtSl-shared-catalog.00ba18173887.png",
+    "bytes": 379798,
+    "sha256": "00ba1817388783450a7c3691934bd32e305e3532c90f33e44aab1ea83206e117"
+  },
+  {
+    "path": "public/local-media/diva46-pilot/GBDiva46SpryShnBlk-shared-catalog.f9df84308b46.png",
+    "bytes": 377630,
+    "sha256": "f9df84308b46b3214f4bb58a9d1a3586910804fbd16ec9be9eb6f9994af8e46a"
+  },
+  {
+    "path": "public/local-media/diva46-pilot/GBDiva46SpryShnGl-shared-catalog.814312600589.png",
+    "bytes": 475514,
+    "sha256": "814312600589bfeef69efc1326b6e1519ccab1407150f4a859721e28db1b7862"
+  },
+  {
+    "path": "public/local-media/diva46-pilot/GBDiva46SpryShnSl-shared-catalog.5e8d85f6c571.png",
+    "bytes": 379012,
+    "sha256": "5e8d85f6c57116a10f0b7065f4ffdbfd6bc30f30ef71500a9b8bc6d0f65bdf1e"
+  },
+  {
+    "path": "public/local-media/diva46-pilot/GBDivaFrst46SpryCu-shared-catalog.41943698acf0.png",
+    "bytes": 380787,
+    "sha256": "41943698acf0d6fed40ffbd4755aac8058bc4b3267e0d2fd834bde93591852aa"
+  },
+  {
+    "path": "public/local-media/diva46-pilot/GBDivaFrst46SpryMtGl-shared-catalog.834f6a2ed88b.png",
+    "bytes": 360373,
+    "sha256": "834f6a2ed88b2f8a1f1ac45dc4579d4f8dd61712c24c35db36b0e3213b9063b1"
+  },
+  {
+    "path": "public/local-media/diva46-pilot/GBDivaFrst46SpryMtSl-shared-catalog.c91b08a32bcf.png",
+    "bytes": 287326,
+    "sha256": "c91b08a32bcf95b6d1ef56184fece7896e18e2191eb9ea18424126ece6e97141"
+  },
+  {
+    "path": "public/local-media/diva46-pilot/GBDivaFrst46SpryShnBlk-shared-catalog.44dd05347b87.png",
+    "bytes": 289091,
+    "sha256": "44dd05347b87cc099f355b3caaa593ec778b2c4a8a909784d09c95488d0755e9"
+  },
+  {
+    "path": "public/local-media/diva46-pilot/GBDivaFrst46SpryShnGl-shared-catalog.8706eebe9901.png",
+    "bytes": 378127,
+    "sha256": "8706eebe9901afee63bc5f2a554d08fe2089765cd15a5e31587559ba6abf95c4"
+  },
+  {
+    "path": "public/local-media/diva46-pilot/GBDivaFrst46SpryShnSl-shared-catalog.0920db0542cc.png",
+    "bytes": 289270,
+    "sha256": "0920db0542cc2989e9e856634b12ceede2255d9b62dc981a192dd548802b1f8d"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp100SpryCu-native-tube.940914eda692.png",
+    "bytes": 33509,
+    "sha256": "940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp100SpryCu-native-tube.9735ef353dbb.png",
+    "bytes": 33509,
+    "sha256": "9735ef353dbb6b1f39be0311a7a72d0b99c1e9868214a9aaa8d4fdf9bffea0f3"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp100SpryCu-shared-catalog.3fe8c5f88a2a.png",
+    "bytes": 401992,
+    "sha256": "3fe8c5f88a2ac160f1f1dc9524054e271a489f4b2d505ca0cc6f3adbc67a9e11"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp100SpryMtGl-107x46-catalog.899ae609c4ef.png",
+    "bytes": 383090,
+    "sha256": "899ae609c4ef255d9bae17718102c49585a84d36f74904da24551f4d5dc6e36c"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp100SpryMtGl-107x46-catalog.f288887aedc8.png",
+    "bytes": 383043,
+    "sha256": "f288887aedc8337bfcdbf6357396f37e17259cdd9ece7d9bf2d9b68dd8ae2ada"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp100SpryMtGl-shared-catalog.f288887aedc8.png",
+    "bytes": 383043,
+    "sha256": "f288887aedc8337bfcdbf6357396f37e17259cdd9ece7d9bf2d9b68dd8ae2ada"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp100SpryMtSl-native-tube.6880c1c5e262.png",
+    "bytes": 36850,
+    "sha256": "6880c1c5e26265666c258d02c493d09c10547fe8848aa792c6f82a1d9380927c"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp100SpryMtSl-native-tube.eff054ee57db.png",
+    "bytes": 36850,
+    "sha256": "eff054ee57db13f064823b78d7dba60108978083132791d4885d999fcb456c84"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp100SpryMtSl-shared-catalog.4fcfba3540fb.png",
+    "bytes": 329628,
+    "sha256": "4fcfba3540fbf6666c33b95f9839b5995439aaebde865120318d11521345d019"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp100SpryShnBlk-native-tube.940914eda692.png",
+    "bytes": 33509,
+    "sha256": "940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp100SpryShnBlk-native-tube.9735ef353dbb.png",
+    "bytes": 33509,
+    "sha256": "9735ef353dbb6b1f39be0311a7a72d0b99c1e9868214a9aaa8d4fdf9bffea0f3"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp100SpryShnBlk-shared-catalog.9fbc969f99e1.png",
+    "bytes": 329821,
+    "sha256": "9fbc969f99e189bcc5c55b5e50a9de2e2ffb45329de596c22cb63af341626591"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp100SpryShnGl-native-tube.220a0365f812.png",
+    "bytes": 36343,
+    "sha256": "220a0365f812852ed6b04122635c405a296d4086f744ebb9fa5e8e87ead39909"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp100SpryShnGl-native-tube.d29bcecf15f9.png",
+    "bytes": 36343,
+    "sha256": "d29bcecf15f9ba2709470f24d1d456071fc344e5e1e938b38d00a8be16003616"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp100SpryShnGl-shared-catalog.87fa84ab1249.png",
+    "bytes": 399448,
+    "sha256": "87fa84ab124966d779467bf47bbef4dbed22fbd540108b7fc1f377dc1c90085b"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp100SpryShnSl-native-tube.940914eda692.png",
+    "bytes": 33509,
+    "sha256": "940914eda692a849b044b76ed822c62e51e2f17abf7a90d3645a93a7698255dd"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp100SpryShnSl-native-tube.9735ef353dbb.png",
+    "bytes": 33509,
+    "sha256": "9735ef353dbb6b1f39be0311a7a72d0b99c1e9868214a9aaa8d4fdf9bffea0f3"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp100SpryShnSl-shared-catalog.b102e2ecee7c.png",
+    "bytes": 328879,
+    "sha256": "b102e2ecee7c6ad55097bf8051e11596a38afd5cfe035a58a5d365bfb639a979"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp50SpryCu-native-tube.6b511b205007.png",
+    "bytes": 27380,
+    "sha256": "6b511b20500736cb8af2e0c8ef46393034596034ff2908f9890ea09756bbe6c0"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp50SpryCu-native-tube.abd1dd749986.png",
+    "bytes": 27380,
+    "sha256": "abd1dd749986c006f412ebfc4f6cec3847b800dc1898021b494f29583665cb37"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp50SpryCu-shared-catalog.a493cba8116e.png",
+    "bytes": 398393,
+    "sha256": "a493cba8116e830d1b1ea2659003b15d0734e503b1f97eb73fe5dca6cb5ec838"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp50SpryMtGl-shared-catalog.7580022c9950.png",
+    "bytes": 375664,
+    "sha256": "7580022c995036c9626d1fdba70105775b77dfc1e3149703b6be223e662584ea"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp50SpryMtSl-native-tube.2ab4241d20f6.png",
+    "bytes": 25593,
+    "sha256": "2ab4241d20f6becc37c0d2e211c7f629bbcf3ce9ebb8704af5d2ae23e6f5ed27"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp50SpryMtSl-native-tube.bf29cf892dca.png",
+    "bytes": 25593,
+    "sha256": "bf29cf892dca0895bb25b16fa775d02765c6e6e5d6382dbdb8e426208cab986a"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp50SpryMtSl-shared-catalog.5cbe4f3825ba.png",
+    "bytes": 298913,
+    "sha256": "5cbe4f3825ba839fd94cd3c38240dd0bac7ef939579f4f96df6dc06d74ae6286"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp50SpryShnBlk-native-tube.951ca106760f.png",
+    "bytes": 25470,
+    "sha256": "951ca106760f2b34381c4ea32452423e7632c12293def5e1d27c2b5bf79c4167"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp50SpryShnBlk-native-tube.f28219ec617f.png",
+    "bytes": 25470,
+    "sha256": "f28219ec617f87c94b76da662080a516e33438bba40f1cb00e15db21f8c52ae1"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp50SpryShnBlk-shared-catalog.713b9d68412f.png",
+    "bytes": 299408,
+    "sha256": "713b9d68412fb0846de7ee68c0a1f84d1138efb62c73777b057a5b40a99a4fb6"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp50SpryShnGl-native-tube.63aa5c0e7f70.png",
+    "bytes": 25579,
+    "sha256": "63aa5c0e7f70f23c55baff76994ae766f128425510e0d713bcf8bad432213ac0"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp50SpryShnGl-native-tube.63ca6264b0f1.png",
+    "bytes": 25579,
+    "sha256": "63ca6264b0f11daeace215730ff5ef425e451bc83e531f85a52e11890f013edc"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp50SpryShnGl-shared-catalog.8c00a2f63c65.png",
+    "bytes": 393827,
+    "sha256": "8c00a2f63c652c86b85e48080e55cd1e8d4b6670d09a9d9fa753eaab77e6d084"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp50SpryShnSl-native-tube.63aa5c0e7f70.png",
+    "bytes": 25579,
+    "sha256": "63aa5c0e7f70f23c55baff76994ae766f128425510e0d713bcf8bad432213ac0"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp50SpryShnSl-native-tube.63ca6264b0f1.png",
+    "bytes": 25579,
+    "sha256": "63ca6264b0f11daeace215730ff5ef425e451bc83e531f85a52e11890f013edc"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/GBEmp50SpryShnSl-shared-catalog.63eefb858852.png",
+    "bytes": 299519,
+    "sha256": "63eefb85885225425daa74a073b6ee06389598128ca17440a8c9c771f4fcce43"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/LBEmp100WhtClOvrCp-native-tube.d8ba369f9439.png",
+    "bytes": 46800,
+    "sha256": "d8ba369f94392fd2b5d8b02d4f6718acf5926f084b92a6e518b9f0970e7b5396"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/LBEmp100WhtClOvrCp-native-tube.dccdf8225d8e.png",
+    "bytes": 46800,
+    "sha256": "dccdf8225d8ed57444366b990f0a68a3df422cbe5f6c55ac61c7657c2a2f0cf5"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/LBEmp100WhtClOvrCp-shared-catalog.6c0335cd32e4.png",
+    "bytes": 321955,
+    "sha256": "6c0335cd32e4d4b3f45e504e7686f148ab13de12bc5ecf7df8aa37be3495df7c"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/LBEmp50WhtClOvrCp-shared-catalog.0c9c203d4591.png",
+    "bytes": 288579,
+    "sha256": "0c9c203d4591e29fc94fc34a43d9dd629a894b1026b406c790ca3246f544c4fe"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/empire-100ml-107x46.1abdf390058c.png",
+    "bytes": 1140744,
+    "sha256": "1abdf390058c03e60c655df18b6152c8a0f8bbda8d650cca6d2fb4ef948cca3f"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/empire-100ml-empty-alpha.cea2bf27e051.png",
+    "bytes": 1367032,
+    "sha256": "cea2bf27e051959c0a0b6fbaaa44f678e6500baade907ce4a271e65d9293a8f7"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/empire-100ml-native-spray-tube.883a216fc61f.png",
+    "bytes": 33508,
+    "sha256": "883a216fc61f92a2ec8371eea59aa547b4db841240c8b2296cc505d8045ff2f0"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/empire-50ml-empty-alpha.0fce3a2c6bb1.png",
+    "bytes": 1321128,
+    "sha256": "0fce3a2c6bb142cb81008c5559efaf7dac20b459d52cc60ce7b0c3243bbc036f"
+  },
+  {
+    "path": "public/local-media/empire-bare-glass/empire-50ml-native-spray-tube.7d755598ba26.png",
+    "bytes": 25595,
+    "sha256": "7d755598ba26efc496f5cd05fb5930132eb0af6d4a99d8bd95da3f937ccc6d90"
+  },
+  {
+    "path": "public/local-media/round78-lotion-pilot/LBRnd78LtnClOvrCap-shared-catalog.5a6aea98b830.png",
+    "bytes": 298554,
+    "sha256": "5a6aea98b830bc50e87d88ca314c07941fbb959eaab466af20b39c3ad523dcb5"
+  },
+  {
+    "path": "public/local-media/round78-lotion-pilot/LBRnd78LtnCu-shared-catalog.e3fd0877bc15.png",
+    "bytes": 412802,
+    "sha256": "e3fd0877bc15120e5a1ad6202c3fc1c90b8712bbadfabedbe86933029778a4a8"
+  },
+  {
+    "path": "public/local-media/round78-lotion-pilot/LBRnd78LtnMtGl-shared-catalog.41ee7331dfc8.png",
+    "bytes": 393043,
+    "sha256": "41ee7331dfc84598ec0c49b7bc843471f89b8636f7348836615c72421d8be5be"
+  },
+  {
+    "path": "public/local-media/round78-lotion-pilot/LBRnd78LtnMtSl-shared-catalog.82b224cb65a2.png",
+    "bytes": 298609,
+    "sha256": "82b224cb65a22cbd9d10e0b9a4029e1af01889822bac85382ef704cff31515e4"
+  },
+  {
+    "path": "public/local-media/round78-lotion-pilot/LBRnd78LtnShnBlk-shared-catalog.c804fe625383.png",
+    "bytes": 295101,
+    "sha256": "c804fe625383e7b491c15878bc30aed51caaefab64acabe9a4ea7c81913896a2"
+  },
+  {
+    "path": "public/local-media/round78-lotion-pilot/LBRnd78LtnShnGl-shared-catalog.fcb3457ee046.png",
+    "bytes": 413248,
+    "sha256": "fcb3457ee046bcfa30c39a0d3a0343651658fb48815a52e5eccdb992b5fa8813"
+  },
+  {
+    "path": "public/local-media/round78-lotion-pilot/LBRnd78LtnShnSl-shared-catalog.7c5be87f489f.png",
+    "bytes": 298163,
+    "sha256": "7c5be87f489f23d0a52b1d21910a5954f380f996b55d3f1fae68a9419f997347"
+  },
+  {
+    "path": "public/local-media/round78-lotion-pilot/LBRndFrst78LtnClOvrCap-shared-catalog.9488f2b0d866.png",
+    "bytes": 319575,
+    "sha256": "9488f2b0d866d36661ecb43019031112cf4c2c5e23c4fd1150e1b4c9ff8679d2"
+  },
+  {
+    "path": "public/local-media/round78-lotion-pilot/LBRndFrst78LtnCu-shared-catalog.679bc55de619.png",
+    "bytes": 427552,
+    "sha256": "679bc55de619243dcef8d017cbe37c5e0e3619f4ac8ac09b8a09e4469e98f008"
+  },
+  {
+    "path": "public/local-media/round78-lotion-pilot/LBRndFrst78LtnMtGl-shared-catalog.e3f567612598.png",
+    "bytes": 408073,
+    "sha256": "e3f567612598b9d251ac6c92ec9931ec0fa8c657e8d1c65eaf0f7378b6d72851"
+  },
+  {
+    "path": "public/local-media/round78-lotion-pilot/LBRndFrst78LtnMtSl-shared-catalog.458efdc1bd35.png",
+    "bytes": 320044,
+    "sha256": "458efdc1bd353563c511712085f29a7e2a6e0e31ceff0176a40a8a9f8a2c1c8d"
+  },
+  {
+    "path": "public/local-media/round78-lotion-pilot/LBRndFrst78LtnShnBlk-shared-catalog.69e3abc6ee73.png",
+    "bytes": 320593,
+    "sha256": "69e3abc6ee73036759298f5cf1226568d53d0162330192bb2e0a4be0d51c49a7"
+  },
+  {
+    "path": "public/local-media/round78-lotion-pilot/LBRndFrst78LtnShnGl-shared-catalog.b54e686a8479.png",
+    "bytes": 434009,
+    "sha256": "b54e686a8479e365c7fcf3405bc7452c31f9d96b6e9de50b497ac7772f081cb9"
+  },
+  {
+    "path": "public/local-media/round78-lotion-pilot/LBRndFrst78LtnShnSl-shared-catalog.6b12ab831eb8.png",
+    "bytes": 322802,
+    "sha256": "6b12ab831eb868e5dd2e0d6920aa6fecc6b698bfb2d8d9312716dfa27271323c"
+  },
+  {
+    "path": "public/local-media/round78-pilot/GBRnd78SpryCu-shared-catalog.fc78436ff5db.png",
+    "bytes": 411582,
+    "sha256": "fc78436ff5db33076675e83914319c881ed305b0f523be2f6d4f827d8f1870b8"
+  },
+  {
+    "path": "public/local-media/round78-pilot/GBRnd78SpryMtGl-shared-catalog.515bdef76e64.png",
+    "bytes": 386973,
+    "sha256": "515bdef76e64df516b1562d3cc9cc1d4d33c591366e1398db8775a1093b3b1d6"
+  },
+  {
+    "path": "public/local-media/round78-pilot/GBRnd78SpryMtSl-shared-catalog.89e992101be2.png",
+    "bytes": 289499,
+    "sha256": "89e992101be2d23eb61a895b37998cacb18c2cd7e4e2ea674db96f24d5af6df0"
+  },
+  {
+    "path": "public/local-media/round78-pilot/GBRnd78SpryShnBlk-shared-catalog.bba51de97217.png",
+    "bytes": 289575,
+    "sha256": "bba51de97217751f2e441630cafaa0207999d867bcf4403d1d55382a8afa0275"
+  },
+  {
+    "path": "public/local-media/round78-pilot/GBRnd78SpryShnGl-shared-catalog.158384c42a2e.png",
+    "bytes": 405873,
+    "sha256": "158384c42a2e4d6adceed230697445cb0bf41a9956cd1b3833bbf12f44f2efa3"
+  },
+  {
+    "path": "public/local-media/round78-pilot/GBRnd78SpryShnSl-shared-catalog.dfbc0784912a.png",
+    "bytes": 291643,
+    "sha256": "dfbc0784912aed51ea448fc2e0853dbf809a4b5eada0babcd32c051ab6efcbcb"
+  },
+  {
+    "path": "public/local-media/round78-pilot/GBRndFrst78SpryCu-shared-catalog.ffbf828bbdaa.png",
+    "bytes": 430746,
+    "sha256": "ffbf828bbdaafed94b484ce4be95293b193287d47b8038ad41374974ae4c3254"
+  },
+  {
+    "path": "public/local-media/round78-pilot/GBRndFrst78SpryMtGl-shared-catalog.9cc726a91ca4.png",
+    "bytes": 407364,
+    "sha256": "9cc726a91ca4753a0f0b3a2fbb16807f9d1413b711403343853907e767ec0265"
+  },
+  {
+    "path": "public/local-media/round78-pilot/GBRndFrst78SpryMtSl-shared-catalog.b378bdef422f.png",
+    "bytes": 312777,
+    "sha256": "b378bdef422fb899cc41544aa39fa62e47658e2779feb2fc1375d088155f96ef"
+  },
+  {
+    "path": "public/local-media/round78-pilot/GBRndFrst78SpryShnBlk-shared-catalog.5689174dc313.png",
+    "bytes": 316874,
+    "sha256": "5689174dc313d7c1baab7b61a9b9d692cd9c376b0432f7299ad3f1bfc56ba949"
+  },
+  {
+    "path": "public/local-media/round78-pilot/GBRndFrst78SpryShnGl-shared-catalog.299f3bc1227a.png",
+    "bytes": 430208,
+    "sha256": "299f3bc1227ab863fd4e443612b280ab00c4c7cdf575aee5d4f0820772cdeda7"
+  },
+  {
+    "path": "public/local-media/round78-pilot/GBRndFrst78SpryShnSl-shared-catalog.f000bbc5ba6b.png",
+    "bytes": 317489,
+    "sha256": "f000bbc5ba6beba0914dcaeb9c3ec8d91a7c7f20e7de03644d9f00c79c243b68"
+  },
+  {
+    "path": "scripts/audit-local-pdp-picks.ts",
+    "bytes": 1994,
+    "sha256": "66f44d26e8e9fed2f362f3a0a6004f9d8f7c6a23ecea47ac2d983a32d9d470bb"
+  },
+  {
+    "path": "scripts/capture-diva46-spray-completion.ts",
+    "bytes": 1162,
+    "sha256": "f34f1556954515b024fe5f2dc563bbd329ebf26f05b01ccacda0c7c7388e8fa9"
+  },
+  {
+    "path": "scripts/capture-diva46-two-bottle-pilot.ts",
+    "bytes": 1162,
+    "sha256": "2352a8c0149c88bf28f3a6acb5964510d3c91c3f9c3f57625e4095ac126d6afb"
+  },
+  {
+    "path": "scripts/capture-round78-lotion-completion.ts",
+    "bytes": 1164,
+    "sha256": "45d242e0c0d64415d6f00b9524f6b415645d18b184a8a69e9ed6352dd5c692ee"
+  },
+  {
+    "path": "scripts/capture-round78-lotion-pilot.ts",
+    "bytes": 1159,
+    "sha256": "55ee816c6e19680871a50cb2de9f2a5c0ccfdfa342c6098034cd1699221b28f8"
+  },
+  {
+    "path": "scripts/capture-round78-spray-completion.ts",
+    "bytes": 1166,
+    "sha256": "967ca5f911e9db9258c19ae05de803c7cbca027035d4ddb88ff881e5d055d86c"
+  },
+  {
+    "path": "scripts/capture-round78-two-bottle-pilot.ts",
+    "bytes": 1166,
+    "sha256": "6c195f1e2c51623ed97cc76c12190cdf75388dc10b1b853194adb5658096da41"
+  },
+  {
+    "path": "scripts/inspect-diva-picks.ts",
+    "bytes": 1154,
+    "sha256": "bdc68b366ae269ff1a76c41f9af404e1476f8b1e40581fc36fde0f958170901e"
+  },
+  {
+    "path": "scripts/prepare-empire-50ml-source-tube.py",
+    "bytes": 2084,
+    "sha256": "1e5f64d8f5512300723a65413c481993fe550a8eb31e8fa2e6e2aa75be3a09e3"
+  },
+  {
+    "path": "scripts/prepare-empire-alpha-pilot.py",
+    "bytes": 4262,
+    "sha256": "0e3313833deda27183351d17b552311a9b3113678d27569a380e30d971f1983f"
+  },
+  {
+    "path": "scripts/prepare-empire-proportion-pilot.py",
+    "bytes": 3150,
+    "sha256": "c426c75d0350e15d81e651a17c14be7c4dce62db104061cb4e8f0d37d525de34"
+  },
+  {
+    "path": "scripts/prepare-empire-remaining-sources.py",
+    "bytes": 4909,
+    "sha256": "80f175e6938813c188f178a39f55858887cc586bb03a7c9c5f86a5b2c0d9d9f9"
+  },
+  {
+    "path": "scripts/prepare-empire-source-tube.py",
+    "bytes": 2432,
+    "sha256": "0172acfe66859f71c10f56d6e1fe299c104a050bd073b1c6d17db7d0389379ab"
+  },
+  {
+    "path": "scripts/snapshot-diva46-completion-kits.ts",
+    "bytes": 1147,
+    "sha256": "e5aad93ee0518a2545009331e05c35e199ecd66a7c76adf667902cc521be8c7b"
+  },
+  {
+    "path": "scripts/snapshot-diva46-pilot-kits.ts",
+    "bytes": 760,
+    "sha256": "978b4a00225e9679f0ef6c97e7a7f3dd154eb57d1711290d8216bb43cfb4667f"
+  },
+  {
+    "path": "scripts/snapshot-round78-completion-kits.ts",
+    "bytes": 650,
+    "sha256": "2c7e0b8968f1ca80e5496def418192fe21dd2e8c8cbfeda86a427cdefb4429bc"
+  },
+  {
+    "path": "scripts/snapshot-round78-lotion-completion-kits.ts",
+    "bytes": 1163,
+    "sha256": "d55998a9d7380d5f93e8d3174c7991d1d87d69e4bcaeb6687b06e595e7e2bcf3"
+  },
+  {
+    "path": "scripts/snapshot-round78-lotion-pilot-kits.ts",
+    "bytes": 1215,
+    "sha256": "6aad4c151e42edefa7e0ff7d04c021f6bd25aec587b7f091917f6ebc1ee0fff1"
+  },
+  {
+    "path": "src/lib/products/local-diva46-additional-catalog-heroes.json",
+    "bytes": 6504,
+    "sha256": "d5cb77fb7840bd3ae992cab31e80a8b0da365fc246842b4a6243e030dee4c350"
+  },
+  {
+    "path": "src/lib/products/local-diva46-completion-provenance.json",
+    "bytes": 22641,
+    "sha256": "2de15cd767536de73923642c6b82c8f6929246c080ce9f7e1888c741e4729a6c"
+  },
+  {
+    "path": "src/lib/products/local-diva46-pilot-catalog-heroes.json",
+    "bytes": 1311,
+    "sha256": "6ce440ee6b4a45a712542a4d3b0bf2c371f5c7f2c6f4a0bec9718ecf3c765f95"
+  },
+  {
+    "path": "src/lib/products/local-diva46-pilot-provenance.json",
+    "bytes": 3785,
+    "sha256": "67360c710266ec9ef9175ddb64739ff3fbdddf4fe91c8f802a5b8cd2a735bcf3"
+  },
+  {
+    "path": "src/lib/products/local-empire-50ml-catalog-provenance.json",
+    "bytes": 1696,
+    "sha256": "6c40b89994873e373f5404e9a0d9fd06ed64d62bc3ad18d444728cf633d3103a"
+  },
+  {
+    "path": "src/lib/products/local-empire-additional-catalog-heroes.json",
+    "bytes": 8592,
+    "sha256": "797807d8888919f20fd7ee8240c9a510ecb51d1f2d4df08c7706f5c27841aca0"
+  },
+  {
+    "path": "src/lib/products/local-empire-catalog-hero.json",
+    "bytes": 622,
+    "sha256": "d5da2564fcc8c98ee7e44a21ce9d5eb19141d101de0687e566bfb4feb3d31969"
+  },
+  {
+    "path": "src/lib/products/local-empire-catalog-provenance.json",
+    "bytes": 1718,
+    "sha256": "db4dab5ae4738355180e4d2c9e3df2878bf55e94366e39066214ba0aafba9487"
+  },
+  {
+    "path": "src/lib/products/local-empire-completion-provenance.json",
+    "bytes": 24813,
+    "sha256": "9f5fc1664457eff0f9d1582fa7330e566c0fca2b393277077243d81e370d974f"
+  },
+  {
+    "path": "src/lib/products/local-round78-additional-catalog-heroes.json",
+    "bytes": 6553,
+    "sha256": "7cd30aafd5ee038e153bb6bef8abca5c9148a27d08d7609cc379263e990c03f8"
+  },
+  {
+    "path": "src/lib/products/local-round78-completion-provenance.json",
+    "bytes": 22822,
+    "sha256": "ee30eafc45763eba99f879764d85ea864ab4ec4fd44433c6417a3ac35a31af4b"
+  },
+  {
+    "path": "src/lib/products/local-round78-lotion-additional-catalog-heroes.json",
+    "bytes": 7943,
+    "sha256": "469e24df74c04c7ef10436b1f554c44da67abf3d8e13163c25aa4b51079bc9a9"
+  },
+  {
+    "path": "src/lib/products/local-round78-lotion-completion-provenance.json",
+    "bytes": 26192,
+    "sha256": "0e224acb176af0848a3ff296390275505fd3c8476232ed9dad35b522ff985de3"
+  },
+  {
+    "path": "src/lib/products/local-round78-lotion-pilot-catalog-heroes.json",
+    "bytes": 1329,
+    "sha256": "7a1ebdc5b287425569097b3594cfc745e98596f8a15d0f7f6bb4b3985355a361"
+  },
+  {
+    "path": "src/lib/products/local-round78-lotion-pilot-provenance.json",
+    "bytes": 3825,
+    "sha256": "a6e1f342f92be69790c2b4582e00d0bbdb728a9189eacfa9d0cc2699ecfdeb8a"
+  },
+  {
+    "path": "src/lib/products/local-round78-pilot-catalog-heroes.json",
+    "bytes": 1321,
+    "sha256": "51a66bd1320e51b3fc05f647ed5c884ad117d0512763df8e15fa9a8b5e7f8b72"
+  },
+  {
+    "path": "src/lib/products/local-round78-pilot-provenance.json",
+    "bytes": 3809,
+    "sha256": "f3c6698ee6f60a9795a08000dfa2232ad1c6de81dc8026b281d3ab07d4ba9309"
+  },
+  {
+    "path": "src/lib/register/local-empire-100ml-spray-tube.json",
+    "bytes": 1388,
+    "sha256": "519c6ac4a6c7fbeb32d0fa31ea0f7357621750c434b9375122a15946484ff6ce"
+  },
+  {
+    "path": "src/lib/register/local-empire-100ml-white-pump-tube.json",
+    "bytes": 1372,
+    "sha256": "2f75360a61f4b5a65f4c97a610f2908ed2dc29e1a8406c130cf66a662a7f0dd6"
+  },
+  {
+    "path": "src/lib/register/local-empire-100ml-white-pump.json",
+    "bytes": 3330,
+    "sha256": "dd2ef476f02cf26e0fbfdb19b39ae029a87c3ea5c8c9b58a2a5a2c94cccd015c"
+  },
+  {
+    "path": "src/lib/register/local-empire-additional-spray-tubes.json",
+    "bytes": 16467,
+    "sha256": "4935c73a7233f31cae0a84461dc84460784e2b2426bebb411d09ac886345ce08"
+  },
+  {
+    "path": "src/lib/register/local-round78-additional-spray-joins.json",
+    "bytes": 1950,
+    "sha256": "b7d9c53b8f6639be4701ce8ab5613f046b39e4f66ff75b3392b1d52e0a52efab"
+  },
+  {
+    "path": "src/lib/register/local-round78-two-bottle-pilot.json",
+    "bytes": 702,
+    "sha256": "2008ac4e723f319b60108724162c78b911864ca3251edb8f9f393fcdb9dda2fc"
+  },
+  {
+    "path": "tests/local-diva46-spray-completion.test.ts",
+    "bytes": 3260,
+    "sha256": "c5712dfffec6557f8f6e3ade56fcef1a02e34b711713426218fa8362e7578754"
+  },
+  {
+    "path": "tests/local-diva46-two-bottle-pilot.test.ts",
+    "bytes": 2507,
+    "sha256": "7f3095cdd8ae0b1551aee544fa00d61ca96e664cbeddadfb4190c8be7f237502"
+  },
+  {
+    "path": "tests/local-empire-catalog-hero.test.ts",
+    "bytes": 3298,
+    "sha256": "25b494168becb73ef4a52ce6273dc2c6e268aa7f7230088eff738f35d84072fa"
+  },
+  {
+    "path": "tests/local-empire-completion.test.ts",
+    "bytes": 3679,
+    "sha256": "89b09f0918cb6da5a93be93a648cad82ac12e063b3cee077e5132967e56e0d6f"
+  },
+  {
+    "path": "tests/local-round78-lotion-completion.test.ts",
+    "bytes": 2715,
+    "sha256": "14cb23eee200702daeea68e66fabd8c528d1327f454b99ea5430136cf959ad97"
+  },
+  {
+    "path": "tests/local-round78-lotion-pilot.test.ts",
+    "bytes": 2509,
+    "sha256": "4641c5e5aae9a1181a052eea3a6c2db9c8553ec42f24187d18f9c8aed3fd3029"
+  },
+  {
+    "path": "tests/local-round78-spray-completion.test.ts",
+    "bytes": 3790,
+    "sha256": "bf547c3f5525bb31932b667f5b55800200cfaf1749f4afd9513de7143d1d1b9d"
+  },
+  {
+    "path": "tests/local-round78-two-bottle-pilot.test.ts",
+    "bytes": 3455,
+    "sha256": "a876a652cd17654bbb50f2e5ece7c42684f1917171882628d49bc47b03f3e753"
+  }
+]

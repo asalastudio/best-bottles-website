@@ -1,0 +1,6122 @@
+{
+  "GB-RND-CLR-78ML-SPR-CPR": {
+    "sku": "GBRnd78SpryCu",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 447.91,
+          "bottom": 962.65
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 441.92,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTCP-18-415-03",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 447.91,
+          "bottom": 962.65
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.65
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 441.92,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTCP-18-415-03",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 373.47,
+          "top": 2,
+          "right": 629.9,
+          "bottom": 449.91
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.65
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/sprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 229,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.47,
+          "y": 2,
+          "width": 256.43,
+          "height": 447.91
+        },
+        "componentId": "CMP-SPR-MTCP-18-415-03"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 356.41,
+          "top": -62.68,
+          "right": 667.39,
+          "bottom": 449.81
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1197.46
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/overcap-9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 392,
+          "height": 646
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 356.41,
+          "y": -62.68,
+          "width": 310.98,
+          "height": 512.49
+        },
+        "componentId": "CMP-SPR-MTCP-18-415-03"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-MTCP-18-415-03"
+      ],
+      "seatSignature": "cd79d21f07ae58",
+      "seatDropMm": 0
+    }
+  },
+  "GBRnd78SpryCu": {
+    "sku": "GBRnd78SpryCu",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 447.91,
+          "bottom": 962.65
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 441.92,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTCP-18-415-03",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 447.91,
+          "bottom": 962.65
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.65
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 441.92,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTCP-18-415-03",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 373.47,
+          "top": 2,
+          "right": 629.9,
+          "bottom": 449.91
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.65
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/sprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 229,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.47,
+          "y": 2,
+          "width": 256.43,
+          "height": 447.91
+        },
+        "componentId": "CMP-SPR-MTCP-18-415-03"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 356.41,
+          "top": -62.68,
+          "right": 667.39,
+          "bottom": 449.81
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1197.46
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/overcap-9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 392,
+          "height": 646
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 356.41,
+          "y": -62.68,
+          "width": 310.98,
+          "height": 512.49
+        },
+        "componentId": "CMP-SPR-MTCP-18-415-03"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-MTCP-18-415-03"
+      ],
+      "seatSignature": "cd79d21f07ae58",
+      "seatDropMm": 0
+    }
+  },
+  "GB-RND-CLR-78ML-SPR-MGLD": {
+    "sku": "GBRnd78SpryMtGl",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 449.69,
+          "bottom": 964.43
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 443.7,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTGD-18-415-05",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 449.69,
+          "bottom": 964.43
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -727.43
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 443.7,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTGD-18-415-05",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 365.53,
+          "top": -10.02,
+          "right": 633.32,
+          "bottom": 451.69
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -727.43
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/sprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 232,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 365.53,
+          "y": -10.02,
+          "width": 267.79,
+          "height": 461.71
+        },
+        "componentId": "CMP-SPR-MTGD-18-415-05"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 359.98,
+          "top": -21.42,
+          "right": 636.85,
+          "bottom": 456.16
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1217.61
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 349,
+          "height": 602
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 359.98,
+          "y": -21.42,
+          "width": 276.87,
+          "height": 477.58
+        },
+        "componentId": "CMP-SPR-MTGD-18-415-05"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-MTGD-18-415-05"
+      ],
+      "seatSignature": "f7f7a68114cf32",
+      "seatDropMm": 0
+    }
+  },
+  "GBRnd78SpryMtGl": {
+    "sku": "GBRnd78SpryMtGl",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 449.69,
+          "bottom": 964.43
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 443.7,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTGD-18-415-05",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 449.69,
+          "bottom": 964.43
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -727.43
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 443.7,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTGD-18-415-05",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 365.53,
+          "top": -10.02,
+          "right": 633.32,
+          "bottom": 451.69
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -727.43
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/sprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 232,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 365.53,
+          "y": -10.02,
+          "width": 267.79,
+          "height": 461.71
+        },
+        "componentId": "CMP-SPR-MTGD-18-415-05"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 359.98,
+          "top": -21.42,
+          "right": 636.85,
+          "bottom": 456.16
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1217.61
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 349,
+          "height": 602
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 359.98,
+          "y": -21.42,
+          "width": 276.87,
+          "height": 477.58
+        },
+        "componentId": "CMP-SPR-MTGD-18-415-05"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-MTGD-18-415-05"
+      ],
+      "seatSignature": "f7f7a68114cf32",
+      "seatDropMm": 0
+    }
+  },
+  "GB-RND-CLR-78ML-SPR-MSLV": {
+    "sku": "GBRnd78SpryMtSl",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 449.18,
+          "bottom": 963.92
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 443.19,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTSL-18-415-06",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 449.18,
+          "bottom": 963.92
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -726.92
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 443.19,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTSL-18-415-06",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 373.21,
+          "top": 9.65,
+          "right": 624.56,
+          "bottom": 451.18
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -726.92
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/sprayer-5c50ea9efde8b3535c6330bf6b21429e2300857f9ba7d9c47677349dce048cef.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 226,
+          "height": 397
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.21,
+          "y": 9.65,
+          "width": 251.35,
+          "height": 441.53
+        },
+        "componentId": "CMP-SPR-MTSL-18-415-06"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.77,
+          "top": -19.84,
+          "right": 634.47,
+          "bottom": 456.15
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1197.42
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 345,
+          "height": 600
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.77,
+          "y": -19.84,
+          "width": 273.7,
+          "height": 475.99
+        },
+        "componentId": "CMP-SPR-MTSL-18-415-06"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-MTSL-18-415-06"
+      ],
+      "seatSignature": "961a328613d41d",
+      "seatDropMm": 0
+    }
+  },
+  "GBRnd78SpryMtSl": {
+    "sku": "GBRnd78SpryMtSl",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 449.18,
+          "bottom": 963.92
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 443.19,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTSL-18-415-06",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 449.18,
+          "bottom": 963.92
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -726.92
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 443.19,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTSL-18-415-06",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 373.21,
+          "top": 9.65,
+          "right": 624.56,
+          "bottom": 451.18
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -726.92
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/sprayer-5c50ea9efde8b3535c6330bf6b21429e2300857f9ba7d9c47677349dce048cef.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 226,
+          "height": 397
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.21,
+          "y": 9.65,
+          "width": 251.35,
+          "height": 441.53
+        },
+        "componentId": "CMP-SPR-MTSL-18-415-06"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.77,
+          "top": -19.84,
+          "right": 634.47,
+          "bottom": 456.15
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1197.42
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 345,
+          "height": 600
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.77,
+          "y": -19.84,
+          "width": 273.7,
+          "height": 475.99
+        },
+        "componentId": "CMP-SPR-MTSL-18-415-06"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-MTSL-18-415-06"
+      ],
+      "seatSignature": "961a328613d41d",
+      "seatDropMm": 0
+    }
+  },
+  "GB-RND-CLR-78ML-SPR-SBLK": {
+    "sku": "GBRnd78SpryShnBlk",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 451.16,
+          "bottom": 965.9
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 445.17,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHBK-18-415-06",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 451.16,
+          "bottom": 965.9
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -728.9
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 445.17,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHBK-18-415-06",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 366.52,
+          "top": 2.61,
+          "right": 627.84,
+          "bottom": 453.16
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -728.9
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/sprayer-9d494fd880618a93df237d4a4ce12c35c13cc5b98af531044a943793654e9994.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 232,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 366.52,
+          "y": 2.61,
+          "width": 261.32,
+          "height": 450.55
+        },
+        "componentId": "CMP-SPR-SHBK-18-415-06"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.38,
+          "top": -18.25,
+          "right": 637.25,
+          "bottom": 454.57
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1204.86
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 349,
+          "height": 596
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.38,
+          "y": -18.25,
+          "width": 276.87,
+          "height": 472.82
+        },
+        "componentId": "CMP-SPR-SHBK-18-415-06"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-SHBK-18-415-06"
+      ],
+      "seatSignature": "ebe306e003aaa3",
+      "seatDropMm": 0
+    }
+  },
+  "GBRnd78SpryShnBlk": {
+    "sku": "GBRnd78SpryShnBlk",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 451.16,
+          "bottom": 965.9
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 445.17,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHBK-18-415-06",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 451.16,
+          "bottom": 965.9
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -728.9
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 445.17,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHBK-18-415-06",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 366.52,
+          "top": 2.61,
+          "right": 627.84,
+          "bottom": 453.16
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -728.9
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/sprayer-9d494fd880618a93df237d4a4ce12c35c13cc5b98af531044a943793654e9994.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 232,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 366.52,
+          "y": 2.61,
+          "width": 261.32,
+          "height": 450.55
+        },
+        "componentId": "CMP-SPR-SHBK-18-415-06"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.38,
+          "top": -18.25,
+          "right": 637.25,
+          "bottom": 454.57
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1204.86
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 349,
+          "height": 596
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.38,
+          "y": -18.25,
+          "width": 276.87,
+          "height": 472.82
+        },
+        "componentId": "CMP-SPR-SHBK-18-415-06"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-SHBK-18-415-06"
+      ],
+      "seatSignature": "ebe306e003aaa3",
+      "seatDropMm": 0
+    }
+  },
+  "GB-RND-CLR-78ML-SPR-SGLD": {
+    "sku": "GBRnd78SpryShnGl",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 446.59,
+          "bottom": 961.33
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 440.6,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHGD-18-415-05",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 446.59,
+          "bottom": 961.33
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -724.33
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 440.6,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHGD-18-415-05",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 367.02,
+          "top": 10.8,
+          "right": 631.89,
+          "bottom": 448.59
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -724.33
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/sprayer-41f38526607d7ec57dcc6c175773a0ec77889e76f1bd23f478cc2292b6497846.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 242,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 367.02,
+          "y": 10.8,
+          "width": 264.87,
+          "height": 437.79
+        },
+        "componentId": "CMP-SPR-SHGD-18-415-05"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 365.29,
+          "top": -22.22,
+          "right": 637.4,
+          "bottom": 449.01
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1186.54
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/overcap-177601ce48e6d817e1fbeebf18246c078cca84cedbce281747026dc3ef8abb38.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 343,
+          "height": 594
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 365.29,
+          "y": -22.22,
+          "width": 272.11,
+          "height": 471.23
+        },
+        "componentId": "CMP-SPR-SHGD-18-415-05"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-SHGD-18-415-05"
+      ],
+      "seatSignature": "418ae0fc193fb3",
+      "seatDropMm": 0
+    }
+  },
+  "GBRnd78SpryShnGl": {
+    "sku": "GBRnd78SpryShnGl",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 446.59,
+          "bottom": 961.33
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 440.6,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHGD-18-415-05",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 446.59,
+          "bottom": 961.33
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -724.33
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 440.6,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHGD-18-415-05",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 367.02,
+          "top": 10.8,
+          "right": 631.89,
+          "bottom": 448.59
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -724.33
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/sprayer-41f38526607d7ec57dcc6c175773a0ec77889e76f1bd23f478cc2292b6497846.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 242,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 367.02,
+          "y": 10.8,
+          "width": 264.87,
+          "height": 437.79
+        },
+        "componentId": "CMP-SPR-SHGD-18-415-05"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 365.29,
+          "top": -22.22,
+          "right": 637.4,
+          "bottom": 449.01
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1186.54
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/overcap-177601ce48e6d817e1fbeebf18246c078cca84cedbce281747026dc3ef8abb38.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 343,
+          "height": 594
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 365.29,
+          "y": -22.22,
+          "width": 272.11,
+          "height": 471.23
+        },
+        "componentId": "CMP-SPR-SHGD-18-415-05"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-SHGD-18-415-05"
+      ],
+      "seatSignature": "418ae0fc193fb3",
+      "seatDropMm": 0
+    }
+  },
+  "GB-RND-CLR-78ML-SPR-SSLV": {
+    "sku": "GBRnd78SpryShnSl",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 439.75,
+          "bottom": 954.49
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 433.77,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHSL-18-415-06",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 439.75,
+          "bottom": 954.49
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -717.49
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 433.77,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHSL-18-415-06",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 372.9,
+          "top": 0.83,
+          "right": 627.1,
+          "bottom": 448.5
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -717.49
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/sprayer-a26b031f10138c75eae2c73ead6908b1896facdfee8e4a690d34e2f0c2a49616.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 226,
+          "height": 398
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 372.9,
+          "y": 0.83,
+          "width": 254.2,
+          "height": 447.67
+        },
+        "componentId": "CMP-SPR-SHSL-18-415-06"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.77,
+          "top": -19.84,
+          "right": 639.23,
+          "bottom": 455.36
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1196.02
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 351,
+          "height": 599
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.77,
+          "y": -19.84,
+          "width": 278.46,
+          "height": 475.2
+        },
+        "componentId": "CMP-SPR-SHSL-18-415-06"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-SHSL-18-415-06"
+      ],
+      "seatSignature": "a447ebbd16cc96",
+      "seatDropMm": 0
+    }
+  },
+  "GBRnd78SpryShnSl": {
+    "sku": "GBRnd78SpryShnSl",
+    "familyId": "register:round-78ml-18-415|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.51,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 439.75,
+          "bottom": 954.49
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 433.77,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHSL-18-415-06",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.65
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 439.75,
+          "bottom": 954.49
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -717.49
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 433.77,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHSL-18-415-06",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 372.9,
+          "top": 0.83,
+          "right": 627.1,
+          "bottom": 448.5
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -717.49
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/sprayer-a26b031f10138c75eae2c73ead6908b1896facdfee8e4a690d34e2f0c2a49616.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 226,
+          "height": 398
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 372.9,
+          "y": 0.83,
+          "width": 254.2,
+          "height": 447.67
+        },
+        "componentId": "CMP-SPR-SHSL-18-415-06"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.77,
+          "top": -19.84,
+          "right": 639.23,
+          "bottom": 455.36
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1196.02
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 351,
+          "height": 599
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.77,
+          "y": -19.84,
+          "width": 278.46,
+          "height": 475.2
+        },
+        "componentId": "CMP-SPR-SHSL-18-415-06"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-SHSL-18-415-06"
+      ],
+      "seatSignature": "a447ebbd16cc96",
+      "seatDropMm": 0
+    }
+  },
+  "GB-RND-FRS-78ML-SPR-CPR": {
+    "sku": "GBRndFrst78SpryCu",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 447.91,
+          "bottom": 962.65
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 441.92,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTCP-18-415-03",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 447.91,
+          "bottom": 962.65
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.65
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 441.92,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTCP-18-415-03",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 373.47,
+          "top": 2,
+          "right": 629.9,
+          "bottom": 449.91
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.65
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/sprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 229,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.47,
+          "y": 2,
+          "width": 256.43,
+          "height": 447.91
+        },
+        "componentId": "CMP-SPR-MTCP-18-415-03"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 356.41,
+          "top": -62.68,
+          "right": 667.39,
+          "bottom": 449.81
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1197.46
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/overcap-9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 392,
+          "height": 646
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 356.41,
+          "y": -62.68,
+          "width": 310.98,
+          "height": 512.49
+        },
+        "componentId": "CMP-SPR-MTCP-18-415-03"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-MTCP-18-415-03"
+      ],
+      "seatSignature": "280489e11add96",
+      "seatDropMm": 0
+    }
+  },
+  "GBRndFrst78SpryCu": {
+    "sku": "GBRndFrst78SpryCu",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 447.91,
+          "bottom": 962.65
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 441.92,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTCP-18-415-03",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 447.91,
+          "bottom": 962.65
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.65
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 441.92,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTCP-18-415-03",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 373.47,
+          "top": 2,
+          "right": 629.9,
+          "bottom": 449.91
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -725.65
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/sprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 229,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.47,
+          "y": 2,
+          "width": 256.43,
+          "height": 447.91
+        },
+        "componentId": "CMP-SPR-MTCP-18-415-03"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 356.41,
+          "top": -62.68,
+          "right": 667.39,
+          "bottom": 449.81
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1197.46
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/overcap-9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 392,
+          "height": 646
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 356.41,
+          "y": -62.68,
+          "width": 310.98,
+          "height": 512.49
+        },
+        "componentId": "CMP-SPR-MTCP-18-415-03"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-MTCP-18-415-03"
+      ],
+      "seatSignature": "280489e11add96",
+      "seatDropMm": 0
+    }
+  },
+  "GB-RND-FRS-78ML-SPR-MGLD": {
+    "sku": "GBRndFrst78SpryMtGl",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 449.69,
+          "bottom": 964.43
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 443.7,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTGD-18-415-05",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 449.69,
+          "bottom": 964.43
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -727.43
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 443.7,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTGD-18-415-05",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 365.53,
+          "top": -10.02,
+          "right": 633.32,
+          "bottom": 451.69
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -727.43
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/sprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 232,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 365.53,
+          "y": -10.02,
+          "width": 267.79,
+          "height": 461.71
+        },
+        "componentId": "CMP-SPR-MTGD-18-415-05"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 359.98,
+          "top": -21.42,
+          "right": 636.85,
+          "bottom": 456.16
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1217.61
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 349,
+          "height": 602
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 359.98,
+          "y": -21.42,
+          "width": 276.87,
+          "height": 477.58
+        },
+        "componentId": "CMP-SPR-MTGD-18-415-05"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-MTGD-18-415-05"
+      ],
+      "seatSignature": "b859e5db00d868",
+      "seatDropMm": 0
+    }
+  },
+  "GBRndFrst78SpryMtGl": {
+    "sku": "GBRndFrst78SpryMtGl",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 449.69,
+          "bottom": 964.43
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 443.7,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTGD-18-415-05",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 449.69,
+          "bottom": 964.43
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -727.43
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 443.7,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTGD-18-415-05",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 365.53,
+          "top": -10.02,
+          "right": 633.32,
+          "bottom": 451.69
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -727.43
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/sprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 232,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 365.53,
+          "y": -10.02,
+          "width": 267.79,
+          "height": 461.71
+        },
+        "componentId": "CMP-SPR-MTGD-18-415-05"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 359.98,
+          "top": -21.42,
+          "right": 636.85,
+          "bottom": 456.16
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1217.61
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 349,
+          "height": 602
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 359.98,
+          "y": -21.42,
+          "width": 276.87,
+          "height": 477.58
+        },
+        "componentId": "CMP-SPR-MTGD-18-415-05"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-MTGD-18-415-05"
+      ],
+      "seatSignature": "b859e5db00d868",
+      "seatDropMm": 0
+    }
+  },
+  "GB-RND-FRS-78ML-SPR-MSLV": {
+    "sku": "GBRndFrst78SpryMtSl",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 449.18,
+          "bottom": 963.92
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 443.19,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTSL-18-415-06",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 449.18,
+          "bottom": 963.92
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -726.92
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 443.19,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTSL-18-415-06",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 373.21,
+          "top": 9.65,
+          "right": 624.56,
+          "bottom": 451.18
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -726.92
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/sprayer-5c50ea9efde8b3535c6330bf6b21429e2300857f9ba7d9c47677349dce048cef.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 226,
+          "height": 397
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.21,
+          "y": 9.65,
+          "width": 251.35,
+          "height": 441.53
+        },
+        "componentId": "CMP-SPR-MTSL-18-415-06"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.77,
+          "top": -19.84,
+          "right": 634.47,
+          "bottom": 456.15
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1197.42
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 345,
+          "height": 600
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.77,
+          "y": -19.84,
+          "width": 273.7,
+          "height": 475.99
+        },
+        "componentId": "CMP-SPR-MTSL-18-415-06"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-MTSL-18-415-06"
+      ],
+      "seatSignature": "d5254ae418b51f",
+      "seatDropMm": 0
+    }
+  },
+  "GBRndFrst78SpryMtSl": {
+    "sku": "GBRndFrst78SpryMtSl",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 449.18,
+          "bottom": 963.92
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 443.19,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTSL-18-415-06",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 449.18,
+          "bottom": 963.92
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -726.92
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 443.19,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-MTSL-18-415-06",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 373.21,
+          "top": 9.65,
+          "right": 624.56,
+          "bottom": 451.18
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -726.92
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/sprayer-5c50ea9efde8b3535c6330bf6b21429e2300857f9ba7d9c47677349dce048cef.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 226,
+          "height": 397
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.21,
+          "y": 9.65,
+          "width": 251.35,
+          "height": 441.53
+        },
+        "componentId": "CMP-SPR-MTSL-18-415-06"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.77,
+          "top": -19.84,
+          "right": 634.47,
+          "bottom": 456.15
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1197.42
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 345,
+          "height": 600
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.77,
+          "y": -19.84,
+          "width": 273.7,
+          "height": 475.99
+        },
+        "componentId": "CMP-SPR-MTSL-18-415-06"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-MTSL-18-415-06"
+      ],
+      "seatSignature": "d5254ae418b51f",
+      "seatDropMm": 0
+    }
+  },
+  "GB-RND-FRS-78ML-SPR-SBLK": {
+    "sku": "GBRndFrst78SpryShnBlk",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 451.16,
+          "bottom": 965.9
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 445.17,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHBK-18-415-06",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 451.16,
+          "bottom": 965.9
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -728.9
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 445.17,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHBK-18-415-06",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 366.52,
+          "top": 2.61,
+          "right": 627.84,
+          "bottom": 453.16
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -728.9
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/sprayer-9d494fd880618a93df237d4a4ce12c35c13cc5b98af531044a943793654e9994.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 232,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 366.52,
+          "y": 2.61,
+          "width": 261.32,
+          "height": 450.55
+        },
+        "componentId": "CMP-SPR-SHBK-18-415-06"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.38,
+          "top": -18.25,
+          "right": 637.25,
+          "bottom": 454.57
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1204.86
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 349,
+          "height": 596
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.38,
+          "y": -18.25,
+          "width": 276.87,
+          "height": 472.82
+        },
+        "componentId": "CMP-SPR-SHBK-18-415-06"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-SHBK-18-415-06"
+      ],
+      "seatSignature": "dca1a11a0b3661",
+      "seatDropMm": 0
+    }
+  },
+  "GBRndFrst78SpryShnBlk": {
+    "sku": "GBRndFrst78SpryShnBlk",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 451.16,
+          "bottom": 965.9
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 445.17,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHBK-18-415-06",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 451.16,
+          "bottom": 965.9
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -728.9
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 445.17,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHBK-18-415-06",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 366.52,
+          "top": 2.61,
+          "right": 627.84,
+          "bottom": 453.16
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -728.9
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/sprayer-9d494fd880618a93df237d4a4ce12c35c13cc5b98af531044a943793654e9994.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 232,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 366.52,
+          "y": 2.61,
+          "width": 261.32,
+          "height": 450.55
+        },
+        "componentId": "CMP-SPR-SHBK-18-415-06"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.38,
+          "top": -18.25,
+          "right": 637.25,
+          "bottom": 454.57
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1204.86
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 349,
+          "height": 596
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.38,
+          "y": -18.25,
+          "width": 276.87,
+          "height": 472.82
+        },
+        "componentId": "CMP-SPR-SHBK-18-415-06"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-SHBK-18-415-06"
+      ],
+      "seatSignature": "dca1a11a0b3661",
+      "seatDropMm": 0
+    }
+  },
+  "GB-RND-FRS-78ML-SPR-SGLD": {
+    "sku": "GBRndFrst78SpryShnGl",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 446.59,
+          "bottom": 961.33
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 440.6,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHGD-18-415-05",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 446.59,
+          "bottom": 961.33
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -724.33
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 440.6,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHGD-18-415-05",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 367.02,
+          "top": 10.8,
+          "right": 631.89,
+          "bottom": 448.59
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -724.33
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/sprayer-41f38526607d7ec57dcc6c175773a0ec77889e76f1bd23f478cc2292b6497846.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 242,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 367.02,
+          "y": 10.8,
+          "width": 264.87,
+          "height": 437.79
+        },
+        "componentId": "CMP-SPR-SHGD-18-415-05"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 365.29,
+          "top": -22.22,
+          "right": 637.4,
+          "bottom": 449.01
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1186.54
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/overcap-177601ce48e6d817e1fbeebf18246c078cca84cedbce281747026dc3ef8abb38.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 343,
+          "height": 594
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 365.29,
+          "y": -22.22,
+          "width": 272.11,
+          "height": 471.23
+        },
+        "componentId": "CMP-SPR-SHGD-18-415-05"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-SHGD-18-415-05"
+      ],
+      "seatSignature": "654c666a14879d",
+      "seatDropMm": 0
+    }
+  },
+  "GBRndFrst78SpryShnGl": {
+    "sku": "GBRndFrst78SpryShnGl",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 446.59,
+          "bottom": 961.33
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 440.6,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHGD-18-415-05",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 446.59,
+          "bottom": 961.33
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -724.33
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 440.6,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHGD-18-415-05",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 367.02,
+          "top": 10.8,
+          "right": 631.89,
+          "bottom": 448.59
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -724.33
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/sprayer-41f38526607d7ec57dcc6c175773a0ec77889e76f1bd23f478cc2292b6497846.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 242,
+          "height": 400
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 367.02,
+          "y": 10.8,
+          "width": 264.87,
+          "height": 437.79
+        },
+        "componentId": "CMP-SPR-SHGD-18-415-05"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 365.29,
+          "top": -22.22,
+          "right": 637.4,
+          "bottom": 449.01
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1186.54
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/overcap-177601ce48e6d817e1fbeebf18246c078cca84cedbce281747026dc3ef8abb38.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 343,
+          "height": 594
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 365.29,
+          "y": -22.22,
+          "width": 272.11,
+          "height": 471.23
+        },
+        "componentId": "CMP-SPR-SHGD-18-415-05"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-SHGD-18-415-05"
+      ],
+      "seatSignature": "654c666a14879d",
+      "seatDropMm": 0
+    }
+  },
+  "GB-RND-FRS-78ML-SPR-SSLV": {
+    "sku": "GBRndFrst78SpryShnSl",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 439.75,
+          "bottom": 954.49
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 433.77,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHSL-18-415-06",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 439.75,
+          "bottom": 954.49
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -717.49
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 433.77,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHSL-18-415-06",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 372.9,
+          "top": 0.83,
+          "right": 627.1,
+          "bottom": 448.5
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -717.49
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/sprayer-a26b031f10138c75eae2c73ead6908b1896facdfee8e4a690d34e2f0c2a49616.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 226,
+          "height": 398
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 372.9,
+          "y": 0.83,
+          "width": 254.2,
+          "height": 447.67
+        },
+        "componentId": "CMP-SPR-SHSL-18-415-06"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.77,
+          "top": -19.84,
+          "right": 639.23,
+          "bottom": 455.36
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1196.02
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 351,
+          "height": 599
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.77,
+          "y": -19.84,
+          "width": 278.46,
+          "height": 475.2
+        },
+        "componentId": "CMP-SPR-SHSL-18-415-06"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-SHSL-18-415-06"
+      ],
+      "seatSignature": "002f2cab057738",
+      "seatDropMm": 0
+    }
+  },
+  "GBRndFrst78SpryShnSl": {
+    "sku": "GBRndFrst78SpryShnSl",
+    "familyId": "register:round-78ml-18-415|Frosted",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 261,
+      "baselineY": 1061,
+      "pxPerMm": 10.16
+    },
+    "completeness": "full",
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 200.38,
+          "right": 799.62,
+          "top": 261,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1840,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 127.31,
+          "y": 206.8,
+          "width": 749.87,
+          "height": 893.33
+        },
+        "componentId": null
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 439.75,
+          "bottom": 954.49
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 433.77,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHSL-18-415-06",
+        "views": [
+          "sidecar",
+          "capon"
+        ],
+        "throughGlass": {
+          "clip": [
+            [
+              320.23,
+              261
+            ],
+            [
+              679.77,
+              261
+            ],
+            [
+              679.77,
+              994.96
+            ],
+            [
+              320.23,
+              994.96
+            ]
+          ],
+          "opacity": 0.22
+        }
+      },
+      {
+        "slot": "diptube",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 470.82,
+          "right": 564.34,
+          "top": 439.75,
+          "bottom": 954.49
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -717.49
+        },
+        "image": {
+          "url": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "key": "/local-media/source-tubes/round78-spray.d4949a59193c.png",
+          "sha256": "d4949a59193c9e314339af6996345f6628d33a381201681a41b2729543676acf",
+          "bytes": 25708,
+          "width": 131,
+          "height": 697
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 467.08,
+          "y": 433.77,
+          "width": 98.01,
+          "height": 521.48
+        },
+        "componentId": "CMP-SPR-SHSL-18-415-06",
+        "views": [
+          "exploded"
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 3,
+        "explodeIndex": 1,
+        "bounds": {
+          "left": 372.9,
+          "top": 0.83,
+          "right": 627.1,
+          "bottom": 448.5
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -717.49
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/sprayer-a26b031f10138c75eae2c73ead6908b1896facdfee8e4a690d34e2f0c2a49616.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 226,
+          "height": 398
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 372.9,
+          "y": 0.83,
+          "width": 254.2,
+          "height": 447.67
+        },
+        "componentId": "CMP-SPR-SHSL-18-415-06"
+      },
+      {
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 4,
+        "explodeIndex": 2,
+        "bounds": {
+          "left": 360.77,
+          "top": -19.84,
+          "right": 639.23,
+          "bottom": 455.36
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -1196.02
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 351,
+          "height": 599
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 360.77,
+          "y": -19.84,
+          "width": 278.46,
+          "height": 475.2
+        },
+        "componentId": "CMP-SPR-SHSL-18-415-06"
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "round-78ml-18-415",
+      "plateKey": "round-78ml-18-415|Frosted",
+      "glass": "Frosted",
+      "datum": {
+        "axisX": 500,
+        "seatY": 261,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.16,
+      "componentIds": [
+        "CMP-SPR-SHSL-18-415-06"
+      ],
+      "seatSignature": "002f2cab057738",
+      "seatDropMm": 0
+    }
+  }
+}
