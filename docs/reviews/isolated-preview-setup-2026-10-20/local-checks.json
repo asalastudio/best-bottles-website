@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-20T15:59:40.095489+00:00",
+  "baseCommit": "3935a2f0",
+  "tests": {
+    "command": "vitest run tests/media-isolated-seed.test.ts tests/media-release.test.ts --maxWorkers=1",
+    "passed": 8,
+    "failed": 0
+  },
+  "typecheck": "tsc --noEmit passed",
+  "lint": "new test ESLint passed",
+  "browser": "local-review-browser.json",
+  "remoteVerification": "isolation-verification.json",
+  "hostedAcceptance": false,
+  "pushed": false,
+  "codeDeployed": false
+}

@@ -1,5 +1,7 @@
 # Empire and Round release preparation, 20 October 2026
 
+> Update: the isolated resources are now provisioned and seeded. See [current setup](../isolated-preview-setup-2026-10-20/README.md). The provisioning approval below has been fulfilled; push and code deployment remain unapproved. Historical observations and checks below remain evidence from before setup.
+
 Local implementation is prepared on `integration/local-media-main-2026-10-20`. No push, merge, hosted upload, backend mutation or deployment has been performed. Production activation is blocked in code. Diva and Round lotion remain outside this release.
 
 ## Exact release

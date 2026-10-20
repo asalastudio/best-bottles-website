@@ -1,0 +1,32 @@
+{
+  "scope": "26 approved bottle variants plus six exact matching sprayer component products and media/fitment dependencies",
+  "sourceDeployment": "precise-raccoon-123",
+  "sourceOperation": "sandboxed inline readonly query, bounded indexed lookups; no source writes",
+  "targetDeployment": "beloved-wildcat-265",
+  "counts": {
+    "products": 32,
+    "productGroups": 6,
+    "registerAssemblies": 26,
+    "registerBodies": 3,
+    "registerBodyPlates": 4,
+    "registerComponents": 6,
+    "productKits": 26,
+    "productPlates": 26,
+    "fitments": 28
+  },
+  "exclusions": [
+    "Diva products",
+    "Round lotion products",
+    "customers",
+    "orders",
+    "users",
+    "auth",
+    "secrets",
+    "QuickBooks prices",
+    "Shopify inventory item IDs"
+  ],
+  "retained": "Public catalog identity, variant IDs, captured price/stock display and media provenance. Test snapshot, not live commerce. No checkout credentials or store domain.",
+  "adjustments": "Group counts and price ranges recalculated for the 26 bottles. Supporting component product group links omitted to avoid unrelated catalog groups.",
+  "jsonSha256": "e1372691132dac5b10d101a72b4a8344b635894590097522159ecb887c8ae894",
+  "zipSha256": "a6510d448741f72f7ed582f67d6c80c6bd71297ab592dfab6923ba96d3b597c0"
+}
