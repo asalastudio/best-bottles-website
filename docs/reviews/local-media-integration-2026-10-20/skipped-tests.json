@@ -1,0 +1,19 @@
+[
+  "\u2713 tests/local-empire-bare-glass.test.ts (7 tests | 3 skipped) 404ms",
+  "\u2193 tests/grace-navigation-battery.live.test.ts (5 tests | 5 skipped)",
+  "\u2193 tests/empire-through-glass.test.ts (5 tests | 5 skipped)",
+  "\u2193 tests/grace-accuracy-audit.live.test.ts (1 test | 1 skipped)",
+  "\u2713 tests/local-round78-tubes.test.ts (5 tests | 3 skipped) 22ms",
+  "\u2713 tests/local-round78-lotion-tubes.test.ts (3 tests | 2 skipped) 23ms",
+  "\u2713 tests/local-diva46-tubes.test.ts (3 tests | 2 skipped) 2ms",
+  "\u2193 tests/local-media-baseline.integration.test.ts (3 tests | 3 skipped)",
+  "\u2193 tests/local-round78-spray-completion.test.ts (2 tests | 2 skipped)",
+  "\u2193 tests/local-empire-completion.test.ts (3 tests | 3 skipped)",
+  "\u2193 tests/local-round78-two-bottle-pilot.test.ts (2 tests | 2 skipped)",
+  "\u2193 tests/local-copper-caps.test.ts (2 tests | 2 skipped)",
+  "\u2193 tests/local-diva46-spray-completion.test.ts (2 tests | 2 skipped)",
+  "\u2193 tests/local-round78-lotion-completion.test.ts (2 tests | 2 skipped)",
+  "\u2193 tests/local-round78-lotion-pilot.test.ts (2 tests | 2 skipped)",
+  "\u2193 tests/local-diva46-two-bottle-pilot.test.ts (2 tests | 2 skipped)",
+  "\u2713 tests/madison-image-preflight.test.ts (3 tests | 1 skipped) 5ms"
+]

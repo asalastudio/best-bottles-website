@@ -1,0 +1,31 @@
+
+ RUN  v3.2.4 /Users/jordanrichter/.codex/visualizations/2026/10/19/01a15606-c4e4-7692-9d6e-773c45309fd7/git-checkpoint-20261020/repository
+
+ ✓ tests/register-compose.test.ts (11 tests) 23ms
+ ✓ tests/pdp-redesign-model.test.ts (21 tests) 65ms
+ ✓ tests/local-empire-pilot.test.ts (5 tests) 47ms
+ ✓ tests/local-empire-catalog-hero.test.ts (3 tests) 24ms
+ ✓ tests/local-diva46-tubes.test.ts (3 tests) 71ms
+ ✓ tests/local-round78-tubes.test.ts (5 tests) 191ms
+ ✓ tests/local-round78-lotion-tubes.test.ts (3 tests) 193ms
+ ✓ tests/local-diva46-spray-completion.test.ts (2 tests) 230ms
+ ✓ tests/local-diva46-two-bottle-pilot.test.ts (2 tests) 138ms
+ ✓ tests/local-round78-lotion-completion.test.ts (2 tests) 257ms
+ ✓ tests/local-round78-two-bottle-pilot.test.ts (2 tests) 179ms
+ ✓ tests/local-round78-lotion-pilot.test.ts (2 tests) 179ms
+ ✓ tests/local-round78-spray-completion.test.ts (2 tests) 222ms
+ ✓ tests/local-empire-completion.test.ts (3 tests) 662ms
+   ✓ Empire remaining source completion > does not replace a released white assembly or a changed plate  560ms
+ ✓ tests/local-media-baseline.integration.test.ts (3 tests) 1546ms
+   ✓ captured family through real server loaders (offline) > loads the actual Builder family and full kits with captured production data  802ms
+   ✓ captured family through real server loaders (offline) > calculates PDP envelopes from the same production snapshot  556ms
+ ✓ tests/empire-through-glass.test.ts (5 tests) 1199ms
+   ✓ Empire seated tube occlusion > keeps the glass foot clean with the native tube, even before cavity clipping  670ms
+ ✓ tests/local-empire-bare-glass.test.ts (7 tests) 2571ms
+   ✓ Empire local master assets > preserves the transparent exterior and interior; 50 ml RGB and the 100 ml neck remain unchanged  378ms
+   ✓ Empire masters on the complete captured family > uses the continuous native spray tube in both views, joined to its exact sprayer  1693ms
+
+ Test Files  17 passed (17)
+      Tests  81 passed (81)
+   Start at  07:46:13
+   Duration  3.85s (transform 2.26s, setup 0ms, collect 8.16s, tests 7.80s, environment 2ms, prepare 1.83s)

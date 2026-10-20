@@ -1,0 +1,12 @@
+{
+  "check": "typecheck",
+  "command": [
+    "node",
+    "node_modules/typescript/bin/tsc",
+    "--noEmit"
+  ],
+  "exitCode": 0,
+  "durationSeconds": 84.82,
+  "head": "30973905442e24c8a4dda42fde03d9d8ec32722c",
+  "environment": "allowlisted process environment; no credentials loaded"
+}

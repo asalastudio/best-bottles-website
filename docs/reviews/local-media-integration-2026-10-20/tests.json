@@ -1,0 +1,13 @@
+{
+  "check": "tests",
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "--maxWorkers=4"
+  ],
+  "exitCode": 0,
+  "durationSeconds": 113.34,
+  "head": "30973905442e24c8a4dda42fde03d9d8ec32722c",
+  "environment": "allowlisted process environment; no credentials loaded"
+}

@@ -1,0 +1,114 @@
+{
+  "branch": "integration/local-media-main-2026-10-20",
+  "testedCommit": "30973905442e24c8a4dda42fde03d9d8ec32722c",
+  "integratedMain": "c0a861f85b0508304343c4202ccd2fa59c248f53",
+  "preservedCheckpoint": "04591a03e58d9f309118d6c3e6d8c720436f060d",
+  "conflicts": false,
+  "checks": {
+    "typecheck": {
+      "check": "typecheck",
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 84.82,
+      "head": "30973905442e24c8a4dda42fde03d9d8ec32722c",
+      "environment": "allowlisted process environment; no credentials loaded"
+    },
+    "lint": {
+      "check": "lint",
+      "command": [
+        "npm",
+        "run",
+        "lint"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 59.76,
+      "head": "30973905442e24c8a4dda42fde03d9d8ec32722c",
+      "environment": "allowlisted process environment; no credentials loaded"
+    },
+    "tests": {
+      "check": "tests",
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "--maxWorkers=4"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 113.34,
+      "head": "30973905442e24c8a4dda42fde03d9d8ec32722c",
+      "environment": "allowlisted process environment; no credentials loaded"
+    },
+    "media-replay": {
+      "check": "media-replay",
+      "command": [
+        "node",
+        "scripts/verify-local-media-checkpoint.mjs"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 4.48,
+      "head": "30973905442e24c8a4dda42fde03d9d8ec32722c",
+      "environment": "allowlisted process environment; no credentials loaded"
+    },
+    "copper-snapshot": {
+      "check": "copper-snapshot",
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "tests/local-copper-caps.test.ts"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 3.31,
+      "head": "30973905442e24c8a4dda42fde03d9d8ec32722c",
+      "environment": "allowlisted process environment; no credentials loaded"
+    },
+    "build": {
+      "check": "build",
+      "command": [
+        "npm",
+        "run",
+        "build",
+        "--",
+        "--webpack"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 241.14,
+      "head": "30973905442e24c8a4dda42fde03d9d8ec32722c",
+      "environment": "allowlisted process environment; no credentials loaded"
+    }
+  },
+  "fullSuite": {
+    "filesPassed": 347,
+    "filesSkipped": 12,
+    "testsPassed": 3137,
+    "testsSkipped": 42
+  },
+  "explicitMediaReplay": {
+    "filesPassed": 17,
+    "testsPassed": 81,
+    "testsSkipped": 0
+  },
+  "additionalCopperSnapshot": {
+    "testsPassed": 1,
+    "sourcePixelTestSkipped": 1
+  },
+  "remainingUnexecutedTests": {
+    "liveServiceTests": 6,
+    "missingSourceFileTests": 2
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 92,
+    "warningsInBranchModifiedFiles": 7,
+    "attribution": "File-level comparison only; not proof these seven warnings were introduced by the branch"
+  },
+  "legacyImageFilesVerified": 350,
+  "productionWrites": false,
+  "pushed": false,
+  "prMerged": false,
+  "deployed": false
+}

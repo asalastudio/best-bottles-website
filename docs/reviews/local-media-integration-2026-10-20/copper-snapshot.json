@@ -1,0 +1,13 @@
+{
+  "check": "copper-snapshot",
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "tests/local-copper-caps.test.ts"
+  ],
+  "exitCode": 0,
+  "durationSeconds": 3.31,
+  "head": "30973905442e24c8a4dda42fde03d9d8ec32722c",
+  "environment": "allowlisted process environment; no credentials loaded"
+}

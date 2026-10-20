@@ -1,0 +1,9 @@
+
+ RUN  v3.2.4 /Users/jordanrichter/.codex/visualizations/2026/10/19/01a15606-c4e4-7692-9d6e-773c45309fd7/git-checkpoint-20261020/repository
+
+ ✓ tests/local-copper-caps.test.ts (2 tests | 1 skipped) 73ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 1 skipped (2)
+   Start at  07:47:36
+   Duration  2.02s (transform 391ms, setup 0ms, collect 994ms, tests 73ms, environment 0ms, prepare 140ms)

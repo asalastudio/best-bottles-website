@@ -1,0 +1,11 @@
+{
+  "check": "media-replay",
+  "command": [
+    "node",
+    "scripts/verify-local-media-checkpoint.mjs"
+  ],
+  "exitCode": 0,
+  "durationSeconds": 4.48,
+  "head": "30973905442e24c8a4dda42fde03d9d8ec32722c",
+  "environment": "allowlisted process environment; no credentials loaded"
+}
