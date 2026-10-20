@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-10-20T16:18:22.430048+00:00",
+  "projectId": "prj_GHwEFaEB2YYcMKetaompX9fGC4mR",
+  "name": "best-bottles-website",
+  "production": {
+    "id": "dpl_FZdQy7vDFtxNDCTqgZxMTWQTmk2G",
+    "url": "best-bottles-website-f2k7obp6l-asala.vercel.app",
+    "readyState": "READY",
+    "target": "production",
+    "alias": [
+      "best-bottles-website.vercel.app",
+      "best-bottles-website-asala.vercel.app",
+      "best-bottles-website-git-main-asala.vercel.app"
+    ],
+    "createdAt": 1792391702743
+  }
+}
