@@ -5,6 +5,7 @@ import { unstable_cache } from "next/cache";
 import { api } from "../../convex/_generated/api";
 import {
     buildCatalogSearchResult,
+    scopeCatalogPurchaseData,
     type CatalogSearchResultShape,
     type CatalogSearchGroup,
 } from "@/lib/catalogSearchFallback";
@@ -42,6 +43,7 @@ export function getCatalogConvexClient() {
 }
 
 export function sanitizeCatalogResult(result: CatalogSearchResultShape): CatalogSearchResultShape {
+    result = { ...result, ...scopeCatalogPurchaseData({ ...result, groups: result.items }) };
     const items = result.items.filter((group) => !getLegacyProductRouteOverride(group.slug) && isVisibleCatalogGroup(group, result.variantPreviewRows.find(row => row.groupId === group._id)?.variants));
 
 
