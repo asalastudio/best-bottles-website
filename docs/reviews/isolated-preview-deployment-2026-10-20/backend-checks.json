@@ -1,0 +1,17 @@
+{
+  "url": "https://beloved-wildcat-265.convex.cloud",
+  "accepted": 26,
+  "rejected": [],
+  "families": [
+    {
+      "family": "Empire",
+      "groups": 4
+    },
+    {
+      "family": "Round",
+      "groups": 2
+    }
+  ],
+  "functions": "read-only only",
+  "checkedAt": "2026-10-20T16:08:01.906Z"
+}

@@ -1,0 +1,53 @@
+{
+  "products": [
+    "getShopCollectionGroups",
+    "getBySku",
+    "lookupSku",
+    "getByWebsiteSku",
+    "getByFamily",
+    "getByCategory",
+    "getHomepageStats",
+    "getCompatibleFitments",
+    "getFeaturedByFamily",
+    "getByCollection",
+    "getCatalogTaxonomy",
+    "getCatalogProducts",
+    "getCatalogProductIndexPage",
+    "searchProducts",
+    "checkCount",
+    "getAllCatalogGroups",
+    "searchCatalog",
+    "getPopularFamilies",
+    "getCatalogGroupPrimarySkus",
+    "getCatalogGroupVariantPreviewData",
+    "getCatalogGroups",
+    "getProductGroup",
+    "getFocusedPdpRelations",
+    "getVariantsForGroup",
+    "getGroupsByFamily",
+    "getFamilyPageData",
+    "getProductCohort",
+    "getProductGroupsByFamily",
+    "getSiblingGroups",
+    "getApplicatorSiblings"
+  ],
+  "matrix": [
+    "listFamilies",
+    "getFamilyRows"
+  ],
+  "registerStage": [
+    "forSkus"
+  ],
+  "productKits": [
+    "forSku",
+    "forSkus"
+  ],
+  "productPlates": [
+    "forSkus",
+    "byFamily",
+    "families"
+  ],
+  "grace": [
+    "getBottleComponents"
+  ]
+}

@@ -1,12 +1,12 @@
 {
-  "verified": false,
+  "verified": true,
   "projectId": "prj_JFb1sYpDTmvfUR2qfOOL9TJmF5yt",
   "teamId": "team_CGyACzn1BhcZitDAKUiZRzax",
   "branch": "integration/local-media-main-2026-10-20",
   "convexUrl": "https://beloved-wildcat-265.convex.cloud",
   "productionConvexUrl": "https://precise-raccoon-123.convex.cloud",
-  "evidence": "docs/reviews/isolated-preview-setup-2026-10-20/isolation-verification.json",
+  "evidence": "docs/reviews/isolated-preview-deployment-2026-10-20/backend-checks.json",
   "provisioned": true,
   "isolationVerified": true,
-  "backendFunctionsDeployed": false
+  "backendFunctionsDeployed": true
 }

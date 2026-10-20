@@ -41,6 +41,8 @@ function convexStorageImagePatterns() {
 }
 
 const nextConfig: NextConfig = {
+    // Production uploads exclude local review fixtures; CI still checks the full tsconfig.
+    typescript: { tsconfigPath: "tsconfig.build.json" },
     env: {
         NEXT_PUBLIC_BB_MEDIA_RELEASE: process.env.NEXT_PUBLIC_BB_MEDIA_RELEASE ?? "off",
         NEXT_PUBLIC_CATALOG_HERO_PILOT: process.env.NEXT_PUBLIC_CATALOG_HERO_PILOT
