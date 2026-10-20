@@ -19,6 +19,15 @@ data/*
 !data/register/
 data/register/*
 !data/register/drawings/
+# The migration allowlist is imported by the builder and Convex; its provenance
+# manifest is imported by a test during Next's project-wide typecheck. Retain
+# only these JSON files, not the recovered source payloads or other migrations.
+!data/migrations/
+data/migrations/*
+!data/migrations/legacy-finish-images-2026-10-02/
+data/migrations/legacy-finish-images-2026-10-02/*
+!data/migrations/legacy-finish-images-2026-10-02/patches.json
+!data/migrations/legacy-finish-images-2026-10-02/manifest.json
 docs/
 reference_images/
 Best-Bottles-Orphan-urls/

@@ -10,6 +10,7 @@ import { bareChooserKit, slimBuilderBodies } from "./payload";
 import { readLocalComponentKits } from "../paper-doll/local-component-kits";
 import { loadRegisterKits } from "@/lib/register/load";
 import { assembledKit } from "@/lib/register/stage-kit";
+import { migratedFinishImageUrl } from "./legacy-finish-images";
 
 const client = () => createResilientConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
@@ -46,7 +47,7 @@ export const loadBuilderFamily = unstable_cache(async (family: string) => {
     const data = await familyRows(family);
     if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${family}`);
     return slimBuilderBodies(await loadBuilderBodies(data.rows, { strictRegister: true }));
-}, ["bottle-builder-family-chooser-v7-elegant-photo"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-family-chooser-v8-migrated-finish-images"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 /** The cached family. When the cache has no entry to fall back on (a new key, an
  * eviction) and the register lookup fails, this one request builds the family
@@ -225,6 +226,12 @@ export async function loadBuilderBodies(rows: CatalogRow[], options: KitLoadOpti
     const listingProofs = candidates.map((row, i) => proofs.get(chooserGroupKey(row))
         ?? (configurations[i]?.register ? bareChooserKit(configurations[i]!) ?? null : null));
     const bodies = groupBuilderBodies(resolveBuilderConfigurations(candidates, configurations, plateUrls, listingProofs).filter(config => config !== null));
+    for (const body of bodies) {
+        for (const config of body.configurations) {
+            config.finishComponent = { ...config.finishComponent,
+                imageUrl: migratedFinishImageUrl(config.finishComponent.websiteSku, config.finishComponent.imageUrl) };
+        }
+    }
     for (const row of reviewedRows) {
         const unavailable = unavailableVintageFinishes(row, activeBySku);
         if (!unavailable.length) continue;
