@@ -1,0 +1,13 @@
+{
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "tests/focused-pdp-mobile-dom.test.ts",
+    "--maxWorkers=1"
+  ],
+  "node": "v24.19.0",
+  "exitCode": 0,
+  "seconds": 4.91,
+  "reason": "Isolated rerun of the one suite whose initial dynamic import exceeded 5 seconds during the concurrent full build"
+}

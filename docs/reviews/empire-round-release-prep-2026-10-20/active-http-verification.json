@@ -1,0 +1,31 @@
+{
+  "node": "v24.19.0",
+  "mode": "active",
+  "revision": "empire-round26-03baed749353:all",
+  "checks": [
+    {
+      "route": "kits",
+      "mismatchedRevisionStatus": 409,
+      "repeatRequestStatus": 409,
+      "cacheControl": "no-store",
+      "responseRevision": "empire-round26-03baed749353:all"
+    },
+    {
+      "route": "bodies",
+      "mismatchedRevisionStatus": 409,
+      "repeatRequestStatus": 409,
+      "cacheControl": "no-store",
+      "responseRevision": "empire-round26-03baed749353:all"
+    },
+    {
+      "route": "families",
+      "mismatchedRevisionStatus": 409,
+      "repeatRequestStatus": 409,
+      "cacheControl": "no-store",
+      "responseRevision": "empire-round26-03baed749353:all"
+    }
+  ],
+  "immutableAssetsOverNextHttp": 57,
+  "backendRequests": 0,
+  "scope": "Local built Next server. Does not exercise a hosted CDN or checkout."
+}

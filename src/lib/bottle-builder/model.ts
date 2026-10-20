@@ -1,3 +1,4 @@
+import { releaseBodyImage } from "../media-release/release";
 import { exactComponentMatch } from "./component-matches";
 import { catalogIncludedAssembly } from "../../../convex/catalogIncludedAssemblies";
 import { sourceComponentLink, sourceComponentLinks } from "./source-component-links";
@@ -179,6 +180,8 @@ export function compatibleFinishComponent(row: CatalogRow) {
 }
 
 export function reviewedBodyImage(row: CatalogRow) {
+    const released = releaseBodyImage(row.websiteSku);
+    if (released) return released;
     const local = localEmpireBodyImage(row.family, row.capacityMl, row.color, row.neckThreadSize);
     if (local) return local;
     const media = bodyMedia as Record<string, { url: string; width: number; height: number }>;

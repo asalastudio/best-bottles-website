@@ -11,6 +11,7 @@ import { isOptimizableImageUrl, isRegisterAssetUrl } from "@/lib/products/optimi
 import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/products/register-image";
 import { BEHIND_GLASS_SLOTS } from "@/lib/products/pdp-redesign/stage";
 import { sourceTubeMaterialFilter } from "@/lib/register/source-tube-material";
+import { mediaSourceUrl } from "@/lib/media-release/release";
 import { throughGlassAppearance } from '@/lib/register/through-glass';
 
 /** Clear glass and the clear dip tube take the stage colour. A published dropper
@@ -27,7 +28,7 @@ function blendsIntoGlass(config: BuilderConfiguration, part: BuilderPart, stage:
     // The shaft and tube cut from a catalogue hero (src/lib/register/dip-tubes.ts) are the hero's own pixels, white shaft
     // included; multiplying would erase the shaft into the glass.
     if (part.slot === "diptube" && (part.image.url.startsWith("/images/register/tubes/")
-        || part.image.url.startsWith("/local-media/source-tubes/"))) return false;
+        || mediaSourceUrl(part.image.url).startsWith("/local-media/source-tubes/"))) return false;
     return config.color === "Clear" && (part.slot === "diptube"
         || (part.slot === "body" && (stage === "body" || config.fitment !== "Dropper" || splitDropper)));
 }

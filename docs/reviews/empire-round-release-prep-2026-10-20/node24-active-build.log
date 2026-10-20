@@ -1,0 +1,143 @@
+
+> best-bottles@0.1.0 build
+> next build --webpack
+
+⚠ Missing environment variable: OPENAI_API_KEY
+▲ Next.js 16.2.12 (webpack)
+- Experiments (use with caution):
+  · clientTraceMetadata
+  ✓ webpackBuildWorker
+  ✓ webpackMemoryOptimizations
+
+  Creating an optimized production build ...
+⚠ Missing environment variable: OPENAI_API_KEY
+[@sentry/nextjs - Node.js] Warning: No auth token provided. Will not create release. Please set the `authToken` option. You can find information on how to generate a Sentry auth token here: https://docs.sentry.io/api/auth/
+⚠ Missing environment variable: OPENAI_API_KEY
+[@sentry/nextjs - Edge] Warning: No auth token provided. Will not create release. Please set the `authToken` option. You can find information on how to generate a Sentry auth token here: https://docs.sentry.io/api/auth/
+⚠ Missing environment variable: OPENAI_API_KEY
+[@sentry/nextjs - Client] Warning: No auth token provided. Will not create release. Please set the `authToken` option. You can find information on how to generate a Sentry auth token here: https://docs.sentry.io/api/auth/
+✓ Compiled successfully in 2.9min
+  Running TypeScript ...
+  Finished TypeScript in 37.0s ...
+  Collecting page data using 9 workers ...
+  Generating static pages using 9 workers (0/63) ...
+  Generating static pages using 9 workers (15/63)
+  Generating static pages using 9 workers (31/63)
+[convex] transient connect failure in products:getAllCatalogGroups; retrying
+[convex] transient connect failure in products:getAllCatalogGroups; retrying
+  Generating static pages using 9 workers (47/63)
+✓ Generating static pages using 9 workers (63/63) in 10.6s
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ƒ /
+├ ƒ /_not-found
+├ ƒ /about
+├ ƒ /api/asset-ledger/cylinder-final-plates
+├ ƒ /api/asset-ledger/final-images
+├ ƒ /api/asset-ledger/plate-completion
+├ ƒ /api/asset-ledger/plate-contact-sheet
+├ ƒ /api/asset-ledger/standards
+├ ƒ /api/bottle-builder/bodies
+├ ƒ /api/bottle-builder/families
+├ ƒ /api/bottle-builder/kits
+├ ƒ /api/bottle-builder/validate
+├ ƒ /api/bottle-builder/warm
+├ ƒ /api/catalog/interpret
+├ ƒ /api/catalog/search
+├ ƒ /api/catalog/search-log
+├ ƒ /api/draft-mode/disable
+├ ƒ /api/draft-mode/enable
+├ ƒ /api/executive/grace-audit
+├ ƒ /api/executive/grace-integrity
+├ ƒ /api/grace/chat
+├ ƒ /api/grace/sessions
+├ ƒ /api/grace/tools
+├ ƒ /api/grace/upload
+├ ƒ /api/grace/vision
+├ ƒ /api/grace/workspace-account
+├ ƒ /api/knowledge/chat
+├ ƒ /api/knowledge/corrections
+├ ƒ /api/openai/realtime-token
+├ ƒ /api/paper-doll/render
+├ ƒ /api/pdf/catalog
+├ ƒ /api/pdf/tech-sheet/[slug]
+├ ƒ /api/portal/grace/projects
+├ ƒ /api/sentry/webhook
+├ ƒ /api/shopify/resolve-variants
+├ ƒ /api/shopify/webhooks
+├ ƒ /api/voice/transcribe
+├ ○ /apple-icon.png
+├ ƒ /blog
+├ ● /blog/[slug]
+├ ƒ /bottle-families
+├ ƒ /cart
+├ ƒ /catalog
+├ ƒ /catalog/[family]
+├ ƒ /catalog/application/[application]
+├ ƒ /collections
+├ ƒ /collections/boston-round-30ml
+├ ƒ /contact
+├ ƒ /dev/lighting-test
+├ ƒ /dev/material-lab
+├ ƒ /example
+├ ƒ /executive
+├ ƒ /fitment-demo
+├ ƒ /grace-workspace
+├ ○ /icon.svg
+├ ƒ /lab/bottle-3d
+├ ƒ /lab/bottle25
+├ ƒ /lab/configurator
+├ ƒ /lab/glass-9ml
+├ ƒ /lab/paper-doll
+├ ƒ /lab/portal-shell
+├ ƒ /lab/register-parity
+├ ƒ /lab/register-parity/file/[...path]
+├ ƒ /matrix
+├ ƒ /portal
+├ ƒ /portal/account
+├ ƒ /portal/catalog
+├ ƒ /portal/drafts
+├ ƒ /portal/drafts/[draftId]
+├ ƒ /portal/grace
+├ ƒ /portal/orders
+├ ƒ /portal/orders/[orderId]
+├ ƒ /portal/sessions
+├ ƒ /portal/sessions/[sessionId]
+├ ƒ /portal/settings/[[...rest]]
+├ ƒ /portal/tax-exemption
+├ ƒ /portal/tools
+├ ƒ /privacy
+├ ƒ /products/[slug]
+├ ƒ /request-quote
+├ ƒ /request-sample
+├ ƒ /resources
+├ ○ /robots.txt
+├ ƒ /server-sitemap.xml
+├ ƒ /shipping-returns
+├ ƒ /sign-in/[[...sign-in]]
+├ ƒ /sign-up/[[...sign-up]]
+├ ○ /sitemap.xml
+├ ƒ /studio/[[...tool]]
+├ ƒ /team
+├ ƒ /team/asset-ledger
+├ ƒ /team/components
+├ ƒ /team/media-review
+├ ƒ /team/media-review/diva46
+├ ƒ /team/media-review/round78
+├ ƒ /team/media-review/round78/lotion
+├ ƒ /team/new
+├ ƒ /team/portal-accounts
+├ ƒ /team/products
+├ ƒ /team/products/new
+├ ƒ /team/resale-certificates
+├ ƒ /tech-stack
+└ ƒ /terms
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand

@@ -1,0 +1,376 @@
+{
+  "id": "prj_GHwEFaEB2YYcMKetaompX9fGC4mR",
+  "name": "best-bottles-website",
+  "nodeVersion": "24.x",
+  "buildCommand": "npm run build",
+  "git": {
+    "type": "github",
+    "repo": "best-bottles-website",
+    "org": "asalastudio",
+    "productionBranch": "main"
+  },
+  "capturedAt": "2026-10-20T15:09:29.989916+00:00",
+  "envMetadata": [
+    {
+      "key": "NEXT_PUBLIC_SANITY_PROJECT_ID",
+      "target": [
+        "development",
+        "preview",
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "NEXT_PUBLIC_SANITY_DATASET",
+      "target": [
+        "production",
+        "preview",
+        "development"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY",
+      "target": [
+        "development",
+        "preview",
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "CLERK_SECRET_KEY",
+      "target": [
+        "production",
+        "preview",
+        "development"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "NEXT_PUBLIC_GRACE_VOICE_PROVIDER",
+      "target": [
+        "development",
+        "preview",
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "CONVEX_DEPLOY_KEY",
+      "target": [
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "SHOPIFY_ADMIN_TOKEN",
+      "target": [
+        "development",
+        "preview",
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN",
+      "target": [
+        "development",
+        "preview",
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "SHOPIFY_WEBHOOK_SECRET",
+      "target": [
+        "production",
+        "preview",
+        "development"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "NEXT_PUBLIC_CLERK_ENABLED",
+      "target": [
+        "preview",
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "sensitive"
+    },
+    {
+      "key": "NEXT_PUBLIC_CLERK_SIGN_IN_URL",
+      "target": [
+        "preview",
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "sensitive"
+    },
+    {
+      "key": "NEXT_PUBLIC_CLERK_SIGN_UP_URL",
+      "target": [
+        "preview",
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "sensitive"
+    },
+    {
+      "key": "NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL",
+      "target": [
+        "preview",
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "sensitive"
+    },
+    {
+      "key": "NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL",
+      "target": [
+        "preview",
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "sensitive"
+    },
+    {
+      "key": "NEXT_PUBLIC_CONVEX_URL",
+      "target": [
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "BEST_BOTTLES_CONVEX_WRITE_TOKEN",
+      "target": [
+        "preview",
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "sensitive"
+    },
+    {
+      "key": "NEXT_PUBLIC_CONVEX_URL",
+      "target": [
+        "preview"
+      ],
+      "gitBranch": "codex/launch-readiness-june-15",
+      "type": "sensitive"
+    },
+    {
+      "key": "NEXT_PUBLIC_SITE_URL",
+      "target": [
+        "preview",
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "sensitive"
+    },
+    {
+      "key": "SANITY_API_READ_TOKEN",
+      "target": [
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "sensitive"
+    },
+    {
+      "key": "SANITY_API_READ_TOKEN",
+      "target": [
+        "development"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "SANITY_API_READ_TOKEN",
+      "target": [
+        "preview"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "NEXT_PUBLIC_CONVEX_URL",
+      "target": [
+        "preview"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "NEXT_PUBLIC_CONVEX_SITE_URL",
+      "target": [
+        "preview"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "OPENAI_API_KEY",
+      "target": [
+        "production",
+        "preview"
+      ],
+      "gitBranch": null,
+      "type": "sensitive"
+    },
+    {
+      "key": "BLOB_READ_WRITE_TOKEN",
+      "target": [
+        "development"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "SENTRY_WEBHOOK_CLIENT_SECRET",
+      "target": [
+        "production",
+        "preview"
+      ],
+      "gitBranch": null,
+      "type": "sensitive"
+    },
+    {
+      "key": "NEXT_PUBLIC_SENTRY_DSN",
+      "target": [
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "SENTRY_ORG",
+      "target": [
+        "preview",
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "SENTRY_PROJECT",
+      "target": [
+        "preview",
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "NEXT_PUBLIC_SENTRY_ORG_SLUG",
+      "target": [
+        "preview",
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "NEXT_PUBLIC_POSTHOG_KEY",
+      "target": [
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "NEXT_PUBLIC_POSTHOG_KEY",
+      "target": [
+        "preview"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "NEXT_PUBLIC_POSTHOG_KEY",
+      "target": [
+        "development"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "TEAM_HUB_SHOPIFY_PRICE_PUSH",
+      "target": [
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "sensitive"
+    },
+    {
+      "key": "NEXT_PUBLIC_CATALOG_HERO_PILOT",
+      "target": [
+        "preview"
+      ],
+      "gitBranch": "codex/circle-round-empire-scale-2026-09-22",
+      "type": "encrypted"
+    },
+    {
+      "key": "BB_CONVEX_PREVIEW_DEPLOY",
+      "target": [
+        "preview"
+      ],
+      "gitBranch": "codex/circle-round-empire-scale-2026-09-22",
+      "type": "encrypted"
+    },
+    {
+      "key": "NEXT_PUBLIC_CATALOG_HERO_PILOT",
+      "target": [
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "CRON_SECRET",
+      "target": [
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "sensitive"
+    },
+    {
+      "key": "CATALOG_SEARCH_INTERPRETATION",
+      "target": [
+        "production"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "CATALOG_SEARCH_INTERPRETATION",
+      "target": [
+        "preview"
+      ],
+      "gitBranch": null,
+      "type": "encrypted"
+    },
+    {
+      "key": "TYPESAFE_API_KEY",
+      "target": [
+        "production",
+        "preview"
+      ],
+      "gitBranch": null,
+      "type": "sensitive"
+    }
+  ],
+  "publicBackendUrls": {
+    "production": "https://precise-raccoon-123.convex.cloud",
+    "preview": "https://helpful-elephant-638.convex.cloud"
+  }
+}

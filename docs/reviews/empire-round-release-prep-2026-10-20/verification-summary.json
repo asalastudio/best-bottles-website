@@ -1,0 +1,157 @@
+{
+  "preparedAt": "2026-10-20T15:40:48.129546+00:00",
+  "release": "empire-round26-03baed749353",
+  "manifestSha256": "5287f525f7cf1689825ad1228b8e9307a28ed36bfb9d52c6c11d9ceafe5b3eea",
+  "scope": 26,
+  "uniqueAssets": 57,
+  "defaultMode": "off",
+  "productionApproval": false,
+  "productionWrites": false,
+  "pushed": false,
+  "hostedPreviewCreated": false,
+  "checks": {
+    "node24-tests": {
+      "check": "node24-tests",
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "--maxWorkers=4"
+      ],
+      "exitCode": 0,
+      "seconds": 56.82,
+      "node": "v24.19.0",
+      "baseCommit": "dbab99913faa91d1a4f2bc0ede0c7d0ffd21f8ba",
+      "workingTreeChanges": true,
+      "environment": "allowlisted; no credentials or deploy commands"
+    },
+    "node24-media-replay": {
+      "check": "node24-media-replay",
+      "command": [
+        "node",
+        "scripts/verify-local-media-checkpoint.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 11.53,
+      "node": "v24.19.0",
+      "baseCommit": "dbab99913faa91d1a4f2bc0ede0c7d0ffd21f8ba",
+      "workingTreeChanges": true,
+      "environment": "allowlisted; no credentials or deploy commands"
+    },
+    "node24-active-build": {
+      "check": "node24-active-build",
+      "command": [
+        "npm",
+        "run",
+        "build",
+        "--",
+        "--webpack"
+      ],
+      "exitCode": 0,
+      "seconds": 246.84,
+      "node": "v24.19.0",
+      "baseCommit": "dbab99913faa91d1a4f2bc0ede0c7d0ffd21f8ba",
+      "workingTreeChanges": true,
+      "environment": "allowlisted; no credentials or deploy commands"
+    },
+    "node24-off-build": {
+      "check": "node24-off-build",
+      "command": [
+        "npm",
+        "run",
+        "build",
+        "--",
+        "--webpack"
+      ],
+      "exitCode": 0,
+      "seconds": 268.74,
+      "node": "v24.19.0",
+      "baseCommit": "dbab99913faa91d1a4f2bc0ede0c7d0ffd21f8ba",
+      "workingTreeChanges": true,
+      "environment": "allowlisted; no credentials or deploy commands"
+    },
+    "active-http-verification": {
+      "node": "v24.19.0",
+      "mode": "active",
+      "revision": "empire-round26-03baed749353:all",
+      "checks": [
+        {
+          "route": "kits",
+          "mismatchedRevisionStatus": 409,
+          "repeatRequestStatus": 409,
+          "cacheControl": "no-store",
+          "responseRevision": "empire-round26-03baed749353:all"
+        },
+        {
+          "route": "bodies",
+          "mismatchedRevisionStatus": 409,
+          "repeatRequestStatus": 409,
+          "cacheControl": "no-store",
+          "responseRevision": "empire-round26-03baed749353:all"
+        },
+        {
+          "route": "families",
+          "mismatchedRevisionStatus": 409,
+          "repeatRequestStatus": 409,
+          "cacheControl": "no-store",
+          "responseRevision": "empire-round26-03baed749353:all"
+        }
+      ],
+      "immutableAssetsOverNextHttp": 57,
+      "backendRequests": 0,
+      "scope": "Local built Next server. Does not exercise a hosted CDN or checkout."
+    },
+    "off-http-verification": {
+      "node": "v24.19.0",
+      "mode": "off",
+      "revision": "media-off-v1",
+      "checks": [
+        {
+          "route": "kits",
+          "mismatchedRevisionStatus": 409,
+          "repeatRequestStatus": 409,
+          "cacheControl": "no-store",
+          "responseRevision": "media-off-v1"
+        },
+        {
+          "route": "bodies",
+          "mismatchedRevisionStatus": 409,
+          "repeatRequestStatus": 409,
+          "cacheControl": "no-store",
+          "responseRevision": "media-off-v1"
+        },
+        {
+          "route": "families",
+          "mismatchedRevisionStatus": 409,
+          "repeatRequestStatus": 409,
+          "cacheControl": "no-store",
+          "responseRevision": "media-off-v1"
+        }
+      ],
+      "immutableAssetsOverNextHttp": 57,
+      "backendRequests": 0,
+      "scope": "Local built Next server. Does not exercise a hosted CDN or checkout."
+    },
+    "local-review-browser": {
+      "kind": "local contact sheet, not hosted storefront QA",
+      "catalogImages": 26,
+      "assetHashesOverHttp": 57,
+      "desktop": "1365x1000",
+      "mobile": "390x844",
+      "mobileOverflow": false,
+      "pageErrors": [],
+      "externalRequests": []
+    }
+  },
+  "liveSourceAcceptance": {
+    "production": 26,
+    "existingPreview": 12
+  },
+  "remaining": [
+    "Provision and verify a separate preview project/backend without shared write credentials",
+    "Seed reviewed source/catalog data in that isolated backend after approval",
+    "Approve the exact branch push and draft PR",
+    "Run hosted catalog/PDP/Builder acceptance and CDN/open-tab rollback rehearsal",
+    "Prepare a separate production approval packet; production activation is currently blocked"
+  ]
+}

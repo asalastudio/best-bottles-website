@@ -1,0 +1,18 @@
+{
+  "status": "not-executed-on-hosted-preview",
+  "release": "empire-round26-03baed749353",
+  "applicationCommit": null,
+  "previewProjectId": null,
+  "previewConvexUrl": null,
+  "offDeploymentId": null,
+  "canaryDeploymentId": null,
+  "empireDeploymentId": null,
+  "allDeploymentId": null,
+  "warmCacheResults": null,
+  "openBuilderResults": null,
+  "sourceGuardResults": null,
+  "heldFamilyResults": null,
+  "restoredDeploymentId": null,
+  "restoredResponseRevision": null,
+  "productionActionsAuthorized": false
+}

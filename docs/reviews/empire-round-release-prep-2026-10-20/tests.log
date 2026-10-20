@@ -1,0 +1,571 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.4 [39m[90m/Users/jordanrichter/.codex/visualizations/2026/10/19/01a15606-c4e4-7692-9d6e-773c45309fd7/git-checkpoint-20261020/repository[39m
+
+ [2m[90m↓[39m[22m tests/local-media-baseline.integration.test.ts [2m([22m[2m3 tests[22m[2m | [22m[33m3 skipped[39m[2m)[22m
+ [32m✓[39m tests/local-empire-bare-glass.test.ts [2m([22m[2m7 tests[22m[2m | [22m[33m3 skipped[39m[2m)[22m[32m 290[2mms[22m[39m
+ [32m✓[39m tests/convex-server-client.test.ts [2m([22m[2m9 tests[22m[2m)[22m[33m 617[2mms[22m[39m
+   [33m[2m✓[22m[39m resilient server-side Convex client[2m > [22mthe client's queries survive a 503 from Convex [33m 604[2mms[22m[39m
+ [2m[90m↓[39m[22m tests/local-empire-completion.test.ts [2m([22m[2m3 tests[22m[2m | [22m[33m3 skipped[39m[2m)[22m
+ [2m[90m↓[39m[22m tests/empire-through-glass.test.ts [2m([22m[2m5 tests[22m[2m | [22m[33m5 skipped[39m[2m)[22m
+ [32m✓[39m tests/plate-contact-sheet.test.ts [2m([22m[2m13 tests[22m[2m)[22m[33m 657[2mms[22m[39m
+   [33m[2m✓[22m[39m family plate approval[2m > [22msupports a 373-plate family batch without writing Boston decisions [33m 452[2mms[22m[39m
+ [32m✓[39m tests/vercel-preview-build.test.ts [2m([22m[2m5 tests[22m[2m)[22m[33m 1822[2mms[22m[39m
+   [33m[2m✓[22m[39m deploys opted-in previews with their backend before releasing the frontend [33m 851[2mms[22m[39m
+   [33m[2m✓[22m[39m preserves existing preview and production build behavior outside the opt-in [33m 403[2mms[22m[39m
+ [32m✓[39m tests/legacy-store-images.test.ts [2m([22m[2m4 tests[22m[2m)[22m[33m 322[2mms[22m[39m
+ [32m✓[39m tests/paper-doll-recanvas.test.ts [2m([22m[2m4 tests[22m[2m)[22m[33m 569[2mms[22m[39m
+   [33m[2m✓[22m[39m CYL-9ML 2080×2288 recanvas pipeline[2m > [22mproduces an exact RGBA canvas with transparent side padding [33m 561[2mms[22m[39m
+ [32m✓[39m tests/media-release.test.ts [2m([22m[2m7 tests[22m[2m)[22m[33m 406[2mms[22m[39m
+ [32m✓[39m tests/local-round78-tubes.test.ts [2m([22m[2m5 tests[22m[2m | [22m[33m3 skipped[39m[2m)[22m[32m 17[2mms[22m[39m
+ [2m[90m↓[39m[22m tests/local-diva46-spray-completion.test.ts [2m([22m[2m2 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m
+ [32m✓[39m tests/catalog-hero-cre-pilot.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 180[2mms[22m[39m
+ [32m✓[39m tests/catalog-hero-boston-diva-release.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 171[2mms[22m[39m
+ [32m✓[39m tests/local-round78-lotion-tubes.test.ts [2m([22m[2m3 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m[32m 17[2mms[22m[39m
+ [2m[90m↓[39m[22m tests/local-round78-lotion-completion.test.ts [2m([22m[2m2 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m
+ [32m✓[39m tests/pdp-label-fit.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 160[2mms[22m[39m
+ [2m[90m↓[39m[22m tests/local-round78-lotion-pilot.test.ts [2m([22m[2m2 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m
+ [32m✓[39m tests/cylinder-catalog-heroes.test.ts [2m([22m[2m57 tests[22m[2m)[22m[32m 159[2mms[22m[39m
+ [2m[90m↓[39m[22m tests/local-round78-spray-completion.test.ts [2m([22m[2m2 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m
+ [32m✓[39m tests/certificate-workflow.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 293[2mms[22m[39m
+ [2m[90m↓[39m[22m tests/local-round78-two-bottle-pilot.test.ts [2m([22m[2m2 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m
+ [32m✓[39m tests/catalog-hero-pilot.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 156[2mms[22m[39m
+ [32m✓[39m tests/catalog-hero-elegant-release.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 99[2mms[22m[39m
+ [32m✓[39m tests/catalog-hero-remaining-42-release.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 102[2mms[22m[39m
+ [32m✓[39m tests/catalog-hero-batch3-release.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 77[2mms[22m[39m
+ [2m[90m↓[39m[22m tests/local-diva46-two-bottle-pilot.test.ts [2m([22m[2m2 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m
+ [32m✓[39m tests/standard-review.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 137[2mms[22m[39m
+[90mstdout[2m | tests/grace-gateway-jev-safety-net.test.ts[2m > [22m[2mGrace tool gateway: Jev safety net and search tiles[2m > [22m[2mre-runs the request as written when Jev's filter empties it, tells the model, and links every tile
+[22m[39m[Grace/Jev] searchCatalog filters {
+  applicator: [32m'filter finemist'[39m,
+  family: [32m''[39m,
+  glassColour: [32m''[39m,
+  atomizerFinish: [32m''[39m,
+  capFinish: [32m''[39m
+} 3ms
+
+[90mstdout[2m | tests/grace-gateway-jev-safety-net.test.ts[2m > [22m[2mGrace tool gateway: Jev safety net and search tiles[2m > [22m[2mre-runs the request as written when Jev's filter empties it, tells the model, and links every tile
+[22m[39m[Grace/Jev] broadened: enriched search found nothing; the request as written found [33m2[39m applicator: filter finemist
+
+[90mstdout[2m | tests/grace-gateway-jev-safety-net.test.ts[2m > [22m[2mGrace tool gateway: Jev safety net and search tiles[2m > [22m[2mre-runs the request as written when Jev's filter empties it, tells the model, and links every tile
+[22m[39m[Grace server-tool] ok {
+  tool_name: [32m'searchCatalog'[39m,
+  durationMs: [33m4[39m,
+  resultCount: [1mnull[22m,
+  resultType: [32m'object'[39m
+}
+
+[90mstdout[2m | tests/grace-gateway-jev-safety-net.test.ts[2m > [22m[2mGrace tool gateway: Jev safety net and search tiles[2m > [22m[2mkeeps the raw array contract for returnRaw callers
+[22m[39m[Grace/Jev] searchCatalog filters {
+  applicator: [32m'filter finemist'[39m,
+  family: [32m''[39m,
+  glassColour: [32m''[39m,
+  atomizerFinish: [32m''[39m,
+  capFinish: [32m''[39m
+} 3ms
+
+[90mstdout[2m | tests/grace-gateway-jev-safety-net.test.ts[2m > [22m[2mGrace tool gateway: Jev safety net and search tiles[2m > [22m[2mkeeps the raw array contract for returnRaw callers
+[22m[39m[Grace/Jev] broadened: enriched search found nothing; the request as written found [33m2[39m applicator: filter finemist
+
+[90mstdout[2m | tests/grace-gateway-jev-safety-net.test.ts[2m > [22m[2mGrace tool gateway: Jev safety net and search tiles[2m > [22m[2mkeeps the raw array contract for returnRaw callers
+[22m[39m[Grace server-tool] ok {
+  tool_name: [32m'searchCatalog'[39m,
+  durationMs: [33m0[39m,
+  resultCount: [33m2[39m,
+  resultType: [32m'array'[39m
+}
+
+[90mstdout[2m | tests/grace-gateway-jev-safety-net.test.ts[2m > [22m[2mactive Refine survives raw searches and zero matches[2m > [22m[2mreturns a filtered raw row array, not the group verification envelope
+[22m[39m[Grace/Jev] searchCatalog filters {
+  applicator: [32m'filter finemist'[39m,
+  family: [32m''[39m,
+  glassColour: [32m''[39m,
+  atomizerFinish: [32m''[39m,
+  capFinish: [32m''[39m
+} 3ms
+
+[90mstdout[2m | tests/grace-gateway-jev-safety-net.test.ts[2m > [22m[2mactive Refine survives raw searches and zero matches[2m > [22m[2mreturns a filtered raw row array, not the group verification envelope
+[22m[39m[Grace/Jev] broadened: enriched search found nothing; the request as written found [33m1[39m applicator: filter finemist
+
+[90mstdout[2m | tests/grace-gateway-jev-safety-net.test.ts[2m > [22m[2mactive Refine survives raw searches and zero matches[2m > [22m[2mreturns a filtered raw row array, not the group verification envelope
+[22m[39m[Grace server-tool] ok {
+  tool_name: [32m'searchCatalog'[39m,
+  durationMs: [33m1[39m,
+  resultCount: [33m1[39m,
+  resultType: [32m'array'[39m
+}
+
+[90mstdout[2m | tests/grace-gateway-jev-safety-net.test.ts[2m > [22m[2mactive Refine survives raw searches and zero matches[2m > [22m[2mdoes not restore excluded rows after zero matches, raw=true
+[22m[39m[Grace/Jev] searchCatalog filters {
+  applicator: [32m'filter finemist'[39m,
+  family: [32m''[39m,
+  glassColour: [32m''[39m,
+  atomizerFinish: [32m''[39m,
+  capFinish: [32m''[39m
+} 3ms
+
+[90mstdout[2m | tests/grace-gateway-jev-safety-net.test.ts[2m > [22m[2mactive Refine survives raw searches and zero matches[2m > [22m[2mdoes not restore excluded rows after zero matches, raw=true
+[22m[39m[Grace server-tool] ok {
+  tool_name: [32m'searchCatalog'[39m,
+  durationMs: [33m1[39m,
+  resultCount: [33m0[39m,
+  resultType: [32m'array'[39m
+}
+
+[90mstdout[2m | tests/grace-gateway-jev-safety-net.test.ts[2m > [22m[2mactive Refine survives raw searches and zero matches[2m > [22m[2mdoes not restore excluded rows after zero matches, raw=false
+[22m[39m[Grace/Jev] searchCatalog filters {
+  applicator: [32m'filter finemist'[39m,
+  family: [32m''[39m,
+  glassColour: [32m''[39m,
+  atomizerFinish: [32m''[39m,
+  capFinish: [32m''[39m
+} 3ms
+
+[90mstdout[2m | tests/grace-gateway-jev-safety-net.test.ts[2m > [22m[2mactive Refine survives raw searches and zero matches[2m > [22m[2mdoes not restore excluded rows after zero matches, raw=false
+[22m[39m[Grace server-tool] ok {
+  tool_name: [32m'searchCatalog'[39m,
+  durationMs: [33m1[39m,
+  resultCount: [1mnull[22m,
+  resultType: [32m'object'[39m
+}
+
+[90mstdout[2m | tests/grace-gateway-jev-safety-net.test.ts[2m > [22m[2muses the storefront group envelope only for explicit refinement verification
+[22m[39m[Grace/Jev] searchCatalog filters {
+  applicator: [32m'filter finemist'[39m,
+  family: [32m''[39m,
+  glassColour: [32m''[39m,
+  atomizerFinish: [32m''[39m,
+  capFinish: [32m''[39m
+} 3ms
+
+[90mstdout[2m | tests/grace-gateway-jev-safety-net.test.ts[2m > [22m[2muses the storefront group envelope only for explicit refinement verification
+[22m[39m[Grace server-tool] ok {
+  tool_name: [32m'searchCatalog'[39m,
+  durationMs: [33m0[39m,
+  resultCount: [1mnull[22m,
+  resultType: [32m'object'[39m
+}
+
+[90mstdout[2m | tests/grace-gateway-jev-safety-net.test.ts[2m > [22m[2mexact SKU gateway preserves price tiers and supplies a verified clickable product URL
+[22m[39m[Grace server-tool] ok {
+  tool_name: [32m'getProductBySku'[39m,
+  durationMs: [33m0[39m,
+  resultCount: [1mnull[22m,
+  resultType: [32m'object'[39m
+}
+
+ [32m✓[39m tests/grace-gateway-jev-safety-net.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 123[2mms[22m[39m
+ [32m✓[39m tests/local-diva46-tubes.test.ts [2m([22m[2m3 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/catalog-hero-next-batch-release.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 48[2mms[22m[39m
+ [32m✓[39m tests/final-image-review.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 93[2mms[22m[39m
+ [32m✓[39m tests/crawl-route-status.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 71[2mms[22m[39m
+ [32m✓[39m tests/catalogFilters.test.ts [2m([22m[2m102 tests[22m[2m)[22m[32m 49[2mms[22m[39m
+ [32m✓[39m tests/plate-completion.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 63[2mms[22m[39m
+ [32m✓[39m tests/catalog-hero-sleek-release.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 68[2mms[22m[39m
+ [32m✓[39m tests/builder-readiness-audit.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m tests/catalog-hero-vials-release.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 45[2mms[22m[39m
+ [32m✓[39m tests/catalog-hero-batch6-release.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 52[2mms[22m[39m
+[90mstderr[2m | tests/shopify-order-webhook-route.test.ts[2m > [22m[2morder webhook ingress (fixture only)[2m > [22m[2mverifies HMAC before any order read or write
+[22m[39m[Shopify Webhook] HMAC verification failed { topic: [32m'orders/updated'[39m, shop: [1mnull[22m }
+
+[90mstdout[2m | tests/shopify-order-webhook-route.test.ts[2m > [22m[2morder webhook ingress (fixture only)[2m > [22m[2mpasses source clocks and every package through the signed order path
+[22m[39m[Shopify Webhook] orders/updated: order #123 → synced
+
+[90mstderr[2m | tests/shopify-order-webhook-route.test.ts[2m > [22m[2morder webhook ingress (fixture only)[2m > [22m[2mrequests retry instead of acknowledging an event when the source read is behind
+[22m[39m[Shopify Webhook] Error processing fulfillments/update: Error: shopify_fulfillment_snapshot_not_current
+    at assertFulfillmentSnapshot [90m(/Users/jordanrichter/.codex/visualizations/2026/10/19/01a15606-c4e4-7692-9d6e-773c45309fd7/git-checkpoint-20261020/repository/[39msrc/lib/shopify-order-sync.ts:45:15[90m)[39m
+    at POST [90m(/Users/jordanrichter/.codex/visualizations/2026/10/19/01a15606-c4e4-7692-9d6e-773c45309fd7/git-checkpoint-20261020/repository/[39msrc/app/api/shopify/webhooks/route.ts:166:17[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:103:5)[39m
+    at [90m/Users/jordanrichter/.codex/visualizations/2026/10/19/01a15606-c4e4-7692-9d6e-773c45309fd7/git-checkpoint-20261020/repository/[39mtests/shopify-order-webhook-route.test.ts:49:17
+    at [90mfile:///Users/jordanrichter/.codex/visualizations/2026/10/19/01a15606-c4e4-7692-9d6e-773c45309fd7/git-checkpoint-20261020/repository/[39mnode_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:752:20
+
+[90mstderr[2m | tests/shopify-order-webhook-route.test.ts[2m > [22m[2morder webhook ingress (fixture only)[2m > [22m[2mdoes not write a timestamp-less order or fulfillment snapshot
+[22m[39m[Shopify Webhook] Error processing orders/updated: Error: shopify_order_source_version_missing
+    at orderSyncArgs [90m(/Users/jordanrichter/.codex/visualizations/2026/10/19/01a15606-c4e4-7692-9d6e-773c45309fd7/git-checkpoint-20261020/repository/[39msrc/lib/shopify-order-sync.ts:7:46[90m)[39m
+    at POST [90m(/Users/jordanrichter/.codex/visualizations/2026/10/19/01a15606-c4e4-7692-9d6e-773c45309fd7/git-checkpoint-20261020/repository/[39msrc/app/api/shopify/webhooks/route.ts:144:124[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:103:5)[39m
+    at [90m/Users/jordanrichter/.codex/visualizations/2026/10/19/01a15606-c4e4-7692-9d6e-773c45309fd7/git-checkpoint-20261020/repository/[39mtests/shopify-order-webhook-route.test.ts:54:17
+    at [90mfile:///Users/jordanrichter/.codex/visualizations/2026/10/19/01a15606-c4e4-7692-9d6e-773c45309fd7/git-checkpoint-20261020/repository/[39mnode_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:752:20
+
+[90mstderr[2m | tests/shopify-order-webhook-route.test.ts[2m > [22m[2morder webhook ingress (fixture only)[2m > [22m[2mdoes not write a timestamp-less order or fulfillment snapshot
+[22m[39m[Shopify Webhook] Error processing orders/updated: Error: shopify_fulfillment_source_version_missing
+    at orderSyncArgs [90m(/Users/jordanrichter/.codex/visualizations/2026/10/19/01a15606-c4e4-7692-9d6e-773c45309fd7/git-checkpoint-20261020/repository/[39msrc/lib/shopify-order-sync.ts:12:15[90m)[39m
+    at POST [90m(/Users/jordanrichter/.codex/visualizations/2026/10/19/01a15606-c4e4-7692-9d6e-773c45309fd7/git-checkpoint-20261020/repository/[39msrc/app/api/shopify/webhooks/route.ts:144:124[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:103:5)[39m
+    at [90m/Users/jordanrichter/.codex/visualizations/2026/10/19/01a15606-c4e4-7692-9d6e-773c45309fd7/git-checkpoint-20261020/repository/[39mtests/shopify-order-webhook-route.test.ts:55:17
+    at [90mfile:///Users/jordanrichter/.codex/visualizations/2026/10/19/01a15606-c4e4-7692-9d6e-773c45309fd7/git-checkpoint-20261020/repository/[39mnode_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:752:20
+
+ [32m✓[39m tests/shopify-order-webhook-route.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 47[2mms[22m[39m
+ [32m✓[39m tests/grace-robustness-pass3.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 43[2mms[22m[39m
+ [32m✓[39m tests/catalog-approved-heroes.test.ts [2m([22m[2m404 tests[22m[2m)[22m[33m 5213[2mms[22m[39m
+ [32m✓[39m tests/pdp-redesign-model.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32m✓[39m tests/certificate-status-pages.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 38[2mms[22m[39m
+ [32m✓[39m tests/local-empire-pilot.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32m✓[39m tests/bottle-builder-server.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 36[2mms[22m[39m
+ [32m✓[39m tests/shop-three-ways.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m tests/source-recovery.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m tests/portal-order-detail-truth.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 34[2mms[22m[39m
+ [32m✓[39m tests/launch-readiness.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/mobile-homepage-redesign.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32m✓[39m tests/reconciled-sku-media.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32m✓[39m tests/graceOpenAIRealtimeAdapter.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 30[2mms[22m[39m
+ [32m✓[39m tests/homepage-merchandising.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32m✓[39m tests/register-seat-drops.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32m✓[39m tests/pdp-discovery-sections.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 41[2mms[22m[39m
+ [32m✓[39m tests/crawl-robots-sitemap.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32m✓[39m tests/cart-direct-checkout.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 42[2mms[22m[39m
+ [32m✓[39m tests/grace-hardening.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32m✓[39m tests/item-description.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 36[2mms[22m[39m
+ [32m✓[39m tests/responsive-shell-contract.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/shopify-customers.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m tests/mobile-pdp-models.test.ts [2m([22m[2m42 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m tests/catalog-hero-diva-release.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32m✓[39m tests/bottle-builder-components.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32m✓[39m tests/bottle-builder.test.ts [2m([22m[2m32 tests[22m[2m)[22m[32m 37[2mms[22m[39m
+ [32m✓[39m tests/focused-pdp-layout.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m tests/local-empire-catalog-hero.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m tests/bottle-builder-source-links.test.ts [2m([22m[2m110 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32m✓[39m tests/jev-reconciliation.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32m✓[39m tests/catalog-included-assemblies.test.ts [2m([22m[2m64 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32m✓[39m tests/catalog-search-interpretation.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 33[2mms[22m[39m
+ [32m✓[39m tests/portal-order-tracking.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 38[2mms[22m[39m
+ [32m✓[39m tests/team-launch-readiness.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[32m 37[2mms[22m[39m
+ [32m✓[39m tests/shop-collections.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m tests/customer-facing-product-names.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32m✓[39m tests/cylinder-final-release.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32m✓[39m tests/executive-grace-operations.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m tests/certificate-documents.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32m✓[39m tests/catalog-hero-apothecary-release.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m tests/decorated-cap-finish.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32m✓[39m tests/local-source-tubes.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m tests/cap-finish-evidence.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m tests/graceSearchUtils.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m tests/jev-intent-finish-only.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/variant-cards.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32m✓[39m tests/catalog-cap-previews.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 43[2mms[22m[39m
+ [32m✓[39m tests/register-rows.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m tests/register-compose.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m tests/observability-wiring.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/catalogProductGrid.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32m✓[39m tests/volume-pricing-display.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m tests/mizan-ux-recovery.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/catalog-missing-source-visibility.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m tests/product-card-variant-previews.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m tests/asset-ledger-reviews.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m tests/staging-ui-reference-audit.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/grace-openai-failure-routes.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m tests/homepage-browse.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m tests/cylinder-family-page.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m tests/mobile-family-css.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/blue-half-dram-vial-media.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m tests/canonicalProduct.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32m✓[39m tests/portal-address-form.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m tests/catalog-vocabulary-alignment.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m tests/catalogRefineStates.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+[90mstdout[2m | tests/grace-policy-corpus.test.ts[2m > [22m[2mpolicy parity across Grace channels[2m > [22m[2mreturns the contract through the actual Realtime server tool without a live policy query
+[22m[39m[Grace server-tool] ok {
+  tool_name: [32m'getPolicy'[39m,
+  durationMs: [33m0[39m,
+  resultCount: [1mnull[22m,
+  resultType: [32m'object'[39m
+}
+
+ [32m✓[39m tests/grace-policy-corpus.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m tests/grace-workspace-families.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m tests/faq-policy-pages.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m tests/register-phase4-parity.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m tests/pdp-relations.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m tests/catalog-price-filter-semantics.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m tests/unified-cylinder-pdp.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m tests/register-stage-kit.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m tests/portal-account-staff.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m tests/cylinder-9ml-cohort.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m tests/family-page-data.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32m✓[39m tests/product-truth-reconciliation.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m tests/native-recovery-release.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32m✓[39m tests/graceRefineState.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m tests/media-baseline-replay.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m tests/assembled-pdp-lower-stack.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/checkout-minimum.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/madison-sanity-adapter.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+[90mstderr[2m | tests/employee-knowledge-api.test.ts[2m > [22m[2memployee knowledge chat API[2m > [22m[2mreturns a generic provider failure and persists only a minimized error trace
+[22m[39m[knowledge/chat] model failure { requestId: [32m'request_1'[39m, error: [32m'Error'[39m }
+
+[90mstderr[2m | tests/employee-knowledge-api.test.ts[2m > [22m[2memployee knowledge chat API[2m > [22m[2mpersists the runtime failure trace instead of replacing its usage
+[22m[39m[knowledge/chat] model failure { requestId: [32m'request_1'[39m, error: [32m'KnowledgeResponseExecutionError'[39m }
+
+ [32m✓[39m tests/employee-knowledge-api.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/local-component-kits.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/grace-shopping-context.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+[90mstderr[2m | tests/shopify.test.ts[2m > [22m[2mcreateStorefrontCartCheckout[2m > [22m[2mreturns null when Shopify reports cartCreate userErrors
+[22m[39m[Shopify] cartCreate userErrors: Merchandise does not exist
+
+ [32m✓[39m tests/shopify.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/wholesale-draft-orders.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+[90mstderr[2m | tests/pdp-one-frame-per-glass.test.ts[2m > [22m[2menvelopes from the catalogue and the register[2m > [22m[2mleaves a page on its own kits when the lookup fails, and never throws
+[22m[39m[register] no stage envelopes for Test 30 ml; framing with the page's own kits fetch failed
+
+ [32m✓[39m tests/pdp-one-frame-per-glass.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/byb-checklist-batch2.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32m✓[39m tests/local-diva-rings.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m tests/portal-certificate-ui.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/ux-intuitiveness.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m tests/madison-shopify-hero-route.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/pdp-stage-modes.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m tests/grace-openai-failure.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m tests/team-hub-dashboard.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/register-layers.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/reuse-queue.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/portal-shipping-address.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/analytics-events.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/portal-error-redaction.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m tests/glass-sibling-selection.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m tests/catalog-card-purchase.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/checkout-readiness.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/team-hub-links.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/guided-finder-model.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m tests/checkout-sku-identity.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m tests/site-health-invariants.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/team-create-product.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/grace-order-list.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/graceRealtimeConfig.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m tests/knowledge-tool-registry.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/portal-onboarding.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/catalog-8a-filters.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/knowledge-gateway-acceptance.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/one-ml-vial-applicators.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/grace-agentic-handoff.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/shopify-sellability.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/local-tassel-media.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/catalogResultIntegrity.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/observability-sentry-issues.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/byb-checklist-batch1.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/shopify-order-snapshot.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/reconciliation-csv.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/grace-search-tiles.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/legacy-reference-image-scraper.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/workspace-account-route.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/shopify-orders.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/grace-pdp-plate-swap.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/catalog-live-shopify-hero.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/register-phase3-measurements.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/plate-scope.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/certificate-expiration.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/plate-plan.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/graceOpenAIToolSpecs.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/knowledge-openai-responses.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/paper-doll-draft-preview.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/grace-tool-gateway-server.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/bottle-builder-payload.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/catalog-search-log.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/catalog-ux-matrix.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/pdp-redesign-stage.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/compatibility-resolver-parity.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/grace-prompt-channels.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/pdp-stage-frame.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/shopify-sync-foundation.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/cylinder-availability-repair.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/product-groups-rebuild-interlock.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/pdf-catalog.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/catalog-search-alternate-sku.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/bottle-builder-preview-registration.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/globals-css-parses.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/portal-certificate-approval.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/knowledge-corrections.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/cylinder-authoritative-query.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/cylinder-cap-thumbnails.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/mobile-catalog-compression.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/catalog-browse-defaults.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/bottle-builder-entry.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/catalog.smoke.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/portal-mobile-shell.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/paper-doll-sanity-contract.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/grace-sessions-server.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/focused-pdp-purchase-panel.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/wholesale-checkout-fallback.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/catalog-server-sanitization.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/pdp-closure-rail.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/portal-server-authorization.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/mobile-page-heading.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/group-variant-intent.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/grace-memory-capabilities.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/pdp-tech-drawing.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/posthog-capture-config.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/team-access.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/knowledge-operations.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/i18n-foundation.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/pdp-analytics-resolution.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/paper-doll-shared-contract.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/mega-menu.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/madison-image-preflight.test.ts [2m([22m[2m3 tests[22m[2m | [22m[33m1 skipped[39m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/image-generation-coverage.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/kit-frame.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/knowledge-runtime-policy.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/homepage-family-art.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/knowledge-authorization.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/madison-image-naming-audit.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/next-image-config.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/catalog-component-sources.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+[90mstderr[2m | tests/sentry-webhook-verification.test.ts[2m > [22m[2mverifySentryWebhook[2m > [22m[2mrejects a wrong secret, a tampered body, a missing header, and an unset secret
+[22m[39m[Sentry Webhook] SENTRY_WEBHOOK_CLIENT_SECRET not set
+
+ [32m✓[39m tests/sentry-webhook-verification.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/cylinder-beauty-gallery.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/component-13-415.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/cylinder-final-plates.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/cylinder-white-cap-repair.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/optimizable-image.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/grace-push-layout.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/grace-catalog-navigation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/catalogSurface.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/portal-address-action.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/grace-refine-facet-match.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/grace-capability-guardrails.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/applicator-compatibility-rules.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/bottle-standards.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/session-replay-scope.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/focused-shopping-context.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/grace-audit-report.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/prepared-plate-reviews.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/dropper-presentation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/paper-doll-mapping-resolver.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/team-product-image-upload.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/grace-message-links.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/push-shopify-pdp-media-replace.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/checkout-navigation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/register-load-failures.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/pdp-drawings.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/catalogRefineModel.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/family-guides.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/focused-pdp-rollout.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/portalGraceProjects.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/grace-voice-echo-guard.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/frosted-elegant-register-recovery.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/pdp-sku-image-fallback.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/clerk-branded-auth.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/legacy-product-route-overrides.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/pdp-editorial-description.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/catalog-pagination.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/register-stage-bone.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/product-image-fallback.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/catalog-card-visual.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/focused-pdp-builder-language.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/catalog-hero-prod-slug-aliases.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/closure-swatch-keys.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/bottle-builder-preview-frame.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/graceShapeIntent.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/grace-session-compression.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/exploded-stack.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/pdp-selected-kit-truth.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/pdp-fallback-media.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/register-detached-overcaps.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/cylinder-v3-acceptance.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/madison-supabase-audit.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/executive-hub-auth.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/bottle-builder-mobile-request.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/catalog-group-sku.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/knowledge-operations-schema.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/focused-pdp-purchasability.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/grace-workspace-shell.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/catalogSearchClient.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/grace-focused-navigation-contract.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/graceRealtimeInstructions.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/hub-sign-in.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [2m[90m↓[39m[22m tests/grace-accuracy-audit.live.test.ts [2m([22m[2m1 test[22m[2m | [22m[33m1 skipped[39m[2m)[22m
+ [2m[90m↓[39m[22m tests/grace-navigation-battery.live.test.ts [2m([22m[2m5 tests[22m[2m | [22m[33m5 skipped[39m[2m)[22m
+[90mstderr[2m | tests/next-build-memory.test.ts
+[22m[39m⚠ Missing environment variable: NEXT_PUBLIC_CONVEX_URL
+⚠ Missing environment variable: OPENAI_API_KEY
+
+ [32m✓[39m tests/next-build-memory.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [2m[90m↓[39m[22m tests/local-copper-caps.test.ts [2m([22m[2m2 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m
+ [32m✓[39m tests/bottle-builder-kits-hydrate.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 30[2mms[22m[39m
+ [32m✓[39m tests/pdp-redesign-page-dom.test.ts [2m([22m[2m4 tests[22m[2m)[22m[33m 921[2mms[22m[39m
+   [33m[2m✓[22m[39m redesigned product page[2m > [22mopens on the group's primary SKU with the canvas, buy box and curated description [33m 721[2mms[22m[39m
+ [32m✓[39m tests/focused-pdp-mobile-dom.test.ts [2m([22m[2m4 tests[22m[2m)[22m[33m 1662[2mms[22m[39m
+   [33m[2m✓[22m[39m focused PDP mobile purchase surface[2m > [22mshows exact local-review components in both Photo cap states without opting another SKU into review [33m 1556[2mms[22m[39m
+ [32m✓[39m tests/mobile-bottle-builder.test.tsx [2m([22m[2m15 tests[22m[2m)[22m[33m 627[2mms[22m[39m
+ [32m✓[39m tests/cylinder-focused-finder.test.ts [2m([22m[2m9 tests[22m[2m)[22m[33m 522[2mms[22m[39m
+ [32m✓[39m tests/application-finder-route.test.ts [2m([22m[2m13 tests[22m[2m)[22m[33m 373[2mms[22m[39m
+ [32m✓[39m tests/catalog-filter-sidebar.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[32m 212[2mms[22m[39m
+[90mstderr[2m | tests/grace-workspace-cart-dom.test.tsx[2m > [22m[2mworkspace cart[2m > [22m[2mkeeps items visible when checkout reports an error
+[22m[39m[Cart] Checkout error: Error: Please check availability and try again.
+    at [90m/Users/jordanrichter/.codex/visualizations/2026/10/19/01a15606-c4e4-7692-9d6e-773c45309fd7/git-checkpoint-20261020/repository/[39msrc/components/CartProvider.tsx:289:23
+
+ [32m✓[39m tests/grace-workspace-cart-dom.test.tsx [2m([22m[2m12 tests[22m[2m)[22m[33m 369[2mms[22m[39m
+[90mstderr[2m | tests/grace-redesign-dom.test.tsx[2m > [22m[2mGrace redesign interactions[2m > [22m[2mkeeps expansion available to guests and never resets the existing thread
+[22m[39mYou have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+
+ [32m✓[39m tests/catalog-card-tier-pricing.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[32m 108[2mms[22m[39m
+ [32m✓[39m tests/grace-redesign-dom.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[32m 173[2mms[22m[39m
+ [32m✓[39m tests/certificate-client.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 87[2mms[22m[39m
+Sourcemap for "/Users/jordanrichter/.codex/visualizations/2026/10/19/01a15606-c4e4-7692-9d6e-773c45309fd7/git-checkpoint-20261020/repository/node_modules/posthog-js/dist/rrweb.js" points to missing source files
+ [32m✓[39m tests/mobile-family-catalog.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 118[2mms[22m[39m
+ [32m✓[39m tests/grace-workspace-controls-dom.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 132[2mms[22m[39m
+ [32m✓[39m tests/builder-image-retry.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 63[2mms[22m[39m
+ [32m✓[39m tests/posthog-replay-privacy.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 122[2mms[22m[39m
+ [32m✓[39m tests/cylinder-catalog-hero-preview.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 88[2mms[22m[39m
+ [32m✓[39m tests/bottle-builder-preview-seat.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[32m 81[2mms[22m[39m
+ [32m✓[39m tests/bottle-builder-chooser-image.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[32m 81[2mms[22m[39m
+ [32m✓[39m tests/bottle-builder-load-speed.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[32m 76[2mms[22m[39m
+ [32m✓[39m tests/posthog-identity.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 37[2mms[22m[39m
+ [32m✓[39m tests/portal-mobile-chrome.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 57[2mms[22m[39m
+ [32m✓[39m tests/pdp-stage-zoom.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 61[2mms[22m[39m
+ [32m✓[39m tests/builder-image-register-retry.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 48[2mms[22m[39m
+ [32m✓[39m tests/posthog-anonymous-continuity.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m tests/pdp-image-recovery.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 47[2mms[22m[39m
+ [32m✓[39m tests/posthog-privacy.test.ts [2m([22m[2m39 tests[22m[2m)[22m[32m 43[2mms[22m[39m
+ [32m✓[39m tests/pdp-roller-insert-chooser.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 44[2mms[22m[39m
+ [32m✓[39m tests/builder-image-placeholder.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 41[2mms[22m[39m
+ [32m✓[39m tests/faq-sample-success.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 79[2mms[22m[39m
+ [32m✓[39m tests/focused-finder-components.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 54[2mms[22m[39m
+ [32m✓[39m tests/workspace-account-client.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32m✓[39m tests/catalog-cap-swap.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 38[2mms[22m[39m
+ [32m✓[39m tests/catalog-approved-card.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32m✓[39m tests/bottle-builder-family-discovery.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32m✓[39m tests/grace-memory-resilience.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32m✓[39m tests/announcement-marquee.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m tests/catalog-card-static-hero.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 36[2mms[22m[39m
+ [32m✓[39m tests/posthog-provider-identity.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m tests/grace-product-card-navigation.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m tests/media-release-client.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32m✓[39m tests/product-compatibility-matrix.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 211[2mms[22m[39m
+ [32m✓[39m tests/grace-exact-variant-retrieval.test.ts [2m([22m[2m11 tests[22m[2m)[22m[33m 345[2mms[22m[39m
+ [32m✓[39m tests/portal-order-sync.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 192[2mms[22m[39m
+ [32m✓[39m tests/resale-certificates.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 223[2mms[22m[39m
+ [32m✓[39m tests/component-review.test.ts [2m([22m[2m6 tests[22m[2m)[22m[33m 355[2mms[22m[39m
+ [32m✓[39m tests/four-family-component-repair.test.ts [2m([22m[2m13 tests[22m[2m)[22m[33m 455[2mms[22m[39m
+   [33m[2m✓[22m[39m atomic four-family component repair[2m > [22mdry-runs by default, repairs exact records, preserves commerce/plates, and is idempotent [33m 386[2mms[22m[39m
+ [32m✓[39m tests/portal-draft-editor.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 120[2mms[22m[39m
+ [32m✓[39m tests/grace-askgrace-openai-failure.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 158[2mms[22m[39m
+ [32m✓[39m tests/grace-bottle-components.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 118[2mms[22m[39m
+ [32m✓[39m tests/portal-account-foundation.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 175[2mms[22m[39m
+ [32m✓[39m tests/native-media-release.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 155[2mms[22m[39m
+ [32m✓[39m tests/portal-read-authorization.test.ts [2m([22m[2m38 tests[22m[2m)[22m[32m 81[2mms[22m[39m
+ [32m✓[39m tests/catalog-corrections.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 150[2mms[22m[39m
+ [32m✓[39m tests/order-pad-search.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 250[2mms[22m[39m
+ [32m✓[39m tests/staff-product-edits.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 62[2mms[22m[39m
+ [32m✓[39m tests/grace-sessions.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 68[2mms[22m[39m
+ [32m✓[39m tests/product-group-hero-assignment.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 64[2mms[22m[39m
+ [32m✓[39m tests/group-display-names.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 49[2mms[22m[39m
+[90mstderr[2m | tests/shopify-sync-catalogue-truth.test.ts[2m > [22m[2mShopify webhooks treat the catalogue as the source of truth[2m > [22m[2mreplays the 2026-09-20 activation: name, price, stock, group and row count all survive
+[22m[39m[shopifySync] empire-100ml-clear-18-415-reducer: 1 Shopify variant(s) not in the catalogue, ignored: GB-EMP-CLR-100ML-RDC-SGLD-01
+
+[90mstderr[2m | tests/shopify-sync-catalogue-truth.test.ts[2m > [22m[2mShopify webhooks treat the catalogue as the source of truth[2m > [22m[2mcreates nothing for a Shopify product the catalogue does not have
+[22m[39m[shopifySync] not-a-catalogue-group: 2 Shopify variant(s) not in the catalogue, ignored: GB-EMP-CLR-100ML-RDC-SGLD, GB-EMP-CLR-100ML-RDC-SGLD-01
+
+[90mstderr[2m | tests/shopify-sync-catalogue-truth.test.ts[2m > [22m[2mShopify webhooks treat the catalogue as the source of truth[2m > [22m[2man older route that sends no tracking or publish fields changes neither stock nor sellability
+[22m[39m[shopifySync] empire-100ml-clear-18-415-reducer: 1 Shopify variant(s) not in the catalogue, ignored: GB-EMP-CLR-100ML-RDC-SGLD-01
+
+ [32m✓[39m tests/shopify-sync-catalogue-truth.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 41[2mms[22m[39m
+ [32m✓[39m tests/catalog-restore.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m tests/plate-imagery-promotion.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m tests/catalog-component-products.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m tests/certificate-read-authorization.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 37[2mms[22m[39m
+ [32m✓[39m tests/cylinder-release.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m tests/four-family-reconciliation.test.ts [2m([22m[2m1 test[22m[2m)[22m[33m 58940[2mms[22m[39m
+   [33m[2m✓[22m[39m four-family catalog reconciliation[2m > [22mgives PDP and Builder identical exact components for all 925 source records [33m 58937[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m349 passed[39m[22m[2m | [22m[33m12 skipped[39m[90m (361)[39m
+[2m      Tests [22m [1m[32m3145 passed[39m[22m[2m | [22m[33m42 skipped[39m[90m (3187)[39m
+[2m   Start at [22m 08:18:04
+[2m   Duration [22m 96.95s[2m (transform 7.78s, setup 0ms, collect 64.83s, tests 83.74s, environment 13.00s, prepare 16.06s)[22m

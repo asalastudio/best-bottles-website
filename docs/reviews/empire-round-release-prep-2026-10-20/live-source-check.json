@@ -1,0 +1,137 @@
+{
+  "capturedAt": "2026-10-20T15:24:15.819Z",
+  "revision": "empire-round26-03baed749353",
+  "operation": "registerStage.forSkus public query only; no writes",
+  "results": [
+    {
+      "environment": "production",
+      "url": "https://precise-raccoon-123.convex.cloud",
+      "requested": 26,
+      "accepted": 26,
+      "rejected": [],
+      "missing": [],
+      "differences": []
+    },
+    {
+      "environment": "existingPreview",
+      "url": "https://helpful-elephant-638.convex.cloud",
+      "requested": 26,
+      "accepted": 12,
+      "rejected": [
+        "GBEmp100SpryMtGl",
+        "GBEmp50SpryMtGl",
+        "GBEmp100SpryCu",
+        "GBEmp100SpryMtSl",
+        "GBEmp100SpryShnBlk",
+        "GBEmp100SpryShnGl",
+        "GBEmp100SpryShnSl",
+        "GBEmp50SpryCu",
+        "GBEmp50SpryMtSl",
+        "GBEmp50SpryShnBlk",
+        "GBEmp50SpryShnGl",
+        "GBEmp50SpryShnSl",
+        "LBEmp100WhtClOvrCp",
+        "LBEmp50WhtClOvrCp"
+      ],
+      "missing": [],
+      "differences": [
+        {
+          "sku": "GBEmp100SpryMtGl",
+          "fields": [
+            "plate",
+            "components"
+          ]
+        },
+        {
+          "sku": "GBEmp50SpryMtGl",
+          "fields": [
+            "plate",
+            "components"
+          ]
+        },
+        {
+          "sku": "GBEmp100SpryCu",
+          "fields": [
+            "plate",
+            "components"
+          ]
+        },
+        {
+          "sku": "GBEmp100SpryMtSl",
+          "fields": [
+            "plate",
+            "components"
+          ]
+        },
+        {
+          "sku": "GBEmp100SpryShnBlk",
+          "fields": [
+            "plate",
+            "components"
+          ]
+        },
+        {
+          "sku": "GBEmp100SpryShnGl",
+          "fields": [
+            "plate",
+            "components"
+          ]
+        },
+        {
+          "sku": "GBEmp100SpryShnSl",
+          "fields": [
+            "plate",
+            "components"
+          ]
+        },
+        {
+          "sku": "GBEmp50SpryCu",
+          "fields": [
+            "plate",
+            "components"
+          ]
+        },
+        {
+          "sku": "GBEmp50SpryMtSl",
+          "fields": [
+            "plate",
+            "components"
+          ]
+        },
+        {
+          "sku": "GBEmp50SpryShnBlk",
+          "fields": [
+            "plate",
+            "components"
+          ]
+        },
+        {
+          "sku": "GBEmp50SpryShnGl",
+          "fields": [
+            "plate",
+            "components"
+          ]
+        },
+        {
+          "sku": "GBEmp50SpryShnSl",
+          "fields": [
+            "plate",
+            "components"
+          ]
+        },
+        {
+          "sku": "LBEmp100WhtClOvrCp",
+          "fields": [
+            "plate"
+          ]
+        },
+        {
+          "sku": "LBEmp50WhtClOvrCp",
+          "fields": [
+            "plate"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "check": "tests",
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "--maxWorkers=4"
+  ],
+  "exitCode": 0,
+  "seconds": 98.02,
+  "node": "v22.22.3",
+  "baseCommit": "dbab99913faa91d1a4f2bc0ede0c7d0ffd21f8ba",
+  "workingTreeChanges": true,
+  "environment": "allowlisted; no credentials or deploy commands"
+}

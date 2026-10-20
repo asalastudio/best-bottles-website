@@ -1,0 +1,13 @@
+
+ RUN  v3.2.4 /Users/jordanrichter/.codex/visualizations/2026/10/19/01a15606-c4e4-7692-9d6e-773c45309fd7/git-checkpoint-20261020/repository
+
+ ✓ tests/portal-server-authorization.test.ts (5 tests) 6ms
+ ✓ tests/clerk-branded-auth.test.ts (10 tests) 3ms
+ ✓ tests/media-preview-auth.test.ts (2 tests) 5ms
+ ✓ tests/media-release.test.ts (7 tests) 430ms
+ ✓ tests/media-release-client.test.tsx (1 test) 15ms
+
+ Test Files  5 passed (5)
+      Tests  25 passed (25)
+   Start at  08:27:18
+   Duration  1.84s (transform 467ms, setup 0ms, collect 1.18s, tests 459ms, environment 502ms, prepare 241ms)

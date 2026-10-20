@@ -88,7 +88,9 @@ export default async function proxy(req: NextRequest, event: NextFetchEvent) {
     requestHeaders.set(LOCALE_HEADER, locale);
     requestHeaders.set(PATHNAME_HEADER, originalPath);
 
-    const clerkRes = await clerk(req, event);
+    // Clerk validates its keys before invoking our callback. Honor the explicit
+    // disabled mode before entering its middleware so isolated previews need no live credentials.
+    const clerkRes = CLERK_ENABLED ? await clerk(req, event) : NextResponse.next();
     if (clerkRes && clerkRes.status >= 300 && clerkRes.status < 400) {
         return clerkRes;
     }

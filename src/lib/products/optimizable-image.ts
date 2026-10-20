@@ -1,3 +1,4 @@
+import { mediaSourceUrl } from "../media-release/release";
 /** Only proxy sources verified in both local Next and deployed Vercel. The
  * public Blob plates are already compact WebP files, and local Next rejects
  * their remote URL even though the deployed proxy accepts it. Unknown hosts
@@ -21,6 +22,7 @@ const REGISTER_BLOB_HOST = "yzy7l20k4yt6znzz.public.blob.vercel-storage.com";
  * display-sized WebP instead; the published kit layers are already compact
  * WebP files and stay direct. */
 export function isRegisterAssetUrl(value: string): boolean {
+    value = mediaSourceUrl(value);
     try {
         const url = new URL(value);
         return url.protocol === "https:" && url.hostname === REGISTER_BLOB_HOST && url.pathname.startsWith("/register/");

@@ -1,0 +1,14 @@
+{
+  "check": "lint",
+  "command": [
+    "npm",
+    "run",
+    "lint"
+  ],
+  "exitCode": 0,
+  "seconds": 51.19,
+  "node": "v22.22.3",
+  "baseCommit": "dbab99913faa91d1a4f2bc0ede0c7d0ffd21f8ba",
+  "workingTreeChanges": true,
+  "environment": "allowlisted; no credentials or deploy commands"
+}

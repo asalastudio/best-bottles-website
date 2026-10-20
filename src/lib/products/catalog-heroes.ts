@@ -1,3 +1,4 @@
+import { releaseHero, releaseEntries, isReleaseHero, mediaReleaseMode } from "../media-release/release";
 import divaPilotRows from "./local-diva46-pilot-catalog-heroes.json";
 import divaAdditionalRows from "./local-diva46-additional-catalog-heroes.json";
 import roundLotionPilotRows from "./local-round78-lotion-pilot-catalog-heroes.json";
@@ -28,11 +29,16 @@ function activePilotRows(): CatalogHero[] {
 
 /** Exact-SKU local review only; never enters a production or Vercel build. */
 function localReviewHeroes(): CatalogHero[] {
-    return process.env.NODE_ENV === "development" && !process.env.VERCEL ? [localEmpireRow, ...additionalEmpireRows, ...roundPilotRows, ...roundAdditionalRows, ...divaPilotRows, ...divaAdditionalRows, ...roundLotionPilotRows, ...roundLotionAdditionalRows] : [];
+    return mediaReleaseMode() === "off" && process.env.NODE_ENV === "development" && !process.env.VERCEL ? [localEmpireRow, ...additionalEmpireRows, ...roundPilotRows, ...roundAdditionalRows, ...divaPilotRows, ...divaAdditionalRows, ...roundLotionPilotRows, ...roundLotionAdditionalRows] : [];
 }
 export function isLocalReviewHero(hero?: CatalogHero | null): boolean {
     const local = localReviewHeroes().find(row => row.websiteSku === hero?.websiteSku);
     return Boolean(local && hero && hero.websiteSku === local.websiteSku && hero.groupSlug === local.groupSlug && hero.url === local.url);
+}
+
+/** Exact reviewed media, whether local pilot or the versioned preview bundle. */
+export function isReviewedMediaHero(hero?: CatalogHero | null): boolean {
+    return isLocalReviewHero(hero) || isReleaseHero(hero);
 }
 
 /** Explicit build opt-in: staging candidates do not become a production release. */
@@ -77,6 +83,8 @@ function isPilotHero(hero?: CatalogHero | null): boolean {
 /** Exact SKU lookup only: never borrow another finish or applicator's photo. */
 export function getProductHero(websiteSku?: string | null): CatalogHero | null {
     if (!websiteSku) return null;
+    const released = releaseHero(websiteSku);
+    if (released) return released;
     const local = localReviewHeroes().find(row => row.websiteSku === websiteSku);
     if (local?.websiteSku === websiteSku) return local;
     return (isCatalogHeroPilotEnabled() ? activePilotRows().find(row => row.websiteSku === websiteSku) : null) ?? bySku.get(websiteSku) ?? null;
@@ -84,6 +92,8 @@ export function getProductHero(websiteSku?: string | null): CatalogHero | null {
 
 /** A released Sunburst hero for exactly this SKU in this group; never an older bone-review photo. */
 export function getReleasedCatalogHero(groupSlug: string, websiteSku?: string | null): CatalogHero | null {
+    const released = releaseHero(websiteSku);
+    if (released?.groupSlug === groupSlug) return released;
     if (!websiteSku || !isCatalogHeroPilotEnabled()) return null;
     const slugs = recordedGroupSlugs(groupSlug);
     const row = activePilotRows().find(candidate => slugs.includes(candidate.groupSlug) && candidate.websiteSku === websiteSku);
@@ -92,6 +102,10 @@ export function getReleasedCatalogHero(groupSlug: string, websiteSku?: string | 
 
 /** Only select an assembly still present in the filtered catalog result. */
 export function getCatalogHero(groupSlug: string, variants: readonly { websiteSku?: string | null }[], preferredWebsiteSku?: string | null): CatalogHero | null {
+    const released = releaseEntries().map(entry => entry.hero).find(row => row.groupSlug === groupSlug
+        && variants.some(v => v.websiteSku === row.websiteSku)
+        && (!preferredWebsiteSku || preferredWebsiteSku.trim().toLowerCase() === row.websiteSku.toLowerCase()));
+    if (released) return released;
     const local = localReviewHeroes().find(row => row.groupSlug === groupSlug
         && variants.some(v => v.websiteSku === row.websiteSku)
         && (!preferredWebsiteSku || preferredWebsiteSku.trim().toLowerCase() === row.websiteSku.toLowerCase()));
@@ -152,7 +166,7 @@ export function resolveLiveCatalogCardHero(input: {
     const heroImageUrl = input.heroImageUrl?.trim() || null;
     // Only an exact, still-visible assembly can supersede a live group photo.
     // Keeping this ahead of Shopify precedence is essential for staging review.
-    if ((isLocalReviewHero(input.staticHero) || isPilotHero(input.staticHero)) && input.variants?.some(variant => variant.websiteSku === input.staticHero?.websiteSku)) {
+    if ((isReviewedMediaHero(input.staticHero) || isPilotHero(input.staticHero)) && input.variants?.some(variant => variant.websiteSku === input.staticHero?.websiteSku)) {
         const hero = input.staticHero!;
         return { catalogHero: hero, imageUrl: hero.url, picturedWebsiteSku: hero.websiteSku };
     }

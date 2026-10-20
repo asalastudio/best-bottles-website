@@ -1,3 +1,4 @@
+import { assertMediaPreviewConfig } from "./src/lib/media-release/build-config";
 import type { NextConfig } from "next";
 // The /config subpath is the supported import for build-time wiring; importing
 // withSentryConfig from the package root is deprecated and breaks in v11.
@@ -7,6 +8,7 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const projectRoot = process.cwd();
+assertMediaPreviewConfig(process.env);
 
 // ── Validate required environment variables at build time ────────────────
 const requiredEnvVars = [
@@ -40,6 +42,7 @@ function convexStorageImagePatterns() {
 
 const nextConfig: NextConfig = {
     env: {
+        NEXT_PUBLIC_BB_MEDIA_RELEASE: process.env.NEXT_PUBLIC_BB_MEDIA_RELEASE ?? "off",
         NEXT_PUBLIC_CATALOG_HERO_PILOT: process.env.NEXT_PUBLIC_CATALOG_HERO_PILOT
             ?? (process.env.VERCEL_ENV === "preview"
                 && process.env.VERCEL_GIT_COMMIT_REF === "codex/cylinder-hero-staging-2026-09-22"

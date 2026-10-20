@@ -20,7 +20,7 @@ it("keeps the selected workspace available during discovery, failure and retry",
         await act(async () => resolve({ ok: false }));
         expect(el.textContent).toContain("error"); expect(el.querySelector("option")?.textContent).toBe("Cylinder");
         await act(async () => el.querySelector("button")!.click());
-        await act(async () => resolve({ ok: true, json: async () => ({ families: [{ family: "Circle", groups: 4 }, { family: "Cylinder", groups: 5 }] }) }));
+        await act(async () => resolve({ ok: true, headers: new Headers({ "X-BB-Media-Revision": "media-off-v1" }), json: async () => ({ families: [{ family: "Circle", groups: 4 }, { family: "Cylinder", groups: 5 }] }) }));
         expect(el.textContent).toContain("ready"); expect([...el.querySelectorAll("option")].map(o => o.textContent)).toEqual(["Circle", "Cylinder"]);
     } finally { act(() => root.unmount()); vi.unstubAllGlobals(); }
 });

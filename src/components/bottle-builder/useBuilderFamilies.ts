@@ -1,4 +1,6 @@
 "use client";
+import { reportMediaRevisionMismatch } from "./media-revision-notice";
+import { builderMediaUrl, mediaRevision } from "@/lib/media-release/release";
 import { useEffect, useState } from "react";
 import type { BuilderFamily } from "@/lib/bottle-builder/entry";
 
@@ -20,8 +22,12 @@ export function useBuilderFamilies(initial: BuilderFamily[], streamed?: Promise<
             setStatus("ready");
         };
         const discover = () => {
-            fetch("/api/bottle-builder/families", { signal: controller.signal })
+            fetch(builderMediaUrl("/api/bottle-builder/families"), { signal: controller.signal })
                 .then(async response => {
+                    if (response.status === 409 || (response.ok && response.headers.get("X-BB-Media-Revision") !== mediaRevision())) {
+                        reportMediaRevisionMismatch();
+                        throw Error("Bottle images have changed. Refresh this page.");
+                    }
                     if (!response.ok) throw Error("Family discovery unavailable");
                     const data = await response.json();
                     if (!validFamilies(data.families)) throw Error("Invalid families");

@@ -1,0 +1,31 @@
+{
+  "node": "v24.19.0",
+  "mode": "off",
+  "revision": "media-off-v1",
+  "checks": [
+    {
+      "route": "kits",
+      "mismatchedRevisionStatus": 409,
+      "repeatRequestStatus": 409,
+      "cacheControl": "no-store",
+      "responseRevision": "media-off-v1"
+    },
+    {
+      "route": "bodies",
+      "mismatchedRevisionStatus": 409,
+      "repeatRequestStatus": 409,
+      "cacheControl": "no-store",
+      "responseRevision": "media-off-v1"
+    },
+    {
+      "route": "families",
+      "mismatchedRevisionStatus": 409,
+      "repeatRequestStatus": 409,
+      "cacheControl": "no-store",
+      "responseRevision": "media-off-v1"
+    }
+  ],
+  "immutableAssetsOverNextHttp": 57,
+  "backendRequests": 0,
+  "scope": "Local built Next server. Does not exercise a hosted CDN or checkout."
+}

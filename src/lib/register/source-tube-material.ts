@@ -1,3 +1,4 @@
+import { mediaSourceUrl } from '../media-release/release';
 import additionalSprayTubes from './local-empire-additional-spray-tubes.json';
 import empire100SprayTube from './local-empire-100ml-spray-tube.json';
 import sources from './local-source-tubes.json';
@@ -13,6 +14,7 @@ import round78Lotion from './local-round78-lotion-tubes.json';
  * applying this exposed-part boost there makes it read as an exterior sticker.
  */
 export function sourceTubeMaterialFilter(url: string, view: 'sidecar' | 'capon' | 'exploded'): string | undefined {
+    url = mediaSourceUrl(url);
     // Round's source is photographed through glass. Keep its white highlights
     // neutral: darkening them turns the entire pump into a gray silhouette.
     if (url === vintageTube.url && view !== 'exploded') return 'brightness(0.96)';

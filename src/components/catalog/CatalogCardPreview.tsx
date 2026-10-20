@@ -1,7 +1,7 @@
 "use client";
 
 import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
-import { getCatalogHeroStyle, getCatalogHeroProductHref, getProductHero, isLocalReviewHero, type CatalogHero } from "@/lib/products/catalog-heroes";
+import { getCatalogHeroStyle, getCatalogHeroProductHref, getProductHero, isReviewedMediaHero, type CatalogHero } from "@/lib/products/catalog-heroes";
 import { capSwapFraming, capSwapPlateBox, capSwapPlateUrl } from "@/lib/products/catalog-cap-swap";
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -62,9 +62,9 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
     const heroSwap = catalogHero && selected ? capSwapFraming(catalogHero.url) : null;
     const heroSwapUrl = heroSwap ? capSwapPlateUrl(heroSwap, selectedPlate) : null;
     const selectedHero = selected ? getProductHero(skuOf(selected)) : null;
-    const selectedLocalHero = isLocalReviewHero(selectedHero) && selectedHero?.groupSlug === slug ? selectedHero : null;
-    const selectedExactPhoto = selected && (selectedLocalHero || isLocalReviewHero(catalogHero) || isReconciliationSku(skuOf(selected)) || getBlueHalfDramVialImage(skuOf(selected)))
-        ? [selectedLocalHero?.url, isLocalReviewHero(catalogHero) ? assembly(selected) : null, getBlueHalfDramVialImage(skuOf(selected)), getReconciledLocalSkuImage(skuOf(selected)), selected.imageUrl].find((url) => url && !failed.has(url))
+    const selectedLocalHero = isReviewedMediaHero(selectedHero) && selectedHero?.groupSlug === slug ? selectedHero : null;
+    const selectedExactPhoto = selected && (selectedLocalHero || isReviewedMediaHero(catalogHero) || isReconciliationSku(skuOf(selected)) || getBlueHalfDramVialImage(skuOf(selected)))
+        ? [selectedLocalHero?.url, isReviewedMediaHero(catalogHero) ? assembly(selected) : null, getBlueHalfDramVialImage(skuOf(selected)), getReconciledLocalSkuImage(skuOf(selected)), selected.imageUrl].find((url) => url && !failed.has(url))
         : null;
     const selectedVialImage = oneMlVialApplicator(skuOf(selected))?.image;
     const swapUrl = catalogHero

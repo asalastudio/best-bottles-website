@@ -1,0 +1,6 @@
+▲ Next.js 16.2.12
+- Local:         http://127.0.0.1:3011
+- Network:       http://127.0.0.1:3011
+✓ Ready in 230ms
+⚠ Missing environment variable: OPENAI_API_KEY
+⚠ The static directory has been deprecated in favor of the public directory. https://nextjs.org/docs/messages/static-dir-deprecated

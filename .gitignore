@@ -269,3 +269,6 @@ data/descriptions/pdp/catalog-facts.json
 
 # Explicitly enabled local catalogue replay; never release a review snapshot.
 /output/local-media-baseline/
+
+# Verified source downloads; immutable release copies are tracked under public/media-releases.
+/output/media-release-source-cache/

@@ -1,0 +1,13 @@
+
+ RUN  v3.2.4 /Users/jordanrichter/.codex/visualizations/2026/10/19/01a15606-c4e4-7692-9d6e-773c45309fd7/git-checkpoint-20261020/repository
+
+ ✓ tests/media-release.test.ts (7 tests) 355ms
+ ✓ tests/vercel-preview-build.test.ts (5 tests) 1091ms
+   ✓ preserves existing preview and production build behavior outside the opt-in  342ms
+ ✓ tests/media-release-client.test.tsx (1 test) 14ms
+ ✓ tests/bottle-builder-kits-hydrate.test.tsx (2 tests) 20ms
+
+ Test Files  4 passed (4)
+      Tests  15 passed (15)
+   Start at  08:20:34
+   Duration  1.94s (transform 369ms, setup 0ms, collect 761ms, tests 1.48s, environment 704ms, prepare 170ms)

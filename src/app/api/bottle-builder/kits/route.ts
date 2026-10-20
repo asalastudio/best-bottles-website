@@ -1,7 +1,10 @@
+import { mediaRevisionConflict, mediaResponseHeaders } from "@/lib/media-release/http";
 import { NextResponse } from "next/server";
 import { BUILDER_CDN_CACHE, loadBuilderBodyKits } from "@/lib/bottle-builder/server";
 
 export async function GET(request: Request) {
+    const conflict = mediaRevisionConflict(request);
+    if (conflict) return conflict;
     const url = new URL(request.url);
     const family = url.searchParams.get("family") ?? "";
     const bodyId = url.searchParams.get("bodyId") ?? "";
@@ -10,7 +13,7 @@ export async function GET(request: Request) {
     }
     try {
         return NextResponse.json({ kits: await loadBuilderBodyKits(family, bodyId) }, {
-            headers: { "Cache-Control": BUILDER_CDN_CACHE },
+            headers: mediaResponseHeaders(BUILDER_CDN_CACHE),
         });
     } catch (error) {
         // Uncached 503: the browser retries, and the data cache keeps its last good entry.

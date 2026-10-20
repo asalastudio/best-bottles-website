@@ -1,5 +1,7 @@
 # Production media release plan, 20 October 2026
 
+Update: local technical preparation for the approved 26 Empire/Round variants is recorded in [the preview setup and rollback package](../empire-round-release-prep-2026-10-20/README.md). The 52-SKU planning inventory below remains a historical plan and is not publisher input. Diva and Round lotion are excluded from the prepared release.
+
 Prepared locally on `integration/local-media-main-2026-10-20`. This is a review package, not an executable publication manifest. No assets were uploaded, no release was activated, and no GitHub, hosting, or production backend state was changed.
 
 The package pins 52 catalog images, 52 captured assembly recipes, and 73 unique local image files by SHA-256. Existing remote component URLs remain references and must be reverified before release. The capture source files were checked against the previously verified preservation archive. The full local integration checks and production build have passed; hosted release preparation is still outstanding.
