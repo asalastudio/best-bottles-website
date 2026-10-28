@@ -127,53 +127,11 @@ const nextConfig: NextConfig = {
                 destination: "/es/matrix",
                 permanent: true,
             },
-            // ── Legacy /product/ → new /products/ (singular → plural) ──────
-            {
-                source: "/product/:slug",
-                destination: "/products/:slug",
-                permanent: true,
-            },
-
-            // ── Legacy PHP category pages → /catalog with filters ──────────
-            {
-                source: "/all-bottles/:path*.php",
-                destination: "/catalog",
-                permanent: true,
-            },
-            {
-                source: "/all-bottles/:path*",
-                destination: "/catalog",
-                permanent: true,
-            },
-
-            // ── Legacy content pages ───────────────────────────────────────
-            {
-                source: "/product-packaging-ideas.php",
-                destination: "/blog",
-                permanent: true,
-            },
-            {
-                source: "/about-us.php",
-                destination: "/about",
-                permanent: true,
-            },
-            {
-                source: "/contact-us.php",
-                destination: "/contact",
-                permanent: true,
-            },
-            {
-                source: "/contact.php",
-                destination: "/contact",
-                permanent: true,
-            },
-
-            // ── Catch-all for stray .php pages ─────────────────────────────
-            {
-                source: "/:path*.php",
-                destination: "/",
-                permanent: true,
-            },
+            // ── Legacy bestbottles.com URLs ────────────────────────────────
+            // Answered by the map in src/lib/seo/legacyRedirects.ts, from the
+            // proxy. Do not add legacy rules here: next.config redirects run
+            // BEFORE the proxy, so a catch-all such as `/:path*.php` or
+            // `/product/:slug` would shadow every specific mapping.
 
             // ── Non-www → www canonicalization (handled at DNS/Vercel level,
             //    but this catches any direct hits) ──────────────────────────
