@@ -97,6 +97,7 @@ import {
 import { noMatchGraceToolResult, type GraceToolResult } from "@/lib/graceToolResults";
 import { searchCatalogServer } from "@/lib/catalogServer";
 import { buildPolicyToolResult } from "@/lib/grace/policyCorpus";
+import { GRACE_ONLINE_PRICING_RULE, forGraceModel, withGraceOnlinePricing } from "@/lib/grace/onlinePricing";
 import type { GraceRefineState } from "@/lib/grace/refineState";
 import type { GraceOpenAIToolName } from "@/lib/knowledge/toolSchemas";
 
@@ -311,7 +312,9 @@ export async function executeGraceServerTool({
                         warnings: ["Never claim an exact size, SKU, price, stock status, or compatibility unless a tool result returned it."],
                     });
                 } else {
-                    const slim = rows.map((p) => ({
+                    // Prices leave as onlineUnitPrice + quoteOnlyVolumeRates (onlinePricing.ts):
+                    // the 12+ column is a quote rate, never an online price.
+                    const slim = rows.map((p) => withGraceOnlinePricing({
                         graceSku: p.graceSku,
                         websiteSku: p.websiteSku,
                         itemName: p.itemName,
@@ -407,7 +410,8 @@ export async function executeGraceServerTool({
                         components: Record<string, unknown>;
                     };
                     result = {
-                        bottle: {
+                        pricingRule: GRACE_ONLINE_PRICING_RULE,
+                        bottle: withGraceOnlinePricing({
                             graceSku: d.bottle.graceSku,
                             websiteSku: d.bottle.websiteSku,
                             itemName: d.bottle.itemName,
@@ -420,14 +424,19 @@ export async function executeGraceServerTool({
                             applicator: d.bottle.applicator,
                             capColor: d.bottle.capColor,
                             capStyle: d.bottle.capStyle,
-                            webPrice1pc: d.bottle.webPrice1pc,
-                            webPrice10pc: d.bottle.webPrice10pc,
-                            webPrice12pc: d.bottle.webPrice12pc,
+                            webPrice1pc: d.bottle.webPrice1pc as number | null,
+                            webPrice10pc: d.bottle.webPrice10pc as number | null,
+                            webPrice12pc: d.bottle.webPrice12pc as number | null,
                             stockStatus: d.bottle.stockStatus,
-                        },
+                        }),
                         componentTypes: d.componentTypes,
                         totalComponents: d.totalComponents,
-                        components: d.components,
+                        components: Object.fromEntries(Object.entries(d.components).map(([type, items]) => [
+                            type,
+                            Array.isArray(items)
+                                ? items.map((item) => withGraceOnlinePricing(item as Record<string, unknown> & { webPrice1pc?: number | null }))
+                                : items,
+                        ])),
                     };
                 } else {
                     result = data;
@@ -498,8 +507,9 @@ export async function executeGraceServerTool({
                         }
                         : null;
                 } else {
-                    result = {
+                    const product = withGraceOnlinePricing({
                         found: true,
+                        pricingRule: GRACE_ONLINE_PRICING_RULE,
                         graceSku: data.graceSku,
                         websiteSku: data.websiteSku,
                         itemName: data.itemName,
@@ -512,13 +522,12 @@ export async function executeGraceServerTool({
                         applicator: data.applicator,
                         capColor: data.capColor,
                         neckThreadSize: data.neckThreadSize,
+                        // The full quantity-break ladder (priceTiers) leaves as
+                        // quoteOnlyVolumeRates: rates a quote confirms, never
+                        // billed online. Online checkout bills onlineUnitPrice.
                         webPrice1pc: data.webPrice1pc,
                         webPrice10pc: data.webPrice10pc,
                         webPrice12pc: data.webPrice12pc,
-                        // Full quantity-break ladder mirrored from bestbottles.com
-                        // (minQty / unitPrice / totalPrice). This is the ONLY tool
-                        // payload carrying tiers past the second break — quantity
-                        // quotes above 12 pcs must come from here, never estimated.
                         priceTiers: data.priceTiers ?? null,
                         stockStatus: data.stockStatus,
                         // PDP slug so Grace can navigate straight to this product.
@@ -531,7 +540,10 @@ export async function executeGraceServerTool({
                         heightWithoutCap: data.heightWithoutCap ?? null,
                         diameter: data.diameter ?? null,
                         measurementSource: data.measurementSource ?? null,
-                    };
+                    });
+                    // The agent reads the row as JSON: it gets onlineUnitPrice only, no
+                    // webPrice1pc beside it. Cards keep webPrice1pc for cart staging.
+                    result = isAgentLookup ? forGraceModel(product) : product;
                 }
                 break;
             }
@@ -803,7 +815,8 @@ export async function executeGraceServerTool({
                     tagline: overview && typeof overview === "object" && "graceHint" in overview
                         ? String((overview as { graceHint?: string }).graceHint ?? "")
                         : "",
-                    variants,
+                    pricingRule: GRACE_ONLINE_PRICING_RULE,
+                    variants: variants.map((variant) => withGraceOnlinePricing(variant)),
                     defaultGraceSku: variants[0]?.graceSku,
                     threadSizes: overview && typeof overview === "object" && "threadSizes" in overview
                         ? ((overview as { threadSizes?: string[] }).threadSizes ?? [])
@@ -853,7 +866,7 @@ export async function executeGraceServerTool({
                 );
                 result = fetched
                     .filter((p): p is NonNullable<typeof p> => !!p)
-                    .map((p) => ({
+                    .map((p) => withGraceOnlinePricing({
                         graceSku: p.graceSku,
                         websiteSku: p.websiteSku,
                         itemName: p.itemName,
@@ -868,6 +881,7 @@ export async function executeGraceServerTool({
                         webPrice1pc: p.webPrice1pc,
                         webPrice10pc: p.webPrice10pc,
                         webPrice12pc: p.webPrice12pc,
+                        priceTiers: p.priceTiers ?? null,
                         stockStatus: p.stockStatus,
                         heroImageUrl: p.imageUrl ?? null,
                         heightMm: null,

@@ -114,6 +114,10 @@ describe("focused PDP purchase panel", () => {
         expect(pdp).toContain("Price / unit");
         expect(pdp).toContain("formatVolumeQtyRange");
         expect(pdp).toContain("pdp-volume-case-shortcut");
+        // The case shortcut totals at what the cart charges, not the quote rate.
+        expect(pdp).toContain("resolveChargedUnitPrice(caseQty, {");
+        expect(pdp).toContain("formatPrice(caseUnit * caseQty)");
+        expect(pdp).not.toContain("quotedCaseUnit");
     });
 
     it("builds primary glass choices from same-application groups rather than cross-application siblings", () => {

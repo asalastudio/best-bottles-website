@@ -30,8 +30,15 @@ const ROWS: SpecRow[] = [
     { key: "Applicator", accessor: (p) => p.applicator ?? "—" },
     { key: "Neck thread", accessor: (p) => p.neckThreadSize ?? "—" },
     { key: "Family", accessor: (p) => p.family ?? "—" },
-    { key: "Price (1pc)", accessor: (p) => (p.webPrice1pc != null ? `$${p.webPrice1pc.toFixed(2)}` : "—") },
-    { key: "Price (12pc)", accessor: (p) => (p.webPrice12pc != null ? `$${p.webPrice12pc.toFixed(2)}` : "—") },
+    // Online checkout bills the 1–11 rate at every quantity; volume rates are quoted (Jordan, 2026-10-17).
+    { key: "Online price", accessor: (p) => {
+        const online = p.onlineUnitPrice ?? p.webPrice1pc;
+        return online != null ? `$${online.toFixed(2)} each` : "—";
+    } },
+    { key: "Volume (quote)", accessor: (p) => {
+        const rate = p.quoteOnlyVolumeRates?.[0];
+        return rate ? `from $${rate.quotedUnitPrice.toFixed(2)} at ${rate.fromQty.toLocaleString("en-US")}+` : "—";
+    } },
 ];
 
 export default function PatternF_DeepCompare({ payload, onAddToShortlist }: PatternFDeepCompareProps) {

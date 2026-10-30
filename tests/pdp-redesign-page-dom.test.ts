@@ -204,6 +204,28 @@ describe("redesigned product page", () => {
         expect(container.querySelector('[data-testid="pdp-order-lines"]')).toBeNull();
     });
 
+    it("totals 12+ at the rate the cart bills: the 1–11 rate, with the break marked on quote", async () => {
+        await mount();
+        // The metal roller with dotted cap carries the 0.85 / 12+ 0.81 / 144+ 0.77 ladder.
+        await click('[data-testid="pdp-roller-toggle"] [data-roller="metal"]');
+        expect(text('[data-testid="pdp-item-name"]')).toBe("GBCylBlu9MtlRollBlkDot");
+        await click('[data-testid="pdp-pack-toggle"]');
+        const menu = text('[data-testid="pdp-pack-menu"]') ?? "";
+        expect(menu).toContain("$0.81/set on quote");
+        expect(menu).not.toContain("$0.85/set on quote");
+        await click('[data-testid="pdp-pack-menu"] [data-tier-min="144"]');
+        expect(text('[data-testid="pdp-pack-toggle"]')).toContain("$0.77/set on quote");
+        // 144 × $0.85 = $122.40 is what checkout bills; 144 × $0.77 = $110.88 is a quote.
+        expect(text('[data-testid="pdp-add"]')).toBe("Add to cart · $122.40");
+        expect(text('[data-testid="pdp-sticky-bar"]')).toContain("144 × $0.85");
+        expect(text('[data-testid="pdp-sticky-bar"]')).toContain("$122.40");
+        expect(container.textContent).not.toContain("$110.88");
+        await click('[data-testid="pdp-add"]');
+        expect(cart.items[0]).toMatchObject({ graceSku: "GB-CYL-BLU-9ML-MRL-BKDT", quantity: 144, unitPrice: 0.85 });
+        expect(text('[data-testid="pdp-order-line"]')).toContain("$122.40");
+        expect(text('[data-testid="pdp-order-lines"]')).not.toContain("$110.88");
+    });
+
     it("navigates to the sibling glass with the picks carried and opens Grace from the fitment button", async () => {
         await mount();
         await click('[data-testid="pdp-glass-lineup"] [data-glass-slug="cylinder-9ml-amber-17-415-rollon"]');

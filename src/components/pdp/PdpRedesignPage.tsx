@@ -34,7 +34,7 @@ import type { ItemDescription } from "@/lib/products/item-description/resolve";
 import { getMaterialSwatchBackground, getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { pdpFallbackMedia } from "@/lib/products/pdp-redesign/fallback-media";
 import { SITE_NAME } from "@/lib/seo";
-import { formatVolumeQtyRange, resolveQuotedUnitPrice } from "@/lib/volumePricing";
+import { formatVolumeQtyRange } from "@/lib/volumePricing";
 import {
     buildYourBottleHref,
     callouts as buildCallouts,
@@ -58,7 +58,7 @@ import {
     statusLine,
     techSheetRows,
     tiersFor,
-    unitPriceAt,
+    chargedUnitPriceAt,
     type CollectionBand,
     type PdpGroup,
     type Picks,
@@ -288,7 +288,9 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
 
     // ── pricing and purchase ──────────────────────────────────────────────
     const tiers = useMemo(() => tiersFor(selected), [selected]);
-    const unitPrice = unitPriceAt(selected, qty);
+    // Every total on the page is what the cart will charge: the 1–11 rate at any
+    // quantity while 12+ rates are quoted. The Set of menu still lists the breaks.
+    const unitPrice = chargedUnitPriceAt(selected, qty);
     const lineTotal = unitPrice != null ? unitPrice * qty : null;
     const status = statusLine(selected);
     const checkoutReady = selected ? isCheckoutReady({
@@ -341,7 +343,8 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     const orderLines = useMemo<OrderLineView[]>(() => cartItems
         .filter((item) => item.productGroupSlug && pageSlugs.has(item.productGroupSlug))
         .map((item) => {
-            const rate = resolveQuotedUnitPrice(item.quantity, item) ?? item.unitPrice ?? 0;
+            // The cart's own line price (CartProvider sets it from resolveChargedUnitPrice), so these totals are the cart's.
+            const rate = item.unitPrice ?? 0;
             const roller = rollers.find((option) => option.id === rollerIdFor(item.applicator)) ?? null;
             const label = lineLabel(glassShortLabel(item.color), roller, roller ? null : fitmentLabel({ applicator: item.applicator ?? null } as ProductVariant), item.capColor ?? null);
             return {
