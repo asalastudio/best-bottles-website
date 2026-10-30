@@ -8,19 +8,31 @@
 import type { Metadata } from "next";
 
 export const PRODUCTION_SITE_URL = "https://www.bestbottles.com";
-// Pre-cutover, the Vercel staging URL is acting as production. Allow it
-// alongside the canonical domain until DNS, Sanity CORS, and Clerk allowed
-// origins are switched over to www.bestbottles.com.
-const STAGING_SITE_URL = "https://best-bottles-website.vercel.app";
-const ALLOWED_PRODUCTION_SITE_URLS = new Set<string>([PRODUCTION_SITE_URL, STAGING_SITE_URL]);
+
+export function isVercelAppHost(hostOrUrl: string | null | undefined): boolean {
+  if (!hostOrUrl) return false;
+  const trimmed = hostOrUrl.trim();
+  if (!trimmed) return false;
+  try {
+    const hostname = trimmed.includes("://")
+      ? new URL(trimmed).hostname
+      : (trimmed.split(",")[0]?.trim().split("/")[0]?.split(":")[0] ?? "");
+    return hostname.toLowerCase().endsWith(".vercel.app");
+  } catch {
+    return false;
+  }
+}
 
 const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/+$/, "");
 
-export const SITE_URL = configuredSiteUrl || PRODUCTION_SITE_URL;
+export const SITE_URL =
+  configuredSiteUrl && !isVercelAppHost(configuredSiteUrl)
+    ? configuredSiteUrl
+    : PRODUCTION_SITE_URL;
 
-if (process.env.VERCEL_ENV === "production" && !ALLOWED_PRODUCTION_SITE_URLS.has(SITE_URL)) {
+if (process.env.VERCEL_ENV === "production" && SITE_URL !== PRODUCTION_SITE_URL) {
   throw new Error(
-    `NEXT_PUBLIC_SITE_URL must be https://www.bestbottles.com (or the staging URL during pre-cutover) for production builds. Received: ${SITE_URL}`,
+    `NEXT_PUBLIC_SITE_URL must be https://www.bestbottles.com for production builds. Received: ${SITE_URL}`,
   );
 }
 export const SITE_NAME = "Best Bottles";
@@ -40,6 +52,22 @@ export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-default.png`;
 export const DEFAULT_ROBOTS = {
   googleBot: { "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 },
 } as const satisfies Metadata["robots"];
+
+export const VERCEL_APP_ROBOTS = {
+  index: false,
+  follow: false,
+  googleBot: {
+    index: false,
+    follow: false,
+    "max-video-preview": -1,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+  },
+} as const satisfies Metadata["robots"];
+
+export function robotsForHost(host: string | null | undefined): Metadata["robots"] {
+  return isVercelAppHost(host) ? VERCEL_APP_ROBOTS : DEFAULT_ROBOTS;
+}
 
 // ─── Structured Data Builders ────────────────────────────────────────────────
 

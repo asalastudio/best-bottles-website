@@ -6,7 +6,7 @@ import { resolveRobots as resolveRobotsMeta } from "next/dist/lib/metadata/resol
 import { NAMED_CRAWLERS, PRIVATE_PATH_PREFIXES, buildRobots, isPrivatePath } from "@/lib/crawl/robots";
 import { NOT_IN_SITEMAP, SITEMAP_PAGES, buildPageSitemap, sitemapProductSlugs } from "@/lib/crawl/sitemap";
 import { productPageRobots } from "@/lib/products/pdp-robots";
-import { DEFAULT_ROBOTS } from "@/lib/seo";
+import { DEFAULT_ROBOTS, PRODUCTION_SITE_URL, isVercelAppHost, robotsForHost } from "@/lib/seo";
 
 const ORIGIN = "https://www.bestbottles.com";
 
@@ -93,35 +93,61 @@ describe("robots.txt", () => {
         }
     });
 
-    it("names the same origin as the canonical links for Host and both sitemaps", () => {
-        const preCutover = serializeRobotsTxt(buildRobots("https://best-bottles-website.vercel.app/"));
-        expect(preCutover).toContain("Host: https://best-bottles-website.vercel.app\n");
-        expect(preCutover).toContain("Sitemap: https://best-bottles-website.vercel.app/sitemap.xml\n");
-        expect(preCutover).toContain("Sitemap: https://best-bottles-website.vercel.app/server-sitemap.xml\n");
-        expect(preCutover).not.toContain("bestbottles.com");
+    it("names the same origin as the canonical links for Host and both sitemaps on bestbottles.com", () => {
+        const canonical = serializeRobotsTxt(buildRobots(`${ORIGIN}/`, "www.bestbottles.com"));
+        expect(canonical).toContain("Host: https://www.bestbottles.com\n");
+        expect(canonical).toContain("Sitemap: https://www.bestbottles.com/sitemap.xml\n");
+        expect(canonical).toContain("Sitemap: https://www.bestbottles.com/server-sitemap.xml\n");
+    });
+
+    it("disallows all crawling when requested on a *.vercel.app host", () => {
+        for (const host of [
+            "best-bottles-website.vercel.app",
+            "best-bottles-website-git-preview-asala.vercel.app",
+            "preview.vercel.app:443",
+        ]) {
+            const vercelRobots = serializeRobotsTxt(buildRobots(ORIGIN, host));
+            expect(vercelRobots.trim(), host).toBe("User-Agent: *\nDisallow: /");
+            expect(isAllowed(vercelRobots, "Googlebot", "/"), host).toBe(false);
+            expect(isAllowed(vercelRobots, "*", "/catalog"), host).toBe(false);
+        }
     });
 });
 
 describe("robots.txt and sitemap routes follow SITE_URL", () => {
     afterEach(() => {
         vi.unstubAllEnvs();
+        vi.doUnmock("next/headers");
         vi.resetModules();
     });
 
-    it("use NEXT_PUBLIC_SITE_URL, the origin layout.tsx gives metadataBase", async () => {
+    it("always resolve SITE_URL to bestbottles.com even if NEXT_PUBLIC_SITE_URL is unset or points at *.vercel.app", async () => {
         vi.stubEnv("NEXT_PUBLIC_SITE_URL", "https://best-bottles-website.vercel.app");
+        vi.doMock("next/headers", () => ({
+            headers: async () => new Headers({ host: "www.bestbottles.com" }),
+        }));
         vi.resetModules();
         const [{ SITE_URL }, { default: robots }, { default: sitemap }] = await Promise.all([
             import("@/lib/seo"),
             import("@/app/robots"),
             import("@/app/sitemap"),
         ]);
-        expect(SITE_URL).toBe("https://best-bottles-website.vercel.app");
-        const rules = robots();
-        expect(rules.host).toBe(SITE_URL);
-        expect([rules.sitemap].flat().every((url) => url?.startsWith(`${SITE_URL}/`))).toBe(true);
-        expect(sitemap().every((entry) => entry.url.startsWith(SITE_URL))).toBe(true);
+        expect(SITE_URL).toBe(PRODUCTION_SITE_URL);
+        const rules = await robots();
+        expect(rules.host).toBe(PRODUCTION_SITE_URL);
+        expect([rules.sitemap].flat().every((url) => url?.startsWith(`${PRODUCTION_SITE_URL}/`))).toBe(true);
+        expect(sitemap().every((entry) => entry.url.startsWith(PRODUCTION_SITE_URL))).toBe(true);
         expect(readFileSync("src/app/layout.tsx", "utf8")).toContain("metadataBase: new URL(SITE_URL)");
+    });
+
+    it("returns Disallow: / from /robots.txt when the request host is *.vercel.app", async () => {
+        vi.doMock("next/headers", () => ({
+            headers: async () => new Headers({ "x-forwarded-host": "best-bottles-website.vercel.app" }),
+        }));
+        vi.resetModules();
+        const { default: robots } = await import("@/app/robots");
+        const rules = await robots();
+        expect(serializeRobotsTxt(rules).trim()).toBe("User-Agent: *\nDisallow: /");
     });
 
     it("are served by the app, not stale files in public/", () => {
@@ -251,5 +277,25 @@ describe("robots meta tags", () => {
         expect(resolveRobotsMeta(productPageRobots({ variants: [] }).robots)).toEqual({ basic: "noindex, follow", googleBot: null });
         expect(productPageRobots({ variants: [{}] })).toEqual({});
         expect(productPageRobots(null)).toEqual({});
+    });
+
+    it("emits noindex, nofollow meta and X-Robots-Tag header on *.vercel.app hosts while keeping bestbottles.com indexable", () => {
+        expect(isVercelAppHost("best-bottles-website.vercel.app")).toBe(true);
+        expect(isVercelAppHost("https://preview-abc.vercel.app/catalog")).toBe(true);
+        expect(isVercelAppHost("www.bestbottles.com")).toBe(false);
+        expect(isVercelAppHost("bestbottles.com")).toBe(false);
+
+        const vercelResolved = resolveRobotsMeta(robotsForHost("best-bottles-website.vercel.app"));
+        expect(vercelResolved?.basic).toBe("noindex, nofollow");
+        expect(vercelResolved?.googleBot).toContain("noindex, nofollow");
+
+        const prodResolved = resolveRobotsMeta(robotsForHost("www.bestbottles.com"));
+        expect(prodResolved?.basic).toBeFalsy();
+        expect(prodResolved?.googleBot).not.toMatch(/\bnoindex\b/);
+
+        const nextConfigSource = readFileSync("next.config.ts", "utf8");
+        expect(nextConfigSource).toContain("X-Robots-Tag");
+        expect(nextConfigSource).toContain("noindex, nofollow");
+        expect(nextConfigSource).toContain(".*\\\\.vercel\\\\.app");
     });
 });
