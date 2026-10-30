@@ -15,6 +15,7 @@ import GraceChatDrawer from "@/components/grace/GraceChatDrawer";
 import GraceLauncher from "@/components/grace/GraceLauncher";
 import GraceLayoutShell from "@/components/grace/GraceLayoutShell";
 import { AnalyticsProvider } from "@/components/AnalyticsProvider";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { CLERK_ENABLED } from "@/lib/clerk";
 import { clerkAppearance } from "@/lib/clerkAppearance";
 
@@ -61,6 +62,7 @@ function ProviderContent({
                     </GraceProvider>
                 </Suspense>
                 <AnalyticsProvider withClerk={withClerk} />
+                <GoogleAnalytics />
             </CartProvider>
         </ConvexClientProvider>
         </RegionProvider>
