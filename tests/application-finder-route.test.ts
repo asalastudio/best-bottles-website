@@ -4,6 +4,7 @@ import { act, createElement, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { renderToStaticMarkup } from "react-dom/server";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+vi.mock("server-only", () => ({}));
 import type { CatalogSearchResultShape } from "@/lib/catalogSearchFallback";
 import type { CatalogSearchArgs } from "@/lib/catalogServer";
 import { HOME_APPLICATION_LINKS } from "@/lib/homepageMerchandising";

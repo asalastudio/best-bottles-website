@@ -93,7 +93,11 @@ export function registerVintagePreview(
     reference?: BuilderConfiguration,
 ) {
     const canonical = canonicalBody(config);
-    if (canonical) {
+    // This photographed replacement belongs to legacy kit coordinates. Register
+    // plates already carry measured body/neck seating; scaling their hardware
+    // onto the legacy Empire photo raises the ferrule above its neck.
+    const sourceKit = config.kit ?? config.previewKit ?? config.chooserKit;
+    if (canonical && !sourceKit?.register) {
         const own = parts.find(part => part.slot === "body");
         if (!own || (config.kit ?? config.previewKit ?? config.chooserKit)?.completeness !== "full") return null;
         const fixed = canonical.part as BuilderPart;

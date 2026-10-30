@@ -1,0 +1,86 @@
+[
+  {
+    "componentId": "CMP-SPR-BLK-18-415-02",
+    "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-BLK-18-415-02/sprayer-8c0a1fc75690da707d6ca5a89cc820b9124ff5af2535eb1fa0e37b1811367505.png",
+    "sourceWidth": 1628,
+    "sourceHeight": 1800,
+    "url": "/local-media/tassel-silver/black-9a026273bc858d927de00688f008ee868a95750383127962f327639f8ae2e546.png",
+    "sha256": "9a026273bc858d927de00688f008ee868a95750383127962f327639f8ae2e546",
+    "bytes": 1066898,
+    "crop": {
+      "left": 0,
+      "top": 86,
+      "width": 1628,
+      "height": 1800
+    },
+    "sourceSha256": "991bfc71b3faa6006abadba9574aad19899b2bc324bafe94cdf340716d2f7f85",
+    "anchor": {
+      "x": 1483.5,
+      "y": 308
+    },
+    "pxPerMm": 12.8025
+  },
+  {
+    "componentId": "CMP-SPR-RED-18-415-02",
+    "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-RED-18-415-02/sprayer-de03bde7cdcbb3b85f17572ad955744fb6a518ca3a26f782e005b5f97e77b302.png",
+    "sourceWidth": 1628,
+    "sourceHeight": 1706,
+    "url": "/local-media/tassel-silver/red-f299038b3c102215de23400399462bf7c2011caae60218cfe8318db9660d492c.png",
+    "sha256": "f299038b3c102215de23400399462bf7c2011caae60218cfe8318db9660d492c",
+    "bytes": 1785920,
+    "crop": {
+      "left": 0,
+      "top": 100,
+      "width": 1628,
+      "height": 1706
+    },
+    "sourceSha256": "4e6f32623c9a2e348db55ebdbbdb26fb4cde1c5c08e6ce6c5fdc8c2994863358",
+    "anchor": {
+      "x": 1483.5,
+      "y": 308
+    },
+    "pxPerMm": 12.8025
+  },
+  {
+    "componentId": "CMP-SPR-WHT-18-415-02",
+    "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-WHT-18-415-02/sprayer-b56c72b9bf1522d31333604bdf49703812bff10f9a53b21453da8a8b41ff438d.png",
+    "sourceWidth": 1628,
+    "sourceHeight": 1737,
+    "url": "/local-media/tassel-silver/white-47681659e9e5b0ec415f36d68fe1f349a97aa55d8488c758668df645205de68e.png",
+    "sha256": "47681659e9e5b0ec415f36d68fe1f349a97aa55d8488c758668df645205de68e",
+    "bytes": 1439954,
+    "crop": {
+      "left": 0,
+      "top": 100,
+      "width": 1628,
+      "height": 1737
+    },
+    "sourceSha256": "22889effc9c30b697bf2998de4a98b75201f3c52af8d14fffba916740aa1ad06",
+    "anchor": {
+      "x": 1483.5,
+      "y": 308
+    },
+    "pxPerMm": 12.8025
+  },
+  {
+    "componentId": "CMP-SPR-IVSL-18-415-02",
+    "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-IVSL-18-415-02/sprayer-65295d990e4ec3833f3c24a9c153b765fcae099643486058ef07215b7f38df4d.png",
+    "sourceWidth": 1628,
+    "sourceHeight": 1723,
+    "url": "/local-media/tassel-silver/ivory-silver-d1cf66acdda1a2b85aa9c4618fad14d54ab28dcfebaee5bffd9dd4a911f6691d.png",
+    "sha256": "d1cf66acdda1a2b85aa9c4618fad14d54ab28dcfebaee5bffd9dd4a911f6691d",
+    "bytes": 1738065,
+    "crop": {
+      "left": 0,
+      "top": 100,
+      "width": 1628,
+      "height": 1723
+    },
+    "sourceSha256": "e4e362f7bc4fb1c0f765c7b12739cc284f4027c02d0f38a4e44896167c2e43ed",
+    "anchor": {
+      "x": 1483.5,
+      "y": 308
+    },
+    "pxPerMm": 12.8025
+  }
+]

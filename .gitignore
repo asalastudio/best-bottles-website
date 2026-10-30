@@ -266,3 +266,6 @@ data/descriptions/pdp/catalog-facts.json
 
 # Dip tube cuts from catalogue heroes: fits, warps and cuts (scripts/register/tubes/cut_heroes.py)
 /output/register-tubes/
+
+# Explicitly enabled local catalogue replay; never release a review snapshot.
+/output/local-media-baseline/

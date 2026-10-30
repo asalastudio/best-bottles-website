@@ -1,0 +1,242 @@
+[
+  {
+    "key": "square-15ml-13-415|Clear|spray",
+    "expectedPlate": {
+      "anchors": {
+        "axisX": 613,
+        "baselineY": 2096,
+        "seatY": 140,
+        "shoulderY": 533
+      },
+      "approved": true,
+      "bodyId": "square-15ml-13-415",
+      "glass": "Clear",
+      "height": 2192,
+      "plateKey": "square-15ml-13-415|Clear",
+      "pxPerMm": 35.9342,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/square-15ml-13-415/clear/b17dc553b7d483fcd46fbf342f4df644f7615503bc08d00c32506d0109ee4da3.png",
+      "width": 1264
+    },
+    "url": "/local-media/source-tubes/square15-spray.0604326db996.png",
+    "sha256": "0604326db996f823677981c19a959b464e0d5a42c73ab46dcea733adf13f4fb6",
+    "width": 62,
+    "height": 454,
+    "scale": 3.1548387096774193,
+    "x": 527.8193548387097,
+    "y": 405.0064516129032,
+    "source": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/12. Square 15ml/1. Square 15ml (Uncapped) PSD /7. GBSqr15SpryGlMatt.psd",
+    "sourceSha256": "d1773b99062bc967c8282c18e70aae43e916a4ecb698dc428d3f071fcf9a735d",
+    "layerIndex": 2,
+    "layerName": "Layer 13",
+    "sourceBodyBounds": [
+      157,
+      253,
+      483,
+      873
+    ],
+    "sourceTubeBounds": [
+      293,
+      337,
+      355,
+      791
+    ],
+    "registration": "Uniform source-body seat-to-foot mapping; source tube pixels unmodified. Pending assembly visual approval.",
+    "visuallyApproved": false
+  },
+  {
+    "componentIds": [
+      "CMP-LPM-MSLV-18-415-02",
+      "CMP-LPM-CPR-18-415",
+      "CMP-LPM-MGLD-18-415",
+      "CMP-LPM-MSLV-18-415-01",
+      "CMP-LPM-SBLK-18-415",
+      "CMP-LPM-SGLD-18-415",
+      "CMP-LPM-SSLV-18-415"
+    ],
+    "expectedPumpLayers": {
+      "CMP-LPM-MSLV-18-415-02": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-02/pump-c4e70e2d9fcd9d18fd74b384607f1faed235200eafc355f70caf5f83ba538bc9.png",
+        "width": 565,
+        "height": 981,
+        "pxPerMm": 23.0964,
+        "anchor": {
+          "x": 283.5,
+          "y": 552.8
+        }
+      },
+      "CMP-LPM-CPR-18-415": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-CPR-18-415/pump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png",
+        "width": 228,
+        "height": 400,
+        "pxPerMm": 8.786,
+        "anchor": {
+          "x": 113,
+          "y": 236.2
+        }
+      },
+      "CMP-LPM-MGLD-18-415": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MGLD-18-415/pump-39b24dee49ed593591bcc637bcd69b518e1f5d316ae537739782b91f956423bc.png",
+        "width": 236,
+        "height": 400,
+        "pxPerMm": 8.8222,
+        "anchor": {
+          "x": 118.2,
+          "y": 242.1
+        }
+      },
+      "CMP-LPM-MSLV-18-415-01": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-01/pump-0cc427bbd8ed00ae446a8a4e5fec65e8a3f68476b7f4cf11c6398f51825987bb.png",
+        "width": 552,
+        "height": 995,
+        "pxPerMm": 23.1664,
+        "anchor": {
+          "x": 278.5,
+          "y": 570.7
+        }
+      },
+      "CMP-LPM-SBLK-18-415": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SBLK-18-415/pump-7fd1cfbea3ed6283b4937b6c0f9d3416bc379da9fabc13b1bc4d460e74d71176.png",
+        "width": 233,
+        "height": 400,
+        "pxPerMm": 9.1446,
+        "anchor": {
+          "x": 119,
+          "y": 228.6
+        }
+      },
+      "CMP-LPM-SGLD-18-415": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SGLD-18-415/pump-07155152afd69e8ef46c789f986353c6a4246c8dd0d9b47d32454294c1f0159b.png",
+        "width": 239,
+        "height": 400,
+        "pxPerMm": 9.4085,
+        "anchor": {
+          "x": 122,
+          "y": 227.9
+        }
+      },
+      "CMP-LPM-SSLV-18-415": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SSLV-18-415/pump-5ab4afef966a38362aa7e46a12c8f076a476dc3c005f0425521645c0c8b662c4.png",
+        "width": 231,
+        "height": 400,
+        "pxPerMm": 9.2722,
+        "anchor": {
+          "x": 115.5,
+          "y": 229.9
+        }
+      }
+    },
+    "key": "empire-50ml-18-415|Clear|lotion",
+    "expectedPlate": {
+      "anchors": {
+        "axisX": 519,
+        "baselineY": 2096,
+        "seatY": 147,
+        "shoulderY": 515
+      },
+      "approved": true,
+      "bodyId": "empire-50ml-18-415",
+      "glass": "Clear",
+      "height": 2192,
+      "plateKey": "empire-50ml-18-415|Clear",
+      "pxPerMm": 21.3272,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/empire-50ml-18-415/clear/d260dcd1fd95003ad6a9cb4398f5ef34f0b6ca2cdda79833daa9bb7b1f27d4aa.png",
+      "width": 1056
+    },
+    "url": "/local-media/source-tubes/empire50-lotion.b46b895205ac.png",
+    "sha256": "b46b895205ac7872e3a04ad69c7fc891cd2f3c87713faebf5bd54167f9d26a29",
+    "width": 111,
+    "height": 722,
+    "scale": 1.5370662460567823,
+    "x": 442.9152208201893,
+    "y": 510.17318336408306,
+    "source": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/14. LBEmp50LtnMtGl.psd",
+    "sourceSha256": "53dcc9551b2db261808001ee37330ddeeab2288ec36c6dcbf27d4aa6128894a2",
+    "layerIndex": 2,
+    "layerName": "Layer 15",
+    "sourceBodyBounds": [
+      62,
+      405,
+      593,
+      1673
+    ],
+    "sourceTubeBounds": [
+      214,
+      671,
+      383,
+      1759
+    ],
+    "sourceCrop": {
+      "left": 55,
+      "top": 6,
+      "width": 111,
+      "height": 722
+    },
+    "registration": "Uniform source body rim-to-foot scale. Original source tube head axis (PSD x318.5) aligns to plate axis; top visible alpha seated 2 stage pixels under the existing pump. Low-alpha raster tails and isolated two-pixel head-edge fleck excluded outside the continuous mechanism crop; retained RGBA pixels unchanged. Candidate pending assembly approval.",
+    "visuallyApproved": false
+  },
+  {
+    "expectedPumpLayers": {
+      "LIB-18-415-WhtPumpClOvrCp": {
+        "url": "/local-media/empire-white-pump/pump-25c3d0557906a8824e68ca309440d7cf3df382ab92a1c485f85bb19d26b4554c.png",
+        "width": 380,
+        "height": 602,
+        "pxPerMm": 13.2495,
+        "anchor": {
+          "x": 189,
+          "y": 382
+        }
+      }
+    },
+    "key": "empire-50ml-18-415|Clear|lotion",
+    "componentIds": [
+      "LIB-18-415-WhtPumpClOvrCp"
+    ],
+    "expectedPlate": {
+      "anchors": {
+        "axisX": 519,
+        "baselineY": 2096,
+        "seatY": 147,
+        "shoulderY": 515
+      },
+      "approved": true,
+      "bodyId": "empire-50ml-18-415",
+      "glass": "Clear",
+      "height": 2192,
+      "plateKey": "empire-50ml-18-415|Clear",
+      "pxPerMm": 21.3272,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/empire-50ml-18-415/clear/d260dcd1fd95003ad6a9cb4398f5ef34f0b6ca2cdda79833daa9bb7b1f27d4aa.png",
+      "width": 1056
+    },
+    "url": "/local-media/source-tubes/empire50-white-lotion.121928bb048d.png",
+    "sha256": "121928bb048d3a62ea8589b6c0c1c64e711a2575654bed3d5162f1d074995f79",
+    "width": 110,
+    "height": 786,
+    "scale": 1.5370662460567823,
+    "x": 443.68375394321765,
+    "y": 485.50267867429494,
+    "source": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/57. LBEmp50WhtClOvrCp.psd",
+    "sourceSha256": "d20000cd25f2ddba2b206aecdf1becb37c10d18166e167bf0da9f8167a9f8a0d",
+    "layerIndex": 2,
+    "layerName": "Layer 32",
+    "sourceBodyBounds": [
+      272,
+      439,
+      803,
+      1707
+    ],
+    "sourceTubeBounds": [
+      421,
+      705,
+      586,
+      1881
+    ],
+    "sourceCrop": {
+      "left": 55,
+      "top": 0,
+      "width": 110,
+      "height": 786
+    },
+    "registration": "Exact Empire white pump source tube, unchanged RGBA inside padded meaningful bounds; uniform source rim-to-foot scale. Head centered on original head axis and seated 2 stage pixels inside recovered white pump. Candidate pending review.",
+    "visuallyApproved": false
+  }
+]

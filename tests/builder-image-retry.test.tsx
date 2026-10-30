@@ -79,3 +79,56 @@ it("re-requests the photo fallback once when a configuration has no kit", () => 
     act(() => { second!.dispatchEvent(new Event("error")); });
     expect(el.textContent).toContain("Image unavailable");
 });
+
+it("lets a shopper recover a failed chooser image without resetting their bottle selection", () => {
+    const chooser = { ...config, kit: null, bodyImage: { url: "https://blob.example/body.png", width: 1000, height: 1100 } } as BuilderConfiguration;
+    act(() => root.render(<BuilderImage config={chooser} parts={[]} label="25 ml Cylinder" />));
+    act(() => { el.querySelector("img")!.dispatchEvent(new Event("error")); });
+    act(() => { el.querySelector("img")!.dispatchEvent(new Event("error")); });
+    expect(el.textContent).toContain("Image unavailable");
+    const retry = el.querySelector("button");
+    expect(retry?.textContent).toBe("Try again");
+    act(() => { retry!.dispatchEvent(new MouseEvent("click", { bubbles: true })); });
+    expect(el.querySelector("img")?.getAttribute("alt")).toBe("25 ml Cylinder");
+    expect(el.textContent).not.toContain("Image unavailable");
+});
+
+it("automatically recovers a failed tile once after a pause, without an endless retry loop", () => {
+    vi.useFakeTimers();
+    try {
+        const chooser = { ...config, kit: null, bodyImage: { url: "https://blob.example/body.png", width: 1000, height: 1100 } } as BuilderConfiguration;
+        act(() => root.render(<BuilderImage config={chooser} parts={[]} label="50 ml Cylinder" />));
+        const fail = () => act(() => { el.querySelector("img")!.dispatchEvent(new Event("error")); });
+        fail(); fail();
+        expect(el.textContent).toContain("Image unavailable");
+        act(() => vi.advanceTimersByTime(1500));
+        expect(el.querySelector("img")).toBeTruthy();
+        fail(); fail();
+        act(() => vi.advanceTimersByTime(15000));
+        expect(el.textContent).toContain("Image unavailable");
+        expect(el.querySelector("img")).toBeNull();
+    } finally { vi.useRealTimers(); }
+});
+
+it("recovers a failed tile when the network reconnects", () => {
+    const chooser = { ...config, kit: null, bodyImage: { url: "https://blob.example/body.png", width: 1000, height: 1100 } } as BuilderConfiguration;
+    act(() => root.render(<BuilderImage config={chooser} parts={[]} label="100 ml Cylinder" />));
+    act(() => { el.querySelector("img")!.dispatchEvent(new Event("error")); });
+    act(() => { el.querySelector("img")!.dispatchEvent(new Event("error")); });
+    expect(el.textContent).toContain("Image unavailable");
+    act(() => window.dispatchEvent(new Event("online")));
+    expect(el.querySelector("img")).toBeTruthy();
+});
+
+it("does not nest a retry button inside a selectable thumbnail", () => {
+    const choose = vi.fn();
+    const chooser = { ...config, kit: null, bodyImage: { url: "https://blob.example/body.png", width: 1000, height: 1100 } } as BuilderConfiguration;
+    act(() => root.render(<button onClick={choose}><BuilderImage config={chooser} parts={[]} label="25 ml Cylinder" thumbnail /></button>));
+    act(() => { el.querySelector("img")!.dispatchEvent(new Event("error")); });
+    act(() => { el.querySelector("img")!.dispatchEvent(new Event("error")); });
+    expect(el.textContent).toContain("Image unavailable");
+    expect(el.querySelectorAll("button")).toHaveLength(1);
+    act(() => window.dispatchEvent(new Event("online")));
+    expect(el.querySelector("img")).toBeTruthy();
+    expect(choose).not.toHaveBeenCalled();
+});

@@ -15,6 +15,8 @@ import cobaltRollerMedia from "./rollers-cobalt.generated.json";
 import { resolveChargedUnitPrice } from "@/lib/volumePricing";
 import type { PartBox, RegisterKitMeta } from "@/lib/register/stage-kit";
 import type { DetachedLook } from "@/lib/products/kit-frame";
+import { localEmpireBodyImage } from "@/lib/register/local-empire-bare-glass";
+import type { ThroughGlass } from '@/lib/register/through-glass';
 
 type MatrixRow = FunctionReturnType<typeof api.matrix.getFamilyRows>["rows"][number];
 export type CatalogRow = Omit<MatrixRow, "resolution"> & {
@@ -23,7 +25,7 @@ export type CatalogRow = Omit<MatrixRow, "resolution"> & {
 };
 type PublishedKit = NonNullable<FunctionReturnType<typeof api.productKits.forSku>>;
 /** A published kit layer (a full-canvas image), or a register part standing in its own box on the canvas (src/lib/register/stage-kit.ts). */
-export type BuilderPart = PublishedKit["parts"][number] & { box?: PartBox | null; componentId?: string | null; detached?: DetachedLook | null };
+export type BuilderPart = PublishedKit["parts"][number] & { box?: PartBox | null; componentId?: string | null; detached?: DetachedLook | null; throughGlass?: ThroughGlass };
 /** A published per-SKU kit, or one composed from the component register (`register` set): one plate per glass, shared component layers, one datum per body. */
 export type BuilderKit = Omit<PublishedKit, "parts"> & { parts: BuilderPart[]; register?: RegisterKitMeta | null };
 export type BuilderConfiguration = {
@@ -177,6 +179,8 @@ export function compatibleFinishComponent(row: CatalogRow) {
 }
 
 export function reviewedBodyImage(row: CatalogRow) {
+    const local = localEmpireBodyImage(row.family, row.capacityMl, row.color, row.neckThreadSize);
+    if (local) return local;
     const media = bodyMedia as Record<string, { url: string; width: number; height: number }>;
     // Distinct moulds of one family and capacity (Footed vs Tall Rectangle 10 ml)
     // carry their own reviewed body, keyed by the group profile; the family key

@@ -14,13 +14,13 @@ Reads output/register-tubes/ (cut_heroes.py). Writes public/images/register/tube
 and src/lib/register/hero-tubes.json (each layer's size and top-left on its plate, plate px). A frosted glass also gets
 an EXPLODED layer: lifted out of the glass, its tube is the clear bottle's clear tube.
 """
-import hashlib
 import json
 import sys
 from pathlib import Path
 
 import numpy as np
 from PIL import Image, ImageFilter
+from export_safety import TubeExportBatch
 
 ROOT = Path(__file__).resolve().parents[3]
 CUTS = ROOT / "output" / "register-tubes"
@@ -257,20 +257,9 @@ def clean_tube(im, px_per_mm):
     return out[:end + 1]
 
 
-def publish(im, bbox, slug):
-    png = Image.fromarray(im.clip(0, 255).astype(np.uint8), "RGBA")
-    tmp = PUBLIC / f"{slug}.png"
-    png.save(tmp, optimize=True)
-    final = PUBLIC / f"{slug}.{hashlib.sha256(tmp.read_bytes()).hexdigest()[:12]}.png"
-    tmp.rename(final)
-    return {"url": "/" + str(final.relative_to(ROOT / "public")), "width": png.width, "height": png.height, "x": bbox[0], "y": bbox[1]}
-
-
 def main():
     cuts = json.loads((CUTS / "cuts.json").read_text())
-    PUBLIC.mkdir(parents=True, exist_ok=True)
-    for old in PUBLIC.glob("*.png"):
-        old.unlink()
+    batch = TubeExportBatch(PUBLIC, ROOT / "public")
     tubes, missing = {}, []
     # Every frosted glass takes each family its clear bottle has, even where the frosted SKUs had no hero or their old
     # shared tube showed through the frosted glass (the bulb sprayers): one look per bottle.
@@ -299,7 +288,7 @@ def main():
             how, src = choice
             im, bbox = placed(cuts, src, pk)
             im = tidy(im, PLATES[pk]["pxPerMm"])
-            entry["seated"] = publish(frost(im, PLATES[pk]["pxPerMm"]) if how == "clear" else im, bbox, slug)
+            entry["seated"] = batch.prepare(frost(im, PLATES[pk]["pxPerMm"]) if how == "clear" else im, bbox, slug)
             entry.update({"from": how, "hero": cuts[src]["hero"], "fit": cuts[src]["fit"]["score"]})
         # EXPLODED lifts the tube out of the glass: out of frosted glass it is the clear bottle's clear tube, out of
         # ribbed or faceted glass a clean tube of the same mechanism.
@@ -317,18 +306,21 @@ def main():
         if lifted:
             im_l, bbox_l = lifted
             clean = clean_tube(tidy(im_l, PLATES[pk]["pxPerMm"]), PLATES[pk]["pxPerMm"])
-            entry["exploded"] = publish(clean, [bbox_l[0], bbox_l[1], clean.shape[1], clean.shape[0]], slug + "-exploded")
+            entry["exploded"] = batch.prepare(clean, [bbox_l[0], bbox_l[1], clean.shape[1], clean.shape[0]], slug + "-exploded", exploded=True)
         if not entry["seated"] and not entry["exploded"]:
             missing.append(slot)
             continue
         tubes[slot] = entry
-    MANIFEST.write_text(json.dumps({
+    batch.write()
+    manifest_temp = MANIFEST.with_suffix('.json.tmp')
+    manifest_temp.write_text(json.dumps({
         "_doc": "Dip tube + pump shaft layers cut from the released catalogue heroes (scripts/register/tubes/). Key: plateKey|family "
                 "(bulb, tassel, spray, lotion). seated: the tube in the glass (SIDECAR, CAP ON), the hero's own pixels; exploded: the "
                 "tube lifted out with its actuator (EXPLODED), the same cut cleaned to stand alone (the clear bottle's for frosted "
                 "glass, a plain glass's for ribbed or faceted glass). x, y: the layer's top-left on its plate, plate px; it draws at the plate's own scale. "
                 "from: own = this slot's hero; bulb/tassel = the twin bulb sprayer's; clear = the clear bottle's, frosted.",
         "tubes": tubes}, indent=1) + "\n")
+    manifest_temp.replace(MANIFEST)
     print(f"{len(tubes)} slots -> {MANIFEST.relative_to(ROOT)}; {sum(1 for t in tubes.values() if t['exploded'])} with an EXPLODED layer "
           f"of their own; {len(missing)} without: {', '.join(missing)}")
 

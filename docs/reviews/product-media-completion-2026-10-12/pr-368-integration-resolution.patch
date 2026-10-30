@@ -1,0 +1,80 @@
+--- a/src/components/pdp/PdpStage.tsx
++++ b/src/components/pdp/PdpStage.tsx
+@@ -322,7 +322,12 @@
+                                                 draggable={false}
+                                                 className={part.box ? undefined : styles.stagePart}
+                                                 data-slot={part.slot}
+-                                                onError={() => { if (markRegisterOptimizerUnavailable(part.url)) showRaw(part.url); }}
++                                                onError={() => {
++                                                    if (!rawUrls.has(part.url) && canOptimizeProductImage(part.url)) {
++                                                        markRegisterOptimizerUnavailable(part.url);
++                                                        showRaw(part.url);
++                                                    }
++                                                }}
+                                                 style={part.box ? boxStyle : { transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex }}
+                                             />
+                                         );
+@@ -390,7 +395,7 @@
+                             sizes={LCP_SIZES}
+                             unoptimized={rawUrls.has(fallbackImageUrl) || !canOptimizeProductImage(fallbackImageUrl)}
+                             onError={() => {
+-                                if (!rawUrls.has(fallbackImageUrl) && isOptimizableImageUrl(fallbackImageUrl)) {
++                                if (!rawUrls.has(fallbackImageUrl) && canOptimizeProductImage(fallbackImageUrl)) {
+                                     // Shopify and local photos also pass through the optimizer.
+                                     // Try their original URL once before rejecting this exact image.
+                                     markRegisterOptimizerUnavailable(fallbackImageUrl);
+--- a/src/components/pdp/pdp.module.css
++++ b/src/components/pdp/pdp.module.css
+@@ -1402,8 +1402,6 @@
+         margin-left: 0;
+     }
+ 
+-<<<<<<< HEAD
+-=======
+     /* The product photo is the mobile LCP element. It is in the first HTML at
+        full opacity. Transitions on the stage used to interpolate transform and
+        opacity after hydration, which holds the paint until script runs. */
+@@ -1417,13 +1415,6 @@
+         transition: none;
+     }
+ 
+-    .stageBaseline {
+-        left: 24px;
+-        right: 24px;
+-        bottom: 30px;
+-    }
+-
+->>>>>>> 2b0710952e9e91fc09076ceba351905d3527f45b
+     .callout {
+         right: 10px;
+         gap: 6px;
+--- a/tests/pdp-image-recovery.test.tsx
++++ b/tests/pdp-image-recovery.test.tsx
+@@ -54,3 +54,27 @@
+     await fail();
+     expect(photo()?.getAttribute('src')).toBe(nextSku);
+ });
++
++for (const source of [
++    'https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/exact-sku.webp',
++    'https://cdn.sanity.io/images/test/product.png',
++    'https://www.bestbottles.com/images/store/exact-sku.gif',
++]) it(`recovers the original for PR #368's expanded optimized source: ${new URL(source).hostname}`, async () => {
++    await act(async () => root.render(createElement(PdpStage, {...props, fallbackImageUrls: [source]})));
++    expect(photo()?.getAttribute('src')).toContain('/_next/image?');
++    await fail();
++    expect(photo()?.getAttribute('src')).toBe(source);
++});
++
++it('recovers a non-register legacy body layer without discarding its assembly', async () => {
++    const source = 'https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/exact-sku/body.webp';
++    const kit = {sku: 'EXACT', canvas: {width: 1000, height: 1100},
++        anchors: {axisX: 500, neckAxisX: 500, seatY: 250, baselineY: 1050},
++        parts: [{slot: 'body', zOrder: 0, explodeIndex: 0, bounds: {left: 300, top: 250, right: 700, bottom: 1050},
++            assembled: {x: 0,y: 0}, exploded: {dx: 0,dy: 0}, image: {url: source,width: 1000,height: 1100}}]};
++    await act(async () => root.render(createElement(PdpStage, {...props, kit, view: 'capon'})));
++    expect(photo()?.getAttribute('src')).toContain('/_next/image?');
++    await fail();
++    expect(photo()?.getAttribute('src')).toBe(source);
++    expect(container.querySelector('[data-source="kit"]')).not.toBeNull();
++});

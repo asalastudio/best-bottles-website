@@ -36,6 +36,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw
 from psd_tools import PSDImage
+from psd_tools.api.layers import AdjustmentLayer
 from scipy import ndimage
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -104,6 +105,25 @@ def canvas_of(psd: PSDImage, layers: list) -> Image.Image:
         sheet.paste(pix.convert("RGBA"), (layer.bbox[0], layer.bbox[1]))
         canvas = Image.alpha_composite(canvas, sheet)
     return canvas
+
+
+def photo_canvas_of(psd: PSDImage, layers: list) -> Image.Image:
+    """Do not silently drop a photo's finish adjustments when extracting parts.
+
+    canvas_of composites selected pixel layers independently. It cannot retain
+    Photoshop's adjustment stack or its masks. The tassel silver masters use
+    Black & White adjustments over gold source pixels; skipping them produced
+    identical ivory/gold and ivory/silver exports. Hold adjusted photo cuts until
+    an adjustment-aware, visually checked source export is available. Even an
+    adjustment outside the chosen part requires review because masks determine
+    its scope. Hidden/zero-opacity adjustments do not affect the visible result.
+    """
+    adjustments = [layer for layer in psd.descendants()
+                   if isinstance(layer, AdjustmentLayer) and layer.is_visible() and layer.opacity > 0]
+    if adjustments:
+        names = ", ".join(f"{layer.name} ({layer.kind})" for layer in adjustments)
+        raise ValueError(f"Photo cut requires adjustment-aware source export: {names}")
+    return canvas_of(psd, layers)
 
 
 def box(mask: np.ndarray) -> tuple[int, int, int, int]:
@@ -520,7 +540,13 @@ def main() -> int:
                 result["components"].append(entry)
                 print(f"{cid:26} {ctype:20} ref {sku:24} no closure layer to cut")
                 continue
-            img = canvas_of(ref.psd, ref.closure)
+            try:
+                img = photo_canvas_of(ref.psd, ref.closure)
+            except ValueError as error:
+                entry["checks"] = {"status": str(error), "approvable": False}
+                result["components"].append(entry)
+                print(f"{cid:26} {ctype:20} HELD: {error}")
+                continue
             above, below, split_row, collar_w = split_below_collar(img, ref.bm["rim"], ref.bm["axisX"])
             trimmed_row, trimmed_px = None, 0
             if neck == "20-400" and ctype == "dropper":

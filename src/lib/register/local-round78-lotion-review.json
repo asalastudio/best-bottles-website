@@ -1,0 +1,103 @@
+{
+  "snapshotCapturedAt": "2026-10-14T16:28:58.881Z",
+  "rows": [
+    {
+      "websiteSku": "LBRnd78LtnMtGl",
+      "graceSku": "LB-RND-CLR-78ML-LPM-MGLD",
+      "glass": "Clear",
+      "finish": "Matte Gold",
+      "productGroupSlug": "round-78ml-clear-18-415-lotionpump"
+    },
+    {
+      "websiteSku": "LBRnd78LtnShnGl",
+      "graceSku": "LB-RND-CLR-78ML-LPM-SGLD",
+      "glass": "Clear",
+      "finish": "Shiny Gold",
+      "productGroupSlug": "round-78ml-clear-18-415-lotionpump"
+    },
+    {
+      "websiteSku": "LBRnd78LtnShnBlk",
+      "graceSku": "LB-RND-CLR-78ML-LPM-SBLK",
+      "glass": "Clear",
+      "finish": "Shiny Black",
+      "productGroupSlug": "round-78ml-clear-18-415-lotionpump"
+    },
+    {
+      "websiteSku": "LBRnd78LtnMtSl",
+      "graceSku": "LB-RND-CLR-78ML-LPM-MSLV",
+      "glass": "Clear",
+      "finish": "Matte Silver",
+      "productGroupSlug": "round-78ml-clear-18-415-lotionpump"
+    },
+    {
+      "websiteSku": "LBRnd78LtnShnSl",
+      "graceSku": "LB-RND-CLR-78ML-LPM-SSLV",
+      "glass": "Clear",
+      "finish": "Shiny Silver",
+      "productGroupSlug": "round-78ml-clear-18-415-lotionpump"
+    },
+    {
+      "websiteSku": "LBRnd78LtnCu",
+      "graceSku": "LB-RND-CLR-78ML-LPM-CPR",
+      "glass": "Clear",
+      "finish": "Copper",
+      "productGroupSlug": "round-78ml-clear-18-415-lotionpump"
+    },
+    {
+      "websiteSku": "LBRndFrst78LtnMtGl",
+      "graceSku": "LB-RND-FRS-78ML-02",
+      "glass": "Frosted",
+      "finish": "Frosted",
+      "productGroupSlug": "round-78ml-frosted-18-415-lotionpump"
+    },
+    {
+      "websiteSku": "LBRndFrst78LtnShnGl",
+      "graceSku": "LB-RND-FRS-78ML-05",
+      "glass": "Frosted",
+      "finish": "Frosted",
+      "productGroupSlug": "round-78ml-frosted-18-415-lotionpump"
+    },
+    {
+      "websiteSku": "LBRndFrst78LtnShnBlk",
+      "graceSku": "LB-RND-FRS-78ML-04",
+      "glass": "Frosted",
+      "finish": "Frosted",
+      "productGroupSlug": "round-78ml-frosted-18-415-lotionpump"
+    },
+    {
+      "websiteSku": "LBRndFrst78LtnMtSl",
+      "graceSku": "LB-RND-FRS-78ML-03",
+      "glass": "Frosted",
+      "finish": "Frosted",
+      "productGroupSlug": "round-78ml-frosted-18-415-lotionpump"
+    },
+    {
+      "websiteSku": "LBRndFrst78LtnShnSl",
+      "graceSku": "LB-RND-FRS-78ML-06",
+      "glass": "Frosted",
+      "finish": "Frosted",
+      "productGroupSlug": "round-78ml-frosted-18-415-lotionpump"
+    },
+    {
+      "websiteSku": "LBRndFrst78LtnCu",
+      "graceSku": "LB-RND-FRS-78ML-01",
+      "glass": "Frosted",
+      "finish": "Frosted",
+      "productGroupSlug": "round-78ml-frosted-18-415-lotionpump"
+    },
+    {
+      "websiteSku": "LBRnd78LtnClOvrCap",
+      "graceSku": "LB-RND-CLR-78ML-LPM-COCP",
+      "glass": "Clear",
+      "finish": "Clear Overcap",
+      "productGroupSlug": "round-78ml-clear-18-415-lotionpump"
+    },
+    {
+      "websiteSku": "LBRndFrst78LtnClOvrCap",
+      "graceSku": "LB-RND-FRS-78ML-T",
+      "glass": "Frosted",
+      "finish": "Frosted",
+      "productGroupSlug": "round-78ml-frosted-18-415-lotionpump"
+    }
+  ]
+}

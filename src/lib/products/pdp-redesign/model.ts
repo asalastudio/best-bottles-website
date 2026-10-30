@@ -75,6 +75,17 @@ function clean(value: string | null | undefined): string | null {
 
 /** The finish a cap is sold as: "Black with Dots", "Matte Copper", "Shiny Silver". */
 export function capFinishName(variant: ProductVariant): string {
+    const finish = baseCapFinishName(variant);
+    // Catalogue ring rows have generic capColor and sometimes an imported
+    // "Tall" style. The described jewelry is a separate purchasable option.
+    // Include it before slugging: "Ivory + Silver" otherwise collides with
+    // the non-ring "Ivory Silver" option and selects the wrong SKU.
+    const description = `${variant.itemName ?? ""} ${variant.itemDescription ?? ""}`;
+    return /\bjewell?ed\b[^.]*\bring\b/i.test(description) && !/\bring\b/i.test(finish)
+        ? `${finish}, Jeweled Ring` : finish;
+}
+
+function baseCapFinishName(variant: ProductVariant): string {
     const normalised = normalizeImportedCapColor(variant);
     const dotted = decoratedCapFinish(normalised);
     if (dotted) return dotted;
