@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { isVercelAppHost } from "@/lib/seo";
 
 /**
  * Paths no crawler should fetch: APIs, accounts, staff tools, demos, and the
@@ -57,16 +58,25 @@ export function isPrivatePath(pathname: string): boolean {
  * (`SITE_URL` in src/lib/seo.ts), so robots, sitemaps and canonicals can never
  * disagree about the host.
  */
-export function buildRobots(siteUrl: string): MetadataRoute.Robots {
+export function buildRobots(siteUrl: string, requestHost?: string | null): MetadataRoute.Robots {
+    const rules: MetadataRoute.Robots["rules"] = [
+        {
+            userAgent: ["*", ...NAMED_CRAWLERS],
+            allow: "/",
+            disallow: [...PRIVATE_PATH_PREFIXES],
+        },
+    ];
+
+    // Allow crawling on *.vercel.app so Google can recrawl already-indexed URLs
+    // and read the X-Robots-Tag / meta noindex signals. `Disallow: /` can be
+    // re-added later once the vercel.app URLs have dropped out of the index.
+    if (isVercelAppHost(requestHost) || isVercelAppHost(siteUrl)) {
+        return { rules };
+    }
+
     const origin = siteUrl.replace(/\/+$/, "");
     return {
-        rules: [
-            {
-                userAgent: ["*", ...NAMED_CRAWLERS],
-                allow: "/",
-                disallow: [...PRIVATE_PATH_PREFIXES],
-            },
-        ],
+        rules,
         host: origin,
         sitemap: SITEMAP_PATHS.map((path) => `${origin}${path}`),
     };

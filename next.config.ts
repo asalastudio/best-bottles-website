@@ -216,6 +216,18 @@ const nextConfig: NextConfig = {
                     { key: "Permissions-Policy", value: "camera=(), microphone=(self), geolocation=(), payment=(self), usb=()" },
                 ],
             },
+            {
+                source: "/:path*",
+                has: [
+                    {
+                        type: "host",
+                        value: ".*\\.vercel\\.app",
+                    },
+                ],
+                headers: [
+                    { key: "X-Robots-Tag", value: "noindex, nofollow" },
+                ],
+            },
         ];
     },
 };
