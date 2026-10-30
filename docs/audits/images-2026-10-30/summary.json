@@ -1,0 +1,527 @@
+{
+ "generatedAt": "2026-10-30T22:33:04.513Z",
+ "aliases": {
+  "cylinder-30ml-clear-18-415": [
+   "cylinder-30ml-clear-18-415-finemist"
+  ],
+  "atomizer-5ml-slim": [
+   "atomizer-5ml"
+  ],
+  "aluminum-bottle-65ml-mixed-20-410": [
+   "aluminum-bottle-65ml-clear-20-410-lotionpump",
+   "aluminum-bottle-65ml-white-20-410-lotionpump"
+  ],
+  "aluminum-bottle-100ml-mixed-20-410": [
+   "aluminum-bottle-100ml-clear-20-410-finemist"
+  ],
+  "aluminum-bottle-120ml-mixed-20-410": [
+   "aluminum-bottle-120ml-clear-20-410-lotionpump"
+  ],
+  "aluminum-bottle-500ml-mixed-20-410": [
+   "aluminum-bottle-500ml-clear-20-410"
+  ],
+  "heart-4ml-frosted-8mm-keychain": [
+   "heart-4ml-frosted-8mm-keychain-glassapplicator"
+  ],
+  "heart-4ml-frosted-8mm-tassel": [
+   "heart-4ml-frosted-8mm-tassel-glassapplicator"
+  ]
+ },
+ "prod": {
+  "deployment": "prod",
+  "url": "https://precise-raccoon-123.convex.cloud",
+  "groups": 363,
+  "variants": 2483,
+  "variantsWithWebsiteSku": 2480,
+  "platesFound": 4529,
+  "plateConflicts": 0,
+  "groupErrors": 0,
+  "imageUrlClass": {
+   "shopify-cdn": 2192,
+   "legacy-bestbottles": 229,
+   "none": 58,
+   "vercel-blob": 4
+  },
+  "capOffClass": {
+   "none": 2392,
+   "sanity": 91
+  },
+  "groupHeroClass": {
+   "none": 360,
+   "shopify-cdn": 3
+  },
+  "bestSource": {
+   "plate": 1918,
+   "hero-released": 336,
+   "convex-imageUrl:shopify-cdn": 85,
+   "reconciled-local": 53,
+   "hero-base": 42,
+   "none": 34,
+   "BLOCKED:legacy-bestbottles": 13,
+   "convex-imageUrl:vercel-blob": 2
+  },
+  "lineItemsThumbClass": {
+   "shopify-cdn": 2192,
+   "none": 287,
+   "vercel-blob": 4
+  },
+  "lineItemsMatchesBest": {
+   "different-from-best": 2109,
+   "no-thumbnail": 287,
+   "same-as-best": 87
+  },
+  "lineItemsVsBest": {
+   "plate -> line shows shopify-cdn": 1716,
+   "hero-released -> line shows shopify-cdn": 313,
+   "plate -> line shows none": 201,
+   "reconciled-local -> line shows shopify-cdn": 53,
+   "none -> line shows none": 34,
+   "hero-base -> line shows shopify-cdn": 25,
+   "hero-released -> line shows none": 22,
+   "hero-base -> line shows none": 17,
+   "BLOCKED:legacy-bestbottles -> line shows none": 13,
+   "hero-released -> line shows vercel-blob": 1,
+   "plate -> line shows vercel-blob": 1
+  },
+  "heroReleasedWrongGroup": 3,
+  "heroBaseWrongGroup": 37,
+  "cardSource": {
+   "hero-released": 294,
+   "hero-base": 41,
+   "none": 17,
+   "plate": 9,
+   "variant-imageUrl:shopify-cdn": 2
+  },
+  "cardSourceByFamily": {
+   "Cylinder": {
+    "hero-released": 48,
+    "hero-base": 3,
+    "none": 2
+   },
+   "Elegant": {
+    "hero-released": 30,
+    "hero-base": 2,
+    "none": 1
+   },
+   "Circle": {
+    "hero-released": 27
+   },
+   "Boston Round": {
+    "hero-released": 23
+   },
+   "Round": {
+    "hero-released": 22
+   },
+   "Diva": {
+    "hero-released": 21
+   },
+   "Sleek": {
+    "hero-released": 21
+   },
+   "Vial": {
+    "hero-released": 15,
+    "hero-base": 2
+   },
+   "Slim": {
+    "hero-released": 15
+   },
+   "Decorative": {
+    "hero-released": 10,
+    "hero-base": 2
+   },
+   "Empire": {
+    "hero-released": 11
+   },
+   "Cream Jar": {
+    "plate": 8,
+    "variant-imageUrl:shopify-cdn": 1,
+    "hero-base": 1
+   },
+   "Cap/Closure": {
+    "none": 5,
+    "hero-base": 4
+   },
+   "Rectangle": {
+    "hero-released": 7,
+    "none": 1
+   },
+   "Roll-On Cap": {
+    "hero-base": 6,
+    "none": 1
+   },
+   "Sprayer": {
+    "hero-base": 7
+   },
+   "Aluminum Bottle": {
+    "hero-released": 3,
+    "hero-base": 3
+   },
+   "Tulip": {
+    "hero-released": 6
+   },
+   "Grace": {
+    "hero-released": 5
+   },
+   "Diamond": {
+    "hero-released": 5
+   },
+   "Apothecary": {
+    "hero-released": 5
+   },
+   "Royal": {
+    "hero-released": 3,
+    "hero-base": 1
+   },
+   "Dropper": {
+    "hero-base": 3,
+    "none": 1
+   },
+   "Atomizer": {
+    "hero-released": 2,
+    "none": 1
+   },
+   "Square": {
+    "hero-released": 3
+   },
+   "Flair": {
+    "hero-released": 3
+   },
+   "Teardrop": {
+    "hero-released": 3
+   },
+   "Lotion Bottle": {
+    "hero-base": 2,
+    "hero-released": 1
+   },
+   "Pillar": {
+    "hero-released": 2,
+    "none": 1
+   },
+   "Bell": {
+    "hero-released": 3
+   },
+   "Plastic Bottle": {
+    "variant-imageUrl:shopify-cdn": 1,
+    "plate": 1
+   },
+   "Gift Box": {
+    "hero-base": 1,
+    "none": 1
+   },
+   "Lotion Pump": {
+    "hero-base": 1
+   },
+   "Tool": {
+    "hero-base": 1
+   },
+   "Gift Bag": {
+    "hero-base": 1
+   },
+   "Packaging Supply": {
+    "hero-base": 1
+   },
+   "Unknown": {
+    "none": 1
+   },
+   "Internal": {
+    "none": 1
+   },
+   "Plug/Applicator": {
+    "none": 1
+   }
+  },
+  "noImageAnywhere": 34,
+  "blockedOnly": 13
+ },
+ "dev": {
+  "deployment": "dev",
+  "url": "https://helpful-elephant-638.convex.cloud",
+  "groups": 380,
+  "variants": 2384,
+  "variantsWithWebsiteSku": 2380,
+  "platesFound": 4535,
+  "plateConflicts": 0,
+  "groupErrors": 0,
+  "imageUrlClass": {
+   "vercel-blob": 2135,
+   "shopify-cdn": 173,
+   "legacy-bestbottles": 50,
+   "none": 26
+  },
+  "capOffClass": {
+   "vercel-blob": 1184,
+   "none": 1112,
+   "sanity": 87,
+   "shopify-cdn": 1
+  },
+  "groupHeroClass": {
+   "vercel-blob": 308,
+   "shopify-cdn": 53,
+   "none": 19
+  },
+  "bestSource": {
+   "plate": 1907,
+   "hero-released": 335,
+   "hero-base": 75,
+   "convex-imageUrl:shopify-cdn": 34,
+   "none": 26,
+   "BLOCKED:legacy-bestbottles": 7
+  },
+  "lineItemsThumbClass": {
+   "vercel-blob": 2166,
+   "shopify-cdn": 177,
+   "none": 41
+  },
+  "lineItemsMatchesBest": {
+   "different-from-best": 2261,
+   "same-as-best": 82,
+   "no-thumbnail": 41
+  },
+  "lineItemsVsBest": {
+   "plate -> line shows vercel-blob": 1756,
+   "hero-released -> line shows vercel-blob": 309,
+   "plate -> line shows shopify-cdn": 85,
+   "hero-base -> line shows vercel-blob": 38,
+   "hero-base -> line shows shopify-cdn": 35,
+   "hero-released -> line shows shopify-cdn": 20,
+   "plate -> line shows none": 18,
+   "none -> line shows none": 15,
+   "none -> line shows vercel-blob": 9,
+   "hero-released -> line shows none": 6,
+   "BLOCKED:legacy-bestbottles -> line shows vercel-blob": 6,
+   "none -> line shows shopify-cdn": 2,
+   "hero-base -> line shows none": 2,
+   "BLOCKED:legacy-bestbottles -> line shows shopify-cdn": 1
+  },
+  "heroReleasedWrongGroup": 3,
+  "heroBaseWrongGroup": 2,
+  "cardSource": {
+   "hero-released": 294,
+   "hero-base": 74,
+   "none": 11,
+   "group-heroImageUrl:shopify": 1
+  },
+  "cardSourceByFamily": {
+   "Cylinder": {
+    "hero-released": 48,
+    "hero-base": 3,
+    "none": 1,
+    "group-heroImageUrl:shopify": 1
+   },
+   "Elegant": {
+    "hero-released": 31,
+    "hero-base": 2
+   },
+   "Circle": {
+    "hero-released": 26
+   },
+   "Boston Round": {
+    "hero-released": 23
+   },
+   "Round": {
+    "hero-released": 22
+   },
+   "Diva": {
+    "hero-released": 21
+   },
+   "Sleek": {
+    "hero-released": 21
+   },
+   "Vial": {
+    "hero-released": 15,
+    "hero-base": 2
+   },
+   "Slim": {
+    "hero-released": 15
+   },
+   "Cream Jar": {
+    "hero-base": 13
+   },
+   "Decorative": {
+    "hero-released": 10,
+    "hero-base": 2
+   },
+   "Empire": {
+    "hero-released": 11
+   },
+   "Gift Bag": {
+    "hero-base": 11
+   },
+   "Cap/Closure": {
+    "none": 5,
+    "hero-base": 4
+   },
+   "Aluminum Bottle": {
+    "hero-released": 4,
+    "hero-base": 3
+   },
+   "Roll-On Cap": {
+    "hero-base": 6,
+    "none": 1
+   },
+   "Rectangle": {
+    "hero-released": 7
+   },
+   "Sprayer": {
+    "hero-base": 7
+   },
+   "Gift Box": {
+    "hero-base": 7
+   },
+   "Tulip": {
+    "hero-released": 6
+   },
+   "Grace": {
+    "hero-released": 5
+   },
+   "Diamond": {
+    "hero-released": 5
+   },
+   "Apothecary": {
+    "hero-released": 5
+   },
+   "Royal": {
+    "hero-released": 3,
+    "hero-base": 1
+   },
+   "Dropper": {
+    "hero-base": 3,
+    "none": 1
+   },
+   "Lotion Bottle": {
+    "hero-base": 2,
+    "none": 2
+   },
+   "Square": {
+    "hero-released": 3
+   },
+   "Flair": {
+    "hero-released": 3
+   },
+   "Tool": {
+    "hero-base": 3
+   },
+   "Teardrop": {
+    "hero-released": 3
+   },
+   "Bell": {
+    "hero-released": 3
+   },
+   "Atomizer": {
+    "hero-released": 2
+   },
+   "Plastic Bottle": {
+    "hero-base": 2
+   },
+   "Packaging Supply": {
+    "hero-base": 2
+   },
+   "Pillar": {
+    "hero-released": 2
+   },
+   "Lotion Pump": {
+    "hero-base": 1
+   },
+   "Unknown": {
+    "none": 1
+   }
+  },
+  "noImageAnywhere": 26,
+  "blockedOnly": 7
+ },
+ "registry": {
+  "heroRows": 738,
+  "distinctSkus": 414,
+  "fileMissingOnDisk": 0,
+  "skuNotInProd": 0,
+  "skuNotInProdByFile": {},
+  "groupMismatchInProd": 40,
+  "groupMismatchSamples": [
+   {
+    "sku": "GBElg15MinarCu",
+    "heroGroup": "elegant-15ml-clear-13-415-capclosure",
+    "prodGroup": "elegant-15ml-clear-13-415",
+    "file": "catalog-heroes.json"
+   },
+   {
+    "sku": "GBCrclFrst50RdcrIvyLthr",
+    "heroGroup": "circle-50ml-frosted-18-400-reducer",
+    "prodGroup": "circle-50ml-frosted-18-415-reducer",
+    "file": "catalog-heroes.json"
+   },
+   {
+    "sku": "GBCyl5SpryBlkMatt",
+    "heroGroup": "cylinder-5.5ml-clear-13-415-finemist",
+    "prodGroup": "cylinder-5ml-clear-13-415-finemist",
+    "file": "catalog-heroes.json"
+   },
+   {
+    "sku": "LB3mlClear",
+    "heroGroup": "lotion-bottle-3ml-clear-Snap-On",
+    "prodGroup": "lotion-bottle-3ml-clear-snap",
+    "file": "catalog-heroes.json"
+   },
+   {
+    "sku": "PB10SpryNat",
+    "heroGroup": "plastic-bottle-10ml-clear",
+    "prodGroup": "plastic-bottle-10ml-mixed",
+    "file": "catalog-heroes.json"
+   },
+   {
+    "sku": "PB1ozClearcap",
+    "heroGroup": "plastic-bottle-30ml-clear",
+    "prodGroup": "plastic-bottle-30ml-mixed",
+    "file": "catalog-heroes.json"
+   },
+   {
+    "sku": "FunnelMetalGl",
+    "heroGroup": "tool-0ml-gold",
+    "prodGroup": "tool-0ml-mixed",
+    "file": "catalog-heroes.json"
+   },
+   {
+    "sku": "FunnelMetalSl",
+    "heroGroup": "tool-0ml-silver",
+    "prodGroup": "tool-0ml-mixed",
+    "file": "catalog-heroes.json"
+   },
+   {
+    "sku": "OBagBlack4x6",
+    "heroGroup": "gift-bag-0ml-black",
+    "prodGroup": "gift-bag-0ml-mixed",
+    "file": "catalog-heroes.json"
+   },
+   {
+    "sku": "OBagChGreen5x8",
+    "heroGroup": "gift-bag-0ml-green",
+    "prodGroup": "gift-bag-0ml-mixed",
+    "file": "catalog-heroes.json"
+   },
+   {
+    "sku": "OBagGold4x6",
+    "heroGroup": "gift-bag-0ml-gold",
+    "prodGroup": "gift-bag-0ml-mixed",
+    "file": "catalog-heroes.json"
+   },
+   {
+    "sku": "OBagIvory4x6",
+    "heroGroup": "gift-bag-0ml-ivory",
+    "prodGroup": "gift-bag-0ml-mixed",
+    "file": "catalog-heroes.json"
+   }
+  ]
+ },
+ "prodVsDev": {
+  "skusOnlyInProd": 100,
+  "skusOnlyInDev": 0,
+  "bestSourceDiffers": 39,
+  "pairs": {
+   "prod convex-imageUrl:shopify-cdn | dev hero-base": 21,
+   "prod plate | dev hero-base": 12,
+   "prod convex-imageUrl:vercel-blob | dev plate": 2,
+   "prod convex-imageUrl:shopify-cdn | dev BLOCKED:legacy-bestbottles": 2,
+   "prod plate | dev hero-released": 1,
+   "prod hero-released | dev hero-base": 1
+  }
+ }
+}
