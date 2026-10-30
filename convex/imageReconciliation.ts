@@ -127,3 +127,65 @@ export const applyImageTruthPatch = internalMutation({
         return result;
     },
 });
+
+/**
+ * Retire product image links that no longer resolve (Shopify CDN files that
+ * now 404). Each patch names the field, the dead value the caller observed and
+ * the replacement: the SKU's paper-doll plate when it has one, otherwise null so no
+ * surface tries to load a broken image. The dead value moves into the matching
+ * `legacyShopify*` field unless that already holds something. A row whose field
+ * no longer equals the observed value is left alone and reported as `changed`,
+ * so a stale plan can never clobber a newer image.
+ *
+ * Run by scripts/retire_dead_shopify_image_links.mjs (`--apply`).
+ */
+export const retireDeadImageLinks = internalMutation({
+    args: {
+        sourceLabel: v.string(),
+        patches: v.array(v.object({
+            websiteSku: v.string(),
+            field: v.union(v.literal("imageUrl"), v.literal("imageUrlCapOff")),
+            expect: v.string(),
+            next: v.union(v.string(), v.null()),
+        })),
+    },
+    handler: async (ctx, args) => {
+        const patches = args.patches.slice(0, MAX_PATCHES_PER_RUN);
+        const result = {
+            sourceLabel: args.sourceLabel,
+            requested: args.patches.length,
+            processed: patches.length,
+            truncated: args.patches.length > MAX_PATCHES_PER_RUN,
+            repointed: 0,
+            cleared: 0,
+            notFound: [] as string[],
+            changed: [] as string[],
+            rejectedSanity: [] as string[],
+        };
+        for (const patch of patches) {
+            if (patch.next && isSanityCdnUrl(patch.next)) {
+                result.rejectedSanity.push(patch.websiteSku);
+                continue;
+            }
+            const product = await ctx.db
+                .query("products")
+                .withIndex("by_websiteSku", (q) => q.eq("websiteSku", patch.websiteSku))
+                .first();
+            if (!product) {
+                result.notFound.push(patch.websiteSku);
+                continue;
+            }
+            if (product[patch.field] !== patch.expect) {
+                result.changed.push(patch.websiteSku);
+                continue;
+            }
+            const legacyField = patch.field === "imageUrl" ? "legacyShopifyImageUrl" : "legacyShopifyImageUrlCapOff";
+            const next: { imageUrl?: string | null; imageUrlCapOff?: string | null; legacyShopifyImageUrl?: string; legacyShopifyImageUrlCapOff?: string } = {};
+            next[patch.field] = patch.next;
+            if (!product[legacyField]) next[legacyField] = patch.expect;
+            await ctx.db.patch(product._id, next);
+            if (patch.next) result.repointed++; else result.cleared++;
+        }
+        return result;
+    },
+});
