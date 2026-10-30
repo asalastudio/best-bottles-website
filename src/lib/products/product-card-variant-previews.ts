@@ -30,6 +30,8 @@ export type ProductCardVariantPreviewSource = {
     graceSku?: string | null;
     imageUrl?: string | null;
     imageUrlCapOff?: string | null;
+    /** The SKU's paper-doll plate thumbnail, when the search carried it (line view). */
+    plateThumbUrl?: string | null;
     color?: string | null;
     applicator?: string | null;
     capColor?: string | null;
