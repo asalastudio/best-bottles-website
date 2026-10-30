@@ -100,16 +100,21 @@ describe("robots.txt", () => {
         expect(canonical).toContain("Sitemap: https://www.bestbottles.com/server-sitemap.xml\n");
     });
 
-    it("disallows all crawling when requested on a *.vercel.app host", () => {
+    it("allows crawling on *.vercel.app hosts (so crawlers see noindex) without advertising sitemaps", () => {
         for (const host of [
             "best-bottles-website.vercel.app",
             "best-bottles-website-git-preview-asala.vercel.app",
             "preview.vercel.app:443",
         ]) {
             const vercelRobots = serializeRobotsTxt(buildRobots(ORIGIN, host));
-            expect(vercelRobots.trim(), host).toBe("User-Agent: *\nDisallow: /");
-            expect(isAllowed(vercelRobots, "Googlebot", "/"), host).toBe(false);
-            expect(isAllowed(vercelRobots, "*", "/catalog"), host).toBe(false);
+            expect(vercelRobots, host).toContain("Allow: /\n");
+            expect(vercelRobots, host).not.toContain("Disallow: /\n");
+            expect(vercelRobots, host).not.toContain("Sitemap:");
+            expect(vercelRobots, host).not.toContain("Host:");
+            expect(vercelRobots, host).not.toContain("vercel.app");
+            expect(isAllowed(vercelRobots, "Googlebot", "/"), host).toBe(true);
+            expect(isAllowed(vercelRobots, "*", "/catalog"), host).toBe(true);
+            expect(isAllowed(vercelRobots, "Googlebot", "/portal"), host).toBe(false);
         }
     });
 });
@@ -140,14 +145,18 @@ describe("robots.txt and sitemap routes follow SITE_URL", () => {
         expect(readFileSync("src/app/layout.tsx", "utf8")).toContain("metadataBase: new URL(SITE_URL)");
     });
 
-    it("returns Disallow: / from /robots.txt when the request host is *.vercel.app", async () => {
+    it("allows crawling without sitemaps from /robots.txt when the request host is *.vercel.app", async () => {
         vi.doMock("next/headers", () => ({
             headers: async () => new Headers({ "x-forwarded-host": "best-bottles-website.vercel.app" }),
         }));
         vi.resetModules();
         const { default: robots } = await import("@/app/robots");
         const rules = await robots();
-        expect(serializeRobotsTxt(rules).trim()).toBe("User-Agent: *\nDisallow: /");
+        const serialized = serializeRobotsTxt(rules);
+        expect(serialized).toContain("Allow: /\n");
+        expect(serialized).not.toContain("Disallow: /\n");
+        expect(serialized).not.toContain("Sitemap:");
+        expect(serialized).not.toContain("vercel.app");
     });
 
     it("are served by the app, not stale files in public/", () => {
