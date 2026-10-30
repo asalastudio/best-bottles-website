@@ -25,13 +25,14 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { config } from "dotenv";
+import { IMAGE_PIPELINE_GRID_ROOT } from "./lib/local-paths.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 config({ path: path.join(__dirname, "../.env.local") });
 
 // ── CONFIG ────────────────────────────────────────────────────────────────────
 
-const GRID_DIR = "/Users/jordanrichter/Projects/Clients/Best Bottles/bottle-image-pipeline/output_collections/grid/Diva";
+const GRID_DIR = path.join(IMAGE_PIPELINE_GRID_ROOT, "Diva");
 const FAMILY_FILTER = "Diva";
 const DRY_RUN = process.argv.includes("--dry-run");
 const CLEAR_WRONG = process.argv.includes("--clear-wrong");

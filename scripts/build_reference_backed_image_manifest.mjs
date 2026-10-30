@@ -10,8 +10,9 @@
  */
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { basename, extname, relative, resolve } from "node:path";
+import { REPO_ROOT } from "./lib/local-paths.mjs";
 
-const SITE_ROOT = "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026";
+const SITE_ROOT = REPO_ROOT;
 const MADISON_ROOT = "/Users/jordanrichter/Projects/Madison Studio/madison-app";
 const PIPELINE_LANE_ID = "grid-card-2000x2200";
 const DEFAULT_OUT_DIR = `${MADISON_ROOT}/tmp`;

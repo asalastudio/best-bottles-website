@@ -33,13 +33,14 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { config } from "dotenv";
+import { IMAGE_PIPELINE_GRID_ROOT } from "./lib/local-paths.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 config({ path: path.join(__dirname, "../.env.local") });
 
 // ── CONFIG ────────────────────────────────────────────────────────────────────
 // Root of the pipeline output — may contain family subfolders OR direct SKU folders
-const GRID_ROOT = "/Users/jordanrichter/Projects/Clients/Best Bottles/bottle-image-pipeline/output_collections/grid";
+const GRID_ROOT = IMAGE_PIPELINE_GRID_ROOT;
 
 const ARG_FAMILY = (() => {
     const i = process.argv.indexOf("--family");

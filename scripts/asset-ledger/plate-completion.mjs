@@ -1,11 +1,12 @@
 import {createHash,randomUUID} from 'node:crypto';
 import {readFile,writeFile,rename,open,unlink,realpath} from 'node:fs/promises';
 import path from 'node:path';
+import { PSD_MASTER_ROOT } from "../lib/local-paths.mjs";
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const documentPath='data/asset-ledger/boston-plate-completion.json';
 const feedbackPath='data/asset-ledger/boston-completion-decisions.json';
 const canonical=v=>JSON.stringify(v,(_,value)=>value&&typeof value==='object'&&!Array.isArray(value)?Object.fromEntries(Object.entries(value).sort(([a],[b])=>a.localeCompare(b))):value);
-const MASTER='/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master';
+const MASTER=PSD_MASTER_ROOT;
 const json=async file=>JSON.parse(await readFile(file,'utf8'));
 export const completionBinding=(row,presentation)=>hash(JSON.stringify({sku:row.sku,productGroupId:row.productGroupId,standardId:row.standardId,standardVersion:row.standardVersion,standardReferenceSha256:row.standardReferenceSha256,presentation,views:row.views}));
 async function feedback(root){try{return await json(path.join(root,feedbackPath));}catch(e){if(e.code==='ENOENT')return {revision:0,decisions:{},history:[]};throw e;}}

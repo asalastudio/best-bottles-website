@@ -1,7 +1,8 @@
 import path from 'node:path';
 import {indexedViews, remoteHash} from './plate-contact-sheet.mjs';
+import { PSD_MASTER_ROOT } from "../lib/local-paths.mjs";
 
-const MASTER = '/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master';
+const MASTER = PSD_MASTER_ROOT;
 const checkedStates = new Set(['plated', 'plated-no-capoff-by-design']);
 
 // Receives the result of readCompletion, which verifies local image/source

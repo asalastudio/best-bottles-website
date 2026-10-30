@@ -11,6 +11,7 @@ import { pathToFileURL } from "node:url";
 import sharp from "sharp";
 import { ConvexHttpClient } from "convex/browser";
 import { createBlobStore, verifyPublicUrl } from "./lib/store-blob.mjs";
+import { PSD_MASTER_ROOT } from "../lib/local-paths.mjs";
 const hash = (b) => createHash("sha256").update(b).digest("hex");
 const read = async (p) => JSON.parse(await fs.readFile(p, "utf8"));
 const save = async (p, data) =>
@@ -330,7 +331,7 @@ export async function run(args = process.argv.slice(2)) {
       storageProvider: "vercel-blob",
     };
     const master =
-      "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/";
+      (PSD_MASTER_ROOT + "/");
     const library = r.source.on.path.startsWith(master)
       ? "master"
       : "desktop-master";
