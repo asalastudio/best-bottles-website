@@ -60,6 +60,8 @@ export interface CatalogSearchVariantPreviewRow {
         graceSku: string | null;
         imageUrl: string | null;
         imageUrlCapOff: string | null;
+        /** The SKU's paper-doll plate thumbnail; the search fills it for the line view only. */
+        plateThumbUrl?: string | null;
         color: string | null;
         applicator: string | null;
         capColor: string | null;
