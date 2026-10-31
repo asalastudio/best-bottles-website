@@ -98,17 +98,24 @@ export function getReleasedCatalogHero(groupSlug: string, websiteSku?: string | 
     return row ? { ...row, groupSlug } : null;
 }
 
-/** Only select an assembly still present in the filtered catalog result. */
+/**
+ * Only select an assembly still present in the filtered catalog result.
+ *
+ * When a SKU is asked for (a search for it, the SKU a Line items row prints, a
+ * picked finish), its own approved photograph wins from either registry. Only
+ * when it has none does the group fall back to its usual hero: a released one
+ * first, then the original registry in recorded order. Before 31 Oct 2026 a
+ * sibling's released hero beat the asked-for SKU's own registry photo, so a
+ * finish with its own picture still showed another finish's bottle.
+ */
 export function getCatalogHero(groupSlug: string, variants: readonly { websiteSku?: string | null }[], preferredWebsiteSku?: string | null): CatalogHero | null {
     const slugs = recordedGroupSlugs(groupSlug);
-    const eligible = isCatalogHeroPilotEnabled() ? activePilotRows().filter(candidate =>
-        slugs.includes(candidate.groupSlug) && variants.some(variant => variant.websiteSku === candidate.websiteSku),
-    ) : [];
-    const pilot = eligible.find(candidate => candidate.websiteSku.toLowerCase() === preferredWebsiteSku?.trim().toLowerCase()) ?? eligible[0];
-    if (pilot) return { ...pilot, groupSlug };
-    const hero = slugs.flatMap(slug => byGroup.get(slug) ?? []).find(candidate =>
-        variants.some(variant => variant.websiteSku === candidate.websiteSku),
-    );
+    const listed = (websiteSku: string) => variants.some(variant => variant.websiteSku === websiteSku);
+    const eligible = isCatalogHeroPilotEnabled() ? activePilotRows().filter(candidate => slugs.includes(candidate.groupSlug) && listed(candidate.websiteSku)) : [];
+    const original = slugs.flatMap(slug => byGroup.get(slug) ?? []).filter(candidate => listed(candidate.websiteSku));
+    const preferred = preferredWebsiteSku?.trim().toLowerCase();
+    const isPreferred = (candidate: CatalogHero) => Boolean(preferred) && candidate.websiteSku.toLowerCase() === preferred;
+    const hero = eligible.find(isPreferred) ?? original.find(isPreferred) ?? eligible[0] ?? original[0];
     return hero ? { ...hero, groupSlug } : null;
 }
 

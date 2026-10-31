@@ -31,13 +31,19 @@ type Props = {
      * hero stays (never borrow another finish's photo, never show a mismatch).
      */
     selected?: ProductCardVariantPreview | null;
+    /**
+     * The picked cap's own approved catalog hero, exact SKU only. Shown when
+     * no calibrated swap can draw the pick, so picking a finish never leaves
+     * another finish's bottle on screen.
+     */
+    selectedHero?: CatalogHero | null;
 };
 
 function skuOf(variant: ProductCardVariantPreview | null | undefined): string | null {
     return variant?.websiteSku ?? variant?.graceSku ?? null;
 }
 
-export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroHoverImageUrl, href, variants, family, slug, selected = null }: Props) {
+export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroHoverImageUrl, href, variants, family, slug, selected = null, selectedHero = null }: Props) {
     const [heroHovered, setHeroHovered] = useState(false);
     const [failed, setFailed] = useState<Set<string>>(() => new Set());
     const skus = [...new Set([skuOf(variants[0]), skuOf(selected)].filter((sku): sku is string => Boolean(sku)))];
@@ -104,6 +110,18 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
                 </span>
             </span>
         </LocaleLink>;
+    }
+
+    // A picked finish with its own approved hero shows that hero when no swap can
+    // draw it. While plates load for a calibrated hero the swap may still come,
+    // so the card waits rather than flicker between the two.
+    if (catalogHero && selected && selectedHero && selectedHero.websiteSku === skuOf(selected)
+        && selectedHero.url !== catalogHero.url && !(heroSwap && assemblyPlates === undefined)) {
+        return <ProductCardImagePreview
+            productTitle={`${title}, ${selected.label}`} defaultImage={{ url: null, alt: `${title}, ${selected.label}` }} catalogHero={selectedHero}
+            productHref={href} variantPreviews={[]}
+            auditMeta={{ surface: "catalog-card", family, productGroupSlug: slug, websiteSku: selectedHero.websiteSku }}
+        />;
     }
 
     // A selected SKU without a calibrated swap still shows its own photograph.
