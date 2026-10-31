@@ -5,8 +5,8 @@
     {
       "path": "runtime/public/reviews/meeting-audit-2026-10-31/index.html",
       "source": "public/reviews/meeting-audit-2026-10-31/index.html",
-      "sha256": "ab0d09e79bebc3a74658d80700e2ca8e970af9b282156e077bba2b7a15ed0270",
-      "bytes": 766513,
+      "sha256": "f26ec8becc9693eafad939a5ff7d3dab7f1c4e1b3b077f4bbb412a8643877f35",
+      "bytes": 767020,
       "restoreTo": "public/reviews/meeting-audit-2026-10-31/index.html"
     },
     {
@@ -52,8 +52,8 @@
     {
       "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/board-template.html",
       "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/board-template.html",
-      "sha256": "699d00058227497c6ca153cd6f53c2a64a46edd39abb3b7841fc6d67a11d9630",
-      "bytes": 22257
+      "sha256": "adf41b8efcc201b9bf68f9d23ac073ce2a83e985848bee0d2d9faba68d17ce7a",
+      "bytes": 22764
     },
     {
       "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/audit-data.json",
@@ -64,26 +64,50 @@
     {
       "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/check-board.cjs",
       "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/check-board.cjs",
-      "sha256": "13f2c3403976a484b73743511df3bfc01d2aee976b5d3ce5d259866beb3f9a4f",
-      "bytes": 4705
+      "sha256": "3bd6434dd72c37e7bfdae37f7adb1af88db9a08a6e6930e797eda6f24ea62b44",
+      "bytes": 5926
     },
     {
       "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/browser-checks.json",
       "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/browser-checks.json",
-      "sha256": "565f39ec1fbf54e3217cf291d43488c8e8d4abcd6070a1dc7fe483e03bd2720c",
-      "bytes": 427
+      "sha256": "90b5c89d754cd39325f9b28f94cb19076b5a195e889e0b1e11db76c677042b66",
+      "bytes": 548
     },
     {
       "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/board-desktop.png",
       "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/board-desktop.png",
-      "sha256": "c08d122a1f71543d1765614c77c24834c7dff45aa9fa5387cd9ee61d99f3f788",
-      "bytes": 292298
+      "sha256": "ac86c55b6b06a91f1de0238e996ec6ad95c2fedc1c311300c1c3f0a997ed3309",
+      "bytes": 300552
     },
     {
       "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/board-mobile.png",
       "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/board-mobile.png",
-      "sha256": "47aedcdc86ab29ae9cc45d0a43296bbf06f71f888df17b3e1016cc060d2e9a54",
-      "bytes": 262697
+      "sha256": "a0e4bfd1f28242008e0a07f62950815372525f03e8cd0f42a0956d3a04ea8519",
+      "bytes": 270328
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/shared/build.mjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/shared/build.mjs",
+      "bytes": 6145,
+      "sha256": "8adc455fe3591f041dbb2483781e8a9653f05e49fa679789cb2848f388af002f"
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/shared/structure.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/shared/structure.json",
+      "bytes": 1515,
+      "sha256": "fd4410153e67891f842e9ceedad7423a57b0a528e6295e4712ecceaa9463a0bb"
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/shared/shared-locations.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/shared/shared-locations.json",
+      "bytes": 381,
+      "sha256": "f54f621bf9b5a1cb5bdf506c2fcbfdc37285a3c536b2413964398ea7edfc4740"
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/shared/best-bottles-catalog-review.xlsx",
+      "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/shared/best-bottles-catalog-review.xlsx",
+      "bytes": 163260,
+      "sha256": "c404fbe7e5f77d15952b75bdae061e27392d4204e4de61b255cd3de766068037"
     }
   ]
 }

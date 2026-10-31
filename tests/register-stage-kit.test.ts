@@ -177,11 +177,22 @@ describe("kitFromRegister", () => {
         expect(assembledKit(both).parts.filter((part) => part.slot === "roller").map((part) => part.image.url)).toEqual([seated.url]);
         expect(assembledKit(both).parts.length).toBe(both.parts.length - 1);
         expect(assembledKit(kit).parts).toEqual(kit.parts);
-        // the plug lifts as the insert's own unit, the cap above it
+        // The whole plug detaches without covering the bottle. A fixed-scale
+        // stage can place it beside the glass when a vertical stack cannot fit.
         const exploded = stageLayout(both, "exploded", context)!;
-        expect(exploded.parts.find((part) => part.slot === "roller")!.dyPct).toBeLessThan(0);
+        const drawnRoller = exploded.parts.find((part) => part.slot === "roller")!;
+        const sourceRoller = both.parts.find((part) => part.image.url === drawnRoller.url)!;
+        const bodyBounds = both.parts.find((part) => part.slot === "body")!.bounds;
+        const rollerBounds = {
+            left: sourceRoller.bounds.left + drawnRoller.dxPct / 100 * both.canvas.width,
+            right: sourceRoller.bounds.right + drawnRoller.dxPct / 100 * both.canvas.width,
+            top: sourceRoller.bounds.top + drawnRoller.dyPct / 100 * both.canvas.height,
+            bottom: sourceRoller.bounds.bottom + drawnRoller.dyPct / 100 * both.canvas.height,
+        };
+        expect(rollerBounds.right < bodyBounds.left || rollerBounds.left > bodyBounds.right
+            || rollerBounds.bottom < bodyBounds.top || rollerBounds.top > bodyBounds.bottom).toBe(true);
         // The reviewed glass no longer shrinks to fit a tall vertical stack.
-        // The cap may move into the side tray while the insert stays lifted.
+        // Detached pieces may move into the side tray.
         for (const drawn of exploded.parts) {
             const source = both.parts.find(part => part.image.url === drawn.url)!;
             const f = exploded.frame;

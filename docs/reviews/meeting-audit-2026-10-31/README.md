@@ -14,7 +14,7 @@ Flair comes first, followed by 5 ml bottles, known issues and the remaining fami
 4. Use **Review related pages** for the other colors and fitments. Approving one page does not approve those pages or every cap SKU.
 5. Finish with known issues and catalog exceptions. Export the review CSV and save a notes backup.
 
-The source files are CSVs ready to import into Google Sheets. No Google Sheet was created or shared. The interactive board saves decisions in the current browser only. Use **Save notes backup** to retain or transfer the meeting state. **Import notes** merges matching product-page records from that backup. Browser notes are not committed automatically and do not change the storefront or backend.
+The online meeting register is [01 Best Bottles catalog audit - 2026-10-31](https://docs.google.com/spreadsheets/d/1tzH1wFVkTsmDBmOZCxXqeltzV34XfFQLVZ033gfbo-Q). The sheet and review backups live in the [dated Best Bottles Drive folder](https://drive.google.com/drive/folders/1YMQoNVlutIeYUVALHdNgGthBTjldwO1-). Use the sheet for durable decisions, owners and next actions. The source CSVs are retained as snapshots. The interactive board saves decisions in the current browser only. Use **Save notes backup** to retain or transfer the meeting state. **Import notes** merges matching product-page records from that backup. Browser notes are not committed automatically and do not change the storefront or backend.
 
 ## Acceptance standard
 

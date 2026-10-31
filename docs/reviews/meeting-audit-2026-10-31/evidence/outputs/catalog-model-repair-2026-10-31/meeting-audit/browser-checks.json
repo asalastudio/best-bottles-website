@@ -1,14 +1,17 @@
 {
-  "checkedAt": "2026-10-31T21:35:30.434Z",
+  "checkedAt": "2026-10-31T21:46:25.492Z",
   "checks": [
     "90 main starting points",
     "318 product-page entries",
     "363 product-group records",
+    "Family and numeric capacity search",
     "Family search",
     "Amber filter",
     "Approval requires checklist",
     "Notes, owner, reviewer and checklist survive reload",
     "Changed check invalidates approval",
+    "Notes backup import survives reload",
+    "Verified shared sheet linked",
     "Mobile layout fits viewport",
     "All four CSV downloads available"
   ],

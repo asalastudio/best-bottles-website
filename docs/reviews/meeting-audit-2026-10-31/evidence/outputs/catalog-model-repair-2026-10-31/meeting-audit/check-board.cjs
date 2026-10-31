@@ -6,7 +6,7 @@ const fs=require('fs'),path=require('path'),p=require('puppeteer-core');
  await page.select('#scope','pages');count=await page.$$eval('.item',els=>els.length);if(count!==318)throw Error('Page count '+count);checks.push('318 product-page entries');
  await page.select('#scope','all');count=await page.$$eval('.item',els=>els.length);if(count!==363)throw Error('Full count '+count);checks.push('363 product-group records');
  await page.type('#search','circle 15');
- // Search supports exact words in the title rather than requiring a family-size phrase.
+ const matches=await page.$$eval('.item',els=>els.map(e=>e.textContent));if(!matches.length||matches.some(x=>!/15 ml/i.test(x)))throw Error('Numeric search matched neck digits instead of capacity');checks.push('Family and numeric capacity search');
  await page.$eval('#search',e=>{e.value='circle';e.dispatchEvent(new Event('input',{bubbles:true}));});
  const circle=await page.$$eval('.item',els=>els.map(e=>e.textContent));if(!circle.length||circle.some(x=>!/circle/i.test(x)))throw Error('Search filtering failed');checks.push('Family search');
  await page.select('#scope','pages');await page.$eval('#search',e=>{e.value='';e.dispatchEvent(new Event('input',{bubbles:true}));});await page.select('#color','Amber');if(!await page.$('.item'))throw Error('Amber missing');checks.push('Amber filter');
@@ -19,6 +19,11 @@ const fs=require('fs'),path=require('path'),p=require('puppeteer-core');
  await page.$eval('#search',e=>{e.value='';e.dispatchEvent(new Event('input',{bubbles:true}));});await page.select('#scope','all');await page.$eval('[data-id="'+id+'"]',e=>e.click());
  if(await page.$eval('#notes',e=>e.value)!=='QA persistence check')throw Error('Notes not restored');if(await page.$eval('#decision',e=>e.value)!=='approved')throw Error('Decision not restored');checks.push('Notes, owner, reviewer and checklist survive reload');
  await page.select('[data-check="glass"]','fix');if(await page.$eval('#decision',e=>e.value)==='approved')throw Error('Approval not cleared');checks.push('Changed check invalidates approval');
+ const backup=path.join(__dirname,'shared','notes-import-test.json');fs.writeFileSync(backup,JSON.stringify({schema:'best-bottles-review-v1',reviewer:'Import test',reviews:{[id]:{decision:'fix',checks:{glass:'fix'},notes:'Imported geometry note',owner:'Test owner',reviewer:'Import test'}}}));
+ await (await page.$('#importFile')).uploadFile(backup);await page.waitForFunction(()=>document.getElementById('notice').textContent.includes('Imported 1'));
+ if(await page.$eval('#notes',e=>e.value)!=='Imported geometry note')throw Error('Notes import failed');
+ await page.reload({waitUntil:'networkidle2'});await page.select('#scope','all');await page.$eval('[data-id="'+id+'"]',e=>e.click());if(await page.$eval('#notes',e=>e.value)!=='Imported geometry note')throw Error('Imported notes not saved');checks.push('Notes backup import survives reload');
+ const shared=await page.$eval('#sharedSheet',e=>e.href);if(!shared.includes('1tzH1wFVkTsmDBmOZCxXqeltzV34XfFQLVZ033gfbo-Q'))throw Error('Shared sheet link missing');checks.push('Verified shared sheet linked');
  // Use a clean browser state in the delivered screenshots.
  await page.evaluate(()=>localStorage.removeItem('best-bottles-meeting-audit-20261031-v1'));await page.reload({waitUntil:'networkidle2'});await page.screenshot({path:path.join(__dirname,'board-desktop.png'),fullPage:true});
  await page.setViewport({width:390,height:844});await page.reload({waitUntil:'networkidle2'});if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('Mobile overflow');await page.screenshot({path:path.join(__dirname,'board-mobile.png'),fullPage:true});checks.push('Mobile layout fits viewport');
