@@ -1,0 +1,439 @@
+{
+  "date": "2026-10-30",
+  "status": "approved",
+  "scope": "Catalog heroes for SKUs the 30 Oct 2026 image audit found with no usable image (docs/audits/images-2026-10-30/no-image-skus.md)",
+  "generation": "Flattened master PSDs on the bone plate. No generation, no retouching, no added shadow.",
+  "canvas": [
+    1560,
+    1716
+  ],
+  "bone": "#F5F3EF",
+  "baselinePercent": 91,
+  "generator": "scripts/hero-families/psd-gap-heroes-2026-10-30.py",
+  "rules": {
+    "tassel": "21. Tassels/Updated Tassels, the folder batch 3 used for the approved GBCrclFrst50AnSpTslBlk; batch 3 sizing 1.13908 px per PSD px at 2080 wide (x0.75), glass foot on 91%, artwork centred; the PSDs draw the dip tube as a separate sharp layer behind the frosted bottle, so it is diffused (Gaussian 14 PSD px) as frosted glass scatters it, which leaves no visible line, as on the approved frosted Circle bulb siblings",
+    "elegant-100ml": "glass shoulder-to-foot span 57%, foot on 91% (docs/hero-families/elegant-2026-09-23)",
+    "component": "fit 1240 x 1280, lowest pixel on y=1561, centred; reproduces the approved CP13-415WhtSht hero to a mean 0.6/255"
+  },
+  "notes": {
+    "GBCrclFrst50AnSpTslGl": "No frosted 50 ml gold file exists in Updated Tassels. The gold sprayer, bulb and tassel layer of the clear 50 ml gold file sits on the frosted bottle of the ivory/gold file, seated by aligning the identical collars (right edge and collar foot); checked at full size.",
+    "CPKeyChnGld": "Identity inferred: production names it \"Cap/Closure Gold\" in cap-closure-SPECIAL; the library's gold key-chain heart cap is the match. The group stays held off the catalog until confirmed.",
+    "CPTslRed": "Identity inferred: production names it \"Cap/Closure Gold Red\" in cap-closure-SPECIAL; the library's red-tassel shiny-gold heart cap is the match. The group stays held off the catalog until confirmed.",
+    "8-425 caps": "Sourced from 6. 8-425 Bottles - CB/8245 Caps, the folder whose white cap matches the approved 8-425CpShortWhite hero; 20. Caps/20. 8-245 Caps holds a misfiled 13-415 cap photo."
+  },
+  "notRendered": {
+    "13-415CAP4SpryCuMt, 13-415CAP4SprySlMt, 13-415CAP4SpryGlSh, 18-415CAP4SpryMtGl, 18-415CAP4SpryShnBlk": "duplicate listings of sprayers already sold as CP13-415Spry* / Spry18-415*; held on purpose",
+    "GBTallRect10MtlRollPinkDo": "the only file is a clear bottle on an uncut white card; keying it would damage the glass",
+    "CP13-415GlSht, CP13-415SlSht, CP13-415CuSht, CP13-415GlMattSht, CP13-415SlMattSht, CP13-415BlkShShtMtl": "the library has only tall 13-415 caps; these are short caps",
+    "others": "no source in the PSD library (packaging, vial plugs, 13-425 / 22-400 / 24-400 / press-fit caps, amber dropper, white roll-on cap); need photography"
+  },
+  "rows": [
+    {
+      "sku": "GBCrclFrst50AnSpTslGl",
+      "groupSlug": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "graceSku": "GB-CIR-FRS-50ML-ASP-02",
+      "shopifyVariantId": "gid://shopify/ProductVariant/67575556276516",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7eqtk6frtr12ef2k4ymmyhmx8ez095",
+        "displayName": "50 ml Frosted Circle Vintage Bulb Spray Bottle with Tassel",
+        "color": "Frosted",
+        "capColor": "Frosted",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
+      },
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslGl.a0368e69a7cb.png",
+      "sha256": "a0368e69a7cb03163ffa86ae7e1760687e0a89c4f9465a9ef0c5b83cad993a8c",
+      "bytes": 996099,
+      "rule": "tassel",
+      "scale": 0.85431,
+      "offset": [
+        -270,
+        -37
+      ],
+      "sources": [
+        "21. Tassels/Updated Tassels/43. GBCrclFrst50AnSpTslIvyGl.psd (frosted bottle, dip tube)",
+        "21. Tassels/Updated Tassels/50. GBCrcl50AnSpTslGl.psd (gold sprayer, bulb and tassel)"
+      ],
+      "glassFootSrcY": 1871,
+      "dipTubeDiffusionPx": 14
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslIvyGl",
+      "groupSlug": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "graceSku": "GB-CIR-FRS-50ML-ASP-03",
+      "shopifyVariantId": "gid://shopify/ProductVariant/67575556079908",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7eqtk6frtr12ef2k4ymmyhmx8ez095",
+        "displayName": "50 ml Frosted Circle Vintage Bulb Spray Bottle with Tassel",
+        "color": "Frosted",
+        "capColor": "Frosted",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
+      },
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslIvyGl.8af506ef6558.png",
+      "sha256": "8af506ef6558798ece8a6c78b51814930ade8babc7fcb0f0938c70650bfc618b",
+      "bytes": 994640,
+      "rule": "tassel",
+      "scale": 0.85431,
+      "offset": [
+        -269,
+        -37
+      ],
+      "sources": [
+        "21. Tassels/Updated Tassels/43. GBCrclFrst50AnSpTslIvyGl.psd"
+      ],
+      "glassFootSrcY": 1871,
+      "dipTubeDiffusionPx": 14
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslIvySl",
+      "groupSlug": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "graceSku": "GB-CIR-FRS-50ML-ASP-04",
+      "shopifyVariantId": "gid://shopify/ProductVariant/67575556112676",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7eqtk6frtr12ef2k4ymmyhmx8ez095",
+        "displayName": "50 ml Frosted Circle Vintage Bulb Spray Bottle with Tassel",
+        "color": "Frosted",
+        "capColor": "Frosted",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
+      },
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslIvySl.38fc0ddc3aa4.png",
+      "sha256": "38fc0ddc3aa4341c1269a39274f86308c2f359448b745a94d36a0d1ecd6e2242",
+      "bytes": 963537,
+      "rule": "tassel",
+      "scale": 0.85431,
+      "offset": [
+        -238,
+        -104
+      ],
+      "sources": [
+        "21. Tassels/Updated Tassels/44. GBCrclFrst50AnSpTslIvySl.psd"
+      ],
+      "glassFootSrcY": 1950,
+      "dipTubeDiffusionPx": 14
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslLvn",
+      "groupSlug": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "graceSku": "GB-CIR-FRS-50ML-ASP-05",
+      "shopifyVariantId": "gid://shopify/ProductVariant/67575556047140",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7eqtk6frtr12ef2k4ymmyhmx8ez095",
+        "displayName": "50 ml Frosted Circle Vintage Bulb Spray Bottle with Tassel",
+        "color": "Frosted",
+        "capColor": "Frosted",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
+      },
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslLvn.3a37e3dc2ed2.png",
+      "sha256": "3a37e3dc2ed282098e571d93f7563e94ff6ca863acf237fd4a09a5ee724db887",
+      "bytes": 956531,
+      "rule": "tassel",
+      "scale": 0.85431,
+      "offset": [
+        -267,
+        -126
+      ],
+      "sources": [
+        "21. Tassels/Updated Tassels/42. GBCrclFrst50AnSpTslLvn.psd"
+      ],
+      "glassFootSrcY": 1975,
+      "dipTubeDiffusionPx": 14
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslMtSl",
+      "groupSlug": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "graceSku": "GB-CIR-FRS-50ML-ASP-06",
+      "shopifyVariantId": "gid://shopify/ProductVariant/67575556243748",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7eqtk6frtr12ef2k4ymmyhmx8ez095",
+        "displayName": "50 ml Frosted Circle Vintage Bulb Spray Bottle with Tassel",
+        "color": "Frosted",
+        "capColor": "Frosted",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
+      },
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslMtSl.41c91580b5e9.png",
+      "sha256": "41c91580b5e921499e4ea233ab08a5dbaffe2d22c2e4eebd044dca962dd144b9",
+      "bytes": 700458,
+      "rule": "tassel",
+      "scale": 0.85431,
+      "offset": [
+        -270,
+        17
+      ],
+      "sources": [
+        "21. Tassels/Updated Tassels/49. GBCrclFrst50AnSpTslMtSl.psd"
+      ],
+      "glassFootSrcY": 1808,
+      "dipTubeDiffusionPx": 14
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslPnk",
+      "groupSlug": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "graceSku": "GB-CIR-FRS-50ML-ASP-07",
+      "shopifyVariantId": "gid://shopify/ProductVariant/67575556178212",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7eqtk6frtr12ef2k4ymmyhmx8ez095",
+        "displayName": "50 ml Frosted Circle Vintage Bulb Spray Bottle with Tassel",
+        "color": "Frosted",
+        "capColor": "Frosted",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
+      },
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslPnk.d00561a907bb.png",
+      "sha256": "d00561a907bbee8e0ebdde097fc08f18d216cdc199e64094366b310f76b9b131",
+      "bytes": 935611,
+      "rule": "tassel",
+      "scale": 0.85431,
+      "offset": [
+        -317,
+        -58
+      ],
+      "sources": [
+        "21. Tassels/Updated Tassels/46. GBCrclFrst50AnSpTslPnk.psd"
+      ],
+      "glassFootSrcY": 1896,
+      "dipTubeDiffusionPx": 14
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslRed",
+      "groupSlug": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "graceSku": "GB-CIR-FRS-50ML-ASP-08",
+      "shopifyVariantId": "gid://shopify/ProductVariant/67575556210980",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7eqtk6frtr12ef2k4ymmyhmx8ez095",
+        "displayName": "50 ml Frosted Circle Vintage Bulb Spray Bottle with Tassel",
+        "color": "Frosted",
+        "capColor": "Frosted",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
+      },
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslRed.15330ca8c3eb.png",
+      "sha256": "15330ca8c3eb2c564eaa707621c740fae96e576d31bd0cc667c88b00fdd24807",
+      "bytes": 851919,
+      "rule": "tassel",
+      "scale": 0.85431,
+      "offset": [
+        -270,
+        -60
+      ],
+      "sources": [
+        "21. Tassels/Updated Tassels/47. GBCrclFrst50AnSpTslRed.psd"
+      ],
+      "glassFootSrcY": 1898,
+      "dipTubeDiffusionPx": 14
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslWht",
+      "groupSlug": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "graceSku": "GB-CIR-FRS-50ML-ASP-09",
+      "shopifyVariantId": "gid://shopify/ProductVariant/67575556145444",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7eqtk6frtr12ef2k4ymmyhmx8ez095",
+        "displayName": "50 ml Frosted Circle Vintage Bulb Spray Bottle with Tassel",
+        "color": "Frosted",
+        "capColor": "Frosted",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
+      },
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslWht.5a1531a02085.png",
+      "sha256": "5a1531a020852ebf4998c958cd62327399dc84fbdff24cf2e90c85190d0cd65e",
+      "bytes": 817033,
+      "rule": "tassel",
+      "scale": 0.85431,
+      "offset": [
+        -307,
+        -41
+      ],
+      "sources": [
+        "21. Tassels/Updated Tassels/45. GBCrclFrst50AnSpTslWht.psd"
+      ],
+      "glassFootSrcY": 1876,
+      "dipTubeDiffusionPx": 14
+    },
+    {
+      "sku": "GBElgFrst100RdcrMtSl",
+      "groupSlug": "elegant-100ml-frosted-18-415-reducer",
+      "graceSku": "GB-ELG-FRS-100ML-RDC-MSLV",
+      "shopifyVariantId": "gid://shopify/ProductVariant/67575871963428",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh76x9h6v1v7w7ba1tp99k48qh8dr082",
+        "displayName": "100 ml Frosted Elegant Reducer Bottle",
+        "color": "Frosted",
+        "capColor": "Matte Silver",
+        "applicator": "Reducer",
+        "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
+      },
+      "url": "/images/catalog/psd-gap-2026-10-30/GBElgFrst100RdcrMtSl.7274285ff94e.png",
+      "sha256": "7274285ff94e878a057e8e46109be2483a9422789fde247828ca470bfd525f54",
+      "bytes": 197123,
+      "rule": "elegant-100ml",
+      "scale": 0.737091,
+      "offset": [
+        315,
+        212
+      ],
+      "sources": [
+        "2.  18-415 Bottles /20. Elegant Frosted 100ml/1. Elegant Frst 100ml PSD/9. GBElgFrst100RdcrMtSl.psd"
+      ],
+      "glassFootSrcY": 1831,
+      "glassShoulderSrcY": 504
+    },
+    {
+      "sku": "8-425CpShortBlack",
+      "groupSlug": "cap-closure-8-425",
+      "graceSku": "CMP-CAP-BLK-8-425",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343625117988",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh79efgbsfvb5r8pet88m34g158ds5ee",
+        "displayName": "Cap & Closure \u2014 Thread 8-425",
+        "color": null,
+        "capColor": "Black",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
+      },
+      "url": "/images/catalog/psd-gap-2026-10-30/8-425CpShortBlack.0516fe7b2092.png",
+      "sha256": "0516fe7b209284751414b97859aa8e8a4ae446458aed7e133f232a0c9befe59b",
+      "bytes": 372862,
+      "rule": "component",
+      "scale": 2.80543,
+      "offset": [
+        -208,
+        -358
+      ],
+      "sources": [
+        "6.   8-425 Bottles - CB/8245 Caps/1. CP8-425ShortBlack.psd"
+      ],
+      "keyedWhiteCard": true
+    },
+    {
+      "sku": "CP8-425TallBlack",
+      "groupSlug": "cap-closure-8-425",
+      "graceSku": "CMP-CAP-BLK-8425-T",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343625150756",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh79efgbsfvb5r8pet88m34g158ds5ee",
+        "displayName": "Cap & Closure \u2014 Thread 8-425",
+        "color": null,
+        "capColor": "Black",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
+      },
+      "url": "/images/catalog/psd-gap-2026-10-30/CP8-425TallBlack.1b0505bbba1e.png",
+      "sha256": "1b0505bbba1ea872cf6a87c05caacf577c1787b7b83f502c4c6eb04558210205",
+      "bytes": 347487,
+      "rule": "component",
+      "scale": 2.942529,
+      "offset": [
+        -209,
+        -452
+      ],
+      "sources": [
+        "6.   8-425 Bottles - CB/8245 Caps/5. 8-425CpTallBlack.psd"
+      ],
+      "keyedWhiteCard": true
+    },
+    {
+      "sku": "CP18-415ShnBlkTall",
+      "groupSlug": "cap-closure-18-415",
+      "graceSku": "CMP-CAP-SBLK-18415-T",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343655854372",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7efvxkmtbe33f042c57smywd8ds6rs",
+        "displayName": "Cap & Closure \u2014 Thread 18-415",
+        "color": null,
+        "capColor": "Shiny Black",
+        "applicator": null,
+        "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
+      },
+      "url": "/images/catalog/psd-gap-2026-10-30/CP18-415ShnBlkTall.cfc29dbfed24.png",
+      "sha256": "cfc29dbfed242d8c28a6aa45554fd69fdcc0076f8af715c8a29a1a9f3a74961b",
+      "bytes": 186905,
+      "rule": "component",
+      "scale": 5.311203,
+      "offset": [
+        132,
+        286
+      ],
+      "sources": [
+        "20. Caps/6. 18-415 Caps/2. CP18-415ShnBlkTall.psd"
+      ],
+      "keyedWhiteCard": true
+    },
+    {
+      "sku": "CPKeyChnGld",
+      "groupSlug": "cap-closure-SPECIAL",
+      "graceSku": "CMP-CLS-GLD-02",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343700779300",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7b0yv6mzrmvfykvtnrhka3e98dsccj",
+        "displayName": "Cap & Closure \u2014 Thread SPECIAL",
+        "color": null,
+        "capColor": "Gold",
+        "applicator": "Cap/Closure",
+        "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
+      },
+      "url": "/images/catalog/psd-gap-2026-10-30/CPKeyChnGld.04a5b3d51207.png",
+      "sha256": "04a5b3d512071148fe8f1fca5cd418768235013fe65481c95a82289388d59573",
+      "bytes": 411981,
+      "rule": "component",
+      "scale": 3.009709,
+      "offset": [
+        -337,
+        -82
+      ],
+      "sources": [
+        "20. Caps/21. Hearts 8-245 Caps/2. CP8-425GlChainShortShnGlCap.psd"
+      ]
+    },
+    {
+      "sku": "CPTslRed",
+      "groupSlug": "cap-closure-SPECIAL",
+      "graceSku": "CMP-CLS-GDRD",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343700812068",
+      "production": {
+        "deployment": "precise-raccoon-123",
+        "groupId": "kh7b0yv6mzrmvfykvtnrhka3e98dsccj",
+        "displayName": "Cap & Closure \u2014 Thread SPECIAL",
+        "color": null,
+        "capColor": "Red",
+        "applicator": "Cap/Closure",
+        "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
+      },
+      "url": "/images/catalog/psd-gap-2026-10-30/CPTslRed.943a22f600e9.png",
+      "sha256": "943a22f600e99dc5c268a4f78503b4863080a9f3ad4f7d7cdf1a3b8805968be9",
+      "bytes": 368404,
+      "rule": "component",
+      "scale": 2.719298,
+      "offset": [
+        -297,
+        207
+      ],
+      "sources": [
+        "20. Caps/21. Hearts 8-245 Caps/4. CP8-425RedTslShortShnGlCap.psd"
+      ]
+    }
+  ],
+  "revisions": [
+    {
+      "date": "2026-10-30",
+      "change": "Re-rendered all 14. Jordan flagged the dip tubes on the 8 tassel bottles. Cause: the first render pasted through the alpha mask onto a transparent layer, which darkened semi-transparent pixels, so the frosted glass went grey (body ~222) and the opaque tube behind it read as a hard white streak. Compositing now uses premultiplied resize and true alpha (body ~238), and the tube is diffused. Tube contrast against the surrounding glass fell from ~6.8 to ~0.5 levels."
+    }
+  ],
+  "approvedBy": "Jordan, in chat, 30 Oct 2026 (\"Approve and merge\"), after reviewing the re-rendered sheet"
+}

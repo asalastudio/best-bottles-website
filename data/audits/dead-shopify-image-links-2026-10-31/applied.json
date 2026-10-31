@@ -1,0 +1,22 @@
+{
+  "appliedAt": "2026-10-31T04:20:00Z",
+  "deployment": "precise-raccoon-123 (production)",
+  "mutation": "imageReconciliation:retireDeadImageLinks",
+  "sourceLabel": "image-audit-2026-10-30:dead-shopify-404",
+  "plan": "plan.json in this folder (every patch re-probed 404 immediately before apply; identical to the 2026-10-30 dry run)",
+  "result": {
+    "requested": 1144,
+    "repointed": 1142,
+    "cleared": 2,
+    "skippedChanged": 0
+  },
+  "verification": {
+    "reprobeAfterApply": {
+      "deadFields": 0,
+      "liveFields": 1048
+    },
+    "replacementUrlsServing": "1142 of 1142 returned 200 image/webp before apply"
+  },
+  "reverse": "Each patch's `expect` is the old imageUrl. For the 1,142 repointed rows, re-running the mutation with expect and next swapped restores it. The 2 cleared rows (Plastic, CJBlu3) cannot be restored that way: their current value is null and the mutation's `expect` must be a string, so restoring them needs a direct patch of imageUrl to the `expect` recorded in plan.json (both old URLs returned 404). Where legacyShopifyImageUrl was empty, the old URL is also kept there.",
+  "approvedBy": "Jordan, in chat, 30 Oct 2026 (the audit's recommended order, step 2)"
+}
