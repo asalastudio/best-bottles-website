@@ -88,7 +88,12 @@ export default async function proxy(req: NextRequest, event: NextFetchEvent) {
     requestHeaders.set(LOCALE_HEADER, locale);
     requestHeaders.set(PATHNAME_HEADER, originalPath);
 
-    const clerkRes = await clerk(req, event);
+    // Clerk validates keys before invoking the callback. Honor the existing
+    // disabled-auth setting before entering the SDK for credential-free previews.
+    // Production media builds require authentication enabled in build-config.ts.
+    const clerkRes = CLERK_ENABLED ? await clerk(req, event) : NextResponse.next({
+        request: { headers: requestHeaders },
+    });
     if (clerkRes && clerkRes.status >= 300 && clerkRes.status < 400) {
         return clerkRes;
     }

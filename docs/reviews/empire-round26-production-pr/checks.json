@@ -1,0 +1,40 @@
+{
+  "statusAtCommit": "Draft PR preparation; full CI and both production-mode builds required before merge review",
+  "base": "c0a861f85b0508304343c4202ccd2fa59c248f53",
+  "release": "empire-round26-03baed749353",
+  "localNode": "24.13.1",
+  "completed": {
+    "approvedRecipeReplay": "26 of 26 match approved captures",
+    "immutableAssetHashes": "57 of 57 match",
+    "releaseCounts": [
+      0,
+      2,
+      14,
+      26
+    ],
+    "heldFamilies": "Diva and Round lotion kits and catalog heroes remain on baseline",
+    "renderers": "26 variants through Builder and PDP views; through-glass clipping, material handling and measured body registration",
+    "controls": "Production approvals, wrong targets, inherited backend keys and stale Builder revisions tested",
+    "realBuildWrapper": "Preflight runs before Next and blocks unapproved production; no Convex invocation",
+    "productionPublicQueries": "26 source recipes accepted; 26 product and Shopify variant identities match",
+    "lint": "0 errors, 85 warnings in the full repository run",
+    "convexDiff": "No changes",
+    "productionDeployment": "Unchanged: dpl_FZdQy7vDFtxNDCTqgZxMTWQTmk2G",
+    "disabledAuthReviewGuard": "3 tests pass: disabled review bypass, enabled Clerk path and POST header preservation; production build requires auth enabled"
+  },
+  "fullValidation": "Use the final PR head's CI check and media-release-smoke artifact. Workflow runs typecheck, lint, all tests, off/all builds and compiled-app smoke checks with placeholder services.",
+  "localRunCaveats": [
+    "The unchanged main baseline hit the focused-PDP cold-import timeout; its isolated rerun passed all 4 tests.",
+    "Full candidate tests alongside compilation hit that timeout and the existing 120-second four-family reconciliation timeout. No failing assertions remain in the focused release tests.",
+    "CI separates tests from builds and uses two test workers with a 15-second default test timeout; existing explicit test timeouts are retained.",
+    "The initial off build compiled and typechecked, but its HTTP smoke check exposed the existing disabled-auth Clerk initialization issue. The focused guard is tested; CI must rebuild and smoke-test the corrected commit."
+  ],
+  "notPerformed": [
+    "Focused-commit hosted preview",
+    "Production staging",
+    "Production promotion",
+    "Backend deployment",
+    "Production settings changes",
+    "Live checkout"
+  ]
+}

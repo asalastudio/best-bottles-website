@@ -34,7 +34,7 @@ describe("the family list streamed into /matrix", () => {
     });
 
     it("falls back to the families route when the stream failed", async () => {
-        const fetcher = vi.fn(async () => ({ ok: true, json: async () => ({ families: [{ family: "Diva", groups: 3 }] }) }));
+        const fetcher = vi.fn(async () => ({ ok: true, headers: new Headers({ "X-BB-Media-Revision": "media-off-v1" }), json: async () => ({ families: [{ family: "Diva", groups: 3 }] }) }));
         vi.stubGlobal("fetch", fetcher);
         vi.stubGlobal("requestIdleCallback", (cb: () => void) => { cb(); return 1; });
         const { el, unmount } = await render(<Families streamed={Promise.resolve(null)} />);
@@ -55,7 +55,7 @@ describe("the family list streamed into /matrix", () => {
 
 describe("bottle requests shared by the tile prefetch and the pick", () => {
     it("asks once for a bottle that was hovered and then picked", async () => {
-        const fetcher = vi.fn(async (url: string) => ({ ok: true, json: async () => url.includes("/kits") ? { kits: { A: null } } : { configurations: [] } }));
+        const fetcher = vi.fn(async (url: string) => ({ ok: true, headers: new Headers({ "X-BB-Media-Revision": "media-off-v1" }), json: async () => url.includes("/kits") ? { kits: { A: null } } : { configurations: [] } }));
         vi.stubGlobal("fetch", fetcher);
         const { prefetchBody, loadBodyKits, loadBodyConfigurations } = await import("@/components/bottle-builder/builder-requests");
         prefetchBody("Cylinder", "cylinder-9ml|17-415|Glass Bottle", null);
@@ -64,16 +64,16 @@ describe("bottle requests shared by the tile prefetch and the pick", () => {
         await expect(loadBodyConfigurations("Cylinder", "cylinder-9ml|17-415|Glass Bottle", null)).resolves.toEqual([]);
         expect(fetcher).toHaveBeenCalledTimes(2);
         expect(fetcher.mock.calls.map(([url]) => url)).toEqual([
-            "/api/bottle-builder/bodies?family=Cylinder&bodyId=cylinder-9ml%7C17-415%7CGlass%20Bottle",
-            "/api/bottle-builder/kits?family=Cylinder&bodyId=cylinder-9ml%7C17-415%7CGlass%20Bottle&media=elegant-photo-hardware-v5",
+            "/api/bottle-builder/bodies?family=Cylinder&bodyId=cylinder-9ml%7C17-415%7CGlass%20Bottle&mediaRevision=media-off-v1",
+            "/api/bottle-builder/kits?family=Cylinder&bodyId=cylinder-9ml%7C17-415%7CGlass%20Bottle&media=elegant-photo-hardware-v5&mediaRevision=media-off-v1",
         ]);
     });
 
     it("forgets a failed or malformed response, so trying again makes a new request", async () => {
         const fetcher = vi.fn()
             .mockResolvedValueOnce({ ok: false, status: 503, json: async () => ({}) })
-            .mockResolvedValueOnce({ ok: true, json: async () => ({ configurations: "nope" }) })
-            .mockResolvedValueOnce({ ok: true, json: async () => ({ configurations: [] }) });
+            .mockResolvedValueOnce({ ok: true, headers: new Headers({ "X-BB-Media-Revision": "media-off-v1" }), json: async () => ({ configurations: "nope" }) })
+            .mockResolvedValueOnce({ ok: true, headers: new Headers({ "X-BB-Media-Revision": "media-off-v1" }), json: async () => ({ configurations: [] }) });
         vi.stubGlobal("fetch", fetcher);
         const { loadBodyConfigurations } = await import("@/components/bottle-builder/builder-requests");
         await expect(loadBodyConfigurations("Cylinder", "b", null)).rejects.toThrow();

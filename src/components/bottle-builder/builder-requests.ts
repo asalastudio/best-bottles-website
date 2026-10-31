@@ -1,3 +1,5 @@
+import { reportMediaRevisionMismatch } from "./media-revision-notice";
+import { builderMediaUrl, mediaRevision } from "@/lib/media-release/release";
 import type { BuilderConfiguration, BuilderKit } from "@/lib/bottle-builder/model";
 
 /** One request per bottle per page view, shared by the tile prefetch and the
@@ -7,9 +9,14 @@ import type { BuilderConfiguration, BuilderKit } from "@/lib/bottle-builder/mode
 const requests = new Map<string, Promise<unknown>>();
 
 function load<T>(url: string, read: (data: unknown) => T | null): Promise<T> {
+    url = builderMediaUrl(url);
     let request = requests.get(url) as Promise<T> | undefined;
     if (!request) {
         request = fetch(url, { headers: { Accept: "application/json" } }).then(async response => {
+            if (response.status === 409 || (response.ok && response.headers.get('X-BB-Media-Revision') !== mediaRevision())) {
+                reportMediaRevisionMismatch();
+                throw Error('Bottle images have changed. Refresh this page.');
+            }
             if (!response.ok) throw Error(`Builder request failed: ${response.status}`);
             const value = read(await response.json());
             if (value === null) throw Error("Invalid builder response");

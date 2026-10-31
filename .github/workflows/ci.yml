@@ -13,13 +13,13 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22.17.0
+          node-version: 24.13.1
           cache: npm
 
       - name: Install dependencies
@@ -32,11 +32,11 @@ jobs:
         run: npm run lint
 
       - name: Unit tests
-        run: npx vitest run
+        run: npx vitest run --maxWorkers=2 --testTimeout=15000
 
-      - name: Production build
+      - name: Production-mode build, release off
         # Match the Webpack compiler used by scripts/vercel-build.sh.
-        run: npm run build -- --webpack
+        run: bash scripts/vercel-build.sh
         env:
           # Build with placeholder public config so no live service is required.
           # Not VERCEL_ENV=production, so src/lib/seo.ts does not throw on the
@@ -52,3 +52,54 @@ jobs:
           # constructs during the /_not-found prerender. No queries run at build
           # time, so it never connects — a well-formed URL is all that's needed.
           NEXT_PUBLIC_CONVEX_URL: https://ci-placeholder.convex.cloud
+
+      - name: Smoke compiled off build
+        run: |
+          node node_modules/next/dist/bin/next start --hostname 127.0.0.1 --port 3021 > /tmp/bb-smoke-off-server.log 2>&1 &
+          task_server_pid=$!
+          trap 'kill "$task_server_pid" 2>/dev/null || true' EXIT
+          node scripts/media-release/smoke-built.mjs http://127.0.0.1:3021 off
+        env:
+          BB_MEDIA_LOCAL_REVIEW: "true"
+          NEXT_PUBLIC_BB_MEDIA_RELEASE: off
+          NEXT_PUBLIC_SITE_URL: https://ci.example.com
+          NEXT_PUBLIC_CLERK_ENABLED: "false"
+          NEXT_PUBLIC_SANITY_PROJECT_ID: gh97irjh
+          NEXT_PUBLIC_SANITY_DATASET: production
+          NEXT_PUBLIC_CONVEX_URL: https://ci-placeholder.convex.cloud
+
+      - name: Production-mode build, all 26 variants
+        run: bash scripts/vercel-build.sh
+        env:
+          BB_MEDIA_LOCAL_REVIEW: "true"
+          NEXT_PUBLIC_BB_MEDIA_RELEASE: empire-round26-03baed749353:all
+          NEXT_PUBLIC_SITE_URL: https://ci.example.com
+          NEXT_PUBLIC_CLERK_ENABLED: "false"
+          NEXT_PUBLIC_SANITY_PROJECT_ID: gh97irjh
+          NEXT_PUBLIC_SANITY_DATASET: production
+          NEXT_PUBLIC_CONVEX_URL: https://ci-placeholder.convex.cloud
+
+      - name: Smoke compiled all build
+        run: |
+          node node_modules/next/dist/bin/next start --hostname 127.0.0.1 --port 3021 > /tmp/bb-smoke-all-server.log 2>&1 &
+          task_server_pid=$!
+          trap 'kill "$task_server_pid" 2>/dev/null || true' EXIT
+          node scripts/media-release/smoke-built.mjs http://127.0.0.1:3021 all
+        env:
+          BB_MEDIA_LOCAL_REVIEW: "true"
+          NEXT_PUBLIC_BB_MEDIA_RELEASE: empire-round26-03baed749353:all
+          NEXT_PUBLIC_SITE_URL: https://ci.example.com
+          NEXT_PUBLIC_CLERK_ENABLED: "false"
+          NEXT_PUBLIC_SANITY_PROJECT_ID: gh97irjh
+          NEXT_PUBLIC_SANITY_DATASET: production
+          NEXT_PUBLIC_CONVEX_URL: https://ci-placeholder.convex.cloud
+
+      - name: Preserve compiled-build smoke receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: media-release-smoke
+          path: |
+            docs/reviews/empire-round26-production-pr/local-smoke-*.json
+            /tmp/bb-smoke-*-server.log
+          if-no-files-found: ignore
