@@ -1,0 +1,53 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { isVisibleCatalogGroup, isHiddenCatalogGroup, hasCatalogSourceHold } from '@/lib/products/catalog-listing-visibility';
+const out=path.resolve('outputs/catalog-model-repair-2026-10-31/meeting-audit');
+const inventory=JSON.parse(fs.readFileSync(out+'/inventory.json','utf8'));
+const source=JSON.parse(fs.readFileSync('outputs/catalog-model-repair-2026-10-31/sources/catalog-production.json','utf8'));
+const prior=new Map(source.rows.map((r:any)=>[r.websiteSku,r]));
+const cobalt=JSON.parse(fs.readFileSync('outputs/catalog-model-repair-2026-10-31/cobalt-followup/per-sku-defects.json','utf8'));
+const manifests=['vial-2ml-source','vial-4ml-measured','cylinder5-profiles','small-sprayers','elegant60-reducer','catalog-followups'];
+const kits:any={};for(const name of manifests)Object.assign(kits,JSON.parse(fs.readFileSync('public/local-kits/'+name+'-2026-10-31/kits.json','utf8')).rows);
+const rows=inventory.groups.map((g:any)=>{
+ const variants=inventory.rows.filter((r:any)=>r.productGroupId===g._id);
+ const local=variants.filter((r:any)=>kits[r.websiteSku]);
+ const representative=variants.find((r:any)=>r.websiteSku===g.primaryWebsiteSku)??local[0]??variants[0];
+ const master=representative && kits[representative.websiteSku];
+ const audit=cobalt.filter((r:any)=>variants.some((v:any)=>v.websiteSku===r.sku));
+ const issues=[...new Set(audit.flatMap((r:any)=>r.issues))] as string[];
+ const notes:string[]=[];
+ let evidence='Not visually reviewed', evidenceLink='';
+ if(audit.length){evidence='Representative captured';evidenceLink='/reviews/catalog-followup-2026-10-31/index.html#cobalt';}
+ if(local.length){evidence='Local update checked';notes.push(`${local.length} of ${variants.length} SKU configurations have local review kits. This is not final approval of every finish.`);evidenceLink='/reviews/catalog-followup-2026-10-31/index.html';}
+ if(g.slug.startsWith('vial-2ml-')&&g.neckThreadSize==='8-425'){notes.push('Measured 35 × 11.64 mm clear/amber artwork; 40.24% full-glass height. Both cap finishes checked.');}
+ if(g.slug.startsWith('vial-4ml-')&&!g.slug.endsWith('dropper')){notes.push('Four-color shorter-neck images; 45 × 14.60 mm, 7 mm neck, 51.74% full-glass height. Both cap finishes checked.');evidenceLink='/reviews/vial-4ml-short-neck-2026-10-31/index.html';}
+ if(g.slug==='vial-2ml-amber-13-425'){notes.push('Separate short 22 × 16 mm vial. Native image generation, not Sunburst. Legacy description says 1.5 ml; capacity field says 2 ml.');}
+ if(g.family==='Cylinder'&&g.capacityMl===5){notes.push('Approved clear/cobalt v19 body retained. Old glass overlays removed from roll-ons; 71 builder configurations compared.');}
+ if(g.slug==='tulip-5ml-amber-13-415-finemist'){notes.push('Eight sprayer finishes: thin Blender tube with slight bend, wider exploded spacing, fixed body scale.');}
+ if(g.family==='Cylinder'&&g.capacityMl===9&&g.slug.endsWith('finemist')){evidence='Earlier family review';notes.push('Earlier shared clear-overcap and frosted/swirl corrections. Reconfirm this exact color and closure in the meeting.');}
+ if(g.family==='Flair')notes.push('Priority family requested by Jordan. Full visual sign-off is still required.');
+ const bottle=/Bottle|Atomizer|Jar/.test(g.category||'');
+ const visible=isVisibleCatalogGroup({...g,variantCount:variants.length},variants);
+ const exceptions=[];if(!variants.length)exceptions.push('No linked SKU records');if(isHiddenCatalogGroup(g.slug))exceptions.push('Intentionally hidden browse group');if(hasCatalogSourceHold(g.slug))exceptions.push('Source-image hold');if(g.category==='Internal')exceptions.push('Internal record');
+ if(issues.length)evidence='Known follow-up';
+ const detail:any=representative?prior.get(representative.websiteSku):null;
+ const isSmallSpray=g.family==='Cylinder'&&[3,3.3,4].includes(g.capacityMl)&&g.neckThreadSize==='12mm';
+ const title=isSmallSpray?`${g.capacityMl===4?'4':'3.3'} ml Clear Cylinder Fine-Mist Spray Bottle`:g.displayName;
+ return {id:g.slug,title,family:g.family||'Unassigned',capacity:g.capacityMl??null,color:g.color||'Mixed / unspecified',neck:g.neckThreadSize||'Unspecified',category:g.category,fitments:[...new Set(variants.map((v:any)=>v.applicator||'Screw cap / bare').filter(Boolean))],bodyKey:[g.family,g.capacityMl,g.neckThreadSize].join('|'),bottle,visible,exceptions,evidence,issues,notes,evidenceLink,sku:representative?.websiteSku||'',url:'http://localhost:3010/products/'+encodeURIComponent(g.slug)+(representative?'?sku='+encodeURIComponent(representative.websiteSku):''),sourceUrl:detail?.productUrl||'',sizing:master?.glassSizing?`${master.glassSizing.heightPct}% ${master.glassSizing.landmarkY!==undefined?'shoulder-to-base':'full glass'}; ${master.glassSizing.baselinePct}% baseline`:'Use approved catalog curve and documented family exceptions',builder:isSmallSpray?'Product-page only, intentionally excluded':'Check if offered on the product page',dimensions:detail?{height:detail.heightWithoutCap||'',diameter:detail.diameter||''}:{},variants:variants.map((v:any)=>({sku:v.websiteSku,cap:v.capColor||'',fitment:v.applicator||'',url:'http://localhost:3010/products/'+encodeURIComponent(g.slug)+'?sku='+encodeURIComponent(v.websiteSku)}))};
+});
+const priority=(r:any)=>r.family==='Flair'?0:r.capacity===5?1:r.issues.length?2:/amber|cobalt|blue/i.test(r.color)?3:4;
+rows.sort((a:any,b:any)=>priority(a)-priority(b)||a.family.localeCompare(b.family)||(a.capacity??0)-(b.capacity??0)||a.neck.localeCompare(b.neck)||a.color.localeCompare(b.color)||a.id.localeCompare(b.id));
+const containers=rows.filter((r:any)=>r.bottle&&r.visible);
+const bodies=[...new Set(containers.map((r:any)=>r.bodyKey))].map(key=>{
+ const pages=containers.filter((r:any)=>r.bodyKey===key);
+ const main=pages.find((r:any)=>r.color==='Clear'&&r.evidence==='Local update checked')??pages.find((r:any)=>r.color==='Clear')??pages[0];
+ return {key,family:main.family,capacity:main.capacity,neck:main.neck,representative:main.id,colors:[...new Set(pages.map((r:any)=>r.color))],pages:pages.map((r:any)=>r.id),skus:pages.reduce((n:any,r:any)=>n+r.variants.length,0)};
+});
+const data={generatedAt:new Date().toISOString(),inventoryAt:inventory.collectedAt,referenceSnapshotAt:source.collectedAt,rows,bodies,unlinkedSkus:inventory.rows.filter((r:any)=>!inventory.groups.some((g:any)=>g._id===r.productGroupId)).map((r:any)=>r.websiteSku),checks:[['identity','Correct bottle, size, color and product title'],['glass','Body geometry, neck, shoulder, base and realistic glass'],['scale','Approved scale, stable centerline and baseline'],['fitment','Tube, ball, insert or reducer present and seated'],['closure','Cap finish, cap seating and complete frame'],['views','Cap off, cap on, exploded and mobile layout'],['builder','Builder handoff and selected bottle, where offered']]};
+fs.writeFileSync(out+'/audit-data.json',JSON.stringify(data));
+const cell=(x:any)=>'"'+String(x??'').replaceAll('"','""')+'"';
+const csv=(headers:string[],values:any[][])=>'\ufeff'+[headers,...values].map(row=>row.map(cell).join(',')).join('\r\n')+'\r\n';
+fs.writeFileSync(out+'/product-page-audit.csv',csv(['Product page','Family','Capacity ml','Color','Neck','Category','SKU count','Representative SKU','Local product URL','Original reference URL','Evidence state','Known issues','Implementation notes','Catalog exception','Meeting decision','Reviewer','Owner',...data.checks.map(c=>c[1]),'Review notes'],rows.map((r:any)=>[r.title,r.family,r.capacity,r.color,r.neck,r.category,r.variants.length,r.sku,r.url,r.sourceUrl,r.evidence,r.issues.join('; '),r.notes.join('; '),r.exceptions.join('; '),'Not reviewed','','',...data.checks.map(()=> 'Unchecked'),''])));
+fs.writeFileSync(out+'/main-bottle-index.csv',csv(['Family','Capacity ml','Neck','Colors','Product pages','SKU configurations','Representative URL'],bodies.map(b=>[b.family,b.capacity,b.neck,b.colors.join('; '),b.pages.length,b.skus,rows.find((r:any)=>r.id===b.representative).url])));
+fs.writeFileSync(out+'/sku-crosswalk.csv',csv(['SKU','Product page','Family','Capacity ml','Color','Fitment','Cap','Exact product URL'],rows.flatMap((r:any)=>r.variants.map((v:any)=>[v.sku,r.id,r.family,r.capacity,r.color,v.fitment,v.cap,v.url]))));
+console.log({allGroups:rows.length,visibleBottlePages:containers.length,bodyFamilies:bodies.length,variantRows:rows.reduce((n:any,r:any)=>n+r.variants.length,0),unlinked:data.unlinkedSkus.length,exceptions:rows.filter((r:any)=>r.exceptions.length).length});
