@@ -15,8 +15,8 @@
  * traffic it exists for.
  *
  * Structural destination checks live in tests/legacy-redirects.test.ts.
- * Live HTTP checks use scripts/verify-legacy-redirects.mjs. That guard exists because the first version
- * of this map — hand-written during the May audit — pointed 47 of its 135
+ * Live HTTP checks use scripts/verify-legacy-redirects.mjs. These guards exist
+ * because the first version of this map — hand-written during the May audit — pointed 47 of its 135
  * destinations at pages that were never built, chiefly /collections/<slug>
  * routes. Collections are catalogue FILTERS (/catalog?shop=<key>), not pages.
  * A 301 into a 404 is worse than no redirect at all: it spends the link equity
