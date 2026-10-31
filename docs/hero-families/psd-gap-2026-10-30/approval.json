@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "status": "awaiting Jordan's visual approval; merging the pull request releases them",
+  "status": "approved",
   "scope": "Catalog heroes for SKUs the 30 Oct 2026 image audit found with no usable image (docs/audits/images-2026-10-30/no-image-skus.md)",
   "generation": "Flattened master PSDs on the bone plate. No generation, no retouching, no added shadow.",
   "canvas": [
@@ -434,5 +434,6 @@
       "date": "2026-10-30",
       "change": "Re-rendered all 14. Jordan flagged the dip tubes on the 8 tassel bottles. Cause: the first render pasted through the alpha mask onto a transparent layer, which darkened semi-transparent pixels, so the frosted glass went grey (body ~222) and the opaque tube behind it read as a hard white streak. Compositing now uses premultiplied resize and true alpha (body ~238), and the tube is diffused. Tube contrast against the surrounding glass fell from ~6.8 to ~0.5 levels."
     }
-  ]
+  ],
+  "approvedBy": "Jordan, in chat, 30 Oct 2026 (\"Approve and merge\"), after reviewing the re-rendered sheet"
 }

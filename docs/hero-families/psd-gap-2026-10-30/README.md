@@ -16,8 +16,8 @@ all fourteen.
 | 8-425CpShortBlack, CP8-425TallBlack, CP18-415ShnBlkTall | Component box, as the approved caps |
 | CPKeyChnGld, CPTslRed | Component box; identity inferred from the SKU names, group still held |
 
-Status: awaiting Jordan's visual approval. Merging the pull request that adds them
-releases them. Group cards do not change: release rows and earlier registry rows
+Status: approved by Jordan on 30 Oct 2026 after the dip-tube re-render, and
+released with the pull request that adds them. Group cards do not change: release rows and earlier registry rows
 still win, so each new hero shows only when its own SKU is the one pictured (a
 selected finish, a Line items row, the cart). The one group that gains a card image,
 `cap-closure-SPECIAL`, stays held off the catalog by `hasCatalogSourceHold`.
