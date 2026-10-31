@@ -11,7 +11,9 @@ plate, 1560 x 1716, #F5F3EF, framed by the rule its group already uses:
            artwork centred on x=780. GBCrclFrst50AnSpTslGl has no frosted file in that
            folder, so its gold sprayer layer comes from the clear 50 ml gold file and
            sits on the frosted bottle of the ivory/gold file, seated by aligning the
-           two identical collars (right edge and collar foot).
+           two identical collars (right edge and collar foot). The dip tube, a separate
+           sharp layer behind the frosted bottle, is diffused as frosted glass would
+           scatter it (see frosted_tube).
 - elegant  Elegant 100 ml frosted: glass shoulder-to-foot span 57% of the height, foot
            on 91% (docs/hero-families/elegant-2026-09-23/README.md), centred.
 - component caps: product scaled to fit 1240 x 1280, lowest pixel on y=1561, centred
@@ -22,7 +24,7 @@ Reads PSDs from $BB_PSD_MASTER_ROOT (default: the shared BB-PSD-Files-Master lin
 """
 import hashlib, json, os, sys
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageFilter
 from psd_tools import PSDImage
 
 ROOT = os.environ.get("BB_PSD_MASTER_ROOT", "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master")
@@ -45,13 +47,32 @@ def flatten(psd, swap=None):
     return canvas
 
 def place(rgba, scale, anchor_y_src, anchor_y_dst, center_x_src):
-    full = rgba.resize((round(rgba.width * scale), round(rgba.height * scale)), Image.LANCZOS)
+    # Resize premultiplied and composite with true alpha. An earlier version pasted
+    # through the alpha mask onto a transparent layer, which darkened every
+    # semi-transparent pixel: frosted glass went grey (~221) and the opaque dip tube
+    # behind it read as a hard white streak.
+    full = rgba.convert("RGBa").resize((round(rgba.width * scale), round(rgba.height * scale)), Image.LANCZOS).convert("RGBA")
     ox, oy = round(CX - center_x_src * scale), round(anchor_y_dst - anchor_y_src * scale)
-    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    layer.paste(full, (ox, oy), full)
+    sx, sy, dx, dy = max(0, -ox), max(0, -oy), max(0, ox), max(0, oy)
+    w, h = min(full.width - sx, W - dx), min(full.height - sy, H - dy)
     out = Image.new("RGBA", (W, H), BONE + (255,))
-    out.alpha_composite(layer)
+    out.alpha_composite(full.crop((sx, sy, sx + w, sy + h)), dest=(dx, dy))
     return out.convert("RGB"), {"scale": round(scale, 6), "offset": [ox, oy]}
+
+TUBE_DIFFUSION_PX = 14
+
+def frosted_tube(layer):
+    """The PSDs draw the dip tube as a separate sharp layer behind the frosted bottle.
+    Frosted glass scatters what is behind it, so a crisp line cannot show through.
+    Diffuse it (Gaussian, in PSD pixels) so it reads as the approved frosted Circle
+    bulb siblings do: no visible line, at most a soft band."""
+    assert layer.name == "Layer 4 copy" and layer.width < 150, "expected the narrow dip-tube layer"
+    pad = 4 * TUBE_DIFFUSION_PX
+    im = layer.composite().convert("RGBA")
+    canvas = Image.new("RGBA", (im.width + 2 * pad, im.height + 2 * pad), (0, 0, 0, 0))
+    canvas.paste(im, (pad, pad))
+    soft = canvas.convert("RGBa").filter(ImageFilter.GaussianBlur(TUBE_DIFFUSION_PX)).convert("RGBA")
+    return soft, layer.left - pad, layer.top - pad
 
 def alpha_bbox(rgba, cut=8):
     return rgba.getchannel("A").point(lambda v: 255 if v > cut else 0).getbbox()
@@ -74,18 +95,21 @@ def tassel(colour):
         ivory = next(l for l in layers(base) if l.name == "Layer 9")
         sprayer = next(l for l in layers(gold) if l.name == "Layer 10")
         (ir, ib), (gr, gb) = collar(ivory), collar(sprayer)
-        rgba = flatten(base, swap={"Layer 9": (sprayer.composite().convert("RGBA"), sprayer.left + ir - gr, sprayer.top + ib - gb)})
+        tube = next(l for l in layers(base) if l.name == "Layer 4 copy")
+        rgba = flatten(base, swap={"Layer 9": (sprayer.composite().convert("RGBA"), sprayer.left + ir - gr, sprayer.top + ib - gb),
+                                   "Layer 4 copy": frosted_tube(tube)})
         sources = [f"{UPDATED}/43. GBCrclFrst50AnSpTslIvyGl.psd (frosted bottle, dip tube)", f"{UPDATED}/50. GBCrcl50AnSpTslGl.psd (gold sprayer, bulb and tassel)"]
         psd = base
     else:
         name = next(f for f in os.listdir(f"{ROOT}/{UPDATED}") if f.endswith(f". GBCrclFrst50AnSpTsl{colour}.psd"))
         psd = PSDImage.open(f"{ROOT}/{UPDATED}/{name}")
-        rgba = flatten(psd)
+        tube = next(l for l in layers(psd) if l.name == "Layer 4 copy")
+        rgba = flatten(psd, swap={"Layer 4 copy": frosted_tube(tube)})
         sources = [f"{UPDATED}/{name}"]
     foot = bottle_layer(psd).bbox[3] - 9
     x0, _, x1, _ = alpha_bbox(rgba)
     img, meta = place(rgba, TASSEL_SCALE, foot, BASE_Y, (x0 + x1) / 2)
-    return img, {**meta, "rule": "tassel", "sources": sources, "glassFootSrcY": foot}
+    return img, {**meta, "rule": "tassel", "sources": sources, "glassFootSrcY": foot, "dipTubeDiffusionPx": TUBE_DIFFUSION_PX}
 
 def elegant(rel):
     psd = PSDImage.open(f"{ROOT}/{rel}")

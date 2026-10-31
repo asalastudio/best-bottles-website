@@ -3,7 +3,9 @@
 Fourteen SKUs the 30 Oct image audit found with no usable catalog image now have a
 hero in `src/lib/products/catalog-heroes.json`. Each is a flattened master PSD on the
 bone plate (1560 x 1716, #F5F3EF) with no generation, retouching or added shadow,
-framed by the rule its group already uses. `approval.json` records the source files,
+framed by the rule its group already uses. On the eight tassel bottles the dip tube, a separate
+sharp layer behind the frosted glass in the PSDs, is diffused the way frosted glass scatters it,
+so no line shows through, as on the approved frosted Circle bulb bottles. `approval.json` records the source files,
 transform, production identity and sha256 of every image; `review-sheet.png` shows
 all fourteen.
 

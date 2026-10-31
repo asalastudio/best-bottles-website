@@ -11,7 +11,7 @@
   "baselinePercent": 91,
   "generator": "scripts/hero-families/psd-gap-heroes-2026-10-30.py",
   "rules": {
-    "tassel": "21. Tassels/Updated Tassels, the folder batch 3 used for the approved GBCrclFrst50AnSpTslBlk; batch 3 sizing 1.13908 px per PSD px at 2080 wide (x0.75), glass foot on 91%, artwork centred",
+    "tassel": "21. Tassels/Updated Tassels, the folder batch 3 used for the approved GBCrclFrst50AnSpTslBlk; batch 3 sizing 1.13908 px per PSD px at 2080 wide (x0.75), glass foot on 91%, artwork centred; the PSDs draw the dip tube as a separate sharp layer behind the frosted bottle, so it is diffused (Gaussian 14 PSD px) as frosted glass scatters it, which leaves no visible line, as on the approved frosted Circle bulb siblings",
     "elegant-100ml": "glass shoulder-to-foot span 57%, foot on 91% (docs/hero-families/elegant-2026-09-23)",
     "component": "fit 1240 x 1280, lowest pixel on y=1561, centred; reproduces the approved CP13-415WhtSht hero to a mean 0.6/255"
   },
@@ -42,9 +42,9 @@
         "applicator": "Vintage Bulb Sprayer with Tassel",
         "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
       },
-      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslGl.6cb2ff317610.png",
-      "sha256": "6cb2ff31761049af5f086a5ecffc3687d0ca3eeda1ea12b4e61ba992d5966301",
-      "bytes": 982260,
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslGl.a0368e69a7cb.png",
+      "sha256": "a0368e69a7cb03163ffa86ae7e1760687e0a89c4f9465a9ef0c5b83cad993a8c",
+      "bytes": 996099,
       "rule": "tassel",
       "scale": 0.85431,
       "offset": [
@@ -55,7 +55,8 @@
         "21. Tassels/Updated Tassels/43. GBCrclFrst50AnSpTslIvyGl.psd (frosted bottle, dip tube)",
         "21. Tassels/Updated Tassels/50. GBCrcl50AnSpTslGl.psd (gold sprayer, bulb and tassel)"
       ],
-      "glassFootSrcY": 1871
+      "glassFootSrcY": 1871,
+      "dipTubeDiffusionPx": 14
     },
     {
       "sku": "GBCrclFrst50AnSpTslIvyGl",
@@ -71,9 +72,9 @@
         "applicator": "Vintage Bulb Sprayer with Tassel",
         "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
       },
-      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslIvyGl.e49bfbd88699.png",
-      "sha256": "e49bfbd886994a092c5118ff9542782aba3c1888a1ccbb5d981d7bde36eeaeeb",
-      "bytes": 984601,
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslIvyGl.8af506ef6558.png",
+      "sha256": "8af506ef6558798ece8a6c78b51814930ade8babc7fcb0f0938c70650bfc618b",
+      "bytes": 994640,
       "rule": "tassel",
       "scale": 0.85431,
       "offset": [
@@ -83,7 +84,8 @@
       "sources": [
         "21. Tassels/Updated Tassels/43. GBCrclFrst50AnSpTslIvyGl.psd"
       ],
-      "glassFootSrcY": 1871
+      "glassFootSrcY": 1871,
+      "dipTubeDiffusionPx": 14
     },
     {
       "sku": "GBCrclFrst50AnSpTslIvySl",
@@ -99,9 +101,9 @@
         "applicator": "Vintage Bulb Sprayer with Tassel",
         "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
       },
-      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslIvySl.7f43f555dc2d.png",
-      "sha256": "7f43f555dc2d6acabaddaef95601bd282441e7c57a9899e26436e80baa5066a2",
-      "bytes": 952840,
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslIvySl.38fc0ddc3aa4.png",
+      "sha256": "38fc0ddc3aa4341c1269a39274f86308c2f359448b745a94d36a0d1ecd6e2242",
+      "bytes": 963537,
       "rule": "tassel",
       "scale": 0.85431,
       "offset": [
@@ -111,7 +113,8 @@
       "sources": [
         "21. Tassels/Updated Tassels/44. GBCrclFrst50AnSpTslIvySl.psd"
       ],
-      "glassFootSrcY": 1950
+      "glassFootSrcY": 1950,
+      "dipTubeDiffusionPx": 14
     },
     {
       "sku": "GBCrclFrst50AnSpTslLvn",
@@ -127,9 +130,9 @@
         "applicator": "Vintage Bulb Sprayer with Tassel",
         "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
       },
-      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslLvn.e5c838ac6a56.png",
-      "sha256": "e5c838ac6a5681a3bd8e7e6119c72dbf86c8e749ef7bbbb5de62351b76b8a46e",
-      "bytes": 941390,
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslLvn.3a37e3dc2ed2.png",
+      "sha256": "3a37e3dc2ed282098e571d93f7563e94ff6ca863acf237fd4a09a5ee724db887",
+      "bytes": 956531,
       "rule": "tassel",
       "scale": 0.85431,
       "offset": [
@@ -139,7 +142,8 @@
       "sources": [
         "21. Tassels/Updated Tassels/42. GBCrclFrst50AnSpTslLvn.psd"
       ],
-      "glassFootSrcY": 1975
+      "glassFootSrcY": 1975,
+      "dipTubeDiffusionPx": 14
     },
     {
       "sku": "GBCrclFrst50AnSpTslMtSl",
@@ -155,9 +159,9 @@
         "applicator": "Vintage Bulb Sprayer with Tassel",
         "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
       },
-      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslMtSl.f9c3fa83f5a0.png",
-      "sha256": "f9c3fa83f5a03cd9402e53acf1ee2418b57cfab4acd59aedf0abe50937135886",
-      "bytes": 685885,
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslMtSl.41c91580b5e9.png",
+      "sha256": "41c91580b5e921499e4ea233ab08a5dbaffe2d22c2e4eebd044dca962dd144b9",
+      "bytes": 700458,
       "rule": "tassel",
       "scale": 0.85431,
       "offset": [
@@ -167,7 +171,8 @@
       "sources": [
         "21. Tassels/Updated Tassels/49. GBCrclFrst50AnSpTslMtSl.psd"
       ],
-      "glassFootSrcY": 1808
+      "glassFootSrcY": 1808,
+      "dipTubeDiffusionPx": 14
     },
     {
       "sku": "GBCrclFrst50AnSpTslPnk",
@@ -183,9 +188,9 @@
         "applicator": "Vintage Bulb Sprayer with Tassel",
         "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
       },
-      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslPnk.f8a16bb7012d.png",
-      "sha256": "f8a16bb7012db151d061117b673e1531e7ffebe3bcfb47c1aa7e9b4b350665c3",
-      "bytes": 923493,
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslPnk.d00561a907bb.png",
+      "sha256": "d00561a907bbee8e0ebdde097fc08f18d216cdc199e64094366b310f76b9b131",
+      "bytes": 935611,
       "rule": "tassel",
       "scale": 0.85431,
       "offset": [
@@ -195,7 +200,8 @@
       "sources": [
         "21. Tassels/Updated Tassels/46. GBCrclFrst50AnSpTslPnk.psd"
       ],
-      "glassFootSrcY": 1896
+      "glassFootSrcY": 1896,
+      "dipTubeDiffusionPx": 14
     },
     {
       "sku": "GBCrclFrst50AnSpTslRed",
@@ -211,9 +217,9 @@
         "applicator": "Vintage Bulb Sprayer with Tassel",
         "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
       },
-      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslRed.094db8ba72fb.png",
-      "sha256": "094db8ba72fbceda3bff9deb171c0cded21b3449130eeefdc11660f80ec73bd6",
-      "bytes": 837400,
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslRed.15330ca8c3eb.png",
+      "sha256": "15330ca8c3eb2c564eaa707621c740fae96e576d31bd0cc667c88b00fdd24807",
+      "bytes": 851919,
       "rule": "tassel",
       "scale": 0.85431,
       "offset": [
@@ -223,7 +229,8 @@
       "sources": [
         "21. Tassels/Updated Tassels/47. GBCrclFrst50AnSpTslRed.psd"
       ],
-      "glassFootSrcY": 1898
+      "glassFootSrcY": 1898,
+      "dipTubeDiffusionPx": 14
     },
     {
       "sku": "GBCrclFrst50AnSpTslWht",
@@ -239,9 +246,9 @@
         "applicator": "Vintage Bulb Sprayer with Tassel",
         "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
       },
-      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslWht.85236101bc8f.png",
-      "sha256": "85236101bc8f027ae0938419959071c016a42a2ef0b732f0ac0e5b65e48b8aa2",
-      "bytes": 816662,
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslWht.5a1531a02085.png",
+      "sha256": "5a1531a020852ebf4998c958cd62327399dc84fbdff24cf2e90c85190d0cd65e",
+      "bytes": 817033,
       "rule": "tassel",
       "scale": 0.85431,
       "offset": [
@@ -251,7 +258,8 @@
       "sources": [
         "21. Tassels/Updated Tassels/45. GBCrclFrst50AnSpTslWht.psd"
       ],
-      "glassFootSrcY": 1876
+      "glassFootSrcY": 1876,
+      "dipTubeDiffusionPx": 14
     },
     {
       "sku": "GBElgFrst100RdcrMtSl",
@@ -267,9 +275,9 @@
         "applicator": "Reducer",
         "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
       },
-      "url": "/images/catalog/psd-gap-2026-10-30/GBElgFrst100RdcrMtSl.b4b31e2eef86.png",
-      "sha256": "b4b31e2eef860e115ab2130b35ee7c16a821ef1ed376a4e1dc1a0ba5d76bff32",
-      "bytes": 197764,
+      "url": "/images/catalog/psd-gap-2026-10-30/GBElgFrst100RdcrMtSl.7274285ff94e.png",
+      "sha256": "7274285ff94e878a057e8e46109be2483a9422789fde247828ca470bfd525f54",
+      "bytes": 197123,
       "rule": "elegant-100ml",
       "scale": 0.737091,
       "offset": [
@@ -296,9 +304,9 @@
         "applicator": null,
         "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
       },
-      "url": "/images/catalog/psd-gap-2026-10-30/8-425CpShortBlack.eefe86bab441.png",
-      "sha256": "eefe86bab4412c6aa6780983571e7ac3cc9d523f912c0d9e0b58def97dc340d9",
-      "bytes": 369272,
+      "url": "/images/catalog/psd-gap-2026-10-30/8-425CpShortBlack.0516fe7b2092.png",
+      "sha256": "0516fe7b209284751414b97859aa8e8a4ae446458aed7e133f232a0c9befe59b",
+      "bytes": 372862,
       "rule": "component",
       "scale": 2.80543,
       "offset": [
@@ -324,9 +332,9 @@
         "applicator": null,
         "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
       },
-      "url": "/images/catalog/psd-gap-2026-10-30/CP8-425TallBlack.79dfc85e2ef1.png",
-      "sha256": "79dfc85e2ef15381caddcc7be8a6fb7755ab7e00a8bf71fc4fca55e17dd65908",
-      "bytes": 338672,
+      "url": "/images/catalog/psd-gap-2026-10-30/CP8-425TallBlack.1b0505bbba1e.png",
+      "sha256": "1b0505bbba1ea872cf6a87c05caacf577c1787b7b83f502c4c6eb04558210205",
+      "bytes": 347487,
       "rule": "component",
       "scale": 2.942529,
       "offset": [
@@ -352,9 +360,9 @@
         "applicator": null,
         "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
       },
-      "url": "/images/catalog/psd-gap-2026-10-30/CP18-415ShnBlkTall.a6f91df859f6.png",
-      "sha256": "a6f91df859f66d3f318dc10213758c3919f9c8409f087445bfcda7f09ea09733",
-      "bytes": 186016,
+      "url": "/images/catalog/psd-gap-2026-10-30/CP18-415ShnBlkTall.cfc29dbfed24.png",
+      "sha256": "cfc29dbfed242d8c28a6aa45554fd69fdcc0076f8af715c8a29a1a9f3a74961b",
+      "bytes": 186905,
       "rule": "component",
       "scale": 5.311203,
       "offset": [
@@ -380,9 +388,9 @@
         "applicator": "Cap/Closure",
         "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
       },
-      "url": "/images/catalog/psd-gap-2026-10-30/CPKeyChnGld.d390c400f359.png",
-      "sha256": "d390c400f359f8dd14e5f67363f26d424ca107ecc093857f2d70252c171734a2",
-      "bytes": 391366,
+      "url": "/images/catalog/psd-gap-2026-10-30/CPKeyChnGld.04a5b3d51207.png",
+      "sha256": "04a5b3d512071148fe8f1fca5cd418768235013fe65481c95a82289388d59573",
+      "bytes": 411981,
       "rule": "component",
       "scale": 3.009709,
       "offset": [
@@ -407,9 +415,9 @@
         "applicator": "Cap/Closure",
         "verifiedBy": "products:searchCatalog exact websiteSku, one holder"
       },
-      "url": "/images/catalog/psd-gap-2026-10-30/CPTslRed.de9e56affcb7.png",
-      "sha256": "de9e56affcb754b1fbb3d247ee37c6681c4a14222d8d76bd42af449011cf3bc2",
-      "bytes": 357423,
+      "url": "/images/catalog/psd-gap-2026-10-30/CPTslRed.943a22f600e9.png",
+      "sha256": "943a22f600e99dc5c268a4f78503b4863080a9f3ad4f7d7cdf1a3b8805968be9",
+      "bytes": 368404,
       "rule": "component",
       "scale": 2.719298,
       "offset": [
@@ -419,6 +427,12 @@
       "sources": [
         "20. Caps/21. Hearts 8-245 Caps/4. CP8-425RedTslShortShnGlCap.psd"
       ]
+    }
+  ],
+  "revisions": [
+    {
+      "date": "2026-10-30",
+      "change": "Re-rendered all 14. Jordan flagged the dip tubes on the 8 tassel bottles. Cause: the first render pasted through the alpha mask onto a transparent layer, which darkened semi-transparent pixels, so the frosted glass went grey (body ~222) and the opaque tube behind it read as a hard white streak. Compositing now uses premultiplied resize and true alpha (body ~238), and the tube is diffused. Tube contrast against the surrounding glass fell from ~6.8 to ~0.5 levels."
     }
   ]
 }
