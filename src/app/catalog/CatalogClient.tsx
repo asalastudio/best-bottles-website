@@ -283,6 +283,9 @@ function ProductGroupCard({
     const defaultCap = previews.find((variant) => defaultSku && (variant.websiteSku === defaultSku || variant.graceSku === defaultSku)) ?? previews[0] ?? null;
     const [pickedCapId, setPickedCapId] = useState<string | null>(null);
     const pickedCap = previews.find((variant) => variant.id === pickedCapId && variant.id !== defaultCap?.id && capPurchases[variant.id]) ?? null;
+    // The picked finish's own approved photograph, for cards whose hero has no
+    // calibrated cap swap (see CatalogCardPreview).
+    const pickedHero = pickedCap?.websiteSku ? getCatalogHero(group.slug, [pickedCap], pickedCap.websiteSku) : null;
     const purchaseVariant = pickedCap ? capPurchases[pickedCap.id] : defaultPurchase;
     const capKind = COMPONENT_CATEGORIES.has(group.category) ? null : catalogCapKind(group.applicatorTypes ?? [], previews);
     const capPhoto = useCatalogCapPhotos({ capKind, neck: group.neckThreadSize, variants: previews });
@@ -310,6 +313,7 @@ function ProductGroupCard({
             <CatalogCardPreview
                 title={customerDisplayName}
                 catalogHero={assembledVialImage ? null : displayHero}
+                selectedHero={pickedHero}
                 imageUrl={assembledVialImage ?? defaultImageUrl}
                 heroHoverImageUrl={assembledVialImage ? null : group.heroHoverImageUrl}
                 href={pickedCap ? productCardVariantHref(href, pickedCap) : href}
