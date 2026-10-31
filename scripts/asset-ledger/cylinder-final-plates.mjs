@@ -3,8 +3,9 @@ import {readFile,writeFile,open,rename,unlink,realpath} from 'node:fs/promises';
 import path from 'node:path';
 import {livePlates,remoteHash} from './plate-contact-sheet.mjs';
 import {readCylinderFinalRelease} from './cylinder-final-release.mjs';
+import { PSD_MASTER_ROOT } from "../lib/local-paths.mjs";
 
-const MASTER='/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master';
+const MASTER=PSD_MASTER_ROOT;
 const packetPath='docs/reviews/cylinder-final38-2026-09-13/prepared-v2.json';
 const decisionPath='data/asset-ledger/cylinder-final38-decisions.json';
 const reviewUrl='/reviews/cylinder-final38-2026-09-13/index.html';

@@ -4,6 +4,7 @@ import {access, mkdir, readFile, writeFile} from 'node:fs/promises';
 import path from 'node:path';
 import {createHash, randomUUID} from 'node:crypto';
 import sharp from 'sharp';
+import { PSD_MASTER_ROOT } from "../lib/local-paths.mjs";
 
 const root = process.cwd();
 const releaseId = 'tulip-plate-release-2026-09-13';
@@ -14,7 +15,7 @@ const reviewPackets = [
 ];
 const preparedManifestFile = 'dist/paper-doll/technical-reconciliation-2026-09-13/tulip/plates/manifest.json';
 const holdEvidenceFile = 'data/asset-ledger/missing-plate-acquisition-2026-09-13.json';
-const masterRoot = '/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master';
+const masterRoot = PSD_MASTER_ROOT;
 const clearUncappedFolder = '5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD ';
 const amberUncappedFolder = '5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD ';
 const clearCappedFolder = '5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD ';

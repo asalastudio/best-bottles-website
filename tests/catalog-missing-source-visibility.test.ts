@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { isMissingHeroSource, isVisibleCatalogGroup } from '../src/lib/products/catalog-listing-visibility';
+import { hasCatalogSourceHold, isMissingHeroSource, isVisibleCatalogGroup } from '../src/lib/products/catalog-listing-visibility';
 import { filterVariantsForProductGroup } from '../src/lib/productVariantIntegrity';
 import { getCatalogCardVariantPreviews } from '../src/lib/products/product-card-variant-previews';
 import { sanitizeCatalogResult, applyVisibleCatalogSummary } from '../src/lib/catalogServer';
@@ -29,6 +29,13 @@ describe('missing source publication hold',()=>{
   expect(isVisibleCatalogGroup({slug:'lotion-bottle-30ml-clear',variantCount:0})).toBe(false);
   expect(isVisibleCatalogGroup({slug:'lotion-bottle-30ml-clear',variantCount:1},[])).toBe(false);
   expect(isVisibleCatalogGroup({slug:'lotion-bottle-30ml-clear',variantCount:1})).toBe(true);
+ });
+ it('holds the press-fit and specialty cap groups under their production slugs',()=>{
+  for(const slug of ['cap-closure-PRESS-FIT','cap-closure-SPECIAL','cap-closure-Press-Fit','cap-closure-Specialty']){
+   expect(hasCatalogSourceHold(slug)).toBe(true);
+   expect(isVisibleCatalogGroup({slug,variantCount:6})).toBe(false);
+  }
+  expect(hasCatalogSourceHold('cap-closure-18-415')).toBe(false);
  });
  it('takes the discontinued LBMetalSilver1oz group off the catalog',()=>{
   expect(isVisibleCatalogGroup({slug:'lotion-bottle-30ml-clear-18mm',variantCount:1},[{websiteSku:'LBMetalSilver1oz'}])).toBe(false);

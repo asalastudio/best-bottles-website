@@ -21,9 +21,10 @@ const headCell =
 /**
  * A product thumbnail that yields rather than shouts.
  *
- * Many rows still carry Shopify URLs for files that were deleted, so a 404 is
- * ordinary here. A grid of broken-image glyphs reads as a broken page, so a
- * failed load falls back to a plain tile. Plain <img> rather than next/image:
+ * The row's image comes through the card's chain (approved hero, plate,
+ * reconciled local image, usable Convex URL); only the last step can still be
+ * a Shopify file that was deleted. A grid of broken-image glyphs reads as a
+ * broken page, so a failed load falls back to a plain tile. Plain <img> rather than next/image:
  * these URLs span several hosts, and routing them through /_next/image buys
  * nothing for a 44px tile while adding a host allowlist to maintain.
  */

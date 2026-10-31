@@ -8,6 +8,7 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {ConvexHttpClient} from 'convex/browser';
 import {createBlobStore,verifyPublicUrl} from './lib/store-blob.mjs';
+import { PSD_MASTER_ROOT } from "../lib/local-paths.mjs";
 const argv=process.argv.slice(2);const value=k=>argv[argv.indexOf(k)+1];
 const batch=path.resolve(value('--batch'));const release=path.resolve(value('--release'));
 const mode=value('--mode');if(!['plates','kits'].includes(mode))throw Error('--mode plates|kits required');
@@ -43,12 +44,12 @@ for(const row of rows){
   if(row.mediaStatus!=='validated_local')throw Error('Unvalidated plate '+sku);
   const evidence=row.evidence;
   if(evidence.returnedSku!==sku||hash(await fs.readFile(evidence.file))!==evidence.sha256)throw Error('Evidence drift '+sku);
-  const source=row.source??{kind:'master',path:path.join('/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master',row.plate.sourceRelPath),sha256:row.plate.sourceSha256};
+  const source=row.source??{kind:'master',path:path.join(PSD_MASTER_ROOT,row.plate.sourceRelPath),sha256:row.plate.sourceSha256};
   if(hash(await fs.readFile(source.path))!==source.sha256)throw Error('Source drift '+sku);
   const roles={};for(const [field,role] of [['plate','front'],['thumb','thumb'],['plateCapOff','frontCapOff'],['thumbCapOff','thumbCapOff']])roles[role]=addAsset(path.join(batch,'plates'),row[field],role);
   prepared.push({sku,websiteSku:sku,graceSku:p.graceSku,familyId:row.familyId,...roles,
    views:(oldBySku.get(sku)?.views??[]).filter(v=>v.source==='photo'),
-   source:{library:source.kind==='master'?'master':'legacy-exact',path:source.kind==='master'?path.relative('/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master',source.path):source.url,psdSha256:source.kind==='master'?source.sha256:null,psdSha256CapOff:row.plateCapOff?.sourceSha256??null},
+   source:{library:source.kind==='master'?'master':'legacy-exact',path:source.kind==='master'?path.relative(PSD_MASTER_ROOT,source.path):source.url,psdSha256:source.kind==='master'?source.sha256:null,psdSha256CapOff:row.plateCapOff?.sourceSha256??null},
    builder:{name:'reviewed-family-release',version:'1.0.0',builtAt:Date.now()},storageProvider:'vercel-blob'});
  }else{
   if(!(row.gates?.parity?.ok || (row.visualReview?.approved && row.gates?.parity?.mean<=12 && row.gates?.parity?.tailOver40<=.08))||!row.parts.some(p=>p.slot==='body'))throw Error('Invalid kit '+sku);

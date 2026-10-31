@@ -5,12 +5,13 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import sharp from 'sharp';
 import {readStandards,saveStandardDecision,localReviewRequestAllowed,lockReadiness,appearancePreview} from '../scripts/asset-ledger/standard-review.mjs';
+import {PSD_MASTER_ROOT} from '../scripts/lib/local-paths.mjs';
 
 const sourceMock=vi.hoisted(()=>({directory:''}));
 vi.mock('node:fs/promises',async importOriginal=>{
  const actual=await importOriginal<typeof import('node:fs/promises')>();
  return {...actual,realpath:async(file:string)=>{
-  const master='/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master';
+  const {PSD_MASTER_ROOT:master}=await import('../scripts/lib/local-paths.mjs');
   return actual.realpath(sourceMock.directory&&String(file).startsWith(master)?String(file).replace(master,sourceMock.directory):file);
  }};
 });
@@ -68,7 +69,7 @@ describe('local bottle-standard decisions',()=>{
   const source=Buffer.from('Test-only source bytes');await writeFile(path.join(sourceMock.directory,'source.psd'),source);
   await saveStandardDecision(root,{id:s.id,revisionToken:s.revisionToken,action:'request-sizing',percent:0,note:'Keep the verified glass size'});
   let {document}=await readStandards(root);const current=document.standards[0];current.productGroupIds=['group-1'];
-  current.preparedReview={requestId:current.sizingRequest.id,standardVersion:1,referenceSha256:s.reference.sha256,measurement:'full_glass',bareGlass:{...s.reference,identityVerified:true,verifiedBy:'Test fixture',verifiedAt:'2026-09-12',sourcePath:'/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/source.psd',sourceSha256:createHash('sha256').update(source).digest('hex')},before:s.reference,after:s.reference,canvas:{width:20,height:22},glass:{rimY:10,baseY:20.02},beforeGlass:{rimY:10,baseY:20.02},baselinePercent:91,registrationVerified:true,assemblyBoundsVerified:true,scopeVerified:true,productGroupIds:['group-1']};
+  current.preparedReview={requestId:current.sizingRequest.id,standardVersion:1,referenceSha256:s.reference.sha256,measurement:'full_glass',bareGlass:{...s.reference,identityVerified:true,verifiedBy:'Test fixture',verifiedAt:'2026-09-12',sourcePath:`${PSD_MASTER_ROOT}/source.psd`,sourceSha256:createHash('sha256').update(source).digest('hex')},before:s.reference,after:s.reference,canvas:{width:20,height:22},glass:{rimY:10,baseY:20.02},beforeGlass:{rimY:10,baseY:20.02},baselinePercent:91,registrationVerified:true,assemblyBoundsVerified:true,scopeVerified:true,productGroupIds:['group-1']};
   const file=path.join(root,'data/asset-ledger/bottle-standards.json');await writeFile(file,JSON.stringify(document));
   current.preparedReview.kind='bare-glass-standard';current.preparedReview.referenceImage=s.reference;
   await writeFile(file,JSON.stringify(document));

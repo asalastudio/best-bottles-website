@@ -1076,6 +1076,30 @@ export const searchCatalog = query({
         const nextCursor = nextOffset < sorted.length ? String(nextOffset) : null;
         const visibleIds = new Set(items.map((group) => String(group._id)));
 
+        // The line-item view draws each row from the same chain as the visual
+        // card (approved hero, then the SKU's paper-doll plate, then the Convex
+        // URL). The card fetches plates itself; the row cannot, so the search
+        // carries the plate thumbnail for line requests only. One lookup per
+        // SKU, newest plate wins, the same rule as productPlates.forSkus.
+        const plateThumbs = new Map<string, string | null>();
+        const plateThumbFor = async (variant: { websiteSku?: string | null; graceSku?: string | null }) => {
+            if (args.view !== "line") return null;
+            for (const raw of [variant.websiteSku, variant.graceSku]) {
+                const sku = raw?.trim();
+                if (!sku) continue;
+                if (!plateThumbs.has(sku)) {
+                    const rows = [
+                        ...(await ctx.db.query("productPlates").withIndex("by_websiteSku", (q) => q.eq("websiteSku", sku)).collect()),
+                        ...(await ctx.db.query("productPlates").withIndex("by_graceSku", (q) => q.eq("graceSku", sku)).collect()),
+                    ];
+                    const newest = rows.sort((a, b) => b.importedAt - a.importedAt)[0];
+                    plateThumbs.set(sku, newest?.thumb.url ?? null);
+                }
+                const hit = plateThumbs.get(sku);
+                if (hit) return hit;
+            }
+            return null;
+        };
         const variantPreviewRows = await Promise.all(items.map(async (group) => {
             const variants = await ctx.db
                 .query("products")
@@ -1083,13 +1107,14 @@ export const searchCatalog = query({
                 .collect();
             return {
                 groupId: String(group._id),
-                variants: variants.map((variant) => ({
+                variants: await Promise.all(variants.map(async (variant) => ({
                     id: String(variant._id),
                     itemName: variant.itemName ?? null,
                     websiteSku: variant.websiteSku ?? null,
                     graceSku: variant.graceSku ?? null,
                     imageUrl: variant.imageUrl ?? null,
                     imageUrlCapOff: variant.imageUrlCapOff ?? null,
+                    plateThumbUrl: await plateThumbFor(variant),
                     color: variant.color ?? null,
                     applicator: variant.applicator ?? null,
                     capColor: variant.capColor ?? null,
@@ -1105,7 +1130,7 @@ export const searchCatalog = query({
                     webPrice10pc: variant.webPrice10pc ?? null,
                     webPrice12pc: variant.webPrice12pc ?? null,
                     priceTiers: variant.priceTiers ?? null,
-                })),
+                }))),
             };
         }));
 

@@ -18,6 +18,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CatalogProductGrid from "@/components/catalog/CatalogProductGrid";
 import { useGrace } from "@/components/useGrace";
 import { getCatalogHero, getCatalogHeroProductHref, resolveLiveCatalogCardHero, type CatalogHero } from "@/lib/products/catalog-heroes";
+import { resolveCatalogLineThumbnail } from "@/lib/products/catalog-line-items";
 import { isOneMlVialGroup, oneMlVialApplicator } from "@/lib/products/one-ml-vial-applicators";
 import { isOptimizableImageUrl } from "@/lib/products/optimizable-image";
 import CatalogCardPreview from "@/components/catalog/CatalogCardPreview";
@@ -282,6 +283,9 @@ function ProductGroupCard({
     const defaultCap = previews.find((variant) => defaultSku && (variant.websiteSku === defaultSku || variant.graceSku === defaultSku)) ?? previews[0] ?? null;
     const [pickedCapId, setPickedCapId] = useState<string | null>(null);
     const pickedCap = previews.find((variant) => variant.id === pickedCapId && variant.id !== defaultCap?.id && capPurchases[variant.id]) ?? null;
+    // The picked finish's own approved photograph, for cards whose hero has no
+    // calibrated cap swap (see CatalogCardPreview).
+    const pickedHero = pickedCap?.websiteSku ? getCatalogHero(group.slug, [pickedCap], pickedCap.websiteSku) : null;
     const purchaseVariant = pickedCap ? capPurchases[pickedCap.id] : defaultPurchase;
     const capKind = COMPONENT_CATEGORIES.has(group.category) ? null : catalogCapKind(group.applicatorTypes ?? [], previews);
     const capPhoto = useCatalogCapPhotos({ capKind, neck: group.neckThreadSize, variants: previews });
@@ -309,6 +313,7 @@ function ProductGroupCard({
             <CatalogCardPreview
                 title={customerDisplayName}
                 catalogHero={assembledVialImage ? null : displayHero}
+                selectedHero={pickedHero}
                 imageUrl={assembledVialImage ?? defaultImageUrl}
                 heroHoverImageUrl={assembledVialImage ? null : group.heroHoverImageUrl}
                 href={pickedCap ? productCardVariantHref(href, pickedCap) : href}
@@ -1127,6 +1132,17 @@ export default function CatalogClient({
 
         return next;
     }, [variantPreviewRows, visibleProducts, skuMap]);
+    // The line-item rows resolve their image as the card does (approved hero,
+    // plate, reconciled local, usable Convex URL) through the shared resolver,
+    // so the two views agree on every group.
+    const lineItemThumbnailMap = useMemo(() => {
+        const next = new Map<string, string>();
+        for (const group of visibleProducts) {
+            const url = resolveCatalogLineThumbnail(group, variantSourceMap.get(group._id) ?? [], skuMap.get(group._id));
+            if (url) next.set(group._id, url);
+        }
+        return next;
+    }, [visibleProducts, variantSourceMap, skuMap]);
     const customerNameMap = useMemo(() => {
         const groupById = new Map(visibleProducts.map((group) => [group._id, group]));
         const next = new Map<string, string>();
@@ -1848,7 +1864,7 @@ export default function CatalogClient({
                                                 groups={visibleProducts}
                                                 skuMap={skuMap}
                                                 applicatorParam={visualApplicatorParam}
-                                                thumbnailMap={catalogThumbnailMap}
+                                                thumbnailMap={lineItemThumbnailMap}
                                                 displayNameMap={customerNameMap}
                                                 primarySkuMetaMap={primarySkuMetaMap}
                                             />
@@ -1861,7 +1877,7 @@ export default function CatalogClient({
                                             groups={visibleProducts}
                                             skuMap={skuMap}
                                             applicatorParam={visualApplicatorParam}
-                                            thumbnailMap={catalogThumbnailMap}
+                                            thumbnailMap={lineItemThumbnailMap}
                                             displayNameMap={customerNameMap}
                                             primarySkuMetaMap={primarySkuMetaMap}
                                         />

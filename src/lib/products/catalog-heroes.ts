@@ -44,6 +44,33 @@ const verifiedGroupAliases: Readonly<Record<string, readonly string[]>> = {
     // Production drops the applicator suffix from the two Heart groups.
     "heart-4ml-frosted-8mm-keychain": ["heart-4ml-frosted-8mm-keychain-glassapplicator"],
     "heart-4ml-frosted-8mm-tassel": ["heart-4ml-frosted-8mm-tassel-glassapplicator"],
+    // Production merged each colour of these non-glass lines into one "mixed"
+    // group after the heroes were approved per colour (image audit, 2026-10-30).
+    "gift-bag-0ml-mixed": ["gift-bag-0ml-black", "gift-bag-0ml-blue", "gift-bag-0ml-gold", "gift-bag-0ml-green", "gift-bag-0ml-ivory", "gift-bag-0ml-lavender", "gift-bag-0ml-pink", "gift-bag-0ml-purple", "gift-bag-0ml-red", "gift-bag-0ml-silver"],
+    "gift-box-0ml-mixed": ["gift-box-0ml-blue", "gift-box-0ml-clear", "gift-box-0ml-green", "gift-box-0ml-matte", "gift-box-0ml-silver", "gift-box-0ml-white"],
+    "tool-0ml-mixed": ["tool-0ml-gold", "tool-0ml-silver"],
+    "packaging-supply-0ml-mixed": ["packaging-supply-0ml-clear"],
+    "plastic-bottle-10ml-mixed": ["plastic-bottle-10ml-clear"],
+    "plastic-bottle-30ml-mixed": ["plastic-bottle-30ml-clear"],
+    // Cream jars: one production group per size, heroes recorded per glass colour.
+    "cream-jar-3ml-mixed": ["cream-jar-3ml-clear", "cream-jar-3ml-cobalt-blue"],
+    "cream-jar-5ml-mixed": ["cream-jar-5ml-amber", "cream-jar-5ml-clear"],
+    "cream-jar-15ml-mixed": ["cream-jar-15ml-clear"],
+    "cream-jar-20ml-mixed": ["cream-jar-20ml-white"],
+    "cream-jar-30ml-mixed": ["cream-jar-30ml-amber", "cream-jar-30ml-frosted"],
+    "cream-jar-40ml-mixed": ["cream-jar-40ml-amber", "cream-jar-40ml-frosted"],
+    "cream-jar-60ml-mixed": ["cream-jar-60ml-frosted"],
+    "cream-jar-63ml-mixed": ["cream-jar-63ml-white"],
+    // Glass slugs production renamed. The SKU match stays exact, so each alias
+    // only lets the same assembly's own hero through.
+    // Minaret cap (GBElg15MinarCu) was recorded under a cap-closure slug that is now empty.
+    "elegant-15ml-clear-13-415": ["elegant-15ml-clear-13-415-capclosure"],
+    // The frosted 50 ml Circle reducer is an 18-415 neck; the hero slug said 18-400.
+    "circle-50ml-frosted-18-415-reducer": ["circle-50ml-frosted-18-400-reducer"],
+    // GBCyl5SpryBlkMatt is a 5 ml bottle recorded under the 5.5 ml slug.
+    "cylinder-5ml-clear-13-415-finemist": ["cylinder-5.5ml-clear-13-415-finemist"],
+    // The 3 ml snap lotion bottle was recorded as "Snap-On".
+    "lotion-bottle-3ml-clear-snap": ["lotion-bottle-3ml-clear-Snap-On"],
 };
 
 /** The group itself plus any recorded groups it corresponds to. The SKU match stays exact. */
@@ -71,17 +98,24 @@ export function getReleasedCatalogHero(groupSlug: string, websiteSku?: string | 
     return row ? { ...row, groupSlug } : null;
 }
 
-/** Only select an assembly still present in the filtered catalog result. */
+/**
+ * Only select an assembly still present in the filtered catalog result.
+ *
+ * When a SKU is asked for (a search for it, the SKU a Line items row prints, a
+ * picked finish), its own approved photograph wins from either registry. Only
+ * when it has none does the group fall back to its usual hero: a released one
+ * first, then the original registry in recorded order. Before 31 Oct 2026 a
+ * sibling's released hero beat the asked-for SKU's own registry photo, so a
+ * finish with its own picture still showed another finish's bottle.
+ */
 export function getCatalogHero(groupSlug: string, variants: readonly { websiteSku?: string | null }[], preferredWebsiteSku?: string | null): CatalogHero | null {
     const slugs = recordedGroupSlugs(groupSlug);
-    const eligible = isCatalogHeroPilotEnabled() ? activePilotRows().filter(candidate =>
-        slugs.includes(candidate.groupSlug) && variants.some(variant => variant.websiteSku === candidate.websiteSku),
-    ) : [];
-    const pilot = eligible.find(candidate => candidate.websiteSku.toLowerCase() === preferredWebsiteSku?.trim().toLowerCase()) ?? eligible[0];
-    if (pilot) return { ...pilot, groupSlug };
-    const hero = slugs.flatMap(slug => byGroup.get(slug) ?? []).find(candidate =>
-        variants.some(variant => variant.websiteSku === candidate.websiteSku),
-    );
+    const listed = (websiteSku: string) => variants.some(variant => variant.websiteSku === websiteSku);
+    const eligible = isCatalogHeroPilotEnabled() ? activePilotRows().filter(candidate => slugs.includes(candidate.groupSlug) && listed(candidate.websiteSku)) : [];
+    const original = slugs.flatMap(slug => byGroup.get(slug) ?? []).filter(candidate => listed(candidate.websiteSku));
+    const preferred = preferredWebsiteSku?.trim().toLowerCase();
+    const isPreferred = (candidate: CatalogHero) => Boolean(preferred) && candidate.websiteSku.toLowerCase() === preferred;
+    const hero = eligible.find(isPreferred) ?? original.find(isPreferred) ?? eligible[0] ?? original[0];
     return hero ? { ...hero, groupSlug } : null;
 }
 

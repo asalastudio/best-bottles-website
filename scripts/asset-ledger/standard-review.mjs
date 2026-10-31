@@ -3,10 +3,11 @@ import {readFile, realpath, writeFile, rename, open, unlink} from 'node:fs/promi
 import path from 'node:path';
 import sharp from 'sharp';
 import {readFinalImage} from './final-image-review.mjs';
+import { PSD_MASTER_ROOT } from "../lib/local-paths.mjs";
 
 export const digest = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const bytesHash = bytes => createHash('sha256').update(bytes).digest('hex');
-const masterRoot = '/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master';
+const masterRoot = PSD_MASTER_ROOT;
 
 export function localReviewRequestAllowed(request, environment) {
   const url = new URL(request.url);

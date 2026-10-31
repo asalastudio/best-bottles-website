@@ -8,8 +8,9 @@
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
+import { REPO_ROOT } from "./lib/local-paths.mjs";
 
-const SITE_ROOT = "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026";
+const SITE_ROOT = REPO_ROOT;
 const MADISON_ROOT = "/Users/jordanrichter/Projects/Madison Studio/madison-app";
 const ORG_ID = "4ab1ac72-cd7e-4faf-9152-5aa5f2862411";
 const PIPELINE_LANE_ID = "grid-card-2000x2200";

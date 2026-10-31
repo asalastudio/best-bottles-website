@@ -1,7 +1,8 @@
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
-const master='/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master';
+import { PSD_MASTER_ROOT } from "../lib/local-paths.mjs";
+const master=PSD_MASTER_ROOT;
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 export async function readKitPilot(root, group, plates) {
  let data;try{data=JSON.parse(await readFile(path.join(root,'data/asset-ledger/boston-kit-pilot.json'),'utf8'));}catch{return {kits:{},plates};}

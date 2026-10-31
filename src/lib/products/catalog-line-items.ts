@@ -1,11 +1,12 @@
 import { isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
+import { getCatalogHero } from "@/lib/products/catalog-heroes";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
+import { getReconciledLocalSkuImage } from "@/lib/products/reconciled-sku-images";
 import {
     resolveCatalogGroupSku,
     catalogGroupSkuLabel,
     type CatalogSearchGroup,
     type CatalogSearchResultShape,
-    type CatalogSearchVariantPreviewRow,
 } from "@/lib/catalogSearchFallback";
 
 /**
@@ -37,7 +38,6 @@ export type CatalogLineItem = {
     thumbnailUrl: string | null;
 };
 
-type VariantPreview = CatalogSearchVariantPreviewRow["variants"][number];
 
 /**
  * Sanity and legacy bestbottles.com URLs point at art that no longer matches
@@ -59,9 +59,48 @@ export function usableProductImageUrl(value: string | null | undefined): string 
     return url;
 }
 
-export function getCatalogVariantThumbnail(variant: VariantPreview | null | undefined): string | null {
+/** The fields the thumbnail chain reads; every search row and card source carries them. */
+export type CatalogThumbnailVariant = {
+    websiteSku?: string | null;
+    graceSku?: string | null;
+    imageUrl?: string | null;
+    imageUrlCapOff?: string | null;
+    plateThumbUrl?: string | null;
+};
+
+/**
+ * One variant's own image, in the order the visual card falls back: its
+ * paper-doll plate, then a reconciled local image, then a usable Convex URL.
+ * Never a blocked legacy or Sanity URL.
+ */
+export function getCatalogVariantThumbnail(variant: CatalogThumbnailVariant | null | undefined): string | null {
     if (!variant) return null;
-    return usableProductImageUrl(variant.imageUrl) ?? usableProductImageUrl(variant.imageUrlCapOff) ?? null;
+    return variant.plateThumbUrl?.trim()
+        || getReconciledLocalSkuImage(variant.websiteSku)
+        || usableProductImageUrl(variant.imageUrl)
+        || usableProductImageUrl(variant.imageUrlCapOff)
+        || null;
+}
+
+/**
+ * The image a line-item row shows for a group, resolved the way the visual
+ * card resolves its own: the group's approved hero first (the same assembly
+ * the card pictures), else the primary variant's plate, reconciled local
+ * image or usable Convex URL, else any sibling's, else the group's own hero URL.
+ */
+export function resolveCatalogLineThumbnail(
+    group: { slug: string; heroImageUrl?: string | null },
+    variants: readonly CatalogThumbnailVariant[],
+    primarySku: string | null | undefined,
+): string | null {
+    const hero = getCatalogHero(group.slug, variants, primarySku);
+    if (hero) return hero.url;
+    // The row is named after the primary SKU's variant, but a sibling's photo
+    // still beats an empty tile when that variant has no usable art of its own.
+    const named = pickRepresentativeVariant(variants, primarySku ?? null);
+    return getCatalogVariantThumbnail(named)
+        ?? variants.map(getCatalogVariantThumbnail).find((url): url is string => Boolean(url))
+        ?? usableProductImageUrl(group.heroImageUrl);
 }
 
 /**
@@ -69,10 +108,10 @@ export function getCatalogVariantThumbnail(variant: VariantPreview | null | unde
  * the row is actually selling. Fall back to any variant that has usable art
  * before giving up — a family photo beats an empty tile.
  */
-function pickRepresentativeVariant(
-    variants: VariantPreview[],
+function pickRepresentativeVariant<T extends CatalogThumbnailVariant>(
+    variants: readonly T[],
     primarySku: string | null,
-): VariantPreview | null {
+): T | null {
     const named = primarySku
         ? variants.find((v) => v.websiteSku === primarySku || v.graceSku === primarySku)
         : undefined;
@@ -108,7 +147,7 @@ export function buildCatalogLineItem(
         neckThreadSize: group.neckThreadSize,
         variantCount: group.variantCount,
         priceFrom: group.priceRangeMin,
-        thumbnailUrl: getCatalogVariantThumbnail(variant) ?? usableProductImageUrl(group.heroImageUrl),
+        thumbnailUrl: resolveCatalogLineThumbnail(group, variants, sku.websiteSku ?? sku.graceSku),
     };
 }
 

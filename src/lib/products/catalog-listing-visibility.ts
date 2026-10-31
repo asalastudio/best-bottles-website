@@ -36,12 +36,18 @@ export function isMissingHeroSource(variant: { websiteSku?: string | null; grace
         || (variant.graceSku && missingGraceSkus.has(variant.graceSku)));
 }
 
+// Groups held off the catalog until they have source images. Matched without
+// case: production files the press-fit and specialty caps as
+// cap-closure-PRESS-FIT and cap-closure-SPECIAL, which an exact match missed,
+// so the press-fit group was listed as a "Product image coming soon" card.
+const SOURCE_HOLD_GROUPS = new Set([
+    "unknown-0ml-clear", "cap-closure-13-425", "cap-closure-22-400",
+    "cap-closure-24-400", "cap-closure-press-fit", "cap-closure-specialty",
+    "cap-closure-special", "dropper-17-415", "roll-on-fitment",
+]);
+
 export function hasCatalogSourceHold(slug: string): boolean {
-    return new Set([
-        "unknown-0ml-clear", "cap-closure-13-425", "cap-closure-22-400",
-        "cap-closure-24-400", "cap-closure-Press-Fit", "cap-closure-Specialty",
-        "dropper-17-415", "roll-on-fitment",
-    ]).has(slug);
+    return SOURCE_HOLD_GROUPS.has(slug.toLowerCase());
 }
 
 // Test and internal records ("Internal") are never listed, whatever their slug.

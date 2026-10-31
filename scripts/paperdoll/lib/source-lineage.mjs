@@ -1,7 +1,8 @@
 import { existsSync, realpathSync } from "node:fs";
 import { basename, extname, isAbsolute, relative, resolve, sep } from "node:path";
 
-export const PSD_MASTER_ROOT = "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master";
+export { PSD_MASTER_ROOT } from "../../lib/local-paths.mjs";
+import { PSD_MASTER_ROOT } from "../../lib/local-paths.mjs";
 
 function isInside(root, candidate) {
     const rel = relative(root, candidate);

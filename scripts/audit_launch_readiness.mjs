@@ -11,9 +11,10 @@ import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 import { ConvexHttpClient } from "convex/browser";
+import { REPO_ROOT } from "./lib/local-paths.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const REPO = "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026";
+const REPO = REPO_ROOT;
 
 function loadEnvLocal() {
   try {
