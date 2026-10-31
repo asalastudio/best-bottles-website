@@ -3,6 +3,7 @@
 import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
 import { getCatalogHeroStyle, type CatalogHero } from "@/lib/products/catalog-heroes";
 import { capSwapFraming, capSwapPlateBox, capSwapPlateUrl } from "@/lib/products/catalog-cap-swap";
+import { catalogCapOnlySwap, capOnlyBox } from "@/lib/products/catalog-cap-only-swap";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import LocaleLink from "@/components/LocaleLink";
@@ -63,6 +64,8 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
         fallbackImageUrl: variants[0] ? assembly(variants[0]) : null,
     });
     const selectedPlate = selected ? assemblyPlates?.plates[skuOf(selected) ?? ""] : undefined;
+    const capOnly = catalogCapOnlySwap(catalogHero, skuOf(selected));
+    const capOnlyUrl = selectedPlate?.imageCapOff;
     // Hero card: the picked cap's plate, placed and lit like the hero. Other
     // cards show plates already, so the picked cap's full plate simply replaces it.
     const heroSwap = catalogHero && selected ? capSwapFraming(catalogHero.url) : null;
@@ -92,6 +95,26 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
 
     const approvedHero = catalogHero && !("hoverUrl" in catalogHero);
     const exactVariant = variants.find(variant => variant.websiteSku === catalogHero?.websiteSku);
+
+    if (catalogHero && selected && capOnly && capOnlyUrl && !failed.has(capOnlyUrl)) {
+        return <LocaleLink href={href} aria-label={`View ${title}, ${selected.label}`}
+            className="relative block aspect-[10/11] w-full overflow-hidden bg-[#f5f3ef]"
+            data-visual-mode="selected-cap" data-bb-image-audit="catalog-card" data-bb-family={family ?? undefined}
+            data-bb-product-group-slug={slug} data-bb-website-sku={skuOf(selected) ?? undefined}>
+            <span className="absolute inset-0 block" style={getCatalogHeroStyle(catalogHero)} data-testid="catalog-card-cap-only-swap">
+                <Image src={catalogHero.url} alt={`${title}, ${selected.label}`} fill unoptimized className="object-fill" />
+                <span className="absolute block overflow-hidden" style={capOnlyBox(capOnly.patch)} data-testid="catalog-card-cap-patch" aria-hidden>
+                    <span className="absolute block" style={capOnlyBox(capOnly.backdrop)}>
+                        <Image src={catalogHero.url} alt="" fill unoptimized className="object-fill" />
+                    </span>
+                    <span className="absolute block" style={{ ...capOnlyBox(capOnly.plate), mixBlendMode: "multiply" }}>
+                        <Image key={capOnlyUrl} src={capOnlyUrl} alt="" fill unoptimized className="object-fill"
+                            onError={() => fail(capOnlyUrl)} />
+                    </span>
+                </span>
+            </span>
+        </LocaleLink>;
+    }
 
     if (catalogHero && heroSwap && heroSwapUrl && !failed.has(heroSwapUrl)) {
         // bone × the hero's own shadow × the plate. The wrapper carries the bone

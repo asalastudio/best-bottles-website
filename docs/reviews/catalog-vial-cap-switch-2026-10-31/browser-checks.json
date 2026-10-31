@@ -1,0 +1,366 @@
+[
+  {
+    "size": "desktop",
+    "color": "clear",
+    "cap": "black",
+    "sku": "GBV1DrmBlackCapSht",
+    "href": "/products/vial-4ml-clear-13-425?sku=GBV1DrmBlackCapSht",
+    "label": "Short Black",
+    "images": [
+      "http://localhost:3010/images/catalog/vials-approved-2026-09-25/GBV1DrmWhtCapSht.e2b04790b812.webp",
+      "http://localhost:3010/images/catalog/vials-approved-2026-09-25/GBV1DrmWhtCapSht.e2b04790b812.webp",
+      "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-clear-13-425/GBV1DrmBlackCapSht/a61b14cf68f94aa595fe68fd262c9ded33a21ac0d4ed1cc7be2848c3ef271c8b.front-off-1000x1100.webp"
+    ],
+    "mode": "selected-cap",
+    "patch": {
+      "x": 498.28125,
+      "y": 432.078125,
+      "width": 74.109375,
+      "height": 49.5625,
+      "top": 432.078125,
+      "right": 572.390625,
+      "bottom": 481.640625,
+      "left": 498.28125
+    },
+    "overflow": false
+  },
+  {
+    "size": "desktop",
+    "color": "clear",
+    "cap": "white",
+    "sku": "GBV1DrmWhtCapSht",
+    "href": "/products/vial-4ml-clear-13-425?sku=GBV1DrmWhtCapSht",
+    "label": "Short White",
+    "images": [
+      "http://localhost:3010/_next/image?url=%2Fimages%2Fcatalog%2Fvials-approved-2026-09-25%2FGBV1DrmWhtCapSht.e2b04790b812.webp&w=384&q=75"
+    ],
+    "overflow": false
+  },
+  {
+    "size": "desktop",
+    "color": "clear",
+    "cap": "black",
+    "sku": "GBV1DrmBlackCapSht",
+    "href": "/products/vial-4ml-clear-13-425?sku=GBV1DrmBlackCapSht",
+    "label": "Short Black",
+    "images": [
+      "http://localhost:3010/images/catalog/vials-approved-2026-09-25/GBV1DrmWhtCapSht.e2b04790b812.webp",
+      "http://localhost:3010/images/catalog/vials-approved-2026-09-25/GBV1DrmWhtCapSht.e2b04790b812.webp",
+      "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-clear-13-425/GBV1DrmBlackCapSht/a61b14cf68f94aa595fe68fd262c9ded33a21ac0d4ed1cc7be2848c3ef271c8b.front-off-1000x1100.webp"
+    ],
+    "mode": "selected-cap",
+    "patch": {
+      "x": 498.28125,
+      "y": 442.078125,
+      "width": 74.109375,
+      "height": 49.5625,
+      "top": 442.078125,
+      "right": 572.390625,
+      "bottom": 491.640625,
+      "left": 498.28125
+    },
+    "overflow": false
+  },
+  {
+    "size": "desktop",
+    "color": "amber",
+    "cap": "black",
+    "sku": "GBVAmb1DrmBlackCapSht",
+    "href": "/products/vial-4ml-amber-13-425?sku=GBVAmb1DrmBlackCapSht",
+    "label": "Short Black",
+    "images": [
+      "http://localhost:3010/images/catalog/cap-swap-shadows/GBVAmb1DrmWhtCapSht.b4d7ea2084.webp",
+      "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-amber-13-425/GBVAmb1DrmBlackCapSht/76aeb8ae80cdb548a452df0c5fd6dd8112d0ded1b5016e39d0a9dcd25906fb79.front-off-1000x1100.webp"
+    ],
+    "mode": "selected-cap",
+    "overflow": false
+  },
+  {
+    "size": "desktop",
+    "color": "amber",
+    "cap": "white",
+    "sku": "GBVAmb1DrmWhtCapSht",
+    "href": "/products/vial-4ml-amber-13-425?sku=GBVAmb1DrmWhtCapSht",
+    "label": "Short White",
+    "images": [
+      "http://localhost:3010/_next/image?url=%2Fimages%2Fcatalog%2Fvials-approved-2026-09-25%2FGBVAmb1DrmWhtCapSht.c91a4c0b8009.webp&w=384&q=75"
+    ],
+    "overflow": false
+  },
+  {
+    "size": "desktop",
+    "color": "amber",
+    "cap": "black",
+    "sku": "GBVAmb1DrmBlackCapSht",
+    "href": "/products/vial-4ml-amber-13-425?sku=GBVAmb1DrmBlackCapSht",
+    "label": "Short Black",
+    "images": [
+      "http://localhost:3010/images/catalog/cap-swap-shadows/GBVAmb1DrmWhtCapSht.b4d7ea2084.webp",
+      "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-amber-13-425/GBVAmb1DrmBlackCapSht/76aeb8ae80cdb548a452df0c5fd6dd8112d0ded1b5016e39d0a9dcd25906fb79.front-off-1000x1100.webp"
+    ],
+    "mode": "selected-cap",
+    "overflow": false
+  },
+  {
+    "size": "desktop",
+    "color": "blue",
+    "cap": "black",
+    "sku": "GBVBlu1DrmBlackCapSht",
+    "href": "/products/vial-4ml-blue-13-425?sku=GBVBlu1DrmBlackCapSht",
+    "label": "Short Black",
+    "images": [
+      "http://localhost:3010/images/catalog/cap-swap-shadows/GBVBlu1DrmWhtCapSht.d2bd6d7135.webp",
+      "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-blue-13-425/GBVBlu1DrmBlackCapSht/cbbe282508f054cf7c3717de1affe20087abd6279c74bd428a20ceff206c3ca0.front-off-1000x1100.webp"
+    ],
+    "mode": "selected-cap",
+    "overflow": false
+  },
+  {
+    "size": "desktop",
+    "color": "blue",
+    "cap": "white",
+    "sku": "GBVBlu1DrmWhtCapSht",
+    "href": "/products/vial-4ml-blue-13-425?sku=GBVBlu1DrmWhtCapSht",
+    "label": "Short White",
+    "images": [
+      "http://localhost:3010/_next/image?url=%2Fimages%2Fcatalog%2Fvials-approved-2026-09-25%2FGBVBlu1DrmWhtCapSht.f9249489db14.webp&w=384&q=75"
+    ],
+    "overflow": false
+  },
+  {
+    "size": "desktop",
+    "color": "blue",
+    "cap": "black",
+    "sku": "GBVBlu1DrmBlackCapSht",
+    "href": "/products/vial-4ml-blue-13-425?sku=GBVBlu1DrmBlackCapSht",
+    "label": "Short Black",
+    "images": [
+      "http://localhost:3010/images/catalog/cap-swap-shadows/GBVBlu1DrmWhtCapSht.d2bd6d7135.webp",
+      "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-blue-13-425/GBVBlu1DrmBlackCapSht/cbbe282508f054cf7c3717de1affe20087abd6279c74bd428a20ceff206c3ca0.front-off-1000x1100.webp"
+    ],
+    "mode": "selected-cap",
+    "overflow": false
+  },
+  {
+    "size": "desktop",
+    "color": "green",
+    "cap": "black",
+    "sku": "GBVGr1DrmBlackCapSht",
+    "href": "/products/vial-4ml-green-13-425?sku=GBVGr1DrmBlackCapSht",
+    "label": "Short Black",
+    "images": [
+      "http://localhost:3010/images/catalog/cap-swap-shadows/GBVGr1DrmWhtCapSht.09f69b99f7.webp",
+      "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-green-13-425/GBVGr1DrmBlackCapSht/12ebaae81f8131fb77aafcef284f629569a085d9b407e959fbbef14ad5f176a1.front-off-1000x1100.webp"
+    ],
+    "mode": "selected-cap",
+    "overflow": false
+  },
+  {
+    "size": "desktop",
+    "color": "green",
+    "cap": "white",
+    "sku": "GBVGr1DrmWhtCapSht",
+    "href": "/products/vial-4ml-green-13-425?sku=GBVGr1DrmWhtCapSht",
+    "label": "Short White",
+    "images": [
+      "http://localhost:3010/_next/image?url=%2Fimages%2Fcatalog%2Fvials-approved-2026-09-25%2FGBVGr1DrmWhtCapSht.7aab95b220c5.webp&w=384&q=75"
+    ],
+    "overflow": false
+  },
+  {
+    "size": "desktop",
+    "color": "green",
+    "cap": "black",
+    "sku": "GBVGr1DrmBlackCapSht",
+    "href": "/products/vial-4ml-green-13-425?sku=GBVGr1DrmBlackCapSht",
+    "label": "Short Black",
+    "images": [
+      "http://localhost:3010/images/catalog/cap-swap-shadows/GBVGr1DrmWhtCapSht.09f69b99f7.webp",
+      "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-green-13-425/GBVGr1DrmBlackCapSht/12ebaae81f8131fb77aafcef284f629569a085d9b407e959fbbef14ad5f176a1.front-off-1000x1100.webp"
+    ],
+    "mode": "selected-cap",
+    "overflow": false
+  },
+  {
+    "size": "mobile",
+    "color": "clear",
+    "cap": "black",
+    "sku": "GBV1DrmBlackCapSht",
+    "href": "/products/vial-4ml-clear-13-425?sku=GBV1DrmBlackCapSht",
+    "label": "Short Black",
+    "images": [
+      "http://localhost:3010/images/catalog/vials-approved-2026-09-25/GBV1DrmWhtCapSht.e2b04790b812.webp",
+      "http://localhost:3010/images/catalog/vials-approved-2026-09-25/GBV1DrmWhtCapSht.e2b04790b812.webp",
+      "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-clear-13-425/GBV1DrmBlackCapSht/a61b14cf68f94aa595fe68fd262c9ded33a21ac0d4ed1cc7be2848c3ef271c8b.front-off-1000x1100.webp"
+    ],
+    "mode": "selected-cap",
+    "patch": {
+      "x": 199.5625,
+      "y": 427.859375,
+      "width": 73.015625,
+      "height": 48.828125,
+      "top": 427.859375,
+      "right": 272.578125,
+      "bottom": 476.6875,
+      "left": 199.5625
+    },
+    "overflow": false
+  },
+  {
+    "size": "mobile",
+    "color": "clear",
+    "cap": "white",
+    "sku": "GBV1DrmWhtCapSht",
+    "href": "/products/vial-4ml-clear-13-425?sku=GBV1DrmWhtCapSht",
+    "label": "Short White",
+    "images": [
+      "http://localhost:3010/_next/image?url=%2Fimages%2Fcatalog%2Fvials-approved-2026-09-25%2FGBV1DrmWhtCapSht.e2b04790b812.webp&w=384&q=75"
+    ],
+    "overflow": false
+  },
+  {
+    "size": "mobile",
+    "color": "clear",
+    "cap": "black",
+    "sku": "GBV1DrmBlackCapSht",
+    "href": "/products/vial-4ml-clear-13-425?sku=GBV1DrmBlackCapSht",
+    "label": "Short Black",
+    "images": [
+      "http://localhost:3010/images/catalog/vials-approved-2026-09-25/GBV1DrmWhtCapSht.e2b04790b812.webp",
+      "http://localhost:3010/images/catalog/vials-approved-2026-09-25/GBV1DrmWhtCapSht.e2b04790b812.webp",
+      "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-clear-13-425/GBV1DrmBlackCapSht/a61b14cf68f94aa595fe68fd262c9ded33a21ac0d4ed1cc7be2848c3ef271c8b.front-off-1000x1100.webp"
+    ],
+    "mode": "selected-cap",
+    "patch": {
+      "x": 199.5625,
+      "y": 437.859375,
+      "width": 73.015625,
+      "height": 48.828125,
+      "top": 437.859375,
+      "right": 272.578125,
+      "bottom": 486.6875,
+      "left": 199.5625
+    },
+    "overflow": false
+  },
+  {
+    "size": "mobile",
+    "color": "amber",
+    "cap": "black",
+    "sku": "GBVAmb1DrmBlackCapSht",
+    "href": "/products/vial-4ml-amber-13-425?sku=GBVAmb1DrmBlackCapSht",
+    "label": "Short Black",
+    "images": [
+      "http://localhost:3010/images/catalog/cap-swap-shadows/GBVAmb1DrmWhtCapSht.b4d7ea2084.webp",
+      "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-amber-13-425/GBVAmb1DrmBlackCapSht/76aeb8ae80cdb548a452df0c5fd6dd8112d0ded1b5016e39d0a9dcd25906fb79.front-off-1000x1100.webp"
+    ],
+    "mode": "selected-cap",
+    "overflow": false
+  },
+  {
+    "size": "mobile",
+    "color": "amber",
+    "cap": "white",
+    "sku": "GBVAmb1DrmWhtCapSht",
+    "href": "/products/vial-4ml-amber-13-425?sku=GBVAmb1DrmWhtCapSht",
+    "label": "Short White",
+    "images": [
+      "http://localhost:3010/_next/image?url=%2Fimages%2Fcatalog%2Fvials-approved-2026-09-25%2FGBVAmb1DrmWhtCapSht.c91a4c0b8009.webp&w=384&q=75"
+    ],
+    "overflow": false
+  },
+  {
+    "size": "mobile",
+    "color": "amber",
+    "cap": "black",
+    "sku": "GBVAmb1DrmBlackCapSht",
+    "href": "/products/vial-4ml-amber-13-425?sku=GBVAmb1DrmBlackCapSht",
+    "label": "Short Black",
+    "images": [
+      "http://localhost:3010/images/catalog/cap-swap-shadows/GBVAmb1DrmWhtCapSht.b4d7ea2084.webp",
+      "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-amber-13-425/GBVAmb1DrmBlackCapSht/76aeb8ae80cdb548a452df0c5fd6dd8112d0ded1b5016e39d0a9dcd25906fb79.front-off-1000x1100.webp"
+    ],
+    "mode": "selected-cap",
+    "overflow": false
+  },
+  {
+    "size": "mobile",
+    "color": "blue",
+    "cap": "black",
+    "sku": "GBVBlu1DrmBlackCapSht",
+    "href": "/products/vial-4ml-blue-13-425?sku=GBVBlu1DrmBlackCapSht",
+    "label": "Short Black",
+    "images": [
+      "http://localhost:3010/images/catalog/cap-swap-shadows/GBVBlu1DrmWhtCapSht.d2bd6d7135.webp",
+      "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-blue-13-425/GBVBlu1DrmBlackCapSht/cbbe282508f054cf7c3717de1affe20087abd6279c74bd428a20ceff206c3ca0.front-off-1000x1100.webp"
+    ],
+    "mode": "selected-cap",
+    "overflow": false
+  },
+  {
+    "size": "mobile",
+    "color": "blue",
+    "cap": "white",
+    "sku": "GBVBlu1DrmWhtCapSht",
+    "href": "/products/vial-4ml-blue-13-425?sku=GBVBlu1DrmWhtCapSht",
+    "label": "Short White",
+    "images": [
+      "http://localhost:3010/_next/image?url=%2Fimages%2Fcatalog%2Fvials-approved-2026-09-25%2FGBVBlu1DrmWhtCapSht.f9249489db14.webp&w=384&q=75"
+    ],
+    "overflow": false
+  },
+  {
+    "size": "mobile",
+    "color": "blue",
+    "cap": "black",
+    "sku": "GBVBlu1DrmBlackCapSht",
+    "href": "/products/vial-4ml-blue-13-425?sku=GBVBlu1DrmBlackCapSht",
+    "label": "Short Black",
+    "images": [
+      "http://localhost:3010/images/catalog/cap-swap-shadows/GBVBlu1DrmWhtCapSht.d2bd6d7135.webp",
+      "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-blue-13-425/GBVBlu1DrmBlackCapSht/cbbe282508f054cf7c3717de1affe20087abd6279c74bd428a20ceff206c3ca0.front-off-1000x1100.webp"
+    ],
+    "mode": "selected-cap",
+    "overflow": false
+  },
+  {
+    "size": "mobile",
+    "color": "green",
+    "cap": "black",
+    "sku": "GBVGr1DrmBlackCapSht",
+    "href": "/products/vial-4ml-green-13-425?sku=GBVGr1DrmBlackCapSht",
+    "label": "Short Black",
+    "images": [
+      "http://localhost:3010/images/catalog/cap-swap-shadows/GBVGr1DrmWhtCapSht.09f69b99f7.webp",
+      "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-green-13-425/GBVGr1DrmBlackCapSht/12ebaae81f8131fb77aafcef284f629569a085d9b407e959fbbef14ad5f176a1.front-off-1000x1100.webp"
+    ],
+    "mode": "selected-cap",
+    "overflow": false
+  },
+  {
+    "size": "mobile",
+    "color": "green",
+    "cap": "white",
+    "sku": "GBVGr1DrmWhtCapSht",
+    "href": "/products/vial-4ml-green-13-425?sku=GBVGr1DrmWhtCapSht",
+    "label": "Short White",
+    "images": [
+      "http://localhost:3010/_next/image?url=%2Fimages%2Fcatalog%2Fvials-approved-2026-09-25%2FGBVGr1DrmWhtCapSht.7aab95b220c5.webp&w=384&q=75"
+    ],
+    "overflow": false
+  },
+  {
+    "size": "mobile",
+    "color": "green",
+    "cap": "black",
+    "sku": "GBVGr1DrmBlackCapSht",
+    "href": "/products/vial-4ml-green-13-425?sku=GBVGr1DrmBlackCapSht",
+    "label": "Short Black",
+    "images": [
+      "http://localhost:3010/images/catalog/cap-swap-shadows/GBVGr1DrmWhtCapSht.09f69b99f7.webp",
+      "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-green-13-425/GBVGr1DrmBlackCapSht/12ebaae81f8131fb77aafcef284f629569a085d9b407e959fbbef14ad5f176a1.front-off-1000x1100.webp"
+    ],
+    "mode": "selected-cap",
+    "overflow": false
+  }
+]

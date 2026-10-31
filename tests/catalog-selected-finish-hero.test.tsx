@@ -56,6 +56,34 @@ function render(catalogHero: CatalogHero, selected: { id: string; label: string;
 afterEach(() => { act(() => root?.unmount()); container?.remove(); plates.current = {}; });
 
 describe("picking a finish on a hero card", () => {
+    it("switches the clear 4 ml vial to short black and back without replacing its glass", () => {
+        const clear = getProductHero("GBV1DrmWhtCapSht")!;
+        const picked = { id: "vial-black", label: "Short Black", websiteSku: "GBV1DrmBlackCapSht", optionType: "capColor" as const };
+        const white = { id: "vial-white", label: "White", websiteSku: "GBV1DrmWhtCapSht", optionType: "capColor" as const };
+        // The default SKU has no cap-off plate; its approved hero still exists.
+        plates.current = {
+            [white.websiteSku]: { image: "/white-on.webp", imageCapOff: null, thumb: "/white-thumb.webp", thumbCapOff: null },
+            [picked.websiteSku]: { image: "/black-on.webp", imageCapOff: "/black-off.webp", thumb: "/black-thumb.webp", thumbCapOff: null },
+        };
+        const props = { title: "4 ml Clear Vial Bottle with Cap", catalogHero: clear, imageUrl: null,
+            href: `/products/${clear.groupSlug}?sku=${picked.websiteSku}`, variants: [white, picked], family: "Vial", slug: clear.groupSlug };
+        container = document.createElement("div"); document.body.append(container); root = createRoot(container);
+        for (const selected of [picked, null, picked]) {
+            act(() => root.render(createElement(CatalogCardPreview, { ...props, selected })));
+            expect(container.querySelector("img")?.getAttribute("src")).toBe(clear.url);
+            const patch = container.querySelector('[data-testid="catalog-card-cap-patch"]');
+            if (selected) {
+                expect(container.querySelector('[data-bb-website-sku="GBV1DrmBlackCapSht"]')).not.toBeNull();
+                expect(patch?.querySelector('img[src="/black-off.webp"]')).not.toBeNull();
+                expect(patch?.className).toContain("overflow-hidden");
+                expect(container.querySelector('img[src="/black-on.webp"]')).toBeNull();
+            } else {
+                expect(patch).toBeNull();
+                expect(container.querySelectorAll("img")).toHaveLength(1);
+            }
+        }
+    });
+
     it("shows the picked finish's own hero when the group hero has no cap swap", () => {
         const groupHero = getCatalogHero(TASSEL, [black, gold])!;
         expect(capSwapFraming(groupHero.url)).toBeNull();
