@@ -1,0 +1,270 @@
+[
+  {
+    "sku": "GBTulipAmb5SpryBlkMatt",
+    "href": "http://localhost:3010/matrix?family=Tulip&shop=glass-spray-bottles&sku=GBTulipAmb5SpryBlkMatt&from=pdp",
+    "passed": true,
+    "layers": [
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fsprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-13-415%2Fsprayer-9a41ce1ea4f7e686d39c11b0b76d6bb89cd33bec877e2d4ff5c0f6853328ab90.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fsprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fsprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-02%2Fsprayer-a20e02d4b923a879323b7f3406c9fdfff3cbc35b150ef43570352e336c1dc768.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fsprayer-026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-03%2Fsprayer-6d1e75eb88437a3ec4913e7fb138b44c625a9c3090c751961e5862c4822d80f7.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fsprayer-68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "overcap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fovercap-b45348edce87e0f56e9fb934151ebc13cdaf4029209e7e3dbea54d2f27f4d1cc.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "body",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Ftulip-5ml-13-415%2Famber%2F84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png&w=1200&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "diptube",
+        "url": "/_next/image?url=%2Flocal-kits%2Fdip-tube-followup-2026-10-31%2Fmechanism-tulip-5-v3.752290ff324a.png&w=1200&q=75",
+        "opacity": "0.32"
+      },
+      {
+        "slot": "sprayer",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fsprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png&w=1200&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "overcap",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fovercap-b45348edce87e0f56e9fb934151ebc13cdaf4029209e7e3dbea54d2f27f4d1cc.png&w=1200&q=75",
+        "opacity": "1"
+      }
+    ]
+  },
+  {
+    "sku": "GBSleek8SpryCuMatt",
+    "href": "http://localhost:3010/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryCuMatt&from=pdp",
+    "passed": true,
+    "layers": [
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fsprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-13-415%2Fsprayer-9a41ce1ea4f7e686d39c11b0b76d6bb89cd33bec877e2d4ff5c0f6853328ab90.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fsprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fsprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-02%2Fsprayer-a20e02d4b923a879323b7f3406c9fdfff3cbc35b150ef43570352e336c1dc768.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fsprayer-026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-03%2Fsprayer-6d1e75eb88437a3ec4913e7fb138b44c625a9c3090c751961e5862c4822d80f7.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fsprayer-68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "overcap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fovercap-bb4cc14ddf3bbc4772ddc2639e77460aa9847e73661ca85cd95fd4813da1956d.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "body",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fsleek-8ml-13-415%2Fclear%2F7987a868e0824c4d2462d6f97d9523b5dfc8bb4340bce939603558412e49573c.png&w=1200&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "diptube",
+        "url": "/_next/image?url=%2Flocal-kits%2Fdip-tube-followup-2026-10-31%2Fmechanism-sleek-8-v1.5b26404496ef.png&w=1200&q=75",
+        "opacity": "0.58"
+      },
+      {
+        "slot": "sprayer",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fsprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png&w=1200&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "overcap",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fovercap-bb4cc14ddf3bbc4772ddc2639e77460aa9847e73661ca85cd95fd4813da1956d.png&w=1200&q=75",
+        "opacity": "1"
+      }
+    ]
+  },
+  {
+    "sku": "GBRnd78SpryCu",
+    "href": "http://localhost:3010/matrix?family=Round&shop=glass-spray-bottles&sku=GBRnd78SpryCu&from=pdp",
+    "passed": true,
+    "layers": [
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTCP-18-415-03%2Fsprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTGD-18-415-05%2Fsprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTSL-18-415-06%2Fsprayer-5c50ea9efde8b3535c6330bf6b21429e2300857f9ba7d9c47677349dce048cef.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-SHBK-18-415-06%2Fsprayer-9d494fd880618a93df237d4a4ce12c35c13cc5b98af531044a943793654e9994.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-SHGD-18-415-05%2Fsprayer-41f38526607d7ec57dcc6c175773a0ec77889e76f1bd23f478cc2292b6497846.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-SHSL-18-415-06%2Fsprayer-a26b031f10138c75eae2c73ead6908b1896facdfee8e4a690d34e2f0c2a49616.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "overcap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTCP-18-415-03%2Fovercap-9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "body",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fround-78ml-18-415%2Fclear%2F971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png&w=1200&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "diptube",
+        "url": "/_next/image?url=%2Flocal-kits%2Fdip-tube-followup-2026-10-31%2Fmechanism-round-78-v1.951d7c2f41fa.png&w=1200&q=75",
+        "opacity": "0.58"
+      },
+      {
+        "slot": "sprayer",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTCP-18-415-03%2Fsprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png&w=1200&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "overcap",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTCP-18-415-03%2Fovercap-9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9.png&w=1200&q=75",
+        "opacity": "1"
+      }
+    ]
+  },
+  {
+    "sku": "GBRndFrst78SpryCu",
+    "href": "http://localhost:3010/matrix?family=Round&shop=glass-spray-bottles&sku=GBRndFrst78SpryCu&from=pdp",
+    "passed": true,
+    "layers": [
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTCP-18-415-03%2Fsprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTGD-18-415-05%2Fsprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTSL-18-415-06%2Fsprayer-5c50ea9efde8b3535c6330bf6b21429e2300857f9ba7d9c47677349dce048cef.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-SHBK-18-415-06%2Fsprayer-9d494fd880618a93df237d4a4ce12c35c13cc5b98af531044a943793654e9994.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-SHGD-18-415-05%2Fsprayer-41f38526607d7ec57dcc6c175773a0ec77889e76f1bd23f478cc2292b6497846.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-SHSL-18-415-06%2Fsprayer-a26b031f10138c75eae2c73ead6908b1896facdfee8e4a690d34e2f0c2a49616.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "overcap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTCP-18-415-03%2Fovercap-9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9.png&w=3840&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "body",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fround-78ml-18-415%2Ffrosted%2F02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png&w=1200&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "diptube",
+        "url": "/_next/image?url=%2Flocal-kits%2Fdip-tube-followup-2026-10-31%2Fmechanism-round-78-v1.951d7c2f41fa.png&w=1200&q=75",
+        "opacity": "0.16"
+      },
+      {
+        "slot": "sprayer",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTCP-18-415-03%2Fsprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png&w=1200&q=75",
+        "opacity": "1"
+      },
+      {
+        "slot": "overcap",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTCP-18-415-03%2Fovercap-9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9.png&w=1200&q=75",
+        "opacity": "1"
+      }
+    ]
+  }
+]

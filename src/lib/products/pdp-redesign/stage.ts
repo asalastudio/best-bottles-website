@@ -331,7 +331,9 @@ export function stageLayout(
             url: part.image.url,
             dxPct: (offset.dx / canvas.width) * 100,
             dyPct: (offset.dy / canvas.height) * 100,
-            zIndex: part.zOrder + 1,
+            // zOrder is a relative priority and can be fractional (a tube
+            // between glass and hardware). CSS z-index requires an integer.
+            zIndex: index + 1,
             opacity: part.opacity,
             ...(part.box ? {
                 box: {

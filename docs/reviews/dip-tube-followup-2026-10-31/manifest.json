@@ -1,0 +1,1349 @@
+{
+  "date": "2026-10-31",
+  "status": "local-review",
+  "files": [
+    {
+      "path": "runtime/public/local-kits/dip-tube-followup-2026-10-31/mechanism-round-78-v1.951d7c2f41fa.png",
+      "sha256": "951d7c2f41fa3e8d5c880abedf5a0bca763eb8c96963c9bb86ce03a93ffce72b",
+      "bytes": 116564,
+      "restoreTo": "public/local-kits/dip-tube-followup-2026-10-31/mechanism-round-78-v1.951d7c2f41fa.png"
+    },
+    {
+      "path": "runtime/public/local-kits/dip-tube-followup-2026-10-31/mechanism-sleek-8-v1.5b26404496ef.png",
+      "sha256": "5b26404496efced9032654bae61f0c93938fb20c6713d05f8c54afc73c26900e",
+      "bytes": 97052,
+      "restoreTo": "public/local-kits/dip-tube-followup-2026-10-31/mechanism-sleek-8-v1.5b26404496ef.png"
+    },
+    {
+      "path": "runtime/public/local-kits/dip-tube-followup-2026-10-31/mechanism-tulip-5-v3.752290ff324a.png",
+      "sha256": "752290ff324ad2d49d4f02c995368027c855549ae5eabf62eedfdd7d27cd121b",
+      "bytes": 70984,
+      "restoreTo": "public/local-kits/dip-tube-followup-2026-10-31/mechanism-tulip-5-v3.752290ff324a.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/all-28-contact-sheet.png",
+      "sha256": "93f8521cf4558ab5e1b2877334a59f3842ede93ad3cee12800008516809d4f35",
+      "bytes": 310771,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/all-28-contact-sheet.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/defects-by-sku.csv",
+      "sha256": "67483fa8410a3358144e03c1d388da1527c76fdd8f7ac2aa40fcd210a5e254f0",
+      "bytes": 12458,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/defects-by-sku.csv"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/defects-by-sku.json",
+      "sha256": "79ca1544e6e44b7b427f6186a4d2d352911626a17c870fecf5058d359900df5a",
+      "bytes": 24756,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/defects-by-sku.json"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/index.html",
+      "sha256": "9285f860ee6274cba383591aec834d51be845e9e82f560d026c875a3771b39c3",
+      "bytes": 21578,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/index.html"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/round-exploded-after.png",
+      "sha256": "70606f3c29c70dbebd1aef3c3eda1f1ae519a5e9d818e5ba627a3f7312112d68",
+      "bytes": 62207,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/round-exploded-after.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/round-exploded-before.png",
+      "sha256": "1e9abde7100b2014a723fa95be5ce550510a6a2bd75df1597c7058013c870be7",
+      "bytes": 64304,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/round-exploded-before.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/round-sidecar-after.png",
+      "sha256": "f49573f0b0f63cda0a8874106b19e5b7fb998876173e0c6094110148784e4f57",
+      "bytes": 88155,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/round-sidecar-after.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/round-sidecar-before.png",
+      "sha256": "55e53d5c299d315542bed00940102d867ad48fe1c5f6a906cdf5e45cdc731e14",
+      "bytes": 86369,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/round-sidecar-before.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/builder-GBRnd78SpryCu.png",
+      "sha256": "bfde2881e11f623082bcd920e69938aef5d2a721a93bbc2ea95c9b4295838998",
+      "bytes": 255896,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/builder-GBRnd78SpryCu.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/builder-GBRndFrst78SpryCu.png",
+      "sha256": "339c876f5e8f4ae2202af1eed900e4433793fd2d6712bda47ba71ed1927a46bf",
+      "bytes": 244400,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/builder-GBRndFrst78SpryCu.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/builder-GBSleek8SpryCuMatt.png",
+      "sha256": "f1d42db8c9abc4645b1e6045b06e3b99283fb9bf64c28b7b30a337ed3621baf5",
+      "bytes": 267398,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/builder-GBSleek8SpryCuMatt.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/builder-GBTulipAmb5SpryBlkMatt.png",
+      "sha256": "df69eb476652ab7904cc3bc9e07ff368dded11868600b8026c04ef5e31877e23",
+      "bytes": 274594,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/builder-GBTulipAmb5SpryBlkMatt.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryCu-capon.png",
+      "sha256": "be11485e1dc46ca847890ecc1867544ee0ad66edf5341a12a3886e9f76595dd7",
+      "bytes": 71489,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryCu-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryCu-exploded.png",
+      "sha256": "1f12c52bd046a4e2a2450941d92a5ed564c6630ea0f2d391f79256429ce4b09a",
+      "bytes": 62207,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryCu-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryCu-sidecar.png",
+      "sha256": "f49573f0b0f63cda0a8874106b19e5b7fb998876173e0c6094110148784e4f57",
+      "bytes": 88155,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryCu-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryMtGl-capon.png",
+      "sha256": "ffbfc90653d4eead54646a1b96b7cc16b88143b71624f0c52239d06672436e4a",
+      "bytes": 65884,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryMtGl-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryMtGl-exploded.png",
+      "sha256": "84dd539de582d3517eddaf8d360e945539a1f8297b145e6d5d1fa2cb336b0364",
+      "bytes": 62348,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryMtGl-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryMtGl-sidecar.png",
+      "sha256": "7eab94a09de9246f9fbeb86e878dcd1158a487e7c950ce0a2db93e9325b1adbf",
+      "bytes": 83048,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryMtGl-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryMtSl-capon.png",
+      "sha256": "d3ab3baa28f67c3982224e42e525e9335b77c1a3860390b2a1feb8b58712db20",
+      "bytes": 53618,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryMtSl-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryMtSl-exploded.png",
+      "sha256": "dcaf7dbd92c6b78681923bd122f199869ed136a3d2f7806ad2f1b2f1a612b9c0",
+      "bytes": 55667,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryMtSl-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryMtSl-sidecar.png",
+      "sha256": "ed2376a6c54873e88d651ee1d4844c4d564213eee61d350dc2c5ad529643eba5",
+      "bytes": 61207,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryMtSl-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryShnBlk-capon.png",
+      "sha256": "439204b0db0912047cfb8f88270ebec2b859c945fcad23de9204cfb01b3b1335",
+      "bytes": 57784,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryShnBlk-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryShnBlk-exploded.png",
+      "sha256": "c5597bd022b21e4d8b12b81c12e5948e852f89f17cac9932675ae93984400c82",
+      "bytes": 57147,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryShnBlk-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryShnBlk-sidecar.png",
+      "sha256": "c81b76f3865dc5d190142b9a70067bdeecfb0bd9e4ad69e239e0a330bf19e07a",
+      "bytes": 66596,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryShnBlk-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryShnGl-capon.png",
+      "sha256": "67b697d109fb4d9f63fdd15c6c43311d8c6de14c49cae017123dc8175638a714",
+      "bytes": 72708,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryShnGl-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryShnGl-exploded.png",
+      "sha256": "c52794224801df516816133030991914293715576171400b2cd16529b8c18189",
+      "bytes": 65145,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryShnGl-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryShnGl-sidecar.png",
+      "sha256": "cf98314b69bdb1cb9b7cc38b2c1019fb6be488f703d2834f01dd3865039988ec",
+      "bytes": 91749,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryShnGl-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryShnSl-capon.png",
+      "sha256": "07b3c207ef4322b30d72a912726110acc487d08ea2a10752d102ef6bfcce69c7",
+      "bytes": 57803,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryShnSl-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryShnSl-exploded.png",
+      "sha256": "abd7e6aa0a81aaba42a3cdf4d436089981f3abde319626f327b88e9a17af8965",
+      "bytes": 56998,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryShnSl-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryShnSl-sidecar.png",
+      "sha256": "85bfa1c4dc21c14618bbb2aaf3c3768501a72fda84e755df6f065694e53e6b8b",
+      "bytes": 67323,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRnd78SpryShnSl-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryCu-capon.png",
+      "sha256": "5350390ddc678abf264b4c271e2335a9d43c6bd0d207eacf4197f9675aaded3b",
+      "bytes": 56486,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryCu-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryCu-exploded.png",
+      "sha256": "70ca3bc05407ec5d8694f9e6e8f9a9b6ecfbc15697a93a3c88e4b0e7f981efb7",
+      "bytes": 61009,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryCu-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryCu-sidecar.png",
+      "sha256": "6d1c5e91d811e7bdccda68c38a1f2538c40d49892371e3c2982272e2095de018",
+      "bytes": 72365,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryCu-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryMtGl-capon.png",
+      "sha256": "eaf0ac3577b4d2b216744a746951f0296088d91286d0078667c3d73ca5bdd87e",
+      "bytes": 51369,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryMtGl-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryMtGl-exploded.png",
+      "sha256": "2f17c2f2b49eadd6b922fe29e1f5962cef1efc57ae7f6d91f521b8605fa04c80",
+      "bytes": 61100,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryMtGl-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryMtGl-sidecar.png",
+      "sha256": "58b8e0afb3141cb53d027f1ef275abb522fc4cb70613c27027e9b13ad2d79304",
+      "bytes": 67934,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryMtGl-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryMtSl-capon.png",
+      "sha256": "0642290fdeef9a0d5896b4c134fac1ec02b89a5644507da712b1549a597b1bf7",
+      "bytes": 39481,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryMtSl-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryMtSl-exploded.png",
+      "sha256": "7dcbcfee86a69cb945d6e1c090f252e2d88d8ec2ace6b3ccb4cb90646c030240",
+      "bytes": 54420,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryMtSl-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryMtSl-sidecar.png",
+      "sha256": "6301033d68c3771fd9a2f91c4c88d9b96c898632c4206030d33fba506fc9db7f",
+      "bytes": 47203,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryMtSl-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryShnBlk-capon.png",
+      "sha256": "5dc97648d4a0be2eac4a31f787626fb493bde79f451e5e62bd828e2714232bec",
+      "bytes": 43697,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryShnBlk-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryShnBlk-exploded.png",
+      "sha256": "2c6885918b67c600028942fafb3853c77607e0f2411a7f12d3513a795734066d",
+      "bytes": 56078,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryShnBlk-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryShnBlk-sidecar.png",
+      "sha256": "77d3b1a8f2299cd45a2d2516a1b955bab4810aa0cd03cee5f1e82f0443860727",
+      "bytes": 52858,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryShnBlk-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryShnGl-capon.png",
+      "sha256": "23ed2afc342f4fc0318af15d45f7b216cf975b581049be78c76a13c2734799e7",
+      "bytes": 57928,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryShnGl-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryShnGl-exploded.png",
+      "sha256": "3de9df9c3a6c679d6a407e8bd4333c6836d7d2f028df7ed8f6ccc72e7a3e00e0",
+      "bytes": 63845,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryShnGl-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryShnGl-sidecar.png",
+      "sha256": "0448876af35264b55cf3ba866625557a3f2ace01025ca1382eb570ef4f0e1b2f",
+      "bytes": 76523,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryShnGl-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryShnSl-capon.png",
+      "sha256": "4b62a5b5da0465e6a37b9fb8505d0bce8c7670bc9f914d65f88fe5faf6485c9f",
+      "bytes": 43734,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryShnSl-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryShnSl-exploded.png",
+      "sha256": "8f32ecff05f4e365fef026dea4c8ead2a1d35b89a62e0bf33abc3ce3f9e932c7",
+      "bytes": 55852,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryShnSl-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryShnSl-sidecar.png",
+      "sha256": "a09922e8d54dd6b0967c37e7a3d941769e2ef389664ff3ecaeec14842d3db8b0",
+      "bytes": 53655,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBRndFrst78SpryShnSl-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryBlkMatt-capon.png",
+      "sha256": "cabeb3390cbac3403e7f3495b719a719286984cc7396edc91c3123609229972d",
+      "bytes": 24411,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryBlkMatt-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryBlkMatt-exploded.png",
+      "sha256": "3076665ad331b0bd65b61c37e91e52cd33ff418506d58167bd99ae2c3210abfb",
+      "bytes": 66392,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryBlkMatt-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryBlkMatt-sidecar.png",
+      "sha256": "06e362e64ba3bc91ae745e662d1a79bf1f6a13e8b9ba4bfa5bb26712d0f26a88",
+      "bytes": 30885,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryBlkMatt-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryBlkSh-capon.png",
+      "sha256": "caf1e5386b1f51810f4a51bf633bb0121bbcf480f106c26f35c1891f4e34be1e",
+      "bytes": 23119,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryBlkSh-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryBlkSh-exploded.png",
+      "sha256": "d0fa8ad8a539615c8fdd2aa8a15f6350ec3233998673927a58f4c3c6cd962156",
+      "bytes": 66109,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryBlkSh-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryBlkSh-sidecar.png",
+      "sha256": "567c7c1710fe83ea13c07848801670e5b57fe732417aefcdd4851f9c1fcacf14",
+      "bytes": 30246,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryBlkSh-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryBluMatt-capon.png",
+      "sha256": "42fadd92ee6af65bf48cab741afd2c9dc4a667b1b8999ba7797eef590fed8b5f",
+      "bytes": 29591,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryBluMatt-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryBluMatt-exploded.png",
+      "sha256": "d93509432548c1edd9abe8717b62dffa37cd09d66368a289759ad832191d390d",
+      "bytes": 76926,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryBluMatt-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryBluMatt-sidecar.png",
+      "sha256": "e02493f430ede049f6207fab930ec921f013da4f5891cb9f9c51a4bbdb916084",
+      "bytes": 39950,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryBluMatt-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryCuMatt-capon.png",
+      "sha256": "4b25f80b853fcb324a4b488e21d5dfc390409892c0b1ec6caee72b078bc3033e",
+      "bytes": 29217,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryCuMatt-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryCuMatt-exploded.png",
+      "sha256": "d3c7d4db8f93424eb8bd2b9c855ddf6db87f72c3c106c7bad1f9041d17baa9ce",
+      "bytes": 76816,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryCuMatt-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryCuMatt-sidecar.png",
+      "sha256": "f8f2d8e1001786b6956fb9f8959af0b50c61e5c637b8a028e80fb0e9bd674e78",
+      "bytes": 39789,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryCuMatt-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryGlMatt-capon.png",
+      "sha256": "3558c9e4308ef0362ae68a88946ae41da76df791d76651ccae4727b8a7db9381",
+      "bytes": 29569,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryGlMatt-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryGlMatt-exploded.png",
+      "sha256": "0174f7757f0db242cddf1426ea0a18596898359b55306354dc70adb14a4bbfd9",
+      "bytes": 77851,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryGlMatt-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryGlMatt-sidecar.png",
+      "sha256": "9e8d31656e2aa7618cec655366bedf92eaf7436586dd9debda86279ffee5af1e",
+      "bytes": 41218,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryGlMatt-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryGlSh-capon.png",
+      "sha256": "bfd9b2404dae49824adc9f3e05642e00dbed23ce59cf4e0ab82a01ee8d7060a7",
+      "bytes": 30636,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryGlSh-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryGlSh-exploded.png",
+      "sha256": "9cd4a25c3daf096bdab57dd07e9b4e6e5a0aba6f66b0a089ce902298c2c54ea0",
+      "bytes": 79949,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryGlSh-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryGlSh-sidecar.png",
+      "sha256": "0f8963652458a4d62401c13713e51e5eeabad30bf702519497b81ba404b5c44b",
+      "bytes": 43966,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SpryGlSh-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SprySlMatt-capon.png",
+      "sha256": "0ca7cc815ec083f97a73f25c838470539a150c26eb4b6b707a3fc9d3d1c9f392",
+      "bytes": 22837,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SprySlMatt-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SprySlMatt-exploded.png",
+      "sha256": "94c0425d7f27e00c85e1d80ad7ecbd21e670ad2eb202f2e407cc137c5004bf54",
+      "bytes": 65018,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SprySlMatt-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SprySlMatt-sidecar.png",
+      "sha256": "171446c42239559a4ff3f6c4425daf29bcd0a9a5af7a7240e7323d49ca241da9",
+      "bytes": 28918,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SprySlMatt-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SprySlSh-capon.png",
+      "sha256": "f23bb98e2e9729a6c135c85508e4a1dfa6c76570a7f650b8e6911598b1ef386b",
+      "bytes": 24921,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SprySlSh-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SprySlSh-exploded.png",
+      "sha256": "841ca1e0832bb430228a30c2ed876056b7ff3b2e8bde4bb11105464f0193d76b",
+      "bytes": 69294,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SprySlSh-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SprySlSh-sidecar.png",
+      "sha256": "1ef28b54a8ea0b09ab9c6ed6c150341c3fbcd4b63e98afab0355c09712488123",
+      "bytes": 33603,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBSleek8SprySlSh-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryBlkMatt-capon.png",
+      "sha256": "781548d908a65487e2ef345573629d20d6747ee0aee0bb59fd2e039ca4d43e45",
+      "bytes": 39759,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryBlkMatt-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryBlkMatt-exploded.png",
+      "sha256": "4ec9c7e5352655ee47ff774c10fe7653573f3081bf90e1ad6b0d2160e1bae406",
+      "bytes": 86937,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryBlkMatt-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryBlkMatt-sidecar.png",
+      "sha256": "1b3d536a06fe0901ed5ae14c32fa60263eff46082f053a59cf48c0c4353bee18",
+      "bytes": 49162,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryBlkMatt-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryBlkSh-capon.png",
+      "sha256": "e453fdda06a2bc034336151cfe95b260202ce232422e3d0ef0211a75f93fd913",
+      "bytes": 38078,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryBlkSh-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryBlkSh-exploded.png",
+      "sha256": "1c86eba88cf6dd070e59aea998aeed6738f27f036b7fbc4a9468787ee2e32d08",
+      "bytes": 87192,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryBlkSh-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryBlkSh-sidecar.png",
+      "sha256": "f9e7a87f7c1a7be787cae31f710bb4b6683b6fc23e6dc314073ff2d171ad9017",
+      "bytes": 48438,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryBlkSh-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryBluMatt-capon.png",
+      "sha256": "62d265809cdececb6ac32f72d3832288356d3e8092895a05a7a40197b2e67131",
+      "bytes": 46193,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryBluMatt-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryBluMatt-exploded.png",
+      "sha256": "6f964415bb307c531cb7356ae4fc0c6ab5345d2a7109910e8776362967b1c448",
+      "bytes": 101132,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryBluMatt-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryBluMatt-sidecar.png",
+      "sha256": "ed7220b02160aa8e3ad02ac284f3ef410d8127a96b44528fdb1645cafd87cc68",
+      "bytes": 61713,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryBluMatt-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryCuMatt-capon.png",
+      "sha256": "92a6fe609c0d59e871584b2b247edae7a767d1b05991a760685ecea5de495991",
+      "bytes": 45875,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryCuMatt-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryCuMatt-exploded.png",
+      "sha256": "8613ebd419bb99123cf8db55adaed6a5c8685d7151115aa4203ec4638de73307",
+      "bytes": 100713,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryCuMatt-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryCuMatt-sidecar.png",
+      "sha256": "bfabf295449a262130801bcdf7961f322c1ae6c30f8658631b9a13007e6ffc40",
+      "bytes": 61165,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryCuMatt-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryGlMatt-capon.png",
+      "sha256": "6725fe4c2f32dc53886c929523d7eb0c4bc660d3205e50990f74978c111f989c",
+      "bytes": 46301,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryGlMatt-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryGlMatt-exploded.png",
+      "sha256": "432791b6fc3a6d20a428db7976122b14913bfd457bc41181597f3542a06fe520",
+      "bytes": 103033,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryGlMatt-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryGlMatt-sidecar.png",
+      "sha256": "1518158e5bdc60e8956b204a9ef447d43b87b4bd4c0a8632355adabcf20cebcf",
+      "bytes": 64223,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryGlMatt-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryGlSh-capon.png",
+      "sha256": "a40458fe961524aa90eab5ad79a17a973677d20c598db9aa97a6848b0a0819a6",
+      "bytes": 48019,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryGlSh-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryGlSh-exploded.png",
+      "sha256": "c1754497cb93755ab4d41c7580fce2199d79e73e79d2c1472dd6dc35738aad1d",
+      "bytes": 106197,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryGlSh-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryGlSh-sidecar.png",
+      "sha256": "ceebb6da0d54a50c2486a9b43b229bb24be2ac8702e89a508b46ef21a06024fb",
+      "bytes": 67609,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SpryGlSh-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SprySlMatt-capon.png",
+      "sha256": "58566d641d55808d14d80683912a43280207a55c01eddd72ab6d96dbf851b0f2",
+      "bytes": 37511,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SprySlMatt-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SprySlMatt-exploded.png",
+      "sha256": "2cc00a038dad5ba73ee05751bf10b0ae1422de0ceb299738da012075537e9e17",
+      "bytes": 85141,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SprySlMatt-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SprySlMatt-sidecar.png",
+      "sha256": "6a4bdc5964b150ba7ad4824a1279717a09099d641be3015b68943f0d1390d37a",
+      "bytes": 46585,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SprySlMatt-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SprySlSh-capon.png",
+      "sha256": "363130cda128cb68f207cf827d861d9c43836fab7c4d3edde116fe9beffda329",
+      "bytes": 40716,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SprySlSh-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SprySlSh-exploded.png",
+      "sha256": "fc3e1188721e0972a16b16a8373c0261706b89fab6c1e7cdaf4a46b2f10c4902",
+      "bytes": 91984,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SprySlSh-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SprySlSh-sidecar.png",
+      "sha256": "67a49e2d84cd49ba01635a7d2393212e70d10e54c8664c23d39a19cbe1499ed7",
+      "bytes": 54467,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/desktop-GBTulipAmb5SprySlSh-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryCu-capon.png",
+      "sha256": "3cf7f45820b4acc55b936c4039432e549dd01260a3c7d81c459950008f735d6d",
+      "bytes": 42412,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryCu-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryCu-exploded.png",
+      "sha256": "966dfd218ff2b62b6022e46bf101232ff94b3208c63619c9d929bd3d38376fa9",
+      "bytes": 25450,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryCu-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryCu-sidecar.png",
+      "sha256": "755baa858307421d69782d8577099386651450d8cd40aca7fbb5ca4c27d192c5",
+      "bytes": 53095,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryCu-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryMtGl-capon.png",
+      "sha256": "3dceabe2b4376de5e62572d87de171e19300a5c2a789cbedc6e418c5267a1b27",
+      "bytes": 39745,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryMtGl-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryMtGl-exploded.png",
+      "sha256": "12a2770d08530aea07a9a246ad21f134df4acff6fef2d55defea6b212f4e8e8c",
+      "bytes": 25543,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryMtGl-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryMtGl-sidecar.png",
+      "sha256": "0ba870f7789629318c358074ac1d190d04ae610e309d73fc6ed9e527fccd78b7",
+      "bytes": 50578,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryMtGl-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryMtSl-capon.png",
+      "sha256": "82e2492545f68d8af27de9203612e0809f4e6641b268b729de492a378cbacc23",
+      "bytes": 32462,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryMtSl-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryMtSl-exploded.png",
+      "sha256": "fb78e4722cf5eeddaf1e5874147855be243b970893fd2ac671027c92f340b892",
+      "bytes": 21880,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryMtSl-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryMtSl-sidecar.png",
+      "sha256": "2e9ef6d327dcabe3a852fb86dd05d5edf6ce76ed825ee1c419482182f133e3f1",
+      "bytes": 37601,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryMtSl-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryShnBlk-capon.png",
+      "sha256": "014d40502d170f53573957a124ce79114ebbc0fe0b25f7c314a2f9bd8d2629fb",
+      "bytes": 34599,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryShnBlk-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryShnBlk-exploded.png",
+      "sha256": "169b9b69d412e407ab1df96e9787c2c2d85b703828bbfdd79e56b5fc9f3b6d80",
+      "bytes": 22544,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryShnBlk-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryShnBlk-sidecar.png",
+      "sha256": "ccc25a806aaa34ef4da15bc9ddab0ffe39c642fdc4a726d5d0b3c09aa041c6dc",
+      "bytes": 40438,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryShnBlk-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryShnGl-capon.png",
+      "sha256": "f3b59f051ba0ebfdbdb81d33f3c1adc46d3b3217dff4acb43fe3ae044ae143eb",
+      "bytes": 43375,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryShnGl-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryShnGl-exploded.png",
+      "sha256": "a61248f49b8873359eb5d7be52df8827ad439ab2ce801407ff6b114cdbb2f256",
+      "bytes": 26794,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryShnGl-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryShnGl-sidecar.png",
+      "sha256": "82e7ffb1b27720774f41affff49c8f6b859df672bfef370ffba10ff15c6282e6",
+      "bytes": 55240,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryShnGl-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryShnSl-capon.png",
+      "sha256": "9e0a5dd6ed344a53b46dc1c0107400acdfbaa3cc4e37835b71754f75ae71f1b1",
+      "bytes": 34452,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryShnSl-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryShnSl-exploded.png",
+      "sha256": "7c3199473aaadcc4de92d6e2c1aab387031d3fa45d27e957abd90d2c737cb483",
+      "bytes": 22639,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryShnSl-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryShnSl-sidecar.png",
+      "sha256": "11ddbcbafb02b5181eec82d7f524160bb3d39a1febc8c4423d6b02831ddaf38d",
+      "bytes": 40903,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRnd78SpryShnSl-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryCu-capon.png",
+      "sha256": "9321240046a48e2fde63eff812ce8c2560e55f78ca521e90c8c744b61e2dc37b",
+      "bytes": 34908,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryCu-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryCu-exploded.png",
+      "sha256": "9ba2c7f6ee7dc7fb709b5f93322d2eebb5b818e1b2a79976bbcdb2425fc04f53",
+      "bytes": 24586,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryCu-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryCu-sidecar.png",
+      "sha256": "71548f3dd9ac1df302c10ebff28b97a742238aaaed0d71e26445c3104c33a260",
+      "bytes": 45247,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryCu-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryMtGl-capon.png",
+      "sha256": "11b685a27f665af89719c3c71180cc0379ee8e7bc90a3e57f31f1d7e779acc36",
+      "bytes": 32454,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryMtGl-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryMtGl-exploded.png",
+      "sha256": "51702885a185fd6c316248a6f728667483127c747cbf93457ca11980143f8f63",
+      "bytes": 24691,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryMtGl-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryMtGl-sidecar.png",
+      "sha256": "281fa1e14a2e832ffac650ff72368387208b08dbf1807bf2f718e2a3fd9754c1",
+      "bytes": 43021,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryMtGl-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryMtSl-capon.png",
+      "sha256": "1b929494cb085051857109d47d2a561526f9cf36cce55104233db9d60199486a",
+      "bytes": 25670,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryMtSl-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryMtSl-exploded.png",
+      "sha256": "d3cd6f4a8f3796b0dde10fe4f8076b87673152db98aa869c248abbee47c663c0",
+      "bytes": 21257,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryMtSl-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryMtSl-sidecar.png",
+      "sha256": "429faf90267f4f96e5bceb104f30e833ec22567bc4b6c9f23e217e4bb0cd7b9b",
+      "bytes": 30887,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryMtSl-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryShnBlk-capon.png",
+      "sha256": "42f6aba866d62ed418bb2af0a185945c3bcefd29348752c0b32a17bd1daec048",
+      "bytes": 27792,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryShnBlk-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryShnBlk-exploded.png",
+      "sha256": "b84cd062ae70221ac02f05a42df2a66df98533dc72c3170ab930be50d202a1be",
+      "bytes": 21901,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryShnBlk-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryShnBlk-sidecar.png",
+      "sha256": "2f9a5eafb6b625d63bacefd0b9ef496ba4fbab9093f161ab88ac279c1a55ab3e",
+      "bytes": 33893,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryShnBlk-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryShnGl-capon.png",
+      "sha256": "497b5935ff3eed20aaa9222460172705759edc7f0101fa7e816fe7239d1e2770",
+      "bytes": 35997,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryShnGl-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryShnGl-exploded.png",
+      "sha256": "e6d93db668952b524fea7a3691eb44ba2fd53b630ca09155e0df017aaa62df91",
+      "bytes": 26043,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryShnGl-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryShnGl-sidecar.png",
+      "sha256": "306909f747a4e5989b63a5a9c05faa8bb7fbbc04b5c7c6952150566eef72b0ee",
+      "bytes": 47797,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryShnGl-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryShnSl-capon.png",
+      "sha256": "ab0b7932ef3431e98484346e80a5fc4ff6c1292414346f74affe305084747ca6",
+      "bytes": 27561,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryShnSl-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryShnSl-exploded.png",
+      "sha256": "c2254380e6b94085c0c70d6229b854342742006dbe7fed7d0e00e64dd7bf550c",
+      "bytes": 21993,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryShnSl-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryShnSl-sidecar.png",
+      "sha256": "6d3416aa267fbb6fad441895626203b8e5728918180b809993bdaf9366a99c94",
+      "bytes": 34405,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBRndFrst78SpryShnSl-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryBlkMatt-capon.png",
+      "sha256": "9b01569ed365afb656dd31eb93be1c4cb0d6250e82f0a95e380af055b6d36899",
+      "bytes": 14955,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryBlkMatt-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryBlkMatt-exploded.png",
+      "sha256": "12a1fc1052318209509eecf92727f1393ef45a7a26720aeeb5d206cb897c68af",
+      "bytes": 28033,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryBlkMatt-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryBlkMatt-sidecar.png",
+      "sha256": "d3299dad9496208ab3052fd3e9353a66b0b844316f527a0a05a0ed8c2b07eeee",
+      "bytes": 19100,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryBlkMatt-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryBlkSh-capon.png",
+      "sha256": "d4f4e3234cf37d3ece242778021d3c9fbe5a19023b7f79576d18cc3ec288d173",
+      "bytes": 14316,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryBlkSh-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryBlkSh-exploded.png",
+      "sha256": "8e0311a3a83347f2ee9be5499d99f17a2e0e3db9c925f80f4083bbe70d9681f6",
+      "bytes": 28049,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryBlkSh-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryBlkSh-sidecar.png",
+      "sha256": "3430b04dbb84f1fa0f01dfbc7bf9f6669b298ddc5e42bd67bea41ada0fd17501",
+      "bytes": 18857,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryBlkSh-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryBluMatt-capon.png",
+      "sha256": "1efe28aae29b88c459706c515f78e1ae4577b05ad63cf65cbf2e802733efa523",
+      "bytes": 17882,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryBluMatt-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryBluMatt-exploded.png",
+      "sha256": "4ea2b4559b7a3fe9f33ef5e301165617269badfb6237a23a7aa69e3954b047a6",
+      "bytes": 33802,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryBluMatt-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryBluMatt-sidecar.png",
+      "sha256": "b40d812e15f04819853364a6587f1f8d700107e7c22c849893ce6caec4a817f2",
+      "bytes": 24414,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryBluMatt-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryCuMatt-capon.png",
+      "sha256": "1152f0b29c09fcfa5441caa16712b4d6721b128f51d3435fcaa8c027d5baf937",
+      "bytes": 17712,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryCuMatt-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryCuMatt-exploded.png",
+      "sha256": "71d43eea084c31af7c9072283edbc9a4c15cd8ab607a07ebfc97cfacb1cdc5f3",
+      "bytes": 33795,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryCuMatt-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryCuMatt-sidecar.png",
+      "sha256": "12c665968cda1e4ab780be8c5fb0cd93e5f35f277b687f3c0b3b41c51eef2ed7",
+      "bytes": 24132,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryCuMatt-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryGlMatt-capon.png",
+      "sha256": "f31d7b162358f0a5c93247b550e8dcbeb64c659788f7906601ccc96121d62ee3",
+      "bytes": 17869,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryGlMatt-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryGlMatt-exploded.png",
+      "sha256": "f101d068bc395964d3e4369c3dedf7cdf7966e7ea80ccef1a0e9226f22476dff",
+      "bytes": 34444,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryGlMatt-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryGlMatt-sidecar.png",
+      "sha256": "7e652faf6def0d614d6f06fabd12f5325fcc5c5ac75d1c8ffed2672b3ecae870",
+      "bytes": 24975,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryGlMatt-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryGlSh-capon.png",
+      "sha256": "50c297bbab2da905542e36cf106d6dad01d3aa9280d892ba7d546cf2f6ad472d",
+      "bytes": 18411,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryGlSh-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryGlSh-exploded.png",
+      "sha256": "f29f269876a8fa22599acf2b4ec54cfdb16dc01ab88bbb1499b8517e7cc24dfd",
+      "bytes": 35856,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryGlSh-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryGlSh-sidecar.png",
+      "sha256": "c7d02e2278e872601d0a1a08ce9e2489d10cce8568920ae557e7081a8dea47a3",
+      "bytes": 26557,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SpryGlSh-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SprySlMatt-capon.png",
+      "sha256": "aaf6ab8f63881c5ddd9bcbd4c90b37183601146680b392c1ed9bb6102dfdcf1a",
+      "bytes": 14163,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SprySlMatt-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SprySlMatt-exploded.png",
+      "sha256": "a8811bf47b86a19742e0a70d3822731b9bc20345dbfbebee0c7dc8ddaf4756db",
+      "bytes": 27551,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SprySlMatt-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SprySlMatt-sidecar.png",
+      "sha256": "a0b688031f4cfbd58124ae16fb183bfa59e32368b209ebaa4af26662f149966e",
+      "bytes": 18135,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SprySlMatt-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SprySlSh-capon.png",
+      "sha256": "06c573b922c43e6ff050807ff4b1a0d57cda909f5f47673be20ce86344492e8c",
+      "bytes": 15103,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SprySlSh-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SprySlSh-exploded.png",
+      "sha256": "2c7722d5ace2771377d64c58e0e36b7fb5ac027a8d41a3508b0ce08ed0a86c4d",
+      "bytes": 29755,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SprySlSh-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SprySlSh-sidecar.png",
+      "sha256": "70a3dcaf494b2625a3046cbdde2632207784abb23461c608bd8ed095850c1b61",
+      "bytes": 20322,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBSleek8SprySlSh-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryBlkMatt-capon.png",
+      "sha256": "6bd98829ffa072618af85c64835a61c5eb127096fed9cd80acf297a50bcfe885",
+      "bytes": 24771,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryBlkMatt-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryBlkMatt-exploded.png",
+      "sha256": "fcb352711f843ccdfc0db87c13c176fba9975c168b115fb1125ad212b96edb62",
+      "bytes": 41395,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryBlkMatt-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryBlkMatt-sidecar.png",
+      "sha256": "ff9dc095a85e3e135f7a90a1f696fd0959bb4123eccf96fec51004b8380b00b2",
+      "bytes": 30000,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryBlkMatt-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryBlkSh-capon.png",
+      "sha256": "e8eb795bf67b39b3c48b2a36ecc8dba36e8bfeb91dadccb15aea374aa42c86c3",
+      "bytes": 23599,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryBlkSh-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryBlkSh-exploded.png",
+      "sha256": "80616b9a4db9621b31ac5d42654a5f1891665d88227b7c0c5b3f0204899e6ed9",
+      "bytes": 41355,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryBlkSh-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryBlkSh-sidecar.png",
+      "sha256": "a9c27d6d5e482ae389f61bf50347fb9ddf2c5c58bcd0965df201c20375802d71",
+      "bytes": 29614,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryBlkSh-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryBluMatt-capon.png",
+      "sha256": "0e0ee2ff86c9a38fb486ca1add7bf22abf00573479a88aae59cea995cce1be86",
+      "bytes": 28303,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryBluMatt-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryBluMatt-exploded.png",
+      "sha256": "d2ad7e916e44b15398a661d34fa3fd75ae6ef2a966bd8073c088040e90015633",
+      "bytes": 49129,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryBluMatt-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryBluMatt-sidecar.png",
+      "sha256": "ebaf612fb02c2db80473d0c0fd70b206f6b01d1fd173721fd34796d421a5c671",
+      "bytes": 36683,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryBluMatt-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryCuMatt-capon.png",
+      "sha256": "b3bad6c872e43bebdd1240a77597184507e1c90b934301df4a3ed123752df919",
+      "bytes": 28112,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryCuMatt-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryCuMatt-exploded.png",
+      "sha256": "c229d3611d5aa3bfe55580d7b19b03d563a1d2776d56d3546e53ae1253fa9b15",
+      "bytes": 48733,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryCuMatt-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryCuMatt-sidecar.png",
+      "sha256": "a815914455bc010cf7ea056a992e2cc149de1a0c5da83a2be025261350e2590b",
+      "bytes": 36551,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryCuMatt-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryGlMatt-capon.png",
+      "sha256": "cdd790ae6f40f7d738e5b52cf923464ae43d93e5eeea42086e300ce3909c1aab",
+      "bytes": 28395,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryGlMatt-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryGlMatt-exploded.png",
+      "sha256": "0e40191b616cba370e9d3cf838dd376e5fdf4117946f0b8cf52bfa37b5d852a1",
+      "bytes": 49885,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryGlMatt-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryGlMatt-sidecar.png",
+      "sha256": "a296160504954b8f3cb29383e4860a6dc893d00408021e72ad80d8ae65ce818b",
+      "bytes": 37514,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryGlMatt-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryGlSh-capon.png",
+      "sha256": "3e0e10a23af2b75fe7b1554ced7b1866334cc73a0683f72d06f99083dab318c3",
+      "bytes": 29326,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryGlSh-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryGlSh-exploded.png",
+      "sha256": "5b4d30c405e42cb418732a0d5db7db3bb8b59b22dd72fb93ead91abef60fb94d",
+      "bytes": 51828,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryGlSh-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryGlSh-sidecar.png",
+      "sha256": "f6152285f912b2e16fb104b16ed5da5727092c51d0ed84a47e741643fcb63e4a",
+      "bytes": 40086,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SpryGlSh-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SprySlMatt-capon.png",
+      "sha256": "758fb3a218457212b1a1a800dd6ef9a9acadb9bcab5d5a2e72de53a738f312ee",
+      "bytes": 23348,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SprySlMatt-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SprySlMatt-exploded.png",
+      "sha256": "6ba1fbfea4d978e69e2299d288f2adabd3b22bd0e03d2af6d0351d00d1f9faa0",
+      "bytes": 40152,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SprySlMatt-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SprySlMatt-sidecar.png",
+      "sha256": "a063c7d51c3e9c0ed11ddec558244ef31e6352093a9f0876b6427acbbd2d26e1",
+      "bytes": 28501,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SprySlMatt-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SprySlSh-capon.png",
+      "sha256": "27e35cd6850abf8c9a8001f61c3412a0b42ed972ca707397003b0bb07ab84768",
+      "bytes": 24778,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SprySlSh-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SprySlSh-exploded.png",
+      "sha256": "71391561f1e161d07bd8f3f7bee73785d674f1fa84a71b98860182317260304d",
+      "bytes": 43647,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SprySlSh-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SprySlSh-sidecar.png",
+      "sha256": "dbb3e86a0e46c6b05fa6d3a1a56bc6bc1778b9dac78b4e710460160fa3af1c6a",
+      "bytes": 32823,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/mobile-GBTulipAmb5SprySlSh-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/regression-cylinder-5ml-clear-13-415-rollon-exploded.png",
+      "sha256": "c4e35d8b4ebb4addfa7da567597398972f33e0090bd98477ebd6bc506dae8661",
+      "bytes": 53570,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/regression-cylinder-5ml-clear-13-415-rollon-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/regression-cylinder-5ml-clear-13-415-rollon-sidecar.png",
+      "sha256": "41127e515318b5a05275568817cf2b0e5484b0f3d8229c9d7fab63c16cb8bd2b",
+      "bytes": 66298,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/regression-cylinder-5ml-clear-13-415-rollon-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/regression-cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png",
+      "sha256": "525ea5dab60a2c8bf0b72cfab0ab9bd0f821eaf2350f38b46bd344f3cfe2c098",
+      "bytes": 65597,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/regression-cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/regression-cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "sha256": "31f9a15df52a658f626df53524c7c0862495c0a5cba397d570cf83604dc09699",
+      "bytes": 77462,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/regression-cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/regression-cylinder-9ml-clear-17-415-finemist-exploded.png",
+      "sha256": "1aeb5188d65cc7eb3244b35981e4c35b8800bc15da0778362a2e4868ce1df1e7",
+      "bytes": 57003,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/regression-cylinder-9ml-clear-17-415-finemist-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/regression-cylinder-9ml-clear-17-415-finemist-sidecar.png",
+      "sha256": "75644e7f0899b5b878812fe9fc1be8c2843844b7309e23f6fd0725453b74aa12",
+      "bytes": 21206,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/regression-cylinder-9ml-clear-17-415-finemist-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/regression-cylinder-9ml-swirl-17-415-finemist-exploded.png",
+      "sha256": "3909e3a3d1f52e1104c9da6c7cc94490dab85c128653183b09e28467fd0e9d11",
+      "bytes": 76930,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/regression-cylinder-9ml-swirl-17-415-finemist-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/screenshots/regression-cylinder-9ml-swirl-17-415-finemist-sidecar.png",
+      "sha256": "8a8d67e45ef6933af2cc5abde43417fcf2f605b268db59403b93dab79908ab39",
+      "bytes": 40240,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/screenshots/regression-cylinder-9ml-swirl-17-415-finemist-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/sleek-exploded-after.png",
+      "sha256": "6831c23c82c2f2017ce1c36ed4af3b93eb448a89105eea812bb3548a3d106feb",
+      "bytes": 76816,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/sleek-exploded-after.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/sleek-exploded-before.png",
+      "sha256": "281409df79f820eca7deb2f3cdb0d06b2e0e16e15747e7a73a45c2cf4e55bff1",
+      "bytes": 75086,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/sleek-exploded-before.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/sleek-sidecar-after.png",
+      "sha256": "f8f2d8e1001786b6956fb9f8959af0b50c61e5c637b8a028e80fb0e9bd674e78",
+      "bytes": 39789,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/sleek-sidecar-after.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/sleek-sidecar-before.png",
+      "sha256": "1e63bf2ed7a7df3ac05ce5740fd48ed440f4a11b2acf9b6ace9bbae481c06538",
+      "bytes": 38874,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/sleek-sidecar-before.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/tulip-exploded-after.png",
+      "sha256": "d1396d90edc582b148c5a76df91ebba6d2e1c2e6307a9243734573ab70d8f2c9",
+      "bytes": 86938,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/tulip-exploded-after.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/tulip-exploded-before.png",
+      "sha256": "d1396d90edc582b148c5a76df91ebba6d2e1c2e6307a9243734573ab70d8f2c9",
+      "bytes": 86938,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/tulip-exploded-before.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/tulip-sidecar-after.png",
+      "sha256": "1b3d536a06fe0901ed5ae14c32fa60263eff46082f053a59cf48c0c4353bee18",
+      "bytes": 49162,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/tulip-sidecar-after.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/tulip-sidecar-before.png",
+      "sha256": "ff2f24a676d4cc98b83f5409fe37637668d1ebe27c7fa421c40a1eee3eebea64",
+      "bytes": 48437,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/tulip-sidecar-before.png"
+    },
+    {
+      "path": "runtime/public/reviews/dip-tube-followup-2026-10-31/verification.json",
+      "sha256": "9c45a28750fbbbeb6c13e03551fd75640a277ee2aa495925f24e21f28b9cf322",
+      "bytes": 2114,
+      "restoreTo": "public/reviews/dip-tube-followup-2026-10-31/verification.json"
+    },
+    {
+      "path": "runtime/public/local-kits/catalog-followups-2026-10-31/kits.json",
+      "sha256": "5f9782d47ccec14a82320724da7afc3006719ad49a394a8699d763a5b61c13ed",
+      "bytes": 188562,
+      "restoreTo": "public/local-kits/catalog-followups-2026-10-31/kits.json"
+    },
+    {
+      "path": "runtime/public/reviews/meeting-audit-2026-10-31/index.html",
+      "sha256": "f1a6fccb2876066513d23ce4b629e11734377bd12b527257778486fe324ed599",
+      "bytes": 770762,
+      "restoreTo": "public/reviews/meeting-audit-2026-10-31/index.html"
+    },
+    {
+      "path": "runtime/public/reviews/meeting-audit-2026-10-31/product-page-audit.csv",
+      "sha256": "ce50b291b488c1ad3afbd327c10db92b20075c22e5f996dfb5dc1b29fc60fa60",
+      "bytes": 149598,
+      "restoreTo": "public/reviews/meeting-audit-2026-10-31/product-page-audit.csv"
+    },
+    {
+      "path": "evidence/brief.md",
+      "sha256": "ff9652661dcd836ea4b537ffb389dfce01497a758fa6fe7297721c6580353138",
+      "bytes": 1971
+    },
+    {
+      "path": "evidence/render-tubes.py",
+      "sha256": "1494c473148992c3f3783494c34fd43d8b3ec21a19f7ab09747877f23af5a473",
+      "bytes": 5009
+    },
+    {
+      "path": "evidence/integrate.cjs",
+      "sha256": "0228c3ac8bb88b704e6caf31e95dd142a782fdec54f2a7105a94918cc8b4784b",
+      "bytes": 3363
+    },
+    {
+      "path": "evidence/review.cjs",
+      "sha256": "bee0af8047586572e85331847e4f66eff0c4ec34497074befd4e95c357abe91b",
+      "bytes": 6142
+    },
+    {
+      "path": "evidence/verify.cjs",
+      "sha256": "32ec63b9ac7028ed15ed00d966acc29575f9e6ec7e91a02c517b9d958915a5e9",
+      "bytes": 5647
+    },
+    {
+      "path": "evidence/handoffs.cjs",
+      "sha256": "1cb527de9badd52d91065add8c3f3326d109db8f50ed6a2b50bcf8aeffa56667",
+      "bytes": 2245
+    },
+    {
+      "path": "evidence/regression.cjs",
+      "sha256": "a35bc4da28601bb810d2cd16248ae6b26ff4fd530215c29adfb15d7a50bf8286",
+      "bytes": 1923
+    },
+    {
+      "path": "evidence/package.py",
+      "sha256": "c0a66de9afecb8c0ff1d174d2bf936ea19f8b59676ab7477aff0be2838d5294e",
+      "bytes": 6696
+    },
+    {
+      "path": "evidence/register-live.json",
+      "sha256": "b8eb2ecc6a357dcd94d15e4e710a37322dff85f11440aa339a256e9d5b5d8714",
+      "bytes": 76640
+    },
+    {
+      "path": "evidence/kits-before.json",
+      "sha256": "b4b15665f7711cc9ec9df9bd8795ec4f5bffa49554920831588ff90b93e4700c",
+      "bytes": 164139
+    },
+    {
+      "path": "evidence/kits-after.json",
+      "sha256": "4a3ddcb590cb943a75780e206fa63f47d7b38a5de4ad4f33336d9f69096e63b1",
+      "bytes": 171535
+    },
+    {
+      "path": "evidence/defects-by-sku.json",
+      "sha256": "79ca1544e6e44b7b427f6186a4d2d352911626a17c870fecf5058d359900df5a",
+      "bytes": 24756
+    },
+    {
+      "path": "evidence/browser-before.json",
+      "sha256": "741c63b1ede3e5f15360760e5b9f69e07b894a0cfd285418e7f47bb01b4d0935",
+      "bytes": 23679
+    },
+    {
+      "path": "evidence/browser-after-pilot.json",
+      "sha256": "59b111a878f55d7b954d021eb28d751409ce47172bd611281251ad364c9ac5cb",
+      "bytes": 23732
+    },
+    {
+      "path": "evidence/browser-verification.json",
+      "sha256": "09bbb3cb9c38e22497cb14eaed743ae9c195c575c9fcdcb05f160e16490004dd",
+      "bytes": 518021
+    },
+    {
+      "path": "evidence/builder-verification.json",
+      "sha256": "7c602bc3c1afb9c9496b19efc7303f69bfb9e6fbd33e545caa8903196bad9428",
+      "bytes": 5412
+    },
+    {
+      "path": "evidence/builder-handoffs.json",
+      "sha256": "97742acd8dd760b230d4e57a311e4a9feea205b5fa0290246902f970da33fd0f",
+      "bytes": 15929
+    },
+    {
+      "path": "evidence/shared-stage-regression.json",
+      "sha256": "e1fb843eef02857c644458cc216ac80d4172e1e2fe5c5719bde1446010667c6d",
+      "bytes": 3766
+    },
+    {
+      "path": "evidence/alpha-checks.json",
+      "sha256": "09dad4b595fc40f22df3ebe707e068b75ddcb76c68d2ed3f6fa66a1c4c18940a",
+      "bytes": 739
+    },
+    {
+      "path": "evidence/verification.json",
+      "sha256": "9c45a28750fbbbeb6c13e03551fd75640a277ee2aa495925f24e21f28b9cf322",
+      "bytes": 2114
+    },
+    {
+      "path": "evidence/restore-verification.json",
+      "sha256": "a9248c58a0c40e550853a9385aedb32d86b7d1b1321e941863b06451ce70321c",
+      "bytes": 592
+    },
+    {
+      "path": "evidence/native-scenes.json",
+      "sha256": "b883c3a6c8e98e86e7fb3900db49ae5d06cc4c7844d4dfc555d4b34ee92accfc",
+      "bytes": 1100
+    },
+    {
+      "path": "evidence/mechanism-round-78-v1.json",
+      "sha256": "94d6fa750ba54f755093f468e165e07b0e2d4493da15cc582411bd5de48dfc9a",
+      "bytes": 1305
+    },
+    {
+      "path": "evidence/mechanism-sleek-8-v1.json",
+      "sha256": "8995f3b013e4f9ecedf3f99cec92a49cf6e5bac8eba92f822dc2a41068744cb2",
+      "bytes": 1304
+    },
+    {
+      "path": "evidence/mechanism-tulip-5-v3.json",
+      "sha256": "a3939c6d156f47564d18ce9ebb05b5b8531ba3001bb0836e666133d941d7548d",
+      "bytes": 1272
+    }
+  ]
+}

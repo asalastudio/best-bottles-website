@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-31",
+  "scope": {
+    "skus": 28,
+    "Tulip5": 8,
+    "Sleek8": 8,
+    "Round78clear": 6,
+    "Round78frosted": 6
+  },
+  "automated": {
+    "focusedTestsPassed": 52,
+    "typecheck": "passed",
+    "targetedLint": "passed",
+    "pdpBrowserStates": 168,
+    "builderKits": 28,
+    "builderBrowserHandoffs": 4,
+    "sharedStageRegressions": 8,
+    "pageErrors": 0
+  },
+  "visualReview": "All 28 seated variants inspected on contact sheet; representative before/after, exploded, mobile and builder screenshots inspected. Owner approval pending.",
+  "preservation": "Body, head, cap, external hardware, kit anchors and glass sizing unchanged. Nontube part records compared byte-for-byte.",
+  "geometry": "Hollow tube mesh manifold and normals recalculated. Slim OD 1.1 mm Tulip/Sleek, 1.5 mm Round. Complete alpha rows and padded bounds.",
+  "limitations": [
+    "Tube and internal cartridge dimensions, assumed floor and tip clearance are inferred, not supplier measured.",
+    "Seated tube is a native Blender RGBA layer composited over existing glass; through-glass refraction is approximated, not a complete 3D bottle ray trace.",
+    "Full-catalog visual signoff remains unfinished."
+  ],
+  "release": "Local review only; no media published and no merge performed.",
+  "previousCommitCi": {
+    "commit": "ac3f19a4f001d707d3575cef0360837cd1b8700c",
+    "runId": 41248855001,
+    "conclusion": "success; predates this dip-tube commit"
+  },
+  "restore": {
+    "emptyRestore": {
+      "mode": "restored",
+      "verifiedFiles": 226,
+      "copied": 203,
+      "unchanged": 0,
+      "backedUp": 0
+    },
+    "repeatRestore": {
+      "mode": "restored",
+      "verifiedFiles": 226,
+      "copied": 0,
+      "unchanged": 203,
+      "backedUp": 0
+    },
+    "conflictBackup": {
+      "mode": "restored",
+      "verifiedFiles": 226,
+      "copied": 1,
+      "unchanged": 202,
+      "backedUp": 1,
+      "backupRoot": "/var/folders/g3/l_7f2hg57x90xzht2md1q_hm0000gn/T/bb-dip-tube-restore-89lhhw8y/outputs/catalog-model-repair-2026-10-31/checkpoint-restore-backups/2026-10-31T23-36-05-549Z"
+    }
+  }
+}

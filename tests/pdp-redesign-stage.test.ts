@@ -56,6 +56,23 @@ describe("reducer cap removal", () => {
 });
 
 describe("layout", () => {
+    it("keeps fractional layer priorities above or behind glass with valid CSS indices", () => {
+        for (const tubePriority of [-0.5, 0.5]) {
+            const kit: KitLike = { ...KIT, parts: [
+                ...KIT.parts,
+                { ...KIT.parts[0], slot: "diptube", zOrder: tubePriority },
+            ] };
+            for (const view of ["sidecar", "capon", "exploded"] as const) {
+                const parts = stageLayout(kit, view, CONTEXT)!.parts;
+                const tube = parts.find(part => part.slot === "diptube")!;
+                const glass = parts.find(part => part.slot === "body")!;
+                expect(parts.every(part => Number.isInteger(part.zIndex) && part.zIndex > 0)).toBe(true);
+                expect(Math.sign(tube.zIndex - glass.zIndex)).toBe(Math.sign(tubePriority));
+                expect(tube.zIndex).toBeLessThan(parts.find(part => part.slot === "cap")!.zIndex);
+            }
+        }
+    });
+
     it("paints every part in z order at its assembled position for CAP ON", () => {
         const layout = stageLayout(KIT, "capon", CONTEXT)!;
         expect(layout.parts.map((part) => part.slot)).toEqual(["body", "roller", "cap"]);
