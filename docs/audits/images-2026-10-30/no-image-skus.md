@@ -52,3 +52,19 @@ they are below the bone-canvas standard and blocked by policy.
 
 `data/paper-doll/component-library-inventory.json` only covers `20. Caps` and
 `21. Tassels`; the sprayer and bottle libraries need the drive mounted to search.
+
+## Update, 30 Oct 2026 (later)
+
+With the PSD library mounted, 14 of the 46 now have catalog heroes
+(`docs/hero-families/psd-gap-2026-10-30/`): the 8 tassel bottles, GBElgFrst100RdcrMtSl,
+8-425CpShortBlack, CP8-425TallBlack, CP18-415ShnBlkTall, and the two held specialty caps
+CPKeyChnGld and CPTslRed. Findings from the library search that change the table below:
+
+- The five held `13-415CAP4Spry*` / `18-415CAP4Spry*` SKUs are duplicate listings of sprayers
+  already sold as `CP13-415Spry*` and `Spry18-415*`; they should stay held (or be retired),
+  not pictured.
+- The six short 13-415 caps have no source: the library's `CP13-415Gl` and `CP13-415Sl` are tall caps.
+- GBTallRect10MtlRollPinkDo's only file is a clear bottle on an uncut white card.
+- The 8-425 caps folder under `20. Caps` holds a misfiled 13-415 cap photo; the right source is
+  `6. 8-425 Bottles - CB/8245 Caps`.
+- The 18-415 and 13-415 sprayer files under `20. Caps` are close-ups of the collar, not packshots.

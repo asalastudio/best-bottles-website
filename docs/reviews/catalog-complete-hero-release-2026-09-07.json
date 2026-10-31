@@ -5,7 +5,7 @@
   "additionalJarClosurePackaging": 57,
   "replacementSetTotal": 391,
   "retainedAlternateSkus": 0,
-  "registryTotal": 399,
+  "registryTotal": 413,
   "missingSourceProductRecords": 25,
   "baselinePercent": 91,
   "background": "#F5F3EF",
@@ -4400,11 +4400,166 @@
         "translateXPercent": 0,
         "translateYPercent": 0
       }
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslGl",
+      "groupSlug": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslGl.6cb2ff317610.png",
+      "sha256": "6cb2ff31761049af5f086a5ecffc3687d0ca3eeda1ea12b4e61ba992d5966301",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslIvyGl",
+      "groupSlug": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslIvyGl.e49bfbd88699.png",
+      "sha256": "e49bfbd886994a092c5118ff9542782aba3c1888a1ccbb5d981d7bde36eeaeeb",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslIvySl",
+      "groupSlug": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslIvySl.7f43f555dc2d.png",
+      "sha256": "7f43f555dc2d6acabaddaef95601bd282441e7c57a9899e26436e80baa5066a2",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslLvn",
+      "groupSlug": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslLvn.e5c838ac6a56.png",
+      "sha256": "e5c838ac6a5681a3bd8e7e6119c72dbf86c8e749ef7bbbb5de62351b76b8a46e",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslMtSl",
+      "groupSlug": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslMtSl.f9c3fa83f5a0.png",
+      "sha256": "f9c3fa83f5a03cd9402e53acf1ee2418b57cfab4acd59aedf0abe50937135886",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslPnk",
+      "groupSlug": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslPnk.f8a16bb7012d.png",
+      "sha256": "f8a16bb7012db151d061117b673e1531e7ffebe3bcfb47c1aa7e9b4b350665c3",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslRed",
+      "groupSlug": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslRed.094db8ba72fb.png",
+      "sha256": "094db8ba72fbceda3bff9deb171c0cded21b3449130eeefdc11660f80ec73bd6",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslWht",
+      "groupSlug": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "url": "/images/catalog/psd-gap-2026-10-30/GBCrclFrst50AnSpTslWht.85236101bc8f.png",
+      "sha256": "85236101bc8f027ae0938419959071c016a42a2ef0b732f0ac0e5b65e48b8aa2",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBElgFrst100RdcrMtSl",
+      "groupSlug": "elegant-100ml-frosted-18-415-reducer",
+      "url": "/images/catalog/psd-gap-2026-10-30/GBElgFrst100RdcrMtSl.b4b31e2eef86.png",
+      "sha256": "b4b31e2eef860e115ab2130b35ee7c16a821ef1ed376a4e1dc1a0ba5d76bff32",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "8-425CpShortBlack",
+      "groupSlug": "cap-closure-8-425",
+      "url": "/images/catalog/psd-gap-2026-10-30/8-425CpShortBlack.eefe86bab441.png",
+      "sha256": "eefe86bab4412c6aa6780983571e7ac3cc9d523f912c0d9e0b58def97dc340d9",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "CP8-425TallBlack",
+      "groupSlug": "cap-closure-8-425",
+      "url": "/images/catalog/psd-gap-2026-10-30/CP8-425TallBlack.79dfc85e2ef1.png",
+      "sha256": "79dfc85e2ef15381caddcc7be8a6fb7755ab7e00a8bf71fc4fca55e17dd65908",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "CP18-415ShnBlkTall",
+      "groupSlug": "cap-closure-18-415",
+      "url": "/images/catalog/psd-gap-2026-10-30/CP18-415ShnBlkTall.a6f91df859f6.png",
+      "sha256": "a6f91df859f66d3f318dc10213758c3919f9c8409f087445bfcda7f09ea09733",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "CPKeyChnGld",
+      "groupSlug": "cap-closure-SPECIAL",
+      "url": "/images/catalog/psd-gap-2026-10-30/CPKeyChnGld.d390c400f359.png",
+      "sha256": "d390c400f359f8dd14e5f67363f26d424ca107ecc093857f2d70252c171734a2",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "CPTslRed",
+      "groupSlug": "cap-closure-SPECIAL",
+      "url": "/images/catalog/psd-gap-2026-10-30/CPTslRed.de9e56affcb7.png",
+      "sha256": "de9e56affcb754b1fbb3d247ee37c6681c4a14222d8d76bd42af449011cf3bc2",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
     }
   ],
   "supersededLocalAlternateSkus": 10,
   "laterApprovals": [
-    "elegant-shoulder-alignment-2026-09-07.json"
+    "elegant-shoulder-alignment-2026-09-07.json",
+    "../hero-families/psd-gap-2026-10-30/approval.json"
   ],
   "circleRevision": {
     "report": "docs/reviews/circle-recovery/alignment-and-matte-report.json",
