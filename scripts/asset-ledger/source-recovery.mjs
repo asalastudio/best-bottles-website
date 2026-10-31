@@ -1,11 +1,12 @@
 import {createHash} from 'node:crypto';
 import {readFile,realpath} from 'node:fs/promises';
 import path from 'node:path';
+import { PSD_MASTER_ROOT } from "../lib/local-paths.mjs";
 
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 export const sourceBinding = row => digest(JSON.stringify({sku:row.sku,productGroupId:row.productGroupId,candidates:row.candidates.map(c=>({sourcePath:c.sourcePath,sourceSha256:c.sourceSha256,url:c.url,sha256:c.sha256}))}));
 export const pairBinding = row => digest(JSON.stringify({sku:row.sku,productGroupId:row.productGroupId,capOn:row.reconciledCapOn ? {sourceSha256:row.reconciledCapOn.sourceSha256,sha256:row.reconciledCapOn.sha256} : null,capOff:row.candidates.filter(c=>c.view==='off').map(c=>({sourceSha256:c.sourceSha256,sha256:c.sha256}))}));
-const masterRoot='/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master';
+const masterRoot=PSD_MASTER_ROOT;
 
 // Source approval is separate from finished plates, kit approval and release.
 // Recheck both the reviewed preview and original PSD; changed bytes stay pending.

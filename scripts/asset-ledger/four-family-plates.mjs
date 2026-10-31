@@ -3,11 +3,12 @@ import {readFile,writeFile,realpath,open,unlink,rename,mkdir} from 'node:fs/prom
 import path from 'node:path';
 import {livePlates} from './plate-contact-sheet.mjs';
 import {plateIdentityFingerprint} from './plate-scope.mjs';
+import { PSD_MASTER_ROOT } from "../lib/local-paths.mjs";
 
 const ID='four-family-plates-2026-09-13';
 const packetPath=`docs/reviews/${ID}/prepared.json`;
 const decisionsPath=`data/asset-ledger/${ID}-decisions.json`;
-const MASTER='/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master';
+const MASTER=PSD_MASTER_ROOT;
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 const json=async file=>JSON.parse(await readFile(file,'utf8'));
 const fields=['graceSku','family','capacityMl','color','applicator','capColor','productGroupId'];

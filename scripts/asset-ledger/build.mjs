@@ -33,6 +33,7 @@ import path from "node:path";
 import { execSync } from "node:child_process";
 
 import { readReviews } from "./reviews.mjs";
+import { PSD_MASTER_ROOT, isPsdMasterMounted, psdMasterTarget } from "../lib/local-paths.mjs";
 const root = process.cwd();
 // `npm run ledger:build` should just work: pick up NEXT_PUBLIC_CONVEX_URL from .env.local without sourcing it first
 if (!process.env.NEXT_PUBLIC_CONVEX_URL && existsSync(path.join(root, ".env.local"))) { try { process.loadEnvFile(path.join(root, ".env.local")); } catch { /* fall through to the explicit error below */ } }
@@ -42,6 +43,10 @@ const readJson = (p) => JSON.parse(readFileSync(p, "utf8"));
 const sha256 = (b) => createHash("sha256").update(b).digest("hex");
 const sources = [];
 const note = (name, detail) => sources.push({ name, ...detail });
+// The PSD master library is a symlink to an external drive; compare real paths so
+// a source inside it is recognised, and record whether it was readable at all.
+const psdMasterReal = isPsdMasterMounted() ? psdMasterTarget() : null;
+note("psd.master", { root: PSD_MASTER_ROOT, target: psdMasterTarget(), mounted: psdMasterReal !== null });
 
 // ---------- product identity (Convex) ----------
 let products = [], groups = [], deployment = null;
@@ -251,7 +256,7 @@ for (const sku of [...skus].sort()) {
     if (historicalSizeHolds.has(sku)) plate.sizeHold = "Earlier sizing finding remains open; regrouping is not approval";
     if (localCandidates.has(sku)) plate.localCandidate = localCandidates.get(sku);
     if (sourceHolds.has(sku)) plate.sourceHold = sourceHolds.get(sku);
-    plate.masterSourceRecorded = !!pl && existsSync(path.resolve("/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",pl.sourcePath)) && realpathSync(path.resolve("/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",pl.sourcePath)).startsWith("/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/");
+    plate.masterSourceRecorded = !!pl && psdMasterReal !== null && existsSync(path.resolve(PSD_MASTER_ROOT,pl.sourcePath)) && realpathSync(path.resolve(PSD_MASTER_ROOT,pl.sourcePath)).startsWith(psdMasterReal + path.sep);
     plate.checksPassed = ["plated", "plated-no-capoff-by-design"].includes(plate.state) && !plate.hold && !plate.issues?.length && !plate.sizeHold && !plate.sourceHold && plate.masterSourceRecorded;
     plate.complete = plate.checksPassed && !!plate.approval;
     // kit

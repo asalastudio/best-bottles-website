@@ -1,7 +1,7 @@
 // Bounded, restartable execution of the explicitly requested 47-image batch.
 const fs = require('fs');
 const {spawn} = require('child_process');
-require('dotenv').config({path:'/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.env.local',quiet:true});
+require('dotenv').config({path:require('path').resolve(__dirname,'../../.env.local'),quiet:true});
 if (!process.env.OPENAI_API_KEY) throw Error('OPENAI_API_KEY is not configured');
 const manifest = 'output/imagegen/boston-diva-2026-09-23/manifest.json';
 const rows = JSON.parse(fs.readFileSync(manifest)).rows;

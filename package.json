@@ -56,7 +56,9 @@
     "review:heroes": "node tools/hero-review/server.cjs",
     "ledger:build": "node scripts/asset-ledger/build.mjs",
     "review:heroes:import": "node tools/hero-review/import.cjs",
-    "review:heroes:archive": "node tools/hero-review/archive.cjs"
+    "review:heroes:archive": "node tools/hero-review/archive.cjs",
+    "check:catalog-heroes": "tsx scripts/check_catalog_hero_coverage.mts",
+    "images:retire-dead-shopify": "node scripts/retire_dead_shopify_image_links.mjs"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.64",
