@@ -1,0 +1,145 @@
+{
+  "productId": "gid://shopify/Product/10433891238180",
+  "title": "15 ml Clear Elegant Roll-On Bottle",
+  "publicationVariantCount": 34,
+  "publicationVariants": [
+    {
+      "id": "gid://shopify/ProductVariant/53343615156516",
+      "sku": "GB-ELG-CLR-15ML-ROL-SSLV"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53343615189284",
+      "sku": "GB-ELG-CLR-15ML-ROL-SGLD"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53343615222052",
+      "sku": "GB-ELG-CLR-15ML-ROL-PKDT"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53343615254820",
+      "sku": "GB-ELG-CLR-15ML-ROL-SLDT"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53343615287588",
+      "sku": "GB-ELG-CLR-15ML-ROL-MSLV"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53343615320356",
+      "sku": "GB-ELG-CLR-15ML-ROL-SBLK"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53343615353124",
+      "sku": "GB-ELG-CLR-15ML-ROL-MCPR"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53343615385892",
+      "sku": "GB-ELG-CLR-15ML-ROL-MGLD"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53343615418660",
+      "sku": "GB-ELG-CLR-15ML-ROL-BKDT"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53343615451428",
+      "sku": "GB-ELG-CLR-15ML-MRL-BKDT"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53343615484196",
+      "sku": "GB-ELG-CLR-15ML-MRL-MCPR-01"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53343615516964",
+      "sku": "GB-ELG-CLR-15ML-MRL-MGLD"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53343615549732",
+      "sku": "GB-ELG-CLR-15ML-MRL-SGLD-01"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53343615582500",
+      "sku": "GB-ELG-CLR-15ML-MRL-PKDT"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53343615615268",
+      "sku": "GB-ELG-CLR-15ML-MRL-SLDT"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53343615648036",
+      "sku": "GB-ELG-CLR-15ML-MRL-MSLV-01"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53343615680804",
+      "sku": "GB-ELG-CLR-15ML-MRL-SSLV"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/53343615713572",
+      "sku": "GB-ELG-CLR-15ML-MRL-SBLK"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/54056450162980",
+      "sku": "GB-ELG-CLR-15ML-MRL"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/54056450195748",
+      "sku": "GB-ELG-CLR-15ML-MRL-BLK-01"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/54056450228516",
+      "sku": "GB-ELG-CLR-15ML-MRL-BLK-02"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/54056450261284",
+      "sku": "GB-ELG-CLR-15ML-MRL-MCPR-02"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/54056450294052",
+      "sku": "GB-ELG-CLR-15ML-MRL-MSLV-02"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/54056450326820",
+      "sku": "GB-ELG-CLR-15ML-MRL-SGLD-02"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/54056450359588",
+      "sku": "GB-ELG-CLR-15ML-MRL-SLV-01"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/54056450392356",
+      "sku": "GB-ELG-CLR-15ML-MRL-SLV-02"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/54056450425124",
+      "sku": "GB-ELG-CLR-15ML-RBL"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/54056450457892",
+      "sku": "GB-ELG-CLR-15ML-RBL-BLK-01"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/54056450490660",
+      "sku": "GB-ELG-CLR-15ML-RBL-BLK-02"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/54056450523428",
+      "sku": "GB-ELG-CLR-15ML-RBL-MCPR"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/54056450556196",
+      "sku": "GB-ELG-CLR-15ML-RBL-MSLV"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/54056450588964",
+      "sku": "GB-ELG-CLR-15ML-RBL-SGLD"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/54056450621732",
+      "sku": "GB-ELG-CLR-15ML-RBL-SLV-01"
+    },
+    {
+      "id": "gid://shopify/ProductVariant/54056450654500",
+      "sku": "GB-ELG-CLR-15ML-RBL-SLV-02"
+    }
+  ],
+  "tierPriceChangeVariantId": "gid://shopify/ProductVariant/53343615680804",
+  "status": "read-only-proposed-scope-not-applied"
+}

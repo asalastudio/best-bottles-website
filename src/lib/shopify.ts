@@ -68,6 +68,7 @@ interface CartCreatePayload {
 async function storefrontGraphQL<T>(
     query: string,
     variables?: Record<string, unknown>,
+    privateBuyerContext = false,
 ): Promise<T> {
     const domain = getShopifyDomain();
     const token = getStorefrontAccessToken();
@@ -81,7 +82,7 @@ async function storefrontGraphQL<T>(
     }
 
     const res = await fetch(
-        `https://${domain}/api/${API_VERSION}/graphql.json`,
+        `https://${domain}/api/${privateBuyerContext ? "2026-04" : API_VERSION}/graphql.json`,
         {
             method: "POST",
             headers: {
@@ -89,16 +90,19 @@ async function storefrontGraphQL<T>(
                 "X-Shopify-Storefront-Access-Token": token,
             },
             body: JSON.stringify({ query, variables }),
+            ...(privateBuyerContext ? { cache: "no-store" as const } : {}),
         },
     );
 
     if (!res.ok) {
+        if (privateBuyerContext) throw new Error("Shopify B2B request failed");
         const text = await res.text();
         throw new Error(`Shopify Storefront API ${res.status}: ${text}`);
     }
 
     const json = (await res.json()) as StorefrontGqlResult<T>;
     if (json.errors?.length) {
+        if (privateBuyerContext) throw new Error("Shopify B2B request rejected");
         throw new Error(
             `Shopify Storefront GQL: ${json.errors.map((error) => error.message).join(", ")}`,
         );
@@ -107,6 +111,11 @@ async function storefrontGraphQL<T>(
         throw new Error("Shopify Storefront GQL: empty data payload");
     }
     return json.data;
+}
+
+/** Server-side B2B adapter: never cache personalized prices or expose token-bearing errors. */
+export function nativeB2bStorefrontGraphQL<T>(query: string, variables: Record<string, unknown>): Promise<T> {
+    return storefrontGraphQL<T>(query, variables, true);
 }
 
 /**
