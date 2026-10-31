@@ -1,0 +1,183 @@
+{
+  "source": "glass-5-clear-measured-v9.blend",
+  "chosen": "glass-5-clear-measured-v11.blend",
+  "changes": [
+    "Removed two supplemental Variant side black cards in clear scene only"
+  ],
+  "unchanged": [
+    "clear/cobalt shared measured mesh",
+    "clear glass IOR 1.52 and roughness 0",
+    "camera, crop, background, framing and closure positions",
+    "all 35 cobalt configurations and cobalt v9 files"
+  ],
+  "rejectedCandidate": {
+    "version": "v10",
+    "change": "roughness 0.045",
+    "reason": "Did not sufficiently reduce the dark side bands"
+  },
+  "integration": {
+    "clearImagesUpdated": 36,
+    "cobaltKitsUnchanged": 35,
+    "allLayoutAndClosureDataUnchanged": true,
+    "skus": [
+      "GBCyl5SpryBlkMatt",
+      "GBCylBlu5Sl",
+      "GBCylBlu5WhtSht",
+      "GBCyl5Gl",
+      "GBCyl5Sl",
+      "GBCylBlu5Gl",
+      "GBCyl5MtlRollCuMatt",
+      "GBCyl5MtlRollBlkSh",
+      "GBCyl5MtlRollGlMatt",
+      "GBCyl5MtlRollSlMatt",
+      "GBCyl5MtlRollPinkDot",
+      "GBCyl5MtlRollGlSh",
+      "GBCyl5MtlRollSlDot",
+      "GBCyl5MtlRollSlSh",
+      "GBCylBlu5MtlRollCuMatt",
+      "GBCylBlu5MtlRollGlMatt",
+      "GBCylBlu5MtlRollPinkDot",
+      "GBCylBlu5MtlRollBlkSh",
+      "GBCylBlu5MtlRollGlSh",
+      "GBCylBlu5MtlRollSlDot",
+      "GBCyl5SpryBluMatt",
+      "GBCyl5SprySlMatt",
+      "GBCyl5SpryBlkSh",
+      "GBCyl5SpryGlSh",
+      "GBCyl5SprySlSh",
+      "GBCylBlu5MtlRollSlMatt",
+      "GBCylBlu5MtlRollSlSh",
+      "GBCyl5SpryCuMatt",
+      "GBCyl5SpryGlMatt",
+      "GBCylBlu5SpryBlkSh",
+      "GBCylBlu5SpryGlSh",
+      "GBCylBlu5SprySlSh",
+      "GBCylBlu5SpryBluMatt",
+      "GBCylBlu5SpryCuMatt",
+      "GBCylBlu5SpryGlMatt",
+      "GBCylBlu5SprySlMatt",
+      "GBCylBlu5RollBlkDot",
+      "GBCyl5RollBlkDot",
+      "GBCyl5RollBlkSh",
+      "GBCyl5RollGlSh",
+      "GBCyl5RollSlDot",
+      "GBCyl5RollSlSh",
+      "GBCyl5RollCuMatt",
+      "GBCyl5RollGlMatt",
+      "GBCyl5RollSlMatt",
+      "GBCyl5RollPinkDot",
+      "GBCylBlu5RollGlSh",
+      "GBCylBlu5RollGlMatt",
+      "GBCylBlu5RollPinkDot",
+      "GBCylBlu5RollBlkSh",
+      "GBCylBlu5RollSlDot",
+      "GBCylBlu5RollSlSh",
+      "GBCylBlu5RollCuMatt",
+      "GBCylBlu5RollSlMatt",
+      "GBCyl5MtlRollBlkDot",
+      "GBCylBlu5MtlRollBlkDot",
+      "GBCyl5BlkSht",
+      "GBCylBlu5BlkSht",
+      "GBCylBlu5BlkShSht",
+      "GBCylBlu5CuSht",
+      "GBCylBlu5GlMattSht",
+      "GBCylBlu5SlMattSht",
+      "GBCylBlu5GlSht",
+      "GBCylBlu5SlSht",
+      "GBCyl5CuSht",
+      "GBCyl5GlMattSht",
+      "GBCyl5SlMattSht",
+      "GBCyl5BlkShSht",
+      "GBCyl5WhtSht",
+      "GBCyl5GlSht",
+      "GBCyl5SlSht"
+    ]
+  },
+  "sceneCheck": [
+    {
+      "version": 9,
+      "vertices": "283a4b82fc97aa1b2599a9198b6e4462aa1962967956fb81ab9ae8f77f70fef4",
+      "faces": "fe55f1a1824f4f57b7895cd948066e47db00d27d0ddd26f31c8f8d86495e4481",
+      "camera": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.05233597382903099,
+          -0.9986295104026794,
+          -1.4954692125320435
+        ],
+        [
+          0.0,
+          0.9986295104026794,
+          0.05233597382903099,
+          0.14238157868385315
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "crop": [
+        0.4059999883174896,
+        0.09449999779462814,
+        0.593999981880188,
+        0.43849998712539673
+      ],
+      "dimensions": [
+        0.01754741184413433,
+        0.01754741184413433,
+        0.05322999879717827
+      ]
+    },
+    {
+      "version": 11,
+      "vertices": "283a4b82fc97aa1b2599a9198b6e4462aa1962967956fb81ab9ae8f77f70fef4",
+      "faces": "fe55f1a1824f4f57b7895cd948066e47db00d27d0ddd26f31c8f8d86495e4481",
+      "camera": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.05233597382903099,
+          -0.9986295104026794,
+          -1.4954692125320435
+        ],
+        [
+          0.0,
+          0.9986295104026794,
+          0.05233597382903099,
+          0.14238157868385315
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "crop": [
+        0.4059999883174896,
+        0.09449999779462814,
+        0.593999981880188,
+        0.43849998712539673
+      ],
+      "dimensions": [
+        0.01754741184413433,
+        0.01754741184413433,
+        0.05322999879717827
+      ]
+    }
+  ],
+  "status": "Local visual review. No production upload."
+}

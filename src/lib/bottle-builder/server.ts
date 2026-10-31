@@ -1,15 +1,16 @@
 import "server-only";
+import { CYLINDER9_OVERCAP_MASTER } from "@/lib/register/detached-overcaps";
 import { unstable_cache } from "next/cache";
 import type { ConvexHttpClient } from "convex/browser";
 import { createResilientConvexHttpClient } from "@/lib/convexServerClient";
 import { api } from "../../../convex/_generated/api";
 import { catalogIncludedAssembly } from "../../../convex/catalogIncludedAssemblies";
-import { builderBodyIdentity, chooserGroupKey, chooserSourceRows, resolveBuilderConfigurations, reviewedCylinderFiveMlRow, type BuilderKit, groupBuilderBodies, isBuilderCandidate, type CatalogRow } from "./model";
+import { builderBodyIdentity, chooserGroupKey, chooserSourceRows, resolveBuilderConfigurations, reviewedCylinderFiveMlRow, type BuilderKit, type BuilderBody, groupBuilderBodies, isBuilderCandidate, type CatalogRow } from "./model";
 import { resolveListedComponents, unavailableVintageFinishes, type ActiveComponent } from "./components";
 import { bareChooserKit, slimBuilderBodies } from "./payload";
 import { readLocalComponentKits } from "../paper-doll/local-component-kits";
 import { loadRegisterKits } from "@/lib/register/load";
-import { assembledKit } from "@/lib/register/stage-kit";
+import { assembledKit, type RegisterKit } from "@/lib/register/stage-kit";
 
 const client = () => createResilientConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
@@ -17,6 +18,30 @@ const client = () => createResilientConvexHttpClient(process.env.NEXT_PUBLIC_CON
 // names a kits.json staged by scripts/paperdoll/local-kit-overlay.mjs, whose part
 // URLs live under public/local-kits/. Never set in production; nothing here writes.
 const localKits = readLocalComponentKits;
+
+function localAssembledKit(kit: BuilderKit): BuilderKit {
+    if (kit.register) return assembledKit(kit as RegisterKit);
+    return { ...kit, parts: kit.parts.filter(part => {
+        const views = (part as typeof part & { views?: string[] }).views;
+        return !views || views.includes("capon");
+    }) };
+}
+
+/** Apply review files after the shared cache so localhost never reverts to stale artwork. */
+function withLocalReviewBodies(bodies: BuilderBody[]): BuilderBody[] {
+    const local = localKits();
+    if (!local) return bodies;
+    return slimBuilderBodies(bodies.map(body => ({ ...body,
+        configurations: body.configurations.map(config => {
+            const staged = local[config.id] ?? (config.product.graceSku ? local[config.product.graceSku] : undefined);
+            if (!staged) return config;
+            const kit = localAssembledKit(staged);
+            return { ...config, kit, chooserKit: bareChooserKit(kit), bodyImage: null,
+                previewKit: undefined, previewKitSku: undefined };
+        }),
+    })));
+}
+
 
 // Raw matrix rows repeat compatibility lists and can exceed Next's 2 MB cache
 // entry limit. Cache the slim family workspace and individual image kits.
@@ -46,7 +71,7 @@ export const loadBuilderFamily = unstable_cache(async (family: string) => {
     const data = await familyRows(family);
     if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${family}`);
     return slimBuilderBodies(await loadBuilderBodies(data.rows, { strictRegister: true }));
-}, ["bottle-builder-family-chooser-v7-elegant-photo"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-family-chooser-v10-cyl9-swirl-behind", CYLINDER9_OVERCAP_MASTER], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 /** The cached family. When the cache has no entry to fall back on (a new key, an
  * eviction) and the register lookup fails, this one request builds the family
@@ -56,12 +81,12 @@ export const loadBuilderFamily = unstable_cache(async (family: string) => {
  * failed refresh keeps serving the last good copy. */
 export async function loadBuilderFamilyOrUncached(family: string): Promise<{ bodies: Awaited<ReturnType<typeof loadBuilderFamily>>; cached: boolean }> {
     try {
-        return { bodies: await loadBuilderFamily(family), cached: true };
+        return { bodies: withLocalReviewBodies(await loadBuilderFamily(family)), cached: true };
     } catch (error) {
         console.error("[builder] family load failed; building this request uncached", family, error instanceof Error ? error.message : error);
         const data = await familyRows(family);
         if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${family}`);
-        return { bodies: slimBuilderBodies(await loadBuilderBodies(data.rows, { strictRegister: false })), cached: false };
+        return { bodies: withLocalReviewBodies(slimBuilderBodies(await loadBuilderBodies(data.rows, { strictRegister: false }))), cached: false };
     }
 }
 
@@ -105,7 +130,7 @@ async function loadKitsForRows(rows: Array<{ websiteSku: string | null; graceSku
         const staged = local && ((row.websiteSku && local[row.websiteSku]) || (row.graceSku && local[row.graceSku]));
         // The builder draws assembled bottles only: a register insert's EXPLODED-only plug layer stays out.
         const fromRegister = (row.graceSku && registered[row.graceSku]) || (row.websiteSku && registered[row.websiteSku]) || null;
-        const kit = staged || (fromRegister ? assembledKit(fromRegister) : null);
+        const kit = staged ? localAssembledKit(staged) : (fromRegister ? assembledKit(fromRegister) : null);
         if (kit) {
             if (row.websiteSku) result.set(row.websiteSku, kit);
             if (row.graceSku) result.set(row.graceSku, kit);
@@ -141,13 +166,21 @@ const cachedBodyKits = unstable_cache(async (pairs: Array<[string, string | null
         kits[websiteSku] = loaded.get(websiteSku) ?? (graceSku ? loaded.get(graceSku) : undefined) ?? null;
     }
     return kits;
-}, ["bottle-builder-body-kits-v5-elegant-photo-hardware"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-body-kits-v8-cyl9-swirl-behind", CYLINDER9_OVERCAP_MASTER], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 export async function loadBuilderBodyKits(family: string, bodyId: string) {
     if (!family || family.length > 100 || !bodyId || bodyId.length > 200) return {};
     const body = (await loadBuilderFamily(family)).find(item => item.id === bodyId);
     if (!body) return {};
-    return cachedBodyKits(body.configurations.map(config => [config.id, config.product.graceSku ?? null]));
+    const kits = await cachedBodyKits(body.configurations.map(config => [config.id, config.product.graceSku ?? null]));
+    const local = localKits();
+    if (!local) return kits;
+    const result = { ...kits };
+    for (const config of body.configurations) {
+        const staged = local[config.id] ?? (config.product.graceSku ? local[config.product.graceSku] : undefined);
+        if (staged) result[config.id] = localAssembledKit(staged);
+    }
+    return result;
 }
 
 /** The published plate per candidate SKU: the exact master front on the plate

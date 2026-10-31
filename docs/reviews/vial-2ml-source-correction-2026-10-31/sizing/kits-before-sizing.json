@@ -1,0 +1,192 @@
+{
+  "rows": {
+    "GBVialClr2mlWhtCap": {
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "baselineY": 1001,
+        "seatY": 286,
+        "pxPerMm": null
+      },
+      "canvas": {
+        "height": 1100,
+        "width": 1000
+      },
+      "completeness": "full",
+      "conflicts": [],
+      "familyId": "vial-2ml-clear-8-425",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 349.0590405904059,
+            "top": 103.17712177121781,
+            "right": 646.1180811808117,
+            "bottom": 998.468634686347
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/vial-2ml-source-2026-10-31/parts/f769786d251fa57fa592825f790db1c62d9f3c75d8031647313bd15a9ee591d8.body.png",
+            "key": "f769786d251fa57fa592825f790db1c62d9f3c75d8031647313bd15a9ee591d8.body.png",
+            "sha256": "f769786d251fa57fa592825f790db1c62d9f3c75d8031647313bd15a9ee591d8",
+            "bytes": 584268,
+            "width": 1196,
+            "height": 1315
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "image-generation-review",
+          "box": {
+            "x": 9.210332103321036,
+            "y": 11.014760147601578,
+            "width": 984.1623616236162,
+            "height": 1082.0848708487085
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": "white",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 343,
+            "top": 75,
+            "right": 658,
+            "bottom": 287
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -211
+          },
+          "image": {
+            "url": "/local-kits/vial-2ml-source-2026-10-31/parts/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+            "key": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+            "sha256": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa",
+            "bytes": 9370,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "plateSha256": "c4fa1744adec04afc085cd829573d1035a8f32b290cbd2633f6fb020d653c6c8",
+      "sku": "GBVialClr2mlWhtCap",
+      "three": null
+    },
+    "GBVialClr2mlBlackCap": {
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "baselineY": 1001,
+        "seatY": 288,
+        "pxPerMm": null
+      },
+      "canvas": {
+        "height": 1100,
+        "width": 1000
+      },
+      "completeness": "full",
+      "conflicts": [],
+      "familyId": "vial-2ml-clear-8-425",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 349.0590405904059,
+            "top": 103.17712177121781,
+            "right": 646.1180811808117,
+            "bottom": 998.468634686347
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/vial-2ml-source-2026-10-31/parts/f769786d251fa57fa592825f790db1c62d9f3c75d8031647313bd15a9ee591d8.body.png",
+            "key": "f769786d251fa57fa592825f790db1c62d9f3c75d8031647313bd15a9ee591d8.body.png",
+            "sha256": "f769786d251fa57fa592825f790db1c62d9f3c75d8031647313bd15a9ee591d8",
+            "bytes": 584268,
+            "width": 1196,
+            "height": 1315
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "image-generation-review",
+          "box": {
+            "x": 9.210332103321036,
+            "y": 11.014760147601578,
+            "width": 984.1623616236162,
+            "height": 1082.0848708487085
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": "black",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 338,
+            "top": 83,
+            "right": 656,
+            "bottom": 289
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -213
+          },
+          "image": {
+            "url": "/local-kits/vial-2ml-source-2026-10-31/parts/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+            "key": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+            "sha256": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4",
+            "bytes": 9794,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "plateSha256": "52508a53280415b93a16451db5cbf60c93fb612488cf7e5908beb5fdc02cbc31",
+      "sku": "GBVialClr2mlBlackCap",
+      "three": null
+    }
+  },
+  "reviewCandidate": {
+    "scope": "local-only",
+    "generatedBodySha256": "f769786d251fa57fa592825f790db1c62d9f3c75d8031647313bd15a9ee591d8",
+    "sourceGeometry": "corrected 12. Vials PSD",
+    "pixelAssetUnmodified": true
+  },
+  "defaultPdpSkus": [
+    "GBVialClr2mlWhtCap",
+    "GBVialClr2mlBlackCap"
+  ]
+}

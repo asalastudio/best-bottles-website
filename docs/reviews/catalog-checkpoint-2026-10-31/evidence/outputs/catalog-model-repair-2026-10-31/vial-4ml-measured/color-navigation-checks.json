@@ -1,0 +1,30 @@
+[
+  {
+    "color": "amber",
+    "sku": "GBVAmb1DrmWhtCapSht",
+    "cap": "white",
+    "url": "http://localhost:3010/products/vial-4ml-amber-13-425?cap=white",
+    "passed": true
+  },
+  {
+    "color": "blue",
+    "sku": "GBVBlu1DrmWhtCapSht",
+    "cap": "white",
+    "url": "http://localhost:3010/products/vial-4ml-blue-13-425?cap=white",
+    "passed": true
+  },
+  {
+    "color": "green",
+    "sku": "GBVGr1DrmWhtCapSht",
+    "cap": "white",
+    "url": "http://localhost:3010/products/vial-4ml-green-13-425?cap=white",
+    "passed": true
+  },
+  {
+    "color": "clear",
+    "sku": "GBV1DrmWhtCapSht",
+    "cap": "white",
+    "url": "http://localhost:3010/products/vial-4ml-clear-13-425?cap=white",
+    "passed": true
+  }
+]

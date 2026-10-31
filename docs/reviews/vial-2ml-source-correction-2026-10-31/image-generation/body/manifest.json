@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-31",
+  "method": "built-in image_gen reference edit with transparent background",
+  "reference": "public/local-kits/vial-2ml-source-2026-10-31/parts/aaab2a356d0e6d3eb948079a7271b1b6867ae05171d53f18ceee4ca892258d01.body.webp",
+  "referenceSha256": "aaab2a356d0e6d3eb948079a7271b1b6867ae05171d53f18ceee4ca892258d01",
+  "output": "clear-2ml-vial-body-candidate-v1.png",
+  "outputSha256": "f769786d251fa57fa592825f790db1c62d9f3c75d8031647313bd15a9ee591d8",
+  "dimensions": [
+    1196,
+    1315
+  ],
+  "prompt": "prompt.txt",
+  "status": "local-review-candidate",
+  "userVisualAcceptance": false,
+  "productionPublished": false,
+  "qa": {
+    "alphaConfirmed": true,
+    "silhouetteThreshold": 128,
+    "referenceBounds": [
+      350,
+      104,
+      646,
+      996
+    ],
+    "generatedBounds": [
+      415,
+      113,
+      773,
+      1197
+    ],
+    "widthHeightRatioDifferencePercent": -0.4762142216016674,
+    "registration": {
+      "uniformScale": 0.8228782287822878,
+      "x": 9.210332103321036,
+      "y": 11.014760147601578
+    },
+    "pixelAssetUnmodified": true,
+    "limitations": "Overall silhouette ratio only; does not certify every thread detail, manufacturing geometry or physical fit."
+  },
+  "integration": {
+    "localhostOverlay": "public/local-kits/vial-2ml-source-2026-10-31/kits.json",
+    "skus": [
+      "GBVialClr2mlWhtCap",
+      "GBVialClr2mlBlackCap"
+    ],
+    "caps": "Original corrected PSD cap layers retained",
+    "production": "unchanged"
+  }
+}

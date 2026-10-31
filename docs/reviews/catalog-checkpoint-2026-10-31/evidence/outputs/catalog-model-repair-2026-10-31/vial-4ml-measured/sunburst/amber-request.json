@@ -1,0 +1,10 @@
+{
+  "model": "gpt-image-2.5-sunburst",
+  "quality": "high",
+  "input": {
+    "path": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/references/measured-geometry.png",
+    "sha256": "72a3c2201e8ad5327638be3678bc77d4bfd247a3a8a46f50c54af73c4837a947"
+  },
+  "prompt": "1. Turn the exact silhouette in the supplied geometry guide into a photorealistic dark amber glass 4 ml vial. Keep its outline and SHORT neck proportions exactly: height 44.98 mm, body diameter 14.60 mm, thread outside diameter 12.50 mm, shoulder-to-rim 7 mm.\n2. A real empty dark amber glass vial photographed at eye level, perfectly straight on. Studio softbox reflections, amber transmitted light, crisp realistic refraction in the walls, threads and base.\n3. Transparent background. One complete bare bottle only. Omit the guide text and drawing lines. No cap, label, liquid or objects. Do not lengthen the neck.\n",
+  "reason": "First clear attempt copied the long neck from material reference; use only the already-approved dimensional guide"
+}

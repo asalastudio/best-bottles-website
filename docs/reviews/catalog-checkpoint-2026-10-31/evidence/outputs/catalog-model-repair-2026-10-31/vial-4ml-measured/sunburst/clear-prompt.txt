@@ -1,0 +1,3 @@
+1. Render the measured bottle silhouette from image 1 as a photorealistic bare 4 ml glass vial. Lock the outside shape: height 44.98 mm, body diameter 14.60 mm, thread-crest diameter 12.50 mm, short neck height 7 mm from shoulder to rim. Image 1 is a dimension guide, not material or line art to copy. The neck must have the short proportion drawn in image 1.
+2. Use clear glass and studio lighting, using image 2 only for glass color and material quality, not its longer-neck geometry. Real optical refraction and cylindrical light falloff, no sticker-like interior panel.
+3. One empty bare bottle, upright, straight-on eye-level view without looking into the top. Full bottle, no cap, no text, no extra objects; genuinely transparent background. Enhance photographic quality.

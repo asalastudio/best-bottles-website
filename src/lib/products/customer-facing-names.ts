@@ -136,6 +136,9 @@ function titleCase(value: string): string {
 }
 
 function cleanCapacity(group?: CustomerFacingNameGroupInput | null, variant?: CustomerFacingNameVariantInput | null): string | null {
+    // This legacy family says "3 ml" in text but is the catalogued 3.3 ml bottle.
+    if (group?.slug === "cylinder-3.3ml-clear-12mm-finemist"
+        || ["GBSpry3mlClBlk", "GBSpry3mlClWht"].includes(variant?.websiteSku ?? "")) return "3.3 ml";
     const capacity = clean(variant?.capacity) ?? clean(group?.capacity);
     if (capacity) {
         const ml = capacity.match(/(\d+(?:\.\d+)?)\s*ml/i);

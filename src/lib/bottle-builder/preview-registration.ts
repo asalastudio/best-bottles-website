@@ -92,6 +92,9 @@ export function registerVintagePreview(
     parts: BuilderPart[],
     reference?: BuilderConfiguration,
 ) {
+    // Register plates and components already share measured coordinates. An older
+    // photographed-body substitution would change both geometry and registration.
+    if ((config.kit ?? config.previewKit ?? config.chooserKit)?.register) return null;
     const canonical = canonicalBody(config);
     if (canonical) {
         const own = parts.find(part => part.slot === "body");

@@ -1,0 +1,251 @@
+{
+  "rows": {
+    "GBV1DrmWhtCapSht": {
+      "sku": "GBV1DrmWhtCapSht",
+      "familyId": "vial-4ml-clear-13-425",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "baselineY": 1000,
+        "seatY": 240.0622498888395,
+        "pxPerMm": 20.008892841262785
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 353.9350822587817,
+            "top": 100,
+            "right": 646.0649177412183,
+            "bottom": 1000
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/vial-4ml-measured-2026-10-31/parts/a55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png",
+            "key": "a55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png",
+            "sha256": "a55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f",
+            "bytes": 487683,
+            "width": 1195,
+            "height": 1316
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "image-generation-review",
+          "box": {
+            "x": 4.213936352664632,
+            "y": 24,
+            "width": 997.4147240043194,
+            "height": 1052.8
+          }
+        },
+        {
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "bounds": {
+            "left": 349.8452645620275,
+            "top": 45.31610816928735,
+            "right": 650.1547354379724,
+            "bottom": 240.0622498888395
+          },
+          "derivation": "psd-layer",
+          "explodeIndex": 1,
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": {
+            "bytes": 8874,
+            "height": 1100,
+            "key": "71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp",
+            "sha256": "71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e",
+            "url": "/local-kits/vial-4ml-measured-2026-10-31/parts/71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp",
+            "width": 1000
+          },
+          "image2x": null,
+          "mask": null,
+          "slot": "cap",
+          "variantKey": "white",
+          "zOrder": 1,
+          "box": {
+            "x": 44.98565018796228,
+            "y": 9.824988883948407,
+            "width": 910.0286996240754,
+            "height": 1001.031569586483
+          }
+        }
+      ],
+      "plateSha256": "",
+      "three": null,
+      "conflicts": [],
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 51.74,
+        "baselinePct": 91
+      }
+    },
+    "GBV1DrmBlackCapSht": {
+      "sku": "GBV1DrmBlackCapSht",
+      "familyId": "vial-4ml-clear-13-425",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "baselineY": 1000,
+        "seatY": 240.0622498888395,
+        "pxPerMm": 20.008892841262785
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 353.9350822587817,
+            "top": 100,
+            "right": 646.0649177412183,
+            "bottom": 1000
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/vial-4ml-measured-2026-10-31/parts/a55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png",
+            "key": "a55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png",
+            "sha256": "a55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f",
+            "bytes": 487683,
+            "width": 1195,
+            "height": 1316
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "image-generation-review",
+          "box": {
+            "x": 4.213936352664632,
+            "y": 24,
+            "width": 997.4147240043194,
+            "height": 1052.8
+          }
+        },
+        {
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "bounds": {
+            "left": 349.8452645620275,
+            "top": 44.59454695183395,
+            "right": 650.1547354379725,
+            "bottom": 240.0622498888395
+          },
+          "derivation": "psd-layer",
+          "explodeIndex": 1,
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": {
+            "bytes": 10514,
+            "height": 1100,
+            "key": "ec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798.cap.webp",
+            "sha256": "ec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798",
+            "url": "/local-kits/vial-4ml-measured-2026-10-31/parts/ec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798.cap.webp",
+            "width": 1000
+          },
+          "image2x": null,
+          "mask": null,
+          "slot": "cap",
+          "variantKey": "black",
+          "zOrder": 1,
+          "box": {
+            "x": 58.420689274128335,
+            "y": 10.831943717260259,
+            "width": 888.4895588045707,
+            "height": 977.3385146850278
+          }
+        }
+      ],
+      "plateSha256": "",
+      "three": null,
+      "conflicts": [],
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 51.74,
+        "baselinePct": 91
+      }
+    }
+  },
+  "defaultPdpSkus": [
+    "GBV1DrmWhtCapSht",
+    "GBV1DrmBlackCapSht"
+  ],
+  "reviewCandidate": {
+    "scope": "localhost only; selected screw-cap SKUs only; remaining colors and dropper variants not changed",
+    "model": "gpt-image-2.5-sunburst",
+    "quality": "high",
+    "measurements": {
+      "height": 44.98,
+      "bodyDiameter": 14.6,
+      "threadDiameter": 12.5,
+      "neckHeight": 7
+    },
+    "geometry": "2D generated artwork guided by caliper proportions; displayed width registered to measured body aspect with at most 5% horizontal calibration; not a dimensional Blender mesh",
+    "registration": {
+      "clear": {
+        "source": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/clear-v3.png",
+        "hash": "a55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f",
+        "dimensions": [
+          1195,
+          1316
+        ],
+        "alphaBounds": {
+          "left": 419,
+          "top": 95,
+          "right": 769,
+          "bottom": 1220
+        },
+        "ratio": 0.3111111111111111,
+        "targetRatio": 0.3245887060915963,
+        "ratioDeltaPct": -4.152207001522079,
+        "transparentPixels": 1178556,
+        "verticalScale": 0.8,
+        "horizontalScale": 0.8346566728069619,
+        "horizontalCalibrationPct": 4.332084100870226,
+        "visualQA": {
+          "file": "clear-v3.png",
+          "status": "Local visual review candidate, not production approved",
+          "neckRatio": 0.15911111,
+          "targetNeckRatio": 0.15562472209871056,
+          "camera": "Upright straight-on; no view down into opening",
+          "reason": "First candidate with short neck matching the 7 mm guide; native body is 4.15% too narrow, calibrated in display registration."
+        }
+      }
+    },
+    "capSource": "Saved exact published 13-425 cap masters; shared black and white assets",
+    "pixelAssetsUnmodified": true
+  }
+}

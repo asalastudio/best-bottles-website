@@ -1,0 +1,82 @@
+{
+  "circle-100ml-18-415": {
+    "factor": 0.63,
+    "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+  },
+  "round-78ml-18-415": {
+    "factor": 0.29,
+    "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+  },
+  "empire-50ml-18-415": {
+    "factor": 0.46,
+    "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+  },
+  "round-128ml-18-415": {
+    "factor": 0.41,
+    "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+  },
+  "elegant-100ml-18-415": {
+    "factor": 0.78,
+    "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+  },
+  "cylinder-100ml-18-415": {
+    "factor": 0.8,
+    "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+  },
+  "diva-100ml-18-415": {
+    "factor": 0.68,
+    "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+  },
+  "circle-15ml-13-415": {
+    "factor": 0.99,
+    "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+  },
+  "sleek-50ml-18-415": {
+    "factor": 0.87,
+    "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+  },
+  "empire-100ml-18-415": {
+    "factor": 0.65,
+    "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+  },
+  "sleek-100ml-18-415": {
+    "factor": 0.88,
+    "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+  },
+  "slim-100ml-18-415": {
+    "factor": 0.81,
+    "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+  },
+  "slim-50ml-18-415": {
+    "factor": 0.77,
+    "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+  },
+  "diva-46ml-18-415": {
+    "factor": 0.56,
+    "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+  },
+  "circle-50ml-18-415": {
+    "factor": 0.5,
+    "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+  },
+  "grace-55ml-18-415": {
+    "factor": 0.67,
+    "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+  },
+  "cylinder-50ml-18-415": {
+    "factor": 0.73,
+    "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+  },
+  "diamond-60ml-18-415": {
+    "factor": 0.56,
+    "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+  },
+  "elegant-60ml-18-415": {
+    "factor": 0.64,
+    "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+  },
+  "cylinder-25ml-18-415": {
+    "factor": 0.44,
+    "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+  }
+}

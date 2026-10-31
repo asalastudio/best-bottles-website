@@ -1,0 +1,24 @@
+ M src/app/products/[slug]/page.tsx
+ M src/components/bottle-builder/BuilderImage.tsx
+ M src/components/pdp/PdpStage.tsx
+ M src/lib/bottle-builder/model.ts
+ M src/lib/bottle-builder/payload.ts
+ M src/lib/bottle-builder/preview-layout.ts
+ M src/lib/bottle-builder/preview-registration.ts
+ M src/lib/paper-doll/local-component-kits.ts
+ M src/lib/products/pdp-redesign/stage.ts
+ M src/lib/products/pdp-stage-frame.ts
+ M src/lib/register/stage-kit.ts
+ M tests/local-component-kits.test.ts
+ M tests/register-stage-kit.test.ts
+?? docs/reviews/vial-2ml-source-correction-2026-10-31/
+?? outputs/catalog-model-repair-2026-10-31/
+?? public/reviews/cylinder9-render-comparison-2026-10-31/
+?? public/reviews/glass-body-overview-2026-10-31/
+?? public/reviews/vial-sizing-2026-10-31/
+?? src/lib/products/fixed-stage-placement.ts
+?? src/lib/register/catalog-scale-readiness.generated.json
+?? src/lib/register/catalog-scale.generated.json
+?? src/lib/register/catalog-scale.ts
+?? tests/catalog-stage-stability.test.ts
+?? tests/pdp-reviewed-glass-sizing.test.ts

@@ -1,0 +1,170 @@
+{
+  "royal-13ml-13-415": {
+    "status": "ready",
+    "reason": null
+  },
+  "circle-100ml-18-415": {
+    "status": "hold",
+    "reason": "At least one captured component exceeds the fixed approved frame. Repair the component or its detached placement before enabling this body."
+  },
+  "round-78ml-18-415": {
+    "status": "hold",
+    "reason": "At least one captured component exceeds the fixed approved frame. Repair the component or its detached placement before enabling this body."
+  },
+  "empire-50ml-18-415": {
+    "status": "hold",
+    "reason": "At least one captured component exceeds the fixed approved frame. Repair the component or its detached placement before enabling this body."
+  },
+  "round-128ml-18-415": {
+    "status": "hold",
+    "reason": "At least one captured component exceeds the fixed approved frame. Repair the component or its detached placement before enabling this body."
+  },
+  "elegant-100ml-18-415": {
+    "status": "hold",
+    "reason": "At least one captured component exceeds the fixed approved frame. Repair the component or its detached placement before enabling this body."
+  },
+  "square-15ml-13-415": {
+    "status": "ready",
+    "reason": null
+  },
+  "cylinder-100ml-18-415": {
+    "status": "hold",
+    "reason": "At least one captured component exceeds the fixed approved frame. Repair the component or its detached placement before enabling this body."
+  },
+  "diva-100ml-18-415": {
+    "status": "hold",
+    "reason": "At least one captured component exceeds the fixed approved frame. Repair the component or its detached placement before enabling this body."
+  },
+  "circle-15ml-13-415": {
+    "status": "hold",
+    "reason": "At least one captured component exceeds the fixed approved frame. Repair the component or its detached placement before enabling this body."
+  },
+  "sleek-50ml-18-415": {
+    "status": "hold",
+    "reason": "At least one captured component exceeds the fixed approved frame. Repair the component or its detached placement before enabling this body."
+  },
+  "empire-100ml-18-415": {
+    "status": "hold",
+    "reason": "At least one captured component exceeds the fixed approved frame. Repair the component or its detached placement before enabling this body."
+  },
+  "sleek-100ml-18-415": {
+    "status": "hold",
+    "reason": "At least one captured component exceeds the fixed approved frame. Repair the component or its detached placement before enabling this body."
+  },
+  "slim-100ml-18-415": {
+    "status": "hold",
+    "reason": "At least one captured component exceeds the fixed approved frame. Repair the component or its detached placement before enabling this body."
+  },
+  "boston-round-30ml-20-400": {
+    "status": "ready",
+    "reason": null
+  },
+  "elegant-15ml-13-415": {
+    "status": "ready",
+    "reason": null
+  },
+  "sleek-30ml-18-415": {
+    "status": "ready",
+    "reason": null
+  },
+  "slim-30ml-18-415": {
+    "status": "ready",
+    "reason": null
+  },
+  "slim-50ml-18-415": {
+    "status": "hold",
+    "reason": "At least one captured component exceeds the fixed approved frame. Repair the component or its detached placement before enabling this body."
+  },
+  "cylinder-5ml-13-415": {
+    "status": "ready",
+    "reason": null
+  },
+  "diva-46ml-18-415": {
+    "status": "hold",
+    "reason": "At least one captured component exceeds the fixed approved frame. Repair the component or its detached placement before enabling this body."
+  },
+  "sleek-5ml-13-415": {
+    "status": "ready",
+    "reason": null
+  },
+  "tulip-5ml-13-415": {
+    "status": "ready",
+    "reason": null
+  },
+  "boston-round-60ml-20-400": {
+    "status": "ready",
+    "reason": null
+  },
+  "sleek-8ml-13-415": {
+    "status": "ready",
+    "reason": null
+  },
+  "cylinder-9ml-17-415": {
+    "status": "ready",
+    "reason": null
+  },
+  "flair-15ml-13-415": {
+    "status": "ready",
+    "reason": null
+  },
+  "circle-50ml-18-415": {
+    "status": "hold",
+    "reason": "At least one captured component exceeds the fixed approved frame. Repair the component or its detached placement before enabling this body."
+  },
+  "cylinder-9ml-13-415": {
+    "status": "ready",
+    "reason": null
+  },
+  "grace-55ml-18-415": {
+    "status": "hold",
+    "reason": "At least one captured component exceeds the fixed approved frame. Repair the component or its detached placement before enabling this body."
+  },
+  "footed-rectangle-10ml-13-415": {
+    "status": "ready",
+    "reason": null
+  },
+  "tall-rectangle-10ml-13-415": {
+    "status": "ready",
+    "reason": null
+  },
+  "tulip-6ml-13-415": {
+    "status": "ready",
+    "reason": null
+  },
+  "cylinder-50ml-18-415": {
+    "status": "hold",
+    "reason": "At least one captured component exceeds the fixed approved frame. Repair the component or its detached placement before enabling this body."
+  },
+  "diamond-60ml-18-415": {
+    "status": "hold",
+    "reason": "At least one captured component exceeds the fixed approved frame. Repair the component or its detached placement before enabling this body."
+  },
+  "diva-30ml-18-415": {
+    "status": "ready",
+    "reason": null
+  },
+  "elegant-60ml-18-415": {
+    "status": "hold",
+    "reason": "At least one captured component exceeds the fixed approved frame. Repair the component or its detached placement before enabling this body."
+  },
+  "cylinder-25ml-18-415": {
+    "status": "hold",
+    "reason": "At least one captured component exceeds the fixed approved frame. Repair the component or its detached placement before enabling this body."
+  },
+  "tola-decorative-3ml-14.3mm": {
+    "status": "ready",
+    "reason": null
+  },
+  "tola-decorative-6ml-14.3mm": {
+    "status": "ready",
+    "reason": null
+  },
+  "pillar-9ml-13-415": {
+    "status": "ready",
+    "reason": null
+  },
+  "bell-10ml-13-415": {
+    "status": "ready",
+    "reason": null
+  }
+}

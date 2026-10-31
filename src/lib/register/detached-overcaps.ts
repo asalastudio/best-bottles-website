@@ -24,6 +24,10 @@ type DetachedOvercap = {
     source: string;
 };
 
+// October 31: one native Blender shell with continuous transparency; no image cutout.
+// Original v34 WEBP remains preserved; all compatible finishes share this asset.
+export const CYLINDER9_OVERCAP_MASTER = "/assets/register/overcaps/cylinder-9ml-clear-overcap-alpha-v6.png";
+
 export const DETACHED_OVERCAPS: Readonly<Record<string, DetachedOvercap>> = {
     // The 18-415 matte silver lotion pump with the clear overcap: every LtnClOvrCap SKU (26 on 20 glasses).
     "CMP-LPM-MSLV-18-415-02": {
@@ -41,7 +45,7 @@ export const DETACHED_OVERCAPS: Readonly<Record<string, DetachedOvercap>> = {
     "CMP-SPR-BLK-17-415-01": {
         seatedLayerSha256: "6f140877bdf765f9da7c44b5425ed07446cdfe2af7f1cbe06589ec062980384d",
         seatedCoverWidth: 424,
-        url: "/assets/register/overcaps/ovr-17-415-clear-overcap.webp",
+        url: CYLINDER9_OVERCAP_MASTER,
         width: 427,
         height: 569,
         coverWidth: 424,
@@ -50,7 +54,7 @@ export const DETACHED_OVERCAPS: Readonly<Record<string, DetachedOvercap>> = {
     "CMP-SPR-CLR-17-415": {
         seatedLayerSha256: "6f140877bdf765f9da7c44b5425ed07446cdfe2af7f1cbe06589ec062980384d",
         seatedCoverWidth: 424,
-        url: "/assets/register/overcaps/ovr-17-415-clear-overcap.webp",
+        url: CYLINDER9_OVERCAP_MASTER,
         width: 427,
         height: 569,
         coverWidth: 424,
@@ -59,7 +63,7 @@ export const DETACHED_OVERCAPS: Readonly<Record<string, DetachedOvercap>> = {
     "CMP-SPR-RED-17-415": {
         seatedLayerSha256: "6f140877bdf765f9da7c44b5425ed07446cdfe2af7f1cbe06589ec062980384d",
         seatedCoverWidth: 424,
-        url: "/assets/register/overcaps/ovr-17-415-clear-overcap.webp",
+        url: CYLINDER9_OVERCAP_MASTER,
         width: 427,
         height: 569,
         coverWidth: 424,
@@ -68,7 +72,7 @@ export const DETACHED_OVERCAPS: Readonly<Record<string, DetachedOvercap>> = {
     "CMP-SPR-SGLD-17-415": {
         seatedLayerSha256: "6f140877bdf765f9da7c44b5425ed07446cdfe2af7f1cbe06589ec062980384d",
         seatedCoverWidth: 424,
-        url: "/assets/register/overcaps/ovr-17-415-clear-overcap.webp",
+        url: CYLINDER9_OVERCAP_MASTER,
         width: 427,
         height: 569,
         coverWidth: 424,
@@ -77,7 +81,7 @@ export const DETACHED_OVERCAPS: Readonly<Record<string, DetachedOvercap>> = {
     "CMP-SPR-SLV-17-415": {
         seatedLayerSha256: "6f140877bdf765f9da7c44b5425ed07446cdfe2af7f1cbe06589ec062980384d",
         seatedCoverWidth: 424,
-        url: "/assets/register/overcaps/ovr-17-415-clear-overcap.webp",
+        url: CYLINDER9_OVERCAP_MASTER,
         width: 427,
         height: 569,
         coverWidth: 424,
@@ -86,7 +90,7 @@ export const DETACHED_OVERCAPS: Readonly<Record<string, DetachedOvercap>> = {
     "CMP-SPR-SSLV-17-415": {
         seatedLayerSha256: "6f140877bdf765f9da7c44b5425ed07446cdfe2af7f1cbe06589ec062980384d",
         seatedCoverWidth: 424,
-        url: "/assets/register/overcaps/ovr-17-415-clear-overcap.webp",
+        url: CYLINDER9_OVERCAP_MASTER,
         width: 427,
         height: 569,
         coverWidth: 424,
@@ -95,7 +99,7 @@ export const DETACHED_OVERCAPS: Readonly<Record<string, DetachedOvercap>> = {
     "CMP-LPM-BLK-17-415": {
         seatedLayerSha256: "b5f3c4d65b0deaba3cb493567995c68c4a8541ed42f14668faa3cbd1d1454ef6",
         seatedCoverWidth: 424,
-        url: "/assets/register/overcaps/ovr-17-415-clear-overcap.webp",
+        url: CYLINDER9_OVERCAP_MASTER,
         width: 427,
         height: 569,
         coverWidth: 424,
@@ -104,7 +108,7 @@ export const DETACHED_OVERCAPS: Readonly<Record<string, DetachedOvercap>> = {
     "CMP-LPM-MSLV-17-415": {
         seatedLayerSha256: "b5f3c4d65b0deaba3cb493567995c68c4a8541ed42f14668faa3cbd1d1454ef6",
         seatedCoverWidth: 424,
-        url: "/assets/register/overcaps/ovr-17-415-clear-overcap.webp",
+        url: CYLINDER9_OVERCAP_MASTER,
         width: 427,
         height: 569,
         coverWidth: 424,
@@ -113,7 +117,7 @@ export const DETACHED_OVERCAPS: Readonly<Record<string, DetachedOvercap>> = {
     "CMP-LPM-SGLD-17-415": {
         seatedLayerSha256: "b5f3c4d65b0deaba3cb493567995c68c4a8541ed42f14668faa3cbd1d1454ef6",
         seatedCoverWidth: 424,
-        url: "/assets/register/overcaps/ovr-17-415-clear-overcap.webp",
+        url: CYLINDER9_OVERCAP_MASTER,
         width: 427,
         height: 569,
         coverWidth: 424,

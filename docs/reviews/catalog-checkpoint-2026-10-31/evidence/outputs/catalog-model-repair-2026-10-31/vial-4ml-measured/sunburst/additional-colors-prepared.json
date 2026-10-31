@@ -1,0 +1,26 @@
+{
+  "status": "Prepared only; awaiting authorization beyond four-call limit",
+  "model": "gpt-image-2.5-sunburst",
+  "quality": "high",
+  "count": 3,
+  "jobs": [
+    {
+      "color": "amber",
+      "input": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/clear-v3.png",
+      "promptFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/amber-color-edit-prompt.txt",
+      "output": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/amber-v2.png"
+    },
+    {
+      "color": "green",
+      "input": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/clear-v3.png",
+      "promptFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/green-color-edit-prompt.txt",
+      "output": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/green-v2.png"
+    },
+    {
+      "color": "cobalt",
+      "input": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/clear-v3.png",
+      "promptFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/cobalt-color-edit-prompt.txt",
+      "output": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/cobalt-v2.png"
+    }
+  ]
+}

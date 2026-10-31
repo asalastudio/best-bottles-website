@@ -395,7 +395,7 @@ export function callouts(variant: ProductVariant | null | undefined, capName: st
         const roller = rollerIdFor(applicator);
         const line1 = roller ? `${displayApplicatorName(applicator)} insert` : displayApplicatorName(applicator);
         const line2 = neck
-            ? roller ? `Press-fit into ${neck} neck` : thread ? `Threads onto ${neck} neck` : `Fits ${neck} neck`
+            ? roller || applicator.toLowerCase() === "reducer" ? `Press-fit into ${neck} neck` : thread ? `Threads onto ${neck} neck` : `Fits ${neck} neck`
             : null;
         out.push({ key: "fitment", title: "FITMENT", line1, line2 });
     }
@@ -491,10 +491,11 @@ export function collectionDescription(band: CollectionBand, groups: readonly Col
     return `${band.subtitle} ${members.length} ${noun}${familyText ? ` across ${familyText}` : ""}${range}.`;
 }
 
-export function buildYourBottleHref(group: Pick<PdpGroup, "family">, collection: CollectionBand | null): string {
+export function buildYourBottleHref(group: Pick<PdpGroup, "family">, collection: CollectionBand | null, sku?: string | null): string {
     const params = new URLSearchParams();
     if (group.family) params.set("family", group.family);
     if (collection) params.set("shop", collection.key);
+    if (sku) params.set("sku", sku);
     params.set("from", "pdp");
     return `/matrix?${params.toString()}`;
 }

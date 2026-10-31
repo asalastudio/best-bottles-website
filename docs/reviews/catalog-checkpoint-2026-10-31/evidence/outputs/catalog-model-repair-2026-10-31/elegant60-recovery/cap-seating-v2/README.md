@@ -1,0 +1,1 @@
+Local-only cap seating correction. All 24 reducer kits receive one skirt-to-neck registration per glass. Zero shoulder clearance as clarified by user and IMG_6871.HEIC. Body images, anchors, insert and cap sizes unchanged. Original kits: ../before-cap-seating-kits.json. Product and builder share corrected boxes. Report: report.json. No production writes.

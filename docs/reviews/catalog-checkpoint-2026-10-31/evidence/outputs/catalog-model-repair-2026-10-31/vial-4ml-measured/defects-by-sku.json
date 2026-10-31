@@ -1,0 +1,154 @@
+[
+  {
+    "sku": "GBV1DrmWhtCapSht",
+    "product": "vial-4ml-clear-13-425",
+    "defects": [
+      {
+        "issue": "Black/white cap imported as Clear, collapsing both options",
+        "status": "Fixed locally and verified exact SKU selection"
+      },
+      {
+        "issue": "Old glass body artwork and inconsistent short-neck shape",
+        "status": "Replaced with registered Sunburst glass; short neck, full bottle and cap seating checked"
+      }
+    ],
+    "checks": "Included in 64 family browser checks, both finishes, all three views, desktop/mobile, thumbnails and reload",
+    "beforeScreenshot": "screenshots/before-clear.png",
+    "afterScreenshot": "screenshots/desktop-clear-white-sidecar.png",
+    "capOnScreenshot": "screenshots/desktop-clear-white-capon.png",
+    "explodedScreenshot": "screenshots/desktop-clear-white-exploded.png"
+  },
+  {
+    "sku": "GBV1DrmBlackCapSht",
+    "product": "vial-4ml-clear-13-425",
+    "defects": [
+      {
+        "issue": "Black/white cap imported as Clear, collapsing both options",
+        "status": "Fixed locally and verified exact SKU selection"
+      },
+      {
+        "issue": "Old glass body artwork and inconsistent short-neck shape",
+        "status": "Replaced with registered Sunburst glass; short neck, full bottle and cap seating checked"
+      }
+    ],
+    "checks": "Included in 64 family browser checks, both finishes, all three views, desktop/mobile, thumbnails and reload",
+    "beforeScreenshot": "screenshots/before-clear.png",
+    "afterScreenshot": "screenshots/desktop-clear-black-sidecar.png",
+    "capOnScreenshot": "screenshots/desktop-clear-black-capon.png",
+    "explodedScreenshot": "screenshots/desktop-clear-black-exploded.png"
+  },
+  {
+    "sku": "GBVAmb1DrmWhtCapSht",
+    "product": "vial-4ml-amber-13-425",
+    "defects": [
+      {
+        "issue": "Black/white cap imported as Clear, collapsing both options",
+        "status": "Fixed locally and verified exact SKU selection"
+      },
+      {
+        "issue": "Old glass body artwork and inconsistent short-neck shape",
+        "status": "Replaced with registered Sunburst glass; short neck, full bottle and cap seating checked"
+      }
+    ],
+    "checks": "Included in 64 family browser checks, both finishes, all three views, desktop/mobile, thumbnails and reload",
+    "beforeScreenshot": "screenshots/before-amber.png",
+    "afterScreenshot": "screenshots/desktop-amber-white-sidecar.png",
+    "capOnScreenshot": "screenshots/desktop-amber-white-capon.png",
+    "explodedScreenshot": "screenshots/desktop-amber-white-exploded.png"
+  },
+  {
+    "sku": "GBVAmb1DrmBlackCapSht",
+    "product": "vial-4ml-amber-13-425",
+    "defects": [
+      {
+        "issue": "Black/white cap imported as Clear, collapsing both options",
+        "status": "Fixed locally and verified exact SKU selection"
+      },
+      {
+        "issue": "Old glass body artwork and inconsistent short-neck shape",
+        "status": "Replaced with registered Sunburst glass; short neck, full bottle and cap seating checked"
+      }
+    ],
+    "checks": "Included in 64 family browser checks, both finishes, all three views, desktop/mobile, thumbnails and reload",
+    "beforeScreenshot": "screenshots/before-amber.png",
+    "afterScreenshot": "screenshots/desktop-amber-black-sidecar.png",
+    "capOnScreenshot": "screenshots/desktop-amber-black-capon.png",
+    "explodedScreenshot": "screenshots/desktop-amber-black-exploded.png"
+  },
+  {
+    "sku": "GBVGr1DrmWhtCapSht",
+    "product": "vial-4ml-green-13-425",
+    "defects": [
+      {
+        "issue": "Black/white cap imported as Clear, collapsing both options",
+        "status": "Fixed locally and verified exact SKU selection"
+      },
+      {
+        "issue": "Old glass body artwork and inconsistent short-neck shape",
+        "status": "Replaced with registered Sunburst glass; short neck, full bottle and cap seating checked"
+      }
+    ],
+    "checks": "Included in 64 family browser checks, both finishes, all three views, desktop/mobile, thumbnails and reload",
+    "beforeScreenshot": "screenshots/before-green.png",
+    "afterScreenshot": "screenshots/desktop-green-white-sidecar.png",
+    "capOnScreenshot": "screenshots/desktop-green-white-capon.png",
+    "explodedScreenshot": "screenshots/desktop-green-white-exploded.png"
+  },
+  {
+    "sku": "GBVGr1DrmBlackCapSht",
+    "product": "vial-4ml-green-13-425",
+    "defects": [
+      {
+        "issue": "Black/white cap imported as Clear, collapsing both options",
+        "status": "Fixed locally and verified exact SKU selection"
+      },
+      {
+        "issue": "Old glass body artwork and inconsistent short-neck shape",
+        "status": "Replaced with registered Sunburst glass; short neck, full bottle and cap seating checked"
+      }
+    ],
+    "checks": "Included in 64 family browser checks, both finishes, all three views, desktop/mobile, thumbnails and reload",
+    "beforeScreenshot": "screenshots/before-green.png",
+    "afterScreenshot": "screenshots/desktop-green-black-sidecar.png",
+    "capOnScreenshot": "screenshots/desktop-green-black-capon.png",
+    "explodedScreenshot": "screenshots/desktop-green-black-exploded.png"
+  },
+  {
+    "sku": "GBVBlu1DrmWhtCapSht",
+    "product": "vial-4ml-blue-13-425",
+    "defects": [
+      {
+        "issue": "Black/white cap imported as Clear, collapsing both options",
+        "status": "Fixed locally and verified exact SKU selection"
+      },
+      {
+        "issue": "Old glass body artwork and inconsistent short-neck shape",
+        "status": "Replaced with registered Sunburst glass; short neck, full bottle and cap seating checked"
+      }
+    ],
+    "checks": "Included in 64 family browser checks, both finishes, all three views, desktop/mobile, thumbnails and reload",
+    "beforeScreenshot": "screenshots/before-blue.png",
+    "afterScreenshot": "screenshots/desktop-blue-white-sidecar.png",
+    "capOnScreenshot": "screenshots/desktop-blue-white-capon.png",
+    "explodedScreenshot": "screenshots/desktop-blue-white-exploded.png"
+  },
+  {
+    "sku": "GBVBlu1DrmBlackCapSht",
+    "product": "vial-4ml-blue-13-425",
+    "defects": [
+      {
+        "issue": "Black/white cap imported as Clear, collapsing both options",
+        "status": "Fixed locally and verified exact SKU selection"
+      },
+      {
+        "issue": "Old glass body artwork and inconsistent short-neck shape",
+        "status": "Replaced with registered Sunburst glass; short neck, full bottle and cap seating checked"
+      }
+    ],
+    "checks": "Included in 64 family browser checks, both finishes, all three views, desktop/mobile, thumbnails and reload",
+    "beforeScreenshot": "screenshots/before-blue.png",
+    "afterScreenshot": "screenshots/desktop-blue-black-sidecar.png",
+    "capOnScreenshot": "screenshots/desktop-blue-black-capon.png",
+    "explodedScreenshot": "screenshots/desktop-blue-black-exploded.png"
+  }
+]

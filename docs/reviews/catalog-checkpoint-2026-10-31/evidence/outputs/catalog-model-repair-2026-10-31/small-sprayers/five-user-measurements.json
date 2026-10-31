@@ -1,0 +1,51 @@
+{
+  "source": "Jordan physical caliper measurements, 2026-10-31, current conversation",
+  "precedence": "Latest 12.60 mm outside-thread and 17.45 mm body readings supersede 12.64 and 17.55 respectively",
+  "heightOverallMm": 53.23,
+  "bodyDiameterNominalMm": 17.45,
+  "shape": "Very subtle convex barrel; preserve natural slope, not a perfect straight cylinder",
+  "rawDiameterReadingsMm": {
+    "firstSet": {
+      "top": 17.44,
+      "middle": 17.51,
+      "base": 17.56
+    },
+    "secondSet": {
+      "top": 17.55,
+      "middle": 17.65,
+      "bottom": 17.5
+    }
+  },
+  "shoulderToBaseMm": 40.1,
+  "neckThreadRootDiameterMm": 12.0,
+  "neckThreadCrestDiameterMm": 12.6,
+  "internalDepthMm": 48.8,
+  "derivedCenterBaseThicknessMm": 4.43,
+  "status": "New caliper diameters applied to both glasses; approved per-glass appearance retained; local review",
+  "rimWallThicknessMm": 1.8,
+  "threadCrestWallThicknessMm": 2.64,
+  "derivedThreadBoreDiameterMm": 7.32,
+  "derivedLipBoreDiameterMm": 7.32,
+  "neckTransition": "Uniform 7.32 mm bore; 10.92 mm plain rim and neck lands, with 12.00 mm actual thread roots and 12.60 mm crests",
+  "appliesTo": [
+    "5 ml Cylinder clear 13-415",
+    "5 ml Cylinder cobalt blue 13-415"
+  ],
+  "latestNeckClarification": {
+    "source": "Jordan, current conversation after measured-v9 local review",
+    "outsideThreadDiameterMm": 12.6,
+    "rimEdgeGlassThicknessMm": 1.8,
+    "rimToOutsideThreadThicknessMm": 2.64,
+    "interpretation": "Final wording interpreted as radial glass thickness at the plain rim and including the outside thread, respectively. The earlier phrase about neck height was followed by this clarification. These two numbers are not used as vertical neck heights.",
+    "rootDiameterNote": "12.00 mm root diameter retained from earlier explicit measurement; latest wording confirms 12.64 mm across the outside of the threads.",
+    "referenceImage": "user-photos/clear-5ml-appearance-reference.png; user-confirmed clear 5 ml example"
+  },
+  "sharedGeometryVerification": "five-measured-verification.json: identical v19 geometry for clear and cobalt",
+  "derivedPlainRimDiameterMm": 10.92,
+  "inferredPlainNeckLandDiameterMm": 10.92,
+  "assumptions": [
+    "Uniform opening through the neck is inferred, not independently measured",
+    "Plain rim OD = 12.60 - 2*2.64 + 2*1.80 = 10.92 mm",
+    "Unthreaded lands use the derived rim OD, guided by the user-confirmed clear 5 ml reference"
+  ]
+}

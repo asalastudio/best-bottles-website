@@ -1701,6 +1701,8 @@
     }
 
     .buildLine {
+        max-width: 100%;
+        white-space: normal;
         font-size: 10px;
     }
 

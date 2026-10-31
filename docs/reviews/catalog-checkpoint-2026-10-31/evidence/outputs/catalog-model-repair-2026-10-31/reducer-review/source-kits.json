@@ -1,0 +1,3170 @@
+[
+  {
+    "graceSku": "GB-ELG-CLR-60ML-RDC-BKLT",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Clear",
+      "graceSku": "GB-ELG-CLR-60ML-RDC-BKLT",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-BLK-18415-LTR",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElg60RdcrBlkLthr"
+    },
+    "kit": {
+      "sku": "GBElg60RdcrBlkLthr",
+      "familyId": "register:elegant-60ml-18-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 237.08,
+            "top": 261,
+            "right": 762.92,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/58165fd317cadaaed55186664e754056328839abd9cf229b479434412b052773.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -21.74,
+            "y": -23.4,
+            "width": 1023.02,
+            "height": 1125.32
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 370.2,
+            "top": 120.81,
+            "right": 649.31,
+            "bottom": 419.42
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -182.42
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-BLK-18415-LTR/cap-8bd04d6c5a282ea76c16bc8ec98df1f148e7f8e2740688a3ed44788dc7a182e7.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 229,
+            "height": 245
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 370.2,
+            "y": 120.81,
+            "width": 279.11,
+            "height": 298.61
+          },
+          "componentId": "CMP-CAP-BLK-18415-LTR"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-BLK-18415-LTR"
+        ],
+        "seatSignature": "ae7bda880ccea7",
+        "seatDropMm": 1.14
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-FRS-60ML-RDC-BKLT",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Frosted",
+      "graceSku": "GB-ELG-FRS-60ML-RDC-BKLT",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-BLK-18415-LTR",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Frosted",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElgFrst60RdcrBlkLthr"
+    },
+    "kit": {
+      "sku": "GBElgFrst60RdcrBlkLthr",
+      "familyId": "register:elegant-60ml-18-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 250,
+            "top": 261,
+            "right": 750,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/3a4f9d550fc893d4d2612937a5f1f32d00edb6df8017ffadd8e8cdd5034fc8a4.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -31.05,
+            "y": -53.74,
+            "width": 1052.63,
+            "height": 1157.89
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 370.2,
+            "top": 134.59,
+            "right": 649.31,
+            "bottom": 433.2
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -196.2
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-BLK-18415-LTR/cap-8bd04d6c5a282ea76c16bc8ec98df1f148e7f8e2740688a3ed44788dc7a182e7.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 229,
+            "height": 245
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 370.2,
+            "y": 134.59,
+            "width": 279.11,
+            "height": 298.61
+          },
+          "componentId": "CMP-CAP-BLK-18415-LTR"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-BLK-18415-LTR"
+        ],
+        "seatSignature": "f50e46cb16b6e4",
+        "seatDropMm": 2.85
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-CLR-60ML-RDC-SBLK-T",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Clear",
+      "graceSku": "GB-ELG-CLR-60ML-RDC-SBLK-T",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-SBLK-18415-T",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElg60RdcrShnBlkTall"
+    },
+    "kit": {
+      "sku": "GBElg60RdcrShnBlkTall",
+      "familyId": "register:elegant-60ml-18-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 237.08,
+            "top": 261,
+            "right": 762.92,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/58165fd317cadaaed55186664e754056328839abd9cf229b479434412b052773.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -21.74,
+            "y": -23.4,
+            "width": 1023.02,
+            "height": 1125.32
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 394.5,
+            "top": 147.41,
+            "right": 634.87,
+            "bottom": 413.89
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -176.89
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-SBLK-18415-T/cap-216376a7f597fef31d124b470c9c1a99628f36fabed4e92f42c403e0e0ed4d5d.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 221,
+            "height": 245
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 394.5,
+            "y": 147.41,
+            "width": 240.37,
+            "height": 266.48
+          },
+          "componentId": "CMP-CAP-SBLK-18415-T"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-SBLK-18415-T"
+        ],
+        "seatSignature": "98526e981aeb4d",
+        "seatDropMm": 0.57
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-CLR-60ML-RDC-WHT",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Clear",
+      "graceSku": "GB-ELG-CLR-60ML-RDC-WHT",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-WHT-18415-T",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElg60RdcrWht"
+    },
+    "kit": {
+      "sku": "GBElg60RdcrWht",
+      "familyId": "register:elegant-60ml-18-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 237.08,
+            "top": 261,
+            "right": 762.92,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/58165fd317cadaaed55186664e754056328839abd9cf229b479434412b052773.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -21.74,
+            "y": -23.4,
+            "width": 1023.02,
+            "height": 1125.32
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 387.43,
+            "top": 151.94,
+            "right": 607.15,
+            "bottom": 417.12
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -180.12
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-WHT-18415-T/cap-b2a62926377b89e2b34fea1be5ab2849186494e1210fde5bf8aa22ea2748dfa7.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 203,
+            "height": 245
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 387.43,
+            "y": 151.94,
+            "width": 219.72,
+            "height": 265.18
+          },
+          "componentId": "CMP-CAP-WHT-18415-T"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-WHT-18415-T"
+        ],
+        "seatSignature": "4ac7d52502b7be",
+        "seatDropMm": 0.57
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-CLR-60ML-RDC",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Clear",
+      "graceSku": "GB-ELG-CLR-60ML-RDC",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-LBRN-18415-LTR",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElg60RdcrLBrwnLthr"
+    },
+    "kit": {
+      "sku": "GBElg60RdcrLBrwnLthr",
+      "familyId": "register:elegant-60ml-18-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 237.08,
+            "top": 261,
+            "right": 762.92,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/58165fd317cadaaed55186664e754056328839abd9cf229b479434412b052773.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -21.74,
+            "y": -23.4,
+            "width": 1023.02,
+            "height": 1125.32
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 372.6,
+            "top": 120.14,
+            "right": 650.14,
+            "bottom": 418.47
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -181.47
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-LBRN-18415-LTR/cap-334320d38cfb4759b15438ed2edf9a9a51ee5b7401cbb4b85c9364fa67631a69.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 227,
+            "height": 244
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 372.6,
+            "y": 120.14,
+            "width": 277.54,
+            "height": 298.33
+          },
+          "componentId": "CMP-CAP-LBRN-18415-LTR"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-LBRN-18415-LTR"
+        ],
+        "seatSignature": "f604c4380a671d",
+        "seatDropMm": 1.03
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-CLR-60ML-RDC-BRLT",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Clear",
+      "graceSku": "GB-ELG-CLR-60ML-RDC-BRLT",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-BRN-18415-LTR",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElg60RdcrBrwnLthr"
+    },
+    "kit": {
+      "sku": "GBElg60RdcrBrwnLthr",
+      "familyId": "register:elegant-60ml-18-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 237.08,
+            "top": 261,
+            "right": 762.92,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/58165fd317cadaaed55186664e754056328839abd9cf229b479434412b052773.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -21.74,
+            "y": -23.4,
+            "width": 1023.02,
+            "height": 1125.32
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 370.83,
+            "top": 115.32,
+            "right": 653.85,
+            "bottom": 419.53
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -182.53
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-BRN-18415-LTR/cap-1a315abd51583519d964763719e510489ad65d41157649bb17af66481e4b36a8.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 227,
+            "height": 244
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 370.83,
+            "y": 115.32,
+            "width": 283.02,
+            "height": 304.21
+          },
+          "componentId": "CMP-CAP-BRN-18415-LTR"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-BRN-18415-LTR"
+        ],
+        "seatSignature": "98c5606a017f6d",
+        "seatDropMm": 1.14
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-CLR-60ML-RDC-IVLT",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Clear",
+      "graceSku": "GB-ELG-CLR-60ML-RDC-IVLT",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-IVY-18415-LTR",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElg60RdcrIvyLthr"
+    },
+    "kit": {
+      "sku": "GBElg60RdcrIvyLthr",
+      "familyId": "register:elegant-60ml-18-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 237.08,
+            "top": 261,
+            "right": 762.92,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/58165fd317cadaaed55186664e754056328839abd9cf229b479434412b052773.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -21.74,
+            "y": -23.4,
+            "width": 1023.02,
+            "height": 1125.32
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 365.47,
+            "top": 131.18,
+            "right": 629.54,
+            "bottom": 420.89
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -183.89
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-IVY-18415-LTR/cap-a8408ded928b19b85ab86622c68710570e26019c8d700529725937486f320422.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 793,
+            "height": 870
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 365.47,
+            "y": 131.18,
+            "width": 264.07,
+            "height": 289.71
+          },
+          "componentId": "CMP-CAP-IVY-18415-LTR"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-IVY-18415-LTR"
+        ],
+        "seatSignature": "e507f6221777f5",
+        "seatDropMm": 1.37
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-CLR-60ML-RDC-PNK",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Clear",
+      "graceSku": "GB-ELG-CLR-60ML-RDC-PNK",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-PNK-18415-LTR",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElg60RdcrPnkLthr"
+    },
+    "kit": {
+      "sku": "GBElg60RdcrPnkLthr",
+      "familyId": "register:elegant-60ml-18-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 237.08,
+            "top": 261,
+            "right": 762.92,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/58165fd317cadaaed55186664e754056328839abd9cf229b479434412b052773.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -21.74,
+            "y": -23.4,
+            "width": 1023.02,
+            "height": 1125.32
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 365.75,
+            "top": 125.67,
+            "right": 631.56,
+            "bottom": 418.6
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -181.6
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-PNK-18415-LTR/cap-05058e25010d340ada26a7b4710134d02e27087604191a7de3f60cf544ee5c97.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 794,
+            "height": 875
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 365.75,
+            "y": 125.67,
+            "width": 265.81,
+            "height": 292.93
+          },
+          "componentId": "CMP-CAP-PNK-18415-LTR"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-PNK-18415-LTR"
+        ],
+        "seatSignature": "7b6d44420ea491",
+        "seatDropMm": 1.03
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-CLR-60ML-RDC-SBLK",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Clear",
+      "graceSku": "GB-ELG-CLR-60ML-RDC-SBLK",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "LIB-18-415-ShnBlkCap",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElg60RdcrShnBlk"
+    },
+    "kit": {
+      "sku": "GBElg60RdcrShnBlk",
+      "familyId": "register:elegant-60ml-18-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 237.08,
+            "top": 261,
+            "right": 762.92,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/58165fd317cadaaed55186664e754056328839abd9cf229b479434412b052773.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -21.74,
+            "y": -23.4,
+            "width": 1023.02,
+            "height": 1125.32
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 386.52,
+            "top": 205.7,
+            "right": 613.48,
+            "bottom": 423.39
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -186.39
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/LIB-18-415-ShnBlkCap/cap-da8783aa11ef90ea2c0ae5dedb79ee25c192073123dad3722319690dda82f655.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 245,
+            "height": 235
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 386.52,
+            "y": 205.7,
+            "width": 226.96,
+            "height": 217.69
+          },
+          "componentId": "LIB-18-415-ShnBlkCap"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "LIB-18-415-ShnBlkCap"
+        ],
+        "seatSignature": "9b21aa090c51d0",
+        "seatDropMm": 0.46
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-CLR-60ML-RDC-SGLD",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Clear",
+      "graceSku": "GB-ELG-CLR-60ML-RDC-SGLD",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-SGLD-18415-S",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElg60RdcrShnGl"
+    },
+    "kit": {
+      "sku": "GBElg60RdcrShnGl",
+      "familyId": "register:elegant-60ml-18-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 237.08,
+            "top": 261,
+            "right": 762.92,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/58165fd317cadaaed55186664e754056328839abd9cf229b479434412b052773.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -21.74,
+            "y": -23.4,
+            "width": 1023.02,
+            "height": 1125.32
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 392.92,
+            "top": 204.14,
+            "right": 619.73,
+            "bottom": 419.27
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -182.27
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-SGLD-18415-S/cap-3e51945791b1c5a47553daeea323ae74e11dae1673995e156062ad74f6192f53.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 233,
+            "height": 221
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 392.92,
+            "y": 204.14,
+            "width": 226.81,
+            "height": 215.13
+          },
+          "componentId": "CMP-CAP-SGLD-18415-S"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-SGLD-18415-S"
+        ],
+        "seatSignature": "e86833960cccef",
+        "seatDropMm": 0.68
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-CLR-60ML-RDC-SSLV",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Clear",
+      "graceSku": "GB-ELG-CLR-60ML-RDC-SSLV",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-SSLV-18415-S",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElg60RdcrShnSl"
+    },
+    "kit": {
+      "sku": "GBElg60RdcrShnSl",
+      "familyId": "register:elegant-60ml-18-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 237.08,
+            "top": 261,
+            "right": 762.92,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/58165fd317cadaaed55186664e754056328839abd9cf229b479434412b052773.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -21.74,
+            "y": -23.4,
+            "width": 1023.02,
+            "height": 1125.32
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 393.97,
+            "top": 209.41,
+            "right": 607.87,
+            "bottom": 426.06
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -189.06
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-SSLV-18415-S/cap-47b100d5600877255dfa86c8ecc117f8ecc2e5cad8ae3165a52d64e6f475949c.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 233,
+            "height": 236
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 393.97,
+            "y": 209.41,
+            "width": 213.9,
+            "height": 216.65
+          },
+          "componentId": "CMP-CAP-SSLV-18415-S"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-SSLV-18415-S"
+        ],
+        "seatSignature": "9ae4a185067ae4",
+        "seatDropMm": 0.57
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-CLR-60ML-RDC-MSLV",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Clear",
+      "graceSku": "GB-ELG-CLR-60ML-RDC-MSLV",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-MSLV-18415-S",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElg60RdcrMtSl"
+    },
+    "kit": {
+      "sku": "GBElg60RdcrMtSl",
+      "familyId": "register:elegant-60ml-18-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 237.08,
+            "top": 261,
+            "right": 762.92,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/58165fd317cadaaed55186664e754056328839abd9cf229b479434412b052773.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -21.74,
+            "y": -23.4,
+            "width": 1023.02,
+            "height": 1125.32
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 393.08,
+            "top": 208.45,
+            "right": 606,
+            "bottom": 414.98
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -177.98
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-MSLV-18415-S/cap-ab1f6159d1e145299e2a6d78327fe5652877c76b4c9b3b643aa181c509a3c02d.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 233,
+            "height": 226
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 393.08,
+            "y": 208.45,
+            "width": 212.92,
+            "height": 206.53
+          },
+          "componentId": "CMP-CAP-MSLV-18415-S"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-MSLV-18415-S"
+        ],
+        "seatSignature": "5d7b7d0519ba3c",
+        "seatDropMm": 0.46
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-CLR-60ML-RDC-MSLV-T",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Clear",
+      "graceSku": "GB-ELG-CLR-60ML-RDC-MSLV-T",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-MSLV-18415-T",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElg60RdcrMtSlTall"
+    },
+    "kit": {
+      "sku": "GBElg60RdcrMtSlTall",
+      "familyId": "register:elegant-60ml-18-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 237.08,
+            "top": 261,
+            "right": 762.92,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/58165fd317cadaaed55186664e754056328839abd9cf229b479434412b052773.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -21.74,
+            "y": -23.4,
+            "width": 1023.02,
+            "height": 1125.32
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 387.95,
+            "top": 147.52,
+            "right": 609.88,
+            "bottom": 414.05
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -177.05
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-MSLV-18415-T/cap-25cdbc112e3e99fab06d1f3cee450933d40ef6841593c8b86ebbe6e72fb397f9.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 204,
+            "height": 245
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 387.95,
+            "y": 147.52,
+            "width": 221.93,
+            "height": 266.53
+          },
+          "componentId": "CMP-CAP-MSLV-18415-T"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-MSLV-18415-T"
+        ],
+        "seatSignature": "bea44f0b1c1122",
+        "seatDropMm": 0.34
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-FRS-60ML-RDC-SBLK",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Frosted",
+      "graceSku": "GB-ELG-FRS-60ML-RDC-SBLK",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "LIB-18-415-ShnBlkCap",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Frosted",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElgFrst60RdcrShnBlk"
+    },
+    "kit": {
+      "sku": "GBElgFrst60RdcrShnBlk",
+      "familyId": "register:elegant-60ml-18-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 250,
+            "top": 261,
+            "right": 750,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/3a4f9d550fc893d4d2612937a5f1f32d00edb6df8017ffadd8e8cdd5034fc8a4.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -31.05,
+            "y": -53.74,
+            "width": 1052.63,
+            "height": 1157.89
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 386.52,
+            "top": 221.42,
+            "right": 613.48,
+            "bottom": 439.11
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -202.11
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/LIB-18-415-ShnBlkCap/cap-da8783aa11ef90ea2c0ae5dedb79ee25c192073123dad3722319690dda82f655.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 245,
+            "height": 235
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 386.52,
+            "y": 221.42,
+            "width": 226.96,
+            "height": 217.69
+          },
+          "componentId": "LIB-18-415-ShnBlkCap"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "LIB-18-415-ShnBlkCap"
+        ],
+        "seatSignature": "671dbef41a9a95",
+        "seatDropMm": 2.39
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-FRS-60ML-RDC-SBLK-T",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Frosted",
+      "graceSku": "GB-ELG-FRS-60ML-RDC-SBLK-T",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-SBLK-18415-T",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Frosted",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElgFrst60RdcrShnBlkTall"
+    },
+    "kit": {
+      "sku": "GBElgFrst60RdcrShnBlkTall",
+      "familyId": "register:elegant-60ml-18-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 250,
+            "top": 261,
+            "right": 750,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/3a4f9d550fc893d4d2612937a5f1f32d00edb6df8017ffadd8e8cdd5034fc8a4.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -31.05,
+            "y": -53.74,
+            "width": 1052.63,
+            "height": 1157.89
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 394.5,
+            "top": 162.17,
+            "right": 634.87,
+            "bottom": 428.65
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -191.65
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-SBLK-18415-T/cap-216376a7f597fef31d124b470c9c1a99628f36fabed4e92f42c403e0e0ed4d5d.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 221,
+            "height": 245
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 394.5,
+            "y": 162.17,
+            "width": 240.37,
+            "height": 266.48
+          },
+          "componentId": "CMP-CAP-SBLK-18415-T"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-SBLK-18415-T"
+        ],
+        "seatSignature": "00d7b7f906326c",
+        "seatDropMm": 2.39
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-FRS-60ML-RDC-SGLD",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Frosted",
+      "graceSku": "GB-ELG-FRS-60ML-RDC-SGLD",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-SGLD-18415-S",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Frosted",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElgFrst60RdcrShnGl"
+    },
+    "kit": {
+      "sku": "GBElgFrst60RdcrShnGl",
+      "familyId": "register:elegant-60ml-18-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 250,
+            "top": 261,
+            "right": 750,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/3a4f9d550fc893d4d2612937a5f1f32d00edb6df8017ffadd8e8cdd5034fc8a4.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -31.05,
+            "y": -53.74,
+            "width": 1052.63,
+            "height": 1157.89
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 392.92,
+            "top": 217.93,
+            "right": 619.73,
+            "bottom": 433.06
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -196.06
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-SGLD-18415-S/cap-3e51945791b1c5a47553daeea323ae74e11dae1673995e156062ad74f6192f53.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 233,
+            "height": 221
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 392.92,
+            "y": 217.93,
+            "width": 226.81,
+            "height": 215.13
+          },
+          "componentId": "CMP-CAP-SGLD-18415-S"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-SGLD-18415-S"
+        ],
+        "seatSignature": "3fcb42a312a3d2",
+        "seatDropMm": 2.39
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-FRS-60ML-RDC-SSLV",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Frosted",
+      "graceSku": "GB-ELG-FRS-60ML-RDC-SSLV",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-SSLV-18415-S",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Frosted",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElgFrst60RdcrShnSl"
+    },
+    "kit": {
+      "sku": "GBElgFrst60RdcrShnSl",
+      "familyId": "register:elegant-60ml-18-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 250,
+            "top": 261,
+            "right": 750,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/3a4f9d550fc893d4d2612937a5f1f32d00edb6df8017ffadd8e8cdd5034fc8a4.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -31.05,
+            "y": -53.74,
+            "width": 1052.63,
+            "height": 1157.89
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 393.97,
+            "top": 224.16,
+            "right": 607.87,
+            "bottom": 440.81
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -203.81
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-SSLV-18415-S/cap-47b100d5600877255dfa86c8ecc117f8ecc2e5cad8ae3165a52d64e6f475949c.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 233,
+            "height": 236
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 393.97,
+            "y": 224.16,
+            "width": 213.9,
+            "height": 216.65
+          },
+          "componentId": "CMP-CAP-SSLV-18415-S"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-SSLV-18415-S"
+        ],
+        "seatSignature": "1c44048000b2e9",
+        "seatDropMm": 2.39
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-FRS-60ML-RDC-WHT",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Frosted",
+      "graceSku": "GB-ELG-FRS-60ML-RDC-WHT",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-WHT-18415-T",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Frosted",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElgFrst60RdcrWht"
+    },
+    "kit": {
+      "sku": "GBElgFrst60RdcrWht",
+      "familyId": "register:elegant-60ml-18-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 250,
+            "top": 261,
+            "right": 750,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/3a4f9d550fc893d4d2612937a5f1f32d00edb6df8017ffadd8e8cdd5034fc8a4.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -31.05,
+            "y": -53.74,
+            "width": 1052.63,
+            "height": 1157.89
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 387.43,
+            "top": 166.69,
+            "right": 607.15,
+            "bottom": 431.87
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -194.87
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-WHT-18415-T/cap-b2a62926377b89e2b34fea1be5ab2849186494e1210fde5bf8aa22ea2748dfa7.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 203,
+            "height": 245
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 387.43,
+            "y": 166.69,
+            "width": 219.72,
+            "height": 265.18
+          },
+          "componentId": "CMP-CAP-WHT-18415-T"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-WHT-18415-T"
+        ],
+        "seatSignature": "9d749fd20e55a1",
+        "seatDropMm": 2.39
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-FRS-60ML-RDC-BRLT",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Frosted",
+      "graceSku": "GB-ELG-FRS-60ML-RDC-BRLT",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-BRN-18415-LTR",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Frosted",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElgFrst60RdcrBrwnLthr"
+    },
+    "kit": {
+      "sku": "GBElgFrst60RdcrBrwnLthr",
+      "familyId": "register:elegant-60ml-18-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 250,
+            "top": 261,
+            "right": 750,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/3a4f9d550fc893d4d2612937a5f1f32d00edb6df8017ffadd8e8cdd5034fc8a4.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -31.05,
+            "y": -53.74,
+            "width": 1052.63,
+            "height": 1157.89
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 370.83,
+            "top": 129.1,
+            "right": 653.85,
+            "bottom": 433.31
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -196.31
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-BRN-18415-LTR/cap-1a315abd51583519d964763719e510489ad65d41157649bb17af66481e4b36a8.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 227,
+            "height": 244
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 370.83,
+            "y": 129.1,
+            "width": 283.02,
+            "height": 304.21
+          },
+          "componentId": "CMP-CAP-BRN-18415-LTR"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-BRN-18415-LTR"
+        ],
+        "seatSignature": "146cd7191789ee",
+        "seatDropMm": 2.85
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-FRS-60ML-RDC-IVLT",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Frosted",
+      "graceSku": "GB-ELG-FRS-60ML-RDC-IVLT",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-IVY-18415-LTR",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Frosted",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElgFrst60RdcrIvyLthr"
+    },
+    "kit": {
+      "sku": "GBElgFrst60RdcrIvyLthr",
+      "familyId": "register:elegant-60ml-18-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 250,
+            "top": 261,
+            "right": 750,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/3a4f9d550fc893d4d2612937a5f1f32d00edb6df8017ffadd8e8cdd5034fc8a4.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -31.05,
+            "y": -53.74,
+            "width": 1052.63,
+            "height": 1157.89
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 365.47,
+            "top": 144.97,
+            "right": 629.54,
+            "bottom": 434.68
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -197.68
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-IVY-18415-LTR/cap-a8408ded928b19b85ab86622c68710570e26019c8d700529725937486f320422.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 793,
+            "height": 870
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 365.47,
+            "y": 144.97,
+            "width": 264.07,
+            "height": 289.71
+          },
+          "componentId": "CMP-CAP-IVY-18415-LTR"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-IVY-18415-LTR"
+        ],
+        "seatSignature": "08a79eb1125a66",
+        "seatDropMm": 3.08
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-FRS-60ML-RDC-LBLT",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Frosted",
+      "graceSku": "GB-ELG-FRS-60ML-RDC-LBLT",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-LBRN-18415-LTR",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Frosted",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElgFrst60RdcrLBrwnLthr"
+    },
+    "kit": {
+      "sku": "GBElgFrst60RdcrLBrwnLthr",
+      "familyId": "register:elegant-60ml-18-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 250,
+            "top": 261,
+            "right": 750,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/3a4f9d550fc893d4d2612937a5f1f32d00edb6df8017ffadd8e8cdd5034fc8a4.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -31.05,
+            "y": -53.74,
+            "width": 1052.63,
+            "height": 1157.89
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 372.6,
+            "top": 133.93,
+            "right": 650.14,
+            "bottom": 432.26
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -195.26
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-LBRN-18415-LTR/cap-334320d38cfb4759b15438ed2edf9a9a51ee5b7401cbb4b85c9364fa67631a69.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 227,
+            "height": 244
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 372.6,
+            "y": 133.93,
+            "width": 277.54,
+            "height": 298.33
+          },
+          "componentId": "CMP-CAP-LBRN-18415-LTR"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-LBRN-18415-LTR"
+        ],
+        "seatSignature": "e93201110d5cc4",
+        "seatDropMm": 2.74
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-FRS-60ML-RDC-MSLV",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Frosted",
+      "graceSku": "GB-ELG-FRS-60ML-RDC-MSLV",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-MSLV-18415-S",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Frosted",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElgFrst60RdcrMtSl"
+    },
+    "kit": {
+      "sku": "GBElgFrst60RdcrMtSl",
+      "familyId": "register:elegant-60ml-18-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 250,
+            "top": 261,
+            "right": 750,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/3a4f9d550fc893d4d2612937a5f1f32d00edb6df8017ffadd8e8cdd5034fc8a4.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -31.05,
+            "y": -53.74,
+            "width": 1052.63,
+            "height": 1157.89
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 393.08,
+            "top": 224.16,
+            "right": 606,
+            "bottom": 430.69
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -193.69
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-MSLV-18415-S/cap-ab1f6159d1e145299e2a6d78327fe5652877c76b4c9b3b643aa181c509a3c02d.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 233,
+            "height": 226
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 393.08,
+            "y": 224.16,
+            "width": 212.92,
+            "height": 206.53
+          },
+          "componentId": "CMP-CAP-MSLV-18415-S"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-MSLV-18415-S"
+        ],
+        "seatSignature": "6fbdc408057669",
+        "seatDropMm": 2.39
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-FRS-60ML-RDC-MSLV-T",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Frosted",
+      "graceSku": "GB-ELG-FRS-60ML-RDC-MSLV-T",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-MSLV-18415-T",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Frosted",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElgFrst60RdcrMtSlTall"
+    },
+    "kit": {
+      "sku": "GBElgFrst60RdcrMtSlTall",
+      "familyId": "register:elegant-60ml-18-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 250,
+            "top": 261,
+            "right": 750,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/3a4f9d550fc893d4d2612937a5f1f32d00edb6df8017ffadd8e8cdd5034fc8a4.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -31.05,
+            "y": -53.74,
+            "width": 1052.63,
+            "height": 1157.89
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 387.95,
+            "top": 164.29,
+            "right": 609.88,
+            "bottom": 430.82
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -193.82
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-MSLV-18415-T/cap-25cdbc112e3e99fab06d1f3cee450933d40ef6841593c8b86ebbe6e72fb397f9.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 204,
+            "height": 245
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 387.95,
+            "y": 164.29,
+            "width": 221.93,
+            "height": 266.53
+          },
+          "componentId": "CMP-CAP-MSLV-18415-T"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-MSLV-18415-T"
+        ],
+        "seatSignature": "fa2f2576073be7",
+        "seatDropMm": 2.39
+      }
+    }
+  },
+  {
+    "graceSku": "GB-ELG-FRS-60ML-RDC-PKLT",
+    "assembly": {
+      "bodyId": "elegant-60ml-18-415",
+      "glass": "Frosted",
+      "graceSku": "GB-ELG-FRS-60ML-RDC-PKLT",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-PNK-18415-LTR",
+          "role": "cap"
+        }
+      ],
+      "plateKey": "elegant-60ml-18-415|Frosted",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBElgFrst60RdcrPnkLthr"
+    },
+    "kit": {
+      "sku": "GBElgFrst60RdcrPnkLthr",
+      "familyId": "register:elegant-60ml-18-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.77
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 250,
+            "top": 261,
+            "right": 750,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/3a4f9d550fc893d4d2612937a5f1f32d00edb6df8017ffadd8e8cdd5034fc8a4.body.webp",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": -31.05,
+            "y": -53.74,
+            "width": 1052.63,
+            "height": 1157.89
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 365.75,
+            "top": 140.42,
+            "right": 631.56,
+            "bottom": 433.35
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -196.35
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-PNK-18415-LTR/cap-05058e25010d340ada26a7b4710134d02e27087604191a7de3f60cf544ee5c97.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 794,
+            "height": 875
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 365.75,
+            "y": 140.42,
+            "width": 265.81,
+            "height": 292.93
+          },
+          "componentId": "CMP-CAP-PNK-18415-LTR"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "elegant-60ml-18-415",
+        "plateKey": "elegant-60ml-18-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 8.77,
+        "componentIds": [
+          "CMP-CAP-PNK-18415-LTR"
+        ],
+        "seatSignature": "bd476abd1a6146",
+        "seatDropMm": 2.85
+      }
+    }
+  }
+]

@@ -32,3 +32,7 @@ dist/
 
 # Preserved generation sources and local review artifacts are not storefront assets.
 output/
+
+# Local model audits, backups and restored review pages are not release assets.
+outputs/
+public/reviews/*-2026-10-31/

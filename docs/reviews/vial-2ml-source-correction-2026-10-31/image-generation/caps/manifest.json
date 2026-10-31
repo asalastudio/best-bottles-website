@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-31",
+  "method": "built-in image_gen reference edit",
+  "reference": "user-cap-reference.png",
+  "referenceSha256": "7723ae7a99fae06ab8d9e44c41b3fc22d93ab1ec42b3eea4823600dd5a539deb",
+  "output": "black-white-vial-caps-candidate-v2.png",
+  "outputSha256": "e9d6cb9a4e3b390a51a52c2cb7ca1b04331a51c2c19dc315b25348ed28e988cd",
+  "dimensions": [
+    1928,
+    815
+  ],
+  "prompts": "prompts.json",
+  "status": "visual-review-candidate",
+  "userApproved": false,
+  "published": false,
+  "qa": "v1 introduced unsupported gray tabs and exposed under-cap shapes. v2 removes those protrusions. Visual comparison only; synthesized rib and surface microdetail is not a dimensional validation.",
+  "integration": "No website, kit, catalog registry or production changes."
+}

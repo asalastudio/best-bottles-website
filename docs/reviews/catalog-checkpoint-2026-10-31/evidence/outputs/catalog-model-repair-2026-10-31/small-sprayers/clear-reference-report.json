@@ -1,0 +1,588 @@
+{
+  "status": "Local candidate for user visual review",
+  "reference": "User-confirmed clear 5 ml example, EB36A593-F711-4CAD-8D9C-5671333C48B3.PNG",
+  "current": "renders/glass-5-clear-measured-v16.blend",
+  "appearance": {
+    "dimensionsMm": [
+      17.5474,
+      17.5474,
+      53.23
+    ],
+    "inferred": [
+      "Subtle barrel bow interpolated around 17.55 mm nominal; shoulder curvature reconstructed from upright IMG_6841 and side-on IMG_6845/6846; measured shoulder datum 40.10 mm",
+      "Plain rim OD assumed equal to the measured 12.00 mm root OD; 1.80 mm rim wall gives an 8.40 mm lip bore, tapering to 7.36 mm under 12.64 mm thread crests"
+    ],
+    "crop": [
+      1015,
+      2246,
+      1485,
+      3622
+    ],
+    "axis": 1250.0,
+    "baseline": 3597.9901552200317,
+    "shoulder": 2596.864104270935,
+    "sourcePxPerMm": 25,
+    "geometry": {
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentNormalEdges": 0,
+      "degenerateFaces": 0,
+      "volumeMm3": 5634.489152845048,
+      "vertices": 267266,
+      "faces": 267648
+    },
+    "sourceReference": "small-sprayers/source-review/sources.json",
+    "status": "Staged on localhost for reference comparison; awaiting user visual approval; cobalt unchanged",
+    "hardware_lit": [
+      "CAP_BlackDotted_Shell",
+      "CAP_Jewel_center_1",
+      "CAP_Jewel_center_2",
+      "CAP_Jewel_center_3",
+      "CAP_Jewel_left_1",
+      "CAP_Jewel_left_2",
+      "CAP_Jewel_right_1",
+      "CAP_Jewel_right_2",
+      "ROLLER_Ball \u2014 plastic or stainless",
+      "ROLLER_Housing_Flange_HollowStem",
+      "pump \u2014 discharge recess backing",
+      "pump \u2014 measured dip tube \u00d83.55",
+      "pump \u2014 measured pump body",
+      "pump \u2014 phenolic collar",
+      "pump \u2014 stationary white sleeve",
+      "pump \u2014 translucent overcap",
+      "pump \u2014 white actuator"
+    ],
+    "sourceScene": "glass-5-clear-measured-v14.blend",
+    "appearanceChanges": [
+      "Graduated grey side cards and broad studio diffuser",
+      "Transmission sees the softly lit studio backdrop rather than constant-color emission; camera background remains transparent",
+      "Glass material, measured geometry, camera, crop and cobalt remain unchanged",
+      "Two full-height soft vertical highlights based on user clear-5ml reference; their ends stay beyond bottle bounds"
+    ],
+    "referenceImage": "/Users/jordanrichter/Downloads/EB36A593-F711-4CAD-8D9C-5671333C48B3.PNG",
+    "referenceSha256": "20518a1a613143fd3fd6a535f206e5e0fc359e39ad8248d1a099749ca1335e5a",
+    "referenceUse": "User-confirmed clear 5 ml glass example; lighting and visible glass cues, with measured dimensions retained",
+    "geometrySha256": "700ed649e4233e40708c572eed1f280136a40d146f92a82c91a4a7eec39fff6c"
+  },
+  "invariants": [
+    {
+      "version": 9,
+      "vertices": "283a4b82fc97aa1b2599a9198b6e4462aa1962967956fb81ab9ae8f77f70fef4",
+      "faces": "fe55f1a1824f4f57b7895cd948066e47db00d27d0ddd26f31c8f8d86495e4481",
+      "camera": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.05233597382903099,
+          -0.9986295104026794,
+          -1.4954692125320435
+        ],
+        [
+          0.0,
+          0.9986295104026794,
+          0.05233597382903099,
+          0.14238157868385315
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "crop": [
+        0.4059999883174896,
+        0.09449999779462814,
+        0.593999981880188,
+        0.43849998712539673
+      ],
+      "dimensions": [
+        0.01754741184413433,
+        0.01754741184413433,
+        0.05322999879717827
+      ],
+      "glassShader": [
+        [
+          "BSDF_PRINCIPLED",
+          [
+            [
+              "Base Color",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Metallic",
+              0.0
+            ],
+            [
+              "Roughness",
+              0.0
+            ],
+            [
+              "IOR",
+              1.5199999809265137
+            ],
+            [
+              "Alpha",
+              1.0
+            ],
+            [
+              "Thin Wall",
+              false
+            ],
+            [
+              "Normal",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "Weight",
+              0.0
+            ],
+            [
+              "Diffuse Roughness",
+              0.0
+            ],
+            [
+              "Subsurface Weight",
+              0.0
+            ],
+            [
+              "Subsurface Radius",
+              [
+                1.0,
+                0.20000000298023224,
+                0.10000000149011612
+              ]
+            ],
+            [
+              "Subsurface Scale",
+              0.004999999888241291
+            ],
+            [
+              "Subsurface IOR",
+              1.399999976158142
+            ],
+            [
+              "Subsurface Anisotropy",
+              0.0
+            ],
+            [
+              "Specular IOR Level",
+              0.5
+            ],
+            [
+              "Specular Tint",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Anisotropic",
+              0.0
+            ],
+            [
+              "Anisotropic Rotation",
+              0.0
+            ],
+            [
+              "Tangent",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "Transmission Weight",
+              1.0
+            ],
+            [
+              "Coat Weight",
+              0.0
+            ],
+            [
+              "Coat Roughness",
+              0.029999999329447746
+            ],
+            [
+              "Coat IOR",
+              1.5
+            ],
+            [
+              "Coat Tint",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Coat Normal",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "Sheen Weight",
+              0.0
+            ],
+            [
+              "Sheen Roughness",
+              0.5
+            ],
+            [
+              "Sheen Tint",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Emission Color",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Emission Strength",
+              0.0
+            ],
+            [
+              "Thin Film Thickness",
+              0.0
+            ],
+            [
+              "Thin Film IOR",
+              1.3300000429153442
+            ]
+          ]
+        ],
+        [
+          "OUTPUT_MATERIAL",
+          [
+            [
+              "Displacement",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "Thickness",
+              0.0
+            ]
+          ]
+        ],
+        [
+          "VOLUME_ABSORPTION",
+          [
+            [
+              "Color",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Density",
+              0.0
+            ],
+            [
+              "Weight",
+              0.0
+            ]
+          ]
+        ]
+      ]
+    },
+    {
+      "version": 16,
+      "vertices": "283a4b82fc97aa1b2599a9198b6e4462aa1962967956fb81ab9ae8f77f70fef4",
+      "faces": "fe55f1a1824f4f57b7895cd948066e47db00d27d0ddd26f31c8f8d86495e4481",
+      "camera": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.05233597382903099,
+          -0.9986295104026794,
+          -1.4954692125320435
+        ],
+        [
+          0.0,
+          0.9986295104026794,
+          0.05233597382903099,
+          0.14238157868385315
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "crop": [
+        0.4059999883174896,
+        0.09449999779462814,
+        0.593999981880188,
+        0.43849998712539673
+      ],
+      "dimensions": [
+        0.01754741184413433,
+        0.01754741184413433,
+        0.05322999879717827
+      ],
+      "glassShader": [
+        [
+          "BSDF_PRINCIPLED",
+          [
+            [
+              "Base Color",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Metallic",
+              0.0
+            ],
+            [
+              "Roughness",
+              0.0
+            ],
+            [
+              "IOR",
+              1.5199999809265137
+            ],
+            [
+              "Alpha",
+              1.0
+            ],
+            [
+              "Thin Wall",
+              false
+            ],
+            [
+              "Normal",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "Weight",
+              0.0
+            ],
+            [
+              "Diffuse Roughness",
+              0.0
+            ],
+            [
+              "Subsurface Weight",
+              0.0
+            ],
+            [
+              "Subsurface Radius",
+              [
+                1.0,
+                0.20000000298023224,
+                0.10000000149011612
+              ]
+            ],
+            [
+              "Subsurface Scale",
+              0.004999999888241291
+            ],
+            [
+              "Subsurface IOR",
+              1.399999976158142
+            ],
+            [
+              "Subsurface Anisotropy",
+              0.0
+            ],
+            [
+              "Specular IOR Level",
+              0.5
+            ],
+            [
+              "Specular Tint",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Anisotropic",
+              0.0
+            ],
+            [
+              "Anisotropic Rotation",
+              0.0
+            ],
+            [
+              "Tangent",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "Transmission Weight",
+              1.0
+            ],
+            [
+              "Coat Weight",
+              0.0
+            ],
+            [
+              "Coat Roughness",
+              0.029999999329447746
+            ],
+            [
+              "Coat IOR",
+              1.5
+            ],
+            [
+              "Coat Tint",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Coat Normal",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "Sheen Weight",
+              0.0
+            ],
+            [
+              "Sheen Roughness",
+              0.5
+            ],
+            [
+              "Sheen Tint",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Emission Color",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Emission Strength",
+              0.0
+            ],
+            [
+              "Thin Film Thickness",
+              0.0
+            ],
+            [
+              "Thin Film IOR",
+              1.3300000429153442
+            ]
+          ]
+        ],
+        [
+          "OUTPUT_MATERIAL",
+          [
+            [
+              "Displacement",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "Thickness",
+              0.0
+            ]
+          ]
+        ],
+        [
+          "VOLUME_ABSORPTION",
+          [
+            [
+              "Color",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Density",
+              0.0
+            ],
+            [
+              "Weight",
+              0.0
+            ]
+          ]
+        ]
+      ]
+    }
+  ],
+  "integration": {
+    "clearImagesUpdated": 36,
+    "cobaltKitsUnchanged": 35,
+    "allLayoutAndClosureDataUnchanged": true
+  }
+}

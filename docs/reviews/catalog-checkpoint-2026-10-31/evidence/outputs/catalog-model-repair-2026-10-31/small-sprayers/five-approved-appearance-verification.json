@@ -1,0 +1,28 @@
+[
+  {
+    "glass": "clear",
+    "approvedSourceVersion": 16,
+    "currentVersion": 19,
+    "checks": {
+      "bodyMaterial": true,
+      "studio": true,
+      "world": true,
+      "camera": true,
+      "crop": true,
+      "view": true
+    }
+  },
+  {
+    "glass": "cobalt",
+    "approvedSourceVersion": 9,
+    "currentVersion": 19,
+    "checks": {
+      "bodyMaterial": true,
+      "studio": true,
+      "world": true,
+      "camera": true,
+      "crop": true,
+      "view": true
+    }
+  }
+]

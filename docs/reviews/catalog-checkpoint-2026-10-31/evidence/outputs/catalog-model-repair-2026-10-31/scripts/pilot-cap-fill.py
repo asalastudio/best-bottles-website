@@ -1,0 +1,5 @@
+import bpy,json,sys,math
+from pathlib import Path
+from mathutils import Vector
+r=Path(sys.argv[sys.argv.index('--')+1]).resolve();row=next(a for a in json.loads((r/'sources/variant-render-queue.json').read_text()) if a['id']=='cyl5-cobalt-blue--cap-shiny-silver');bpy.ops.wm.open_mainfile(filepath=row['workingCopy'],load_ui=False,use_scripts=False);s=bpy.context.scene;body=next(o for o in s.objects if o.type=='MESH' and o.name.startswith('Bottle |'));rim=max((body.matrix_world@v.co).z for v in body.data.vertices);s.objects['Sheet hardware left'].location.z=rim+.02951;s.objects['Sheet hardware right'].location.z=rim+.02451;p=r/'working/pilots';p.mkdir(exist_ok=True);bpy.ops.wm.save_as_mainfile(filepath=str(p/'cobalt-hardware-position.blend'),compress=True)
+code=(r/'scripts/render-variants.py').read_text().split('import traceback\nqueue=')[0];code=code.replace("out=r/'renders/final/sku-variants'","out=r/'renders/pilots/cap-hardware-position'");env={};exec(code,env);env=env['env'];row['saveScene']=True;env['render'](row,str(p/'cobalt-hardware-position.blend'),'after')

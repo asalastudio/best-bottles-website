@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-31",
+  "instruction": "Use the later approved vial sizing",
+  "source": "docs/hero-families/vials-2026-09-25/approval.json",
+  "scope": "local product page, two clear 2 ml vial cap SKUs",
+  "glassHeightMm": 35,
+  "glassHeightPct": 40.24,
+  "baselinePct": 91
+}

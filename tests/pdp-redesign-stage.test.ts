@@ -29,6 +29,32 @@ describe("views", () => {
     });
 });
 
+describe("reducer cap removal", () => {
+    const context = { ...CONTEXT, family: "Elegant", capacityMl: 60, applicator: "Reducer" };
+    const reducerKit: KitLike = { ...KIT, parts: KIT.parts.flatMap(part => part.slot === "roller" ? [
+        { ...part, slot: "reducer", views: ["sidecar", "capon"], image: { ...part.image, url: "seated.png" } },
+        { ...part, slot: "reducer", views: ["exploded"], image: { ...part.image, url: "full-plug.png" } },
+    ] : [part]) };
+    it("removes the cap while leaving the reducer seated, then shows the full plug exploded", () => {
+        expect(availableViews(reducerKit, context)).toEqual(["sidecar", "capon", "exploded"]);
+        const off = stageLayout(reducerKit, "sidecar", context)!;
+        const on = stageLayout(reducerKit, "capon", context)!;
+        expect(off.frameCss).toBe(on.frameCss);
+        expect(off.parts.find(p => p.slot === "cap")!.dxPct).toBeGreaterThan(0);
+        expect(off.parts.find(p => p.slot === "reducer")).toMatchObject({ url: "seated.png", dxPct: 0, dyPct: 0 });
+        const exploded = stageLayout(reducerKit, "exploded", context)!;
+        expect(exploded.parts.filter(p => p.slot === "reducer")).toHaveLength(1);
+        expect(exploded.parts.find(p => p.slot === "reducer")!.url).toBe("full-plug.png");
+        expect(exploded.parts.find(p => p.slot === "reducer")!.dyPct).toBeLessThan(0);
+    });
+    it("does not offer a fake cap-off view when the reducer insert is missing", () => {
+        const missing = { ...KIT, parts: KIT.parts.filter(p => p.slot !== "roller") };
+        expect(availableViews(missing, context)).toEqual(["capon"]);
+        expect(effectiveView("sidecar", missing, context)).toBe("capon");
+        expect(effectiveView("exploded", missing, context)).toBe("capon");
+    });
+});
+
 describe("layout", () => {
     it("paints every part in z order at its assembled position for CAP ON", () => {
         const layout = stageLayout(KIT, "capon", CONTEXT)!;

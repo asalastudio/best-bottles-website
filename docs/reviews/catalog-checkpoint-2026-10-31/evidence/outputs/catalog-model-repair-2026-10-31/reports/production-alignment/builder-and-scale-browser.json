@@ -1,0 +1,88 @@
+{
+  "checkedAt": "2026-10-31T17:08:58.104Z",
+  "builder": [
+    {
+      "name": "bottle selected",
+      "stage": "body",
+      "source": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fclear%2F6ab851b603457da335f376baad6751e57bfb749f5c1a66100d5b172a8457716e.png&w=3840&q=75",
+      "normalized": {
+        "left": 0.42174003755476736,
+        "top": 0.38293534131214074,
+        "width": 0.1564364698518673,
+        "height": 0.5273979098306242
+      },
+      "viewBox": null
+    },
+    {
+      "name": "clear glass",
+      "stage": "body",
+      "source": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fclear%2F6ab851b603457da335f376baad6751e57bfb749f5c1a66100d5b172a8457716e.png&w=3840&q=75",
+      "normalized": {
+        "left": 0.42175261662161223,
+        "top": 0.3829278436265336,
+        "width": 0.15645664379288834,
+        "height": 0.5273792195189575
+      },
+      "viewBox": null
+    },
+    {
+      "name": "sprayer selected",
+      "stage": "fitment",
+      "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fclear%2F6ab851b603457da335f376baad6751e57bfb749f5c1a66100d5b172a8457716e.png&w=1200&q=75",
+      "normalized": {
+        "left": 0.42176807737028704,
+        "top": 0.3829478793741618,
+        "width": 0.15646384525942586,
+        "height": 0.5273993232330934
+      },
+      "viewBox": "-152.4194556843261 -245.14375028002078 1304.8389113686521 1435.3228025055175"
+    },
+    {
+      "name": "black finish",
+      "stage": "complete",
+      "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fclear%2F6ab851b603457da335f376baad6751e57bfb749f5c1a66100d5b172a8457716e.png&w=1200&q=75",
+      "normalized": {
+        "left": 0.42176807737028704,
+        "top": 0.3829478793741618,
+        "width": 0.15646384525942586,
+        "height": 0.5273993232330934
+      },
+      "viewBox": "-152.4194556843261 -245.14375028002078 1304.8389113686521 1435.3228025055175"
+    },
+    {
+      "name": "cap on",
+      "stage": "complete",
+      "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fclear%2F6ab851b603457da335f376baad6751e57bfb749f5c1a66100d5b172a8457716e.png&w=1200&q=75",
+      "normalized": {
+        "left": 0.42176807737028704,
+        "top": 0.3829478793741618,
+        "width": 0.15646384525942586,
+        "height": 0.5273993232330934
+      },
+      "viewBox": "-152.4194556843261 -245.14375028002078 1304.8389113686521 1435.3228025055175"
+    },
+    {
+      "name": "cap sidecar",
+      "stage": "complete",
+      "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fclear%2F6ab851b603457da335f376baad6751e57bfb749f5c1a66100d5b172a8457716e.png&w=1200&q=75",
+      "normalized": {
+        "left": 0.42176807737028704,
+        "top": 0.3829478793741618,
+        "width": 0.15646384525942586,
+        "height": 0.5273993232330934
+      },
+      "viewBox": "-152.4194556843261 -245.14375028002078 1304.8389113686521 1435.3228025055175"
+    }
+  ],
+  "gallery": {
+    "defaultCards": 72,
+    "allColorCards": 110,
+    "failedImages": [],
+    "mobileOverflow": false
+  },
+  "errors": [],
+  "builderStable": true,
+  "overcapSources": [
+    "/_next/image?url=%2Fassets%2Fregister%2Fovercaps%2Fcylinder-9ml-clear-overcap-alpha-v6.png&w=1200&q=75"
+  ]
+}

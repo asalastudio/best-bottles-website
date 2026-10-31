@@ -1,0 +1,11 @@
+import bpy,json,sys,hashlib
+from pathlib import Path
+r=Path(sys.argv[sys.argv.index('--')+1]).resolve();source=r/'renders/final/native-approved-studio/native-dispenser-finishes-17415-v27__scenes__mist-black-clear/review-scene.blend';rows=[]
+for a in json.loads((r/'sources/tube-visual-refinements.json').read_text()):
+ d=Path(a['path']).parent;rep=json.loads((d/'repair-report-v13.json').read_text());bpy.ops.wm.open_mainfile(filepath=rep['workingCopy'],load_ui=False,use_scripts=False)
+ with bpy.data.libraries.load(str(source),link=False) as (data,dst):dst.materials=[n for n in data.materials if n.startswith('v15 fine-mist dip tube')][:1]
+ mat=dst.materials[0]
+ for o in bpy.context.scene.objects:
+  if o.type=='MESH' and 'dip tube' in o.name.lower() and 'barb' not in o.name.lower():o.data.materials[0]=mat
+ rep['workingCopy']=str(d/'model-tube-v14.blend');rep['changes'].append({'code':'TUBE-MATERIAL','detail':'Reused the catalog 17-415 clear PE tube material: IOR 1.46, roughness 0.18, transmission 0.95 and low-density white volume scattering. Camera, lights, glass and 1.05/0.6365 mm tube geometry retained.','source':str(source)});rep['tubeVisualQualification']['pilot']='renders/pilots/tube-native-material/sleek5-transparent.png';rep['tubeVisualQualification']['materialSource']=str(source);rep['tubeVisualQualification']['supplierDiameterVerified']=False;bpy.ops.wm.save_as_mainfile(filepath=rep['workingCopy'],compress=True);(d/'repair-report-v14.json').write_text(json.dumps(rep,indent=2));rows.append({'id':rep['id'],'path':rep['workingCopy'],'kind':a['kind']});print('TUBE_FINAL_MATERIAL',rep['id'],flush=True)
+(r/'sources/tube-visual-refinements.json').write_text(json.dumps(rows,indent=2));(r/'sources/tube-appearance-verified.json').write_text(json.dumps({'reviewer':'assistant visual QA','userVisualApproval':False,'outsideDiameterMm':1.05,'boreMm':.6365,'reference':'renders/before/catalog/GBSleek5SpryBlkMatt.webp','selectedPilot':'renders/pilots/tube-native-material/sleek5-transparent.png','qualification':'Photo-based visual refinement; not supplier-measured dimensions. Refraction creates stronger edge contrast near shoulder and base. All finish renders must still be inspected.','rejectedExperiments':['tube-caustics','tube-shadow-lighting'],'models':rows},indent=2));print('TUBE_MATERIALS_COMPLETE',len(rows),flush=True)

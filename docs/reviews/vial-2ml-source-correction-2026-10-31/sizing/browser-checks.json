@@ -1,0 +1,207 @@
+[
+  {
+    "name": "desktop-white-sidecar",
+    "url": "http://localhost:3010/products/vial-2ml-clear-8-425?cap=white",
+    "view": "sidecar",
+    "glassHeightPct": 40.239830877693265,
+    "glassFootPct": 90.99972238071936,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(25.2796%, 46.1226%) scale(0.494409)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-white-capon",
+    "url": "http://localhost:3010/products/vial-2ml-clear-8-425?cap=white",
+    "view": "capon",
+    "glassHeightPct": 40.239830877693265,
+    "glassFootPct": 90.99972238071936,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(25.2796%, 46.1226%) scale(0.494409)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-white-exploded",
+    "url": "http://localhost:3010/products/vial-2ml-clear-8-425?cap=white",
+    "view": "exploded",
+    "glassHeightPct": 40.239830877693265,
+    "glassFootPct": 90.99972238071936,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(25.2796%, 46.1226%) scale(0.494409)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-black-sidecar",
+    "url": "http://localhost:3010/products/vial-2ml-clear-8-425?cap=black",
+    "view": "sidecar",
+    "glassHeightPct": 40.239830877693265,
+    "glassFootPct": 90.99972238071936,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(25.2796%, 46.1226%) scale(0.494409)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-black-capon",
+    "url": "http://localhost:3010/products/vial-2ml-clear-8-425?cap=black",
+    "view": "capon",
+    "glassHeightPct": 40.239830877693265,
+    "glassFootPct": 90.99972238071936,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(25.2796%, 46.1226%) scale(0.494409)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-black-exploded",
+    "url": "http://localhost:3010/products/vial-2ml-clear-8-425?cap=black",
+    "view": "exploded",
+    "glassHeightPct": 40.239830877693265,
+    "glassFootPct": 90.99972238071936,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(25.2796%, 46.1226%) scale(0.494409)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-white-reload",
+    "url": "http://localhost:3010/products/vial-2ml-clear-8-425?cap=white",
+    "view": "sidecar",
+    "glassHeightPct": 40.239830877693265,
+    "glassFootPct": 90.99972238071936,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(25.2796%, 46.1226%) scale(0.494409)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-white-sidecar",
+    "url": "http://localhost:3010/products/vial-2ml-clear-8-425?cap=white",
+    "view": "sidecar",
+    "glassHeightPct": 40.23967849548968,
+    "glassFootPct": 90.99872520102014,
+    "baselinePct": 90.99613640181421,
+    "canvas": {
+      "x": 0,
+      "y": 192.46875,
+      "width": 338.25,
+      "height": 372.0625
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(25.2796%, 46.1226%) scale(0.494409)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-white-capon",
+    "url": "http://localhost:3010/products/vial-2ml-clear-8-425?cap=white",
+    "view": "capon",
+    "glassHeightPct": 40.23967849548968,
+    "glassFootPct": 90.99872520102014,
+    "baselinePct": 90.99613640181421,
+    "canvas": {
+      "x": 0,
+      "y": 192.46875,
+      "width": 338.25,
+      "height": 372.0625
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(25.2796%, 46.1226%) scale(0.494409)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-white-exploded",
+    "url": "http://localhost:3010/products/vial-2ml-clear-8-425?cap=white",
+    "view": "exploded",
+    "glassHeightPct": 40.23967849548968,
+    "glassFootPct": 90.99872520102014,
+    "baselinePct": 90.99613640181421,
+    "canvas": {
+      "x": 0,
+      "y": 192.46875,
+      "width": 338.25,
+      "height": 372.0625
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(25.2796%, 46.1226%) scale(0.494409)",
+    "previewFlag": false
+  },
+  {
+    "name": "amber-unchanged",
+    "override": false,
+    "generated": false
+  }
+]

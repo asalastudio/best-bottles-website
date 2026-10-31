@@ -168,7 +168,8 @@ describe("Build Your Bottle first-paint contract", () => {
         expect(server).toContain("productKits.forSkus");
         const familiesFn = server.slice(server.indexOf("export const loadBuilderFamilies"), server.indexOf("async function loadKitsForRows"));
         expect(familiesFn).not.toContain("loadBuilderFamily(");
-        expect(page).toContain("chooserBodies");
+        expect(page).toContain("builderProductEntry");
+        expect(readFileSync("src/lib/bottle-builder/entry.ts", "utf8")).toContain("chooserBodies(bodies)");
         expect(page).not.toContain("chooserPreloadUrls(bodies, CHOOSER_PRIORITY_TILES)");
         expect(page).not.toContain('rel="preload"');
         expect(client).toContain("useBuilderKits");

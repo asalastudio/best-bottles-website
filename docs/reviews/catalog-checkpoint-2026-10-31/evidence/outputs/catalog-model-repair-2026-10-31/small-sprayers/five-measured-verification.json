@@ -1,0 +1,107 @@
+{
+  "rows": [
+    {
+      "glass": "clear",
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/small-sprayers/renders/glass-5-clear-measured-v19.blend",
+      "measured": {
+        "heightMm": 53.22999879717827,
+        "barrelDiameterMm": 17.450000300533993,
+        "internalDepthMm": 48.799998592585325,
+        "baseThicknessMm": 4.430000204592943,
+        "rootDiameterMm": 11.999999487294877,
+        "crestDiameterMm": 12.60000083854995,
+        "threadBoreMm": 7.319999501305395,
+        "plainRimDiameterMm": 10.920000758974046,
+        "lipBoreMm": 7.31999934784409,
+        "rimWallMm": 1.8000007055649783,
+        "threadCrestWallMm": 2.6400006686222772
+      },
+      "expected": {
+        "heightMm": 53.23,
+        "barrelDiameterMm": 17.45,
+        "internalDepthMm": 48.8,
+        "baseThicknessMm": 4.43,
+        "rootDiameterMm": 12,
+        "crestDiameterMm": 12.6,
+        "threadBoreMm": 7.32,
+        "plainRimDiameterMm": 10.92,
+        "lipBoreMm": 7.32,
+        "rimWallMm": 1.8,
+        "threadCrestWallMm": 2.64
+      },
+      "checks": {
+        "heightMm": true,
+        "barrelDiameterMm": true,
+        "internalDepthMm": true,
+        "baseThicknessMm": true,
+        "rootDiameterMm": true,
+        "crestDiameterMm": true,
+        "threadBoreMm": true,
+        "plainRimDiameterMm": true,
+        "lipBoreMm": true,
+        "rimWallMm": true,
+        "threadCrestWallMm": true,
+        "baseDownNeckUp": true,
+        "cameraClipSafe": true
+      },
+      "geometry": {
+        "nonManifoldEdges": 0,
+        "flippedEdges": 0,
+        "degenerateFaces": 0
+      },
+      "geometrySha256": "55979c0ec53ac71051cf12f3b113704f785c855f8cde6735e44a79222ba864c1"
+    },
+    {
+      "glass": "cobalt",
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/small-sprayers/renders/glass-5-cobalt-measured-v19.blend",
+      "measured": {
+        "heightMm": 53.22999879717827,
+        "barrelDiameterMm": 17.450000300533993,
+        "internalDepthMm": 48.799998592585325,
+        "baseThicknessMm": 4.430000204592943,
+        "rootDiameterMm": 11.999999487294877,
+        "crestDiameterMm": 12.60000083854995,
+        "threadBoreMm": 7.319999501305395,
+        "plainRimDiameterMm": 10.920000758974046,
+        "lipBoreMm": 7.31999934784409,
+        "rimWallMm": 1.8000007055649783,
+        "threadCrestWallMm": 2.6400006686222772
+      },
+      "expected": {
+        "heightMm": 53.23,
+        "barrelDiameterMm": 17.45,
+        "internalDepthMm": 48.8,
+        "baseThicknessMm": 4.43,
+        "rootDiameterMm": 12,
+        "crestDiameterMm": 12.6,
+        "threadBoreMm": 7.32,
+        "plainRimDiameterMm": 10.92,
+        "lipBoreMm": 7.32,
+        "rimWallMm": 1.8,
+        "threadCrestWallMm": 2.64
+      },
+      "checks": {
+        "heightMm": true,
+        "barrelDiameterMm": true,
+        "internalDepthMm": true,
+        "baseThicknessMm": true,
+        "rootDiameterMm": true,
+        "crestDiameterMm": true,
+        "threadBoreMm": true,
+        "plainRimDiameterMm": true,
+        "lipBoreMm": true,
+        "rimWallMm": true,
+        "threadCrestWallMm": true,
+        "baseDownNeckUp": true,
+        "cameraClipSafe": true
+      },
+      "geometry": {
+        "nonManifoldEdges": 0,
+        "flippedEdges": 0,
+        "degenerateFaces": 0
+      },
+      "geometrySha256": "55979c0ec53ac71051cf12f3b113704f785c855f8cde6735e44a79222ba864c1"
+    }
+  ],
+  "sameGeometryForBothGlasses": true
+}

@@ -1,0 +1,25 @@
+{
+  "status": "new user measurement reference; artwork revision pending",
+  "unit": "mm",
+  "family": "Vial",
+  "capacityMl": 2,
+  "colors": [
+    "Clear",
+    "Amber"
+  ],
+  "heightMm": 35,
+  "shoulderToBaseMm": 28.19,
+  "bodyDiameterMm": 11.64,
+  "cavityDepthMm": 34.17,
+  "outsideThreadDiameterMm": 8.96,
+  "neckBoreMm": 3.0,
+  "neckHeightMm": 5.9,
+  "inferredShoulderTransitionMm": 0.91,
+  "displayGlassHeightPct": 40.24,
+  "displayBaselinePct": 91,
+  "notes": [
+    "Spoken milliliters for lengths interpreted as millimeters in context.",
+    "Shoulder transition is provisional; do not add the 5.90 mm neck on top of the 35 mm total.",
+    "User photos remain local; not included in the public repository."
+  ]
+}

@@ -113,8 +113,8 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     }
     const failed = layers.some(({ part }) => part.image.url === failedUrl);
     if (!parts.length || failed) return <span role="img" aria-label={label}>Image unavailable</span>;
-    const { x, y, width, height } = !thumbnail && frameConfigurations?.length && layout
-        ? builderBodyFrame(config, frameConfigurations, bodyReference, layout, { expanded })
+    const { x, y, width, height } = !thumbnail && layout && (layout.glassSizing || frameConfigurations?.length)
+        ? builderBodyFrame(config, frameConfigurations ?? [], bodyReference, layout, { expanded })
         : previewFrame(layout?.anchors ?? kit.anchors, layers.map(layer => layer.bounds), { scale, thumbnail, expanded });
     // A single registered body layer is the chooser tile. <img> fetches in
     // parallel with preload/priority; SVG <image href> waits on hydrate and
@@ -174,12 +174,12 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
                 return <g key={`${part.slot}-${part.componentId ?? ""}-${part.image.url}:${attempt(part.image.url)}`} transform={layerTransform(transform, part)}>
                     <defs><clipPath id={clipId} clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width={part.image.width} height={visible} /></clipPath></defs>
                     <image href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} x="0" y="0" clipPath={`url(#${clipId})`}
-                        style={{ mixBlendMode: blendsIntoGlass(config, part, stage, splitDropper) ? "multiply" : undefined }}
+                        style={{ opacity: part.opacity, mixBlendMode: blendsIntoGlass(config, part, stage, splitDropper) ? "multiply" : undefined }}
                         onLoad={markLoaded} onError={() => onLayerError(part.image.url)} data-builder-layer={part.slot} />
                 </g>;
             }
             return <image key={`${part.slot}-${part.componentId ?? ""}-${part.image.url}:${attempt(part.image.url)}`} href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} transform={layerTransform(transform, part)}
-                x="0" y="0" style={{ mixBlendMode: blendsIntoGlass(config, part, stage, splitDropper) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined }}
+                x="0" y="0" style={{ opacity: part.opacity, mixBlendMode: blendsIntoGlass(config, part, stage, splitDropper) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined }}
                 onLoad={markLoaded} onError={() => onLayerError(part.image.url)} data-builder-layer={part.slot} />;
         })}
 

@@ -1,0 +1,424 @@
+{
+  "scope": "Local 3.3 ml and 4 ml black/white sprayers, compared with user-supplied original-site screenshots.",
+  "pairs": [
+    {
+      "sizeMl": "3.3",
+      "skus": [
+        "GBSpry3mlClBlk",
+        "GBSpry3mlClWht"
+      ],
+      "checks": {
+        "bodyVisualDataIdentical": true,
+        "diptubeVisualDataIdentical": true,
+        "overcapVisualDataIdentical": true,
+        "anchorsIdentical": true,
+        "sizingIdentical": true
+      }
+    },
+    {
+      "sizeMl": "4",
+      "skus": [
+        "GBSpry4mlClBlk",
+        "GBSpry4mlClWh"
+      ],
+      "checks": {
+        "bodyVisualDataIdentical": true,
+        "diptubeVisualDataIdentical": true,
+        "overcapVisualDataIdentical": true,
+        "anchorsIdentical": true,
+        "sizingIdentical": true
+      }
+    }
+  ],
+  "browser": {
+    "rows": [
+      {
+        "size": "3.3",
+        "finish": "black",
+        "title": "3.3 ml Clear Cylinder Fine-Mist Spray Bottle - Black Sprayer",
+        "titleTag": "3.3 ml Clear Cylinder Fine-Mist Spray Bottle - Black Sprayer | Best Bottles",
+        "view": "sidecar",
+        "body": {
+          "x": 311.30450439453125,
+          "y": 306.7728271484375,
+          "width": 73.17584228515625,
+          "height": 187.5032958984375
+        },
+        "urls": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-3.3-profile-v4.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fmechanism-3.3-v2.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fhead-black.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fovercap-12mm.png&w=640&q=75"
+        ],
+        "failed": 0,
+        "capCount": 1,
+        "builderLink": false,
+        "configureLink": "#product-canvas",
+        "glassThumbs": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-3.3-profile-v4.png&w=256&q=75"
+        ]
+      },
+      {
+        "size": "3.3",
+        "finish": "black",
+        "title": "3.3 ml Clear Cylinder Fine-Mist Spray Bottle - Black Sprayer",
+        "titleTag": "3.3 ml Clear Cylinder Fine-Mist Spray Bottle - Black Sprayer | Best Bottles",
+        "view": "capon",
+        "body": {
+          "x": 311.30450439453125,
+          "y": 306.7728271484375,
+          "width": 73.17584228515625,
+          "height": 187.5032958984375
+        },
+        "urls": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-3.3-profile-v4.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fmechanism-3.3-v2.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fhead-black.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fovercap-12mm.png&w=640&q=75"
+        ],
+        "failed": 0,
+        "capCount": 1,
+        "builderLink": false,
+        "configureLink": "#product-canvas",
+        "glassThumbs": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-3.3-profile-v4.png&w=256&q=75"
+        ]
+      },
+      {
+        "size": "3.3",
+        "finish": "black",
+        "title": "3.3 ml Clear Cylinder Fine-Mist Spray Bottle - Black Sprayer",
+        "titleTag": "3.3 ml Clear Cylinder Fine-Mist Spray Bottle - Black Sprayer | Best Bottles",
+        "view": "exploded",
+        "body": {
+          "x": 311.30450439453125,
+          "y": 306.7728271484375,
+          "width": 73.17584228515625,
+          "height": 187.5032958984375
+        },
+        "urls": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-3.3-profile-v4.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fmechanism-3.3-v2.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fhead-black.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fovercap-12mm.png&w=640&q=75"
+        ],
+        "failed": 0,
+        "capCount": 1,
+        "builderLink": false,
+        "configureLink": "#product-canvas",
+        "glassThumbs": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-3.3-profile-v4.png&w=256&q=75"
+        ]
+      },
+      {
+        "size": "3.3",
+        "finish": "white",
+        "title": "3.3 ml Clear Cylinder Fine-Mist Spray Bottle - White Sprayer",
+        "titleTag": "3.3 ml Clear Cylinder Fine-Mist Spray Bottle - White Sprayer | Best Bottles",
+        "view": "sidecar",
+        "body": {
+          "x": 311.30450439453125,
+          "y": 306.7728271484375,
+          "width": 73.17584228515625,
+          "height": 187.5032958984375
+        },
+        "urls": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-3.3-profile-v4.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fmechanism-3.3-v2.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fhead-white.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fovercap-12mm.png&w=640&q=75"
+        ],
+        "failed": 0,
+        "capCount": 1,
+        "builderLink": false,
+        "configureLink": "#product-canvas",
+        "glassThumbs": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-3.3-profile-v4.png&w=256&q=75"
+        ]
+      },
+      {
+        "size": "3.3",
+        "finish": "white",
+        "title": "3.3 ml Clear Cylinder Fine-Mist Spray Bottle - White Sprayer",
+        "titleTag": "3.3 ml Clear Cylinder Fine-Mist Spray Bottle - White Sprayer | Best Bottles",
+        "view": "capon",
+        "body": {
+          "x": 311.30450439453125,
+          "y": 306.7728271484375,
+          "width": 73.17584228515625,
+          "height": 187.5032958984375
+        },
+        "urls": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-3.3-profile-v4.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fmechanism-3.3-v2.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fhead-white.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fovercap-12mm.png&w=640&q=75"
+        ],
+        "failed": 0,
+        "capCount": 1,
+        "builderLink": false,
+        "configureLink": "#product-canvas",
+        "glassThumbs": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-3.3-profile-v4.png&w=256&q=75"
+        ]
+      },
+      {
+        "size": "3.3",
+        "finish": "white",
+        "title": "3.3 ml Clear Cylinder Fine-Mist Spray Bottle - White Sprayer",
+        "titleTag": "3.3 ml Clear Cylinder Fine-Mist Spray Bottle - White Sprayer | Best Bottles",
+        "view": "exploded",
+        "body": {
+          "x": 311.30450439453125,
+          "y": 306.7728271484375,
+          "width": 73.17584228515625,
+          "height": 187.5032958984375
+        },
+        "urls": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-3.3-profile-v4.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fmechanism-3.3-v2.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fhead-white.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fovercap-12mm.png&w=640&q=75"
+        ],
+        "failed": 0,
+        "capCount": 1,
+        "builderLink": false,
+        "configureLink": "#product-canvas",
+        "glassThumbs": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-3.3-profile-v4.png&w=256&q=75"
+        ]
+      },
+      {
+        "size": "4",
+        "finish": "black",
+        "title": "4 ml Clear Cylinder Fine-Mist Spray Bottle - Black Sprayer",
+        "titleTag": "4 ml Clear Cylinder Fine-Mist Spray Bottle - Black Sprayer | Best Bottles",
+        "view": "sidecar",
+        "body": {
+          "x": 317.19451904296875,
+          "y": 287.9287109375,
+          "width": 61.43035888671875,
+          "height": 205.88580322265625
+        },
+        "urls": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-4-profile-v4.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fmechanism-4-v2.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fhead-black.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fovercap-12mm.png&w=640&q=75"
+        ],
+        "failed": 0,
+        "capCount": 1,
+        "builderLink": false,
+        "configureLink": "#product-canvas",
+        "glassThumbs": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-4-profile-v4.png&w=256&q=75"
+        ]
+      },
+      {
+        "size": "4",
+        "finish": "black",
+        "title": "4 ml Clear Cylinder Fine-Mist Spray Bottle - Black Sprayer",
+        "titleTag": "4 ml Clear Cylinder Fine-Mist Spray Bottle - Black Sprayer | Best Bottles",
+        "view": "capon",
+        "body": {
+          "x": 317.19451904296875,
+          "y": 287.9287109375,
+          "width": 61.43035888671875,
+          "height": 205.88580322265625
+        },
+        "urls": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-4-profile-v4.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fmechanism-4-v2.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fhead-black.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fovercap-12mm.png&w=640&q=75"
+        ],
+        "failed": 0,
+        "capCount": 1,
+        "builderLink": false,
+        "configureLink": "#product-canvas",
+        "glassThumbs": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-4-profile-v4.png&w=256&q=75"
+        ]
+      },
+      {
+        "size": "4",
+        "finish": "black",
+        "title": "4 ml Clear Cylinder Fine-Mist Spray Bottle - Black Sprayer",
+        "titleTag": "4 ml Clear Cylinder Fine-Mist Spray Bottle - Black Sprayer | Best Bottles",
+        "view": "exploded",
+        "body": {
+          "x": 317.19451904296875,
+          "y": 287.9287109375,
+          "width": 61.43035888671875,
+          "height": 205.88580322265625
+        },
+        "urls": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-4-profile-v4.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fmechanism-4-v2.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fhead-black.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fovercap-12mm.png&w=640&q=75"
+        ],
+        "failed": 0,
+        "capCount": 1,
+        "builderLink": false,
+        "configureLink": "#product-canvas",
+        "glassThumbs": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-4-profile-v4.png&w=256&q=75"
+        ]
+      },
+      {
+        "size": "4",
+        "finish": "white",
+        "title": "4 ml Clear Cylinder Fine-Mist Spray Bottle - White Sprayer",
+        "titleTag": "4 ml Clear Cylinder Fine-Mist Spray Bottle - White Sprayer | Best Bottles",
+        "view": "sidecar",
+        "body": {
+          "x": 317.19451904296875,
+          "y": 287.9287109375,
+          "width": 61.43035888671875,
+          "height": 205.88580322265625
+        },
+        "urls": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-4-profile-v4.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fmechanism-4-v2.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fhead-white.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fovercap-12mm.png&w=640&q=75"
+        ],
+        "failed": 0,
+        "capCount": 1,
+        "builderLink": false,
+        "configureLink": "#product-canvas",
+        "glassThumbs": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-4-profile-v4.png&w=256&q=75"
+        ]
+      },
+      {
+        "size": "4",
+        "finish": "white",
+        "title": "4 ml Clear Cylinder Fine-Mist Spray Bottle - White Sprayer",
+        "titleTag": "4 ml Clear Cylinder Fine-Mist Spray Bottle - White Sprayer | Best Bottles",
+        "view": "capon",
+        "body": {
+          "x": 317.19451904296875,
+          "y": 287.9287109375,
+          "width": 61.43035888671875,
+          "height": 205.88580322265625
+        },
+        "urls": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-4-profile-v4.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fmechanism-4-v2.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fhead-white.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fovercap-12mm.png&w=640&q=75"
+        ],
+        "failed": 0,
+        "capCount": 1,
+        "builderLink": false,
+        "configureLink": "#product-canvas",
+        "glassThumbs": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-4-profile-v4.png&w=256&q=75"
+        ]
+      },
+      {
+        "size": "4",
+        "finish": "white",
+        "title": "4 ml Clear Cylinder Fine-Mist Spray Bottle - White Sprayer",
+        "titleTag": "4 ml Clear Cylinder Fine-Mist Spray Bottle - White Sprayer | Best Bottles",
+        "view": "exploded",
+        "body": {
+          "x": 317.19451904296875,
+          "y": 287.9287109375,
+          "width": 61.43035888671875,
+          "height": 205.88580322265625
+        },
+        "urls": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-4-profile-v4.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fmechanism-4-v2.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fhead-white.png&w=640&q=75",
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fovercap-12mm.png&w=640&q=75"
+        ],
+        "failed": 0,
+        "capCount": 1,
+        "builderLink": false,
+        "configureLink": "#product-canvas",
+        "glassThumbs": [
+          "/_next/image?url=%2Flocal-kits%2Fsmall-sprayers-2026-10-31%2Fglass-4-profile-v4.png&w=256&q=75"
+        ]
+      }
+    ],
+    "errors": [],
+    "checks": {
+      "twelveStates": true,
+      "imagesLoaded": true,
+      "oneCap": true,
+      "pdpOnly": true,
+      "names": true,
+      "newGlass": true,
+      "stable": true
+    }
+  },
+  "native": {
+    "source": "Current local Blender scenes; visual comparison with user-provided original-site screenshots",
+    "sizes": [
+      {
+        "sizeMl": 3.3,
+        "bodyHeightMm": 37.00000047683716,
+        "bodyDiameterMm": 14.000000432133675,
+        "interiorFloorMm": 1.5999999595806003,
+        "tubeTipMm": 3.5000001080334187,
+        "tipClearanceMm": 1.9000001484528184,
+        "tubeOuterDiameterMm": 1.1000000552205362,
+        "tubeTopMm": 18.99999938905239,
+        "tubeCentered": true,
+        "heelZProfileMm": [
+          0.0,
+          0.1,
+          0.3,
+          0.6,
+          1.0,
+          1.6,
+          1.6457,
+          1.85,
+          2.2913,
+          2.3
+        ]
+      },
+      {
+        "sizeMl": 4.0,
+        "bodyHeightMm": 48.99999871850014,
+        "bodyDiameterMm": 14.000000432133675,
+        "interiorFloorMm": 1.5999999595806003,
+        "tubeTipMm": 3.5000001080334187,
+        "tipClearanceMm": 1.9000001484528184,
+        "tubeOuterDiameterMm": 1.1000000552205362,
+        "tubeTopMm": 30.99999949336052,
+        "tubeCentered": true,
+        "heelZProfileMm": [
+          0.0,
+          0.1,
+          0.3,
+          0.6,
+          1.0,
+          1.6,
+          1.6415,
+          1.85,
+          2.2831,
+          2.3
+        ]
+      }
+    ],
+    "matchedHeelProfiles": false,
+    "heelProfileMaxDeltaMm": 0.008199999999999985,
+    "heelProfilesConsistentWithin001Mm": true,
+    "notes": [
+      "Tube diameter and concealed neck geometry are modeling assumptions, not supplier measurements.",
+      "Mechanism v2 uses the current 1.6 mm base: actual tip clearance is 1.9 mm. The housing and spring follow the exact-SKU source photo visually."
+    ]
+  },
+  "notes": [
+    "Mechanism v2 corrects the translucent pump housing, taper and visible spring against source photos. Bottle geometry is unchanged. Tube component IDs retain their associated head finish; image, position, opacity and animation data match.",
+    "Both sizes use a modeled 1.1 mm tube and 1.9 mm tip-to-floor gap, not independently measured supplier specifications.",
+    "Mechanism v2 metadata uses the current profile-v4 floor of 1.6 mm.",
+    "The 3.3 ml name retains legacy 3ml SKU identifiers.",
+    "Both sizes remain product-page only. Production is unchanged."
+  ]
+}

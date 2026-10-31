@@ -1,0 +1,154 @@
+[
+  {
+    "color": "clear",
+    "finish": "black",
+    "url": "http://localhost:3010/products/vial-4ml-clear-13-425?cap=black",
+    "heading": "1 Dram (4 ml) Clear Vial - Black Cap",
+    "caps": [
+      {
+        "id": "black",
+        "pressed": "true"
+      },
+      {
+        "id": "white",
+        "pressed": "false"
+      }
+    ],
+    "text": [
+      "GBV1DrmBlackCapSht"
+    ]
+  },
+  {
+    "color": "clear",
+    "finish": "white",
+    "url": "http://localhost:3010/products/vial-4ml-clear-13-425?cap=white",
+    "heading": "1 Dram (4 ml) Clear Vial - White Cap",
+    "caps": [
+      {
+        "id": "black",
+        "pressed": "false"
+      },
+      {
+        "id": "white",
+        "pressed": "true"
+      }
+    ],
+    "text": [
+      "GBV1DrmWhtCapSht"
+    ]
+  },
+  {
+    "color": "amber",
+    "finish": "black",
+    "url": "http://localhost:3010/products/vial-4ml-amber-13-425?cap=black",
+    "heading": "1 Dram (4 ml) Amber Vial - Black Cap",
+    "caps": [
+      {
+        "id": "black",
+        "pressed": "true"
+      },
+      {
+        "id": "white",
+        "pressed": "false"
+      }
+    ],
+    "text": [
+      "GBVAmb1DrmBlackCapSht"
+    ]
+  },
+  {
+    "color": "amber",
+    "finish": "white",
+    "url": "http://localhost:3010/products/vial-4ml-amber-13-425?cap=white",
+    "heading": "1 Dram (4 ml) Amber Vial - White Cap",
+    "caps": [
+      {
+        "id": "black",
+        "pressed": "false"
+      },
+      {
+        "id": "white",
+        "pressed": "true"
+      }
+    ],
+    "text": [
+      "GBVAmb1DrmWhtCapSht"
+    ]
+  },
+  {
+    "color": "blue",
+    "finish": "black",
+    "url": "http://localhost:3010/products/vial-4ml-blue-13-425?cap=black",
+    "heading": "1 Dram (4 ml) Cobalt Blue Vial - Black Cap",
+    "caps": [
+      {
+        "id": "black",
+        "pressed": "true"
+      },
+      {
+        "id": "white",
+        "pressed": "false"
+      }
+    ],
+    "text": [
+      "GBVBlu1DrmBlackCapSht"
+    ]
+  },
+  {
+    "color": "blue",
+    "finish": "white",
+    "url": "http://localhost:3010/products/vial-4ml-blue-13-425?cap=white",
+    "heading": "1 Dram (4 ml) Cobalt Blue Vial - White Cap",
+    "caps": [
+      {
+        "id": "black",
+        "pressed": "false"
+      },
+      {
+        "id": "white",
+        "pressed": "true"
+      }
+    ],
+    "text": [
+      "GBVBlu1DrmWhtCapSht"
+    ]
+  },
+  {
+    "color": "green",
+    "finish": "black",
+    "url": "http://localhost:3010/products/vial-4ml-green-13-425?cap=black",
+    "heading": "1 Dram (4 ml) Green Vial - Black Cap",
+    "caps": [
+      {
+        "id": "black",
+        "pressed": "true"
+      },
+      {
+        "id": "white",
+        "pressed": "false"
+      }
+    ],
+    "text": [
+      "GBVGr1DrmBlackCapSht"
+    ]
+  },
+  {
+    "color": "green",
+    "finish": "white",
+    "url": "http://localhost:3010/products/vial-4ml-green-13-425?cap=white",
+    "heading": "1 Dram (4 ml) Green Vial - White Cap",
+    "caps": [
+      {
+        "id": "black",
+        "pressed": "false"
+      },
+      {
+        "id": "white",
+        "pressed": "true"
+      }
+    ],
+    "text": [
+      "GBVGr1DrmWhtCapSht"
+    ]
+  }
+]

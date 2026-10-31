@@ -7,10 +7,9 @@ import { Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BuilderLoading from "@/components/bottle-builder/BuilderLoading";
-import { loadBuilderEntry } from "@/lib/bottle-builder/entry";
+import { builderProductEntry, loadBuilderEntry } from "@/lib/bottle-builder/entry";
 import MatrixClient from "@/components/matrix/MatrixClient";
 import { loadBuilderFamilies, loadBuilderFamilyOrUncached } from "@/lib/bottle-builder/server";
-import { chooserBodies } from "@/lib/bottle-builder/payload";
 import { preferMobileRequest } from "@/lib/bottle-builder/mobile-request";
 import { SITE_URL, buildBreadcrumbJsonLd } from "@/lib/seo";
 
@@ -22,8 +21,8 @@ export const metadata: Metadata = {
     alternates: { canonical: `${SITE_URL}/matrix` },
 };
 
-export default async function MatrixPage({ searchParams }: { searchParams: Promise<{ family?: string; shop?: string }> }) {
-    const { family: familyParam, shop } = await searchParams;
+export default async function MatrixPage({ searchParams }: { searchParams: Promise<{ family?: string; shop?: string; sku?: string }> }) {
+    const { family: familyParam, shop, sku } = await searchParams;
     const collection = shop && BUILDER_COLLECTION_FITMENTS[shop] ? getShopCollection(shop) : undefined;
     const breadcrumb = buildBreadcrumbJsonLd([
         { name: "Home", url: SITE_URL },
@@ -34,13 +33,13 @@ export default async function MatrixPage({ searchParams }: { searchParams: Promi
         <Navbar hideMobileSearch builderMobile />
         <main className="min-h-screen bg-bone pt-[104px] sm:pt-[120px]" data-builder-page>
             {collection && <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-4 px-5 py-4 text-sm"><span>Building from {collection.title}</span><Link className="underline" href={shopCollectionHref(collection.key)}>Back to collection</Link><Link className="underline" href="/matrix">Explore all fitments</Link></div>}
-            <Suspense fallback={<BuilderLoading />}><Builder familyParam={familyParam} collection={collection?.key} /></Suspense>
+            <Suspense fallback={<BuilderLoading />}><Builder familyParam={familyParam} collection={collection?.key} sku={sku} /></Suspense>
         </main>
         <Footer />
     </>;
 }
 
-async function Builder({ familyParam, collection }: { familyParam?: string; collection?: string }) {
+async function Builder({ familyParam, collection, sku }: { familyParam?: string; collection?: string; sku?: string }) {
     // The family list streams into this same response instead of a client fetch
     // after hydration (requestIdleCallback, then a function call that missed the
     // CDN every time). Started before anything is awaited and never awaited here:
@@ -53,8 +52,8 @@ async function Builder({ familyParam, collection }: { familyParam?: string; coll
     });
     // First paint: chooser bodies only (one configuration per glass). The chosen bottle's
     // configurations load from /api/bottle-builder/bodies; Cylinder's HTML drops from 789 KB.
-    const bodies = chooserBodies(builderCollectionBodies(entry.bodies, collection));
+    const start = builderProductEntry(builderCollectionBodies(entry.bodies, collection), sku);
     return <>
-        <MatrixClient key={`${entry.openFamily}:${collection ?? "all"}`} {...entry} familyList={familyList} bodies={bodies} preferMobile={preferMobile} />
+        <MatrixClient key={`${entry.openFamily}:${collection ?? "all"}:${sku ?? ""}`} {...entry} familyList={familyList} bodies={start.bodies} initialSelection={start.selection} initialStep={start.step} entryUnavailable={start.unavailable} preferMobile={preferMobile} />
     </>;
 }

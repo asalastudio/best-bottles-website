@@ -1,0 +1,49 @@
+{
+  "sku": "GBVialClr2mlWhtCap",
+  "canvas": {
+    "height": 1100,
+    "width": 1000
+  },
+  "measurement": "bare glass foot to rim",
+  "options": [
+    {
+      "title": "Current product page",
+      "pct": 77.32063066085206,
+      "foot": 89.87705467963771,
+      "frame": {
+        "scale": 0.95,
+        "x": -13.085608856088548,
+        "y": 3.6456725930895675
+      },
+      "note": "Generic plate factor: 0.95. No measured-height target for this vial."
+    },
+    {
+      "title": "Approved vial-family size",
+      "pct": 40.24,
+      "foot": 91,
+      "frame": {
+        "scale": 0.4944087971511475,
+        "x": 17.168336850435242,
+        "y": 46.12257484832497
+      },
+      "note": "September 25 vial record: 35 mm bare glass; same size for both caps."
+    },
+    {
+      "title": "Universal S20–S200 chart",
+      "pct": 30.5,
+      "foot": 91,
+      "frame": {
+        "scale": 0.3747382781587972,
+        "x": 25.11516585333685,
+        "y": 56.985053003824845
+      },
+      "note": "September 16 proposal: exact 35 mm lookup, S40 tag. Saved as unapproved."
+    }
+  ],
+  "currentPageChanged": false,
+  "sources": {
+    "universal": "docs/reviews/bottle-measurements-2026-09-16/scale-card/scale-card.json",
+    "approvedVial": "docs/hero-families/vials-2026-09-25/approval.json",
+    "currentPdp": "src/lib/products/pdp-stage-frame.ts"
+  }
+}

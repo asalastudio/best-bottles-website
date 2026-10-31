@@ -1,0 +1,21 @@
+{
+  "approvedBy": "Jordan Richter",
+  "date": "2026-10-31",
+  "scope": "9 ml Cylinder 17-415 fine mist visual treatment; complete family checks and swirl fix documented separately",
+  "overcap": {
+    "approval": "That cap is much better. Okay, please lock that in.",
+    "path": "public/assets/register/overcaps/cylinder-9ml-clear-overcap-alpha-v6.png",
+    "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+    "dimensions": [
+      427,
+      569
+    ],
+    "source": "Native Blender continuous-alpha shell, renders/empty-overcap-alpha-v6.blend"
+  },
+  "frosted": {
+    "approval": "Frosted is looking much better now.",
+    "seatedTubeOpacity": 0.3,
+    "bodyScaleChanged": false
+  },
+  "publication": "Local review only; no production deployment authorized"
+}

@@ -159,6 +159,8 @@ async function loadRedesignPayload(
     activeSlug: string,
     siblingGroups: SiblingGroup[],
     platesBySku: Record<string, { image: string; imageCapOff: string | null }>,
+    localComponentKits: Record<string, KitLike> = {},
+    localReview: { host: string | null; flag: unknown } = { host: null, flag: undefined },
 ): Promise<PdpRedesignPayload> {
     const convex = getConvexClient();
     const siblings: SiblingGlassGroup[] = await Promise.all(siblingGroups.map(async (sibling) => {
@@ -221,6 +223,17 @@ async function loadRedesignPayload(
         } catch (error) {
             console.error("[pdp] kit lookup failed; rendering without layers", error);
         }
+    }
+
+    // Use the same host-gated, exact-SKU local review input as the classic PDP.
+    // The loader disables candidates on Vercel; local defaults require an explicit SKU allowlist.
+    // Sibling glass thumbnails must use the same reviewed body as their product page.
+    const reviewKits = { ...localComponentKits, ...localPdpComponentKits(localReview.host, localReview.flag, pairs) };
+    for (const pair of pairs) {
+        const localKit = pair.websiteSku ? reviewKits[pair.websiteSku] : null;
+        if (!localKit || localKit.sku !== pair.websiteSku) continue;
+        kitsBySku[pair.websiteSku!] = localKit;
+        if (pair.graceSku) kitsBySku[pair.graceSku] = localKit;
     }
 
     // A cap-only group has no fitment of its own: the Build Your Bottle strip's fitment tile shows this
@@ -387,7 +400,8 @@ export default async function ProductPage({
     ]);
     const group = data?.group;
     const variant = primaryVariant;
-    const localComponentKits = localPdpComponentKits((await headers()).get('host'), resolvedSearchParams.assetPreview, data?.variants ?? []);
+    const requestHost = (await headers()).get('host');
+    const localComponentKits = localPdpComponentKits(requestHost, resolvedSearchParams.assetPreview, data?.variants ?? []);
     const localAssetPreview = localBostonPreview(process.env.NODE_ENV, (await headers()).get('host'), resolvedSearchParams.assetPreview) && group?.family === 'Boston Round';
     const completion = localAssetPreview ? await readCompletion(process.cwd()) : null;
     const displayedPlates = localAssetPreview ? previewPlates(completion, group?._id, data?.variants ?? [], platesBySku) : platesBySku;
@@ -430,7 +444,7 @@ export default async function ProductPage({
         : null;
 
     if (data && redesignApplies(activeSlug, data)) {
-        const payload = await loadRedesignPayload(data, activeSlug, siblingGroups, platesBySku);
+        const payload = await loadRedesignPayload(data, activeSlug, siblingGroups, platesBySku, localComponentKits, { host: requestHost, flag: resolvedSearchParams.assetPreview });
         return (
             <>
                 {productJsonLd && (

@@ -1,0 +1,786 @@
+{
+  "aluminum-bottle-100ml-20-410": {
+    "targetPct": 60.8218,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 127.8
+  },
+  "aluminum-bottle-120ml-20-410": {
+    "targetPct": 50.5,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/remaining-42-2026-09-24/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 114
+  },
+  "aluminum-bottle-250ml-20-410": {
+    "targetPct": 60,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/remaining-42-2026-09-24/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 155
+  },
+  "aluminum-bottle-500ml-20-410": {
+    "targetPct": 73.8743,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 178
+  },
+  "aluminum-bottle-65ml-20-410": {
+    "targetPct": 40,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/remaining-42-2026-09-24/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 94
+  },
+  "apothecary-15ml-Ground": {
+    "targetPct": 35.5,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/apothecary-2026-09-24/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 58
+  },
+  "apothecary-30ml-Ground": {
+    "targetPct": 48,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/apothecary-2026-09-24/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 58
+  },
+  "atomizer-10ml-17mm": {
+    "targetPct": 75,
+    "baselinePct": 91,
+    "landmark": "full-product",
+    "source": "docs/hero-families/remaining-42-2026-09-24/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 82
+  },
+  "atomizer-5ml-10mm": {
+    "targetPct": 84.5,
+    "baselinePct": 91,
+    "landmark": "full-product",
+    "source": "docs/hero-families/remaining-42-2026-09-24/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 92
+  },
+  "atomizer-5ml-13-415": {
+    "targetPct": 69,
+    "baselinePct": 91,
+    "landmark": "full-product",
+    "source": "docs/hero-families/remaining-42-2026-09-24/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 76
+  },
+  "bell-10ml-13-415": {
+    "targetPct": 37.09,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 55
+  },
+  "boston-round-15ml-18-400": {
+    "targetPct": 42,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 68
+  },
+  "boston-round-30ml-20-400": {
+    "targetPct": 45,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 78
+  },
+  "boston-round-60ml-20-400": {
+    "targetPct": 52,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 94
+  },
+  "circle-100ml-18-415": {
+    "targetPct": 58,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 105
+  },
+  "circle-15ml-13-415": {
+    "targetPct": 44.625,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 60
+  },
+  "circle-30ml-15-415": {
+    "targetPct": 46,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 74
+  },
+  "circle-50ml-18-400": {
+    "targetPct": 48.5352,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 87
+  },
+  "circle-50ml-18-415": {
+    "targetPct": 54,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 87
+  },
+  "cream-jar-15ml-37mm": {
+    "targetPct": 26.4898,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 31
+  },
+  "cream-jar-20ml-40mm": {
+    "targetPct": 27.917,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 33.9
+  },
+  "cream-jar-30ml-45mm": {
+    "targetPct": 28.445,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 35
+  },
+  "cream-jar-3ml-20mm": {
+    "targetPct": 19.2549,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 18
+  },
+  "cream-jar-40ml-48/400": {
+    "targetPct": 31.657,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 42
+  },
+  "cream-jar-5ml-27mm": {
+    "targetPct": 17.969,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 16
+  },
+  "cream-jar-5ml-PRESS-FIT": {
+    "targetPct": 22.7958,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 24
+  },
+  "cream-jar-60ml-58mm": {
+    "targetPct": 35.4772,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 51
+  },
+  "cream-jar-63ml-58mm": {
+    "targetPct": 35.4772,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 51
+  },
+  "cylinder-100ml-18-415": {
+    "targetPct": 67.5,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 154
+  },
+  "cylinder-114ml-no-neck": {
+    "targetPct": 49.5,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 116
+  },
+  "cylinder-227ml-no-neck": {
+    "targetPct": 63,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 156
+  },
+  "cylinder-25ml-18-415": {
+    "targetPct": 46.5,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 83
+  },
+  "cylinder-28ml-16mm": {
+    "targetPct": 50.5,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 81
+  },
+  "cylinder-3.3ml-12mm": {
+    "targetPct": 28,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 37
+  },
+  "cylinder-30ml-18-415": {
+    "targetPct": 46,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 50.8
+  },
+  "cylinder-454ml-no-neck": {
+    "targetPct": 71.5,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 195
+  },
+  "cylinder-4ml-12mm": {
+    "targetPct": 32.5,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 49
+  },
+  "cylinder-5.5ml-13-415": {
+    "targetPct": 36.2871,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 53
+  },
+  "cylinder-50ml-16mm": {
+    "targetPct": 53,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 98
+  },
+  "cylinder-50ml-18-415": {
+    "targetPct": 56,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 117
+  },
+  "cylinder-5ml-13-415": {
+    "targetPct": 36.5,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 53
+  },
+  "cylinder-9ml-13-415": {
+    "targetPct": 62.5,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 106
+  },
+  "cylinder-9ml-17-415": {
+    "targetPct": 43.5,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 70
+  },
+  "diamond-60ml-18-415": {
+    "targetPct": 48.87,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/batch3-2026-09-25/approval.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 88
+  },
+  "diva-100ml-18-415": {
+    "targetPct": 57,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 113
+  },
+  "diva-30ml-18-415": {
+    "targetPct": 40,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 81
+  },
+  "diva-46ml-18-415": {
+    "targetPct": 47,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 89
+  },
+  "elegant-100ml-18-415": {
+    "targetPct": 57,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/elegant-2026-09-23/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 109
+  },
+  "elegant-15ml-13-415": {
+    "targetPct": 39,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/elegant-2026-09-23/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 61
+  },
+  "elegant-30ml-15-415": {
+    "targetPct": 43,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/elegant-2026-09-23/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 75
+  },
+  "elegant-60ml-18-415": {
+    "targetPct": 47,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/elegant-2026-09-23/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 86
+  },
+  "empire-100ml-18-415": {
+    "targetPct": 55,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 107
+  },
+  "empire-50ml-18-415": {
+    "targetPct": 50,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 88
+  },
+  "eternal-flame-decorative-35ml-Ground": {
+    "targetPct": 32.54,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/next-batch-2026-09-25/approval.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 44
+  },
+  "flair-15ml-13-415": {
+    "targetPct": 37.48,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 56
+  },
+  "footed-rectangle-10ml-13-415": {
+    "targetPct": 35.07,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/batch3-2026-09-25/approval.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 50
+  },
+  "genie-decorative-32ml-Ground": {
+    "targetPct": 45.18,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/next-batch-2026-09-25/approval.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 77
+  },
+  "grace-55ml-18-415": {
+    "targetPct": 56.59,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/approval.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 113
+  },
+  "heart-decorative-4ml-8mm": {
+    "targetPct": 33.3928,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 46
+  },
+  "lotion-bottle-30ml-18mm": {
+    "targetPct": 58.04,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 118
+  },
+  "lotion-bottle-30ml-no-neck": {
+    "targetPct": 58.04,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 118
+  },
+  "lotion-bottle-3ml-snap": {
+    "targetPct": 35,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/vials-2026-09-25/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 118
+  },
+  "lotion-bottle-3ml-Snap-On": {
+    "targetPct": 58.04,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 118
+  },
+  "marble-decorative-10ml-17.52mm": {
+    "targetPct": 46.21,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/next-batch-2026-09-25/approval.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 80
+  },
+  "marble-decorative-5ml-17.52mm": {
+    "targetPct": 41.28,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/next-batch-2026-09-25/approval.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 66
+  },
+  "pear-apothecary-118ml-Ground": {
+    "targetPct": 43,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/apothecary-2026-09-24/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 52.2
+  },
+  "pear-decorative-355ml-Ground": {
+    "targetPct": 67.32,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/next-batch-2026-09-25/approval.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 52.2
+  },
+  "pillar-9ml-13-415": {
+    "targetPct": 37.87,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 57
+  },
+  "pillar-9ml-17-415": {
+    "targetPct": 37.8699,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 57
+  },
+  "plastic-bottle-10ml-no-neck": {
+    "targetPct": 50.7266,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 93.8
+  },
+  "plastic-bottle-30ml-13-415": {
+    "targetPct": 42.0013,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 68
+  },
+  "rectangle-10ml-13-415": {
+    "targetPct": 52.9764,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 101
+  },
+  "rectangle-9ml-Ground": {
+    "targetPct": 37.01,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/batch3-2026-09-25/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 47
+  },
+  "round-128ml-18-415": {
+    "targetPct": 54,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 83
+  },
+  "round-78ml-18-415": {
+    "targetPct": 48,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 73
+  },
+  "royal-13ml-13-415": {
+    "targetPct": 37.48,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 56
+  },
+  "royal-14ml-11mm": {
+    "targetPct": 40.5334,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 64
+  },
+  "sleek-100ml-18-415": {
+    "targetPct": 60.5,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/sleek-2026-09-23/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 149
+  },
+  "sleek-30ml-18-415": {
+    "targetPct": 47,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/sleek-2026-09-23/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 98
+  },
+  "sleek-50ml-18-415": {
+    "targetPct": 56,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/sleek-2026-09-23/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 139
+  },
+  "sleek-5ml-13-415": {
+    "targetPct": 30,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/sleek-2026-09-23/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 45
+  },
+  "sleek-8ml-13-415": {
+    "targetPct": 43,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/sleek-2026-09-23/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 66
+  },
+  "slim-100ml-18-415": {
+    "targetPct": 67.5,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/remaining-42-2026-09-24/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 154
+  },
+  "slim-30ml-18-415": {
+    "targetPct": 48.5,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/remaining-42-2026-09-24/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 87
+  },
+  "slim-50ml-18-415": {
+    "targetPct": 54,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/remaining-42-2026-09-24/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 121
+  },
+  "square-15ml-13-415": {
+    "targetPct": 35.89,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 52
+  },
+  "tall-rectangle-10ml-13-415": {
+    "targetPct": 52.98,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/batch3-2026-09-25/approval.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 101
+  },
+  "teardrop-9ml-Ground": {
+    "targetPct": 32.99,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/batch3-2026-09-25/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 43
+  },
+  "tola-decorative-3ml-14.3mm": {
+    "targetPct": 31.66,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/next-batch-2026-09-25/approval.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 42
+  },
+  "tola-decorative-6ml-14.3mm": {
+    "targetPct": 34.24,
+    "baselinePct": 91,
+    "landmark": "closure-seat",
+    "source": "docs/hero-families/next-batch-2026-09-25/approval.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 48
+  },
+  "tulip-5ml-13-415": {
+    "targetPct": 32.97,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/batch3-2026-09-25/approval.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 45
+  },
+  "tulip-6ml-13-415": {
+    "targetPct": 32.97,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/batch3-2026-09-25/approval.json",
+    "basis": "approved-curve-release",
+    "heightBareMm": 45
+  },
+  "vial-1ml-Plug": {
+    "targetPct": 40.24,
+    "baselinePct": 91,
+    "landmark": "full-glass",
+    "source": "docs/hero-families/vials-2026-09-25/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 35
+  },
+  "vial-2ml-13-425": {
+    "targetPct": 25.29,
+    "baselinePct": 91,
+    "landmark": "full-glass",
+    "source": "docs/hero-families/vials-2026-09-25/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 22
+  },
+  "vial-2ml-8-425": {
+    "targetPct": 40.24,
+    "baselinePct": 91,
+    "landmark": "full-glass",
+    "source": "docs/hero-families/vials-2026-09-25/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 35
+  },
+  "vial-3ml-13-425": {
+    "targetPct": 31.04,
+    "baselinePct": 91,
+    "landmark": "full-glass",
+    "source": "docs/hero-families/vials-2026-09-25/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 29
+  },
+  "vial-4ml-13-425": {
+    "targetPct": 51.74,
+    "baselinePct": 91,
+    "landmark": "full-glass",
+    "source": "docs/hero-families/vials-2026-09-25/approval.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 45
+  },
+  "vial-9ml-18-400": {
+    "targetPct": 46.0004,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "basis": "catalog-curve",
+    "heightBareMm": 79.4
+  }
+}

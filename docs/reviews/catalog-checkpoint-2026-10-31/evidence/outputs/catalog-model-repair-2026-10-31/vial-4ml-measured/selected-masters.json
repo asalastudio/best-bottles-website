@@ -1,0 +1,40 @@
+{
+  "clear": {
+    "file": "clear-v3.png",
+    "status": "Local visual review candidate, not production approved",
+    "neckRatio": 0.15911111,
+    "targetNeckRatio": 0.15562472209871056,
+    "camera": "Upright straight-on; no view down into opening",
+    "reason": "First candidate with short neck matching the 7 mm guide; native body is 4.15% too narrow, calibrated in display registration."
+  },
+  "amber": {
+    "file": "amber-v2.png",
+    "status": "Color-only edit verified against the shared clear master; local review",
+    "reference": "clear-v3.png",
+    "model": "gpt-image-2.5-sunburst",
+    "sha256": "b6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68",
+    "normalizedEdgeRms": 0.003622551265803671,
+    "shoulderHeightFractionDelta": 0.0020000000000000018,
+    "camera": "Same upright straight-on view; no view into opening"
+  },
+  "green": {
+    "file": "green-v2.png",
+    "status": "Color-only edit verified against the shared clear master; local review",
+    "reference": "clear-v3.png",
+    "model": "gpt-image-2.5-sunburst",
+    "sha256": "309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8",
+    "normalizedEdgeRms": 0.0022797072900293115,
+    "shoulderHeightFractionDelta": 0.0020000000000000018,
+    "camera": "Same upright straight-on view; no view into opening"
+  },
+  "cobalt": {
+    "file": "cobalt-v2.png",
+    "status": "Color-only edit verified against the shared clear master; local review",
+    "reference": "clear-v3.png",
+    "model": "gpt-image-2.5-sunburst",
+    "sha256": "d1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7",
+    "normalizedEdgeRms": 0.0033465995566447884,
+    "shoulderHeightFractionDelta": 0.0040000000000000036,
+    "camera": "Same upright straight-on view; no view into opening"
+  }
+}

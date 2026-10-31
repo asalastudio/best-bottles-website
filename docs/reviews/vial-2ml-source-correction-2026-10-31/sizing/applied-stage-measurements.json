@@ -1,0 +1,110 @@
+[
+  {
+    "sku": "GBVialClr2mlWhtCap",
+    "view": "sidecar",
+    "frame": {
+      "scale": 0.4944087971511475,
+      "x": 25.279560142442627,
+      "y": 46.12257484832497
+    },
+    "glassHeightPct": 40.24,
+    "glassFootPct": 91,
+    "anchorFootPct": 91.1137753890794,
+    "bodyBounds": {
+      "left": 349.0590405904059,
+      "top": 103.17712177121781,
+      "right": 646.1180811808117,
+      "bottom": 998.468634686347
+    }
+  },
+  {
+    "sku": "GBVialClr2mlWhtCap",
+    "view": "capon",
+    "frame": {
+      "scale": 0.4944087971511475,
+      "x": 25.279560142442627,
+      "y": 46.12257484832497
+    },
+    "glassHeightPct": 40.24,
+    "glassFootPct": 91,
+    "anchorFootPct": 91.1137753890794,
+    "bodyBounds": {
+      "left": 349.0590405904059,
+      "top": 103.17712177121781,
+      "right": 646.1180811808117,
+      "bottom": 998.468634686347
+    }
+  },
+  {
+    "sku": "GBVialClr2mlWhtCap",
+    "view": "exploded",
+    "frame": {
+      "scale": 0.4944087971511475,
+      "x": 25.279560142442627,
+      "y": 46.12257484832497
+    },
+    "glassHeightPct": 40.24,
+    "glassFootPct": 91,
+    "anchorFootPct": 91.1137753890794,
+    "bodyBounds": {
+      "left": 349.0590405904059,
+      "top": 103.17712177121781,
+      "right": 646.1180811808117,
+      "bottom": 998.468634686347
+    }
+  },
+  {
+    "sku": "GBVialClr2mlBlackCap",
+    "view": "sidecar",
+    "frame": {
+      "scale": 0.4944087971511475,
+      "x": 25.279560142442627,
+      "y": 46.12257484832497
+    },
+    "glassHeightPct": 40.24,
+    "glassFootPct": 91,
+    "anchorFootPct": 91.1137753890794,
+    "bodyBounds": {
+      "left": 349.0590405904059,
+      "top": 103.17712177121781,
+      "right": 646.1180811808117,
+      "bottom": 998.468634686347
+    }
+  },
+  {
+    "sku": "GBVialClr2mlBlackCap",
+    "view": "capon",
+    "frame": {
+      "scale": 0.4944087971511475,
+      "x": 25.279560142442627,
+      "y": 46.12257484832497
+    },
+    "glassHeightPct": 40.24,
+    "glassFootPct": 91,
+    "anchorFootPct": 91.1137753890794,
+    "bodyBounds": {
+      "left": 349.0590405904059,
+      "top": 103.17712177121781,
+      "right": 646.1180811808117,
+      "bottom": 998.468634686347
+    }
+  },
+  {
+    "sku": "GBVialClr2mlBlackCap",
+    "view": "exploded",
+    "frame": {
+      "scale": 0.4944087971511475,
+      "x": 25.279560142442627,
+      "y": 46.12257484832497
+    },
+    "glassHeightPct": 40.24,
+    "glassFootPct": 91,
+    "anchorFootPct": 91.1137753890794,
+    "bodyBounds": {
+      "left": 349.0590405904059,
+      "top": 103.17712177121781,
+      "right": 646.1180811808117,
+      "bottom": 998.468634686347
+    }
+  }
+]

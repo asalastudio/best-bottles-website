@@ -1,0 +1,3158 @@
+{
+  "date": "2026-10-31",
+  "status": "local review checkpoint; not a production media release",
+  "files": [
+    {
+      "path": "runtime/public/local-kits/small-sprayers-2026-10-31/kits.json",
+      "source": "public/local-kits/small-sprayers-2026-10-31/kits.json",
+      "sha256": "b7560dc7022657e8da1dbd70adaa25ba625287efdc5c6d7b7e03d2671a0b2b76",
+      "bytes": 26335,
+      "restoreTo": "public/local-kits/small-sprayers-2026-10-31/kits.json"
+    },
+    {
+      "path": "runtime/public/local-kits/small-sprayers-2026-10-31/glass-3.3-gpt-neck-v1-c90d9f27720d.png",
+      "source": "public/local-kits/small-sprayers-2026-10-31/glass-3.3-gpt-neck-v1-c90d9f27720d.png",
+      "sha256": "c90d9f27720d0c190004b4740594be87f757e5812916d5e45a8b791b01dde889",
+      "bytes": 700619,
+      "restoreTo": "public/local-kits/small-sprayers-2026-10-31/glass-3.3-gpt-neck-v1-c90d9f27720d.png"
+    },
+    {
+      "path": "runtime/public/local-kits/small-sprayers-2026-10-31/glass-4-gpt-neck-v1-506f69a26228.png",
+      "source": "public/local-kits/small-sprayers-2026-10-31/glass-4-gpt-neck-v1-506f69a26228.png",
+      "sha256": "506f69a262287b41ed80e008bbdceb524d08744bb4225c9a3ede9ec440939f25",
+      "bytes": 930737,
+      "restoreTo": "public/local-kits/small-sprayers-2026-10-31/glass-4-gpt-neck-v1-506f69a26228.png"
+    },
+    {
+      "path": "runtime/public/local-kits/small-sprayers-2026-10-31/head-black.png",
+      "source": "public/local-kits/small-sprayers-2026-10-31/head-black.png",
+      "sha256": "691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2",
+      "bytes": 43828,
+      "restoreTo": "public/local-kits/small-sprayers-2026-10-31/head-black.png"
+    },
+    {
+      "path": "runtime/public/local-kits/small-sprayers-2026-10-31/head-white.png",
+      "source": "public/local-kits/small-sprayers-2026-10-31/head-white.png",
+      "sha256": "ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7",
+      "bytes": 24512,
+      "restoreTo": "public/local-kits/small-sprayers-2026-10-31/head-white.png"
+    },
+    {
+      "path": "runtime/public/local-kits/small-sprayers-2026-10-31/mechanism-3.3-v3.png",
+      "source": "public/local-kits/small-sprayers-2026-10-31/mechanism-3.3-v3.png",
+      "sha256": "a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5",
+      "bytes": 60557,
+      "restoreTo": "public/local-kits/small-sprayers-2026-10-31/mechanism-3.3-v3.png"
+    },
+    {
+      "path": "runtime/public/local-kits/small-sprayers-2026-10-31/mechanism-4-v3.png",
+      "source": "public/local-kits/small-sprayers-2026-10-31/mechanism-4-v3.png",
+      "sha256": "241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc",
+      "bytes": 78005,
+      "restoreTo": "public/local-kits/small-sprayers-2026-10-31/mechanism-4-v3.png"
+    },
+    {
+      "path": "runtime/public/local-kits/small-sprayers-2026-10-31/overcap-12mm.png",
+      "source": "public/local-kits/small-sprayers-2026-10-31/overcap-12mm.png",
+      "sha256": "0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52",
+      "bytes": 324597,
+      "restoreTo": "public/local-kits/small-sprayers-2026-10-31/overcap-12mm.png"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder5-profiles-2026-10-31/kits.json",
+      "source": "public/local-kits/cylinder5-profiles-2026-10-31/kits.json",
+      "sha256": "b0bd5249821d3bdab1144db59ee1d80ef2cb99183623233897fe6d9e9f5147d6",
+      "bytes": 410621,
+      "restoreTo": "public/local-kits/cylinder5-profiles-2026-10-31/kits.json"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "source": "public/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "sha256": "e66b67414c119eb8f999a37f26bf0a3808a95732fa123a0d0ce6f8e9b59640c6",
+      "bytes": 420607,
+      "restoreTo": "public/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "source": "public/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "sha256": "aad0f0df8534c8e165dcbd39289ac492151a00ce0597f3df6d6644ee27fa3683",
+      "bytes": 459712,
+      "restoreTo": "public/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder5-profiles-2026-10-31/mechanism-5-measured-v6.png",
+      "source": "public/local-kits/cylinder5-profiles-2026-10-31/mechanism-5-measured-v6.png",
+      "sha256": "0fcd2cf291c19f88980f6c9c92d91eb3dcd112c0b734aac75ff9b11e7db538f1",
+      "bytes": 84979,
+      "restoreTo": "public/local-kits/cylinder5-profiles-2026-10-31/mechanism-5-measured-v6.png"
+    },
+    {
+      "path": "runtime/public/local-kits/elegant60-reducer-2026-10-31/kits.json",
+      "source": "public/local-kits/elegant60-reducer-2026-10-31/kits.json",
+      "sha256": "31e137064ffea54404e6ea1fba06db2d777702cd3b9cfd08f3e47fdfbea3e218",
+      "bytes": 130862,
+      "restoreTo": "public/local-kits/elegant60-reducer-2026-10-31/kits.json"
+    },
+    {
+      "path": "runtime/public/local-kits/elegant60-reducer-2026-10-31/body-clear-gpt-r5-db7c6308f3e9.png",
+      "source": "public/local-kits/elegant60-reducer-2026-10-31/body-clear-gpt-r5-db7c6308f3e9.png",
+      "sha256": "1f8e119d3d398c179cb636356bde06dbd8a2587fc1f72aa82ccbbfdaa12fe0e2",
+      "bytes": 928328,
+      "restoreTo": "public/local-kits/elegant60-reducer-2026-10-31/body-clear-gpt-r5-db7c6308f3e9.png"
+    },
+    {
+      "path": "runtime/public/local-kits/elegant60-reducer-2026-10-31/body-frosted-gpt-r5-a01865c38a9f.png",
+      "source": "public/local-kits/elegant60-reducer-2026-10-31/body-frosted-gpt-r5-a01865c38a9f.png",
+      "sha256": "c75e784b6cff488c6104d5539cf81db393defecbbde5232d0af28e8da9cdfdc6",
+      "bytes": 2457906,
+      "restoreTo": "public/local-kits/elegant60-reducer-2026-10-31/body-frosted-gpt-r5-a01865c38a9f.png"
+    },
+    {
+      "path": "runtime/public/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "source": "public/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
+      "bytes": 51329,
+      "restoreTo": "public/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png"
+    },
+    {
+      "path": "runtime/public/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "source": "public/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
+      "bytes": 18427,
+      "restoreTo": "public/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png"
+    },
+    {
+      "path": "runtime/public/local-kits/vial-4ml-measured-2026-10-31/kits.json",
+      "source": "public/local-kits/vial-4ml-measured-2026-10-31/kits.json",
+      "sha256": "367355398c5ed644a13a9dfbd0611ab768c21c74dde154bb8e8b3c49fa34d957",
+      "bytes": 29966,
+      "restoreTo": "public/local-kits/vial-4ml-measured-2026-10-31/kits.json"
+    },
+    {
+      "path": "runtime/public/local-kits/vial-4ml-measured-2026-10-31/parts/309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8.body.png",
+      "source": "public/local-kits/vial-4ml-measured-2026-10-31/parts/309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8.body.png",
+      "sha256": "309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8",
+      "bytes": 570051,
+      "restoreTo": "public/local-kits/vial-4ml-measured-2026-10-31/parts/309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8.body.png"
+    },
+    {
+      "path": "runtime/public/local-kits/vial-4ml-measured-2026-10-31/parts/71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp",
+      "source": "public/local-kits/vial-4ml-measured-2026-10-31/parts/71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp",
+      "sha256": "71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e",
+      "bytes": 8874,
+      "restoreTo": "public/local-kits/vial-4ml-measured-2026-10-31/parts/71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp"
+    },
+    {
+      "path": "runtime/public/local-kits/vial-4ml-measured-2026-10-31/parts/a55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png",
+      "source": "public/local-kits/vial-4ml-measured-2026-10-31/parts/a55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png",
+      "sha256": "a55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f",
+      "bytes": 487683,
+      "restoreTo": "public/local-kits/vial-4ml-measured-2026-10-31/parts/a55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png"
+    },
+    {
+      "path": "runtime/public/local-kits/vial-4ml-measured-2026-10-31/parts/b6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68.body.png",
+      "source": "public/local-kits/vial-4ml-measured-2026-10-31/parts/b6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68.body.png",
+      "sha256": "b6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68",
+      "bytes": 563295,
+      "restoreTo": "public/local-kits/vial-4ml-measured-2026-10-31/parts/b6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68.body.png"
+    },
+    {
+      "path": "runtime/public/local-kits/vial-4ml-measured-2026-10-31/parts/d1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png",
+      "source": "public/local-kits/vial-4ml-measured-2026-10-31/parts/d1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png",
+      "sha256": "d1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7",
+      "bytes": 551946,
+      "restoreTo": "public/local-kits/vial-4ml-measured-2026-10-31/parts/d1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png"
+    },
+    {
+      "path": "runtime/public/local-kits/vial-4ml-measured-2026-10-31/parts/ec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798.cap.webp",
+      "source": "public/local-kits/vial-4ml-measured-2026-10-31/parts/ec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798.cap.webp",
+      "sha256": "ec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798",
+      "bytes": 10514,
+      "restoreTo": "public/local-kits/vial-4ml-measured-2026-10-31/parts/ec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798.cap.webp"
+    },
+    {
+      "path": "runtime/public/local-kits/vial-2ml-source-2026-10-31/kits.json",
+      "source": "public/local-kits/vial-2ml-source-2026-10-31/kits.json",
+      "sha256": "c18594f8fe22460b62907c6656880b3df12c69caddc9ee009483cd9be5ba6b09",
+      "bytes": 13185,
+      "restoreTo": "public/local-kits/vial-2ml-source-2026-10-31/kits.json"
+    },
+    {
+      "path": "runtime/public/local-kits/vial-2ml-source-2026-10-31/parts/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+      "source": "public/local-kits/vial-2ml-source-2026-10-31/parts/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+      "sha256": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4",
+      "bytes": 9794,
+      "restoreTo": "public/local-kits/vial-2ml-source-2026-10-31/parts/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp"
+    },
+    {
+      "path": "runtime/public/local-kits/vial-2ml-source-2026-10-31/parts/32e5dfca3f9368b87082eb5063c47b7ef12bbb460c09f9d8f695dc659f6357ac.body.png",
+      "source": "public/local-kits/vial-2ml-source-2026-10-31/parts/32e5dfca3f9368b87082eb5063c47b7ef12bbb460c09f9d8f695dc659f6357ac.body.png",
+      "sha256": "32e5dfca3f9368b87082eb5063c47b7ef12bbb460c09f9d8f695dc659f6357ac",
+      "bytes": 591550,
+      "restoreTo": "public/local-kits/vial-2ml-source-2026-10-31/parts/32e5dfca3f9368b87082eb5063c47b7ef12bbb460c09f9d8f695dc659f6357ac.body.png"
+    },
+    {
+      "path": "runtime/public/local-kits/vial-2ml-source-2026-10-31/parts/32f2956f5be3443b20a2b87a70014f95830013e2dbc28f8188dd90f6ecb9c75e.body.png",
+      "source": "public/local-kits/vial-2ml-source-2026-10-31/parts/32f2956f5be3443b20a2b87a70014f95830013e2dbc28f8188dd90f6ecb9c75e.body.png",
+      "sha256": "32f2956f5be3443b20a2b87a70014f95830013e2dbc28f8188dd90f6ecb9c75e",
+      "bytes": 587312,
+      "restoreTo": "public/local-kits/vial-2ml-source-2026-10-31/parts/32f2956f5be3443b20a2b87a70014f95830013e2dbc28f8188dd90f6ecb9c75e.body.png"
+    },
+    {
+      "path": "runtime/public/local-kits/vial-2ml-source-2026-10-31/parts/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+      "source": "public/local-kits/vial-2ml-source-2026-10-31/parts/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+      "sha256": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa",
+      "bytes": 9370,
+      "restoreTo": "public/local-kits/vial-2ml-source-2026-10-31/parts/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp"
+    },
+    {
+      "path": "runtime/public/reviews/vial-4ml-short-neck-2026-10-31/before-amber.png",
+      "source": "public/reviews/vial-4ml-short-neck-2026-10-31/before-amber.png",
+      "sha256": "7877efe99048ebd73c1482b668ad1c6bbee46cbd4ce7633e02dadc0597b55517",
+      "bytes": 213645,
+      "restoreTo": "public/reviews/vial-4ml-short-neck-2026-10-31/before-amber.png"
+    },
+    {
+      "path": "runtime/public/reviews/vial-4ml-short-neck-2026-10-31/before-clear.png",
+      "source": "public/reviews/vial-4ml-short-neck-2026-10-31/before-clear.png",
+      "sha256": "99a17b75b30340aa1214e3c29b31c9f7278ffd6a666c7ee3c5a5274ceb415cf5",
+      "bytes": 160028,
+      "restoreTo": "public/reviews/vial-4ml-short-neck-2026-10-31/before-clear.png"
+    },
+    {
+      "path": "runtime/public/reviews/vial-4ml-short-neck-2026-10-31/before-cobalt.png",
+      "source": "public/reviews/vial-4ml-short-neck-2026-10-31/before-cobalt.png",
+      "sha256": "9a90905b8b809924da07fe15c2bc67fd3d69a9b4790a906cf6c83424c028227a",
+      "bytes": 206608,
+      "restoreTo": "public/reviews/vial-4ml-short-neck-2026-10-31/before-cobalt.png"
+    },
+    {
+      "path": "runtime/public/reviews/vial-4ml-short-neck-2026-10-31/before-green.png",
+      "source": "public/reviews/vial-4ml-short-neck-2026-10-31/before-green.png",
+      "sha256": "e99440959953ab0baa249823bd7d926daf2b3546b27f2155c67b8239209a60b3",
+      "bytes": 207748,
+      "restoreTo": "public/reviews/vial-4ml-short-neck-2026-10-31/before-green.png"
+    },
+    {
+      "path": "runtime/public/reviews/vial-4ml-short-neck-2026-10-31/clear-long-neck.png",
+      "source": "public/reviews/vial-4ml-short-neck-2026-10-31/clear-long-neck.png",
+      "sha256": "ef158fe487115ea06aba19fc0dafa942a602100be3b427a58ff4bbe8436e04f0",
+      "bytes": 608372,
+      "restoreTo": "public/reviews/vial-4ml-short-neck-2026-10-31/clear-long-neck.png"
+    },
+    {
+      "path": "runtime/public/reviews/vial-4ml-short-neck-2026-10-31/clear-short-neck.png",
+      "source": "public/reviews/vial-4ml-short-neck-2026-10-31/clear-short-neck.png",
+      "sha256": "a55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f",
+      "bytes": 487683,
+      "restoreTo": "public/reviews/vial-4ml-short-neck-2026-10-31/clear-short-neck.png"
+    },
+    {
+      "path": "runtime/public/reviews/vial-4ml-short-neck-2026-10-31/index.html",
+      "source": "public/reviews/vial-4ml-short-neck-2026-10-31/index.html",
+      "sha256": "c52a0b0143a1a98afd18a2beae10382644addbac1c9a1a2489bbe39a343b476b",
+      "bytes": 21469,
+      "restoreTo": "public/reviews/vial-4ml-short-neck-2026-10-31/index.html"
+    },
+    {
+      "path": "runtime/public/reviews/vial-4ml-short-neck-2026-10-31/measured-guide.png",
+      "source": "public/reviews/vial-4ml-short-neck-2026-10-31/measured-guide.png",
+      "sha256": "95392d76a884f54f0dd61c587debe053d70cb7e8da12ff2499643f3a4ca5c95d",
+      "bytes": 37174,
+      "restoreTo": "public/reviews/vial-4ml-short-neck-2026-10-31/measured-guide.png"
+    },
+    {
+      "path": "runtime/public/reviews/vial-4ml-short-neck-2026-10-31/original.png",
+      "source": "public/reviews/vial-4ml-short-neck-2026-10-31/original.png",
+      "sha256": "3362ee6fb9e83d698e06a6668c8349b5a26ad23a0956d566cdb87f4d80c613ea",
+      "bytes": 66517,
+      "restoreTo": "public/reviews/vial-4ml-short-neck-2026-10-31/original.png"
+    },
+    {
+      "path": "runtime/public/reviews/vial-sunburst-pilot-2026-10-31/clear-prompt.txt",
+      "source": "public/reviews/vial-sunburst-pilot-2026-10-31/clear-prompt.txt",
+      "sha256": "71e955a3077da4591f98b6d79e9d71d7627ca28a391ba5f5d47e1c9d25b19a14",
+      "bytes": 279,
+      "restoreTo": "public/reviews/vial-sunburst-pilot-2026-10-31/clear-prompt.txt"
+    },
+    {
+      "path": "runtime/public/reviews/vial-sunburst-pilot-2026-10-31/index.html",
+      "source": "public/reviews/vial-sunburst-pilot-2026-10-31/index.html",
+      "sha256": "20c015007013d8264889b21bfdc983e67b28143b6d47a4277adfba5754efc584",
+      "bytes": 8102,
+      "restoreTo": "public/reviews/vial-sunburst-pilot-2026-10-31/index.html"
+    },
+    {
+      "path": "runtime/public/reviews/vial-sunburst-pilot-2026-10-31/masters/clear-before.png",
+      "source": "public/reviews/vial-sunburst-pilot-2026-10-31/masters/clear-before.png",
+      "sha256": "456fd602a557f8fb131704bde0635549a3743e0c96236bdafaeac217c94aa92d",
+      "bytes": 531279,
+      "restoreTo": "public/reviews/vial-sunburst-pilot-2026-10-31/masters/clear-before.png"
+    },
+    {
+      "path": "runtime/public/reviews/vial-sunburst-pilot-2026-10-31/masters/clear-sunburst.png",
+      "source": "public/reviews/vial-sunburst-pilot-2026-10-31/masters/clear-sunburst.png",
+      "sha256": "32f2956f5be3443b20a2b87a70014f95830013e2dbc28f8188dd90f6ecb9c75e",
+      "bytes": 587312,
+      "restoreTo": "public/reviews/vial-sunburst-pilot-2026-10-31/masters/clear-sunburst.png"
+    },
+    {
+      "path": "runtime/public/reviews/vial-sunburst-pilot-2026-10-31/report.json",
+      "source": "public/reviews/vial-sunburst-pilot-2026-10-31/report.json",
+      "sha256": "1ee6f70917699552d64ccbc3ac59352853658c0f28dfca50ea8d52a14e980ad9",
+      "bytes": 3448,
+      "restoreTo": "public/reviews/vial-sunburst-pilot-2026-10-31/report.json"
+    },
+    {
+      "path": "runtime/public/reviews/clear-5ml-reference-2026-10-31/approval.json",
+      "source": "public/reviews/clear-5ml-reference-2026-10-31/approval.json",
+      "sha256": "706b5ab72263c1faeb763efd80fb6ae934fb128753ab73cdd343f35c3ae93f72",
+      "bytes": 4655,
+      "restoreTo": "public/reviews/clear-5ml-reference-2026-10-31/approval.json"
+    },
+    {
+      "path": "runtime/public/reviews/clear-5ml-reference-2026-10-31/glass-5-clear-measured-v11.png",
+      "source": "public/reviews/clear-5ml-reference-2026-10-31/glass-5-clear-measured-v11.png",
+      "sha256": "300b9a57e4d63bab83ce2757952c32eda34651f7be0d945b8473d1346e117efb",
+      "bytes": 340686,
+      "restoreTo": "public/reviews/clear-5ml-reference-2026-10-31/glass-5-clear-measured-v11.png"
+    },
+    {
+      "path": "runtime/public/reviews/clear-5ml-reference-2026-10-31/glass-5-clear-measured-v16.png",
+      "source": "public/reviews/clear-5ml-reference-2026-10-31/glass-5-clear-measured-v16.png",
+      "sha256": "6dae64f20c5cd3305f040984695dad991fd90368f3f95d85577878af968da536",
+      "bytes": 419632,
+      "restoreTo": "public/reviews/clear-5ml-reference-2026-10-31/glass-5-clear-measured-v16.png"
+    },
+    {
+      "path": "runtime/public/reviews/clear-5ml-reference-2026-10-31/glass-5-clear-measured-v19.png",
+      "source": "public/reviews/clear-5ml-reference-2026-10-31/glass-5-clear-measured-v19.png",
+      "sha256": "e66b67414c119eb8f999a37f26bf0a3808a95732fa123a0d0ce6f8e9b59640c6",
+      "bytes": 420607,
+      "restoreTo": "public/reviews/clear-5ml-reference-2026-10-31/glass-5-clear-measured-v19.png"
+    },
+    {
+      "path": "runtime/public/reviews/clear-5ml-reference-2026-10-31/handoff-checks.json",
+      "source": "public/reviews/clear-5ml-reference-2026-10-31/handoff-checks.json",
+      "sha256": "27af78de671046ab7c35ea94044e4a26f2a1362b0b3f908e393b2e3f3b254c01",
+      "bytes": 28007,
+      "restoreTo": "public/reviews/clear-5ml-reference-2026-10-31/handoff-checks.json"
+    },
+    {
+      "path": "runtime/public/reviews/clear-5ml-reference-2026-10-31/index.html",
+      "source": "public/reviews/clear-5ml-reference-2026-10-31/index.html",
+      "sha256": "e23be4fc2dfc8ec60324024104dccc5a36fa6db0285bc0620f44173637275450",
+      "bytes": 1976,
+      "restoreTo": "public/reviews/clear-5ml-reference-2026-10-31/index.html"
+    },
+    {
+      "path": "runtime/public/reviews/clear-5ml-reference-2026-10-31/reference.png",
+      "source": "public/reviews/clear-5ml-reference-2026-10-31/reference.png",
+      "sha256": "20518a1a613143fd3fd6a535f206e5e0fc359e39ad8248d1a099749ca1335e5a",
+      "bytes": 1521090,
+      "restoreTo": "public/reviews/clear-5ml-reference-2026-10-31/reference.png"
+    },
+    {
+      "path": "runtime/public/reviews/clear-5ml-reference-2026-10-31/report.json",
+      "source": "public/reviews/clear-5ml-reference-2026-10-31/report.json",
+      "sha256": "5c9902a082af8b4588e5a8e82e85ba5c8dee8b25487cf3ae06bcb30d3c0ae1ac",
+      "bytes": 13198,
+      "restoreTo": "public/reviews/clear-5ml-reference-2026-10-31/report.json"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-family-2026-10-31/family-contact-sheet.png",
+      "source": "public/reviews/cylinder9-family-2026-10-31/family-contact-sheet.png",
+      "sha256": "80eb9ba59a0c05ee89c7040d7a6aadfe048b7909f7b42d943888e5eda8e8f82f",
+      "bytes": 361935,
+      "restoreTo": "public/reviews/cylinder9-family-2026-10-31/family-contact-sheet.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-family-2026-10-31/index.html",
+      "source": "public/reviews/cylinder9-family-2026-10-31/index.html",
+      "sha256": "bffd0786f0bdcfd22ab0fe7636eee3fa8ba364f8f59bcecfad621549d9c6965e",
+      "bytes": 4124,
+      "restoreTo": "public/reviews/cylinder9-family-2026-10-31/index.html"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-overcap-2026-10-31/index.html",
+      "source": "public/reviews/cylinder9-overcap-2026-10-31/index.html",
+      "sha256": "0759086a3f2dbaaf206148ef5d1897d3ada73feba2d8415054117d6e91306334",
+      "bytes": 1375,
+      "restoreTo": "public/reviews/cylinder9-overcap-2026-10-31/index.html"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-clear-black-leather-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-black-leather-capon.png",
+      "sha256": "8a3cb830b7c911e14bff7293df02b152bf39d52be96260079d6baefaa2d11464",
+      "bytes": 52447,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-black-leather-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-clear-black-leather-exploded.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-black-leather-exploded.png",
+      "sha256": "2ef3d5eda39252f5c4c4532be47df554d18a69e04f5e7d47a942952d9b829ad1",
+      "bytes": 79420,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-black-leather-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-clear-black-leather-sidecar.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-black-leather-sidecar.png",
+      "sha256": "308d7caef3fa25a8c2c709992f13ccf5dbac716ec60c1c9fd89c5ed57934fb8c",
+      "bytes": 62354,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-black-leather-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-clear-brown-leather-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-brown-leather-capon.png",
+      "sha256": "1e2fbc2e5f7905d1926bb49091f1c108f28d541a252f6ca9a5df56e110677867",
+      "bytes": 67104,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-brown-leather-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-clear-ivory-leather-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-ivory-leather-capon.png",
+      "sha256": "4bf7343a5924115bbc235e63175d9bea50aa456aaac5931d9c1d9235ac6e3148",
+      "bytes": 62246,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-ivory-leather-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-clear-light-brown-leather-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-light-brown-leather-capon.png",
+      "sha256": "a83bbdfc9213bdb450da6c56dc2b31a1af3ddeda89bc36f033b4eee24d699bae",
+      "bytes": 65299,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-light-brown-leather-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-clear-matte-silver-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-matte-silver-capon.png",
+      "sha256": "008ad19125a3cb230e8092508d8d06b1b7ff8a93b8af7956dd227cf1bc8550b6",
+      "bytes": 35132,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-matte-silver-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-clear-parts.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-parts.png",
+      "sha256": "330ea42614e34f5e90cc4115e1bcd0d173d568f3d73f67b1b2a76660e9483a8e",
+      "bytes": 65360,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-parts.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-clear-pink-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-pink-capon.png",
+      "sha256": "6d8b8e7b5287b8a4a689d461b04895cda086ad7d6b8814379ffe0f655210ab68",
+      "bytes": 62578,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-pink-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-clear-shiny-black-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-shiny-black-capon.png",
+      "sha256": "0d471e2af9b86aea396f72489782bd1100b09bab0231d5e99dc2eac614a041a0",
+      "bytes": 36581,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-shiny-black-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-clear-shiny-gold-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-shiny-gold-capon.png",
+      "sha256": "86eb55a01bb5951a8a518a04f9150db20c48035a438f160883eab81e0cf1ce72",
+      "bytes": 41644,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-shiny-gold-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-clear-shiny-gold-exploded.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-shiny-gold-exploded.png",
+      "sha256": "4a7bf8b494f0a1f586f0dd076c7b72f2c8765aea0ecf6bb5ec3b2460cd20fbbd",
+      "bytes": 76281,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-shiny-gold-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-clear-shiny-gold-sidecar.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-shiny-gold-sidecar.png",
+      "sha256": "8c84854ace7804986789fd1250f0919efb447b94584c5ba29fc04c86f846f4c8",
+      "bytes": 52347,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-shiny-gold-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-clear-shiny-silver-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-shiny-silver-capon.png",
+      "sha256": "2b8abc35174b9b165a2ed8bdfbf57516b10d3be798107222936f69c701f43e35",
+      "bytes": 36686,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-shiny-silver-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-clear-white-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-white-capon.png",
+      "sha256": "d6794a37eecd0b565734442381246a8bf535d88fe09c59cec06633e0cd89054e",
+      "bytes": 33787,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-white-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-clear-white-exploded.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-white-exploded.png",
+      "sha256": "b85ba51d822b6975b9501430698a01aba2c036d6b1301d2ad7809bd6c11f62b9",
+      "bytes": 65786,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-white-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-clear-white-sidecar.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-white-sidecar.png",
+      "sha256": "bd7fc3ba2f264f673c3660739b93c25ae7ee5b168d4d5a21773b3de2e7f3713a",
+      "bytes": 44359,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-clear-white-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-black-leather-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-black-leather-capon.png",
+      "sha256": "c126efc2e4e8c8c678c5a726c72fb0e752c3d700313cd642563c68a3dd2f76ab",
+      "bytes": 47651,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-black-leather-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-black-leather-exploded.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-black-leather-exploded.png",
+      "sha256": "fa957e0df812e07a1ab4543df39914e6a1083489688a37feb1c944dc137ad414",
+      "bytes": 74203,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-black-leather-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-black-leather-sidecar.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-black-leather-sidecar.png",
+      "sha256": "6a2fc94115ed7af9deb9464b7317991b54b6d9813cf58a314c15c6159143c0b7",
+      "bytes": 55995,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-black-leather-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-brown-leather-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-brown-leather-capon.png",
+      "sha256": "38d228ff1220a36ed0de8110d9c05f5aa3c35e0de4af02e28e1c9bb1492bf520",
+      "bytes": 62437,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-brown-leather-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-ivory-leather-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-ivory-leather-capon.png",
+      "sha256": "d8b6c0bf322d5d8346bea230ad70eb3daf38466ef5ee6909ac25c384f41c8c22",
+      "bytes": 57453,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-ivory-leather-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-light-brown-leather-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-light-brown-leather-capon.png",
+      "sha256": "f26c38e6de088297c8eed56254c1fa330c5c0b0349af48e721abc73c9d5c2bb8",
+      "bytes": 60541,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-light-brown-leather-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-matte-silver-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-matte-silver-capon.png",
+      "sha256": "c313a3f4c26f340d4959137fce89faf6bb6ea93d3c999b747e6990cb2bd80d95",
+      "bytes": 29646,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-matte-silver-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-parts.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-parts.png",
+      "sha256": "cd468b59a71d22ec7cc6f6c85a4b642fc57657999993cfe7055e48b1bb600392",
+      "bytes": 63038,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-parts.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-pink-leather-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-pink-leather-capon.png",
+      "sha256": "b75592aff43603380dab7df1ea8735cb40392591c42f5f1f3e415d0b452a4ee5",
+      "bytes": 57921,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-pink-leather-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-shiny-black-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-shiny-black-capon.png",
+      "sha256": "4946f8c1d89bbe1dcbd4a2e00258ac90299077040cad5665b81e7b79baf0cf1e",
+      "bytes": 31078,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-shiny-black-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-shiny-gold-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-shiny-gold-capon.png",
+      "sha256": "8cd28e9a6f35f8b2c811e86cf50752457be2836ddcb63c8cee707ae38f8ffdf0",
+      "bytes": 36452,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-shiny-gold-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-shiny-gold-exploded.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-shiny-gold-exploded.png",
+      "sha256": "83b036664d12f23121f420ebe389021e3bc9507e81fb3fcb7d4291b4bae92493",
+      "bytes": 69617,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-shiny-gold-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-shiny-gold-sidecar.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-shiny-gold-sidecar.png",
+      "sha256": "87bf45a16697068627c5da531cb3fd56a31bcbeef34dd09c296cdec76d89b8c6",
+      "bytes": 44932,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-shiny-gold-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-shiny-silver-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-shiny-silver-capon.png",
+      "sha256": "e6258ab9d53854d639c171505fd4de31a7e6f2167dbdcca97034a65aeee9b37c",
+      "bytes": 31343,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-shiny-silver-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-white-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-white-capon.png",
+      "sha256": "b9eccc61a5b94df3f13271a078ebc9ef97c386bae4f4fd1587b6d004a19b2a22",
+      "bytes": 28245,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-white-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-white-exploded.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-white-exploded.png",
+      "sha256": "0d607d99125957b3ffb83420473e7d5f1adbfa8c66f5e9808426de6b140c1071",
+      "bytes": 59722,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-white-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-white-sidecar.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-white-sidecar.png",
+      "sha256": "f23b73f44ea35563ee7b975152e39bcbc9c95799e78cef67d3a3d35aeacb8af0",
+      "bytes": 37068,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/after-frosted-white-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/before-clear-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/before-clear-capon.png",
+      "sha256": "f3cdd7b14676cb7b5d99a0f9742f99a7ff99853dfc2fd999cfd9a80795f011e9",
+      "bytes": 41022,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/before-clear-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/before-frosted-capon.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/before-frosted-capon.png",
+      "sha256": "8d43649e73a011a2344e62120133a07bc5748ca87f1fafbd2596f07fd451f259",
+      "bytes": 35670,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/before-frosted-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/black-leather-source.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/black-leather-source.png",
+      "sha256": "f4f98940e73b926bda0ba033ed55d5fa3da0f61363c84a3150ee6b1d47a39074",
+      "bytes": 88569,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/black-leather-source.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/contact.png",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/contact.png",
+      "sha256": "4f0c783d4030d94543093804118e0a9d7bfd63183edd984e05714f782d6de961",
+      "bytes": 190092,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/contact.png"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/index.html",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/index.html",
+      "sha256": "5ec5c7dfa8259e350f2a22867d0af7d063f4e4a86a8019a891c00e4ce353eff7",
+      "bytes": 4550,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/index.html"
+    },
+    {
+      "path": "runtime/public/reviews/elegant60-cap-seating-2026-10-31/report.json",
+      "source": "public/reviews/elegant60-cap-seating-2026-10-31/report.json",
+      "sha256": "3ae5db2721609bfde244f8e14cd6d58d7f0f411983557f942e5b6a6d250b8401",
+      "bytes": 51661,
+      "restoreTo": "public/reviews/elegant60-cap-seating-2026-10-31/report.json"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-black-capon.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-black-capon.png",
+      "sha256": "4541dd58a8f98592627eff69954ba0910fe0016fe006ff79b1f3d3477da57b5b",
+      "bytes": 22979,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-black-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-black-exploded.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-black-exploded.png",
+      "sha256": "48954bae719a5d3c254d743c93f4bf9c2bfa8b598469a8362bce77f8b3d93399",
+      "bytes": 54360,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-black-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-black-page.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-black-page.png",
+      "sha256": "c30618f8d1e7caabb560385985e5c9fd273ab9d44ff027d784aa0a4e178860f0",
+      "bytes": 195636,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-black-page.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-black-parts.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-black-parts.png",
+      "sha256": "11edb5654bc76c50e6b554a56b8f8a6ecd3ed234fb9d69002c615e6853a7616a",
+      "bytes": 58092,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-black-parts.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-black-sidecar.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-black-sidecar.png",
+      "sha256": "f2097defc5c1f58bd710d84017cc18a712ee32b9f14f57b563fbb0b1f9219aa1",
+      "bytes": 25831,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-black-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-white-capon.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-white-capon.png",
+      "sha256": "d5df35a7465729e9dbd07964b0a27c74c654990ba757edcf5325f8fcad51e2ef",
+      "bytes": 20245,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-white-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-white-exploded.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-white-exploded.png",
+      "sha256": "9a82eab2c32a1b13f2ab732b1d16b436098a7171dab42f14e059a3e3b2e7043d",
+      "bytes": 51354,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-white-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-white-page.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-white-page.png",
+      "sha256": "26a5cf62724a06dfcff2c5cef44e31308c402c03c69e0d6a5cdf3b4fa452c2b6",
+      "bytes": 192678,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-white-page.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-white-parts.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-white-parts.png",
+      "sha256": "11edb5654bc76c50e6b554a56b8f8a6ecd3ed234fb9d69002c615e6853a7616a",
+      "bytes": 58092,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-white-parts.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-white-sidecar.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-white-sidecar.png",
+      "sha256": "1321b0664e4cb541089e2c64b3b7915f236cc629093b1572fa86b9b1da122b8d",
+      "bytes": 22989,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-3.3-white-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-black-capon.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-black-capon.png",
+      "sha256": "90e072c76dbea9ee41b2073ea3ede133366d98a26a5cbe6819aca6923808df27",
+      "bytes": 20927,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-black-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-black-exploded.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-black-exploded.png",
+      "sha256": "e327cee4a3a2b6293eb0c50f2d240ff29e558ad314b22ebf95b6338a68e6d62d",
+      "bytes": 50596,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-black-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-black-page.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-black-page.png",
+      "sha256": "6cf131991053f042e016b122e3971763506a5925224a538ef0d1b30ff88b369f",
+      "bytes": 190074,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-black-page.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-black-parts.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-black-parts.png",
+      "sha256": "5d37a85c6afbaed472c60190652498346854d9b3c211ae1522800a4b995a0867",
+      "bytes": 55669,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-black-parts.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-black-sidecar.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-black-sidecar.png",
+      "sha256": "ab4188287fef5d8fce424a7f971c253902acdbd0007ebacb9ebaab7b765d6292",
+      "bytes": 23014,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-black-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-white-capon.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-white-capon.png",
+      "sha256": "d9e179df35817861be33b779f203758e88c7f5a70ba2a9c68ec96e76deb05d07",
+      "bytes": 18988,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-white-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-white-exploded.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-white-exploded.png",
+      "sha256": "8e99897bb9f72aa750c0533ca9811a1fa1586a70924406305866d0a1218f8d4d",
+      "bytes": 48482,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-white-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-white-page.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-white-page.png",
+      "sha256": "dcf12193d525be2d3d9b9375786d586bf78511afccea30d8635bd1f55ea029c2",
+      "bytes": 187819,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-white-page.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-white-parts.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-white-parts.png",
+      "sha256": "5d37a85c6afbaed472c60190652498346854d9b3c211ae1522800a4b995a0867",
+      "bytes": 55669,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-white-parts.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-white-sidecar.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-white-sidecar.png",
+      "sha256": "3ab17a256754916161b4fff90af02df0604d40675b91330b69a5299cc5c2b2e4",
+      "bytes": 21031,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/after-4-white-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-black-capon.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-black-capon.png",
+      "sha256": "c0cf2310ff6aefe0fb58465383af5618deb22f47ccac56dbb90dc2280444c22a",
+      "bytes": 20152,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-black-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-black-exploded.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-black-exploded.png",
+      "sha256": "0b129fbf281a00a23ef093340dbdac549ea2047d4e82ebaced75539c5b6115d8",
+      "bytes": 51977,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-black-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-black-page.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-black-page.png",
+      "sha256": "a59f7a018738364870489cb1dc8cc5a768c4cbe8c62bc2696b1ea2935649289d",
+      "bytes": 191926,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-black-page.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-black-parts.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-black-parts.png",
+      "sha256": "e5a2810eb8e7f99122108b5196c4d77e9546873bd7390cfd697d9844ee319e04",
+      "bytes": 54747,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-black-parts.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-black-sidecar.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-black-sidecar.png",
+      "sha256": "0ddf27a4a7ebc4fa058ebf78b3166707ca3773a4fdb19907ad6826371b1ab9d2",
+      "bytes": 22091,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-black-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-white-capon.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-white-capon.png",
+      "sha256": "ba09ced1ce164916f99a14aa08ea2f0a2e8729d26e8f7295309f528802e499f3",
+      "bytes": 17291,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-white-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-white-exploded.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-white-exploded.png",
+      "sha256": "977b81e662fab076f28bea46f653329c603df91e51cfdfbfc1b8775c6e8de5f8",
+      "bytes": 49276,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-white-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-white-page.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-white-page.png",
+      "sha256": "c49d56fafcd8443b3e2ebbe3ed7af17b8dbe3145f7119c97d6af4f0541ca1435",
+      "bytes": 189373,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-white-page.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-white-parts.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-white-parts.png",
+      "sha256": "e5a2810eb8e7f99122108b5196c4d77e9546873bd7390cfd697d9844ee319e04",
+      "bytes": 54747,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-white-parts.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-white-sidecar.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-white-sidecar.png",
+      "sha256": "5ea5060e72e7404ee1dc84885bb260d3375c1a39e4a8040702650e0d89e2bc87",
+      "bytes": 19130,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-3.3-white-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-black-capon.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-black-capon.png",
+      "sha256": "07bbc9b3e4cc14162610101eb76934be24caf7a53de540e52041c3457cc0cca5",
+      "bytes": 17264,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-black-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-black-exploded.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-black-exploded.png",
+      "sha256": "b2d080a9bd6ce430e9ed9c21f8c32e738fa5e180c0983feefc7cb7bd368fae50",
+      "bytes": 47410,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-black-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-black-page.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-black-page.png",
+      "sha256": "979de338a8ad744135c0cf4f8df42e536f44c4c268bd3d1486c7bbba41edf68a",
+      "bytes": 185442,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-black-page.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-black-parts.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-black-parts.png",
+      "sha256": "4906cc3aec0cdf12b6ecad48650bb1cc3231dd7f665e79e063ee9470ffba601f",
+      "bytes": 52856,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-black-parts.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-black-sidecar.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-black-sidecar.png",
+      "sha256": "157c1108241c9b259e5a7c4839ca3a04bfc257ccdc2999263ca60dc8737ed1cc",
+      "bytes": 18596,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-black-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-white-capon.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-white-capon.png",
+      "sha256": "4374c1fea4e9f2685047404fd91303b5dc77313340b78b73cfcfeee1f7c22508",
+      "bytes": 15121,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-white-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-white-exploded.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-white-exploded.png",
+      "sha256": "b55f4e1d2b1724abc850736563e3275d72c3f27e3270894caf42681100940d01",
+      "bytes": 45234,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-white-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-white-page.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-white-page.png",
+      "sha256": "8407d829bec5dbcc9e6d79df02e89f2b5a914517546732ce22de26a8889bbde6",
+      "bytes": 183096,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-white-page.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-white-parts.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-white-parts.png",
+      "sha256": "4906cc3aec0cdf12b6ecad48650bb1cc3231dd7f665e79e063ee9470ffba601f",
+      "bytes": 52856,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-white-parts.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-white-sidecar.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-white-sidecar.png",
+      "sha256": "b047dd3f105d7c05c3c6591805f88a07472c7d5371a13743fc9f1ca2289458e1",
+      "bytes": 16452,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-4-white-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-cap-capon.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-cap-capon.png",
+      "sha256": "93c71f0ed4ac173892371609d11d06ffde77ff2c85cb6c62d08a44da9864de1a",
+      "bytes": 55654,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-cap-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-cap-exploded.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-cap-exploded.png",
+      "sha256": "9f7731ebd5ca9376b5f7b70e92e99d0fa749b77d37f0f641b4d57ed9e23a632b",
+      "bytes": 45403,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-cap-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-cap-sidecar.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-cap-sidecar.png",
+      "sha256": "dfc51a0e6f5d142261a9be0665852eadd17fde8f10912f964fbecbc97cab3e97",
+      "bytes": 61290,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-cap-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-finemist-capon.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-finemist-capon.png",
+      "sha256": "7cb1334f7b74bb115fe187414d11ab44b375a49fcad5d4ff463f18e353917087",
+      "bytes": 61696,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-finemist-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-finemist-exploded.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-finemist-exploded.png",
+      "sha256": "f5c4c0c26e5a34c288146f752d886b5bfdf658108d7a0bf298ba19a399738873",
+      "bytes": 63501,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-finemist-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-finemist-sidecar.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-finemist-sidecar.png",
+      "sha256": "b8100fecd707a46497563da0d3e65ea3c835a392004f9043e2c837458289257c",
+      "bytes": 68801,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-finemist-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-rollon-capon.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-rollon-capon.png",
+      "sha256": "5b046f8c9aaccaef6b99a3cbb85d4a16d803bbb36764d34255306376d1c4a4dd",
+      "bytes": 55805,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-rollon-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-rollon-exploded.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-rollon-exploded.png",
+      "sha256": "7b5871734cb726ac98657d0dc8e66cb47c6e5d56bba36d7b46586b4f39476ed0",
+      "bytes": 53708,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-rollon-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-rollon-sidecar.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-rollon-sidecar.png",
+      "sha256": "8404659448a2c47d4e22a6f2cb51a0e1f3bef21b73935395322e8ed0a59708c2",
+      "bytes": 65110,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-clear-rollon-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-cap-capon.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-cap-capon.png",
+      "sha256": "abbb002e9aa67b4b4734616b7e3534048ae44598dd6c13f6af24b4e85e831119",
+      "bytes": 63648,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-cap-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-cap-exploded.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-cap-exploded.png",
+      "sha256": "17e0f346c0f8168a09380856b211d1b06bba511e36ea71bd68084fcac231c0ed",
+      "bytes": 57561,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-cap-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-cap-sidecar.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-cap-sidecar.png",
+      "sha256": "208e17a2bd9c091ae3ca1eac646ce115edfe04867b71f418244350b48aba5536",
+      "bytes": 72649,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-cap-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-finemist-capon.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-finemist-capon.png",
+      "sha256": "582503bab2426032f92916ba5a231c1757e3c240fa7e321bff0b9571e4c60686",
+      "bytes": 65472,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-finemist-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-finemist-exploded.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-finemist-exploded.png",
+      "sha256": "41ff671bade25ec997ae127f839140668740cfa6ec03f5459c3b5d031b660c24",
+      "bytes": 71726,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-finemist-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-finemist-sidecar.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-finemist-sidecar.png",
+      "sha256": "1d7d1d81554fc0583c85c4d005a89ecbdafaf2eb5915ee18f995fa466bff2aaf",
+      "bytes": 70456,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-finemist-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-rollon-capon.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-rollon-capon.png",
+      "sha256": "9be247d3c55817110c0f4c79f885f87ebd56fee61cfdf6e61929c6f2a38e2303",
+      "bytes": 65105,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-rollon-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-rollon-exploded.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-rollon-exploded.png",
+      "sha256": "e1805f7b5adfb942ac982f7c974f7cab791740048eeaab8d1a046ab2fbfd2d5e",
+      "bytes": 67108,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-rollon-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-rollon-sidecar.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-rollon-sidecar.png",
+      "sha256": "61cb1779d88f586cd401a933fb5609b4c9639f61db8d6cd41a5458bae6e26fff",
+      "bytes": 77015,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-cobalt-blue-rollon-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-final-gold-capon.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-final-gold-capon.png",
+      "sha256": "d55efff72909ca4380e80da7b541203cf73c0c93b8d874c2b4a34b8dd3918b80",
+      "bytes": 60986,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-final-gold-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-final-gold-exploded.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-final-gold-exploded.png",
+      "sha256": "4c942c6a32f8abd8974b0bdaa144b7a26f60a37e11f4877ff62eee179d1b43d0",
+      "bytes": 50593,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-final-gold-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-final-gold-sidecar.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-final-gold-sidecar.png",
+      "sha256": "c84884ff4878984e73a3fe2954a4704d83c3ba8e70f893f5145469f92e80d450",
+      "bytes": 66378,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-final-gold-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-measured-gold-capon.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-measured-gold-capon.png",
+      "sha256": "ff1bddc1c0fdfb2e164a15476e35bd27c8823bf54c8b28eba91d9ec6cd8781fa",
+      "bytes": 64652,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-measured-gold-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-measured-gold-exploded.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-measured-gold-exploded.png",
+      "sha256": "329598bd7586357a4cc2a76525888a1349c922ec6cb5bc02cc86fa28971debb4",
+      "bytes": 54595,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-measured-gold-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-measured-gold-sidecar.png",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-measured-gold-sidecar.png",
+      "sha256": "46f039139befe448864dbee14d548a92a3982d63f7aecd3e4d76750196898ae2",
+      "bytes": 71212,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/before-5-measured-gold-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/index.html",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/index.html",
+      "sha256": "b5287330c4847b0d8ab033d1e684574b04a697b5617a9bc8f8aae05f160fb61d",
+      "bytes": 2758,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/index.html"
+    },
+    {
+      "path": "runtime/public/reviews/small-sprayers-gpt-curved-2026-10-31/report.json",
+      "source": "public/reviews/small-sprayers-gpt-curved-2026-10-31/report.json",
+      "sha256": "f3735780cbbca2dfa7930be4c544caa51c90d165618271cd6881d6e67b685af8",
+      "bytes": 25156,
+      "restoreTo": "public/reviews/small-sprayers-gpt-curved-2026-10-31/report.json"
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/adopt-clean-body-profiles.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/adopt-clean-body-profiles.py",
+      "sha256": "ba38301c86beed821d2e3ecac8c288e877628f9e3ad3c6980abac1ab69ad56a9",
+      "bytes": 5460
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/apply-scales.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/apply-scales.py",
+      "sha256": "e9fd92f4554345d17f7cae13f577d5489b43c299ce095ad88b612ffcf9152713",
+      "bytes": 1289
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/audit-fit.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/audit-fit.py",
+      "sha256": "e218284b4a50f3b9ff1f0ba36d68d165019dd7fa1d8fb67489cdfea8d7e1868e",
+      "bytes": 3046
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/audit-models-v2.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/audit-models-v2.py",
+      "sha256": "499012bc8c4b641c7808db302c0dff633fbf134ba46ed60136ed3450ca90f45b",
+      "bytes": 5195
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/audit-models.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/audit-models.py",
+      "sha256": "842de3212150e2485ce8c96d5de4bd30781cf7c5eb8521ffe707ed5aa6636b5c",
+      "bytes": 5121
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/audit-repaired.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/audit-repaired.py",
+      "sha256": "daf23e720068ded781cd30b67743a7b897f1552c6c73a33667467834d8b2a3a2",
+      "bytes": 3448
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/audit-stage-scale.ts",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/audit-stage-scale.ts",
+      "sha256": "919dbf691c54497de2931d0616882f0b6c6fb076e3768a51aa1770655ed492e6",
+      "bytes": 5270
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/audit-supplemental.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/audit-supplemental.py",
+      "sha256": "4ca499e5120b8d72f5b49ee5f9c790f632bc261e8455a5e0cff394484708113f",
+      "bytes": 5151
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/build-body-overview.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/build-body-overview.cjs",
+      "sha256": "e79497f050086565c726b8a8b8de2ad4b41014880470b768bb57d46d6b4fc9bc",
+      "bytes": 7324
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/build-droppers.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/build-droppers.py",
+      "sha256": "b7c40ccd22a9f55aac6ea6392184db12958acf3551049bea27239879d57be3cd",
+      "bytes": 7567
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/build-empire-review.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/build-empire-review.py",
+      "sha256": "99ecb6197c2b83a983faedf1f071a41b675c7c13230de7a97fb34607c979b358",
+      "bytes": 4203
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/build-master-gallery.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/build-master-gallery.cjs",
+      "sha256": "32b8e0d97a165354e8a33e69de9d6c0bd4d0df5f1e631ddaf1abc6a5f99bb383",
+      "bytes": 7680
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/build-review.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/build-review.py",
+      "sha256": "cb1514db29792c38de831ab0901698532a9a3d797cc52b312443797372dd8bdc",
+      "bytes": 17272
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/build-scale-policy.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/build-scale-policy.py",
+      "sha256": "9a17711d476eef837bffebfecd5cb2f8ea88f5eb90802167e4e844e73b5b6a5b",
+      "bytes": 6921
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/build-scale-review.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/build-scale-review.cjs",
+      "sha256": "fb465c4295824a7f7993f7bad5d689035f02f7b5beaaf08e694d756358fea06f",
+      "bytes": 4803
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/calculate-stage-clearance.ts",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/calculate-stage-clearance.ts",
+      "sha256": "8ab0a247b498d6b431c81f1fd91fac72334b0b69f99a5943a9475510d80299c4",
+      "bytes": 3014
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/check-builder-and-scale.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/check-builder-and-scale.cjs",
+      "sha256": "bcf4780e2a2fcfa2ae86c5e0343c080f53f66740752ddc6aa6087ebd8991b168",
+      "bytes": 4572
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/check-master-gallery.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/check-master-gallery.cjs",
+      "sha256": "4d5924d87b3c51d2a1c75766d82d3f3fa017e19a4561b66b3319c35756ef8e65",
+      "bytes": 2188
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/check-production-alignment.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/check-production-alignment.cjs",
+      "sha256": "b984f80a6bb69cee80c35c1c5baeb7443a6f93ed118b97fa12d68fabd9b36af5",
+      "bytes": 3667
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/check-stage-stability.ts",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/check-stage-stability.ts",
+      "sha256": "0594249e55784764acb1930e4dbf059941c81b3480b80ce4310c203ccd0624cf",
+      "bytes": 3683
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/compact-review.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/compact-review.cjs",
+      "sha256": "6705dc5b4c9282d249ae5edb4a74177dbb5fd8b3292a304b3ebc4128eb89c9cb",
+      "bytes": 2238
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/continue-dropper-renders.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/continue-dropper-renders.py",
+      "sha256": "009c1b152d704599589cc957bd06dd8ac85cbb23feab6f696d96ef9a1e016463",
+      "bytes": 476
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/continue-renders.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/continue-renders.py",
+      "sha256": "fdc117b4742a744238baa749fa7bdfe7cd60cb783a8c3d983d20567af25578f4",
+      "bytes": 500
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/diagnose-circle-tip.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/diagnose-circle-tip.py",
+      "sha256": "82dc413844494c90aa3f8653f7650f017703bcfe3e07aa7d318c9ed0ffcae2bc",
+      "bytes": 1487
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/download-before.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/download-before.py",
+      "sha256": "fc441be9e92c59d523824499b992882a99906f719efbdd95dc5788ee1be6d704",
+      "bytes": 2052
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/dropper-final-fit.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/dropper-final-fit.py",
+      "sha256": "9e555b560557f30093b63de4b08c7abe8229559819725333fd17edd83c14d118",
+      "bytes": 1877
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/empire-final-mesh.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/empire-final-mesh.py",
+      "sha256": "a775146fea6acb4d11a0642a2a852863859af1cc8ba7c18f3c2b8c65ecb8e7d0",
+      "bytes": 1117
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/export-catalog.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/export-catalog.cjs",
+      "sha256": "a15f301ecd4713e0c21c02a466bb80ef0e19ee9abca7f35ae8d8bc98c44c0b69",
+      "bytes": 609
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/final-mating-repairs.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/final-mating-repairs.py",
+      "sha256": "784182e3a8e99664db3a1a56f9ab733f136f775ec278b2391d0d7705d0db4acb",
+      "bytes": 8592,
+      "sourceSha256": "247f4690c0c500beff55c31859e1538191d7cce0ddac74ebb03d824c5d550f94",
+      "normalization": "Text line endings and trailing whitespace only"
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/finalize-tube-material.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/finalize-tube-material.py",
+      "sha256": "5961f92543d49404cc64e96067e77d44f8447e2520df62849b16363abd615790",
+      "bytes": 2352
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/fix-actuator-stem.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/fix-actuator-stem.py",
+      "sha256": "b54b06b6baea09c6e0c09c0a89467080edbe99c92f6214ac03dd64baa9933ab1",
+      "bytes": 3650
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/fix-dropper-collars.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/fix-dropper-collars.py",
+      "sha256": "e4312f2f6523fbe446b6109ec1ec981a3356fb6a42566fb431ea32c53eea144c",
+      "bytes": 3337
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/fix-neck-overhang.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/fix-neck-overhang.py",
+      "sha256": "0296ffec7dcc6f7e8a6f3da002582459b5aaf5830d70367d54b8aaaddf834f9d",
+      "bytes": 5433
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/fix-priority-materials.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/fix-priority-materials.py",
+      "sha256": "4219c0352f011afd67071f16a08a2cf88a965bb5026ab545ea5f5d19ebf39972",
+      "bytes": 1631
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/fix-round-parts.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/fix-round-parts.py",
+      "sha256": "7528ceb4443e38773bed85177b6b6ac7f541fc2262b8cd17f916fb10bc719fb1",
+      "bytes": 3365
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/flair-from-drawing.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/flair-from-drawing.py",
+      "sha256": "2fa380832c441e9ef4f5f64391da251938dffe08ce4f69feb5d0b9addd722c86",
+      "bytes": 8150
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/inspect-glb.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/inspect-glb.py",
+      "sha256": "d3ba393681407040fcc5a1d28d13b72557027373713cb6dd87662b6f275aeb95",
+      "bytes": 1730
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/legacy-shading.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/legacy-shading.py",
+      "sha256": "745e7decd60819eea005fbbed60bda395dc3ce1401f5319095e9c1792b570e96",
+      "bytes": 2732
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/make-variant-queue.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/make-variant-queue.py",
+      "sha256": "e3050c3106364afc6bad69a2d1c3d100739e728785935abde845c87b52bed633",
+      "bytes": 4623
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/mating-audit.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/mating-audit.py",
+      "sha256": "5c6e59d8d01860ec034ffab2bc3b712fe2c286d244628e38393cbb0e412f865c",
+      "bytes": 4251
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/model-previews.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/model-previews.py",
+      "sha256": "d315c7b195c9501290fcdfb6585cc8b6a51e0077f05bfbbbf7e56cb9847abdc5",
+      "bytes": 1757
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/native-final-scene-fixes.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/native-final-scene-fixes.py",
+      "sha256": "6977f8ad23c6f4be7c54ce78fdd3847340a558e6ba710cc348e5563764fe800b",
+      "bytes": 1837
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/native-previews-after.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/native-previews-after.py",
+      "sha256": "0cc0a2c1c6c0edfb8623148c2a01498c488fb1afc07e7cabdb2efeba761493f3",
+      "bytes": 2114,
+      "sourceSha256": "b606796279f6d27674627a54a904518ae12d896b72076b2d86657b1f59fc7ead",
+      "normalization": "Text line endings and trailing whitespace only"
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/native-previews.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/native-previews.py",
+      "sha256": "8da06c13e9e5d2ad474c121bb25b73f52a2a86afb2880a4401047976d0c5ee80",
+      "bytes": 2079,
+      "sourceSha256": "50a7a1f8ebe5b75d708af67a7fe5410defe812359c0f335503fcb5d129d6892c",
+      "normalization": "Text line endings and trailing whitespace only"
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/photo-fallbacks.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/photo-fallbacks.py",
+      "sha256": "e8fa75c1b725e7c9c6a1f70d0b722dfc82fab44c8b37588c269859d58f2b0d44",
+      "bytes": 2174
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/pilot-cap-fill.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/pilot-cap-fill.py",
+      "sha256": "177c315f48ce189a7a6f69e7f6e2a48a9ed5be1eb400f1d0ca53c4639c0b949b",
+      "bytes": 1081
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/pilot-explicit-visibility.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/pilot-explicit-visibility.py",
+      "sha256": "c1c893517ba020ecf79c7c2192ec64e0fb0dd359b44354746ad4b5ab02128a96",
+      "bytes": 1070
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/pilot-tube-caustics.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/pilot-tube-caustics.py",
+      "sha256": "3d740e2ae8f3a133a61b54505c609b2de84486cf2183c085800ea6d9e1411afa",
+      "bytes": 2058
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/pilot-tube-native-material.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/pilot-tube-native-material.py",
+      "sha256": "6ff45a4aed059c2e752dd1f096ebc65c419b18fafb39f939997966cc2701f0b0",
+      "bytes": 1702
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/pilot-tube-optics.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/pilot-tube-optics.py",
+      "sha256": "1d4b5413db05eff4ec3e667f0d015c5755b241bd71394cb741f7645f11712d28",
+      "bytes": 1451
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/pilot-tube-shadow-lighting.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/pilot-tube-shadow-lighting.py",
+      "sha256": "31010f44cc0f9ca488ee0f48f568f8307878f4900f445f797155a7a5eee37c2b",
+      "bytes": 2510
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/pilot-tube-slim.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/pilot-tube-slim.py",
+      "sha256": "37ba79f2b94eca2e869cabef5baf2c2ef72c11918053195c6ad011d53128c955",
+      "bytes": 1683
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/pilot-wide-fill.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/pilot-wide-fill.py",
+      "sha256": "9e6a48367ef43bb14d8700194a9168ae511674a906713c01342961592df17928",
+      "bytes": 1146
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/prepare-render-review.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/prepare-render-review.cjs",
+      "sha256": "4f2efe770f3c1006652c7164578b0a0ea06814c75f714d1ec6afbe98694c5ff9",
+      "bytes": 3225
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/priority-assemblies.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/priority-assemblies.py",
+      "sha256": "7ba63bf9100ac63a836dd8542d826e3b140d38d91b4283597b60f30ab6935128",
+      "bytes": 7247
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/rebuild-neck-transition.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/rebuild-neck-transition.py",
+      "sha256": "4ea1761414354d3f2e987602b002665e3e3b66118757d1354c3669f42ffad287",
+      "bytes": 4926
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/recover-body-masters.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/recover-body-masters.cjs",
+      "sha256": "093068d80b1f707e224e75b566486d9e84b9938dde9eb0489fa42bc5cb3ee1d7",
+      "bytes": 4708
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/refine-flair.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/refine-flair.py",
+      "sha256": "3292bec9bb8a4f86862f09649d99085755d66dccc45216c08d5932d834bd1b26",
+      "bytes": 6678
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/refine-legacy-finishes.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/refine-legacy-finishes.py",
+      "sha256": "a256ca52e6cf6ca7bb408c7b3b2cfcfbbddf0d585223d1dec33b2ebd8bfcc1e2",
+      "bytes": 6172
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/refine-small-tubes.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/refine-small-tubes.py",
+      "sha256": "aba2b1e71ed15c64a65370ef758df1d3a57ce4028286c12c74b400988fde9e37",
+      "bytes": 2517
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/refit-circle-pipette-tip.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/refit-circle-pipette-tip.py",
+      "sha256": "9ca646624350254ef9858f976e9cda13710e573141bfaf66e7e1f482c8931362",
+      "bytes": 1780
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/refit-elegant-droppers.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/refit-elegant-droppers.py",
+      "sha256": "cdc06fd43e794f4fa297e201e8ee8c4bc0c562b4f87a5375cacc92328ae43c1a",
+      "bytes": 919
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/render-all-native.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/render-all-native.py",
+      "sha256": "9b802d036201e3153a7698ef411b8ef11812a69a490766c86d225b6a1352ce6d",
+      "bytes": 9439
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/render-body-overview.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/render-body-overview.py",
+      "sha256": "6dd292b6621bd6d620682ce888b43dd144abfa052d8d724f703da2700666fbb5",
+      "bytes": 4308
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/render-droppers.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/render-droppers.py",
+      "sha256": "5c4846f4b408fb2aa69c8a2adc3df9222d96702f7bce931e27b7c1cea4184f7d",
+      "bytes": 3206
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/render-empire.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/render-empire.py",
+      "sha256": "60fbaa2abd8e2187fd6e2a4b17d40a4702743e4a92cdca24de2655c8fc049f57",
+      "bytes": 2018
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/render-native-approved.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/render-native-approved.py",
+      "sha256": "6f17d0bb73e0c9108518fc24fd2dd36dec66a2d2d8f9c9f1446e13439988bde7",
+      "bytes": 8884
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/render-native-final.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/render-native-final.py",
+      "sha256": "3b79df227881b9f46694bd60b0109aa08436997cb2a896b5deb7e7c164cc87bc",
+      "bytes": 7582
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/render-native-v2.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/render-native-v2.py",
+      "sha256": "48e79033a0b30968c356983e0e145856397a19fae63a53cac72c79309a6c8e86",
+      "bytes": 7050
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/render-native-v3.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/render-native-v3.py",
+      "sha256": "f2512fea4d731150ca549e122d2c44253053cb6aa32f9b828fe9f4bc490582fe",
+      "bytes": 6566
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/render-native-v4.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/render-native-v4.py",
+      "sha256": "90aaa44d7d0782b978d1f6b33b826b9fedb547de06f68ffb396bde9f7e925ebd",
+      "bytes": 6933
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/render-native-v5.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/render-native-v5.py",
+      "sha256": "f102f102eebf23c98f531054442ef686305cedaff138022e4d1607bffa6f9e81",
+      "bytes": 6977
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/render-native-v6.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/render-native-v6.py",
+      "sha256": "f8f3cdc4e4bf4787ca9a56ffa15fb93e03dae55b575c53fba89d010ea59a9afe",
+      "bytes": 7402
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/render-native-v7.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/render-native-v7.py",
+      "sha256": "1db9fb08ea7911395cb102e8e1ecb600821b599c8074c162607b9dd66b6297da",
+      "bytes": 7319
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/render-native.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/render-native.py",
+      "sha256": "982875c7fe12d0e3a31c689a4d90c35c4a7b0f20ced9e99604655883c6691b69",
+      "bytes": 5981
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/render-priority-v3.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/render-priority-v3.py",
+      "sha256": "6c4261eaf055791362610f4ac1e5b61c09c7c395001fe70961bcde9ae89e01ba",
+      "bytes": 2043
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/render-priority.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/render-priority.py",
+      "sha256": "04c6634d846865c66f1d85e691d9a2156bd9acbc3cfb0bba40c882e810a554e8",
+      "bytes": 1700
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/render-tube-variants.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/render-tube-variants.py",
+      "sha256": "9e1af291154c6111287e2f11dc2d502eaa0ff1d33caa956c44d63a5a822a2555",
+      "bytes": 2066
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/render-variant-pilot.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/render-variant-pilot.py",
+      "sha256": "f68eda46f78096b09b98fcdfa44649b5ae2e4681e93b949aa6a2a509afb3d612",
+      "bytes": 2345
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/render-variants-odd.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/render-variants-odd.py",
+      "sha256": "e0ffe9997930f88d1ba9e3d3afd314ddbf2bb92fcc462f7bc48f09254e132bc1",
+      "bytes": 2421
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/render-variants.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/render-variants.py",
+      "sha256": "0b6f123a11a9fc0fddd1650e08bbf720348bf9961d9ee010f7d68bc0be585663",
+      "bytes": 2494
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/repair-bulb-collar.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/repair-bulb-collar.py",
+      "sha256": "6331ce4ce583c3f4916a0c8584622ab5970323e296469effd2de4d043c0e0f33",
+      "bytes": 3703
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/repair-flair.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/repair-flair.py",
+      "sha256": "77bf3ee97e5c07488c2b4952703a13b37a49b57127e33f77b4d7d8a6b8e59a56",
+      "bytes": 6724
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/repair-glb.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/repair-glb.py",
+      "sha256": "62a1cd1331b176a9a6423bab88ae6a07aa88ad1818e909ef54e84a825d0c2269",
+      "bytes": 11553
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/repair-microseams.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/repair-microseams.py",
+      "sha256": "499ce8519395ca5187bf5f4bc5e8b13fbbeed470ff0c581e2eeb2c9de35fdb9f",
+      "bytes": 1970
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/repair-native.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/repair-native.py",
+      "sha256": "261cd3254b50e9d5e340b3f57bb83b5f18c3fd49782a3b7e28c32e330db606d5",
+      "bytes": 4952
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/repair-seams.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/repair-seams.py",
+      "sha256": "94d0fb287124ca4b091d9a3278cc5fe32600bac9cb559f31fba9ff26d1fcbb8f",
+      "bytes": 5007
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/review-sheets.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/review-sheets.py",
+      "sha256": "dcebe317552da8a110fb95cfefdfce678ca548fb27ebd53ca83cb79cbf5f0542",
+      "bytes": 1710
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/selected-previews.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/selected-previews.py",
+      "sha256": "7f188be2e9d52875c6a746ed7e661cd41a3cef6792b621c1089692933bc20276",
+      "bytes": 3073
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/update-neck-dependents.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/update-neck-dependents.py",
+      "sha256": "0a17c17b36f109da3f47e6dfe59c3d1bbc5e71f19aa64cf83fabadad1995b646",
+      "bytes": 2589
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/verify-fit-extended.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/verify-fit-extended.py",
+      "sha256": "44f0b55e076036766ae8fc9d4b9ebfe53713081fb40ca5cabdd8b495dbc3cee1",
+      "bytes": 3903
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/verify-fit-final.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/verify-fit-final.py",
+      "sha256": "c844834250592488ed458bc377ee015033088c2a820bc9e876f30369a8a16ae0",
+      "bytes": 5828
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/verify-fit.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/verify-fit.py",
+      "sha256": "0ac80a965869cb709175ff88f1e8cb842dac98c3d9d4ecd37fd27db64c01137c",
+      "bytes": 3746
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/scripts/verify-originals.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/scripts/verify-originals.py",
+      "sha256": "f922baca37b49a7a1de3873dc71baf3f8497e70eb76f78f09c1251bd708a7d36",
+      "bytes": 852
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/body-scale-targets.csv",
+      "source": "outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/body-scale-targets.csv",
+      "sha256": "34448a4e01cdf666612bc986263e7a4a4f239134293b9de79e2c426bb7831551",
+      "bytes": 20889,
+      "sourceSha256": "04656fd1f8acd499ff860db7541151dbedbc0609ebefb3b5f4a01f8c83355e29",
+      "normalization": "Text line endings and trailing whitespace only"
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/interactive-clearance.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/interactive-clearance.json",
+      "sha256": "a569310a4d0132fde183efadb8a6324b5dda8b6e425c06de0666e6e4e65c64ad",
+      "bytes": 12384
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/local-register-payload.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/local-register-payload.json",
+      "sha256": "8618eff694f7ec9b0363c81417a9a75687da190502c563aeadb3e2fa799fb78b",
+      "bytes": 981597
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/register-payload-precise-raccoon-123.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/register-payload-precise-raccoon-123.json",
+      "sha256": "6852a6edb88668ae48e0706f3865b9e33966d2f481083951f37b00db09f17a20",
+      "bytes": 939490
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/rejected-fit-to-canvas-factors.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/rejected-fit-to-canvas-factors.json",
+      "sha256": "b946f777f08971cc724ce7242831b4df2eb2a9d3e9c74fa822fd29678cf6d5a3",
+      "bytes": 4585
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/scale-policy.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/scale-policy.json",
+      "sha256": "9aaf5d544ec9c3361b43ce0cbd36536f708eda76df2f5de080bbba38f7af104e",
+      "bytes": 292675
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/sku-scale-status.csv",
+      "source": "outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/sku-scale-status.csv",
+      "sha256": "764714ba1d61fb6cb593ed56b31f15c8694c7d3484a7a614515464eb05ba5218",
+      "bytes": 489148,
+      "sourceSha256": "2f6f7554e70c20b1923b8a4b8d6827a55c762aa863bf19a9cd94845eaf9024be",
+      "normalization": "Text line endings and trailing whitespace only"
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/stability-all-targets.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/stability-all-targets.json",
+      "sha256": "62d5b156c7974bf275a4bbf5580c1441cda6e8b1b44316ba229794f6d0c95387",
+      "bytes": 358167
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/stability-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/stability-checks.json",
+      "sha256": "650795610fb07db9a596fe8851470fcd75bafb0584119de0eb65d6b7b2eb9af2",
+      "bytes": 308
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/stability-production.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/stability-production.json",
+      "sha256": "ef4538078933ab01760fb382a390745e1463b176be88f789c97f0d2e95dd9928",
+      "bytes": 308
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reports/production-alignment/README.md",
+      "source": "outputs/catalog-model-repair-2026-10-31/reports/production-alignment/README.md",
+      "sha256": "4720b9ebc5f997dd22134c655644c6c26e6146a71cfc821933822471d2bf9f6b",
+      "bytes": 4065
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reports/production-alignment/alignment.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/reports/production-alignment/alignment.json",
+      "sha256": "93c883a3fea59ae910fe98345fe8936000a2056067ed60c9f741ea065d72c4c6",
+      "bytes": 2718
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reports/production-alignment/browser-parity.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/reports/production-alignment/browser-parity.json",
+      "sha256": "4647d177bec10090199052b90ffa9b28d4499ce6c3f55b15799c3deb7e113a42",
+      "bytes": 5532
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reports/production-alignment/builder-and-scale-browser.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/reports/production-alignment/builder-and-scale-browser.json",
+      "sha256": "e546353622ab990639df790e5432ff653bfd43d0364fbb2b64c660569d6eac8e",
+      "bytes": 3697
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reports/production-alignment/component-data-diff.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/reports/production-alignment/component-data-diff.json",
+      "sha256": "b7296a20864d39867fcfebf3ec5461a0dfd8d081b074e1fc1160fdce6ddabb5d",
+      "bytes": 1100
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reports/production-alignment/git-status-before.txt",
+      "source": "outputs/catalog-model-repair-2026-10-31/reports/production-alignment/git-status-before.txt",
+      "sha256": "cc5f4fc69a37524690387717194d9f35d1f865f2b3c3bfc476717dbd6da48069",
+      "bytes": 1044
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reports/production-alignment/storage-inspection.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/reports/production-alignment/storage-inspection.json",
+      "sha256": "524aec7c0a364deac57c9381cc53fde5a747c7cfae07c962719eb381632a5c6d",
+      "bytes": 6802
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/README.md",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/README.md",
+      "sha256": "dfa25f8b912ab19ac5e4ead870215dd7e55d4bc060797adc6e7680c86d9dd179",
+      "bytes": 3018
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/approved-five-appearance.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/approved-five-appearance.json",
+      "sha256": "e2d215ebb4eaa4b4707325f44487a4177809d8f7fac18c6642c13c00dfb51513",
+      "bytes": 659
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/approved-five-v19.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/approved-five-v19.json",
+      "sha256": "706b5ab72263c1faeb763efd80fb6ae934fb128753ab73cdd343f35c3ae93f72",
+      "bytes": 4655
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/browser-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/browser-checks.json",
+      "sha256": "238bbb5e4f6988b21043ba36edf8d818ea5284ef6cacfd2e75b4edb39384baf2",
+      "bytes": 13366
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-balanced-invariants.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-balanced-invariants.json",
+      "sha256": "d37dcace520655ebcea8db349448d56218c7cc204a67475da6aff22da461a443",
+      "bytes": 9105
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-curvature-brief.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-curvature-brief.json",
+      "sha256": "7adccb7185502de30cfc3a0ed8db57e747408c72112d754dac9029770705cd01",
+      "bytes": 1874
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-curvature-browser-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-curvature-browser-checks.json",
+      "sha256": "2f8434c6323fc358406bf5cac34cad6c2465716ec020cd0f79ae2d7c9d755a86",
+      "bytes": 2286
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-curvature-integration-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-curvature-integration-checks.json",
+      "sha256": "f9c111999be7be1b002cbe0ee24bfeae1958bdbad3f4b5e6a1ae3fe375c12658",
+      "bytes": 103
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-curvature-report.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-curvature-report.json",
+      "sha256": "9ee979d48a0a34d3c30a839e789ba26e9b85e42429179a9d96598d468209247f",
+      "bytes": 10836
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-curved-invariants.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-curved-invariants.json",
+      "sha256": "5f015684569f34abd2b344e5457d6763e5a0d14c71edb0fa00a3b61b9eb4e900",
+      "bytes": 9105
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-optics-browser-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-optics-browser-checks.json",
+      "sha256": "594e561b51a2099afcf6632e5e5e2556de1bddd080569263ac5db9e3d28bff96",
+      "bytes": 2286
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-optics-integration-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-optics-integration-checks.json",
+      "sha256": "ba268b0d9a84ad8b0337c5cdaec9ce4641f98584492e13622af14439124229d4",
+      "bytes": 1869
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-optics-invariants.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-optics-invariants.json",
+      "sha256": "7b55a49c17b2dfe0c05eaf9b4c58e799c3ef958adea87813806adf0e8d76090f",
+      "bytes": 1627
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-optics-report.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-optics-report.json",
+      "sha256": "6042bd44f64aed44e32820a289bd39fee68f46e681aaa9a09ca9c647b9b3e80c",
+      "bytes": 4482
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-reference-browser-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-reference-browser-checks.json",
+      "sha256": "fa126b79bc4631a7f1de369999dc1e4318337cb52227526b80652a37f1cb6ca7",
+      "bytes": 2286
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-reference-integration-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-reference-integration-checks.json",
+      "sha256": "f9c111999be7be1b002cbe0ee24bfeae1958bdbad3f4b5e6a1ae3fe375c12658",
+      "bytes": 103
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-reference-invariants.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-reference-invariants.json",
+      "sha256": "2355d315d79733abcea1b7c428b4b398cbf7ecfdfe46a8248382dc0495c719c0",
+      "bytes": 9105
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-reference-report.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-reference-report.json",
+      "sha256": "fcaa5d3f94978359a83dd4dc3a3bc3f4ebaf0363f3cff6eff379359b39cb664d",
+      "bytes": 13076
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-sibling-switch-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/clear-sibling-switch-checks.json",
+      "sha256": "8da70b4589ab428f0c7be30316043b9bd9da59691f1b2157cb5f013d8091be8b",
+      "bytes": 2276
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/final-measured-pdp-label-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/final-measured-pdp-label-checks.json",
+      "sha256": "a513d784322b346b21cb5ea7465f3523a5c6af5911e4c5096d7b8b7f0f1a8dfa",
+      "bytes": 226
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/five-approved-appearance-verification.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/five-approved-appearance-verification.json",
+      "sha256": "c32682f43b4e3a8ed2676102dddc6a641a7073cb639218c4f02cd30227bcd342",
+      "bytes": 490
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/five-approved-handoff-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/five-approved-handoff-checks.json",
+      "sha256": "27af78de671046ab7c35ea94044e4a26f2a1362b0b3f908e393b2e3f3b254c01",
+      "bytes": 28007
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/five-body-integration.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/five-body-integration.json",
+      "sha256": "76a4c8d3ca9268fc91ffb14e3c9d677963a6fbe1187a7dbd45c7c50e77b7f0b9",
+      "bytes": 22875
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/five-browser-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/five-browser-checks.json",
+      "sha256": "3768948358f59205fc36c946d1d2b1fb0887f6dd0023d111f3bde3f57729bf40",
+      "bytes": 20020
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/five-final-diameter-shared-geometry.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/five-final-diameter-shared-geometry.json",
+      "sha256": "20b7df3b9340dbedb8deab550c9f885cc9afb4a1db3b36ae704eb23b8f6ba101",
+      "bytes": 243
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/five-final-integration-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/five-final-integration-checks.json",
+      "sha256": "04c71c5d1a65bbce373d395ca8357681bca16cac8d062abaf88ce82375f5bede",
+      "bytes": 131
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/five-final-neck-report.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/five-final-neck-report.json",
+      "sha256": "5c9902a082af8b4588e5a8e82e85ba5c8dee8b25487cf3ae06bcb30d3c0ae1ac",
+      "bytes": 13198
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/five-layout-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/five-layout-checks.json",
+      "sha256": "d88152292254841995b50b2b05585004fca666d1beebc013974ab9016f0f8d5e",
+      "bytes": 4903
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/five-layouts.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/five-layouts.json",
+      "sha256": "906c70c69f20582d756ac2005b674509b7c7111c6b6f63e7df01ae2cb973aa1b",
+      "bytes": 770420
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/five-measured-verification.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/five-measured-verification.json",
+      "sha256": "c14891f5003fc673ee9201cbdd91b1cb6485ddb473e8eb5d4569caa2850da885",
+      "bytes": 3724
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/five-user-measurements.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/five-user-measurements.json",
+      "sha256": "46a5405900792d637906c242f5eab24346510c2c9480a759a06cd487e47dad57",
+      "bytes": 2450
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/measured-pdp-label-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/measured-pdp-label-checks.json",
+      "sha256": "3ae659c7a5c8eed8d41cabe571ae16804d693f2606b8ca7ec47f3dd9b342eae0",
+      "bytes": 161
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/mobile-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/mobile-checks.json",
+      "sha256": "f4bfb634d131487ba8b25e35834b6231da98a2016bc6f4d6663af5147be707a9",
+      "bytes": 334
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/profile-review-report.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/profile-review-report.json",
+      "sha256": "f5829bccdc40f744eac13b135bceac5325d45440fc969f55b538c694d4009bb8",
+      "bytes": 113921
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/props-3.3-black.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/props-3.3-black.json",
+      "sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "bytes": 4
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/props-3.3-white.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/props-3.3-white.json",
+      "sha256": "67b4ebc0a9f4c9bf30867ac7568333050d6f7351c6f8b160ef391ad0933b382f",
+      "bytes": 12793
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/props-4-black.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/props-4-black.json",
+      "sha256": "4b910aadc9b69c385f5e90e4afd877d6482dcc02d9e9ec7a8a04669932ae1c09",
+      "bytes": 16618
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/props-4-white.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/props-4-white.json",
+      "sha256": "1362261fb132d3642e79e7b3baee66399131c120188873a0af4b4777b7b316ea",
+      "bytes": 16519
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/small-consistency-native.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/small-consistency-native.json",
+      "sha256": "d3a86e44ab6d09bb629632e528f4eba62569705ab2a5d1c16aaaeb09b4ae31ef",
+      "bytes": 1586
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/small-sprayer-consistency-report.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/small-sprayer-consistency-report.json",
+      "sha256": "ec654b9bed806b36bef64335ddf206817ab68ac1909f235932ff53642307c271",
+      "bytes": 17128
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/apply-gpt-bodies.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/apply-gpt-bodies.cjs",
+      "sha256": "9f0c0466a2e40f30b7b628f7d926c4eb236cce513b445f832410638f5fd4996a",
+      "bytes": 3587
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/build-five-kits.ts",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/build-five-kits.ts",
+      "sha256": "3b73a218d09e5959ad08b1182468237eed0531f5aea1d20727fdc68586881df2",
+      "bytes": 5527
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/build-kits.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/build-kits.cjs",
+      "sha256": "4aa7a5015caba36006b58db63dd22a7f31fab07b46c1f442b179ccf39690cb74",
+      "bytes": 3661
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/check-five-approved-handoff.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/check-five-approved-handoff.cjs",
+      "sha256": "abab9e8a1cea2d72dc127e2ee959a21e55dcf7806e648e4afd50bce985be2b66",
+      "bytes": 4077
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/check-five-final.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/check-five-final.cjs",
+      "sha256": "4ea4915c85027cc4ab00bb926ebdb6c6eaedf250b75a8372db121884a2eab39a",
+      "bytes": 2444
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/check-five-frames.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/check-five-frames.py",
+      "sha256": "4ef7d6cdf44527f03c95c8d44567e4ad55b61b8c2a2c2bbd3cf405b58c21bff1",
+      "bytes": 1137
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/check-five-layouts.ts",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/check-five-layouts.ts",
+      "sha256": "cdb920d57ec239bd40eb6f4741547b995b8cd756f9f0c4ea5741678030e86d9d",
+      "bytes": 694
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/check-five.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/check-five.cjs",
+      "sha256": "350636889162834ae205b89257f7822f7a11d622bddca1ae75befbf1a0d61a55",
+      "bytes": 2443
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/check-mobile.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/check-mobile.cjs",
+      "sha256": "8268e5489559368e8bcbe76c7a320ef9da2cec7069c34fc3889f4fa667c65dab",
+      "bytes": 1355
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/check-pages.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/check-pages.cjs",
+      "sha256": "a8e2c54ddaf99296b133f643c39de44b7d2a15b91a5b08f40da6d4b93bff3f3b",
+      "bytes": 3034
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/clear-balanced-reflections.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/clear-balanced-reflections.py",
+      "sha256": "6c44b8d45e8ba8bce68f76c0e7d236cc8574f09a4668c1655ea94b05fd4da62d",
+      "bytes": 2620
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/clear-curved-studio.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/clear-curved-studio.py",
+      "sha256": "ceb1cbc0c4f78c7b4c56b48a7b91d91c290bc02b6fac02782f73237204522cc4",
+      "bytes": 1514
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/clear-optics-review.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/clear-optics-review.py",
+      "sha256": "bc36d052c8e4a26dbb072a35fddd61082978636af3e7cbaa289b7ddb36bdc1dc",
+      "bytes": 1652
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/clear-reference-highlights-v16.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/clear-reference-highlights-v16.py",
+      "sha256": "bb9ac6b7f0216e15cd7387e11082440f01fd2076e858c6f6c1512cec8654d2f0",
+      "bytes": 1916
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/clear-reference-highlights.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/clear-reference-highlights.py",
+      "sha256": "1a35b6c7d3804c1d6edb5b1d7b033211d3e9020d02d4ca03b910a1c8e92efba1",
+      "bytes": 1918
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/clear-transmitted-studio.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/clear-transmitted-studio.py",
+      "sha256": "f589a29b003943cc4980a06f4af7b64a7889f5d71ca7bfa9ba81aad82e008d89",
+      "bytes": 1509
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/correct-profiles.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/correct-profiles.py",
+      "sha256": "6b770a8bd2e01a2179b59c21de6bd71a045380b5aebd9095b287c14896192c68",
+      "bytes": 5486
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/five-final-diameters.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/five-final-diameters.py",
+      "sha256": "80d58f7f635c50809ec3eb7e165e453697111f6bbadb6631d1c3f68a780f7eff",
+      "bytes": 2680
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/five-measured-envelope.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/five-measured-envelope.py",
+      "sha256": "f177012ef923ddf77fc117fa6227e5695f5f243586c629f0f9de76201568991d",
+      "bytes": 2817
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/five-measured-final.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/five-measured-final.py",
+      "sha256": "48f6e499495f4ec7f3fa541ba1e21641c13122d289267147446d19f5522ff02a",
+      "bytes": 3173
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/five-photo-neck.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/five-photo-neck.py",
+      "sha256": "c26ea1c0253f230da6993a1734e95271e370ad2f0a6477a20424a3198d260c13",
+      "bytes": 4294
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/five-reference-finish.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/five-reference-finish.py",
+      "sha256": "0de2c81025c0be2e301dda20a8f4db2220dd554dbc2eb6f94ca94501eff800a8",
+      "bytes": 3259
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/inspect-scene.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/inspect-scene.py",
+      "sha256": "3407011aefda7726b227de1e60f054116d2b4ebf3a4fc9a14e6a86ab5b5150b3",
+      "bytes": 362
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/inspect-sources.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/inspect-sources.py",
+      "sha256": "84ffb8c38e5af617e308d1fefcfc94beda9cd364db2885c394edf55597ecf2d9",
+      "bytes": 1250
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/make-review.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/make-review.py",
+      "sha256": "6629a5ad7b42fb4490460516b752bfd5f91680fb0bc44de70554900207acb65e",
+      "bytes": 11049
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/probe-5.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/probe-5.py",
+      "sha256": "cd33535119548c4a24886841d5b5ffd77f0c3dd86dee4a96a69dd0ce5c33f72b",
+      "bytes": 885
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/render-balanced-retry.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/render-balanced-retry.py",
+      "sha256": "b80b6415507e1b38668e20b2993d7fb4c3b169c4e79a6d4fb5c85c8ed09e409d",
+      "bytes": 1194
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/render-body-v2.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/render-body-v2.py",
+      "sha256": "540644b1bcfe7cfbe81741ddada81361f964740ce08757034dd327d134ebdd68",
+      "bytes": 2586
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/render-body-v3.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/render-body-v3.py",
+      "sha256": "cc6755c14c82bbc64033633c17f77672120282ca22d256e01a79c4de1b3b06be",
+      "bytes": 2639
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/render-five-measured-tube.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/render-five-measured-tube.py",
+      "sha256": "6b86964be3bcbdfece776c026b7ccf5b6617ce756fc7e8405e5b09209c5f5b13",
+      "bytes": 1802
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/render-five-tube.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/render-five-tube.py",
+      "sha256": "3f496245355a6775a04d4bf9a1596c5b1c62d56c05efb4ed978573cb2eccb726",
+      "bytes": 1799
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/render-small-mechanism-v2.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/render-small-mechanism-v2.py",
+      "sha256": "4a5e2d7d771466f55ec2d0b8880d5c2aa872720540b2819e79eeaf9c492398e6",
+      "bytes": 2772
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/render-small-mechanism-v3.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/render-small-mechanism-v3.py",
+      "sha256": "ae152f5c8f538517bb342a4554d661ef3f29cccc16cdc207c4a912deaec60742",
+      "bytes": 4634
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/render-small.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/render-small.py",
+      "sha256": "8a4402b81ac8cf11d32f4bc558fd9103af5ebb5ee884179384ecd08bc367d458",
+      "bytes": 3864
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/render-tubes.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/render-tubes.py",
+      "sha256": "53da8e2a5177cdd2aee631be8930a6507f4817563fc2177ddaab5d4277356ef4",
+      "bytes": 1796
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/small-consistency-review.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/small-consistency-review.py",
+      "sha256": "110986bf85df70fb9be5c8fa39bd6b908d60eab36bbfbe8091862c96fd16b88a",
+      "bytes": 4341
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/verify-five-appearance-lock.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/verify-five-appearance-lock.py",
+      "sha256": "4b1937ad5ee58b6f2f58ebf14b17f10fa4ca0203dc98c29f6943909147dadd31",
+      "bytes": 1734
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/verify-five-measured.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/verify-five-measured.py",
+      "sha256": "618a64cdace2eb3d106da9ce7e28c2da7d1fb90dbcc77ae48e4e1683e1878ee3",
+      "bytes": 2704
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/verify-five-reference-finish.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/verify-five-reference-finish.py",
+      "sha256": "49c2469f43dd9a94fbd392a4232a9bcc4270565ac295d3fdd86c6495724c972b",
+      "bytes": 2713
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/verify-small-consistency.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/verify-small-consistency.py",
+      "sha256": "6b9a3338710905771130539fd4dc042245f92f8955fb45198770fdda7dc40250",
+      "bytes": 2401
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/elegant60-recovery/README.md",
+      "source": "outputs/catalog-model-repair-2026-10-31/elegant60-recovery/README.md",
+      "sha256": "891bf220615d44d859c3a7ec2c16803ed3217767dd12e5d880de8da440447d03",
+      "bytes": 906
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/elegant60-recovery/apply-bodies.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/elegant60-recovery/apply-bodies.cjs",
+      "sha256": "202c3f7436d779768a61edbb41cf37ac8518f3c567dda328f239d80c79c1e639",
+      "bytes": 4665
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/elegant60-recovery/before-cap-seating-kits.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/elegant60-recovery/before-cap-seating-kits.json",
+      "sha256": "00da579479775a303ee414006d97e2c9c37e46eae80d9eade7903360bf061464",
+      "bytes": 130024
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/elegant60-recovery/before-kits.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/elegant60-recovery/before-kits.json",
+      "sha256": "18121831a40a651c59a58eaa2f74db018213e75f113bd86456eecb0769dcaa65",
+      "bytes": 127492
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/elegant60-recovery/body-recovery-report.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/elegant60-recovery/body-recovery-report.json",
+      "sha256": "ccf0da950cb10defd529eb688db5852e21e095cbfe820b43251b4ef02a702b08",
+      "bytes": 39412
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/elegant60-recovery/browser-verification.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/elegant60-recovery/browser-verification.json",
+      "sha256": "8562f73c295c6cc5ab89ce8878b92e918b562e7e13050566019cb963e686a199",
+      "bytes": 53448
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/elegant60-recovery/builder-verification.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/elegant60-recovery/builder-verification.json",
+      "sha256": "bc5f1e093fbedfe016c7eebdbeec84f68336990bd54a396cd6bfb6c53c618674",
+      "bytes": 3973
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/elegant60-recovery/check-builder.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/elegant60-recovery/check-builder.cjs",
+      "sha256": "06bc63889024067fbc78d04eaf9559e978cb40630b4ce760120dcfe0a0f91aff",
+      "bytes": 1475
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/elegant60-recovery/handoff-verification.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/elegant60-recovery/handoff-verification.json",
+      "sha256": "627f41c2337c8262254133a3dbc64076310c36968674351bbbb0c4609b8cd1e0",
+      "bytes": 446
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/elegant60-recovery/make-review.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/elegant60-recovery/make-review.py",
+      "sha256": "db0dd88a837fad2cf8d71f756fabf583d5ade9c6aa2e135cc6656e9d750acedc",
+      "bytes": 5488
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/elegant60-recovery/report.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/elegant60-recovery/report.json",
+      "sha256": "d0dc894b874a9a379922340867514b94a627fedb62025019b8498ffa2dd20a63",
+      "bytes": 32963
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/elegant60-recovery/cap-seating-v2/README.md",
+      "source": "outputs/catalog-model-repair-2026-10-31/elegant60-recovery/cap-seating-v2/README.md",
+      "sha256": "7099146803259e0ce9f37a45921ec5d57b0efdd249d2436d91212b1f69385057",
+      "bytes": 357
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/elegant60-recovery/cap-seating-v2/browser-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/elegant60-recovery/cap-seating-v2/browser-checks.json",
+      "sha256": "373858cc6fb81e8ce6505204cc3656a6ba6a1db8f13195ddbffb6bfa6ed34ded",
+      "bytes": 53411
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/elegant60-recovery/cap-seating-v2/check-pages.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/elegant60-recovery/cap-seating-v2/check-pages.cjs",
+      "sha256": "ccef2e290a4bba01e5b324badc090ba1d5ad832eb8488aab8052d2a10c4a850a",
+      "bytes": 3063
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/elegant60-recovery/cap-seating-v2/make-review.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/elegant60-recovery/cap-seating-v2/make-review.py",
+      "sha256": "bff5a6883f442226c6fcc550084c205a97fc4fcfba90f487b7119e8048356d3e",
+      "bytes": 4595
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/elegant60-recovery/cap-seating-v2/report.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/elegant60-recovery/cap-seating-v2/report.json",
+      "sha256": "3ae5db2721609bfde244f8e14cd6d58d7f0f411983557f942e5b6a6d250b8401",
+      "bytes": 51661
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reducer-review/before.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/reducer-review/before.json",
+      "sha256": "53053352ef2f875f1342e5d52decd34c255885e4d53e2c7662b0a323a45d6b77",
+      "bytes": 656
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reducer-review/browser-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/reducer-review/browser-checks.json",
+      "sha256": "8562f73c295c6cc5ab89ce8878b92e918b562e7e13050566019cb963e686a199",
+      "bytes": 53448
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reducer-review/build-kits.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/reducer-review/build-kits.cjs",
+      "sha256": "c1ff4b8667c79c8785634f14fd98ce8baff705cba1a66609cefe8742d7634547",
+      "bytes": 2225
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reducer-review/builder-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/reducer-review/builder-checks.json",
+      "sha256": "fdef426e09b5e84498e1351576eec4d18bc958fe2506b3f9052a29b4aacc33d1",
+      "bytes": 3856
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reducer-review/check-pages.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/reducer-review/check-pages.cjs",
+      "sha256": "2527a08234e19beffa7cb0165c70ef080ecae91e69cd23633266c6adb879b6f6",
+      "bytes": 3032
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reducer-review/inspect-kits.ts",
+      "source": "outputs/catalog-model-repair-2026-10-31/reducer-review/inspect-kits.ts",
+      "sha256": "f895e2fd244564d64f11f857b84df218a500eaa450ec14bc8012f069d97ab728",
+      "bytes": 699
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reducer-review/make-review.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/reducer-review/make-review.py",
+      "sha256": "5315599a9b9b4171315d5409ed49fd2cc30d4d1db5869e9228e898a122937c54",
+      "bytes": 5823
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reducer-review/render-reducer.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/reducer-review/render-reducer.py",
+      "sha256": "65009b3f0633333166d5ca36713b7e881169d3d2c50c61ac4897774eff48f8fe",
+      "bytes": 2034
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reducer-review/review-report.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/reducer-review/review-report.json",
+      "sha256": "e031c3307054b60d909d35a3a834d3ee72aa65d9bf246975eac7981e921884af",
+      "bytes": 85111
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/reducer-review/source-kits.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/reducer-review/source-kits.json",
+      "sha256": "23002094351ebccbad38da162f80982748f8d4036f34bbeb26133e2742a98fed",
+      "bytes": 82374
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/README.md",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/README.md",
+      "sha256": "d688561c48be2593d3aeca3c65cb4da0ed695cf629d037aa872be1b96003d7fe",
+      "bytes": 3502
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/cap-options-browser-check.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/cap-options-browser-check.json",
+      "sha256": "a7b62748bfdcee2568ebd90b4520901d0ea2af9b546f428149c083469f6c0501",
+      "bytes": 3106
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/catalog-before.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/catalog-before.json",
+      "sha256": "5665bf8941aa43a4a251d8b613515cd423542e76fd588416fdf3755802cec31d",
+      "bytes": 29031
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/color-navigation-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/color-navigation-checks.json",
+      "sha256": "736515ad5e4b4d9b35f5058c87799a602dc6fa6f1953e8e4e8c6d90a18b264be",
+      "bytes": 720
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/defects-by-sku.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/defects-by-sku.json",
+      "sha256": "716c0467d83de1c7581a15cc599a54aafa92dc721f3223ce6558cc8b47f9a8fe",
+      "bytes": 6904
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/generation-ledger.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/generation-ledger.json",
+      "sha256": "d1762f5e48ef588bccc83438054a844b82425cad881595e284f53964815153cf",
+      "bytes": 1805
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/kits-after.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/kits-after.json",
+      "sha256": "caa95440bb0897cb2d795ef953b2d341ee0c2fed738fdef8906389edfb7a9a62",
+      "bytes": 29965
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/kits-before-integration.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/kits-before-integration.json",
+      "sha256": "68564fab13514dd8cae28a748dbd1e96b8103f43ba79dfb03dc2bb07a601edf2",
+      "bytes": 7911
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/original-kits.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/original-kits.json",
+      "sha256": "ba735f350b2a51817d63e67e082ff7a09f59306ff0ba7511bb3331c8e4cdc928",
+      "bytes": 9486
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/registration.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/registration.json",
+      "sha256": "bdf7c95b493379a52a1682b247ca97a16a476410461c9478efb2c02f138daff8",
+      "bytes": 4965
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/rejected-clear-long-neck.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/rejected-clear-long-neck.json",
+      "sha256": "44f04fae5bf6ca7bcfcadd14f57e4e8581e7623a4dff85ed50933ef11970b90f",
+      "bytes": 182
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/review-browser-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/review-browser-checks.json",
+      "sha256": "fa7f2ba734aba36e4b4c24caccfc5a1e92b0a750be400f16e456f5db31dbc7f4",
+      "bytes": 2268
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/selected-masters.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/selected-masters.json",
+      "sha256": "e6200a2865f536f6533f947fb1aae62fe17e6e4763ed3fb6614ea77f8241406f",
+      "bytes": 1786
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/shape-consistency.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/shape-consistency.json",
+      "sha256": "48efd2f90cdc097889ee416e461581ea66f0e2b3b294b1ed06e7f497e465449e",
+      "bytes": 3116
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/scripts/browser-check.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/scripts/browser-check.cjs",
+      "sha256": "acc7b420b78336d04294a0bc28d05e95f7a05a072aaeb8cd0ab3028b3dfb4f7c",
+      "bytes": 6453
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/scripts/build-review.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/scripts/build-review.cjs",
+      "sha256": "784e79c8a5282fb1e531379ec5f1373941e8ac3e118a0ed5617ad4cfc4d4cbec",
+      "bytes": 7202
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/scripts/compare-shapes.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/scripts/compare-shapes.cjs",
+      "sha256": "9ee3b1768d27e3aab7066089867ab15bbb6efc9025a0057998c82561392f3932",
+      "bytes": 2367
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/scripts/integrate.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/scripts/integrate.cjs",
+      "sha256": "8b11cd1343e308558d30336f9fb0c139a334a1cc0dc1042443e051548251ccbc",
+      "bytes": 5279
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-sunburst/README.md",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-sunburst/README.md",
+      "sha256": "7e55ab90ba7a306e0e158983bcc6bf64432124577016dbe006b8274aac97d5d0",
+      "bytes": 1056
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-sunburst/amber-sunburst.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-sunburst/amber-sunburst.json",
+      "sha256": "74a64ccc57888cd63011c98e204fe3fa5bc34c3921ea5ba0bff1239be0901bcd",
+      "bytes": 276
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-sunburst/approved-request.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-sunburst/approved-request.json",
+      "sha256": "bb965ee951f1a17842ed2e0ff18e3acffe30bb76a311125df6fd04d8c0013b30",
+      "bytes": 1687
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-sunburst/browser-check.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-sunburst/browser-check.cjs",
+      "sha256": "72478b334eb96025bcaac4bb9678e1ebf9fe573ca99d4f51dbd697fc07fee041",
+      "bytes": 5485
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-sunburst/browser-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-sunburst/browser-checks.json",
+      "sha256": "4490b90d28d992b2da52421765b85c5815670465898fd2d6103a59313c9081b7",
+      "bytes": 21235
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-sunburst/kits-after.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-sunburst/kits-after.json",
+      "sha256": "c18594f8fe22460b62907c6656880b3df12c69caddc9ee009483cd9be5ba6b09",
+      "bytes": 13185
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-sunburst/kits-before.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-sunburst/kits-before.json",
+      "sha256": "15ace4cc57b5bc9413e0989504903b2135dabac7d80dab8b978ee9b2e514598c",
+      "bytes": 12758
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-sunburst/prompt.txt",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-sunburst/prompt.txt",
+      "sha256": "5da2d8018611cfee92583fccbc04e728d3780805acda27e0b4e72efebaf59a6a",
+      "bytes": 655
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-sunburst/request.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-sunburst/request.json",
+      "sha256": "df7692fb45c4fb127242c942d0aaff8a7a96c96f03f19ffdbb360e1ec66bf27a",
+      "bytes": 1645
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-pdp-integration/README.md",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-pdp-integration/README.md",
+      "sha256": "82707fc0fde3a7f427d5a0084ee264260806edfea0c1115fbd938acbf1bdad41",
+      "bytes": 2246
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-pdp-integration/browser-check.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-pdp-integration/browser-check.cjs",
+      "sha256": "c4fb011f6a8898648f3313276872e5e4af107d47783eb273a6888c0e3c777aae",
+      "bytes": 5492
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-pdp-integration/browser-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-pdp-integration/browser-checks.json",
+      "sha256": "4cc2f6839a59325e2c5f9468e161a8f9ed3125a089ee306edc41e839a2314f9f",
+      "bytes": 21238
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-pdp-integration/kits-after.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-pdp-integration/kits-after.json",
+      "sha256": "15ace4cc57b5bc9413e0989504903b2135dabac7d80dab8b978ee9b2e514598c",
+      "bytes": 12758
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-pdp-integration/kits-before.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-pdp-integration/kits-before.json",
+      "sha256": "0d61b7da2ecabed6eeb03aabab5059884a80fb7bf08c0ca74a76c5457c2d9f7d",
+      "bytes": 6631
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-green-black-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-green-black-capon.png",
+      "sha256": "641acb38a3d0a581b1b5eee867b8bc13fae36ff4c638d184bf46587243794a93",
+      "bytes": 57641
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-green-white-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-green-white-capon.png",
+      "sha256": "ebab32263c2bfeaa6a8d764948b2a6b4bc3ae3835b488a6c2427579b489c1021",
+      "bytes": 167000
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-clear-black-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-clear-black-sidecar.png",
+      "sha256": "ed3c8b2a36a07274c4c444f8b91f0a8ad2fc410fd628cb64afe2923558efb350",
+      "bytes": 164445
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-green-black-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-green-black-exploded.png",
+      "sha256": "a33a5d9d6dff5e9b663f5ed04301f89157ccaed11c2a0c1cf64b41689d695998",
+      "bytes": 75055
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/browser-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/browser-checks.json",
+      "sha256": "a2d321170731962ab28482dbfffb2019762e4166ddbde124a2daf3f7c4188188",
+      "bytes": 76696
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-clear-black-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-clear-black-exploded.png",
+      "sha256": "5e44b368aef65043cda95caa6a281f49363ffd6a3e4ec24cdae671076eba656c",
+      "bytes": 193646
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-green-white-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-green-white-sidecar.png",
+      "sha256": "047bfbb03f062b3c361f2528e859ef80139d871c94bb30f9debbd49b225d73bf",
+      "bytes": 174434
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-blue-white-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-blue-white-capon.png",
+      "sha256": "4977e1950428fc7a0db2dc5a98336d1f851c051c98a9f24d084effc982f3e83a",
+      "bytes": 168219
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/reload-clear.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/reload-clear.png",
+      "sha256": "d002f37f586f157ec928657ef6d06cf1e78dffc11943a4805a61c51fb1b2fe1a",
+      "bytes": 55512
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-clear-white-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-clear-white-exploded.png",
+      "sha256": "a0ba0a7201a4d57f6183c716157a2371b76f63a30bc84ee3016b73e067c6c4b8",
+      "bytes": 67910
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-green-white-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-green-white-capon.png",
+      "sha256": "68680b74929094184fa82603d78ddc0f14f6e49593a8a431dc6ae9c82872d7fd",
+      "bytes": 55841
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-green-white-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-green-white-sidecar.png",
+      "sha256": "91a44d780a90b7bc212453173ecdd7e1ee1e720cb5305b76159963853c03b075",
+      "bytes": 60288
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-green-black-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-green-black-capon.png",
+      "sha256": "083cac8519915cab85e6f4cb28783c0b0e1440be87866b8c91ee5a8348a5fdb1",
+      "bytes": 167743
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-blue-white-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-blue-white-sidecar.png",
+      "sha256": "4974ccd7d6947d8461842a22f79447e6e190f5f4acba276b5ab027060a17526a",
+      "bytes": 175758
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/reload-amber.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/reload-amber.png",
+      "sha256": "858abbdc935315f900eb74fb07ee664b208a673e3e331e656a39db7c468dc458",
+      "bytes": 61884
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-green-white-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-green-white-exploded.png",
+      "sha256": "a960eab7bac79c53d5f0489acc59f8880467566ea69e88819142b3f89062ef7c",
+      "bytes": 202137
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-clear-black-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-clear-black-sidecar.png",
+      "sha256": "8de875b52d9097ab73d5f0b26e035c2cd286b6f9693a285b2e9a5f179dc1dbc5",
+      "bytes": 55529
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-blue-black-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-blue-black-capon.png",
+      "sha256": "67aba8c4fc9bf03244fc93948a52487d3fec846b4d7354d96da5b65ec1ac6add",
+      "bytes": 168953
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-amber-white-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-amber-white-sidecar.png",
+      "sha256": "54c4ebcb2c14cb0de38caa15be44baa8813d23c848f778881a343e74b66038fe",
+      "bytes": 60268
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/family-black-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/family-black-exploded.png",
+      "sha256": "d9aa08e2ead2e3b0c65dbcae6a2e98ab64510e9f74525592adceaf202e72f65d",
+      "bytes": 156525
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-amber-white-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-amber-white-capon.png",
+      "sha256": "5062a019018e2b0d2db3dcf0908e4352b0210340b823308ba92a7a6c824f83a8",
+      "bytes": 55939
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-amber-black-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-amber-black-capon.png",
+      "sha256": "28c49e198edd32cca1f4199215ad9c809e4f9e22f02ba4c808a52bdeb56153b5",
+      "bytes": 171530
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/legacy-query-blue.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/legacy-query-blue.png",
+      "sha256": "20b8800a01f8c95d2c004f365bcc21864b0e7aac04f01e3b644516d67c2f414b",
+      "bytes": 62132
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-amber-black-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-amber-black-exploded.png",
+      "sha256": "16ff639ed34a8e93399784705d4f20135132c42eeade5be98bc3f5a5d25d7456",
+      "bytes": 205533
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/legacy-query-green.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/legacy-query-green.png",
+      "sha256": "092b94779f0053c5c98151f9d545d3918991dc24b1b0e36a5111f5e2e7abc41f",
+      "bytes": 61711
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-blue-white-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-blue-white-exploded.png",
+      "sha256": "12e4fc67a7ba38740596958b1e41f25b954d78711573406a6bc272f32962f490",
+      "bytes": 203572
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-blue-black-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-blue-black-sidecar.png",
+      "sha256": "957e8cd5abfc3b9d8dcaf9f5c9b48ccb9bae7dd6f5ff16d88e4d669b6b5df599",
+      "bytes": 62311
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-amber-black-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-amber-black-capon.png",
+      "sha256": "590a2427a03d71637de968e42f1d2dd4c8e526b2660c370c8a2307952c68999d",
+      "bytes": 57749
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/before-blue.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/before-blue.png",
+      "sha256": "9a90905b8b809924da07fe15c2bc67fd3d69a9b4790a906cf6c83424c028227a",
+      "bytes": 206608
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-amber-white-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-amber-white-capon.png",
+      "sha256": "e16a338386a60df46b6933a146f1bf1f9e97f3e174203c989f8702d5cd8d969d",
+      "bytes": 170611
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-amber-white-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-amber-white-exploded.png",
+      "sha256": "4a92870588efd796f7fcb1b49abf610dd65d40d25d1d3c84223bc8fec40b864c",
+      "bytes": 73604
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-amber-white-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-amber-white-sidecar.png",
+      "sha256": "ccce9ca28af425a17ac1c4c4b13b43e021ff5221f2766f656e13c8e3dd07f3f8",
+      "bytes": 177937
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/before-green.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/before-green.png",
+      "sha256": "e99440959953ab0baa249823bd7d926daf2b3546b27f2155c67b8239209a60b3",
+      "bytes": 207748
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/family-white-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/family-white-sidecar.png",
+      "sha256": "e40f614f474bbbfc8089985f67da2bbeb6c2da93f54e6e318b0d9130c8fc2567",
+      "bytes": 155016
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-blue-white-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-blue-white-exploded.png",
+      "sha256": "a219706e5fa8b0411dcbfc8a4fae6dc41f53d4726e087f5febf56c679500a63c",
+      "bytes": 74600
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/legacy-query-amber.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/legacy-query-amber.png",
+      "sha256": "9abf2a13ad6aca70079d884cb2bc2b6b44ec71a27bb82c5f656707436382da35",
+      "bytes": 61889
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-clear-black-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-clear-black-exploded.png",
+      "sha256": "4b92ed97a9a922d6e61050dd8721de0604495b3a7677b5a70f5cdbc6074b6587",
+      "bytes": 69220
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-green-black-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-green-black-sidecar.png",
+      "sha256": "935d59c2d80355500bca5b4a05116afd621497fed3c87d4f9a8de191c71b51af",
+      "bytes": 174600
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/legacy-query-clear.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/legacy-query-clear.png",
+      "sha256": "64b7d68bc4429363899d1b0561eeef0e02dbbb04d20c0fce242f74ef48facf58",
+      "bytes": 55514
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-green-black-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-green-black-exploded.png",
+      "sha256": "1e4f8e42426a9f0b912e5b46b11b529d74402eb1a518f9700fb952e8e0c0209c",
+      "bytes": 202473
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-clear-white-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-clear-white-sidecar.png",
+      "sha256": "62ddcdd9d2555c148af48896ab6a203ae794e477b6c6c06f67cbfb0783f1ea7e",
+      "bytes": 164691
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-clear-white-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-clear-white-sidecar.png",
+      "sha256": "96116c2ef26a928e5bc0e7b5a2d32139d95500d9c2bd22f5e8b76090cbe21978",
+      "bytes": 54243
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-blue-black-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-blue-black-sidecar.png",
+      "sha256": "50728a6f6831ace808a335274d8b878ebbfbcb9f73ba7233288151eb982e81b6",
+      "bytes": 175839
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/before-clear.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/before-clear.png",
+      "sha256": "99a17b75b30340aa1214e3c29b31c9f7278ffd6a666c7ee3c5a5274ceb415cf5",
+      "bytes": 160028
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-green-white-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-green-white-exploded.png",
+      "sha256": "f9dc394e514e8ff9f59e4ad1778c7effaf822be6f9ed67dd5d72718fe055249e",
+      "bytes": 73699
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-green-black-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-green-black-sidecar.png",
+      "sha256": "cbc3213771695610f489dd3d57ab114066efd7397bf3dab7cb86140e711298da",
+      "bytes": 61713
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-clear-white-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-clear-white-exploded.png",
+      "sha256": "9c695d1bafdeefa0e45a2a1cd9a043e8d73cc46b2db3741939c6fce29a519eed",
+      "bytes": 193474
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/before-amber.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/before-amber.png",
+      "sha256": "7877efe99048ebd73c1482b668ad1c6bbee46cbd4ce7633e02dadc0597b55517",
+      "bytes": 213645
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-blue-black-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-blue-black-capon.png",
+      "sha256": "cb1c84a9dad594e7fdcb27ed94675940c336e328964c0c7e5062f12b629a3013",
+      "bytes": 57962
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/family-overview.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/family-overview.png",
+      "sha256": "ad99b23a5e424dc3f793a7c6ae2adbde5d443aa3161533092f314d7213708f24",
+      "bytes": 79596
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-clear-black-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-clear-black-capon.png",
+      "sha256": "8f5df19358c786246d5247313a9077fd8acc42175afefb4447299c182353ec5d",
+      "bytes": 158886
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/family-white-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/family-white-capon.png",
+      "sha256": "7417706412427a3bb179244c4a9d7067e7025fd9e74a3d9e307374385f1e43e8",
+      "bytes": 138744
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-clear-white-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-clear-white-capon.png",
+      "sha256": "e0f643054855a4da0d779bc8a13a47f71351336e5a72dda64b1bfc964da8aa92",
+      "bytes": 50934
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-amber-black-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-amber-black-exploded.png",
+      "sha256": "5a62a19355dd060c699b32fefb6ee9d75efffd4914b17e7fa67a55b9c9d3a66e",
+      "bytes": 75296
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-blue-black-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-blue-black-exploded.png",
+      "sha256": "859c933bfa649a9ba8c138578e259412dfbe07bdf2f63332e835191bee0ac1cc",
+      "bytes": 75871
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-amber-black-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-amber-black-sidecar.png",
+      "sha256": "5a842edb408652c85811f1bd766e8a07bf5bc62b2ece4892028f087f5e0dd163",
+      "bytes": 61906
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/reload-blue.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/reload-blue.png",
+      "sha256": "dfcc78c3076a6782d843c3406184383a4047eb3437c3cbcdb0e5eab63ec8cd88",
+      "bytes": 62284
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/family-black-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/family-black-sidecar.png",
+      "sha256": "26d4f2927717cdcc5506748968ba95de1bc85a03657d6558a37affbd62c2fc6c",
+      "bytes": 155880
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/family-white-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/family-white-exploded.png",
+      "sha256": "fa68c4f3a23123c2f41d4ca8a83bbe3199f26cdb95cec382c846b1bbbd468b27",
+      "bytes": 155506
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-blue-white-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-blue-white-capon.png",
+      "sha256": "8a4aee1f048062a3a929797ad6a96ab28cf275796574db752086c1f154858e26",
+      "bytes": 56504
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-amber-white-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-amber-white-exploded.png",
+      "sha256": "948fbc78b407b497b8804cb882cc5921fd947b3fc73118e3fae9a1b068058d40",
+      "bytes": 205123
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-blue-black-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-blue-black-exploded.png",
+      "sha256": "5d90abcb5ebf66a7c7828e44df6b479cd1081be35a1d66cfbfc1da0278b3629f",
+      "bytes": 203891
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-amber-black-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-amber-black-sidecar.png",
+      "sha256": "4fb1d4e070e24bd95d20ff4ed7f407afff9121912ca0330b89a12b7e697d5a34",
+      "bytes": 178086
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-blue-white-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-blue-white-sidecar.png",
+      "sha256": "ab38604da15e8c483b472ad102ea0553909b165fd1fe5d8750ad6f3282b894f0",
+      "bytes": 60724
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/reload-green.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/reload-green.png",
+      "sha256": "45feabbdcdda9c5aca339dbaad23af7d9352b547b80a6f45c315d606781b0f90",
+      "bytes": 61706
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-clear-white-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/desktop-clear-white-capon.png",
+      "sha256": "b98b1e2b7f96fc000ae564446dd9f9da75621604976c913f43fd473b3ac4e7ae",
+      "bytes": 158356
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/family-black-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/family-black-capon.png",
+      "sha256": "4c188b65c80045224c02c208f038e73b373cb32327e4e6e15c2a5e68f72e02e9",
+      "bytes": 140091
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-clear-black-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/screenshots/mobile-clear-black-capon.png",
+      "sha256": "d3d9dbacbe509f9a7f1dceeacc6570507a02b6cb4b7ff9d387a7e9c4c3b290cf",
+      "bytes": 52242
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/request.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/request.json",
+      "sha256": "9182eeca5e076f83af89ee817d59e3ac93246b585005a2a262798a0cc6bb0302",
+      "bytes": 7568
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/cobalt-prompt.txt",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/cobalt-prompt.txt",
+      "sha256": "faca6680a4720cd4384b2200bf0decb8208bb8477c5a3d4a4029a18787e9f054",
+      "bytes": 789
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/amber-v2-prompt.txt",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/amber-v2-prompt.txt",
+      "sha256": "6cf08c535f49b68f32ea4546922f71c0ea6276ffb4817d30a2ee5e1e4893c850",
+      "bytes": 874
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/clear-prompt.txt",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/clear-prompt.txt",
+      "sha256": "1c7c48f1b915d30da110b813a81dcc957824d1480f661b4884d2a3235b641a9c",
+      "bytes": 778
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/clear-v2-prompt.txt",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/clear-v2-prompt.txt",
+      "sha256": "8bf8de6fc5ec3b11fc6470b675e3be637372b3fb49af4691445c08192ba6b940",
+      "bytes": 881
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/amber-prompt.txt",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/amber-prompt.txt",
+      "sha256": "6a0e6ee8261451c8331cc447c4fc9bd9003c13cbd2591aa636142afa8ece2bfc",
+      "bytes": 783
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/additional-colors-approved.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/additional-colors-approved.json",
+      "sha256": "b03b2b551a407d94545652d44e2fa15be8d226f3214fc299e470263e555d0437",
+      "bytes": 5270
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/amber-color-edit-prompt.txt",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/amber-color-edit-prompt.txt",
+      "sha256": "b7e8b4171b0fc34c925f3fcb9fdc04a912847b86f5cc84a1b626f4a6be755472",
+      "bytes": 760
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/cobalt-color-edit-prompt.txt",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/cobalt-color-edit-prompt.txt",
+      "sha256": "573aa4f92bd91d03b1e94c63898629cdefe4334e64c15118a0889428fb2338f1",
+      "bytes": 751
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/green-prompt.txt",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/green-prompt.txt",
+      "sha256": "d02f3feef173e8a3444d66179540ef3b73bf3b9fd8706f491fd23952e32d4ace",
+      "bytes": 791
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/clear-v3-quality-gate.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/clear-v3-quality-gate.json",
+      "sha256": "4ece0e9de83585b0baa5113ed7cf063f8b94fea6a6bed746644b153723b1394c",
+      "bytes": 536
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/amber-request.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/amber-request.json",
+      "sha256": "b876ace9988e11cd338a5799dc52f2417a14d0a8b56a28532ccb76df5c4284dc",
+      "bytes": 1174
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/approved-request.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/approved-request.json",
+      "sha256": "297ffa8f08a40fdde759e6eb1e51257d84b1ab44b4af55921d0f2dc159e173c5",
+      "bytes": 7652
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/clear-quality-gate.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/clear-quality-gate.json",
+      "sha256": "3ba2d05e8fbc044e7ef87f51e8445fac182a6068d32f7b012c4151e339a1f8de",
+      "bytes": 249
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/green-color-edit-prompt.txt",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/green-color-edit-prompt.txt",
+      "sha256": "77566b948c7a0514ecf0d0dcb2fd23a52ec97e7763576ac2978a8a748cf766f9",
+      "bytes": 734
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/amber-guide-only-prompt.txt",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/amber-guide-only-prompt.txt",
+      "sha256": "a0a193ee001e1a440e4d4356a2e9cc7b4d42aa4d560cfd896a57f5d23688a56a",
+      "bytes": 617
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/additional-colors-prepared.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/additional-colors-prepared.json",
+      "sha256": "222fd6fefc7e17629aedc84c70abd3aeebb7f568a9da78d2f6fe7b381ca97219",
+      "bytes": 2518
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/clear-v3-request.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/clear-v3-request.json",
+      "sha256": "4d52956cb715d2e90f8e5bde0a162b14a7e61673e190af29e6ce448ef6f51e75",
+      "bytes": 476
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/clear-v2-request.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/clear-v2-request.json",
+      "sha256": "a61ae6aef55f40e85f56efecf3b93fd6c2b74ea2fff8942b5d1ca1c4c2e383e5",
+      "bytes": 483
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/clear-v3-prompt.txt",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/clear-v3-prompt.txt",
+      "sha256": "86228f4ed9da0c4a7b2cb4abb23ce2ec8d8bdbcdfac3d838a1fb9fbc0582c7f0",
+      "bytes": 967
+    }
+  ]
+}

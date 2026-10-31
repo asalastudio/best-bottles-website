@@ -1,0 +1,1998 @@
+{
+  "status": "LOCAL REVIEW ONLY. No originals replaced, no upload or production changes. Not a catalog-wide sign-off.",
+  "scope": "3.3 ml and 4 ml clear 12 mm fine mist; 5 ml Cylinder clear/cobalt 13-415",
+  "skus": [
+    {
+      "sku": "GBSpry3mlClBlk",
+      "body": "cylinder-3.3ml-clear-12mm",
+      "defects": [
+        "body crop omitted the neck",
+        "overweight heel in first model candidate",
+        "inconsistent fitment crops",
+        "duplicate overcap choices",
+        "3 ml / 3.3 ml naming conflict"
+      ],
+      "corrections": [
+        "closed Blender glass with complete neck and lighter heel",
+        "published external envelope preserved",
+        "black and white head photographs cropped consistently",
+        "one clear cover master",
+        "approved scale and foot unchanged",
+        "product-page only"
+      ],
+      "status": "local visual review; concealed finish remains inferred"
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "body": "cylinder-3.3ml-clear-12mm",
+      "defects": [
+        "body crop omitted the neck",
+        "overweight heel in first model candidate",
+        "inconsistent fitment crops",
+        "duplicate overcap choices",
+        "3 ml / 3.3 ml naming conflict"
+      ],
+      "corrections": [
+        "closed Blender glass with complete neck and lighter heel",
+        "published external envelope preserved",
+        "black and white head photographs cropped consistently",
+        "one clear cover master",
+        "approved scale and foot unchanged",
+        "product-page only"
+      ],
+      "status": "local visual review; concealed finish remains inferred"
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "body": "cylinder-4ml-clear-12mm",
+      "defects": [
+        "body crop omitted the neck",
+        "overweight heel in first model candidate",
+        "inconsistent fitment crops",
+        "duplicate overcap choices"
+      ],
+      "corrections": [
+        "closed Blender glass with complete neck and lighter heel",
+        "published external envelope preserved",
+        "black and white head photographs cropped consistently",
+        "one clear cover master",
+        "approved scale and foot unchanged",
+        "product-page only"
+      ],
+      "status": "local visual review; concealed finish remains inferred"
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "body": "cylinder-4ml-clear-12mm",
+      "defects": [
+        "body crop omitted the neck",
+        "overweight heel in first model candidate",
+        "inconsistent fitment crops",
+        "duplicate overcap choices"
+      ],
+      "corrections": [
+        "closed Blender glass with complete neck and lighter heel",
+        "published external envelope preserved",
+        "black and white head photographs cropped consistently",
+        "one clear cover master",
+        "approved scale and foot unchanged",
+        "product-page only"
+      ],
+      "status": "local visual review; concealed finish remains inferred"
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide",
+        "bent assembled dip tube"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved",
+        "centered straight 1.1 mm OD tube; full tube in exploded view"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5Sl",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5WhtSht",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5Gl",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5Sl",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5Gl",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5MtlRollCuMatt",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkSh",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5MtlRollGlMatt",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5MtlRollSlMatt",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5MtlRollPinkDot",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5MtlRollGlSh",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5MtlRollSlDot",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5MtlRollSlSh",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollCuMatt",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlMatt",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollPinkDot",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkSh",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlSh",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlDot",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5SpryBluMatt",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide",
+        "bent assembled dip tube"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved",
+        "centered straight 1.1 mm OD tube; full tube in exploded view"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide",
+        "bent assembled dip tube"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved",
+        "centered straight 1.1 mm OD tube; full tube in exploded view"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5SpryBlkSh",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide",
+        "bent assembled dip tube"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved",
+        "centered straight 1.1 mm OD tube; full tube in exploded view"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5SpryGlSh",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide",
+        "bent assembled dip tube"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved",
+        "centered straight 1.1 mm OD tube; full tube in exploded view"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5SprySlSh",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide",
+        "bent assembled dip tube"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved",
+        "centered straight 1.1 mm OD tube; full tube in exploded view"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlMatt",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlSh",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5SpryCuMatt",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide",
+        "bent assembled dip tube"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved",
+        "centered straight 1.1 mm OD tube; full tube in exploded view"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5SpryGlMatt",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide",
+        "bent assembled dip tube"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved",
+        "centered straight 1.1 mm OD tube; full tube in exploded view"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5SpryBlkSh",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide",
+        "bent assembled dip tube"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved",
+        "centered straight 1.1 mm OD tube; full tube in exploded view"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5SpryGlSh",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide",
+        "bent assembled dip tube"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved",
+        "centered straight 1.1 mm OD tube; full tube in exploded view"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5SprySlSh",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide",
+        "bent assembled dip tube"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved",
+        "centered straight 1.1 mm OD tube; full tube in exploded view"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5SpryBluMatt",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide",
+        "bent assembled dip tube"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved",
+        "centered straight 1.1 mm OD tube; full tube in exploded view"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5SpryCuMatt",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide",
+        "bent assembled dip tube"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved",
+        "centered straight 1.1 mm OD tube; full tube in exploded view"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide",
+        "bent assembled dip tube"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved",
+        "centered straight 1.1 mm OD tube; full tube in exploded view"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5SprySlMatt",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide",
+        "bent assembled dip tube"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved",
+        "centered straight 1.1 mm OD tube; full tube in exploded view"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5RollBlkSh",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5RollGlSh",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5RollSlDot",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5RollSlSh",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5RollCuMatt",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5RollGlMatt",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5RollSlMatt",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5RollPinkDot",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5RollGlSh",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5RollGlMatt",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5RollPinkDot",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5RollBlkSh",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5RollSlDot",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5RollSlSh",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5RollCuMatt",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5RollSlMatt",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5BlkSht",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5BlkSht",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5CuSht",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5GlMattSht",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5GlSht",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCylBlu5SlSht",
+      "body": "cylinder-5ml-13-415 Cobalt Blue",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5CuSht",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5SlMattSht",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5BlkShSht",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5WhtSht",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5GlSht",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    },
+    {
+      "sku": "GBCyl5SlSht",
+      "body": "cylinder-5ml-13-415 Clear",
+      "defects": [
+        "prior nominal 17 mm body did not match user caliper measurements",
+        "neck and shoulder silhouette did not match the physical bottle; shoulder datum and internal depth were estimated",
+        "rim and thread walls needed measurement-based reconstruction",
+        "unmeasured 12 mm plain rim and flared opening made the neck read too wide"
+      ],
+      "corrections": [
+        "53.23 mm overall height; nominal 17.45 mm gently bowed body",
+        "40.10 mm shoulder to base; 48.80 mm internal depth; 4.43 mm inner floor",
+        "12.00 mm root and 12.60 mm thread-crest diameters",
+        "1.80 mm lip wall and 2.64 mm wall at thread crests; inferred uniform 7.32 mm bore and derived 10.92 mm plain rim",
+        "short smooth shoulder and rounded threads referenced to upright and side-view physical photographs; real lower ring and gap retained",
+        "one shared geometry for clear and cobalt",
+        "approved scale targets and closure anchors preserved"
+      ],
+      "status": "local visual review against user caliper dimensions; uniform bore inferred; plain rim derived as 10.92 mm"
+    }
+  ],
+  "models": [
+    {
+      "label": "3.3 ml clear",
+      "scene": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/small-sprayers/renders/glass-3.3-profile-v4.blend",
+      "render": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/small-sprayers/renders/glass-3.3-profile-v4.png",
+      "sha256": "8162210929602d1f642c0469444796211b3e2870a774aa890c93aabe2cfb3ee1",
+      "dimensionsMm": [
+        14.0,
+        14.0,
+        37.0
+      ],
+      "inferred": [
+        "12 mm concealed finish profile",
+        "1.05 mm nominal wall",
+        "1.6 mm heel; visual inference from source photo"
+      ],
+      "crop": [
+        1060,
+        2651,
+        1440,
+        3622
+      ],
+      "axis": 1250.0,
+      "baseline": 3597.9901552200317,
+      "shoulder": 2824.0524530410767,
+      "sourcePxPerMm": 25,
+      "geometry": {
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentNormalEdges": 0,
+        "degenerateFaces": 0,
+        "volumeMm3": 1771.0855174206922,
+        "vertices": 28034,
+        "faces": 28224
+      },
+      "sourceReference": "small-sprayers/source-review/sources.json",
+      "status": "local visual review candidate",
+      "hardware_lit": [
+        "CAP_BlackDotted_Shell",
+        "CAP_Jewel_center_1",
+        "CAP_Jewel_center_2",
+        "CAP_Jewel_center_3",
+        "CAP_Jewel_left_1",
+        "CAP_Jewel_left_2",
+        "CAP_Jewel_right_1",
+        "CAP_Jewel_right_2",
+        "ROLLER_Ball \u2014 plastic or stainless",
+        "ROLLER_Housing_Flange_HollowStem",
+        "pump \u2014 discharge recess backing",
+        "pump \u2014 measured dip tube \u00d83.55",
+        "pump \u2014 measured pump body",
+        "pump \u2014 phenolic collar",
+        "pump \u2014 stationary white sleeve",
+        "pump \u2014 translucent overcap",
+        "pump \u2014 white actuator"
+      ]
+    },
+    {
+      "label": "4 ml clear",
+      "scene": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/small-sprayers/renders/glass-4-profile-v4.blend",
+      "render": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/small-sprayers/renders/glass-4-profile-v4.png",
+      "sha256": "0c65763f4b94921c9190b46696f9795bbc006872fa4a944af9a35056856cc363",
+      "dimensionsMm": [
+        14.0,
+        14.0,
+        49.0
+      ],
+      "inferred": [
+        "12 mm concealed finish profile",
+        "1.05 mm nominal wall",
+        "1.6 mm heel; visual inference from source photo"
+      ],
+      "crop": [
+        1060,
+        2352,
+        1440,
+        3622
+      ],
+      "axis": 1250.0,
+      "baseline": 3597.9901552200317,
+      "shoulder": 2524.463415145874,
+      "sourcePxPerMm": 25,
+      "geometry": {
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentNormalEdges": 0,
+        "degenerateFaces": 0,
+        "volumeMm3": 2283.6075065983578,
+        "vertices": 35330,
+        "faces": 35520
+      },
+      "sourceReference": "small-sprayers/source-review/sources.json",
+      "status": "local visual review candidate",
+      "hardware_lit": [
+        "CAP_BlackDotted_Shell",
+        "CAP_Jewel_center_1",
+        "CAP_Jewel_center_2",
+        "CAP_Jewel_center_3",
+        "CAP_Jewel_left_1",
+        "CAP_Jewel_left_2",
+        "CAP_Jewel_right_1",
+        "CAP_Jewel_right_2",
+        "ROLLER_Ball \u2014 plastic or stainless",
+        "ROLLER_Housing_Flange_HollowStem",
+        "pump \u2014 discharge recess backing",
+        "pump \u2014 measured dip tube \u00d83.55",
+        "pump \u2014 measured pump body",
+        "pump \u2014 phenolic collar",
+        "pump \u2014 stationary white sleeve",
+        "pump \u2014 translucent overcap",
+        "pump \u2014 white actuator"
+      ]
+    },
+    {
+      "label": "5 ml clear",
+      "scene": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/small-sprayers/renders/glass-5-clear-measured-v19.blend",
+      "render": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/small-sprayers/renders/glass-5-clear-measured-v19.png",
+      "sha256": "e66b67414c119eb8f999a37f26bf0a3808a95732fa123a0d0ce6f8e9b59640c6",
+      "dimensionsMm": [
+        17.45,
+        17.45,
+        53.23
+      ],
+      "inferred": [
+        "Subtle body bow retained at revised 17.45 mm maximum diameter",
+        "Uniform 7.32 mm opening assumed; 10.92 mm rim derived from measured 1.80 mm rim wall and 2.64 mm thread-crest wall",
+        "Unthreaded neck lands matched to derived rim and user reference; actual thread roots remain 12.00 mm"
+      ],
+      "crop": [
+        1015,
+        2246,
+        1485,
+        3622
+      ],
+      "axis": 1250.0,
+      "baseline": 3597.9901552200317,
+      "shoulder": 2596.864104270935,
+      "sourcePxPerMm": 25,
+      "geometry": {
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentNormalEdges": 0,
+        "degenerateFaces": 0,
+        "volumeMm3": 5634.489152845048,
+        "vertices": 267266,
+        "faces": 267648
+      },
+      "sourceReference": "small-sprayers/source-review/sources.json",
+      "status": "Local updated geometry with approved per-glass appearance; no production changes",
+      "hardware_lit": [
+        "CAP_BlackDotted_Shell",
+        "CAP_Jewel_center_1",
+        "CAP_Jewel_center_2",
+        "CAP_Jewel_center_3",
+        "CAP_Jewel_left_1",
+        "CAP_Jewel_left_2",
+        "CAP_Jewel_right_1",
+        "CAP_Jewel_right_2",
+        "ROLLER_Ball \u2014 plastic or stainless",
+        "ROLLER_Housing_Flange_HollowStem",
+        "pump \u2014 discharge recess backing",
+        "pump \u2014 measured dip tube \u00d83.55",
+        "pump \u2014 measured pump body",
+        "pump \u2014 phenolic collar",
+        "pump \u2014 stationary white sleeve",
+        "pump \u2014 translucent overcap",
+        "pump \u2014 white actuator"
+      ],
+      "sourceScene": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/small-sprayers/renders/glass-5-clear-measured-v16.blend",
+      "appearanceChanges": [],
+      "referenceImage": "/Users/jordanrichter/Downloads/EB36A593-F711-4CAD-8D9C-5671333C48B3.PNG",
+      "referenceSha256": "20518a1a613143fd3fd6a535f206e5e0fc359e39ad8248d1a099749ca1335e5a",
+      "referenceUse": "User-confirmed clear 5 ml glass example; lighting and visible glass cues, with measured dimensions retained",
+      "geometrySha256": "90705aeb7df2dda29e4393de104961876c59442e7b637b8d73956f33c724cc87",
+      "finalDiameterUpdate": {
+        "bodyMm": 17.45,
+        "outsideThreadMm": 12.6,
+        "rootMm": 12,
+        "threadBoreMm": 7.32,
+        "plainRimMm": 10.92,
+        "plainLandMm": 10.92,
+        "inference": "Uniform bore; rim OD derived from 1.80 mm wall, plain land matched to rim and clear reference; thread roots remain 12.00 mm",
+        "source": "Jordan revised caliper readings, 2026-10-31 after clear reference review"
+      },
+      "appearancePreservedFrom": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/small-sprayers/renders/glass-5-clear-measured-v16.blend"
+    },
+    {
+      "label": "5 ml cobalt",
+      "scene": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/small-sprayers/renders/glass-5-cobalt-measured-v19.blend",
+      "render": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/small-sprayers/renders/glass-5-cobalt-measured-v19.png",
+      "sha256": "aad0f0df8534c8e165dcbd39289ac492151a00ce0597f3df6d6644ee27fa3683",
+      "dimensionsMm": [
+        17.45,
+        17.45,
+        53.23
+      ],
+      "inferred": [
+        "Subtle body bow retained at revised 17.45 mm maximum diameter",
+        "Uniform 7.32 mm opening assumed; 10.92 mm rim derived from measured 1.80 mm rim wall and 2.64 mm thread-crest wall",
+        "Unthreaded neck lands matched to derived rim and user reference; actual thread roots remain 12.00 mm"
+      ],
+      "crop": [
+        1015,
+        2246,
+        1485,
+        3622
+      ],
+      "axis": 1250.0,
+      "baseline": 3597.9901552200317,
+      "shoulder": 2596.864104270935,
+      "sourcePxPerMm": 25,
+      "geometry": {
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentNormalEdges": 0,
+        "degenerateFaces": 0,
+        "volumeMm3": 5634.489152845048,
+        "vertices": 267266,
+        "faces": 267648
+      },
+      "sourceReference": "small-sprayers/source-review/sources.json",
+      "status": "Local updated geometry with approved per-glass appearance; no production changes",
+      "hardware_lit": [
+        "CAP_BlackDotted_Shell",
+        "CAP_Jewel_center_1",
+        "CAP_Jewel_center_2",
+        "CAP_Jewel_center_3",
+        "CAP_Jewel_left_1",
+        "CAP_Jewel_left_2",
+        "CAP_Jewel_right_1",
+        "CAP_Jewel_right_2",
+        "ROLLER_Ball \u2014 plastic or stainless",
+        "ROLLER_Housing_Flange_HollowStem",
+        "pump \u2014 discharge recess backing",
+        "pump \u2014 measured dip tube \u00d83.55",
+        "pump \u2014 measured pump body",
+        "pump \u2014 phenolic collar",
+        "pump \u2014 stationary white sleeve",
+        "pump \u2014 translucent overcap",
+        "pump \u2014 white actuator"
+      ],
+      "sourceScene": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/small-sprayers/renders/glass-5-cobalt-measured-v9.blend",
+      "geometrySha256": "90705aeb7df2dda29e4393de104961876c59442e7b637b8d73956f33c724cc87",
+      "finalDiameterUpdate": {
+        "bodyMm": 17.45,
+        "outsideThreadMm": 12.6,
+        "rootMm": 12,
+        "threadBoreMm": 7.32,
+        "plainRimMm": 10.92,
+        "plainLandMm": 10.92,
+        "inference": "Uniform bore; rim OD derived from 1.80 mm wall, plain land matched to rim and clear reference; thread roots remain 12.00 mm",
+        "source": "Jordan revised caliper readings, 2026-10-31 after clear reference review"
+      },
+      "appearancePreservedFrom": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/small-sprayers/renders/glass-5-cobalt-measured-v9.blend",
+      "appearanceChanges": []
+    }
+  ],
+  "orientationPolicy": "Catalog base stays down and neck stays up. Inverted IMG_6848/6849 are base-detail references only.",
+  "limitations": [
+    "The exact 3.3/4 ml original PSD photos have the sprayer on. Their concealed 12 mm finish geometry is inferred, not manufacturer-verified.",
+    "Five ml dimensions now follow Jordan caliper measurements. A uniform 7.32 mm opening is inferred from the measured 12.60 mm crest and 2.64 mm wall; the 1.80 mm rim wall gives a 10.92 mm plain rim. Unthreaded neck lands follow that diameter and the supplied clear reference. This is not a manufacturing tolerance drawing.",
+    "The legacy technical drawing, label-fit diagram and PDF link are omitted only for these local measured-body previews because they still carry the earlier dimensions. They require a separate measured drawing update before release.",
+    "The product data still carries legacy 5 ml dimensions; local callouts and the tech sheet now show 53.23 mm height and 17.45 mm nominal diameter. No backend record was changed.",
+    "This local review does not approve unrelated product families, checkout or redirects."
+  ],
+  "sources": [
+    {
+      "url": "https://www.bestbottles.com/product/Sample-Promotional-Decant-Spray-clear-glass-vial-Black-Sprayer-3ml",
+      "use": "3.3 ml description, 14 mm diameter, 37 mm bare height"
+    },
+    {
+      "url": "https://www.bestbottles.com/product/Sample-Promotional-Decant-Spray-clear-glass-vial-Black-Sprayer-4ml",
+      "use": "14 mm diameter, 49 mm bare height"
+    },
+    {
+      "url": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-black-cap",
+      "use": "Historical nominal reference only. Superseded by Jordan physical measurements for this model."
+    }
+  ],
+  "clearGlassAppearance": {
+    "version": "v19",
+    "change": "Restored graduated neutral-grey reflection cards, replaced short strips with a broad diffuser and full-height feathered highlights from Jordan\u2019s clear 5 ml example, and restored the lit studio background through clear glass. Approved clear v16 and cobalt v9 appearance settings are retained while both share the v19 measured neck/body geometry. Camera, crop, scale and closures remain unchanged.",
+    "previous": "renders/glass-5-clear-measured-v9.png",
+    "current": "renders/glass-5-clear-measured-v19.png"
+  },
+  "verification": {
+    "rows": [
+      {
+        "glass": "clear",
+        "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/small-sprayers/renders/glass-5-clear-measured-v19.blend",
+        "measured": {
+          "heightMm": 53.22999879717827,
+          "barrelDiameterMm": 17.450000300533993,
+          "internalDepthMm": 48.799998592585325,
+          "baseThicknessMm": 4.430000204592943,
+          "rootDiameterMm": 11.999999487294877,
+          "crestDiameterMm": 12.60000083854995,
+          "threadBoreMm": 7.319999501305395,
+          "plainRimDiameterMm": 10.920000758974046,
+          "lipBoreMm": 7.31999934784409,
+          "rimWallMm": 1.8000007055649783,
+          "threadCrestWallMm": 2.6400006686222772
+        },
+        "expected": {
+          "heightMm": 53.23,
+          "barrelDiameterMm": 17.45,
+          "internalDepthMm": 48.8,
+          "baseThicknessMm": 4.43,
+          "rootDiameterMm": 12,
+          "crestDiameterMm": 12.6,
+          "threadBoreMm": 7.32,
+          "plainRimDiameterMm": 10.92,
+          "lipBoreMm": 7.32,
+          "rimWallMm": 1.8,
+          "threadCrestWallMm": 2.64
+        },
+        "checks": {
+          "heightMm": true,
+          "barrelDiameterMm": true,
+          "internalDepthMm": true,
+          "baseThicknessMm": true,
+          "rootDiameterMm": true,
+          "crestDiameterMm": true,
+          "threadBoreMm": true,
+          "plainRimDiameterMm": true,
+          "lipBoreMm": true,
+          "rimWallMm": true,
+          "threadCrestWallMm": true,
+          "baseDownNeckUp": true,
+          "cameraClipSafe": true
+        },
+        "geometry": {
+          "nonManifoldEdges": 0,
+          "flippedEdges": 0,
+          "degenerateFaces": 0
+        },
+        "geometrySha256": "55979c0ec53ac71051cf12f3b113704f785c855f8cde6735e44a79222ba864c1"
+      },
+      {
+        "glass": "cobalt",
+        "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/small-sprayers/renders/glass-5-cobalt-measured-v19.blend",
+        "measured": {
+          "heightMm": 53.22999879717827,
+          "barrelDiameterMm": 17.450000300533993,
+          "internalDepthMm": 48.799998592585325,
+          "baseThicknessMm": 4.430000204592943,
+          "rootDiameterMm": 11.999999487294877,
+          "crestDiameterMm": 12.60000083854995,
+          "threadBoreMm": 7.319999501305395,
+          "plainRimDiameterMm": 10.920000758974046,
+          "lipBoreMm": 7.31999934784409,
+          "rimWallMm": 1.8000007055649783,
+          "threadCrestWallMm": 2.6400006686222772
+        },
+        "expected": {
+          "heightMm": 53.23,
+          "barrelDiameterMm": 17.45,
+          "internalDepthMm": 48.8,
+          "baseThicknessMm": 4.43,
+          "rootDiameterMm": 12,
+          "crestDiameterMm": 12.6,
+          "threadBoreMm": 7.32,
+          "plainRimDiameterMm": 10.92,
+          "lipBoreMm": 7.32,
+          "rimWallMm": 1.8,
+          "threadCrestWallMm": 2.64
+        },
+        "checks": {
+          "heightMm": true,
+          "barrelDiameterMm": true,
+          "internalDepthMm": true,
+          "baseThicknessMm": true,
+          "rootDiameterMm": true,
+          "crestDiameterMm": true,
+          "threadBoreMm": true,
+          "plainRimDiameterMm": true,
+          "lipBoreMm": true,
+          "rimWallMm": true,
+          "threadCrestWallMm": true,
+          "baseDownNeckUp": true,
+          "cameraClipSafe": true
+        },
+        "geometry": {
+          "nonManifoldEdges": 0,
+          "flippedEdges": 0,
+          "degenerateFaces": 0
+        },
+        "geometrySha256": "55979c0ec53ac71051cf12f3b113704f785c855f8cde6735e44a79222ba864c1"
+      }
+    ],
+    "sameGeometryForBothGlasses": true
+  },
+  "photoOrientation": {
+    "files": {
+      "IMG_6841": "Upright standing bottle, low camera angle. Primary neck/shoulder silhouette reference.",
+      "IMG_6842": "Upright standing bottle, oblique top view. Rim and neck reference.",
+      "IMG_6843": "Bottle lying on side, mouth facing camera. Opening reference only; not catalog orientation.",
+      "IMG_6845": "Bottle lying on plate, neck at top of image. Side silhouette reference; render remains upright.",
+      "IMG_6846": "Bottle lying on side, neck to left. Side silhouette reference; render remains upright.",
+      "IMG_6848": "UPSIDE DOWN, base facing up. Base underside detail only; excluded from neck/profile orientation.",
+      "IMG_6849": "UPSIDE DOWN, base facing up. Base underside detail only; excluded from neck/profile orientation.",
+      "IMG_6850": "Upright standing bottle, oblique upper view. Shoulder and neck reference.",
+      "IMG_6851": "Upright standing bottle, oblique upper view. Shoulder and neck reference.",
+      "IMG_6853": "Top-down opening view. Mouth reference only; not catalog orientation."
+    },
+    "renderOrientation": "Base at Z=0, neck toward +Z; unchanged approved catalog camera",
+    "photoFindings": [
+      "Lower annular neck bead and a gap above it are visible in the real bottle and must be retained.",
+      "Thread crests are rounded; the old exaggerated sharp projections must be softened at measured 12.64 mm maximum.",
+      "Shoulder is a short smooth transition into the neck, not a thick bulb.",
+      "Do not copy the upside-down base rim as the neck."
+    ]
+  },
+  "fiveMlUserMeasurements": {
+    "source": "Jordan physical caliper measurements, 2026-10-31, current conversation",
+    "precedence": "Latest 12.60 mm outside-thread and 17.45 mm body readings supersede 12.64 and 17.55 respectively",
+    "heightOverallMm": 53.23,
+    "bodyDiameterNominalMm": 17.45,
+    "shape": "Very subtle convex barrel; preserve natural slope, not a perfect straight cylinder",
+    "rawDiameterReadingsMm": {
+      "firstSet": {
+        "top": 17.44,
+        "middle": 17.51,
+        "base": 17.56
+      },
+      "secondSet": {
+        "top": 17.55,
+        "middle": 17.65,
+        "bottom": 17.5
+      }
+    },
+    "shoulderToBaseMm": 40.1,
+    "neckThreadRootDiameterMm": 12.0,
+    "neckThreadCrestDiameterMm": 12.6,
+    "internalDepthMm": 48.8,
+    "derivedCenterBaseThicknessMm": 4.43,
+    "status": "New caliper diameters applied to both glasses; approved per-glass appearance retained; local review",
+    "rimWallThicknessMm": 1.8,
+    "threadCrestWallThicknessMm": 2.64,
+    "derivedThreadBoreDiameterMm": 7.32,
+    "derivedLipBoreDiameterMm": 7.32,
+    "neckTransition": "Uniform 7.32 mm bore; 10.92 mm plain rim and neck lands, with 12.00 mm actual thread roots and 12.60 mm crests",
+    "appliesTo": [
+      "5 ml Cylinder clear 13-415",
+      "5 ml Cylinder cobalt blue 13-415"
+    ],
+    "latestNeckClarification": {
+      "source": "Jordan, current conversation after measured-v9 local review",
+      "outsideThreadDiameterMm": 12.6,
+      "rimEdgeGlassThicknessMm": 1.8,
+      "rimToOutsideThreadThicknessMm": 2.64,
+      "interpretation": "Final wording interpreted as radial glass thickness at the plain rim and including the outside thread, respectively. The earlier phrase about neck height was followed by this clarification. These two numbers are not used as vertical neck heights.",
+      "rootDiameterNote": "12.00 mm root diameter retained from earlier explicit measurement; latest wording confirms 12.64 mm across the outside of the threads.",
+      "referenceImage": "user-photos/clear-5ml-appearance-reference.png; user-confirmed clear 5 ml example"
+    },
+    "sharedGeometryVerification": "five-measured-verification.json: identical v19 geometry for clear and cobalt",
+    "derivedPlainRimDiameterMm": 10.92,
+    "inferredPlainNeckLandDiameterMm": 10.92,
+    "assumptions": [
+      "Uniform opening through the neck is inferred, not independently measured",
+      "Plain rim OD = 12.60 - 2*2.64 + 2*1.80 = 10.92 mm",
+      "Unthreaded lands use the derived rim OD, guided by the user-confirmed clear 5 ml reference"
+    ]
+  }
+}

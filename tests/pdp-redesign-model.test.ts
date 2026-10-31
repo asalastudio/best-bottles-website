@@ -197,6 +197,10 @@ describe("copy", () => {
 });
 
 describe("exploded callouts (render only what the field holds)", () => {
+    it("describes the reducer as a press-fit insert rather than a threaded closure", () => {
+        const rows = callouts(variant({ websiteSku: "GBElg60RdcrShnGl", graceSku: "GB-ELG-CLR-60ML-RDC-SGLD", applicator: "Reducer", neckThreadSize: "18-415" }), "Shiny Gold");
+        expect(rows.find(row => row.key === "fitment")?.line2).toBe("Press-fit into 18-415 neck");
+    });
     it("names cap, fitment, neck and body from the SKU", () => {
         const rows = callouts(VARIANTS[0], "Black with Dots");
         expect(rows.map((row) => row.key)).toEqual(["cap", "fitment", "neck", "body"]);

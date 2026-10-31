@@ -1,0 +1,23 @@
+{
+  "image": "clear-v3.png",
+  "model": "gpt-image-2.5-sunburst",
+  "generation": 4,
+  "authorizedMaximum": 4,
+  "alphaBounds": [
+    419,
+    95,
+    769,
+    1220
+  ],
+  "dimensions": [
+    1195,
+    1316
+  ],
+  "aspect": 0.3111111111111111,
+  "targetAspect": 0.3245887060915963,
+  "visualShoulderY": 274,
+  "neckRatio": 0.15911111111111112,
+  "targetNeckRatio": 0.15562472209871056,
+  "status": "Candidate for local registration; neck corrected; native body is slightly narrower than measured ratio",
+  "productionPublished": false
+}

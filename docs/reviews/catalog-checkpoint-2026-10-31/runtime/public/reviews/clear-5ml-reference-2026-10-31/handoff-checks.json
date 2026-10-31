@@ -1,0 +1,752 @@
+{
+  "configurations": [
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "color": "Clear",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Matte Black",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5Sl",
+      "color": "Cobalt Blue",
+      "fitment": "Screw Cap",
+      "closure": "Tall Regular Shiny Silver",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5WhtSht",
+      "color": "Cobalt Blue",
+      "fitment": "Screw Cap",
+      "closure": "Short Ribbed White",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5Gl",
+      "color": "Clear",
+      "fitment": "Screw Cap",
+      "closure": "Tall Regular Shiny Gold",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5Sl",
+      "color": "Clear",
+      "fitment": "Screw Cap",
+      "closure": "Tall Regular Shiny Silver",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5Gl",
+      "color": "Cobalt Blue",
+      "fitment": "Screw Cap",
+      "closure": "Tall Regular Shiny Gold",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5MtlRollCuMatt",
+      "color": "Clear",
+      "fitment": "Metal Roller",
+      "closure": "Matte Copper Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkSh",
+      "color": "Clear",
+      "fitment": "Metal Roller",
+      "closure": "Shiny Black Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5MtlRollGlMatt",
+      "color": "Clear",
+      "fitment": "Metal Roller",
+      "closure": "Matte Gold Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5MtlRollSlMatt",
+      "color": "Clear",
+      "fitment": "Metal Roller",
+      "closure": "Matte Silver Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5MtlRollPinkDot",
+      "color": "Clear",
+      "fitment": "Metal Roller",
+      "closure": "Pink with Dots Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5MtlRollGlSh",
+      "color": "Clear",
+      "fitment": "Metal Roller",
+      "closure": "Shiny Gold Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5MtlRollSlDot",
+      "color": "Clear",
+      "fitment": "Metal Roller",
+      "closure": "Silver with Dots Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5MtlRollSlSh",
+      "color": "Clear",
+      "fitment": "Metal Roller",
+      "closure": "Shiny Silver Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollCuMatt",
+      "color": "Cobalt Blue",
+      "fitment": "Metal Roller",
+      "closure": "Matte Copper Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlMatt",
+      "color": "Cobalt Blue",
+      "fitment": "Metal Roller",
+      "closure": "Matte Gold Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollPinkDot",
+      "color": "Cobalt Blue",
+      "fitment": "Metal Roller",
+      "closure": "Pink with Dots Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkSh",
+      "color": "Cobalt Blue",
+      "fitment": "Metal Roller",
+      "closure": "Shiny Black Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlSh",
+      "color": "Cobalt Blue",
+      "fitment": "Metal Roller",
+      "closure": "Shiny Gold Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlDot",
+      "color": "Cobalt Blue",
+      "fitment": "Metal Roller",
+      "closure": "Silver with Dots Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5SpryBluMatt",
+      "color": "Clear",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Matte Blue",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "color": "Clear",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Matte Silver",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5SpryBlkSh",
+      "color": "Clear",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Shiny Black",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5SpryGlSh",
+      "color": "Clear",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Shiny Gold",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5SprySlSh",
+      "color": "Clear",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Shiny Silver",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlMatt",
+      "color": "Cobalt Blue",
+      "fitment": "Metal Roller",
+      "closure": "Matte Silver Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlSh",
+      "color": "Cobalt Blue",
+      "fitment": "Metal Roller",
+      "closure": "Shiny Silver Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5SpryCuMatt",
+      "color": "Clear",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Matte Copper",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5SpryGlMatt",
+      "color": "Clear",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Matte Gold",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5SpryBlkSh",
+      "color": "Cobalt Blue",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Shiny Black",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5SpryGlSh",
+      "color": "Cobalt Blue",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Shiny Gold",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5SprySlSh",
+      "color": "Cobalt Blue",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Shiny Silver",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5SpryBluMatt",
+      "color": "Cobalt Blue",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Matte Blue",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5SpryCuMatt",
+      "color": "Cobalt Blue",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Matte Copper",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "color": "Cobalt Blue",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Matte Gold",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5SprySlMatt",
+      "color": "Cobalt Blue",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Matte Silver",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "color": "Cobalt Blue",
+      "fitment": "Plastic Roller",
+      "closure": "Black with Dots Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "color": "Clear",
+      "fitment": "Plastic Roller",
+      "closure": "Black with Dots Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5RollBlkSh",
+      "color": "Clear",
+      "fitment": "Plastic Roller",
+      "closure": "Shiny Black Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5RollGlSh",
+      "color": "Clear",
+      "fitment": "Plastic Roller",
+      "closure": "Shiny Gold Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5RollSlDot",
+      "color": "Clear",
+      "fitment": "Plastic Roller",
+      "closure": "Silver with Dots Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5RollSlSh",
+      "color": "Clear",
+      "fitment": "Plastic Roller",
+      "closure": "Shiny Silver Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5RollCuMatt",
+      "color": "Clear",
+      "fitment": "Plastic Roller",
+      "closure": "Matte Copper Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5RollGlMatt",
+      "color": "Clear",
+      "fitment": "Plastic Roller",
+      "closure": "Matte Gold Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5RollSlMatt",
+      "color": "Clear",
+      "fitment": "Plastic Roller",
+      "closure": "Matte Silver Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5RollPinkDot",
+      "color": "Clear",
+      "fitment": "Plastic Roller",
+      "closure": "Pink with Dots Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5RollGlSh",
+      "color": "Cobalt Blue",
+      "fitment": "Plastic Roller",
+      "closure": "Shiny Gold Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5RollGlMatt",
+      "color": "Cobalt Blue",
+      "fitment": "Plastic Roller",
+      "closure": "Matte Gold Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5RollPinkDot",
+      "color": "Cobalt Blue",
+      "fitment": "Plastic Roller",
+      "closure": "Pink with Dots Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5RollBlkSh",
+      "color": "Cobalt Blue",
+      "fitment": "Plastic Roller",
+      "closure": "Shiny Black Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5RollSlDot",
+      "color": "Cobalt Blue",
+      "fitment": "Plastic Roller",
+      "closure": "Silver with Dots Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5RollSlSh",
+      "color": "Cobalt Blue",
+      "fitment": "Plastic Roller",
+      "closure": "Shiny Silver Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5RollCuMatt",
+      "color": "Cobalt Blue",
+      "fitment": "Plastic Roller",
+      "closure": "Matte Copper Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5RollSlMatt",
+      "color": "Cobalt Blue",
+      "fitment": "Plastic Roller",
+      "closure": "Matte Silver Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "color": "Clear",
+      "fitment": "Metal Roller",
+      "closure": "Black with Dots Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "color": "Cobalt Blue",
+      "fitment": "Metal Roller",
+      "closure": "Black with Dots Cap",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5BlkSht",
+      "color": "Clear",
+      "fitment": "Screw Cap",
+      "closure": "Short Ribbed Black",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5BlkSht",
+      "color": "Cobalt Blue",
+      "fitment": "Screw Cap",
+      "closure": "Short Ribbed Black",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "color": "Cobalt Blue",
+      "fitment": "Screw Cap",
+      "closure": "Short Lined Shiny Black",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5CuSht",
+      "color": "Cobalt Blue",
+      "fitment": "Screw Cap",
+      "closure": "Short Lined Matte Copper",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5GlMattSht",
+      "color": "Cobalt Blue",
+      "fitment": "Screw Cap",
+      "closure": "Short Lined Matte Gold",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "color": "Cobalt Blue",
+      "fitment": "Screw Cap",
+      "closure": "Short Lined Matte Silver",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5GlSht",
+      "color": "Cobalt Blue",
+      "fitment": "Screw Cap",
+      "closure": "Short Lined Shiny Gold",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCylBlu5SlSht",
+      "color": "Cobalt Blue",
+      "fitment": "Screw Cap",
+      "closure": "Short Lined Shiny Silver",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5CuSht",
+      "color": "Clear",
+      "fitment": "Screw Cap",
+      "closure": "Short Lined Matte Copper",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "color": "Clear",
+      "fitment": "Screw Cap",
+      "closure": "Short Lined Matte Gold",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5SlMattSht",
+      "color": "Clear",
+      "fitment": "Screw Cap",
+      "closure": "Short Lined Matte Silver",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5BlkShSht",
+      "color": "Clear",
+      "fitment": "Screw Cap",
+      "closure": "Short Lined Shiny Black",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5WhtSht",
+      "color": "Clear",
+      "fitment": "Screw Cap",
+      "closure": "Short Ribbed White",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5GlSht",
+      "color": "Clear",
+      "fitment": "Screw Cap",
+      "closure": "Short Lined Shiny Gold",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    },
+    {
+      "sku": "GBCyl5SlSht",
+      "color": "Clear",
+      "fitment": "Screw Cap",
+      "closure": "Short Lined Shiny Silver",
+      "body": "/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "match": true
+    }
+  ],
+  "browser": [
+    {
+      "glass": "clear",
+      "type": "cap",
+      "sku": "GBCyl5BlkShSht",
+      "href": "/matrix?family=Cylinder&sku=GBCyl5BlkShSht&from=pdp",
+      "url": "http://localhost:3010/matrix?family=Cylinder&sku=GBCyl5BlkShSht&from=pdp",
+      "summary": "Your Build\nReview Your Bottle\nBottle\n5 ml Cylinder\n13-415 neck\nEdit\nGlass\nClear\nEdit\nFitment\nScrew Cap\nEdit\nCap finish\nShort Lined Shiny Black\nEdit\nUnit price\n$0.47\nTotal (12 units)\n$5.64\nSet your quantity at review. $44.36 more reaches the $50.00 order minimum.\n\nMade to work together.\nOnly compatible combinations are shown.",
+      "stage": "complete",
+      "images": [
+        {
+          "src": "/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-clear-measured-v19.png&w=1200&q=75",
+          "loaded": true
+        },
+        {
+          "src": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SBLK-13-415%2Fcap-672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84.png&w=1200&q=75",
+          "loaded": true
+        }
+      ],
+      "selected": [
+        "English",
+        "Short Lined Shiny Black"
+      ],
+      "passed": true
+    },
+    {
+      "glass": "clear",
+      "type": "finemist",
+      "sku": "GBCyl5SpryBlkMatt",
+      "href": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp",
+      "url": "http://localhost:3010/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp",
+      "summary": "Your Build\nReview Your Bottle\nBottle\n5 ml Cylinder\n13-415 neck\nEdit\nGlass\nClear\nEdit\nFitment\nFine Mist Sprayer\nEdit\nSprayer finish\nMatte Black\nEdit\nUnit price\n$0.76\nTotal (12 units)\n$9.12\nSet your quantity at review. $40.88 more reaches the $50.00 order minimum.\n\nMade to work together.\nOnly compatible combinations are shown.",
+      "stage": "complete",
+      "images": [
+        {
+          "src": "/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-clear-measured-v19.png&w=1200&q=75",
+          "loaded": true
+        },
+        {
+          "src": "/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fmechanism-5-measured-v6.png&w=1200&q=75",
+          "loaded": true
+        },
+        {
+          "src": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fsprayer-d8bec1ef79019326aadd602c3dd3450f0b90533938be759cf30827707fe5a0ea.png&w=1200&q=75",
+          "loaded": true
+        },
+        {
+          "src": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fovercap-5088de2996649ad9b83f70579842e3e23551492f6d9e7d290df5272b41cd6065.png&w=1200&q=75",
+          "loaded": true
+        }
+      ],
+      "selected": [
+        "English",
+        "Matte Black"
+      ],
+      "passed": true
+    },
+    {
+      "glass": "clear",
+      "type": "rollon",
+      "sku": "GBCyl5MtlRollBlkSh",
+      "href": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollBlkSh&from=pdp",
+      "url": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollBlkSh&from=pdp",
+      "summary": "Your Build\nReview Your Bottle\nBottle\n5 ml Cylinder\n13-415 neck\nEdit\nGlass\nClear\nEdit\nFitment\nMetal Roller\nEdit\nRoller cap\nShiny Black Cap\nEdit\nUnit price\n$0.61\nTotal (12 units)\n$7.32\nSet your quantity at review. $42.68 more reaches the $50.00 order minimum.\n\nMade to work together.\nOnly compatible combinations are shown.",
+      "stage": "complete",
+      "images": [
+        {
+          "src": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FLIB-13-415-MtlRollon%2Froller-21b3ac34990036064878e735d7eb702a6f37a23ebcd09bebdf93edac8cd15089.png&w=1200&q=75",
+          "loaded": true
+        },
+        {
+          "src": "/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-clear-measured-v19.png&w=1200&q=75",
+          "loaded": true
+        },
+        {
+          "src": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FLIB-13-415-MtlRollon%2Froller-34e2954cb7e7d56b7e140e9d6d521a34bb3b73e687b33ea5759c571b823ff1c5.png&w=1200&q=75",
+          "loaded": true
+        },
+        {
+          "src": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-SBLK-13415%2Fcap-a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8.png&w=1200&q=75",
+          "loaded": true
+        }
+      ],
+      "selected": [
+        "English",
+        "Shiny Black Cap"
+      ],
+      "passed": true
+    },
+    {
+      "glass": "cobalt-blue",
+      "type": "cap",
+      "sku": "GBCylBlu5BlkShSht",
+      "href": "/matrix?family=Cylinder&sku=GBCylBlu5BlkShSht&from=pdp",
+      "url": "http://localhost:3010/matrix?family=Cylinder&sku=GBCylBlu5BlkShSht&from=pdp",
+      "summary": "Your Build\nReview Your Bottle\nBottle\n5 ml Cylinder\n13-415 neck\nEdit\nGlass\nCobalt Blue\nEdit\nFitment\nScrew Cap\nEdit\nCap finish\nShort Lined Shiny Black\nEdit\nUnit price\n$0.50\nTotal (12 units)\n$6.00\nSet your quantity at review. $44.00 more reaches the $50.00 order minimum.\n\nMade to work together.\nOnly compatible combinations are shown.",
+      "stage": "complete",
+      "images": [
+        {
+          "src": "/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=1200&q=75",
+          "loaded": true
+        },
+        {
+          "src": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SBLK-13-415%2Fcap-672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84.png&w=1200&q=75",
+          "loaded": true
+        }
+      ],
+      "selected": [
+        "English",
+        "Short Lined Shiny Black"
+      ],
+      "passed": true
+    },
+    {
+      "glass": "cobalt-blue",
+      "type": "finemist",
+      "sku": "GBCylBlu5SpryBlkSh",
+      "href": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryBlkSh&from=pdp",
+      "url": "http://localhost:3010/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryBlkSh&from=pdp",
+      "summary": "Your Build\nReview Your Bottle\nBottle\n5 ml Cylinder\n13-415 neck\nEdit\nGlass\nCobalt Blue\nEdit\nFitment\nFine Mist Sprayer\nEdit\nSprayer finish\nShiny Black\nEdit\nUnit price\n$0.87\nTotal (12 units)\n$10.44\nSet your quantity at review. $39.56 more reaches the $50.00 order minimum.\n\nMade to work together.\nOnly compatible combinations are shown.",
+      "stage": "complete",
+      "images": [
+        {
+          "src": "/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=1200&q=75",
+          "loaded": true
+        },
+        {
+          "src": "/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fmechanism-5-measured-v6.png&w=1200&q=75",
+          "loaded": true
+        },
+        {
+          "src": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fsprayer-89f5d44301f184ae8fd4e63f79e5cc3f8766513cbd2e4d4d6e9b170d3e58d2a8.png&w=1200&q=75",
+          "loaded": true
+        },
+        {
+          "src": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fovercap-e38f5276720e5771a3afa79a361e1b655481c8c6788bff5c0792821896ba2a15.png&w=1200&q=75",
+          "loaded": true
+        }
+      ],
+      "selected": [
+        "English",
+        "Shiny Black"
+      ],
+      "passed": true
+    },
+    {
+      "glass": "cobalt-blue",
+      "type": "rollon",
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "href": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollBlkDot&from=pdp",
+      "url": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollBlkDot&from=pdp",
+      "summary": "Your Build\nReview Your Bottle\nBottle\n5 ml Cylinder\n13-415 neck\nEdit\nGlass\nCobalt Blue\nEdit\nFitment\nMetal Roller\nEdit\nRoller cap\nBlack with Dots Cap\nEdit\nUnit price\n$0.72\nTotal (12 units)\n$8.64\nSet your quantity at review. $41.36 more reaches the $50.00 order minimum.\n\nMade to work together.\nOnly compatible combinations are shown.",
+      "stage": "complete",
+      "images": [
+        {
+          "src": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FLIB-13-415-MtlRollon%2Froller-21b3ac34990036064878e735d7eb702a6f37a23ebcd09bebdf93edac8cd15089.png&w=1200&q=75",
+          "loaded": true
+        },
+        {
+          "src": "/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=1200&q=75",
+          "loaded": true
+        },
+        {
+          "src": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FLIB-13-415-MtlRollon%2Froller-af89cb09fd3ed13788dce568f4d425304766ab4073a91687a7e23a88e95cca94.png&w=1200&q=75",
+          "loaded": true
+        },
+        {
+          "src": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-BLK-13415-DOT%2Fcap-afd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=1200&q=75",
+          "loaded": true
+        }
+      ],
+      "selected": [
+        "English",
+        "Black with Dots Cap"
+      ],
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

@@ -1,0 +1,54 @@
+{
+  "model": "gpt-image-2.5-sunburst",
+  "quality": "high",
+  "authorizedCalls": 4,
+  "submittedCalls": 7,
+  "attempts": [
+    {
+      "attempt": 1,
+      "file": "sunburst/clear.png",
+      "sha256": "ef158fe487115ea06aba19fc0dafa942a602100be3b427a58ff4bbe8436e04f0",
+      "status": "Rejected: threaded neck too tall"
+    },
+    {
+      "attempt": 2,
+      "file": "sunburst/amber.png",
+      "sha256": "df04624745f4849e8e315d2114f962f42f98b78a81d835e520fef1e5ec504a8e",
+      "status": "Rejected: neck/shoulder remained taller than measured target"
+    },
+    {
+      "attempt": 3,
+      "file": "sunburst/clear-v2.png",
+      "sha256": "8dd2f7c2aa41b12f1617c86cc6ec0d3a05b6959c77f3e5874cf85fe9ca5f19bc",
+      "status": "Rejected: native body aspect was too narrow"
+    },
+    {
+      "attempt": 4,
+      "file": "sunburst/clear-v3.png",
+      "sha256": "a55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f",
+      "status": "Selected for local review: short neck; display width calibrated +4.33%"
+    }
+  ],
+  "pendingAuthorization": null,
+  "additionalApprovedCalls": 3,
+  "additionalAttempts": [
+    {
+      "attempt": 5,
+      "file": "sunburst/amber-v2.png",
+      "sha256": "b6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68",
+      "status": "Installed locally; shape checked against clear master"
+    },
+    {
+      "attempt": 6,
+      "file": "sunburst/green-v2.png",
+      "sha256": "309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8",
+      "status": "Installed locally; shape checked against clear master"
+    },
+    {
+      "attempt": 7,
+      "file": "sunburst/cobalt-v2.png",
+      "sha256": "d1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7",
+      "status": "Installed locally; shape checked against clear master"
+    }
+  ]
+}

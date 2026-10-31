@@ -1,0 +1,909 @@
+{
+  "localOnly": true,
+  "upscaleRecordFound": false,
+  "rows": [
+    {
+      "sku": "GBElg60RdcrBlkLthr",
+      "glass": "Clear",
+      "file": "body-clear-gpt-r5-db7c6308f3e9.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (clear), lit; baked on bone #F5F3EF",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/17.  60ml Eleg, Ltn & Spry, capped/11. GBElg60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "1f8e119d3d398c179cb636356bde06dbd8a2587fc1f72aa82ccbbfdaa12fe0e2",
+      "pixelSha256": "db7c6308f3e9c9d6d73a6a1e34dccdafbd0b568f0bded6ed8463c37f81e76056",
+      "sourceAnchors": {
+        "axisX": 752.5,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 478
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 194.88089204257477,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElg60RdcrShnBlkTall",
+      "glass": "Clear",
+      "file": "body-clear-gpt-r5-db7c6308f3e9.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (clear), lit; baked on bone #F5F3EF",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/17.  60ml Eleg, Ltn & Spry, capped/11. GBElg60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "1f8e119d3d398c179cb636356bde06dbd8a2587fc1f72aa82ccbbfdaa12fe0e2",
+      "pixelSha256": "db7c6308f3e9c9d6d73a6a1e34dccdafbd0b568f0bded6ed8463c37f81e76056",
+      "sourceAnchors": {
+        "axisX": 752.5,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 478
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 194.88089204257477,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElg60RdcrWht",
+      "glass": "Clear",
+      "file": "body-clear-gpt-r5-db7c6308f3e9.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (clear), lit; baked on bone #F5F3EF",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/17.  60ml Eleg, Ltn & Spry, capped/11. GBElg60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "1f8e119d3d398c179cb636356bde06dbd8a2587fc1f72aa82ccbbfdaa12fe0e2",
+      "pixelSha256": "db7c6308f3e9c9d6d73a6a1e34dccdafbd0b568f0bded6ed8463c37f81e76056",
+      "sourceAnchors": {
+        "axisX": 752.5,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 478
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 194.88089204257477,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElg60RdcrLBrwnLthr",
+      "glass": "Clear",
+      "file": "body-clear-gpt-r5-db7c6308f3e9.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (clear), lit; baked on bone #F5F3EF",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/17.  60ml Eleg, Ltn & Spry, capped/11. GBElg60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "1f8e119d3d398c179cb636356bde06dbd8a2587fc1f72aa82ccbbfdaa12fe0e2",
+      "pixelSha256": "db7c6308f3e9c9d6d73a6a1e34dccdafbd0b568f0bded6ed8463c37f81e76056",
+      "sourceAnchors": {
+        "axisX": 752.5,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 478
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 194.88089204257477,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElg60RdcrBrwnLthr",
+      "glass": "Clear",
+      "file": "body-clear-gpt-r5-db7c6308f3e9.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (clear), lit; baked on bone #F5F3EF",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/17.  60ml Eleg, Ltn & Spry, capped/11. GBElg60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "1f8e119d3d398c179cb636356bde06dbd8a2587fc1f72aa82ccbbfdaa12fe0e2",
+      "pixelSha256": "db7c6308f3e9c9d6d73a6a1e34dccdafbd0b568f0bded6ed8463c37f81e76056",
+      "sourceAnchors": {
+        "axisX": 752.5,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 478
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 194.88089204257477,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElg60RdcrIvyLthr",
+      "glass": "Clear",
+      "file": "body-clear-gpt-r5-db7c6308f3e9.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (clear), lit; baked on bone #F5F3EF",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/17.  60ml Eleg, Ltn & Spry, capped/11. GBElg60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "1f8e119d3d398c179cb636356bde06dbd8a2587fc1f72aa82ccbbfdaa12fe0e2",
+      "pixelSha256": "db7c6308f3e9c9d6d73a6a1e34dccdafbd0b568f0bded6ed8463c37f81e76056",
+      "sourceAnchors": {
+        "axisX": 752.5,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 478
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 194.88089204257477,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElg60RdcrPnkLthr",
+      "glass": "Clear",
+      "file": "body-clear-gpt-r5-db7c6308f3e9.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (clear), lit; baked on bone #F5F3EF",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/17.  60ml Eleg, Ltn & Spry, capped/11. GBElg60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "1f8e119d3d398c179cb636356bde06dbd8a2587fc1f72aa82ccbbfdaa12fe0e2",
+      "pixelSha256": "db7c6308f3e9c9d6d73a6a1e34dccdafbd0b568f0bded6ed8463c37f81e76056",
+      "sourceAnchors": {
+        "axisX": 752.5,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 478
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 194.88089204257477,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElg60RdcrShnBlk",
+      "glass": "Clear",
+      "file": "body-clear-gpt-r5-db7c6308f3e9.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (clear), lit; baked on bone #F5F3EF",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/17.  60ml Eleg, Ltn & Spry, capped/11. GBElg60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "1f8e119d3d398c179cb636356bde06dbd8a2587fc1f72aa82ccbbfdaa12fe0e2",
+      "pixelSha256": "db7c6308f3e9c9d6d73a6a1e34dccdafbd0b568f0bded6ed8463c37f81e76056",
+      "sourceAnchors": {
+        "axisX": 752.5,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 478
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 194.88089204257477,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElg60RdcrShnGl",
+      "glass": "Clear",
+      "file": "body-clear-gpt-r5-db7c6308f3e9.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (clear), lit; baked on bone #F5F3EF",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/17.  60ml Eleg, Ltn & Spry, capped/11. GBElg60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "1f8e119d3d398c179cb636356bde06dbd8a2587fc1f72aa82ccbbfdaa12fe0e2",
+      "pixelSha256": "db7c6308f3e9c9d6d73a6a1e34dccdafbd0b568f0bded6ed8463c37f81e76056",
+      "sourceAnchors": {
+        "axisX": 752.5,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 478
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 194.88089204257477,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElg60RdcrShnSl",
+      "glass": "Clear",
+      "file": "body-clear-gpt-r5-db7c6308f3e9.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (clear), lit; baked on bone #F5F3EF",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/17.  60ml Eleg, Ltn & Spry, capped/11. GBElg60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "1f8e119d3d398c179cb636356bde06dbd8a2587fc1f72aa82ccbbfdaa12fe0e2",
+      "pixelSha256": "db7c6308f3e9c9d6d73a6a1e34dccdafbd0b568f0bded6ed8463c37f81e76056",
+      "sourceAnchors": {
+        "axisX": 752.5,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 478
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 194.88089204257477,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElg60RdcrMtSl",
+      "glass": "Clear",
+      "file": "body-clear-gpt-r5-db7c6308f3e9.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (clear), lit; baked on bone #F5F3EF",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/17.  60ml Eleg, Ltn & Spry, capped/11. GBElg60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "1f8e119d3d398c179cb636356bde06dbd8a2587fc1f72aa82ccbbfdaa12fe0e2",
+      "pixelSha256": "db7c6308f3e9c9d6d73a6a1e34dccdafbd0b568f0bded6ed8463c37f81e76056",
+      "sourceAnchors": {
+        "axisX": 752.5,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 478
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 194.88089204257477,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElg60RdcrMtSlTall",
+      "glass": "Clear",
+      "file": "body-clear-gpt-r5-db7c6308f3e9.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (clear), lit; baked on bone #F5F3EF",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/17.  60ml Eleg, Ltn & Spry, capped/11. GBElg60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "1f8e119d3d398c179cb636356bde06dbd8a2587fc1f72aa82ccbbfdaa12fe0e2",
+      "pixelSha256": "db7c6308f3e9c9d6d73a6a1e34dccdafbd0b568f0bded6ed8463c37f81e76056",
+      "sourceAnchors": {
+        "axisX": 752.5,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 478
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 194.88089204257477,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElgFrst60RdcrBlkLthr",
+      "glass": "Frosted",
+      "file": "body-frosted-gpt-r5-a01865c38a9f.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (frosted), lit + own frosted photo",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/19.  60ml Eleg Frst, Ltn & Spry, capped/11. GBElgFrst60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "c75e784b6cff488c6104d5539cf81db393defecbbde5232d0af28e8da9cdfdc6",
+      "pixelSha256": "a01865c38a9f7fa31e819e4326b5f631ca2b1c8f816209eac50228017678bb48",
+      "sourceAnchors": {
+        "axisX": 750.8,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 475
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 195.5701976685251,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElgFrst60RdcrShnBlk",
+      "glass": "Frosted",
+      "file": "body-frosted-gpt-r5-a01865c38a9f.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (frosted), lit + own frosted photo",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/19.  60ml Eleg Frst, Ltn & Spry, capped/11. GBElgFrst60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "c75e784b6cff488c6104d5539cf81db393defecbbde5232d0af28e8da9cdfdc6",
+      "pixelSha256": "a01865c38a9f7fa31e819e4326b5f631ca2b1c8f816209eac50228017678bb48",
+      "sourceAnchors": {
+        "axisX": 750.8,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 475
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 195.5701976685251,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElgFrst60RdcrShnBlkTall",
+      "glass": "Frosted",
+      "file": "body-frosted-gpt-r5-a01865c38a9f.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (frosted), lit + own frosted photo",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/19.  60ml Eleg Frst, Ltn & Spry, capped/11. GBElgFrst60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "c75e784b6cff488c6104d5539cf81db393defecbbde5232d0af28e8da9cdfdc6",
+      "pixelSha256": "a01865c38a9f7fa31e819e4326b5f631ca2b1c8f816209eac50228017678bb48",
+      "sourceAnchors": {
+        "axisX": 750.8,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 475
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 195.5701976685251,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElgFrst60RdcrShnGl",
+      "glass": "Frosted",
+      "file": "body-frosted-gpt-r5-a01865c38a9f.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (frosted), lit + own frosted photo",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/19.  60ml Eleg Frst, Ltn & Spry, capped/11. GBElgFrst60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "c75e784b6cff488c6104d5539cf81db393defecbbde5232d0af28e8da9cdfdc6",
+      "pixelSha256": "a01865c38a9f7fa31e819e4326b5f631ca2b1c8f816209eac50228017678bb48",
+      "sourceAnchors": {
+        "axisX": 750.8,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 475
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 195.5701976685251,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElgFrst60RdcrShnSl",
+      "glass": "Frosted",
+      "file": "body-frosted-gpt-r5-a01865c38a9f.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (frosted), lit + own frosted photo",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/19.  60ml Eleg Frst, Ltn & Spry, capped/11. GBElgFrst60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "c75e784b6cff488c6104d5539cf81db393defecbbde5232d0af28e8da9cdfdc6",
+      "pixelSha256": "a01865c38a9f7fa31e819e4326b5f631ca2b1c8f816209eac50228017678bb48",
+      "sourceAnchors": {
+        "axisX": 750.8,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 475
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 195.5701976685251,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElgFrst60RdcrWht",
+      "glass": "Frosted",
+      "file": "body-frosted-gpt-r5-a01865c38a9f.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (frosted), lit + own frosted photo",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/19.  60ml Eleg Frst, Ltn & Spry, capped/11. GBElgFrst60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "c75e784b6cff488c6104d5539cf81db393defecbbde5232d0af28e8da9cdfdc6",
+      "pixelSha256": "a01865c38a9f7fa31e819e4326b5f631ca2b1c8f816209eac50228017678bb48",
+      "sourceAnchors": {
+        "axisX": 750.8,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 475
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 195.5701976685251,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElgFrst60RdcrBrwnLthr",
+      "glass": "Frosted",
+      "file": "body-frosted-gpt-r5-a01865c38a9f.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (frosted), lit + own frosted photo",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/19.  60ml Eleg Frst, Ltn & Spry, capped/11. GBElgFrst60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "c75e784b6cff488c6104d5539cf81db393defecbbde5232d0af28e8da9cdfdc6",
+      "pixelSha256": "a01865c38a9f7fa31e819e4326b5f631ca2b1c8f816209eac50228017678bb48",
+      "sourceAnchors": {
+        "axisX": 750.8,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 475
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 195.5701976685251,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElgFrst60RdcrIvyLthr",
+      "glass": "Frosted",
+      "file": "body-frosted-gpt-r5-a01865c38a9f.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (frosted), lit + own frosted photo",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/19.  60ml Eleg Frst, Ltn & Spry, capped/11. GBElgFrst60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "c75e784b6cff488c6104d5539cf81db393defecbbde5232d0af28e8da9cdfdc6",
+      "pixelSha256": "a01865c38a9f7fa31e819e4326b5f631ca2b1c8f816209eac50228017678bb48",
+      "sourceAnchors": {
+        "axisX": 750.8,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 475
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 195.5701976685251,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElgFrst60RdcrLBrwnLthr",
+      "glass": "Frosted",
+      "file": "body-frosted-gpt-r5-a01865c38a9f.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (frosted), lit + own frosted photo",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/19.  60ml Eleg Frst, Ltn & Spry, capped/11. GBElgFrst60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "c75e784b6cff488c6104d5539cf81db393defecbbde5232d0af28e8da9cdfdc6",
+      "pixelSha256": "a01865c38a9f7fa31e819e4326b5f631ca2b1c8f816209eac50228017678bb48",
+      "sourceAnchors": {
+        "axisX": 750.8,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 475
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 195.5701976685251,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElgFrst60RdcrMtSl",
+      "glass": "Frosted",
+      "file": "body-frosted-gpt-r5-a01865c38a9f.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (frosted), lit + own frosted photo",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/19.  60ml Eleg Frst, Ltn & Spry, capped/11. GBElgFrst60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "c75e784b6cff488c6104d5539cf81db393defecbbde5232d0af28e8da9cdfdc6",
+      "pixelSha256": "a01865c38a9f7fa31e819e4326b5f631ca2b1c8f816209eac50228017678bb48",
+      "sourceAnchors": {
+        "axisX": 750.8,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 475
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 195.5701976685251,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElgFrst60RdcrMtSlTall",
+      "glass": "Frosted",
+      "file": "body-frosted-gpt-r5-a01865c38a9f.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (frosted), lit + own frosted photo",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/19.  60ml Eleg Frst, Ltn & Spry, capped/11. GBElgFrst60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "c75e784b6cff488c6104d5539cf81db393defecbbde5232d0af28e8da9cdfdc6",
+      "pixelSha256": "a01865c38a9f7fa31e819e4326b5f631ca2b1c8f816209eac50228017678bb48",
+      "sourceAnchors": {
+        "axisX": 750.8,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 475
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 195.5701976685251,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    },
+    {
+      "sku": "GBElgFrst60RdcrPnkLthr",
+      "glass": "Frosted",
+      "file": "body-frosted-gpt-r5-a01865c38a9f.png",
+      "source": {
+        "layer": "geometry: Clear; material: reference glass (frosted), lit + own frosted photo",
+        "library": "gpt-image-2.5-sunburst",
+        "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/19.  60ml Eleg Frst, Ltn & Spry, capped/11. GBElgFrst60SpryMtGl.psd",
+        "psdSha256": null
+      },
+      "revision": 5,
+      "hashVerified": true,
+      "fileSha256": "c75e784b6cff488c6104d5539cf81db393defecbbde5232d0af28e8da9cdfdc6",
+      "pixelSha256": "a01865c38a9f7fa31e819e4326b5f631ca2b1c8f816209eac50228017678bb48",
+      "sourceAnchors": {
+        "axisX": 750.8,
+        "baselineY": 2097,
+        "seatY": 124,
+        "shoulderY": 475
+      },
+      "scale": 0.40547389761784086,
+      "box": {
+        "x": 195.5701976685251,
+        "y": 210.72123669538774,
+        "width": 616.3203243791181,
+        "height": 888.7987835783072
+      },
+      "stageAnchorsUnchanged": true,
+      "hardwareUnchanged": true,
+      "stageEnvelopeUnchanged": true
+    }
+  ],
+  "browser": {
+    "passed": true,
+    "states": 60,
+    "visibleFinishes": 20
+  },
+  "builder": {
+    "passed": true,
+    "approved5mlUnchanged": true,
+    "records": [
+      {
+        "sku": "GBElg60RdcrBlkLthr",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-clear-gpt-r5-db7c6308f3e9.png",
+        "match": true
+      },
+      {
+        "sku": "GBElgFrst60RdcrBlkLthr",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-frosted-gpt-r5-a01865c38a9f.png",
+        "match": true
+      },
+      {
+        "sku": "GBElg60RdcrShnBlkTall",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-clear-gpt-r5-db7c6308f3e9.png",
+        "match": true
+      },
+      {
+        "sku": "GBElg60RdcrWht",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-clear-gpt-r5-db7c6308f3e9.png",
+        "match": true
+      },
+      {
+        "sku": "GBElg60RdcrLBrwnLthr",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-clear-gpt-r5-db7c6308f3e9.png",
+        "match": true
+      },
+      {
+        "sku": "GBElg60RdcrBrwnLthr",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-clear-gpt-r5-db7c6308f3e9.png",
+        "match": true
+      },
+      {
+        "sku": "GBElg60RdcrIvyLthr",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-clear-gpt-r5-db7c6308f3e9.png",
+        "match": true
+      },
+      {
+        "sku": "GBElg60RdcrPnkLthr",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-clear-gpt-r5-db7c6308f3e9.png",
+        "match": true
+      },
+      {
+        "sku": "GBElg60RdcrShnBlk",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-clear-gpt-r5-db7c6308f3e9.png",
+        "match": true
+      },
+      {
+        "sku": "GBElg60RdcrShnGl",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-clear-gpt-r5-db7c6308f3e9.png",
+        "match": true
+      },
+      {
+        "sku": "GBElg60RdcrShnSl",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-clear-gpt-r5-db7c6308f3e9.png",
+        "match": true
+      },
+      {
+        "sku": "GBElg60RdcrMtSl",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-clear-gpt-r5-db7c6308f3e9.png",
+        "match": true
+      },
+      {
+        "sku": "GBElg60RdcrMtSlTall",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-clear-gpt-r5-db7c6308f3e9.png",
+        "match": true
+      },
+      {
+        "sku": "GBElgFrst60RdcrShnBlk",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-frosted-gpt-r5-a01865c38a9f.png",
+        "match": true
+      },
+      {
+        "sku": "GBElgFrst60RdcrShnBlkTall",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-frosted-gpt-r5-a01865c38a9f.png",
+        "match": true
+      },
+      {
+        "sku": "GBElgFrst60RdcrShnGl",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-frosted-gpt-r5-a01865c38a9f.png",
+        "match": true
+      },
+      {
+        "sku": "GBElgFrst60RdcrShnSl",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-frosted-gpt-r5-a01865c38a9f.png",
+        "match": true
+      },
+      {
+        "sku": "GBElgFrst60RdcrWht",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-frosted-gpt-r5-a01865c38a9f.png",
+        "match": true
+      },
+      {
+        "sku": "GBElgFrst60RdcrBrwnLthr",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-frosted-gpt-r5-a01865c38a9f.png",
+        "match": true
+      },
+      {
+        "sku": "GBElgFrst60RdcrIvyLthr",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-frosted-gpt-r5-a01865c38a9f.png",
+        "match": true
+      },
+      {
+        "sku": "GBElgFrst60RdcrLBrwnLthr",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-frosted-gpt-r5-a01865c38a9f.png",
+        "match": true
+      },
+      {
+        "sku": "GBElgFrst60RdcrMtSl",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-frosted-gpt-r5-a01865c38a9f.png",
+        "match": true
+      },
+      {
+        "sku": "GBElgFrst60RdcrMtSlTall",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-frosted-gpt-r5-a01865c38a9f.png",
+        "match": true
+      },
+      {
+        "sku": "GBElgFrst60RdcrPnkLthr",
+        "url": "/local-kits/elegant60-reducer-2026-10-31/body-frosted-gpt-r5-a01865c38a9f.png",
+        "match": true
+      }
+    ]
+  },
+  "fitment": {
+    "currentNativeSource": "working/legacy/glb-closures__BB_REDUCER_18415/model-shading-v3.blend",
+    "sourceCommit": "080a0be297189b0339384e6bb8439370932be01f",
+    "sourceDate": "2026-08-30",
+    "repair": "2026-10-31: sharp-edge normals, geometry preserved",
+    "historicalPhotoCommit": "40eda09381873ab9de6ad04c5fbd025da81feef3",
+    "historicalPhotoSha256": "57762272c36205187a394244ca5281adac35d272c9a3e7c3eb8aacf944e689b5",
+    "laterGeometryRevisionConfirmed": false
+  },
+  "handoff": {
+    "passed": true,
+    "rows": [
+      {
+        "glass": "clear",
+        "sku": "GBElg60RdcrShnGl",
+        "href": "/matrix?family=Elegant&shop=splash-on-bottles&sku=GBElg60RdcrShnGl&from=pdp",
+        "matched": true
+      },
+      {
+        "glass": "frosted",
+        "sku": "GBElgFrst60RdcrShnGl",
+        "href": "/matrix?family=Elegant&shop=splash-on-bottles&sku=GBElgFrst60RdcrShnGl&from=pdp",
+        "matched": true
+      }
+    ],
+    "reviewImagesLoaded": true
+  },
+  "status": "local-review-only; not published; visual approval pending"
+}

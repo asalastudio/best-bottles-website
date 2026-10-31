@@ -1,0 +1,3 @@
+1. Keep geometry, silhouette and straight-on eye-level perspective locked to the first image, including the rim and base.
+2. Clear glass quality, refraction and lighting from the second image, not its shape or background.
+3. Enhance the quality. Keep the background transparent.

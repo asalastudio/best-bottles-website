@@ -1,0 +1,9 @@
+{
+  "generation": 4,
+  "authorizedMaximum": 4,
+  "model": "gpt-image-2.5-sunburst",
+  "inputs": [
+    "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/references/measured-geometry-v2.png"
+  ],
+  "reason": "Explicit silhouette pixel positions and width-to-height ratio after prior attempt produced an overly narrow body."
+}

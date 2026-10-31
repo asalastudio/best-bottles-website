@@ -239,6 +239,7 @@ function collarFinish(input: ComposeInput): string | null {
 
 /** "under a clear overcap" / "under a plastic overcap" when the SKU is sold with one. */
 function overcapClause(input: ComposeInput, legacy: LegacyFacts | null): string {
+    if (["GBSpry3mlClBlk", "GBSpry3mlClWht", "GBSpry4mlClBlk", "GBSpry4mlClWh"].includes(input.websiteSku ?? "")) return " with one clear protective overcap";
     if (/overcap/i.test(clean(input.capColor) ?? "") || /MtSlCl$|ClOvrCap$/i.test(input.websiteSku ?? "")) return " under a clear overcap";
     if (legacy?.flags.plasticOvercap) return " under a plastic overcap";
     return "";

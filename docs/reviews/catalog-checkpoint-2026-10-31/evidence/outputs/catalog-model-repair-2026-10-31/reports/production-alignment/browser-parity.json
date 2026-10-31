@@ -1,0 +1,139 @@
+{
+  "checkedAt": "2026-10-31T16:51:44.451Z",
+  "pages": [
+    {
+      "name": "local",
+      "status": 200,
+      "url": "http://localhost:3010/products/cylinder-9ml-clear-17-415-finemist?cap=black",
+      "title": "9 ml Clear Cylinder Fine-Mist Spray Bottle - Black Sprayer | Best Bottles",
+      "h1": "9 ml Clear Cylinder Fine-Mist Spray Bottle - Black Sprayer",
+      "stageSource": "register",
+      "images": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/cylinder-9ml-17-415/clear/6ab851b603457da335f376baad6751e57bfb749f5c1a66100d5b172a8457716e.png",
+          "loaded": true
+        },
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-SPR-BLK-17-415-01/diptube-f833a5ba9f592d80a9cff517acb1cecf9e976af50c16e82c51f9ba45dbd19f2a.png",
+          "loaded": true
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-SPR-BLK-17-415-01/sprayer-b8b8824a9c0e1597a56bdb2712a7e82190b8b0dd0d6d45da467e51873a583dd3.png",
+          "loaded": true
+        },
+        {
+          "slot": "overcap",
+          "url": "/assets/register/overcaps/ovr-17-415-clear-overcap.webp",
+          "loaded": true
+        },
+        {
+          "slot": "collar",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-SPR-BLK-17-415-01/collar-8c6f6359674ce298481c1d74905220267c48a2af90b4501ce59e8cf0917f2ca4.png",
+          "loaded": true
+        }
+      ],
+      "caps": [
+        "Black cap",
+        "Gold cap",
+        "Matte Silver cap",
+        "Red cap",
+        "Shiny Silver cap",
+        "Turquoise cap"
+      ]
+    },
+    {
+      "name": "production",
+      "status": 200,
+      "url": "https://best-bottles-website.vercel.app/products/cylinder-9ml-clear-17-415-finemist?cap=black",
+      "title": "9 ml Clear Cylinder Fine-Mist Spray Bottle - Black Sprayer | Best Bottles",
+      "h1": "9 ml Clear Cylinder Fine-Mist Spray Bottle - Black Sprayer",
+      "stageSource": "register",
+      "images": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/cylinder-9ml-17-415/clear/6ab851b603457da335f376baad6751e57bfb749f5c1a66100d5b172a8457716e.png",
+          "loaded": true
+        },
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-SPR-BLK-17-415-01/diptube-f833a5ba9f592d80a9cff517acb1cecf9e976af50c16e82c51f9ba45dbd19f2a.png",
+          "loaded": true
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-SPR-BLK-17-415-01/sprayer-b8b8824a9c0e1597a56bdb2712a7e82190b8b0dd0d6d45da467e51873a583dd3.png",
+          "loaded": true
+        },
+        {
+          "slot": "overcap",
+          "url": "/assets/register/overcaps/ovr-17-415-clear-overcap.webp",
+          "loaded": true
+        },
+        {
+          "slot": "collar",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-SPR-BLK-17-415-01/collar-8c6f6359674ce298481c1d74905220267c48a2af90b4501ce59e8cf0917f2ca4.png",
+          "loaded": true
+        }
+      ],
+      "caps": [
+        "Black cap",
+        "Gold cap",
+        "Matte Silver cap",
+        "Red cap",
+        "Shiny Silver cap",
+        "Turquoise cap"
+      ]
+    }
+  ],
+  "localViews": [
+    {
+      "view": "capon",
+      "body": {
+        "left": 418.5852966308594,
+        "top": 416.7900390625,
+        "width": 76.80545043945312,
+        "height": 284.79327392578125
+      },
+      "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fclear%2F6ab851b603457da335f376baad6751e57bfb749f5c1a66100d5b172a8457716e.png&w=640&q=75"
+    },
+    {
+      "view": "exploded",
+      "body": {
+        "left": 418.5852966308594,
+        "top": 416.7900390625,
+        "width": 76.80545043945312,
+        "height": 284.79327392578125
+      },
+      "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fclear%2F6ab851b603457da335f376baad6751e57bfb749f5c1a66100d5b172a8457716e.png&w=640&q=75"
+    },
+    {
+      "view": "sidecar",
+      "body": {
+        "left": 418.5852966308594,
+        "top": 416.7900390625,
+        "width": 76.80545043945312,
+        "height": 284.79327392578125
+      },
+      "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fclear%2F6ab851b603457da335f376baad6751e57bfb749f5c1a66100d5b172a8457716e.png&w=640&q=75"
+    },
+    {
+      "view": "sidecar",
+      "body": {
+        "left": 418.5852966308594,
+        "top": 416.7900390625,
+        "width": 76.80545043945312,
+        "height": 284.79327392578125
+      },
+      "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fclear%2F6ab851b603457da335f376baad6751e57bfb749f5c1a66100d5b172a8457716e.png&w=640&q=75",
+      "action": "second cap"
+    }
+  ],
+  "errors": [],
+  "mobileOverflow": false,
+  "sameProduct": true,
+  "sameStageAssetUrls": true,
+  "bodyStable": true
+}
