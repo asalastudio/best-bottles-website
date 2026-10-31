@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-import { stageLayout, type KitLike } from '/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/src/lib/products/pdp-redesign/stage';
+import { stageLayout, type KitLike } from '@/lib/products/pdp-redesign/stage';
 const root=process.cwd();
 const rows=JSON.parse(fs.readFileSync(root+'/public/local-kits/vial-2ml-source-2026-10-31/kits.json','utf8')).rows as Record<string,KitLike>;
 const results=[];

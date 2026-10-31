@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { stageLayout, type KitLike } from '/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/src/lib/products/pdp-redesign/stage';
+import { stageLayout, type KitLike } from '@/lib/products/pdp-redesign/stage';
 const root=process.cwd();
 const kit=JSON.parse(fs.readFileSync(root+'/public/local-kits/vial-2ml-source-2026-10-31/kits.json','utf8')).rows.GBVialClr2mlWhtCap as KitLike;
 const layout=stageLayout(kit,'sidecar',{family:'Vial',capacityMl:2,color:'Clear',applicator:'Cap/Closure',websiteSku:kit.sku})!;
