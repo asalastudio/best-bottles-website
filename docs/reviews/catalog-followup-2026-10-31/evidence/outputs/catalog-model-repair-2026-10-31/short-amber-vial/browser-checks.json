@@ -1,0 +1,110 @@
+[
+  {
+    "name": "desktop",
+    "view": "sidecar",
+    "images": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Fshort-amber-5be9929a0bde.png&w=640&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "thumbs": [
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Fshort-amber-5be9929a0bde.png&w=256&q=75"
+    ],
+    "overflow": false
+  },
+  {
+    "name": "desktop",
+    "view": "capon",
+    "images": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Fshort-amber-5be9929a0bde.png&w=640&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "thumbs": [
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Fshort-amber-5be9929a0bde.png&w=256&q=75"
+    ],
+    "overflow": false
+  },
+  {
+    "name": "desktop",
+    "view": "exploded",
+    "images": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Fshort-amber-5be9929a0bde.png&w=640&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "thumbs": [
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Fshort-amber-5be9929a0bde.png&w=256&q=75"
+    ],
+    "overflow": false
+  },
+  {
+    "name": "mobile",
+    "view": "sidecar",
+    "images": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Fshort-amber-5be9929a0bde.png&w=640&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "thumbs": [
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Fshort-amber-5be9929a0bde.png&w=256&q=75"
+    ],
+    "overflow": false
+  },
+  {
+    "name": "mobile",
+    "view": "capon",
+    "images": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Fshort-amber-5be9929a0bde.png&w=640&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "thumbs": [
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Fshort-amber-5be9929a0bde.png&w=256&q=75"
+    ],
+    "overflow": false
+  },
+  {
+    "name": "mobile",
+    "view": "exploded",
+    "images": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Fshort-amber-5be9929a0bde.png&w=640&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "thumbs": [
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Fshort-amber-5be9929a0bde.png&w=256&q=75"
+    ],
+    "overflow": false
+  }
+]

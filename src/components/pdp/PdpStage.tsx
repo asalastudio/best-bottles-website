@@ -370,7 +370,7 @@ export default function PdpStage({
                     </button>
                 ) : null}
 
-                <div className={styles.callouts} data-on={showCallouts ? "true" : "false"} aria-hidden={!showCallouts} data-testid="pdp-callouts">
+                <div className={styles.callouts} data-on={showCallouts ? "true" : "false"} aria-hidden={!showCallouts || mobile} data-testid="pdp-callouts">
                     {calloutRows.map(({ callout, anchor, shiftPct }) => {
                         if (!anchor) return null;
                         const rowStyle: CSSProperties = {
@@ -394,6 +394,17 @@ export default function PdpStage({
                     })}
                 </div>
             </div>
+
+            {layout?.grid && calloutRows.some(row => row.anchor) ? (
+                <dl className={styles.mobileCallouts} data-testid="pdp-component-details">
+                    {calloutRows.filter(row => row.anchor).map(({ callout }) => (
+                        <div key={callout.key}>
+                            <dt>{callout.title}</dt>
+                            <dd>{callout.line1}{callout.line2 ? <><br />{callout.line2}</> : null}</dd>
+                        </div>
+                    ))}
+                </dl>
+            ) : null}
 
             <div className={styles.lineup} data-testid="pdp-glass-lineup">
                 <span className={styles.lineupLabel}>

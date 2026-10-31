@@ -1,0 +1,1944 @@
+[
+  {
+    "sku": "GBAtom10Blu",
+    "graceSku": "GB-CYL-BLU-10ML-ATM-BLU",
+    "family": "Atomizer",
+    "capacityMl": 10,
+    "color": "Cobalt Blue",
+    "slug": "atomizer-10ml",
+    "state": "legacy-gallery-reviewed",
+    "issues": [],
+    "screenshots": [],
+    "legacyScreenshot": "atomizer-10ml-legacy.png",
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu1ozMtlRollonMattSl",
+    "graceSku": "GB-BSR-BLU-30ML-MRO-MSLV",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-30ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBVBlu1DrmWhtCapSht",
+    "graceSku": "GB-VIA-CLR-3ML-S-06",
+    "family": "Vial",
+    "capacityMl": 4,
+    "color": "Blue",
+    "slug": "vial-4ml-blue-13-425",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "vial-4ml-blue-13-425-sidecar.png",
+      "vial-4ml-blue-13-425-capon.png",
+      "vial-4ml-blue-13-425-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu1ozMtlRollonShnSl",
+    "graceSku": "GB-BSR-BLU-30ML-MRO-SSLV",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-30ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu1ozMtlRollonMattBlk",
+    "graceSku": "GB-BSR-BLU-30ML-MRO-MBLK",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-30ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu1ozMtlRollonMattGl",
+    "graceSku": "GB-BSR-BLU-30ML-MRO-MGLD",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-30ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5Sl",
+    "graceSku": "GB-CYL-BLU-5ML-SLV-T",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9SpryBlk",
+    "graceSku": "GB-CYL-BLU-9ML-SPR-BLK",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-finemist-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-finemist-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-finemist-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5WhtSht",
+    "graceSku": "GB-CYL-CBL-5ML-S-02",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5Gl",
+    "graceSku": "GB-CYL-BLU-5ML-GLD-T",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu2ozMtlRollonMattBlk",
+    "graceSku": "GB-BSR-BLU-60ML-MRO-MBLK",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-60ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu2ozMtlRollonMattGl",
+    "graceSku": "GB-BSR-CBL-60ML-MRL-MGLD",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-60ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu2ozMtlRollonMattSl",
+    "graceSku": "GB-BSR-BLU-60ML-MRO-MSLV",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-60ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu2ozMtlRollonShnSl",
+    "graceSku": "GB-BSR-BLU-60ML-MRO-SSLV",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-60ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu15WhtDrpr",
+    "graceSku": "GB-BSR-CBL-15ML-WHT-T-01",
+    "family": "Boston Round",
+    "capacityMl": 15,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-15ml-cobalt-blue-18-400-dropper",
+    "state": "needs-followup",
+    "issues": [
+      "Legacy glass and dropper cutouts contain visible alpha fragments; replace with complete clean masters. Exact finish layers need review.",
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-15ml-cobalt-blue-18-400-dropper-sidecar.png",
+      "boston-round-15ml-cobalt-blue-18-400-dropper-capon.png",
+      "boston-round-15ml-cobalt-blue-18-400-dropper-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu15WhtDrprSlTrim",
+    "graceSku": "GB-BSR-CBL-15ML-WHT-T-03",
+    "family": "Boston Round",
+    "capacityMl": 15,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-15ml-cobalt-blue-18-400-dropper",
+    "state": "needs-followup",
+    "issues": [
+      "Legacy glass and dropper cutouts contain visible alpha fragments; replace with complete clean masters. Exact finish layers need review.",
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-15ml-cobalt-blue-18-400-dropper-sidecar.png",
+      "boston-round-15ml-cobalt-blue-18-400-dropper-capon.png",
+      "boston-round-15ml-cobalt-blue-18-400-dropper-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu15WhtDrprGlTrim",
+    "graceSku": "GB-BSR-CBL-15ML-WHT-T-02",
+    "family": "Boston Round",
+    "capacityMl": 15,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-15ml-cobalt-blue-18-400-dropper",
+    "state": "needs-followup",
+    "issues": [
+      "Legacy glass and dropper cutouts contain visible alpha fragments; replace with complete clean masters. Exact finish layers need review.",
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-15ml-cobalt-blue-18-400-dropper-sidecar.png",
+      "boston-round-15ml-cobalt-blue-18-400-dropper-capon.png",
+      "boston-round-15ml-cobalt-blue-18-400-dropper-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu15mlBlkDropperSlTrim",
+    "graceSku": "GB-BSR-CBL-15ML-BLK-T-03",
+    "family": "Boston Round",
+    "capacityMl": 15,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-15ml-cobalt-blue-18-400-dropper",
+    "state": "needs-followup",
+    "issues": [
+      "Legacy glass and dropper cutouts contain visible alpha fragments; replace with complete clean masters. Exact finish layers need review.",
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-15ml-cobalt-blue-18-400-dropper-sidecar.png",
+      "boston-round-15ml-cobalt-blue-18-400-dropper-capon.png",
+      "boston-round-15ml-cobalt-blue-18-400-dropper-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu15BlkDrprGlTrim",
+    "graceSku": "GB-BSR-CBL-15ML-BLK-T-02",
+    "family": "Boston Round",
+    "capacityMl": 15,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-15ml-cobalt-blue-18-400-dropper",
+    "state": "needs-followup",
+    "issues": [
+      "Legacy glass and dropper cutouts contain visible alpha fragments; replace with complete clean masters. Exact finish layers need review.",
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-15ml-cobalt-blue-18-400-dropper-sidecar.png",
+      "boston-round-15ml-cobalt-blue-18-400-dropper-capon.png",
+      "boston-round-15ml-cobalt-blue-18-400-dropper-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu1ozBlkDropperShnGlTrim",
+    "graceSku": "GB-BSR-CBL-30ML-BLK-T-02",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-30ml-cobalt-blue-20-400-dropper",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-30ml-cobalt-blue-20-400-dropper-sidecar.png",
+      "boston-round-30ml-cobalt-blue-20-400-dropper-capon.png",
+      "boston-round-30ml-cobalt-blue-20-400-dropper-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu1ozWhtDropper",
+    "graceSku": "GB-BSR-CBL-30ML-WHT-T-01",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-30ml-cobalt-blue-20-400-dropper",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-30ml-cobalt-blue-20-400-dropper-sidecar.png",
+      "boston-round-30ml-cobalt-blue-20-400-dropper-capon.png",
+      "boston-round-30ml-cobalt-blue-20-400-dropper-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu1ozWhtDropperShnGlTrim",
+    "graceSku": "GB-BSR-CBL-30ML-WHT-T-02",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-30ml-cobalt-blue-20-400-dropper",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-30ml-cobalt-blue-20-400-dropper-sidecar.png",
+      "boston-round-30ml-cobalt-blue-20-400-dropper-capon.png",
+      "boston-round-30ml-cobalt-blue-20-400-dropper-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu1ozWhtDropperShnSlTrim",
+    "graceSku": "GB-BSR-CBL-30ML-WHT-T-03",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-30ml-cobalt-blue-20-400-dropper",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-30ml-cobalt-blue-20-400-dropper-sidecar.png",
+      "boston-round-30ml-cobalt-blue-20-400-dropper-capon.png",
+      "boston-round-30ml-cobalt-blue-20-400-dropper-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu1ozRollonMattBlk",
+    "graceSku": "GB-BSR-BLU-30ML-RON-MBLK",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-30ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu1ozRollonMattSl",
+    "graceSku": "GB-BSR-CBL-30ML-RBL-MSLV",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-30ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu1ozRollonShnSl",
+    "graceSku": "GB-BSR-BLU-30ML-RON-SSLV",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-30ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu1ozRollonMattGl",
+    "graceSku": "GB-BSR-BLU-30ML-RON-MGLD",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-30ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu1ozRollonShnBlk",
+    "graceSku": "GB-BSR-CBL-30ML-RBL-SBLK",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-30ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu2ozRollonMattGl",
+    "graceSku": "GB-BSR-BLU-60ML-RON-MGLD",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-60ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu2ozRollonMattBlk",
+    "graceSku": "GB-BSR-BLU-60ML-RON-MBLK",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-60ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu2ozRollonMattSl",
+    "graceSku": "GB-BSR-BLU-60ML-RON-MSLV",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-60ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu2ozRollonShnSl",
+    "graceSku": "GB-BSR-BLU-60ML-RON-SSLV",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-60ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu2ozRollonShnBlk",
+    "graceSku": "GB-BSR-CBL-60ML-RBL-SBLK",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-60ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu2ozBlkDropperShnGlTrim",
+    "graceSku": "GB-BSR-CBL-60ML-BLK-T-02",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-60ml-cobalt-blue-20-400-dropper",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-60ml-cobalt-blue-20-400-dropper-sidecar.png",
+      "boston-round-60ml-cobalt-blue-20-400-dropper-capon.png",
+      "boston-round-60ml-cobalt-blue-20-400-dropper-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu2ozWhtDropper",
+    "graceSku": "GB-BSR-CBL-60ML-WHT-T-01",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-60ml-cobalt-blue-20-400-dropper",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-60ml-cobalt-blue-20-400-dropper-sidecar.png",
+      "boston-round-60ml-cobalt-blue-20-400-dropper-capon.png",
+      "boston-round-60ml-cobalt-blue-20-400-dropper-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu2ozWhtDropperShnGlTrim",
+    "graceSku": "GB-BSR-CBL-60ML-WHT-T-02",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-60ml-cobalt-blue-20-400-dropper",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-60ml-cobalt-blue-20-400-dropper-sidecar.png",
+      "boston-round-60ml-cobalt-blue-20-400-dropper-capon.png",
+      "boston-round-60ml-cobalt-blue-20-400-dropper-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu2ozWhtDropperShnSlTrim",
+    "graceSku": "GB-BSR-CBL-60ML-WHT-T-03",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-60ml-cobalt-blue-20-400-dropper",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-60ml-cobalt-blue-20-400-dropper-sidecar.png",
+      "boston-round-60ml-cobalt-blue-20-400-dropper-capon.png",
+      "boston-round-60ml-cobalt-blue-20-400-dropper-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5MtlRollBlkSh",
+    "graceSku": "GB-CYL-BLU-5ML-MRL-SBLK",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "state": "local-fixed-old-glass-overlay",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5MtlRollCuMatt",
+    "graceSku": "GB-CYL-BLU-5ML-MRL-MCPR",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "state": "local-fixed-old-glass-overlay",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5MtlRollGlMatt",
+    "graceSku": "GB-CYL-BLU-5ML-MRL-MGLD",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "state": "local-fixed-old-glass-overlay",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5MtlRollGlSh",
+    "graceSku": "GB-CYL-BLU-5ML-MRL-SGLD",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "state": "local-fixed-old-glass-overlay",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5MtlRollPinkDot",
+    "graceSku": "GB-CYL-BLU-5ML-MRL-PKDT",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "state": "local-fixed-old-glass-overlay",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5MtlRollSlDot",
+    "graceSku": "GB-CYL-BLU-5ML-MRL-SLDT",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "state": "local-fixed-old-glass-overlay",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5MtlRollSlMatt",
+    "graceSku": "GB-CYL-BLU-5ML-MRL-MSLV",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "state": "local-fixed-old-glass-overlay",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5MtlRollSlSh",
+    "graceSku": "GB-CYL-BLU-5ML-MRL-SSLV",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "state": "local-fixed-old-glass-overlay",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5SprySlSh",
+    "graceSku": "GB-CYL-BLU-5ML-SPR-SSLV",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+    "state": "approved-body-verified",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-finemist-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-finemist-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-finemist-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5SpryBlkSh",
+    "graceSku": "GB-CYL-BLU-5ML-SPR-SBLK",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+    "state": "approved-body-verified",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-finemist-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-finemist-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-finemist-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5SpryGlSh",
+    "graceSku": "GB-CYL-BLU-5ML-SPR-SGLD",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+    "state": "approved-body-verified",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-finemist-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-finemist-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-finemist-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5SpryGlMatt",
+    "graceSku": "GB-CYL-BLU-5ML-SPR-MGLD",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+    "state": "approved-body-verified",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-finemist-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-finemist-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-finemist-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu15BlkCapSht",
+    "graceSku": "GB-BSR-CBL-15ML-BLK-S",
+    "family": "Boston Round",
+    "capacityMl": 15,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-15ml-cobalt-blue-18-400",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-15ml-cobalt-blue-18-400-sidecar.png",
+      "boston-round-15ml-cobalt-blue-18-400-capon.png",
+      "boston-round-15ml-cobalt-blue-18-400-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5SpryBluMatt",
+    "graceSku": "GB-CYL-BLU-5ML-SPR-MBLU",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+    "state": "approved-body-verified",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-finemist-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-finemist-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-finemist-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5SpryCuMatt",
+    "graceSku": "GB-CYL-BLU-5ML-SPR-MCPR",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+    "state": "approved-body-verified",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-finemist-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-finemist-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-finemist-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "LBCylBlu9LtnMattSl",
+    "graceSku": "LB-CYL-BLU-9ML-LPM-MSLV",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-lotionpump-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-lotionpump-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-lotionpump-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5SprySlMatt",
+    "graceSku": "GB-CYL-BLU-5ML-SPR-MSLV",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+    "state": "approved-body-verified",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-finemist-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-finemist-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-finemist-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "LBCylBlu9LtnGl",
+    "graceSku": "LB-CYL-BLU-9ML-LPM-GLD",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-lotionpump-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-lotionpump-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-lotionpump-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu1ozBlkCapSht",
+    "graceSku": "GB-BSR-CBL-30ML-BLK-S",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-30ml-cobalt-blue-20-400",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "boston-round-30ml-cobalt-blue-20-400-sidecar.png",
+      "boston-round-30ml-cobalt-blue-20-400-capon.png",
+      "boston-round-30ml-cobalt-blue-20-400-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu2ozBlkCapSht",
+    "graceSku": "GB-BSR-BLU-60ML-BLK-S",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-60ml-cobalt-blue-20-400",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "boston-round-60ml-cobalt-blue-20-400-sidecar.png",
+      "boston-round-60ml-cobalt-blue-20-400-capon.png",
+      "boston-round-60ml-cobalt-blue-20-400-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5RollBlkDot",
+    "graceSku": "GB-CYL-BLU-5ML-ROL-BKDT",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "state": "local-fixed-old-glass-overlay",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9RollBlkDot",
+    "graceSku": "GB-CYL-BLU-9ML-ROL-BKDT",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5RollGlSh",
+    "graceSku": "GB-CYL-BLU-5ML-ROL-SGLD",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "state": "local-fixed-old-glass-overlay",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5RollSlSh",
+    "graceSku": "GB-CYL-BLU-5ML-ROL-SSLV",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "state": "local-fixed-old-glass-overlay",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5RollBlkSh",
+    "graceSku": "GB-CYL-BLU-5ML-ROL-SBLK",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "state": "local-fixed-old-glass-overlay",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5RollGlMatt",
+    "graceSku": "GB-CYL-BLU-5ML-ROL-MGLD",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "state": "local-fixed-old-glass-overlay",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5RollPinkDot",
+    "graceSku": "GB-CYL-BLU-5ML-ROL-PKDT",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "state": "local-fixed-old-glass-overlay",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5RollSlDot",
+    "graceSku": "GB-CYL-BLU-5ML-ROL-SLDT",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "state": "local-fixed-old-glass-overlay",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5RollCuMatt",
+    "graceSku": "GB-CYL-BLU-5ML-ROL-MCPR",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "state": "local-fixed-old-glass-overlay",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5RollSlMatt",
+    "graceSku": "GB-CYL-BLU-5ML-ROL-MSLV",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "state": "local-fixed-old-glass-overlay",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu1ozRollonGl",
+    "graceSku": "GB-BSR-BLU-30ML-RON-GLD",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-30ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu2ozRollonGl",
+    "graceSku": "GB-BSR-BLU-60ML-RON-GLD",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-60ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5MtlRollBlkDot",
+    "graceSku": "GB-CYL-BLU-5ML-MRL-BKDT",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "state": "local-fixed-old-glass-overlay",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9SpryTur",
+    "graceSku": "GB-CYL-BLU-9ML-SPR-TRQ",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-finemist-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-finemist-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-finemist-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9SpryMattSl",
+    "graceSku": "GB-CYL-BLU-9ML-SPR-MSLV",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-finemist-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-finemist-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-finemist-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9MtlRollMattSl",
+    "graceSku": "GB-CYL-BLU-9ML-MRL-MSLV",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9SpryGl",
+    "graceSku": "GB-CYL-BLU-9ML-SPR-GLD",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-finemist-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-finemist-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-finemist-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9MtlRollSlDot",
+    "graceSku": "GB-CYL-BLU-9ML-MRL-SLDT",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9SpryShSl",
+    "graceSku": "GB-CYL-BLU-9ML-SPR-SSLV",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-finemist-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-finemist-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-finemist-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9MtlRollPnkDot",
+    "graceSku": "GB-CYL-BLU-9ML-MRL-PKDT",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9SpryRd",
+    "graceSku": "GB-CYL-BLU-9ML-SPR-RED",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-finemist-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-finemist-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-finemist-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9MtlRollMattGl",
+    "graceSku": "GB-CYL-BLU-9ML-MRL-MGLD",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9MtlRollBlkDot",
+    "graceSku": "GB-CYL-BLU-9ML-MRL-BKDT",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9MtlRollShnGl",
+    "graceSku": "GB-CYL-BLU-9ML-MRL-SGLD",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9MtlRollShnSl",
+    "graceSku": "GB-CYL-BLU-9ML-MRL-SSLV",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9MtlRollMattCu",
+    "graceSku": "GB-CYL-BLU-9ML-MRL-MCPR",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9MtlRollShBlk",
+    "graceSku": "GB-CYL-BLU-9ML-MRL-SBLK",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9MtlRollWht",
+    "graceSku": "GB-CYL-BLU-9ML-MRL-WHT",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu1ozMtlRollonGl",
+    "graceSku": "GB-BSR-BLU-30ML-MRO-GLD",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-30ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-30ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu2ozMtlRollonGl",
+    "graceSku": "GB-BSR-CBL-60ML-MRL-SGLD",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-60ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9RollWht",
+    "graceSku": "GB-CYL-BLU-9ML-ROL-WHT",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9RollShBlk",
+    "graceSku": "GB-CYL-BLU-9ML-ROL-SBLK",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9RollShnGl",
+    "graceSku": "GB-CYL-BLU-9ML-ROL-SGLD",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9RollShnSl",
+    "graceSku": "GB-CYL-BLU-9ML-ROL-SSLV",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9RollPnkDot",
+    "graceSku": "GB-CYL-BLU-9ML-ROL-PKDT",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9RollMattSl",
+    "graceSku": "GB-CYL-BLU-9ML-ROL-MSLV",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9RollSlDot",
+    "graceSku": "GB-CYL-BLU-9ML-ROL-SLDT",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9RollMattGl",
+    "graceSku": "GB-CYL-BLU-9ML-ROL-MGLD",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu9RollMattCu",
+    "graceSku": "GB-CYL-BLU-9ML-ROL-MCPR",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBTrdpBlue",
+    "graceSku": "GB-TRD-BLU-9ML",
+    "family": "Teardrop",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "teardrop-9ml-cobalt-blue-Ground-glassapplicator",
+    "state": "legacy-gallery-reviewed",
+    "issues": [],
+    "screenshots": [],
+    "legacyScreenshot": "teardrop-9ml-cobalt-blue-Ground-glassapplicator-legacy.png",
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBVBlu1DrmBlkDropper",
+    "graceSku": "GB-VIA-CLR-3ML-03",
+    "family": "Vial",
+    "capacityMl": 4,
+    "color": "Blue",
+    "slug": "vial-4ml-blue-13-425-dropper",
+    "state": "needs-followup",
+    "issues": [
+      "Still uses old glass body; needs approved 4 ml body registered with dropper/pipette.",
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "vial-4ml-blue-13-425-dropper-sidecar.png",
+      "vial-4ml-blue-13-425-dropper-capon.png",
+      "vial-4ml-blue-13-425-dropper-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu15BlkDrpr",
+    "graceSku": "GB-BSR-CBL-15ML-BLK-T-01",
+    "family": "Boston Round",
+    "capacityMl": 15,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-15ml-cobalt-blue-18-400-dropper",
+    "state": "needs-followup",
+    "issues": [
+      "Legacy glass and dropper cutouts contain visible alpha fragments; replace with complete clean masters. Exact finish layers need review.",
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-15ml-cobalt-blue-18-400-dropper-sidecar.png",
+      "boston-round-15ml-cobalt-blue-18-400-dropper-capon.png",
+      "boston-round-15ml-cobalt-blue-18-400-dropper-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBVBlu1DrmBlackCapSht",
+    "graceSku": "GB-VIA-CLR-3ML-S-05",
+    "family": "Vial",
+    "capacityMl": 4,
+    "color": "Blue",
+    "slug": "vial-4ml-blue-13-425",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "vial-4ml-blue-13-425-sidecar.png",
+      "vial-4ml-blue-13-425-capon.png",
+      "vial-4ml-blue-13-425-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu1ozBlkDropper",
+    "graceSku": "GB-BSR-CBL-30ML-BLK-T-01",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-30ml-cobalt-blue-20-400-dropper",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-30ml-cobalt-blue-20-400-dropper-sidecar.png",
+      "boston-round-30ml-cobalt-blue-20-400-dropper-capon.png",
+      "boston-round-30ml-cobalt-blue-20-400-dropper-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5BlkSht",
+    "graceSku": "GB-CYL-CBL-5ML-S-01",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu2ozBlkDropper",
+    "graceSku": "GB-BSR-CBL-60ML-BLK-T-01",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-60ml-cobalt-blue-20-400-dropper",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-60ml-cobalt-blue-20-400-dropper-sidecar.png",
+      "boston-round-60ml-cobalt-blue-20-400-dropper-capon.png",
+      "boston-round-60ml-cobalt-blue-20-400-dropper-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GB1ozGenieBl",
+    "graceSku": "GB-GNI-BLU-32ML",
+    "family": "Decorative",
+    "capacityMl": 32,
+    "color": "Cobalt Blue",
+    "slug": "genie-32ml-cobalt-blue-Ground",
+    "state": "legacy-gallery-reviewed",
+    "issues": [],
+    "screenshots": [],
+    "legacyScreenshot": "genie-32ml-cobalt-blue-Ground-legacy.png",
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBEternalFlameBlue",
+    "graceSku": "GB-ETF-BLU-35ML",
+    "family": "Decorative",
+    "capacityMl": 35,
+    "color": "Cobalt Blue",
+    "slug": "eternal-flame-35ml-cobalt-blue-Ground",
+    "state": "legacy-gallery-reviewed",
+    "issues": [],
+    "screenshots": [],
+    "legacyScreenshot": "eternal-flame-35ml-cobalt-blue-Ground-legacy.png",
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "LBCylBlu9LtnBlk",
+    "graceSku": "LB-CYL-BLU-9ML-LPM-BLK",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-9ml-cobalt-blue-17-415-lotionpump-sidecar.png",
+      "cylinder-9ml-cobalt-blue-17-415-lotionpump-capon.png",
+      "cylinder-9ml-cobalt-blue-17-415-lotionpump-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GB15ApthBlue",
+    "graceSku": "GB-APT-BLU-15ML-BLU-T",
+    "family": "Apothecary",
+    "capacityMl": 15,
+    "color": "Cobalt Blue",
+    "slug": "apothecary-15ml-cobalt-blue-Ground-glassapplicator",
+    "state": "legacy-gallery-reviewed",
+    "issues": [],
+    "screenshots": [],
+    "legacyScreenshot": "apothecary-15ml-cobalt-blue-Ground-glassapplicator-legacy.png",
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GB1ozApthBlue",
+    "graceSku": "GB-APT-BLU-30ML-BLU-T",
+    "family": "Apothecary",
+    "capacityMl": 30,
+    "color": "Cobalt Blue",
+    "slug": "apothecary-30ml-cobalt-blue-Ground-glassapplicator",
+    "state": "legacy-gallery-reviewed",
+    "issues": [],
+    "screenshots": [],
+    "legacyScreenshot": "apothecary-30ml-cobalt-blue-Ground-glassapplicator-legacy.png",
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBAtom5Blu",
+    "graceSku": "GB-CYL-BLU-5ML-ATM-BLU",
+    "family": "Atomizer",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "atomizer-5ml",
+    "state": "legacy-gallery-reviewed",
+    "issues": [],
+    "screenshots": [],
+    "legacyScreenshot": "atomizer-5ml-legacy.png",
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBVBlu1o9BlackCapSht",
+    "graceSku": "GB-VIA-BLU-3ML-BLK-S",
+    "family": "Vial",
+    "capacityMl": 3,
+    "color": "Blue",
+    "slug": "vial-3ml-blue-13-425",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "vial-3ml-blue-13-425-sidecar.png",
+      "vial-3ml-blue-13-425-capon.png",
+      "vial-3ml-blue-13-425-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5BlkShSht",
+    "graceSku": "GB-CYL-BLU-5ML-CAP-SBLK",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBBstnBlu2ozMtlRollonShnBlk",
+    "graceSku": "GB-BSR-BLU-60ML-MRL-SBLK",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "color": "Cobalt Blue",
+    "slug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+    "state": "needs-followup",
+    "issues": [
+      "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction."
+    ],
+    "screenshots": [
+      "boston-round-60ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-capon.png",
+      "boston-round-60ml-cobalt-blue-20-400-rollon-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5CuSht",
+    "graceSku": "GB-CYL-BLU-5ML-MCPR-S",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5GlMattSht",
+    "graceSku": "GB-CYL-BLU-5ML-MGLD-S",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5SlMattSht",
+    "graceSku": "GB-CYL-BLU-5ML-MSLV-S",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5GlSht",
+    "graceSku": "GB-CYL-BLU-5ML-SGLD-S",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  },
+  {
+    "sku": "GBCylBlu5SlSht",
+    "graceSku": "GB-CYL-BLU-5ML-SSLV-S",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "color": "Cobalt Blue",
+    "slug": "cylinder-5ml-cobalt-blue-13-415",
+    "state": "representative-family-reviewed",
+    "issues": [],
+    "screenshots": [
+      "cylinder-5ml-cobalt-blue-13-415-sidecar.png",
+      "cylinder-5ml-cobalt-blue-13-415-capon.png",
+      "cylinder-5ml-cobalt-blue-13-415-exploded.png"
+    ],
+    "coverage": "All SKUs inventoried; representative SKU viewed for each of 24 groups. This is not individual visual sign-off for every closure finish."
+  }
+]

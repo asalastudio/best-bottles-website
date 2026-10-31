@@ -14,14 +14,17 @@ export function fixedStageOffsets<T extends Part>(parts: readonly T[], offsets: 
     const result = new Map(offsets);
     if(view==='capon')return result;
     const body=parts.find(p=>p.slot==='body');if(!body)return result;
-    const margin=0.5;
+    const margin=view==='exploded'?2:0.5;
     const area={left:(margin-frame.x)/100*canvas.width/frame.scale,right:(100-margin-frame.x)/100*canvas.width/frame.scale,top:(margin-frame.y)/100*canvas.height/frame.scale,bottom:(99.5-frame.y)/100*canvas.height/frame.scale};
-    const gap=canvas.width/frame.scale*.005;
+    // Reserve a visible gap in screen space even when the approved glass is small.
+    const gap=canvas.width/frame.scale*(view==='exploded'?.04:.005);
     const movable=parts.filter(p=>p.slot!=='body'&&(view==='exploded'||p.slot==='cap'||p.slot==='overcap'));
-    if(movable.every(p=>fits(moved(p.bounds,result.get(p)??{dx:0,dy:0}),area)))return result;
     const occupied=parts.filter(p=>!movable.includes(p)).map(p=>moved(p.bounds,result.get(p)??{dx:0,dy:0}));
     const groups=new Map<string,{parts:T[];bounds:StageBounds}>();
     for(const p of movable){const key=explodeUnitKey(p),old=groups.get(key);if(old){old.parts.push(p);old.bounds=union(old.bounds,p.bounds);}else groups.set(key,{parts:[p],bounds:{...p.bounds}});}
+    const originalUnits=[...groups.values()].map(unit=>moved(unit.bounds,result.get(unit.parts[0])??{dx:0,dy:0}));
+    if(originalUnits.every((bounds,index)=>fits(bounds,area)
+        && (view!=="exploded" || [...occupied,...originalUnits.slice(0,index)].every(other=>!overlaps(bounds,other,gap)))))return result;
     // Place the largest mechanism first. Its head, collar and tube remain rigidly registered.
     const units=[...groups.values()].sort((a,b)=>(b.bounds.bottom-b.bounds.top)-(a.bounds.bottom-a.bounds.top));
     for(const unit of units){
@@ -29,7 +32,8 @@ export function fixedStageOffsets<T extends Part>(parts: readonly T[], offsets: 
         const preferred=result.get(unit.parts[0])??{dx:0,dy:0};
         const xs=[body.bounds.right+gap,body.bounds.left-gap-w,area.left,area.right-w,(body.bounds.left+body.bounds.right-w)/2];
         const ys=[body.bounds.bottom-h,area.top,body.bounds.top-gap-h,...occupied.flatMap(o=>[o.top-gap-h,o.bottom+gap])];
-        const positions=[preferred,...xs.flatMap(x=>ys.map(y=>({dx:x-b.left,dy:y-b.top})))];
+        const vertical=ys.map(y=>({dx:preferred.dx,dy:y-b.top}));
+        const positions=[preferred,...vertical,...xs.flatMap(x=>ys.map(y=>({dx:x-b.left,dy:y-b.top})))];
         const chosen=positions.find(o=>{const q=moved(b,o);return fits(q,area)&&occupied.every(other=>!overlaps(q,other,gap));});
         if(chosen){for(const p of unit.parts)result.set(p,chosen);occupied.push(moved(b,chosen));}
         else occupied.push(moved(b,preferred));

@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-31",
+  "typecheck": {
+    "command": "tsc --noEmit --incremental false",
+    "exitCode": 0
+  },
+  "lint": {
+    "command": "eslint src/lib/products/fixed-stage-placement.ts src/lib/paper-doll/local-component-kits.ts src/components/pdp/PdpStage.tsx tests/fixed-stage-placement.test.ts",
+    "exitCode": 0
+  },
+  "tests": {
+    "targetedSuiteFilesPassed": 11,
+    "targetedSuiteTestsPassed": 82,
+    "additionalRegression": "The updated fixed-stage-placement test file passes all three tests, including the in-bounds crowded-components regression."
+  },
+  "browser": {
+    "tulipSkuViews": 24,
+    "measured2mlChecks": 32,
+    "shortAmberViews": 6,
+    "cylinderConfigurations": 71,
+    "cylinderBrowserHandoffs": 6,
+    "spacing": "Desktop and mobile gaps, unchanged bottle bounds across views, complete parts, zoom reset, four mobile detail labels, catalog navigation."
+  },
+  "restore": {
+    "verifiedHashes": 175,
+    "runtimeFiles": 87,
+    "emptyDirectoryRestore": "passed",
+    "repeatRestoreUnchanged": 87
+  },
+  "previousCommitCi": {
+    "commit": "3fbbbf06f668e8f1b09a536d19876bd8d9638d3b",
+    "runId": 41242534996,
+    "status": "passed; applies to the earlier typecheck fix, not this follow-up"
+  },
+  "releaseState": "local review candidates; not merged or published"
+}

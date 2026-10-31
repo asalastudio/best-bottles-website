@@ -1,0 +1,1143 @@
+{
+  "date": "2026-10-31",
+  "status": "local review follow-up; no production publication",
+  "files": [
+    {
+      "path": "runtime/public/local-kits/vial-2ml-source-2026-10-31/kits.json",
+      "source": "public/local-kits/vial-2ml-source-2026-10-31/kits.json",
+      "sha256": "4ff6bbe5f51f1e302126165ddeacbb68a6eda7bd757ab5b73c4d0be986a62e75",
+      "bytes": 14124,
+      "restoreTo": "public/local-kits/vial-2ml-source-2026-10-31/kits.json"
+    },
+    {
+      "path": "runtime/public/local-kits/vial-2ml-source-2026-10-31/parts/2584b13f4f589aea6f67854d8a22ec9ace1ecabf12bf1a90f8259e24677f392a.body.png",
+      "source": "public/local-kits/vial-2ml-source-2026-10-31/parts/2584b13f4f589aea6f67854d8a22ec9ace1ecabf12bf1a90f8259e24677f392a.body.png",
+      "sha256": "2584b13f4f589aea6f67854d8a22ec9ace1ecabf12bf1a90f8259e24677f392a",
+      "bytes": 668843,
+      "restoreTo": "public/local-kits/vial-2ml-source-2026-10-31/parts/2584b13f4f589aea6f67854d8a22ec9ace1ecabf12bf1a90f8259e24677f392a.body.png"
+    },
+    {
+      "path": "runtime/public/local-kits/vial-2ml-source-2026-10-31/parts/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+      "source": "public/local-kits/vial-2ml-source-2026-10-31/parts/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+      "sha256": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4",
+      "bytes": 9794,
+      "restoreTo": "public/local-kits/vial-2ml-source-2026-10-31/parts/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp"
+    },
+    {
+      "path": "runtime/public/local-kits/vial-2ml-source-2026-10-31/parts/5aa9750d5f1bd449f4fe1df007c6dde8f672da6f9c671fa363069911627878f7.body.png",
+      "source": "public/local-kits/vial-2ml-source-2026-10-31/parts/5aa9750d5f1bd449f4fe1df007c6dde8f672da6f9c671fa363069911627878f7.body.png",
+      "sha256": "5aa9750d5f1bd449f4fe1df007c6dde8f672da6f9c671fa363069911627878f7",
+      "bytes": 668010,
+      "restoreTo": "public/local-kits/vial-2ml-source-2026-10-31/parts/5aa9750d5f1bd449f4fe1df007c6dde8f672da6f9c671fa363069911627878f7.body.png"
+    },
+    {
+      "path": "runtime/public/local-kits/vial-2ml-source-2026-10-31/parts/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+      "source": "public/local-kits/vial-2ml-source-2026-10-31/parts/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+      "sha256": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa",
+      "bytes": 9370,
+      "restoreTo": "public/local-kits/vial-2ml-source-2026-10-31/parts/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder5-profiles-2026-10-31/kits.json",
+      "source": "public/local-kits/cylinder5-profiles-2026-10-31/kits.json",
+      "sha256": "c2d626e3b869676797d08b1bcad0153dee4871628a604c366ac7a86787e819a2",
+      "bytes": 369330,
+      "restoreTo": "public/local-kits/cylinder5-profiles-2026-10-31/kits.json"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "source": "public/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "sha256": "e66b67414c119eb8f999a37f26bf0a3808a95732fa123a0d0ce6f8e9b59640c6",
+      "bytes": 420607,
+      "restoreTo": "public/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "source": "public/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "sha256": "aad0f0df8534c8e165dcbd39289ac492151a00ce0597f3df6d6644ee27fa3683",
+      "bytes": 459712,
+      "restoreTo": "public/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder5-profiles-2026-10-31/mechanism-5-measured-v6.png",
+      "source": "public/local-kits/cylinder5-profiles-2026-10-31/mechanism-5-measured-v6.png",
+      "sha256": "0fcd2cf291c19f88980f6c9c92d91eb3dcd112c0b734aac75ff9b11e7db538f1",
+      "bytes": 84979,
+      "restoreTo": "public/local-kits/cylinder5-profiles-2026-10-31/mechanism-5-measured-v6.png"
+    },
+    {
+      "path": "runtime/public/local-kits/catalog-followups-2026-10-31/kits.json",
+      "source": "public/local-kits/catalog-followups-2026-10-31/kits.json",
+      "sha256": "a46437a098825082590af368783f93794bc88760c7ab59d044f2f94dd2848084",
+      "bytes": 56296,
+      "restoreTo": "public/local-kits/catalog-followups-2026-10-31/kits.json"
+    },
+    {
+      "path": "runtime/public/local-kits/catalog-followups-2026-10-31/short-amber-5be9929a0bde.png",
+      "source": "public/local-kits/catalog-followups-2026-10-31/short-amber-5be9929a0bde.png",
+      "sha256": "5be9929a0bde292b74b11d7122c9736b21552b1dffacebce4e52252195e6c392",
+      "bytes": 991128,
+      "restoreTo": "public/local-kits/catalog-followups-2026-10-31/short-amber-5be9929a0bde.png"
+    },
+    {
+      "path": "runtime/public/local-kits/catalog-followups-2026-10-31/tulip-diptube-752290ff324a.png",
+      "source": "public/local-kits/catalog-followups-2026-10-31/tulip-diptube-752290ff324a.png",
+      "sha256": "752290ff324ad2d49d4f02c995368027c855549ae5eabf62eedfdd7d27cd121b",
+      "bytes": 70984,
+      "restoreTo": "public/local-kits/catalog-followups-2026-10-31/tulip-diptube-752290ff324a.png"
+    },
+    {
+      "path": "runtime/public/local-kits/vial-4ml-measured-2026-10-31/parts/71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp",
+      "source": "public/local-kits/vial-4ml-measured-2026-10-31/parts/71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp",
+      "sha256": "71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e",
+      "bytes": 8874,
+      "restoreTo": "public/local-kits/vial-4ml-measured-2026-10-31/parts/71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/apothecary-15ml-cobalt-blue-Ground-glassapplicator-legacy.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/apothecary-15ml-cobalt-blue-Ground-glassapplicator-legacy.png",
+      "sha256": "87f98a1c7b53255c8e351da77b0f2b05c220b7cb6725e7b3ae5cf097be4fbd4b",
+      "bytes": 267469,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/apothecary-15ml-cobalt-blue-Ground-glassapplicator-legacy.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/apothecary-30ml-cobalt-blue-Ground-glassapplicator-legacy.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/apothecary-30ml-cobalt-blue-Ground-glassapplicator-legacy.png",
+      "sha256": "585cf4f9c9682ddd1d4bbdeeafa79788a562f6ec65dc7e97834cfe297b309da2",
+      "bytes": 277956,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/apothecary-30ml-cobalt-blue-Ground-glassapplicator-legacy.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/atomizer-10ml-legacy.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/atomizer-10ml-legacy.png",
+      "sha256": "094564a30d0bf93e7057df6d5b197ca04c22b8cc8adaece21c3c6b35e689b513",
+      "bytes": 330945,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/atomizer-10ml-legacy.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/atomizer-5ml-legacy.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/atomizer-5ml-legacy.png",
+      "sha256": "7b9690e1143e1ed43af3d53b4ab20b136cf5833e19c46b7a0b8e93e9e39a8f60",
+      "bytes": 275125,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/atomizer-5ml-legacy.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-15ml-cobalt-blue-18-400-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-15ml-cobalt-blue-18-400-capon.png",
+      "sha256": "315e9a64e520ba832305ed3f9fd5996c6be9376f4421b940c8c7a56b2ae3011e",
+      "bytes": 57196,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-15ml-cobalt-blue-18-400-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-15ml-cobalt-blue-18-400-dropper-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-15ml-cobalt-blue-18-400-dropper-capon.png",
+      "sha256": "ba462953cda2498b5299d6bd8288df6de195f8d9ce0ef9c973dc6a8055cb16e9",
+      "bytes": 67995,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-15ml-cobalt-blue-18-400-dropper-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-15ml-cobalt-blue-18-400-dropper-exploded.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-15ml-cobalt-blue-18-400-dropper-exploded.png",
+      "sha256": "ba462953cda2498b5299d6bd8288df6de195f8d9ce0ef9c973dc6a8055cb16e9",
+      "bytes": 67995,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-15ml-cobalt-blue-18-400-dropper-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-15ml-cobalt-blue-18-400-dropper-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-15ml-cobalt-blue-18-400-dropper-sidecar.png",
+      "sha256": "ba462953cda2498b5299d6bd8288df6de195f8d9ce0ef9c973dc6a8055cb16e9",
+      "bytes": 67995,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-15ml-cobalt-blue-18-400-dropper-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-15ml-cobalt-blue-18-400-exploded.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-15ml-cobalt-blue-18-400-exploded.png",
+      "sha256": "315e9a64e520ba832305ed3f9fd5996c6be9376f4421b940c8c7a56b2ae3011e",
+      "bytes": 57196,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-15ml-cobalt-blue-18-400-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-15ml-cobalt-blue-18-400-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-15ml-cobalt-blue-18-400-sidecar.png",
+      "sha256": "315e9a64e520ba832305ed3f9fd5996c6be9376f4421b940c8c7a56b2ae3011e",
+      "bytes": 57196,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-15ml-cobalt-blue-18-400-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-capon.png",
+      "sha256": "53615acfcc05ad324bb9f8e7a9952cad16bf8a407f889e78382c24c86baf66dd",
+      "bytes": 62241,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-dropper-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-dropper-capon.png",
+      "sha256": "1c1e3fe310dfa2fa359346a4f3437a985a8e60eae70b1aacaf4b4f99beb88daf",
+      "bytes": 71486,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-dropper-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-dropper-exploded.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-dropper-exploded.png",
+      "sha256": "1c1e3fe310dfa2fa359346a4f3437a985a8e60eae70b1aacaf4b4f99beb88daf",
+      "bytes": 71486,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-dropper-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-dropper-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-dropper-sidecar.png",
+      "sha256": "1c1e3fe310dfa2fa359346a4f3437a985a8e60eae70b1aacaf4b4f99beb88daf",
+      "bytes": 71486,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-dropper-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-exploded.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-exploded.png",
+      "sha256": "1662b7df0858f68bee1b59fdfeda5de778208d64eb243e6a164b7a2274f376c2",
+      "bytes": 89767,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-rollon-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-rollon-capon.png",
+      "sha256": "9e07539202b177709405b015b00db67ac04e1516513fe36814b8af0ef06e7c0e",
+      "bytes": 54108,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-rollon-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-rollon-exploded.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-rollon-exploded.png",
+      "sha256": "9e07539202b177709405b015b00db67ac04e1516513fe36814b8af0ef06e7c0e",
+      "bytes": 54108,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-rollon-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "sha256": "2e59be548989d3fc4b21ab82c3cebbd1aa7dcacf5c8d489ca5fd018ca8d472cb",
+      "bytes": 75766,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-rollon-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-sidecar.png",
+      "sha256": "5f36f8dc12e7a958f48b67bbf2c53e23b3a568d8d2aba937d3e185459b73f148",
+      "bytes": 70449,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-30ml-cobalt-blue-20-400-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-capon.png",
+      "sha256": "ff1aa509f458b0ae4716775008079598acf010d61ae997bd9db0bfab44a0c8bd",
+      "bytes": 69305,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-dropper-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-dropper-capon.png",
+      "sha256": "65f643af7db633001caff2686d54be90d3d78042278b825e2cdd72c6b8eef491",
+      "bytes": 77666,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-dropper-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-dropper-exploded.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-dropper-exploded.png",
+      "sha256": "65f643af7db633001caff2686d54be90d3d78042278b825e2cdd72c6b8eef491",
+      "bytes": 77666,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-dropper-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-dropper-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-dropper-sidecar.png",
+      "sha256": "65f643af7db633001caff2686d54be90d3d78042278b825e2cdd72c6b8eef491",
+      "bytes": 77666,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-dropper-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-exploded.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-exploded.png",
+      "sha256": "23273d3359d55c55035a07050f21aa903ad2807857cac9c0d0ef8bd91aec8a20",
+      "bytes": 97742,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-rollon-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-rollon-capon.png",
+      "sha256": "4fc59d418a5fcdc3f1ea7577dae406d462f41d3a2622de03823295ee890436a1",
+      "bytes": 61726,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-rollon-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-rollon-exploded.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-rollon-exploded.png",
+      "sha256": "4fc59d418a5fcdc3f1ea7577dae406d462f41d3a2622de03823295ee890436a1",
+      "bytes": 61726,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-rollon-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-rollon-sidecar.png",
+      "sha256": "1b3ebe1824c0dfffdfdba3253b3d236aa46c3fb8b83ef16426e4efbb5f3d70ea",
+      "bytes": 81772,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-rollon-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-sidecar.png",
+      "sha256": "c01bc899ef6253c4843d508f27ba091c89b7fd9bdf27beeb33f18bfeccb85cd4",
+      "bytes": 76684,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/boston-round-60ml-cobalt-blue-20-400-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/component-followups-tulip-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/component-followups-tulip-capon.png",
+      "sha256": "74c904706668c77440761ec1569c222abf1f3b90cf0e8244dcb6281fc4dd630f",
+      "bytes": 45542,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/component-followups-tulip-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/component-followups-tulip-exploded.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/component-followups-tulip-exploded.png",
+      "sha256": "2c0ab1578a121f10271c32972e08d1efb602f93955bda32a9d5d4757a67dc80a",
+      "bytes": 104671,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/component-followups-tulip-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/component-followups-tulip-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/component-followups-tulip-sidecar.png",
+      "sha256": "9d1e7c2d13dbc3493b0dc6e50915e8bb0091f7f20add91a355b7c7098abc3e83",
+      "bytes": 63535,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/component-followups-tulip-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-capon.png",
+      "sha256": "3b15bd9cff3146938769b8e756ef9439fdfac8cf447b6e207c63727f0d7c1b69",
+      "bytes": 55970,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-exploded.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-exploded.png",
+      "sha256": "c55a03060f10cb02d59cad3e759651bdebea872813875928b76bd74ee623836a",
+      "bytes": 54146,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-finemist-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-finemist-capon.png",
+      "sha256": "b2454ffcb1a59deca1c4ed74ed2d8ce9668842491b0873aec39bde35a89e6490",
+      "bytes": 59061,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-finemist-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-finemist-exploded.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-finemist-exploded.png",
+      "sha256": "64a21271c6724c144188a59ac594959feeaa8c113f1f08d82c2e90972a9f042d",
+      "bytes": 68952,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-finemist-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-finemist-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-finemist-sidecar.png",
+      "sha256": "6f5870133b0a1e856f813766847793cdc8b23368ca90ea1ca82a467589490a10",
+      "bytes": 64761,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-finemist-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+      "sha256": "39520203ff1f58741df5fa5b53ac447866be384b1c8a8faa2648784bb774dcce",
+      "bytes": 56031,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-rollon-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png",
+      "sha256": "f4949be7e078d45be42a69e8ed8764446abbb68b81085af536a6c3569628418c",
+      "bytes": 62115,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+      "sha256": "ccda5973a81091f1c8f33d11ca88f39c93fac6e12b92c9cc05328e4850e50266",
+      "bytes": 68147,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-sidecar.png",
+      "sha256": "c1ebccb033db98bcdac7bcb510c48bad3c8a6bba481a3202cb3fb9c8d29dd97b",
+      "bytes": 65068,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/cylinder-5ml-cobalt-blue-13-415-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-finemist-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-finemist-capon.png",
+      "sha256": "e2ee3e0d56bdd3fc7423ccb7d01ab76ddbe68124f7e5256ef77cef333296e5c7",
+      "bytes": 30346,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-finemist-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-finemist-exploded.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-finemist-exploded.png",
+      "sha256": "336069c2693615806bedfcb4ff42d9f0e7b3b833845635fdb83e3f28e7ea4e04",
+      "bytes": 69033,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-finemist-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-finemist-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-finemist-sidecar.png",
+      "sha256": "6edab5a158569c6690fd87235a055fd1fab5ea60fe7898c1c0db6ec429c6ef63",
+      "bytes": 32123,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-finemist-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-lotionpump-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-lotionpump-capon.png",
+      "sha256": "abdd8981102451bd04be2d3908ff546cb1af7044a9fe85f98affece1425aaef2",
+      "bytes": 33223,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-lotionpump-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-lotionpump-exploded.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-lotionpump-exploded.png",
+      "sha256": "2d004da34ae2d2d9fef7d41a63cbd19a0130c72b08adbf07272cabad0bc24776",
+      "bytes": 71865,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-lotionpump-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-lotionpump-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-lotionpump-sidecar.png",
+      "sha256": "06dade8efcaa36bf19d90c8fb92363d594daeb41ccc1cb2d2aabd3ad73b73fe2",
+      "bytes": 35035,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-lotionpump-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+      "sha256": "25f72fb98650b54357be3b32938b4676b1901b83e2803133d483c3f919af0abc",
+      "bytes": 26976,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-rollon-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png",
+      "sha256": "15d425c86a6772ccefe65197097bc68bf1e34bb766c90575f917b2ed41ab75e0",
+      "bytes": 64820,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+      "sha256": "ab003d893a0eac14cf55cd73aed2831e788e2ae964ac3fddb75c798c00d41905",
+      "bytes": 37058,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/cylinder5-rollon-followup-clear-after.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/cylinder5-rollon-followup-clear-after.png",
+      "sha256": "41127e515318b5a05275568817cf2b0e5484b0f3d8229c9d7fab63c16cb8bd2b",
+      "bytes": 66298,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/cylinder5-rollon-followup-clear-after.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/cylinder5-rollon-followup-cobalt-blue-after.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/cylinder5-rollon-followup-cobalt-blue-after.png",
+      "sha256": "31f9a15df52a658f626df53524c7c0862495c0a5cba397d570cf83604dc09699",
+      "bytes": 77462,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/cylinder5-rollon-followup-cobalt-blue-after.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/eternal-flame-35ml-cobalt-blue-Ground-legacy.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/eternal-flame-35ml-cobalt-blue-Ground-legacy.png",
+      "sha256": "84b1ecbb3e7719d75ba500c07123e559e28762f6fbbf0725ac7d8ec996229925",
+      "bytes": 296268,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/eternal-flame-35ml-cobalt-blue-Ground-legacy.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/genie-32ml-cobalt-blue-Ground-legacy.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/genie-32ml-cobalt-blue-Ground-legacy.png",
+      "sha256": "8b37ce6ddc26c3461a60ab8a5b87d45206e090cb6e16b69eabd63c41eadb8747",
+      "bytes": 226096,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/genie-32ml-cobalt-blue-Ground-legacy.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/index.html",
+      "source": "public/reviews/catalog-followup-2026-10-31/index.html",
+      "sha256": "659a3ab3a4ad0abcfeeb723002c24f638894bf1804fed634cb375ad0748ba1da",
+      "bytes": 21103,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/index.html"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/per-sku-defects.csv",
+      "source": "public/reviews/catalog-followup-2026-10-31/per-sku-defects.csv",
+      "sha256": "f69a1b15d5ef0647863e9f3f49a1256c5dd36ffb04f3861efa8c0cca0211e0ff",
+      "bytes": 14747,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/per-sku-defects.csv"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/per-sku-defects.json",
+      "source": "public/reviews/catalog-followup-2026-10-31/per-sku-defects.json",
+      "sha256": "78a40ced486cdd0669ed2eb331ba6967abf8528207f9cb896fb99abfe2062fd2",
+      "bytes": 79642,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/per-sku-defects.json"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/short-amber-vial-desktop-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/short-amber-vial-desktop-capon.png",
+      "sha256": "af0a77310ade6b8d643e8684d96da6a748c8600280448d5121a00d0e2e39dfd6",
+      "bytes": 142069,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/short-amber-vial-desktop-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/short-amber-vial-desktop-exploded.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/short-amber-vial-desktop-exploded.png",
+      "sha256": "b5484d7876f420d1675f1c3329782305487030f4fc7531d17490279e191d1d67",
+      "bytes": 178096,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/short-amber-vial-desktop-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/short-amber-vial-desktop-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/short-amber-vial-desktop-sidecar.png",
+      "sha256": "1a9b36c5c4e13a2356661e01a06478e8edf3264a79678d2c20152ac83c4b3c1c",
+      "bytes": 150654,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/short-amber-vial-desktop-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/summary.json",
+      "source": "public/reviews/catalog-followup-2026-10-31/summary.json",
+      "sha256": "2749011263826f7aabc62380a9498ff2797117bfa6cf68f90a51ca2b56f0ed10",
+      "bytes": 564,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/summary.json"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/teardrop-9ml-cobalt-blue-Ground-glassapplicator-legacy.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/teardrop-9ml-cobalt-blue-Ground-glassapplicator-legacy.png",
+      "sha256": "228946148f967ea94f7e30fa464cb3ac1658e330f037acc84212cc6e4560e2ce",
+      "bytes": 260665,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/teardrop-9ml-cobalt-blue-Ground-glassapplicator-legacy.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/vial-2ml-measured-desktop-amber-white-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/vial-2ml-measured-desktop-amber-white-capon.png",
+      "sha256": "e865761b5fb94398b6a17c60b707b4084306e8ca7717f2861df1945b74653533",
+      "bytes": 146914,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/vial-2ml-measured-desktop-amber-white-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/vial-2ml-measured-desktop-amber-white-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/vial-2ml-measured-desktop-amber-white-sidecar.png",
+      "sha256": "ee101817898b2f9746c624facac4d523047565f96d48fc64ac60bd448d48fd7b",
+      "bytes": 151254,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/vial-2ml-measured-desktop-amber-white-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/vial-2ml-measured-desktop-clear-white-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/vial-2ml-measured-desktop-clear-white-capon.png",
+      "sha256": "c4175b8e68c33d91aa0c398902295e8f79aa50f52a4c574ed279780b95e9e416",
+      "bytes": 143973,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/vial-2ml-measured-desktop-clear-white-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/vial-2ml-measured-desktop-clear-white-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/vial-2ml-measured-desktop-clear-white-sidecar.png",
+      "sha256": "aafd0df3e69b032d74650682730dd578d9ff965f19a752664edd18b780fc4b23",
+      "bytes": 147835,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/vial-2ml-measured-desktop-clear-white-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/vial-3ml-blue-13-425-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/vial-3ml-blue-13-425-capon.png",
+      "sha256": "3a47c5e7efc873a14ffebad883ef9a475e3a4a7c047fbde44d6fd5ac584cbd60",
+      "bytes": 46681,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/vial-3ml-blue-13-425-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/vial-3ml-blue-13-425-exploded.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/vial-3ml-blue-13-425-exploded.png",
+      "sha256": "3a47c5e7efc873a14ffebad883ef9a475e3a4a7c047fbde44d6fd5ac584cbd60",
+      "bytes": 46681,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/vial-3ml-blue-13-425-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/vial-3ml-blue-13-425-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/vial-3ml-blue-13-425-sidecar.png",
+      "sha256": "3a47c5e7efc873a14ffebad883ef9a475e3a4a7c047fbde44d6fd5ac584cbd60",
+      "bytes": 46681,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/vial-3ml-blue-13-425-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/vial-4ml-blue-13-425-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/vial-4ml-blue-13-425-capon.png",
+      "sha256": "b4a32d75e58939f57789cca5af5fbc6a902a73802895128470d59041b42d2401",
+      "bytes": 28302,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/vial-4ml-blue-13-425-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/vial-4ml-blue-13-425-dropper-capon.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/vial-4ml-blue-13-425-dropper-capon.png",
+      "sha256": "33705cc3863878b61bddfeb74812bcaf176de1be06c2bee067075ee08cb305ef",
+      "bytes": 44561,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/vial-4ml-blue-13-425-dropper-capon.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/vial-4ml-blue-13-425-dropper-exploded.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/vial-4ml-blue-13-425-dropper-exploded.png",
+      "sha256": "33705cc3863878b61bddfeb74812bcaf176de1be06c2bee067075ee08cb305ef",
+      "bytes": 44561,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/vial-4ml-blue-13-425-dropper-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/vial-4ml-blue-13-425-dropper-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/vial-4ml-blue-13-425-dropper-sidecar.png",
+      "sha256": "33705cc3863878b61bddfeb74812bcaf176de1be06c2bee067075ee08cb305ef",
+      "bytes": 44561,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/vial-4ml-blue-13-425-dropper-sidecar.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/vial-4ml-blue-13-425-exploded.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/vial-4ml-blue-13-425-exploded.png",
+      "sha256": "f00aecb85f9b11109aab3b25f2abb21a2d5908eee71e16b4978dc09c533b6429",
+      "bytes": 57604,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/vial-4ml-blue-13-425-exploded.png"
+    },
+    {
+      "path": "runtime/public/reviews/catalog-followup-2026-10-31/vial-4ml-blue-13-425-sidecar.png",
+      "source": "public/reviews/catalog-followup-2026-10-31/vial-4ml-blue-13-425-sidecar.png",
+      "sha256": "f72695400adc28c8d2c676f400fbcbf6a7de1e4c4b6096192940b3daf5959a73",
+      "bytes": 36359,
+      "restoreTo": "public/reviews/catalog-followup-2026-10-31/vial-4ml-blue-13-425-sidecar.png"
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/browser-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/browser-checks.json",
+      "sha256": "3106f6f44953c17355c4e15002206387694f97e38b8b46dc57e7f6fdf6aefae6",
+      "bytes": 21228
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/kits-after.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/kits-after.json",
+      "sha256": "4ff6bbe5f51f1e302126165ddeacbb68a6eda7bd757ab5b73c4d0be986a62e75",
+      "bytes": 14124
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/kits-before.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/kits-before.json",
+      "sha256": "e39d055a796689abba4771c5c980e1ac7a042e331d187fa7b0ec5cb49324ceac",
+      "bytes": 13184
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/registration.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/registration.json",
+      "sha256": "175211f87e89598da40edb3344754e82ce8c05dc01b806390cf2f01dfc3879a9",
+      "bytes": 1388
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/scripts/browser-check.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/scripts/browser-check.cjs",
+      "sha256": "9e3ab47f915a0fba81346da5226de5cb4f5905014b9697e98a414de9913cc23d",
+      "bytes": 5583
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/scripts/integrate.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/scripts/integrate.cjs",
+      "sha256": "2b5b9b0cf7c89aac2e69fc7851f49bbecc69f3da0389f38f20ff48cb329f9863",
+      "bytes": 3551
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/scripts/make-guide.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/scripts/make-guide.cjs",
+      "sha256": "01ddca1533a13f570fcdb3ffb283676c1beb51e1575f71159da5030442158048",
+      "bytes": 858
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/short-amber-vial/browser-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/short-amber-vial/browser-checks.json",
+      "sha256": "53fc16cbe16b9ae594a953b66effc12ac789387e1c1999c4291a4242e8792383",
+      "bytes": 4041
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/short-amber-vial/check.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/short-amber-vial/check.cjs",
+      "sha256": "3f1244fd3d64ba8cecfe7585c9f2a343383f3434a81d499694128be9324e3d92",
+      "bytes": 1606
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/short-amber-vial/integrate.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/short-amber-vial/integrate.cjs",
+      "sha256": "f552747876b9fdf49243e96c31399cf016f3f532b3e0f9e61d58bad910cffb9f",
+      "bytes": 3023
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/short-amber-vial/prompt.txt",
+      "source": "outputs/catalog-model-repair-2026-10-31/short-amber-vial/prompt.txt",
+      "sha256": "a25245f80665e73b630e4bef1c85f912c66d451368d7535ff6a859504cde8a08",
+      "bytes": 1448
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/short-amber-vial/published-kits.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/short-amber-vial/published-kits.json",
+      "sha256": "4775f45ed00540e29d1798a661b1d9da7cd1b03207ba05260be93b0f7af00519",
+      "bytes": 35
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/short-amber-vial/registration.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/short-amber-vial/registration.json",
+      "sha256": "94cf259e38f784d08d29b803383f7637c3bf0377464c90284153af1ab8dd9c31",
+      "bytes": 3278
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/short-amber-vial/render-short.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/short-amber-vial/render-short.py",
+      "sha256": "231844ee5e8fba4391209a9803e4b0e135b607a6375ca0979b57adf58462a226",
+      "bytes": 3118
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/component-followups/check-spacing.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/component-followups/check-spacing.cjs",
+      "sha256": "80ea3fd4e67cca54cd794eba9c32b2c34fd0fa727626c105c4bd558842c0bf2a",
+      "bytes": 5454
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/component-followups/check-tulip.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/component-followups/check-tulip.cjs",
+      "sha256": "39ee3e589432ec9a02831a86e1c2a09f8f2e86b6faa7dd2300ef52e0df23572d",
+      "bytes": 1581
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/component-followups/inspect.ts.txt",
+      "source": "outputs/catalog-model-repair-2026-10-31/component-followups/inspect.ts",
+      "sha256": "0c17c7ca555724ccbd52b9391811451fd03a9fc65d07342d1ed7a8762fc7387d",
+      "bytes": 640
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/component-followups/integrate-tulip.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/component-followups/integrate-tulip.cjs",
+      "sha256": "57e4085d934847cf713b9942fc9a032c9d16ebeb3d0e19e197711b36089a9879",
+      "bytes": 2332
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/component-followups/render-tulip-tube.py",
+      "source": "outputs/catalog-model-repair-2026-10-31/component-followups/render-tulip-tube.py",
+      "sha256": "43e160d771e420c9cefd5db8fdcfe6651667a9854b9d6583c238eb7f3727a5c4",
+      "bytes": 4837
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/component-followups/spacing-browser-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/component-followups/spacing-browser-checks.json",
+      "sha256": "71d7c6da939706d9e37022a92a8766f000fa027e8c7f8913f30d90f92dace162",
+      "bytes": 9189
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/component-followups/tulip-before.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/component-followups/tulip-before.json",
+      "sha256": "7a35a07eb3ef577c5fbc2b9f68a7aec7a889bf3c2b003fd2b2d17bdfc51e0ce4",
+      "bytes": 39206
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/component-followups/tulip-browser-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/component-followups/tulip-browser-checks.json",
+      "sha256": "1161e6727549350363a17731da4200f1b25bc21a7e19f01d225c82268c637bf0",
+      "bytes": 15993
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/component-followups/tulip-changes.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/component-followups/tulip-changes.json",
+      "sha256": "401c4178aec17f5c072842446e5100174792e65ef4e8c4a4591170193cd2acfb",
+      "bytes": 3807
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/after.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/after.json",
+      "sha256": "5051a1d6e36c7b79f0a108ffe4017bdb37ca6c8154237b7849959e074d79f583",
+      "bytes": 8524
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/changes.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/changes.json",
+      "sha256": "62d275afc314deb39f7c4daee24e4fba9f265de29dc8c67f42d7b3760e93d85a",
+      "bytes": 14635
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/check-handoff.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/check-handoff.cjs",
+      "sha256": "8e4218e5aa77934945af9de62b648fed1f209a34416397cf3c53bb0fafb636fd",
+      "bytes": 4072
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/five-approved-handoff-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/five-approved-handoff-checks.json",
+      "sha256": "f18d4ed47b5c40adc9fdb2cf9998190c468454048170e02f02a75cecdd3d3602",
+      "bytes": 27425
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/kits-before.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/kits-before.json",
+      "sha256": "b0bd5249821d3bdab1144db59ee1d80ef2cb99183623233897fe6d9e9f5147d6",
+      "bytes": 410621
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/probe.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/probe.cjs",
+      "sha256": "12d5996bd87850de69a19bf777db637766f9743e3b512c403c55d4090ae65989",
+      "bytes": 1361
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cobalt-followup/audit.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/cobalt-followup/audit.cjs",
+      "sha256": "aecc7cf6f8e8a1e68eb040a35719462906bf7a786d890657e07006f5650ff541",
+      "bytes": 2165
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cobalt-followup/browser-audit.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/cobalt-followup/browser-audit.json",
+      "sha256": "8576f68f5d2419d9050624876939a27831e5886585a0e45de46173973573d165",
+      "bytes": 84352
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cobalt-followup/contact.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/cobalt-followup/contact.cjs",
+      "sha256": "2bcfebc6e4556cbe4cd4b86ff48ef9dbde4ca581fb420ec93ecb4351a6138292",
+      "bytes": 1145
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cobalt-followup/finish-report.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/cobalt-followup/finish-report.cjs",
+      "sha256": "9677cab173b94123eb938a20eb12f43bfaac38d8542b9340d8480252afa2d23b",
+      "bytes": 2329
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cobalt-followup/inventory.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/cobalt-followup/inventory.cjs",
+      "sha256": "e2d6887c6a71628e80752ddb2259b7006939b9f61cf76890d6faf7f7559ce9c9",
+      "bytes": 1094
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cobalt-followup/inventory.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/cobalt-followup/inventory.json",
+      "sha256": "0dabd3b60a7ca68cdaaa3a0d4a28712294470ecaf5d782d0ba4e718e6b86d84a",
+      "bytes": 995809
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cobalt-followup/legacy-check.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/cobalt-followup/legacy-check.cjs",
+      "sha256": "bbfecc0d8dec5b7c6c6767f15f01bcc265d65d114f8202fc3b238a97e762356e",
+      "bytes": 1744
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cobalt-followup/legacy-kits.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/cobalt-followup/legacy-kits.json",
+      "sha256": "7bfc29b470ce113bca509deabb0375a1812ee5a0802548e82f712992e8dfbdfe",
+      "bytes": 14428
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cobalt-followup/per-sku-defects.csv",
+      "source": "outputs/catalog-model-repair-2026-10-31/cobalt-followup/per-sku-defects.csv",
+      "sha256": "f69a1b15d5ef0647863e9f3f49a1256c5dd36ffb04f3861efa8c0cca0211e0ff",
+      "bytes": 14747
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cobalt-followup/per-sku-defects.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/cobalt-followup/per-sku-defects.json",
+      "sha256": "78a40ced486cdd0669ed2eb331ba6967abf8528207f9cb896fb99abfe2062fd2",
+      "bytes": 79642
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cobalt-followup/summary.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/cobalt-followup/summary.json",
+      "sha256": "2749011263826f7aabc62380a9498ff2797117bfa6cf68f90a51ca2b56f0ed10",
+      "bytes": 564
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/amber-followup/status.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/amber-followup/status.json",
+      "sha256": "b21cac104f5be4821aae82e3ebea4ba8544c283fa86b117b0a53a0c93b3237af",
+      "bytes": 27616
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/sunburst/clear-v5.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/sunburst/clear-v5.png",
+      "sha256": "2584b13f4f589aea6f67854d8a22ec9ace1ecabf12bf1a90f8259e24677f392a",
+      "bytes": 668843
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/sunburst/amber-v1.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/sunburst/amber-v1.png",
+      "sha256": "5aa9750d5f1bd449f4fe1df007c6dde8f672da6f9c671fa363069911627878f7",
+      "bytes": 668010
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/short-amber-vial/short-amber-native-v2.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/short-amber-vial/short-amber-native-v2.png",
+      "sha256": "5be9929a0bde292b74b11d7122c9736b21552b1dffacebce4e52252195e6c392",
+      "bytes": 991128
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/renders/mechanism-tulip-5-v3.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/renders/mechanism-tulip-5-v3.png",
+      "sha256": "752290ff324ad2d49d4f02c995368027c855549ae5eabf62eedfdd7d27cd121b",
+      "bytes": 70984
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/renders/mechanism-tulip-5-v3.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/renders/mechanism-tulip-5-v3.json",
+      "sha256": "a3939c6d156f47564d18ce9ebb05b5b8531ba3001bb0836e666133d941d7548d",
+      "bytes": 1272
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/build-five-kits.ts.txt",
+      "source": "outputs/catalog-model-repair-2026-10-31/small-sprayers/scripts/build-five-kits.ts",
+      "sha256": "9c13f8f10586820937e7def8c8ea8366801dd84cbcb5894faad4d0d9ca938042",
+      "bytes": 5794
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/make-followup-review.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/make-followup-review.cjs",
+      "sha256": "b3d3aa770e7b50f354e32fd6fe34c815f27b91d1fdde928c2853bf8ed32b3388",
+      "bytes": 4633
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/component-followups/1440-spacing-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/component-followups/1440-spacing-exploded.png",
+      "sha256": "7f602497534a8a5e289bd371aa5f6390061de20317ec0c852e00da8cf44a22c8",
+      "bytes": 103012
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/component-followups/390-spacing-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/component-followups/390-spacing-exploded.png",
+      "sha256": "e24255e4d0d5dc0e621c4c4ce641150512e95263800f3f93dbd7613e525e35b3",
+      "bytes": 49144
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/component-followups/390-spacing-with-details.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/component-followups/390-spacing-with-details.png",
+      "sha256": "0df33aed32524f8ca1a31b9e0a3e594b6a7ec057d4893a4aea37729b93efd9dc",
+      "bytes": 352306
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/component-followups/tulip-reported-before.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/component-followups/tulip-reported-before.png",
+      "sha256": "5abf6006a9103ae4393e92a14f5ee05c0c331e8387d65492d2399b40f59245da",
+      "bytes": 150585
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-amber-black-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-amber-black-capon.png",
+      "sha256": "90d70fc6c703dca9e1eb4c8ed17b9a42af38c75e6251b68811e6c4fe5d55fbfe",
+      "bytes": 146338
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-amber-black-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-amber-black-exploded.png",
+      "sha256": "4eeb3a74bd2c618e6ac4373e3af1fbbf56482cd45c70bc7b350577237c515fd3",
+      "bytes": 177244
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-amber-black-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-amber-black-sidecar.png",
+      "sha256": "8ae409baaee3e3ac03601d7d2ac42174b1c06086b72d6aab046ab4ebc735698a",
+      "bytes": 150378
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-amber-white-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-amber-white-capon.png",
+      "sha256": "e865761b5fb94398b6a17c60b707b4084306e8ca7717f2861df1945b74653533",
+      "bytes": 146914
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-amber-white-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-amber-white-exploded.png",
+      "sha256": "c42448c1acba08c3f2d058bc13dbf1e9b63f545be283dddabb6f72a79a0c46c9",
+      "bytes": 177962
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-amber-white-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-amber-white-sidecar.png",
+      "sha256": "ee101817898b2f9746c624facac4d523047565f96d48fc64ac60bd448d48fd7b",
+      "bytes": 151254
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-clear-black-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-clear-black-capon.png",
+      "sha256": "438b82ae2efc6103c3150d459ea3d852e55cf9a736eb528d9d9e39b132a06239",
+      "bytes": 142998
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-clear-black-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-clear-black-exploded.png",
+      "sha256": "64e6fb88b5efc2a1c0d05031910fa25012581d14be9f0bb30f9ed74bdf7c6e9b",
+      "bytes": 172822
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-clear-black-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-clear-black-sidecar.png",
+      "sha256": "73b8b654942c205b19d9e3a0ce1c43ef904bf953e098310d466838183a898c02",
+      "bytes": 146534
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-clear-white-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-clear-white-capon.png",
+      "sha256": "c4175b8e68c33d91aa0c398902295e8f79aa50f52a4c574ed279780b95e9e416",
+      "bytes": 143973
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-clear-white-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-clear-white-exploded.png",
+      "sha256": "f385caebf1c44a9e9396fd82671511fddb98f0ec49e8f5b23e61287276dbf6f0",
+      "bytes": 173896
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-clear-white-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/desktop-clear-white-sidecar.png",
+      "sha256": "aafd0df3e69b032d74650682730dd578d9ff965f19a752664edd18b780fc4b23",
+      "bytes": 147835
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-amber-black-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-amber-black-capon.png",
+      "sha256": "06e33a043f842b0b058a5f46dbaf8b1998acd1b4075e218591ac4d332545535d",
+      "bytes": 48078
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-amber-black-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-amber-black-exploded.png",
+      "sha256": "cdd2cd24d766c532f7e686e4253a665807bc35f4b32749c4a7c4f8a9078eb95c",
+      "bytes": 63863
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-amber-black-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-amber-black-sidecar.png",
+      "sha256": "65529bfd810ede229db7e7e10ff3f9005fd9a69cf6763d67607ef692c59c0ad4",
+      "bytes": 50569
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-amber-white-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-amber-white-capon.png",
+      "sha256": "b4dce9db422859fa28aa8cafce60ffd235f6745655754e2f053f7973429b8827",
+      "bytes": 47097
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-amber-white-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-amber-white-exploded.png",
+      "sha256": "5fbedf32b89861395c9303c5f23112f6da6b722c721345fd3733439d7e6cca4d",
+      "bytes": 63042
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-amber-white-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-amber-white-sidecar.png",
+      "sha256": "69dc90b6d4ee78eeb7ecc0b5d33bca022f5d2ee25fca85db3d16297b1229e2c9",
+      "bytes": 49569
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-clear-black-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-clear-black-capon.png",
+      "sha256": "17f3ec578cf86d0d07682800e2a8196f1062cdc38b2f7eed1bfa9f7641c6be4a",
+      "bytes": 46057
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-clear-black-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-clear-black-exploded.png",
+      "sha256": "fc2c1381cf5504b813eabdc7e95ec857d2b9e263ee93b5e9bd739f120099cd98",
+      "bytes": 61973
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-clear-black-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-clear-black-sidecar.png",
+      "sha256": "541e28937fd0efb0b7a48b42b8429cc1cc0a2223c31398ec046d3795d0612dbb",
+      "bytes": 48218
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-clear-white-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-clear-white-capon.png",
+      "sha256": "ccfda44b1ec829d01ecd1c9e99ad8c91180ba710d80f231e86e3e6d3b80afa67",
+      "bytes": 45515
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-clear-white-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-clear-white-exploded.png",
+      "sha256": "d203045296d1cd2fd6881ea28cb30ef0512956da20d0d1dab782dad39f65e1ca",
+      "bytes": 61575
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-clear-white-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/mobile-clear-white-sidecar.png",
+      "sha256": "e69dede2042853813601f966113de750a9d3fb00548a3ba195925c1a47fb2687",
+      "bytes": 47731
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/short-amber-vial/desktop-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/short-amber-vial/desktop-capon.png",
+      "sha256": "af0a77310ade6b8d643e8684d96da6a748c8600280448d5121a00d0e2e39dfd6",
+      "bytes": 142069
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/short-amber-vial/desktop-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/short-amber-vial/desktop-exploded.png",
+      "sha256": "b5484d7876f420d1675f1c3329782305487030f4fc7531d17490279e191d1d67",
+      "bytes": 178096
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/short-amber-vial/desktop-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/short-amber-vial/desktop-sidecar.png",
+      "sha256": "1a9b36c5c4e13a2356661e01a06478e8edf3264a79678d2c20152ac83c4b3c1c",
+      "bytes": 150654
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/short-amber-vial/mobile-capon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/short-amber-vial/mobile-capon.png",
+      "sha256": "5e4b87fa5e2698db7695bcaeaab8513388321e495406be08bbebd322d671f097",
+      "bytes": 45815
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/short-amber-vial/mobile-exploded.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/short-amber-vial/mobile-exploded.png",
+      "sha256": "6a17c0062daaa554392a7f62a54d1bb37f15a71d0648e84a24594376dbb9a7a0",
+      "bytes": 64306
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/short-amber-vial/mobile-sidecar.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/short-amber-vial/mobile-sidecar.png",
+      "sha256": "8dbf9c97b49fa3e1c1b6b6450da79f87aff8ba84d7eeef82d518c5ada73a2a58",
+      "bytes": 50755
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/approved-handoff-clear-cap.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/approved-handoff-clear-cap.png",
+      "sha256": "6aa99685c536e3bb46d3d23bb7d0ba8f35a67ed9e61c553a1c08cf59f4ef22c9",
+      "bytes": 181778
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/approved-handoff-clear-finemist.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/approved-handoff-clear-finemist.png",
+      "sha256": "67fe4c3a2134c25fa5fa42f003e140b0740603b2723f010c57384b0eb1bada4d",
+      "bytes": 188132
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/approved-handoff-clear-rollon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/approved-handoff-clear-rollon.png",
+      "sha256": "fec612e5adaaa2270e629be58a53ec7a71dcc57a46c899398c9eb2c3e96e6e8b",
+      "bytes": 169402
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/approved-handoff-cobalt-blue-cap.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/approved-handoff-cobalt-blue-cap.png",
+      "sha256": "6f2327fbc6c7a9018521d702af278c499d2ce6aceac8ea7ee7f2503cf8b35cab",
+      "bytes": 189149
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/approved-handoff-cobalt-blue-finemist.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/approved-handoff-cobalt-blue-finemist.png",
+      "sha256": "b64bad2268a2436818d391aac5949d0e18ab66c84d192b17185f4978a72676c7",
+      "bytes": 187127
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/approved-handoff-cobalt-blue-rollon.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/cylinder5-rollon-followup/approved-handoff-cobalt-blue-rollon.png",
+      "sha256": "ad292657415d6b6f0be7cba59506584fa992c76c8d4b6ff257d2873c4ebf25ae",
+      "bytes": 177563
+    }
+  ]
+}

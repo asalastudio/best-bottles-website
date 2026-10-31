@@ -1,0 +1,502 @@
+{
+  "GBBstnBlu15BlkCapSht": null,
+  "GBBstnBlu15BlkDrpr": null,
+  "GBBstnBlu15BlkDrprGlTrim": {
+    "anchors": {
+      "axisX": 500,
+      "baselineY": 1061,
+      "neckAxisX": 500,
+      "pxPerMm": null,
+      "seatY": 393
+    },
+    "canvas": {
+      "height": 1100,
+      "width": 1000
+    },
+    "completeness": "full",
+    "conflicts": [],
+    "familyId": "boston-round-15ml-cobalt-blue-18-400",
+    "parts": [
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 1064,
+          "left": 305,
+          "right": 796,
+          "top": 101
+        },
+        "derivation": "background-matte",
+        "explodeIndex": 0,
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "bytes": 35090,
+          "height": 1100,
+          "key": "kits/master-parts/b3de109ada236b9011da0b4382bc2174cd143e86dd9db4822006b3231b074408.body.webp",
+          "sha256": "b3de109ada236b9011da0b4382bc2174cd143e86dd9db4822006b3231b074408",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/b3de109ada236b9011da0b4382bc2174cd143e86dd9db4822006b3231b074408.body.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0
+      },
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 393,
+          "left": 368,
+          "right": 619,
+          "top": 45
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 1,
+        "exploded": {
+          "dx": -338,
+          "dy": 0
+        },
+        "image": {
+          "bytes": 14356,
+          "height": 1100,
+          "key": "kits/master-parts/b18d6013a7344c81eeb4692f2f43f40255aa36e52666f510fa598fdf33adecbf.fitment.webp",
+          "sha256": "b18d6013a7344c81eeb4692f2f43f40255aa36e52666f510fa598fdf33adecbf",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/b18d6013a7344c81eeb4692f2f43f40255aa36e52666f510fa598fdf33adecbf.fitment.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "fitment",
+        "variantKey": null,
+        "zOrder": 1
+      }
+    ],
+    "plateSha256": "41dbe631293965471c6ab8e75064d6628a575445cc308e068c2b4da53c994691",
+    "sku": "GBBstnBlu15BlkDrprGlTrim",
+    "three": null
+  },
+  "GBBstnBlu15WhtDrpr": {
+    "anchors": {
+      "axisX": 500,
+      "baselineY": 1061,
+      "neckAxisX": 500,
+      "pxPerMm": null,
+      "seatY": 415
+    },
+    "canvas": {
+      "height": 1100,
+      "width": 1000
+    },
+    "completeness": "full",
+    "conflicts": [],
+    "familyId": "boston-round-15ml-cobalt-blue-18-400",
+    "parts": [
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 1062,
+          "left": 305,
+          "right": 796,
+          "top": 98
+        },
+        "derivation": "background-matte",
+        "explodeIndex": 0,
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "bytes": 35250,
+          "height": 1100,
+          "key": "kits/master-parts/5f30e753a4efbd7d0e8f000160b477bc3ef81415aec09226a17e781e6af591f2.body.webp",
+          "sha256": "5f30e753a4efbd7d0e8f000160b477bc3ef81415aec09226a17e781e6af591f2",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/5f30e753a4efbd7d0e8f000160b477bc3ef81415aec09226a17e781e6af591f2.body.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0
+      },
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 415,
+          "left": 376,
+          "right": 645,
+          "top": 31
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 1,
+        "exploded": {
+          "dx": -364,
+          "dy": 0
+        },
+        "image": {
+          "bytes": 11682,
+          "height": 1100,
+          "key": "kits/master-parts/c43cb89d30b1af6bedbb0fb7a33aad945084d14c327d6369da52e733c0e91584.fitment.webp",
+          "sha256": "c43cb89d30b1af6bedbb0fb7a33aad945084d14c327d6369da52e733c0e91584",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/c43cb89d30b1af6bedbb0fb7a33aad945084d14c327d6369da52e733c0e91584.fitment.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "fitment",
+        "variantKey": null,
+        "zOrder": 1
+      }
+    ],
+    "plateSha256": "7782b3e777e4b7939824a4fed23c8e06f0a421bbd3cf5fc198be1e433337b8d8",
+    "sku": "GBBstnBlu15WhtDrpr",
+    "three": null
+  },
+  "GBBstnBlu15WhtDrprGlTrim": {
+    "anchors": {
+      "axisX": 500,
+      "baselineY": 1061,
+      "neckAxisX": 500,
+      "pxPerMm": null,
+      "seatY": 388
+    },
+    "canvas": {
+      "height": 1100,
+      "width": 1000
+    },
+    "completeness": "full",
+    "conflicts": [],
+    "familyId": "boston-round-15ml-cobalt-blue-18-400",
+    "parts": [
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 1062,
+          "left": 306,
+          "right": 796,
+          "top": 101
+        },
+        "derivation": "background-matte",
+        "explodeIndex": 0,
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "bytes": 34758,
+          "height": 1100,
+          "key": "kits/master-parts/b1da2826b7dcb113a5076c845e7f75a5c3bb887401b8770950ad17b8b2e94b8f.body.webp",
+          "sha256": "b1da2826b7dcb113a5076c845e7f75a5c3bb887401b8770950ad17b8b2e94b8f",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/b1da2826b7dcb113a5076c845e7f75a5c3bb887401b8770950ad17b8b2e94b8f.body.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0
+      },
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 388,
+          "left": 369,
+          "right": 617,
+          "top": 44
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 1,
+        "exploded": {
+          "dx": -335,
+          "dy": 0
+        },
+        "image": {
+          "bytes": 13056,
+          "height": 1100,
+          "key": "kits/master-parts/18e5e721cbdf9fe0778d66670b7645535fd3744b554285300c3b7a76b68fa4a5.fitment.webp",
+          "sha256": "18e5e721cbdf9fe0778d66670b7645535fd3744b554285300c3b7a76b68fa4a5",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/18e5e721cbdf9fe0778d66670b7645535fd3744b554285300c3b7a76b68fa4a5.fitment.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "fitment",
+        "variantKey": null,
+        "zOrder": 1
+      }
+    ],
+    "plateSha256": "485e8f3749c330c0f935c0f7cc54c32f7657ea5340b3d5d141e6f0631a41a4c0",
+    "sku": "GBBstnBlu15WhtDrprGlTrim",
+    "three": null
+  },
+  "GBBstnBlu15WhtDrprSlTrim": {
+    "anchors": {
+      "axisX": 500,
+      "baselineY": 1061,
+      "neckAxisX": 500,
+      "pxPerMm": null,
+      "seatY": 393
+    },
+    "canvas": {
+      "height": 1100,
+      "width": 1000
+    },
+    "completeness": "full",
+    "conflicts": [],
+    "familyId": "boston-round-15ml-cobalt-blue-18-400",
+    "parts": [
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 1064,
+          "left": 305,
+          "right": 796,
+          "top": 101
+        },
+        "derivation": "background-matte",
+        "explodeIndex": 0,
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "bytes": 35348,
+          "height": 1100,
+          "key": "kits/master-parts/25a1a25c6279caba1cf9e2775df6429d7b5eed5606c56a9e46a755bfceb2656c.body.webp",
+          "sha256": "25a1a25c6279caba1cf9e2775df6429d7b5eed5606c56a9e46a755bfceb2656c",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/25a1a25c6279caba1cf9e2775df6429d7b5eed5606c56a9e46a755bfceb2656c.body.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0
+      },
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 393,
+          "left": 364,
+          "right": 617,
+          "top": 47
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 1,
+        "exploded": {
+          "dx": -336,
+          "dy": 0
+        },
+        "image": {
+          "bytes": 12254,
+          "height": 1100,
+          "key": "kits/master-parts/6c11114148ae87a832d507dd1fffc08733dd3dcf85e22e23d90933c8177381e8.fitment.webp",
+          "sha256": "6c11114148ae87a832d507dd1fffc08733dd3dcf85e22e23d90933c8177381e8",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/6c11114148ae87a832d507dd1fffc08733dd3dcf85e22e23d90933c8177381e8.fitment.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "fitment",
+        "variantKey": null,
+        "zOrder": 1
+      }
+    ],
+    "plateSha256": "457dad7e863f884944e4bcbffd8e2741f9321b0b0c09b0d1e045d1e1462e21df",
+    "sku": "GBBstnBlu15WhtDrprSlTrim",
+    "three": null
+  },
+  "GBBstnBlu15mlBlkDropperSlTrim": {
+    "anchors": {
+      "axisX": 500,
+      "baselineY": 1060,
+      "neckAxisX": 500,
+      "pxPerMm": null,
+      "seatY": 415
+    },
+    "canvas": {
+      "height": 1100,
+      "width": 1000
+    },
+    "completeness": "full",
+    "conflicts": [],
+    "familyId": "boston-round-15ml-cobalt-blue-18-400",
+    "parts": [
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 1063,
+          "left": 314,
+          "right": 808,
+          "top": 94
+        },
+        "derivation": "background-matte",
+        "explodeIndex": 0,
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "bytes": 35726,
+          "height": 1100,
+          "key": "kits/master-parts/576882b2ae95216b0ed1f7e3d34188ae324dfb4836a8af879c105db3049be976.body.webp",
+          "sha256": "576882b2ae95216b0ed1f7e3d34188ae324dfb4836a8af879c105db3049be976",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/576882b2ae95216b0ed1f7e3d34188ae324dfb4836a8af879c105db3049be976.body.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0
+      },
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 415,
+          "left": 372,
+          "right": 634,
+          "top": 37
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 1,
+        "exploded": {
+          "dx": -344,
+          "dy": 0
+        },
+        "image": {
+          "bytes": 13938,
+          "height": 1100,
+          "key": "kits/master-parts/fafdc61f361a306f1bfdd1be6ccb85f72817d4b8b37629199ff7765ccd88d134.fitment.webp",
+          "sha256": "fafdc61f361a306f1bfdd1be6ccb85f72817d4b8b37629199ff7765ccd88d134",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/fafdc61f361a306f1bfdd1be6ccb85f72817d4b8b37629199ff7765ccd88d134.fitment.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "fitment",
+        "variantKey": null,
+        "zOrder": 1
+      }
+    ],
+    "plateSha256": "5062fa1ffc152d60569e6244d4c701636b1973e6e5aaf6dbb57c8450cc661f6c",
+    "sku": "GBBstnBlu15mlBlkDropperSlTrim",
+    "three": null
+  },
+  "GBVBlu1DrmBlkDropper": {
+    "anchors": {
+      "axisX": 500,
+      "baselineY": 1060,
+      "neckAxisX": 500,
+      "pxPerMm": null,
+      "seatY": 453
+    },
+    "canvas": {
+      "height": 1100,
+      "width": 1000
+    },
+    "completeness": "full",
+    "conflicts": [],
+    "familyId": "vial-4ml-blue-13-425",
+    "parts": [
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 1064,
+          "left": 369,
+          "right": 633,
+          "top": 313
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 0,
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "bytes": 22666,
+          "height": 1100,
+          "key": "kits/master-parts/a47eb8da978d754a563039193360e7027e6824777f6b7560bb3079d3d9a74700.body.webp",
+          "sha256": "a47eb8da978d754a563039193360e7027e6824777f6b7560bb3079d3d9a74700",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/a47eb8da978d754a563039193360e7027e6824777f6b7560bb3079d3d9a74700.body.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0
+      },
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 453,
+          "left": 372,
+          "right": 628,
+          "top": 35
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 1,
+        "exploded": {
+          "dx": 285,
+          "dy": 0
+        },
+        "image": {
+          "bytes": 11702,
+          "height": 1100,
+          "key": "kits/master-parts/ced256fd52c671ab964fe37efcbd42a8bfb50a277065b40d51eab64bf6866f51.fitment.webp",
+          "sha256": "ced256fd52c671ab964fe37efcbd42a8bfb50a277065b40d51eab64bf6866f51",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/ced256fd52c671ab964fe37efcbd42a8bfb50a277065b40d51eab64bf6866f51.fitment.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "fitment",
+        "variantKey": null,
+        "zOrder": 1
+      }
+    ],
+    "plateSha256": "565d7bb8f3316ccb3001215e8cfbe50b626f346d28d1e56abe5067a6d64d36e9",
+    "sku": "GBVBlu1DrmBlkDropper",
+    "three": null
+  }
+}

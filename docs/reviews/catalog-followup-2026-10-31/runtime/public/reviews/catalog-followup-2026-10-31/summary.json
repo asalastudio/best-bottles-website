@@ -1,0 +1,12 @@
+{
+  "inventorySkus": 117,
+  "productGroups": 24,
+  "interactiveGroups": 17,
+  "legacyGalleryGroups": 7,
+  "unresolved": [
+    "Exploded view unavailable in the current kit; recorded as coverage gap, not a passed interaction.",
+    "Legacy glass and dropper cutouts contain visible alpha fragments; replace with complete clean masters. Exact finish layers need review.",
+    "Still uses old glass body; needs approved 4 ml body registered with dropper/pipette."
+  ],
+  "scopeLimit": "Family representatives, not per-finish visual approval. No production changes."
+}

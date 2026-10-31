@@ -1,0 +1,530 @@
+[
+  {
+    "sku": "GBTulipAmb5SpryBlkMatt",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=matte-black",
+    "view": "sidecar",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SpryBlkMatt",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=matte-black",
+    "view": "capon",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SpryBlkMatt",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=matte-black",
+    "view": "exploded",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SpryBlkSh",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=shiny-black",
+    "view": "sidecar",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SpryBlkSh",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=shiny-black",
+    "view": "capon",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SpryBlkSh",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=shiny-black",
+    "view": "exploded",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SpryBluMatt",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=matte-blue",
+    "view": "sidecar",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SpryBluMatt",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=matte-blue",
+    "view": "capon",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SpryBluMatt",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=matte-blue",
+    "view": "exploded",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SpryCuMatt",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=matte-copper",
+    "view": "sidecar",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SpryCuMatt",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=matte-copper",
+    "view": "capon",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SpryCuMatt",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=matte-copper",
+    "view": "exploded",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SpryGlMatt",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=matte-gold",
+    "view": "sidecar",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SpryGlMatt",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=matte-gold",
+    "view": "capon",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SpryGlMatt",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=matte-gold",
+    "view": "exploded",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SprySlMatt",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=matte-silver",
+    "view": "sidecar",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SprySlMatt",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=matte-silver",
+    "view": "capon",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SprySlMatt",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=matte-silver",
+    "view": "exploded",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SpryGlSh",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=shiny-gold",
+    "view": "sidecar",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SpryGlSh",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=shiny-gold",
+    "view": "capon",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SpryGlSh",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=shiny-gold",
+    "view": "exploded",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SprySlSh",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=shiny-silver",
+    "view": "sidecar",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SprySlSh",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=shiny-silver",
+    "view": "capon",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  },
+  {
+    "sku": "GBTulipAmb5SprySlSh",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=shiny-silver",
+    "view": "exploded",
+    "tubes": [
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcatalog-followups-2026-10-31%2Ftulip-diptube-752290ff324a.png&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "body": {
+      "x": 379.25396728515625,
+      "y": 442.7808837890625,
+      "width": 157.9288330078125,
+      "height": 270.453125,
+      "top": 442.7808837890625,
+      "right": 537.1828002929688,
+      "bottom": 713.2340087890625,
+      "left": 379.25396728515625
+    },
+    "overflow": false
+  }
+]
