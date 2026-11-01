@@ -1,0 +1,171 @@
+{
+  "version": "15a83f894e25",
+  "shoulderY": 637.1469781520843,
+  "diameterMm": 1.1,
+  "baseThicknessMm": 4.43,
+  "tipClearanceMm": 5.33,
+  "tubeTop": 616.1669781520843,
+  "tubeBottom": 1005.0883,
+  "nativeHeight": 1314.4927248521285,
+  "scale": 0.2958717948717949,
+  "sourceSha256": "99a2a782c154680ba81e2915d50a3f0e634f5395f08fcfc6a8d37005335b0f8f",
+  "tubeAsset": {
+    "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+    "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+    "bytes": 3437610,
+    "width": 180,
+    "height": 1314.4927248521285
+  },
+  "checks": [
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "glass": "Clear",
+      "finish": "Matte Black",
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "bodyHash": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+      "shoulderY": 637.1469781520843,
+      "tipClearanceMm": 5.33,
+      "tubeDiameterMm": 1.1
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "glass": "Clear",
+      "finish": "Matte Silver",
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "bodyHash": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+      "shoulderY": 637.1469781520843,
+      "tipClearanceMm": 5.33,
+      "tubeDiameterMm": 1.1
+    },
+    {
+      "sku": "GBCyl5SpryBlkSh",
+      "glass": "Clear",
+      "finish": "Shiny Black",
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "bodyHash": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+      "shoulderY": 637.1469781520843,
+      "tipClearanceMm": 5.33,
+      "tubeDiameterMm": 1.1
+    },
+    {
+      "sku": "GBCyl5SpryGlSh",
+      "glass": "Clear",
+      "finish": "Shiny Gold",
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "bodyHash": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+      "shoulderY": 637.1469781520843,
+      "tipClearanceMm": 5.33,
+      "tubeDiameterMm": 1.1
+    },
+    {
+      "sku": "GBCyl5SprySlSh",
+      "glass": "Clear",
+      "finish": "Shiny Silver",
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "bodyHash": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+      "shoulderY": 637.1469781520843,
+      "tipClearanceMm": 5.33,
+      "tubeDiameterMm": 1.1
+    },
+    {
+      "sku": "GBCyl5SpryBluMatt",
+      "glass": "Clear",
+      "finish": "Matte Blue",
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "bodyHash": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+      "shoulderY": 637.1469781520843,
+      "tipClearanceMm": 5.33,
+      "tubeDiameterMm": 1.1
+    },
+    {
+      "sku": "GBCyl5SpryCuMatt",
+      "glass": "Clear",
+      "finish": "Matte Copper",
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "bodyHash": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+      "shoulderY": 637.1469781520843,
+      "tipClearanceMm": 5.33,
+      "tubeDiameterMm": 1.1
+    },
+    {
+      "sku": "GBCyl5SpryGlMatt",
+      "glass": "Clear",
+      "finish": "Matte Gold",
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "bodyHash": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+      "shoulderY": 637.1469781520843,
+      "tipClearanceMm": 5.33,
+      "tubeDiameterMm": 1.1
+    },
+    {
+      "sku": "GBCylBlu5SprySlSh",
+      "glass": "Cobalt Blue",
+      "finish": "Shiny Silver",
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+      "bodyHash": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
+      "shoulderY": 637.1469781520843,
+      "tipClearanceMm": 5.33,
+      "tubeDiameterMm": 1.1
+    },
+    {
+      "sku": "GBCylBlu5SpryBlkSh",
+      "glass": "Cobalt Blue",
+      "finish": "Shiny Black",
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+      "bodyHash": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
+      "shoulderY": 637.1469781520843,
+      "tipClearanceMm": 5.33,
+      "tubeDiameterMm": 1.1
+    },
+    {
+      "sku": "GBCylBlu5SpryGlSh",
+      "glass": "Cobalt Blue",
+      "finish": "Shiny Gold",
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+      "bodyHash": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
+      "shoulderY": 637.1469781520843,
+      "tipClearanceMm": 5.33,
+      "tubeDiameterMm": 1.1
+    },
+    {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "glass": "Cobalt Blue",
+      "finish": "Matte Gold",
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+      "bodyHash": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
+      "shoulderY": 637.1469781520843,
+      "tipClearanceMm": 5.33,
+      "tubeDiameterMm": 1.1
+    },
+    {
+      "sku": "GBCylBlu5SpryBluMatt",
+      "glass": "Cobalt Blue",
+      "finish": "Matte Blue",
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+      "bodyHash": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
+      "shoulderY": 637.1469781520843,
+      "tipClearanceMm": 5.33,
+      "tubeDiameterMm": 1.1
+    },
+    {
+      "sku": "GBCylBlu5SpryCuMatt",
+      "glass": "Cobalt Blue",
+      "finish": "Matte Copper",
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+      "bodyHash": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
+      "shoulderY": 637.1469781520843,
+      "tipClearanceMm": 5.33,
+      "tubeDiameterMm": 1.1
+    },
+    {
+      "sku": "GBCylBlu5SprySlMatt",
+      "glass": "Cobalt Blue",
+      "finish": "Matte Silver",
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+      "bodyHash": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
+      "shoulderY": 637.1469781520843,
+      "tipClearanceMm": 5.33,
+      "tubeDiameterMm": 1.1
+    }
+  ]
+}

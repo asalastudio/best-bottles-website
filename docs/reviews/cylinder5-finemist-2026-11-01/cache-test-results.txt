@@ -1,0 +1,10 @@
+
+ RUN  v3.2.4 /Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9
+
+ ✓ tests/bottle-builder-load-speed.test.tsx (10 tests) 114ms
+
+ Test Files  1 passed (1)
+      Tests  10 passed (10)
+   Start at  09:19:06
+   Duration  797ms (transform 94ms, setup 0ms, collect 92ms, tests 114ms, environment 358ms, prepare 43ms)
+

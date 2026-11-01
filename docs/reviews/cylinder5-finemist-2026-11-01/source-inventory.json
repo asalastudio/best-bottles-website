@@ -1,0 +1,386 @@
+[
+  {
+    "sku": "GBCyl5SpryBlkMatt",
+    "slot": "sprayer",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/sprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png",
+    "box": {
+      "x": 412.38704091341583,
+      "y": 308.0578591817317,
+      "width": 173.55909609895338,
+      "height": 347.11819219790675
+    },
+    "file": "GBCyl5SpryBlkMatt-sprayer.png",
+    "sha256": "75bd378a167265705fd96c08474800287e2f68178f321b919f16a608292241cb",
+    "bytes": 210807,
+    "size": [
+      524,
+      1048
+    ],
+    "inkBounds": [
+      18,
+      22,
+      517,
+      978
+    ]
+  },
+  {
+    "sku": "GBCyl5SpryBlkMatt",
+    "slot": "overcap",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/overcap-b45348edce87e0f56e9fb934151ebc13cdaf4029209e7e3dbea54d2f27f4d1cc.png",
+    "box": {
+      "x": 399.1522740247383,
+      "y": 284.1933587059942,
+      "width": 202.6336631779258,
+      "height": 367.9085537583254
+    },
+    "file": "GBCyl5SpryBlkMatt-overcap.png",
+    "sha256": "640937f743c35560d43b8feb5c24f21aa4ea4b6e5b69650d94b1888c373e9b09",
+    "bytes": 42709,
+    "size": [
+      217,
+      394
+    ],
+    "inkBounds": [
+      8,
+      9,
+      208,
+      386
+    ]
+  },
+  {
+    "sku": "GBCyl5SprySlMatt",
+    "slot": "sprayer",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/sprayer-a20e02d4b923a879323b7f3406c9fdfff3cbc35b150ef43570352e336c1dc768.png",
+    "box": {
+      "x": 410.800066603235,
+      "y": 326.19328258801147,
+      "width": 175.90462416745956,
+      "height": 321.7565461465271
+    },
+    "file": "GBCyl5SprySlMatt-sprayer.png",
+    "sha256": "dce84611502e4c3ce9944703ca4ad9eeb34d12b865487ed5188f0611f82beb6a",
+    "bytes": 254433,
+    "size": [
+      562,
+      1028
+    ],
+    "inkBounds": [
+      15,
+      24,
+      555,
+      1009
+    ]
+  },
+  {
+    "sku": "GBCyl5SprySlMatt",
+    "slot": "overcap",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/overcap-1be2d9861e87c29a56140ae74184a378ba2c3fe06305ecf3d2f876b933e42f8f.png",
+    "box": {
+      "x": 398.2140627973358,
+      "y": 284.20333967649856,
+      "width": 202.6336631779258,
+      "height": 370.7132064700286
+    },
+    "file": "GBCyl5SprySlMatt-overcap.png",
+    "sha256": "eb4d00473153dffc64e8ed505f3dbaab06605f2d39737f6b504e9af689555ee5",
+    "bytes": 36549,
+    "size": [
+      217,
+      397
+    ],
+    "inkBounds": [
+      10,
+      14,
+      209,
+      386
+    ]
+  },
+  {
+    "sku": "GBCyl5SpryBlkSh",
+    "slot": "sprayer",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/sprayer-026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854.png",
+    "box": {
+      "x": 412.06764985727875,
+      "y": 323.9575451950524,
+      "width": 172.62088487155089,
+      "height": 320.70854424357753
+    },
+    "file": "GBCyl5SpryBlkSh-sprayer.png",
+    "sha256": "b8ef681852402409386a6012b0ed705f7cbb7cc274f0609364b7e9020692fccc",
+    "bytes": 280734,
+    "size": [
+      584,
+      1085
+    ],
+    "inkBounds": [
+      21,
+      14,
+      576,
+      1066
+    ]
+  },
+  {
+    "sku": "GBCyl5SpryBlkSh",
+    "slot": "overcap",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/overcap-0d973b7809b6734336588f87e9718c6698f508987cdad579f4468bfd5776b85f.png",
+    "box": {
+      "x": 404.7515984776403,
+      "y": 286.06978116079927,
+      "width": 219.44161750713607,
+      "height": 367.9085537583254
+    },
+    "file": "GBCyl5SpryBlkSh-overcap.png",
+    "sha256": "40b455a184e014a9f7aa0ec7fb194976dc092ff65508b0be452164e7a242e52f",
+    "bytes": 37124,
+    "size": [
+      235,
+      394
+    ],
+    "inkBounds": [
+      6,
+      8,
+      200,
+      385
+    ]
+  },
+  {
+    "sku": "GBCyl5SpryGlSh",
+    "slot": "sprayer",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/sprayer-6d1e75eb88437a3ec4913e7fb138b44c625a9c3090c751961e5862c4822d80f7.png",
+    "box": {
+      "x": 412.58666032350146,
+      "y": 324.3567840152236,
+      "width": 172.76061845861085,
+      "height": 321.26747859181734
+    },
+    "file": "GBCyl5SpryGlSh-sprayer.png",
+    "sha256": "b97dd1980aee4a2b6cc4af4bcd8025f294b5611539956267152570227458c966",
+    "bytes": 969624,
+    "size": [
+      570,
+      1060
+    ],
+    "inkBounds": [
+      25,
+      22,
+      557,
+      1033
+    ]
+  },
+  {
+    "sku": "GBCyl5SpryGlSh",
+    "slot": "overcap",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/overcap-77e9889f85b72cf928f2408e9317378bd7444f4e0578b581f91e4c37b3fb96a9.png",
+    "box": {
+      "x": 402.88515699333965,
+      "y": 284.32311132254995,
+      "width": 196.09612749762132,
+      "height": 370.7132064700286
+    },
+    "file": "GBCyl5SpryGlSh-overcap.png",
+    "sha256": "3f8f7c00824f707a1ddf6297c32fb75935c6b4935bec9453a54506db52a34ec1",
+    "bytes": 103083,
+    "size": [
+      210,
+      397
+    ],
+    "inkBounds": [
+      7,
+      8,
+      202,
+      388
+    ]
+  },
+  {
+    "sku": "GBCyl5SprySlSh",
+    "slot": "sprayer",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/sprayer-68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681.png",
+    "box": {
+      "x": 412.7064319695528,
+      "y": 325.1652426260704,
+      "width": 172.76061845861085,
+      "height": 321.26747859181734
+    },
+    "file": "GBCyl5SprySlSh-sprayer.png",
+    "sha256": "78a0231ee807a6f14cf1e196b79d805b11bebcda3492a6b5c3c3c4f1100c96f1",
+    "bytes": 607574,
+    "size": [
+      570,
+      1060
+    ],
+    "inkBounds": [
+      25,
+      22,
+      557,
+      1033
+    ]
+  },
+  {
+    "sku": "GBCyl5SprySlSh",
+    "slot": "overcap",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/overcap-5d55997ab95a26957819244c7f5857179c7f04496a8b1f7cff60282b9b396115.png",
+    "box": {
+      "x": 406.15891531874405,
+      "y": 287.0079923882017,
+      "width": 192.36324452901997,
+      "height": 366.9803235014272
+    },
+    "file": "GBCyl5SprySlSh-overcap.png",
+    "sha256": "399f2358dba6296845b35734511f25b9c58657cc690940ec17969cfd2d0539ee",
+    "bytes": 43410,
+    "size": [
+      206,
+      393
+    ],
+    "inkBounds": [
+      6,
+      7,
+      196,
+      383
+    ]
+  },
+  {
+    "sku": "GBCyl5SpryBluMatt",
+    "slot": "sprayer",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/sprayer-9a41ce1ea4f7e686d39c11b0b76d6bb89cd33bec877e2d4ff5c0f6853328ab90.png",
+    "box": {
+      "x": 418.13607992388205,
+      "y": 336.49364414843006,
+      "width": 164.34666032350142,
+      "height": 309.08071360608943
+    },
+    "file": "GBCyl5SpryBluMatt-sprayer.png",
+    "sha256": "5b29f79825aaf81bcf8968428048685ab85706ba4173c6848a21bff788dcced3",
+    "bytes": 615112,
+    "size": [
+      528,
+      993
+    ],
+    "inkBounds": [
+      9,
+      12,
+      519,
+      977
+    ]
+  },
+  {
+    "sku": "GBCyl5SpryBluMatt",
+    "slot": "overcap",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/overcap-d5794d78965a3aea6757349b0d8b412a636d1117fcf899c9d6d423d29d4f3702.png",
+    "box": {
+      "x": 405.2207040913416,
+      "y": 285.1415509039011,
+      "width": 196.09612749762132,
+      "height": 367.9085537583254
+    },
+    "file": "GBCyl5SpryBluMatt-overcap.png",
+    "sha256": "73d870e06cb40c929dad20ec54f2ae03effdc915c3c7a3366289902fb238e826",
+    "bytes": 99263,
+    "size": [
+      210,
+      394
+    ],
+    "inkBounds": [
+      6,
+      6,
+      200,
+      385
+    ]
+  },
+  {
+    "sku": "GBCyl5SpryCuMatt",
+    "slot": "sprayer",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/sprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png",
+    "box": {
+      "x": 415.7107040913416,
+      "y": 326.2831113225499,
+      "width": 169.48686013320648,
+      "height": 314.8497145575642
+    },
+    "file": "GBCyl5SpryCuMatt-sprayer.png",
+    "sha256": "5ed12b227632e35faeb0867cb0f19597e9653bc7096dff37666b426a92133005",
+    "bytes": 319281,
+    "size": [
+      555,
+      1031
+    ],
+    "inkBounds": [
+      13,
+      13,
+      540,
+      1017
+    ]
+  },
+  {
+    "sku": "GBCyl5SpryCuMatt",
+    "slot": "overcap",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/overcap-bb4cc14ddf3bbc4772ddc2639e77460aa9847e73661ca85cd95fd4813da1956d.png",
+    "box": {
+      "x": 399.6213796384396,
+      "y": 286.06978116079927,
+      "width": 199.82901046622266,
+      "height": 368.8467649857279
+    },
+    "file": "GBCyl5SpryCuMatt-overcap.png",
+    "sha256": "16c425550406383cc3ed23dbf57d9e4a6c03dc643698c7e00fd499c7f85a94c8",
+    "bytes": 85824,
+    "size": [
+      214,
+      395
+    ],
+    "inkBounds": [
+      9,
+      8,
+      207,
+      384
+    ]
+  },
+  {
+    "sku": "GBCyl5SpryGlMatt",
+    "slot": "sprayer",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/sprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png",
+    "box": {
+      "x": 417.63703139866794,
+      "y": 333.9484966698383,
+      "width": 166.3129115128449,
+      "height": 309.1805233111322
+    },
+    "file": "GBCyl5SpryGlMatt-sprayer.png",
+    "sha256": "2612773a8d3e7a8267d94291add8f5c757baf3f0d1873ce71a4b03150299c301",
+    "bytes": 698720,
+    "size": [
+      525,
+      976
+    ],
+    "inkBounds": [
+      9,
+      9,
+      516,
+      966
+    ]
+  },
+  {
+    "sku": "GBCyl5SpryGlMatt",
+    "slot": "overcap",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/overcap-b4071730d45aad300557716fd43f4b9c6d1ce86233400e83e3a8e17dec50df33.png",
+    "box": {
+      "x": 401.018715509039,
+      "y": 286.06978116079927,
+      "width": 199.82901046622266,
+      "height": 369.78497621313034
+    },
+    "file": "GBCyl5SpryGlMatt-overcap.png",
+    "sha256": "ca81aa5a076674b7126d14583c097fde57aea18acfcdd3abdfbbcecfb406c789",
+    "bytes": 101886,
+    "size": [
+      214,
+      396
+    ],
+    "inkBounds": [
+      7,
+      7,
+      204,
+      385
+    ]
+  }
+]

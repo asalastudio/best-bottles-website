@@ -70,6 +70,15 @@ describe("bottle requests shared by the tile prefetch and the pick", () => {
         ]);
     });
 
+    it("keys 5 ml kits by the sprayer revision so an older browser cache cannot mask updates", async () => {
+        const fetcher = vi.fn(async (_url: string) => ({ ok: true, json: async () => ({ kits: {} }) }));
+        vi.stubGlobal("fetch", fetcher);
+        const { loadBodyKits } = await import("@/components/bottle-builder/builder-requests");
+        const index = JSON.parse(readFileSync("src/lib/products/cylinder5-sprayer-index.json", "utf8"));
+        await loadBodyKits("Cylinder", "cylinder-5ml|13-415|Glass Bottle");
+        expect(fetcher.mock.calls[0][0]).toContain(`media=reviewed-masters-${index.version}`);
+    });
+
     it("forgets a failed or malformed response, so trying again makes a new request", async () => {
         const fetcher = vi.fn()
             .mockResolvedValueOnce({ ok: false, status: 503, json: async () => ({}) })

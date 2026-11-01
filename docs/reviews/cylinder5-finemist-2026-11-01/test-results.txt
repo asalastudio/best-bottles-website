@@ -1,0 +1,16 @@
+
+ RUN  v3.2.4 /Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9
+
+ ✓ tests/gpt13-local-review.test.ts (4 tests) 5ms
+ ✓ tests/local-component-kits.test.ts (5 tests) 13ms
+ ✓ tests/fixed-stage-placement.test.ts (4 tests) 8ms
+ ✓ tests/builder-gpt13-preview.test.ts (2 tests) 7ms
+ ✓ tests/pdp-redesign-stage.test.ts (15 tests) 10ms
+ ✓ tests/cylinder5-sprayer-review.test.ts (5 tests) 180ms
+ ✓ tests/bottle-builder-load-speed.test.tsx (10 tests) 125ms
+
+ Test Files  7 passed (7)
+      Tests  45 passed (45)
+   Start at  09:16:15
+   Duration  1.41s (transform 650ms, setup 0ms, collect 848ms, tests 347ms, environment 581ms, prepare 756ms)
+

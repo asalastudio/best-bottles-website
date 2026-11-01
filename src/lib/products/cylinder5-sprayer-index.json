@@ -1,0 +1,22 @@
+{
+  "version": "15a83f894e25",
+  "bodyId": "cylinder-5ml-13-415",
+  "kitFile": "public/local-kits/cylinder5-finemist-2026-11-01/kits.json",
+  "skus": [
+    "GBCyl5SpryBlkMatt",
+    "GBCyl5SprySlMatt",
+    "GBCyl5SpryBlkSh",
+    "GBCyl5SpryGlSh",
+    "GBCyl5SprySlSh",
+    "GBCyl5SpryBluMatt",
+    "GBCyl5SpryCuMatt",
+    "GBCyl5SpryGlMatt",
+    "GBCylBlu5SprySlSh",
+    "GBCylBlu5SpryBlkSh",
+    "GBCylBlu5SpryGlSh",
+    "GBCylBlu5SpryGlMatt",
+    "GBCylBlu5SpryBluMatt",
+    "GBCylBlu5SpryCuMatt",
+    "GBCylBlu5SprySlMatt"
+  ]
+}

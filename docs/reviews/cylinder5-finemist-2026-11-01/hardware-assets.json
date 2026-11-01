@@ -1,0 +1,258 @@
+{
+  "GBCyl5SpryBlkMatt|sprayer": {
+    "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkMatt-sprayer.809c14cf93e1.svg",
+    "sha256": "809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f",
+    "bytes": 299364,
+    "width": 524,
+    "height": 1048,
+    "ink": [
+      18,
+      21,
+      517,
+      978
+    ],
+    "source": "GBCyl5SpryBlkMatt-sprayer.png",
+    "sourceSha256": "75bd378a167265705fd96c08474800287e2f68178f321b919f16a608292241cb",
+    "excludedOpaqueSpecks": 0
+  },
+  "GBCyl5SpryBlkMatt|overcap": {
+    "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkMatt-overcap.cd9e1c80f58d.svg",
+    "sha256": "cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd",
+    "bytes": 64030,
+    "width": 217,
+    "height": 394,
+    "ink": [
+      7,
+      8,
+      209,
+      386
+    ],
+    "source": "GBCyl5SpryBlkMatt-overcap.png",
+    "sourceSha256": "640937f743c35560d43b8feb5c24f21aa4ea4b6e5b69650d94b1888c373e9b09",
+    "excludedOpaqueSpecks": 0
+  },
+  "GBCyl5SprySlMatt|sprayer": {
+    "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlMatt-sprayer.40b457cd8831.svg",
+    "sha256": "40b457cd883102380e20b27f714510a0426e836aea42ac8679a2939c5d5c26fd",
+    "bytes": 358123,
+    "width": 562,
+    "height": 1028,
+    "ink": [
+      15,
+      24,
+      555,
+      1010
+    ],
+    "source": "GBCyl5SprySlMatt-sprayer.png",
+    "sourceSha256": "dce84611502e4c3ce9944703ca4ad9eeb34d12b865487ed5188f0611f82beb6a",
+    "excludedOpaqueSpecks": 0
+  },
+  "GBCyl5SprySlMatt|overcap": {
+    "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlMatt-overcap.48fe1f6f78e9.svg",
+    "sha256": "48fe1f6f78e9a0903b5a4584438a5a15f9111f0e3596c1928bd1100f6c438ffc",
+    "bytes": 55886,
+    "width": 217,
+    "height": 397,
+    "ink": [
+      10,
+      14,
+      209,
+      387
+    ],
+    "source": "GBCyl5SprySlMatt-overcap.png",
+    "sourceSha256": "eb4d00473153dffc64e8ed505f3dbaab06605f2d39737f6b504e9af689555ee5",
+    "excludedOpaqueSpecks": 0
+  },
+  "GBCyl5SpryBlkSh|sprayer": {
+    "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkSh-sprayer.d600b45fd94f.svg",
+    "sha256": "d600b45fd94f7eb3913038186f9badecd68edd88635b8e277893db8ddefd6489",
+    "bytes": 394555,
+    "width": 584,
+    "height": 1085,
+    "ink": [
+      20,
+      14,
+      577,
+      1067
+    ],
+    "source": "GBCyl5SpryBlkSh-sprayer.png",
+    "sourceSha256": "b8ef681852402409386a6012b0ed705f7cbb7cc274f0609364b7e9020692fccc",
+    "excludedOpaqueSpecks": 0
+  },
+  "GBCyl5SpryBlkSh|overcap": {
+    "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkSh-overcap.dd88361f3fed.svg",
+    "sha256": "dd88361f3fed6b9283d0b6edab71697dc032c201a532c82af37bdf604bc1f64d",
+    "bytes": 56369,
+    "width": 235,
+    "height": 394,
+    "ink": [
+      6,
+      7,
+      200,
+      385
+    ],
+    "source": "GBCyl5SpryBlkSh-overcap.png",
+    "sourceSha256": "40b455a184e014a9f7aa0ec7fb194976dc092ff65508b0be452164e7a242e52f",
+    "excludedOpaqueSpecks": 0
+  },
+  "GBCyl5SpryGlSh|sprayer": {
+    "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlSh-sprayer.a31e7cdc0a03.svg",
+    "sha256": "a31e7cdc0a03a59ddc56445c9d49c4a2f6472a55b62aa2514afe529576df8fbc",
+    "bytes": 1312217,
+    "width": 570,
+    "height": 1060,
+    "ink": [
+      25,
+      22,
+      558,
+      1033
+    ],
+    "source": "GBCyl5SpryGlSh-sprayer.png",
+    "sourceSha256": "b97dd1980aee4a2b6cc4af4bcd8025f294b5611539956267152570227458c966",
+    "excludedOpaqueSpecks": 0
+  },
+  "GBCyl5SpryGlSh|overcap": {
+    "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlSh-overcap.2d8f48c7c9b5.svg",
+    "sha256": "2d8f48c7c9b5ce613dd0b8adcfba34cc2193e7c26ab889b65b62a7ffc6df3d33",
+    "bytes": 144369,
+    "width": 210,
+    "height": 397,
+    "ink": [
+      7,
+      8,
+      202,
+      389
+    ],
+    "source": "GBCyl5SpryGlSh-overcap.png",
+    "sourceSha256": "3f8f7c00824f707a1ddf6297c32fb75935c6b4935bec9453a54506db52a34ec1",
+    "excludedOpaqueSpecks": 0
+  },
+  "GBCyl5SprySlSh|sprayer": {
+    "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlSh-sprayer.3fff04080b71.svg",
+    "sha256": "3fff04080b71bbf67f65773fdd81e63dd9e905d87e47e45a64bf86d2d13426e7",
+    "bytes": 829486,
+    "width": 570,
+    "height": 1060,
+    "ink": [
+      25,
+      22,
+      558,
+      1033
+    ],
+    "source": "GBCyl5SprySlSh-sprayer.png",
+    "sourceSha256": "78a0231ee807a6f14cf1e196b79d805b11bebcda3492a6b5c3c3c4f1100c96f1",
+    "excludedOpaqueSpecks": 0
+  },
+  "GBCyl5SprySlSh|overcap": {
+    "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlSh-overcap.0b1dc7e7b639.svg",
+    "sha256": "0b1dc7e7b639019ff6cc047feda07782eeb2413916860b44a3cf1388a89d0866",
+    "bytes": 64742,
+    "width": 206,
+    "height": 393,
+    "ink": [
+      6,
+      6,
+      196,
+      384
+    ],
+    "source": "GBCyl5SprySlSh-overcap.png",
+    "sourceSha256": "399f2358dba6296845b35734511f25b9c58657cc690940ec17969cfd2d0539ee",
+    "excludedOpaqueSpecks": 0
+  },
+  "GBCyl5SpryBluMatt|sprayer": {
+    "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBluMatt-sprayer.c6e4df7cab34.svg",
+    "sha256": "c6e4df7cab3493aa23ee4fede95a6df04f9b37a745bbe0a96acdf960d73373d0",
+    "bytes": 838113,
+    "width": 528,
+    "height": 993,
+    "ink": [
+      9,
+      12,
+      519,
+      977
+    ],
+    "source": "GBCyl5SpryBluMatt-sprayer.png",
+    "sourceSha256": "5b29f79825aaf81bcf8968428048685ab85706ba4173c6848a21bff788dcced3",
+    "excludedOpaqueSpecks": 0
+  },
+  "GBCyl5SpryBluMatt|overcap": {
+    "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBluMatt-overcap.5abe54c88dca.svg",
+    "sha256": "5abe54c88dca9f65382f09aa82d00201d7e931cf94e30d51f0a44b1bbdac77f0",
+    "bytes": 139248,
+    "width": 210,
+    "height": 394,
+    "ink": [
+      6,
+      6,
+      200,
+      386
+    ],
+    "source": "GBCyl5SpryBluMatt-overcap.png",
+    "sourceSha256": "73d870e06cb40c929dad20ec54f2ae03effdc915c3c7a3366289902fb238e826",
+    "excludedOpaqueSpecks": 0
+  },
+  "GBCyl5SpryCuMatt|sprayer": {
+    "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryCuMatt-sprayer.682c91008417.svg",
+    "sha256": "682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600",
+    "bytes": 444974,
+    "width": 555,
+    "height": 1031,
+    "ink": [
+      12,
+      11,
+      541,
+      1019
+    ],
+    "source": "GBCyl5SpryCuMatt-sprayer.png",
+    "sourceSha256": "5ed12b227632e35faeb0867cb0f19597e9653bc7096dff37666b426a92133005",
+    "excludedOpaqueSpecks": 0
+  },
+  "GBCyl5SpryCuMatt|overcap": {
+    "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryCuMatt-overcap.0056c53ff25d.svg",
+    "sha256": "0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627",
+    "bytes": 121536,
+    "width": 214,
+    "height": 395,
+    "ink": [
+      9,
+      8,
+      207,
+      385
+    ],
+    "source": "GBCyl5SpryCuMatt-overcap.png",
+    "sourceSha256": "16c425550406383cc3ed23dbf57d9e4a6c03dc643698c7e00fd499c7f85a94c8",
+    "excludedOpaqueSpecks": 0
+  },
+  "GBCyl5SpryGlMatt|sprayer": {
+    "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlMatt-sprayer.e853d044d5b8.svg",
+    "sha256": "e853d044d5b8f34ddffc698dc234cc8b8d291e7c62fe5393fd1247531d78c481",
+    "bytes": 949858,
+    "width": 525,
+    "height": 976,
+    "ink": [
+      9,
+      8,
+      516,
+      967
+    ],
+    "source": "GBCyl5SpryGlMatt-sprayer.png",
+    "sourceSha256": "2612773a8d3e7a8267d94291add8f5c757baf3f0d1873ce71a4b03150299c301",
+    "excludedOpaqueSpecks": 0
+  },
+  "GBCyl5SpryGlMatt|overcap": {
+    "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlMatt-overcap.f3ef10365bdc.svg",
+    "sha256": "f3ef10365bdc41ae107624567637e458c85a8233f23b14b5438e6985ef0b5226",
+    "bytes": 142776,
+    "width": 214,
+    "height": 396,
+    "ink": [
+      7,
+      7,
+      206,
+      385
+    ],
+    "source": "GBCyl5SpryGlMatt-overcap.png",
+    "sourceSha256": "ca81aa5a076674b7126d14583c097fde57aea18acfcdd3abdfbbcecfb406c789",
+    "excludedOpaqueSpecks": 0
+  }
+}
