@@ -1,0 +1,582 @@
+{
+  "passed": true,
+  "catalog": [
+    {
+      "sku": "GBCylAmb9SpryBlk",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-amber.f45c288e0b6c.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-black.ee72ac48811e.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-amber-17-415-finemist?sku=GBCylAmb9SpryBlk&sku=GBCylAmb9SpryBlk",
+      "passed": true
+    },
+    {
+      "sku": "GBCylAmb9SpryGl",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-amber.f45c288e0b6c.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-gold.b31c199b774b.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-amber-17-415-finemist?sku=GBCylAmb9SpryGl&sku=GBCylAmb9SpryGl",
+      "passed": true
+    },
+    {
+      "sku": "GBCylAmb9SpryMattSl",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-amber.f45c288e0b6c.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-matte-silver.a05bf5300265.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-amber-17-415-finemist?sku=GBCylAmb9SpryMattSl&sku=GBCylAmb9SpryMattSl",
+      "passed": true
+    },
+    {
+      "sku": "GBCylAmb9SpryRd",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-amber.f45c288e0b6c.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-red.e34c8674e08e.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-amber-17-415-finemist?sku=GBCylAmb9SpryRd&sku=GBCylAmb9SpryRd",
+      "passed": true
+    },
+    {
+      "sku": "GBCylAmb9SpryShSl",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-amber.f45c288e0b6c.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-shiny-silver.21659785df2b.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-amber-17-415-finemist?sku=GBCylAmb9SpryShSl&sku=GBCylAmb9SpryShSl",
+      "passed": true
+    },
+    {
+      "sku": "GBCylAmb9SpryTur",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-amber.f45c288e0b6c.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-turquoise.430ff4c25dce.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-amber-17-415-finemist?sku=GBCylAmb9SpryTur&sku=GBCylAmb9SpryTur",
+      "passed": true
+    },
+    {
+      "sku": "GBCyl9SpryBlk",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-black.ee72ac48811e.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-clear-17-415-finemist?sku=GBCyl9SpryBlk&sku=GBCyl9SpryBlk",
+      "passed": true
+    },
+    {
+      "sku": "GBCyl9SpryGl",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-gold.b31c199b774b.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-clear-17-415-finemist?sku=GBCyl9SpryGl&sku=GBCyl9SpryGl",
+      "passed": true
+    },
+    {
+      "sku": "GBCyl9SpryMattSl",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-matte-silver.a05bf5300265.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-clear-17-415-finemist?sku=GBCyl9SpryMattSl&sku=GBCyl9SpryMattSl",
+      "passed": true
+    },
+    {
+      "sku": "GBCyl9SpryRd",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-red.e34c8674e08e.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-clear-17-415-finemist?sku=GBCyl9SpryRd&sku=GBCyl9SpryRd",
+      "passed": true
+    },
+    {
+      "sku": "GBCyl9SpryShSl",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-shiny-silver.21659785df2b.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-clear-17-415-finemist?sku=GBCyl9SpryShSl&sku=GBCyl9SpryShSl",
+      "passed": true
+    },
+    {
+      "sku": "GBCyl9SpryTur",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-turquoise.430ff4c25dce.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-clear-17-415-finemist?sku=GBCyl9SpryTur&sku=GBCyl9SpryTur",
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu9SpryBlk",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-black.ee72ac48811e.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-cobalt-blue-17-415-finemist?sku=GBCylBlu9SpryBlk&sku=GBCylBlu9SpryBlk",
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu9SpryGl",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-gold.b31c199b774b.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-cobalt-blue-17-415-finemist?sku=GBCylBlu9SpryGl&sku=GBCylBlu9SpryGl",
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu9SpryMattSl",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-matte-silver.a05bf5300265.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-cobalt-blue-17-415-finemist?sku=GBCylBlu9SpryMattSl&sku=GBCylBlu9SpryMattSl",
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu9SpryRd",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-red.e34c8674e08e.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-cobalt-blue-17-415-finemist?sku=GBCylBlu9SpryRd&sku=GBCylBlu9SpryRd",
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu9SpryShSl",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-shiny-silver.21659785df2b.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-cobalt-blue-17-415-finemist?sku=GBCylBlu9SpryShSl&sku=GBCylBlu9SpryShSl",
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu9SpryTur",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-turquoise.430ff4c25dce.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-cobalt-blue-17-415-finemist?sku=GBCylBlu9SpryTur&sku=GBCylBlu9SpryTur",
+      "passed": true
+    },
+    {
+      "sku": "GBCylFrst9SpryBlk",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-frosted.76402e4bb5a5.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-black.ee72ac48811e.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-frosted-17-415-finemist?sku=GBCylFrst9SpryBlk&sku=GBCylFrst9SpryBlk",
+      "passed": true
+    },
+    {
+      "sku": "GBCylFrst9SpryGl",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-frosted.76402e4bb5a5.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-gold.b31c199b774b.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-frosted-17-415-finemist?sku=GBCylFrst9SpryGl&sku=GBCylFrst9SpryGl",
+      "passed": true
+    },
+    {
+      "sku": "GBCylFrst9SpryMattSl",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-frosted.76402e4bb5a5.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-matte-silver.a05bf5300265.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-frosted-17-415-finemist?sku=GBCylFrst9SpryMattSl&sku=GBCylFrst9SpryMattSl",
+      "passed": true
+    },
+    {
+      "sku": "GBCylFrst9SpryRd",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-frosted.76402e4bb5a5.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-red.e34c8674e08e.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-frosted-17-415-finemist?sku=GBCylFrst9SpryRd&sku=GBCylFrst9SpryRd",
+      "passed": true
+    },
+    {
+      "sku": "GBCylFrst9SpryShSl",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-frosted.76402e4bb5a5.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-shiny-silver.21659785df2b.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-frosted-17-415-finemist?sku=GBCylFrst9SpryShSl&sku=GBCylFrst9SpryShSl",
+      "passed": true
+    },
+    {
+      "sku": "GBCylFrst9SpryTur",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-frosted.76402e4bb5a5.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-turquoise.430ff4c25dce.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-frosted-17-415-finemist?sku=GBCylFrst9SpryTur&sku=GBCylFrst9SpryTur",
+      "passed": true
+    },
+    {
+      "sku": "GBCylSwrl9SpryBlk",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-swirl.032e641c93c4.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-black.ee72ac48811e.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-swirl-17-415-finemist?sku=GBCylSwrl9SpryBlk&sku=GBCylSwrl9SpryBlk",
+      "passed": true
+    },
+    {
+      "sku": "GBCylSwrl9SpryGl",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-swirl.032e641c93c4.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-gold.b31c199b774b.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-swirl-17-415-finemist?sku=GBCylSwrl9SpryGl&sku=GBCylSwrl9SpryGl",
+      "passed": true
+    },
+    {
+      "sku": "GBCylSwrl9SpryMattSl",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-swirl.032e641c93c4.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-matte-silver.a05bf5300265.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-swirl-17-415-finemist?sku=GBCylSwrl9SpryMattSl&sku=GBCylSwrl9SpryMattSl",
+      "passed": true
+    },
+    {
+      "sku": "GBCylSwrl9SpryRd",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-swirl.032e641c93c4.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-red.e34c8674e08e.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-swirl-17-415-finemist?sku=GBCylSwrl9SpryRd&sku=GBCylSwrl9SpryRd",
+      "passed": true
+    },
+    {
+      "sku": "GBCylSwrl9SpryShSl",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-swirl.032e641c93c4.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-shiny-silver.21659785df2b.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-swirl-17-415-finemist?sku=GBCylSwrl9SpryShSl&sku=GBCylSwrl9SpryShSl",
+      "passed": true
+    },
+    {
+      "sku": "GBCylSwrl9SpryTur",
+      "body": "/local-kits/cylinder9-masters-2026-11-01/body-swirl.032e641c93c4.png",
+      "collar": "/local-kits/cylinder9-masters-2026-11-01/collar-turquoise.430ff4c25dce.png",
+      "href": "http://127.0.0.1:3010/products/cylinder-9ml-swirl-17-415-finemist?sku=GBCylSwrl9SpryTur&sku=GBCylSwrl9SpryTur",
+      "passed": true
+    }
+  ],
+  "builder": [
+    {
+      "url": "http://127.0.0.1:3010/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl9SpryGl&from=pdp",
+      "parts": [
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-black.ee72ac48811e.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-gold.b31c199b774b.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-matte-silver.a05bf5300265.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-red.e34c8674e08e.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-shiny-silver.21659785df2b.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-turquoise.430ff4c25dce.png&w=640&q=75"
+        },
+        {
+          "slot": "diptube",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/tube-fitted.f5a5592f59a0.png&w=1200&q=75"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png&w=1200&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=1200&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-gold.b31c199b774b.png&w=1200&q=75"
+        },
+        {
+          "slot": "overcap",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/overcap.a8ffedd460b5.png&w=1200&q=75"
+        }
+      ],
+      "text": "Building from Glass Spray Bottles\nBack to collection\nExplore all fitments\nBack to bottles\nBuild Your Bottle\n\nChoose your bottle and glass, then how it dispenses or closes and the finish you like.\n\nBottle\nGlass\nFitment\nFinish\n5\nReview\nSTEP 4 OF 5\nStart over\nChoose your sprayer finish\n\nChoose the look of your fine mist sprayer. Every option shown fits your selection.\n\nFine Mist Sprayer\n17-415 neck · Clear glass\nChange fitment\n\nChange your sprayer finish to customize this bottle.\n\nBlack\nGold\nMatte Silver\nRed\nShiny Silver\nTurquoise\nIncluded overcap\n\nComes with this sprayer and cannot be selected separately.\n\nBack\nYOUR BOTTLE, TAKING SHAPE\nYour bottle preview\n9 ml Cylinder\n\nClear · Fine Mist Sprayer\n\nMatching overcap included\nShow cap\nYour Build\nReview Your Bottle\nBottle\n9 ml Cylinder\n17-415 neck\nEdit\nGlass\nClear\nEdit\nFitment\nFine Mist Sprayer\nEdit\nSprayer finish\nGold\nEdit\nUnit price\n$0.88\nTotal (12 units)\n$10.56\nSet your quantity at review. $39.44 more reaches the $50.00 order minimum.\n\nMade to work together.\nOnly compatible combinations are shown.\n\nSAME BOTTLES. MORE POSSIBILITIES.",
+      "glass": "clear",
+      "passed": true
+    },
+    {
+      "url": "http://127.0.0.1:3010/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylAmb9SpryGl&from=pdp",
+      "parts": [
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-black.ee72ac48811e.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-gold.b31c199b774b.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-matte-silver.a05bf5300265.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-red.e34c8674e08e.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-shiny-silver.21659785df2b.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-turquoise.430ff4c25dce.png&w=640&q=75"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/body-amber.f45c288e0b6c.png&w=1200&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=1200&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-gold.b31c199b774b.png&w=1200&q=75"
+        },
+        {
+          "slot": "overcap",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/overcap.a8ffedd460b5.png&w=1200&q=75"
+        }
+      ],
+      "text": "Building from Glass Spray Bottles\nBack to collection\nExplore all fitments\nBack to bottles\nBuild Your Bottle\n\nChoose your bottle and glass, then how it dispenses or closes and the finish you like.\n\nBottle\nGlass\nFitment\nFinish\n5\nReview\nSTEP 4 OF 5\nStart over\nChoose your sprayer finish\n\nChoose the look of your fine mist sprayer. Every option shown fits your selection.\n\nFine Mist Sprayer\n17-415 neck · Amber glass\nChange fitment\n\nChange your sprayer finish to customize this bottle.\n\nBlack\nGold\nMatte Silver\nRed\nShiny Silver\nTurquoise\nIncluded overcap\n\nComes with this sprayer and cannot be selected separately.\n\nBack\nYOUR BOTTLE, TAKING SHAPE\nYour bottle preview\n9 ml Cylinder\n\nAmber · Fine Mist Sprayer\n\nMatching overcap included\nShow cap\nYour Build\nReview Your Bottle\nBottle\n9 ml Cylinder\n17-415 neck\nEdit\nGlass\nAmber\nEdit\nFitment\nFine Mist Sprayer\nEdit\nSprayer finish\nGold\nEdit\nUnit price\n$0.90\nTotal (12 units)\n$10.80\nSet your quantity at review. $39.20 more reaches the $50.00 order minimum.\n\nMade to work together.\nOnly compatible combinations are shown.\n\nSAME BOTTLES. MORE POSSIBILITIES.",
+      "glass": "amber",
+      "passed": true
+    },
+    {
+      "url": "http://127.0.0.1:3010/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu9SpryGl&from=pdp",
+      "parts": [
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-black.ee72ac48811e.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-gold.b31c199b774b.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-matte-silver.a05bf5300265.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-red.e34c8674e08e.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-shiny-silver.21659785df2b.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-turquoise.430ff4c25dce.png&w=640&q=75"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png&w=1200&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=1200&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-gold.b31c199b774b.png&w=1200&q=75"
+        },
+        {
+          "slot": "overcap",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/overcap.a8ffedd460b5.png&w=1200&q=75"
+        }
+      ],
+      "text": "Building from Glass Spray Bottles\nBack to collection\nExplore all fitments\nBack to bottles\nBuild Your Bottle\n\nChoose your bottle and glass, then how it dispenses or closes and the finish you like.\n\nBottle\nGlass\nFitment\nFinish\n5\nReview\nSTEP 4 OF 5\nStart over\nChoose your sprayer finish\n\nChoose the look of your fine mist sprayer. Every option shown fits your selection.\n\nFine Mist Sprayer\n17-415 neck · Cobalt Blue glass\nChange fitment\n\nChange your sprayer finish to customize this bottle.\n\nBlack\nGold\nMatte Silver\nRed\nShiny Silver\nTurquoise\nIncluded overcap\n\nComes with this sprayer and cannot be selected separately.\n\nBack\nYOUR BOTTLE, TAKING SHAPE\nYour bottle preview\n9 ml Cylinder\n\nCobalt Blue · Fine Mist Sprayer\n\nMatching overcap included\nShow cap\nYour Build\nReview Your Bottle\nBottle\n9 ml Cylinder\n17-415 neck\nEdit\nGlass\nCobalt Blue\nEdit\nFitment\nFine Mist Sprayer\nEdit\nSprayer finish\nGold\nEdit\nUnit price\n$0.93\nTotal (12 units)\n$11.16\nSet your quantity at review. $38.84 more reaches the $50.00 order minimum.\n\nMade to work together.\nOnly compatible combinations are shown.\n\nSAME BOTTLES. MORE POSSIBILITIES.",
+      "glass": "cobalt",
+      "passed": true
+    },
+    {
+      "url": "http://127.0.0.1:3010/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylFrst9SpryGl&from=pdp",
+      "parts": [
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-black.ee72ac48811e.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-gold.b31c199b774b.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-matte-silver.a05bf5300265.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-red.e34c8674e08e.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-shiny-silver.21659785df2b.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-turquoise.430ff4c25dce.png&w=640&q=75"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/body-frosted.76402e4bb5a5.png&w=1200&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=1200&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-gold.b31c199b774b.png&w=1200&q=75"
+        },
+        {
+          "slot": "overcap",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/overcap.a8ffedd460b5.png&w=1200&q=75"
+        }
+      ],
+      "text": "Building from Glass Spray Bottles\nBack to collection\nExplore all fitments\nBack to bottles\nBuild Your Bottle\n\nChoose your bottle and glass, then how it dispenses or closes and the finish you like.\n\nBottle\nGlass\nFitment\nFinish\n5\nReview\nSTEP 4 OF 5\nStart over\nChoose your sprayer finish\n\nChoose the look of your fine mist sprayer. Every option shown fits your selection.\n\nFine Mist Sprayer\n17-415 neck · Frosted glass\nChange fitment\n\nChange your sprayer finish to customize this bottle.\n\nBlack\nGold\nMatte Silver\nRed\nShiny Silver\nTurquoise\nIncluded overcap\n\nComes with this sprayer and cannot be selected separately.\n\nBack\nYOUR BOTTLE, TAKING SHAPE\nYour bottle preview\n9 ml Cylinder\n\nFrosted · Fine Mist Sprayer\n\nMatching overcap included\nShow cap\nYour Build\nReview Your Bottle\nBottle\n9 ml Cylinder\n17-415 neck\nEdit\nGlass\nFrosted\nEdit\nFitment\nFine Mist Sprayer\nEdit\nSprayer finish\nGold\nEdit\nUnit price\n$0.98\nTotal (12 units)\n$11.76\nSet your quantity at review. $38.24 more reaches the $50.00 order minimum.\n\nMade to work together.\nOnly compatible combinations are shown.\n\nSAME BOTTLES. MORE POSSIBILITIES.",
+      "glass": "frosted",
+      "passed": true
+    },
+    {
+      "url": "http://127.0.0.1:3010/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylSwrl9SpryGl&from=pdp",
+      "parts": [
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-black.ee72ac48811e.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-gold.b31c199b774b.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-matte-silver.a05bf5300265.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-red.e34c8674e08e.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-shiny-silver.21659785df2b.png&w=640&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=640&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-turquoise.430ff4c25dce.png&w=640&q=75"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/body-swirl.032e641c93c4.png&w=1200&q=75"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png&w=1200&q=75"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/collar-gold.b31c199b774b.png&w=1200&q=75"
+        },
+        {
+          "slot": "overcap",
+          "url": "/_next/image?url=/local-kits/cylinder9-masters-2026-11-01/overcap.a8ffedd460b5.png&w=1200&q=75"
+        }
+      ],
+      "text": "Building from Glass Spray Bottles\nBack to collection\nExplore all fitments\nBack to bottles\nBuild Your Bottle\n\nChoose your bottle and glass, then how it dispenses or closes and the finish you like.\n\nBottle\nGlass\nFitment\nFinish\n5\nReview\nSTEP 4 OF 5\nStart over\nChoose your sprayer finish\n\nChoose the look of your fine mist sprayer. Every option shown fits your selection.\n\nFine Mist Sprayer\n17-415 neck · Swirl glass\nChange fitment\n\nChange your sprayer finish to customize this bottle.\n\nBlack\nGold\nMatte Silver\nRed\nShiny Silver\nTurquoise\nIncluded overcap\n\nComes with this sprayer and cannot be selected separately.\n\nBack\nYOUR BOTTLE, TAKING SHAPE\nYour bottle preview\n9 ml Cylinder\n\nSwirl · Fine Mist Sprayer\n\nMatching overcap included\nShow cap\nYour Build\nReview Your Bottle\nBottle\n9 ml Cylinder\n17-415 neck\nEdit\nGlass\nSwirl\nEdit\nFitment\nFine Mist Sprayer\nEdit\nSprayer finish\nGold\nEdit\nUnit price\n$1.00\nTotal (12 units)\n$12.00\nSet your quantity at review. $38.00 more reaches the $50.00 order minimum.\n\nMade to work together.\nOnly compatible combinations are shown.\n\nSAME BOTTLES. MORE POSSIBILITIES.",
+      "glass": "swirl",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

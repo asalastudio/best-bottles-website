@@ -1,3 +1,4 @@
+import { CYLINDER9_MASTER_VERSION } from "@/lib/products/cylinder9-master";
 import type { BuilderConfiguration, BuilderKit } from "@/lib/bottle-builder/model";
 
 /** One request per bottle per page view, shared by the tile prefetch and the
@@ -33,7 +34,7 @@ export function loadBodyConfigurations(family: string, bodyId: string, shop: str
 /** The chosen bottle's kit layers, keyed by configuration id. */
 export function loadBodyKits(family: string, bodyId: string) {
     const pilot = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("assetPreview") === "gpt13" ? "&assetPreview=gpt13" : "";
-    return load(`/api/bottle-builder/kits?${query(family, bodyId)}&media=reviewed-cylinder9-overcap-swirl-v6${pilot}`,
+    return load(`/api/bottle-builder/kits?${query(family, bodyId)}&media=reviewed-masters-${CYLINDER9_MASTER_VERSION}${pilot}`,
         data => {
             const kits = data && typeof data === "object" ? (data as { kits?: unknown }).kits : null;
             return kits && typeof kits === "object" ? kits as Record<string, BuilderKit | null> : null;

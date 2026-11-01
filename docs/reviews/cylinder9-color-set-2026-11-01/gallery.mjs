@@ -1,0 +1,10 @@
+const model=await(await fetch('model.json')).json(),root=new URL('.',location.href).href,ppm=4.068519842685373,axis=348,rim=206.786871,base=491.577677;let mode='sidecar';
+function image(file,x,y,w,h){return '<image href="'+root+file+'" x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'"/>';}
+function assembly(c){const dx=mode==='exploded'?30*ppm:0,dy=mode==='exploded'?-13*ppm:0,s=284.790806/1905;let art='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 696 540"><path d="M143 491.6H553" stroke="#d5d0c9" stroke-width="1"/>';
+const tubeOpacity=mode==='exploded'?1:c.glassKey==='clear'?1:0;art+='<g opacity="'+tubeOpacity+'">'+image('tube-fitted.png',axis+dx-86*ppm/(39/1.4),rim+12.2*ppm+dy,180*ppm/(39/1.4),52.3*ppm)+'</g>';
+art+=image('body-'+c.glassKey+'.png',axis-375*s,rim-113*s,743*s,2116*s);
+art+=image('actuator.png',axis+dx-122.5*ppm/15.338,rim+dy-.7*ppm-299.9*ppm/15.338,248*ppm/15.338,302*ppm/15.338);
+art+=image('collar-'+c.finishKey+'.png',axis+dx-148.5*ppm/15.338,rim+dy-.7*ppm-30.9*ppm/15.338,301*ppm/15.338,257*ppm/15.338);
+art+=image('overcap.png',mode==='cap-on'?axis-33.74:mode==='exploded'?208.9:418,mode==='cap-on'?110.1:401.65,67.48,89.93);return art+'</svg>';}
+function render(){const grid=document.querySelector('#grid');grid.innerHTML='';for(const c of model.configurations){const link=document.createElement('a');link.href='index.html?glass='+c.glassKey+'&finish='+c.finishKey;link.className='card';link.dataset.sku=c.websiteSku;link.innerHTML=assembly(c)+'<p>'+c.glassLabel+' · '+c.finishLabel+'<small>'+c.websiteSku+'</small></p>';grid.append(link);}document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===mode)));window.galleryMode=mode;Promise.all([...document.querySelectorAll('image')].map(im=>new Promise(resolve=>{const i=new Image;i.onload=resolve;i.onerror=resolve;i.src=im.getAttribute('href')}))).then(()=>window.galleryReady=true);}
+document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;window.galleryReady=false;render()});render();

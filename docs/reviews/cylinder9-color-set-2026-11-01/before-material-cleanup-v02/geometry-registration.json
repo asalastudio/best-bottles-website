@@ -1,0 +1,308 @@
+[
+  {
+    "key": "gold",
+    "kind": "collar",
+    "template": "BB_17-415_Black-Collar_PSD-GPT_v01_APPROVED.png",
+    "templateBounds": [
+      32,
+      40,
+      1164,
+      996
+    ],
+    "rawSize": [
+      1357,
+      1159
+    ],
+    "rawBounds": [
+      42,
+      45,
+      1315,
+      1118
+    ],
+    "rawAspectDriftPercent": 0.19363825870466478,
+    "uniformScale": 0.8909599254426841,
+    "translation": [
+      -6.516309412861119,
+      -0.09319664492078772
+    ],
+    "output": [
+      1204,
+      1028
+    ],
+    "maskSha256": "6b9bbeebd8e37bf314172abd733cfc209a476f8c7a3ff75523044056485d27ff",
+    "materialBleedPx": 0,
+    "geometryNote": "Uniform material registration inside approved collar outline; shared anchor and physical dimensions."
+  },
+  {
+    "key": "matte-silver",
+    "kind": "collar",
+    "template": "BB_17-415_Black-Collar_PSD-GPT_v01_APPROVED.png",
+    "templateBounds": [
+      32,
+      40,
+      1164,
+      996
+    ],
+    "rawSize": [
+      1357,
+      1159
+    ],
+    "rawBounds": [
+      39,
+      51,
+      1315,
+      1114
+    ],
+    "rawAspectDriftPercent": 1.3745350348536967,
+    "uniformScale": 0.8993414863593603,
+    "translation": [
+      -10.854186265286899,
+      -5.866415804327374
+    ],
+    "output": [
+      1204,
+      1028
+    ],
+    "maskSha256": "6b9bbeebd8e37bf314172abd733cfc209a476f8c7a3ff75523044056485d27ff",
+    "materialBleedPx": 0,
+    "geometryNote": "Uniform material registration inside approved collar outline; shared anchor and physical dimensions."
+  },
+  {
+    "key": "shiny-silver",
+    "kind": "collar",
+    "template": "BB_17-415_Black-Collar_PSD-GPT_v01_APPROVED.png",
+    "templateBounds": [
+      32,
+      40,
+      1164,
+      996
+    ],
+    "rawSize": [
+      1357,
+      1159
+    ],
+    "rawBounds": [
+      39,
+      50,
+      1312,
+      1115
+    ],
+    "rawAspectDriftPercent": 0.9462665273146653,
+    "uniformScale": 0.8976525821596244,
+    "translation": [
+      -8.364319248826291,
+      -4.8826291079812165
+    ],
+    "output": [
+      1204,
+      1028
+    ],
+    "maskSha256": "6b9bbeebd8e37bf314172abd733cfc209a476f8c7a3ff75523044056485d27ff",
+    "materialBleedPx": 0,
+    "geometryNote": "Uniform material registration inside approved collar outline; shared anchor and physical dimensions."
+  },
+  {
+    "key": "red",
+    "kind": "collar",
+    "template": "BB_17-415_Black-Collar_PSD-GPT_v01_APPROVED.png",
+    "templateBounds": [
+      32,
+      40,
+      1164,
+      996
+    ],
+    "rawSize": [
+      1357,
+      1159
+    ],
+    "rawBounds": [
+      38,
+      52,
+      1308,
+      1106
+    ],
+    "rawAspectDriftPercent": 1.7594088815282127,
+    "uniformScale": 0.9070208728652751,
+    "translation": [
+      -12.425047438330125,
+      -7.1650853889943065
+    ],
+    "output": [
+      1204,
+      1028
+    ],
+    "maskSha256": "6b9bbeebd8e37bf314172abd733cfc209a476f8c7a3ff75523044056485d27ff",
+    "materialBleedPx": 0,
+    "geometryNote": "Uniform material registration inside approved collar outline; shared anchor and physical dimensions."
+  },
+  {
+    "key": "turquoise",
+    "kind": "collar",
+    "template": "BB_17-415_Black-Collar_PSD-GPT_v01_APPROVED.png",
+    "templateBounds": [
+      32,
+      40,
+      1164,
+      996
+    ],
+    "rawSize": [
+      1356,
+      1159
+    ],
+    "rawBounds": [
+      41,
+      45,
+      1316,
+      1119
+    ],
+    "rawAspectDriftPercent": 0.2576149396924521,
+    "uniformScale": 0.8901303538175046,
+    "translation": [
+      -5.953445065176879,
+      -0.05586592178770644
+    ],
+    "output": [
+      1204,
+      1028
+    ],
+    "maskSha256": "6b9bbeebd8e37bf314172abd733cfc209a476f8c7a3ff75523044056485d27ff",
+    "materialBleedPx": 0,
+    "geometryNote": "Uniform material registration inside approved collar outline; shared anchor and physical dimensions."
+  },
+  {
+    "key": "amber",
+    "kind": "body",
+    "template": "BB_Cylinder_9ml_17-415_Clear_BODY_v04_APPROVED.png",
+    "templateBounds": [
+      119,
+      113,
+      631,
+      2018
+    ],
+    "rawSize": [
+      743,
+      2116
+    ],
+    "rawBounds": [
+      119,
+      108,
+      626,
+      2016
+    ],
+    "rawAspectDriftPercent": -1.132259728773588,
+    "uniformScale": 1,
+    "translation": [
+      0,
+      0
+    ],
+    "output": [
+      743,
+      2116
+    ],
+    "maskSha256": "32dd18d5322a14e46f8ad70d4066853cb7f9dcad94e9aeae6389031e665ef7f3",
+    "materialBleedPx": 8,
+    "geometryNote": "No geometric transform. New material clipped inside approved body outline; 8px color bleed under layer fills narrow edge gaps. Internal reflected detail is generated."
+  },
+  {
+    "key": "cobalt",
+    "kind": "body",
+    "template": "BB_Cylinder_9ml_17-415_Clear_BODY_v04_APPROVED.png",
+    "templateBounds": [
+      119,
+      113,
+      631,
+      2018
+    ],
+    "rawSize": [
+      743,
+      2116
+    ],
+    "rawBounds": [
+      118,
+      110,
+      631,
+      2018
+    ],
+    "rawAspectDriftPercent": 0.03777270047169434,
+    "uniformScale": 1,
+    "translation": [
+      0,
+      0
+    ],
+    "output": [
+      743,
+      2116
+    ],
+    "maskSha256": "32dd18d5322a14e46f8ad70d4066853cb7f9dcad94e9aeae6389031e665ef7f3",
+    "materialBleedPx": 8,
+    "geometryNote": "No geometric transform. New material clipped inside approved body outline; 8px color bleed under layer fills narrow edge gaps. Internal reflected detail is generated."
+  },
+  {
+    "key": "frosted",
+    "kind": "body",
+    "template": "BB_Cylinder_9ml_17-415_Clear_BODY_v04_APPROVED.png",
+    "templateBounds": [
+      119,
+      113,
+      631,
+      2018
+    ],
+    "rawSize": [
+      743,
+      2116
+    ],
+    "rawBounds": [
+      122,
+      112,
+      626,
+      2043
+    ],
+    "rawAspectDriftPercent": -2.8879142931123813,
+    "uniformScale": 1,
+    "translation": [
+      0,
+      0
+    ],
+    "output": [
+      743,
+      2116
+    ],
+    "maskSha256": "32dd18d5322a14e46f8ad70d4066853cb7f9dcad94e9aeae6389031e665ef7f3",
+    "materialBleedPx": 8,
+    "geometryNote": "No geometric transform. New material clipped inside approved body outline; 8px color bleed under layer fills narrow edge gaps. Internal reflected detail is generated."
+  },
+  {
+    "key": "swirl",
+    "kind": "body",
+    "template": "BB_Cylinder_9ml_17-415_Clear_BODY_v04_APPROVED.png",
+    "templateBounds": [
+      119,
+      113,
+      631,
+      2018
+    ],
+    "rawSize": [
+      743,
+      2116
+    ],
+    "rawBounds": [
+      122,
+      111,
+      622,
+      2021
+    ],
+    "rawAspectDriftPercent": -2.5993946335078566,
+    "uniformScale": 1,
+    "translation": [
+      0,
+      0
+    ],
+    "output": [
+      743,
+      2116
+    ],
+    "maskSha256": "32dd18d5322a14e46f8ad70d4066853cb7f9dcad94e9aeae6389031e665ef7f3",
+    "materialBleedPx": 8,
+    "geometryNote": "No geometric transform. New material clipped inside approved body outline; 8px color bleed under layer fills narrow edge gaps. Internal reflected detail is generated."
+  }
+]

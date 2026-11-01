@@ -1,0 +1,119 @@
+{
+  "bodyId": "cylinder-9ml-17-415",
+  "status": "color review",
+  "newImageCount": 9,
+  "builtInGenerationCount": 11,
+  "sharedInternals": "same mechanism and overcap; no new generation",
+  "combinations": 30,
+  "files": [
+    {
+      "identity": "body|clear",
+      "runtimeFile": "public/reviews/cylinder9-color-set-2026-11-01/body-clear.png",
+      "bytes": 1634900,
+      "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+      "status": "prior approved body",
+      "editableSource": "preserved approved native PNG"
+    },
+    {
+      "identity": "body|amber",
+      "runtimeFile": "public/reviews/cylinder9-color-set-2026-11-01/body-amber.png",
+      "bytes": 1072998,
+      "sha256": "febbb07b9ed556d34fced6dd5e4f16b1642ce6dec9cf946d7132c9736539c753",
+      "status": "review candidate",
+      "editableSource": "body-amber.svg"
+    },
+    {
+      "identity": "body|cobalt",
+      "runtimeFile": "public/reviews/cylinder9-color-set-2026-11-01/body-cobalt.png",
+      "bytes": 1050539,
+      "sha256": "3c54f5996c109e8c3aaa7038c20d1aee367747276afc9531c4b9b7cb0456e529",
+      "status": "review candidate",
+      "editableSource": "body-cobalt.svg"
+    },
+    {
+      "identity": "body|frosted",
+      "runtimeFile": "public/reviews/cylinder9-color-set-2026-11-01/body-frosted.png",
+      "bytes": 1064837,
+      "sha256": "4f6b526ea3f1a628240427b27c801fd0f97353231af63db4ce9014210884e674",
+      "status": "review candidate",
+      "editableSource": "body-frosted.svg"
+    },
+    {
+      "identity": "body|swirl",
+      "runtimeFile": "public/reviews/cylinder9-color-set-2026-11-01/body-swirl.png",
+      "bytes": 1537538,
+      "sha256": "032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66",
+      "status": "review candidate",
+      "editableSource": "body-swirl.svg"
+    },
+    {
+      "identity": "collar|black",
+      "runtimeFile": "public/reviews/cylinder9-color-set-2026-11-01/collar-black.png",
+      "bytes": 885576,
+      "sha256": "8fcf55b9fe3c6f9df96e5cb3272a24860321497ba54c4dfb2d42ad6b310395ee",
+      "status": "review candidate",
+      "editableSource": "collar-black-alpha-v02.svg"
+    },
+    {
+      "identity": "collar|gold",
+      "runtimeFile": "public/reviews/cylinder9-color-set-2026-11-01/collar-gold.png",
+      "bytes": 945516,
+      "sha256": "5063cb8d191d8b6e7cf2c54c265d7e3672d587a66db903d4064ef6b4b4097a8a",
+      "status": "review candidate",
+      "editableSource": "collar-gold-alpha-v02.svg"
+    },
+    {
+      "identity": "collar|matte-silver",
+      "runtimeFile": "public/reviews/cylinder9-color-set-2026-11-01/collar-matte-silver.png",
+      "bytes": 1223088,
+      "sha256": "a92a50f2af07c9c92110fbadd396156222d4cb28fe99235fe72e169a94f4a104",
+      "status": "review candidate",
+      "editableSource": "collar-matte-silver-alpha-v02.svg"
+    },
+    {
+      "identity": "collar|shiny-silver",
+      "runtimeFile": "public/reviews/cylinder9-color-set-2026-11-01/collar-shiny-silver.png",
+      "bytes": 933809,
+      "sha256": "de08091a534df7f91a287602ad519a56a678191fd351f84242bdd6b8609f8d95",
+      "status": "review candidate",
+      "editableSource": "collar-shiny-silver-alpha-v02.svg"
+    },
+    {
+      "identity": "collar|red",
+      "runtimeFile": "public/reviews/cylinder9-color-set-2026-11-01/collar-red.png",
+      "bytes": 1436737,
+      "sha256": "6194fb5305347782e7c0dcd5a01f2b96296841c9d736ea344e426e725989e808",
+      "status": "review candidate",
+      "editableSource": "collar-red-alpha-v02.svg"
+    },
+    {
+      "identity": "collar|turquoise",
+      "runtimeFile": "public/reviews/cylinder9-color-set-2026-11-01/collar-turquoise.png",
+      "bytes": 1455037,
+      "sha256": "bf4cd34cd121d06ac3292c0405d0b985f7df84b6d1b6359d45f948caaa05fda6",
+      "status": "review candidate",
+      "editableSource": "collar-turquoise-alpha-v02.svg"
+    },
+    {
+      "identity": "shared|actuator.png",
+      "runtimeFile": "public/reviews/cylinder9-color-set-2026-11-01/actuator.png",
+      "bytes": 826441,
+      "sha256": "0e86a99e6f43a8eb58484b308c13afd24b6234f6f953e32b40d11ff52bd92182",
+      "status": "alpha-only edge update"
+    },
+    {
+      "identity": "shared|mechanism.png",
+      "runtimeFile": "public/reviews/cylinder9-color-set-2026-11-01/mechanism.png",
+      "bytes": 859237,
+      "sha256": "99a2a782c154680ba81e2915d50a3f0e634f5395f08fcfc6a8d37005335b0f8f",
+      "status": "approved source retained"
+    },
+    {
+      "identity": "shared|overcap.png",
+      "runtimeFile": "public/reviews/cylinder9-color-set-2026-11-01/overcap.png",
+      "bytes": 300365,
+      "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+      "status": "approved source retained"
+    }
+  ]
+}

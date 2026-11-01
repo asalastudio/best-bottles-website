@@ -1,0 +1,77 @@
+[
+  {
+    "file": "body-clear.png",
+    "bytes": 1634900,
+    "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba"
+  },
+  {
+    "file": "body-amber.png",
+    "bytes": 1050360,
+    "sha256": "f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb"
+  },
+  {
+    "file": "body-cobalt.png",
+    "bytes": 1022364,
+    "sha256": "9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0"
+  },
+  {
+    "file": "body-frosted.png",
+    "bytes": 1131945,
+    "sha256": "76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db"
+  },
+  {
+    "file": "body-swirl.png",
+    "bytes": 1537538,
+    "sha256": "032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66"
+  },
+  {
+    "file": "collar-black.png",
+    "bytes": 860722,
+    "sha256": "ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf"
+  },
+  {
+    "file": "collar-gold.png",
+    "bytes": 918131,
+    "sha256": "b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839"
+  },
+  {
+    "file": "collar-matte-silver.png",
+    "bytes": 1206578,
+    "sha256": "a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155"
+  },
+  {
+    "file": "collar-shiny-silver.png",
+    "bytes": 914651,
+    "sha256": "21659785df2b6f8a242573a035ef4cfe40e4bab57f6b31407d2281014f3c363e"
+  },
+  {
+    "file": "collar-red.png",
+    "bytes": 1351590,
+    "sha256": "e34c8674e08e3f1eed980b88caff4cbecdb81cd89d3fcbb0957526446cf466a1"
+  },
+  {
+    "file": "collar-turquoise.png",
+    "bytes": 1444391,
+    "sha256": "430ff4c25dced2145d0390140a89f0115c771bab5422a71944291ab23684506c"
+  },
+  {
+    "file": "actuator.png",
+    "bytes": 826441,
+    "sha256": "0e86a99e6f43a8eb58484b308c13afd24b6234f6f953e32b40d11ff52bd92182"
+  },
+  {
+    "file": "mechanism.png",
+    "bytes": 859237,
+    "sha256": "99a2a782c154680ba81e2915d50a3f0e634f5395f08fcfc6a8d37005335b0f8f"
+  },
+  {
+    "file": "overcap.png",
+    "bytes": 300365,
+    "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0"
+  },
+  {
+    "file": "tube-fitted.png",
+    "bytes": 124485,
+    "sha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484"
+  }
+]

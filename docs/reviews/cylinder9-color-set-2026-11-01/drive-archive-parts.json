@@ -1,0 +1,27 @@
+{
+  "parts": [
+    {
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/family-master-library-2026-11-01/Cylinder_9ml_Shared-Masters_2026-11-01_v04_REVIEW.zip.part01",
+      "name": "Cylinder_9ml_Shared-Masters_2026-11-01_v04_REVIEW.zip.part01",
+      "bytes": 80000000,
+      "sha256": "a0423059b422604944c4eaa72c29a5a4b8fd1a8219f6d934d378270e0d535cf4",
+      "mime": "application/octet-stream"
+    },
+    {
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/family-master-library-2026-11-01/Cylinder_9ml_Shared-Masters_2026-11-01_v04_REVIEW.zip.part02",
+      "name": "Cylinder_9ml_Shared-Masters_2026-11-01_v04_REVIEW.zip.part02",
+      "bytes": 80000000,
+      "sha256": "77421f2140fea86569bd33d79b1b8e80519b10aef590b7f01fd0d3ed2fd81aff",
+      "mime": "application/octet-stream"
+    },
+    {
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/family-master-library-2026-11-01/Cylinder_9ml_Shared-Masters_2026-11-01_v04_REVIEW.zip.part03",
+      "name": "Cylinder_9ml_Shared-Masters_2026-11-01_v04_REVIEW.zip.part03",
+      "bytes": 39950221,
+      "sha256": "7ad63a5096daaf7a7a205b2e7e5ee40ac6e826c0356cebbf273d53e77903b6bb",
+      "mime": "application/octet-stream"
+    }
+  ],
+  "joinedSha256": "4c433de52e32ffa4345da9ae431108a6576fccb7da1ce81d5d373c34859313a2",
+  "joinedBytes": 199950221
+}

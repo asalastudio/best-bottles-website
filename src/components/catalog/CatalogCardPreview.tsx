@@ -1,5 +1,6 @@
 "use client";
 
+import { cylinder9MasterSku } from "@/lib/products/cylinder9-master";
 import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
 import { getCatalogHeroStyle, type CatalogHero } from "@/lib/products/catalog-heroes";
 import { capSwapFraming, capSwapPlateBox, capSwapPlateUrl } from "@/lib/products/catalog-cap-swap";
@@ -47,10 +48,12 @@ function skuOf(variant: ProductCardVariantPreview | null | undefined): string | 
 export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroHoverImageUrl, href, variants, family, slug, selected = null, selectedHero = null }: Props) {
     const [heroHovered, setHeroHovered] = useState(false);
     const [failed, setFailed] = useState<Set<string>>(() => new Set());
+    const masterSku = process.env.NODE_ENV === "development"
+        ? cylinder9MasterSku(skuOf(selected) ?? catalogHero?.websiteSku ?? skuOf(variants[0])) : null;
     const skus = [...new Set([catalogHero ? null : skuOf(variants[0]), skuOf(selected)].filter((sku): sku is string => Boolean(sku)))];
     // The approved hero already supplies the default image. Fetch a plate only
     // for a selected finish, or for a card that needs its primary fallback.
-    const assemblyPlates = useQuery(api.productPlates.forSkus, skus.length ? { skus } : "skip");
+    const assemblyPlates = useQuery(api.productPlates.forSkus, !masterSku && skus.length ? { skus } : "skip");
     const assembly = (variant: ProductCardVariantPreview) => {
         const plate = assemblyPlates?.plates[skuOf(variant) ?? ""];
         const vialImage = oneMlVialApplicator(skuOf(variant))?.image;
@@ -85,17 +88,27 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
 
     const preloadUrls = heroHoverImageUrl ?? "";
     useEffect(() => {
-        if (!preloadUrls) return;
+        if (!preloadUrls || masterSku) return;
         const images = preloadUrls.split("\n").map((url) => {
             const image = new window.Image();
             image.src = url;
             return image;
         });
         return () => { images.forEach((image) => { image.onload = null; }); };
-    }, [preloadUrls]);
+    }, [preloadUrls, masterSku]);
 
     const approvedHero = catalogHero && !("hoverUrl" in catalogHero);
     const exactVariant = variants.find(variant => variant.websiteSku === catalogHero?.websiteSku);
+
+    // The selected exact SKU shares its body and components with PDP and Builder.
+    // Keep this ahead of legacy baked-photo swaps so choosing a cap cannot restore old glass.
+    if (masterSku) {
+        return <ProductCardImagePreview productTitle={title}
+            defaultImage={{ url: displayImage ?? imageUrl, alt: title }}
+            catalogHero={catalogHero ? { ...catalogHero, websiteSku: masterSku } : null}
+            productHref={href} variantPreviews={[]}
+            auditMeta={{ surface: "catalog-card", family, productGroupSlug: slug, websiteSku: masterSku }} />;
+    }
 
     if (catalogHero && selected && capOnly && capOnlyUrl && !failed.has(capOnlyUrl)) {
         return <LocaleLink href={href} aria-label={`View ${title}, ${selected.label}`}

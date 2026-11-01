@@ -1,0 +1,1328 @@
+{
+  "date": "2026-11-01",
+  "status": "shared-master integration; Amber/Cobalt v4 approved; prior sources preserved",
+  "files": [
+    {
+      "path": "BB_17-415_Black-Collar_PSD-GPT_v01_APPROVED.png",
+      "bytes": 887018,
+      "sha256": "7aedfaed66d5579c836af8adf3e7dab63122486fca5af1d5330478da09c2508e"
+    },
+    {
+      "path": "BB_17-415_Pump-and-Tube_Reference-v02_APPROVED.png",
+      "bytes": 859237,
+      "sha256": "99a2a782c154680ba81e2915d50a3f0e634f5395f08fcfc6a8d37005335b0f8f"
+    },
+    {
+      "path": "BB_17-415_White-Actuator_PSD-GPT_v01_APPROVED.png",
+      "bytes": 831626,
+      "sha256": "f71292c15119d1aef747fc967ae32ad2d3410179eedeb90bace1fe47d4e2378e"
+    },
+    {
+      "path": "BB_Cylinder_9ml_17-415_Clear_BODY_v04_APPROVED.png",
+      "bytes": 1634900,
+      "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba"
+    },
+    {
+      "path": "BB_Cylinder_9ml_Clear-Overcap_v06_APPROVED.png",
+      "bytes": 300365,
+      "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0"
+    },
+    {
+      "path": "CMP-SPR-BLK-17-415-01--collar.png",
+      "bytes": 40472,
+      "sha256": "a028691129ace1193997cb09d53eb503510f196708d9a9a3dfbbfa740e3006bf"
+    },
+    {
+      "path": "CMP-SPR-CLR-17-415--collar.png",
+      "bytes": 105494,
+      "sha256": "3aaad2679f488259c597ee4f98bc230ea9c39f7cb3a8beb7d4c3336b7918ccee"
+    },
+    {
+      "path": "CMP-SPR-RED-17-415--collar.png",
+      "bytes": 99100,
+      "sha256": "c39ace8baf084db6c8c034080adc3240a1eb34fb4f501e2978ba0d86973a1be6"
+    },
+    {
+      "path": "CMP-SPR-SGLD-17-415--collar.png",
+      "bytes": 88494,
+      "sha256": "1a664dd8e175e87008adb19090b701cf65672e51b3b89f15a569d8adff32dacc"
+    },
+    {
+      "path": "CMP-SPR-SLV-17-415--collar.png",
+      "bytes": 42199,
+      "sha256": "68ce28f209f1fd23e7498c3d1a95d65eefdf699cc95040420c300f5eb52c6069"
+    },
+    {
+      "path": "CMP-SPR-SSLV-17-415--collar.png",
+      "bytes": 42059,
+      "sha256": "6d6e1807ab55c8ae418d64acc37afac8e8e131ef9eb32acffc55445cf5952366"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6038,
+      "sha256": "6c6871aeb32633c058fe957a1ea4031f04fa9ade4eeebd9fcacfbc6d633497c6"
+    },
+    {
+      "path": "actual-amber-1440.png",
+      "bytes": 38549,
+      "sha256": "a7a99c9b1581619ef8b9d81a40af47f1ba0b8dd102c53e25622013dead8dcff9"
+    },
+    {
+      "path": "actual-amber-390.png",
+      "bytes": 23115,
+      "sha256": "c527b3e0a4c02983643fab414303ec6a5f3d3a3d67f676faefea8bb9f95fe676"
+    },
+    {
+      "path": "actual-builder-amber-gold.png",
+      "bytes": 183690,
+      "sha256": "9bd3a7d11c756ff55051e9a71071dc5dcfa0616853d40ce9496ee2c582154724"
+    },
+    {
+      "path": "actual-builder-clear-gold.png",
+      "bytes": 182786,
+      "sha256": "1a51fa34e1ef14ec90b9ace0b7ab33ef2ac378be12b07a822e026e40f0d9e740"
+    },
+    {
+      "path": "actual-builder-cobalt-gold.png",
+      "bytes": 185224,
+      "sha256": "06b747430af3d0c8f62f6bfb5aec924266a4157a7186b81e8b49d7d368a52195"
+    },
+    {
+      "path": "actual-builder-frosted-gold.png",
+      "bytes": 178346,
+      "sha256": "e707b260a8815b86ac572fa8a1f5b5ec9fffca55000cc237ec9d254e3b2811b3"
+    },
+    {
+      "path": "actual-builder-swirl-gold.png",
+      "bytes": 191777,
+      "sha256": "aeaf69bf12a2919cd647c61e6bb2454ba410589c5020ae8673372e6ca825c2aa"
+    },
+    {
+      "path": "actual-catalog.png",
+      "bytes": 211901,
+      "sha256": "36c9a776b6f91a9f181537e0afb7cc6a180e396361bac98e916bf4cb78f5245e"
+    },
+    {
+      "path": "actual-clear-1440.png",
+      "bytes": 39871,
+      "sha256": "a8a0f798aef0cb6ae55d29daed52f26602c724468f6bf4218ee86a3c249d2302"
+    },
+    {
+      "path": "actual-clear-390.png",
+      "bytes": 22479,
+      "sha256": "b9608e61150f734b65e1c99d1fdc8c5834a9ba302689231fb841fd814643876d"
+    },
+    {
+      "path": "actual-clear-exploded-1440.png",
+      "bytes": 77032,
+      "sha256": "8424b2fe2286df88cd8cdf15162e594d440bdb222b9557666b3d165f8e969202"
+    },
+    {
+      "path": "actual-clear-exploded-390.png",
+      "bytes": 33508,
+      "sha256": "81b2122b45449edd56d087ca0f96f1dd910bb23acdc1973c8d401699bb1a745f"
+    },
+    {
+      "path": "actual-cobalt-1440.png",
+      "bytes": 41205,
+      "sha256": "73ef41bd29fb5419861e37df42394962c248fc872a2f4429ab5a777feefe20aa"
+    },
+    {
+      "path": "actual-cobalt-390.png",
+      "bytes": 24247,
+      "sha256": "1dee393870b6e3e7e10c9ae74a5b801f57909fdf045d63260d45226b06dfe95f"
+    },
+    {
+      "path": "actual-frosted-1440.png",
+      "bytes": 31581,
+      "sha256": "8ec51d2f9d9586e202054423789da910dc92268ab3496ed89579841875232320"
+    },
+    {
+      "path": "actual-frosted-390.png",
+      "bytes": 19024,
+      "sha256": "c534e663f133932d9044cfa3015a6c6a25336b1c8a8c6a630a3ff511ef075110"
+    },
+    {
+      "path": "actual-pdp-amber-gold.png",
+      "bytes": 221285,
+      "sha256": "2f372faf1e2d30fe6a0c1e0e2a63ffe20f08289495df58e0c8a4695f89a5ca35"
+    },
+    {
+      "path": "actual-pdp-checks.json",
+      "bytes": 285385,
+      "sha256": "61bb4ca011555818942b69fa2b18c514aa38a4dbc47c38568a5a52a28701a665"
+    },
+    {
+      "path": "actual-review-amber-gold.png",
+      "bytes": 240867,
+      "sha256": "633eefd58ba588b9f06fb054d780e14ab30a3fd578a8753376eebf8baffb226f"
+    },
+    {
+      "path": "actual-swirl-1440.png",
+      "bytes": 51435,
+      "sha256": "154a19acd677f55a5d7633c983e8ddc00fec670cf1d9fbec4f38ad2f197d79d1"
+    },
+    {
+      "path": "actual-swirl-390.png",
+      "bytes": 27401,
+      "sha256": "11b8965d99126d86a295478d8d2e3e0c88bfc25eab8f828441565a0194a24cf8"
+    },
+    {
+      "path": "actuator-alpha-v02.svg",
+      "bytes": 1109428,
+      "sha256": "c3057dfa197655a23b329fc3543527f9bf97c3a21478adfe6bf1e3a5ffcdcd77"
+    },
+    {
+      "path": "actuator.png",
+      "bytes": 826441,
+      "sha256": "0e86a99e6f43a8eb58484b308c13afd24b6234f6f953e32b40d11ff52bd92182"
+    },
+    {
+      "path": "all30-cap-on.png",
+      "bytes": 171394,
+      "sha256": "b9e1e166ffebd1f58cfe9c416f88a44c61141c4563f89b8683d5597265c01f7d"
+    },
+    {
+      "path": "all30-exploded.png",
+      "bytes": 187938,
+      "sha256": "3c40e1f8e46c67ab31e0a2c8db4b0d7beacb730b52f9a0bad92c65601618d202"
+    },
+    {
+      "path": "all30-sidecar.png",
+      "bytes": 173828,
+      "sha256": "8a36115b359363d0ae7ceac0704bb72932c24f2a783879ec51edf649d8cc149b"
+    },
+    {
+      "path": "alpha-cleanup-verification.json",
+      "bytes": 2157,
+      "sha256": "2c1416d35e8fb85e2633fcd2c347c420d4dcc72be086387fd63d8062d7469aa2"
+    },
+    {
+      "path": "amber-dark-material-guide.png",
+      "bytes": 830150,
+      "sha256": "e9688bd182c2b712d85fac31c4007618267a30af821b59f60cde5fdd9b8e1cd9"
+    },
+    {
+      "path": "amber-material-reference.png",
+      "bytes": 283227,
+      "sha256": "a9cb84120fc5a8d8f91f9fa466d169219a7a9f449b1f035a068ca14a9061f0a5"
+    },
+    {
+      "path": "amber-red-cap-on.png",
+      "bytes": 38366,
+      "sha256": "b3327fc686b7314bf91fc293aea5a902f7018f6569183bf1f8ef4ad3cc20bea1"
+    },
+    {
+      "path": "amber-red-exploded.png",
+      "bytes": 53194,
+      "sha256": "f68a0d1133d5616b26238a40b01383836c4e4bbb0ac00da21fabd7051d2a2f2d"
+    },
+    {
+      "path": "amber-red-sidecar.png",
+      "bytes": 41129,
+      "sha256": "ff4b6af1c1d940dd0bc2f35e3b357e89a7365c047d8dd7c24cbd4111270ab54a"
+    },
+    {
+      "path": "approval-record.json",
+      "bytes": 507,
+      "sha256": "e7115bc257353f9d9d59e061c9743bd0b9282a4470a839d888a448c231193bdd"
+    },
+    {
+      "path": "assembly-v03-approved.json",
+      "bytes": 3702,
+      "sha256": "2073ea2f1226fa53fd6891de1b6ecbff5de99b6894d9ca22c7da54ebc6ae945d"
+    },
+    {
+      "path": "before-edge-cleanup/actuator.png",
+      "bytes": 831626,
+      "sha256": "f71292c15119d1aef747fc967ae32ad2d3410179eedeb90bace1fe47d4e2378e"
+    },
+    {
+      "path": "before-edge-cleanup/collar-black.png",
+      "bytes": 887018,
+      "sha256": "7aedfaed66d5579c836af8adf3e7dab63122486fca5af1d5330478da09c2508e"
+    },
+    {
+      "path": "before-edge-cleanup/collar-gold.png",
+      "bytes": 947208,
+      "sha256": "0b364f4fd8595af37c1479189c6459062dc843f38839a157748f4a8633deda48"
+    },
+    {
+      "path": "before-edge-cleanup/collar-matte-silver.png",
+      "bytes": 1225887,
+      "sha256": "585f0a0d7cef4d4f61f2f1de0ef4feb1a995aaee9a20d01af54860aae97b08f0"
+    },
+    {
+      "path": "before-edge-cleanup/collar-red.png",
+      "bytes": 1436593,
+      "sha256": "35843e2f2e33dba183eedac609cdc9bd5f77993cfaf41a02ce819b61bcf990fb"
+    },
+    {
+      "path": "before-edge-cleanup/collar-shiny-silver.png",
+      "bytes": 935126,
+      "sha256": "5e5aa64fbe0165ebb4df7df9bbdf7c4b9c24e8489c406835566de9ef021a4890"
+    },
+    {
+      "path": "before-edge-cleanup/collar-turquoise.png",
+      "bytes": 1459688,
+      "sha256": "5a8cc76ceadb107f4ab79a660c4ef9319a7e6c9f5e37f22f5c5ee1926f39452c"
+    },
+    {
+      "path": "before-material-cleanup-v02/body-amber-raw.png",
+      "bytes": 1227612,
+      "sha256": "882f71b7a1185ccabb887784b5853c27dd1c97811b90c539dde567154d9e57d9"
+    },
+    {
+      "path": "before-material-cleanup-v02/body-amber.png",
+      "bytes": 1072998,
+      "sha256": "febbb07b9ed556d34fced6dd5e4f16b1642ce6dec9cf946d7132c9736539c753"
+    },
+    {
+      "path": "before-material-cleanup-v02/body-amber.svg",
+      "bytes": 3339233,
+      "sha256": "a461690fd1cd744dd2050f0aae93907653559c749436f3790a4307131e3f0ff5"
+    },
+    {
+      "path": "before-material-cleanup-v02/body-cobalt-raw.png",
+      "bytes": 1200599,
+      "sha256": "d1dfd5092c38679bd8cc6d0442ca6fe1a7424bff6c411bdf12c5e68923c1ab84"
+    },
+    {
+      "path": "before-material-cleanup-v02/body-cobalt.png",
+      "bytes": 1050539,
+      "sha256": "3c54f5996c109e8c3aaa7038c20d1aee367747276afc9531c4b9b7cb0456e529"
+    },
+    {
+      "path": "before-material-cleanup-v02/body-cobalt.svg",
+      "bytes": 3267202,
+      "sha256": "6ce9b4510809c52ff36fc17dd0dee94c60d3e1e79d1ccf4a803d7e9dac365175"
+    },
+    {
+      "path": "before-material-cleanup-v02/body-frosted-raw.png",
+      "bytes": 1336858,
+      "sha256": "1bbcbf44b36ec620746a0a7f47d593b5ebbb82fa705fc63bef9a0aad53d81076"
+    },
+    {
+      "path": "before-material-cleanup-v02/body-frosted.png",
+      "bytes": 1064837,
+      "sha256": "4f6b526ea3f1a628240427b27c801fd0f97353231af63db4ce9014210884e674"
+    },
+    {
+      "path": "before-material-cleanup-v02/body-frosted.svg",
+      "bytes": 3630563,
+      "sha256": "ea015f55bf7e7488baf5752ae0c7fec9e1f202bce35321419754a4321b831d50"
+    },
+    {
+      "path": "before-material-cleanup-v02/browser-checks.json",
+      "bytes": 237545,
+      "sha256": "f673c48162ec49e9bd60e108b0cd5a9b10aa6160a18948d420b91a3c874a8234"
+    },
+    {
+      "path": "before-material-cleanup-v02/edge-verification.json",
+      "bytes": 2324,
+      "sha256": "b7197769c7358a8ebd6e5921bc16e0ccb5e5a39f1d706bd8f3eca9e1819f871f"
+    },
+    {
+      "path": "before-material-cleanup-v02/final-files.json",
+      "bytes": 4718,
+      "sha256": "1b3ad9f52158c33661ab2eca53ba2065a4d42cf25c5609c1590779a73f0b5527"
+    },
+    {
+      "path": "before-material-cleanup-v02/generation-jobs.json",
+      "bytes": 14047,
+      "sha256": "46a846ba98ac0943770ce99e2176d88b7f34fb1f102b76fd3f9245f08c7e311d"
+    },
+    {
+      "path": "before-material-cleanup-v02/geometry-registration.json",
+      "bytes": 6905,
+      "sha256": "318fe21ee3ab1f752ff6a8d822e964b7b5099594fefa49d149c9aa7dbbb4144b"
+    },
+    {
+      "path": "body-amber-raw-v03.png",
+      "bytes": 1200009,
+      "sha256": "10da89d15b15f3ead6c92cb0fe4564e4a2fa4bc7fc19b965fe5780e5d8f01d29"
+    },
+    {
+      "path": "body-amber-raw-v04.png",
+      "bytes": 1226218,
+      "sha256": "e296c3067fd7ff489ddd732eec7255a167a06743b97441eb17a1b7753f1284fc"
+    },
+    {
+      "path": "body-amber-raw.png",
+      "bytes": 1226218,
+      "sha256": "e296c3067fd7ff489ddd732eec7255a167a06743b97441eb17a1b7753f1284fc"
+    },
+    {
+      "path": "body-amber.png",
+      "bytes": 1050360,
+      "sha256": "f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb"
+    },
+    {
+      "path": "body-amber.svg",
+      "bytes": 3335521,
+      "sha256": "5ac8c484245971971061b18e2ea93319097cd25a2eb0e57c89bf53d5f2c8aea7"
+    },
+    {
+      "path": "body-cobalt-raw-v03.png",
+      "bytes": 1122588,
+      "sha256": "485722a6c0080f2d93ac77f7cfb81625fd2a262a639e4b88721a91ae210c979e"
+    },
+    {
+      "path": "body-cobalt-raw-v04.png",
+      "bytes": 1237029,
+      "sha256": "8e6c515c09ea08c6f1f9aca1a2463b9379698ff113b6626d5a4963d7475e9f3f"
+    },
+    {
+      "path": "body-cobalt-raw.png",
+      "bytes": 1237029,
+      "sha256": "8e6c515c09ea08c6f1f9aca1a2463b9379698ff113b6626d5a4963d7475e9f3f"
+    },
+    {
+      "path": "body-cobalt.png",
+      "bytes": 1022364,
+      "sha256": "9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0"
+    },
+    {
+      "path": "body-cobalt.svg",
+      "bytes": 3364346,
+      "sha256": "7bebf4aa9f905d895ebd9d0f4bc0baa6c7f65fa301c897a50689338a69b5d259"
+    },
+    {
+      "path": "body-frosted-before-clear-neck-v03.png",
+      "bytes": 1022232,
+      "sha256": "2edc1cc3173772af4a49015d15cf7e27c2a0b1dedf0f60fe279aa5ac894dd07d"
+    },
+    {
+      "path": "body-frosted-clear-neck-v03.svg",
+      "bytes": 3543579,
+      "sha256": "59b308815e81e1f7688f173267b79496914f5489a93624fe72f3f6ce9fde5576"
+    },
+    {
+      "path": "body-frosted-raw.png",
+      "bytes": 1270401,
+      "sha256": "9858974cf1aeaaf838a745d595d8104ee7fe901e3db3ab67cceb4557b01814a1"
+    },
+    {
+      "path": "body-frosted.png",
+      "bytes": 1131945,
+      "sha256": "76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db"
+    },
+    {
+      "path": "body-frosted.svg",
+      "bytes": 3453339,
+      "sha256": "61c7730f377e12fa73cd4255e0838f69e0980066a9d211981ef3e8145e332589"
+    },
+    {
+      "path": "body-swirl-raw.png",
+      "bytes": 1819853,
+      "sha256": "c2f23923abf6abd47ab9056dece98f8b88091eb6e0a472be15f9c4a205c0ebe1"
+    },
+    {
+      "path": "body-swirl.png",
+      "bytes": 1537538,
+      "sha256": "032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66"
+    },
+    {
+      "path": "body-swirl.svg",
+      "bytes": 4918545,
+      "sha256": "0a251cde529d488132c02704aa385d53fdd8678ec7c3b0544650fa2a31afe80e"
+    },
+    {
+      "path": "boston-amber-material-guide.png",
+      "bytes": 215439,
+      "sha256": "acd5cd3cb2598ab6028ed954541c62bb2a2dd54f12b99811ac8c8f92992c8041"
+    },
+    {
+      "path": "boston-cobalt-material-guide.png",
+      "bytes": 223547,
+      "sha256": "a58b6d4ef23928b203ce5a90eb79fe4439348fbe1cfc8f3adc96d55b55468598"
+    },
+    {
+      "path": "browser-checks.json",
+      "bytes": 237503,
+      "sha256": "f3cf037fd8860444c6cf2be83021d3ce4c737c0eebd23b2ee2919670d8dd1e84"
+    },
+    {
+      "path": "build-canonical-library.py",
+      "bytes": 4937,
+      "sha256": "3163deaaf84e507706d15f89ff6526a9d9e14a6a299d5131e88ae7c44aa7523b"
+    },
+    {
+      "path": "canonical-library.json",
+      "bytes": 31606,
+      "sha256": "fe23af6fd08b96838d78f6d0c1a3ef4d12eb5310d78b28213298d5346a97440a"
+    },
+    {
+      "path": "check-color-set.cjs",
+      "bytes": 4619,
+      "sha256": "d7e350f8fb1e22ecd06e96022a9bedf534dbca1c67054b4792aaf825918cea7c"
+    },
+    {
+      "path": "clean-alpha.cjs",
+      "bytes": 2957,
+      "sha256": "7d3f560d952c66dfcea80a92c887d56905147cf0ccbd08fa1a68db68564ad58a"
+    },
+    {
+      "path": "clear-frosted-neck.cjs",
+      "bytes": 1881,
+      "sha256": "99a3177d15a8b71b1fceef50afa0553b02c0e04c87dd95439b27f819dba3024e"
+    },
+    {
+      "path": "clear-red-cap-on.png",
+      "bytes": 38697,
+      "sha256": "a10b96d2e6608301297e71367028a861f271ca0277f7175443afd86dc893afdb"
+    },
+    {
+      "path": "clear-red-exploded.png",
+      "bytes": 51684,
+      "sha256": "d108e3bdfe1f15e4b1b6599c7b8912d96f79d494a4553dafde25b346215a34c1"
+    },
+    {
+      "path": "clear-red-sidecar.png",
+      "bytes": 41442,
+      "sha256": "ad7af05d2a7b3a60e2cb4e4248cabc15650cd766ddc2482ce208221fc161db89"
+    },
+    {
+      "path": "cobalt-dark-material-guide.png",
+      "bytes": 189812,
+      "sha256": "610d25d7a2f9f6cfe4a6700a8bb48e7aff3e30d8ab09de2b14a7620742ee1c1d"
+    },
+    {
+      "path": "cobalt-material-reference.png",
+      "bytes": 301838,
+      "sha256": "cf0305dd1c3440dd646c4bd1f4e816a0ecb7c3ba06761c757a450dcecf76159f"
+    },
+    {
+      "path": "cobalt-red-cap-on.png",
+      "bytes": 37705,
+      "sha256": "09becbc5a98d44d5af86eb50eddbf8bb9d366c1a32147663119ccc4822bf1cf0"
+    },
+    {
+      "path": "cobalt-red-exploded.png",
+      "bytes": 52635,
+      "sha256": "1eed4b92cf850a3cc4af56e8a44c846855c55f183dccea3c8a007418b6845bb3"
+    },
+    {
+      "path": "cobalt-red-sidecar.png",
+      "bytes": 40477,
+      "sha256": "8441d32e06eebd4560633579f3fe9046670a423021cd60f8baff8070a25a2222"
+    },
+    {
+      "path": "collar-black-alpha-v02.svg",
+      "bytes": 1183286,
+      "sha256": "a4bf1079d4583becd074829d42a9a3b3dbc7b9920c0a9269e0d8fab4e75bf4b8"
+    },
+    {
+      "path": "collar-black-smooth-v03.svg",
+      "bytes": 2365942,
+      "sha256": "0d7fa3eff9015b2d50cdc02704621d3165531a537e5ac99cd54b4349c0071f24"
+    },
+    {
+      "path": "collar-black.png",
+      "bytes": 860722,
+      "sha256": "ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf"
+    },
+    {
+      "path": "collar-gold-alpha-v02.svg",
+      "bytes": 1263538,
+      "sha256": "8f5a5c5dddac15a1b4d484ae0463ef3a6c835c73ad021626303becd7d02cadbf"
+    },
+    {
+      "path": "collar-gold-raw.png",
+      "bytes": 1654587,
+      "sha256": "1d3e8d42abdc3d5b6502f0f8fac4ec4d92abc4f660f1d3d8c409c28a7152745e"
+    },
+    {
+      "path": "collar-gold-smooth-v03.svg",
+      "bytes": 4412918,
+      "sha256": "4cca5a5a355b7fa5723fb3b722dbab1b70ed13b5a5319aed15606f587df10900"
+    },
+    {
+      "path": "collar-gold.png",
+      "bytes": 918131,
+      "sha256": "b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839"
+    },
+    {
+      "path": "collar-gold.svg",
+      "bytes": 2236998,
+      "sha256": "eff28526fa862d242b7cc43635ac2da3822ebb0a10583f0f711c837d1d0c47c5"
+    },
+    {
+      "path": "collar-matte-silver-alpha-v02.svg",
+      "bytes": 1635110,
+      "sha256": "549bf64fbdcaabecfccdfd6a92370c67f2f7c70c3a998133e5925f7359071bc6"
+    },
+    {
+      "path": "collar-matte-silver-raw.png",
+      "bytes": 2079972,
+      "sha256": "b48e00e7380df8c0bcef37d223476abc35c50c9efc617617ddd9c45bda1810d1"
+    },
+    {
+      "path": "collar-matte-silver-smooth-v03.svg",
+      "bytes": 5547274,
+      "sha256": "436c2772a6fca42ada6a31aead4d4e98855a0ce36f08ccdad51ffe5f54d1ffdd"
+    },
+    {
+      "path": "collar-matte-silver.png",
+      "bytes": 1206578,
+      "sha256": "a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155"
+    },
+    {
+      "path": "collar-matte-silver.svg",
+      "bytes": 2804184,
+      "sha256": "716cff942a2318eac04efd54557080a37d1230d8580a764acd4142f61b749f62"
+    },
+    {
+      "path": "collar-red-alpha-v02.svg",
+      "bytes": 1916054,
+      "sha256": "fba7768afca409ca3915f85bd28037e6dd412f7b9f4f27fc2be2905f705d8682"
+    },
+    {
+      "path": "collar-red-initial-SUPERSEDED.png",
+      "bytes": 2019087,
+      "sha256": "af19d5cc97a25d782b6f6f6740a9d1be420079644707b0aac8a73a36bda65ed6"
+    },
+    {
+      "path": "collar-red-mirror-REJECTED.png",
+      "bytes": 1669017,
+      "sha256": "3999f824f26e21591978453095d382071e30741e5494b9d22968a8eab6172d53"
+    },
+    {
+      "path": "collar-red-raw.png",
+      "bytes": 2005979,
+      "sha256": "85369246aa9a409b180ed6c160fcc4ac7c339a37f606d0bee78c7178902b5556"
+    },
+    {
+      "path": "collar-red-smooth-v03.svg",
+      "bytes": 5349964,
+      "sha256": "b3577716fcf4f52c1f4ca79602c5ba65ba91c37e7888a82c441853242013ecd8"
+    },
+    {
+      "path": "collar-red.png",
+      "bytes": 1351590,
+      "sha256": "e34c8674e08e3f1eed980b88caff4cbecdb81cd89d3fcbb0957526446cf466a1"
+    },
+    {
+      "path": "collar-red.svg",
+      "bytes": 2705520,
+      "sha256": "24b3d333f5631057369350397471af1b310ec213b2304ca0437aa8f6da251077"
+    },
+    {
+      "path": "collar-shiny-silver-alpha-v02.svg",
+      "bytes": 1247430,
+      "sha256": "b7c0f1fc0dbd23220bb44d653d27403df06f52e22a4545f1a40e31ecc6b42280"
+    },
+    {
+      "path": "collar-shiny-silver-raw.png",
+      "bytes": 1620780,
+      "sha256": "4f0ac5fa702cacdaf0d71bf76724a9ed0fe2fe860802773acb784777e2008aa0"
+    },
+    {
+      "path": "collar-shiny-silver-smooth-v03.svg",
+      "bytes": 4322764,
+      "sha256": "319c2e53d51e0b18c8083f432d87ef108c1fbb723a5a36b13ddd4200ab1f3f4f"
+    },
+    {
+      "path": "collar-shiny-silver.png",
+      "bytes": 914651,
+      "sha256": "21659785df2b6f8a242573a035ef4cfe40e4bab57f6b31407d2281014f3c363e"
+    },
+    {
+      "path": "collar-shiny-silver.svg",
+      "bytes": 2191929,
+      "sha256": "8ab57407d75e94b47b90904c78623185ea631b2bde2dfaefb27302fa3bbc7aa0"
+    },
+    {
+      "path": "collar-turquoise-alpha-v02.svg",
+      "bytes": 1946846,
+      "sha256": "677be32c0f89323bf9358d0cc9dbd0e7fc2ed4b375789ae29926c56db11b6668"
+    },
+    {
+      "path": "collar-turquoise-raw.png",
+      "bytes": 2253105,
+      "sha256": "bbf1ebc15362cbb6eb4efb7c19d3d429080cd8c7d81aea53ef0452fb01f67396"
+    },
+    {
+      "path": "collar-turquoise-smooth-v03.svg",
+      "bytes": 6008964,
+      "sha256": "4c056c62cc771d315b32f36c38194d95d0ad355abab4a2affea4dcb58394cc45"
+    },
+    {
+      "path": "collar-turquoise.png",
+      "bytes": 1444391,
+      "sha256": "430ff4c25dced2145d0390140a89f0115c771bab5422a71944291ab23684506c"
+    },
+    {
+      "path": "collar-turquoise.svg",
+      "bytes": 3035026,
+      "sha256": "9065d7b69f734bf1337e8375539e1a90f7f798f3a65204404762432b7679e227"
+    },
+    {
+      "path": "cross-surface-checks.json",
+      "bytes": 31680,
+      "sha256": "30f94fc23a7141741bf789f0d8a9a0a53daa106ed9c9cf8aeeed0eac23f3af07"
+    },
+    {
+      "path": "drive-native-receipt.json",
+      "bytes": 6762,
+      "sha256": "c21aa02a0d190d1db54a7d204cc1c924c68a4040f7f638bac0124d28017ec63b"
+    },
+    {
+      "path": "drive-upload-plan.json",
+      "bytes": 7301,
+      "sha256": "61db17ad39e12e10a4ade6f56936141521b682640c10e9afdede06219e0811cb"
+    },
+    {
+      "path": "edge-verification.json",
+      "bytes": 2341,
+      "sha256": "e17217c5dee1cbf6b44786a2c57cc5d411e226db002445a679d9f64a9a673d44"
+    },
+    {
+      "path": "export-colors.cjs",
+      "bytes": 2144,
+      "sha256": "d1c8658d5ed9fdf37a85fcec2c9200f71ac24644b1297e12a3df947918fb658e"
+    },
+    {
+      "path": "final-files.json",
+      "bytes": 2151,
+      "sha256": "40b5d421ecfed09cd229c4b58d8737203a24e2717b557b279b88a1f343580983"
+    },
+    {
+      "path": "frosted-material-reference.png",
+      "bytes": 211325,
+      "sha256": "c35a5233c4018b06e84c60b0dea63fdbf04421ea8f6c821ef6ed5d14e4455f2e"
+    },
+    {
+      "path": "frosted-red-cap-on.png",
+      "bytes": 31799,
+      "sha256": "2ea57561998d53d550e16c3d8a51a89714219a76fe43bfe27bb2363eaf7152dd"
+    },
+    {
+      "path": "frosted-red-exploded.png",
+      "bytes": 45928,
+      "sha256": "000f8fbc69b5474324e7b3affcb2992eca6d7928a8b66d750aa794a2a85649fe"
+    },
+    {
+      "path": "frosted-red-sidecar.png",
+      "bytes": 34358,
+      "sha256": "5b57aa3f83b179f1e64aa65b6b498a22d9b53b45cb371e95693bb7e652349d09"
+    },
+    {
+      "path": "frosted-satin-material-guide.png",
+      "bytes": 137674,
+      "sha256": "ecd5f9be6220904e1fc989bf73f15dad3c9366896562566eac21207bf774e829"
+    },
+    {
+      "path": "gallery.html",
+      "bytes": 1501,
+      "sha256": "7fb3c8c01294374cda895888ecc79d843ad0072be0bcf143fc2e6a2243bb4cf8"
+    },
+    {
+      "path": "gallery.mjs",
+      "bytes": 2060,
+      "sha256": "9a9c243a763fae2d38d79028ab3189f155d09d3cb016fce18e3e2d87cbc3b329"
+    },
+    {
+      "path": "generation-jobs.json",
+      "bytes": 15160,
+      "sha256": "adcf8e159eada34c622d4a4d669b8d2068ded04c677c6fb9022d2699c3dc70f1"
+    },
+    {
+      "path": "geometry-registration.json",
+      "bytes": 6904,
+      "sha256": "515528176b53cf523ead019fea26372d13588bd5ac316d17d54151ba04964947"
+    },
+    {
+      "path": "index.html",
+      "bytes": 2022,
+      "sha256": "7681b8927d4676a566f2acf009e7f48259c3670e58a35db233093de6d8b4f9df"
+    },
+    {
+      "path": "individual-color-masters.png",
+      "bytes": 325898,
+      "sha256": "a9ff5aed3cb9a2855a2b838567f6b3b09675370c0e0c4a04550602b49ee3361e"
+    },
+    {
+      "path": "legacy-visual-reference.json",
+      "bytes": 1947,
+      "sha256": "6e99d9594c359d6b5aee4820d61505482bd32211fbb33121979cb2f87ca60931"
+    },
+    {
+      "path": "masters.html",
+      "bytes": 1067,
+      "sha256": "664afd06d23e501fd4557eb3a5ca713163cd835b79b517aac5dd970cbfe61068"
+    },
+    {
+      "path": "material-dark-reflection-jobs.json",
+      "bytes": 6229,
+      "sha256": "9931e7368322fd0363d2985ab01a857a35789287601f3d0252fa28c132f98e01"
+    },
+    {
+      "path": "material-v02-jobs.json",
+      "bytes": 5180,
+      "sha256": "ba340961f75756c33a05e229232ac9ef5896e40d468351888d67366387252f8a"
+    },
+    {
+      "path": "model.json",
+      "bytes": 10673,
+      "sha256": "a168f92cfc850c322b94eef2b61fdb663659ce261fd304157aa42fc62f3fd4eb"
+    },
+    {
+      "path": "package-review.py",
+      "bytes": 1880,
+      "sha256": "d41efe63bd3f980aa487710f68907a0965b2c7ca09fbc723cb80654c3bee3d61"
+    },
+    {
+      "path": "preserved-sources.json",
+      "bytes": 1737,
+      "sha256": "0d47aeb8c1b15bf25315f5e24a882b05b4747ab22ecfaad7ad8b1f4e412770a4"
+    },
+    {
+      "path": "product-review-1440.png",
+      "bytes": 241935,
+      "sha256": "6de4072160359c5af3e29217a5cae58f155e91d967829b34400a2f75f3c9fcfd"
+    },
+    {
+      "path": "product-review-390.png",
+      "bytes": 101182,
+      "sha256": "58090fd68ac9a2c8d58b6ea7e9301c2293033a4c32cc933523e67b12918ced33"
+    },
+    {
+      "path": "psd-provenance.json",
+      "bytes": 12700,
+      "sha256": "2cc23f32c084cbb49015dfdf33096b2519098bd40d75073f22f01287cde54bdc"
+    },
+    {
+      "path": "read-source-kits.cjs",
+      "bytes": 944,
+      "sha256": "e8e8e5a194efc574df73742378a01bd1dfc6b26c6a7c78004b7a756ff4457eb8"
+    },
+    {
+      "path": "red-finish-reference.png",
+      "bytes": 463249,
+      "sha256": "9350bcfb78482cca230ca98acb1b8aaf2c7bc55265a2f6d5ac9a643e22872a34"
+    },
+    {
+      "path": "register-colors.cjs",
+      "bytes": 4094,
+      "sha256": "414c6a30fafe51b689d0c6c0135c086a66cc3e5fd57ee78ea2c0e057a1fca0ed"
+    },
+    {
+      "path": "restore.mjs",
+      "bytes": 2694,
+      "sha256": "05968d5922a474322313801e4a55b0482d0f45ec3acfbac4792fad724d61b7e1"
+    },
+    {
+      "path": "review-isolated-v01.mjs",
+      "bytes": 6348,
+      "sha256": "58359b6582c04619e240e944e39d41e47aa207f6e14f72b53c6c1440dfdc60c3"
+    },
+    {
+      "path": "review.mjs",
+      "bytes": 2548,
+      "sha256": "14d5910f4464f62692a4aa7bf02b085834755bddb23057debd655017fb565a93"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png",
+      "bytes": 826441,
+      "sha256": "0e86a99e6f43a8eb58484b308c13afd24b6234f6f953e32b40d11ff52bd92182",
+      "restoreTo": "public/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder9-masters-2026-11-01/body-amber.f45c288e0b6c.png",
+      "bytes": 1050360,
+      "sha256": "f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb",
+      "restoreTo": "public/local-kits/cylinder9-masters-2026-11-01/body-amber.f45c288e0b6c.png"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "bytes": 1634900,
+      "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+      "restoreTo": "public/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "bytes": 1022364,
+      "sha256": "9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0",
+      "restoreTo": "public/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder9-masters-2026-11-01/body-frosted.76402e4bb5a5.png",
+      "bytes": 1131945,
+      "sha256": "76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db",
+      "restoreTo": "public/local-kits/cylinder9-masters-2026-11-01/body-frosted.76402e4bb5a5.png"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder9-masters-2026-11-01/body-swirl.032e641c93c4.png",
+      "bytes": 1537538,
+      "sha256": "032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66",
+      "restoreTo": "public/local-kits/cylinder9-masters-2026-11-01/body-swirl.032e641c93c4.png"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder9-masters-2026-11-01/collar-black.ee72ac48811e.png",
+      "bytes": 860722,
+      "sha256": "ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf",
+      "restoreTo": "public/local-kits/cylinder9-masters-2026-11-01/collar-black.ee72ac48811e.png"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder9-masters-2026-11-01/collar-gold.b31c199b774b.png",
+      "bytes": 918131,
+      "sha256": "b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839",
+      "restoreTo": "public/local-kits/cylinder9-masters-2026-11-01/collar-gold.b31c199b774b.png"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder9-masters-2026-11-01/collar-matte-silver.a05bf5300265.png",
+      "bytes": 1206578,
+      "sha256": "a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155",
+      "restoreTo": "public/local-kits/cylinder9-masters-2026-11-01/collar-matte-silver.a05bf5300265.png"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder9-masters-2026-11-01/collar-red.e34c8674e08e.png",
+      "bytes": 1351590,
+      "sha256": "e34c8674e08e3f1eed980b88caff4cbecdb81cd89d3fcbb0957526446cf466a1",
+      "restoreTo": "public/local-kits/cylinder9-masters-2026-11-01/collar-red.e34c8674e08e.png"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder9-masters-2026-11-01/collar-shiny-silver.21659785df2b.png",
+      "bytes": 914651,
+      "sha256": "21659785df2b6f8a242573a035ef4cfe40e4bab57f6b31407d2281014f3c363e",
+      "restoreTo": "public/local-kits/cylinder9-masters-2026-11-01/collar-shiny-silver.21659785df2b.png"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder9-masters-2026-11-01/collar-turquoise.430ff4c25dce.png",
+      "bytes": 1444391,
+      "sha256": "430ff4c25dced2145d0390140a89f0115c771bab5422a71944291ab23684506c",
+      "restoreTo": "public/local-kits/cylinder9-masters-2026-11-01/collar-turquoise.430ff4c25dce.png"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder9-masters-2026-11-01/kits.json",
+      "bytes": 999819,
+      "sha256": "387165f5ba0081c7141b158a09b95da3f809386a943a72ed5dc5ddee53488f55",
+      "restoreTo": "public/local-kits/cylinder9-masters-2026-11-01/kits.json"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder9-masters-2026-11-01/overcap.a8ffedd460b5.png",
+      "bytes": 300365,
+      "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+      "restoreTo": "public/local-kits/cylinder9-masters-2026-11-01/overcap.a8ffedd460b5.png"
+    },
+    {
+      "path": "runtime/public/local-kits/cylinder9-masters-2026-11-01/tube-fitted.f5a5592f59a0.png",
+      "bytes": 124485,
+      "sha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484",
+      "restoreTo": "public/local-kits/cylinder9-masters-2026-11-01/tube-fitted.f5a5592f59a0.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/actuator-alpha-v02.svg",
+      "bytes": 1109428,
+      "sha256": "c3057dfa197655a23b329fc3543527f9bf97c3a21478adfe6bf1e3a5ffcdcd77",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/actuator-alpha-v02.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/actuator.png",
+      "bytes": 826441,
+      "sha256": "0e86a99e6f43a8eb58484b308c13afd24b6234f6f953e32b40d11ff52bd92182",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/actuator.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/body-amber.png",
+      "bytes": 1050360,
+      "sha256": "f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/body-amber.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/body-amber.svg",
+      "bytes": 3335521,
+      "sha256": "5ac8c484245971971061b18e2ea93319097cd25a2eb0e57c89bf53d5f2c8aea7",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/body-amber.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/body-clear.png",
+      "bytes": 1634900,
+      "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/body-clear.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/body-cobalt.png",
+      "bytes": 1022364,
+      "sha256": "9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/body-cobalt.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/body-cobalt.svg",
+      "bytes": 3364346,
+      "sha256": "7bebf4aa9f905d895ebd9d0f4bc0baa6c7f65fa301c897a50689338a69b5d259",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/body-cobalt.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/body-frosted-clear-neck-v03.svg",
+      "bytes": 3543579,
+      "sha256": "59b308815e81e1f7688f173267b79496914f5489a93624fe72f3f6ce9fde5576",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/body-frosted-clear-neck-v03.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/body-frosted.png",
+      "bytes": 1131945,
+      "sha256": "76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/body-frosted.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/body-frosted.svg",
+      "bytes": 3453339,
+      "sha256": "61c7730f377e12fa73cd4255e0838f69e0980066a9d211981ef3e8145e332589",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/body-frosted.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/body-swirl.png",
+      "bytes": 1537538,
+      "sha256": "032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/body-swirl.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/body-swirl.svg",
+      "bytes": 4918545,
+      "sha256": "0a251cde529d488132c02704aa385d53fdd8678ec7c3b0544650fa2a31afe80e",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/body-swirl.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-black-alpha-v02.svg",
+      "bytes": 1183286,
+      "sha256": "a4bf1079d4583becd074829d42a9a3b3dbc7b9920c0a9269e0d8fab4e75bf4b8",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-black-alpha-v02.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-black-smooth-v03.svg",
+      "bytes": 2365942,
+      "sha256": "0d7fa3eff9015b2d50cdc02704621d3165531a537e5ac99cd54b4349c0071f24",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-black-smooth-v03.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-black.png",
+      "bytes": 860722,
+      "sha256": "ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-black.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-gold-alpha-v02.svg",
+      "bytes": 1263538,
+      "sha256": "8f5a5c5dddac15a1b4d484ae0463ef3a6c835c73ad021626303becd7d02cadbf",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-gold-alpha-v02.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-gold-smooth-v03.svg",
+      "bytes": 4412918,
+      "sha256": "4cca5a5a355b7fa5723fb3b722dbab1b70ed13b5a5319aed15606f587df10900",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-gold-smooth-v03.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-gold.png",
+      "bytes": 918131,
+      "sha256": "b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-gold.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-gold.svg",
+      "bytes": 2236998,
+      "sha256": "eff28526fa862d242b7cc43635ac2da3822ebb0a10583f0f711c837d1d0c47c5",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-gold.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-matte-silver-alpha-v02.svg",
+      "bytes": 1635110,
+      "sha256": "549bf64fbdcaabecfccdfd6a92370c67f2f7c70c3a998133e5925f7359071bc6",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-matte-silver-alpha-v02.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-matte-silver-smooth-v03.svg",
+      "bytes": 5547274,
+      "sha256": "436c2772a6fca42ada6a31aead4d4e98855a0ce36f08ccdad51ffe5f54d1ffdd",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-matte-silver-smooth-v03.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-matte-silver.png",
+      "bytes": 1206578,
+      "sha256": "a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-matte-silver.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-matte-silver.svg",
+      "bytes": 2804184,
+      "sha256": "716cff942a2318eac04efd54557080a37d1230d8580a764acd4142f61b749f62",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-matte-silver.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-red-alpha-v02.svg",
+      "bytes": 1916054,
+      "sha256": "fba7768afca409ca3915f85bd28037e6dd412f7b9f4f27fc2be2905f705d8682",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-red-alpha-v02.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-red-smooth-v03.svg",
+      "bytes": 5349964,
+      "sha256": "b3577716fcf4f52c1f4ca79602c5ba65ba91c37e7888a82c441853242013ecd8",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-red-smooth-v03.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-red.png",
+      "bytes": 1351590,
+      "sha256": "e34c8674e08e3f1eed980b88caff4cbecdb81cd89d3fcbb0957526446cf466a1",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-red.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-red.svg",
+      "bytes": 2705520,
+      "sha256": "24b3d333f5631057369350397471af1b310ec213b2304ca0437aa8f6da251077",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-red.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-shiny-silver-alpha-v02.svg",
+      "bytes": 1247430,
+      "sha256": "b7c0f1fc0dbd23220bb44d653d27403df06f52e22a4545f1a40e31ecc6b42280",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-shiny-silver-alpha-v02.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-shiny-silver-smooth-v03.svg",
+      "bytes": 4322764,
+      "sha256": "319c2e53d51e0b18c8083f432d87ef108c1fbb723a5a36b13ddd4200ab1f3f4f",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-shiny-silver-smooth-v03.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-shiny-silver.png",
+      "bytes": 914651,
+      "sha256": "21659785df2b6f8a242573a035ef4cfe40e4bab57f6b31407d2281014f3c363e",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-shiny-silver.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-shiny-silver.svg",
+      "bytes": 2191929,
+      "sha256": "8ab57407d75e94b47b90904c78623185ea631b2bde2dfaefb27302fa3bbc7aa0",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-shiny-silver.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-turquoise-alpha-v02.svg",
+      "bytes": 1946846,
+      "sha256": "677be32c0f89323bf9358d0cc9dbd0e7fc2ed4b375789ae29926c56db11b6668",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-turquoise-alpha-v02.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-turquoise-smooth-v03.svg",
+      "bytes": 6008964,
+      "sha256": "4c056c62cc771d315b32f36c38194d95d0ad355abab4a2affea4dcb58394cc45",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-turquoise-smooth-v03.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-turquoise.png",
+      "bytes": 1444391,
+      "sha256": "430ff4c25dced2145d0390140a89f0115c771bab5422a71944291ab23684506c",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-turquoise.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/collar-turquoise.svg",
+      "bytes": 3035026,
+      "sha256": "9065d7b69f734bf1337e8375539e1a90f7f798f3a65204404762432b7679e227",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/collar-turquoise.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/gallery.html",
+      "bytes": 1501,
+      "sha256": "7fb3c8c01294374cda895888ecc79d843ad0072be0bcf143fc2e6a2243bb4cf8",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/gallery.html"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/gallery.mjs",
+      "bytes": 2060,
+      "sha256": "9a9c243a763fae2d38d79028ab3189f155d09d3cb016fce18e3e2d87cbc3b329",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/gallery.mjs"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/index.html",
+      "bytes": 2022,
+      "sha256": "7681b8927d4676a566f2acf009e7f48259c3670e58a35db233093de6d8b4f9df",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/index.html"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/masters.html",
+      "bytes": 1067,
+      "sha256": "664afd06d23e501fd4557eb3a5ca713163cd835b79b517aac5dd970cbfe61068",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/masters.html"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/mechanism.png",
+      "bytes": 859237,
+      "sha256": "99a2a782c154680ba81e2915d50a3f0e634f5395f08fcfc6a8d37005335b0f8f",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/mechanism.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/model.json",
+      "bytes": 10673,
+      "sha256": "a168f92cfc850c322b94eef2b61fdb663659ce261fd304157aa42fc62f3fd4eb",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/model.json"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/overcap.png",
+      "bytes": 300365,
+      "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/overcap.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/psd-provenance.json",
+      "bytes": 12700,
+      "sha256": "2cc23f32c084cbb49015dfdf33096b2519098bd40d75073f22f01287cde54bdc",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/psd-provenance.json"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/review.mjs",
+      "bytes": 2548,
+      "sha256": "14d5910f4464f62692a4aa7bf02b085834755bddb23057debd655017fb565a93",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/review.mjs"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/tube-fitted.png",
+      "bytes": 124485,
+      "sha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/tube-fitted.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/tube-fitted.svg",
+      "bytes": 3437608,
+      "sha256": "a6d4617c0e69ce3fbc71176980e9684cd6c40f18241ba286cc94d3c597f0b4a8",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/tube-fitted.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-color-set-2026-11-01/tube-reference-layer.mjs",
+      "bytes": 1129,
+      "sha256": "b33b7a8e877c5dfc92c11f63fd86dc4939c1c0a19f5ff9e7f46d0ff9bd10e02b",
+      "restoreTo": "public/reviews/cylinder9-color-set-2026-11-01/tube-reference-layer.mjs"
+    },
+    {
+      "path": "sku-crosswalk.json",
+      "bytes": 7193,
+      "sha256": "37043c65913428e72c4629a16ef31a36ab5933dfa7a4b165277c2038fcbb2438"
+    },
+    {
+      "path": "smooth-collar-contours.cjs",
+      "bytes": 2512,
+      "sha256": "73671a1abe43b5d61d13313f01706eeea0c13715b7fbd9fb465ebcc439ccfa27"
+    },
+    {
+      "path": "smooth-contour-verification.json",
+      "bytes": 2819,
+      "sha256": "64fad9473b006cfce782c97076c4ff387d0d6c31c8bebfeb7cc5e3fe393df1b7"
+    },
+    {
+      "path": "source-builder-kits.json",
+      "bytes": 867464,
+      "sha256": "4efef09690e9b7b123fd39712e4fbfe4487434f1cecf346de7271fcb1081eb4d"
+    },
+    {
+      "path": "source-code/src/app/api/bottle-masters/cylinder9/route.ts",
+      "bytes": 1500,
+      "sha256": "d2a2ec176b0cb9e51cdb50fed55da12e4fe5c8834c4ac09721529a3fe6b52e2a"
+    },
+    {
+      "path": "source-code/src/components/bottle-builder/builder-requests.ts",
+      "bytes": 2798,
+      "sha256": "b5782d87e8b69e126ed431d24ab1565673694ea7838f2dcfa9979d5fddb65230"
+    },
+    {
+      "path": "source-code/src/components/catalog/CatalogCardPreview.tsx",
+      "bytes": 13696,
+      "sha256": "a5d5f170cb10866c81653d79f02718fad5e8709efd3d4603149321fd0d62c536"
+    },
+    {
+      "path": "source-code/src/components/products/Cylinder9MasterPreview.tsx",
+      "bytes": 3130,
+      "sha256": "1fe714b16ac7059b2c4f275b83539ddf20c18599757b91d4b489d9f48149cf4e"
+    },
+    {
+      "path": "source-code/src/components/products/ProductCardImagePreview.tsx",
+      "bytes": 14416,
+      "sha256": "44973fd8815c0d54f6904460d1d9aff58e56ed8c58e5744a6d87294bee062e22"
+    },
+    {
+      "path": "source-code/src/lib/paper-doll/local-component-kits.ts",
+      "bytes": 3522,
+      "sha256": "8a9c8df317165ee55cdeb7a7a81c7b2aaf49276d1d5134fd54f5d25aba9d7df8"
+    },
+    {
+      "path": "source-code/src/lib/products/cylinder9-master-index.json",
+      "bytes": 31606,
+      "sha256": "fe23af6fd08b96838d78f6d0c1a3ef4d12eb5310d78b28213298d5346a97440a"
+    },
+    {
+      "path": "source-code/src/lib/products/cylinder9-master.ts",
+      "bytes": 262,
+      "sha256": "a8d7ea05ea6529543cd54b4d9a26d61ef1adeff64c4516eb84eb560277356411"
+    },
+    {
+      "path": "source-code/tests/cylinder9-master-library.test.ts",
+      "bytes": 4594,
+      "sha256": "6f2aa1d88166ee88afa6b70edd2c54461944ae8f072d2167028ee8751c39d531"
+    },
+    {
+      "path": "source-complete-kits.json",
+      "bytes": 1032174,
+      "sha256": "1d400a71a5d4cafddba4c8c1668e6fdf01748e83d078b21487b7c6daf9b58f6a"
+    },
+    {
+      "path": "source-references.json",
+      "bytes": 1564,
+      "sha256": "9d591cdbfe42f6c382456750bf43bf2029e1bb75338c44df66eec20898e0da4b"
+    },
+    {
+      "path": "swirl-material-reference.png",
+      "bytes": 211554,
+      "sha256": "2d6c0060ecb3b79ed9e6f8659a554accd635867d8e196b14a386df1be310e6bb"
+    },
+    {
+      "path": "swirl-red-cap-on.png",
+      "bytes": 55785,
+      "sha256": "21b391dd414d3bb0abd18a3f0b4a53fdc7a5022a50ab2ea0e2ba6818dbb3a40f"
+    },
+    {
+      "path": "swirl-red-exploded.png",
+      "bytes": 69808,
+      "sha256": "29c25639c7b36de133bc3e66ba85c688c0193c92ef063d7f924cd583eece3d26"
+    },
+    {
+      "path": "swirl-red-sidecar.png",
+      "bytes": 58937,
+      "sha256": "c12047c714e8b88b7defc2394768ea5df65e939f16b038cd945db5761a6c4e0c"
+    },
+    {
+      "path": "tube-fitted.png",
+      "bytes": 124485,
+      "sha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484"
+    },
+    {
+      "path": "tube-fitted.svg",
+      "bytes": 3437608,
+      "sha256": "a6d4617c0e69ce3fbc71176980e9684cd6c40f18241ba286cc94d3c597f0b4a8"
+    },
+    {
+      "path": "tube-reference-layer.mjs",
+      "bytes": 1129,
+      "sha256": "b33b7a8e877c5dfc92c11f63fd86dc4939c1c0a19f5ff9e7f46d0ff9bd10e02b"
+    },
+    {
+      "path": "unit-test-results.json",
+      "bytes": 29430,
+      "sha256": "00dc995422a87375a616e6cde01c33238fff3654e01e21430a3be65feeda05aa"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 477,
+      "sha256": "1cbab6630f698607ecb4dcc8ad0c9f7677f9a54998f67d2b07a7217550d3d5a8"
+    },
+    {
+      "path": "verify-actual-pdp.cjs",
+      "bytes": 3834,
+      "sha256": "69d54dab8dc03a903483db58ef41fd722aa63dd81b89f12f761ff08b16f37374"
+    },
+    {
+      "path": "verify-cross-surface.cjs",
+      "bytes": 4359,
+      "sha256": "3acc7d7c28a0e790e528731105ef896557d44bf9db84b1ddbfd49fc8b6d00f89"
+    }
+  ]
+}

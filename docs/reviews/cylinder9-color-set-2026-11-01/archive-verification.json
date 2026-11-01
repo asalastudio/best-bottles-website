@@ -1,0 +1,16 @@
+{
+  "archive": "outputs/family-master-library-2026-11-01/Cylinder_9ml_Shared-Masters_2026-11-01_v04_REVIEW.zip",
+  "bytes": 199950221,
+  "sha256": "4c433de52e32ffa4345da9ae431108a6576fccb7da1ce81d5d373c34859313a2",
+  "zipEntries": 253,
+  "crcPass": true,
+  "entryHashesPass": true,
+  "restore": {
+    "mode": "restored",
+    "verifiedFiles": 252,
+    "copied": 62,
+    "unchanged": 0,
+    "backedUp": 0
+  },
+  "restoredInto": "/var/folders/g3/l_7f2hg57x90xzht2md1q_hm0000gn/T/cylinder9-color-set-restore-khg1m0bj"
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "file": "docs/reviews/cylinder9-psd-fitments-2026-11-01/BB_Cylinder_9ml_17-415_Clear_BODY_v04_APPROVED.png",
+    "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+    "unchanged": true
+  },
+  {
+    "file": "docs/reviews/cylinder9-psd-fitments-2026-11-01/BB_17-415_White-Actuator_PSD-GPT_v01_APPROVED.png",
+    "sha256": "f71292c15119d1aef747fc967ae32ad2d3410179eedeb90bace1fe47d4e2378e",
+    "unchanged": true
+  },
+  {
+    "file": "docs/reviews/cylinder9-psd-fitments-2026-11-01/BB_17-415_Black-Collar_PSD-GPT_v01_APPROVED.png",
+    "sha256": "7aedfaed66d5579c836af8adf3e7dab63122486fca5af1d5330478da09c2508e",
+    "unchanged": true
+  },
+  {
+    "file": "docs/reviews/cylinder9-psd-fitments-2026-11-01/BB_17-415_Pump-and-Tube_Reference-v02_APPROVED.png",
+    "sha256": "99a2a782c154680ba81e2915d50a3f0e634f5395f08fcfc6a8d37005335b0f8f",
+    "unchanged": true
+  },
+  {
+    "file": "docs/reviews/cylinder9-psd-fitments-2026-11-01/BB_Cylinder_9ml_Clear-Overcap_v06_APPROVED.png",
+    "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+    "unchanged": true
+  },
+  {
+    "file": "public/local-kits/cylinder5-all71-2026-11-01/kits.json",
+    "sha256": "d787f102c28e057a47baf62b5dffe32276f1f830d0f2485fd87f08e60a9029e0",
+    "unchanged": true
+  },
+  {
+    "file": "public/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+    "sha256": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+    "unchanged": true
+  },
+  {
+    "file": "public/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+    "sha256": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
+    "unchanged": true
+  }
+]

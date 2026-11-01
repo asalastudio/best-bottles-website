@@ -47,6 +47,7 @@
     "pipeline",
     "madison-image-pipeline-diagnostic",
     "outputs",
-    "docs/reviews/catalog-checkpoint-2026-10-31/evidence"
+    "docs/reviews/catalog-checkpoint-2026-10-31/evidence",
+    "docs/reviews/**/source-code"
   ]
 }

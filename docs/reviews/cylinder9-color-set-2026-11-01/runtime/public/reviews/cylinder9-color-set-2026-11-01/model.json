@@ -1,0 +1,423 @@
+{
+  "glasses": [
+    {
+      "key": "clear",
+      "label": "Clear",
+      "image": "body-clear.png"
+    },
+    {
+      "key": "amber",
+      "label": "Amber",
+      "image": "body-amber.png"
+    },
+    {
+      "key": "cobalt",
+      "label": "Cobalt Blue",
+      "image": "body-cobalt.png"
+    },
+    {
+      "key": "frosted",
+      "label": "Frosted",
+      "image": "body-frosted.png"
+    },
+    {
+      "key": "swirl",
+      "label": "Swirl",
+      "image": "body-swirl.png"
+    }
+  ],
+  "finishes": [
+    {
+      "key": "black",
+      "label": "Black",
+      "image": "collar-black.png"
+    },
+    {
+      "key": "gold",
+      "label": "Gold",
+      "image": "collar-gold.png"
+    },
+    {
+      "key": "matte-silver",
+      "label": "Matte Silver",
+      "image": "collar-matte-silver.png"
+    },
+    {
+      "key": "shiny-silver",
+      "label": "Shiny Silver",
+      "image": "collar-shiny-silver.png"
+    },
+    {
+      "key": "red",
+      "label": "Red",
+      "image": "collar-red.png"
+    },
+    {
+      "key": "turquoise",
+      "label": "Turquoise",
+      "image": "collar-turquoise.png"
+    }
+  ],
+  "configurations": [
+    {
+      "websiteSku": "GBCylAmb9SpryBlk",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-finemist",
+      "glassLabel": "Amber",
+      "finishLabel": "Black",
+      "layerKeys": {
+        "body": "AMB",
+        "sprayer": "BLK"
+      },
+      "glassKey": "amber",
+      "finishKey": "black"
+    },
+    {
+      "websiteSku": "GBCylAmb9SpryGl",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-finemist",
+      "glassLabel": "Amber",
+      "finishLabel": "Gold",
+      "layerKeys": {
+        "body": "AMB",
+        "sprayer": "GL"
+      },
+      "glassKey": "amber",
+      "finishKey": "gold"
+    },
+    {
+      "websiteSku": "GBCylAmb9SpryMattSl",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-finemist",
+      "glassLabel": "Amber",
+      "finishLabel": "Matte Silver",
+      "layerKeys": {
+        "body": "AMB",
+        "sprayer": "MATT-SL"
+      },
+      "glassKey": "amber",
+      "finishKey": "matte-silver"
+    },
+    {
+      "websiteSku": "GBCylAmb9SpryRd",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-finemist",
+      "glassLabel": "Amber",
+      "finishLabel": "Red",
+      "layerKeys": {
+        "body": "AMB",
+        "sprayer": "RD"
+      },
+      "glassKey": "amber",
+      "finishKey": "red"
+    },
+    {
+      "websiteSku": "GBCylAmb9SpryShSl",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-finemist",
+      "glassLabel": "Amber",
+      "finishLabel": "Shiny Silver",
+      "layerKeys": {
+        "body": "AMB",
+        "sprayer": "SHN-SL"
+      },
+      "glassKey": "amber",
+      "finishKey": "shiny-silver"
+    },
+    {
+      "websiteSku": "GBCylAmb9SpryTur",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-finemist",
+      "glassLabel": "Amber",
+      "finishLabel": "Turquoise",
+      "layerKeys": {
+        "body": "AMB",
+        "sprayer": "TUR"
+      },
+      "glassKey": "amber",
+      "finishKey": "turquoise"
+    },
+    {
+      "websiteSku": "GBCyl9SpryBlk",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-finemist",
+      "glassLabel": "Clear",
+      "finishLabel": "Black",
+      "layerKeys": {
+        "body": "CLR",
+        "sprayer": "BLK"
+      },
+      "glassKey": "clear",
+      "finishKey": "black"
+    },
+    {
+      "websiteSku": "GBCyl9SpryGl",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-finemist",
+      "glassLabel": "Clear",
+      "finishLabel": "Gold",
+      "layerKeys": {
+        "body": "CLR",
+        "sprayer": "GL"
+      },
+      "glassKey": "clear",
+      "finishKey": "gold"
+    },
+    {
+      "websiteSku": "GBCyl9SpryMattSl",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-finemist",
+      "glassLabel": "Clear",
+      "finishLabel": "Matte Silver",
+      "layerKeys": {
+        "body": "CLR",
+        "sprayer": "MATT-SL"
+      },
+      "glassKey": "clear",
+      "finishKey": "matte-silver"
+    },
+    {
+      "websiteSku": "GBCyl9SpryRd",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-finemist",
+      "glassLabel": "Clear",
+      "finishLabel": "Red",
+      "layerKeys": {
+        "body": "CLR",
+        "sprayer": "RD"
+      },
+      "glassKey": "clear",
+      "finishKey": "red"
+    },
+    {
+      "websiteSku": "GBCyl9SpryShSl",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-finemist",
+      "glassLabel": "Clear",
+      "finishLabel": "Shiny Silver",
+      "layerKeys": {
+        "body": "CLR",
+        "sprayer": "SHN-SL"
+      },
+      "glassKey": "clear",
+      "finishKey": "shiny-silver"
+    },
+    {
+      "websiteSku": "GBCyl9SpryTur",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-finemist",
+      "glassLabel": "Clear",
+      "finishLabel": "Turquoise",
+      "layerKeys": {
+        "body": "CLR",
+        "sprayer": "TUR"
+      },
+      "glassKey": "clear",
+      "finishKey": "turquoise"
+    },
+    {
+      "websiteSku": "GBCylBlu9SpryBlk",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+      "glassLabel": "Cobalt Blue",
+      "finishLabel": "Black",
+      "layerKeys": {
+        "body": "BLU",
+        "sprayer": "BLK"
+      },
+      "glassKey": "cobalt",
+      "finishKey": "black"
+    },
+    {
+      "websiteSku": "GBCylBlu9SpryGl",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+      "glassLabel": "Cobalt Blue",
+      "finishLabel": "Gold",
+      "layerKeys": {
+        "body": "BLU",
+        "sprayer": "GL"
+      },
+      "glassKey": "cobalt",
+      "finishKey": "gold"
+    },
+    {
+      "websiteSku": "GBCylBlu9SpryMattSl",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+      "glassLabel": "Cobalt Blue",
+      "finishLabel": "Matte Silver",
+      "layerKeys": {
+        "body": "BLU",
+        "sprayer": "MATT-SL"
+      },
+      "glassKey": "cobalt",
+      "finishKey": "matte-silver"
+    },
+    {
+      "websiteSku": "GBCylBlu9SpryRd",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+      "glassLabel": "Cobalt Blue",
+      "finishLabel": "Red",
+      "layerKeys": {
+        "body": "BLU",
+        "sprayer": "RD"
+      },
+      "glassKey": "cobalt",
+      "finishKey": "red"
+    },
+    {
+      "websiteSku": "GBCylBlu9SpryShSl",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+      "glassLabel": "Cobalt Blue",
+      "finishLabel": "Shiny Silver",
+      "layerKeys": {
+        "body": "BLU",
+        "sprayer": "SHN-SL"
+      },
+      "glassKey": "cobalt",
+      "finishKey": "shiny-silver"
+    },
+    {
+      "websiteSku": "GBCylBlu9SpryTur",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+      "glassLabel": "Cobalt Blue",
+      "finishLabel": "Turquoise",
+      "layerKeys": {
+        "body": "BLU",
+        "sprayer": "TUR"
+      },
+      "glassKey": "cobalt",
+      "finishKey": "turquoise"
+    },
+    {
+      "websiteSku": "GBCylFrst9SpryBlk",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-finemist",
+      "glassLabel": "Frosted",
+      "finishLabel": "Black",
+      "layerKeys": {
+        "body": "FRS",
+        "sprayer": "BLK"
+      },
+      "glassKey": "frosted",
+      "finishKey": "black"
+    },
+    {
+      "websiteSku": "GBCylFrst9SpryGl",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-finemist",
+      "glassLabel": "Frosted",
+      "finishLabel": "Gold",
+      "layerKeys": {
+        "body": "FRS",
+        "sprayer": "GL"
+      },
+      "glassKey": "frosted",
+      "finishKey": "gold"
+    },
+    {
+      "websiteSku": "GBCylFrst9SpryMattSl",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-finemist",
+      "glassLabel": "Frosted",
+      "finishLabel": "Matte Silver",
+      "layerKeys": {
+        "body": "FRS",
+        "sprayer": "MATT-SL"
+      },
+      "glassKey": "frosted",
+      "finishKey": "matte-silver"
+    },
+    {
+      "websiteSku": "GBCylFrst9SpryRd",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-finemist",
+      "glassLabel": "Frosted",
+      "finishLabel": "Red",
+      "layerKeys": {
+        "body": "FRS",
+        "sprayer": "RD"
+      },
+      "glassKey": "frosted",
+      "finishKey": "red"
+    },
+    {
+      "websiteSku": "GBCylFrst9SpryShSl",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-finemist",
+      "glassLabel": "Frosted",
+      "finishLabel": "Shiny Silver",
+      "layerKeys": {
+        "body": "FRS",
+        "sprayer": "SHN-SL"
+      },
+      "glassKey": "frosted",
+      "finishKey": "shiny-silver"
+    },
+    {
+      "websiteSku": "GBCylFrst9SpryTur",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-finemist",
+      "glassLabel": "Frosted",
+      "finishLabel": "Turquoise",
+      "layerKeys": {
+        "body": "FRS",
+        "sprayer": "TUR"
+      },
+      "glassKey": "frosted",
+      "finishKey": "turquoise"
+    },
+    {
+      "websiteSku": "GBCylSwrl9SpryBlk",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-finemist",
+      "glassLabel": "Swirl",
+      "finishLabel": "Black",
+      "layerKeys": {
+        "body": "SWL",
+        "sprayer": "BLK"
+      },
+      "glassKey": "swirl",
+      "finishKey": "black"
+    },
+    {
+      "websiteSku": "GBCylSwrl9SpryGl",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-finemist",
+      "glassLabel": "Swirl",
+      "finishLabel": "Gold",
+      "layerKeys": {
+        "body": "SWL",
+        "sprayer": "GL"
+      },
+      "glassKey": "swirl",
+      "finishKey": "gold"
+    },
+    {
+      "websiteSku": "GBCylSwrl9SpryMattSl",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-finemist",
+      "glassLabel": "Swirl",
+      "finishLabel": "Matte Silver",
+      "layerKeys": {
+        "body": "SWL",
+        "sprayer": "MATT-SL"
+      },
+      "glassKey": "swirl",
+      "finishKey": "matte-silver"
+    },
+    {
+      "websiteSku": "GBCylSwrl9SpryRd",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-finemist",
+      "glassLabel": "Swirl",
+      "finishLabel": "Red",
+      "layerKeys": {
+        "body": "SWL",
+        "sprayer": "RD"
+      },
+      "glassKey": "swirl",
+      "finishKey": "red"
+    },
+    {
+      "websiteSku": "GBCylSwrl9SpryShSl",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-finemist",
+      "glassLabel": "Swirl",
+      "finishLabel": "Shiny Silver",
+      "layerKeys": {
+        "body": "SWL",
+        "sprayer": "SHN-SL"
+      },
+      "glassKey": "swirl",
+      "finishKey": "shiny-silver"
+    },
+    {
+      "websiteSku": "GBCylSwrl9SpryTur",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-finemist",
+      "glassLabel": "Swirl",
+      "finishLabel": "Turquoise",
+      "layerKeys": {
+        "body": "SWL",
+        "sprayer": "TUR"
+      },
+      "glassKey": "swirl",
+      "finishKey": "turquoise"
+    }
+  ]
+}
