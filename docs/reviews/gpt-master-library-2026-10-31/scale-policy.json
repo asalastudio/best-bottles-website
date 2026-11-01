@@ -1,0 +1,66 @@
+{
+  "confirmedAt": "2026-10-31",
+  "userDecision": "Later catalog-wide curve, with approved family exceptions",
+  "curve": {
+    "coefficient": 3.5314,
+    "exponent": 0.5868,
+    "input": "bare glass height in mm, foot to rim",
+    "output": "shoulder or closure-seat span as percent of 10:11 canvas",
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+    "calibrationBodies": [
+      "diva-100ml-18-415",
+      "elegant-100ml-18-415",
+      "cylinder-50ml-18-415",
+      "cylinder-5ml-13-415",
+      "elegant-15ml-13-415"
+    ]
+  },
+  "baselinePct": 91,
+  "calibration": [
+    {
+      "bodyId": "diva-100ml-18-415",
+      "targetPct": 57,
+      "baselinePct": 91,
+      "landmark": "closure-seat",
+      "source": "docs/hero-families/boston-diva-2026-09-23/approval.json",
+      "basis": "approved-family-exception",
+      "heightBareMm": 113
+    },
+    {
+      "bodyId": "elegant-100ml-18-415",
+      "targetPct": 57,
+      "baselinePct": 91,
+      "landmark": "shoulder",
+      "source": "docs/hero-families/elegant-2026-09-23/approval.json",
+      "basis": "approved-family-exception",
+      "heightBareMm": 109
+    },
+    {
+      "bodyId": "cylinder-50ml-18-415",
+      "targetPct": 56,
+      "baselinePct": 91,
+      "landmark": "shoulder",
+      "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+      "basis": "approved-family-exception",
+      "heightBareMm": 117
+    },
+    {
+      "bodyId": "cylinder-5ml-13-415",
+      "targetPct": 36.5,
+      "baselinePct": 91,
+      "landmark": "shoulder",
+      "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+      "basis": "approved-family-exception",
+      "heightBareMm": 53
+    },
+    {
+      "bodyId": "elegant-15ml-13-415",
+      "targetPct": 39,
+      "baselinePct": 91,
+      "landmark": "shoulder",
+      "source": "docs/hero-families/elegant-2026-09-23/approval.json",
+      "basis": "approved-family-exception",
+      "heightBareMm": 61
+    }
+  ]
+}

@@ -65,8 +65,8 @@
     {
       "path": "files/public/reviews/cylinder5-new-masters-2026-10-31/index.html",
       "restoreTo": "public/reviews/cylinder5-new-masters-2026-10-31/index.html",
-      "bytes": 9127,
-      "sha256": "a1585e51c72c0e466db532fa11fd08c365e104473f38837e8ef35006f8f62696"
+      "bytes": 9133,
+      "sha256": "e5e78bb1e803d1747441d3f5def09eaa44515c64be4c9d62f9457a98bfc58e7e"
     },
     {
       "path": "files/public/reviews/cylinder5-new-masters-2026-10-31/measured-clear-v19.png",
@@ -203,6 +203,30 @@
       "restoreTo": "public/reviews/clear-5ml-reference-2026-10-31/reference.png",
       "bytes": 1521090,
       "sha256": "20518a1a613143fd3fd6a535f206e5e0fc359e39ad8248d1a099749ca1335e5a"
+    },
+    {
+      "path": "files/public/reviews/cylinder5-new-masters-2026-10-31/clear-candidate-v4.png",
+      "restoreTo": "public/reviews/cylinder5-new-masters-2026-10-31/clear-candidate-v4.png",
+      "bytes": 1223724,
+      "sha256": "9f0171dfa0fd2d650813c17a0de0bc7e72ccbef1c34f00ab41ee4753bca11c61"
+    },
+    {
+      "path": "files/public/reviews/cylinder5-new-masters-2026-10-31/cobalt-candidate-v4.png",
+      "restoreTo": "public/reviews/cylinder5-new-masters-2026-10-31/cobalt-candidate-v4.png",
+      "bytes": 1194011,
+      "sha256": "f1ada374583791f73d1b8457c165dad3f793397f3e6a0d9eafa92cf59d615ec4"
+    },
+    {
+      "path": "files/public/reviews/cylinder5-new-masters-2026-10-31/material-refinement-prompts.json",
+      "restoreTo": "public/reviews/cylinder5-new-masters-2026-10-31/material-refinement-prompts.json",
+      "bytes": 3876,
+      "sha256": "d6d049025e0f4b67af49d240938d0c1cdef28dd0bdda76e2f5d4ca6cd1125589"
+    },
+    {
+      "path": "files/public/reviews/cylinder5-new-masters-2026-10-31/quality-v4.json",
+      "restoreTo": "public/reviews/cylinder5-new-masters-2026-10-31/quality-v4.json",
+      "bytes": 211167,
+      "sha256": "ddf4ba90da4fe709d88b49118a2afc3f083685233fe93a4006f00770006736cb"
     }
   ]
 }

@@ -19,3 +19,7 @@ node docs/reviews/cylinder5-gpt-review-2026-10-31/restore.mjs --apply
 ```
 
 Every package file is verified before restoring. Existing differing files are backed up. The September catalog assemblies are included as source evidence; restore does not overwrite their tracked runtime paths. No database writes, production uploads, deployment or merge are part of this package.
+
+## Saved material revision 4
+
+The later clear/cobalt material candidates and prompts are preserved in this package. They remain unapproved and unassigned. The open revision-3 comparison now reads quality-v3.json, so its numbers match its images. quality-v4.json records the separate material study.

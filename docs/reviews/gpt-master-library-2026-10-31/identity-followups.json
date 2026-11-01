@@ -1,0 +1,122 @@
+[
+  {
+    "bodyId": "cylinder-30ml-18-415",
+    "glass": "Clear",
+    "representative": {
+      "graceSku": "GB-SPR-CLR-30ML-GLD",
+      "websiteSku": "GBSpry1ozGl"
+    },
+    "reason": "No exact entry in historical GPT body manifest. Not proof that no source exists; identity/source reconciliation required.",
+    "classification": "Documented merged/one-piece source exclusion; separate body needed only if configurator requires it"
+  },
+  {
+    "bodyId": "lotion-bottle-30ml-18mm",
+    "glass": "Clear",
+    "representative": {
+      "graceSku": "LB-LTB-CLR-30ML-T",
+      "websiteSku": "LBMetalSilver1oz"
+    },
+    "reason": "No exact entry in historical GPT body manifest. Not proof that no source exists; identity/source reconciliation required.",
+    "classification": "Documented merged/one-piece source exclusion; separate body needed only if configurator requires it"
+  },
+  {
+    "bodyId": "lotion-bottle-30ml-no-neck",
+    "glass": "Clear",
+    "representative": {
+      "graceSku": "LB-LTB-CLR-30ML-SGLD-T",
+      "websiteSku": "LB1ozGl"
+    },
+    "reason": "No exact entry in historical GPT body manifest. Not proof that no source exists; identity/source reconciliation required.",
+    "classification": "Documented merged/one-piece source exclusion; separate body needed only if configurator requires it"
+  },
+  {
+    "bodyId": "lotion-bottle-3ml-snap",
+    "glass": "Clear",
+    "representative": {
+      "graceSku": "LB-LTB-CLR-3ML-CLR-T",
+      "websiteSku": "LB3mlClear"
+    },
+    "reason": "No exact entry in historical GPT body manifest. Not proof that no source exists; identity/source reconciliation required.",
+    "classification": "Documented merged/one-piece source exclusion; separate body needed only if configurator requires it"
+  },
+  {
+    "bodyId": "lotion-bottle-3ml-Snap-On",
+    "glass": "Clear",
+    "representative": {
+      "graceSku": "LB-LTB-CLR-3ML-CLR-T",
+      "websiteSku": "LB3mlClear"
+    },
+    "reason": "No exact entry in historical GPT body manifest. Not proof that no source exists; identity/source reconciliation required.",
+    "classification": "Documented merged/one-piece source exclusion; separate body needed only if configurator requires it"
+  },
+  {
+    "bodyId": "marble-decorative-10ml-17.52mm",
+    "glass": "Clear",
+    "representative": {
+      "graceSku": "GB-DEC-CLR-10ML-T",
+      "websiteSku": "GBMtlMrblLarge"
+    },
+    "reason": "No exact entry in historical GPT body manifest. Not proof that no source exists; identity/source reconciliation required.",
+    "classification": "Documented merged/one-piece source exclusion; separate body needed only if configurator requires it"
+  },
+  {
+    "bodyId": "marble-decorative-5ml-17.52mm",
+    "glass": "Clear",
+    "representative": {
+      "graceSku": "GB-DEC-CLR-5ML-T",
+      "websiteSku": "GBMtlMrblSmall"
+    },
+    "reason": "No exact entry in historical GPT body manifest. Not proof that no source exists; identity/source reconciliation required.",
+    "classification": "Documented merged/one-piece source exclusion; separate body needed only if configurator requires it"
+  },
+  {
+    "bodyId": "pillar-9ml-17-415",
+    "glass": "Clear",
+    "representative": {
+      "graceSku": "GB-PIL-CLR-9ML-SPR-MBLK",
+      "websiteSku": "GBPillar9SpryBlkMatt"
+    },
+    "reason": "No exact entry in historical GPT body manifest. Not proof that no source exists; identity/source reconciliation required.",
+    "classification": "Historical mismatch: 17-415 spray vs available 13-415 roll-on; source match pending"
+  },
+  {
+    "bodyId": "rectangle-10ml-13-415",
+    "glass": "Clear",
+    "representative": {
+      "graceSku": "GB-RCT-CLR-10ML-BLK-S-01",
+      "websiteSku": "GBRect10BlkSht"
+    },
+    "reason": "No exact entry in historical GPT body manifest. Not proof that no source exists; identity/source reconciliation required.",
+    "classification": "Existing GPT master under tall-rectangle identity; same current register hash"
+  },
+  {
+    "bodyId": "royal-14ml-11mm",
+    "glass": "Clear",
+    "representative": {
+      "graceSku": "GB-RYL-CLR-14ML-T",
+      "websiteSku": "GBMtlCylGl"
+    },
+    "reason": "No exact entry in historical GPT body manifest. Not proof that no source exists; identity/source reconciliation required.",
+    "classification": "Documented merged/one-piece source exclusion; separate body needed only if configurator requires it"
+  },
+  {
+    "bodyId": "vial-3ml-13-425",
+    "glass": "Blue",
+    "representative": {
+      "graceSku": "GB-GRN-GRN-20ML",
+      "websiteSku": "GBVGreen2o4WhtCapSht"
+    },
+    "reason": "No exact entry in historical GPT body manifest. Not proof that no source exists; identity/source reconciliation required.",
+    "classification": "Historical exact-source gap; reconcile identity before new generation"
+  },
+  {
+    "bodyId": "vial-3ml-13-425",
+    "glass": "Green",
+    "representative": {
+      "graceSku": "GB-GRN-GRN-20ML",
+      "websiteSku": "GBVGreen2o4WhtCapSht"
+    },
+    "reason": "No exact entry in historical GPT body manifest. Not proof that no source exists; identity/source reconciliation required.",
+    "classification": "Historical exact-source gap; reconcile identity before new generation"
+  }
+]

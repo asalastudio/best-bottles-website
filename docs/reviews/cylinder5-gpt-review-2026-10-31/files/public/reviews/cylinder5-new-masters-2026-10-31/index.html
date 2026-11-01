@@ -23,9 +23,9 @@ main{max-width:1180px;margin:auto;padding:30px 30px 50px}.eyebrow{font-size:11px
 <tr><td>Dip tube through glass</td><td>Needs its own optical treatment and visual check; alpha does not calculate refraction</td></tr>
 <tr><td>71 component SKUs and builder</td><td>Reuse inventory prepared; candidate replacement pending</td></tr>
 </tbody></table><p class="muted">Image measurements use an alpha threshold and equal-height registration to detect gross drift. They do not certify manufacturer dimensions. The generator did not expose a specific model identifier.</p></details>
-<footer><a href="index-v1.html">Rejected first pair</a><a href="variation-coverage.csv" download>71-SKU reuse checklist</a><a href="quality.json">Geometry checks</a><a href="prompts.json">Generation prompts</a><a href="/reviews/cylinder5-recovered-ai-2026-10-31/index.html">Earlier recovered masters</a><a href="/products/cylinder-5ml-clear-13-415?cap=regular-shiny-gold">Current clear product</a></footer>
+<footer><a href="index-v1.html">Rejected first pair</a><a href="variation-coverage.csv" download>71-SKU reuse checklist</a><a href="quality-v3.json">Geometry checks</a><a href="prompts.json">Generation prompts</a><a href="/reviews/cylinder5-recovered-ai-2026-10-31/index.html">Earlier recovered masters</a><a href="/products/cylinder-5ml-clear-13-415?cap=regular-shiny-gold">Current clear product</a></footer>
 </main><script>
-fetch('quality.json').then(r=>r.json()).then(q=>{
+fetch('quality-v3.json').then(r=>r.json()).then(q=>{
 const points=q.geometry.normalized; const path='M '+points.map(p=>(p.left+.5)+','+p.y).join(' L ')+' L '+[...points].reverse().map(p=>(p.right+.5)+','+p.y).join(' L ')+' Z';
 document.querySelectorAll('[data-body]').forEach(el=>{
  const key=el.dataset.body;const measured=key.startsWith('measured');const m=measured?q.geometry:q.colors[key];const name=measured?key+'-v19.png':key+'-candidate-v3.png';
