@@ -315,10 +315,18 @@ export function stageLayout(
     // Keep its size and foot fixed when a cap changes or the parts are lifted.
     if (reviewedFrame) {
         frame = reviewedFrame;
-        offsets = fixedStageOffsets(sorted, offsets, view, frame, canvas);
+        offsets = fixedStageOffsets(sorted, offsets, view, frame, canvas, {
+            insertsFirst: kit.register?.bodyId === "cylinder-9ml-17-415"
+                && sorted.some(part => part.slot === "roller" && part.image.url.startsWith("/local-kits/cylinder9-masters-2026-11-01/")),
+        });
     }
 
+    // Stable physical-layer keys let CSS translate the same DOM element between views.
+    const occurrences = new Map<string, number>();
     const parts: StagePart[] = sorted.map((part, index) => {
+        const owner = `${part.slot}-${part.componentId ?? "body"}`;
+        const occurrence = occurrences.get(owner) ?? 0;
+        occurrences.set(owner, occurrence + 1);
         const offset = offsets.get(part) ?? { dx: 0, dy: 0 };
         let clipBottomPct: number | undefined;
         if (part.box && BEHIND_GLASS_SLOTS.has(part.slot)) {
@@ -326,7 +334,7 @@ export function stageLayout(
             if (over > 0.5) clipBottomPct = Math.min(100, (over / part.box.height) * 100);
         }
         return {
-            key: `${part.slot}-${index}`,
+            key: `${owner}-${occurrence}`,
             slot: part.slot,
             url: part.image.url,
             dxPct: (offset.dx / canvas.width) * 100,

@@ -1,0 +1,931 @@
+{
+  "version": "8f4467cab276",
+  "configurations": [
+    {
+      "websiteSku": "LBCylAmb9LtnBlk",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-lotionpump",
+      "glassLabel": "Amber",
+      "applicatorKey": "lotion-pump",
+      "finishLabel": "Black"
+    },
+    {
+      "websiteSku": "LBCylAmb9LtnGl",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-lotionpump",
+      "glassLabel": "Amber",
+      "applicatorKey": "lotion-pump",
+      "finishLabel": "Gold"
+    },
+    {
+      "websiteSku": "LBCylAmb9LtnMtSl",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-lotionpump",
+      "glassLabel": "Amber",
+      "applicatorKey": "lotion-pump",
+      "finishLabel": "Matte Silver"
+    },
+    {
+      "websiteSku": "GBCylAmb9MtlRollBlkDot",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "glassLabel": "Amber",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Black Dotted"
+    },
+    {
+      "websiteSku": "GBCylAmb9MtlRollMattCu",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "glassLabel": "Amber",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Matte Copper"
+    },
+    {
+      "websiteSku": "GBCylAmb9MtlRollMattGl",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "glassLabel": "Amber",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Matte Gold"
+    },
+    {
+      "websiteSku": "GBCylAmb9MtlRollMattSl",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "glassLabel": "Amber",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Matte Silver"
+    },
+    {
+      "websiteSku": "GBCylAmb9MtlRollPnkDot",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "glassLabel": "Amber",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Pink Dotted"
+    },
+    {
+      "websiteSku": "GBCylAmb9MtlRollShBlk",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "glassLabel": "Amber",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Shiny Black"
+    },
+    {
+      "websiteSku": "GBCylAmb9MtlRollShnGl",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "glassLabel": "Amber",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Shiny Gold"
+    },
+    {
+      "websiteSku": "GBCylAmb9MtlRollShnSl",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "glassLabel": "Amber",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Shiny Silver"
+    },
+    {
+      "websiteSku": "GBCylAmb9MtlRollSlDot",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "glassLabel": "Amber",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Silver Dotted"
+    },
+    {
+      "websiteSku": "GBCylAmb9MtlRollWht",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "glassLabel": "Amber",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "White"
+    },
+    {
+      "websiteSku": "GBCylAmb9RollBlkDot",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "glassLabel": "Amber",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Black Dotted"
+    },
+    {
+      "websiteSku": "GBCylAmb9RollMattCu",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "glassLabel": "Amber",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Matte Copper"
+    },
+    {
+      "websiteSku": "GBCylAmb9RollMattGl",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "glassLabel": "Amber",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Matte Gold"
+    },
+    {
+      "websiteSku": "GBCylAmb9RollMattSl",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "glassLabel": "Amber",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Matte Silver"
+    },
+    {
+      "websiteSku": "GBCylAmb9RollPnkDot",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "glassLabel": "Amber",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Pink Dotted"
+    },
+    {
+      "websiteSku": "GBCylAmb9RollShBlk",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "glassLabel": "Amber",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Shiny Black"
+    },
+    {
+      "websiteSku": "GBCylAmb9RollShnGl",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "glassLabel": "Amber",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Shiny Gold"
+    },
+    {
+      "websiteSku": "GBCylAmb9RollShnSl",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "glassLabel": "Amber",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Shiny Silver"
+    },
+    {
+      "websiteSku": "GBCylAmb9RollSlDot",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "glassLabel": "Amber",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Silver Dotted"
+    },
+    {
+      "websiteSku": "GBCylAmb9RollWht",
+      "productGroupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "glassLabel": "Amber",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "White"
+    },
+    {
+      "websiteSku": "LBCyl9LtnBlk",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-lotionpump",
+      "glassLabel": "Clear",
+      "applicatorKey": "lotion-pump",
+      "finishLabel": "Black"
+    },
+    {
+      "websiteSku": "LBCyl9LtnGl",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-lotionpump",
+      "glassLabel": "Clear",
+      "applicatorKey": "lotion-pump",
+      "finishLabel": "Gold"
+    },
+    {
+      "websiteSku": "LBCyl9LtnMtSl",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-lotionpump",
+      "glassLabel": "Clear",
+      "applicatorKey": "lotion-pump",
+      "finishLabel": "Matte Silver"
+    },
+    {
+      "websiteSku": "GBCyl9MtlRollBlkDot",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "glassLabel": "Clear",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Black Dotted"
+    },
+    {
+      "websiteSku": "GBCyl9MtlRollMattCu",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "glassLabel": "Clear",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Matte Copper"
+    },
+    {
+      "websiteSku": "GBCyl9MtlRollMattGl",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "glassLabel": "Clear",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Matte Gold"
+    },
+    {
+      "websiteSku": "GBCyl9MtlRollMattSl",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "glassLabel": "Clear",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Matte Silver"
+    },
+    {
+      "websiteSku": "GBCyl9MtlRollPnkDot",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "glassLabel": "Clear",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Pink Dotted"
+    },
+    {
+      "websiteSku": "GBCyl9MtlRollShBlk",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "glassLabel": "Clear",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Shiny Black"
+    },
+    {
+      "websiteSku": "GBCyl9MtlRollShnGl",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "glassLabel": "Clear",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Shiny Gold"
+    },
+    {
+      "websiteSku": "GBCyl9MtlRollShnSl",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "glassLabel": "Clear",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Shiny Silver"
+    },
+    {
+      "websiteSku": "GBCyl9MtlRollSlDot",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "glassLabel": "Clear",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Silver Dotted"
+    },
+    {
+      "websiteSku": "GBCyl9MtlRollWht",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "glassLabel": "Clear",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "White"
+    },
+    {
+      "websiteSku": "GBCyl9RollBlkDot",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "glassLabel": "Clear",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Black Dotted"
+    },
+    {
+      "websiteSku": "GBCyl9RollMattCu",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "glassLabel": "Clear",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Matte Copper"
+    },
+    {
+      "websiteSku": "GBCyl9RollMattGl",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "glassLabel": "Clear",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Matte Gold"
+    },
+    {
+      "websiteSku": "GBCyl9RollMattSl",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "glassLabel": "Clear",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Matte Silver"
+    },
+    {
+      "websiteSku": "GBCyl9RollPnkDot",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "glassLabel": "Clear",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Pink Dotted"
+    },
+    {
+      "websiteSku": "GBCyl9RollShBlk",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "glassLabel": "Clear",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Shiny Black"
+    },
+    {
+      "websiteSku": "GBCyl9RollShnGl",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "glassLabel": "Clear",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Shiny Gold"
+    },
+    {
+      "websiteSku": "GBCyl9RollShnSl",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "glassLabel": "Clear",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Shiny Silver"
+    },
+    {
+      "websiteSku": "GBCyl9RollSlDot",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "glassLabel": "Clear",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Silver Dotted"
+    },
+    {
+      "websiteSku": "GBCyl9RollWht",
+      "productGroupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "glassLabel": "Clear",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "White"
+    },
+    {
+      "websiteSku": "LBCylBlu9LtnBlk",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "lotion-pump",
+      "finishLabel": "Black"
+    },
+    {
+      "websiteSku": "LBCylBlu9LtnGl",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "lotion-pump",
+      "finishLabel": "Gold"
+    },
+    {
+      "websiteSku": "LBCylBlu9LtnMattSl",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "lotion-pump",
+      "finishLabel": "Matte Silver"
+    },
+    {
+      "websiteSku": "GBCylBlu9MtlRollBlkDot",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Black Dotted"
+    },
+    {
+      "websiteSku": "GBCylBlu9MtlRollMattCu",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Matte Copper"
+    },
+    {
+      "websiteSku": "GBCylBlu9MtlRollMattGl",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Matte Gold"
+    },
+    {
+      "websiteSku": "GBCylBlu9MtlRollMattSl",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Matte Silver"
+    },
+    {
+      "websiteSku": "GBCylBlu9MtlRollPnkDot",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Pink Dotted"
+    },
+    {
+      "websiteSku": "GBCylBlu9MtlRollShBlk",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Shiny Black"
+    },
+    {
+      "websiteSku": "GBCylBlu9MtlRollShnGl",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Shiny Gold"
+    },
+    {
+      "websiteSku": "GBCylBlu9MtlRollShnSl",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Shiny Silver"
+    },
+    {
+      "websiteSku": "GBCylBlu9MtlRollSlDot",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Silver Dotted"
+    },
+    {
+      "websiteSku": "GBCylBlu9MtlRollWht",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "White"
+    },
+    {
+      "websiteSku": "GBCylBlu9RollBlkDot",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Black Dotted"
+    },
+    {
+      "websiteSku": "GBCylBlu9RollMattCu",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Matte Copper"
+    },
+    {
+      "websiteSku": "GBCylBlu9RollMattGl",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Matte Gold"
+    },
+    {
+      "websiteSku": "GBCylBlu9RollMattSl",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Matte Silver"
+    },
+    {
+      "websiteSku": "GBCylBlu9RollPnkDot",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Pink Dotted"
+    },
+    {
+      "websiteSku": "GBCylBlu9RollShBlk",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Shiny Black"
+    },
+    {
+      "websiteSku": "GBCylBlu9RollShnGl",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Shiny Gold"
+    },
+    {
+      "websiteSku": "GBCylBlu9RollShnSl",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Shiny Silver"
+    },
+    {
+      "websiteSku": "GBCylBlu9RollSlDot",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Silver Dotted"
+    },
+    {
+      "websiteSku": "GBCylBlu9RollWht",
+      "productGroupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "glassLabel": "Cobalt Blue",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "White"
+    },
+    {
+      "websiteSku": "LBCylFrst9LtnBlk",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-lotionpump",
+      "glassLabel": "Frosted",
+      "applicatorKey": "lotion-pump",
+      "finishLabel": "Black"
+    },
+    {
+      "websiteSku": "LBCylFrst9LtnGl",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-lotionpump",
+      "glassLabel": "Frosted",
+      "applicatorKey": "lotion-pump",
+      "finishLabel": "Gold"
+    },
+    {
+      "websiteSku": "LBCylFrst9LtnMtSl",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-lotionpump",
+      "glassLabel": "Frosted",
+      "applicatorKey": "lotion-pump",
+      "finishLabel": "Matte Silver"
+    },
+    {
+      "websiteSku": "GBCylFrst9MtlRollBlkDot",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "glassLabel": "Frosted",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Black Dotted"
+    },
+    {
+      "websiteSku": "GBCylFrst9MtlRollMattCu",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "glassLabel": "Frosted",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Matte Copper"
+    },
+    {
+      "websiteSku": "GBCylFrst9MtlRollMattGl",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "glassLabel": "Frosted",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Matte Gold"
+    },
+    {
+      "websiteSku": "GBCylFrst9MtlRollMattSl",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "glassLabel": "Frosted",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Matte Silver"
+    },
+    {
+      "websiteSku": "GBCylFrst9MtlRollPnkDot",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "glassLabel": "Frosted",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Pink Dotted"
+    },
+    {
+      "websiteSku": "GBCylFrst9MtlRollShBlk",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "glassLabel": "Frosted",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Shiny Black"
+    },
+    {
+      "websiteSku": "GBCylFrst9MtlRollShnGl",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "glassLabel": "Frosted",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Shiny Gold"
+    },
+    {
+      "websiteSku": "GBCylFrst9MtlRollShnSl",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "glassLabel": "Frosted",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Shiny Silver"
+    },
+    {
+      "websiteSku": "GBCylFrst9MtlRollSlDot",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "glassLabel": "Frosted",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Silver Dotted"
+    },
+    {
+      "websiteSku": "GBCylFrst9MtlRollWht",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "glassLabel": "Frosted",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "White"
+    },
+    {
+      "websiteSku": "GBCylFrst9RollBlkDot",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "glassLabel": "Frosted",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Black Dotted"
+    },
+    {
+      "websiteSku": "GBCylFrst9RollMattCu",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "glassLabel": "Frosted",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Matte Copper"
+    },
+    {
+      "websiteSku": "GBCylFrst9RollMattGl",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "glassLabel": "Frosted",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Matte Gold"
+    },
+    {
+      "websiteSku": "GBCylFrst9RollMattSl",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "glassLabel": "Frosted",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Matte Silver"
+    },
+    {
+      "websiteSku": "GBCylFrst9RollPnkDot",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "glassLabel": "Frosted",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Pink Dotted"
+    },
+    {
+      "websiteSku": "GBCylFrst9RollShBlk",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "glassLabel": "Frosted",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Shiny Black"
+    },
+    {
+      "websiteSku": "GBCylFrst9RollShnGl",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "glassLabel": "Frosted",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Shiny Gold"
+    },
+    {
+      "websiteSku": "GBCylFrst9RollShnSl",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "glassLabel": "Frosted",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Shiny Silver"
+    },
+    {
+      "websiteSku": "GBCylFrst9RollSlDot",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "glassLabel": "Frosted",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Silver Dotted"
+    },
+    {
+      "websiteSku": "GBCylFrst9RollWht",
+      "productGroupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "glassLabel": "Frosted",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "White"
+    },
+    {
+      "websiteSku": "LBCylSwrl9LtnBlk",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-lotionpump",
+      "glassLabel": "Swirl",
+      "applicatorKey": "lotion-pump",
+      "finishLabel": "Black"
+    },
+    {
+      "websiteSku": "LBCylSwrl9LtnGl",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-lotionpump",
+      "glassLabel": "Swirl",
+      "applicatorKey": "lotion-pump",
+      "finishLabel": "Gold"
+    },
+    {
+      "websiteSku": "LBCylSwrl9LtnMtSl",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-lotionpump",
+      "glassLabel": "Swirl",
+      "applicatorKey": "lotion-pump",
+      "finishLabel": "Matte Silver"
+    },
+    {
+      "websiteSku": "GBCylSwrl9MtlRollBlkDot",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "glassLabel": "Swirl",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Black Dotted"
+    },
+    {
+      "websiteSku": "GBCylSwrl9MtlRollMattCu",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "glassLabel": "Swirl",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Matte Copper"
+    },
+    {
+      "websiteSku": "GBCylSwrl9MtlRollMattGl",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "glassLabel": "Swirl",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Matte Gold"
+    },
+    {
+      "websiteSku": "GBCylSwrl9MtlRollMattSl",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "glassLabel": "Swirl",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Matte Silver"
+    },
+    {
+      "websiteSku": "GBCylSwrl9MtlRollPnkDot",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "glassLabel": "Swirl",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Pink Dotted"
+    },
+    {
+      "websiteSku": "GBCylSwrl9MtlRollShBlk",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "glassLabel": "Swirl",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Shiny Black"
+    },
+    {
+      "websiteSku": "GBCylSwrl9MtlRollShnGl",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "glassLabel": "Swirl",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Shiny Gold"
+    },
+    {
+      "websiteSku": "GBCylSwrl9MtlRollShnSl",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "glassLabel": "Swirl",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Shiny Silver"
+    },
+    {
+      "websiteSku": "GBCylSwrl9MtlRollSlDot",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "glassLabel": "Swirl",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "Silver Dotted"
+    },
+    {
+      "websiteSku": "GBCylSwrl9MtlRollWht",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "glassLabel": "Swirl",
+      "applicatorKey": "metal-roller",
+      "finishLabel": "White"
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollBlkDot",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "glassLabel": "Swirl",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Black Dotted"
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollMattCu",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "glassLabel": "Swirl",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Matte Copper"
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollMattGl",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "glassLabel": "Swirl",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Matte Gold"
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollMattSl",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "glassLabel": "Swirl",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Matte Silver"
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollPnkDot",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "glassLabel": "Swirl",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Pink Dotted"
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollShBlk",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "glassLabel": "Swirl",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Shiny Black"
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollShnGl",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "glassLabel": "Swirl",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Shiny Gold"
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollShnSl",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "glassLabel": "Swirl",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Shiny Silver"
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollSlDot",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "glassLabel": "Swirl",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "Silver Dotted"
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollWht",
+      "productGroupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "glassLabel": "Swirl",
+      "applicatorKey": "plastic-roller",
+      "finishLabel": "White"
+    }
+  ],
+  "assets": {
+    "body-clear": {
+      "url": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+      "bytes": 1634900,
+      "width": 743,
+      "height": 2116
+    },
+    "body-amber": {
+      "url": "/local-kits/cylinder9-masters-2026-11-01/body-amber.f45c288e0b6c.png",
+      "sha256": "f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb",
+      "bytes": 1050360,
+      "width": 743,
+      "height": 2116
+    },
+    "body-cobalt": {
+      "url": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "sha256": "9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0",
+      "bytes": 1022364,
+      "width": 743,
+      "height": 2116
+    },
+    "body-frosted": {
+      "url": "/local-kits/cylinder9-masters-2026-11-01/body-frosted.76402e4bb5a5.png",
+      "sha256": "76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db",
+      "bytes": 1131945,
+      "width": 743,
+      "height": 2116
+    },
+    "body-swirl": {
+      "url": "/local-kits/cylinder9-masters-2026-11-01/body-swirl.032e641c93c4.png",
+      "sha256": "032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66",
+      "bytes": 1537538,
+      "width": 743,
+      "height": 2116
+    },
+    "collar-black": {
+      "url": "/local-kits/cylinder9-masters-2026-11-01/collar-black.ee72ac48811e.png",
+      "sha256": "ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf",
+      "bytes": 860722,
+      "width": 1204,
+      "height": 1028
+    },
+    "collar-gold": {
+      "url": "/local-kits/cylinder9-masters-2026-11-01/collar-gold.b31c199b774b.png",
+      "sha256": "b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839",
+      "bytes": 918131,
+      "width": 1204,
+      "height": 1028
+    },
+    "collar-matte-silver": {
+      "url": "/local-kits/cylinder9-masters-2026-11-01/collar-matte-silver.a05bf5300265.png",
+      "sha256": "a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155",
+      "bytes": 1206578,
+      "width": 1204,
+      "height": 1028
+    },
+    "collar-shiny-silver": {
+      "url": "/local-kits/cylinder9-masters-2026-11-01/collar-shiny-silver.21659785df2b.png",
+      "sha256": "21659785df2b6f8a242573a035ef4cfe40e4bab57f6b31407d2281014f3c363e",
+      "bytes": 914651,
+      "width": 1204,
+      "height": 1028
+    },
+    "collar-red": {
+      "url": "/local-kits/cylinder9-masters-2026-11-01/collar-red.e34c8674e08e.png",
+      "sha256": "e34c8674e08e3f1eed980b88caff4cbecdb81cd89d3fcbb0957526446cf466a1",
+      "bytes": 1351590,
+      "width": 1204,
+      "height": 1028
+    },
+    "collar-turquoise": {
+      "url": "/local-kits/cylinder9-masters-2026-11-01/collar-turquoise.430ff4c25dce.png",
+      "sha256": "430ff4c25dced2145d0390140a89f0115c771bab5422a71944291ab23684506c",
+      "bytes": 1444391,
+      "width": 1204,
+      "height": 1028
+    },
+    "actuator": {
+      "url": "/local-kits/cylinder9-masters-2026-11-01/actuator.0e86a99e6f43.png",
+      "sha256": "0e86a99e6f43a8eb58484b308c13afd24b6234f6f953e32b40d11ff52bd92182",
+      "bytes": 826441,
+      "width": 992,
+      "height": 1208
+    },
+    "overcap": {
+      "url": "/local-kits/cylinder9-masters-2026-11-01/overcap.a8ffedd460b5.png",
+      "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+      "bytes": 300365,
+      "width": 427,
+      "height": 569
+    },
+    "tube-fitted": {
+      "url": "/local-kits/cylinder9-masters-2026-11-01/tube-fitted.f5a5592f59a0.png",
+      "sha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484",
+      "bytes": 124485,
+      "width": 180,
+      "height": 1457
+    },
+    "lotion-head": {
+      "url": "/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+      "sha256": "001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe",
+      "bytes": 985854,
+      "width": 1322,
+      "height": 1190
+    },
+    "roller-metal": {
+      "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+      "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
+      "bytes": 1251166,
+      "width": 1052,
+      "height": 1494
+    },
+    "roller-plastic": {
+      "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+      "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
+      "bytes": 1188258,
+      "width": 1052,
+      "height": 1494
+    }
+  }
+}

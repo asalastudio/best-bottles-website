@@ -10,7 +10,7 @@ const union = (a: StageBounds, b: StageBounds): StageBounds => ({ left: Math.min
 const fits = (b: StageBounds, f: StageBounds) => b.left >= f.left-1e-7 && b.right <= f.right+1e-7 && b.top >= f.top-1e-7 && b.bottom <= f.bottom+1e-7;
 const overlaps = (a: StageBounds,b: StageBounds,gap: number) => a.left < b.right+gap-1e-7 && a.right > b.left-gap+1e-7 && a.top < b.bottom+gap-1e-7 && a.bottom > b.top-gap+1e-7;
 
-export function fixedStageOffsets<T extends Part>(parts: readonly T[], offsets: ReadonlyMap<T,Offset>, view: 'sidecar'|'capon'|'exploded', frame: PdpStageFrame, canvas: { width: number; height: number }): Map<T,Offset> {
+export function fixedStageOffsets<T extends Part>(parts: readonly T[], offsets: ReadonlyMap<T,Offset>, view: 'sidecar'|'capon'|'exploded', frame: PdpStageFrame, canvas: { width: number; height: number }, options: { insertsFirst?: boolean } = {}): Map<T,Offset> {
     const result = new Map(offsets);
     if(view==='capon')return result;
     const body=parts.find(p=>p.slot==='body');if(!body)return result;
@@ -26,13 +26,21 @@ export function fixedStageOffsets<T extends Part>(parts: readonly T[], offsets: 
     if(originalUnits.every((bounds,index)=>fits(bounds,area)
         && (view!=="exploded" || [...occupied,...originalUnits.slice(0,index)].every(other=>!overlaps(bounds,other,gap)))))return result;
     // Place the largest mechanism first. Its head, collar and tube remain rigidly registered.
-    const units=[...groups.values()].sort((a,b)=>(b.bounds.bottom-b.bounds.top)-(a.bounds.bottom-a.bounds.top));
+    const units=[...groups.values()].sort((a,b)=> {
+        if (options.insertsFirst && view === 'exploded') {
+            const insertA=a.parts.some(p=>p.slot==='roller'), insertB=b.parts.some(p=>p.slot==='roller');
+            if(insertA!==insertB)return insertA?-1:1;
+        }
+        return (b.bounds.bottom-b.bounds.top)-(a.bounds.bottom-a.bounds.top);
+    });
     for(const unit of units){
         const b=unit.bounds,w=b.right-b.left,h=b.bottom-b.top;
         const preferred=result.get(unit.parts[0])??{dx:0,dy:0};
         const choose = (space: number, available: StageBounds) => {
             const xs=[body.bounds.right+space,body.bounds.left-space-w,available.left,available.right-w,(body.bounds.left+body.bounds.right-w)/2];
-            const ys=[body.bounds.bottom-h,available.top,body.bounds.top-space-h,...occupied.flatMap(o=>[o.top-space-h,o.bottom+space])];
+            const ys=options.insertsFirst && view==='exploded'
+                ? [body.bounds.top-space-h,available.top,body.bounds.bottom-h,...occupied.flatMap(o=>[o.top-space-h,o.bottom+space])]
+                : [body.bounds.bottom-h,available.top,body.bounds.top-space-h,...occupied.flatMap(o=>[o.top-space-h,o.bottom+space])];
             const vertical=ys.map(y=>({dx:preferred.dx,dy:y-b.top}));
             const positions=[preferred,...vertical,...xs.flatMap(x=>ys.map(y=>({dx:x-b.left,dy:y-b.top})))];
             return positions.find(o=>{const q=moved(b,o);return fits(q,available)&&occupied.every(other=>!overlaps(q,other,space));});

@@ -4,6 +4,7 @@ import { createRoot } from "react-dom/client";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { readFileSync } from "node:fs";
 import { useBuilderFamilies } from "@/components/bottle-builder/useBuilderFamilies";
+import { CYLINDER9_MASTER_VERSION } from "@/lib/products/cylinder9-master";
 import type { BuilderFamily } from "@/lib/bottle-builder/entry";
 
 (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
@@ -65,7 +66,7 @@ describe("bottle requests shared by the tile prefetch and the pick", () => {
         expect(fetcher).toHaveBeenCalledTimes(2);
         expect(fetcher.mock.calls.map(([url]) => url)).toEqual([
             "/api/bottle-builder/bodies?family=Cylinder&bodyId=cylinder-9ml%7C17-415%7CGlass%20Bottle",
-            "/api/bottle-builder/kits?family=Cylinder&bodyId=cylinder-9ml%7C17-415%7CGlass%20Bottle&media=reviewed-cylinder9-overcap-swirl-v6",
+            `/api/bottle-builder/kits?family=Cylinder&bodyId=cylinder-9ml%7C17-415%7CGlass%20Bottle&media=reviewed-masters-${CYLINDER9_MASTER_VERSION}`,
         ]);
     });
 

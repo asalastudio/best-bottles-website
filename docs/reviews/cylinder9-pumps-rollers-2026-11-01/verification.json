@@ -1,0 +1,37 @@
+{
+  "version": "8f4467cab276",
+  "typecheck": "passed: tsc --noEmit --incremental false",
+  "unitTests": {
+    "passed": 3169,
+    "skipped": 7,
+    "filesPassed": 348,
+    "filesSkipped": 2
+  },
+  "lint": "passed, zero errors; existing repository warnings remain; newly edited files checked separately",
+  "pdpBrowser": {
+    "configurations": 25,
+    "views": 3,
+    "widths": [
+      1440,
+      390
+    ],
+    "states": 150,
+    "errors": []
+  },
+  "builderBrowser": {
+    "exactSkuSelections": 7,
+    "errors": []
+  },
+  "catalogBrowser": {
+    "exactSkuSelections": 20,
+    "errors": []
+  },
+  "analyticCoverage": {
+    "configurations": 115,
+    "views": 345
+  },
+  "reviewArtworkStatus": "pending visual approval",
+  "production": "No merge, deployment, database write or live-store upload",
+  "ciPriorFailure": "41303273958 failed a stale cache-version assertion; updated test follows the current master version and now passes locally",
+  "build": "Production build deferred to GitHub CI to keep the running localhost preview undisturbed"
+}

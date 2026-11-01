@@ -3,7 +3,11 @@
  * their remote URL even though the deployed proxy accepts it. Unknown hosts
  * stay direct instead of breaking the PDP when an optimizer differs. */
 export function isOptimizableImageUrl(value: string): boolean {
-    if (value.startsWith("/") && !value.startsWith("//")) return true;
+    if (value.startsWith("/") && !value.startsWith("//")) {
+        // Registered SVG envelopes carry exact alpha contours and already scale
+        // natively. Next rejects SVG optimization unless explicitly enabled.
+        return !/\.svg(?:[?#]|$)/i.test(value);
+    }
     if (isRegisterAssetUrl(value)) return true;
     try {
         const url = new URL(value);

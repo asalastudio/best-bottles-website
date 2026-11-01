@@ -1,0 +1,5403 @@
+{
+  "version": "8f4467cab276",
+  "started": "2026-11-01T12:01:21.904Z",
+  "pdp": [
+    {
+      "sku": "LBCylAmb9LtnBlk",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnBlk",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnBlk",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnGl",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnGl",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnGl",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnMtSl",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnMtSl",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnMtSl",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "GBCylAmb9MtlRollBlkDot",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylAmb9MtlRollBlkDot",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylAmb9MtlRollBlkDot",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnMtSl",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnMtSl",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnMtSl",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9MtlRollBlkDot",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9MtlRollBlkDot",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9MtlRollBlkDot",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "LBCylBlu9LtnBlk",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylBlu9LtnBlk",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylBlu9LtnBlk",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylBlu9LtnGl",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylBlu9LtnGl",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylBlu9LtnGl",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu9MtlRollBlkDot",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu9MtlRollBlkDot",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu9MtlRollBlkDot",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu9RollBlkDot",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu9RollBlkDot",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu9RollBlkDot",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "LBCylFrst9LtnBlk",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylFrst9LtnBlk",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylFrst9LtnBlk",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylFrst9LtnGl",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylFrst9LtnGl",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylFrst9LtnGl",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylFrst9LtnMtSl",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylFrst9LtnMtSl",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylFrst9LtnMtSl",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "GBCylFrst9MtlRollBlkDot",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylFrst9MtlRollBlkDot",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylFrst9MtlRollBlkDot",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylFrst9RollBlkDot",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylFrst9RollBlkDot",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylFrst9RollBlkDot",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "LBCylSwrl9LtnBlk",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylSwrl9LtnBlk",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylSwrl9LtnBlk",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylSwrl9LtnGl",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylSwrl9LtnGl",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylSwrl9LtnGl",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylSwrl9LtnMtSl",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylSwrl9LtnMtSl",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylSwrl9LtnMtSl",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollBlkDot",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollBlkDot",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollBlkDot",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylSwrl9RollBlkDot",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylSwrl9RollBlkDot",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylSwrl9RollBlkDot",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnBlk",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnBlk",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnBlk",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnGl",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnGl",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnGl",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnMtSl",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnMtSl",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnMtSl",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "GBCylAmb9MtlRollBlkDot",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylAmb9MtlRollBlkDot",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylAmb9MtlRollBlkDot",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnMtSl",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnMtSl",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnMtSl",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9MtlRollBlkDot",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9MtlRollBlkDot",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9MtlRollBlkDot",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "LBCylBlu9LtnBlk",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylBlu9LtnBlk",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylBlu9LtnBlk",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylBlu9LtnGl",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylBlu9LtnGl",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylBlu9LtnGl",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu9MtlRollBlkDot",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu9MtlRollBlkDot",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu9MtlRollBlkDot",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu9RollBlkDot",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu9RollBlkDot",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu9RollBlkDot",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "LBCylFrst9LtnBlk",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylFrst9LtnBlk",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylFrst9LtnBlk",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylFrst9LtnGl",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylFrst9LtnGl",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylFrst9LtnGl",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylFrst9LtnMtSl",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylFrst9LtnMtSl",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylFrst9LtnMtSl",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "GBCylFrst9MtlRollBlkDot",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylFrst9MtlRollBlkDot",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylFrst9MtlRollBlkDot",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylFrst9RollBlkDot",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylFrst9RollBlkDot",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylFrst9RollBlkDot",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-frosted.76402e4bb5a5.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "LBCylSwrl9LtnBlk",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylSwrl9LtnBlk",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylSwrl9LtnBlk",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylSwrl9LtnGl",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylSwrl9LtnGl",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylSwrl9LtnGl",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylSwrl9LtnMtSl",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylSwrl9LtnMtSl",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "LBCylSwrl9LtnMtSl",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=640&q=75",
+          "width": 180
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "pump",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+          "width": 1322
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=640&q=75",
+          "width": 427
+        }
+      ]
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollBlkDot",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollBlkDot",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollBlkDot",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylSwrl9RollBlkDot",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylSwrl9RollBlkDot",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCylSwrl9RollBlkDot",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-swirl.032e641c93c4.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    }
+  ],
+  "builder": [
+    {
+      "sku": "LBCylAmb9LtnGl",
+      "layers": [
+        {
+          "slot": "pump",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75"
+        },
+        {
+          "slot": "pump",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75"
+        },
+        {
+          "slot": "pump",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=3840&q=75"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-amber.f45c288e0b6c.png&w=1200&q=75"
+        },
+        {
+          "slot": "pump",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=1200&q=75"
+        },
+        {
+          "slot": "overcap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=1200&q=75"
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "layers": [
+        {
+          "slot": "pump",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75"
+        },
+        {
+          "slot": "pump",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75"
+        },
+        {
+          "slot": "pump",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=3840&q=75"
+        },
+        {
+          "slot": "diptube",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=1200&q=75"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=1200&q=75"
+        },
+        {
+          "slot": "pump",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=1200&q=75"
+        },
+        {
+          "slot": "overcap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=1200&q=75"
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "layers": [
+        {
+          "slot": "pump",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75"
+        },
+        {
+          "slot": "pump",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75"
+        },
+        {
+          "slot": "pump",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=3840&q=75"
+        },
+        {
+          "slot": "diptube",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=1200&q=75"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=1200&q=75"
+        },
+        {
+          "slot": "pump",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=1200&q=75"
+        },
+        {
+          "slot": "overcap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=1200&q=75"
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnMtSl",
+      "layers": [
+        {
+          "slot": "pump",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-black.ee72ac48811e.png&w=640&q=75"
+        },
+        {
+          "slot": "pump",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-gold.b31c199b774b.png&w=640&q=75"
+        },
+        {
+          "slot": "pump",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=3840&q=75"
+        },
+        {
+          "slot": "diptube",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Ftube-fitted.f5a5592f59a0.png&w=1200&q=75"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=1200&q=75"
+        },
+        {
+          "slot": "pump",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg"
+        },
+        {
+          "slot": "collar",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fcollar-matte-silver.a05bf5300265.png&w=1200&q=75"
+        },
+        {
+          "slot": "overcap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fovercap.a8ffedd460b5.png&w=1200&q=75"
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9MtlRollBlkDot",
+      "layers": [
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=3840&q=75"
+        },
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=1200&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=1200&q=75"
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "layers": [
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=3840&q=75"
+        },
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=1200&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=1200&q=75"
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu9MtlRollBlkDot",
+      "layers": [
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=3840&q=75"
+        },
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=1200&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=1200&q=75"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "reviewPage": {
+    "status": "loaded",
+    "title": "9 ml Cylinder · Lotion pumps & rollers"
+  },
+  "finished": "2026-11-01T12:04:14.926Z"
+}
