@@ -12,6 +12,7 @@
 
 import { useRef, useState, type CSSProperties, type KeyboardEvent } from "react";
 import { useQuery } from "convex/react";
+import Image from "next/image";
 import { api } from "../../../convex/_generated/api";
 import { catalogCapPhoto, CATALOG_CAP_FAMILY, type CatalogCapKind } from "@/lib/products/catalog-cap-photos";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
@@ -36,10 +37,13 @@ export function useCatalogCapPhotos(input: {
 }): (variant: ProductCardVariantPreview) => string | undefined {
     const { capKind, neck, variants } = input;
     const canHaveCaps = Boolean(capKind && neck && variants.length > 0);
-    const capPlates = useQuery(api.productPlates.byFamily, canHaveCaps
+    // Exact reviewed photos take precedence over the live index. If every
+    // finish already has one, the index cannot change what the card displays.
+    const needsIndex = canHaveCaps && variants.some(variant => !catalogCapPhoto(variant, [], capKind!));
+    const capPlates = useQuery(api.productPlates.byFamily, needsIndex
         ? { familyId: `${CATALOG_CAP_FAMILY[capKind!]}-${neck}`, limit: 200 } : "skip");
     const fallbackCaps = useQuery(api.productPlates.byFamily,
-        canHaveCaps && (capKind === "plain" || capKind === "pump") && capPlates !== undefined && capPlates.page.length === 0
+        needsIndex && (capKind === "plain" || capKind === "pump") && capPlates !== undefined && capPlates.page.length === 0
             ? { familyId: `roll-on-cap-${neck}`, limit: 200 } : "skip");
     const rows = [...(capPlates?.page ?? []), ...(fallbackCaps?.page ?? [])];
     return (variant) => (capKind ? catalogCapPhoto(variant, rows, capKind) : undefined);
@@ -102,6 +106,7 @@ export default function CatalogCapDots({ title, variants, selectedId, onSelect, 
             <div role="radiogroup" aria-label={`${variants.every((variant) => oneMlVialApplicator(variant.websiteSku)) ? "Applicator" : "Cap"} for ${title}`} onKeyDown={move} className="contents">
                 {shown.map((variant) => {
                     const active = variant.id === selected.id;
+                    const photoUrl = photo(variant);
                     return (
                         <button
                             key={variant.id}
@@ -119,8 +124,11 @@ export default function CatalogCapDots({ title, variants, selectedId, onSelect, 
                             data-testid="catalog-card-cap-dot"
                             data-sku={variant.websiteSku ?? variant.graceSku ?? undefined}
                             className="h-[22px] w-[22px] flex-none rounded-full bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#9a7a48]"
-                            style={{ ...capDotStyle(variant, photo(variant)), boxShadow: active ? SELECTED_RING : UNSELECTED_RING }}
-                        />
+                            style={{ ...capDotStyle(variant, undefined), boxShadow: active ? SELECTED_RING : UNSELECTED_RING }}
+                        >
+                            {photoUrl && <Image src={photoUrl} alt="" width={22} height={22} loading="lazy"
+                                className="h-full w-full rounded-full object-cover" />}
+                        </button>
                     );
                 })}
             </div>

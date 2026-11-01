@@ -1,0 +1,53 @@
+{
+  "results": [
+    {
+      "name": "desktop",
+      "status": 200,
+      "images": [
+        {
+          "src": "clear-candidate-v1.png",
+          "decoded": true
+        },
+        {
+          "src": "cobalt-candidate-v1.png",
+          "decoded": true
+        },
+        {
+          "src": "measured-clear-v19.png",
+          "decoded": true
+        },
+        {
+          "src": "measured-cobalt-v19.png",
+          "decoded": true
+        }
+      ],
+      "overflow": false,
+      "outlineVisible": true
+    },
+    {
+      "name": "mobile",
+      "status": 304,
+      "images": [
+        {
+          "src": "clear-candidate-v1.png",
+          "decoded": true
+        },
+        {
+          "src": "cobalt-candidate-v1.png",
+          "decoded": true
+        },
+        {
+          "src": "measured-clear-v19.png",
+          "decoded": true
+        },
+        {
+          "src": "measured-cobalt-v19.png",
+          "decoded": true
+        }
+      ],
+      "overflow": false,
+      "outlineVisible": true
+    }
+  ],
+  "errors": []
+}

@@ -47,8 +47,9 @@ function skuOf(variant: ProductCardVariantPreview | null | undefined): string | 
 export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroHoverImageUrl, href, variants, family, slug, selected = null, selectedHero = null }: Props) {
     const [heroHovered, setHeroHovered] = useState(false);
     const [failed, setFailed] = useState<Set<string>>(() => new Set());
-    const skus = [...new Set([skuOf(variants[0]), skuOf(selected)].filter((sku): sku is string => Boolean(sku)))];
-    // Bottle imagery must remain available even when there is no hero.
+    const skus = [...new Set([catalogHero ? null : skuOf(variants[0]), skuOf(selected)].filter((sku): sku is string => Boolean(sku)))];
+    // The approved hero already supplies the default image. Fetch a plate only
+    // for a selected finish, or for a card that needs its primary fallback.
     const assemblyPlates = useQuery(api.productPlates.forSkus, skus.length ? { skus } : "skip");
     const assembly = (variant: ProductCardVariantPreview) => {
         const plate = assemblyPlates?.plates[skuOf(variant) ?? ""];

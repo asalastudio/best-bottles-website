@@ -1,0 +1,330 @@
+{
+  "generatedAt": "2026-11-01T02:20:29.490Z",
+  "navigation": [
+    {
+      "run": "baseline",
+      "page": "family-cold",
+      "domContentLoadedMs": 2634,
+      "requestToResponseStartMs": 787,
+      "lcpMs": 2792,
+      "requests": 191,
+      "bytes": 4117421,
+      "scriptBytes": 2624979,
+      "imageRequests": 127,
+      "imageBytes": 1284535,
+      "longTaskMs": 808
+    },
+    {
+      "run": "baseline",
+      "page": "family-warm",
+      "domContentLoadedMs": 1302,
+      "requestToResponseStartMs": 585,
+      "lcpMs": 1368,
+      "requests": 191,
+      "bytes": 184647,
+      "scriptBytes": 25358,
+      "imageRequests": 127,
+      "imageBytes": 3479,
+      "longTaskMs": 602
+    },
+    {
+      "run": "baseline",
+      "page": "catalog-cold",
+      "domContentLoadedMs": 1249,
+      "requestToResponseStartMs": 725,
+      "lcpMs": 1872,
+      "requests": 94,
+      "bytes": 3184595,
+      "scriptBytes": 2668256,
+      "imageRequests": 27,
+      "imageBytes": 271867,
+      "longTaskMs": 274
+    },
+    {
+      "run": "after",
+      "page": "family-cold",
+      "domContentLoadedMs": 3782,
+      "requestToResponseStartMs": 830,
+      "lcpMs": 4180,
+      "requests": 76,
+      "bytes": 2899209,
+      "scriptBytes": 2631324,
+      "imageRequests": 12,
+      "imageBytes": 55471,
+      "longTaskMs": 444
+    },
+    {
+      "run": "after",
+      "page": "family-warm",
+      "domContentLoadedMs": 1804,
+      "requestToResponseStartMs": 686,
+      "lcpMs": 2284,
+      "requests": 76,
+      "bytes": 191623,
+      "scriptBytes": 25358,
+      "imageRequests": 12,
+      "imageBytes": 5954,
+      "longTaskMs": 387
+    },
+    {
+      "run": "after",
+      "page": "catalog-cold",
+      "domContentLoadedMs": 1787,
+      "requestToResponseStartMs": 962,
+      "lcpMs": 2796,
+      "requests": 85,
+      "bytes": 3075684,
+      "scriptBytes": 2674633,
+      "imageRequests": 18,
+      "imageBytes": 156429,
+      "longTaskMs": 339
+    },
+    {
+      "run": "production-observation",
+      "page": "production-family-cold",
+      "domContentLoadedMs": 2650,
+      "requestToResponseStartMs": 61,
+      "lcpMs": 2776,
+      "requests": 215,
+      "bytes": 2880998,
+      "scriptBytes": 1411515,
+      "imageRequests": 127,
+      "imageBytes": 1281609,
+      "longTaskMs": 203
+    }
+  ],
+  "scroll": [
+    {
+      "run": "before",
+      "page": "family",
+      "queryCounts": {
+        "graceMemory:getByOwner": 1,
+        "productPlates:forSkus": 47,
+        "productPlates:byFamily": 12
+      },
+      "imageRequests": 160,
+      "scrolls": [
+        {
+          "y": 0,
+          "ms": 5,
+          "dom": 4384
+        },
+        {
+          "y": 1000,
+          "ms": 4,
+          "dom": 4384
+        },
+        {
+          "y": 2400,
+          "ms": 105,
+          "dom": 4384
+        },
+        {
+          "y": 4500,
+          "ms": 104,
+          "dom": 4377
+        },
+        {
+          "y": 8000,
+          "ms": 3412,
+          "dom": 4377
+        }
+      ],
+      "errors": []
+    },
+    {
+      "run": "before",
+      "page": "mobile",
+      "queryCounts": {
+        "graceMemory:getByOwner": 1,
+        "productPlates:forSkus": 47,
+        "productPlates:byFamily": 12
+      },
+      "imageRequests": 149,
+      "scrolls": [
+        {
+          "y": 0,
+          "ms": 3,
+          "dom": 4377
+        },
+        {
+          "y": 1000,
+          "ms": 3,
+          "dom": 4377
+        },
+        {
+          "y": 2400,
+          "ms": 2,
+          "dom": 4377
+        },
+        {
+          "y": 4500,
+          "ms": 109,
+          "dom": 4377
+        },
+        {
+          "y": 8000,
+          "ms": 207,
+          "dom": 4377
+        }
+      ],
+      "errors": []
+    },
+    {
+      "run": "before",
+      "page": "catalog",
+      "queryCounts": {
+        "graceMemory:getByOwner": 1,
+        "productPlates:forSkus": 24,
+        "productPlates:byFamily": 16
+      },
+      "imageRequests": 39,
+      "scrolls": [
+        {
+          "y": 0,
+          "ms": 3,
+          "dom": 1400
+        },
+        {
+          "y": 1000,
+          "ms": 1,
+          "dom": 1400
+        },
+        {
+          "y": 2400,
+          "ms": 2,
+          "dom": 1403
+        },
+        {
+          "y": 4500,
+          "ms": 519,
+          "dom": 1403
+        },
+        {
+          "y": 8000,
+          "ms": 2,
+          "dom": 1403
+        }
+      ],
+      "errors": []
+    },
+    {
+      "run": "after",
+      "page": "family",
+      "queryCounts": {
+        "graceMemory:getByOwner": 1,
+        "productPlates:byFamily": 9
+      },
+      "imageRequests": 152,
+      "scrolls": [
+        {
+          "y": 0,
+          "ms": 4,
+          "dom": 4758
+        },
+        {
+          "y": 1000,
+          "ms": 3,
+          "dom": 4758
+        },
+        {
+          "y": 2400,
+          "ms": 206,
+          "dom": 4758
+        },
+        {
+          "y": 4500,
+          "ms": 407,
+          "dom": 4758
+        },
+        {
+          "y": 8000,
+          "ms": 307,
+          "dom": 4758
+        }
+      ],
+      "errors": []
+    },
+    {
+      "run": "after",
+      "page": "mobile",
+      "queryCounts": {
+        "graceMemory:getByOwner": 1,
+        "productPlates:byFamily": 9
+      },
+      "imageRequests": 112,
+      "scrolls": [
+        {
+          "y": 0,
+          "ms": 6,
+          "dom": 4751
+        },
+        {
+          "y": 1000,
+          "ms": 2,
+          "dom": 4751
+        },
+        {
+          "y": 2400,
+          "ms": 12,
+          "dom": 4751
+        },
+        {
+          "y": 4500,
+          "ms": 122,
+          "dom": 4751
+        },
+        {
+          "y": 8000,
+          "ms": 230,
+          "dom": 4751
+        }
+      ],
+      "errors": []
+    },
+    {
+      "run": "after",
+      "page": "catalog",
+      "queryCounts": {
+        "graceMemory:getByOwner": 1,
+        "productPlates:forSkus": 2,
+        "productPlates:byFamily": 14
+      },
+      "imageRequests": 39,
+      "scrolls": [
+        {
+          "y": 0,
+          "ms": 2,
+          "dom": 1413
+        },
+        {
+          "y": 1000,
+          "ms": 2,
+          "dom": 1413
+        },
+        {
+          "y": 2400,
+          "ms": 1,
+          "dom": 1416
+        },
+        {
+          "y": 4500,
+          "ms": 103,
+          "dom": 1416
+        },
+        {
+          "y": 8000,
+          "ms": 1,
+          "dom": 1416
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "limitations": [
+    "Local navigation runs use Next development mode, not a controlled production benchmark.",
+    "Cold means browser HTTP cache disabled; server/image optimizer caches were not reset.",
+    "Navigation timing did not improve consistently. Claim reduced media requests and bytes, not an LCP speedup.",
+    "Production observation is the previous deployed code; local fixes have not been deployed."
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "recoveredAt": "2026-11-01T02:03:13.732Z",
+  "historical": [
+    {
+      "bodyId": "cylinder-5ml-13-415",
+      "plateKey": "cylinder-5ml-13-415|Clear",
+      "glass": "Clear",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "neck": "13-415",
+      "url": "masters/7a241aaee776778898fea5fb9994d4a4030638b9d104815c7683791a39d66da9.png",
+      "localPath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/reviews/glass-body-overview-2026-10-31/masters/7a241aaee776778898fea5fb9994d4a4030638b9d104815c7683791a39d66da9.png",
+      "method": "GPT image generation",
+      "approval": "Historical record; may be superseded",
+      "source": {
+        "masterGlass": "Clear",
+        "role": "reference glass (clear), lit",
+        "cut": "PSD layer Layer 4",
+        "psd": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /1. GBCyl5BlkSht.psd",
+        "derivedFrom": "a9a1e380ab56e94dc8c4c4495903dd290bd2ab6d4118bc60e1112d0712a750bd",
+        "neckEdit": null
+      },
+      "anchors": {
+        "axisX": 444.5,
+        "seatY": 151,
+        "shoulderY": 577,
+        "baselineY": 2094,
+        "barrelAxisX": 455,
+        "bodyShoulderY": 607
+      },
+      "pxPerMm": 35.6601,
+      "hashVerified": true,
+      "hashBasis": "decoded RGBA pixels",
+      "recordedHash": "e1f7c0e7d1305ff1f3c2c9a22602f619d9576754473977a1c5ecb146e6280ec2",
+      "fileSha256": "7a241aaee776778898fea5fb9994d4a4030638b9d104815c7683791a39d66da9",
+      "checks": {
+        "rawIoU": 0.9899,
+        "fittedIoU": 0.9911,
+        "edgeP95Px": 5.7,
+        "edgeMaxPx": 11.2,
+        "interiorHolePct": 0.05,
+        "edges": "render outline",
+        "widthMm": 17.55,
+        "referenceWidthMm": 17,
+        "widthErrorPct": 3.3
+      }
+    },
+    {
+      "bodyId": "cylinder-5ml-13-415",
+      "plateKey": "cylinder-5ml-13-415|Cobalt Blue",
+      "glass": "Cobalt Blue",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "neck": "13-415",
+      "url": "masters/834e1cce7a7f3d6dfa135707e769b209d889061754b8825db1655c38c0271cdb.png",
+      "localPath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/reviews/glass-body-overview-2026-10-31/masters/834e1cce7a7f3d6dfa135707e769b209d889061754b8825db1655c38c0271cdb.png",
+      "method": "GPT image generation",
+      "approval": "Historical record; may be superseded",
+      "source": {
+        "masterGlass": "Clear",
+        "role": "reference glass (cobalt-blue), lit",
+        "cut": "PSD layer Layer 5",
+        "psd": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/1. GBCylBlu5BlkSht.psd",
+        "derivedFrom": "3994320bf3f84f80980135b0abe9f9e2ef96c283d0be4b78179276ad1f5cb16f",
+        "neckEdit": null
+      },
+      "anchors": {
+        "axisX": 446,
+        "seatY": 150,
+        "shoulderY": 580,
+        "baselineY": 2095,
+        "barrelAxisX": 454.5,
+        "bodyShoulderY": 611
+      },
+      "pxPerMm": 35.6968,
+      "hashVerified": true,
+      "hashBasis": "decoded RGBA pixels",
+      "recordedHash": "5db1c8bb2111937674cbe79084673e547e4cc18906aabc7d72010a5e52cca84b",
+      "fileSha256": "834e1cce7a7f3d6dfa135707e769b209d889061754b8825db1655c38c0271cdb",
+      "checks": {
+        "rawIoU": 0.9673,
+        "fittedIoU": 0.9902,
+        "edgeP95Px": 5.1,
+        "edgeMaxPx": 9,
+        "interiorHolePct": 0.17,
+        "edges": "render outline",
+        "widthMm": 17.48,
+        "referenceWidthMm": 17,
+        "widthErrorPct": 2.8
+      }
+    }
+  ],
+  "note": "Historical GPT bare body masters. Not newly approved or substituted into any product page."
+}
