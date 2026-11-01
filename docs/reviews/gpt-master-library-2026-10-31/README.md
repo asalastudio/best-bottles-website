@@ -2,9 +2,17 @@
 
 Jordan chose existing GPT body masters for the paper-doll architecture on October 31, 2026. Product pages and standalone builder must share the same selected master. The product grid is a later migration.
 
+## Current visual selection
+
+Jordan preferred the Boston Round family and the clear Apothecary 118 ml. The ten affected source files are pinned as preferred candidates. Family-level praise is not approval of every color or assembled configuration. All other bodies remain individually reviewable; the white 20 ml cream jar remains held for the wrong source.
+
+The gallery shows processed registered body layers. The nine Boston Round plates record a later hero-reference material pass, documented in scripts/register/bodies/hero_jobs.py. Other plates include earlier passes. A recorded GPT model and old approval do not prove that the displayed version meets today's glass-quality bar. Raw-versus-processed and later-upscale recovery remains open.
+
+review-decisions.json preserves Jordan's feedback, exact image hashes and acceptance checks. visual-review.csv provides one row per body/color. No preferred reference or later accepted repair is replaced automatically.
+
 ## Verified recovery
 
-The September 25 second-pass record explicitly established these as the catalogue source-of-truth bodies. All 109 saved color images across 71 designs were rehashed. All have registration anchors and an approved-family or curve-derived display target. The historical manifest records GPT Image 2.5 Sunburst, quality high. These are bare bodies, separate from assembled heroes.
+The September 25 record established source-of-truth bodies; the saved manifest also contains later material passes. All 109 saved color images across 71 designs were rehashed. All have registration anchors and an approved-family or curve-derived display target. The historical manifest records GPT Image 2.5 Sunburst, quality high. These are bare bodies, separate from assembled heroes.
 
 The configured registry has 110 plates: 101 marked GPT and 9 Blender. 100 historical plate keys still match their registered hashes. One extra current GPT key uses the same Rectangle 10 ml source under an alias. This read-only registry snapshot does not prove which asset every rendered product page selects.
 

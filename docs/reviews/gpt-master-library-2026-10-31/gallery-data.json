@@ -49,6 +49,17 @@
         "bytes": 1282759
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/791d12a1322ceb0311f03dfdd979e9943c4771408583431eb31b62054ea79a64.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (cobalt-blue), lit",
+      "processedSourceFile": "final-lit/apothecary-15ml-Ground/cobalt-blue.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -109,6 +120,17 @@
         "bytes": 835741
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/7da8ddaa6d5ece8632a6406f528de81990f65dc63c2d6aff5072e08e6a11dbd6.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/apothecary-30ml-Ground/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -161,6 +183,17 @@
         "bytes": 1282658
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/380df4669205b1e3e14ea31264416838f43fdfb057b6d50efee62a38bfdf0566.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (cobalt-blue), lit",
+      "processedSourceFile": "final-lit/apothecary-30ml-Ground/cobalt-blue.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -213,6 +246,17 @@
         "bytes": 1423266
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/ddc0f0937bc12ba7c4cb49641e20a81b91edda05255fceeae4de6c24e9f220f5.png",
+      "renderPass": "lit",
+      "sourceRole": "own photo (no reference glass on file)",
+      "processedSourceFile": "final-lit/apothecary-30ml-Ground/green.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -273,6 +317,17 @@
         "bytes": 1087701
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/1cc7ff6696419f5d08ce819777f7cfbe342a5db0656ea180dcfc36756f6d6836.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/pear-apothecary-118ml-Ground/clear.png",
+      "visualReview": {
+        "decision": "preferred-candidate",
+        "label": "Preferred candidate: preserve this version",
+        "evidence": "User preferred the Apothecary 118 ml body.",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -336,6 +391,17 @@
         "bytes": 905200
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/82159e636e8b5852e8815cc4a3644cb9245e7a2fa4f98b9f7a0f01d2333a2abf.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/bell-10ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -387,6 +453,17 @@
         "bytes": 1490690
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/eec34e8865060d08cdd327516efda0dd427a48dfd74e69909a1bde377f4fbd83.png",
+      "renderPass": "hero",
+      "sourceRole": "shared amber: the approved 60 mL amber hero (GBBstnAmb2ozBlkCapSht) as the reference for every size",
+      "processedSourceFile": "final-hero/boston-round-15ml-18-400/amber.png",
+      "visualReview": {
+        "decision": "preferred-candidate",
+        "label": "Preferred candidate: preserve this version",
+        "evidence": "User preferred the Boston Round family as a group.",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -446,6 +523,17 @@
         "bytes": 759637
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/c3fe7d1438474fa4bc3d5d9f7766bb1b88eb1580ca4b17edee496c699e18d7db.png",
+      "renderPass": "hero",
+      "sourceRole": "shared clear: the 30 mL first-test render as the reference for every size",
+      "processedSourceFile": "final-hero/boston-round-15ml-18-400/clear.png",
+      "visualReview": {
+        "decision": "preferred-candidate",
+        "label": "Preferred candidate: preserve this version",
+        "evidence": "User preferred the Boston Round family as a group.",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -497,6 +585,17 @@
         "bytes": 1365321
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/ae417411797bf8716ca86434f0132332925d1374e048ab8d7e2037ff709027b4.png",
+      "renderPass": "hero",
+      "sourceRole": "shared cobalt via the 30 mL attempt-3 render (closer shape; the 60 mL reference narrowed the 15 mL neck)",
+      "processedSourceFile": "final-hero/boston-round-15ml-18-400/cobalt-blue.png",
+      "visualReview": {
+        "decision": "preferred-candidate",
+        "label": "Preferred candidate: preserve this version",
+        "evidence": "User preferred the Boston Round family as a group.",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -553,6 +652,17 @@
         "bytes": 1627896
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/23031f70828ba10de6dbe216491c02369a28008c8bcd349abd06690df7da2433.png",
+      "renderPass": "hero",
+      "sourceRole": "shared amber: the approved 60 mL amber hero (GBBstnAmb2ozBlkCapSht) as the reference for every size",
+      "processedSourceFile": "final-hero/boston-round-30ml-20-400/amber.png",
+      "visualReview": {
+        "decision": "preferred-candidate",
+        "label": "Preferred candidate: preserve this version",
+        "evidence": "User preferred the Boston Round family as a group.",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -617,6 +727,17 @@
         "bytes": 874596
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/7228e7f5710c13d267688039d14de41f1d51ed14baf1020c136939459cdef834.png",
+      "renderPass": "hero",
+      "sourceRole": "shared clear: the 30 mL first-test render as the reference for every size",
+      "processedSourceFile": "final-hero/boston-round-30ml-20-400/clear.png",
+      "visualReview": {
+        "decision": "preferred-candidate",
+        "label": "Preferred candidate: preserve this version",
+        "evidence": "User preferred the Boston Round family as a group.",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -673,6 +794,17 @@
         "bytes": 1490053
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/3db57ae08eebe81ab25e35bb4c44525f79b6b598e249bd42a5ca365c45e126d9.png",
+      "renderPass": "hero",
+      "sourceRole": "shared cobalt: the 60 mL attempt-2 render as the reference for every size",
+      "processedSourceFile": "final-hero/boston-round-30ml-20-400/cobalt-blue.png",
+      "visualReview": {
+        "decision": "preferred-candidate",
+        "label": "Preferred candidate: preserve this version",
+        "evidence": "User preferred the Boston Round family as a group.",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -727,6 +859,17 @@
         "bytes": 1127825
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/efbc84a5c3b0efcbe65e5a4e676c397ad5568dbb7ec95a1099f8d19de948df0e.png",
+      "renderPass": "hero",
+      "sourceRole": "shared amber: the approved 60 mL amber hero (GBBstnAmb2ozBlkCapSht) as the reference for every size",
+      "processedSourceFile": "final-hero/boston-round-60ml-20-400/amber.png",
+      "visualReview": {
+        "decision": "preferred-candidate",
+        "label": "Preferred candidate: preserve this version",
+        "evidence": "User preferred the Boston Round family as a group.",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -789,6 +932,17 @@
         "bytes": 669842
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/1c868862d1df677700e1b69f15103ca9d541a9519f4e90b77a62b973fb73317b.png",
+      "renderPass": "hero",
+      "sourceRole": "shared clear: the 30 mL first-test render as the reference for every size",
+      "processedSourceFile": "final-hero/boston-round-60ml-20-400/clear.png",
+      "visualReview": {
+        "decision": "preferred-candidate",
+        "label": "Preferred candidate: preserve this version",
+        "evidence": "User preferred the Boston Round family as a group.",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -843,6 +997,17 @@
         "bytes": 1125682
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/6ba772c607badf1621deef2f80419f2f17c1bc8b3f2dab16aa533a396b17c534.png",
+      "renderPass": "hero",
+      "sourceRole": "shared cobalt: the 60 mL attempt-2 render as the reference for every size",
+      "processedSourceFile": "final-hero/boston-round-60ml-20-400/cobalt-blue.png",
+      "visualReview": {
+        "decision": "preferred-candidate",
+        "label": "Preferred candidate: preserve this version",
+        "evidence": "User preferred the Boston Round family as a group.",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -906,6 +1071,17 @@
         "bytes": 1483707
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/6c2f69b10b1cf70c325c3d4cae8d993fcd43c5df9f45fa96fb4b94681845bed8.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/circle-15ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -966,6 +1142,17 @@
         "bytes": 953144
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/202a5e5181c974208953d2cf37a54683104467b9dbcae614225566f357532b64.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/circle-30ml-15-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -1031,6 +1218,17 @@
         "bytes": 1089964
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/f7ecc815ee4cb67bbf1ed7a2697bbad40756169f6f390082e82248f3c8125de8.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/circle-50ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -1088,6 +1286,17 @@
         "bytes": 2319011
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/5af241860ed78a52baa86048ec8c9a6df2fef069a3005294c8d9c1225ec759df.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/circle-50ml-18-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -1151,6 +1360,17 @@
         "bytes": 1469238
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/dd60d07c5c58bf32617162c7d9652f9eebd71a90ef1b80644667b9b55217071b.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/circle-100ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -1206,6 +1426,17 @@
         "bytes": 2475878
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/8e98074990be3c1ce5e2c1565c9a2d60a50d96521a63876d56e196a9d036a733.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/circle-100ml-18-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -1267,6 +1498,17 @@
         "bytes": 1816961
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/fb2655cf7bc6f63c3b5e93195fca6717e6531d86f9f919b89d9477a9e7acd33e.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cream-jar-3ml-20mm/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -1320,6 +1562,17 @@
         "bytes": 2349566
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/e1a574a2fb0ee5a708787d41272db799127d28c65470bf93c76d84f7534478b6.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (cobalt-blue), lit",
+      "processedSourceFile": "final-lit/cream-jar-3ml-20mm/cobalt-blue.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -1373,6 +1626,17 @@
         "bytes": 2889237
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/03266a4cf82a392532452fa020351cc76ad980d86d74868d8c0c24351737d6ff.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (amber), lit",
+      "processedSourceFile": "final-lit/cream-jar-5ml-27mm/amber.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -1434,6 +1698,17 @@
         "bytes": 2121670
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/4cfbcf26667698599726313302eb46d95c473e7e3e5f791ac78214dc48ab4ee2.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cream-jar-5ml-27mm/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -1495,6 +1770,17 @@
         "bytes": 1401907
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/ab0f3613c26c2725ab6fb0498364ebcc2e92a612847767c09880f82516766e23.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cream-jar-15ml-37mm/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -1548,6 +1834,17 @@
         "bytes": 1271345
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/be88084576462d334faeee18b93b9ea0a13102d59656fb1e0509ea5fd6e8fb46.png",
+      "renderPass": "lit",
+      "sourceRole": "own colour, lit by the clear reference",
+      "processedSourceFile": "final-lit/cream-jar-20ml-40mm/white.png",
+      "visualReview": {
+        "decision": "held-wrong-source",
+        "label": "Held: wrong source body",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "measured",
       "lockStatus": "held: wrong source body"
     },
@@ -1600,6 +1897,17 @@
         "bytes": 4120936
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/2c6cf4a3933fdb661eae4d70525ea18b9e5b65f4b9acc936a12b6a7001b425e8.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (amber), lit",
+      "processedSourceFile": "final-lit/cream-jar-30ml-45mm/amber.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -1652,6 +1960,17 @@
         "bytes": 3725388
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/6dc95820e75c1761ae06929e8506380e9f7e5d5289a6507c109bc6e3368eab47.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/cream-jar-30ml-45mm/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -1705,6 +2024,17 @@
         "bytes": 3821552
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/16f764774ab19b8f91854aaf3b72598837817a8eea74abaced3f6249acd4a7f9.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (amber), lit",
+      "processedSourceFile": "final-lit/cream-jar-40ml-48/400/amber.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -1758,6 +2088,17 @@
         "bytes": 3484738
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/8fb0a786b08ced019a18b2fee4c4b52655a88ef7f61d90a1f64ee64d2a37fd79.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/cream-jar-40ml-48/400/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -1811,6 +2152,17 @@
         "bytes": 3109690
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/1aba96b0e05434f06559001b9a7996dc981b1a1823ed46610052e9c4d87da9fc.png",
+      "renderPass": "lit",
+      "sourceRole": "own colour, lit by the clear reference",
+      "processedSourceFile": "final-lit/cream-jar-63ml-58mm/white.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -1871,6 +2223,17 @@
         "bytes": 725780
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/15ce2cfbff36dc202e30e66bdf511ed1d2f6e1586759a5640a49e3904bc042c7.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-3.3ml-12mm/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked"
     },
@@ -1929,6 +2292,17 @@
         "bytes": 686892
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/6ee48a6120f0324b73485ecff23bf8caa61037ff51de462afdef5975ee9f92eb.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-4ml-12mm/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked"
     },
@@ -1992,6 +2366,17 @@
         "bytes": 606416
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/7a241aaee776778898fea5fb9994d4a4030638b9d104815c7683791a39d66da9.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-5ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked"
     },
@@ -2047,6 +2432,17 @@
         "bytes": 1217660
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/834e1cce7a7f3d6dfa135707e769b209d889061754b8825db1655c38c0271cdb.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (cobalt-blue), lit",
+      "processedSourceFile": "final-lit/cylinder-5ml-13-415/cobalt-blue.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked"
     },
@@ -2110,6 +2506,17 @@
         "bytes": 724059
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/77f8547a00012f0bcd36cddfef803378056434f70278ba285e76819dbc115c07.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-5.5ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -2175,6 +2582,17 @@
         "bytes": 444850
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/7a866573d796d5543c2e6e88e4b4fb96d08fdde722b6ba6f07c0a528b7cf9ff6.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-9ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked"
     },
@@ -2232,6 +2650,17 @@
         "bytes": 704167
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/7cadb88aa92ccff1c337efa5904398e792e3832cff5cfdd0a9366af51066495e.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/cylinder-9ml-13-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked"
     },
@@ -2287,6 +2716,17 @@
         "bytes": 1023576
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/2497d6024a8575bc1c3dfb7ca8e09cb1cfa654c81fd3a7b41a89452fca4fac8d.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (amber), lit",
+      "processedSourceFile": "final-lit/cylinder-9ml-17-415/amber.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked"
     },
@@ -2350,6 +2790,17 @@
         "bytes": 484190
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/35018244cb0df545826f81a741f502b2f3913c7f1ebe29a81e3e6ef06cfe264d.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-9ml-17-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked"
     },
@@ -2405,6 +2856,17 @@
         "bytes": 1003237
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/4151b885b0cbb6cfb89fd1e7ced3f8c3664870cca2399acc00e4c10bc02367d3.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (cobalt-blue), lit",
+      "processedSourceFile": "final-lit/cylinder-9ml-17-415/cobalt-blue.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked"
     },
@@ -2460,6 +2922,17 @@
         "bytes": 1037452
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/c684d0095b694cb60a90e599f2d9ee138eda6114e79321654d7b10a93c8553a7.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/cylinder-9ml-17-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked"
     },
@@ -2523,6 +2996,17 @@
         "bytes": 1242197
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/98808a04fcb5bc57b0273448bf7a938a589fd0b1b782a5f00f3cdcf6fd3afcd1.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (swirl), lit + own swirl photo",
+      "processedSourceFile": "final-lit/cylinder-9ml-17-415/swirl.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked"
     },
@@ -2586,6 +3070,17 @@
         "bytes": 598595
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-25ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -2644,6 +3139,17 @@
         "bytes": 635988
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/bd4cb95c2e2f7cb1495779df5edfd82f5900c7538c91efa1643eab5ff10e12f7.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-28ml-16mm/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -2702,6 +3208,17 @@
         "bytes": 573361
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/583b5d7a43ef7242dff43910ff81cc1d37c4cf1fb31877b83cead5f38b1f575c.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-50ml-16mm/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -2765,6 +3282,17 @@
         "bytes": 468773
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-50ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -2828,6 +3356,17 @@
         "bytes": 328523
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-100ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -2893,6 +3432,17 @@
         "bytes": 1068022
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/4053980915c4605e53bb29d87fe2a60f5175c53f9b55d4f8de4af2ee612b2e28.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/tola-decorative-3ml-14.3mm/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -2945,6 +3495,17 @@
         "bytes": 2114092
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/260a27cf3e9b6ca6d5bff950896c0e69c3ab4d80950e60c4e527cdfa0bb57dde.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit",
+      "processedSourceFile": "final-lit/heart-decorative-4ml-8mm/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -3010,6 +3571,17 @@
         "bytes": 1008070
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/68bce10081c5a79226db77ef14b67c82eaf980a4631fdee8a4c7d1c96765218d.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/tola-decorative-6ml-14.3mm/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -3070,6 +3642,17 @@
         "bytes": 1342379
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/817d93f54217392a2bb63c0df777ab43a9139fa354a836e7e32c746eb2c46bf5.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/genie-decorative-32ml-Ground/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -3122,6 +3705,17 @@
         "bytes": 1631563
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/d64a0dbb1acec29a0a5286feadd6ae62869f56f223726c95c21d238fdd76054f.png",
+      "renderPass": "lit",
+      "sourceRole": "own photo colour (the photo is aqua blue; the catalogue says cobalt), lit by the clear reference",
+      "processedSourceFile": "final-lit/genie-decorative-32ml-Ground/cobalt-blue.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -3182,6 +3776,17 @@
         "bytes": 1422003
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/ab2f67387c18c925ca6ac560ccb7ee523e38a12bfe72fbffb26756af728712f6.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/eternal-flame-decorative-35ml-Ground/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -3234,6 +3839,17 @@
         "bytes": 2454910
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/80f35755770e8170f8e82ea509fddc07e511cae788612d1d1ca4896f535d8e3c.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (cobalt-blue), lit",
+      "processedSourceFile": "final-lit/eternal-flame-decorative-35ml-Ground/cobalt-blue.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -3286,6 +3902,17 @@
         "bytes": 3342421
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/5db9dc4fe9e60be76511dd8e9ec2752da0acd201efbfd136e7098070c603cf63.png",
+      "renderPass": "lit",
+      "sourceRole": "own photo (no reference glass on file)",
+      "processedSourceFile": "final-lit/eternal-flame-decorative-35ml-Ground/green.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -3346,6 +3973,17 @@
         "bytes": 1143268
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/c21204b9ddd660202740195a542cbcceafed662ea9c0ddc8007578812bb0e7b4.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/pear-decorative-355ml-Ground/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -3398,6 +4036,17 @@
         "bytes": 1393030
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/2a7712f011921f22b2ccaf80c430b78b8d4ad11f390efc52ad741ca97c537bfb.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (cobalt-blue), lit",
+      "processedSourceFile": "final-lit/pear-decorative-355ml-Ground/cobalt-blue.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -3461,6 +4110,17 @@
         "bytes": 974590
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/7b6f949d7cc6c836b68d6b1642bca61a75a3c1185876292ccb64709b351c3dae.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/diamond-60ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -3524,6 +4184,17 @@
         "bytes": 1353737
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/cf8cf39c9fac3390cd968a1a3eb7af08b6a6cad9849857d0f73f2828936ddf96.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/diva-30ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -3587,6 +4258,17 @@
         "bytes": 1706253
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/72792c951091e9a8efe49d578992352658935ec8bf8b3fb623c4a4d7e8ad3a81.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/diva-46ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -3642,6 +4324,17 @@
         "bytes": 1475544
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/25421a4669bbac44117bcce3966a4394e70170603eaa7bec2bce1964f69047b1.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/diva-46ml-18-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -3705,6 +4398,17 @@
         "bytes": 1749480
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/fbe6befc92e0b89f8f3078c79a41f8f4c31f792d1154048f7b8fd67f6d4240b8.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/diva-100ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -3768,6 +4472,17 @@
         "bytes": 885948
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/56da9e1912c4dbbbca2553895b4a2503dd80b9aec5356a54318ef510dc367a51.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/elegant-15ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -3823,6 +4538,17 @@
         "bytes": 2018849
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/930cbfc1ee47bb9c297e766570a6421ffe6d993ef9b9a1dca4ae7fe677a36469.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/elegant-15ml-13-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -3883,6 +4609,17 @@
         "bytes": 768918
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/b145ec48ff6d4092943ad8d8114abe8123b620da1aeafee087fbe1ab7adf1f28.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/elegant-30ml-15-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -3935,6 +4672,17 @@
         "bytes": 1998117
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/b9ac27910c071b142484c3fef6f3a6cdbc9b95303f5cccc133af7aa927720d42.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/elegant-30ml-15-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -3998,6 +4746,17 @@
         "bytes": 928328
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/1f8e119d3d398c179cb636356bde06dbd8a2587fc1f72aa82ccbbfdaa12fe0e2.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/elegant-60ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked"
     },
@@ -4053,6 +4812,17 @@
         "bytes": 2457906
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/c75e784b6cff488c6104d5539cf81db393defecbbde5232d0af28e8da9cdfdc6.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/elegant-60ml-18-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked"
     },
@@ -4116,6 +4886,17 @@
         "bytes": 880448
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/b4d4a3a31634b307ce6af77f95b934c237ee2cb5927440b6296d1e48ed0d39d7.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/elegant-100ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -4171,6 +4952,17 @@
         "bytes": 2026587
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/596acd72b1d62ac91104d53086da90c9dd1129cb514edf167210d3b419642213.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/elegant-100ml-18-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -4234,6 +5026,17 @@
         "bytes": 838391
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/b6b5751d97395e60010d44d2355dedf6635ebb3fa0ce561ad0515c4716ae1a98.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/empire-50ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -4297,6 +5100,17 @@
         "bytes": 833919
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/d8b515902d99a06cf7c487a662cf9cfd2a0d70115469f4541cb1df786e4455c5.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/empire-100ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -4362,6 +5176,17 @@
         "bytes": 1585912
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/f606c00236a6110d1f621ead0d8397bfd3a8e7163c7f608c6b015d7d943900d3.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/flair-15ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -4425,6 +5250,17 @@
         "bytes": 833716
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/5d715c7e51b19bd5e121fbcfe84bf791c00249c4d1b33a9bffdc82fe3b22d4c1.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/grace-55ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -4488,6 +5324,17 @@
         "bytes": 795718
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/e2a8a3fdd902256c2d6479977c7b7b0eaaeb213ea12186b7d43297b043332510.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/pillar-9ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -4549,6 +5396,17 @@
         "bytes": 1344739
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/f263cd15809bb59f74c5f52087a45d7152573245e5af493f0dd2aaef6d01b27f.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/rectangle-9ml-Ground/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -4613,6 +5471,17 @@
         "bytes": 1092148
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/1adcac01e02b912a611b3d46c853ea0c8c2eed3c8bed325ce690cb8adcf18bdd.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/footed-rectangle-10ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -4678,6 +5547,17 @@
         "bytes": 404489
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/7b76e4484634cd8af296e96f4660f6cf40a064e583903670f1566f77fec9102b.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/tall-rectangle-10ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -4741,6 +5621,17 @@
         "bytes": 1345403
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/861bf783efc053ab1a85540d5e02db5af348d8187f36ca5c8e848d3eb42b6eaf.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/round-78ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -4796,6 +5687,17 @@
         "bytes": 2240120
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/a19d21b4ea3382bfc80dcf1ae0fb954777aa9e9eff908c5253b3ddef6445e388.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit",
+      "processedSourceFile": "final-lit/round-78ml-18-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -4861,6 +5763,17 @@
         "bytes": 1200739
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/2d4ea78e2aa52b7595b452bc3d5c648f0570dec3bc0b22f16fe6572602fbe461.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/round-128ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -4918,6 +5831,17 @@
         "bytes": 2486524
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/6aa9e740cbb09de2443a2c9494d5cf69db49c1cad6246ec6bbe993c25e7b53bb.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/round-128ml-18-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -4981,6 +5905,17 @@
         "bytes": 1264666
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/5155f9cb377371cc0ed332823db9cec5649b865c784a21c74d39ca72da5c01dd.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/royal-13ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -5044,6 +5979,17 @@
         "bytes": 955434
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/a3270080edb0cc8cc77cd2d78e4ae1627cc4631a0d77c4d9080e9e78734e5e23.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/sleek-5ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -5107,6 +6053,17 @@
         "bytes": 585672
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/a30b2604fa73376431855253eb7ff93d65e505896a70c2ec5988db604d2f96e0.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/sleek-8ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -5170,6 +6127,17 @@
         "bytes": 705329
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/c1ee268989b9b9b1098e6346d8c9efdfb0696483f6753d6119e9d7d52c47ba2f.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/sleek-30ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -5233,6 +6201,17 @@
         "bytes": 466412
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/88202921a9c14fa611253de8ed4153fcf4f9e4bb1543386f7c857a018edea243.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/sleek-50ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -5296,6 +6275,17 @@
         "bytes": 512626
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/2a2c2334c67c1bd8dd07a0b795bb68e9faf0b503d79fb846ef4d40e391d7d800.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/sleek-100ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -5359,6 +6349,17 @@
         "bytes": 712805
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/e87244e71089f455efb71c8494bbe2f39dc853458be974f51f57e56d49aee74c.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/slim-30ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -5422,6 +6423,17 @@
         "bytes": 531397
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/0ee6d4335b1b410e3c6217e114e9632351f2c73b4d1cf6b9b83575c709adc219.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/slim-50ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -5485,6 +6497,17 @@
         "bytes": 471758
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/e9749471139207de7869ddcccb226a3610fdc6cc939f18f884e56fda09060758.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/slim-100ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -5548,6 +6571,17 @@
         "bytes": 1079530
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/7fc1299a37a65d2e48839bd37a7af9f09106c02c1e6f189c9caaed8af3869d74.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/square-15ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -5609,6 +6643,17 @@
         "bytes": 1105510
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/b1ea3e35694ee0873d63a38271d03fe7bc8b5372e7cdd53e24a5f35ab1cc7535.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/teardrop-9ml-Ground/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -5662,6 +6707,17 @@
         "bytes": 2459573
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/9ab31e46bbd4d88531839fce49cb54fa552e94468a89ea96b5f538cb3291af74.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (cobalt-blue), lit",
+      "processedSourceFile": "final-lit/teardrop-9ml-Ground/cobalt-blue.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -5715,6 +6771,17 @@
         "bytes": 2947602
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/78b4c91578850371ccd6ffe6e9d1e57d5589b3e979487f195704a0648beaf41d.png",
+      "renderPass": "lit",
+      "sourceRole": "own photo (no reference glass on file)",
+      "processedSourceFile": "final-lit/teardrop-9ml-Ground/green.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -5770,6 +6837,17 @@
         "bytes": 1850139
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (amber), lit",
+      "processedSourceFile": "final-lit/tulip-5ml-13-415/amber.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -5833,6 +6911,17 @@
         "bytes": 1024156
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/tulip-6ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -5885,6 +6974,17 @@
         "bytes": 760920
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/8e2cb2ac2e4a5168d332739d5d830aaf620d34c2bef3526428f76cde405fa34d.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (amber), lit",
+      "processedSourceFile": "final-lit/vial-1ml-Plug/amber.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -5945,6 +7045,17 @@
         "bytes": 344444
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/51f491f183b435a378796f0f9ce8ec8fefd3a7cce518bfd2ef538ee0add0a5a0.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/vial-1ml-Plug/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     },
@@ -5999,6 +7110,17 @@
         "bytes": 2072095
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/41f17d6c1fab4490ac973c7b5f8b376c3b9bdd19c625eb6e54bb0566d6864688.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (amber), lit",
+      "processedSourceFile": "final-lit/vial-2ml-13-425/amber.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked"
     },
@@ -6051,6 +7173,17 @@
         "bytes": 1090168
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/fd30a3375d52c20a946dc25055cde1f5683ad7678cb6f4805d6b6c02c9ce35f5.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (amber), lit",
+      "processedSourceFile": "final-lit/vial-2ml-8-425/amber.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked"
     },
@@ -6111,6 +7244,17 @@
         "bytes": 462287
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/9250034ea6792a8ae8be87fd0f8e798632d1bf3bfb4438f6807e09f6381b46e8.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/vial-2ml-8-425/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked"
     },
@@ -6163,6 +7307,17 @@
         "bytes": 1251574
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/6626786a3151860e277a659043a4b8d6980555a4c0436f0f25d37ef3f75bf7a1.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (amber), lit",
+      "processedSourceFile": "final-lit/vial-4ml-13-425/amber.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked"
     },
@@ -6215,6 +7370,17 @@
         "bytes": 1172885
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/3d84fa26781af51eb6cb29182b25c39f5eccc9eabeb31d573a2ce81db15caa74.png",
+      "renderPass": "lit",
+      "sourceRole": "own photo (no reference glass on file)",
+      "processedSourceFile": "final-lit/vial-4ml-13-425/blue.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked"
     },
@@ -6275,6 +7441,17 @@
         "bytes": 605075
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/26d16179c1d055ddbdf7f827a7e4103d21cc1c469b57a99964e559a0405e18dc.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/vial-4ml-13-425/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked"
     },
@@ -6327,6 +7504,17 @@
         "bytes": 1200473
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/12e1cc1dfeaf0aca8f3f6bfe031391917098c968168216cf61f5c7a9322d6b9e.png",
+      "renderPass": "lit",
+      "sourceRole": "own photo (no reference glass on file)",
+      "processedSourceFile": "final-lit/vial-4ml-13-425/green.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked"
     },
@@ -6389,6 +7577,17 @@
         "bytes": 727926
       },
       "preview": "/reviews/glass-body-overview-2026-10-31/masters/c1193bd6ca1b7ffe17e546d0ace4090ef03134d9bf36e5bff0a3ea88f3f7f4a6.png",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/vial-9ml-18-400/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked"
     }

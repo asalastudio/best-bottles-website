@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-11-01T06:27:13.960Z",
+  "requestedModel": "gpt-image-2.5-sunburst",
+  "requestedImages": 1,
+  "generatedImages": 0,
+  "status": "waiting-for-api-credits",
+  "error": {
+    "httpStatus": 429,
+    "code": "credit_balance_exhausted",
+    "type": "insufficient_quota",
+    "message": "You have no credits remaining. Add credits to continue using the API."
+  },
+  "exactFileUploadApproval": "User approved source-cylinder9-clear.png and glass-material-reference.png to api.openai.com for one high-quality edit.",
+  "latestUserDecision": "Keep Sunburst; I’ll restore credits",
+  "fallbackUsed": false,
+  "runtimeChanged": false
+}

@@ -1,0 +1,11 @@
+{
+  "rows": 18,
+  "brokenImages": [],
+  "pilotState": "The two-image upload was approved. OpenAI returned credit_balance_exhausted (429). Jordan chose to keep GPT 2.5 Sunburst and restore API credits. No candidate has been generated.",
+  "mappedPages": 50,
+  "errors": [],
+  "mobile": {
+    "viewport": 390,
+    "scrollWidth": 390
+  }
+}

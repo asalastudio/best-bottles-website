@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-01T06:13:16.390Z",
+  "checkedAt": "2026-11-01T06:19:48.242Z",
   "pages": [
     {
       "page": "1 / 6",
@@ -149,7 +149,27 @@
   ],
   "uniqueKeys": 109,
   "errors": [],
-  "filters": "2 masters · original pixels preserved · scale is applied at display time",
+  "preferredReview": {
+    "count": "10 body images · original pixels preserved · scale is applied at display time",
+    "keys": [
+      "pear-apothecary-118ml-Ground|Clear",
+      "boston-round-15ml-18-400|Amber",
+      "boston-round-15ml-18-400|Clear",
+      "boston-round-15ml-18-400|Cobalt Blue",
+      "boston-round-30ml-20-400|Amber",
+      "boston-round-30ml-20-400|Clear",
+      "boston-round-30ml-20-400|Cobalt Blue",
+      "boston-round-60ml-20-400|Amber",
+      "boston-round-60ml-20-400|Clear",
+      "boston-round-60ml-20-400|Cobalt Blue"
+    ],
+    "allProtected": true
+  },
+  "pendingReview": "98 body images · original pixels preserved · scale is applied at display time",
+  "heldKeys": [
+    "cream-jar-20ml-40mm|White"
+  ],
+  "filters": "2 body images · original pixels preserved · scale is applied at display time",
   "mobile": {
     "scrollWidth": 390,
     "viewport": 390

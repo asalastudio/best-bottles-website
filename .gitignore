@@ -275,3 +275,6 @@ data/descriptions/pdp/catalog-facts.json
 
 # Local Drive transfer staging. Sources remain in the review archive.
 /outputs/drive-backup-2026-10-31/
+
+# Cylinder material pilot working copies; exact inputs and request are preserved in docs/reviews.
+/output/imagegen/cylinder9-material-pilot-2026-10-31/

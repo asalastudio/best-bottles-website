@@ -1,17 +1,141 @@
 {
-  "schemaVersion": 1,
-  "createdAt": "2026-11-01T06:12:52.626Z",
+  "schemaVersion": 2,
+  "createdAt": "2026-11-01T06:28:25.786Z",
   "scope": "Recovered source lock and selection policy. Does not change storefront assignments or mark every assembly approved.",
   "decision": "Existing GPT master bodies for the paper-doll architecture first; product page and standalone configurator must resolve the same selected body. Grid migration is separate.",
   "sourceProof": {
     "record": "docs/COMPONENT_REGISTER_BODIES.md",
     "commit": "5ab30ada",
     "date": "2026-09-25",
-    "pass": "lit",
+    "passes": [
+      "lit",
+      "hero"
+    ],
+    "laterBostonRefinement": "scripts/register/bodies/hero_jobs.py, September 29; per-image pass and role are retained below",
     "intent": "Source-of-truth glass bodies for the catalogue",
     "approval": "data/register/bodies/rulings.json",
     "approvedDate": "2026-09-26",
     "approvalScope": "I approve all the approvable ones; existing holds remain held."
+  },
+  "visualReview": {
+    "schemaVersion": 1,
+    "reviewDate": "2026-10-31",
+    "recordedBy": "Jordan Richter",
+    "quote": "The Boston rounds look pretty good and the Apothecary 118 looks really good. Some of them look very acceptable and others don't so we need to be careful about how we decide on this, as we don't want to lose what's good.",
+    "scope": "Positive family-level visual feedback. Preserve these exact candidates for comparison. This is not final approval of every color, measurement or assembled component state.",
+    "defaultDecision": "individual-review",
+    "selectionPolicy": [
+      "Preserve every recovered original and every later accepted correction.",
+      "Use the preferred candidates as glass-quality references. Do not replace or regenerate them in a blanket pass.",
+      "Compare alternative artwork only for a specific identified defect. Reuse accepted geometry and approved scale.",
+      "Select one body per design, size, neck and glass color only after individual visual review and component-fit verification.",
+      "Historical registry approval and generation metadata do not establish current visual acceptance."
+    ],
+    "acceptanceChecks": [
+      "Correct silhouette, neck, threads, shoulder and base against the product reference.",
+      "Convincing glass depth, reflections, refraction and color; no flat cutout, removed-looking center or ghost parts.",
+      "Approved catalog curve and family exception, fixed baseline and centerline.",
+      "Cap, roller, reducer and sprayer seating; realistic dip tube and occlusion in all assembly states.",
+      "Same selected body and placement on the product page and builder."
+    ],
+    "preferredCandidates": [
+      {
+        "plateKey": "pear-apothecary-118ml-Ground|Clear",
+        "fileSha256": "1cc7ff6696419f5d08ce819777f7cfbe342a5db0656ea180dcfc36756f6d6836",
+        "sourceSha256": "d016dde7be1fd4e4bb8e9ebfeb267b6f505ae692a4925712c65b3619133d79dd",
+        "decision": "preferred-candidate",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "evidence": "User preferred the Apothecary 118 ml body."
+      },
+      {
+        "plateKey": "boston-round-15ml-18-400|Amber",
+        "fileSha256": "eec34e8865060d08cdd327516efda0dd427a48dfd74e69909a1bde377f4fbd83",
+        "sourceSha256": "213acfa97636e35aefd02f6be31d9e7492938238794b88ac98d5bf1534897065",
+        "decision": "preferred-candidate",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "evidence": "User preferred the Boston Round family as a group."
+      },
+      {
+        "plateKey": "boston-round-15ml-18-400|Clear",
+        "fileSha256": "c3fe7d1438474fa4bc3d5d9f7766bb1b88eb1580ca4b17edee496c699e18d7db",
+        "sourceSha256": "5519efaae3d84cfe0fb2f370cc6baff3606f7bd1dda86c6cddbe419d194eba7f",
+        "decision": "preferred-candidate",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "evidence": "User preferred the Boston Round family as a group."
+      },
+      {
+        "plateKey": "boston-round-15ml-18-400|Cobalt Blue",
+        "fileSha256": "ae417411797bf8716ca86434f0132332925d1374e048ab8d7e2037ff709027b4",
+        "sourceSha256": "de927345e77767a032d7f643529c741160113aeedf785ee5513a81bb65acc4e5",
+        "decision": "preferred-candidate",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "evidence": "User preferred the Boston Round family as a group."
+      },
+      {
+        "plateKey": "boston-round-30ml-20-400|Amber",
+        "fileSha256": "23031f70828ba10de6dbe216491c02369a28008c8bcd349abd06690df7da2433",
+        "sourceSha256": "8f2827198a660d2da500b04853a9310c33227a5888016d6b0ec1604bd86232e7",
+        "decision": "preferred-candidate",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "evidence": "User preferred the Boston Round family as a group."
+      },
+      {
+        "plateKey": "boston-round-30ml-20-400|Clear",
+        "fileSha256": "7228e7f5710c13d267688039d14de41f1d51ed14baf1020c136939459cdef834",
+        "sourceSha256": "d808172772697322ff5b8034c56ec82f9facf99a11b5b1604fc51e906cfa020a",
+        "decision": "preferred-candidate",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "evidence": "User preferred the Boston Round family as a group."
+      },
+      {
+        "plateKey": "boston-round-30ml-20-400|Cobalt Blue",
+        "fileSha256": "3db57ae08eebe81ab25e35bb4c44525f79b6b598e249bd42a5ca365c45e126d9",
+        "sourceSha256": "45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d",
+        "decision": "preferred-candidate",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "evidence": "User preferred the Boston Round family as a group."
+      },
+      {
+        "plateKey": "boston-round-60ml-20-400|Amber",
+        "fileSha256": "efbc84a5c3b0efcbe65e5a4e676c397ad5568dbb7ec95a1099f8d19de948df0e",
+        "sourceSha256": "8eef8c733ee54fc9c84f6d77ad6937e2d08fbcca0c006f30565aecb883e5cb85",
+        "decision": "preferred-candidate",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "evidence": "User preferred the Boston Round family as a group."
+      },
+      {
+        "plateKey": "boston-round-60ml-20-400|Clear",
+        "fileSha256": "1c868862d1df677700e1b69f15103ca9d541a9519f4e90b77a62b973fb73317b",
+        "sourceSha256": "f5843f966a54e2359dfff5e53b364a512d97b6951f6b895577d0959a725c55ee",
+        "decision": "preferred-candidate",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "evidence": "User preferred the Boston Round family as a group."
+      },
+      {
+        "plateKey": "boston-round-60ml-20-400|Cobalt Blue",
+        "fileSha256": "6ba772c607badf1621deef2f80419f2f17c1bc8b3f2dab16aa533a396b17c534",
+        "sourceSha256": "9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3",
+        "decision": "preferred-candidate",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "evidence": "User preferred the Boston Round family as a group."
+      }
+    ],
+    "unresolved": "Recover raw and later material variants for weak candidates. The gallery currently shows processed registered body layers, not verified raw upscales.",
+    "scaleContractConfirmation": {
+      "date": "2026-10-31",
+      "userDecision": "These 109s are our anchors with the scale targets.",
+      "scope": "Preserve the existing sizing chart, registration anchors and scale targets while improving material quality."
+    }
   },
   "policy": {
     "identity": [
@@ -139,6 +263,17 @@
         "heightBareMm": 58
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (cobalt-blue), lit",
+      "processedSourceFile": "final-lit/apothecary-15ml-Ground/cobalt-blue.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "10. Apothecary/1. Half Oz -15ml Apoth/1. GB15ApthBlue.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -171,6 +306,17 @@
         "heightBareMm": 58
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/apothecary-30ml-Ground/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "10. Apothecary/2. 1oz Apoth/2. GB1ozApth.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -203,6 +349,17 @@
         "heightBareMm": 58
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (cobalt-blue), lit",
+      "processedSourceFile": "final-lit/apothecary-30ml-Ground/cobalt-blue.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "10. Apothecary/2. 1oz Apoth/1. GB1ozApthBlue.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -235,6 +392,17 @@
         "heightBareMm": 58
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "own photo (no reference glass on file)",
+      "processedSourceFile": "final-lit/apothecary-30ml-Ground/green.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "10. Apothecary/2. 1oz Apoth/3. GB1ozApthGreen.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -267,6 +435,17 @@
         "heightBareMm": 52.2
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/pear-apothecary-118ml-Ground/clear.png",
+      "visualReview": {
+        "decision": "preferred-candidate",
+        "label": "Preferred candidate: preserve this version",
+        "evidence": "User preferred the Apothecary 118 ml body.",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "10. Apothecary/4. 4oz Pear Apoth/GBPearClear4ozStpr.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -301,6 +480,17 @@
         "heightBareMm": 55
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/bell-10ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "5.  13-415 Bottles/7. Bell 12ml/1. Bell 12ml (Uncapped) PSD/28. GBBell12Gl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -334,6 +524,17 @@
         "heightBareMm": 68
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "hero",
+      "sourceRole": "shared amber: the approved 60 mL amber hero (GBBstnAmb2ozBlkCapSht) as the reference for every size",
+      "processedSourceFile": "final-hero/boston-round-15ml-18-400/amber.png",
+      "visualReview": {
+        "decision": "preferred-candidate",
+        "label": "Preferred candidate: preserve this version",
+        "evidence": "User preferred the Boston Round family as a group.",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/1. GBBstnAmb15mlBlkCapSht.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -367,6 +568,17 @@
         "heightBareMm": 68
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "hero",
+      "sourceRole": "shared clear: the 30 mL first-test render as the reference for every size",
+      "processedSourceFile": "final-hero/boston-round-15ml-18-400/clear.png",
+      "visualReview": {
+        "decision": "preferred-candidate",
+        "label": "Preferred candidate: preserve this version",
+        "evidence": "User preferred the Boston Round family as a group.",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/3. Clear Bottle (.5ounce:15ml) (capped)/Clear Dropper Bottler 1.5 ounce Alternating Caps (capped)/1. GBBstn15BlkCapSht.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -400,6 +612,17 @@
         "heightBareMm": 68
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "hero",
+      "sourceRole": "shared cobalt via the 30 mL attempt-3 render (closer shape; the 60 mL reference narrowed the 15 mL neck)",
+      "processedSourceFile": "final-hero/boston-round-15ml-18-400/cobalt-blue.png",
+      "visualReview": {
+        "decision": "preferred-candidate",
+        "label": "Preferred candidate: preserve this version",
+        "evidence": "User preferred the Boston Round family as a group.",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/1. GBBstnBlu15BlkCapSht.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -433,6 +656,17 @@
         "heightBareMm": 78
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "hero",
+      "sourceRole": "shared amber: the approved 60 mL amber hero (GBBstnAmb2ozBlkCapSht) as the reference for every size",
+      "processedSourceFile": "final-hero/boston-round-30ml-20-400/amber.png",
+      "visualReview": {
+        "decision": "preferred-candidate",
+        "label": "Preferred candidate: preserve this version",
+        "evidence": "User preferred the Boston Round family as a group.",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/1. Amber Bottle (1oz)/Amber - Alternating Caps/1. GBBstnAmb1ozMtlRollonMattSl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -466,6 +700,17 @@
         "heightBareMm": 78
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "hero",
+      "sourceRole": "shared clear: the 30 mL first-test render as the reference for every size",
+      "processedSourceFile": "final-hero/boston-round-30ml-20-400/clear.png",
+      "visualReview": {
+        "decision": "preferred-candidate",
+        "label": "Preferred candidate: preserve this version",
+        "evidence": "User preferred the Boston Round family as a group.",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/1. GBBstn1ozMtlRollonMattSl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -499,6 +744,17 @@
         "heightBareMm": 78
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "hero",
+      "sourceRole": "shared cobalt: the 60 mL attempt-2 render as the reference for every size",
+      "processedSourceFile": "final-hero/boston-round-30ml-20-400/cobalt-blue.png",
+      "visualReview": {
+        "decision": "preferred-candidate",
+        "label": "Preferred candidate: preserve this version",
+        "evidence": "User preferred the Boston Round family as a group.",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/2. Cobalt Blue Bottle (1oz)/Cobalt Blue - Alternating Caps /1. GBBstnBlu1ozMtlRollonMattSl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -532,6 +788,17 @@
         "heightBareMm": 94
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "hero",
+      "sourceRole": "shared amber: the approved 60 mL amber hero (GBBstnAmb2ozBlkCapSht) as the reference for every size",
+      "processedSourceFile": "final-hero/boston-round-60ml-20-400/amber.png",
+      "visualReview": {
+        "decision": "preferred-candidate",
+        "label": "Preferred candidate: preserve this version",
+        "evidence": "User preferred the Boston Round family as a group.",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/1. Amber Bottle (2 ounce:60 ml)/Amber - Alternating Caps/1. GBBstnAmb2ozMtlRollonMattSl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -565,6 +832,17 @@
         "heightBareMm": 94
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "hero",
+      "sourceRole": "shared clear: the 30 mL first-test render as the reference for every size",
+      "processedSourceFile": "final-hero/boston-round-60ml-20-400/clear.png",
+      "visualReview": {
+        "decision": "preferred-candidate",
+        "label": "Preferred candidate: preserve this version",
+        "evidence": "User preferred the Boston Round family as a group.",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/10. GBBstn2ozRollonMattGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -598,6 +876,17 @@
         "heightBareMm": 94
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "hero",
+      "sourceRole": "shared cobalt: the 60 mL attempt-2 render as the reference for every size",
+      "processedSourceFile": "final-hero/boston-round-60ml-20-400/cobalt-blue.png",
+      "visualReview": {
+        "decision": "preferred-candidate",
+        "label": "Preferred candidate: preserve this version",
+        "evidence": "User preferred the Boston Round family as a group.",
+        "protectedReference": true,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/2. Cobalt Blue Bottle (2 ounce:60 ml)/Cobalt Blue 2oz - Alternating Caps  /1. GBBstnBlu2ozMtlRollonMattSl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -632,6 +921,17 @@
         "heightBareMm": 60
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/circle-15ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /1. GBCrcl15BlkSht.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -666,6 +966,17 @@
         "heightBareMm": 74
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/circle-30ml-15-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "4.  15-415 Bottles/2. Circle Clear 30ml - Uncapped/Circle 30ml/1. GBCrcl30SpryBlk.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -700,6 +1011,17 @@
         "heightBareMm": 87
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/circle-50ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/4.  50ml Circle, Ltn & Spr, Capped/11. GBCrcl50SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -734,6 +1056,17 @@
         "heightBareMm": 87
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/circle-50ml-18-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/1. GBCrclFrst50RdcrShnGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -768,6 +1101,17 @@
         "heightBareMm": 105
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/circle-100ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/11. GBCrcl100SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -802,6 +1146,17 @@
         "heightBareMm": 105
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/circle-100ml-18-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/6. 100ml Circle Frst, Ltn & Frst, capped/11. GBCrclFrst100SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -834,6 +1189,17 @@
         "heightBareMm": 18
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cream-jar-3ml-20mm/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "14. Cream Jars/Uncapped/14. Jar Clear, White cap 3ml/CJClr3.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -866,6 +1232,17 @@
         "heightBareMm": 18
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (cobalt-blue), lit",
+      "processedSourceFile": "final-lit/cream-jar-3ml-20mm/cobalt-blue.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": null,
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -898,6 +1275,17 @@
         "heightBareMm": 16
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (amber), lit",
+      "processedSourceFile": "final-lit/cream-jar-5ml-27mm/amber.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "14. Cream Jars/Uncapped/11. Jar Amb, Blk Cap 5ml/CJAmb5mlBlkCap.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -930,6 +1318,17 @@
         "heightBareMm": 16
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cream-jar-5ml-27mm/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "14. Cream Jars/Uncapped/17. Jar Clear, Clear Cap 5ml/CJClr5mlClrCap.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -962,6 +1361,17 @@
         "heightBareMm": 31
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cream-jar-15ml-37mm/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "14. Cream Jars/Uncapped/13. Jar Clear, White cap 15ml/CJClr15Wht.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -994,6 +1404,17 @@
         "heightBareMm": 33.9
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "own colour, lit by the clear reference",
+      "processedSourceFile": "final-lit/cream-jar-20ml-40mm/white.png",
+      "visualReview": {
+        "decision": "held-wrong-source",
+        "label": "Held: wrong source body",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "14. Cream Jars/Uncapped/16. Jar White, White cap 20ml/CJWhite20.psd",
       "registerApproval": "measured",
       "lockStatus": "held: wrong source body",
@@ -1026,6 +1447,17 @@
         "heightBareMm": 35
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (amber), lit",
+      "processedSourceFile": "final-lit/cream-jar-30ml-45mm/amber.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "14. Cream Jars/Uncapped/3. Jar Amb, Sl Cap 30ml/CJAmb30SlCap.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -1058,6 +1490,17 @@
         "heightBareMm": 35
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/cream-jar-30ml-45mm/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "14. Cream Jars/Uncapped/10. Jar Frst, Blk Cap 30ml/CJFrst30BlkCap.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -1090,6 +1533,17 @@
         "heightBareMm": 42
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (amber), lit",
+      "processedSourceFile": "final-lit/cream-jar-40ml-48/400/amber.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "14. Cream Jars/Uncapped/7. Jar Amb, Sl Cap 40ml/CJAmb40SlCap.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -1122,6 +1576,17 @@
         "heightBareMm": 42
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/cream-jar-40ml-48/400/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "14. Cream Jars/Uncapped/2. Jar Frost, Sl Cap 40ml/CJFrst40SlCap.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -1154,6 +1619,17 @@
         "heightBareMm": 51
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "own colour, lit by the clear reference",
+      "processedSourceFile": "final-lit/cream-jar-63ml-58mm/white.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "14. Cream Jars/Uncapped/20. Cream Jar White Plastic 60ml, silver cap/CJWhitePlsSlFr2oz.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -1186,6 +1662,17 @@
         "heightBareMm": 37
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-3.3ml-12mm/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "17. Additional Bottles/GBSpry3mlClBlk.psd",
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked",
@@ -1218,6 +1705,17 @@
         "heightBareMm": 49
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-4ml-12mm/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "17. Additional Bottles/GBSpry4mlClBlk.psd",
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked",
@@ -1252,6 +1750,17 @@
         "heightBareMm": 53
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-5ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /1. GBCyl5BlkSht.psd",
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked",
@@ -1286,6 +1795,17 @@
         "heightBareMm": 53
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (cobalt-blue), lit",
+      "processedSourceFile": "final-lit/cylinder-5ml-13-415/cobalt-blue.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/1. GBCylBlu5BlkSht.psd",
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked",
@@ -1320,6 +1840,17 @@
         "heightBareMm": 53
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-5.5ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /3. GBCyl5SpryBlkMatt.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -1354,6 +1885,17 @@
         "heightBareMm": 106
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-9ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/1. GBTallCyl9BlkSht.psd",
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked",
@@ -1388,6 +1930,17 @@
         "heightBareMm": 106
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/cylinder-9ml-13-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/1. GBTallCylFrst9BlkSht.psd",
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked",
@@ -1422,6 +1975,17 @@
         "heightBareMm": 70
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (amber), lit",
+      "processedSourceFile": "final-lit/cylinder-9ml-17-415/amber.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "3.  17-415 Bottles/3. Amber 9ml (Uncapped)/1. GBCylAmb9MtlRollMattSl.psd",
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked",
@@ -1456,6 +2020,17 @@
         "heightBareMm": 70
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-9ml-17-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "3.  17-415 Bottles/9. Clear  (Uncapped)/1. GBCyl9MtlRollMattSl.psd",
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked",
@@ -1490,6 +2065,17 @@
         "heightBareMm": 70
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (cobalt-blue), lit",
+      "processedSourceFile": "final-lit/cylinder-9ml-17-415/cobalt-blue.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "3.  17-415 Bottles/1. Cobalt Blue 9ml  (Uncapped)/1. GBCylBlu9MtlRollMattSl.psd",
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked",
@@ -1524,6 +2110,17 @@
         "heightBareMm": 70
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/cylinder-9ml-17-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "3.  17-415 Bottles/5. Frosted 9ml (Uncapped)/1. GBCylFrst9MtlRollMattSl.psd",
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked",
@@ -1558,6 +2155,17 @@
         "heightBareMm": 70
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (swirl), lit + own swirl photo",
+      "processedSourceFile": "final-lit/cylinder-9ml-17-415/swirl.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "3.  17-415 Bottles/7. Swirl 9ml (Uncapped)/1. GBCylSwrl9MtlRollMattSl.psd",
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked",
@@ -1592,6 +2200,17 @@
         "heightBareMm": 83
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-25ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": null,
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -1624,6 +2243,17 @@
         "heightBareMm": 81
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-28ml-16mm/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": null,
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -1656,6 +2286,17 @@
         "heightBareMm": 98
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-50ml-16mm/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "13. 16 mm/4. 50ml Uncapped/1. GBCyl50RollBlk.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -1690,6 +2331,17 @@
         "heightBareMm": 117
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-50ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/2.  50ml Cyl, Ltn & Spry, capped/11. GBCyl50SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -1724,6 +2376,17 @@
         "heightBareMm": 154
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/cylinder-100ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/3.  100ml Cyl, Ltn & Spry Capped/11. GBCyl100SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -1758,6 +2421,17 @@
         "heightBareMm": 42
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/tola-decorative-3ml-14.3mm/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "16. 14.3mm/New Folder With Items/GB3TPlGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -1790,6 +2464,17 @@
         "heightBareMm": 46
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit",
+      "processedSourceFile": "final-lit/heart-decorative-4ml-8mm/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "9.   8mm Deco Hearts /1. Small Decorative Hearts /1. Frst 4 ml Heart/1. Frst 4ml Heart/2. GBHeartFrst4KeyGld.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -1824,6 +2509,17 @@
         "heightBareMm": 48
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/tola-decorative-6ml-14.3mm/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "16. 14.3mm/New Folder With Items/GB6TPlGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -1856,6 +2552,17 @@
         "heightBareMm": 77
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/genie-decorative-32ml-Ground/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "17. Additional Bottles/GB1ozGenieCl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -1888,6 +2595,17 @@
         "heightBareMm": 77
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "own photo colour (the photo is aqua blue; the catalogue says cobalt), lit by the clear reference",
+      "processedSourceFile": "final-lit/genie-decorative-32ml-Ground/cobalt-blue.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "17. Additional Bottles/GB1ozGenieBl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -1920,6 +2638,17 @@
         "heightBareMm": 44
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/eternal-flame-decorative-35ml-Ground/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "17. Additional Bottles/GBEternalFlameClear.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -1952,6 +2681,17 @@
         "heightBareMm": 44
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (cobalt-blue), lit",
+      "processedSourceFile": "final-lit/eternal-flame-decorative-35ml-Ground/cobalt-blue.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "19. Eternal Flames/GBEternalFlameBlue.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -1984,6 +2724,17 @@
         "heightBareMm": 44
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "own photo (no reference glass on file)",
+      "processedSourceFile": "final-lit/eternal-flame-decorative-35ml-Ground/green.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "19. Eternal Flames/GBEternalFlameGreen.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2016,6 +2767,17 @@
         "heightBareMm": 52.2
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/pear-decorative-355ml-Ground/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "10. Apothecary/8. 12 Oz Pear /GBCB12ozPear.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2048,6 +2810,17 @@
         "heightBareMm": 52.2
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (cobalt-blue), lit",
+      "processedSourceFile": "final-lit/pear-decorative-355ml-Ground/cobalt-blue.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "10. Apothecary/8. 12 Oz Pear /GBCB12ozPear.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2082,6 +2855,17 @@
         "heightBareMm": 88
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/diamond-60ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/28.  60ml Diamond (Clear) Ltn & Spry, capped/11. GBDmnd2ozSpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2116,6 +2900,17 @@
         "heightBareMm": 81
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/diva-30ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/23.  30ml Diva Clear, Ltn & Spry, capped/11. GBDiva30SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2150,6 +2945,17 @@
         "heightBareMm": 89
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/diva-46ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/25.  46 Diva (Clear) Ltn & Spry, capped/13. GBDiva46SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2184,6 +2990,17 @@
         "heightBareMm": 89
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/diva-46ml-18-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/26.  46 Diva (Frosted) Ltn & Spry, uncapped/11. GBDivaFrst46SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2218,6 +3035,17 @@
         "heightBareMm": 113
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/diva-100ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/27.  100ml Diva (Clear) Ltn & Spry, capped/11. GBDiva100SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2252,6 +3080,17 @@
         "heightBareMm": 61
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/elegant-15ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/1. GBElg15BlkSht.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2286,6 +3125,17 @@
         "heightBareMm": 61
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/elegant-15ml-13-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/1. GBElgFrst15BlkSht.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2320,6 +3170,17 @@
         "heightBareMm": 75
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/elegant-30ml-15-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "4.  15-415 Bottles/6. Elegant Clear 30ml - Uncapped/Elegant Clear 30/4. GBElg30SpryMattSl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2354,6 +3215,17 @@
         "heightBareMm": 75
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/elegant-30ml-15-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "4.  15-415 Bottles/8. Elegant Frosted 30ml - Uncapped/Elegant Frst 30/1. GBElgFrst30SpryBlk.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2388,6 +3260,17 @@
         "heightBareMm": 86
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/elegant-60ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/17.  60ml Eleg, Ltn & Spry, capped/11. GBElg60SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked",
@@ -2422,6 +3305,17 @@
         "heightBareMm": 86
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/elegant-60ml-18-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/19.  60ml Eleg Frst, Ltn & Spry, capped/11. GBElgFrst60SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked",
@@ -2456,6 +3350,17 @@
         "heightBareMm": 109
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/elegant-100ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/18.  100ml Elegant, Ltn & Spry, capped/11. GBElg100SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2490,6 +3395,17 @@
         "heightBareMm": 109
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/elegant-100ml-18-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/20.  100ml Eleg Frst, Ltn & Spry, capped/11. GBElgFrst100SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2524,6 +3440,17 @@
         "heightBareMm": 88
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/empire-50ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/21.  50 Empire, Ltn & Spry, capped/11. GBEmp50SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2558,6 +3485,17 @@
         "heightBareMm": 107
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/empire-100ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/22.  100 Empire, Ltn & Spry, capped/11. GBEmp100SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2592,6 +3530,17 @@
         "heightBareMm": 56
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/flair-15ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "5.  13-415 Bottles/11. Flair 15ml/1. Flair 15ml  (uncapped) PSD /1. GBFlair15BlkSht.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2626,6 +3575,17 @@
         "heightBareMm": 113
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/grace-55ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/29.  55ml Grace (Clear) Ltn & Spry, capped/11. GBGrce55SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2660,6 +3620,17 @@
         "heightBareMm": 57
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/pillar-9ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "12. Vials/0. All Vials/Capped/27. GBPillar9RollBlk.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2692,6 +3663,17 @@
         "heightBareMm": 47
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/rectangle-9ml-Ground/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "17. Additional Bottles/GBSQSTBlue.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2725,6 +3707,17 @@
         "heightBareMm": 50
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/footed-rectangle-10ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/1. Footed Rect 10ml (Uncapped) PSD/1. GBRect10BlkSht.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2759,6 +3752,17 @@
         "heightBareMm": 101
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/tall-rectangle-10ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "5.  13-415 Bottles/16. Tall Rectangular 10ml/1. Tall Rectangular 10ml (uncapped) PSD/1. GBTallRect10BlkSht.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2793,6 +3797,17 @@
         "heightBareMm": 73
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/round-78ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/11. GBRnd78SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2827,6 +3842,17 @@
         "heightBareMm": 73
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit",
+      "processedSourceFile": "final-lit/round-78ml-18-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/8.  78 Round Frosted, Spry & Ltn, capped/11. GBRndFrst78SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2861,6 +3887,17 @@
         "heightBareMm": 83
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/round-128ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/7.  128ml Round, Ltn & Spry, capped/11. GBRnd128SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2895,6 +3932,17 @@
         "heightBareMm": 83
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (frosted), lit + own frosted photo",
+      "processedSourceFile": "final-lit/round-128ml-18-415/frosted.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/11. GBRndFrst128SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2929,6 +3977,17 @@
         "heightBareMm": 56
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/royal-13ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "5.  13-415 Bottles/10. Royal 13ml/1. Royal 13ml (Unapped) PSD /1. GBRoyal13BlkSht.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2963,6 +4022,17 @@
         "heightBareMm": 45
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/sleek-5ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "5.  13-415 Bottles/5. Sleek 5ml/1. Sleek 5ml PSD (Uncapped) /1. GBSleek5BlkSht.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -2997,6 +4067,17 @@
         "heightBareMm": 66
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/sleek-8ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "5.  13-415 Bottles/6. Sleek 8ml/1. Sleek 8ml (Uncapped) PSD /1. GBSleek8BlkSht.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -3031,6 +4112,17 @@
         "heightBareMm": 98
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/sleek-30ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/11. 30ml  Slk, Ltn & Spry, capped/11. GBSlk30SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -3065,6 +4157,17 @@
         "heightBareMm": 139
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/sleek-50ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/12. 50ml Slk, Ltn & Spry, capped/11. GBSlk50SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -3099,6 +4202,17 @@
         "heightBareMm": 149
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/sleek-100ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/13. 100ml Sleek, Ltn & Spry capped/11. GBSlk100SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -3133,6 +4247,17 @@
         "heightBareMm": 87
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/slim-30ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/11. GBSlm30SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -3167,6 +4292,17 @@
         "heightBareMm": 121
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/slim-50ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /15. Slim 50ml/2. Slim 50ml (18-415) Sideviews/Slim 50ml .psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -3201,6 +4337,17 @@
         "heightBareMm": 154
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/slim-100ml-18-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/11. GBSlm100SpryMtGl.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -3235,6 +4382,17 @@
         "heightBareMm": 52
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/square-15ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "5.  13-415 Bottles/12. Square 15ml/1. Square 15ml (Uncapped) PSD /10. GBSqr15MtlRollSlDot.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -3267,6 +4425,17 @@
         "heightBareMm": 43
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/teardrop-9ml-Ground/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "17. Additional Bottles/GBTRDPClear.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -3299,6 +4468,17 @@
         "heightBareMm": 43
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (cobalt-blue), lit",
+      "processedSourceFile": "final-lit/teardrop-9ml-Ground/cobalt-blue.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "17. Additional Bottles/GBTrdpBlue.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -3331,6 +4511,17 @@
         "heightBareMm": 43
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "own photo (no reference glass on file)",
+      "processedSourceFile": "final-lit/teardrop-9ml-Ground/green.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "17. Additional Bottles/GBTRDPGreen.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -3365,6 +4556,17 @@
         "heightBareMm": 45
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (amber), lit",
+      "processedSourceFile": "final-lit/tulip-5ml-13-415/amber.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /1. GBTulipAmb5BlkSht.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -3399,6 +4601,17 @@
         "heightBareMm": 45
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/tulip-6ml-13-415/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /1. GBTulip6BlkSht.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -3431,6 +4644,17 @@
         "heightBareMm": 35
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (amber), lit",
+      "processedSourceFile": "final-lit/vial-1ml-Plug/amber.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "12. Vials/2. 1ml Amber PSD Uncapped/1. GB1mlAmbVBlk.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -3463,6 +4687,17 @@
         "heightBareMm": 35
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/vial-1ml-Plug/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "12. Vials/4. 1ml Clear PSD Uncapped/1. GB1mlVBlk.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",
@@ -3497,6 +4732,17 @@
         "heightBareMm": 22
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (amber), lit",
+      "processedSourceFile": "final-lit/vial-2ml-13-425/amber.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "5.  13-415 Bottles/22. GB 1o5 Amber/2.  Amber 1o5  Uncapped/2. GBVialAmb1o5WhtCapSht.psd",
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked",
@@ -3531,6 +4777,17 @@
         "heightBareMm": 35
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (amber), lit",
+      "processedSourceFile": "final-lit/vial-2ml-8-425/amber.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "12. Vials/0. All Vials/Uncapped/GBVAmb2BlackCap.psd",
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked",
@@ -3565,6 +4822,17 @@
         "heightBareMm": 35
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/vial-2ml-8-425/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "6.   8-425 Bottles - CB/2. 2ml Dram/1.  Clear 2ml Dram/1. GBVialClr2mlBlackCap.psd",
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked",
@@ -3599,6 +4867,17 @@
         "heightBareMm": 45
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (amber), lit",
+      "processedSourceFile": "final-lit/vial-4ml-13-425/amber.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "12. Vials/0. All Vials/Uncapped/GBVAmb1DrmBlackCapSht.psd",
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked",
@@ -3633,6 +4912,17 @@
         "heightBareMm": 45
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "own photo (no reference glass on file)",
+      "processedSourceFile": "final-lit/vial-4ml-13-425/blue.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "12. Vials/0. All Vials/Uncapped/GBVBlu1DrmBlackCapSht.psd",
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked",
@@ -3667,6 +4957,17 @@
         "heightBareMm": 45
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/vial-4ml-13-425/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "12. Vials/0. All Vials/Capped/GBV1DrmBlkDropper.psd",
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked",
@@ -3701,6 +5002,17 @@
         "heightBareMm": 45
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "own photo (no reference glass on file)",
+      "processedSourceFile": "final-lit/vial-4ml-13-425/green.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "12. Vials/0. All Vials/Uncapped/GBVGr1DrmBlackCapSht.psd",
       "registerApproval": "approved",
       "lockStatus": "preserve later family correction; historical source locked",
@@ -3735,6 +5047,17 @@
         "heightBareMm": 79.4
       },
       "modelRecorded": "gpt-image-2.5-sunburst",
+      "renderPass": "lit",
+      "sourceRole": "reference glass (clear), lit",
+      "processedSourceFile": "final-lit/vial-9ml-18-400/clear.png",
+      "visualReview": {
+        "decision": "individual-review",
+        "label": "Individual visual review pending",
+        "evidence": "No current individual visual acceptance recorded.",
+        "protectedReference": false,
+        "finalVisualApproval": false,
+        "assemblyVerified": false
+      },
       "sourcePsd": "12. Vials/0. All Vials/Uncapped/GB09BlackCapApp.psd",
       "registerApproval": "approved",
       "lockStatus": "historical approved source locked",

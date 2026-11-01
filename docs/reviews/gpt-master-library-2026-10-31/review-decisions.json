@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-10-31",
+  "recordedBy": "Jordan Richter",
+  "quote": "The Boston rounds look pretty good and the Apothecary 118 looks really good. Some of them look very acceptable and others don't so we need to be careful about how we decide on this, as we don't want to lose what's good.",
+  "scope": "Positive family-level visual feedback. Preserve these exact candidates for comparison. This is not final approval of every color, measurement or assembled component state.",
+  "defaultDecision": "individual-review",
+  "selectionPolicy": [
+    "Preserve every recovered original and every later accepted correction.",
+    "Use the preferred candidates as glass-quality references. Do not replace or regenerate them in a blanket pass.",
+    "Compare alternative artwork only for a specific identified defect. Reuse accepted geometry and approved scale.",
+    "Select one body per design, size, neck and glass color only after individual visual review and component-fit verification.",
+    "Historical registry approval and generation metadata do not establish current visual acceptance."
+  ],
+  "acceptanceChecks": [
+    "Correct silhouette, neck, threads, shoulder and base against the product reference.",
+    "Convincing glass depth, reflections, refraction and color; no flat cutout, removed-looking center or ghost parts.",
+    "Approved catalog curve and family exception, fixed baseline and centerline.",
+    "Cap, roller, reducer and sprayer seating; realistic dip tube and occlusion in all assembly states.",
+    "Same selected body and placement on the product page and builder."
+  ],
+  "preferredCandidates": [
+    {
+      "plateKey": "pear-apothecary-118ml-Ground|Clear",
+      "fileSha256": "1cc7ff6696419f5d08ce819777f7cfbe342a5db0656ea180dcfc36756f6d6836",
+      "sourceSha256": "d016dde7be1fd4e4bb8e9ebfeb267b6f505ae692a4925712c65b3619133d79dd",
+      "decision": "preferred-candidate",
+      "protectedReference": true,
+      "finalVisualApproval": false,
+      "evidence": "User preferred the Apothecary 118 ml body."
+    },
+    {
+      "plateKey": "boston-round-15ml-18-400|Amber",
+      "fileSha256": "eec34e8865060d08cdd327516efda0dd427a48dfd74e69909a1bde377f4fbd83",
+      "sourceSha256": "213acfa97636e35aefd02f6be31d9e7492938238794b88ac98d5bf1534897065",
+      "decision": "preferred-candidate",
+      "protectedReference": true,
+      "finalVisualApproval": false,
+      "evidence": "User preferred the Boston Round family as a group."
+    },
+    {
+      "plateKey": "boston-round-15ml-18-400|Clear",
+      "fileSha256": "c3fe7d1438474fa4bc3d5d9f7766bb1b88eb1580ca4b17edee496c699e18d7db",
+      "sourceSha256": "5519efaae3d84cfe0fb2f370cc6baff3606f7bd1dda86c6cddbe419d194eba7f",
+      "decision": "preferred-candidate",
+      "protectedReference": true,
+      "finalVisualApproval": false,
+      "evidence": "User preferred the Boston Round family as a group."
+    },
+    {
+      "plateKey": "boston-round-15ml-18-400|Cobalt Blue",
+      "fileSha256": "ae417411797bf8716ca86434f0132332925d1374e048ab8d7e2037ff709027b4",
+      "sourceSha256": "de927345e77767a032d7f643529c741160113aeedf785ee5513a81bb65acc4e5",
+      "decision": "preferred-candidate",
+      "protectedReference": true,
+      "finalVisualApproval": false,
+      "evidence": "User preferred the Boston Round family as a group."
+    },
+    {
+      "plateKey": "boston-round-30ml-20-400|Amber",
+      "fileSha256": "23031f70828ba10de6dbe216491c02369a28008c8bcd349abd06690df7da2433",
+      "sourceSha256": "8f2827198a660d2da500b04853a9310c33227a5888016d6b0ec1604bd86232e7",
+      "decision": "preferred-candidate",
+      "protectedReference": true,
+      "finalVisualApproval": false,
+      "evidence": "User preferred the Boston Round family as a group."
+    },
+    {
+      "plateKey": "boston-round-30ml-20-400|Clear",
+      "fileSha256": "7228e7f5710c13d267688039d14de41f1d51ed14baf1020c136939459cdef834",
+      "sourceSha256": "d808172772697322ff5b8034c56ec82f9facf99a11b5b1604fc51e906cfa020a",
+      "decision": "preferred-candidate",
+      "protectedReference": true,
+      "finalVisualApproval": false,
+      "evidence": "User preferred the Boston Round family as a group."
+    },
+    {
+      "plateKey": "boston-round-30ml-20-400|Cobalt Blue",
+      "fileSha256": "3db57ae08eebe81ab25e35bb4c44525f79b6b598e249bd42a5ca365c45e126d9",
+      "sourceSha256": "45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d",
+      "decision": "preferred-candidate",
+      "protectedReference": true,
+      "finalVisualApproval": false,
+      "evidence": "User preferred the Boston Round family as a group."
+    },
+    {
+      "plateKey": "boston-round-60ml-20-400|Amber",
+      "fileSha256": "efbc84a5c3b0efcbe65e5a4e676c397ad5568dbb7ec95a1099f8d19de948df0e",
+      "sourceSha256": "8eef8c733ee54fc9c84f6d77ad6937e2d08fbcca0c006f30565aecb883e5cb85",
+      "decision": "preferred-candidate",
+      "protectedReference": true,
+      "finalVisualApproval": false,
+      "evidence": "User preferred the Boston Round family as a group."
+    },
+    {
+      "plateKey": "boston-round-60ml-20-400|Clear",
+      "fileSha256": "1c868862d1df677700e1b69f15103ca9d541a9519f4e90b77a62b973fb73317b",
+      "sourceSha256": "f5843f966a54e2359dfff5e53b364a512d97b6951f6b895577d0959a725c55ee",
+      "decision": "preferred-candidate",
+      "protectedReference": true,
+      "finalVisualApproval": false,
+      "evidence": "User preferred the Boston Round family as a group."
+    },
+    {
+      "plateKey": "boston-round-60ml-20-400|Cobalt Blue",
+      "fileSha256": "6ba772c607badf1621deef2f80419f2f17c1bc8b3f2dab16aa533a396b17c534",
+      "sourceSha256": "9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3",
+      "decision": "preferred-candidate",
+      "protectedReference": true,
+      "finalVisualApproval": false,
+      "evidence": "User preferred the Boston Round family as a group."
+    }
+  ],
+  "unresolved": "Recover raw and later material variants for weak candidates. The gallery currently shows processed registered body layers, not verified raw upscales.",
+  "scaleContractConfirmation": {
+    "date": "2026-10-31",
+    "userDecision": "These 109s are our anchors with the scale targets.",
+    "scope": "Preserve the existing sizing chart, registration anchors and scale targets while improving material quality."
+  }
+}
