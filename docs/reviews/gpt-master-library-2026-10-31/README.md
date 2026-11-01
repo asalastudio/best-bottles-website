@@ -39,3 +39,7 @@ Gallery copies: public/reviews/glass-body-overview-2026-10-31/masters/<file-sha2
 Read-only audit: outputs/catalog-model-repair-2026-10-31/gpt-master-library/audit.cjs
 
 No generation, source deletion, database write, merge or deployment occurred. The older offline SKU media-gap snapshot is excluded from body coverage totals.
+
+## Family archive after every batch
+
+Save individual, versioned masters in the [Best Bottles family library](https://drive.google.com/drive/folders/1kztMnt9MYau-UfgN6sK8kI7fJZsMnQUe), following [the batch closeout and approval rules](../family-master-library-2026-11-01/README.md). Review versions and approved versions are separate, and earlier files are retained.

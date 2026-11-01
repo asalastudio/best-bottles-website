@@ -278,3 +278,6 @@ data/descriptions/pdp/catalog-facts.json
 
 # Cylinder material pilot working copies; exact inputs and request are preserved in docs/reviews.
 /output/imagegen/cylinder9-material-pilot-2026-10-31/
+
+# Labeled Drive transfer copies; canonical images and the verified registry are in docs/reviews.
+/outputs/family-master-library-2026-11-01/

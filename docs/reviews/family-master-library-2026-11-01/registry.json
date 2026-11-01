@@ -1,0 +1,1527 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-11-01T07:23:46.964Z",
+  "library": {
+    "id": "1kztMnt9MYau-UfgN6sK8kI7fJZsMnQUe",
+    "url": "https://drive.google.com/drive/folders/1kztMnt9MYau-UfgN6sK8kI7fJZsMnQUe"
+  },
+  "batch": "2026-10-31-gpt13-ff83c6df",
+  "sourceCommit": "ff83c6df22b8d7fa1819aa07e278175a33ae04f4",
+  "scope": "Current composition batch only. Historical archive remains preserved separately.",
+  "approvalPolicy": "Exact-version sign-off required; preserve all versions; no automatic publication.",
+  "families": [
+    {
+      "name": "Bell",
+      "folder": {
+        "id": "1XoWiq_gBLwOx5Sp34bTMpuw7UNkh_QVB",
+        "url": "https://drive.google.com/drive/folders/1XoWiq_gBLwOx5Sp34bTMpuw7UNkh_QVB"
+      },
+      "approved": {
+        "id": "1O6k7ad2XMbelVnLPGMujPggaSxv2MXY2",
+        "url": "https://drive.google.com/drive/folders/1O6k7ad2XMbelVnLPGMujPggaSxv2MXY2"
+      },
+      "review": {
+        "id": "1kmcgzRa2Z0niXyv6sVCSYxrHtf3rsSk8",
+        "url": "https://drive.google.com/drive/folders/1kmcgzRa2Z0niXyv6sVCSYxrHtf3rsSk8"
+      },
+      "batchManifest": {
+        "id": "1uUDz7TTos7H500IZIJFqtM-MWSNNvA9N",
+        "url": "https://drive.google.com/file/d/1uUDz7TTos7H500IZIJFqtM-MWSNNvA9N/view?usp=drivesdk"
+      },
+      "masters": [
+        {
+          "identity": "bell-10ml-13-415|Clear",
+          "family": "Bell",
+          "bodyId": "bell-10ml-13-415",
+          "capacityMl": 10,
+          "neck": "13-415",
+          "glass": "Clear",
+          "label": "BB_bell-10ml-13-415_Clear_BODY_GPT-recovered_REVIEW_2026-10-31_82159e636e8b.png",
+          "bytes": 905200,
+          "sha256": "82159e636e8b5852e8815cc4a3644cb9245e7a2fa4f98b9f7a0f01d2333a2abf",
+          "status": "review",
+          "approval": null,
+          "sourceStatus": "recovered GPT master",
+          "sourceFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/gpt-13-415-2026-10-31/bell-10ml-13-415-clear.82159e636e8b.png",
+          "sourceCommit": "ff83c6df22b8d7fa1819aa07e278175a33ae04f4",
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "axisX": 500,
+            "neckAxisX": 500,
+            "seatY": 457,
+            "baselineY": 1061,
+            "pxPerMm": 10.5
+          },
+          "bodyBox": {
+            "x": 322.69175257731956,
+            "y": 408.43092783505153,
+            "width": 358.6639175257732,
+            "height": 682.4577319587629
+          },
+          "glassSizing": {
+            "heightPct": 37.09,
+            "baselinePct": 91,
+            "landmarkY": 618.8969072164948,
+            "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+          },
+          "partsAreSeparate": true,
+          "linkedSkus": [
+            "GBBell10SpryBlkSh"
+          ],
+          "reviewUrl": "http://localhost:3010/reviews/gpt-13-415-paperdoll-2026-10-31/index.html#GBBell10SpryBlkSh",
+          "imageDimensions": {
+            "width": 1152,
+            "height": 2192,
+            "format": "png",
+            "hasAlpha": true
+          },
+          "drive": {
+            "id": "13UXPQwrQ-mubYNkZ_nCpyWbJNW6vDzrW",
+            "url": "https://drive.google.com/file/d/13UXPQwrQ-mubYNkZ_nCpyWbJNW6vDzrW/view?usp=drivesdk"
+          },
+          "remoteMetadataVerified": {
+            "name": true,
+            "bytes": true,
+            "parent": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Circle",
+      "folder": {
+        "id": "17LquG5xMaPubIOpJJv8xu4TUshqrHJDT",
+        "url": "https://drive.google.com/drive/folders/17LquG5xMaPubIOpJJv8xu4TUshqrHJDT"
+      },
+      "approved": {
+        "id": "16So3xSzR_DyXHJpe39hoVt3ieaOewzjA",
+        "url": "https://drive.google.com/drive/folders/16So3xSzR_DyXHJpe39hoVt3ieaOewzjA"
+      },
+      "review": {
+        "id": "1a6PdjNagDQPYfrKx515OGNM-CphSAbqp",
+        "url": "https://drive.google.com/drive/folders/1a6PdjNagDQPYfrKx515OGNM-CphSAbqp"
+      },
+      "batchManifest": {
+        "id": "1Hz0lOSA78tDr0sJ5KbftvOgOKeiOlyT9",
+        "url": "https://drive.google.com/file/d/1Hz0lOSA78tDr0sJ5KbftvOgOKeiOlyT9/view?usp=drivesdk"
+      },
+      "masters": [
+        {
+          "identity": "circle-15ml-13-415|Clear",
+          "family": "Circle",
+          "bodyId": "circle-15ml-13-415",
+          "capacityMl": 15,
+          "neck": "13-415",
+          "glass": "Clear",
+          "label": "BB_circle-15ml-13-415_Clear_BODY_GPT-recovered_REVIEW_2026-10-31_6c2f69b10b1c.png",
+          "bytes": 1483707,
+          "sha256": "6c2f69b10b1cf70c325c3d4cae8d993fcd43c5df9f45fa96fb4b94681845bed8",
+          "status": "review",
+          "approval": null,
+          "sourceStatus": "recovered GPT master",
+          "sourceFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/gpt-13-415-2026-10-31/circle-15ml-13-415-clear.6c2f69b10b1c.png",
+          "sourceCommit": "ff83c6df22b8d7fa1819aa07e278175a33ae04f4",
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "axisX": 500,
+            "neckAxisX": 500,
+            "seatY": 380,
+            "baselineY": 1061,
+            "pxPerMm": 10.49
+          },
+          "bodyBox": {
+            "x": 180.9008686765457,
+            "y": 331.6305569749617,
+            "width": 634.7184466019418,
+            "height": 762.7756770567195
+          },
+          "glassSizing": {
+            "heightPct": 44.625,
+            "baselinePct": 91,
+            "landmarkY": 565.1262135922331,
+            "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; opt-in sprayer-only clearance test, catalog readiness hold unchanged"
+          },
+          "partsAreSeparate": true,
+          "linkedSkus": [
+            "GBCrcl15SpryBlkMatt",
+            "GBCrcl15SpryBlkSh",
+            "GBCrcl15SpryBluMatt",
+            "GBCrcl15SpryCuMatt",
+            "GBCrcl15SpryGlMatt",
+            "GBCrcl15SpryGlSh",
+            "GBCrcl15SprySlMatt",
+            "GBCrcl15SprySlSh"
+          ],
+          "reviewUrl": "http://localhost:3010/reviews/gpt-13-415-paperdoll-2026-10-31/index.html#GBCrcl15SpryBlkMatt",
+          "imageDimensions": {
+            "width": 1824,
+            "height": 2192,
+            "format": "png",
+            "hasAlpha": true
+          },
+          "drive": {
+            "id": "1Rs5eu6pyhdHZvvJHkvNEkd8-E1xavouh",
+            "url": "https://drive.google.com/file/d/1Rs5eu6pyhdHZvvJHkvNEkd8-E1xavouh/view?usp=drivesdk"
+          },
+          "remoteMetadataVerified": {
+            "name": true,
+            "bytes": true,
+            "parent": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cylinder",
+      "folder": {
+        "id": "1LqwguZjwx2NeAjTKstf2NSeFWmq8B6rP",
+        "url": "https://drive.google.com/drive/folders/1LqwguZjwx2NeAjTKstf2NSeFWmq8B6rP"
+      },
+      "approved": {
+        "id": "1q1Sdlmvm6t5hmE01RaKtcNnkGiCJQJ_g",
+        "url": "https://drive.google.com/drive/folders/1q1Sdlmvm6t5hmE01RaKtcNnkGiCJQJ_g"
+      },
+      "review": {
+        "id": "1cnq6jceYSX_sKIW76iBdWVsYwVGPaAqE",
+        "url": "https://drive.google.com/drive/folders/1cnq6jceYSX_sKIW76iBdWVsYwVGPaAqE"
+      },
+      "batchManifest": {
+        "id": "1aNZHu8A7EzMLtA--dTR45z4aFu470ZHV",
+        "url": "https://drive.google.com/file/d/1aNZHu8A7EzMLtA--dTR45z4aFu470ZHV/view?usp=drivesdk"
+      },
+      "masters": [
+        {
+          "identity": "cylinder-5ml-13-415|Clear",
+          "family": "Cylinder",
+          "bodyId": "cylinder-5ml-13-415",
+          "capacityMl": 5,
+          "neck": "13-415",
+          "glass": "Clear",
+          "label": "BB_cylinder-5ml-13-415_Clear_BODY_GPT-r03_REVIEW_2026-10-31_3d366e116958.png",
+          "bytes": 1246630,
+          "sha256": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+          "status": "review",
+          "approval": null,
+          "sourceStatus": "GPT revision 3 candidate; appearance approval pending",
+          "sourceFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+          "sourceCommit": "ff83c6df22b8d7fa1819aa07e278175a33ae04f4",
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "axisX": 500,
+            "neckAxisX": 500,
+            "seatY": 501,
+            "baselineY": 1061,
+            "pxPerMm": 10.49
+          },
+          "bodyBox": {
+            "x": 344.8791720263,
+            "y": 488.79150508069336,
+            "width": 308.55372528392115,
+            "height": 580.9857343693964
+          },
+          "glassSizing": {
+            "heightPct": 36.5,
+            "baselinePct": 91,
+            "landmarkY": 637.1469781520843,
+            "source": "Jordan caliper measurements 2026-10-31: shoulder 40.10 mm; approved 36.5% family framing and 91% foot preserved"
+          },
+          "partsAreSeparate": true,
+          "linkedSkus": [
+            "GBCyl5Sl",
+            "GBCyl5Gl",
+            "GBCyl5BlkSht",
+            "GBCyl5WhtSht",
+            "GBCyl5CuSht",
+            "GBCyl5GlMattSht",
+            "GBCyl5SlMattSht",
+            "GBCyl5BlkShSht",
+            "GBCyl5GlSht",
+            "GBCyl5SlSht",
+            "GBCyl5MtlRollBlkSh",
+            "GBCyl5MtlRollCuMatt",
+            "GBCyl5MtlRollGlMatt",
+            "GBCyl5MtlRollGlSh",
+            "GBCyl5MtlRollPinkDot",
+            "GBCyl5MtlRollSlDot",
+            "GBCyl5MtlRollSlMatt",
+            "GBCyl5MtlRollSlSh",
+            "GBCyl5RollBlkDot",
+            "GBCyl5RollSlSh",
+            "GBCyl5RollBlkSh",
+            "GBCyl5RollGlSh",
+            "GBCyl5RollSlDot",
+            "GBCyl5RollPinkDot",
+            "GBCyl5RollCuMatt",
+            "GBCyl5RollGlMatt",
+            "GBCyl5RollSlMatt",
+            "GBCyl5MtlRollBlkDot",
+            "GBCyl5SpryBlkMatt",
+            "GBCyl5SprySlMatt",
+            "GBCyl5SpryBlkSh",
+            "GBCyl5SpryGlSh",
+            "GBCyl5SprySlSh",
+            "GBCyl5SpryBluMatt",
+            "GBCyl5SpryCuMatt",
+            "GBCyl5SpryGlMatt"
+          ],
+          "reviewUrl": "http://localhost:3010/reviews/gpt-13-415-paperdoll-2026-10-31/index.html#GBCyl5Sl",
+          "imageDimensions": {
+            "width": 914,
+            "height": 1721,
+            "format": "png",
+            "hasAlpha": true
+          },
+          "drive": {
+            "id": "1_PPj6AY2JAqLKe6_PDdQmP-gDiUk35VJ",
+            "url": "https://drive.google.com/file/d/1_PPj6AY2JAqLKe6_PDdQmP-gDiUk35VJ/view?usp=drivesdk"
+          },
+          "remoteMetadataVerified": {
+            "name": true,
+            "bytes": true,
+            "parent": true
+          }
+        },
+        {
+          "identity": "cylinder-5ml-13-415|Cobalt Blue",
+          "family": "Cylinder",
+          "bodyId": "cylinder-5ml-13-415",
+          "capacityMl": 5,
+          "neck": "13-415",
+          "glass": "Cobalt Blue",
+          "label": "BB_cylinder-5ml-13-415_Cobalt-Blue_BODY_GPT-r03_REVIEW_2026-10-31_c51b7b6df61f.png",
+          "bytes": 1209733,
+          "sha256": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
+          "status": "review",
+          "approval": null,
+          "sourceStatus": "GPT revision 3 candidate; appearance approval pending",
+          "sourceFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+          "sourceCommit": "ff83c6df22b8d7fa1819aa07e278175a33ae04f4",
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "axisX": 500,
+            "neckAxisX": 500,
+            "seatY": 501,
+            "baselineY": 1061,
+            "pxPerMm": 10.49
+          },
+          "bodyBox": {
+            "x": 346.3659576190476,
+            "y": 489.830989047619,
+            "width": 307.2680847619048,
+            "height": 578.5649604761904
+          },
+          "glassSizing": {
+            "heightPct": 36.5,
+            "baselinePct": 91,
+            "landmarkY": 637.1469781520843,
+            "source": "Jordan caliper measurements 2026-10-31: shoulder 40.10 mm; approved 36.5% family framing and 91% foot preserved"
+          },
+          "partsAreSeparate": true,
+          "linkedSkus": [
+            "GBCylBlu5Sl",
+            "GBCylBlu5WhtSht",
+            "GBCylBlu5Gl",
+            "GBCylBlu5BlkSht",
+            "GBCylBlu5BlkShSht",
+            "GBCylBlu5CuSht",
+            "GBCylBlu5GlMattSht",
+            "GBCylBlu5SlMattSht",
+            "GBCylBlu5GlSht",
+            "GBCylBlu5SlSht",
+            "GBCylBlu5MtlRollBlkSh",
+            "GBCylBlu5MtlRollCuMatt",
+            "GBCylBlu5MtlRollGlMatt",
+            "GBCylBlu5MtlRollGlSh",
+            "GBCylBlu5MtlRollPinkDot",
+            "GBCylBlu5MtlRollSlDot",
+            "GBCylBlu5MtlRollSlMatt",
+            "GBCylBlu5MtlRollSlSh",
+            "GBCylBlu5RollBlkDot",
+            "GBCylBlu5RollGlSh",
+            "GBCylBlu5RollSlSh",
+            "GBCylBlu5RollBlkSh",
+            "GBCylBlu5RollGlMatt",
+            "GBCylBlu5RollPinkDot",
+            "GBCylBlu5RollSlDot",
+            "GBCylBlu5RollCuMatt",
+            "GBCylBlu5RollSlMatt",
+            "GBCylBlu5MtlRollBlkDot",
+            "GBCylBlu5SprySlSh",
+            "GBCylBlu5SpryBlkSh",
+            "GBCylBlu5SpryGlSh",
+            "GBCylBlu5SpryGlMatt",
+            "GBCylBlu5SpryBluMatt",
+            "GBCylBlu5SpryCuMatt",
+            "GBCylBlu5SprySlMatt"
+          ],
+          "reviewUrl": "http://localhost:3010/reviews/gpt-13-415-paperdoll-2026-10-31/index.html#GBCylBlu5Sl",
+          "imageDimensions": {
+            "width": 914,
+            "height": 1721,
+            "format": "png",
+            "hasAlpha": true
+          },
+          "drive": {
+            "id": "1eGDNUG9Vuy504gLqqaO_fDotH7_H8wis",
+            "url": "https://drive.google.com/file/d/1eGDNUG9Vuy504gLqqaO_fDotH7_H8wis/view?usp=drivesdk"
+          },
+          "remoteMetadataVerified": {
+            "name": true,
+            "bytes": true,
+            "parent": true
+          }
+        },
+        {
+          "identity": "cylinder-9ml-13-415|Clear",
+          "family": "Cylinder",
+          "bodyId": "cylinder-9ml-13-415",
+          "capacityMl": 9,
+          "neck": "13-415",
+          "glass": "Clear",
+          "label": "BB_cylinder-9ml-13-415_Clear_BODY_GPT-recovered_REVIEW_2026-10-31_7a866573d796.png",
+          "bytes": 444850,
+          "sha256": "7a866573d796d5543c2e6e88e4b4fb96d08fdde722b6ba6f07c0a528b7cf9ff6",
+          "status": "review",
+          "approval": null,
+          "sourceStatus": "recovered GPT master",
+          "sourceFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/gpt-13-415-2026-10-31/cylinder-9ml-13-415-clear.7a866573d796.png",
+          "sourceCommit": "ff83c6df22b8d7fa1819aa07e278175a33ae04f4",
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "axisX": 500,
+            "neckAxisX": 500,
+            "seatY": 261,
+            "baselineY": 1061,
+            "pxPerMm": 7.56
+          },
+          "bodyBox": {
+            "x": 356.39776763064435,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "glassSizing": {
+            "heightPct": 62.5,
+            "baselinePct": 91,
+            "landmarkY": 344.2064941653983,
+            "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+          },
+          "partsAreSeparate": true,
+          "linkedSkus": [
+            "GBTallCyl9SpryBlkMatt",
+            "GBTallCyl9SpryBluMatt",
+            "GBTallCyl9SpryCuMatt",
+            "GBTallCyl9SpryBlkSh",
+            "GBTallCyl9SpryGlMatt",
+            "GBTallCyl9SpryGlSh",
+            "GBTallCyl9SprySlMatt",
+            "GBTallCyl9SprySlSh"
+          ],
+          "reviewUrl": "http://localhost:3010/reviews/gpt-13-415-paperdoll-2026-10-31/index.html#GBTallCyl9SpryBlkMatt",
+          "imageDimensions": {
+            "width": 736,
+            "height": 2192,
+            "format": "png",
+            "hasAlpha": true
+          },
+          "drive": {
+            "id": "1Kwnwn1YMRCk15y4WCjoyH5XsDxh42o-g",
+            "url": "https://drive.google.com/file/d/1Kwnwn1YMRCk15y4WCjoyH5XsDxh42o-g/view?usp=drivesdk"
+          },
+          "remoteMetadataVerified": {
+            "name": true,
+            "bytes": true,
+            "parent": true
+          }
+        },
+        {
+          "identity": "cylinder-9ml-13-415|Frosted",
+          "family": "Cylinder",
+          "bodyId": "cylinder-9ml-13-415",
+          "capacityMl": 9,
+          "neck": "13-415",
+          "glass": "Frosted",
+          "label": "BB_cylinder-9ml-13-415_Frosted_BODY_GPT-recovered_REVIEW_2026-10-31_7cadb88aa92c.png",
+          "bytes": 704167,
+          "sha256": "7cadb88aa92ccff1c337efa5904398e792e3832cff5cfdd0a9366af51066495e",
+          "status": "review",
+          "approval": null,
+          "sourceStatus": "recovered GPT master",
+          "sourceFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/gpt-13-415-2026-10-31/cylinder-9ml-13-415-frosted.7cadb88aa92c.png",
+          "sourceCommit": "ff83c6df22b8d7fa1819aa07e278175a33ae04f4",
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "axisX": 500,
+            "neckAxisX": 500,
+            "seatY": 261,
+            "baselineY": 1061,
+            "pxPerMm": 7.56
+          },
+          "bodyBox": {
+            "x": 355.1801116184678,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "glassSizing": {
+            "heightPct": 62.5,
+            "baselinePct": 91,
+            "landmarkY": 343.3947234906139,
+            "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+          },
+          "partsAreSeparate": true,
+          "linkedSkus": [
+            "GBTallCylFrst9SpryBlkMatt",
+            "GBTallCylFrst9SpryBlkSh",
+            "GBTallCylFrst9SpryBluMatt",
+            "GBTallCylFrst9SpryGlSh",
+            "GBTallCylFrst9SpryGlMatt",
+            "GBTallCylFrst9SprySlMatt",
+            "GBTallCylFrst9SprySlSh",
+            "GBTallCylFrst9SpryCuMatt"
+          ],
+          "reviewUrl": "http://localhost:3010/reviews/gpt-13-415-paperdoll-2026-10-31/index.html#GBTallCylFrst9SpryBlkMatt",
+          "imageDimensions": {
+            "width": 736,
+            "height": 2192,
+            "format": "png",
+            "hasAlpha": true
+          },
+          "drive": {
+            "id": "1Y5d2Hr1mVs-32hY3bpYnCs5lLfDqKi7E",
+            "url": "https://drive.google.com/file/d/1Y5d2Hr1mVs-32hY3bpYnCs5lLfDqKi7E/view?usp=drivesdk"
+          },
+          "remoteMetadataVerified": {
+            "name": true,
+            "bytes": true,
+            "parent": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Elegant",
+      "folder": {
+        "id": "1-dJlZVib5RMzjxPvT91ArM1jqv47HtGV",
+        "url": "https://drive.google.com/drive/folders/1-dJlZVib5RMzjxPvT91ArM1jqv47HtGV"
+      },
+      "approved": {
+        "id": "1Y_PDcEmboSX6xKW6puWyIvgcvDHNwc8X",
+        "url": "https://drive.google.com/drive/folders/1Y_PDcEmboSX6xKW6puWyIvgcvDHNwc8X"
+      },
+      "review": {
+        "id": "1K-rpdHnsWwC0hLLPXJMWBuL4m9yRUpxT",
+        "url": "https://drive.google.com/drive/folders/1K-rpdHnsWwC0hLLPXJMWBuL4m9yRUpxT"
+      },
+      "batchManifest": {
+        "id": "1Uls58Pw9jEj3tly_1OPmhJhGgjWcgJsY",
+        "url": "https://drive.google.com/file/d/1Uls58Pw9jEj3tly_1OPmhJhGgjWcgJsY/view?usp=drivesdk"
+      },
+      "masters": [
+        {
+          "identity": "elegant-15ml-13-415|Clear",
+          "family": "Elegant",
+          "bodyId": "elegant-15ml-13-415",
+          "capacityMl": 15,
+          "neck": "13-415",
+          "glass": "Clear",
+          "label": "BB_elegant-15ml-13-415_Clear_BODY_GPT-recovered_REVIEW_2026-10-31_56da9e1912c4.png",
+          "bytes": 885948,
+          "sha256": "56da9e1912c4dbbbca2553895b4a2503dd80b9aec5356a54318ef510dc367a51",
+          "status": "review",
+          "approval": null,
+          "sourceStatus": "recovered GPT master",
+          "sourceFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/gpt-13-415-2026-10-31/elegant-15ml-13-415-clear.56da9e1912c4.png",
+          "sourceCommit": "ff83c6df22b8d7fa1819aa07e278175a33ae04f4",
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "axisX": 500,
+            "neckAxisX": 500,
+            "seatY": 384,
+            "baselineY": 1061,
+            "pxPerMm": 10.51
+          },
+          "bodyBox": {
+            "x": 265.61413319776307,
+            "y": 339.60091509913576,
+            "width": 479.0971021860701,
+            "height": 754.4402643619725
+          },
+          "glassSizing": {
+            "heightPct": 39,
+            "baselinePct": 91,
+            "landmarkY": 513.4112862226741,
+            "source": "docs/hero-families/elegant-2026-09-23/approval.json"
+          },
+          "partsAreSeparate": true,
+          "linkedSkus": [
+            "GBElg15SpryBlkMatt",
+            "GBElg15SpryBlkSh",
+            "GBElg15SpryGlSh",
+            "GBElg15SprySlMatt",
+            "GBElg15SprySlSh",
+            "GBElg15SpryBluMatt",
+            "GBElg15SpryCuMatt",
+            "GBElg15SpryGlMatt"
+          ],
+          "reviewUrl": "http://localhost:3010/reviews/gpt-13-415-paperdoll-2026-10-31/index.html#GBElg15SpryBlkMatt",
+          "imageDimensions": {
+            "width": 1392,
+            "height": 2192,
+            "format": "png",
+            "hasAlpha": true
+          },
+          "drive": {
+            "id": "1OR79DD4Kn0_4zTu4DRu_Rmao-WvIaChu",
+            "url": "https://drive.google.com/file/d/1OR79DD4Kn0_4zTu4DRu_Rmao-WvIaChu/view?usp=drivesdk"
+          },
+          "remoteMetadataVerified": {
+            "name": true,
+            "bytes": true,
+            "parent": true
+          }
+        },
+        {
+          "identity": "elegant-15ml-13-415|Frosted",
+          "family": "Elegant",
+          "bodyId": "elegant-15ml-13-415",
+          "capacityMl": 15,
+          "neck": "13-415",
+          "glass": "Frosted",
+          "label": "BB_elegant-15ml-13-415_Frosted_BODY_GPT-recovered_REVIEW_2026-10-31_930cbfc1ee47.png",
+          "bytes": 2018849,
+          "sha256": "930cbfc1ee47bb9c297e766570a6421ffe6d993ef9b9a1dca4ae7fe677a36469",
+          "status": "review",
+          "approval": null,
+          "sourceStatus": "recovered GPT master",
+          "sourceFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/gpt-13-415-2026-10-31/elegant-15ml-13-415-frosted.930cbfc1ee47.png",
+          "sourceCommit": "ff83c6df22b8d7fa1819aa07e278175a33ae04f4",
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "axisX": 500,
+            "neckAxisX": 500,
+            "seatY": 384,
+            "baselineY": 1061,
+            "pxPerMm": 10.51
+          },
+          "bodyBox": {
+            "x": 263.8932384341637,
+            "y": 339.60091509913576,
+            "width": 479.0971021860701,
+            "height": 754.4402643619725
+          },
+          "glassSizing": {
+            "heightPct": 39,
+            "baselinePct": 91,
+            "landmarkY": 513.0671072699542,
+            "source": "docs/hero-families/elegant-2026-09-23/approval.json"
+          },
+          "partsAreSeparate": true,
+          "linkedSkus": [
+            "GBElgFrst15SpryBlkMatt",
+            "GBElgFrst15SpryBlkSh",
+            "GBElgFrst15SpryBluMatt",
+            "GBElgFrst15SpryGlSh",
+            "GBElgFrst15SprySlMatt",
+            "GBElgFrst15SprySlSh",
+            "GBElgFrst15SpryCuMatt",
+            "GBElgFrst15SpryGlMatt"
+          ],
+          "reviewUrl": "http://localhost:3010/reviews/gpt-13-415-paperdoll-2026-10-31/index.html#GBElgFrst15SpryBlkMatt",
+          "imageDimensions": {
+            "width": 1392,
+            "height": 2192,
+            "format": "png",
+            "hasAlpha": true
+          },
+          "drive": {
+            "id": "1f8H2USOvN4YH5AlWelvI3Mt59xMOsT35",
+            "url": "https://drive.google.com/file/d/1f8H2USOvN4YH5AlWelvI3Mt59xMOsT35/view?usp=drivesdk"
+          },
+          "remoteMetadataVerified": {
+            "name": true,
+            "bytes": true,
+            "parent": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Flair",
+      "folder": {
+        "id": "184CxqMHOGN3K8Bf-r8MBi0zKDQrdrzy3",
+        "url": "https://drive.google.com/drive/folders/184CxqMHOGN3K8Bf-r8MBi0zKDQrdrzy3"
+      },
+      "approved": {
+        "id": "1RMUwye6Lp6IHEFrioU8T3J5zn82Y7G6z",
+        "url": "https://drive.google.com/drive/folders/1RMUwye6Lp6IHEFrioU8T3J5zn82Y7G6z"
+      },
+      "review": {
+        "id": "1WHHAS5dpg-Ip4OQZgfpalP6nQmc1SpQX",
+        "url": "https://drive.google.com/drive/folders/1WHHAS5dpg-Ip4OQZgfpalP6nQmc1SpQX"
+      },
+      "batchManifest": {
+        "id": "13Pd_6phrtuDtijHQdaX3-H5Oag7sB6mK",
+        "url": "https://drive.google.com/file/d/13Pd_6phrtuDtijHQdaX3-H5Oag7sB6mK/view?usp=drivesdk"
+      },
+      "masters": [
+        {
+          "identity": "flair-15ml-13-415|Clear",
+          "family": "Flair",
+          "bodyId": "flair-15ml-13-415",
+          "capacityMl": 15,
+          "neck": "13-415",
+          "glass": "Clear",
+          "label": "BB_flair-15ml-13-415_Clear_BODY_GPT-recovered_REVIEW_2026-10-31_f606c00236a6.png",
+          "bytes": 1585912,
+          "sha256": "f606c00236a6110d1f621ead0d8397bfd3a8e7163c7f608c6b015d7d943900d3",
+          "status": "review",
+          "approval": null,
+          "sourceStatus": "recovered GPT master",
+          "sourceFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/gpt-13-415-2026-10-31/flair-15ml-13-415-clear.f606c00236a6.png",
+          "sourceCommit": "ff83c6df22b8d7fa1819aa07e278175a33ae04f4",
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "axisX": 500,
+            "neckAxisX": 500,
+            "seatY": 431,
+            "baselineY": 1061,
+            "pxPerMm": 10.5
+          },
+          "bodyBox": {
+            "x": 251.9557385486361,
+            "y": 381.06690684508493,
+            "width": 492.8461142563047,
+            "height": 710.7359752959342
+          },
+          "glassSizing": {
+            "heightPct": 37.48,
+            "baselinePct": 91,
+            "landmarkY": 591.174987133299,
+            "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+          },
+          "partsAreSeparate": true,
+          "linkedSkus": [
+            "GBFlair15SpryBlkMatt",
+            "GBFlair15SpryBlkSh",
+            "GBFlair15SpryGlSh",
+            "GBFlair15SprySlMatt",
+            "GBFlair15SprySlSh",
+            "GBFlair15SpryBluMatt",
+            "GBFlair15SpryCuMatt",
+            "GBFlair15SpryGlMatt"
+          ],
+          "reviewUrl": "http://localhost:3010/reviews/gpt-13-415-paperdoll-2026-10-31/index.html#GBFlair15SpryBlkMatt",
+          "imageDimensions": {
+            "width": 1520,
+            "height": 2192,
+            "format": "png",
+            "hasAlpha": true
+          },
+          "drive": {
+            "id": "1pooBabIdY6l9axJWODgQlvkk0gpset4f",
+            "url": "https://drive.google.com/file/d/1pooBabIdY6l9axJWODgQlvkk0gpset4f/view?usp=drivesdk"
+          },
+          "remoteMetadataVerified": {
+            "name": true,
+            "bytes": true,
+            "parent": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pillar",
+      "folder": {
+        "id": "1kC_Qha6JMmeKKTVT1ndh_uwUOnjckcKo",
+        "url": "https://drive.google.com/drive/folders/1kC_Qha6JMmeKKTVT1ndh_uwUOnjckcKo"
+      },
+      "approved": {
+        "id": "1qUMHVgzSutLKzYpjnNNZ_Y5wqfWCbi3j",
+        "url": "https://drive.google.com/drive/folders/1qUMHVgzSutLKzYpjnNNZ_Y5wqfWCbi3j"
+      },
+      "review": {
+        "id": "1BRYuBkJZdPtnbbZiV6P2SVxSUbZk4iVa",
+        "url": "https://drive.google.com/drive/folders/1BRYuBkJZdPtnbbZiV6P2SVxSUbZk4iVa"
+      },
+      "batchManifest": {
+        "id": "1Hd39xTkqBsU0sawiiQs4dYoF5osP3oxz",
+        "url": "https://drive.google.com/file/d/1Hd39xTkqBsU0sawiiQs4dYoF5osP3oxz/view?usp=drivesdk"
+      },
+      "masters": [
+        {
+          "identity": "pillar-9ml-13-415|Clear",
+          "family": "Pillar",
+          "bodyId": "pillar-9ml-13-415",
+          "capacityMl": 9,
+          "neck": "13-415",
+          "glass": "Clear",
+          "label": "BB_pillar-9ml-13-415_Clear_BODY_GPT-recovered_REVIEW_2026-10-31_e2a8a3fdd902.png",
+          "bytes": 795718,
+          "sha256": "e2a8a3fdd902256c2d6479977c7b7b0eaaeb213ea12186b7d43297b043332510",
+          "status": "review",
+          "approval": null,
+          "sourceStatus": "recovered GPT master",
+          "sourceFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/gpt-13-415-2026-10-31/pillar-9ml-13-415-clear.e2a8a3fdd902.png",
+          "sourceCommit": "ff83c6df22b8d7fa1819aa07e278175a33ae04f4",
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "axisX": 500,
+            "neckAxisX": 500,
+            "seatY": 443,
+            "baselineY": 1061,
+            "pxPerMm": 10.5
+          },
+          "bodyBox": {
+            "x": 328.6382848392036,
+            "y": 399.4655436447167,
+            "width": 343.22817764165393,
+            "height": 691.5038284839204
+          },
+          "glassSizing": {
+            "heightPct": 37.87,
+            "baselinePct": 91,
+            "landmarkY": 546.4732006125574,
+            "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+          },
+          "partsAreSeparate": true,
+          "linkedSkus": [
+            "GBPillar9SpryBlkMatt"
+          ],
+          "reviewUrl": "http://localhost:3010/reviews/gpt-13-415-paperdoll-2026-10-31/index.html#GBPillar9SpryBlkMatt",
+          "imageDimensions": {
+            "width": 1088,
+            "height": 2192,
+            "format": "png",
+            "hasAlpha": true
+          },
+          "drive": {
+            "id": "1KAK7tUr_MpIEajzxx80qpf8ImFRe4-TO",
+            "url": "https://drive.google.com/file/d/1KAK7tUr_MpIEajzxx80qpf8ImFRe4-TO/view?usp=drivesdk"
+          },
+          "remoteMetadataVerified": {
+            "name": true,
+            "bytes": true,
+            "parent": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Rectangle",
+      "folder": {
+        "id": "1yLr4LKdzXR4-8Xo0vEVPrX6wkvxKWYN6",
+        "url": "https://drive.google.com/drive/folders/1yLr4LKdzXR4-8Xo0vEVPrX6wkvxKWYN6"
+      },
+      "approved": {
+        "id": "199NmpG2Cc07vqn4o7Jn7MwBtQC1pjNsW",
+        "url": "https://drive.google.com/drive/folders/199NmpG2Cc07vqn4o7Jn7MwBtQC1pjNsW"
+      },
+      "review": {
+        "id": "10gX5sIKWzi3gjYwRaQRx1YEBPZY6WvSe",
+        "url": "https://drive.google.com/drive/folders/10gX5sIKWzi3gjYwRaQRx1YEBPZY6WvSe"
+      },
+      "batchManifest": {
+        "id": "1jzUvAHaG2hZgNd0xGZtiwyODhkwIcl41",
+        "url": "https://drive.google.com/file/d/1jzUvAHaG2hZgNd0xGZtiwyODhkwIcl41/view?usp=drivesdk"
+      },
+      "masters": [
+        {
+          "identity": "footed-rectangle-10ml-13-415|Clear",
+          "family": "Rectangle",
+          "bodyId": "footed-rectangle-10ml-13-415",
+          "capacityMl": 10,
+          "neck": "13-415",
+          "glass": "Clear",
+          "label": "BB_footed-rectangle-10ml-13-415_Clear_BODY_GPT-recovered_REVIEW_2026-10-31_1adcac01e02b.png",
+          "bytes": 1092148,
+          "sha256": "1adcac01e02b912a611b3d46c853ea0c8c2eed3c8bed325ce690cb8adcf18bdd",
+          "status": "review",
+          "approval": null,
+          "sourceStatus": "recovered GPT master",
+          "sourceFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/gpt-13-415-2026-10-31/footed-rectangle-10ml-13-415-clear.1adcac01e02b.png",
+          "sourceCommit": "ff83c6df22b8d7fa1819aa07e278175a33ae04f4",
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "axisX": 500,
+            "neckAxisX": 500,
+            "seatY": 507,
+            "baselineY": 1061,
+            "pxPerMm": 10.5
+          },
+          "bodyBox": {
+            "x": 314.72185430463577,
+            "y": 469.1823739174732,
+            "width": 379.30514518593986,
+            "height": 618.6286296484972
+          },
+          "glassSizing": {
+            "heightPct": 35.07,
+            "baselinePct": 91,
+            "landmarkY": 680.8481915435557,
+            "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+          },
+          "partsAreSeparate": true,
+          "linkedSkus": [
+            "GBRect10SpryBlkMatt",
+            "GBRect10SpryBlkSh",
+            "GBRect10SpryBluMatt",
+            "GBRect10SpryCuMatt",
+            "GBRect10SpryGlMatt",
+            "GBRect10SpryGlSh",
+            "GBRect10SprySlMatt",
+            "GBRect10SprySlSh"
+          ],
+          "reviewUrl": "http://localhost:3010/reviews/gpt-13-415-paperdoll-2026-10-31/index.html#GBRect10SpryBlkMatt",
+          "imageDimensions": {
+            "width": 1344,
+            "height": 2192,
+            "format": "png",
+            "hasAlpha": true
+          },
+          "drive": {
+            "id": "1iqRAzs2niXj7MPfTX6M1qR1cK34e01Od",
+            "url": "https://drive.google.com/file/d/1iqRAzs2niXj7MPfTX6M1qR1cK34e01Od/view?usp=drivesdk"
+          },
+          "remoteMetadataVerified": {
+            "name": true,
+            "bytes": true,
+            "parent": true
+          }
+        },
+        {
+          "identity": "tall-rectangle-10ml-13-415|Clear",
+          "family": "Rectangle",
+          "bodyId": "tall-rectangle-10ml-13-415",
+          "capacityMl": 10,
+          "neck": "13-415",
+          "glass": "Clear",
+          "label": "BB_tall-rectangle-10ml-13-415_Clear_BODY_GPT-recovered_REVIEW_2026-10-31_7b76e4484634.png",
+          "bytes": 404489,
+          "sha256": "7b76e4484634cd8af296e96f4660f6cf40a064e583903670f1566f77fec9102b",
+          "status": "review",
+          "approval": null,
+          "sourceStatus": "recovered GPT master",
+          "sourceFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/gpt-13-415-2026-10-31/tall-rectangle-10ml-13-415-clear.7b76e4484634.png",
+          "sourceCommit": "ff83c6df22b8d7fa1819aa07e278175a33ae04f4",
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "axisX": 500,
+            "neckAxisX": 500,
+            "seatY": 261,
+            "baselineY": 1061,
+            "pxPerMm": 7.83
+          },
+          "bodyBox": {
+            "x": 353.8461538461538,
+            "y": 212.417004048583,
+            "width": 297.9757085020243,
+            "height": 887.4493927125505
+          },
+          "glassSizing": {
+            "heightPct": 52.98,
+            "baselinePct": 91,
+            "landmarkY": 355.331983805668,
+            "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+          },
+          "partsAreSeparate": true,
+          "linkedSkus": [
+            "GBTallRect10SpryBlkMatt",
+            "GBTallRect10SpryBlkSh",
+            "GBTallRect10SpryBluMatt",
+            "GBTallRect10SpryCuMatt",
+            "GBTallRect10SpryGlMatt",
+            "GBTallRect10SpryGlSh",
+            "GBTallRect10SprySlMatt",
+            "GBTallRect10SprySlSh"
+          ],
+          "reviewUrl": "http://localhost:3010/reviews/gpt-13-415-paperdoll-2026-10-31/index.html#GBTallRect10SpryBlkMatt",
+          "imageDimensions": {
+            "width": 736,
+            "height": 2192,
+            "format": "png",
+            "hasAlpha": true
+          },
+          "drive": {
+            "id": "1vbo0GBMxBF_Dq7Rw3S_Ftpt_-fUY5_Ro",
+            "url": "https://drive.google.com/file/d/1vbo0GBMxBF_Dq7Rw3S_Ftpt_-fUY5_Ro/view?usp=drivesdk"
+          },
+          "remoteMetadataVerified": {
+            "name": true,
+            "bytes": true,
+            "parent": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Royal",
+      "folder": {
+        "id": "1sPHObAuU9wxZqzD76pdCxqKroxWTo1to",
+        "url": "https://drive.google.com/drive/folders/1sPHObAuU9wxZqzD76pdCxqKroxWTo1to"
+      },
+      "approved": {
+        "id": "17ksQpLjSq7eN-tL7-Mn8eDjdfDMHSCVk",
+        "url": "https://drive.google.com/drive/folders/17ksQpLjSq7eN-tL7-Mn8eDjdfDMHSCVk"
+      },
+      "review": {
+        "id": "1fGxTa9EDB2KJmK6gvwMjvftoFhVL6Zqd",
+        "url": "https://drive.google.com/drive/folders/1fGxTa9EDB2KJmK6gvwMjvftoFhVL6Zqd"
+      },
+      "batchManifest": {
+        "id": "1duFpXdcbz4DDV19kYuLEbdrDlW6eR_YD",
+        "url": "https://drive.google.com/file/d/1duFpXdcbz4DDV19kYuLEbdrDlW6eR_YD/view?usp=drivesdk"
+      },
+      "masters": [
+        {
+          "identity": "royal-13ml-13-415|Clear",
+          "family": "Royal",
+          "bodyId": "royal-13ml-13-415",
+          "capacityMl": 13,
+          "neck": "13-415",
+          "glass": "Clear",
+          "label": "BB_royal-13ml-13-415_Clear_BODY_GPT-recovered_REVIEW_2026-10-31_5155f9cb3773.png",
+          "bytes": 1264666,
+          "sha256": "5155f9cb377371cc0ed332823db9cec5649b865c784a21c74d39ca72da5c01dd",
+          "status": "review",
+          "approval": null,
+          "sourceStatus": "recovered GPT master",
+          "sourceFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/gpt-13-415-2026-10-31/royal-13ml-13-415-clear.5155f9cb3773.png",
+          "sourceCommit": "ff83c6df22b8d7fa1819aa07e278175a33ae04f4",
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "axisX": 500,
+            "neckAxisX": 500,
+            "seatY": 432,
+            "baselineY": 1061,
+            "pxPerMm": 10.51
+          },
+          "bodyBox": {
+            "x": 238.13126919140223,
+            "y": 386.61156601842373,
+            "width": 535.6479017400205,
+            "height": 705.6131013306039
+          },
+          "glassSizing": {
+            "heightPct": 37.48,
+            "baselinePct": 91,
+            "landmarkY": 580.3976458546571,
+            "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+          },
+          "partsAreSeparate": true,
+          "linkedSkus": [
+            "GBRoyal13SpryBlkSh",
+            "GBRoyal13SpryGlSh",
+            "GBRoyal13SprySlSh",
+            "GBRoyal13SpryBluMatt",
+            "GBRoyal13SpryCuMatt",
+            "GBRoyal13SprySlMatt",
+            "GBRoyal13SpryGlMatt"
+          ],
+          "reviewUrl": "http://localhost:3010/reviews/gpt-13-415-paperdoll-2026-10-31/index.html#GBRoyal13SpryBlkSh",
+          "imageDimensions": {
+            "width": 1664,
+            "height": 2192,
+            "format": "png",
+            "hasAlpha": true
+          },
+          "drive": {
+            "id": "1VNkqaY5zh1b7UL94Yjf8fxyTlectC4F0",
+            "url": "https://drive.google.com/file/d/1VNkqaY5zh1b7UL94Yjf8fxyTlectC4F0/view?usp=drivesdk"
+          },
+          "remoteMetadataVerified": {
+            "name": true,
+            "bytes": true,
+            "parent": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sleek",
+      "folder": {
+        "id": "1vVSqpdvOO2Z_7PiZL7zwzCHslxNBLS9O",
+        "url": "https://drive.google.com/drive/folders/1vVSqpdvOO2Z_7PiZL7zwzCHslxNBLS9O"
+      },
+      "approved": {
+        "id": "17lRrwMwAMA5itPxvn1v8IxYhd8D_frLg",
+        "url": "https://drive.google.com/drive/folders/17lRrwMwAMA5itPxvn1v8IxYhd8D_frLg"
+      },
+      "review": {
+        "id": "1T3JP8biNfZ7WfPZnkwb3Qpj2P3u6L_2y",
+        "url": "https://drive.google.com/drive/folders/1T3JP8biNfZ7WfPZnkwb3Qpj2P3u6L_2y"
+      },
+      "batchManifest": {
+        "id": "1KfAnk4UqlUepGmERsghRejaxbUDIPFAg",
+        "url": "https://drive.google.com/file/d/1KfAnk4UqlUepGmERsghRejaxbUDIPFAg/view?usp=drivesdk"
+      },
+      "masters": [
+        {
+          "identity": "sleek-5ml-13-415|Clear",
+          "family": "Sleek",
+          "bodyId": "sleek-5ml-13-415",
+          "capacityMl": 5,
+          "neck": "13-415",
+          "glass": "Clear",
+          "label": "BB_sleek-5ml-13-415_Clear_BODY_GPT-recovered_REVIEW_2026-10-31_a3270080edb0.png",
+          "bytes": 955434,
+          "sha256": "a3270080edb0cc8cc77cd2d78e4ae1627cc4631a0d77c4d9080e9e78734e5e23",
+          "status": "review",
+          "approval": null,
+          "sourceStatus": "recovered GPT master",
+          "sourceFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/gpt-13-415-2026-10-31/sleek-5ml-13-415-clear.a3270080edb0.png",
+          "sourceCommit": "ff83c6df22b8d7fa1819aa07e278175a33ae04f4",
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "axisX": 500,
+            "neckAxisX": 500,
+            "seatY": 572,
+            "baselineY": 1061,
+            "pxPerMm": 10.51
+          },
+          "bodyBox": {
+            "x": 373.4956499488229,
+            "y": 536.2134083930399,
+            "width": 260.2661207778915,
+            "height": 548.560900716479
+          },
+          "glassSizing": {
+            "heightPct": 30,
+            "baselinePct": 91,
+            "landmarkY": 700.8817809621289,
+            "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+          },
+          "partsAreSeparate": true,
+          "linkedSkus": [
+            "GBSleek5SpryBlkMatt",
+            "GBSleek5SpryGlSh",
+            "GBSleek5SprySlSh",
+            "GBSleek5SpryBlkSh",
+            "GBSleek5SprySlMatt",
+            "GBSleek5SpryCuMatt",
+            "GBSleek5SpryBluMatt",
+            "GBSleek5SpryGlMatt",
+            "GBSleek5Gl",
+            "GBSleek5Sl",
+            "GBSleek5WhtSht",
+            "GBSleek5BlkSht",
+            "GBSleek5CuSht",
+            "GBSleek5GlMattSht",
+            "GBSleek5SlMattSht",
+            "GBSleek5BlkShSht",
+            "GBSleek5GlSht",
+            "GBSleek5SlSht",
+            "GBSleek5MtlRollBlkSh",
+            "GBSleek5MtlRollCuMatt",
+            "GBSleek5MtlRollGlMatt",
+            "GBSleek5MtlRollGlSh",
+            "GBSleek5MtlRollPinkDot",
+            "GBSleek5MtlRollSlDot",
+            "GBSleek5MtlRollSlMatt",
+            "GBSleek5MtlRollSlSh",
+            "GBSleek5RollBlkDot",
+            "GBSleek5RollBlkSh",
+            "GBSleek5RollGlSh",
+            "GBSleek5RollSlSh",
+            "GBSleek5RollPinkDot",
+            "GBSleek5RollSlDot",
+            "GBSleek5RollCuMatt",
+            "GBSleek5RollGlMatt",
+            "GBSleek5RollSlMatt",
+            "GBSleek5MtlRollBlkDot"
+          ],
+          "reviewUrl": "http://localhost:3010/reviews/gpt-13-415-paperdoll-2026-10-31/index.html#GBSleek5SpryBlkMatt",
+          "imageDimensions": {
+            "width": 1040,
+            "height": 2192,
+            "format": "png",
+            "hasAlpha": true
+          },
+          "drive": {
+            "id": "1LpEF5BRkRcfknEQFhsziNG_oaEfLcRoc",
+            "url": "https://drive.google.com/file/d/1LpEF5BRkRcfknEQFhsziNG_oaEfLcRoc/view?usp=drivesdk"
+          },
+          "remoteMetadataVerified": {
+            "name": true,
+            "bytes": true,
+            "parent": true
+          }
+        },
+        {
+          "identity": "sleek-8ml-13-415|Clear",
+          "family": "Sleek",
+          "bodyId": "sleek-8ml-13-415",
+          "capacityMl": 8,
+          "neck": "13-415",
+          "glass": "Clear",
+          "label": "BB_sleek-8ml-13-415_Clear_BODY_GPT-recovered_REVIEW_2026-10-31_a30b2604fa73.png",
+          "bytes": 585672,
+          "sha256": "a30b2604fa73376431855253eb7ff93d65e505896a70c2ec5988db604d2f96e0",
+          "status": "review",
+          "approval": null,
+          "sourceStatus": "recovered GPT master",
+          "sourceFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/gpt-13-415-2026-10-31/sleek-8ml-13-415-clear.a30b2604fa73.png",
+          "sourceCommit": "ff83c6df22b8d7fa1819aa07e278175a33ae04f4",
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "axisX": 500,
+            "neckAxisX": 500,
+            "seatY": 353,
+            "baselineY": 1061,
+            "pxPerMm": 10.5
+          },
+          "bodyBox": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "glassSizing": {
+            "heightPct": 43,
+            "baselinePct": 91,
+            "landmarkY": 469.97391304347826,
+            "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+          },
+          "partsAreSeparate": true,
+          "linkedSkus": [
+            "GBSleek8SpryBlkMatt",
+            "GBSleek8SpryBlkSh",
+            "GBSleek8SpryGlSh",
+            "GBSleek8SprySlMatt",
+            "GBSleek8SprySlSh",
+            "GBSleek8SpryBluMatt",
+            "GBSleek8SpryCuMatt",
+            "GBSleek8SpryGlMatt"
+          ],
+          "reviewUrl": "http://localhost:3010/reviews/gpt-13-415-paperdoll-2026-10-31/index.html#GBSleek8SpryBlkMatt",
+          "imageDimensions": {
+            "width": 768,
+            "height": 2192,
+            "format": "png",
+            "hasAlpha": true
+          },
+          "drive": {
+            "id": "1JpoMq1gbe0egkHQ6A0piH4znXJiegrpj",
+            "url": "https://drive.google.com/file/d/1JpoMq1gbe0egkHQ6A0piH4znXJiegrpj/view?usp=drivesdk"
+          },
+          "remoteMetadataVerified": {
+            "name": true,
+            "bytes": true,
+            "parent": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Square",
+      "folder": {
+        "id": "10MHFzUOgYZisJmh4GgbKPXlCY5iBAbvx",
+        "url": "https://drive.google.com/drive/folders/10MHFzUOgYZisJmh4GgbKPXlCY5iBAbvx"
+      },
+      "approved": {
+        "id": "17pY9YUln7jQcu3YJX5VYsxEYcxSZmJuF",
+        "url": "https://drive.google.com/drive/folders/17pY9YUln7jQcu3YJX5VYsxEYcxSZmJuF"
+      },
+      "review": {
+        "id": "1F1Uz3qnBHbuK9-7k2H1h-k8yNdmLPgMf",
+        "url": "https://drive.google.com/drive/folders/1F1Uz3qnBHbuK9-7k2H1h-k8yNdmLPgMf"
+      },
+      "batchManifest": {
+        "id": "1XQrQWMngUP0ebD8Vo7OSUenO71gntOJ9",
+        "url": "https://drive.google.com/file/d/1XQrQWMngUP0ebD8Vo7OSUenO71gntOJ9/view?usp=drivesdk"
+      },
+      "masters": [
+        {
+          "identity": "square-15ml-13-415|Clear",
+          "family": "Square",
+          "bodyId": "square-15ml-13-415",
+          "capacityMl": 15,
+          "neck": "13-415",
+          "glass": "Clear",
+          "label": "BB_square-15ml-13-415_Clear_BODY_GPT-recovered_REVIEW_2026-10-31_7fc1299a37a6.png",
+          "bytes": 1079530,
+          "sha256": "7fc1299a37a65d2e48839bd37a7af9f09106c02c1e6f189c9caaed8af3869d74",
+          "status": "review",
+          "approval": null,
+          "sourceStatus": "recovered GPT master",
+          "sourceFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/gpt-13-415-2026-10-31/square-15ml-13-415-clear.7fc1299a37a6.png",
+          "sourceCommit": "ff83c6df22b8d7fa1819aa07e278175a33ae04f4",
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "axisX": 500,
+            "neckAxisX": 500,
+            "seatY": 489,
+            "baselineY": 1061,
+            "pxPerMm": 10.51
+          },
+          "bodyBox": {
+            "x": 320.7382413087935,
+            "y": 448.05930470347647,
+            "width": 369.63599182004094,
+            "height": 641.0143149284254
+          },
+          "glassSizing": {
+            "heightPct": 35.89,
+            "baselinePct": 91,
+            "landmarkY": 603.9263803680982,
+            "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+          },
+          "partsAreSeparate": true,
+          "linkedSkus": [
+            "GBSqr15SpryBlkSh",
+            "GBSqr15SpryGlSh",
+            "GBSqr15SprySlMatt",
+            "GBSqr15SprySlSh",
+            "GBSqr15SpryBluMatt",
+            "GBSqr15SpryCuMatt",
+            "GBSqr15SpryGlMatt"
+          ],
+          "reviewUrl": "http://localhost:3010/reviews/gpt-13-415-paperdoll-2026-10-31/index.html#GBSqr15SpryBlkSh",
+          "imageDimensions": {
+            "width": 1264,
+            "height": 2192,
+            "format": "png",
+            "hasAlpha": true
+          },
+          "drive": {
+            "id": "1xNdzfcQu-CBfJi2qFr-uNKp9H0Z76gPR",
+            "url": "https://drive.google.com/file/d/1xNdzfcQu-CBfJi2qFr-uNKp9H0Z76gPR/view?usp=drivesdk"
+          },
+          "remoteMetadataVerified": {
+            "name": true,
+            "bytes": true,
+            "parent": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tulip",
+      "folder": {
+        "id": "1_izsmtj26BbSvD3IOSmQ0Wf4eCmV2P-4",
+        "url": "https://drive.google.com/drive/folders/1_izsmtj26BbSvD3IOSmQ0Wf4eCmV2P-4"
+      },
+      "approved": {
+        "id": "1rs40Y38MWWr5iB2w2tdPOB58sYCw2UA6",
+        "url": "https://drive.google.com/drive/folders/1rs40Y38MWWr5iB2w2tdPOB58sYCw2UA6"
+      },
+      "review": {
+        "id": "18LZlrD5o-H3MU6M5F6a-gV0lLp7RDFG7",
+        "url": "https://drive.google.com/drive/folders/18LZlrD5o-H3MU6M5F6a-gV0lLp7RDFG7"
+      },
+      "batchManifest": {
+        "id": "1eDsSvZdJjTzrGIeP7awYZbEdjAyBO0PK",
+        "url": "https://drive.google.com/file/d/1eDsSvZdJjTzrGIeP7awYZbEdjAyBO0PK/view?usp=drivesdk"
+      },
+      "masters": [
+        {
+          "identity": "tulip-5ml-13-415|Amber",
+          "family": "Tulip",
+          "bodyId": "tulip-5ml-13-415",
+          "capacityMl": 5,
+          "neck": "13-415",
+          "glass": "Amber",
+          "label": "BB_tulip-5ml-13-415_Amber_BODY_GPT-recovered_REVIEW_2026-10-31_1987a24ec5e9.png",
+          "bytes": 1850139,
+          "sha256": "1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f",
+          "status": "review",
+          "approval": null,
+          "sourceStatus": "recovered GPT master",
+          "sourceFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+          "sourceCommit": "ff83c6df22b8d7fa1819aa07e278175a33ae04f4",
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "axisX": 500,
+            "neckAxisX": 500,
+            "seatY": 566,
+            "baselineY": 1061,
+            "pxPerMm": 10.5
+          },
+          "bodyBox": {
+            "x": 339.5833333333333,
+            "y": 527.2962962962963,
+            "width": 325.925925925926,
+            "height": 558.1481481481482
+          },
+          "glassSizing": {
+            "heightPct": 32.97,
+            "baselinePct": 91,
+            "landmarkY": 693.5694444444445,
+            "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+          },
+          "partsAreSeparate": true,
+          "linkedSkus": [
+            "GBTulipAmb5SpryBlkMatt",
+            "GBTulipAmb5SpryBlkSh",
+            "GBTulipAmb5SpryBluMatt",
+            "GBTulipAmb5SpryCuMatt",
+            "GBTulipAmb5SpryGlMatt",
+            "GBTulipAmb5SpryGlSh",
+            "GBTulipAmb5SprySlMatt",
+            "GBTulipAmb5SprySlSh",
+            "GBTulipAmb5Gl",
+            "GBTulipAmb5Sl",
+            "GBTulipAmb5WhtSht",
+            "GBTulipAmb5BlkSht",
+            "GBTulipAmb5CuSht",
+            "GBTulipAmb5GlMattSht",
+            "GBTulipAmb5SlMattSht",
+            "GBTulipAmb5BlkShSht",
+            "GBTulipAmb5GlSht",
+            "GBTulipAmb5SlSht",
+            "GBTulipAmb5MtlRollCuMatt",
+            "GBTulipAmb5MtlRollGlMatt",
+            "GBTulipAmb5MtlRollGlSh",
+            "GBTulipAmb5MtlRollPinkDot",
+            "GBTulipAmb5MtlRollSlDot",
+            "GBTulipAmb5MtlRollSlMatt",
+            "GBTulipAmb5MtlRollSlSh",
+            "GBTulipAmb5MtlRollBlkSh",
+            "GBTulipAmb5RollBlkDot",
+            "GBTulipAmb5RollBlkSh",
+            "GBTulipAmb5RollCuMatt",
+            "GBTulipAmb5RollGlMatt",
+            "GBTulipAmb5RollPinkDot",
+            "GBTulipAmb5RollSlDot",
+            "GBTulipAmb5RollSlMatt",
+            "GBTulipAmb5RollSlSh",
+            "GBTulipAmb5MtlRollBlkDot",
+            "GBTulipAmb5RollGlSh"
+          ],
+          "reviewUrl": "http://localhost:3010/reviews/gpt-13-415-paperdoll-2026-10-31/index.html#GBTulipAmb5SpryBlkMatt",
+          "imageDimensions": {
+            "width": 1280,
+            "height": 2192,
+            "format": "png",
+            "hasAlpha": true
+          },
+          "drive": {
+            "id": "1cSV33lANTHKQu_hj1dBTe7ufvRaoN9CX",
+            "url": "https://drive.google.com/file/d/1cSV33lANTHKQu_hj1dBTe7ufvRaoN9CX/view?usp=drivesdk"
+          },
+          "remoteMetadataVerified": {
+            "name": true,
+            "bytes": true,
+            "parent": true
+          }
+        },
+        {
+          "identity": "tulip-6ml-13-415|Clear",
+          "family": "Tulip",
+          "bodyId": "tulip-6ml-13-415",
+          "capacityMl": 6,
+          "neck": "13-415",
+          "glass": "Clear",
+          "label": "BB_tulip-6ml-13-415_Clear_BODY_GPT-recovered_REVIEW_2026-10-31_545e756d1bdb.png",
+          "bytes": 1024156,
+          "sha256": "545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4",
+          "status": "review",
+          "approval": null,
+          "sourceStatus": "recovered GPT master",
+          "sourceFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+          "sourceCommit": "ff83c6df22b8d7fa1819aa07e278175a33ae04f4",
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "axisX": 500,
+            "neckAxisX": 500,
+            "seatY": 566,
+            "baselineY": 1061,
+            "pxPerMm": 10.5
+          },
+          "bodyBox": {
+            "x": 341.6,
+            "y": 528.6846153846154,
+            "width": 316.79999999999995,
+            "height": 556.4307692307692
+          },
+          "glassSizing": {
+            "heightPct": 32.97,
+            "baselinePct": 91,
+            "landmarkY": 688.1,
+            "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+          },
+          "partsAreSeparate": true,
+          "linkedSkus": [
+            "GBTulip6SpryBlkSh",
+            "GBTulip6SpryBluMatt",
+            "GBTulip6SpryCuMatt",
+            "GBTulip6SpryGlMatt",
+            "GBTulip6SpryGlSh",
+            "GBTulip6SprySlMatt",
+            "GBTulip6SprySlSh"
+          ],
+          "reviewUrl": "http://localhost:3010/reviews/gpt-13-415-paperdoll-2026-10-31/index.html#GBTulip6SpryBlkSh",
+          "imageDimensions": {
+            "width": 1248,
+            "height": 2192,
+            "format": "png",
+            "hasAlpha": true
+          },
+          "drive": {
+            "id": "1PBA8FnDtoUlu3cP1lGlBgPZY5hKQJh9H",
+            "url": "https://drive.google.com/file/d/1PBA8FnDtoUlu3cP1lGlBgPZY5hKQJh9H/view?usp=drivesdk"
+          },
+          "remoteMetadataVerified": {
+            "name": true,
+            "bytes": true,
+            "parent": true
+          }
+        }
+      ]
+    }
+  ]
+}

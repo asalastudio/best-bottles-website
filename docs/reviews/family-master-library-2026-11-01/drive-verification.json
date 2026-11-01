@@ -1,0 +1,108 @@
+{
+  "verifiedAt": "2026-11-01T07:25:30.504Z",
+  "library": {
+    "success": true,
+    "id": "1kztMnt9MYau-UfgN6sK8kI7fJZsMnQUe",
+    "url": "https://drive.google.com/drive/folders/1kztMnt9MYau-UfgN6sK8kI7fJZsMnQUe",
+    "title": "Bottle Master Library",
+    "parent_id": "1hvh1v5vlh9G0DHJgTr5Oay2eOUFIQ73x"
+  },
+  "batch": "2026-10-31-gpt13-ff83c6df",
+  "indexDocuments": [
+    {
+      "source": "README.md",
+      "id": "1EhtjwVUaSxyBVdawToHq9SZMHvXGz9UJ",
+      "url": "https://drive.google.com/file/d/1EhtjwVUaSxyBVdawToHq9SZMHvXGz9UJ/view?usp=drivesdk",
+      "name": "START HERE - Family masters and approval rules.md",
+      "remoteBytes": 3810,
+      "verified": true
+    },
+    {
+      "source": "MASTER-INDEX.md",
+      "id": "1EYNHZIW9tAXlzqlkJvI3GDobbPh_W4Md",
+      "url": "https://drive.google.com/file/d/1EYNHZIW9tAXlzqlkJvI3GDobbPh_W4Md/view?usp=drivesdk",
+      "name": "Master index - 2026-10-31 gpt13 batch.md",
+      "remoteBytes": 9751,
+      "verified": true
+    },
+    {
+      "source": "registry.json",
+      "id": "1MTeAIAoPBbKof7x52hNq38oBp-9p9TEc",
+      "url": "https://drive.google.com/file/d/1MTeAIAoPBbKof7x52hNq38oBp-9p9TEc/view?usp=drivesdk",
+      "name": "Master registry - 2026-10-31 gpt13 batch.json",
+      "remoteBytes": 57402,
+      "verified": true
+    }
+  ],
+  "familyFolderChecks": [
+    {
+      "family": "Bell",
+      "images": 1,
+      "files": 2,
+      "verified": true
+    },
+    {
+      "family": "Circle",
+      "images": 1,
+      "files": 2,
+      "verified": true
+    },
+    {
+      "family": "Cylinder",
+      "images": 4,
+      "files": 5,
+      "verified": true
+    },
+    {
+      "family": "Elegant",
+      "images": 2,
+      "files": 3,
+      "verified": true
+    },
+    {
+      "family": "Flair",
+      "images": 1,
+      "files": 2,
+      "verified": true
+    },
+    {
+      "family": "Pillar",
+      "images": 1,
+      "files": 2,
+      "verified": true
+    },
+    {
+      "family": "Rectangle",
+      "images": 2,
+      "files": 3,
+      "verified": true
+    },
+    {
+      "family": "Royal",
+      "images": 1,
+      "files": 2,
+      "verified": true
+    },
+    {
+      "family": "Sleek",
+      "images": 2,
+      "files": 3,
+      "verified": true
+    },
+    {
+      "family": "Square",
+      "images": 1,
+      "files": 2,
+      "verified": true
+    },
+    {
+      "family": "Tulip",
+      "images": 2,
+      "files": 3,
+      "verified": true
+    }
+  ],
+  "masterCount": 18,
+  "verification": "Individual remote name, byte size and parent readback; final folder listing confirms all master and manifest IDs. Local source/copy SHA256 comparisons recorded in registry.",
+  "approval": "All exact batch versions remain review candidates; no automatic promotion."
+}
