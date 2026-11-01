@@ -1,0 +1,20 @@
+{
+  "version": "0e0c159eb6f1",
+  "api": [
+    {"bodyId":"tulip-5ml|13-415|Glass Bottle","matchingKits":10},
+    {"bodyId":"sleek-5ml|13-415|Glass Bottle","matchingKits":36},
+    {"bodyId":"sleek-8ml|13-415|Glass Bottle","matchingKits":36},
+    {"bodyId":"tall-rectangle-10ml|13-415|Glass Bottle","matchingKits":36},
+    {"bodyId":"footed-rectangle-10ml|13-415|Glass Bottle","matchingKits":36},
+    {"bodyId":"cylinder-9ml|13-415|Glass Bottle","matchingKits":72},
+    {"bodyId":"flair-15ml|13-415|Glass Bottle","matchingKits":36},
+    {"bodyId":"tulip-6ml|13-415|Glass Bottle","matchingKits":9},
+    {"bodyId":"circle-15ml|13-415|Glass Bottle","matchingKits":36},
+    {"bodyId":"elegant-15ml|13-415|Glass Bottle","matchingKits":69},
+    {"bodyId":"royal-13ml|13-415|Glass Bottle","matchingKits":35},
+    {"bodyId":"pillar-9ml|13-415|Glass Bottle","matchingKits":1},
+    {"bodyId":"square-15ml|13-415|Glass Bottle","matchingKits":34},
+    {"bodyId":"bell-10ml|13-415|Glass Bottle","matchingKits":4}
+  ],
+  "records": [{"sku":"GBSleek5RollBlkDot","passed":true,"url":"http://localhost:3010/matrix?family=Sleek&sku=GBSleek5RollBlkDot&from=pdp&shop=roll-on-bottles"},{"sku":"GBSleek8RollBlkDot","passed":true,"url":"http://localhost:3010/matrix?family=Sleek&sku=GBSleek8RollBlkDot&from=pdp&shop=roll-on-bottles"},{"sku":"GBTallCyl9RollBlkDot","passed":true,"url":"http://localhost:3010/matrix?family=Cylinder&sku=GBTallCyl9RollBlkDot&from=pdp&shop=roll-on-bottles"},{"sku":"GBTallCylFrst9RollBlkDot","passed":true,"url":"http://localhost:3010/matrix?family=Cylinder&sku=GBTallCylFrst9RollBlkDot&from=pdp&shop=roll-on-bottles"}]
+}

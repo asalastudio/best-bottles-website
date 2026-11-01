@@ -20,7 +20,8 @@ function readLocalKitReview(): LocalKitReview | null {
         process.env.NODE_ENV === "development" ? "public/local-kits/cylinder5-finemist-2026-11-01/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/cylinder5-masters-2026-11-01/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/cylinder9-masters-2026-11-01/kits.json" : undefined,
-        process.env.NODE_ENV === "development" ? "public/local-kits/tulip-rollers-2026-11-01/kits.json" : undefined];
+        process.env.NODE_ENV === "development" ? "public/local-kits/tulip-rollers-2026-11-01/kits.json" : undefined,
+        process.env.NODE_ENV === "development" ? "public/local-kits/remaining-13-415-2026-11-01/kits.json" : undefined];
     const rows: Record<string, BuilderKit> = {};
     const defaults = new Set<string>();
     let loaded = false;
@@ -65,6 +66,13 @@ export function localGpt13ComponentKits(host: string | null, flag: unknown): Rec
             }
         } catch { /* The original pilot remains available without this local batch. */ }
     }
+    // Bookmarked 13-415 pilot URLs must use the same current bodies and parts as the builder.
+    try {
+        const current = JSON.parse(readFileSync("public/local-kits/remaining-13-415-2026-11-01/kits.json", "utf8")) as LocalKitReview;
+        for (const [sku, kit] of Object.entries(current.rows ?? {})) {
+            if (kit.sku === sku && kit.register?.bodyId.endsWith("-13-415")) rows[sku] = kit;
+        }
+    } catch { /* This review batch is optional outside the active checkout. */ }
     return rows;
 }
 

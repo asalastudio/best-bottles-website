@@ -1,0 +1,18 @@
+{
+  "version": "0e0c159eb6f1",
+  "layoutConfigurations": 450,
+  "layoutStates": 1350,
+  "desktopRepresentativeStates": 165,
+  "mobileRepresentativeStates": 24,
+  "latestFrostedStates": 24,
+  "note": "Final frosted checks supersede that sprayer subset in the broader desktop run. All other kits retain the centered registrations verified there.",
+  "failures": [],
+  "pageErrors": [],
+  "sharedBuilderMatches": 450,
+  "actualBuilderEntries": 4,
+  "productionActivated": false,
+  "targetedRegressionTests": 57,
+  "typecheck": "passed",
+  "lint": "passed",
+  "drive": {"families":11,"verifiedFiles":27,"receipt":"drive-archive-receipt.json"}
+}
