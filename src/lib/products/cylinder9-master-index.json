@@ -1,5 +1,5 @@
 {
-  "version": "5f6e38a210fd",
+  "version": "8260f36da490",
   "bodyId": "cylinder-9ml-17-415",
   "assets": {
     "body-clear": {
@@ -120,6 +120,14 @@
       "bytes": 1233944,
       "width": 1052,
       "height": 1494
+    },
+    "lotion-tube": {
+      "url": "/local-kits/lotion9-flair-fit-2026-11-01/lotion-mechanism-slim.fd1f18d27439.svg",
+      "key": "",
+      "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+      "bytes": 1203053,
+      "width": 180,
+      "height": 579.2967707486541
     }
   },
   "skus": {

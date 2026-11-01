@@ -1,5 +1,5 @@
 {
-  "version": "5f6e38a210fd",
+  "version": "8260f36da490",
   "bodyId": "cylinder-9ml-17-415",
   "rows": {
     "GBCylAmb9SpryBlk": {
@@ -1453,10 +1453,10 @@
           "zOrder": 0,
           "explodeIndex": 1,
           "bounds": {
-            "left": 466.6148,
-            "top": 436.4425428571428,
-            "right": 536.4908,
-            "bottom": 1002.0499428571428
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
           },
           "assembled": {
             "x": 0,
@@ -1467,21 +1467,21 @@
             "dy": -140.58385714285714
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/tube-fitted.f5a5592f59a0.png",
-            "sha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484",
-            "bytes": 124485,
+            "url": "/local-kits/lotion9-flair-fit-2026-11-01/lotion-mechanism-slim.fd1f18d27439.svg",
+            "key": "",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
             "width": 180,
-            "height": 1457,
-            "key": ""
+            "height": 579.2967707486541
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 466.6148,
-            "y": 436.4425428571428,
-            "width": 69.87599999999999,
-            "height": 565.6074
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
           },
           "componentId": "CMP-LPM-BLK-17-415",
           "views": [
@@ -1690,10 +1690,10 @@
           "zOrder": 0,
           "explodeIndex": 1,
           "bounds": {
-            "left": 466.6148,
-            "top": 436.4425428571428,
-            "right": 536.4908,
-            "bottom": 1002.0499428571428
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
           },
           "assembled": {
             "x": 0,
@@ -1704,21 +1704,21 @@
             "dy": -140.58385714285714
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/tube-fitted.f5a5592f59a0.png",
-            "sha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484",
-            "bytes": 124485,
+            "url": "/local-kits/lotion9-flair-fit-2026-11-01/lotion-mechanism-slim.fd1f18d27439.svg",
+            "key": "",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
             "width": 180,
-            "height": 1457,
-            "key": ""
+            "height": 579.2967707486541
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 466.6148,
-            "y": 436.4425428571428,
-            "width": 69.87599999999999,
-            "height": 565.6074
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
           },
           "componentId": "CMP-LPM-SGLD-17-415",
           "views": [
@@ -1927,10 +1927,10 @@
           "zOrder": 0,
           "explodeIndex": 1,
           "bounds": {
-            "left": 466.6148,
-            "top": 436.4425428571428,
-            "right": 536.4908,
-            "bottom": 1002.0499428571428
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
           },
           "assembled": {
             "x": 0,
@@ -1941,21 +1941,21 @@
             "dy": -140.58385714285714
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/tube-fitted.f5a5592f59a0.png",
-            "sha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484",
-            "bytes": 124485,
+            "url": "/local-kits/lotion9-flair-fit-2026-11-01/lotion-mechanism-slim.fd1f18d27439.svg",
+            "key": "",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
             "width": 180,
-            "height": 1457,
-            "key": ""
+            "height": 579.2967707486541
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 466.6148,
-            "y": 436.4425428571428,
-            "width": 69.87599999999999,
-            "height": 565.6074
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
           },
           "componentId": "CMP-LPM-MSLV-17-415",
           "views": [
@@ -6745,13 +6745,13 @@
         {
           "slot": "diptube",
           "variantKey": null,
-          "zOrder": 0,
+          "zOrder": 2,
           "explodeIndex": 1,
           "bounds": {
-            "left": 466.6148,
-            "top": 436.4425428571428,
-            "right": 536.4908,
-            "bottom": 1002.0499428571428
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
           },
           "assembled": {
             "x": 0,
@@ -6762,23 +6762,70 @@
             "dy": -140.58385714285714
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/tube-fitted.f5a5592f59a0.png",
-            "sha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484",
-            "bytes": 124485,
+            "url": "/local-kits/lotion9-flair-fit-2026-11-01/lotion-mechanism-slim.fd1f18d27439.svg",
+            "key": "",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
             "width": 180,
-            "height": 1457,
-            "key": ""
+            "height": 579.2967707486541
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 466.6148,
-            "y": 436.4425428571428,
-            "width": 69.87599999999999,
-            "height": 565.6074
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
           },
-          "componentId": "CMP-LPM-BLK-17-415"
+          "componentId": "CMP-LPM-BLK-17-415",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.62,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "/local-kits/lotion9-flair-fit-2026-11-01/lotion-mechanism-slim.fd1f18d27439.svg",
+            "key": "",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-BLK-17-415",
+          "views": [
+            "exploded"
+          ]
         },
         {
           "slot": "body",
@@ -6979,13 +7026,13 @@
         {
           "slot": "diptube",
           "variantKey": null,
-          "zOrder": 0,
+          "zOrder": 2,
           "explodeIndex": 1,
           "bounds": {
-            "left": 466.6148,
-            "top": 436.4425428571428,
-            "right": 536.4908,
-            "bottom": 1002.0499428571428
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
           },
           "assembled": {
             "x": 0,
@@ -6996,23 +7043,70 @@
             "dy": -140.58385714285714
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/tube-fitted.f5a5592f59a0.png",
-            "sha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484",
-            "bytes": 124485,
+            "url": "/local-kits/lotion9-flair-fit-2026-11-01/lotion-mechanism-slim.fd1f18d27439.svg",
+            "key": "",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
             "width": 180,
-            "height": 1457,
-            "key": ""
+            "height": 579.2967707486541
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 466.6148,
-            "y": 436.4425428571428,
-            "width": 69.87599999999999,
-            "height": 565.6074
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
           },
-          "componentId": "CMP-LPM-SGLD-17-415"
+          "componentId": "CMP-LPM-SGLD-17-415",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.62,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "/local-kits/lotion9-flair-fit-2026-11-01/lotion-mechanism-slim.fd1f18d27439.svg",
+            "key": "",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-SGLD-17-415",
+          "views": [
+            "exploded"
+          ]
         },
         {
           "slot": "body",
@@ -7213,13 +7307,13 @@
         {
           "slot": "diptube",
           "variantKey": null,
-          "zOrder": 0,
+          "zOrder": 2,
           "explodeIndex": 1,
           "bounds": {
-            "left": 466.6148,
-            "top": 436.4425428571428,
-            "right": 536.4908,
-            "bottom": 1002.0499428571428
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
           },
           "assembled": {
             "x": 0,
@@ -7230,23 +7324,70 @@
             "dy": -140.58385714285714
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/tube-fitted.f5a5592f59a0.png",
-            "sha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484",
-            "bytes": 124485,
+            "url": "/local-kits/lotion9-flair-fit-2026-11-01/lotion-mechanism-slim.fd1f18d27439.svg",
+            "key": "",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
             "width": 180,
-            "height": 1457,
-            "key": ""
+            "height": 579.2967707486541
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 466.6148,
-            "y": 436.4425428571428,
-            "width": 69.87599999999999,
-            "height": 565.6074
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
           },
-          "componentId": "CMP-LPM-MSLV-17-415"
+          "componentId": "CMP-LPM-MSLV-17-415",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.62,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "/local-kits/lotion9-flair-fit-2026-11-01/lotion-mechanism-slim.fd1f18d27439.svg",
+            "key": "",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-MSLV-17-415",
+          "views": [
+            "exploded"
+          ]
         },
         {
           "slot": "body",
@@ -12052,10 +12193,10 @@
           "zOrder": 0,
           "explodeIndex": 1,
           "bounds": {
-            "left": 466.6148,
-            "top": 436.4425428571428,
-            "right": 536.4908,
-            "bottom": 1002.0499428571428
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
           },
           "assembled": {
             "x": 0,
@@ -12066,21 +12207,21 @@
             "dy": -140.58385714285714
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/tube-fitted.f5a5592f59a0.png",
-            "sha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484",
-            "bytes": 124485,
+            "url": "/local-kits/lotion9-flair-fit-2026-11-01/lotion-mechanism-slim.fd1f18d27439.svg",
+            "key": "",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
             "width": 180,
-            "height": 1457,
-            "key": ""
+            "height": 579.2967707486541
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 466.6148,
-            "y": 436.4425428571428,
-            "width": 69.87599999999999,
-            "height": 565.6074
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
           },
           "componentId": "CMP-LPM-BLK-17-415",
           "views": [
@@ -12289,10 +12430,10 @@
           "zOrder": 0,
           "explodeIndex": 1,
           "bounds": {
-            "left": 466.6148,
-            "top": 436.4425428571428,
-            "right": 536.4908,
-            "bottom": 1002.0499428571428
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
           },
           "assembled": {
             "x": 0,
@@ -12303,21 +12444,21 @@
             "dy": -140.58385714285714
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/tube-fitted.f5a5592f59a0.png",
-            "sha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484",
-            "bytes": 124485,
+            "url": "/local-kits/lotion9-flair-fit-2026-11-01/lotion-mechanism-slim.fd1f18d27439.svg",
+            "key": "",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
             "width": 180,
-            "height": 1457,
-            "key": ""
+            "height": 579.2967707486541
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 466.6148,
-            "y": 436.4425428571428,
-            "width": 69.87599999999999,
-            "height": 565.6074
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
           },
           "componentId": "CMP-LPM-SGLD-17-415",
           "views": [
@@ -12526,10 +12667,10 @@
           "zOrder": 0,
           "explodeIndex": 1,
           "bounds": {
-            "left": 466.6148,
-            "top": 436.4425428571428,
-            "right": 536.4908,
-            "bottom": 1002.0499428571428
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
           },
           "assembled": {
             "x": 0,
@@ -12540,21 +12681,21 @@
             "dy": -140.58385714285714
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/tube-fitted.f5a5592f59a0.png",
-            "sha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484",
-            "bytes": 124485,
+            "url": "/local-kits/lotion9-flair-fit-2026-11-01/lotion-mechanism-slim.fd1f18d27439.svg",
+            "key": "",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
             "width": 180,
-            "height": 1457,
-            "key": ""
+            "height": 579.2967707486541
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 466.6148,
-            "y": 436.4425428571428,
-            "width": 69.87599999999999,
-            "height": 565.6074
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
           },
           "componentId": "CMP-LPM-MSLV-17-415",
           "views": [
@@ -17365,10 +17506,10 @@
           "zOrder": 0,
           "explodeIndex": 1,
           "bounds": {
-            "left": 466.6148,
-            "top": 436.4425428571428,
-            "right": 536.4908,
-            "bottom": 1002.0499428571428
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
           },
           "assembled": {
             "x": 0,
@@ -17379,21 +17520,21 @@
             "dy": -140.58385714285714
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/tube-fitted.f5a5592f59a0.png",
-            "sha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484",
-            "bytes": 124485,
+            "url": "/local-kits/lotion9-flair-fit-2026-11-01/lotion-mechanism-slim.fd1f18d27439.svg",
+            "key": "",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
             "width": 180,
-            "height": 1457,
-            "key": ""
+            "height": 579.2967707486541
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 466.6148,
-            "y": 436.4425428571428,
-            "width": 69.87599999999999,
-            "height": 565.6074
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
           },
           "componentId": "CMP-LPM-BLK-17-415",
           "views": [
@@ -17602,10 +17743,10 @@
           "zOrder": 0,
           "explodeIndex": 1,
           "bounds": {
-            "left": 466.6148,
-            "top": 436.4425428571428,
-            "right": 536.4908,
-            "bottom": 1002.0499428571428
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
           },
           "assembled": {
             "x": 0,
@@ -17616,21 +17757,21 @@
             "dy": -140.58385714285714
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/tube-fitted.f5a5592f59a0.png",
-            "sha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484",
-            "bytes": 124485,
+            "url": "/local-kits/lotion9-flair-fit-2026-11-01/lotion-mechanism-slim.fd1f18d27439.svg",
+            "key": "",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
             "width": 180,
-            "height": 1457,
-            "key": ""
+            "height": 579.2967707486541
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 466.6148,
-            "y": 436.4425428571428,
-            "width": 69.87599999999999,
-            "height": 565.6074
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
           },
           "componentId": "CMP-LPM-SGLD-17-415",
           "views": [
@@ -17839,10 +17980,10 @@
           "zOrder": 0,
           "explodeIndex": 1,
           "bounds": {
-            "left": 466.6148,
-            "top": 436.4425428571428,
-            "right": 536.4908,
-            "bottom": 1002.0499428571428
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
           },
           "assembled": {
             "x": 0,
@@ -17853,21 +17994,21 @@
             "dy": -140.58385714285714
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/tube-fitted.f5a5592f59a0.png",
-            "sha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484",
-            "bytes": 124485,
+            "url": "/local-kits/lotion9-flair-fit-2026-11-01/lotion-mechanism-slim.fd1f18d27439.svg",
+            "key": "",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
             "width": 180,
-            "height": 1457,
-            "key": ""
+            "height": 579.2967707486541
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 466.6148,
-            "y": 436.4425428571428,
-            "width": 69.87599999999999,
-            "height": 565.6074
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
           },
           "componentId": "CMP-LPM-MSLV-17-415",
           "views": [
@@ -22678,10 +22819,10 @@
           "zOrder": 0,
           "explodeIndex": 1,
           "bounds": {
-            "left": 466.6148,
-            "top": 436.4425428571428,
-            "right": 536.4908,
-            "bottom": 1002.0499428571428
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
           },
           "assembled": {
             "x": 0,
@@ -22692,21 +22833,21 @@
             "dy": -140.58385714285714
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/tube-fitted.f5a5592f59a0.png",
-            "sha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484",
-            "bytes": 124485,
+            "url": "/local-kits/lotion9-flair-fit-2026-11-01/lotion-mechanism-slim.fd1f18d27439.svg",
+            "key": "",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
             "width": 180,
-            "height": 1457,
-            "key": ""
+            "height": 579.2967707486541
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 466.6148,
-            "y": 436.4425428571428,
-            "width": 69.87599999999999,
-            "height": 565.6074
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
           },
           "componentId": "CMP-LPM-BLK-17-415",
           "views": [
@@ -22915,10 +23056,10 @@
           "zOrder": 0,
           "explodeIndex": 1,
           "bounds": {
-            "left": 466.6148,
-            "top": 436.4425428571428,
-            "right": 536.4908,
-            "bottom": 1002.0499428571428
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
           },
           "assembled": {
             "x": 0,
@@ -22929,21 +23070,21 @@
             "dy": -140.58385714285714
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/tube-fitted.f5a5592f59a0.png",
-            "sha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484",
-            "bytes": 124485,
+            "url": "/local-kits/lotion9-flair-fit-2026-11-01/lotion-mechanism-slim.fd1f18d27439.svg",
+            "key": "",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
             "width": 180,
-            "height": 1457,
-            "key": ""
+            "height": 579.2967707486541
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 466.6148,
-            "y": 436.4425428571428,
-            "width": 69.87599999999999,
-            "height": 565.6074
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
           },
           "componentId": "CMP-LPM-SGLD-17-415",
           "views": [
@@ -23152,10 +23293,10 @@
           "zOrder": 0,
           "explodeIndex": 1,
           "bounds": {
-            "left": 466.6148,
-            "top": 436.4425428571428,
-            "right": 536.4908,
-            "bottom": 1002.0499428571428
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
           },
           "assembled": {
             "x": 0,
@@ -23166,21 +23307,21 @@
             "dy": -140.58385714285714
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/tube-fitted.f5a5592f59a0.png",
-            "sha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484",
-            "bytes": 124485,
+            "url": "/local-kits/lotion9-flair-fit-2026-11-01/lotion-mechanism-slim.fd1f18d27439.svg",
+            "key": "",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
             "width": 180,
-            "height": 1457,
-            "key": ""
+            "height": 579.2967707486541
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 466.6148,
-            "y": 436.4425428571428,
-            "width": 69.87599999999999,
-            "height": 565.6074
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
           },
           "componentId": "CMP-LPM-MSLV-17-415",
           "views": [

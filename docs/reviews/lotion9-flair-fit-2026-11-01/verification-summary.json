@@ -1,0 +1,15 @@
+{
+  "pumpVersion": "8260f36da490",
+  "otherVersion": "3ebe6e73b538",
+  "configurations": 55,
+  "baseBrowserStates": 330,
+  "finalClearLotionDesktopStates": 9,
+  "finalClearLotionMobileStates": 9,
+  "failures": [],
+  "pageErrors": [],
+  "builder": {"api":[{"bodyId":"cylinder-9ml|17-415|Glass Bottle","matchingKits":15},{"bodyId":"cylinder-9ml|13-415|Glass Bottle","matchingKits":4},{"bodyId":"flair-15ml|13-415|Glass Bottle","matchingKits":36}],"records":[{"family":"Cylinder","sku":"LBCyl9LtnBlk","passed":true},{"family":"Flair","sku":"GBFlair15SpryBlkMatt","passed":true},{"family":"Flair","sku":"GBFlair15MtlRollBlkDot","passed":true},{"family":"Cylinder","sku":"GBTallCyl9WhtSht","passed":true}]},
+  "resolvedChecks": [{"path":"approved-chamber/browser-verification.json","issue":"Development page hot-reloaded during view change; isolated final-chamber rerun passed."}],
+  "coverageNote": "The broad 330-state pass covers all Flair and ribbed cap configurations. Final clear-lotion desktop/mobile checks supersede earlier lotion registrations after the chamber aspect ratio and blend correction. All 15 lotion kits share the final master.",
+  "archiveFilesVerified": 3,
+  "productionActivated": false
+}

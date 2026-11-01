@@ -1,0 +1,5 @@
+{
+  "records": [],
+  "failures": [{"viewport":"desktop","sku":"LBCyl9LtnBlk","error":"Waiting failed: 30000ms exceeded"}],
+  "pageErrors": ["Cannot read properties of null (reading 'dataset')"]
+}

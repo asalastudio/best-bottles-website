@@ -63,11 +63,12 @@ describe('9 ml lotion and roller review registration',()=>{
    expect(cap.bounds.left+dx).toBeGreaterThan(r.bounds.right);
   }
  });
- it('moves the lotion head, collar and thin tube as one unit, with no tube below the foot',()=>{
+ it('moves the lotion head, collar and connected tube as one unit, with no tube below the foot',()=>{
   for(const c of configs.filter(c=>c.applicatorKey==='lotion-pump')){
    const kit=rows[c.websiteSku],body=kit.parts.find(p=>p.slot==='body')!,tube=kit.parts.find(p=>p.slot==='diptube')!;
    expect(tube.bounds.bottom).toBeLessThan(body.bounds.bottom);
-   expect(tube.views).toEqual(c.glassLabel==='Clear'?undefined:['exploded']);
+   expect(tube.views).toEqual(c.glassLabel==='Clear'?['sidecar','capon']:['exploded']);
+   for(const view of ['sidecar','capon','exploded'] as const)expect(kit.parts.filter(p=>p.slot==='diptube'&&(!p.views||p.views.includes(view)))).toHaveLength(c.glassLabel==='Clear'||view==='exploded'?1:0);
    const l=stageLayout(kit,'exploded',context(c))!;
    const moving=l.parts.filter(p=>['pump','collar','diptube'].includes(p.slot));
    expect(moving).toHaveLength(3);
