@@ -1,5 +1,5 @@
 {
-  "version": "8f4467cab276",
+  "version": "3dc8ce855e21",
   "scope": [
     "LBCylAmb9LtnBlk",
     "LBCylAmb9LtnGl",
@@ -117,6 +117,7 @@
     "GBCylSwrl9RollSlDot",
     "GBCylSwrl9RollWht"
   ],
+  "lotionCollarLiftMm": 0.7,
   "silhouettes": {
     "lotion-head": {
       "w": 1322,

@@ -17,6 +17,9 @@ for(const[name,v]of Object.entries(silhouettes)){
 const config=JSON.parse(fs.readFileSync('data/paper-doll/CYL-9ML/configurations.json'));
 const source=previous.rows.GBCyl9SpryBlk,basecollar=source.parts.find(p=>p.slot==='collar'),basetube=source.parts.find(p=>p.slot==='diptube'),basecap=source.parts.find(p=>p.slot==='overcap');
 const dimPart=(slot,asset,scale,x,y,bounds,z,id,ix=0)=>({slot,variantKey:null,zOrder:z,explodeIndex:ix,bounds,assembled:{x:0,y:0},exploded:{dx:0,dy:0},image:{...assets[asset],key:''},image2x:null,mask:null,derivation:'psd-layer',box:{x,y,width:assets[asset].width*scale,height:assets[asset].height*scale},componentId:id});
+// Lift the lotion assembly 0.7 mm to reveal the curved glass shoulder.
+// Move hardware together; preserve the approved tube length and bottom clearance.
+const lotionCollarLiftMm=0.7;
 const selected=[];
 for(const c of config){
  if(c.applicatorKey==='fine-mist-sprayer')continue;
@@ -28,6 +31,10 @@ for(const c of config){
   const tube={...structuredClone(basetube),componentId:id};if(c.glassLabel!=='Clear')tube.views=['exploded'];
   const s=159.2/(1013-310),x=500-(310+1013)/2*s,y=290-1036*s;
   const head=dimPart('pump','lotion-head',s,x,y,{left:x+310*s,top:y+169*s,right:x+1013*s,bottom:290},4,id,1);
+  const lift=lotionCollarLiftMm*kit.register.pxPerMm;
+  for(const part of [head,collar,cap]){
+   part.box.y-=lift;part.bounds.top-=lift;part.bounds.bottom-=lift;
+  }
   kit.parts=[tube,body,head,collar,cap];
  }else{
   const kind=c.applicatorKey==='metal-roller'?'metal':'plastic',id=kit.register.componentIds.find(id=>id.includes('Rollon'));
@@ -39,6 +46,6 @@ for(const c of config){
  selected.push(c);
 }
 library.version=sha(JSON.stringify({assets,rows:library.rows})).slice(0,12);index.version=library.version;
-fs.writeFileSync(out+'/kits.json',JSON.stringify(library,null,2)+'\n');fs.writeFileSync('src/lib/products/cylinder9-master-index.json',JSON.stringify(index,null,2)+'\n');fs.writeFileSync(dir+'/component-registration.json',JSON.stringify({version:library.version,scope:selected.map(c=>c.websiteSku),silhouettes,pumpTube:'Reused approved fine-mist visual mechanism/tube; lotion internals are a review representation, manufacturer mechanism dimensions unconfirmed.',rollerSeat:'Underside of flange at body.bounds.top; lower plug behind glass in assembled view; whole insert moves together.',status:'Local candidates, pending visual approval'},null,2)+'\n');
+fs.writeFileSync(out+'/kits.json',JSON.stringify(library,null,2)+'\n');fs.writeFileSync('src/lib/products/cylinder9-master-index.json',JSON.stringify(index,null,2)+'\n');fs.writeFileSync(dir+'/component-registration.json',JSON.stringify({version:library.version,scope:selected.map(c=>c.websiteSku),lotionCollarLiftMm,silhouettes,pumpTube:'Reused approved fine-mist visual mechanism/tube; lotion internals are a review representation, manufacturer mechanism dimensions unconfirmed.',rollerSeat:'Underside of flange at body.bounds.top; lower plug behind glass in assembled view; whole insert moves together.',status:'Local candidates, pending visual approval'},null,2)+'\n');
 fs.writeFileSync(review+'/model.json',JSON.stringify({version:library.version,configurations:selected.map(({websiteSku,productGroupSlug,glassLabel,applicatorKey,finishLabel})=>({websiteSku,productGroupSlug,glassLabel,applicatorKey,finishLabel})),assets},null,2));
 console.log(JSON.stringify({version:library.version,pumps:selected.filter(c=>c.applicatorKey==='lotion-pump').length,rollers:selected.filter(c=>c.applicatorKey!=='lotion-pump').length}));

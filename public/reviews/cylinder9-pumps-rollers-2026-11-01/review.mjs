@@ -1,4 +1,4 @@
-const model=await fetch('./model.json').then(r=>r.json());
+const model=await fetch('./model.json', {cache:'no-store'}).then(r=>r.json());
 const $=id=>document.getElementById(id),query=new URLSearchParams(location.search);
 if([...$('fitment').options].some(o=>o.value===query.get('fitment')))$('fitment').value=query.get('fitment');
 if([...$('glass').options].some(o=>o.value===query.get('glass')))$('glass').value=query.get('glass');
@@ -10,7 +10,7 @@ function chooseView(){
  if(d){const b=[...d.querySelectorAll('button')].find(b=>b.textContent.trim()===view);if(b)b.click();}
  const type=$('fitment').value==='lotion-pump'?'pump':$('fitment').value==='metal-roller'?'metal':'plastic';
  const shot=view==='EXPLODED'?'exploded':'sidecar';
- $('before').src=`before-${type}-${shot}.png`;$('after').src=`after-${type}-${shot}.png`;
+ $('before').src=`before-${type}-${shot}.png`;$('after').src=`after-${type}-${shot}.png?seating=2`;
  const params=new URLSearchParams({fitment:$('fitment').value,glass:$('glass').value,finish:$('finish').value,view});history.replaceState(null,'','?'+params);
 }
 function select(){const rows=model.configurations.filter(c=>c.applicatorKey===$('fitment').value&&c.glassLabel===$('glass').value);const old=preferredFinish||$('finish').value;preferredFinish=null;$('finish').replaceChildren(...rows.map(c=>new Option(c.finishLabel,c.finishLabel)));if(rows.some(c=>c.finishLabel===old))$('finish').value=old;show();}

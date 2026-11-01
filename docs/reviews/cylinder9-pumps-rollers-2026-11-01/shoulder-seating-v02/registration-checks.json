@@ -1,0 +1,24 @@
+{
+  "version": "3dc8ce855e21",
+  "changedSkus": [
+    "LBCylAmb9LtnBlk",
+    "LBCylAmb9LtnGl",
+    "LBCylAmb9LtnMtSl",
+    "LBCyl9LtnBlk",
+    "LBCyl9LtnGl",
+    "LBCyl9LtnMtSl",
+    "LBCylBlu9LtnBlk",
+    "LBCylBlu9LtnGl",
+    "LBCylBlu9LtnMattSl",
+    "LBCylFrst9LtnBlk",
+    "LBCylFrst9LtnGl",
+    "LBCylFrst9LtnMtSl",
+    "LBCylSwrl9LtnBlk",
+    "LBCylSwrl9LtnGl",
+    "LBCylSwrl9LtnMtSl"
+  ],
+  "count": 15,
+  "hardwareLiftMm": 0.7,
+  "bottleAndTubeUnchanged": true,
+  "other130KitsUnchanged": true
+}

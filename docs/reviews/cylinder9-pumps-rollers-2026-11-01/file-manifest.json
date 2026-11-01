@@ -1,10 +1,10 @@
 {
-  "version": "8f4467cab276",
+  "version": "3dc8ce855e21",
   "files": [
     {
       "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/README.md",
-      "bytes": 5352,
-      "sha256": "e77ea143700bbf34433809056f3de9d9022a77907bbd55abaf7809ea167aec89"
+      "bytes": 5575,
+      "sha256": "7ffeb213101307a06ac28fce2a742cf0af57999a6d7d491234d3bfdac1393794"
     },
     {
       "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/after-metal-exploded.png",
@@ -28,13 +28,13 @@
     },
     {
       "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/after-pump-exploded.png",
-      "bytes": 74838,
-      "sha256": "c69c3e8aedea40b7e11007414653dc7903b8519edc060c53546bb41a57fe10fb"
+      "bytes": 74366,
+      "sha256": "21a6a65404474a30b3ea2d36c2b7f233915caa934a5cdb9759722fdfe0f719a2"
     },
     {
       "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/after-pump-sidecar.png",
-      "bytes": 34427,
-      "sha256": "10cde2e2d7a5382aae761947fae3d3e79f0be53acb63f6acf48d865bac94a27b"
+      "bytes": 35006,
+      "sha256": "629273bfe29f96e387dbe400b9f88399d43b01cda3a491f74389aebed822a045"
     },
     {
       "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/before-index.json",
@@ -83,8 +83,8 @@
     },
     {
       "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/build-components.cjs",
-      "bytes": 5371,
-      "sha256": "ca46b46cae920318816b15e07d69914def6e7fdd6b49d51148029a5dbcee3381"
+      "bytes": 5741,
+      "sha256": "8b6acb4d6cac3fbbde5b20669a8875fbf8cb18881f26543d321a4d03a51db83e"
     },
     {
       "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/builder-metal.png",
@@ -108,8 +108,8 @@
     },
     {
       "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/component-registration.json",
-      "bytes": 4737,
-      "sha256": "40bcc5921b0ca8e50e8ca9fdae935fe4ed00b59a536930e4c7896b4130753dc8"
+      "bytes": 4766,
+      "sha256": "e9a56074fd07afa0b2470705b0ec6df3ee598eb625afeae3e0e301f672b080b8"
     },
     {
       "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/defects-and-changes.csv",
@@ -135,6 +135,96 @@
       "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/selected-assets.json",
       "bytes": 760,
       "sha256": "c8ddbec2b1b2854d17b848ec33f44ce0d0b567c7110c2353d866eb6e90210f9e"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/README.md",
+      "bytes": 822,
+      "sha256": "ebac74b8937fa653091a51735b94bfcbb43b0fab70890a5fa7d10aad9a352622"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/before-index.json",
+      "bytes": 32405,
+      "sha256": "4209206777b52677118ff3eef91300dc57adf17b333250bf8ac349beda609981"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/before-kits.json",
+      "bytes": 757158,
+      "sha256": "eaab77db4b0ab5fd84cbf53cdec6f2be8595640863b5a5367d7c39f87aae74ac"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/black-full.png",
+      "bytes": 116894,
+      "sha256": "31d5e02662218e1992d9399d6513b8b99a1a02f78b97d363e196da76072fb845"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/black-shoulder.png",
+      "bytes": 26040,
+      "sha256": "da0171774985a3194883b05eaa931ea634130bdf2736bb48058bae665101631c"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/browser-checks.json",
+      "bytes": 4122,
+      "sha256": "7e9a4a2be9b755b822c5f917b1c444194603e1aed978d96afd530bacdd3093e8"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/gold-full.png",
+      "bytes": 125484,
+      "sha256": "82a520b1251dcd9392ad0a3c300c49486dcdba1da61dc4bd5427d27a822ba777"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/gold-shoulder.png",
+      "bytes": 33853,
+      "sha256": "658bba8300486a86eedc597f7d2edf3e3eb9f2e0e915e96bfa11ea0698931393"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/matte-silver-full.png",
+      "bytes": 119596,
+      "sha256": "53803053e0e689f630c9cc629b1775fc98be61e655e0ce4177190597ebb39507"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/matte-silver-shoulder.png",
+      "bytes": 28091,
+      "sha256": "b43517011126a46fedfdc14f11351ca1483c790b0e0192bcac97a3de262fb4a8"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/registration-checks.json",
+      "bytes": 506,
+      "sha256": "44f0b8ef117a33b2b2e96bbdb59ef86e4d06aa6f8aedbf9256ccac4e97fc3b94"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/v01-after-metal-exploded.png",
+      "bytes": 67601,
+      "sha256": "53a70b52671fb645c9a808b836a0fb479014e0a0bfe8c4d8e6636fecbaeaebda"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/v01-after-metal-sidecar.png",
+      "bytes": 36727,
+      "sha256": "2eb8a7981fe2d2a2257d48c1a40b7bb44d7fbaf43d13a33dfe5fd7c2651f11d6"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/v01-after-plastic-exploded.png",
+      "bytes": 67339,
+      "sha256": "084c7fbb7b0be25e01e58e0126a769934b9d7eb67a8d5bb52e90e94878d623d1"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/v01-after-plastic-sidecar.png",
+      "bytes": 36216,
+      "sha256": "091558134ae4041290d3273f9b7c42fc0f2500d01975a3e92a7eba078cde0049"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/v01-after-pump-exploded.png",
+      "bytes": 74838,
+      "sha256": "c69c3e8aedea40b7e11007414653dc7903b8519edc060c53546bb41a57fe10fb"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/v01-after-pump-sidecar.png",
+      "bytes": 34427,
+      "sha256": "10cde2e2d7a5382aae761947fae3d3e79f0be53acb63f6acf48d865bac94a27b"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/verify.cjs",
+      "bytes": 2568,
+      "sha256": "719b82637f471c7927f6c47bb2563adb58e9aaa12e8c89ec95a09a9af2b60f0d"
     },
     {
       "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/source-manifest.json",
@@ -513,13 +603,13 @@
     },
     {
       "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/after-pump-exploded.png",
-      "bytes": 74838,
-      "sha256": "c69c3e8aedea40b7e11007414653dc7903b8519edc060c53546bb41a57fe10fb"
+      "bytes": 74366,
+      "sha256": "21a6a65404474a30b3ea2d36c2b7f233915caa934a5cdb9759722fdfe0f719a2"
     },
     {
       "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/after-pump-sidecar.png",
-      "bytes": 34427,
-      "sha256": "10cde2e2d7a5382aae761947fae3d3e79f0be53acb63f6acf48d865bac94a27b"
+      "bytes": 35006,
+      "sha256": "629273bfe29f96e387dbe400b9f88399d43b01cda3a491f74389aebed822a045"
     },
     {
       "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/before-metal-exploded.png",
@@ -564,12 +654,12 @@
     {
       "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/model.json",
       "bytes": 30426,
-      "sha256": "98ec348448587bbd495d04fc35a81ebd27fa50c78fe14a4cd19cde92eae7f2b5"
+      "sha256": "44451cc37d7e372561846d7232f5ae3f98f66676e38aa9ab1e77e3ffd31a5a6a"
     },
     {
       "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/review.mjs",
-      "bytes": 2369,
-      "sha256": "123ed5bcae507d17af992cc980842dfc02f843438d61bf5fa244fed6c4e57dcd"
+      "bytes": 2399,
+      "sha256": "3f6801de0e5e61ece1c876e0ba780aa4bdbbda7e4d201e6e707dec05b188e339"
     },
     {
       "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/roller-metal.svg",
