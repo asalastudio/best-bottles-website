@@ -163,5 +163,25 @@
       "localPath": "docs/reviews/cylinder5-all71-2026-11-01/archive-verification.json",
       "nameSizeParentVerified": true
     }
-  ]
+  ],
+  "libraryIndex": {
+    "id": "1MLo5zrkXiVtB1aVmNFXmXSj-DqGvZaKF",
+    "title": "BATCH-INDEX_2026-11-01_Cylinder5-all71_v02.md",
+    "mime_type": null,
+    "size": "1027",
+    "url": "https://drive.google.com/file/d/1MLo5zrkXiVtB1aVmNFXmXSj-DqGvZaKF/view?usp=drivesdk",
+    "display_url": "https://drive.google.com/file/d/1MLo5zrkXiVtB1aVmNFXmXSj-DqGvZaKF/view?usp=drivesdk",
+    "file_or_folder": null,
+    "created_time": null,
+    "modified_time": null,
+    "parent_ids": [
+      "1kztMnt9MYau-UfgN6sK8kI7fJZsMnQUe"
+    ],
+    "drive_id": null,
+    "current_user_can_share": null,
+    "has_augmented_permissions": null,
+    "shared": null,
+    "permissions": null,
+    "source_visibility_status": "access_not_verified"
+  }
 }
